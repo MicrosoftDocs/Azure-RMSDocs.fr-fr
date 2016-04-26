@@ -1,19 +1,32 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [Azure-RMSDocs\understand-explore\compare-azure-rms-ad-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/9467639e816c25714b5817e349eefee0d27e56ee/Azure-RMSDocs/understand-explore/compare-azure-rms-ad-rms.md) | HandedOffSuccess | [Details](#f4496c388bc939d07d45f3ecb41f72ed4e559b30369)
+ [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/99c21cff48129feb6721a8ada746158efb378aa1/Azure-RMSDocs/index.md) | HandedOffSuccess | [Details](#bf11a118e91d7babc4372312509f64fb855b3e4f162)
+ [Azure-RMSDocs\plan-design\plan-implement-tenant-key.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/1011508d8b803acf078d0e8acb4d37945f423c90/Azure-RMSDocs/plan-design/plan-implement-tenant-key.md) | HandedOffSuccess | [Details](#826e18b82baa88140caa0ebe29b19ab483ff0683335)
 
 ## Item Details
-##### <a name='f4496c388bc939d07d45f3ecb41f72ed4e559b30369'></a> Source: [Azure-RMSDocs\understand-explore\compare-azure-rms-ad-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/9467639e816c25714b5817e349eefee0d27e56ee/Azure-RMSDocs/understand-explore/compare-azure-rms-ad-rms.md)
+##### <a name='bf11a118e91d7babc4372312509f64fb855b3e4f162'></a> Source: [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/99c21cff48129feb6721a8ada746158efb378aa1/Azure-RMSDocs/index.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [compare-azure-rms-ad-rms.4805b567858dd2f4067e44738d85aea3757b387c.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/fc98dc7a35c8a9bab8eb077933e0bb3853934ec4/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/compare-azure-rms-ad-rms.4805b567858dd2f4067e44738d85aea3757b387c.fr-fr.xlf)
-* Handoff Datetime: 2016-04-26 21:56:10
+* Handoff File: [index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/9645979f1d604041b4de73e2239d1e1149910fea/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.fr-fr.xlf)
+* Handoff Datetime: 2016-04-26 23:49:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='826e18b82baa88140caa0ebe29b19ab483ff0683335'></a> Source: [Azure-RMSDocs\plan-design\plan-implement-tenant-key.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/1011508d8b803acf078d0e8acb4d37945f423c90/Azure-RMSDocs/plan-design/plan-implement-tenant-key.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [plan-implement-tenant-key.d79d8fa892f346e358054d66de4468234c124ef5.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/9645979f1d604041b4de73e2239d1e1149910fea/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/plan-implement-tenant-key.d79d8fa892f346e358054d66de4468234c124ef5.fr-fr.xlf)
+* Handoff Datetime: 2016-04-26 23:49:42
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00

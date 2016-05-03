@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [Azure-RMSDocs\rms-client\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/1ccad6fa14e22c36013efa730e935fb27bf3f0e3/Azure-RMSDocs/rms-client/TOC.md) | HandedOffSuccess | [Details](#a59e742697f4cbee72e4d5e537a4483647dd2e18359)
 
 ## Item Details
-##### <a name='a59e742697f4cbee72e4d5e537a4483647dd2e18359'></a> Source: [Azure-RMSDocs\rms-client\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/1ccad6fa14e22c36013efa730e935fb27bf3f0e3/Azure-RMSDocs/rms-client/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [TOC.cacfe166ad1ecfe5d611cff0117fd584e54c7ef9.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/2396db73d33be9803011eb2bf7e587105ee43375/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/TOC.cacfe166ad1ecfe5d611cff0117fd584e54c7ef9.fr-fr.xlf)
-* Handoff Datetime: 2016-04-29 23:21:56
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
 
 ## Error Details
 

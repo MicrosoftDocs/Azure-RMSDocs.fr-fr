@@ -1,13 +1,12 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
  [Azure-RMSDocs\Develop\ADAL-authentication.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a26a1debf504fb5e4aeddf4f1ad99202d7c20834/Azure-RMSDocs/Develop/ADAL-authentication.md) | HandedOffFailed | [Details](#0068d338348b4edb9db561bee0545ed50fed029a43)
- [Azure-RMSDocs\develop\api-reference-4-2.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/fc3763daa314e786f01fcef830391d2c9803a7ea/Azure-RMSDocs/develop/api-reference-4-2.md) | OutofSyncHandedBackSuccess | [Details](#030d418ade8e3fab417749574e31225263d0802248)
 
 ## Item Details
 ##### <a name='0068d338348b4edb9db561bee0545ed50fed029a43'></a> Source: [Azure-RMSDocs\Develop\ADAL-authentication.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a26a1debf504fb5e4aeddf4f1ad99202d7c20834/Azure-RMSDocs/Develop/ADAL-authentication.md)
@@ -21,21 +20,6 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='030d418ade8e3fab417749574e31225263d0802248'></a> Source: [Azure-RMSDocs\develop\api-reference-4-2.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/fc3763daa314e786f01fcef830391d2c9803a7ea/Azure-RMSDocs/develop/api-reference-4-2.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/06aab758b713d67313434b923ff8e9fc2604f959/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.fr-fr.xlf)
-* Handoff Datetime: 2016-05-09 22:59:39
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\develop\api-reference-4-2.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/86180cbff2d05ec2c5d7c551f0e57685296b5091/Azure-RMSDocs/develop/api-reference-4-2.md)
-* Current Handback File: [api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/90a5cfec1410fca9706ef28d1fa0e226dc1687d3/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.fr-fr.xlf)
-* Current Handback Datetime: 2016-05-09 12:41:04
 * [Back to Top](#report-top)
 
 

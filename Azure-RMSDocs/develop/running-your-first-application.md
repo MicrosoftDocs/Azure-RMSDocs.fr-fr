@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 43b611a8-2cc0-49a8-9db9-e81321c38f7a
-
+ms.assetid: 834B7242-31D3-4275-A892-CFE95A61E29E
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Test de votre application avec gestion des droits
 
 Cette rubrique décrit les étapes que vous devez effectuer pour tester votre application Rights Management Services SDK 2.1 avec gestion des droits.
@@ -107,7 +105,7 @@ Vous pouvez exécuter votre application à partir de n’importe quel répertoir
 
     Pour obtenir des informations sur la configuration du client sur votre ordinateur, consultez [Configure the client](how-to-configure-the-ad-rms-client-2-0.md) (Configurer le client). Pour obtenir des informations sur l’installation d’un serveur RMS, consultez [Install and configure the server](how-to-install-and-configure-an-rms-server.md) (Installer et configurer le serveur).
 
-### Rubriques connexes
+## Rubriques connexes
 
 * [How-to use (Utilisation de procédures)](how-to-use-msipc.md)
 * [Configure the client (Configurer le client)](how-to-configure-the-ad-rms-client-2-0.md)
@@ -125,6 +123,6 @@ Vous pouvez exécuter votre application à partir de n’importe quel répertoir
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

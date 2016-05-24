@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: caf031ca-4876-4d42-9fbc-8638f579fb38
-
+ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Déboguer une application avec gestion des droits
 
 La rubrique suivante indique comment déboguer une application et utiliser le journal des événements Windows.
@@ -72,7 +70,7 @@ Par exemple, la commande suivante active le journal des événements MSIPC et af
 
  
 
-### Rubriques connexes
+## Rubriques connexes
 
 * [Utilisation de procédures](how-to-use-msipc.md)
  
@@ -83,6 +81,6 @@ Par exemple, la commande suivante active le journal des événements MSIPC et af
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

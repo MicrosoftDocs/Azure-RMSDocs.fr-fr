@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 03d4fa22-0de4-400f-935d-e347d5890680
-
+ms.assetid: 186A9740-D812-4440-B28A-6968B2D8898C
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Utilisation de procédures
 
 Les rubriques suivantes vous guident dans les principales tâches de l’utilisation de Rights Management Services SDK 2.1 pour implémenter la protection des informations dans votre application.
@@ -38,7 +36,7 @@ Les rubriques suivantes vous guident dans les principales tâches de l’utilisa
   Cette section vous guide tout au long du processus de publication de votre application testée dans un environnement de production.
  
 
-### Rubriques connexes
+## Rubriques connexes
 
 * [Vue d'ensemble](ad-rms-overview.md)
 * [Utilisation de procédures](how-to-use-msipc.md)
@@ -47,6 +45,6 @@ Les rubriques suivantes vous guident dans les principales tâches de l’utilisa
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

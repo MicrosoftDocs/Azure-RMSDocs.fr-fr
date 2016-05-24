@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 4d32682c-754d-4e30-977d-95b08e0662cc
-
+ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 # optional metadata
 
 #ROBOTS:
@@ -25,12 +24,11 @@ ms.suite: ems
 
 ---
 
-﻿
 # Configurer l’environnement de test
 
 Vous pouvez tester votre application avec gestion des droits à l’aide de plusieurs options du serveur.
 
-**Important**  Nous vous recommandons de tester votre application Rights Management Services SDK 2.1 d’abord avec l’environnement de préproduction AD RMS sur un serveur AD RMS. Ensuite, si vous souhaitez que votre client puisse utiliser votre application avec le service Azure RMS, passez aux tests avec cet environnement. Pour plus d’informations, consultez [Permettre à votre application de service d’opérer avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
+**Important**  Nous vous recommandons de tester votre application Rights Management Services SDK 2.1 d’abord avec l’environnement de préproduction AD RMS sur un serveur AD RMS. Ensuite, si vous souhaitez que votre client puisse utiliser votre application avec le service Azure RMS, passez aux tests avec cet environnement. Pour plus d’informations, consultez [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md) (Permettre à votre application de service d’opérer avec le service RMS cloud).
 
  
 
@@ -51,7 +49,7 @@ Deux options sont disponibles pour tester votre application sur un serveur RMS 
 -   **Vous pouvez exécuter votre application sur l’environnement AD RMS ISV 1-box**. Si vous exécutez Windows Server 2012, Windows Server 2008 R2 ou Windows Server 2008 et que Hyper-V est installé, vous pouvez déployer l’environnement AD RMS ISV 1-box en créant une machine virtuelle à l’aide du VHD AD RMS 1-box. L’environnement AD RMS ISV 1-box fournit un serveur RMS configuré pour la préproduction et sur lequel Active Directory Rights Management Services Client 2.1 est installé. Les paramètres du Registre pour le serveur et le client RMS sont déjà configurés. Pour tester votre application, exécutez-la sur la machine virtuelle sur laquelle l’environnement 1-box est déployé.
 -   **Vous pouvez exécuter votre application sur un serveur RMS configuré pour la préproduction et déployé sur votre réseau**. Dans ce cas, vous devez également installer et configurer AD RMS Client 2.1 sur l’ordinateur où votre application s’exécutera. Pour plus d’informations sur la procédure à suivre, consultez [Configurer le client](how-to-configure-the-ad-rms-client-2-0.md). Pour plus d’informations sur la façon de déployer un serveur RMS et de le configurer pour la préproduction, consultez [Installer et configurer le serveur](how-to-install-and-configure-an-rms-server.md).
 
-### Rubriques connexes
+## Rubriques connexes
 
 * [Procédures](how-to-use-msipc.md)
 * [Page de téléchargement des éléments associés au webinaire AD RMS SDK](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
@@ -67,6 +65,6 @@ Deux options sont disponibles pour tester votre application sur un serveur RMS 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

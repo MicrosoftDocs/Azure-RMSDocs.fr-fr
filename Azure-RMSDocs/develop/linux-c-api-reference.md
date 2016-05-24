@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: aca520e1-ea56-4405-8d79-953a7b430bb4
-
+ms.assetid: 2BD4F55D-BA88-4516-86FB-E2E6535D1690
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Référence d’API Linux
 
 La référence d’API pour notre prise en charge de système d’exploitation Linux est hébergée sur Github - [Kit RMS SDK pour C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html). Pour plus d’informations, consultez [Prise en main](get-started.md).
@@ -38,6 +36,6 @@ La référence d’API pour notre prise en charge de système d’exploitation L
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

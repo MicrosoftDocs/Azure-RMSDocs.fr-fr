@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 3760d242-2f8c-4312-aaa5-8d592fd28748
-
+ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Fichiers d’environnement de développement
 
 Cette rubrique présente les fichiers d’environnement de développement et leurs emplacements d’installation relatifs sur votre ordinateur.
@@ -60,6 +58,6 @@ Rights Management Services SDK 2.1 comprend les fichiers suivants, qui sont ins
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

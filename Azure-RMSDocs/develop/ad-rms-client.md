@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 8116fe81-16db-45fe-96a7-d53f2914a2e9
-
+ms.assetid: F7145090-C2EB-405A-A4CF-0240D57A36DA
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Client
+# Client
 
 Cette rubrique décrit l’objectif et la fonction d’Active Directory Rights Management Services Client 2.1.
 
@@ -52,6 +51,6 @@ Pour plus d’informations, consultez la [documentation TechNet sur RMS Client 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

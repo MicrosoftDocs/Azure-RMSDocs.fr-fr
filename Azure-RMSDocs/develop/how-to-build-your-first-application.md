@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: ec4661b0-e2d6-49f4-b819-ef624271ccc1
-
+ms.assetid: 581451A2-9558-4D0D-9D01-BEAB282C5A83
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Exemple d’application IPCHelloWorld
 
 Cette rubrique contient des instructions pour créer un exemple d’application avec gestion des droits.
@@ -224,6 +222,6 @@ Avant de terminer, vous devez également libérer toutes les ressources allouée
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

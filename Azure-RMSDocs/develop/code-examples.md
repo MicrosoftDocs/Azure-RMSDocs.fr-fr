@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: b2fce5e9-0b71-40c9-a325-1ff8afef9252
-
+ms.assetid: 634df601-79d2-4bc2-b845-4df886d7c589
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Exemples de code
 
 Microsoft Rights Management SDK 4.2 comprend un exemple de code et des projets de travail pour certains des systèmes d’exploitation pris en charge.
@@ -51,6 +49,6 @@ Ces rubriques présentent des éléments de code importants pour la version asso
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

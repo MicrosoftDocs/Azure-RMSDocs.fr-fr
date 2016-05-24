@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 989ceee5-75dd-4f83-b90e-1b39c80384a2
-
+ms.assetid: 44D3EB62-7A60-45D9-BA7E-45A06E7D598F
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Rights Management Services SDK 2.1
 
 
@@ -59,7 +57,7 @@ Pour plus d’informations sur les conditions d’exécution d’un élément de
 
  
 
-### Rubriques connexes
+## Rubriques connexes
 
 * [Page de téléchargement de RMS SDK 2.1](http://www.microsoft.com/en-us/download/details.aspx?id=38397)
 * [RMS Developer's Corner](http://blogs.msdn.com/b/rms/archive/2012/05/31/official-release-of-ad-rms-sdk-2-0-and-ad-rms-client-2-0.aspx)
@@ -69,6 +67,6 @@ Pour plus d’informations sur les conditions d’exécution d’un élément de
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

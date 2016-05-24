@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: c73fde39-6e16-470c-800e-59ab04c78f5f
-
+ms.assetid: 09BA148C-7D1E-43C8-92EA-24BBB6EFDB19
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Signature de votre application pour la production
 
 Cette rubrique vous guide tout au long du processus de signature de votre application pour le mode de production.
@@ -67,9 +65,9 @@ Placez-les dans le même répertoire que *GenManifest.exe* et le fichier binaire
 
     -   Votre fichier *Nom_de_votre_application*.exe.man doit toujours se trouver dans le même répertoire que *Nom_de_votre_application*.exe.
 
-### Rubriques connexes
+## Rubriques connexes
 
-* [Utilisation de procédures](how-to-use-msipc.md)
+* [Procédures](how-to-use-msipc.md)
 * [Test de votre application avec gestion des droits](running-your-first-application.md)
  
 
@@ -79,6 +77,6 @@ Placez-les dans le même répertoire que *GenManifest.exe* et le fichier binaire
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 58051d42-5a0a-4b65-9e02-bcdbf17d3262
-
+ms.assetid: 74C342BF-0F79-486D-AED7-C53230DE5FA7
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Configurer le client
 
 Cette rubrique contient des instructions sur la configuration d’Active Directory Rights Management Services Client 2.1
@@ -117,7 +115,7 @@ Les étapes suivantes expliquent comment installer le runtime développeur, conf
 
 Les instructions de cette rubrique ne sont pas exhaustives. Pour plus d’informations sur la configuration d’AD RMS Client 2.1, consultez [RMS Client 2.0 Deployment Notes](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx) (Notes sur le déploiement de RMS Client 2.0).
 
-### Rubriques connexes
+## Rubriques connexes
 
 
 * [Utilisation des procédures](how-to-use-msipc.md)
@@ -131,6 +129,6 @@ Les instructions de cette rubrique ne sont pas exhaustives. Pour plus d’inform
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

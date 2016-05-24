@@ -521,19 +521,7 @@
   "3b935953f9e8da1ecb1359f91176d0297a3ee66e": [
     "Azure-RMSDocs\\develop\\common-error-conditions-and-solutions.md"
   ],
-  "2a90d8f7a9265532668e5f7d5bd4289474afeb3f": [
-    "Azure-RMSDocs\\develop\\common-error-conditions-and-solutions.md"
-  ],
-  "5d2bd8b33882edd748de760ff1fb11309527bb05": [
-    "Azure-RMSDocs\\develop\\common-error-conditions-and-solutions.md"
-  ],
   "1476cfafbc3ecf619e66fee22f657c1714deffe8": [
-    "Azure-RMSDocs\\develop\\community-resources.md"
-  ],
-  "6d8a64e4e28bcf2aa7d38897744752ea46e430c4": [
-    "Azure-RMSDocs\\develop\\community-resources.md"
-  ],
-  "32417af0749b9c6cb4948eae0a14232ea9c1e63d": [
     "Azure-RMSDocs\\develop\\community-resources.md"
   ],
   "7832f87febd6d9f87a3975c2084caca7aa73b9fc": [
@@ -555,12 +543,6 @@
     "Azure-RMSDocs\\develop\\deploying-your-application.md"
   ],
   "e90bbe3ea7e77d56f1baf64e455086fbd2d78105": [
-    "Azure-RMSDocs\\develop\\developer-notes.md"
-  ],
-  "efae413d37999a95ee5492592ab215b53807b87e": [
-    "Azure-RMSDocs\\develop\\developer-notes.md"
-  ],
-  "b247da41774924342fe1c77c198748fa1d4ff9a2": [
     "Azure-RMSDocs\\develop\\developer-notes.md"
   ],
   "50fe3072ccc2ae9b867f84da3f7f1094ab601dc9": [
@@ -626,15 +608,6 @@
   "b62f18a5d58a63bd20eae8e12ea17b9938f32805": [
     "Azure-RMSDocs\\develop\\how-to-configure-the-ad-rms-client-2-0.md"
   ],
-  "3fa08273d9cabb728db067c2ca7995814795a15e": [
-    "Azure-RMSDocs\\develop\\how-to-configure-the-ad-rms-client-2-0.md"
-  ],
-  "b5bcd2858415ebf8dad2aea21f75a3625ec8fbdc": [
-    "Azure-RMSDocs\\develop\\how-to-configure-the-ad-rms-client-2-0.md"
-  ],
-  "880246c0e2f1a852699f98d90ec46d26877930f5": [
-    "Azure-RMSDocs\\develop\\how-to-configure-the-ad-rms-client-2-0.md"
-  ],
   "451d3dc162f98b33cb762c795de29a15c0c0be97": [
     "Azure-RMSDocs\\develop\\how-to-enable-email-notification.md"
   ],
@@ -678,15 +651,6 @@
     "Azure-RMSDocs\\develop\\how-to-use-document-tracking.md"
   ],
   "e9c975ca055f84ef20f0cc7a32ba11bb901cc984": [
-    "Azure-RMSDocs\\develop\\how-to-use-file-api-with-aadrm-cloud.md"
-  ],
-  "beba3047f32dfa939d8a9e4e84ef2d216baf3364": [
-    "Azure-RMSDocs\\develop\\how-to-use-file-api-with-aadrm-cloud.md"
-  ],
-  "c4326d7b2afe94b90df6a49d988b4f3dedcdc1f7": [
-    "Azure-RMSDocs\\develop\\how-to-use-file-api-with-aadrm-cloud.md"
-  ],
-  "73bd4f343797d30b4bd85d270ac49e517ecfbb7e": [
     "Azure-RMSDocs\\develop\\how-to-use-file-api-with-aadrm-cloud.md"
   ],
   "e696d5c73233959038becc81abe770cb1bad5895": [
@@ -749,15 +713,6 @@
   "4ec214203fa6e27ec75cdc0c2b2d46b1e0ab58df": [
     "Azure-RMSDocs\\develop\\microsoft-information-protection-and-control-client-portal.md"
   ],
-  "8727ad121b570aca03a3426f2f72da98de8eb3de": [
-    "Azure-RMSDocs\\develop\\microsoft-information-protection-and-control-client-portal.md"
-  ],
-  "55fa16f173fd14219da537d113533efbc1f1b69f": [
-    "Azure-RMSDocs\\develop\\microsoft-information-protection-and-control-client-portal.md"
-  ],
-  "6c6e6ba4ce772ff58ca5a2650eecc812e06a5553": [
-    "Azure-RMSDocs\\develop\\microsoft-information-protection-and-control-client-portal.md"
-  ],
   "4d66c3fdbb7f21ddb8f21b07cd14c6ad1483610e": [
     "Azure-RMSDocs\\develop\\obtaining-a-production-license.md"
   ],
@@ -815,15 +770,6 @@
   "7ff5c24120c60bfded7603e3257be03430c307c6": [
     "Azure-RMSDocs\\develop\\signing-your-application-for-production.md"
   ],
-  "d042a24123d0df71f9e25bfd1d13be07cfbcc896": [
-    "Azure-RMSDocs\\develop\\signing-your-application-for-production.md"
-  ],
-  "a942e83cdc1d7f32225c658479d7c35421d19a0d": [
-    "Azure-RMSDocs\\develop\\signing-your-application-for-production.md"
-  ],
-  "6276b460d151834c7b806eb78cad59810e58a500": [
-    "Azure-RMSDocs\\develop\\signing-your-application-for-production.md"
-  ],
   "906ca8a8bb04400d74b5e7b48924300756cd630b": [
     "Azure-RMSDocs\\develop\\supported-file-formats.md"
   ],
@@ -837,12 +783,6 @@
     "Azure-RMSDocs\\develop\\supported-file-formats.md"
   ],
   "baf08d04f836e5aa406f125a7029bc43297f5df1": [
-    "Azure-RMSDocs\\develop\\supported-platforms.md"
-  ],
-  "c32f1fe5f4dc040724f8342ea17ee0d6a9eeb4af": [
-    "Azure-RMSDocs\\develop\\supported-platforms.md"
-  ],
-  "979043d59c72c54e1896e4d2c3db291863607d1a": [
     "Azure-RMSDocs\\develop\\supported-platforms.md"
   ],
   "39ad7b9fa52e1a066b56c552ec33e7e8bb1e696c": [

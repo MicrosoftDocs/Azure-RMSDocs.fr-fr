@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: deb9a110-c098-4834-8319-05d5a28a0ccd
-
+ms.assetid: EC831494-7F2C-4C70-9063-B02CDDEA14EE
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Formats de fichier pris en charge
 
 L’API de fichier prend en charge les formats natif et Pfile.
@@ -39,7 +37,7 @@ La version actuelle de l’API de fichier prend en charge la protection native p
 
 Les administrateurs peuvent définir des clés de Registre pour déterminer si et comment les fichiers doivent être protégés selon leur extension de nom de fichier. Pour plus d’informations sur la configuration de la protection des fichiers avec l’API de fichier, consultez [Configuration de l’API de fichier](file-api-configuration.md).
 
-### Rubriques connexes
+## Rubriques connexes
 
 * [Notes du développeur](developer-notes.md)
 * [Configuration de l’API de fichier](file-api-configuration.md)
@@ -51,6 +49,6 @@ Les administrateurs peuvent définir des clés de Registre pour déterminer si e
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

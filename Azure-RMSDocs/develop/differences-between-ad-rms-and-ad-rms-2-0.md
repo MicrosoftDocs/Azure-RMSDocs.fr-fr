@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: ee4989d6-3903-4ed2-ac62-d5692e2ef494
-
+ms.assetid: 622D5C6E-07D5-4C71-A99D-9823C1FE6936
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Améliorations offertes par ce SDK
 Cette rubrique décrit comment Rights Management Services SDK 2.1 constitue une amélioration significative par rapport au Kit [Active Directory Rights Management Services SDK](https://msdn.microsoft.com/library/Cc530379) d’origine en termes d’effort de développement à fournir pour créer une application avec gestion des droits.
 
@@ -53,6 +51,6 @@ Le Kit AD RMS SDK tirant parti des fonctionnalités exposées par le client dans
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 376c08d9-51e8-46c9-b2d2-426f648f7e4d
-
+ms.assetid: F5CD72F6-D49A-4121-866F-3182CD980875
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Basculer vers l’environnement de production
 
 Cette section vous guide tout au long du processus de libération de votre application testée dans un environnement de production.
@@ -53,7 +51,7 @@ Les sections suivantes vous guident tout au long de ce processus.
   Cette rubrique décrit les options de déploiement pour votre application avec gestion des droits.
  
 
-### Rubriques connexes
+## Rubriques connexes
 
 * [Vue d'ensemble](ad-rms-overview.md)
 * [Utilisation de procédures](how-to-use-msipc.md)
@@ -62,6 +60,6 @@ Les sections suivantes vous guident tout au long de ce processus.
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

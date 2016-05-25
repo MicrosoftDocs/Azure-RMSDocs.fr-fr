@@ -2,7 +2,7 @@
 # required metadata
 
 title: Présentation des restrictions d’utilisation | Azure RMS
-description:
+description: Toutes les applications prenant en charge RMS doivent appliquer des restrictions d’utilisation.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 361bbc29-821f-4577-ace6-0aec799039a9
-
+ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Présentation des restrictions d’utilisation
+# Comprendre les restrictions d’utilisation
 
 Toutes les applications prenant en charge RMS doivent appliquer des restrictions d’utilisation. Une restriction d’utilisation est une condition qui se produit quand un utilisateur tente d’effectuer une action (par exemple, imprimer d’un document), alors que la stratégie RMS pour ce document ne lui accorde pas l’autorisation ou le droit nécessaire pour mener à bien cette action (par exemple, le droit PRINT).
 
@@ -51,7 +50,7 @@ Il est possible d’interroger les autorisations dont dispose un utilisateur sur
 
     Pour obtenir des conseils sur la mise en œuvre de droits spécifiques, consultez [Informations de référence sur les restrictions d’utilisation](usage-restriction-reference.md).
 
-### Rubriques connexes
+## Rubriques connexes
 
 * [Concepts de développement](ad-rms-concepts-nav.md)
 * [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
@@ -64,6 +63,6 @@ Il est possible d’interroger les autorisations dont dispose un utilisateur sur
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

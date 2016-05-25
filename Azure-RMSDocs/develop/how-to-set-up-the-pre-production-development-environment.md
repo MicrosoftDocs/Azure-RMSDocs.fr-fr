@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: bdb24446-d69f-435b-be39-a036540f7378
-
+ms.assetid: 4629ACAA-2A83-4697-B769-D649114D35E1
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Configuration de l’environnement de développement de préproduction
 
 Cette section vous guide tout au long du processus de configuration et d’exécution de votre application avec gestion des droits dans un environnement de test et de préproduction. Les rubriques suivantes expliquent comment configurer votre environnement de développement de préproduction. L’ordre dans lequel elles sont répertoriées suggère l’ordre dans lequel vous pouvez effectuer les tâches.
@@ -41,15 +39,15 @@ Cette section vous guide tout au long du processus de configuration et d’exéc
 |[Déboguer une application avec gestion des droits](debugging-applications-that-use-ad-rms.md)|La rubrique suivante indique comment déboguer une application et utiliser le journal des événements Windows.|
 
 
-### Rubriques connexes
+## Rubriques connexes
 
 * [Vue d'ensemble](ad-rms-overview.md)
-* [Utilisation des procédures](how-to-use-msipc.md)
+* [Utilisation de procédures](how-to-use-msipc.md)
  
 
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

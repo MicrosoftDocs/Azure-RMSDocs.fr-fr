@@ -118,7 +118,7 @@ Est-ce que cela existe ?
 
 ### Code inséré
 
-Ceci est un exemple de `in-line code`.
+Il s’agit d’un exemple de `in-line code`.
 
 ## Citation
 
@@ -127,7 +127,7 @@ Ceci est un exemple de `in-line code`.
 ## Images
 
 ### Image statique
-![ceci est le texte de remplacement](./media/AzRMS_elements.png)
+![il s’agit du texte de remplacement](./media/AzRMS_elements.png)
 
 ### Image liée
 
@@ -164,7 +164,19 @@ Ceci est un exemple de `in-line code`.
 > [!div class="button"]
 [liens de boutons](/azure-rms/index.html)
 
-### Sélecteur
+### Sélectionneur
+
+Texte de présentation : [!div class="op_single_selector"]
+- [aide](./develop/developers-guide.md)
+- [barre](./develop/developer-notes.md)
+
+Texte de présentation : [!div class="op_single_selector"]
+- [aide](./develop/developers-guide.md)
+- [barre](./develop/developer-notes.md)
+
+
+
+
 > [!div class="op_single_selector"]
 - [aide](./develop/developers-guide.md)
 - [barre](./develop/developer-notes.md)
@@ -179,6 +191,6 @@ Ceci est un exemple de `in-line code`.
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

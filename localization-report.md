@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 2
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 166
-[ In Sync Handback Files ](#insync-handback-success-list)| 45
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 165
+[ In Sync Handback Files ](#insync-handback-success-list)| 46
 [ Ignored Files ](#ignored-list)| 66
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -303,7 +303,6 @@
  [Azure-RMSDocs\rms-client\sharing-app-windows.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/rms-client/sharing-app-windows.md) | OutofSyncHandedBackSuccess | [Details](#39eebe7e99fce0eae612f87726764c6810351b77376)
  [Azure-RMSDocs\rms-client\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/1ccad6fa14e22c36013efa730e935fb27bf3f0e3/Azure-RMSDocs/rms-client/TOC.md) | OutofSyncHandedBackSuccess | [Details](#a59e742697f4cbee72e4d5e537a4483647dd2e18377)
  [Azure-RMSDocs\rms-client\use-client.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/rms-client/use-client.md) | OutofSyncHandedBackSuccess | [Details](#8c21202793dca90edda943082fcd718bdf7397ca378)
- [Azure-RMSDocs\scratch.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/4aa72824efd231285a1941ff1335437d24c83233/Azure-RMSDocs/scratch.md) | OutofSyncHandedBackSuccess | [Details](#47e2d48aeba95aba232a1c8a7f02df31d2604a6e379)
  [Azure-RMSDocs\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/5141bfecf0a9cd895980a647b91239848769d9e5/Azure-RMSDocs/TOC.md) | OutofSyncHandedBackSuccess | [Details](#6cb49518dbeef7122e355cd9b2edfb83722e1dba381)
  [Azure-RMSDocs\understand-explore\api-support.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/api-support.md) | OutofSyncHandedBackSuccess | [Details](#bb69cda94bf611712eb5b4a74d9ec25d1749da3a382)
  [Azure-RMSDocs\understand-explore\applications-support.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/16c2dbbce4234f41941bd3fd92d264df0ae685e2/Azure-RMSDocs/understand-explore/applications-support.md) | OutofSyncHandedBackSuccess | [Details](#15167c4e7dbe0fd401e198c80524b39e4ded250d383)
@@ -370,6 +369,7 @@
  [Azure-RMSDocs\includes\win8_client_1_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/win8_client_1_md.md) | InSyncHandedBackSuccess | [Details](#54b0789edc06c2f0735e554d0b6c010b32e896f7160)
  [Azure-RMSDocs\includes\win8_server_1.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/win8_server_1.md) | InSyncHandedBackSuccess | [Details](#c6a1c70d4bdc9367af817b843e529a7f9d2d3d33161)
  [Azure-RMSDocs\includes\win8_server_1_md.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/win8_server_1_md.md) | InSyncHandedBackSuccess | [Details](#25d07b17db2fd45050cf796606dd93b3a2b819ac162)
+ [Azure-RMSDocs\scratch.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/4aa72824efd231285a1941ff1335437d24c83233/Azure-RMSDocs/scratch.md) | InSyncHandedBackSuccess | [Details](#47e2d48aeba95aba232a1c8a7f02df31d2604a6e379)
  [Azure-RMSDocs\template.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/5b56229ad5e234663a23812b09a7f934d6738e5a/Azure-RMSDocs/template.md) | InSyncHandedBackSuccess | [Details](#e6106b0b5a5aa1039f7cbf5a35589216c5e540f3380)
  [template.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/3e96bf95d07a07b72f41853d6674180c45844e54/template.md) | InSyncHandedBackSuccess | [Details](#e6106b0b5a5aa1039f7cbf5a35589216c5e540f3402)
 
@@ -5556,18 +5556,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='47e2d48aeba95aba232a1c8a7f02df31d2604a6e379'></a> Source: [Azure-RMSDocs\scratch.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/4aa72824efd231285a1941ff1335437d24c83233/Azure-RMSDocs/scratch.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\scratch.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/75e556f5b6076f48826b6d1ebd0cfa7ebc2714e5/Azure-RMSDocs/scratch.md)
 * Handoff File: [scratch.fa4cad53100d924953d6bbe13ddd392558d629de.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/e025fa377b8bca6bcedeac1cb913f6ed3946fc7c/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/scratch.fa4cad53100d924953d6bbe13ddd392558d629de.fr-fr.xlf)
 * Handoff Datetime: 2016-04-27 21:28:56
 * Handoff Reason: Include
 * Archive File: [scratch.fa4cad53100d924953d6bbe13ddd392558d629de.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/d2f564198dd4a1d62e1ec5d04dc4cb6b692a7784/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/archive/scratch.fa4cad53100d924953d6bbe13ddd392558d629de.fr-fr.xlf)
 * Archive Datetime: 2016-05-21 18:40:29
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\scratch.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/86180cbff2d05ec2c5d7c551f0e57685296b5091/Azure-RMSDocs/scratch.md)
-* Current Handback File: [scratch.fa4cad53100d924953d6bbe13ddd392558d629de.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/90a5cfec1410fca9706ef28d1fa0e226dc1687d3/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/scratch.fa4cad53100d924953d6bbe13ddd392558d629de.fr-fr.xlf)
-* Current Handback Datetime: 2016-05-09 12:41:04
+* Handback File: [scratch.fa4cad53100d924953d6bbe13ddd392558d629de.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/a38819766ca5192001836aa2d725aedd731ae6c9/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/scratch.fa4cad53100d924953d6bbe13ddd392558d629de.fr-fr.xlf)
+* Handback Datetime: 2016-06-02 07:33:18
 * [Back to Top](#report-top)
 
 ##### <a name='e6106b0b5a5aa1039f7cbf5a35589216c5e540f3380'></a> Source: [Azure-RMSDocs\template.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/5b56229ad5e234663a23812b09a7f934d6738e5a/Azure-RMSDocs/template.md)

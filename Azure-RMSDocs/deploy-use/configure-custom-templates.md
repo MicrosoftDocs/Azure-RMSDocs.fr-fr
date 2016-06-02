@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/23/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,17 +26,20 @@ ms.suite: ems
 ---
 
 # Configuration de modèles personnalisés pour Azure Rights Management
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Après avoir [activé Azure Rights Management](activate-service.md) (Azure RMS), les utilisateurs peuvent automatiquement utiliser les deux modèles par défaut qui leur facilitent l’application de stratégies aux fichiers sensibles pour en restreindre l’accès aux utilisateurs autorisés de votre organisation. Ces deux modèles incluent les restrictions de stratégie de droits suivantes :
 
 -   Affichage en lecture seule du contenu protégé
 
-    -   Nom d’affichage : **&lt;nom_organisation&gt; - Affichage confidentiel uniquement**
+    -   Nom d’affichage : **&lt;nom de l’organisation&gt; - Affichage confidentiel uniquement**
 
     -   Autorisation spécifique : Afficher le contenu
 
 -   Autorisations de lecture ou de modification du contenu protégé
 
-    -   Nom d’affichage : **&lt;nom_l’organisation&gt; - Confidentiel**
+    -   Nom d’affichage : **&lt;nom de l’organisation&gt; - Confidentiel**
 
     -   Autorisations spécifiques : Afficher le contenu, Enregistrer le fichier, Modifier le contenu, Afficher les droits affectés, Autoriser les macros, Transférer, Répondre, Répondre à tous
 
@@ -69,6 +72,6 @@ Utilisez les informations suivantes pour vous aider à configurer et utiliser de
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO5-->
 
 

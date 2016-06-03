@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Vérification d'Azure Rights Management
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Après avoir activé [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) et effectué toutes les étapes de configuration supplémentaires nécessaires pour votre organisation, vous pouvez vérifier que le service fonctionne comme prévu en protégeant un fichier ou un e-mail associé à un compte d’utilisateur, puis en essayant d’ouvrir et d’utiliser ce contenu protégé à partir d’un autre compte d’utilisateur.
 
 Pour effectuer ce test, vous pouvez utiliser les informations contenues dans [Aide aux utilisateurs sur la protection de fichiers grâce à Azure Rights Management](help-users.md).
@@ -43,6 +46,6 @@ Vous pouvez contrôler l'usage de la protection des informations par votre organ
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

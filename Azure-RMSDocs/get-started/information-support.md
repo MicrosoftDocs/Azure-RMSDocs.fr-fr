@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,9 +26,12 @@ ms.suite: ems
 ---
 
 # Informations et support technique pour Azure Rights Management
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Pour plus d’informations sur Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS), consultez les ressources suivantes.
 
-|Pour effectuer cette opération...|.. procédez ainsi :|
+|Pour effectuer cette opération...|... procédez ainsi :|
 |----------------|---------------|
 |… lire la documentation la plus récente sur [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] →|Utilisez la bibliothèque de documentation pour [Azure Rights Management](../understand-explore/azure-rights-management.md)|
 |… formuler des commentaires ou poser une question sur la documentation →|Envoyez un message électronique à [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
@@ -47,8 +50,7 @@ Le groupe de produits Rights Management utilise le [Blog de l’équipe Microsof
 
 Vous pouvez utiliser la [balise de documents](http://blogs.technet.com/b/rms/archive/tags/docs/) et les annonces mensuelles relatives à la documentation pour vérifier l’existence de nouveaux articles et la mise à jour des articles existants.
 
-> [!TIP]
-> Si vous développez des applications pour Azure RMS ou AD RMS, vous pouvez également être intéressé par le [blog des développeurs d'Active Directory Rights Management Services (AD RMS)](http://blogs.msdn.com/b/rms/).
+> [!TIP] Si vous développez des applications pour Azure RMS ou AD RMS, vous pouvez également être intéressé par le [blog des développeurs d’Active Directory Rights Management Services (AD RMS)](http://blogs.msdn.com/b/rms/).
 
 ## Options de support technique et ressources de la communauté
 Les liens suivants fournissent des informations sur les options de support technique et de dépannage, et des ressources de la communauté :
@@ -69,6 +71,6 @@ Vous pouvez aussi accéder au [portail Microsoft Rights Management Services (RMS
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

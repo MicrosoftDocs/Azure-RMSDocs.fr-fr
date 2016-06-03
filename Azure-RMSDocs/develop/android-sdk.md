@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 9728c135-0e7f-4f5c-95ba-1db79e418080
-
+ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Configuration pour Android
+# Configuration pour Android
 
 Les applications Android peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations en utilisant Azure Active Directory Rights Management (AAD RM).
 
@@ -73,28 +72,28 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 -   Ouvrez l’environnement de développement Eclipse.
 -   Pour créer un projet d’application Android, dans le menu **Fichier**, cliquez sur **Nouveau**, cliquez sur **Projet**, puis sélectionnez **Projet d’application Android**.
 
-    ![](../media/Android-setup-01c.png)
+    ![Créez une application Android](../media/Android-setup-01c.png)
 
 -   Entrez le nom de l’application. Le nom du projet et le nom du package sont renseignés en fonction du nom de l’application.
 -   Cliquez sur **Suivant** et choisissez où vous voulez créer l’espace de travail.
 
-    ![](../media/Android-setup-02a.jpg)
+    ![Entrez le nom de l’application](../media/Android-setup-02a.jpg)
 
 -   Cliquez sur **Suivant** et sélectionnez une icône pour votre application.
 
-    ![](../media/Android-setup-03.png)
+    ![Sélectionnez une icône pour votre application](../media/Android-setup-03.png)
 
 -   Cliquez sur **Suivant** et sélectionnez **Activité vide** pour créer l’activité.
 
-    ![](../media/Android-setup-04.png)
+    ![Créez l’activité](../media/Android-setup-04.png)
 
 -   Cliquez sur **Suivant** et indiquez un nom pour l’activité. Vous pouvez laisser *MainActivity* comme nom par défaut avec un nom d’affichage *activity\_main*.
 
-    ![](../media/Android-setup-05a.jpg)
+    ![Spécifiez un nom pour l’activité](../media/Android-setup-05a.jpg)
 
 -   Cliquez sur **Terminer**.
 
-    ![](../media/Android-setup-06.jpg)
+    ![Terminez la création](../media/Android-setup-06.jpg)
 
 -   Votre projet a été créé, ainsi que la classe d’activité principale *MainActivity.java*.
 
@@ -105,21 +104,21 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
     Dans Eclipse, cliquez sur **Fichier**. Dans le menu **Fichier**, cliquez sur **Importer**. Dans la boîte de dialogue **Importer**, sélectionnez **Android / Code Android existant dans l’espace de travail**.
 
-    ![](../media/Android-setup-07.png)
+    ![Importez-le dans l’espace de travail](../media/Android-setup-07.png)
 
 -   Cliquez sur **Suivant**. Accédez au dossier où vous avez extrait *adrms\_android\_sdk.zip*. Le SDK doit apparaître dans la liste comme **com.microsoft.rightsmanagement**.
 
-    ![](../media/Android-setup-08c.jpg)
+    ![Naviguez pour sélectionner le dossier](../media/Android-setup-08c.jpg)
 
 -   Quand vous cliquez sur **Terminer**, le projet de SDK s’affiche comme frère de votre application précédemment créée.
 
-    ![](../media/Android-setup-09.jpg)
+    ![Le projet du SDK s’affiche en tant que frère de votre application](../media/Android-setup-09.jpg)
 
 -   Cliquez avec le bouton droit sur l’icône **Projet** et examinez les propriétés du projet.
 -   Accédez à l’onglet **Android**.
 -   Cliquez sur **Ajouter**, puis sélectionnez la bibliothèque *com.microsoft.rightsmanagement* à partir de l’espace de travail.
 
-    ![](../media/Android-setup-10b.jpg)
+    ![Ajoutez la bibliothèque](../media/Android-setup-10b.jpg)
 
 -   Cliquez sur **OK**.
 
@@ -127,7 +126,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
     Pour ajouter les autorisations, cliquez sur **Ajouter**, puis sélectionnez **Utilise les autorisations**.
 
-    ![](../media/Android-setup-11d.jpg)
+    ![Ajoutez des autorisations](../media/Android-setup-11d.jpg)
 
 -   Vous pouvez vérifier l’étape du manifeste en consultant le manifeste dans l’affichage de l’éditeur de texte. Vérifiez que les lignes suivantes s’affichent :
 
@@ -152,13 +151,13 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 [Terminologie et concepts du développement](core-concepts.md)
 
-[Informations de référence sur l’API Android](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement)
+[Informations de référence sur l’API Android](android-namespaces.md)
 
  
 
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

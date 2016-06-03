@@ -28,6 +28,9 @@ ms.suite: ems
 
 # Phase de migration 3 : Configuration des services de prise en charge
 
+*S’applique à : Active Directory Rights Management Services, Azure Rights Management*
+
+
 Utilisez les informations suivantes pour la Phase 3 de la migration d’AD RMS vers Azure Rights Management (Azure RMS). Ces procédures couvrent les étapes 6 à 7 de [Migration d’AD RMS vers Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
 
 
@@ -85,13 +88,13 @@ Enfin, pour cette étape, si vous avez importé plusieurs TPD dans Azure RMS, qu
 
 1.  Assurez-vous qu'aucun document n'est extrait des bibliothèques protégées par RMS. Les documents extraits deviendront inaccessibles à la fin de cette procédure.
 
-2.  Sur le site web Administration centrale de SharePoint, dans la section **Lancement rapide** , cliquez sur **Sécurité**.
+2.  Sur le site web Administration centrale de SharePoint, dans la section **Lancement rapide**, cliquez sur **Sécurité**.
 
-3.  Dans la page **Sécurité** , dans la section **Stratégie d'information** , cliquez sur **Configurer la gestion des droits relatifs à l'information**.
+3.  Dans la page **Sécurité**, dans la section **Stratégie d’information**, cliquez sur **Configurer la gestion des droits relatifs à l’information**.
 
-4.  Dans la page **Gestion des droits relatifs à l'information** , dans la section **Gestion des droits relatifs à l'information** , sélectionnez **Ne pas utiliser IRM sur ce serveur**, puis cliquez sur **OK**.
+4.  Dans la page **Gestion des droits relatifs à l’information**, dans la section **Gestion des droits relatifs à l’information**, sélectionnez **Ne pas utiliser IRM sur ce serveur**, puis cliquez sur **OK**.
 
-5.  Sur chaque ordinateur SharePoint Server, supprimez le contenu du dossier \ProgramData\Microsoft\MSIPC\Server\*&lt;SID du compte exécutant SharePoint Server.
+5.  Sur chaque ordinateur SharePoint Server, supprimez le contenu du dossier \ProgramData\Microsoft\MSIPC\Server\*&lt;SID du compte exécutant SharePoint Server&gt;*.
 
 #### Installation et configuration du connecteur RMS
 
@@ -216,8 +219,8 @@ L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS 
 Une fois ces procédures terminées, vous pouvez lire la section **Étapes suivantes** de l’article [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
 ## Étapes suivantes
-Pour poursuivre la migration, passez à la [Phase 4 - Tâches de post-migration](migrate-from-ad-rms-phase4.md).
+Pour poursuivre la migration, passez à la [Phase 4 : Tâches de post-migration](migrate-from-ad-rms-phase4.md).
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -27,28 +27,31 @@ ms.suite: ems
 
 
 # Azure RMS en action : ce que voient les utilisateurs et les administrateurs
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Cet article présente quelques exemples classiques illustrant comment les administrateurs et les utilisateurs voient et peuvent utiliser Azure Rights Management (Azure RMS) pour protéger des informations sensibles ou confidentielles.
 
 > [!NOTE]
 > Dans tous ces exemples où Azure RMS protège des données, le propriétaire du contenu continue à avoir un accès complet aux données (fichiers ou courrier électronique), même si la protection appliquée accorde des autorisations à un groupe dont le propriétaire n'était pas un membre, ou si la protection appliquée inclut une date d'expiration.
-> 
+>
 > De même, le service informatique peut toujours accéder aux données protégées sans restriction, en utilisant la fonctionnalité de super utilisateur de Rights Management, qui accorde un accès délégué aux utilisateurs autorisés ou aux services que vous spécifiez. En outre, le service informatique peut suivre et analyser l'utilisation des données protégées, par exemple, pour déterminer qui accède aux données et à quel moment.
 
-Pour d’autres captures d’écran et vidéos montrant RMS en action, consultez le [portail des services Microsoft Rights Management](http://www.microsoft.com/rms) et le [blog de l’équipe Microsoft Rights Management (RMS)](http://blogs.technet.com/b/rms).
+Pour obtenir d’autres captures d’écran et vidéos montrant RMS en action, consultez le [portail des services Microsoft Rights Management](http://www.microsoft.com/rms) et le [blog de l’équipe Microsoft Rights Management (RMS)](http://blogs.technet.com/b/rms).
 
 ## Activation et configuration de Rights Management
 Bien que vous puissiez utiliser Windows PowerShell pour activer et configurer Azure RMS, cela est plus facile à partir du portail de gestion. Dès que le service est activé, vous disposez de deux modèles par défaut permettant aux administrateurs et aux utilisateurs d'appliquer rapidement et facilement la protection des informations aux fichiers. Vous pouvez également créer vos propres modèles personnalisés afin d'avoir accès à des paramètres et options supplémentaires.
 
-![](../media/AzRMS_StoryboardActivate_small1.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 1](../media/AzRMS_StoryboardActivate_small1.png)
 
 
 **CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 1 :** pour activer RMS, vous pouvez utiliser le Centre d’administration Office 365 (première image) ou le portail Azure Classic (deuxième image).<br /><br />Un simple clic permet d'activer RMS et un autre de confirmer l'activation. Ensuite, la protection des informations est activée pour les administrateurs et les utilisateurs au sein de votre organisation.
 
 ---
 
-![](../media/AzRMS_TemplatesPortal_small.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 2](../media/AzRMS_TemplatesPortal_small.png)
 
-**CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 2 :** après l’activation, deux modèles de stratégie des droits sont automatiquement disponibles pour votre organisation. Un modèle est en lecture seule (**Affichage confidentiel uniquement** est inclus dans son nom), tandis que l’autre est accessible en lecture et en modification (**Confidentiel**).
+**CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 2 :** après l’activation, deux modèles de stratégie des droits sont automatiquement disponibles pour votre organisation. Un modèle est en lecture seule (**Affichage confidentiel uniquement** est inclus dans son nom), tandis que l’autre est accessible en lecture et en modification (**Confidentiel**)).
 
 Lorsque ces modèles sont appliqués à des fichiers ou à des messages électroniques, ils restreignent l'accès aux utilisateurs de votre organisation. Il s'agit d'un moyen très simple et rapide d'empêcher une fuite de données de votre organisation vers des personnes extérieures à celle-ci.
 
@@ -59,13 +62,13 @@ Si vous ne voulez pas que les utilisateurs puissent voir ces modèles, ou si vou
 
 ---
 
-![](../media/AzRMS_TemplatesSettings3.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 3](../media/AzRMS_TemplatesSettings3.png)
 
 **CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 3 :** l’accès hors connexion, les paramètres d’expiration et la publication (affichage dans les applications qui prennent en charge Rights Management) immédiate ou non du modèle figurent parmi les paramètres de configuration disponibles si vous décidez de créer vos propres modèles.
 
 ---
 
-![](../media/AzRMS_TemplatesPortal_ExplorerWord3.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 4](../media/AzRMS_TemplatesPortal_ExplorerWord3.png)
 
 **CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 4 :** suite à la publication de ces modèles, les utilisateurs peuvent sélectionner ceux-ci dans des applications telles que l’Explorateur de fichiers et Microsoft Word :
 
@@ -89,23 +92,23 @@ Cet exemple montre comment vous pouvez utiliser Azure RMS pour protéger automat
 
 Il existe de nombreuses façons d'appliquer des valeurs de classification à des fichiers. Par exemple, vous pouvez examiner le contenu des fichiers et appliquer en conséquence des classifications intégrées, telles que Confidentialité et Informations d'identification personnelle. Toutefois, dans cet exemple, un administrateur crée une classification personnalisée **Marketing** , qui est appliquée automatiquement à tous les documents utilisateur enregistrés dans le dossier **Marketing Promotions** . Bien que ce dossier soit protégé par des autorisations NTFS qui limitent l'accès aux membres du groupe Marketing, l'administrateur sait que ces autorisations peuvent être perdues si un membre de ce groupe déplace les fichiers ou les envoie par courrier électronique. Ensuite, des utilisateurs non autorisés pourraient accéder aux informations contenues dans les fichiers.
 
-![](../media/AzRMS_FCI_ConnectorSmall.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 1](../media/AzRMS_FCI_ConnectorSmall.png)
 
 **CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 1 :** l’administrateur installe et configure le connecteur RMS (Rights Management), qui joue le rôle de relais entre les serveurs locaux et Azure RMS.
 
 ---
 
-![](../media/AzRMS_ExampleFCI_ConfigurationSmall.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 2](../media/AzRMS_ExampleFCI_ConfigurationSmall.png)
 
 **CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 2 :** sur le serveur de fichiers, l’administrateur configure les règles et tâches de classification pour que tous les fichiers utilisateur enregistrés dans le dossier **Marketing Promotions** soient automatiquement classés sous la catégorie **Marketing** et protégés par un chiffrement RMS.
 
-Il sélectionne le modèle RMS personnalisé créé dans notre premier exemple, ce qui restreint l'accès aux membres des départements Ventes et Marketing : **Vente et Marketing - Lecture et impression uniquement**.
+Il sélectionne le modèle RMS personnalisé créé dans notre premier exemple, ce qui restreint l’accès aux membres des départements Ventes et Marketing : **Vente et Marketing - Lecture et impression uniquement**.
 
 Par conséquent, tous les documents de ce dossier sont automatiquement associés à la classification Marketing, et protégés par le modèle RMS Ventes et Marketing.
 
 ---
 
-![](../media/AzRMS_FCI_EmailSmall.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 3](../media/AzRMS_FCI_EmailSmall.png)
 
 **CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 3 :** voici comment RMS permet d’éviter une fuite de données vers des personnes qui ne doivent pas avoir accès à des informations sensibles ou confidentielles :
 
@@ -124,7 +127,7 @@ L'exemple précédent a montré comment protéger automatiquement des fichiers c
 
 Dans cet exemple, l'administrateur configure une stratégie permettant à l'organisation de rester en conformité avec les réglementations des États-Unis en matière de protection des informations d'identification personnelle, mais des règles peuvent également être définies en fonction d'autres règlements ou de prescriptions personnalisées que vous définissez.
 
-![](../media/AzRMS_DLPExample1.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 1](../media/AzRMS_DLPExample1.png)
 
 **CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 1 :** dans le Centre d’administration Exchange, le modèle Exchange nommé **Données relatives aux informations d’identification personnelles (PII) pour les États-Unis** permet de créer et de configurer une nouvelle stratégie DLP. Ce modèle recherche des informations telles que des numéros de sécurité sociale ou des numéros de permis de conduire dans les messages électroniques.
 
@@ -134,13 +137,13 @@ Ici, la règle est configurée pour utiliser un des modèles par défaut, **VanA
 
 ---
 
-![](../media/AzRMS_DLPUnprotectedEmail_small.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 2](../media/AzRMS_DLPUnprotectedEmail_small.png)
 
 **CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 2 :** le responsable du recrutement écrit un e-mail qui contient le numéro de sécurité sociale d’un employé embauché récemment. Il envoie ce message électronique à Sherrie du département Ressources humaines.
 
 ---
 
-![](../media/AzRMS_DLPProtectedEmail_small.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 3](../media/AzRMS_DLPProtectedEmail_small.png)
 
 **CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 3 :** si cet e-mail est envoyé ou transféré à quelqu’un extérieur à l’organisation, la règle DLP applique automatiquement la protection des droits.
 
@@ -152,7 +155,7 @@ Le message électronique est chiffré quand il quitte l'infrastructure de l'orga
 
 -   Pour plus d’informations sur le fonctionnement d’Azure RMS avec Exchange Online, consultez la section [Exchange Online et Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) dans [Comment les applications prennent en charge Azure Rights Management](applications-support.md).
 
--   Pour obtenir des instructions détaillées en vue de configurer Exchange Online pour Azure RMS, consultez [Exchange Online : configuration de la gestion des droits relatifs à l’information](../deploy-use/configure-office365.md#exchange-online-irm-configuration) dans [Configuration d’applications pour Azure Rights Management](../deploy-use/configure-applications.md).
+-   Pour obtenir des instructions détaillées pour configurer Exchange Online pour Azure RMS, consultez [Exchange Online : configuration de la gestion des droits relatifs à l’information](../deploy-use/configure-office365.md#exchange-online-irm-configuration) dans [Configuration d’applications pour Azure Rights Management](../deploy-use/configure-applications.md).
 
 ## Protection automatique de fichiers avec SharePoint Online et des bibliothèques protégées
 
@@ -160,13 +163,13 @@ Cela montre comment protéger facilement des documents lorsque vous utilisez Sha
 
 Dans cet exemple, l'administrateur SharePoint de Contoso a créé une bibliothèque pour chaque département, qui permet de stocker et d'extraire de façon centralisée des documents à des fins de modification et de contrôle de version. Par exemple, il existe une bibliothèque pour le département Ventes, une autre pour le département Marketing, une troisième pour le département Ressources humaines, et ainsi de suite. Quand un nouveau document est chargé ou créé dans une de ces bibliothèques protégées, ce document hérite de la protection de la bibliothèque (sans qu'il faille sélectionner un modèle de stratégie de droits). Il est alors automatiquement protégé et le reste, même s'il est déplacé hors de la bibliothèque SharePoint.
 
-![](../media/AzRMS_StoryboardSPO_small1.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 1](../media/AzRMS_StoryboardSPO_small1.png)
 
 **CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 1 :** l’administrateur active Information Rights Management pour le site SharePoint.
 
 ---
 
-![](../media/AzRMS_StoryboardSPO_small2.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 2](../media/AzRMS_StoryboardSPO_small2.png)
 
 **CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 2 :** ensuite, il active Rights Management pour une bibliothèque. Bien qu'il existe des options supplémentaires, ce simple paramètre est souvent suffisant.
 
@@ -174,7 +177,7 @@ Désormais, quand des documents sont téléchargés à partir de cette biblioth�
 
 ---
 
-![](../media/AzRMS_StoryboardSPO_small3.png)
+![CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 3](../media/AzRMS_StoryboardSPO_small3.png)
 
 **CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 3 :** quand une personne du département des ventes extrait ce rapport de la bibliothèque, la bannière d’informations affichée en haut du rapport lui indique clairement qu’il s’agit d’un document protégé dont l’accès est restreint.
 
@@ -186,7 +189,7 @@ Le document reste protégé, même si l'utilisateur le renomme, l'enregistre ail
 
 -   Pour plus d’informations sur le fonctionnement d’Azure RMS avec SharePoint, consultez la section [SharePoint Online et SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) dans [Comment les applications prennent en charge Azure Rights Management](applications-support.md).
 
--   Pour obtenir des instructions détaillées en vue de configurer SharePoint pour Azure RMS, consultez [SharePoint Online et OneDrive Entreprise : configuration de la gestion des droits relatifs à l’information](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) dans [Configuration d’applications pour Azure Rights Management](../deploy-use/configure-applications.md).
+-   Pour obtenir des instructions détaillées pour configurer SharePoint pour Azure RMS, consultez [SharePoint Online et OneDrive Entreprise : configuration de la gestion des droits relatifs à l’information](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) dans [Configuration d’applications pour Azure Rights Management](../deploy-use/configure-applications.md).
 
 ## Partage en toute sécurité de pièces jointes avec des utilisateurs mobiles
 
@@ -196,7 +199,7 @@ Cet exemple montre comment un utilisateur peut aisément partager un document av
 
 Dans cet exemple, Alice, de Contoso, envoie par courrier électronique un document Word confidentiel qu'elle adresse à Bob, de Fabrikam. Celui-ci lit le document sur son iPad, mais il pourrait tout aussi bien le lire sur un iPhone, une tablette ou un téléphone Android, un ordinateur Mac, ainsi qu'un téléphone ou un ordinateur Windows.
 
-![](../media/AzRMS_StoryboardEmail_small1.png)
+![CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 1](../media/AzRMS_StoryboardEmail_small1.png)
 
 **CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 1 :** sur son PC Windows, Alice crée un e-mail standard auquel elle joint un document.
 
@@ -206,7 +209,7 @@ Souhaitant que Bob puisse afficher et modifier le document, mais pas le copier o
 
 ---
 
-![](../media/AzRMS_StoryboardEmail_small2.png)
+![CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 2](../media/AzRMS_StoryboardEmail_small2.png)
 
 **CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 2 :** Bob voit l’e-mail sur son iPad.
 
@@ -214,17 +217,17 @@ En plus de la pièce jointe, le message d'Alice contient des instructions qu'il 
 
 ---
 
-![](../media/AzRMS_StoryboardEmail_small3.png)
+![CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 3](../media/AzRMS_StoryboardEmail_small3.png)
 
-**CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 3 :** Bob peut à présent ouvrir la pièce jointe. Il est d'abord invité à se connecter pour confirmer qu'il est bien le destinataire souhaité.
+**CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 3 :** Bob peut à présent ouvrir la pièce jointe. Il est d'abord invité à se connecter pour confirmer qu'il est bien le destinataire souhaité.
 
 Lorsque Bob consulte le document, il voit également les informations d'accès restreint qui lui indiquent qu'il peut afficher et modifier le document, mais pas le copier ou l'imprimer.
 
 ---
 
-![](../media/AzRMS_StoryboardEmail_small4.png)
+![CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 4](../media/AzRMS_StoryboardEmail_small4.png)
 
-**CE QUE LES ADMINISTRATEURS VOIENT À L’ÉTAPE 4 :** Alice reçoit un e-mail lui indiquant que Bob a ouvert avec succès le document qu’elle a envoyé, ainsi que le moment auquel il y a accédé.
+**CE QUE LES UTILISATEURS VOIENT À L’ÉTAPE 4 :** Alice reçoit un e-mail lui indiquant que Bob a ouvert avec succès le document qu’elle a envoyé, ainsi que le moment auquel il y a accédé.
 
 Si Bob transfère le message électronique avec la pièce jointe, ou l'enregistre dans un emplacement où d'autres personnes peuvent y accéder, ou si le message est intercepté sur le réseau, personne d'autre que lui n'est en mesure de lire le document.
 
@@ -240,6 +243,7 @@ Si Bob transfère le message électronique avec la pièce jointe, ou l'enregistr
 
 Après avoir vu ces quelques exemples de ce qu'Azure RMS peut faire, peut-être souhaitez-vous savoir comment il le fait. Pour obtenir des informations techniques sur le fonctionnement d’Azure RMS, consultez [Fonctionnement d’Azure RMS](how-does-it-work.md).
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Apr16_HO4-->
 
 

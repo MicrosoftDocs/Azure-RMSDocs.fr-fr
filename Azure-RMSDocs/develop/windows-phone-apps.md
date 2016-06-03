@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configuration pour Windows Phone | Azure RMS
-description:
+description: Les applications Windows Phone peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leurs applications.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 71119aa7-ffc6-46e0-82ae-0b3b614c2cad
-
+ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Configuration pour Windows Phone
+# Configuration pour Windows Phone
 
 
 Les applications Windows Phone peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations à l’aide d’Azure Active Directory Rights Management (AAD RM).
@@ -58,16 +57,16 @@ Passez en revue les informations contenues dans le guide de [développement Wind
 -   Cliquez sur **Fichier**. Dans le menu **Fichier**, cliquez sur **Nouveau**, puis sur **Projet**.
 -   Dans la boîte de dialogue **Nouveau projet**, sélectionnez **Visual C\#**, **Application vide (Windows Phone)**, puis cliquez sur **OK**.
 
-    ![](../media/wpsetup-newproj.png)
+    ![Créer un projet](../media/wpsetup-newproj.png)
 
 -   Dans l’Explorateur de solutions, cliquez avec le bouton droit sur votre projet, puis sélectionnez **Ajouter une référence** pour ouvrir la boîte de dialogue **Ajouter une référence**.
 
-    ![](../media/wpsetup-addref.png)
+    ![Ajouter une référence](../media/wpsetup-addref.png)
 
 -   Cliquez sur **Parcourir** dans l’angle inférieur gauche de la boîte de dialogue **Ajouter une référence**, puis sélectionnez le fichier *Microsoft.RightsManagment.dll* figurant dans le dossier dans lequel vous avez extrait le package.
--   **Applications gérées** : pour créer une application gérée, vous devez ajouter cette référence. Sélectionnez **Windows 8.1**-&gt;**Extensions**, puis cochez la case **Package Windows Visual C++ Runtime pour Windows**.
+-   **Applications gérées** : pour créer une application gérée, vous devez ajouter cette référence. Sélectionnez **Windows 8.1**-&gt;**Extensions**, puis cochez la case **Package Windows Visual C++ Runtime pour Windows**
 
-    ![](../media/wpsetup-refmngr.png)
+    ![Ajouter des extensions](../media/wpsetup-refmngr.png)
 
 -   **Ajout de fonctionnalités** : votre application a besoin de la fonctionnalité « Internet (client et serveur) » pour utiliser le SDK. Pour ajouter cette fonctionnalité à votre application, ouvrez le fichier *Package.appxmanifest* dans le projet et accédez à l’onglet **Fonctionnalités** pour l’ajouter.
 
@@ -97,6 +96,6 @@ Vous êtes maintenant prêt à créer vos propres applications Windows Phone.
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

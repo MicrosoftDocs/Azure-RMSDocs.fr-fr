@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Scénario - Configurer des dossiers de travail pour la protection permanente
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Ce scénario et la documentation utilisateur associée utilisent Azure Rights Management pour appliquer une protection permanente aux documents Office des [dossiers de travail](https://technet.microsoft.com/library/dn265974.aspx). Dossiers de travail utilise un service de rôle pour les serveurs de fichiers exécutant Windows Server qui offre aux utilisateurs une manière cohérente d’accéder à leurs fichiers professionnels depuis leurs PC et leurs appareils. Bien que Dossiers de travail fournisse son propre chiffrement pour protéger les fichiers, le déplacement de ces derniers en dehors de l’environnement Dossiers de travail entraîne la perte de cette protection. Les utilisateurs peuvent par exemple copier les fichiers synchronisés et les enregistrer sur un stockage qui n’est pas sous le contrôle de votre service informatique ou les fichiers sont envoyés par e-mail à d’autres personnes.
 
 La protection supplémentaire fournie par Azure Rights Management permet d’éviter la perte accidentelle de données en empêchant la consultation des fichiers par des personnes extérieures à votre organisation. Pour ce faire, vous pouvez utiliser un des modèles de stratégie de droits par défaut intégrés. Toutefois, avant de déployer ce scénario, vérifiez si les utilisateurs peuvent avoir légitimement besoin de partager ces fichiers avec des personnes extérieures à l’organisation. Par exemple, après avoir travaillé sur un projet de liste de prix, un utilisateur envoie par e-mail la version finale aux clients d’une autre organisation. Lorsque vous utilisez le modèle Rights Management par défaut pour Dossiers de travail, le client de l’autre organisation ne peut pas lire ce document envoyé par e-mail. Vous pouvez satisfaire à cette exigence en créant un modèle personnalisé qui permet aux utilisateurs d’appliquer une nouvelle stratégie de droits au fichier, qui remplace la restriction d’origine relative à tous les employés à une restriction concernant les personnes indiquées dans l’e-mail.
@@ -46,9 +49,9 @@ Les instructions conviennent pour l’ensemble des situations suivantes :
 -   Pour les fichiers qui doivent être partagés avec des personnes qui ne sont pas spécifiées dans le modèle de stratégie de droits (par exemple, les utilisateurs d’une autre organisation), les utilisateurs doivent appliquer une nouvelle stratégie de droits pour remplacer la protection de la stratégie de droits d’origine.
 
 ## Instructions de déploiement
-![](../media/AzRMS_AdminBanner.png)
+![Instructions destinées aux administrateurs pour le déploiement rapide Azure RMS](../media/AzRMS_AdminBanner.png)
 
-Vérifiez que les conditions suivantes sont réunies, puis suivez les instructions pour mener à bien les procédures associées avant de passer à la documentation utilisateur.
+Vérifiez que les conditions suivantes sont réunies, puis suivez les instructions pour mener à bien les procédures associées avant de poursuivre avec la documentation utilisateur.
 
 ## Conditions requises pour ce scénario
 Pour pouvoir appliquer les instructions de ce scénario, les conditions suivantes doivent être réunies :
@@ -57,7 +60,7 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
 |---------------|--------------------------------|
 |Azure Rights Management est activé|[Activation d'Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Vous avez synchronisé vos comptes d'utilisateurs Active Directory locaux avec Azure Active Directory ou Office 365, y compris leurs adresses électroniques. Cela est nécessaire pour tous les utilisateurs utilisant Dossiers de travail.|[Préparation pour Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Une des causes suivantes :<br /><br />Pour utiliser un modèle par défaut pour tous les utilisateurs qui ne leur permet pas d’appliquer une nouvelle stratégie de droits, consultez : Vous n’avez pas archivé le modèle par défaut **&lt;nom de l’organisation&gt; - Confidentiel**.<br /><br />Pour utiliser un modèle personnalisé qui permet aux utilisateurs d’appliquer une nouvelle stratégie de droits : utilisez les instructions ci-après pour créer un modèle personnalisé|[Configuration de modèles personnalisés pour Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|Une des causes suivantes :<br /><br />- Pour utiliser un modèle par défaut pour tous les utilisateurs qui ne leur permet pas d’appliquer une nouvelle stratégie de droits, consultez : Vous n’avez pas archivé le modèle par défaut **&lt;nom de l’organisation&gt; - Confidentiel**.<br /><br />- Pour utiliser un modèle personnalisé qui permet aux utilisateurs d’appliquer une nouvelle stratégie de droits : utilisez les instructions ci-après pour créer un modèle personnalisé|[Configuration de modèles personnalisés pour Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |Le connecteur Rights Management autorisé pour l’ordinateur Windows Server et configuré pour le rôle **Serveur ICF** est installé.|[Déploiement du connecteur Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
 |L'application de partage Rights Management est déployée sur les ordinateurs des utilisateurs qui exécutent Windows|[Déploiement automatique de l'application de partage Microsoft Rights Management](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 
@@ -101,7 +104,7 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
 
     2.  Pour l’action, choisissez **Chiffrement RMS**, puis sélectionnez un modèle :
 
-        -   Si vous n’avez pas créé de modèle personnalisé, car vous ne souhaitez pas que les utilisateurs puissent partager des fichiers avec des personnes extérieures à l’organisation, sélectionnez le nom du modèle de **&lt;nom de l’organisation&gt; - Confidentiel**. Par exemple **VanArsdel, Ltd - Confidentiel**.
+        -   Si vous n’avez pas créé de modèle personnalisé parce que vous ne souhaitez pas que les utilisateurs puissent partager des fichiers avec des personnes extérieures à l’organisation, sélectionnez le nom du modèle de **&lt;nom de l’organisation&gt; - Confidentiel**. Par exemple **VanArsdel, Ltd - Confidentiel**.
 
         -   Si vous avez créé un modèle personnalisé à l’aide des instructions précédentes, sélectionnez ce modèle. Par exemple : **Contenu protégé par Dossiers de travail**.
 
@@ -125,6 +128,6 @@ Si vous avez configuré le modèle personnalisé comme décrit pour ce scénario
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

@@ -27,7 +27,10 @@ ms.reviewer: mbaldwin
 
 # Client Azure RMS
 
+*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
-<!--HONumber=Apr16_HO3-->
+
+
+<!--HONumber=Apr16_HO4-->
 
 

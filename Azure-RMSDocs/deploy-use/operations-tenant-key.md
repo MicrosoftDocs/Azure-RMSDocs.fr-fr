@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Opérations pour votre clé de locataire Azure Rights Management
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Selon la typologie de votre clé de locataire (gérée par Microsoft ou par le client), différents niveaux de contrôle et de responsabilité sont disponibles pour votre clé de locataire Microsoft Azure Rights Management (Azure RMS) après l'implémentation de celle-ci.
 
 La gestion de votre propre clé de locataire est souvent appelée BYOK (Bring Your Own Key). Pour plus d’informations sur ce scénario et découvrir comment choisir entre les deux typologies de clé de locataire, consultez [Planification et implémentation de la clé de locataire Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
@@ -51,6 +54,6 @@ Après avoir identifié la typologie implémentée, sélectionnez l’une des se
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

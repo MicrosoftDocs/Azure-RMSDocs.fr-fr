@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Détermination des utilisateurs inscrits à RMS for Individuals
+
+*S’applique à : Azure Rights Management*
+
 En tant qu'administrateur, vous souhaitez sûrement savoir si vos utilisateurs se sont inscrits à RMS for individuals. Pour ce faire, utilisez une ou plusieurs des méthodes suivantes :
 
 -   Demandez aux utilisateurs comment ils protègent les fichiers hautement confidentiels, en particulier lorsqu'ils collaborent avec des personnes extérieures à l'organisation.
@@ -39,6 +42,6 @@ En tant qu'administrateur, vous souhaitez sûrement savoir si vos utilisateurs s
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

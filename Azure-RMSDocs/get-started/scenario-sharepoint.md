@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Scenario : garder le contrôle des documents stockés dans SharePoint
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour s’assurer que les documents Office stockés dans SharePoint restent sous votre contrôle en utilisant des bibliothèques protégées. Par exemple, les documents sont automatiquement protégés contre les fuites accidentelles ou volontaires par les utilisateurs et vous pouvez bloquer l’accès au contenu même après qu’il a été téléchargé ou synchronisé. Les fichiers que vous voulez protéger peuvent être destinés à des actions de collaboration interne sur des documents de conception ou des plans ou pour d’autres livrables. Quand vous configurez des bibliothèques protégées pour SharePoint, les fichiers Office qui y sont stockés sont protégés par Azure Rights Management.
 
 Les instructions conviennent pour l’ensemble des situations suivantes :
@@ -37,7 +40,7 @@ Les instructions conviennent pour l’ensemble des situations suivantes :
 -   Les employés n’ont pas besoin de partager ces documents avec des personnes extérieures à votre organisation.
 
 ## Instructions de déploiement
-![](../media/AzRMS_AdminBanner.png)
+![Instructions destinées aux administrateurs pour le déploiement rapide Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Vérifiez que les conditions suivantes sont remplies et que les procédures associées sont en place avant de poursuivre avec la documentation utilisateur.
 
@@ -71,18 +74,18 @@ En utilisant le modèle suivant, copiez et collez l’annonce dans une communica
 
 1.  Remplacez chaque instance de *&lt;nom de la bibliothèque SharePoint&gt;* par le nom et le lien de la bibliothèque SharePoint que vous avez configurée pour Azure Rights Management. Si cette communication concerne plusieurs bibliothèques protégées, modifiez les instructions en conséquence.
 
-2.  Si vous avez configuré l’option **Autoriser la protection de groupe. Groupe par défaut**, remplacez *&lt;nom du groupe&gt;* par le nom du groupe que vous avez configuré et indiquez dans la zone prévue à cet effet la raison pour laquelle ce groupe dispose des autorisations d’accès qui lui permettent de collaborer sur les fichiers, mais pas en utilisant la bibliothèque SharePoint. Si vous n’avez pas configuré cette option, supprimez cette phrase.
+2.  Si vous avez configuré l’option **Autoriser la protection de groupe. Groupe par défaut**, remplacez *&lt;nom du groupe&gt;* par le nom du groupe que vous avez configuré et indiquez dans la zone prévue à cet effet la &lt;raison pour laquelle ce groupe dispose des autorisations d’accès qui lui permettent de collaborer sur les fichiers, mais pas en utilisant la bibliothèque SharePoint&gt;. Si vous n’avez pas configuré cette option, supprimez cette phrase.
 
-3.  Remplacez *&lt;coordonnées&gt;* par des informations sur la façon dont vos utilisateurs peuvent contacter le support technique, par exemple, un lien de site web, une adresse de messagerie ou un numéro de téléphone.
+3.  Remplacez *&lt;coordonnées&gt;* par des instructions indiquant comment contacter le support technique, telles qu’un lien vers un site web, une adresse e-mail ou un numéro de téléphone.
 
 4.  Apportez les modifications supplémentaires que vous voulez éventuellement apporter à l’annonce, puis adressez-la à ces utilisateurs.
 
 L’exemple de documentation illustre la façon dont cette annonce se présente aux utilisateurs une fois vos personnalisations effectuées.
 
-![](../media/AzRMS_UsersBanner.png)
+![Modèle de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_UsersBanner.png)
 
 ### Annonce de l’équipe informatique : Modifications apportées au site &lt;nom de la bibliothèque SharePoint&gt;
-Le site SharePoint **&lt;nom de la bibliothèque SharePoint&gt;** est maintenant configuré pour une collaboration sécurisée. Désormais, seuls les membres du groupe &lt;nom du groupe&gt; peuvent ouvrir ces documents à partir de ce site, même si vous les enregistrez localement ou les envoyez par e-mail à quelqu’un d’autre. L’exception est que vous pouvez partager les documents avec les membres du groupe &lt;nom du groupe&gt; après les avoir téléchargés, raison pour laquelle ce groupe dispose des autorisations d’accès qui lui permettent de collaborer sur les fichiers, mais pas en utilisant la bibliothèque SharePoint. Lorsque vous modifiez un fichier, une bannière d’information de couleur jaune s’affiche en haut du document, indiquant qu’il est protégé et qui peut y accéder.
+Le site SharePoint **&lt;nom de la bibliothèque SharePoint&gt;** est maintenant configuré pour une collaboration sécurisée. Désormais, seuls les membres du groupe &lt;nom du groupe&gt; peuvent ouvrir ces documents à partir de ce site, même si vous les enregistrez localement ou les envoyez par e-mail à quelqu’un d’autre. L’exception est que vous pouvez partager les documents avec les membres du groupe &lt;nom du groupe&gt; après les avoir téléchargés, &lt;raison pour laquelle ce groupe dispose des autorisations d’accès qui lui permettent de collaborer sur les fichiers, mais pas en utilisant la bibliothèque SharePoint&gt;. Lorsque vous modifiez un fichier, une bannière d’information de couleur jaune s’affiche en haut du document, indiquant qu’il est protégé et qui peut y accéder.
 
 Cette modification permet de conserver les données confidentielles de notre entreprise hors de portée de personnes qui ne sont pas supposées y avoir accès. Si vous utilisez un appareil mobile pour accéder à ces documents protégés, vous pouvez les consulter, mais vous devez utiliser un appareil de bureau pour les modifier.
 
@@ -93,7 +96,7 @@ Vous ne pouvez pas charger des documents sur le site &lt;nom du site SharePoint&
 -   Contactez le support technique : &lt;coordonnées&gt;
 
 ### Exemple de documentation utilisateur
-![](../media/AzRMS_ExampleBanner.png)
+![Exemple de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_ExampleBanner.png)
 
 #### Annonce de l’équipe informatique : Modifications du site de rapports et de prévisions de ventes
 Le site SharePoint **Rapports et prévisions de ventes**est désormais configuré pour une collaboration sécurisée. À présent, seuls les membres de notre équipe Vente et Marketing peuvent ouvrir les documents provenant de ce site, même si vous les enregistrez localement ou les envoyez par e-mail à quelqu’un d’autre. L’exception est qu’après avoir téléchargé des documents, vous pouvez les partager avec des membres de l’équipe Finances afin qu’ils puissent en extraire les chiffres prévisionnels mensuels. Lorsque vous modifiez un fichier, une bannière d’information de couleur jaune s’affiche en haut du document, indiquant qu’il est protégé et qui peut y accéder.
@@ -108,6 +111,6 @@ Vous ne pouvez pas charger des documents sur le site Rapports et prévisions de 
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données
+
+*S’applique à : Azure Rights Management, Office 365*
+
 La fonctionnalité de super utilisateur de Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) garantit que les personnes et services autorisés peuvent toujours lire et inspecter les données qu’Azure RMS protège pour votre organisation. Si nécessaire, supprimez la protection ou modifiez la protection appliquée précédemment. Un super utilisateur possède toujours des droits de propriétaire complets pour toutes les licences d’utilisation octroyées par le client RMS de l’organisation. Cette capacité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise. Par exemple, vous pouvez utiliser cette fonctionnalité pour les scénarios suivants :
 
 -   Un employé quitte l’organisation et vous devez lire les fichiers qu’il a protégés.
@@ -66,7 +69,7 @@ L’extrait de journal suivant montre des exemples d’entrées lors de l’util
 ## Options de script pour les super utilisateurs
 Une personne désignée comme super utilisateur pour [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] devra souvent supprimer la protection de plusieurs fichiers, dans plusieurs emplacements. Bien qu’il soit possible de le faire manuellement, il est plus efficace (et souvent plus fiable) de le faire à l’aide d’un script. Pour cela, [téléchargez l’outil de protection RMS](http://www.microsoft.com/en-us/download/details.aspx?id=47256). Utilisez ensuite les applets de commande [Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) et [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx) en fonction des besoins.
 
-Pour plus d’informations sur ces applets de commande, voir [Applets de commande pour la protection RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+Pour plus d’informations sur ces applets de commande, consultez [Azure Rights Management Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx) (Applets de commande pour la protection Azure Rights Management).
 
 > [!NOTE]
 > Le module PowerShell RMSProtection inclus dans l’outil de protection RMS est différent du principal [module Windows PowerShell pour Azure Rights Management](administer-powershell.md) et le complète. Le module RMSProtection prend en charge Azure RMS et AD RMS.
@@ -74,6 +77,6 @@ Pour plus d’informations sur ces applets de commande, voir [Applets de command
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

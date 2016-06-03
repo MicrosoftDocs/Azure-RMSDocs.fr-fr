@@ -2,7 +2,7 @@
 # required metadata
 
 title: Présentation des chaînes de certificats | Azure RMS
-description:
+description: Une application avec gestion des droits nécessite une paire de clés publiques et une chaîne de certificats qui renvoie à un certificat Microsoft à la racine de confiance
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 14694cb0-adc4-4c2f-aff5-22aa132777df
-
+ms.assetid: 6AEA2162-82BF-4867-9285-111CD3FCD2F6
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Présentation des chaînes de certificats
+# Présentation des chaînes de certificats
 
 Le développement d’une application avec gestion des droits nécessite une paire de clés publiques et une chaîne de certificats qui renvoie à un certificat Microsoft à la racine de confiance.
 
@@ -49,7 +48,7 @@ Que vous ayez ou non utilisé un certificat de préproduction pendant le dévelo
 
 Pour plus d’informations sur l’utilisation de chaînes de certificats et la signature d’applications, consultez [Basculement vers l’environnement de production](switching-to-the-production-environment.md).
 
-### Rubriques connexes
+## Rubriques connexes
 
 * [Concepts de développement](ad-rms-concepts-nav.md)
 * [Basculement vers l’environnement de production](switching-to-the-production-environment.md)
@@ -58,6 +57,6 @@ Pour plus d’informations sur l’utilisation de chaînes de certificats et la 
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

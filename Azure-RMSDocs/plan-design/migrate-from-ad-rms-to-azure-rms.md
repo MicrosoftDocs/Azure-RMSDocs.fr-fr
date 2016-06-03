@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/06/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Migration d'AD RMS vers Azure Rights Management
+
+*S’applique à : Active Directory Rights Management Services, Azure Rights Management*
+
 Utilisez l'ensemble suivant d'instructions pour migrer votre déploiement Active Directory Rights Management Services (AD RMS) vers Azure Rights Management (Azure RMS). Après la migration, les utilisateurs auront toujours accès aux documents et messages électroniques que votre organisation a protégés à l'aide d'AD RMS, et le contenu nouvellement protégé utilisera Azure RMS.
 
 Vous n'êtes pas certain de l'opportunité de cette migration AD RMS pour votre organisation ?
@@ -42,13 +45,13 @@ Avant de procéder à la migration vers Azure RMS, assurez-vous que les conditi
 
     Toutes les versions d'AD RMS, de Windows Server 2008 à Windows Server 2012 R2, prennent en charge une migration vers Azure RMS :
 
-    - Windows Server 2008 (x86 ou x64)
+    - Windows Server 2008 (x86 ou x64)
 
     - Windows Server 2008 R2 (x64)
 
-    - Windows Server 2012 (x64)
+    - Windows Server 2012 (x64)
 
-    - Windows Server 2012 R2 (x64)
+    - Windows Server 2012 R2 (x64)
 
     Toutes les topologies AD RMS valides sont prises en charge :
 
@@ -58,12 +61,12 @@ Avant de procéder à la migration vers Azure RMS, assurez-vous que les conditi
 
     - Plusieurs forêts, plusieurs clusters RMS
 
-    **Remarque** : Par défaut, plusieurs clusters RMS migrent vers un seul locataire Azure RMS. Si vous souhaitez disposer de plusieurs clients RMS, vous devez les traiter comme des migrations différentes. Une clé d'un cluster RMS ne peut pas être importée dans plus d'un client Azure RMS.
+    **Remarque** : Par défaut, plusieurs clusters RMS migrent vers un seul client Azure RMS. Si vous souhaitez disposer de plusieurs clients RMS, vous devez les traiter comme des migrations différentes. Une clé d'un cluster RMS ne peut pas être importée dans plus d'un client Azure RMS.
 
 
 - **Toutes les configurations requises pour exécuter Azure RMS, y compris un client Azure RMS (non activé)**
 
-    Consultez [Conditions requises pour Azure Rights Management](../get-started/requirements-azure-rms.md).
+    Consultez [Configuration requise pour Azure Rights Management](../get-started/requirements-azure-rms.md).
 
     Bien que vous deviez disposer d'un client Azure RMS pour pouvoir migrer à partir d'AD RMS, nous vous recommandons de ne pas activer le service Rights Management avant d'avoir procédé à la migration. Le processus de migration inclut cette étape après l'exportation des clés et modèles à partir d'AD RMS, et leur importation dans Azure RMS. Toutefois, si Azure RMS est déjà activé, vous pouvez toujours migrer à partir d'AD RMS.
 
@@ -88,7 +91,7 @@ Avant de procéder à la migration vers Azure RMS, assurez-vous que les conditi
 
 Limitations :
 
--   Bien que le processus de migration prenne en charge la migration de votre clé de certificat de licence serveur (SLC) vers un module de sécurité matériel (HSM) pour Azure RMS, Exchange Online ne prend pas actuellement en charge cette configuration. Si vous souhaitez disposer de toutes les fonctionnalités d’IRM avec Exchange Online après la migration vers Azure RMS, votre clé de locataire Azure RMS doit être [gérée par Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-). Vous pouvez également exécuter l'IRM avec des fonctionnalités réduites dans Exchange Online quand vous gérez vous-même votre client Azure RMS (à l'aide de la solution BYOK). Pour plus d’informations sur l’utilisation d’Exchange Online avec Azure RMS, consultez l’[Étape 6. Configurer l’intégration de l’IRM pour Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online) dans ces instructions de migration.
+-   Bien que le processus de migration prenne en charge la migration de votre clé de certificat de licence serveur (SLC) vers un module de sécurité matériel (HSM) pour Azure RMS, Exchange Online ne prend pas actuellement en charge cette configuration. Si vous souhaitez disposer de toutes les fonctionnalités d’IRM avec Exchange Online après la migration vers Azure RMS, votre clé de locataire Azure RMS doit être [gérée par Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-). Vous pouvez également exécuter l'IRM avec des fonctionnalités réduites dans Exchange Online quand vous gérez vous-même votre client Azure RMS (à l'aide de la solution BYOK). Pour plus d’informations sur l’utilisation d’Exchange Online avec Azure RMS, consultez l’[Étape 6. Configurer l’intégration de l’IRM pour Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online) dans ces instructions de migration.
 
 -   Si vous disposez de logiciels et de clients non pris en charge avec Azure RMS, ceux-ci ne peuvent pas protéger ou utiliser du contenu protégé par Azure RMS. Consultez les sections relatives aux applications et aux clients pris en charge dans l’article [Conditions requises pour Azure Rights Management](../get-started/requirements-azure-rms.md).
 
@@ -167,7 +170,7 @@ Les neuf étapes de migration peuvent être divisés en quatre phases qui peuven
 
 [**PHASE 4 : TÂCHES DE POST-MIGRATION**](migrate-from-ad-rms-phase4.md )
 
-- **Étape : Désaffecter AD RMS**
+- **Étape 8 : Désaffecter AD RMS**
 
     Après avoir vérifié que tous les clients utilisent Azure RMS et n'accèdent plus aux serveurs AD RMS, vous pouvez désaffecter votre déploiement AD RMS.
 
@@ -182,6 +185,6 @@ Pour démarrer la migration, passez à la [Phase 1 : Configuration côté serv
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO1-->
 
 

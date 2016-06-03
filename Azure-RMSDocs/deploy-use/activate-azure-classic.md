@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/05/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Comment activer Azure Rights Management à partir du portail classique Azure
 
+*S’applique à : Azure Rights Management*
+
+
 Utilisez ces instructions si vous avez accès au portail Azure. Par exemple, vous avez un abonnement pour Enterprise Mobility Suite.
 
 > [!TIP]
@@ -34,21 +37,25 @@ Utilisez ces instructions si vous avez accès au portail Azure. Par exemple, vou
 
 1.  Après avoir créé votre compte Azure, [connectez-vous au portail Azure Classic](http://go.microsoft.com/fwlink/p/?LinkID=275081).
 
-2.  Dans le volet gauche, cliquez sur **Active Directory**.
+2.  Dans le volet gauche, cliquez sur **ACTIVE DIRECTORY**.
 
-3.  Dans la page **Active Directory** , cliquez sur **RIGHTS MANAGEMENT**.
+3.  Dans la page **active directory**, cliquez sur **RIGHTS MANAGEMENT**.
 
 4.  Sélectionnez l’annuaire à gérer pour [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], cliquez sur **ACTIVER**, puis confirmez.
 
-    > [!NOTE]
-    > Si vous voyez une erreur d’activation, il est possible que votre plan de services ou votre version de produit ne prenne pas en charge [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
-    >
-    > Utilisez les informations de [Abonnements cloud prenant en charge Azure RMS](../get-started/requirements-subscriptions.md) pour vérifier la prise en charge de RMS. Pour obtenir de l'aide, envoyez un courrier électronique à [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+---
+
+   REMARQUE : Si vous voyez une erreur d’activation, il est possible que votre plan de services ou votre version de produit n’inclue pas [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+
+   Utilisez les informations de [Abonnements cloud prenant en charge Azure RMS](../get-started/requirements-subscriptions.md) pour vérifier la prise en charge de RMS. Pour obtenir de l’aide, envoyez un message électronique à [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+
+---
+
 
 **Statut de Rights Management** doit désormais afficher l’état **Actif** et l’option **ACTIVER** est remplacée par **DÉSACTIVER**.
 
 ## Descriptions et valeurs d’état du service Rights Management dans le portail Azure Classic
-En plus de l'état **Actif** qui indique que le service Rights Management est activé et opérationnel, vous pouvez également voir les états **Inactif**, **Indisponible**ou **Non autorisé**.
+En plus de l’état **Actif** qui indique que le service Rights Management est activé et opérationnel, vous pouvez également voir les états **Inactif**, **Indisponible** ou **Non autorisé**.
 
 |Valeur d'état|Description|
 |----------------|---------------|
@@ -58,8 +65,8 @@ En plus de l'état **Actif** qui indique que le service Rights Management est ac
 |**Non autorisé**|Vous n’êtes pas autorisé à consulter l’état du service [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]. Par exemple, votre compte est verrouillé ou vous êtes l'administrateur global du locataire sélectionné.|
 
 ## Étapes suivantes
-Retour à [Activation d’Azure Rights Management](activate-service.md)
+Retour à [Activation d’Azure Rights Management](activate-service.md).
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO1-->
 
 

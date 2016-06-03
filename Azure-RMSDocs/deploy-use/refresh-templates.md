@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/06/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -27,14 +27,17 @@ ms.suite: ems
 
 
 # Actualisation des modèles pour les utilisateurs
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Quand vous utilisez Azure RMS, les modèles sont automatiquement téléchargés vers les ordinateurs clients pour que les utilisateurs puissent les sélectionner depuis leurs applications. En revanche, vous devrez peut-être effectuer d'autres étapes si vous apportez des modifications aux modèles :
 
 |Application ou service|Mode d'actualisation des modèles après des modifications|
 |--------------------------|---------------------------------------------|
-|Exchange Online|Configuration manuelle requise pour actualiser les modèles.<br /><br />Pour connaître les étapes de configuration, consultez la section suivante, [Exchange Online uniquement : Configurer Exchange pour télécharger des modèles personnalisés modifiés](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
+|Exchange Online|Configuration manuelle requise pour actualiser les modèles.<br /><br />Pour connaître les étapes de configuration, consultez la section suivante, [Exchange Online uniquement : Configurer Exchange pour télécharger des modèles personnalisés modifiés](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
 |Office 365|Actualisation automatique (aucune étape supplémentaire nécessaire).|
-|Office 2016 et Office 2013<br /><br />Application de partage RMS pour Windows|Actualisation automatique (d’après une planification) :<br /><br />Pour ces versions ultérieures d’Office : l’intervalle d’actualisation par défaut est de sept jours.<br /><br />Pour l’application de partage RMS pour Windows : à partir de la version 1.0.1784.0, l’intervalle d’actualisation par défaut est d’une journée. Les versions antérieures ont, par défaut, un intervalle d'actualisation de sept jours.<br /><br />Pour forcer une actualisation avant cette planification, consultez la section suivante, [Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié](#office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
-|Office 2010|Actualisation lors de la connexion des utilisateurs.<br /><br />Pour forcer une actualisation, demandez aux utilisateurs de se déconnecter, puis de se reconnecter ou forcez-les à le faire. Ou consultez la section [Office 2010 uniquement : Comment forcer une actualisation d’un modèle personnalisé modifié](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Office 2016 et Office 2013<br /><br />Application de partage RMS pour Windows|Actualisation automatique (d’après une planification) :<br /><br />Pour ces versions ultérieures d’Office : l’intervalle d’actualisation par défaut est de sept jours.<br /><br />Pour l’application de partage RMS pour Windows : à partir de la version 1.0.1784.0, l’intervalle d’actualisation par défaut est d’une journée. Les versions antérieures ont, par défaut, un intervalle d'actualisation de 7 jours.<br /><br />Pour forcer une actualisation avant cette planification, consultez la section suivante, [Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié](#office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Office 2010|Actualisation lors de la connexion des utilisateurs.<br /><br />Pour forcer une actualisation, demandez aux utilisateurs de se déconnecter, puis de se reconnecter ou forcez-les à le faire. Ou consultez la section [Office 2010 uniquement : Forcer une actualisation pour un modèle personnalisé modifié](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
 Pour les appareils mobiles qui utilisent l'application de partage RMS, les modèles sont automatiquement téléchargés (et actualisés au besoin) sans aucune qu'aucune configuration soit requise.
 
 ## Exchange Online uniquement : Comment configurer Exchange pour télécharger des modèles personnalisés modifiés
@@ -108,7 +111,7 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 
 1.  Dans l'un Éditeur du Registre, créez et définissez l'une des valeurs de Registre suivantes :
 
-    - Pour définir une fréquence de mise à jour en jours (au moins 1 jour) :  créez une valeur de Registre nommée **TemplateUpdateFrequency** , et définissez une valeur entière pour les données, spécifiant la fréquence en jours de téléchargement des modifications dans un modèle téléchargé. Utilisez le tableau suivant pour rechercher le chemin d'accès du Registre afin de créer cette nouvelle valeur de Registre.
+    - Pour définir une fréquence de mise à jour en jours (au moins 1 jour) :  créez une valeur de Registre nommée **TemplateUpdateFrequency** , et définissez une valeur entière pour les données, spécifiant la fréquence en jours de téléchargement des modifications dans un modèle téléchargé. Utilisez les informations suivantes pour rechercher le chemin du Registre pour créer cette nouvelle valeur de Registre.
 
         **Chemin de Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
@@ -116,16 +119,15 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 
         **Valeur** : TemplateUpdateFrequency
 
+    - Pour définir une fréquence de mise à jour en secondes (au moins 1 seconde) :  créez une valeur de Registre nommée **TemplateUpdateFrequencyInSeconds** , et définissez une valeur entière pour les données, spécifiant la fréquence en secondes de téléchargement des modifications dans un modèle téléchargé. Utilisez les informations suivantes pour rechercher le chemin du Registre pour créer cette nouvelle valeur de Registre.
 
-    - To set an update frequency in seconds (minimum of 1 second):  Create a new registry value named **TemplateUpdateFrequencyInSeconds** and define an integer value for the data, which specifies the frequency in seconds to download any changes to a downloaded template. Use the following table to locate the registry path to create this new registry value.
+        **Chemin de Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-        **Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
+        **Type :** REG_DWORD
 
-        **Type:** REG_DWORD
+        **Valeur :** TemplateUpdateFrequencyInSeconds
 
-        **Value:** TemplateUpdateFrequencyInSeconds
-
-    Make sure that you create and set one of these registry values, not both. If both are present, **TemplateUpdateFrequency** is ignored.
+    Assurez-vous que vous créez et définissez l'une de ces valeurs de Registre, pas les deux. Si les deux sont présentes, **TemplateUpdateFrequency** est ignoré.
 
 2.  Si vous souhaitez forcer une actualisation immédiate des modèles, passez à la procédure suivante. Dans le cas contraire, redémarrez maintenant vos applications et instances Office de l'Explorateur de fichiers.
 
@@ -190,6 +192,6 @@ En modifiant le Registre sur les ordinateurs qui exécutent Office 2010, vous po
 ## Voir aussi
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO1-->
 
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Application de partage Rights Management : Installation et configuration pour les clients | Azure RMS
+title: Application de partage Rights Management &colon; installation et configuration pour les clients | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Application de partage Rights Management : installation et configuration pour les clients
+
+*S’applique à : Azure Rights Management, Office 365*
+
 L'application de partage Rights Management (RMS) est requise pour permettre aux ordinateurs client d'utiliser Azure RMS avec Office 2010, et est recommandée pour tous les ordinateurs et appareils mobiles prenant en charge Azure RMS. L'application de partage RMS s'intègre aux applications Office via l'installation d'un complément Office, afin de permettre aux utilisateurs de protéger facilement des fichiers et e-mails directement depuis le ruban. Elle offre également une protection générique pour les types de fichiers qui ne sont pas pris en charge de manière native par Azure RMS, et un site de suivi de documents permettant aux utilisateurs de suivre et de révoquer les fichiers qu'ils ont protégés.
 
 ## Application de partage RMS pour Windows : installation et configuration
@@ -45,6 +48,6 @@ Pour installer l'application de partage RMS pour plateformes mobiles, vous pouve
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

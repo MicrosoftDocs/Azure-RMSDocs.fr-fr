@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,9 +26,14 @@ ms.suite: ems
 ---
 
 # Feuille de route pour le déploiement d’Azure Rights Management
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Procédez comme suit pour préparer, implémenter et gérer Azure Rights Management (Azure RMS) pour votre organisation.
 
 Toutefois, si vous souhaitez uniquement tester rapidement Azure RMS pour vous-même, au lieu de le déployer dans un environnement de production, consultez [Didacticiel de démarrage rapide pour Azure Rights Management](../get-started/quick-start-tutorial.md).
+
+Pour obtenir une liste de scénarios spécifiques et les étapes de configuration et la documentation utilisateur final associés, consultez le [Guide de déploiement rapide pour Azure Rights Management](../get-started/rapid-deployment-guide.md).
 
 > [!IMPORTANT]
 > Avant de suivre les étapes ci-dessous, prenez le temps de consulter [Conditions requises pour Azure Rights Management](../get-started/requirements-azure-rms.md).
@@ -60,10 +65,14 @@ La configuration de vos applications et services peut inclure l’installation d
 
 Si vous avez des services informatiques, tels que des solutions de protection contre la perte de données (DLP), des passerelles de chiffrement de contenu (CEG) et d’autres logiciels anti-programme malveillant, qui sont chargés d’inspecter les fichiers qu’Azure RMS doit protéger, configurez les comptes de service en tant que super utilisateurs pour Azure RMS. Pour plus d’informations, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../deploy-use/configure-super-users.md).
 
+Pour pouvoir protéger ou ôter la protection en bloc de tous les types de fichiers, installez l’outil de protection RMS, qui utilise le module PowerShell de protection RMS. Pour plus d’informations, consultez [Applets de commande de Protection RMS](https://msdn.microsoft.com/library/mt433195.aspx).
+
 Si vous voulez utiliser des services locaux avec Azure Rights Management, installez et configurez le connecteur Microsoft Rights Management. Pour plus d’informations, consultez [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
 ## Étape 4 : Publier et utiliser du contenu protégé par des droits
 Vous êtes maintenant prêt à publier et à consommer du contenu protégé, ainsi qu'à journaliser la manière dont votre entreprise utilise Rights Management. Pour plus d’informations, consultez [Aider les utilisateurs à protéger des fichiers en utilisant Azure Rights Management](../deploy-use/help-users.md) et [Journalisation et analyse de l’utilisation d’Azure Rights Management](../deploy-use/log-analyze-usage.md).
+
+Si vous êtes intéressé par la protection automatique des fichiers à l’aide de l’infrastructure de classification des fichiers sur un serveur de fichiers Windows, consultez [Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server](../rms-client/configure-fci.md).
 
 ## Étape 5 : administrer la Gestion des droits pour votre compte de locataire selon les besoins
 Quand vous commencez à utiliser [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], le module [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] pour Windows PowerShell peut s’avérer utile pour automatiser les changements administratifs ou générer des scripts sur ces changements. Pour plus d’informations, consultez [Administration d’Azure Rights Management à l’aide de Windows PowerShell](../deploy-use/administer-powershell.md).
@@ -71,6 +80,6 @@ Quand vous commencez à utiliser [!INCLUDE[aad_rightsmanagement_2](../includes/a
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

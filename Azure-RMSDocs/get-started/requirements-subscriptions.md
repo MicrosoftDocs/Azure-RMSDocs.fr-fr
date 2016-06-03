@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Conditions requises pour Azure RMS : abonnements cloud qui prennent en charge Azure RMS
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Pour utiliser Azure Rights Management (Azure RMS), votre organisation doit être titulaire d’au moins un des abonnements suivants, avec un nombre suffisant de licences pour les utilisateurs et des services qui protègent les fichiers et les messages électroniques. Si vous avez un service qui applique une protection pour les utilisateurs (propriétaires des fichiers ou des messages électroniques), ces utilisateurs doivent avoir une de ces licences. Les utilisateurs qui se contentent de consommer (par exemple, lire et modifier) ces données protégées n’ont pas besoin de licence
 
 -   Office 365
@@ -39,7 +42,7 @@ Pour utiliser Azure Rights Management (Azure RMS), votre organisation doit être
 
 Pour plus d’informations et d’options d’inscription, voir les sections suivantes.
 
-Pour une comparaison des licences des fonctionnalités Azure RMS pour les abonnements payants, consultez [Comparaison des offres Rights Management Services (RMS)](http://technet.microsoft.com/dn858608).
+Pour une comparaison des licences des fonctionnalités Azure RMS pour les abonnements payants, consultez [Comparison of Rights Management Services (RMS) Offerings](http://technet.microsoft.com/dn858608) (Comparaison des offres Rights Management Services (RMS)).
 
 Avez-vous d’autres questions sur les licences pour Azure RMS ? Téléchargez le **FAQ sur les licences pour Azure Rights Management** à partir de la page [Achat d’Azure Rights Management](https://www.microsoft.com/en-us/server-cloud/products/azure-rights-management/Purchasing.aspx). 
 
@@ -53,8 +56,8 @@ Abonnement  |Inclut IRM
 Office 365 Business Essentials|Non|
 Office 365 Business Premium|Non|
 Office 365 Entreprise E1 <br /><br /> Office 365 Éducation A1|Non <br /><br /> Non|
-Office 365 Entreprise E3 <br /><br /> Office 365 Éducation A3 <br /><br /> Office 365 Secteur Public G3|Oui <br /><br /> Oui <br /><br /> Oui|
-Office 365 Entreprise E4 <br /><br /> Office 365 Éducation A4 <br /><br /> Office 365 Secteur public G4|Oui <br /><br /> Oui <br /><br /> Oui|
+Office 365 Entreprise E3 <br /><br /> Office 365 Éducation A3 <br /><br /> Office 365 Secteur Public G3|Oui <br /><br /> Oui <br /><br /> Oui|
+Office 365 Entreprise E4 <br /><br /> Office 365 Éducation A4 <br /><br /> Office 365 Secteur public G4|Oui <br /><br /> Oui <br /><br /> Oui|
 Office 365 Entreprise E5 <br /><br /> Office 365 Éducation A5|Oui <br /><br /> Oui|
 Office 365 Entreprise K1|Non|
 SharePoint plan 1 <br /><br /> SharePoint plan 2|Non <br /><br /> Non|
@@ -76,9 +79,9 @@ Pour plus d’informations sur l’abonnement Azure Rights Management Premium, c
 Cet abonnement inclut aussi une période d’essai pour vous permettre de tester gratuitement Azure RMS (25 utilisateurs). 
 
 ### Que se passe-t-il lorsque l’abonnement d’essai arrive à expiration ?
-Si votre abonnement d’essai arrive à expiration, vous n’aurez plus accès au contenu qui a été protégé en utilisant votre abonnement d’essai Azure RMS. Cependant, l’accès est automatiquement restauré si vous achetez un abonnement qui prend en charge Azure RMS.
+Si votre abonnement d’essai arrive à expiration, vous n’avez plus accès au contenu qui a été protégé dans le cadre de votre abonnement d’essai à Azure RMS. Cependant, l’accès est automatiquement restauré si vous achetez un abonnement qui prend en charge Azure RMS.
 
-La seule exception qui vous permet de ne pas perdre l’accès quand votre abonnement arrive à expiration est si votre organisation a utilisé Azure RMS avec un abonnement RMS for individuals avant d’avoir obtenu l’abonnement d’évaluation. Dans ce cas, l’accès au contenu auparavant protégé est conservé, même après l’expiration de l’abonnement d’évaluation.
+La seule exception qui vous permet de ne pas perdre l’accès quand votre abonnement arrive à expiration est si votre organisation a utilisé Azure RMS avec un abonnement RMS for individuals avant l’obtention de l’abonnement d’évaluation. Dans ce cas, l’accès au contenu auparavant protégé est conservé, même après l’expiration de l’abonnement d’évaluation.
 
 ## Abonnement Enterprise Mobility Suite
 [Version d’évaluation gratuite de 30 jours](http://go.microsoft.com/fwlink/?LinkId=615385)
@@ -94,6 +97,6 @@ Pour plus d’informations, consultez [RMS for individuals et Azure Rights Manag
 ## Étapes suivantes
 Pour vérifier les autres conditions requises, consultez [Conditions requises pour Azure Rights Management](requirements-azure-rms.md).
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

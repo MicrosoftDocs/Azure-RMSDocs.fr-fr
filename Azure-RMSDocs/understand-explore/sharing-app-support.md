@@ -27,7 +27,10 @@ ms.suite: ems
 
 
 # Application de partage RMS pour Windows et les plateformes mobiles
-L’application de partage RMS est une application téléchargeable gratuitement qui est nécessaire pour prendre en charge Office 2010, mais également recommandée pour les ordinateurs Windows et Mac, ainsi que les appareils mobiles. L’un de ses avantages est qu’elle est capable d’appliquer une protection générique aux applications et fichiers qui ne prennent pas en charge [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] de manière native, ce qui signifie que tous les fichiers peuvent être protégés. Pour plus d’informations sur les différents niveaux de protection, voir la section [Niveaux de protection : natif et générique](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) du [Guide de l’administrateur de l’application de partage Rights Management](../rms-client/sharing-app-admin-guide.md).
+
+*S’applique à : Azure Rights Management, Office 365*
+
+L’application de partage RMS est une application téléchargeable gratuitement qui est nécessaire pour prendre en charge Office 2010, mais également recommandée pour les ordinateurs Windows et Mac, ainsi que les appareils mobiles. L’un de ses avantages est qu’elle est capable d’appliquer une protection générique aux applications et fichiers qui ne prennent pas en charge [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] de manière native, ce qui signifie que tous les fichiers peuvent être protégés. Pour plus d’informations sur les différents niveaux de protection, consultez la section [Niveaux de protection : natif et générique](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) du [Guide de l’administrateur de l’application de partage Rights Management](../rms-client/sharing-app-admin-guide.md).
 
 Lorsque les utilisateurs protègent leurs fichiers à l’aide de l’application de partage RMS, ils peuvent également suivre les documents protégés et, si nécessaire, révoquer l’accès à ceux-ci. Ils doivent pour cela utiliser le [site de suivi des documents](http://go.microsoft.com/fwlink/?LinkId=529562).
 
@@ -39,7 +42,7 @@ Pour les ordinateurs Windows, l’application de partage RMS s’intègre discr�
 
 -   Une visionneuse pour ouvrir des fichiers qui ont été protégés par [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]. Cette visionneuse est automatiquement appelée quand aucune autre application installée n’est capable d’ouvrir le fichier protégé.
 
--   Une configuration principale d’Office 2010 qui permet à Word, Excel, PowerPoint et Outlook inclus dans cette suite de fonctionner de manière transparente avec [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
+-   Une configuration principale d’Office 2010 qui permet à Word, Excel, PowerPoint et Outlook inclus dans cette suite de fonctionner de manière transparente avec [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
 
 Bien que l’application de partage RMS pour Windows puisse être téléchargée et installée pour un seul ordinateur via la page [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970), elle prend également en charge un déploiement d’entreprise avec une installation sans assistance et une configuration personnalisée. Pour plus d’informations, consultez les ressources suivantes :
 
@@ -61,6 +64,6 @@ Pour voir comment d’autres applications et services prennent en charge Azure R
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

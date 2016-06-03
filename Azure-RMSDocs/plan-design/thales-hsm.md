@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Informations complémentaires sur les modules de sécurité matériels Thales et les compléments Microsoft
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Azure RMS utilise des modules de sécurité matériels Thales pour protéger vos clés quand vous gérez votre propre clé de client (le scénario Bring your own key ou BYOK).
 
 Thales e-Security est l'un des principaux fournisseurs mondiaux de solutions de chiffrement de données et de cybersécurité pour les secteurs des services financiers, de la haute technologie, de la fabrication, du gouvernement et de la technologie. Avec 40 ans d'expérience en matière de protection des informations pour les sociétés et les gouvernements, les solutions Thales sont utilisées par quatre des cinq plus grandes sociétés de l'énergie et de l'aérospatial et 22 pays de l'OTAN, et sécurisent plus de 80 % des transactions de paiement dans le monde.
@@ -36,6 +39,6 @@ Pour plus d'informations, reportez-vous à la page relative aux [modules de séc
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

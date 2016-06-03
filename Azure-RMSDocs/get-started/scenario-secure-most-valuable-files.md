@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Scénario - Sécuriser vos fichiers les plus précieux
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Ce scénario et la documentation utilisateur associé utilisent Azure Rights Management pour protéger de manière manuelle et personnalisée un certain nombre de fichiers que vous considérez comme les plus précieux, qui assure le plus haut niveau de protection qui soit contre tout accès non autorisé. Il s’agit généralement de fichiers auxquels seules quelques personnes doivent pouvoir accéder. Par exemple, les instructions relatives à la recette d’un produit alimentaire distinctif de votre société ou des plans de reprise qui ne doivent pas être rendus publics avant une date définie.
 
 Les instructions conviennent pour l’ensemble des situations suivantes :
@@ -43,16 +46,16 @@ Les instructions conviennent pour l’ensemble des situations suivantes :
 -   L’administrateur doit être en mesure de savoir qui accède aux fichiers et à quel moment et de bloquer l’accès si nécessaire.
 
 ## Instructions de déploiement
-![](../media/AzRMS_AdminBanner.png)
+![Instructions destinées aux administrateurs pour le déploiement rapide Azure RMS](../media/AzRMS_AdminBanner.png)
 
-Vérifiez que les conditions suivantes sont réunies, puis suivez les instructions pour mener à bien les procédures associées avant de passer à la documentation utilisateur.
+Vérifiez que les conditions suivantes sont réunies, puis suivez les instructions pour mener à bien les procédures associées avant de poursuivre avec la documentation utilisateur.
 
 ## Conditions requises pour ce scénario
 Pour ce scénario, les éléments suivants doivent être en place :
 
 |Configuration requise|Si vous avez besoin d’informations supplémentaires|
 |---------------|--------------------------------|
-|Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory.<br /><br />Un groupe nommé **Accès privilégié** ayant accès aux e-mails, qui contient les personnes devant avoir accès à ces documents hautement confidentiels<br /><br />Un groupe nommé **Responsables de la conformité informatique** ayant accès aux e-mails, qui contient les personnes dont le travail inclut eDiscovery, la surveillance et l’audit<br /><br />Un groupe nommé **Administrateurs RMS** et tous les administrateurs chargés de configurer Azure RMS sont membres de ce groupe|[Préparation pour Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory.<br /><br />- Un groupe nommé **Accès privilégié** ayant accès aux e-mails, qui contient les personnes devant avoir accès à ces documents hautement confidentiels<br /><br />- Un groupe nommé **Responsables de la conformité informatique** ayant accès aux e-mails, qui contient les personnes dont le travail inclut eDiscovery, la surveillance et l’audit<br /><br />- Un groupe nommé **Administrateurs RMS** et tous les administrateurs chargés de configurer Azure RMS sont membres de ce groupe|[Préparation pour Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management est activé|[Activation d'Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Vous avez configuré un modèle personnalisé comme décrit ci-après|[Configuration de modèles personnalisés pour Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |L’application de partage Rights Management est déployée sur votre ordinateur Windows afin que vous puissiez protéger ces fichiers sur place, comme décrit dans la section suivante|[Télécharger et installer l'application de partage Rights Management](https://technet.microsoft.com/library/dn574734%28v=ws.10%29.aspx)|
@@ -91,8 +94,7 @@ Pour ce scénario, les éléments suivants doivent être en place :
 
 Pour en savoir plus sur la protection des fichiers sur place, consultez [Protéger un fichier sur un appareil (protéger sur place) à l’aide de l’application de partage Rights Management](https://technet.microsoft.com/library/dn574733%28v=ws.10%29.aspx).
 
-> [!TIP]
-> Si le nombre de fichiers à protéger est trop important pour ce processus manuel, envisagez d’utiliser l’[outil Protection RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256) pour protéger en bloc les fichiers avec le modèle.
+> [!TIP] Si le nombre de fichiers à protéger est trop important pour ce processus manuel, utilisez l’[outil Protection RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256) pour protéger en bloc les fichiers avec le modèle.
 
 ### Pour surveiller et si nécessaire, révoquer l’accès aux fichiers
 
@@ -109,13 +111,13 @@ En utilisant le modèle suivant, copiez et collez l’annonce dans une communica
 
 1.  Fournissez les noms réels des fichiers ou utilisez une référence claire que les utilisateurs autorisés comprendront.
 
-2.  Remplacez *&lt;coordonnées&gt;* par des instructions portant sur la façon dont ces utilisateurs peuvent contacter le support technique ou le service informatique via un canal de support par réaffectation en fonction de l’importance de ces documents. Par exemple, indiquez un numéro de téléphone joignable 24 heures sur 24 pour les appels du support technique très importants.
+2.  Remplacez *&lt;coordonnées&gt;* par des instructions expliquant comment ces utilisateurs peuvent contacter le support technique ou le service informatique par le biais d’un canal de support par réaffectation en fonction de l’importance de ces documents. Par exemple, indiquez un numéro de téléphone joignable 24 heures sur 24 pour les appels du support technique très importants.
 
 3.  Apportez les modifications supplémentaires que vous voulez éventuellement apporter à l’annonce, puis adressez-la à ces utilisateurs.
 
 L’exemple de documentation illustre la façon dont cette annonce se présente aux utilisateurs une fois vos personnalisations effectuées.
 
-![](../media/AzRMS_UsersBanner.png)
+![Modèle de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_UsersBanner.png)
 
 ### Annonce de l’équipe informatique : Protection des documents ultraconfidentiels de &lt;nom de l’organisation&gt;
 Un niveau de protection très élevé est désormais appliqué à ces fichiers de sorte qu’ils sont accessibles et modifiables uniquement par les &lt;utilisateurs avec accès restreint&gt;. Pour les protéger contre tout accès non autorisé, votre application demandera automatiquement une autorisation chaque fois que vous ouvrirez ces fichiers. Vous devez donc disposer d’une connexion Internet. Il se peut que vos informations d’identification vous soient demandées :
@@ -131,7 +133,7 @@ Un niveau de protection très élevé est désormais appliqué à ces fichiers d
 -   Si vous ne pouvez pas accéder à ces fichiers, ou si vous remarquez des modifications suspectes dans les fichiers &lt;action et coordonnées&gt;.
 
 #### Exemple de documentation utilisateur personnalisée
-![](../media/AzRMS_ExampleBanner.png)
+![Exemple de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_ExampleBanner.png)
 
 ##### Annonce de l’équipe informatique : Protection des documents ultraconfidentiels de VanArsdel
 Un niveau de protection très élevé est désormais appliqué à ces fichiers de sorte que seules les personnes figurant sur la liste des destinataires de ce message peuvent y accéder et les modifier. Pour les protéger contre tout accès non autorisé, vos applications demanderont automatiquement une autorisation chaque fois que vous ouvrirez ces fichiers. Vous devez donc disposer d’une connexion Internet pour les ouvrir. Il se peut que vos informations d’identification vous soient demandées :
@@ -150,6 +152,6 @@ Un niveau de protection très élevé est désormais appliqué à ces fichiers d
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

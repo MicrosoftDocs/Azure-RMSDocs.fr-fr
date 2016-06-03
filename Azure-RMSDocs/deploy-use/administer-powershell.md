@@ -26,9 +26,12 @@ ms.suite: ems
 ---
 
 # Administration d’Azure Rights Management à l'aide de Windows PowerShell
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Si vous pouvez activer Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) en utilisant le Centre d’administration [!INCLUDE[o365_2](../includes/o365_2_md.md)] ou le portail Azure Classic, vous pouvez également utiliser pour cela le module Windows PowerShell pour [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (AADRM).
 
-Une fois [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] activé, il est probable qu’aucune tâche administrative supplémentaire ne soit nécessaires. Cependant, certains scénarios de configuration avancée peuvent vous obliger à utiliser le module Windows PowerShell pour [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]. Le tableau suivant répertorie certains des scénarios de configuration avancée qui utilisent Windows PowerShell. Pour obtenir la liste complète des applets de commande disponibles avec plus d'informations sur chacune d'elles, consultez [Applets de commande d’Azure Rights Management](http://msdn.microsoft.com/library/azure/dn629398.aspx).
+Une fois [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] activé, il est probable qu’aucune tâche administrative supplémentaire ne soit nécessaires. Cependant, certains scénarios de configuration avancée peuvent vous obliger à utiliser le module Windows PowerShell pour [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]. Le tableau suivant répertorie certains des scénarios de configuration avancée qui utilisent Windows PowerShell. Pour obtenir la liste complète des applets de commande disponibles avec plus d’informations sur chacune d’elles, consultez [Applets de commande de la Gestion des droits Azure](http://msdn.microsoft.com/library/azure/dn629398.aspx).
 
 > [!NOTE]
 > Si vous devez installer le module Windows PowerShell pour [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], consultez [Installation de Windows PowerShell pour Azure Rights Management](install-powershell.md).
@@ -48,7 +51,7 @@ Il existe également un module Windows PowerShell complémentaire, **RMSProtecti
 |gérer la fonctionnalité de super utilisateur de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] pour votre organisation.|[Enable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629400.aspx)<br /><br />[Disable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629428.aspx)<br /><br />[Add-AadrmSuperUser](http://msdn.microsoft.com/library/azure/dn629411.aspx)<br /><br />[Get-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629408.aspx)<br /><br />[Remove-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629405.aspx)<br /><br />[Set-AadrmSuperUserGroup](https://msdn.microsoft.com/library/azure/mt653943.aspx)<br /><br />[Get-AadrmSuperUserGroup](https://msdn.microsoft.com/library/azure/mt653942.aspx)<br /><br />[Clear-AadrmSuperUserGroup](https://msdn.microsoft.com/library/azure/mt653944.aspx)|
 |gérer les utilisateurs et les groupes autorisés à administrer le service [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] pour votre organisation.|[Add-AadrmRoleBasedAdministrator](http://msdn.microsoft.com/library/azure/dn629417.aspx)<br /><br />[Get-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/azure/dn629407.aspx)<br /><br />[Remove-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/azure/dn629424.aspx)|
 |obtenir un journal des tâches d’administration de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] pour votre organisation.|[Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx)|
-|journaliser et analyser la journalisation de l’utilisation de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].|[Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx)|
+|consigner et analyser la journalisation de l’utilisation de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].|[Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx)|
 |afficher la configuration actuelle de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] pour votre organisation.|[Get-AadrmConfiguration](http://msdn.microsoft.com/library/azure/dn629410.aspx)|
 |migrer votre organisation de [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] vers un déploiement AD RMS local.|[Set-AadrmMigrationUrl](https://msdn.microsoft.com/library/azure/dn629429.aspx)<br /><br />[Get-AadrmMigrationUrl](http://msdn.microsoft.com/library/azure/dn629403.aspx)|
 
@@ -56,6 +59,6 @@ Il existe également un module Windows PowerShell complémentaire, **RMSProtecti
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

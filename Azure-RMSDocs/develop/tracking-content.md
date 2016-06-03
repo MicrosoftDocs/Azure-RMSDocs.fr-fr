@@ -2,7 +2,7 @@
 # required metadata
 
 title: Suivi du contenu | Azure RMS
-description:
+description: Conseils de base pour l’implémentation de suivi de documents
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: ca08e01f-690d-46f4-ae0f-a880cc29dabc
-
+ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 # optional metadata
 
 #ROBOTS:
@@ -25,9 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Suivi du contenu
-
-\[Certaines informations se rapportent à la version préliminaire du produit qui peut encore faire l’objet de modifications significatives avant sa commercialisation. Microsoft exclut toute garantie, expresse ou implicite, concernant les informations fournies ici.\]
+# Suivi du contenu
 
 Cette rubrique propose des conseils de base pour implémenter le suivi de documents sur du contenu protégé à l’aide de Rights Management Services SDK 2.1.
 
@@ -120,7 +117,7 @@ Voici un exemple d’extrait de code illustrant la définition des métadonnées
                               sendLicenseRegistrationNotificationEmail);
 
 
-### Rubriques connexes
+## Rubriques connexes
 
 
 * [**Types de propriétés des métadonnées de licence**](/rights-management/sdk/2.1/api/win/license%20metadata%20property%20types#msipc_license_metadata_property_types)
@@ -137,6 +134,6 @@ Voici un exemple d’extrait de code illustrant la définition des métadonnées
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

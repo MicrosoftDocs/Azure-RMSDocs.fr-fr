@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Générer et transférer votre clé de locataire en personne
 
+*S’applique à : Azure Rights Management, Office 365*
+
+
 Suivez les procédures de cette section si vous avez décidé de [gérer votre propre clé de locataire](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) et que vous ne voulez pas la transférer via Internet, mais plutôt la transférer en personne.
 
 ## Génération de la clé de locataire
@@ -39,7 +42,7 @@ Pour générer votre propre clé de locataire, suivez ces 3 étapes :
 -   [Étape 3 : création d'une nouvelle clé](#step-3-create-a-new-key)
 
 ### Étape 1 : préparation d'un poste de travail avec un module de sécurité matériel Thales
-Installez le logiciel de support nCipher (Thales) sur un ordinateur Windows, puis joignez un module de sécurité matériel Thales à cet ordinateur. Vérifiez ensuite que les outils Thales apparaissent dans votre chemin. Pour plus d'informations, reportez-vous au guide d'utilisation inclus avec le module de sécurité matériel Thales, ou visitez le site Web de Thales pour Azure RMS à l'adresse [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
+Installez le logiciel de support nCipher (Thales) sur un ordinateur Windows, puis joignez un module de sécurité matériel Thales à cet ordinateur. Vérifiez ensuite que les outils Thales apparaissent dans votre chemin. Pour plus d’informations, consultez le guide d’utilisation fourni avec le module de sécurité matériel Thales, ou accédez au site web de Thales pour Azure RMS à l’adresse [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
 
 ### Étape 2 : création d'un monde de sécurité
 Ouvrez une invite de commande et exécutez le programme de nouveau monde Thales.
@@ -67,7 +70,7 @@ generatekey --generate simple type=RSA size=2048 protect=module ident=contosokey
 ```
 Tenez compte des instructions suivantes pour l'exécution de cette commande :
 
--   Le paramètre **protect** doit être définie sur la valeur **module**, comme indiqué. Ceci crée une clé protégée par module. L’ensemble d’outils BYOK ne prend pas en charge les clés protégées par OCS.
+-   Le paramètre **protect** doit être défini avec la valeur **module**, comme indiqué. Ceci crée une clé protégée par module. L’ensemble d’outils BYOK ne prend pas en charge les clés protégées par OCS.
 
 -   Nous recommandons la taille de clé 2048, mais les clés RSA 1024 bits sont également prises en charge pour les clients AD RMS existants possédant de telles clés et migrant vers Azure RMS.
 
@@ -153,6 +156,6 @@ Vous avez à présent effectué toutes les instructions nécessaires pour transf
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

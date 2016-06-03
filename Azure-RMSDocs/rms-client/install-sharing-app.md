@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Télécharger et installer l'application de partage Rights Management
+
+*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+
 Pour installer l’application de partage RMS, vous ne devez pas nécessairement être administrateur local. Toutefois, si vous ne l’êtes pas et utilisez Office 2010, il existe quelques limitations. Pour plus d’informations, consultez la section [Si vous n’êtes pas administrateur local et utilisez Office 2010](#if-you-are-not-a-local-administrator-and-use-office-2010) dans cette page.
 
 ## Pour télécharger et installer l’application de partage Rights Management
@@ -65,13 +68,13 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 -   [Exemples d’utilisation de l’application de partage RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Que souhaitez-vous faire ?](sharing-app-user-guide.md##what-do-you-want-to-do-)
+-   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do-)
 
 ## Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

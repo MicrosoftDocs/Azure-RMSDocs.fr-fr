@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Gérée par le client : opérations de cycle de vie des clés de locataires
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Si vous gérez votre clé de locataire pour Azure Rights Management (dans le cadre d’un scénario BYOK, ou Bring Your Own Key), utilisez les sections suivantes pour obtenir plus d’informations sur les opérations de cycle de vie qui s’appliquent à cette topologie.
 
 ## Révocation de votre clé de locataire
@@ -68,6 +71,6 @@ En cas de violation, la meilleure action que vous ou Microsoft pourra mettre en 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

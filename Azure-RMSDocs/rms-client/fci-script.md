@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Script Windows PowerShell pour la protection Azure RMS à l’aide de l’ICF des outils de gestion de ressources pour serveur de fichiers
+
+*S’applique à : Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+
 Cette page contient l’exemple de script à copier et à modifier, comme indiqué dans [Protection RMS avec l’infrastructure de classification des fichiers de Windows Server](configure-fci.md).
 
 *&#42;&#42;Exclusion de responsabilité&#42;&#42; : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple*
@@ -177,6 +180,6 @@ if (!$Script:isScriptProcess) { exit(-1) } else {exit(0)}
 Retour à [Protection RMS avec l’infrastructure de classification des fichiers de Windows Server](configure-fci.md).
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

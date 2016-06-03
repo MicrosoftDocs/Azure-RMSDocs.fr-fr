@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -25,7 +25,10 @@ ms.suite: ems
 
 ---
 
-# Protéger un fichier partagé par e-mail à l’aide de l’application de partage Rights Management
+# Protégez un fichier partagé par courrier électronique à l’aide de l’application de partage Rights Management
+
+*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+
 Lorsque vous protégez un fichier que vous le partagez par e-mail, il crée une nouvelle version du fichier d’origine. Le fichier d’origine reste non protégé et la nouvelle version est protégée et automatiquement jointe à un e-mail que vous envoyez ensuite.
 
 Dans certains cas (pour les fichiers créés par Microsoft Word, Excel et PowerPoint), l’application de partage RMS crée deux versions du fichier et les joint au message. La deuxième version du fichier est dotée d’une extension **.ppdf** et il est un cliché instantané PDF du fichier. Cette version du fichier garantit que les destinataires peuvent toujours lire le fichier, même s’ils n’ont pas l’application que vous avez utilisée pour le créer. Cela est souvent le cas quand vous lisez vos e-mails sur un appareil mobile et que vous souhaitez afficher les pièces jointes. Pour ouvrir le fichier, vous avez simplement besoin de l’application de partage RMS. Vous pouvez ensuite lire le fichier joint, mais vous ne pourrez pas le modifier sans ouvrir l’autre version du fichier dans l’application prenant en charge RMS.
@@ -38,9 +41,9 @@ Si votre organisation utilise Azure RMS, vous pouvez effectuer le suivi de vos f
 
 ## Avec Outlook : Pour protéger un fichier partagé par e-mail
 
-1.  Créez votre e-mail et joignez le fichier. Puis, sous l’onglet **Message** du groupe **RMS**, cliquez sur **Partage protégé**, puis à nouveau sur **Partage protégé** :
+1.  Créez votre e-mail et joignez le fichier. Puis, dans l’onglet **Message** du groupe **RMS** , cliquez sur **Partage protégé** , puis sur **Partage protégé** à nouveau :
 
-    ![](../media/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
+    ![Complément Outlook pour l'application de partage RMS](../media/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
 
     Si vous ne voyez pas ce bouton, il est probable que l’application de partage RMS ne soit pas installée sur votre ordinateur, que la version la plus récente ne soit pas installée ou que votre ordinateur doive être redémarré pour terminer l’installation. Pour plus d’informations sur l’installation de l’application de partage, consultez [Télécharger et installer l’application de partage Rights Management](install-sharing-app.md).
 
@@ -59,11 +62,11 @@ En plus de partager un fichier protégé à l’aide d’Outlook, vous pouvez é
 
     -   Pour l’Explorateur de fichiers : cliquez avec le bouton droit sur le fichier, sélectionnez **Protéger avec RMS**, puis **Partage protégé** :
 
-        ![](../media/ADRMS_MSRMSApp_ShareProtectedMenu.png)
+        ![Option de menu Partage protégé](../media/ADRMS_MSRMSApp_ShareProtectedMenu.png)
 
     -   Pour les applications Office, Word, Excel et PowerPoint : Assurez-vous d’abord d’avoir enregistré le fichier. Puis, dans l’onglet **Accueil** du groupe **RMS** , cliquez sur **Partage protégé** puis sur **Partage protégé** à nouveau :
 
-        ![](../media/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
+        ![Complément de barre d'outils Office](../media/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
     Si vous ne voyez pas ces options de protection, il est probable que l’application de partage RMS ne soit pas installée sur votre ordinateur, que la version la plus récente ne soit pas installée ou que votre ordinateur doive être redémarré pour terminer l’installation. Pour plus d’informations sur l’installation de l’application de partage, consultez [Télécharger et installer l’application de partage Rights Management](install-sharing-app.md).
 
@@ -73,7 +76,7 @@ En plus de partager un fichier protégé à l’aide d’Outlook, vous pouvez é
 
     Exemple :
 
-    ![](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
+    ![E-mail pour Azure RMS](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
     Vous vous demandez : [qu’est-ce que le fichier .ppdf créé automatiquement ?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)
 
@@ -89,13 +92,12 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 -   [Exemples d’utilisation de l’application de partage RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Que souhaitez-vous faire ?](sharing-app-user-guide.md##what-do-you-want-to-do-)
+-   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do-)
 
 ## Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 
-
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

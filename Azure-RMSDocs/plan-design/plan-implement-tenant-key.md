@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Planification et implémentation de la clé de locataire Azure Rights Management
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Utilisez les informations de cet article pour planifier et gérer votre clé de locataire (ou client) Rights Management (RMS) pour Azure RMS. Par exemple, au lieu que Microsoft gère votre clé de locataire (par défaut), vous pouvez gérer votre propre clé de locataire afin de vous conformer à des réglementations spécifiques s'appliquant à votre organisation.  La gestion de votre propre clé de locataire est également appelée BYOK (Bring Your Own Key).
 
 > [!NOTE]
@@ -62,11 +65,11 @@ Si vous choisissez de confier à Microsoft la gestion de votre clé de locataire
 
 Les schémas ci-dessous présentent et comparent ces deux options. Le premier schéma permet notamment de juger de la faible charge administrative qui vous incombe dans la configuration par défaut, lorsque Microsoft gère la clé de locataire.
 
-![](../media/RMS_BYOK_cloud.png)
+![Cycle de vie de clé de locataire Azure RMS - géré par Microsoft, valeur par défaut](../media/RMS_BYOK_cloud.png)
 
 Le deuxième schéma présente quant à lui les étapes supplémentaires requises lorsque vous gérez votre clé de locataire.
 
-![](../media/RMS_BYOK_onprem.png)
+![Cycle de vie de clé de locataire Azure RMS - géré par vous-même, BYOK](../media/RMS_BYOK_onprem.png)
 
 Si vous choisissez de confier à Microsoft la gestion de votre clé de locataire, aucune autre action n’est nécessaire de votre part et vous n’avez pas à générer la clé. Vous pouvez passer directement à la rubrique [Étapes suivantes](plan-implement-tenant-key.md#next-steps).
 
@@ -90,7 +93,7 @@ Reportez-vous au tableau suivant pour connaître les conditions requises pour la
 |Abonnement prenant en charge Azure RMS.|Pour plus d’informations sur les abonnements disponibles, consultez [Abonnements au cloud prenant en charge Azure RMS](../get-started/requirements-subscriptions.md).|
 |Vous n'utilisez pas RMS for Individuals ou Exchange Online. Ou, si vous utilisez Exchange Online, vous comprenez et acceptez les limitations liées à l'utilisation de la solution BYOK avec cette configuration.|Pour plus d’informations sur les restrictions et limitations actuelles relatives à la solution BYOK, consultez [Tarifs et restrictions BYOK](byok-price-restrictions.md).<br /><br />**Important** : Actuellement, la solution BYOK n’est pas compatible avec Exchange Online.|
 |Module de sécurité matériel Thales, cartes à puce et logiciel de support.<br /><br />**Remarque** : Si vous migrez d’AD RMS vers Azure RMS en passant d’une clé logicielle à une clé matérielle, vous devez disposer au minimum de la version 11.62 pour les pilotes Thales.|Vous devez avoir accès à un module de sécurité matériel Thales et posséder des connaissances de base concernant le fonctionnement de ce type de module. Reportez-vous à la page relative aux [modules de sécurité matériels Thales](http://www.thales-esecurity.com/msrms/buy) pour obtenir la liste des modèles compatibles ou pour acheter un module de sécurité matériel si vous n'en avez pas.|
-|Si vous souhaitez transférer votre clé de locataire par Internet au lieu de vous présenter à Redmond, aux États-Unis, vous devez remplir trois conditions :<br /><br />Condition 1 : Disposer d’une station de travail x64 hors connexion dotée au minimum de Windows 7 et du logiciel nShield de Thales version 11.62.<br /><br />Si cette station de travail exécute Windows 7, vous devez [installer Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />Condition 2 : Disposer d’une station de travail connectée à Internet, dotée de Windows 7 au minimum.<br /><br />Condition 3 : Disposer d’une clé USB ou tout autre dispositif de stockage portable possédant au moins 16 Mo d’espace libre.|Ces éléments ne sont pas obligatoires si vous vous rendez à Redmond pour transférer votre clé de locataire en personne.<br /><br />Pour des questions de sécurité, il est recommandé que le premier poste de travail ne soit connecté à aucun réseau. Cependant, il ne s'agit pas d'une obligation forcée par programmation.<br /><br />Remarque : Dans les instructions ci-après, cette première station de travail est désignée sous le terme **station de travail déconnectée**.<br /><br />De plus, si votre clé de locataire est destinée à un réseau de production, nous vous recommandons d'utiliser un deuxième poste de travail pour télécharger l'ensemble d'outils et envoyer la clé. Cependant, dans le cadre de tests, vous pouvez utiliser le même poste de travail.<br /><br />Remarque : Dans les instructions ci-après, cette deuxième station de travail est désignée sous le terme **station de travail connectée à Internet**.|
+|Si vous souhaitez transférer votre clé de locataire par Internet au lieu de vous présenter à Redmond, aux États-Unis, vous devez remplir trois conditions :<br /><br />1 : Une station de travail x64 hors connexion dotée au minimum de Windows 7 et du logiciel nShield de Thales version 11.62.<br /><br />Si cette station de travail exécute Windows 7, vous devez [installer Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />2 : Un poste de travail connecté à Internet, doté de Windows 7 au minimum.<br /><br />3 : Une clé USB ou tout autre dispositif de stockage portable avec au moins 16 Mo d’espace libre.|Ces éléments ne sont pas obligatoires si vous vous rendez à Redmond pour transférer votre clé de locataire en personne.<br /><br />Pour des questions de sécurité, il est recommandé que le premier poste de travail ne soit connecté à aucun réseau. Cependant, il ne s'agit pas d'une obligation forcée par programmation.<br /><br />Remarque : Dans les instructions ci-après, cette première station de travail est désignée sous le terme **station de travail déconnectée**.<br /><br />De plus, si votre clé de locataire est destinée à un réseau de production, nous vous recommandons d'utiliser un deuxième poste de travail pour télécharger l'ensemble d'outils et envoyer la clé. Cependant, dans le cadre de tests, vous pouvez utiliser le même poste de travail.<br /><br />Remarque : Dans les instructions ci-après, cette deuxième station de travail est désignée sous le terme **station de travail connectée à Internet**.|
 
 Les procédures de génération et d'utilisation de la clé de locataire varient selon que vous préférez les effectuer par Internet ou en personne :
 
@@ -135,7 +138,7 @@ Maintenant que vous avez planifié et, le cas échéant, généré votre clé de
 
     Si vous avez décidé de gérer vous-même votre clé de locataire, la journalisation inclut des informations utiles sur son utilisation. Consultez l'exemple suivant de fichier journal affiché dans Excel, où les types de requête **Decrypt** et **SignDigest** montrent que la clé de locataire est utilisée.
 
-    ![](../media/RMS_Logging.gif)
+    ![fichier journal dans Excel où la clé de locataire est utilisée](../media/RMS_Logging.gif)
 
     Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation d’Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
@@ -145,6 +148,6 @@ Maintenant que vous avez planifié et, le cas échéant, généré votre clé de
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

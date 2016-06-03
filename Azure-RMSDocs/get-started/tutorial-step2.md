@@ -4,24 +4,24 @@
 title: Didacticiel de démarrage rapide Azure RMS – étape 2 |Azure RMS
 description: Deuxième étape d’un didacticiel vous permettant de tester rapidement Microsoft Azure Rights Management au sein de votre organisation en seulement 5 étapes qui devraient vous prendre moins de 15 minutes.
 keywords:
-author: Cabailey
+author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: f32cf2f3-29e2-429c-a0fd-b16cc482484a
 
 # optional metadata
 
-ROBOTS: 
-audience:
-ms.devlang:
+#ROBOTS:
+#audience:
+#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+#ms.tgt_pltfrm:
+#ms.custom:
 
 ---
 
@@ -29,23 +29,26 @@ ms.custom:
 
 # Démarrage rapide Azure RMS – étape 2 : installer l’application de partage Rights Management
 
+*S’applique à : Azure Rights Management, Office 365*
+
+
 Atteindre : 
 > [!div class="op_single_selector"]
 - [Introduction](quick-start-tutorial.md)
 - [Étape 1 : activer Azure RMS](tutorial-step1.md)
-- [Étape 2 : installer l’application de partage RMS](tutorial-step2.md)
+- [Étape 2 : Installer l’application de partage RMS](tutorial-step2.md)
 - [Étape 3 : envoyer le document confidentiel par e-mail](tutorial-step3.md)
-- [Étape 4 : le destinataire lit le document](tutorial-step4.md)
-- [Étape 5 : suivre votre document](tutorial-step5.md)
+- [Étape 4 : Le destinataire lit le document](tutorial-step4.md)
+- [Étape 5 : Suivre votre document](tutorial-step5.md)
 
 
-![](../media/AzRMS_QuickStartSteps2.PNG)
+![Didacticiel de démarrage rapide Azure RMS étape 2](../media/AzRMS_QuickStartSteps2.PNG)
 
 L’application de partage Rights Management (également appelée « application de partage RMS ») n’est pas obligatoire pour Azure Rights Management, mais nous la recommandons pour tous les ordinateurs et appareils mobiles prenant en charge Azure Rights Management. L’application de partage RMS s’intègre aux applications Office via l’installation d’un complément Office, afin de permettre aux utilisateurs de protéger facilement des fichiers directement depuis le ruban. Elle permet également de protéger tout type de fichier en appliquant une protection générique pour les fichiers qui ne sont pas pris en charge en mode natif par Azure Rights Management, et propose un site de suivi de document pour suivre et révoquer les fichiers sous protection. Nous utiliserons le site de suivi de document plus loin dans ce didacticiel.
 
 Cette application peut être téléchargée gratuitement et propose une installation par script pour les environnements de production. Dans le cadre de ce didacticiel, nous allons l’installer localement.
 
-![](../media/AzRMS_Tutorial_2_Screenshots.png)
+![Captures d’écran de l’étape 2 du didacticiel](../media/AzRMS_Tutorial_2_Screenshots.png)
 
 ### Pour télécharger et installer l’application de partage Rights Management
 
@@ -68,10 +71,9 @@ Vous êtes maintenant prêt à protéger les fichiers contenant des informations
 |Pour comprendre la différence entre la protection native et la protection générique|[Quelle est la différence entre la protection générique et la protection intégrée (native) ?](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)|
 
 
->[!div class="step-by-step"]
-[« Étape 1](quick-start-tutorial.md)
+>[!div class="step-by-step"] [« Étape 1](quick-start-tutorial.md)
 [Étape 3 »](tutorial-step3.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

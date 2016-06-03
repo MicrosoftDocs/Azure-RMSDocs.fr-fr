@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Applications Office : configuration pour les clients
 
+*S’applique à : Azure Rights Management, Office 365*
+
+
 Utilisez ces informations pour déterminer ce que vous devez faire pour que les applications Office utilisées par vos utilisateurs finaux fonctionnent avec Azure Rights Management (Azure RMS).
 
 ## Office 2016 et Office 2013
@@ -41,6 +44,6 @@ Pour plus d’informations sur l’application de partage Rights Management, con
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -27,13 +27,16 @@ ms.suite: ems
 
 # Tarifs et restrictions BYOK
 
+*S’applique à : Azure Rights Management, Office 365*
+
+
 Toute organisation possédant un abonnement Azure géré par informatique peut utiliser la solution BYOK et consigner son utilisation sans frais supplémentaires. Notez que les organisations utilisant RMS for individuals ne peuvent utiliser ni la solution BYOK, ni la journalisation, car elles ne disposent d'aucun administrateur locataire pour configurer ces fonctions.
 
 
 > [!NOTE]
 > Pour plus d’informations sur RMS for individuals, consultez [RMS for individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-![](../media/RMS_BYOK_noExchange.png)
+![BYOK ne prend pas en charge Exchange Online](../media/RMS_BYOK_noExchange.png)
 
 La solution BYOK et la journalisation fonctionnent de façon transparente, chaque application s'intégrant avec Azure RMS, notamment les services cloud tels que SharePoint Online, les serveurs locaux exécutant Exchange et SharePoint qui fonctionnent avec Azure RMS grâce au connecteur RMS, et les applications clientes telles qu’Office 2013. Vous obtenez des journaux d'utilisation de la clé, quelle que soit l'application effectuant des requêtes Azure RMS.
 
@@ -57,12 +60,12 @@ Parfois, l'exception BYOK d'Azure RMS pour Exchange Online n'est pas un problèm
 
 ## Étapes suivantes
 
-Si vous avez décidé de gérer votre propre clé, accédez à [Implémentation de votre clé de client Azure Rights Management](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key).
+Si vous avez décidé de gérer votre propre clé, accédez à [Implémentation de la clé de locataire Azure Rights Management](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key).
 
 Si vous souhaitez que Microsoft gère votre clé de client (configuration par défaut), consultez la section [Étapes suivantes](plan-implement-tenant-key.md#next-steps) de l’article Planification et implémentation de votre clé de client Azure Rights Management.
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

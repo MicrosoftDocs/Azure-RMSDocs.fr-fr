@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Guide de déploiement rapide pour Azure Rights Management
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Utilisez ce guide en complément des informations de configuration fournies dans la section **Déployer et utiliser** pour vous aider à déployer et à utiliser rapidement Azure Rights Management (Azure RMS) en choisissant dans une liste de scénarios spécifiques à implémenter.
 
 Ces scénarios contiennent des instructions destinées aux administrateurs et une documentation associée à l’adresse des utilisateurs finaux. Avant de fournir la documentation (instructions ou annonces) à vos utilisateurs finaux, vous devez la personnaliser en fonction de vos besoins et des flux de travail existants. Un exemple d’instructions ou d’annonce montre à quoi peut ressembler la documentation destinée aux utilisateurs finaux.
@@ -36,8 +39,7 @@ Les scénarios répertoriés ici sont un échantillon des plus populaires. Azure
 
 Avant de déployer ces solutions, vous souhaiterez peut-être envoyer une annonce aux utilisateurs finaux pour leur signaler que certains changements vont avoir lieu pour aider à protéger les données de l’entreprise, et qu’ils seront peut-être mis à contribution. Un exemple d’annonce est fourni après le tableau suivant.
 
-> [!NOTE]
-> Si vous avez des questions et des commentaires concernant ce guide, utilisez les mécanismes de commentaires indiqués sur cette page ou envoyez un e-mail à [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
+> [!NOTE] Si vous avez des questions et des commentaires concernant ce guide, utilisez les mécanismes de commentaires indiqués sur cette page ou envoyez un e-mail à [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
 ## Scénarios pour Azure RMS
 Pour vous aider à déployer rapidement Azure RMS pour résoudre des problèmes spécifiques, choisissez les scénarios qui correspondent le plus à vos objectifs commerciaux et adaptez-les si nécessaire.
@@ -130,7 +132,7 @@ Voir : [Scénario - Configurer des dossiers de travail pour la protection perma
 ## Annonce pour les utilisateurs avant le déploiement
 Vous pouvez utiliser l’exemple de message de communication suivant pour signaler aux utilisateurs que le déploiement d’Azure RMS va impliquer certains changements. Copiez et collez le texte suivant, et faites-le envoyer par e-mail à tous les utilisateurs par un membre de l’équipe dirigeante de votre organisation, de préférence le Directeur général. Apportez au texte toute modification susceptible de le rendre plus pertinent pour vos utilisateurs et votre organisation.
 
-![](../media/AzRMS_ExampleBanner.png)
+![Exemple de bannière de documentation utilisateur pour un déploiement rapide Azure RMS](../media/AzRMS_ExampleBanner.png)
 
 ### Modifications que nous apportons pour protéger nos données
 Avez-vous déjà souhaité bloquer l’accès à un document envoyé par erreur à vos partenaires ? Vous êtes-vous déjà demandé s’il existait un moyen de savoir lesquels de vos clients avaient lu les dernières nouveautés sur les produits que vous leur aviez envoyées ? Souhaiteriez-vous pouvoir partager des informations de produits confidentielles sans risquer qu’elles soient transférées à des personnes qui ne doivent pas les voir ?
@@ -139,7 +141,7 @@ Vous pourrez bientôt bénéficier de toutes ces fonctionnalités, car le servic
 
 Par exemple, pour effectuer le suivi (et, si nécessaire, la révocation) des documents que vous partagez, vous utiliserez le site de suivi des documents :
 
-![](../media/AzRMS_Tutorial_5_Screenshots.png)
+![Captures d’écran de suivi de documents Azure RMS](../media/AzRMS_Tutorial_5_Screenshots.png)
 
 Pour obtenir un aperçu de son fonctionnement, regardez cette vidéo de deux minutes : [Suivi et révocation de documents Azure RMS](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
@@ -149,6 +151,6 @@ Les solutions que nous implémentons nous aideront à protéger nos données les
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

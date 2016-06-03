@@ -25,7 +25,10 @@ ms.suite: ems
 
 ---
 
-# Aider les utilisateurs à protéger des fichiers en utilisant Azure Rights Management
+# Aide aux utilisateurs sur la protection de fichiers grâce à Azure Rights Management
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Après avoir déployé et configuré Azure Rights Management (Azure RMS) pour votre organisation, fournissez de l'aide et des instructions aux utilisateurs, aux administrateurs et au support technique :
 
 -   **Informations pour les utilisateurs finaux :**
@@ -46,7 +49,7 @@ Après avoir déployé et configuré Azure Rights Management (Azure RMS) pour vo
 
     L'un des outils les plus utiles pour le support technique est l' [Analyseur RMS](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Les opérateurs du support technique peuvent l'exécuter avec l'option d'administrateur Azure RMS, et demander aux utilisateurs de l'exécuter avec l'option d'utilisateur Azure RMS. Cet outil permet, non seulement d'identifier des problèmes, mais également de les résoudre ou, à défaut, d'enregistrer des journaux de suivi.
 
-    S’il existe des demandes légitimes d’obtention de droits d’accès complets à des documents protégés, par exemple une demande émanant du service juridique ou d’un responsable après qu’un employé a quitté l’organisation, vérifiez que le support technique dispose des processus nécessaires pour effectuer une telle demande à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md) d’Azure RMS.
+    S’il existe des demandes légitimes d’obtention de droits d’accès complets à des documents protégés, par exemple une demande émanant du service juridique ou d’un responsable après qu’un employé a quitté l’organisation, vérifiez que le support technique dispose des processus nécessaires pour effectuer une telle demande à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md) d’Azure RMS..
 
     Voici en outre quelques-uns des problèmes classiques que des utilisateurs pourraient signaler :
 
@@ -71,7 +74,7 @@ En plus d'aider les utilisateurs à protéger des documents importants, l'applic
 
 Pour obtenir des instructions sur l’utilisation de cette application pour les ordinateurs Windows, consultez le [Guide de l’utilisateur de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md).
 
-Pour les appareils mobiles, consultez la [FAQ relative à l’application de partage Microsoft Rights Management pour plateformes mobiles](http://technet.microsoft.com/dn451248).
+Pour les appareils mobiles, consultez le [FAQ relatif à l’application de partage Microsoft Rights Management pour plateformes mobiles](http://technet.microsoft.com/dn451248).
 
 > [!TIP]
 > Pour un scénario d’exemple global avec des captures d’écran, consultez [Partage sécurisé de pièces jointes avec des utilisateurs mobiles](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users.
@@ -99,7 +102,7 @@ Lorsque d'autres personnes ouvriront le document, ils devront d'abord être auth
 
 1.  Dans Outlook, créez un message électronique destiné à une personne au sein de votre organisation.
 
-2.  À partir de l’onglet **OPTIONS** , cliquez sur **Autorisation**, puis sélectionnez une option. Par exemple : **Ne pas transférer**, **&lt;Nom de l’entreprise&gt; - Confidentiel** ou **&lt;Nom de l’entreprise&gt; - Affichage confidentiel uniquement**.
+2.  À partir de l’onglet **OPTIONS** , cliquez sur **Autorisation**, puis sélectionnez une option. Par exemple : **Ne pas transférer**, **&lt;Nom de la société&gt; - Confidentiel** ou **&lt;Nom de la société&gt; - Affichage confidentiel uniquement**.
 
 3.  Envoyez le message.
 
@@ -109,7 +112,7 @@ Comme pour l'affichage d'un document protégé, lorsque les destinataires reçoi
 
 1.  Dans Outlook Web App, créez un message électronique destiné à une personne au sein de votre organisation.
 
-2.  Cliquez sur  **…**, puis sur **Définir l’autorisation**et sélectionnez une option. Par exemple : **Ne pas transférer**, **Ne pas répondre à tous**, **&lt;Nom de l’entreprise&gt; - Confidentiel** ou **&lt;Nom de l’entreprise&gt; - Affichage confidentiel uniquement**.
+2.  Cliquez sur  **…**, puis sur **Définir l’autorisation**et sélectionnez une option. Par exemple : **Ne pas transférer**, **Ne pas répondre à tous**, **&lt;Nom de la société&gt; - Confidentiel** ou **&lt;Nom de la société&gt; - Affichage confidentiel uniquement**.
 
 3.  Envoyez le message.
 
@@ -118,6 +121,6 @@ Comme pour l'affichage d'un document protégé, lorsque les destinataires reçoi
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

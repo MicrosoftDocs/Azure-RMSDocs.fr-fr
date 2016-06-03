@@ -26,28 +26,31 @@ ms.suite: ems
 ---
 
 # Inscription à RMS for individuals
+
+*S’applique à : Azure Rights Management*
+
 Pour obtenir un compte gratuit, les utilisateurs accèdent à la [page Microsoft Rights Management](https://portal.aadrm.com/) et en font la demande en indiquant leur adresse e-mail professionnelle ou scolaire. 
 
 Le plus souvent, les utilisateurs sont dirigés vers cette page d’inscription après avoir reçu un e-mail avec pièce jointe protégée, qui contient des instructions sur la manière de s’inscrire. Ils reçoivent en retour un e-mail de Microsoft qui leur permet de mener à bien l’inscription en entrant les détails nécessaires à la création de leur compte. Ils reçoivent ensuite une confirmation par e-mail de Microsoft, ultime e-mail qui les dirige vers la page de téléchargement de l’application de partage pour différents appareils, et qui contient un lien vers le guide de l’utilisateur.
 
 ## Inscription à RMS for individuals
 
-1.  À l'aide d'un ordinateur Windows ou Mac, accédez à la page [Microsoft Rights Management](https://portal.aadrm.com).
+1.  À l’aide d’un ordinateur Windows ou Mac, accédez à la page [Microsoft Rights Management](https://portal.aadrm.com).
 
-2.  Entrez l'adresse de messagerie que vous utilisez au sein de votre organisation, par exemple, **janetm@contoso.com** ou **p.dover@fabrikam.com**.
+2.  Entrez l’adresse e-mail que vous utilisez au sein de votre organisation, par exemple **janetm@contoso.com** ou **p.dover@fabrikam.com**.
 
     > [!IMPORTANT]
     > Les adresses e-mail personnelles ne sont pas prises en charge. Par conséquent, n'indiquez pas de compte Microsoft (anciennement compte Microsoft Live ID) ou tout autre compte personnel que vous pouvez utiliser à votre domicile avec votre fournisseur d'accès à Internet.
 
-3.  Cliquez sur **Mise en route**.
+3.  Cliquez sur **Prise en main**.
 
-    Microsoft utilise votre adresse de messagerie pour vérifier si votre organisation possède déjà un [abonnement payant qui inclut Azure RMS](../get-started/requirements-subscriptions.md). Si tel est le cas, vous n'avez pas besoin de RMS for Individuals. Vous êtes connecté immédiatement et l'inscription en libre-service à RMS for Individuals est annulée. Si aucun abonnement payant pour Azure RMS n'est trouvé, vous passez à l'étape suivante.
+    Microsoft utilise votre adresse e-mail pour vérifier si votre organisation a déjà un [abonnement payant qui inclut Azure RMS](../get-started/requirements-subscriptions.md). Si tel est le cas, vous n'avez pas besoin de RMS for Individuals. Vous êtes connecté immédiatement et l'inscription en libre-service à RMS for Individuals est annulée. Si aucun abonnement payant pour Azure RMS n'est trouvé, vous passez à l'étape suivante.
 
-4.  Attendez qu'un e-mail de confirmation soit envoyé à l'adresse que vous avez indiquée. Il doit provenir de Microsoft (DoNotReply@microsoft.com) et sont objet est **Microsoft RMS**.
+4.  Attendez qu'un e-mail de confirmation soit envoyé à l'adresse que vous avez indiquée. Il doit provenir de Microsoft (DoNotReply@microsoft.com) et être intitulé **Microsoft RMS**.
 
 5.  Cliquez ensuite sur le lien figurant dans les instructions pour terminer l'inscription.
 
-6.  Ce lien vous permet d'accéder à une nouvelle page **Microsoft Rights Management** dans laquelle vous pouvez entrer les informations relatives à votre compte. Tapez vos nom et prénom, entrez et confirmez le mot de passe de votre choix, sélectionnez votre pays dans la liste déroulante (ou le pays le plus proche si le vôtre n'y figure pas), puis cliquez sur **Créer**.
+6.  Ce lien vous permet d'accéder à une nouvelle page **Microsoft Rights Management** dans laquelle vous pouvez entrer les informations relatives à votre compte. Tapez vos nom et prénom, entrez et confirmez le mot de passe de votre choix, sélectionnez votre pays dans la liste déroulante (ou le pays le plus proche si le vôtre n’y figure pas), puis cliquez sur **Créer**.
 
 7.  Vous devez alors recevoir un autre e-mail de Microsoft, vous confirmant que votre compte est prêt à l'emploi.
 
@@ -104,6 +107,6 @@ Consultez [Contrôle administrateur des comptes créés pour RMS for individuals
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

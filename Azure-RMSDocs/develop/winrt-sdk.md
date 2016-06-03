@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configuration pour le Windows Store | Azure RMS
-description:
+description: Les applications du Windows Store peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leurs applications.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: c2684152-7d52-4636-916d-15720f4e3346
-
+ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Configuration pour le Windows Store
 
 Les applications du Windows Store peuvent utiliser le Kit Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations à l’aide d’Azure Active Directory Rights Management (AAD RM).
@@ -34,8 +32,8 @@ Cette rubrique vous guide tout au long du processus de configuration de votre en
 
 -   [Conditions préalables](#prerequisites)
 -   [Facultatif](#optional)
--   [Configuration de votre environnement de développement](#configuring_your_development_environment)
--   [Voir aussi](#see_also)
+-   [Configuration de votre environnement de développement](#configuring-your-development-environment)
+-   [Voir aussi](#see-also)
 
 ## Conditions préalables
 
@@ -61,16 +59,16 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 -   Cliquez sur **Fichier**, sur **Nouveau**, puis sur **Projet**.
 -   Dans la boîte de dialogue **Nouveau projet**, cliquez sur **Visual C\#**, sélectionnez **Application vide (Windows)**, puis cliquez sur **OK**.
 
-    ![](../media/winrtsetup-newproj.png)
+    ![Créer un projet](../media/winrtsetup-newproj.png)
 
 -   Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur votre projet, puis sélectionnez **Ajouter une référence** pour ouvrir la boîte de dialogue **Ajouter une référence**.
 
-    ![](../media/winrtsetup-addref.png)
+    ![Ajouter une référence](../media/winrtsetup-addref.png)
 
 -   Dans la boîte de dialogue **Ajouter une référence**, cliquez sur **Parcourir**, puis sélectionnez le fichier *Microsoft.RightsManagement.dll* figurant dans le dossier dans lequel vous avez extrait le package du SDK.
--   **Applications gérées** : pour créer une application gérée, vous devez ajouter cette référence. Sélectionnez **Windows 8.1**-&gt;**Extensions**, puis cochez la case **Package Windows Visual C++ Runtime pour Windows**.
+-   **Applications gérées** : pour créer une application gérée, vous devez ajouter cette référence. Sélectionnez **Windows 8.1**-&gt;**Extensions**, puis cochez la case **Package Windows Visual C++ Runtime pour Windows**
 
-    ![](../media/winrtsetup-refmngr.png)
+    ![Ajouter des extensions](../media/winrtsetup-refmngr.png)
 
 -   **Ajout de fonctionnalités** : votre application a besoin de la fonctionnalité « Internet (client et serveur) » pour utiliser le SDK. Pour ajouter cette fonctionnalité à votre application, ouvrez le fichier *Package.appxmanifest* dans le projet et accédez à l’onglet **Fonctionnalités** pour l’ajouter.
 
@@ -91,6 +89,6 @@ Vous êtes maintenant prêt à créer vos propres applications du Windows Store.
 [Référence de l’API Windows](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement)
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

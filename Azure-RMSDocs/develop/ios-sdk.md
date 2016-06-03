@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 23f64fc8-d0f3-49ee-8d8a-b34ef26878a7
-
+ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Installation iOS et OS X
+# Installation iOS et OS X
 
 Les applications iOS et OS X peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’Azure Active Directory Rights Management (AAD RM).
 
@@ -67,41 +66,41 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 -   Pour créer un projet, dans le menu **Fichier**, cliquez sur **Nouveau**, puis sur **Projet**.
 -   Sélectionnez **Single View Application**.
 
-    ![](../media/iOS-Project.png)
+    ![Créer un nouveau projet](../media/iOS-Project.png)
 
 -   Entrez un nom et un identificateur pour votre nouveau projet.
 
-    ![](../media/iOS-project-options.png)
+    ![Nommez votre projet](../media/iOS-project-options.png)
 
 -   Cliquez sur **Suivant** et sélectionnez l’emplacement de votre projet.
 -   Pour ajouter l’infrastructure **MSRightsManagement** aux Frameworks iOS, faites glisser le dossier .framework à partir du dossier d’installation du SDK vers la section **Frameworks** de votre **Project Navigator**.
 
-    ![](../media/ios-add-dependencies-01a.png)
+    ![Définissez un emplacement](../media/ios-add-dependencies-01a.png)
 
 -   Sélectionnez la case d’option **Create groups for any added folders** et décochez la case **Copy items into destination group’s folder (if needed)**.
 
     Cette action conserve la référence au dossier d’installation du SDK au lieu de créer une copie.
 
-    ![](../media/iOS-create-groups.png)
+    ![Définissez la référence au dossier d’installation du SDK](../media/iOS-create-groups.png)
 
 -   Pour ajouter MS RMS SDK 4.2 pour le groupe de ressources, faites glisser le fichier MSRightsManagementResources.bundle du dossier MSRightsManagement.framework/Resources vers la section **Frameworks** de votre Project Navigator.
 
-    ![](../media/iOS-add-resource-bundle-02a.png)
+    ![Ajoutez le groupe de ressources](../media/iOS-add-resource-bundle-02a.png)
 
 -   Comme vous l’avez fait quand vous avez copié le Framework, sélectionnez la case d’option **Create groups for any added folders** (Créer des groupes pour tout dossier ajouté) et décochez la case **Copy items into destination group’s folder (if needed)** (Copier les éléments dans le dossier du groupe de destination si nécessaire).
 -   Le SDK s’appuie sur d’autres infrastructures, notamment : **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** et **Security**. Pour ajouter ces infrastructures, accédez à la section **Linked Frameworks and Libraries** (Infrastructures et bibliothèques liées) du volet **Summary** (Résumé) de la cible et développez cette section pour les ajouter.
 
     Les infrastructures **UIKit** et **Foundation** sont obligatoires et généralement présentes par défaut.
 
-    ![](../media/iOS-add-libraries.png)
+    ![Ajoutez des ressources](../media/iOS-add-libraries.png)
 
 -   Ajoutez l’indicateur **-ObjC** à **Other Linker Flags** (Autres indicateurs d’éditeur de lien) dans vos **Build Settings** (Paramètres de build) cibles.
 
-    ![](../media/iOS-linker-flags.png)
+    ![Ajoutez des paramètres de build](../media/iOS-linker-flags.png)
 
 -   Maintenant, votre **Project Navigator** doit ressembler à cette arborescence.
 
-    ![](../media/iOS-verify-setup-01a.png)
+    ![Passez en revue le projet](../media/iOS-verify-setup-01a.png)
 
 -   Vous êtes maintenant prêt à créer vos propres applications iOS/OS X.
 
@@ -123,6 +122,6 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

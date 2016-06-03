@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Gérée par Microsoft : opérations de cycle de vie des clés de locataires
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Si Microsoft gère votre clé de locataire pour Azure Rights Management (par défaut), utilisez les sections suivantes pour obtenir plus d’informations sur les opérations de cycle de vie qui s’appliquent à cette topologie.
 
 ## Révocation de votre clé de locataire
@@ -101,6 +104,6 @@ En cas de violation, la meilleure mesure que vous ou Microsoft puissiez prendre 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -27,7 +27,10 @@ ms.reviewer: mbaldwin
 
 # Comprendre et explorer Azure Rights Management
 
+*S’applique à : Azure Rights Management, Office 365*
 
-<!--HONumber=Apr16_HO3-->
+
+
+<!--HONumber=Apr16_HO4-->
 
 

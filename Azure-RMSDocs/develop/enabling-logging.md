@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: b0aafe75-19c9-47dc-bbba-cf4287399c6e
-
+ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Comment : activer la journalisation des erreurs et des performances
 Microsoft Rights Management SDK 4.2 gère le chargement des journaux de diagnostic et de performances via une propriété d’appareil unique.
 
@@ -85,7 +83,7 @@ Activer la journalisation automatique
 
     CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 
-Pour plus d’informations sur les paramètres facultatifs, consultez [CustomerExperienceOptions](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptionss).
+Pour plus d’informations sur les paramètres facultatifs, consultez [CustomerExperienceOptions](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptions).
 
 Obtenir le paramètre d’indicateur de contrôle de la journalisation en cours
 
@@ -101,6 +99,6 @@ Obtenir le paramètre d’indicateur de contrôle de la journalisation en cours
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

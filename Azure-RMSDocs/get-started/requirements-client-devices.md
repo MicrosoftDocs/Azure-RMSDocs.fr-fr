@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Conditions requises pour Azure RMS : Appareils clients prenant en charge Azure RMS
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Consultez les sections suivantes pour identifier les appareils prenant en charge Azure Rights Management (Azure RMS).
 
 ## Ordinateurs
@@ -59,6 +62,6 @@ Pour vérifier les autres conditions requises, consultez [Conditions requises po
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

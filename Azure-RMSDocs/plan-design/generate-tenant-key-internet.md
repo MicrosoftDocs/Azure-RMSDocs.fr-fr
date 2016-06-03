@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Générer et transférer votre clé de locataire par Internet
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Utilisez les procédures suivantes si vous avez décidé de [gérer votre propre clé de locataire](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) et que vous voulez la transférer via Internet au lieu de vous déplacer jusqu’à un établissement Microsoft pour la transférer en personne.
 
 
@@ -40,12 +43,12 @@ Pour préparer le poste de travail connecté à Internet, suivez ces 3 étapes :
 -   [Étape 3 : téléchargement de l'ensemble d'outils BYOK](#step-3-download-the-byok-toolset)
 
 ### Étape 1 : installation de Windows PowerShell pour Azure Rights Management
-Depuis le poste de travail connecté à Internet, téléchargez et installez le module Windows PowerShell pour Azure Rights Management.
+À partir de la station de travail connectée à Internet, téléchargez et installez le module Windows PowerShell pour Azure Rights Management.
 
 > [!NOTE]
 > Si vous avez déjà téléchargé ce module Windows PowerShell, exécutez la commande suivante pour vérifier que le numéro de votre version est au minimum 2.1.0.0 : `(Get-Module aadrm -ListAvailable).Version`
 
-Pour des instructions d’installation, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md).
+Pour obtenir des instructions d’installation, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md).
 
 ### Étape 2 : obtention de l'ID de locataire Azure Active Directory
 Lancez Windows PowerShell avec l'option **Exécuter en tant qu'administrateur** , puis exécutez les commandes suivantes :
@@ -88,9 +91,9 @@ L'ensemble d'outils inclut les éléments suivants :
 
 -   Un script Python nommé **verifykeypackage.py**.
 
--   Un fichier exécutable en ligne de commande nommé **KeyTransferRemote.exe**, un fichier de métadonnées nommé **KeyTransferRemote.exe.config** et les fichiers DLL associés.
+-   Un fichier exécutable en ligne de commande nommé **KeyTransferRemote.exe**, un fichier de métadonnées nommé **KeyTransferRemote.exe.config** et les fichiers DLL associés
 
--   Un package Visual C++ Redistribuable, nommé **vcredist_x64.exe**.
+-   Un package Visual C++ redistribuable nommé **vcredist_x64.exe**.
 
 Copiez le package sur une clé USB ou un autre support de stockage portable.
 
@@ -109,7 +112,7 @@ Vérifiez que les outils Thales se trouvent dans votre chemin **(%nfast_home%\bi
 ```
 set PATH=%PATH%;”%nfast_home%\bin”;”%nfast_home%\python\bin”
 ```
-Pour plus d'informations, reportez-vous au guide d'utilisation inclus avec le module de sécurité matériel Thales, ou visitez le site Web de Thales pour Azure RMS à l'adresse [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
+Pour plus d’informations, consultez le guide d’utilisation fourni avec le module de sécurité matériel Thales, ou accédez au site web de Thales pour Azure RMS à l’adresse [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
 
 ### Étape 2 : installation de l'ensemble d'outils BYOK sur le poste de travail déconnecté
 Copiez le package de l'ensemble d'outils BYOK à partir de la clé USB ou du support de stockage portable utilisé, puis procédez comme suit :
@@ -185,7 +188,7 @@ Cette étape est facultative mais recommandée, pour vous permettre de vérifier
 
 2.  Vérifiez que les éléments suivants s'affichent. Ils indiquent une validation réussie : **Résultat :  SUCCESS**
 
-Ce script valide la chaîne de signataire jusqu'à la clé racine Thales. Le hachage de cette clé racine est incorporé dans le script. Sa valeur doit être **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**. Vous pouvez également confirmer cette valeur séparément via le [site web de Thales](http://www.thalesesec.com/).
+Ce script valide la chaîne de signataire jusqu'à la clé racine Thales. Le hachage de cette clé racine est incorporé dans le script. Sa valeur doit être **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**. Vous pouvez également confirmer cette valeur séparément en accédant au [site web de Thales](http://www.thalesesec.com/).
 
 Vous pouvez à présent créer une clé qui sera votre clé de locataire RMS.
 
@@ -199,7 +202,7 @@ generatekey --generate simple type=RSA size=2048 protect=module ident=contosokey
 ```
 Tenez compte des instructions suivantes pour l'exécution de cette commande :
 
--   Le paramètre **protect** doit être définie sur la valeur **module**, comme indiqué. Ceci crée une clé protégée par module. L’ensemble d’outils BYOK ne prend pas en charge les clés protégées par OCS.
+-   Le paramètre **protect** doit être défini avec la valeur **module**, comme indiqué. Ceci crée une clé protégée par module. L’ensemble d’outils BYOK ne prend pas en charge les clés protégées par OCS.
 
 -   Nous recommandons la taille de clé 2048, mais les clés RSA 1024 bits sont également prises en charge pour les clients AD RMS existants possédant de telles clés et migrant vers Azure RMS.
 
@@ -218,7 +221,7 @@ Tenez compte des instructions suivantes pour l'exécution de cette commande :
 
 -   Utilisez l’option **-M** afin que la clé convienne pour ce scénario. Dans le cas contraire, la clé résultante sera une clé spécifique à l'utilisateur actuel.
 
--   L’option **appname** est le nom de l’application indiqué dans le fichier de clé. Si vous avez utilisé ces instructions pour créer une clé, nous avons utilisé la valeur « simple » comme indiqué dans la commande. Cependant, si vous migrez une clé protégée par module de sécurité matériel existante pour une migration d’AD RMS vers Azure RMS, spécifiez votre nom existant dans cette commande et dans celle qui suivent quand elles utilisent également l’option appname.
+-   L’option **appname** est le nom de l’application indiqué dans le fichier de clé. Si vous avez utilisé ces instructions pour créer une clé, nous avons utilisé la valeur « simple » comme indiqué dans la commande. Cependant, si vous migrez une clé protégée par module de sécurité matériel existante pour une migration d’AD RMS vers Azure RMS, spécifiez votre nom existant dans cette commande et dans celle qui suivent quand elles utilisent également l’option appname.
 
 Cette commande crée un fichier de clé tokenisée dans votre dossier %NFAST_KMDATA%\local avec un nom commençant par **key_caping`_`** suivi d’un SID. Par exemple : **key_caping_machine--801c1a878c925fd9df4d62ba001b94701c039e2fb**. Ce fichier contient une clé chiffrée.
 
@@ -270,7 +273,7 @@ Lors de l’exécution de cette commande, remplacez *contosokey* par la même va
 
 Vous serez invité à connecter vos cartes ACS de monde de sécurité et, le cas échéant, leur mot de passe ou code confidentiel.
 
-Quand la commande se termine, vous voyez **Résultat : RÉUSSITE**, et la copie de votre clé de locataire avec des autorisations réduites est enregistrée dans le fichier nommé key_xferacId_*&lt;contosokey&gt;*.
+Quand la commande se termine, le message **Résultat : RÉUSSITE** s’affiche et la copie de votre clé de locataire avec des autorisations réduites est enregistrée dans le fichier nommé key_xferacId_*&lt;contosokey&gt;*.
 
 ### Étape 2 : inspection de la copie de la clé
 Vous pouvez exécuter les utilitaires Thales pour confirmer les autorisations minimales sur la nouvelle clé de locataire :
@@ -336,9 +339,9 @@ Sur le poste de travail connecté à Internet, suivez ces 3 étapes pour transf
 -   [Étape 3 : Énumérer vos clés de locataire selon les besoins](#step-3-enumerate-your-tenant-keys-as-needed)
 
 ### Étape 1 : connexion à Azure RMS
-Revenez dans la fenêtre Windows PowerShell et procédez comme suit :
+Renvoiez dans la fenêtre Windows PowerShell et procédez comme suit :
 
-1.  Reconnectez-vous au service [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] :
+1.  Reconnectez-vous au service [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] :
 
     ```
     Connect-AadrmService
@@ -361,7 +364,7 @@ Add-AadrmKey –KeyFile <PathToPackageFile> -Verbose
 
 Si l'envoi abouti, le message suivant s'affiche : **« The Rights management service successfully added the key. ».**
 
-Notez que le changement prend un certain temps pour se propager à tous les centres de données [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
+Notez que le changement met un certain temps à se propager sur tous les centres de données [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
 
 ### Étape 3 : Énumérer vos clés de locataire selon les besoins
 Utilisez à nouveau l'applet de commande Get-AadrmKeys pour afficher la modification de la clé de locataire, ou dès que vous souhaitez consulter la liste de vos clés de locataire. Cette liste comprend la clé de locataire initiale générée par Microsoft ainsi que l'ensemble des clés de locataire que vous avez ajoutées.
@@ -380,6 +383,6 @@ Vous avez à présent effectué toutes les étapes requises pour la solution BYO
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

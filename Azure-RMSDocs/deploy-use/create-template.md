@@ -28,6 +28,9 @@ ms.suite: ems
 
 # Créer, configurer et publier un modèle personnalisé
 
+*S’applique à : Azure Rights Management, Office 365*
+
+
 Vous créez et gérez des modèles personnalisés dans le portail Azure Classic. Pour cela, vous pouvez accéder directement au portail Azure Classic ou vous connecter au Centre d’administration Office 365, puis choisir **Fonctionnalités avancées** de Rights Management. Vous êtes alors redirigé vers le portail Azure Classic.
 
 Utilisez les procédures suivantes pour créer, configurer et publier des modèles personnalisés pour la Gestion des droits.
@@ -38,13 +41,13 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
 
     -   Depuis le [centre d’administration Office 365](https://portal.office.com/):
 
-        1.  Dans le panneau de gauche, cliquez sur **paramètres de service**.
+        1.  Dans le volet gauche, cliquez sur **paramètres de service**.
 
-        2.  À partir de la page **paramètres de service** , cliquez sur **rights management**.
+        2.  Dans la page **paramètres de service**, cliquez sur **rights management**.
 
-        3.  Dans la section **Protéger vos informations** , cliquez sur **Gérer**.
+        3.  Dans la section **Protéger vos informations**, cliquez sur **Gérer**.
 
-        4.  Dans la section **Rights Management** , cliquez sur **fonctionnalités avancées**.
+        4.  Dans la section **Rights Management**, cliquez sur **fonctionnalités avancées**.
 
             > [!NOTE]
             > Si vous n’avez pas activé Rights Management, cliquez d’abord sur **activer** et confirmez votre action. Pour plus d’informations, consultez [Activation d’Azure Rights Management](activate-service.md).
@@ -55,9 +58,9 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
 
     -   À partir du [portail Azure Classic](http://go.microsoft.com/fwlink/p/?LinkID=275081) :
 
-        1.  Dans le volet gauche, cliquez sur **Active Directory**.
+        1.  Dans le volet gauche, cliquez sur **ACTIVE DIRECTORY**.
 
-        2.  À partir du **répertoire actif** , cliquez sur **RIGHTS MANAGEMENT**.
+        2.  Dans la page **active directory**, cliquez sur **RIGHTS MANAGEMENT**.
 
         3.  Sélectionnez l'annuaire concerné par la Gestion des droits.
 
@@ -85,7 +88,7 @@ Depuis la page de démarrage rapide **Prise en main de Rights Management** , cli
     > [!NOTE]
     > Les utilisateurs ou groupes que vous sélectionnez doivent avoir une adresse de messagerie. Dans un environnement de production, ce sera presque toujours le cas, mais dans un simple environnement de test, vous devrez ajouter des adresses de messagerie aux comptes d'utilisateur ou groupes.
 
-    Nous vous recommandons d’utiliser des groupes plutôt que des utilisateurs, pour simplifier la gestion des modèles. Si vous disposez d’Active Directory localement et effectuez une synchronisation avec Azure AD, vous pouvez utiliser des groupes de sécurité ou de distribution à extension messagerie. Toutefois, si vous voulez accorder des droits à tous les utilisateurs de l'organisation, il est plus efficace de copier un des modèles par défaut que de spécifier plusieurs groupes. Pour plus d’informations, consultez la section [Comment copier un modèle](copy-template.md).
+    Nous vous recommandons d’utiliser des groupes plutôt que des utilisateurs, pour simplifier la gestion des modèles. Si vous disposez d’Active Directory localement et effectuez une synchronisation avec Azure AD, vous pouvez utiliser des groupes de sécurité ou de distribution à extension messagerie. Toutefois, si vous voulez accorder des droits à tous les utilisateurs de l'organisation, il est plus efficace de copier un des modèles par défaut que de spécifier plusieurs groupes. Pour plus d’informations, consultez [Comment copier un modèle](copy-template.md).
 
     > [!TIP]
     > Vous pouvez par la suite ajouter au modèle des utilisateurs extérieurs à votre organisation en utilisant le [module Windows PowerShell pour Azure Rights Management](install-powershell.md) et en employant l’une des méthodes suivantes :
@@ -120,12 +123,12 @@ Depuis la page de démarrage rapide **Prise en main de Rights Management** , cli
 
     Par exemple, si vous ne configurez pas la compatibilité des applications pour le modèle départemental dans notre exemple Ressources humaines, seuls les utilisateurs du département Ressources humaines voient ce modèle quand ils utilisent l'application de partage RMS, mais aucun utilisateur ne peut le voir s'il utilise Outlook Web Access (OWA) à partir d'Exchange Server 2013, car Exchange OWA et Exchange ActiveSync ne prennent pas en charge les modèles départementaux. Si vous modifiez ce comportement par défaut en configurant la compatibilité des applications, seuls les utilisateurs du département Ressources humaines voient le modèle départemental quand ils utilisent l'application de partage RMS, mais tous les utilisateurs le voient quand ils utilisent Outlook Web Access (OWA). En cas d'utilisation d'OWA ou d'Exchange ActiveSync à partir d'Exchange Online, soit tous les utilisateurs voient les modèles départementaux, soit aucun ne les voit, en fonction de l'état du modèle (archivé ou publié) dans Exchange Online.
 
-    Office 2016 prend en charge en mode natif les modèles départementaux, tout comme le fait Office 2013 depuis la version 15.0.4727.1000, publiée en juin 2015 dans le cadre de ([KB 3054853](https://support.microsoft.com/kb/3054853)).
+    Office 2016 prend en charge en mode natif les modèles départementaux, tout comme le fait Office 2013 depuis la version 15.0.4727.1000, publiée en juin 2015 dans le cadre de ([KB 3054853](https://support.microsoft.com/kb/3054853)).
 
     > [!NOTE]
     > Si vous disposez d’applications qui ne prennent pas encore en charge les modèles départementaux en mode natif, vous pouvez utiliser un script de téléchargement de modèle RMS personnalisé ou d’autres outils pour déployer ces modèles dans le dossier client RMS local. Ensuite, ces applications affichent correctement les modèles départementaux uniquement aux utilisateurs et aux groupes que vous sélectionnez pour l'étendue du modèle :
     > 
-    > -   Pour Office 2010, le dossier client est **%localappdata%\Microsoft\DRM\Templates**.
+    > -   Pour Office 2010, le dossier client est **%localappdata%\Microsoft\DRM\Templates**.
     > -   À partir d'un ordinateur client ayant téléchargé tous les modèles, vous pouvez copier et coller les fichiers de modèle sur d'autres ordinateurs.
     > 
     > Vous pouvez [télécharger le script de modèle RMS personnalisé à partir du site Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=524506). Si une erreur s’affiche lorsque vous cliquez sur ce lien, vous n’êtes probablement pas inscrit à Microsoft Connect.   Pour vous inscrire :
@@ -143,28 +146,28 @@ Depuis la page de démarrage rapide **Prise en main de Rights Management** , cli
     |**expiration du contenu**|Définissez une date ou un nombre de jours après lesquels les fichiers protégés par le modèle ne devront plus s'ouvrir. Vous pouvez spécifier une date ou un nombre de jours à partir du moment où la protection est appliquée aux fichiers.<br /><br />Lorsque vous spécifiez une date, celle-ci prend effet à minuit, dans votre fuseau horaire actuel.|
     |**accès hors connexion**|Utilisez ce paramètre pour contrebalancer vos éventuelles exigences de sécurité quand les utilisateurs doivent pouvoir ouvrir des fichiers protégés alors qu’ils n’ont pas de connexion Internet.<br /><br />Si vous spécifiez que le contenu n’est pas disponible sans connexion Internet ou que ce contenu est uniquement disponible pendant un nombre de jours spécifié, quand ce seuil est atteint, les utilisateurs doivent s’authentifier à nouveau et leur accès est journalisé. Dans ce cas, si leurs informations d’identification ne sont pas mises en cache, les utilisateurs sont invités à se connecter préalablement pour pouvoir ouvrir les fichiers.<br /><br />En plus d’une nouvelle authentification, la stratégie et l’appartenance au groupe d’utilisateurs sont réévaluées. Cela signifie que les utilisateurs peuvent accéder de nouveau ou ne plus accéder à un même fichier si des modifications ont été apportées à la stratégie ou à l'appartenance au groupe depuis leur dernier accès.|
 
-10. Lorsque vous êtes certain que le modèle est correctement configuré pour vos utilisateurs, cliquez sur **PUBLIER** pour rendre le modèle visible pour les utilisateurs, puis cliquez sur **ENREGISTRER**.
+10. Quand vous êtes certain que le modèle est correctement configuré pour vos utilisateurs, cliquez sur **PUBLIER** pour rendre le modèle visible pour les utilisateurs, puis cliquez sur **ENREGISTRER**.
 
 11. Cliquez sur le bouton Précédent dans le portail Azure Classic pour revenir à la page **MODÈLES**, dans laquelle votre modèle affiche à présent l’état **Publié**.
 
 Pour apporter des modifications à votre modèle, sélectionnez-le, puis utilisez de nouveau les étapes de démarrage rapide. Ou sélectionnez l'une des options suivantes :
 
--   Pour ajouter d'autres utilisateurs et groupes, puis définir leurs droits : Cliquez sur **DROITS**, puis sur **AJOUTER**.
+-   Pour ajouter d’autres utilisateurs et groupes, puis définir leurs droits, cliquez sur **DROITS**, puis sur **AJOUTER**.
 
--   Pour supprimer des utilisateurs ou groupes que vous avez précédemment sélectionnés : Cliquez sur **DROITS**, sélectionnez l’utilisateur ou le groupe dans la liste, puis cliquez sur **SUPPRIMER**.
+-   Pour supprimer des utilisateurs ou des groupes que vous avez précédemment sélectionnés, cliquez sur **DROITS**, sélectionnez l’utilisateur ou le groupe dans la liste, puis cliquez sur **SUPPRIMER**.
 
--   Pour modifier les utilisateurs pouvant voir les modèles pour les sélectionner à partir d'applications : Cliquez sur **ÉTENDUE**, puis sur **AJOUTER** ou **SUPPRIMER**ou sur **COMPATIBILITÉ DES APPLICATIONS**.
+-   Pour modifier les utilisateurs pouvant voir les modèles pour les sélectionner à partir d’applications, cliquez sur **ÉTENDUE**, puis sur **AJOUTER**, **SUPPRIMER** ou **COMPATIBILITÉ DES APPLICATIONS**.
 
--   Pour que le modèle ne soit plus visible par tous les utilisateurs : Cliquez sur **CONFIGURER**, sur **ARCHIVER**, puis sur **ENREGISTRER**.
+-   Pour que le modèle ne soit plus visible par tous les utilisateurs, cliquez sur **CONFIGURER**, sur **ARCHIVER**, puis sur **ENREGISTRER**.
 
--   Pour apporter d'autres modifications de configuration : Cliquez sur **CONFIGURER**, apportez vos modifications, puis cliquez sur **ENREGISTRER**.
+-   Pour apporter d’autres modifications de configuration, cliquez sur **CONFIGURER**, apportez vos modifications, puis cliquez sur **ENREGISTRER**.
 
 > [!WARNING]
-> Quand vous apportez des modifications à un modèle déjà enregistré, les clients ne voient pas ces modifications tant qu'ils n'ont pas actualisé le modèle sur leurs ordinateurs. Pour plus d’informations, consultez la section [Actualisation des modèles pour les utilisateurs](refresh-templates.md).
+> Quand vous apportez des modifications à un modèle déjà enregistré, les clients ne voient pas ces modifications tant qu'ils n'ont pas actualisé le modèle sur leurs ordinateurs. Pour plus d’informations, consultez [Actualisation des modèles pour les utilisateurs](refresh-templates.md).
 
 ## Voir aussi
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Conditions requises pour Azure RMS : Azure AD Directory
 
+*S’applique à : Azure Rights Management, Office 365*
+
+
 Vous devez disposer d’un annuaire Azure AD pour pouvoir utiliser Azure Rights Management (Azure RMS). Vous devez utiliser le compte de votre organisation correspondant à cet annuaire pour vous connecter au portail Azure Classic, où vous pouvez, par exemple, configurer et gérer les modèles Rights Management.
 
 Si vous n’avez pas encore d’abonnement Azure pour votre organisation, vous pouvez en obtenir un en vous inscrivant pour une évaluation gratuite : accédez à la page [Prise en main d’Azure](https://account.windowsazure.com/organization) et suivez les instructions.
@@ -39,8 +42,7 @@ Pour plus d’informations, consultez les ressources suivantes dans la documenta
 
 Si vous souhaitez intégrer votre annuaire Azure AD à vos forêts AD locales, consultez [Intégration de vos identités locales avec Azure Active Directory](/active-directory/active-directory-aadconnect).
 
-> [!NOTE]
-> Si vous avez des appareils mobiles ou des ordinateurs Mac qui s'authentifient localement par le biais des services AD FS ou d'un fournisseur d'authentification équivalent :
+> [!NOTE] Si vous avez des appareils mobiles ou des ordinateurs Mac qui s’authentifient localement via les services AD FS ou un fournisseur d’authentification équivalent :
 > 
 > -   Vous devez utiliser les services AD FS sur la version serveur minimale de **Windows Server 2012 R2** ou un autre fournisseur d’authentification prenant en charge le protocole OAuth 2.0.
 
@@ -78,6 +80,6 @@ Pour vérifier les autres conditions requises, consultez [Conditions requises po
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

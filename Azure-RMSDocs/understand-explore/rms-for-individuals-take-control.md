@@ -29,6 +29,9 @@ ms.suite: ems
 
 # Contrôle administrateur des comptes créés pour RMS for individuals
 
+*S’applique à : Azure Rights Management*
+
+
 Même si vous ne souhaitez pas convertir l'abonnement RMS for individuals de votre organisation en un abonnement payant, vous pouvez tout de même contrôler les comptes d'utilisateur associés à l'annuaire Azure de votre organisation de l'une des manières suivantes :
 
 -   Implémentez des solutions d'intégration d'annuaire pour Azure Active Directory et votre infrastructure de services de domaine Active Directory. Vous pouvez synchroniser les comptes et les mots de passe, afin que les utilisateurs n'aient pas à créer de nouveaux comptes pour utiliser Rights Management. Vos stratégies de mot de passe locales s'appliqueront ainsi aux nouveaux comptes utilisateur Azure. Vous pouvez également synchroniser les mots de passe, afin que les utilisateurs n'aient pas à mémoriser un autre mot de passe pour utiliser Rights Management.
@@ -49,6 +52,6 @@ Pour contrôler les comptes d'utilisateur dans l'annuaire Azure, ou empêcher de
 Comment savoir si des utilisateurs autres que des administrateurs peuvent créer leurs comptes dans Azure Active Directory pour RMS for individuals ?  Consultez [Détermination des utilisateurs inscrits à RMS for Individuals](rms-for-individuals-identify-sign-up.md).
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

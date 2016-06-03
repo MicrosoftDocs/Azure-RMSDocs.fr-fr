@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
+
+*S’applique à : Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+
 Cet article contient des instructions et un script pour utiliser le client Rights Management (RMS) avec l'outil de protection RMS pour configurer les outils de gestion de ressources pour serveur de fichiers et l'infrastructure de classification des fichiers (ICF).
 
 Cette solution vous permet de protéger automatiquement tous les fichiers figurant dans un dossier sur un serveur de fichiers exécutant Windows Server, ou des fichiers répondant à un critère spécifique. Il s'agit, par exemple, de fichiers qui ont été classés comme contenant des informations confidentielles ou sensibles. Cette solution utilisant Azure Rights Management (Azure RMS) pour protéger les fichiers, vous devez déployer cette technologie dans votre organisation.
@@ -46,7 +49,7 @@ Conditions préalables pour ces instructions :
 
     -   Vous avez identifié un dossier local contenant des fichiers à protéger avec Rights Management. Par exemple, C:\FileShare.
 
-    -   Vous avez installé l'outil de protection RMS, y compris les éléments correspondant aux conditions préalables pour l'outil (tel le client RMS) et pour Azure RMS (tel le compte de principal du service). Pour plus d'informations, voir [Applets de commande de Protection RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+    -   Vous avez installé l'outil de protection RMS, y compris les éléments correspondant aux conditions préalables pour l'outil (tel le client RMS) et pour Azure RMS (tel le compte de principal du service). Pour plus d’informations, consultez [Azure Rights Management Protection Cmdlets (Applets de commande de protection RMS)](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
     -   Si vous souhaitez modifier le niveau par défaut de protection RMS (native ou générique) pour des extensions de nom de fichier spécifiques, vous avez modifié le Registre comme décrit dans la page [Configuration de l’API de fichier](https://msdn.microsoft.com/library/dn197834%28v=vs.85%29.aspx) .
 
@@ -158,7 +161,7 @@ Nous pouvons maintenant créer une règle de classification utilisant cette prop
 
         -   **Activé**: Conservez la valeur par défaut, c'est-à-dire que cette case à cocher est activée.
 
-        -   **Description**: Tapez **Classifier tous les fichiers dans le dossier &lt;nom de dossier&gt; pour Rights Management**.
+        -   **Description** : Tapez **Classifier tous les fichiers dans le dossier &lt;nom de dossier&gt; pour Rights Management**.
 
             Remplacez *&lt;nom de dossier&gt;* par le nom du dossier choisi. Par exemple, **Classifier tous les fichiers dans le dossier C:\FileShare pour Rights Management**.
 
@@ -200,7 +203,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
 
         -   Conservez la case à cocher **Activer** sélectionnée.
 
-        -   **Description**: Tapez **Protéger les fichiers dans &lt;nom de dossier&gt; avec Rights Management et un modèle à l'aide d'un script Windows PowerShell**
+        -   **Description** : Tapez **Protéger les fichiers dans &lt;nom de dossier&gt; avec Rights Management et un modèle à l’aide d’un script Windows PowerShell.**
 
             Remplacez *&lt;nom de dossier&gt;* par le nom du dossier choisi. Par exemple, **Protéger les fichiers dans C:\FileShare avec Rights Management et un modèle à l’aide d’un script Windows PowerShell**.
 
@@ -219,7 +222,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
             ```
             Si Windows n'est pas sur votre lecteur C:, modifiez ce chemin d'accès ou accédez à ce fichier.
 
-        -   **Argument**: Spécifiez les informations suivantes, en fournissant vos propres valeurs pour &lt;chemin&gt; et &lt;ID de modèle&gt; :
+        -   **Argument** : Spécifiez les informations suivantes, en fournissant vos propres valeurs pour &lt;chemin&gt; et &lt;ID de modèle&gt; :
 
             ```
             -Noprofile -Command "<path>\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID <template GUID> -OwnerMail [Source File Owner Email]"
@@ -259,15 +262,15 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
 
 1.  Exécutez la règle de classification :
 
-    1.  Cliquez sur **Règles de Classification** &gt; **Exécuter la classification avec toutes les règles maintenant**.
+    1.  Cliquez sur **Règles de Classification** &gt; **Exécuter la classification avec toutes les règles maintenant**
 
     2.  Cliquez sur **Attendre la fin de la classification**, puis sur **OK**.
 
-2.  Attendez que la boîte de dialogue **Classification en cours d'exécution** se ferme, puis consultez les résultats dans le rapport qui s'affiche automatiquement. Vous devez voir **1** pour le champ **Propriétés** , et le nombre de fichiers figurant dans votre dossier. Vérifiez en contrôlant dans l'Explorateur de fichiers les propriétés des fichiers figurant dans le dossier que vous avez choisi. Sous l'onglet **Classification** , **RMS** doit apparaître en tant que nom de propriété, et **Oui** en tant que **Valeur**.
+2.  Attendez que la boîte de dialogue **Classification en cours d'exécution** se ferme, puis consultez les résultats dans le rapport qui s'affiche automatiquement. Vous devez voir **1** pour le champ **Propriétés** , et le nombre de fichiers figurant dans votre dossier. Vérifiez en contrôlant dans l'Explorateur de fichiers les propriétés des fichiers figurant dans le dossier que vous avez choisi. Sous l’onglet **Classification**, **RMS** doit apparaître en tant que nom de propriété et **Oui** en tant que **Valeur**.
 
 3.  Exécutez la tâche de gestion de fichiers :
 
-    1.  Cliquez sur **Tâches de gestion de fichiers** &gt; **Protéger les fichiers avec RMS** &gt; **Exécuter maintenant une tâche de gestion de fichiers**.
+    1.  Cliquez sur **Tâches de gestion de fichiers** &gt; **Protéger les fichiers avec RMS** &gt; **Exécuter maintenant une tâche de gestion de fichiers**
 
     2.  Cliquez sur **Attendre la fin de l’exécution de la tâche**, puis sur **OK**.
 
@@ -299,12 +302,12 @@ Après avoir vérifié que ces tâches s'exécutent correctement, vous pouvez fe
 ## Modification des instructions pour protéger des fichiers de façon sélective
 Lorsque les instructions précédentes fonctionnent, il est très facile de les modifier pour obtenir une configuration plus sophistiquée. Par exemple, vous pouvez protéger des fichiers en utilisant le même script, mais uniquement pour les fichiers contenant des informations d'identification personnelle, voire sélectionner un modèle associé à des droits plus restrictifs.
 
-Pour ce faire, utilisez l’une des propriétés de classification intégrées (par exemple, **Informations d’identification personnelle**) ou créez votre propre propriété. Créez ensuite une règle utilisant cette propriété. Par exemple, vous pouvez sélectionner le **Classifieur de contenus**, choisir la propriété **Informations d'identification personnelle** avec une valeur **Haute**, et configurer le modèle de chaîne ou d'expression qui identifie le fichier à configurer pour cette propriété (par exemple, la chaîne «**Date de naissance**»).
+Pour ce faire, utilisez l’une des propriétés de classification intégrées (par exemple, **Informations d’identification personnelle**) ou créez votre propre propriété. Créez ensuite une règle utilisant cette propriété. Par exemple, vous pouvez sélectionner le **Classifieur de contenus**, choisir la propriété **Informations d’identification personnelle** avec une valeur **Haute**, et configurer le modèle de chaîne ou d’expression qui identifie le fichier à configurer pour cette propriété (par exemple, la chaîne « **Date de naissance**").
 
-À présent, il ne vous reste plus qu'à créer une tâche de gestion de fichiers utilisant le même script, éventuellement avec un autre modèle, puis à configurer la condition pour la propriété de classification que vous venez de configurer. Par exemple, au lieu de la condition que nous avons configurée précédemment (propriété**RMS** , **Égal**, **Oui**), sélectionnez la propriété **Informations d'identification personnelle** avec la valeur **Opérateur** définie sur **Égal** et la **Valeur** **Haute**.
+À présent, il ne vous reste plus qu'à créer une tâche de gestion de fichiers utilisant le même script, éventuellement avec un autre modèle, puis à configurer la condition pour la propriété de classification que vous venez de configurer. Par exemple, au lieu de la condition que nous avons configurée précédemment (propriété**RMS**, **Égal**, **Oui**), sélectionnez la propriété **Informations d’identification personnelle** avec la valeur **Opérateur** définie sur **Égal** et la **Valeur** **Haute**.
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

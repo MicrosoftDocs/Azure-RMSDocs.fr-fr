@@ -26,7 +26,10 @@ ms.suite: ems
 ---
 
 
-# Guide de l’administrateur de l’application de partage Rights Management
+# Guide de l'administrateur de l'application de partage Rights Management
+
+*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+
 
 Utilisez les informations suivantes si vous êtes responsable de l’application de partage Microsoft Rights Management sur un réseau d’entreprise ou si vous souhaitez des informations plus techniques que celles qui figurent dans le [Guide de l’utilisateur de l’application de partage Rights Management](sharing-app-user-guide.md) ou sur le [Forum Aux Questions sur l’application de partage Microsoft Rights Management pour Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
@@ -35,7 +38,7 @@ L'application de partage RMS est mieux adaptée au travail avec Azure RMS, car c
 ## Déploiement automatique de l'application de partage Microsoft Rights Management
 La version Windows de l'application de partage RMS prend en charge une installation scriptée, ce qui la rend appropriée pour les déploiements d'entreprise.
 
-Les seules conditions préalables à l'installation sont que les ordinateurs exécutent une version minimale de Windows 7 Service Pack 1 et que Microsoft Framework, version minimale 4.0, soit installé. Si vous devez installer Microsoft .NET Framework 4.0, vous pouvez le [télécharger pour installation à partir du Centre de téléchargement Microsoft](http://www.microsoft.com/download/details.aspx?id=17718).
+Les seules conditions préalables à l'installation sont que les ordinateurs exécutent une version minimale de Windows 7 Service Pack 1 et que Microsoft Framework, version minimale 4.0, soit installé. Si vous devez installer Microsoft .NET Framework 4.0, vous pouvez le [télécharger à partir du Centre de téléchargement Microsoft et l’installer](http://www.microsoft.com/download/details.aspx?id=17718).
 
 ### Pour télécharger l’application de partage RMS pour un déploiement automatique
 
@@ -94,7 +97,7 @@ Pour vérifier que l’opération a réussi, consultez la section [Vérification
 
     1.  Connectez-vous à un ordinateur à l'aide d'un compte d'administrateur local.
 
-    2.  Sur cet ordinateur, [téléchargez et installez l'Assistant d'inscription en ligne Microsoft](http://www.microsoft.com/download/details.aspx?id=28177).
+    2.  Sur cet ordinateur, [téléchargez et installez l’Assistant d’inscription en ligne Microsoft](http://www.microsoft.com/download/details.aspx?id=28177).
 
     3.  Exécutez la commande suivante pour afficher l'URL du service de certification à l'écran, que vous pouvez ensuite copier et enregistrer pour l'étape suivante :
 
@@ -204,7 +207,7 @@ Vous pouvez utiliser les fichiers journaux d'installation pour vérifier que l'i
 
 ### Pour vérifier la réussite de l'installation de l'application de partage RMS pour Office 2016 ou Office 2013 et Azure RMS ou Active Directory RMS
 
--   Pour vérifier la réussite de la commande Setup.exe sur chaque ordinateur, recherchez le fichier journal d’installation **RMInstaller.log** dans le dossier *%temp%\RMS_installer_&lt;guid&gt;*, puis identifiez le code de sortie.
+-   Pour vérifier que la commande Setup.exe a fonctionné sur chaque ordinateur, recherchez le fichier journal d’installation **RMInstaller.log** dans le dossier *%temp%\RMS_installer_&lt;guid&gt;*, puis identifiez le code de sortie.
 
     Une installation réussie a le code de sortie 0, et tout autre numéro indique l'échec de l'installation.
 
@@ -212,7 +215,7 @@ Vous pouvez utiliser les fichiers journaux d'installation pour vérifier que l'i
 
 ### Pour vérifier la réussite de l'installation de l'application de partage RMS pour Office 2010 et Azure RMS
 
-1.  Pour vérifier la réussite de la commande Setup.exe sur chaque ordinateur, recherchez le fichier journal d’installation **RMInstaller.log** dans le dossier *%temp%\RMS_installer_&lt;guid&gt;*, puis identifiez le code de sortie.
+1.  Pour vérifier que la commande Setup.exe a fonctionné sur chaque ordinateur, recherchez le fichier journal d’installation **RMInstaller.log** dans le dossier *%temp%\RMS_installer_&lt;guid&gt;*, puis identifiez le code de sortie.
 
     Une installation réussie a le code de sortie 0, et tout autre numéro indique l'échec de l'installation.
 
@@ -234,7 +237,7 @@ Vous pouvez utiliser les fichiers journaux d'installation pour vérifier que l'i
 
 ### Pour vérifier la réussite de l'installation de l'application de partage RMS pour Office 2010 et Active Directory RMS
 
-1.  Pour vérifier la réussite de la commande Setup.exe sur chaque ordinateur, recherchez le fichier journal d’installation dans le dossier *%temp%\RMS_installer_&lt;guid&gt;*, puis identifiez le code de sortie.
+1.  Pour vérifier que la commande Setup.exe a fonctionné sur chaque ordinateur, recherchez le fichier journal d’installation dans le dossier *%temp%\RMS_installer_&lt;guid&gt;*, puis identifiez le code de sortie.
 
     Une installation réussie a le code de sortie 0, et tout autre numéro indique l'échec de l'installation.
 
@@ -257,11 +260,11 @@ Vous pouvez utiliser les fichiers journaux d'installation pour vérifier que l'i
 
     -   [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation]
 
-        @="&lt;url de certification&gt;"
+        @="&lt;certification url&gt;"
 
     -   [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM]
 
-        DefaultUser="&lt;utilisateur_par_défaut&gt;"
+        DefaultUser="&lt;default_user&gt;"
 
 ### Pour vérifier la réussite de l'installation de l'application de partage RMS et du complément Office uniquement
 
@@ -321,7 +324,7 @@ Par défaut, les utilisateurs sont avertis s'il existe une version ultérieure d
 
 1.  Accédez à **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC** et, si elle n’est pas déjà présente, créez une clé nommée **RmsSharingApp**.
 
-2.  Sélectionnez **RmsSharingApp**, créez une valeur DWORD de **AllowUpdatePrompt**et définissez la valeur sur **0**.
+2.  Sélectionnez **RmsSharingApp**, créez une valeur DWORD de **AllowUpdatePrompt** et définissez la valeur sur **0**.
 
 Étant donné que l'application de partage RMS n'est pas prise en charge par WSUS, vous pouvez utiliser la technique suivante pour tester les nouvelles versions de l'application de partage RMS avant de les déployer vers tous les utilisateurs :
 
@@ -337,7 +340,7 @@ Si votre [abonnement prend en charge le suivi des documents](https://technet.mic
 Pour exécuter ces applets de commande, vous devez disposer au moins de la version **2.3.0.0** du module Azure RMS pour Windows PowerShell.  Pour obtenir des instructions d’installation, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md).
 
 > [!TIP]
-> Si vous avez précédemment téléchargé et installé le module, vérifiez le numéro de version en exécutant la commande suivante : `(Get-Module aadrm –ListAvailable).Version`
+> Si vous avez déjà téléchargé et installé le module, vérifiez le numéro de version en exécutant la commande suivante : `(Get-Module aadrm –ListAvailable).Version`
 
 Les URL suivantes sont utilisées pour le suivi des documents et doivent être autorisées (par exemple, ajoutez-les à vos sites approuvés si vous utilisez Internet Explorer avec sécurité renforcée) :
 
@@ -359,16 +362,16 @@ Si vous utilisez les services AD RMS et que les utilisateurs de votre organisati
 
 2.  Sélectionnez **RmsSharingApp**, créez une valeur de chaînes multiples nommée **FederatedDomains**, puis ajoutez les domaines et tous les sous-domaines utilisés par votre organisation. Les caractères génériques ne sont pas pris en charge.
 
-    Par exemple : la société Coho Vineyard &amp; Winery dispose du domaine de messagerie standard **cohovineyardandwinery.com**mais, à la suite de fusions, elles utilisent également les domaines de messagerie **cohowinery.com**, **eastcoast.cohowinery.com**et **cohovineyard**. Pour les données de valeur **FederatedDomains**, l’administrateur entre **cohowinery.com; eastcoast.cohowinery.com; cohovineyard**
+    Par exemple : la société Coho Vineyard &amp; Winery dispose du domaine de messagerie standard **cohovineyardandwinery.com** mais, à la suite de fusions, elle utilise également les domaines de messagerie **cohowinery.com**, **eastcoast.cohowinery.com** et **cohovineyard**. Pour les données de valeur **FederatedDomains**, l’administrateur entre **cohowinery.com; eastcoast.cohowinery.com; cohovineyard**
 
 Si vous n'apportez pas cette modification au Registre, les utilisateurs risquent de ne pas pouvoir consommer le contenu qui a été protégé par d'autres utilisateurs de leur organisation. Cette modification du Registre n'est pas nécessaire si vous utilisez Azure RMS.
 
 
 ## Étapes suivantes
-Pour obtenir des informations techniques supplémentaires sur notamment la différence entre les niveaux de protection (native et générique), les types de fichiers pris en charge, les extensions de nom de fichier et la façon de modifier le niveau de protection par défaut, consultez [Présentation technique de l’application de partage Rights Management](sharing-app-admin-guide-technical.md).
+Pour obtenir des informations techniques supplémentaires, notamment sur la différence entre les niveaux de protection (native et générique), les types de fichiers pris en charge, les extensions de nom de fichier et la façon de modifier le niveau de protection par défaut, consultez [Présentation technique de l’application de partage Rights Management](sharing-app-admin-guide-technical.md).
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

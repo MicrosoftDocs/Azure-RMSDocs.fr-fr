@@ -28,13 +28,16 @@ ms.suite: ems
 
 # Paramètres de Registre pour le connecteur Rights Management
 
+*S’applique à : Azure Rights Management, Office 365*
+
+
 Reportez-vous aux tableaux des sections suivantes uniquement si vous voulez ajouter ou vérifier manuellement les paramètres de Registre des serveurs exécutant Exchange, SharePoint ou Windows Server, qui configure les serveurs pour utiliser le [connecteur RMS](deploy-rms-connector.md). La méthode recommandée pour configurer ces serveurs consiste à utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS.
 
 Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 -   *MicrosoftRMSURL* est l'URL de service Microsoft RMS de votre organisation. Pour obtenir cette valeur :
 
-    1.  Exécutez l’applet de commande [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) pour Azure RMS. Si vous n’avez pas déjà installé le module Windows PowerShell pour Azure RMS, consultez [Installation de Windows PowerShell pour Azure Rights Management](install-powershell.md).
+    1.  Exécutez l’applet de commande [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) pour Azure RMS. Si vous n’avez pas encore installé le module Windows PowerShell pour Azure RMS, consultez [Installation de Windows PowerShell pour Azure Rights Management](install-powershell.md).
 
     2.  Dans le résultat de l'applet de commande, identifiez la valeur **LicensingIntranetDistributionPointUrl** .
 
@@ -149,7 +152,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 - https://*ConnectorFQDN*
 
 
-## Paramètres de Registre SharePoint 2013
+## Paramètres de Registre SharePoint 2016 ou SharePoint 2013
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
@@ -219,6 +222,6 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 Retour à [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

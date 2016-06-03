@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Journalisation et analyse de l’utilisation d’Azure Rights Management
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Les informations de cette rubrique aident à comprendre comment utiliser la journalisation de l’utilisation avec Azure Rights Management (Azure RMS). Le service Azure Rights Management peut journaliser chaque demande effectuée pour votre organisation, notamment les demandes provenant d’utilisateurs, les actions effectuées par les administrateurs Rights Management au sein de votre organisation, ainsi que les actions effectuées par les opérateurs Microsoft pour prendre en charge votre déploiement du service Azure Rights Management.
 
 Vous pouvez ensuite utiliser les journaux Azure Rights Management dans le cadre des scénarios d’entreprise suivants :
@@ -44,8 +47,7 @@ Vous pouvez ensuite utiliser les journaux Azure Rights Management dans le cadre 
 
     En cas de fuite d’informations, vous devrez très certainement fournir une liste des personnes qui ont accédé récemment à des documents spécifiques ainsi que le type d’informations auxquelles a pu accéder un individu suspecté. Vous pouvez répondre à ces types de questions quand vous utilisez Azure Rights Management et la journalisation, car les personnes qui consultent du contenu protégé doivent toujours obtenir une licence Rights Management pour ouvrir des documents et des images protégés par Azure Rights Management, même si ces fichiers sont déplacés par e-mail ou s’ils sont copiés sur des lecteurs USB ou d’autres dispositifs de stockage. Cela signifie que vous pouvez utiliser les journaux storage devices en tant que source d’informations fiable pour une analyse légale quand vous protégez vos données à l’aide d’Azure Rights Management.
 
-> [!NOTE]
-> Si vous vous intéressez uniquement à la journalisation des tâches d’administration pour Azure Rights Management et que vous ne souhaitez pas suivre la manière dont les utilisateurs utilisent Rights Management, vous pouvez utiliser l’applet de commande Windows PowerShell [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) pour Azure Rights Management.
+> [!NOTE] Si vous vous intéressez uniquement à la journalisation des tâches d’administration pour Azure Rights Management et que vous ne souhaitez pas suivre la manière dont les utilisateurs utilisent Rights Management, vous pouvez utiliser l’applet de commande Windows PowerShell [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) pour Azure Rights Management.
 > 
 > Vous pouvez également utiliser le portail Azure Classic pour obtenir des rapports détaillés tels que **Résumé RMS**, **Utilisateurs RMS actifs**, **Plateformes des appareils RMS** et **Utilisation d’applications RMS**. Pour accéder à ces rapports à partir du portail Azure Classic, cliquez sur **Active Directory**, sélectionnez et ouvrez un annuaire, puis cliquez sur **RAPPORTS**.
 
@@ -54,8 +56,7 @@ Pour plus d’informations sur la journalisation de l’utilisation d’Azure Ri
 ## Comment activer la journalisation de l’utilisation d’Azure Rights Management
 Depuis février 2016, la journalisation de l’utilisation d’Azure Rights Management est activée par défaut pour tous les clients. Cela s’applique aux clients qui ont activé leur service Azure RMS avant février 2016 et à ceux qui l’activent après février 2016. 
 
-> [!NOTE]
-> Le stockage des journaux ou la fonctionnalité de journalisation n’entraînent pas de frais supplémentaires.
+> [!NOTE] Le stockage des journaux ou la fonctionnalité de journalisation n’entraînent pas de frais supplémentaires.
 > 
 > Si vous utilisiez la journalisation de l’utilisation pour Azure RMS avant février 2016, vous aviez besoin d’un abonnement à Azure et d’une capacité de stockage suffisante sur Azure, ce qui n’est plus le cas.
 
@@ -151,7 +152,7 @@ Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des c
 |owner-email|Chaîne|Adresse de messagerie du propriétaire du document.|alice@contoso.com|
 |issuer|Chaîne|Adresse de messagerie de l’émetteur du document.|alice@contoso.com (ou) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com’|
 |Template-id|Chaîne|ID du modèle utilisé pour protéger le document.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|File-name|Chaîne|Nom de fichier du document qui a été protégé.|TopSecretDocument.docx|
+|File-name|Chaîne|Nom de fichier du document qui a été protégé. <br /><br />Actuellement, certains fichiers (tels que les documents Office) sont affichés sous forme de GUID plutôt que noms de fichiers réels.|TopSecretDocument.docx|
 |Date-published|Date|Date à laquelle le document a été protégé.|2015-10-15T21:37:00|
 |c-info|Chaîne|Informations concernant la plateforme du client d’où émane la demande.<br /><br />La chaîne spécifique varie selon l’application (par exemple, le système d’exploitation ou le navigateur).|’MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64’|
 |c-ip|Adresse|Adresse IP du client d’où émane la demande.|64.51.202.144|
@@ -159,9 +160,9 @@ Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des c
 #### Exceptions pour le champ user-id.
 Bien que le champ user-id indique généralement l’utilisateur qui effectue la demande, il existe deux exceptions pour lesquelles la valeur ne mappe pas à un utilisateur réel :
 
--   Valeur **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**.
+-   Valeur **'microsoftrmsonline@&lt;votreIDdeClient&gt;.rms.&lt;région&gt;.aadrm.com'**.
 
-    Cette valeur indique qu’un service Office 365, tel qu’Exchange Online ou SharePoint Online, est à l’origine de la demande. Dans la chaîne, *&lt;YourTenantID&gt;* représente le GUID de votre client et *&lt;region&gt;* correspond à la région dans laquelle votre client est inscrit. Par exemple, **AN** représente l’Amérique du Nord, **UE** correspond à l’Europe et **AP** correspond à l’Asie.
+    Cette valeur indique qu’un service Office 365, tel qu’Exchange Online ou SharePoint Online, est à l’origine de la demande. Dans la chaîne, *&lt;votreIDdeClient&gt;* correspond au GUID de votre client, et *&lt;région&gt;* à la région dans laquelle votre client est inscrit. Par exemple, **AN** représente l’Amérique du Nord, **UE** correspond à l’Europe et **AP** correspond à l’Asie.
 
 -   Si vous utilisez le connecteur RMS :
 
@@ -228,6 +229,6 @@ Pour plus d’informations sur l’utilisation de Windows PowerShell pour Azure 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Autres applications prenant en charge les API RMS
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Utilisez les informations suivantes pour comprendre comment Azure Rights Management (Azure RMS) peut prendre en charge d’autres applications pour protéger les données de votre organisation.
 
 En utilisant RMS SDK, vos développeurs internes peuvent écrire des applications métier pour prendre en charge nativement [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]. Le mode d’intégration de la protection des informations à ces applications dépend de la manière dont elles sont écrites. Par exemple, l’intégration peut être automatiquement appliquée en demandant un minimum d’interaction utilisateur, ou pour une expérience plus personnalisée, les utilisateurs peuvent être invités à configurer des paramètres pour appliquer la protection des informations à des fichiers. Pour plus d’informations sur le SDK, consultez le [Guide du développeur](../develop/developers-guide.md).

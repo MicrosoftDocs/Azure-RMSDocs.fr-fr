@@ -2,7 +2,7 @@
 # required metadata
 
 title: Utilisation du chiffrement | Azure RMS
-description:
+description: vous oriente vers nos packages de chiffrement
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 088c98f9-f06e-4aae-8fac-bc7605e545f5
-
+ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Utilisation du chiffrement
+# Utilisation du chiffrement
 
 Cette rubrique vous oriente vers nos offres de chiffrement et présente quelques extraits de code pour illustrer leur utilisation.
 
@@ -107,6 +106,6 @@ Cet exemple montre également la nouvelle façon de prendre en charge des *algor
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

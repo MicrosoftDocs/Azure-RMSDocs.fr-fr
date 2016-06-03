@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/19/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Configuration des droits d’utilisation pour Azure Rights Management
+
+*S’applique à : Azure Rights Management, Office 365*
+
 Lorsque vous définissez la protection de fichiers ou de messages électroniques à l'aide d'Azure Rights Management (Azure RMS) et n'utilisez pas de modèle, vous devez configurer les droits d'utilisation vous-même. En outre, lorsque vous configurez des modèles personnalisés pour Azure RMS, vous sélectionnez les droits d’utilisation qui seront ensuite appliqués automatiquement lorsque le modèle sera sélectionné par des utilisateurs, administrateurs ou services configurés. Par exemple, dans le portail Azure Classic, vous pouvez sélectionner des rôles qui configurent un regroupement logique de droits d’utilisation, ou configurer les droits individuels.
 
 Utilisez cet article pour vous aider à configurer les droits d’utilisation de l’application que vous utilisez et pour comprendre comment ces droits sont interprétés par les applications.
@@ -47,8 +50,6 @@ Permet à l'utilisateur de modifier, réorganiser, mettre en forme ou filtrer le
 **Nom dans les modèles AD RMS** : *Modifier*
 
 **Constante ou valeur d’API** : *Non applicable*
-
-Dans les applications Office, ce droit permet également à l'utilisateur d'enregistrer le document.
 
 ---
 
@@ -90,7 +91,7 @@ Ce droit, disponible dans le SDK, est disponible en tant que stratégie ad hoc d
 
 ### Enregistrer sous, Exporter
 
-Active l'option d'enregistrement du contenu sous un autre nom de fichier (Enregistrer sous). Selon l'application, le fichier peut être enregistré sans protection.
+Active l'option d'enregistrement du contenu sous un autre nom de fichier (Enregistrer sous). Pour les documents Office, le fichier peut être enregistré sans protection.
 
 **Encodage dans la stratégie** : EXPORT
 
@@ -108,7 +109,7 @@ Ce droit permet également à l’utilisateur d’utiliser d’autres options d�
 
 ### Prédictif
 
-Active l’option de transfert de message électronique et d’ajout de destinataires aux lignes *À* et *Cc*.
+Active l’option de transfert de message électronique et d’ajout de destinataires aux lignes *À* et *Cc*. Ce droit ne s’applique pas aux documents, mais uniquement aux e-mails.
 
 **Encodage dans la stratégie** : FORWARD
 
@@ -206,55 +207,24 @@ Permet à l'utilisateur d'ouvrir le document et d'en voir le contenu.
 
 ---
 
-### Afficher les droits
+### Copier
 
-Permet à l'utilisateur d'afficher la stratégie appliquée au document.
+Active les options permettant de copier des données du document (y compris des captures d’écran) vers un autre emplacement du document ou vers un autre document.
 
-**Encodage dans la stratégie** : VIEWRIGHTSDATA
+**Encodage dans la stratégie** : EXTRACT
 
-**Implémentation dans les droits personnalisés Office** : Non implémenté.
+**Implémentation dans les droits personnalisés Office :** comme l’option de stratégie personnalisée *Autoriser les utilisateurs bénéficiant d’accès en lecture à copier le contenu*.
 
-**Nom dans le portail Azure Classic** : *Afficher les droits affectés*
+**Nom dans le portail Azure Classic :** *Copier et Extraire le contenu*
 
-**Nom dans les modèles AD RMS** : *Afficher les droits*
+**Nom dans les modèles AD RMS :** *Extraire*
 
-**Constante ou valeur d’API** : IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
+**Constante ou valeur d’API :** IPC_GENERIC_EXTRACTL"EXTRACT"
 
----
-
-### Nom commun : Afficher les droits
-
-Permet à l'utilisateur d'afficher la stratégie appliquée au document.
-
-**Encodage dans la stratégie** : VIEWRIGHTSDATA
-
-**Implémentation dans les droits personnalisés Office** : Non implémenté.
-
-**Nom dans le portail Azure Classic** : *Afficher les droits affectés*
-
-**Nom dans les modèles AD RMS** : *Afficher les droits*
-
-**Constante ou valeur d’API** : IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
-
-Ignoré par certaines applications.
+Dans certaines applications, permet également d’enregistrer l’ensemble du document sous forme non protégée.
 
 ---
 
-### Modifier les droits
-
-Permet à l'utilisateur de modifier la stratégie appliquée au document. Inclut notamment la suppression de la protection.
-
-**Encodage dans la stratégie** : EDITRIGHTSDATA
-
-**Implémentation dans les droits personnalisés Office** : Non implémenté.
-
-**Nom dans le portail Azure Classic** : *Modifier les droits*
-
-**Nom dans les modèles AD RMS** : *Modifier les droits*
-
-**Constante ou valeur d’API** : IPC_WRITE_RIGHTSL"EDITRIGHTSDATA"
-
----
 
 ### Autoriser les macros
 
@@ -302,6 +272,6 @@ Les droits inclus avec les modèles par défaut sont les suivants :
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

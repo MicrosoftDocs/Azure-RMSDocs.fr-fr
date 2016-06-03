@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 705942bb-639d-4582-942e-0ec061843d48
-
+ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Exemples de code iOS/OS X
 
 Cette rubrique présente des éléments de code importants pour la version iOS/OS X du Kit RMS SDK.
@@ -44,7 +42,7 @@ Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un ex
 
 - **Étape 1** : Créer un objet [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd)
 
- **Description** : Instancier un objet [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) par le biais de sa méthode de création qui implémente l’authentification de service à l’aide de [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) pour obtenir un jeton en passant une instance de **MSAuthenticationCallback**, comme paramètre *authenticationCallback*, à l’API MSIPC. Voir l’appel à [**protectedDataWithProtectedFile**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) dans la section d’exemple de code suivante.
+ **Description** : Instancier un objet [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) par le biais de sa méthode de création qui implémente l’authentification de service à l’aide de [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) pour obtenir un jeton en passant une instance de **MSAuthenticationCallback**, comme paramètre *authenticationCallback*, à l’API MSIPC. Consultez l’appel à [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) dans la section d’exemple de code suivante.
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -117,7 +115,7 @@ Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un ex
 
 ### Scénario : Créer un fichier protégé à l’aide d’un modèle
 
-Dans ce scénario, nous commençons par obtenir une liste de modèles, [**MSTemplateDescriptor**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_mstemplatedescriptor_interface_objc), nous sélectionnons le premier pour créer une stratégie, puis nous créons et écrivons dans le nouveau fichier protégé.
+Dans ce scénario, nous commençons par obtenir une liste de modèles, [**MSTemplateDescriptor**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_mstemplatedescriptor_interface_objc), nous sélectionnons le premier pour créer une stratégie, puis nous créons et écrivons dans le nouveau fichier protégé.
 
 -   **Étape 1** : Obtenir la liste des modèles
 
@@ -290,6 +288,6 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [**MSTemp
 
  
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

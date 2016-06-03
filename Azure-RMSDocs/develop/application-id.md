@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 834c5943-a724-4322-9035-060c1112fe22
-
+ms.assetid: 0fe9dc-bc91-4018-b28d-2db293a3eaa2
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Procédure : obtention d’un ID d’application Azure
 
 La création d’une application RMS avec Microsoft Rights Management SDK 4.2 nécessite la création d’un contrat avec l’équipe RMS.
@@ -46,7 +44,7 @@ Utilisez les étapes suivantes pour créer votre ID d’application et pour sign
     Voici à quoi ressemble l’appel d’authentification dans notre rubrique [Exemples de code iOS/OS X](ios-os-x-code-examples.md).
 
 
-    // Retrieve token using ADAL
+    // Récupérer le jeton à l’aide de la bibliothèque ADAL
         [context acquireTokenWithResource:authenticationParameters.resource
                                  clientId:appClientId
                               redirectUri:redirectURI
@@ -64,6 +62,6 @@ Utilisez les étapes suivantes pour créer votre ID d’application et pour sign
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

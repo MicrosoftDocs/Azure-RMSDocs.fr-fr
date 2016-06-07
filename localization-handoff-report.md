@@ -1,42 +1,58 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [Azure-RMSDocs\deploy-use\operations-microsoft-managed-tenant-key.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f517c66dde0f686e3a74d7abc76a7c4f5d2252f8/Azure-RMSDocs/deploy-use/operations-microsoft-managed-tenant-key.md) | OutofSyncHandedBackSuccess | [Details](#00db0afb2e5d872162f7ac4e361f517623530ae231)
- [Azure-RMSDocs\understand-explore\how-does-it-work.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/5d825d6c8b2c8b7a9c34ac940c5a08439a9ae562/Azure-RMSDocs/understand-explore/how-does-it-work.md) | OutofSyncHandedBackSuccess | [Details](#505f2c94bb4fd056b4d2f51c147c6b0b84efac00389)
+ [Azure-RMSDocs\deploy-use\configure-custom-templates.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/8e72b68c03ee7da58adaff96f3f4611a227214b0/Azure-RMSDocs/deploy-use/configure-custom-templates.md) | OutofSyncHandedBackSuccess | [Details](#26afa04c5041d0b8c952d3d6b3da5a2215acda8711)
+ [Azure-RMSDocs\deploy-use\configure-usage-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/8e72b68c03ee7da58adaff96f3f4611a227214b0/Azure-RMSDocs/deploy-use/configure-usage-rights.md) | OutofSyncHandedBackSuccess | [Details](#a48cc696447f76127d5433ac5691ceb8790c1c8918)
+ [Azure-RMSDocs\get-started\faqs.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/8e72b68c03ee7da58adaff96f3f4611a227214b0/Azure-RMSDocs/get-started/faqs.md) | OutofSyncHandedBackSuccess | [Details](#f7c946f6d20805f4cfe7385fa6eedbf3a1f7e097110)
 
 ## Item Details
-##### <a name='00db0afb2e5d872162f7ac4e361f517623530ae231'></a> Source: [Azure-RMSDocs\deploy-use\operations-microsoft-managed-tenant-key.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f517c66dde0f686e3a74d7abc76a7c4f5d2252f8/Azure-RMSDocs/deploy-use/operations-microsoft-managed-tenant-key.md)
+##### <a name='26afa04c5041d0b8c952d3d6b3da5a2215acda8711'></a> Source: [Azure-RMSDocs\deploy-use\configure-custom-templates.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/8e72b68c03ee7da58adaff96f3f4611a227214b0/Azure-RMSDocs/deploy-use/configure-custom-templates.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [operations-microsoft-managed-tenant-key.1128a69c06be9836b7e8e311b5dea4f8647d0797.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/664fe6e9e5bf07c4cc9fe7c35bfc6afa115ab04c/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/operations-microsoft-managed-tenant-key.1128a69c06be9836b7e8e311b5dea4f8647d0797.fr-fr.xlf)
-* Handoff Datetime: 2016-06-03 17:18:19
+* Handoff File: [configure-custom-templates.05b0c1b94b5c1cbb78ae5760b7c9abb1ad1d3890.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/d9399d6017891862b936204926a7b15e4e05d65b/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/configure-custom-templates.05b0c1b94b5c1cbb78ae5760b7c9abb1ad1d3890.fr-fr.xlf)
+* Handoff Datetime: 2016-06-07 20:19:14
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\deploy-use\operations-microsoft-managed-tenant-key.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/305e58febc63e4ad47233a3625d6bc5aee2043ca/Azure-RMSDocs/deploy-use/operations-microsoft-managed-tenant-key.md)
-* Current Handback File: [operations-microsoft-managed-tenant-key.1128a69c06be9836b7e8e311b5dea4f8647d0797.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/operations-microsoft-managed-tenant-key.1128a69c06be9836b7e8e311b5dea4f8647d0797.fr-fr.xlf)
+* Current Target File: [Azure-RMSDocs\deploy-use\configure-custom-templates.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/0b87d9f11acf45df566d0434720f73d4a0ef368b/Azure-RMSDocs/deploy-use/configure-custom-templates.md)
+* Current Handback File: [configure-custom-templates.05b0c1b94b5c1cbb78ae5760b7c9abb1ad1d3890.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/03a6dec223a119dbd9dc0cc74aecdc30267f2c74/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/configure-custom-templates.05b0c1b94b5c1cbb78ae5760b7c9abb1ad1d3890.fr-fr.xlf)
+* Current Handback Datetime: 2016-06-02 22:25:59
+* [Back to Top](#report-top)
+
+##### <a name='a48cc696447f76127d5433ac5691ceb8790c1c8918'></a> Source: [Azure-RMSDocs\deploy-use\configure-usage-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/8e72b68c03ee7da58adaff96f3f4611a227214b0/Azure-RMSDocs/deploy-use/configure-usage-rights.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/d9399d6017891862b936204926a7b15e4e05d65b/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.fr-fr.xlf)
+* Handoff Datetime: 2016-06-07 20:19:14
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [Azure-RMSDocs\deploy-use\configure-usage-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/305e58febc63e4ad47233a3625d6bc5aee2043ca/Azure-RMSDocs/deploy-use/configure-usage-rights.md)
+* Current Handback File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.fr-fr.xlf)
 * Current Handback Datetime: 2016-06-03 00:33:47
 * [Back to Top](#report-top)
 
-##### <a name='505f2c94bb4fd056b4d2f51c147c6b0b84efac00389'></a> Source: [Azure-RMSDocs\understand-explore\how-does-it-work.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/5d825d6c8b2c8b7a9c34ac940c5a08439a9ae562/Azure-RMSDocs/understand-explore/how-does-it-work.md)
+##### <a name='f7c946f6d20805f4cfe7385fa6eedbf3a1f7e097110'></a> Source: [Azure-RMSDocs\get-started\faqs.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/8e72b68c03ee7da58adaff96f3f4611a227214b0/Azure-RMSDocs/get-started/faqs.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [how-does-it-work.e10d4871d616835b44d201ec5b1212a575d0f425.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/664fe6e9e5bf07c4cc9fe7c35bfc6afa115ab04c/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/how-does-it-work.e10d4871d616835b44d201ec5b1212a575d0f425.fr-fr.xlf)
-* Handoff Datetime: 2016-06-03 17:18:19
+* Handoff File: [faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/d9399d6017891862b936204926a7b15e4e05d65b/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.fr-fr.xlf)
+* Handoff Datetime: 2016-06-07 20:19:14
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\understand-explore\how-does-it-work.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/305e58febc63e4ad47233a3625d6bc5aee2043ca/Azure-RMSDocs/understand-explore/how-does-it-work.md)
-* Current Handback File: [how-does-it-work.e10d4871d616835b44d201ec5b1212a575d0f425.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/how-does-it-work.e10d4871d616835b44d201ec5b1212a575d0f425.fr-fr.xlf)
+* Current Target File: [Azure-RMSDocs\get-started\faqs.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/305e58febc63e4ad47233a3625d6bc5aee2043ca/Azure-RMSDocs/get-started/faqs.md)
+* Current Handback File: [faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.fr-fr.xlf)
 * Current Handback Datetime: 2016-06-03 00:33:47
 * [Back to Top](#report-top)
 

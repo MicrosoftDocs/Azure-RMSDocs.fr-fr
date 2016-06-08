@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Configuration de l’API de fichier
 
 
@@ -85,11 +85,11 @@ Si vous affectez une autre valeur, ou si vous n’affectez aucune valeur, le com
 -   **Fichiers txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** : Le chiffrement natif est activé (xxx devient pxxx)
 -   **Tous les autres fichiers** : Le chiffrement avec protection de fichier (pfile) est activé (xxx devient xxx.pfile)
 
-Si un chiffrement est tenté sur un type de fichier bloqué, une erreur [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes) se produit.
+Si vous tentez un chiffrement sur un type de fichier bloqué, une erreur [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes) se produit.
 
 ### API de fichier - Détails de la prise en charge des fichiers
 
-Vous pouvez ajouter une prise en charge native pour tous les types de fichier (extension). Par exemple, quelle que soit l’extension &lt;ext&gt; (non Office), \*.p&lt;ext&gt; est utilisé si la configuration d’administration de cette extension est « NATIVE ».
+Vous pouvez ajouter une prise en charge native pour tous les types de fichier (extension). Par exemple, pour toute extension &lt;ext&gt; (non-Office), \*.p&lt;ext&gt; est utilisé si la configuration d’administration pour cette extension est « NATIVE ».
 
 **Fichiers Office**
 
@@ -151,7 +151,7 @@ HKEY_LOCAL_MACHINE
 
 ## Rubriques connexes
 
-* [Notes pour les développeurs](developer-notes.md)
+* [Notes du développeur](developer-notes.md)
 * [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes)
  
 
@@ -161,6 +161,6 @@ HKEY_LOCAL_MACHINE
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

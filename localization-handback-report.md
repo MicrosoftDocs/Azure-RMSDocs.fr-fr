@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [Azure-RMSDocs\develop\file-api-configuration.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ac6afddc2b39d6209ef1b89d8d84011942cdba5a/Azure-RMSDocs/develop/file-api-configuration.md) | InSyncHandedBackSuccess | [Details](#0d92797c5e0f3f59f092c0486678bb99f91f279866)
 
 ## Item Details
-##### <a name='0d92797c5e0f3f59f092c0486678bb99f91f279866'></a> Source: [Azure-RMSDocs\develop\file-api-configuration.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ac6afddc2b39d6209ef1b89d8d84011942cdba5a/Azure-RMSDocs/develop/file-api-configuration.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\develop\file-api-configuration.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/c262592f2868142043a2463540b9a80a7b7823cd/Azure-RMSDocs/develop/file-api-configuration.md)
-* Handoff File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/40f42ef61a647df96c2ae705e8b60b4add566f1a/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf)
-* Handoff Datetime: 2016-06-02 02:15:22
-* Handoff Reason: Include
-* Archive File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/66aa92a7bfef09dcd989fd3c023d2982824c4ff1/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/archive/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf)
-* Archive Datetime: 2016-06-02 03:15:06
-* Handback File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/b2e7326579d8b086c080f7d9d4f3146e18f8c318/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf)
-* Handback Datetime: 2016-06-08 10:08:05
-* [Back to Top](#report-top)
-
 
 ## Error Details
 

@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Obtention d’une licence de production
 
 Avant de pouvoir publier une application développée avec Rights Management Services SDK 2.1, vous devez demander un contrat de licence de production pour obtenir un certificat de production.
@@ -89,6 +89,6 @@ Vous pouvez obtenir le certificat en demandant un contrat de licence de producti
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

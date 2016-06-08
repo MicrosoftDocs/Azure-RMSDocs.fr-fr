@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Déploiement de votre application
 
 
@@ -44,8 +44,7 @@ AD RMS Client 2.1 est un logiciel conçu pour vos ordinateurs clients, qui perme
 
 AD RMS Client 2.1 n’est pas un composant du système d’exploitation Windows. Il est disponible sous la forme d’un téléchargement facultatif qui, à condition d’en accuser réception et d’accepter son contrat de licence, peut être distribué gratuitement avec votre logiciel tiers, pour permettre l’accès du client à du contenu dont les droits ont été protégés en utilisant et en déployant des serveurs RMS dans votre environnement.
 
-> [!IMPORTANT]
-> AD RMS Client 2.1 est spécifique à l’architecture et doit correspondre à celle de votre système d’exploitation cible.
+> [!IMPORTANT] AD RMS Client 2.1 est propre à l’architecture et doit correspondre à celle de votre système d’exploitation cible.
 
 
 ## Choix d’installation d’AD RMS Client 2.1
@@ -103,6 +102,6 @@ Pour plus d’informations sur l’activation de votre application pour utiliser
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

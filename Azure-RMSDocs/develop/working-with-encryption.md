@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Utilisation du chiffrement
 
 Cette rubrique vous oriente vers nos offres de chiffrement et présente quelques extraits de code pour illustrer leur utilisation.
@@ -44,7 +44,7 @@ Cette rubrique vous oriente vers nos offres de chiffrement et présente quelques
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (aussi appelé « algorithmes déconseillés »)
 
-Les indicateurs de package de chiffrement (voir [**Chiffrement préféré**](/rights-management/sdk/2.1/api/win/constants#msipc_preferred_encryption)) peuvent être utilisés conjointement avec notre nouvel indicateur de propriété de licence **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
+Vous pouvez utiliser les indicateurs de package de chiffrement (voir [**Chiffrement préféré**](/rights-management/sdk/2.1/api/win/constants#msipc_preferred_encryption)) conjointement avec notre nouvel indicateur de propriété de licence **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
 
 Voici quelques extraits de code simples qui montrent comment utiliser la nouvelle propriété de licence.
 
@@ -106,6 +106,6 @@ Cet exemple montre également la nouvelle façon de prendre en charge des *algor
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

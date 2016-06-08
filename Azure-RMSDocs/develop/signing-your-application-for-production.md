@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Signature de votre application pour la production
 
 Cette rubrique vous guide tout au long du processus de signature de votre application pour le mode de production.
@@ -77,6 +77,6 @@ Placez-les dans le même répertoire que *GenManifest.exe* et le fichier binaire
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

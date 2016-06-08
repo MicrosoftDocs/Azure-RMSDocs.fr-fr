@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Présentation des chaînes de certificats
 
 Le développement d’une application avec gestion des droits nécessite une paire de clés publiques et une chaîne de certificats qui renvoie à un certificat Microsoft à la racine de confiance.
@@ -57,6 +57,6 @@ Pour plus d’informations sur l’utilisation de chaînes de certificats et la 
  
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

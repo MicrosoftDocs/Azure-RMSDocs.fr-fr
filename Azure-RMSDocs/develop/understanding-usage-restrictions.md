@@ -23,8 +23,8 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
-# Comprendre les restrictions d’utilisation
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
+# Présentation des restrictions d’utilisation
 
 Toutes les applications prenant en charge RMS doivent appliquer des restrictions d’utilisation. Une restriction d’utilisation est une condition qui se produit quand un utilisateur tente d’effectuer une action (par exemple, imprimer d’un document), alors que la stratégie RMS pour ce document ne lui accorde pas l’autorisation ou le droit nécessaire pour mener à bien cette action (par exemple, le droit PRINT).
 
@@ -63,6 +63,6 @@ Il est possible d’interroger les autorisations dont dispose un utilisateur sur
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

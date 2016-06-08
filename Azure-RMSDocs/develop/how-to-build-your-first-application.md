@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Exemple d’application IPCHelloWorld
 
 Cette rubrique contient des instructions pour créer un exemple d’application avec gestion des droits.
@@ -222,6 +222,6 @@ Avant de terminer, vous devez également libérer toutes les ressources allouée
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

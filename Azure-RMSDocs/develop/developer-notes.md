@@ -23,12 +23,12 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Notes du développeur
 
 Cette section traite de recommandations propres à différents scénarios de développement importants. Les scénarios de cette section sont spécifiques à cette version de Rights Management Services SDK 2.1 et peuvent être modifiés dans les versions ultérieures.
 
-- [Ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md) - Votre application doit ajouter explicitement les droits « Propriétaire » lors de la création d’une licence à partir de rien ([IpcCreateLicenseFromScratch](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
+- [Ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md) - Votre application doit ajouter explicitement les droits &quot;Propriétaire&quot; lors de la création d’une licence à partir de rien ([IpcCreateLicenseFromScratch](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
 - [Conditions d’erreur courantes et solutions](common-error-conditions-and-solutions.md) - Cette rubrique répertorie les messages d’erreur les plus courants susceptibles de s’afficher quand vous utilisez les outils de développement de RMS SDK 2.1.
 - [Activation des notifications par e-mail](how-to-enable-email-notification.md) - Les notifications par e-mail permettent à un propriétaire de contenu protégé d’être averti quand un utilisateur accède à son contenu.
 - [Configuration de l’API de fichier](file-api-configuration.md) - Le comportement de l’API de fichier peut être configuré via des paramètres du Registre.
@@ -48,6 +48,6 @@ Cette section traite de recommandations propres à différents scénarios de dé
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

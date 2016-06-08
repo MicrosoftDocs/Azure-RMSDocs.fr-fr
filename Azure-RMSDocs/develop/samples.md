@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Exemples de code
 
 Cette rubrique répertorie un ensemble d’exemples utilisant Rights Management Services SDK 2.1, disponible dans le Centre de téléchargement MSDN.
@@ -57,6 +57,6 @@ Cette rubrique répertorie un ensemble d’exemples utilisant Rights Management 
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

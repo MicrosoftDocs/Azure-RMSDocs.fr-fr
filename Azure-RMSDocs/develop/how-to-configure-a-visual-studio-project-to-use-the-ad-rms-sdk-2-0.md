@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Configurer Visual Studio
 
 Cette rubrique contient des instructions sur la configuration d’un projet Visual Studio en vue d’utiliser Rights Management Services SDK 2.1.
@@ -51,13 +51,13 @@ Ces instructions concernent la création d’une application 32 bits native.
     Sous **Propriétés de configuration**, sélectionnez **Répertoires VC++**, puis ajoutez le répertoire des bibliothèques de RMS SDK 2.1 au champ **Répertoires de bibliothèques** de votre plateforme.
 
     -   Pour Win32, utilisez **$(MSIPCSDKDIR)\\lib**
-    -   Pour Win64, utilisez **$(MSIPCSDKDIR)\\lib\\x64**
+    -   Pour x64, utilisez **$(MSIPCSDKDIR)\\lib\\x64**
 
     ![Propriétés de configuration - Champ Répertoires de bibliothèques](../media/library_directories.png)
 
 3.  Ajoutez les fichiers de bibliothèque de RMS SDK 2.1 en tant que dépendances Visual Studio 2010.
 
-    Sous **Éditeur de liens**, sélectionnez **Entrée**, puis ajoutez les fichiers de bibliothèquede RMS SDK 2.1 (**Msipc.lib** et **Msipc\_s.lib**) au champ **Dépendances supplémentaires**.
+    Sous **Éditeur de liens**, sélectionnez **Entrée**, puis ajoutez les fichiers de bibliothèque de RMS SDK 2.1 (**Msipc.lib** et **Msipc\_s.lib**) au champ **Dépendances supplémentaires**.
 
     ![Éditeur de liens - Fichiers de bibliothèque - Champ Dépendances](../media/additional_dependencies.png)
 
@@ -85,6 +85,6 @@ Ces instructions concernent la création d’une application 32 bits native.
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

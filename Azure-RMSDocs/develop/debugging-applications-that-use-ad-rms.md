@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Déboguer une application avec gestion des droits
 
 La rubrique suivante indique comment déboguer une application et utiliser le journal des événements Windows.
@@ -46,7 +46,7 @@ HKEY_LOCAL_MACHINE
 
 ### Journalisation des applications à l’aide du journal des événements Windows
 
-Le nom du journal des événements est Microsoft-RMS-MSIPC/Debug. Cela signifie que votre journal apparaît dans l’Observateur d’événements Windows sous la forme Journaux des applications et des services\\Microsoft\\RMS\\MSIPC\\Debug.
+Le nom du journal des événements est Microsoft-RMS-MSIPC/Debug. Cela signifie que votre journal apparaît dans l’Observateur d’événements Windows sous la forme « Journaux des applications et des services\\Microsoft\\RMS\\MSIPC\\Debug ».
 
 **Remarque** Le journal est activé par défaut et la valeur 3 est définie pour le niveau de commentaires.
 
@@ -81,6 +81,6 @@ Par exemple, la commande suivante active le journal des événements MSIPC et af
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

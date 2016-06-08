@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Conditions d’erreur courantes et solutions
 Cette rubrique répertorie les messages d’erreur les plus courants susceptibles de s’afficher quand vous utilisez les outils de développement du Kit Rights Management Services SDK 2.1. Le cas échéant, elle fournit également les actions recommandées pour corriger les erreurs.
 
@@ -45,9 +45,9 @@ Certaines fonctions de RMS SDK 2.1 sont conçues pour échouer sous un débogue
 - [IpcGetTemplateIssuerList](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist)
 
 Pour déboguer le code situé après ces appels de fonction, vous devez vous introduire dans le processus et attacher un débogueur une fois les appels de fonction terminés. Une façon de vous introduire dans le débogueur consiste à utiliser une instruction Assert. La macro ASSERTE est incluse dans l’en-tête *Crtdbg.h*.
-Pour plus d’informations sur \_ASSERTE, consultez [Macros \_ASSERT, \_ASSERTE](https://msdn.microsoft.com/en-us/library/ezb1wyez.aspx).
+Pour plus d’informations sur \_ASSERTE, consultez [\_ASSERT, \_ASSERTE, macros](https://msdn.microsoft.com/en-us/library/ezb1wyez.aspx)
 
-**ERREUR** - *IPCERROR_BROKEN_CERT_CHAIN* : la chaîne de certificat ne correspond pas.
+**ERREUR** - *IPCERROR_BROKEN_CERT_CHAIN* : La chaîne de certificat ne correspond pas.
 
 **ACTION** : vérifiez que la clé de la hiérarchie contient la valeur correcte en fonction de la clé que vous utilisez pour signer votre manifeste d’application AD RMS.
 Il s’agit des clés de signature et de leurs valeurs associées (**DWORD** de la hiérarchie) :
@@ -68,12 +68,12 @@ Il s’agit des clés de signature et de leurs valeurs associées (**DWORD** de 
 * [IpcGetKey](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey)
 * [IpcGetTemplateList](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
 * [IpcGetTemplateIssuerList](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist)
-* [Macros \_ASSERT, \_ASSERTE](https://msdn.microsoft.com/en-us/library/ezb1wyez.aspx)
+* [\_ASSERT, \_ASSERTE, macros](https://msdn.microsoft.com/en-us/library/ezb1wyez.aspx)
  
 
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

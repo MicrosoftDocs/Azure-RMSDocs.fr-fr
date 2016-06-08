@@ -23,8 +23,8 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
-# Basculer vers l’environnement de production
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
+# Basculement vers l’environnement de production
 
 Cette section vous guide tout au long du processus de libération de votre application testée dans un environnement de production.
 
@@ -60,6 +60,6 @@ Les sections suivantes vous guident tout au long de ce processus.
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

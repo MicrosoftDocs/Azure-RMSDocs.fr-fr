@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Test de votre application avec gestion des droits
 
 Cette rubrique décrit les étapes que vous devez effectuer pour tester votre application Rights Management Services SDK 2.1 avec gestion des droits.
@@ -55,7 +55,7 @@ Créer et générer une application avec gestion des droits. Consultez la sectio
 
 Vous devez générer un manifeste pour votre application avant de l’exécuter.
 
-**Remarque**  Si votre application utilise le mode API serveur (**IPC\_API\_MODE\_SERVER**), il n’est pas nécessaire d’utiliser un manifeste d’application. Vous pouvez tester votre application sur un serveur AD RMS de production, vous n’êtes alors pas obligé d’obtenir une licence de production quand vous passez à l’environnement de production. Pour plus d’informations sur les applications en mode serveur, consultez [Application types](application-types.md) (Types d’applications).
+**Remarque** : Si votre application utilise le mode API serveur (**IPC\_API\_MODE\_SERVER**), il n’est pas nécessaire d’utiliser un manifeste d’application. Vous pouvez tester votre application sur un serveur AD RMS de production, vous n’êtes alors pas obligé d’obtenir une licence de production quand vous passez à l’environnement de production. Pour plus d’informations sur les applications en mode serveur, consultez [Application types](application-types.md) (Types d’applications).
 
  
 
@@ -77,11 +77,11 @@ Pour générer le manifeste d’application à l’aide de la chaîne de certifi
 
     %MSIPCSdkDir%\\bin\\Isvtier5appsignsdk\_client.xml
 
-    %MSIPCSdkDir%\\bin\\NomApp.isv.mcf
+    %MSIPCSdkDir%\\bin\\YourAppName.isv.mcf
 
 2.  Dans le dossier de votre application, renommez le fichier de configuration de manifeste, NomApp.isv.mcf, en lui attribuant le nom de votre application et en lui ajoutant l’extension de nom de fichier .mcf. Par exemple, si votre application se nomme MonApp.exe, remplacez NomApp.isv.mcf par MonApp.exe.mcf.
 
-3.  Utilisez un éditeur de texte pour ajouter votre application au fichier de configuration de manifeste. Pour ce faire, remplacez le texte de l’espace réservé &lt;NomApp&gt;.exe figurant dans la liste des modules de votre fichier .mcf par le nom de votre application ; par exemple, MonApp.exe.
+3.  Utilisez un éditeur de texte pour ajouter votre application au fichier de configuration de manifeste. Pour ce faire, remplacez le texte de l’espace réservé &lt;NomApp&gt;.exe figurant dans la liste des modules de votre fichier .mcf par le nom de votre application, par exemple MonApp.exe.
 
     Le processus de signature génère une erreur si le fichier .mcf est utilisé sans avoir été modifié.
 
@@ -123,6 +123,6 @@ Vous pouvez exécuter votre application à partir de n’importe quel répertoir
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

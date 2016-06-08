@@ -23,8 +23,8 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
-# Configuration de l’environnement de développement de préproduction
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
+# Setting up the pre-production development environment (Installation de l’environnement de développement de préproduction)
 
 Cette section vous guide tout au long du processus de configuration et d’exécution de votre application avec gestion des droits dans un environnement de test et de préproduction. Les rubriques suivantes expliquent comment configurer votre environnement de développement de préproduction. L’ordre dans lequel elles sont répertoriées suggère l’ordre dans lequel vous pouvez effectuer les tâches.
 
@@ -48,6 +48,6 @@ Cette section vous guide tout au long du processus de configuration et d’exéc
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

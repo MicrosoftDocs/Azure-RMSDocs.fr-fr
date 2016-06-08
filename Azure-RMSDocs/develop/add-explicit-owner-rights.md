@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Ajouter des droits de propriétaire explicites
 
 Votre application doit ajouter explicitement les droits « Propriétaire » lors de la création d’une licence à partir de rien ([**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
@@ -32,7 +32,7 @@ Votre application doit ajouter explicitement les droits « Propriétaire » lo
 
 Quand votre application crée un handle de licence en utilisant [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch), elle doit également accorder explicitement les droits (autorisations) complets de propriétaire.
 
-**Remarque** : La définition d’un utilisateur comme « propriétaire » en utilisant [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) avec la propriété **IPC\_LI\_OWNER** n’accorde pas toutes les autorisations de propriétaire.
+**Remarque**  La définition d’un utilisateur comme « propriétaire » en utilisant [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) avec la propriété **IPC\_LI\_OWNER** n’accorde pas toutes les autorisations de propriétaire.
 
  
 ## Scénario : attribution de droits à une licence
@@ -42,7 +42,7 @@ Dans cet exemple C++, les droits nécessaires sont ajoutés à une licence cré�
 Les deux droits suivants sont ajoutés à ces utilisateurs :
 
 -   Autorisations *Read* attribuées à joe@contoso.com
--   Autorisations *Full* attribuées à joe@contoso.com
+-   Autorisations *Full* attribuées à mary\_kay@contoso.com
 
 **REMARQUE** : Cet exemple de code montre seulement les étapes impliquées dans la création et l’ajout de droits spécifiques à une licence donnée.
 
@@ -117,6 +117,6 @@ Les deux droits suivants sont ajoutés à ces utilisateurs :
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

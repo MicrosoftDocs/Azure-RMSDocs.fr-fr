@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Suivi du contenu
 
 Cette rubrique propose des conseils de base pour implémenter le suivi de documents sur du contenu protégé à l’aide de Rights Management Services SDK 2.1.
@@ -134,6 +134,6 @@ Voici un exemple d’extrait de code illustrant la définition des métadonnées
  
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

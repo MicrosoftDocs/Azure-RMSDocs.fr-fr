@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Configurer le client
 
 Cette rubrique contient des instructions sur la configuration d’Active Directory Rights Management Services Client 2.1
@@ -55,7 +55,7 @@ Les étapes suivantes expliquent comment installer le runtime développeur, conf
 
 1.  Copiez le runtime développeur (Ipcsecproc\_isv.dll) de l’emplacement %MSIPCSDKDIR%\\bin\\x86 (pour les versions 32 bits de Windows) ou %MSIPCSDKDIR\\bin\\x64 (pour les versions 64 bits de Windows) vers C:\\Program Files\\Active Directory Rights Management Services Client 2.1.
 
-    **Important** Si vous exécutez une application 32 bits sur une version 64 bits de Windows, vous devez copier Ipcsecproc\_isv.dll de l’emplacement %MSIPCSDKDIR%\\bin\\x86 vers l’emplacement \\Active C:\\Program Files (x86) Directory Rights Management Services Client 2.1.
+    **Important** Si vous exécutez une application 32 bits sur une version 64 bits de Windows, vous devez copier Ipcsecproc\_isv.dll from %MSIPCSDKDIR%\\bin\\x86 vers C:\\Program Files(x86)\\Active Directory Rights Management Services Client 2.1.
 
      
 
@@ -129,6 +129,6 @@ Les instructions de cette rubrique ne sont pas exhaustives. Pour plus d’inform
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

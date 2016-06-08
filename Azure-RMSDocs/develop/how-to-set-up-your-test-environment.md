@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Configurer l’environnement de test
 
 Vous pouvez tester votre application avec gestion des droits à l’aide de plusieurs options du serveur.
@@ -65,6 +65,6 @@ Deux options sont disponibles pour tester votre application sur un serveur RMS 
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

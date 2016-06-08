@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/25/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -86,17 +86,18 @@ La seule exception qui vous permet de ne pas perdre l’accès quand votre abonn
 ## Abonnement Enterprise Mobility Suite
 [Version d’évaluation gratuite de 30 jours](http://go.microsoft.com/fwlink/?LinkId=615385)
 
-Cet abonnement est destiné aux organisations qui souhaitent associer Azure Active Directory Premium, Windows Intune et Azure Rights Management. L’utilisation d’Azure Rights Management avec Office offre une prise en charge identique à celle offerte en utilisant l’abonnement Azure Rights Management Premium. 
-Pour plus d’informations sur l’abonnement Enterprise Mobility Suite, consultez [Vue d’ensemble de Microsoft Enterprise Mobility](http://go.microsoft.com/fwlink/?LinkId=615386).
+Cet abonnement est destiné aux organisations qui souhaitent associer Azure Active Directory Premium, Windows Intune et Azure Rights Management. L’utilisation d’Azure Rights Management avec Office offre une prise en charge identique à celle offerte en utilisant l’abonnement Azure Rights Management Premium. Pour plus d’informations sur l’abonnement Enterprise Mobility Suite, consultez [Vue d’ensemble de Microsoft Enterprise Mobility](http://go.microsoft.com/fwlink/?LinkId=615386).
 
 ## Abonnement RMS for individuals
 Cet abonnement est destiné aux membres d’une organisation n’ayant pas déployé Azure RMS ni AD RMS. Il permet à ces personnes de lire du contenu protégé par une organisation qui utilise Azure RMS, mais aussi de protéger leur propre contenu.
+
+Il peut être répertorié dans le portail d’administration Office 365 comme **Rights Management Adhoc** et attribué automatiquement aux utilisateurs. N’attribuez pas manuellement cette licence aux utilisateurs et ne l’utilisez pas pour administrer Azure RMS pour votre organisation. 
 
 Pour plus d’informations, consultez [RMS for individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
 ## Étapes suivantes
 Pour vérifier les autres conditions requises, consultez [Conditions requises pour Azure Rights Management](requirements-azure-rms.md).
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO5-->
 
 

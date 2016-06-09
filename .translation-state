@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "590d7da83b0958ec0116efb9961f77fcc5b8274d",
-  "LastTranslatedCommit": "fea6779b4f6ddea3c17c2baa9a5fb04340a1bb5c",
+  "LastTranslatedCommit": "8acb1bb8d74e5b7ded01114be1d5100e961fae7a",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
       "FileHash": "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a",
@@ -70729,14 +70729,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "305e58febc63e4ad47233a3625d6bc5aee2043ca",
+      "TargetFileCommit": "8acb1bb8d74e5b7ded01114be1d5100e961fae7a",
       "TargetFilePath": "Azure-RMSDocs\\get-started\\tutorial-step4.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.fr-fr.xlf",
-      "HandbackFileCommit": "009fefcd2e5ef8282d2278f7a25576c84d9de43d",
-      "HandbackDateTime": "2016-06-03T00:33:47.77922Z",
+      "HandbackFileCommit": "dfee5193946409215220801e468a6a9d4f309705",
+      "HandbackDateTime": "2016-06-09T18:11:08.0673452Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-06-03T00:33:47.77922Z",
+      "UpdatedDateTime": "2016-06-09T18:11:08.0673452Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\archive\\tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.fr-fr.xlf",
       "ArchiveFileCommit": "d2f564198dd4a1d62e1ec5d04dc4cb6b692a7784",
       "ArchiveFileDateTime": "2016-05-21T18:40:29.994816Z",

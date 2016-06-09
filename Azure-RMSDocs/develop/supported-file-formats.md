@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
+
 # Formats de fichier pris en charge
 
 L’API de fichier prend en charge les formats natif et Pfile.
@@ -46,9 +46,6 @@ Les administrateurs peuvent définir des clés de Registre pour déterminer si e
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

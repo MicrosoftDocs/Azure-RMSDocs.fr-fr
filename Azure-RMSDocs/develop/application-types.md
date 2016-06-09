@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
+
 # Types d’applications
 
 
@@ -36,7 +36,6 @@ Les types d’application suivants sont actuellement pris en charge par Rights M
 Une application simple peut être un outil de ligne de commande conçu pour chiffrer un fichier donné. Pour obtenir un exemple d’application simple avec gestion des droits, consultez [IPCHelloWorld : un exemple d’application](how-to-build-your-first-application.md).
 
 ### Applications en mode serveur
-
 
 Le *mode serveur* est conçu pour les applications non interactives qui consomment, protègent ou traitent du contenu protégé par RMS. Un exemple est une application de *protection contre la perte de données* qui s’exécute en tant que service sur un serveur de fichiers et qui protège automatiquement les documents sensibles. Consultez l’[exemple IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d) pour un exemple de ce type d’application.
 
@@ -60,19 +59,12 @@ Pour plus d’informations sur la protection de votre application, consultez [Co
 
 ## Rubriques connexes
 
-* [Concepts de développement](ad-rms-concepts-nav.md)
 * [Exemple IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
 * [IPCHelloWorld : un exemple d’application](how-to-build-your-first-application.md)
 * [Définition du mode de sécurité de l’API](setting-the-api-security-mode-api-mode.md)
 * [Comprendre les restrictions d’utilisation](understanding-usage-restrictions.md)
- 
-
- 
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

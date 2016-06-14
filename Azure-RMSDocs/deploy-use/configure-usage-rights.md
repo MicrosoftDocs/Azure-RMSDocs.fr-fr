@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/19/2016
+ms.date: 06/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -43,7 +43,7 @@ Permet à l'utilisateur de modifier, réorganiser, mettre en forme ou filtrer le
 
 **Encodage dans la stratégie** : DOCEDIT
 
-**Implémentation dans les droits personnalisés Office** : En relation avec les options *Modifier* et *Contrôle total*.**
+**Implémentation dans les droits personnalisés Office** : En relation avec les options *Modifier* et *Contrôle total*.
 
 **Nom dans le portail Azure Classic** : *Modifier le contenu*
 
@@ -267,11 +267,32 @@ Les droits inclus avec les modèles par défaut sont les suivants :
 |&lt;*nom de l’organisation*&gt; *- Affichage confidentiel uniquement*|Afficher, Ouvrir, Lire|
 |&lt;*nom de l’organisation*&gt; *- Confidentiel*|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Afficher les droits ; Autoriser les macros ; Transférer ; Répondre ; Répondre à tous|
 
+## Option Ne pas transférer pour les e-mails
+
+Les clients et services Exchange (par exemple, le client Outlook, l’application Outlook Web Access et les règles de transport Exchange) ont leur propre option de protection des droits d’information pour les e-mails : **Ne pas transférer**. 
+
+Même si cette option apparaît aux utilisateurs (les administrateurs Exchange) comme s’il s’agissait d’un modèle de gestion des droits par défaut qu’ils peuvent sélectionner, **Ne pas transférer** n’est pas un modèle. Cela explique pourquoi vous ne pouvez pas la voir dans le portail classique Azure quand vous affichez et gérez des modèles pour Azure RMS. L’option **Ne pas transférer** correspond plutôt à un ensemble de droits appliqué dynamiquement par les utilisateurs à leurs destinataires.
+
+Quand l’option **Ne pas transférer** est appliquée à un e-mail, les destinataires ne peuvent pas le transférer, l’imprimer, en copier le contenu, enregistrer des pièces jointes ou l’enregistrer sous un autre nom. Par exemple, dans le client Outlook, le bouton Transférer n’est pas disponible. Les options de menu **Enregistrer sous**, **Enregistrer les pièces jointes** et **Imprimer** ne sont pas disponibles non plus. Vous ne pouvez pas ajouter ou modifier des destinataires dans les zones **À**, **Cc** ou **Cci**.
+
+Il existe une distinction importante entre l’application de l’option **Ne pas transférer** et celle d’un modèle qui n’accorde pas le droit d’être transféré à un e-mail : l’option **Ne pas transférer** utilise une liste dynamique des utilisateurs autorisés qui se base sur les destinataires choisis de l’utilisateur de l’e-mail d’origine, tandis que les droits du modèle ont une liste statique d’utilisateurs autorisés que l’administrateur a spécifiée au préalable. Quelle est la différence ? Prenons un exemple : 
+
+Une utilisatrice veut envoyer certaines informations par e-mail à certaines personnes du service Marketing. Ces informations ne doivent être partagées avec personne d’autre. A-t-elle intérêt à protéger l’e-mail avec un modèle qui restreint les droits (affichage, réponse et enregistrement) au service Marketing ?  Ou doit-elle choisir d’utiliser l’option **Ne pas transférer** ? Ces deux possibilités ont pour résultat d’empêcher les destinataires de transférer l’e-mail. 
+
+- Si elle applique le modèle, les destinataires peuvent quand même partager les informations avec d’autres utilisateurs du service Marketing. Par exemple, un destinataire pourrait utiliser l’Explorateur pour glisser-déplacer l’e-mail vers un emplacement partagé ou un lecteur USB. Ainsi, toute personne du service Marketing (dont le propriétaire de l’e-mail) qui a accès à cet emplacement peut afficher les informations contenues dans l’e-mail.
+ 
+- Si elle applique l’option **Ne pas transférer**, les destinataires ne pourront pas partager les informations avec d’autres personnes du service Marketing en déplaçant l’e-mail vers un autre emplacement. Dans ce scénario, seuls les destinataires d’origine (et le propriétaire du message) sont en mesure d’afficher les informations contenues dans l’e-mail.
+
+> [!NOTE] Utilisez l’option **Ne pas transférer** quand il est important que seuls les destinataires choisis par l’expéditeur puissent consulter les informations contenues dans l’e-mail. Utilisez un modèle pour les e-mails afin de restreindre les droits à un groupe de personnes que l’administrateur spécifie à l’avance, indépendamment des destinataires choisis de l’expéditeur.
+
+
+
+
 ## Voir aussi
 [Configuration de modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

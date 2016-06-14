@@ -23,16 +23,15 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
-# Activation des notifications par e-mail
+
+# Comment : activer les notifications par e-mail
 
 Les notifications par e-mail permettent à un propriétaire de contenu protégé d’être averti quand un utilisateur accède à son contenu.
 
 Pour configurer les notifications par e-mail pour une licence donnée, utilisez [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) avec le paramètre de type de propriété *dwPropID* en tant que [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA), et les champs de données de l’application en tant que [**IPC\_NAME\_VALUE\_LIST**](/rights-management/sdk/2.1/api/win/structures#msipc_ipc_name_value_list).
 
-## C++
+    C++
 
-    ...
     int numDataPairs = 3;
 
     IPC_NAME_VALUE propertyValuePairs [numDataPairs];
@@ -46,7 +45,7 @@ Pour configurer les notifications par e-mail pour une licence donnée, utilisez 
     IPC_NAME_VALUE_LIST emailNotificationAppData = {numDataPairs, propertyValuePairs};
 
     result = IpcSetLicenseProperty( licenseHandle, FALSE, IPC_LI_APP_SPECIFIC_DATA, emailNotificationAppData);
-    ...    
+        
 
 Le tableau suivant contient les champs de données de l’application (les paires nom/valeur des propriétés) pour les e-mails de notification RMS.
 
@@ -71,6 +70,6 @@ Le tableau suivant contient les champs de données de l’application (les paire
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

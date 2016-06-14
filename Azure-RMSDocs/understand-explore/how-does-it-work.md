@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/02/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -66,7 +66,7 @@ Mode de stockage et de sécurisation des clés de chiffrement :
 
 - La clé de contenu est protégée à l’aide de la clé RSA de l’organisation (« clé de locataire Azure RMS ») dans le cadre de la stratégie définie dans le document, et signée par l’auteur de celui-ci. Cette clé de locataire est commune à tous les documents et e-mails protégés par Azure RMS pour l’organisation ; elle ne peut être modifiée par un administrateur Azure RMS que si l’organisation utilise une clé de locataire gérée par le client, appelée BYOK (Bring Your Own Key). 
 
-    Cette clé de locataire est protégée dans les services en ligne de Microsoft, dans un environnement très contrôlé et sous étroite surveillance. Lorsque vous utilisez une clé de locataire gérée par le client (BYOK), cette sécurité est renforcée par l’utilisation d’une série de modules de sécurité matériels (HSM) haut de gamme dans chaque région Azure, ne laissant aucune possibilité d’extraire, exporter ou partager les clés, quelles que soient les circonstances. Pour plus d’informations sur la gestion de votre clé de locataire et du BYOK, consultez [Planification et implémentation de la clé de locataire Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
+    Cette clé de locataire est protégée dans les services en ligne de Microsoft, dans un environnement très contrôlé et sous étroite surveillance. Lorsque vous utilisez une clé de locataire gérée par le client (BYOK), cette sécurité est renforcée par l’utilisation d’une série de modules de sécurité matériels (HSM) haut de gamme dans chaque région Azure, ne laissant aucune possibilité d’extraire, exporter ou partager les clés, quelles que soient les circonstances. Pour plus d’informations sur la gestion de votre clé de locataire et du BYOK, consultez [Planification et implémentation de votre clé de locataire Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
 
 - Les licences et certificats envoyés à un appareil Windows sont protégés par la clé privée d’appareil du client, créée quand un utilisateur utilise Azure RMS sur l’appareil pour la première fois. Cette clé privée est à son tour protégée par DPAPI sur le client, ce qui a pour effet de protéger ces clés secrètes à l’aide d’une clé dérivée du mot de passe de l’utilisateur. Sur les appareils mobiles, les clés ne sont utilisées qu’une seule fois. Ainsi, n’étant pas stockées sur les clients, elles ne nécessitent pas de protection sur l’appareil. 
 
@@ -77,8 +77,7 @@ Pour comprendre plus précisément le fonctionnement d’Azure RMS, examinons un
 
 Après l'initialisation de l'environnement utilisateur, l'utilisateur peut protéger des documents ou consommer des documents protégés sur cet ordinateur.
 
-> [!NOTE]
-> Si l'utilisateur utilise un autre ordinateur Windows, ou si un autre utilisateur utilise ce même ordinateur, le processus d'initialisation est répété.
+> [!NOTE] Si l'utilisateur utilise un autre ordinateur Windows, ou si un autre utilisateur utilise ce même ordinateur, le processus d'initialisation est répété.
 
 ### Initialisation de l'environnement utilisateur
 Pour qu'un utilisateur puisse protéger du contenu ou utiliser du contenu protégé sur un ordinateur Windows, l'environnement utilisateur doit être préparé sur l'appareil en question. Ce processus se produit une seule fois, sans intervention humaine, quand un utilisateur tente de protéger ou de consommer du contenu protégé :
@@ -87,7 +86,7 @@ Pour qu'un utilisateur puisse protéger du contenu ou utiliser du contenu proté
 
 **Ce qui se passe à l’étape 1** : le client RMS sur l’ordinateur se connecte d’abord à Azure RMS, puis authentifie l’utilisateur à l’aide de son compte Azure Active Directory.
 
-Quand le compte de l’utilisateur est fédéré avec Azure Active Directory, cette authentification est automatique et l’utilisateur n’est donc pas invité à fournir des informations d’identification.
+Lorsque le compte de l'utilisateur est fédéré avec Azure Active Directory, cette authentification est automatique. L'utilisateur n'est donc pas invité à fournir d'informations d'identification.
 
 ![Activation du client RMS : étape 2](../media/AzRMS_useractivation2.png)
 
@@ -106,7 +105,7 @@ Quand un utilisateur protège un document, le client RMS effectue les actions su
 
 **Ce qui se passe à l’étape 2** : le client RMS crée ensuite un certificat incluant une stratégie pour le document, soit en se basant sur un modèle, soit en spécifiant des droits spécifiques pour le document. Cette stratégie inclut les droits de différents utilisateurs ou groupes, ainsi que d'autres restrictions telles qu'une date d'expiration.
 
-Le client RMS utilise ensuite la clé de l'organisation obtenue lors de l'initialisation de l'environnement utilisateur, en se servant de cette clé pour chiffrer la stratégie et la clé symétrique de contenu. Le client RMS signe également la stratégie avec le certificat de l’utilisateur obtenu lors de l’initialisation de l’environnement utilisateur.|
+Le client RMS utilise ensuite la clé de l'organisation obtenue lors de l'initialisation de l'environnement utilisateur, en se servant de cette clé pour chiffrer la stratégie et la clé symétrique de contenu. Le client RMS signe également la stratégie avec le certificat de l'utilisateur obtenu lors de l'initialisation de l'environnement utilisateur.
 
 ![Protection de document RMS : étape 3](../media/AzRMS_documentprotection3.png)
 
@@ -152,10 +151,9 @@ Consultez [Terminologie pour Azure Rights Management](../get-started/terminology
 
 Si vous êtes prêt à déployer Azure RMS pour votre organisation, consultez la [Feuille de route pour le déploiement d’Azure Rights Management](../plan-design/deployment-roadmap.md) pour connaître les étapes de déploiement et accéder à des liens vers des instructions.
 
-> [!TIP]
-> Pour plus d’informations et de l’aide supplémentaire, utilisez les ressources et les liens de [Informations et support technique pour Azure Rights Management](../get-started/information-support.md).
+> [!TIP] Pour plus d’informations et de l’aide supplémentaire, utilisez les ressources et les liens de [Informations et support technique pour Azure Rights Management](../get-started/information-support.md).
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

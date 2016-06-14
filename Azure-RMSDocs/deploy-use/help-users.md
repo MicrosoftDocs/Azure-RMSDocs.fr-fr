@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -35,8 +35,7 @@ Après avoir déployé et configuré Azure Rights Management (Azure RMS) pour vo
 
     Expliquez à vos utilisateurs comment et quand protéger des documents et messages électroniques contenant des informations sensibles. Autant que possible, fournissez ces informations pour leurs flux de travail existants afin qu'ils puissent intégrer les étapes supplémentaires dans un processus déjà familier, au lieu d'introduire des processus entièrement nouveaux. Pensez à leur faire part des avantages et des risques inhérents à votre activité et proposez-leur des conseils sur la protection des fichiers et des messages électroniques. Si vous avez configuré des [modèles personnalisés](configure-custom-templates.md), fournissez des instructions concernant le modèle à sélectionner si le nom et la description des modèles ne suffisent pas à identifier le bon modèle.
 
-    > [!TIP]
-    > Exemples de vidéos à l’attention des utilisateurs finaux :
+    > [!TIP] Exemples de vidéos à l’attention des utilisateurs finaux :
     >
     > -   [Expérience utilisateur d'Azure RMS](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-user-experience)
     > -   [Suivi et révocation de documents Azure RMS](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
@@ -49,7 +48,7 @@ Après avoir déployé et configuré Azure Rights Management (Azure RMS) pour vo
 
     L'un des outils les plus utiles pour le support technique est l' [Analyseur RMS](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Les opérateurs du support technique peuvent l'exécuter avec l'option d'administrateur Azure RMS, et demander aux utilisateurs de l'exécuter avec l'option d'utilisateur Azure RMS. Cet outil permet, non seulement d'identifier des problèmes, mais également de les résoudre ou, à défaut, d'enregistrer des journaux de suivi.
 
-    S’il existe des demandes légitimes d’obtention de droits d’accès complets à des documents protégés, par exemple une demande émanant du service juridique ou d’un responsable après qu’un employé a quitté l’organisation, vérifiez que le support technique dispose des processus nécessaires pour effectuer une telle demande à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md) d’Azure RMS..
+    S’il existe des demandes légitimes d’obtention de droits d’accès complets à des documents protégés, par exemple une demande émanant du service juridique ou d’un responsable après qu’un employé a quitté l’organisation, vérifiez que le support technique dispose des processus nécessaires pour effectuer une telle demande à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md) d’Azure RMS.
 
     Voici en outre quelques-uns des problèmes classiques que des utilisateurs pourraient signaler :
 
@@ -74,16 +73,14 @@ En plus d'aider les utilisateurs à protéger des documents importants, l'applic
 
 Pour obtenir des instructions sur l’utilisation de cette application pour les ordinateurs Windows, consultez le [Guide de l’utilisateur de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md).
 
-Pour les appareils mobiles, consultez le [FAQ relatif à l’application de partage Microsoft Rights Management pour plateformes mobiles](http://technet.microsoft.com/dn451248).
+Pour les appareils mobiles, consultez la [FAQ relative à l’application de partage Microsoft Rights Management pour plateformes mobiles](http://technet.microsoft.com/dn451248).
 
-> [!TIP]
-> Pour un scénario d’exemple global avec des captures d’écran, consultez [Partage sécurisé de pièces jointes avec des utilisateurs mobiles](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users.
+> [!TIP] Pour un exemple de scénario complexe avec des captures d’écran, consultez [Partage en toute sécurité de pièces jointes avec des utilisateurs mobiles](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
 ## Utilisation de la protection des informations avec Office 365, Office 2016 ou Office 2013
 Si vous utilisez Azure RMS et que vous n’avez pas installé l’application de partage Rights Management, les utilisateurs ne voient pas le bouton **Partage protégé** sur le ruban ni **Protéger sur place** dans l’Explorateur de fichiers, qui leur permettent de protéger des fichiers plus facilement. Ces utilisateurs doivent suivre des instructions similaires à celle-ci.
 
-> [!TIP]
-> Pour trouver de l’aide et des instructions spécifiques à une application qui ont trait à l’utilisation de la protection des données avec ces applications, recherchez **IRM**, ainsi que le nom et la version de l’application.
+> [!TIP] Pour trouver de l’aide et des instructions spécifiques à une application qui ont trait à l’utilisation de la protection des données avec ces applications, recherchez **IRM**, ainsi que le nom et la version de l’application.
 
 #### Pour protéger un document dans Word 2013
 
@@ -91,8 +88,7 @@ Si vous utilisez Azure RMS et que vous n’avez pas installé l’application d
 
 2.  À partir du menu **Fichier** , cliquez sur **Info**, sur **Protéger le Document**, sur **Restreindre l’accès**, puis choisissez un modèle pour appliquer rapidement les droits d’utilisation appropriés ou sélectionnez **Restreindre l’accès** et sélectionnez vous-même les droits d’utilisation.
 
-    > [!NOTE]
-    > Si vous utilisez Rights Management pour la première fois, contactez le service [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]. Vous serez invité à entrer des informations d’identification pour configurer le client IRM Office.
+    > [!NOTE] Si vous utilisez Rights Management pour la première fois, contactez le service [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]. Vous serez invité à entrer des informations d’identification pour configurer le client IRM Office.
 
 3.  Enregistrez le document.
 
@@ -121,6 +117,6 @@ Comme pour l'affichage d'un document protégé, lorsque les destinataires reçoi
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

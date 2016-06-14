@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 06/07/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -70,9 +70,9 @@ Azure RMS utilise toujours un compte Azure Active Directory et une adresse de m
 La méthode d'authentification pour ces comptes peut varier en fonction de la manière dont l'administrateur de l'autre organisation a configuré les comptes Azure Active Directory. Par exemple, ils peuvent utiliser des mots de passe créés pour ces comptes, Multi-Factor Authentication (MFA), une fédération ou des mots de passe créés dans les services de domaine Active Directory, puis synchronisés avec Azure Active Directory.
 
 ## Puis-je ajouter des utilisateurs ne faisant pas partie de mon organisation à des modèles personnalisés ?
-Oui.  La création de modèles personnalisés que les utilisateurs finaux (et administrateurs) peuvent sélectionner à partir d'applications accélère et facilite l'application de la protection des informations à l'aide de stratégies prédéfinies que vous spécifiez. L'un des paramètres du modèle définit qui peut accéder au contenu, et vous pouvez spécifier des utilisateurs et des groupes au sein de votre organisation, ainsi que des utilisateurs extérieurs à celle-ci.
+Oui. La création de modèles personnalisés que les utilisateurs finaux (et administrateurs) peuvent sélectionner à partir d'applications accélère et facilite l'application de la protection des informations à l'aide de stratégies prédéfinies que vous spécifiez. L'un des paramètres du modèle définit qui peut accéder au contenu, et vous pouvez spécifier des utilisateurs et des groupes au sein de votre organisation, ainsi que des utilisateurs extérieurs à celle-ci.
 
-Pour spécifier des utilisateurs extérieurs à votre organisation, utilisez le [module Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md) :
+Pour spécifier des utilisateurs extérieurs à votre organisation, ajoutez-les en tant que contacts à un groupe que vous sélectionnez dans le portail Azure Classic lors de la configuration de vos modèles. Ou, utilisez le [module Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md) :
 
 -   **utiliser un objet de définition de droits pour créer ou mettre à jour un modèle**.    Spécifiez les adresses de messagerie externes et leurs droits dans un objet de définition de droits, que vous pouvez ensuite utiliser pour créer ou mettre à jour un modèle. Spécifiez l’objet de définition de droits à l’aide de l’applet de commande [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) pour créer une variable, puis spécifiez cette variable dans le paramètre -RightsDefinition avec l’applet de commande [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx) (pour un nouveau modèle) ou l’applet de commande [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) (si vous modifiez un modèle existant). Cependant, si vous ajoutez ces utilisateurs à un modèle existant, vous devez définir des objets de définition de droits pour les groupes existants des modèles et pas seulement les utilisateurs externes.
 
@@ -140,6 +140,11 @@ La possibilité d’empêcher les captures d’écran peut également aider à �
 
 Comme le montrent ces exemples, même si la totalité des plateformes et logiciels prenaient en charge les API de Rights Management pour bloquer les captures d’écran, la technologie seule ne peut pas toujours empêcher des utilisateurs de partager des données qu’ils ne devraient pas. Même si Rights Management peut contribuer à protéger vos données importantes au moyen de stratégies d’autorisation et d’utilisation, cette solution de gestion des droits d’entreprise doit être assortie d’autres moyens de contrôle. Par exemple, vous pouvez mettre en place une sécurité physique, surveiller et soumettre à un contrôle strict les personnes autorisées à accéder aux données de votre organisation et investir dans la formation pour sensibiliser les utilisateurs à la question du partage de données.
 
+## Quelle différence y a-t-il entre un utilisateur qui protège un e-mail avec l’option Ne pas transférer et un modèle qui n’inclut pas de droit de transfert ?
+
+En dépit de son nom et de son apparence, l’option **Ne pas transférer** n’est ni le contraire du droit de transfert, ni un modèle. Il s’agit en fait d’un ensemble de droits qui incluent la restriction de copier, imprimer et enregistrer des pièces jointes, outre la restriction de transfert des e-mails. Les droits sont appliqués dynamiquement aux utilisateurs par le biais des destinataires choisis et non pas statiquement attribués par l’administrateur. Pour plus d’informations, consultez la section [Option Ne pas transférer pour les e-mails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) dans [Configuration des droits d’utilisation pour Azure Rights Management](../deploy-use/configure-usage-rights.md).
+
+
 ## Où puis-je trouver des informations annexes sur Azure RMS (considérations juridiques, conformité, contrats de niveau de service, etc.) ?
 Azure RMS prend en charge d'autres services et s'appuie également sur d'autres services. Si vous recherchez des informations relatives au service Azure RMS qui n'ont pas trait à son utilisation, consultez les ressources suivantes :
 
@@ -191,6 +196,6 @@ Cette page de FAQ sera régulièrement actualisée. Les nouveautés seront répe
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

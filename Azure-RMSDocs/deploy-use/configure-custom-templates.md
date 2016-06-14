@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -43,7 +43,7 @@ Après avoir [activé Azure Rights Management](activate-service.md) (Azure RMS),
 
     -   Autorisations spécifiques : Afficher le contenu, Enregistrer le fichier, Modifier le contenu, Afficher les droits affectés, Autoriser les macros, Transférer, Répondre, Répondre à tous
 
-En outre, l’[application de partage RMS](../rms-client/sharing-app-windows.md) permet aux utilisateurs de définir leur propre jeu d’autorisations. Et pour le client Outlook et Outlook Web Access, les utilisateurs peuvent sélectionner l’option **Ne pas transférer** pour les messages électroniques.
+En outre, l’[application de partage RMS](../rms-client/sharing-app-windows.md) permet aux utilisateurs de définir leur propre jeu d’autorisations. Et pour le client Outlook et Outlook Web Access, les utilisateurs peuvent sélectionner l’option [Ne pas transférer](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
 
 Les modèles par défaut peuvent suffire à de nombreuses organisations. Mais si vous souhaitez créer vos propres modèles de stratégie de droits personnalisés, rien ne vous empêche de le faire. Les raisons justifiant la création d'un modèle personnalisé sont les suivantes :
 
@@ -72,6 +72,6 @@ Utilisez les informations suivantes pour vous aider à configurer et utiliser de
 
 
 
-<!--HONumber=May16_HO5-->
+<!--HONumber=Jun16_HO1-->
 
 

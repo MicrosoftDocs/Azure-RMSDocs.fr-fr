@@ -1,30 +1,19 @@
 ---
-# required metadata
+# métadonnées requises
 
-title: Utilisation du chiffrement | Azure RMS
-description: vous oriente vers nos packages de chiffrement
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
-# optional metadata
+titre : Comment : utiliser des paramètres de chiffrement | Description Azure RMS : Cet article vous oriente vers nos offres de chiffrement mots clés : auteur : bruceperlerms manager : mbaldwin ms.date : 28/04/2016 ms.topic : article ms.prod : azure ms.service : gestion des droits ms.technology : identité techgroup ms.assetid : B1D2C227-F43D-4B18-9956-767B35145792
+# métadonnées facultatives
 
-#ROBOTS:
-audience: developer
-#ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+#ROBOTS :
+audience : développeur
+#ms.devlang :
+ms.reviewer : shubhamp ms.suite : ems
+#ms.tgt_pltfrm :
+#ms.custom :
 
 ---
-** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
-# Utilisation du chiffrement
+
+# Comment : utiliser des paramètres de chiffrement
 
 Cette rubrique vous oriente vers nos offres de chiffrement et présente quelques extraits de code pour illustrer leur utilisation.
 
@@ -58,54 +47,54 @@ Il est encore possible de tirer parti de l’ancien indicateur obsolète des alg
 
 Toute modification du code est inutile, car *AES 256* CBC4K est le chiffrement par défaut.
 
-    
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
-                                    0, 
-                                    NULL, 
+    C++
+
+    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                    0,
+                                    NULL,
                                     &amp;pLicenseHandle);
-    
+
 
 ## Protéger les fichiers avec AES 128 CBC4K
 
-    
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
-                                    0, 
-                                    NULL, 
+    C++
+
+    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                    0,
+                                    NULL,
                                     &amp;pLicenseHandle);
-    
-    DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K; 
-    
-    hr = IpcSetLicenseProperty(pLicenseHandle, 
+
+    DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K;
+
+    hr = IpcSetLicenseProperty(pLicenseHandle,
                            false,
                            IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
                            &amp;dwEncryptionMode);
-    
+
 
 ## Protéger les fichiers avec AES-128 ECB (algorithmes déconseillés)
 
 Cet exemple montre également la nouvelle façon de prendre en charge des *algorithmes déconseillés*.
 
+    C++
     
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
-                                    0, 
-                                    NULL, 
+    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                    0,
+                                    NULL,
                                     &amp;pLicenseHandle);
-    
+
     DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_ECB;
-    
-    hr = IpcSetLicenseProperty(pLicenseHandle, 
+
+    hr = IpcSetLicenseProperty(pLicenseHandle,
                            false,
-                           IPC_LI_PREFERRED_ENCRYPTION_PACKAGE, 
+                           IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
                            &amp;dwEncryptionMode);
-    
- 
 
  
 
+ 
 
 
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

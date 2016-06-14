@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -54,7 +54,7 @@ Vous pouvez exporter votre clé de locataire et votre configuration Azure RMS en
 
 ### Étape 1 : initiation d'une exportation
 
--   Pour ce faire, contactez le support technique Microsoft. Vous devez prouver que vous êtes un administrateur de votre client Azure RMS.
+-   Pour ce faire, contactez le service clientèle de Microsoft pour ouvrir un **cas de support Azure Rights Management avec une demande d’exportation de clé Azure RMS**. Vous devez prouver que vous êtes administrateur de votre locataire Azure RMS et comprendre que la confirmation de ce processus prend plusieurs jours. Des frais de prise en charge standard s’appliquent. L’exportation de votre clé de locataire n’est pas un service de support technique gratuit.
 
 ### Étape 2 : attente de la vérification
 
@@ -104,6 +104,6 @@ En cas de violation, la meilleure mesure que vous ou Microsoft puissiez prendre 
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

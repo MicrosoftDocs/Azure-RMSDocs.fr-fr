@@ -23,32 +23,27 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 
-# Serveur AD RMS
-Cette rubrique décrit l’objectif et les fonctions du serveur RMS.
+# Serveur
 
-Le composant serveur de Rights Management Services (RMS) est implémenté par un ensemble de services web qui s’exécutent sur [Microsoft Internet Information Services](http://www.iis.net/overview) (IIS). Vous pouvez également utiliser l’implémentation cloud via RMS sur Azure. Pour plus d’informations sur l’utilisation du service Azure Rights Management, consultez [Activer votre application de service pour le fonctionnement avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
+Cette rubrique décrit l’objectif et les fonctions du serveur RMS pour Azure et Windows Server.
 
-Pour les serveurs locaux, depuis Windows Server 2008, vous pouvez installer et configurer le service RMS en l’ajoutant en tant que rôle. Pour installer le service sur les systèmes d’exploitation antérieurs, téléchargez-le à partir du Centre de téléchargement Microsoft : [Microsoft Windows Rights Management Services avec Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909).
+**Azure RMS** - Pour plus d’informations sur l’utilisation du service Azure Rights Management, consultez [Activer votre application de service pour le fonctionnement avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
-Parmi les nombreux services web installés, ceux-ci sont importants pour le développement d’applications.
+> [AZURE.IMPORTANT] Nous vous recommandons de développer et tester votre application via Azure RMS.
 
-**Administration** : héberge le site web d’administration qui vous permet de gérer RMS. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences. Vous pouvez utiliser l’[API de script Active Directory Rights Management Services](https://msdn.microsoft.com/library/Bb968797) pour écrire des scripts d’administration.
+**Windows Server** - Pour les serveurs locaux, depuis Windows Server 2008, vous pouvez installer et configurer le service RMS en l’ajoutant en tant que rôle. Pour installer le service sur les systèmes d’exploitation antérieurs, téléchargez-le à partir du Centre de téléchargement Microsoft : [Microsoft Windows Rights Management Services avec Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909).
 
-**Certification de compte** : crée des certificats d’ordinateur qui identifient les ordinateurs dans la hiérarchie de certificats RMS, et des certificats de compte de droits qui associent des utilisateurs à des ordinateurs spécifiques. Pour plus d’informations, consultez [Activation d’un utilisateur](https://msdn.microsoft.com/library/Cc530378).
+Parmi les nombreux services web installés, ceux-ci sont importants pour le développement d’applications pour serveur RMS sur Windows Server.
 
-Ce service s’exécute sur le serveur de certification racine.
-
-**Gestion des licences** : émet une licence d’utilisateur final qui permet aux utilisateurs finaux de consommer du contenu protégé. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.
-
-**Publication** : crée une [licence d’émission](https://msdn.microsoft.com/library/Aa362355). Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.
-
-**Précertification** : permet à un serveur demander un certificat de compte de droits pour le compte d’un utilisateur. Un certificat de compte de droits utilise le certificat d’ordinateur à partir de l’activation de RMS pour lier des comptes d’utilisateur à des ordinateurs ou des groupes d’ordinateurs spécifiques, et est utilisé pour permettre aux consommateurs d’utiliser du contenu protégé. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.
-
-**Localisateur de service** : fournit l’URL des services de certification de compte, de gestion des licences et de publication à Active Directory, pour qu’ils puissent être détectés par les clients RMS. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.
-
- 
+| Service | Description |
+|---------|-------------|
+| Administration | Héberge le site web d’administration qui vous permet de gérer RMS. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences. Vous pouvez utiliser l’API de script Active Directory Rights Management Services pour écrire des scripts d’administration.|
+| Certification de compte |Crée des certificats d’ordinateur qui identifient les ordinateurs dans la hiérarchie de certificats RMS, et des certificats de compte de droits qui associent des utilisateurs à des ordinateurs spécifiques. Pour plus d’informations, consultez Activation d’un ordinateur et Activation d’un utilisateur.<p><p>Ce service s’exécute sur le serveur de certification racine. |
+|Licences | Émet une *licence utilisateur final*. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
+|Visual Studio | Crée une *licence d’émission* qui définit les stratégies pouvant être énumérés dans une licence utilisateur final. Pour plus d’informations, consultez [Création d’une licence d’émission](https://msdn.microsoft.com/library/Aa362355).<p><p>Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
+|Précertification | Permet à un serveur demander un *certificat de compte de droits* pour le compte d’un utilisateur. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
+|Localisateur de service | Fournit l’URL des services de certification, de gestion des licences et de publication des comptes à Active Directory pour qu’ils puissent être détectés par les clients RMS. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
 
 ## Rubriques connexes ##
 * [Vue d'ensemble](ad-rms-overview.md)
@@ -65,6 +60,6 @@ Ce service s’exécute sur le serveur de certification racine.
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

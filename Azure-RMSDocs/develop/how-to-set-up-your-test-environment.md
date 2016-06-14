@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configurer l’environnement de test | Azure RMS
-description: Vous pouvez tester votre application avec gestion des droits à l’aide de plusieurs options du serveur.
+title: Test de votre application | Azure RMS
+description: Instructions de configuration de votre application pour le test.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -23,48 +23,42 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
-# Configurer l’environnement de test
 
-Vous pouvez tester votre application avec gestion des droits à l’aide de plusieurs options du serveur.
+# Test de votre application
 
-**Important**  Nous vous recommandons de tester votre application Rights Management Services SDK 2.1 d’abord avec l’environnement de préproduction AD RMS sur un serveur AD RMS. Ensuite, si vous souhaitez que votre client puisse utiliser votre application avec le service Azure RMS, passez aux tests avec cet environnement. Pour plus d’informations, consultez [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md) (Permettre à votre application de service d’opérer avec le service RMS cloud).
+Cette rubrique contient des instructions sur la configuration de test de votre application.
 
- 
+## Instructions
 
-### Conditions préalables
+### Étape 1 : Configuration pour le test
 
--   [Installer le SDK](create-your-first-rights-aware-application.md)
+Vous pouvez réaliser le test avec Azure RMS ou un serveur RMS en cours d’exécution sur Windows Server. Nous vous suggérons de commencer votre test sur Azure RMS, puis, si votre déploiement l’exige, de procéder au test avec le serveur RMS.
 
-Instructions
+1. Pour réaliser le test avec Azure RMS, consultez [Comment : utiliser l’authentification ADAL](how-to-use-adal-authentication,md).
+2. Pour réaliser le test avec un serveur RMS, consultez [Comment : installer et configurer un serveur RMS](how-to-install-and-configure-an-rms-server.md).
+3. Voici comment installer le runtime développeur.
 
-### Étape 1 : Configurer votre environnement de test
+   Le client Rights Management Services 2.1 doit être installé sur l’ordinateur sur lequel vous testez votre application.
+   - Si vous testez votre application sur un ordinateur autre que votre ordinateur de développement, vous pouvez installer le client RMS 2.1 sur cet ordinateur à partir de la [page de téléchargement du client AD RMS](http://www.microsoft.com/en-us/download/details.aspx?id=38396).
+   - Si vous testez votre application sur votre ordinateur de développement, vous devez déjà avoir installé Rights Management Services SDK 2.1. Le client RMS 2.1 est installé sans assistance à ce stade.
 
-Pour tester votre application avec gestion des droits, vous devez l’exécuter sur un serveur RMS configuré pour la préproduction. Un serveur RMS de préproduction utilise la hiérarchie des certificats ISV/préproduction pour chiffrer et déchiffrer les fichiers.
+    Pour plus d’informations sur la façon d’installer Rights Management Services SDK 2.1, consultez [Installer le SDK](create-your-first-rights-aware-application.md).
 
-Pour plus d’informations sur la hiérarchie des certificats AD RMS, consultez [Présentation des chaînes de certificats](understanding-certificate-chains.md).
+## Remarques
 
-Deux options sont disponibles pour tester votre application sur un serveur RMS :
+Les instructions de cette rubrique ne sont pas exhaustives. Pour plus d’informations sur la configuration du client RMS 2.1, consultez les [notes sur le déploiement du client RMS 2.1](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx).
 
--   **Vous pouvez exécuter votre application sur l’environnement AD RMS ISV 1-box**. Si vous exécutez Windows Server 2012, Windows Server 2008 R2 ou Windows Server 2008 et que Hyper-V est installé, vous pouvez déployer l’environnement AD RMS ISV 1-box en créant une machine virtuelle à l’aide du VHD AD RMS 1-box. L’environnement AD RMS ISV 1-box fournit un serveur RMS configuré pour la préproduction et sur lequel Active Directory Rights Management Services Client 2.1 est installé. Les paramètres du Registre pour le serveur et le client RMS sont déjà configurés. Pour tester votre application, exécutez-la sur la machine virtuelle sur laquelle l’environnement 1-box est déployé.
--   **Vous pouvez exécuter votre application sur un serveur RMS configuré pour la préproduction et déployé sur votre réseau**. Dans ce cas, vous devez également installer et configurer AD RMS Client 2.1 sur l’ordinateur où votre application s’exécutera. Pour plus d’informations sur la procédure à suivre, consultez [Configurer le client](how-to-configure-the-ad-rms-client-2-0.md). Pour plus d’informations sur la façon de déployer un serveur RMS et de le configurer pour la préproduction, consultez [Installer et configurer le serveur](how-to-install-and-configure-an-rms-server.md).
+### Rubriques connexes
 
-## Rubriques connexes
-
-* [Procédures](how-to-use-msipc.md)
-* [Page de téléchargement des éléments associés au webinaire AD RMS SDK](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
-* [Configurer le client](how-to-configure-the-ad-rms-client-2-0.md)
+* [Comment : installer et configurer un serveur RMS](how-to-install-and-configure-an-rms-server.md)
+* [Comment : utiliser l’authentification ADAL](how-to-use-adal-authentication,md)
 * [Installer le SDK](create-your-first-rights-aware-application.md)
-* [Installer et configurer le serveur](how-to-install-and-configure-an-rms-server.md)
-* [Présentation des chaînes de certificats](understanding-certificate-chains.md)
+* [Notes sur le déploiement du client RMS 2.1](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

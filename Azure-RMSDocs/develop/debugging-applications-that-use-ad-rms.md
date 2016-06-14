@@ -1,30 +1,20 @@
 ---
-# required metadata
+# métadonnées requises
 
-title: Déboguer une application avec gestion des droits | Azure RMS
-description: La rubrique suivante indique comment déboguer une application et utiliser le journal des événements Windows.
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
-# optional metadata
+titre : Comment : déboguer une application avec gestion des droits | Description Azure RMS : La rubrique suivante indique comment déboguer votre application et utiliser le journal des événements Windows.
+mots clés : auteur : bruceperlerms manager : mbaldwin ms.date : 28/04/2016 ms.topic : article ms.prod : azure ms.service : gestion des droits ms.technology : identité techgroup ms.assetid : 6F6C7651-6A6E-45DD-A0C5-F036F803249B
+# métadonnées facultatives
 
-#ROBOTS:
-audience: developer
-#ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+#ROBOTS :
+audience : développeur
+#ms.devlang :
+ms.reviewer : shubhamp ms.suite : ems
+#ms.tgt_pltfrm :
+#ms.custom :
 
 ---
-** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
-# Déboguer une application avec gestion des droits
+
+# Comment : déboguer une application avec gestion des droits
 
 La rubrique suivante indique comment déboguer une application et utiliser le journal des événements Windows.
 
@@ -33,6 +23,7 @@ La rubrique suivante indique comment déboguer une application et utiliser le jo
 Dans Rights Management Services SDK 2.1, les vérifications anti-débogage dans la version développeur de notre runtime sont désactivées.
 
 Vous pouvez activer le suivi du débogage à l’aide de la clé de Registre suivante. (Pour désactiver le suivi du débogage, remplacez la valeur par 0.) Rien d’autre n’est nécessaire pour le débogage dans cette version.
+
 
 ```
 HKEY_LOCAL_MACHINE
@@ -72,15 +63,11 @@ Par exemple, la commande suivante active le journal des événements MSIPC et af
 
 ## Rubriques connexes
 
-* [Utilisation de procédures](how-to-use-msipc.md)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

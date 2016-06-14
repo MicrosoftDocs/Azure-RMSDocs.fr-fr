@@ -23,25 +23,33 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
 # Prise en main
 
-La plateforme Rights Management Services SDK 2.1 permet aux développeurs de créer des applications qui tirent parti de la protection des informations de RMS. La plateforme gère des pratiques de sécurité complexes, comme la gestion des clés, et le traitement du chiffrement et du déchiffrement. Elle offre une API simplifiée pour le développement d’applications.
+La plateforme de Rights Management Services SDK 2.1 permet aux développeurs de créer des applications qui tirent parti de la protection des informations par le biais d’un serveur RMS ou d’Azure RMS. La plateforme gère des pratiques de sécurité complexes, comme la gestion des clés, et le traitement du chiffrement et du déchiffrement. Elle offre une API simplifiée pour le développement d’applications.
 
 ## Prise en main de RMS SDK 2.1
 
-Lisez ces sections (ci-dessous) :
+Cette rubrique vous guide tout au long du processus de configuration et d’exécution de votre application avec gestion des droits dans un environnement de test. Les rubriques suivantes expliquent comment configurer votre environnement de développement. L’ordre dans lequel elles sont répertoriées suggère l’ordre dans lequel vous pouvez effectuer les tâches.
 
--   Pourquoi utiliser RMS SDK 2.1 pour protéger votre contenu ?
--   Principes de base
+## Dans cette section
+
+| Rubrique | Description |
+|-------|-------------|
+| [notes de publication](release-notes-rtm.md) | Cette rubrique contient des informations importantes sur cette version du Kit RMS SDK 2.1 et sur les versions précédentes.|
+| [Installer le SDK](install-the-rms-sdk.md) | Cette rubrique vous guide tout au long de l’installation des outils de développement.|
+| [Configurer Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | Cette rubrique contient des instructions sur la configuration d’un projet Visual Studio en vue d’utiliser RMS SDK 2.1.|
+| [Développement de votre application](developing-your-application.md) | Cette rubrique contient des conseils essentiels liés aux principaux aspects d’une application compatible RMS. Vous pouvez vous appuyer sur ces conseils pour développer votre propre application.|
+| [Test de votre application](running-your-first-application.md) |Cette rubrique contient des instructions sur la configuration de test de votre application.|
+| [Déployer en production](deploying-your-application.md) |Cette rubrique décrit les options de déploiement pour votre application avec gestion des droits.|
+
+Une fois que vous avez effectué la prise en main, découvrez nos autres [exemples RMS](samples.md). Ensuite, vous pouvez vous tenir informé via notre blog [RMS Developer's Corner](http://blogs.msdn.com/b/rms/).
+
 
 Essayez d’utiliser RMS SDK 2.1 en suivant les instructions des rubriques suivantes :
 
--   [Installer le SDK](create-your-first-rights-aware-application.md)
+-   [Installer le SDK](install-the-rms-sdk.md)
 -   [Test de votre application avec gestion des droits](running-your-first-application.md)
--   [IPCHelloWorld : un exemple d’application](how-to-build-your-first-application.md)
-
-Une fois que vous avez effectué la prise en main, découvrez nos autres [exemples RMS](samples.md). Ensuite, vous pouvez vous tenir informé via notre blog [RMS Developer's Corner](http://blogs.msdn.com/b/rms/).
+-   [IPCHelloWorld - an example application (Exemple d’application IPCHelloWorld)](how-to-build-your-first-application.md)
 
 ### Pourquoi utiliser RMS SDK 2.1 pour protéger votre contenu ?
 
@@ -65,19 +73,15 @@ RMS SDK 2.1 prend en charge plusieurs plateformes client et serveur importantes
 
 * [Exemples AD RMS](samples.md)
 * [AD RMS Developer's Corner](http://blogs.msdn.com/b/rms/)
-* [Installer le SDK](create-your-first-rights-aware-application.md)
+* [Installer le SDK](install-the-rms-sdk.md)
 * [IPCHelloWorld : un exemple d’application](how-to-build-your-first-application.md)
 * [Vue d'ensemble](ad-rms-overview.md)
 * [Plateformes prises en charge](supported-platforms.md)
-* [Test de votre application avec gestion des droits](running-your-first-application.md)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

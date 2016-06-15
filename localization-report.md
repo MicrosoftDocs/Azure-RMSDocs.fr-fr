@@ -1384,9 +1384,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\develop\how-to-use-document-tracking.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/305e58febc63e4ad47233a3625d6bc5aee2043ca/Azure-RMSDocs/develop/how-to-use-document-tracking.md)
-* Current Handback File: [how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.fr-fr.xlf)
-* Current Handback Datetime: 2016-06-03 00:33:47
+* Current Target File: [Azure-RMSDocs\develop\how-to-use-document-tracking.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/4aa863594069a2f30ff761ef51a9fbfb45ee030b/Azure-RMSDocs/develop/how-to-use-document-tracking.md)
+* Current Handback File: [how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/7a9e963f59b4eb37c2d353d16309e840ad8e1924/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.fr-fr.xlf)
+* Current Handback Datetime: 2016-06-15 10:46:45
 * [Back to Top](#report-top)
 
 ##### <a name='4fc722907339137a752b701d5be09a7da66f4e8975'></a> Source: [Azure-RMSDocs\develop\how-to-use-file-api-with-aadrm-cloud.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/29e856e3e9990f81a791c533ddad5a332093d5d3/Azure-RMSDocs/develop/how-to-use-file-api-with-aadrm-cloud.md)
@@ -1588,9 +1588,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\develop\setting-the-api-security-mode-api-mode.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/1529fbec2164071dc6787f75e050c5101fe5ce69/Azure-RMSDocs/develop/setting-the-api-security-mode-api-mode.md)
-* Current Handback File: [setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/86ab23a5bf161be6606d5f73b2ddf401bde93dce/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.fr-fr.xlf)
-* Current Handback Datetime: 2016-06-08 05:08:10
+* Current Target File: [Azure-RMSDocs\develop\setting-the-api-security-mode-api-mode.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/4aa863594069a2f30ff761ef51a9fbfb45ee030b/Azure-RMSDocs/develop/setting-the-api-security-mode-api-mode.md)
+* Current Handback File: [setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/7a9e963f59b4eb37c2d353d16309e840ad8e1924/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.fr-fr.xlf)
+* Current Handback Datetime: 2016-06-15 10:46:45
 * [Back to Top](#report-top)
 
 ##### <a name='4bb013f420b02a10e306d92624683c48ceb2582f91'></a> Source: [Azure-RMSDocs\develop\setup-developer-environment.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6b5bc9612ac17a2d6905200383d9b8df4c504efe/Azure-RMSDocs/develop/setup-developer-environment.md)

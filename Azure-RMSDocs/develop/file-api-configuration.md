@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
+
 # Configuration de l’API de fichier
 
 
@@ -40,46 +40,45 @@ Pour plus d’informations sur les formats de fichiers pris en charge, consultez
 
 Les sections suivantes décrivent les clés et valeurs de clés qui contrôlent le chiffrement.
 
-
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
 
-*Type* : Clé
+**Type** : Clé
 
-*Description* : Contient la configuration générale de l’API de fichier.
+**Description** : Contient la configuration générale de l’API de fichier.
 
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
 
-*Type : Clé
+**Type** : Clé
 
-*Description : Spécifie les informations de configuration d’une extension de fichier spécifique ; par exemple TXT, JPG, etc.
+**Description** : Spécifie les informations de configuration d’une extension de fichier spécifique ; par exemple TXT, JPG, etc.
 
 - Le caractère générique « * » est autorisé. Toutefois, le paramètre d’une extension spécifique est prioritaire sur le paramètre du caractère générique. Le caractère générique n’affecte pas les paramètres des fichiers Microsoft Office. Vous devez désactiver explicitement ces derniers à l’aide du type de fichier.
 - Pour spécifier des fichiers qui n’ont pas d’extension, utilisez « . »
 - N’indiquez pas le caractère « . » quand vous spécifiez la clé d’une extension de fichier particulière. Par exemple, utilisez `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` pour spécifier les paramètres des fichiers .txt. (N’utilisez pas `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT`).
 
-Définissez la valeur *Encryption* dans la clé pour spécifier le comportement de la protection. Si la valeur *Encryption* n’est pas définie, le comportement par défaut du type de fichier est observé.
+Définissez la valeur **Encryption** dans la clé pour spécifier le comportement de la protection. Si la valeur **Encryption** n’est pas définie, le comportement par défaut du type de fichier est observé.
 
 
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
 
-*Type : REG_SZ*
+**Type** : REG_SZ
 
-*Description : Contient l’une des trois valeurs suivantes :
+**Description** : Contient l’une des trois valeurs suivantes :
 
-- *Off* : Le chiffrement est désactivé.
+- **Off** : Le chiffrement est désactivé.
 
-> [AZURE.NOTE] Ce paramètre n’a aucune incidence sur le déchiffrement. Tout fichier chiffré, que ce soit via la protection Native ou la protection Pfile, peut être déchiffré du moment que l’utilisateur dispose du droit EXTRACT.
+> [AZURE.NOTE] Ce paramètre n’a aucune incidence sur le déchiffrement. Tout fichier chiffré, que ce soit via la protection Native ou la protection Pfile, peut être déchiffré du moment que l’utilisateur dispose du droit **EXTRACT**.
 
-- *Native* : Le chiffrement natif est utilisé. Pour les fichiers Office, le fichier chiffré a la même extension que le fichier d’origine. Par exemple, un fichier avec l’extension de fichier .docx est chiffré en fichier avec l’extension .docx. Les autres fichiers auxquels une protection native peut être appliquée sont chiffrés en fichiers avec une extension au format p**zzz**, où **zzz** représente l’extension de fichier d’origine. Par exemple, les fichiers .txt sont chiffrés en fichiers avec l’extension .ptxt. Vous trouverez ci-après une liste d’extensions de fichiers pouvant bénéficier d’une protection native.
+- **Native** : Le chiffrement natif est utilisé. Pour les fichiers Office, le fichier chiffré a la même extension que le fichier d’origine. Par exemple, un fichier avec l’extension de fichier .docx est chiffré en fichier avec l’extension .docx. Les autres fichiers auxquels une protection native peut être appliquée sont chiffrés en fichiers avec une extension au format p*zzz*, où *zzz* représente l’extension de fichier d’origine. Par exemple, les fichiers .txt sont chiffrés en fichiers avec l’extension .ptxt. Vous trouverez ci-après une liste d’extensions de fichiers pouvant bénéficier d’une protection native.
 
-- *Pfile* : Le chiffrement PFile est utilisé. L’extension .pfile est ajoutée à l’extension d’origine du fichier chiffré. Par exemple, une fois le chiffrement effectué, un fichier .txt a l’extension .txt.pfile.
+- **Pfile** : Le chiffrement PFile est utilisé. L’extension .pfile est ajoutée à l’extension d’origine du fichier chiffré. Par exemple, une fois le chiffrement effectué, un fichier .txt a l’extension .txt.pfile.
 
 
 > [AZURE.NOTE] Ce paramètre n’a aucune incidence sur les formats de fichiers Office. Par exemple, si la valeur `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` est « Pfile », les fichiers .docx sont tout de même chiffrés à l’aide de la protection native. De plus, les fichiers chiffrés gardent l’extension de fichier .docx.
 
 Si vous affectez une autre valeur, ou si vous n’affectez aucune valeur, le comportement par défaut s’applique.
 
-## Comportement par défaut des différents formats de fichiers**
+## Comportement par défaut des différents formats de fichiers
 
 -   **Fichiers Office** : Le chiffrement natif est activé.
 -   **Fichiers txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** : Le chiffrement natif est activé (xxx devient pxxx)
@@ -89,7 +88,7 @@ Si vous tentez un chiffrement sur un type de fichier bloqué, une erreur [**IPCE
 
 ### API de fichier - Détails de la prise en charge des fichiers
 
-Vous pouvez ajouter une prise en charge native pour tous les types de fichier (extension). Par exemple, pour toute extension &lt;ext&gt; (non-Office), \*.p&lt;ext&gt; est utilisé si la configuration d’administration pour cette extension est « NATIVE ».
+Vous pouvez ajouter une prise en charge native pour tous les types de fichier (extension). Par exemple, pour toute extension &lt;ext&gt; (non-Office), \*.p&lt;ext&gt; est utilisé si la configuration d’administration pour cette extension est « NATIVE ».
 
 **Fichiers Office**
 
@@ -106,7 +105,7 @@ Vous pouvez ajouter une prise en charge native pour tous les types de fichier (e
 
 **Tous les autres formats de fichiers**
 
--   Type de protection = Pfile : sample.*zzz* est chiffré et nommé sample.*zzz*.pfile, où zzz représente l’extension de fichier d’origine.
+-   Type de protection = Pfile : sample.*zzz* est chiffré et nommé sample.*zzz*.pfile, où *zzz* représente l’extension de fichier d’origine.
 -   Off : Désactive le chiffrement.
 
 ### Exemples
@@ -158,9 +157,6 @@ HKEY_LOCAL_MACHINE
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

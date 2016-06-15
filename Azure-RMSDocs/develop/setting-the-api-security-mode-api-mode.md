@@ -1,30 +1,20 @@
 ---
-# required metadata
+# métadonnées requises
 
-title: Définition du mode de sécurité de l’API | Azure RMS
-description: Choisissez le mode de sécurité qu’exécute votre application API de fichier.
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
-# optional metadata
+titre : Comment : définir le mode de sécurité de l’API | Description Azure RMS : choisir le mode de sécurité exécuté par votre application API de fichier.
+mots clés : auteur : bruceperlerms manager : mbaldwin ms.date : 28/04/2016 ms.topic: article ms.prod: azure ms.service: gestion des droits ms.technology: identité techgroup ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
+# métadonnées facultatives
 
-#ROBOTS:
-audience: developer
-#ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+#ROBOTS :
+audience : développeur
+#ms.devlang :
+ms.reviewer : shubhamp ms.suite : ems
+#ms.tgt_pltfrm :
+#ms.custom :
 
 ---
-** Ce contenu de SDK n’est pas à jour. Vous trouverez temporairement la [version actuelle](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) de la documentation sur MSDN. **
-# Définition du mode de sécurité de l’API
+
+# Comment : définir le mode de sécurité de l’API
 
 Vous pouvez choisir le mode de sécurité qu’exécute votre application API de fichier à l’aide de la fonction [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty).
 
@@ -34,12 +24,9 @@ Pour plus d’informations sur le *mode serveur*, consultez [Application types](
 
 **Important**  Le mode de sécurité doit être défini avant d’appeler toute autre fonction Rights Management Services SDK 2.1. Une fois que le mode de sécurité a été défini, il ne peut plus être modifié pour le processus en cours.
 
- 
-
 ## Rubriques connexes
 
 * [Application types (Types d’applications)](application-types.md)
-* [Developer concepts (Concepts de développement)](ad-rms-concepts-nav.md)
 * [**API mode values (Valeurs de mode de l’API)**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER)
 * [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty)
  
@@ -47,9 +34,6 @@ Pour plus d’informations sur le *mode serveur*, consultez [Application types](
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "6200c8da7c04f0ee2c962986c142da12f29e2248",
+  "LastProcessedCommit": "f96d2780ba7ff898803dde5d553b85434d7f200b",
   "LastTranslatedCommit": "62e7b35660690a6d4502da33ec03bc40feeda8f5",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
@@ -76105,6 +76105,40 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\archive\\TOC.13a398ad10575ec470dbe9e6b9feae83865839a4.fr-fr.xlf",
       "ArchiveFileCommit": "dd8cd7f240b4d9fd897073ed48d444aec2165201",
       "ArchiveFileDateTime": "2016-06-16T13:08:15.4952982Z",
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
+    },
+    "21b92fae5fd00d80f9afd2e80d21c08bfa47b7b2": {
+      "FileHash": "21b92fae5fd00d80f9afd2e80d21c08bfa47b7b2",
+      "SourceFileCommit": "3883a46440f016138dd50d061a58089253721719",
+      "SourceFilePath": "Azure-RMSDocs\\deploy-use\\configure-usage-rights.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "Azure-RMSDocs\\deploy-use\\configure-usage-rights.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.fr-fr.xlf",
+      "HandoffFileCommit": "01022b1ab86ade98d4e47f81a53dd8b894c519dd",
+      "HandoffDateTime": "2016-06-16T20:49:56.8781378Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
       "ArchiveException": null,
       "BilingualFilePath": null,
       "BilingualFileCommit": null,

@@ -28,17 +28,6 @@ ms.suite: ems
 
 Cette rubrique contient des informations importantes sur cette version du Kit RMS SDK 2.1 et sur les versions précédentes.
 
-- [Nouveautés dans la mise à jour de la documentation du SDK de février 2016](#new-for-the-february-2016-sdk-documentation-update)
-- [Mise à jour de décembre 2015](#december-2015-update)
-- [Mise à jour de mai 2015](#may-2015-update)
-- [Mise à jour d’avril 2015](#april-2015-update)
-- [Mise à jour de janvier 2015](#january-2015-update)
-- [Mise à jour d’octobre 2014](#october-2014-update)
-- [Mise à jour de juillet 2014](#july-2014-update)
-- [Remarques importantes à l’attention des développeurs](#important-developer-notes)
-- [Forum aux questions](#frequently-asked-questions)
-- [Rubriques connexes](#related-topics)
-
 ## Nouveautés dans la mise à jour de la documentation du SDK de février 2016
 
 >[!Note]  Les mises à jour de la documentation de fonctionnalités dans cette section s’appliquent au téléchargement du SDK daté du 11/12/2015.

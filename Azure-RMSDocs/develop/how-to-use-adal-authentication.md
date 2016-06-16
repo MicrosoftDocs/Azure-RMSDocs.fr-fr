@@ -43,13 +43,13 @@ Cette rubrique contient deux approches de l’authentification avec des exemples
 
   Adoptez cette approche si vous souhaitez que le client RMS affiche une invite d’authentification ADAL quand l’authentification est nécessaire. Pour plus d’informations sur la façon de configurer votre application, consultez la section « Authentification interne ».
 
-  >AZURE.NOTE Si votre application utilise actuellement le SDK AD RMS 2.1 avec l’Assistant de connexion, nous vous recommandons d’utiliser la méthode d’authentification interne comme chemin de migration d’application.
+  > [!Note] Si votre application utilise actuellement AD RMS SDK 2.1 avec l’Assistant de connexion, nous vous recommandons d’utiliser la méthode d’authentification interne comme chemin de migration d’application.
 
 - **Authentification externe** : authentification OAuth gérée par votre application.
 
   Adoptez cette approche si vous souhaitez que votre application gère sa propre authentification OAuth. Avec cette approche, le client RMS exerce un rappel défini par l’application quand l’authentification est nécessaire. Pour obtenir un exemple détaillé, consultez « Authentification externe » à la fin de cette rubrique.
 
-  >AZURE.NOTE L’authentification externe n’implique pas la possibilité de modifier les utilisateurs. Le client RMS utilise toujours l’utilisateur par défaut pour un locataire RMS donné.
+  > [!Note] L’authentification externe n’implique pas la possibilité de modifier les utilisateurs. Le client RMS utilise toujours l’utilisateur par défaut pour un client RMS donné.
 
 ## Authentification interne
 

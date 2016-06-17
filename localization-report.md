@@ -1361,8 +1361,8 @@
 * Archive Datetime: 2016-06-16 13:08:15
 * Handback File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/1ffa5c8ae3be0f09e2b4a94c436f94f4885df731/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf)
 * Handback Datetime: 2016-06-17 09:43:45
-* Bilingual File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/5913e83fd16090b1187fdbc0ea8941f701a28144/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 10:19:09
+* Bilingual File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/1ffa5c8ae3be0f09e2b4a94c436f94f4885df731/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf)
+* Bilingual Datetime: 2016-06-17 09:45:19
 * [Back to Top](#report-top)
 
 ##### <a name='b2f5d6d366c767a4c2fb2f5e86ee69509a2aba2765'></a> Source: [Azure-RMSDocs\develop\get-started.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6b5bc9612ac17a2d6905200383d9b8df4c504efe/Azure-RMSDocs/develop/get-started.md)

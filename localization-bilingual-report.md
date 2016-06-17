@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [Azure-RMSDocs\develop\file-api-configuration.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bb6927bb82f1bbfcd63b5b8d02d7aa6c7feee8cd/Azure-RMSDocs/develop/file-api-configuration.md) | InSyncHandedBackSuccess | [Details](#88a911b25c268c54e55bd5bc90ff3e946a9203ee64)
 
 ## Item Details
-##### <a name='88a911b25c268c54e55bd5bc90ff3e946a9203ee64'></a> Source: [Azure-RMSDocs\develop\file-api-configuration.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bb6927bb82f1bbfcd63b5b8d02d7aa6c7feee8cd/Azure-RMSDocs/develop/file-api-configuration.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\develop\file-api-configuration.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/76ee5eb9259cde7177843b4bd2b4eae65b325189/Azure-RMSDocs/develop/file-api-configuration.md)
-* Handoff File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/2c20c2634f779c0a883721bbd0774910894f956d/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf)
-* Handoff Datetime: 2016-06-10 01:36:23
-* Handoff Reason: Include
-* Archive File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/dd8cd7f240b4d9fd897073ed48d444aec2165201/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/archive/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf)
-* Archive Datetime: 2016-06-16 13:08:15
-* Handback File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/1ffa5c8ae3be0f09e2b4a94c436f94f4885df731/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf)
-* Handback Datetime: 2016-06-17 09:43:45
-* Bilingual File: [file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/1ffa5c8ae3be0f09e2b4a94c436f94f4885df731/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-17 09:45:19
-* [Back to Top](#report-top)
-
 
 ## Error Details
 

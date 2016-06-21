@@ -21,11 +21,10 @@
 #### [Exemples de code iOS/OS X](ios-os-x-code-examples.md)
 #### [Ressources de la communauté](community-resources.md)
 ### [Aide et terminologie pour les développeurs](core-concepts.md)
-#### [Comment : ajouter l’authentification à votre application](authentication-integration.md)
-#### [Comment : activer la journalisation des erreurs et des performances](enabling-logging.md)
-#### [Comment : obtenir un ID d’application Azure](application-id.md)
-#### [Comment : utiliser les droits intégrés](built-in-rights-usage-restriction-reference.md)
-#### [Comment : utiliser le suivi de documents](how-to-use-document-tracking.md)
+#### [Procédure d’inscription et d’activation RMS de votre application dans Azure AD](authentication-integration.md)
+#### [Procédure d’activation de la journalisation des erreurs et des performances](enabling-logging.md)
+#### [Procédure d’utilisation des droits intégrés](built-in-rights-usage-restriction-reference.md)
+#### [Procédure d’utilisation du suivi de documents](how-to-use-document-tracking.md)
 #### [Conditions d'utilisation](terms.md)
 ### [Référence d'API](api-reference-4-2.md)
 #### [Informations de référence sur l’API Android](android-namespaces.md)
@@ -60,8 +59,14 @@
 #### [Plateformes prises en charge](supported-platforms.md)
 #### [Présentation des restrictions d’utilisation](understanding-usage-restrictions.md)
 #### [Informations de référence sur les restrictions d’utilisation](usage-restriction-reference.md)
+### [Référence API](api-reference-2-1.md)
+#### [Constantes](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/constants)
+#### [Types de données](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/data types)
+#### [Fonctions](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/functions)
+#### [Structures](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/structures)
+#### [Codes d'erreur](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/Error codes)
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,16 +1,26 @@
 ---
-# métadonnées requises
+# required metadata
 
-titre : Comment : déboguer une application avec gestion des droits | Description Azure RMS : La rubrique suivante indique comment déboguer votre application et utiliser le journal des événements Windows.
-mots clés : auteur : bruceperlerms manager : mbaldwin ms.date : 28/04/2016 ms.topic : article ms.prod : azure ms.service : gestion des droits ms.technology : identité techgroup ms.assetid : 6F6C7651-6A6E-45DD-A0C5-F036F803249B
-# métadonnées facultatives
+title: Procédure : Débogage d’une application avec gestion des droits | Azure RMS
+description: La rubrique suivante indique comment déboguer une application et utiliser le journal des événements Windows.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
+# optional metadata
 
-#ROBOTS :
-audience : développeur
-#ms.devlang :
-ms.reviewer : shubhamp ms.suite : ems
-#ms.tgt_pltfrm :
-#ms.custom :
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
 
 ---
 

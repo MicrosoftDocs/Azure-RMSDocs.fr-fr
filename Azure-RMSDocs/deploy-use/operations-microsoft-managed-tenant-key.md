@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/03/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -42,7 +42,7 @@ Le renouvellement de la clé est également appelé déploiement de la clé. Ne 
 
 -   Vous pensez que la copie principale de votre clé de locataire (celle en votre possession) a été compromise.
 
-Vous pouvez renouveler votre clé de locataire en appelant les services de support technique Microsoft (CSS), et en prouvant que vous êtes bien l'administrateur client.
+Vous pouvez renouveler votre clé de locataire en [contactant le support Microsoft](../get-started/information-support#to-contact-microsoft-support) pour ouvrir un **dossier de support Azure Rights Management dans lequel vous demandez le renouvellement de votre clé de locataire Azure RMS**. Vous devez prouver que vous êtes administrateur de votre locataire Azure RMS et comprendre que la confirmation de ce processus prend plusieurs jours. Des frais de prise en charge standard s’appliquent. Le renouvellement de votre clé de locataire n’est pas un service de support gratuit.
 
 Lorsque vous renouvelez votre clé de locataire, le nouveau contenu est protégé à l'aide de la nouvelle clé de locataire. Vous obtenez ce résultat en plusieurs étapes. Ainsi, pendant un certain temps, certains nouveaux contenus continueront d'être protégés par l'ancienne clé de locataire. Le contenu précédemment protégé reste protégé par l'ancienne clé de locataire. Pour prendre en charge ce scénario, les services Azure RMS conservent votre ancienne clé de locataire afin qu'ils puissent émettre des licences pour l'ancien contenu.
 
@@ -54,7 +54,7 @@ Vous pouvez exporter votre clé de locataire et votre configuration Azure RMS en
 
 ### Étape 1 : initiation d'une exportation
 
--   Pour ce faire, contactez le service clientèle de Microsoft pour ouvrir un **cas de support Azure Rights Management avec une demande d’exportation de clé Azure RMS**. Vous devez prouver que vous êtes administrateur de votre locataire Azure RMS et comprendre que la confirmation de ce processus prend plusieurs jours. Des frais de prise en charge standard s’appliquent. L’exportation de votre clé de locataire n’est pas un service de support technique gratuit.
+-   Pour ce faire, **contactez le support Microsoft** pour ouvrir un [dossier de support Azure Rights Management dans lequel vous demandez l’exportation d’une clé Azure RMS](../get-started/information-support#to-contact-microsoft-support). Vous devez prouver que vous êtes administrateur de votre locataire Azure RMS et comprendre que la confirmation de ce processus prend plusieurs jours. Des frais de prise en charge standard s’appliquent. L’exportation de votre clé de locataire n’est pas un service de support technique gratuit.
 
 ### Étape 2 : attente de la vérification
 
@@ -97,13 +97,13 @@ En cas de violation, la meilleure mesure que vous ou Microsoft puissiez prendre 
 
 |Description de l'incident|Réponse possible|
 |------------------------|-------------------|
-|Votre clé de locataire a fait l'objet d'une fuite.|Renouvelez votre clé de locataire. Consultez la section [Renouvellement de votre clé de locataire](operations-tenant-key.md#re-key-your-tenant-key) dans cet article.|
+|Votre clé de locataire a fait l'objet d'une fuite.|Renouvelez votre clé de locataire. Consultez la section [Renouvellement de votre clé de locataire](operations-tenant-key#re-key-your-tenant-key) dans cet article.|
 |Une personne non autorisée ou un programme malveillant a obtenu le droit d'utiliser votre clé de locataire, sans que celle-ci ait fait l'objet d'une fuite.|Dans ce cas, le renouvellement de votre clé de locataire ne sera pas utile et une analyse de la cause première sera obligatoire. Si un bogue au niveau d'un processus ou d'un logiciel est responsable de l'accès de l'individu non autorisé, cette situation doit être résolue.|
 |Une vulnérabilité a été découverte dans l'algorithme RSA ou la longueur de la clé, ou des attaques en force brute peuvent être envisagées au niveau informatique.|Microsoft doit mettre à jour les services Azure RMS pour prendre en charge de nouveaux algorithmes et longueurs de clé plus élevées qui sont résilients, mais également informer tous les clients qu'ils doivent renouveler leur clé de locataire.|
 
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -1,16 +1,26 @@
 ---
-# métadonnées requises
+# required metadata
 
-titre : Comment : permettre à votre application de service de fonctionner avec le service RMS | Description Azure RMS : Cette rubrique décrit les étapes permettant de configurer votre application de service pour qu’elle utilise Azure Rights Management.
-mots clés : auteur : bruceperlerms manager : mbaldwin ms.date : 28/04/2016 ms.topic: article ms.prod: azure ms.service: gestion des droits ms.technology: identité techgroup ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
-# métadonnées facultatives
+title: Procédure pour autoriser le fonctionnement de votre application de service avec le service RMS cloud | Azure RMS
+description: Cette rubrique décrit les étapes qui permettent de configurer votre application de service pour qu’elle utilise Azure Rights Management.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
+# optional metadata
 
-#ROBOTS :
-audience : développeur
-#ms.devlang :
-ms.reviewer : shubhamp ms.suite : ems
-#ms.tgt_pltfrm :
-#ms.custom :
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
 
 ---
 

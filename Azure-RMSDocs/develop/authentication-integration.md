@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Procédure : ajout de l’authentification à votre application | Azure RMS
+title: Procédure d’inscription et d’activation RMS de votre application dans Azure AD | Azure RMS
 description: Décrit les principes fondamentaux de l’authentification utilisateur pour votre application RMS.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -24,29 +24,28 @@ ms.suite: ems
 
 ---
 
-# Procédure : ajout de l’authentification à votre application
+# Procédure d’inscription et d’activation RMS de votre application dans Azure AD
 
-Cette rubrique décrit les principes fondamentaux de l’authentification utilisateur pour votre application RMS.
+Cette rubrique décrit les concepts de base de l’inscription d’une application et de son activation RMS dans le portail Azure, puis l’authentification utilisateur avec Azure Active Directory Authentication Library (ADAL).
 
 ## Qu’est-ce que l’authentification utilisateur ?
-L’authentification utilisateur est une étape essentielle pour établir la communication entre votre application et l’infrastructure RMS. Le processus d’authentification utilise le protocole OAuth 2.0 standard qui requiert les éléments d’information suivants sur l’utilisateur actuel et sur sa demande d’authentification :**autorité**, **ressource** et **ID utilisateur**.
+L’authentification utilisateur est une étape essentielle pour établir la communication entre votre application et l’infrastructure RMS. Ce processus d’authentification utilise le protocole OAuth 2.0 standard qui nécessite les éléments d’information suivants sur l’utilisateur actuel et sur sa demande d’authentification.
 
-**Remarque** : L’étendue n’est pas utilisée actuellement, mais elle peut l’être et est donc réservée à une utilisation future.
+## Inscription dans le portail Azure
+Commencez par suivre ce guide pour configurer l’inscription de votre application dans le portail Azure, [Configurer Azure RMS pour l’authentification ADAL](adal-auth.md). Copiez et enregistrez **l’ID client** et **l’URI de redirection** de ce processus pour les utiliser plus tard.
 
- 
+## Implémenter l’authentification utilisateur pour votre application
+Chacune des API RMS a un rappel qui doit être implémenté pour activer l’authentification de l’utilisateur. RMS SDK 4.2 utilise votre implémentation du rappel quand vous ne fournissez pas de jeton d’accès, que votre jeton d’accès doit être actualisé ou que le jeton d’accès a expiré.
 
-**Rappel d’authentification utilisateur** : Microsoft Rights Management SDK 4.2 utilise votre implémentation d’un rappel d’authentification quand vous ne fournissez pas un jeton d’accès, quand votre jeton d’accès doit être actualisé ou quand le jeton d’accès a expiré.
+- Android - Interfaces [AuthenticationRequestCallback](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) et [AuthenticationCompletionCallback](/rights-management/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java).
+- iOS/OS X - Protocole [MSAuthenticationCallback](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc).
+-  Windows Phone/Windows RT - Interface [IAuthenticationCallback](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback).
+- Linux - Interface [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
 
-Chacune des API RMS de la plateforme a un rappel qui doit être implémenté afin d’activer l’authentification de l’utilisateur.
+### Bibliothèque à utiliser pour l’authentification
+Pour implémenter votre rappel d’authentification, vous devez télécharger une bibliothèque appropriée et de configurer votre environnement de développement pour qu’il l’utilise. Les bibliothèques ADAL pour ces plateformes se trouvent sur GitHub.
 
--   L’API Android utilise les interfaces [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) et [**AuthenticationCompletionCallback**](/rights-management/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java).
--   L’API iOS/OS X utilise le protocole [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc).
--   L’API WinPhone utilise l’interface [**IAuthenticationCallback**](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback).
--   L’API Linux utilise l’interface [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
-
-## Bibliothèque à utiliser pour l’authentification
-
-Pour implémenter votre rappel d’authentification, vous devez télécharger une bibliothèque appropriée et de configurer votre environnement de développement pour qu’il l’utilise. Les bibliothèques ADAL pour ces plateformes se trouvent sur GitHub. Chacune des ressources suivantes contient de l’aide pour la configuration de votre environnement et pour l’utilisation de la bibliothèque.
+Chacune des ressources suivantes contient de l’aide pour la configuration de votre environnement et pour l’utilisation de la bibliothèque.
 
 -   [Bibliothèque d’authentification Windows Azure Active Directory (ADAL) pour iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/)
 -   [Bibliothèque d’authentification Windows Azure Active Directory (ADAL) pour Mac](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/)
@@ -54,28 +53,28 @@ Pour implémenter votre rappel d’authentification, vous devez télécharger un
 -   [Bibliothèque d’authentification Windows Azure Active Directory (ADAL) pour dotnet](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   Pour le SDK Linux, la bibliothèque ADAL est fournie avec la source du SDK, disponible via [Github](https://github.com/AzureAD/rms-sdk-for-cpp).
 
-**Remarque** : Nous vous recommandons d’utiliser une des bibliothèques d’authentification Active Directory (ADAL) ci-dessus, même si vous pouvez utiliser d’autres bibliothèques d’authentification.
+>[!NOTE]  Nous vous recommandons d’utiliser une des bibliothèques ADAL, même si vous pouvez utiliser d’autres bibliothèques d’authentification.
 
-## Entrées pour l’authentification avec la bibliothèque d’authentification Azure Active Directory (ADAL)
+### Paramètres d’authentification
 
-La bibliothèque ADAL nécessite plusieurs paramètres pour authentifier un utilisateur avec succès auprès d’Azure RMS (ou AD RMS). Voici les paramètres OAuth 2.0 standard qui sont généralement requis d’une application Azure AD, comme avec les applications RMS. Vous trouverez les instructions d’utilisation de la bibliothèque ADAL dans le fichier LISEZMOI des dépôts Github correspondants précédemment répertoriés.
+La bibliothèque ADAL nécessite plusieurs éléments d’information pour authentifier un utilisateur dans Azure RMS (ou AD RMS). Il s’agit de paramètres OAuth 2.0 standard qui sont généralement nécessaires pour toutes les applications Azure AD. Les instructions d’utilisation de la bibliothèque ADAL sont disponibles dans le fichier LISEZ-MOI des dépôts Github correspondants indiqués.
 
-Ces paramètres et ces instructions sont requises pour les flux de travail RMS :
+- **Autorité** : l’URL pour le point de terminaison d’authentification, généralement AAD ou ADFS.
+- **Ressource** : l’URL/URI de l’application de service à laquelle vous essayez d’accéder, généralement Azure RMS ou AD RMS.
+- **ID utilisateur** : l’UPN, généralement une adresses de messagerie, de l’utilisateur qui veut accéder à l’application. Ce paramètre peut être vide si l’utilisateur n’est pas encore connu ; il est également utilisé pour mettre en cache le jeton de l’utilisateur ou pour demander un jeton auprès du cache. Il est aussi généralement utilisé comme *indicateur* pour la confirmation de l’utilisateur.
+- **ID de client** : l’ID de votre application cliente. Il doit s’agir d’un ID d’application Azure AD valide.
+Il provient de l’étape d’inscription dans le portail Azure.
+- **URI de redirection** : fournit la bibliothèque d’authentification avec une cible d’URI pour le code d’authentification. Des formats spécifiques sont nécessaires pour iOS et Android. Ils sont expliqués dans les fichiers LISEZ-MOI des dépôts GitHub correspondants de la bibliothèque ADAL. Cette valeur provient de l’étape d’inscription dans le portail Azure.
 
--   **Autorité** : l’URL pour le point de terminaison d’authentification, généralement AAD ou ADFS. Ce paramètre est fourni à votre application par le rappel d’authentification de RMS SDK.
--   **Ressource** : l’URL/URI de l’application de service à laquelle vous essayez d’accéder, généralement Azure RMS ou AD RMS. Ce paramètre est fourni à votre application par le rappel d’authentification de RMS SDK.
--   **ID utilisateur** : l’UPN, généralement une adresses de messagerie, de l’utilisateur qui veut accéder à l’application. Ce paramètre peut être vide si l’utilisateur n’est pas encore connu ; il est également utilisé pour mettre en cache le jeton de l’utilisateur ou pour demander un jeton auprès du cache. Ceci est généralement utilisé comme un « indicateur » pour la confirmation de l’utilisateur.
--   **ID de client** : l’ID de votre application cliente. Il doit s’agir d’un ID d’application Azure AD valide. Pour plus d’informations, consultez Procédure : obtention d’un ID d’application Azure.
--   **URI de redirection** : fournit la bibliothèque d’authentification avec une cible d’URI pour le code d’authentification. Notez que des formats spécifiques sont requis pour iOS et Android. Ils sont expliqués dans les fichiers LISEZMOI des dépôts GitHub correspondants de la bibliothèque ADAL.
+>[!NOTE] **L’étendue** n’est pas utilisée, mais peut l’être et est donc réservée à une utilisation future.
 
-    Android : `msauth://packagename/Base64UrlencodedSignature`
+    Android: `msauth://packagename/Base64UrlencodedSignature`
 
-    iOS : `<app-scheme>://<bundle-id>`
+    iOS: `<app-scheme>://<bundle-id>`
 
-**Remarque** : Si votre application ne suit pas ces instructions, les flux de travail Azure RMS et Azure AD risquent d’échouer et ne sont pas prise en charge par Microsoft.com. En outre, il peut se produire une violation du contrat RMLA si un ID de client non valide est utilisé dans une application de production.
+>[!NOTE] Si votre application ne suit pas ces instructions, les flux de travail Azure RMS et Azure AD risquent d’échouer et ne sont pas pris en charge par Microsoft.com. En outre, il peut se produire une violation du contrat RMLA si un ID de client non valide est utilisé dans une application de production.
 
-## Exemple d’implémentation d’un rappel d’authentification
-
+### Exemple d’implémentation d’un rappel d’authentification
 **Exemples de code d’authentification** : ce SDK comprend un exemple de code montrant l’utilisation de rappels d’authentification. Pour votre commodité, ces exemples de code sont représentés ici, ainsi que dans chacune des rubriques liées.
 
 **Authentification utilisateur Android** : pour plus d’informations, consultez [Exemples de code Android](android-code.md), **Étape 2** du premier scénario, « Consommation d’un fichier protégé par RMS ».
@@ -153,9 +152,7 @@ Ces paramètres et ces instructions sont requises pour les flux de travail RMS 
                          }
 
 
-**Authentification utilisateur iOS/OS X** : pour plus d’informations, consultez [Exemples de code iOS/OS X](ios-os-x-code-examples.md),
-
-**Étape 2** du premier scénario, « Consommation d’un fichier protégé par RMS ».
+**Authentification utilisateur iOS/OS X** : pour plus d’informations, consultez [Exemples de code iOS/OS X](ios-os-x-code-examples.md), *Étape 2 du premier scénario, « Consommation d’un fichier protégé par RMS ».*
 
 
     // AuthenticationCallback holds the necessary information to retrieve an access token.
@@ -203,7 +200,7 @@ Ces paramètres et ces instructions sont requises pour les flux de travail RMS 
 
 
 
-**Authentification utilisateur Linux / C++** : pour plus d’informations, consultez [Exemples de code Linux](linux-c-code-examples.md).
+**Authentification utilisateur Linux** : pour plus d’informations, consultez [Exemples de code Linux](linux-c-code-examples.md).
 
 
 
@@ -274,6 +271,6 @@ Ces paramètres et ces instructions sont requises pour les flux de travail RMS 
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO3-->
 
 

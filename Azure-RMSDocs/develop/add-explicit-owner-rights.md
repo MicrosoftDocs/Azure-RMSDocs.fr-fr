@@ -1,16 +1,26 @@
 ---
-# métadonnées requises
+# required metadata
 
-titre : Comment : ajouter des droits de propriétaire explicites | Description Azure RMS : Votre application doit ajouter explicitement des droits « Propriétaire » lors de la création d’une licence ex nihilo.
-mots clés : auteur : bruceperlerms manager : mbaldwin ms.date : 28/04/2016 ms.topic: article ms.prod: azure ms.service: gestion des droits ms.technology: identité techgroup ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
-# métadonnées facultatives
+title: Procédure d’ajout des droits de propriétaire explicites | Azure RMS
+description: Votre application doit ajouter explicitement les droits « Propriétaire » lors de la création d’une licence à partir de rien.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
+# optional metadata
 
-#ROBOTS :
-audience : développeur
-#ms.devlang :
-ms.reviewer : shubhamp ms.suite : ems
-#ms.tgt_pltfrm :
-#ms.custom :
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
 
 ---
 

@@ -1,16 +1,26 @@
 ---
-# métadonnées requises
+# required metadata
 
-titre : Comment : installer, configurer et tester avec un serveur RMS | Description Azure RMS : Installer et configurer et un serveur RMS pour tester votre application avec gestion des droits.
-mots clés : auteur : bruceperlerms manager : mbaldwin ms.date : 28/04/2016 ms.topic: article ms.prod: azure ms.service: gestion des droits ms.technology: identité techgroup ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
-# métadonnées facultatives
+title: Procédure d’installation, de configuration et de test d’un serveur RMS | Azure RMS
+description: Installez et configurez un serveur RMS pour tester votre application avec gestion des droits.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
+# optional metadata
 
-#ROBOTS :
-audience : développeur
-#ms.devlang :
-ms.reviewer : shubhamp ms.suite : ems
-#ms.tgt_pltfrm :
-#ms.custom :
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
 
 ---
 
@@ -55,7 +65,7 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
 
     Pour un test avec un serveur RMS, configurez la découverte côté serveur ou côté client pour activer le client Rights Management Services 2.1 afin de découvrir et d’établir la communication avec votre serveur RMS.
 
-    >![REMARQUE] Le test avec Azure RMS ne nécessite pas de configuration de la découverte.
+    > [!Note] Le test avec Azure RMS ne nécessite pas de configuration de la découverte.
 
   - Pour la découverte côté serveur, l’administrateur inscrit un point de connexion de service pour le cluster racine RMS auprès d’Active Directory. Ainsi, le client interroge Active Directory pour découvrir le point de connexion de service et établir une connexion avec le serveur.
   - Pour la découverte côté client, vous configurez des paramètres de découverte de service RMS dans le Registre de l’ordinateur sur lequel s’exécute le client RMS 2.1. Ces paramètres indiquent au client RMS 2.1 le serveur RMS à utiliser. Quand de tels paramètres sont définis, la découverte côté serveur n’est pas lancée.

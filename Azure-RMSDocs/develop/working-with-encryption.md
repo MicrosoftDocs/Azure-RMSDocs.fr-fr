@@ -1,15 +1,26 @@
 ---
-# métadonnées requises
+# required metadata
 
-titre : Comment : utiliser des paramètres de chiffrement | Description Azure RMS : Cet article vous oriente vers nos offres de chiffrement mots clés : auteur : bruceperlerms manager : mbaldwin ms.date : 28/04/2016 ms.topic : article ms.prod : azure ms.service : gestion des droits ms.technology : identité techgroup ms.assetid : B1D2C227-F43D-4B18-9956-767B35145792
-# métadonnées facultatives
+title: Procédure d’utilisation des paramètres de chiffrement | Azure RMS
+description: Cet article vous oriente vers nos packages de chiffrement
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
+# optional metadata
 
-#ROBOTS :
-audience : développeur
-#ms.devlang :
-ms.reviewer : shubhamp ms.suite : ems
-#ms.tgt_pltfrm :
-#ms.custom :
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
 
 ---
 

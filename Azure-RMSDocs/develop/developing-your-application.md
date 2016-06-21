@@ -32,7 +32,7 @@ Cette rubrique contient des conseils essentiels liés aux principaux aspects d�
 
 Les instructions données dans cette rubrique reposent sur l’exemple d’application IPCHelloWorld, lequel vous permet de découvrir les concepts et le code de base d’une application avec gestion des droits. Vous pouvez télécharger l’exemple d’application IPCHellowWorld complet, nommé [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440), à partir de Microsoft Connect.
 
->AZURE.NOTE Le projet IPCHelloWorld est déjà configuré pour Rights Management Services SDK 2.1. Pour plus d’informations sur la configuration d’un nouveau projet en vue d’utiliser RMS SDK 2.1, consultez [Configurer Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
+> [!Note] Le projet IPCHelloWorld est déjà configuré pour Rights Management Services SDK 2.1. Pour plus d’informations sur la configuration d’un nouveau projet en vue d’utiliser RMS SDK 2.1, consultez [Configurer Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
 
 ## Chargement du fichier MSIPC.dll
 

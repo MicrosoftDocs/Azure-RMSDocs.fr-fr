@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -81,9 +81,9 @@ Utilisez les informations et les procédures de cette section si vous souhaitez 
 
 
 > [!IMPORTANT]
-> Si vous avez déjà commencé à utiliser [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (le service est activé) et que certains de vos utilisateurs exécutent Office 2010, contactez le support technique de Microsoft avant d’appliquer ces procédures. Selon votre scénario et vos exigences, vous devrez peut-être appliquer la solution BYOK avec certaines limitations ou étapes supplémentaires.
+> Si vous avez déjà commencé à utiliser [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (le service est activé) et que certains de vos utilisateurs exécutent Office 2010, [contactez le support Microsoft](../get-started/information-support#to-contact-microsoft-support) avant d’appliquer ces procédures. Selon votre scénario et vos exigences, vous devrez peut-être appliquer la solution BYOK avec certaines limitations ou étapes supplémentaires.
 > 
-> Contactez également le support technique si votre organisation applique une politique spécifique en matière de gestion des clés.
+> Vous pouvez aussi [contacter le support Microsoft](../get-started/information-support#to-contact-microsoft-support) si votre organisation applique des stratégies spécifiques en matière de gestion des clés.
 
 ### Conditions requises pour la solution BYOK
 Reportez-vous au tableau suivant pour connaître les conditions requises pour la solution Bring your own key (BYOK).
@@ -114,7 +114,7 @@ Les procédures de génération et d'utilisation de la clé de locataire varient
     > [!NOTE]
     > Votre clé de locataire peut transiter en toute sécurité via des ordinateurs et des réseaux non sécurisés, car elle est chiffrée et sécurisée à l'aide d'autorisations de niveau de contrôle d'accès. Ainsi, elle ne peut être utilisée qu'au sein de vos modules de sécurité matériels et dans ceux de Microsoft pour Azure RMS. Vous pouvez utiliser les scripts de l'ensemble d'outils pour vérifier ces mesures de sécurité. Pour plus d'informations, consultez la documentation Thales relative à la [gestion de clé matérielle dans le cloud RMS](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud).
 
--   **En personne :** cette option requiert de contacter le support technique de Microsoft afin de fixer un rendez-vous de transfert de clé pour Azure RMS. Vous devez en effet vous rendre au bureau Microsoft de Redmond, Washington (États-Unis) pour transférer votre clé de locataire dans le monde de sécurité Azure RMS.
+-   **En personne :** vous devez [contacter le support Microsoft](../get-started/information-support#to-contact-microsoft-support) pour planifier un rendez-vous de transfert de clé pour Azure RMS. Vous devez en effet vous rendre au bureau Microsoft de Redmond, Washington (États-Unis) pour transférer votre clé de locataire dans le monde de sécurité Azure RMS.
 
 Pour obtenir des instructions, précisez si vous allez générer et transférer votre clé de locataire par Internet ou en personne : 
 
@@ -144,10 +144,10 @@ Maintenant que vous avez planifié et, le cas échéant, généré votre clé de
 
 3.  Gérez votre clé de locataire.
 
-    Pour plus d’informations, consultez [Opérations pour votre clé de client Azure Rights Management](../deploy-use/operations-tenant-key.md).
+    Pour plus d’informations, consultez [Opérations pour votre clé de locataire Azure Rights Management](../deploy-use/operations-tenant-key.md).
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

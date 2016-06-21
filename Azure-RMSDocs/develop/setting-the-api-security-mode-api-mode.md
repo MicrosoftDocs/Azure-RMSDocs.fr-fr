@@ -1,16 +1,26 @@
 ---
-# métadonnées requises
+# required metadata
 
-titre : Comment : définir le mode de sécurité de l’API | Description Azure RMS : choisir le mode de sécurité exécuté par votre application API de fichier.
-mots clés : auteur : bruceperlerms manager : mbaldwin ms.date : 28/04/2016 ms.topic: article ms.prod: azure ms.service: gestion des droits ms.technology: identité techgroup ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
-# métadonnées facultatives
+title: Procédure de définition du mode de sécurité de l’API | Azure RMS
+description: Choisissez le mode de sécurité qu’exécute votre application API de fichier.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
+# optional metadata
 
-#ROBOTS :
-audience : développeur
-#ms.devlang :
-ms.reviewer : shubhamp ms.suite : ems
-#ms.tgt_pltfrm :
-#ms.custom :
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
 
 ---
 

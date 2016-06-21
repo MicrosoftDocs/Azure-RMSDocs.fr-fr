@@ -34,7 +34,7 @@ Cette rubrique contient des instructions sur la configuration de test de votre a
 
 Vous pouvez réaliser le test avec Azure RMS ou un serveur RMS en cours d’exécution sur Windows Server. Nous vous suggérons de commencer votre test sur Azure RMS, puis, si votre déploiement l’exige, de procéder au test avec le serveur RMS.
 
-1. Pour réaliser le test avec Azure RMS, consultez [Comment : utiliser l’authentification ADAL](how-to-use-adal-authentication,md).
+1. Pour réaliser le test avec Azure RMS, consultez [Procédure : Utilisation de l’authentification ADAL](how-to-use-adal-authentication.md).
 2. Pour réaliser le test avec un serveur RMS, consultez [Comment : installer et configurer un serveur RMS](how-to-install-and-configure-an-rms-server.md).
 3. Voici comment installer le runtime développeur.
 

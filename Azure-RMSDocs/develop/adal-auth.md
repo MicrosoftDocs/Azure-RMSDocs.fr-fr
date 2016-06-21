@@ -29,11 +29,11 @@ ms.suite: ems
 
 Cette rubrique décrit les étapes de configuration de l’authentification Azure ADAL.
 
-## Authentification interne
+## Configuration de l’authentification Azure
 
 Vous avez besoin des éléments suivants :
 
-- Un [abonnement à Microsoft Azure](https://azure.microsoft.com/en-us/) (une version d’évaluation gratuite suffit).
+- Un [abonnement à Microsoft Azure](https://azure.microsoft.com/en-us/) (une version d’évaluation gratuite suffit). Pour plus d’informations, consultez [Inscription à RMS for Individuals](../understand-explore/rms-for-individuals-user-sign-up.md)
 - Un abonnement à Microsoft Azure Rights Management (un compte [RMS for Individuals](https://technet.microsoft.com/en-us/library/dn592127.aspx) gratuit suffit).
 
 > [!NOTE] Vérifiez auprès de votre administrateur informatique si vous avez un abonnement Microsoft Azure Rights Management et demandez-lui d’effectuer les étapes ci-dessous. Si votre organisation n’a pas d’abonnement, demandez à votre administrateur informatique d’en créer un. En outre, votre administrateur informatique doit s’abonner avec un *compte professionnel ou scolaire*, et non un *compte Microsoft* (tel que Hotmail).

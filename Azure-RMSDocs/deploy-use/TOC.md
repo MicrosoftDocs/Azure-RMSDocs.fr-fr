@@ -22,10 +22,11 @@
 ### [Installer et configurer le connecteur](install-configure-rms-connector.md)
 ### [Configurer des serveurs](configure-servers-rms-connector.md)
 #### [Paramètres du Registre](rms-connector-registry-settings.md)
+### [Surveiller le connecteur](monitor-rms-connector.md)
 ## [Vérification d’Azure RMS](verify.md)
 ## [Aide aux utilisateurs sur la protection de fichiers](help-users.md)
 ## [Journalisation et d’analyse de l’utilisation](log-analyze-usage.md)
-## [Opérations pour votre clé de client](operations-tenant-key.md)
+## [Opérations pour votre clé de locataire](operations-tenant-key.md)
 ### [Gérée par Microsoft](operations-microsoft-managed-tenant-key.md)
 ### [Gérée par le client](operations-customer-managed-tenant-key.md)
 ## [Désaffectation et désactivation](decommission-deactivate.md)
@@ -35,6 +36,6 @@
 # [Développer et personnaliser des applications](/rights-management/develop/developers-guide)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -74400,9 +74400,9 @@
       "ArchiveFileCommit": "dd8cd7f240b4d9fd897073ed48d444aec2165201",
       "ArchiveFileDateTime": "2016-06-16T13:08:15.4952982Z",
       "ArchiveException": null,
-      "BilingualFilePath": null,
-      "BilingualFileCommit": null,
-      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\configure-servers-rms-connector.d68ff3ef0c03209200c1cc55a220f53cfbd6f9bb.fr-fr.xlf",
+      "BilingualFileCommit": "5c149f6a377ecb270a5b4dc886681828a2e7a6f0",
+      "BilingualDateTime": "2016-06-21T12:56:54.4586571Z",
       "BilingualException": null
     },
     "ec5c5616f65422834bdc81a3da4040621ed75c23": {

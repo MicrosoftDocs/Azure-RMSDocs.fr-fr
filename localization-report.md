@@ -631,8 +631,8 @@
 * Archive Datetime: 2016-06-16 13:08:15
 * Handback File: [configure-servers-rms-connector.d68ff3ef0c03209200c1cc55a220f53cfbd6f9bb.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/5c149f6a377ecb270a5b4dc886681828a2e7a6f0/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/configure-servers-rms-connector.d68ff3ef0c03209200c1cc55a220f53cfbd6f9bb.fr-fr.xlf)
 * Handback Datetime: 2016-06-21 12:45:48
-* Bilingual File: [configure-servers-rms-connector.d68ff3ef0c03209200c1cc55a220f53cfbd6f9bb.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/configure-servers-rms-connector.d68ff3ef0c03209200c1cc55a220f53cfbd6f9bb.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 10:19:09
+* Bilingual File: [configure-servers-rms-connector.d68ff3ef0c03209200c1cc55a220f53cfbd6f9bb.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/5c149f6a377ecb270a5b4dc886681828a2e7a6f0/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/configure-servers-rms-connector.d68ff3ef0c03209200c1cc55a220f53cfbd6f9bb.fr-fr.xlf)
+* Bilingual Datetime: 2016-06-21 12:56:54
 * [Back to Top](#report-top)
 
 ##### <a name='d3f923cf6f140c2caa75b7b0c8ac90a42be962a715'></a> Source: [Azure-RMSDocs\deploy-use\configure-sharing-app.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/configure-sharing-app.md)

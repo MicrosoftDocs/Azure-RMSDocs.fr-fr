@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "ba897d554b30a1330157754907b92c997b4bf4b9",
-  "LastTranslatedCommit": "0ef3a209a2bb2b37059ebbd25c54dc41220a4232",
+  "LastTranslatedCommit": "e9474ee5887c3ff88e90cbaa3bb439651ff1af16",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
       "FileHash": "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a",
@@ -74388,14 +74388,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "e9474ee5887c3ff88e90cbaa3bb439651ff1af16",
+      "TargetFilePath": "Azure-RMSDocs\\deploy-use\\configure-servers-rms-connector.md",
+      "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\configure-servers-rms-connector.d68ff3ef0c03209200c1cc55a220f53cfbd6f9bb.fr-fr.xlf",
+      "HandbackFileCommit": "5c149f6a377ecb270a5b4dc886681828a2e7a6f0",
+      "HandbackDateTime": "2016-06-21T12:45:48.2915286Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-06-21T12:45:48.2915286Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\archive\\configure-servers-rms-connector.d68ff3ef0c03209200c1cc55a220f53cfbd6f9bb.fr-fr.xlf",
       "ArchiveFileCommit": "dd8cd7f240b4d9fd897073ed48d444aec2165201",
       "ArchiveFileDateTime": "2016-06-16T13:08:15.4952982Z",

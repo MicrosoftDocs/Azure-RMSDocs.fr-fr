@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "ba897d554b30a1330157754907b92c997b4bf4b9",
+  "LastProcessedCommit": "ff7d9fb177488f956a2b408aa6612d229bd2f7dd",
   "LastTranslatedCommit": "e9474ee5887c3ff88e90cbaa3bb439651ff1af16",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
@@ -76541,6 +76541,40 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.fr-fr.xlf",
       "HandoffFileCommit": "d3e27409f6434e3c6e9d29db3d0854dad3e6a51f",
       "HandoffDateTime": "2016-06-20T16:59:52.1957666Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
+    },
+    "9411fee6b29db4404a0ae430cc7ea54d4d7d47e5": {
+      "FileHash": "9411fee6b29db4404a0ae430cc7ea54d4d7d47e5",
+      "SourceFileCommit": "4b281802dd4b30727e20e22a575be611e3abf27b",
+      "SourceFilePath": "Azure-RMSDocs\\plan-design\\migrate-from-ad-rms-phase1.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "Azure-RMSDocs\\plan-design\\migrate-from-ad-rms-phase1.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.fr-fr.xlf",
+      "HandoffFileCommit": "1b996590fa98fb70271929cba409fafaf2410854",
+      "HandoffDateTime": "2016-06-21T16:58:49.936911Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,

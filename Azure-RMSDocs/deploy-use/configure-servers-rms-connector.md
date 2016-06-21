@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -83,8 +83,7 @@ Inconvénients :
 
 ---
 
-> [!IMPORTANT]
-> Dans les deux cas, vous devez installer manuellement les composants requis et configurer Exchange, SharePoint et l'infrastructure de classification des fichiers pour utiliser Rights Management.
+> [!IMPORTANT] Dans les deux cas, vous devez installer manuellement les composants requis et configurer Exchange, SharePoint et l’infrastructure de classification des fichiers pour utiliser Rights Management.
 
 Pour la plupart des organisations, une configuration automatique avec l'outil de configuration de serveur pour le connecteur Microsoft RMS constitue la meilleure option, car elle est plus efficace et fiable que la configuration manuelle.
 
@@ -92,7 +91,7 @@ Après avoir modifié la configuration de ces serveurs, vous devez les redémarr
 
 ### Utilisation de l'outil de configuration de serveur pour le connecteur Microsoft RMS
 
-1.  Si vous ne l’avez pas encore fait, téléchargez le script de l’outil de configuration de serveur pour le connecteur Microsoft RMS (GenConnectorConfig.ps1) à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
+1.  Si vous ne l'avez pas encore fait, téléchargez le script de l'outil de configuration de serveur pour le connecteur Microsoft RMS (GenConnectorConfig.ps1) à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
 
 2.  Enregistrez le fichier GenConnectorConfig.ps1 sur l'ordinateur que vous utiliserez pour exécuter l'outil. Si vous prévoyez d'exécuter l'outil localement, il doit s'agir du serveur que vous souhaitez configurer afin de communiquer avec le connecteur RMS. Sinon, vous pouvez l'enregistrer sur n'importe quel ordinateur.
 
@@ -115,8 +114,7 @@ Après avoir modifié la configuration de ces serveurs, vous devez les redémarr
 
 Pour exécuter le script, vous devez entrer l’URL du connecteur RMS pour votre organisation. Saisissez le préfixe de protocole (HTTP:// ou HTTPS://) ainsi que le nom du connecteur, tel que défini dans le système DNS pour l'adresse d'équilibrage de charge. Par exemple, https://connector.contoso.com. L'outil utilise ensuite cette URL pour contacter les serveurs qui exécutent le connecteur RMS et obtenir d'autres paramètres servant à créer les configurations requises.
 
-> [!IMPORTANT]
-> Quand vous exécutez cet outil, veillez à spécifier le nom du connecteur RMS de votre organisation faisant l'objet d'un équilibrage de charge et non celui d'un serveur unique exécutant le service de connecteur RMS.
+> [!IMPORTANT] Quand vous exécutez cet outil, spécifiez le nom du connecteur RMS à charge équilibrée de votre organisation et non celui d’un serveur unique exécutant le service de connecteur RMS.
 
 Consultez les sections suivantes pour obtenir des informations spécifiques pour chaque type de service :
 
@@ -190,8 +188,7 @@ Pour utiliser le connecteur RMS, ces serveurs SharePoint doivent exécuter l'une
 
 Un serveur SharePoint 2016 ou SharePoint 2013 doit également exécuter une version du client MSIPC 2.1 prise en charge avec le connecteur RMS. Pour vérifier que vous disposez d’une version prise en charge, téléchargez la dernière version du client à partir du [Centre de téléchargement Microsoft](http://www.microsoft.com/download/details.aspx?id=38396).
 
-> [!WARNING]
-> Étant donné qu’il existe plusieurs versions du client MSIPC 2.1, assurez-vous que vous avez la version 1.0.2004.0 ou une version ultérieure.
+> [!WARNING] Étant donné qu’il existe plusieurs versions du client MSIPC 2.1, vérifiez que vous avez la version 1.0.2004.0 ou ultérieure.
 >
 > Vous pouvez vérifier la version du client en consultant le numéro de version du fichier MSIPC.dll, situé sous **\Program Files\Active Directory Rights Management Services Client 2.1**. La boîte de dialogue Propriétés affiche le numéro de version du client MSIPC 2.1.
 
@@ -248,19 +245,13 @@ Pour utiliser le connecteur RMS et l'infrastructure de classification des fichie
 3.  Créez des règles de classification et des tâches de gestion de fichiers pour protéger les documents avec le chiffrement RMS, puis spécifiez un modèle RMS pour appliquer automatiquement des stratégies RMS. Pour plus d'informations, voir [Vue d'ensemble du Gestionnaire de ressources du serveur de fichiers](http://technet.microsoft.com/library/hh831701.aspx) dans la bibliothèque de documentation Windows Server.
 
 ## Étapes suivantes
-Maintenant que le connecteur RMS est installé et configuré et que vos serveurs sont configurés pour l'utiliser, les administrateurs informatiques et les utilisateurs peuvent protéger et utiliser la messagerie électronique et les documents à l'aide d'Azure RMS. Pour faciliter la tâche des utilisateurs, déployez l'application de partage RMS, qui installe un module complémentaire pour Office et ajoute de nouvelles options contextuelles à l'Explorateur de fichiers. Pour plus d’informations, consultez le [guide d’administration de l’application de partage Rights Management](../rms-client/sharing-app-admin-guide.md).
+Maintenant que le connecteur RMS est installé et configuré, et que vos serveurs sont configurés pour l’utiliser, les administrateurs informatiques et les utilisateurs peuvent protéger et utiliser les e-mails et les documents à l’aide d’Azure RMS. Pour faciliter la tâche des utilisateurs, déployez l'application de partage RMS, qui installe un module complémentaire pour Office et ajoute de nouvelles options contextuelles à l'Explorateur de fichiers. Pour plus d’informations, consultez le [guide d’administration de l’application de partage Rights Management](../rms-client/sharing-app-admin-guide.md).
 
-Vous pouvez également consulter les éléments suivants qui vous aideront à gérer le connecteur RMS et l’utilisation d’Azure RMS par votre organisation :
+Utilisez la [Feuille de route pour le déploiement d’Azure Rights Management](../plan-design/deployment-roadmap.md) pour déterminer si d’autres étapes de configuration peuvent s’avérer nécessaires avant de mettre [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] à la disposition des utilisateurs et des administrateurs.
 
--   Compteurs de performances intégrés au **connecteur Microsoft Rights Management**
-
--   [Outil Analyseur RMS](https://www.microsoft.com/en-us/download/details.aspx?id=46437), notamment l’option de connecteur RMS pour vous aider à surveiller l’intégrité du connecteur et à identifier les problèmes de configuration
-
--   [Journalisation et analyse de l’utilisation d’Azure Rights Management](log-analyze-usage.md)
-
-Utilisez la [Feuille de route pour le déploiement d’Azure Rights Management](../plan-design/deployment-roadmap.md) pour déterminer si d’autres étapes de configuration peuvent s’avérer nécessaires avant de mettre [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] à la disposition des utilisateurs et des administrateurs. 
+Pour surveiller le connecteur RMS, consultez [Surveiller le connecteur Azure Rights Management](monitor-rms-connector.md). 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Autres applications prenant en charge les API RMS : installation et configuration | Azure RMS
+title: "Autres applications prenant en charge les API RMS : installation et configuration | Azure RMS"
 description:
 keywords:
 author: cabailey

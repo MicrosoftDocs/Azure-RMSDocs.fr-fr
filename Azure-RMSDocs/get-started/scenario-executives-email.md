@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Scénario : échange sécurisé d’informations confidentielles entre cadres| Azure RMS
+title: "Scénario : échange sécurisé d’informations confidentielles entre cadres| Azure RMS"
 description:
 keywords:
 author: cabailey

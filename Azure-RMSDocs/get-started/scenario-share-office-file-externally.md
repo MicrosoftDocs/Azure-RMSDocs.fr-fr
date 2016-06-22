@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Scenario : partager un fichier Office avec des utilisateurs d’une autre organisation | Azure RMS
+title: "Scenario : partager un fichier Office avec des utilisateurs d’une autre organisation | Azure RMS"
 description:
 keywords:
 author: cabailey

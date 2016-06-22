@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Procédure : Débogage d’une application avec gestion des droits | Azure RMS
+title: "Procédure : Débogage d’une application avec gestion des droits | Azure RMS"
 description: La rubrique suivante indique comment déboguer une application et utiliser le journal des événements Windows.
 keywords:
 author: bruceperlerms

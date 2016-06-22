@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Procédure : obtention d’un ID d’application Azure | Azure RMS
+title: "Procédure : obtention d’un ID d’application Azure | Azure RMS"
 description: La création d’une application RMS avec Microsoft Rights Management SDK 4.2 nécessite la création d’un contrat avec l’équipe RMS.
 keywords:
 author: bruceperlerms

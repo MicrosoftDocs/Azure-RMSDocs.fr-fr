@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Comment : utiliser les droits intégrés | Azure RMS
+title: "Comment : utiliser les droits intégrés | Azure RMS"
 description: Décrit les droits intégrés fournis par RMS SDK 4.2 et les restrictions d’utilisation qu’une application doit suivre pour respecter ces droits.
 keywords:
 author: bruceperlerms

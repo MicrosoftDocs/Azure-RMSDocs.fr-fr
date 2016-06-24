@@ -77340,9 +77340,9 @@
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
       "ArchiveException": null,
-      "BilingualFilePath": null,
-      "BilingualFileCommit": null,
-      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.fr-fr.xlf",
+      "BilingualFileCommit": "df0b69b38a7d2a7a6fb304ef1391e63bc14d9613",
+      "BilingualDateTime": "2016-06-24T17:28:51.8530417Z",
       "BilingualException": null
     }
   }

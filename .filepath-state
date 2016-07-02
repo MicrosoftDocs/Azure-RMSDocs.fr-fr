@@ -140,9 +140,6 @@
   "61df64691ac3f4d7e871043767444ea64dfe1ef3": [
     "Azure-RMSDocs\\develop\\release-notes-rtm.md"
   ],
-  "c90b1d2257bcf3fd355e810e5f9654683c693454": [
-    "Azure-RMSDocs\\develop\\release-notes-rtm.md"
-  ],
   "61f70a7b4a85c0ab6f0a2732fcf9d314a230e769": [
     "Azure-RMSDocs\\develop\\tracking-content.md"
   ],
@@ -188,9 +185,6 @@
   "2b7c99e3adafde7140d7997364ec2643ba79a2ac": [
     "Azure-RMSDocs\\develop\\ad-rms-server.md"
   ],
-  "685079958d71d8c681d9150aadcbbc4bfedd15ad": [
-    "Azure-RMSDocs\\develop\\ad-rms-server.md"
-  ],
   "5d8c7ab53f76005d7efbfd2d795da08e41f83941": [
     "Azure-RMSDocs\\develop\\android-code.md"
   ],
@@ -216,9 +210,6 @@
     "Azure-RMSDocs\\develop\\application-types.md"
   ],
   "34a82f31b5da46a59627ff559deb46c8445fcdf2": [
-    "Azure-RMSDocs\\develop\\authentication-integration.md"
-  ],
-  "b6e30ce14c5eb5f387a65d7f78fbb1c3abcabd1a": [
     "Azure-RMSDocs\\develop\\authentication-integration.md"
   ],
   "4a5c1a0b420b9db20cca237e2170b6479c565ee6": [
@@ -819,9 +810,6 @@
     "Azure-RMSDocs\\develop\\android-namespaces.md"
   ],
   "9b912a2a66838dc6e6a3b227bcfe4ac589fe06c1": [
-    "Azure-RMSDocs\\develop\\adal-auth.md"
-  ],
-  "8b398b1dcd6054437e58ee4abe900d8662ab4fbf": [
     "Azure-RMSDocs\\develop\\adal-auth.md"
   ],
   "f995da0698ec5fb4a8e46865b70506ced92f73db": [

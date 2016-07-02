@@ -1,7 +1,6 @@
 ---
 asset_id: 78022852-1541-4194-bd6b-2f5fd5d94b77
 layout: HubPage
-
 title: Documentation sur Azure Rights Management
 description: Documentation technique sur Azure Rights Management
 keywords: rights management documentation, rms documentation, Azure RMS documentation
@@ -14,6 +13,10 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
+translationtype: Human Translation
+ms.sourcegitcommit: 80de3ab273c090f466fc381390d84b8f7b90f6f4
+ms.openlocfilehash: 6ba6e7b208c0b53a5cc6f38811f6845234bf7983
+
 
 ---
 # Documentation sur Azure Rights Management
@@ -222,6 +225,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
       </ol>
     </aside>
 </article>
+
 
 
 <!--HONumber=Jun16_HO4-->

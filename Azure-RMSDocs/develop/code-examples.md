@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Exemples de code | Azure RMS
-description: RMS SDK 4.2 comprend un exemple de code et des projets de travail pour certains des systèmes d’exploitation pris en charge.
-keywords:
+description: "RMS SDK 4.2 comprend un exemple de code et des projets de travail pour certains des systèmes d’exploitation pris en charge."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 634df601-79d2-4bc2-b845-4df886d7c589
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6b5bc9612ac17a2d6905200383d9b8df4c504efe
+ms.openlocfilehash: b46c9eae435dda222606e9bfe7b45b0cb4b1e821
+
 
 ---
 
@@ -49,6 +45,7 @@ Ces rubriques présentent des éléments de code importants pour la version asso
  
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

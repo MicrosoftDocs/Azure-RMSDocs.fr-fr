@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Fichiers d’environnement de développement | Azure RMS
-description: Cette rubrique présente les fichiers d’environnement de développement et leurs emplacements d’installation relatifs sur votre ordinateur.
-keywords:
+title: "Fichiers d’environnement de développement | Azure RMS"
+description: "Cette rubrique présente les fichiers d’environnement de développement et leurs emplacements d’installation relatifs sur votre ordinateur."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6b5bc9612ac17a2d6905200383d9b8df4c504efe
+ms.openlocfilehash: 3d6e7c2b40ba80988e93186fd68a12e6216b477d
+
 
 ---
 
@@ -58,6 +54,7 @@ Rights Management Services SDK 2.1 comprend les fichiers suivants, qui sont ins
  
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

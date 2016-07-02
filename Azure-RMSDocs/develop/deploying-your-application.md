@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Déploiement de votre application | Azure RMS
-description: Cette rubrique décrit les options de déploiement pour votre application avec gestion des droits.
-keywords:
+title: "Déploiement de votre application | Azure RMS"
+description: "Cette rubrique décrit les options de déploiement pour votre application avec gestion des droits."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 872bb0c20db2ef8d661d321598a2b1fe61d69316
+ms.openlocfilehash: 902721ae3e69afd144c552b8ee0a916958e80afc
+
 
 ---
 
@@ -84,7 +80,8 @@ Le client RMS 2.1 est un logiciel conçu pour vos ordinateurs clients, qui perm
 Le client RMS 2.1 n’est pas un composant du système d’exploitation Windows. Il est disponible sous la forme d’un téléchargement facultatif qui, à condition d’en accuser réception et d’accepter son contrat de licence, peut être distribué gratuitement avec votre logiciel tiers, pour permettre l’accès du client à du contenu dont les droits ont été protégés en utilisant et en déployant des serveurs RMS dans votre environnement.
 
 
-> [!IMPORTANT] AD RMS Client 2.1 est propre à l’architecture et doit correspondre à celle de votre système d’exploitation cible.
+> [!IMPORTANT]
+> AD RMS Client 2.1 est spécifique à l’architecture et doit correspondre à celle de votre système d’exploitation cible.
 
 
 ## Choix d’installation du client RMS 2.1
@@ -137,6 +134,7 @@ Pour plus d’informations sur l’activation de votre application pour utiliser
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

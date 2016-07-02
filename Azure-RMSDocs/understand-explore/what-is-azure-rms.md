@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: En quoi consiste Azure Rights Management ? | Azure RMS
-description:
-keywords:
+title: "En quoi consiste Azure Rights Management ? | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: e2de70fcbe0b284368b1e52c34f42d1cf4554edd
+ms.openlocfilehash: 6fe5759a790a728da7a16453e5b3ab5d523bb9fd
+
 
 ---
 
@@ -64,9 +58,10 @@ Si vous voulez vous plonger directement dans Azure RMS et l’essayer par vous-
 Toutefois, si vous êtes prêt à déployer Azure RMS pour votre organisation, consultez la [Feuille de route pour le déploiement d’Azure Rights Management](../plan-design/deployment-roadmap.md) pour connaître les étapes de déploiement et accéder à des liens vers des instructions.
 
 > [!TIP]
-> Pour plus d’informations et de l’aide supplémentaire, utilisez les ressources et les liens de [Informations et support technique pour Azure Rights Management](../get-started/information-support.md).
+> Pour plus d’informations et de l’aide supplémentaire, utilisez les ressources et les liens présents dans [Informations et support technique pour Azure Rights Management](../get-started/information-support.md).
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

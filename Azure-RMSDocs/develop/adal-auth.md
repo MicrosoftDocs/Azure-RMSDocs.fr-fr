@@ -1,27 +1,22 @@
 ---
-# required metadata
-
-title: Configurer Azure RMS pour l’authentification ADAL | Azure RMS
-description: Décrit les étapes de configuration de l’authentification Azure ADAL.
+title: "Configurer Azure RMS pour l’authentification ADAL | Azure RMS"
+description: "Décrit les étapes de configuration de l’authentification Azure ADAL."
 keywords: authentication, RMS, ADAL
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
-
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
+ms.openlocfilehash: 9b912a2a66838dc6e6a3b227bcfe4ac589fe06c1
+
 
 ---
 
@@ -36,7 +31,8 @@ Vous avez besoin des éléments suivants :
 - Un [abonnement à Microsoft Azure](https://azure.microsoft.com/en-us/) (une version d’évaluation gratuite suffit). Pour plus d’informations, consultez [Inscription à RMS for Individuals](../understand-explore/rms-for-individuals-user-sign-up.md)
 - Un abonnement à Microsoft Azure Rights Management (un compte [RMS for Individuals](https://technet.microsoft.com/en-us/library/dn592127.aspx) gratuit suffit).
 
-> [!NOTE] Vérifiez auprès de votre administrateur informatique si vous avez un abonnement Microsoft Azure Rights Management et demandez-lui d’effectuer les étapes ci-dessous. Si votre organisation n’a pas d’abonnement, demandez à votre administrateur informatique d’en créer un. En outre, votre administrateur informatique doit s’abonner avec un *compte professionnel ou scolaire*, et non un *compte Microsoft* (tel que Hotmail).
+> [!NOTE] 
+> Vérifiez auprès de votre administrateur informatique si vous avez un abonnement Microsoft Azure Rights Management et demandez-lui d’effectuer les étapes ci-dessous. Si votre organisation n’a pas d’abonnement, demandez à votre administrateur informatique d’en créer un. En outre, votre administrateur informatique doit s’abonner avec un *compte professionnel ou scolaire*, et non un *compte Microsoft* (tel que Hotmail).
 
 Après vous être inscrit à Microsoft Azure :
 
@@ -81,11 +77,13 @@ Après vous être inscrit à Microsoft Azure :
 
 ![Choisissez CONFIGURER](../media/ConfigYourApp.png)
 
->[!NOTE] Copiez l’**ID CLIENT** et l’**URI de redirection** et stockez-les pour une utilisation ultérieure lors de la configuration du client RMS.
+>[!NOTE] 
+> Copiez l’**ID CLIENT** et l’**URI de redirection** et stockez-les pour une utilisation ultérieure lors de la configuration du client RMS.
 
 - Accédez au bas de vos paramètres d’application et cliquez sur le bouton **Ajouter une application** sous **Autorisations pour d’autres applications**.
 
->[!NOTE] Les **autorisations déléguées** affichées pour Microsoft Azure Active Directory sont correctes par défaut : une seule option doit être sélectionnée et cette option est **Activer la connexion et lire le profil utilisateur**.
+>[!NOTE] 
+> Les **autorisations déléguées** affichées pour Microsoft Azure Active Directory sont correctes par défaut : une seule option doit être sélectionnée et cette option est **Activer la connexion et lire le profil utilisateur**.
 
 ![Sélectionnez Ajouter une application](../media/PermissionsToOtherBtn.png)
 
@@ -110,6 +108,7 @@ Après vous être inscrit à Microsoft Azure :
 ![Sélectionnez ENREGISTRER](../media/SaveApplication.png)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

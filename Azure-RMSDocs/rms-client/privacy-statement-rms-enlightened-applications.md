@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Déclaration de confidentialité de Microsoft Rights Management dans les applications compatibles avec RMS | Azure RMS
-description:
-keywords:
+title: "Déclaration de confidentialité de Microsoft Rights Management dans les applications compatibles avec RMS | Azure RMS"
+description: 
+keywords: 
 author: msmbaldwin
 manager: msmbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 751e5e05-fbe2-4769-a5df-1362c0db2108
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8e8b1dabe3ba2894bec9a87e6d34123d833c699b
+ms.openlocfilehash: 500701acb03aa9f049cc995f14e544e07556bc4f
+
 
 ---
 
@@ -29,7 +23,7 @@ ms.suite: ems
 S'applique à : Fonctionnalités de Microsoft Rights Management incorporées dans les applications
 
 > [!NOTE]
-> Cette déclaration de confidentialité est disponible dans d’autres langues dans le [Centre de téléchargement Microsoft](http://www.microsoft.com/download/details.aspx?id=41668).
+> Cette déclaration de confidentialité est disponible dans d’autres langues à partir du [Centre de téléchargement Microsoft](http://www.microsoft.com/download/details.aspx?id=41668).
 
 Microsoft s'engage à protéger votre vie privée, tout en proposant des logiciels qui offrent les performances, la puissance et la commodité que vous souhaitez pour votre activité informatique. Cette déclaration de confidentialité explique la plupart des pratiques de collecte et d’utilisation de données du logiciel ou service client Microsoft Rights Management et de tout autre produit ou service Microsoft cité dans cette notice ou lié à celle-ci.
 
@@ -53,7 +47,7 @@ Nous ne divulguons pas les informations d’identification, confirmations de lec
 Les informations collectées par Microsoft ou qui lui sont envoyées par des applications prenant en charge Microsoft Rights Management peuvent être stockées et traitées aux États-Unis et dans tout autre pays où Microsoft ou ses sociétés affiliées, filiales ou fournisseurs de services sont implantés. Microsoft agit dans le cadre de la sphère de sécurité (« Safe Harbor ») définie par le ministère américain du commerce concernant la collecte, l’utilisation et la conservation des données provenant de l’Union européenne, de la zone économique européenne et de la Suisse.
 
 ## Microsoft Update
-Lorsque vous utilisez des applications prenant en charge Microsoft Rights Management avec Windows, vous pouvez choisir de participer à Microsoft Update. Microsoft Update est un service qui fournit des mises à jour de logiciels Microsoft, notamment du client Microsoft Rights Management pour Windows. Pour plus d’informations sur les informations collectées, leur utilisation et la manière de modifier vos paramètres, consultez la [déclaration de confidentialité des services de mise à jour](http://go.microsoft.com/fwlink/?linkid=50142) ([http://go.microsoft.com/fwlink/?linkid=50142](http://go.microsoft.com/fwlink/?linkid=50142)).
+Lorsque vous utilisez des applications prenant en charge Microsoft Rights Management avec Windows, vous pouvez choisir de participer à Microsoft Update. Microsoft Update est un service qui fournit des mises à jour de logiciels Microsoft, notamment du client Microsoft Rights Management pour Windows. Pour plus d’informations sur les informations collectées, leur utilisation et la manière de modifier vos paramètres, consultez la [déclaration de confidentialité des Services de mise à jour](http://go.microsoft.com/fwlink/?linkid=50142) ([http://go.microsoft.com/fwlink/?linkid=50142](http://go.microsoft.com/fwlink/?linkid=50142)).
 
 Choix/contrôle : pour une installation sans assistance, les applications activées pour Microsoft Rights Management suivent les mêmes paramètres Microsoft Update (MU) que ceux appliqués au Bureau Windows. Pour les installations utilisateur, si Microsoft Update n’est pas activé, il se peut que vous receviez une invite lors de l’installation, vous autorisant à activer Microsoft Update. Si vous le souhaitez, ces paramètres de Microsoft Update s’appliquent à toutes les applications basées sur Windows.
 
@@ -65,6 +59,7 @@ Nous mettrons occasionnellement à jour cette déclaration de confidentialité e
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

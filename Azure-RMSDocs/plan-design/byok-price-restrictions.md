@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Tarifs et restrictions BYOK | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 34d5ed8ca9f5b4556429a081718fc70a789590aa
+
 
 ---
 
@@ -60,12 +54,13 @@ Parfois, l'exception BYOK d'Azure RMS pour Exchange Online n'est pas un problèm
 
 ## Étapes suivantes
 
-Si vous avez décidé de gérer votre propre clé, accédez à [Implémentation de la clé de locataire Azure Rights Management](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key).
+Si vous avez décidé de gérer votre propre clé, accédez à [Implémentation de votre clé de client Azure Rights Management](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key).
 
 Si vous souhaitez que Microsoft gère votre clé de client (configuration par défaut), consultez la section [Étapes suivantes](plan-implement-tenant-key.md#next-steps) de l’article Planification et implémentation de votre clé de client Azure Rights Management.
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

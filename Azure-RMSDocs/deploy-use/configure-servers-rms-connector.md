@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Configuration des serveurs pour le connecteur Azure Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 06/08/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0b07ecc88b1d2d344f0984d4a805cc033996cc4d
+ms.openlocfilehash: 79171b5931b69ca18d2a2cbe321d5d5887903da2
+
 
 ---
 
@@ -83,7 +77,8 @@ Inconvénients :
 
 ---
 
-> [!IMPORTANT] Dans les deux cas, vous devez installer manuellement les composants requis et configurer Exchange, SharePoint et l’infrastructure de classification des fichiers pour utiliser Rights Management.
+> [!IMPORTANT]
+> Dans les deux cas, vous devez installer manuellement les composants requis et configurer Exchange, SharePoint et l'infrastructure de classification des fichiers pour utiliser Rights Management.
 
 Pour la plupart des organisations, une configuration automatique avec l'outil de configuration de serveur pour le connecteur Microsoft RMS constitue la meilleure option, car elle est plus efficace et fiable que la configuration manuelle.
 
@@ -114,7 +109,8 @@ Après avoir modifié la configuration de ces serveurs, vous devez les redémarr
 
 Pour exécuter le script, vous devez entrer l’URL du connecteur RMS pour votre organisation. Saisissez le préfixe de protocole (HTTP:// ou HTTPS://) ainsi que le nom du connecteur, tel que défini dans le système DNS pour l'adresse d'équilibrage de charge. Par exemple, https://connector.contoso.com. L'outil utilise ensuite cette URL pour contacter les serveurs qui exécutent le connecteur RMS et obtenir d'autres paramètres servant à créer les configurations requises.
 
-> [!IMPORTANT] Quand vous exécutez cet outil, spécifiez le nom du connecteur RMS à charge équilibrée de votre organisation et non celui d’un serveur unique exécutant le service de connecteur RMS.
+> [!IMPORTANT]
+> Quand vous exécutez cet outil, veillez à spécifier le nom du connecteur RMS de votre organisation faisant l'objet d'un équilibrage de charge et non celui d'un serveur unique exécutant le service de connecteur RMS.
 
 Consultez les sections suivantes pour obtenir des informations spécifiques pour chaque type de service :
 
@@ -188,7 +184,8 @@ Pour utiliser le connecteur RMS, ces serveurs SharePoint doivent exécuter l'une
 
 Un serveur SharePoint 2016 ou SharePoint 2013 doit également exécuter une version du client MSIPC 2.1 prise en charge avec le connecteur RMS. Pour vérifier que vous disposez d’une version prise en charge, téléchargez la dernière version du client à partir du [Centre de téléchargement Microsoft](http://www.microsoft.com/download/details.aspx?id=38396).
 
-> [!WARNING] Étant donné qu’il existe plusieurs versions du client MSIPC 2.1, vérifiez que vous avez la version 1.0.2004.0 ou ultérieure.
+> [!WARNING]
+> Étant donné qu’il existe plusieurs versions du client MSIPC 2.1, assurez-vous que vous avez la version 1.0.2004.0 ou une version ultérieure.
 >
 > Vous pouvez vérifier la version du client en consultant le numéro de version du fichier MSIPC.dll, situé sous **\Program Files\Active Directory Rights Management Services Client 2.1**. La boîte de dialogue Propriétés affiche le numéro de version du client MSIPC 2.1.
 
@@ -252,6 +249,7 @@ Utilisez la [Feuille de route pour le déploiement d’Azure Rights Management](
 Pour surveiller le connecteur RMS, consultez [Surveiller le connecteur Azure Rights Management](monitor-rms-connector.md). 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

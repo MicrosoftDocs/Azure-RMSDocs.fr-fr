@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 95
-[ In Sync Handback Files ](#insync-handback-success-list)| 107
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 94
+[ In Sync Handback Files ](#insync-handback-success-list)| 108
 [ Ignored Files ](#ignored-list)| 67
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -246,7 +246,6 @@
  [Azure-RMSDocs\understand-explore\rms-for-individuals.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/rms-for-individuals.md) | OutofSyncHandedBackSuccess | [Details](#6a27d5a2a1bad24521a551465fd9324f2a826376385)
  [Azure-RMSDocs\understand-explore\rms-for-individuals-user-sign-up.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/rms-for-individuals-user-sign-up.md) | OutofSyncHandedBackSuccess | [Details](#19252180802c69d6e5d6bf22c71ff3bcba96fb36384)
  [Azure-RMSDocs\understand-explore\sharing-app-support.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/sharing-app-support.md) | OutofSyncHandedBackSuccess | [Details](#02f1cf60bdafe748f16d9defa1c8b0cc8a61efb0386)
- [Azure-RMSDocs\understand-explore\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ab77d92f758a8d5a68c34ba3a4bfbbfc2f35bd34/Azure-RMSDocs/understand-explore/TOC.md) | OutofSyncHandedBackSuccess | [Details](#63a685b29629c7ee120c0c925956e18b52abd1bf387)
  [Azure-RMSDocs\understand-explore\what-admins-users-see.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55/Azure-RMSDocs/understand-explore/what-admins-users-see.md) | OutofSyncHandedBackSuccess | [Details](#213d077a65abd5115b7e0491dfc9cd8145752b23389)
 
 ## <a name='insync-handback-success-list'></a> In Sync Handback File Success List
@@ -357,6 +356,7 @@
  [Azure-RMSDocs\understand-explore\how-does-it-work.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/5d825d6c8b2c8b7a9c34ac940c5a08439a9ae562/Azure-RMSDocs/understand-explore/how-does-it-work.md) | InSyncHandedBackSuccess | [Details](#505f2c94bb4fd056b4d2f51c147c6b0b84efac00380)
  [Azure-RMSDocs\understand-explore\rms-for-individuals-identify-sign-up.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/rms-for-individuals-identify-sign-up.md) | InSyncHandedBackSuccess | [Details](#e577366be26f7296079751e72fb6531b9e28c504382)
  [Azure-RMSDocs\understand-explore\rms-for-individuals-take-control.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/rms-for-individuals-take-control.md) | InSyncHandedBackSuccess | [Details](#df006a27c97884c47c9bb5fb04bfa181a13b7443383)
+ [Azure-RMSDocs\understand-explore\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ab77d92f758a8d5a68c34ba3a4bfbbfc2f35bd34/Azure-RMSDocs/understand-explore/TOC.md) | InSyncHandedBackSuccess | [Details](#63a685b29629c7ee120c0c925956e18b52abd1bf387)
  [Azure-RMSDocs\understand-explore\understand-explore.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/understand-explore.md) | InSyncHandedBackSuccess | [Details](#63635d13f95219bd900d8ecdd0ca0738c5ebca4a388)
  [Azure-RMSDocs\understand-explore\what-is-azure-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/e2de70fcbe0b284368b1e52c34f42d1cf4554edd/Azure-RMSDocs/understand-explore/what-is-azure-rms.md) | InSyncHandedBackSuccess | [Details](#6fe5759a790a728da7a16453e5b3ab5d523bb9fd390)
 
@@ -5743,15 +5743,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='63a685b29629c7ee120c0c925956e18b52abd1bf387'></a> Source: [Azure-RMSDocs\understand-explore\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ab77d92f758a8d5a68c34ba3a4bfbbfc2f35bd34/Azure-RMSDocs/understand-explore/TOC.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\understand-explore\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/305e58febc63e4ad47233a3625d6bc5aee2043ca/Azure-RMSDocs/understand-explore/TOC.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\understand-explore\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/887fe592bb9af0bf7340f6ae00912cd5aa70a585/Azure-RMSDocs/understand-explore/TOC.md)
 * Handoff File: [TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/439d5c4b71d2ec34de179aabdc2d01153369cd8d/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf)
 * Handoff Datetime: 2016-06-27 12:38:33
 * Handoff Reason: Include
 * Archive File: [TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/63ff30dc9a4ab1f2797079852874b950fe571235/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/archive/TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf)
 * Archive Datetime: 2016-07-01 23:47:50
-* Handback File: [TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf)
-* Handback Datetime: 2016-06-03 00:33:47
+* Handback File: [TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/7404dd89c52b36ab387fc6883a9a7e8cc641962f/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf)
+* Handback Datetime: 2016-07-03 01:01:01
 * Bilingual File: [TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf)
 * Bilingual Datetime: 2016-06-16 10:19:09
 * [Back to Top](#report-top)

@@ -5752,8 +5752,8 @@
 * Archive Datetime: 2016-07-01 23:47:50
 * Handback File: [TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/7404dd89c52b36ab387fc6883a9a7e8cc641962f/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf)
 * Handback Datetime: 2016-07-03 01:01:01
-* Bilingual File: [TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 10:19:09
+* Bilingual File: [TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/7404dd89c52b36ab387fc6883a9a7e8cc641962f/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf)
+* Bilingual Datetime: 2016-07-03 01:15:14
 * [Back to Top](#report-top)
 
 ##### <a name='63635d13f95219bd900d8ecdd0ca0738c5ebca4a388'></a> Source: [Azure-RMSDocs\understand-explore\understand-explore.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/understand-explore.md)

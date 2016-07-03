@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [Azure-RMSDocs\understand-explore\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ab77d92f758a8d5a68c34ba3a4bfbbfc2f35bd34/Azure-RMSDocs/understand-explore/TOC.md) | InSyncHandedBackSuccess | [Details](#63a685b29629c7ee120c0c925956e18b52abd1bf387)
 
 ## Item Details
-##### <a name='63a685b29629c7ee120c0c925956e18b52abd1bf387'></a> Source: [Azure-RMSDocs\understand-explore\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ab77d92f758a8d5a68c34ba3a4bfbbfc2f35bd34/Azure-RMSDocs/understand-explore/TOC.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\understand-explore\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/887fe592bb9af0bf7340f6ae00912cd5aa70a585/Azure-RMSDocs/understand-explore/TOC.md)
-* Handoff File: [TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/439d5c4b71d2ec34de179aabdc2d01153369cd8d/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf)
-* Handoff Datetime: 2016-06-27 12:38:33
-* Handoff Reason: Include
-* Archive File: [TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/63ff30dc9a4ab1f2797079852874b950fe571235/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/archive/TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf)
-* Archive Datetime: 2016-07-01 23:47:50
-* Handback File: [TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/7404dd89c52b36ab387fc6883a9a7e8cc641962f/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf)
-* Handback Datetime: 2016-07-03 01:01:01
-* Bilingual File: [TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/7404dd89c52b36ab387fc6883a9a7e8cc641962f/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/TOC.132273379247391752a00ca59e2585345cd61252.fr-fr.xlf)
-* Bilingual Datetime: 2016-07-03 01:15:14
-* [Back to Top](#report-top)
-
 
 ## Error Details
 

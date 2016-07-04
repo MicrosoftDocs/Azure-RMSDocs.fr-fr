@@ -54810,8 +54810,8 @@
       "ArchiveFileDateTime": "2016-07-01T23:47:50.960514Z",
       "ArchiveException": null,
       "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.fr-fr.xlf",
-      "BilingualFileCommit": "90a5cfec1410fca9706ef28d1fa0e226dc1687d3",
-      "BilingualDateTime": "2016-06-16T10:19:09.1517761Z",
+      "BilingualFileCommit": "2dceb057d382b5bb00df57b7980d58f2d2a76910",
+      "BilingualDateTime": "2016-07-04T10:32:40.0515438Z",
       "BilingualException": null
     },
     "2f7554efa3de9dd3a080888f6cbfee972a8bdfc0": {
@@ -80782,9 +80782,9 @@
       "ArchiveFileCommit": "63ff30dc9a4ab1f2797079852874b950fe571235",
       "ArchiveFileDateTime": "2016-07-01T23:47:50.960514Z",
       "ArchiveException": null,
-      "BilingualFilePath": null,
-      "BilingualFileCommit": null,
-      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\file-api-configuration.51543907e5649e6afb362830a5c98c35082f651a.fr-fr.xlf",
+      "BilingualFileCommit": "2dceb057d382b5bb00df57b7980d58f2d2a76910",
+      "BilingualDateTime": "2016-07-04T10:32:40.0515438Z",
       "BilingualException": null
     },
     "db1817835963d49e1f3608489a7a7f730ff60bd9": {

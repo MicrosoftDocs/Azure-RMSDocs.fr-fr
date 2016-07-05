@@ -1,46 +1,11 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [Azure-RMSDocs\deploy-use\activate-office365-preview.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6eae63c629ae7cfe2175a655eb4901c1707c0f1d/Azure-RMSDocs/deploy-use/activate-office365-preview.md) | OutofSyncHandedBackSuccess | [Details](#1ac96ddb1569483236c4dc61f7bc38c99d43ead27)
- [Azure-RMSDocs\develop\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/index.md) | OutofSyncHandedBackSuccess | [Details](#6f8a475907347e545eb3ea46fecc04013fa74c5e76)
 
 ## Item Details
-##### <a name='1ac96ddb1569483236c4dc61f7bc38c99d43ead27'></a> Source: [Azure-RMSDocs\deploy-use\activate-office365-preview.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6eae63c629ae7cfe2175a655eb4901c1707c0f1d/Azure-RMSDocs/deploy-use/activate-office365-preview.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [activate-office365-preview.7708e9e45db9b812160efac75f1066e22858608f.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/e0f6bd8012a752e3786cf0a6ebd498846053cd4c/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/activate-office365-preview.7708e9e45db9b812160efac75f1066e22858608f.fr-fr.xlf)
-* Handoff Datetime: 2016-07-04 01:20:35
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\deploy-use\activate-office365-preview.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/305e58febc63e4ad47233a3625d6bc5aee2043ca/Azure-RMSDocs/deploy-use/activate-office365-preview.md)
-* Current Handback File: [activate-office365-preview.7708e9e45db9b812160efac75f1066e22858608f.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/activate-office365-preview.7708e9e45db9b812160efac75f1066e22858608f.fr-fr.xlf)
-* Current Handback Datetime: 2016-06-03 00:33:47
-* Bilingual File: [activate-office365-preview.7708e9e45db9b812160efac75f1066e22858608f.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/activate-office365-preview.7708e9e45db9b812160efac75f1066e22858608f.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 10:19:09
-* [Back to Top](#report-top)
-
-##### <a name='6f8a475907347e545eb3ea46fecc04013fa74c5e76'></a> Source: [Azure-RMSDocs\develop\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/index.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\develop\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/0141486b3bd73e085a8a05bb29d7cd0c0c17469e/Azure-RMSDocs/develop/index.md)
-* Handoff File: [index.a61cb583487d493a2f466b67dabd23a946990ed9.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/e0f6bd8012a752e3786cf0a6ebd498846053cd4c/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/index.a61cb583487d493a2f466b67dabd23a946990ed9.fr-fr.xlf)
-* Handoff Datetime: 2016-07-04 01:20:35
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [index.a61cb583487d493a2f466b67dabd23a946990ed9.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/5a5a20417259e98e893866173b2e21ab9d4cd355/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/index.a61cb583487d493a2f466b67dabd23a946990ed9.fr-fr.xlf)
-* Handback Datetime: 2016-07-02 05:30:54
-* Bilingual File: [index.a61cb583487d493a2f466b67dabd23a946990ed9.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/5a5a20417259e98e893866173b2e21ab9d4cd355/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/index.a61cb583487d493a2f466b67dabd23a946990ed9.fr-fr.xlf)
-* Bilingual Datetime: 2016-07-02 05:40:52
-* [Back to Top](#report-top)
-
 
 ## Error Details
 

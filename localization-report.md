@@ -1346,7 +1346,7 @@
 * Archive File: [enabling-logging.a8e488d730a63b56be19bf9f232887922dcc32bd.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/63ff30dc9a4ab1f2797079852874b950fe571235/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/archive/enabling-logging.a8e488d730a63b56be19bf9f232887922dcc32bd.fr-fr.xlf)
 * Archive Datetime: 2016-07-01 23:47:50
 * Handback File: [enabling-logging.a8e488d730a63b56be19bf9f232887922dcc32bd.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/0381bf11bd6c0878c840de0748b8496cb0947757/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/enabling-logging.a8e488d730a63b56be19bf9f232887922dcc32bd.fr-fr.xlf)
-* Handback Datetime: 2016-07-07 19:02:04
+* Handback Datetime: 2016-07-07 19:45:27
 * Handback Error: [handback_transform_failed](#5faea360de8aa9ecb82abf25b5c1392d52d0afad62handback_transform_failed)
 * Bilingual File: [enabling-logging.a8e488d730a63b56be19bf9f232887922dcc32bd.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/0381bf11bd6c0878c840de0748b8496cb0947757/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/enabling-logging.a8e488d730a63b56be19bf9f232887922dcc32bd.fr-fr.xlf)
 * Bilingual Datetime: 2016-06-22 12:23:57

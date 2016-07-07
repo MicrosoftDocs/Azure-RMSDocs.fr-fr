@@ -173,9 +173,6 @@
   "24322775b689ad0508979853fd06b2d33fc33cc1": [
     "Azure-RMSDocs\\develop\\ad-rms-client.md"
   ],
-  "85613d5444bcba3c0d3f1dc808fa16f5a84c7e6d": [
-    "Azure-RMSDocs\\develop\\ad-rms-client.md"
-  ],
   "37f3bc2308caaa8fd5e5c7fc8c56b6dc4d076b97": [
     "Azure-RMSDocs\\develop\\ad-rms-overview.md"
   ],
@@ -297,9 +294,6 @@
     "Azure-RMSDocs\\develop\\ios-os-x-code-examples.md"
   ],
   "821fe1c361dc38b1e33ac66208122de165d02020": [
-    "Azure-RMSDocs\\develop\\ios-sdk.md"
-  ],
-  "398ee56037136a74a441cb1ef3291fdfc3c1eb01": [
     "Azure-RMSDocs\\develop\\ios-sdk.md"
   ],
   "1695dc0db8940423fc85484d18e9a80868911e6f": [
@@ -668,9 +662,6 @@
   "b33839ff5ce0d30082f58ff96eb81215b716e46d": [
     "Azure-RMSDocs\\plan-design\\migrate-from-ad-rms-to-azure-rms.md"
   ],
-  "6544421afc1291f5fc7d99ecad71146f0cb4bb1d": [
-    "Azure-RMSDocs\\plan-design\\migrate-from-ad-rms-to-azure-rms.md"
-  ],
   "7b531ebba1923653cb37c70a02fa888a40e96528": [
     "Azure-RMSDocs\\plan-design\\migrate-hsmkey-to-hsmkey.md"
   ],
@@ -690,9 +681,6 @@
     "Azure-RMSDocs\\plan-design\\migrate-softwarekey-to-hsmkey.md"
   ],
   "a739da3fbebc8dfa4c6715fd64ccd72f87d2a686": [
-    "Azure-RMSDocs\\plan-design\\migrate-softwarekey-to-softwarekey.md"
-  ],
-  "a38b93a3a32cc9f1b217fa8ae3df79977473ddb3": [
     "Azure-RMSDocs\\plan-design\\migrate-softwarekey-to-softwarekey.md"
   ],
   "aa482dace1086222f63e9165e3089051b5de3e8c": [

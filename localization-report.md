@@ -366,7 +366,7 @@
  ----------- | ------ | ------- 
  [.gitignore](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a721551274f50639e503aaf8263c5ba20edfe974/.gitignore) | Ignored | [Details](#7c4de7495fb4bb76bd8b9102a4ab583ce46e5cad0)
  [.gitmodules](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a721551274f50639e503aaf8263c5ba20edfe974/.gitmodules) | Ignored | [Details](#b5e754a6683e0f9fa53c3b3d2c3bcde35ee782311)
- [.localization-config](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a721551274f50639e503aaf8263c5ba20edfe974/.localization-config) | Ignored | [Details](#fd984d8d954f4edf36e677a5bbe151ef25aa35f02)
+ [.localization-config](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a721551274f50639e503aaf8263c5ba20edfe974/.localization-config) | Ignored | [Details](#29b6d01355ac983f2df766e7ab506f05649f9ac32)
  [.openpublishing.build.ps1](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a721551274f50639e503aaf8263c5ba20edfe974/.openpublishing.build.ps1) | Ignored | [Details](#9103b6933f2481864ecb6a66b76ba730e7f133b43)
  [.openpublishing.publish.config.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a721551274f50639e503aaf8263c5ba20edfe974/.openpublishing.publish.config.json) | Ignored | [Details](#0f39cf0b5df23c1e18292cdce1860c2f20347f2c4)
  [Azure-RMSDocs\deploy-use\docfx.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a721551274f50639e503aaf8263c5ba20edfe974/Azure-RMSDocs/deploy-use/docfx.json) | Ignored | [Details](#52f40bd51698b95ba5f62c1d054f2b8b2f94969d24)
@@ -457,7 +457,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='fd984d8d954f4edf36e677a5bbe151ef25aa35f02'></a> Source: [.localization-config](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a721551274f50639e503aaf8263c5ba20edfe974/.localization-config)
+##### <a name='29b6d01355ac983f2df766e7ab506f05649f9ac32'></a> Source: [.localization-config](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a721551274f50639e503aaf8263c5ba20edfe974/.localization-config)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -1346,7 +1346,7 @@
 * Archive File: [enabling-logging.a8e488d730a63b56be19bf9f232887922dcc32bd.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/63ff30dc9a4ab1f2797079852874b950fe571235/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/archive/enabling-logging.a8e488d730a63b56be19bf9f232887922dcc32bd.fr-fr.xlf)
 * Archive Datetime: 2016-07-01 23:47:50
 * Handback File: [enabling-logging.a8e488d730a63b56be19bf9f232887922dcc32bd.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/0381bf11bd6c0878c840de0748b8496cb0947757/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/enabling-logging.a8e488d730a63b56be19bf9f232887922dcc32bd.fr-fr.xlf)
-* Handback Datetime: 2016-07-07 21:52:53
+* Handback Datetime: 2016-07-08 04:27:25
 * Handback Error: [handback_transform_failed](#5faea360de8aa9ecb82abf25b5c1392d52d0afad62handback_transform_failed)
 * Bilingual File: [enabling-logging.a8e488d730a63b56be19bf9f232887922dcc32bd.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/0381bf11bd6c0878c840de0748b8496cb0947757/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/enabling-logging.a8e488d730a63b56be19bf9f232887922dcc32bd.fr-fr.xlf)
 * Bilingual Datetime: 2016-06-22 12:23:57

@@ -13,6 +13,7 @@ ms.assetid: F7145090-C2EB-405A-A4CF-0240D57A36DA
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
 ms.openlocfilehash: 24322775b689ad0508979853fd06b2d33fc33cc1
 
@@ -42,6 +43,6 @@ Pour plus d’informations, consultez la [documentation TechNet sur le client RM
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -13,6 +13,7 @@ ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
 ms.openlocfilehash: 6f8a475907347e545eb3ea46fecc04013fa74c5e
 
@@ -51,6 +52,6 @@ Cette collection d’exemples de code RMS fournis par Microsoft et d’outils de
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

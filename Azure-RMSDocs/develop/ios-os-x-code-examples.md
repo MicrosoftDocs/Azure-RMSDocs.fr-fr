@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: acc140931b5f834ce1d70c851d90c334a03010dc
-ms.openlocfilehash: 0c5ec8da79674d2023a0684fb0e83ac1e1743874
+ms.sourcegitcommit: b73c83b91a6b00e44ff6c8fe7f8e954bd9713e34
+ms.openlocfilehash: 66bb1b58cba19d0fe8bc2ec0d3720c0b040f8378
 
 
 ---
@@ -36,9 +36,9 @@ Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un ex
 ###Scénario : Consommer un fichier protégé RMS
 
 
-- **Étape 1** : Créer un objet [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd)
+- **Étape 1** : Créer un objet [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotecteddata)
 
- **Description** : Instancier un objet [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) par le biais de sa méthode de création qui implémente l’authentification de service à l’aide de [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) pour obtenir un jeton en passant une instance de **MSAuthenticationCallback**, comme paramètre *authenticationCallback*, à l’API MSIPC. Consultez l’appel à [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) dans la section d’exemple de code suivante.
+ **Description** : Instancier un objet [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotecteddata) par le biais de sa méthode de création qui implémente l’authentification de service à l’aide de [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) pour obtenir un jeton en passant une instance de **MSAuthenticationCallback**, comme paramètre *authenticationCallback*, à l’API MSIPC. Consultez l’appel à [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) dans la section d’exemple de code suivante.
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -285,6 +285,6 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [**MSTemp
  
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

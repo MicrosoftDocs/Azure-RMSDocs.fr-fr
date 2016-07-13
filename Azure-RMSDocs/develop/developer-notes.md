@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Guide et informations pour développeurs | Azure RMS
-description: Cette rubrique traite de recommandations propres à différents scénarios de développement importants.
-keywords:
+title: "Guide et informations pour développeurs | Azure RMS"
+description: "Cette rubrique traite de recommandations propres à différents scénarios de développement importants."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 5A9F04FD-0FCD-482F-8671-36FE93B783B0
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 91d16ec6e9f9bb359a76562dee7fcb81aac2b44d
+ms.openlocfilehash: 2f2323f32327324611df2b2e8a8824e6896546aa
+
 
 ---
 
@@ -51,6 +47,7 @@ Cette section traite de recommandations spécifiques pour plusieurs scénarios d
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

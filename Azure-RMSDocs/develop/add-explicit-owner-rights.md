@@ -1,26 +1,22 @@
 ---
-# required metadata
-
-title: Procédure d’ajout des droits de propriétaire explicites | Azure RMS
-description: Votre application doit ajouter explicitement les droits « Propriétaire » lors de la création d’une licence à partir de rien.
-keywords:
+title: "Procédure d’ajout des droits de propriétaire explicites | Azure RMS"
+description: "Votre application doit ajouter explicitement les droits « Propriétaire » lors de la création d’une licence à partir de rien."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
+ms.openlocfilehash: b4eec28ef5e0a44c5c60f88558b6168bce9718b2
+
 
 ---
 
@@ -32,7 +28,8 @@ Votre application doit ajouter explicitement les droits « Propriétaire » lo
 
 Quand votre application crée un handle de licence en utilisant [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch), elle doit également accorder explicitement les droits (autorisations) complets de propriétaire.
 
->[!NOTE] La définition d’un utilisateur comme « propriétaire » en utilisant [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) avec la propriété **IPC\_LI\_OWNER** n’accorde pas toutes les autorisations de propriétaire.
+>[!NOTE] 
+> La définition d’un utilisateur comme « propriétaire » en utilisant [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) avec la propriété **IPC\_LI\_OWNER** n’accorde pas toutes les autorisations de propriétaire.
 
 L’exemple de code suivant représente uniquement les étapes de création et d’ajout des droits spécifiques à une licence donnée.
 
@@ -118,6 +115,7 @@ Les deux droits suivants sont ajoutés à ces utilisateurs :
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

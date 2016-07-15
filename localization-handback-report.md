@@ -18,7 +18,7 @@
 * Archive File: [requirements-client-devices.5c627bcec9b9abb2c589eb2e15b8e9c1036fb2f2.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/63ff30dc9a4ab1f2797079852874b950fe571235/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/archive/requirements-client-devices.5c627bcec9b9abb2c589eb2e15b8e9c1036fb2f2.fr-fr.xlf)
 * Archive Datetime: 2016-07-01 23:47:50
 * Handback File: [requirements-client-devices.5c627bcec9b9abb2c589eb2e15b8e9c1036fb2f2.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/0381bf11bd6c0878c840de0748b8496cb0947757/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/requirements-client-devices.5c627bcec9b9abb2c589eb2e15b8e9c1036fb2f2.fr-fr.xlf)
-* Handback Datetime: 2016-07-15 11:22:26
+* Handback Datetime: 2016-07-15 13:25:42
 * Handback Error: [handback_transform_failed](#933394c943763b010ac707384918eff86ea33388108handback_transform_failed)
 * Bilingual File: [requirements-client-devices.5c627bcec9b9abb2c589eb2e15b8e9c1036fb2f2.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/0381bf11bd6c0878c840de0748b8496cb0947757/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/requirements-client-devices.5c627bcec9b9abb2c589eb2e15b8e9c1036fb2f2.fr-fr.xlf)
 * Bilingual Datetime: 2016-06-22 12:23:57

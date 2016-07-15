@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Générer et transférer votre clé de locataire via Internet | Azure RMS
-description:
-keywords:
+title: "Générer et transférer votre clé de locataire via Internet | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
+ms.openlocfilehash: 20cfa722f7008c52f4fbc219a4de04c50ee3548d
+
 
 ---
 
@@ -48,7 +42,7 @@ Pour préparer le poste de travail connecté à Internet, suivez ces 3 étapes :
 > [!NOTE]
 > Si vous avez déjà téléchargé ce module Windows PowerShell, exécutez la commande suivante pour vérifier que le numéro de votre version est au minimum 2.1.0.0 : `(Get-Module aadrm -ListAvailable).Version`
 
-Pour obtenir des instructions d’installation, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md).
+Pour des instructions d’installation, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md).
 
 ### Étape 2 : obtention de l'ID de locataire Azure Active Directory
 Lancez Windows PowerShell avec l'option **Exécuter en tant qu'administrateur** , puis exécutez les commandes suivantes :
@@ -89,11 +83,11 @@ L'ensemble d'outils inclut les éléments suivants :
 
 -   Un package Security World dont le nom commence par **BYOK-SecurityWorld-pkg-**.
 
--   Un script Python nommé **verifykeypackage.py**.
+-   un script Python nommé **verifykeypackage.py**;
 
--   Un fichier exécutable en ligne de commande nommé **KeyTransferRemote.exe**, un fichier de métadonnées nommé **KeyTransferRemote.exe.config** et les fichiers DLL associés
+-   Un fichier exécutable en ligne de commande nommé **KeyTransferRemote.exe**, un fichier de métadonnées nommé **KeyTransferRemote.exe.config** et les fichiers DLL associés.
 
--   Un package Visual C++ redistribuable nommé **vcredist_x64.exe**.
+-   Un package Visual C++ Redistribuable, nommé **vcredist_x64.exe**.
 
 Copiez le package sur une clé USB ou un autre support de stockage portable.
 
@@ -112,7 +106,7 @@ Vérifiez que les outils Thales se trouvent dans votre chemin **(%nfast_home%\bi
 ```
 set PATH=%PATH%;”%nfast_home%\bin”;”%nfast_home%\python\bin”
 ```
-Pour plus d’informations, consultez le guide d’utilisation fourni avec le module de sécurité matériel Thales, ou accédez au site web de Thales pour Azure RMS à l’adresse [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
+Pour plus d'informations, reportez-vous au guide d'utilisation inclus avec le module de sécurité matériel Thales, ou visitez le site Web de Thales pour Azure RMS à l'adresse [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
 
 ### Étape 2 : installation de l'ensemble d'outils BYOK sur le poste de travail déconnecté
 Copiez le package de l'ensemble d'outils BYOK à partir de la clé USB ou du support de stockage portable utilisé, puis procédez comme suit :
@@ -188,7 +182,7 @@ Cette étape est facultative mais recommandée, pour vous permettre de vérifier
 
 2.  Vérifiez que les éléments suivants s'affichent. Ils indiquent une validation réussie : **Résultat :  SUCCESS**
 
-Ce script valide la chaîne de signataire jusqu'à la clé racine Thales. Le hachage de cette clé racine est incorporé dans le script. Sa valeur doit être **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**. Vous pouvez également confirmer cette valeur séparément en accédant au [site web de Thales](http://www.thalesesec.com/).
+Ce script valide la chaîne de signataire jusqu'à la clé racine Thales. Le hachage de cette clé racine est incorporé dans le script. Sa valeur doit être **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**. Vous pouvez également confirmer cette valeur séparément via le [site web de Thales](http://www.thalesesec.com/).
 
 Vous pouvez à présent créer une clé qui sera votre clé de locataire RMS.
 
@@ -269,7 +263,7 @@ Procédez comme suit pour réduire les autorisations pour la clé de locataire :
         KeyTransferRemote.exe -ModifyAcls -KeyAppName simple -KeyIdentifier contosokey -ExchangeKeyPackage BYOK-KEK-pkg-AP-1 -NewSecurityWorldPackage BYOK-SecurityWorld-pkg-AP-1
         ```
 
-Lors de l’exécution de cette commande, remplacez *contosokey* par la même valeur que celle spécifiée à l’[Étape 1 : création d’un monde de sécurité](##step-1-create-a-security-world) de la section *Génération de votre clé de locataire*.
+Quand vous exécutez cette commande, remplacez *contosokey* par la même valeur que celle spécifiée à l’[Étape 1 : Création d’un monde de sécurité](#step-1-create-a-security-world) de la section *Génération de votre clé de locataire*.
 
 Vous serez invité à connecter vos cartes ACS de monde de sécurité et, le cas échéant, leur mot de passe ou code confidentiel.
 
@@ -290,7 +284,7 @@ Vous pouvez exécuter les utilitaires Thales pour confirmer les autorisations mi
     "%nfast_home%\bin\kmfile-dump.exe" "%NFAST_KMDATA%\local\key_xferacld_contosokey"
     ```
 
-Lors de l’exécution de cette commande, remplacez *contosokey* par la même valeur que celle spécifiée à l’[Étape 1 : création d’un monde de sécurité](##step-1-create-a-security-world) de la section *Génération de votre clé de locataire*.
+Quand vous exécutez cette commande, remplacez *contosokey* par la même valeur que celle spécifiée à l’[Étape 1 : Création d’un monde de sécurité](#step-1-create-a-security-world) de la section *Génération de votre clé de locataire*.
 
 ### Étape 3 : Chiffrer votre clé à l'aide de la clé d'échange de clés Microsoft
 Exécutez l'une des commandes suivantes, selon votre région :
@@ -315,7 +309,7 @@ Exécutez l'une des commandes suivantes, selon votre région :
 
 Tenez compte des instructions suivantes pour l'exécution de cette commande :
 
--   Remplacez *contosokey* par l’identificateur que vous avez utilisé pour générer la clé à l’[Étape 1 : création d’un monde de sécurité](##step-1-create-a-security-world) de la section *Génération de votre clé de locataire*.
+-   Remplacez *contosokey* par l’identificateur que vous avez utilisé pour générer la clé à l’[Étape 1 : Création d’un monde de sécurité](#step-1-create-a-security-world) de la section *Génération de votre clé de locataire*.
 
 -   Remplacez *GUID* par l’ID de locataire Azure Active Directory que vous avez récupéré à l’[Étape 2 : obtention de votre ID de locataire Azure Active Directory](#step-2-get-your-azure-active-directory-tenant-id) de la section *Préparation du poste de travail connecté à Internet*.
 
@@ -383,6 +377,7 @@ Vous avez à présent effectué toutes les étapes requises pour la solution BYO
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -203,9 +203,6 @@
   "5d8c7ab53f76005d7efbfd2d795da08e41f83941": [
     "Azure-RMSDocs\\develop\\android-code.md"
   ],
-  "acd0692102c43baff0a92360e0ddbe1259ad9b4f": [
-    "Azure-RMSDocs\\develop\\android-code.md"
-  ],
   "30fad88ff664e2df935c8f2cfd28f8b1fe251f67": [
     "Azure-RMSDocs\\develop\\android-sdk.md"
   ],
@@ -491,15 +488,6 @@
   "feb41356a2ef074679e60ce4bb7b1d6ee910371c": [
     "Azure-RMSDocs\\deploy-use\\operations-microsoft-managed-tenant-key.md"
   ],
-  "4126bc6373f02bdc66206d9d88de43268387d6cf": [
-    "Azure-RMSDocs\\deploy-use\\operations-microsoft-managed-tenant-key.md"
-  ],
-  "630e2cb72166906340bc3a4d9df1e6c1030038a4": [
-    "Azure-RMSDocs\\deploy-use\\operations-microsoft-managed-tenant-key.md"
-  ],
-  "c221a7116250cceabcf6484b5b9348141af1346b": [
-    "Azure-RMSDocs\\deploy-use\\operations-microsoft-managed-tenant-key.md"
-  ],
   "44408fd8f9da73d8050e0938aa1cc9bc76688bed": [
     "Azure-RMSDocs\\deploy-use\\operations-tenant-key.md"
   ],
@@ -626,12 +614,6 @@
   "20cfa722f7008c52f4fbc219a4de04c50ee3548d": [
     "Azure-RMSDocs\\plan-design\\generate-tenant-key-internet.md"
   ],
-  "96b1554b2bdd292d1fc5ba00bb1e9d755049b7b7": [
-    "Azure-RMSDocs\\plan-design\\generate-tenant-key-internet.md"
-  ],
-  "f4552994fb8f83120dcadd157cddb150387a169a": [
-    "Azure-RMSDocs\\plan-design\\generate-tenant-key-internet.md"
-  ],
   "defe008a9b78026ccac584bb06762228456a2916": [
     "Azure-RMSDocs\\plan-design\\migrate-from-ad-rms-phase1.md"
   ],
@@ -684,12 +666,6 @@
     "Azure-RMSDocs\\plan-design\\migrate-hsmkey-to-hsmkey.md"
   ],
   "173641b9dada2673b48a1c210419cb933cdd9f13": [
-    "Azure-RMSDocs\\plan-design\\migrate-softwarekey-to-hsmkey.md"
-  ],
-  "7ed5d71d6c1c85ccb0f60d8a4471f3923a8c9bc8": [
-    "Azure-RMSDocs\\plan-design\\migrate-softwarekey-to-hsmkey.md"
-  ],
-  "78c301287ff0b54c193f0657c9490289a54d26b9": [
     "Azure-RMSDocs\\plan-design\\migrate-softwarekey-to-hsmkey.md"
   ],
   "a739da3fbebc8dfa4c6715fd64ccd72f87d2a686": [
@@ -807,9 +783,6 @@
     "Azure-RMSDocs\\understand-explore\\file-server-support.md"
   ],
   "affb37cc3b991609f5de51370485b10fed932421": [
-    "Azure-RMSDocs\\understand-explore\\office-apps-services-support.md"
-  ],
-  "c6c0e2e3afa416f343f23613db4b3ca228426c01": [
     "Azure-RMSDocs\\understand-explore\\office-apps-services-support.md"
   ],
   "6a27d5a2a1bad24521a551465fd9324f2a826376": [

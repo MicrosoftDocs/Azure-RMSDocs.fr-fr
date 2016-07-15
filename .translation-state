@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "ad2db39bf8ffabcc75f15cc8369ab78c9a5967ac",
-  "LastTranslatedCommit": "13b2279b139837c304baabe54f7b6682b355f3bb",
+  "LastTranslatedCommit": "84559c3b19f9830438e9e83f96cbc9589d32709c",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
       "FileHash": "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a",
@@ -72624,7 +72624,7 @@
       "TargetFilePath": "Azure-RMSDocs\\get-started\\scenario-sharepoint.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\scenario-sharepoint.9134cf463728bc5a6a16c0424ba906e7747bff3b.fr-fr.xlf",
       "HandbackFileCommit": "0381bf11bd6c0878c840de0748b8496cb0947757",
-      "HandbackDateTime": "2016-07-15T17:39:01.6880381Z",
+      "HandbackDateTime": "2016-07-15T19:22:41.3726024Z",
       "HandbackException": {
         "internal_error_code": "handback_transform_failed",
         "internal_error_message": "Handback file: C:\\ol\\master\\EM.handback\\06462f\\ol-handback\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\scenario-sharepoint.9134cf463728bc5a6a16c0424ba906e7747bff3b.fr-fr.xlf failed.",
@@ -72634,7 +72634,7 @@
         "stack_trace": "   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406",
         "extended_information": null
       },
-      "HandbackFailureTimes": 4,
+      "HandbackFailureTimes": 5,
       "UpdatedDateTime": "2016-06-22T12:13:09.8768795Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.fr-fr\\master\\archive\\scenario-sharepoint.9134cf463728bc5a6a16c0424ba906e7747bff3b.fr-fr.xlf",
       "ArchiveFileCommit": "63ff30dc9a4ab1f2797079852874b950fe571235",

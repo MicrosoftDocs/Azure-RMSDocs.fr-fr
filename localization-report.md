@@ -5,13 +5,13 @@
  -------- | ----- 
  Total Files | 413
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 133
+[ Handoff Success Files ](#handoff-success-list)| 132
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 1
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 73
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 72
 [ In Sync Handback Files ](#insync-handback-success-list)| 127
-[ Ignored Files ](#ignored-list)| 79
+[ Ignored Files ](#ignored-list)| 81
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -23,7 +23,6 @@
  [Azure-RMSDocs\information-protection\infoprotect-tutorial-step1.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/78f0f07271414fb646f996e7273343f2abf8852b/Azure-RMSDocs/information-protection/infoprotect-tutorial-step1.md) | HandedOffSuccess | [Details](#633b24d0c23cbbee88a2647aaa9defe376ccb40e156)
  [Azure-RMSDocs\information-protection\infoprotect-tutorial-step2.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/e96aad3494ce8a87c492df2e77135a350e9ffce5/Azure-RMSDocs/information-protection/infoprotect-tutorial-step2.md) | HandedOffSuccess | [Details](#224b7ee1570ba0aa71f587aee84336e4ae8f650d157)
  [Azure-RMSDocs\information-protection\infoprotect-tutorial-step3.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/7f85c673cd1e8055d6a27dcc49b5da18a7e12f98/Azure-RMSDocs/information-protection/infoprotect-tutorial-step3.md) | HandedOffSuccess | [Details](#41ebf56c55d94e9aecf9538d474c8fa2c77ae83e158)
- [Azure-RMSDocs\information-protection\infoprotect-tutorial-step4.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/e2a0ac3fb5653d5260bbd2b3bf572386596b94e0/Azure-RMSDocs/information-protection/infoprotect-tutorial-step4.md) | HandedOffSuccess | [Details](#97d49fc476f2a7a0d9303fd27441d5fe7338fb49159)
  [Azure-RMSDocs\information-protection\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/7e7394fe59d322f6f98907ce70f92f2a0227278e/Azure-RMSDocs/information-protection/TOC.md) | HandedOffSuccess | [Details](#3e1343d5ef022566a6b9adb62ddfb3a8957781c5160)
  [Azure-RMSDocs\information-protection\what-is-information-protection.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0db303b01361b3220c2e9334f84594ac86c5b069/Azure-RMSDocs/information-protection/what-is-information-protection.md) | HandedOffSuccess | [Details](#bfb56fd4994a358d366d94b40f6c5fc889330303161)
  [Azure-RMSDocs\media\150x150.png](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a0f71b3579480945087ffdea1b323da129da1de5/Azure-RMSDocs/media/150x150.png) | HandedOffSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71163)
@@ -196,7 +195,6 @@
  [Azure-RMSDocs\get-started\faqs.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/e89c59716eef7fbdea415b41b1adfa54b0c16689/Azure-RMSDocs/get-started/faqs.md) | OutofSyncHandedBackSuccess | [Details](#bd53b73452f444ac8529a8b8b613e76d8cc234a1100)
  [Azure-RMSDocs\get-started\information-support.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6052afabe4894f8129e9eebc93705b219e6ed875/Azure-RMSDocs/get-started/information-support.md) | OutofSyncHandedBackSuccess | [Details](#a8f5852d965abe2f2654aa236bfd9ea49a62aa84102)
  [Azure-RMSDocs\get-started\requirements-applications.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bb152f428c8e0b9a065035aaad2de6353265a562/Azure-RMSDocs/get-started/requirements-applications.md) | OutofSyncHandedBackSuccess | [Details](#61d18747011435773e16b3c8d2a8ac2104997484105)
- [Azure-RMSDocs\get-started\requirements-azure-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/50ebcd71336baeb68687e2d0c1ff1f0608925761/Azure-RMSDocs/get-started/requirements-azure-rms.md) | OutofSyncHandedBackSuccess | [Details](#72a75712da9efa201865440affa80461dcd7df53107)
  [Azure-RMSDocs\get-started\terminology.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0e9551db57cc1295f20368535267ca5a901ae9f2/Azure-RMSDocs/get-started/terminology.md) | OutofSyncHandedBackSuccess | [Details](#a95b9679578f6786bd883884cd5c5f84cb6db739118)
  [Azure-RMSDocs\get-started\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/127ca88d4ea2d796febf09db207a0075c85d7a8d/Azure-RMSDocs/get-started/TOC.md) | OutofSyncHandedBackSuccess | [Details](#7f5c6009327ffc8cdd31cd4342f9b282e0ac871a119)
  [Azure-RMSDocs\get-started\tutorial-step1.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/fab51fefed8d3a347a52ab7c118bb40b3cc23b37/Azure-RMSDocs/get-started/tutorial-step1.md) | OutofSyncHandedBackSuccess | [Details](#80f2742bbaab9d3252cec6f6c709012ca81218d5120)
@@ -381,6 +379,8 @@
  [Azure-RMSDocs\develop\docfx.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a0f71b3579480945087ffdea1b323da129da1de5/Azure-RMSDocs/develop/docfx.json) | Ignored | [Details](#1817ca056f9a0b0e6aed85bf04892c3f633079d160)
  [Azure-RMSDocs\develop\md.style](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a0f71b3579480945087ffdea1b323da129da1de5/Azure-RMSDocs/develop/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda81)
  [Azure-RMSDocs\docfx.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a0f71b3579480945087ffdea1b323da129da1de5/Azure-RMSDocs/docfx.json) | Ignored | [Details](#d47b66074ce65bdee85cce855d81159fbfc073b599)
+ [Azure-RMSDocs\get-started\requirements-azure-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a0f71b3579480945087ffdea1b323da129da1de5/Azure-RMSDocs/get-started/requirements-azure-rms.md) | Ignored | [Details](#f225d8579e2440d2eb00a4f821a78727b6442fdd107)
+ [Azure-RMSDocs\information-protection\infoprotect-tutorial-step4.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a0f71b3579480945087ffdea1b323da129da1de5/Azure-RMSDocs/information-protection/infoprotect-tutorial-step4.md) | Ignored | [Details](#dcb34eb8bfee6232d32245634dc56f717257b644159)
  [Azure-RMSDocs\md.style](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a0f71b3579480945087ffdea1b323da129da1de5/Azure-RMSDocs/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda162)
  [Azure-RMSDocs\media\AddAnAppPick.png](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a0f71b3579480945087ffdea1b323da129da1de5/Azure-RMSDocs/media/AddAnAppPick.png) | Ignored | [Details](#9617b96490e5d0b51f112cacd7403cec29f5782c165)
  [Azure-RMSDocs\media\AddAppBtn.png](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a0f71b3579480945087ffdea1b323da129da1de5/Azure-RMSDocs/media/AddAppBtn.png) | Ignored | [Details](#7d5f429ac4e453c846f872c556dc884957db739e166)
@@ -2011,21 +2011,16 @@
 * Bilingual Datetime: 2016-06-22 12:23:57
 * [Back to Top](#report-top)
 
-##### <a name='72a75712da9efa201865440affa80461dcd7df53107'></a> Source: [Azure-RMSDocs\get-started\requirements-azure-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/50ebcd71336baeb68687e2d0c1ff1f0608925761/Azure-RMSDocs/get-started/requirements-azure-rms.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='f225d8579e2440d2eb00a4f821a78727b6442fdd107'></a> Source: [Azure-RMSDocs\get-started\requirements-azure-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a0f71b3579480945087ffdea1b323da129da1de5/Azure-RMSDocs/get-started/requirements-azure-rms.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/7b1a4c93ecc770c2fe24abaf3df7542a4c2ded51/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.fr-fr.xlf)
-* Handoff Datetime: 2016-06-17 22:54:38
-* Handoff Reason: Include
-* Archive File: [requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/63ff30dc9a4ab1f2797079852874b950fe571235/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/archive/requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.fr-fr.xlf)
-* Archive Datetime: 2016-07-01 23:47:50
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\get-started\requirements-azure-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr.fr-fr/blob/305e58febc63e4ad47233a3625d6bc5aee2043ca/Azure-RMSDocs/get-started/requirements-azure-rms.md)
-* Current Handback File: [requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.fr-fr.xlf)
-* Current Handback Datetime: 2016-06-03 00:33:47
-* Bilingual File: [requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.fr-fr.xlf](https://github.com/Microsoft/EM.handback/blob/009fefcd2e5ef8282d2278f7a25576c84d9de43d/ol-handback/Microsoft/Azure-RMSDocs-pr.fr-fr/master/requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 10:19:09
 * [Back to Top](#report-top)
 
 ##### <a name='933394c943763b010ac707384918eff86ea33388108'></a> Source: [Azure-RMSDocs\get-started\requirements-client-devices.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ed50d87138c428fadfd22cd5b3ef3c7f7e421848/Azure-RMSDocs/get-started/requirements-client-devices.md)
@@ -2754,12 +2749,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='97d49fc476f2a7a0d9303fd27441d5fe7338fb49159'></a> Source: [Azure-RMSDocs\information-protection\infoprotect-tutorial-step4.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/e2a0ac3fb5653d5260bbd2b3bf572386596b94e0/Azure-RMSDocs/information-protection/infoprotect-tutorial-step4.md)
-* Status: HandedOffSuccess
+##### <a name='dcb34eb8bfee6232d32245634dc56f717257b644159'></a> Source: [Azure-RMSDocs\information-protection\infoprotect-tutorial-step4.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a0f71b3579480945087ffdea1b323da129da1de5/Azure-RMSDocs/information-protection/infoprotect-tutorial-step4.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [infoprotect-tutorial-step4.e05b067bb63bbb103b67887740ea0bb6b9044c40.fr-fr.xlf](https://github.com/Microsoft/EM.handoff/blob/584ecf4ad30c2fe1176790f23ec8d136f657b830/ol-handoff/Microsoft/Azure-RMSDocs-pr.fr-fr/master/infoprotect-tutorial-step4.e05b067bb63bbb103b67887740ea0bb6b9044c40.fr-fr.xlf)
-* Handoff Datetime: 2016-07-12 17:20:47
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 

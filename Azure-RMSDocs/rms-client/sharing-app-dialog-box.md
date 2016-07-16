@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Options de boîte de dialogue pour l’application de partage Rights Management | Azure RMS
-description:
-keywords:
+title: "Options de boîte de dialogue pour l’application de partage Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 771a80843ca5ab01cd06bd4e76c827469b0e9f00
+
 
 ---
 
@@ -57,7 +51,7 @@ Outre les options que vous pouvez choisir, vous pourriez également vous interro
 -   Lorsque vous **appliquez à un fichier une protection générique**, les personnes non autorisées ne peut pas l'ouvrir. En revanche, des personnes autorisées ayant ouvert le fichier peuvent ensuite le transférer, non protégé, à d'autres personnes, ou l'enregistrer dans un emplacement accessible à d'autres. Bien qu'elles voient s'afficher un message leur indiquant les autorisations dont elles disposent sur le fichier et les invitant à respecter les restrictions qui y sont associées, cette protection n'est nullement contraignante. En outre, lorsque vous appliquez une protection générique à un fichier, vous ne pouvez pas moduler l'autorisation d'accès à celui-ci. Par exemple, vous ne pouvez pas restreindre l'utilisation du contenu au seul affichage ou empêcher son impression.
 
     > [!NOTE]
-    > Un fichier faisant l’objet d’une protection générique a toujours l’extension de nom de fichier **.pfile**.
+    > Un fichier faisant l'objet d'une protection générique a toujours l'extension de nom de fichier **.pfile**.
 
 -   Par contre, quand vous utilisez la **protection intégrée (native)** de Rights Management avec des applications qui la prennent en charge (par exemple, des fichiers Office), la protection s’applique au fichier, même si celui-ci est transféré à quelqu’un d’autre ou enregistré à un autre emplacement. Et lorsque vous protégez un fichier de cette manière, vous pouvez utiliser des autorisations restrictives, telles que la lecture seule, ou l'édition mais non l'impression ou la copie. Par exemple, vous pouvez sélectionner **Visionneuse – Affichage uniquement**pour empêcher toute modification, impression ou copie du fichier.
 
@@ -84,6 +78,7 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

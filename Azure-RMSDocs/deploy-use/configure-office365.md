@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Office 365 &colon; configuration pour les clients et services en ligne | Azure RMS
-description:
-keywords:
+title: "Office 365 &colon; configuration pour les clients et services en ligne | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 7a2436a6ebb17e4336f1321b8f3742e34ea59689
+
 
 ---
 
@@ -37,9 +31,9 @@ Cependant, nous vous recommandons de compléter ces applications par l'applicati
 Pour configurer Exchange Online pour la prise en charge d'Azure RMS, vous devez activer la gestion des droits relatifs à l'information pour Exchange Online. Pour ce faire, utilisez Windows PowerShell (inutile d’installer un module séparé) et exécutez des [commandes PowerShell pour Exchange Online](https://technet.microsoft.com/library/jj200677.aspx).
 
 > [!NOTE]
-> Actuellement, vous ne pouvez pas configurer Exchange Online pour prendre en charge Azure RMS si vous utilisez une clé de locataire gérée par le client (BYOK) pour Azure RMS au lieu de la configuration par défaut de clé de locataire gérée par Microsoft. Pour plus d’informations, consultez la section [Tarifs et restrictions BYOK](../plan-design/byok-price-restrictions.md).
+> Actuellement, vous ne pouvez pas configurer Exchange Online pour prendre en charge Azure RMS si vous utilisez une clé de locataire gérée par le client (BYOK) pour Azure RMS au lieu de la configuration par défaut de clé de locataire gérée par Microsoft. Pour plus d’informations, consultez [Tarifs et restrictions BYOK](../plan-design/byok-price-restrictions.md).
 >
-> Si vous essayez de configurer Exchange Online quand Azure RMS utilise BYOK, la commande pour importer la clé (étape 5 de la procédure suivante) échoue avec le message d’erreur **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]**.
+> Si vous essayez de configurer Exchange Online quand Azure RMS utilise BYOK, la commande pour importer la clé (étape 5, dans la procédure suivante) échoue avec le message d’erreur **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]**.
 
 Les étapes suivantes décrivent un ensemble spécifique de commandes à exécuter pour permettre à Exchange Online d'utiliser Azure RMS :
 
@@ -120,7 +114,7 @@ Les étapes suivantes décrivent un ensemble spécifique de commandes à exécut
     Remove-PSSession $Session
     ```
 
-Les utilisateurs peuvent maintenant protéger leurs messages électroniques en utilisant Azure RMS. Par exemple, dans Outlook Web App,  dans le menu étendu, sélectionnez **Définir les autorisations** (**...**), puis choisissez **Ne pas transférer** ou l’un des modèles disponibles pour appliquer la protection des informations au message électronique et aux éventuelles pièces jointes. Toutefois, étant donné qu'Outlook Web App met en cache l'interface utilisateur pendant une journée, attendez l'expiration de cette période avant de tenter d'appliquer la protection des informations au messages électroniques après avoir exécuté ces commandes de configuration. Tant que l'interface utilisateur n'a pas été actualisée pour refléter la nouvelle configuration, aucune option du menu **Définir les autorisations** n'est visible.
+Les utilisateurs peuvent maintenant protéger leurs messages électroniques en utilisant Azure RMS. Par exemple, dans Outlook Web App,  dans le menu étendu, sélectionnez **Définir les autorisations** (**...**), puis choisissez **Ne pas transférer** ou l'un des modèles disponibles pour appliquer la protection des informations au message électronique et aux éventuelles pièces jointes. Toutefois, étant donné qu'Outlook Web App met en cache l'interface utilisateur pendant une journée, attendez l'expiration de cette période avant de tenter d'appliquer la protection des informations au messages électroniques après avoir exécuté ces commandes de configuration. Tant que l'interface utilisateur n'a pas été actualisée pour refléter la nouvelle configuration, aucune option du menu **Définir les autorisations** n'est visible.
 
 > [!IMPORTANT]
 > Si vous créez des [modèles personnalisés](configure-custom-templates.md) pour Azure RMS ou mettez à jour les modèles, vous devez chaque fois exécuter la commande Exchange Online PowerShell suivante (si nécessaire, exécutez d’abord les étapes 2 et 3) pour synchroniser ces modifications sur Exchange Online : `Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
@@ -165,13 +159,13 @@ Après que vous avez activé le service IRM pour SharePoint Online, la biblioth�
 #### Configuration pour les utilisateurs
 Donnez aux utilisateurs ces instructions pour qu'ils puissent configurer leur OneDrive Entreprise et protéger par IRM leurs fichiers d'entreprise.
 
-1.  Dans OneDrive, cliquez sur l’icône **Paramètres** pour ouvrir le menu Paramètres, puis cliquez sur **Contenu du site**.
+1.  Dans OneDrive, cliquez sur l'icône **Paramètres** pour ouvrir le menu Paramètres, puis cliquez sur **Contenu du site**.
 
-2.  Pointez sur la vignette **Documents**, choisissez les points de suspension (**...**), puis cliquez sur **PARAMÈTRES.**
+2.  Pointez sur la vignette **Documents** , choisissez les points de suspension (**...**), puis cliquez sur **PARAMÈTRES**.
 
-3.  Dans la page **Paramètres**, dans la section **Autorisations et gestion**, cliquez sur **Gestion des droits relatifs à l’information**.
+3.  Dans la page **Paramètres** , dans la section **Autorisations et gestion** , cliquez sur **Gestion des droits relatifs à l'information**.
 
-4.  Dans la page **Paramètres de la Gestion des droits relatifs à l’information**, cochez la case **Restreindre les autorisations sur cette bibliothèque lors du téléchargement**, spécifiez votre choix de nom et de description pour les autorisations, cliquez éventuellement sur **AFFICHER LES OPTIONS** pour définir des configurations facultatives, puis cliquez sur **OK**.
+4.  Dans la page **Paramètres de la Gestion des droits relatifs à l'information** , activez la case à cocher **Restreindre les autorisations sur cette bibliothèque lors du téléchargement** , spécifiez votre choix d'un nom et d'une description pour les autorisations, cliquez éventuellement sur **AFFICHER LES OPTIONS** pour définir des configurations facultatives, puis cliquez sur **OK**.
 
     Pour plus d'informations sur les options de configuration, consultez les instructions de la rubrique [Appliquer la Gestion des droits relatifs à l'information à une liste ou à une bibliothèque](https://support.office.com/article/Apply-Information-Rights-Management-to-a-list-or-library-3bdb5c4e-94fc-4741-b02f-4e7cc3c54aa1) dans la documentation d'Office.
 
@@ -584,7 +578,7 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
 > [!TIP]
 > Vous pouvez également utiliser ce script pour configurer IRM pour une bibliothèque SharePoint Online. Pour cette configuration, il est préférable d’activer l’option supplémentaire **Interdire aux utilisateurs de télécharger des documents qui ne prennent pas en charge IRM** pour vous assurer que la bibliothèque ne contient que des documents protégés.    Pour ce faire, ajoutez le paramètre `-IrmReject` à la commande Set-IrmConfiguration dans le script.
 >
-> Vous devez également modifier les variables `$webUrls` (par exemple, **https://contoso.sharepoint.com**) et `$listTitle` (par exemple, **$Reports**)).
+> Vous devez également modifier les variables `$webUrls` (par exemple, **https://contoso.sharepoint.com**) et `$listTitle` (par exemple, **$Reports**).
 
 Si vous devez désactiver IRM pour les bibliothèques OneDrive Entreprise de l’utilisateur, consultez la section [Script pour désactiver IRM pour OneDrive entreprise](#script-to-disable-irm-for-onedrive-for-business).
 
@@ -1111,6 +1105,7 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

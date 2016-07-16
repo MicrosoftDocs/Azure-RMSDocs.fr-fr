@@ -4,7 +4,7 @@ Vos destinataires peuvent utiliser de nombreux appareils pour lire le document p
 
 Demandez-leur de lire le message électronique que vous leur avez envoyé. Avant de voir votre message électronique, ils verront le message suivant :
 
-**L’expéditeur a protégé les pièces jointes avec Microsoft RMS. Vous devez vous **[connecter](http://aka.ms/rms)
+**L’expéditeur a protégé les pièces jointes avec Microsoft RMS. Vous devez** [vous connecter](http://aka.ms/rms)
       **pour les ouvrir.**
 
 Lorsqu’ils cliquent sur le lien, ils sont redirigés vers les instructions pour installer l’application de partage RMS et pour se connecter à un compte gratuit, si nécessaire. Le compte gratuit leur accorde un abonnement à RMS for individuals, et garantit que les utilisateurs autorisés pourront toujours lire un document protégé, même si leur organisation ne dispose pas d’Azure RMS. Ils peuvent ensuite lire les pièces jointes protégées à l’aide des instructions suivantes.
@@ -19,7 +19,7 @@ Lorsqu’ils cliquent sur le lien, ils sont redirigés vers les instructions pou
 
 2.  Si vous êtes invité à saisir votre nom d’utilisateur et votre mot de passe, indiquez votre nom d’utilisateur dans le même format que l’adresse de messagerie utilisée pour vous envoyer le courrier électronique et la pièce jointe. Par exemple, **janetm@contoso.com** ou **p.dover@fabrikam.com**. En ce qui concerne votre mot de passe, saisissez celui que vous avez fourni lors de votre inscription à RMS for individuals. Si votre organisation a Azure RMS, entrez votre mot de passe professionnel habituel.
 
-Le document s’ouvre et vous pouvez maintenant lire le contenu. Par exemple, il peut contenir le message **Si vous pouvez lire ce texte à partir de la pièce jointe de votre courrier électronique, l’expéditeur a réussi à partager un fichier protégé par Azure RMS.** Étant donné que le document est en lecture seule, vous ne pouvez pas modifier son contenu.
+Le document s’ouvre et vous pouvez maintenant lire le contenu. Par exemple, il peut contenir le message **Si vous pouvez lire ce texte à partir de la pièce jointe de votre e-mail, l’expéditeur a réussi à partager un fichier protégé par Azure RMS.** Étant donné que le document est en lecture seule, vous ne pouvez pas modifier son contenu.
 
 Vous pouvez éventuellement demander à votre destinataire de transférer le courrier électronique à d’autres personnes que vous n’avez pas incluses dans votre courrier d’origine. Même si ces personnes travaillent pour une organisation qui dispose d’Azure Rights Management ou s’il demandent un abonnement à RMS for individuals, ils ne seront pas en mesure d’ouvrir la pièce jointe. Lorsqu’elles sont invitées à saisir leur nom d’utilisateur, l’accès au document leur est refusé.
 
@@ -33,6 +33,6 @@ Maintenant que le destinataire a ouvert la pièce jointe et l’a éventuellemen
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Générer et transférer votre clé de locataire en personne | Azure RMS
-description:
-keywords:
+title: "Générer et transférer votre clé de locataire en personne | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3281e45e-cf69-4dc5-946b-3029851d3152
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 1acc66e9a73b100268ed722391a0a87651c64abc
+
 
 ---
 
@@ -42,7 +36,7 @@ Pour générer votre propre clé de locataire, suivez ces 3 étapes :
 -   [Étape 3 : création d'une nouvelle clé](#step-3-create-a-new-key)
 
 ### Étape 1 : préparation d'un poste de travail avec un module de sécurité matériel Thales
-Installez le logiciel de support nCipher (Thales) sur un ordinateur Windows, puis joignez un module de sécurité matériel Thales à cet ordinateur. Vérifiez ensuite que les outils Thales apparaissent dans votre chemin. Pour plus d’informations, consultez le guide d’utilisation fourni avec le module de sécurité matériel Thales, ou accédez au site web de Thales pour Azure RMS à l’adresse [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
+Installez le logiciel de support nCipher (Thales) sur un ordinateur Windows, puis joignez un module de sécurité matériel Thales à cet ordinateur. Vérifiez ensuite que les outils Thales apparaissent dans votre chemin. Pour plus d'informations, reportez-vous au guide d'utilisation inclus avec le module de sécurité matériel Thales, ou visitez le site Web de Thales pour Azure RMS à l'adresse [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
 
 ### Étape 2 : création d'un monde de sécurité
 Ouvrez une invite de commande et exécutez le programme de nouveau monde Thales.
@@ -156,6 +150,7 @@ Vous avez à présent effectué toutes les instructions nécessaires pour transf
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

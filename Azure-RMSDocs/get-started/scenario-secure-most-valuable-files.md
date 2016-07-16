@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Scénario - Sécuriser vos fichiers les plus précieux | Azure RMS
-description:
-keywords:
+title: "Scénario - Sécuriser vos fichiers les plus précieux | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
+ms.openlocfilehash: d4325fb8a0b27d0a8d4fd7451b9d11d10153ed8d
+
 
 ---
 
@@ -94,7 +88,8 @@ Pour ce scénario, les éléments suivants doivent être en place :
 
 Pour en savoir plus sur la protection des fichiers sur place, consultez [Protéger un fichier sur un appareil (protéger sur place) à l’aide de l’application de partage Rights Management](https://technet.microsoft.com/library/dn574733%28v=ws.10%29.aspx).
 
-> [!TIP] Si le nombre de fichiers à protéger est trop important pour ce processus manuel, utilisez l’[outil Protection RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256) pour protéger en bloc les fichiers avec le modèle.
+> [!TIP]
+> Si le nombre de fichiers à protéger est trop important pour ce processus manuel, envisagez d’utiliser l’[outil Protection RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256) pour protéger en bloc les fichiers avec le modèle.
 
 ### Pour surveiller et si nécessaire, révoquer l’accès aux fichiers
 
@@ -152,6 +147,7 @@ Un niveau de protection très élevé est désormais appliqué à ces fichiers d
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

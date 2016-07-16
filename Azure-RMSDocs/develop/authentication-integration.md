@@ -1,26 +1,22 @@
 ---
-# required metadata
-
-title: Procédure d’inscription et d’activation RMS de votre application dans Azure AD | Azure RMS
-description: Décrit les principes fondamentaux de l’authentification utilisateur pour votre application RMS.
-keywords:
+title: "Procédure d’inscription et d’activation RMS de votre application dans Azure AD | Azure RMS"
+description: "Décrit les principes fondamentaux de l’authentification utilisateur pour votre application RMS."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/15/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
+ms.openlocfilehash: 34a82f31b5da46a59627ff559deb46c8445fcdf2
+
 
 ---
 
@@ -53,7 +49,8 @@ Chacune des ressources suivantes contient de l’aide pour la configuration de v
 -   [Bibliothèque d’authentification Windows Azure Active Directory (ADAL) pour dotnet](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   Pour le SDK Linux, la bibliothèque ADAL est fournie avec la source du SDK, disponible via [Github](https://github.com/AzureAD/rms-sdk-for-cpp).
 
->[!NOTE]  Nous vous recommandons d’utiliser une des bibliothèques ADAL, même si vous pouvez utiliser d’autres bibliothèques d’authentification.
+>[!NOTE]  
+> Nous vous recommandons d’utiliser une des bibliothèques ADAL, même si vous pouvez utiliser d’autres bibliothèques d’authentification.
 
 ### Paramètres d’authentification
 
@@ -66,13 +63,15 @@ La bibliothèque ADAL nécessite plusieurs éléments d’information pour authe
 Il provient de l’étape d’inscription dans le portail Azure.
 - **URI de redirection** : fournit la bibliothèque d’authentification avec une cible d’URI pour le code d’authentification. Des formats spécifiques sont nécessaires pour iOS et Android. Ils sont expliqués dans les fichiers LISEZ-MOI des dépôts GitHub correspondants de la bibliothèque ADAL. Cette valeur provient de l’étape d’inscription dans le portail Azure.
 
->[!NOTE] **L’étendue** n’est pas utilisée, mais peut l’être et est donc réservée à une utilisation future.
+>[!NOTE] 
+> **L’étendue** n’est pas utilisée, mais peut l’être et est donc réservée à une utilisation future.
 
     Android: `msauth://packagename/Base64UrlencodedSignature`
 
     iOS: `<app-scheme>://<bundle-id>`
 
->[!NOTE] Si votre application ne suit pas ces instructions, les flux de travail Azure RMS et Azure AD risquent d’échouer et ne sont pas pris en charge par Microsoft.com. En outre, il peut se produire une violation du contrat RMLA si un ID de client non valide est utilisé dans une application de production.
+>[!NOTE] 
+> Si votre application ne suit pas ces instructions, les flux de travail Azure RMS et Azure AD risquent d’échouer et ne sont pas pris en charge par Microsoft.com. En outre, il peut se produire une violation du contrat RMLA si un ID de client non valide est utilisé dans une application de production.
 
 ### Exemple d’implémentation d’un rappel d’authentification
 **Exemples de code d’authentification** : ce SDK comprend un exemple de code montrant l’utilisation de rappels d’authentification. Pour votre commodité, ces exemples de code sont représentés ici, ainsi que dans chacune des rubriques liées.
@@ -271,6 +270,7 @@ Il provient de l’étape d’inscription dans le portail Azure.
  
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

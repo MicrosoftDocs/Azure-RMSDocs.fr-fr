@@ -14,7 +14,7 @@ Ensuite, vous pouvez partager en toute sécurité ce document par courrier élec
 
 3.  Indiquez un objet, tel que  **Document confidentiel** , puis saisissez un bref message, tel que **Merci de lire ce document et de ne pas le partager.**
 
-4.  Puis, sous l’onglet **Message** du groupe **RMS**, cliquez sur **Partage protégé**, puis à nouveau sur **Partage protégé** :
+4.  Puis, dans l’onglet **Message** du groupe **RMS** , cliquez sur **Partage protégé** , puis sur **Partage protégé** à nouveau :
 
 5.  Dans la boîte de dialogue **Partage protégé** :
 
@@ -42,6 +42,6 @@ Maintenant que vous avez envoyé votre document protégé, vous pouvez demander 
 |Options de la boîte de dialogue **partage protégé** →|[Options de boîte de dialogue pour l'application de partage Rights Management](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

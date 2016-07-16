@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Didacticiel de démarrage rapide pour Azure Rights Management | Azure RMS
-description: Didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Rights Management dans votre organisation en seulement cinq étapes et moins de 15 minutes.
-keywords:
+title: "Didacticiel de démarrage rapide pour Azure Rights Management | Azure RMS"
+description: "Didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Rights Management dans votre organisation en seulement cinq étapes et moins de 15 minutes."
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1db923bf-7d19-4fdd-a413-bfeb58af5e03
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 7c89aa5f31732464dab2b90a25ad7c50f36c2c99
+
 
 ---
 
@@ -31,7 +25,7 @@ ms.suite: ems
 
 Atteindre : 
 > [!div class="op_single_selector"]
-- [Étape 1 : Activer Azure RMS](tutorial-step1.md)
+- [Étape 1 : activer Azure RMS](tutorial-step1.md)
 - [Étape 2 : Installer l’application de partage RMS](tutorial-step2.md)
 - [Étape 3 : envoyer le document confidentiel par e-mail](tutorial-step3.md)
 - [Étape 4 : Le destinataire lit le document](tutorial-step4.md)
@@ -55,12 +49,14 @@ Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 
 C’est parti !
 
->[!div class="step-by-step"] [Étape 1 »](tutorial-step1.md)
+>[!div class="step-by-step"]
+[Étape 1 »](tutorial-step1.md)
 
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

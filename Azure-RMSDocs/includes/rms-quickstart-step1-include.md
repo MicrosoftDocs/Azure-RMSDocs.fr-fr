@@ -55,6 +55,6 @@ Bien que ce ne soit pas inclus dans cette rubrique, pour un déploiement de prod
 |Modèles par défaut et création de modèles personnalisés   →|[Configuration de modèles personnalisés pour Azure Rights Management](../deploy-use/create-template.md)|
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

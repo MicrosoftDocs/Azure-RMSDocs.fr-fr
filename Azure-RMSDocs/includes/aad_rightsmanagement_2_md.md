@@ -1,5 +1,5 @@
 Gestion des droits
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=Jun16_HO4-->
 
 

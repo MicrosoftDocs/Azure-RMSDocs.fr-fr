@@ -1,8 +1,6 @@
 ---
-# required metadata
-
-title: Utiliser le portail Azure pour configurer l’authentification RMS | Azure RMS
-description: Décrit le processus d’authentification avec la bibliothèque ADAL
+title: "Utiliser le portail Azure pour configurer l’authentification RMS | Azure RMS"
+description: "Décrit le processus d’authentification avec la bibliothèque ADAL"
 keywords: authentication, RMS, ADAL
 author: bruceperlerms
 manager: mbaldwin
@@ -12,16 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2680b399-febb-4bd6-b844-ac3d1e69aca4
-
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 3f43f5605b1c341d7be618327038d1a86a305a5b
+ms.openlocfilehash: cb82f0333ed17ee2994608baa3bbb50d42f19073
+
 
 ---
 
@@ -66,6 +61,7 @@ Voici un extrait de code de l’exemple de code client mobile permettant d’act
 - [Configurer Azure RMS pour l’authentification ADAL](adal-auth.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

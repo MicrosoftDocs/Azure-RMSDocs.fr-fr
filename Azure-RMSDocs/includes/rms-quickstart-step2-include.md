@@ -27,6 +27,6 @@ Vous êtes maintenant prêt à protéger les fichiers contenant des informations
 |Pour comprendre la différence entre la protection native et la protection générique   →|[Quelle est la différence entre la protection générique et la protection intégrée (native) ?](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

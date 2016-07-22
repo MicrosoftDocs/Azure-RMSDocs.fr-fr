@@ -60,6 +60,6 @@ Applets de commande prenant en charge la création et la gestion de modèles :
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

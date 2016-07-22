@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Exemples de code Linux | Azure RMS
-description: Cette rubrique présente les éléments de code et les scénarios importants pour la version Linux du Kit RMS SDK.
-keywords:
+description: "Cette rubrique présente les éléments de code et les scénarios importants pour la version Linux du Kit RMS SDK."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 79e58b8092ea7cb057229d4c464d79f3694296e6
+ms.openlocfilehash: ace7103cfb44d84a7dd6bf64f57c2a47530117e0
+
 
 ---
 
@@ -32,7 +28,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 ## Scénario : Accéder aux informations de stratégie de protection à partir d’un fichier protégé
 
-**Ouvre et lit un fichier protégé RMS**
+**Ouvre et lit un fichier protégé RMS Source**
 **Source** : [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **Description** : Après obtention d’un nom de fichier auprès de l’utilisateur, lecture des certificats (voir *MainWindow::addCertificates*), configuration du rappel d’autorisation avec l’ID client et l’URL de redirection, appel de *ConvertFromPFile* (voir l’exemple de code suivant), puis lecture de la description, de la date de validité du contenu et du nom de la stratégie de protection.
@@ -205,13 +201,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
     
     AddLog(&quot;Successfully converted to &quot;, fileOut.c_str());
     }
-   catch (const rmsauth::Exception&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.error().c_str());
-    outFile-&gt;close();
-    remove(fileOut.c_str());
-    }
-    catch (const rmscore::exceptions::RMSException&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.what());
+   catch (const rmsauth::Exception&amp; e) { AddLog(&quot;ERROR: &quot;, e.error().c_str()); outFile-&gt;close(); remove(fileOut.c_str()); } catch (const rmscore::exceptions::RMSException&amp; e) { AddLog(&quot;ERROR: &quot;, e.what());
     
     outFile-&gt;close();
     remove(fileOut.c_str());
@@ -511,7 +501,7 @@ La méthode *WorkerThread()* est appelée par deux des exemples de scénarios pr
 ## Scénario : Authentification RMS
 
 Les exemples suivants montrent deux approches d’authentification : obtention d’un jeton oAuth2 d’authentification Azure avec interface utilisateur et sans interface utilisateur.
-**Acquisition de jeton d’authentification oAuth2 avec l’interface utilisateur**
+**Acquisition de jeton d’authentification oAuth2 avec interface utilisateur**
 **Source** : [rmsauth\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rmsauth_sample)
 
 **Étape 1** : Créer un point partagé de l’objet **rmsauth::FileCache**
@@ -522,8 +512,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
     auto FileCachePtr = std::make_shared&lt; rmsauth::FileCache&gt;();
 
 
-**Étape 2** : Créer l’objet **rmsauth::AuthenticationContext**
-Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*.
+**Étape 2** : Créer l’objet **rmsauth::AuthenticationContext** Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*.
 
 **C++** :
 
@@ -533,8 +522,7 @@ Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*
                               FileCachePtr);
 
 
-**Étape 3** : Appeler la méthode **acquireToken** de l’objet **authContext** et spécifier les paramètres suivants :
-Description :
+**Étape 3** : Appeler la méthode **acquireToken** de l’objet **authContext** et spécifier les paramètres suivants : Description :
 
 -   *Ressource demandée* : Ressource protégée à laquelle vous souhaitez accéder
 -   *ID du client unique* : Généralement un GUID
@@ -552,8 +540,7 @@ Description :
                 std::string(“john.smith@msopentechtest01.onmicrosoft.com”));
 
 
-**Étape 4** : Obtenir le jeton d’accès à partir du résultat
-Description : Appeler la méthode **result-&gt; accessToken()**
+**Étape 4** : Obtenir le jeton d’accès à partir du résultat Description : Appeler la méthode **result-&gt; accessToken()**
 
 **Remarque**  Toutes les méthodes de bibliothèque d’authentification peuvent lever **rmsauth::Exception**
 
@@ -561,16 +548,14 @@ Description : Appeler la méthode **result-&gt; accessToken()**
 **Acquisition de jeton d’authentification oAuth2 sans interface utilisateur**
 **Source** : [rmsauth\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rmsauth_sample)
 
-**Étape 1** : Créer un point partagé de l’objet **rmsauth::FileCache**
-Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par défaut
+**Étape 1** : Créer un point partagé de l’objet **rmsauth::FileCache** Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par défaut
 
 **C++** :
 
     auto FileCachePtr = std::make_shared&lt; rmsauth::FileCache&gt;();
 
 
-**Étape 2** : Créer l’objet **UserCredential**
-Description : Spécifier la *connexion utilisateur* et le *mot de passe*
+**Étape 2** : Créer l’objet **UserCredential** Description : Spécifier la *connexion utilisateur* et le *mot de passe*
 
 **C++** :
 
@@ -578,8 +563,7 @@ Description : Spécifier la *connexion utilisateur* et le *mot de passe*
                                                  &quot;SomePass&quot;);
 
 
-**Étape 3** : Créer l’objet **rmsauth::AuthenticationContext**
-Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*
+**Étape 3** : Créer l’objet **rmsauth::AuthenticationContext** Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*
 
 **C++** :
 
@@ -602,13 +586,13 @@ Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*
                 userCred);
 
 
-**Étape 5** : Obtenir le jeton d’accès à partir du résultat
-Description : Appeler la méthode **result-&gt; accessToken()**
+**Étape 5** : Obtenir le jeton d’accès à partir du résultat Description : Appeler la méthode **result-&gt; accessToken()**
 
 **Remarque**  Toutes les méthodes de bibliothèque d’authentification peuvent lever **rmsauth::Exception**
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

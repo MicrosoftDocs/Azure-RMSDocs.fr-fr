@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS | Azure RMS
-description:
-keywords:
+title: "Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 9d5c9558e809779940fac095a789730d5e5924e6
+
 
 ---
 
@@ -43,11 +37,11 @@ Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos do
 
 -   Si vous souhaitez configurer des notifications par courrier électronique : cliquez sur **Paramètres** et indiquez si vous souhaitez recevoir des messages électroniques lorsque quelqu’un accède au document et de quelle manière.
 
--   Si vous avez des questions ou souhaitez fournir des commentaires sur le site de suivi de document, cliquez sur l’icône d’aide pour accéder au [Forum aux questions sur le suivi de documents](http://go.microsoft.com/fwlink/?LinkId=523977).
+-   Si vous avez des questions ou souhaitez fournir des commentaires sur le site de suivi de document : cliquez sur l’icône d’aide pour accéder au [Forum aux questions sur le suivi de documents](http://go.microsoft.com/fwlink/?LinkId=523977).
 
 ## Utilisation d’Office pour accéder au site de suivi de document
 
--   Pour les applications Office, Word, Excel et PowerPoint : sous l’onglet **Accueil**, dans le groupe **RMS**, cliquez sur **Partage protégé**, puis sur **Suivre l’utilisation**.
+-   Pour les applications Office, Word, Excel et PowerPoint : Sous l’onglet **Accueil** , dans le groupe **RMS** , cliquez sur **Partage protégé**, puis sur **Suivre l’utilisation**.
 
     ![Suivre l’utilisation des applications Office quand vous faites appel à l’application de partage RMS ](../media/ADRMS_MSRMSApp_OfficeToolbarTrackUsage.png)
 
@@ -55,7 +49,7 @@ Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos do
 
     ![Sélectionner Suivre l’utilisation d’Outlook quand vous faites appel à l’application de partage RMS ](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
 
-Si vous ne voyez pas ces options pour RMS, il est probable que l’application de partage RMS ne soit pas installée sur votre ordinateur, que la version la plus récente ne soit pas installée ou que votre ordinateur doive être redémarré pour terminer l’installation. Pour plus d’informations sur l’installation de l’application de partage, consultez [Télécharger et installer l’application de partage Rights Management](install-sharing-app.md).
+Si vous ne voyez pas ces options pour RMS, il est probable que l’application de partage RMS ne soit pas installée sur votre ordinateur, que la version la plus récente ne soit pas installée ou que votre ordinateur doive être redémarré pour terminer l’installation. Pour plus d’informations sur l’installation de l’application de partage, voir [Télécharger et installer l’application de partage Rights Management](install-sharing-app.md).
 
 ### Autres méthodes de suivi et de révocation de vos documents
 Outre le suivi de vos documents sur les ordinateurs Windows à l’aide des applications Office, vous pouvez également utiliser ces méthodes :
@@ -105,6 +99,7 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

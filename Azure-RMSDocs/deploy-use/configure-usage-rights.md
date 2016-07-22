@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Configuration des droits d’utilisation pour Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Configuration des droits d’utilisation pour Azure Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 3883a46440f016138dd50d061a58089253721719
+ms.openlocfilehash: 21b92fae5fd00d80f9afd2e80d21c08bfa47b7b2
+
 
 ---
 
@@ -65,7 +58,7 @@ Permet à l'utilisateur d'enregistrer le document à son emplacement actuel.
 
 **Nom dans les modèles AD RMS** : *Enregistrer*
 
-**Constante ou valeur d’API** : IPC_GENERIC_WRITEL"EDIT"
+**Constante ou valeur d’API** : IPC_GENERIC_WRITE L"EDIT"
 
 Dans les applications Office, ce droit permet également à l'utilisateur de modifier le document.
 
@@ -83,7 +76,7 @@ Active l'option d'ajout d'annotations ou de commentaires au contenu.
 
 **Nom dans les modèles AD RMS** : Non implémenté.
 
-**Constante ou valeur d’API** : IPC_GENERIC_COMMENTL"COMMENT
+**Constante ou valeur d’API :** IPC_GENERIC_COMMENT L"COMMENT
 
 Ce droit, disponible dans le SDK, est disponible en tant que stratégie ad hoc dans le module de protection RMS pour Windows PowerShell. Il a été implémenté dans certaines applications de fournisseur de logiciel. Toutefois, il n’est pas largement utilisé et n’est pas actuellement pris en charge par les applications Office.
 
@@ -101,7 +94,7 @@ Active l'option d'enregistrement du contenu sous un autre nom de fichier (Enregi
 
 **Nom dans les modèles AD RMS** : *Exporter (Enregistrer sous)*
 
-**Constante ou valeur d’API** : IPC_GENERIC_EXPORTL"EXPORT"
+**Constante ou valeur d’API :** IPC_GENERIC_EXPORT L"EXPORT"
 
 Ce droit permet également à l’utilisateur d’utiliser d’autres options d’exportation dans les applications, telles que *Envoyer à OneNote*.
 
@@ -119,7 +112,7 @@ Active l’option de transfert de message électronique et d’ajout de destinat
 
 **Nom dans les modèles AD RMS** : *Transférer*
 
-**Constante ou valeur d’API** : IPC_EMAIL_FORWARDL"FORWARD"
+**Constante ou valeur d’API :** IPC_EMAIL_FORWARD L"FORWARD"
 
 N'autorise pas le redirecteur à accorder des droits à d'autres utilisateurs dans le cadre de l'action de transfert.
 
@@ -137,7 +130,7 @@ Accorde tous les droits sur le document. Toutes les actions disponibles peuvent 
 
 **Nom dans les modèles AD RMS** : *Contrôle total*
 
-**Constante ou valeur d’API** : IPC_GENERIC_ALLL"OWNER"
+**Constante ou valeur d’API :** IPC_GENERIC_ALL L"OWNER"
 
 Inclut la possibilité de supprimer la protection.
 
@@ -155,7 +148,7 @@ Active les options d'impression du contenu.
 
 **Nom dans les modèles AD RMS** : *Imprimer*
 
-**Constante ou valeur d’API** : IPC_GENERIC_PRINTL"PRINT
+**Constante ou valeur d’API :** IPC_GENERIC_PRINT L"PRINT
 
 ---
 
@@ -187,7 +180,7 @@ Active l’option *Répondre à tous* dans un client de messagerie, mais ne perm
 
 **Nom dans les modèles AD RMS** : *Répondre à tous*
 
-**Constante ou valeur d’API** : IPC_EMAIL_REPLYALLL"REPLYALL"
+**Constante ou valeur d’API :** IPC_EMAIL_REPLYALL L"REPLYALL"
 
 ---
 
@@ -203,7 +196,7 @@ Permet à l'utilisateur d'ouvrir le document et d'en voir le contenu.
 
 **Nom dans les modèles AD RMS** : *Afficher*
 
-**Constante ou valeur d’API** : IPC_GENERIC_READL"VIEW"
+**Constante ou valeur d’API :** IPC_GENERIC_READ L"VIEW"
 
 ---
 
@@ -219,7 +212,7 @@ Active les options permettant de copier des données du document (y compris des 
 
 **Nom dans les modèles AD RMS :** *Extraire*
 
-**Constante ou valeur d’API :** IPC_GENERIC_EXTRACTL"EXTRACT"
+**Constante ou valeur d’API :** IPC_GENERIC_EXTRACT L"EXTRACT"
 
 Dans certaines applications, permet également d’enregistrer l’ensemble du document sous forme non protégée.
 
@@ -293,6 +286,7 @@ Une utilisatrice veut envoyer certaines informations par e-mail à certaines per
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

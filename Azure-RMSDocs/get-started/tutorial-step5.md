@@ -1,28 +1,26 @@
 ---
-# required metadata
-
-title: "Didacticiel de démarrage rapide Azure RMS – Étape 5 | AZURE RMS"
-description: "Dernière étape d’un didacticiel vous permettant de tester rapidement Microsoft Azure Rights Management au sein de votre organisation en seulement cinq étapes qui devraient vous prendre moins de 15 minutes."
-keywords:
+title: "Didacticiel de démarrage rapide Azure RMS – étape 5 |Azure RMS"
+description: "Dernière étape d’un didacticiel vous permettant de tester rapidement Microsoft Azure Rights Management au sein de votre organisation en seulement 5 étapes qui devraient vous prendre moins de 15 minutes."
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
-ms.technology: techgroup-identity
+ms.technology: 
 ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
-
-# optional metadata
-
-ROBOTS:
-audience:
-ms.devlang:
+ROBOTS: 
+audience: 
+ms.devlang: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+ms.tgt_pltfrm: 
+ms.custom: 
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
+
 
 ---
 
@@ -83,14 +81,16 @@ Si vous êtes prêt à déployer Azure RMS, consultez la [Feuille de route pour
 
 Ou, pour obtenir une liste de scénarios spécifiques, accompagnés des étapes de configuration et de la documentation de l’utilisateur final associées, consultez le [Guide de déploiement rapide pour Azure Rights Management](../get-started/rapid-deployment-guide.md).
 
->[! div classe = « pas à pas »] [Introduction](quick-start-tutorial.md)
-[Étape 1](tutorial-step1.md)
-[Étape 2](tutorial-step2.md)
-[Étape 3](tutorial-step3.md)
-[Étape 4](tutorial-step4.md)
-*Étape 5*
+>[!div class="step-by-step"]
+[Introduction](quick-start-tutorial.md)
+[Étape 1](tutorial-step1.md)
+[Étape 2](tutorial-step2.md)
+[Étape 3](tutorial-step3.md)
+[Étape 4](tutorial-step4.md)
+*Étape 5*
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Installation Linux | Azure RMS
-description: Plusieurs versions des systèmes d’exploitation Linux peuvent maintenant utiliser Microsoft Rights Management SDK 4.2.
-keywords:
+description: "Plusieurs versions des systèmes d’exploitation Linux peuvent maintenant utiliser Microsoft Rights Management SDK 4.2."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6b5bc9612ac17a2d6905200383d9b8df4c504efe
+ms.openlocfilehash: d6920b8ce09b39d98da9e9c197b17a1f13d21c8e
+
 
 ---
 
@@ -36,10 +32,7 @@ Plusieurs versions des systèmes d’exploitation Linux peuvent maintenant utili
 ## Systèmes d'exploitation pris en charge
 
 
-Ubuntu 14.04
-OpenSUSE 13.2
-CentOS 7
-**Remarque**  Les bibliothèques et les exemples ont aussi été correctement compilés sur Windows et OSX, mais ils ne sont pas entièrement pris en charge actuellement.
+Ubuntu 14.04 OpenSUSE 13.2 CentOS 7 **Remarque** Les bibliothèques et les exemples ont aussi été correctement compilés sur Windows et OSX, mais ils ne sont pas entièrement pris en charge pour l’instant.
 
  
 
@@ -66,6 +59,7 @@ Deux rubriques d’aide pour ce SDK sont hébergées sur Github. Elles fournisse
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Application de partage Rights Management &colon; installation et configuration pour les clients | Azure RMS
-description:
-keywords:
+title: "Application de partage Rights Management &colon; installation et configuration pour les clients | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: d3f923cf6f140c2caa75b7b0c8ac90a42be962a7
+
 
 ---
 
@@ -48,6 +42,7 @@ Pour installer l'application de partage RMS pour plateformes mobiles, vous pouve
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

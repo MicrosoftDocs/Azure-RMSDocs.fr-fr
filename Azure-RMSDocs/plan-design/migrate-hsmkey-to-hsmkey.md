@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Étape 2 &colon; Migration de clé protégée par HSM à clé protégée par HSM | Azure RMS
-description:
-keywords:
+title: "Étape 2 &colon; Migration de clé protégée par HSM à clé protégée par HSM | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
+ms.openlocfilehash: 7b531ebba1923653cb37c70a02fa888a40e96528
+
 
 ---
 
@@ -32,7 +26,7 @@ ms.suite: ems
 
 Ces instructions font partie du [chemin de migration d’AD RMS vers Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md), et s’appliquent uniquement si votre clé AD RMS est protégée par HSM et que vous souhaitez procéder à la migration vers Azure Rights Management avec une clé de locataire protégée par HSM. 
 
-Si ce n’est pas votre scénario de configuration choisi, revenez à l’[Étape 2. Exporter les données de configuration d’AD RMS, puis les importer dans Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) et choisissez une configuration différente.
+Si ce n’est pas votre scénario de configuration choisi, revenez à l’[Étape 2. Exporter les données de configuration d’AD RMS, puis les importer dans Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) et choisissez une configuration différente.
 
 > [!NOTE]
 > Ces instructions supposent que votre clé AD RMS est protégée par module. C’est le cas habituel. Si votre clé AD RMS est protégée par OCS, veuillez contacter [AskIPTeam@microsoft.com](mailto: askipteam@microsoft.com?subject=AD%20RMS%20migration%20with%20OCS-protected%20key) avant de suivre ces instructions.
@@ -43,13 +37,13 @@ Vous devez d'abord empaqueter votre clé HSM pour la préparer au transfert vers
 
 ## Partie 1 : empaquetage et transfert de votre clé HSM vers Azure RMS
 
-1.  Suivez les étapes de la section [Implémentation de la solution Bring Your Own Key (BYOK)](plan-implement-tenant-key.md#BKMK_ImplementBYOK) de la rubrique [Planification et implémentation de votre clé de client Azure Rights Management](plan-implement-tenant-key.md), à l’aide de la procédure **Générer et transférer votre clé de client par Internet** avec les exceptions suivantes :
+1.  Suivez les étapes de la section [Implémentation de la solution Bring Your Own Key (BYOK)](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) de la rubrique [Planification et implémentation de votre clé de client Azure Rights Management](plan-implement-tenant-key.md), à l’aide de la procédure **Générer et transférer votre clé de client par Internet** avec les exceptions suivantes :
 
     -   Ne suivez pas la procédure de **Génération de la clé de client**, car vous avez déjà l'équivalent de votre déploiement AD RMS. Vous devez identifier la clé utilisée par votre serveur AD RMS dans l'installation Thales, et utiliser cette clé lors de la migration. Les fichiers de clé chiffrés Thales sont généralement nommés **key_(keyAppName)_(keyIdentifier)** localement sur le serveur.
 
     -   Ne suivez pas la procédure de **Transfert de votre clé de client vers Azure RMS**, qui utilise la commande Add-AadrmKey.  Au lieu de cela, vous transférerez la clé HSM que vous avez préparée lors du téléchargement du domaine de publication approuvé exporté à l'aide de la commande Import-AadrmTpd.
 
-2.  Sur la station de travail connectée à Internet, dans la session Windows PowerShell, reconnectez-vous au service Azure RMS.
+2.  Sur la station de travail connectée à Internet, dans une session Windows PowerShell, reconnectez-vous au service Azure RMS.
 
 Maintenant que vous avez préparé votre clé HSM pour Azure RMS, vous êtes prêt à importer votre fichier de clé HSM et les données de configuration d'AD RMS.
 
@@ -72,10 +66,11 @@ Maintenant que vous avez préparé votre clé HSM pour Azure RMS, vous êtes pr�
     Disconnect-AadrmService
     ```
 
-Vous êtes maintenant prêt à passer à l’[Étape 3. Activer votre client RMS](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
+Vous êtes maintenant prêt à passer à l’[Étape 3. Activer votre client RMS](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Comment déterminer si des utilisateurs se sont inscrits à RMS for Individuals | Azure RMS
-description:
-keywords:
+title: "Comment déterminer si des utilisateurs se sont inscrits à RMS for Individuals | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: e577366be26f7296079751e72fb6531b9e28c504
+
 
 ---
 
@@ -42,6 +36,7 @@ En tant qu'administrateur, vous souhaitez sûrement savoir si vos utilisateurs s
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

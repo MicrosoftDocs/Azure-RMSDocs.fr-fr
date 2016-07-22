@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Application de partage Rights Management &colon; Historique de publication des versions | Azure RMS
-description:
-keywords:
+title: "Application de partage Rights Management &colon; Historique de publication des versions | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: b19eadd408837ebcd77b3ae2f9520f5286fcf41f
+ms.openlocfilehash: cad9d01735d8e649875bc6bba73d29573891e1d8
+
 
 ---
 
@@ -33,8 +26,21 @@ L’équipe Rights Management met régulièrement à jour l’application de par
 
 Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 
-> [!NOTE]
-> Si vous avez des commentaires ou une question concernant l’application de partage RMS, envoyez un e-mail à [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+> [!NOTE] Si vous avez des commentaires ou une question concernant l’application de partage RMS, envoyez un e-mail à [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+
+## Version 1.0.2191.0
+**Publiée le** : 16/06/2016
+
+**Correctifs** :
+
+- Le site de suivi des documents affiche maintenant le nombre correct d’affichages pour chaque document suivi.
+
+- Les modèles pour tous les paramètres régionaux sont désormais affichés comme étant disponibles pour les utilisateurs.
+
+- Après avoir utilisé le partage protégé pour un fichier PowerPoint, les modifications apportées à la version locale du fichier sont désormais enregistrées correctement.
+
+- Petit nombre de bogues mineurs et améliorations pour les messages d’erreur.
+
 
 ## Version 1.0.2004.0
 **Publiée le** : 11/12/2015
@@ -62,7 +68,7 @@ Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 
 -   Prise en charge de Multi-Factor Authentication (MFA) pour Azure RMS, ayant également pour effet d’éliminer la dépendance vis-à-vis de l’Assistant de connexion Microsoft pour les applications qui utilisent l’authentification moderne.
 
-    Pour plus d’informations, consultez la section [Multi-Factor authentication (MFA) et Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) dans [Configuration requise pour Azure Rights Management](../get-started/requirements-azure-rms.md).
+    Pour plus d’informations, consultez la section [Multi-Factor authentication (MFA) et Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) à partir de [Configuration requise pour Azure Rights Management](../get-started/requirements-azure-rms.md).
 
 ## Version 1.0.1784.0
 **Publiée le** : 30/7/2015
@@ -109,10 +115,11 @@ Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 
 **Nouvelles fonctionnalités** :
 
--   **Prise en charge pour plusieurs domaines de messagerie dans votre organisation** : Si vous utilisez AD RMS et que des utilisateurs au sein de votre organisation disposent de plusieurs domaines de messagerie, cette mise à jour leur permet de consommer du contenu protégé par des utilisateurs d’autres domaines au sein de votre organisation. Pour plus d’informations, consultez la section [AD RMS uniquement : Prise en charge de plusieurs domaines de messagerie au sein de votre organisation](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) du [Guide de l’administrateur de l’application de partage Rights Management](sharing-app-admin-guide.md).
+-   **Prise en charge pour plusieurs domaines de messagerie dans votre organisation** : Si vous utilisez AD RMS et que des utilisateurs au sein de votre organisation disposent de plusieurs domaines de messagerie, cette mise à jour leur permet de consommer du contenu protégé par des utilisateurs d’autres domaines au sein de votre organisation. Pour plus d’informations, consultez la section [AD RMS uniquement : Prise en charge de plusieurs domaines de messagerie au sein de votre organisation](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) du [Guide de l’administrateur de l’application de partage Rights Management](sharing-app-admin-guide.md).
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO3-->
 
 

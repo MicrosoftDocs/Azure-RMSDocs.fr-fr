@@ -1,27 +1,20 @@
 ---
-# required metadata
-
 title: Conditions requises pour Azure Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 06/17/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 50ebcd71336baeb68687e2d0c1ff1f0608925761
+ms.openlocfilehash: 72a75712da9efa201865440affa80461dcd7df53
+
 
 ---
 
@@ -60,6 +53,7 @@ Pour plus d’informations sur les exigences Azure RMS supplémentaires pour ce
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO3-->
 
 

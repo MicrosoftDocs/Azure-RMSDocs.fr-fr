@@ -1,26 +1,22 @@
 ---
-# required metadata
-
-title: Nouveautés et notes de publication | Azure RMS
-description: Décrit les modifications et les fonctionnalités importantes de cette nouvelle version du kit de développement logiciel (SDK) RMS.
-keywords:
+title: "Nouveautés et notes de publication | Azure RMS"
+description: "Décrit les modifications et les fonctionnalités importantes de cette nouvelle version du kit de développement logiciel (SDK) RMS."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: eccc0ba9c13e0c35c8d0c8877ce92f9b99e83835
+
 
 ---
 
@@ -29,7 +25,8 @@ ms.suite: ems
 ## Nouveautés
 Le kit de développement logiciel (SDK) Microsoft Rights Management 4.2 améliore encore le niveau de simplicité et de flexibilité relatives à l’activation de l’application RMS. Ce sujet décrit les modifications et les fonctionnalités importantes de cette nouvelle version du kit de développement logiciel (SDK) RMS.
 
--   [Nouveautés de notre mise à jour de décembre 2015](#new_for_our_december_2015_update)
+-   [Nouveau en juin 2016](#new_for_June_2016)
+-   [Mise à jour de décembre 2015](#december_2015_update)
 -   [Mise à jour de juillet 2015 : ajout de la prise en charge du développement Linux/C++](#july_2015_update_-_adds_support_for_linux___c___development)
 -   [Mise à jour de mai 2015 : ajout du contrôle d’enregistrement](#may_2015_update_-_adds_logging_control)
 -   [Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store](#february_2015_update_-_adds_windows_store_application_support)
@@ -38,7 +35,15 @@ Le kit de développement logiciel (SDK) Microsoft Rights Management 4.2 amélio
 -   [Notes de publication](#release-notes)
 -   [Forum aux questions](#frequently_asked_questions)
 
-### Nouveautés de notre mise à jour de décembre 2015
+### Nouveau en juin 2016
+
+- **Prise en charge de l’authentification moderne** : intègre la connexion basée sur la bibliothèque ADAL (Active Directory Authentication Library) aux applications compatibles avec RMS. Elle autorise les fonctionnalités de connexion telles que Multi-Factor Authentication (MFA), les fournisseurs d’identité tiers SAML avec les applications clientes RMS, l’authentification basée sur les cartes à puce et les certificats. Grâce à cette prise en charge, il n’est plus nécessaire d’utiliser le protocole d’authentification de base pour les applications compatibles avec RMS.
+- **Prise en charge du suivi des documents** : les développeurs peuvent désormais activer le suivi des documents quand ils protègent des documents dans leurs applications. 
+- Améliorations apportées aux performances
+- Corrections de bogues
+
+
+### Mise à jour de décembre 2015
 
 Le Kit de développement logiciel (SDK) passe désormais à la version 4.2 et bénéficie des ajouts suivants :
 
@@ -124,7 +129,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 -   **Prise en charge d’AD RMS** : les administrateurs informatiques peuvent utiliser des applications compatibles avec RMS sur des appareils mobiles avec les nouvelles extensions pour appareils mobiles du serveur AD RMS.
 -   **Consommation en mode hors connexion** : les utilisateurs finaux peuvent accéder hors connexion aux données protégées par RMS.
--   **Authentification séparée** : les développeurs peuvent utiliser leur propre bibliothèque d’authentification pour Azure RMS et AD RMS (ou utiliser la [bibliothèque d’authentification Azure AD (ADAL)](https://MSDN.Microsoft.Com/en-us/library/jj573266.aspx)).
+-   **Authentification séparée** : les développeurs peuvent utiliser leur propre bibliothèque d’authentification pour Azure RMS et AD RMS (ou utiliser la [bibliothèque d’authentification Azure AD (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)).
 -   **Interface utilisateur séparée** : les développeurs peuvent créer leur interface utilisateur afin de protéger et d’utiliser des documents protégés par RMS.
 -   **Reconception de l’API** : les développeurs peuvent bénéficier désormais d’une API de chiffrement et de déchiffrement, qui assure la cohérence des comportements RMS et de l’expérience utilisateur avec un minimum d’effort.
 
@@ -142,7 +147,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
     **Solution** : vérifiez que l’application n’autorise pas l’appel de plusieurs instances vers l’API Android.
 
--   Lorsque j’utilise la méthode [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array, int offset, int length)** avec une longueur différente de la valeur *array.length*, je ne suis pas en mesure d’utiliser le contenu ultérieurement à l’aide du Kit de développement logiciel.
+-   Lorsque j’utilise la méthode [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array, int offset, int length)** avec une longueur différente de la valeur *array.length*, je ne suis pas en mesure d’utiliser le contenu ultérieurement à l’aide du SDK.
 
     **Solution** : il s’agit d’un problème connu. Pour l’atténuer, transmettez toujours un tableau **byte \[\]** ayant la même valeur de longueur que le paramètre de longueur, ou utilisez la méthode [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array)**.
 
@@ -227,6 +232,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
  
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO2-->
 
 

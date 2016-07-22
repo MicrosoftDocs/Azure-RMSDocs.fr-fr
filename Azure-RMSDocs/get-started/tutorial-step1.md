@@ -1,26 +1,20 @@
 ---
-# required metadata
-
-title: Didacticiel de démarrage rapide Azure RMS – étape 1 |Azure RMS
-description: Première étape d’un didacticiel vous permettant de tester rapidement Microsoft Azure Rights Management au sein de votre organisation en seulement 5 étapes qui devraient vous prendre moins de 15 minutes.
-keywords:
+title: "Didacticiel de démarrage rapide Azure RMS – étape 1 |Azure RMS"
+description: "Première étape d’un didacticiel vous permettant de tester rapidement Microsoft Azure Rights Management au sein de votre organisation en seulement 5 étapes qui devraient vous prendre moins de 15 minutes."
+keywords: 
 author: Cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/29/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.assetid: 7c4798e6-34a0-4c3f-a47f-505764ddf322
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: fab51fefed8d3a347a52ab7c118bb40b3cc23b37
+ms.openlocfilehash: 80f2742bbaab9d3252cec6f6c709012ca81218d5
+
 
 ---
 
@@ -53,22 +47,25 @@ Même si vous avez un abonnement prenant en charge Azure Rights Management, le s
 
 ### Pour activer Rights Management à partir du Centre d’administration classique Office 365
 
-1.  Accédez au [portail Office 365](https://portal.office.com/) et connectez-vous avec votre compte professionnel ou scolaire.
+> [!NOTE]
+> Si vous utilisez la **préversion du Centre d’administration Office 365** plutôt que le Centre d’administration classique Office 365, vous pouvez utiliser les instructions indiquées dans [Comment activer Azure Rights Management à partir de la version préliminaire du centre d’administration Office 365](../deploy-use/activate-office365-preview.md), ou basculez vers la version classique pour utiliser ces instructions. Pour basculer, cliquez sur **Go to the old admin center** (Accéder à l’ancien Centre d’administration) dans la page **Accueil**, une fois que vous vous êtes connecté.
 
-2.  Si le Centre d’administration Office 365 ne s’affiche pas automatiquement, sélectionnez l’icône de lancement d’application dans l’angle supérieur gauche, puis choisissez **Admin**. La vignette **Admin** s'affiche uniquement pour les administrateurs Office 365.
+1.  Accédez au [portail Office 365](https://portal.office.com/) et connectez-vous avec votre compte d’administrateur général Office 365.
+
+2.  Si le centre d’administration Office 365 ne s’affiche pas automatiquement, sélectionnez l’icône de lancement d’application en haut à gauche, puis choisissez **Administrer**. La vignette **Admin** s'affiche uniquement pour les administrateurs Office 365.
 
     > [!TIP]
-    > Pour obtenir l’aide du centre d’administration, consultez [À propos du Centre d’administration Office 365 - Aide de l’administrateur](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
+    > Pour obtenir l'aide du centre d'administration, consultez [À propos du Centre d'administration Office 365 - Aide de l'administrateur](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
 
 3.  Dans le volet gauche, développez **PARAMÈTRES DE SERVICE**.
 
 4.  Cliquez sur **Rights Management**.
 
-5.  Dans la page **RIGHTS MANAGEMENT**, cliquez sur **Gérer**.
+5.  Sur la page **RIGHTS MANAGEMENT** , cliquez sur **Gérer**.
 
-6.  Dans la page **Rights Management**, cliquez sur **Activer**.
+6.  Dans la page **Rights Management** , cliquez sur **Activer**.
 
-7.  Quand l’invite **Voulez-vous activer Rights Management ?** apparaît, cliquez sur **activer**.
+7.  Lorsque l’invite **Voulez-vous activer Rights Management ?**apparaît, cliquez sur **activer**.
 
 Vous devriez maintenant voir **Rights management est activé** , ainsi que l’option de désactivation (vous devrez peut-être actualiser la page manuellement).
 
@@ -76,13 +73,13 @@ Vous devriez maintenant voir **Rights management est activé** , ainsi que l’o
 
 ### Pour activer Rights Management à partir du portail Azure Classic
 
-1.  Accédez au [portail Azure Classic](http://go.microsoft.com/fwlink/p/?LinkID=275081), puis connectez-vous.
+1.  Accédez au [portail Azure Classic](http://go.microsoft.com/fwlink/p/?LinkID=275081) et connectez-vous avec votre compte d’administrateur général Azure Active Directory.
 
-2.  Dans le volet gauche, cliquez sur **ACTIVE DIRECTORY**.
+2.  Dans le volet gauche, cliquez sur **Active Directory**.
 
-3.  Dans la page **active directory**, cliquez sur **RIGHTS MANAGEMENT**.
+3.  Dans la page **Active Directory** , cliquez sur **RIGHTS MANAGEMENT**.
 
-4.  Sélectionnez l’annuaire à gérer pour [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], cliquez sur **ACTIVER**, puis confirmez.
+4.  Sélectionnez l’annuaire à gérer pour [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], cliquez sur **ACTIVER**, puis confirmez votre action.
 
 **Statut de Rights Management** doit désormais afficher l’état **Actif** et l’option **ACTIVER** est remplacée par **DÉSACTIVER**.
 
@@ -102,6 +99,7 @@ Bien que ce ne soit pas inclus dans cette rubrique, pour un déploiement de prod
 [« Introduction](quick-start-tutorial.md)
 [Étape 2 »](tutorial-step2.md)
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

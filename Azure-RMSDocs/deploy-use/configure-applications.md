@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Configuration d’applications pour Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Configuration d’applications pour Azure Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 8fe934c51e852791d19fbb336deaf9cd7be9817b
+
 
 ---
 
@@ -55,13 +49,13 @@ Après avoir déployé Azure Rights Management (Azure RMS) pour votre organisati
 
     -   [Application de partage RMS pour Windows : installation et configuration](configure-sharing-app.md#the-rms-sharing-application-for-windows-installation-and-configuration)
 
-    -   [Application de partage RMS pour plateformes mobiles : Installation et gestion](configure-sharing-app.md#the-rms-sharing-application-for-mobile-platforms-installation-and-management)
+    -   [Application de partage RMS pour plateformes mobiles : installation et gestion](configure-sharing-app.md#the-rms-sharing-application-for-mobile-platforms-installation-and-management)
 
 
 Pour configurer des serveurs locaux tels que SharePoint Server et Exchange Server, consultez [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md).
 
 > [!TIP]
-> Pour obtenir des exemples généraux et des captures d’écran d’applications configurées pour utiliser Azure RMS, consultez [Azure RMS en action : ce que voient les administrateurs et les utilisateurs](../understand-explore/what-admins-users-see.md).
+> Pour obtenir des exemples généraux et des captures d’écran d’applications configurées de manière à utiliser Azure RMS, consultez [Azure RMS en action : ce que voient les administrateurs et les utilisateurs](../understand-explore/what-admins-users-see.md).
 
 
 Outre ces applications et services, il existe d’autres applications qui prennent en charge les API RMS. Cette catégorie inclut les applications métier développées en interne et les applications de fournisseurs de logiciels écrites avec le Kit RMS SDK. Pour ces applications, suivez les instructions fournies avec l'application.
@@ -80,6 +74,7 @@ Une fois vos applications configurées pour prendre en charge Azure Rights Manag
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

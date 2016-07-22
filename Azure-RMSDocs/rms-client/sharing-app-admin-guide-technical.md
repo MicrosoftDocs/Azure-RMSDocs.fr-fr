@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Présentation technique de l’application de partage Microsoft Rights Management | Azure RMS
-description:
-keywords:
+title: "Présentation technique de l’application de partage Microsoft Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
+ms.openlocfilehash: 4f63cb7911661104113d19ecd84ef7c80a874408
+
 
 ---
 
@@ -66,7 +60,8 @@ En outre, quand l'application de partage RMS protège en mode natif un fichier W
 
 Pour les fichiers protégés de manière générique, l'extension de nom de fichier d'origine est toujours remplacée par .pfile.
 
-> [!WARNING] Si vous disposez de pare-feu, proxys web ou logiciels de sécurité qui contrôlent et prennent des mesures en fonction des extensions de nom de fichier, vous devrez peut-être les reconfigurer pour qu’ils prennent en charge ces nouvelles extensions de nom de fichier.
+> [!WARNING]
+> Si vous disposez de pare-feu, proxys web ou logiciels de sécurité qui contrôlent et prennent des mesures en fonction des extensions de nom de fichier, vous devrez peut-être les reconfigurer pour qu'ils prennent en charge ces nouvelles extensions de nom de fichier.
 
 |Extension de nom de fichier d'origine|Extension de nom d'un fichier protégé par RMS|
 |--------------------------------|-------------------------------------|
@@ -144,6 +139,7 @@ Vous pouvez apporter des modifications similaires au Registre pour d'autres scé
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

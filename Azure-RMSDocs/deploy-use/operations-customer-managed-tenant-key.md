@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Gérée par le client - opérations de cycle de vie des clés de locataires | Azure RMS
-description:
-keywords:
+title: "Gérée par le client - opérations de cycle de vie des clés de locataires | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 496edca2e2323e17216858e2ab4844fdb0aa1fb0
+
 
 ---
 
@@ -71,6 +65,7 @@ En cas de violation, la meilleure action que vous ou Microsoft pourra mettre en 
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

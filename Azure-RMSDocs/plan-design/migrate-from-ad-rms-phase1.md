@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Migration d’AD RMS vers Azure Rights Management - Phase 1 | Azure RMS
-description:
-keywords:
+title: "Migration d’AD RMS vers Azure Rights Management - Phase 1 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 06/23/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: defe008a9b78026ccac584bb06762228456a2916
+
 
 ---
 
@@ -47,7 +40,8 @@ Cette étape est un processus comprenant deux phases :
 ### Exportation des données de configuration d'AD RMS
 Procédez comme suit sur tous les clusters AD RMS, pour tous les domaines de publication approuvés comprenant un contenu protégé pour votre organisation. Il est inutile d'exécuter cette procédure sur des clusters dédiés uniquement à la gestion des licences.
 
-> [!NOTE] Si vous utilisez la gestion des droits Windows Server 2003, au lieu de ces instructions, appliquez la procédure [Exportation de clé privée SLC, TUD, TPD et RMS](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx) décrite dans la rubrique [Migration de Windows RMS vers AD RMS dans une autre infrastructure](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx).
+> [!NOTE]
+> Si vous utilisez la gestion des droits Windows Server 2003, au lieu de ces instructions, appliquez la procédure [Exportation de clé privée SLC, TUD, TPD et RMS](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx) décrite dans la rubrique [Migration de Windows RMS vers AD RMS dans une autre Infrastructure](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx).
 
 #### Pour exporter les données de configuration (informations du domaine de publication approuvé)
 
@@ -80,7 +74,8 @@ Votre déploiement AD RMS actuel utilisera l'une des configurations suivantes po
 
 -   Protection par mot de passe à l'aide d'un fournisseur de services de chiffrement externe.
 
-> [!NOTE] Pour plus d’informations sur l’utilisation des modules de sécurité matériels avec AD RMS, consultez [Utilisation d’AD RMS avec des modules de sécurité matériels](http://technet.microsoft.com/library/jj651024.aspx).
+> [!NOTE]
+> Pour plus d'informations sur l'utilisation des modules de sécurité matériels avec AD RMS, consultez [Utilisation d'AD RMS avec des modules de sécurité matériels](http://technet.microsoft.com/library/jj651024.aspx).
 
 Les deux options de topologie de clé de client Azure RMS sont les suivantes : Microsoft gère votre clé de client (**gérée par Microsoft**) ou vous la gérez vous-même (**gérée par le client**). Quand vous gérez votre propre clé de locataire Azure RMS, ce scénario parfois appelé BYOK (« Bring Your Own Key ») nécessite un module de sécurité matériel (HSM) de Thales. Pour plus d’informations, consultez l’article [Planification et implémentation de la clé de locataire Azure Rights Management](plan-implement-tenant-key.md).
 
@@ -98,7 +93,8 @@ Le tableau suivant permet d'identifier la procédure à utiliser pour votre migr
 |Protection par mot de passe à l'aide d'un fournisseur de services de chiffrement externe|Gérée par le client (BYOK)|Contactez le fournisseur de votre HSM pour obtenir des instructions concernant le transfert de votre clé vers un HSM nShield Thales. Suivez ensuite les instructions de la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.|
 Avant de commencer ces procédures, assurez-vous que vous avez accès aux fichiers .xml créés lors de l'exportation des domaines de publication approuvés. Par exemple, ceux-ci peuvent être enregistrés sur une clé USB que vous déplacez du serveur AD RMS vers la station de travail connectée à Internet.
 
-> [!NOTE] Quelle que soit la manière dont vous stockez ces fichiers, suivez les meilleures pratiques pour les protéger, car ces données incluent votre clé privée.
+> [!NOTE]
+> Quelle que soit la manière dont vous stockez ces fichiers, suivez les meilleures pratiques pour les protéger, car ces données incluent votre clé privée.
 
 
 Pour effectuer l’Étape 2, sélectionnez les instructions correspondant à votre chemin de migration : 
@@ -120,27 +116,51 @@ Les instructions complètes pour cette étape figurent dans l’article [Activat
 
 Si votre client Azure RMS est déjà activé et que vous pouvez identifier ces ordinateurs, exécutez le script CleanUpRMS_RUN_Elevated.cmd sur ces ordinateurs, comme décrit à l’Étape 5. L'exécution de ce script force ceux-ci à réinitialiser l'environnement utilisateur, de sorte qu'ils téléchargent la clé de client et les modèles importés mis à jour.
 
+En outre, si vous avez créé des modèles personnalisés que vous souhaitez utiliser après la migration, vous devez les exporter et importer. Cette procédure est détaillée dans l’étape suivante. 
+
 ## Étape 4. Configurer les modèles importés
 Étant donné que l'état par défaut des modèles importés est **Archivé**, vous devez définir cet état sur **Publié** si vous souhaitez que les utilisateurs soient en mesure de les utiliser avec Azure RMS.
 
-De plus, si vos modèles AD RMS utilisaient le groupe **ANYONE**, ce groupe est automatiquement supprimé pendant l’importation des modèles dans Azure RMS. Vous devez ajouter manuellement le groupe ou les utilisateurs équivalents et les mêmes droits aux modèles importés. Le nom du groupe équivalent pour Azure RMS est **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<nom_client>.onmicrosoft.com**. Par exemple, ce groupe peut se présenter comme suit pour Contoso : **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+Les modèles que vous importez à partir d’AD RMS ressemblent et se comportent comme des modèles personnalisés que vous pouvez créer dans le portail Azure Classic. Pour convertir des modèles importés en modèles publiés pour que les utilisateurs puissent les afficher et les sélectionner à partir d’applications, consultez [Configuration de modèles personnalisés pour Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
-Si vous n’êtes pas sûr que vos modèles AD RMS incluent le groupe ANYONE, vous pouvez utiliser l’exemple de script Windows PowerShell pour identifier ces modèles. Pour plus d’informations sur l’utilisation de Windows PowerShell avec AD RMS, consultez [Utilisation de Windows PowerShell pour administrer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+En plus de publier vos modèles nouvellement importés, vous devrez peut-être effectuer deux modifications importantes pour les modèles avant de poursuivre la migration. Pour offrir une expérience plus cohérente aux utilisateurs pendant le processus de migration, n’apportez pas de modifications supplémentaires aux modèles importés et évitez de publier les deux modèles par défaut fournis avec Azure RMS ou d’en créer à ce stade. Au lieu de cela, attendez que le processus de migration soit terminé et d'avoir désaffecté les serveurs AD RMS.
+
+Voici les modifications que vous pouvez être amené à apporter aux modèles pour cette étape :
+
+- Si vous avez créé des modèles personnalisés dans Azure RMS avant la migration, vous devez manuellement les exporter et importer.
+
+- Si vos modèles dans AD RMS utilisaient le groupe **ANYONE**, vous devez ajouter manuellement les droits et groupe équivalents.
+
+## Procédure à effectuer si vous avez créé des modèles personnalisés avant la migration
+
+Si vous avez créé des modèles personnalisés avant la migration, que ce soit avant ou après l’activation d’Azure RMS, les modèles ne sont pas disponibles pour les utilisateurs après la migration, même si vous les avez définis sur **Publié**. Pour les mettre à la disposition des utilisateurs, vous devez effectuer les opérations suivantes : 
+
+1. Identifiez ces modèles et notez leur ID de modèle, en exécutant l’applet de commande [Get-AadrmTemplate](https://msdn.microsoft.com/library/dn727079.aspx). 
+
+2. Exportez les modèles à l’aide de l’applet de commande PowerShell d’Azure RMS [Export-AadrmTemplate](https://msdn.microsoft.com/library/dn727078.aspx).
+
+3. Importez les modèles à l’aide de l’applet de commande PowerShell d’Azure RMS [Import-AadrmTemplate](https://msdn.microsoft.com/library/dn727077.aspx).
+
+Vous pouvez ensuite publier ou archiver ces modèles comme vous le feriez pour tout autre modèle que vous créez après la migration.
+
+
+## Procédure à effectuer si vos modèles dans AD RMS utilisaient le groupe **ANYONE**
+
+Si vos modèles AD RMS utilisaient le groupe **ANYONE**, ce groupe est automatiquement supprimé pendant l’importation des modèles dans Azure RMS. Vous devez ajouter manuellement le groupe ou les utilisateurs équivalents et les mêmes droits aux modèles importés. Le nom du groupe équivalent pour Azure RMS est **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<nom_client>.onmicrosoft.com**. Par exemple, ce groupe peut se présenter comme suit pour Contoso : **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+
+Si vous n’êtes pas sûr que vos modèles AD RMS incluent le groupe ANYONE, vous pouvez utiliser l’exemple de script Windows PowerShell suivant pour identifier ces modèles. Pour plus d’informations sur l’utilisation de Windows PowerShell avec AD RMS, consultez [Utilisation de Windows PowerShell pour administrer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
 Vous pouvez afficher le groupe créé automatiquement pour votre organisation si vous copiez l’un des modèles de stratégie de droits par défaut dans le portail Azure Classic et que vous identifiez ensuite le **NOM D’UTILISATEUR** dans la page **DROITS**. En revanche, vous ne pouvez pas ajouter ce groupe à un modèle créé ou importé manuellement à partir du portail Azure Classic et devez utiliser l’une des options PowerShell d’Azure RMS suivantes :
 
--   Utilisez l’applet de commande PowerShell [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) pour définir le groupe et les droits « AllStaff » en tant qu’objet de définition de droits, puis réexécutez cette commande pour chacun des autres groupes ou utilisateurs déjà dotés de droits dans le modèle d’origine, outre le groupe ANYONE. Ajoutez ensuite ces objets de définition de droits aux modèles à l’aide de l’applet de commande [Set-AadrmTemplateProperty](https://msdn.microsoft.com/en-us/library/azure/dn727076.aspx).
+-   Utilisez l’applet de commande PowerShell [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) pour définir le groupe et les droits « AllStaff » en tant qu’objet de définition de droits, puis réexécutez cette commande pour chacun des autres groupes ou utilisateurs déjà dotés de droits dans le modèle d’origine, outre le groupe ANYONE. Ajoutez ensuite ces objets de définition de droits aux modèles à l’aide de l’applet de commande [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx).
 
 -   Utilisez l’applet de commande [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx) pour exporter le modèle vers un fichier .XML que vous pourrez modifier pour ajouter le groupe et les droits « AllStaff » aux groupes et droits existants, puis utilisez l’applet de commande [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx) pour réimporter cette modification dans Azure RMS.
 
-> [!NOTE] Ce groupe équivalent « AllStaff » n’est pas exactement identique au groupe ANYONE dans AD RMS : le groupe « AllStaff » comprend tous les utilisateurs de votre client Azure, alors que le groupe ANYONE comprend tous les utilisateurs authentifiés, qui pourraient être extérieurs à votre organisation.
+> [!NOTE]
+> Ce groupe équivalent « AllStaff » n’est pas exactement identique au groupe ANYONE dans AD RMS : le groupe « AllStaff » comprend tous les utilisateurs de votre client Azure, alors que le groupe ANYONE comprend tous les utilisateurs authentifiés, qui pourraient être extérieurs à votre organisation.
 > 
 > Compte tenu de cette différence entre les deux groupes, vous pouvez aussi être amené à ajouter des utilisateurs externes, en plus du groupe « AllStaff ». Les adresses de messagerie externes ne sont pas actuellement prises en charge pour les groupes.
 
-Les modèles que vous importez à partir d’AD RMS ressemblent et se comportent comme des modèles personnalisés que vous pouvez créer dans le portail Azure Classic. Pour convertir des modèles importés en modèles publiés pour que les utilisateurs puissent les afficher et les sélectionner à partir d’applications, ou pour apporter d’autres modifications aux modèles, consultez [Configuration de modèles personnalisés pour Azure Rights Management](../deploy-use/configure-custom-templates.md).
-
-> [!TIP]
-> Pour offrir une expérience plus cohérente aux utilisateurs pendant le processus de migration, n’apportez pas de modifications aux modèles importés hormis ces deux modifications. De même, et évitez de publier les deux modèles par défaut fournis avec Azure RMS ou d’en créer des nouveaux à ce stade. Au lieu de cela, attendez que le processus de migration soit terminé et d'avoir désaffecté les serveurs AD RMS.
 
 ### Exemple de script Windows PowerShell permettant d’identifier les modèles AD RMS qui incluent le groupe ANYONE
 Cette section contient l’exemple de script qui vous permet d’identifier les modèles AD RMS pour lesquels le groupe ANYONE a été défini, comme décrit dans la section précédente.
@@ -185,6 +205,7 @@ Passez à la [Phase 2 : Configuration côté client](migrate-from-ad-rms-phase
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

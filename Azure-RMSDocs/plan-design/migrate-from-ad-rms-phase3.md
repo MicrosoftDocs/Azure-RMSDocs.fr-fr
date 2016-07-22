@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Migration d’AD RMS vers Azure Rights Management - Phase 3 | Azure RMS
-description:
-keywords:
+title: "Migration d’AD RMS vers Azure Rights Management - Phase 3 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,17 +10,11 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 75cce1d0e5a1cff0d4f6609d0f084fda1af62951
+
 
 ---
 
@@ -36,7 +28,7 @@ Utilisez les informations suivantes pour la Phase 3 de la migration d’AD RMS v
 
 ## Étape 6. Configurer l'intégration de l'IRM pour Exchange Online
 
-Si vous avez précédemment importé votre TDP d'AD RMS dans Exchange Online, vous devez supprimer cette TDP pour éviter des conflits de modèles et de stratégies après la migration vers Azure RMS. Pour ce faire, utilisez l’applet de commande [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/en-us/library/jj200720%28v=exchg.150%29.aspx) d’Exchange Online.
+Si vous avez précédemment importé votre TDP d'AD RMS dans Exchange Online, vous devez supprimer cette TDP pour éviter des conflits de modèles et de stratégies après la migration vers Azure RMS. Pour ce faire, utilisez l’applet de commande [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) d’Exchange Online.
 
 Si vous avez choisi une topologie de clé de locataire Azure RMS **gérée par Microsoft**:
 
@@ -82,17 +74,17 @@ Enfin, pour cette étape, si vous avez importé plusieurs TPD dans Azure RMS, qu
     Set-IRMConfiguration -RefreshServerCertificates
     ```
 
-6.  Sur chaque serveur Exchange, réinitialisez IIS, par exemple en exécutant une invite de commandes en tant qu’administrateur et en tapant **iisreset**.
+6.  Sur chaque serveur Exchange, réinitialisez IIS, par exemple, en exécutant une invite de commandes en tant qu’administrateur et en tapant **iisreset**.
 
 ### Désactivation d'IRM sur les serveurs SharePoint et suppression de la configuration AD RMS
 
 1.  Assurez-vous qu'aucun document n'est extrait des bibliothèques protégées par RMS. Les documents extraits deviendront inaccessibles à la fin de cette procédure.
 
-2.  Sur le site web Administration centrale de SharePoint, dans la section **Lancement rapide**, cliquez sur **Sécurité**.
+2.  Sur le site web Administration centrale de SharePoint, dans la section **Lancement rapide** , cliquez sur **Sécurité**.
 
-3.  Dans la page **Sécurité**, dans la section **Stratégie d’information**, cliquez sur **Configurer la gestion des droits relatifs à l’information**.
+3.  Dans la page **Sécurité** , dans la section **Stratégie d'information** , cliquez sur **Configurer la gestion des droits relatifs à l'information**.
 
-4.  Dans la page **Gestion des droits relatifs à l’information**, dans la section **Gestion des droits relatifs à l’information**, sélectionnez **Ne pas utiliser IRM sur ce serveur**, puis cliquez sur **OK**.
+4.  Dans la page **Gestion des droits relatifs à l'information** , dans la section **Gestion des droits relatifs à l'information** , sélectionnez **Ne pas utiliser IRM sur ce serveur**, puis cliquez sur **OK**.
 
 5.  Sur chaque ordinateur SharePoint Server, supprimez le contenu du dossier \ProgramData\Microsoft\MSIPC\Server\*&lt;SID du compte exécutant SharePoint Server&gt;*.
 
@@ -219,8 +211,9 @@ L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS 
 Une fois ces procédures terminées, vous pouvez lire la section **Étapes suivantes** de l’article [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
 ## Étapes suivantes
-Pour poursuivre la migration, passez à la [Phase 4 : Tâches de post-migration](migrate-from-ad-rms-phase4.md).
+Pour poursuivre la migration, passez à la [Phase 4 - Tâches de post-migration](migrate-from-ad-rms-phase4.md).
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

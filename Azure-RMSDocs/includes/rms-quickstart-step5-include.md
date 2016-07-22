@@ -17,7 +17,7 @@ Cette étape est facultative, mais la plupart des utilisateurs souhaitent savoir
 
 2.  Si la page de **protection et partage de vos conditions d’utilisation** apparaît, cliquez sur **Se connecter** et indiquez à nouveau votre nom d’utilisateur et votre mot de passe.
 
-3.  Dans la page **Vos documents partagés**, vous verrez le document que vous avez joint au courrier électronique, **Confidential.docx**. À ce stade, il s’agit du seul fichier affiché, mais la liste s’allongera à mesure que vous partagerez des fichiers.
+3.  La page **Vos documents partagés** répertorie le document que vous avez joint à l’e-mail, **Confidential.docx**. À ce stade, il s’agit du seul fichier affiché, mais la liste s’allongera à mesure que vous partagerez des fichiers.
 
     Sur cette page, vous pouvez voir le moment où vous avez partagé le document (moment de l’envoi du courrier électronique contenant la pièce jointe protégée), la date de la dernière activité et le nom du destinataire auquel vous avez envoyé le courrier. Cliquez sur le nom du document pour plus de détails.
 
@@ -40,6 +40,6 @@ Si vous êtes prêt à déployer Azure RMS, consultez la [Feuille de route pour
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

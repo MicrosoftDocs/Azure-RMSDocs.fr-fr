@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Informations de référence sur PowerShell pour les modèles personnalisés | Azure RMS
-description:
-keywords:
+title: "Informations de référence sur PowerShell pour les modèles personnalisés | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
+ms.openlocfilehash: 645f9ed4080e3b38fcda9afe148923c021046724
+
 
 ---
 
@@ -35,7 +29,8 @@ Toutes les opérations de création et de gestion des modèles que vous pouvez e
 
 Vous pouvez aussi avoir recours à l’exportation et à l’importation pour sauvegarder et restaurer vos modèles personnalisés. Nous vous recommandons de sauvegarder régulièrement vos modèles personnalisés. De cette manière, si vous apportez une modification qui n’était pas désirée, vous pourrez facilement rétablir une version antérieure.
 
-> [!IMPORTANT]Pour utiliser Windows PowerShell pour créer et gérer des modèles de stratégies de droits Azure RMS, vous devez disposer au minimum de la version 2.0.0.0 du [module Windows PowerShell pour Azure RMS](http://go.microsoft.com/fwlink/?LinkId=257721).
+> [!IMPORTANT]
+> Pour utiliser Windows PowerShell pour créer et gérer des modèles de stratégies de droits Azure RMS, vous devez disposer au minimum de la version 2.0.0.0 du [module Windows PowerShell pour Azure RMS](http://go.microsoft.com/fwlink/?LinkId=257721).
 > 
 > Si vous avez déjà installé ce module PowerShell, exécutez la commande suivante dans une fenêtre PowerShell pour vérifier le numéro de version : `(Get-Module aadrm -ListAvailable).Version`
 
@@ -64,6 +59,7 @@ Applets de commande prenant en charge la création et la gestion de modèles :
 ## Voir aussi
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

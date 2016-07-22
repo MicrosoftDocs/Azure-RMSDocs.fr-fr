@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Configuration pour le Windows Store | Azure RMS
-description: Les applications du Windows Store peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leurs applications.
-keywords:
+description: "Les applications du Windows Store peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leurs applications."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 0b8e0fb6d872506ac3529bd137286f0e8fa562ee
+
 
 ---
 
@@ -41,7 +36,7 @@ Cette rubrique vous guide tout au long du processus de configuration de votre en
 Vous devez disposer des logiciels suivants sur votre système de développement :
 
 -   Système d’exploitation [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet)
--   [SDK Windows pour Windows 8.1](https://msdn.microsoft.com/en-us/windows/desktop/bg162891.aspx)
+-   [SDK Windows pour Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) ou version ultérieure, ou Visual Studio 2012 Express (inclus dans le SDK Windows pour Windows 8.0/8.1)
 -   Package RMS SDK 4.2 pour les applications du Windows Store Pour plus d’informations, consultez [Prise en main](get-started.md).
 -   Bibliothèque d’authentification : Nous vous recommandons d’utiliser la [bibliothèque Azure ADAL (Active Directory Authentication Library)](https://msdn.microsoft.com/en-us/library/jj573266.aspx), mais vous pouvez aussi recourir à d’autres bibliothèques d’authentification.
@@ -89,6 +84,7 @@ Vous êtes maintenant prêt à créer vos propres applications du Windows Store.
 [Référence de l’API Windows](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

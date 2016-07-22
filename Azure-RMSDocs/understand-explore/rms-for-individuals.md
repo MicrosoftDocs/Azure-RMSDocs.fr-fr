@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: RMS for individuals et Azure Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 6a27d5a2a1bad24521a551465fd9324f2a826376
+
 
 ---
 
@@ -40,13 +34,14 @@ Ces utilisateurs peuvent créer un compte professionnel ou scolaire gratuit à u
 
 Pour plus d’informations sur la façon dont vous pouvez protéger des fichiers à l’aide de l’application de partage Rights Management disponible gratuitement, consultez le [Guide de l’utilisateur de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md).
 
-RMS for Individuals est un exemple d'inscription en libre-service prise en charge par Azure Active Directory. Pour plus d’informations sur son fonctionnement, consultez [Qu’est-ce qu’une inscription libre-service à Azure ?](/active-directory/active-directory-self-service-signup) dans la documentation Azure Active Directory. 
+RMS for Individuals est un exemple d'inscription en libre-service prise en charge par Azure Active Directory. Pour plus d’informations sur son fonctionnement, voir [Qu’est-ce qu’une inscription libre-service à Azure ?](/active-directory/active-directory-self-service-signup) dans la documentation d’Azure Active Directory. 
 
 ## Étapes suivantes
 Consultez [Inscription à RMS for individuals](rms-for-individuals-user-sign-up.md) pour obtenir des instructions pas à pas et une présentation technique de ce qui se passe en arrière-plan. 
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -17,6 +17,6 @@ Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 Lançons-nous !
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -56,6 +56,6 @@ Il est possible d’interroger les autorisations dont dispose un utilisateur sur
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

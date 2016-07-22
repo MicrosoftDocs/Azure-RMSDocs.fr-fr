@@ -42,6 +42,6 @@ Maintenant que vous avez envoyé votre document protégé, vous pouvez demander 
 |Options de la boîte de dialogue **partage protégé** →|[Options de boîte de dialogue pour l'application de partage Rights Management](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

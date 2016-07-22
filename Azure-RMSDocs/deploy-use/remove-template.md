@@ -42,6 +42,6 @@ L’état passe de **Publié** à **Archivé**. Si vous changez d’avis, sélec
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

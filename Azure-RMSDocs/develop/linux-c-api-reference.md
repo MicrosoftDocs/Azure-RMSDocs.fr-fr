@@ -33,6 +33,6 @@ La référence d’API pour notre prise en charge de système d’exploitation L
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

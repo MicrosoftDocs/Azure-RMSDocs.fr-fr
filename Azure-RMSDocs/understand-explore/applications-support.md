@@ -63,6 +63,6 @@ Découvrez comment chacun des éléments suivants prend en charge Azure RMS :
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

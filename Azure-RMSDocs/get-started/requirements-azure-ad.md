@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: "Conditions requises pour Azure RMS : Azure AD Directory | Azure RMS"
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 75b2414cc360704deb6107d6c0038f5b0bf7fa70
+
 
 ---
 
@@ -42,7 +36,8 @@ Pour plus d’informations, consultez les ressources suivantes dans la documenta
 
 Si vous souhaitez intégrer votre annuaire Azure AD à vos forêts AD locales, consultez [Intégration de vos identités locales avec Azure Active Directory](/active-directory/active-directory-aadconnect).
 
-> [!NOTE] Si vous avez des appareils mobiles ou des ordinateurs Mac qui s’authentifient localement via les services AD FS ou un fournisseur d’authentification équivalent :
+> [!NOTE]
+> Si vous avez des appareils mobiles ou des ordinateurs Mac qui s'authentifient localement par le biais des services AD FS ou d'un fournisseur d'authentification équivalent :
 > 
 > -   Vous devez utiliser les services AD FS sur la version serveur minimale de **Windows Server 2012 R2** ou un autre fournisseur d’authentification prenant en charge le protocole OAuth 2.0.
 
@@ -80,6 +75,7 @@ Pour vérifier les autres conditions requises, consultez [Conditions requises po
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

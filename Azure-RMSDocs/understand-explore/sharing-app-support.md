@@ -59,6 +59,6 @@ Pour voir comment d’autres applications et services prennent en charge Azure R
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: "Scénario : échange sécurisé d’informations confidentielles entre cadres| Azure RMS"
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: def8b7e98fd55a3d028978ffc9f8e41e38a5622c
+
 
 ---
 
@@ -56,7 +50,7 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
 |Azure Rights Management est activé|[Activation d'Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Une de ces configurations :<br /><br />- Exchange Online est activé pour Azure Rights Management<br /><br />- Le connecteur RMS est installé et configuré pour Exchange sur site|Pour Exchange Online : consultez la section **Exchange Online : configuration de la gestion des droits relatifs à l’information** dans [Configuration d’applications pour Azure Rights Management](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />Pour Exchange sur site : [Déploiement du connecteur Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
 |Vous avez configuré un modèle personnalisé comme décrit ci-après|[Configuration de modèles personnalisés pour Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|Vous avez configuré une règle de protection de transport pour IRM, comme décrit plus loin dans cet article|Pour Exchange Online : [Créer une règle de protection de transport](https://technet.microsoft.com/library/dd302432.aspx)<br /><br />Pour Exchange 2013 : [Créer une règle de protection de transport](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.150%29.asp)<br /><br />Pour Exchange 2010 : [Créer une règle de protection de transport](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.141%29.aspx)|
+|Vous avez configuré une règle de protection de transport pour IRM, comme décrit plus loin dans cet article|Pour Exchange Online : [Créer une règle de protection de transport](https://technet.microsoft.com/library/dd302432.aspx)<br /><br />Pour Exchange 2013 : [Créer une règle de protection de transport](https://technet.microsoft.com/library/dd302432%28v=exchg.150%29.asp)<br /><br />Pour Exchange 2010 : [Créer une règle de protection de transport](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.141%29.aspx)|
 
 ### Pour configurer le modèle personnalisé pour les cadres
 
@@ -138,6 +132,7 @@ Lors de l’envoi d’informations confidentielles de votre société à un autr
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jul16_HO3-->
 
 

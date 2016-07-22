@@ -41,6 +41,6 @@ Pour plus d’informations sur le *mode serveur*, consultez [Application types](
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

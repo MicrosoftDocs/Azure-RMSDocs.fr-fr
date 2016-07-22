@@ -108,6 +108,6 @@ Vous êtes maintenant prêt à passer à l’[Étape 3. Activer votre client RMS
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

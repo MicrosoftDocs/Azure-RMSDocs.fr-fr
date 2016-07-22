@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Configuration pour Android | Azure RMS
-description: Les applications Android peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leurs applications.
-keywords:
+description: "Les applications Android peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leurs applications."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 30fad88ff664e2df935c8f2cfd28f8b1fe251f67
+
 
 ---
 
@@ -50,7 +46,7 @@ Nous recommandons les logiciels suivants sur votre système de développement :
 
     Ce SDK peut être utilisé pour développer pour Android 4.0.3 (API niveau 15) et ultérieur.
 
--   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/en-us/library/jj573266.aspx). Vous pouvez cependant utiliser aussi d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
+-   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Vous pouvez cependant utiliser aussi d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
 
     Pour plus d’informations, consultez [ADAL pour Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
@@ -131,12 +127,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 -   Vous pouvez vérifier l’étape du manifeste en consultant le manifeste dans l’affichage de l’éditeur de texte. Vérifiez que les lignes suivantes s’affichent :
 
 
-    <uses-sdk
-         android:minSdkVersion="15"
-         android:targetSdkVersion="19"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission/>
+    <uses-sdk      android:minSdkVersion="15"      android:targetSdkVersion="19"/> <uses-permission android:name="android.permission.INTERNET"/> <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <uses-permission/>
 
 
 **Remarque** : Le SDK utilise *android.support.v4*
@@ -158,6 +149,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

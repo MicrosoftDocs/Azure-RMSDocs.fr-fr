@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: "Scenario : partager un fichier Office avec des utilisateurs d’une autre organisation | Azure RMS"
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 6a6f9d8c0a98752413a99d30926f2b5bc8af193d
+
 
 ---
 
@@ -74,9 +68,10 @@ En utilisant le modèle suivant, copiez et collez les instructions utilisateur d
 
     -   Les étapes n'incluent pas la définition d'une date d'expiration. Si les informations ne doivent pas être utilisées après une certaine date, ajoutez une autre étape pour définir un délai d’expiration approprié, par exemple, 90 jours après l’envoi du message électronique.
 
-    > [!NOTE] Pour plus d’informations sur chacune des options que les utilisateurs peuvent sélectionner, consultez [Options de boîte de dialogue pour l’application de partage Rights Management](https://technet.microsoft.com/library/dn574738.aspx)
+    > [!NOTE]
+    > Pour plus d'informations sur chacune des options que les utilisateurs peuvent sélectionner, consultez [Options de boîte de dialogue pour l'application de partage Rights Management](https://technet.microsoft.com/library/dn574738.aspx)
 
-4.  Apportez les autres modifications de votre choix à cet ensemble d’instructions, puis adressez-le à ces utilisateurs.
+4.  Apportez les autres modifications que vous voulez éventuellement apporter à cet ensemble d’instructions, puis adressez-le à ces utilisateurs.
 
 L’exemple de documentation illustre la façon dont ces instructions se présentent aux utilisateurs une fois vos personnalisations effectuées.
 
@@ -88,7 +83,7 @@ L’exemple de documentation illustre la façon dont ces instructions se présen
 
     ![Capture d’écran du partage de document Office à l’aide d’Outlook](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
 
-2.  Dans la boîte de dialogue **Partager le fichier protégé**, sélectionnez **Visionneuse – Affichage uniquement**:
+2.  Dans la boîte de dialogue **Partager le fichier protégé** , sélectionnez **Visionneuse – Affichage uniquement**:
 
     ![boîte de dialogue Partager le fichier protégé - Visionneuse - Affichage uniquement](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
 
@@ -159,6 +154,7 @@ Utilisez le [portail de suivi de document](https://track.azurerms.com/) pour sav
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

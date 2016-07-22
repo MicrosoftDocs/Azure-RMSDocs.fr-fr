@@ -95,6 +95,6 @@ Pour plus d’informations, consultez [RMS for individuals et Azure Rights Manag
 Pour vérifier les autres conditions requises, consultez [Conditions requises pour Azure Rights Management](requirements-azure-rms.md).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

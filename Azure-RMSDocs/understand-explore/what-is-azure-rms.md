@@ -62,6 +62,6 @@ Toutefois, si vous êtes prêt à déployer Azure RMS pour votre organisation, 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

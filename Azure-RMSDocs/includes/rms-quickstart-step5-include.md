@@ -40,6 +40,6 @@ Si vous êtes prêt à déployer Azure RMS, consultez la [Feuille de route pour
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

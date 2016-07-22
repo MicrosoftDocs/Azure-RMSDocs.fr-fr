@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Utiliser des raccourcis clavier dans l’application de partage Rights Management | Azure RMS
-description:
-keywords:
+title: "Utiliser des raccourcis clavier dans l’application de partage Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 72760134-94e0-4699-b20c-07b96aa061f1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: 789807df983a2a895b6cddc27795be651ca50239
+
 
 ---
 
@@ -40,12 +34,13 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 -   [Exemples d’utilisation de l’application de partage RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

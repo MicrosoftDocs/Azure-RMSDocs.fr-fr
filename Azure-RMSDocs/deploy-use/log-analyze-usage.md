@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Journalisation et analyse de l’utilisation d’Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Journalisation et analyse de l’utilisation d’Azure Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 06/30/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5ab8d4ef132eec9991c0ff789f2b2dfa7bdf2cd8
+ms.openlocfilehash: 845a47f526754f291c27a3c2bbd80af736b44992
+
 
 ---
 
@@ -47,7 +41,8 @@ Vous pouvez ensuite utiliser les journaux Azure Rights Management dans le cadre 
 
     En cas de fuite d’informations, vous devrez très certainement fournir une liste des personnes qui ont accédé récemment à des documents spécifiques ainsi que le type d’informations auxquelles a pu accéder un individu suspecté. Vous pouvez répondre à ces types de questions quand vous utilisez Azure Rights Management et la journalisation, car les personnes qui consultent du contenu protégé doivent toujours obtenir une licence Rights Management pour ouvrir des documents et des images protégés par Azure Rights Management, même si ces fichiers sont déplacés par e-mail ou s’ils sont copiés sur des lecteurs USB ou d’autres dispositifs de stockage. Cela signifie que vous pouvez utiliser les journaux storage devices en tant que source d’informations fiable pour une analyse légale quand vous protégez vos données à l’aide d’Azure Rights Management.
 
-> [!NOTE] Si vous vous intéressez uniquement à la journalisation des tâches d’administration pour Azure Rights Management et que vous ne souhaitez pas suivre la manière dont les utilisateurs utilisent Rights Management, vous pouvez utiliser l’applet de commande Windows PowerShell [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) pour Azure Rights Management.
+> [!NOTE]
+> Si vous vous intéressez uniquement à la journalisation des tâches d’administration pour Azure Rights Management et que vous ne souhaitez pas suivre la manière dont les utilisateurs utilisent Rights Management, vous pouvez utiliser l’applet de commande Windows PowerShell [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) pour Azure Rights Management.
 > 
 > Vous pouvez également utiliser le portail Azure Classic pour obtenir des rapports détaillés tels que **Résumé RMS**, **Utilisateurs RMS actifs**, **Plateformes des appareils RMS** et **Utilisation d’applications RMS**. Pour accéder à ces rapports à partir du portail Azure Classic, cliquez sur **Active Directory**, sélectionnez et ouvrez un annuaire, puis cliquez sur **RAPPORTS**.
 
@@ -56,7 +51,8 @@ Pour plus d’informations sur la journalisation de l’utilisation d’Azure Ri
 ## Comment activer la journalisation de l’utilisation d’Azure Rights Management
 Depuis février 2016, la journalisation de l’utilisation d’Azure Rights Management est activée par défaut pour tous les clients. Cela s’applique aux clients qui ont activé leur service Azure RMS avant février 2016 et à ceux qui l’activent après février 2016. 
 
-> [!NOTE] Le stockage des journaux ou la fonctionnalité de journalisation n’entraînent pas de frais supplémentaires.
+> [!NOTE]
+> Le stockage des journaux ou la fonctionnalité de journalisation n’entraînent pas de frais supplémentaires.
 > 
 > Si vous utilisiez la journalisation de l’utilisation pour Azure RMS avant février 2016, vous aviez besoin d’un abonnement à Azure et d’une capacité de stockage suffisante sur Azure, ce qui n’est plus le cas.
 
@@ -143,17 +139,17 @@ Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des c
 |--------------|-----------------|---------------|-----------------|
 |date|Date|Date UTC du traitement de la demande.<br /><br />La source est l’horloge locale du serveur qui a traité la demande.|25-06-2013|
 |heure|Heure|Heure UTC (au format 24 h) du traitement de la demande.<br /><br />La source est l’horloge locale du serveur qui a traité la demande.|21:59:28|
-|row-id|Text|GUID unique de cet enregistrement de journal.<br /><br />Cette valeur est utile lorsque vous agrégez des journaux ou lorsque vous copiez des journaux dans un autre format.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
+|row-id|Text|GUID unique de cet enregistrement de journal. En l’absence de valeur, utilisez la valeur correlation-id pour identifier l’entrée.<br /><br />Cette valeur est utile lorsque vous agrégez des journaux ou lorsque vous copiez des journaux dans un autre format.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
 |request-type|Nom|Nom de l’API RMS demandée.|AcquireLicense|
-|user-id|Chaîne|Utilisateur ayant adressé la demande.<br /><br />La valeur est placée entre guillemets simples. Certains types de demande sont anonymes, auquel cas la valeur est :|« joe@contoso.com »|
-|result|Chaîne|« Success » si la demande a été traitée correctement.<br /><br />Type d’erreur (entre guillemets simples) si la demande échoue.|« Success »|
+|user-id|Chaîne|Utilisateur ayant adressé la demande.<br /><br />La valeur est placée entre guillemets simples. Les appels à partir d’une clé de locataire gérée par vous (BYOK) ont la valeur **"**, qui s’applique également quand les types de demande sont anonymes.|« joe@contoso.com »|
+|result|Chaîne|« Success » si la demande a été traitée correctement.<br /><br />Type d’erreur (entre guillemets simples) si la demande échoue.|« Success »|
 |correlation-id|Text|GUID commun au journal du client RMS et au journal du serveur pour une demande donnée.<br /><br />Cette valeur peut être utile pour résoudre les problèmes liés au client.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Text|GUID (entre accolades) qui identifie le contenu protégé (par exemple, un document).<br /><br />Ce champ contient une valeur uniquement si le champ request-type est égal à AcquireLicense. Sinon, il reste vierge pour les autres types de demande.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|Chaîne|Adresse de messagerie du propriétaire du document.|alice@contoso.com|
 |issuer|Chaîne|Adresse de messagerie de l’émetteur du document.|alice@contoso.com (ou) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com’|
-|Template-id|Chaîne|ID du modèle utilisé pour protéger le document.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|File-name|Chaîne|Nom de fichier du document qui a été protégé. <br /><br />Actuellement, certains fichiers (tels que les documents Office) sont affichés sous forme de GUID plutôt que noms de fichiers réels.|TopSecretDocument.docx|
-|Date-published|Date|Date à laquelle le document a été protégé.|2015-10-15T21:37:00|
+|template-id|Chaîne|ID du modèle utilisé pour protéger le document.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|Chaîne|Nom de fichier du document qui a été protégé. <br /><br />Actuellement, certains fichiers (tels que les documents Office) sont affichés sous forme de GUID plutôt que noms de fichiers réels.|TopSecretDocument.docx|
+|date-published|Date|Date à laquelle le document a été protégé.|2015-10-15T21:37:00|
 |c-info|Chaîne|Informations concernant la plateforme du client d’où émane la demande.<br /><br />La chaîne spécifique varie selon l’application (par exemple, le système d’exploitation ou le navigateur).|’MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64’|
 |c-ip|Adresse|Adresse IP du client d’où émane la demande.|64.51.202.144|
 
@@ -166,7 +162,7 @@ Bien que le champ user-id indique généralement l’utilisateur qui effectue la
 
 -   Si vous utilisez le connecteur RMS :
 
-    Les demandes émises par ce connecteur sont journalisées avec le nom de principal du service que le service RMS génère automatiquement lors de l’installation du connecteur RMS.
+    Les demandes émises par ce connecteur sont journalisées avec le nom de principal du service **Aadrm_S-1-7-0**, automatiquement généré à l’installation du connecteur RMS.
 
 #### Types de demande standard
 Il existe de nombreux types de demande dans Azure Rights Management. Le tableau suivant répertorie quelques-uns des types de demandes les plus utilisés.
@@ -181,7 +177,7 @@ Il existe de nombreux types de demande dans Azure Rights Management. Le tableau 
 |BECreateEndUserLicenseV1|Un appel est fait à partir d’un appareil mobile pour créer une licence utilisateur final.|
 |BEGetAllTemplatesV1|Un appel est fait à partir d’un appareil mobile (principal) pour obtenir tous les modèles.|
 |Certify|Le client certifie le contenu pour la protection.|
-|Decrypt|Le client tente de déchiffrer le contenu protégé par RMS.|
+|KMSPDecrypt|Le client tente de déchiffrer le contenu protégé par RMS. Applicable uniquement pour une clé de locataire gérée par le client (BYOK).|
 |DeleteTemplateById|Un appel est fait à partir du portail Azure Classic pour supprimer un modèle sur la base de son ID.|
 |ExportTemplateById|Un appel est fait à partir du portail Azure Classic pour exporter un modèle sur la base de son ID.|
 |FECreateEndUserLicenseV1|Similaire à la demande AcquireLicense, mais à partir d’un appareil mobile.|
@@ -199,7 +195,7 @@ Il existe de nombreux types de demande dans Azure Rights Management. Le tableau 
 |ServerCertify|Un appel est fait à partir d’un client RMS (par exemple, SharePoint) pour certifier le serveur.|
 |SetUsageLogFeatureState|Un appel est fait pour activer la journalisation de l’utilisation.|
 |SetUsageLogStorageAccount|Un appel est fait pour spécifier l’emplacement des journaux Azure RMS.|
-|SignDigest|Un appel est fait quand une clé est utilisée à des fins de signature. Cet appel est généralement fait une fois par demande AcquireLicense (ou FECreateEndUserLicenseV1), Certify et GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
+|KMSPSignDigest|Un appel est fait quand une clé gérée par le client (BYOK) est utilisée à des fins de signature. Cet appel est généralement fait une fois par demande AcquireLicense (ou FECreateEndUserLicenseV1), Certify et GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
 |UpdateTemplate|Un appel est fait à partir du portail Azure Classic pour mettre à jour un modèle existant.|
 
 ## Référence Windows PowerShell
@@ -229,6 +225,7 @@ Pour plus d’informations sur l’utilisation de Windows PowerShell pour Azure 
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jul16_HO3-->
 
 

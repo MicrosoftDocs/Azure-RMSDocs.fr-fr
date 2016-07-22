@@ -1,28 +1,21 @@
 ---
-# required metadata
-
-title: Migration d’AD RMS vers Azure Rights Management - Phase 4 | Azure RMS
-description:
-keywords:
+title: "Migration d’AD RMS vers Azure Rights Management - Phase 4 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 06/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ea4dd88ed749092fd02135d8ca25b621f74fe72f
+ms.openlocfilehash: 7ed3569475362272ace055862fe8bb3ee072036a
+
 
 ---
 
@@ -49,7 +42,7 @@ Cette étape est facultative mais recommandée une fois la migration terminée, 
 
 Pour renouveler votre clé de locataire Azure RMS :
 
--   Si votre clé de locataire Azure RMS est gérée par Microsoft : [contactez le support Microsoft](../get-started/information-support#to-contact-microsoft-support) pour ouvrir un **dossier de support Azure Rights Management dans lequel vous demandez le renouvellement de votre clé de locataire Azure RMS**. Vous devez prouver que vous êtes administrateur de votre locataire Azure RMS et comprendre que la confirmation de ce processus prend plusieurs jours. Des frais de prise en charge standard s’appliquent. Le renouvellement de votre clé de locataire n’est pas un service de support gratuit.
+-   Si votre clé de locataire Azure RMS est gérée par Microsoft : [contactez le support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) pour ouvrir un **dossier de support Azure Rights Management dans lequel vous demandez le renouvellement de votre clé de locataire Azure RMS**. Vous devez prouver que vous êtes administrateur de votre locataire Azure RMS et comprendre que la confirmation de ce processus prend plusieurs jours. Des frais de prise en charge standard s’appliquent. Le renouvellement de votre clé de locataire n’est pas un service de support gratuit.
 
 -   Si vous gérez vous-même votre clé de locataire RMS (BYOK) : répétez la procédure BYOK pour générer et créer une clé sur Internet ou en personne.
 
@@ -61,6 +54,7 @@ Maintenant que vous avez terminé la migration, passez en revue la [feuille de r
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

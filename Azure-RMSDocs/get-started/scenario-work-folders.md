@@ -123,6 +123,6 @@ Si vous avez configuré le modèle personnalisé comme décrit pour ce scénario
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Vérification d’Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Vérification d’Azure Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: bb152f428c8e0b9a065035aaad2de6353265a562
+ms.openlocfilehash: afa1fb35110918b9b97f91534616e1933e13b149
+
 
 ---
 
@@ -36,7 +30,7 @@ Pour effectuer ce test, vous pouvez utiliser les informations contenues dans [Ai
 Si votre test échoue, passez en revue les étapes de configuration dans [Feuille de route pour le déploiement d’Azure Rights Management](../plan-design/deployment-roadmap.md) et utilisez l’[outil Analyseur RMS](http://www.microsoft.com/en-us/download/details.aspx?id=46437) pour identifier et résoudre les problèmes potentiels. Vous pouvez également exécuter cet outil à intervalles réguliers, en guise que contrôle d'intégrité général.
 
 > [!TIP]
-> Si vous avez besoin d’aide, consultez la section [Options de support et ressources de la communauté](../get-started/information-support.md##support-options-and-community-resources) dans l’article [Informations et support technique pour Azure Rights Management](../get-started/information-support.md).
+> Si vous avez besoin d’aide, consultez la section [Options de support et ressources de la communauté](../get-started/information-support.md#support-options-and-community-resources) dans l’article [Informations et support technique pour Azure Rights Management](../get-started/information-support.md).
 
 ## Étapes suivantes
 
@@ -46,6 +40,7 @@ Vous pouvez contrôler l'usage de la protection des informations par votre organ
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO3-->
 
 

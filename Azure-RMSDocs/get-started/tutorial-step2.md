@@ -4,7 +4,7 @@ description: "Deuxième étape d’un didacticiel vous permettant de tester rapi
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: f32cf2f3-29e2-429c-a0fd-b16cc482484a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: da706bcaf52d0519706898501c563a9a03231dd9
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: faacd21945cd078425e85af0c5b40347ac4de65a
 
 
 ---
@@ -62,7 +62,7 @@ Vous êtes maintenant prêt à protéger les fichiers contenant des informations
 |--------------------------------|--------------------------|
 |Installation locale de l’application de partage Rights Management pour Windows et instructions utilisateur|[Guide d’utilisation de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md)|
 |Installation par script de l’application de partage Rights Management pour Windows et informations techniques|[guide de l'administrateur de l'application de partage Rights Management](../rms-client/sharing-app-admin-guide.md)|
-|Pour comprendre la différence entre la protection native et la protection générique|[Quelle est la différence entre la protection générique et la protection intégrée (native) ?](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)|
+|Pour comprendre la différence entre la protection native et la protection générique|[Quelle est la différence entre la protection générique et la protection intégrée (native) ?](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection)|
 
 
 >[!div class="step-by-step"]
@@ -70,6 +70,6 @@ Vous êtes maintenant prêt à protéger les fichiers contenant des informations
 [Étape 3 »](tutorial-step3.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

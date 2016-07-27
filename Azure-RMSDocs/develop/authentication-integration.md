@@ -4,7 +4,7 @@ description: "Décrit les principes fondamentaux de l’authentification utilisa
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 07/07/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
-ms.openlocfilehash: 34a82f31b5da46a59627ff559deb46c8445fcdf2
+ms.sourcegitcommit: 04454886841fe7b3482d10e1e32422f28d1c434f
+ms.openlocfilehash: fbe12e339d3fb8fc62aabc34aaa9f5f043e95de9
 
 
 ---
@@ -29,6 +29,9 @@ L’authentification utilisateur est une étape essentielle pour établir la com
 
 ## Inscription dans le portail Azure
 Commencez par suivre ce guide pour configurer l’inscription de votre application dans le portail Azure, [Configurer Azure RMS pour l’authentification ADAL](adal-auth.md). Copiez et enregistrez **l’ID client** et **l’URI de redirection** de ce processus pour les utiliser plus tard.
+
+## Signer votre contrat de licence Rights Managagment (RMLA, Rights Managagment License Agreement)
+Avant de pouvoir déployer votre application, vous devez signer un contrat RMLA avec l’équipe Microsoft Rights Management. Pour plus d’informations, consultez la première section de la rubrique [Déployer en production - Demander un contrat de licence de production](deploying-your-application.md).
 
 ## Implémenter l’authentification utilisateur pour votre application
 Chacune des API RMS a un rappel qui doit être implémenté pour activer l’authentification de l’utilisateur. RMS SDK 4.2 utilise votre implémentation du rappel quand vous ne fournissez pas de jeton d’accès, que votre jeton d’accès doit être actualisé ou que le jeton d’accès a expiré.
@@ -271,6 +274,6 @@ Il provient de l’étape d’inscription dans le portail Azure.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -9,12 +9,13 @@
 #### [Script PowerShell](fci-script.md)
 ### [Application de partage Rights Management pour Windows](sharing-app-windows.md)
 #### [Application de partage Rights Management : Historique de publication des versions](sharing-app-version-release-history.md)
-#### [guide de l'administrateur de l'application de partage Rights Management](sharing-app-admin-guide.md)
-##### [Présentation technique](sharing-app-admin-guide-technical.md)
+#### [guide de l’administrateur de l’application de partage Rights Management](sharing-app-admin-guide.md)
+##### [Présentation technique et détails sur la protection](sharing-app-admin-guide-technical.md)
 #### [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 ##### [Télécharger et installer](install-sharing-app.md)
 ##### [Protéger un fichier sur un appareil](sharing-app-protect-in-place.md)
 ##### [Protéger un fichier que vous partagez par courrier électronique](sharing-app-protect-by-email.md)
+##### [Modifier des autorisations sur les fichiers protégés](sharing-app-reprotect-files.md)
 ##### [Suivre et révoquer vos documents](sharing-app-track-revoke.md)
 ##### [Afficher et utiliser les fichiers protégés](sharing-app-view-use-files.md)
 ##### [Supprimer la protection](sharing-app-remove-protection.md)
@@ -22,8 +23,9 @@
 ##### [Options de la boîte de dialogue](sharing-app-dialog-box.md)
 ### [Déclaration de confidentialité de Microsoft Rights Management dans les applications compatibles avec RMS](privacy-statement-rms-enlightened-applications.md)
 # [Développer et personnaliser des applications](/rights-management/develop/developers-guide)
+# [Azure Information Protection (préversion)](/rights-management/information-protection/what-is-information-protection)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

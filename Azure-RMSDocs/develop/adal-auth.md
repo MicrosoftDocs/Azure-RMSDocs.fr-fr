@@ -1,7 +1,7 @@
 ---
 title: "Configurer Azure RMS pour l’authentification ADAL | Azure RMS"
 description: "Décrit les étapes de configuration de l’authentification Azure ADAL."
-keywords: authentication, RMS, ADAL
+keywords: authentification, RMS, ADAL
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 06/28/2016
@@ -109,6 +109,6 @@ Après vous être inscrit à Microsoft Azure :
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

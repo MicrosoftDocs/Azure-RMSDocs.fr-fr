@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 7cf6ecb95374c080b9b2e94f948ec53ea5e6bb46
+ms.sourcegitcommit: 638c2f27c8d552653dcf3f41d8fad6d44cb08887
+ms.openlocfilehash: 5150351ec6772b95d77698dc39a1f69105c02d2c
 
 
 ---
@@ -51,6 +51,8 @@ Lorsque vous protégez un fichier sur place, celui-ci remplace le fichier non pr
 
     ![Fichier protégé avec une icône de verrou pour l’application de partage RMS](../media/ADRMS_MSRMSApp_Pfile.png)
 
+Si vous changez d’avis concernant les autorisations ou si vous devez les modifier ultérieurement, il vous suffit de reprotéger le fichier.
+
 Si, par la suite, vous avez besoin d’ôter la protection d’un fichier, consultez [Supprimer la protection d’un fichier à l’aide de l’application de partage Rights Management](sharing-app-remove-protection.md).
 
 ## Exemples et autres instructions
@@ -58,13 +60,13 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 -   [Exemples d’utilisation de l’application de partage RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

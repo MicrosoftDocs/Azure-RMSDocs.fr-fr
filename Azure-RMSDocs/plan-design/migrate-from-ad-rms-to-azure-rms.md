@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea4dd88ed749092fd02135d8ca25b621f74fe72f
-ms.openlocfilehash: b33839ff5ce0d30082f58ff96eb81215b716e46d
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: 8ef46d68594a6e559e050f846a844f566ff8770d
 
 
 ---
@@ -85,7 +85,7 @@ Avant de procéder à la migration vers Azure RMS, assurez-vous que les conditi
 
 Limitations :
 
--   Bien que le processus de migration prenne en charge la migration de votre clé de certificat de licence serveur (SLC) vers un module de sécurité matériel (HSM) pour Azure RMS, Exchange Online ne prend pas actuellement en charge cette configuration. Si vous souhaitez disposer de toutes les fonctionnalités d’IRM avec Exchange Online après la migration vers Azure RMS, votre clé de locataire Azure RMS doit être [gérée par Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-). Vous pouvez également exécuter l'IRM avec des fonctionnalités réduites dans Exchange Online quand vous gérez vous-même votre locataire Azure RMS (à l'aide de la solution BYOK). Pour plus d’informations sur l’utilisation d’Exchange Online avec Azure RMS, consultez l’[Étape 6. Configurer l’intégration de l’IRM pour Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online) dans ces instructions de migration.
+-   Bien que le processus de migration prenne en charge la migration de votre clé de certificat de licence serveur (SLC) vers un module de sécurité matériel (HSM) pour Azure RMS, Exchange Online ne prend pas actuellement en charge cette configuration. Si vous souhaitez disposer de toutes les fonctionnalités d’IRM avec Exchange Online après la migration vers Azure RMS, votre clé de locataire Azure RMS doit être [gérée par Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). Vous pouvez également exécuter l'IRM avec des fonctionnalités réduites dans Exchange Online quand vous gérez vous-même votre locataire Azure RMS (à l'aide de la solution BYOK). Pour plus d’informations sur l’utilisation d’Exchange Online avec Azure RMS, consultez l’[Étape 6. Configurer l’intégration de l’IRM pour Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online) dans ces instructions de migration.
 
 -   Si vous disposez de logiciels et de clients non pris en charge avec Azure RMS, ceux-ci ne peuvent pas protéger ou utiliser du contenu protégé par Azure RMS. Consultez les sections relatives aux applications et aux clients pris en charge dans l’article [Conditions requises pour Azure Rights Management](../get-started/requirements-azure-rms.md).
 
@@ -180,6 +180,6 @@ Pour démarrer la migration, passez à la [Phase 1 : Configuration côté serv
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

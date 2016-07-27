@@ -13,8 +13,8 @@ ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
-ms.openlocfilehash: 20cfa722f7008c52f4fbc219a4de04c50ee3548d
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: 7ec87b63b31d0b41c93dab7998df63e208308811
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 20cfa722f7008c52f4fbc219a4de04c50ee3548d
 
 *S’applique à : Azure Rights Management, Office 365*
 
-Utilisez les procédures suivantes si vous avez décidé de [gérer votre propre clé de locataire](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) et que vous voulez la transférer via Internet au lieu de vous déplacer jusqu’à un établissement Microsoft pour la transférer en personne.
+Appliquez les procédures suivantes si vous avez décidé de [gérer votre propre clé de locataire](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok) et que vous voulez la transférer par le biais d’Internet au lieu de vous déplacer jusqu’à un établissement Microsoft pour la transférer en personne :
 
 
 ## préparation du poste de travail connecté à Internet
@@ -378,6 +378,6 @@ Vous avez à présent effectué toutes les étapes requises pour la solution BYO
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

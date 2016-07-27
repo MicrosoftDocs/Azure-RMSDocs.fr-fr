@@ -1,34 +1,28 @@
 ---
-# required metadata
-
-title: Vue d’ensemble | Azure RMS
-description: Rights Management Services (RMS) est une technologie de protection des informations qui vous aide à protéger les informations numériques contre les utilisations non autorisées.
-keywords:
+title: "Présentation - RMS SDK 2.1 | Azure RMS"
+description: "Rights Management Services (RMS) est une technologie de protection des informations qui vous aide à protéger les informations numériques contre les utilisations non autorisées."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/11/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5afdf526fe9f8486c6a778eebf10899e0bd9f839
+ms.openlocfilehash: 53571aff357bbc0cdcb44ce9b403c68719abbaff
+
 
 ---
 
 # Vue d'ensemble
 
-Rights Management Services (RMS) est une technologie de protection des informations qui vous aide à protéger les informations numériques contre les utilisations non autorisées. Dans votre application avec gestion des droits, les propriétaires de contenu peuvent définir qui peut ouvrir, modifier, imprimer, transférer ou effectuer d’autres actions avec le contenu.
-
-## Vue d'ensemble
+Rights Management Services SDK 2.1 est une technologie de protection des informations qui vous aide à protéger les informations numériques contre toute utilisation non autorisée. Dans votre application avec gestion des droits, les propriétaires de contenu peuvent définir qui peut ouvrir, modifier, imprimer, transférer ou effectuer d’autres actions avec le contenu.
 
 AD RMS est constitué de composants [serveur](ad-rms-server.md) et [client](ad-rms-client.md). Le serveur, qui s’exécute sur Azure ou Windows Server, se compose de plusieurs services web.
 
@@ -44,7 +38,7 @@ Voici quelques scénarios pour lesquels des applications basées sur Rights Mana
 -   Les propriétaires d’une bibliothèque de documents en ligne veulent octroyer les droits d’afficher, d’imprimer ou de modifier des documents en fonction de l’identité de l’utilisateur.
 -   Une entreprise veut publier des informations sensibles sur les employés sur un site web interne qui limite les droits de consultation et de modification à certains utilisateurs.
 
-Pour plus d’informations sur le serveur AD RMS, sur le client AD RMS et sur leurs fonctionnalités, consultez le contenu TechNet concernant la [documentation d’AD RMS pour les professionnels de l’informatique](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx).
+Pour plus d’informations sur le serveur AD RMS, sur le client AD RMS et sur leurs fonctionnalités, consultez le contenu TechNet concernant la [documentation d’AD RMS pour les professionnels de l’informatique](https://TechNet.Microsoft.Com/library/cc771234.aspx).
 
 Les autres rubriques de cette section traitent de l’architecture RMS et ses implémentations.
 
@@ -66,6 +60,7 @@ Les autres rubriques de cette section traitent de l’architecture RMS et ses im
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Terminologie relative à Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Terminologie relative à Azure Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0e9551db57cc1295f20368535267ca5a901ae9f2
+ms.openlocfilehash: a95b9679578f6786bd883884cd5c5f84cb6db739
+
 
 ---
 
@@ -37,6 +31,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft [!
 |activer|Permet d’activer le service [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] pour qu’une organisation puisse ajouter la protection des informations à ses documents et ses e-mails. Cette action active également les fonctionnalités Rights Management dans Exchange Online et SharePoint Online.|
 |Active Directory Rights Management Services|Souvent abrégé *AD RMS*.<br /><br />Rôle Windows Server qui assure la protection des informations par le biais du chiffrement et de stratégies, à des fins de sécurisation des documents, des fichiers et des courriers électroniques.|
 |AD RMS|Voir *Services Active Directory Rights Management*.|
+|Azure Information Protection|Actuellement en préversion, ce service utilise la classification, l’étiquetage et la protection pour aider à sécuriser des documents et des e-mails. Azure Rights Management offre une protection à l’aide de stratégies de chiffrement, d’identité et d’autorisation.|
 |Azure Rights Management|Souvent abrégée en *Azure RMS*.<br /><br />Service Azure qui assure la protection des informations par le biais du chiffrement et de stratégies, à des fins de sécurisation des documents, des fichiers et des courriers électroniques.  Également appelé *service Rights Management Azure*. Les noms précédents étaient les suivants :<br /><br />*Windows Azure Active Directory Rights Management* : souvent abrégé en service Windows Azure AD Rights Management.<br /><br />*RMS Online* : nom proposé à l’origine, que vous pouvez rencontrer parfois dans les messages d’erreur et les entrées de fichier journal.|
 |Azure RMS|Voir *Azure Rights Management*.|
 |BYOK|Voir *Bring your own key*.|
@@ -76,6 +71,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft [!
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

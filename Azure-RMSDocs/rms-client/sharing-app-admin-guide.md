@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Guide de l’administrateur de l’application de partage Rights Management | Azure RMS
-description:
-keywords:
+title: "Guide de l’administrateur de l’application de partage Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a58d50b33db95570b43fe1ec0f76bdf490ddd024
+ms.openlocfilehash: 164df467632b38f179d1c1192835f919641331a5
+
 
 ---
 
@@ -35,10 +29,12 @@ Utilisez les informations suivantes si vous êtes responsable de l’application
 
 L'application de partage RMS est mieux adaptée au travail avec Azure RMS, car cette configuration de déploiement prend en charge l'envoi de pièces jointes protégées à des utilisateurs d'une autre organisation et des options telles que les notifications par courrier électronique et le suivi des document avec révocation.  Toutefois, elle fonctionne également avec la version locale, AD RMS, avec certaines limitations. Pour une comparaison complète des fonctionnalités prises en charge par Azure RMS et AD RMS, consultez [Comparaison d’Azure Rights Management avec AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). Si vous avez AD RMS et que vous voulez migrer vers Azure RMS, consultez [Migration d’AD RMS vers Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
+Pour obtenir une présentation technique de l’application de partage Rights Management et des informations sur la protection native et générique, sur les types de fichiers pris en charge, sur les extensions de noms de fichiers et sur la modification du niveau de protection par défaut, consultez [Présentation technique de l’application de partage Microsoft Rights Management et détails sur la protection](sharing-app-admin-guide-technical.md). 
+
 ## Déploiement automatique de l'application de partage Microsoft Rights Management
 La version Windows de l'application de partage RMS prend en charge une installation scriptée, ce qui la rend appropriée pour les déploiements d'entreprise.
 
-Les seules conditions préalables à l'installation sont que les ordinateurs exécutent une version minimale de Windows 7 Service Pack 1 et que Microsoft Framework, version minimale 4.0, soit installé. Si vous devez installer Microsoft .NET Framework 4.0, vous pouvez le [télécharger à partir du Centre de téléchargement Microsoft et l’installer](http://www.microsoft.com/download/details.aspx?id=17718).
+Les seules conditions préalables à l'installation sont que les ordinateurs exécutent une version minimale de Windows 7 Service Pack 1 et que Microsoft Framework, version minimale 4.0, soit installé. Si vous devez installer Microsoft .NET Framework 4.0, vous pouvez le [télécharger pour installation à partir du Centre de téléchargement Microsoft](http://www.microsoft.com/download/details.aspx?id=17718).
 
 ### Pour télécharger l’application de partage RMS pour un déploiement automatique
 
@@ -97,7 +93,7 @@ Pour vérifier que l’opération a réussi, consultez la section [Vérification
 
     1.  Connectez-vous à un ordinateur à l'aide d'un compte d'administrateur local.
 
-    2.  Sur cet ordinateur, [téléchargez et installez l’Assistant d’inscription en ligne Microsoft](http://www.microsoft.com/download/details.aspx?id=28177).
+    2.  Sur cet ordinateur, [téléchargez et installez l'Assistant d'inscription en ligne Microsoft](http://www.microsoft.com/download/details.aspx?id=28177).
 
     3.  Exécutez la commande suivante pour afficher l'URL du service de certification à l'écran, que vous pouvez ensuite copier et enregistrer pour l'étape suivante :
 
@@ -122,13 +118,13 @@ Pour vérifier que l’opération a réussi, consultez la section [Vérification
         > [!NOTE]
         > Cette commande peut vous inviter à entrer vos informations d'identification pour Azure. Si l'ordinateur n'est pas joint à un domaine, ces informations vous seront demandées. Si l'ordinateur est joint à un domaine, l'outil devrait pouvoir utiliser les informations d'identification mises en cache.
 
-2.  Sur chaque ordinateur sur lequel vous allez installer l'application de partage RMS, exécutez la commande suivante avec des privilèges élevés :
+2.  Sur chaque ordinateur sur lequel vous allez installer l’application de partage RMS, exécutez la commande suivante avec des privilèges élevés :
 
     ```
     setup.exe /s /configureO2010Admin /certificationUrl <certification_url>
     ```
 
-3.  Sur chaque ordinateur sur lequel vous allez installer l'application de partage RMS, les utilisateurs doivent exécuter la commande suivante (aucun besoin de privilèges élevés). Il existe différentes manières d'effectuer cette opération, y compris en demandant aux utilisateurs d'exécuter la commande (par exemple, un lien dans un message électronique ou un lien sur le portail du support technique), ou vous pouvez l'ajouter à leur script d'ouverture de session :
+3.  Sur chaque ordinateur sur lequel vous allez installer l’application de partage RMS, chaque utilisateur de l’utilisateur doit exécuter la commande suivante (aucun besoin de privilèges élevés). Il existe différentes manières d'effectuer cette opération, y compris en demandant aux utilisateurs d'exécuter la commande (par exemple, un lien dans un message électronique ou un lien sur le portail du support technique), ou vous pouvez l'ajouter à leur script d'ouverture de session :
 
     ```
     bin\RMSSetup.exe /configureO2010Only
@@ -324,7 +320,7 @@ Par défaut, les utilisateurs sont avertis s'il existe une version ultérieure d
 
 1.  Accédez à **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC** et, si elle n’est pas déjà présente, créez une clé nommée **RmsSharingApp**.
 
-2.  Sélectionnez **RmsSharingApp**, créez une valeur DWORD de **AllowUpdatePrompt** et définissez la valeur sur **0**.
+2.  Sélectionnez **RmsSharingApp**, créez une valeur DWORD de **AllowUpdatePrompt**et définissez la valeur sur **0**.
 
 Étant donné que l'application de partage RMS n'est pas prise en charge par WSUS, vous pouvez utiliser la technique suivante pour tester les nouvelles versions de l'application de partage RMS avant de les déployer vers tous les utilisateurs :
 
@@ -335,12 +331,12 @@ Par défaut, les utilisateurs sont avertis s'il existe une version ultérieure d
 3.  Quand le test est terminé et que les problèmes sont résolus, déployez la dernière version vers tous les utilisateurs à l'aide des instructions de déploiement automatique de ce guide.
 
 ## Azure RMS uniquement : configuration du suivi des documents
-Si votre [abonnement prend en charge le suivi des documents](https://technet.microsoft.com/en-us/dn858608), le site de suivi des documents est activé par défaut pour tous les utilisateurs de votre organisation.  Le suivi des documents fournit des informations telles que les adresses de messagerie des personnes qui ont tenté d'accéder aux documents protégés que les utilisateurs ont partagés et indique quand ces personnes ont tenté d'y accéder, ainsi que leur emplacement. Si l’affichage de ces informations est interdit dans votre organisation pour des raisons de confidentialité, vous pouvez désactiver l’accès au site de suivi des documents à l’aide de l’applet de commande [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032). Vous pouvez réactiver l’accès au site à tout moment en utilisant [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) et vérifier si l’accès est actuellement activé ou désactivé à l’aide de [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037).
+Si votre [abonnement prend en charge le suivi des documents](https://technet.microsoft.com/dn858608), le site de suivi des documents est activé par défaut pour tous les utilisateurs de votre organisation.  Le suivi des documents fournit des informations telles que les adresses de messagerie des personnes qui ont tenté d'accéder aux documents protégés que les utilisateurs ont partagés et indique quand ces personnes ont tenté d'y accéder, ainsi que leur emplacement. Si l’affichage de ces informations est interdit dans votre organisation pour des raisons de confidentialité, vous pouvez désactiver l’accès au site de suivi des documents à l’aide de l’applet de commande [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032). Vous pouvez réactiver l’accès au site à tout moment en utilisant [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) et vérifier si l’accès est actuellement activé ou désactivé à l’aide de [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037).
 
 Pour exécuter ces applets de commande, vous devez disposer au moins de la version **2.3.0.0** du module Azure RMS pour Windows PowerShell.  Pour obtenir des instructions d’installation, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md).
 
 > [!TIP]
-> Si vous avez déjà téléchargé et installé le module, vérifiez le numéro de version en exécutant la commande suivante : `(Get-Module aadrm –ListAvailable).Version`
+> Si vous avez précédemment téléchargé et installé le module, vérifiez le numéro de version en exécutant la commande suivante : `(Get-Module aadrm –ListAvailable).Version`
 
 Les URL suivantes sont utilisées pour le suivi des documents et doivent être autorisées (par exemple, ajoutez-les à vos sites approuvés si vous utilisez Internet Explorer avec sécurité renforcée) :
 
@@ -368,10 +364,11 @@ Si vous n'apportez pas cette modification au Registre, les utilisateurs risquent
 
 
 ## Étapes suivantes
-Pour obtenir des informations techniques supplémentaires, notamment sur la différence entre les niveaux de protection (native et générique), les types de fichiers pris en charge, les extensions de nom de fichier et la façon de modifier le niveau de protection par défaut, consultez [Présentation technique de l’application de partage Rights Management](sharing-app-admin-guide-technical.md).
+Pour obtenir des informations techniques supplémentaires sur notamment la différence entre les niveaux de protection (native et générique), les types de fichiers pris en charge, les extensions de nom de fichier et la façon de modifier le niveau de protection par défaut, consultez [Présentation technique de l’application de partage Rights Management](sharing-app-admin-guide-technical.md).
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO3-->
 
 

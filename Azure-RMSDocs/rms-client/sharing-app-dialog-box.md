@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 771a80843ca5ab01cd06bd4e76c827469b0e9f00
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: ed2ab42174ce5d83fd60ace1c394515db1450e3d
 
 
 ---
@@ -32,14 +32,14 @@ Ces informations vous aident à spécifier les options des boîtes de dialogue *
 
 Outre les options que vous pouvez choisir, vous pourriez également vous interroger sur les points suivants :
 
--   [Qu'est-ce que le fichier .ppdf créé automatiquement ?](#what-s-the-ppdf-file-that-s-automatically-created-)
+-   [Qu'est-ce que le fichier .ppdf créé automatiquement ?](#what-s-the-ppdf-file-that-s-automatically-created)
 
--   [Quelle est la différence entre la protection générique et la protection intégrée (native) ?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)
+-   [Quelle est la différence entre la protection générique et la protection intégrée (native) ?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection)
 
 |Option|Description|
 |----------|---------------|
 |**UTILISATEURS**|Si vous n'avez pas encore spécifié d'adresse de messagerie à partir d'Outlook, tapez les adresses de personnes qui doivent pouvoir ouvrir le fichier.<br /><br />Notez que l’application de partage RMS ne prend pas en charge toutes les adresses de messagerie.<br /><br />Si votre organisation utilise la version locale de Rights Management (AD RMS), les adresses de messagerie que vous pouvez spécifier sont limitées aux personnes de votre organisation. Dans ce cas, si vous tentez de spécifier des adresses de messagerie externes, un message s'affiche, indiquant que la configuration de votre organisation n'autorise le partage de contenu protégé qu'à l'intérieur de celle-ci. <br /><br /> Si votre organisation utilise Azure RMS, les adresses de messagerie que vous spécifiez peuvent être celles de personnes de votre organisation ou celles des personnes d’une autre organisation.<br /><br />Par exemple, **janetm@contoso.com ou p.dover@fabrikam.com**.<br /><br />Les adresses de messagerie personnelles ne sont actuellement pas prises en charge par l’application de partage RMS.|
-|**Protection générique**|Si cette option est sélectionnée, cela signifie que le fichier que vous avez sélectionné ne peut pas être protégé en mode natif. Pour plus d'informations, consultez. [Quelle est la différence entre la protection générique et la protection intégrée (native) ?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection-) dans cette page.|
+|**Protection générique**|Si cette option est sélectionnée, cela signifie que le fichier que vous avez sélectionné ne peut pas être protégé en mode natif. Pour plus d'informations, consultez. [Quelle est la différence entre la protection générique et la protection intégrée (native) ?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection) dans cette page.|
 |**Visionneuse – Affichage uniquement**<br /><br />**Réviseur – Affichage et modification**<br /><br />**Co-auteur – Affichage, modification, copie et impression**<br /><br />**Copropriétaire – Toutes les autorisations**<br /><br />Remarque : Toutes ces options sont associées à une icône circulaire placée devant leur nom, qui représente un globe terrestre. Cette icône est utilisée parce que, généralement, vous sélectionnez l'une de ces options lorsque vous envoyez votre pièce jointe à une personne d'une autre organisation.|Sélectionnez l'une des options suivantes si vous souhaitez définir les droits de votre document protégé. Cliquez sur chaque option pour en afficher la description.<br /><br />Lorsque vous choisissez l'une de ces options, seules les personnes que vous spécifiez dans **UTILISATEURS** disposent des droits que vous définissez pour ouvrir et utiliser le document. Par exemple, si elles transfèrent celui-ci à quelqu'un d'autre, le document ne s'ouvre pas.|
 |Modèles de stratégie que votre administrateur configure.<br /><br />Par exemple, si le nom de votre organisation est Contoso, Ltd, voici ce que vous pouvez lire : **Contoso, Ltd - Affichage confidentiel uniquement**.<br /><br />Remarque : Toutes ces options sont associées à une icône carrée placée devant leur nom, qui représente un immeuble de bureaux. Cette icône est utilisée parce que, généralement, vous sélectionnez l'une de ces options lorsque vous envoyez votre pièce jointe à une personne de votre organisation.|Lorsque vous partagez un document avec des personnes travaillant pour votre organisation, vous voyez les modèles de stratégie disponibles que votre administrateur configure. Choisissez l'un de ceux-ci quand le document ne doit pas être partagé à l'extérieur de votre organisation.<br /><br />Lorsque vous choisissez l'une de ces options, votre administrateur définit les droits relatifs au document et qui peut l'ouvrir.|
 |**Ces documents expirent le**|Sélectionnez cette option uniquement pour des fichiers soumis à une contrainte de temps que les utilisateurs que vous avez sélectionnés doivent pouvoir ouvrir après une date que vous spécifiez. Vous pouvez toujours ouvrir le fichier d'origine mais, après minuit (dans votre fuseau horaire), le jour spécifié, d'autres utilisateurs ne peuvent plus l'ouvrir.<br /><br />Cette option n'est pas disponible si vous sélectionnez un modèle de stratégie que votre administrateur configure.|
@@ -71,7 +71,7 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 -   [Exemples d’utilisation de l’application de partage RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
@@ -79,6 +79,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6b5bc9612ac17a2d6905200383d9b8df4c504efe
-ms.openlocfilehash: d6920b8ce09b39d98da9e9c197b17a1f13d21c8e
+ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
+ms.openlocfilehash: 310ee66374157f946df6876b31859313f74275ae
 
 
 ---
@@ -25,9 +25,9 @@ ms.openlocfilehash: d6920b8ce09b39d98da9e9c197b17a1f13d21c8e
 
 Plusieurs versions des systèmes d’exploitation Linux peuvent maintenant utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’Azure Active Directory Rights Management (AAD RM).
 
--   [Systèmes d'exploitation pris en charge](#supported_operating_systems)
--   [Comment créer et utiliser](#how_to_build_and_use)
--   [Voir aussi](#see_also)
+-   [Systèmes d'exploitation pris en charge](#supported-operating-systems)
+-   [Comment créer et utiliser](#how-to-build-and-use)
+-   [Voir aussi](#see-also)
 
 ## Systèmes d'exploitation pris en charge
 
@@ -60,6 +60,6 @@ Deux rubriques d’aide pour ce SDK sont hébergées sur Github. Elles fournisse
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

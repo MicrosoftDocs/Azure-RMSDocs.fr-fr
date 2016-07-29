@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: eccc0ba9c13e0c35c8d0c8877ce92f9b99e83835
+ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
+ms.openlocfilehash: 8de1886adf322439721274e23452af75b4db2e00
 
 
 ---
@@ -25,15 +25,15 @@ ms.openlocfilehash: eccc0ba9c13e0c35c8d0c8877ce92f9b99e83835
 ## Nouveautés
 Le kit de développement logiciel (SDK) Microsoft Rights Management 4.2 améliore encore le niveau de simplicité et de flexibilité relatives à l’activation de l’application RMS. Ce sujet décrit les modifications et les fonctionnalités importantes de cette nouvelle version du kit de développement logiciel (SDK) RMS.
 
--   [Nouveau en juin 2016](#new_for_June_2016)
--   [Mise à jour de décembre 2015](#december_2015_update)
--   [Mise à jour de juillet 2015 : ajout de la prise en charge du développement Linux/C++](#july_2015_update_-_adds_support_for_linux___c___development)
--   [Mise à jour de mai 2015 : ajout du contrôle d’enregistrement](#may_2015_update_-_adds_logging_control)
--   [Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store](#february_2015_update_-_adds_windows_store_application_support)
--   [Mise à jour de janvier 2015 : ajout de la prise en charge de la plate-forme WinPhone](#january_2015_update_-_adds_winphone_platform_support)
--   [Mise à jour d’octobre 2014 : mise à niveau vers le Kit de développement logiciel (SDK) Microsoft RMS 4.1](#october_2014_update_-_upgrade_to_microsoft_rms_sdk_4.1)
+-   [Nouveau en juin 2016](#new-for-June-2016)
+-   [Mise à jour de décembre 2015](#december-2015-update)
+-   [Mise à jour de juillet 2015 : ajout de la prise en charge du développement Linux/C++](#july-2015-update-adds-support-for-linux-c-developm)
+-   [Mise à jour de mai 2015 : ajout du contrôle d’enregistrement](#may-2015-update-adds-logging-control)
+-   [Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store](#february-2015-update-adds-windows-store-application-support)
+-   [Mise à jour de janvier 2015 : ajout de la prise en charge de la plate-forme WinPhone](#january-2015-update-adds-winphone-platform-support)
+-   [Mise à jour d’octobre 2014 : mise à niveau vers le Kit de développement logiciel (SDK) Microsoft RMS 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
 -   [Notes de publication](#release-notes)
--   [Forum aux questions](#frequently_asked_questions)
+-   [Forum aux questions](#frequently-asked-questions)
 
 ### Nouveau en juin 2016
 
@@ -109,7 +109,7 @@ Cette version ajoute la prise en charge des applications du Windows Store et ass
 
 Cette version ajoute la prise en charge du système d’exploitation Windows Phone et assure la parité fonctionnelle avec la version Android et iOS/OS X du kit de développement logiciel (SDK) RMS 4.1.
 
-## Mise à jour d’octobre 2014 : mise à niveau vers le Kit de développement logiciel (SDK) Microsoft RMS 4.1
+### Mise à jour d’octobre 2014 : mise à niveau vers le Kit de développement logiciel (SDK) Microsoft RMS 4.1
 
 La version 4.1 du kit de développement logiciel (SDK) RMS ajoute les nouvelles fonctionnalités suivantes aux systèmes d’exploitation Google Android et Apple iOS/OS X.
 
@@ -233,6 +233,6 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

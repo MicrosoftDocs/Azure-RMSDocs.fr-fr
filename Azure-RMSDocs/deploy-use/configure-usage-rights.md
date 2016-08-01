@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/16/2016
+ms.date: 07/27/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4d6e0af200410b5af4e290ee0e6f94725916ecde
-ms.openlocfilehash: e9f2fe16494af2286d8ed77d0894bb5229e7c246
+ms.sourcegitcommit: e65fe3e6994352296cdf58d4b53de421389790f7
+ms.openlocfilehash: 17a423b8a5a6ec0aeb1121b9ea290ae84d809d9c
 
 
 ---
@@ -133,7 +133,7 @@ Accorde tous les droits sur le document. Toutes les actions disponibles peuvent 
 
 **Constante ou valeur d’API :** IPC_GENERIC_ALL L"OWNER"
 
-Inclut la possibilité de supprimer la protection.
+Inclut la possibilité de supprimer la protection et de reprotéger un document.
 
 ---
 
@@ -289,6 +289,6 @@ Une utilisatrice veut envoyer certaines informations par e-mail à certaines per
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

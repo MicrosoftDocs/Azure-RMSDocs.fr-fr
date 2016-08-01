@@ -4,7 +4,7 @@ description: "Quand vous protégez un fichier avec Rights Management, vous pouve
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/27/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51050497fe128d94e069d0ac010435bea5623af2
-ms.openlocfilehash: 985d3d2f1151b50fcde8f8bb916e984e1de71b00
+ms.sourcegitcommit: e65fe3e6994352296cdf58d4b53de421389790f7
+ms.openlocfilehash: 492f651f9234a8428a0f39da93b332a552894993
 
 
 ---
@@ -32,7 +32,7 @@ Quand vous protégez un fichier avec Rights Management, vous pouvez modifier les
 >
 > De même, si vous souhaitez ajouter ou supprimer une autorisation, vous ne pouvez pas simplement spécifier cette autorisation à ajouter ou supprimer. Vous devez spécifier toutes les autorisations que vous voulez accorder aux utilisateurs spécifiés.
 
-Si vous êtes le propriétaire du fichier que vous souhaitez reprotéger (par exemple, vous l’avez initialement protégé à l’aide de l’application de partage), vous êtes automatiquement autorisé à le reprotéger. Si vous n’êtes pas le propriétaire, vous n’êtes pas obligatoirement autorisé à reprotéger le fichier. Cela dépend des autorisations dont le fichier protégé dispose actuellement. 
+Si vous êtes le propriétaire du fichier que vous souhaitez reprotéger (par exemple, vous l’avez initialement protégé à l’aide de l’application de partage), vous êtes automatiquement autorisé à le reprotéger. Si vous n’êtes pas le propriétaire, vous n’êtes pas obligatoirement autorisé à reprotéger le fichier. Cela dépend des autorisations dont le fichier protégé dispose actuellement. Vous devez avoir le [droit d’utilisation Contrôle total](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) pour reprotéger un fichier.
 
 Par exemple, si quelqu’un d’autre a protégé le fichier à l’aide de l’application de partage Rights Management et qu’il a spécifié un groupe auquel vous appartenez et **Copropriétaire** comme autorisation personnalisée, vous pouvez reprotéger le fichier. En revanche, s’il n’a pas spécifié votre nom ou un groupe auquel vous appartenez, ou s’il a sélectionné **Réviseur - Consulter et modifier** ou un modèle qui ne vous permet pas de supprimer des autorisations, vous ne pouvez pas reprotéger le fichier. Le moyen le plus simple de le savoir consiste à essayer de reprotéger le fichier.
 
@@ -96,6 +96,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

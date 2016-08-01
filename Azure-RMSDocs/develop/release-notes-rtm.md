@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
-ms.openlocfilehash: 61df64691ac3f4d7e871043767444ea64dfe1ef3
+ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
+ms.openlocfilehash: 2892bc8242c3b6a90352829bf251b7044a919ed3
 
 
 ---
@@ -52,7 +52,7 @@ Cette rubrique contient des informations importantes sur cette version du Kit RM
 
 ## Mise à jour de mai 2015
 
--   **Applications de service et service RMS cloud** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) a besoin de trois informations : la clé symétrique, **AppPrincipalId** et **TenantBposId**. La rubrique traitant de ce sujet a été mise à jour pour fournir des conseils sur le traitement de ces informations d’acquisition. Pour cette mise à jour, consultez la version mise à jour de [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Applications de service et service RMS cloud** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) a besoin de trois informations : la clé symétrique, **AppPrincipalId** et **TenantBposId**. La rubrique traitant de ce sujet a été mise à jour pour fournir des conseils sur le traitement de ces informations d’acquisition. Pour cette mise à jour, consultez la version mise à jour de [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## Mise à jour d’avril 2015
 
@@ -178,6 +178,6 @@ Si aucun nom et aucune description ne peuvent être récupérés, une erreur est
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

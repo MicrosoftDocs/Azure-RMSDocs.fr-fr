@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4c3625676c7e794ef133c75881f666bae80e0513
-ms.openlocfilehash: ad8c41c9f3f3515a817d508d8f5a8953daf4b440
+ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
+ms.openlocfilehash: fce408a8c7a1114375745c3783443b87cd80ba78
 
 
 ---
@@ -46,7 +46,7 @@ Pour utiliser votre application de service de Rights Management Services SDK 2.
 
      
 -   Les étapes suivantes permettent de créer une instance de structure [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) avec le membre **pcCredential** ([**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) rempli avec les informations de connexion du service Azure Rights Management.
--   Utilisez les informations obtenues lors de la création de votre identité de service de clé symétrique (voir la configuration requise plus haut dans cette rubrique) pour définir les paramètres **wszServicePrincipal**, **wszBposTenantId** et **cbKey** quand vous créez une instance de structure [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
+-   Utilisez les informations obtenues lors de la création de votre identité de service de clé symétrique (voir la configuration requise plus haut dans cette rubrique) pour définir les paramètres **wszServicePrincipal**, **wszBposTenantId** et **cbKey** quand vous créez une instance de structure [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key).
 
 **Remarque** En raison d’une condition existante avec notre service de découverte, si vous n’êtes pas en Amérique du Nord, les informations d’identification de clé symétrique d’autres régions ne sont pas acceptées. Vous devez donc spécifier les URL des locataires directement. Cette opération s’effectue par le biais du paramètre [**IPC\_CONNECTION\_INFO**](/rights-management/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) de [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) ou [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
 
@@ -81,7 +81,7 @@ Pour utiliser votre application de service de Rights Management Services SDK 2.
     `Get-AadrmConfiguration`
 
 
--   Créez une instance de  [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) et définissez quelques membres.
+-   Créez une instance de [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) et définissez quelques membres.
 
     // Créer une structure de clés.
     IPC_CREDENTIAL_SYMMETRIC_KEY symKey = {0};
@@ -90,9 +90,9 @@ Pour utiliser votre application de service de Rights Management Services SDK 2.
     symKey.wszBase64Key = "votre_clé_de_principal_du_service"; symKey.wszAppPrincipalId = "votre_identificateur_de_principal_d’application"; symKey.wszBposTenantId = "votre_identificateur_de_locataire";
 
 
-Pour plus d’informations, consultez [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
+Pour plus d’informations, consultez [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key).
 
--   Créez une instance de structure [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) contenant votre instance de [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
+-   Créez une instance de structure [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) contenant votre instance de [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key).
 
 **Remarque** Les membres de *connectionInfo* sont définis avec des URL obtenues à partir de l’appel précédent à `Get-AadrmConfiguration` et notées ici avec ces noms de champs.
 
@@ -160,7 +160,7 @@ Vous avez maintenant terminé les étapes nécessaires pour permettre à votre a
 * [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
 * [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx)
 * [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)
-* [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key)
+* [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key)
 * [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist)
 * [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
 * [**IpcfDecryptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)
@@ -173,6 +173,6 @@ Vous avez maintenant terminé les étapes nécessaires pour permettre à votre a
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

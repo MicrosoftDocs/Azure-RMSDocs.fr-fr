@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a58d50b33db95570b43fe1ec0f76bdf490ddd024
-ms.openlocfilehash: 164df467632b38f179d1c1192835f919641331a5
+ms.sourcegitcommit: 0ac4264f20208f999c9ad9bdd2c4759e65ae021b
+ms.openlocfilehash: 5344c38a31aa0ceb894f330f363442bd2c0d9375
 
 
 ---
@@ -124,7 +124,7 @@ Pour vérifier que l’opération a réussi, consultez la section [Vérification
     setup.exe /s /configureO2010Admin /certificationUrl <certification_url>
     ```
 
-3.  Sur chaque ordinateur sur lequel vous allez installer l’application de partage RMS, chaque utilisateur de l’utilisateur doit exécuter la commande suivante (aucun besoin de privilèges élevés). Il existe différentes manières d'effectuer cette opération, y compris en demandant aux utilisateurs d'exécuter la commande (par exemple, un lien dans un message électronique ou un lien sur le portail du support technique), ou vous pouvez l'ajouter à leur script d'ouverture de session :
+3.  Sur chaque ordinateur sur lequel vous allez installer l’application de partage RMS, chaque utilisateur se servant de l’ordinateur doit exécuter la commande suivante (aucun besoin de privilèges élevés). Il existe différentes manières d'effectuer cette opération, y compris en demandant aux utilisateurs d'exécuter la commande (par exemple, un lien dans un message électronique ou un lien sur le portail du support technique), ou vous pouvez l'ajouter à leur script d'ouverture de session :
 
     ```
     bin\RMSSetup.exe /configureO2010Only
@@ -369,6 +369,6 @@ Pour obtenir des informations techniques supplémentaires sur notamment la diff�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

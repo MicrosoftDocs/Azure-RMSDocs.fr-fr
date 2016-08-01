@@ -3,15 +3,15 @@ title: "Didacticiel de démarrage rapide Azure Information Protection Étape 2 
 description: "Étape 2 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 463c0bc1fa86f73e2623faf5a624afeabcadeedb
-ms.openlocfilehash: c6ecf22b72d862c605f8be2ab1f75fd2126f8575
+ms.sourcegitcommit: 3bf9fe837c7bb268361b8004352192f0540604b9
+ms.openlocfilehash: af2f5eadf3a4993c590f72a8f44e4fea03982505
 
 
 ---
@@ -44,7 +44,7 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
 
 2. Dans le panneau **Label: Confidential** sont répertoriés les paramètres qui sont disponibles pour chaque étiquette. Apportez les modifications suivantes :
 
-    a. Si vous avez activé Azure Rights Management, pour **Select RMS template** (Sélectionner le modèle RMS) : cliquez sur la zone de liste déroulante et sélectionnez le modèle par défaut **\<nom_votre_organisation> - Confidential**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous verrez et sélectionnerez **VanArsdel, Ltd - Confidential**. Si vous avez désactivé ce modèle Azure Rights Management par défaut, sélectionnez un autre modèle. Toutefois, si vous sélectionnez un modèle de service, vérifiez que votre compte est compris dans l’étendue.
+    a. Si vous avez activé Azure Rights Management, pour **Définir le modèle RMS pour la protection des documents et des e-mails contenant cette étiquette** : vérifiez que **Azure RMS** est sélectionné, puis cliquez sur la zone de liste déroulante et sélectionnez le modèle par défaut **\<nom de votre organisation> - Confidentiel**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous verrez et sélectionnerez **VanArsdel, Ltd - Confidential**. Si vous avez désactivé ce modèle Azure Rights Management par défaut, sélectionnez un autre modèle. Toutefois, si vous sélectionnez un modèle de service, vérifiez que votre compte est compris dans l’étendue.
 
     Si vous n’avez pas activé Azure Rights Management, vous ne pouvez pas utiliser cette option.
 
@@ -82,6 +82,6 @@ Maintenant que vous avez examiné la stratégie par défaut et apporté des modi
 [Étape 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

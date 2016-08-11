@@ -3,22 +3,24 @@ title: "Didacticiel de démarrage rapide Azure Information Protection | Azure Ri
 description: "Didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/16/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: cac95dec84f99d2e6caa3458dc8284defe2324bc
-ms.openlocfilehash: 7dc988365c1fa86827d1a7edc33c0a2eb6180f0e
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 17670eadc7cbf6111ab7fd0a9322e51d401b86e1
 
 
 ---
 
 # Didacticiel de démarrage rapide pour Azure Information Protection 
 
-*S’applique à : Azure Information Protection (préversion)*
+>*S’applique à : Azure Information Protection (préversion)*
+
+**[ Cette information est préliminaire et susceptible d'être modifiée. ]**
 
 Utilisez ce didacticiel pour tester rapidement Azure Information Protection (préversion) pour votre organisation en seulement 15 minutes en suivant quatre étapes. Si vous le souhaitez, vous activerez le service Azure Rights Management, vous examinerez et modifierez la stratégie Azure Information Protection par défaut, vous installerez le client Azure Information Protection, puis vous utiliserez un document Word pour voir la classification, l’étiquetage et la protection en action.
 
@@ -38,7 +40,7 @@ Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 
 - Un compte d’administrateur global pour vous connecter au Centre d’administration Office 365 ou au portail Azure Classic, si vous devez activer le service Rights Management. Ce compte doit également disposer d’une adresse de messagerie et d’un service de messagerie professionnel (par exemple, Exchange Online ou Exchange Server).
 
-- Un ordinateur exécutant Windows (au minimum Windows 7 avec le Service Pack 1) et sur lequel Office 2016, Office 2013 avec le Service Pack 1 ou Office 2010 est installé. 
+- Un ordinateur exécutant Windows (au minimum Windows 7 avec le Service Pack 1) et sur lequel Office Professionnel Plus 2016, Office Professionnel Plus 2013 avec Service Pack 1 ou Office Professionnel Plus 2010 est installé. 
 
 - Si Active Directory Rights Management Services (AD RMS) est déployé dans votre organisation : l’ordinateur doit être un ordinateur de groupe de travail qui n’a pas encore utilisé AD RMS. Cela est nécessaire si vous souhaitez protéger des documents et garantit que l’ordinateur télécharge les modèles uniquement à partir d’Azure Rights Management. La connexion simultanée d’un ordinateur à AD RMS et Azure RMS n’est pas prise en charge. Si vous souhaitez obtenir des informations sur la migration, consultez [Migration d’AD RMS vers Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).   
 
@@ -51,6 +53,6 @@ C’est parti !
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

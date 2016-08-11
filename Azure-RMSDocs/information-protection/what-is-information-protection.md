@@ -3,22 +3,24 @@ title: "Qu’est-ce qu’Azure Information Protection ? | Azure Rights Manageme
 description: "Présentation du service Azure Information Protection, actuellement en préversion."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/14/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: 0db303b01361b3220c2e9334f84594ac86c5b069
-ms.openlocfilehash: bfb56fd4994a358d366d94b40f6c5fc889330303
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: d3d63a778bff62649341227b65212722e285a6be
 
 
 ---
 
 # Qu’est-ce qu’Azure Information Protection (préversion) ?
 
-*S’applique à : Azure Information Protection (préversion)*
+>*S’applique à : Azure Information Protection (préversion)*
+
+**[ Cette information est préliminaire et susceptible d'être modifiée. ]**
 
 Azure Information Protection vous permet de classifier, étiqueter et protéger vos documents et vos e-mails. Quand vous classifiez ces données, des étiquettes persistantes sont ajoutées aux données, ce qui vous permet de les identifier à tout moment, quel que soit l’endroit où les données sont stockées ou avec qui elles sont partagées. Les étiquettes persistantes incluent des marquages visuels comme des en-têtes, des pieds de page ou des filigranes. Pour vos données les plus sensibles, vous pouvez également utiliser des stratégies de chiffrement, d’identité et d’autorisation Azure Rights Management pour éviter de les perdre. 
 
@@ -42,6 +44,6 @@ Pour les utilisateurs finaux, Azure Information Protection s’intègre facileme
 Découvrez Azure Information Protection en quatre étapes simples avec notre [Didacticiel de démarrage rapide pour Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

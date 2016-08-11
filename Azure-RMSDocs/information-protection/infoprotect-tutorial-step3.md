@@ -3,22 +3,24 @@ title: "Didacticiel de démarrage rapide Azure Information Protection Étape 3 
 description: "Étape 3 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: 7f85c673cd1e8055d6a27dcc49b5da18a7e12f98
-ms.openlocfilehash: 41ebf56c55d94e9aecf9538d474c8fa2c77ae83e
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 65596a71b07e830377c55dc04b7187251315a634
 
 
 ---
 
 # Étape 3 : Installer le client Azure Information Protection 
 
-*S’applique à : Azure Information Protection (préversion)*
+>*S’applique à : Azure Information Protection (préversion)*
+
+**[ Cette information est préliminaire et susceptible d'être modifiée. ]**
 
 Lors de cette étape, vous allez installer le client Azure Information Protection pour que la stratégie que vous venez de configurer soit téléchargée sur un PC Windows, et vous allez afficher les étiquettes dans les applications Office. 
 
@@ -41,11 +43,16 @@ Lors de cette étape, vous allez installer le client Azure Information Protectio
 
 Vous êtes prêt pour l’étape finale, pour découvrir la classification, l’étiquetage et la protection en action.
 
+|Pour en savoir plus|Informations supplémentaires|
+|--------------------------------|--------------------------|
+|À propos de l’installation du client|[Installation du client Azure Information Protection](info-protect-client.md)|
+
+
 >[!div class="step-by-step"]
 [&#171; Étape 2](infoprotect-tutorial-step2.md)
 [Étape 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

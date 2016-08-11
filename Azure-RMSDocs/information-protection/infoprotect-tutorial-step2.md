@@ -3,26 +3,28 @@ title: "Didacticiel de démarrage rapide Azure Information Protection Étape 2 
 description: "Étape 2 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/22/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf9fe837c7bb268361b8004352192f0540604b9
-ms.openlocfilehash: af2f5eadf3a4993c590f72a8f44e4fea03982505
+ms.sourcegitcommit: cab45baf19af4ab548f5f112946d168d93a95d49
+ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
 
 
 ---
 
 # Étape 2 : Configurer et publier la stratégie Azure Information Protection
 
-*S’applique à : Azure Information Protection (préversion)*
+>*S’applique à : Azure Information Protection (préversion)*
+
+**[ Cette information est préliminaire et susceptible d'être modifiée. ]**
 
 Bien qu’Azure Information Protection soit fourni avec une stratégie par défaut que vous pouvez utiliser sans configuration, nous allons examiner cette stratégie et y apporter des modifications.
 
-1. Connectez-vous au portail Azure à l’aide de ce lien spécial pour Azure Information Protection : https://portal.azure.com/?microsoft_azure_informationprotection=true
+1. Connectez-vous au [portail Azure](https://portal.azure.com).
  
 2. Dans le menu hub, cliquez sur **Parcourir** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
@@ -44,20 +46,22 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
 
 2. Dans le panneau **Label: Confidential** sont répertoriés les paramètres qui sont disponibles pour chaque étiquette. Apportez les modifications suivantes :
 
-    a. Si vous avez activé Azure Rights Management, pour **Définir le modèle RMS pour la protection des documents et des e-mails contenant cette étiquette** : vérifiez que **Azure RMS** est sélectionné, puis cliquez sur la zone de liste déroulante et sélectionnez le modèle par défaut **\<nom de votre organisation> - Confidentiel**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous verrez et sélectionnerez **VanArsdel, Ltd - Confidential**. Si vous avez désactivé ce modèle Azure Rights Management par défaut, sélectionnez un autre modèle. Toutefois, si vous sélectionnez un modèle de service, vérifiez que votre compte est compris dans l’étendue.
-
+    a. Si vous avez activé Azure Rights Management : dans la section **Définir le modèle RMS pour la protection des documents et e-mails contenant cette étiquette**, si vous voyez **Sélectionner le modèle RMS à partir de**, conservez la valeur par défaut **Azure RMS**. Cliquez ensuite pour **Sélectionner un modèle RMS** sur la zone de liste déroulante et sélectionnez le modèle par défaut **\<nom_de_votre_organisation> - Confidentiel**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous verrez et sélectionnerez **VanArsdel, Ltd - Confidential**. Si vous avez désactivé ce modèle Azure Rights Management par défaut, sélectionnez un autre modèle. Toutefois, si vous sélectionnez un modèle de service, vérifiez que votre compte est compris dans l’étendue.
+    
     Si vous n’avez pas activé Azure Rights Management, vous ne pouvez pas utiliser cette option.
-
+    
     b. **Documents with this label have a watermark** (Les documents avec cette étiquette ont un filigrane) : cliquez sur **On** et, dans la zone **Text**, tapez le nom de votre organisation. Dans notre exemple, **VanArsdel, Ltd**. 
-
+    
     c. Cliquez sur **Add a new condition** (Ajouter une nouvelle condition) puis, dans le panneau **Condition**, sélectionnez les éléments suivants :
-
+    
     - **Choose the type of condition** (Choisir le type de condition) : **Built-in** (intégré)
-
+    
     - **Select built-in** (Sélectionner intégré) : **Credit Card Number** (Numéro de carte de crédit)
-
+    
     - **Minimum number of occurrences** (Nombre minimal d’occurrences : **1**
-
+    
+    - **Compter les occurrences avec des valeurs uniques uniquement** : **Activé**
+    
     - Cliquez sur **Save** pour revenir au panneau **Label: Confidential**.
 
 3. Dans le panneau **Label: Confidential**, vous verrez que **Credit Card Number** est affiché comme **CONDITION NAME**, avec **1** **OCCURRENCES**.
@@ -76,12 +80,16 @@ Vous pouvez fermer le portail Azure, ou le laisser ouvert pour essayer des optio
 
 Maintenant que vous avez examiné la stratégie par défaut et apporté des modifications, l’étape suivante consiste à installer le client Azure Information Protection.
 
+|Pour en savoir plus|Informations supplémentaires|
+|--------------------------------|--------------------------|
+|À propos des options de configuration de la stratégie|[Configuration de la stratégie Azure Information Protection](configure-policy.md)|
+
 
 >[!div class="step-by-step"]
 [&#171; Étape 1](infoprotect-tutorial-step1.md)
 [Étape 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

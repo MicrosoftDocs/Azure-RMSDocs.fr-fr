@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79e58b8092ea7cb057229d4c464d79f3694296e6
-ms.openlocfilehash: ace7103cfb44d84a7dd6bf64f57c2a47530117e0
+ms.sourcegitcommit: 11c1598c19392c6ecf0e82817f0ddeecd02c28bf
+ms.openlocfilehash: f1c89418cf031eadaf2d65314e1686ae4f00aa8c
 
 
 ---
@@ -35,38 +35,38 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **C++** :
 
-    void MainWindow::ConvertFromPFILE(const string&amp; fileIn,
-        const string&amp; clientId,
-        const string&amp; redirectUrl,
-        const string&amp; clientEmail) 
+    void MainWindow::ConvertFromPFILE(const string& fileIn,
+        const string& clientId,
+        const string& redirectUrl,
+        const string& clientEmail) 
     {
     // add trusted certificates using HttpHelpers of RMS and Auth SDKs
     addCertificates();
     
     // create shared in/out streams
-    auto inFile = make_shared&lt;ifstream&gt;(
+    auto inFile = make_shared<ifstream>(
     fileIn, ios_base::in | ios_base::binary);
     
-    if (!inFile-&gt;is_open()) {
-     AddLog(&quot;ERROR: Failed to open &quot;, fileIn.c_str());
+    if (!inFile->is_open()) {
+     AddLog("ERROR: Failed to open ", fileIn.c_str());
     return;
     }
     
     string fileOut;
     
     // generate output filename
-    auto pos = fileIn.find_last_of(&#39;.&#39;);
+    auto pos = fileIn.find_last_of('.');
     
     if (pos != string::npos) {
      fileOut = fileIn.substr(0, pos);
     }
     
      // create streams
-    auto outFile = make_shared&lt;fstream&gt;(
+    auto outFile = make_shared<fstream>(
     fileOut, ios_base::in | ios_base::out | ios_base::trunc | ios_base::binary);
     
-    if (!outFile-&gt;is_open()) {
-     AddLog(&quot;ERROR: Failed to open &quot;, fileOut.c_str());
+    if (!outFile->is_open()) {
+     AddLog("ERROR: Failed to open ", fileOut.c_str());
      return;
       }
     
@@ -81,19 +81,19 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
       inFile,
       outFile,
       auth,
-      this-&gt;consent);
+      this->consent);
     
-    AddLog(&quot;Successfully converted to &quot;, fileOut.c_str());
+    AddLog("Successfully converted to ", fileOut.c_str());
     }
-    catch (const rmsauth::Exception&amp; e)
+    catch (const rmsauth::Exception& e)
     {
-    AddLog(&quot;ERROR: &quot;, e.error().c_str());
+    AddLog("ERROR: ", e.error().c_str());
     }
-    catch (const rmscore::exceptions::RMSException&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.what());
+    catch (const rmscore::exceptions::RMSException& e) {
+    AddLog("ERROR: ", e.what());
     }
-    inFile-&gt;close();
-    outFile-&gt;close();
+    inFile->close();
+    outFile->close();
     }
 
 **Créer un flux de fichier protégé**
@@ -103,12 +103,12 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **C++** :
 
-    shared_ptr&lt;GetProtectedFileStreamResult&gt;PFileConverter::ConvertFromPFile(
-    const string           &amp; userId,
-    shared_ptr&lt;istream&gt;      inStream,
-    shared_ptr&lt;iostream&gt;     outStream,
-    IAuthenticationCallback&amp; auth,
-    IConsentCallback       &amp; consent)
+    shared_ptr<GetProtectedFileStreamResult>PFileConverter::ConvertFromPFile(
+    const string           & userId,
+    shared_ptr<istream>      inStream,
+    shared_ptr<iostream>     outStream,
+    IAuthenticationCallback& auth,
+    IConsentCallback       & consent)
     {
     auto inIStream = rmscrypto::api::CreateStreamFromStdStream(inStream);
     
@@ -118,26 +118,26 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
     auth,
     consent,
     POL_None,
-    static_cast&lt;ResponseCacheFlags&gt;(RESPONSE_CACHE_INMEMORY
+    static_cast<ResponseCacheFlags>(RESPONSE_CACHE_INMEMORY
                                     | RESPONSE_CACHE_ONDISK));
     
-    if ((fsResult.get() != nullptr) &amp;&amp; (fsResult-&gt;m_status == Success) &amp;&amp;
-      (fsResult-&gt;m_stream != nullptr)) {
-    auto pfs = fsResult-&gt;m_stream;
+    if ((fsResult.get() != nullptr) && (fsResult->m_status == Success) &&
+      (fsResult->m_stream != nullptr)) {
+    auto pfs = fsResult->m_stream;
     
     // preparing
     readPosition  = 0;
     writePosition = 0;
-    totalSize     = pfs-&gt;Size();
+    totalSize     = pfs->Size();
     
     // start threads
-    for (size_t i = 0; i &lt; THREADS_NUM; ++i) {
+    for (size_t i = 0; i < THREADS_NUM; ++i) {
       threadPool.push_back(thread(WorkerThread,
-                                  static_pointer_cast&lt;iostream&gt;(outStream), pfs,
+                                  static_pointer_cast<iostream>(outStream), pfs,
                                   false));
     }
     
-    for (thread&amp; t: threadPool) {
+    for (thread& t: threadPool) {
       if (t.joinable()) {
         t.join();
       }
@@ -155,36 +155,36 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **C++** :
 
-    void MainWindow::ConvertToPFILEUsingTemplates(const string&amp; fileIn,
-                                              const string&amp; clientId,
-                                              const string&amp; redirectUrl,
-                                              const string&amp; clientEmail) 
+    void MainWindow::ConvertToPFILEUsingTemplates(const string& fileIn,
+                                              const string& clientId,
+                                              const string& redirectUrl,
+                                              const string& clientEmail) 
     {
     // generate output filename
-    string fileOut = fileIn + &quot;.pfile&quot;;
+    string fileOut = fileIn + ".pfile";
     
     // add trusted certificates using HttpHelpers of RMS and Auth SDKs
     addCertificates();
     
     // create shared in/out streams
-    auto inFile = make_shared&lt;ifstream&gt;(
+    auto inFile = make_shared<ifstream>(
     fileIn, ios_base::in | ios_base::binary);
-    auto outFile = make_shared&lt;fstream&gt;(
+    auto outFile = make_shared<fstream>(
     fileOut, ios_base::in | ios_base::out | ios_base::trunc | ios_base::binary);
     
-    if (!inFile-&gt;is_open()) {
-    AddLog(&quot;ERROR: Failed to open &quot;, fileIn.c_str());
+    if (!inFile->is_open()) {
+    AddLog("ERROR: Failed to open ", fileIn.c_str());
     return;
     }
     
-    if (!outFile-&gt;is_open()) {
-    AddLog(&quot;ERROR: Failed to open &quot;, fileOut.c_str());
+    if (!outFile->is_open()) {
+    AddLog("ERROR: Failed to open ", fileOut.c_str());
     return;
     }
     
     // find file extension
     string fileExt;
-    auto   pos = fileIn.find_last_of(&#39;.&#39;);
+    auto   pos = fileIn.find_last_of('.');
     
     if (pos != string::npos) {
     fileExt = fileIn.substr(pos);
@@ -197,17 +197,17 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
     // process convertion
     PFileConverter::ConvertToPFileTemplates(
       clientEmail, inFile, fileExt, outFile, auth,
-      this-&gt;consent, this-&gt;templates);
+      this->consent, this->templates);
     
-    AddLog(&quot;Successfully converted to &quot;, fileOut.c_str());
+    AddLog("Successfully converted to ", fileOut.c_str());
     }
-   catch (const rmsauth::Exception&amp; e) { AddLog(&quot;ERROR: &quot;, e.error().c_str()); outFile-&gt;close(); remove(fileOut.c_str()); } catch (const rmscore::exceptions::RMSException&amp; e) { AddLog(&quot;ERROR: &quot;, e.what());
+   catch (const rmsauth::Exception& e) { AddLog("ERROR: ", e.error().c_str()); outFile->close(); remove(fileOut.c_str()); } catch (const rmscore::exceptions::RMSException& e) { AddLog("ERROR: ", e.what());
     
-    outFile-&gt;close();
+    outFile->close();
     remove(fileOut.c_str());
     }
-    inFile-&gt;close();
-    outFile-&gt;close();
+    inFile->close();
+    outFile->close();
     }
 
 
@@ -218,13 +218,13 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **C++** :
 
-    void PFileConverter::ConvertToPFileTemplates(const string           &amp; userId,
-                                             shared_ptr&lt;istream&gt;      inStream,
-                                             const string           &amp; fileExt,
-                                             std::shared_ptr&lt;iostream&gt;outStream,
-                                             IAuthenticationCallback&amp; auth,
-                                             IConsentCallback&amp; /*consent*/,
-                                             ITemplatesCallback     &amp; templ)
+    void PFileConverter::ConvertToPFileTemplates(const string           & userId,
+                                             shared_ptr<istream>      inStream,
+                                             const string           & fileExt,
+                                             std::shared_ptr<iostream>outStream,
+                                             IAuthenticationCallback& auth,
+                                             IConsentCallback& /*consent*/,
+                                             ITemplatesCallback     & templ)
     {
     auto templates = TemplateDescriptor::GetTemplateList(userId, auth);
     
@@ -232,7 +232,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
     
     size_t pos = templ.SelectTemplate(templates);
     
-    if (pos &lt; templates.size()) {
+    if (pos < templates.size()) {
     auto policy = UserPolicy::CreateFromTemplateDescriptor(
       templates[pos],
       userId,
@@ -251,10 +251,10 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **C++** :
 
-    void PFileConverter::ConvertToPFileUsingPolicy(shared_ptr&lt;UserPolicy&gt;   policy,
-                                               shared_ptr&lt;istream&gt;      inStream,
-                                               const string           &amp; fileExt,
-                                               std::shared_ptr&lt;iostream&gt;outStream)
+    void PFileConverter::ConvertToPFileUsingPolicy(shared_ptr<UserPolicy>   policy,
+                                               shared_ptr<istream>      inStream,
+                                               const string           & fileExt,
+                                               std::shared_ptr<iostream>outStream)
     {
     if (policy.get() != nullptr) {
     auto outIStream = rmscrypto::api::CreateStreamFromStdStream(outStream);
@@ -262,26 +262,26 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
     
     // preparing
     readPosition  = 0;
-    writePosition = pStream-&gt;Size();
+    writePosition = pStream->Size();
     
-    inStream-&gt;seekg(0, ios::end);
-    totalSize = inStream-&gt;tellg();
+    inStream->seekg(0, ios::end);
+    totalSize = inStream->tellg();
     
     // start threads
-    for (size_t i = 0; i &lt; THREADS_NUM; ++i) {
+    for (size_t i = 0; i < THREADS_NUM; ++i) {
       threadPool.push_back(thread(WorkerThread,
-                                  static_pointer_cast&lt;iostream&gt;(inStream),
+                                  static_pointer_cast<iostream>(inStream),
                                   pStream,
                                   true));
     }
     
-    for (thread&amp; t: threadPool) {
+    for (thread& t: threadPool) {
       if (t.joinable()) {
         t.join();
       }
     }
     
-    pStream-&gt;Flush();
+    pStream->Flush();
     }
     
 
@@ -295,37 +295,37 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **C++** :
 
-    void MainWindow::ConvertToPFILEUsingRights(const string            &amp; fileIn,
-                                           const vector&lt;UserRights&gt;&amp; userRights,
-                                           const string            &amp; clientId,
-                                           const string            &amp; redirectUrl,
-                                           const string            &amp; clientEmail)
+    void MainWindow::ConvertToPFILEUsingRights(const string            & fileIn,
+                                           const vector<UserRights>& userRights,
+                                           const string            & clientId,
+                                           const string            & redirectUrl,
+                                           const string            & clientEmail)
     {
     // generate output filename
-    string fileOut = fileIn + &quot;.pfile&quot;;
+    string fileOut = fileIn + ".pfile";
     
     // add trusted certificates using HttpHelpers of RMS and Auth SDKs
     addCertificates();
     
     // create shared in/out streams
-    auto inFile = make_shared&lt;ifstream&gt;(
+    auto inFile = make_shared<ifstream>(
     fileIn, ios_base::in | ios_base::binary);
-    auto outFile = make_shared&lt;fstream&gt;(
+    auto outFile = make_shared<fstream>(
     fileOut, ios_base::in | ios_base::out | ios_base::trunc | ios_base::binary);
     
-    if (!inFile-&gt;is_open()) {
-    AddLog(&quot;ERROR: Failed to open &quot;, fileIn.c_str());
+    if (!inFile->is_open()) {
+    AddLog("ERROR: Failed to open ", fileIn.c_str());
     return;
     }
     
-    if (!outFile-&gt;is_open()) {
-    AddLog(&quot;ERROR: Failed to open &quot;, fileOut.c_str());
+    if (!outFile->is_open()) {
+    AddLog("ERROR: Failed to open ", fileOut.c_str());
     return;
     }
     
     // find file extension
     string fileExt;
-    auto   pos = fileIn.find_last_of(&#39;.&#39;);
+    auto   pos = fileIn.find_last_of('.');
     
     if (pos != string::npos) {
     fileExt = fileIn.substr(pos);
@@ -333,7 +333,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
     
     // is anything to add
     if (userRights.size() == 0) {
-    AddLog(&quot;ERROR: &quot;, &quot;Please fill email and check rights&quot;);
+    AddLog("ERROR: ", "Please fill email and check rights");
     return;
     }
     
@@ -349,25 +349,25 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
       fileExt,
       outFile,
       auth,
-      this-&gt;consent,
+      this->consent,
       userRights);
     
-    AddLog(&quot;Successfully converted to &quot;, fileOut.c_str());
+    AddLog("Successfully converted to ", fileOut.c_str());
     }
-    catch (const rmsauth::Exception&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.error().c_str());
+    catch (const rmsauth::Exception& e) {
+    AddLog("ERROR: ", e.error().c_str());
     
-    outFile-&gt;close();
+    outFile->close();
     remove(fileOut.c_str());
     }
-    catch (const rmscore::exceptions::RMSException&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.what());
+    catch (const rmscore::exceptions::RMSException& e) {
+    AddLog("ERROR: ", e.what());
     
-    outFile-&gt;close();
+    outFile->close();
     remove(fileOut.c_str());
     }
-    inFile-&gt;close();
-    outFile-&gt;close();
+    inFile->close();
+    outFile->close();
     }
 
 
@@ -379,24 +379,24 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 **C++** :
 
     void PFileConverter::ConvertToPFilePredefinedRights(
-    const string            &amp; userId,
-    shared_ptr&lt;istream&gt;       inStream,
-    const string            &amp; fileExt,
-    shared_ptr&lt;iostream&gt;      outStream,
-    IAuthenticationCallback &amp; auth,
-    IConsentCallback&amp; /*consent*/,
-    const vector&lt;UserRights&gt;&amp; userRights)
+    const string            & userId,
+    shared_ptr<istream>       inStream,
+    const string            & fileExt,
+    shared_ptr<iostream>      outStream,
+    IAuthenticationCallback & auth,
+    IConsentCallback& /*consent*/,
+    const vector<UserRights>& userRights)
     {
     auto endValidation = chrono::system_clock::now() + chrono::hours(48);
     
     
     PolicyDescriptor desc(userRights);
     
-    desc.Referrer(make_shared&lt;string&gt;(&quot;https://client.test.app&quot;));
+    desc.Referrer(make_shared<string>("https://client.test.app"));
     desc.ContentValidUntil(endValidation);
     desc.AllowOfflineAccess(false);
-    desc.Name(&quot;Test Name&quot;);
-    desc.Description(&quot;Test Description&quot;);
+    desc.Name("Test Name");
+    desc.Description("Test Description");
     
     auto policy = UserPolicy::Create(desc, userId, auth,
                                    USER_AllowAuditedExtraction);
@@ -411,7 +411,7 @@ La méthode *WorkerThread()* est appelée par deux des exemples de scénarios pr
 **C++** :
 
     threadPool.push_back(thread(WorkerThread,
-                                  static_pointer_cast&lt;iostream&gt;(outStream), pfs,
+                                  static_pointer_cast<iostream>(outStream), pfs,
                                   false));
 
 
@@ -423,20 +423,20 @@ La méthode *WorkerThread()* est appelée par deux des exemples de scénarios pr
     static int64_t totalSize     = 0;
     static int64_t readPosition  = 0;
     static int64_t writePosition = 0;
-    static vector&lt;thread&gt; threadPool;
+    static vector<thread> threadPool;
     
-    static void WorkerThread(shared_ptr&lt;iostream&gt;           stdStream,
-                         shared_ptr&lt;ProtectedFileStream&gt;pStream,
+    static void WorkerThread(shared_ptr<iostream>           stdStream,
+                         shared_ptr<ProtectedFileStream>pStream,
                          bool                           modeWrite) {
-    vector&lt;uint8_t&gt; buffer(4096);
-    int64_t bufferSize = static_cast&lt;int64_t&gt;(buffer.size());
+    vector<uint8_t> buffer(4096);
+    int64_t bufferSize = static_cast<int64_t>(buffer.size());
     
-    while (totalSize - readPosition &gt; 0) {
+    while (totalSize - readPosition > 0) {
     // lock
     threadLocker.lock();
     
     // check remain
-    if (totalSize - readPosition &lt;= 0) {
+    if (totalSize - readPosition <= 0) {
       threadLocker.unlock();
       return;
     }
@@ -456,23 +456,23 @@ La méthode *WorkerThread()* est appelée par deux des exemples de scénarios pr
       try {
         threadLocker.lock();
     
-        stdStream-&gt;seekg(offsetRead);
-        stdStream-&gt;read(reinterpret_cast&lt;char *&gt;(&amp;buffer[0]), toProcess);
+        stdStream->seekg(offsetRead);
+        stdStream->read(reinterpret_cast<char *>(&buffer[0]), toProcess);
         threadLocker.unlock();
         auto written =
-          pStream-&gt;WriteAsync(
+          pStream->WriteAsync(
             buffer.data(), toProcess, offsetWrite, std::launch::deferred).get();
     
         if (written != toProcess) {
-          throw rmscore::exceptions::RMSStreamException(&quot;Error while writing data&quot;);
+          throw rmscore::exceptions::RMSStreamException("Error while writing data");
         }
       }
-      catch (exception&amp; e) {
-        qDebug() &lt;&lt; &quot;Exception: &quot; &lt;&lt; e.what();
+      catch (exception& e) {
+        qDebug() << "Exception: " << e.what();
       }
     } else {
       auto read =
-        pStream-&gt;ReadAsync(&amp;buffer[0],
+        pStream->ReadAsync(&buffer[0],
                            toProcess,
                            offsetRead,
                            std::launch::deferred).get();
@@ -486,12 +486,12 @@ La méthode *WorkerThread()* est appelée par deux des exemples de scénarios pr
         threadLocker.lock();
     
         // seek to write
-        stdStream-&gt;seekp(offsetWrite);
-        stdStream-&gt;write(reinterpret_cast&lt;const char *&gt;(buffer.data()), read);
+        stdStream->seekp(offsetWrite);
+        stdStream->write(reinterpret_cast<const char *>(buffer.data()), read);
         threadLocker.unlock();
       }
-      catch (exception&amp; e) {
-        qDebug() &lt;&lt; &quot;Exception: &quot; &lt;&lt; e.what();
+      catch (exception& e) {
+        qDebug() << "Exception: " << e.what();
       }
     }
     }
@@ -509,7 +509,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
 
 **C++** :
 
-    auto FileCachePtr = std::make_shared&lt; rmsauth::FileCache&gt;();
+    auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
 
 
 **Étape 2** : Créer l’objet **rmsauth::AuthenticationContext** Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*.
@@ -540,7 +540,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
                 std::string(“john.smith@msopentechtest01.onmicrosoft.com”));
 
 
-**Étape 4** : Obtenir le jeton d’accès à partir du résultat Description : Appeler la méthode **result-&gt; accessToken()**
+**Étape 4** : Obtenir le jeton d’accès à partir du résultat Description : Appeler la méthode **result-> accessToken()**
 
 **Remarque**  Toutes les méthodes de bibliothèque d’authentification peuvent lever **rmsauth::Exception**
 
@@ -552,15 +552,15 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
 
 **C++** :
 
-    auto FileCachePtr = std::make_shared&lt; rmsauth::FileCache&gt;();
+    auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
 
 
 **Étape 2** : Créer l’objet **UserCredential** Description : Spécifier la *connexion utilisateur* et le *mot de passe*
 
 **C++** :
 
-    auto userCred = std::make_shared&lt;UserCredential&gt;(&quot;john.smith@msopentechtest01.onmicrosoft.com&quot;,
-                                                 &quot;SomePass&quot;);
+    auto userCred = std::make_shared<UserCredential>("john.smith@msopentechtest01.onmicrosoft.com",
+                                                 "SomePass");
 
 
 **Étape 3** : Créer l’objet **rmsauth::AuthenticationContext** Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*
@@ -586,13 +586,13 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
                 userCred);
 
 
-**Étape 5** : Obtenir le jeton d’accès à partir du résultat Description : Appeler la méthode **result-&gt; accessToken()**
+**Étape 5** : Obtenir le jeton d’accès à partir du résultat Description : Appeler la méthode **result-> accessToken()**
 
 **Remarque**  Toutes les méthodes de bibliothèque d’authentification peuvent lever **rmsauth::Exception**
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO1-->
 
 

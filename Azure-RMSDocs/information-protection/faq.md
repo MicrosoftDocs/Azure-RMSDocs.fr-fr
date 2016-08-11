@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,15 +13,17 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e60cd910a8e995a2681d7eb87a13f815183d9124
-ms.openlocfilehash: 846578a84df383821a64d32ce6dd69290a5fdee9
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 7d5b58efb4b789ba4f3d897ae3a475cbd2c679e5
 
 
 ---
 
 # Forum aux questions pour Azure Information Protection (préversion)
 
-*S’applique à : Azure Information Protection (préversion)*
+>*S’applique à : Azure Information Protection (préversion)*
+
+**[ Cette information est préliminaire et susceptible d'être modifiée. ]**
 
 Vous avez une question à propos de la préversion d’Azure Information Protection ?  Vous trouverez peut-être une réponse ici. 
 
@@ -61,12 +63,6 @@ Pour configurer les stratégies Azure Information Protection dans le portail Azu
 
 Toute modification apportée aux conditions requises des abonnements sera annoncée sur le [Blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
-## Si Azure Information Protection est aujourd’hui en préversion publique, pourquoi n’est-ce pas disponible sur le portail Azure ?
-
-Actuellement, vous devez utiliser ce lien pour voir Azure Information Protection sur le portail : https://portal.azure.com/?Microsoft_Azure_InformationProtection=true.
-
-Ensuite, dans le menu hub, cliquez sur **Parcourir** et commencez à taper « Information Protection » dans la zone Filtrer. Dans les résultats, sélectionnez **Azure Information Protection**.
-
 ## Dois-je être administrateur général pour essayer Azure Information Protection (préversion) ?
 
 Pour la préversion uniquement, tout utilisateur authentifié par Azure peut voir et configurer la stratégie Azure Information Protection de son locataire sur le portail Azure.
@@ -89,7 +85,7 @@ Ces informations sont maintenant documentées et seront mises à jour dans [Conf
 
 Chaque fois qu’un utilisateur ouvre une application Office, le client Azure Information Protection vérifie s’il existe une version ultérieure de la stratégie Azure Information Protection. S’il existe une version ultérieure, le client la télécharge à l’aide d’un lien HTTPS pour sécuriser les données. 
 
-Si l’application est déjà chargée quand une stratégie Azure Information Protection est mise à jour, vous devez fermer et rouvrir l’application pour obtenir la dernière version de la stratégie.
+Si plusieurs instances de l’application Office sont chargées lors de la publication d’une nouvelle stratégie Azure Information Protection, vous devez fermer toutes les instances pour obtenir la dernière version de la stratégie. Par exemple, vous avez deux documents Word ouverts et souhaitez tester la stratégie Azure Information Protection mise à jour dans un seul document : fermez les deux documents Word et rouvrez le document que vous souhaitez utiliser avec la dernière stratégie.
 
 ## Où les fichiers peuvent-ils être stockés pour utiliser Azure Information Protection ? 
 
@@ -113,7 +109,7 @@ Dans le portail Azure, vous pouvez utiliser des modèles prédéfinis, tels que 
 
 Le [Didacticiel de démarrage rapide pour Azure Information Protection](infoprotect-quick-start-tutorial.md) en donne un exemple. 
 
-La précision de classification dépend de la façon dont vous configurez la règle de classification, qui est basée sur des conditions. Actuellement, les conditions prennent en charge les modèles de texte et les expressions régulières. Pour obtenir une explication de chacune des options disponibles dans la préversion, avec certains exemples que vous pouvez testez, consultez le billet Yammer intitulé [Description of content matching for our pre-define Information types](https://www.yammer.com/askipteam/#/Threads/show?threadId=737163344) (Description de correspondance de contenu pour nos types d’informations prédéfinis). La détection s’exécute quand le document est enregistré ou quand un e-mail est envoyé.
+La précision de classification dépend de la façon dont vous configurez la règle de classification, qui est basée sur des conditions. Actuellement, les conditions prennent en charge les modèles de texte et les expressions régulières. Pour obtenir une explication sur chacune des options disponibles lors de l’aperçu, avec des exemples suggérés pour vous permettre de les tester, consultez [Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection](configure-policy-classification.md). La détection s’exécute quand le document est enregistré ou quand un e-mail est envoyé.
 
 Pour bénéficier de la meilleure expérience utilisateur et pour garantir assurer la continuité d’activité, nous vous recommandons de commencer avec des actions de recommandation utilisateur, plutôt que des actions entièrement automatiques. Cela permet aux utilisateurs d’accepter l’action d’étiquetage ou de protection, ou d’ignorer ces suggestions.   
 
@@ -121,7 +117,7 @@ Pour bénéficier de la meilleure expérience utilisateur et pour garantir assur
 
 Oui. Utilisez le portail Azure pour configurer s’il faut utiliser la classification automatique ou présenter une recommandation aux utilisateurs, en affectant la valeur **recommandé** à l’option **Select how this label is applied: automatically or recommended to user** (Sélectionner comment cette étiquette est appliquée : automatiquement ou recommandée à l’utilisateur).
 
-Le [Didacticiel de démarrage rapide pour Azure Information Protection](infoprotect-quick-start-tutorial.md) en donne un exemple.
+Le [Didacticiel de démarrage rapide pour Azure Information Protection](infoprotect-quick-start-tutorial.md) en donne un exemple.  
 
 ## Puis-je forcer la classification de tous les documents ?
 
@@ -140,7 +136,7 @@ Oui. Pour forcer les utilisateurs à justifier le changement de classification, 
 
 Dans le portail Azure, vous pouvez sélectionner un modèle Azure Rights Management pour protéger automatiquement le contenu, en fonction du niveau de classification que vous spécifiez.
 
-Le [Didacticiel de démarrage rapide pour Azure Information Protection](infoprotect-quick-start-tutorial.md) en donne un exemple.
+Le [Didacticiel de démarrage rapide pour Azure Information Protection](infoprotect-quick-start-tutorial.md) en donne un exemple. Pour en savoir plus, consultez la rubrique [Comment configurer une étiquette pour appliquer Rights Management protection](configure-policy-protection.md).
 
 ## Un fichier peut-il être classifié avec deux classifications différentes ?
 
@@ -188,6 +184,6 @@ Ensuite, accédez à notre [site Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

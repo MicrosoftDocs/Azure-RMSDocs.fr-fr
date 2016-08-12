@@ -3,15 +3,15 @@ title: "Didacticiel de démarrage rapide Azure Information Protection Étape 3 
 description: "Étape 3 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 65596a71b07e830377c55dc04b7187251315a634
+ms.sourcegitcommit: 264f2be6c62dc7fa670171493941332fe7ff20e5
+ms.openlocfilehash: 42649148e58a8ea1baab6317d181c24e6a21d709
 
 
 ---
@@ -37,9 +37,8 @@ Lors de cette étape, vous allez installer le client Azure Information Protectio
         Cliquez sur **Protéger** > **Aide et de commentaires** puis, dans la boîte de dialogue **Microsoft Azure Information Protection**, vérifiez l’état de votre client. Il doit afficher **Information Protection policy is installed** (La stratégie Information Protection est installée) et une heure de connexion récente. Vérifiez que le nom d’utilisateur affiché correspond à celui de votre locataire.
 
     - Une nouvelle barre s’affiche sous le ruban, la barre Information Protection. Elle affiche le titre **Sensitivity** (Niveau de confidentialité) et l’étiquette par défaut **Internal** (Interne) que nous avons configurée. 
-
-
-![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : client installé](../media/word2013-callouts.png)
+    
+        ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : client installé](../media/word2013-callouts2.png)
 
 Vous êtes prêt pour l’étape finale, pour découvrir la classification, l’étiquetage et la protection en action.
 
@@ -53,6 +52,6 @@ Vous êtes prêt pour l’étape finale, pour découvrir la classification, l’
 [Étape 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

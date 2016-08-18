@@ -3,15 +3,15 @@ title: "Didacticiel de démarrage rapide Azure Information Protection Étape 4 
 description: "Étape 4 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: cdd8dee1837c34caaeb0f8a1947dea37504e422a
+ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
+ms.openlocfilehash: a36433167462275e91059f9eb3a2141ffa2797d5
 
 
 ---
@@ -28,7 +28,7 @@ La classification et la protection ont lieu quand vous enregistrez le document, 
 
 ### Pour modifier manuellement notre étiquette par défaut
 
-- Dans la barre Information Protection, cliquez sur l’icône Edit label (Modifier l’étiquette) à côté de **Internal** (Interne). Les étiquettes disponibles apparaissent. Choisissez **Personal** (Personnel). Vous êtes invité à justifier pourquoi vous abaissez le niveau de classification. Sélectionnez **This file no longer requires that classification** (Ce fichier n’a plus besoin de cette classification), puis cliquez sur **Confirm**.  
+- Dans la barre Information Protection, sélectionnez l’étiquette **Personal** (Personnel). Vous êtes alors invité à indiquer pourquoi vous abaissez le niveau de classification. Sélectionnez **This file no longer requires that classification** (Ce fichier n’a plus besoin de cette classification), puis cliquez sur **Confirm**.  
 
     **Sensitivity** (Niveau de confidentialité) prend la valeur **Personal** (Personnel).
 
@@ -36,7 +36,7 @@ La classification et la protection ont lieu quand vous enregistrez le document, 
 
 ### Pour supprimer complètement la classification
 
-- Dans la barre Information Protection, cliquez sur l’icône d’étiquette Edit à côté de **Personal**. Les étiquettes disponibles apparaissent. Au lieu de choisir l’une des étiquettes, cliquez sur l’icône Remove label (Supprimer l’étiquette). Cliquez sur **OK** pour confirmer et fournir la justification de cette action.  
+- Dans la barre Information Protection, cliquez sur l’icône **Edit label** (Modifier l’étiquette) à côté de **Personal** (Personnel). Les étiquettes disponibles apparaissent. Au lieu de choisir l’une des étiquettes, cliquez sur l’icône **Remove label** (Supprimer l’étiquette). Cliquez sur **OK** pour confirmer, puis indiquez la justification de cette action.  
 
     La valeur **Sensitivity** (Niveau de confidentialité) indique **Not set** (Non défini), ce qui correspond à ce que les utilisateurs voient initialement si vous ne définissez pas d’étiquette par défaut.
 
@@ -77,6 +77,6 @@ Quand vous avez terminé vos propres tests, il peut être utile de consulter le 
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

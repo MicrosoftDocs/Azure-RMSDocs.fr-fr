@@ -20,11 +20,12 @@
 ### [Supprimer ou réorganiser une étiquette](configure-policy-delete-reorder.md)
 ### [Modifier une étiquette](configure-policy-change-label.md)
 ### [Appliquer la protection](configure-policy-protection.md)
+#### [Restrictions liées à HYOK](configure-adrms-restrictions.md)
 ### [Configurer des marquages visuels](configure-policy-markings.md)
 ### [Configurer des conditions](configure-policy-classification.md)
 ## [Installer le client](info-protect-client.md)
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

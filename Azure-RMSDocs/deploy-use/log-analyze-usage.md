@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/05/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2082620eb152aa88af4141b88985adce22769168
-ms.openlocfilehash: fbf614bf7b30165a78f6312267243ad6fdb81435
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 28fed61b674112d2ebeb30a15a6f6217647e0b5f
 
 
 ---
@@ -179,13 +179,13 @@ Il existe de nombreux types de demande dans Azure Rights Management. Le tableau 
 |BECreateEndUserLicenseV1|Un appel est fait à partir d’un appareil mobile pour créer une licence utilisateur final.|
 |BEGetAllTemplatesV1|Un appel est fait à partir d’un appareil mobile (principal) pour obtenir tous les modèles.|
 |Certify|Le client certifie le contenu pour la protection.|
-|KMSPDecrypt|Le client tente de déchiffrer le contenu protégé par RMS. Applicable uniquement pour une clé de locataire gérée par le client (BYOK).|
 |DeleteTemplateById|Un appel est fait à partir du portail Azure Classic pour supprimer un modèle sur la base de son ID.|
 |DocumentEventsCsv|Un appel est effectué à partir du site de suivi des documents pour télécharger le fichier CSV pour un seul document.|
 |ExportTemplateById|Un appel est fait à partir du portail Azure Classic pour exporter un modèle sur la base de son ID.|
 |FECreateEndUserLicenseV1|Similaire à la demande AcquireLicense, mais à partir d’un appareil mobile.|
 |FECreatePublishingLicenseV1|Identique à Certify et GetClientLicensorCert combinés, mais à partir de clients mobiles.|
 |FEGetAllTemplates|Un appel est fait à partir d’un appareil mobile (frontal) pour obtenir les modèles.|
+|FindServiceLocationsForUser|Un appel est fait pour rechercher des URL utilisées pour appeler Certify ou AcquireLicense.|
 |GetAllDocs|Un appel est effectué à partir du site de suivi des documents pour charger la page **tous les documents** pour un utilisateur ou rechercher tous les documents pour le client. Utilisez cette valeur avec les champs admin-action et acting-as-admin :<br /><br />- admin-action est vide : un utilisateur affiche la page **tous les documents** page pour ses propres documents.<br /><br />- admin-action a la valeur true et acting-as-user est vide : un administrateur affiche tous les documents pour son client.<br /><br />- admin-action a la valeur true et acting-as-user n’est pas vide : un administrateur affiche la page **tous les documents** pour un utilisateur.|
 |GetAllTemplates|Un appel est fait à partir du portail Azure Classic pour obtenir tous les modèles.|
 |GetClientLicensorCert|Le client demande un certificat de publication (qui sera ensuite utilisé pour protéger du contenu) à partir d’un ordinateur Windows.|
@@ -195,8 +195,11 @@ Il existe de nombreux types de demande dans Azure Rights Management. Le tableau 
 |GetSingle|Un appel est effectué à partir du site de suivi des documents pour accéder à une page **un seul document**.|
 |GetTenantFunctionalState|Le portail Azure Classic vérifie si Azure RMS est activé.|
 |GetTemplateById|Un appel est fait à partir du portail Azure Classic pour obtenir un modèle sur la base de son ID.|
-|ExportTemplateById|Un appel est fait à partir du portail Azure Classic pour exporter un modèle sur la base de son ID.|
-|FindServiceLocationsForUser|Un appel est fait pour rechercher des URL utilisées pour appeler Certify ou AcquireLicense.|
+|KeyVaultDecryptRequest|Le client tente de déchiffrer le contenu protégé par RMS. Applicable uniquement pour une clé de locataire gérée par le client (BYOK) dans Azure Key Vault.|
+|KeyVaultGetKeyInfoRequest|Un appel est effectué pour vérifier que la clé spécifiée pour être utilisée dans Azure Key Vault pour la clé de locataire Azure RMS est accessible et n’est pas déjà utilisée.|
+|KeyVaultSignDigest|Un appel est effectué quand une clé gérée par le client (BYOK) dans Azure Key Vault est utilisée à des fins de signature. Cet appel est généralement fait une fois par demande AcquireLicense (ou FECreateEndUserLicenseV1), Certify et GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
+|KMSPDecrypt|Le client tente de déchiffrer le contenu protégé par RMS. Applicable uniquement pour une clé de locataire gérée par le client (BYOK) héritée.|
+|KMSPSignDigest|Un appel est fait quand une clé gérée par le client (BYOK) héritée est utilisée à des fins de signature. Cet appel est généralement fait une fois par demande AcquireLicense (ou FECreateEndUserLicenseV1), Certify et GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
 |LoadEventsForMap|Un appel est effectué à partir du site de suivi des documents pour accéder à l’affichage du mappage pour un seul document.|
 |LoadEventsForSummary|Un appel est effectué à partir du site de suivi des documents pour accéder à l’affichage de la chronologie pour un seul document.|
 |LoadEventsForTimeline|Un appel est effectué à partir du site de suivi des documents pour accéder à l’affichage du mappage pour un seul document.|
@@ -206,10 +209,8 @@ Il existe de nombreux types de demande dans Azure Rights Management. Le tableau 
 |ServerCertify|Un appel est fait à partir d’un client RMS (par exemple, SharePoint) pour certifier le serveur.|
 |SetUsageLogFeatureState|Un appel est fait pour activer la journalisation de l’utilisation.|
 |SetUsageLogStorageAccount|Un appel est fait pour spécifier l’emplacement des journaux Azure RMS.|
-|SignDigest|Un appel est fait quand une clé est utilisée à des fins de signature. Cet appel est généralement fait une fois par demande AcquireLicense (ou FECreateEndUserLicenseV1), Certify et GetClientLicensorCert (ou FECreatePublishingLicenseV1).|
 |UpdateNotificationSettings|Un appel est effectué à partir du site de suivi des documents pour modifier les paramètres de notification pour un seul document.|
 |UpdateTemplate|Un appel est fait à partir du portail Azure Classic pour mettre à jour un modèle existant.|
-
 
 
 ## Référence Windows PowerShell
@@ -240,6 +241,6 @@ Pour plus d’informations sur l’utilisation de Windows PowerShell pour Azure 
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

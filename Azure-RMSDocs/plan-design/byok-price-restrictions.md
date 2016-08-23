@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 34d5ed8ca9f5b4556429a081718fc70a789590aa
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: ece615912d69eda78107c60245620ed36c0affd2
 
 
 ---
@@ -24,7 +24,9 @@ ms.openlocfilehash: 34d5ed8ca9f5b4556429a081718fc70a789590aa
 *S’applique à : Azure Rights Management, Office 365*
 
 
-Toute organisation possédant un abonnement Azure géré par informatique peut utiliser la solution BYOK et consigner son utilisation sans frais supplémentaires. Notez que les organisations utilisant RMS for individuals ne peuvent utiliser ni la solution BYOK, ni la journalisation, car elles ne disposent d'aucun administrateur locataire pour configurer ces fonctions.
+Les organisations qui ont un abonnement incluant Azure Rights Management peuvent utiliser des clés gérées par le client (BYOK) dans Azure Key Vault et consigner son utilisation dans un journal sans frais supplémentaires. Cependant, pour utiliser Azure Key Vault, vous devez disposer d’un abonnement Azure qui prend en charge Key Vault avec des clés protégées par HSM. L’utilisation d’une clé dans Azure Key Vault entraîne des frais mensuels. Pour plus d’informations, consultez la [page Tarification d’Azure Key Vault](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+
+Si vous avez des utilisateurs qui ont souscrit un compte gratuit en utilisant RMS en tant que particuliers, vous ne pouvez pas utiliser BYOK ni la journalisation de l’utilisation car cette configuration n’a pas d’administrateur de locataire pour configurer ces fonctionnalités.
 
 
 > [!NOTE]
@@ -32,9 +34,9 @@ Toute organisation possédant un abonnement Azure géré par informatique peut u
 
 ![BYOK ne prend pas en charge Exchange Online](../media/RMS_BYOK_noExchange.png)
 
-La solution BYOK et la journalisation fonctionnent de façon transparente, chaque application s'intégrant avec Azure RMS, notamment les services cloud tels que SharePoint Online, les serveurs locaux exécutant Exchange et SharePoint qui fonctionnent avec Azure RMS grâce au connecteur RMS, et les applications clientes telles qu’Office 2013. Vous obtenez des journaux d'utilisation de la clé, quelle que soit l'application effectuant des requêtes Azure RMS.
+BYOK et la journalisation de l’utilisation fonctionnent de façon transparente avec chaque application qui s’intègre à Azure RMS. Sont compris : les services cloud, comme SharePoint Online, les serveurs locaux exécutant Exchange et SharePoint qui fonctionnent avec Azure RMS grâce au connecteur RMS, et les applications clientes comme Office 2016 et Office 2013. Vous obtenez des journaux d'utilisation de la clé, quelle que soit l'application effectuant des requêtes Azure RMS.
 
-Il existe une exception : Actuellement, la solution **Azure RMS BYOK**n'est pas compatible avec Exchange Online.  Si vous souhaitez utiliser Exchange Online, nous vous recommandons de déployer Azure RMS maintenant en mode de gestion de clés par défaut dans lequel Microsoft génère et gère votre clé. Vous avez la possibilité de passer à la solution BYOK ultérieurement, par exemple, quand Exchange Online prend en charge Azure RMS BYOK. Toutefois, si vous ne pouvez pas attendre, une autre option consiste à déployer Azure RMS avec la solution BYOK et des fonctionnalités RMS réduites pour Exchange Online (les pièces jointes et messages électroniques non protégés restent entièrement fonctionnels) :
+Il existe une exception : Actuellement, la solution **Azure RMS BYOK**n'est pas compatible avec Exchange Online. Si vous souhaitez utiliser Exchange Online, nous vous recommandons de déployer Azure RMS maintenant en mode de gestion de clés par défaut dans lequel Microsoft génère et gère votre clé. Vous avez la possibilité de passer à la solution BYOK ultérieurement, par exemple, quand Exchange Online prend en charge Azure RMS BYOK. Toutefois, si vous ne pouvez pas attendre, une autre option consiste à déployer Azure RMS avec la solution BYOK et des fonctionnalités RMS réduites pour Exchange Online (les pièces jointes et messages électroniques non protégés restent entièrement fonctionnels) :
 
 -   Il n'est pas possible d'afficher les pièces jointes ou messages électroniques protégés dans Outlook Web Access.
 
@@ -48,7 +50,7 @@ Il existe une exception : Actuellement, la solution **Azure RMS BYOK**n'est pas 
 
 Lorsque vous utilisez la solution BYOK Azure RMS avec des fonctionnalités RMS réduites pour Exchange Online, RMS fonctionne avec les clients de messagerie dans Outlook sur Mac et Windows et sur d'autres clients de messagerie qui n'utilisent pas Exchange ActiveSync IRM.
 
-Si vous effectuez une migration vers Azure RMS à partir d'AD RMS, vous avez peut-être importé votre clé en tant que domaine de publication approuvé (TPD) dans Exchange Online (également appelée BYOK dans la terminologie d'Exchange, qui est distincte de la solution BYOK d'Azure RMS ). Dans ce scénario, vous devez supprimer le domaine de publication approuvé d'Exchange Online afin d'éviter les modèles et stratégies en conflit. Pour plus d’informations, consultez [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) dans la bibliothèque d’applets de commande Exchange Online.
+Si vous effectuez une migration vers Azure RMS depuis AD RMS, vous avez peut-être importé votre clé comme domaine de publication approuvé (TPD) dans Exchange Online (également appelé BYOK dans la terminologie d’Exchange, qui est distincte du BYOK d’Azure Key Vault). Dans ce scénario, vous devez supprimer le domaine de publication approuvé d'Exchange Online afin d'éviter les modèles et stratégies en conflit. Pour plus d’informations, consultez [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) dans la bibliothèque d’applets de commande Exchange Online.
 
 Parfois, l'exception BYOK d'Azure RMS pour Exchange Online n'est pas un problème dans la pratique. Par exemple, les organisations qui souhaitent utiliser la solution BYOK et la journalisation exécutent leurs applications de données (Exchange, SharePoint, Office) en local et utilisent Azure RMS pour les fonctionnalités qui ne sont pas facilement disponibles avec AD RMS en local (par exemple, collaboration avec d'autres sociétés et accès à partir de clients mobiles). La solution BYOK et la journalisation fonctionnent bien dans ce scénario et offrent aux organisations un contrôle total sur leur abonnement Azure RMS.
 
@@ -61,6 +63,6 @@ Si vous souhaitez que Microsoft gère votre clé de client (configuration par d�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

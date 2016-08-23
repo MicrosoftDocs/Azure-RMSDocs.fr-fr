@@ -3,15 +3,15 @@ title: "Comment configurer des marquages visuels d’une étiquette pour Azure I
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
-ms.openlocfilehash: 78b68c7a502776c6492437e9b8a5c3f1ebf27f95
+ms.sourcegitcommit: b5e7fecca7aeb61221dc1f61aa3e202936b8c042
+ms.openlocfilehash: 2b4f464fa51e0743cb1ce0726c7feb31146b5128
 
 
 ---
@@ -60,17 +60,19 @@ Utilisez les instructions suivantes pour configurer les marquages visuels d’un
 
 Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’en-tête, le pied de page ou le filigrane :
 
-- `${Item.Label}` pour l’étiquette sélectionnée
+- `${Item.Label}` pour l’étiquette sélectionnée. Par exemple : interne
 
-- `${Item.Name}` pour le nom de fichier ou l’objet de l’e-mail
+- `${Item.Name}` pour le nom de fichier ou l’objet de l’e-mail. Par exemple : JulySales.docx
 
-- `${Item.Location}` pour le chemin du fichier
+- `${Item.Location}` pour le chemin et le nom de fichier des documents, et pour l’objet des e-mails. Par exemple : \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` pour le propriétaire du document ou de l’e-mail
+- `${User.Name}` pour le propriétaire du document ou de l’e-mail, par le nom d’utilisateur connecté à Windows. Par exemple : rsimone
 
-- `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée 
+- `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Par exemple : rsimone@vanarsdelltd.com
+
+- `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Par exemple : 16/08/2016 13:30
     
-Exemple : Si vous spécifiez la chaîne `Document: ${item.name} Sensitivity: ${item.label}` pour le pied de page de l’étiquette Secret, le texte du pied de page appliqué à un document nommé project.docx est **Document: project.docx Sensitivity: Secret**.
+Exemple : Si vous spécifiez la chaîne `Document: ${item.name}  Classification: ${item.label}` pour le pied de page de l’étiquette Secret, le texte du pied de page appliqué à un document nommé project.docx est **Document : project.docx Classification : Secret**.
 
 ## Étapes suivantes
 
@@ -80,6 +82,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

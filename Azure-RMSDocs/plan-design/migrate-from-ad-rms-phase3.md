@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 75cce1d0e5a1cff0d4f6609d0f084fda1af62951
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 6d3cb53fb199bb880a0e61d2b964f297e547a027
 
 
 ---
@@ -42,7 +42,7 @@ Si vous avez choisi une topologie de clé de locataire Azure RMS **gérée par 
 ## Étape 7. Déployer le connecteur RMS
 Si vous avez utilisé la fonctionnalité Information Rights Management (IRM) d'Exchange Server ou de SharePoint Server avec AD RMS, vous devez d'abord désactiver l'IRM sur ces serveurs, puis supprimer la configuration AD RMS. Ensuite, déployez le connecteur Rights Management (RMS), qui agit comme interface de communication (relais) entre les serveurs locaux et Azure RMS.
 
-Enfin, pour cette étape, si vous avez importé plusieurs TPD dans Azure RMS, qui ont été utilisés pour protéger des messages électroniques, vous devez modifier manuellement le Registre sur les ordinateurs Exchange Server afin de rediriger toutes les URL de TPD vers le connecteur RMS.
+Enfin, pour cette étape, si vous avez importé plusieurs fichiers de configuration de données (.xml) AD RMS dans Azure RMS qui ont été utilisés pour protéger des e-mails, vous devez modifier manuellement le Registre sur les ordinateurs Exchange Server pour rediriger toutes les URL de domaine de publication approuvé vers le connecteur RMS.
 
 > [!NOTE]
 > Avant de commencer, vérifiez les versions des serveurs locaux prises en charge par Azure RMS, dans [Serveurs locaux prenant en charge Azure RMS](../get-started/requirements-servers.md).
@@ -95,7 +95,7 @@ Enfin, pour cette étape, si vous avez importé plusieurs TPD dans Azure RMS, qu
 
 #### Pour Exchange uniquement et plusieurs TPD : modifier le Registre
 
--   Sur chaque serveur Exchange, ajoutez manuellement les clés de Registre suivantes pour chaque TPD que vous avez importé afin de rediriger les URL de TPD vers le connecteur RMS. Ces entrées de Registre sont spécifiques de la migration et ne sont pas ajoutées par l'outil de configuration de serveur pour le connecteur Microsoft RMS.
+-   Sur chaque serveur Exchange, ajoutez manuellement les clés de Registre suivantes pour chaque fichier de configuration de données (.xml) que vous avez importé pour rediriger les URL de domaine de publication approuvé vers le connecteur RMS. Ces entrées de Registre sont spécifiques de la migration et ne sont pas ajoutées par l'outil de configuration de serveur pour le connecteur Microsoft RMS.
 
     Lorsque vous apportez ces modifications au Registre, suivez les instructions suivantes :
 
@@ -215,6 +215,6 @@ Une fois ces procédures terminées, vous pouvez lire la section **Étapes suiva
 Pour poursuivre la migration, passez à la [Phase 4 - Tâches de post-migration](migrate-from-ad-rms-phase4.md).
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,15 +3,15 @@ title: "Comment configurer les paramètres de stratégie globaux pour Azure Info
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 3b22cf76f03a4d36281db7e705359402dcbbde0e
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 508161474bf6fd7406668de3976206947de254de
 
 
 ---
@@ -29,11 +29,11 @@ Il existe 3 paramètres dans la stratégie Azure Information Protection qui s’
 
 Pour configurer ces paramètres :
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
- 
-2. Dans le menu hub, cliquez sur **Parcourir** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+1. Si vous ne l’avez pas déjà fait, connectez-vous au [portail Azure](https://portal.azure.com), puis accédez au panneau **Azure Information Protection**. 
+    
+    Par exemple, cliquez sur **Parcourir** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-3. Dans le panneau **Azure Information Protection**, configurez les paramètres globaux suivants :
+2. Dans le panneau **Azure Information Protection**, configurez les paramètres globaux suivants :
 
     - **Tous les documents et e-mails doivent avoir une étiquette** : lorsque vous paramétrez cette option sur **Activé**, tous les documents et e-mails envoyés enregistrés doivent avoir une étiquette appliquée. L’étiquetage peut être affecté manuellement par un utilisateur, automatiquement à la suite d’une [condition](configure-policy-classification.md), ou être attribué par défaut (en définissant l’option **Sélectionner l’étiquette par défaut**. 
 
@@ -49,9 +49,9 @@ Pour configurer ces paramètres :
 
     Cette option n’est pas applicable pour les sous-étiquettes.
 
-4. Pour enregistrer vos modifications, cliquez sur **Enregistrer**.
+3. Pour enregistrer vos modifications, cliquez sur **Enregistrer**.
 
-5. Pour que les modifications soient disponibles pour les utilisateurs, cliquez sur **Publier**.
+4. Pour que les modifications soient disponibles pour les utilisateurs, cliquez sur **Publier**.
 
 ## Étapes suivantes
 
@@ -68,6 +68,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

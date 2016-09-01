@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea4dd88ed749092fd02135d8ca25b621f74fe72f
-ms.openlocfilehash: 7ed3569475362272ace055862fe8bb3ee072036a
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 21fac7d684f2d544ab97f5ca6eb7faaaca3e9d26
 
 
 ---
@@ -36,25 +36,24 @@ Surveillez l’activité de vos serveurs AD RMS, par exemple, en vérifiant [les
 Après la désaffectation de vos serveurs AD RMS, vous pouvez réviser vos modèles dans le portail Azure Classic et les consolider afin que les utilisateurs aient moins de choix, les reconfigurer ou même ajouter de nouveaux modèles. Il serait également judicieux de publier les modèles par défaut. Pour plus d’informations, consultez [Configuration de modèles personnalisés pour Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
 ## Étape 9. Renouveler votre clé de locataire Azure RMS
-Cette étape est obligatoire une fois la migration terminée si votre déploiement AD RMS utilisait le mode de chiffrement RMS 1, car le renouvellement de clé crée une clé de locataire qui utilise le mode de chiffrement RMS 2. L'utilisation d'Azure RMS avec le mode de chiffrement 1 est prise en charge uniquement pendant le processus de migration.
+Cette étape s’applique seulement si vous avez choisi une topologie de clé de locataire Gérée par Microsoft et non pas Gérée par le client (BYOK avec Azure Key Vault).
 
-Cette étape est facultative mais recommandée une fois la migration terminée, même si vous utilisiez le mode de chiffrement RMS 2, car elle permet de sécuriser votre clé de locataire Azure RMS contre d'éventuelles failles de sécurité de votre clé AD RMS. Quand vous renouvelez votre clé de locataire Azure RMS (« déploiement de la clé »), une nouvelle clé est créée et la clé d'origine est archivée. Toutefois, étant donné que le basculement d’une clé à l’autre ne se produit pas immédiatement mais sur plusieurs semaines, n’attendez pas de soupçonner une violation de votre clé d’origine et renouvelez votre clé de locataire Azure RMS dès la fin de la migration.
+Cette étape est facultative, mais elle est recommandée quand votre clé de locataire Azure RMS est gérée par Microsoft et a été migrée depuis AD RMS. La recréation de clé dans ce scénario permet de protéger votre clé de locataire Azure RMS contre des failles de sécurité de votre clé AD RMS.
 
-Pour renouveler votre clé de locataire Azure RMS :
+Quand vous renouvelez votre clé de locataire Azure RMS (« déploiement de la clé »), une nouvelle clé est créée et la clé d'origine est archivée. Toutefois, étant donné que le basculement d’une clé à l’autre ne se produit pas immédiatement mais sur plusieurs semaines, n’attendez pas de soupçonner une violation de votre clé d’origine et renouvelez votre clé de locataire Azure RMS dès la fin de la migration.
 
--   Si votre clé de locataire Azure RMS est gérée par Microsoft : [contactez le support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) pour ouvrir un **dossier de support Azure Rights Management dans lequel vous demandez le renouvellement de votre clé de locataire Azure RMS**. Vous devez prouver que vous êtes administrateur de votre locataire Azure RMS et comprendre que la confirmation de ce processus prend plusieurs jours. Des frais de prise en charge standard s’appliquent. Le renouvellement de votre clé de locataire n’est pas un service de support gratuit.
+Pour recréer votre clé de locataire Azure RMS gérée par Microsoft : [contactez le support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) et ouvrez un **dossier de support Azure Rights Management avec une demande de recréation de votre clé RMS après une migration depuis AD RMS**. Vous devez prouver que vous êtes administrateur de votre locataire Azure RMS et comprendre que la confirmation de ce processus prend plusieurs jours. Des frais de prise en charge standard s’appliquent. Le renouvellement de votre clé de locataire n’est pas un service de support gratuit.
 
--   Si vous gérez vous-même votre clé de locataire RMS (BYOK) : répétez la procédure BYOK pour générer et créer une clé sur Internet ou en personne.
-
-Pour plus d’informations sur la gestion de votre clé de locataire Azure RMS, consultez [Opérations pour votre clé de locataire Azure Rights Management](../deploy-use/operations-tenant-key.md).
 
 ## Étapes suivantes
+
+Pour plus d’informations sur la gestion de votre clé de locataire RMS, consultez [Opérations pour votre clé de locataire Azure Rights Management](../deploy-use/operations-tenant-key.md).
 
 Maintenant que vous avez terminé la migration, passez en revue la [feuille de route de déploiement](deployment-roadmap.md) pour identifier les autres tâches de déploiement éventuellement nécessaires.
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2016
+ms.date: 08/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e65fe3e6994352296cdf58d4b53de421389790f7
-ms.openlocfilehash: 17a423b8a5a6ec0aeb1121b9ea290ae84d809d9c
+ms.sourcegitcommit: 60f25cdcdabbfbb61072a95e39f84fed79cad871
+ms.openlocfilehash: e656729fa9ea926681e560f40c4f43ce320a0d5e
 
 
 ---
@@ -28,211 +28,24 @@ Lorsque vous définissez la protection de fichiers ou de messages électroniques
 Utilisez cet article pour vous aider à configurer les droits d’utilisation de l’application que vous utilisez et pour comprendre comment ces droits sont interprétés par les applications.
 
 ## Descriptions et droits d’utilisation
-Les sections suivantes répertorient et décrivent les droits d’utilisation pris en charge par Rights Management et la manière dont ils sont utilisés et interprétés. Ils sont répertoriés selon le **Nom commun**, qui correspond à la manière dont le droit d’utilisation est généralement affiché ou référencé sous une forme plus conviviale que la valeur de mot unique utilisée dans le code (valeur d’**Encodage dans la stratégie**). La **Constante ou valeur d’API** est le nom SDK d’un appel d’API MSIPC utilisé quand vous écrivez une application compatible avec RMS qui recherche un droit d’utilisation ou en ajoute un à une stratégie.
+Le tableau suivant répertorie et décrit les droits d'utilisation pris en charge par Rights Management, et la manière dont ils sont utilisés et interprétés. Ils sont répertoriés selon le **Nom commun**, qui correspond à la manière dont le droit d’utilisation est généralement affiché ou référencé sous une forme plus conviviale que la valeur de mot unique utilisée dans le code (valeur d’**Encodage dans la stratégie**). La **Constante ou valeur d’API** est le nom SDK d’un appel d’API MSIPC utilisé quand vous écrivez une application compatible avec RMS qui recherche un droit d’utilisation ou en ajoute un à une stratégie.
+
+
+|Right|Description|Implémentation|
+|-------------------------------|---------------------------|-----------------|
+|Nom commun : **Modifier le contenu, Modifier** <br /><br />Encodage dans la stratégie : **DOCEDIT**|Permet à l'utilisateur de modifier, réorganiser, mettre en forme ou filtrer le contenu de l'application. N'accorde pas le droit d'enregistrer la copie modifiée.|Droits personnalisés Office : En relation avec les options **Modifier** et **Contrôle total**. <br /><br />Nom dans le portail Azure Classic : **Modifier le contenu**<br /><br />Nom dans les modèles AD RMS : **Modifier** <br /><br />Constante ou valeur d’API : Non applicable|
+|Nom commun : **Enregistrer** <br /><br />Encodage dans la stratégie : **EDIT**|Permet à l'utilisateur d'enregistrer le document à son emplacement actuel.<br /><br />Dans les applications Office, ce droit permet également à l'utilisateur de modifier le document.|Droits personnalisés Office : En relation avec les options **Modifier** et **Contrôle total**. <br /><br />Nom dans le portail Azure Classic : **Enregistrer le fichier**<br /><br />Nom dans les modèles AD RMS : **Enregistrer** <br /><br />Constante ou valeur d’API `IPC_GENERIC_WRITE L"EDIT"`|
+|Nom commun : **Commentaire** <br /><br />Encodage dans la stratégie : **COMMENT**|Active l'option d'ajout d'annotations ou de commentaires au contenu.<br /><br />Ce droit, disponible dans le SDK, est disponible en tant que stratégie ad hoc dans le module de protection RMS pour Windows PowerShell. Il a été implémenté dans certaines applications de fournisseur de logiciel. Toutefois, il n’est pas largement utilisé et n’est pas actuellement pris en charge par les applications Office.|Droits personnalisés Office : Non implémenté. <br /><br />Nom dans le portail Azure Classic : Non implémenté.<br /><br />Nom dans les modèles AD RMS : Non implémenté. <br /><br />Constante ou valeur d’API `IPC_GENERIC_COMMENT L"COMMENT`|
+|Nom commun : **Enregistrer sous, Exporter** <br /><br />Encodage dans la stratégie : **EXPORT**|Active l'option d'enregistrement du contenu sous un autre nom de fichier (Enregistrer sous). Pour les documents Office, le fichier peut être enregistré sans protection.<br /><br />Ce droit permet également à l'utilisateur d'utiliser d'autres options d'exportation dans les applications, telles que **Envoyer à OneNote**.|Droits personnalisés Office : En relation avec les options **Modifier** et **Contrôle total**. <br /><br />Nom dans le portail Azure Classic : **Exporter le contenu (Enregistrer sous)**<br /><br />Nom dans les modèles AD RMS : **Exporter (Enregistrer sous)** <br /><br />Constante ou valeur d’API `IPC_GENERIC_EXPORT L"EXPORT"`|
+|Nom commun : **Transférer** <br /><br />Encodage dans la stratégie : **FORWARD**|Active l'option de transfert de message électronique et d'ajout de destinataires aux lignes **À** et **CC** . Ce droit ne s’applique pas aux documents, mais uniquement aux e-mails.<br /><br />N'autorise pas le redirecteur à accorder des droits à d'autres utilisateurs dans le cadre de l'action de transfert.|Droits personnalisés Office : Refusés en cas d’utilisation de la stratégie standard **Ne pas transférer**.<br /><br />Nom dans le portail Azure Classic : **Transférer**<br /><br />Nom dans les modèles AD RMS : **Transférer** <br /><br />Constante ou valeur d’API `IPC_EMAIL_FORWARD L"FORWARD"`|
+|Nom commun : **Contrôle total** <br /><br />Encodage dans la stratégie : **OWNER**|Accorde tous les droits sur le document. Toutes les actions disponibles peuvent être effectuées.<br /><br />Inclut la possibilité de supprimer la protection et de reprotéger un document.|Droits personnalisés Office : Comme l’option personnalisée **Contrôle total**.<br /><br />Nom dans le portail Azure Classic : **Contrôle total**<br /><br />Nom dans les modèles AD RMS : **Contrôle total** <br /><br />Constante ou valeur d’API `IPC_GENERIC_ALL L"OWNER"`|
+|Nom commun : **Imprimer** <br /><br />Encodage dans la stratégie : **PRINT**|Active les options d'impression du contenu.|Droits personnalisés Office : Comme l’option **Imprimer le contenu** dans les autorisations personnalisées. N’est pas un paramètre par destinataire.<br /><br />Nom dans le portail Azure Classic : **Imprimer**<br /><br />Nom dans les modèles AD RMS : **Imprimer** <br /><br />Constante ou valeur d’API `IPC_GENERIC_PRINT L"PRINT"`|
+|Nom commun : **Répondre** <br /><br />Encodage dans la stratégie : **PRINT**|Active l’option **Répondre** dans un client de messagerie sans autoriser de modification des lignes **À** ou **Cc**.|Droits personnalisés Office : Non implémenté.<br /><br />Nom dans le portail Azure Classic : **Répondre**<br /><br />Nom dans les modèles AD RMS : **Répondre** <br /><br />Constante ou valeur d’API `IPC_EMAIL_REPLY`|
+|Nom commun : **Répondre à tous** <br /><br />Encodage dans la stratégie : **REPLYALL**|Active l'option **Répondre à tous** dans un client de messagerie, mais ne permet pas à l'utilisateur d'ajouter des destinataires aux lignes **À** ou **CC** .|Droits personnalisés Office : Non implémenté.<br /><br />Nom dans le portail Azure Classic : **Répondre à tous**<br /><br />Nom dans les modèles AD RMS : **Répondre à tous** <br /><br />Constante ou valeur d’API `IPC_EMAIL_REPLYALL L"REPLYALL"`|
+|Nom commun : **Afficher, Ouvrir, Lire** <br /><br />Encodage dans la stratégie : **VIEW**|Permet à l'utilisateur d'ouvrir le document et d'en voir le contenu.|Droits personnalisés Office : Comme l’option **Afficher** de la stratégie personnalisée **Lecture**.<br /><br />Nom dans le portail Azure classique : **Afficher**<br /><br />Nom dans les modèles AD RMS : **Répondre à tous** <br /><br />Constante ou valeur d’API `IPC_GENERIC_READ L"VIEW"`|
+|Nom commun : **Copier** <br /><br />Encodage dans la stratégie : **EXTRACT**|Active les options permettant de copier des données du document (y compris des captures d’écran) vers un autre emplacement du document ou vers un autre document.<br /><br />Dans certaines applications, permet également d’enregistrer l’ensemble du document sous forme non protégée.|Droits personnalisés Office : comme l’option de stratégie personnalisée **Autoriser les utilisateurs bénéficiant d’accès en lecture à copier le contenu**.<br /><br />Nom dans le portail Azure Classic : **Copier et Extraire le contenu**<br /><br />Nom dans les modèles AD RMS : **Extraire** <br /><br />Constante ou valeur d’API `IPC_GENERIC_EXTRACT L"EXTRACT"`|
+|Nom commun : **Autoriser les macros** <br /><br />Encodage dans la stratégie : **OBJMODEL**|Active l'option permettant d'exécuter des macros ou d'effectuer d'autres opérations d'accès à distance ou par programme au contenu d'un document.|Droits personnalisés Office : Comme l’option de la stratégie personnalisée **Autoriser l’accès par programme**. N’est pas un paramètre par destinataire.<br /><br />Nom dans le portail Azure Classic : **Autoriser les macros**<br /><br />Nom dans les modèles AD RMS : **Autoriser les macros** <br /><br />Constante ou valeur d’API : Non applicable|
 
-
-### Modifier le contenu, Modifier
-
-Permet à l'utilisateur de modifier, réorganiser, mettre en forme ou filtrer le contenu de l'application. N'accorde pas le droit d'enregistrer la copie modifiée.
-
-**Encodage dans la stratégie** : DOCEDIT
-
-**Implémentation dans les droits personnalisés Office** : En relation avec les options *Modifier* et *Contrôle total*.
-
-**Nom dans le portail Azure Classic** : *Modifier le contenu*
-
-**Nom dans les modèles AD RMS** : *Modifier*
-
-**Constante ou valeur d’API** : *Non applicable*
-
----
-
-### Enregistrer
-
-Permet à l'utilisateur d'enregistrer le document à son emplacement actuel.
-
-**Encodage dans la stratégie** : EDIT
-
-**Implémentation dans les droits personnalisés Office** : En relation avec les options *Modifier* et *Contrôle total*.
-
-**Nom dans le portail Azure Classic** : *Enregistrer le fichier*
-
-**Nom dans les modèles AD RMS** : *Enregistrer*
-
-**Constante ou valeur d’API** : IPC_GENERIC_WRITE L"EDIT"
-
-Dans les applications Office, ce droit permet également à l'utilisateur de modifier le document.
-
----
-
-### Commentaire
-
-Active l'option d'ajout d'annotations ou de commentaires au contenu.
-
-**Encodage dans la stratégie** : COMMENT
-
-**Implémentation dans les droits personnalisés Office** : Non implémenté.
-
-**Nom dans le portail Azure Classic** : Non implémenté.
-
-**Nom dans les modèles AD RMS** : Non implémenté.
-
-**Constante ou valeur d’API :** IPC_GENERIC_COMMENT L"COMMENT
-
-Ce droit, disponible dans le SDK, est disponible en tant que stratégie ad hoc dans le module de protection RMS pour Windows PowerShell. Il a été implémenté dans certaines applications de fournisseur de logiciel. Toutefois, il n’est pas largement utilisé et n’est pas actuellement pris en charge par les applications Office.
-
----
-
-### Enregistrer sous, Exporter
-
-Active l'option d'enregistrement du contenu sous un autre nom de fichier (Enregistrer sous). Pour les documents Office, le fichier peut être enregistré sans protection.
-
-**Encodage dans la stratégie** : EXPORT
-
-**Implémentation dans les droits personnalisés Office** : En relation avec les options *Modifier* et *Contrôle total*.
-
-**Nom dans le portail Azure Classic** : *Exporter le contenu (Enregistrer sous)*
-
-**Nom dans les modèles AD RMS** : *Exporter (Enregistrer sous)*
-
-**Constante ou valeur d’API :** IPC_GENERIC_EXPORT L"EXPORT"
-
-Ce droit permet également à l’utilisateur d’utiliser d’autres options d’exportation dans les applications, telles que *Envoyer à OneNote*.
-
----
-
-### Prédictif
-
-Active l’option de transfert de message électronique et d’ajout de destinataires aux lignes *À* et *Cc*. Ce droit ne s’applique pas aux documents, mais uniquement aux e-mails.
-
-**Encodage dans la stratégie** : FORWARD
-
-**Implémentation dans les droits personnalisés Office** : Refusée en cas d’utilisation de la stratégie standard *Ne pas transférer*.
-
-**Nom dans le portail Azure Classic** : *Transférer*
-
-**Nom dans les modèles AD RMS** : *Transférer*
-
-**Constante ou valeur d’API :** IPC_EMAIL_FORWARD L"FORWARD"
-
-N'autorise pas le redirecteur à accorder des droits à d'autres utilisateurs dans le cadre de l'action de transfert.
-
----
-
-### Contrôle total
-
-Accorde tous les droits sur le document. Toutes les actions disponibles peuvent être effectuées.
-
-**Encodage dans la stratégie** : OWNER
-
-**Implémentation dans les droits personnalisés Office** : Comme l’option personnalisée *Contrôle total*.
-
-**Nom dans le portail Azure Classic** : *Contrôle total*
-
-**Nom dans les modèles AD RMS** : *Contrôle total*
-
-**Constante ou valeur d’API :** IPC_GENERIC_ALL L"OWNER"
-
-Inclut la possibilité de supprimer la protection et de reprotéger un document.
-
----
-
-### Imprimer
-
-Active les options d'impression du contenu.
-
-**Encodage dans la stratégie** : PRINT
-
-**Implémentation dans les droits personnalisés Office** : Comme l’option *Imprimer le contenu* dans les autorisations personnalisées. N’est pas un paramètre par destinataire.
-
-**Nom dans le portail Azure Classic** : *Imprimer*
-
-**Nom dans les modèles AD RMS** : *Imprimer*
-
-**Constante ou valeur d’API :** IPC_GENERIC_PRINT L"PRINT
-
----
-
-### Répondre
-
-Active l’option Répondre dans un client de messagerie sans autoriser de modification des lignes *À* ou *Cc*.
-
-**Encodage dans la stratégie** : REPLY
-
-**Implémentation dans les droits personnalisés Office** : Non applicable.
-
-**Nom dans le portail Azure Classic** : *Répondre*
-
-**Nom dans les modèles AD RMS** : *Répondre*
-
-**Constante ou valeur d’API** : IPC_EMAIL_REPLY
-
----
-
-### Répondre à tous
-
-Active l’option *Répondre à tous* dans un client de messagerie, mais ne permet pas à l’utilisateur d’ajouter des destinataires aux lignes *À* ou *Cc*.
-
-**Encodage dans la stratégie** : REPLYALL
-
-**Implémentation dans les droits personnalisés Office** : Non applicable.
-
-**Nom dans le portail Azure Classic** : *Répondre à tous*
-
-**Nom dans les modèles AD RMS** : *Répondre à tous*
-
-**Constante ou valeur d’API :** IPC_EMAIL_REPLYALL L"REPLYALL"
-
----
-
-### Afficher, Ouvrir, Lire
-
-Permet à l'utilisateur d'ouvrir le document et d'en voir le contenu.
-
-**Encodage dans la stratégie** : VIEW
-
-**Implémentation dans les droits personnalisés Office** : Comme l’option *Afficher* de la stratégie personnalisée *Lecture*.
-
-**Nom dans le portail Azure Classic** : *Afficher le contenu*
-
-**Nom dans les modèles AD RMS** : *Afficher*
-
-**Constante ou valeur d’API :** IPC_GENERIC_READ L"VIEW"
-
----
-
-### Copier
-
-Active les options permettant de copier des données du document (y compris des captures d’écran) vers un autre emplacement du document ou vers un autre document.
-
-**Encodage dans la stratégie** : EXTRACT
-
-**Implémentation dans les droits personnalisés Office :** comme l’option de stratégie personnalisée *Autoriser les utilisateurs bénéficiant d’accès en lecture à copier le contenu*.
-
-**Nom dans le portail Azure Classic :** *Copier et Extraire le contenu*
-
-**Nom dans les modèles AD RMS :** *Extraire*
-
-**Constante ou valeur d’API :** IPC_GENERIC_EXTRACT L"EXTRACT"
-
-Dans certaines applications, permet également d’enregistrer l’ensemble du document sous forme non protégée.
-
----
-
-
-### Autoriser les macros
-
-Active l'option permettant d'exécuter des macros ou d'effectuer d'autres opérations d'accès à distance ou par programme au contenu d'un document.
-
-**Encodage dans la stratégie** : OBJMODEL
-
-**Implémentation dans les droits personnalisés Office** : Comme l’option de la stratégie personnalisée *Autoriser l’accès par programme*. N’est pas un paramètre par destinataire.
-
-**Nom dans le portail Azure Classic** : *Autoriser les macros*
-
-**Nom dans les modèles AD RMS** : *Autoriser les macros*
-
-**Constante ou valeur d’API** : Non applicable
 
 
 ## Droits inclus dans les niveaux d’autorisation
@@ -289,6 +102,6 @@ Une utilisatrice veut envoyer certaines informations par e-mail à certaines per
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

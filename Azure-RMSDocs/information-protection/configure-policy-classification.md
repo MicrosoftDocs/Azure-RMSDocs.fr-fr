@@ -3,15 +3,15 @@ title: "Comment configurer des conditions pour la classification automatique et 
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 9da6bf3687242793002976c3514bda068effd8d7
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 80c201dcf316a5aa5e123645d47c6741f8b61f05
 
 
 ---
@@ -49,15 +49,15 @@ Dans cet exemple, l’utilisateur peut cliquer sur **Modifier maintenant** pour 
 
 ## Pour configurer la classification automatique ou recommandée pour une étiquette
 
-1. Assurez-vous d’être connecté au portail Azure à l’aide de ce lien spécial pour Azure Information Protection : https://portal.azure.com/?microsoft_azure_informationprotection=true
- 
-2. Dans le menu hub, cliquez sur **Parcourir** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+1. Si vous ne l’avez pas déjà fait, connectez-vous au [portail Azure](https://portal.azure.com), puis accédez au panneau **Azure Information Protection**. 
+    
+    Par exemple, cliquez sur **Parcourir** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-3. Dans le panneau **Azure Information Protection**, sélectionnez l’étiquette que vous souhaitez configurer pour la classification automatique ou recommandée.
+2. Dans le panneau **Azure Information Protection**, sélectionnez l’étiquette que vous souhaitez configurer pour la classification automatique ou recommandée.
 
-4. Dans le panneau **Étiquette**, dans la section **Configurer des conditions pour appliquer automatiquement cette étiquette**, cliquez sur **Ajouter une condition**.
+3. Dans le panneau **Étiquette**, dans la section **Configurer des conditions pour appliquer automatiquement cette étiquette**, cliquez sur **Ajouter une condition**.
 
-5. Dans le panneau **Condition**, sélectionnez **Intégré** si vous souhaitez utiliser une condition prédéfinie, ou **Personnalisé** si vous souhaitez spécifier votre propre condition, puis cliquez sur **Enregistrer** :
+4. Dans le panneau **Condition**, sélectionnez **Intégré** si vous souhaitez utiliser une condition prédéfinie, ou **Personnalisé** si vous souhaitez spécifier votre propre condition, puis cliquez sur **Enregistrer** :
 
     - Pour **Intégré** : faites votre sélection dans la liste des conditions disponibles, puis sélectionnez le nombre minimal d’occurrences et déterminez si l’occurrence doit avoir une valeur unique pour être incluse dans le nombre d’occurrences.
         
@@ -67,13 +67,13 @@ Dans cet exemple, l’utilisateur peut cliquer sur **Modifier maintenant** pour 
         
     **Exemple d’options occurrences** : vous sélectionnez l’option de numéro de sécurité sociale intégrée et définissez le nombre minimal d’occurrences sur 2, et si le même numéro de sécurité sociale est répertorié deux fois dans un document : si vous définissez **Compter les occurrences avec des valeurs uniques uniquement** sur **Activé**, la condition n’est pas remplie. Si vous définissez cette option sur **Désactivé**, la condition est remplie.
 
-6. Dans le panneau **Étiquette**, configurez les options suivantes, puis cliquez sur **Enregistrer** :
+5. Dans le panneau **Étiquette**, configurez les options suivantes, puis cliquez sur **Enregistrer** :
 
     - Choisissez la classification automatique ou recommandée : pour l’option **Sélectionner comment cette étiquette est appliquée : automatiquement ou recommandée à l’utilisateur**, sélectionnez **Automatique** ou **Recommandée**.
 
     - Spécifiez le texte de l’invite utilisateur ou du conseil de stratégie : conservez le texte par défaut ou spécifiez votre propre chaîne.
 
-7. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
+6. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
 
 ## Informations sur les conditions intégrées
 
@@ -225,6 +225,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

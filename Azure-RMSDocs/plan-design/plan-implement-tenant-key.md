@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/30/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f01d57759ab80b4946c07a627269550c80114131
-ms.openlocfilehash: aa482dace1086222f63e9165e3089051b5de3e8c
+ms.sourcegitcommit: a80866576dc7d6400bcebc2fc1c37bc0367bcdf3
+ms.openlocfilehash: ee7b9b5f251856f102651f1e8f379f7bbacea77e
 
 
 ---
@@ -35,27 +35,27 @@ Si vous déployez Azure RMS à l'aide d'une clé de locataire gérée par Micros
 |Besoin de l'entreprise|Topologie de clé de locataire recommandée|
 |------------------------|-----------------------------------|
 |Déployer Azure RMS rapidement et sans nécessiter un matériel spécial|Géré par Microsoft|
-|Besoin de toutes les fonctionnalités IRM dans Exchange Online avec Azure RMS|Géré par Microsoft|
+|Besoin de toutes les fonctionnalités IRM dans Exchange Online avec Azure RMS|Gestion par Microsoft|
 |Vos clés sont créées par vous, et protégées dans un module de sécurité matériel (HSM)|BYOK<br /><br />Actuellement, cette configuration entraîne une réduction des fonctionnalités IRM dans Exchange Online. Pour plus d’informations, consultez la section [Tarifs et restrictions BYOK](byok-price-restrictions.md) .|
 
 ## Choix de la topologie de clé de locataire : gestion Microsoft (par défaut) ou gestion BYOK
 Choisissez la topologie de clé de locataire la plus adaptée à votre organisation. Par défaut, Azure RMS génère la clé de locataire et gère la plupart des aspects de son cycle de vie. Il s'agit de l'option la plus simple, avec la charge administrative la plus faible. Dans la plupart des cas, les utilisateurs n'ont même pas conscience de l'existence de cette clé de locataire. Il leur suffit de s'inscrire à Azure RMS ; le reste du processus de gestion de la clé est traité par Microsoft.
 
-Mais vous pouvez également souhaiter bénéficier d'un contrôle complet sur votre clé de locataire, ce qui implique la création de votre clé et la conservation de la copie principale en local. Il est souvent fait référence à ce scénario sous le terme « Bring your own key » (BYOK). Cette option implique les étapes suivantes :
+Vous pouvez aussi vouloir un contrôle total sur votre clé de locataire en utilisant [Azure Key Vault](https://azure.microsoft.com/services/key-vault/). Ce scénario implique la création de votre clé de locataire et la conservation de la copie principale sur votre serveur local. Il est souvent fait référence à ce scénario sous le terme « Bring your own key » (BYOK). Cette option implique les étapes suivantes :
 
-1.  Vous générez votre clé de locataire en local, en accord avec vos politiques informatiques.
+1.  Générez votre clé de locataire en local, en accord avec vos stratégies informatiques et de sécurité.
 
-2.  Vous transférez en toute sécurité la clé de locataire à partir d'un module de sécurité matériel en votre possession vers des modules de sécurité matériels possédés et gérés par Microsoft. Notez que tout au long de ce processus, la clé de locataire ne quitte jamais les limites de protection matérielles.
+2.  Transférez de façon sécurisée la clé de locataire depuis un module de sécurité matériel (HSM) en votre possession vers des modules de sécurité matériels détenus et gérés par Microsoft, en utilisant Azure Key Vault. Notez que tout au long de ce processus, la clé de locataire ne quitte jamais les limites de protection matérielles.
 
-3.  La clé de locataire reste protégée lors de son transfert à Microsoft grâce à des modules de sécurité matériels Thales. Microsoft a collaboré avec Thales pour s'assurer que votre clé de locataire ne puisse pas être extraite de modules de sécurité matériels de Microsoft.
+3.  Quand vous transférez votre clé de locataire à Microsoft, celle-ci reste protégée par Azure Key Vault.
 
 Bien que cette action soit facultative, vous pouvez également utiliser les journaux d'utilisation quasiment en temps réel à partir d'Azure RMS pour voir exactement quand et comment votre clé de locataire est utilisée.
 
 > [!NOTE]
-> À des fins de protection supplémentaires, Azure RMS utilise des mondes de sécurité distincts pour ses centres de données en Amérique du Nord, dans la région EMEA (Europe, Moyen-Orient et Afrique) et en Asie. Lorsque vous gérez votre propre clé de locataire, celle-ci est liée au monde de sécurité de la région d'enregistrement de votre locataire RMS. Par exemple, la clé de locataire d'un client européen ne peut pas être utilisée dans des centres de données en Amérique du Nord ou en Asie.
+> En guise de mesure de protection supplémentaire, Azure Key Vault utilise des domaines de sécurité distincts pour ses centres de données dans des régions comme Amérique du Nord, EMEA (Europe, Moyen-Orient et Afrique) et Asie, de même que pour les différentes instances d’Azure, comme Microsoft Azure Allemagne et Azure Government. Quand vous gérez votre propre clé de locataire, celle-ci est liée au domaine de sécurité de la région ou de l’instance où votre locataire RMS est inscrit. Par exemple, la clé de locataire d'un client européen ne peut pas être utilisée dans des centres de données en Amérique du Nord ou en Asie.
 
 ## Cycle de vie d'une clé de locataire
-Si vous choisissez de confier à Microsoft la gestion de votre clé de locataire, Microsoft traite la plupart des aspects de son cycle de vie. Cependant, si vous décidez de gérer vous-même votre clé de locataire, vous êtes responsable d'un grand nombre d'opérations et de certaines procédures supplémentaires.
+Si vous choisissez de confier à Microsoft la gestion de votre clé de locataire, Microsoft traite la plupart des aspects de son cycle de vie. Cependant, si vous décidez de gérer votre clé de locataire, vous êtes responsable d’un grand nombre d’opérations du cycle de vie de la clé et de certaines procédures supplémentaires dans Azure Key Vault.
 
 Les schémas ci-dessous présentent et comparent ces deux options. Le premier schéma permet notamment de juger de la faible charge administrative qui vous incombe dans la configuration par défaut, lorsque Microsoft gère la clé de locataire.
 
@@ -63,7 +63,7 @@ Les schémas ci-dessous présentent et comparent ces deux options. Le premier sc
 
 Le deuxième schéma présente quant à lui les étapes supplémentaires requises lorsque vous gérez votre clé de locataire.
 
-![Cycle de vie de clé de locataire Azure RMS - géré par vous-même, BYOK](../media/RMS_BYOK_onprem.png)
+![Cycle de vie de clé de locataire Azure RMS - géré par vous-même, BYOK](../media/RMS_BYOK_onprem4.png)
 
 Si vous choisissez de confier à Microsoft la gestion de votre clé de locataire, aucune autre action n’est nécessaire de votre part et vous n’avez pas à générer la clé. Vous pouvez passer directement à la rubrique [Étapes suivantes](plan-implement-tenant-key.md#next-steps).
 
@@ -86,34 +86,28 @@ Reportez-vous au tableau suivant pour connaître les conditions requises pour la
 |---------------|--------------------|
 |Abonnement prenant en charge Azure RMS.|Pour plus d’informations sur les abonnements disponibles, consultez [Abonnements au cloud prenant en charge Azure RMS](../get-started/requirements-subscriptions.md).|
 |Vous n'utilisez pas RMS for Individuals ou Exchange Online. Ou, si vous utilisez Exchange Online, vous comprenez et acceptez les limitations liées à l'utilisation de la solution BYOK avec cette configuration.|Pour plus d’informations sur les restrictions et limitations actuelles relatives à la solution BYOK, consultez [Tarifs et restrictions BYOK](byok-price-restrictions.md).<br /><br />**Important** : Actuellement, la solution BYOK n’est pas compatible avec Exchange Online.|
-|Module de sécurité matériel Thales, cartes à puce et logiciel de support.<br /><br />**Remarque** : Si vous migrez d’AD RMS vers Azure RMS en passant d’une clé logicielle à une clé matérielle, vous devez disposer au minimum de la version 11.62 pour les pilotes Thales.|Vous devez avoir accès à un module de sécurité matériel Thales et posséder des connaissances de base concernant le fonctionnement de ce type de module. Reportez-vous à la page relative aux [modules de sécurité matériels Thales](http://www.thales-esecurity.com/msrms/buy) pour obtenir la liste des modèles compatibles ou pour acheter un module de sécurité matériel si vous n'en avez pas.|
-|Si vous souhaitez transférer votre clé de locataire par Internet au lieu de vous présenter à Redmond, aux États-Unis, vous devez remplir trois conditions :<br /><br />1 : Une station de travail x64 hors connexion dotée au minimum de Windows 7 et du logiciel nShield de Thales version 11.62.<br /><br />Si cette station de travail exécute Windows 7, vous devez [installer Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />2 : Un poste de travail connecté à Internet, doté de Windows 7 au minimum.<br /><br />3 : Une clé USB ou tout autre dispositif de stockage portable avec au moins 16 Mo d’espace libre.|Ces éléments ne sont pas obligatoires si vous vous rendez à Redmond pour transférer votre clé de locataire en personne.<br /><br />Pour des questions de sécurité, il est recommandé que le premier poste de travail ne soit connecté à aucun réseau. Cependant, il ne s'agit pas d'une obligation forcée par programmation.<br /><br />Remarque : Dans les instructions ci-après, cette première station de travail est désignée sous le terme **station de travail déconnectée**.<br /><br />De plus, si votre clé de locataire est destinée à un réseau de production, nous vous recommandons d'utiliser un deuxième poste de travail pour télécharger l'ensemble d'outils et envoyer la clé. Cependant, dans le cadre de tests, vous pouvez utiliser le même poste de travail.<br /><br />Remarque : Dans les instructions ci-après, cette deuxième station de travail est désignée sous le terme **station de travail connectée à Internet**.|
+|Toutes les conditions préalables répertoriées pour BYOK dans Key Vault.|Consultez [Conditions préalables pour BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) dans la documentation d’Azure Key Vault. <br /><br />**Remarque** : Si vous migrez d’AD RMS vers Azure RMS en passant d’une clé logicielle à une clé matérielle, vous devez disposer au minimum de la version 11.62 pour le microprogramme Thales.|
+|Le module d’administration Azure RMS pour Windows PowerShell.|Pour obtenir des instructions d’installation, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />Si vous avez déjà installé ce module Windows PowerShell, exécutez la commande suivante pour vérifier que le numéro de votre version est au minimum **2.5.0.0** : `(Get-Module aadrm -ListAvailable).Version`|
 
-Les procédures de génération et d'utilisation de la clé de locataire varient selon que vous préférez les effectuer par Internet ou en personne :
+Pour plus d’informations sur les modules de sécurité matériels Thales et comment ils sont utilisés avec Azure Key Vault, consultez le [site web de Thales](https://www.thales-esecurity.com/msrms/cloud).
 
--   **Par Internet :** cette option implique des étapes de configuration supplémentaires, telles que le téléchargement et l'utilisation d'un ensemble d'outils et d'applets de commande Windows PowerShell. Mais elle présente l'avantage de vous éviter de vous déplacer jusqu'au bureau Microsoft pour pouvoir transférer votre clé de locataire. La sécurité est assurée comme suit :
+Pour générer et transférer votre propre clé de locataire dans Azure Key Vault, suivez les procédures de la rubrique [Comment générer et transférer les clés protégées par HSM pour Azure Ket Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) dans la documentation d’Azure Key Vault.
 
-    -   Vous générez la clé de locataire à partir d'un poste de travail hors ligne, ce qui réduit la surface d'attaque.
+Quand la clé est transférée vers Key Vault, elle reçoit un ID de clé dans Key Vault. Il s’agit d’une URL contenant le nom du coffre, le conteneur de clés, le nom de la clé et la version de la clé. Par exemple : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Vous devez indiquer à Azure RMS d’utiliser cette clé en spécifiant cette URL.
 
-    -   La clé de locataire est chiffrée à l'aide d'une clé d'échange de clés, qui reste chiffrée jusqu'à son transfert aux modules de sécurité matériels Azure RMS. Seule une version chiffrée de votre clé de locataire quitte le poste de travail d'origine.
+Mais avant qu’Azure RMS puisse utiliser la clé, il doit être autorisé à utiliser la clé dans le coffre de clés de votre organisation. Pour cela, l’administrateur d’Azure Key Vault utilise l’applet de commande PowerShell de Key Vault, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) et accorde des autorisations au principal du service Azure RMS, **Microsoft.Azure.RMS**. Exemple :
 
-    -   Un outil définit des propriétés sur votre clé de locataire, qui la lient au monde de sécurité Azure RMS. Ainsi, une fois que les modules de sécurité matériels Azure RMS ont reçu et déchiffré votre clé de locataire, seuls ceux-ci peuvent les utiliser. Votre clé de locataire ne peut pas être exportée. Cette liaison est appliquée par les modules de sécurité matériels Thales.
+    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign 
 
-    -   La clé d'échange de clés utilisée pour chiffrer votre clé de locataire est générée au sein des modules de sécurité matériels Azure RMS et n'est pas exportable. Les modules de sécurité matériels veillent à ce qu'il n'existe pas de version claire de la clé d'échange de clés à l'extérieur. De plus, l'ensemble d'outils inclut une attestation de Thales indiquant que la clé d'échange de clés n'est pas exportable et qu'elle a été générée au sein d'un module de sécurité matériel authentique conçu par Thales.
+Vous êtes maintenant prêt à configurer Azure RMS pour utiliser cette clé comme clé de locataire Azure RMS de votre organisation. En utilisant des applets de commande Azure RMS, connectez-vous d’abord à Azure RMS :
 
-    -   L'ensemble d'outils inclut également une attestation de Thales indiquant que le monde de sécurité Azure RMS a été généré au sein d'un module de sécurité matériel authentique conçu par Thales, cela afin de garantir que Microsoft utilise du matériel authentique.
+    Connect-AadrmService
 
-    -   Microsoft utilise des clés d'échange de clés et des mondes de sécurité distincts pour chaque zone géographique. Ainsi, votre clé de locataire ne peut être utilisée que dans les centres de données de la zone dans laquelle elle a été chiffrée. Par exemple, la clé de locataire d'un client européen ne peut pas être utilisée dans des centres de données en Amérique du Nord ou en Asie.
+Ensuite, exécutez l’applet de commande [Add-AadrmKeyVaultKey](https://msdn.microsoft.com/library/azure/mt759829.aspx) en spécifiant l’URL de la clé. Exemple :
 
-    > [!NOTE]
-    > Votre clé de locataire peut transiter en toute sécurité via des ordinateurs et des réseaux non sécurisés, car elle est chiffrée et sécurisée à l'aide d'autorisations de niveau de contrôle d'accès. Ainsi, elle ne peut être utilisée qu'au sein de vos modules de sécurité matériels et dans ceux de Microsoft pour Azure RMS. Vous pouvez utiliser les scripts de l'ensemble d'outils pour vérifier ces mesures de sécurité. Pour plus d'informations, consultez la documentation Thales relative à la [gestion de clé matérielle dans le cloud RMS](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud).
+    Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 
--   **En personne :** vous devez [contacter le support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) pour planifier un rendez-vous de transfert de clé pour Azure RMS. Vous devez en effet vous rendre au bureau Microsoft de Redmond, Washington (États-Unis) pour transférer votre clé de locataire dans le monde de sécurité Azure RMS.
-
-Pour obtenir des instructions, précisez si vous allez générer et transférer votre clé de locataire par Internet ou en personne : 
-
-- [Par Internet](generate-tenant-key-internet.md)
-- [En personne](generate-tenant-key-in-person.md)
+Si vous devez vérifier que l’URL de la clé est définie correctement dans Azure RMS, vous pouvez exécuter [Get-AzureKeyVaultKey](https://msdn.microsoft.com/library/dn868053.aspx) dans Azure Key Vault pour voir l’URL de la clé.
 
 
 ## Étapes suivantes
@@ -122,15 +116,15 @@ Maintenant que vous avez planifié et, le cas échéant, généré votre clé de
 
 1.  Commencez à utiliser votre clé de locataire :
 
-    -   Si ce n'est déjà fait, vous devez maintenant activer Rights Management pour que votre organisation puisse utiliser RMS. Les utilisateurs peuvent exploiter immédiatement la clé de locataire (gérée par Microsoft ou par vous).
+    -   Si ce n'est déjà fait, vous devez maintenant activer Rights Management pour que votre organisation puisse utiliser RMS. Les utilisateurs peuvent commencer immédiatement à utiliser votre clé de locataire (gérée par Microsoft ou par vous dans Azure Key Vault).
 
         Pour plus d’informations sur l’activation, consultez [Activation d’Azure Rights Management](../deploy-use/activate-service.md).
 
     -   Si vous avez déjà activé Rights Management et avez décidé de gérer vous-même vote clé de locataire, les utilisateurs passent graduellement de l'ancienne clé de locataire à la nouvelle. Cette transition progressive s'effectue en quelques semaines. Les documents et fichiers protégés par l'ancienne clé de locataire restent accessibles pour les utilisateurs autorisés.
 
-2.  Envisagez l’activation de la journalisation de l’utilisation, qui consigne chaque transaction effectuée par RMS.
+2.  Envisagez l’activation de la journalisation de l’utilisation, qui consigne chaque transaction effectuée par Azure Rights Management.
 
-    Si vous avez décidé de gérer vous-même votre clé de locataire, la journalisation inclut des informations utiles sur son utilisation. Consultez l’extrait de code suivant tiré d’un fichier journal affiché dans Excel, où les types de requête **Decrypt** et **SignDigest** montrent que la clé de locataire est utilisée.
+    Si vous avez décidé de gérer vous-même votre clé de locataire, la journalisation inclut des informations utiles sur son utilisation. Consultez l’extrait de code suivant, tiré d’un fichier journal affiché dans Excel, où les types de requête **KeyVaultDecryptRequest** et **KeyVaultSignRequest** montrent que la clé de locataire est utilisée.
 
     ![fichier journal dans Excel où la clé de locataire est utilisée](../media/RMS_Logging.png)
 
@@ -143,6 +137,6 @@ Maintenant que vous avez planifié et, le cas échéant, généré votre clé de
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

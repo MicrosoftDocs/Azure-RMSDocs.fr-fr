@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/21/2016
+ms.date: 08/05/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ac4264f20208f999c9ad9bdd2c4759e65ae021b
-ms.openlocfilehash: 5344c38a31aa0ceb894f330f363442bd2c0d9375
+ms.sourcegitcommit: f7cf74355aa39928fd66a4be13a9b65428da7480
+ms.openlocfilehash: 08226cd930f90bc7c9cda4c65315ee6472fbcf52
 
 
 ---
@@ -351,6 +351,33 @@ Les URL suivantes sont utilisées pour le suivi des documents et doivent être a
 
 -   https://&#42;.microsoftonline-p.com
 
+### Suivi et révocation de documents pour les utilisateurs
+
+Quand les utilisateurs se connectent au site de suivi des documents, ils peuvent suivre et révoquer des documents qu’ils ont partagés à l’aide de l’application de partage RMS. Quand vous vous connectez comme administrateur pour Azure RMS (administrateur général), vous pouvez cliquer sur l’icône Administrateur en haut à droite de la page pour passer en mode Administrateur et afficher les documents partagés par les utilisateurs de votre organisation.
+
+Les actions que vous prenez en mode Administrateur sont auditées et consignées dans les fichiers journaux d’utilisation, et vous devez confirmer pour continuer. Pour plus d’informations sur la journalisation, consultez la section suivante.
+
+Quand vous êtes en mode Administrateur, vous pouvez lancer une recherche par utilisateur ou par document. Une recherche par utilisateur affiche tous les documents partagés par l’utilisateur spécifié. Une recherche par document affiche tous les utilisateurs de votre organisation qui ont partagé ce document. Vous pouvez ensuite affiner les résultats de la recherche pour effectuer le suivi des documents partagés par les utilisateurs et, si nécessaire, les révoquer. 
+
+Pour quitter le mode Administrateur, cliquez sur **X** à côté de **Quitter le mode Administrateur**.
+
+Pour obtenir des instructions sur l’utilisation du site de suivi des documents, consultez [Suivre et révoquer vos documents](sharing-app-track-revoke.md) dans le guide de l’utilisateur.
+
+
+
+### Journalisation de l’utilisation du site de suivi des documents
+
+Dans les fichiers journaux d’utilisation, deux champs s’appliquent au suivi des documents : **AdminAction** et **ActingAsUser**.
+
+**AdminAction** Ce champ a la valeur True quand un administrateur utilise le site de suivi des documents en mode Administrateur, par exemple pour révoquer un document au nom d’un utilisateur ou pour voir quand il a été partagé. Ce champ est vide quand un utilisateur se connecte au site de suivi des documents.
+
+**ActingAsUser**: Quand le champ AdminAction a la valeur True, ce champ contient le nom de l’utilisateur au nom duquel l’administrateur agit (comme propriétaire du document ou utilisateur recherché). Ce champ est vide quand un utilisateur se connecte au site de suivi des documents. 
+
+Il existe également des types de demandes qui journalisent la façon dont les utilisateurs et les administrateurs utilisent le site de suivi des documents. Par exemple, **RevokeAccess** est le type de demande quand un utilisateur (ou un administrateur au nom d’un utilisateur) a révoqué un document dans le site de suivi des documents. Utilisez ce type de demande conjointement avec le champ AdminAction pour déterminer si l’utilisateur a révoqué son propre document (le champ AdminAction est vide) ou si un administrateur a révoqué un document au nom d’un d’utilisateur (AdminAction a la valeur True).
+
+
+Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation d’Azure Rights Management](../deploy-use/log-analyze-usage.md).
+
 ## AD RMS uniquement : prise en charge de plusieurs domaines de messagerie au sein de votre organisation
 Si vous utilisez les services AD RMS et que les utilisateurs de votre organisation disposent de plusieurs domaines de messagerie, suite à une fusion ou une acquisition par exemple, vous devez apporter la modification suivante au Registre :
 
@@ -369,6 +396,6 @@ Pour obtenir des informations techniques supplémentaires sur notamment la diff�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

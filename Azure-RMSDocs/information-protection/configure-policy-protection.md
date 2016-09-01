@@ -3,15 +3,15 @@ title: "Comment configurer une étiquette pour appliquer Rights Management prote
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: 00b4cd2b1e7b1196cedd39d7052db534e781bb13
-ms.openlocfilehash: 7a20b59c404959c4ec209e8c29ac61ab71233e87
+ms.sourcegitcommit: e11a5a836d6a410ba49ac17cfe95d8530ecb785f
+ms.openlocfilehash: 60738c310a3e7c734bfe3e48e16535ed3be05bb4
 
 
 ---
@@ -22,51 +22,56 @@ ms.openlocfilehash: 7a20b59c404959c4ec209e8c29ac61ab71233e87
 
 **[ Cette information est préliminaire et susceptible d'être modifiée. ]**
 
-Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’Azure Rights Management, qui utilise des stratégies de chiffrement, d’identité et d’autorisation pour éviter la perte de données. Cette protection est appliquée lorsque vous configurez une étiquette pour utiliser un modèle de gestion des droits. 
+Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’un service Rights Management qui utilise des stratégies de chiffrement, d’identité et d’autorisation pour éviter la perte de données. Cette protection est appliquée lorsque vous configurez une étiquette pour utiliser un modèle de gestion des droits. 
 
-Ce modèle peut être l’un des modèles par défaut créés automatiquement lorsque vous activez Azure Rights Management, ou un modèle personnalisé. Les modèles pour départements sont pris en charge, mais appliquent la protection uniquement lorsque l’auteur du document ou de l’e-mail figure dans l’étendue configurée du modèle. Si l’utilisateur n’y figure pas, il reçoit un message indiquant qu’Azure Information Protection ne peut pas appliquer l’étiquette.
+Ce modèle peut être l’un des modèles par défaut créés automatiquement lorsque vous activez Azure Rights Management, ou un modèle personnalisé. Les modèles pour services Azure Rights Management sont pris en charge, mais appliquent la protection uniquement lorsque l’auteur du document ou de l’e-mail figure dans l’étendue configurée du modèle. Si l’utilisateur n’y figure pas, il reçoit un message indiquant qu’Azure Information Protection ne peut pas appliquer l’étiquette.
 
 ## Fonctionnement de la protection
 
-Lorsqu’un document ou un e-mail est protégé par Azure Rights Management, il est chiffré au repos et en transit et peut uniquement être déchiffré par les utilisateurs autorisés. Ce chiffrement est conservé avec le document ou l’e-mail, même si ce dernier est renommé. En outre, vous pouvez configurer des droits d’utilisation et des restrictions, comme dans les exemples suivants :
+Quand un document ou un e-mail est protégé par Rights Management, il est chiffré au repos et en transit et peut uniquement être déchiffré par les utilisateurs autorisés. Ce chiffrement est conservé avec le document ou l’e-mail, même si ce dernier est renommé. En outre, vous pouvez configurer des droits d’utilisation et des restrictions, comme dans les exemples suivants :
 
-- Seuls les utilisateurs de votre organisation peuvent ouvrir le document ou l’e-mail.
+- Seuls les utilisateurs de votre organisation peuvent ouvrir le document ou l’e-mail confidentiel de l’entreprise.
 
-- Seuls les utilisateurs du service marketing peuvent modifier et imprimer le document ou l’e-mail. Tous les autres utilisateurs de votre organisation peuvent uniquement afficher le document ou l’e-mail.
+- Seuls les utilisateurs du service marketing peuvent modifier et imprimer le document ou l’e-mail d’annonce de la promotion. Tous les autres utilisateurs de votre organisation peuvent uniquement lire le document ou l’e-mail.
 
-- Les utilisateurs ne peuvent pas transférer un e-mail.
+- Les utilisateurs ne peuvent pas transférer un e-mail qui contient des informations sur une réorganisation interne.
 
-- Il est impossible d’ouvrir des documents ou des e-mails envoyés à des partenaires commerciaux après une date spécifiée.
+- Il est impossible d’ouvrir la liste de prix actuelle envoyée à des partenaires commerciaux après une date spécifiée.
 
-Pour plus d’informations sur les modèles et la manière de configurer ces droits d’utilisation et restrictions, consultez [Configuration de modèles personnalisés pour Azure Rights Management](../deploy-use/configure-custom-templates.md).
+Pour plus d’informations sur les modèles Azure Rights Management et la manière de configurer ces droits d’utilisation et restrictions, consultez [Configuration de modèles personnalisés pour Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
 Pour plus d’informations sur Azure Rights Management et son fonctionnement, consultez [Qu'est-ce qu'Azure Rights Management ?](../understand-explore/what-is-azure-rms.md)
 
 > [!IMPORTANT]
-> Pour configurer une étiquette pour appliquer la Rights Management Protection, le service Azure Rights Management doit être activé pour votre organisation. Si vous ne le n’avez pas déjà fait, consultez [Activation d'Azure Rights Management](../deploy-use/activate-service.md).
+> Pour configurer une étiquette pour appliquer la protection Azure Rights Management, le service Azure Rights Management doit être activé pour votre organisation. Si vous ne le n’avez pas déjà fait, consultez [Activation d'Azure Rights Management](../deploy-use/activate-service.md).
 
 
 ## Configuration d’une étiquette pour appliquer Rights Management protection
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
- 
-2. Dans le menu hub, cliquez sur **Parcourir** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+1. Si vous ne l’avez pas déjà fait, connectez-vous au [portail Azure](https://portal.azure.com) comme administrateur général pour récupérer les modèles Azure Rights Management. Accédez ensuite au panneau **Azure Information Protection**. 
 
-3. Dans le panneau **Azure Information Protection**, sélectionnez l’étiquette que vous souhaitez configurer pour appliquer Rights Management Protection.
+    Par exemple, cliquez sur **Parcourir** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-4. Dans le panneau **Étiquette**, dans la section **Définir le modèle RMS pour la protection des documents et e-mails contenant cette étiquette**, configurez les éléments suivants :
+2. Dans le panneau **Azure Information Protection**, sélectionnez l’étiquette que vous souhaitez configurer pour appliquer Rights Management Protection.
 
-    - Si vous voyez **Sélectionner le modèle RMS à partir de :**, sélectionnez **Azure RMS**. 
+3. Dans le panneau **Étiquette**, dans la section **Définir le modèle RMS pour la protection des documents et e-mails contenant cette étiquette**, pour **Sélectionner le modèle RMS à partir de**, sélectionnez **Azure RMS** ou **AD RMS (PRÉVERSION)**.
     
-        Ne sélectionnez pas **AD RMS** et les options de configuration associées sans l’assistance de Microsoft. Si vous êtes intéressé par un test d’Azure Information Protection avec Active Directory Rights Management Services, envoyez un e-mail à askipteam@microsoft.com. 
+    Dans la plupart des cas, vous devez sélectionner **Azure RMS**. Ne sélectionnez AD RMS que si vous avez lu et compris les conditions préalables et les restrictions qui accompagnent cette configuration, parfois appelée « *conservez votre propre clé* » (HYOK). Pour plus d’informations, consultez [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md).
     
-    - Pour **Sélectionner un modèle RMS** : cliquez sur la zone de liste déroulante et sélectionnez le modèle que vous souhaitez utiliser pour protéger des documents et des e-mails avec cette étiquette.
+4. Si vous avez sélectionné Azure RMS : pour **Sélectionner un modèle RMS**, cliquez sur la zone de liste déroulante et sélectionnez le modèle à utiliser pour protéger des documents et des e-mails avec cette étiquette.
 
-        > [!NOTE] Si vous créez un nouveau modèle après avoir ouvert le panneau **Étiquette**, fermez ce panneau et retourner à l’étape 3, afin que votre modèle nouvellement créé soit récupéré depuis Azure en vue de sa sélection.
+    > [!NOTE] 
+    > Si vous créez un modèle après avoir ouvert le panneau **Étiquette**, fermez ce panneau et retournez à l’étape 2 pour que votre modèle nouvellement créé soit récupéré depuis Azure en vue de sa sélection.
+    
+    N’oubliez pas que si vous sélectionnez un modèle de service ou que vous avez configuré des [contrôles d’intégration](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) :
+    
+    - Les utilisateurs en dehors de l’étendue configurée du modèle ou qui sont exclus de l’application de la protection d’Azure Rights Management continuent de voir l’étiquette, mais ne peuvent pas l’appliquer. S’ils sélectionnent l’étiquette, ils voient le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
+    
+5. Si vous avez sélectionné AD RMS : indiquez le GUID du modèle et l’URL de licence de votre cluster AD RMS. [Plus d'informations](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-5. Cliquez sur **Enregistrer**.
+6. Cliquez sur **Enregistrer**.
 
-6. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
+7. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
 
 ## Étapes suivantes
 
@@ -74,6 +79,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

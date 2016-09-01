@@ -3,15 +3,15 @@ title: "Didacticiel de démarrage rapide Azure Information Protection Étape 2 
 description: "Étape 2 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: cab45baf19af4ab548f5f112946d168d93a95d49
-ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
+ms.sourcegitcommit: 09cb56aaa0d7d97073623c518aa331d591a376e3
+ms.openlocfilehash: 65d758635b77ee7d6c423a1400a7621e8e05b14d
 
 
 ---
@@ -24,13 +24,20 @@ ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
 
 Bien qu’Azure Information Protection soit fourni avec une stratégie par défaut que vous pouvez utiliser sans configuration, nous allons examiner cette stratégie et y apporter des modifications.
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
+1. Connectez-vous au [portail Azure](https://portal.azure.com). Si vous souhaitez tester la protection ainsi que la classification et l’étiquetage, connectez-vous en tant qu’administrateur général pour pouvoir récupérer les modèles Azure Rights Management.
  
-2. Dans le menu hub, cliquez sur **Parcourir** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+2. Dans le menu hub : cliquez sur **Nouveau** > **Sécurité + Identité** > **Azure Information Protection (préversion)** > **Créer**.
 
-- Le panneau principal **Azure Information Protection** s’affiche et montre la stratégie Information Protection par défaut créée automatiquement. Cette stratégie par défaut contient les étiquettes de classification suivantes : **Personal**, **Public**, **Internal**, **Confidential** et **Secret**. Lisez l’info-bulle de chacune d’elles pour comprendre la façon dont les étiquettes sont censées être utilisées. Notez que **Secret** a deux sous-étiquettes (**All Company** et **My Group**), pour illustrer comment une classification peut avoir des sous-catégories.
+    Cette opération crée le panneau **Azure Information Protection**. Vous pourrez ainsi sélectionner le service dans la liste **Parcourir** du hub la prochaine fois que vous vous connecterez au portail. 
 
-- Avec les paramètres par défaut, **Internal**, **Confidential** et **Secret** ont des marquages visuels configurés (par exemple pied de page, en-tête, filigrane), et la protection n’est définie pour aucune des étiquettes. Les trois paramètres globaux ne sont pas non plus définis. Ainsi, aucun document ou e-mail n’est obligé d’avoir une étiquette, il n’y a aucune étiquette par défaut et les utilisateurs n’ont pas à fournir de justification quand ils abaissent le niveau de confidentialité.
+    > [!TIP] 
+    > Sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous pourrez ainsi ignorer l’étape Parcourir la prochaine fois que vous vous connecterez au portail.
+
+3.  Le panneau principal **Azure Information Protection** indique la stratégie Information Protection par défaut qui est créée automatiquement :
+    
+    - Étiquettes de classification : **Personal**, **Public**, **Internal**, **Confidential** et **Secret**. Lisez l’info-bulle de chacune d’elles pour comprendre la façon dont les étiquettes sont censées être utilisées. Notez que **Secret** a deux sous-étiquettes (**All Company** et **My Group**), pour illustrer comment une classification peut avoir des sous-catégories.
+
+    - Avec les paramètres par défaut, les étiquettes **Internal**, **Confidential** et **Secret** ont des marquages visuels configurés (par exemple : pied de page, en-tête, filigrane), et la protection n’est définie pour aucune des étiquettes. Les trois paramètres globaux ne sont pas non plus définis. Ainsi, aucun document ou e-mail n’est obligé d’avoir une étiquette, il n’y a aucune étiquette par défaut et les utilisateurs n’ont pas à fournir de justification quand ils abaissent le niveau de confidentialité.
 
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](../media/info-protect-policy.png)
 
@@ -42,7 +49,7 @@ Pour notre didacticiel, nous allons modifier deux de ces paramètres globaux pou
 
 Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Confidential** :
 
-1. Cliquez sur l’entrée d’étiquette **Confidential**.
+1. Cliquez sur l’étiquette **Confidential**.
 
 2. Dans le panneau **Label: Confidential** sont répertoriés les paramètres qui sont disponibles pour chaque étiquette. Apportez les modifications suivantes :
 
@@ -90,6 +97,6 @@ Maintenant que vous avez examiné la stratégie par défaut et apporté des modi
 [Étape 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

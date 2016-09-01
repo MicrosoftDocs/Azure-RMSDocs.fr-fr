@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 7d5b58efb4b789ba4f3d897ae3a475cbd2c679e5
+ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
+ms.openlocfilehash: c61e299cac50069afc119d37fd461cda88a2afd3
 
 
 ---
@@ -39,11 +39,11 @@ Essayez notre didacticiel de démarrage rapide pour obtenir une démonstration e
 
 Notez que la préversion vous permet d’essayer le nouveau **plan de service Premium P2** et que certaines fonctionnalités avancées, telles que l’étiquetage automatique et recommandé, peuvent ne pas être disponibles avec votre plan actuel au moment de la disponibilité générale. Pour plus d’informations sur les différents plans de service (Azure Information Protection Premium P1 et Azure Information Protection Premium P2), consultez le blog suivant : [Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/) (Présentation d’Enterprise Mobility + Security).
 
-Cette préversion a les limitations suivantes. Pour être tenu au courant de la disponibilité de fonctionnalités supplémentaires, consultez les annonces publiées sur le [Blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) et sur notre [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) :
+Cette préversion a les limitations suivantes. Pour être tenu au courant de la disponibilité de fonctionnalités supplémentaires, consultez les annonces publiées sur le [Blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) et sur notre [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all):
 
 - Il n’existe aucun enregistrement centralisé pour la classification et l’étiquetage.
 
-- Les noms des étiquettes et des info-bulles sont pris en charge en anglais uniquement.
+- Les noms des étiquettes et des info-bulles sont pris en charge dans une seule langue uniquement.
 
 - Les conditions de classification automatique doivent être des expressions ou des modèles.
 
@@ -61,11 +61,11 @@ Pour la préversion, vous pouvez utiliser n’importe quel abonnement incluant A
 
 Pour configurer les stratégies Azure Information Protection dans le portail Azure, vous devez avoir un abonnement Azure. Si vous n’avez pas encore d’abonnement Azure pour votre organisation, vous pouvez en obtenir un en vous inscrivant pour une évaluation gratuite : accédez à la page [Prise en main d’Azure](https://account.windowsazure.com/organization) et suivez les instructions.
 
-Toute modification apportée aux conditions requises des abonnements sera annoncée sur le [Blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
+Toute modification apportée aux conditions requises des abonnements sera annoncée sur le [Blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection).
 
 ## Dois-je être administrateur général pour essayer Azure Information Protection (préversion) ?
 
-Pour la préversion uniquement, tout utilisateur authentifié par Azure peut voir et configurer la stratégie Azure Information Protection de son locataire sur le portail Azure.
+Pour la préversion uniquement, tout utilisateur authentifié par Azure peut voir et configurer la stratégie Azure Information Protection de son locataire sur le portail Azure à des fins de classification et d’étiquetage dans le portail Azure. Toutefois, si vous voulez configurer une étiquette pour appliquer un modèle Azure Rights Management, vous devez être connecté tant qu’administrateur général pour Azure Active Directory.
 
 Si vous sélectionnez l’option d’installation de la stratégie de démonstration quand vous installez le [client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), vous n’êtes même pas obligé de vous connecter au portail pour essayer la préversion. La stratégie de démonstration installe localement la stratégie par défaut pour Azure Information Protection. Vous pourrez donc essayer l’étiquetage des documents et des e-mails, mais vous ne pourrez pas modifier ni ajouter de nouvelles étiquettes sans vous connecter au portail. 
 
@@ -74,7 +74,7 @@ Si vous souhaitez protéger les documents et les e-mails que vous classifiez et 
 
 ## Azure Information Protection prend-il en charge les scénarios locaux et hybrides ?
 
-Azure Information Protection est une solution basée sur le cloud. Si les scénarios hybrides vous intéressent, contactez l’équipe Information Protection en envoyant un e-mail à askipteam@microsoft.com.
+Azure Information Protection est une solution basée sur le cloud. Si le déploiement d’Azure Information Protection dans le cadre d’un scénario hybride vous intéresse, contactez l’équipe Information Protection en envoyant un e-mail à askipteam@microsoft.com.
 
 ## Quelles sont les applications et les plateformes clientes prises en charge par Azure Information Protection ?
 
@@ -150,7 +150,11 @@ Azure Information Protection utilisant des métadonnées persistantes pour la cl
 
 ## Comment fonctionnent le suivi des documents et la révocation pour Azure Information Protection ?
 
-Le suivi des documents pour les fichiers que vous classifiez et protégez à l’aide d’Azure Information Protection fonctionne comme aujourd’hui pour Azure Rights Management. Pour plus d’informations, consultez [Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS](../rms-client/sharing-app-track-revoke.md).
+Le suivi des documents pour les fichiers que vous classifiez et protégez à l’aide d’Azure Information Protection fonctionne comme aujourd’hui pour Azure Rights Management et l’application de partage RMS. Vous pouvez également accéder au site de suivi des documents à l’aide du client Azure Information Protection (version 1.0.233 ou ultérieure) : 
+
+- Dans une application Office, sous l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger** > **Suivre l’utilisation**. 
+
+Pour plus d’informations, consultez [Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS](../rms-client/sharing-app-track-revoke.md).
 
 ## Comment Azure Information Protection applique-t-il les stratégies que je configure ?
 
@@ -184,6 +188,6 @@ Ensuite, accédez à notre [site Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

@@ -3,15 +3,15 @@ title: "Comment supprimer ou réorganiser une étiquette pour Azure Information 
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 50a60f8a0f8cb92aba7453e6c1dedacbe004a5ed
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 3b4066c8e5770e6f4a502ecaebfd961400e9df2d
 
 
 ---
@@ -36,11 +36,11 @@ Triez les étiquettes de manière à ce que les utilisateurs les voient dans un 
 
 Suivez la procédure indiquée ci-dessous pour effectuer ces modifications.
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com).
+1. Si vous ne l’avez pas déjà fait, connectez-vous au [portail Azure](https://portal.azure.com), puis accédez au panneau **Azure Information Protection**. 
+    
+    Par exemple, cliquez sur **Parcourir** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. Dans le menu hub, cliquez sur **Parcourir** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
-
-3. Dans le panneau **Azure Information Protection**, effectuez l’une des actions suivantes (supprimer, désactiver, ou réorganiser une étiquette) :
+2. Dans le panneau **Azure Information Protection**, effectuez l’une des actions suivantes (supprimer, désactiver, ou réorganiser une étiquette) :
 
     - Pour supprimer une étiquette : cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette que vous souhaitez supprimer, cliquez sur **Supprimer cette étiquette**, puis cliquez sur **Oui** pour confirmer. Cliquez ensuite sur **Enregistrer**. 
 
@@ -48,7 +48,7 @@ Suivez la procédure indiquée ci-dessous pour effectuer ces modifications.
 
     - Pour réorganiser une étiquette : cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette que vous souhaitez réorganiser, cliquez sur **Déplacer vers le haut** ou **Déplacer vers le bas** jusqu'à ce que l’étiquette soit à l’endroit souhaité. Cliquez ensuite sur **Enregistrer**. 
 
-4. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
+3. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
 
 ## Étapes suivantes
 
@@ -58,6 +58,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

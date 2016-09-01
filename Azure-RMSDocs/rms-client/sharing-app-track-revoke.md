@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: 406214d90b509bd391cc12ff9033bd07d08300c9
+ms.sourcegitcommit: e9ad2e518b4a7dac608572eb5eb2d99bbda4754e
+ms.openlocfilehash: 4c757494a1fe948ed26b32f86844f7b5896c919b
 
 
 ---
@@ -33,9 +33,11 @@ Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos do
 
 -   Si vous souhaitez arrêter le partage d’un document : cliquez sur **Révoquer l’accès**, notez la durée pendant laquelle le document restera disponible et choisissez d’informer ou non les utilisateurs que vous révoquez l’accès au document partagé, puis envoyez un message personnalisé. La révocation d’un document partagé n’a pas pour effet de supprimer celui-ci, mais les utilisateurs autorisés à l’ouvrir ne le peuvent plus.
 
--   Si vous souhaitez exporter vers Excel : cliquez sur **Ouvrir dans Excel**pour pouvoir modifier les données et créer vos propres vues et graphiques.
+-   Si vous souhaitez exporter vers Excel : cliquez sur **Exporter au format CSV** pour pouvoir modifier les données et créer vos propres vues et graphiques.
 
 -   Si vous souhaitez configurer des notifications par courrier électronique : cliquez sur **Paramètres** et indiquez si vous souhaitez recevoir des messages électroniques lorsque quelqu’un accède au document et de quelle manière.
+
+- Si vous souhaitez suivre et révoquer des documents partagés pour d’autres utilisateurs : les administrateurs pour Azure RMS peuvent cliquer sur l’icône Administrateur pour effectuer le suivi et la révocation de documents pour d’autres utilisateurs. Cette icône n’est accessible qu’aux administrateurs.
 
 -   Si vous avez des questions ou souhaitez fournir des commentaires sur le site de suivi de document : cliquez sur l’icône d’aide pour accéder au [Forum aux questions sur le suivi de documents](http://go.microsoft.com/fwlink/?LinkId=523977).
 
@@ -49,7 +51,12 @@ Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos do
 
     ![Sélectionner Suivre l’utilisation d’Outlook quand vous faites appel à l’application de partage RMS ](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
 
-Si vous ne voyez pas ces options pour RMS, il est probable que l’application de partage RMS ne soit pas installée sur votre ordinateur, que la version la plus récente ne soit pas installée ou que votre ordinateur doive être redémarré pour terminer l’installation. Pour plus d’informations sur l’installation de l’application de partage, voir [Télécharger et installer l’application de partage Rights Management](install-sharing-app.md).
+Si vous ne voyez pas ces options pour RMS, il est probable que l’application de partage RMS ne soit pas installée sur votre ordinateur, que la version la plus récente ne soit pas installée ou que votre ordinateur doive être redémarré pour terminer l’installation. Pour plus d’informations sur l’installation de l’application de partage, consultez [Télécharger et installer l’application de partage Rights Management](install-sharing-app.md).
+
+> [!NOTE] 
+> Si vous avez installé la préversion du [client Azure Information Protection](../information-protection/info-protect-client.md), version 1.0.233 ou ultérieure, vous pouvez également accéder au site de suivi des documents à l’aide du bouton **Protéger**: 
+> 
+> - Dans une application Office, sous l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger** > **Suivre l’utilisation**. 
 
 ### Autres méthodes de suivi et de révocation de vos documents
 Outre le suivi de vos documents sur les ordinateurs Windows à l’aide des applications Office, vous pouvez également utiliser ces méthodes :
@@ -100,6 +107,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 

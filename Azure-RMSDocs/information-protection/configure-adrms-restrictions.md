@@ -1,17 +1,16 @@
 ---
 title: "Restrictions liées à HYOK | Azure Rights Management"
-description: 
-author: cabailey
+description: "La protection de vos documents et e-mails les plus sensibles passe généralement par l’application d’une protection Azure Rights Management. Cette dernière offre les avantages suivants."
 manager: mbaldwin
 ms.date: 08/18/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: a80866576dc7d6400bcebc2fc1c37bc0367bcdf3
-ms.openlocfilehash: 1cbf6bd6c209a8aafd1db61422ce03b628aaec07
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: cb12abb4dfe96135317facf4284c0eae7ef38196
 
 
 ---
@@ -95,6 +94,6 @@ Pour configurer une étiquette pour la protection AD RMS, consultez [Comment con
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

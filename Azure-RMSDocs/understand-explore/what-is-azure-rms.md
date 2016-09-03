@@ -1,27 +1,26 @@
 ---
 title: "En quoi consiste Azure Rights Management ? | Azure RMS"
-description: 
-keywords: 
+description: "Azure Rights Management (Azure RMS) est une solution de protection des informations destinée aux organisations désireuses de protéger leurs données dans l'environnement de travail exigeant d'aujourd'hui."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e2de70fcbe0b284368b1e52c34f42d1cf4554edd
-ms.openlocfilehash: 6fe5759a790a728da7a16453e5b3ab5d523bb9fd
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: f6f2b382766ea91ed463c18655efb07d206213af
 
 
 ---
 
 # En quoi consiste Azure Rights Management ?
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 
 Azure Rights Management (Azure RMS) est une solution de protection des informations destinée aux organisations désireuses de protéger leurs données dans l'environnement de travail exigeant d'aujourd'hui.
@@ -62,6 +61,6 @@ Toutefois, si vous êtes prêt à déployer Azure RMS pour votre organisation, 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

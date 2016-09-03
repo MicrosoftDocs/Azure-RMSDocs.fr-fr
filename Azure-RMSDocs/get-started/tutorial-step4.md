@@ -1,35 +1,33 @@
 ---
-# required metadata
-
-title: "Didacticiel de démarrage rapide Azure RMS – Étape 4 | AZURE RMS"
-description: "Quatrième étape d’un didacticiel vous permettant de tester rapidement Microsoft Azure Rights Management au sein de votre organisation en seulement cinq étapes qui devraient vous prendre moins de 15 minutes."
-keywords:
+title: "Didacticiel de démarrage rapide Azure RMS – étape 4 |Azure RMS"
+description: "Quatrième étape d’un didacticiel vous permettant de tester rapidement Microsoft Azure Rights Management au sein de votre organisation en seulement 5 étapes qui devraient vous prendre moins de 15 minutes."
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
-ms.technology: techgroup-identity
+ms.technology: 
 ms.assetid: f8340056-87a1-4daa-8b63-3d95fc381b9c
-
-# optional metadata
-
-ROBOTS:
-audience:
-ms.devlang:
+ROBOTS: 
+audience: 
+ms.devlang: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+ms.tgt_pltfrm: 
+ms.custom: 
+translationtype: Human Translation
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 0287f1408c7cd22d0254d135aaa267ec77246e45
+
 
 ---
 
 
 # Démarrage rapide Azure RMS – étape 4 : demander aux destinataires d’ouvrir le document envoyé par e-mail
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 
 Atteindre : 
@@ -39,12 +37,12 @@ Atteindre :
 - [Étape 2 : Installer l’application de partage RMS](tutorial-step2.md)
 - [Étape 3 : envoyer le document confidentiel par e-mail](tutorial-step3.md)
 - [Étape 4 : Le destinataire lit le document](tutorial-step4.md)
-- [Étape 5 : Suivre votre document](tutorial-step5.md)
+- [Étape 5 : Suivre votre document](tutorial-step5.md)
 
 
 ![Didacticiel de démarrage rapide Azure RMS étape 4](../media/AzRMS_QuickStartSteps4.PNG)
 
-Vos destinataires peuvent utiliser de nombreux appareils pour lire le document protégé que vous avez envoyé en pièce jointe d’un courrier électronique. Les appareils incluent les iPad, les iPhone, les tablettes et les téléphones Android, les ordinateurs Mac, ainsi que les ordinateurs Windows.
+Vos destinataires peuvent utiliser de nombreux appareils pour lire le document protégé que vous avez envoyé en pièce jointe d’un e-mail. Les appareils incluent les iPad, les iPhone, les tablettes et les téléphones Android, les ordinateurs Mac, ainsi que les ordinateurs Windows.
 
 Demandez-leur de lire le message électronique que vous leur avez envoyé. Avant de voir votre message électronique, ils verront le message suivant :
 
@@ -73,12 +71,14 @@ Maintenant que le destinataire a ouvert la pièce jointe et l’a éventuellemen
 |--------------------------------|--------------------------|
 |Instructions détaillées pour afficher les fichiers protégés par Azure Rights Management|[Afficher et utiliser des fichiers qui ont été protégés par Rights Management](../rms-client/sharing-app-view-use-files.md)|
 |Abonnement gratuit RMS for individuals|[RMS for Individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md)|
-|Deux versions du fichier joint à l’e-mail|[Qu'est-ce que le fichier .ppdf créé automatiquement ?](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)|
+|Deux versions du fichier joint à l’e-mail|[Qu'est-ce que le fichier .ppdf créé automatiquement ?](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)|
 
 
->[!div class="step-by-step"] [« Étape 3](tutorial-step3.md)
+>[!div class="step-by-step"]
+[« Étape 3](tutorial-step3.md)
 [Étape 5 »](tutorial-step5.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

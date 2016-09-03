@@ -1,20 +1,19 @@
 ---
 title: "Fonctionnement d’Azure RMS | Azure RMS"
-description: 
-keywords: 
+description: "Concernant le fonctionnement d'Azure RMS, il est important de comprendre que le service Rights Management et, plus généralement, Microsoft ne consultent ni ne stockent vos données dans le cadre du processus de protection des informations. Les informations que vous protégez ne sont jamais stockées dans Azure, sauf si vous indiquez expressément votre volonté de les y stocker, ou si vous utilisez un autre service cloud qui les stocke dans Azure. Azure RMS rend simplement les données d’un document illisibles pour toute personne autre que des utilisateurs et services autorisés."
 author: cabailey
 manager: mbaldwin
 ms.date: 06/02/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d825d6c8b2c8b7a9c34ac940c5a08439a9ae562
-ms.openlocfilehash: 505f2c94bb4fd056b4d2f51c147c6b0b84efac00
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 527af70532f390330fdb65bc27b04bb366289748
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 505f2c94bb4fd056b4d2f51c147c6b0b84efac00
 
 # Fonctionnement d'Azure RMS Sous le capot
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Concernant le fonctionnement d'Azure RMS, il est important de comprendre que le service Rights Management et, plus généralement, Microsoft ne consultent ni ne stockent vos données dans le cadre du processus de protection des informations. Les informations que vous protégez ne sont jamais stockées dans Azure, sauf si vous indiquez expressément votre volonté de les y stocker, ou si vous utilisez un autre service cloud qui les stocke dans Azure. Azure RMS rend simplement les données d'un document illisibles pour toute personne autre que des utilisateurs et services autorisés :
 
@@ -50,7 +49,7 @@ Même si vous n'avez pas besoin de connaître le détail du fonctionnement de RM
 |Algorithme : RSA<br /><br />Longueur de clé : 2 048 bits|Protection de clé|
 |SHA-256|Signature de certificat|
 
-###### Note de bas de page 1 
+###### Note 1 
 
 La longueur de 256 bits est utilisée par l'application de partage Rights Management pour la protection en modes générique et natif quand le fichier a une extension de nom de fichier .ppdf, ou est un fichier image ou texte protégé (tel que .ptxt ou .pjpg).
 
@@ -151,6 +150,6 @@ Si vous êtes prêt à déployer Azure RMS pour votre organisation, consultez l
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

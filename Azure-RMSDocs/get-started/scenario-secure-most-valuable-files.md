@@ -1,27 +1,26 @@
 ---
 title: "Scénario - Sécuriser vos fichiers les plus précieux | Azure RMS"
-description: 
-keywords: 
+description: "Ce scénario et la documentation utilisateur associé utilisent Azure Rights Management pour protéger de manière manuelle et personnalisée un certain nombre de fichiers que vous considérez comme les plus précieux, qui assure le plus haut niveau de protection qui soit contre tout accès non autorisé. Il s’agit généralement de fichiers auxquels seules quelques personnes doivent pouvoir accéder. Par exemple, les instructions relatives à la recette d’un produit alimentaire distinctif de votre société ou des plans de reprise qui ne doivent pas être rendus publics avant une date définie."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: d4325fb8a0b27d0a8d4fd7451b9d11d10153ed8d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 5db916bc9eef927dc7d6a628808e9af79363e480
 
 
 ---
 
 # Scénario - Sécuriser vos fichiers les plus précieux
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Ce scénario et la documentation utilisateur associé utilisent Azure Rights Management pour protéger de manière manuelle et personnalisée un certain nombre de fichiers que vous considérez comme les plus précieux, qui assure le plus haut niveau de protection qui soit contre tout accès non autorisé. Il s’agit généralement de fichiers auxquels seules quelques personnes doivent pouvoir accéder. Par exemple, les instructions relatives à la recette d’un produit alimentaire distinctif de votre société ou des plans de reprise qui ne doivent pas être rendus publics avant une date définie.
 
@@ -47,7 +46,7 @@ Vérifiez que les conditions suivantes sont réunies, puis suivez les instructio
 ## Conditions requises pour ce scénario
 Pour ce scénario, les éléments suivants doivent être en place :
 
-|Configuration requise|Si vous avez besoin d’informations supplémentaires|
+|Condition requise|Si vous avez besoin d’informations supplémentaires|
 |---------------|--------------------------------|
 |Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory.<br /><br />- Un groupe nommé **Accès privilégié** ayant accès aux e-mails, qui contient les personnes devant avoir accès à ces documents hautement confidentiels<br /><br />- Un groupe nommé **Responsables de la conformité informatique** ayant accès aux e-mails, qui contient les personnes dont le travail inclut eDiscovery, la surveillance et l’audit<br /><br />- Un groupe nommé **Administrateurs RMS** et tous les administrateurs chargés de configurer Azure RMS sont membres de ce groupe|[Préparation pour Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management est activé|[Activation d'Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
@@ -123,7 +122,7 @@ Un niveau de protection très élevé est désormais appliqué à ces fichiers d
 
 -   &lt;document ultraconfidentiel, type ou emplacement 3&gt;
 
-**Vous avez besoin d'aide ?**
+**Vous avez besoin d'aide ?**
 
 -   Si vous ne pouvez pas accéder à ces fichiers, ou si vous remarquez des modifications suspectes dans les fichiers &lt;action et coordonnées&gt;.
 
@@ -141,13 +140,13 @@ Un niveau de protection très élevé est désormais appliqué à ces fichiers d
 
 -   Spécifications de conception pour le nom de code « Neptune »
 
-**Vous avez besoin d'aide ?**
+**Vous avez besoin d'aide ?**
 
 -   Si vous ne pouvez pas accéder à ces fichiers, ou si vous remarquez des modifications suspectes dans les fichiers, appelez le numéro du support technique disponible 24 heures sur 24 chargé de remonter les incidents qui vous a été envoyé par le département informatique dans un e-mail protégé.
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

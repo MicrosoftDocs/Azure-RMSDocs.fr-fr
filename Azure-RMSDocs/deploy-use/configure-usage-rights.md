@@ -1,27 +1,26 @@
 ---
 title: "Configuration des droits d’utilisation pour Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Lorsque vous définissez la protection de fichiers ou de messages électroniques à l'aide d'Azure Rights Management (Azure RMS) et n'utilisez pas de modèle, vous devez configurer les droits d'utilisation vous-même. En outre, lorsque vous configurez des modèles personnalisés pour Azure RMS, vous sélectionnez les droits d’utilisation qui seront ensuite appliqués automatiquement lorsque le modèle sera sélectionné par des utilisateurs, administrateurs ou services configurés."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 60f25cdcdabbfbb61072a95e39f84fed79cad871
-ms.openlocfilehash: e656729fa9ea926681e560f40c4f43ce320a0d5e
+ms.sourcegitcommit: e1f1bef9ce87dcffb8d3da920f19198aa253e8e6
+ms.openlocfilehash: bbfb00822a03609f5b81808e1e1c4cad8c02be0b
 
 
 ---
 
 # Configuration des droits d’utilisation pour Azure Rights Management
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Lorsque vous définissez la protection de fichiers ou de messages électroniques à l'aide d'Azure Rights Management (Azure RMS) et n'utilisez pas de modèle, vous devez configurer les droits d'utilisation vous-même. En outre, lorsque vous configurez des modèles personnalisés pour Azure RMS, vous sélectionnez les droits d’utilisation qui seront ensuite appliqués automatiquement lorsque le modèle sera sélectionné par des utilisateurs, administrateurs ou services configurés. Par exemple, dans le portail Azure Classic, vous pouvez sélectionner des rôles qui configurent un regroupement logique de droits d’utilisation, ou configurer les droits individuels.
 
@@ -40,7 +39,7 @@ Le tableau suivant répertorie et décrit les droits d'utilisation pris en charg
 |Nom commun : **Transférer** <br /><br />Encodage dans la stratégie : **FORWARD**|Active l'option de transfert de message électronique et d'ajout de destinataires aux lignes **À** et **CC** . Ce droit ne s’applique pas aux documents, mais uniquement aux e-mails.<br /><br />N'autorise pas le redirecteur à accorder des droits à d'autres utilisateurs dans le cadre de l'action de transfert.|Droits personnalisés Office : Refusés en cas d’utilisation de la stratégie standard **Ne pas transférer**.<br /><br />Nom dans le portail Azure Classic : **Transférer**<br /><br />Nom dans les modèles AD RMS : **Transférer** <br /><br />Constante ou valeur d’API `IPC_EMAIL_FORWARD L"FORWARD"`|
 |Nom commun : **Contrôle total** <br /><br />Encodage dans la stratégie : **OWNER**|Accorde tous les droits sur le document. Toutes les actions disponibles peuvent être effectuées.<br /><br />Inclut la possibilité de supprimer la protection et de reprotéger un document.|Droits personnalisés Office : Comme l’option personnalisée **Contrôle total**.<br /><br />Nom dans le portail Azure Classic : **Contrôle total**<br /><br />Nom dans les modèles AD RMS : **Contrôle total** <br /><br />Constante ou valeur d’API `IPC_GENERIC_ALL L"OWNER"`|
 |Nom commun : **Imprimer** <br /><br />Encodage dans la stratégie : **PRINT**|Active les options d'impression du contenu.|Droits personnalisés Office : Comme l’option **Imprimer le contenu** dans les autorisations personnalisées. N’est pas un paramètre par destinataire.<br /><br />Nom dans le portail Azure Classic : **Imprimer**<br /><br />Nom dans les modèles AD RMS : **Imprimer** <br /><br />Constante ou valeur d’API `IPC_GENERIC_PRINT L"PRINT"`|
-|Nom commun : **Répondre** <br /><br />Encodage dans la stratégie : **PRINT**|Active l’option **Répondre** dans un client de messagerie sans autoriser de modification des lignes **À** ou **Cc**.|Droits personnalisés Office : Non implémenté.<br /><br />Nom dans le portail Azure Classic : **Répondre**<br /><br />Nom dans les modèles AD RMS : **Répondre** <br /><br />Constante ou valeur d’API `IPC_EMAIL_REPLY`|
+|Nom commun : **Répondre** <br /><br />Encodage dans la stratégie : **REPLY**|Active l’option **Répondre** dans un client de messagerie sans autoriser de modification des lignes **À** ou **Cc**.|Droits personnalisés Office : Non implémenté.<br /><br />Nom dans le portail Azure Classic : **Répondre**<br /><br />Nom dans les modèles AD RMS : **Répondre** <br /><br />Constante ou valeur d’API `IPC_EMAIL_REPLY`|
 |Nom commun : **Répondre à tous** <br /><br />Encodage dans la stratégie : **REPLYALL**|Active l'option **Répondre à tous** dans un client de messagerie, mais ne permet pas à l'utilisateur d'ajouter des destinataires aux lignes **À** ou **CC** .|Droits personnalisés Office : Non implémenté.<br /><br />Nom dans le portail Azure Classic : **Répondre à tous**<br /><br />Nom dans les modèles AD RMS : **Répondre à tous** <br /><br />Constante ou valeur d’API `IPC_EMAIL_REPLYALL L"REPLYALL"`|
 |Nom commun : **Afficher, Ouvrir, Lire** <br /><br />Encodage dans la stratégie : **VIEW**|Permet à l'utilisateur d'ouvrir le document et d'en voir le contenu.|Droits personnalisés Office : Comme l’option **Afficher** de la stratégie personnalisée **Lecture**.<br /><br />Nom dans le portail Azure classique : **Afficher**<br /><br />Nom dans les modèles AD RMS : **Répondre à tous** <br /><br />Constante ou valeur d’API `IPC_GENERIC_READ L"VIEW"`|
 |Nom commun : **Copier** <br /><br />Encodage dans la stratégie : **EXTRACT**|Active les options permettant de copier des données du document (y compris des captures d’écran) vers un autre emplacement du document ou vers un autre document.<br /><br />Dans certaines applications, permet également d’enregistrer l’ensemble du document sous forme non protégée.|Droits personnalisés Office : comme l’option de stratégie personnalisée **Autoriser les utilisateurs bénéficiant d’accès en lecture à copier le contenu**.<br /><br />Nom dans le portail Azure Classic : **Copier et Extraire le contenu**<br /><br />Nom dans les modèles AD RMS : **Extraire** <br /><br />Constante ou valeur d’API `IPC_GENERIC_EXTRACT L"EXTRACT"`|
@@ -102,6 +101,6 @@ Une utilisatrice veut envoyer certaines informations par e-mail à certaines per
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

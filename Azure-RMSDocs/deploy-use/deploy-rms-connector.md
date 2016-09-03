@@ -1,27 +1,26 @@
 ---
 title: "Déploiement du connecteur Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Utilisez ces informations pour en savoir plus sur le connecteur Azure Rights Management et comprendre comment l’utiliser pour assurer la protection des informations à l’aide de déploiements locaux existants utilisant Microsoft Exchange Server, Microsoft SharePoint Server, ou des serveurs de fichiers exécutant Windows Server et utilisant l’infrastructure de classification des fichiers du Gestionnaire de ressources du serveur de fichiers."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e31656e417a0861d33deb2436d2e4b596a7512a7
-ms.openlocfilehash: 6b9b3b039ba2de0de174a134768afd763d26b5dd
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 003dcc6a000d303fc42204d61145cf067dc16d32
 
 
 ---
 
 # Déploiement du connecteur Azure Rights Management
 
-*S’applique à : Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*S’applique à : Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 Utilisez ces informations pour en savoir plus sur le connecteur Azure Rights Management et comprendre comment l’utiliser pour assurer la protection des informations à l’aide de déploiements locaux existants utilisant Microsoft Exchange Server, Microsoft SharePoint Server, ou des serveurs de fichiers exécutant Windows Server et utilisant l’infrastructure de classification des fichiers du Gestionnaire de ressources du serveur de fichiers.
 
@@ -84,6 +83,6 @@ Avant d'installer le connecteur RMS, assurez-vous que les conditions requises su
 Accédez à [Installation et configuration du connecteur Azure Rights Management](install-configure-rms-connector.md).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

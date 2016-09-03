@@ -1,20 +1,19 @@
 ---
 title: "Paramètres de Registre pour le connecteur RMS | Azure RMS"
-description: 
-keywords: 
+description: "Reportez-vous aux tableaux des sections suivantes uniquement si vous voulez ajouter ou vérifier manuellement les paramètres de Registre des serveurs exécutant Exchange, SharePoint ou Windows Server, qui configure les serveurs pour utiliser le connecteur RMS. La méthode recommandée pour configurer ces serveurs consiste à utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 935c354f9bcd3be23a953cdeb08c7860257637d6
-ms.openlocfilehash: 5099a10a183f1c78595794511654226265e740c8
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 49fff7c2e0c06d26751136b681022f221f80d6cd
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 5099a10a183f1c78595794511654226265e740c8
 
 # Paramètres de Registre pour le connecteur Rights Management
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 
 Reportez-vous aux tableaux des sections suivantes uniquement si vous voulez ajouter ou vérifier manuellement les paramètres de Registre des serveurs exécutant Exchange, SharePoint ou Windows Server, qui configure les serveurs pour utiliser le [connecteur RMS](deploy-rms-connector.md). La méthode recommandée pour configurer ces serveurs consiste à utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS.
@@ -217,6 +216,6 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 Retour à [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

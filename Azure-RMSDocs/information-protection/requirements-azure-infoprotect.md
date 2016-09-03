@@ -1,20 +1,19 @@
 ---
 title: Configuration requise pour Azure Information Protection | Azure RMS
-description: 
-keywords: 
+description: "Pour évaluer la préversion d’Azure Information Protection, vérifiez que vous disposez des prérequis suivants."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: aa4353e5-c5b0-47f6-a6f9-87d13e8f075f
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c0652e05576ab28d7b77380ab1b8aa0ca2d3e479
-ms.openlocfilehash: e3eb845af4e2cfec43c63c9625163f62c83cf954
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: cc1ec2b2544ac368821155b7e0c3c0e179982d1d
 
 
 ---
@@ -29,7 +28,7 @@ Pour évaluer la préversion d’Azure Information Protection, vérifiez que vou
 
 |Condition requise|Plus d'informations|
 |---------------|--------------------|
-|Un abonnement au cloud qui inclut Azure RMS.|Votre organisation doit avoir un abonnement au cloud prenant en charge Rights Management.<br /><br />Pour plus d’informations et pour obtenir des liens vers des versions d’essai gratuites, consultez [Abonnements au cloud prenant en charge Azure RMS](../get-started/requirements-subscriptions.md).|
+|Abonnement Office 365 incluant Azure Rights Management|Par exemple un abonnement Office 365 E3, E4 ou E5.<br /><br />Pour plus d’informations sur les abonnements disponibles et pour obtenir des liens vers des essais gratuits, consultez la section [Abonnement Office 365](../get-started/requirements-subscriptions.md#office-365-subscription) dans la documentation sur les conditions requises pour Azure RMS.|
 |Annuaire Azure AD|Votre organisation doit disposer d’un annuaire Azure AD qui prend en charge l’authentification utilisateur pour Azure RMS et Azure Information Protection. De plus, si vous souhaitez utiliser les comptes d’utilisateur de votre annuaire local (AD DS), vous devez également configurer l’intégration d’annuaire.<br /><br />La solution Multi-Factor Authentication (MFA) est prise en charge avec Azure RMS si vous disposez du logiciel client requis et que vous avez correctement configuré l’infrastructure de prise en charge de MFA.<br /><br />Pour plus d’informations, consultez [Annuaire Azure AD](../get-started/requirements-azure-ad.md), où les informations fournies pour Azure RMS s’appliquent également à Azure Information Protection.|
 |Appareils clients|Les appareils clients suivants sont pris en charge pour cette préversion :<br /><br />- Windows 10 (x86, x64)<br /><br />- Windows 8.1 (x86, x64)<br /><br />- Windows 8 (x86, x64)<br /><br />- Windows 7 Service Pack 1 (x86, x64)<br /><br />Quand vous protégez les données, celles-ci peuvent être consommées par les mêmes appareils (Windows, Mac, iOS, Android) que ceux qui prennent en charge Azure Rights Management. Pour plus d’informations sur ces appareils et sur les versions prises en charge, consultez [Conditions requises pour Azure RMS : Appareils clients prenant en charge Azure RMS](../get-started/requirements-client-devices.md).|
 |Applications|Pour la préversion et la disponibilité générale (GA), Azure Information Protection prend en charge l’étiquetage et la protection des fichiers et des e-mails créés par les applications Office suivantes : **Word**, **Excel**, **PowerPoint** et **Outlook** des suites Office suivantes :<br /><br />- Office Professionnel Plus 2016<br /><br />- Office Professionnel Plus 2013 avec Service Pack 1<br /><br />- Office Professionnel Plus 2010<br /><br />Après la disponibilité générale, une annonce sera publiée sur le [Blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) quand Azure Information Protection prendra en charge d’autres types de fichiers comme les fichiers audio, vidéo, image et PDF.|
@@ -42,6 +41,6 @@ Si ces conditions sont remplies, essayez notre démonstration autoguidée pour c
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

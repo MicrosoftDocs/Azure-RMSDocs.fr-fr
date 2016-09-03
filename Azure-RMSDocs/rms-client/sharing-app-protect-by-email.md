@@ -1,27 +1,26 @@
 ---
 title: "Protéger un fichier que vous partagez par e-mail à l’aide de l’application de partage Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Lorsque vous protégez un fichier que vous le partagez par e-mail, il crée une nouvelle version du fichier d’origine. Le fichier d’origine reste non protégé et la nouvelle version est protégée et automatiquement jointe à un e-mail que vous envoyez ensuite."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: 13f44e93ee9c1c0583bd75121aec638fee09b748
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 9becbab6612e49e285774e2e8742d6448b11a041
 
 
 ---
 
-# Protégez un fichier partagé par courrier électronique à l’aide de l’application de partage Rights Management
+# Protéger un fichier partagé par courrier électronique à l’aide de l’application de partage Rights Management
 
-*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Lorsque vous protégez un fichier que vous le partagez par e-mail, il crée une nouvelle version du fichier d’origine. Le fichier d’origine reste non protégé et la nouvelle version est protégée et automatiquement jointe à un e-mail que vous envoyez ensuite.
 
@@ -93,6 +92,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

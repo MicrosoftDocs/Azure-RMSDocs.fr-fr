@@ -1,33 +1,26 @@
 ---
-# required metadata
-
-title: Vue d’ensemble d’Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Vue d’ensemble d’Azure Rights Management | Azure RMS"
+description: "Microsoft Azure Rights Management (Azure RMS) vous aide à protéger les informations sensibles de votre organisation contre tout accès non autorisé et à contrôler l’utilisation de ces informations. Azure Rights Management est un service cloud intégré dans d’autres services et applications cloud Microsoft, comme Office 365 et Azure Active Directory. Vous pouvez aussi l’utiliser avec vos propres applications métier et avec les solutions de protection des informations d’autres éditeurs de logiciels, que ces applications et solutions soient locales ou dans le cloud."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/03/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 965581c8-be3c-43b4-8145-5cefd29c7636
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 9d6c68c01cbd410def904f7cf256ffe9a5a5417b
+
 
 ---
 
 # Vue d’ensemble d’Azure Rights Management
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Microsoft Azure Rights Management (Azure RMS) vous aide à protéger les informations sensibles de votre organisation contre tout accès non autorisé et à contrôler l’utilisation de ces informations. Azure Rights Management est un service cloud intégré dans d’autres services et applications cloud Microsoft, comme Office 365 et Azure Active Directory. Vous pouvez aussi l’utiliser avec vos propres applications métier et avec les solutions de protection des informations d’autres éditeurs de logiciels, que ces applications et solutions soient locales ou dans le cloud. 
 
@@ -45,6 +38,7 @@ Si vous êtes prêt à déployer Azure RMS pour votre organisation, utilisez la 
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Aug16_HO4-->
 
 

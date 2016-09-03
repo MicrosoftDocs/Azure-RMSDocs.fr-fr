@@ -1,26 +1,22 @@
 ---
-# required metadata
-
-title: Procédure d’installation, de configuration et de test d’un serveur RMS | Azure RMS
-description: Installez et configurez un serveur RMS pour tester votre application avec gestion des droits.
-keywords:
+title: "Procédure d’installation, de configuration et de test d’un serveur RMS | Azure RMS"
+description: "Installez et configurez un serveur RMS pour tester votre application avec gestion des droits."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
+ms.openlocfilehash: d046e7f6bbe867b6bc867483441bb0cc5c20df82
+
 
 ---
 
@@ -65,12 +61,13 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
 
     Pour un test avec un serveur RMS, configurez la découverte côté serveur ou côté client pour activer le client Rights Management Services 2.1 afin de découvrir et d’établir la communication avec votre serveur RMS.
 
-    > [!Note] Le test avec Azure RMS ne nécessite pas de configuration de la découverte.
+    > [!Note]
+    > Le test avec Azure RMS ne nécessite pas de configuration de la découverte.
 
   - Pour la découverte côté serveur, l’administrateur inscrit un point de connexion de service pour le cluster racine RMS auprès d’Active Directory. Ainsi, le client interroge Active Directory pour découvrir le point de connexion de service et établir une connexion avec le serveur.
   - Pour la découverte côté client, vous configurez des paramètres de découverte de service RMS dans le Registre de l’ordinateur sur lequel s’exécute le client RMS 2.1. Ces paramètres indiquent au client RMS 2.1 le serveur RMS à utiliser. Quand de tels paramètres sont définis, la découverte côté serveur n’est pas lancée.
 
-  Pour configurer la découverte côté client, vous pouvez définir les clés de Registre suivantes pour qu’elles pointent vers votre serveur RMS. Pour plus d’informations sur la configuration de la découverte côté serveur, consultez les [notes sur le déploiement du client RMS 2.0](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx).
+  Pour configurer la découverte côté client, vous pouvez définir les clés de Registre suivantes pour qu’elles pointent vers votre serveur RMS. Pour plus d’informations sur la configuration de la découverte côté serveur, consultez les [notes sur le déploiement du client RMS 2.0](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
 1. **EnterpriseCertification**
         HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterpriseCertification
@@ -80,9 +77,11 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
 2. **EnterprisePublishing**
         HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterprisePublishing **Valeur** : (Par défaut) : [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
->[!NOTE] Par défaut, ces clés n’existent pas dans le Registre et doivent être créées.
+>[!NOTE] 
+> Par défaut, ces clés n’existent pas dans le Registre et doivent être créées.
 
->[!IMPORTANT] Si vous exécutez une application 32 bits sur une version 64 bits de Windows, vous devez définir ces clés dans l’emplacement de clé suivant :<p>
+>[!IMPORTANT] 
+> Si vous exécutez une application 32 bits sur une version 64 bits de Windows, vous devez définir ces clés dans l’emplacement de clé suivant :<p>
   ```    
   HKEY_LOCAL_MACHINE
     SOFTWARE
@@ -96,6 +95,7 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

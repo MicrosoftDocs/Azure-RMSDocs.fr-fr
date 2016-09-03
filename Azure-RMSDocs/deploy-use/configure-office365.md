@@ -1,27 +1,26 @@
 ---
 title: "Office 365 &colon; configuration pour les clients et services en ligne | Azure RMS"
-description: 
-keywords: 
+description: "Office 365 prenant en charge Azure RMS en mode natif, aucune configuration d'ordinateur client n'est requise pour la prise en charge des fonctionnalités de gestion des droits relatifs à l'information pour les applications telles que Word, Excel, PowerPoint, Outlook et Outlook Web App. Les utilisateurs doivent simplement se connecter à leurs applications Office avec leurs informations d’identification Microsoft Office 365 pour pouvoir protéger des fichiers et e-mails, et accéder à des fichiers et e-mails protégés par d’autres."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: 3592fb7c386eaeddc839c11a494f94d9b7564472
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 09f152ef910cf9c08c9a693f79c40f491263c5d3
 
 
 ---
 
 # Office 365 : configuration pour les clients et services en ligne
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Office 365 prenant en charge Azure RMS en mode natif, aucune configuration d'ordinateur client n'est requise pour la prise en charge des fonctionnalités de gestion des droits relatifs à l'information pour les applications telles que Word, Excel, PowerPoint, Outlook et Outlook Web App. Les utilisateurs doivent simplement se connecter à leurs applications Office avec leurs informations d’identification [!INCLUDE[o365_1](../includes/o365_1_md.md)] pour pouvoir protéger des fichiers et e-mails, et accéder à des fichiers et e-mails protégés par d’autres.
 
@@ -74,7 +73,7 @@ Les étapes suivantes décrivent un ensemble spécifique de commandes à exécut
     ```
     Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.eu.aadrm.com/TenantManagement/ServicePartner.svc"
     ```
-    Pour l'Asie :
+    Pour l'Asie :
 
     ```
     Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.ap.aadrm.com/TenantManagement/ServicePartner.svc"
@@ -121,7 +120,7 @@ Les utilisateurs peuvent maintenant protéger leurs messages électroniques en u
 
 En tant qu’administrateur Exchange, vous pouvez maintenant configurer des fonctionnalités qui appliquent automatiquement la protection des informations, telles que les [règles de transport](https://technet.microsoft.com/library/dd302432.aspx), les [stratégies de protection contre la perte des données (DLP)](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx) et la [messagerie vocale protégée](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (messagerie unifiée).
 
-Pour obtenir des instructions détaillées concernant la configuration d'Exchange Online afin d'activer la fonctionnalité IRM, consultez la documentation dans la bibliothèque Exchange. Par exemple :
+Pour obtenir des instructions détaillées concernant la configuration d'Exchange Online afin d'activer la fonctionnalité IRM, consultez la documentation dans la bibliothèque Exchange. Exemple :
 
 -   [Connexion à Exchange Online à l'aide de Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx)
 
@@ -1106,6 +1105,6 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

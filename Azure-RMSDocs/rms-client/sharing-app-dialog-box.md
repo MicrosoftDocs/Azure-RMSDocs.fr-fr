@@ -1,27 +1,26 @@
 ---
 title: "Options de boîte de dialogue pour l’application de partage Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Ces informations vous aident à spécifier les options des boîtes de dialogue Ajouter une protection ou Partage protégé de l’application de partage RMS. Ces boîtes de dialogue s’affichent quand vous voulez protéger un fichier à partager ou protéger un fichier sur place et que vous choisissez des autorisations personnalisées."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: ed2ab42174ce5d83fd60ace1c394515db1450e3d
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: aa0f5456d17564183317e3e693ae63adb8c597c5
 
 
 ---
 
 # Options de boîte de dialogue pour l'application de partage Rights Management
 
-*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Ces informations vous aident à spécifier les options des boîtes de dialogue **Ajouter une protection** ou **Partage protégé** de l'application de partage RMS. Ces boîtes de dialogue s’affichent quand vous voulez [protéger un fichier à partager](sharing-app-protect-by-email.md) ou [protéger un fichier sur place](sharing-app-protect-in-place.md) et que vous choisissez des autorisations personnalisées.
 
@@ -79,6 +78,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: "Scénario - Envoyer un e-mail confidentiel de l’entreprise | Azure RMS"
-description: 
-keywords: 
+description: "Ce scénario et la documentation utilisateur associée utilisent Azure Rights Management afin que n’importe quel utilisateur de l’organisation puisse envoyer de manière sécurisée des communications par e-mail qui ne peuvent pas être lues à l’extérieur de l’organisation. Par exemple, si quelqu’un transfère l’e-mail à une personne d’une autre organisation ou vers un compte de messagerie personnel. Les e-mails et pièces jointes sont protégés par Azure Rights Management et un modèle choisi par les utilisateurs à partir du client de messagerie."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: b6f3b06485dda81be2a36035fea7477f4061a8e9
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 4bda209d2f66bb3a3ca1639a7ddfcfc3bccf51b1
 
 
 ---
 
 # Scénario - Envoyer un e-mail confidentiel de l’entreprise
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Ce scénario et la documentation utilisateur associée utilisent Azure Rights Management afin que n’importe quel utilisateur de l’organisation puisse envoyer de manière sécurisée des communications par e-mail qui ne peuvent pas être lues à l’extérieur de l’organisation. Par exemple, si quelqu’un transfère l’e-mail à une personne d’une autre organisation ou vers un compte de messagerie personnel. Les e-mails et pièces jointes sont protégés par Azure Rights Management et un modèle choisi par les utilisateurs à partir du client de messagerie.
 
@@ -48,7 +47,7 @@ Vérifiez que les conditions suivantes sont remplies avant de poursuivre avec la
 ## Conditions requises pour ce scénario
 Pour pouvoir appliquer les instructions de ce scénario, les conditions suivantes doivent être réunies :
 
-|Configuration requise|Si vous avez besoin d'informations supplémentaires|
+|Condition requise|Si vous avez besoin d'informations supplémentaires|
 |---------------|--------------------------------|
 |Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory|[Préparation pour Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |Votre clé de locataire Azure Rights Management est gérée par Microsoft ; vous n’utilisez pas BYOK|[Planification et implémentation de votre clé de locataire Azure Rights Management](https://technet.microsoft.com/library/dn440580.aspx)|
@@ -82,7 +81,7 @@ En utilisant le modèle suivant, copiez et collez les instructions utilisateur d
 
         -   Modifiez le paragraphe final explicatif des restrictions qui s’appliquent aux destinataires.
 
-6.  Apportez les autres modifications de votre choix à cet ensemble d’instructions, puis adressez-le à ces utilisateurs.
+6.  Apportez les autres modifications que vous voulez éventuellement apporter à cet ensemble d’instructions, puis adressez-le à ces utilisateurs.
 
 7.  Étant donné que certains clients ne prennent pas en charge Rights Management, vous devrez peut-être fournir des informations et des recommandations aux destinataires de ces e-mails protégés. Ces informations reposent sur les appareils et les applications de messagerie utilisés au sein de votre organisation et sur vos préférences. Recommandez, par exemple, que les utilisateurs iOS lisent les e-mails protégés avec Outlook pour iPad et iPhone plutôt qu’avec le client de messagerie iOS natif.
 
@@ -116,7 +115,7 @@ Quand une personne figurant sur la ligne **À**, **Cc**, ou **Cci** reçoit ce m
 
 Les destinataires de votre message pourront le transférer à d’autres personnes, mais seuls les utilisateurs de *&lt;nom de l’organisation&gt;* pourront le lire. Si vous attachez un document Office, celui-ci aura la même protection, même si cette pièce jointe est enregistrée avec un nom différent, à un autre emplacement. Toutefois, les utilisateurs authentifiés avec succès peuvent effectuer des opérations de copier et coller ou d’impression à partir de l’e-mail ou de la pièce jointe. Si vous avez besoin d’une protection plus restrictive empêchant des actions telles que celles-ci, contactez le support technique.
 
-**Vous avez besoin d'aide ?**
+**Vous avez besoin d'aide ?**
 
 -   Contactez le support technique :
 
@@ -149,7 +148,7 @@ Lorsqu’une personne figurant sur la ligne **À**, **Cc**, ou **Cci** reçoit c
 
 Les destinataires de votre e-mail pourront le transférer à d’autres personnes, toutefois seuls les utilisateurs de VanArsdel pourront le lire. Si vous attachez un document Office, celui-ci aura la même protection, même si cette pièce jointe est enregistrée avec un nom différent, à un autre emplacement. Toutefois, les utilisateurs authentifiés avec succès peuvent effectuer des opérations de copier et coller ou d’impression à partir de l’e-mail ou de la pièce jointe. Si vous avez besoin d’une protection plus restrictive empêchant des actions telles que celles-ci, contactez le support technique.
 
-**Vous avez besoin d'aide ?**
+**Vous avez besoin d'aide ?**
 
 -   Contactez le support technique :
 
@@ -158,6 +157,6 @@ Les destinataires de votre e-mail pourront le transférer à d’autres personne
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: "Comparaison d’Azure Rights Management avec AD RMS | Azure RMS"
-description: 
-keywords: 
+description: "Si vous connaissez ou avez déjà déployé Active Directory Rights Management Services (AD RMS), vous vous demandez peut-être ce qui le différencie d’Azure RMS en termes de fonctionnement et de configuration requise."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: ce79ec40cbd8ca3796a17920d27dc3872cd40842
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 7dd888f28e5f4d307a1f96203516d3b058541ba5
 
 
 ---
 
 # Comparaison d'Azure Rights Management avec AD RMS
 
-*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Office 365*
+>*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Office 365*
 
 Si vous connaissez ou avez déjà déployé Active Directory Rights Management Services (AD RMS), vous vous demandez peut-être ce qui le différencie d’[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] en termes de fonctionnement et de configuration requise. 
 
@@ -76,6 +75,6 @@ Si vous souhaitez migrer d’AD RMS vers Azure RMS, consultez [Migration d’A
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

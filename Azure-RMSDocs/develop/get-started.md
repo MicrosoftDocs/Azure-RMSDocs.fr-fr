@@ -4,9 +4,9 @@ description: "Une approche rapide pour développer une première application se 
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6b5bc9612ac17a2d6905200383d9b8df4c504efe
-ms.openlocfilehash: b2f5d6d366c767a4c2fb2f5e86ee69509a2aba27
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 10b6cd94e013cabe27e614442a549775e2783e56
 
 
 ---
@@ -56,6 +56,6 @@ Pour cette version de Microsoft Rights Management SDK 4.2, une approche rapide 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

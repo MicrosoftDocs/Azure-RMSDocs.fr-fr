@@ -1,27 +1,26 @@
 ---
 title: "Supprimer la protection d’un fichier à l’aide de l’application de partage Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Pour supprimer la protection d’un fichier (autrement dit, le dé-protéger) protégé à l’aide de l’application de partage RMS, utilisez l’option Supprimer la protection à partir de l’Explorateur de fichiers."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: 4aea0c89e5d97a7a0190962e073f0b4bc95bef25
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: b94cd999fef2186ddf67a0e6cebc3349a3586538
 
 
 ---
 
 # Suppression de la protection d'un fichier avec l'application de partage Rights Management
 
-*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Pour supprimer la protection d'un fichier (autrement dit, le dé-protéger) protégé à l'aide de l'application de partage RMS, utilisez l'option **Supprimer la Protection** de l'Explorateur de fichiers.
 
@@ -36,7 +35,7 @@ Pour supprimer la protection d'un fichier (autrement dit, le dé-protéger) prot
 
     Il se peut que vous soyez invité à fournir vos informations d'identification.
 
-Remarque : Si vous ne voyez pas ces options, l’application de partage RMS n’est peut-être pas installée sur votre ordinateur, la version la plus récente n’est peut-être pas installée ou votre ordinateur doit peut-être être redémarré pour terminer l’installation. Pour plus d’informations sur l’installation de l’application de partage, voir [Télécharger et installer l’application de partage Rights Management](install-sharing-app.md).
+Remarque : Si vous ne voyez pas ces options, l’application de partage RMS n’est peut-être pas installée sur votre ordinateur, la version la plus récente n’est peut-être pas installée ou votre ordinateur doit peut-être être redémarré pour terminer l’installation. Pour plus d’informations sur l’installation de l’application de partage, consultez [Télécharger et installer l’application de partage Rights Management](install-sharing-app.md).
 
 Le fichier protégé d'origine (par exemple, Sample.ptxt) est supprimé et remplacé par un fichier du même nom, mais avec l'extension de nom de fichier non protégé (par exemple, Sample.txt).
 
@@ -52,6 +51,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

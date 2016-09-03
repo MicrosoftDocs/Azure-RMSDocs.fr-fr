@@ -1,36 +1,35 @@
 ---
 title: Conditions requises pour Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Pour déployer Microsoft Azure Rights Management (Azure RMS) dans votre organisation, vérifiez d’abord que vous disposez des prérequis suivants. Vous pouvez ensuite utiliser la feuille de route pour le déploiement d’Azure Rights Management pour déployer Rights Management dans votre organisation."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fab331a26e18730e9cc64a24c0501b7ae21aa1b
-ms.openlocfilehash: f225d8579e2440d2eb00a4f821a78727b6442fdd
+ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
+ms.openlocfilehash: d56eb077ef76e1869c7d90141f1b35c1bdbfe9fa
 
 
 ---
 
 # Conditions requises pour Azure Rights Management
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 
 Pour déployer Microsoft Azure Rights Management (Azure RMS) dans votre organisation, vérifiez d’abord que vous disposez des prérequis suivants. Vous pouvez ensuite utiliser la [feuille de route pour le déploiement d’Azure Rights Management](../plan-design/deployment-roadmap.md) pour déployer Rights Management dans votre organisation.
 
-|Configuration requise|Plus d’informations|
+|Condition requise|Plus d’informations|
 |---------------|--------------------|
 |Un abonnement au cloud pour RMS|Votre organisation doit posséder un abonnement au cloud prenant en charge RMS.<br /><br />Pour plus d’informations sur les licences, consultez [Abonnements cloud prenant en charge Azure RMS](requirements-subscriptions.md).|
 |Annuaire Azure AD|Votre organisation doit disposer d’un annuaire Azure AD pour la prise en charge de l’authentification utilisateur pour RMS. De plus, si vous souhaitez utiliser les comptes d’utilisateur de votre annuaire local (AD DS), vous devez également configurer l’intégration d’annuaire.<br /><br />La solution Multi-Factor Authentication (MFA) est prise en charge avec Azure RMS si vous disposez du logiciel client requis et que vous avez correctement configuré l’infrastructure de prise en charge de MFA.<br /><br />Pour plus d’informations, consultez [Azure Active Directory](requirements-azure-ad.md).|
-|Périphériques client|Les utilisateurs doivent posséder des périphériques client (ordinateurs ou appareils mobiles) exécutant un système d’exploitation qui prend en charge RMS.<br /><br />Pour plus d’informations, consultez [Périphériques client prenant en charge Azure RMS](requirements-client-devices.md).|
+|Appareils clients|Les utilisateurs doivent posséder des périphériques client (ordinateurs ou appareils mobiles) exécutant un système d’exploitation qui prend en charge RMS.<br /><br />Pour plus d’informations, consultez [Périphériques client prenant en charge Azure RMS](requirements-client-devices.md).|
 |Applications|Les utilisateurs doivent exécuter des applications prenant en charge RMS.<br /><br />Pour plus d’informations, consultez [Applications prenant en charge Azure RMS](requirements-applications.md).|
 |Infrastructure prenant en charge la connexion Internet et les services cloud dépendants|Si vous avez un pare-feu ou des périphériques réseau intervenants similaires qui doivent être configurés pour autoriser des connexions spécifiques, consultez les informations relatives à **Azure Rights Management (RMS)** dans la section [Portail et services partagés Office 365](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_Portal-identity) de l’article Office suivant : [URL et plages d’adresses IP Office 365](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2).<br /><br />Suivez les instructions fournies dans cet article Office pour être tenu au courant des modifications apportées à ces informations en vous abonnant à un flux RSS.<br /><br />En plus des informations de l’article relatif à Office, voici des informations propres à Azure RMS :<br /><br />- N’interrompez pas la connexion du client au service TLS (par exemple, pour effectuer une inspection au niveau du paquet). Cela a pour effet d’interrompre l’épinglage de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour sécuriser leur communication avec Azure RMS.<br /><br />- Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour utiliser l’authentification Windows intégrée avec les informations d’identification d’ouverture de session Active Directory de l’utilisateur.|
 
@@ -56,6 +55,6 @@ Pour plus d’informations sur les exigences Azure RMS supplémentaires pour ce
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

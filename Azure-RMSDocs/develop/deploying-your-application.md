@@ -4,9 +4,9 @@ description: "Cette rubrique décrit les options de déploiement pour votre appl
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 982021a2e972023b04e6483348a7c27aa029e198
-ms.openlocfilehash: 8308e2db84e13c6b8c85a1a3ae6c01fc0aabee75
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 3b6ff46581921f69c47cad3d6d879c53320b9126
 
 
 ---
@@ -28,10 +28,6 @@ Cette rubrique décrit les options de déploiement pour votre application avec g
 ## Demander un contrat de licence de production
 
  Avant de pouvoir publier une application développée avec Rights Management Services SDK 2.1, vous devez demander un contrat de licence de production pour obtenir un certificat de production.
-
-> [!IMPORTANT]
-> Si vous devez exécuter votre application cliente avec Azure RMS, vous devez créer vos propres locataires. Pour plus d’informations, consultez [Conditions requises pour Azure RMS : abonnements cloud qui prennent en charge Azure RMS](../get-started/requirements-subscriptions.md).
-> Pour plus d’informations sur l’exécution d’Azure RMS, consultez [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 Vous pouvez obtenir le certificat en demandant un contrat de licence de production.
 
@@ -116,7 +112,8 @@ Pour que votre utilisateur final tire parti des services Azure Rights Management
 
 
 > [!IMPORTANT]
-> L’exécution de votre application cliente de RMS SDK 2.1 avec Azure RMS vous oblige à créer vos propres locataires. Pour plus d’informations, consultez [Conditions requises pour Azure RMS : abonnements cloud qui prennent en charge Azure RMS](../get-started/requirements-subscriptions.md).
+> Si vous devez exécuter votre application cliente avec Azure RMS, vous devez créer vos propres locataires. Pour plus d’informations, consultez [Conditions requises pour Azure RMS : abonnements cloud qui prennent en charge Azure RMS](../get-started/requirements-subscriptions.md).
+> Pour plus d’informations sur l’exécution d’Azure RMS, consultez [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 -   Téléchargez l’[Assistant de connexion Microsoft Online Services](http://www.microsoft.com/en-us/download/details.aspx?id=28177) à partir du Centre de téléchargement Microsoft.
 -   Vérifiez que votre déploiement d’une application avec gestion des droits inclut une vérification des composants requis pour la sélection de ce service.
@@ -135,6 +132,6 @@ Pour plus d’informations sur l’activation de votre application pour utiliser
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: "Afficher et utiliser des fichiers qui ont été protégés par Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Lorsque l'application de partage Rights Management (RMS) est installée sur votre ordinateur, vous pouvez afficher un fichier protégé simplement en double-cliquant dessus. Le fichier peut être une pièce jointe à un message électronique, ou un fichier apparaissant dans l'Explorateur de fichiers."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 06f615c993d54ab1e8e4a94d7414302481d919b4
-ms.openlocfilehash: cd19be1c0319a3d2a4609030c0114b07b461c1d8
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 78810a639c2360707b628423bb68b2f05e8c5b56
 
 
 ---
 
-# Afficher et utiliser des fichiers qui ont été protégés par Rights Management
+# Affichage et utilisation des fichiers qui ont été protégés par Rights Management
 
-*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Quand [l’application de partage Rights Management (RMS) est installée sur votre ordinateur](install-sharing-app.md), vous pouvez afficher un fichier protégé simplement en double-cliquant dessus. Le fichier peut être une pièce jointe à un message électronique, ou un fichier apparaissant dans l'Explorateur de fichiers.
 
@@ -108,6 +107,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

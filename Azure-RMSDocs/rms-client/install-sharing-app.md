@@ -1,27 +1,26 @@
 ---
 title: "Télécharger et installer l’application de partage Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Pour installer l’application de partage RMS, vous ne devez pas nécessairement être administrateur local. Toutefois, si vous ne l’êtes pas et utilisez Office 2010, il existe quelques limitations. Pour plus d’informations, consultez la section Si vous n’êtes pas administrateur local et utilisez Office 2010 dans cette page."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 5ec740b4de63c90c9713916dcf104316e727498b
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: bda09df1ff51565a4bbf501161c7a4f8cdbbfe22
 
 
 ---
 
 # Télécharger et installer l'application de partage Rights Management
 
-*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Pour installer l’application de partage RMS, vous ne devez pas nécessairement être administrateur local. Toutefois, si vous ne l’êtes pas et utilisez Office 2010, il existe quelques limitations. Pour plus d’informations, consultez la section [Si vous n’êtes pas administrateur local et utilisez Office 2010](#if-you-are-not-a-local-administrator-and-use-office-2010) dans cette page.
 
@@ -62,7 +61,7 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 -   [Exemples d’utilisation de l’application de partage RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
@@ -70,6 +69,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

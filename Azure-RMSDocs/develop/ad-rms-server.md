@@ -6,7 +6,7 @@ author: bruceperlerms
 manager: mbaldwin
 ms.date: 06/28/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 17B05780-B0EF-4805-8304-52DCDEB3AADB
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
-ms.openlocfilehash: 2b7c99e3adafde7140d7997364ec2643ba79a2ac
+ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
+ms.openlocfilehash: 609a507335cea4a0a12e3652366961526d348c33
 
 
 ---
@@ -58,6 +58,6 @@ Parmi les nombreux services web installés, ceux-ci sont importants pour le dév
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

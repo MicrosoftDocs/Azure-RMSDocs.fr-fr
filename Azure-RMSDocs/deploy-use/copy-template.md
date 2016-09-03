@@ -1,20 +1,19 @@
 ---
 title: "Copier un modèle | Azure RMS"
-description: 
-keywords: 
+description: "Si vous voulez créer un nouveau modèle dont les paramètres sont très similaires à ceux d’un modèle existant, sélectionnez le modèle d’origine sur la page MODÈLES , cliquez sur COPIER, spécifiez un nom unique, puis apportez les modifications nécessaires."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f329ce49-e044-4c11-821d-5496d83c1bb3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: 87d712bbda11a4cfdfb2f3b3e9a549bca977afd6
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: e5d7fea3b0c3c9fcc3546752b5483b9c97a917e9
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 87d712bbda11a4cfdfb2f3b3e9a549bca977afd6
 
 # Copier un modèle
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Si vous voulez créer un nouveau modèle dont les paramètres sont très similaires à ceux d’un modèle existant, sélectionnez le modèle d’origine sur la page **MODÈLES** , cliquez sur **COPIER**, spécifiez un nom unique, puis apportez les modifications nécessaires.
 
@@ -37,6 +36,6 @@ Vous pouvez copier les modèles personnalisés et les modèles par défaut. Si v
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

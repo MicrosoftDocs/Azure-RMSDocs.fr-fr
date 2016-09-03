@@ -3,15 +3,15 @@ title: "Didacticiel de démarrage rapide Azure Information Protection | Azure Ri
 description: "Didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 7d599aef75272eff5527294141bb0eb98d041b1b
-ms.openlocfilehash: 419bfcde6915bd6c8db9cf5ddb268f6d70c83768
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: 6fbe4bd32f1aef57b3bf42aeedea46f618fb5540
 
 
 ---
@@ -31,7 +31,7 @@ Si vous rencontrez des problèmes pour effectuer ce didacticiel, pour utiliser l
 ## Conditions préalables 
 Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 
-- Un abonnement incluant Azure Rights Management, qui vous donne accès à la préversion d’Azure Information Protection. Azure Information Protection est disponible dans toutes les régions qui prennent en charge Azure Rights Management. Pour plus d’informations sur les abonnements disponibles et pour obtenir des liens vers des versions d’évaluation gratuites, consultez [Conditions requises pour Azure RMS : abonnements cloud qui prennent en charge Azure RMS](../get-started/requirements-subscriptions.md).
+- Un abonnement Office 365 incluant la protection des documents Office et des messages électroniques à l’aide d’Azure Rights Management. Pour plus d’informations sur les abonnements disponibles et pour obtenir des liens vers des essais gratuits, consultez la section [Abonnement Office 365](../get-started/requirements-subscriptions.md#office-365-subscription) dans la documentation sur les conditions requises pour Azure RMS.
 
 - Un abonnement Azure, pour vous permettre d’accéder au portail Azure et de configurer la stratégie Azure Information Protection. Si vous n’avez pas encore d’abonnement Azure pour votre organisation, vous pouvez en obtenir un en vous inscrivant pour une évaluation gratuite : accédez à la page [Prise en main d’Azure](https://account.windowsazure.com/organization) et suivez les instructions.
 
@@ -51,6 +51,6 @@ C’est parti !
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

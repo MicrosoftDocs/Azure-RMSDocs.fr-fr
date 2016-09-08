@@ -1,27 +1,26 @@
 ---
 title: "Journalisation et analyse de l’utilisation d’Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Les informations de cette rubrique aident à comprendre comment utiliser la journalisation de l’utilisation avec Azure Rights Management (Azure RMS). Le service Azure Rights Management peut journaliser chaque demande effectuée pour votre organisation, notamment les demandes provenant d’utilisateurs, les actions effectuées par les administrateurs Rights Management au sein de votre organisation, ainsi que les actions effectuées par les opérateurs Microsoft pour prendre en charge votre déploiement du service Azure Rights Management."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: 28fed61b674112d2ebeb30a15a6f6217647e0b5f
+ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
+ms.openlocfilehash: 868656f84f39db20f0aee8d148b00af15849fda5
 
 
 ---
 
 # Journalisation et analyse de l’utilisation d’Azure Rights Management
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Les informations de cette rubrique aident à comprendre comment utiliser la journalisation de l’utilisation avec Azure Rights Management (Azure RMS). Le service Azure Rights Management peut journaliser chaque demande effectuée pour votre organisation, notamment les demandes provenant d’utilisateurs, les actions effectuées par les administrateurs Rights Management au sein de votre organisation, ainsi que les actions effectuées par les opérateurs Microsoft pour prendre en charge votre déploiement du service Azure Rights Management.
 
@@ -241,6 +240,6 @@ Pour plus d’informations sur l’utilisation de Windows PowerShell pour Azure 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

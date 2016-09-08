@@ -1,27 +1,26 @@
 ---
 title: "Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS | Azure RMS"
-description: 
-keywords: 
+description: "Après avoir protégé vos documents à l’aide de l’application de partage RMS, si votre organisation utilise Azure Rights Management plutôt que les services AD RMS (Active Directory Rights Management Services), vous pouvez suivre la façon dont les personnes utilisent vos documents protégés. Si nécessaire, vous pouvez aussi révoquer l’accès à ces documents dès lors que vous ne voulez plus qu’ils soient partagés. Pour cela, utilisez le site de suivi des documents, auquel vous pouvez accéder à partir d'un ordinateur Windows ou Mac, d'une tablette ou d'un téléphone."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/10/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9ad2e518b4a7dac608572eb5eb2d99bbda4754e
-ms.openlocfilehash: 4c757494a1fe948ed26b32f86844f7b5896c919b
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: d27a516339a9687cb5ce117b6a2aa93730863c2d
 
 
 ---
 
 # Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS
 
-*S’applique à : Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Après avoir protégé vos documents à l’aide de l’application de partage RMS, si votre organisation utilise Azure Rights Management plutôt que les services AD RMS (Active Directory Rights Management Services), vous pouvez suivre la façon dont les personnes utilisent vos documents protégés. Si nécessaire, vous pouvez aussi révoquer l’accès à ces documents dès lors que vous ne voulez plus qu’ils soient partagés. Pour cela, utilisez le **site de suivi des documents**, auquel vous pouvez accéder à partir d’un ordinateur Windows ou Mac, d’une tablette ou d’un téléphone.
 
@@ -107,6 +106,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

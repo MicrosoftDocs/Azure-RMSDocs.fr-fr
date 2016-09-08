@@ -4,28 +4,28 @@ description: "Didacticiel de prise en main vous permettant de tester rapidement 
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1db923bf-7d19-4fdd-a413-bfeb58af5e03
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 7c89aa5f31732464dab2b90a25ad7c50f36c2c99
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: c828ba3d4156c0115a012d10b375caee0d5e5c10
 
 
 ---
 
 # Didacticiel de démarrage rapide pour Azure Rights Management
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Atteindre : 
 > [!div class="op_single_selector"]
-- [Étape 1 : activer Azure RMS](tutorial-step1.md)
+- [Étape 1 : Activer Azure RMS](tutorial-step1.md)
 - [Étape 2 : Installer l’application de partage RMS](tutorial-step2.md)
 - [Étape 3 : envoyer le document confidentiel par e-mail](tutorial-step3.md)
 - [Étape 4 : Le destinataire lit le document](tutorial-step4.md)
@@ -35,7 +35,7 @@ Ce didacticiel permet de tester rapidement Microsoft Azure Rights Management (é
 
 ![Didacticiel de démarrage rapide Azure RMS toutes étapes](../media/AzRMS_QuickStartStepsAll.PNG)
 
-Ce didacticiel est destiné aux administrateurs et consultants en informatique, afin de les aider à évaluer Azure Rights Management comme une solution de protection des informations pour une organisation. Dans un environnement de production, les instructions pour activer le service seraient effectuées par un administrateur, et les instructions utilisées pour envoyer le document seraient réalisées par les utilisateurs finaux. Les deux ensembles d’instructions sont inclus dans ce didacticiel pour illustrer le scénario de bout en bout consistant à envoyer en toute sécurité un document confidentiel à une personne d’une autre organisation. Si vous rencontrez des problèmes en suivant ce didacticiel, envoyez un courrier électronique à [AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Quick%20Start%20tutorial) et nous vous aiderons.
+Ce didacticiel est destiné aux administrateurs et consultants en informatique, afin de les aider à évaluer Azure Rights Management comme une solution de protection des informations pour une organisation. Dans un environnement de production, les instructions pour activer le service sont généralement effectuées par un administrateur tandis que les instructions utilisées pour envoyer le document le sont par les utilisateurs finaux. Les deux ensembles d’instructions sont inclus dans ce didacticiel pour illustrer le scénario de bout en bout consistant à envoyer en toute sécurité un document confidentiel à une personne d’une autre organisation. Si vous rencontrez des problèmes pendant l’exécution de ce didacticiel, envoyez un e-mail à [AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Quick%20Start%20tutorial) et nous vous aiderons.
 
 Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 
@@ -57,6 +57,6 @@ C’est parti !
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

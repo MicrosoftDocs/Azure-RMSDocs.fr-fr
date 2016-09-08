@@ -1,27 +1,26 @@
 ---
 title: "Guide d’utilisation de l’application de partage Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "L’application de partage Microsoft Rights Management (RMS) pour Windows vous aide à protéger vos images et documents importants afin qu’ils ne soient pas accessibles aux personnes non autorisées, même lorsque vous les envoyez par courrier électronique ou que vous les enregistrez sur un autre appareil. Vous pouvez également utiliser cette application pour ouvrir et utiliser des fichiers protégés par d’autres personnes à l’aide de la même technologie Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 384a58f32aae8c7d908392e7fd9a1629bc05cdff
-ms.openlocfilehash: d3727eb963532e03137aea2140293fa9c5821db2
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 0e9ec1074f5305c12f436336520d7a6703ed0cfa
 
 
 ---
 
 # Guide d’utilisation de l’application de partage Rights Management
 
-*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 L’application de partage Microsoft Rights Management (RMS) pour Windows vous aide à protéger vos images et documents importants afin qu’ils ne soient pas accessibles aux personnes non autorisées, même lorsque vous les envoyez par courrier électronique et que vous les enregistrez sur un autre appareil. Vous pouvez également utiliser cette application pour ouvrir et utiliser des fichiers protégés par d’autres personnes à l’aide de la même technologie Rights Management.
 
@@ -68,6 +67,6 @@ Voici quelques exemples d’utilisation de l’application de partage RMS pour p
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: "Terminologie relative à Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Azure RMS ? Recherchez ici la définition de termes et d’abréviations propres à Azure RMS, ou qui ont un sens particulier dans le contexte de Rights Management."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/10/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 75f868c4428e7b434e6a115a3e70508c3ff7f93d
-ms.openlocfilehash: 1a45457548d8cba6424e92bc18ef085d095742f3
+ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
+ms.openlocfilehash: cb30347efd062b0f1c74a029efc747d277c817f3
 
 
 ---
 
 # Terminologie relative à Azure Rights Management
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) ? Recherchez ici la définition de termes et d’abréviations propres à Azure RMS, ou qui ont un sens particulier dans le contexte de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
 
@@ -74,6 +73,6 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft [!
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

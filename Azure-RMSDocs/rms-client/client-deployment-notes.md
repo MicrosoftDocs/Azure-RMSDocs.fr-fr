@@ -1,33 +1,26 @@
 ---
-# required metadata
-
-title: Notes sur le déploiement du client RMS | Azure RMS
-description:
-keywords:
+title: "Notes sur le déploiement du client RMS | Azure RMS"
+description: "Le client service Rights Management (client RMS) version 2 est également appelé client MSIPC. Il s’agit d’un logiciel pour ordinateurs Windows, qui communique avec les services Microsoft Rights Management localement ou dans le cloud pour protéger l’accès aux informations et leur utilisation quand celles-ci transitent par des applications et appareils, à l’intérieur ou à l’extérieur des limites managées de votre organisation. Outre le fait qu’il soit fournit avec l’application de partage Microsoft Rights Management pour Windows, le client RMS est disponible sous la forme d’un téléchargement facultatif qui peut, après réception et acceptation de son contrat de licence, être distribué gratuitement avec des logiciels tiers afin que les clients puissent protéger et utiliser du contenu protégé par les services RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 6d80958fe4d56458b7dee48e7475a37de8a102bd
+
 
 ---
 
 # Notes sur le déploiement du client RMS
 
-*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 7 avec SP1, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista*
+>*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 7 avec SP1, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista*
 
 Le client du service Rights Management (client RMS) version 2 est également appelé client MSIPC. Il s'agit d'un logiciel pour ordinateurs Windows, qui communique avec les services Microsoft Rights Management localement ou dans le cloud pour protéger l'accès aux informations et leur utilisation quand celles-ci transitent par des applications et appareils, à l'intérieur ou à l'extérieur des limites managées de votre organisation. Outre le fait qu’il soit fournit avec l’[application de partage Microsoft Rights Management pour Windows](sharing-app-windows.md), le client RMS est disponible sous la forme d’un [téléchargement facultatif](http://www.microsoft.com/download/details.aspx?id=38396) qui peut, après réception et acceptation de son contrat de licence, être distribué gratuitement avec des logiciels tiers afin que les clients puissent protéger et utiliser du contenu protégé par les services RMS.
 
@@ -42,7 +35,8 @@ Le client RMS peut être librement redistribué et regroupé avec d'autres appli
 ## Installation du client RMS
 Le client RMS est contenu dans un fichier exécutable d’installation nommé **setup_msipc_***<arch>***.exe**, où *<arch>* est **x86** (pour les ordinateurs clients 32 bits) ou **x64** (pour les ordinateurs clients 64 bits). Le package d'installation 64 bits (x64) installe un exécutable runtime 32 bits pour la compatibilité avec les applications 32 bits qui s'exécutent sur une installation de système d'exploitation 64 bits, ainsi qu'un exécutable runtime 64 bits pour la prise en charge des applications 64 bits natives. Le programme d'installation 32 bits (x86) ne s'exécute pas sur une installation de Windows 64 bits.
 
-> [!NOTE] Pour installer le client RMS, vous avez besoin de privilèges élevés, comme ceux d’un membre du groupe Administrateurs sur l’ordinateur local.
+> [!NOTE]
+> Pour installer le client RMS, vous avez besoin de privilèges élevés, tel ceux d'un membre du groupe Administrateurs sur l'ordinateur local.
 
 Vous pouvez installer le client RMS à l'aide de l'une des méthodes d'installation suivantes :
 
@@ -62,8 +56,8 @@ Le client RMS est pris en charge par les systèmes d'exploitation suivants :
 
 |Système d'exploitation Windows Server|Système d'exploitation Windows Client|
 |-----------------------------------|-----------------------------------|
-|Windows Server 2012 R2|Windows 8.1|
-|Windows Server 2012|Windows 8|
+|Windows Server 2012 R2|Windows 8.1|
+|Windows Server 2012|Windows 8|
 |Windows Server 2008 R2|Windows 7 avec au minimum SP1|
 |Windows Server 2008 (AD RMS uniquement)|Windows Vista avec au minimum SP2 (AD RMS uniquement)|
 
@@ -192,7 +186,8 @@ Une alternative à l'utilisation d'un SCP, ou à défaut de SCP, vous pouvez con
 
 2.  Dans l’Éditeur du Registre, accédez à **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC**.
 
-    > [!IMPORTANT] Si vous exécutez une application 32 bits sur un ordinateur 64 bits, le chemin est le suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
+    > [!IMPORTANT]
+    > Si vous exécutez une application 32 bits sur un ordinateur 64 bits, le chemin est le suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
 
 3.  Pour créer la sous-clé ServiceLocation, cliquez avec le bouton droit sur **MSIPC**, pointez sur **Nouveau**, cliquez sur **Clé**, puis tapez **ServiceLocation**.
 
@@ -233,7 +228,8 @@ Dans certains cas, il se peut que vous deviez rediriger le trafic pendant la dé
 
     **Valeur :** https://fabrikam.com/_wmcs/licensing
 
-    > [!NOTE] Si des URL intranet et extranet sont spécifiées pour l’ancien serveur de licences, vous devez définir un nouveau nom et un nouveau mappage de valeur pour ces deux URL sous la clé LicensingRedirection.
+    > [!NOTE]
+    > Si l'ancien serveur de licences a une URL intranet et extranet spécifiées, un nouveau nom et un mappage de valeur doivent être définis pour ces deux URL sous la clé LicensingRedirection.
 
 5.  Répétez l'étape précédente pour tous les serveurs à rediriger.
 
@@ -241,6 +237,7 @@ Dans certains cas, il se peut que vous deviez rediriger le trafic pendant la dé
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Aug16_HO4-->
 
 

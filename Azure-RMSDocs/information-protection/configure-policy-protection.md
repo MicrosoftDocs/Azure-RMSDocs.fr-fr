@@ -1,17 +1,16 @@
 ---
 title: "Comment configurer une étiquette pour appliquer Rights Management protection | Azure Rights Management"
-description: 
-author: cabailey
+description: "Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’un service Rights Management qui utilise des stratégies de chiffrement, d’identité et d’autorisation pour éviter la perte de données. Cette protection est appliquée lorsque vous configurez une étiquette pour utiliser un modèle de gestion des droits."
 manager: mbaldwin
 ms.date: 08/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: e11a5a836d6a410ba49ac17cfe95d8530ecb785f
-ms.openlocfilehash: 60738c310a3e7c734bfe3e48e16535ed3be05bb4
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: 23e62c82a38e696b0708f3b599d24f3a0f337fd8
 
 
 ---
@@ -79,6 +78,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: "Inscription des utilisateurs à RMS for individuals | Azure RMS"
-description: 
-keywords: 
+description: "Pour obtenir un compte gratuit, les utilisateurs accèdent à la page Microsoft Rights Management et en font la demande en indiquant leur adresse e-mail professionnelle ou scolaire."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 19252180802c69d6e5d6bf22c71ff3bcba96fb36
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: a31005f3dce927db917cb0f2851916b8946da4ee
 
 
 ---
 
 # Inscription à RMS for individuals
 
-*S’applique à : Azure Rights Management*
+>*S’applique à : Azure Rights Management*
 
 Pour obtenir un compte gratuit, les utilisateurs accèdent à la [page Microsoft Rights Management](https://portal.aadrm.com/) et en font la demande en indiquant leur adresse e-mail professionnelle ou scolaire. 
 
@@ -102,6 +101,6 @@ Consultez [Contrôle administrateur des comptes créés pour RMS for individuals
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

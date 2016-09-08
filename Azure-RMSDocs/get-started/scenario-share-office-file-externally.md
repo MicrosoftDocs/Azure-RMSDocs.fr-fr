@@ -1,27 +1,26 @@
 ---
 title: "Scenario : partager un fichier Office avec des utilisateurs d’une autre organisation | Azure RMS"
-description: 
-keywords: 
+description: "Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour permettre à des utilisateurs d’envoyer un fichier Office par e-mail en toute sécurité à des personnes appartenant à une autre organisation. Le fichier Office peut être un document Word, une feuille de calcul Excel ou une présentation PowerPoint qui contient, par exemple, des informations tarifaires pour un partenaire, une liste de produits pour un revendeur ou une liste de délais de livraison pour des clients potentiels. Lorsque les utilisateurs suivent les instructions, le fichier joint au message électronique est protégé par Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 6a6f9d8c0a98752413a99d30926f2b5bc8af193d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 9615e41666a08a1d66f4e0dbdedb06f02a8efd3e
 
 
 ---
 
 # Scenario : partager un fichier Office avec des utilisateurs d’une autre organisation
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour permettre à des utilisateurs d’envoyer un fichier Office par e-mail en toute sécurité à des personnes appartenant à une autre organisation. Le fichier Office peut être un document Word, une feuille de calcul Excel ou une présentation PowerPoint qui contient, par exemple, des informations tarifaires pour un partenaire, une liste de produits pour un revendeur ou une liste de délais de livraison pour des clients potentiels. Lorsque les utilisateurs suivent les instructions, le fichier joint au message électronique est protégé par Azure Rights Management.
 
@@ -101,7 +100,7 @@ Quand une personne mentionnée sur la ligne **À**, **Cc** ou **Cci** reçoit ce
 
 Utilisez le [portail de suivi de document](https://track.azurerms.com/) pour savoir si et quand elle ouvre le &lt;nom du type de document Office&gt; joint. Envisagez de la contacter à l’aide d’un appel téléphonique de suivi dès que vous voyez qu’elle a ouvert le &lt;nom du type de document Office&gt;.
 
-**Vous avez besoin d'aide ?**
+**Vous avez besoin d'aide ?**
 
 -   Pour plus d'informations :
 
@@ -155,6 +154,6 @@ Utilisez le [portail de suivi de document](https://track.azurerms.com/) pour sav
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

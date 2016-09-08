@@ -1,33 +1,32 @@
 ---
 title: Application de partage Rights Management pour Windows | Azure RMS
-description: 
-keywords: 
+description: "L’application de partage Rights Management pour Windows est téléchargeable gratuitement pour les organisations qui utilisent Active Directory Rights Management Services (AD RMS) ou Azure Rights Management (Azure RMS), ainsi que pour les organisations qui ne disposent pas de leur propre infrastructure de protection des informations et qui souhaitent consommer du contenu protégé par d’autres organisations utilisant Azure RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 39eebe7e99fce0eae612f87726764c6810351b77
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: d0c2ee02a6de78b3f324cf174f54e0227de301ed
 
 
 ---
 
 # Application de partage Rights Management pour Windows
 
-*S’applique à : Active Directory Rights Management Services, Azure Rights Management*
+>*S’applique à : Active Directory Rights Management Services, Azure Rights Management*
 
 L’application de partage Rights Management pour Windows (également appelée simplement « application de partage RMS ») est une application téléchargeable gratuitement pour les organisations qui utilisent [Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) ou [Azure Rights Management](../understand-explore/azure-rights-management.md) (Azure RMS), ainsi que pour les organisations qui ne disposent pas de leur propre infrastructure de protection des informations et qui souhaitent consommer du contenu protégé par d’autres organisations utilisant Azure RMS.
 
 -   [Application de partage Rights Management : Historique de publication des versions](sharing-app-version-release-history.md)
 
--   [guide de l'administrateur de l'application de partage Rights Management](sharing-app-admin-guide.md)
+-   [Guide de l'administrateur de l'application de partage Rights Management](sharing-app-admin-guide.md)
 
 -   [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
@@ -35,11 +34,11 @@ L’application de partage Rights Management pour Windows (également appelée s
 > Il existe également une application de partage Rights Management pour ordinateurs Mac et appareils mobiles. Pour plus d'informations, consultez [FAQ concernant l'application de partage Rights Management pour plateformes mobiles et Mac](http://technet.microsoft.com/dn451248).
 
 ## Voir aussi
-[FAQ concernant l'application de partage Rights Management pour Windows](http://technet.microsoft.com/dn467883)
+[FAQ concernant l’application de partage Rights Management pour Windows](http://technet.microsoft.com/dn467883)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

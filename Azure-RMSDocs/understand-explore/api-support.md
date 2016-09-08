@@ -1,33 +1,26 @@
 ---
-# required metadata
-
-title: "Autres applications prenant en charge les API RMS : installation et configuration | Azure RMS"
-description:
-keywords:
+title: 'Autres applications prenant en charge les API RMS : installation et configuration | Azure RMS'
+description: "Utilisez les informations suivantes pour comprendre comment Azure Rights Management (Azure RMS) peut prendre en charge d’autres applications pour protéger les données de votre organisation."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: d94494160df269d6a583c3152769f84ec51f886e
+
 
 ---
 
 # Autres applications prenant en charge les API RMS
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Utilisez les informations suivantes pour comprendre comment Azure Rights Management (Azure RMS) peut prendre en charge d’autres applications pour protéger les données de votre organisation.
 
@@ -39,6 +32,7 @@ De même, de nombreux éditeurs de logiciels proposent des applications pour fou
 
 Pour voir comment d’autres applications et services prennent en charge Azure Rights Management, consultez [Comment les applications prennent en charge Azure Rights Management](applications-support.md).
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 

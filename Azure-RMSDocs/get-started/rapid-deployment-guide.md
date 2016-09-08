@@ -1,27 +1,26 @@
 ---
 title: "Guide de déploiement rapide pour Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Utilisez ce guide en complément des informations de configuration fournies dans la section Déployer et utiliser pour vous aider à déployer et à utiliser rapidement Azure Rights Management (Azure RMS) en choisissant dans une liste de scénarios spécifiques à implémenter."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 01c2436218e0d7fd80a31cdc037d9dc8933e42f2
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 93ef6397be2cd4799bd72975de72028ee6a898ed
 
 
 ---
 
 # Guide de déploiement rapide pour Azure Rights Management
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Utilisez ce guide en complément des informations de configuration fournies dans la section **Déployer et utiliser** pour vous aider à déployer et à utiliser rapidement Azure Rights Management (Azure RMS) en choisissant dans une liste de scénarios spécifiques à implémenter.
 
@@ -147,6 +146,6 @@ Les solutions que nous implémentons nous aideront à protéger nos données les
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

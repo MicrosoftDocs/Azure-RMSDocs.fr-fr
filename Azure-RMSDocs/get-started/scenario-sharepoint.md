@@ -1,27 +1,26 @@
 ---
 title: "Scenario : garder le contrôle des documents stockés dans SharePoint | Azure RMS"
-description: 
-keywords: 
+description: "Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour s’assurer que les documents Office stockés dans SharePoint restent sous votre contrôle en utilisant des bibliothèques protégées. Par exemple, les documents sont automatiquement protégés contre les fuites accidentelles ou volontaires par les utilisateurs et vous pouvez bloquer l’accès au contenu même après qu’il a été téléchargé ou synchronisé. Les fichiers que vous voulez protéger peuvent être destinés à des actions de collaboration interne sur des documents de conception ou des plans ou pour d’autres livrables. Quand vous configurez des bibliothèques protégées pour SharePoint, les fichiers Office qui y sont stockés sont protégés par Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: cb028afcbfd9b59f134539c434f4f49efc5e9092
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: f0dfe895820d33eab1d3a69c92e881287072f554
 
 
 ---
 
 # Scenario : garder le contrôle des documents stockés dans SharePoint
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour s’assurer que les documents Office stockés dans SharePoint restent sous votre contrôle en utilisant des bibliothèques protégées. Par exemple, les documents sont automatiquement protégés contre les fuites accidentelles ou volontaires par les utilisateurs et vous pouvez bloquer l’accès au contenu même après qu’il a été téléchargé ou synchronisé. Les fichiers que vous voulez protéger peuvent être destinés à des actions de collaboration interne sur des documents de conception ou des plans ou pour d’autres livrables. Quand vous configurez des bibliothèques protégées pour SharePoint, les fichiers Office qui y sont stockés sont protégés par Azure Rights Management.
 
@@ -41,7 +40,7 @@ Vérifiez que les conditions suivantes sont remplies et que les procédures asso
 ## Conditions requises pour ce scénario
 Pour pouvoir appliquer ce scénario, les éléments suivants doivent être en place :
 
-|Configuration requise|Si vous avez besoin d'informations supplémentaires|
+|Condition requise|Si vous avez besoin d'informations supplémentaires|
 |---------------|--------------------------------|
 |Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory|[Préparation pour Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management est activé|[Activation d'Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
@@ -106,6 +105,6 @@ Vous ne pouvez pas charger des documents sur le site Rapports et prévisions de 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

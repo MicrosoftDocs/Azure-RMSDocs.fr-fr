@@ -1,20 +1,19 @@
 ---
 title: "Créer, configurer et publier un modèle personnalisé | Azure RMS"
-description: 
-keywords: 
+description: "Vous créez et gérez des modèles personnalisés dans le portail Azure Classic. Pour cela, vous pouvez accéder directement au portail Azure Classic ou vous connecter au Centre d’administration Office 365, puis choisir Fonctionnalités avancées de Rights Management. Vous êtes alors redirigé vers le portail Azure Classic."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5737594c679be0702761014425e104e5eade59f3
-ms.openlocfilehash: c240502f2e88ec61bcbee6be778e77a0d5aee66b
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 64beb891fda54da3718a322f6628a2987ff35111
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: c240502f2e88ec61bcbee6be778e77a0d5aee66b
 
 # Créer, configurer et publier un modèle personnalisé
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 
 Vous créez et gérez des modèles personnalisés dans le portail Azure Classic. Pour cela, vous pouvez accéder directement au portail Azure Classic ou vous connecter au Centre d’administration Office 365, puis choisir **Fonctionnalités avancées** de Rights Management. Vous êtes alors redirigé vers le portail Azure Classic.
@@ -56,7 +55,7 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
 
         1.  Dans le volet gauche, cliquez sur **Active Directory**.
 
-        2.  À partir du **répertoire actif** , cliquez sur **RIGHTS MANAGEMENT**.
+        2.  Dans la page **Active Directory** , cliquez sur **RIGHTS MANAGEMENT**.
 
         3.  Sélectionnez l'annuaire concerné par la Gestion des droits.
 
@@ -135,7 +134,7 @@ Depuis la page de démarrage rapide **Prise en main de Rights Management** , cli
     > 2.  Cliquez sur **Annuaire**, puis sélectionnez la catégorie **Afficher les produits Connect n’acceptant pas actuellement de commentaire**.
     > 3.  Recherchez **Rights Management Services** et, pour le programme **Microsoft RMS Enterprise Features**, cliquez sur **Rejoindre**.
 
-9. Cliquez sur **CONFIGURER** et ajoutez les autres langues que les utilisateurs utilisent, ainsi que le nom et la description du modèle dans ces langues. Quand vos utilisateurs sont multilingues, il est important d’ajouter chacune des langues qu’ils utilisent ainsi que de fournir un nom et une description dans cette langue. Les utilisateurs peuvent alors voir le nom et la description du modèle dans la même langue que celle de leur système d'exploitation client. Vous êtes ainsi sûr qu'ils comprennent la stratégie appliquée à un document ou message électronique. Si aucune langue ne correspond à celle de leur système d'exploitation client, le nom et la description qui s'affichent le sont dans la langue que vous avez définie au moment où vous avez créé le modèle.
+9. Cliquez sur **CONFIGURER** et ajoutez les autres langues que les utilisateurs utilisent, ainsi que le nom et la description du modèle dans ces langues. Quand vos utilisateurs sont multilingues, il est important d’ajouter chacune des langues qu’ils utilisent ainsi que de fournir un nom et une description dans cette langue. Les utilisateurs peuvent alors voir le nom et la description du modèle dans la même langue que celle de leur système d’exploitation client. Vous êtes ainsi sûr qu’ils comprennent la stratégie appliquée à un document ou message électronique. Si aucune langue ne correspond à celle de leur système d'exploitation client, le nom et la description qui s'affichent le sont dans la langue que vous avez définie au moment où vous avez créé le modèle.
 
     Vérifiez ensuite si vous voulez apporter des modifications aux paramètres suivants :
 
@@ -167,6 +166,6 @@ Pour apporter des modifications à votre modèle, sélectionnez-le, puis utilise
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

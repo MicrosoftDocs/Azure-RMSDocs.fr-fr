@@ -1,27 +1,26 @@
 ---
 title: "Scénario : échange sécurisé d’informations confidentielles entre cadres| Azure RMS"
-description: 
-keywords: 
+description: "Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour permettre à des cadres de s’échanger des emails et des pièces jointes en toute sécurité, tandis que des stratégies limitent automatiquement l’accès aux cadres, sans que ceux-ci aient à prendre des mesures particulières. Les e-mails et les pièces jointes éventuelles sont protégés automatiquement par Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: def8b7e98fd55a3d028978ffc9f8e41e38a5622c
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 3c15175f26c5e3bc0ff824c284beedc639cf9309
 
 
 ---
 
 # Scénario : échange sécurisé d’informations confidentielles entre cadres
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour permettre à des cadres de s’échanger des emails et des pièces jointes en toute sécurité, tandis que des stratégies limitent automatiquement l’accès aux cadres, sans que ceux-ci aient à prendre des mesures particulières. Les e-mails et les pièces jointes éventuelles sont protégés automatiquement par Azure Rights Management.
 
@@ -43,7 +42,7 @@ Vérifiez que les conditions suivantes sont réunies, puis suivez les instructio
 ## Conditions requises pour ce scénario
 Pour pouvoir appliquer les instructions de ce scénario, les conditions suivantes doivent être réunies :
 
-|Configuration requise|Si vous avez besoin d’informations supplémentaires|
+|Condition requise|Si vous avez besoin d’informations supplémentaires|
 |---------------|--------------------------------|
 |Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory.<br /><br />- Un groupe à extension messagerie nommé **Cadres**, dont tous les cadres sont membres<br /><br />- Un groupe nommé **Administrateurs RMS** et tous les administrateurs chargés de configurer Azure RMS sont membres de ce groupe|[Préparation pour Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |Votre clé de locataire Azure Rights Management est gérée par Microsoft ; vous n’utilisez pas BYOK|[Planification et implémentation de votre clé de locataire Azure Rights Management](https://technet.microsoft.com/library/dn440580.aspx)|
@@ -112,7 +111,7 @@ Dès lors, chaque fois que vous enverrez des e-mails à un autre cadre de l’en
 
 Lors de l’envoi d’informations confidentielles de votre société à un autre cadre de &lt;nom de l’organisation&gt;, pensez à les envoyer à une adresse e-mail professionnelle (*nom*@&lt;domaine_messagerie&gt;) et non à une adresse e-mail personnelle.
 
-**Vous avez besoin d'aide ?**
+**Vous avez besoin d'aide ?**
 
 -   Contactez le support technique : &lt;coordonnées&gt;
 
@@ -126,13 +125,13 @@ Dès lors, chaque fois que vous enverrez des e-mails à un autre cadre de l’en
 
 Lors de l’envoi d’informations confidentielles de votre société à un autre cadre de VanArsdel, pensez à les envoyer à une adresse de messagerie professionnelle (*nom*@&lt;vanarsdelltd.com) et non à une adresse de messagerie personnelle.
 
-**Vous avez besoin d'aide ?**
+**Vous avez besoin d'aide ?**
 
 -   Contactez le support technique : helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,20 +1,19 @@
 ---
 title: "Actualiser les modèles | Azure RMS"
-description: 
-keywords: 
+description: "Quand vous utilisez Azure RMS, les modèles sont automatiquement téléchargés vers les ordinateurs clients pour que les utilisateurs puissent les sélectionner depuis leurs applications. En revanche, vous devrez peut-être effectuer d’autres étapes si vous apportez des modifications aux modèles."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/06/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 771f4139b09cccc05f2d1ee52c76b99467c70446
-ms.openlocfilehash: 13c2b79558202d59ec49da3a189a58356518718d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 2339643120b9e9ee24d046bf5620f68fee88b7c9
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 13c2b79558202d59ec49da3a189a58356518718d
 
 # Actualisation des modèles pour les utilisateurs
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Quand vous utilisez Azure RMS, les modèles sont automatiquement téléchargés vers les ordinateurs clients pour que les utilisateurs puissent les sélectionner depuis leurs applications. En revanche, vous devrez peut-être effectuer d'autres étapes si vous apportez des modifications aux modèles :
 
@@ -72,7 +71,7 @@ Vous devez suivre cette procédure chaque fois que vous modifiez un modèle.
     > [!NOTE]
     > Pour vérifier le nom de votre TPD, vous pouvez utiliser l’applet de commande [Get-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200707%28v=exchg.160%29.aspx).
 
-3.  Pour vérifier que les modèles ont été importés correctement, patientez quelques minutes, puis exécutez l’applet de commande [Get-RMSTemplate](http://technet.microsoft.com/library/dd297960%28v=exchg.160%29.aspx) et définissez le Type sur All. Exemple :
+3.  Pour vérifier que les modèles ont été importés correctement, patientez quelques minutes, puis exécutez l’applet de commande [Get-RMSTemplate](http://technet.microsoft.com/library/dd297960%28v=exchg.160%29.aspx) et définissez le Type sur All. Exemple :
 
     ```
     Get-RMSTemplate -TrustedPublishingDomain "RMS Online - 1" -Type All
@@ -154,7 +153,7 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 En modifiant le Registre sur les ordinateurs qui exécutent Office 2010, vous pouvez définir une valeur de façon à ce que les modèles modifiés soient actualisés sur les ordinateurs sans attendre que les utilisateurs se déconnectent, puis se reconnectent. Vous pouvez également forcer une actualisation immédiate en supprimant les données existantes dans une valeur de registre.
 
 > [!WARNING]
-> Si vous n'utilisez pas l'Éditeur du Registre correctement, vous risquez de provoquer de sérieux problèmes pouvant vous amener à devoir réinstaller le système d'exploitation. Microsoft ne peut pas garantir la résolution des problèmes engendrés par une utilisation incorrecte de l'Éditeur du Registre. Utilisez l'Éditeur du Registre à vos propres risques.
+> Si vous n'utilisez pas l'Éditeur du Registre correctement, vous risquez de provoquer de sérieux problèmes pouvant vous amener à devoir réinstaller le système d'exploitation. Microsoft ne peut pas garantir la résolution des problèmes engendrés par une utilisation incorrecte de l'Éditeur du Registre. Utilisez l’Éditeur du Registre à vos propres risques.
 
 ### Pour modifier la fréquence de mise à jour
 
@@ -187,6 +186,6 @@ En modifiant le Registre sur les ordinateurs qui exécutent Office 2010, vous po
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

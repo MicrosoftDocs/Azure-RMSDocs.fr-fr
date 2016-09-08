@@ -1,27 +1,26 @@
 ---
 title: "Vérification d’Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Après avoir activé Azure RMS et effectué toutes les étapes de configuration supplémentaires nécessaires pour votre organisation, vous pouvez vérifier que le service fonctionne comme prévu en protégeant un fichier ou un e-mail associé à un compte d’utilisateur, puis en essayant d’ouvrir et d’utiliser ce contenu protégé à partir d’un autre compte d’utilisateur."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bb152f428c8e0b9a065035aaad2de6353265a562
-ms.openlocfilehash: afa1fb35110918b9b97f91534616e1933e13b149
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: b24fa3540e4e9b9cc02ba3bcd83f5864ce8674d6
 
 
 ---
 
 # Vérification d'Azure Rights Management
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Après avoir activé [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) et effectué toutes les étapes de configuration supplémentaires nécessaires pour votre organisation, vous pouvez vérifier que le service fonctionne comme prévu en protégeant un fichier ou un e-mail associé à un compte d’utilisateur, puis en essayant d’ouvrir et d’utiliser ce contenu protégé à partir d’un autre compte d’utilisateur.
 
@@ -41,6 +40,6 @@ Vous pouvez contrôler l'usage de la protection des informations par votre organ
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

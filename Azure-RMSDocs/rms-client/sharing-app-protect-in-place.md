@@ -1,27 +1,26 @@
 ---
 title: "Protéger un fichier sur un appareil (protéger sur place) à l’aide de l’application de partage Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Lorsque vous protégez un fichier sur place, celui-ci remplace le fichier non protégé d'origine. Vous pouvez ensuite laisser le fichier là où il est, le copier vers un autre dossier ou appareil, ou partager le dossier dans lequel il se trouve : le fichier reste protégé. Vous pouvez également joindre le fichier protégé à un message électronique, même si la méthode recommandée pour partager un fichier protégé via courrier électronique consiste à le faire directement à partir de l’Explorateur de fichiers ou d’une application Office."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 638c2f27c8d552653dcf3f41d8fad6d44cb08887
-ms.openlocfilehash: 5150351ec6772b95d77698dc39a1f69105c02d2c
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 55f5f9dd0dd90bfa98798b4fc0b4cb4bd3c90076
 
 
 ---
 
 # Protection d'un fichier sur un appareil (Protéger sur place) à l'aide de l'application de partage Rights Management
 
-*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Lorsque vous protégez un fichier sur place, celui-ci remplace le fichier non protégé d'origine. Vous pouvez ensuite laisser le fichier là où il est, le copier vers un autre dossier ou appareil, ou partager le dossier dans lequel il se trouve : le fichier reste protégé. Vous pouvez aussi joindre le fichier protégé à un e-mail, même si la méthode recommandée pour partager un fichier protégé par e-mail consiste à le faire directement à partir de l’Explorateur de fichiers ou d’une application Office (consultez [Protéger un fichier que vous partagez par e-mail en utilisant l’application de partage Rights Management](sharing-app-protect-by-email.md)).
 
@@ -47,7 +46,7 @@ Lorsque vous protégez un fichier sur place, celui-ci remplace le fichier non pr
 
     -   Sélectionnez **Autorisations personnalisées**: Choisissez cette option si les modèles n'offrent pas le niveau de protection nécessaire, ou si vous souhaitez définir vous-même explicitement les options de protection. Spécifiez les options souhaitées pour ce fichier dans la boîte de dialogue [Ajouter une protection](sharing-app-dialog-box.md), puis cliquez sur **Appliquer**.
 
-3.  Avant que le focus revienne sur l'Explorateur de fichiers, il se peut qu'une boîte de dialogue s'affiche brièvement pour vous informer que le fichier est protégé. Les fichiers sélectionnés sont désormais protégés. Dans certains cas (lorsque l'ajout d'une protection modifie l'extension du nom du fichier), le fichier d'origine dans l'Explorateur de fichiers est remplacé par un nouveau fichier associé à l'icône de verrou de protection de Rights Management. Exemple :
+3.  Avant que le focus revienne sur l'Explorateur de fichiers, il se peut qu'une boîte de dialogue s'affiche brièvement pour vous informer que le fichier est protégé. Les fichiers sélectionnés sont désormais protégés. Dans certains cas (lorsque l'ajout d'une protection modifie l'extension du nom du fichier), le fichier d'origine dans l'Explorateur de fichiers est remplacé par un nouveau fichier associé à l'icône de verrou de protection de Rights Management. Exemple :
 
     ![Fichier protégé avec une icône de verrou pour l’application de partage RMS](../media/ADRMS_MSRMSApp_Pfile.png)
 
@@ -67,6 +66,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

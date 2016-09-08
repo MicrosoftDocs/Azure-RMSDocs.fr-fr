@@ -4,9 +4,9 @@ description: "Toutes les applications prenant en charge RMS doivent appliquer de
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 872bb0c20db2ef8d661d321598a2b1fe61d69316
-ms.openlocfilehash: 2d2cbe580349e1615371a6a76e78140f6577e890
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: df210bd7aff33fda41a278e6aed1108574fe68eb
 
 
 ---
@@ -26,7 +26,7 @@ Toutes les applications prenant en charge RMS doivent appliquer des restrictions
 
 Il est possible d’interroger les autorisations dont dispose un utilisateur sur un document à l’aide de la fonction [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck).
 
-## Présentation des restrictions d’utilisation
+## Comprendre les restrictions d’utilisation
 
 -   Se familiariser avec les droits RMS standard
 
@@ -56,6 +56,6 @@ Il est possible d’interroger les autorisations dont dispose un utilisateur sur
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

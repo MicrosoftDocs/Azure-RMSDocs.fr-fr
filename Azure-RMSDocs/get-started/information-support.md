@@ -1,33 +1,26 @@
 ---
-# required metadata
-
 title: Informations et support technique pour Azure Rights Management | Azure RMS
-description:
-keywords:
+description: "Pour plus d’informations sur Microsoft Azure RMS, consultez les ressources suivantes."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/13/2016
+ms.date: 06/29/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 9084d8eab83e0be8f545575f12d70d2338c4763d
+
 
 ---
 
 # Informations et support technique pour Azure Rights Management
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Pour plus d’informations sur Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS), consultez les ressources suivantes.
 
@@ -42,7 +35,8 @@ Pour plus d’informations sur Microsoft [!INCLUDE[aad_rightsmanagement_1](../in
 ## Blog du groupe de produits Microsoft Rights Management
 Le groupe de produits Rights Management travaille en collaboration avec le [blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) pour fournir des informations techniques et d’autres actualités concernant [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] et les technologies associées. Ces billets de blog complètent la documentation du produit et les informations de support technique.
 
-> [!TIP] Si vous développez des applications pour Azure RMS ou AD RMS, vous pouvez également être intéressé par le [blog des développeurs d’Active Directory Rights Management Services (AD RMS)](http://blogs.msdn.com/b/rms/).
+> [!TIP]
+> Si vous développez des applications pour Azure RMS ou AD RMS, vous pouvez également être intéressé par le [blog des développeurs d’Active Directory Rights Management Services (AD RMS)](https://blogs.msdn.microsoft.com/rms/).
 
 ## Options de support technique et ressources de la communauté
 Les sections suivantes fournissent des informations sur les options de support et de résolution de problème ainsi que des ressources de la communauté.
@@ -71,7 +65,15 @@ Acquisition des principales compétences :
 
 Résolution des problèmes :
 
-- Téléchargez et exécutez [l’outil RMS Analyzer](http://www.microsoft.com/en-us/download/details.aspx?id=46437). Pour plus d’informations sur cet outil, consultez les sections **Détails** et **Instructions d’installation** dans la page de téléchargement. 
+- Si vous avez une question sur un point spécifique, consultez la page [Forum Aux Questions](faqs.md).
+
+- Si vous avez une question concernant une politique de support pour Azure RMS, consultez la page [Conditions requises](requirements-azure-rms.md), qui est régulièrement mise à jour.
+
+- Pour plus d’informations sur l’aide à apporter aux utilisateurs finaux, au support technique et aux administrateurs qui configurent les services et applications qui utilisent Azure RMS, consultez [Aide aux utilisateurs sur la protection de fichiers](../deploy-use/help-users.md).
+
+- Si vous avez déployé le connecteur RMS pour vos serveurs locaux, consultez les informations sur la [surveillance](../deploy-use/monitor-rms-connector.md), qui incluent des détails sur les entrées du journal des événements, les compteurs de performance et la journalisation.
+
+- Pour les vérifications automatisées, la correction automatique et le suivi, téléchargez et exécutez l’[outil RMS Analyzer](http://www.microsoft.com/en-us/download/details.aspx?id=46437). Pour plus d’informations sur cet outil, consultez les sections **Détails** et **Instructions d’installation** dans la page de téléchargement. 
 
 ### Ressources de la communauté
 
@@ -83,6 +85,7 @@ Résolution des problèmes :
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

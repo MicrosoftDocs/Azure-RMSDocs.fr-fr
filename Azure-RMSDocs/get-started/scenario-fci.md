@@ -1,27 +1,26 @@
 ---
 title: "Scénario - Protéger les fichiers situés sur un partage de serveur de fichiers | Azure RMS"
-description: 
-keywords: 
+description: "Ce scénario et la documentation utilisateur associée utilisent Azure Rights Management pour protéger en bloc tous les fichiers situés sur un serveur de fichiers pour vous assurer que seuls les employés de votre organisation peuvent y accéder, même s’ils sont copiés et enregistrés sur un stockage qui n’est pas sous le contrôle de votre service informatique ou envoyés par e-mail à d’autres utilisateurs."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: c16098a2d0fe41748280704716a2eeef8921a6fa
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: adc8ebd3063d8ac4b3710c517f0177fc25a16845
 
 
 ---
 
 # Scénario - Protéger les fichiers situés sur un partage de serveur de fichiers
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Ce scénario et la documentation utilisateur associée utilisent Azure Rights Management pour protéger en bloc tous les fichiers situés sur un serveur de fichiers pour vous assurer que seuls les employés de votre organisation peuvent y accéder, même s’ils sont copiés et enregistrés sur un stockage qui n’est pas sous le contrôle de votre service informatique ou envoyés par e-mail à d’autres utilisateurs.
 
@@ -43,7 +42,7 @@ Vérifiez que les conditions suivantes sont réunies, puis suivez les instructio
 ## Conditions requises pour ce scénario
 Pour pouvoir appliquer les instructions de ce scénario, les conditions suivantes doivent être réunies :
 
-|Configuration requise|Si vous avez besoin d'informations supplémentaires|
+|Condition requise|Si vous avez besoin d'informations supplémentaires|
 |---------------|--------------------------------|
 |Azure Rights Management est activé|[Activation d'Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Vous avez synchronisé vos comptes d'utilisateurs Active Directory locaux avec Azure Active Directory ou Office 365, y compris leurs adresses électroniques. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et Azure Rights Management.|[Préparation pour Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
@@ -114,7 +113,7 @@ L’exemple de documentation illustre la façon dont ces instructions se présen
 
 Périodiquement, le fichier sera de nouveau protégé, ce qui ajoutera une nouvelle fois l’extension de nom de fichier .pfile et vous contraindra à répéter ces étapes.
 
-**Vous avez besoin d'aide ?**
+**Vous avez besoin d'aide ?**
 
 -   Pour plus d'informations :
 
@@ -145,17 +144,17 @@ Périodiquement, le fichier sera de nouveau protégé, ce qui ajoutera une nouve
 
 Périodiquement, le fichier sera de nouveau protégé, ce qui ajoutera une nouvelle fois l’extension de nom de fichier .pfile et vous contraindra à répéter ces étapes.
 
-**Vous avez besoin d'aide ?**
+**Vous avez besoin d'aide ?**
 
 -   Pour plus d'informations :
 
-    -   [Afficher et utiliser des fichiers protégés](https://technet.microsoft.com/library/dn574741%28v=ws.10%29)
+    -   [Afficher et utiliser des fichier protégés](https://technet.microsoft.com/library/dn574741%28v=ws.10%29)
 
 -   Contactez le support technique : helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

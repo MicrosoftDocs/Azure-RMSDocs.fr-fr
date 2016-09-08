@@ -1,27 +1,26 @@
 ---
 title: Tarifs et restrictions BYOK | Azure RMS
-description: 
-keywords: 
+description: "Les organisations qui ont un abonnement incluant Azure Rights Management peuvent utiliser des clés gérées par le client (BYOK) dans Azure Key Vault et consigner son utilisation dans un journal sans frais supplémentaires. Cependant, pour utiliser Azure Key Vault, vous devez disposer d’un abonnement Azure qui prend en charge Key Vault avec des clés protégées par HSM. L’utilisation d’une clé dans Azure Key Vault entraîne des frais mensuels. Pour plus d’informations, consultez la page Tarification d’Azure Key Vault."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: ece615912d69eda78107c60245620ed36c0affd2
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 8505032a2a12f84c245e834e71d0b7b0d12e894f
 
 
 ---
 
 # Tarifs et restrictions BYOK
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 
 Les organisations qui ont un abonnement incluant Azure Rights Management peuvent utiliser des clés gérées par le client (BYOK) dans Azure Key Vault et consigner son utilisation dans un journal sans frais supplémentaires. Cependant, pour utiliser Azure Key Vault, vous devez disposer d’un abonnement Azure qui prend en charge Key Vault avec des clés protégées par HSM. L’utilisation d’une clé dans Azure Key Vault entraîne des frais mensuels. Pour plus d’informations, consultez la [page Tarification d’Azure Key Vault](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
@@ -63,6 +62,6 @@ Si vous souhaitez que Microsoft gère votre clé de client (configuration par d�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

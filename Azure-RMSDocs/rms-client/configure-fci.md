@@ -1,27 +1,26 @@
 ---
 title: "Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server | Azure RMS"
-description: 
-keywords: 
+description: Cet article contient des instructions et un script pour utiliser le client Rights Management (RMS) avec l'outil de protection RMS pour configurer les outils de gestion de ressources pour serveur de fichiers et l'infrastructure de classification des fichiers (ICF).
 author: cabailey
 manager: mbaldwin
 ms.date: 06/14/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1fc1835b60c4c75b81f106011849940ba2e77164
-ms.openlocfilehash: afb00e010df25dea5f3c3cad23824f773de59b18
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 431eb994070391a78b0b8e34b1afb668f0981f0f
 
 
 ---
 
 # Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
-*S’applique à : Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*S’applique à : Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 Cet article contient des instructions et un script pour utiliser le client Rights Management (RMS) avec l'outil de protection RMS pour configurer les outils de gestion de ressources pour serveur de fichiers et l'infrastructure de classification des fichiers (ICF).
 
@@ -303,6 +302,6 @@ Pour ce faire, utilisez l’une des propriétés de classification intégrées (
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

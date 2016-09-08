@@ -6,15 +6,15 @@ author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f32cf2f3-29e2-429c-a0fd-b16cc482484a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: faacd21945cd078425e85af0c5b40347ac4de65a
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 19eb18599d9d084b40cfe746f01eb8ce463c47ab
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: faacd21945cd078425e85af0c5b40347ac4de65a
 
 # Démarrage rapide Azure RMS – étape 2 : installer l’application de partage Rights Management
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 
 Atteindre : 
@@ -33,7 +33,7 @@ Atteindre :
 - [Étape 2 : Installer l’application de partage RMS](tutorial-step2.md)
 - [Étape 3 : envoyer le document confidentiel par e-mail](tutorial-step3.md)
 - [Étape 4 : Le destinataire lit le document](tutorial-step4.md)
-- [Étape 5 : Suivre votre document](tutorial-step5.md)
+- [Étape 5 : Suivre votre document](tutorial-step5.md)
 
 
 ![Didacticiel de démarrage rapide Azure RMS étape 2](../media/AzRMS_QuickStartSteps2.PNG)
@@ -52,7 +52,7 @@ Cette application peut être téléchargée gratuitement et propose une installa
 
 3.  Pour une installation locale, vous devez utiliser un compte d’administrateur pour exécuter le fichier Setup.exe qui a été téléchargé. Si vous êtes invité à continuer, cliquez sur **Oui**.
 
-4.  Dans la page **Installer Microsoft RMS** , cliquez sur **Suivant**, puis attendez que l’installation se termine.
+4.  Dans la page **Installer Microsoft RMS**, cliquez sur **Suivant**, puis attendez que l’installation se termine.
 
 5.  Une fois l’installation terminée, cliquez sur **Redémarrer** si vous êtes invité à redémarrer votre ordinateur, ou sur  **Fermer** pour terminer l’installation.
 
@@ -61,7 +61,7 @@ Vous êtes maintenant prêt à protéger les fichiers contenant des informations
 |Pour en savoir plus|Informations supplémentaires|
 |--------------------------------|--------------------------|
 |Installation locale de l’application de partage Rights Management pour Windows et instructions utilisateur|[Guide d’utilisation de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md)|
-|Installation par script de l’application de partage Rights Management pour Windows et informations techniques|[guide de l'administrateur de l'application de partage Rights Management](../rms-client/sharing-app-admin-guide.md)|
+|Installation par script de l’application de partage Rights Management pour Windows et informations techniques|[Guide de l'administrateur de l'application de partage Rights Management](../rms-client/sharing-app-admin-guide.md)|
 |Pour comprendre la différence entre la protection native et la protection générique|[Quelle est la différence entre la protection générique et la protection intégrée (native) ?](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection)|
 
 
@@ -70,6 +70,6 @@ Vous êtes maintenant prêt à protéger les fichiers contenant des informations
 [Étape 3 »](tutorial-step3.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

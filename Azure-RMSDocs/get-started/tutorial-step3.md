@@ -1,34 +1,28 @@
 ---
-# required metadata
-
-title: Didacticiel de démarrage rapide Azure RMS – étape 3 |Azure RMS
-description: Troisième étape d’un didacticiel vous permettant de tester rapidement Microsoft Azure Rights Management au sein de votre organisation en seulement 5 étapes qui devraient vous prendre moins de 15 minutes.
-keywords:
+title: "Didacticiel de démarrage rapide Azure RMS – étape 3 |Azure RMS"
+description: "Troisième étape d’un didacticiel vous permettant de tester rapidement Microsoft Azure Rights Management au sein de votre organisation en seulement 5 étapes qui devraient vous prendre moins de 15 minutes."
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c604e749-8918-40e8-8148-6bd000cb2be2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 62b2303074ccf2b23e29a5770f51b003c8f97780
+
 
 ---
 
 
 # Démarrage rapide Azure RMS – étape 3 : envoyer le document à protéger par e-mail
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 
 Atteindre : 
@@ -51,11 +45,11 @@ Ensuite, vous pouvez partager en toute sécurité ce document par courrier élec
 
 1.  Dans Outlook, créez un message et joignez le fichier que vous venez de créer.
 
-2.  Dans la zone **À** , saisissez au moins une adresse de messagerie professionnelle. Veillez à indiquer une adresse de messagerie professionnelle, comme **janetm@contoso.com** ou **p.dover@fabrikam.com**, car Azure Rights Management ne prend actuellement pas en charge les adresses e-mail personnelles de votre fournisseur Internet que vous utilisez chez vous. Le fait de savoir si le destinataire possède également Azure Rights Management n’est pas important.
+2.  Dans la zone **À**, entrez une ou plusieurs adresses e-mail professionnelles. Veillez à indiquer une adresse de messagerie professionnelle, comme **janetm@contoso.com** ou **p.dover@fabrikam.com**, car Azure Rights Management ne prend actuellement pas en charge les adresses e-mail personnelles de votre fournisseur Internet que vous utilisez chez vous. Le fait de savoir si le destinataire possède également Azure Rights Management n’est pas important.
 
 3.  Indiquez un objet, tel que  **Document confidentiel** , puis saisissez un bref message, tel que **Merci de lire ce document et de ne pas le partager.**
 
-4.  Puis, dans l’onglet **Message** du groupe **RMS** , cliquez sur **Partage protégé** , puis sur **Partage protégé** à nouveau :
+4.  Ensuite, sous l’onglet **Message** du groupe **RMS**, cliquez sur **Partage protégé**, puis sur **Partage protégé** à nouveau :
 
 5.  Dans la boîte de dialogue **Partage protégé** :
 
@@ -83,9 +77,11 @@ Maintenant que vous avez envoyé votre document protégé, vous pouvez demander 
 |Options de la boîte de dialogue **partage protégé**|[Options de boîte de dialogue pour l'application de partage Rights Management](../rms-client/sharing-app-dialog-box.md)|
 
 
->[!div class="step-by-step"] [« Étape 2](tutorial-step2.md)
+>[!div class="step-by-step"]
+[« Étape 2](tutorial-step2.md)
 [Étape 4 »](tutorial-step4.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

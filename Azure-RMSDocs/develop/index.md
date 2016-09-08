@@ -4,7 +4,7 @@ description: "Trois générations du Kit Rights Management SDK sont désormais d
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 6f8a475907347e545eb3ea46fecc04013fa74c5e
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: f030cf299c7555f35c8ff61172b5d1debb2c9e6b
 
 
 ---
@@ -52,6 +52,6 @@ Cette collection d’exemples de code RMS fournis par Microsoft et d’outils de
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

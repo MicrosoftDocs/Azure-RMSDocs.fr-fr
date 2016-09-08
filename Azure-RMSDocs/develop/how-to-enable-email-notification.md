@@ -4,9 +4,9 @@ description: "Les notifications par e-mail permettent à un propriétaire de con
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b2234f2209962d3dfda10958e740e04a5e5a4f13
-ms.openlocfilehash: 54fc5037eaaa5c9ae2557aa6e4c67aa99a4143e6
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: dc7b6fe403a95eae50e81ca87e46e68d412535c7
 
 
 ---
@@ -52,7 +52,7 @@ Le tableau suivant contient les champs de données de l’application (les paire
 |MS.Notify.Enabled|string|« true » &#124; « false »|Si cette valeur est définie sur « true », un e-mail de notification est envoyé au propriétaire de la licence de publication quand un utilisateur tente d’utiliser sa licence pour obtenir une licence utilisateur final.|
 |MS.Notify.Culture|string|« en-US »| **Source** : System.Globalization.CultureInfo.CurrentUICulture.Name <br><br>Cette valeur est utilisée pour déterminer la langue localisée de l’e-mail de notification, ainsi que le format de date et d’heure qui doit être utilisé dans l’e-mail.<br><br>Elle doit être définie selon les paramètres utilisateur de l’ordinateur sur lequel est créée la licence de publication, ou selon la culture par défaut du propriétaire de la licence de publication.|
 |MS.Notify.TZID|string|« Pacific Standard Time »|**Source** : TimeZoneInfo.Local.Id - ID de fuseau horaire Windows.<br><br>Cette valeur correspond à l’identificateur de fuseau horaire du système d’exploitation Microsoft Windows qui décrit un fuseau horaire particulier et ses caractéristiques.|
-|MS.Notify.TZO|string|« -480 »|Il s’agit du décalage horaire du propriétaire de la licence de publication, exprimé en minutes, par rapport à l’heure UTC.<br><br>Si une valeur TZID est fournie, le décalage du fuseau horaire spécifié sera utilisé et cette valeur sera ignorée.<br><br>Cette valeur sera probablement utilisée par les plateformes de publication non Windows qui n’ont pas accès à la liste des valeurs d’ID de fuseau horaire du système d’exploitation Windows.<br><br>Si aucune valeur TZID n’est fournie, cette valeur sera utilisée pour calculer le décalage des messages de notification et la valeur TZSN sera utilisée (quelle que soit la valeur de fuseau horaire) pour indiquer le nom du fuseau horaire. De cette manière, le fuseau horaire reste fixe et n’est pas mis à jour à l’heure d’été.<br><br>Exemple :<br><br>Si la valeur TXID est vide, et si la valeur TZ0 est définie sur « -420 » et la valeur TZSN définie sur « Pacific Daylight Time », toutes les valeurs indiquées dans l’e-mail de notification seront ajustées à l’heure « Pacific Daylight Time » et le resteront, même si l’heure d’été n’est plus en cours.<br><br>En revanche, si une valeur TZID est fournie, ainsi qu’une valeur TZSN et une valeur TZDN, les heures spécifiées dans l’e-mail de notification seront ajustées et s’afficheront selon le mode d’affichage de date et d’heure défini (Heure d’été ou Standard).|
+|MS.Notify.TZO|string|« -480 »|Il s’agit du décalage horaire du propriétaire de la licence de publication, exprimé en minutes, par rapport à l’heure UTC.<br><br>Si une valeur TZID est fournie, le décalage du fuseau horaire spécifié sera utilisé et cette valeur sera ignorée.<br><br>Cette valeur sera probablement utilisée par les plateformes de publication non Windows qui n’ont pas accès à la liste des valeurs d’ID de fuseau horaire du système d’exploitation Windows.<br><br>Si aucune valeur TZID n’est fournie, cette valeur sera utilisée pour calculer le décalage des messages de notification et la valeur TZSN sera utilisée (quelle que soit la valeur de fuseau horaire) pour indiquer le nom du fuseau horaire. De cette manière, le fuseau horaire reste fixe et n’est pas mis à jour à l’heure d’été.<br><br>Exemple :<br><br>Si la valeur TXID est vide, et si la valeur TZ0 est définie sur « -420 » et la valeur TZSN définie sur « Pacific Daylight Time », toutes les valeurs indiquées dans l’e-mail de notification seront ajustées à l’heure « Pacific Daylight Time » et le resteront, même si l’heure d’été n’est plus en cours.<br><br>En revanche, si une valeur TZID est fournie, ainsi qu’une valeur TZSN et une valeur TZDN, les heures spécifiées dans l’e-mail de notification seront ajustées et s’afficheront selon le mode d’affichage de date et d’heure défini (Heure d’été ou Standard).|
 |MS.Notify.TZSN|string|« Pacific Standard Time »|**Source** : TimeZoneInfo.Local.StandardName - Nom du fuseau horaire.<br><br>Cela doit correspondre au nom localisé du fuseau horaire Standard.|
 |MS.Notify.TZDN|string|« Pacific Daylight Time »|**Source** : TimeZoneInfo.Local.DaylightName - Nom du fuseau horaire de l’heure d’été.<br><br>Cela doit correspondre au nom localisé du fuseau horaire de l’heure d’été. Il peut être le même que le nom standard si le fuseau horaire ne prend pas en charge l’heure d’été.|
 
@@ -67,6 +67,6 @@ Le tableau suivant contient les champs de données de l’application (les paire
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

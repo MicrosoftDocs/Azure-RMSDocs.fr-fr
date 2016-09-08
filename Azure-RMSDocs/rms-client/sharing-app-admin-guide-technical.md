@@ -1,20 +1,19 @@
 ---
 title: "Présentation technique de l’application de partage Microsoft Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "L’application de partage Microsoft Rights Management est une application téléchargeable facultative pour Microsoft Windows et d’autres plateformes. Elle offre les fonctionnalités suivantes."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 09effc3dfb238370563981defdcf3c3b4cffcaae
-ms.openlocfilehash: 2f249996b9b912f744754357423a0c4f134ec094
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: d5e1c7969d2125c4f66d6dcea3bde0c81a7de1f3
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 2f249996b9b912f744754357423a0c4f134ec094
 
 # Présentation technique de l’application de partage Microsoft Rights Management et détails sur la protection
 
-*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 
 L'application de partage Microsoft Rights Management est une application téléchargeable facultative pour Microsoft Windows et d’autres plateformes. Elle offre les fonctionnalités suivantes :
@@ -79,7 +78,7 @@ Pour les fichiers protégés de manière générique, l'extension de nom de fich
 |.jpe|.pjpe|
 |.jfif|.pjfif|
 |.jt|.pjt|
-¹ Rendu PDF avec Foxit. Copyright © 2003-2014 Foxit Corporation.
+¹ Rendu PDF avec Foxit. Copyright © 2003-2014 Foxit Corporation.
 
 Le tableau suivant répertorie les types de fichier pris en charge en mode natif par l'application de partage Microsoft Rights Management dans Microsoft Office 2016, Office 2013 et Office 2010. Pour ces fichiers, l'extension de nom de fichier reste la même une fois que le fichier est protégé par RMS.
 
@@ -140,6 +139,6 @@ Vous pouvez apporter des modifications similaires au Registre pour d'autres scé
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

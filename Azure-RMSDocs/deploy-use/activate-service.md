@@ -1,27 +1,26 @@
 ---
 title: "Activation d’Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Quand vous activez Azure RMS, votre organisation peut commencer à protéger des données importantes à l’aide d’applications et services prenant en charge cette solution de protection des informations. Les administrateurs peuvent également gérer et surveiller les fichiers et messages électroniques protégés de votre organisation. Vous devez procéder à l’activation avant de commencer à utiliser les fonctionnalités de gestion des droits relatifs à l’information (IRM) dans Office, SharePoint et Exchange, et à protéger des fichiers sensibles ou confidentiels."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bf5e3561ef24d8f44e791ff7bdc8450a73f79705
-ms.openlocfilehash: d66e4e6bca253bc2bf9d12ba22ed0202cba2edaf
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: d8ec823553934442ecb1e0a0b288eaa6d9c21ea6
 
 
 ---
 
 # Activation d'Azure Rights Management
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Quand vous activez [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS), votre organisation peut commencer à protéger des données importantes à l’aide d’applications et services prenant en charge cette solution de protection des informations. Les administrateurs peuvent également gérer et surveiller les fichiers et messages électroniques protégés de votre organisation. Vous devez activer [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] avant de commencer à utiliser les fonctionnalités de gestion des droits relatifs à l’information (IRM) dans Office, SharePoint et Exchange, et à protéger des fichiers sensibles ou confidentiels.
 
@@ -82,6 +81,6 @@ Les services Office, comme Exchange Online et SharePoint Online, nécessitent un
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

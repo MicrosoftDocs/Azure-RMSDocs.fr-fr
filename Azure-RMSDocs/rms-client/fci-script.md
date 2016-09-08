@@ -1,27 +1,26 @@
 ---
 title: "Script Windows PowerShell pour la protection Azure RMS à l’aide de l’ICF des outils de gestion de ressources pour serveur de fichiers | Azure RMS"
-description: 
-keywords: 
+description: "Cette page contient l’exemple de script à copier et à modifier, comme indiqué dans Protection RMS avec l’infrastructure de classification des fichiers de Windows Server."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: a1771c37bffa2af60773a5befdd35c14f684c942
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 567280a3992d8964d4112e597ebda8cf65f5ec9a
 
 
 ---
 
 # Script Windows PowerShell pour la protection Azure RMS à l’aide de l’ICF des outils de gestion de ressources pour serveur de fichiers
 
-*S’applique à : Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*S’applique à : Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 Cette page contient l’exemple de script à copier et à modifier, comme indiqué dans [Protection RMS avec l’infrastructure de classification des fichiers de Windows Server](configure-fci.md).
 
@@ -175,6 +174,6 @@ Retour à [Protection RMS avec l’infrastructure de classification des fichiers
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

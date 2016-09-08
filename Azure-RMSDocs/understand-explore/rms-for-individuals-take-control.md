@@ -1,20 +1,19 @@
 ---
 title: "Contrôle administrateur des comptes créés pour RMS for individuals | Azure RMS"
-description: 
-keywords: 
+description: "Même si vous ne souhaitez pas convertir l’abonnement RMS for individuals de votre organisation en un abonnement payant, vous pouvez tout de même contrôler les comptes d’utilisateur associés à l’annuaire Azure de votre organisation de l’une des manières suivantes."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: df006a27c97884c47c9bb5fb04bfa181a13b7443
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: a900622fcce4a0a1431f47647709584e404a7f8c
 
 
 ---
@@ -23,7 +22,7 @@ ms.openlocfilehash: df006a27c97884c47c9bb5fb04bfa181a13b7443
 
 # Contrôle administrateur des comptes créés pour RMS for individuals
 
-*S’applique à : Azure Rights Management*
+>*S’applique à : Azure Rights Management*
 
 
 Même si vous ne souhaitez pas convertir l'abonnement RMS for individuals de votre organisation en un abonnement payant, vous pouvez tout de même contrôler les comptes d'utilisateur associés à l'annuaire Azure de votre organisation de l'une des manières suivantes :
@@ -47,6 +46,6 @@ Comment savoir si des utilisateurs autres que des administrateurs peuvent créer
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

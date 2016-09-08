@@ -1,27 +1,26 @@
 ---
 title: "Scénario - Configurer des dossiers de travail pour la protection permanente | Azure RMS"
-description: 
-keywords: 
+description: "Ce scénario et la documentation utilisateur associée utilisent Azure Rights Management pour appliquer une protection permanente aux documents Office des dossiers de travail. Dossiers de travail utilise un service de rôle pour les serveurs de fichiers exécutant Windows Server qui offre aux utilisateurs une manière cohérente d’accéder à leurs fichiers professionnels depuis leurs PC et leurs appareils. Bien que Dossiers de travail fournisse son propre chiffrement pour protéger les fichiers, le déplacement de ces derniers en dehors de l’environnement Dossiers de travail entraîne la perte de cette protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: 35ad445e229eac3feeca5522a41b9e3b25fd1180
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: ce61f22be934ec9817a22737417514468b5c6528
 
 
 ---
 
 # Scénario - Configurer des dossiers de travail pour la protection permanente
 
-*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Rights Management, Office 365*
 
 Ce scénario et la documentation utilisateur associée utilisent Azure Rights Management pour appliquer une protection permanente aux documents Office des [dossiers de travail](https://technet.microsoft.com/library/dn265974.aspx). Dossiers de travail utilise un service de rôle pour les serveurs de fichiers exécutant Windows Server qui offre aux utilisateurs une manière cohérente d’accéder à leurs fichiers professionnels depuis leurs PC et leurs appareils. Bien que Dossiers de travail fournisse son propre chiffrement pour protéger les fichiers, le déplacement de ces derniers en dehors de l’environnement Dossiers de travail entraîne la perte de cette protection. Les utilisateurs peuvent par exemple copier les fichiers synchronisés et les enregistrer sur un stockage qui n’est pas sous le contrôle de votre service informatique ou les fichiers sont envoyés par e-mail à d’autres personnes.
 
@@ -50,7 +49,7 @@ Vérifiez que les conditions suivantes sont réunies, puis suivez les instructio
 ## Conditions requises pour ce scénario
 Pour pouvoir appliquer les instructions de ce scénario, les conditions suivantes doivent être réunies :
 
-|Configuration requise|Si vous avez besoin d'informations supplémentaires|
+|Condition requise|Si vous avez besoin d'informations supplémentaires|
 |---------------|--------------------------------|
 |Azure Rights Management est activé|[Activation d'Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Vous avez synchronisé vos comptes d'utilisateurs Active Directory locaux avec Azure Active Directory ou Office 365, y compris leurs adresses électroniques. Cela est nécessaire pour tous les utilisateurs utilisant Dossiers de travail.|[Préparation pour Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
@@ -123,6 +122,6 @@ Si vous avez configuré le modèle personnalisé comme décrit pour ce scénario
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

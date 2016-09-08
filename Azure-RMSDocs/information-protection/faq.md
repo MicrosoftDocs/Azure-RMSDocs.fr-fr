@@ -1,20 +1,19 @@
 ---
 title: "Forum aux questions pour Azure Information Protection (préversion) | Azure Information Protection"
-description: 
-keywords: 
+description: "Vous avez une question à propos de la préversion d’Azure Information Protection ? Vous trouverez peut-être une réponse ici."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
-ms.openlocfilehash: c61e299cac50069afc119d37fd461cda88a2afd3
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: 55d56786150d38b36ae8185c4a7ac4c8a5c51ba4
 
 
 ---
@@ -57,7 +56,7 @@ Cette préversion a les limitations suivantes. Pour être tenu au courant de la 
 
 ## De quel abonnement ai-je besoin pour essayer Azure Information Protection ?
 
-Pour la préversion, vous pouvez utiliser n’importe quel abonnement incluant Azure Rights Management. Azure Information Protection est disponible dans toutes les régions. Pour plus d’informations sur les abonnements disponibles et pour obtenir des liens vers des versions d’évaluation gratuites, consultez [Conditions requises pour Azure RMS : abonnements cloud qui prennent en charge Azure RMS](../get-started/requirements-subscriptions.md).
+Pour la préversion, vous pouvez utiliser n’importe quel abonnement Office 365 incluant la protection des documents Office et les messages électronique à l’aide d’Azure Rights Management. Azure Information Protection est disponible dans toutes les régions. Pour plus d’informations sur les abonnements disponibles et pour obtenir des liens vers des essais gratuits, consultez la section [Abonnement Office 365](../get-started/requirements-subscriptions.md#office-365-subscription) dans la documentation sur les conditions requises pour Azure RMS.
 
 Pour configurer les stratégies Azure Information Protection dans le portail Azure, vous devez avoir un abonnement Azure. Si vous n’avez pas encore d’abonnement Azure pour votre organisation, vous pouvez en obtenir un en vous inscrivant pour une évaluation gratuite : accédez à la page [Prise en main d’Azure](https://account.windowsazure.com/organization) et suivez les instructions.
 
@@ -188,6 +187,6 @@ Ensuite, accédez à notre [site Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

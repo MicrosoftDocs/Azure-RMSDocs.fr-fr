@@ -3,7 +3,7 @@ title: "Informations de référence sur PowerShell pour les modèles personnalis
 description: "Toutes les opérations de création et de gestion des modèles que vous pouvez effectuer via le portail Azure Classic sont également exécutables à partir de la ligne de commande de PowerShell. De plus, vous pouvez importer et exporter des modèles afin de pouvoir copier des modèles entre clients ou réaliser des modifications en bloc de propriétés complexes dans les modèles, par exemple, au niveau des noms et des descriptions dans plusieurs langues."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 4874e6061bb9b8781fc2ad02c80dba38084f4747
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 5068021b504e9f943c0d4e57f13d58fc5cb5d391
 
 
 ---

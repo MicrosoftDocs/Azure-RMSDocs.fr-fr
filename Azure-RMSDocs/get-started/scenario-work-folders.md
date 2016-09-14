@@ -1,9 +1,9 @@
 ---
 title: "Scénario - Configurer des dossiers de travail pour la protection permanente | Azure RMS"
-description: "Ce scénario et la documentation utilisateur associée utilisent Azure Rights Management pour appliquer une protection permanente aux documents Office des dossiers de travail. Dossiers de travail utilise un service de rôle pour les serveurs de fichiers exécutant Windows Server qui offre aux utilisateurs une manière cohérente d’accéder à leurs fichiers professionnels depuis leurs PC et leurs appareils. Bien que Dossiers de travail fournisse son propre chiffrement pour protéger les fichiers, le déplacement de ces derniers en dehors de l’environnement Dossiers de travail entraîne la perte de cette protection."
+description: "Ce scénario et la documentation utilisateur associée utilisent Azure Rights Management pour appliquer une protection permanente aux documents Office des dossiers de travail."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: ce61f22be934ec9817a22737417514468b5c6528
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 1fdb62af06a3011e1102df0df3f9b61bcdc67edd
 
 
 ---

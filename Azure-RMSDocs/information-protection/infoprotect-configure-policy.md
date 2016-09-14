@@ -1,5 +1,5 @@
 ---
-title: "Configuration de la stratégie Azure Information Protection | Azure Rights Management"
+title: "Configuration de la stratégie Azure Information Protection | Azure Information Protection"
 description: "Informations détaillées sur la configuration et la publication de la stratégie Azure Information Protection."
 author: cabailey
 manager: mbaldwin
@@ -10,8 +10,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 38ecc425-9bab-4e70-9436-eccbef0e3113
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 68f12f4a6ae7d45e5bfd17e7352e56f9c878168c
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 767579fd2c332c37811afa9ce0bc2a8bf48f9348
 
 
 ---
@@ -23,6 +23,6 @@ ms.openlocfilehash: 68f12f4a6ae7d45e5bfd17e7352e56f9c878168c
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

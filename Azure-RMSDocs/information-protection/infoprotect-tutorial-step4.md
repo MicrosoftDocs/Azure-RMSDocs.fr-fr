@@ -1,17 +1,17 @@
 ---
-title: "Didacticiel de démarrage rapide Azure Information Protection Étape 4 | Azure Rights Management"
+title: "Didacticiel de démarrage rapide Azure Information Protection Étape 4 | Azure Information Protection"
 description: "Étape 4 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 6d93723a6f7aaffec8d18cf289bff0752b53a2c9
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 2c04c749ff73050dc8a15dd984c33f700e3e6ed5
 
 
 ---
@@ -32,7 +32,7 @@ La classification et la protection ont lieu quand vous enregistrez le document, 
 
     **Sensitivity** (Niveau de confidentialité) prend la valeur **Personal** (Personnel).
 
-    ![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : invite de confirmation de l’abaissement](../media/confirm-lowering.png)
+    ![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : invite de confirmation de l’abaissement](../media/info-protect-lower-justification.png)
 
 ### Pour supprimer complètement la classification
 
@@ -77,6 +77,6 @@ Quand vous avez terminé vos propres tests, il peut être utile de consulter le 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

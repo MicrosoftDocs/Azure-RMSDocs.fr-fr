@@ -1,6 +1,6 @@
 ---
 title: RMS for individuals et Azure Rights Management | Azure RMS
-description: "RMS for individuals est un abonnement gratuit en libre-service destiné aux utilisateurs au sein d’une organisation, qui reçoivent des fichiers sensibles protégés par Microsoft Azure Rights Management (Azure RMS), mais qui ne peuvent pas s’authentifier parce que le département informatique ne gère pas de compte pour eux dans Azure. Par exemple, le département informatique ne dispose pas d'Office 365 ou n'utilise par les services Azure."
+description: "Informations relatives à RMS for Individuals, un abonnement libre-service gratuit destiné aux utilisateurs d’une organisation qui reçoivent des fichiers sensibles protégés par Microsoft Azure Rights Management (Azure RMS), mais qui ne peuvent pas s’authentifier parce que leur service informatique ne gère pas de compte en leur nom dans Azure."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/24/2016
@@ -12,8 +12,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 2e80c1e02e47d07678b38f6d6cb229a9db8307d4
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: 15be32e029637321bf8e4f7c1a53f918efda7f23
 
 
 ---
@@ -22,14 +22,14 @@ ms.openlocfilehash: 2e80c1e02e47d07678b38f6d6cb229a9db8307d4
 
 >*S’applique à : Azure Rights Management*
 
-RMS for individuals est un abonnement gratuit en libre-service destiné aux utilisateurs au sein d’une organisation, qui reçoivent des fichiers sensibles protégés par Microsoft Azure Rights Management (Azure RMS), mais qui ne peuvent pas s’authentifier parce que le département informatique ne gère pas de compte pour eux dans Azure. Par exemple, le département informatique ne dispose pas d'Office 365 ou n'utilise par les services Azure.
+RMS for Individuals est un abonnement libre-service gratuit destiné aux utilisateurs d’une organisation qui reçoivent des fichiers sensibles protégés par Microsoft Azure Rights Management (Azure RMS), mais qui ne peuvent pas s’authentifier parce que leur service informatique ne gère pas de compte en leur nom dans Azure. Par exemple, le département informatique ne dispose pas d'Office 365 ou n'utilise par les services Azure.
 
 Ces utilisateurs peuvent créer un compte professionnel ou scolaire gratuit à utiliser avec Azure RMS, puis télécharger et installer l'application de partage Rights Management. Par conséquent, ces utilisateurs peuvent désormais s'authentifier pour prouver qu'ils sont bien la personne à qui les fichiers protégés ont été envoyés, puis lire ceux-ci sur des ordinateurs ou des appareils mobiles.
 
 À l'aide de l'application de partage Rights Management sur un ordinateur Windows, ces utilisateurs peuvent également protéger des fichiers sur place ou envoyer des fichiers protégés par courrier électronique à des personnes faisant ou non partie de leur organisation. Si les destinataires du courrier électronique appartiennent à une organisation qui ne gère pas non plus de comptes utilisateurs dans Azure, ils peuvent également créer un compte RMS for Individuals pour lire les pièces jointes protégées.
 
 > [!IMPORTANT]
-> Cet abonnement gratuit garantit que des personnes autorisées puissent toujours lire des fichiers protégés. Actuellement, vous pouvez également utiliser cet abonnement gratuit pour protéger des documents et créer de nouveaux messages électroniques. Toutefois, la capacité de création de contenu protégé est destinée uniquement à des fins d'évaluation et risque d'être supprimée dans le futur. Pour plus d’informations, notamment sur les changements éventuels dans les modalités de protection de contenu à l’aide de RMS for Individuals, consultez les [Conditions d’utilisation de Microsoft Rights Management](https://portal.aadrm.com/Legal/Service).
+> Cet abonnement gratuit garantit que des personnes autorisées puissent toujours lire des fichiers protégés. Actuellement, vous pouvez également utiliser cet abonnement gratuit pour protéger des documents et créer de nouveaux messages électroniques. Toutefois, la capacité de création de contenu protégé est destinée uniquement à des fins d'évaluation et risque d'être supprimée dans le futur. 
 
 Pour plus d’informations sur la façon dont vous pouvez protéger des fichiers à l’aide de l’application de partage Rights Management disponible gratuitement, consultez le [Guide de l’utilisateur de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md).
 
@@ -41,6 +41,6 @@ Consultez [Inscription à RMS for individuals](rms-for-individuals-user-sign-up.
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

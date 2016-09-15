@@ -1,9 +1,9 @@
 ---
 title: Applications et services Office | Azure RMS
-description: "Les applications Office (telles que Word, Excel, PowerPoint et Outlook) et les services Office (tels qu’Exchange et SharePoint) pour utilisateurs finaux peuvent utiliser Microsoft Azure Rights Management pour protéger les données de votre organisation."
+description: "Comment les applications Office (telles que Word, Excel, PowerPoint et Outlook) et les services Office (tels qu’Exchange et SharePoint) pour utilisateurs finaux peuvent utiliser Microsoft Azure Rights Management pour protéger les données de votre organisation."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/30/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 93dde9494a430526ebd26e1d5123ad44901ffcbb
+ms.sourcegitcommit: f0871436caef79187349d700d190564b08cc9e46
+ms.openlocfilehash: 1e1a52e637671d857fac22c51a635e726fa99b01
 
 
 ---
@@ -61,7 +61,6 @@ Si vous utilisez SharePoint Server, vous pouvez utiliser les fonctionnalités de
 > 
 > -   Vous ne pouvez pas utiliser les modèles personnalisés ou par défaut que vous gérez dans le portail Azure Classic.
 > -   Les fichiers comportant une extension .PPDF pour les fichiers PDF protégés ne sont pas pris en charge. Les fichiers comportant une extension .PDF et protégés par RMS en mode natif sont pris en charge lorsque vous utilisez un lecteur PDF qui prend en charge RMS en mode natif.
-> -   Office sur les appareils mobiles ne prenant pas encore en charge RMS, ces appareils doivent utiliser un navigateur pour afficher les fichiers protégés par RMS, qui sont en lecture seule.
 
 Azure RMS applique des restrictions d’utilisation et un chiffrement de données aux documents téléchargés à partir de SharePoint, mais pas aux documents créés dans SharePoint ou chargés sur la bibliothèque. Pour plus d’informations sur la façon dont les documents sont protégés avant leur téléchargement, voir [Chiffrement de données dans OneDrive Entreprise et SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) dans la documentation SharePoint.
 
@@ -72,6 +71,6 @@ Pour plus d’informations sur l’utilisation d’Azure RMS avec SharePoint, vo
 Pour voir comment d’autres applications et services prennent en charge Azure Rights Management, consultez [Comment les applications prennent en charge Azure Rights Management](applications-support.md).
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

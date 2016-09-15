@@ -3,7 +3,7 @@ title: "Forum aux questions pour Azure Information Protection (préversion) | Az
 description: "Vous avez une question à propos de la préversion d’Azure Information Protection ? Vous trouverez peut-être une réponse ici."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 55d56786150d38b36ae8185c4a7ac4c8a5c51ba4
+ms.sourcegitcommit: 0a66851beeedecc3bda92f840f06b56f40c0c4c1
+ms.openlocfilehash: 427b783b41d8977ff07b0fbc929bf0d7afd0721d
 
 
 ---
@@ -80,9 +80,9 @@ Azure Information Protection est une solution basée sur le cloud. Si le déploi
 Ces informations sont maintenant documentées et seront mises à jour dans [Configuration requise pour Azure Information Protection](requirements-azure-infoprotect.md).
 
 
-## Comment les ordinateurs obtiennent-ils les informations sur les stratégie à partir d’Azure Information Protection et quelle est la fréquence d’actualisation ?
+## Comment les ordinateurs obtiennent-ils les informations sur les stratégies à partir d’Azure Information Protection et quelle est la fréquence d’actualisation ?
 
-Chaque fois qu’un utilisateur ouvre une application Office, le client Azure Information Protection vérifie s’il existe une version ultérieure de la stratégie Azure Information Protection. S’il existe une version ultérieure, le client la télécharge à l’aide d’un lien HTTPS pour sécuriser les données. 
+Chaque fois qu’un utilisateur ouvre une application Office, le client Azure Information Protection vérifie s’il existe une version ultérieure de la stratégie Azure Information Protection. De plus, une vérification des applications Office est automatiquement effectuée toutes les 24 heures. S’il existe une version ultérieure, le client la télécharge à l’aide d’un lien HTTPS pour sécuriser les données. 
 
 Si plusieurs instances de l’application Office sont chargées lors de la publication d’une nouvelle stratégie Azure Information Protection, vous devez fermer toutes les instances pour obtenir la dernière version de la stratégie. Par exemple, vous avez deux documents Word ouverts et souhaitez tester la stratégie Azure Information Protection mise à jour dans un seul document : fermez les deux documents Word et rouvrez le document que vous souhaitez utiliser avec la dernière stratégie.
 
@@ -129,7 +129,7 @@ Oui. Pour supprimer la classification d’un fichier, ouvrez-le dans l’applica
 
 ## Puis-je demander aux utilisateurs de justifier pourquoi ils modifient le niveau de classification ?
 
-Oui. Pour forcer les utilisateurs à justifier le changement de classification, dans le portail Azure, affectez la valeur **On** à l’option **Users must provide justification when lowering the sensitivity level** (Les utilisateurs doivent fournir une justification quand ils abaissent le niveau de confidentialité). Dans ce cas, la raison de l’action et la justification sont enregistrées dans le journal des événements Windows local de l’utilisateur : **Application** > **Microsoft Azure Information Protection**.
+Oui. Pour forcer les utilisateurs à justifier le changement de classification, dans le portail Azure, affectez la valeur **On** à l’option **Users must provide justification to set a lower classification label, remove a label, or remove protection** (Les utilisateurs doivent fournir une justification pour définir une étiquette de classification d’un niveau inférieur, supprimer une étiquette ou enlever la protection). Dans ce cas, la raison de l’action et la justification sont enregistrées dans le journal des événements Windows local de l’utilisateur : **Application** > **Microsoft Azure Information Protection**.
 
 ## Comment faire pour protéger automatiquement le contenu une fois qu’il a été classifié ?
 
@@ -187,6 +187,6 @@ Ensuite, accédez à notre [site Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

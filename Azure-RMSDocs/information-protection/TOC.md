@@ -24,8 +24,9 @@
 ### [Configurer des marquages visuels](configure-policy-markings.md)
 ### [Configurer des conditions](configure-policy-classification.md)
 ## [Installer le client](info-protect-client.md)
+## [Termes du contrat de licence logiciel pour Azure Information Protection](aip-software-license-terms.md)
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Sep16_HO1-->
 
 

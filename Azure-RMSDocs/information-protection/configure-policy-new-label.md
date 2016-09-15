@@ -1,5 +1,5 @@
 ---
-title: "Comment créer une étiquette pour Azure Information Protection | Azure Rights Management"
+title: "Comment créer une étiquette pour Azure Information Protection | Azure Information Protection"
 description: "Même si Azure Information Protection est fourni avec des étiquettes par défaut que vous pouvez personnaliser, vous pouvez également créer vos propres étiquettes que les utilisateurs voient dans la barre Information Protection."
 manager: mbaldwin
 ms.date: 08/10/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 96cbe6cbe823d2c90ec91cbf77ef7d96cc6a568c
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: b02c3e602a8178c0837104a88b360d041ecddc4d
 
 
 ---
@@ -52,6 +52,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

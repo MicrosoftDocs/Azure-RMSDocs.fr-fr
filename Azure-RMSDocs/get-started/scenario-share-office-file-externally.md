@@ -1,9 +1,9 @@
 ---
 title: "Scenario : partager un fichier Office avec des utilisateurs d’une autre organisation | Azure RMS"
-description: "Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour permettre à des utilisateurs d’envoyer un fichier Office par e-mail en toute sécurité à des personnes appartenant à une autre organisation. Le fichier Office peut être un document Word, une feuille de calcul Excel ou une présentation PowerPoint qui contient, par exemple, des informations tarifaires pour un partenaire, une liste de produits pour un revendeur ou une liste de délais de livraison pour des clients potentiels. Lorsque les utilisateurs suivent les instructions, le fichier joint au message électronique est protégé par Azure Rights Management."
+description: "Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour permettre à des utilisateurs d’envoyer un fichier Office par e-mail en toute sécurité à des personnes appartenant à une autre organisation."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 9615e41666a08a1d66f4e0dbdedb06f02a8efd3e
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 26e81330c58057aac9629690f1d4fe85e56a64f8
 
 
 ---

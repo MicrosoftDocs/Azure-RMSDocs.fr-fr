@@ -1,9 +1,9 @@
 ---
 title: "Guide d’utilisation de l’application de partage Rights Management | Azure RMS"
-description: "L’application de partage Microsoft Rights Management (RMS) pour Windows vous aide à protéger vos images et documents importants afin qu’ils ne soient pas accessibles aux personnes non autorisées, même lorsque vous les envoyez par courrier électronique ou que vous les enregistrez sur un autre appareil. Vous pouvez également utiliser cette application pour ouvrir et utiliser des fichiers protégés par d’autres personnes à l’aide de la même technologie Rights Management."
+description: "L’application de partage Microsoft Rights Management (RMS) pour Windows vous aide à protéger vos images et documents importants afin qu’ils ne soient pas accessibles aux personnes non autorisées, même lorsque vous les envoyez par courrier électronique ou que vous les enregistrez sur un autre appareil."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 0e9ec1074f5305c12f436336520d7a6703ed0cfa
+ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
+ms.openlocfilehash: c39e311e8247938cf44068106a9771d2ad7a56e0
 
 
 ---

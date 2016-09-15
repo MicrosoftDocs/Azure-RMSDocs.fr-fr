@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 5340673beb2a6f2dd4acd96fd599c0b90b9991dd
+ms.sourcegitcommit: 99390fb78a9da3bef8a67c8595770a84fb9bb89a
+ms.openlocfilehash: a32bfc59dd72efbcb239845ddabfa9bd3a969127
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 5340673beb2a6f2dd4acd96fd599c0b90b9991dd
 Collection de définitions propres aux services Rights Management.
 
 **Algorithme déconseillé**  
-Paramètre modal qui implémente un ancien schéma de protection de contenu, se référant en particulier au mode de chiffrement ECB (Electronic CookBook). Dans ce SDK, le paramètre vous permet de générer des licences compatibles avec la bibliothèque MSDRM utilisée par le Kit [AD Rights Management SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
+Paramètre modal qui implémente un ancien schéma de protection de contenu, se référant en particulier au mode de chiffrement ECB (Electronic CodeBook). Dans ce SDK, le paramètre vous permet de générer des licences compatibles avec la bibliothèque MSDRM utilisée par le Kit [AD Rights Management SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
 
 Ce paramètre peut inciter l’application à protéger le contenu non conformément aux normes de vos clients pour la protection de contenu.
 
@@ -46,6 +46,6 @@ Le format PFile est transparent pour le développeur d’applications, car il es
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

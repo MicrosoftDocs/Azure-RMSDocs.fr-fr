@@ -1,16 +1,16 @@
 ---
-title: "Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection | Azure Rights Management"
+title: "Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection | Azure Information Protection"
 description: "Lorsque vous configurez des conditions pour une étiquette, vous pouvez affecter automatiquement une étiquette à un document ou à un e-mail. Ou vous pouvez inviter les utilisateurs à sélectionner l’étiquette que vous recommandez."
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 0e6baca43c7a4f2e91f45222f5f6f233b3eeb438
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: ea69e955e4ba5facb1a8f21a90592c0eaae5425e
 
 
 ---
@@ -27,7 +27,7 @@ Lorsque vous configurez des conditions pour une étiquette, vous pouvez affecter
  
 - La classification recommandée s’applique à Word, Excel et PowerPoint lors de l’enregistrement de fichiers.
 
-Lorsque vous configurez des conditions, vous pouvez utiliser des modèles prédéfinis, tels que « Numéros de carte de crédit » ou « Numéro de sécurité sociale (USA) ». Vous pouvez aussi définir une chaîne ou un modèle personnalisé comme condition de classification automatique. Pour plus d’informations sur les conditions, consultez la section [Informations sur les conditions intégrées](#information-about-the-built-in-conditions).
+Lorsque vous configurez des conditions, vous pouvez utiliser des modèles prédéfinis, tels que « Numéros de carte de crédit » ou « Numéro de sécurité sociale (USA) ». Vous pouvez aussi définir une chaîne ou un modèle personnalisé comme condition de classification automatique. Ces conditions s’appliquent au corps de texte dans les documents et les e-mails, ainsi qu’aux en-têtes et pieds de page. Pour plus d’informations sur les conditions, consultez la section [Informations sur les conditions intégrées](#information-about-the-built-in-conditions).
 
 Évaluation de plusieurs conditions lorsqu’elles s’appliquent à plusieurs étiquettes :
 
@@ -224,6 +224,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

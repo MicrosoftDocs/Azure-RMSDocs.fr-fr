@@ -1,5 +1,5 @@
 ---
-title: "Comment configurer une étiquette pour appliquer Rights Management protection | Azure Rights Management"
+title: "Comment configurer une étiquette pour appliquer la protection Rights Management | Azure Information Protection"
 description: "Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’un service Rights Management qui utilise des stratégies de chiffrement, d’identité et d’autorisation pour éviter la perte de données. Cette protection est appliquée lorsque vous configurez une étiquette pour utiliser un modèle de gestion des droits."
 manager: mbaldwin
 ms.date: 08/15/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 23e62c82a38e696b0708f3b599d24f3a0f337fd8
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 9cf13b5b795fc5e236ee3f48914cbbd406ad3e7e
 
 
 ---
@@ -57,7 +57,7 @@ Pour plus d’informations sur Azure Rights Management et son fonctionnement, co
     
     Dans la plupart des cas, vous devez sélectionner **Azure RMS**. Ne sélectionnez AD RMS que si vous avez lu et compris les conditions préalables et les restrictions qui accompagnent cette configuration, parfois appelée « *conservez votre propre clé* » (HYOK). Pour plus d’informations, consultez [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md).
     
-4. Si vous avez sélectionné Azure RMS : pour **Sélectionner un modèle RMS**, cliquez sur la zone de liste déroulante et sélectionnez le modèle à utiliser pour protéger des documents et des e-mails avec cette étiquette.
+4. Si vous avez sélectionné Azure RMS : pour **Sélectionner un modèle RMS**, cliquez sur la zone de liste déroulante et sélectionnez le modèle ou l’option Rights Management à utiliser pour protéger des documents et e-mails avec cette étiquette.
 
     > [!NOTE] 
     > Si vous créez un modèle après avoir ouvert le panneau **Étiquette**, fermez ce panneau et retournez à l’étape 2 pour que votre modèle nouvellement créé soit récupéré depuis Azure en vue de sa sélection.
@@ -78,6 +78,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

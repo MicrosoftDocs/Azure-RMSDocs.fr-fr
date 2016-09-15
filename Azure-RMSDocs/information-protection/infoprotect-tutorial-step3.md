@@ -1,17 +1,17 @@
 ---
-title: "Didacticiel de démarrage rapide Azure Information Protection Étape 3 | Azure Rights Management"
+title: "Didacticiel de démarrage rapide Azure Information Protection Étape 3 | Azure Information Protection"
 description: "Étape 3 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 320cd688ba5aabcb966009907d568033149953e3
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: f5e15870a3a67f67261db9c3d1d735c126f48ee2
 
 
 ---
@@ -26,7 +26,7 @@ Lors de cette étape, vous allez installer le client Azure Information Protectio
 
 1. Sur un PC où Office est installé (mais où Word n’est pas ouvert), [téléchargez le client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) à partir du Centre de téléchargement Microsoft. 
 
-2. Exécutez **AZInfoProtection.exe** et suivez les invites pour installer le client.
+2. Exécutez **AzInfoProtection.exe** et suivez les invites pour installer le client.
 
     Pour ce didacticiel, peu importe si vous sélectionnez l’option d’installation d’une stratégie de démonstration, étant donné que la stratégie que nous venons de configurer sera téléchargée à partir d’Azure et remplacera la stratégie de démonstration installée. Toutefois, vous pouvez utiliser l’option de stratégie de démonstration si vous souhaitez simplement découvrir les étiquettes par défaut sans connexion à Azure Information Protection. 
 
@@ -52,6 +52,6 @@ Vous êtes prêt pour l’étape finale, pour découvrir la classification, l’
 [Étape 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

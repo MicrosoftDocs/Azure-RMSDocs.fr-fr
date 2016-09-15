@@ -3,7 +3,7 @@ title: Forum Aux Questions sur Azure Rights Management | Azure RMS
 description: "Forum Aux Questions sur Microsoft Azure Rights Management, également appelé Azure RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 906e544cc3c9be6ba475502e3cdb93f2e047da7f
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: e0529126fefc9dec6aaa490538971a7573f79431
 
 
 ---
@@ -121,7 +121,7 @@ Initialement, Azure RMS ne prenait pas en charge la migration à partir d'un dé
 Pour plus d’informations, consultez [Migration d’AD RMS vers Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 ## Nous voulons utiliser BYOK avec Azure RMS mais avons appris que cette solution n'est pas compatible avec Exchange Online. que conseillez-vous ?
-Ne laissez pas cette limitation retarder votre déploiement d'Azure RMS. Si vous disposez d'Exchange Online et souhaitez utiliser la solution BYOK, nous vous recommandons de déployer maintenant Azure RMS en mode de gestion de clés par défaut dans lequel Microsoft génère et gère votre clé. De cette façon, vous bénéficiez de tous les avantages de la protection de vos fichiers et courriers électroniques importants, avec la possibilité de passer à BYOK ultérieurement (par exemple, si Exchange Online ne prend pas en charge BYOK).
+Ne laissez pas cette limitation retarder votre déploiement d'Azure RMS. Si vous disposez d'Exchange Online et souhaitez utiliser la solution BYOK, nous vous recommandons de déployer maintenant Azure RMS en mode de gestion de clés par défaut dans lequel Microsoft génère et gère votre clé. De cette façon, vous bénéficiez de tous les avantages de la protection de vos fichiers et courriers électroniques importants, avec la possibilité de passer à BYOK ultérieurement (par exemple, si Exchange Online ne prend pas en charge BYOK). Si vous passez à BYOK, vous pouvez continuer d’utiliser vos documents et e-mails précédemment protégés en utilisant une clé archivée.
 
 Toutefois, si vos stratégies d'entreprise vous obligent à utiliser un module de sécurité matériel (HSM) sans lequel votre déploiement d'Azure RMS serait bloqué, vous pouvez déployer Azure RMS avec l'option BYOK, et des fonctionnalités RMS réduites pour Exchange. Pour plus d’informations, consultez [Tarifs et restrictions BYOK](../plan-design/byok-price-restrictions.md) dans [Planification et implémentation de la clé de locataire Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
 
@@ -145,7 +145,7 @@ Pour les abonnements payants qui prennent en charge Azure RMS (Office 365, Azu
 
 L'abonnement gratuit qui prend en charge Azure RMS (RMS for individuals) prend en charge la consommation de contenu protégé par Azure RMS. Pour plus d’informations, consultez [RMS for individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## Où trouver des informations techniques sur l'abonnement gratuit Azure RMS (RMS for Individuals), par exemple, son fonctionnement, la façon de prendre le contrôle des comptes et les domaines non utilisables ?
+## Où trouver des informations techniques sur l’abonnement gratuit à Azure RMS (RMS for Individuals), par exemple, sur le déroulement de ce processus et la façon dont un administrateur peut contrôler les comptes créés ?
 Vous trouverez des réponses à ces questions dans [RMS for individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md) et les articles connexes.
 
 ## Comment récupérer l'accès à des fichiers protégés par un employé qui a quitté l'organisation ?
@@ -223,6 +223,6 @@ Cette page de FAQ sera régulièrement actualisée. Les nouveautés seront répe
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

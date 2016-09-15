@@ -1,5 +1,5 @@
 ---
-title: "Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection | Azure Rights Management"
+title: "Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection | Azure Information Protection"
 description: "Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez sélectionner plusieurs options pour que la classification choisie soit facilement visible. Ces marquages visuels sont un filigrane, un en-tête et un pied de page."
 manager: mbaldwin
 ms.date: 08/17/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: c73b6e3fe114625c16a7c2e799162902ba26e4cf
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: d70bfbe658b1c7d9a5a91c925a554974423699a7
 
 
 ---
@@ -81,6 +81,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

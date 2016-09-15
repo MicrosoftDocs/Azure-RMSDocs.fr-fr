@@ -1,6 +1,6 @@
 ---
-title: "Didacticiel de démarrage rapide Azure Information Protection Étape 2 | Azure Rights Management"
-description: "Étape 2 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et environ 10 minutes."
+title: "Didacticiel de démarrage rapide Azure Information Protection Étape 1 | Azure Information Protection"
+description: "Étape 1 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/291/2016
@@ -10,8 +10,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: b608ee307bf7388ab7c7ed70cc1286db5df176c8
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 96b5d2e53d2d1460a97a87f4037cab79b8586244
 
 
 ---
@@ -86,6 +86,6 @@ Pour un déploiement de production, vous souhaiterez probablement configurer des
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

@@ -1,9 +1,9 @@
 ---
 title: "Étape 2 &colon; Migration de clé protégée par logiciel à clé protégée par HSM | Azure RMS"
-description: "Ces instructions font partie du chemin de migration d’AD RMS vers Azure Rights Management. Elles s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous voulez migrer vers Azure Rights Management avec une clé de locataire protégée par HSM dans Azure Key Vault."
+description: "Instructions faisant partie du chemin de migration d’AD RMS vers Azure Rights Management. Elles s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous souhaitez procéder à la migration vers Azure Rights Management avec une clé de locataire protégée par HSM dans Azure Key Vault."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: e470b5b5542536e812749f77353aaf34922d4985
+ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
+ms.openlocfilehash: f4341d648b591922df93a4d2ba5e14151743fcdb
 
 
 ---

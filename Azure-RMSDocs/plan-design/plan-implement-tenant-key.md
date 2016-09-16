@@ -1,9 +1,9 @@
 ---
 title: "Planification et implémentation de la clé de locataire Azure Rights Management | Azure RMS"
-description: "Utilisez les informations de cet article pour planifier et gérer votre clé de locataire (ou client) Rights Management (RMS) pour Azure RMS. Par exemple, au lieu que Microsoft gère votre clé de locataire (par défaut), vous pouvez gérer votre propre clé de locataire afin de vous conformer à des réglementations spécifiques s'appliquant à votre organisation. La gestion de votre propre clé de locataire est également appelée BYOK (Bring Your Own Key)."
+description: "Informations vous permettant de planifier et de gérer votre clé de locataire Rights Management (RMS) pour Azure RMS. Par exemple, au lieu que Microsoft gère votre clé de locataire (par défaut), vous pouvez gérer votre propre clé de locataire afin de vous conformer à des réglementations spécifiques s'appliquant à votre organisation. La gestion de votre propre clé de locataire est également appelée BYOK (Bring Your Own Key)."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 3a45a12cba766fed074d8b5fcf861164802d2441
+ms.sourcegitcommit: eec7cc8b20435df11d7b8f89c4b9e9d0f039dc55
+ms.openlocfilehash: 25d47ab488474ed756b3139bb9d42d420cea25f7
 
 
 ---
@@ -64,7 +64,7 @@ Le deuxième schéma présente quant à lui les étapes supplémentaires requise
 
 ![Cycle de vie de clé de locataire Azure RMS - géré par vous-même, BYOK](../media/RMS_BYOK_onprem4.png)
 
-Si vous choisissez de confier à Microsoft la gestion de votre clé de locataire, aucune autre action n’est nécessaire de votre part et vous n’avez pas à générer la clé. Vous pouvez passer directement à la rubrique [Étapes suivantes](plan-implement-tenant-key.md#next-steps).
+Si vous choisissez de confier à Microsoft la gestion de votre clé de locataire, aucune autre action n’est nécessaire de votre part et vous n’avez pas à générer la clé. Vous pouvez passer directement à la rubrique [Étapes suivantes](plan-implement-tenant-key.md#next-steps).  
 
 Si vous décidez de gérer vous-même votre clé de locataire, lisez les sections suivantes pour plus d'informations.
 
@@ -74,7 +74,7 @@ Utilisez les informations et les procédures de cette section si vous souhaitez 
 
 
 > [!IMPORTANT]
-> Si vous avez déjà commencé à utiliser [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (le service est activé) et que certains de vos utilisateurs exécutent Office 2010, [contactez le support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) avant d’appliquer ces procédures. Selon votre scénario et vos exigences, vous devrez peut-être appliquer la solution BYOK avec certaines limitations ou étapes supplémentaires.
+> Si vous avez commencé à utiliser Azure RMS avec une clé de locataire gérée par Microsoft et que vous souhaitez à présent la gérer vous même (c’est-à-dire passer à un scénario BYOK), les documents et e-mails précédemment protégés restent accessibles à l’aide d’une clé archivée. Toutefois, si vous avez des utilisateurs qui exécutent Office 2010, [contactez le support technique Microsoft](../get-started/information-support.md#to-contact-microsoft-support) avant d’exécuter ces procédures. Ces ordinateurs nécessitent des étapes de configuration supplémentaires.
 > 
 > Vous pouvez aussi [contacter le support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) si votre organisation applique des stratégies spécifiques en matière de gestion des clés.
 
@@ -136,6 +136,6 @@ Maintenant que vous avez planifié et, le cas échéant, généré votre clé de
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

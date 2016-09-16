@@ -1,9 +1,9 @@
 ---
 title: Conditions requises pour Azure Rights Management | Azure RMS
-description: "Pour déployer Microsoft Azure Rights Management (Azure RMS) dans votre organisation, vérifiez d’abord que vous disposez des prérequis suivants. Vous pouvez ensuite utiliser la feuille de route pour le déploiement d’Azure Rights Management pour déployer Rights Management dans votre organisation."
+description: "Identifiez les exigences liées au déploiement de Microsoft Azure Rights Management (Azure RMS) dans votre organisation."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/15/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
-ms.openlocfilehash: d56eb077ef76e1869c7d90141f1b35c1bdbfe9fa
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 9bd75b44541f51b39315a898417ebe5d3b562cf9
 
 
 ---

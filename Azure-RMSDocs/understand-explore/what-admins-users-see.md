@@ -1,9 +1,9 @@
 ---
 title: Ce que voient les utilisateurs et les administrateurs | Azure RMS
-description: "Cet article présente quelques exemples classiques illustrant comment les administrateurs et les utilisateurs voient et peuvent utiliser Azure Rights Management (Azure RMS) pour protéger des informations sensibles ou confidentielles."
+description: "Découvrez quelques exemples classiques illustrant comment les administrateurs et les utilisateurs voient et peuvent utiliser Azure Rights Management (Azure RMS) pour protéger des informations sensibles ou confidentielles."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 4a2f473c657b7fe27e2a6d42000fd540c49e8895
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: 6fbe4841ca3ccd684dd78608d023f6d54735bcaf
 
 
 ---

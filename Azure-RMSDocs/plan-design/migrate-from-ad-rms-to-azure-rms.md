@@ -1,9 +1,9 @@
 ---
 title: "Migration d’AD RMS vers Azure Rights Management | Azure RMS"
-description: "Utilisez l’ensemble suivant d’instructions pour migrer votre déploiement Active Directory Rights Management Services (AD RMS) vers Azure Rights Management (Azure RMS). Après la migration, les utilisateurs auront toujours accès aux documents et messages électroniques que votre organisation a protégés à l'aide d'AD RMS, et le contenu nouvellement protégé utilisera Azure RMS."
+description: "Instructions à suivre pour migrer votre déploiement Active Directory Rights Management Services (AD RMS) vers Azure Rights Management (Azure RMS). Après la migration, les utilisateurs auront toujours accès aux documents et messages électroniques que votre organisation a protégés à l'aide d'AD RMS, et le contenu nouvellement protégé utilisera Azure RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: bead12db04e6fcf2f9e4af5148d3f8a4ef4089da
+ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
+ms.openlocfilehash: 6aa75f5e6b326068951b3d4d65f337c15a475029
 
 
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Configuration de modèles personnalisés pour Azure Rights Management | Azure RMS"
-description: "Après avoir activé Azure Rights Management (Azure RMS), les utilisateurs peuvent automatiquement utiliser les deux modèles par défaut qui leur facilitent l'application de stratégies aux fichiers sensibles pour en restreindre l'accès aux utilisateurs autorisés de votre organisation. Ces deux modèles incluent les restrictions de stratégie de droits suivantes."
+description: "Informations et instructions destinées aux administrateurs souhaitant configurer et gérer des modèles de droits d’utilisation. Grâce aux modèles, les utilisateurs et autres administrateurs peuvent appliquer facilement des stratégies à des fichiers sensibles qui limitent l’accès aux utilisateurs autorisés."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/03/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 83db5e11a4603523d7c4a86921fbdafb5f6fbfb5
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 4f04a8b892cfb1f1ab62d1810fae172ad8bc9747
 
 
 ---

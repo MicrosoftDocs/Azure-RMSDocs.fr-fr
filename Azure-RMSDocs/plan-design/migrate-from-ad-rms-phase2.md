@@ -1,9 +1,9 @@
 ---
 title: "Migration d’AD RMS vers Azure Rights Management - Phase 2 | Azure RMS"
-description: "Utilisez les informations suivantes pour la Phase 2 de la migration d’AD RMS vers Azure Rights Management (Azure RMS). Ces procédures couvrent l’étape 5 de Migration d’AD RMS vers Azure Rights Management."
+description: "Phase 2 de la migration d’AD RMS vers Azure Rights Management (Azure RMS), couvrant l’étape 5 de la migration d’AD RMS vers Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 8e1e44eca132b3fd3c83894544d01c180db8735e
+ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
+ms.openlocfilehash: d03c61ae5a2b0f74259e177d0f15dd2262465754
 
 
 ---

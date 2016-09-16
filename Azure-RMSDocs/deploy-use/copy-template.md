@@ -1,9 +1,9 @@
 ---
 title: "Copier un modèle | Azure RMS"
-description: "Si vous voulez créer un nouveau modèle dont les paramètres sont très similaires à ceux d’un modèle existant, sélectionnez le modèle d’origine sur la page MODÈLES , cliquez sur COPIER, spécifiez un nom unique, puis apportez les modifications nécessaires."
+description: "Instructions à suivre pour copier un modèle. Vous pouvez ainsi créer facilement un modèle dont les paramètres sont très semblables à ceux d’un modèle existant."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: f329ce49-e044-4c11-821d-5496d83c1bb3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: e5d7fea3b0c3c9fcc3546752b5483b9c97a917e9
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: a35a59f466b088d3735bef4e12327990c75952d6
 
 
 ---

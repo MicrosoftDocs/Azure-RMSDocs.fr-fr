@@ -1,9 +1,9 @@
 ---
 title: "Application de partage Rights Management &colon; Historique de publication des versions | Azure RMS"
-description: "L’équipe Rights Management met régulièrement à jour l’application de partage du même nom à l’aide de correctifs et de nouvelles fonctionnalités. Pour déterminer les nouveautés ou modifications apportées à une version, utilisez les informations suivantes. La dernière version est répertoriée en première position."
+description: "Découvrez les nouveautés ou modifications apportées à une version de l’application de partage Rights Management pour Windows."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 060324fd6f0a87839ff267b540b9e5024498c242
+ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
+ms.openlocfilehash: 361fde97756c24fa46df6eda16d7506b4b8aaa3a
 
 
 ---

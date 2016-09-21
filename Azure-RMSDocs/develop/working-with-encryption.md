@@ -1,26 +1,22 @@
 ---
-# required metadata
-
-title: Procédure d’utilisation des paramètres de chiffrement | Azure RMS
-description: Cet article vous oriente vers nos packages de chiffrement
-keywords:
+title: "Procédure d’utilisation des paramètres de chiffrement | Azure RMS"
+description: Orientation pour les packages de chiffrement Azure RMS et les captures de code pour leur utilisation.
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 83c4eb741c484018a2837840465aca3276c785c1
+ms.openlocfilehash: b128a9adf75ae8558a33181f63881e2243e840bb
+
 
 ---
 
@@ -106,6 +102,7 @@ Cet exemple montre également la nouvelle façon de prendre en charge des *algor
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Sep16_HO2-->
 
 

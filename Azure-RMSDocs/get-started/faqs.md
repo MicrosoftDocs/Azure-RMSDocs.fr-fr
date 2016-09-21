@@ -3,7 +3,7 @@ title: Forum Aux Questions sur Azure Rights Management | Azure RMS
 description: "Forum Aux Questions sur Microsoft Azure Rights Management, également appelé Azure RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
-ms.openlocfilehash: e0529126fefc9dec6aaa490538971a7573f79431
+ms.sourcegitcommit: 62b72d2debef3421fea4f0e70beed67e5364d7d3
+ms.openlocfilehash: 99b5e4ea74cd6f76a2409d89c3db5d8672b63055
 
 
 ---
@@ -165,37 +165,8 @@ Comme le montrent ces exemples, même si la totalité des plateformes et logicie
 En dépit de son nom et de son apparence, l’option **Ne pas transférer** n’est ni le contraire du droit de transfert, ni un modèle. Il s’agit en fait d’un ensemble de droits qui incluent la restriction de copier, imprimer et enregistrer des pièces jointes, outre la restriction de transfert des e-mails. Les droits sont appliqués dynamiquement aux utilisateurs par le biais des destinataires choisis et non pas statiquement attribués par l’administrateur. Pour plus d’informations, consultez la section [Option Ne pas transférer pour les e-mails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) dans [Configuration des droits d’utilisation pour Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
 ## Où puis-je trouver des informations annexes sur Azure RMS (considérations juridiques, conformité, contrats de niveau de service, etc.) ?
-Azure RMS prend en charge d'autres services et s'appuie également sur d'autres services. Si vous recherchez des informations relatives au service Azure RMS qui n'ont pas trait à son utilisation, consultez les ressources suivantes :
 
-**Juridique et confidentialité :**
-
--   Pour plus d'informations sur le contrat Microsoft Azure : [Contrat Microsoft Azure](http://azure.microsoft.com/support/legal/subscription-agreement/)
-
--   Pour plus d'informations sur la confidentialité dans Microsoft Azure : [Déclaration de confidentialité de Microsoft Azure](http://azure.microsoft.com/support/legal/privacy-statement/)
-
-**Sécurité, conformité et audit :**
-
-Consultez la section [Respect des obligations réglementaires, de conformité et de sécurité](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) dans l’article [Quels problèmes Azure RMS résout-il ?](../understand-explore/azure-rms-problems-it-solves.md). De plus :
-
--   Pour connaître les certifications externes pour Azure RMS : [Centre de gestion de la confidentialité Microsoft Azure](http://azure.microsoft.com/support/trust-center/)
-
--   Pour plus d'informations sur FIPS 140 : [Validation FIPS 140](https://technet.microsoft.com/library/security/cc750357.aspx)
-
-**Contrats de niveau de service :**
-
--   Contrat de niveau de service Azure RMS, par région sélectionnée : [télécharger à partir de la page de recherche des licences de produits](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
-
-    - Par exemple, cliquez sur **OnlineSvcsConsolidatedSLA(WW)(English)(March2016)** pour télécharger le contrat de niveau de service de mars 2016 pour l’Amérique du Nord.
-
--   Contrat de niveau de service pour Azure Active Directory : [Contrats de niveau de service](http://azure.microsoft.com/support/legal/sla/)
-
-**Documentation :**
-
--   Site de documentation sur Azure Active Directory : [Azure Active Directory](http://azure.microsoft.com/documentation/services/active-directory/)
-
--   Bibliothèque Azure Active Directory : [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx)
-
--   Bibliothèque Office 365 : [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
+Consultez [Conformité et informations annexes pour Azure Rights Management](../understand-explore/compliance.md).
 
 ## Quelles sont les dernières actualités concernant la fonctionnalité de classification et d’étiquetage ?
 
@@ -223,6 +194,6 @@ Cette page de FAQ sera régulièrement actualisée. Les nouveautés seront répe
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

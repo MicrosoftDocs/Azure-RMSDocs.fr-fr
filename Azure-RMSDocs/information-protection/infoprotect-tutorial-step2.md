@@ -3,15 +3,15 @@ title: "Didacticiel de démarrage rapide Azure Information Protection Étape 2 
 description: "Étape 2 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 9125757ba2cce865d73acab341d3e3b6ff36ba57
+ms.sourcegitcommit: ba0f05619e1d13e16b8d4f6d86231b89e9326726
+ms.openlocfilehash: 9dfbeb4c887c619d07b11be0da304ac4f4e7d4a9
 
 
 ---
@@ -24,14 +24,14 @@ ms.openlocfilehash: 9125757ba2cce865d73acab341d3e3b6ff36ba57
 
 Bien qu’Azure Information Protection soit fourni avec une stratégie par défaut que vous pouvez utiliser sans configuration, nous allons examiner cette stratégie et y apporter des modifications.
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com). Si vous souhaitez tester la protection ainsi que la classification et l’étiquetage, connectez-vous en tant qu’administrateur général pour pouvoir récupérer les modèles Azure Rights Management.
+1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com). Si vous souhaitez tester la protection ainsi que la classification et l’étiquetage, connectez-vous en tant qu’administrateur général pour pouvoir récupérer les modèles Azure Rights Management.
  
 2. Dans le menu hub : cliquez sur **Nouveau** > **Sécurité + Identité** > **Azure Information Protection (préversion)** > **Créer**.
 
-    Cette opération crée le panneau **Azure Information Protection**. Vous pourrez ainsi sélectionner le service dans la liste **Parcourir** du hub la prochaine fois que vous vous connecterez au portail. 
+    Cette opération crée le panneau **Azure Information Protection**. Vous pouvez ainsi sélectionner le service dans la liste **Autres services** du hub lors de votre prochaine connexion au portail. 
 
     > [!TIP] 
-    > Sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous pourrez ainsi ignorer l’étape Parcourir la prochaine fois que vous vous connecterez au portail.
+    > Sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous n’avez ainsi pas besoin d’accéder au service lors de votre prochaine connexion au portail.
 
 3.  Le panneau principal **Azure Information Protection** indique la stratégie Information Protection par défaut qui est créée automatiquement :
     
@@ -53,7 +53,7 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
 
 2. Dans le panneau **Label: Confidential** sont répertoriés les paramètres qui sont disponibles pour chaque étiquette. Apportez les modifications suivantes :
 
-    a. Si vous avez activé Azure Rights Management : dans la section **Définir le modèle RMS pour la protection des documents et e-mails contenant cette étiquette**, si vous voyez **Sélectionner le modèle RMS à partir de**, conservez la valeur par défaut **Azure RMS**. Cliquez ensuite pour **Sélectionner un modèle RMS** sur la zone de liste déroulante et sélectionnez le modèle par défaut **\<nom_de_votre_organisation> - Confidentiel**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous verrez et sélectionnerez **VanArsdel, Ltd - Confidential**. Si vous avez désactivé ce modèle Azure Rights Management par défaut, sélectionnez un autre modèle. Toutefois, si vous sélectionnez un modèle de service, vérifiez que votre compte est compris dans l’étendue.
+    a. Si vous avez activé Azure Rights Management : dans la section **Définir le modèle RMS pour la protection des documents et e-mails contenant cette étiquette**, pour **Sélectionner le modèle RMS à partir de**, conservez la valeur par défaut **Azure RMS**. Cliquez ensuite pour **Sélectionner un modèle RMS** sur la zone de liste déroulante et sélectionnez le modèle par défaut **\<nom_de_votre_organisation> - Confidentiel**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous verrez et sélectionnerez **VanArsdel, Ltd - Confidential**. Si vous avez désactivé ce modèle Azure Rights Management par défaut, sélectionnez un autre modèle. Toutefois, si vous sélectionnez un modèle de service, vérifiez que votre compte est compris dans l’étendue.
     
     Si vous n’avez pas activé Azure Rights Management, vous ne pouvez pas utiliser cette option.
     
@@ -97,6 +97,6 @@ Maintenant que vous avez examiné la stratégie par défaut et apporté des modi
 [Étape 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

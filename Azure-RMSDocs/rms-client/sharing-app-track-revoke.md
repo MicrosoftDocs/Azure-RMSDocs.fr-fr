@@ -1,9 +1,9 @@
 ---
 title: "Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS | Azure RMS"
-description: "Après avoir protégé vos documents à l’aide de l’application de partage RMS, si votre organisation utilise Azure Rights Management plutôt que les services AD RMS (Active Directory Rights Management Services), vous pouvez suivre la façon dont les personnes utilisent vos documents protégés. Si nécessaire, vous pouvez aussi révoquer l’accès à ces documents dès lors que vous ne voulez plus qu’ils soient partagés. Pour cela, utilisez le site de suivi des documents, auquel vous pouvez accéder à partir d'un ordinateur Windows ou Mac, d'une tablette ou d'un téléphone."
+description: "Après avoir protégé vos documents à l’aide de l’application de partage RMS, vous pouvez voir comment les personnes utilisent vos documents protégés. Si nécessaire, vous pouvez aussi révoquer l’accès à ces documents dès lors que vous ne voulez plus qu’ils soient partagés."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: d27a516339a9687cb5ce117b6a2aa93730863c2d
+ms.sourcegitcommit: 44541b6fe2567d23174b26cb42fec0731f5d3f58
+ms.openlocfilehash: 2117291a7204dae86b3a6d378ab6af4d84435417
 
 
 ---

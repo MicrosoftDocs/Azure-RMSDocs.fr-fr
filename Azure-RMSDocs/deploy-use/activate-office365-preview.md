@@ -1,9 +1,9 @@
 ---
 title: "Comment activer Azure Rights Management à partir de la version préliminaire du centre d’administration Office 365| Azure RMS"
-description: "Procédez selon les instructions suivantes seulement si vous utilisez la nouvelle version préliminaire du centre d’administration Office 365 (Version Preview du centre d’administration Office 365)."
+description: "Instructions d’activation d’Azure RMS quand vous avez accès à la nouvelle version préliminaire du Centre d’administration Office 365."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/03/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 554b34c0aa2aa86a915a28d120f2ebaa9705c586
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 20217b10451bd18e898eacd82c10358137a6a42f
 
 
 ---

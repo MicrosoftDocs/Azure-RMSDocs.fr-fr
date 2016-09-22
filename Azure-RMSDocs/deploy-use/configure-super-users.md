@@ -1,9 +1,9 @@
 ---
 title: "Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données | Azure RMS"
-description: "La fonctionnalité de super utilisateur de Microsoft Azure RMS garantit que les personnes et services autorisés peuvent toujours lire et inspecter les données qu’Azure RMS protège pour votre organisation. Si nécessaire, supprimez la protection ou modifiez la protection appliquée précédemment. Un super utilisateur possède toujours des droits de propriétaire complets pour toutes les licences d’utilisation octroyées par le client RMS de l’organisation. Cette capacité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise."
+description: "Découvrez et implémentez la fonctionnalité de super utilisateur de Microsoft Azure RMS. Grâce à celle-ci, les personnes et services autorisés peuvent toujours lire et inspecter les données qu’Azure RMS protège pour votre organisation. Cette capacité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 32da3f280b7dc8fa0655ae65d904864d80b9a035
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: ac0d2c991bdd13c31c46a9579ac1a6d2150557b6
 
 
 ---

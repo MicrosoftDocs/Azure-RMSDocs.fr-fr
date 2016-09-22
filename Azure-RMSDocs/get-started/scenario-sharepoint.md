@@ -1,9 +1,9 @@
 ---
 title: "Scenario : garder le contrôle des documents stockés dans SharePoint | Azure RMS"
-description: "Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour s’assurer que les documents Office stockés dans SharePoint restent sous votre contrôle en utilisant des bibliothèques protégées. Par exemple, les documents sont automatiquement protégés contre les fuites accidentelles ou volontaires par les utilisateurs et vous pouvez bloquer l’accès au contenu même après qu’il a été téléchargé ou synchronisé. Les fichiers que vous voulez protéger peuvent être destinés à des actions de collaboration interne sur des documents de conception ou des plans ou pour d’autres livrables. Quand vous configurez des bibliothèques protégées pour SharePoint, les fichiers Office qui y sont stockés sont protégés par Azure Rights Management."
+description: "Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour s’assurer que les documents Office stockés dans SharePoint restent sous votre contrôle en utilisant des bibliothèques protégées."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: f0dfe895820d33eab1d3a69c92e881287072f554
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 048eafc41dcd03c708dca5befbef4e4b9e7113c4
 
 
 ---

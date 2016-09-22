@@ -1,9 +1,9 @@
 ---
 title: "Comment activer Azure Rights Management à partir du centre d’administration classique Office 365| Azure RMS"
-description: "Procédez selon ces instructions si vous utilisez la version classique (originale) du centre d’administration Office 365."
+description: "Instructions d’activation d’Azure RMS quand vous avez accès à la version classique (version d’origine) du Centre d’administration Office 365."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: b6c42663-af01-49d5-94bc-98963c383379
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 27667ed6c205cfa93b2d985722637255ddbd6072
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: e273e34c055846ee2aa4e5eb687592b23b9540b1
 
 
 ---

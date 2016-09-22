@@ -1,9 +1,9 @@
 ---
 title: "Migration d’AD RMS vers Azure Rights Management - Phase 2 | Azure RMS"
-description: "Utilisez les informations suivantes pour la Phase 2 de la migration d’AD RMS vers Azure Rights Management (Azure RMS). Ces procédures couvrent l’étape 5 de Migration d’AD RMS vers Azure Rights Management."
+description: "Phase 2 de la migration d’AD RMS vers Azure Rights Management (Azure RMS), couvrant l’étape 5 de la migration d’AD RMS vers Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 09/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 8e1e44eca132b3fd3c83894544d01c180db8735e
+ms.sourcegitcommit: 4184c8b78d8ca6beb88efad79e0372367c523f2f
+ms.openlocfilehash: 2d8abaec220074531724ce4e95b4aefe23d0b2d6
 
 
 ---
@@ -46,7 +46,7 @@ Pour des clients Windows :
 
             reg delete HKCU\Software\Microsoft\Office\16.0\Common\DRM /f
 
-    - Pour **Redirect_Onprem.cmd** : recherchez la ligne `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F1` et immédiatement en dessous, ajoutez les deux lignes suivantes :
+    - Pour **Redirect_Onprem.cmd** : recherchez la ligne `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F` et immédiatement en dessous, ajoutez les deux lignes suivantes :
 
             reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServerUrl" /d "https://%CloudRMS%/_wmcs/licensing" /F 
 
@@ -131,6 +131,6 @@ Redirect_OnPrem.cmd :
 Pour poursuivre la migration, passez à la [Phase 3 : Configuration des services de prise en charge](migrate-from-ad-rms-phase3.md).
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

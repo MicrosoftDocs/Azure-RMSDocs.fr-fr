@@ -1,9 +1,9 @@
 ---
 title: "Désaffectation et désactivation d’Azure Rights Management | Azure RMS"
-description: "Vous pouvez toujours contrôler si votre organisation protège le contenu à l’aide d’Azure RMS et, si vous décidez de ne plus utiliser cette solution de protection des informations, vous êtes certain de toujours avoir accès au contenu précédemment protégé. Si vous n’avez pas besoin d’un accès permanent à un contenu précédemment protégé, vous pouvez simplement désactiver le service et laisser votre abonnement Azure Rights Management expirer. Cela est approprié si, par exemple, vous avez terminé le test avant de le déployer dans un environnement de production."
+description: "Informations et instructions à prendre en compte si vous décidez de ne plus utiliser cette solution de protection des informations."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 40e4997f67a078ec781f1e7800599554858777a8
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 275cc46ba34eae246ccc52682073f1f4f90cb8a7
 
 
 ---

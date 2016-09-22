@@ -1,9 +1,9 @@
 ---
 title: "Problèmes résolus par Azure RMS | Azure RMS"
-description: "Utilisez le tableau suivant pour identifier les besoins ou problèmes métier auxquels votre entreprise peut être confrontée, et savoir de quelle façon Azure RMS peut y remédier."
+description: "Identifiez les besoins ou problèmes métier auxquels votre entreprise peut être confrontée et découvrez comment Azure RMS peut y remédier."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
-ms.openlocfilehash: 7aec5c26acb78cd85eee614a603745f3ee5938a2
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: bc25d2ee7224983d70a23177666c1a72b3db1a17
 
 
 ---

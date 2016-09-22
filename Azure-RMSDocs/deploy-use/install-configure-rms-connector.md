@@ -1,9 +1,9 @@
 ---
 title: Installation et configuration du connecteur Azure Rights Management | Azure RMS
-description: "Utilisez les informations suivantes pour vous aider à installer et à configurer le connecteur Azure Rights Management (RMS). Ces procédures couvrent les étapes 1 à 4 de Déploiement du connecteur Azure Rights Management."
+description: "Informations vous permettant d’installer et de configurer le connecteur Azure Rights Management (RMS). Ces procédures couvrent les étapes 1 à 4 de Déploiement du connecteur Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/27/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 9160188f6e905db7ef95365a0cc5cfbcb7522101
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: c4c619caca525191abe6527ca8f54c37e10cf117
 
 
 ---
@@ -217,15 +217,15 @@ Si vos serveurs de connecteur sont installés au sein d'un réseau qui ne possè
 ## Installation de l'outil d'administration du connecteur RMS sur les ordinateurs d'administration
 Vous pouvez exécuter l'outil d'administration du connecteur RMS à partir d'un ordinateur sur lequel le connecteur RMS n'est pas installé, dans la mesure où cet ordinateur est conforme à la configuration suivante :
 
--   un ordinateur physique ou virtuel exécutant Windows Server 2012 ou Windows Server 2012 R2 (toutes éditions), Windows Server 2008 R2 ou Windows Server 2008 R2 Service Pack 1 (toutes éditions), Windows 8.1, Windows 8 ou Windows 7 ;
+-   Un ordinateur physique ou virtuel exécutant Windows Server 2012 ou Windows Server 2012 R2 (toutes éditions), Windows Server 2008 R2 ou Windows Server 2008 R2 Service Pack 1 (toutes éditions), Windows 8.1, Windows 8 ou Windows 7.
 
--   1 Go de RAM minimum ;
+-   1 Go de RAM minimum.
 
--   64 Go d'espace disque minimum ;
+-   64 Go d'espace disque minimum.
 
--   au moins une interface réseau ;
+-   Au moins une interface réseau.
 
--   un accès à Internet via un pare-feu (ou un proxy web).
+-   Un accès à Internet via un pare-feu (ou un proxy web).
 
 Exécutez les fichiers suivants pour installer l'outil d'administration du connecteur RMS :
 

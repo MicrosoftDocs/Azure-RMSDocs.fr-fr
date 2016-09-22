@@ -1,9 +1,9 @@
 ---
 title: Comment les applications prennent en charge Azure Rights Management | Azure RMS
-description: "Utilisez les informations suivantes pour mieux comprendre comment les applications (comme Office Word, Excel, PowerPoint et Outlook) et les services (comme Exchange et SharePoint) les plus couramment utilisés par vos utilisateurs finaux peuvent utiliser Microsoft Azure Rights Management pour protéger les données de votre organisation."
+description: "Découvrez comment les applications (comme Office Word, Excel, PowerPoint et Outlook) et les services (comme Exchange et SharePoint) les plus couramment employés par vos utilisateurs finaux peuvent utiliser Microsoft Azure Rights Management pour protéger les données de votre organisation."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: df66b53238acecd4173b7d1bc57a611c403ec256
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: 00f64e1d22f9e3aba302dcef43d2041a4e4c9fab
 
 
 ---

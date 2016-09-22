@@ -1,9 +1,9 @@
 ---
 title: 'Autres applications prenant en charge les API RMS : installation et configuration | Azure RMS'
-description: "Utilisez les informations suivantes pour comprendre comment Azure Rights Management (Azure RMS) peut prendre en charge d’autres applications pour protéger les données de votre organisation."
+description: "Découvrez comment Azure Rights Management (Azure RMS) peut prendre en charge d’autres applications pour protéger les données de votre organisation."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: d94494160df269d6a583c3152769f84ec51f886e
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: 5536c23fe8feb8192670cbdb6ec67f6895638427
 
 
 ---

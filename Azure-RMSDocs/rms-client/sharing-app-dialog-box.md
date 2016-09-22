@@ -1,9 +1,9 @@
 ---
 title: "Options de boîte de dialogue pour l’application de partage Rights Management | Azure RMS"
-description: "Ces informations vous aident à spécifier les options des boîtes de dialogue Ajouter une protection ou Partage protégé de l’application de partage RMS. Ces boîtes de dialogue s’affichent quand vous voulez protéger un fichier à partager ou protéger un fichier sur place et que vous choisissez des autorisations personnalisées."
+description: "Informations vous permettant de spécifier les options des boîtes de dialogue Ajouter une protection ou Partage protégé de l’application de partage RMS. Ces boîtes de dialogue s’affichent quand vous voulez protéger un fichier à partager ou protéger un fichier sur place et que vous choisissez des autorisations personnalisées."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: aa0f5456d17564183317e3e693ae63adb8c597c5
+ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
+ms.openlocfilehash: 5f652b0e75350656f446c05d2464319ba46e06ad
 
 
 ---

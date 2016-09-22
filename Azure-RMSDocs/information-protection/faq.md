@@ -3,7 +3,7 @@ title: "Forum aux questions pour Azure Information Protection (préversion) | Az
 description: "Vous avez une question à propos de la préversion d’Azure Information Protection ? Vous trouverez peut-être une réponse ici."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0a66851beeedecc3bda92f840f06b56f40c0c4c1
-ms.openlocfilehash: 427b783b41d8977ff07b0fbc929bf0d7afd0721d
+ms.sourcegitcommit: 459cbe65741ea415defced844034f62cfd4654ed
+ms.openlocfilehash: 39334a5cc18f1b45eabd7cf5b4f9b891fb10a5e6
 
 
 ---
@@ -143,6 +143,10 @@ Si nécessaire, vous pouvez créer des sous-étiquettes pour mieux décrire les 
 
 Bien que vous puissiez définir actuellement des marquages visuels, une protection et des conditions aux deux niveaux, quand vous utilisez des sous-niveaux, vous devez configurer ces paramètres uniquement au sous-niveau. Si vous configurez les mêmes paramètres sur l’étiquette parente et à son sous-niveau, les paramètres au sous-niveau sont prioritaires.
 
+## Quand un e-mail est étiqueté, les pièces jointes reçoivent-elles automatiquement le même étiquetage ?
+
+Non. Quand vous étiquetez un e-mail comportant des pièces jointes, ces dernières n’héritent pas de la même étiquette. Les pièces jointes peuvent rester sans étiquette ou conserver une étiquette appliquée séparément. Toutefois, si l’étiquette de l’e-mail applique une protection, cette protection est appliquée aux pièces jointes.
+
 ## Comment faire pour intégrer les solutions DLP et autres applications avec Azure Information Protection ?
 
 Azure Information Protection utilisant des métadonnées persistantes pour la classification, notamment une étiquette de texte en clair, ces informations peuvent être lues par les solutions DLP et d’autres applications. Dans les fichiers, ces métadonnées sont stockées dans des propriétés personnalisées. Dans les e-mails, ces informations figurent dans les en-têtes.
@@ -187,6 +191,6 @@ Ensuite, accédez à notre [site Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

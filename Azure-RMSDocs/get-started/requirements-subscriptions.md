@@ -1,9 +1,9 @@
 ---
 title: "Conditions requises pour Azure RMS &#58; abonnements cloud | Azure RMS"
-description: "Pour utiliser Azure Rights Management (Azure RMS), votre organisation doit être titulaire d’au moins un des abonnements suivants, avec un nombre suffisant de licences pour les utilisateurs et des services qui protègent les fichiers et les messages électroniques. Si vous avez un service qui applique une protection pour les utilisateurs (propriétaires des fichiers ou des messages électroniques), ces utilisateurs doivent avoir une de ces licences. Les utilisateurs qui se contentent de consommer (par exemple, lire et modifier) ces données protégées n’ont pas besoin de licence"
+description: "Identifiez les abonnements que vous pouvez utiliser pour déployer Azure Rights Management (Azure RMS) dans votre organisation."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 6a16e890-3c3e-4f47-80ca-176a34bdf8bc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 4cac0f039e69e31943bb8773d0761f7e654cc940
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 5c0597ee3882c25fd5c04fbd89990806754bda1a
 
 
 ---

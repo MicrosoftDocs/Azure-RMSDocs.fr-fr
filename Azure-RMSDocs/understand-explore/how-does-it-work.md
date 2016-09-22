@@ -1,9 +1,9 @@
 ---
 title: "Fonctionnement d’Azure RMS | Azure RMS"
-description: "Concernant le fonctionnement d'Azure RMS, il est important de comprendre que le service Rights Management et, plus généralement, Microsoft ne consultent ni ne stockent vos données dans le cadre du processus de protection des informations. Les informations que vous protégez ne sont jamais stockées dans Azure, sauf si vous indiquez expressément votre volonté de les y stocker, ou si vous utilisez un autre service cloud qui les stocke dans Azure. Azure RMS rend simplement les données d’un document illisibles pour toute personne autre que des utilisateurs et services autorisés."
+description: "Découvrez en détail le fonctionnement d’Azure RMS, les contrôles de chiffrement qu’il utilise et le déroulement de ce processus à l’aide de diagrammes détaillés."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/02/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 527af70532f390330fdb65bc27b04bb366289748
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: 5fa410e2c2b84a3626cb06a85dc2511b17e085ae
 
 
 ---

@@ -2,15 +2,15 @@
 title: "Comment modifier ou personnaliser une étiquette existante pour Azure Information Protection | Azure Information Protection"
 description: "Vous pouvez modifier ou optimiser les étiquettes que les utilisateurs voient dans la barre Information Protection en les configurant dans la stratégie Azure Information Protection."
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 61ceff2fb2a964495d16bb5e801a5ee7bfa60832
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: 2ee4f945307744678df8b842aab2be219f8ef582
 
 
 ---
@@ -28,9 +28,9 @@ Par exemple, vous pouvez modifier un nom d’étiquette ou de sous-étiquette, u
 Procédez comme suit pour modifier une étiquette.
 
 
-1. Si vous ne l’avez pas déjà fait, connectez-vous au [portail Azure](https://portal.azure.com), puis accédez au panneau **Azure Information Protection**. 
+1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com), puis accédez au panneau **Azure Information Protection**. 
     
-    Par exemple, cliquez sur **Parcourir** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
 2. Dans le panneau **Azure Information Protection**, sélectionnez l’étiquette à modifier, puis apportez vos modifications dans le panneau **Étiquette** et dans les panneaux suivants en fonction de vos besoins.
 
@@ -52,6 +52,6 @@ Pour plus d’informations sur la configuration des options disponibles pour une
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

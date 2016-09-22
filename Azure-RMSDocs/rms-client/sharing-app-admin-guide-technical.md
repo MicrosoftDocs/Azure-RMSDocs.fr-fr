@@ -1,9 +1,9 @@
 ---
 title: "Présentation technique de l’application de partage Microsoft Rights Management | Azure RMS"
-description: "L’application de partage Microsoft Rights Management est une application téléchargeable facultative pour Microsoft Windows et d’autres plateformes. Elle offre les fonctionnalités suivantes."
+description: "Détails techniques destinés aux administrateurs de réseaux d’entreprise en charge du déploiement de l’application de partage RMS pour Windows."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/15/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: d5e1c7969d2125c4f66d6dcea3bde0c81a7de1f3
+ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
+ms.openlocfilehash: 2a3640590ca2729da71e847c03823719e92bcb0f
 
 
 ---

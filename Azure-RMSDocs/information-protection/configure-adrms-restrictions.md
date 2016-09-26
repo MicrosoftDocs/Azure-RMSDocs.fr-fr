@@ -2,15 +2,15 @@
 title: "Restrictions liées à HYOK | Azure Information Protection"
 description: Identify the limitations, prerequisites, and recommendations if you select AD RMS protection with Azure Information Protection. This solution is sometimes referred to as "hold your own key" (HYOK).
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: fe0f492b94cbcc437c722daae9c3c56820593566
+ms.sourcegitcommit: 593ec90a781a41e3b93a4c31d22a3ca547b49bc7
+ms.openlocfilehash: faf3180ca290f1668233663099b924ff199524d9
 
 
 ---
@@ -43,6 +43,16 @@ Dans ce scénario HYOK, les stratégies de droits et la clé privée de l’orga
 > Utilisez uniquement cette configuration quand cela est nécessaire et limitez-la aux documents et e-mails qui l’exigent. La protection AD RMS ne fournit pas les avantages associés à la protection Azure RMS. Son objectif est plutôt d’offrir « l’opacité des données à tout prix ».
 
 Les utilisateurs ne peuvent pas faire la distinction entre une étiquette qui utilise la protection AD RMS et une autre qui utilise la protection Azure RMS. En raison des restrictions associées à la protection AD RMS, veillez à indiquer clairement quand les utilisateurs doivent sélectionner des étiquettes qui appliquent la protection AD RMS.
+
+## Limitations
+
+En plus de ne pas prendre en charge les avantages associés à l’utilisation de la protection Azure RMS, l’utilisation conjuguée d’AD RMS et d’Azure Information Protection s’accompagne des limitations suivantes :
+
+- Absence de prise en charge d’Office 2010 ou Office 2007.
+
+- Si vous utilisez aussi la protection Azure RMS : n’utilisez pas l’option **Ne pas transférer** quand vous configurez une étiquette pour la protection Azure RMS. Vous devez aussi demander aux utilisateurs de ne pas sélectionner manuellement cette option dans Outlook. 
+
+    Si l’option Ne pas transférer est appliquée par une étiquette ou manuellement par les utilisateurs, l’option risque d’être appliquée par votre déploiement AD RMS, et non par le service de gestion des droits Azure voulu. Dans ce scénario, les personnes extérieures avec qui vous partagez ne pourront pas ouvrir les messages électroniques auxquels cette option Ne pas transférer a été appliquée.
 
 ## Exigences liées à HYOK
 
@@ -94,6 +104,6 @@ Pour configurer une étiquette pour la protection AD RMS, consultez [Comment con
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -3,7 +3,7 @@ title: "Migration d’AD RMS vers Azure Rights Management | Azure RMS"
 description: "Instructions à suivre pour migrer votre déploiement Active Directory Rights Management Services (AD RMS) vers Azure Rights Management (Azure RMS). Après la migration, les utilisateurs auront toujours accès aux documents et messages électroniques que votre organisation a protégés à l'aide d'AD RMS, et le contenu nouvellement protégé utilisera Azure RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: 6aa75f5e6b326068951b3d4d65f337c15a475029
+ms.sourcegitcommit: 5c20772240961bdd3052e55a19eaca21ef7da003
+ms.openlocfilehash: 01c107979265abf0d34060eccf09ca32c0086ab8
 
 
 ---
@@ -46,7 +46,7 @@ Avant de procéder à la migration vers Azure RMS, assurez-vous que les conditi
         
     - Mode de chiffrement 2 :
     
-        - Vos serveurs et vos clients AD RMS doivent s’exécuter en Mode de chiffrement 2 avant de pouvoir commencer la migration vers Azure RMS. Pour plus d’informations, consultez [Modes de chiffrement d’AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+        - Vos serveurs et vos clients AD RMS doivent s’exécuter en Mode de chiffrement 2 avant de pouvoir commencer la migration vers Azure RMS. Même si la clé de certificat de licence serveur (SLC) doit utiliser le mode de chiffrement 2, les clés configurées précédemment pour le mode de chiffrement 1 sont prises en charge dans Azure RMS en tant que clés archivées. Pour plus d’informations sur les mode de chiffrement et pour savoir comment passer au mode de chiffrement 2, consultez [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx) (Modes de chiffrement AD RMS).
         
     - Toutes les topologies AD RMS valides sont prises en charge :
     
@@ -184,6 +184,6 @@ Pour démarrer la migration, passez à la [Phase 1 : Configuration côté serv
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

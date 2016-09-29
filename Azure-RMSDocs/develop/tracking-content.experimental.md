@@ -163,6 +163,6 @@ Le client doit simplement ouvrir un navigateur avec l’URL appropriée. Le port
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

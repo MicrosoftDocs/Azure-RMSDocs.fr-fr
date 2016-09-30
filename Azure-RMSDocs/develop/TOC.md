@@ -1,4 +1,4 @@
-# [Comprendre et explorer](/rights-management/understand-explore/azure-rights-management)
+# [Comprendre et explorer](/rights-management/understand-explore/what-is-information-protection)
 # [Mise en route](/rights-management/get-started/requirements-azure-rms)
 # [Planifier et concevoir](/rights-management/plan-design/deployment-roadmap)
 # [Déployer et utiliser le service](/rights-management/deploy-use/activate-service)
@@ -6,12 +6,12 @@
 # [Développer et personnaliser des applications](developers-guide.md)
 ## [Guide du développeur](developers-guide.md)
 ## [Rights Management SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
-### [Vue d'ensemble](overview.md)
+### [Vue d’ensemble](overview.md)
 ### [Prise en main](get-started.md)
 #### [Nouveautés](release-notes.md)
 #### [Configurer l’environnement de développement](setup-Developer-environment.md)
 #### [Configuration pour Android](android-sdk.md)
-#### [Configuration pour Linux](linux-setup.md)
+#### [Installation Linux](linux-setup.md)
 #### [Configuration pour iOS et OS X](ios-sdk.md)
 #### [Configuration pour Windows Phone](windows-phone-apps.md)
 #### [Configuration pour le Windows Store](winrt-sdk.md)
@@ -32,7 +32,7 @@
 #### [Informations de référence sur l’API iOS / OS X](/rights-management/sdk/4.2/api/iOS/iOS)
 #### [Référence de l’API Windows](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement)
 ## [Rights Management SDK 2.1](microsoft-information-protection-and-control-client-portal.md)
-### [Vue d'ensemble](ad-rms-overview.md)
+### [Vue d’ensemble](ad-rms-overview.md)
 #### [Client](ad-rms-client.md)
 #### [Serveur](ad-rms-server.md)
 ### [Prise en main](getting-started-with-ad-rms-2-0.md)
@@ -57,7 +57,7 @@
 #### [Configuration de l’API de fichier](file-api-configuration.md)
 #### [Formats de fichier pris en charge](supported-file-formats.md)
 #### [Plateformes prises en charge](supported-platforms.md)
-#### [Présentation des restrictions d’utilisation](understanding-usage-restrictions.md)
+#### [Comprendre les restrictions d’utilisation](understanding-usage-restrictions.md)
 #### [Informations de référence sur les restrictions d’utilisation](usage-restriction-reference.md)
 ### [Référence API](api-reference-2-1.md)
 #### [Constantes](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/constants)
@@ -65,9 +65,8 @@
 #### [Fonctions](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/functions)
 #### [Structures](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/structures)
 #### [Codes d'erreur](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/Error codes)
-# [Azure Information Protection (préversion)](/rights-management/information-protection/what-is-information-protection)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

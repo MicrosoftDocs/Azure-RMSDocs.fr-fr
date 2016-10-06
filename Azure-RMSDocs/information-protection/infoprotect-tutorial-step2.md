@@ -1,102 +1,13 @@
 ---
-title: "Didacticiel de démarrage rapide Azure Information Protection Étape 2 | Azure Information Protection"
-description: "Étape 2 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en seulement quatre étapes et moins de 15 minutes."
-author: cabailey
-manager: mbaldwin
-ms.date: 09/14/2016
-ms.topic: article
-ms.prod: 
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
+redirect_url: /information-protection/get-started/infoprotect-tutorial-step2
 translationtype: Human Translation
-ms.sourcegitcommit: ba0f05619e1d13e16b8d4f6d86231b89e9326726
-ms.openlocfilehash: 9dfbeb4c887c619d07b11be0da304ac4f4e7d4a9
-
+ms.sourcegitcommit: 3336b75fbc2fce1c9260afb217d909b2b772ed03
+ms.openlocfilehash: 6cbc4cd9c210a09b498756dac63fa2e04bc3b0bf
 
 ---
 
-# Étape 2 : Configurer et publier la stratégie Azure Information Protection
-
->*S’applique à : Azure Information Protection (préversion)*
-
-**[ Cette information est préliminaire et susceptible d'être modifiée. ]**
-
-Bien qu’Azure Information Protection soit fourni avec une stratégie par défaut que vous pouvez utiliser sans configuration, nous allons examiner cette stratégie et y apporter des modifications.
-
-1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com). Si vous souhaitez tester la protection ainsi que la classification et l’étiquetage, connectez-vous en tant qu’administrateur général pour pouvoir récupérer les modèles Azure Rights Management.
- 
-2. Dans le menu hub : cliquez sur **Nouveau** > **Sécurité + Identité** > **Azure Information Protection (préversion)** > **Créer**.
-
-    Cette opération crée le panneau **Azure Information Protection**. Vous pouvez ainsi sélectionner le service dans la liste **Autres services** du hub lors de votre prochaine connexion au portail. 
-
-    > [!TIP] 
-    > Sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous n’avez ainsi pas besoin d’accéder au service lors de votre prochaine connexion au portail.
-
-3.  Le panneau principal **Azure Information Protection** indique la stratégie Information Protection par défaut qui est créée automatiquement :
-    
-    - Étiquettes de classification : **Personal**, **Public**, **Internal**, **Confidential** et **Secret**. Lisez l’info-bulle de chacune d’elles pour comprendre la façon dont les étiquettes sont censées être utilisées. Notez que **Secret** a deux sous-étiquettes (**All Company** et **My Group**), pour illustrer comment une classification peut avoir des sous-catégories.
-
-    - Avec les paramètres par défaut, les étiquettes **Internal**, **Confidential** et **Secret** ont des marquages visuels configurés (par exemple : pied de page, en-tête, filigrane), et la protection n’est définie pour aucune des étiquettes. Les trois paramètres globaux ne sont pas non plus définis. Ainsi, aucun document ou e-mail n’est obligé d’avoir une étiquette, il n’y a aucune étiquette par défaut et les utilisateurs n’ont pas à fournir de justification quand ils abaissent le niveau de classification.
-
-    ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](../media/info-protect-policy.png)
-
-Pour notre didacticiel, nous allons modifier deux de ces paramètres globaux pour que vous puissiez voir leur fonctionnement :
-
--  **Select the default label** (Sélectionner l’étiquette par défaut) : affectez la valeur **Internal**.
-
-- **Users must provide justification to set a lower classification label, remove a label, or remove protection (Les utilisateurs doivent fournir une justification pour définir une étiquette de classification d’un niveau inférieur, supprimer une étiquette ou enlever la protection)** : affectez la valeur **On**.
-
-Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Confidential** :
-
-1. Cliquez sur l’étiquette **Confidential**.
-
-2. Dans le panneau **Label: Confidential** sont répertoriés les paramètres qui sont disponibles pour chaque étiquette. Apportez les modifications suivantes :
-
-    a. Si vous avez activé Azure Rights Management : dans la section **Définir le modèle RMS pour la protection des documents et e-mails contenant cette étiquette**, pour **Sélectionner le modèle RMS à partir de**, conservez la valeur par défaut **Azure RMS**. Cliquez ensuite pour **Sélectionner un modèle RMS** sur la zone de liste déroulante et sélectionnez le modèle par défaut **\<nom_de_votre_organisation> - Confidentiel**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous verrez et sélectionnerez **VanArsdel, Ltd - Confidential**. Si vous avez désactivé ce modèle Azure Rights Management par défaut, sélectionnez un autre modèle. Toutefois, si vous sélectionnez un modèle de service, vérifiez que votre compte est compris dans l’étendue.
-    
-    Si vous n’avez pas activé Azure Rights Management, vous ne pouvez pas utiliser cette option.
-    
-    b. **Documents with this label have a watermark** (Les documents avec cette étiquette ont un filigrane) : cliquez sur **On** et, dans la zone **Text**, tapez le nom de votre organisation. Dans notre exemple, **VanArsdel, Ltd**. 
-    
-    c. Cliquez sur **Add a new condition** (Ajouter une nouvelle condition) puis, dans le panneau **Condition**, sélectionnez les éléments suivants :
-    
-    - **Choose the type of condition** (Choisir le type de condition) : **Built-in** (intégré)
-    
-    - **Select built-in** (Sélectionner intégré) : **Credit Card Number** (Numéro de carte de crédit)
-    
-    - **Minimum number of occurrences** (Nombre minimal d’occurrences : **1**
-    
-    - **Compter les occurrences avec des valeurs uniques uniquement** : **Activé**
-    
-    - Cliquez sur **Save** pour revenir au panneau **Label: Confidential**.
-
-3. Dans le panneau **Label: Confidential**, vous verrez que **Credit Card Number** est affiché comme **CONDITION NAME**, avec **1** **OCCURRENCES**.
-
-4. Conservez la valeur **Select how this label is applied** (Sélectionner comment cette étiquette est appliquée) : **Recommended**.
-
-5. Dans la zone **Enter notes for internal housekeeping** (Entrer des remarques de maintenance interne), tapez **À des fins de test uniquement**.
-
-6. Cliquez sur **Save** dans ce panneau **Label: Confidential** et, dans le panneau **Azure Information Protection** principal, cliquez à nouveau sur **Save**.
-
-7. Maintenant que nous avons effectué et enregistré nos modifications, nous souhaitons qu’elles soient accessibles aux utilisateurs. Cliquez sur **Publish**, puis sur **Yes** pour confirmer.
-
-![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut configurée](../media/info-protect-policy-configured.png)
-
-Vous pouvez fermer le portail Azure, ou le laisser ouvert pour essayer des options de configuration supplémentaires après avoir terminé ce didacticiel.
-
-Maintenant que vous avez examiné la stratégie par défaut et apporté des modifications, l’étape suivante consiste à installer le client Azure Information Protection.
-
-|Pour en savoir plus|Informations supplémentaires|
-|--------------------------------|--------------------------|
-|À propos des options de configuration de la stratégie|[Configuration de la stratégie Azure Information Protection](configure-policy.md)|
 
 
->[!div class="step-by-step"]
-[&#171; Étape 1](infoprotect-tutorial-step1.md)
-[Étape 3 &#187;](infoprotect-tutorial-step3.md)
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

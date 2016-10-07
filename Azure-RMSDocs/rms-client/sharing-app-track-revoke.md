@@ -3,7 +3,7 @@ title: "Suivre et révoquer vos documents quand vous utilisez l’application de
 description: "Après avoir protégé vos documents à l’aide de l’application de partage RMS, vous pouvez voir comment les personnes utilisent vos documents protégés. Si nécessaire, vous pouvez aussi révoquer l’accès à ces documents dès lors que vous ne voulez plus qu’ils soient partagés."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
-ms.openlocfilehash: b8cc9dd2984f7853e1fbacebbb4f6934f918200e
+ms.sourcegitcommit: 13579b8cb5516a1d7390db81957c140b8e980982
+ms.openlocfilehash: 1cd55e9c6200876a4d9921e3b60eb8fb58845d0c
 
 
 ---
@@ -28,7 +28,7 @@ Après avoir protégé vos documents à l’aide de l’application de partage R
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation/player" frameborder="0" allowfullscreen></iframe>
 </div>
 
-Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos documents. Sous réserve que votre organisation dispose d’un [abonnement qui prend en charge le suivi et la révocation de documents](https://go.microsoft.com/fwlink/?LinkId=827589) et qu’une licence vous a été attribuée dans le cadre de cet abonnement, vous pouvez voir qui a essayé d’ouvrir les fichiers que vous avez protégés, si ces personnes y sont parvenues (ont bien été authentifiées) ou pas, le nombre de fois où elles ont tenté d’accéder au document, ainsi que leur emplacement à ce moment-là. De plus :
+Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos documents. Sous réserve que votre organisation dispose d’un [abonnement qui prend en charge le suivi et la révocation de documents](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) et qu’une licence vous a été attribuée dans le cadre de cet abonnement, vous pouvez voir qui a essayé d’ouvrir les fichiers que vous avez protégés, si ces personnes y sont parvenues (ont bien été authentifiées) ou pas, le nombre de fois où elles ont tenté d’accéder au document, ainsi que leur emplacement à ce moment-là. De plus :
 
 -   Si vous souhaitez arrêter le partage d’un document : cliquez sur **Révoquer l’accès**, notez la durée pendant laquelle le document restera disponible et choisissez d’informer ou non les utilisateurs que vous révoquez l’accès au document partagé, puis envoyez un message personnalisé. La révocation d’un document partagé n’a pas pour effet de supprimer celui-ci, mais les utilisateurs autorisés à l’ouvrir ne le peuvent plus.
 
@@ -106,6 +106,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

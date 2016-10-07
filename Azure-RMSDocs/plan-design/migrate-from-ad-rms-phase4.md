@@ -3,7 +3,7 @@ title: "Migration d’AD RMS vers Azure Information Protection - Phase 4 | A
 description: "Phase 4 de la migration d’AD RMS vers Azure Information Protection, couvrant les étapes 8 et 9 de la migration d’AD RMS vers Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d7e21c2bb07e82bc243e5ab01c0a21aa0fe274d1
-ms.openlocfilehash: 78b61500cb1e596ae469ecad650ab3d5ee27566d
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: f86e712ee9d2df1e466ceaabcaa0890dca71da53
 
 
 ---
@@ -32,7 +32,7 @@ Facultatif : Supprimez le point de connexion de service d’Active Directory pou
 
 Surveillez l’activité de vos serveurs AD RMS, par exemple, en vérifiant [les demandes dans le rapport d’intégrité système](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), la [Table ServiceRequest](http://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) ou [l’audit de l’accès utilisateur au contenu protégé](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). Après avoir confirmé que les clients RMS ne communiquent plus avec ces serveurs, et que les clients utilisent avec succès Azure Information Protection, vous pouvez supprimer le rôle serveur AD RMS de ces serveurs. Si vous utilisez des serveurs dédiés, vous pouvez prendre la précaution de les arrêter pendant un certain temps pour vous assurer qu’aucun problème n’est signalé, qui pourrait nécessiter un redémarrage de ces serveurs pour garantir la continuité de service pendant que vous étudiez la raison pour laquelle les clients n’utilisent pas Azure Information Protection.
 
-Après la désaffectation de vos serveurs AD RMS, vous pouvez réviser vos modèles dans le portail Azure Classic et les consolider afin que les utilisateurs aient moins de choix, les reconfigurer ou même ajouter de nouveaux modèles. Il serait également judicieux de publier les modèles par défaut. Pour plus d’informations, consultez [Configuration de modèles personnalisés pour Azure Rights Management](../deploy-use/configure-custom-templates.md).
+Après la désaffectation de vos serveurs AD RMS, vous pouvez réviser vos modèles dans le portail Azure Classic et les consolider afin que les utilisateurs aient moins de choix, les reconfigurer ou même ajouter de nouveaux modèles. Il serait également judicieux de publier les modèles par défaut. Pour plus d’informations, consultez [Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
 ## Étape 9. Renouvellement de votre clé de locataire Azure Information Protection
 Cette étape s’applique seulement si vous avez choisi une topologie de clé de locataire Gérée par Microsoft et non pas Gérée par le client (BYOK avec Azure Key Vault).
@@ -53,6 +53,6 @@ Maintenant que vous avez terminé la migration, passez en revue la [feuille de r
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

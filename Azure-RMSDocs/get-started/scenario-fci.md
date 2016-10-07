@@ -3,7 +3,7 @@ title: "Scénario - Protéger les fichiers situés sur un partage de serveur de 
 description: "Ce scénario et la documentation utilisateur associée utilisent la protection Azure Rights Management pour protéger en bloc tous les fichiers situés sur un serveur de fichiers pour vous assurer que seuls les employés de votre organisation peuvent y accéder, même s’ils sont copiés et enregistrés sur un stockage qui n’est pas sous le contrôle de votre service informatique ou envoyés par e-mail à d’autres utilisateurs."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
-ms.openlocfilehash: a12276bcf2072ac812ae6b68d9e1cdacbe46adaa
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
 
 
 ---
@@ -46,7 +46,7 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
 |---------------|--------------------------------|
 |Azure Rights Management est activé|[Activation d'Azure Rights Management](../deploy-use/activate-service.md)|
 |Vous avez synchronisé vos comptes d'utilisateurs Active Directory locaux avec Azure Active Directory ou Office 365, y compris leurs adresses électroniques. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et Azure Rights Management.|[Préparation d’Azure Information Protection](../plan-design/prepare.md)|
-|Une des causes suivantes :<br /><br />- Pour utiliser un modèle par défaut pour tous les utilisateurs, consultez : Vous n’avez pas archivé le modèle par défaut &lt;nom de l’organisation&gt; - Confidentiel<br /><br />- Pour utiliser un modèle personnalisé pour des utilisateurs spécifiques, consultez : Vous avez créé et publié ce modèle personnalisé|[Configuration de modèles personnalisés pour Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|Une des causes suivantes :<br /><br />- Pour utiliser un modèle par défaut pour tous les utilisateurs, consultez : Vous n’avez pas archivé le modèle par défaut &lt;nom de l’organisation&gt; - Confidentiel<br /><br />- Pour utiliser un modèle personnalisé pour des utilisateurs spécifiques, consultez : Vous avez créé et publié ce modèle personnalisé|[Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |L'application de partage Rights Management est déployée sur les ordinateurs des utilisateurs qui exécutent Windows|[Déploiement automatique de l'application de partage Microsoft Rights Management](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Vous avez téléchargé l’outil Protection RMS et configuré les conditions préalables pour Azure RMS|Pour obtenir des instructions relatives au téléchargement de l’outil et aux conditions préalables : [Applets de commande de Protection RMS](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Pour configurer d’autres conditions préalables pour Azure RMS, telles que le compte du principal du service : [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
@@ -155,6 +155,6 @@ Périodiquement, le fichier sera de nouveau protégé, ce qui ajoutera une nouve
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

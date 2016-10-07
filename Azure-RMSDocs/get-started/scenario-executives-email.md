@@ -3,7 +3,7 @@ title: "Scénario : échange sécurisé d’informations confidentielles entre 
 description: "Ce scénario et la documentation utilisateur associée s’appuient sur la protection Azure Rights Management pour permettre à des cadres de s’échanger des e-mails et des pièces jointes en toute sécurité, tandis que des stratégies limitent automatiquement l’accès aux cadres, sans que ceux-ci aient à prendre des mesures particulières."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
-ms.openlocfilehash: fb25a5f97580e7d912016bbeb304e6470f8cbba0
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 8481c275609e74ff5e09a0397e0e3a0346aa4430
 
 
 ---
@@ -45,10 +45,10 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
 |Condition requise|Si vous avez besoin d’informations supplémentaires|
 |---------------|--------------------------------|
 |Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory.<br /><br />- Un groupe à extension messagerie nommé **Cadres**, dont tous les cadres sont membres<br /><br />- Un groupe nommé **Administrateurs RMS** et tous les administrateurs chargés de configurer Azure RMS sont membres de ce groupe|[Préparation d’Azure Information Protection](../plan-design/prepare.md)|
-|Votre clé de locataire Azure Information Protection est gérée par Microsoft ; vous n’utilisez pas BYOK|[Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md)|
+|Votre clé de locataire Azure Information Protection est gérée par Microsoft ; vous n’utilisez pas BYOK|[Planification et implémentation de la clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md)|
 |Azure Rights Management est activé|[Activation d'Azure Rights Management](../deploy-use/activate-service.md)|
 |Une de ces configurations :<br /><br />- Exchange Online est activé pour Azure Rights Management<br /><br />- Le connecteur RMS est installé et configuré pour Exchange sur site|Pour Exchange Online : consultez les informations indiquées dans [Exchange Online : configuration de la gestion des droits relatifs à l’information](../deploy-use/configure-office365.md#exchange-online-irm-configuration).<br /><br />Pour Exchange sur site : [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
-|Vous avez configuré un modèle personnalisé comme décrit ci-après|[Configuration de modèles personnalisés pour Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|Vous avez configuré un modèle personnalisé comme décrit ci-après|[Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |Vous avez configuré une règle de protection de transport pour IRM, comme décrit plus loin dans cet article|Pour Exchange Online : [Flux de messagerie ou règles de transport](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />Pour Exchange 2013 : [Créer une règle de protection de transport](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))<br /><br />Pour Exchange 2010 : [Créer une règle de protection de transport](https://technet.microsoft.com/library/dd302432(v=exchg.141))|
 
 ### Pour configurer le modèle personnalisé pour les cadres
@@ -132,6 +132,6 @@ Lors de l’envoi d’informations confidentielles de votre société à un autr
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

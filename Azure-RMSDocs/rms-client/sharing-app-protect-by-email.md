@@ -1,32 +1,32 @@
 ---
-title: "Protéger un fichier que vous partagez par e-mail à l’aide de l’application de partage Rights Management | Azure RMS"
+title: "Protéger un fichier que vous partagez par e-mail à l’aide de l’application de partage Rights Management | Azure Information Protection"
 description: "Instructions à suivre pour partager un document par e-mail en toute sécurité."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: ff5dd6afaa454c20f35c237e94947dcec9e737f6
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: b4467f73dd9d107681961f99ee038ed889e25b2d
 
 
 ---
 
 # Protéger un fichier partagé par courrier électronique à l’aide de l’application de partage Rights Management
 
->*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Lorsque vous protégez un fichier que vous le partagez par e-mail, il crée une nouvelle version du fichier d’origine. Le fichier d’origine reste non protégé et la nouvelle version est protégée et automatiquement jointe à un e-mail que vous envoyez ensuite.
 
-Dans certains cas (pour les fichiers créés par Microsoft Word, Excel et PowerPoint), l’application de partage RMS crée deux versions du fichier et les joint au message. La deuxième version du fichier est dotée d’une extension **.ppdf** et il est un cliché instantané PDF du fichier. Cette version du fichier garantit que les destinataires peuvent toujours lire le fichier, même s’ils n’ont pas l’application que vous avez utilisée pour le créer. Cela est souvent le cas quand vous lisez vos e-mails sur un appareil mobile et que vous souhaitez afficher les pièces jointes. Pour ouvrir le fichier, vous avez simplement besoin de l’application de partage RMS. Vous pouvez ensuite lire le fichier joint, mais vous ne pourrez pas le modifier sans ouvrir l’autre version du fichier dans l’application prenant en charge RMS.
+Dans certains cas (pour les fichiers créés par Microsoft Word, Excel et PowerPoint), l’application de partage RMS crée deux versions du fichier et les joint au message. La deuxième version du fichier est dotée d’une extension **.ppdf** et il est un cliché instantané PDF du fichier. Cette version du fichier garantit que les destinataires peuvent toujours lire le fichier, même s’ils n’ont pas l’application que vous avez utilisée pour le créer. Cela est souvent le cas quand vous lisez vos e-mails sur un appareil mobile et que vous souhaitez afficher les pièces jointes. Pour ouvrir le fichier, vous avez simplement besoin de l’application de partage RMS. Vous pouvez ensuite lire le fichier joint, mais vous ne pourrez pas le modifier sans ouvrir l’autre version du fichier dans l’application prenant en charge un service Rights Management.
 
-Si votre organisation utilise Azure RMS, vous pouvez effectuer le suivi de vos fichiers grâce au partage :
+Si votre organisation utilise Azure Information Protection, vous pouvez effectuer le suivi de vos fichiers grâce au partage :
 
 -   Sélectionnez une option pour recevoir des e-mails lorsque quelqu’un tente d’ouvrir ces pièces jointes protégées. Chaque fois que quelqu’un accède au fichier, vous recevrez une notification vous indiquant qui a tenté d’ouvrir le fichier et à quel moment, et si cette personne a réussi ou non (elle a bien été authentifiée).
 
@@ -69,7 +69,7 @@ En plus de partager un fichier protégé à l’aide d’Outlook, vous pouvez é
 
     Exemple :
 
-    ![E-mail pour Azure RMS](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
+    ![E-mail pour Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
     Vous vous demandez : [qu’est-ce que le fichier .ppdf créé automatiquement ?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)
 
@@ -92,6 +92,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

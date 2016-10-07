@@ -1,47 +1,49 @@
 ---
-title: "Conditions requises pour Azure RMS : Applications | Azure RMS"
-description: "Identifiez les applications qui prennent en charge Azure RMS en mode natif. RMS est étroitement intégré à ces applications grâce à l’utilisation d’API RMS pour la prise en charge des restrictions d’utilisation."
+title: "Prise en charge des applications pour la protection des données | Azure Information Protection"
+description: "Identifiez les applications qui utilisent les API RMS pour prendre en charge le service Azure Rights Management d’Azure Information Protection en mode natif."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 14eec6f0ad9c1b9abaeff1c70cfbcb66011397a0
+ms.sourcegitcommit: a809edc63801912e836878e9205643d7d52188f1
+ms.openlocfilehash: 872e962bc4c08000fea9f81d48dece28a39d91dd
 
 
 ---
 
 
-# Conditions requises pour Azure RMS : Applications
+# Applications prenant en charge la protection des données Azure Rights Management
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
 
-Utilisez le tableau suivant pour identifier les applications qui prennent en charge Azure RMS en mode natif. RMS est étroitement intégré à ces applications grâce à l’utilisation d’API RMS pour la prise en charge des restrictions d’utilisation. Ces applications sont également appelées « applications compatibles avec RMS ».
+Consultez le tableau suivant pour identifier les applications prenant en charge le service Azure Rights Management (Azure RMS) en mode natif, qui assure la protection des données pour Azure Information Protection. 
+
+Pour ces applications, la prise en charge de Rights Management est étroitement intégrée à l’aide des API Rights Management pour prendre en charge les restrictions d’utilisation. Ces applications sont également appelées « applications compatibles avec RMS ».
 
 Sauf indication contraire, les fonctionnalités prises en charge s’appliquent à Azure RMS et à AD RMS. Par ailleurs, la prise en charge d’AD RMS sur iOS, Android, OS X et Windows Phone 8.1 nécessite [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx).
 
 Informations sur les colonnes du tableau :
 
--   **PDF protégé** : fichiers avec l’extension de nom de fichier .ppdf qui sont créés automatiquement quand vous utilisez l’application de partage RMS pour partager des fichiers Office et des fichiers PDF par e-mail. L’application de partage RMS comprend un lecteur de fichiers PDF protégés. Si vous avez précédemment créé des fichiers PDF protégés avec Azure RMS or AD RMS, utilisez Foxit Reader ou Nitro Pro pour continuer à lire ces fichiers sur des appareils Windows, iOS et Android.
+-   **PDF protégé** : fichiers avec l’extension de nom de fichier .ppdf qui sont créés automatiquement quand vous utilisez l’application de partage RMS pour partager des fichiers Office et des fichiers PDF par e-mail. L’application de partage RMS et l’application Azure Information Protection pour iOS et Android comprennent un lecteur de fichiers PDF protégés. Si vous avez précédemment créé des fichiers PDF protégés avec Azure RMS or AD RMS, utilisez Foxit Reader ou Nitro Pro pour continuer à lire ces fichiers sur des appareils Windows, iOS et Android.
 
 -   **E-mail** : les clients de messagerie répertoriés peuvent protéger le message électronique proprement dit, ce qui a pour effet de protéger automatiquement tout fichier joint. Dans ce scénario, la fonctionnalité d’aperçu du client peut afficher le contenu protégé (message et pièce jointe) aux destinataires autorisés. Cependant, si une pièce jointe est protégée mais pas le message électronique qui la contient, la fonctionnalité d’aperçu du client ne peut pas afficher la pièce jointe protégée aux destinataires autorisés.
 
--   **Autres types de fichier** : les fichiers texte et image incluent les fichiers ayant une extension de nom de fichier .txt, .xml, .jpg et jpeg. Ces fichiers changent d’extension de nom de fichier une fois qu’ils sont protégés en mode natif par RMS et ils basculent en lecture seule. Les fichiers qui ne peuvent pas être protégés en mode natif ont une extension de nom de fichier .pfile une fois qu’ils sont protégés de manière générique par RMS. Pour plus d’informations, consultez le [guide d’administration de l’application de partage Rights Management](../rms-client/sharing-app-admin-guide.md).
+-   **Autres types de fichier** : les fichiers texte et image incluent les fichiers ayant une extension de nom de fichier .txt, .xml, .jpg et .jpeg. Ces fichiers changent d’extension de nom de fichier une fois qu’ils sont protégés en mode natif par Rights Management, puis passent en lecture seule. Les fichiers qui ne peuvent pas être protégés en mode natif ont une extension de nom de fichier .pfile une fois qu’ils sont protégés de manière générique par Rights Management. Pour plus d’informations, consultez le [guide d’administration de l’application de partage Rights Management](../rms-client/sharing-app-admin-guide.md).
 
 
 |**Système d’exploitation de l’appareil**|Word, Excel, PowerPoint|PDF protégé|Courrier électronique|Autres types de fichiers|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
 |**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Applications Office Mobile (Azure RMS uniquement) [[1]](#footnote-1)<br /><br />Office Online [[2]](#footnote-2)|Gaaiho Doc<br /><br />Client PDF GigaTrust Desktop pour Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />Application de partage RMS|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Outlook Web App (OWA) [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|Application de partage RMS pour Windows : texte, images, pfile<br /><br />Siemens JT2Go : fichiers JT (Windows 10 uniquement)|
-|**iOS**|Office pour iPad et iPhone [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />Docs TITUS|Foxit Reader<br /><br />Application de partage RMS [[1]](#footnote-1)<br /><br />Docs TITUS|Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Office pour iPad et iPhone [[4]](#footnote-4)<br /><br />OWA pour iOS [[3]](#footnote-3)<br /><br />TITUS Mail|Application de partage RMS [[1]](#footnote-1) : texte, images, pfile<br /><br />Docs TITUS : Pfile|
-|**Android**|GigaTrust App pour Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (Azure RMS uniquement)[[1]](#footnote-1)|GigaTrust App pour Android<br /><br />Foxit Reader<br /><br />Application de partage RMS [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />GigaTrust App pour Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook pour Android [[4]](#footnote-4)<br /><br />OWA pour Android [[3]](#footnote-3) et [[7]](#footnote-7)<br /><br />Samsung Email (S3 et versions ultérieures) [[7]](#footnote-7)<br /><br />TITUS Classification for Mobile|Application de partage RMS [[1]](#footnote-1) : texte, images, pfile|
+|**iOS**|Office pour iPad et iPhone [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />Docs TITUS|Application Azure Information Protection [[1]](#footnote-1)<br /><br /> Foxit Reader<br /><br />Docs TITUS|Application Azure Information Protection [[1]](#footnote-1)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Office pour iPad et iPhone [[4]](#footnote-4)<br /><br />OWA pour iOS [[3]](#footnote-3)<br /><br />TITUS Mail|Application Azure Information Protection [[1]](#footnote-1) : texte, images, pfile<br /><br />Docs TITUS : Pfile|
+|**Android**|GigaTrust App pour Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (Azure RMS uniquement)[[1]](#footnote-1)|Application Azure Information Protection [[1]](#footnote-1)<br /><br />GigaTrust App pour Android<br /><br />Foxit Reader<br /><br />Application de partage RMS [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />Application Azure Information Protection [[1]](#footnote-1)<br /><br />GigaTrust App pour Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook pour Android [[4]](#footnote-4)<br /><br />OWA pour Android [[3]](#footnote-3) et [[7]](#footnote-7)<br /><br />Samsung Email (S3 et versions ultérieures) [[7]](#footnote-7)<br /><br />TITUS Classification for Mobile|Application Azure Information Protection [[1]](#footnote-1) : texte, images, pfile|
 |**OS X**|Office 2011 (AD RMS uniquement)<br /><br />Office 2016 pour Mac<br /><br />Office Online [[2]](#footnote-2)|Foxit Reader<br /><br />Application de partage RMS [[1]](#footnote-1)|Outlook 2011 (AD RMS uniquement)<br /><br />Outlook 2016 pour Mac<br /><br />Outlook pour Mac|Application de partage RMS [[1]](#footnote-1) : texte, images, pfile|
 |**Windows 10 Mobile**|Applications Office Mobile (Azure RMS uniquement)[[1]](#footnote-1)|Non pris en charge|Citrix WorxMail [[6]](#footnote-6)<br /><br />Courrier Outlook|Non pris en charge|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[2]](#footnote-2)|Non pris en charge|Outlook 2013 RT<br /><br />Application de messagerie pour Windows<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go : fichiers JT|
@@ -49,27 +51,27 @@ Informations sur les colonnes du tableau :
 |**Blackberry 10**|Non pris en charge|Non pris en charge|Messagerie Blackberry [[4]](#footnote-4)|Non pris en charge|
 
 
-###### Note 1
+##### Note 1
 Prend en charge l’affichage de contenu protégé.
 
-###### Note 2 
+##### Note 2 
 Prend en charge l’affichage de contenu protégé dans SharePoint Online, OneDrive Entreprise et Outlook Web Access.
 
-###### Note 3
+##### Note 3
 Si un destinataire possédant une boîte aux lettres Exchange sur site reçoit un message électronique protégé, il ne peut ouvrir ce contenu que dans un client de messagerie riche, tel qu’Outlook.  Ce contenu ne peut être ouvert à partir d’Outlook Web Access.
 
-###### Note 4
+##### Note 4
 Utilise l’IRM Exchange ActiveSync, qui doit être activée par l’administrateur Exchange. Les utilisateurs peuvent afficher, répondre et répondre à tous pour les messages électroniques protégés, mais ne peuvent pas protéger eux-mêmes de nouveaux messages.
 
 Si un destinataire possédant une boîte aux lettres Exchange sur site reçoit un message électronique protégé en provenance d’une autre organisation utilisant Exchange, il ne peut ouvrir ce contenu que dans un client de messagerie riche, tel qu’Outlook.  Ce contenu ne peut être ouvert à partir sur un appareil utilisant l’IRM Exchange ActiveSync.
 
-###### Note 5
+##### Note 5
 Prend en charge l’affichage et l’édition de documents protégés. Pour plus d’informations, consultez le billet suivant sur le blog Office : [Azure Rights Management support comes to Office for iPad and iPhone](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)
 
-###### Note 6
+##### Note 6
 Pour plus d’informations, consultez la [documentation produit Citrix pour WorxMail](http://docs.citrix.com/en-us/worx-mobile-apps/10/xmob-worx-mail.html).
 
-###### Note 7
+##### Note 7
 Pour plus d’informations, consultez le billet suivant sur le blog Office : [OWA for Android now available on select devices](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)
 
 ## Plus d’informations sur la prise en charge d’Azure RMS pour Office
@@ -90,6 +92,14 @@ Azure RMS avec Office Professionnel Plus 2010 ou Office Professionnel 2010
 
 - Non pris en charge sur Windows 10
 
+## Pour plus d’informations sur l’application Azure Information Protection pour iOS et Android
+
+L’application Azure Information Protection pour iOS et Android remplace l’application de partage RMS pour ces appareils. Elle fournit les mêmes fonctionnalités et, en plus, prend en charge les e-mails protégés par des droits et les fichiers PDF protégés par des droits sur SharePoint Online.
+
+Si vos appareils iOS et Android sont inscrits par Microsoft Intune, vous pouvez déployer et gérer cette application à l’aide d’une application gérée par une stratégie. Pour plus d’informations, consultez [Configurer et déployer des stratégies de gestion des applications mobiles dans la console Microsoft Intune](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) dans la documentation Intune. Pour l’étape 2 de cette documentation Intune, suivez les instructions pour publier une application gérée par une stratégie.
+
+Pour plus d’informations, consultez [FAQs for Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md) (Forum Aux Questions concernant l’application Azure Information Protection pour iOS et Android).
+
 
 ## Plus d’informations sur l’application de partage Rights Management
 
@@ -101,17 +111,12 @@ Pour plus d’informations sur l’application de partage Rights Management pour
 
 Pour plus d’informations sur l’application de partage Rights Management pour plateformes mobiles, reportez-vous aux ressources suivantes :
 
--   Téléchargez l’application correspondante en utilisant les liens figurant dans la page [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970)
-
--   Si vous avez Microsoft Intune, vous pouvez déployer et gérer l’application à l’aide d’une application gérée par une stratégie : 
-
-    -   Pour les appareils iOS et Android inscrits par Intune : [Configurer et déployer des stratégies de gestion des applications mobiles dans la console Microsoft Intune](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)
-
-    -   Pour les appareils Android qui ne sont pas inscrits par Intune : [Créer et déployer des stratégies de gestion des applications mobiles à l’aide de Microsoft Intune](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
+-   Téléchargez l’application correspondante à l’aide des liens de la page [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970)
 
 -   [FAQ relatif à l'application de partage Microsoft Rights Management pour plateformes mobiles](https://technet.microsoft.com/dn451248)
 
-
+> [!NOTE]
+> L’application de partage RMS pour iOS et Android est maintenant remplacée par l’application Azure Information Protection.
 
 ## Plus d’informations sur les autres applications qui prennent en charge Azure RMS
 
@@ -140,13 +145,13 @@ De plus, l’application de partage RMS présente les restrictions suivantes :
 
 
 ## Étapes suivantes
-Pour vérifier les autres conditions requises, consultez [Conditions requises pour Azure Rights Management](requirements-azure-rms.md).
+Pour vérifier les autres conditions requises, consultez [Configuration requise pour Azure Information Protection](requirements-azure-rms.md).
 
-Pour plus d’informations sur la prise en charge d’Azure RMS par les applications les plus courantes, consultez [Mode de prise en charge d’Azure Rights Management par les applications](../understand-explore/applications-support.md).
+Pour plus d’informations sur la prise en charge d’Azure RMS par les applications les plus courantes, consultez [Comment les applications prennent en charge le service Azure Rights Management](../understand-explore/applications-support.md).
 
 Pour plus d’informations sur la façon de configurer les applications les plus courantes pour Azure RMS, consultez [Configuration d’applications pour Azure Rights Management](../deploy-use/configure-applications.md).
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

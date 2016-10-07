@@ -1,28 +1,28 @@
 ---
-title: "Scenario : garder le contrôle des documents stockés dans SharePoint | Azure RMS"
-description: "Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour s’assurer que les documents Office stockés dans SharePoint restent sous votre contrôle en utilisant des bibliothèques protégées."
+title: "Scénario : garder le contrôle des documents stockés dans SharePoint | Azure Information Protection"
+description: "Ce scénario et la documentation utilisateur associée s’appuient sur la protection Azure Rights Management pour s’assurer que les documents Office stockés dans SharePoint restent sous votre contrôle en utilisant des bibliothèques protégées."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 048eafc41dcd03c708dca5befbef4e4b9e7113c4
+ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
+ms.openlocfilehash: e0e6442e077d6899cbbf88ae2889908e93592815
 
 
 ---
 
 # Scenario : garder le contrôle des documents stockés dans SharePoint
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
-Ce scénario et la documentation utilisateur associée s’appuient sur Azure Rights Management pour s’assurer que les documents Office stockés dans SharePoint restent sous votre contrôle en utilisant des bibliothèques protégées. Par exemple, les documents sont automatiquement protégés contre les fuites accidentelles ou volontaires par les utilisateurs et vous pouvez bloquer l’accès au contenu même après qu’il a été téléchargé ou synchronisé. Les fichiers que vous voulez protéger peuvent être destinés à des actions de collaboration interne sur des documents de conception ou des plans ou pour d’autres livrables. Quand vous configurez des bibliothèques protégées pour SharePoint, les fichiers Office qui y sont stockés sont protégés par Azure Rights Management.
+Ce scénario et la documentation utilisateur associée s’appuient sur la technologie Azure Rights Management d’Azure Information Protection pour s’assurer que les documents Office stockés dans SharePoint restent sous votre contrôle en utilisant des bibliothèques protégées. Par exemple, les documents sont automatiquement protégés contre les fuites accidentelles ou volontaires par les utilisateurs et vous pouvez bloquer l’accès au contenu même après qu’il a été téléchargé ou synchronisé. Les fichiers que vous voulez protéger peuvent être destinés à des actions de collaboration interne sur des documents de conception ou des plans ou pour d’autres livrables. Quand vous configurez des bibliothèques protégées pour SharePoint, les fichiers Office qui y sont stockés sont protégés par Azure Rights Management.
 
 Les instructions conviennent pour l’ensemble des situations suivantes :
 
@@ -42,9 +42,9 @@ Pour pouvoir appliquer ce scénario, les éléments suivants doivent être en pl
 
 |Condition requise|Si vous avez besoin d'informations supplémentaires|
 |---------------|--------------------------------|
-|Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory|[Préparation pour Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Azure Rights Management est activé|[Activation d'Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Si vous utilisez SharePoint Server : Déployez le connecteur RMS et configurez-le pour SharePoint|[Déploiement du connecteur Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
+|Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory|[Préparation d’Azure Information Protection](../plan-design/prepare.md)|
+|Azure Rights Management est activé|[Activation d'Azure Rights Management](../deploy-use/activate-service.md)|
+|Si vous utilisez SharePoint Server : Déployez le connecteur RMS et configurez-le pour SharePoint|[Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
 |Configurer des autorisations pour le site SharePoint à protéger|[Gérer les autorisations pour une liste, une bibliothèque, un dossier, un document ou un élément de liste](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Application de la Gestion des droits relatifs à l'information à une liste ou à une bibliothèque](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 |Configurez SharePoint pour IRM et les bibliothèques protégées|[Configuration de la gestion des droits relatifs à l'information dans le centre d'administration SharePoint](https://support.office.com/en-us/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)<br /><br />[Application de la Gestion des droits relatifs à l'information à une liste ou à une bibliothèque](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 
@@ -105,6 +105,6 @@ Vous ne pouvez pas charger des documents sur le site Rapports et prévisions de 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -1,19 +1,19 @@
 ---
-title: "Créer, configurer et publier un modèle personnalisé | Azure RMS"
+title: "Créer, configurer et publier un modèle personnalisé | Azure Information Protection"
 description: "Instructions à suivre pour créer et gérer des modèles personnalisés dans le portail Azure Classic. Les modèles permettent aux utilisateurs finaux et à d’autres administrateurs d’appliquer facilement des stratégies appropriées qui protègent les documents et les e-mails."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 6875d8d4755dc791879838d1f46be87e2e043a3b
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 30cd611e128217b2760e66b3391a0702ae0ed7a6
 
 
 ---
@@ -21,12 +21,12 @@ ms.openlocfilehash: 6875d8d4755dc791879838d1f46be87e2e043a3b
 
 # Créer, configurer et publier un modèle personnalisé
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
 
 Vous créez et gérez des modèles personnalisés dans le portail Azure Classic. Pour cela, vous pouvez accéder directement au portail Azure Classic ou vous connecter au Centre d’administration Office 365, puis choisir **Fonctionnalités avancées** de Rights Management. Vous êtes alors redirigé vers le portail Azure Classic.
 
-Vous devez être administrateur global pour créer et gérer des modèles dans le portail Azure Classic. Si vous avez attribué le rôle d’administrateur global pour Azure RMS à d’autres utilisateurs, ils peuvent également créer et gérer des modèles, mais ils doivent utiliser [PowerShell](configure-templates-with-powershell.md). Pour plus d’informations, consultez [Dois-je être administrateur général pour configurer Azure RMS ou puis-je déléguer cette opération à d’autres administrateurs ?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
+Vous devez être administrateur global pour créer et gérer des modèles dans le portail Azure Classic. Si vous avez attribué le rôle d’administrateur général pour le service Azure Rights Management à d’autres utilisateurs, ils peuvent également créer et gérer des modèles, mais ils doivent utiliser [PowerShell](configure-templates-with-powershell.md). Pour plus d’informations, consultez [Dois-je être administrateur général pour configurer Azure RMS ou puis-je déléguer cette opération à d’autres administrateurs ?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
 
 Utilisez les procédures suivantes pour créer, configurer et publier des modèles personnalisés pour la Gestion des droits.
 
@@ -45,7 +45,7 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
         4.  Dans la section **Rights Management** , cliquez sur **fonctionnalités avancées**.
 
             > [!NOTE]
-            > Si vous n’avez pas activé Rights Management, cliquez d’abord sur **activer** et confirmez votre action. Pour plus d’informations, consultez [Activation d’Azure Rights Management](activate-service.md).
+            > Si le service Rights Management n’est pas activé, cliquez d’abord sur **activer** et confirmez votre action. Pour plus d’informations, consultez [Activation d’Azure Rights Management](activate-service.md).
             > 
             > Si vous n’avez pas encore cliqué sur **Fonctionnalités avancées**, une fois Rights Management activé, suivez les instructions à l’écran pour obtenir un abonnement Azure gratuit, nécessaire pour accéder au portail Azure Classic.
 
@@ -166,6 +166,6 @@ Pour apporter des modifications à votre modèle, sélectionnez-le, puis utilise
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

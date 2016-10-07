@@ -1,33 +1,33 @@
 ---
-title: "Afficher et utiliser des fichiers qui ont été protégés par Rights Management | Azure RMS"
+title: "Afficher et utiliser des fichiers qui ont été protégés par Rights Management | Azure Information Protection"
 description: "Instructions à suivre pour afficher et utiliser un fichier protégé. Cette procédure nécessite l’installation de l’application de partage Rights Management (RMS)."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 8d93968c51ad1037e5424df4ee9b724e0c1f89a2
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 3f906815da2acd8f52bd742306d9936a71229c97
 
 
 ---
 
 # Afficher et utiliser des fichiers qui ont été protégés par Rights Management
 
->*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Quand [l’application de partage Rights Management (RMS) est installée sur votre ordinateur](install-sharing-app.md), vous pouvez afficher un fichier protégé simplement en double-cliquant dessus. Le fichier peut être une pièce jointe à un message électronique, ou un fichier apparaissant dans l'Explorateur de fichiers.
 
 > [!NOTE]
-> Pour que vous puissiez afficher le fichier protégé, RMS doit confirmer que vous y êtes autorisé. Pour ce faire, il vérifie vos nom d'utilisateur et mot de passe. Dans certains cas, cette opération peut être mise en cache de sorte que vous ne voyez pas d'invite vous demandant vos informations d'identification. Dans d'autres cas, vous êtes invité à fournir vos informations d'identification.
+> Pour que vous puissiez afficher le fichier protégé, le service Rights Management doit confirmer que vous y êtes autorisé. Pour ce faire, il vérifie vos nom d’utilisateur et mot de passe. Dans certains cas, cette opération peut être mise en cache de sorte que vous ne voyez pas d'invite vous demandant vos informations d'identification. Dans d'autres cas, vous êtes invité à fournir vos informations d'identification.
 >
-> Si votre organisation n'utilise pas Azure Rights Management (Azure RMS) ou AD RMS, vous pouvez demander un compte gratuit acceptant vos informations d'identification afin de pouvoir ouvrir des fichiers protégés à l'aide de RMS :
+> Si votre organisation n’utilise pas Azure Information Protection ou AD RMS, vous pouvez demander un compte gratuit acceptant vos informations d’identification afin de pouvoir ouvrir des fichiers protégés à l’aide de RMS :
 >
 > -   Pour demander ce compte, cliquez sur le lien [RMS for Individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
@@ -68,7 +68,7 @@ La manière dont le fichier s'ouvre dépend de la manière dont il a été prot�
 
 
 
-Pour obtenir la liste complète des extensions de nom de fichier prises en charge par Rights Management, consultez la section [Types de fichier pris en charge et extensions de nom de fichier](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) du [Guide de l’administrateur de l’application de partage Rights Management](sharing-app-admin-guide.md). Si votre extension de nom de fichier n’est pas répertoriée, faites une recherche sur le web pour déterminer si cette extension de nom de fichier est prise en charge par une autre application.
+Pour obtenir la liste complète des extensions de nom de fichier prises en charge par les services Rights Management, consultez la section [Types de fichier pris en charge et extensions de nom de fichier](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) du [Guide de l’administrateur de l’application de partage Rights Management](sharing-app-admin-guide.md). Si votre extension de nom de fichier n’est pas répertoriée, faites une recherche sur le web pour déterminer si cette extension de nom de fichier est prise en charge par une autre application.
 
 > [!NOTE]
 > Si, après avoir confirmé que le fichier est bien protégé par Rights Management, il ne s’ouvre pas, téléchargez et utilisez l’[outil Analyseur RMS](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Suivez les instructions contenues dans l’outil pour rechercher la présence de problèmes éventuels sur votre ordinateur qui pourraient empêcher l’ouverture d’un document protégé.
@@ -90,7 +90,7 @@ Si, après avoir ouvert le fichier protégé, vous voulez le lire, mais aussi, p
 
 - **Autres extensions de nom de fichier**
 
-    Pour utiliser de tels fichiers, votre appareil doit disposer d'une application comprenant Rights Management. Les applications de ce type sont qualifiées de « compatibles RMS ». Les applications Office 2016, Office 2013 et Office 2010 (telles que Word, Excel, PowerPoint et Outlook) sont des exemples d’applications compatibles avec Rights Management. Toutefois, des applications ne provenant pas de Microsoft, telles que celles publiées par d'autres éditeurs de logiciels ou vos propres applications métier, peuvent également être compatibles Rights Management.
+    Pour utiliser de tels fichiers, votre appareil doit disposer d’une application comprenant la protection Rights Management. Les applications de ce type sont qualifiées de « compatibles RMS ». Les applications Office 2016, Office 2013 et Office 2010 (telles que Word, Excel, PowerPoint et Outlook) sont des exemples d’applications compatibles avec Rights Management. Toutefois, des applications ne provenant pas de Microsoft, telles que celles publiées par d'autres éditeurs de logiciels ou vos propres applications métier, peuvent également être compatibles Rights Management.
 
     Les applications compatibles Rights Management savent comment ouvrir des fichiers protégés par d'autres applications compatibles Rights Management. Elles conservent également la protection appliquée au fichier, même si vous modifiez celui-ci ou l'enregistrez sous un autre nom ou dans un autre emplacement. Ces applications vous permettent d'utiliser le fichier conformément aux autorisations qui lui sont appliquées de sorte que, si vous disposez des autorisations nécessaires, vous l'utiliser. Par exemple, il se peut que vous puissiez modifier le fichier mais pas l'imprimer.
 
@@ -107,6 +107,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

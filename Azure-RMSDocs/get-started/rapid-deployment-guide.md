@@ -1,42 +1,42 @@
 ---
-title: "Guide de déploiement rapide pour Azure Rights Management | Azure RMS"
-description: "Guide vous permettant de déployer et d’utiliser plus rapidement Azure Rights Management (Azure RMS) pour protéger les données de votre organisation. Commencez par choisir un scénario spécifique à implémenter dans une liste."
+title: "Guide de déploiement rapide pour Azure Information Protection | Azure Information Protection"
+description: "Guide vous permettant de déployer et d’utiliser plus rapidement Azure Information Protection pour protéger les données de votre organisation. Commencez par choisir un scénario spécifique à implémenter dans une liste."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 715290d2417df3b386d8e5b8a784e964355d4e15
+ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
+ms.openlocfilehash: 914362cbabe2e929b988e0f922c3848e8ca7771f
 
 
 ---
 
 # Guide de déploiement rapide pour Azure Rights Management
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
-Utilisez ce guide en complément des informations de configuration fournies dans la section **Déployer et utiliser** pour vous aider à déployer et à utiliser rapidement Azure Rights Management (Azure RMS) en choisissant dans une liste de scénarios spécifiques à implémenter.
+Utilisez ce guide en complément des informations de configuration fournies dans la section **Déployer et utiliser** pour vous aider à déployer et à utiliser rapidement Azure Information Protection en effectuant votre choix dans une liste de scénarios spécifiques à implémenter.
 
 Ces scénarios contiennent des instructions destinées aux administrateurs et une documentation associée à l’adresse des utilisateurs finaux. Avant de fournir la documentation (instructions ou annonces) à vos utilisateurs finaux, vous devez la personnaliser en fonction de vos besoins et des flux de travail existants. Un exemple d’instructions ou d’annonce montre à quoi peut ressembler la documentation destinée aux utilisateurs finaux.
 
 Chaque scénario comporte une liste d’exigences et des liens vers des informations supplémentaires qui vous aideront à déployer ces solutions indépendamment et dans n’importe quel ordre.
 
-Les scénarios répertoriés ici sont un échantillon des plus populaires. Azure RMS pouvant servir à protéger des informations dans un grand nombre de scénarios à la fois au sein d’une organisation et parmi plusieurs organisations, vous pouvez définir vos propres scénarios et les déployer dans votre environnement et pour vos utilisateurs à l’aide de ce même modèle. En se concentrant sur des scénarios spécifiques, votre déploiement d’Azure RMS répondra au mieux à vos objectifs professionnels. De plus, d’après notre expérience, les utilisateurs ont tendance à suivre les instructions spécifiques à un scénario beaucoup plus étroitement et systématiquement que des conseils généraux tels que « protéger les documents sensibles ».
+Les scénarios répertoriés ici sont un échantillon des plus populaires. Étant donné qu’Azure Information Protection peut être utilisé pour protéger des informations dans un grand nombre de scénarios à la fois au sein d’une organisation et entre plusieurs organisations, vous pouvez définir vos propres scénarios et les déployer dans votre environnement et pour vos utilisateurs à l’aide de ce même modèle. En se concentrant sur des scénarios spécifiques, votre déploiement d’Azure Information Protection répondra au mieux à vos objectifs professionnels. De plus, d’après notre expérience, les utilisateurs ont tendance à suivre les instructions spécifiques à un scénario beaucoup plus étroitement et systématiquement que des conseils généraux tels que « protéger les documents sensibles ».
 
 Avant de déployer ces solutions, vous souhaiterez peut-être envoyer une annonce aux utilisateurs finaux pour leur signaler que certains changements vont avoir lieu pour aider à protéger les données de l’entreprise, et qu’ils seront peut-être mis à contribution. Un exemple d’annonce est fourni après le tableau suivant.
 
 > [!NOTE]
 > Si vous avez des questions et des commentaires concernant ce guide, utilisez les mécanismes de commentaires indiqués sur cette page ou envoyez un e-mail à [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
-## Scénarios pour Azure RMS
-Pour vous aider à déployer rapidement Azure RMS pour résoudre des problèmes spécifiques, choisissez les scénarios qui correspondent le plus à vos objectifs commerciaux et adaptez-les si nécessaire.
+## Scénarios pour Azure Information Protection
+Pour vous aider à déployer rapidement Azure Information Protection pour résoudre des problèmes professionnels spécifiques, choisissez les scénarios qui correspondent le plus à vos objectifs commerciaux et adaptez-les si nécessaire.
 
 
 
@@ -124,14 +124,14 @@ Voir : [Scénario - Configurer des dossiers de travail pour la protection perma
 
 
 ## Annonce pour les utilisateurs avant le déploiement
-Vous pouvez utiliser l’exemple de message de communication suivant pour signaler aux utilisateurs que le déploiement d’Azure RMS va impliquer certains changements. Copiez et collez le texte suivant, et faites-le envoyer par e-mail à tous les utilisateurs par un membre de l’équipe dirigeante de votre organisation, de préférence le Directeur général. Apportez au texte toute modification susceptible de le rendre plus pertinent pour vos utilisateurs et votre organisation.
+Vous pouvez utiliser l’exemple de message de communication suivant pour signaler aux utilisateurs que le déploiement d’Azure Information Protection va impliquer certains changements. Copiez et collez le texte suivant, et faites-le envoyer par e-mail à tous les utilisateurs par un membre de l’équipe dirigeante de votre organisation, de préférence le Directeur général. Apportez au texte toute modification susceptible de le rendre plus pertinent pour vos utilisateurs et votre organisation.
 
 ![Exemple de bannière de documentation utilisateur pour un déploiement rapide Azure RMS](../media/AzRMS_ExampleBanner.png)
 
 ### Modifications que nous apportons pour protéger nos données
 Avez-vous déjà souhaité bloquer l’accès à un document envoyé par erreur à vos partenaires ? Vous êtes-vous déjà demandé s’il existait un moyen de savoir lesquels de vos clients avaient lu les dernières nouveautés sur les produits que vous leur aviez envoyées ? Souhaiteriez-vous pouvoir partager des informations de produits confidentielles sans risquer qu’elles soient transférées à des personnes qui ne doivent pas les voir ?
 
-Vous pourrez bientôt bénéficier de toutes ces fonctionnalités, car le service Informatique va déployer des modifications qui implémentent Microsoft Azure Rights Management (Azure RMS) comme solution de protection des données d’entreprise. Une grande partie de ces modifications appliqueront automatiquement la protection dont nous avons besoin, sans que vous ayez à faire quoi que ce soit de différent. En revanche, certaines modifications pourront nécessiter un comportement différent de votre part. Dans ce cas, le service Informatique vous enverra des informations et des instructions, et vous pourrez bénéficier d’une aide de la part du Support technique en cas de question ou de problème.
+Vous pourrez bientôt bénéficier de toutes ces fonctionnalités, car le service Informatique va déployer des modifications qui implémentent Microsoft Azure Information Protection comme solution de protection des données d’entreprise. Une grande partie de ces modifications appliqueront automatiquement la protection dont nous avons besoin, sans que vous ayez à faire quoi que ce soit de différent. En revanche, certaines modifications pourront nécessiter un comportement différent de votre part. Dans ce cas, le service Informatique vous enverra des informations et des instructions, et vous pourrez bénéficier d’une aide de la part du Support technique en cas de question ou de problème.
 
 Par exemple, pour effectuer le suivi (et, si nécessaire, la révocation) des documents que vous partagez, vous utiliserez le site de suivi des documents :
 
@@ -146,6 +146,6 @@ Les solutions que nous implémentons nous aideront à protéger nos données les
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -4,18 +4,18 @@ description:
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: e47a440a1cc69351baacdabb38774986f60b7443
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 703a30d1dc48856c896cc9763cbf6ea947773d2a
 
 
 ---
@@ -52,7 +52,7 @@ Cette rubrique contient des informations importantes sur cette version du Kit RM
 
 ## Mise à jour de mai 2015
 
--   **Applications de service et service RMS cloud** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) a besoin de trois informations : la clé symétrique, **AppPrincipalId** et **TenantBposId**. La rubrique traitant de ce sujet a été mise à jour pour fournir des conseils sur le traitement de ces informations d’acquisition. Pour cette mise à jour, consultez la version mise à jour de [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Applications de service et service RMS cloud** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) a besoin de trois informations : la clé symétrique, **AppPrincipalId** et **TenantBposId**. La rubrique traitant de ce sujet a été mise à jour pour fournir des conseils sur le traitement de ces informations d’acquisition. Pour cette mise à jour, consultez la version mise à jour de [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## Mise à jour d’avril 2015
 
@@ -61,7 +61,7 @@ Cette rubrique contient des informations importantes sur cette version du Kit RM
 
     **Remarque** Nous n’exposerons plus l’indicateur **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** dans notre API. Cela signifie que les futures applications ne seront plus compilées si elles font référence à cet indicateur. Toutefois les applications déjà créées continueront de fonctionner dans la mesure où nous respecterons de manière privée l’indicateur dans le code de l’API. Il est encore possible de tirer parti de l’ancien indicateur obsolète des algorithmes de chiffrement en modifiant simplement un indicateur. Pour plus d’informations, voir [Utilisation du chiffrement](working-with-encryption.md).
 
--   Les **applications en mode serveur**, celles utilisant une [**valeur du mode API**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER) de **IPC\_API\_MODE\_SERVER**, n’ont plus besoin d’installer de manifeste d’application. Vous pouvez tester votre application sur un serveur RMS de production et vous n’êtes pas obligé d’obtenir une licence de production quand vous passez à l’environnement de production. Pour plus d’informations sur les applications en mode serveur, consultez [Types d’applications](application-types.md).
+-   Les **applications en mode serveur**, celles utilisant une [**valeur du mode API**](/information-protection/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER) de **IPC\_API\_MODE\_SERVER**, n’ont plus besoin d’installer de manifeste d’application. Vous pouvez tester votre application sur un serveur RMS de production et vous n’êtes pas obligé d’obtenir une licence de production quand vous passez à l’environnement de production. Pour plus d’informations sur les applications en mode serveur, consultez [Types d’applications](application-types.md).
 -   La **journalisation** est maintenant implémentée par le biais du fichier et de méthodes de suivi d’événements pour Windows.
 -   Si l’exécution s’effectue sur un **ordinateur Windows 7 SP1 ou Windows Server 2008 R2**, lisez la remarque suivante sous « Remarques importantes à l’attention des développeurs ».
 
@@ -91,18 +91,18 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 
     **Remarque** D’autres types et structures de données de prise en charge, non répertoriés ici, ont été ajoutés pour les extensions d’API de fichier. Toutes les rubriques mises à jour pour cette version sont marquées comme étant **préliminaires et susceptible d’être modifiées**.
 
-    -   [**IpcfOpenFileOnHandle**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfopenfileonhandle)
-    -   [**IpcfOpenFileOnILockBytes**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfopenfileonilockbytes)
-    -   [**IpcfGetFileProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfgetfileproperty)
-    -   [**IpcfLogicalFileRangeToRawFileRange**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcflogicalfilerangetorawfilerange)
-    -   [**IpcfReadFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfreadfile)
-    -   [**IpcfSetEndOfFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfsetendoffile)
-    -   [**IpcfWriteFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfwritefile)
+    -   [**IpcfOpenFileOnHandle**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfopenfileonhandle)
+    -   [**IpcfOpenFileOnILockBytes**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfopenfileonilockbytes)
+    -   [**IpcfGetFileProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfgetfileproperty)
+    -   [**IpcfLogicalFileRangeToRawFileRange**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcflogicalfilerangetorawfilerange)
+    -   [**IpcfReadFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfreadfile)
+    -   [**IpcfSetEndOfFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfsetendoffile)
+    -   [**IpcfWriteFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfwritefile)
 
 ## Mise à jour d’avril 2014
 
 -   L’**utilisation de la mémoire d’API de fichier**, en particulier pour les PFiles volumineux, a été considérablement améliorée.
--   L’**ID de contenu** est désormais accessible en écriture par le biais de la propriété **IPC\_LI\_CONTENT\_ID**. Pour plus d’informations, voir [**Types de propriété de licence**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA).
+-   L’**ID de contenu** est désormais accessible en écriture par le biais de la propriété **IPC\_LI\_CONTENT\_ID**. Pour plus d’informations, voir [**Types de propriété de licence**](/information-protection/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA).
 -   **Besoin du manifeste de production** : le manifeste n’est plus nécessaire lorsque votre service ou application compatible avec RMS est exécutée en mode serveur. Pour plus d’informations, voir [Types d’applications](application-types.md).
 -   **Mises à jour de la documentation**
 
@@ -132,17 +132,17 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 
       - Tous les fichiers, à l’exception des fichiers système et des fichiers Office peuvent être protégés à l’aide du format de fichier de protégé par RMS (PFile).
 
-    L’API de fichier est implémentée par le biais des quatre nouvelles fonctions suivantes : [IpcfDecryptFile](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile), [IpcfEncryptFile](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfile), [IpcfGetSerializedLicenseFromFile](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfgetserializedlicensefromfile) et [IpcfIsFileEncrypted](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfisfileencrypted).
+    L’API de fichier est implémentée par le biais des quatre nouvelles fonctions suivantes : [IpcfDecryptFile](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile), [IpcfEncryptFile](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile), [IpcfGetSerializedLicenseFromFile](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfgetserializedlicensefromfile) et [IpcfIsFileEncrypted](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfisfileencrypted).
 
     L’API de fichier exige l’installation du client RMS (Rights Management Services) 2.1 sur l’ordinateur client et la connectivité de l’ordinateur avec un serveur RMS. Pour plus d’informations sur le serveur RMS, sur le client RMS et sur leurs fonctionnalités, consultez le contenu TechNet de la [documentation RMS pour les professionnels de l’informatique](https://technet.microsoft.com/en-us/library/cc771234(v=ws.10).aspx).
 
 -   **Problème** : lors de la création d’une nouvelle licence, les droits de propriété doivent être accordés de manière explicite.
 
-    **Solution** : votre application doit ajouter explicitement les droits **Propriétaire** au propriétaire de la licence lors de la création d’une nouvelle licence à l’aide de [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). Pour plus d’informations, voir [Ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md).
+    **Solution** : votre application doit ajouter explicitement les droits **Propriétaire** au propriétaire de la licence lors de la création d’une nouvelle licence à l’aide de [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). Pour plus d’informations, voir [Ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md).
 
--   **Problème** : si une application appelle [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) ou [**IpcUnprotectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow) deux fois pour la même fenêtre à l’aide de son handle, RMS SDK 2.1 renvoie un échec dans le **HRESULT**.
+-   **Problème** : si une application appelle [**IpcProtectWindow**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) ou [**IpcUnprotectWindow**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow) deux fois pour la même fenêtre à l’aide de son handle, RMS SDK 2.1 renvoie un échec dans le **HRESULT**.
 
-    **Solution** : pour obtenir des conseils spécifiques concernant ce problème, consultez la section Remarques dans [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) et [**IpcUnprotectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow).
+    **Solution** : pour obtenir des conseils spécifiques concernant ce problème, consultez la section Remarques dans [**IpcProtectWindow**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) et [**IpcUnprotectWindow**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow).
 
 -   **Problème** : lors de la création de plusieurs architectures, vous devez utiliser ce guide.
 
@@ -165,19 +165,19 @@ Si aucun nom et aucune description ne peuvent être récupérés, une erreur est
 * [Vue d'ensemble](ad-rms-overview.md)
 * [Ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md)
 * [Configuration de l’API de fichier](file-api-configuration.md)
-* [**IpcfGetSerializedLicenseFromFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfgetserializedlicensefromfile)
-* [**IpcfEncryptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfile)
-* [**IpcfDecryptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)
-* [**IpcfIsFileEncrypted**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfisfileencrypted)
-* [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
-* [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow)
-* [**IpcUnprotectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow)
+* [**IpcfGetSerializedLicenseFromFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfgetserializedlicensefromfile)
+* [**IpcfEncryptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile)
+* [**IpcfDecryptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)
+* [**IpcfIsFileEncrypted**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfisfileencrypted)
+* [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
+* [**IpcProtectWindow**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcprotectwindow)
+* [**IpcUnprotectWindow**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow)
  
 
  
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

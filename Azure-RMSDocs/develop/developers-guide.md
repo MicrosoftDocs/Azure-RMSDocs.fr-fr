@@ -4,18 +4,18 @@ description: "Vue d’ensemble de l’utilisation des outils de développement 
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a22e6bd0-8ce8-45b4-9a32-273126ab831e
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 1f23f2a3e0e012eeeb779eb44ec9be377cd19fe1
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 5010096d11524eb4f48fafcc6b2a5d85f48c8fe9
 
 
 ---
@@ -74,6 +74,6 @@ Les éléments suivants sont exécutés sur Windows Desktop et pris en charge pa
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

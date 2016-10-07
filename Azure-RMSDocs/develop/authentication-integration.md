@@ -4,18 +4,18 @@ description: "Décrit les principes fondamentaux de l’authentification utilisa
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 07/07/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: 87ffcdaeaae80efa23c0ed7e7ce95ac7f63c62e0
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 2f4e0d1990362ab50d90b1a31c3b5db45d2fcdd1
 
 
 ---
@@ -36,9 +36,9 @@ Avant de pouvoir déployer votre application, vous devez signer un contrat RMLA 
 ## Implémenter l’authentification utilisateur pour votre application
 Chacune des API RMS a un rappel qui doit être implémenté pour activer l’authentification de l’utilisateur. RMS SDK 4.2 utilise votre implémentation du rappel quand vous ne fournissez pas de jeton d’accès, que votre jeton d’accès doit être actualisé ou que le jeton d’accès a expiré.
 
-- Android - Interfaces [AuthenticationRequestCallback](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) et [AuthenticationCompletionCallback](/rights-management/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java).
-- iOS/OS X - Protocole [MSAuthenticationCallback](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc).
--  Windows Phone/Windows RT - Interface [IAuthenticationCallback](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback).
+- Android - Interfaces [AuthenticationRequestCallback](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) et [AuthenticationCompletionCallback](/information-protection/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java).
+- iOS/OS X - Protocole [MSAuthenticationCallback](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc).
+-  Windows Phone/Windows RT - Interface [IAuthenticationCallback](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback).
 - Linux - Interface [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
 
 ### Bibliothèque à utiliser pour l’authentification
@@ -274,6 +274,6 @@ Il provient de l’étape d’inscription dans le portail Azure.
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

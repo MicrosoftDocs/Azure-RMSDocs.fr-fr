@@ -4,18 +4,18 @@ description: Orientation pour les packages de chiffrement Azure RMS et les captu
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 83c4eb741c484018a2837840465aca3276c785c1
-ms.openlocfilehash: b128a9adf75ae8558a33181f63881e2243e840bb
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: bf27067f832f12ef66f6df92f4008a0d21cdf2aa
 
 
 ---
@@ -40,7 +40,7 @@ Cette rubrique vous oriente vers nos offres de chiffrement et présente quelques
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (aussi appelé « algorithmes déconseillés »)
 
-Vous pouvez utiliser les indicateurs de package de chiffrement (voir [**Chiffrement préféré**](/rights-management/sdk/2.1/api/win/constants#msipc_preferred_encryption)) conjointement avec notre nouvel indicateur de propriété de licence **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
+Vous pouvez utiliser les indicateurs de package de chiffrement (voir [**Chiffrement préféré**](/information-protection/sdk/2.1/api/win/constants#msipc_preferred_encryption)) conjointement avec notre nouvel indicateur de propriété de licence **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
 
 Voici quelques extraits de code simples qui montrent comment utiliser la nouvelle propriété de licence.
 
@@ -103,6 +103,6 @@ Cet exemple montre également la nouvelle façon de prendre en charge des *algor
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO5-->
 
 

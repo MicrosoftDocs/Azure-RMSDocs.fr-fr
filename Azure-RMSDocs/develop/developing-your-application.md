@@ -4,18 +4,18 @@ description: "Instructions de développement d’une application à l’aide de 
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 07/06/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4141cadf67dc479116c802f9340ba222140194a3
-ms.openlocfilehash: 2d965086fa44d98e8236a6bbd2515fb3afac3f05
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 6e2b85bc8069de7060211df4d53be7f24ae44e3e
 
 
 ---
@@ -35,7 +35,7 @@ Vous pouvez télécharger l’exemple d’application *IPCHellowWorld* complet, 
 
 ## Chargement du fichier MSIPC.dll
 
-Pour pouvoir appeler des fonctions de RMS SDK 2.1, vous devez d’abord appeler [IpcInitialize](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) pour charger MSIPC.dll.
+Pour pouvoir appeler des fonctions de RMS SDK 2.1, vous devez d’abord appeler [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) pour charger MSIPC.dll.
 
         C++
         hr = IpcInitialize();
@@ -58,7 +58,7 @@ La capture de code suivante énumère les modèles RMS disponibles sur le serve
         goto exit;
       }
 
-Cet appel récupère les modèles RMS installés sur le serveur par défaut et charge les résultats dans la structure [IPC_TIL](/rights-management/sdk/2.1/api/win/ipc_til#msipc_ipc_til) indiquée par la variable *pcTil*, puis affiche les modèles.
+Cet appel récupère les modèles RMS installés sur le serveur par défaut et charge les résultats dans la structure [IPC_TIL](/information-protection/sdk/2.1/api/win/ipc_til#msipc_ipc_til) indiquée par la variable *pcTil*, puis affiche les modèles.
 
       C++
       if (0 == pcTil->cTi) {
@@ -77,9 +77,9 @@ Cet appel récupère les modèles RMS installés sur le serveur par défaut et 
 
 ## Sérialisation d’une licence
 
-Avant de pouvoir protéger des données, vous devez sérialiser une licence et obtenir une clé de contenu. La clé de contenu est utilisée pour chiffrer les données sensibles. La licence sérialisée est généralement associée aux données chiffrées et utilisée par l’utilisateur des données protégées. L’utilisateur doit appeler la fonction [IpcGetKey](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey) à l’aide de la licence sérialisée pour obtenir la clé de contenu qui permettra de déchiffrer le contenu ainsi que la stratégie associée à ce contenu.
+Avant de pouvoir protéger des données, vous devez sérialiser une licence et obtenir une clé de contenu. La clé de contenu est utilisée pour chiffrer les données sensibles. La licence sérialisée est généralement associée aux données chiffrées et utilisée par l’utilisateur des données protégées. L’utilisateur doit appeler la fonction [IpcGetKey](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetkey) à l’aide de la licence sérialisée pour obtenir la clé de contenu qui permettra de déchiffrer le contenu ainsi que la stratégie associée à ce contenu.
 
-Pour simplifier, utilisez le premier modèle RMS retourné par [IpcGetTemplateList](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) pour sérialiser une licence.
+Pour simplifier, utilisez le premier modèle RMS retourné par [IpcGetTemplateList](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) pour sérialiser une licence.
 
 Normalement, vous utiliseriez une boîte de dialogue pour permettre à l’utilisateur de sélectionner le modèle souhaité.
 
@@ -97,7 +97,7 @@ Une fois cela effectué, vous disposez de la clé de contenu (*hContentKey*) et 
 
 ## Protection des données
 
-Vous êtes maintenant prêt à chiffrer les données sensibles avec la fonction [IpcEncrypt](/rights-management/sdk/2.1/api/win/functions#msipc_ipcencrypt). Vous devez d’abord demander à la fonction **IpcEncrypt** la taille des données chiffrées.
+Vous êtes maintenant prêt à chiffrer les données sensibles avec la fonction [IpcEncrypt](/information-protection/sdk/2.1/api/win/functions#msipc_ipcencrypt). Vous devez d’abord demander à la fonction **IpcEncrypt** la taille des données chiffrées.
 
       C++
       cbText = (DWORD)(sizeof(WCHAR)*(wcslen(wszText)+1));
@@ -109,7 +109,7 @@ Vous êtes maintenant prêt à chiffrer les données sensibles avec la fonction 
         goto exit;
       }
 
-Ici, wszText contient le texte brut que vous voulez protéger. La fonction [IpcEncrypt](/rights-management/sdk/2.1/api/win/functions#msipc_ipcencrypt) retourne la taille des données chiffrées dans le paramètre *cbEncrypted*.
+Ici, wszText contient le texte brut que vous voulez protéger. La fonction [IpcEncrypt](/information-protection/sdk/2.1/api/win/functions#msipc_ipcencrypt) retourne la taille des données chiffrées dans le paramètre *cbEncrypted*.
 
 Allouez de la mémoire pour les données chiffrées.
 
@@ -151,7 +151,7 @@ Dans cet exemple d’application, la fonction *DisplayError* est utilisée pour 
         }
       }
 
-La fonction *DisplayError* utilise la fonction [IpcGetErrorMessageText](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext) pour obtenir le message d’erreur à partir du code d’erreur correspondant et l’imprimer dans la sortie standard.
+La fonction *DisplayError* utilise la fonction [IpcGetErrorMessageText](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext) pour obtenir le message d’erreur à partir du code d’erreur correspondant et l’imprimer dans la sortie standard.
 
 ## Nettoyage
 
@@ -177,16 +177,16 @@ Avant de terminer, vous devez également libérer toutes les ressources allouée
 ## Rubriques connexes
 
 - [Guide et informations pour développeurs](developer-notes.md)
-- [IpcEncrypt](/rights-management/sdk/2.1/api/win/functions#msipc_ipcencrypt)
-- [IpcGetErrorMessageText](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext)
-- [IpcGetKey](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey)
-- [IpcGetTemplateList](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
-- [IpcInitialize](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-- [IPC_TIL](/rights-management/sdk/2.1/api/win/ipc_til#msipc_ipc_til)
+- [IpcEncrypt](/information-protection/sdk/2.1/api/win/functions#msipc_ipcencrypt)
+- [IpcGetErrorMessageText](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext)
+- [IpcGetKey](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetkey)
+- [IpcGetTemplateList](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
+- [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)
+- [IPC_TIL](/information-protection/sdk/2.1/api/win/ipc_til#msipc_ipc_til)
 - [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO5-->
 
 

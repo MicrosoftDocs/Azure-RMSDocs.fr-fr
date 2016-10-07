@@ -1,6 +1,6 @@
 # [Comprendre et explorer](/information-protection/understand-explore/what-is-information-protection)
 # [Mise en route](requirements-azure-rms.md)
-## [Configuration requise](requirements-azure-rms.md)
+## [Configuration requise](requirements.md)
 ### [Configuration requise d’Azure Active Directory](requirements-azure-ad.md)
 ### [Prise en charge d’appareils clients pour la protection des données](requirements-client-devices.md)
 ### [Prise en charge d’applications pour la protection des données](requirements-applications.md)

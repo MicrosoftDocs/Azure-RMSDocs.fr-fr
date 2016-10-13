@@ -1,29 +1,28 @@
 ---
-title: "Conditions requises pour Azure RMS : Azure AD Directory | Azure RMS"
-description: "Identifiez les exigences liées à Azure AD dans le but d’utiliser Azure Rights Management (Azure RMS) pour authentifier les utilisateurs."
+title: "Configuration requise d’Azure Active Directory | Azure Information Protection"
+description: "Identifiez la configuration requise d’Azure AD pour utiliser Azure Information Protection afin de permettre l’authentification des utilisateurs."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/29/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: b4ac71492ba9ad883d481149a248b919973d7386
+ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
+ms.openlocfilehash: 5be497b09ed1b1342747508611a1cc06ad0edf02
 
 
 ---
 
-# Conditions requises pour Azure RMS : Azure AD Directory
+# Configuration requise d’Azure Active Directory pour Azure Information Protection
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
-
-Vous devez disposer d’un annuaire Azure AD pour pouvoir utiliser Azure Rights Management (Azure RMS). Vous devez utiliser le compte de votre organisation correspondant à cet annuaire pour vous connecter au portail Azure Classic, où vous pouvez, par exemple, configurer et gérer les modèles Rights Management.
+Vous avez besoin d’un annuaire Azure AD pour utiliser Azure Information Protection. Vous devez utiliser le compte de votre organisation correspondant à cet annuaire pour vous connecter au portail Azure Classic, où vous pouvez, par exemple, configurer et gérer les modèles Rights Management.
 
 Si vous n’avez pas encore d’abonnement Azure pour votre organisation, vous pouvez en obtenir un en vous inscrivant pour une évaluation gratuite : accédez à la page [Prise en main d’Azure](https://account.windowsazure.com/organization) et suivez les instructions.
 
@@ -40,8 +39,8 @@ Si vous souhaitez intégrer votre annuaire Azure AD à vos forêts AD locales, 
 > 
 > -   Vous devez utiliser les services AD FS sur la version serveur minimale de **Windows Server 2012 R2** ou un autre fournisseur d’authentification prenant en charge le protocole OAuth 2.0.
 
-## Multi-Factor Authentication (MFA) et Azure RMS
-L’utilisation de Multi-Factor Authentication avec Azure RMS requiert au moins l’un des éléments suivants :
+## Authentification multifacteur (MFA) et Azure Information Protection
+Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Protection, vous devez avoir au moins l’un des éléments suivants :
 
 -   Office 2013 (version minimale) :
 
@@ -53,7 +52,7 @@ L’utilisation de Multi-Factor Authentication avec Azure RMS requiert au moins
 
 -   Application de partage Rights Management pour appareils mobiles et ordinateurs Mac :
 
-    -   Assurez-vous que vous avez installé la dernière version. La prise en charge de MFA a été introduite dans la version de septembre 2015 de l’application de partage RMS.
+    -   Assurez-vous d’avoir installé la dernière version. La prise en charge de MFA a été introduite dans la version de septembre 2015 de l’application de partage RMS.
 
 Ensuite, configurez votre solution MFA :
 
@@ -70,11 +69,11 @@ Ensuite, configurez votre solution MFA :
         Pour plus d’informations sur ce scénario, consultez [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sur le blog Office.
 
 ## Étapes suivantes
-Pour vérifier les autres conditions requises, consultez [Conditions requises pour Azure Rights Management](requirements-azure-rms.md).
+Pour vérifier les autres conditions requises, consultez [Configuration requise pour Azure Information Protection](requirements-azure-rms.md).
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

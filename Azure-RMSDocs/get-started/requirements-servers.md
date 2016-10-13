@@ -1,29 +1,31 @@
 ---
-title: "Conditions requises pour Azure RMS #58; serveurs locaux qui prennent en charge Azure Rights Management | Azure RMS"
-description: Identifiez les produits de serveurs locaux pris en charge avec Azure RMS quand vous utilisez le connecteur Azure RMS.
+title: "Prise en charge des serveurs locaux pour la protection des données | Azure Information Protection"
+description: "Identifiez les produits de serveurs locaux qui peuvent utiliser le service Azure Rights Management d’Azure Information Protection, à l’aide du connecteur Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 0f9f1dc09d1b0d831b1c96d25b7bb763086aa9c9
+ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
+ms.openlocfilehash: 22f63cae58f6dfe7e0381a561ffb348177585809
 
 
 ---
 
 
-# Conditions requises pour Azure RMS : serveurs locaux qui prennent en charge Azure RMS
+# Serveurs locaux prenant en charge la protection des données Azure Rights Management
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
-Les produits de serveurs locaux suivants sont acceptés avec le connecteur Azure RMS, qui agit en tant qu’interface de communication (relais) entre les serveurs locaux et Azure RMS. De plus, cette configuration implique de configurer la synchronisation des annuaires entre vos forêts Active Directory et Azure Active Directory.
+Les produits de serveurs locaux suivants sont pris en charge avec Azure Information Protection quand vous utilisez le connecteur Azure Rights Management. Ce connecteur fait office d’interface de communication (relais) entre les serveurs locaux et le service Azure Rights Management utilisé par Azure Information Protection pour protéger les e-mails et les documents Office. 
+
+Pour utiliser ce connecteur, vous devez configurer la synchronisation des annuaires entre vos forêts Active Directory et Azure Active Directory.
 
 -   **Exchange Server** :
 
@@ -48,19 +50,19 @@ Les produits de serveurs locaux suivants sont acceptés avec le connecteur Azure
     -   Windows Server 2012
 
     > [!NOTE]
-    > Les serveurs de fichiers qui exécutent Windows Server 2008 R2 n’ont pas d’action de tâche de gestion de fichiers intégrée pour appliquer une protection RMS. Par conséquent, vous ne pouvez pas utiliser le connecteur RMS pour ce scénario. En revanche, vous pouvez utiliser l’infrastructure de classification des fichiers et Azure RMS sur ces systèmes d’exploitation si vous configurez une tâche de gestion de fichiers personnalisée de sorte qu’elle exécute un exécutable ou un script capable de protéger les fichiers à l’aide d’Azure RMS. Par exemple, un script Windows PowerShell qui utilise les [applets de commande de protection RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+    > Les serveurs de fichiers qui exécutent Windows Server 2008 R2 n’ont pas d’action de tâche de gestion de fichiers intégrée pour appliquer la protection de Rights Management. Par conséquent, vous ne pouvez pas utiliser le connecteur Rights Management pour ce scénario. En revanche, vous pouvez utiliser l’infrastructure de classification des fichiers et Azure RMS sur ces systèmes d’exploitation si vous configurez une tâche de gestion de fichiers personnalisée de sorte qu’elle exécute un exécutable ou un script capable de protéger les fichiers à l’aide d’Azure RMS. Par exemple, un script Windows PowerShell qui utilise les [applets de commande de protection RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
     > 
     > Vous pouvez également utiliser ces applets de commande avec des serveurs exécutant des versions ultérieures de Windows Server, l’avantage étant que ces applets de commande peuvent protéger tous les types de fichiers. Le connecteur RMS protège uniquement les fichiers Office. Pour obtenir des instructions, consultez [Protection RMS avec l’Infrastructure de classification des fichiers &#40;ICF&#41; de Windows Server](../rms-client/configure-fci.md).
 
-Le connecteur RMS est pris en charge sur Windows Server 2012 R2, Windows Server 2012 et Windows Server 2008 R2.
+Le connecteur Rights Management est pris en charge sur Windows Server 2012 R2, Windows Server 2012 et Windows Server 2008 R2.
 
-Pour plus d’informations sur la configuration du connecteur RMS pour ces serveurs locaux, consultez [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md).
+Pour plus d’informations sur la configuration du connecteur Rights Management pour ces serveurs locaux, consultez [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
 ## Étapes suivantes
 Pour vérifier les autres conditions requises, consultez [Conditions requises pour Azure Rights Management](requirements-azure-rms.md).
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

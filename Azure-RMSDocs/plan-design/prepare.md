@@ -1,47 +1,45 @@
 ---
-title: "Préparation pour Azure Rights Management | Azure RMS"
-description: "Vérifiez que tout est en place pour activer et déployer Azure RMS. Vous devez notamment disposer de comptes d’utilisateurs et de groupes pour l’authentification."
+title: "Préparation pour la protection Azure Rights Management | Azure Information Protection"
+description: "Vérifiez que tout est en place pour utiliser le service Azure Rights Management afin de permettre à votre organisation de protéger les documents et les e-mails."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: c5f22b4050779193042f3e6e059d8ca84e94b390
+ms.sourcegitcommit: 46db6ef6f65a06c42909252cf99884cc5eaaefe4
+ms.openlocfilehash: 5a3df821c70b8cd308f8fb8cc94ee0cff069a3d9
 
 
 ---
 
-# Préparation pour Azure Rights Management
+# Préparation d’Azure Information Protection
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
-Une fois que vous avez souscrit un abonnement au cloud et assigné à votre organisation un compte pour [!INCLUDE[o365_1](../includes/o365_1_md.md)] ou Azure Active Directory, vous êtes prêt à activer le service [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
-
-Toutefois, commencez par vous assurer que les éléments suivants sont en place :
+Avant de déployer Azure Information Protection dans votre organisation, vérifiez que les éléments suivants sont en place :
 
 -   Les comptes d’utilisateurs et groupes du cloud créés manuellement ou qui sont automatiquement créés et synchronisés par les services de domaine Active Directory (AD DS).
 
-    Lorsque vous synchronisez vos comptes et groupes locaux, certains attributs ne doivent pas être synchronisés. Pour obtenir la liste des attributs qui doivent être synchronisés pour Azure RMS, consultez la [section relative à Azure RMS](/active-directory/active-directory-aadconnectsync-attributes-synchronized#azure-rms) dans la documentation d’Azure Active Directory. Pour faciliter le déploiement, nous vous conseillons d’utiliser [Azure AD Connect](/active-directory/active-directory-aadconnectsync-whatis) pour connecter vos annuaires locaux à Azure Active Directory, mais vous pouvez utiliser toute méthode de synchronisation d’annuaires permettant d’obtenir le même résultat.
+    Lorsque vous synchronisez vos comptes et groupes locaux, certains attributs ne doivent pas être synchronisés. Pour obtenir la liste des attributs qui doivent être synchronisés pour le service Azure Rights Management utilisé par Azure Information Protection, consultez la [section relative à Azure RMS](/active-directory/active-directory-aadconnectsync-attributes-synchronized#azure-rms) dans la documentation Azure Active Directory. Pour faciliter le déploiement, nous vous conseillons d’utiliser [Azure AD Connect](/active-directory/active-directory-aadconnectsync-whatis) pour connecter vos annuaires locaux à Azure Active Directory, mais vous pouvez utiliser toute méthode de synchronisation d’annuaires permettant d’obtenir le même résultat.
 
--   Les groupes à extension messagerie du cloud que vous utiliserez avec Rights Management. Ceux-ci peuvent être des groupes intégrés ou des groupes créés manuellement contenant les utilisateurs qui utiliseront Rights Management.
+-   Les groupes à extension messagerie du cloud que vous utiliserez avec Azure Information Protection. Ceux-ci peuvent être des groupes intégrés ou des groupes créés manuellement contenant les utilisateurs qui utiliseront des documents et e-mails protégés.
 
     Si vous avez Exchange Online, vous pouvez créer et utiliser des groupes à extension messagerie à l’aide du Centre d’administration Exchange. Si vous disposez d’AD DS et synchronisez sur Azure AD, vous pouvez créer et utiliser des groupes à extension messagerie qui sont des groupes de sécurité ou de distribution.
 
-## Activation de Rights Management
-Par défaut, [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] est désactivé quand vous créez votre compte [!INCLUDE[o365_2](../includes/o365_2_md.md)] ou Azure AD. Pour activer [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] pour votre organisation, vous devez activer le service. Pour plus d’informations, consultez [Activation d’Azure Rights Management](../deploy-use/activate-service.md).
+## Activer le service Rights Management pour la protection des données
+Lorsque vous êtes prêt à commencer à protéger des documents et des e-mails, activez le service Rights Management pour activer cette technologie. Pour plus d’informations, consultez [Activation d’Azure Rights Management](../deploy-use/activate-service.md).
 
 
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

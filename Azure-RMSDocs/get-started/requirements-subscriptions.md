@@ -3,17 +3,17 @@ title: "Conditions requises pour Azure RMS &#58; abonnements cloud | Azure RMS"
 description: "Identifiez les abonnements que vous pouvez utiliser pour déployer Azure Rights Management (Azure RMS) dans votre organisation."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6a16e890-3c3e-4f47-80ca-176a34bdf8bc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 5c0597ee3882c25fd5c04fbd89990806754bda1a
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: e0c6c9300096a3130cc59406208d51bbafc9e35b
 
 
 ---
@@ -94,6 +94,6 @@ Pour plus d’informations, consultez [RMS for individuals et Azure Rights Manag
 Pour vérifier les autres conditions requises, consultez [Conditions requises pour Azure Rights Management](requirements-azure-rms.md).
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

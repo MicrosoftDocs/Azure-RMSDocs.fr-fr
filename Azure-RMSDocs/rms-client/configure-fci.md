@@ -1,39 +1,39 @@
 ---
-title: "Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server | Azure RMS"
+title: "Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server | Azure Information Protection"
 description: "Instructions d’utilisation du client Rights Management (RMS) avec l’outil de protection RMS pour configurer les outils de gestion de ressources pour serveur de fichiers et l’infrastructure de classification des fichiers (ICF)."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8a7a433652e76ff1069f0f0a7465483b13c065c
-ms.openlocfilehash: b350a35d44e743de94446409b1bba4256ca38728
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 7e0556e99aa09d4b6f2488cb866b57488a22cacd
 
 
 ---
 
 # Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
->*S’applique à : Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*S’applique à : Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 Cet article contient des instructions et un script pour utiliser le client Rights Management (RMS) avec l'outil de protection RMS pour configurer les outils de gestion de ressources pour serveur de fichiers et l'infrastructure de classification des fichiers (ICF).
 
-Cette solution vous permet de protéger automatiquement tous les fichiers figurant dans un dossier sur un serveur de fichiers exécutant Windows Server, ou des fichiers répondant à un critère spécifique. Il s'agit, par exemple, de fichiers qui ont été classés comme contenant des informations confidentielles ou sensibles. Cette solution utilisant Azure Rights Management (Azure RMS) pour protéger les fichiers, vous devez déployer cette technologie dans votre organisation.
+Cette solution vous permet de protéger automatiquement tous les fichiers figurant dans un dossier sur un serveur de fichiers exécutant Windows Server, ou des fichiers répondant à un critère spécifique. Il s'agit, par exemple, de fichiers qui ont été classés comme contenant des informations confidentielles ou sensibles. Cette solution utilisant le service Azure Rights Management d’Azure Information Protection pour protéger les fichiers, vous devez déployer cette technologie dans votre organisation.
 
 > [!NOTE]
-> Bien qu’Azure RMS inclue un [connecteur](../deploy-use/deploy-rms-connector.md) prenant en charge l’infrastructure de classification des fichiers, cette solution prend en charge uniquement la protection native (par exemple, celle des fichiers Office).
+> Bien qu’Azure Information Protection inclue un [connecteur](../deploy-use/deploy-rms-connector.md) prenant en charge l’infrastructure de classification des fichiers, cette solution prend en charge uniquement la protection native (par exemple, celle des fichiers Office).
 > 
 > Pour prendre en charge tous les types de fichiers avec l'infrastructure de classification des fichiers, vous devez utiliser le module **Protection RMS** de Windows PowerShell, comme décrit dans cet article. Les applets de commande de protection RMS, telle l'application de partage RMS, prenant en charge les protections générique et native, tous les fichiers peuvent être protégés. Pour plus d’informations sur les différents niveaux de protection, consultez la section [Niveaux de protection : native et générique](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) du [Guide de l’administrateur de l’application de partage Rights Management](sharing-app-admin-guide.md).
 
 Les instructions qui suivent ont trait à Windows Server 2012 R2 ou à Windows Server 2012. Si vous exécutez d'autres versions prises en charge de Windows, il se peut que vous deviez adapter certaines étapes en fonction de différences existant entre votre version du système d'exploitation et celle évoquée dans cet article.
 
-## Conditions préalables pour l'utilisation de la protection Azure RMS avec l'ICF de Windows Server
+## Conditions préalables pour l’utilisation de la protection Azure Rights Management avec l’ICF de Windows Server
 Conditions préalables pour ces instructions :
 
 -   Sur chaque serveur de fichiers où vous allez exécuter le Gestionnaire de ressources de fichiers avec l'infrastructure de classification des fichiers :
@@ -48,7 +48,7 @@ Conditions préalables pour ces instructions :
 
     -   Vous disposez d'une connexion Internet, avec des paramètres d'ordinateur configurés, si nécessaire, pour un serveur proxy. Exemple : `netsh winhttp import proxy source=ie`
 
--   Vous avez configuré les conditions préalables supplémentaires pour votre déploiement d’Azure Rights Management, comme décrit dans [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx). En particulier, vous avez défini les valeurs suivantes pour la connexion à Azure RMS à l'aide d'un principal du service :
+-   Vous avez configuré les conditions préalables supplémentaires pour votre déploiement d’Azure Information Protection, comme décrit dans [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx). En particulier, vous avez défini les valeurs suivantes pour la connexion au service Azure Rights Management à l’aide d’un principal du service :
 
     -   BposTenantId
 
@@ -56,7 +56,7 @@ Conditions préalables pour ces instructions :
 
     -   Clé symétrique
 
--   Vous avez synchronisé vos comptes d'utilisateurs Active Directory locaux avec Azure Active Directory ou Office 365, y compris leurs adresses électroniques. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu'ils sont protégés par ICF et Azure RMS. Si vous n'exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l'accès des utilisateurs à ces fichiers soit bloqué. Pour plus d’informations sur la configuration de ce compte, consultez [Préparation pour Azure Rights Management](../plan-design/prepare.md).
+-   Vous avez synchronisé vos comptes d'utilisateurs Active Directory locaux avec Azure Active Directory ou Office 365, y compris leurs adresses électroniques. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et le service Azure Rights Management. Si vous n’exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l’accès des utilisateurs à ces fichiers soit bloqué. Pour plus d’informations sur la configuration de ce compte, consultez [Préparation pour le service Azure Rights Management](../plan-design/prepare.md).
 
 -   Vous avez identifié le modèle Rights Management à utiliser pour protéger les fichiers. Assurez-vous de connaître l'ID de ce modèle à l'aide de l'applet de commande [Get-RMSTemplate](https://msdn.microsoft.com/library/azure/mt433197.aspx) .
 
@@ -94,7 +94,7 @@ Quand vous aurez suivi ces instructions, tous les fichiers figurant dans votre d
 
         `[Parameter(Mandatory = $false)]             [string]$AppPrincipalId = "b5e3f76a-b5c2-4c96-a594-a0807f65bba4",`
 
-    -   Recherchez la chaîne suivante, et remplacez-la par votre propre clé symétrique que vous utilisez avec l'applet de commande [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) pour vous connecter à Azure RMS :
+    -   Recherchez la chaîne suivante, et remplacez-la par votre propre clé symétrique que vous utilisez avec l’applet de commande [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) pour vous connecter au service Azure Rights Management :
 
         ```
         <enter your key here>
@@ -105,7 +105,7 @@ Quand vous aurez suivi ces instructions, tous les fichiers figurant dans votre d
 
         `[string]$SymmetricKey = "zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA="`
 
-    -   Recherchez la chaîne suivante, et remplacez-la par votre propre BposTenantId (ID de locataire) que vous utilisez avec l'applet de commande [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) pour vous connecter à Azure RMS :
+    -   Recherchez la chaîne suivante, et remplacez-la par votre propre BposTenantId (ID de locataire) que vous utilisez avec l’applet de commande [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) pour vous connecter au service Azure Rights Management :
 
         ```
         <enter your BposTenantId here>
@@ -116,7 +116,7 @@ Quand vous aurez suivi ces instructions, tous les fichiers figurant dans votre d
 
         `[string]$BposTenantId = "23976bc6-dcd4-4173-9d96-dad1f48efd42",`
 
-    -   Si votre serveur exécute Windows Server 2012, vous devrez charger manuellement le module de protection RMS au début du script. Ajoutez la commande suivante (ou son équivalent si le dossier « Program Files » se trouve sur un lecteur autre que le lecteur C:) :
+    -   Si votre serveur exécute Windows Server 2012, vous devrez charger manuellement le module de protection RMS au début du script. Ajoutez la commande suivante (ou son équivalent si le dossier « Program Files » se trouve sur un lecteur autre que le lecteur C:) :
 
         ```
         Import-Module "C:\Program Files\WindowsPowerShell\Modules\RMSProtection\RMSProtection.dll"
@@ -302,6 +302,6 @@ Pour ce faire, utilisez l’une des propriétés de classification intégrées (
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

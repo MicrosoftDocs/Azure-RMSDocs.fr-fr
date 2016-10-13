@@ -4,18 +4,18 @@ description: "Le comportement de l’API de fichier peut être configuré via le
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: 8232137fb52b03a30513b132b02251f3cc01079a
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: d949acd4281509bbed05a14e0e26d1549b52a33a
 
 
 ---
@@ -82,7 +82,7 @@ Si vous affectez une autre valeur, ou si vous n’affectez aucune valeur, le com
 -   **Fichiers txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** : Le chiffrement natif est activé (xxx devient pxxx)
 -   **Tous les autres fichiers** : Le chiffrement avec protection de fichier (pfile) est activé (xxx devient xxx.pfile)
 
-Si vous tentez un chiffrement sur un type de fichier bloqué, une erreur [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes) se produit.
+Si vous tentez un chiffrement sur un type de fichier bloqué, une erreur [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes) se produit.
 
 ### API de fichier - Détails de la prise en charge des fichiers
 
@@ -149,13 +149,13 @@ HKEY_LOCAL_MACHINE
 ## Rubriques connexes
 
 * [Notes pour le développeur](developer-notes.md)
-* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes)
+* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes)
  
 
  
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

@@ -1,32 +1,32 @@
 ---
-title: "Conditions requises pour Azure RMS : Appareil client | Azure RMS"
-description: Identifiez les appareils qui prennent en charge Azure Rights Management (Azure RMS).
+title: "Prise en charge des appareils clients pour la protection des données | Azure Information Protection"
+description: "Identifiez les appareils prenant en charge le service Azure Rights Management d’Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: e52720c09e3541a16c2e234bbd336cc7916ccfe1
+ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
+ms.openlocfilehash: 3b9c126211389dfe14bb5f1cc4ec8be1213df49d
 
 
 ---
 
 
-# Conditions requises pour Azure RMS : Appareils clients prenant en charge Azure RMS
+# Appareils clients prenant en charge la protection des données Azure Rights Management
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
-Consultez les sections suivantes pour identifier les appareils prenant en charge Azure Rights Management (Azure RMS).
+Consultez les sections suivantes pour identifier les appareils prenant en charge le service Azure Rights Management, qui assure la protection des données pour Azure Information Protection.
 
 ## Ordinateurs
-Les systèmes d’exploitation d’ordinateur suivants prennent en charge Azure Rights Management :
+Les systèmes d’exploitation d’ordinateur suivants prennent en charge le service Azure Rights Management :
 
 -   **Windows 7** (x86, x64)
 
@@ -39,7 +39,7 @@ Les systèmes d’exploitation d’ordinateur suivants prennent en charge Azure 
 -   **Mac OS X** : version minimale Mac OS X 10.8 (Mountain Lion)
 
 ## Appareils mobiles
-Les systèmes d’exploitation d’appareil mobile suivants prennent en charge Azure Rights Management :
+Les systèmes d’exploitation d’appareils mobiles suivants prennent en charge le service Azure Rights Management :
 
 -   **Windows Phone** : Windows Phone 8.1
 
@@ -51,11 +51,11 @@ Les systèmes d’exploitation d’appareil mobile suivants prennent en charge A
 
 
 ## Étapes suivantes
-Pour vérifier les autres conditions requises, consultez [Conditions requises pour Azure Rights Management](requirements-azure-rms.md).
+Pour vérifier les autres conditions requises, consultez [Configuration requise pour Azure Information Protection](requirements-azure-rms.md).
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

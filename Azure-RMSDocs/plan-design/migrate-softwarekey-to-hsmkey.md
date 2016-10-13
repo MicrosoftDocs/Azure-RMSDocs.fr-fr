@@ -1,39 +1,39 @@
 ---
-title: "Étape 2 &colon; Migration de clé protégée par logiciel à clé protégée par HSM | Azure RMS"
-description: "Instructions faisant partie du chemin de migration d’AD RMS vers Azure Rights Management. Elles s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous souhaitez procéder à la migration vers Azure Rights Management avec une clé de locataire protégée par HSM dans Azure Key Vault."
+title: "Étape 2 &colon; Migration de clé protégée par logiciel à clé protégée par HSM | Azure Information Protection"
+description: "Instructions qui font partie du chemin de migration d’AD RMS vers Azure Information Protection. Celles-ci s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous souhaitez procéder à la migration vers Azure Information Protection avec une clé de locataire protégée par HSM dans Azure Key Vault."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: f4341d648b591922df93a4d2ba5e14151743fcdb
+ms.sourcegitcommit: 931642ea9070a7581b428bcd04756048673fe3c0
+ms.openlocfilehash: ae530a9ae861bce8f82fa2e535e5b2281f1c9ffe
 
 
 ---
 
 # Étape 2 : Migration de clé protégée par logiciel à clé protégée par HSM
 
->*S’applique à : Active Directory Rights Management Services, Azure Rights Management*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection*
 
 
-Ces instructions font partie du [chemin de migration d’AD RMS vers Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md). Elles s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous voulez migrer vers Azure Rights Management avec une clé de locataire protégée par HSM dans Azure Key Vault. 
+Ces instructions font partie du [chemin de migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). Elles s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous souhaitez procéder à la migration vers Azure Information Protection avec une clé de locataire protégée par HSM dans Azure Key Vault. 
 
 Si ce n’est pas votre scénario de configuration choisi, revenez à l’[Étape 2. Exporter les données de configuration d’AD RMS, puis les importer dans Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) et choisissez une configuration différente.
 
-Cette procédure en quatre parties permet d’importer la configuration d’AD RMS dans Azure RMS pour que votre clé de locataire Azure RMS soit gérée par vous (BYOK) dans Azure Key Vault.
+Cette procédure en quatre parties permet d’importer la configuration AD RMS dans Azure Information Protection pour que votre clé de locataire Azure Information Protection soit gérée par l’utilisateur (BYOK) dans Azure Key Vault.
 
-Vous devez d’abord extraire votre clé de certificat de licence serveur des données de configuration AD RMS, transférer la clé vers un HSM Thales local, empaqueter et transférer votre clé HSM vers Azure Key Vault, autoriser Azure RMS à accéder à votre coffre de clés, puis importer les données de configuration.
+Vous devez d’abord extraire votre clé de certificat de licence serveur des données de configuration AD RMS, transférer la clé vers un module de sécurité matériel (HSM) Thales local, empaqueter et transférer votre clé HSM vers Azure Key Vault, autoriser le service Azure Rights Management d’Azure Information Protection à accéder à votre coffre de clés, puis importer les données de configuration.
 
-Comme votre clé de locataire Azure RMS est stockée et gérée par Azure Key Vault, cette partie de la migration nécessite une administration dans Azure Key Vault, en plus d’Azure RMS. Si Azure Key Vault est géré par un autre administrateur que celui de votre organisation, vous devez coordonner et travailler avec cet administrateur pour effectuer ces procédures.
+Comme votre clé de locataire Azure Information Protection est stockée et gérée par Azure Key Vault, cette partie de la migration nécessite une administration dans Azure Key Vault, en plus d’Azure Information Protection. Si Azure Key Vault est géré par un autre administrateur que celui de votre organisation, vous devez coordonner et travailler avec cet administrateur pour effectuer ces procédures.
 
-Avant de commencer, vérifiez que votre organisation dispose d’un coffre de clés qui a été créé dans Azure Key Vault et qu’il prend en charge les clés protégées par HSM. Bien que ce ne soit pas obligatoire, nous vous recommandons d’avoir un coffre de clés dédié pour Azure RMS. Ce coffre de clés doit être configuré de façon à autoriser Azure RMS à y accéder : les clés stockées dans ce coffre de clés doivent donc être limitées uniquement aux clés Azure RMS.
+Avant de commencer, vérifiez que votre organisation dispose d’un coffre de clés qui a été créé dans Azure Key Vault et qu’il prend en charge les clés protégées par HSM. Bien que ce ne soit pas obligatoire, nous vous recommandons d’avoir un coffre de clés dédié pour Azure Information Protection. Ce coffre de clés doit être configuré de façon à autoriser le service Azure Rights Management d’Azure Information Protection à y accéder : les clés stockées dans ce coffre de clés doivent donc être limitées aux clés Azure Information Protection.
 
 
 > [!TIP]
@@ -46,15 +46,15 @@ Avant de commencer, vérifiez que votre organisation dispose d’un coffre de cl
 
     -   **Générer et transférer votre clé vers le HSM d’Azure Key Vault** : [Étape 1 : Préparation de la station de travail connectée à Internet](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
 
-    -   **Générer et transférer votre clé de locataire via Internet**: [Étape 2 : Préparation de votre poste de travail déconnecté](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
+    -   **Générer et transférer votre clé de locataire via Internet** : [Étape 2 : Préparation de votre poste de travail déconnecté](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
 
     Ne suivez pas ces étapes pour générer votre clé de client, car vous avez déjà l'équivalent dans le fichier (.xml) de données de configuration exporté. Exécutez plutôt un outil pour extraire cette clé du fichier et l’importer dans votre HSM local. L’outil crée deux fichiers quand vous l’exécutez :
 
-    - Un nouveau fichier de données de configuration sans la clé, qui est alors prêt à être importé dans votre locataire Azure RMS.
+    - Un nouveau fichier de données de configuration sans la clé, qui est alors prêt à être importé dans votre locataire Azure Information Protection.
 
     - Un fichier PEM (conteneur de clé) avec la clé, qui est alors prêt à être importé dans votre HSM local.
 
-2. Administrateur Azure RMS ou administrateur Azure Key Vault : sur la station de travail déconnectée, exécutez l’outil TpdUtil à partir du [Kit de migration Azure RMS](https://go.microsoft.com/fwlink/?LinkId=524619). Par exemple, si l’outil est installé sur votre lecteur E où vous copiez votre fichier de données de configuration nommé ContosoTPD.xml :
+2. Administrateur Azure Information Protection ou administrateur Azure Key Vault : sur la station de travail déconnectée, exécutez l’outil TpdUtil à partir du [Kit de migration Azure RMS](https://go.microsoft.com/fwlink/?LinkId=524619). Par exemple, si l’outil est installé sur votre lecteur E où vous copiez votre fichier de données de configuration nommé ContosoTPD.xml :
 
     ```
         E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
@@ -122,15 +122,15 @@ Maintenant que votre clé de licence serveur a été extraite et importée dans 
 
     Avant de transférer votre clé vers Azure Key Vault, vérifiez que l’utilitaire KeyTransferRemote.exe retourne **Résultat : RÉUSSITE** quand vous créez une copie de votre clé avec des autorisations réduites (étape 4.1) et quand vous chiffrez votre clé (étape 4.3).
 
-    Quand la clé se charge dans Azure Key Vault, vous voyez s’afficher les propriétés de la clé, notamment l’ID de clé. Elle ressemble à ceci : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Prenez note de cette URL car l’administrateur Azure RMS en a besoin pour indiquer à Azure RMS d’utiliser cette clé pour sa clé de locataire.
+    Quand la clé se charge dans Azure Key Vault, vous voyez s’afficher les propriétés de la clé, notamment l’ID de clé. Elle ressemble à ceci : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Prenez note de cette URL, car l’administrateur Azure Information Protection en a besoin pour indiquer au service Azure Rights Management d’Azure Information Protection d’utiliser cette clé pour sa clé de locataire.
 
     Maintenant que vous avez transféré votre clé HSM dans Azure Key Vault, vous êtes prêt à importer vos données de configuration AD RMS.
 
-## Partie 3 : Importation des données de configuration dans Azure RMS
+## Partie 3 : Importer les données de configuration dans Azure Information Protection
 
-1.  Administrateur Azure RMS : sur le poste de travail connecté à Internet et dans la session PowerShell, copiez vos nouveaux fichiers de données de configuration (.xml) où la clé de certificat de licence serveur a été supprimée après exécution de l’outil TpdUtil.
+1.  Administrateur Azure Information Protection : sur le poste de travail connecté à Internet et dans la session PowerShell, copiez vos nouveaux fichiers de données de configuration (.xml) où la clé de certificat de licence serveur (SLC) a été supprimée après l’exécution de l’outil TpdUtil.
 
-2. Chargez le premier fichier .xml en utilisant l’applet de commande [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx). Si vous avez plusieurs de ces fichiers .xml parce que vous aviez plusieurs domaines de publication approuvés, choisissez le fichier correspondant à la clé HSM que vous voulez utiliser dans Azure RMS pour protéger le contenu après la migration.
+2. Chargez le premier fichier .xml en utilisant l’applet de commande [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx). Si vous avez plusieurs de ces fichiers parce que vous aviez plusieurs domaines de publication approuvés, choisissez le fichier correspondant à la clé HSM que vous voulez utiliser avec Azure Information Protection pour protéger le contenu après la migration.
 
     Pour exécuter cette applet de commande, vous avez besoin de l’URL de la clé qui a été identifiée à l’étape précédente.
 
@@ -146,23 +146,23 @@ Maintenant que votre clé de licence serveur a été extraite et importée dans 
 
 
 
-3.  Utilisez l’applet de commande [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) pour vous déconnecter du service Azure RMS :
+3.  Utilisez l’applet de commande [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) pour vous déconnecter du service Azure Rights Management :
 
     ```
     Disconnect-AadrmService
     ```
 
     > [!NOTE]
-    > Si vous avez besoin ultérieurement de vérifier quelle clé de locataire est utilisée par Azure RMS dans Azure Key Vault, utilisez l’applet de commande [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) d’Azure RMS.
+    > Si vous avez besoin ultérieurement de vérifier quelle clé est utilisée par votre clé de locataire Azure Information Protection dans Azure Key Vault, utilisez l’applet de commande [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) d’Azure RMS.
 
 
-Vous êtes maintenant prêt à passer à l’[Étape 3. Activer votre client RMS](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
-
-
-
+Vous êtes maintenant prêt à passer à l’[Étape 3. Activez votre locataire Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+
+
+<!--HONumber=Sep16_HO4-->
 
 

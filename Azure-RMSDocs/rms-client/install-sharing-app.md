@@ -1,26 +1,26 @@
 ---
-title: "Télécharger et installer l’application de partage Rights Management | Azure RMS"
+title: "Télécharger et installer l’application de partage Rights Management | Azure Information Protection"
 description: "Instructions d’installation interactive de l’application de partage RMS pour Windows dans le but de partager des documents avec d’autres utilisateurs en toute sécurité."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 44541b6fe2567d23174b26cb42fec0731f5d3f58
-ms.openlocfilehash: b01896dc49a6c581427393f9e3fc21dbbd235238
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: c705bfec85bb93cb03d7e3edc9f3ce5949a8b61d
 
 
 ---
 
 # Télécharger et installer l'application de partage Rights Management
 
->*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Pour installer l’application de partage RMS, vous ne devez pas nécessairement être administrateur local. Toutefois, si vous ne l’êtes pas et utilisez Office 2010, il existe quelques limitations. Pour plus d’informations, consultez la section [Si vous n’êtes pas administrateur local et utilisez Office 2010](#if-you-are-not-a-local-administrator-and-use-office-2010) dans cette page.
 
@@ -28,11 +28,11 @@ Pour installer l’application de partage RMS, vous ne devez pas nécessairement
 
 1.  Accédez à la page [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft.
 
-2.  Dans la section **Ordinateurs** , cliquez sur l’icône de l’ **application RMS pour Windows** et enregistrez le fichier **Setup.exe** pour installer l’application de partage Microsoft Rights Management.
+2.  Dans la section **Ordinateurs**, cliquez sur l’icône de l’**application RMS pour Windows** et enregistrez le fichier **Setup.exe** pour installer l’application de partage Microsoft Rights Management.
 
 3.  Double-cliquez sur le fichier Setup.exe qui a été téléchargé. Si vous êtes invité à continuer, cliquez sur **Oui**.
 
-4.  Dans la page **Installer Microsoft RMS** , cliquez sur **Suivant**, puis attendez que l’installation se termine.
+4.  Dans la page **Installer Microsoft RMS**, cliquez sur **Suivant**, puis attendez que l’installation se termine.
 
     > [!NOTE]
     > L’application de partage RMS nécessite au minimum la version Microsoft .NET Framework 4.0. Le programme d’installation vérifie si elle est installée et, si ce n’est pas le cas, un message comportant un lien pour son installation s’affiche.
@@ -44,13 +44,13 @@ Vous pouvez à présent protéger vos fichiers et lire des fichiers protégés p
 ## Si vous n’êtes pas administrateur local et utilisez Office 2010
 Si vous vous connectez à votre ordinateur sans disposer de droits d’administration locale, et que le programme d’installation détecte qu’Office 2010 est installé, un message d’avertissement s’affiche, indiquant que certains scénarios ne fonctionnent pas avec cette configuration. Ces scénarios sont les suivants :
 
--   Si votre organisation utilise Azure RMS plutôt qu’une version locale de RMS :
+-   Si votre organisation utilise le service Azure Rights Management d’Azure Information Protection plutôt que sur une version locale de Rights Management :
 
     -   Les fonctionnalités de Gestion des droits relatifs à l’Information (IRM) d’Office ne sont pas disponibles. Par exemple, l’option **Ne pas transférer** pour les e-mails, et les **restrictions d’accès** que vous pouvez définir par le biais des autorisations dans le menu **Fichier** de Word et Excel. Vous pouvez utiliser l’option Protégé contre le partage accessible dans le ruban, et les options de clic droit de l’Explorateur de fichiers.
 
--   Si votre organisation utilise une version locale de RMS plutôt qu’Azure RMS :
+-   Si votre organisation utilise une version locale de Rights Management plutôt que le service Azure Rights Management d’Azure Information Protection :
 
-    -   Vous ne pouvez pas lire un document protégé qui vous est envoyé par un membre d’une autre organisation utilisant Azure RMS.
+    -   Vous ne pouvez pas lire un document protégé qui vous est envoyé par un membre d’une autre organisation utilisant le service Azure Rights Management.
 
 Si vous n’êtes pas administrateur local et utilisez Office 365 ou Office 2013, vous ne voyez pas ce message et ces scénarios sont pris en charge.
 
@@ -69,6 +69,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

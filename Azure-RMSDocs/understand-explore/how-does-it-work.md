@@ -1,19 +1,19 @@
 ---
-title: "Fonctionnement d’Azure RMS | Azure RMS"
+title: "Fonctionnement d’Azure RMS | Azure Information Protection"
 description: "Découvrez en détail le fonctionnement d’Azure RMS, les contrôles de chiffrement qu’il utilise et le déroulement de ce processus à l’aide de diagrammes détaillés."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: 5fa410e2c2b84a3626cb06a85dc2511b17e085ae
+ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
+ms.openlocfilehash: 5efa5bdf9e11e55ec190c3abe95b1bdc33026c63
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: 5fa410e2c2b84a3626cb06a85dc2511b17e085ae
 
 # Fonctionnement d'Azure RMS Sous le capot
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
 Concernant le fonctionnement d'Azure RMS, il est important de comprendre que le service Rights Management et, plus généralement, Microsoft ne consultent ni ne stockent vos données dans le cadre du processus de protection des informations. Les informations que vous protégez ne sont jamais stockées dans Azure, sauf si vous indiquez expressément votre volonté de les y stocker, ou si vous utilisez un autre service cloud qui les stocke dans Azure. Azure RMS rend simplement les données d'un document illisibles pour toute personne autre que des utilisateurs et services autorisés :
 
@@ -150,6 +150,6 @@ Si vous êtes prêt à déployer Azure RMS pour votre organisation, consultez l
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

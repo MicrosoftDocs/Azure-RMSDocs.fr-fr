@@ -4,18 +4,18 @@ description: "Installez et configurez un serveur RMS pour tester votre applicat
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: d046e7f6bbe867b6bc867483441bb0cc5c20df82
+ms.sourcegitcommit: b7ee098ceaa8ac6b1e0d5d6cbe090042510aa89b
+ms.openlocfilehash: ac7dd8592d6e11905744c4f4e0171fd5b5945c51
 
 
 ---
@@ -70,12 +70,26 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
   Pour configurer la découverte côté client, vous pouvez définir les clés de Registre suivantes pour qu’elles pointent vers votre serveur RMS. Pour plus d’informations sur la configuration de la découverte côté serveur, consultez les [notes sur le déploiement du client RMS 2.0](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
 1. **EnterpriseCertification**
-        HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterpriseCertification
 
-  **Valeur** : (Par défaut) : [**http|https**]://RMSClusterName/**_wmcs/Certification**
+        HKEY_LOCAL_MACHINE
+          SOFTWARE
+            Microsoft
+              MSIPC
+                ServiceLocation
+                  EnterpriseCertification
+
+   **Valeur** : (Par défaut) : [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
 2. **EnterprisePublishing**
-        HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterprisePublishing **Valeur** : (Par défaut) : [**http|https**]://RMSClusterName/**_wmcs/Licensing**
+
+        HKEY_LOCAL_MACHINE
+          SOFTWARE
+            Microsoft
+              MSIPC
+                ServiceLocation
+                  EnterprisePublishing
+                  
+   **Valeur** : (Par défaut) :[**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 >[!NOTE] 
 > Par défaut, ces clés n’existent pas dans le Registre et doivent être créées.
@@ -96,6 +110,6 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

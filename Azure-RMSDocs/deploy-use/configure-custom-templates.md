@@ -1,28 +1,28 @@
 ---
-title: "Configuration de modèles personnalisés pour Azure Rights Management | Azure RMS"
+title: "Configuration de modèles personnalisés pour le service Azure Rights Management | Azure Information Protection"
 description: "Informations et instructions destinées aux administrateurs souhaitant configurer et gérer des modèles de droits d’utilisation. Grâce aux modèles, les utilisateurs et autres administrateurs peuvent appliquer facilement des stratégies à des fichiers sensibles qui limitent l’accès aux utilisateurs autorisés."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 4f04a8b892cfb1f1ab62d1810fae172ad8bc9747
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: d8db7f0346fad1b9c46423875d1e559d41987686
 
 
 ---
 
-# Configuration de modèles personnalisés pour Azure Rights Management
+# Configuration de modèles personnalisés pour le service Azure Rights Management
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
-Après avoir [activé Azure Rights Management](activate-service.md) (Azure RMS), les utilisateurs peuvent automatiquement utiliser les deux modèles par défaut qui leur facilitent l’application de stratégies aux fichiers sensibles pour en restreindre l’accès aux utilisateurs autorisés de votre organisation. Ces deux modèles incluent les restrictions de stratégie de droits suivantes :
+Une fois [activé](activate-service.md) le service Azure Rights Management, les utilisateurs peuvent automatiquement utiliser les deux modèles par défaut qui leur facilitent l’application de stratégies de gestion des droits aux fichiers sensibles pour en restreindre l’accès aux utilisateurs autorisés de votre organisation. Ces deux modèles incluent les restrictions de stratégie de droits suivantes :
 
 -   Affichage en lecture seule du contenu protégé
 
@@ -66,6 +66,6 @@ Utilisez les informations suivantes pour vous aider à configurer et utiliser de
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

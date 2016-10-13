@@ -1,19 +1,19 @@
 ---
-title: "Problèmes résolus par Azure RMS | Azure RMS"
-description: "Identifiez les besoins ou problèmes métier auxquels votre entreprise peut être confrontée et découvrez comment Azure RMS peut y remédier."
+title: "Problèmes résolus par Azure RMS | Azure Information Protection"
+description: "Identifiez les besoins ou problèmes liés à la protection des informations auxquels votre entreprise peut être confrontée et découvrez comment la technologie Azure RMS peut y remédier."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: bc25d2ee7224983d70a23177666c1a72b3db1a17
+ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
+ms.openlocfilehash: 03ada045291115a6cc47353fed36ed9db7a23668
 
 
 ---
@@ -21,13 +21,15 @@ ms.openlocfilehash: bc25d2ee7224983d70a23177666c1a72b3db1a17
 
 # Quels problèmes Azure RMS résout-il ?
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
-Utilisez le tableau suivant pour identifier les besoins ou problèmes métier auxquels votre entreprise peut être confrontée, et savoir de quelle façon Azure RMS peut y remédier.
+Utilisez le tableau suivant pour identifier les besoins ou problèmes métier auxquels votre entreprise peut être confrontée pour protéger des documents et e-mails, et savoir de quelle façon la technologie Azure RMS peut y remédier.
+
+Azure RMS est la technologie de protection utilisée par [Azure Information Protection](what-is-information-protection.md).
 
 |Impératif ou problème|Résolu par Azure RMS|
 |--------------------------|-----------------------|
-|Protection de tous les types de fichiers|√ Dans la précédente implémentation de Rights Management, seuls les fichiers Office pouvaient être protégés, à l'aide de la protection native. Maintenant, le terme [protection générique](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection) signifie que tous les types de fichiers sont pris en charge.|
+|Protection de tous les types de fichiers|√ Dans les précédentes implémentations de Rights Management, seuls les fichiers Office pouvaient être protégés, à l’aide de la protection native. Maintenant, le terme [protection générique](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection) signifie que tous les types de fichiers sont pris en charge.|
 |Protection des fichiers en tout lieu|√ Quand un fichier est enregistré à un emplacement ([protection sur place](../rms-client/sharing-app-protect-in-place.md)), il reste protégé, même s’il est copié vers un emplacement de stockage non contrôlé par le service informatique, comme un service de stockage cloud.|
 |Partage sécurisé des fichiers envoyés par e-mail|√ Quand un fichier est partagé par e-mail ([Partage protégé](../rms-client/sharing-app-protect-by-email.md)), il est protégé comme pièce jointe à un e-mail, avec des instructions expliquant comment ouvrir la pièce jointe protégée. Dans la mesure où le texte de l’e-mail n’est pas chiffré, son destinataire peut lire ces instructions. En revanche, le document joint est protégé, par conséquent seuls les utilisateurs autorisés peuvent l'ouvrir, même si l’e-mail ou le document est transféré à d'autres personnes.|
 |Audit et surveillance|√ Vous pouvez [auditer et surveiller l’utilisation](../deploy-use/log-analyze-usage.md) de vos fichiers protégés, même quand ceux-ci sortent des limites de votre organisation.<br /><br />Par exemple, vous travaillez pour Contoso, Ltd. Vous travaillez sur un projet conjoint avec 3 personnes de Fabrikam, Inc. Vous envoyez par e-mail à ces 3 personnes un document que vous protégez et dont vous restreignez l'accès à la lecture seule. L'audit Azure RMS peut vous fournir les informations suivantes :<br /><br />- Date/heure auxquelles les destinataires de Fabrikam ont ouvert le document, le cas échéant.<br /><br />- Tentative d'ouverture du document (en vain) par d'autres personnes que vous n'avez pas spécifiées, peut-être parce qu'il a été transféré ou enregistré à un emplacement partagé auxquels des tiers ont accès.<br /><br />- Tentative d'impression ou de modification du document (en vain) par une ou plusieurs des personnes spécifiées.|
@@ -72,6 +74,6 @@ Pour voir à quoi ressemble Azure RMS pour les administrateurs et les utilisateu
 Si vous voulez obtenir des informations plus techniques sur le fonctionnement d’Azure RMS, consultez [Fonctionnement d’Azure RMS](how-does-it-work.md). 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

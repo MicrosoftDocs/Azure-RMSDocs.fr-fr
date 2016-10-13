@@ -4,18 +4,18 @@ description: "Les applications Windows Phone peuvent utiliser Microsoft Rights M
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: b2f7233b91852dae0fe619720b84bd395547a05c
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 148cefbe973eadebf942c826ac19c0ee34823c89
 
 
 ---
@@ -78,7 +78,7 @@ Vous êtes maintenant prêt à créer vos propres applications Windows Phone.
 
 [Développement Windows Phone](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
 
-[Référence de l’API Windows](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Référence de l’API Windows](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
@@ -93,6 +93,6 @@ Vous êtes maintenant prêt à créer vos propres applications Windows Phone.
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

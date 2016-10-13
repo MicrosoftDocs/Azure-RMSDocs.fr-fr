@@ -4,18 +4,18 @@ description: "Décrit les étapes de configuration d’Azure RMS pour utiliser l
 keywords: authentification, RMS, ADAL
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 83c4eb741c484018a2837840465aca3276c785c1
-ms.openlocfilehash: 7dfb9ec1266ab89a30caf1b7b539e9408a1092f2
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 2588d10805ddfdc1c09db3008a424767fb528986
 
 
 ---
@@ -109,6 +109,6 @@ Après vous être inscrit à Microsoft Azure :
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO5-->
 
 

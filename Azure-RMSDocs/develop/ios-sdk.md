@@ -4,18 +4,18 @@ description: "Les applications iOS et OS X peuvent utiliser RMS SDK 4.2 pour ac
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 65c5b290278405152d0377a686886ff5be14b52b
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 80d79ead119b5dbe86d94f979742ecc2b62d1ef9
 
 
 ---
@@ -108,7 +108,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 * [Terminologie et concepts du développement](core-concepts.md)
 
-* [Référence d’API iOS / OS X](/rights-management/sdk/4.2/api/ios/ios)
+* [Référence d’API iOS / OS X](/information-protection/sdk/4.2/api/ios/ios)
 
  
 
@@ -119,6 +119,6 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

@@ -1,6 +1,6 @@
-# [Comprendre et explorer](/rights-management/understand-explore/azure-rights-management)
-# [Mise en route](/rights-management/get-started/requirements-azure-rms)
-# [Planifier et concevoir](/rights-management/plan-design/deployment-roadmap)
+# [Comprendre et explorer](/information-protection/understand-explore/what-is-information-protection)
+# [Mise en route](/information-protection/get-started/requirements-azure-rms)
+# [Planifier et concevoir](/information-protection/plan-design/deployment-roadmap)
 # [Déployer et utiliser le service](activate-service.md)
 ## [Activation du service](activate-service.md)
 ### [Version préliminaire du Centre d’administration Office 365](activate-office365-preview.md)
@@ -18,12 +18,22 @@
 ### [Application de partage RMS](configure-sharing-app.md)
 ## [Configuration des droits d’utilisation](configure-usage-rights.md)
 ## [Configuration de super utilisateurs pour les services de découverte ou la récupération de données](configure-super-users.md)
+## [Configuration de la stratégie Information Protection](configure-policy.md)
+### [La stratégie par défaut](configure-policy-default.md)
+### [Configurez les paramètres globaux](configure-policy-settings.md)
+### [Créer une étiquette](configure-policy-new-label.md)
+### [Supprimer ou réorganiser une étiquette](configure-policy-delete-reorder.md)
+### [Modifier une étiquette](configure-policy-change-label.md)
+### [Appliquer la protection](configure-policy-protection.md)
+#### [Restrictions liées à HYOK](configure-adrms-restrictions.md)
+### [Configurer des marquages visuels](configure-policy-markings.md)
+### [Configurer des conditions](configure-policy-classification.md)
 ## [Déploiement du connecteur RMS](deploy-rms-connector.md)
 ### [Installer et configurer le connecteur](install-configure-rms-connector.md)
 ### [Configurer des serveurs](configure-servers-rms-connector.md)
 #### [Paramètres du Registre](rms-connector-registry-settings.md)
 ### [Surveiller le connecteur](monitor-rms-connector.md)
-## [Vérification d’Azure RMS](verify.md)
+## [Vérification du service Azure Rights Management](verify.md)
 ## [Aide aux utilisateurs sur la protection de fichiers](help-users.md)
 ## [Journalisation et d’analyse de l’utilisation](log-analyze-usage.md)
 ## [Opérations pour votre clé de locataire](operations-tenant-key.md)
@@ -32,11 +42,11 @@
 ## [Désaffectation et désactivation](decommission-deactivate.md)
 ## [Administration avec PowerShell](administer-powershell.md)
 ### [Installation de Windows PowerShell pour Azure RMS](install-powershell.md)
-# [Déployer et utiliser le client](/rights-management/rms-client/use-client)
-# [Développer et personnaliser des applications](/rights-management/develop/developers-guide)
-# [Azure Information Protection (préversion)](/rights-management/information-protection/what-is-information-protection)
+# [Déployer et utiliser le client](/information-protection/rms-client/use-client)
+# [Développer et personnaliser des applications](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Sep16_HO4-->
 
 

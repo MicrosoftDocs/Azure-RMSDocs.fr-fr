@@ -1,28 +1,28 @@
 ---
-title: "Scénario - Protéger les fichiers situés sur un partage de serveur de fichiers | Azure RMS"
-description: "Ce scénario et la documentation utilisateur associée utilisent Azure Rights Management pour protéger en bloc tous les fichiers situés sur un serveur de fichiers pour vous assurer que seuls les employés de votre organisation peuvent y accéder, même s’ils sont copiés et enregistrés sur un stockage qui n’est pas sous le contrôle de votre service informatique ou envoyés par e-mail à d’autres utilisateurs."
+title: "Scénario - Protéger les fichiers situés sur un partage de serveur de fichiers | Azure Information Protection"
+description: "Ce scénario et la documentation utilisateur associée utilisent la protection Azure Rights Management pour protéger en bloc tous les fichiers situés sur un serveur de fichiers pour vous assurer que seuls les employés de votre organisation peuvent y accéder, même s’ils sont copiés et enregistrés sur un stockage qui n’est pas sous le contrôle de votre service informatique ou envoyés par e-mail à d’autres utilisateurs."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: adc8ebd3063d8ac4b3710c517f0177fc25a16845
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
 
 
 ---
 
 # Scénario - Protéger les fichiers situés sur un partage de serveur de fichiers
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
-Ce scénario et la documentation utilisateur associée utilisent Azure Rights Management pour protéger en bloc tous les fichiers situés sur un serveur de fichiers pour vous assurer que seuls les employés de votre organisation peuvent y accéder, même s’ils sont copiés et enregistrés sur un stockage qui n’est pas sous le contrôle de votre service informatique ou envoyés par e-mail à d’autres utilisateurs.
+Ce scénario et la documentation utilisateur associée utilisent la technologie Azure Rights Management d’Azure Information Protection pour protéger en bloc tous les fichiers situés sur un serveur de fichiers pour vous assurer que seuls les employés de votre organisation peuvent y accéder, même s’ils sont copiés et enregistrés sur un stockage qui n’est pas sous le contrôle de votre service informatique ou envoyés par e-mail à d’autres utilisateurs.
 
 Ces instructions utilisent un des modèles par défaut, ce qui limite l’accès à tous les employés ayant tous les droits d’utilisation. Toutefois, si nécessaire, vous pouvez restreindre les droits d’accès et d’utilisation en configurant un modèle personnalisé au lieu d’utiliser un modèle par défaut.
 
@@ -44,10 +44,10 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
 
 |Condition requise|Si vous avez besoin d'informations supplémentaires|
 |---------------|--------------------------------|
-|Azure Rights Management est activé|[Activation d'Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Vous avez synchronisé vos comptes d'utilisateurs Active Directory locaux avec Azure Active Directory ou Office 365, y compris leurs adresses électroniques. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et Azure Rights Management.|[Préparation pour Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Une des causes suivantes :<br /><br />- Pour utiliser un modèle par défaut pour tous les utilisateurs, consultez : Vous n’avez pas archivé le modèle par défaut &lt;nom de l’organisation&gt; - Confidentiel<br /><br />- Pour utiliser un modèle personnalisé pour des utilisateurs spécifiques, consultez : Vous avez créé et publié ce modèle personnalisé|[Configuration de modèles personnalisés pour Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|L'application de partage Rights Management est déployée sur les ordinateurs des utilisateurs qui exécutent Windows|[Déploiement automatique de l'application de partage Microsoft Rights Management](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|Azure Rights Management est activé|[Activation d'Azure Rights Management](../deploy-use/activate-service.md)|
+|Vous avez synchronisé vos comptes d'utilisateurs Active Directory locaux avec Azure Active Directory ou Office 365, y compris leurs adresses électroniques. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et Azure Rights Management.|[Préparation d’Azure Information Protection](../plan-design/prepare.md)|
+|Une des causes suivantes :<br /><br />- Pour utiliser un modèle par défaut pour tous les utilisateurs, consultez : Vous n’avez pas archivé le modèle par défaut &lt;nom de l’organisation&gt; - Confidentiel<br /><br />- Pour utiliser un modèle personnalisé pour des utilisateurs spécifiques, consultez : Vous avez créé et publié ce modèle personnalisé|[Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|L'application de partage Rights Management est déployée sur les ordinateurs des utilisateurs qui exécutent Windows|[Déploiement automatique de l'application de partage Microsoft Rights Management](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Vous avez téléchargé l’outil Protection RMS et configuré les conditions préalables pour Azure RMS|Pour obtenir des instructions relatives au téléchargement de l’outil et aux conditions préalables : [Applets de commande de Protection RMS](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Pour configurer d’autres conditions préalables pour Azure RMS, telles que le compte du principal du service : [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
 ### Configuration d’un serveur de fichiers pour protéger tous les fichiers à l’aide d’Azure RMS et des Outils de gestion de ressources avec l’infrastructure de classification des fichiers
@@ -68,7 +68,7 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
     ```
     Pour utiliser le modèle par défaut qui limite l’accès à tous les employés disposant de tous les droits d’utilisation, recherchez le nom du modèle de **&lt;nom de l’organisation&gt; - Confidentiel**. Par exemple **VanArsdel, Ltd - Confidentiel**.
 
-4.  Suivez les instructions pas à pas de [Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx).
+4.  Suivez les instructions pas à pas de [Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server](../rms-client/configure-fci.md).
 
     Ces instructions incluent un script Windows PowerShell que vous spécifiez pour s’exécuter comme un exécutable personnalisé dans les Outils de gestion de ressources pour serveur de fichiers. Les instructions incluent également comment vérifier que les fichiers sont protégés par Azure Rights Management.
 
@@ -117,7 +117,7 @@ Périodiquement, le fichier sera de nouveau protégé, ce qui ajoutera une nouve
 
 -   Pour plus d'informations :
 
-    -   [Afficher et utiliser des fichiers protégés](https://technet.microsoft.com/library/dn574741%28v=ws.10%29)
+    -   [Afficher et utiliser des fichiers protégés](../rms-client/sharing-app-view-use-files.md)
 
 -   Contactez le support technique :
 
@@ -148,13 +148,13 @@ Périodiquement, le fichier sera de nouveau protégé, ce qui ajoutera une nouve
 
 -   Pour plus d'informations :
 
-    -   [Afficher et utiliser des fichier protégés](https://technet.microsoft.com/library/dn574741%28v=ws.10%29)
+    -   [Afficher et utiliser des fichier protégés](../rms-client/sharing-app-view-use-files.md)
 
 -   Contactez le support technique : helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

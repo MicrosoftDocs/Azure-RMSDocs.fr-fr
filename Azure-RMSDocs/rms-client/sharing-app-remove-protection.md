@@ -1,26 +1,26 @@
 ---
-title: "Supprimer la protection d’un fichier à l’aide de l’application de partage Rights Management | Azure RMS"
+title: "Supprimer la protection d’un fichier à l’aide de l’application de partage Rights Management | Azure Information Protection"
 description: "Instructions à suivre pour supprimer la protection d’un fichier protégé (autrement dit, pour le déprotéger) à l’aide de l’application de partage RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 4400b09108851ad5776596b699db2fcb01bb0b70
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: ceb726e47c4eb9413b7d7eb5b1469e2a99992dda
 
 
 ---
 
 # Suppression de la protection d'un fichier avec l'application de partage Rights Management
 
->*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Pour supprimer la protection d'un fichier (autrement dit, le dé-protéger) protégé à l'aide de l'application de partage RMS, utilisez l'option **Supprimer la Protection** de l'Explorateur de fichiers.
 
@@ -51,6 +51,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

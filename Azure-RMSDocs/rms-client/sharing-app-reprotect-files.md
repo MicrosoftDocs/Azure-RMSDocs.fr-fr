@@ -1,27 +1,27 @@
 ---
-title: "Modifier les autorisations des fichiers qui ont été protégés par Rights Management | Azure RMS"
+title: "Modifier les autorisations des fichiers qui ont été protégés par Rights Management | Azure Information Protection"
 description: "Quand vous protégez un fichier avec Rights Management, vous pouvez modifier les autorisations en le reprotégeant, puis en spécifiant tous les utilisateurs qui doivent y avoir accès et quelles autorisations vous souhaitez leur accorder."
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 214890cee5975c05798014ddb8d153faa9ca3998
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 99dcbeb68cbbe363cfd1e6ded07882f01621e438
 
 
 ---
 
 # Modifier les autorisations des fichiers qui ont été protégés par Rights Management
 
->*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Quand vous protégez un fichier avec Rights Management, vous pouvez modifier les autorisations en le reprotégeant, puis en spécifiant tous les utilisateurs qui doivent y avoir accès et quelles autorisations vous souhaitez leur accorder.
 
@@ -62,9 +62,9 @@ Si vous souhaitez supprimer complètement toutes les autorisations pour que le f
     Si vous êtes autorisé à reprotéger le fichier, avant que le focus revienne sur l’Explorateur de fichiers, une boîte de dialogue peut s’afficher brièvement pour vous informer que le fichier est protégé. Les fichiers sélectionnés sont désormais protégés avec vos modifications. 
 
 > [!NOTE]
-> Pour pouvoir reprotéger le fichier, RMS doit confirmer que vous êtes autorisé à effectuer cette action sur ce fichier. Pour ce faire, il vérifie vos nom d’utilisateur et mot de passe. Dans certains cas, cette opération peut être mise en cache de sorte que vous ne voyez pas d'invite vous demandant vos informations d'identification. Dans d'autres cas, vous êtes invité à fournir vos informations d'identification.
+> Pour pouvoir reprotéger le fichier, le service Rights Management doit confirmer que vous êtes autorisé à effectuer cette action sur ce fichier. Pour ce faire, il vérifie vos nom d’utilisateur et mot de passe. Dans certains cas, cette opération peut être mise en cache de sorte que vous ne voyez pas d'invite vous demandant vos informations d'identification. Dans d'autres cas, vous êtes invité à fournir vos informations d'identification.
 >
-> Si votre organisation n’utilise pas Azure Rights Management (Azure RMS) ou AD RMS, vous pouvez demander un compte gratuit acceptant vos informations d’identification pour pouvoir utiliser des fichiers protégés à l’aide de RMS :
+> Si votre organisation n’utilise pas Azure Information Protection ou AD RMS, vous pouvez demander un compte gratuit acceptant vos informations d’identification pour pouvoir utiliser des fichiers protégés à l’aide de RMS :
 >
 > -   Pour demander ce compte, cliquez sur le lien [RMS for Individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
@@ -96,6 +96,6 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

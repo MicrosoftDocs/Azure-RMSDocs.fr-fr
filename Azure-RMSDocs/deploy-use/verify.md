@@ -1,28 +1,28 @@
 ---
-title: "Vérification d’Azure Rights Management | Azure RMS"
+title: "Vérification d’Azure Rights Management | Azure Information Protection"
 description: "Instructions à suivre pour vérifier que le service fonctionne comme prévu. Pour cela, protégez un fichier ou un e-mail en utilisant un compte d’utilisateur, puis essayez d’ouvrir et d’utiliser ce contenu protégé à partir d’un autre compte d’utilisateur."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: aed609eb3562f670fd85ca8138bcd89cdc7800fd
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 665adbee40f5c1653a3c046231c5df450ee78c5f
 
 
 ---
 
 # Vérification d'Azure Rights Management
 
->*S’applique à : Azure Rights Management, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
-Après avoir activé [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) et effectué toutes les étapes de configuration supplémentaires nécessaires pour votre organisation, vous pouvez vérifier que le service fonctionne comme prévu en protégeant un fichier ou un e-mail associé à un compte d’utilisateur, puis en essayant d’ouvrir et d’utiliser ce contenu protégé à partir d’un autre compte d’utilisateur.
+Quand le service Azure Rights Management d’Azure Information Protection est activé et que vous avez effectué toutes les étapes de configuration supplémentaires requises pour votre organisation, vous pouvez vérifier que ce service de protection fonctionne comme prévu en protégeant un fichier ou un e-mail en utilisant un compte d’utilisateur, puis en essayant d’ouvrir et d’utiliser ce contenu protégé à partir d’un autre compte d’utilisateur.
 
 Pour effectuer ce test, vous pouvez utiliser les informations contenues dans [Aide aux utilisateurs sur la protection de fichiers grâce à Azure Rights Management](help-users.md).
 
@@ -33,13 +33,13 @@ Si votre test échoue, passez en revue les étapes de configuration dans [Feuill
 
 ## Étapes suivantes
 
-Vous pouvez contrôler l'usage de la protection des informations par votre organisation à l'aide de la journalisation de l'utilisation. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation d’Azure Rights Management](log-analyze-usage.md).
+Vous pouvez, à l’aide de la journalisation de l’utilisation, surveiller l’usage que fait votre organisation du service Azure Rights Management. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation d’Azure Rights Management](log-analyze-usage.md).
 
 
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

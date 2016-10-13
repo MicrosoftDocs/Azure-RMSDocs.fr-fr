@@ -1,29 +1,29 @@
 ---
-title: "Comment activer Azure Rights Management à partir du portail classique Azure | Azure RMS"
-description: "Instructions d’activation d’Azure RMS quand vous avez accès au portail Azure. Par exemple, vous avez un abonnement à Enterprise Mobility Suite ou êtes abonné à Azure Rights Management Premium."
+title: "Comment activer Azure Rights Management à partir du portail classique Azure | Azure Information Protection"
+description: "Instructions d’activation du service Azure Rights Management quand vous avez accès au portail Azure. Par exemple, vous avez un abonnement à Enterprise Mobility Suite ou êtes abonné à Azure Information Protection Premium."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: ab3b5d71e8cee2ece7fad4c9c3017de7d6eca979
+ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
+ms.openlocfilehash: a553ea57bd4b396b7629dc24aea9f76b4a2a5e5a
 
 
 ---
 
 # Comment activer Azure Rights Management à partir du portail classique Azure
 
->*S’applique à : Azure Rights Management*
+>*S’applique à : Azure Information Protection*
 
 
-Utilisez ces instructions si vous avez accès au portail Azure. Par exemple, vous avez un abonnement à Enterprise Mobility Suite ou êtes abonné à Azure Rights Management Premium.
+Utilisez ces instructions si vous avez accès au portail Azure. Par exemple, vous avez un abonnement à Enterprise Mobility Suite ou êtes abonné à Azure Information Protection Premium.
 
 > [!TIP]
 > Regardez une vidéo de 2 minutes : [Comment activer Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)
@@ -37,9 +37,9 @@ Utilisez ces instructions si vous avez accès au portail Azure. Par exemple, vou
 4.  Sélectionnez l’annuaire à gérer pour [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], cliquez sur **ACTIVER**, puis confirmez votre action.
 
     > [!NOTE]
-    >Si vous voyez une erreur d’activation, il est possible que votre plan de services ou votre version de produit n’inclue pas [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+    >Si vous voyez une erreur d’activation, il est possible que votre plan de service ou version de produit n’inclue pas le service Azure Rights Management d’Azure Information Protection.
     >
-    >Utilisez les informations de [Abonnements cloud prenant en charge Azure RMS](../get-started/requirements-subscriptions.md) pour vérifier la prise en charge de RMS. Pour obtenir de l'aide, envoyez un courrier électronique à [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    >Utilisez les [informations d’abonnement](https://go.microsoft.com/fwlink/?LinkId=827589) pour confirmer que votre abonnement inclut Azure Rights Management. Pour obtenir de l'aide, envoyez un courrier électronique à [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 
 **Statut de Rights Management** doit désormais afficher l’état **Actif** et l’option **ACTIVER** est remplacée par **DÉSACTIVER**.
@@ -58,6 +58,6 @@ En plus de l'état **Actif** qui indique que le service Rights Management est ac
 Retour à [Activation d’Azure Rights Management](activate-service.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -3,7 +3,7 @@ title: Configuration des serveurs pour le connecteur Azure Rights Management | A
 description: "Informations vous permettant de configurer les serveurs locaux destinés à utiliser le connecteur Azure Rights Management (RMS). Ces procédures couvrent l’étape 5 de Déploiement du connecteur Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 825103c8857d2db4f0a37570d10fd88361eae274
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: fc30e58bb6702576988db0dcb4fd38a73d5591b1
 
 
 ---
@@ -243,12 +243,12 @@ Pour utiliser le connecteur RMS et l'infrastructure de classification des fichie
 ## Étapes suivantes
 Maintenant que le connecteur RMS est installé et configuré, et que vos serveurs sont configurés pour l’utiliser, les administrateurs informatiques et les utilisateurs peuvent protéger et utiliser les e-mails et les documents à l’aide d’Azure RMS. Pour faciliter la tâche des utilisateurs, déployez l'application de partage RMS, qui installe un module complémentaire pour Office et ajoute de nouvelles options contextuelles à l'Explorateur de fichiers. Pour plus d’informations, consultez le [guide d’administration de l’application de partage Rights Management](../rms-client/sharing-app-admin-guide.md).
 
-Utilisez la [Feuille de route pour le déploiement d’Azure Rights Management](../plan-design/deployment-roadmap.md) pour déterminer si d’autres étapes de configuration peuvent s’avérer nécessaires avant de mettre [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] à la disposition des utilisateurs et des administrateurs.
+Vous pouvez utiliser la [Feuille de route pour le déploiement d’Azure Information Protection](../plan-design/deployment-roadmap.md) pour déterminer si d’autres étapes de configuration peuvent s’avérer nécessaires avant de mettre [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] à la disposition des utilisateurs et des administrateurs.
 
 Pour surveiller le connecteur RMS, consultez [Surveiller le connecteur Azure Rights Management](monitor-rms-connector.md). 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -3,7 +3,7 @@ title: "Forum aux questions sur le service de protection des données, Azure Rig
 description: "Certaines questions fréquentes sur le service de protection des données, Azure Rights Management (Azure RMS), d’Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad2d3d7962ab8f8422f4682e4ecd24a7cff3b239
-ms.openlocfilehash: 1840954addbf7b3ad603c05b0c55f8bf99ccacfb
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 114dfd2a0f19205432771b5dc17ddcb60f7ec44b
 
 
 ---
@@ -85,7 +85,7 @@ Pour spécifier des utilisateurs extérieurs à votre organisation, ajoutez-les 
 
 -   **utiliser un objet de définition de droits pour créer ou mettre à jour un modèle**.    Spécifiez les adresses de messagerie externes et leurs droits dans un objet de définition de droits, que vous pouvez ensuite utiliser pour créer ou mettre à jour un modèle. Spécifiez l’objet de définition de droits à l’aide de l’applet de commande [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) pour créer une variable, puis spécifiez cette variable dans le paramètre -RightsDefinition avec l’applet de commande [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx) (pour un nouveau modèle) ou l’applet de commande [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) (si vous modifiez un modèle existant). Cependant, si vous ajoutez ces utilisateurs à un modèle existant, vous devez définir des objets de définition de droits pour les groupes existants des modèles et pas seulement les utilisateurs externes.
 
-Pour plus d’informations sur les modèles personnalisés, consultez [Configuration de modèles personnalisés pour Azure Rights Management](../deploy-use/configure-custom-templates.md).
+Pour plus d’informations sur les modèles personnalisés, consultez [Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
 ## Azure RMS fonctionne-t-il avec des groupes dynamiques dans Azure AD ?
 Une fonctionnalité Azure AD Premium vous permet de configurer l’appartenance dynamique à des groupes en spécifiant des [règles basées sur des attributs](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). Quand vous créez un groupe de sécurité dans Azure AD, ce type de groupe prend en charge l’appartenance dynamique. Toutefois, il ne prend pas en charge les adresses e-mail et ne peut donc pas être utilisé avec le service Azure Rights Management. Néanmoins, vous pouvez désormais créer dans Azure AD un type de groupe à extension messagerie, qui prend en charge l’appartenance dynamique. Quand vous ajoutez un nouveau groupe dans le portail Azure Classic, vous pouvez choisir le **TYPE DE GROUPE** d’**Office 365 « Preview »**. Dans la mesure où ce groupe est à extension messagerie, vous pouvez l’utiliser avec la protection Azure Rights Management.
@@ -145,6 +145,6 @@ En dépit de son nom et de son apparence, l’option **Ne pas transférer** n’
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

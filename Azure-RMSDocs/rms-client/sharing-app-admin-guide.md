@@ -3,7 +3,7 @@ title: "Guide d’administrateur sur l’application de partage Rights Managemen
 description: "Instructions et informations destinées aux administrateurs sur un réseau d’entreprise en charge du déploiement de l’application de partage Microsoft Rights Management pour Windows."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7ca9476d99457c814755b118660743b27ad78dbc
-ms.openlocfilehash: 73fd286c8112392bf7cb93468a27188aae6c22de
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: 4a551f198b0469f82c14120c0c6f2bb7d055afe9
 
 
 ---
@@ -382,7 +382,7 @@ Dans les fichiers journaux d’utilisation, deux champs s’appliquent au suivi 
 Il existe également des types de demandes qui journalisent la façon dont les utilisateurs et les administrateurs utilisent le site de suivi des documents. Par exemple, **RevokeAccess** est le type de demande quand un utilisateur (ou un administrateur au nom d’un utilisateur) a révoqué un document dans le site de suivi des documents. Utilisez ce type de demande conjointement avec le champ AdminAction pour déterminer si l’utilisateur a révoqué son propre document (le champ AdminAction est vide) ou si un administrateur a révoqué un document au nom d’un d’utilisateur (AdminAction a la valeur True).
 
 
-Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation d’Azure Rights Management](../deploy-use/log-analyze-usage.md).
+Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../deploy-use/log-analyze-usage.md)
 
 ## AD RMS uniquement : prise en charge de plusieurs domaines de messagerie au sein de votre organisation
 Si vous utilisez les services AD RMS et que les utilisateurs de votre organisation disposent de plusieurs domaines de messagerie, suite à une fusion ou une acquisition par exemple, vous devez apporter la modification suivante au Registre :
@@ -402,6 +402,6 @@ Pour obtenir des informations techniques supplémentaires sur notamment la diff�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

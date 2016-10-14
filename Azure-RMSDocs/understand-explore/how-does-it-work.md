@@ -3,7 +3,7 @@ title: "Fonctionnement d’Azure RMS | Azure Information Protection"
 description: "Découvrez en détail le fonctionnement d’Azure RMS, les contrôles de chiffrement qu’il utilise et le déroulement de ce processus à l’aide de diagrammes détaillés."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
-ms.openlocfilehash: 5efa5bdf9e11e55ec190c3abe95b1bdc33026c63
+ms.sourcegitcommit: 0e66bfa436bf811b34cf3cfe1b2d68a6a4e137c2
+ms.openlocfilehash: dd6c9250102e104ba49b0c08f14d9959cd1228cb
 
 
 ---
@@ -29,7 +29,7 @@ Concernant le fonctionnement d'Azure RMS, il est important de comprendre que le 
 
 -   Quand un document protégé est utilisé par un utilisateur légitime, ou traité par un service autorisé, ses données sont déchiffrées et les droits définis dans la stratégie appliqués.
 
-À un niveau élevé, vous pouvez voir comment ce processus fonctionne dans l'image suivante. Un document contenant la formule secrète est protégé, puis ouvert correctement par un utilisateur ou un service autorisé. Le document est protégé par une clé de contenu (la clé verte sur cette image). Cette clé unique pour chaque document est placée dans l'en-tête du fichier, où elle est protégée par votre clé racine de locataire RMS (la clé rouge sur l'image). Microsoft peut générer et gérer votre clé de locataire. Vous pouvez également générer et gérer personnellement votre propre clé de locataire.
+À un niveau élevé, vous pouvez voir comment ce processus fonctionne dans l'image suivante. Un document contenant la formule secrète est protégé, puis ouvert correctement par un utilisateur ou un service autorisé. Le document est protégé par une clé de contenu (la clé verte sur cette image). Elle est unique pour chaque document et est placée dans l’en-tête du fichier où elle est protégée par votre clé racine de locataire Azure Information Protection (la clé rouge sur l’image). Microsoft peut générer et gérer votre clé de locataire. Vous pouvez également générer et gérer personnellement votre propre clé de locataire.
 
 Durant le processus de protection, quand Azure RMS chiffre, déchiffre, autorise et applique des restrictions, la formule secrète n'est jamais envoyée à Azure.
 
@@ -57,16 +57,16 @@ Mode de stockage et de sécurisation des clés de chiffrement :
 
 - Pour chaque document ou e-mail protégé par Azure RMS, Azure RMS crée une clé AES unique (la « clé de contenu »), qui est incorporée au document et qui persiste au fil de ses modifications successives. 
 
-- La clé de contenu est protégée à l’aide de la clé RSA de l’organisation (« clé de locataire Azure RMS ») dans le cadre de la stratégie définie dans le document, et signée par l’auteur de celui-ci. Cette clé de locataire est commune à tous les documents et e-mails protégés par Azure RMS pour l’organisation ; elle ne peut être modifiée par un administrateur Azure RMS que si l’organisation utilise une clé de locataire gérée par le client, appelée BYOK (Bring Your Own Key). 
+- La clé de contenu est protégée à l’aide de la clé RSA de l’organisation (la « clé de locataire Azure Information Protection ») dans le cadre de la stratégie définie dans le document. La stratégie est également signée par l’auteur du document. Cette clé de locataire est commune à tous les documents et e-mails protégés par Azure RMS pour l’organisation ; elle ne peut être modifiée par un administrateur Azure Information Protection que si l’organisation utilise une clé de locataire gérée par le client, également appelée BYOK (Bring Your Own Key). 
 
-    Cette clé de locataire est protégée dans les services en ligne de Microsoft, dans un environnement très contrôlé et sous étroite surveillance. Lorsque vous utilisez une clé de locataire gérée par le client (BYOK), cette sécurité est renforcée par l’utilisation d’une série de modules de sécurité matériels (HSM) haut de gamme dans chaque région Azure, ne laissant aucune possibilité d’extraire, exporter ou partager les clés, quelles que soient les circonstances. Pour plus d’informations sur la gestion de votre clé de locataire et du BYOK, consultez [Planification et implémentation de votre clé de locataire Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
+    Cette clé de locataire est protégée dans les services en ligne de Microsoft, dans un environnement très contrôlé et sous étroite surveillance. Lorsque vous utilisez une clé de locataire gérée par le client (BYOK), cette sécurité est renforcée par l’utilisation d’une série de modules de sécurité matériels (HSM) haut de gamme dans chaque région Azure, ne laissant aucune possibilité d’extraire, exporter ou partager les clés, quelles que soient les circonstances. Pour plus d’informations sur les options de clé de locataire et les clés BYOK, consultez [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
 - Les licences et certificats envoyés à un appareil Windows sont protégés par la clé privée d’appareil du client, créée quand un utilisateur utilise Azure RMS sur l’appareil pour la première fois. Cette clé privée est à son tour protégée par DPAPI sur le client, ce qui a pour effet de protéger ces clés secrètes à l’aide d’une clé dérivée du mot de passe de l’utilisateur. Sur les appareils mobiles, les clés ne sont utilisées qu’une seule fois. Ainsi, n’étant pas stockées sur les clients, elles ne nécessitent pas de protection sur l’appareil. 
 
 
 
 ## Procédure pas à pas décrivant le fonctionnement d'Azure RMS : première utilisation, protection du contenu, consommation du contenu
-Pour comprendre plus précisément le fonctionnement d’Azure RMS, examinons un flux classique tel qu’il se produit après l’[activation du service Azure RMS](../deploy-use/activate-service.md), quand un utilisateur utilise RMS pour la première fois sur son ordinateur Windows (processus parfois nommé **initialisation de l’environnement utilisateur** ou amorçage), **protège du contenu** (un document ou un e-mail), puis **consomme** (ouvre et utilise) du contenu protégé par quelqu’un d’autre.
+Pour comprendre plus en détails le fonctionnement d’Azure RMS, examinons un flux classique tel qu’il se produit après l’[activation du service Azure Rights Management](../deploy-use/activate-service.md), quand un utilisateur utilise le service Rights Management pour la première fois sur son ordinateur Windows (un processus parfois nommé **initialisation de l’environnement utilisateur** ou amorçage), **protège du contenu** (un document ou un e-mail), puis **consomme** (ouvre et utilise) du contenu protégé par quelqu’un d’autre.
 
 Après l'initialisation de l'environnement utilisateur, l'utilisateur peut protéger des documents ou consommer des documents protégés sur cet ordinateur.
 
@@ -78,15 +78,15 @@ Pour qu'un utilisateur puisse protéger du contenu ou utiliser du contenu proté
 
 ![Activation du client RMS : étape 1](../media/AzRMS.png)
 
-**Ce qui se passe à l’étape 1** : le client RMS sur l’ordinateur se connecte d’abord à Azure RMS, puis authentifie l’utilisateur à l’aide de son compte Azure Active Directory.
+**Ce qui se passe à l’étape 1** : le client RMS sur l’ordinateur se connecte d’abord au service à Azure Rights Management, puis authentifie l’utilisateur à l’aide de son compte Azure Active Directory.
 
 Lorsque le compte de l'utilisateur est fédéré avec Azure Active Directory, cette authentification est automatique. L'utilisateur n'est donc pas invité à fournir d'informations d'identification.
 
 ![Activation du client RMS : étape 2](../media/AzRMS_useractivation2.png)
 
-**Ce qui se passe à l’étape 2** : une fois l’utilisateur authentifié, la connexion est automatiquement redirigée vers le locataire RMS de l’organisation, qui émet des certificats permettant à l’utilisateur de s’authentifier auprès d’Azure RMS, pour consommer du contenu protégé et protéger du contenu hors connexion.
+**Ce qui se passe à l’étape 2** : une fois l’utilisateur authentifié, la connexion est automatiquement redirigée vers le locataire Azure Information Protection de l’organisation, qui émet des certificats permettant à l’utilisateur de s’authentifier auprès du service Azure Rights Management, pour consommer du contenu protégé et protéger du contenu hors connexion.
 
-Une copie du certificat de l'utilisateur est stockée dans Azure RMS afin que, si l'utilisateur utilise un autre appareil, les certificats soient créés à l'aide des mêmes clés.
+Une copie du certificat de l’utilisateur est stockée dans Azure afin que, si l’utilisateur utilise un autre appareil, les certificats soient créés en utilisant les mêmes clés.
 
 ### Protection du contenu
 Quand un utilisateur protège un document, le client RMS effectue les actions suivantes sur un document non protégé :
@@ -108,11 +108,11 @@ Le client RMS utilise ensuite la clé de l'organisation obtenue lors de l'initia
 Ce document peut être stocké partout, ou partagé à l'aide de n'importe quelle méthode, et la stratégie reste toujours associée au document chiffré.
 
 ### Consommation du contenu
-Quand un utilisateur souhaite consommer un document protégé, le client RMS commence par demander l'accès au service Azure RMS :
+Quand un utilisateur veut consommer un document protégé, le client RMS commence par demander l’accès au service Azure Rights Management :
 
 ![Consommation de document RMS : étape 1](../media/AzRMS_documentconsumption1.png)
 
-**Ce qui se passe à l’étape 1 **: l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur à Azure RMS. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l'utilisateur sur le document.
+**Ce qui se passe à l’étape 1 **: l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur au service Azure Rights Management. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l'utilisateur sur le document.
 
 ![Consommation de document RMS : étape 2](../media/AzRMS_documentconsumption2.png)
 
@@ -129,27 +129,27 @@ Le client déchiffre également la liste des droits, et transmet ceux-ci à l'ap
 ### Variantes
 Les procédures pas à pas précédentes couvrent les scénarios standard, mais il existe des variantes :
 
--   **Appareils mobiles**: Quand des appareils mobiles protègent ou consomment des fichiers avec Azure RMS, les flux de processus sont beaucoup plus simples. Les appareils mobiles ne passent pas par le processus d'initialisation utilisateur, car chaque transaction (pour protéger ou consommer du contenu) est indépendante. Comme les ordinateurs Windows, les appareils mobiles se connectent au service Azure RMS et s'authentifient. Pour protéger du contenu, les appareils mobiles soumettent une stratégie, puis Azure RMS leur envoie une licence de publication et une clé symétrique pour protéger le document. Pour consommer du contenu, quand des appareils mobiles se connectent au service Azure RMS et s'authentifient, ils envoient la stratégie de document à Azure RMS en demandant une licence d'utilisation pour consommer le document. En réponse, Azure RMS leur envoie les clés et restrictions nécessaires. Les deux processus utilisent TLS pour protéger l'échange de clés et d'autres communications.
+-   **Appareils mobiles** : quand des appareils mobiles protègent ou consomment des fichiers avec le service Azure Rights Management, les flux du processus sont beaucoup plus simples. Les appareils mobiles ne passent pas par le processus d'initialisation utilisateur, car chaque transaction (pour protéger ou consommer du contenu) est indépendante. Comme avec les ordinateurs Windows, les appareils mobiles se connectent au service Azure Rights Management et s’authentifient. Pour protéger du contenu, les appareils mobiles soumettent une stratégie, puis le service Azure Rights Management leur envoie une licence de publication et une clé symétrique pour protéger le document. Pour consommer du contenu, quand des appareils mobiles se connectent au service Azure Rights Management et s’authentifient, ils envoient la stratégie de document au service Azure Rights Management et demandent une licence d’utilisation pour consommer le document. En réponse, le service Azure Rights Management leur envoie les clés nécessaires et les restrictions. Les deux processus utilisent TLS pour protéger l'échange de clés et d'autres communications.
 
--   **Connecteur RMS**: Quand Azure RMS est utilisé avec le connecteur RMS, le flux de processus est identique. La seule différence est que le connecteur fait office de relais entre les services locaux (tels qu'Exchange Server et SharePoint Server) et Azure RMS. Le connecteur proprement dit n'effectue aucune opération telle qu'une initialisation de l'environnement utilisateur, un chiffrement ou un déchiffrement. Il relaie simplement la communication qui accède généralement à un serveur AD RMS, en gérant la traduction entre les protocoles utilisés de part et d'autre. Ce scénario vous permet d’utiliser Azure RMS avec des services locaux.
+-   **Connecteur RMS** : quand le service Azure Rights Management est utilisé avec le connecteur RMS, le flux du processus reste identique. La seule différence est que le connecteur fait office de relais entre les services locaux (comme Exchange Server et SharePoint Server) et le service Azure Rights Management. Le connecteur proprement dit n'effectue aucune opération telle qu'une initialisation de l'environnement utilisateur, un chiffrement ou un déchiffrement. Il relaie simplement la communication qui accède généralement à un serveur AD RMS, en gérant la traduction entre les protocoles utilisés de part et d'autre. Ce scénario vous permet d’utiliser le service Azure Rights Management avec des services locaux.
 
--   **Protection générique (.pfile)**: Quand Azure RMS protège un fichier de façon générique, le flux est fondamentalement le même pour la protection du contenu, sauf que le client RMS crée une stratégie qui accorde tous les droits. Lorsque le fichier est consommé, il est déchiffré avant d'être transmis à l'application cible. Ce scénario vous permet de protéger tous les fichiers, même s'ils ne prennent pas en charge RMS en mode natif.
+-   **Protection générique (.pfile)** : quand le service Azure Rights Management protège un fichier de façon générique, le flux est fondamentalement le même pour la protection du contenu, sauf que le client RMS crée une stratégie qui accorde tous les droits. Lorsque le fichier est consommé, il est déchiffré avant d'être transmis à l'application cible. Ce scénario vous permet de protéger tous les fichiers, même s'ils ne prennent pas en charge RMS en mode natif.
 
--   **PDF protégé (.ppdf)**: Quand Azure RMS protège un fichier Office en mode natif, il en crée également une copie qu'il protège de la même façon. La seule différence est que la copie est un fichier au format PPDF, que l'application de partage RMS peut ouvrir en mode affichage. Ce scénario vous permet d'envoyer des pièces jointes protégées par courrier électronique, en sachant que le destinataire sur un appareil mobile sera toujours en mesure de les lire, même si son appareil n'a pas d'application prenant en charge en mode natif des fichiers Office protégés.
+-   **PDF protégé (.ppdf)** : quand le service Azure Rights Management protège un fichier Office en mode natif, il en crée également une copie qu’il protège de la même façon. La seule différence est que la copie est un fichier au format PPDF, que l'application de partage RMS peut ouvrir en mode affichage. Ce scénario vous permet d'envoyer des pièces jointes protégées par courrier électronique, en sachant que le destinataire sur un appareil mobile sera toujours en mesure de les lire, même si son appareil n'a pas d'application prenant en charge en mode natif des fichiers Office protégés.
 
 ## Étapes suivantes
 
-Pour en savoir plus sur Azure RMS, reportez-vous aux autres articles de la section **Comprendre et explorer**, comme [Comment les applications prennent en charge Azure Rights Management](applications-support.md), pour savoir comment intégrer vos applications existantes avec Azure RMS afin de bénéficier d’une solution de protection des informations. 
+Pour en savoir plus sur le service Azure Rights Management, reportez-vous aux autres articles de la section **Comprendre et explorer**, comme [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md), pour savoir comment intégrer vos applications existantes avec Azure Rights Management afin de bénéficier d’une solution de protection des informations. 
 
-Consultez [Terminologie pour Azure Rights Management](../get-started/terminology.md) pour vous familiariser avec les termes que vous allez rencontrer lors de la configuration et de l’utilisation d’Azure RMS, et n’oubliez pas de lire aussi [Configuration requise pour Azure Rights Management](../get-started/requirements-azure-rms.md) avant d’entamer votre déploiement. Si vous voulez vous y plonger directement et essayer par vous-même, utilisez le [Didacticiel de démarrage rapide pour Azure Rights Management](../get-started/quick-start-tutorial.md).
+Consultez [Terminologie liée à Azure Information Protection](../get-started/terminology.md) pour vous familiariser avec les termes que vous allez rencontrer lors de la configuration et de l’utilisation du service Azure Rights Management, et n’oubliez pas de lire aussi [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md) avant d’entamer votre déploiement. Si vous voulez vous y plonger directement et essayer par vous-même, utilisez le [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
-Si vous êtes prêt à déployer Azure RMS pour votre organisation, consultez la [Feuille de route pour le déploiement d’Azure Rights Management](../plan-design/deployment-roadmap.md) pour connaître les étapes de déploiement et accéder à des liens vers des instructions.
+Si vous êtes prêt à déployer la protection des données pour votre organisation, utilisez la [Feuille de route pour le déploiement d’Azure Information Protection](../plan-design/deployment-roadmap.md) pour connaître les étapes de déploiement et accéder à des liens vers des instructions.
 
 > [!TIP]
-> Pour plus d’informations et de l’aide supplémentaire, utilisez les ressources et les liens de [Informations et support technique pour Azure Rights Management](../get-started/information-support.md).
+> Pour obtenir plus d’informations et de l’aide supplémentaire, utilisez les ressources et les liens dans [Informations et support pour Azure Information Protection](../get-started/information-support.md).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

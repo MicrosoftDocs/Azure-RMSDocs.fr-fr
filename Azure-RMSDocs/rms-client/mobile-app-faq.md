@@ -4,7 +4,7 @@ description:
 keywords: "Quelques questions fréquemment posées pour vous aider à utiliser l’application Azure Information Protection pour iOS et Android"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ac04af3b503bb7bb1d3c9f4bcee4aff163d73314
-ms.openlocfilehash: 42368b8ee50acf09c6af45182ace1f159a4e5f02
+ms.sourcegitcommit: fd11b55ec8ee11f594c33a5a46694d83b2db6953
+ms.openlocfilehash: ff2b28d9774682abbe77b484b097ea51709a3234
 
 
 ---
@@ -27,7 +27,7 @@ Cette page fournit des réponses aux questions les plus fréquemment posées sur
 
 ## Que puis-je faire avec l’application Azure Information Protection ?
 
-Cette application vous permet d’afficher des messages électroniques protégés par des droits (fichiers .rpmsg) (mais pas d’en créer ou d’y répondre). Cette application vous permet également d’afficher (mais pas de créer ou de modifier) des fichiers PDF protégés par des droits, images, fichiers texte et tout autre format de fichier protégé en tant que fichier .pfile. 
+Cette application vous permet d’afficher des e-mails protégés par des droits (fichiers .rpmsg). Cette application vous permet également d’afficher des fichiers PDF protégés par des droits, des images, des fichiers texte et tout autre format de fichier protégé en tant que fichier .pfile. Actuellement, vous ne pouvez pas utiliser cette application pour créer des e-mails protégés, y répondre, ou créer ou modifier des fichiers protégés.
 
 ## Puis-je ouvrir des fichiers PDF qui se trouvent dans des bibliothèques protégées SharePoint et dans OneDrive Entreprise ?
 
@@ -64,6 +64,6 @@ Publiez votre question sur notre [site Yammer](http://www.yammer.com/AskIPTeam),
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

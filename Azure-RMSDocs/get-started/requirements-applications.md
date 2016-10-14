@@ -3,7 +3,7 @@ title: "Prise en charge des applications pour la protection des données | Azur
 description: "Identifiez les applications qui utilisent les API RMS pour prendre en charge le service Azure Rights Management d’Azure Information Protection en mode natif."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/03/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a809edc63801912e836878e9205643d7d52188f1
-ms.openlocfilehash: 872e962bc4c08000fea9f81d48dece28a39d91dd
+ms.sourcegitcommit: 451952f7d0c293db2c9d4f5040ef0e14aa973866
+ms.openlocfilehash: a9b0fcddf9b11a8ab2d105ca5fc778831913bb72
 
 
 ---
@@ -58,12 +58,12 @@ Prend en charge l’affichage de contenu protégé.
 Prend en charge l’affichage de contenu protégé dans SharePoint Online, OneDrive Entreprise et Outlook Web Access.
 
 ##### Note 3
-Si un destinataire possédant une boîte aux lettres Exchange sur site reçoit un message électronique protégé, il ne peut ouvrir ce contenu que dans un client de messagerie riche, tel qu’Outlook.  Ce contenu ne peut être ouvert à partir d’Outlook Web Access.
+Si un destinataire reçoit un e-mail protégé et qu’il n’utilise pas Exchange comme serveur de messagerie, ou si l’émetteur appartient à une autre organisation, ce contenu ne peut être ouvert que dans un client de messagerie riche, comme Outlook. Ce contenu ne peut être ouvert à partir d’Outlook Web Access.
 
 ##### Note 4
 Utilise l’IRM Exchange ActiveSync, qui doit être activée par l’administrateur Exchange. Les utilisateurs peuvent afficher, répondre et répondre à tous pour les messages électroniques protégés, mais ne peuvent pas protéger eux-mêmes de nouveaux messages.
 
-Si un destinataire possédant une boîte aux lettres Exchange sur site reçoit un message électronique protégé en provenance d’une autre organisation utilisant Exchange, il ne peut ouvrir ce contenu que dans un client de messagerie riche, tel qu’Outlook.  Ce contenu ne peut être ouvert à partir sur un appareil utilisant l’IRM Exchange ActiveSync.
+Si un destinataire reçoit un e-mail protégé et qu’il n’utilise pas Exchange comme serveur de messagerie, ou si l’émetteur appartient à une autre organisation, ce contenu ne peut être ouvert que dans un client de messagerie riche, comme Outlook. Ce contenu ne peut pas être ouvert à partir d’Outlook Web Access ou de clients de messagerie mobile via Exchange Active Sync IRM.
 
 ##### Note 5
 Prend en charge l’affichage et l’édition de documents protégés. Pour plus d’informations, consultez le billet suivant sur le blog Office : [Azure Rights Management support comes to Office for iPad and iPhone](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)
@@ -152,6 +152,6 @@ Pour plus d’informations sur la prise en charge d’Azure RMS par les applica
 Pour plus d’informations sur la façon de configurer les applications les plus courantes pour Azure RMS, consultez [Configuration d’applications pour Azure Rights Management](../deploy-use/configure-applications.md).
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

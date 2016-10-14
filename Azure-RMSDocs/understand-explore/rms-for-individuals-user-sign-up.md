@@ -3,7 +3,7 @@ title: "Inscription des utilisateurs à RMS for individuals | Azure Information 
 description: "Instructions à suivre pour obtenir ce compte gratuit et informations techniques sur le déroulement du processus."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
-ms.openlocfilehash: 362ea0d002e25c830c9e50ac7f1956f1e9ea8bb7
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: 093bce2835b0606c127d9bcecab5ec353160833c
 
 
 ---
@@ -83,7 +83,7 @@ Grâce à ce processus, aucun frais n'est imputé à l'organisation et aucune in
 
     -   Exécuter le processus eDiscovery sur les données de votre organisation, afin de pouvoir déchiffrer, si nécessaire, les fichiers qui ont été protégés à l'aide de Rights Management. Pour plus d’informations, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../deploy-use/configure-super-users.md).
 
-    -   Consigner l'ensemble de l'activité liée à Rights Management de votre organisation. Il s'agit d'informations précieuses puisque vous pouvez non seulement savoir quels fichiers sont protégés et qui y accède, mais également identifier le comportement potentiellement suspect de personnes non autorisées. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation d’Azure Rights Management](../deploy-use/log-analyze-usage.md).
+    -   Consigner l'ensemble de l'activité liée à Rights Management de votre organisation. Il s'agit d'informations précieuses puisque vous pouvez non seulement savoir quels fichiers sont protégés et qui y accède, mais également identifier le comportement potentiellement suspect de personnes non autorisées. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
     -   Offrir aux utilisateurs la possibilité de suivre et révoquer leurs documents protégés, si ces fonctionnalités sont prises en charge par votre [abonnement Azure RMS](https://technet.microsoft.com/dn858608). Pour plus d’informations, consultez [Suivre et révoquer des fichiers](../rms-client/sharing-app-track-revoke.md) dans le [Guide d’utilisation de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md).
 
@@ -97,6 +97,6 @@ Consultez [Contrôle administrateur des comptes créés pour RMS for individuals
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -3,7 +3,7 @@ title: "Informations d’administration et prise en charge pour Azure Informatio
 description: "Ressources pour les administrateurs, qui incluent des informations sur les nouvelles versions, les options de support disponibles et la procédure à suivre pour contacter Microsoft en cas de problème."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 10/13/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 13579b8cb5516a1d7390db81957c140b8e980982
-ms.openlocfilehash: 1ca9b1d4b3af81a892e001c639ad79ac931233be
+ms.sourcegitcommit: 263c4109ac5dec435bbb0b126594eeafc974ff47
+ms.openlocfilehash: 79bed57d13aba8648ab3e3b7340bcc6d711f7942
 
 
 ---
@@ -26,10 +26,10 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure Infor
 
 |Pour effectuer cette opération...|... procédez ainsi :|
 |----------------|---------------|
-|… Consulter la documentation recommandée pour le service →|Utilisez la première page de la [Documentation sur Azure Information Protection](https://docs.microsoft.com/information-protection/).|
-|… formuler des commentaires ou poser une question sur la documentation →|Envoyez un message électronique à [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
-|… Recevoir des tweets relatifs à Information Protection et des annonces relatives aux mises à jour de la documentation de la part du groupe de produits →|Suivez Dan Plastina, l’un des responsables de l’équipe Microsoft Information Protection. Consultez [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy)|
-|… Vérifier les informations d’abonnement et quelles fonctionnalités sont prises en charge →|Utilisez les [informations sur les abonnements](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) du site Azure Information Protection.|
+|Consulter la documentation recommandée pour le service →|Utilisez la première page de la [Documentation sur Azure Information Protection](https://docs.microsoft.com/information-protection/).|
+|Formuler des commentaires ou poser une question sur la documentation →|Envoyez un e-mail à [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
+|Recevoir des tweets relatifs à Information Protection et des annonces relatives aux mises à jour de la documentation de la part du groupe de produits →|Suivez Dan Plastina, l’un des responsables de l’équipe Microsoft Information Protection. Consultez [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy)|
+|Vérifier les informations d’abonnement et les fonctionnalités prises en charge →|Utilisez les [informations sur les abonnements](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) du site Azure Information Protection.|
 
 
 ## Informations sur les nouvelles versions
@@ -61,7 +61,9 @@ Pour connaître les autres options de support, adressez-vous à votre contact Mi
 
 ### Support autonome
 
-Acquisition des principales compétences :
+Vidéos à la demande :
+
+- Sessions Microsoft Ignite 2016 pour [Azure Information Protection et Azure Rights Management](https://myignite.microsoft.com/videos?f=%5B%7B%22name%22:%22Azure%20Rights%20Management%22,%22facetName%22:%22products%22%7D,%7B%22name%22:%22Azure%20Information%20Protection%22,%22facetName%22:%22products%22%7D%5D)
 
 - Microsoft Virtual Academy [Azure Rights Management Services Core Skills](https://mva.microsoft.com/en-us/training-courses/azure-rights-management-services-core-skills-10500?l=QLoxMwuCB_1805094681) (Principales compétences d’Azure Rights Management Services)
 
@@ -88,6 +90,6 @@ Résolution des problèmes :
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -3,7 +3,7 @@ title: "Forum aux questions sur le service de protection des données, Azure Rig
 description: "Certaines questions fréquentes sur le service de protection des données, Azure Rights Management (Azure RMS), d’Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 114dfd2a0f19205432771b5dc17ddcb60f7ec44b
+ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
+ms.openlocfilehash: 874836e1a0abc9bbb3f5d881980ba0d5dfe30869
 
 
 ---
@@ -94,7 +94,7 @@ Comme le montre clairement le nom de l’option, ce nouveau type de groupe est t
 
 
 ## Quels appareils et types de fichier Azure RMS prend-il en charge ?
-Pour obtenir la liste des appareils qui prennent en charge le service Azure Rights Management, consultez [Conditions requises pour Azure RMS : Appareils clients prenant en charge Azure RMS](../get-started/requirements-client-devices.md). Les fonctionnalités Rights Management n’étant pas toutes disponibles sur tous les appareils pris en charge, pensez à consulter le tableau dans [Conditions requises pour Azure RMS : Applications](../get-started/requirements-applications.md).
+Pour obtenir la liste des appareils qui prennent en charge le service Azure Rights Management, consultez [Appareils clients prenant en charge la protection des données Azure Rights Management](../get-started/requirements-client-devices.md). Les fonctionnalités Rights Management n’étant actuellement pas toutes disponibles sur tous les appareils pris en charge, pensez à consulter le tableau présenté dans [Applications prenant en charge la protection des données Azure Rights Management](../get-started/requirements-applications.md).
 
 Le service Azure Rights Management peut prendre en charge tous les types de fichiers. Dans le cas de texte, d’images, de fichiers Microsoft Office (Word, Excel, PowerPoint), de fichiers .pdf et d’autres types de fichier d’application, Azure Rights Management offre une protection native qui comprend le chiffrement et la mise en application de droits (autorisations). Pour tous les autres types de fichier et d'application, la protection générique offre l'encapsulation et l'authentification des fichiers afin de vérifier si un utilisateur est autorisé à ouvrir le fichier.
 
@@ -145,6 +145,6 @@ En dépit de son nom et de son apparence, l’option **Ne pas transférer** n’
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

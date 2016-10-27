@@ -142,7 +142,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 [Terminologie et concepts du développement](core-concepts.md)
 
-[Informations de référence sur l’API Android](android-namespaces.md)
+[Informations de référence sur l’API Android](https://msdn.microsoft.com/library/dn758245.aspx)
 
  
 

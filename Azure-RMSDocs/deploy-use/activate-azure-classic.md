@@ -12,8 +12,8 @@ ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
-ms.openlocfilehash: a553ea57bd4b396b7629dc24aea9f76b4a2a5e5a
+ms.sourcegitcommit: 565f2479fe1d41aa051dd64752413eb72d644535
+ms.openlocfilehash: 74aac58a7b523f98ef627831830577d4fde7d5af
 
 
 ---
@@ -39,7 +39,7 @@ Utilisez ces instructions si vous avez accès au portail Azure. Par exemple, vou
     > [!NOTE]
     >Si vous voyez une erreur d’activation, il est possible que votre plan de service ou version de produit n’inclue pas le service Azure Rights Management d’Azure Information Protection.
     >
-    >Utilisez les [informations d’abonnement](https://go.microsoft.com/fwlink/?LinkId=827589) pour confirmer que votre abonnement inclut Azure Rights Management. Pour obtenir de l'aide, envoyez un courrier électronique à [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    >Pour activer le service Azure Rights Management, vous devez avoir un [plan Premium Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) ou un [plan Office 365 incluant Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Pour obtenir de l'aide, envoyez un courrier électronique à [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 
 **Statut de Rights Management** doit désormais afficher l’état **Actif** et l’option **ACTIVER** est remplacée par **DÉSACTIVER**.
@@ -58,6 +58,6 @@ En plus de l'état **Actif** qui indique que le service Rights Management est ac
 Retour à [Activation d’Azure Rights Management](activate-service.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

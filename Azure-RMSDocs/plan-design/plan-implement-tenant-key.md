@@ -3,7 +3,7 @@ title: "Planification et implémentation de votre clé de locataire Azure Rights
 description: "Informations vous permettant de planifier et de gérer votre clé de locataire Azure Information Protection. Au lieu que Microsoft gère votre clé de locataire (option par défaut), vous pouvez gérer votre propre clé de locataire afin de vous conformer à des réglementations spécifiques s’appliquant à votre organisation. La gestion de votre propre clé de locataire est également appelée BYOK (Bring Your Own Key)."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d7e21c2bb07e82bc243e5ab01c0a21aa0fe274d1
-ms.openlocfilehash: 967eda9a180f24bc847b55d4315c97dfabb90714
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: 70f4b178d2814683551574f4e777213eea914477
 
 
 ---
@@ -127,7 +127,7 @@ Maintenant que vous avez planifié et, le cas échéant, généré votre clé de
 
     ![fichier journal dans Excel où la clé de locataire est utilisée](../media/RMS_Logging.png)
 
-    Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation d’Azure Rights Management](../deploy-use/log-analyze-usage.md).
+    Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
 3.  Gérez votre clé de locataire.
 
@@ -136,6 +136,6 @@ Maintenant que vous avez planifié et, le cas échéant, généré votre clé de
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

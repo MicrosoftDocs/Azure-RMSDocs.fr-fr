@@ -82,7 +82,7 @@ Vous êtes maintenant prêt à créer vos propres applications du Windows Store.
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
-[Référence de l’API Windows](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Référence de l’API Windows](https://msdn.microsoft.com/library/dn891914.aspx)
 
 
 

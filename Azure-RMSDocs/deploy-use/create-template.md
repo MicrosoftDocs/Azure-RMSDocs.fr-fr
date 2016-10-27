@@ -3,7 +3,7 @@ title: "Créer, configurer et publier un modèle personnalisé | Azure Informati
 description: "Instructions à suivre pour créer et gérer des modèles personnalisés dans le portail Azure Classic. Les modèles permettent aux utilisateurs finaux et à d’autres administrateurs d’appliquer facilement des stratégies appropriées qui protègent les documents et les e-mails."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 30cd611e128217b2760e66b3391a0702ae0ed7a6
+ms.sourcegitcommit: d205e63bdd8819177493837296259c5400a76503
+ms.openlocfilehash: 906bc1e97947cf32b102fdf484b86bc30b9a383d
 
 
 ---
@@ -70,9 +70,11 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
 
         Si cette page ne s’affiche pas immédiatement après que vous avez suivi les instructions pour Office 365, utilisez les instructions de navigation fournies ci-dessus pour le portail Azure Classic.
 
-3.  Sur la page **Ajouter un nouveau modèle de stratégie de droits** , choisissez la langue dans laquelle vous allez taper le nom et la description du modèle en fonction de vos utilisateurs (vous pourrez ajouter d’autres langues ultérieurement). Tapez ensuite un nom unique et une description, puis cliquez sur le bouton Terminé.
+3. Sur la page **Ajouter un nouveau modèle de stratégie de droits** , choisissez la langue dans laquelle vous allez taper le nom et la description du modèle en fonction de vos utilisateurs (vous pourrez ajouter d’autres langues ultérieurement). Tapez ensuite un nom unique et une description, puis cliquez sur le bouton Terminé.
 
-Depuis la page de démarrage rapide **Prise en main de Rights Management** , cliquez sur **Gérer vos modèles de stratégie de droits**. Le modèle que vous venez de créer a été ajouté à la liste des modèles. Son état est **Archivé**. À ce stade, le modèle est créé mais pas configuré. Les utilisateurs ne peuvent pas le voir.
+    N’incluez pas de signe deux-points ou point-virgule dans la description ou le nom de votre modèle. Certains services et applications utilisant les modèles Rights Management ne peuvent pas prendre en charge ces caractères pour ces modèles. Dans ce scénario, ces applications et services peuvent ne pas être en mesure de récupérer ou d’utiliser ces modèles Azure Rights Management.
+
+4. Depuis la page de démarrage rapide **Prise en main de Rights Management** , cliquez sur **Gérer vos modèles de stratégie de droits**. Le modèle que vous venez de créer a été ajouté à la liste des modèles. Son état est **Archivé**. À ce stade, le modèle est créé mais pas configuré. Les utilisateurs ne peuvent pas le voir.
 
 ## Pour configurer et publier un modèle personnalisé
 
@@ -166,6 +168,6 @@ Pour apporter des modifications à votre modèle, sélectionnez-le, puis utilise
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

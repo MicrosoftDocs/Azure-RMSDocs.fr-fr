@@ -3,7 +3,7 @@ title: "Scénario - Envoyer un e-mail confidentiel de l’entreprise | Azure Inf
 description: "Ce scénario et la documentation utilisateur associée utilisent la protection Azure Rights Management afin que n’importe quel utilisateur de l’organisation puisse envoyer de manière sécurisée des communications par e-mail qui ne peuvent pas être lues à l’extérieur de l’organisation."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/10/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 9fafe78b8393ae36defeecccceb8f4a2d36a3b79
+ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
+ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
 
 
 ---
@@ -54,7 +54,7 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
 |Azure Rights Management est activé|[Activation d'Azure Rights Management](../deploy-use/activate-service.md)|
 |Une des causes suivantes :<br /><br />- Exchange Online est activé pour Azure Rights Management<br /><br />- Le connecteur RMS est installé et configuré pour Exchange sur site|Pour Exchange Online : consultez la section **Exchange Online : configuration d’IRM** dans [Office 365 : Configuration pour les clients et les services en ligne](../deploy-use/configure-office365.md).<br /><br />Pour Exchange sur site : [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
 |Vous n’avez pas archivé le modèle Azure Rights Management par défaut **&lt;organisation&gt; - confidentiel**. Ou bien, vous avez configuré un modèle personnalisé à cette fin, car vous avez besoin des paramètres plus restrictifs ou seul un sous-ensemble d’utilisateurs de l’organisation doit être en mesure de lire les e-mails protégés.|[Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md)<br /><br />Conseil : si vous avez besoin de paramètres de stratégie d’utilisation plus restrictifs pour tous les utilisateurs de l’organisation, copiez et modifiez un des modèles par défaut, plutôt que de créer un nouveau modèle.<br /><br />Les modèles mis à jour ne sont pas immédiatement actualisés pour les clients de messagerie de ce scénario. Pour plus d’informations, consultez l’article [Actualisation des modèles pour les utilisateurs](../deploy-use/refresh-templates.md).|
-|Les utilisateurs qui envoient l’e-mail protégé disposent d’Outlook 2013, Outlook 2016 ou d’Outlook Web Access.<br /><br />Les utilisateurs qui reçoivent l’e-mail ont un client de messagerie prenant en charge Azure Rights Management.|Vous pouvez utiliser Outlook 2010, toutefois vous devez [installer l’application de partage Rights Management pour Windows](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) et adapter les instructions de l’utilisateur en conséquence.<br /><br />Pour consulter la liste des clients de messagerie prenant en charge Azure Rights Management, consultez la colonne **E-mail** du tableau [Conditions requises pour Azure RMS : Applications](../get-started/requirements-applications.md).|
+|Les utilisateurs qui envoient l’e-mail protégé disposent d’Outlook 2013, Outlook 2016 ou d’Outlook Web Access.<br /><br />Les utilisateurs qui reçoivent l’e-mail ont un client de messagerie prenant en charge Azure Rights Management.|Vous pouvez utiliser Outlook 2010, toutefois vous devez [installer l’application de partage Rights Management pour Windows](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) et adapter les instructions de l’utilisateur en conséquence.<br /><br />Pour obtenir la liste des clients de messagerie prenant en charge Azure Rights Management, consultez la colonne **Courrier électronique** du tableau dans [Applications prenant en charge la protection des données Azure Rights Management](../get-started/requirements-applications.md).|
 
 ## Instructions de la documentation utilisateur
 En utilisant le modèle suivant, copiez et collez les instructions utilisateur dans une communication à destination de vos utilisateurs finaux, puis apportez ces modifications en les adaptant à votre environnement :
@@ -157,6 +157,6 @@ Les destinataires de votre e-mail pourront le transférer à d’autres personne
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

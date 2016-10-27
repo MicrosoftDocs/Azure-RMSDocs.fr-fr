@@ -3,7 +3,7 @@ title: "Comment activer Azure Rights Management à partir du centre d’administ
 description: "Instructions d’activation du service Azure Rights Management quand vous avez accès à la version classique (version d’origine) du Centre d’administration Office 365."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: b6c42663-af01-49d5-94bc-98963c383379
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
-ms.openlocfilehash: 8e2b4befc9acd2f50472169b8195d2510fa22be8
+ms.sourcegitcommit: 565f2479fe1d41aa051dd64752413eb72d644535
+ms.openlocfilehash: 69ee78823c2a0500596dec24f44ecba8329af516
 
 
 ---
@@ -39,7 +39,7 @@ Procédez selon ces instructions si vous utilisez la version classique (original
     > [!NOTE]
     >Si vous ne voyez pas cette option, votre plan de service ou votre version de produit n’inclut peut-être pas le service Azure Rights Management d’Azure Information Protection.
     >
-    >Utilisez les [informations d’abonnement](https://go.microsoft.com/fwlink/?LinkId=827589) pour confirmer que votre abonnement inclut Azure Rights Management. Pour obtenir de l'aide, envoyez un courrier électronique à [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    >Pour activer le service Azure Rights Management, vous devez avoir un [plan Premium Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) ou un [plan Office 365 incluant Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Pour obtenir de l'aide, envoyez un courrier électronique à [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 5. Dans la page **RIGHTS MANAGEMENT** , cliquez sur **Gérer**.
 
@@ -53,6 +53,6 @@ Vous devez maintenant voir **Rights Management est activé** , ainsi qu'une opti
 Retour à [Activation d’Azure Rights Management](activate-service.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

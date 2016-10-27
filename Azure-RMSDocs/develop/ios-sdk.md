@@ -108,14 +108,11 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 * [Terminologie et concepts du développement](core-concepts.md)
 
-* [Référence d’API iOS / OS X](/information-protection/sdk/4.2/api/ios/ios)
+* [Référence d’API iOS / OS X](https://msdn.microsoft.com/library/dn758306.aspx)
 
  
 
  
-
-
-
 
 
 

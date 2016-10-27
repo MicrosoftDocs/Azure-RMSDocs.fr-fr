@@ -3,7 +3,7 @@ title: "Scénario - Sécuriser vos fichiers les plus précieux | Azure Informati
 description: "Ce scénario et la documentation utilisateur associé utilisent Azure Rights Management pour protéger de manière manuelle et personnalisée un certain nombre de fichiers que vous considérez comme les plus précieux, qui assure le plus haut niveau de protection qui soit contre tout accès non autorisé."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 2001b13c15ebfd1c1f939d342ac2a7006c18c0f8
+ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
+ms.openlocfilehash: 6687ed42bca5e773d6bbc97285f12e3c91ff9f32
 
 
 ---
@@ -53,7 +53,7 @@ Pour ce scénario, les éléments suivants doivent être en place :
 |Vous avez configuré un modèle personnalisé comme décrit ci-après|[Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |L’application de partage Rights Management est déployée sur votre ordinateur Windows afin que vous puissiez protéger ces fichiers sur place, comme décrit dans la section suivante|[Télécharger et installer l'application de partage Rights Management](../rms-client/install-sharing-app.md)|
 |Les utilisateurs autorisés ont une version minimale d’Office 2013|Si les utilisateurs disposent d’Office 2010, ils doivent également installer l’application de partage Rights Management.|
-|Votre abonnement Azure RMS inclut le suivi de document|Si votre abonnement à Azure RMS n’inclut pas le suivi et la révocation des documents, vous ne pourrez pas utiliser le site de suivi de document pour voir qui accède à ces documents et révoquer l’accès si nécessaire. Dans ce cas, souscrivez un abonnement prenant en charge le suivi des documents ou acceptez cette restriction. Vous pouvez également envisager d’utiliser les fonctionnalités de [journalisation de l’utilisation](../deploy-use/log-analyze-usage.md) d’Azure RMS, qui peuvent fournir des informations, indiquant par exemple qui a accédé à chaque fichier et à quel moment, pour vous permettre de détecter un comportement suspect potentiel.<br /><br />Vérifiez les informations d’abonnement dans la [page de tarification](https://go.microsoft.com/fwlink/?LinkId=827589) d’Azure Information Protection.|
+|Votre abonnement Azure Information Protection inclut le suivi des documents|Si votre abonnement n’inclut pas le suivi et la révocation des documents, vous ne pouvez pas utiliser le site de suivi des documents pour voir qui accède à ces documents et en révoquer l’accès si nécessaire. Dans ce cas, souscrivez un abonnement prenant en charge le suivi des documents ou acceptez cette restriction. Vous pouvez également envisager d’utiliser les fonctionnalités de [journalisation de l’utilisation](../deploy-use/log-analyze-usage.md) du service Azure Rights Management, qui peuvent fournir des informations indiquant par exemple qui a accédé à chaque fichier et quand, pour vous permettre de détecter un comportement suspect potentiel.<br /><br />Consultez la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) sur le site Azure Information Protection.|
 
 ### Pour configurer le modèle personnalisé :
 
@@ -147,6 +147,6 @@ Un niveau de protection très élevé est désormais appliqué à ces fichiers d
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

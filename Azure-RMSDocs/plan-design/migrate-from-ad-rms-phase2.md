@@ -1,9 +1,9 @@
 ---
-title: "Migration d’AD RMS vers Azure Rights Management - Phase 2 | Azure Information Protection"
+title: "Migration d’AD RMS vers Azure Information Protection - Phase 2 | Azure Information Protection"
 description: "Phase 2 de la migration d’AD RMS vers Azure Information Protection, couvrant l’étape 5 de la migration d’AD RMS vers Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3f9a7ceee318fee5414e02af7927256e74800a16
-ms.openlocfilehash: 113636139f0ff6e47a5b5c0467dfe8616c641e04
+ms.sourcegitcommit: 25f7c2e5eb226fcf7c30026a37a767e559a522ad
+ms.openlocfilehash: 810e540e02db0b4a142471dd89e30663bd61f22c
 
 
 ---
@@ -39,6 +39,8 @@ Pour des clients Windows :
 
     > [!IMPORTANT]
     > Les instructions incluent le remplacement des exemples d’adresses **adrms** et **adrms.contoso.com** par les adresses de vos propres serveurs AD RMS. Quand vous effectuez cette opération, vérifiez qu’il n’y a pas d’espaces supplémentaires avant ou après vos adresses ; ces derniers engendreraient une interruption du script de migration et il serait très difficile de les identifier comme étant à l’origine du problème. Certains outils d’édition ajoutent automatiquement un espace après le collage du texte.
+    >
+    > De plus, si vos serveurs AD RMS utilisent des certificats de serveur SSL/TLS, vérifiez si les valeurs des URL de licence incluent le numéro de port **443** dans la chaîne. Par exemple : https:// rms.treyresearch.net:443/_wmcs/licensing. Ces informations sont disponibles dans la console Active Directory Rights Management Services quand vous cliquez sur le nom du cluster et que vous consultez les informations **Détails du cluster**. Si vous voyez le numéro de port 443 dans l’URL, incluez cette valeur quand vous modifiez le script. Par exemple, https://rms.treyresearch.net**:443**.
 
 3. Si les utilisateurs disposent d’Office 2016 : Les scripts ne sont pas encore mis à jour pour inclure la configuration pour Office 2016 ; donc, si les utilisateurs disposent de cette version d’Office, vous devez manuellement mettre à jour les scripts :
 
@@ -131,6 +133,6 @@ Redirect_OnPrem.cmd :
 Pour poursuivre la migration, passez à la [Phase 3 : Configuration des services de prise en charge](migrate-from-ad-rms-phase3.md).
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

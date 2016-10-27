@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: e47c5331f49c62a00617f40b1af7ffdc4a89dcfd
+ms.sourcegitcommit: 44e90a1de74d62469bd8a99a2d49d1e57d2d0f62
+ms.openlocfilehash: e1bc56fc108101d0af833a84ba52821c8b18736d
 
 
 ---
@@ -61,8 +61,6 @@ Lors de la demande de contrat, procédez comme suit :
 L’équipe ADRMLA (Active Directory Rights Management Licensing Agreement) répondra à votre demande dans les trois jours ouvrables suivant la réception de votre e-mail (ou plus si vous avez envoyé la demande par voie postale). La réponse contiendra le formulaire de contrat de licence et d’autres instructions. Lisez, signez et renvoyez toutes les pages du contrat à l’équipe ADRMLA. Veuillez ne pas modifier les polices ou la mise forme des paragraphes du contrat de licence.
 
 Suivez bien les instructions envoyées par l’équipe ADRMLA. Ces instructions mentionnent les informations numériques nécessaires pour répondre à votre demande de certificat. En suivant les instructions pas à pas, vous réduirez tout risque de retard.
-
-L’équipe ADRMLA vous transmettra votre certificat de production dès qu’il aura été créé. Notez que le délai d’envoi du certificat par e-mail par l’équipe ADRMLA peut aller jusqu’à 15 jours, voire plus en cas de communication par voie postale.
 
 
 ## Options d’installation et configuration requise pour le client RMS (Rights Management Services) 2.1
@@ -132,6 +130,6 @@ Pour plus d’informations sur l’activation de votre application pour utiliser
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

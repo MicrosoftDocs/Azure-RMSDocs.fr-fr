@@ -3,15 +3,15 @@ title: "Qu’est-ce qu’Azure Information Protection ? | Azure Information Pro
 description: "Présentation du service Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: c1279e6f2420711f921a8ccae256a80d619e8566
-ms.openlocfilehash: 5891dfa423bb5e0b9871bc60a31572ed4f89a7c7
+ms.sourcegitcommit: 0098fa28313561e99f39e2539e20c8a6bc0207f7
+ms.openlocfilehash: eaaa08a99b3c065422dd8b0bc01d89ead15e9d49
 
 
 ---
@@ -74,7 +74,9 @@ Quand les utilisateurs partagent leurs documents protégés par e-mail, ils peuv
 
 ## Ressources pour Azure Information Protection
 
-- Annonce de la préversion : [Azure Information Protection : disponible en préversion publique dès maintenant](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/12/azure-information-protection-public-preview-available-now/)
+- Annonce : [Azure Information Protection est maintenant mis à la disposition générale](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/04/azure-information-protection-is-now-generally-available/)
+
+- Version d’évaluation gratuite : [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
 - Téléchargement du client : [Client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
@@ -82,9 +84,21 @@ Quand les utilisateurs partagent leurs documents protégés par e-mail, ils peuv
 
 - Yammer : [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- Présentation vidéo :
+- Vidéo de présentation
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
+
+    De plus, Microsoft Ignite 2016 propose plusieurs sessions à la demande pour Azure Information Protection :
+
+    - [BRK2127: Adopt a comprehensive identity-driven solution for protecting and sharing data securely (Adopter une solution complète basée sur les identités pour protéger et partager des données en toute sécurité)](https://myignite.microsoft.com/videos?q=BRK2127)
+    
+    - [THR2107: Collaborate securely using Azure Information Protection (Collaborer en toute sécurité à l’aide d’Azure Information Protection)](https://myignite.microsoft.com/videos?q=THR2107)
+    
+    - [THR2108: Ensure comprehensive protection of your data with Azure Information Protection (Garantir une protection complète de vos données avec Azure Information Protection)](https://myignite.microsoft.com/videos?q=THR2108)
+    
+    - [BRK3095: Learn how classification, labeling, and protection delivers persistent data protection (Découvrir comment la classification, l’étiquetage et la protection offrent une protection des données persistantes)](https://myignite.microsoft.com/videos?q=BRK3095)
+    
+    - [BRK2128: Send secure email to anyone with the power of Microsoft Office 365 and Azure Information Protection (Envoyer un e-mail sécurisé à l’aide de la puissance de Microsoft Office 365 et d’Azure Information Protection)](https://myignite.microsoft.com/videos?q=BRK2128)
 
 
 ## Étapes suivantes
@@ -94,6 +108,6 @@ Configurez et découvrez Azure Information Protection par vous-même avec notre 
 Vous connaissez Azure Information Protection ou Azure Rights Management sous un autre nom ? Consultez [notre liste d’autres termes pour le service](azure-rms-aka.md).
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

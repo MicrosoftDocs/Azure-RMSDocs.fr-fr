@@ -110,6 +110,6 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -4,7 +4,7 @@ description:
 keywords: "Quelques questions fréquemment posées pour vous aider à utiliser l’application Azure Information Protection pour iOS et Android"
 author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7ca40550f16dff0cc4979eb029d9eb7dd68414f
-ms.openlocfilehash: da77d799128e110679c972629fa9f816487ccb4f
+ms.sourcegitcommit: c03bcfc5590035ab0d51cb3b4f2b7196db458ea3
+ms.openlocfilehash: 1829557b41d2c49ac661cbde96f69dda2ccc5b19
 
 
 ---
@@ -27,7 +27,7 @@ Cette page fournit des réponses aux questions les plus fréquemment posées sur
 
 ## Que puis-je faire avec l’application Azure Information Protection ?
 
-Cette application vous permet d’afficher des e-mails protégés par des droits (fichiers .rpmsg) si votre application de messagerie ne prend pas en charge la protection des données Rights Management. Cette application vous permet également d’afficher des fichiers PDF, des images et des fichiers texte protégés par des droits, ainsi que des fichiers protégés de manière générique (ces derniers ont une extension de nom de fichier .pfile). Actuellement, vous ne pouvez pas utiliser cette application pour créer des e-mails protégés, y répondre, ou créer ou modifier des fichiers protégés.
+Cette application vous permet d’afficher des e-mails protégés par des droits (fichiers .rpmsg) si votre application de messagerie ne prend pas en charge la protection des données Rights Management. Cette application vous permet également d’afficher les fichiers PDF, les images et les fichiers texte protégés par des droits. Actuellement, vous ne pouvez pas utiliser cette application pour créer des e-mails protégés, y répondre, ou créer ou modifier des fichiers protégés.
 
 ## Puis-je ouvrir des fichiers PDF qui se trouvent dans des bibliothèques protégées SharePoint et dans OneDrive Entreprise ?
 
@@ -43,7 +43,7 @@ Sur votre appareil mobile, vous devez accéder à l’un des fichiers que l’ap
 
 - **Un fichier PDF protégé par des droits** : utilisez l’application de partage Rights Management à partir d’un ordinateur Windows ou une application PDF prenant en charge la gestion des droits de manière native pour vous envoyer un fichier PDF protégé par des droits comme pièce jointe dans un e-mail. Vous pouvez également télécharger un fichier PDF dans une bibliothèque protégée SharePoint, puis la partager en utilisant votre adresse e-mail.
 
-- **Un fichier .ptxt, .pjpg ou .pfile** : utilisez l’application de partage Rights Management sur un ordinateur Windows et l’option [Partage protégé](sharing-app-protect-by-email.md) pour vous envoyer un fichier protégé comme pièce jointe d’e-mail. Pour obtenir la liste complète des types de fichiers que vous pouvez utiliser pour le test, consultez le premier tableau de la section [Types de fichier pris en charge et extensions de nom de fichier](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) dans le Guide de l'administrateur de l'application de partage Rights Management. 
+- **Un fichier .ptxt, .pjpg ou .ppng** : Utilisez l’application de partage Rights Management sur un ordinateur Windows et l’option [Partage protégé](sharing-app-protect-by-email.md) pour vous envoyer un fichier protégé comme pièce jointe d’e-mail. Pour obtenir la liste complète des types de fichiers que vous pouvez utiliser pour le test, consultez le premier tableau de la section [Types de fichier pris en charge et extensions de nom de fichier](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) dans le Guide de l'administrateur de l'application de partage Rights Management. 
 
 Pour afficher ces fichiers dans l’application de visionneuse Azure Information Protection, cliquez sur la pièce jointe ou le lien dans l’e-mail. Lorsque vous êtes invité à sélectionner une application avez laquelle les ouvrir, sélectionnez l’application **Visionneuse d’accès et de protection des informations**. Vous êtes ensuite invité à vous connecter avec votre compte professionnel ou scolaire. Une fois que vous êtes correctement authentifié, l’application Azure Information Protection affiche l’e-mail ou le fichier pour vous permettre de les lire.
 
@@ -58,14 +58,6 @@ Pas encore. Aujourd’hui, vous pouvez vous inscrire uniquement avec votre adres
 ## Quelles extensions de fichier puis-je ouvrir avec cette application ?
 
 Vous pouvez ouvrir les fichiers .rpmsg, .pdf, .ppdf, .pjpg, .ptxt et plusieurs autres formats de fichiers texte et images.
-
-## Pourquoi dois-je donner mon consentement avant d’afficher un fichier .pfile protégé ?
-
-Un consentement est nécessaire pour valider le fait que vous êtes conscient des points suivants :
-
-- Le propriétaire du document attend de vous que vous respectiez les droits.
-
-- L’ouverture de ce contenu dans une application tierce sera auditée.
 
 ##  Comment envoyer des commentaires concernant cette application ?
 

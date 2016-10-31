@@ -4,7 +4,7 @@ description: "Cette rubrique traite des types d’applications que vous pouvez c
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: dac322fedd1ac23660abb3b79261e8339ffd81ca
+ms.sourcegitcommit: 1ab93dc8f770e2e49b5846dd6c31f649a55175b0
+ms.openlocfilehash: 77bb95ae54ec0fb699d3b0dd2879bb14fdd3dd28
 
 
 ---
@@ -29,7 +29,7 @@ Les types d’application suivants sont actuellement pris en charge par Rights M
 
 ## Applications simples
 
-Une application simple peut être un outil de ligne de commande conçu pour chiffrer un fichier donné. Pour obtenir un exemple d’application simple avec gestion des droits, consultez [IPCHelloWorld : un exemple d’application](how-to-build-your-first-application.md).
+Une application simple peut être un outil de ligne de commande conçu pour chiffrer un fichier donné. Pour obtenir un exemple d’une application simple avec gestion des droits, consultez notre implémentation de *IPCHelloWorld* dans [Développement de votre application](developing-your-application.md).
 
 ### Applications en mode serveur
 
@@ -55,13 +55,13 @@ Pour plus d’informations sur la protection de votre application, consultez [Co
 
 ## Rubriques connexes
 
-* [Exemple IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
-* [Exemple d’application IPCHelloWorld](how-to-build-your-first-application.md)
-* [Définition du mode de sécurité de l’API](setting-the-api-security-mode-api-mode.md)
-* [Comprendre les restrictions d’utilisation](understanding-usage-restrictions.md)
+- [Exemple IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
+- [Développement de votre application](developing-your-application.md)
+- [Définition du mode de sécurité de l’API](setting-the-api-security-mode-api-mode.md)
+- [Comprendre les restrictions d’utilisation](understanding-usage-restrictions.md)
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: d949acd4281509bbed05a14e0e26d1549b52a33a
+ms.sourcegitcommit: 734ff9735adbf5aac5824b5c823a1fdcaf245d4e
+ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
 
 
 ---
@@ -63,7 +63,7 @@ Définissez la valeur **Encryption** dans la clé pour spécifier le comportemen
 
 - **Off** : Le chiffrement est désactivé.
 
-> [!Note] 
+> [!Note]
 > Ce paramètre n’a aucune incidence sur le déchiffrement. Tout fichier chiffré, que ce soit via la protection Native ou la protection Pfile, peut être déchiffré du moment que l’utilisateur dispose du droit **EXTRACT**.
 
 - **Native** : Le chiffrement natif est utilisé. Pour les fichiers Office, le fichier chiffré a la même extension que le fichier d’origine. Par exemple, un fichier avec l’extension de fichier .docx est chiffré en fichier avec l’extension .docx. Les autres fichiers auxquels une protection native peut être appliquée sont chiffrés en fichiers avec une extension au format p*zzz*, où *zzz* représente l’extension de fichier d’origine. Par exemple, les fichiers .txt sont chiffrés en fichiers avec l’extension .ptxt. Vous trouverez ci-après une liste d’extensions de fichiers pouvant bénéficier d’une protection native.
@@ -71,7 +71,7 @@ Définissez la valeur **Encryption** dans la clé pour spécifier le comportemen
 - **Pfile** : Le chiffrement PFile est utilisé. L’extension .pfile est ajoutée à l’extension d’origine du fichier chiffré. Par exemple, une fois le chiffrement effectué, un fichier .txt a l’extension .txt.pfile.
 
 
-> [!Note] 
+> [!Note]
 > Ce paramètre n’a aucune incidence sur les formats de fichiers Office. Par exemple, si la valeur `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` est « Pfile », les fichiers .docx sont tout de même chiffrés à l’aide de la protection native. De plus, les fichiers chiffrés gardent l’extension de fichier .docx.
 
 Si vous affectez une autre valeur, ou si vous n’affectez aucune valeur, le comportement par défaut s’applique.
@@ -82,7 +82,7 @@ Si vous affectez une autre valeur, ou si vous n’affectez aucune valeur, le com
 -   **Fichiers txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** : Le chiffrement natif est activé (xxx devient pxxx)
 -   **Tous les autres fichiers** : Le chiffrement avec protection de fichier (pfile) est activé (xxx devient xxx.pfile)
 
-Si vous tentez un chiffrement sur un type de fichier bloqué, une erreur [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes) se produit.
+Si vous tentez un chiffrement sur un type de fichier bloqué, une erreur [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx) se produit.
 
 ### API de fichier - Détails de la prise en charge des fichiers
 
@@ -148,14 +148,14 @@ HKEY_LOCAL_MACHINE
 
 ## Rubriques connexes
 
-* [Notes pour le développeur](developer-notes.md)
-* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes)
+- [Notes pour le développeur](developer-notes.md)
+- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
  
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

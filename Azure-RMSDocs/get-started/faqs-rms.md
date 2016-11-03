@@ -3,7 +3,7 @@ title: "Forum aux questions sur le service de protection des données, Azure Rig
 description: "Certaines questions fréquentes sur le service de protection des données, Azure Rights Management (Azure RMS), d’Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
-ms.openlocfilehash: 874836e1a0abc9bbb3f5d881980ba0d5dfe30869
+ms.sourcegitcommit: ec8609217db42a2cf0b3f89367cf4dee6ccb77de
+ms.openlocfilehash: ae25f5af9784b0de92626dbfe65d4358359b4bd9
 
 
 ---
@@ -129,6 +129,18 @@ Utilisez la fonctionnalité de super utilisateur d'Azure RMS, qui permet à des 
 
 Pour plus d’informations, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../deploy-use/configure-super-users.md).
 
+## Lorsque je teste la révocation dans le site de suivi des documents, je vois un message m’indiquant que les autres utilisateurs continueront d’avoir accès au document pendant 30 jours. Cette durée est-elle configurable ?
+
+Oui. Ce message indique la licence d’utilisation de ce fichier en particulier. Une licence d'utilisation est un certificat par document qui est accordé à un utilisateur souhaitant ouvrir un e-mail ou un fichier protégé. Ce certificat contient les droits d’utilisateur du fichier ou de l’e-mail, la clé de chiffrement qui est utilisée pour chiffrer le contenu, ainsi que les restrictions d’accès supplémentaires définies dans la stratégie du document. Lorsque la période de validité de la licence d’utilisation expire et que l’utilisateur tente d’ouvrir le fichier ou l’e-mail, ses informations d’identification doivent être renvoyées au service Azure Rights Management. 
+
+La révocation d’un fichier ne peut être appliquée que lorsque l’utilisateur doit s’authentifier auprès du service Azure Rights Management. Par conséquent, si la période de validité de la licence d’utilisation du fichier est de 30 jours, et si l’utilisateur a déjà ouvert le document, il pourra continuer d’y accéder pendant toute la durée de la licence d’utilisation. Quand la licence d’utilisation expire, l’utilisateur doit se réauthentifier. C’est à ce moment-là que l’utilisateur se voit refuser l’accès au document, car celui-ci a été révoqué.
+
+Pour un locataire, la valeur par défaut de la période de validité de la licence est de 30 jours. Vous pouvez configurer cette valeur à l’aide de l’applet de commande PowerShell [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx). Ce paramètre peut être remplacé par un paramètre plus restrictif dans un modèle personnalisé. 
+
+Les utilisateurs peuvent modifier le paramètre du locataire et le paramètre du modèle en utilisant l’application de partage RMS et en sélectionnant l’option **M’autoriser à révoquer de suite l’accès à ces documents**. Ce paramètre définit la période de validité de la licence d’utilisation sur 0. 
+
+Pour plus d’informations et pour obtenir des exemples de la façon dont fonctionne la licence d’utilisation, consultez la description détaillée de [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx).
+
 ## Est-ce que Rights Management peut empêcher les captures d’écran ?
 En n’accordant pas le [droit d’utilisation](../deploy-use/configure-usage-rights.md) **Copy**, Rights Management peut empêcher les captures d’écran de nombreux outils de capture écran couramment utilisés sur les plateformes Windows (Windows 7, Windows 8.1, Windows 10, Windows Phone) et Android. En revanche, les appareils iOS et Mac n’autorisent aucune application à empêcher les captures d’écran, et les navigateurs (par exemple, utilisés avec Outlook Web App et Office Online) ne peuvent pas non plus empêcher les captures d’écran.
 
@@ -145,6 +157,6 @@ En dépit de son nom et de son apparence, l’option **Ne pas transférer** n’
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

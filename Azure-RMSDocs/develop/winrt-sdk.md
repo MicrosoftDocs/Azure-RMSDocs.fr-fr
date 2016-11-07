@@ -14,24 +14,24 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 763e99e40bbe329305e97757e87d10b048cc62e9
+ms.sourcegitcommit: dc452dac3a86cd9cc39127d5a29106ae87ba94be
+ms.openlocfilehash: c3dfa23a4bb03aec3ad9eae835382040a5347006
 
 
 ---
 
-# Configuration pour le Windows Store
+# <a name="windows-store-setup"></a>Configuration pour le Windows Store
 
 Les applications du Windows Store peuvent utiliser le Kit Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations à l’aide d’Azure Active Directory Rights Management (AAD RM).
 
 Cette rubrique vous guide tout au long du processus de configuration de votre environnement pour créer vos propres applications.
 
--   [Conditions préalables](#prerequisites)
+-   [Prérequis](#prerequisites)
 -   [Facultatif](#optional)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## Conditions préalables
+## <a name="prerequisites"></a>Conditions préalables
 
 
 Vous devez disposer des logiciels suivants sur votre système de développement :
@@ -44,11 +44,11 @@ Vous devez disposer des logiciels suivants sur votre système de développement�
 
 Lisez la rubrique [Nouveautés](release-notes.md) pour obtenir des informations sur les mises à jour des API, des informations sur les appareils et les environnements, les notes de publication et les questions les plus fréquentes (FAQ).
 
-## Facultatif
+## <a name="optional"></a>Facultatif
 
 Notre bibliothèque d’interface utilisateur fournit une interface utilisateur réutilisable pour les opérations de protection et de consommation pour les développeurs qui ne souhaitent pas créer leur propre interface utilisateur personnalisée ([Bibliothèque d’interface utilisateur pour les applications du Windows Store](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore)). Nous fournissons également un exemple d’application du Windows Store ([Exemple d’application RMS pour le Windows Store](https://github.com/AzureADSamples/rms-samples-for-windowsstore)).
 
-## Configuration de votre environnement de développement
+## <a name="configuring-your-development-environment"></a>Configuration de votre environnement de développement
 
 
 -   Ouvrez Visual Studio.
@@ -70,7 +70,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 Vous êtes maintenant prêt à créer vos propres applications du Windows Store.
 
-### Voir aussi
+### <a name="see-also"></a>Voir aussi
 
 [Prise en main](get-started.md)
 
@@ -78,14 +78,14 @@ Vous êtes maintenant prêt à créer vos propres applications du Windows Store.
 
 [Terminologie et concepts du développement](core-concepts.md)
 
-[Windows 8](http://windows.microsoft.com/en-US/windows-8/meet)
+[Windows 8](http://windows.microsoft.com/en-US/windows-8/meet)
 
-[Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
+[Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
-[Référence de l’API Windows](https://msdn.microsoft.com/library/dn891914.aspx)
+[Informations de référence sur l’API Windows](https://msdn.microsoft.com/library/dn891914.aspx)
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

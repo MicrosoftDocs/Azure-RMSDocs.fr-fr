@@ -20,13 +20,13 @@ ms.openlocfilehash: 719077671664dda3102949609874c569a691bbb8
 
 ---
 
-# Test de votre application
+# <a name="testing-your-application"></a>Test de votre application
 
 Cette rubrique contient des instructions sur la configuration de test de votre application.
 
-## Instructions
+## <a name="instructions"></a>Instructions
 
-### Étape 1 : Configuration pour le test
+### <a name="step-1-setup-for-testing"></a>Étape 1 : Configuration pour le test
 
 Vous pouvez réaliser le test avec Azure RMS ou un serveur RMS en cours d’exécution sur Windows Server. Nous vous suggérons de commencer votre test sur Azure RMS, puis, si votre déploiement l’exige, de procéder au test avec le serveur RMS.
 
@@ -40,14 +40,14 @@ Vous pouvez réaliser le test avec Azure RMS ou un serveur RMS en cours d’exé
 
     Pour plus d’informations sur la façon d’installer Rights Management Services SDK 2.1, consultez [Installer le SDK](install-the-rms-sdk.md).
 
-## Remarques
+## <a name="remarks"></a>Remarques
 
 Les instructions de cette rubrique ne sont pas exhaustives. Pour plus d’informations sur la configuration du client RMS 2.1, consultez les [notes sur le déploiement du client RMS 2.1](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx).
 
-### Rubriques connexes
+### <a name="related-topics"></a>Rubriques connexes
 
-* [Comment : installer et configurer un serveur RMS](how-to-install-and-configure-an-rms-server.md)
-* [Comment : utiliser l’authentification ADAL](how-to-use-adal-authentication.md)
+* [Procédure : installation et configuration d’un serveur RMS](how-to-install-and-configure-an-rms-server.md)
+* [Procédure : utilisation de l’authentification ADAL](how-to-use-adal-authentication.md)
 * [Installer le SDK](install-the-rms-sdk.md)
 * [Notes sur le déploiement du client RMS 2.1](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
  
@@ -56,6 +56,6 @@ Les instructions de cette rubrique ne sont pas exhaustives. Pour plus d’inform
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

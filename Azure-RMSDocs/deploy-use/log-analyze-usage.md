@@ -12,13 +12,13 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e33f1e54c21507999d30dcee2ce63c8eb2d69895
-ms.openlocfilehash: 33520bcfc36ed0a022b87c4b2db1e6fcd7a6eb14
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 9dea728836d52249471d3dde69b63a9a2cd1467c
 
 
 ---
 
-# Journalisation et analyse de l’utilisation du service Azure Rights Management
+# <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Journalisation et analyse de l’utilisation du service Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -26,17 +26,17 @@ Utilisez ces informations pour comprendre comment vous pouvez utiliser la journa
 
 Vous pouvez ensuite utiliser ces journaux du service Azure Rights Management pour prendre en charge les scénarios d’entreprise suivants :
 
--   **Analyse pour gagner en visibilité**
+-   **Analyser pour obtenir des informations sur l’activité**
 
     Vous pouvez importer les journaux générés par le service Azure Rights Management dans le référentiel de votre choix (par exemple, une base de données, un système de traitement analytique en ligne (OLAP) ou un système Map/Reduce) pour analyser les informations et générer des rapports. Par exemple, vous pouvez identifier les personnes qui accèdent à vos données protégées, déterminer quelles sont les données protégées auxquelles accèdent les utilisateurs, à partir de quels appareils et à partir de quel emplacement, savoir si les utilisateurs parviennent à consulter du contenu protégé, ou encore identifier les personnes qui ont lu un document important qui était protégé.
 
--   **Surveillance des abus**
+-   **Surveiller les abus**
 
     Les informations de journalisation d’Azure Rights Management mises à votre disposition quasiment en temps réel vous permettent de surveiller en continu l’utilisation du service Rights Management au sein de votre entreprise. 99,9 % des journaux sont disponibles pour le service dans un délai de 15 minutes suivant le début d’une action initiée.
 
     Par exemple, vous pouvez souhaiter recevoir une alerte en cas d’augmentation soudaine du nombre de personnes qui consultent des données protégées en dehors des heures de travail, ce qui pourrait signifier qu’un utilisateur malveillant recueille des informations pour les revendre à des concurrents, ou si un même utilisateur accède visiblement à des données à partir d’adresses IP différentes dans un court laps de temps, cela peut indiquer qu’un compte d’utilisateur a été compromis.
 
--   **effectuer une analyse d’investigation ;**
+-   **Réaliser une analyse d’investigation**
 
     En cas de fuite d’informations, vous devrez très certainement fournir une liste des personnes qui ont accédé récemment à des documents spécifiques ainsi que le type d’informations auxquelles a pu accéder un individu suspecté. Vous pouvez répondre à ces types de questions quand vous utilisez cette journalisation, car les personnes qui consultent du contenu protégé doivent toujours obtenir une licence Rights Management pour ouvrir des documents et des images protégés par le service Azure Rights Management, même si ces fichiers sont déplacés par e-mail ou s’ils sont copiés sur des lecteurs USB ou d’autres dispositifs de stockage. Cela signifie que vous pouvez utiliser ces journaux en tant que source d’informations fiable pour une analyse légale quand vous protégez vos données à l’aide du service Azure Rights Management.
 
@@ -47,7 +47,7 @@ Vous pouvez ensuite utiliser ces journaux du service Azure Rights Management pou
 
 Pour plus d’informations sur la journalisation de l’utilisation d’Azure Rights Management, consultez les sections suivantes.
 
-## Comment activer la journalisation de l’utilisation d’Azure Rights Management
+## <a name="how-to-enable-azure-rights-management-usage-logging"></a>Comment activer la journalisation de l’utilisation d’Azure Rights Management
 Depuis février 2016, la journalisation de l’utilisation d’Azure Rights Management est activée par défaut pour tous les clients. Cela s’applique aux clients qui ont activé leur service Azure Rights Management avant février 2016 et à ceux qui l’activent après février 2016. 
 
 > [!NOTE]
@@ -57,14 +57,14 @@ Depuis février 2016, la journalisation de l’utilisation d’Azure Rights Ma
 
 
 
-## Comment accéder aux journaux d’utilisation Azure Rights Management et les utiliser
+## <a name="how-to-access-and-use-your-azure-rights-management-usage-logs"></a>Comment accéder aux journaux d’utilisation Azure Rights Management et les utiliser
 Le service Azure Rights Management écrit des journaux enregistrés dans votre compte de stockage Azure sous la forme d’une série d’objets blob. Chaque objet blob contient un ou plusieurs enregistrements journal au format W3C étendu. Les noms des objets blob sont des chiffres et sont classés dans leur ordre de création. La section [Comment interpréter vos journaux d’utilisation d’Azure Rights Management](#how-to-interpret-your-azure-rights-management-usage-logs) (plus loin dans ce document) contient des informations supplémentaires sur le contenu des journaux et leur création.
 
 Les journaux peuvent mettre un certain temps à apparaître dans votre compte de stockage après une action Azure Rights Management. La plupart des journaux apparaissent dans un délai de 15 minutes. Nous vous conseillons de télécharger les journaux vers un espace de stockage local, tel qu’un dossier, une base de données ou un référentiel Map/Reduce.
 
 Pour télécharger vos journaux d’utilisation, vous allez utiliser le module d’administration Azure Rights Management pour Windows PowerShell. Pour obtenir des instructions d’installation, consultez [Installation de Windows PowerShell pour Azure Rights Management](install-powershell.md). Si vous avez déjà téléchargé ce module Windows PowerShell, exécutez la commande suivante pour vérifier que le numéro de votre version est au minimum **2.4.0.0** : `(Get-Module aadrm -ListAvailable).Version` 
 
-### Pour télécharger vos journaux d’utilisation à l’aide de PowerShell
+### <a name="to-download-your-usage-logs-by-using-powershell"></a>Pour télécharger vos journaux d’utilisation à l’aide de PowerShell
 
 1.  Démarrez Windows PowerShell avec l’option **Exécuter en tant qu’administrateur**, puis utilisez l’applet de commande [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) pour vous connecter au service Azure Rights Management :
 
@@ -80,15 +80,15 @@ Pour télécharger vos journaux d’utilisation, vous allez utiliser le module d
 
     Par exemple, après avoir créé un dossier nommé Logs sur votre lecteur E :
     
-    * Pour télécharger les journaux correspondant à une date précise (par exemple, le 1er février 2016), exécutez la commande suivante : `Get-AadrmUserLog -Path E:\Logs -fordate 2/1/2016`
+    * Pour télécharger les journaux correspondant à une date précise (par exemple le 1er février 2016), exécutez la commande suivante : `Get-AadrmUserLog -Path E:\Logs -fordate 2/1/2016`
     
-    * Pour télécharger les journaux correspondant à une plage de dates (par exemple, du 1er au 14 février 2016), exécutez la commande suivante : `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
+    * Pour télécharger les journaux correspondant à une plage de dates (par exemple du 1er au 14 février 2016), exécutez la commande suivante : `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
 
 Si vous spécifiez uniquement le jour, comme dans nos exemples, l’heure est supposée être 00:00:00 dans votre heure locale, puis convertie en temps universel coordonné (UTC). Quand vous spécifiez une heure à l’aide des paramètres -fromdate ou -todate (par exemple, -fordate "2/1/2016 15:00:00"), ces date et heure sont converties au format UTC. La commande Get-AadrmUserLog obtient alors les journaux correspondant à cette période UTC.
 
 Vous ne pouvez pas spécifier moins d’une journée entière à télécharger.
 
-Par défaut, cette applet de commande utilise trois threads pour télécharger les journaux. Si vous disposez d’une bande passante suffisante et souhaitez réduire le temps nécessaire pour télécharger les journaux, utilisez le paramètre -NumberOfThreads qui prend en charge une valeur comprise entre 1 et 32. Par exemple, si vous exécutez la commande suivante, l’applet de commande génère 10 threads pour télécharger les journaux : `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
+Par défaut, cette applet de commande utilise trois threads pour télécharger les journaux. Si vous disposez d’une bande passante suffisante et souhaitez réduire le temps nécessaire pour télécharger les journaux, utilisez le paramètre -NumberOfThreads qui prend en charge une valeur comprise entre 1 et 32. Par exemple, si vous exécutez la commande suivante, l’applet de commande génère 10 threads pour télécharger les journaux : `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
 
 
 > [!TIP]
@@ -96,14 +96,14 @@ Par défaut, cette applet de commande utilise trois threads pour télécharger l
 >
 > Par exemple, vous pouvez exécuter la commande suivante pour importer toutes les informations dans un fichier au format .log : `logparser –i:w3c –o:csv "SELECT * INTO AllLogs.csv FROM *.log"`
 
-#### Si vous avez activé manuellement la journalisation de l’utilisation Azure Rights Management avant le changement de journalisation du 22 février 2016
+#### <a name="if-you-manually-enabled-azure-rights-management-usage-logging-before-the-logging-change-february-22-2016"></a>Si vous avez activé manuellement la journalisation de l’utilisation Azure Rights Management avant le changement de journalisation du 22 février 2016
 
 
 Si vous utilisiez la journalisation de l’utilisation avant le changement de journalisation, vous aurez des journaux d’utilisation dans votre compte de stockage Azure. Dans le cadre de ce changement de journalisation, Microsoft ne copie pas ces journaux de votre compte de stockage vers le nouveau compte de stockage géré par Azure Rights Management. Vous êtes responsable de la gestion du cycle de vie des journaux générés précédemment, et vous pouvez utiliser l’applet de commande [Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) pour télécharger vos anciens journaux. Exemple :
 
 - Pour télécharger tous les journaux disponibles dans votre dossier E:\logs : `Get-AadrmUsageLog -Path "E:\Logs"`
     
-- Pour télécharger une plage d'objets blob spécifique : `Get-AadrmUsageLog –Path "E:\Logs" –FromCounter 1024 –ToCounter 2047`
+- Pour télécharger une plage d’objets blob spécifique : `Get-AadrmUsageLog –Path "E:\Logs" –FromCounter 1024 –ToCounter 2047`
 
 Notez que vous n’avez pas à télécharger de journaux à l’aide de l’applet de commande Get-AadrmUsageLog dans les cas suivants :
 
@@ -111,20 +111,20 @@ Notez que vous n’avez pas à télécharger de journaux à l’aide de l’appl
 
 - Vous avez activé le service Azure Rights Management après le 22 février 2016.
 
-## Comment interpréter vos journaux d’utilisation d’Azure Rights Management
+## <a name="how-to-interpret-your-azure-rights-management-usage-logs"></a>Comment interpréter vos journaux d’utilisation d’Azure Rights Management
 Pour interpréter les journaux d’utilisation d’Azure Rights Management, utilisez les informations suivantes.
 
-### Séquence du journal
+### <a name="the-log-sequence"></a>Séquence du journal
 Le service Azure Rights Management écrit les journaux sous la forme d’une série d’objets blob. 
 
 Chaque entrée du journal a un horodatage UTC. Étant donné que le service Azure Rights Management s’exécute sur plusieurs serveurs répartis dans plusieurs centres de données, les journaux peuvent parfois sembler hors séquence, même s’ils sont triés en fonction de leur horodatage. Toutefois, le décalage est mineur et souvent inférieur à une minute. Dans la plupart des cas, cela ne risque pas de poser de problème lors de l’analyse des journaux.
 
-### Format des objets blob
+### <a name="the-blob-format"></a>Format des objets blob
 Chaque objet blob est au format de journal W3C étendu. Il commence par les deux lignes suivantes :
 
-**#Logiciel : RMS**
+**#Software: RMS**
 
-**#Version : 1.1**
+**#Version: 1.1**
 
 La première ligne indique qu’il s’agit de journaux Azure Rights Management. La deuxième indique que le reste de l’objet blob suit les spécifications de la version 1.1. À titre de recommandation, les applications qui analysent ces journaux doivent vérifier ces deux lignes avant de continuer l’analyse du reste de l’objet blob.
 
@@ -140,12 +140,12 @@ Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des c
 |heure|Heure|Heure UTC (au format 24 h) du traitement de la demande.<br /><br />La source est l’horloge locale du serveur qui a traité la demande.|21:59:28|
 |row-id|Text|GUID unique de cet enregistrement de journal. En l’absence de valeur, utilisez la valeur correlation-id pour identifier l’entrée.<br /><br />Cette valeur est utile lorsque vous agrégez des journaux ou lorsque vous copiez des journaux dans un autre format.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
 |request-type|Nom|Nom de l’API RMS demandée.|AcquireLicense|
-|user-id|Chaîne|Utilisateur ayant adressé la demande.<br /><br />La valeur est placée entre guillemets simples. Les appels à partir d’une clé de locataire gérée par vous (BYOK) ont la valeur **"**, qui s’applique également quand les types de demande sont anonymes.|« joe@contoso.com »|
+|user-id|Chaîne|Utilisateur ayant adressé la demande.<br /><br />La valeur est placée entre guillemets simples. Les appels à partir d’une clé de locataire gérée par vous (BYOK) ont la valeur **"**, qui s’applique également quand les types de demande sont anonymes.|‘joe@contoso.com’|
 |result|Chaîne|« Success » si la demande a été traitée correctement.<br /><br />Type d’erreur (entre guillemets simples) si la demande échoue.|« Success »|
 |correlation-id|Text|GUID commun au journal du client RMS et au journal du serveur pour une demande donnée.<br /><br />Cette valeur peut être utile pour résoudre les problèmes liés au client.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Text|GUID (entre accolades) qui identifie le contenu protégé (par exemple, un document).<br /><br />Ce champ contient une valeur uniquement si le champ request-type est égal à AcquireLicense. Sinon, il reste vierge pour les autres types de demande.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|Chaîne|Adresse de messagerie du propriétaire du document.|alice@contoso.com|
-|issuer|Chaîne|Adresse de messagerie de l’émetteur du document.|alice@contoso.com (ou) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com’|
+|issuer|Chaîne|Adresse de messagerie de l’émetteur du document.|alice@contoso.com (ou) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |template-id|Chaîne|ID du modèle utilisé pour protéger le document.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
 |file-name|Chaîne|Nom de fichier du document qui a été protégé. <br /><br />Actuellement, certains fichiers (tels que les documents Office) sont affichés sous forme de GUID plutôt que noms de fichiers réels.|TopSecretDocument.docx|
 |date-published|Date|Date à laquelle le document a été protégé.|2015-10-15T21:37:00|
@@ -153,10 +153,10 @@ Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des c
 |c-ip|Adresse|Adresse IP du client d’où émane la demande.|64.51.202.144|
 
 
-#### Exceptions pour le champ user-id.
+#### <a name="exceptions-for-the-userid-field"></a>Exceptions pour le champ user-id.
 Bien que le champ user-id indique généralement l’utilisateur qui effectue la demande, il existe deux exceptions pour lesquelles la valeur ne mappe pas à un utilisateur réel :
 
--   Valeur **'microsoftrmsonline@&lt;votreIDdeClient&gt;.rms.&lt;région&gt;.aadrm.com'**.
+-   Valeur **'microsoftrmsonline@&lt;votre_ID_de_locataire&gt;.rms.&lt;région&gt;.aadrm.com’**.
 
     Cette valeur indique qu’un service Office 365, tel qu’Exchange Online ou SharePoint Online, est à l’origine de la demande. Dans la chaîne, *&lt;votreIDdeClient&gt;* correspond au GUID de votre client, et *&lt;région&gt;* à la région dans laquelle votre client est inscrit. Par exemple, **AN** représente l’Amérique du Nord, **UE** correspond à l’Europe et **AP** correspond à l’Asie.
 
@@ -164,7 +164,7 @@ Bien que le champ user-id indique généralement l’utilisateur qui effectue la
 
     Les demandes émises par ce connecteur sont journalisées avec le nom de principal du service **Aadrm_S-1-7-0**, automatiquement généré à l’installation du connecteur RMS.
 
-#### Types de demande standard
+#### <a name="typical-request-types"></a>Types de demande standard
 Il existe de nombreux types de demande dans le service Azure Rights Management. Le tableau suivant répertorie quelques-uns des types de demandes les plus utilisés.
 
 |Type de demande|Description|
@@ -212,7 +212,7 @@ Il existe de nombreux types de demande dans le service Azure Rights Management. 
 |UpdateTemplate|Un appel est fait à partir du portail Azure Classic pour mettre à jour un modèle existant.|
 
 
-## Référence Windows PowerShell
+## <a name="windows-powershell-reference"></a>Référence Windows PowerShell
 À partir de février 2016, la seule applet de commande Windows PowerShell dont vous avez besoin pour la journalisation de l’utilisation d’Azure Rights Management est [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx). 
 
 Avant ce changement, les applets de commande (désormais déconseillées) nécessaires pour les journaux d’utilisation d’Azure Rights Management étaient les suivantes :  
@@ -240,6 +240,6 @@ Pour plus d’informations sur l’utilisation de Windows PowerShell pour le ser
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

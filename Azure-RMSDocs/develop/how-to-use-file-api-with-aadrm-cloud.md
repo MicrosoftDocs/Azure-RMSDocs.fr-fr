@@ -20,19 +20,19 @@ ms.openlocfilehash: 28b85313e278455391040797ea2886bd9247abe2
 
 ---
 
-# Comment : permettre à votre application de service de fonctionner avec le service RMS cloud
+# <a name="howto-enable-your-service-application-to-work-with-cloud-based-rms"></a>Comment : permettre à votre application de service de fonctionner avec le service RMS cloud
 
 Cette rubrique décrit les étapes qui permettent de configurer votre application de service pour qu’elle utilise Azure Rights Management. Pour plus d’informations, consultez [Prise en main d’Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
 
 **Important**  
 Pour utiliser votre application de service de Rights Management Services SDK 2.1 avec Azure RMS, vous devez créer vos propres locataires. Pour plus d’informations, consultez [Conditions requises pour Azure RMS : abonnements cloud qui prennent en charge Azure RMS](../get-started/requirements-subscriptions.md).
 
-## Conditions préalables
+## <a name="prerequisites"></a>Conditions préalables
 
 -   RMS SDK 2.1 doit être installé et configuré. Pour plus d’informations, consultez [Prise en main de RMS SDK 2.1](getting-started-with-ad-rms-2-0.md).
 -   Vous devez [créer une identité de service par le biais d’ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx) à l’aide de l’option de clé symétrique, ou par d’autres moyens, et noter les informations clés de ce processus.
 
-## Connexion au service Rights Management Azure
+## <a name="connecting-to-the-azure-rights-management-service"></a>Connexion au service Rights Management Azure
 
 -   Appelez [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx).
 -   Définissez [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx).
@@ -50,9 +50,9 @@ Pour utiliser votre application de service de Rights Management Services SDK 2.
 
 **Remarque** : En raison d’une condition existante avec notre service de découverte, si vous n’êtes pas en Amérique du Nord, les informations d’identification de clé symétrique des autres régions ne sont pas acceptées. Vous devez donc spécifier les URL des locataires directement. Cette opération s’effectue par le biais du paramètre *pConnectionInfo* (type [IPC\_CONNECTION\_INFO](https://msdn.microsoft.com/library/hh535274.aspx)) des fonctions [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) ou [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx).
 
-## Générer une clé symétrique et recueillir les informations nécessaires
+## <a name="generate-a-symmetric-key-and-collect-the-needed-information"></a>Générer une clé symétrique et recueillir les informations nécessaires
 
-### Instructions pour générer une clé symétrique
+### <a name="instructions-to-generate-a-symmetric-key"></a>Instructions pour générer une clé symétrique
 
 -   Installez l’[Assistant de connexion Microsoft Online](http://go.microsoft.com/fwlink/p/?LinkID=286152).
 -   Installez le [Module Powershell Azure AD](https://bposast.vo.msecnd.net/MSOPMW/8073.4/amd64/AdministrationConfig-en.msi).
@@ -63,9 +63,9 @@ Pour utiliser votre application de service de Rights Management Services SDK 2.
 
     `Import-Module MSOnline`
 
-    `Connect-MsolService` (entrez vos informations d’identification d’administrateur)
+    `Connect-MsolService`(entrez vos informations d’identification d’administrateur)
 
-    `New-MsolServicePrincipal` (entrez un nom complet)
+    `New-MsolServicePrincipal`(entrez un nom d’affichage)
 
 - Une fois la clé symétrique générée, les informations sur la clé sont transmises, notamment la clé elle-même et *AppPrincipalId*.
 
@@ -78,14 +78,14 @@ Pour utiliser votre application de service de Rights Management Services SDK 2.
       AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
 
 
-### Instructions pour trouver **TenantBposId** et les **Urls**
+### <a name="instructions-to-find-out-tenantbposid-and-urls"></a>Instructions pour trouver **TenantBposId** et les **Urls**
 
 -   Installez le [Module Powershell Azure RMS](https://technet.microsoft.com/en-us/library/jj585012.aspx).
 -   Démarrez Powershell et exécutez les commandes suivantes pour obtenir la configuration RMS du locataire.
 
     `Import-Module aadrm`
 
-    `Connect-AadrmService` (entrez vos informations d’identification d’administrateur)
+    `Connect-AadrmService`(entrez vos informations d’identification d’administrateur)
 
     `Get-AadrmConfiguration`
 
@@ -128,7 +128,7 @@ Pour plus d’informations, consultez [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://
     promptCtx.hCancelEvent = NULL;
     promptCtx.pcCredential = &cred;
 
-### Identifier un modèle, puis procéder au chiffrement
+### <a name="identify-a-template-and-then-encrypt"></a>Identifier un modèle, puis procéder au chiffrement
 
 -   Sélectionnez un modèle à utiliser pour le chiffrement.
     Appelez [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) en passant la même instance de [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx).
@@ -162,7 +162,7 @@ Exemple d’utilisation de [IpcfDecryptFile](https://msdn.microsoft.com/library/
 
 Vous avez maintenant terminé les étapes nécessaires pour permettre à votre application d’utiliser Azure Rights Management.
 
-## Rubriques connexes
+## <a name="related-topics"></a>Rubriques connexes
 
 * [Prise en main d’Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
 * [Prise en main de RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
@@ -184,6 +184,6 @@ Vous avez maintenant terminé les étapes nécessaires pour permettre à votre a
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

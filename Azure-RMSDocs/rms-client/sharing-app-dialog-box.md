@@ -3,7 +3,7 @@ title: "Options de boîte de dialogue pour l’application de partage Rights Man
 description: "Informations vous permettant de spécifier les options des boîtes de dialogue Ajouter une protection ou Partage protégé de l’application de partage RMS. Ces boîtes de dialogue s’affichent quand vous voulez protéger un fichier à partager ou protéger un fichier sur place et que vous choisissez des autorisations personnalisées."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 25e93f993ef76d0bce61f925c58cc667ccacf7b8
-ms.openlocfilehash: c28651342c3048b783880f8ea3b12acd56d973a2
+ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
+ms.openlocfilehash: 97766046526db5148f03873343a2fb3840392c6a
 
 
 ---
@@ -54,7 +54,7 @@ Outre les options que vous pouvez choisir, vous pourriez également vous interro
 
 -   Par contre, quand vous utilisez la **protection intégrée (native)** de Rights Management avec des applications qui la prennent en charge (par exemple, des fichiers Office), la protection s’applique au fichier, même si celui-ci est transféré à quelqu’un d’autre ou enregistré à un autre emplacement. Et lorsque vous protégez un fichier de cette manière, vous pouvez utiliser des autorisations restrictives, telles que la lecture seule, ou l'édition mais non l'impression ou la copie. Par exemple, vous pouvez sélectionner **Visionneuse – Affichage uniquement**pour empêcher toute modification, impression ou copie du fichier.
 
-Pour plus d’informations techniques, consultez la section [Niveaux de protection : natif et générique](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) du [Guide de l’administrateur de l’application de partage Rights Management](sharing-app-admin-guide.md).
+Pour plus d’informations techniques, consultez la section [Niveaux de protection : natif et générique](sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) du [Guide de l’administrateur de l’application de partage Rights Management](sharing-app-admin-guide.md).
 
 ## <a name="whats-the-ppdf-file-thats-automatically-created"></a>Qu'est-ce que le fichier .ppdf créé automatiquement ?
 

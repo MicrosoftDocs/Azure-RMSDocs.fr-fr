@@ -12,16 +12,15 @@ ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: efbb95e5f34a45c8a5f17eb61ebb09dfe5c8f65f
-ms.openlocfilehash: 1b69be775b3cd270e4b6ea42a306eb51c15424cb
+ms.sourcegitcommit: 8b456ae32446a2c429f33b76563eef53ea92a902
+ms.openlocfilehash: bbcc5f71eda6b100ad16f33793752b92ddfa4304
 
 
 ---
 
-# Configuration requise pour Azure Information Protection
+# <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
-
 
 Avant de déployer Azure Information Protection pour votre organisation, vérifiez que les conditions préalables suivantes sont respectées. 
 
@@ -55,6 +54,6 @@ Pour plus d’informations sur les conditions requises supplémentaires pour ce 
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

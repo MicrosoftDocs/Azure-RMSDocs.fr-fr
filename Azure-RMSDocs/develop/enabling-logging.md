@@ -14,17 +14,25 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 118aa3e25c6be9d0bf43141585d79030fc79224a
+ms.sourcegitcommit: ac77c4e0bced244f1cec74f15cbe0d62c9ab4437
+ms.openlocfilehash: 66d24f4ed737526525c041de7aeb96de35b37032
 
 
 ---
 
-# Comment : activer la journalisation des erreurs et des performances
+# <a name="how-to-enable-error-and-performance-logging"></a>Comment : activer la journalisation des erreurs et des performances
 Microsoft Rights Management SDK 4.2 gère le chargement des journaux de diagnostic et de performances via une propriété d’appareil unique.
 
-## Vue d'ensemble ##
-Vous pouvez améliorer l’expérience de vos utilisateurs et faciliter la résolution de leurs problèmes en activant le chargement automatique des journaux de diagnostic et de performances sur Microsoft. Afin de respecter la confidentialité de l’utilisateur, en tant que développeur d’applications, vous devez lui demander son consentement avant d’activer la journalisation automatique.
+## <a name="overview"></a>Vue d’ensemble ##
+Vous pouvez améliorer l’expérience de vos utilisateurs et faciliter la résolution de leurs problèmes en activant le chargement automatique des données des journaux de diagnostic, de performances et de télémétrie vers Microsoft. 
+
+> [!IMPORTANT] 
+> Afin de respecter la confidentialité de l’utilisateur, en tant que développeur d’applications, vous devez lui demander son consentement avant d’activer la journalisation automatique.
+
+> [!NOTE]
+> À titre d’exemple, voici un message standard que Microsoft utilise pour la notification de journalisation : 
+>
+> *En activant la journalisation des erreurs et des performances, vous acceptez d’envoyer les données des erreurs et des performances à Microsoft.  Microsoft collecte les données des erreurs et des performances via Internet (« Données »).  Microsoft utilise ces données pour fournir et améliorer la qualité, la sécurité et l’intégrité des produits et des services Microsoft.  Par exemple, nous analysons les performances et la fiabilité, comme les fonctionnalités que vous utilisez, la rapidité de réponse des fonctionnalités, les performances de l’appareil, les interactions de l’interface utilisateur et tous les problèmes que vous rencontrez avec le produit.  Les données incluent également des informations sur la configuration de votre logiciel, comme le logiciel en cours d’exécution et l’adresse IP.*  
 
 Vous allez gérer le contrôle de la journalisation via deux propriétés.
 
@@ -39,7 +47,7 @@ Vous allez gérer le contrôle de la journalisation via deux propriétés.
 
 Dans chacun des exemples d’extraits de code suivants, l’application appelante peut définir ou interroger la propriété.
 
-### Android ###
+### <a name="android"></a>Android ###
 Activer la journalisation automatique
 
     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
@@ -52,7 +60,7 @@ Obtenir le paramètre d’indicateur de contrôle de la journalisation en cours
     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
     Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
 
-## iOS ##
+## <a name="ios"></a>iOS ##
 Activer la journalisation automatique
 
     NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
@@ -74,12 +82,12 @@ Obtenir le paramètre de contrôle de niveau de journalisation
     [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcLogLevel&quot;];
  
 
-## Windows ##
+## <a name="windows"></a>Windows ##
 Activer la journalisation automatique
 
     CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 
-Pour plus d’informations sur les paramètres facultatifs, consultez [CustomerExperienceOptions](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptions).
+Pour plus d’informations sur les paramètres facultatifs, consultez [CustomerExperienceOptions](https://msdn.microsoft.com/library/microsoft.rightsmanagement.customerexperienceoptions.aspx).
 
 Obtenir le paramètre d’indicateur de contrôle de la journalisation en cours
 
@@ -96,6 +104,6 @@ Obtenir le paramètre d’indicateur de contrôle de la journalisation en cours
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -114,7 +114,7 @@ La version 4.1 du kit de développement logiciel (SDK) RMS ajoute les nouvelles
 
 Cette section donne des informations sur les versions actuelles et précédentes du kit de développement logiciel (SDK) Microsoft Rights Management 4.x que vous souhaitez connaître en tant que développeur.
 
-**AD RMS SDK 4.1 - Version en disponibilité globale des plateformes iOS/OS X et Android**
+**AD RMS SDK 4.1 - Version en disponibilité globale des plateformes iOS/OS X et Android**
 
 -   **Prise en charge d’AD RMS** : les administrateurs informatiques peuvent utiliser des applications compatibles avec RMS sur des appareils mobiles avec les nouvelles extensions pour appareils mobiles du serveur AD RMS.
 -   **Consommation en mode hors connexion** : les utilisateurs finaux peuvent accéder hors connexion aux données protégées par RMS.
@@ -140,7 +140,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
     **Solution** : il s’agit d’un problème connu. Pour le limiter, passez toujours un tableau *byte \[\]* ayant la même valeur de longueur que le paramètre length, ou utilisez la méthode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
 
-**iOS et OS X**
+**iOS et OS X**
 
 -   Nos kits de développement logiciel iOS et OS X prennent en charge deux dialectes de Portugais. Malheureusement, en raison d’un bogue, la prise en charge de la première localisation n’est pas complètement assurée. En raison de ce bogue, le portugais n’est pas entièrement pris en charge. La plupart du texte est traduit, mais pas l’interface utilisateur.
 
@@ -154,7 +154,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
     Il s’agit d’un comportement facultatif connu pour iOS selon les instructions relatives à l’interface humaine Apple.
 
-**OS X uniquement**
+**OS X uniquement**
 
 -   Le kit de développement logiciel (SDK) RMS 4.x n’affiche pas le voyant d’activité réseau.
 
@@ -181,7 +181,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 **Q** : Comment obtenir de nouveaux locataires d’organisation pour essayer le Kit de développement logiciel (SDK) et les exemples d’applications ?
 
-**R** : Pour demander des informations d’identification pour les organisations de test Azure AD RMS, envoyez un e-mail à <rmcstbeta@microsoft.comrmcstbeta@microsoft.com>.
+**R** : Pour demander des informations d’identification pour les organisations de test Azure AD RMS, envoyez un e-mail à <rmcstbeta@microsoft.com>.
 
 **Q** : Je ne vois aucune discussion relative à la hiérarchie de test dans la documentation. Pourquoi ?
 

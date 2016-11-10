@@ -164,9 +164,9 @@ Vous avez maintenant terminé les étapes nécessaires pour permettre à votre a
 
 ## <a name="related-topics"></a>Rubriques connexes
 
-* [Prise en main d’Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
-* [Prise en main de RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
-* [Créer une identité de service à l’aide d’ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
+* [Bien démarrer avec Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
+* [Bien démarrer avec RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
+* [Créer une identité de service via ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
 * [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
 * [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx)

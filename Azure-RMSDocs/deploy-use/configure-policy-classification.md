@@ -2,20 +2,20 @@
 title: "Comment configurer des conditions pour la classification automatique et recommandée | Azure Information Protection"
 description: "Lorsque vous configurez des conditions pour une étiquette, vous pouvez affecter automatiquement une étiquette à un document ou à un e-mail. Ou vous pouvez inviter les utilisateurs à sélectionner l’étiquette que vous recommandez."
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
+ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
+ms.openlocfilehash: bd6adab05c4f087f5441d168c3385057ce5b6355
 
 
 ---
 
-# Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
+# <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
@@ -44,7 +44,7 @@ Un exemple d’invite s’affiche lorsque vous configurez une condition d’appl
 
 Dans cet exemple, l’utilisateur peut cliquer sur **Modifier maintenant** pour appliquer l’étiquette recommandée ou remplacer la recommandation en fermant la barre.
 
-## Pour configurer la classification automatique ou recommandée pour une étiquette
+## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Pour configurer la classification automatique ou recommandée pour une étiquette
 
 1. Si ce n’est déjà fait, dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général, puis accédez au panneau **Azure Information Protection**. 
     
@@ -72,7 +72,7 @@ Dans cet exemple, l’utilisateur peut cliquer sur **Modifier maintenant** pour 
 
 6. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
 
-## Informations sur les conditions intégrées
+## <a name="information-about-the-builtin-conditions"></a>Informations sur les conditions intégrées
 
 Pendant la période d’évaluation, vous pouvez sélectionner les conditions suivantes :
 
@@ -87,7 +87,7 @@ Pendant la période d’évaluation, vous pouvez sélectionner les conditions su
 - [Numéro de compte bancaire international (IBAN)](#international-banking-account-number-iban)
 
 
-### Code SWIFT
+### <a name="swift-code"></a>Code SWIFT
 
 Faire correspondre ce type d’information lorsque le contenu inclut les éléments suivants :  
 
@@ -113,7 +113,7 @@ Exemples de test :
 ----
 
 
-### Numéro de carte de crédit
+### <a name="credit-card-number"></a>Numéro de carte de crédit
 
 Faire correspondre ce type d’information lorsque le contenu inclut les éléments suivants :  
 
@@ -136,7 +136,7 @@ Exemples de test :
 
 ----
 
-### Numéro d’acheminement ABA
+### <a name="aba-routing-number"></a>Numéro d’acheminement ABA
 
 Faire correspondre ce type d’information lorsque le contenu inclut les éléments suivants :  
 
@@ -173,7 +173,7 @@ Exemples de test :
 
 ----
 
-### Numéro de sécurité sociale (SSN) (USA)
+### <a name="usa-social-security-number-ssn"></a>Numéro de sécurité sociale (SSN) (USA)
 
 Faire correspondre ce type d’information lorsque le contenu inclut les éléments suivants :  
 
@@ -199,7 +199,7 @@ Exemples de test :
 
 ----
 
-### Numéro de compte bancaire international (IBAN)
+### <a name="international-banking-account-number-iban"></a>Numéro de compte bancaire international (IBAN)
 
 Faire correspondre ce type d’information lorsque le contenu inclut les éléments suivants :  
 
@@ -213,15 +213,15 @@ Exemples de test :
 - **GB29 NWBK 6016 1331 9268 19 IBAN**
 
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organization-s-policy).  
-
-
+Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO1-->
 
 

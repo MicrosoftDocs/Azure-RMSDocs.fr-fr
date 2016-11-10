@@ -3,7 +3,7 @@ title: "Protéger un fichier que vous partagez par e-mail à l’aide de l’app
 description: "Instructions à suivre pour partager un document par e-mail en toute sécurité."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: b4467f73dd9d107681961f99ee038ed889e25b2d
+ms.sourcegitcommit: addc24fed28cee52b57c7e3bde926d6324478e7b
+ms.openlocfilehash: 1eed5f339ede2d96b1de7e486a04416d1a22c871
 
 
 ---
 
-# Protéger un fichier partagé par courrier électronique à l’aide de l’application de partage Rights Management
+# <a name="protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application"></a>Protégez un fichier partagé par courrier électronique à l’aide de l’application de partage Rights Management
 
 >*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
@@ -32,7 +32,7 @@ Si votre organisation utilise Azure Information Protection, vous pouvez effectue
 
 -   Utilisez le site de suivi de la documentation. Vous pouvez même cesser de partager le fichier en supprimant l’accès à ce dernier sur le site de suivi de document. Pour plus d’informations, consultez [Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS](sharing-app-track-revoke.md).
 
-## Avec Outlook : Pour protéger un fichier partagé par e-mail
+## <a name="using-outlook-to-protect-a-file-that-you-share-by-email"></a>Avec Outlook : Pour protéger un fichier partagé par e-mail
 
 1.  Créez votre e-mail et joignez le fichier. Puis, dans l’onglet **Message** du groupe **RMS** , cliquez sur **Partage protégé** , puis sur **Partage protégé** à nouveau :
 
@@ -42,14 +42,14 @@ Si votre organisation utilise Azure Information Protection, vous pouvez effectue
 
 2.  Spécifiez les options souhaitées pour ce fichier dans la [boîte de dialogue Partage protégé](sharing-app-dialog-box.md), puis cliquez sur **Envoyer maintenant**.
 
-### Autres méthodes pour protéger un fichier partagé par e-mail
+### <a name="other-ways-to-protect-a-file-that-you-share-by-email"></a>Autres méthodes pour protéger un fichier partagé par e-mail
 En plus de partager un fichier protégé à l’aide d’Outlook, vous pouvez également utiliser ces alternatives :
 
 -   Depuis l’Explorateur de fichiers : Cette méthode fonctionne pour tous les fichiers.
 
 -   À partir d’une application Office : cette méthode fonctionnant pour les applications prises en charge par l’application de partage RMS à l’aide du complément Office, le groupe **RMS** apparaît sur le ruban.
 
-#### Avec l’Explorateur de fichiers ou une application Office : Pour protéger un fichier partagé par e-mail
+#### <a name="using-file-explorer-or-an-office-application-to-protect-a-file-that-you-share-by-email"></a>Avec l’Explorateur de fichiers ou une application Office : Pour protéger un fichier partagé par e-mail
 
 1.  Utilisez l’une des options suivantes :
 
@@ -71,7 +71,7 @@ En plus de partager un fichier protégé à l’aide d’Outlook, vous pouvez é
 
     ![E-mail pour Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
-    Vous vous demandez : [qu’est-ce que le fichier .ppdf créé automatiquement ?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)
+    Vous vous demandez : [qu’est-ce que le fichier .ppdf créé automatiquement ?](sharing-app-dialog-box.md#whats-the-ppdf-file-thats-automatically-created)
 
 4.  Facultatif : Vous pouvez modifier n’importe quel élément de cet e-mail. Par exemple, vous pouvez ajouter ou modifier l’objet ou le texte du message.
 
@@ -80,18 +80,18 @@ En plus de partager un fichier protégé à l’aide d’Outlook, vous pouvez é
 
 5.  Envoyez l’e-mail.
 
-## Exemples et autres instructions
+## <a name="examples-and-other-instructions"></a>Exemples et autres instructions
 Pour obtenir des exemples et des instructions concernant l’utilisation de l’application de partage Rights Management, voir les sections suivantes dans le Guide d’utilisation de l’application de partage Rights Management :
 
 -   [Exemples d’utilisation de l’application de partage RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
+-   [Que voulez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -2,20 +2,20 @@
 title: "Comment configurer des marquages visuels d’une étiquette | Azure Information Protection"
 description: "Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez sélectionner plusieurs options pour que la classification choisie soit facilement visible. Ces marquages visuels sont un filigrane, un en-tête et un pied de page."
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 5b00975e3e435ec3ab122c3a015a3daf93db3daf
+ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
+ms.openlocfilehash: eca90185e6225d3f55f979f66f8225d661fe59cd
 
 
 ---
 
-# Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
+# <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
@@ -53,7 +53,7 @@ Utilisez les instructions suivantes pour configurer les marquages visuels d’un
 
 4. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
 
-## Utilisation de variables dans la chaîne de texte
+## <a name="using-variables-in-the-text-string"></a>Utilisation de variables dans la chaîne de texte
 
 Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’en-tête, le pied de page ou le filigrane :
 
@@ -71,14 +71,14 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
     
 Exemple : Si vous spécifiez la chaîne `Document: ${item.name}  Classification: ${item.label}` pour le pied de page de l’étiquette Secret, le texte du pied de page appliqué à un document nommé project.docx est **Document : project.docx Classification : Secret**.
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organization-s-policy).  
-
-
+Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO1-->
 
 

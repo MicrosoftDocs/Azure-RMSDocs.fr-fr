@@ -19,7 +19,7 @@ ms.openlocfilehash: c2a272cc27a45f7fda8279394fcb681b70dea81b
 ---
 
 
-# Génération et transfert de votre clé de locataire – via Internet : CONTENU RETIRÉ
+# <a name="generate-and-transfer-your-tenant-key-over-the-internet-retired-content"></a>Génération et transfert de votre clé de locataire – via Internet : CONTENU RETIRÉ
 
 >*S’applique à : Azure Rights Management, Office 365*
 
@@ -27,6 +27,6 @@ Les informations contenues dans cet article ont été supprimées car elles ne s
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

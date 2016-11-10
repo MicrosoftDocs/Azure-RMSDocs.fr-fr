@@ -3,7 +3,7 @@ title: "Application de partage Rights Management &colon; Historique de publicat
 description: "Découvrez les nouveautés ou modifications apportées à une version de l’application de partage Rights Management pour Windows."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 31b9ad27e1fc640f8fec29067794f952aa6031b6
+ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
+ms.openlocfilehash: 08ca0de6802aa001e5e2bcf7637592c2ad68864d
 
 
 ---
 
-# Application de partage Rights Management : Historique de publication des versions
+# <a name="rights-management-sharing-application-version-release-history"></a>Application de partage Rights Management : Historique de publication des versions
 
 >*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
@@ -29,7 +29,7 @@ Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 > [!NOTE]
 > Si vous avez des commentaires ou une question concernant l’application de partage RMS, envoyez un message électronique à [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
 
-## Version 1.0.2217.0
+## <a name="version-1022170"></a>Version 1.0.2217.0
 
 **Publiée le** : 13/07/2016
 
@@ -39,7 +39,7 @@ Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 
 
 
-## Version 1.0.2191.0
+## <a name="version-1021910"></a>Version 1.0.2191.0
 **Publiée le** : 16/06/2016
 
 **Correctifs** :
@@ -53,7 +53,7 @@ Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 - Petit nombre de bogues mineurs et améliorations pour les messages d’erreur.
 
 
-## Version 1.0.2004.0
+## <a name="version-1020040"></a>Version 1.0.2004.0
 **Publiée le** : 11/12/2015
 
 **Correctifs** :
@@ -72,16 +72,16 @@ Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 
     Certaines restrictions s’appliquent aux utilisateurs standards exécutant Office 2010. Pour plus d’informations, consultez la section [Si vous n’êtes pas un administrateur local et que vous utilisez Office 2010](install-sharing-app.md#if-you-are-not-a-local-administrator-and-use-office-2010) dans les instructions de l’utilisateur [Télécharger et installer l’application de partage Rights Management](install-sharing-app.md).
 
-## Version 1.0.1908.0
+## <a name="version-1019080"></a>Version 1.0.1908.0
 **Publiée le** : 16/9/2015
 
 **Correctifs** :
 
 -   Prise en charge de Multi-Factor Authentication (MFA) pour Azure RMS, ayant également pour effet d’éliminer la dépendance vis-à-vis de l’Assistant de connexion Microsoft pour les applications qui utilisent l’authentification moderne.
 
-    Pour plus d’informations, consultez la section [Multi-Factor authentication (MFA) et Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) à partir de [Configuration requise pour Azure Rights Management](../get-started/requirements-azure-rms.md).
+    Pour plus d’informations, consultez la section [Authentification multifacteur et Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection) dans [Configuration requise d’Active Directory pour Azure Information Protection](../get-started/requirements-azure-ad.md).
 
-## Version 1.0.1784.0
+## <a name="version-1017840"></a>Version 1.0.1784.0
 **Publiée le** : 30/7/2015
 
 **Correctifs** :
@@ -90,7 +90,7 @@ Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 
 -   Petit nombre de bogues mineurs et régressions.
 
-## Version 1.0.1770.0
+## <a name="version-1017700"></a>Version 1.0.1770.0
 **Publiée le** : 25/4/2015
 
 **Correctifs** :
@@ -113,7 +113,7 @@ Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 
     Pour plus d’informations, consultez [Options de boîte de dialogue pour l’application de partage Rights Management](sharing-app-dialog-box.md).
 
-## Version 1.0.1667.0
+## <a name="version-1016670"></a>Version 1.0.1667.0
 **Publiée le** : 19/1/2015
 
 **Correctifs** :
@@ -131,6 +131,6 @@ Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

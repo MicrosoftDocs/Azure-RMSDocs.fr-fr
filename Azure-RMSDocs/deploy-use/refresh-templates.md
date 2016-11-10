@@ -19,7 +19,7 @@ ms.openlocfilehash: a823d79a9305569962ee165b6eadf1d5384c0c0b
 ---
 
 
-# Actualisation des modèles pour les utilisateurs
+# <a name="refreshing-templates-for-users"></a>Actualisation des modèles pour les utilisateurs
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -33,7 +33,7 @@ Quand vous utilisez le service Azure Rights Management d’Azure Information Pro
 |Office 2010|Actualisation lors de la connexion des utilisateurs.<br /><br />Pour forcer une actualisation, demandez aux utilisateurs de se déconnecter, puis de se reconnecter ou forcez-les à le faire. Ou consultez la section [Office 2010 uniquement : Comment forcer une actualisation d’un modèle personnalisé modifié](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
 Pour les appareils mobiles qui utilisent l'application de partage RMS, les modèles sont automatiquement téléchargés (et actualisés au besoin) sans aucune qu'aucune configuration soit requise.
 
-## Exchange Online uniquement : Comment configurer Exchange pour télécharger des modèles personnalisés modifiés
+## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Exchange Online uniquement : Comment configurer Exchange pour télécharger des modèles personnalisés modifiés
 Si vous avez déjà configuré la Gestion des droits relatifs à l'information (IRM) pour Exchange Online, les modèles personnalisés ne peuvent pas être téléchargés par les utilisateurs tant que vous n'apportez pas les modifications suivantes à l'aide de Windows PowerShell dans Exchange Online.
 
 > [!NOTE]
@@ -41,7 +41,7 @@ Si vous avez déjà configuré la Gestion des droits relatifs à l'information (
 
 Vous devez suivre cette procédure chaque fois que vous modifiez un modèle.
 
-### Pour mettre à jour des modèles pour Exchange Online
+### <a name="to-update-templates-for-exchange-online"></a>Pour mettre à jour des modèles pour Exchange Online
 
 1.  À l’aide de Windows PowerShell dans Exchange Online, connectez-vous au service :
 
@@ -94,13 +94,13 @@ Pour que les utilisateurs ne voient plus ces modèles, connectez-vous au service
 Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
 ```
 
-## Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié
+## <a name="office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié
 En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013 ou l'application de partage Rights Management (RMS) pour Windows, vous pouvez modifier la planification automatique afin que les modèles modifiés soient actualisés sur les ordinateurs à une fréquence supérieure à la fréquence par défaut. Vous pouvez également forcer une actualisation immédiate en supprimant les données existantes dans une valeur de registre.
 
 > [!WARNING]
 > Si vous n'utilisez pas l'Éditeur du Registre correctement, vous risquez de provoquer de sérieux problèmes pouvant vous amener à devoir réinstaller le système d'exploitation. Microsoft ne peut pas garantir la résolution des problèmes engendrés par une utilisation incorrecte de l'Éditeur du Registre. Utilisez l’Éditeur du Registre à vos propres risques.
 
-### Pour modifier la planification automatique
+### <a name="to-change-the-automatic-schedule"></a>Pour modifier la planification automatique
 
 1.  Dans l'un Éditeur du Registre, créez et définissez l'une des valeurs de Registre suivantes :
 
@@ -124,7 +124,7 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 
 2.  Si vous souhaitez forcer une actualisation immédiate des modèles, passez à la procédure suivante. Dans le cas contraire, redémarrez maintenant vos applications et instances Office de l'Explorateur de fichiers.
 
-### Pour forcer une actualisation immédiate
+### <a name="to-force-an-immediate-refresh"></a>Pour forcer une actualisation immédiate
 
 1.  À l’aide d’un éditeur du Registre, supprimez les données de la valeur **LastUpdatedTime**. Par exemple, les données peuvent afficher **2015-04-20T15:52**. Supprimez 2015-04-20T15:52 pour qu’aucune donnée ne s’affiche. Utilisez les informations suivantes pour rechercher le chemin de Registre et supprimer ces données de valeur de Registre.
 
@@ -149,13 +149,13 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 
 3.  Redémarrez vos applications et instances les de l'Explorateur de fichiers.
 
-## Office 2010 uniquement : Forcer une actualisation pour un modèle personnalisé modifié
+## <a name="office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2010 uniquement : Forcer une actualisation pour un modèle personnalisé modifié
 En modifiant le Registre sur les ordinateurs qui exécutent Office 2010, vous pouvez définir une valeur de façon à ce que les modèles modifiés soient actualisés sur les ordinateurs sans attendre que les utilisateurs se déconnectent, puis se reconnectent. Vous pouvez également forcer une actualisation immédiate en supprimant les données existantes dans une valeur de registre.
 
 > [!WARNING]
 > Si vous n'utilisez pas l'Éditeur du Registre correctement, vous risquez de provoquer de sérieux problèmes pouvant vous amener à devoir réinstaller le système d'exploitation. Microsoft ne peut pas garantir la résolution des problèmes engendrés par une utilisation incorrecte de l'Éditeur du Registre. Utilisez l’Éditeur du Registre à vos propres risques.
 
-### Pour modifier la fréquence de mise à jour
+### <a name="to-change-the-update-frequency"></a>Pour modifier la fréquence de mise à jour
 
 1.  À l'aide d'un éditeur du Registre, créez une nouvelle valeur de Registre nommée **UpdateFrequency** et définir une valeur entière pour les données, qui spécifiant la fréquence en jours pour télécharger les modifications dans un modèle téléchargé. Utilisez le tableau suivant pour rechercher le chemin d'accès du Registre afin de créer cette nouvelle valeur de Registre.
 
@@ -167,7 +167,7 @@ En modifiant le Registre sur les ordinateurs qui exécutent Office 2010, vous po
 
 2.  Si vous souhaitez forcer une actualisation immédiate des modèles, passez à la procédure suivante. Dans le cas contraire, redémarrez vos applications Office.
 
-### Pour forcer une actualisation immédiate
+### <a name="to-force-an-immediate-refresh"></a>Pour forcer une actualisation immédiate
 
 1.  À l’aide d’un éditeur du Registre, supprimez les données de la valeur **LastUpdatedTime**. Par exemple, les données peuvent afficher **2015-04-20T15:52**. Supprimez 2015-04-20T15:52 pour qu’aucune donnée ne s’affiche. Utilisez le tableau suivant pour rechercher le chemin d’accès du registre pour supprimer cette valeur de registre.
 
@@ -182,10 +182,10 @@ En modifiant le Registre sur les ordinateurs qui exécutent Office 2010, vous po
 
 3.  Redémarrez vos applications Office.
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

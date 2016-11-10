@@ -19,19 +19,19 @@ ms.openlocfilehash: 8c5b7d17b5feffa07028498e8d7f201b25626478
 
 
 ---
-# Mise en route
+# <a name="getting-started"></a>Mise en route
 
 La plateforme de Rights Management Services SDK 2.1 permet aux développeurs de créer des applications qui tirent parti de la protection des informations par le biais d’un serveur RMS ou d’Azure RMS. La plateforme gère des pratiques de sécurité complexes, comme la gestion des clés, et le traitement du chiffrement et du déchiffrement. Elle offre une API simplifiée pour le développement d’applications.
 
-## Prise en main de RMS SDK 2.1
+## <a name="get-started-with-rms-sdk-21"></a>Prise en main de RMS SDK 2.1
 
 Cette rubrique vous guide tout au long du processus de configuration et d’exécution de votre application avec gestion des droits dans un environnement de test. Les rubriques suivantes expliquent comment configurer votre environnement de développement. L’ordre dans lequel elles sont répertoriées suggère l’ordre dans lequel vous pouvez effectuer les tâches.
 
-## Dans cette section
+## <a name="in-this-sections"></a>Dans cette section
 
 | Rubrique | Description |
 |-------|-------------|
-| [notes de publication](release-notes-rtm.md) | Cette rubrique contient des informations importantes sur cette version du Kit RMS SDK 2.1 et sur les versions précédentes.|
+| [Notes de publication](release-notes-rtm.md) | Cette rubrique contient des informations importantes sur cette version du Kit RMS SDK 2.1 et sur les versions précédentes.|
 | [Installer le SDK](install-the-rms-sdk.md) | Cette rubrique vous guide tout au long de l’installation des outils de développement.|
 | [Configurer Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | Cette rubrique contient des instructions sur la configuration d’un projet Visual Studio en vue d’utiliser RMS SDK 2.1.|
 | [Développement de votre application](developing-your-application.md) | Cette rubrique contient des conseils essentiels liés aux principaux aspects d’une application compatible RMS. Vous pouvez vous appuyer sur ces conseils pour développer votre propre application.|
@@ -47,7 +47,7 @@ Essayez d’utiliser RMS SDK 2.1 en suivant les instructions des rubriques suiv
 - [Test de votre application](how-to-set-up-your-test-environment.md)
 - [Déployer en production](deploying-your-application.md)
 
-### Pourquoi utiliser RMS SDK 2.1 pour protéger votre contenu ?
+### <a name="why-use-rms-sdk-21-for-protecting-your-content"></a>Pourquoi utiliser RMS SDK 2.1 pour protéger votre contenu ?
 
 Pour les développeurs qui veulent ajouter la prise en charge de RMS à leurs applications nouvelles et existantes, RMS SDK 2.1 facilite :
 
@@ -59,16 +59,16 @@ Pour les développeurs qui veulent ajouter la prise en charge de RMS à leurs ap
 
 RMS SDK 2.1 prend en charge plusieurs plateformes client et serveur importantes. Pour plus d’informations, consultez [Plateformes](supported-platforms.md) prises en charge.
 
-## Principes de base
+## <a name="core-principles"></a>Principes de base
 
 **Simplicité** : Les commentaires et les modèles d’utilisation pour AD RMS SDK 1.0 ont été analysés, et ces données ont été utilisées pour simplifier ou automatiser les tâches de programmation les plus difficiles. Les applications RMS créées avec RMS SDK 2.1 nécessitent généralement 5 à 10 fois moins de lignes de code RMS que les applications RMS écrites avec AD RMS SDK 1.0.
 **Écrire une seule fois** : Les applications RMS SDK 2.1 ne nécessitent pas de modification du code ni de recompilation pour utiliser les dernières fonctionnalités RMS. Les nouvelles fonctionnalités RMS sont disponibles dans votre application existante dès qu’elles sont ajoutées au serveur RMS.
 **Cohérence** : RMS SDK 2.1 facilite l’écriture des applications qui respectent les différentes configurations de RMS. Il réduit également sensiblement la quantité d’interface utilisateur RMS que vous devez créer en tant que développeur d’applications, en encourageant une apparence cohérente et en réduisant la nécessité de former les utilisateurs.
 
-## Rubriques connexes
+## <a name="related-topics"></a>Rubriques connexes
 
 * [Guide du développeur RMS](developers-guide.md)
-* [AD RMS Developer's Corner](http://blogs.msdn.com/b/rms/)
+* [AD RMS Developer’s Corner](http://blogs.msdn.com/b/rms/)
 
  
 
@@ -76,6 +76,6 @@ RMS SDK 2.1 prend en charge plusieurs plateformes client et serveur importantes
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

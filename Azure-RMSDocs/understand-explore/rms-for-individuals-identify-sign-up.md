@@ -1,9 +1,9 @@
 ---
 title: "Comment déterminer si des utilisateurs se sont inscrits à RMS for Individuals | Azure Information Protection"
-description: "En tant qu'administrateur, vous souhaitez sûrement savoir si vos utilisateurs se sont inscrits à RMS for individuals. Vous pouvez utiliser l’une des méthodes décrites dans cet article ou une combinaison de ces méthodes."
+description: "En tant qu&quot;administrateur, vous souhaitez sûrement savoir si vos utilisateurs se sont inscrits à RMS for individuals. Vous pouvez utiliser l’une des méthodes décrites dans cet article ou une combinaison de ces méthodes."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
-ms.openlocfilehash: 9233952b6a707359c8f97516b57542e5d3d1744c
+ms.sourcegitcommit: c1a9de2d0ef3021335e94cde86a7e6b844b15908
+ms.openlocfilehash: 70909cfa78800eabb798aec34264770104f7c47b
 
 
 ---
@@ -31,11 +31,11 @@ En tant qu'administrateur, vous souhaitez sûrement savoir si vos utilisateurs s
 
 -   Utilisez une solution de gestion de système, telle que System Center Configuration Manager, pour dresser l'inventaire des logiciels installés et utilisés. L'application de partage Rights Management s'exécute à l'aide du programme **ipviewer.exe** et vous pouvez [télécharger et installer l'application](http://go.microsoft.com/fwlink/?LinkId=303970) gratuitement pour identifier d'autres caractéristiques de cette application que vous utilisez ensuite pour l'inventaire logiciel.
 
--   Recherchez les extensions de nom de fichier créées par l'application de partage Rights Management. Les extensions de nom de fichier .pfile et .ppdf sont des exemples évidents, mais d'autres fichiers changent d'extension de nom quand ils font l'objet d'une protection native de Rights Management. Pour plus d’informations, consultez la section [Types de fichiers pris en charge et extensions de nom de fichier](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) du [Guide de l’administrateur de l’application de partage Rights Management](http://technet.microsoft.com/library/dn339003.aspx).
+-   Recherchez les extensions de nom de fichier créées par l'application de partage Rights Management. Les extensions de nom de fichier .pfile et .ppdf sont les exemples les plus évidents, mais d’autres fichiers changent d’extension de nom de fichier quand ils sont protégés nativement par le service Rights Management. Pour plus d’informations, consultez la section [Types de fichiers pris en charge et extensions de nom de fichier](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) du [Guide de l’administrateur de l’application de partage Rights Management](http://technet.microsoft.com/library/dn339003.aspx).
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

@@ -3,7 +3,7 @@ title: Forum aux questions pour Azure Information Protection | Azure Information
 description: "Certaines questions fréquentes sur Azure Information Protection et son service de protection des données, Azure Rights Management (Azure RMS)."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 10/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
-ms.openlocfilehash: d869514a126302522030cfb395b49112c48442dc
+ms.sourcegitcommit: 23065305e68dfd4f924041942a72b95bf9a60957
+ms.openlocfilehash: 5a7d9b9e49c4a682ad9b293147eb6840ca1febf3
 
 
 ---
@@ -45,7 +45,7 @@ Consultez [Conformité et informations annexes pour Azure Information Protection
 
 ## Que puis-je faire si ma question ne figure pas dans cette rubrique ?
 
-Tout d’abord, passez en revue les questions fréquentes qui sont spécifiques à la classification et à l’étiquetage ou spécifiques à la protection des données. Le service Azure Information Protection (Azure RMS) fournit la technologie de protection des données pour Azure Information Protection, et Azure RMS peut être utilisé avec la classification et l’étiquetage, ou sans ces derniers : 
+Tout d’abord, passez en revue les questions fréquentes qui sont spécifiques à la classification et à l’étiquetage ou spécifiques à la protection des données. Le service Azure Rights Management (Azure RMS) fournit la technologie de protection des données pour Azure Information Protection, et Azure RMS peut être utilisé avec ou sans la classification et l’étiquetage : 
 
 - [Forum aux questions sur la classification et l’étiquetage](faqs-infoprotect.md)
 
@@ -67,6 +67,6 @@ En outre, il existe des FAQ conçus pour les utilisateurs finaux :
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO4-->
 
 

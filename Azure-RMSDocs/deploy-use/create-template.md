@@ -3,7 +3,7 @@ title: "Créer, configurer et publier un modèle personnalisé | Azure Informati
 description: "Instructions à suivre pour créer et gérer des modèles personnalisés dans le portail Azure Classic. Les modèles permettent aux utilisateurs finaux et à d’autres administrateurs d’appliquer facilement des stratégies appropriées qui protègent les documents et les e-mails."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 11/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,25 +12,25 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d205e63bdd8819177493837296259c5400a76503
-ms.openlocfilehash: 906bc1e97947cf32b102fdf484b86bc30b9a383d
+ms.sourcegitcommit: 0046023125fe339ed408edf47c59e36708b01783
+ms.openlocfilehash: 00661951513647add0c638e0eeb9e9fe38fa2d8d
 
 
 ---
 
 
-# Créer, configurer et publier un modèle personnalisé
+# <a name="create-configure-and-publish-a-custom-template"></a>Créer, configurer et publier un modèle personnalisé
 
 >*S’applique à : Azure Information Protection, Office 365*
 
 
 Vous créez et gérez des modèles personnalisés dans le portail Azure Classic. Pour cela, vous pouvez accéder directement au portail Azure Classic ou vous connecter au Centre d’administration Office 365, puis choisir **Fonctionnalités avancées** de Rights Management. Vous êtes alors redirigé vers le portail Azure Classic.
 
-Vous devez être administrateur global pour créer et gérer des modèles dans le portail Azure Classic. Si vous avez attribué le rôle d’administrateur général pour le service Azure Rights Management à d’autres utilisateurs, ils peuvent également créer et gérer des modèles, mais ils doivent utiliser [PowerShell](configure-templates-with-powershell.md). Pour plus d’informations, consultez [Dois-je être administrateur général pour configurer Azure RMS ou puis-je déléguer cette opération à d’autres administrateurs ?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
+Vous devez être administrateur global pour créer et gérer des modèles dans le portail Azure Classic. Si vous avez attribué le rôle d’administrateur général pour le service Azure Rights Management à d’autres utilisateurs, ils peuvent également créer et gérer des modèles, mais ils doivent utiliser [PowerShell](configure-templates-with-powershell.md). Pour plus d’informations, consultez [Dois-je être administrateur général pour configurer Azure RMS ou puis-je déléguer cette opération à d’autres administrateurs ?](../get-started/faqs-rms.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
 
 Utilisez les procédures suivantes pour créer, configurer et publier des modèles personnalisés pour la Gestion des droits.
 
-## Pour créer un modèle personnalisé
+## <a name="to-create-a-custom-template"></a>Pour créer un modèle personnalisé
 
 1.  Selon que vous vous connectez au Centre d’administration Office 365 ou au portail Azure Classic, procédez de l’une des manières suivantes :
 
@@ -76,7 +76,7 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
 
 4. Depuis la page de démarrage rapide **Prise en main de Rights Management** , cliquez sur **Gérer vos modèles de stratégie de droits**. Le modèle que vous venez de créer a été ajouté à la liste des modèles. Son état est **Archivé**. À ce stade, le modèle est créé mais pas configuré. Les utilisateurs ne peuvent pas le voir.
 
-## Pour configurer et publier un modèle personnalisé
+## <a name="to-configure-and-publish-a-custom-template"></a>Pour configurer et publier un modèle personnalisé
 
 1.  Sélectionnez votre modèle nouvellement créé dans la page **MODÈLES** du portail Azure Classic.
 
@@ -164,10 +164,10 @@ Pour apporter des modifications à votre modèle, sélectionnez-le, puis utilise
 > [!WARNING]
 > Quand vous apportez des modifications à un modèle déjà enregistré, les clients ne voient pas ces modifications tant qu'ils n'ont pas actualisé le modèle sur leurs ordinateurs. Pour plus d’informations, consultez la section [Actualisation des modèles pour les utilisateurs](refresh-templates.md).
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

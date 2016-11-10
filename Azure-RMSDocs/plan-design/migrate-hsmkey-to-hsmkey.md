@@ -3,7 +3,7 @@ title: "Étape 2 &colon; Migration de clé protégée par HSM à clé protégé
 description: "Instructions qui font partie du chemin de migration d’AD RMS vers Azure Information Protection. Celles-ci s’appliquent uniquement si votre clé AD RMS est protégée par HSM et que vous souhaitez procéder à la migration vers Azure Information Protection avec une clé de locataire protégée par HSM dans Azure Key Vault."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/14/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,20 +12,20 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bad084502b9b7e55c6e80dccfbd66c3f34b63c7c
-ms.openlocfilehash: 8d9538cb2663edce5fc343ed9710032505c15293
+ms.sourcegitcommit: 1fcebaaa2fbe1479e83c232d51013341977796fc
+ms.openlocfilehash: 3f5982b94f1de83ec66860946c46b9acbf45f479
 
 
 ---
 
-# Étape 2 : Migration de clé protégée par HSM à clé protégée par HSM
+# <a name="step-2-hsmprotected-key-to-hsmprotected-key-migration"></a>Étape 2 : Migration de clé protégée par HSM à clé protégée par HSM
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection*
 
 
 Ces instructions font partie du [chemin de migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). Elles s’appliquent uniquement si votre clé AD RMS est protégée par HSM et que vous souhaitez procéder à la migration vers Azure Information Protection avec une clé de locataire protégée par HSM dans Azure Key Vault. 
 
-Si ce n’est pas votre scénario de configuration choisi, revenez à l’[Étape 2. Exporter les données de configuration d’AD RMS, puis les importer dans Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) et choisissez une configuration différente.
+Si ce n’est pas votre scénario de configuration choisi, revenez à l’[Étape 2. Exporter les données de configuration d’AD RMS, puis les importer dans Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection) et choisissez une configuration différente.
 
 > [!NOTE]
 > Ces instructions supposent que votre clé AD RMS est protégée par module. Il s’agit du cas le plus classique. 
@@ -41,7 +41,7 @@ Avant de commencer, vérifiez que votre organisation dispose d’un coffre de cl
 > Si vous voulez effectuer les étapes de configuration pour Azure Key Vault et que vous n’êtes pas familiarisé avec ce service Azure, il peut être utile de consulter d’abord [Prise en main d’Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
 
 
-## Partie 1 : Transfert de votre clé HSM vers Azure Key Vault
+## <a name="part-1-transfer-your-hsm-key-to-azure-key-vault"></a>Partie 1 : Transfert de votre clé HSM vers Azure Key Vault
 
 Ces procédures sont effectuées par l’administrateur d’Azure Key Vault.
 
@@ -60,7 +60,7 @@ Ces procédures sont effectuées par l’administrateur d’Azure Key Vault.
 
 Maintenant que vous avez préparé votre clé HSM dans Azure Key Vault pour le service Azure Rights Management d’Azure Information Protection, vous êtes prêt à importer vos données de configuration AD RMS.
 
-## Partie 2 : Importer les données de configuration dans Azure Information Protection
+## <a name="part-2-import-the-configuration-data-to-azure-information-protection"></a>Partie 2 : Importer les données de configuration dans Azure Information Protection
 
 Ces procédures sont effectuées par l’administrateur d’Azure Information Protection.
 
@@ -89,11 +89,11 @@ Ces procédures sont effectuées par l’administrateur d’Azure Information Pr
     > [!NOTE]
     > Si vous avez besoin ultérieurement de vérifier quelle clé est utilisée par votre clé de locataire Azure Information Protection dans Azure Key Vault, utilisez l’applet de commande [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) d’Azure RMS.
 
-Vous êtes maintenant prêt à passer à l’[Étape 3. Activez votre locataire Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
+Vous êtes maintenant prêt à passer à l’[Étape 3. Activez votre locataire Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
 
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

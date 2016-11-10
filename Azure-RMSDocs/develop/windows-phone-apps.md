@@ -14,24 +14,24 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 148cefbe973eadebf942c826ac19c0ee34823c89
+ms.sourcegitcommit: dc452dac3a86cd9cc39127d5a29106ae87ba94be
+ms.openlocfilehash: 790f0d847c57b9e13d9074298b3e89584dc24760
 
 
 ---
 
-# Configuration pour Windows Phone
+# <a name="windows-phone-setup"></a>Configuration pour Windows Phone
 
 
 Les applications Windows Phone peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations à l’aide d’Azure Active Directory Rights Management (AAD RM).
 
 Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
 
--   [Conditions préalables](#prerequisites)
+-   [Prérequis](#prerequisites)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## Conditions préalables
+## <a name="prerequisites"></a>Conditions préalables
 
 
 Vous devez disposer des logiciels suivants sur votre système de développement :
@@ -46,7 +46,7 @@ Lisez la rubrique [Nouveautés](release-notes.md) pour obtenir des informations 
 
 Passez en revue les informations contenues dans le guide de [développement Windows Phone](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx) dans le Centre de développement Windows Phone.
 
-## Configuration de votre environnement de développement
+## <a name="configuring-your-development-environment"></a>Configuration de votre environnement de développement
 
 
 -   Ouvrez *Visual Studio*.
@@ -68,7 +68,7 @@ Passez en revue les informations contenues dans le guide de [développement Wind
 
 Vous êtes maintenant prêt à créer vos propres applications Windows Phone.
 
-### Voir aussi
+### <a name="see-also"></a>Voir aussi
 
 [Prise en main](get-started.md)
 
@@ -78,9 +78,9 @@ Vous êtes maintenant prêt à créer vos propres applications Windows Phone.
 
 [Développement Windows Phone](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
 
-[Référence de l’API Windows](https://msdn.microsoft.com/library/dn891914.aspx)
+[Informations de référence sur l’API Windows](https://msdn.microsoft.com/library/dn891914.aspx)
 
-[Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
+[Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
 [SDK Windows Phone](http://dev.windowsphone.com/en-us/downloadsdk)
 
@@ -93,6 +93,6 @@ Vous êtes maintenant prêt à créer vos propres applications Windows Phone.
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

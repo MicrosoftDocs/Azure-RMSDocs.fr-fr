@@ -3,7 +3,7 @@ title: "Inscription des utilisateurs à RMS for individuals | Azure Information 
 description: "Instructions à suivre pour obtenir ce compte gratuit et informations techniques sur le déroulement du processus."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: 093bce2835b0606c127d9bcecab5ec353160833c
+ms.sourcegitcommit: 8306d70937aeaf665617d84b4e7ad2c8944e3c79
+ms.openlocfilehash: e3fc6390b3a5b1b6a7b321999a94d4c2226e93ad
 
 
 ---
@@ -22,11 +22,11 @@ ms.openlocfilehash: 093bce2835b0606c127d9bcecab5ec353160833c
 
 >*S’applique à : Azure Information Protection*
 
-Pour obtenir un compte gratuit, demandez-le via la [page Microsoft Azure Rights Management](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) et indiquez votre adresse e-mail professionnelle. Le plus souvent, vous êtes redirigé vers cette page d’inscription après avoir reçu un e-mail avec une pièce jointe protégée qui explique la procédure d’inscription. Vous recevez alors un message électronique en réponse de Microsoft, et pouvez ensuite effectuer la procédure d'inscription en fournissant les détails nécessaires pour la création de votre compte. À la fin de cette procédure, vous voyez s’afficher une page à partir de laquelle vous pouvez télécharger l’application de partage pour différents appareils, un lien vers le guide de l’utilisateur et un lien pour obtenir la dernière liste des applications offrant une prise en charge native de la protection Rights Management. 
+Pour obtenir un compte gratuit, demandez-le via la [page Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) et indiquez votre adresse e-mail professionnelle. Le plus souvent, vous êtes redirigé vers cette page d’inscription après avoir reçu un e-mail avec une pièce jointe protégée qui explique la procédure d’inscription. Vous recevez alors un message électronique en réponse de Microsoft, et pouvez ensuite effectuer la procédure d'inscription en fournissant les détails nécessaires pour la création de votre compte. À la fin de cette procédure, vous voyez s’afficher une page à partir de laquelle vous pouvez télécharger l’application de partage pour différents appareils, un lien vers le guide de l’utilisateur et un lien pour obtenir la dernière liste des applications offrant une prise en charge native de la protection Rights Management. 
 
 ## Inscription à RMS for individuals
 
-1.  À partir d’un ordinateur Windows ou Mac, ou d’un appareil mobile, accédez à la page [Microsoft Azure Rights Management](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
+1.  À partir d’un ordinateur Windows ou Mac, ou d’un appareil mobile, accédez à la page [Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
 
 2.  Entrez l'adresse de messagerie que vous utilisez au sein de votre organisation, par exemple, **janetm@contoso.com** ou **p.dover@fabrikam.com**.
 
@@ -35,9 +35,9 @@ Pour obtenir un compte gratuit, demandez-le via la [page Microsoft Azure Rights 
 
 3.  Cliquez sur **S’inscrire**.
 
-    Microsoft utilise votre adresse de messagerie pour vérifier si votre organisation possède déjà un [abonnement payant qui inclut Azure RMS](../get-started/requirements-subscriptions.md). Si tel est le cas, vous n'avez pas besoin de RMS for Individuals. Vous êtes connecté immédiatement et l'inscription en libre-service à RMS for Individuals est annulée. Si aucun abonnement payant pour Azure RMS n'est trouvé, vous passez à l'étape suivante.
+    Microsoft utilise votre adresse e-mail pour vérifier si votre organisation a déjà un [abonnement payant pour Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) ou un [abonnement Office 365 qui inclut la protection des données à l’aide d’Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Si tel est le cas, vous n'avez pas besoin de RMS for Individuals. Vous êtes connecté immédiatement et l'inscription en libre-service à RMS for Individuals est annulée. Si aucun abonnement payant n’est trouvé, vous passez à l’étape suivante.
 
-4.  Attendez qu'un e-mail de confirmation soit envoyé à l'adresse que vous avez indiquée. Il provient de l’équipe Office 365 (support@email.microsoftonline.com) et a pour objet **Terminer l’inscription à Microsoft Azure Rights Management**.
+4.  Attendez qu'un e-mail de confirmation soit envoyé à l'adresse que vous avez indiquée. Il provient de l’équipe Office 365 (support@email.microsoftonline.com) et a pour objet **Terminer l’inscription à Microsoft Azure Information Protection**.
 
 5.  À la réception de l’e-mail, cliquez sur **Oui, c’est moi** pour vérifier votre adresse e-mail et terminer le processus d’inscription.
 
@@ -87,7 +87,7 @@ Grâce à ce processus, aucun frais n'est imputé à l'organisation et aucune in
 
     -   Offrir aux utilisateurs la possibilité de suivre et révoquer leurs documents protégés, si ces fonctionnalités sont prises en charge par votre [abonnement Azure RMS](https://technet.microsoft.com/dn858608). Pour plus d’informations, consultez [Suivre et révoquer des fichiers](../rms-client/sharing-app-track-revoke.md) dans le [Guide d’utilisation de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md).
 
-    -   Implémenter une solution Bring you own key (BYOK) afin que votre clé de locataire pour Azure Rights Management soit générée en local selon vos stratégies informatiques, puis transférée en toute sécurité à Microsoft grâce à un module de sécurité matériel (HSM). Pour plus d’informations, consultez [Planification et implémentation de la clé de locataire Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
+    -   Implémentez une solution BYOK pour que votre clé de locataire pour Azure Rights Management soit générée localement conformément à vos stratégies informatiques, puis transférée en toute sécurité à Microsoft grâce à un module de sécurité matériel. Pour plus d’informations, consultez [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md) (Planification et implémentation de la clé de locataire Azure Information Protection).
 
 
 ## Étapes suivantes
@@ -97,6 +97,6 @@ Consultez [Contrôle administrateur des comptes créés pour RMS for individuals
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO4-->
 
 

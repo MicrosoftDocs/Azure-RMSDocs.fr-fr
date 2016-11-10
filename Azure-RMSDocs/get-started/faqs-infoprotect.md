@@ -3,7 +3,7 @@ title: "Forum aux questions sur la classification et l’étiquetage | Azure Inf
 description: "Vous avez une question à propos de la préversion d’Azure Information Protection ? Vous trouverez peut-être une réponse ici."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ce4fc256cf80fdd2e4a8212e2f64ffc6ca6a3964
-ms.openlocfilehash: 9b341a53a85242839d737bc36c90a8f94637bae1
+ms.sourcegitcommit: b23466ee412f3e705f49083c11c2099c0cdcd2d6
+ms.openlocfilehash: b9e0a154b67bc54b7868021fb46f7d52c8b7e3bd
 
 
 ---
@@ -34,13 +34,17 @@ Essayez notre didacticiel de démarrage rapide pour obtenir une démonstration e
 
 La version actuelle présente les limitations ci-après. Pour être tenu au courant de la disponibilité de fonctionnalités supplémentaires, consultez les annonces publiées sur le [Blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) et sur notre [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all):
 
-- Il n’existe aucun enregistrement centralisé pour la classification et l’étiquetage.
+- Vous pouvez appliquer des étiquettes seulement aux types de fichiers Office et aux e-mails Outlook.
+
+- Les étiquettes sur le complément Office sont visibles par tous les utilisateurs qui ont installé le client Azure Information Protection.
 
 - Les noms des étiquettes et des info-bulles sont pris en charge dans une seule langue uniquement.
 
-- Les conditions de classification automatique doivent être des expressions ou des modèles.
-
 - Les fichiers ne peuvent pas être classés à partir de l’Explorateur Windows.
+
+- Il n’existe aucun enregistrement centralisé pour la classification et l’étiquetage.
+
+- Les conditions de classification automatique doivent être des expressions ou des modèles.
 
 - Les applications Office pour les appareils mobiles (iOS et Android) et les ordinateurs Mac, ainsi que les applications web Office (Office Online) ne sont pas encore prises en charge.
 
@@ -53,6 +57,10 @@ La version actuelle présente les limitations ci-après. Pour être tenu au cour
 Pour configurer la stratégie Azure Information Protection, vous devez vous connecter au portail Azure en tant qu’administrateur général pour Azure Active Directory.
 
 Toutefois, si vous sélectionnez l’option d’installation de la stratégie de démonstration quand vous installez le [client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), vous n’êtes pas obligé de vous connecter au portail pour voir et essayer la fonctionnalité d’étiquetage. La stratégie de démonstration installe localement la stratégie par défaut pour Azure Information Protection. Vous pourrez donc essayer l’étiquetage des documents et des e-mails, mais vous ne pourrez pas modifier ni ajouter de nouvelles étiquettes sans vous connecter au portail. 
+
+## Que sont les options P1 et P2 dans le portail Azure ?
+
+Pour vérifier les fonctionnalités qui sont incluses dans l’abonnement **Azure Information Protection Premium 1** (P1) et l’abonnement **Azure Information Protection Premium 2** (P2), consultez la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) sur le site Azure Information Protection.
 
 ## Azure Information Protection prend-il en charge les scénarios locaux et hybrides ?
 
@@ -150,6 +158,6 @@ Si vous avez un problème avec Azure Information Protection et que vous utilisez
 Si vous avez des questions ou des commentaires, rendez-vous sur le [site Yammer Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

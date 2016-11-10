@@ -2,6 +2,7 @@
 title: "Créer, configurer et publier un modèle personnalisé | Azure Information Protection"
 description: "Instructions à suivre pour créer et gérer des modèles personnalisés dans le portail Azure Classic. Les modèles permettent aux utilisateurs finaux et à d’autres administrateurs d’appliquer facilement des stratégies appropriées qui protègent les documents et les e-mails."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/03/2016
 ms.topic: article

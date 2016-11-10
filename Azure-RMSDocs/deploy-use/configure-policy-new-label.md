@@ -1,6 +1,8 @@
 ---
 title: "Comment créer une étiquette | Azure Information Protection"
 description: "Même si Azure Information Protection est fourni avec des étiquettes par défaut que vous pouvez personnaliser, vous pouvez également créer vos propres étiquettes que les utilisateurs voient dans la barre Information Protection."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

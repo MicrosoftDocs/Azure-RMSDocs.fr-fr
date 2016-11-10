@@ -3,6 +3,7 @@ title: Exemples de code Android | Azure RMS
 description: "Cette rubrique présente des éléments de code importants pour la version Android du Kit RMS SDK."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,14 +21,14 @@ ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
 
 ---
 
-# Exemples de code Android
+# <a name="android-code-examples"></a>Exemples de code Android
 
 Cette rubrique présente des éléments de code importants pour la version Android du Kit RMS SDK.
 
 **Remarque** : Dans l’exemple de code et les descriptions qui suivent, nous utilisons le terme MSIPC (Microsoft Information Protection and Control) pour faire référence au processus client.
 
 
-## Utilisation de Microsoft Rights Management SDK 4.2 : principaux scénarios
+## <a name="using-the-microsoft-rights-management-sdk-42-key-scenarios"></a>Utilisation de Microsoft Rights Management SDK 4.2 : principaux scénarios
 
 Voici des exemples de code tirés d’un exemple d’application plus large représentant des scénarios de développement importants pour votre compréhension de ce SDK. Ces exemples illustrent l’utilisation du format de fichier protégé Microsoft (appelé « fichier protégé »), l’utilisation de formats de fichiers protégés personnalisés et l’utilisation de contrôles d’interface utilisateur personnalisés.
 
@@ -35,7 +36,7 @@ Voici des exemples de code tirés d’un exemple d’application plus large repr
 
 L’exemple d’application, *MSIPCSampleApp*, est disponible pour une utilisation avec ce SDK pour le système d’exploitation Android. Consultez [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android) sur GitHub pour accéder à cette application.
 
-### Scénario : Consommer un fichier protégé RMS
+### <a name="scenario-consume-an-rms-protected-file"></a>Scénario : Consommer un fichier protégé RMS
 
 -   **Étape 1** : Créer un [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx)
 
@@ -197,7 +198,7 @@ L’exemple d’application, *MSIPCSampleApp*, est disponible pour une utilisati
                 }
 
 
-### Scénario : Créer un fichier protégé à l’aide d’un modèle
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scénario : Créer un fichier protégé à l’aide d’un modèle
 
 Ce scénario commence par obtenir une liste de modèles, sélectionne le premier pour créer une stratégie, puis nous crée et écrit dans le nouveau fichier protégé.
 
@@ -321,7 +322,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
 
 
 
-### Scénario : Ouvrir un fichier protégé personnalisé
+### <a name="scenario-open-a-custom-protected-file"></a>Scénario : Ouvrir un fichier protégé personnalisé
 
 -   **Étape 1** : Créer un [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) à partir d’un *serializedContentPolicy*.
 
@@ -436,7 +437,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
         buffer.close();    customProtectedInputStream.close();  }  catch (IOException e)  {    ...  } }
 
 
-### Scénario : Créer un fichier protégé personnalisé à l’aide d’une stratégie personnalisée (ad hoc)
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-adhoc-policy"></a>Scénario : Créer un fichier protégé personnalisé à l’aide d’une stratégie personnalisée (ad hoc)
 
 -   **Étape 1** : Avec une adresse e-mail fournie par l’utilisateur, créer un descripteur de stratégie.
 

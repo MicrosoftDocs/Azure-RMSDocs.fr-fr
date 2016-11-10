@@ -3,6 +3,7 @@ title: "Procédure d’utilisation du suivi de documents | Azure RMS"
 description: "L’utilisation de la fonctionnalité de suivi des documents nécessite une connaissance de base de la gestion des métadonnées associées et de l’inscription auprès du service."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,11 +21,11 @@ ms.openlocfilehash: 616d5dd088665abf6e7d435978b021b10c5ac3f5
 
 ---
 
-# Procédure : utilisation du suivi des documents
+# <a name="how-to-use-document-tracking"></a>Procédure : utilisation du suivi des documents
 
 L’utilisation de la fonctionnalité de suivi des documents nécessite une connaissance de base de la gestion des métadonnées associées et de l’inscription auprès du service.
 
-## Gestion des métadonnées de suivi des documents
+## <a name="managing-document-tracking-metadata"></a>Gestion des métadonnées de suivi des documents
 
 Chacun des systèmes d’exploitation prenant en charge le suivi des documents a des implémentations similaires. Elles comprennent notamment un ensemble de propriétés qui représentent les métadonnées, un nouveau paramètre ajouté aux méthodes de création de stratégie utilisateur, et une méthode pour inscrire la stratégie afin de la suivre avec le service de suivi des documents.
 

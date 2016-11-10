@@ -3,6 +3,7 @@ title: "Procédure pour autoriser le fonctionnement de votre application de serv
 description: "Cette rubrique décrit les étapes qui permettent de configurer votre application de service pour qu’elle utilise Azure Rights Management."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

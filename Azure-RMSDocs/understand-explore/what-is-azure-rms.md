@@ -2,6 +2,7 @@
 title: "En quoi consiste Azure Rights Management ? | Azure Information Protection"
 description: "Azure Rights Management (Azure RMS) est la technologie de protection utilisée par Azure Information Protection."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/31/2016
 ms.topic: article

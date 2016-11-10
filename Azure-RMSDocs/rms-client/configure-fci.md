@@ -2,6 +2,7 @@
 title: "Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server | Azure Information Protection"
 description: "Instructions d’utilisation du client Rights Management (RMS) avec l’outil de protection RMS pour configurer les outils de gestion de ressources pour serveur de fichiers et l’infrastructure de classification des fichiers (ICF)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/03/2016
 ms.topic: article

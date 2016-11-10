@@ -2,6 +2,7 @@
 title: Configuration des serveurs pour le connecteur Azure Rights Management | Azure Information Protection
 description: "Informations vous permettant de configurer les serveurs locaux destinés à utiliser le connecteur Azure Rights Management (RMS). Ces procédures couvrent l’étape 5 de Déploiement du connecteur Azure Rights Management."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article

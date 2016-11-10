@@ -2,6 +2,7 @@
 title: "Nouveautés et notes de publication | Azure RMS"
 description: "Décrit les modifications et les fonctionnalités importantes de cette nouvelle version du kit de développement logiciel (SDK) RMS."
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/31/2016
 ms.topic: article

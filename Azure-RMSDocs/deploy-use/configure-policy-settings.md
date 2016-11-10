@@ -1,6 +1,8 @@
 ---
 title: "Comment configurer les paramètres de stratégie globaux | Azure Information Protection"
 description: "Il existe 3 paramètres dans la stratégie Azure Information Protection qui s’appliquent à tous les utilisateurs et à tous les appareils."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

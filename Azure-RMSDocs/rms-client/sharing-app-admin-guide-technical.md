@@ -2,6 +2,7 @@
 title: "Présentation technique de l’application de partage Microsoft Rights Management | Azure Information Protection"
 description: "Détails techniques destinés aux administrateurs de réseaux d’entreprise en charge du déploiement de l’application de partage RMS pour Windows."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

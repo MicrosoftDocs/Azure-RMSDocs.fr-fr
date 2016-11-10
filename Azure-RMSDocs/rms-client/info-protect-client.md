@@ -2,20 +2,20 @@
 title: Installation du client Azure Information Protection | Azure Information Protection
 description: "Instructions pour installer le client qui ajoute une barre Information Protection à vos applications Office, à partir de laquelle vous pouvez sélectionner des étiquettes de classification pour vos documents et e-mails."
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 003e76733657bb97c5447e2cdc44049d111d33fa
-ms.openlocfilehash: 2892b091e300b0ef15ca09524d233474bd5de193
+ms.sourcegitcommit: 2f1930f4657278d25ef6dd369866f16e4ba71644
+ms.openlocfilehash: 5e36d046d53b0fdfb6796f2a00e8d0d1325f30c3
 
 
 ---
 
-# Installation du client Azure Information Protection
+# <a name="installing-the-azure-information-protection-client"></a>Installation du client Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
@@ -30,7 +30,7 @@ Téléchargez le client Azure Information Protection depuis le [Centre de télé
 Avant d’installer le client, vérifiez que vous disposez des versions et des applications nécessaires du système d’exploitation pour le client Azure Information Protection : [Configuration requise pour Azure Information Protection](../get-started/requirements-azure-rms.md).
 
 
-## Installation manuelle du client Azure Information Protection
+## <a name="to-install-the-azure-information-protection-client-manually"></a>Installation manuelle du client Azure Information Protection
 
 1. Après avoir [téléchargé le client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), exécutez **AzInfoProtection.exe** et suivez les invites pour installer le client. Cette installation nécessite des autorisations administratives locales.
 
@@ -38,13 +38,15 @@ Avant d’installer le client, vérifiez que vous disposez des versions et des a
 
 2. Pour commencer à utiliser le client Azure Information Protection : si votre ordinateur exécute Office 2010, redémarrez votre ordinateur. Pour d’autres versions d’Office, redémarrez les applications Office.
 
-## Installation du client Azure Information Protection pour des utilisateurs
+## <a name="to-install-the-azure-information-protection-client-for-users"></a>Installation du client Azure Information Protection pour des utilisateurs
 
 Vous pouvez créer un script pour automatiser l’installation du client Azure Information Protection à l’aide d’options de ligne de commande. Pour afficher les options d’installation, exécutez `AzInfoProtection.exe /help`.
 
 Par exemple, pour installer le client en mode silencieux : `AzInfoProtection.exe /passive | quiet`
 
-## Désinstallation du client Azure Information Protection
+Le client Azure Information Protection est également inclus dans le catalogue Microsoft Update, ce qui vous permet d’installer et de mettre à jour le client à l’aide de n’importe quel service de mise à jour de logiciel utilisant le catalogue.
+
+## <a name="to-uninstall-the-azure-information-protection-client"></a>Désinstallation du client Azure Information Protection
 
 Choisissez l’une des méthodes suivantes :
 
@@ -52,24 +54,34 @@ Choisissez l’une des méthodes suivantes :
 
 - Réexécutez **AzInfoProtection.exe** et, dans la page **Modifier l’installation**, cliquez sur **Désinstaller**. 
 
-- Exécuter `AzInfoProtection.exe /uninstall`
+- Exécutez `AzInfoProtection.exe /uninstall`
 
 
-## Vérification de l’installation et de l’état de la connexion, ou signalisation d’un problème
+## <a name="to-verify-installation-connection-status-or-report-a-problem"></a>Vérification de l’installation et de l’état de la connexion, ou signalisation d’un problème
 
 1. Ouvrez une application Office et, dans l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger**, puis sur **Aide et commentaires**.
 
 2. Notez les éléments suivants dans la boîte de dialogue **Microsoft Azure Information Protection** :
 
-    - La valeur de la **Dernière connexion** qui identifie la date/heure de la dernière connexion du client au service Azure Information Protection de votre organisation. Lorsque le client se connecte au service, il télécharge automatiquement la dernière stratégie s’il détecte des modifications dans sa stratégie actuelle. Si vous avez apporté des modifications à la stratégie après l’heure affichée, fermez et rouvrez l’application Office.
+    - Dans la section **état du client** : utilisez la valeur de **Version** pour vérifier que l’installation a réussi. En outre, vous voyez quand le client s’est connecté pour la dernière fois au service Azure Information Protection et quand la stratégie Azure Information Protection a été installée ou mise à jour pour la dernière fois. Lorsque le client se connecte au service, il télécharge automatiquement la dernière stratégie s’il détecte des modifications dans sa stratégie actuelle. Si vous avez apporté des modifications à la stratégie après l’heure affichée, fermez et rouvrez l’application Office.
+    
+        Vous voyez aussi votre nom d’utilisateur qui identifie le compte utilisé pour vous authentifier auprès d’Azure Information Protection. Ce nom d’utilisateur doit correspondre à un compte que vous utilisez pour Office 365 ou Azure Active Directory.
 
-    - Le nom d’utilisateur affiché qui identifie le compte utilisé pour vous authentifier auprès d’Azure Information Protection. Ce nom d’utilisateur doit correspondre à un compte que vous utilisez pour Office 365 ou Azure Active Directory.
+    - Dans la section **Aide et commentaires** : Utilisez le lien **Envoyer des commentaires** pour joindre automatiquement les journaux de votre client à un e-mail qui peut être envoyé à l’équipe d’Information Protection pour examiner un problème. 
+    
+        Pour des informations de diagnostic et pour réinitialiser le client, cliquez sur **Exécuter les diagnostics**. Quand les tests de diagnostic sont terminés, cliquez sur **Copier les résultats** pour coller les informations dans un e-mail que vous pouvez envoyer à votre support technique ou au support technique Microsoft. Une fois les tests terminés, vous pouvez aussi réinitialiser le client.
+        
+        Plus d’informations sur l’option **Reset** :
+        
+        - Il n’est pas obligatoire d’être un administrateur local pour utiliser cette option, et cette action n’est pas enregistrée dans l’Observateur d’événements. 
+        
+        - Sauf si des fichiers sont verrouillés, cette action supprime tous les fichiers de **%localappdata%\Microsoft\MSIPC**, qui est l’emplacement où les certificats clients et les modèles de gestion des droits sont stockés. Elle ne supprime pas la stratégie Azure Information Protection ni les fichiers journaux du client, et elle ne déconnecte pas l’utilisateur.
+        
+        - La clé et les paramètres de Registre suivants sont supprimés : **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Si vous configurez des paramètres pour cette clé de Registre (par exemple des paramètres pour la redirection de votre locataire Azure Information Protection car vous migrez depuis AD RMS et vous avez toujours un point de connexion de service sur votre réseau), vous devez reconfigurer les paramètres du Registre après avoir réinitialisé le client.
+        
+        - Après avoir réinitialisé le client, vous devez réinitialiser l’environnement utilisateur (opération également appelée « amorçage »), ce qui télécharge des certificats pour le client et les derniers modèles. Pour cela, fermez toutes les instances d’Office et redémarrez une application Office. Cette action vérifie également que vous avez téléchargé la dernière stratégie Azure Information Protection. Ne réexécutez pas les tests de diagnostic tant que vous n’avez pas fait ceci.
 
-    - La version du client Azure Information Protection.
-
-    - Le lien **Envoyer des commentaires**, que vous pouvez utiliser pour joindre automatiquement vos journaux de client à un e-mail qui peut être envoyé à l’équipe d’Information Protection à des fins d’analyse.
-
-## Raccourcis clavier de la barre Azure Information Protection
+## <a name="keyboard-shortcuts-for-the-azure-information-protection-bar"></a>Raccourcis clavier de la barre Azure Information Protection
 
 Pour accéder à la barre Azure Information Protection à l’aide du clavier, utilisez la combinaison de touches suivante :
 
@@ -78,7 +90,7 @@ Pour accéder à la barre Azure Information Protection à l’aide du clavier, u
 Utilisez ensuite la touche de tabulation pour sélectionner les étiquettes et autres commandes de la barre (icônes **Masquer les étiquettes** et **Supprimer les étiquettes**), puis appuyez sur la touche Entrée pour les sélectionner.
 
 
-## Emplacements des fichiers
+## <a name="file-locations"></a>Emplacements des fichiers
 
 Fichiers du client :   
 
@@ -91,14 +103,16 @@ Fichiers journaux du client et fichier de stratégie actuellement installé :
 - Pour les systèmes d’exploitation 64 bits et 32 bits : **%localappdata%\Microsoft\MSIP**
 
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour modifier les étiquettes dans la barre Information Protection, vous devez configurer la stratégie Azure Information Protection. Pour en savoir plus, consultez [Configuration de la stratégie Azure Information Protection](../deploy-use/configure-policy.md).
 
-Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut et voir le comportement qui en résulte dans une application Office, essayez le [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md). 
+Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut et voir le comportement qui en résulte dans une application Office, essayez le [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
+
+Pour vérifier les informations de version pour le client, consultez l’[historique des versions](client-version-release-history.md).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

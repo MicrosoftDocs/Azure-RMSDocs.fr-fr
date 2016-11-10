@@ -18,13 +18,13 @@ ms.openlocfilehash: 4f8b32fa7961b3d59911cc279ac30a7c497deb5f
 
 ---
 
-# Génération et transfert de votre clé de locataire – en personne | CONTENU RETIRÉ
+# <a name="generate-and-transfer-your-tenant-key-in-person-retired-content"></a>Génération et transfert de votre clé de locataire – en personne | CONTENU RETIRÉ
 
 >*S’applique à : Azure Rights Management, Office 365*
 
 Les informations contenues dans cet article ont été supprimées car elles ne sont plus pertinentes maintenant qu’Azure Rights Management utilise Azure Key Vault pour les clés de locataire gérées par le client (également appelées BYOK ou Bring Your Own Key). 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

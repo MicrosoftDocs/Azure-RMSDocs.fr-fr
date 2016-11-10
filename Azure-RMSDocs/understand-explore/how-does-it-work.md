@@ -19,7 +19,7 @@ ms.openlocfilehash: dd6c9250102e104ba49b0c08f14d9959cd1228cb
 ---
 
 
-# Fonctionnement d'Azure RMS Sous le capot
+# <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -39,7 +39,7 @@ Pour obtenir une description détaillée de ce qui se passe, consultez la sectio
 
 Pour obtenir des détails techniques sur les algorithmes et les longueurs de clé qu'Azure RMS utilise, consultez la section suivante.
 
-## Contrôles de chiffrement utilisés par Azure RMS : Algorithmes et longueurs de clé
+## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Contrôles de chiffrement utilisés par Azure RMS : Algorithmes et longueurs de clé
 Même si vous n'avez pas besoin de connaître le détail du fonctionnement de RMS, il se peut que l'on vous interroge sur les contrôles de chiffrement utilisés, pour s'assurer que la protection de sécurité est conforme aux normes.
 
 
@@ -49,7 +49,7 @@ Même si vous n'avez pas besoin de connaître le détail du fonctionnement de RM
 |Algorithme : RSA<br /><br />Longueur de clé : 2 048 bits|Protection de clé|
 |SHA-256|Signature de certificat|
 
-###### Note 1 
+###### <a name="footnote-1"></a>Note 1 
 
 La longueur de 256 bits est utilisée par l'application de partage Rights Management pour la protection en modes générique et natif quand le fichier a une extension de nom de fichier .ppdf, ou est un fichier image ou texte protégé (tel que .ptxt ou .pjpg).
 
@@ -65,7 +65,7 @@ Mode de stockage et de sécurisation des clés de chiffrement :
 
 
 
-## Procédure pas à pas décrivant le fonctionnement d'Azure RMS : première utilisation, protection du contenu, consommation du contenu
+## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procédure pas à pas décrivant le fonctionnement d'Azure RMS : première utilisation, protection du contenu, consommation du contenu
 Pour comprendre plus en détails le fonctionnement d’Azure RMS, examinons un flux classique tel qu’il se produit après l’[activation du service Azure Rights Management](../deploy-use/activate-service.md), quand un utilisateur utilise le service Rights Management pour la première fois sur son ordinateur Windows (un processus parfois nommé **initialisation de l’environnement utilisateur** ou amorçage), **protège du contenu** (un document ou un e-mail), puis **consomme** (ouvre et utilise) du contenu protégé par quelqu’un d’autre.
 
 Après l'initialisation de l'environnement utilisateur, l'utilisateur peut protéger des documents ou consommer des documents protégés sur cet ordinateur.
@@ -73,7 +73,7 @@ Après l'initialisation de l'environnement utilisateur, l'utilisateur peut prot�
 > [!NOTE]
 > Si l'utilisateur utilise un autre ordinateur Windows, ou si un autre utilisateur utilise ce même ordinateur, le processus d'initialisation est répété.
 
-### Initialisation de l'environnement utilisateur
+### <a name="initializing-the-user-environment"></a>Initialisation de l'environnement utilisateur
 Pour qu'un utilisateur puisse protéger du contenu ou utiliser du contenu protégé sur un ordinateur Windows, l'environnement utilisateur doit être préparé sur l'appareil en question. Ce processus se produit une seule fois, sans intervention humaine, quand un utilisateur tente de protéger ou de consommer du contenu protégé :
 
 ![Activation du client RMS : étape 1](../media/AzRMS.png)
@@ -88,7 +88,7 @@ Lorsque le compte de l'utilisateur est fédéré avec Azure Active Directory, ce
 
 Une copie du certificat de l’utilisateur est stockée dans Azure afin que, si l’utilisateur utilise un autre appareil, les certificats soient créés en utilisant les mêmes clés.
 
-### Protection du contenu
+### <a name="content-protection"></a>Protection du contenu
 Quand un utilisateur protège un document, le client RMS effectue les actions suivantes sur un document non protégé :
 
 ![Protection de document RMS : étape 1](../media/AzRMS_documentprotection1.png)
@@ -107,7 +107,7 @@ Le client RMS utilise ensuite la clé de l'organisation obtenue lors de l'initia
 
 Ce document peut être stocké partout, ou partagé à l'aide de n'importe quelle méthode, et la stratégie reste toujours associée au document chiffré.
 
-### Consommation du contenu
+### <a name="content-consumption"></a>Consommation du contenu
 Quand un utilisateur veut consommer un document protégé, le client RMS commence par demander l’accès au service Azure Rights Management :
 
 ![Consommation de document RMS : étape 1](../media/AzRMS_documentconsumption1.png)
@@ -126,7 +126,7 @@ Après cela, la clé de contenu re-chiffrée est incorporée dans une licence d'
 
 Le client déchiffre également la liste des droits, et transmet ceux-ci à l'application qui les applique dans son interface utilisateur.
 
-### Variantes
+### <a name="variations"></a>Variantes
 Les procédures pas à pas précédentes couvrent les scénarios standard, mais il existe des variantes :
 
 -   **Appareils mobiles** : quand des appareils mobiles protègent ou consomment des fichiers avec le service Azure Rights Management, les flux du processus sont beaucoup plus simples. Les appareils mobiles ne passent pas par le processus d'initialisation utilisateur, car chaque transaction (pour protéger ou consommer du contenu) est indépendante. Comme avec les ordinateurs Windows, les appareils mobiles se connectent au service Azure Rights Management et s’authentifient. Pour protéger du contenu, les appareils mobiles soumettent une stratégie, puis le service Azure Rights Management leur envoie une licence de publication et une clé symétrique pour protéger le document. Pour consommer du contenu, quand des appareils mobiles se connectent au service Azure Rights Management et s’authentifient, ils envoient la stratégie de document au service Azure Rights Management et demandent une licence d’utilisation pour consommer le document. En réponse, le service Azure Rights Management leur envoie les clés nécessaires et les restrictions. Les deux processus utilisent TLS pour protéger l'échange de clés et d'autres communications.
@@ -137,7 +137,7 @@ Les procédures pas à pas précédentes couvrent les scénarios standard, mais 
 
 -   **PDF protégé (.ppdf)** : quand le service Azure Rights Management protège un fichier Office en mode natif, il en crée également une copie qu’il protège de la même façon. La seule différence est que la copie est un fichier au format PPDF, que l'application de partage RMS peut ouvrir en mode affichage. Ce scénario vous permet d'envoyer des pièces jointes protégées par courrier électronique, en sachant que le destinataire sur un appareil mobile sera toujours en mesure de les lire, même si son appareil n'a pas d'application prenant en charge en mode natif des fichiers Office protégés.
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour en savoir plus sur le service Azure Rights Management, reportez-vous aux autres articles de la section **Comprendre et explorer**, comme [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md), pour savoir comment intégrer vos applications existantes avec Azure Rights Management afin de bénéficier d’une solution de protection des informations. 
 
@@ -150,6 +150,6 @@ Si vous êtes prêt à déployer la protection des données pour votre organisat
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

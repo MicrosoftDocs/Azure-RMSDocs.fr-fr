@@ -18,7 +18,7 @@ ms.openlocfilehash: 06c71229427743e9669baee1fdbb41f175180b0f
 
 ---
 
-# Activation d'Azure Rights Management
+# <a name="activating-azure-rights-management"></a>Activation d'Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -36,7 +36,7 @@ Quand le service Azure Rights Management est activé, tous les utilisateurs de v
 Pour découvrir comment activer le service Rights Management à partir de votre portail de gestion, choisissez si vous allez utiliser le centre d’administration Office 365 (version préliminaire ou classique) ou le portail de gestion classique Azure :
 
 
-- [Centre d’administration Office 365 – version préliminaire](activate-office365-preview.md)
+- [Centre d’administration Office 365 – préversion](activate-office365-preview.md)
 - [Centre d’administration Office 365 – classique](activate-office365-classic.md)
 - [Portail Azure Classic](activate-azure-classic.md)
 
@@ -48,7 +48,7 @@ En guise d’alternative, vous pouvez utiliser Windows PowerShell pour activer [
 
 3. Exécutez [Enable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629412.aspx) pour activer le service Azure Rights Management.
 
-## Configuration de contrôles d'intégration pour un déploiement échelonné
+## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Configuration de contrôles d'intégration pour un déploiement échelonné
 Si vous ne souhaitez pas que tous les utilisateurs puissent protéger des fichiers immédiatement à l’aide d’Azure Rights Management, vous pouvez configurer des contrôles d’intégration d’utilisateur à l’aide de la commande Windows PowerShell [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) . Vous pouvez exécuter cette commande avant ou après avoir activé le service Azure Rights Management.
 
 > [!IMPORTANT]
@@ -71,7 +71,7 @@ Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
 Lorsque vous utilisez ces contrôles d'intégration, tous les utilisateurs de l'organisation peuvent toujours consommer du contenu protégé par votre sous-ensemble d'utilisateurs, mais ils ne peuvent pas appliquer la protection des informations à eux-mêmes à partir d'applications clientes. Par exemple, dans leurs clients Office, ils ne voient pas les modèles par défaut qui sont automatiquement publiés au moment de l’activation du service Azure Rights Management, ou les modèles personnalisés que vous pourriez configurer.  Les applications côté serveur, telles qu’Exchange, peuvent implémenter leurs propres contrôles utilisateur pour l’intégration de Rights Management et obtenir le même résultat.
 
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] étant à présent activé pour votre organisation, consultez la [Feuille de route pour le déploiement d’Azure Information Protection](../plan-design/deployment-roadmap.md) pour déterminer si d’autres étapes de configuration peuvent s’avérer nécessaires avant de mettre Azure Information Protection à la disposition des utilisateurs et des administrateurs. 
 
 Par exemple, vous pouvez utiliser des [modèles personnalisés](configure-custom-templates.md) pour faciliter l’application par les utilisateurs de la protection des informations à des fichiers, connecter vos serveurs locaux pour l’utilisation de [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] via l’installation du [connecteur Rights Management](deploy-rms-connector.md) et déployer l’application de partage [Rights Management](../rms-client/sharing-app-windows.md) qui prend en charge la protection de tous les types de fichiers sur tous les appareils. 
@@ -81,6 +81,6 @@ Les services Office, comme Exchange Online et SharePoint Online, nécessitent un
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

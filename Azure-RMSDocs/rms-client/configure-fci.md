@@ -3,7 +3,7 @@ title: "Protection RMS avec l’infrastructure de classification des fichiers (I
 description: "Instructions d’utilisation du client Rights Management (RMS) avec l’outil de protection RMS pour configurer les outils de gestion de ressources pour serveur de fichiers et l’infrastructure de classification des fichiers (ICF)."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 7e0556e99aa09d4b6f2488cb866b57488a22cacd
+ms.sourcegitcommit: 88b6c5fffb1be59563c2b93c8db244edc3201f3c
+ms.openlocfilehash: e14526494d0068e56a5b103467ac4ec8a75db46d
 
 
 ---
 
-# Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
+# <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
->*S’applique à : Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
+>*S’applique à : Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 Cet article contient des instructions et un script pour utiliser le client Rights Management (RMS) avec l'outil de protection RMS pour configurer les outils de gestion de ressources pour serveur de fichiers et l'infrastructure de classification des fichiers (ICF).
 
@@ -29,11 +29,11 @@ Cette solution vous permet de protéger automatiquement tous les fichiers figura
 > [!NOTE]
 > Bien qu’Azure Information Protection inclue un [connecteur](../deploy-use/deploy-rms-connector.md) prenant en charge l’infrastructure de classification des fichiers, cette solution prend en charge uniquement la protection native (par exemple, celle des fichiers Office).
 > 
-> Pour prendre en charge tous les types de fichiers avec l'infrastructure de classification des fichiers, vous devez utiliser le module **Protection RMS** de Windows PowerShell, comme décrit dans cet article. Les applets de commande de protection RMS, telle l'application de partage RMS, prenant en charge les protections générique et native, tous les fichiers peuvent être protégés. Pour plus d’informations sur les différents niveaux de protection, consultez la section [Niveaux de protection : native et générique](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) du [Guide de l’administrateur de l’application de partage Rights Management](sharing-app-admin-guide.md).
+> Pour prendre en charge tous les types de fichiers avec l'infrastructure de classification des fichiers, vous devez utiliser le module **Protection RMS** de Windows PowerShell, comme décrit dans cet article. Les applets de commande de protection RMS, telle l'application de partage RMS, prenant en charge les protections générique et native, tous les fichiers peuvent être protégés. Pour plus d’informations sur les différents niveaux de protection, consultez la section [Niveaux de protection : native et générique](sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) du [Guide de l’administrateur de l’application de partage Rights Management](sharing-app-admin-guide.md).
 
 Les instructions qui suivent ont trait à Windows Server 2012 R2 ou à Windows Server 2012. Si vous exécutez d'autres versions prises en charge de Windows, il se peut que vous deviez adapter certaines étapes en fonction de différences existant entre votre version du système d'exploitation et celle évoquée dans cet article.
 
-## Conditions préalables pour l’utilisation de la protection Azure Rights Management avec l’ICF de Windows Server
+## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Conditions préalables pour l’utilisation de la protection Azure Rights Management avec l’ICF de Windows Server
 Conditions préalables pour ces instructions :
 
 -   Sur chaque serveur de fichiers où vous allez exécuter le Gestionnaire de ressources de fichiers avec l'infrastructure de classification des fichiers :
@@ -44,9 +44,9 @@ Conditions préalables pour ces instructions :
 
     -   Vous avez installé l'outil de protection RMS, y compris les éléments correspondant aux conditions préalables pour l'outil (tel le client RMS) et pour Azure RMS (tel le compte de principal du service). Pour plus d'informations, voir [Applets de commande de Protection RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
-    -   Si vous souhaitez modifier le niveau par défaut de protection RMS (native ou générique) pour des extensions de nom de fichier spécifiques, vous avez modifié le Registre comme décrit dans la page [Configuration de l’API de fichier](https://msdn.microsoft.com/library/dn197834%28v=vs.85%29.aspx) .
+    -   Si vous souhaitez modifier le niveau par défaut de protection RMS (native ou générique) pour des extensions de nom de fichier spécifiques, vous avez modifié le Registre comme décrit dans la page [Configuration de l’API de fichier](../develop/file-api-configuration.md) .
 
-    -   Vous disposez d'une connexion Internet, avec des paramètres d'ordinateur configurés, si nécessaire, pour un serveur proxy. Exemple : `netsh winhttp import proxy source=ie`
+    -   Vous disposez d'une connexion Internet, avec des paramètres d'ordinateur configurés, si nécessaire, pour un serveur proxy. Par exemple : `netsh winhttp import proxy source=ie`
 
 -   Vous avez configuré les conditions préalables supplémentaires pour votre déploiement d’Azure Information Protection, comme décrit dans [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx). En particulier, vous avez défini les valeurs suivantes pour la connexion au service Azure Rights Management à l’aide d’un principal du service :
 
@@ -60,7 +60,7 @@ Conditions préalables pour ces instructions :
 
 -   Vous avez identifié le modèle Rights Management à utiliser pour protéger les fichiers. Assurez-vous de connaître l'ID de ce modèle à l'aide de l'applet de commande [Get-RMSTemplate](https://msdn.microsoft.com/library/azure/mt433197.aspx) .
 
-## Instructions de configuration de l'ICF des outils de gestion de ressources pour serveur de fichiers pour la protection Azure RMS
+## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rms-protection"></a>Instructions de configuration de l'ICF des outils de gestion de ressources pour serveur de fichiers pour la protection Azure RMS
 Suivez ces instructions pour protéger automatiquement tous les fichiers figurant dans un dossier, en utilisant un script Windows PowerShell en tant que tâche personnalisée. Exécutez les procédures suivantes, dans l'ordre indiqué :
 
 1.  Exécution du script Windows PowerShell
@@ -77,13 +77,13 @@ Suivez ces instructions pour protéger automatiquement tous les fichiers figuran
 
 Quand vous aurez suivi ces instructions, tous les fichiers figurant dans votre dossier sélectionné seront classifiés avec la propriété personnalisée de RMS, et seront protégés par Rights Management. Pour une configuration plus complexe qui protège sélectivement certains fichiers et pas d'autres, vous pouvez ensuite créer ou utiliser une propriété et une règle de classification différentes, avec une tâche de gestion de fichiers qui protège uniquement ces fichiers.
 
-### Exécution du script Windows PowerShell
+### <a name="save-the-windows-powershell-script"></a>Exécution du script Windows PowerShell
 
 1.  Copiez le contenu du [script Windows PowerShell](fci-script.md) pour la protection Azure RMS à l’aide des outils de gestion de ressources pour serveur de fichiers. Collez le contenu du script et nommez le fichier **RMS-Protect-FCI.ps1** sur votre ordinateur.
 
 2.  Examinez le script et apportez les modifications suivantes :
 
-    -   Recherchez la chaîne suivante, et remplacez-la par votre propre AppPrincipalId (ID de principal d'application) que vous utilisez avec l'applet de commande [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) pour vous connecter à Azure RMS :
+    -   Recherchez la chaîne suivante et remplacez-la par votre propre AppPrincipalId que vous utilisez avec l’applet de commande [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) pour vous connecter au service Azure Rights Management :
 
         ```
         <enter your AppPrincipalId here>
@@ -130,7 +130,7 @@ Quand vous aurez suivi ces instructions, tous les fichiers figurant dans votre d
 
 Vous êtes maintenant prêt à configurer les outils de gestion de ressources pour serveur de fichiers.
 
-### Création d'une propriété de classification pour Rights Management (RMS)
+### <a name="create-a-classification-property-for-rights-management-rms"></a>Création d'une propriété de classification pour Rights Management (RMS)
 
 -   Dans Outils de gestion de ressources pour serveur de fichiers, Gestion de la classification, créez une propriété locale :
 
@@ -144,7 +144,7 @@ Vous êtes maintenant prêt à configurer les outils de gestion de ressources po
 
 Nous pouvons maintenant créer une règle de classification utilisant cette propriété.
 
-### Création d'une règle de classification (Classifier pour RMS)
+### <a name="create-a-classification-rule-classify-for-rms"></a>Création d'une règle de classification (Classifier pour RMS)
 
 -   Créez une règle de classification :
 
@@ -172,7 +172,7 @@ Nous pouvons maintenant créer une règle de classification utilisant cette prop
 
 Bien que vous puissiez exécuter les règles de classification manuellement pour les opérations en cours, vous souhaitez probablement que cette règle s'exécute selon une planification, afin que les nouveaux fichiers soient classifiés avec la propriété RMS.
 
-### Configuration de la planification de la classification
+### <a name="configure-the-classification-schedule"></a>Configuration de la planification de la classification
 
 -   Sous l'onglet **Classification automatique** :
 
@@ -186,7 +186,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
 
 À présent que vous avez terminé la configuration de la classification, vous êtes prêt à configurer une tâche de gestion pour appliquer la protection RMS aux fichiers.
 
-### Création d'une tâche de gestion de fichiers personnalisée (Protéger les fichiers avec RMS)
+### <a name="create-a-custom-file-management-task-protect-files-with-rms"></a>Création d'une tâche de gestion de fichiers personnalisée (Protéger les fichiers avec RMS)
 
 -   Dans **Tâches de gestion de fichiers**, créez une tâche de gestion de fichier :
 
@@ -251,7 +251,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
 
         -   **Exécuter en continu sur les nouveaux fichiers**: Activez cette case à cocher.
 
-### Test de la configuration en exécutant manuellement la règle et la tâche
+### <a name="test-the-configuration-by-manually-running-the-rule-and-task"></a>Test de la configuration en exécutant manuellement la règle et la tâche
 
 1.  Exécutez la règle de classification :
 
@@ -292,7 +292,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
 Après avoir vérifié que ces tâches s'exécutent correctement, vous pouvez fermer le Gestionnaire de ressources de fichiers. Les nouveaux fichiers sont automatiquement protégés et tous les fichiers sont de nouveau protégés lors de l'exécution des planifications. Le renouvellement de la protection des fichiers garantit que toutes les modifications apportées aux modèles sont appliquées aux fichiers.
 
 
-## Modification des instructions pour protéger des fichiers de façon sélective
+## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Modification des instructions pour protéger des fichiers de façon sélective
 Lorsque les instructions précédentes fonctionnent, il est très facile de les modifier pour obtenir une configuration plus sophistiquée. Par exemple, vous pouvez protéger des fichiers en utilisant le même script, mais uniquement pour les fichiers contenant des informations d'identification personnelle, voire sélectionner un modèle associé à des droits plus restrictifs.
 
 Pour ce faire, utilisez l’une des propriétés de classification intégrées (par exemple, **Informations d’identification personnelle**) ou créez votre propre propriété. Créez ensuite une règle utilisant cette propriété. Par exemple, vous pouvez sélectionner le **Classifieur de contenus**, choisir la propriété **Informations d'identification personnelle** avec une valeur **Haute**, et configurer le modèle de chaîne ou d'expression qui identifie le fichier à configurer pour cette propriété (par exemple, la chaîne «**Date de naissance**»).
@@ -302,6 +302,6 @@ Pour ce faire, utilisez l’une des propriétés de classification intégrées (
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

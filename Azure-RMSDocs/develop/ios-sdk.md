@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 80d79ead119b5dbe86d94f979742ecc2b62d1ef9
+ms.sourcegitcommit: 7c0b885c35dcac0237788a69486d8f736c97c0c4
+ms.openlocfilehash: 96b71d26461559aa8e53960e7e8f3f748b7ebb1d
 
 
 ---
 
-# Installation iOS et OS X
+# <a name="ios-and-os-x-setup"></a>Installation iOS et OS X
 
 Les applications iOS et OS X peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’Azure Rights Management (Azure RMS).
 
@@ -29,12 +29,12 @@ Cette rubrique explique comment configurer votre environnement pour créer vos p
 **Remarque**  Ce SDK ne prend pas en charge l’iPod Touch.
 
 
--   [Conditions préalables](#prerequisites)
+-   [Prérequis](#prerequisites)
 -   [Facultatif](#optional)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## Conditions préalables
+## <a name="prerequisites"></a>Conditions préalables
 
 Nous vous recommandons de disposer des logiciels suivants sur votre système de développement :
 
@@ -53,11 +53,11 @@ Nous vous recommandons de disposer des logiciels suivants sur votre système de 
 
 Lisez la rubrique [Nouveautés](release-notes.md) pour obtenir des informations sur les mises à jour des API, les notes de publication et les questions les plus fréquentes (FAQ).
 
-## Facultatif
+## <a name="optional"></a>Facultatif
 
 Notre bibliothèque d’interface utilisateur fournit une interface utilisateur réutilisable pour les opérations de protection et de consommation pour les développeurs qui ne souhaitent pas créer leur propre interface utilisateur personnalisée - [Bibliothèque d’interface utilisateur et exemple d’application pour iOS](https://github.com/AzureAD/rms-sdk-ui-for-ios).
 
-## Configuration de votre environnement de développement
+## <a name="configuring-your-development-environment"></a>Configuration de votre environnement de développement
 
 -   Pour créer un projet, dans le menu **Fichier**, cliquez sur **Nouveau**, puis sur **Projet**.
 -   Sélectionnez **Single View Application**.
@@ -100,7 +100,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 -   Vous êtes maintenant prêt à créer vos propres applications iOS/OS X.
 
-### Voir aussi
+### <a name="see-also"></a>Voir aussi
 
 * [Prise en main](get-started.md)
 
@@ -108,7 +108,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 * [Terminologie et concepts du développement](core-concepts.md)
 
-* [Référence d’API iOS / OS X](https://msdn.microsoft.com/library/dn758306.aspx)
+* [Informations de référence sur l’API iOS / OS X](https://msdn.microsoft.com/library/dn758306.aspx)
 
  
 
@@ -116,6 +116,6 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

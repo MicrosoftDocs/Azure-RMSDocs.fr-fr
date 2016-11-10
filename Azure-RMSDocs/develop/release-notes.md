@@ -3,7 +3,7 @@ title: "Nouveautés et notes de publication | Azure RMS"
 description: "Décrit les modifications et les fonctionnalités importantes de cette nouvelle version du kit de développement logiciel (SDK) RMS."
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 10/20/2016
+ms.date: 10/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,28 +13,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81cbe287b67e2a1598efdd2a816913f147c7ff7b
-ms.openlocfilehash: f3d4b1ba0da3530121aa81056238533f0dcbed2f
+ms.sourcegitcommit: 60e64b1fb1184aaa51b6664ecb5288d6ff861413
+ms.openlocfilehash: 04364bc5daec881fe3c55d5cd41e7be11ac91ae7
 
 
 ---
 
-# Nouveautés et notes de publication
+# <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
 
-## Nouveautés
-Le kit de développement logiciel (SDK) Microsoft Rights Management 4.2 améliore encore le niveau de simplicité et de flexibilité relatives à l’activation de l’application RMS. Ce sujet décrit les modifications et les fonctionnalités importantes de cette nouvelle version du kit de développement logiciel (SDK) RMS.
+## <a name="whats-new"></a>Nouveautés
+Le kit de développement logiciel (SDK) Microsoft Rights Management 4.2 améliore encore le niveau de simplicité et de flexibilité relatives à l’activation de l’application RMS. Cette rubrique décrit les modifications et les fonctionnalités importantes de cette version du SDK RMS.
 
--   [Nouveau en juin 2016](#new-for-June-2016)
--   [Mise à jour de décembre 2015](#december-2015-update)
--   [Mise à jour de juillet 2015 : ajout de la prise en charge du développement Linux/C++](#july-2015-update-adds-support-for-linux-c-developm)
--   [Mise à jour de mai 2015 : ajout du contrôle d’enregistrement](#may-2015-update-adds-logging-control)
--   [Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store](#february-2015-update-adds-windows-store-application-support)
--   [Mise à jour de janvier 2015 : ajout de la prise en charge de la plate-forme WinPhone](#january-2015-update-adds-winphone-platform-support)
--   [Mise à jour d’octobre 2014 : mise à niveau vers le Kit de développement logiciel (SDK) Microsoft RMS 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
--   [Notes de publication](#release-notes)
--   [Forum aux questions](#frequently-asked-questions)
-
-### Nouveau en juin 2016
+### <a name="new-for-june-2016"></a>Nouveau en juin 2016
 
 - **Prise en charge de l’authentification moderne** : intègre la connexion basée sur la bibliothèque ADAL (Active Directory Authentication Library) aux applications compatibles avec RMS. Elle autorise les fonctionnalités de connexion telles que Multi-Factor Authentication (MFA), les fournisseurs d’identité tiers SAML avec les applications clientes RMS, l’authentification basée sur les cartes à puce et les certificats. Grâce à cette prise en charge, il n’est plus nécessaire d’utiliser le protocole d’authentification de base pour les applications compatibles avec RMS.
 - **Prise en charge du suivi des documents** : les développeurs peuvent désormais activer le suivi des documents quand ils protègent des documents dans leurs applications.
@@ -42,7 +32,7 @@ Le kit de développement logiciel (SDK) Microsoft Rights Management 4.2 amélio
 - Corrections de bogues
 
 
-### Mise à jour de décembre 2015
+### <a name="december-2015-update"></a>Mise à jour de décembre 2015
 
 Le Kit de développement logiciel (SDK) passe désormais à la version 4.2 et bénéficie des ajouts suivants :
 
@@ -58,7 +48,7 @@ Le Kit de développement logiciel (SDK) passe désormais à la version 4.2 et b
 
     [Méthode synchrone CustomProtectedOutputStream.create](https://msdn.microsoft.com/library/mt631363.aspx)
 
-    [Méthode synchrone ProtectedFileInputStream.create](https://msdn.microsoft.com/library/mt631375.aspx)
+    [Méthode synchrone ProtectedFileInputStream.create ](https://msdn.microsoft.com/library/mt631375.aspx)
 
     [Méthode synchrone ProtectedFileOutputStream.create](https://msdn.microsoft.com/library/mt631376.aspx)
 
@@ -66,15 +56,15 @@ Le Kit de développement logiciel (SDK) passe désormais à la version 4.2 et b
 
     [Méthode synchrone UserPolicy.acquire](https://msdn.microsoft.com/library/mt631384.aspx)
 
-    [Méthode synchrone UserPolicy.create (PolicyDescriptor...)**](https://msdn.microsoft.com/library/mt631385.aspx)
+    [Méthode synchrone UserPolicy.create (PolicyDescriptor…)**](https://msdn.microsoft.com/library/mt631385.aspx)
 
-    [Méthode synchrone UserPolicy.create (TempalteDescriptor…...)](https://msdn.microsoft.com/library/mt631386.aspx)
+    [Méthode synchrone UserPolicy.create (TempalteDescriptor…)](https://msdn.microsoft.com/library/mt631386.aspx)
 
 -   Une nouvelle classe [ProtectedBuffer](https://msdn.microsoft.com/library/mt631369.aspx) a été ajoutée à l’API Android.
 -   Mises à jour pour améliorer les messages d’erreur et le dépannage.
 -   Améliorations de performances significatives pour les opérations de chiffrement.
 
-### Mise à jour de juillet 2015 : ajout de la prise en charge du développement Linux/C++
+### <a name="july-2015-update-adds-support-for-linux-c-development"></a>Mise à jour de juillet 2015 : ajout de la prise en charge du développement Linux/C++
 
 L’élément suivant est ajouté à cette version :
 
@@ -82,7 +72,7 @@ L’élément suivant est ajouté à cette version :
 
     Pour plus d’informations, consultez [Prise en main](get-started.md).
 
-### Mise à jour de mai 2015 : ajout du contrôle d’enregistrement
+### <a name="may-2015-update-adds-logging-control"></a>Mise à jour de mai 2015 : ajout du contrôle d’enregistrement
 
 Cette version permet la prise en charge des éléments suivants :
 
@@ -100,15 +90,15 @@ Cette version permet la prise en charge des éléments suivants :
 
     Pour plus d’informations, consultez [MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx).
 
-### Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store
+### <a name="february-2015-update-adds-windows-store-application-support"></a>Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store
 
 Cette version ajoute la prise en charge des applications du Windows Store et assure la parité fonctionnelle avec la version Windows Phone, Android et iOS/OS X du kit de développement logiciel (SDK) RMS 4.1.
 
-### Mise à jour de janvier 2015 : ajout de la prise en charge de la plate-forme WinPhone
+### <a name="january-2015-update-adds-winphone-platform-support"></a>Mise à jour de janvier 2015 : ajout de la prise en charge de la plate-forme WinPhone
 
 Cette version ajoute la prise en charge du système d’exploitation Windows Phone et assure la parité fonctionnelle avec la version Android et iOS/OS X du kit de développement logiciel (SDK) RMS 4.1.
 
-### Mise à jour d’octobre 2014 : mise à niveau vers le Kit de développement logiciel (SDK) Microsoft RMS 4.1
+### <a name="october-2014-update-upgrade-to-microsoft-rms-sdk-41"></a>Mise à jour d’octobre 2014 : mise à niveau vers le Kit de développement logiciel (SDK) Microsoft RMS 4.1
 
 La version 4.1 du kit de développement logiciel (SDK) RMS ajoute les nouvelles fonctionnalités suivantes aux systèmes d’exploitation Google Android et Apple iOS/OS X.
 
@@ -120,11 +110,11 @@ La version 4.1 du kit de développement logiciel (SDK) RMS ajoute les nouvelles
 
     Exemple : modification de MSUserPolicy.name en [MSUserPolicy.policyName](https://msdn.microsoft.com/library/dn790799.aspx).
 
-## Notes de publication
+## <a name="release-notes"></a>Notes de publication
 
 Cette section donne des informations sur les versions actuelles et précédentes du kit de développement logiciel (SDK) Microsoft Rights Management 4.x que vous souhaitez connaître en tant que développeur.
 
-**Kit de développement logiciel (SDK) AD RMS 4.1 - Version en disponibilité globale des plateformes iOS/OS X et Android**
+**AD RMS SDK 4.1 - Version en disponibilité globale des plateformes iOS/OS X et Android**
 
 -   **Prise en charge d’AD RMS** : les administrateurs informatiques peuvent utiliser des applications compatibles avec RMS sur des appareils mobiles avec les nouvelles extensions pour appareils mobiles du serveur AD RMS.
 -   **Consommation en mode hors connexion** : les utilisateurs finaux peuvent accéder hors connexion aux données protégées par RMS.
@@ -132,7 +122,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 -   **Interface utilisateur séparée** : les développeurs peuvent créer leur interface utilisateur afin de protéger et d’utiliser des documents protégés par RMS.
 -   **Reconception de l’API** : les développeurs peuvent bénéficier désormais d’une API de chiffrement et de déchiffrement, qui assure la cohérence des comportements RMS et de l’expérience utilisateur avec un minimum d’effort.
 
-**Commun à toutes les plates-formes**
+**Commun à toutes les plateformes**
 
 -   Les API du Kit de développement logiciel (SDK) RMS 4.x ne sont pas *thread-safe*.
 
@@ -146,11 +136,11 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
     **Solution** : vérifiez que l’application n’autorise pas l’appel de plusieurs instances vers l’API Android.
 
--   Lorsque j’utilise la méthode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array, int offset, int length) avec une longueur différente de la valeur *array.length*, je ne suis pas en mesure d’utiliser le contenu ultérieurement à l’aide du SDK.
+-   Quand j’utilise la méthode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array, int offset, int length) avec une longueur différente de la valeur de *array.length*, je ne peux pas utiliser le contenu ultérieurement avec le SDK.
 
-    **Solution** : il s’agit d’un problème connu. Pour l’atténuer, transmettez toujours un tableau *byte \[\]* ayant la même valeur de longueur que le paramètre de longueur, ou utilisez la méthode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
+    **Solution** : il s’agit d’un problème connu. Pour le limiter, passez toujours un tableau *byte \[\]* ayant la même valeur de longueur que le paramètre length, ou utilisez la méthode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
 
-**iOS et OS X**
+**iOS et OS X**
 
 -   Nos kits de développement logiciel iOS et OS X prennent en charge deux dialectes de Portugais. Malheureusement, en raison d’un bogue, la prise en charge de la première localisation n’est pas complètement assurée. En raison de ce bogue, le portugais n’est pas entièrement pris en charge. La plupart du texte est traduit, mais pas l’interface utilisateur.
 
@@ -164,7 +154,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
     Il s’agit d’un comportement facultatif connu pour iOS selon les instructions relatives à l’interface humaine Apple.
 
-**OS X uniquement**
+**OS X uniquement**
 
 -   Le kit de développement logiciel (SDK) RMS 4.x n’affiche pas le voyant d’activité réseau.
 
@@ -181,7 +171,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 **Remarque** : les applications MDI ne sont pas prises en charge par notre API iOS.
 
-## Forum aux questions
+## <a name="frequently-asked-questions"></a>Forum aux questions
 
 **Toutes les plateformes**
 
@@ -191,7 +181,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 **Q** : Comment obtenir de nouveaux locataires d’organisation pour essayer le Kit de développement logiciel (SDK) et les exemples d’applications ?
 
-**R** : Pour demander des informations d’identification pour les organisations de test Azure AD RMS, envoyez un courrier électronique à <rmcstbeta@microsoft.com>.
+**R** : Pour demander des informations d’identification pour les organisations de test Azure AD RMS, envoyez un e-mail à <rmcstbeta@microsoft.com>.
 
 **Q** : Je ne vois aucune discussion relative à la hiérarchie de test dans la documentation. Pourquoi ?
 
@@ -232,6 +222,6 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

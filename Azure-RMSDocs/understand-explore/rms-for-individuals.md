@@ -2,6 +2,7 @@
 title: RMS for individuals et Azure Information Protection | Azure Information Protection
 description: "Informations relatives à RMS for Individuals, un abonnement libre-service gratuit destiné aux utilisateurs d’une organisation qui reçoivent des fichiers sensibles protégés par le service Azure Rights Management, mais qui ne peuvent pas s’authentifier, car leur service informatique ne gère pas de compte en leur nom dans Azure."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d27417bf90dab8c7e8654c68d204dad6297fa0d
-ms.openlocfilehash: 5ce322224da9052b1fa5a3e3d995bbb52e079797
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f89374ec327f51f3e8354aec57f0c0da9ddac585
 
 
 ---
 
-# RMS for individuals et Azure Information Protection
+# <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals et Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
@@ -35,12 +36,12 @@ Pour plus d’informations sur la façon dont vous pouvez protéger des fichiers
 
 RMS for Individuals est un exemple d'inscription en libre-service prise en charge par Azure Active Directory. Pour plus d’informations sur son fonctionnement, voir [Qu’est-ce qu’une inscription libre-service à Azure ?](/active-directory/active-directory-self-service-signup) dans la documentation d’Azure Active Directory. 
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 Consultez [Inscription à RMS for individuals](rms-for-individuals-user-sign-up.md) pour obtenir des instructions pas à pas et une présentation technique de ce qui se passe en arrière-plan. 
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

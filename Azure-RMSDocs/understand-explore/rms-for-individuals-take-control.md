@@ -2,6 +2,7 @@
 title: "Contrôle administrateur des comptes créés pour RMS for individuals | Azure Information Protection"
 description: "Comment contrôler les comptes d’utilisateur dans Azure Active Directory si vous ne souhaitez pas convertir l’abonnement RMS for Individuals de votre organisation en un abonnement payant."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,15 +13,15 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
-ms.openlocfilehash: 6f26faf8a96c388a4640701a12a77e3b4ef60567
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f9999db44758251f7b9b4c8f86549b1ee36e83d3
 
 
 ---
 
 
 
-# Contrôle administrateur des comptes créés pour RMS for individuals
+# <a name="how-administrators-can-control-the-accounts-created-for-rms-for-individuals"></a>Contrôle administrateur des comptes créés pour RMS for individuals
 
 >*S’applique à : Azure Information Protection*
 
@@ -40,12 +41,12 @@ Même si vous ne souhaitez pas convertir l'abonnement RMS for individuals de vot
 Pour contrôler les comptes d'utilisateur dans l'annuaire Azure, ou empêcher des utilisateurs de s'inscrire à RMS for individuals, vous devez disposer d'un abonnement Azure et être propriétaire de l'annuaire. Si vous n'avez pas encore d'abonnement Azure, vous pouvez en obtenir un gratuitement. Si un annuaire a été créé automatiquement pour vous lors du processus d'abonnement en libre-service, acquérez la propriété du domaine utilisé pour le créer. Si vous possédez déjà un annuaire dans Azure, et que les utilisateurs ont spécifié un nouveau domaine que vous utilisez dans votre organisation, fusionnez ce domaine dans votre annuaire existant. Pour plus d'informations, voir les instructions de la rubrique [Qu’est-ce qu'une inscription libre-service à Azure ?](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/)
 
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Comment savoir si des utilisateurs autres que des administrateurs peuvent créer leurs comptes dans Azure Active Directory pour RMS for individuals ?  Consultez [Détermination des utilisateurs inscrits à RMS for Individuals](rms-for-individuals-identify-sign-up.md).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

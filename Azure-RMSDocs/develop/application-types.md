@@ -3,6 +3,7 @@ title: "Types d’applications | Azure RMS"
 description: "Cette rubrique traite des types d’applications que vous pouvez choisir de créer avec une gestion des droits."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/20/2016
 ms.topic: article
@@ -14,24 +15,24 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1ab93dc8f770e2e49b5846dd6c31f649a55175b0
-ms.openlocfilehash: 77bb95ae54ec0fb699d3b0dd2879bb14fdd3dd28
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 20a0906561a79e0826b47981425ae121f07f3d26
 
 
 ---
 
-# Application types (Types d’applications)
+# <a name="application-types"></a>Application types (Types d’applications)
 
 
 Cette rubrique traite des types d’applications que vous pouvez choisir de créer avec une gestion des droits.
 
 Les types d’application suivants sont actuellement pris en charge par Rights Management Services SDK 2.1
 
-## Applications simples
+## <a name="simple-applications"></a>Applications simples
 
 Une application simple peut être un outil de ligne de commande conçu pour chiffrer un fichier donné. Pour obtenir un exemple d’une application simple avec gestion des droits, consultez notre implémentation de *IPCHelloWorld* dans [Développement de votre application](developing-your-application.md).
 
-### Applications en mode serveur
+### <a name="server-mode-applications"></a>Applications en mode serveur
 
 Le *mode serveur* est conçu pour les applications non interactives qui consomment, protègent ou traitent du contenu protégé par RMS. Un exemple est une application de *protection contre la perte de données* qui s’exécute en tant que service sur un serveur de fichiers et qui protège automatiquement les documents sensibles. Consultez l’[exemple IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d) pour un exemple de ce type d’application.
 
@@ -39,7 +40,7 @@ Si votre application utilise le *mode serveur*, elle doit s’authentifier aupr�
 
 Pour plus d’informations sur la définition du mode de sécurité de l’API, consultez [Définition du mode de sécurité de l’API](setting-the-api-security-mode-api-mode.md).
 
-### Applications clientes enrichies
+### <a name="rich-client-applications"></a>Applications clientes enrichies
 
 Une application cliente enrichie permet aux utilisateurs d’afficher et de manipuler des données via une interface utilisateur graphique. Souvent, les données présentées dans cette interface utilisateur sont importantes et sensibles au vol ou à une exposition accidentelle. La prise en charge de la protection des informations améliore généralement les scénarios existants, mais elle n’est pas l’objectif principal du développement de l’application.
 
@@ -53,7 +54,7 @@ Microsoft Notepad est une application cliente enrichie simple. Microsoft Office 
 
 Pour plus d’informations sur la protection de votre application, consultez [Comprendre les restrictions d’utilisation](understanding-usage-restrictions.md).
 
-## Rubriques connexes
+## <a name="related-topics"></a>Rubriques connexes
 
 - [Exemple IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
 - [Développement de votre application](developing-your-application.md)
@@ -62,6 +63,6 @@ Pour plus d’informations sur la protection de votre application, consultez [Co
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

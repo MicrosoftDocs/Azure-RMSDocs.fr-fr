@@ -2,6 +2,7 @@
 title: "Protéger un fichier que vous partagez par e-mail à l’aide de l’application de partage Rights Management | Azure Information Protection"
 description: "Instructions à suivre pour partager un document par e-mail en toute sécurité."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

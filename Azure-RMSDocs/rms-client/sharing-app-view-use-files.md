@@ -2,6 +2,7 @@
 title: "Afficher et utiliser des fichiers qui ont été protégés par Rights Management | Azure Information Protection"
 description: "Instructions à suivre pour afficher et utiliser un fichier protégé. Cette procédure nécessite l’installation de l’application de partage Rights Management (RMS)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 94a8729e7c7e5bb438ac2bd48789a522c8de8cc4
-ms.openlocfilehash: db8d6a9c5959139ee76f022a5cee997bab24e6c9
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 1f248150a3f65fe5ffda1d20f51eee6bb834dd60
 
 
 ---
 
-# Afficher et utiliser des fichiers qui ont été protégés par Rights Management
+# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Afficher et utiliser des fichiers qui ont été protégés par Rights Management
 
 >*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
@@ -34,7 +35,7 @@ Quand [l’application de partage Rights Management (RMS) est installée sur vot
 >     Lorsque vous vous inscrivez, utilisez l'adresse de messagerie de votre organisation plutôt qu'une adresse personnelle. Si vous vous inscrivez parce que vous reçu une pièce protégée jointe à un message électronique, utilisez l'adresse de messagerie à laquelle ce message a été envoyé.
 > -   Pour plus d’informations, consultez [RMS for individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## Pour afficher un fichier protégé
+## <a name="to-view-a-protected-file"></a>Pour afficher un fichier protégé
 Dans l'Explorateur de fichiers ou dans le message électronique contenant la pièce jointe, double-cliquez sur le fichier protégé, puis entrez vos informations d'identification si vous y êtes invité.
 
 Si vous voyez deux versions du fichier dont les extensions diffèrent, n'ouvrez celle dont l'extension est .ppdf uniquement si l'autre ne s'ouvre pas. Si vous ne pouvez pas non plus ouvrir la version .ppdf, installez l’[application de partage RMS](install-sharing-app.md), qui peut ouvrir des fichiers dont l’extension est .ppdf.
@@ -73,7 +74,7 @@ Pour obtenir la liste complète des extensions de nom de fichier prises en charg
 > [!NOTE]
 > Si, après avoir confirmé que le fichier est bien protégé par Rights Management, il ne s’ouvre pas, téléchargez et utilisez l’[outil Analyseur RMS](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Suivez les instructions contenues dans l’outil pour rechercher la présence de problèmes éventuels sur votre ordinateur qui pourraient empêcher l’ouverture d’un document protégé.
 
-## Pour utiliser un fichier protégé (par exemple, l'éditer et l'imprimer)
+## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>Pour utiliser un fichier protégé (par exemple, l'éditer et l'imprimer)
 Si, après avoir ouvert le fichier protégé, vous voulez le lire, mais aussi, par exemple, le modifier, le copier et l’imprimer :
 
 - **L’extension du nom du fichier est *.pfile***
@@ -95,18 +96,18 @@ Si, après avoir ouvert le fichier protégé, vous voulez le lire, mais aussi, p
     Les applications compatibles Rights Management savent comment ouvrir des fichiers protégés par d'autres applications compatibles Rights Management. Elles conservent également la protection appliquée au fichier, même si vous modifiez celui-ci ou l'enregistrez sous un autre nom ou dans un autre emplacement. Ces applications vous permettent d'utiliser le fichier conformément aux autorisations qui lui sont appliquées de sorte que, si vous disposez des autorisations nécessaires, vous l'utiliser. Par exemple, il se peut que vous puissiez modifier le fichier mais pas l'imprimer.
 
 
-## Exemples et autres instructions
+## <a name="examples-and-other-instructions"></a>Exemples et autres instructions
 Pour obtenir des exemples et des instructions concernant l’utilisation de l’application de partage Rights Management, voir les sections suivantes dans le Guide d’utilisation de l’application de partage Rights Management :
 
 -   [Exemples d’utilisation de l’application de partage RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
+-   [Que voulez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

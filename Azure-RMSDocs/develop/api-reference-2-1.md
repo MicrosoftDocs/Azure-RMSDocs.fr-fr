@@ -3,6 +3,7 @@ title: "Informations de référence sur l’API | Azure RMS"
 description: "Microsoft Rights Management SDK 2.1 prend en charge l’activation RMS des clients Windows."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/19/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: bb20d796e5a852aa9da224cbf218b9a166a9dbd8
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f430c1ea265e560786bf06d4aeb0792ab610746c
 
 
 ---
 
-# Référence d'API
+# <a name="api-reference"></a>Référence d'API
 
 Microsoft Rights Management SDK 2.1 prend en charge l’activation RMS des clients Windows. Pour plus d’informations sur des points spécifiques, consultez [Notes de publication](release-notes-rtm.md).
 - [Constantes](https://msdn.microsoft.com/library/hh535291.aspx)
@@ -31,7 +32,7 @@ Microsoft Rights Management SDK 2.1 prend en charge l’activation RMS des clien
 
 
 
-## Rubriques connexes
+## <a name="related-topics"></a>Rubriques connexes
 
 * [Notes de publication](release-notes-rtm.md)
  
@@ -40,6 +41,6 @@ Microsoft Rights Management SDK 2.1 prend en charge l’activation RMS des clien
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

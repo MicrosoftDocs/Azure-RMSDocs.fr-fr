@@ -2,6 +2,7 @@
 title: "Scénario : échange sécurisé d’informations confidentielles entre cadres| Azure Information Protection"
 description: "Ce scénario et la documentation utilisateur associée s’appuient sur la protection Azure Rights Management pour permettre à des cadres de s’échanger des e-mails et des pièces jointes en toute sécurité, tandis que des stratégies limitent automatiquement l’accès aux cadres, sans que ceux-ci aient à prendre des mesures particulières."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 8481c275609e74ff5e09a0397e0e3a0346aa4430
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: c8c460549df34a746b21f57aa890a52571bf2061
 
 
 ---
 
-# Scénario : échange sécurisé d’informations confidentielles entre cadres
+# <a name="scenario-executives-securely-exchange-privileged-information"></a>Scénario : échange sécurisé d’informations confidentielles entre cadres
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -34,24 +35,24 @@ Les instructions conviennent pour l’ensemble des situations suivantes :
 
 -   Les cadres ont la possibilité de remplacer eux-mêmes la règle s’ils ont besoin d’envoyer un e-mail non protégé à d’autres cadres.
 
-## Instructions de déploiement
+## <a name="deployment-instructions"></a>Instructions de déploiement
 ![Instructions destinées aux administrateurs pour le déploiement rapide Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Vérifiez que les conditions suivantes sont réunies, puis suivez les instructions pour mener à bien les procédures associées avant de poursuivre avec la documentation utilisateur.
 
-## Conditions requises pour ce scénario
+## <a name="requirements-for-this-scenario"></a>Conditions requises pour ce scénario
 Pour pouvoir appliquer les instructions de ce scénario, les conditions suivantes doivent être réunies :
 
 |Condition requise|Si vous avez besoin d’informations supplémentaires|
 |---------------|--------------------------------|
 |Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory.<br /><br />- Un groupe à extension messagerie nommé **Cadres**, dont tous les cadres sont membres<br /><br />- Un groupe nommé **Administrateurs RMS** et tous les administrateurs chargés de configurer Azure RMS sont membres de ce groupe|[Préparation d’Azure Information Protection](../plan-design/prepare.md)|
-|Votre clé de locataire Azure Information Protection est gérée par Microsoft ; vous n’utilisez pas BYOK|[Planification et implémentation de la clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md)|
-|Azure Rights Management est activé|[Activation d'Azure Rights Management](../deploy-use/activate-service.md)|
+|Votre clé de locataire Azure Information Protection est gérée par Microsoft ; vous n’utilisez pas BYOK|[Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md)|
+|Azure Rights Management est activé|[Activation d’Azure Rights Management](../deploy-use/activate-service.md)|
 |Une de ces configurations :<br /><br />- Exchange Online est activé pour Azure Rights Management<br /><br />- Le connecteur RMS est installé et configuré pour Exchange sur site|Pour Exchange Online : consultez les informations indiquées dans [Exchange Online : configuration de la gestion des droits relatifs à l’information](../deploy-use/configure-office365.md#exchange-online-irm-configuration).<br /><br />Pour Exchange sur site : [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
 |Vous avez configuré un modèle personnalisé comme décrit ci-après|[Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |Vous avez configuré une règle de protection de transport pour IRM, comme décrit plus loin dans cet article|Pour Exchange Online : [Flux de messagerie ou règles de transport](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />Pour Exchange 2013 : [Créer une règle de protection de transport](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))<br /><br />Pour Exchange 2010 : [Créer une règle de protection de transport](https://technet.microsoft.com/library/dd302432(v=exchg.141))|
 
-### Pour configurer le modèle personnalisé pour les cadres
+### <a name="to-configure-the-custom-template-for-executives"></a>Pour configurer le modèle personnalisé pour les cadres
 
 1.  Dans le portail Azure Classic : créez un modèle personnalisé pour Azure Rights Management qui contienne les valeurs et les paramètres suivants :
 
@@ -69,7 +70,7 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
     Import-RMSTrustedPublishingDomain -Name "RMS Online -1" -RefreshTemplates -RMSOnline
     ```
 
-### Pour configurer la règle de transport pour IRM
+### <a name="to-configure-the-transport-rule-for-irm"></a>Pour configurer la règle de transport pour IRM
 
 -   Servez-vous de la documentation Exchange référencée dans le tableau pour savoir comment créer la règle de transport avec les paramètres suivants :
 
@@ -83,7 +84,7 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
 
     -   Vérifiez que la règle est configurée pour être **appliquée**.
 
-## Instructions de la documentation utilisateur
+## <a name="user-documentation-instructions"></a>Instructions de la documentation utilisateur
 À moins que vous vouliez fournir des instructions sur la façon de spécifier **NPP** ou les termes ou expressions destinés à qualifier l’exception dans l’objet de l’e-mail, aucune instruction de procédure n’est à donner aux utilisateurs pour ce scénario, car la protection des e-mails en provenance et à destination des cadres n’appellent aucune action de leur part. Les e-mails et les pièces jointes sont automatiquement protégés de manière à ce que seuls les membres du groupe Cadres puissent y accéder.
 
 Cependant, vous serez peut-être amené à informer les cadres et le support technique que ces e-mails sont automatiquement protégés et en quoi cela peut en limiter leur utilisation. Par exemple, ils ne pourront pas être lus par d’autres personnes si ces messages ou pièces jointes sont transférés par la suite à d’autres personnes. Si vous avez configuré l’exception NPP (ou un équivalent), vérifiez que le support technique a connaissance de cette configuration de sorte que les cadres puissent remplacer la règle par eux-mêmes, sans l’intervention d’un administrateur Exchange.
@@ -104,7 +105,7 @@ L’exemple de documentation illustre la façon dont cette annonce se présente 
 
 ![Modèle de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Annonce de l’équipe informatique : Les e-mails des cadres de &lt;nom de l’organisation&gt; sont désormais automatiquement protégés
+### <a name="it-announcement-ltorganization-namegt-executive-emails-are-now-automatically-protected"></a>Annonce de l’équipe informatique : Les e-mails des cadres de &lt;nom de l’organisation&gt; sont désormais automatiquement protégés
 Dès lors, chaque fois que vous enverrez des e-mails à un autre cadre de l’entreprise &lt;nom de l’organisation&gt;, le contenu de ces messages et les pièces jointes seront automatiquement protégés de telle sorte que seul un autre cadre de l’entreprise pourra y avoir accès et lire, imprimer ou encore copier les informations. Cette restriction s’applique même si vous transférez le message à d’autres personnes ou enregistrez les pièces jointes. Cette protection permet d’éviter une perte de données confidentielles et sensibles.
 
 À noter que si vous voulez autoriser d’autres utilisateurs que des cadres de &lt;nom de l’organisation&gt; à lire et à modifier les informations que vous envoyez dans ces e-mails, vous devez les leur envoyer séparément. Ou bien, pour ignorer la protection automatique, tapez les lettres **NPP** (abréviation de « Ne pas protéger ») n’importe où dans l’objet de l’e-mail.
@@ -115,15 +116,15 @@ Lors de l’envoi d’informations confidentielles de votre société à un autr
 
 -   Contactez le support technique : &lt;coordonnées&gt;
 
-### Exemple de documentation utilisateur
+### <a name="example-user-documentation"></a>Exemple de documentation utilisateur
 ![Exemple de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### Annonce de l’équipe informatique : Les e-mails des cadres de VanArsdel sont désormais automatiquement protégés
+#### <a name="it-announcement-vanarsdel-executive-emails-are-now-automatically-protected"></a>Annonce de l’équipe informatique : Les e-mails des cadres de VanArsdel sont désormais automatiquement protégés
 Dès lors, chaque fois que vous enverrez des e-mails à un autre cadre de l’entreprise VanArsdel, le contenu de ces messages et les pièces jointes seront automatiquement protégés de telle sorte que seul un autre cadre de l’entreprise pourra y avoir accès et lire, imprimer ou encore copier les informations. Cette restriction s’applique même si vous transférez le message à d’autres personnes ou enregistrez les pièces jointes. Cette protection permet d’éviter une perte de données confidentielles et sensibles.
 
 À noter que si vous voulez autoriser d’autres utilisateurs que des cadres de VanArsdel à lire et modifier les informations que vous envoyez dans ces e-mails, vous devez les leur envoyer séparément. Ou bien, pour ignorer la protection automatique, tapez les lettres **NPP** (abréviation de « Ne pas protéger ») n’importe où dans l’objet de l’e-mail.
 
-Lors de l’envoi d’informations confidentielles de votre société à un autre cadre de VanArsdel, pensez à les envoyer à une adresse de messagerie professionnelle (*nom*@&lt;vanarsdelltd.com) et non à une adresse de messagerie personnelle.
+Lors de l’envoi d’informations confidentielles de votre société à un autre cadre de VanArsdel, pensez à les envoyer à une adresse de messagerie professionnelle (*nom*@vanarsdelltd.com)) et non à une adresse de messagerie personnelle.
 
 **Vous avez besoin d'aide ?**
 
@@ -132,6 +133,6 @@ Lors de l’envoi d’informations confidentielles de votre société à un autr
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

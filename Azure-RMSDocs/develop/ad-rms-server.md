@@ -3,6 +3,7 @@ title: Serveur AD RMS | Azure RMS
 description: "Le composant serveur de Rights Management Services (RMS) est implémenté par un ensemble de services web qui s’exécutent sur Microsoft Internet Information Services."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 3e2dee5511bc86e44e2e10ff9fc981aa36ccee38
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 498a06a65d61417600cd5501a0d04935cb733c37
 
 
 ---
 
-# Serveur
+# <a name="server"></a>Serveur
 
 Cette rubrique décrit l’objectif et les fonctions du serveur RMS pour Azure et Windows Server.
 
@@ -42,7 +43,7 @@ Parmi les nombreux services web installés, ceux-ci sont importants pour le dév
 |Précertification | Permet à un serveur demander un *certificat de compte de droits* pour le compte d’un utilisateur. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
 |Localisateur de service | Fournit l’URL des services de certification, de gestion des licences et de publication des comptes à Active Directory pour qu’ils puissent être détectés par les clients RMS. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
 
-## Rubriques connexes ##
+## <a name="related-topics"></a>Rubriques connexes ##
 * [Vue d'ensemble](ad-rms-overview.md)
 * [Microsoft Internet Information Services](http://www.iis.net/overview)
 * [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md)
@@ -58,6 +59,6 @@ Parmi les nombreux services web installés, ceux-ci sont importants pour le dév
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

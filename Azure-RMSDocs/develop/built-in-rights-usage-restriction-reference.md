@@ -3,6 +3,7 @@ title: "Comment : utiliser les droits intégrés | Azure RMS"
 description: "Décrit les droits intégrés fournis par RMS SDK 4.2 et les restrictions d’utilisation qu’une application doit suivre pour respecter ces droits."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -22,13 +23,13 @@ ms.openlocfilehash: 3d897f191368b7af6fd339603e183583fa9b4a27
 
 ---
 
-# Comment : utiliser les droits intégrés
+# <a name="how-to-use-builtin-rights"></a>Comment : utiliser les droits intégrés
 
 Cette rubrique décrit les droits intégrés fournis par Microsoft Rights Management SDK 4.2 et les restrictions d’utilisation qu’une application doit suivre pour respecter ces droits. Vous trouverez ci-après les différents droits intégrés (droits communs, droits sur les documents modifiables et droits sur les e-mails), suivis d’une description et des valeurs qu’ils acceptent par système d’exploitation.
 
 **Remarque** : Pour le SDK Linux, consultez le fichier source *rights.h* pour obtenir plus d’informations.
 
-## Droits communs
+## <a name="common-rights"></a>Droits communs
 
 **All** : collection de tous les droits communs.
 - Android : [CommonRights.All](https://msdn.microsoft.com/library/dn758258.aspx)
@@ -51,7 +52,7 @@ Cette rubrique décrit les droits intégrés fournis par Microsoft Rights Manage
 
  
 
-## Droits sur les documents modifiables
+## <a name="editable-document-rights"></a>Droits sur les documents modifiables
 **All** : collection contenant tous les droits sur les documents modifiables.
 - Android : [EditableDocumentRights.All](https://msdn.microsoft.com/library/dn758284.aspx)
 - iOS et OS X : [MSEditableDocumentRights all](https://msdn.microsoft.com/library/dn758318.aspx)
@@ -93,7 +94,7 @@ Cette rubrique décrit les droits intégrés fournis par Microsoft Rights Manage
 
  
 
-## Droits sur les e-mails
+## <a name="email-rights"></a>Droits sur les e-mails
 
 **All** : Collection contenant tous les droits sur les e-mails.
 - Android : [EmailRights.All](https://msdn.microsoft.com/library/dn758285.aspx)

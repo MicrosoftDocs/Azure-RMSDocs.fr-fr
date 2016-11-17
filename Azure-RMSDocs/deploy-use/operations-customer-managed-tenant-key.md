@@ -2,6 +2,7 @@
 title: "Gérée par le client - Opérations de cycle de vie des clés de locataires | Azure Information Protection"
 description: "Informations sur les opérations de cycle de vie applicables si vous gérez votre clé de locataire pour Azure Information Protection (dans le cadre d’un scénario BYOK, ou Bring Your Own Key)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

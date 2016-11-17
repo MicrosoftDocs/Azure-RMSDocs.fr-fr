@@ -2,6 +2,7 @@
 title: "Autres applications prenant en charge les API Rights Management : installation et configuration | Azure Information Protection"
 description: "Découvrez comment le service Azure Rights Management d’Azure Information Protection peut prendre en charge d’autres applications pour protéger les données de votre organisation."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/10/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
-ms.openlocfilehash: 0ee1e316310df889f87b1bc7932d8970abae140f
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 28e81e174e1b1a39928fa47f9155c40e769b633f
 
 
 ---
 
-# Autres applications prenant en charge les API Rights Management
+# <a name="other-applications-that-support-the-rights-management-apis"></a>Autres applications prenant en charge les API Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -28,11 +29,11 @@ En utilisant le SDK Rights Management, vos développeurs internes peuvent écrir
 
 De même, de nombreux éditeurs de logiciels proposent des applications pour fournir des solutions de protection des informations, également appelées produits de gestion des droits d’entreprise. Un lecteur PDF prenant en charge le service Azure Rights Management pour des plateformes spécifiques en est un exemple typique. Aidez-vous du tableau dans [Applications prenant en charge la protection des données Azure Rights Management](../get-started/requirements-applications.md) pour identifier les applications qui prennent en charge Rights Management (applications compatibles avec RSM), puis effectuez une recherche sur Internet pour acheter ou télécharger l’application.
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour voir comment d’autres applications et services prennent en charge le service Azure Rights Management, consultez [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md).
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

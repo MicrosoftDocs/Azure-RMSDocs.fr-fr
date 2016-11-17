@@ -2,6 +2,7 @@
 title: "Déploiement du connecteur Azure Rights Management | Azure Information Protection"
 description: "Instructions pour déployer le connecteur RMS, qui fournit le service de protection des données dans le cas des déploiements locaux existants utilisant Exchange Server, SharePoint Server ou Windows Server et l’Infrastructure de classification des fichiers (ICF)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

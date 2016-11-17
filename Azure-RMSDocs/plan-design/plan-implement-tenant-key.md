@@ -2,8 +2,9 @@
 title: "Planification et implémentation de votre clé de locataire Azure Rights Management | Azure Information Protection"
 description: "Informations vous permettant de planifier et de gérer votre clé de locataire Azure Information Protection. Au lieu que Microsoft gère votre clé de locataire (option par défaut), vous pouvez gérer votre propre clé de locataire afin de vous conformer à des réglementations spécifiques s’appliquant à votre organisation. La gestion de votre propre clé de locataire est également appelée BYOK (Bring Your Own Key)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 11/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
-ms.openlocfilehash: b8380389267d77da53a5b87ffd606b6e754de7f3
+ms.sourcegitcommit: 84072c64f83ec97ac41d6ec030be5eabff263b4b
+ms.openlocfilehash: afcef2843336e022e63e7895ac3c0488d0aa0e2a
 
 
 ---
@@ -90,6 +91,8 @@ Reportez-vous au tableau suivant pour connaître les conditions requises pour la
 
 Pour plus d’informations sur les modules de sécurité matériels Thales et comment ils sont utilisés avec Azure Key Vault, consultez le [site web de Thales](https://www.thales-esecurity.com/msrms/cloud).
 
+### <a name="instructions-for-byok"></a>Instructions pour BYOK
+
 Pour générer et transférer votre propre clé de locataire dans Azure Key Vault, suivez les procédures de la rubrique [Comment générer et transférer les clés protégées par HSM pour Azure Ket Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) dans la documentation d’Azure Key Vault.
 
 Quand la clé est transférée vers Key Vault, elle reçoit un ID de clé dans Key Vault. Il s’agit d’une URL contenant le nom du coffre, le conteneur de clés, le nom de la clé et la version de la clé. Par exemple : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Vous devez indiquer au service Azure Rights Management d’Azure Information Protection d’utiliser cette clé, en spécifiant cette URL.
@@ -105,6 +108,11 @@ Vous êtes maintenant prêt à configurer Azure Information Protection pour util
 Ensuite, exécutez l’applet de commande [Add-AadrmKeyVaultKey](https://msdn.microsoft.com/library/azure/mt759829.aspx) en spécifiant l’URL de la clé. Exemple :
 
     Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
+
+> [!IMPORTANT]
+> Dans cet exemple, « aaaabbbbcccc111122223333 » est la version de la clé à utiliser. Si vous ne spécifiez pas la version, la version actuelle de la clé est utilisée sans avertissement, et la commande semble fonctionner. Toutefois, si votre clé dans Key Vault est ultérieurement mise à jour (renouvelée), le service Azure Rights Management cessera de fonctionner pour votre locataire, même si vous réexécutez la commande Use-AadrmKeyVaultKey.
+>
+>Veillez à spécifier la version de clé en plus du nom de clé quand vous exécutez cette commande.
 
 Si vous devez vérifier que l’URL de la clé est définie correctement dans le service Azure RMS, vous pouvez exécuter [Get-AzureKeyVaultKey](https://msdn.microsoft.com/en-us/library/dn868053(v=azure.300\).aspx) dans Azure Key Vault pour voir l’URL de la clé.
 
@@ -136,6 +144,6 @@ Maintenant que vous avez planifié et, le cas échéant, généré votre clé de
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

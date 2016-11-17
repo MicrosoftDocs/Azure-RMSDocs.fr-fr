@@ -2,6 +2,7 @@
 title: "Comment activer Azure Rights Management à partir du portail classique Azure | Azure Information Protection"
 description: "Instructions d’activation du service Azure Rights Management quand vous avez accès au portail Azure. Par exemple, vous avez un abonnement à Enterprise Mobility Suite ou êtes abonné à Azure Information Protection Premium."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 565f2479fe1d41aa051dd64752413eb72d644535
-ms.openlocfilehash: 74aac58a7b523f98ef627831830577d4fde7d5af
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: fe806c1c2b3f3284b905602a3a10deb79d91425e
 
 
 ---
 
-# Comment activer Azure Rights Management à partir du portail classique Azure
+# <a name="how-to-activate-azure-rights-management-from-the-azure-classic-portal"></a>Comment activer Azure Rights Management à partir du portail classique Azure
 
 >*S’applique à : Azure Information Protection*
 
@@ -44,7 +45,7 @@ Utilisez ces instructions si vous avez accès au portail Azure. Par exemple, vou
 
 **Statut de Rights Management** doit désormais afficher l’état **Actif** et l’option **ACTIVER** est remplacée par **DÉSACTIVER**.
 
-## Descriptions et valeurs d’état du service Rights Management dans le portail Azure Classic
+## <a name="rights-management-status-values-and-descriptions-in-the-azure-classic-portal"></a>Descriptions et valeurs d’état du service Rights Management dans le portail Azure Classic
 En plus de l'état **Actif** qui indique que le service Rights Management est activé et opérationnel, vous pouvez également voir les états **Inactif**, **Indisponible**ou **Non autorisé**.
 
 |Valeur d'état|Description|
@@ -54,10 +55,10 @@ En plus de l'état **Actif** qui indique que le service Rights Management est ac
 |**Indisponible**|Le service [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] est indisponible. Réessayez plus tard.|
 |**Non autorisé**|Vous n’êtes pas autorisé à consulter l’état du service [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]. Par exemple, votre compte est verrouillé ou vous êtes l'administrateur global du locataire sélectionné.|
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 Retour à [Activation d’Azure Rights Management](activate-service.md)
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

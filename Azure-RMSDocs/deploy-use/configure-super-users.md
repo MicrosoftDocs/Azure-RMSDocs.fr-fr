@@ -2,6 +2,7 @@
 title: "Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données | Azure Information Protection"
 description: "Découvrez et implémentez la fonctionnalité de super utilisateur du service Azure Rights Management d’Azure Information Protection. Grâce à celle-ci, les personnes et services autorisés peuvent toujours lire et inspecter les données qu’Azure Rights Management protège pour votre organisation. Cette capacité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: d2ae8df5895b1cf1985420be25abac36fe2689b7
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 70c74678ec0ef0b583b2784177520d0ea8a5b7e8
 
 
 ---
 
-# Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données
+# <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -59,7 +60,7 @@ L’extrait de journal suivant montre des exemples d’entrées lors de l’util
 
 `2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
 
-## Options de script pour les super utilisateurs
+## <a name="scripting-options-for-super-users"></a>Options de script pour les super utilisateurs
 Une personne désignée comme super utilisateur pour [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] devra souvent supprimer la protection de plusieurs fichiers, dans plusieurs emplacements. Bien qu’il soit possible de le faire manuellement, il est plus efficace (et souvent plus fiable) de le faire à l’aide d’un script. Pour cela, [téléchargez l’outil de protection RMS](http://www.microsoft.com/en-us/download/details.aspx?id=47256). Utilisez ensuite les applets de commande [Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) et [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx) en fonction des besoins.
 
 Pour plus d’informations sur ces applets de commande, voir [Applets de commande pour la protection RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
@@ -71,6 +72,6 @@ Pour plus d’informations sur ces applets de commande, voir [Applets de command
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

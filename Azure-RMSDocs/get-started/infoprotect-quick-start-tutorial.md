@@ -2,6 +2,7 @@
 title: "Didacticiel de démarrage rapide | Azure Information Protection"
 description: "Didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 30 minutes."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/04/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 4f5f7670ce1897a6436e511057fc714c839a8f00
-ms.openlocfilehash: a8c4003d8dbae5d33712860cd1f665de234db5a0
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 9f475892d7999fc3ff10a27d11986dec9cfa94cd
 
 
 ---
 
-# Didacticiel de démarrage rapide pour Azure Information Protection 
+# <a name="quick-start-tutorial-for-azure-information-protection"></a>Didacticiel de démarrage rapide pour Azure Information Protection 
 
 >*S’applique à : Azure Information Protection*
 
@@ -26,7 +27,7 @@ Ce didacticiel est destiné aux administrateurs et consultants en informatique, 
 
 Si vous rencontrez des problèmes pour effectuer ce didacticiel, pour utiliser Azure Information Protection, ou si vous souhaitez savoir ce que d’autres en pensent, rendez-vous sur le [site Azure Information Protection Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
-## Conditions préalables 
+## <a name="prerequisites"></a>Conditions préalables 
 Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 
 - Un abonnement qui inclut Azure Information Protection pour la classification, l’étiquetage et la protection. Ce didacticiel inclut certaines des fonctionnalités avancées, telles que la classification automatique des données avec des recommandations pour l’utilisateur et le site de suivi de document. Vérifiez que votre abonnement prend en charge ces fonctionnalités. Pour plus d’informations, consultez les [informations sur les abonnements](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) sur le site Azure Information Protection.
@@ -45,12 +46,12 @@ Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 C’est parti !
 
 >[!div class="step-by-step"]
-[&#187; Étape 1](infoprotect-tutorial-step1.md)
+[&#187;Étape 1](infoprotect-tutorial-step1.md)
 
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

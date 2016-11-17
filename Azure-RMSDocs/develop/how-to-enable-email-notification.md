@@ -3,6 +3,7 @@ title: "Activation des notifications par e-mail | Azure RMS"
 description: "Les notifications par e-mail permettent à un propriétaire de contenu protégé d’être averti quand un utilisateur accède à son contenu."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 77e2dfe7f2afb1e70de658850f83f86e9224aea6
-ms.openlocfilehash: 411c549cc865914c6e35ececad99da0a0d46c5d4
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 5da480834485d58028b366c8fbb9a53412cd7c6a
 
 
 ---
 
-# Comment : activer les notifications par e-mail
+# <a name="howto-enable-email-notification"></a>Comment : activer les notifications par e-mail
 
 Les notifications par e-mail permettent à un propriétaire de contenu protégé d’être averti quand un utilisateur accède à son contenu.
 
@@ -56,7 +57,7 @@ Le tableau suivant contient les champs de données de l’application (les paire
 |MS.Notify.TZSN|string|« Pacific Standard Time »|**Source** : TimeZoneInfo.Local.StandardName - Nom du fuseau horaire.<br><br>Cela doit correspondre au nom localisé du fuseau horaire Standard.|
 |MS.Notify.TZDN|string|« Pacific Daylight Time »|**Source** : TimeZoneInfo.Local.DaylightName - Nom du fuseau horaire de l’heure d’été.<br><br>Cela doit correspondre au nom localisé du fuseau horaire de l’heure d’été. Il peut être le même que le nom standard si le fuseau horaire ne prend pas en charge l’heure d’été.|
 
-## Rubriques connexes
+## <a name="related-topics"></a>Rubriques connexes
 
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
 - [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx)
@@ -67,6 +68,6 @@ Le tableau suivant contient les champs de données de l’application (les paire
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

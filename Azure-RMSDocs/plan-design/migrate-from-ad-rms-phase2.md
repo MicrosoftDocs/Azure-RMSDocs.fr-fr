@@ -2,6 +2,7 @@
 title: "Migration d’AD RMS vers Azure Information Protection - Phase 2 | Azure Information Protection"
 description: "Phase 2 de la migration d’AD RMS vers Azure Information Protection, couvrant l’étape 5 de la migration d’AD RMS vers Azure Information Protection."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/12/2016
 ms.topic: article
@@ -12,19 +13,19 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 25f7c2e5eb226fcf7c30026a37a767e559a522ad
-ms.openlocfilehash: 810e540e02db0b4a142471dd89e30663bd61f22c
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: ca8d2ccb68b96095fccf9d55b9cb9392d3a455ec
 
 
 ---
-# Phase de migration 2 - Configuration côté client
+# <a name="migration-phase-2-clientside-configuration"></a>Phase de migration 2 - Configuration côté client
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Office 365*
+>*S’applique à : Services AD RMS, Azure Information Protection, Office 365*
 
 Utilisez les informations suivantes pour la Phase 2 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent l’étape 5 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## Étape 5. Reconfigurer les clients pour utiliser Azure Information Protection
+## <a name="step-5-reconfigure-clients-to-use-azure-information-protection"></a>Étape 5. Reconfigurer les clients pour utiliser Azure Information Protection
 Pour des clients Windows :
 
 1.  [Téléchargez les scripts de migration](https://go.microsoft.com/fwlink/?LinkId=524619) :
@@ -76,7 +77,7 @@ Pour des clients Windows :
 
     -  Supprimez les enregistrements SRV DNS que vous avez créés lors du déploiement de l’ [extension d'appareil mobile AD RMS](http://technet.microsoft.com/library/dn673574.aspx).
 
-#### Modifications apportées par les scripts de migration
+#### <a name="changes-made-by-the-migration-scripts"></a>Modifications apportées par les scripts de migration
 Cette section décrit les modifications apportées par les scripts de migration. Vous pouvez utiliser ces informations uniquement à des fins de référence ou de dépannage, ou si vous voulez apporter personnellement ces modifications.
 
 CleanUpRMS_RUN_Elevated.cmd :
@@ -129,10 +130,10 @@ Redirect_OnPrem.cmd :
     > Vous pouvez trouver cette valeur en identifiant la valeur **RightsManagementServiceId** lorsque vous exécutez l'applet de commande [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) pour Azure RMS.
 
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 Pour poursuivre la migration, passez à la [Phase 3 : Configuration des services de prise en charge](migrate-from-ad-rms-phase3.md).
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

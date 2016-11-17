@@ -2,6 +2,7 @@
 title: Configuration requise pour Azure Information Protection | Azure Information Protection
 description: "Identifiez les critères de déploiement d’Azure Information Protection pour votre organisation."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/19/2016
 ms.topic: get-started-article

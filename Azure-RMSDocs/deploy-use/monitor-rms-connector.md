@@ -2,6 +2,7 @@
 title: "Surveiller le connecteur Azure Rights Management | Azure Information Protection"
 description: "Informations vous permettant de surveiller le connecteur et l’utilisation du service Azure Rights Management d’Azure Information Protection par votre organisation."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article
@@ -12,19 +13,19 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: af75705e8c256811d1816c2ad52e42e98b4db503
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 65d9e0bb46238d9fda31b8fb47e8e4368d96e1b2
 
 
 ---
 
-# Surveiller le connecteur Azure Rights Management
+# <a name="monitor-the-azure-rights-management-connector"></a>Surveiller le connecteur Azure Rights Management
 
->*S’applique à : Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
+>*S’applique à : Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 Après avoir installé et configuré le connecteur RMS, vous pouvez utiliser les méthodes et les informations suivantes pour surveiller le connecteur et l’utilisation du service Azure Rights Management d’Azure Information Protection par votre organisation.
 
-## Entrées du journal des événements de l’application
+## <a name="application-event-log-entries"></a>Entrées du journal des événements de l’application
 
 Le connecteur RMS utilise le journal des événements de l’application pour enregistrer des entrées pour le **connecteur Microsoft RMS**. 
 
@@ -41,7 +42,7 @@ Comme avec toutes les entrées de journal des événements, examinez le message 
 
 Outre la vérification du journal des événements quand vous déployez le connecteur pour la première fois, recherchez régulièrement les avertissements et les erreurs. Par exemple, le connecteur peut fonctionner comme prévu initialement, mais les autres administrateurs peuvent modifier les configurations dépendantes. Par exemple, un autre administrateur modifie la configuration du serveur proxy web et les serveurs du connecteur RMS ne peuvent plus se connecter à Internet (Erreur 3001) ou il supprime un compte d’ordinateur d’un groupe que vous avez autorisé à utiliser le connecteur (Avertissement 2001).
 
-### ID du journal des événements et descriptions
+### <a name="event-log-ids-and-descriptions"></a>ID du journal des événements et descriptions
 
 Les sections suivantes indiquent les ID d’événement possibles, des descriptions et des informations supplémentaires.
 
@@ -73,7 +74,7 @@ Cet événement est consigné quand un compte à partir d’un serveur local se 
 
 Information **1003**
 
-**La connexion depuis le client répertorié ci-dessous est passée d’une connexion non sécurisée (HTTP) à une connexion sécurisée (HTTPS).**
+**La connexion à partir du client répertorié ci-dessous est passée d’une connexion non sécurisée (HTTP) à une connexion sécurisée (HTTPS).**
 
 Cet événement est consigné quand un serveur local change sa connexion au connecteur RMS de HTTP (moins sécurisé) à HTTPS (plus sécurisé). Le SID, le nom du compte et le nom de l’ordinateur effectuant la connexion figurent dans le message de l’événement.
 
@@ -113,7 +114,7 @@ Le message d’événement contient des informations sur le compte et l’ordina
 
 Avertissement **2002**
 
-**La connexion depuis le client répertorié ci-dessous utilise une connexion non sécurisée (HTTP).**
+**La connexion à partir du client répertorié ci-dessous utilise une connexion non sécurisée (HTTP).**
 
 Cet événement est consigné quand un serveur local se connecte correctement au connecteur RMS, mais que la connexion utilise le protocole HTTP (moins sécurisé) au lieu du protocole HTTPS (plus sécurisé). Un événement est consigné par compte, plutôt que par connexion. Cet événement est redéclenché si le compte revient à HTTP après avoir basculé vers HTTPS.
 
@@ -153,13 +154,13 @@ Cet événement est consigné si le connecteur RMS ne peut pas télécharger la 
 
 ----
 
-## Compteurs de performances
+## <a name="performance-counters"></a>Compteurs de performances
 
 Quand vous installez le connecteur RMS, il crée automatiquement les compteurs de performances du **connecteur Microsoft Rights Management** qui sont utiles pour surveiller les performances de l’utilisation du service Azure Rights Management par le biais du connecteur. Par exemple, si vous observez régulièrement des retards lors de la protection des documents ou des e-mails, ou lors de l’ouverture de documents ou e-mails protégés, les compteurs de performances peuvent vous aider à déterminer si le retard est dû au temps de traitement sur le connecteur, au temps de traitement dans le service Azure Rights Management ou au réseau. Pour vous permettre d’identifier l’origine du retard, recherchez les compteurs qui incluent des valeurs moyennes pour le **Temps de traitement du connecteur**, le **Temps de réponse du service** et le **Temps de réponse du connecteur**. Par exemple : **Temps de réponse moyen du connecteur pour les demandes de licences par lot réussies**.
 
 Si vous avez récemment ajouté des comptes de serveur pour utiliser le connecteur, le compteur à consulter est **Durée depuis la dernière mise à jour de la stratégie d’autorisation** pour vérifier que le connecteur a téléchargé la liste depuis que vous l’avez mise à jour, ou déterminer si vous devez attendre un peu plus longtemps (jusqu’à 15 minutes).
 
-## RMS Analyzer
+## <a name="rms-analyzer"></a>RMS Analyzer
 
 Vous pouvez utiliser l’outil Rights Management Services Analyzer pour vous aider à surveiller l’intégrité du connecteur et à identifier les problèmes de configuration.
 
@@ -167,7 +168,7 @@ Si vous n’avez pas encore téléchargé cet outil, vous pouvez le faire à par
 
 Pour des informations et des instructions supplémentaires sur cet outil, consultez les sections **Détails** et **Instructions d’installation** dans la page de téléchargement.
 
-## Journalisation
+## <a name="logging"></a>Journalisation
 
 La journalisation de l’utilisation vous aide à identifier quand les e-mails et les documents sont protégés et consommés. Quand vous utilisez le connecteur RMS, le champ ID d’utilisateur dans les journaux contient le nom principal de service **Aadrm_S-1-7-0** qui est créé automatiquement pour le connecteur RMS.
 
@@ -192,6 +193,6 @@ Si vous avez besoin d’une journalisation plus détaillée à des fins de diagn
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

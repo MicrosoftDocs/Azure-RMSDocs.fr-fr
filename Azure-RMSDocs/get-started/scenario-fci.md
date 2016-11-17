@@ -2,6 +2,7 @@
 title: "Scénario - Protéger les fichiers situés sur un partage de serveur de fichiers | Azure Information Protection"
 description: "Ce scénario et la documentation utilisateur associée utilisent la protection Azure Rights Management pour protéger en bloc tous les fichiers situés sur un serveur de fichiers pour vous assurer que seuls les employés de votre organisation peuvent y accéder, même s’ils sont copiés et enregistrés sur un stockage qui n’est pas sous le contrôle de votre service informatique ou envoyés par e-mail à d’autres utilisateurs."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 31957f12d363746a7a48580e043b477ab09cb823
 
 
 ---
 
-# Scénario - Protéger les fichiers situés sur un partage de serveur de fichiers
+# <a name="scenario-protect-files-on-a-file-server-share"></a>Scénario - Protéger les fichiers situés sur un partage de serveur de fichiers
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -34,23 +35,23 @@ Les instructions conviennent pour l’ensemble des situations suivantes :
 
 -   La protection de tous les fichiers est réappliquée selon une planification, pour s’assurer que les modifications apportées aux modèles de stratégie de droits sont appliquées aux fichiers protégés.
 
-## Instructions de déploiement
+## <a name="deployment-instructions"></a>Instructions de déploiement
 ![Instructions destinées aux administrateurs pour le déploiement rapide Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Vérifiez que les conditions suivantes sont réunies, puis suivez les instructions pour mener à bien les procédures associées avant de poursuivre avec la documentation utilisateur.
 
-## Conditions requises pour ce scénario
+## <a name="requirements-for-this-scenario"></a>Conditions requises pour ce scénario
 Pour pouvoir appliquer les instructions de ce scénario, les conditions suivantes doivent être réunies :
 
 |Condition requise|Si vous avez besoin d'informations supplémentaires|
 |---------------|--------------------------------|
-|Azure Rights Management est activé|[Activation d'Azure Rights Management](../deploy-use/activate-service.md)|
+|Azure Rights Management est activé|[Activation d’Azure Rights Management](../deploy-use/activate-service.md)|
 |Vous avez synchronisé vos comptes d'utilisateurs Active Directory locaux avec Azure Active Directory ou Office 365, y compris leurs adresses électroniques. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et Azure Rights Management.|[Préparation d’Azure Information Protection](../plan-design/prepare.md)|
 |Une des causes suivantes :<br /><br />- Pour utiliser un modèle par défaut pour tous les utilisateurs, consultez : Vous n’avez pas archivé le modèle par défaut &lt;nom de l’organisation&gt; - Confidentiel<br /><br />- Pour utiliser un modèle personnalisé pour des utilisateurs spécifiques, consultez : Vous avez créé et publié ce modèle personnalisé|[Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |L'application de partage Rights Management est déployée sur les ordinateurs des utilisateurs qui exécutent Windows|[Déploiement automatique de l'application de partage Microsoft Rights Management](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Vous avez téléchargé l’outil Protection RMS et configuré les conditions préalables pour Azure RMS|Pour obtenir des instructions relatives au téléchargement de l’outil et aux conditions préalables : [Applets de commande de Protection RMS](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Pour configurer d’autres conditions préalables pour Azure RMS, telles que le compte du principal du service : [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
-### Configuration d’un serveur de fichiers pour protéger tous les fichiers à l’aide d’Azure RMS et des Outils de gestion de ressources avec l’infrastructure de classification des fichiers
+### <a name="configuring-a-file-server-to-protect-all-files-by-using-azure-rms-and-file-server-resource-manager-with-file-classification-infrastructure"></a>Configuration d’un serveur de fichiers pour protéger tous les fichiers à l’aide d’Azure RMS et des Outils de gestion de ressources avec l’infrastructure de classification des fichiers
 
 1.  Démarrez une session Windows PowerShell. Il est inutile d’exécuter cette session en tant qu’administrateur.
 
@@ -72,7 +73,7 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
 
     Ces instructions incluent un script Windows PowerShell que vous spécifiez pour s’exécuter comme un exécutable personnalisé dans les Outils de gestion de ressources pour serveur de fichiers. Les instructions incluent également comment vérifier que les fichiers sont protégés par Azure Rights Management.
 
-## Instructions de la documentation utilisateur
+## <a name="user-documentation-instructions"></a>Instructions de la documentation utilisateur
 Si les fichiers que vous protégez sont uniquement des fichiers Office, il se peut que vous n’ayez à fournir aucune instruction concernant les fichiers protégés aux utilisateurs. Lorsque des utilisateurs autorisés ouvrent ces documents, ils le font comme d’habitude dans Office, à la seule différence qu’ils peuvent être invités à s’authentifier. Par ailleurs, ils verront probablement une barre d’informations en haut du document qui les informe que le document est protégé.
 
 Si les noms de fichiers protégés comportent une extension **.ppdf** ou s’il s’agit d’un fichier texte ou image protégé (dont l’extension est, par exemple, **.ptxt** ou.**pjpg**), cela signifie qu’ils sont désormais en lecture seule et ne peuvent pas être modifiés. Les utilisateurs peuvent les afficher à l’aide de la visionneuse d’application de partage RMS, qui se charge automatiquement pour ces types de fichiers. Ces fichiers sont protégés en mode natif par Azure RMS et appliquent tous les paramètres de stratégie à partir du modèle que vous avez appliqué à l’exception des droits d’utilisation, car le fichier lui-même est en lecture seule. Sauf si vous savez que vous prévoyez de protéger ces types de fichiers, il est peu probable que vous ayez besoin d’instructions utilisateur pour ce scénario. Toutefois, avertissez votre support technique qu’il devra peut-être expliquer aux utilisateurs pourquoi ces fichiers ne peuvent pas être modifiés.
@@ -97,7 +98,7 @@ L’exemple de documentation illustre la façon dont ces instructions se présen
 
 ![Modèle de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Procédure de modification de &lt;type de fichier&gt; à partir du &lt;partage de serveur de fichiers&gt;
+### <a name="how-to-edit-lttype-of-filegt-from-the-ltfile-server-sharegt"></a>Procédure de modification de &lt;type de fichier&gt; à partir du &lt;partage de serveur de fichiers&gt;
 
 1.  Double-cliquez sur le fichier pour l’ouvrir. Il se peut que vous soyez invité à fournir vos informations d’identification.
 
@@ -117,16 +118,16 @@ Périodiquement, le fichier sera de nouveau protégé, ce qui ajoutera une nouve
 
 -   Pour plus d'informations :
 
-    -   [Afficher et utiliser des fichiers protégés](../rms-client/sharing-app-view-use-files.md)
+    -   [Afficher et utiliser des fichier protégés](../rms-client/sharing-app-view-use-files.md)
 
 -   Contactez le support technique :
 
     -   *&lt;coordonnées&gt;*
 
-### Exemple de documentation utilisateur personnalisée
+### <a name="example-customized-user-documentation"></a>Exemple de documentation utilisateur personnalisée
 ![Exemple de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### Procédure de modification de dessins de CAO à partir du partage ProjectNextGen
+#### <a name="how-to-edit-cad-drawings-from-the-projectnextgen-share"></a>Procédure de modification de dessins de CAO à partir du partage ProjectNextGen
 
 1.  Double-cliquez sur le fichier pour l’ouvrir. Il se peut que vous soyez invité à fournir vos informations d’identification.
 
@@ -155,6 +156,6 @@ Périodiquement, le fichier sera de nouveau protégé, ce qui ajoutera une nouve
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

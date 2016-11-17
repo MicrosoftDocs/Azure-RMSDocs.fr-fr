@@ -3,6 +3,7 @@ title: "Modifier les autorisations des fichiers qui ont été protégés par Rig
 description: "Quand vous protégez un fichier avec Rights Management, vous pouvez modifier les autorisations en le reprotégeant, puis en spécifiant tous les utilisateurs qui doivent y avoir accès et quelles autorisations vous souhaitez leur accorder."
 keywords: 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -13,13 +14,13 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 99dcbeb68cbbe363cfd1e6ded07882f01621e438
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
 
 
 ---
 
-# Modifier les autorisations des fichiers qui ont été protégés par Rights Management
+# <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Modifier les autorisations des fichiers qui ont été protégés par Rights Management
 
 >*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
@@ -38,7 +39,7 @@ Par exemple, si quelqu’un d’autre a protégé le fichier à l’aide de l’
 
 Si vous souhaitez supprimer complètement toutes les autorisations pour que le fichier ne soit plus protégé, consultez [Supprimer la protection d’un fichier](sharing-app-remove-protection.md).
 
-## Pour reprotéger un fichier sur place
+## <a name="to-reprotect-a-file-inplace"></a>Pour reprotéger un fichier sur place
 
 1.  Dans l'Explorateur de fichiers, sélectionnez un fichier à protéger. Cliquez avec le bouton droit, sélectionnez **Protéger avec RMS**, puis sélectionnez **Protéger sur place**. Exemple :
 
@@ -71,7 +72,7 @@ Si vous souhaitez supprimer complètement toutes les autorisations pour que le f
 >     Lorsque vous vous inscrivez, utilisez l'adresse de messagerie de votre organisation plutôt qu'une adresse personnelle. Si vous vous inscrivez parce que vous reçu une pièce protégée jointe à un message électronique, utilisez l'adresse de messagerie à laquelle ce message a été envoyé.
 > -   Pour plus d’informations, consultez [RMS for individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## Pour reprotéger un fichier que vous avez envoyé par e-mail
+## <a name="to-reprotect-a-file-that-you-have-emailed"></a>Pour reprotéger un fichier que vous avez envoyé par e-mail
 
 Si vous souhaitez modifier les autorisations pour un fichier que vous avez envoyé par e-mail :
 
@@ -84,18 +85,18 @@ Si vous souhaitez modifier les autorisations pour un fichier que vous avez envoy
     Pour révoquer un fichier que vous avez envoyé par e-mail, consultez [Suivre et révoquer vos documents](sharing-app-track-revoke.md).
 
 
-## Exemples et autres instructions
+## <a name="examples-and-other-instructions"></a>Exemples et autres instructions
 Pour obtenir des exemples et des instructions concernant l’utilisation de l’application de partage Rights Management, voir les sections suivantes dans le Guide d’utilisation de l’application de partage Rights Management :
 
 -   [Exemples d’utilisation de l’application de partage RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
+-   [Que voulez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

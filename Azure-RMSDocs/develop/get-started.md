@@ -3,6 +3,7 @@ title: Prise en main | Azure RMS
 description: "Une approche rapide pour développer une première application se fait via les guides de configuration de l’environnement de développement pour chacun des systèmes d’exploitation/plateformes."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: d4373ed4a0909c5c0c4dceb51f98ace1977cb6f7
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 6e05b2c7444b5440d80bf5c4764b5ada554bbdc7
 
 
 ---
 
-# Prise en main
+# <a name="get-started"></a>Prise en main
 
 Pour cette version de Microsoft Rights Management SDK 4.2, une approche rapide pour développer une première application se fait via les guides de configuration de l’environnement de développement pour chacun des systèmes d’exploitation/plateformes. Pour commencer à créer vos applications avec gestion des droits, procédez comme suit :
 
@@ -39,8 +40,8 @@ Pour cette version de Microsoft Rights Management SDK 4.2, une approche rapide 
 
   Les guides de configuration vous guident dans la configuration de votre environnement de développement pour la création de vos propres applications.
   - [Configuration pour Android](android-sdk.md)
-  - [Configuration pour iOS et OS X](ios-sdk.md)          
-  - [Configuration pour Linux](linux-setup.md)              
+  - [Installation iOS et OS X](ios-sdk.md)          
+  - [Installation Linux](linux-setup.md)              
   - [Windows Phone](windows-phone-apps.md)     
   - [Applications du Windows Store](winrt-sdk.md)
 
@@ -56,6 +57,6 @@ Pour cette version de Microsoft Rights Management SDK 4.2, une approche rapide 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

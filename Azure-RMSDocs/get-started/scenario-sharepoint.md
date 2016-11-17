@@ -2,6 +2,7 @@
 title: "Scénario : garder le contrôle des documents stockés dans SharePoint | Azure Information Protection"
 description: "Ce scénario et la documentation utilisateur associée s’appuient sur la protection Azure Rights Management pour s’assurer que les documents Office stockés dans SharePoint restent sous votre contrôle en utilisant des bibliothèques protégées."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
-ms.openlocfilehash: e0e6442e077d6899cbbf88ae2889908e93592815
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 371e566a166dad74b55266db23e034f926942a26
 
 
 ---
 
-# Scenario : garder le contrôle des documents stockés dans SharePoint
+# <a name="scenario-retain-control-of-documents-stored-in-sharepoint"></a>Scenario : garder le contrôle des documents stockés dans SharePoint
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -32,23 +33,23 @@ Les instructions conviennent pour l’ensemble des situations suivantes :
 
 -   Les employés n’ont pas besoin de partager ces documents avec des personnes extérieures à votre organisation.
 
-## Instructions de déploiement
+## <a name="deployment-instructions"></a>Instructions de déploiement
 ![Instructions destinées aux administrateurs pour le déploiement rapide Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Vérifiez que les conditions suivantes sont remplies et que les procédures associées sont en place avant de poursuivre avec la documentation utilisateur.
 
-## Conditions requises pour ce scénario
+## <a name="requirements-for-this-scenario"></a>Conditions requises pour ce scénario
 Pour pouvoir appliquer ce scénario, les éléments suivants doivent être en place :
 
 |Condition requise|Si vous avez besoin d'informations supplémentaires|
 |---------------|--------------------------------|
 |Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory|[Préparation d’Azure Information Protection](../plan-design/prepare.md)|
-|Azure Rights Management est activé|[Activation d'Azure Rights Management](../deploy-use/activate-service.md)|
+|Azure Rights Management est activé|[Activation d’Azure Rights Management](../deploy-use/activate-service.md)|
 |Si vous utilisez SharePoint Server : Déployez le connecteur RMS et configurez-le pour SharePoint|[Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
-|Configurer des autorisations pour le site SharePoint à protéger|[Gérer les autorisations pour une liste, une bibliothèque, un dossier, un document ou un élément de liste](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Application de la Gestion des droits relatifs à l'information à une liste ou à une bibliothèque](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
-|Configurez SharePoint pour IRM et les bibliothèques protégées|[Configuration de la gestion des droits relatifs à l'information dans le centre d'administration SharePoint](https://support.office.com/en-us/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)<br /><br />[Application de la Gestion des droits relatifs à l'information à une liste ou à une bibliothèque](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
+|Configurer des autorisations pour le site SharePoint à protéger|[Gérer les autorisations pour une liste, une bibliothèque, un dossier, un document ou un élément de liste](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Activation de la gestion des droits relatifs à l'information pour une liste ou une bibliothèque](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
+|Configurez SharePoint pour IRM et les bibliothèques protégées|[Configuration de la gestion des droits relatifs à l'information dans le centre d'administration SharePoint](https://support.office.com/en-us/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)<br /><br />[Activation de la gestion des droits relatifs à l'information pour une liste ou une bibliothèque](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 
-### Pour configurer la bibliothèque SharePoint pour les paramètres IRM
+### <a name="to-configure-the-sharepoint-library-for-irm-settings"></a>Pour configurer la bibliothèque SharePoint pour les paramètres IRM
 
 1.  Après avoir configuré SharePoint pour une utilisation du service IRM, accédez à la bibliothèque SharePoint à protéger avec Azure RMS. Dans la page **Paramètres** &gt; **Information Rights Management (IRM)** du site, après avoir sélectionné **Restreindre les autorisations sur cette bibliothèque lors du téléchargement** et spécifié un titre de stratégie pour les administrateurs et une description de la stratégie pour les utilisateurs, cliquez sur **AFFICHER LES OPTIONS**.
 
@@ -60,7 +61,7 @@ Pour pouvoir appliquer ce scénario, les éléments suivants doivent être en pl
 
         Sans cette option, seuls les utilisateurs qui ont accès à la bibliothèque SharePoint pourront collaborer sur ces documents et seulement en téléchargeant les documents directement à partir de SharePoint. Cette restriction convient dans de nombreux cas.
 
-## Instructions de la documentation utilisateur
+## <a name="user-documentation-instructions"></a>Instructions de la documentation utilisateur
 Il n’existe aucune instruction de procédure à communiquer aux utilisateurs pour ce scénario, car les bibliothèques protégées ne nécessitent aucune action spéciale de leur part. Les documents sont automatiquement protégés lors du téléchargement en fonction des autorisations définies par un administrateur SharePoint pour le site. Cependant, informez les utilisateurs de cette modification pour qu’ils sachent à quoi s’attendre et portez à la connaissance de votre support technique les bibliothèques qui sont protégées et en quoi cela peut limiter l’utilisation des documents. Par exemple, en raison des limitations actuelles, ces documents peuvent être affichés, mais pas modifiés avec des appareils mobiles. Si vous avez configuré la protection de groupe, portez à la connaissance des utilisateurs les groupes qui peuvent accéder et modifier des documents en dehors de SharePoint.
 
 En utilisant le modèle suivant, copiez et collez l’annonce dans une communication à destination de vos utilisateurs finaux, puis apportez ces modifications en les adaptant à votre environnement :
@@ -77,34 +78,34 @@ L’exemple de documentation illustre la façon dont cette annonce se présente 
 
 ![Modèle de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Annonce de l’équipe informatique : Modifications apportées au site &lt;nom de la bibliothèque SharePoint&gt;
+### <a name="it-announcement-changes-to-the-ltname-of-sharepoint-librarygt-site"></a>Annonce de l’équipe informatique : Modifications apportées au site &lt;nom de la bibliothèque SharePoint&gt;
 Le site SharePoint **&lt;nom de la bibliothèque SharePoint&gt;** est maintenant configuré pour une collaboration sécurisée. Désormais, seuls les membres du groupe &lt;nom du groupe&gt; peuvent ouvrir ces documents à partir de ce site, même si vous les enregistrez localement ou les envoyez par e-mail à quelqu’un d’autre. L’exception est que vous pouvez partager les documents avec les membres du groupe &lt;nom du groupe&gt; après les avoir téléchargés, &lt;raison pour laquelle ce groupe dispose des autorisations d’accès qui lui permettent de collaborer sur les fichiers, mais pas en utilisant la bibliothèque SharePoint&gt;. Lorsque vous modifiez un fichier, une bannière d’information de couleur jaune s’affiche en haut du document, indiquant qu’il est protégé et qui peut y accéder.
 
 Cette modification permet de conserver les données confidentielles de notre entreprise hors de portée de personnes qui ne sont pas supposées y avoir accès. Si vous utilisez un appareil mobile pour accéder à ces documents protégés, vous pouvez les consulter, mais vous devez utiliser un appareil de bureau pour les modifier.
 
 Vous ne pouvez pas charger des documents sur le site &lt;nom du site SharePoint&gt; s’ils ne prennent pas en charge la collaboration sécurisée.
 
-**Vous avez besoin d'aide ?**
+**Vous avez besoin d'aide ?**
 
 -   Contactez le support technique : &lt;coordonnées&gt;
 
-### Exemple de documentation utilisateur
+### <a name="example-user-documentation"></a>Exemple de documentation utilisateur
 ![Exemple de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### Annonce de l’équipe informatique : Modifications du site de rapports et de prévisions de ventes
+#### <a name="it-announcement-changes-to-the-sales-forecasts-and-reports-site"></a>Annonce de l’équipe informatique : Modifications du site de rapports et de prévisions de ventes
 Le site SharePoint **Rapports et prévisions de ventes**est désormais configuré pour une collaboration sécurisée. À présent, seuls les membres de notre équipe Vente et Marketing peuvent ouvrir les documents provenant de ce site, même si vous les enregistrez localement ou les envoyez par e-mail à quelqu’un d’autre. L’exception est qu’après avoir téléchargé des documents, vous pouvez les partager avec des membres de l’équipe Finances afin qu’ils puissent en extraire les chiffres prévisionnels mensuels. Lorsque vous modifiez un fichier, une bannière d’information de couleur jaune s’affiche en haut du document, indiquant qu’il est protégé et qui peut y accéder.
 
 Cette modification permet de conserver les données confidentielles de notre entreprise hors de portée de personnes qui ne sont pas supposées y avoir accès. Si vous utilisez un appareil mobile pour accéder à ces documents protégés, vous pouvez les consulter, mais vous devez utiliser un appareil de bureau pour les modifier.
 
 Vous ne pouvez pas charger des documents sur le site Rapports et prévisions de ventes si celui-ci ne prend pas en charge la collaboration sécurisée.
 
-**Vous avez besoin d’aide ?**
+**Vous avez besoin d'aide ?**
 
 -   Contactez le support technique : helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

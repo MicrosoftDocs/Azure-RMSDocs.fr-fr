@@ -2,6 +2,7 @@
 title: Application de partage RMS pour Windows et les plateformes mobiles | Azure Information Protection
 description: "Découvrez comment l’application de partage RMS prend en charge Azure RMS. L’application de partage RMS est une application téléchargeable gratuitement qui est nécessaire pour prendre en charge Office 2010, mais également recommandée pour les ordinateurs Windows et Mac, ainsi que les appareils mobiles."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/03/2016
 ms.topic: article

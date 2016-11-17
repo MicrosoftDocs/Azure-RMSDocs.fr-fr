@@ -3,6 +3,7 @@ title: "Développement de votre application | Azure RMS"
 description: "Instructions de développement d’une application à l’aide de RMS SDK 2.1."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 11/01/2016
 ms.topic: article

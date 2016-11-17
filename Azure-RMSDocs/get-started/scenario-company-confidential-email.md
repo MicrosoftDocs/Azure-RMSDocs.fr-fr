@@ -2,6 +2,7 @@
 title: "Scénario - Envoyer un e-mail confidentiel de l’entreprise | Azure Information Protection"
 description: "Ce scénario et la documentation utilisateur associée utilisent la protection Azure Rights Management afin que n’importe quel utilisateur de l’organisation puisse envoyer de manière sécurisée des communications par e-mail qui ne peuvent pas être lues à l’extérieur de l’organisation."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/10/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
-ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
 
 
 ---
 
-# Scénario - Envoyer un e-mail confidentiel de l’entreprise
+# <a name="scenario-send-a-companyconfidential-email"></a>Scénario - Envoyer un e-mail confidentiel de l’entreprise
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -39,24 +40,24 @@ Les instructions conviennent pour l’ensemble des situations suivantes :
 
 -   Les utilisateurs doivent sélectionner manuellement le modèle à partir de leur client de messagerie.
 
-## Instructions de déploiement
+## <a name="deployment-instructions"></a>Instructions de déploiement
 ![Instructions destinées aux administrateurs pour le déploiement rapide Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Vérifiez que les conditions suivantes sont remplies avant de poursuivre avec la documentation utilisateur.
 
-## Conditions requises pour ce scénario
+## <a name="requirements-for-this-scenario"></a>Conditions requises pour ce scénario
 Pour pouvoir appliquer les instructions de ce scénario, les conditions suivantes doivent être réunies :
 
 |Condition requise|Si vous avez besoin d'informations supplémentaires|
 |---------------|--------------------------------|
 |Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory|[Préparation d’Azure Information Protection](../plan-design/prepare.md)|
-|Votre clé de locataire Azure Information Protection est gérée par Microsoft ; vous n’utilisez pas BYOK|[Planification et implémentation de la clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md)|
-|Azure Rights Management est activé|[Activation d'Azure Rights Management](../deploy-use/activate-service.md)|
+|Votre clé de locataire Azure Information Protection est gérée par Microsoft ; vous n’utilisez pas BYOK|[Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md)|
+|Azure Rights Management est activé|[Activation d’Azure Rights Management](../deploy-use/activate-service.md)|
 |Une des causes suivantes :<br /><br />- Exchange Online est activé pour Azure Rights Management<br /><br />- Le connecteur RMS est installé et configuré pour Exchange sur site|Pour Exchange Online : consultez la section **Exchange Online : configuration d’IRM** dans [Office 365 : Configuration pour les clients et les services en ligne](../deploy-use/configure-office365.md).<br /><br />Pour Exchange sur site : [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
 |Vous n’avez pas archivé le modèle Azure Rights Management par défaut **&lt;organisation&gt; - confidentiel**. Ou bien, vous avez configuré un modèle personnalisé à cette fin, car vous avez besoin des paramètres plus restrictifs ou seul un sous-ensemble d’utilisateurs de l’organisation doit être en mesure de lire les e-mails protégés.|[Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md)<br /><br />Conseil : si vous avez besoin de paramètres de stratégie d’utilisation plus restrictifs pour tous les utilisateurs de l’organisation, copiez et modifiez un des modèles par défaut, plutôt que de créer un nouveau modèle.<br /><br />Les modèles mis à jour ne sont pas immédiatement actualisés pour les clients de messagerie de ce scénario. Pour plus d’informations, consultez l’article [Actualisation des modèles pour les utilisateurs](../deploy-use/refresh-templates.md).|
 |Les utilisateurs qui envoient l’e-mail protégé disposent d’Outlook 2013, Outlook 2016 ou d’Outlook Web Access.<br /><br />Les utilisateurs qui reçoivent l’e-mail ont un client de messagerie prenant en charge Azure Rights Management.|Vous pouvez utiliser Outlook 2010, toutefois vous devez [installer l’application de partage Rights Management pour Windows](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) et adapter les instructions de l’utilisateur en conséquence.<br /><br />Pour obtenir la liste des clients de messagerie prenant en charge Azure Rights Management, consultez la colonne **Courrier électronique** du tableau dans [Applications prenant en charge la protection des données Azure Rights Management](../get-started/requirements-applications.md).|
 
-## Instructions de la documentation utilisateur
+## <a name="user-documentation-instructions"></a>Instructions de la documentation utilisateur
 En utilisant le modèle suivant, copiez et collez les instructions utilisateur dans une communication à destination de vos utilisateurs finaux, puis apportez ces modifications en les adaptant à votre environnement :
 
 1.  Remplacez toutes les instances de *&lt;nom de l’organisation&gt;* par le nom de votre organisation.
@@ -91,7 +92,7 @@ L’exemple de documentation illustre la façon dont ces instructions se présen
 
 ![Modèle de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook
+### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook
 
 1.  Dans Outlook, créez un message, ajoutez les pièces jointes que vous souhaitez inclure, puis sélectionnez les utilisateurs ou les groupes dans *&lt;nom de l’organisation&gt;*.
 
@@ -101,7 +102,7 @@ L’exemple de documentation illustre la façon dont ces instructions se présen
 
 3.  Envoyez le message.
 
-### Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook Web App
+### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook Web App
 
 1.  Dans Outlook Web App, créez un message, ajoutez les pièces jointes que vous souhaitez inclure, puis sélectionnez les utilisateurs ou les groupes de *&lt;nom de l’organisation&gt;* dans le carnet d’adresses.
 
@@ -121,10 +122,10 @@ Les destinataires de votre message pourront le transférer à d’autres personn
 
     -   *&lt;coordonnées&gt;*
 
-### Exemple de documentation utilisateur personnalisée
+### <a name="example-customized-user-documentation"></a>Exemple de documentation utilisateur personnalisée
 ![Exemple de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook
+#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook
 
 1.  Dans Outlook, créez un nouvel e-mail, ajoutez les pièces jointes que vous souhaitez inclure, puis sélectionnez les utilisateurs ou les groupes VanArsdel à partir du carnet d’adresses.
 
@@ -134,7 +135,7 @@ Les destinataires de votre message pourront le transférer à d’autres personn
 
 3.  Envoyez le message.
 
-#### Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook Web App
+#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook Web App
 
 1.  Dans Outlook Web App, créez un nouvel e-mail, ajoutez les pièces jointes que vous souhaitez inclure, puis sélectionnez les utilisateurs ou les groupes VanArsdel à partir du carnet d’adresses.
 
@@ -152,11 +153,11 @@ Les destinataires de votre e-mail pourront le transférer à d’autres personne
 
 -   Contactez le support technique :
 
-    -   Adresse électronique : helpdesk@vanarsdelltd.com
+    -   E-mail : helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "Notes sur le déploiement du client RMS | Azure Information Protection"
 description: "Informations sur la redistribution, l’installation, les systèmes d’exploitation pris en charge, les paramètres de Registre et la découverte du service pour le client du service Rights Management (client RMS) version 2, également appelé client MSIPC."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/28/2016
 ms.topic: article

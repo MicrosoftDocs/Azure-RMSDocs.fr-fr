@@ -2,6 +2,7 @@
 title: "Préparation pour la protection Azure Rights Management | Azure Information Protection"
 description: "Vérifiez que tout est en place pour utiliser le service Azure Rights Management afin de permettre à votre organisation de protéger les documents et les e-mails."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 46db6ef6f65a06c42909252cf99884cc5eaaefe4
-ms.openlocfilehash: 5a3df821c70b8cd308f8fb8cc94ee0cff069a3d9
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: facb9bd0d21551e9170cd9be6e9abda24766f9fd
 
 
 ---
 
-# Préparation d’Azure Information Protection
+# <a name="preparing-for-azure-information-protection"></a>Préparation d’Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -32,7 +33,7 @@ Avant de déployer Azure Information Protection dans votre organisation, vérifi
 
     Si vous avez Exchange Online, vous pouvez créer et utiliser des groupes à extension messagerie à l’aide du Centre d’administration Exchange. Si vous disposez d’AD DS et synchronisez sur Azure AD, vous pouvez créer et utiliser des groupes à extension messagerie qui sont des groupes de sécurité ou de distribution.
 
-## Activer le service Rights Management pour la protection des données
+## <a name="activate-the-rights-management-service-for-data-protection"></a>Activer le service Rights Management pour la protection des données
 Lorsque vous êtes prêt à commencer à protéger des documents et des e-mails, activez le service Rights Management pour activer cette technologie. Pour plus d’informations, consultez [Activation d’Azure Rights Management](../deploy-use/activate-service.md).
 
 
@@ -40,6 +41,6 @@ Lorsque vous êtes prêt à commencer à protéger des documents et des e-mails,
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

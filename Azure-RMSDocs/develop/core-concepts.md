@@ -3,6 +3,7 @@ title: "Aide et terminologie pour les développeurs | Azure RMS"
 description: "Le but principal de RMS SDK 4.2 est de vous aider à créer de la façon la plus simple possible des applications compatibles AD RMS tirant parti de la protection des informations AD RMS."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,7 +21,7 @@ ms.openlocfilehash: 2ac4ca3e505d78758a01516f66f1e5f4ff4b17b6
 
 ---
 
-# Aide et terminologie pour les développeurs
+# <a name="developer-guidance-and-terms"></a>Aide et terminologie pour les développeurs
 Le but principal de Microsoft Rights Management Services (RMS) SDK 4.2 est de vous aider à créer de la façon la plus simple possible des applications compatibles AD RMS tirant parti d’Active Directory Rights Management Services (AD RMS).
 
 Les rubriques suivantes sont destinées à prendre en charge votre processus de conception pour le développement d’applications compatibles RMS.

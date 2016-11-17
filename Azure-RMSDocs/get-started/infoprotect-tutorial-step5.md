@@ -3,6 +3,7 @@ title: "Étape 5 du didacticiel de démarrage rapide | Azure Information Protec
 description: "Étape 5 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 30 minutes."
 keywords: 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -13,14 +14,14 @@ ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1af9f3b3451bf8ceafbaf3cddd2b26c37fe9d597
-ms.openlocfilehash: d607c19d37da6b6fb23513067e9e30f33f0260de
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 5844ddd3f675cdc5a88de3abc3170d7e8a89aee9
 
 
 ---
 
 
-# Étape 5 : Voir le partage de fichiers protégés en action et effectuer le suivi de votre document 
+# <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Étape 5 : Voir le partage de fichiers protégés en action et effectuer le suivi de votre document 
 
 >*S’applique à : Azure Information Protection*
 
@@ -28,7 +29,7 @@ Pour cette étape finale du didacticiel, recherchez un document Word que vous av
 
 Ensuite, vous pouvez partager en toute sécurité ce document par courrier électronique. 
 
-## Partage en toute sécurité d’un document par courrier électronique
+## <a name="to-safely-share-your-document-by-email"></a>Partage en toute sécurité d’un document par courrier électronique
 
 1.  Dans Word, ouvrez votre document. Vous verrez que l’étiquette par défaut **Interne** est automatiquement réappliquée. 
 
@@ -68,13 +69,13 @@ Ensuite, vous pouvez partager en toute sécurité ce document par courrier élec
 
 Maintenant que vous avez envoyé votre document protégé, vous pouvez demander à vos destinataires de l’ouvrir dès qu’ils le reçoivent. Ne fermez pas Word, car nous allons le réutiliser au cours de la procédure finale pour suivre le document partagé.
 
-## demande au destinataires d’ouvrir le document envoyé par courrier électronique
+## <a name="ask-your-recipients-to-open-the-emailed-document"></a>demande au destinataires d’ouvrir le document envoyé par courrier électronique
 
 Vos destinataires peuvent utiliser de nombreux appareils pour lire le document protégé que vous avez envoyé en pièce jointe d’un courrier électronique. Les appareils incluent les iPad, les iPhone, les tablettes et les téléphones Android, les ordinateurs Mac, ainsi que les ordinateurs Windows.
 
 Demandez-leur de lire le message électronique que vous leur avez envoyé. En supposant que c’est la première fois qu’ils ont reçu des pièces jointes protégées par Rights Management, demandez-leur de cliquer sur le lien des instructions. Ils voient alors la page [Bienvenue dans Microsoft RMS !](https://portal.azurerms.com/#/rmshelp), qui contient des instructions pour installer l’application de partage RMS et pour se connecter à un compte gratuit, si nécessaire. Ils sont ensuite prêts à lire la pièce jointe protégée.
 
-### Instructions pour le destinataire : affichage de la pièce jointe du document protégé
+### <a name="instructions-for-recipient-to-view-the-protected-document-attachment"></a>Instructions pour le destinataire : affichage de la pièce jointe du document protégé
 
 1. Ouvrez une des pièces jointes pour lire le document :
     
@@ -94,7 +95,7 @@ Votre destinataire peut éventuellement transférer l’e-mail à d’autres per
 
 Maintenant que le destinataire a ouvert la pièce jointe et l’a éventuellement transférée à une autre personne, attendez-vous à recevoir une notification par courrier électronique qui vous informe de cette activité. Toutefois, les e-mails se perdent facilement au fil du temps. Afin d’assurer un meilleur suivi des personnes ayant accédé à votre document, utilisez le site de suivi de document (sujet traité dans la dernière procédure).
 
-## Suivi du document protégé
+## <a name="to-track-your-protected-document"></a>Suivi du document protégé
 
 1.  De retour dans Word, sous l’onglet **Accueil**, dans le groupe **RMS**, cliquez sur **Partage protégé**, puis sur **Suivre l’utilisation** dans le menu :
 
@@ -124,7 +125,7 @@ Vous pouvez revenir sur ce site pour suivre les autres activités de votre docum
 |À propos de l’utilisation du site de suivi de document|[Suivre et révoquer vos documents](../rms-client/sharing-app-track-revoke.md)
 
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Maintenant que vous avez vu comment personnaliser la stratégie Azure Information Protection par défaut et comment fonctionne l’étiquetage d’un document Word, essayez d’appliquer certains autres paramètres pour voir comment ils fonctionnent dans les autres applications Office qui prennent en charge Azure Information Protection : Excel, PowerPoint et Outlook. Si ces applications étaient ouvertes quand vous avez installé le client Azure Information Protection, fermez et rouvrez-les avant d’essayer de les utiliser avec Azure Information Protection.
 
@@ -133,6 +134,6 @@ Essayez de partager davantage de documents, suivez leur utilisation et vérifiez
 Vous pouvez ensuite juger utile de consulter certains [forums aux questions](faqs.md) sur Azure Information Protection et de lire d’autres articles de la documentation. Mais si vous êtes prêt à déployer Azure Information Protection pour votre organisation, vous pouvez passer directement à la [Feuille de route pour le déploiement d’Azure Information Protection](../plan-design/deployment-roadmap.md). 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "Étape 3 du didacticiel de démarrage rapide | Azure Information Protection"
 description: "Étape 3 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 30 minutes."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: b5c87669c965d1e67b47dcfbd8ba97f1da41d104
-ms.openlocfilehash: 042e168452d2b5cbc1eeec4fc06a3b0f137a5caf
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 496f086d4db43a69ef0acca579b290286a5b9e5b
 
 
 ---
 
-# Étape 3 : Installer le client et l’application 
+# <a name="step-3-install-the-client-and-application"></a>Étape 3 : Installer le client et l’application 
 
 >*S’applique à : Azure Information Protection*
 
@@ -27,7 +28,7 @@ Ensuite, vous allez installer l’application de partage Rights Management, afin
 Ces deux installations s’intègrent aux applications Office et, actuellement, vous devez les installer séparément.
 
 
-## Installer le client Azure Information Protection
+## <a name="install-the-azure-information-protection-client"></a>Installer le client Azure Information Protection
 
 1. Sur un PC où Office est installé (mais où Word n’est pas ouvert), [téléchargez le client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) à partir du Centre de téléchargement Microsoft. 
 
@@ -35,7 +36,7 @@ Ces deux installations s’intègrent aux applications Office et, actuellement, 
 
     Pour ce didacticiel, peu importe si vous sélectionnez l’option d’installation d’une stratégie de démonstration, étant donné que la stratégie que nous venons de configurer sera téléchargée à partir d’Azure et remplacera la stratégie de démonstration installée. Toutefois, vous pouvez utiliser l’option de stratégie de démonstration si vous souhaitez simplement découvrir les étiquettes par défaut sans connexion à Azure Information Protection. 
 
-## installation de l’application de partage Rights Management 
+## <a name="install-the-rights-management-sharing-application"></a>installation de l’application de partage Rights Management 
 
 1. Accédez à la page [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft.
 
@@ -44,7 +45,7 @@ Ces deux installations s’intègrent aux applications Office et, actuellement, 
 3. Dans la page **Installer Microsoft RMS** , cliquez sur **Suivant**, puis attendez que l’installation se termine. Ensuite, cliquez sur **Redémarrer** si vous êtes invité à redémarrer votre ordinateur, ou sur **Fermer** pour terminer l’installation.
 
 
-## Vérifier les installations
+## <a name="verify-the-installations"></a>Vérifier les installations
 
 Vérifiez que ces installations se sont déroulées correctement en ouvrant Word et un nouveau document vierge (ne l’enregistrez pas pour l’instant). Si vous êtes invité à entrer votre nom d’utilisateur et votre mot de passe, entrez les détails de votre compte d’administrateur général. 
 
@@ -66,7 +67,7 @@ Vous êtes maintenant prêt à voir Azure Information Protection en action.
 |--------------------------------|--------------------------|
 |À propos de l’installation du client Azure Information Protection|[Installation du client Azure Information Protection](../rms-client/info-protect-client.md)|
 |À propos de l’installation de l’application de partage Rights Management et des instructions utilisateur|[Guide d’utilisation de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md)|
-|Installation par script de l’application de partage Rights Management pour Windows et informations techniques|[Guide de l'administrateur de l'application de partage Rights Management](../rms-client/sharing-app-admin-guide.md)|
+|Installation par script de l’application de partage Rights Management pour Windows et informations techniques|[Guide de l’administrateur de l’application de partage Rights Management](../rms-client/sharing-app-admin-guide.md)|
 
 
 >[!div class="step-by-step"]
@@ -74,6 +75,6 @@ Vous êtes maintenant prêt à voir Azure Information Protection en action.
 [Étape 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

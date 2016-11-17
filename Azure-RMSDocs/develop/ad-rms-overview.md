@@ -3,6 +3,7 @@ title: "Présentation - RMS SDK 2.1 | Azure RMS"
 description: "Rights Management Services (RMS) est une technologie de protection des informations qui vous aide à protéger les informations numériques contre les utilisations non autorisées."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 82441858230e179a08bfa74e0f6aaf9ed17a62fb
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 816d665314fb77931433e36420b54c3ab6f689b9
 
 
 ---
 
-# Vue d'ensemble
+# <a name="overview"></a>Vue d'ensemble
 
 Rights Management Services SDK 2.1 est une technologie de protection des informations qui vous aide à protéger les informations numériques contre toute utilisation non autorisée. Dans votre application avec gestion des droits, les propriétaires de contenu peuvent définir qui peut ouvrir, modifier, imprimer, transférer ou effectuer d’autres actions avec le contenu.
 
@@ -42,7 +43,7 @@ Pour plus d’informations sur le serveur AD RMS, sur le client AD RMS et sur le
 
 Les autres rubriques de cette section traitent de l’architecture RMS et ses implémentations.
 
-## Dans cette section
+## <a name="in-this-section"></a>Dans cette section
 
 | Rubrique | Description |
 |-------|-------------|
@@ -50,7 +51,7 @@ Les autres rubriques de cette section traitent de l’architecture RMS et ses im
 |[Serveur](ad-rms-server.md) | Cette rubrique décrit l’objectif et les fonctions du serveur RMS pour Azure et Windows Server.|
 
 
-## Rubriques connexes
+## <a name="related-topics"></a>Rubriques connexes
 
 * [Concepts RMS](application-types.md)
 * [Prise en main](getting-started-with-ad-rms-2-0.md)
@@ -61,6 +62,6 @@ Les autres rubriques de cette section traitent de l’architecture RMS et ses im
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

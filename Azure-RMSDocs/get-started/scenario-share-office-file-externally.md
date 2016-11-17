@@ -2,6 +2,7 @@
 title: "Scénario : partager un fichier Office avec des utilisateurs d’une autre organisation | Azure Information Protection"
 description: "Ce scénario et la documentation utilisateur associée s’appuient sur la protection Azure Rights Management pour permettre à des utilisateurs d’envoyer un fichier Office par e-mail en toute sécurité à des personnes appartenant à une autre organisation."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
-ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 24b4e542a437a824c6783b02bde5bfb848cdeb3a
 
 
 ---
 
-# Scenario : partager un fichier Office avec des utilisateurs d’une autre organisation
+# <a name="scenario-share-an-office-file-with-users-in-another-organization"></a>Scenario : partager un fichier Office avec des utilisateurs d’une autre organisation
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -34,23 +35,23 @@ Ce scénario convient dans les cas suivants :
 
 -   L’employé peut être soucieux de savoir quand ce document est ouvert par l’utilisateur externe.
 
-## Instructions de déploiement
+## <a name="deployment-instructions"></a>Instructions de déploiement
 ![Instructions destinées aux administrateurs pour le déploiement rapide Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Vérifiez que les conditions suivantes sont remplies avant de poursuivre avec la documentation utilisateur.
 
-## Conditions requises pour ce scénario
+## <a name="requirements-for-this-scenario"></a>Conditions requises pour ce scénario
 Pour que les instructions pour l'utilisateur décrites dans ce scénario fonctionnent, les éléments suivants doivent être en place :
 
 |Configuration requise|Si vous avez besoin d'informations supplémentaires|
 |---------------|--------------------------------|
 |Vous avez préparé des comptes et des groupes pour Office 365 ou Azure Active Directory|[Préparation d’Azure Information Protection](https://technet.microsoft.com/library/jj585029.aspx)|
-|Azure Rights Management est activé|[Activation d'Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
+|Azure Rights Management est activé|[Activation d’Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |L'application de partage Rights Management est déployée sur les ordinateurs des utilisateurs qui exécutent Windows|[Déploiement automatique de l'application de partage Microsoft Rights Management](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Les utilisateurs disposent d'Outlook version Office 2013|Si les utilisateurs disposent d’Office 2016 ou Office 2010, remplacez la capture d’écran par une version équivalente afin que l’image corresponde à ce que les utilisateurs voient.|
 |Votre abonnement Azure Information Protection inclut le suivi de document|Si votre abonnement n’inclut pas le suivi et la révocation de document, les utilisateurs ne seront pas en mesure de suivre toutes les étapes des instructions pour l’utilisateur. Dans ce cas, achetez un abonnement ne prenant pas en charge ces fonctionnalités, ou modifiez les instructions pour l'utilisateur en supprimant les étapes qui utilisent ces fonctionnalités.<br /><br />Consultez la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) sur le site Azure Information Protection.|
 
-## Instructions de la documentation utilisateur
+## <a name="user-documentation-instructions"></a>Instructions de la documentation utilisateur
 En utilisant le modèle suivant, copiez et collez les instructions utilisateur dans une communication à destination de vos utilisateurs finaux, puis apportez ces modifications en les adaptant à votre environnement :
 
 1.  Remplacez *&lt;nom du type de document Office&gt;* par le type de document que vos utilisateurs enverront. Utilisez une formulation spécifique de leurs flux de travail qui leur est familière, telle que « tarifs », « délais de livraison » ou « soumission d'appel d'offres », plutôt que « document Word » ou « Feuille de calcul Excel ». Cette formulation plus spécifique permet d’augmenter les chances qu’ils suivent les instructions quand ils utiliseront ces documents.
@@ -76,7 +77,7 @@ L’exemple de documentation illustre la façon dont ces instructions se présen
 
 ![Modèle de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Comment partager un &lt;nom du type de document Office&gt;
+### <a name="how-to-share-a-ltname-of-office-document-typegt"></a>Comment partager un &lt;nom du type de document Office&gt;
 
 1.  Créez votre e-mail en spécifiant une ou plusieurs adresses e-mail, tapez votre message, puis joignez le *&lt;nom du type de document Office&gt;* à l’e-mail. Ensuite, sous l'onglet **MESSAGE** , dans le groupe **RMS** , cliquez sur **Partager le fichier protégé** , puis de nouveau sur **Partager le fichier protégé** :
 
@@ -104,7 +105,7 @@ Utilisez le [portail de suivi de document](https://track.azurerms.com/) pour sav
 
 -   Pour plus d'informations :
 
-    -   [Protéger un fichier que vous partagez par courrier électronique](../rms-client/sharing-app-protect-by-email.md)
+    -   [Protéger un fichier que vous partagez par e-mail](../rms-client/sharing-app-protect-by-email.md)
 
     -   [Suivre et révoquer vos documents](../rms-client/sharing-app-track-revoke.md)
 
@@ -112,10 +113,10 @@ Utilisez le [portail de suivi de document](https://track.azurerms.com/) pour sav
 
     -   *&lt;coordonnées&gt;*
 
-### Exemple de documentation utilisateur personnalisée
+### <a name="example-customized-user-documentation"></a>Exemple de documentation utilisateur personnalisée
 ![Exemple de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### Comment partager une liste de prix avec votre client
+#### <a name="how-to-share-a-price-list-with-your-customer"></a>Comment partager une liste de prix avec votre client
 
 1.  Créez votre message électronique en spécifiant les adresses de messagerie de votre client, tapez votre message, puis joignez la dernière liste de prix au message électronique. Ensuite, sous l'onglet **MESSAGE** , dans le groupe **RMS** , cliquez sur **Partager le fichier protégé** , puis de nouveau sur **Partager le fichier protégé** :
 
@@ -143,17 +144,17 @@ Utilisez le [portail de suivi de document](https://track.azurerms.com/) pour sav
 
 -   Pour plus d'informations :
 
-    -   [Protéger un fichier que vous partagez par courrier électronique](../rms-client/sharing-app-protect-by-email.md)
+    -   [Protéger un fichier que vous partagez par e-mail](../rms-client/sharing-app-protect-by-email.md)
 
     -   [Suivre et révoquer vos documents](../rms-client/sharing-app-track-revoke.md)
 
 -   Contactez le support technique :
 
-    -   Adresse électronique : helpdesk@vanarsdelltd.com
+    -   E-mail : helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

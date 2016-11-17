@@ -2,6 +2,7 @@
 title: "Journalisation et analyse de l’utilisation du service Azure Rights Management | Azure Information Protection"
 description: "Informations et instructions sur la journalisation de l’utilisation avec Azure Rights Management (Azure RMS)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

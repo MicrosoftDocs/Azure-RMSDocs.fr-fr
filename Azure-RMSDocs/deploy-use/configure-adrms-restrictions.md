@@ -1,6 +1,8 @@
 ---
 title: "Restrictions liées à HYOK | Azure Information Protection"
 description: Identify the limitations, prerequisites, and recommendations if you select AD RMS protection with Azure Information Protection. This solution is sometimes referred to as "hold your own key" (HYOK).
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/10/2016
 ms.topic: article
@@ -9,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 821f4c0bfbad4c88bea0fbe26807f8e50677069b
-ms.openlocfilehash: 44a7dc786b678844e58f2a60204853d86c8750a7
+ms.sourcegitcommit: f1bf7377e5e8079025dff638a185c825256a5cc7
+ms.openlocfilehash: 3a563eccb37cfd660c28fd2308749d1e71771f23
 
 
 ---
 
-# HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
+# <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 
 >*S’applique à : Azure Information Protection*
 
@@ -44,7 +46,7 @@ Dans ce scénario HYOK, les stratégies de droits et la clé privée de l’orga
 
 Les utilisateurs ne peuvent pas faire la distinction entre une étiquette qui utilise la protection AD RMS et une autre qui utilise la protection Azure RMS. En raison des restrictions associées à la protection AD RMS, veillez à indiquer clairement quand les utilisateurs doivent sélectionner des étiquettes qui appliquent la protection AD RMS.
 
-## Limitations lors de l’utilisation de HYOK
+## <a name="limitations-when-using-hyok"></a>Limitations lors de l’utilisation de HYOK
 
 En plus de ne pas prendre en charge les avantages associés à l’utilisation de la protection Azure RMS, l’utilisation conjuguée d’AD RMS et d’Azure Information Protection s’accompagne des limitations suivantes :
 
@@ -54,7 +56,7 @@ En plus de ne pas prendre en charge les avantages associés à l’utilisation d
 
     Si l’option Ne pas transférer est appliquée par une étiquette ou manuellement par les utilisateurs, l’option risque d’être appliquée par votre déploiement AD RMS, et non par le service de gestion des droits Azure voulu. Dans ce scénario, les personnes extérieures avec qui vous partagez ne pourront pas ouvrir les messages électroniques auxquels cette option Ne pas transférer a été appliquée.
 
-## Exigences liées à HYOK
+## <a name="requirements-for-hyok"></a>Exigences liées à HYOK
 
 Vérifiez que votre déploiement AD RMS répond aux exigences suivantes pour fournir la protection AD RMS pour Azure Information Protection.
 
@@ -84,7 +86,7 @@ Vérifiez que votre déploiement AD RMS répond aux exigences suivantes pour fou
 Pour obtenir des informations et des instructions sur le déploiement pour AD RMS, consultez [Services AD RMS (Active Directory Rights Management Services)](https://technet.microsoft.com/library/hh831364.aspx) dans la bibliothèque Windows Server. 
 
 
-## Recherche d’informations pour spécifier la protection AD RMS avec une étiquette Azure Information Protection
+## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Recherche d’informations pour spécifier la protection AD RMS avec une étiquette Azure Information Protection
 
 Quand vous configurez une étiquette pour la protection AD RMS, vous devez spécifier le GUID du modèle et l’URL de licence de votre cluster AD RMS. Vous trouverez ces deux valeurs dans la console AD RMS (Active Directory Rights Management Services) :
 
@@ -94,7 +96,7 @@ Quand vous configurez une étiquette pour la protection AD RMS, vous devez spéc
     
     Si vous disposez d’une valeur de licence extranet et d’une valeur de licence intranet qui sont différentes : spécifiez uniquement la valeur extranet si vous souhaitez partager des documents ou des e-mails protégés avec des partenaires définis avec des approbations point à point explicites. Sinon, utilisez la valeur intranet et vérifiez que tous les ordinateurs clients qui utilisent la protection AD RMS avec Azure Information Protection se connectent au moyen d’une connexion intranet (par exemple, les ordinateurs distants utilisent une connexion VPN).
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur cette fonctionnalité en préversion, consultez l’annonce sur le billet de blog [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
 
@@ -102,6 +104,6 @@ Pour configurer une étiquette pour la protection AD RMS, consultez [Comment con
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

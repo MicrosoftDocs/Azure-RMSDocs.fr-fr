@@ -1,6 +1,8 @@
 ---
 title: "Comment supprimer ou réorganiser une étiquette | Azure Information Protection"
 description: "Vous pouvez supprimer ou réorganiser les étiquettes que les utilisateurs voient dans la barre Information Protection en configurant la stratégie Azure Information Protection en conséquence."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

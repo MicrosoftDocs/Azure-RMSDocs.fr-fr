@@ -2,6 +2,7 @@
 title: "Problèmes résolus par Azure RMS | Azure Information Protection"
 description: "Identifiez les besoins ou problèmes liés à la protection des informations auxquels votre entreprise peut être confrontée et découvrez comment la technologie Azure RMS peut y remédier."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

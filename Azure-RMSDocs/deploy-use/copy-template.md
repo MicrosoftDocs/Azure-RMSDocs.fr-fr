@@ -2,6 +2,7 @@
 title: "Copier un modèle | Azure Information Protection"
 description: "Instructions à suivre pour copier un modèle. Vous pouvez ainsi créer facilement un modèle dont les paramètres sont très semblables à ceux d’un modèle existant."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: f329ce49-e044-4c11-821d-5496d83c1bb3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 5248a7a5b90e956d4121d95e0b82a941a20d4e8f
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: e0945e9ab719fd4b686c3fb7932891ed92fa31c6
 
 
 ---
 
 
-# Copier un modèle
+# <a name="copy-a-template"></a>Copier un modèle
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -32,10 +33,10 @@ Vous pouvez copier les modèles personnalisés et les modèles par défaut. Si v
 
 
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

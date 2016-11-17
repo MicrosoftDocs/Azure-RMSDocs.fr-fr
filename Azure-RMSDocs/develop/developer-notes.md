@@ -3,6 +3,7 @@ title: "Guide et informations pour développeurs | Azure RMS"
 description: "Cette rubrique traite de recommandations propres à différents scénarios de développement importants."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/18/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 593b8b505b8bd241c301c95ee6280f93f14901b9
-ms.openlocfilehash: 54ce450600b2a10e6889d2684ce26c9da9f9167e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 93ed9760d79f2f38d4bee302ebb5c7c6368b1bbe
 
 
 ---
 
-# Guide et informations pour développeurs
+# <a name="developer-guidance-and-information"></a>Guide et informations pour développeurs
 
 Cette section traite de recommandations spécifiques pour plusieurs scénarios de développement importants, ainsi que des informations générales sur le développement avec ce SDK. Les scénarios de cette section sont spécifiques à cette version du SDK Rights Management Services 2.1 et peuvent être modifiés dans les versions ultérieures.
 - [Comment : utiliser l’authentification ADAL](how-to-use-adal-authentication.md) - Authentification auprès d’Azure RMS pour votre application à l’aide de la bibliothèque d’authentification ADAL (Azure Active Directory Authentication Library).
@@ -40,7 +41,7 @@ Cette section traite de recommandations spécifiques pour plusieurs scénarios d
 - [Informations de référence sur les restrictions d’utilisation](usage-restriction-reference.md) - Les restrictions d’utilisation sont définies par les constantes répertoriées dans cette rubrique.
 
  
-## Rubriques connexes
+## <a name="related-topics"></a>Rubriques connexes
 * [Vue d'ensemble](ad-rms-overview.md)
  
 
@@ -48,6 +49,6 @@ Cette section traite de recommandations spécifiques pour plusieurs scénarios d
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

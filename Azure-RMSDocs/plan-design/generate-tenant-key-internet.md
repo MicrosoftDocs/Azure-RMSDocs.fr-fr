@@ -2,6 +2,7 @@
 title: "Génération et transfert de votre clé de locataire – sur Internet : CONTENU RETIRÉ | Azure RMS"
 description: "Les informations contenues dans cet article ont été supprimées car elles ne sont plus pertinentes maintenant qu’Azure Rights Management utilise Azure Key Vault pour les clés de locataire gérées par le client (également appelées BYOK ou Bring Your Own Key)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

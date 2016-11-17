@@ -2,6 +2,7 @@
 title: "Fonctionnement d’Azure RMS | Azure Information Protection"
 description: "Découvrez en détail le fonctionnement d’Azure RMS, les contrôles de chiffrement qu’il utilise et le déroulement de ce processus à l’aide de diagrammes détaillés."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article

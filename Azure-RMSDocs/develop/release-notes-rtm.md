@@ -3,6 +3,7 @@ title: Notes de publication | Azure RMS
 description: 
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/20/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f65f42b54fbca1a0436a0f1f6cc9be60a5e3c68
-ms.openlocfilehash: 31670bda73bdf0ddcb0167c40cdf32b11fd7af3c
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: d481ee096213af79a7852f1afa6d075d389a4212
 
 
 ---
 
-# Notes de publication
+# <a name="release-notes"></a>Notes de publication
 
 Cette rubrique contient des informations importantes sur cette version du Kit RMS SDK 2.1 et sur les versions précédentes.
 
-## Nouveautés dans la mise à jour de la documentation du SDK de février 2016
+## <a name="new-for-the-february-2016-sdk-documentation-update"></a>Nouveautés dans la mise à jour de la documentation du SDK de février 2016
 
 >[!Note]
 > Les mises à jour de la documentation de fonctionnalités dans cette section s’appliquent au téléchargement du SDK daté du 11/12/2015.
@@ -40,7 +41,7 @@ Cette rubrique contient des informations importantes sur cette version du Kit RM
 - **La prise en charge de l’Assistant de connexion Microsoft Online avec le SDK RMS est supprimée.** Nous continuerons à prendre en charge l’utilisation de l’Assistant de connexion pendant six mois, après quoi la prise en charge cessera.
 
 
-## Mise à jour de décembre 2015
+## <a name="december-2015-update"></a>Mise à jour de décembre 2015
 
 - Des améliorations de performances ont été implémentées dans plusieurs domaines :
     - Publication depuis le serveur de licences principal lors de l’utilisation de serveurs de licence.
@@ -50,11 +51,11 @@ Cette rubrique contient des informations importantes sur cette version du Kit RM
 - Notez également que la liste des [plates-formes prises en charge](supported-platforms.md) est également mise à jour.
 - Le besoin d’un environnement de préproduction et l’utilisation de manifestes d’application ont été supprimés de RMS SDK 2.1. Les sections de cet ensemble de documentation pour développeurs ont été supprimées et l’ensemble de la documentation simplifié et réorganisé.
 
-## Mise à jour de mai 2015
+## <a name="may-2015-update"></a>Mise à jour de mai 2015
 
 -   **Applications de service et service RMS cloud** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) a besoin de trois informations : la clé symétrique, **AppPrincipalId** et **TenantBposId**. La rubrique traitant de ce sujet a été mise à jour pour fournir des conseils sur le traitement de ces informations. Pour cette mise à jour, consultez la version mise à jour de [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
-## Mise à jour d’avril 2015
+## <a name="april-2015-update"></a>Mise à jour d’avril 2015
 
 -   Le **suivi des documents** est maintenant possible grâce à un ensemble de nouvelles API. Pour plus d’informations, consultez [Suivi de contenu](tracking-content.md).
 -   **Type de chiffrement** : nous prenons désormais en charge le contrôle au niveau de l’API pour la sélection du package de chiffrement. Pour plus d’informations, voir [Utilisation du chiffrement](working-with-encryption.md).
@@ -65,7 +66,7 @@ Cette rubrique contient des informations importantes sur cette version du Kit RM
 -   La **journalisation** est maintenant implémentée par le biais du fichier et de méthodes de suivi d’événements pour Windows.
 -   Si l’exécution s’effectue sur un **ordinateur Windows 7 SP1 ou Windows Server 2008 R2**, lisez la remarque suivante sous « Remarques importantes à l’attention des développeurs ».
 
-## Mise à jour de janvier 2015
+## <a name="january-2015-update"></a>Mise à jour de janvier 2015
 
 -   **Prise en charge de l’augmentation de la taille du fichier protégé (pfile)** : prise en charge de tailles de fichiers supérieures à un gigaoctet (1 Go). Pour plus d’informations sur les fichiers pfile, consultez [Formats de fichiers pris en charge](supported-file-formats.md).
 -   **Amélioration de la journalisation pour un meilleur diagnostic** : les niveaux de journalisation indiquent **ERREUR** ou **AVERTISSEMENT** pour les messages qui doivent être examinés. Tous les autres messages, y compris les exceptions qui sont toujours affichées, seront enregistrés en tant que **INFO**.
@@ -75,12 +76,12 @@ Cette rubrique contient des informations importantes sur cette version du Kit RM
 -   **Acquisition des modèles d’une société** :corrections importantes apportées au code d’acquisition de modèles en fonction des rapports et des commentaires clients.
 -   Amélioration de la cohérence de la localisation
 
-## Mise à jour d’octobre 2014
+## <a name="october-2014-update"></a>Mise à jour d’octobre 2014
 
 -   Les comportements par défaut du composant de l’API de fichier du SDK a été mis à jour. Pour plus d’informations, voir [Configuration de l’API de fichier](file-api-configuration.md).
 -   La notification par courrier électronique, qui est une nouvelle fonctionnalité, est décrite dans la rubrique des remarques à l’attention des développeurs [Activation des notifications par courrier électronique](how-to-enable-email-notification.md).
 
-## Mise à jour de juillet 2014
+## <a name="july-2014-update"></a>Mise à jour de juillet 2014
 
 Le composant de l’API de fichier du SDK a été étendu et offre les fonctionnalités suivantes :
 
@@ -99,7 +100,7 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
     -   [IpcfSetEndOfFile](https://msdn.microsoft.com/library/dn771754.aspx)
     -   [IpcfWriteFile](https://msdn.microsoft.com/library/dn771756.aspx)
 
-## Mise à jour d’avril 2014
+## <a name="april-2014-update"></a>Mise à jour d’avril 2014
 
 -   L’**utilisation de la mémoire d’API de fichier**, en particulier pour les PFiles volumineux, a été considérablement améliorée.
 -   L’**ID de contenu** est désormais accessible en écriture par le biais de la propriété **IPC\_LI\_CONTENT\_ID**. Pour plus d’informations, consultez [Types de propriété de licence](https://msdn.microsoft.com/library/hh535287.aspx).
@@ -108,9 +109,9 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 
     **Meilleure pratique en matière de test** : ajout de conseils pour l’utilisation d’un serveur local avant le test avec Azure RMS. Pour plus d’informations, consultez [Permettre à votre application de service d’opérer avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
-## Remarques importantes à l’attention des développeurs
+## <a name="important-developer-notes"></a>Remarques importantes à l’attention des développeurs
 
--   **Prise en charge native pour tous les types de fichier**
+-   **Prise en charge native pour tous les types de fichiers**
 
     Une prise en charge native peut être ajoutée pour tout type de fichier (extension) avec cette version du SDK Rights Management Services 2.1. Par exemple, pour toute extension &lt;ext&gt; (non Office et pdf), \*.p&lt;ext&gt; est utilisé si la configuration d’administration pour cette extension est « NATIVE ».
 
@@ -148,7 +149,7 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 
     **Solution** : si vous souhaitez utiliser le fichier Ipcsecproc\*isv.dll pour une architecture différente (par exemple, vous avez installé le SDK 64 bits sur un ordinateur 64 bits et vous souhaitez maintenant effectuer le déploiement sur un ordinateur 32 bits qui nécessite Ipcsecproc\*isv.dll), vous devez installer le SDK 32 bits sur un autre ordinateur et copier les fichiers Ipcsecproc\*isv.dll à cet emplacement à partir du dossier « "%PROGRAMFILES%\\Microsoft Information Protection And Control » (l’emplacement par défaut ou là où vous avez choisi d’installer le SDK).
 
-## Forum aux questions
+## <a name="frequently-asked-questions"></a>Forum aux questions
 
 **Q** : Comment se comporte la langue par défaut avec des fonctions qui prennent un paramètre LCID ?
 
@@ -167,6 +168,6 @@ Si aucun nom et aucune description ne peuvent être récupérés, une erreur est
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

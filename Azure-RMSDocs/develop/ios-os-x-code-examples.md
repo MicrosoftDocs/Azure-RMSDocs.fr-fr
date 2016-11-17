@@ -3,6 +3,7 @@ title: Exemples de code iOS/OS X | Azure RMS
 description: "Cette rubrique présente des éléments de code importants pour la version iOS/OS X du Kit RMS SDK."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,7 +21,7 @@ ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
 
 ---
 
-# Exemples de code iOS/OS X
+# <a name="iosos-x-code-examples"></a>Exemples de code iOS/OS X
 
 Cette rubrique présente des éléments de code importants pour la version iOS/OS X du Kit RMS SDK.
 
@@ -28,12 +29,12 @@ Cette rubrique présente des éléments de code importants pour la version iOS/O
 
 
 
-## Utilisation de Microsoft Rights Management SDK 4.2 - Principaux scénarios
+## <a name="using-the-microsoft-rights-management-sdk-42-key-scenarios"></a>Utilisation de Microsoft Rights Management SDK 4.2 - Principaux scénarios
 
 
 Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un exemple d’application représentant des scénarios de développement importants pour l’orientation de ce SDK. Ces exemples illustrent l’utilisation du format de fichier protégé Microsoft (appelé « fichier protégé »), l’utilisation de formats de fichiers protégés personnalisés et l’utilisation de contrôles d’interface utilisateur personnalisés.
 
-### Scénario : Consommer un fichier protégé RMS
+### <a name="scenario-consume-an-rms-protected-file"></a>Scénario : Consommer un fichier protégé RMS
 
 
 - **Étape 1** : Créer un objet [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)
@@ -109,7 +110,7 @@ Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un ex
             }
         }
 
-### Scénario : Créer un fichier protégé à l’aide d’un modèle
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scénario : Créer un fichier protégé à l’aide d’un modèle
 
 Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx), nous sélectionnons le premier pour créer une stratégie, puis nous créons et écrivons dans le nouveau fichier protégé.
 
@@ -154,7 +155,7 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
             }];
         }
 
-### Scénario : Ouvrir un fichier protégé personnalisé
+### <a name="scenario-open-a-custom-protected-file"></a>Scénario : Ouvrir un fichier protégé personnalisé
 
 
 -   **Étape 1** : Créer un [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) à partir d’un *serializedContentPolicy*.
@@ -212,7 +213,7 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
             }];
          }
 
-### Scénario : Créer un fichier protégé personnalisé à l’aide d’une stratégie personnalisée (ad hoc)
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-adhoc-policy"></a>Scénario : Créer un fichier protégé personnalisé à l’aide d’une stratégie personnalisée (ad hoc)
 
 
 -   **Étape 1** : Avec une adresse e-mail fournie par l’utilisateur, créer un descripteur de stratégie.

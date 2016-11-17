@@ -2,6 +2,7 @@
 title: "Configuration requise d’Azure Active Directory | Azure Information Protection"
 description: "Identifiez la configuration requise d’Azure AD pour utiliser Azure Information Protection afin de permettre l’authentification des utilisateurs."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/29/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
-ms.openlocfilehash: 5be497b09ed1b1342747508611a1cc06ad0edf02
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 667e1e533df6d26c9aae0aba1f889b0e6470b059
 
 
 ---
 
-# Configuration requise d’Azure Active Directory pour Azure Information Protection
+# <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -30,7 +31,7 @@ Pour plus d’informations, consultez les ressources suivantes dans la documenta
 
 -   [Qu’est-ce qu’Azure AD Directory ?](/active-directory/active-directory-whatis)
 
--   [Comment sont associés les abonnements Azure et Azure Active Directory ?](/active-directory/active-directory-how-subscriptions-associated-directory)
+-   [Comment les abonnements Azure sont-ils associés à Azure Active Directory ?](/active-directory/active-directory-how-subscriptions-associated-directory)
 
 Si vous souhaitez intégrer votre annuaire Azure AD à vos forêts AD locales, consultez [Intégration de vos identités locales avec Azure Active Directory](/active-directory/active-directory-aadconnect).
 
@@ -39,7 +40,7 @@ Si vous souhaitez intégrer votre annuaire Azure AD à vos forêts AD locales, 
 > 
 > -   Vous devez utiliser les services AD FS sur la version serveur minimale de **Windows Server 2012 R2** ou un autre fournisseur d’authentification prenant en charge le protocole OAuth 2.0.
 
-## Authentification multifacteur (MFA) et Azure Information Protection
+## <a name="multifactor-authentication-mfa-and-azure-information-protection"></a>Authentification multifacteur (MFA) et Azure Information Protection
 Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Protection, vous devez avoir au moins l’un des éléments suivants :
 
 -   Office 2013 (version minimale) :
@@ -68,12 +69,12 @@ Ensuite, configurez votre solution MFA :
 
         Pour plus d’informations sur ce scénario, consultez [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sur le blog Office.
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 Pour vérifier les autres conditions requises, consultez [Configuration requise pour Azure Information Protection](requirements-azure-rms.md).
 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "Informations d’administration et prise en charge pour Azure Information Protection | Azure Information Protection"
 description: "Ressources pour les administrateurs, qui incluent des informations sur les nouvelles versions, les options de support disponibles et la procédure à suivre pour contacter Microsoft en cas de problème."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/13/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 263c4109ac5dec435bbb0b126594eeafc974ff47
-ms.openlocfilehash: 79bed57d13aba8648ab3e3b7340bcc6d711f7942
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 4f0e3fbfd5caee7a5ea3fc40d8519a5e34d78cb5
 
 
 ---
 
-# Informations et prise en charge pour Azure Information Protection
+# <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -28,20 +29,20 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure Infor
 |----------------|---------------|
 |Consulter la documentation recommandée pour le service →|Utilisez la première page de la [Documentation sur Azure Information Protection](https://docs.microsoft.com/information-protection/).|
 |Formuler des commentaires ou poser une question sur la documentation →|Envoyez un e-mail à [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
-|Recevoir des tweets relatifs à Information Protection et des annonces relatives aux mises à jour de la documentation de la part du groupe de produits →|Suivez Dan Plastina, l’un des responsables de l’équipe Microsoft Information Protection. Consultez [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy)|
+|Recevoir des tweets relatifs à Information Protection et des annonces relatives aux mises à jour de la documentation de la part du groupe de produits →|Suivez Dan Plastina, l’un des responsables de l’équipe Microsoft Information Protection. Voir [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy)|
 |Vérifier les informations d’abonnement et les fonctionnalités prises en charge →|Utilisez les [informations sur les abonnements](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) du site Azure Information Protection.|
 
 
-## Informations sur les nouvelles versions
+## <a name="information-about-new-releases"></a>Informations sur les nouvelles versions
 Le groupe de produits Information Protection publie des annonces sur les nouvelles versions et mises à jour dans le [Blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services). Ces billets de blog complètent la documentation du produit et les informations de support technique.
 
 > [!TIP]
 > Si vous développez des applications qui utilisent les services Microsoft Rights Management (Azure RMS or AD RMS), vous pouvez également être intéressé par le blog [Active Directory Rights Management Services (AD RMS) Developer’s Corner](https://blogs.msdn.microsoft.com/rms/).
 
-## Options de support technique et ressources de la communauté
+## <a name="support-options-and-community-resources"></a>Options de support technique et ressources de la communauté
 Les sections suivantes fournissent des informations sur les options de support et de résolution de problème ainsi que des ressources de la communauté.
 
-### Pour contacter le support Microsoft
+### <a name="to-contact-microsoft-support"></a>Pour contacter le support Microsoft
 
 Si vous avez Support Premier, visitez le [portail pour les clients Support Premier](https://premier.microsoft.com/) afin d’envoyer des incidents, de rechercher des solutions et d’obtenir de l’aide.
 
@@ -59,7 +60,7 @@ Pour les autres clients, utilisez les canaux de support suivants, selon la faço
 
 Pour connaître les autres options de support, adressez-vous à votre contact Microsoft. 
 
-### Support autonome
+### <a name="selfhelp"></a>Support autonome
 
 Vidéos à la demande :
 
@@ -79,7 +80,7 @@ Résolution des problèmes :
 
 - Pour les vérifications automatisées, la correction automatique et le suivi, téléchargez et exécutez l’[outil RMS Analyzer](http://www.microsoft.com/en-us/download/details.aspx?id=46437). Pour plus d’informations sur cet outil, consultez les sections **Détails** et **Instructions d’installation** dans la page de téléchargement. 
 
-### Ressources de la communauté
+### <a name="community-resources"></a>Ressources de la communauté
 
 -   [Yammer : Azure Information Protection](http://www.yammer.com/AskIPTeam)
 
@@ -90,6 +91,6 @@ Résolution des problèmes :
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

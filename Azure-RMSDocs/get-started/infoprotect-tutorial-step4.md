@@ -2,6 +2,7 @@
 title: "Étape 4 du didacticiel de démarrage rapide | Azure Rights Management"
 description: "Étape 3 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 30 minutes."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: ce1d0a700e0b69d71f5cb2e93f406124bc0ca581
-ms.openlocfilehash: c9ed50317e18e86438b4393ce629d23d433c99fe
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: dc4cf3426bca306b66e2b23c3dd63373f62c9b7c
 
 
 ---
 
-# Étape 4 : classification, étiquetage et protection en action 
+# <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Étape 4 : classification, étiquetage et protection en action 
 
 >*S’applique à : Azure Information Protection*
 
@@ -24,7 +25,7 @@ Maintenant que vous avez un document Word ouvert avec le client Azure Informatio
 
 La classification et la protection ont lieu quand vous enregistrez le document, mais avant cela, nous allons utiliser notre document non enregistré pour voir combien il est facile d’appliquer et de modifier les étiquettes.
 
-## Pour modifier manuellement notre étiquette par défaut
+## <a name="to-manually-change-our-default-label"></a>Pour modifier manuellement notre étiquette par défaut
 
 Dans la barre Information Protection, sélectionnez l’étiquette **Personal** (Personnel). Vous êtes alors invité à indiquer pourquoi vous abaissez le niveau de classification :
 
@@ -32,7 +33,7 @@ Dans la barre Information Protection, sélectionnez l’étiquette **Personal** 
 
 Sélectionnez **The previous label no longer applies** (L’étiquette précédente ne s’applique plus), cliquez sur **Confirm** (Confirmer). **Sensitivity** (Niveau de confidentialité) prend la valeur **Personal** (Personnel).
 
-## Pour supprimer complètement la classification
+## <a name="to-remove-the-classification-completely"></a>Pour supprimer complètement la classification
 
 Dans la barre Information Protection, cliquez sur l’icône **Edit label** (Modifier l’étiquette) à côté de **Personal** (Personnel). Les étiquettes disponibles apparaissent. Au lieu de choisir l’une des étiquettes, cliquez sur l’icône **Remove label** (Supprimer l’étiquette). Cliquez sur **OK** pour confirmer, puis indiquez la justification de cette action.  
 
@@ -41,7 +42,7 @@ La valeur **Sensitivity** (Niveau de confidentialité) indique **Not set** (Non 
 ![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : supprimer la classification](../media/sensitivity-not-set.png)
 
 
-## Pour afficher une invite de recommandation pour l’étiquetage et la protection automatique
+## <a name="to-see-a-recommendation-prompt-for-labeling-and-automatic-protection"></a>Pour afficher une invite de recommandation pour l’étiquetage et la protection automatique
 
 1. Dans le document Word, tapez un numéro de carte de crédit valide, par exemple **4242-4242-4242-4242**. 
 
@@ -63,6 +64,6 @@ La classification, l’étiquetage et la protection n’ayant plus de secret pou
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

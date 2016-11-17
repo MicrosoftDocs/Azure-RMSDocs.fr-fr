@@ -2,6 +2,7 @@
 title: "Configuration de la stratégie | Azure Information Protection"
 description: "Pour configurer la classification, l’étiquetage et la protection, vous devez configurer la stratégie Azure Information Protection."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 472541f32c429eea34ea0afb76905bee8abf9747
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 055470948a1bf21d4ee1ee83f345f49a98c1bf31
 
 
 ---
 
-# Configuration de la stratégie Azure Information Protection
+# <a name="configuring-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
@@ -51,7 +52,7 @@ Lorsque vous avez terminé les modifications souhaitées, cliquez sur **Publier*
 
 Le client Azure Information Protection vérifie si des modifications ont été apportées au démarrage d’une application Office prise en charge et télécharge les modifications en tant que stratégie Azure Information Protection.
 
-## Configuration de la stratégie de votre organisation
+## <a name="configuring-your-organizations-policy"></a>Configuration de la stratégie de votre organisation
 
 Utilisez les informations suivantes pour configurer votre stratégie Azure Information Protection :
 
@@ -59,7 +60,7 @@ Utilisez les informations suivantes pour configurer votre stratégie Azure Infor
 
 - [Comment configurer les paramètres de stratégie globaux](configure-policy-settings.md)
 
-- [Comment créer une nouvelle étiquette](configure-policy-new-label.md)
+- [Comment créer une étiquette](configure-policy-new-label.md)
 
 - [Comment supprimer ou réorganiser une étiquette](configure-policy-delete-reorder.md)
 
@@ -71,13 +72,13 @@ Utilisez les informations suivantes pour configurer votre stratégie Azure Infor
 
 - [Comment configurer des conditions pour la classification automatique et recommandée](configure-policy-classification.md)
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut et voir le comportement qui en résulte dans une application Office, essayez le [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

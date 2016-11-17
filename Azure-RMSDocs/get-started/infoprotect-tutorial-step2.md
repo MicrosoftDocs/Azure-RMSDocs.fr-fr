@@ -2,6 +2,7 @@
 title: "Étape 1 du didacticiel de démarrage rapide | Azure Information Protection"
 description: "Étape 2 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 30 minutes."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: b23022c5fbec3d4f6f19ab5017ecf9badf01a9e7
-ms.openlocfilehash: c8cad9c4b6efe2630843bcb1618ecd535670e0fe
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 3c2523119020232b9044506b2d2a602104e81d0b
 
 
 ---
 
-# Étape 2 : Configurer et publier la stratégie Azure Information Protection
+# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Étape 2 : Configurer et publier la stratégie Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
@@ -39,7 +40,7 @@ Bien qu’Azure Information Protection soit fourni avec une stratégie par défa
 
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](../media/info-protect-policy.png)
 
-## Modification des paramètres globaux pour un modèle par défaut et une demande de justification
+## <a name="changing-the-global-settings-for-a-default-template-and-prompt-for-justification"></a>Modification des paramètres globaux pour un modèle par défaut et une demande de justification
 
 Pour notre didacticiel, nous allons modifier deux de ces paramètres globaux pour que vous puissiez voir leur fonctionnement :
 
@@ -47,7 +48,7 @@ Pour notre didacticiel, nous allons modifier deux de ces paramètres globaux pou
 
 2. Pour **Users must provide justification to set a lower classification label, remove a label, or remove protection** (Les utilisateurs doivent fournir une justification pour définir une étiquette de classification d’un niveau inférieur, supprimer une étiquette ou enlever la protection), affectez la valeur **On**.
 
-## Configuration d’une étiquette pour la protection, d’un filigrane et d’une condition pour une demande de classification
+## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>Configuration d’une étiquette pour la protection, d’un filigrane et d’une condition pour une demande de classification
 
 Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Confidential** :
 
@@ -121,6 +122,6 @@ Ayant examiné la stratégie par défaut et apporté des modifications, vous pou
 [Étape 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -3,6 +3,7 @@ title: "Ressources de la communauté | Azure RMS"
 description: "AD RMS est bien pris en charge par une communauté croissante de développeurs sur plusieurs plateformes."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,23 +15,23 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: dab2d84371cd2c45af617898f1694f99128551d9
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: cd203a651362564e2f2275051f61f86b3bee6703
 
 
 ---
 
-# Ressources de la communauté
+# <a name="community-resources"></a>Ressources de la communauté
 
 Active Directory Rights Management Services est bien pris en charge par une communauté croissante de développeurs sur plusieurs plateformes.
 
-## Ressources de la communauté AD RMS
+## <a name="ad-rms-community-resources"></a>Ressources de la communauté AD RMS
 
 Le blog [RMS Developer’s Corner](http://blogs.msdn.com/b/rms/) est un hub actif destiné aux développeurs de solutions de protection des informations.
 
 La section Rights Management Services du site Connect comprend les derniers livrables en cours et vous permet de donner votre avis.
 
-**Remarque**  
+**Note**  
 Si vous n’êtes pas encore inscrit à Microsoft Connect, procédez comme suit :
 
 -   Accédez à [Microsoft Connect](http://connect.microsoft.com) (http://connect.microsoft.com).
@@ -50,6 +51,6 @@ Si vous n’êtes pas encore inscrit à Microsoft Connect, procédez comme suit�
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

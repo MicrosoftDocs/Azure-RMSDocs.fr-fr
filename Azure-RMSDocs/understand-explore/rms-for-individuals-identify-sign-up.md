@@ -2,6 +2,7 @@
 title: "Comment déterminer si des utilisateurs se sont inscrits à RMS for Individuals | Azure Information Protection"
 description: "En tant qu&quot;administrateur, vous souhaitez sûrement savoir si vos utilisateurs se sont inscrits à RMS for individuals. Vous pouvez utiliser l’une des méthodes décrites dans cet article ou une combinaison de ces méthodes."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/24/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c1a9de2d0ef3021335e94cde86a7e6b844b15908
-ms.openlocfilehash: 70909cfa78800eabb798aec34264770104f7c47b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: b9979d48af7146f8021de840248f71cb1399b777
 
 
 ---
 
 
-# Détermination des utilisateurs inscrits à RMS for Individuals
+# <a name="how-to-find-out-if-your-users-have-signed-up-for-rms-for-individuals"></a>Détermination des utilisateurs inscrits à RMS for Individuals
 
 >*S’applique à : Azure Information Protection*
 
@@ -36,6 +37,6 @@ En tant qu'administrateur, vous souhaitez sûrement savoir si vos utilisateurs s
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

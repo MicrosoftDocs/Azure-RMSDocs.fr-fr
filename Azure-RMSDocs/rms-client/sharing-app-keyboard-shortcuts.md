@@ -2,6 +2,7 @@
 title: "Utiliser des raccourcis clavier dans l’application de partage Rights Management | Azure Information Protection"
 description: "Instructions à suivre pour utiliser les raccourcis clavier avec l’application de partage RMS pour Windows."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 72760134-94e0-4699-b20c-07b96aa061f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 0e39640a5c48f5d924fed6ee7bf6de34bf195e56
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: ed59b022078f73d61afcff3eff10aa338176e568
 
 
 ---
 
-# Utiliser les raccourcis clavier dans l’application de partage Rights Management
+# <a name="use-keyboard-shortcuts-in-the-rights-management-sharing-application"></a>Utiliser les raccourcis clavier dans l’application de partage Rights Management
 
 >*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
@@ -28,18 +29,18 @@ Par exemple, dans la boîte de dialogue **Partage protégé**, appuyez sur **Alt
 
 ![Clés d’accès d’application de partage RMS](../media/ADRMS_MSRMSApp_AccessKeys.png)
 
-## Exemples et autres instructions
+## <a name="examples-and-other-instructions"></a>Exemples et autres instructions
 Pour obtenir des exemples et des instructions concernant l’utilisation de l’application de partage Rights Management, voir les sections suivantes dans le Guide d’utilisation de l’application de partage Rights Management :
 
 -   [Exemples d’utilisation de l’application de partage RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
+-   [Que voulez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

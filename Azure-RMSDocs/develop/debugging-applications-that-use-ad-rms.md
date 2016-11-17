@@ -3,6 +3,7 @@ title: "Procédure : Débogage d’une application avec gestion des droits | Az
 description: "La rubrique suivante indique comment déboguer une application et utiliser le journal des événements Windows."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: cab6839a1911bb61185f2ef361b2040ac0d38a6e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 789c93b6d7ac72ebe1df04300f2885ca2aa23a06
 
 
 ---
 
-# Comment : déboguer une application avec gestion des droits
+# <a name="howto-debug-a-rightsenabled-application"></a>Comment : déboguer une application avec gestion des droits
 
 La rubrique suivante indique comment déboguer une application et utiliser le journal des événements Windows.
 
-## Débogage de votre application
+## <a name="debugging-your-application"></a>Débogage de votre application
 
 Dans Rights Management Services SDK 2.1, les vérifications anti-débogage dans la version développeur de notre runtime sont désactivées.
 
@@ -41,7 +42,7 @@ HKEY_LOCAL_MACHINE
             dword
 ```
 
-### Journalisation des applications à l’aide du journal des événements Windows
+### <a name="application-logging-by-using-the-windows-event-log"></a>Journalisation des applications à l’aide du journal des événements Windows
 
 Le nom du journal des événements est Microsoft-RMS-MSIPC/Debug. Cela signifie que votre journal apparaît dans l’Observateur d’événements Windows sous la forme « Journaux des applications et des services\\Microsoft\\RMS\\MSIPC\\Debug ».
 
@@ -67,7 +68,7 @@ Par exemple, la commande suivante active le journal des événements MSIPC et af
 
  
 
-## Rubriques connexes
+## <a name="related-topics"></a>Rubriques connexes
 
  
 
@@ -75,6 +76,6 @@ Par exemple, la commande suivante active le journal des événements MSIPC et af
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

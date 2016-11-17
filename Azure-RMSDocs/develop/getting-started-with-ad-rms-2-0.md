@@ -3,6 +3,7 @@ title: Prise en main | Azure RMS
 description: "La plateforme RMS SDK 2.1 permet aux développeurs de créer des applications qui tirent parti de la protection des informations RMS."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

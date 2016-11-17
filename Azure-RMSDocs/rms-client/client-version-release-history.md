@@ -2,6 +2,7 @@
 title: Client Azure Information Protection&colon; Historique des versions | Azure Information Protection
 description: "Découvrez ce qui est nouveau ou ce qui a changé dans une version du client Azure Information Protection pour Windows."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/27/2016
 ms.topic: article

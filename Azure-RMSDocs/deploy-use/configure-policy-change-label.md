@@ -1,6 +1,8 @@
 ---
 title: "Comment modifier ou personnaliser une étiquette existante | Azure Information Protection"
 description: "Vous pouvez modifier ou optimiser les étiquettes que les utilisateurs voient dans la barre Information Protection en les configurant dans la stratégie Azure Information Protection."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/03/2016
 ms.topic: article

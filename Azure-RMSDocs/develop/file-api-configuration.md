@@ -3,6 +3,7 @@ title: "Configuration de l’API de fichier | Azure RMS"
 description: "Le comportement de l’API de fichier peut être configuré via les paramètres du Registre."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 734ff9735adbf5aac5824b5c823a1fdcaf245d4e
-ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 02ba5c914553e8ade9b6cf43e1e2349b91fdaa1b
 
 
 ---
 
-# Configuration de l’API de fichier
+# <a name="file-api-configuration"></a>Configuration de l’API de fichier
 
 
 Le comportement de l’API de fichier peut être configuré via les paramètres du Registre.
@@ -32,17 +33,17 @@ L’API de fichier fournit deux types de protection : une protection native et 
 
 Pour plus d’informations sur les formats de fichiers pris en charge, consultez **API de fichier - Détails de la prise en charge des fichiers** dans cette rubrique.
 
-## Types et descriptions des clés/valeurs de clés
+## <a name="keykey-value-types-and-descriptions"></a>Types et descriptions des clés/valeurs de clés
 
 Les sections suivantes décrivent les clés et valeurs de clés qui contrôlent le chiffrement.
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
+### <a name="hkeylocalmachinesoftwaremicrosoftmsipcfileprotection"></a>HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
 
 **Type** : Clé
 
 **Description** : Contient la configuration générale de l’API de fichier.
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
+### <a name="hkeylocalmachinesoftwaremicrosoftmsipcfileprotectionltextgt"></a>HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
 
 **Type** : Clé
 
@@ -55,7 +56,7 @@ Les sections suivantes décrivent les clés et valeurs de clés qui contrôlent 
 Définissez la valeur **Encryption** dans la clé pour spécifier le comportement de la protection. Si la valeur **Encryption** n’est pas définie, le comportement par défaut du type de fichier est observé.
 
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
+### <a name="hkeylocalmachinesoftwaremicrosoftmsipcfileprotectionltextgtencryption"></a>HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
 
 **Type** : REG_SZ
 
@@ -76,7 +77,7 @@ Définissez la valeur **Encryption** dans la clé pour spécifier le comportemen
 
 Si vous affectez une autre valeur, ou si vous n’affectez aucune valeur, le comportement par défaut s’applique.
 
-## Comportement par défaut des différents formats de fichiers
+## <a name="default-behavior-for-different-file-formats"></a>Comportement par défaut des différents formats de fichiers
 
 -   **Fichiers Office** : Le chiffrement natif est activé.
 -   **Fichiers txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** : Le chiffrement natif est activé (xxx devient pxxx)
@@ -84,7 +85,7 @@ Si vous affectez une autre valeur, ou si vous n’affectez aucune valeur, le com
 
 Si vous tentez un chiffrement sur un type de fichier bloqué, une erreur [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx) se produit.
 
-### API de fichier - Détails de la prise en charge des fichiers
+### <a name="file-api-file-support-details"></a>API de fichier - Détails de la prise en charge des fichiers
 
 Vous pouvez ajouter une prise en charge native pour tous les types de fichier (extension). Par exemple, pour toute extension &lt;ext&gt; (non-Office), \*.p&lt;ext&gt; est utilisé si la configuration d’administration pour cette extension est « NATIVE ».
 
@@ -106,7 +107,7 @@ Vous pouvez ajouter une prise en charge native pour tous les types de fichier (e
 -   Type de protection = Pfile : sample.*zzz* est chiffré et nommé sample.*zzz*.pfile, où *zzz* représente l’extension de fichier d’origine.
 -   Off : Désactive le chiffrement.
 
-### Exemples
+### <a name="examples"></a>Exemples
 
 Les paramètres suivants activent le chiffrement PFile pour les fichiers txt. La protection native est appliquée aux fichiers Office (par défaut) tandis que la protection PFile est appliquée aux fichiers txt. Pour tous les autres fichiers, la protection est bloquée (par défaut).
 
@@ -146,9 +147,9 @@ HKEY_LOCAL_MACHINE
                   Encryption = Off
 ```
 
-## Rubriques connexes
+## <a name="related-topics"></a>Rubriques connexes
 
-- [Notes pour le développeur](developer-notes.md)
+- [Notes pour les développeurs](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
  
 
@@ -156,6 +157,6 @@ HKEY_LOCAL_MACHINE
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

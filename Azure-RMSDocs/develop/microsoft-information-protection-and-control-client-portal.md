@@ -3,6 +3,7 @@ title: "Rights Management Services SDK 2.1 | Azure RMS"
 description: "La plateforme RMS SDK 2.1 permet aux développeurs de créer des applications qui tirent parti de RMS ou d’Azure RMS pour assurer la protection des informations."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 5972599c568091d39e8a6974648022c4835af1bb
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 20699fe6a0f5d1e989ee767a5710a3272718f064
 
 
 ---
 
-# Rights Management Services SDK 2.1
+# <a name="rights-management-services-sdk-21"></a>Rights Management Services SDK 2.1
 
-## Fonction
+## <a name="purpose"></a>Fonction
 
 La plateforme Rights Management Services SDK 2.1 permet aux développeurs de créer des applications qui tirent parti de Rights Management Services (RMS) ou d’Azure Rights Management pour assurer la protection des informations. RMS SDK 2.1 gère des pratiques de sécurité complexes comme la gestion des clés et le traitement du chiffrement et du déchiffrement, et offre une API simplifiée pour le développement d’applications.
 
-### Développeurs concernés
+### <a name="developer-audience"></a>Développeurs concernés
 
 RMS SDK 2.1, disponible à partir de la [page de téléchargement de RMS SDK 2.1](http://www.microsoft.com/en-us/download/details.aspx?id=38397) dans le Centre de téléchargement Microsoft, sert à créer des applications personnalisées qui activent la gestion des droits sur des ressources numériques et appliquent des conditions d’utilisation pour ces ressources. Une connaissance du langage de programmation C++ est nécessaire.
 
@@ -34,24 +35,24 @@ Pour plus d’informations sur cette technologie, consultez [RMS Developer's Cor
 
 Pour obtenir des réponses aux questions les plus fréquentes, consultez la section dédiée aux développeurs de notre [Forum aux questions sur RMS](http://aka.ms/adrmsfaq )
 
-### Conditions d’exécution
+### <a name="runtime-requirements"></a>Conditions d’exécution
 
 Pour plus d’informations sur les conditions d’exécution d’un élément de programmation spécifique, consultez la section Configuration requise de la rubrique de référence correspondant à cet élément.
 
 |Rubrique|Description|
 |-----|--------|
 |[Vue d'ensemble](ad-rms-overview.md)|Rights Management Services (RMS) est une technologie de protection des informations qui vous aide à protéger les informations numériques contre les utilisations non autorisées.|
-|[Mise en route](getting-started-with-ad-rms-2-0.md)|La plateforme RMS SDK 2.1 permet aux développeurs de créer des applications qui tirent parti de la protection des informations RMS.|
+|[Bien démarrer](getting-started-with-ad-rms-2-0.md)|La plateforme RMS SDK 2.1 permet aux développeurs de créer des applications qui tirent parti de la protection des informations RMS.|
 |[Notes de publication](release-notes-rtm.md)|Cette rubrique contient des informations importantes sur cette version du Kit RMS SDK 2.1 et sur les versions précédentes.|
-|[Notes pour le développeur](developer-notes.md)|Cette section traite de recommandations propres à différents scénarios de développement importants.|
-|[Référence d'API](api-reference-2-1.md)|Cette section contient des rubriques avec de la documentation de référence pour tous les éléments de l’API.|
+|[Notes pour les développeurs](developer-notes.md)|Cette section traite de recommandations propres à différents scénarios de développement importants.|
+|[Référence API](api-reference-2-1.md)|Cette section contient des rubriques avec de la documentation de référence pour tous les éléments de l’API.|
 
  
 
-## Rubriques connexes
+## <a name="related-topics"></a>Rubriques connexes
 
 * [Page de téléchargement de RMS SDK 2.1](http://www.microsoft.com/en-us/download/details.aspx?id=38397)
-* [RMS Developer's Corner](http://blogs.msdn.com/b/rms/archive/2012/05/31/official-release-of-ad-rms-sdk-2-0-and-ad-rms-client-2-0.aspx)
+* [Coin du développeur RMS](http://blogs.msdn.com/b/rms/archive/2012/05/31/official-release-of-ad-rms-sdk-2-0-and-ad-rms-client-2-0.aspx)
 * [FAQ sur RMS](http://aka.ms/adrmsfaq )
  
 
@@ -59,6 +60,6 @@ Pour plus d’informations sur les conditions d’exécution d’un élément de
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

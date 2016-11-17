@@ -2,6 +2,7 @@
 title: "Étape 1 du didacticiel de démarrage rapide | Azure Information Protection"
 description: "Étape 1 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 30 minutes."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: b23022c5fbec3d4f6f19ab5017ecf9badf01a9e7
-ms.openlocfilehash: 247ab8dd5a47f9370f03fbd5badd7c78784d20b5
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: edb98a61d247b51319a1eb172f9978e3d64d0e1b
 
 
 ---
 
-# Étape 1 : activation du service Rights Management
+# <a name="step-1-activate-the-rights-management-service"></a>Étape 1 : activation du service Rights Management
  
 >*S’applique à : Azure Information Protection*
 
@@ -29,7 +30,7 @@ Pour ce didacticiel, nous allons passer directement à la page d’activation po
 
 Si vous préférez accéder à cette page à partir de votre portail d’administration d’Office 365 plutôt que directement, consultez les instructions complètes dans [Activation d’Azure Rights Management](../deploy-use/activate-service.md). En outre, utilisez ces instructions complètes si vous avez accès au portail Azure, mais pas au portail d’administration d’Office 365.
 
-## Pour activer le service Rights Management
+## <a name="to-activate-the-rights-management-service"></a>Pour activer le service Rights Management
 
 1. Ouvrez une nouvelle fenêtre de navigateur et accédez directement à la [page d’activation de Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) pour les administrateurs Office 365.
     
@@ -47,7 +48,7 @@ C’est tout ce que vous avez à faire pour cette première étape du didacticie
 
 |Pour en savoir plus|Informations supplémentaires|
 |--------------------------------|--------------------------|
-|À propos de l’activation de Rights Management|[Activation d'Azure Rights Management](../deploy-use/activate-service.md)|
+|À propos de l’activation de Rights Management|[Activation d’Azure Rights Management](../deploy-use/activate-service.md)|
 |Modèles par défaut et création de modèles personnalisés|[Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 
 >[!div class="step-by-step"]
@@ -56,6 +57,6 @@ C’est tout ce que vous avez à faire pour cette première étape du didacticie
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

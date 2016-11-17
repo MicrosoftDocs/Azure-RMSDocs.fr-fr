@@ -3,6 +3,7 @@ title: Formats de fichier pris en charge | Azure RMS
 description: "La version actuelle de l’API de fichier prend en charge la protection native pour les fichiers Microsoft Office, PDF et la protection PFile pour tous les autres formats de fichier."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 0baa6a5ceeba8ae2e276ffe09edb54060671d8be
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f5fa3082e407e207f33f041d22661888a13566b2
 
 
 ---
 
-# Formats de fichier pris en charge
+# <a name="supported-file-formats"></a>Formats de fichier pris en charge
 
 L’API de fichier prend en charge les formats natif et Pfile.
 
-## Formats de fichier pris en charge
+## <a name="supported-file-formats"></a>Formats de fichier pris en charge
 
 La version actuelle de l’API de fichier prend en charge la protection native pour les fichiers Microsoft Office, PDF (Portable Document Files) et la protection PFile pour tous les autres formats de fichier. Les fichiers PDF peuvent éventuellement avoir une protection PFile.
 
@@ -33,9 +34,9 @@ La version actuelle de l’API de fichier prend en charge la protection native p
 
 Les administrateurs peuvent définir des clés de Registre pour déterminer si et comment les fichiers doivent être protégés selon leur extension de nom de fichier. Pour plus d’informations sur la configuration de la protection des fichiers avec l’API de fichier, consultez [Configuration de l’API de fichier](file-api-configuration.md).
 
-## Rubriques connexes
+## <a name="related-topics"></a>Rubriques connexes
 
-* [Notes pour le développeur](developer-notes.md)
+* [Notes pour les développeurs](developer-notes.md)
 * [Configuration de l’API de fichier](file-api-configuration.md)
  
 
@@ -43,6 +44,6 @@ Les administrateurs peuvent définir des clés de Registre pour déterminer si e
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

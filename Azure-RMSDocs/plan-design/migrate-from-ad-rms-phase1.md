@@ -2,6 +2,7 @@
 title: "Migration d’AD RMS vers Azure Information Protection - Phase 1 | Azure Information Protection"
 description: "Phase 1 de la migration d’AD RMS vers Azure Information Protection, couvrant les étapes 1 à 4 de la migration d’AD RMS vers Azure Information Protection."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,20 +13,20 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d7e21c2bb07e82bc243e5ab01c0a21aa0fe274d1
-ms.openlocfilehash: 79daf0aec75aa16884b5b395a836cfac566ce13d
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 2db4041d7839d32a4d8f0bd468aa114d45665c27
 
 
 ---
 
-# Phase de migration 1 : Configuration côté serveur pour AD RMS
+# <a name="migration-phase-1-serverside-configuration-for-ad-rms"></a>Phase de migration 1 : Configuration côté serveur pour AD RMS
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Office 365*
+>*S’applique à : Services AD RMS, Azure Information Protection, Office 365*
 
 Utilisez les informations suivantes pour la Phase 1 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent les étapes 1 à 4 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## Étape 1 : Télécharger l’outil d’administration Azure Rights Management
+## <a name="step-1-download-the-azure-rights-management-administration-tool"></a>Étape 1 : Télécharger l’outil d’administration Azure Rights Management
 Accédez au Centre de téléchargement Microsoft et téléchargez l’[outil d’administration Azure Rights Management](https://go.microsoft.com/fwlink/?LinkId=257721), qui contient le module d’administration Azure Rights Management pour Windows PowerShell. Azure Rights Management (Azure RMS) est le service qui fournit la protection des données pour Azure Information Protection.
 
 Installez l’outil. Pour obtenir des instructions, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md).
@@ -33,14 +34,14 @@ Installez l’outil. Pour obtenir des instructions, consultez [Installation de W
 > [!NOTE]
 > Si vous avez déjà téléchargé ce module Windows PowerShell, exécutez la commande suivante pour vérifier que le numéro de votre version est au minimum 2.5.0.0 : `(Get-Module aadrm -ListAvailable).Version`
 
-## Étape 2. Exporter les données de configuration d’AD RMS, puis les importer dans Azure Information Protection
+## <a name="step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Étape 2. Exporter les données de configuration d’AD RMS, puis les importer dans Azure Information Protection
 Cette étape est un processus comprenant deux phases :
 
 1.  Exporter les données de configuration d'AD RMS en exportant les domaines de publication approuvés (TPD) dans un fichier .xml. Ce processus est identique pour toutes les migrations.
 
 2.  Importez les données de configuration dans Azure Information Protection. Il existe différents processus pour cette étape, en fonction de la configuration actuelle de votre déploiement AD RMS et de votre topologie préférée pour votre clé de client Azure RMS.
 
-### Exportation des données de configuration d'AD RMS
+### <a name="export-the-configuration-data-from-ad-rms"></a>Exportation des données de configuration d'AD RMS
 
 > [!IMPORTANT]
 > Avant de suivre cette procédure, vérifiez d’abord que vos serveurs AD RMS sont en cours d’exécution en mode de chiffrement 2, qui est une condition requise pour Azure Information Protection.
@@ -56,7 +57,7 @@ Cette étape est un processus comprenant deux phases :
 
 Procédez comme suit sur tous les clusters AD RMS, pour tous les domaines de publication approuvés comprenant un contenu protégé pour votre organisation. Il est inutile d'exécuter cette procédure sur des clusters dédiés uniquement à la gestion des licences.
 
-#### Pour exporter les données de configuration (informations du domaine de publication approuvé)
+#### <a name="to-export-the-configuration-data-trusted-publishing-domain-information"></a>Pour exporter les données de configuration (informations du domaine de publication approuvé)
 
 1.  Connectez-vous au cluster AD RMS en tant qu'utilisateur avec des autorisations d'administration AD RMS.
 
@@ -74,7 +75,7 @@ Procédez comme suit sur tous les clusters AD RMS, pour tous les domaines de pub
 
 Après avoir exporté tous les domaines de publication approuvés, vous pouvez commencer la procédure d’importation de ces données dans Azure Information Protection.
 
-### Importer les données de configuration dans Azure Information Protection
+### <a name="import-the-configuration-data-to-azure-information-protection"></a>Importer les données de configuration dans Azure Information Protection
 La procédure exacte de cette étape dépend de la configuration actuelle de votre déploiement AD RMS, ainsi que de votre topologie préférée pour votre clé de propriétaire Azure Information Protection.
 
 Votre déploiement AD RMS actuel utilisera l'une des configurations suivantes pour votre clé de certificat de licence serveur (SLC) :
@@ -118,7 +119,7 @@ Pour effectuer l’Étape 2, sélectionnez les instructions correspondant à vo
 - [Clé protégée par logiciel vers clé protégée par HSM](migrate-softwarekey-to-hsmkey.md)
 
 
-## Étape 3. Activer votre locataire Azure Information Protection
+## <a name="step-3-activate-your-azure-information-protection-tenant"></a>Étape 3. Activer votre locataire Azure Information Protection
 Cette étape nécessite que vous activiez le service Azure Rights Management. Les instructions complètes figurent dans l’article [Activation d’Azure Rights Management](../deploy-use/activate-service.md).
 
 
@@ -131,7 +132,7 @@ Si votre locataire Azure Information Protection est déjà activé et que vous p
 
 En outre, si vous avez créé des modèles personnalisés que vous souhaitez utiliser après la migration, vous devez les exporter et importer. Cette procédure est détaillée dans l’étape suivante. 
 
-## Étape 4. Configurer les modèles importés
+## <a name="step-4-configure-imported-templates"></a>Étape 4. Configurer les modèles importés
 Étant donné que l’état par défaut des modèles importés est **Archivé**, vous devez définir cet état sur **Publié** si vous voulez que les utilisateurs soient en mesure d’utiliser ces modèles avec le service Azure Rights Management.
 
 Les modèles que vous importez à partir d’AD RMS ressemblent et se comportent comme des modèles personnalisés que vous pouvez créer dans le portail Azure Classic. Pour convertir des modèles importés en modèles publiés pour que les utilisateurs puissent les afficher et les sélectionner à partir d’applications, consultez [Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md).
@@ -144,7 +145,7 @@ Voici les modifications que vous pouvez être amené à apporter aux modèles po
 
 - Si vos modèles dans AD RMS utilisaient le groupe **ANYONE**, vous devez ajouter manuellement les droits et groupe équivalents.
 
-## Procédure à effectuer si vous avez créé des modèles personnalisés avant la migration
+## <a name="procedure-if-you-created-custom-templates-before-the-migration"></a>Procédure à effectuer si vous avez créé des modèles personnalisés avant la migration
 
 Si vous avez créé des modèles personnalisés avant la migration, que ce soit avant ou après l’activation du service Azure Rights Management, les modèles ne sont pas disponibles pour les utilisateurs après la migration, même si vous les avez définis sur **Publié**. Pour les mettre à la disposition des utilisateurs, vous devez effectuer les opérations suivantes : 
 
@@ -157,9 +158,9 @@ Si vous avez créé des modèles personnalisés avant la migration, que ce soit 
 Vous pouvez ensuite publier ou archiver ces modèles comme vous le feriez pour tout autre modèle que vous créez après la migration.
 
 
-## Procédure à effectuer si vos modèles dans AD RMS utilisaient le groupe **ANYONE**
+## <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Procédure à effectuer si vos modèles dans AD RMS utilisaient le groupe **ANYONE**
 
-Si vos modèles dans AD RMS utilisaient le groupe **ANYONE**, ce groupe est automatiquement supprimé pendant l’importation des modèles dans Azure Information Protection. Vous devez ajouter manuellement le groupe ou les utilisateurs équivalents, ainsi que les mêmes droits, aux modèles importés. Le nom du groupe équivalent pour Azure Information Protection est **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<nom_locataire>.onmicrosoft.com**. Par exemple, ce groupe peut se présenter comme suit pour Contoso : **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+Si vos modèles dans AD RMS utilisaient le groupe **ANYONE**, ce groupe est automatiquement supprimé pendant l’importation des modèles dans Azure Information Protection. Vous devez ajouter manuellement le groupe ou les utilisateurs équivalents, ainsi que les mêmes droits, aux modèles importés. Le groupe équivalent pour Azure Information Protection se nomme **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<tenant_name>.onmicrosoft.com**. Par exemple, ce groupe peut se présenter sous la même forme que dans l’exemple suivant pour Contoso : **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
 
 Si vous n’êtes pas sûr que vos modèles AD RMS incluent le groupe ANYONE, vous pouvez utiliser l’exemple de script Windows PowerShell suivant pour identifier ces modèles. Pour plus d’informations sur l’utilisation de Windows PowerShell avec AD RMS, consultez [Utilisation de Windows PowerShell pour administrer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
@@ -175,7 +176,7 @@ Vous pouvez afficher le groupe créé automatiquement pour votre organisation si
 > Compte tenu de cette différence entre les deux groupes, vous pouvez aussi être amené à ajouter des utilisateurs externes, en plus du groupe « AllStaff ». Les adresses de messagerie externes ne sont pas actuellement prises en charge pour les groupes.
 
 
-### Exemple de script Windows PowerShell permettant d’identifier les modèles AD RMS qui incluent le groupe ANYONE
+### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Exemple de script Windows PowerShell permettant d’identifier les modèles AD RMS qui incluent le groupe ANYONE
 Cette section contient l’exemple de script qui vous permet d’identifier les modèles AD RMS pour lesquels le groupe ANYONE a été défini, comme décrit dans la section précédente.
 
 **Exclusion de responsabilité** : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
@@ -213,12 +214,12 @@ Remove-PSDrive MyRmsAdmin -force
 ```
 
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 Passez à la [Phase 2 : Configuration côté client](migrate-from-ad-rms-phase2.md).
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

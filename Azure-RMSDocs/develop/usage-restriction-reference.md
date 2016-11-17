@@ -3,6 +3,7 @@ title: "Informations de référence sur les restrictions d’utilisation | Azure
 description: "Les restrictions d’utilisation sont définies par les constantes répertoriées dans cette rubrique."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/19/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 37d9906b5df00b6ec6eeb6739766c00bd5cef37b
-ms.openlocfilehash: e9cc23d220408faf0e010debb1b6cab0c9dc58ba
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f4767c81c246ec6ba53992b9b8e3375e8e02723d
 
 
 ---
 
-# Informations de référence sur les restrictions d’utilisation
+# <a name="usage-restriction-reference"></a>Informations de référence sur les restrictions d’utilisation
 
 Les restrictions d’utilisation sont définies par les constantes répertoriées dans cette rubrique.
 
@@ -49,6 +50,6 @@ Pour chaque droit utilisateur répertorié dans la colonne Droit AD RMS, vous t
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

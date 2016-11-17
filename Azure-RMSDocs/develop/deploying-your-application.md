@@ -3,6 +3,7 @@ title: "Déploiement de votre application | Azure RMS"
 description: "Cette rubrique décrit les options de déploiement pour votre application avec gestion des droits."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,18 +15,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 44e90a1de74d62469bd8a99a2d49d1e57d2d0f62
-ms.openlocfilehash: e1bc56fc108101d0af833a84ba52821c8b18736d
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f565294366bdfd06be7fc25ef781eb4900929484
 
 
 ---
 
-# Déployer en production
+# <a name="deploy-into-production"></a>Déployer en production
 
 
 Cette rubrique décrit les options de déploiement pour votre application avec gestion des droits.
 
-## Demander un contrat de licence de production
+## <a name="request-a-production-license-agreement"></a>Demander un contrat de licence de production
 
  Avant de pouvoir publier une application développée avec Rights Management Services SDK 2.1, vous devez demander un contrat de licence de production pour obtenir un certificat de production.
 
@@ -63,11 +64,11 @@ L’équipe ADRMLA (Active Directory Rights Management Licensing Agreement) rép
 Suivez bien les instructions envoyées par l’équipe ADRMLA. Ces instructions mentionnent les informations numériques nécessaires pour répondre à votre demande de certificat. En suivant les instructions pas à pas, vous réduirez tout risque de retard.
 
 
-## Options d’installation et configuration requise pour le client RMS (Rights Management Services) 2.1
+## <a name="installation-options-and-requirements-for-rights-management-service-client-21"></a>Options d’installation et configuration requise pour le client RMS (Rights Management Services) 2.1
 
 Étant donné que vous avez utilisé RMS SDK 2.1, Active Directory Rights Management Services Client 2.1 doit être déployé sur l’ordinateur de l’utilisateur final.
 
-### Client RMS 2.1
+### <a name="rms-client-21"></a>Client RMS 2.1
 
 Le client RMS 2.1 est un logiciel conçu pour vos ordinateurs clients, qui permet de protéger l’accès aux informations qui circulent dans les applications utilisant RMS, qu’elles soient installées en local ou dans un centre de données Microsoft, ainsi que l’utilisation de ces informations.
 
@@ -78,7 +79,7 @@ Le client RMS 2.1 n’est pas un composant du système d’exploitation Windows
 > AD RMS Client 2.1 est spécifique à l’architecture et doit correspondre à celle de votre système d’exploitation cible.
 
 
-## Choix d’installation du client RMS 2.1
+## <a name="rms-client-21-installation-choices"></a>Choix d’installation du client RMS 2.1
 
 -   **Redistribution du client RMS 2.1**
 
@@ -99,7 +100,7 @@ Le client RMS 2.1 n’est pas un composant du système d’exploitation Windows
 
     Si le client est présent, poursuivez l’installation de votre application.
 
-## Activation d’Azure Rights Management Services avec votre application
+## <a name="enabling-azure-rights-management-services-with-your-application"></a>Activation d’Azure Rights Management Services avec votre application
 
 > [!NOTE]
 > Si vous avez migré vers le nouveau modèle ADAL pour l’authentification, il est inutile d’installer l’Assistant de connexion. Pour plus d’informations, consultez [Authentification ADAL pour votre application compatible RMS](adal-auth.md).
@@ -119,7 +120,7 @@ Pour que votre utilisateur final tire parti des services Azure Rights Management
 
 Pour plus d’informations sur l’activation de votre application pour utiliser RMS pour les services Azure Rights Management, consultez [Permettre à votre application de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
-## Rubriques connexes
+## <a name="related-topics"></a>Rubriques connexes
 
 * [Assistant de connexion Microsoft Online Services](http://www.microsoft.com/en-us/download/details.aspx?id=28177)
 * [Configuration de Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx)
@@ -130,6 +131,6 @@ Pour plus d’informations sur l’activation de votre application pour utiliser
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,8 +2,9 @@
 title: "Activation d’Azure Rights Management | Azure Information Protection"
 description: "Le service Azure Rights Management doit être activé pour que votre organisation puisse commencer à protéger des documents et e-mails importants à l’aide d’applications et de services prenant en charge cette solution de protection des informations."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +13,8 @@ ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: 06c71229427743e9669baee1fdbb41f175180b0f
+ms.sourcegitcommit: 84072c64f83ec97ac41d6ec030be5eabff263b4b
+ms.openlocfilehash: 51bc2c66cfce9f50b0d876fb1066d740f570d27d
 
 
 ---
@@ -40,19 +41,19 @@ Pour découvrir comment activer le service Rights Management à partir de votre 
 - [Centre d’administration Office 365 – classique](activate-office365-classic.md)
 - [Portail Azure Classic](activate-azure-classic.md)
 
-En guise d’alternative, vous pouvez utiliser Windows PowerShell pour activer [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] :
+En guise d’alternative, vous pouvez utiliser PowerShell pour activer [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] :
 
 1. Installez l’outil d’administration Azure Rights Management, qui installe le module d’administration Azure Rights Management. Pour obtenir des instructions, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md).
 
-2. À partir d’une session Windows PowerShell, exécutez [Connect-AadrmService](https://msdn.microsoft.com/library/windowsazure/dn629415.aspx) et, à l’invite, fournissez les détails du compte d’administrateur général de votre locataire Azure Information Protection.
+2. À partir d’une session PowerShell, exécutez [Connect-AadrmService](https://msdn.microsoft.com/library/windowsazure/dn629415.aspx) et, à l’invite, fournissez les détails du compte d’administrateur général de votre locataire Azure Information Protection.
 
 3. Exécutez [Enable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629412.aspx) pour activer le service Azure Rights Management.
 
 ## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Configuration de contrôles d'intégration pour un déploiement échelonné
-Si vous ne souhaitez pas que tous les utilisateurs puissent protéger des fichiers immédiatement à l’aide d’Azure Rights Management, vous pouvez configurer des contrôles d’intégration d’utilisateur à l’aide de la commande Windows PowerShell [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) . Vous pouvez exécuter cette commande avant ou après avoir activé le service Azure Rights Management.
+Si vous ne souhaitez pas que tous les utilisateurs puissent protéger des fichiers immédiatement à l’aide d’Azure Rights Management, vous pouvez configurer des contrôles d’intégration d’utilisateur à l’aide de la commande PowerShell [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) . Vous pouvez exécuter cette commande avant ou après avoir activé le service Azure Rights Management.
 
 > [!IMPORTANT]
-> Pour utiliser cette commande, vous devez disposer au moins de la version **2.1.0.0** du [module Azure Rights Management Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=257721).
+> Pour utiliser cette commande, vous devez disposer au moins de la version **2.1.0.0** du [module Azure Rights Management PowerShell](http://go.microsoft.com/fwlink/?LinkId=257721).
 >
 > Pour vérifier la version que vous avez installée, exécutez : **(Get-Module aadrm – ListAvailable).Version**
 
@@ -61,13 +62,16 @@ Par exemple, si vous souhaitez initialement que seuls les administrateurs du gro
 ```
 Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId fbb99ded-32a0-45f1-b038-38b519009503
 ```
-Notez que pour cette option de configuration, vous devez spécifier un groupe. Vous ne pouvez pas spécifier des utilisateurs individuels.
+Notez que pour cette option de configuration, vous devez spécifier un groupe. Vous ne pouvez pas spécifier des utilisateurs individuels. Pour obtenir l’ID d’objet du groupe, utilisez Azure AD PowerShell. Par exemple, pour la [version 1.0](https://msdn.microsoft.com/library/azure/jj151815\(v=azure.98\).aspx) du module, utilisez la commande [Get-MsolGroup](https://msdn.microsoft.com/library/azure/dn194130\(v=azure.98\).aspx).
 
 Ou bien, si vous souhaitez vous assurer que seuls les utilisateurs disposant d’une licence appropriée pour utiliser Azure Information Protection puissent protéger du contenu :
 
 ```
 Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
 ```
+
+Pour plus d’informations sur cette applet de commande et pour obtenir des exemples supplémentaires, consultez l’aide de [Set-AadrmOnboardingControlPolicy](https://msdn.microsoft.com/library/dn857521.aspx).
+
 Lorsque vous utilisez ces contrôles d'intégration, tous les utilisateurs de l'organisation peuvent toujours consommer du contenu protégé par votre sous-ensemble d'utilisateurs, mais ils ne peuvent pas appliquer la protection des informations à eux-mêmes à partir d'applications clientes. Par exemple, dans leurs clients Office, ils ne voient pas les modèles par défaut qui sont automatiquement publiés au moment de l’activation du service Azure Rights Management, ou les modèles personnalisés que vous pourriez configurer.  Les applications côté serveur, telles qu’Exchange, peuvent implémenter leurs propres contrôles utilisateur pour l’intégration de Rights Management et obtenir le même résultat.
 
 
@@ -81,6 +85,6 @@ Les services Office, comme Exchange Online et SharePoint Online, nécessitent un
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

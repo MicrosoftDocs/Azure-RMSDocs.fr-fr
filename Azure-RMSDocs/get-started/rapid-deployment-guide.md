@@ -2,6 +2,7 @@
 title: "Guide de déploiement rapide pour Azure Information Protection | Azure Information Protection"
 description: "Guide vous permettant de déployer et d’utiliser plus rapidement Azure Information Protection pour protéger les données de votre organisation. Commencez par choisir un scénario spécifique à implémenter dans une liste."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
-ms.openlocfilehash: 914362cbabe2e929b988e0f922c3848e8ca7771f
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: d1415913f4a76331088140555b0cfeaa88200871
 
 
 ---
 
-# Guide de déploiement rapide pour Azure Rights Management
+# <a name="rapid-deployment-guide-for-azure-rights-management"></a>Guide de déploiement rapide pour Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -35,7 +36,7 @@ Avant de déployer ces solutions, vous souhaiterez peut-être envoyer une annonc
 > [!NOTE]
 > Si vous avez des questions et des commentaires concernant ce guide, utilisez les mécanismes de commentaires indiqués sur cette page ou envoyez un e-mail à [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
-## Scénarios pour Azure Information Protection
+## <a name="scenarios-for-azure-information-protection"></a>Scénarios pour Azure Information Protection
 Pour vous aider à déployer rapidement Azure Information Protection pour résoudre des problèmes professionnels spécifiques, choisissez les scénarios qui correspondent le plus à vos objectifs commerciaux et adaptez-les si nécessaire.
 
 
@@ -123,12 +124,12 @@ Voir : [Scénario - Configurer des dossiers de travail pour la protection perma
 
 
 
-## Annonce pour les utilisateurs avant le déploiement
+## <a name="announcement-for-users-before-rollout"></a>Annonce pour les utilisateurs avant le déploiement
 Vous pouvez utiliser l’exemple de message de communication suivant pour signaler aux utilisateurs que le déploiement d’Azure Information Protection va impliquer certains changements. Copiez et collez le texte suivant, et faites-le envoyer par e-mail à tous les utilisateurs par un membre de l’équipe dirigeante de votre organisation, de préférence le Directeur général. Apportez au texte toute modification susceptible de le rendre plus pertinent pour vos utilisateurs et votre organisation.
 
 ![Exemple de bannière de documentation utilisateur pour un déploiement rapide Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-### Modifications que nous apportons pour protéger nos données
+### <a name="changes-were-making-to-safeguard-our-data"></a>Modifications que nous apportons pour protéger nos données
 Avez-vous déjà souhaité bloquer l’accès à un document envoyé par erreur à vos partenaires ? Vous êtes-vous déjà demandé s’il existait un moyen de savoir lesquels de vos clients avaient lu les dernières nouveautés sur les produits que vous leur aviez envoyées ? Souhaiteriez-vous pouvoir partager des informations de produits confidentielles sans risquer qu’elles soient transférées à des personnes qui ne doivent pas les voir ?
 
 Vous pourrez bientôt bénéficier de toutes ces fonctionnalités, car le service Informatique va déployer des modifications qui implémentent Microsoft Azure Information Protection comme solution de protection des données d’entreprise. Une grande partie de ces modifications appliqueront automatiquement la protection dont nous avons besoin, sans que vous ayez à faire quoi que ce soit de différent. En revanche, certaines modifications pourront nécessiter un comportement différent de votre part. Dans ce cas, le service Informatique vous enverra des informations et des instructions, et vous pourrez bénéficier d’une aide de la part du Support technique en cas de question ou de problème.
@@ -146,6 +147,6 @@ Les solutions que nous implémentons nous aideront à protéger nos données les
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

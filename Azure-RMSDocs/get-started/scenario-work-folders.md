@@ -2,6 +2,7 @@
 title: "Scénario - Configurer des dossiers de travail pour la protection permanente | Azure Information Protection"
 description: "Ce scénario et la documentation utilisateur associée utilisent la protection Azure Rights Management pour appliquer une protection permanente aux documents Office des dossiers de travail."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 966c1b109a02f8193de16eae6f2eacec757f533b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 0d4b1cdc2620a1f8cf9ddced24a898a38d8e9b57
 
 
 ---
 
-# Scénario - Configurer des dossiers de travail pour la protection permanente
+# <a name="scenario-configure-work-folders-for-persistent-protection"></a>Scénario - Configurer des dossiers de travail pour la protection permanente
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -41,23 +42,23 @@ Les instructions conviennent pour l’ensemble des situations suivantes :
 
 -   Pour les fichiers qui doivent être partagés avec des personnes qui ne sont pas spécifiées dans le modèle de stratégie de droits (par exemple, les utilisateurs d’une autre organisation), les utilisateurs doivent appliquer une nouvelle stratégie de droits pour remplacer la protection de la stratégie de droits d’origine.
 
-## Instructions de déploiement
+## <a name="deployment-instructions"></a>Instructions de déploiement
 ![Instructions destinées aux administrateurs pour le déploiement rapide Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Vérifiez que les conditions suivantes sont réunies, puis suivez les instructions pour mener à bien les procédures associées avant de poursuivre avec la documentation utilisateur.
 
-## Conditions requises pour ce scénario
+## <a name="requirements-for-this-scenario"></a>Conditions requises pour ce scénario
 Pour pouvoir appliquer les instructions de ce scénario, les conditions suivantes doivent être réunies :
 
 |Condition requise|Si vous avez besoin d'informations supplémentaires|
 |---------------|--------------------------------|
-|Azure Rights Management est activé|[Activation d'Azure Rights Management](../deploy-use/activate-service.md)|
+|Azure Rights Management est activé|[Activation d’Azure Rights Management](../deploy-use/activate-service.md)|
 |Vous avez synchronisé vos comptes d'utilisateurs Active Directory locaux avec Azure Active Directory ou Office 365, y compris leurs adresses électroniques. Cela est nécessaire pour tous les utilisateurs utilisant Dossiers de travail.|[Préparation d’Azure Information Protection](../plan-design/prepare.md)|
 |Une des causes suivantes :<br /><br />- Pour utiliser un modèle par défaut pour tous les utilisateurs qui ne leur permet pas d’appliquer une nouvelle stratégie de droits, consultez : Vous n’avez pas archivé le modèle par défaut **&lt;nom de l’organisation&gt; - Confidentiel**.<br /><br />- Pour utiliser un modèle personnalisé qui permet aux utilisateurs d’appliquer une nouvelle stratégie de droits : utilisez les instructions ci-après pour créer un modèle personnalisé|[Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |Le connecteur Rights Management autorisé pour l’ordinateur Windows Server et configuré pour le rôle **Serveur ICF** est installé.|[Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
 |L'application de partage Rights Management est déployée sur les ordinateurs des utilisateurs qui exécutent Windows|[Déploiement automatique de l'application de partage Microsoft Rights Management](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 
-### Configuration du modèle de stratégie de droits personnalisé afin que les utilisateurs puissent partager les fichiers de Dossiers de travail à l’extérieur de l’organisation
+### <a name="configuring-the-custom-rights-policy-template-so-that-users-can-share-work-folders-files-outside-the-organization"></a>Configuration du modèle de stratégie de droits personnalisé afin que les utilisateurs puissent partager les fichiers de Dossiers de travail à l’extérieur de l’organisation
 
 1.  Connectez-vous au portail classique Azure et accédez aux modèles Azure Rights Management.
 
@@ -79,7 +80,7 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
 
 5.  Enregistrez le modèle.
 
-### Configuration de Dossiers de travail pour appliquer une protection permanente à un fichier Office
+### <a name="configuring-work-folders-to-apply-persistent-protection-to-office-file"></a>Configuration de Dossiers de travail pour appliquer une protection permanente à un fichier Office
 
 1.  Implémentez Dossiers de travail pour vos utilisateurs afin de pouvoir synchroniser les fichiers enregistrés localement dans un dossier du serveur de fichiers, appelé *partage de synchronisation*. Le partage de synchronisation du serveur de fichiers ne doit pas être sur le même serveur exécutant le connecteur Rights Management.
 
@@ -109,7 +110,7 @@ Pour pouvoir appliquer les instructions de ce scénario, les conditions suivante
 
 4.  Si vous avez décidé de protéger les fichiers de manière sélective en utilisant l’infrastructure de classification des fichiers, configurez votre règle de classification et votre calendrier, puis modifiez la tâche de gestion de fichiers pour inclure cette propriété de classification en tant que condition.
 
-## Instructions de la documentation utilisateur
+## <a name="user-documentation-instructions"></a>Instructions de la documentation utilisateur
 Si les fichiers que vous protégez avec Azure Rights Management ne doivent pas nécessairement être partagés avec des personnes extérieures à votre organisation, il se peut que vous n’ayez aucune autre instruction à donner aux utilisateurs, que celles fournies pour l’utilisation de Dossiers de travail. Lorsque les utilisateurs ouvrent les fichiers protégés par Azure Rights Management et le modèle par défaut, les fichiers, s’ouvrent comme d’habitude dans Office, à la seule différence que les utilisateurs peuvent être invités à s’authentifier, et qu’ils voient une barre d’informations s’afficher en haut du document, les informant que le contenu contient des informations propriétaires destinées aux utilisateurs internes uniquement.
 
 Si vous avez configuré le modèle personnalisé comme décrit pour ce scénario, les utilisateurs voient la description du modèle suivante s’afficher dans la barre d’informations : **Ce contenu est protégé par Dossiers de travail et est limité aux employés de la société uniquement. Pour partager ce contenu avec des personnes extérieures à l’organisation, joignez le document à un e-mail et utilisez la fonction Partage protégé.** Bien que cette description résume comment partager le fichier en dehors de l’organisation, les utilisateurs auront probablement besoin d’instructions détaillées relatives à la manière de procéder, notamment les premières fois. Pour prendre en charge ce scénario ultérieur, suivez les instructions de l’administrateur et de l’utilisateur final de [Scénario - Partage d’un fichier Office avec les utilisateurs d’une autre organisation](scenario-share-office-file-externally.md).
@@ -122,6 +123,6 @@ Si vous avez configuré le modèle personnalisé comme décrit pour ce scénario
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

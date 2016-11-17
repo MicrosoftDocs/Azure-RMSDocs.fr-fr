@@ -2,6 +2,7 @@
 title: "Suivre et révoquer vos documents quand vous utilisez l’application de partage RMS| Azure Information Protection"
 description: "Après avoir protégé vos documents à l’aide de l’application de partage RMS, vous pouvez voir comment les personnes utilisent vos documents protégés. Si nécessaire, vous pouvez aussi révoquer l’accès à ces documents dès lors que vous ne voulez plus qu’ils soient partagés."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/04/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 13579b8cb5516a1d7390db81957c140b8e980982
-ms.openlocfilehash: 1cd55e9c6200876a4d9921e3b60eb8fb58845d0c
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 3b5b19ab2dfdf6b797f55134f3063948dcab33d5
 
 
 ---
 
-# Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS
+# <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS
 
 >*S’applique à : Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
@@ -40,7 +41,7 @@ Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos do
 
 -   Si vous avez des questions ou souhaitez fournir des commentaires sur le site de suivi de document : cliquez sur l’icône d’aide pour accéder au [Forum aux questions sur le suivi de documents](http://go.microsoft.com/fwlink/?LinkId=523977).
 
-## Utilisation d’Office pour accéder au site de suivi de document
+## <a name="using-office-to-access-the-document-tracking-site"></a>Utilisation d’Office pour accéder au site de suivi de document
 
 -   Pour les applications Office, Word, Excel et PowerPoint : Sous l’onglet **Accueil** , dans le groupe **RMS** , cliquez sur **Partage protégé**, puis sur **Suivre l’utilisation**.
 
@@ -57,7 +58,7 @@ Si vous ne voyez pas ces options pour RMS, il est probable que l’application d
 > 
 > - Dans une application Office, sous l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger** > **Suivre l’utilisation**. 
 
-### Autres méthodes de suivi et de révocation de vos documents
+### <a name="other-ways-to-track-and-revoke-your-documents"></a>Autres méthodes de suivi et de révocation de vos documents
 Outre le suivi de vos documents sur les ordinateurs Windows à l’aide des applications Office, vous pouvez également utiliser ces méthodes :
 
 -   **Avec un navigateur web**: cette méthode fonctionne pour tous les appareils pris en charge.
@@ -66,7 +67,7 @@ Outre le suivi de vos documents sur les ordinateurs Windows à l’aide des appl
 
 -   **Avec un message électronique Outlook**: Cette méthode fonctionne sur tous les ordinateurs Windows.
 
-#### Utilisation d’un navigateur web pour accéder au site de suivi de document
+#### <a name="using-a-web-browser-to-access-the-doc-tracking-site"></a>Utilisation d’un navigateur web pour accéder au site de suivi de document
 
 -   Dans un navigateur pris en charge, accédez au [site de suivi de document](http://go.microsoft.com/fwlink/?LinkId=529562).
 
@@ -82,30 +83,30 @@ Outre le suivi de vos documents sur les ordinateurs Windows à l’aide des appl
 
     -   Google Chrome : version 18 ou ultérieure
 
-#### Utilisation de l’Explorateur de fichiers pour accéder au site de suivi de document
+#### <a name="using-file-explorer-to-access-the-doc-tracking-site"></a>Utilisation de l’Explorateur de fichiers pour accéder au site de suivi de document
 
 -   Cliquez avec le bouton droit sur le fichier, sélectionnez **Protéger avec RMS**, puis **Suivre l’utilisation** :
 
     ![Sélectionner Suivre l’utilisation de l’Explorateur quand vous faites appel à l’application de partage RMS](../media/ADRMS_MSRMSApp_ExplorerTrackUsage.png)
 
-#### Utilisation d’un e-mail Outlook pour accéder au site de suivi de document
+#### <a name="using-an-outlook-email-message-to-access-the-doc-tracking-site"></a>Utilisation d’un e-mail Outlook pour accéder au site de suivi de document
 
 -   Dans un e-mail, sous l’onglet **Message** , dans le groupe  **RMS** , cliquez sur **Partage protégé**, puis sur **Suivre l’utilisation**:
 
     ![Sélectionner Suivre l’utilisation d’Outlook quand vous faites appel à l’application de partage RMS](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
 
-## Exemples et autres instructions
+## <a name="examples-and-other-instructions"></a>Exemples et autres instructions
 Pour obtenir des exemples et des instructions concernant l’utilisation de l’application de partage Rights Management, voir les sections suivantes dans le Guide d’utilisation de l’application de partage Rights Management :
 
 -   [Exemples d’utilisation de l’application de partage RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Que souhaitez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
+-   [Que voulez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

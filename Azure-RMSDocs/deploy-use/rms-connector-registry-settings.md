@@ -2,6 +2,7 @@
 title: "Paramètres du Registre pour le connecteur RMS | Azure Information Protection"
 description: "Informations relatives aux paramètres du Registre sur les serveurs utilisant le connecteur RMS. La méthode recommandée pour configurer ces paramètres consiste à utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: a0132404bb9ccb202c552aaca680659947d9c888
 
 
 ---
 
 
-# Paramètres de Registre pour le connecteur Rights Management
+# <a name="registry-setting-for-the-rights-management-connector"></a>Paramètres de Registre pour le connecteur Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -45,7 +46,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 -   Utilisez le préfixe HTTPS pour l'URL du connecteur si vous avez configuré le connecteur pour utiliser le protocole HTTPS pour communiquer avec vos serveurs locaux. Pour plus d’informations, consultez la section [Configuration du connecteur RMS pour le protocole HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) dans les instructions principales. Notez que les URL Microsoft RMS utilisent toujours le protocole HTTPS.
 
 
-## Paramètres de Registre Exchange 2013 ou Exchange 2016
+## <a name="exchange-2016-or-exchange-2013-registry-settings"></a>Paramètres de Registre Exchange 2013 ou Exchange 2016
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -96,7 +97,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 - https://*ConnectorFQDN*
 
 
-## Paramètres de Registre Exchange 2010
+## <a name="exchange-2010-registry-settings"></a>Paramètres de Registre Exchange 2010
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -145,7 +146,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 - https://*ConnectorFQDN*
 
 
-## Paramètres de Registre SharePoint 2016 ou SharePoint 2013
+## <a name="sharepoint-2016-or-sharepoint-2013-registry-settings"></a>Paramètres de Registre SharePoint 2016 ou SharePoint 2013
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
@@ -192,7 +193,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 
 
-## Paramètres de Registre du serveur de fichiers et de l’Infrastructure de classification des fichiers
+## <a name="file-server-and-file-classification-infrastructure-registry-settings"></a>Paramètres de Registre du serveur de fichiers et de l’Infrastructure de classification des fichiers
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
@@ -216,6 +217,6 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 Retour à [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

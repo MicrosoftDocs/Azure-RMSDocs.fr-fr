@@ -4,7 +4,7 @@ description: "Informations vous permettant de configurer les serveurs locaux des
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: fc30e58bb6702576988db0dcb4fd38a73d5591b1
+ms.sourcegitcommit: afbaf9bfc2b898d8dece415a26045ec52f7deaac
+ms.openlocfilehash: 15d017cda5e390a6fd2b639ef451a15422981ae4
 
 
 ---
@@ -142,10 +142,16 @@ Pour utiliser le connecteur RMS, ces serveurs Exchange doivent exécuter l'une d
 
 -   Exchange Server 2010 avec mise à jour cumulative 6 Exchange 2010 Service Pack 3
 
-Vous devez également installer sur ces serveurs une version du client RMS qui prend en charge le mode de chiffrement RMS 2. La version minimale prise en charge par Windows Server 2008 est incluse dans le correctif décrit dans [Longueur de clé RSA augmentée à 2 048 bits pour AD RMS dans Windows Server 2008 R2 et Windows Server 2008](http://support.microsoft.com/kb/2627272). La version minimum pour Windows Server 2008 R2 peut quant à elle être téléchargée via la rubrique [La longueur de clé RSA est augmentée à 2 048 bits pour AD RMS dans Windows 7 ou Windows Server 2008 R2](http://support.microsoft.com/kb/2627273). Notez que Windows Server 2012 et Windows Server 2012 R2 prennent nativement en charge le mode de chiffrement 2.
+Vous avez également besoin sur ces serveurs d’une version 1 du client RMS (également appelé MSDRM) qui prend en charge le mode de chiffrement RMS 2. Tous les systèmes d’exploitation Windows incluent le client MSDRM, mais les versions antérieures du client ne prenaient pas en charge le mode de chiffrement 2. Si vos serveurs Exchange exécutent au moins Windows Server 2012, aucune action supplémentaire n’est nécessaire car le client RMS installé avec ces systèmes d’exploitation prend en charge le mode de chiffrement 2 en mode natif. 
+
+Si vos serveurs Exchange exécutent une version antérieure du système d’exploitation, vérifiez que la version installée du client RMS prend en charge le mode de chiffrement 2. Pour cela, comparez le numéro de version du fichier Windows\System32\Msdrm.dll installé aux numéros de version répertoriés dans les articles suivants de la Base de connaissances. Si le numéro de version du fichier installé est égal ou supérieur aux numéros de version répertoriés, aucune action supplémentaire n’est nécessaire. Si le numéro de version du fichier installé est inférieur, téléchargez le correctif indiqué dans l’article et installez-le.
+
+- Windows Server 2008 : [https://support.microsoft.com/kb/2627272](https://support.microsoft.com/kb/2627272) 
+
+- Windows Server 2008 R2 : [https://support.microsoft.com/kb/2627273](https://support.microsoft.com/kb/2627273)
 
 > [!IMPORTANT]
-> Si ces versions ou des versions ultérieures d'Exchange et du client RMS ne sont pas installées, vous ne pourrez pas configurer Exchange pour utiliser le connecteur. Vérifiez que ces versions sont installées avant de continuer.
+> Si ces versions ou des versions ultérieures d’Exchange et du client MSDRM ne sont pas installées, vous ne pouvez pas configurer Exchange pour utiliser le connecteur. Vérifiez que ces versions sont installées avant de continuer.
 
 ### <a name="to-configure-exchange-servers-to-use-the-connector"></a>Configuration de serveurs Exchange afin d'utiliser le connecteur
 
@@ -182,7 +188,7 @@ Pour utiliser le connecteur RMS, ces serveurs SharePoint doivent exécuter l'une
 
 -   SharePoint Server 2010
 
-Un serveur SharePoint 2016 ou SharePoint 2013 doit également exécuter une version du client MSIPC 2.1 prise en charge avec le connecteur RMS. Pour vérifier que vous disposez d’une version prise en charge, téléchargez la dernière version du client à partir du [Centre de téléchargement Microsoft](http://www.microsoft.com/download/details.aspx?id=38396).
+Un serveur SharePoint 2016 ou SharePoint 2013 doit également exécuter une version du client MSIPC 2.1 prise en charge avec le connecteur RMS. Pour vérifier que vous disposez d’une version prise en charge, téléchargez la dernière version du client à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=38396).
 
 > [!WARNING]
 > Étant donné qu’il existe plusieurs versions du client MSIPC 2.1, assurez-vous que vous avez la version 1.0.2004.0 ou une version ultérieure.
@@ -250,6 +256,6 @@ Pour surveiller le connecteur RMS, consultez [Surveiller le connecteur Azure Rig
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

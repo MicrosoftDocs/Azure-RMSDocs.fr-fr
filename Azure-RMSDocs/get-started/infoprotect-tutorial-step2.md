@@ -4,15 +4,15 @@ description: "Étape 2 d’un didacticiel de prise en main vous permettant de t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 3c2523119020232b9044506b2d2a602104e81d0b
+ms.sourcegitcommit: bce1682624b040545d30ca1cc426e4e2f8c38018
+ms.openlocfilehash: 7ba1566a81ca9a3ac45f340f69d3c9e933f015ff
 
 
 ---
@@ -36,7 +36,7 @@ Bien qu’Azure Information Protection soit fourni avec une stratégie par défa
     
     - Étiquettes de classification : **Personal**, **Public**, **Internal**, **Confidential** et **Secret**. Lisez l’info-bulle de chacune d’elles pour comprendre la façon dont les étiquettes sont censées être utilisées. Notez que **Secret** a deux sous-étiquettes (**All Company** et **My Group**), pour illustrer comment une classification peut avoir des sous-catégories.
 
-    - Avec les paramètres par défaut, les étiquettes **Internal**, **Confidential** et **Secret** ont des marquages visuels configurés (par exemple : pied de page, en-tête, filigrane), et la protection n’est définie pour aucune des étiquettes. Les trois paramètres globaux ne sont pas non plus définis. Ainsi, aucun document ou e-mail n’est obligé d’avoir une étiquette, il n’y a aucune étiquette par défaut et les utilisateurs n’ont pas à fournir de justification quand ils abaissent le niveau de classification.
+    - Avec les paramètres par défaut, les étiquettes **Internal**, **Confidential** et **Secret** ont des marquages visuels configurés (par exemple : pied de page, en-tête, filigrane), et la protection n’est définie pour aucune des étiquettes. Les quatre paramètres globaux ne sont pas non plus définis. Ainsi, aucun document ou e-mail n’est obligé d’avoir une étiquette, il n’y a aucune étiquette par défaut, les utilisateurs n’ont pas à fournir de justification quand ils modifient les étiquettes et le client n’est pas configuré pour un lien d’aide personnalisé.
 
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](../media/info-protect-policy.png)
 
@@ -66,45 +66,45 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
     
     Si vous avez désactivé ce modèle Azure Rights Management par défaut, sélectionnez un autre modèle. Toutefois, si vous sélectionnez un modèle de service, vérifiez que votre compte est compris dans l’étendue.
     
-3. Recherchez la section **Set visual marking** (Activer le marquage visuel) :
+3. Recherchez la section **Définir un marquage visuel** :
     
-    Pour le paramètre **Documents with this label have a watermark** (Les documents avec cette étiquette ont un filigrane), cliquez sur **On** puis, dans la zone **Text**, tapez le nom de votre organisation. Dans notre exemple, **VanArsdel, Ltd** : 
+    Pour le paramètre **Les documents avec cette étiquette ont un filigrane**, cliquez sur **Activé** puis, dans la zone **Texte**, tapez le nom de votre organisation. Dans notre exemple, **VanArsdel, Ltd** : 
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Définir la protection Azure RMS](../media/step2-configure-watermark.png)
     
     Bien que vous puissiez modifier la taille, la couleur et la disposition des filigranes, nous laisserons ces paramètres à leurs valeurs par défaut pour le moment.
     
-4. Recherchez la section **Configure conditions for automatically applying this label** (configurer les conditions de l’application automatique de cette étiquette) :
+4. Recherchez la section **Configurer des conditions pour appliquer automatiquement cette étiquette** :
     
-    Cliquez sur **Add a new condition** (Ajouter une nouvelle condition) puis, dans le panneau **Condition**, sélectionnez les éléments suivants :
+    Cliquez sur **Ajouter une nouvelle condition**, puis dans le panneau **Condition**, sélectionnez les éléments suivants :
     
-    a. **Choose the type of condition** (Choisir le type de condition) : conservez la valeur par défaut **Built-in** (Intégrée).
+    a. **Choisir le type de condition** : conservez la valeur par défaut **Prédéfinie**.
     
-    b. **Select built-in** (Sélectionner prédéfini) : dans la liste déroulante, sélectionnez **Credit Card Number** (Numéro de carte de crédit).
+    b. **Sélectionner Prédéfinie** : dans la liste déroulante, sélectionnez **Numéro de carte de crédit**.
     
-    c. **Minimum number of occurrences** (Nombre minimal d’occurrences) : conservez la valeur par défaut **1**.
+    c. **Nombre minimal d’occurrences** : conservez la valeur par défaut **1**.
     
-    d. **Count occurrences with unique values only** (Compter les occurrences avec des valeurs uniques uniquement) : conservez la valeur par défaut **Off** (Désactivé).
+    d. **Comptabiliser seulement les occurrences avec des valeurs uniques** : conservez la valeur par défaut **Désactivé**.
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Configurer la condition de la carte de crédit](../media/step2-configure-condition.png)
     
-    Cliquez sur **Save** pour revenir au panneau **Label: Confidential**.
+    Cliquez sur **Enregistrer** pour revenir au panneau **Label: Confidential**.
 
 5. Dans le panneau **Label: Confidential**, vous verrez que **Credit Card Number** est affiché comme **CONDITION NAME**, avec **1** **OCCURRENCES** :
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Configurer la condition de la carte de crédit](../media/step2-see-condition.png)
 
-6. Pour **Select how this label is applied** (Sélectionner comment cette étiquette est appliquée) : conservez la valeur par défaut **Recommended** (Recommandé), et ne modifiez pas le conseil de stratégie par défaut :
+6. Pour **Sélectionner comment cette étiquette est appliquée** : conservez la valeur par défaut **Recommandée** et ne modifiez pas le conseil de stratégie par défaut :
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Classification recommandée](../media/step2-keep-recommended.png)
 
-7. Dans la zone **Enter notes for internal housekeeping** (Entrer des remarques de maintenance interne), tapez **À des fins de test uniquement** :
+7. Dans la zone **Saisir des notes pour les tâches de nettoyage internes**, tapez **À des fins de test uniquement** :
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Taper des remarques](../media/step2-type-notes.png)
 
-8. Cliquez sur **Save** (Enregistrer) dans le panneau **Label: Confidential** (Étiquette : Confidentiel). Ensuite, dans le panneau principal **Azure Information Protection**, recliquez sur **Save**.
+8. Cliquez sur **Enregistrer** dans le panneau **Label: Confidential** (Étiquette : Confidentiel). Ensuite, dans le panneau principal **Azure Information Protection**, recliquez sur **Enregistrer**.
 
-9. Maintenant que nous avons effectué et enregistré nos modifications, nous souhaitons qu’elles soient accessibles aux utilisateurs. Cliquez sur **Publish**, puis sur **Yes** pour confirmer.
+9. Maintenant que nous avons effectué et enregistré nos modifications, nous souhaitons qu’elles soient accessibles aux utilisateurs. Cliquez sur **Publier**, puis sur **Oui** pour confirmer.
 
 ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut configurée](../media/info-protect-policy-configured.png)
 
@@ -122,6 +122,6 @@ Ayant examiné la stratégie par défaut et apporté des modifications, vous pou
 [Étape 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

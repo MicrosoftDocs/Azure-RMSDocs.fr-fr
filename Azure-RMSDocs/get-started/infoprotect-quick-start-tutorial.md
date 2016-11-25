@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 9f475892d7999fc3ff10a27d11986dec9cfa94cd
+ms.sourcegitcommit: d300f3c130476974e39689edf9e1f0eabbc35da1
+ms.openlocfilehash: de3435767d161567003369fc55dd476283b64f41
 
 
 ---
@@ -41,7 +41,7 @@ Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 
 - Un compte d’administrateur général pour vous connecter au portail Azure afin de configurer la stratégie Azure Information Protection. Ce compte doit également disposer d’une adresse de messagerie et d’un service de messagerie professionnel (par exemple, Exchange Online ou Exchange Server).
 
-- Un ordinateur exécutant Windows (au minimum Windows 7 avec le Service Pack 1) et sur lequel Office Professionnel Plus 2016, Office Professionnel Plus 2013 avec Service Pack 1 ou Office Professionnel Plus 2010 est installé. 
+- Un ordinateur Windows (au minimum Windows 7 avec le Service Pack 1) et sur lequel Office 365 ProPlus avec des applications 2016 ou 2013, Office Professionnel Plus 2016, Office Professionnel Plus 2013 avec le Service Pack 1 ou Office Professionnel Plus 2010 est installé. 
 
 C’est parti !
 

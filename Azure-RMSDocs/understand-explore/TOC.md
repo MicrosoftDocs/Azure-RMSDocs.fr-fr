@@ -5,7 +5,7 @@
 #### [Quels problèmes résout-il ?](azure-rms-problems-it-solves.md)
 #### [Ce que voient les utilisateurs et les administrateurs](what-admins-users-see.md)
 #### [Comment fonctionne-t-il ?](how-does-it-work.md)
-## [RMS for individuals et Azure RMS](rms-for-individuals.md)
+## [RMS for individuals et Azure Information Protection](rms-for-individuals.md)
 ### [Inscription à RMS for individuals](rms-for-individuals-user-sign-up.md)
 ### [Contrôler les comptes créés pour RMS for individuals](rms-for-individuals-take-control.md)
 ### [Déterminer si des utilisateurs se sont inscrits à RMS for individuals](rms-for-individuals-identify-sign-up.md)
@@ -16,13 +16,13 @@
 ### [Autres applications prenant en charge les API RMS](api-support.md)
 ## [Comparaison d’Azure Information Protection avec AD RMS](compare-on-premise.md)
 ## [Conformité et informations annexes](compliance.md)
-# [Mise en route](/information-protection/get-started/requirements-azure-rms)
+# [Bien démarrer](/information-protection/get-started/requirements-azure-rms)
 # [Planifier et concevoir](/information-protection/plan-design/deployment-roadmap)
 # [Déployer et utiliser le service](/information-protection/deploy-use/activate-service)
 # [Déployer et utiliser le client](/information-protection/rms-client/use-client)
 # [Développer et personnaliser des applications](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO3-->
 
 

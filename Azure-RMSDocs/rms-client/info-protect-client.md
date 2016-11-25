@@ -4,15 +4,15 @@ description: "Instructions pour installer le client qui ajoute une barre Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/01/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 2f1930f4657278d25ef6dd369866f16e4ba71644
-ms.openlocfilehash: 5e36d046d53b0fdfb6796f2a00e8d0d1325f30c3
+ms.sourcegitcommit: db05149a25b6535d568338140daa2474e48b6711
+ms.openlocfilehash: 984d764d0c1ac41e6baec0b7978f501d7494773d
 
 
 ---
@@ -69,7 +69,9 @@ Choisissez l’une des méthodes suivantes :
     
         Vous voyez aussi votre nom d’utilisateur qui identifie le compte utilisé pour vous authentifier auprès d’Azure Information Protection. Ce nom d’utilisateur doit correspondre à un compte que vous utilisez pour Office 365 ou Azure Active Directory.
 
-    - Dans la section **Aide et commentaires** : Utilisez le lien **Envoyer des commentaires** pour joindre automatiquement les journaux de votre client à un e-mail qui peut être envoyé à l’équipe d’Information Protection pour examiner un problème. 
+    - Dans la section **Aide et commentaires** : le **lien En savoir plus** pointe par défaut vers le site web [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection), mais vous pouvez le configurer pour qu’il pointe vers une URL personnalisée dans le cadre des [paramètres globaux](../deploy-use/configure-policy-settings.md) de la stratégie Azure Information Protection.
+        
+        Utilisez le lien **Envoyer des commentaires** pour joindre automatiquement les journaux de votre client à un e-mail qui peut être envoyé à l’équipe d’Information Protection en vue d’examiner un problème. 
     
         Pour des informations de diagnostic et pour réinitialiser le client, cliquez sur **Exécuter les diagnostics**. Quand les tests de diagnostic sont terminés, cliquez sur **Copier les résultats** pour coller les informations dans un e-mail que vous pouvez envoyer à votre support technique ou au support technique Microsoft. Une fois les tests terminés, vous pouvez aussi réinitialiser le client.
         
@@ -115,6 +117,6 @@ Pour vérifier les informations de version pour le client, consultez l’[histor
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

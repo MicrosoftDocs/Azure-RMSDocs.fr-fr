@@ -4,7 +4,7 @@ description: "Découvrez ce qui est nouveau ou ce qui a changé dans une version
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/27/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3beeaffd5cf5f0e0a629dd6130d780cec3e05d6
-ms.openlocfilehash: ff6573042941640d1cca82d68e85f09c82e3c77b
+ms.sourcegitcommit: 45ca64c8338de3f4b192c61eb437b4acdbb8d799
+ms.openlocfilehash: cdd987bf0670f9e5ef7519119aa886573cf14924
 
 
 ---
@@ -37,8 +37,6 @@ Pour déterminer les nouveautés ou modifications apportées à une version, uti
 **Publiée le** : 27/10/2016
 
 **Correctifs** :
-
-- Vous pouvez appliquer une étiquette qui protège le contenu quand vous utilisez Office 2010 et que votre environnement n’a pas été initialisé pour le service Azure Rights Management (aussi appelé « amorçage »).
 
 - L’installation du client se termine quand le service Windows Update est désactivé.
 
@@ -64,6 +62,6 @@ Pour plus d’informations sur l’installation du client, consultez [Installati
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 

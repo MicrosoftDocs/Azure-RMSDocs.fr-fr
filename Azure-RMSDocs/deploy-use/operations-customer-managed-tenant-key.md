@@ -1,5 +1,5 @@
 ---
-title: "Gérée par le client - Opérations de cycle de vie des clés de locataires | Azure Information Protection"
+title: "Gérée par le client - Opérations de cycle de vie des clés de locataires | Azure Information Protection"
 description: "Informations sur les opérations de cycle de vie applicables si vous gérez votre clé de locataire pour Azure Information Protection (dans le cadre d’un scénario BYOK, ou Bring Your Own Key)."
 author: cabailey
 ms.author: cabailey
@@ -20,9 +20,9 @@ ms.openlocfilehash: 03c2e885bfb997fda2a2f675be3dee6bc8ea8138
 ---
 
 
-# <a name="customermanaged-tenant-key-lifecycle-operations"></a>Gérée par le client : opérations de cycle de vie des clés de locataires
+# <a name="customer-managed-tenant-key-lifecycle-operations"></a>Gérée par le client : opérations de cycle de vie des clés de locataires
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
 Si vous gérez votre clé de locataire pour Azure Information Protection (dans le cadre d’un scénario BYOK, ou Bring Your Own Key), utilisez les sections suivantes pour obtenir plus d’informations sur les opérations de cycle de vie qui s’appliquent à cette topologie.
 
@@ -32,8 +32,8 @@ Dans Azure Key Vault, vous pouvez modifier les autorisations sur le coffre de cl
 Quand vous annulez votre abonnement Azure Information Protection, Azure Information Protection arrête d’utiliser votre clé de locataire, et aucune action n’est nécessaire de votre part.
 
 
-## <a name="rekey-your-tenant-key"></a>Renouvellement de votre clé de locataire
-Le renouvellement de la clé est également appelé déploiement de la clé. Ne renouvelez pas votre clé de locataire à moins que ce soit vraiment nécessaire. Les clients plus anciens, tels qu'Office 2010, n'ont pas été conçu pour gérer naturellement les changements de clés. Dans ce scénario, vous devez effacer l’état Rights Management des ordinateurs à l’aide d’une stratégie de groupe ou d’un mécanisme similaire. Toutefois, certains événements légitimes peuvent vous obliger à renouveler votre clé de locataire. Par exemple :
+## <a name="re-key-your-tenant-key"></a>Renouvellement de votre clé de locataire
+Le renouvellement de la clé est également appelé déploiement de la clé. Ne renouvelez pas votre clé de locataire à moins que ce soit vraiment nécessaire. Les clients plus anciens, tels qu'Office 2010, n'ont pas été conçu pour gérer naturellement les changements de clés. Dans ce scénario, vous devez effacer l’état Rights Management des ordinateurs à l’aide d’une stratégie de groupe ou d’un mécanisme similaire. Toutefois, certains événements légitimes peuvent vous obliger à renouveler votre clé de locataire. Par exemple :
 
 -   Votre entreprise s'est divisée en deux sociétés distinctes ou plus. Lorsque vous renouvelez votre clé de locataire, la nouvelle société n'aura pas accès au nouveau contenu publié par vos employés. Elle pourra toujours accéder à l'ancien contenu si elle dispose d'une copie de l'ancienne clé de locataire.
 

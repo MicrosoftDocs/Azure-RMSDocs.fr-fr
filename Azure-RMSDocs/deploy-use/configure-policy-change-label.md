@@ -4,15 +4,15 @@ description: "Vous pouvez modifier ou optimiser les étiquettes que les utilisat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: 0046023125fe339ed408edf47c59e36708b01783
-ms.openlocfilehash: 1d92c127581d68bb52979d65ddb8704cad7c8039
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: f7b5e9e0bb32e4a04dfb407f11e361d959ebb807
 
 
 ---
@@ -32,9 +32,9 @@ Procédez comme suit pour modifier une étiquette.
     
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. Dans le panneau **Azure Information Protection**, sélectionnez l’étiquette à modifier, puis apportez vos modifications dans le panneau **Étiquette** et dans les panneaux suivants en fonction de vos besoins.
+2. Pour modifier une étiquette de la stratégie globale pour qu’elle s’applique à tous les utilisateurs, sélectionnez l’étiquette à modifier à partir du panneau **Stratégie : Globale**, puis apportez vos modifications dans le panneau **Étiquette** et tous les panneaux suivants au besoin. Pour modifier une étiquette à partir d’une [stratégie délimitée](configure-policy-scope.md) afin qu’elle s’applique aux utilisateurs sélectionnés, sélectionnez d’abord cette stratégie dans le panneau **Azure Information Protection** initial.
 
-    L’exception est la réorganisation d’une étiquette, que vous effectuez dans le même panneau **Azure Information Protection** : cliquez avec le bouton droit sur l’étiquette ou sélectionnez le menu contextuel de l’étiquette, puis sur les options **Déplacer vers le haut** ou **Déplacer vers le bas**.
+    Il existe une exception si vous voulez réorganiser une étiquette, ce que vous faites dans le panneau de la stratégie globale ou de votre stratégie délimitée sélectionnée : cliquez avec le bouton droit sur l’étiquette ou sélectionnez le menu contextuel de l’étiquette, puis sélectionnez les options **Déplacer vers le haut** ou **Déplacer vers le bas**.
 
 3. Chaque fois que vous apportez des modifications dans un panneau, cliquez sur **Enregistrer** dans ce panneau si vous souhaitez conserver vos modifications.
 
@@ -52,6 +52,6 @@ Pour plus d’informations sur la configuration des options disponibles pour une
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,7 +4,7 @@ description: "Pour configurer d’autres paramètres et étiquettes pour des uti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 99d7a2a9580466492edc313329cada315a9966d6
+ms.sourcegitcommit: b0600db864f834e9eb84700eb1a36d3e6a6fbde1
+ms.openlocfilehash: ba4567753fbc6320ea6f9170e4bf46857ab999b4
 
 
 ---
@@ -33,7 +33,7 @@ Les stratégies délimitées, comme les étiquettes, sont classées dans le port
 
 Étant donné qu’une stratégie délimitée hérite toujours des étiquettes et paramètres de la stratégie globale, les étiquettes de la stratégie globale s’affichent quand vous créez ou modifiez une stratégie délimitée. Toutefois, vous ne pouvez pas modifier les étiquettes de la stratégie globale quand vous modifiez une stratégie délimitée. En revanche, vous pouvez ajouter des sous-étiquettes à ces étiquettes héritées.
 
-Par exemple, si vous disposez d’une étiquette nommée Confidentiel dans la stratégie globale, tous les utilisateurs la voient. Vous ne pouvez pas la supprimer ni la réorganiser avec une stratégie délimitée. Mais vous pouvez éventuellement créer une stratégie délimitée pour le service Marketing qui permet d’ajouter une nouvelle sous-étiquette à Confidentiel, afin que ces utilisateurs voient Confidentiel\Promotions. Ensuite, vous créez une autre stratégie délimitée pour le service Ventes qui permet d’ajouter une nouvelle sous-étiquette à Confidentiel, afin que ces utilisateurs voient Confidentiel\Partenaires. Chaque sous-étiquette peut alors être configurée pour des paramètres différents et la sous-étiquette est uniquement visible pour les utilisateurs relevant des services respectifs.
+Par exemple, si vous disposez d’une étiquette nommée **Confidentiel** dans la stratégie globale, tous les utilisateurs la voient. Vous ne pouvez pas la supprimer ni la réorganiser avec une stratégie délimitée. Mais vous pouvez éventuellement créer une stratégie délimitée pour le service Marketing permettant d’ajouter une nouvelle sous-étiquette à Confidentiel, afin que ces utilisateurs voient **Confidentiel\Promotions**. Vous devez également créer une autre stratégie étendue pour le service commercial qui ajoute une nouvelle sous-étiquette à la sous-étiquette Confidentiel, afin que ces utilisateurs voient **Confidentiel\Partenaires**. Chaque sous-étiquette peut alors être configurée pour des paramètres différents et la sous-étiquette est uniquement visible pour les utilisateurs relevant des services respectifs.
 
 
 Pour configurer une stratégie délimitée pour Azure Information Protection :
@@ -63,6 +63,6 @@ Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

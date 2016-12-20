@@ -4,7 +4,7 @@ description: "Vous avez une question à propos de la préversion d’Azure Infor
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
-ms.openlocfilehash: ba67bb149b0128b068c86dcf849e2dd49edbf6a7
+ms.sourcegitcommit: 946daa8dedba71d5887dd96f6853e8d90400bfb1
+ms.openlocfilehash: 125752671ec0ca556cc6967a2a3011fb0bf7d9ab
 
 
 ---
@@ -76,11 +76,13 @@ Les étiquettes et la protection appliquées aux fichiers et aux e-mails par Azu
 
 ## <a name="can-i-classify-only-new-data-or-can-i-also-classify-existing-data"></a>Puis-je classifier uniquement les nouvelles données, ou puis-je également classifier les données existantes ?
 
-Les actions de stratégie Azure Information Protection prennent effet lors de l’enregistrement des documents et lors de l’envoi des e-mails, à la fois pour le nouveau contenu et pour les modifications apportées au contenu existant. 
+Les actions de stratégie Azure Information Protection prennent effet lors de l’enregistrement des documents et lors de l’envoi des e-mails, à la fois pour le nouveau contenu et pour les modifications apportées au contenu existant.
+
+Si vous disposez de la préversion du client, vous pouvez aussi classer (et éventuellement protéger) rapidement les fichiers existants à partir de l’Explorateur de fichiers. 
 
 ## <a name="can-i-use-azure-information-protection-for-classification-only-without-enforcing-encryption-and-restricting-usage-rights"></a>Puis-je utiliser Azure Information Protection pour la classification uniquement, sans appliquer de chiffrement ni limiter les droits d’utilisation ?
 
-Oui. Vous pouvez configurer une stratégie Azure Information Protection qui applique uniquement une étiquette. En fait, nous pensons que ce sera le cas d’usage le plus courant pour les réseaux de déploiement où vous devez protéger uniquement un sous-ensemble de documents ou d’e-mails qui nécessitent une gestion de données spéciale.
+Oui. Vous pouvez configurer une stratégie Azure Information Protection qui applique uniquement la classification sans la protection, si le type de fichier prend en charge cette action. En fait, nous pensons que ce sera le cas d’usage le plus courant pour les réseaux de déploiement où vous devez protéger uniquement un sous-ensemble de documents ou d’e-mails qui nécessitent une gestion de données spéciale.
 
 ## <a name="how-does-automatic-classification-work"></a>Comment fonctionne la classification automatique ?
 
@@ -117,11 +119,13 @@ Dans le portail Azure, vous pouvez sélectionner un modèle Rights Management po
 
 Le [Didacticiel de démarrage rapide pour Azure Information Protection](infoprotect-quick-start-tutorial.md) en donne un exemple. Pour en savoir plus, consultez la rubrique [Comment configurer une étiquette pour appliquer Rights Management protection](../deploy-use/configure-policy-protection.md).
 
-## <a name="can-a-file-be-classified-with-two-different-classifications"></a>Un fichier peut-il être classifié avec deux classifications différentes ?
+## <a name="can-a-file-have-more-than-one-classification"></a>Un fichier peut-il avoir plusieurs classifications ?
 
-Si nécessaire, vous pouvez créer des sous-étiquettes pour mieux décrire les sous-catégories d’une étiquette de confidentialité spécifique. Par exemple, l’étiquette principale **Secret** peut contenir des sous-étiquettes telles que **Secret \ Juridique** et **Secret \ Finance**. Vous pouvez ensuite appliquer différents marquages de classification visuels et différents modèles Rights Management à différentes sous-étiquettes.
+Les utilisateurs ne peuvent sélectionner qu’une seule étiquette à la fois pour chaque document ou e-mail, ce qui aboutit la plupart du temps à une classification unique pour chaque élément. Vous avez toutefois la possibilité d’appliquer une étiquette principale et une étiquette secondaire (ou sous-étiquette) à chaque document ou e-mail. Les étiquettes secondaires permettent d’attribuer à un fichier deux classifications ayant une relation parent\enfant afin d’obtenir un niveau de contrôle supplémentaire.
 
-Bien que vous puissiez définir actuellement des marquages visuels, une protection et des conditions aux deux niveaux, quand vous utilisez des sous-niveaux, vous devez configurer ces paramètres uniquement au sous-niveau. Si vous configurez les mêmes paramètres sur l’étiquette parente et à son sous-niveau, les paramètres au sous-niveau sont prioritaires.
+Par exemple, l’étiquette **Secret** peut contenir des sous-étiquettes telles que **Juridique** et **Finance**. Vous pouvez appliquer différents marquages de classification visuels et différents modèles Rights Management à ces sous-étiquettes. L’utilisateur ne peut pas sélectionner uniquement l’étiquette **Secret**. Il peut seulement sélectionner les sous-étiquettes, telles que **Juridique**. L’étiquette qui s’affiche est donc **Secret\Juridique**. Les métadonnées de ce fichier incluent une propriété de texte personnalisée pour **Secret**, une propriété de texte personnalisée pour **Juridique** et une autre qui contient les deux valeurs (**Secret Juridique**). 
+
+Lorsque vous utilisez des étiquettes secondaires, ne configurez pas de marquages visuels, de protection ou de conditions pour l’étiquette principale. Ces paramètres doivent uniquement être définis pour l’étiquette secondaire. Si vous configurez ces paramètres pour l’étiquette principale et l’étiquette secondaire, ce sont les paramètres de l’étiquette secondaire qui seront prioritaires.
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>Quand un e-mail est étiqueté, les pièces jointes reçoivent-elles automatiquement le même étiquetage ?
 
@@ -152,6 +156,9 @@ Voici ce qui se produit quand les utilisateurs utilisent Outlook Web Access ou u
 
 Si vos étiquettes Azure Information Protection appliquent la protection de la gestion des droits, ajoutez-la à la configuration de la règle en sélectionnant l’option permettant de modifier la sécurité des messages, appliquez la protection des droits, puis sélectionnez le modèle RMS ou l’option Ne pas transférer.
 
+Vous pouvez également configurer des règles de transport pour effectuer le mappage inverse : quand une étiquette Azure Information Protection est détectée, définissez la classification de messages Exchange correspondante. Pour effectuer cette opération :
+
+- Pour chaque étiquette Azure Information Protection, créez une règle de transport devant être appliquée lorsque l’en-tête **msip_labels** inclut le nom de votre étiquette (par exemple, **Confidentiel**), puis appliquez une classification de messages qui corresponde à cette étiquette.
 
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Comment faire pour intégrer les solutions DLP et autres applications avec Azure Information Protection ?
 
@@ -198,6 +205,6 @@ Si vous avez un problème avec Azure Information Protection et que vous utilisez
 Si vous avez des questions ou des commentaires, rendez-vous sur le [site Yammer Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -4,15 +4,15 @@ description: "Vous pouvez supprimer ou réorganiser les étiquettes que les util
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: 743741fc63adfd959074986aab5c697d817f69c7
+ms.sourcegitcommit: 55895dd6fd0e106c33914a232e2d00d98e8a154a
+ms.openlocfilehash: 195a4ff44d0edc9d35ee30786bdddbcc821fc106
 
 
 ---
@@ -25,7 +25,9 @@ Vous pouvez supprimer ou réorganiser les étiquettes que les utilisateurs voien
 
 ![Suppression ou réorganisation d’étiquettes dans la stratégie Azure Information Protection](../media/info-protect-contextmenu.png)
 
-Au lieu de supprimer une étiquette, vous pouvez simplement la désactiver si vous souhaitez conserver sa configuration mais l’empêcher de s’afficher dans la barre Information Protection.
+Lorsque vous supprimez une étiquette ayant été appliquée à des documents et à des e-mails, puis publiez la stratégie Azure Information Protection, l’étiquette est automatiquement supprimée des documents et des e-mails lors de leur prochaine ouverture par le client Azure Information Protection.
+
+Au lieu de supprimer une étiquette, vous pouvez simplement la désactiver si vous souhaitez la conserver sans qu’elle ne s’affiche dans la barre Information Protection.
 
 Triez les étiquettes de manière à ce que les utilisateurs les voient dans un ordre de progression logique dans la barre Information Protection. Par exemple, triez les étiquettes dans leur ordre croissant de confidentialité afin que les utilisateurs voient l’étiquette la moins sensible en premier et l’étiquette la plus sensible en dernier. La [stratégie par défaut](configure-policy-default.md) utilise cette configuration.
 
@@ -59,6 +61,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

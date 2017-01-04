@@ -85,7 +85,7 @@ Si vous affectez une autre valeur, ou si vous n’affectez aucune valeur, le com
 
 Si vous tentez un chiffrement sur un type de fichier bloqué, une erreur [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx) se produit.
 
-### <a name="file-api-file-support-details"></a>API de fichier - Détails de la prise en charge des fichiers
+### <a name="file-api---file-support-details"></a>API de fichier - Détails de la prise en charge des fichiers
 
 Vous pouvez ajouter une prise en charge native pour tous les types de fichier (extension). Par exemple, pour toute extension &lt;ext&gt; (non-Office), \*.p&lt;ext&gt; est utilisé si la configuration d’administration pour cette extension est « NATIVE ».
 
@@ -151,10 +151,8 @@ HKEY_LOCAL_MACHINE
 
 - [Notes pour les développeurs](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 <!--HONumber=Nov16_HO3-->

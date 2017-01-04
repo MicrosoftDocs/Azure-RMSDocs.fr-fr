@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 93ed9760d79f2f38d4bee302ebb5c7c6368b1bbe
+ms.sourcegitcommit: a3d58cc4c430fe2335ff8fbb7e23c77915e6b8ab
+ms.openlocfilehash: c09eebc8a950894038a758d8f968c5e3e5ae2a53
 
 
 ---
@@ -35,20 +35,18 @@ Cette section traite de recommandations spécifiques pour plusieurs scénarios d
 - [Comment : utiliser des paramètres de chiffrement](working-with-encryption.md) - Cette rubrique vous oriente vers nos offres de chiffrement et présente quelques extraits de code pour illustrer leur utilisation.
 - [Types d’applications](application-types.md) : cette rubrique traite des types d’applications que vous pouvez choisir de créer avec une gestion des droits.
 - [Configuration de l’API de fichier](file-api-configuration.md) - Le comportement de l’API de fichier peut être configuré via des paramètres du Registre.
+- [Instructions de sécurité](security-guidelines.md) : fournit aux développeurs d’applications toutes les instructions et tous les conseils nécessaires pour travailler correctement dans l’écosystème AIP.
 - [Formats de fichier pris en charge](supported-file-formats.md) - L’API de fichier prend en charge les formats natif et Pfile.
 - [Plateformes prises en charge](supported-platforms.md) - Cette rubrique identifie les plateformes client et serveur prises en charge par RMS SDK 2.1.
-- [Comprendre les restrictions d’utilisation](understanding-usage-restrictions.md) : toutes les applications activées pour RMS doivent appliquer des restrictions d’utilisation.
-- [Informations de référence sur les restrictions d’utilisation](usage-restriction-reference.md) - Les restrictions d’utilisation sont définies par les constantes répertoriées dans cette rubrique.
+- [Comprendre les restrictions d’utilisation](understanding-usage-restrictions.md) : toutes les applications compatibles RMS doivent appliquer des restrictions d’utilisation définies par les constantes répertoriées dans cette rubrique.
 
  
 ## <a name="related-topics"></a>Rubriques connexes
 * [Vue d'ensemble](ad-rms-overview.md)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

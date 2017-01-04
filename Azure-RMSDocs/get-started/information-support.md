@@ -4,7 +4,7 @@ description: "Ressources pour les administrateurs, qui incluent des informations
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/11/2016
+ms.date: 11/29/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 757b0e1a65d54f81b00c6513ee85ded4fe753684
-ms.openlocfilehash: 37f42c4b9f4e4b41e96b3e1e6a74a6c3d7deb254
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: 0a9f88f179e5ac936211e61f8bf6dae9ec83506f
 
 
 ---
@@ -36,7 +36,7 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure Infor
 ## <a name="information-about-new-releases-and-updated-documentation"></a>Informations sur les nouvelles versions et la documentation mise à jour
 L’équipe en charge du produit Information Protection publie des annonces sur les nouvelles versions et mises à jour dans le [blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services). Ces billets de blog complètent la documentation du produit et les informations de support technique.
 
-À la fin de chaque mois, un résumé intitulé « **Azure Information Protection Documentation Update for \<mois, année>** » regroupe les modifications apportées à la documentation. Ces billets, qui ont l’étiquette de type de contenu [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates), recensent les mises à jour de la documentation des nouvelles versions, ainsi que des corrections et des précisions relatives aux versions existantes.
+En fin de mois, un résumé intitulé « **Azure Information Protection Documentation Update for \<mois année>** » regroupe les modifications apportées à la documentation. Ces billets, qui ont l’étiquette de type de contenu [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates), recensent les mises à jour de la documentation des nouvelles versions, ainsi que des corrections et des précisions relatives aux versions existantes.
 
 > [!TIP]
 > Si vous développez des applications qui utilisent les services Microsoft Rights Management (Azure RMS or AD RMS), vous pouvez également être intéressé par le blog [Active Directory Rights Management Services (AD RMS) Developer’s Corner](https://blogs.msdn.microsoft.com/rms/).
@@ -93,6 +93,6 @@ Résolution des problèmes :
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -13,8 +13,8 @@ ms.technology: techgroup-identity
 ms.suite: ems
 ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 translationtype: Human Translation
-ms.sourcegitcommit: 197e1b2d40ce21032b933625feb050807086ce57
-ms.openlocfilehash: cc4465eb7b1374673a50fc8bbe1d6e5be9d1ff84
+ms.sourcegitcommit: a7de2b462362b1fe595856c71694eab149ec09b6
+ms.openlocfilehash: 035327cdfc771bae7ff36dca1a7a888223222252
 
 
 ---
@@ -35,11 +35,13 @@ ms.openlocfilehash: cc4465eb7b1374673a50fc8bbe1d6e5be9d1ff84
       <h2 class="section-heading"><span class="icon icon-warning"></span> Contenu proposé</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><mark><b>NOUVEAUTÉ</b></mark> <a href="./understand-explore/what-is-information-protection.md#resources-for-azure-information-protection">Sessions Azure Information Protection depuis Microsoft Ignite 2016</a></li>
+          <li><mark><b>NOUVEAUTÉ</b></mark> <a href="./deploy-use/configure-policy-scope.md">Guide pratique pour configurer des stratégies délimitées (préversion)</a></li>
+          <li><mark><b>NOUVEAUTÉ</b></mark> <a href="./rms-client/client-user-guide.md">Guide de l’utilisateur (préversion)</a></li>
+          <li><a href="./understand-explore/what-is-information-protection.md#resources-for-azure-information-protection">Sessions Azure Information Protection depuis Microsoft Ignite 2016</a></li>
           <li><a href="./understand-explore/what-is-information-protection.md">Qu’est-ce qu’Azure Information Protection ?</a></li>
-          <li><a href="./get-started/infoprotect-quick-start-tutorial.md">Didacticiel de démarrage rapide pour Azure Information Protection</a></li>
         </ul>
         <ul class="column column-half">
+          <li><a href="./get-started/infoprotect-quick-start-tutorial.md">Didacticiel de démarrage rapide pour Azure Information Protection</a></li>
           <li><a href="./get-started/faqs.md">Forum aux questions sur Azure Information Protection</a></li>
       <li><a href="./plan-design/deployment-roadmap.md">Feuille de route pour le déploiement d’Azure Information Protection</a></li>
           <li><a href="./develop/developers-guide.md">Guide du développeur Azure Information Protection</a></li>
@@ -227,6 +229,6 @@ ms.openlocfilehash: cc4465eb7b1374673a50fc8bbe1d6e5be9d1ff84
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

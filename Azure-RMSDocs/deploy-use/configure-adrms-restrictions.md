@@ -4,15 +4,15 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: f1bf7377e5e8079025dff638a185c825256a5cc7
-ms.openlocfilehash: 3a563eccb37cfd660c28fd2308749d1e71771f23
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: e4ed4513728180179876ff49797f96e9f0f785b3
 
 
 ---
@@ -20,8 +20,6 @@ ms.openlocfilehash: 3a563eccb37cfd660c28fd2308749d1e71771f23
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 
 >*S’applique à : Azure Information Protection*
-
-**[Cette fonctionnalité est toujours à un stade préliminaire, et les informations sont susceptibles d’évoluer. ]**
 
 La protection de vos documents et e-mails les plus sensibles passe généralement par l’application d’une protection Azure Rights Management. Cette dernière offre les avantages suivants :
 
@@ -104,6 +102,6 @@ Pour configurer une étiquette pour la protection AD RMS, consultez [Comment con
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 

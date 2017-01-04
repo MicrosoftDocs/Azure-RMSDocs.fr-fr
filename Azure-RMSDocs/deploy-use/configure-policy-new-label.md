@@ -4,15 +4,15 @@ description: "Même si Azure Information Protection est fourni avec des étiquet
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 translationtype: Human Translation
-ms.sourcegitcommit: addc24fed28cee52b57c7e3bde926d6324478e7b
-ms.openlocfilehash: bedf1cb43be9a70c2b3252fa730f46d83574e954
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: 1b0a908f6a372703ce06e3434307a81fd53c020c
 
 
 ---
@@ -31,11 +31,14 @@ Utilisez les instructions suivantes pour ajouter une étiquette à la stratégie
     
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. Dans le panneau **Azure Information Protection**, effectuez l’une des opérations suivantes :
+2. Si la nouvelle étiquette à ajouter s’applique à tous les utilisateurs, procédez de l’une des manières suivantes à partir du panneau **Stratégie : Globale**. 
 
     - Pour créer une étiquette, cliquez sur **Ajouter une nouvelle étiquette**.
 
     - Pour créer une sous-étiquette, cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette à laquelle vous souhaitez créer une sous-étiquette, puis cliquez sur **Ajouter une sous-étiquette**.
+
+
+     Si la nouvelle étiquette à ajouter se trouve dans une [stratégie délimitée](configure-policy-scope.md) pour qu’elle s’applique uniquement aux utilisateurs sélectionnés, commencez par sélectionner cette stratégie à partir du panneau **Azure Information Protection** initial.
 
 3. Dans le panneau **Étiquette** ou **Sous-étiquette**, sélectionnez les options que vous souhaitez pour cette nouvelle étiquette, puis cliquez sur **Enregistrer**.
 
@@ -52,6 +55,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -74,6 +74,7 @@ Azure Information Protection est conforme à la norme FIPS 140-2, que votre cl�
 ## <a name="next-steps"></a>Étapes suivantes
 Si vous envisagez de migrer d’AD RMS vers Azure Information Protection, consultez [Migration d'AD RMS vers Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 

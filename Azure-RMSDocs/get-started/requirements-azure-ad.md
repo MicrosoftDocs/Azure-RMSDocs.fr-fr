@@ -4,7 +4,7 @@ description: "Identifiez la configuration requise d’Azure AD pour utiliser Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2016
+ms.date: 12/07/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 667e1e533df6d26c9aae0aba1f889b0e6470b059
+ms.sourcegitcommit: a38b4f201a05ece08f06b18797a146adecf59053
+ms.openlocfilehash: 1246bfcf3a389e2dcd7a9ef922c3f40150611640
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 667e1e533df6d26c9aae0aba1f889b0e6470b059
 
 Vous avez besoin d’un annuaire Azure AD pour utiliser Azure Information Protection. Vous devez utiliser le compte de votre organisation correspondant à cet annuaire pour vous connecter au portail Azure Classic, où vous pouvez, par exemple, configurer et gérer les modèles Rights Management.
 
-Si vous n’avez pas encore d’abonnement Azure pour votre organisation, vous pouvez en obtenir un en vous inscrivant pour une évaluation gratuite : accédez à la page [Prise en main d’Azure](https://account.windowsazure.com/organization) et suivez les instructions.
+Si vous n’avez pas d’abonnement Azure pour votre organisation, vous pouvez en obtenir un en vous inscrivant pour une évaluation gratuite. Consultez la page [Bien démarrer avec Azure](https://account.windowsazure.com/organization) et suivez les instructions.
 
 Pour plus d’informations, consultez les ressources suivantes dans la documentation Azure Active Directory :
 
@@ -35,12 +35,17 @@ Pour plus d’informations, consultez les ressources suivantes dans la documenta
 
 Si vous souhaitez intégrer votre annuaire Azure AD à vos forêts AD locales, consultez [Intégration de vos identités locales avec Azure Active Directory](/active-directory/active-directory-aadconnect).
 
-> [!NOTE]
-> Si vous avez des appareils mobiles ou des ordinateurs Mac qui s'authentifient localement par le biais des services AD FS ou d'un fournisseur d'authentification équivalent :
-> 
-> -   Vous devez utiliser les services AD FS sur la version serveur minimale de **Windows Server 2012 R2** ou un autre fournisseur d’authentification prenant en charge le protocole OAuth 2.0.
+### <a name="scenarios-that-have-specific-requirements"></a>Scénarios avec des exigences spécifiques 
 
-## <a name="multifactor-authentication-mfa-and-azure-information-protection"></a>Authentification multifacteur (MFA) et Azure Information Protection
+Ordinateurs qui exécutent Office 2010 : 
+
+- Si vos comptes d’utilisateur sont fédérés (par exemple, si vous utilisez AD FS), ils doivent utiliser l’authentification intégrée de Windows. L’authentification basée sur les formulaires dans ce scénario ne peut pas authentifier les utilisateurs pour Azure Information Protection.
+
+Appareils mobiles ou ordinateurs Mac qui s’authentifient localement par le biais des services AD FS ou d’un fournisseur d’authentification équivalent :
+
+- Vous devez utiliser les services AD FS sur la version serveur minimale de **Windows Server 2012 R2** ou un autre fournisseur d’authentification prenant en charge le protocole OAuth 2.0.
+
+## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>Authentification multifacteur (MFA) et Azure Information Protection
 Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Protection, vous devez avoir au moins l’un des éléments suivants :
 
 -   Office 2013 (version minimale) :
@@ -75,6 +80,6 @@ Pour vérifier les autres conditions requises, consultez [Configuration requise 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

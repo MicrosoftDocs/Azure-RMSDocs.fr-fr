@@ -6,7 +6,7 @@ Cette application peut être téléchargée gratuitement et propose une installa
 
 ![Captures d’écran de l’installation de RMS](../media/AzRMS_Tutorial_2_Screenshots.png)
 
-#### Pour télécharger et installer l’application de partage Rights Management
+#### <a name="to-download-and-install-the-rights-management-sharing-application"></a>Pour télécharger et installer l’application de partage Rights Management
 
 1.  Accédez à la page [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft.
 
@@ -14,7 +14,7 @@ Cette application peut être téléchargée gratuitement et propose une installa
 
 3.  Pour une installation locale, vous devez utiliser un compte d’administrateur pour exécuter le fichier Setup.exe qui a été téléchargé. Si vous êtes invité à continuer, cliquez sur **Oui**.
 
-4.  Dans la page **Installer Microsoft RMS** , cliquez sur **Suivant**, puis attendez que l’installation se termine.
+4.  Dans la page **Installer Microsoft RMS**, cliquez sur **Suivant**, puis attendez que l’installation se termine.
 
 5.  Une fois l’installation terminée, cliquez sur **Redémarrer** si vous êtes invité à redémarrer votre ordinateur, ou sur  **Fermer** pour terminer l’installation.
 
@@ -24,9 +24,9 @@ Vous êtes maintenant prêt à protéger les fichiers contenant des informations
 |--------------------------------|--------------------------|
 |Installation locale de l’application de partage Rights Management pour Windows et instructions utilisateur   →|[Guide d’utilisation de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md)|
 |Installation par script de l’application de partage Rights Management pour Windows et informations techniques   →|[Guide de l’administrateur de l’application de partage Rights Management](../rms-client/sharing-app-admin-guide.md)|
-|Pour comprendre la différence entre la protection native et la protection générique   →|[Quelle est la différence entre la protection générique et la protection intégrée (native) ?](../rms-client/sharing-app-dialog-box.md)|
+|Pour comprendre la différence entre la protection native et la protection générique   →|[Quelle est la différence entre la protection générique et la protection intégrée (native) ?](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

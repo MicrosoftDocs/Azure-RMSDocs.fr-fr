@@ -43,7 +43,7 @@
 #### [Test de votre application](how-to-set-up-your-test-environment.md)
 #### [Déployer en production](deploying-your-application.md)
 ### [Guide et informations pour les développeurs](Developer-notes.md)
-#### [Procédure : utilisation de l’authentification ADAL](how-to-use-adal-authentication.md)
+#### [Procédure : utilisation de l’authentification ADAL](how-to-use-adal-authentication.md)
 ##### [Configurer Azure RMS pour l’authentification ADAL](adal-auth.md)
 #### [Procédure d’ajout des droits de propriétaire explicites](add-explicit-owner-rights.md)
 #### [Procédure : débogage d’une application avec gestion des droits](debugging-applications-that-use-ad-rms.md)
@@ -67,6 +67,6 @@
 #### [Codes d'erreur](https://msdn.microsoft.com/library/hh535248.aspx)
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

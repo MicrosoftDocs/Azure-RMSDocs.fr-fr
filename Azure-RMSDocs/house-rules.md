@@ -21,7 +21,7 @@ ms.openlocfilehash: 958135678a9b48ca59b3d377439f5cf4b3d1efd7
 
 # <a name="house-rules-for-customer-comments-on-the-documentation-site-for-azure-information-protection"></a>Règles régissant les commentaires des clients sur le site de documentation pour Azure Information Protection
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
 Si vous avez des commentaires sur la documentation que vous avez lue sur Azure Information Protection, n’hésitez pas à nous en faire part. Par exemple, si vous avez besoin d’une clarification sur les informations documentées, souhaitez signaler une imprécision dans la documentation ou ne trouvez pas les informations dont vous avez besoin. 
 
@@ -44,6 +44,6 @@ Remarque : si vous êtes un employé de Microsoft, utilisez des canaux de commun
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

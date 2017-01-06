@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: dc452dac3a86cd9cc39127d5a29106ae87ba94be
-ms.openlocfilehash: c3dfa23a4bb03aec3ad9eae835382040a5347006
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 862ac33db89752cd25859c6fd3491959efda5107
 
 
 ---
@@ -85,8 +85,9 @@ Vous êtes maintenant prêt à créer vos propres applications du Windows Store.
 
 [Informations de référence sur l’API Windows](https://msdn.microsoft.com/library/dn891914.aspx)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

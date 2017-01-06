@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 60e64b1fb1184aaa51b6664ecb5288d6ff861413
-ms.openlocfilehash: 04364bc5daec881fe3c55d5cd41e7be11ac91ae7
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: febd7d90a1a762de73894724f3cf3401aec0d7b9
 
 
 ---
@@ -65,7 +65,7 @@ Le Kit de développement logiciel (SDK) passe désormais à la version 4.2 et b
 -   Mises à jour pour améliorer les messages d’erreur et le dépannage.
 -   Améliorations de performances significatives pour les opérations de chiffrement.
 
-### <a name="july-2015-update-adds-support-for-linux-c-development"></a>Mise à jour de juillet 2015 : ajout de la prise en charge du développement Linux/C++
+### <a name="july-2015-update---adds-support-for-linux--c-development"></a>Mise à jour de juillet 2015 : ajout de la prise en charge du développement Linux/C++
 
 L’élément suivant est ajouté à cette version :
 
@@ -73,7 +73,7 @@ L’élément suivant est ajouté à cette version :
 
     Pour plus d’informations, consultez [Prise en main](get-started.md).
 
-### <a name="may-2015-update-adds-logging-control"></a>Mise à jour de mai 2015 : ajout du contrôle d’enregistrement
+### <a name="may-2015-update---adds-logging-control"></a>Mise à jour de mai 2015 : ajout du contrôle d’enregistrement
 
 Cette version permet la prise en charge des éléments suivants :
 
@@ -91,15 +91,15 @@ Cette version permet la prise en charge des éléments suivants :
 
     Pour plus d’informations, consultez [MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx).
 
-### <a name="february-2015-update-adds-windows-store-application-support"></a>Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store
+### <a name="february-2015-update---adds-windows-store-application-support"></a>Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store
 
 Cette version ajoute la prise en charge des applications du Windows Store et assure la parité fonctionnelle avec la version Windows Phone, Android et iOS/OS X du kit de développement logiciel (SDK) RMS 4.1.
 
-### <a name="january-2015-update-adds-winphone-platform-support"></a>Mise à jour de janvier 2015 : ajout de la prise en charge de la plate-forme WinPhone
+### <a name="january-2015-update---adds-winphone-platform-support"></a>Mise à jour de janvier 2015 : ajout de la prise en charge de la plate-forme WinPhone
 
 Cette version ajoute la prise en charge du système d’exploitation Windows Phone et assure la parité fonctionnelle avec la version Android et iOS/OS X du kit de développement logiciel (SDK) RMS 4.1.
 
-### <a name="october-2014-update-upgrade-to-microsoft-rms-sdk-41"></a>Mise à jour d’octobre 2014 : mise à niveau vers le Kit de développement logiciel (SDK) Microsoft RMS 4.1
+### <a name="october-2014-update---upgrade-to-microsoft-rms-sdk-41"></a>Mise à jour d’octobre 2014 : mise à niveau vers le Kit de développement logiciel (SDK) Microsoft RMS 4.1
 
 La version 4.1 du kit de développement logiciel (SDK) RMS ajoute les nouvelles fonctionnalités suivantes aux systèmes d’exploitation Google Android et Apple iOS/OS X.
 
@@ -217,12 +217,9 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 **R** : Le kit de développement logiciel (SDK) du système d’exploitation OS X fonctionne avec Xcode 4.6 et versions ultérieures uniquement et OS X 10.8 et versions ultérieures.
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

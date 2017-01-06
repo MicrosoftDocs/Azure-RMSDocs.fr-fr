@@ -17,13 +17,13 @@ ms.suite: ems
 experimental: true
 experiment_id: priyamo-test-20160729
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: a077e9721bde9e812d36dfab46d6215857cb69ab
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 1e1bf622bfae4d2cca3b30798dbf6cb5c794e24a
 
 
 ---
 
-# <a name="howto-enable-document-tracking-and-revocation"></a>Comment : activer le suivi et la révocation de documents
+# <a name="how-to-enable-document-tracking-and-revocation"></a>Comment : activer le suivi et la révocation de documents
 
 Cette rubrique décrit les instructions de base pour implémenter le suivi des documents pour le contenu ainsi que l’exemple de code pour les mises à jour de métadonnées et la création d’un **bouton Suivre l'utilisation** pour votre application.
 
@@ -161,10 +161,10 @@ Le client doit simplement ouvrir un navigateur avec l’URL appropriée. Le port
 * [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
 * [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
- 
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

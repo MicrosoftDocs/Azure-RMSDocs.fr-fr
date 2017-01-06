@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f5fa3082e407e207f33f041d22661888a13566b2
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 54501ba875895129db71ab001d07373b266a225d
 
 
 ---
@@ -39,11 +39,9 @@ Les administrateurs peuvent définir des clés de Registre pour déterminer si e
 * [Notes pour les développeurs](developer-notes.md)
 * [Configuration de l’API de fichier](file-api-configuration.md)
  
-
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

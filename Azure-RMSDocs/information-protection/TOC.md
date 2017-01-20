@@ -7,6 +7,6 @@
 # [Azure Information Protection (préversion)](/information-protection/understand-explore/what-is-azure-information-protection)
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 

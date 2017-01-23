@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ac77c4e0bced244f1cec74f15cbe0d62c9ab4437
-ms.openlocfilehash: 66d24f4ed737526525c041de7aeb96de35b37032
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 9a81746a17988f788503ca706f19a4ed89702c4e
 
 
 ---
@@ -99,12 +99,9 @@ Obtenir le paramètre d’indicateur de contrôle de la journalisation en cours
 
 **Linux / C++** : Ce SDK présente une journalisation de base qui n’est pas aussi complète que celle des autres plateformes. Pour plus d’informations, consultez la section **Dépannage** de « README.md » dans [RMS SDK pour C++ portable](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting).
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

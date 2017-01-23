@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: faa1f33d1151a2d4700cc64556510994c708a414
-ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: cd2436b20a489835aec650c2c5a19d0b0cc50eff
 
 
 ---
@@ -29,7 +29,7 @@ Cette rubrique présente des éléments de code importants pour la version iOS/O
 
 
 
-## <a name="using-the-microsoft-rights-management-sdk-42-key-scenarios"></a>Utilisation de Microsoft Rights Management SDK 4.2 - Principaux scénarios
+## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Utilisation de Microsoft Rights Management SDK 4.2 - Principaux scénarios
 
 
 Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un exemple d’application représentant des scénarios de développement importants pour l’orientation de ce SDK. Ces exemples illustrent l’utilisation du format de fichier protégé Microsoft (appelé « fichier protégé »), l’utilisation de formats de fichiers protégés personnalisés et l’utilisation de contrôles d’interface utilisateur personnalisés.
@@ -213,7 +213,7 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
             }];
          }
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-adhoc-policy"></a>Scénario : Créer un fichier protégé personnalisé à l’aide d’une stratégie personnalisée (ad hoc)
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>Scénario : Créer un fichier protégé personnalisé à l’aide d’une stratégie personnalisée (ad hoc)
 
 
 -   **Étape 1** : Avec une adresse e-mail fournie par l’utilisateur, créer un descripteur de stratégie.
@@ -280,8 +280,9 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
             }];
           }
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

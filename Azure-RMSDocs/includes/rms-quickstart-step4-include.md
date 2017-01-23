@@ -11,7 +11,7 @@ Lorsqu’ils cliquent sur le lien, ils sont redirigés vers les instructions pou
 
 ![Captures d’écran du didacticiel RM](../media/AzRMS_Tutorial_4_Screenshots.png)
 
-#### Affichage de la pièce jointe du document protégé
+#### <a name="to-view-the-protected-document-attachment"></a>Affichage de la pièce jointe du document protégé
 
 1.  Étant donné qu’Azure Rights Management a protégé un document Word, il existe deux pièces jointes au courrier électronique. Il s’agit en fait de deux versions du même fichier, mais avec différentes extensions. Ouvrez la version avec l’extension de nom de fichier **.ppdf** (**Confidential.ppdf**).
 
@@ -27,12 +27,12 @@ Maintenant que le destinataire a ouvert la pièce jointe et l’a éventuellemen
 
 |Pour en savoir plus|Informations supplémentaires|
 |--------------------------------|--------------------------|
-|Instructions détaillées pour afficher les fichiers protégés par Azure Rights Management   →|[Affichage et utilisation des fichiers qui ont été protégés par Rights Management](../rms-client/sharing-app-view-use-files.md)|
+|Instructions détaillées pour afficher les fichiers protégés par Azure Rights Management   →|[Afficher et utiliser des fichiers qui ont été protégés par Rights Management](../rms-client/sharing-app-view-use-files.md)|
 |Abonnement gratuit RMS for individuals   →|[RMS for Individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md)|
-|Deux versions du fichier joint au courrier électronique   →|[Qu'est-ce que le fichier .ppdf créé automatiquement ?](../rms-client/sharing-app-dialog-box.md)|
+|Deux versions du fichier joint au courrier électronique   →|[Qu’est-ce que le fichier .ppdf créé automatiquement ?](../rms-client/sharing-app-dialog-box.md)|
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

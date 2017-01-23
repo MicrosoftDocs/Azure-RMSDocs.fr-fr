@@ -1,11 +1,11 @@
 # [Comprendre et explorer](/information-protection/understand-explore/what-is-information-protection)
-# [Mise en route](requirements-azure-rms.md)
-## [Configuration requise](requirements.md)
+# [Bien démarrer](requirements-azure-rms.md)
+## [Requirements](requirements.md)
 ### [Configuration requise d’Azure Active Directory](requirements-azure-ad.md)
 ### [Prise en charge d’appareils clients pour la protection des données](requirements-client-devices.md)
 ### [Prise en charge d’applications pour la protection des données](requirements-applications.md)
 ### [Prise en charge d’un serveur local pour la protection des données](requirements-servers.md)
-## [Forum aux questions](faqs.md)
+## [Forum Aux Questions](faqs.md)
 ### [Forum aux questions sur la classification et l’étiquetage](faqs-infoprotect.md)
 ### [Forum aux questions sur la protection des données](faqs-rms.md)
 ## [Information et support](information-support.md)
@@ -31,6 +31,6 @@
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Jan17_HO2-->
 
 

@@ -15,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 789c93b6d7ac72ebe1df04300f2885ca2aa23a06
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: da5a9fa1a2c2eaccb6768914a0c425983b14fdbe
 
 
 ---
 
-# <a name="howto-debug-a-rightsenabled-application"></a>Comment : déboguer une application avec gestion des droits
+# <a name="how-to-debug-a-rights-enabled-application"></a>Comment : déboguer une application avec gestion des droits
 
 La rubrique suivante indique comment déboguer une application et utiliser le journal des événements Windows.
 
@@ -66,16 +66,9 @@ Par exemple, la commande suivante active le journal des événements MSIPC et af
 
 **Remarque** Dans l’Observateur d’événements Windows, dans le menu **Affichage**, sélectionnez **Afficher les journaux d’analyse et de débogage** pour afficher le journal de débogage MSIPC.
 
- 
-
-## <a name="related-topics"></a>Rubriques connexes
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

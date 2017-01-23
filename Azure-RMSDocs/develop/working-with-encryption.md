@@ -15,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 37d9906b5df00b6ec6eeb6739766c00bd5cef37b
-ms.openlocfilehash: 0ad53fa82f288153f259870b0022378815f097a8
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ca54dd3ceece96c03de140fcfc3202afdd94796a
 
 
 ---
 
-# <a name="howto-work-with-encryption-settings"></a>Comment : utiliser des paramètres de chiffrement
+# <a name="how-to-work-with-encryption-settings"></a>Comment : utiliser des paramètres de chiffrement
 
 Cette rubrique vous oriente vers nos offres de chiffrement et présente quelques extraits de code pour illustrer leur utilisation.
 
@@ -63,7 +63,7 @@ Toute modification du code est inutile, car *AES 256* CBC4K est le chiffrement p
                                     &amp;pLicenseHandle);
 
 
-## <a name="protect-files-with-aes128-cbc4k"></a>Protéger les fichiers avec AES 128 CBC4K
+## <a name="protect-files-with-aes-128-cbc4k"></a>Protéger les fichiers avec AES 128 CBC4K
 
     C++
 
@@ -80,7 +80,7 @@ Toute modification du code est inutile, car *AES 256* CBC4K est le chiffrement p
                            &amp;dwEncryptionMode);
 
 
-## <a name="protect-files-with-aes128-ecb-deprecated-algorithms"></a>Protéger les fichiers avec AES-128 ECB (algorithmes déconseillés)
+## <a name="protect-files-with-aes-128-ecb-deprecated-algorithms"></a>Protéger les fichiers avec AES-128 ECB (algorithmes déconseillés)
 
 Cet exemple montre également la nouvelle façon de prendre en charge des *algorithmes déconseillés*.
 
@@ -98,12 +98,10 @@ Cet exemple montre également la nouvelle façon de prendre en charge des *algor
                            IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
                            &amp;dwEncryptionMode);
 
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

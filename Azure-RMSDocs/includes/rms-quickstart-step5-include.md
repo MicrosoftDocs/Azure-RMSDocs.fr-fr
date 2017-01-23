@@ -3,7 +3,7 @@
 > [!NOTE]
 > Pour cette étape, vous devez disposer d’un abonnement qui prend en charge le suivi de document. Pour vérifier si votre abonnement inclut le suivi de document, voir la [comparaison des différentes offres de services Rights Management (RMS)](https://technet.microsoft.com/dn858608.aspx).
 
-Cette étape est facultative, mais la plupart des utilisateurs souhaitent savoir si la pièce jointe qu’ils ont envoyée a été ouverte, à quel moment et aussi à quel endroit. Par exemple :
+Cette étape est facultative, mais la plupart des utilisateurs souhaitent savoir si la pièce jointe qu’ils ont envoyée a été ouverte, à quel moment et aussi à quel endroit. Exemple :
 
 -   Vous attendez une réponse de la part d’une personne à une heure donnée, et vous pouvez voir sur le site de suivi de document qu’elle n’a pas ouvert le document, bien que l’échéance approche. Vous lui envoyez un courrier électronique de suivi ou l’appelez en guise de rappel.
 
@@ -11,11 +11,11 @@ Cette étape est facultative, mais la plupart des utilisateurs souhaitent savoir
 
 ![Captures d’écran du didacticiel Azure RMS](../media/AzRMS_Tutorial_5_Screenshots.png)
 
-#### Suivi du document protégé
+#### <a name="to-track-your-protected-document"></a>Suivi du document protégé
 
 1.  Dans Outlook, dans l’onglet **Accueil** du groupe **RMS** , cliquez sur **Suivre l’utilisation**.
 
-2.  Si la page de **protection et partage de vos conditions d’utilisation** apparaît, cliquez sur **Se connecter** et indiquez à nouveau votre nom d’utilisateur et votre mot de passe.
+2.  Si la page **Protégez et partagez comme vous le souhaitez** apparaît, cliquez sur **Se connecter** et indiquez à nouveau votre nom d’utilisateur et votre mot de passe.
 
 3.  La page **Vos documents partagés** répertorie le document que vous avez joint à l’e-mail, **Confidential.docx**. À ce stade, il s’agit du seul fichier affiché, mais la liste s’allongera à mesure que vous partagerez des fichiers.
 
@@ -29,17 +29,17 @@ Vous pouvez revenir sur ce site pour suivre les autres activités de votre docum
 
 |Pour en savoir plus|Informations supplémentaires|
 |--------------------------------|--------------------------|
-|Instructions détaillées pour le suivi de vos documents   →|[Suivi et révocation de vos documents lorsque vous utilisez l’application de partage RMS](../rms-client/sharing-app-track-revoke.md)|
+|Instructions détaillées pour le suivi de vos documents   →|[Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS](../rms-client/sharing-app-track-revoke.md)|
 |Vidéo de deux minutes qui explique et présente le suivi de document   →|[Révocation et suivi de document Azure RMS](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)|
 |Dépannage et questions des clients   →|[FAQ pour le suivi de document](https://technet.microsoft.com/dn947488)|
 
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 Ce didacticiel vous a présenté seulement un scénario dans lequel Azure RMS peut vous aider à protéger vos données. Pour voir d’autres utilisations courantes, consultez [Azure RMS en action](../understand-explore/what-admins-users-see.md). Dans cet article, il existe d’autres sections qui peuvent vous être utiles, telles que le fonctionnement d’Azure RMS et les problèmes professionnels qu’il peut résoudre.
 
 Si vous êtes prêt à déployer Azure RMS, consultez la [Feuille de route pour le déploiement d’Azure Rights Management](../plan-design/deployment-roadmap.md) pour connaître les étapes de déploiement et accéder à des liens vers des instructions.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -1,5 +1,5 @@
 # [Comprendre et explorer](/information-protection/understand-explore/what-is-information-protection)
-# [Mise en route](/information-protection/get-started/requirements-azure-rms)
+# [Bien démarrer](/information-protection/get-started/requirements-azure-rms)
 # [Planifier et concevoir](deployment-roadmap.md)
 ## [Feuille de route pour le déploiement](deployment-roadmap.md)
 ## [Migration à partir d’AD RMS](migrate-from-ad-rms-to-azure-rms.md)
@@ -18,6 +18,6 @@
 # [Développer et personnaliser des applications](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO2-->
 
 

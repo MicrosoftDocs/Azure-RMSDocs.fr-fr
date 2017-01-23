@@ -8,7 +8,7 @@ Même si vous avez un abonnement prenant en charge Azure Rights Management, le s
 
 ![Portail Azure Classic](../media/AzRMS_Tutorial_1_Screenshots.png)
 
-#### Pour activer Rights Management à partir du centre d’administration Office 365
+#### <a name="to-activate-rights-management-from-the-office-365-admin-center"></a>Pour activer Rights Management à partir du centre d’administration Office 365
 
 1.  Accédez au [portail Office 365](https://portal.office.com/) et connectez-vous avec votre compte professionnel ou scolaire.
 
@@ -31,7 +31,7 @@ Vous devriez maintenant voir **Rights management est activé** , ainsi que l’o
 
 À ce stade, ne cliquez pas sur **fonctionnalités avancées**. Vous seriez redirigé vers le portail Azure Classic permettant de configurer des modèles qui sont superflus pour ce didacticiel. Choisissez plutôt de fermer le Centre d’administration Office 365.
 
-#### Activation de Rights Management à partir du portail Azure
+#### <a name="to-activate-rights-management-from-the-azure-portal"></a>Activation de Rights Management à partir du portail Azure
 
 1.  Accédez au portail [Azure Classic](http://go.microsoft.com/fwlink/p/?LinkID=275081), puis connectez-vous.
 
@@ -51,10 +51,10 @@ Bien que ce ne soit pas inclus dans cette rubrique, pour un déploiement de prod
 
 |Pour en savoir plus|Informations supplémentaires|
 |--------------------------------|--------------------------|
-|Activation de Rights Management et contrôle des personnes pouvant protéger des fichiers et des messages électroniques lorsque le service est activé   →|[Activation d'Azure Rights Management](../deploy-use/activate-azure-classic.md)|
+|Activation de Rights Management et contrôle des personnes pouvant protéger des fichiers et des messages électroniques lorsque le service est activé   →|[Activation d’Azure Rights Management](../deploy-use/activate-azure-classic.md)|
 |Modèles par défaut et création de modèles personnalisés   →|[Configuration de modèles personnalisés pour Azure Rights Management](../deploy-use/create-template.md)|
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

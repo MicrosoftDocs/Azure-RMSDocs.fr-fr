@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 12d7f276a489284586f45d34407ecc48b1b4b2ce
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: bdf8988931367e9bdf61d2c145d1027c3116d3ac
 
 
 ---
@@ -25,15 +25,9 @@ ms.openlocfilehash: 12d7f276a489284586f45d34407ecc48b1b4b2ce
 
 La référence d’API pour notre prise en charge de système d’exploitation Linux est hébergée sur Github - [Kit RMS SDK pour C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html). Pour plus d’informations, consultez [Prise en main](get-started.md).
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-
-
-
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

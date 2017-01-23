@@ -15,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 25b9f1c7ee6ad2eb1d642a72713e0dd24703c2bc
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 0e138ec62a16b52fd5657037988d8a9b8daa754f
 
 
 ---
 
-# <a name="howto-use-adal-authentication"></a>Comment : utiliser l’authentification ADAL
+# <a name="how-to-use-adal-authentication"></a>Comment : utiliser l’authentification ADAL
 
 Authentification auprès d’Azure RMS pour votre application à l’aide de la bibliothèque d’authentification ADAL (Azure Active Directory Authentication Library).
 
@@ -123,8 +123,9 @@ C++ extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Para
 - [IPC_PROMPT_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
 - [IPC_AAD_APPLICATION_ID](https://msdn.microsoft.com/library/mt661867.aspx)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

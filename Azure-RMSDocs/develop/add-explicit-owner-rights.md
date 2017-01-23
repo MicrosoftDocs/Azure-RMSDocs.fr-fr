@@ -15,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 2fa260480eaa26a529a058b597657216572b4cb8
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 337c819436e3675eb0ba745717d700002d5184b0
 
 
 ---
 
-# <a name="howto-add-explicit-owner-rights"></a>Comment : ajouter des droits de propriétaire explicites
+# <a name="how-to-add-explicit-owner-rights"></a>Comment : ajouter des droits de propriétaire explicites
 
 Votre application doit ajouter explicitement les droits « Owner » lors de la création d’une licence à partir de rien (à l’aide de [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
 
@@ -111,12 +111,10 @@ Les deux droits suivants sont ajoutés à ces utilisateurs :
 - [Notes pour les développeurs](developer-notes.md)
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
 - [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

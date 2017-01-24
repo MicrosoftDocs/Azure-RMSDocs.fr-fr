@@ -65,6 +65,6 @@ La classification, l’étiquetage et la protection n’ayant plus de secret pou
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

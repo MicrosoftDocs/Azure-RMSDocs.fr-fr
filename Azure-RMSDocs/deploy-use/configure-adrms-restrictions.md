@@ -1,18 +1,18 @@
 ---
 title: "Restrictions liées à HYOK | Azure Information Protection"
-description: Identify the limitations, prerequisites, and recommendations if you select AD RMS protection with Azure Information Protection. This solution is sometimes referred to as "hold your own key" (HYOK).
+description: "Identifiez les limitations, conditions préalables et recommandations associées à la sélection de la protection AD RMS avec Azure Information Protection. Cette solution est parfois appelée HYOK (« conservez votre propre clé »)."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: e4ed4513728180179876ff49797f96e9f0f785b3
+ms.sourcegitcommit: 22af60687ad030e686ba843ced6d450487353a0e
+ms.openlocfilehash: 66c19b296ce170d0f7f5317c87bee532edd9bb78
 
 
 ---
@@ -66,6 +66,8 @@ Vérifiez que votre déploiement AD RMS répond aux exigences suivantes pour fou
     
     - [Mode de chiffrement 2](https://technet.microsoft.com/library/hh867439.aspx) : vous pouvez vérifier la version du mode de chiffrement du cluster AD RMS et son intégrité globale en utilisant l’outil [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437).   
     
+    - Un point de connexion de service (SCP) n’est pas enregistré dans Active Directory : un SCP n’est pas utilisé lorsque vous utilisez la protection AD RMS avec Azure Information Protection. Si vous avez inscrit un SCP pour votre déploiement AD RMS, vous devez le supprimer pour que [Détection du service](../rms-client/client-deployment-notes.md#rms-service-discovery) fonctionne pour la protection d’Azure Rights Management.
+    
     - Les serveurs AD RMS sont configurés pour utiliser SSL/TLS avec un certificat x.509 valide qui est approuvé par les clients qui se connectent : obligatoire pour les environnements de production, mais non obligatoire à des fins de test ou d’évaluation.
     
     - Modèles de droits configurés.
@@ -100,8 +102,9 @@ Pour plus d’informations sur cette fonctionnalité en préversion, consultez l
 
 Pour configurer une étiquette pour la protection AD RMS, consultez [Comment configurer une étiquette pour appliquer la protection Rights Management](../deploy-use/configure-policy-protection.md). 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

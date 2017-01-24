@@ -13,8 +13,8 @@ ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8e731d9fe973dff7f208502b726ec154129cf7e6
-ms.openlocfilehash: f5f7be6a076c2a2eb962288712630d825edd87c3
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: c1db27980508a0bbcd50a4a12f384193dd30440f
 
 
 ---
@@ -58,8 +58,9 @@ Cependant, si vous êtes prêt à déployer Azure Information Protection dans vo
 > [!TIP]
 > Pour obtenir plus d’informations et de l’aide supplémentaire, utilisez les ressources et les liens dans [Informations et support pour Azure Information Protection](../get-started/information-support.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Jan17_HO4-->
 
 

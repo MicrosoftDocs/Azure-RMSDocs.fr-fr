@@ -13,13 +13,13 @@ ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1bf7377e5e8079025dff638a185c825256a5cc7
-ms.openlocfilehash: fba8e46993e414fe63414f7240779f5939166c4a
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 0ad1df8a8343052a85f85b94e0413fe0a0265d4b
 
 
 ---
 
-# <a name="migration-phase-3-supporting-services-configuration"></a>Phase de migration 3 : Configuration des services de prise en charge
+# <a name="migration-phase-3---supporting-services-configuration"></a>Phase de migration 3 : Configuration des services de prise en charge
 
 >*S’applique à : Services AD RMS, Azure Information Protection, Office 365*
 
@@ -214,7 +214,9 @@ Une fois ces procédures terminées, vous pouvez lire la section **Étapes suiva
 ## <a name="next-steps"></a>Étapes suivantes
 Pour poursuivre la migration, passez à la [Phase 4 - Tâches de post-migration](migrate-from-ad-rms-phase4.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Nov16_HO2-->
+
+<!--HONumber=Jan17_HO4-->
 
 

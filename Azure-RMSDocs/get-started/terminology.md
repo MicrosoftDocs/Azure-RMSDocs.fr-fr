@@ -13,8 +13,8 @@ ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 8d2fc307bb531ab434e0bc43a22f7403555ef03f
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: a5706c9cf8b81ec761865a800761c69584659578
 
 
 ---
@@ -69,11 +69,10 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |ôter la protection|Supprimer des contrôles de gestion des droits de fichiers ou d’e-mails, qui utilisent des stratégies de chiffrement, d’identité et de contrôle d’accès afin de sécuriser vos données.|
 |licence d'utilisation|Certificat associé à un document, qui est accordé à un utilisateur qui ouvre un fichier ou un e-mail protégé par un service de gestion des droits. Ce certificat contient les droits d'utilisateur du fichier ou de l'e-mail, la clé de chiffrement qui est utilisée pour chiffrer le contenu, ainsi que les restrictions d'accès supplémentaires définies dans la stratégie du document.|
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

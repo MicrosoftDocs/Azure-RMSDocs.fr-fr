@@ -13,8 +13,8 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 9dea728836d52249471d3dde69b63a9a2cd1467c
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ca8694a26f0f9b537a3e3a6b1f468d89cefe6206
 
 
 ---
@@ -154,7 +154,7 @@ Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des c
 |c-ip|Adresse|Adresse IP du client d’où émane la demande.|64.51.202.144|
 
 
-#### <a name="exceptions-for-the-userid-field"></a>Exceptions pour le champ user-id.
+#### <a name="exceptions-for-the-user-id-field"></a>Exceptions pour le champ user-id.
 Bien que le champ user-id indique généralement l’utilisateur qui effectue la demande, il existe deux exceptions pour lesquelles la valeur ne mappe pas à un utilisateur réel :
 
 -   Valeur **'microsoftrmsonline@&lt;votre_ID_de_locataire&gt;.rms.&lt;région&gt;.aadrm.com’**.
@@ -236,11 +236,12 @@ Si vous avez dans votre propre stockage Azure des journaux antérieurs au change
 
 Pour plus d’informations sur l’utilisation de Windows PowerShell pour le service Azure Rights Management, consultez [Administration du service Azure Rights Management à l’aide de Windows PowerShell](administer-powershell.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

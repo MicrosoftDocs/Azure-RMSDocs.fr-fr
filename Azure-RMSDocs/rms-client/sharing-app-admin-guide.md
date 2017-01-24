@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c9a5bcf46597ee65e2e0f36199f19935f8997048
-ms.openlocfilehash: adab568d173845f411fe5913786b137508485ef6
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 53bd4b52b73c4a487f7d5aa655fd9b372bb7ada3
 
 
 ---
@@ -169,7 +169,7 @@ Pour vérifier que l’opération a réussi, consultez la section [Vérification
 
 Pour vérifier que l’opération a réussi, consultez la section [Vérification de la réussite de l’installation](#verifying-installation-success) dans cet article.
 
-### <a name="to-install-the-rms-sharing-application-and-office-addin-only"></a>Pour installer l'application de partage RMS et le complément Office uniquement
+### <a name="to-install-the-rms-sharing-application-and-office-add-in-only"></a>Pour installer l'application de partage RMS et le complément Office uniquement
 
 1.  Installez le client AD RMS et l’application de partage RMS en utilisant la commande suivante, en spécifiant un dossier existant dans lequel créer le fichier journal :
 
@@ -273,7 +273,7 @@ Vous pouvez utiliser les fichiers journaux d'installation pour vérifier que l'i
 
         DefaultUser="&lt;default_user&gt;"
 
-### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-addin-only"></a>Pour vérifier la réussite de l'installation de l'application de partage RMS et du complément Office uniquement
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>Pour vérifier la réussite de l'installation de l'application de partage RMS et du complément Office uniquement
 
 1.  Pour vérifier la réussite de la commande Setup_ipviewer.exe, recherchez le texte suivant dans le fichier journal d’installation : **Réussite de l’installation ou état d’erreur : 0**
 
@@ -310,7 +310,7 @@ Certaines des commandes d'installation requises pour ces déploiements ne prenne
         x86\setup_ipviewer.exe /uninstall /quiet
         ```
 
-### <a name="to-uninstall-the-office-addin"></a>Pour désinstaller le complément Office
+### <a name="to-uninstall-the-office-add-in"></a>Pour désinstaller le complément Office
 
 -   Utilisez les commandes suivantes :
 
@@ -404,9 +404,10 @@ Si vous n'apportez pas cette modification au Registre, les utilisateurs risquent
 ## <a name="next-steps"></a>Étapes suivantes
 Pour obtenir des informations techniques supplémentaires sur notamment la différence entre les niveaux de protection (native et générique), les types de fichiers pris en charge, les extensions de nom de fichier et la façon de modifier le niveau de protection par défaut, consultez [Présentation technique de l’application de partage Rights Management](sharing-app-admin-guide-technical.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

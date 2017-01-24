@@ -13,8 +13,8 @@ ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 18a222c7927ecc4394266518619941b8a4b6499f
-ms.openlocfilehash: 751422489ec4eec074764ff0417640b22a394325
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 5b438ed97df754b88b0d654439153dea03c8250c
 
 
 ---
@@ -56,9 +56,10 @@ L’application de partage RMS pour les appareils mobiles prend en charge les ap
 ## <a name="next-steps"></a>Étapes suivantes
 Pour voir comment d’autres applications et services prennent en charge le service Azure Rights Management d’Azure Information Protection, consultez [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

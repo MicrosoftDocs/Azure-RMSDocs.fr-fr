@@ -13,8 +13,8 @@ ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
-ms.openlocfilehash: fe6491f413b928a85b2a181ee22cfe17f39149ef
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 77c448230aef0b3364822f38ace4f490bfc2db5f
 
 
 ---
@@ -62,8 +62,9 @@ Disponibilité générale.
 
 Pour plus d’informations sur l’installation du client, consultez [Installation du client Azure Information Protection](info-protect-client.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

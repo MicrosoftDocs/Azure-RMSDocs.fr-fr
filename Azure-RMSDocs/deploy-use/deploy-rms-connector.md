@@ -13,8 +13,8 @@ ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 386453578a5ea8eeb874d7f27badb8f041dda659
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: eaa1d7a0a74fa68f9bf1d15f348dbb45d14cee9a
 
 
 ---
@@ -36,7 +36,7 @@ Le connecteur RMS est un service à faible encombrement qui doit être installé
 ![Vue d’ensemble de l’architecture du connecteur RMS](../media/RMS_connector.png)
 
 
-### <a name="onpremises-servers-supported"></a>Serveurs locaux pris en charge
+### <a name="on-premises-servers-supported"></a>Serveurs locaux pris en charge
 
 Le connecteur RMS prend en charge les serveurs locaux suivants : Exchange Server, SharePoint Server, ainsi que les serveurs de fichiers exécutant Windows Server et utilisant l’infrastructure de classification des fichiers pour classer et appliquer des stratégies à des documents Office dans un dossier. 
 
@@ -50,7 +50,7 @@ Pour connaître les versions de ces serveurs locaux qui sont prises en charge pa
 
 Vous pouvez utiliser ce connecteur RMS même si certains de vos utilisateurs se connectent à des services en ligne dans le cadre d’un scénario hybride. Par exemple, les boîtes aux lettres de certains utilisateurs utilisent Exchange Online et celles d'autres utilisateurs utilisent Exchange Server. Après installation du connecteur RMS, tous les utilisateurs peuvent protéger et consommer des courriers électroniques et pièces jointes à l'aide d'Azure RMS, et la protection des informations fonctionne de façon transparente entre les deux configurations de déploiement.
 
-### <a name="support-for-customermanaged-keys-byok"></a>Prise en charge des clés gérées par le client (BYOK)
+### <a name="support-for-customer-managed-keys-byok"></a>Prise en charge des clés gérées par le client (BYOK)
 
 Si vous gérez votre propre clé de locataire pour Azure RMS (scénario BYOK, Bring You Own Key), le connecteur RMS et les serveurs locaux qui l’utilisent n’accèdent pas au module de sécurité matériel (HSM) qui contient votre clé de locataire. En effet, toutes les opérations de chiffrement qui utilisent la clé de locataire sont effectuées dans Azure RMS et non en local.
 
@@ -97,7 +97,9 @@ Sachant que le connecteur ne vérifie pas automatiquement toutes les [conditions
 
 Accédez à l’étape 1 : [Installation et configuration du connecteur Azure Rights Management](install-configure-rms-connector.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Nov16_HO1-->
+
+<!--HONumber=Jan17_HO4-->
 
 

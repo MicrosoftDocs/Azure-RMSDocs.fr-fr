@@ -13,8 +13,8 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 1de26925961ad560cb9aa86ebc16f7354c7cff1f
 
 
 ---
@@ -48,7 +48,7 @@ Pour obtenir un compte gratuit, demandez-le via la [page Microsoft Azure Informa
 
 Votre compte étant créé, vous pouvez à présent protéger des fichiers et lire des fichiers protégés par d'autres personnes. Si vous êtes invité à vous connecter pour protéger des fichiers ou utiliser des fichiers protégés, entrez l’adresse e-mail et le mot de passe que vous avez utilisés pour créer le compte RMS for Individuals.
 
-## <a name="technical-overview-of-the-signup-process"></a>Présentation technique du processus d’inscription
+## <a name="technical-overview-of-the-sign-up-process"></a>Présentation technique du processus d’inscription
 RMS for Individuals utilise un processus d'inscription en libre-service dont se servent également d'autres services recourant à la technologie cloud de Microsoft pour l'authentification des utilisateurs.
 
 Voici ce qui se passe en arrière-plan quand un utilisateur s'inscrit à RMS for individuals alors que son organisation n'a pas d'abonnement Office 365 ou Azure, et donc pas d'annuaire dans Azure pour authentifier les utilisateurs :
@@ -94,10 +94,9 @@ Grâce à ce processus, aucun frais n'est imputé à l'organisation et aucune in
 ## <a name="next-steps"></a>Étapes suivantes
 Consultez [Contrôle administrateur des comptes créés pour RMS for individuals](rms-for-individuals-take-control.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

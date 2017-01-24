@@ -13,8 +13,8 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3571ab868d2476d6683317295d366f973a88ff43
-ms.openlocfilehash: 4cb92bc420eecc0102f144a66a579d58aa4112b5
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 2e895f51e21d5f8cb45a43719d47ba6987c13a09
 
 
 ---
@@ -72,7 +72,9 @@ Pour plus d’informations sur l’utilisation du service Azure Rights Managemen
 
 Pour voir comment d’autres applications et services prennent en charge le service Azure Rights Management d’Azure Information Protection, consultez [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Oct16_HO5-->
+
+<!--HONumber=Jan17_HO4-->
 
 

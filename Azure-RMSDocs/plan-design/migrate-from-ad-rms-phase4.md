@@ -13,13 +13,13 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3786fa2529b442f7d31603be09f9b80f1a46d171
-ms.openlocfilehash: 238cc238e62db4a74ce2b10e0e68803cc66b718f
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 9c78ac81a90d46ab8d56cd205474fdf85f486c3d
 
 
 ---
 
-# <a name="migration-phase-4-post-migration-tasks"></a>Phase de migration 4 - Tâches de post-migration
+# <a name="migration-phase-4---post-migration-tasks"></a>Phase de migration 4 - Tâches de post-migration
 
 >*S’applique à : Services AD RMS, Azure Information Protection, Office 365*
 
@@ -35,7 +35,7 @@ Surveillez l’activité de vos serveurs AD RMS, par exemple, en vérifiant [les
 
 Après la désaffectation de vos serveurs AD RMS, vous pouvez réviser vos modèles dans le portail Azure Classic et les consolider afin que les utilisateurs aient moins de choix, les reconfigurer ou même ajouter de nouveaux modèles. Il serait également judicieux de publier les modèles par défaut. Pour plus d’informations, consultez [Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
-## <a name="step-9-rekey-your-azure-information-protection-tenant-key"></a>Étape 9. Renouvellement de votre clé de locataire Azure Information Protection
+## <a name="step-9-re-key-your-azure-information-protection-tenant-key"></a>Étape 9. Renouvellement de votre clé de locataire Azure Information Protection
 Cette étape s’applique seulement si vous avez choisi une topologie de clé de locataire Gérée par Microsoft et non pas Gérée par le client (BYOK avec Azure Key Vault).
 
 Cette étape est facultative, mais elle est recommandée quand votre clé de locataire Azure Information Protection est gérée par Microsoft et a été migrée à partir d’AD RMS. Dans ce scénario, le renouvellement de clé permet de protéger votre clé de locataire Azure Information Protection contre des failles de sécurité potentielles de votre clé AD RMS.
@@ -51,9 +51,10 @@ Pour plus d’informations sur la gestion de votre clé de locataire Azure Infor
 
 Maintenant que vous avez terminé la migration, passez en revue la [feuille de route de déploiement](deployment-roadmap.md) pour identifier les autres tâches de déploiement éventuellement nécessaires.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

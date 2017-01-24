@@ -4,7 +4,7 @@ description: "Identifiez les applications qui utilisent les API RMS pour prendre
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2016
+ms.date: 12/16/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4ffe5949c080073f8acaadd7780b2c68b4b155f8
-ms.openlocfilehash: 1381a93b3a4f262c1747fa136467132137421ecb
+ms.sourcegitcommit: 115708d10b3504e77a5e469b4df93262c067ae0c
+ms.openlocfilehash: 9947c6e8b8fe78f262dbfa129f8490489d119dd2
 
 
 ---
@@ -76,7 +76,7 @@ Pour plus d’informations, consultez la [documentation produit Citrix pour Worx
 Pour plus d’informations, consultez le billet suivant sur le blog Office : [OWA for Android now available on select devices](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)
 
 ###### <a name="footnote-8"></a>Note 8
-Pour plus d’informations, consultez le billet suivant du blog Enterprise Mobility and Security : [SealPath brings RMS protection to AutoCAD :(https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
+Pour plus d’informations, consultez le billet suivant sur le blog Enterprise and Mobility : [SealPath apporte une protection RMS à AutoCAD](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
 
 
 ## <a name="more-information-about-azure-rms-support-for-office"></a>Plus d’informations sur la prise en charge d’Azure RMS pour Office
@@ -166,7 +166,9 @@ Pour plus d’informations sur la prise en charge d’Azure RMS par les applica
 
 Pour plus d’informations sur la façon de configurer les applications les plus courantes pour Azure RMS, consultez [Configuration d’applications pour Azure Rights Management](../deploy-use/configure-applications.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Dec16_HO3-->
+
+<!--HONumber=Jan17_HO4-->
 
 

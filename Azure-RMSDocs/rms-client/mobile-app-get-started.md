@@ -14,8 +14,8 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 0a0c6e5f68f016ec6f921b16ff3063599b45f465
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: b2fb20fb4613c688a8ab956fbe91d62041801959
 
 
 ---
@@ -44,8 +44,9 @@ Si vous avez d’autres questions concernant cette application, vérifiez si ell
 
 Si vous avez d’autres questions, accédez à notre [site Yammer](https://www.yammer.com/AskIPTeam) ou [envoyez un e-mail à l’équipe Information Protection](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

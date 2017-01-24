@@ -13,13 +13,13 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 0d4b1cdc2620a1f8cf9ddced24a898a38d8e9b57
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 942b9bfffbd4a43c922ada87220f4eecb78f1d11
 
 
 ---
 
-# <a name="scenario-configure-work-folders-for-persistent-protection"></a>Scénario - Configurer des dossiers de travail pour la protection permanente
+# <a name="scenario---configure-work-folders-for-persistent-protection"></a>Scénario - Configurer des dossiers de travail pour la protection permanente
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -120,9 +120,9 @@ Si vous avez configuré le modèle personnalisé comme décrit pour ce scénario
 > 
 > Après un certain temps, si vous découvrez l’existence de nombreuses demandes du même type, vous pouvez décider de définir votre propre modèle personnalisé pour ce scénario qui accorde l’option Copropriétaire uniquement à des utilisateurs spécifiques (tels que les responsables ou le support technique), tandis que les utilisateurs standard se voient attribuer l’option Coauteur ou tout autre [droit](../deploy-use/configure-usage-rights.md) qui vous semble approprié.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

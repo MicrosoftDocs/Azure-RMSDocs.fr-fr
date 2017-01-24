@@ -13,8 +13,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f89374ec327f51f3e8354aec57f0c0da9ddac585
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 6bf3aa5e12da7faa8c1b7c0461e652693111c59a
 
 
 ---
@@ -39,9 +39,10 @@ RMS for Individuals est un exemple d'inscription en libre-service prise en charg
 ## <a name="next-steps"></a>Étapes suivantes
 Consultez [Inscription à RMS for individuals](rms-for-individuals-user-sign-up.md) pour obtenir des instructions pas à pas et une présentation technique de ce qui se passe en arrière-plan. 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

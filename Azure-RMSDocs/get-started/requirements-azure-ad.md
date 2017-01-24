@@ -13,8 +13,8 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a38b4f201a05ece08f06b18797a146adecf59053
-ms.openlocfilehash: 1246bfcf3a389e2dcd7a9ef922c3f40150611640
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 95d50707c362244972f286943abf9a07e3cedf38
 
 
 ---
@@ -77,9 +77,10 @@ Ensuite, configurez votre solution MFA :
 ## <a name="next-steps"></a>Étapes suivantes
 Pour vérifier les autres conditions requises, consultez [Configuration requise pour Azure Information Protection](requirements-azure-rms.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

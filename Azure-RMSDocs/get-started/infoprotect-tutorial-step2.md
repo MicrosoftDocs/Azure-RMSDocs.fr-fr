@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 2f996bb974b1d86b137e3a8fba387386276739a2
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 00d78bf12a7f400b3dfa7e35ada25177170e2d23
 
 
 ---
@@ -125,7 +125,9 @@ Ayant examiné la stratégie par défaut et apporté des modifications, vous pou
 [&#171; Étape 1](infoprotect-tutorial-step1.md)
 [Étape 3 &#187;](infoprotect-tutorial-step3.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Dec16_HO1-->
+
+<!--HONumber=Jan17_HO4-->
 
 

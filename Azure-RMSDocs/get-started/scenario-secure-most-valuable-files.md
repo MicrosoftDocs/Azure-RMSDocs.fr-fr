@@ -13,13 +13,13 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ad75734c28c51ac68697f96e0e50a5d90314b76e
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 0f2fb608be647e967d8e5857414f25ebba1d4d29
 
 
 ---
 
-# <a name="scenario-secure-your-most-few-valuable-files"></a>Scénario - Sécuriser vos fichiers les plus précieux
+# <a name="scenario---secure-your-most-few-valuable-files"></a>Scénario - Sécuriser vos fichiers les plus précieux
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -70,7 +70,7 @@ Pour ce scénario, les éléments suivants doivent être en place :
 
 2.  Publiez le nouveau modèle.
 
-### <a name="to-protect-the-files-inplace"></a>Pour protéger les fichiers sur place
+### <a name="to-protect-the-files-in-place"></a>Pour protéger les fichiers sur place
 
 1.  Dans l’Explorateur de fichiers, accédez au premier dossier qui contient les fichiers à protéger :
 
@@ -145,9 +145,9 @@ Un niveau de protection très élevé est désormais appliqué à ces fichiers d
 
 -   Si vous ne pouvez pas accéder à ces fichiers, ou si vous remarquez des modifications suspectes dans les fichiers, appelez le numéro du support technique disponible 24 heures sur 24 chargé de remonter les incidents qui vous a été envoyé par le département informatique dans un e-mail protégé.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

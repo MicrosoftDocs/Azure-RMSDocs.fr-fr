@@ -31,6 +31,6 @@
 # [Développer et personnaliser des applications](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

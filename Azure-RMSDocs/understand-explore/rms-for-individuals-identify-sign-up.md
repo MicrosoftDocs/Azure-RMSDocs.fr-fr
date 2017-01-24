@@ -13,8 +13,8 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: b9979d48af7146f8021de840248f71cb1399b777
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: ac980951f9b4cef9816706a23e3807fbe40a62f5
 
 
 ---
@@ -34,9 +34,9 @@ En tant qu'administrateur, vous souhaitez sûrement savoir si vos utilisateurs s
 
 -   Recherchez les extensions de nom de fichier créées par l'application de partage Rights Management. Les extensions de nom de fichier .pfile et .ppdf sont les exemples les plus évidents, mais d’autres fichiers changent d’extension de nom de fichier quand ils sont protégés nativement par le service Rights Management. Pour plus d’informations, consultez la section [Types de fichiers pris en charge et extensions de nom de fichier](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) du [Guide de l’administrateur de l’application de partage Rights Management](http://technet.microsoft.com/library/dn339003.aspx).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -13,13 +13,13 @@ ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 371e566a166dad74b55266db23e034f926942a26
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 1c25f1c8792f7d6d99930dd01c3f3c92a56bbd8a
 
 
 ---
 
-# <a name="scenario-retain-control-of-documents-stored-in-sharepoint"></a>Scenario : garder le contrôle des documents stockés dans SharePoint
+# <a name="scenario---retain-control-of-documents-stored-in-sharepoint"></a>Scenario : garder le contrôle des documents stockés dans SharePoint
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -103,9 +103,9 @@ Vous ne pouvez pas charger des documents sur le site Rapports et prévisions de 
 
 -   Contactez le support technique : helpdesk@vanarsdelltd.com
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

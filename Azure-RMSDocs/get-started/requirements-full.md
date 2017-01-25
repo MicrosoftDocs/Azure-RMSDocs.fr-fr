@@ -13,8 +13,8 @@ ms.assetid: 10cf9371-a61b-495f-9d42-898448806994
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 68b3d74d32b98f44cfdf9cf78b7a9151f16124ce
-ms.openlocfilehash: b4afd639439f0549ce38de1e63a1798d30680066
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: a71123cd055052e6e4a372a945727063b7c2d666
 
 
 ---
@@ -71,7 +71,7 @@ Si vous souhaitez intégrer votre annuaire Azure AD à vos forêts AD locales, 
 > 
 > -   Vous devez utiliser les services AD FS sur la version serveur minimale de **Windows Server 2012 R2** ou un autre fournisseur d’authentification prenant en charge le protocole OAuth 2.0.
 
-### <a name="multifactor-authentication-mfa-and-azure-information-protection"></a>Authentification multifacteur (MFA) et Azure Information Protection
+### <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>Authentification multifacteur (MFA) et Azure Information Protection
 Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Protection, vous devez avoir au moins l’un des éléments suivants :
 
 -   Office 2013 (version minimale) :
@@ -248,7 +248,7 @@ De plus, l’application de partage RMS présente les restrictions suivantes :
 
 -   Pour les ordinateurs Windows : nécessite au minimum la version Windows 7 Service Pack 1
 
-## <a name="onpremises-servers-that-support-azure-rights-management-data-protection"></a>Serveurs locaux prenant en charge la protection des données Azure Rights Management
+## <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Serveurs locaux prenant en charge la protection des données Azure Rights Management
 
 Les produits de serveurs locaux suivants sont pris en charge avec Azure Information Protection quand vous utilisez le connecteur Azure Rights Management. Ce connecteur fait office d’interface de communication (relais) entre les serveurs locaux et le service Azure Rights Management utilisé par Azure Information Protection pour protéger les e-mails et les documents Office. 
 
@@ -285,9 +285,10 @@ Le connecteur Rights Management est pris en charge sur Windows Server 2012 R2,
 
 Pour plus d’informations sur la configuration du connecteur Rights Management pour ces serveurs locaux, consultez [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

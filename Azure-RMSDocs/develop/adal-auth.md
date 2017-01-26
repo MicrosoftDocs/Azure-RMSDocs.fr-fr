@@ -1,10 +1,11 @@
 ---
-title: "Configurer Azure RMS pour l’authentification ADAL | Azure RMS"
-description: "Décrit les étapes de configuration d’Azure RMS pour utiliser l’authentification Azure ADAL"
-keywords: authentification, RMS, ADAL
+title: "Configuration de votre application pour l’authentification ADAL | Microsoft Docs"
+description: "Étapes de configuration de l&quot;application Azure Information Protection pour utiliser l’authentification Azure ADAL"
+keywords: authentification, RMS, ADAL, protection des informations,
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,24 +15,24 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 2588d10805ddfdc1c09db3008a424767fb528986
+ms.sourcegitcommit: b7415265d0e27896df2bdf6a62e7c875ba681345
+ms.openlocfilehash: d51730af8a1f410ad890087200f64864eceb2268
 
 
 ---
 
-# Configurer Azure RMS pour l’authentification ADAL
+# <a name="configure-your-app-for-adal-authentication"></a>Configuration de votre application pour l’authentification ADAL
 
-Cette rubrique décrit les étapes de configuration de l’authentification Azure ADAL.
+Cette rubrique décrit les étapes de configuration de votre application pour l’authentification basée sur Azure Active Directory Authentication Library (ADAL).
 
-## Configuration de l’authentification Azure
+## <a name="azure-authentication-setup"></a>Configuration de l’authentification Azure
 
 Vous avez besoin des éléments suivants :
 
 - Un [abonnement à Microsoft Azure](https://azure.microsoft.com/en-us/) (une version d’évaluation gratuite suffit). Pour plus d’informations, consultez [Inscription à RMS for Individuals](../understand-explore/rms-for-individuals-user-sign-up.md)
 - Un abonnement à Microsoft Azure Rights Management (un compte [RMS for Individuals](https://technet.microsoft.com/en-us/library/dn592127.aspx) gratuit suffit).
 
-> [!NOTE] 
+> [!NOTE]
 > Vérifiez auprès de votre administrateur informatique si vous avez un abonnement Microsoft Azure Rights Management et demandez-lui d’effectuer les étapes ci-dessous. Si votre organisation n’a pas d’abonnement, demandez à votre administrateur informatique d’en créer un. En outre, votre administrateur informatique doit s’abonner avec un *compte professionnel ou scolaire*, et non un *compte Microsoft* (tel que Hotmail).
 
 Après vous être inscrit à Microsoft Azure :
@@ -77,19 +78,15 @@ Après vous être inscrit à Microsoft Azure :
 
 ![Choisissez CONFIGURER](../media/ConfigYourApp.png)
 
->[!NOTE] 
+>[!NOTE]
 > Copiez l’**ID CLIENT** et l’**URI de redirection** et stockez-les pour une utilisation ultérieure lors de la configuration du client RMS.
 
 - Accédez au bas de vos paramètres d’application et cliquez sur le bouton **Ajouter une application** sous **Autorisations pour d’autres applications**.
 
->[!NOTE] 
+>[!NOTE]
 > Les **autorisations déléguées** affichées pour Microsoft Azure Active Directory sont correctes par défaut : une seule option doit être sélectionnée et cette option est **Activer la connexion et lire le profil utilisateur**.
 
 ![Sélectionnez Ajouter une application](../media/PermissionsToOtherBtn.png)
-
-- Maintenant, ajoutez ce GUID `00000012-0000-0000-c000-000000000000` à la zone d’édition **COMMENÇANT PAR** et cliquez sur la coche.
-
-![Ajoutez le GUID](../media/AddGUID.png)
 
 - Cliquez sur le signe plus (+) situé en regard de **Microsoft Rights Management**.
 
@@ -97,7 +94,7 @@ Après vous être inscrit à Microsoft Azure :
 
 - Maintenant, cliquez sur la coche située dans le coin inférieur gauche de la boîte de dialogue.
 
-![Cliquez sur la coche](../media/ChooseCheck.png)
+![Cliquez sur la coche](../media/choosecheck01.png)
 
 - Vous êtes maintenant prêt à ajouter une dépendance à votre application pour Azure RMS. Pour ajouter la dépendance, sélectionnez la nouvelle entrée **Microsoft Rights Management Services** sous **Autorisations pour d’autres applications** et cochez la case **Créer et accéder au contenu protégé pour les utilisateurs** dans la liste déroulante **Autorisations déléguées**.
 
@@ -107,8 +104,9 @@ Après vous être inscrit à Microsoft Azure :
 
 ![Sélectionnez ENREGISTRER](../media/SaveApplication.png)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Jan17_HO4-->
 
 

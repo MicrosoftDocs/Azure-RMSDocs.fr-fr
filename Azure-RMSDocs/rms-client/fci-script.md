@@ -13,8 +13,8 @@ ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 3ec4b05af68380994f636d0a415691f6465f65b0
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: d2f7a4d286e9b016e0b1e3a37dcf4616d2d0173a
 
 
 ---
@@ -175,8 +175,9 @@ if (!$Script:isScriptProcess) { exit(-1) } else {exit(0)}
 
 Retour à [Protection RMS avec l’infrastructure de classification des fichiers de Windows Server](configure-fci.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 199f9233cf9e9e0738c164e537a98189d7a0744e
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: a471dd917aab193ddfe5a58cbfa4f5082e6a049d
 
 
 ---
@@ -36,9 +36,10 @@ Pour pouvoir utiliser le service Azure Rights Management avec Office 2010, les 
 
 Pour plus d’informations sur l’application de partage Rights Management, consultez la section [Application de partage Rights Management : installation et configuration pour les clients](configure-sharing-app.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

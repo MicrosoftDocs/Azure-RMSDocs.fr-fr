@@ -13,12 +13,12 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ca8d2ccb68b96095fccf9d55b9cb9392d3a455ec
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 197ff53d64889487c457f574a235c76821fcf61a
 
 
 ---
-# <a name="migration-phase-2-clientside-configuration"></a>Phase de migration 2 - Configuration côté client
+# <a name="migration-phase-2---client-side-configuration"></a>Phase de migration 2 - Configuration côté client
 
 >*S’applique à : Services AD RMS, Azure Information Protection, Office 365*
 
@@ -133,7 +133,9 @@ Redirect_OnPrem.cmd :
 ## <a name="next-steps"></a>Étapes suivantes
 Pour poursuivre la migration, passez à la [Phase 3 : Configuration des services de prise en charge](migrate-from-ad-rms-phase3.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Nov16_HO2-->
+
+<!--HONumber=Jan17_HO4-->
 
 

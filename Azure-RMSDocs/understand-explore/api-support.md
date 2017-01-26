@@ -13,8 +13,8 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f5ed228f1434761208095fd15d36a6bf05e07154
-ms.openlocfilehash: 82269c1b224df944db2bbc40f36ca111cb1ac160
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 05cb9695d83ba10cc2d7b69d8a1e29a61cb4beb7
 
 
 ---
@@ -33,7 +33,9 @@ De même, de nombreux éditeurs de logiciels proposent des applications pour fou
 
 Pour voir comment d’autres applications et services prennent en charge le service Azure Rights Management, consultez [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Dec16_HO1-->
+
+<!--HONumber=Jan17_HO4-->
 
 

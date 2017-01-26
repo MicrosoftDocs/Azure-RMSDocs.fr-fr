@@ -13,8 +13,8 @@ ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 2a46c750034267bc2e69c35f5ac9c134aed0461b
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 0e10e5d5aba51f96ab1e29e42ae39929c321f563
 
 
 ---
@@ -43,12 +43,10 @@ Après avoir identifié la typologie implémentée, sélectionnez l’une des se
 - [Clé de locataire gérée par Microsoft](operations-microsoft-managed-tenant-key.md)
 - [Clé de locataire gérée par le client](operations-customer-managed-tenant-key.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-
-
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

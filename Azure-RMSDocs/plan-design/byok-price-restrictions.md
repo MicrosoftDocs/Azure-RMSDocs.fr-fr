@@ -1,6 +1,6 @@
 ---
 title: "Tarifs et restrictions liés à BYOK | Azure Information Protection"
-description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
+description: "Découvrez les restrictions imposées quand vous utilisez des clés gérés par le client (BYOK, Bring Your Own Key) avec Azure RMS."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -13,8 +13,8 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
-ms.openlocfilehash: e64e87298358b5d1064cda491a10abb48545a98e
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 2e8a00d4c8d38387645d015d3f69a4d568fc9683
 
 
 ---
@@ -85,9 +85,10 @@ Si vous avez décidé de gérer votre propre clé, accédez à [Implémentation 
 
 Si vous souhaitez que Microsoft gère votre clé de client (configuration par défaut), consultez la section [Étapes suivantes](plan-implement-tenant-key.md#next-steps) de l’article Planification et implémentation de votre clé de client Azure Rights Management.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

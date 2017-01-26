@@ -13,8 +13,8 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ced42d0856b992d3539575d64f5a49706f1768b3
-ms.openlocfilehash: b4b701d6a88bea91e2adbe7e002f01929d388e91
+ms.sourcegitcommit: ed836a1f64ccb3f7e176ad19d27af1021c423cd9
+ms.openlocfilehash: 75f8eb2843005f23fd359d6a4fce073abecbfe0a
 
 
 ---
@@ -188,12 +188,10 @@ Si vous êtes intéressé par la protection automatique des fichiers à l’aide
 ### <a name="step-5-administer-the-rights-management-service-for-your-tenant-account-as-needed"></a>Étape 5 : Administrer le service Rights Management pour votre compte de locataire selon les besoins
 Quand vous commencez à utiliser le service Azure Rights Management, Windows PowerShell peut s’avérer utile pour automatiser les changements administratifs ou générer des scripts sur ces changements. Pour plus d’informations, consultez [Administration du service Azure Rights Management à l’aide de Windows PowerShell](../deploy-use/administer-powershell.md).
 
-## <a name="comments"></a>Commentaires
-
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

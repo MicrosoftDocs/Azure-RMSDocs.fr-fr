@@ -4,7 +4,7 @@ description: "Informations et instructions permettant aux administrateurs de con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 6c71f9b140fa52ab65dab76297a8763b3a980512
+ms.sourcegitcommit: 15bd23bb727937193cb51e732586d4c334357c04
+ms.openlocfilehash: 9c3839a6a6077470e54fb9df437f34abfb0bde78
 
 
 ---
@@ -48,14 +48,14 @@ Les étapes suivantes décrivent un ensemble spécifique de commandes à exécut
     Pour vous connecter, tapez :
 
     ```
-    $Cred = Get-Credential
+    $UserCredential = Get-Credential
     ```
     Dans la boîte de dialogue **Demande d'informations d'identification Windows PowerShell** , entrez vos nom d'utilisateur et mot de passe Office 365.
 
 3.  Connectez-vous au service Exchange Online en exécutant les deux commandes suivantes :
 
     ```
-    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
+    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
     ```
 
     ```
@@ -1108,9 +1108,10 @@ function Add-CredentialToCredentialCache
 Disconnect-SPOService -ErrorAction SilentlyContinue
 ```
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

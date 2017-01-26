@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 translationtype: Human Translation
-ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
-ms.openlocfilehash: 5c3d3962d72a0dc3d08bdb869f6b00f4524477b5
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: e1c1d4a0a2cd48be5322be4f4fedd3350e3b2e0a
 
 
 ---
@@ -40,7 +40,7 @@ Utilisez les informations suivantes pour comprendre la configuration de la strat
 |Confidentiel|Ces données incluent des informations métier sensibles. Une exposition de ces données à des utilisateurs non autorisés peut nuire à l’organisation. Les informations confidentielles sont, par exemple, des informations sur les employés, des projets ou des contrats de clients, ainsi que des données de comptes de vente.|**Activé** : Oui <br /><br />**Couleur** : Orange<br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
 |Secret|Ces données incluent des informations hautement confidentielles de l’entreprise qui doivent être protégées. Une exposition de ces données secrètes à des utilisateurs non autorisés peut nuire gravement à l’organisation. Les informations secrètes sont, par exemple, des informations d’identification personnelles, des enregistrements de clients, des codes source et des rapports financiers préalablement annoncés.|**Activé** : Oui <br /><br />**Couleur** : Rouge<br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
 
-## <a name="sublabels"></a>Sous-étiquettes
+## <a name="sub-labels"></a>Sous-étiquettes
 
 |Étiquette|Info-bulle|Paramètres|
 |-------------------------------|---------------------------|-----------------|
@@ -60,8 +60,9 @@ Utilisez les informations suivantes pour comprendre la configuration de la strat
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy). 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

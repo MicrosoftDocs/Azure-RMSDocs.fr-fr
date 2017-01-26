@@ -13,8 +13,8 @@ ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 1d9213aa6be382510558020411d1667fd2866ca7
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 589f0ff68e1e58c0903eb40dcfd0697a500c8491
 
 
 ---
@@ -40,10 +40,11 @@ Pour savoir comment utiliser le script Windows PowerShell pour tous les types de
 ## <a name="next-steps"></a>Étapes suivantes
 À présent que vous savez comment les applications et services prennent en charge Azure RMS, vous pouvez comparer Azure RMS à la version locale de Rights Management, les services AD RMS (Active Directory Rights Management Services). Pour une comparaison des fonctionnalités, des conditions requises et des contrôles de sécurité, consultez [Comparaison d’Azure Rights Management avec AD RMS](compare-azure-rms-ad-rms.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

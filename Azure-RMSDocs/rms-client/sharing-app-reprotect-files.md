@@ -14,8 +14,8 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: c0bfd99229e4d93c91fe8f9efafd887aa7562328
 
 
 ---
@@ -39,7 +39,7 @@ Par exemple, si quelqu’un d’autre a protégé le fichier à l’aide de l’
 
 Si vous souhaitez supprimer complètement toutes les autorisations pour que le fichier ne soit plus protégé, consultez [Supprimer la protection d’un fichier](sharing-app-remove-protection.md).
 
-## <a name="to-reprotect-a-file-inplace"></a>Pour reprotéger un fichier sur place
+## <a name="to-re-protect-a-file-in-place"></a>Pour reprotéger un fichier sur place
 
 1.  Dans l'Explorateur de fichiers, sélectionnez un fichier à protéger. Cliquez avec le bouton droit, sélectionnez **Protéger avec RMS**, puis sélectionnez **Protéger sur place**. Exemple :
 
@@ -72,7 +72,7 @@ Si vous souhaitez supprimer complètement toutes les autorisations pour que le f
 >     Lorsque vous vous inscrivez, utilisez l'adresse de messagerie de votre organisation plutôt qu'une adresse personnelle. Si vous vous inscrivez parce que vous reçu une pièce protégée jointe à un message électronique, utilisez l'adresse de messagerie à laquelle ce message a été envoyé.
 > -   Pour plus d’informations, consultez [RMS for individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## <a name="to-reprotect-a-file-that-you-have-emailed"></a>Pour reprotéger un fichier que vous avez envoyé par e-mail
+## <a name="to-re-protect-a-file-that-you-have-emailed"></a>Pour reprotéger un fichier que vous avez envoyé par e-mail
 
 Si vous souhaitez modifier les autorisations pour un fichier que vous avez envoyé par e-mail :
 
@@ -95,8 +95,9 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 ## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

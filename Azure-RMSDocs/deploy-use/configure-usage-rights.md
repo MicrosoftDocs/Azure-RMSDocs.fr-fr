@@ -13,8 +13,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1107f484f204e64d76c389daef4d9decbfbb20e8
-ms.openlocfilehash: 46c15d7594110d48f34b1648b2afb17738712720
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 8b3926bf9e985eb8954449b0e88d0d953f4fb339
 
 
 ---
@@ -103,9 +103,11 @@ Une utilisatrice veut envoyer certaines informations par e-mail à certaines per
 ## <a name="see-also"></a>Voir aussi
 [Configuration de modèles personnalisés pour le service Azure Rights Management](configure-custom-templates.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO1-->
+
+<!--HONumber=Jan17_HO4-->
 
 

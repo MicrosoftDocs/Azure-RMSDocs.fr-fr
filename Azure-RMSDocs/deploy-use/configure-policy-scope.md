@@ -4,7 +4,7 @@ description: "Pour configurer d’autres paramètres et étiquettes pour des uti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/09/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b0600db864f834e9eb84700eb1a36d3e6a6fbde1
-ms.openlocfilehash: ba4567753fbc6320ea6f9170e4bf46857ab999b4
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
 
 
 ---
@@ -54,15 +54,19 @@ Pour configurer une stratégie délimitée pour Azure Information Protection :
 
 6. Quand vous avez fini d’apporter les modifications souhaitées pour cette stratégie délimitée, dans le panneau **Azure Information Protection** initial, vérifiez que cette stratégie délimitée respecte l’ordre dans lequel vous voulez l’appliquer. Cette vérification s’avère importante quand vous avez sélectionné le même utilisateur pour plusieurs stratégies délimitées. Ensuite, cliquez sur **Publier**. 
 
-Le client Azure Information Protection vérifie toutes les modifications à chaque démarrage d’une application Office prise en charge. Il télécharge les modifications dans la stratégie globale ou les stratégies délimitées qui s’appliquent à cet utilisateur.
+Le client Azure Information Protection vérifie toutes les modifications à chaque démarrage d’une application Office prise en charge ou à chaque ouverture de l'Explorateur de fichiers. Il télécharge les modifications dans la stratégie globale ou les stratégies délimitées qui s’appliquent à cet utilisateur.
+
+> [!TIP]
+> Une fois que vous avez enregistré votre stratégie délimitée, vous pouvez utiliser le **Cross Policy Editor** dans le panneau **Azure Information Protection** pour afficher et reconfigurer toutes les étiquettes de votre stratégie Azure Information Protection. Cette méthode fournit un moyen simple de comparer les étiquettes de plusieurs stratégies (votre stratégie globale et toutes les stratégies délimitées). Toutefois, cet éditeur ne vous permet pas d’ajouter ou de réorganiser des étiquettes, ni d'afficher ou de configurer les paramètres de stratégie.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut et voir le comportement qui en résulte dans une application Office, essayez le [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

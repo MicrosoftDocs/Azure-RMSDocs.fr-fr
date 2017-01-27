@@ -1,11 +1,11 @@
 ---
-title: "Déploiement de votre application | Azure RMS"
-description: "Cette rubrique décrit les options de déploiement pour votre application avec gestion des droits."
-keywords: 
+title: "Déploiement de votre application | Azure Information Protection"
+description: "Cette rubrique vous guide dans le déploiement de votre application"
+keywords: "déployer, RMS, AIP"
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,99 +15,97 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f565294366bdfd06be7fc25ef781eb4900929484
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 00bf0748f67afe3f81de86fa643e78652cc0d7a4
 
 
 ---
-
 # <a name="deploy-into-production"></a>Déployer en production
 
+Cette rubrique vous guide à travers le processus de déploiement de votre application Azure Information Protection (AIP) / Rights Management Services (RMS) activée.
 
-Cette rubrique décrit les options de déploiement pour votre application avec gestion des droits.
+## <a name="request-an-information-protection-integration-agreement-ipia"></a>Demande d'un IPIA (Information Protection Integration Agreement)
+Avant de pouvoir lancer une application développée avec AIP/RMS, vous devez passer un accord formel avec Microsoft.
 
-## <a name="request-a-production-license-agreement"></a>Demander un contrat de licence de production
+### <a name="begin-the-process"></a>Lancement du processus
+Obtenez votre IPIA en envoyant un e-mail à **IPIA@microsoft.com** avec les informations suivantes :
 
- Avant de pouvoir publier une application développée avec Rights Management Services SDK 2.1, vous devez demander un contrat de licence de production pour obtenir un certificat de production.
+**Objet :** demande d'IPIA pour *Nom de la société*
 
-Vous pouvez obtenir le certificat en demandant un contrat de licence de production.
-
-Envoyez un e-mail à [RMLA@microsoft.com](mailto:rmla@microsoft.com) en spécifiant les informations suivantes :
-
-- Nom complet de l’entreprise
-- Adresse physique de l’entreprise (inclure la ville, le département, le pays ou la région et le code postal)
-- Adresse de correspondance de l’entreprise (inclure la ville, le département, le pays ou la région et le code postal)
-- Numéros de téléphone et de télécopie de l’entreprise
-- URL de l’entreprise
-- Pays ou région où l’entreprise a été créée
-- Nom de l’application ou du produit
+Dans le corps du message électronique, incluez :
+- Nom de l’application et du produit
 - Nom et prénom du demandeur
-- Titre du demandeur
 - Adresse de messagerie du demandeur
 
-Un compte de messagerie n’est pas strictement obligatoire, mais le processus d’application s’appuie généralement sur la messagerie pour la communication. Vous pouvez obtenir un compte de messagerie gratuitement sur Microsoft Outlook.com. Si vous n’avez pas de compte et que vous ne souhaitez pas en créer, vous pouvez envoyer une application à l’adresse suivante :
+### <a name="next-steps"></a>Étapes suivantes
+Après réception de votre demande d'IPIA, nous vous enverrons un formulaire (sous forme de document Word).
+Passez en revue les termes et conditions de l'IPIA et renvoyez le formulaire à l'adresse **IPIA@microsoft.com** avec les informations suivantes :
+- Raison sociale de la société
+- État/Province (États-Unis / Canada) ou pays d'immatriculation
+- URL de l’entreprise
+- Adresse e-mail du contact
+- Adresses supplémentaires de la société (facultatif)
+- Nom de l'application d'entreprise
+- Brève description de l'application
+- *ID de locataire Azure*
+- *ID de l’application* pour l’application
+- Contacts de la société, e-mail et téléphone pour la correspondance en cas de situation critique
 
-      Active Directory Rights Management License Agreements (ADRMLA)
+### <a name="completing-the-agreement"></a>Finalisation de l'accord
+Après réception de votre formulaire, nous vous enverrons le lien IPIA final à signer numériquement. Après votre signature, il sera signé par le représentant de Microsoft approprié, ce qui finalisera l’accord.
 
-      Microsoft Corporation
+### <a name="already-have-a-signed-ipia"></a>Vous disposez déjà d'un IPIA signé ?
+Si vous disposez déjà d'un IPIA signé et souhaitez ajouter un nouvel *ID de l’application* pour une application que vous lancez, envoyez un e-mail à l'adresse **IPIA@microsoft.com** et fournissez-nous les informations suivantes :
+- Nom de l'application d'entreprise
+- Brève description de l'application
+- ID de client Azure (même s'il est identique au précédent)
+- ID de l’application pour l’application
+- Contacts de la société, e-mail et téléphone pour la correspondance en cas de situation critique
 
-      One Microsoft Way
+Patientez jusqu'à 72 heures après l'envoi de l'e-mail pour recevoir un accusé de réception.
 
-      Redmond, WA 98052-6399
+## <a name="deploying-to-the-client-environment"></a>Déploiement dans l’environnement client
 
-Lors de la demande de contrat, procédez comme suit :
-- Envoyez les informations (en anglais) telles qu’elles doivent apparaître sur le contrat.
-- Envoyez toutes les informations demandées. Toute information manquante ou incomplète peut retarder le traitement de votre demande.
-
-L’équipe ADRMLA (Active Directory Rights Management Licensing Agreement) répondra à votre demande dans les trois jours ouvrables suivant la réception de votre e-mail (ou plus si vous avez envoyé la demande par voie postale). La réponse contiendra le formulaire de contrat de licence et d’autres instructions. Lisez, signez et renvoyez toutes les pages du contrat à l’équipe ADRMLA. Veuillez ne pas modifier les polices ou la mise forme des paragraphes du contrat de licence.
-
-Suivez bien les instructions envoyées par l’équipe ADRMLA. Ces instructions mentionnent les informations numériques nécessaires pour répondre à votre demande de certificat. En suivant les instructions pas à pas, vous réduirez tout risque de retard.
-
-
-## <a name="installation-options-and-requirements-for-rights-management-service-client-21"></a>Options d’installation et configuration requise pour le client RMS (Rights Management Services) 2.1
-
-Étant donné que vous avez utilisé RMS SDK 2.1, Active Directory Rights Management Services Client 2.1 doit être déployé sur l’ordinateur de l’utilisateur final.
+Pour déployer votre application créée avec des outils Azure Information Protection (AIP) / Rights Management Services (RMS), vous devez déployer le client RMS 2.1 sur l’ordinateur de l’utilisateur final.
 
 ### <a name="rms-client-21"></a>Client RMS 2.1
+Le client RMS 2.1 est conçu pour protéger l’accès aux informations qui circulent à travers des applications compatibles AIP/RMS, qu’elles soient installées en local ou dans un centre de données Microsoft, ainsi que leur utilisation.
 
-Le client RMS 2.1 est un logiciel conçu pour vos ordinateurs clients, qui permet de protéger l’accès aux informations qui circulent dans les applications utilisant RMS, qu’elles soient installées en local ou dans un centre de données Microsoft, ainsi que l’utilisation de ces informations.
-
-Le client RMS 2.1 n’est pas un composant du système d’exploitation Windows. Il est disponible sous la forme d’un téléchargement facultatif qui, à condition d’en accuser réception et d’accepter son contrat de licence, peut être distribué gratuitement avec votre logiciel tiers, pour permettre l’accès du client à du contenu dont les droits ont été protégés en utilisant et en déployant des serveurs RMS dans votre environnement.
-
+Le client RMS 2.1 n’est pas un composant du système d’exploitation Windows. Le client envoie un téléchargement facultatif qui peut être distribué gratuitement avec votre application, avec accusé de réception et acceptation du contrat de licence.
 
 > [!IMPORTANT]
-> AD RMS Client 2.1 est spécifique à l’architecture et doit correspondre à celle de votre système d’exploitation cible.
+> Le client RMS Client 2.1 est spécifique à l’architecture et doit correspondre à celle de votre système d’exploitation cible.
 
 
-## <a name="rms-client-21-installation-choices"></a>Choix d’installation du client RMS 2.1
+## <a name="rms-client-21-installation-options"></a>Options d’installation du client RMS 2.1
 
--   **Redistribution du client RMS 2.1**
+### <a name="creating-your-deployment-package"></a>Création de votre package de déploiement
 
-    L’approche recommandée consiste à regrouper le package d’installation du client RMS avec votre application ou solution à l’aide de la technologie d’installation que vous préférez. Le client RMS peut être librement redistribué et regroupé avec d’autres applications et solutions informatiques.
+Nous recommandons de regrouper le package d’installation du client RMS avec votre application ou solution à l’aide de la technologie d’installation que vous préférez. Le client RMS peut être librement redistribué avec d'autres applications et solutions.
 
-    Vous pouvez choisir d’installer le client RMS 2.1 sans assistance ou de façon interactive en démarrant son programme d’installation. Les étapes d’intégration sont les suivantes :
+Vous pouvez choisir d’installer le client RMS 2.1 sans assistance ou de façon interactive en démarrant son programme d’installation. Les étapes d’intégration sont les suivantes :
 
-    -   Télécharger le programme d’installation d’AD RMS Client 2.1
-    -   Intégrer l’exécution du programme d’installation du client RMS 2.1 au programme d’installation de votre application
+-   Télécharger le programme d’installation d’AD RMS Client 2.1
+-   Intégrer l’exécution du programme d’installation du client RMS 2.1 au programme d’installation de votre application
 
-    Deux bons exemples d’intégration du client RMS 2.1 à votre application sont le package d’installation de RMS SDK 2.1 et le package Right Protected Folder Explorer. Essayez de les installer vous-même pour comprendre l’approche.
+Un exemple d’intégration du client RMS 2.1 à votre application est le package [Rights Protected Folder Explorer](https://technet.microsoft.com/en-us/library/rights-protected-folder-explorer(v=ws.10).aspx). Essayez de l'installer vous-même pour comprendre l’approche.
 
--   **Faire du client RMS 2.1 un composant requis pour l’installation de votre application**
+### <a name="make-rms-client-21-a-pre-requisite-for-your-application-install"></a>Faire du client RMS 2.1 un composant requis pour l’installation de votre application
 
-    Ici, vous allez créer un composant requis de manière à ce que l’installation de votre application échoue si le client RMS 2.1 n’est pas présent sur l’ordinateur de l’utilisateur final.
+Ici, vous allez créer un composant requis de manière à ce que l’installation de votre application échoue si le client RMS 2.1 n’est pas présent sur l’ordinateur de l’utilisateur final.
 
-    Si le client n’est pas présent, fournissez un message d’erreur indiquant à l’utilisateur où il peut télécharger une copie du client RMS 2.1.
+Si le client n’est pas présent, fournissez un message d’erreur indiquant à l’utilisateur où il peut télécharger une copie du client RMS 2.1.
 
-    Si le client est présent, poursuivez l’installation de votre application.
+Si le client est présent, poursuivez l’installation de votre application.
 
-## <a name="enabling-azure-rights-management-services-with-your-application"></a>Activation d’Azure Rights Management Services avec votre application
+## <a name="enabling-azure-information-protection--rights-management-services-with-your-application"></a>Activation des services Azure Information Protection / Rights Management dans votre application
 
 > [!NOTE]
-> Si vous avez migré vers le nouveau modèle ADAL pour l’authentification, il est inutile d’installer l’Assistant de connexion. Pour plus d’informations, consultez [Authentification ADAL pour votre application compatible RMS](adal-auth.md).
+> Si vous avez migré vers le nouveau modèle ADAL pour l’authentification, il est inutile d’installer le **SIA**. Pour plus d’informations, consultez [Authentification ADAL pour votre application compatible RMS](adal-auth.md).
 > Vous pouvez également **certifier votre application pour Windows 10**. En mettant à jour votre application pour utiliser l’authentification ADAL plutôt que l’Assistant de connexion Microsoft Online, vous et vos clients pouvez : utiliser l’authentification multifacteur, installer le client RMS 2.1 sans avoir besoin de privilèges d’administration sur l’ordinateur.
 
 
-Pour que votre utilisateur final tire parti des services Azure Rights Management, vous devez déployer l’*Assistant de connexion Online Services*. En tant que développeur de l’application, vous ne savez pas si l’utilisateur final utilisera RMS (en local) ou les services Azure Rights Management (service cloud).
+Pour que votre utilisateur final tire parti des services Information Protection / Rights Management, vous devez déployer *l'Assistant de connexion Online Services (SIA)*. En tant que développeur d’applications, vous ne savez pas si l’utilisateur final doit utiliser Information Protection via RMS (localement) ou Azure Information Protection.
 
 
 > [!IMPORTANT]
@@ -125,12 +123,10 @@ Pour plus d’informations sur l’activation de votre application pour utiliser
 * [Assistant de connexion Microsoft Online Services](http://www.microsoft.com/en-us/download/details.aspx?id=28177)
 * [Configuration de Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx)
 * [Permettre à votre application de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

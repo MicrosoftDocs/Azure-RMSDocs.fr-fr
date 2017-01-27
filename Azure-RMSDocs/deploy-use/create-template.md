@@ -4,7 +4,7 @@ description: "Instructions à suivre pour créer et gérer des modèles personna
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 01/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0046023125fe339ed408edf47c59e36708b01783
-ms.openlocfilehash: 00661951513647add0c638e0eeb9e9fe38fa2d8d
+ms.sourcegitcommit: 5b7a73c153edfdc7db3a55ee714b05f65d5090f4
+ms.openlocfilehash: 41a4406803cb0de4af607c7494258fc57d5217f7
 
 
 ---
@@ -35,15 +35,9 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
 
 1.  Selon que vous vous connectez au Centre d’administration Office 365 ou au portail Azure Classic, procédez de l’une des manières suivantes :
 
-    -   Depuis le [centre d’administration Office 365](https://portal.office.com/):
+    -   Dans le **Centre d’administration Office 365**, la navigation varie selon que vous utilisez sa version préliminaire (et la version en question), ou le centre d’administration Office 365 classique. Toutefois, pour toutes les versions, vous pouvez accéder directement à la page de[gestion des droits](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) : 
 
-        1.  Dans le panneau de gauche, cliquez sur **paramètres de service**.
-
-        2.  À partir de la page **paramètres de service** , cliquez sur **rights management**.
-
-        3.  Dans la section **Protéger vos informations** , cliquez sur **Gérer**.
-
-        4.  Dans la section **Rights Management** , cliquez sur **fonctionnalités avancées**.
+        1.  Dans la section **Configuration supplémentaire** , cliquez sur **Fonctionnalités avancées**.
 
             > [!NOTE]
             > Si le service Rights Management n’est pas activé, cliquez d’abord sur **activer** et confirmez votre action. Pour plus d’informations, consultez [Activation d’Azure Rights Management](activate-service.md).
@@ -98,7 +92,7 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
 
 3.  Cliquez sur le bouton Suivant, puis attribuez l'un des droits répertoriés à vos utilisateurs et groupes sélectionnés.
 
-    Pour plus d'informations sur chaque droit (et pour les droits personnalisés), utilisez la description affichée. Vous trouverez des informations plus détaillées dans [Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md). Toutefois, la manière dont les applications qui prennent en charge RMS implémentent ces droits peut varier. Consultez la documentation des applications et testez vous-mêmes celles dont les utilisateurs se servent afin de vérifier leur comportement avant de déployer le modèle pour les utilisateurs. Pour que ce modèle soit visible uniquement par les administrateurs dans le cadre de ce test, configurez-le comme modèle départemental (étape 6).
+    Pour plus d'informations sur chaque droit (et pour les droits personnalisés), utilisez la description affichée. Vous trouverez des informations plus détaillées dans [Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md). Toutefois, la manière dont les applications qui prennent en charge Rights Management implémentent ces droits peut varier. Consultez la documentation des applications et testez vous-mêmes celles dont les utilisateurs se servent afin de vérifier leur comportement avant de déployer le modèle pour les utilisateurs. Pour que ce modèle soit visible uniquement par les administrateurs dans le cadre de ce test, configurez-le comme modèle départemental (étape 6).
 
 4.  Si vous avez sélectionné **Personnalisé**, cliquez sur le bouton Suivant, puis sélectionnez ces droits personnalisés.
 
@@ -141,10 +135,10 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
 
     Vérifiez ensuite si vous voulez apporter des modifications aux paramètres suivants :
 
-    |Paramètre|Plus d'informations|
-    |-----------|--------------------|
-    |**expiration du contenu**|Définissez une date ou un nombre de jours après lesquels les fichiers protégés par le modèle ne devront plus s'ouvrir. Vous pouvez spécifier une date ou un nombre de jours à partir du moment où la protection est appliquée aux fichiers.<br /><br />Lorsque vous spécifiez une date, celle-ci prend effet à minuit, dans votre fuseau horaire actuel.|
-    |**accès hors connexion**|Utilisez ce paramètre pour contrebalancer vos éventuelles exigences de sécurité quand les utilisateurs doivent pouvoir ouvrir des fichiers protégés alors qu’ils n’ont pas de connexion Internet.<br /><br />Si vous spécifiez que le contenu n’est pas disponible sans connexion Internet ou que ce contenu est uniquement disponible pendant un nombre de jours spécifié, quand ce seuil est atteint, les utilisateurs doivent s’authentifier à nouveau et leur accès est journalisé. Dans ce cas, si leurs informations d’identification ne sont pas mises en cache, les utilisateurs sont invités à se connecter préalablement pour pouvoir ouvrir les fichiers.<br /><br />En plus d’une nouvelle authentification, la stratégie et l’appartenance au groupe d’utilisateurs sont réévaluées. Cela signifie que les utilisateurs peuvent accéder de nouveau ou ne plus accéder à un même fichier si des modifications ont été apportées à la stratégie ou à l'appartenance au groupe depuis leur dernier accès.|
+    |Paramètre|Plus d'informations| Paramètre recommandé
+    |-----------|--------------------|--------------------|
+    |**expiration du contenu**|Définissez une date ou un nombre de jours après lesquels les fichiers protégés par le modèle ne devront plus s'ouvrir. Vous pouvez spécifier une date ou un nombre de jours à partir du moment où la protection est appliquée aux fichiers.<br /><br />Lorsque vous spécifiez une date, celle-ci prend effet à minuit, dans votre fuseau horaire actuel.|**Le contenu n’expire jamais**, sauf s'il comporte une spécification de durée.|
+    |**accès hors connexion**|Utilisez ce paramètre pour contrebalancer vos éventuelles exigences de sécurité quand les utilisateurs doivent pouvoir ouvrir des fichiers protégés alors qu’ils n’ont pas de connexion Internet.<br /><br />Si vous spécifiez que le contenu n’est pas disponible sans connexion Internet ou que ce contenu est uniquement disponible pendant un nombre de jours spécifié, quand ce seuil est atteint, les utilisateurs doivent s’authentifier à nouveau et leur accès est journalisé. Dans ce cas, si leurs informations d’identification ne sont pas mises en cache, les utilisateurs sont invités à se connecter préalablement pour pouvoir ouvrir les fichiers.<br /><br />En plus d’une nouvelle authentification, la stratégie et l’appartenance au groupe d’utilisateurs sont réévaluées. Cela signifie que les utilisateurs peuvent accéder de nouveau ou ne plus accéder à un même fichier si des modifications ont été apportées à la stratégie ou à l'appartenance au groupe depuis leur dernier accès.|En fonction de la sensibilité du contenu :<br /><br />- **Nombre de jours pendant lesquels le contenu est disponible sans connexion Internet** = **7** pour les données métier sensibles pouvant nuire à l’entreprise si elles sont partagées avec des personnes non autorisées. Cette recommandation offre un compromis entre sécurité et flexibilité. Il peut s'agir entre autres de contrats, de rapports de sécurité, de résumés de prévision et de données commerciales .<br /><br />- **Le contenu est disponible uniquement avec une connexion Internet** pour les données métier sensibles pouvant nuire à l’entreprise si elles sont partagées avec des personnes non autorisées. Cette recommandation met la priorité sur la sécurité avant la flexibilité. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|
 
 10. Lorsque vous êtes certain que le modèle est correctement configuré pour vos utilisateurs, cliquez sur **PUBLIER** pour rendre le modèle visible pour les utilisateurs, puis cliquez sur **ENREGISTRER**.
 
@@ -168,7 +162,9 @@ Pour apporter des modifications à votre modèle, sélectionnez-le, puis utilise
 ## <a name="see-also"></a>Voir aussi
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Nov16_HO1-->
+
+<!--HONumber=Jan17_HO4-->
 
 

@@ -4,7 +4,7 @@ description: "Vous avez une question à propos de la préversion d’Azure Infor
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/09/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 946daa8dedba71d5887dd96f6853e8d90400bfb1
-ms.openlocfilehash: 125752671ec0ca556cc6967a2a3011fb0bf7d9ab
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 8bb0058940eaf1663ec82b38bc37c33400ea8b87
 
 
 ---
@@ -188,7 +188,7 @@ Vérifiez le nom de domaine du compte connecté qui s’affiche, en particulier 
 
 Pour ouvrir une session sous un autre nom d’utilisateur, vous devez actuellement modifier le Registre :
 
-1. À l’aide d’un éditeur du Registre, accédez à **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** et supprimez la clé **TokenCache**.
+1. À l’aide d’un éditeur du Registre, accédez à **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** et supprimez la valeur **TokenCache**.
 
 2. Redémarrez les applications Office ouvertes et connectez-vous avec votre autre compte d’utilisateur. Si l’invite de connexion au service Azure Information Protection n’apparaît pas dans votre application Office, revenez à la boîte de dialogue **Microsoft Azure Information Protection** et cliquez sur **Connexion** depuis la section mise à jour **État du Client**.
 
@@ -204,7 +204,9 @@ Si vous avez un problème avec Azure Information Protection et que vous utilisez
 
 Si vous avez des questions ou des commentaires, rendez-vous sur le [site Yammer Azure Information Protection](https://www.yammer.com/askipteam/). 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Dec16_HO2-->
+
+<!--HONumber=Jan17_HO4-->
 
 

@@ -37,7 +37,7 @@ ms.openlocfilehash: 035327cdfc771bae7ff36dca1a7a888223222252
         <ul class="column column-half">
           <li><mark><b>NOUVEAUTÉ</b></mark> <a href="./deploy-use/configure-policy-scope.md">Guide pratique pour configurer des stratégies délimitées (préversion)</a></li>
           <li><mark><b>NOUVEAUTÉ</b></mark> <a href="./rms-client/client-user-guide.md">Guide de l’utilisateur (préversion)</a></li>
-          <li><a href="./understand-explore/what-is-information-protection.md#resources-for-azure-information-protection">Sessions Azure Information Protection depuis Microsoft Ignite 2016</a></li>
+          <li><a href="./understand-explore/what-is-information-protection.md#resources-for-azure-information-protection">Sessions Azure Information Protection depuis Microsoft Ignite 2016</a></li>
           <li><a href="./understand-explore/what-is-information-protection.md">Qu’est-ce qu’Azure Information Protection ?</a></li>
         </ul>
         <ul class="column column-half">
@@ -229,6 +229,6 @@ ms.openlocfilehash: 035327cdfc771bae7ff36dca1a7a888223222252
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

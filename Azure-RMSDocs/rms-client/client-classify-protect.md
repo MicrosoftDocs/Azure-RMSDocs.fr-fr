@@ -4,7 +4,7 @@ description: Instructions sur la classification et la protection de vos document
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e6d4cc50259b9d9bb73a75c648f9e6915562accf
-ms.openlocfilehash: e1d61fbe1d74a4a57d9a1fdf518aeb0242d0f7ad
+ms.sourcegitcommit: 171a47f9c22dec24f72f8f21392d6577efd807a5
+ms.openlocfilehash: d050629999c3a886eb8d422f4f38c22d586e0824
 
 
 ---
@@ -53,17 +53,17 @@ Pour obtenir la liste des types de fichiers pris en charge dans l’Explorateur 
 
 2. Dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, utilisez les étiquettes comme vous le feriez dans une application Office, qui définit la classification et la protection comme les a effectuées votre administrateur. Si une étiquette ne peut pas être sélectionnée (elle est indisponible), le fichier sélectionné ne prend pas en charge la classification, mais vous pouvez le protéger.
 
-3. Pour protéger le fichier, choisissez entre les paramètres de protection que votre administrateur a définis pour votre étiquette sélectionnée (**Automatique, en fonction de l’étiquette de classification sélectionnée**), ou spécifiez vos propres paramètres (**Remplacer par des autorisations personnalisées**).
+3. Si vous souhaitez spécifier vos propres paramètres de protection plutôt que d’utiliser les paramètres de protection que votre administrateur peut avoir inclus dans votre étiquette sélectionnée, sélectionnez la protection **Protéger avec des autorisations personnalisées**.
     
-    L’option de remplacement n’utilise pas tous les paramètres de protection que votre administrateur peut avoir définis pour l’étiquette de votre choix. À la place, vous spécifiez vos propres paramètres de protection. 
+    Toute autorisation personnalisée que vous spécifiez remplace (plutôt que complète) les paramètres de protection que votre administrateur peut avoir définis pour l’étiquette de votre choix.  
 
-4. Si vous avez sélectionné l’option de remplacement, spécifiez maintenant ce qui suit :
+4. Si vous avez sélectionné l’option d'autorisations personnalisées, spécifiez maintenant ce qui suit :
 
     - **Sélectionner des autorisations** : sélectionnez le niveau d’accès que vous voulez donner aux utilisateurs quand vous protégez les fichiers sélectionnés.
     
     - **Sélectionner des utilisateurs** : spécifiez les personnes qui doivent disposer des autorisations que vous avez sélectionnées pour vos fichiers. Vous pouvez utiliser le carnet d’adresses pour rechercher et sélectionner les personnes et groupes de votre organisation. Pour les personnes extérieures à votre organisation, vous devez spécifier une adresse e-mail complète. Assurez-vous d’utiliser une adresse e-mail professionnelle, car les adresses personnelles ne sont pas prises en charge pour le moment.
         
-    - **Faire expirer l’accès** : sélectionnez cette option uniquement pour les fichiers urgents afin que les personnes que vous avez spécifiées ne puissent pas les ouvrir après une date que vous spécifiez. Vous pouvez toujours ouvrir le fichier d’origine mais, après minuit (dans votre fuseau horaire), le jour spécifié, les personnes que vous avez désignées ne peuvent plus l’ouvrir.
+    - **Faire expirer l’accès le** : sélectionnez cette option uniquement pour les fichiers urgents afin que les personnes que vous avez spécifiées ne puissent pas les ouvrir après une date que vous spécifiez. Vous pouvez toujours ouvrir le fichier d’origine mais, après minuit (dans votre fuseau horaire), le jour spécifié, les personnes que vous avez désignées ne peuvent plus l’ouvrir.
 
 5. Cliquez sur **Appliquer**, puis sur **Fermer**.
 
@@ -108,9 +108,10 @@ Pour obtenir des instructions pratiques, consultez les sections suivantes du gui
 
 -   [Que voulez-vous faire ?](client-user-guide.md#what-do-you-want-to-do)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -4,15 +4,15 @@ description: "Instructions pour installer le client qui ajoute une barre Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: bd3cbea29183c39abaa66aa5dcec8a14ad0b0757
-ms.openlocfilehash: bccddf228b33bcd8d36ef6af55dea9015cad34d0
+ms.sourcegitcommit: 6012049162d0ac9ee53476640ab3a4bcac18287f
+ms.openlocfilehash: 92d6b6f13d124c8c7ab7735fa170890263c9011b
 
 
 ---
@@ -70,7 +70,7 @@ Exemple d’installation silencieuse unique du module PowerShell, avec le client
 
 Si vous installez la version d’évaluation du client sur des ordinateurs exécutant Office 2010, spécifiez le paramètre **ServiceLocation** si vos utilisateurs ne sont pas des administrateurs locaux sur leurs ordinateurs. Pour plus d'informations, consultez la section suivante.
 
-La version Disponibilité générale du client Azure Information Protection est également incluse dans le catalogue Microsoft Update, ce qui vous permet d’installer et de mettre à jour ce client à l’aide de n’importe quel service de mise à jour de logiciel utilisant le catalogue. Les préversions du client ne sont pas incluses dans le catalogue Microsoft Update.
+Le client Azure Information Protection est également inclus dans le catalogue Microsoft Update, ce qui vous permet d’installer et de mettre à jour le client à l’aide de n’importe quel service de mise à jour de logiciel utilisant le catalogue. 
 
 ### <a name="preview-version-and-office-2010-only"></a>Version d’évaluation et Office 2010 uniquement
 
@@ -223,6 +223,6 @@ Pour vérifier les informations de version pour le client, consultez l’[histor
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Jan17_HO5-->
 
 

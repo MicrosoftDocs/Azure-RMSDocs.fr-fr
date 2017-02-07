@@ -4,7 +4,7 @@ description: "Les développeurs peuvent utiliser Azure Information Protection po
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
 translationtype: Human Translation
-ms.sourcegitcommit: a8cb4f9bf0c38e25045fcd1a01deaa993bc862c8
-ms.openlocfilehash: 7f3c9f95ea86655d04e385eee7fd9c8cc0096ce9
+ms.sourcegitcommit: d00a735328bf04aad365a7577ef33ea24706ffc7
+ms.openlocfilehash: 9a3e0f1ba6c563d6129ef824f565138b68b439b1
 
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guide du développeur Azure Information Protection
@@ -65,17 +65,24 @@ La version 4.2 est un client REST avec des API spécifiques de plusieurs systè
 
 Les guides suivants vous orientent tout au long des étapes d’installation du système d’exploitation d’un environnement de développement d’applications qui utilise des outils courants.
 
-|[![Installation iOS/OSX](../media/develop/ios-icon.png)](ios-sdk.md) | [![Installation Android](../media/develop/android-icon.png)](android-sdk.md) | [![Installation Windows Phone](../media/develop/windows-phone-icon.png)](windows-phone-apps.md) | [![Installation Windows Service](../media/develop/windows-icon.png)](install-the-rms-sdk.md) | [![Installation Linux](../media/develop/linux-icon.png)](linux-setup.md) |
+[![Installation iOS/OSX](../media/develop/ios-icon.png)](ios-sdk.md)
+[![Installation Android](../media/develop/android-icon.png)](android-sdk.md)
+[![Installation Windows Phone](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
+[![Installation Windows Service](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
+[![Installation Linux](../media/develop/linux-icon.png)](linux-setup.md)
 
-## <a name="how-tos"></a>Procédures
+
+## <a name="how-tos"></a>Guides pratiques
 
 Chacune des rubriques suivantes présente les instructions spécifiques d’un aspect de l’implémentation de votre application. Les applications de service sont développées à l’aide du SDK RMS 2.x. Les applications utilisateur sont développées à l’aide du SDK RMS 4.x. Le lien de l’article est attribué avec le type d’application, le service, l’utilisateur.
 
 ### <a name="general"></a>Général
 
 - [Guide pratique pour activer le suivi et la révocation de documents (service)](tracking-content.md)
+- [Guide pratique pour déployer votre client](../rms-client/client-deployment-notes.md)
 - [Guide pratique pour installer et configurer un serveur RMS (service)](how-to-install-and-configure-an-rms-server.md)
 - [Guide pratique pour utiliser le suivi de documents (utilisateur)](how-to-use-document-tracking.md)
+
 
 ### <a name="security-and-authentication"></a>Sécurité et authentification
 
@@ -99,9 +106,9 @@ Chacune des rubriques suivantes présente les instructions spécifiques d’un a
 
 Ces vidéos sont extraites de la conférence Micorsoft 2016 Ignite
 
-- [Email security inside your org (Sécurité des e-mails à l’intérieur de votre organisation)](https://myignite.microsoft.com/videos/2787)
-- [Adopt a comprehensive identity-driven solution for protecting and sharing data securely (Adopter une solution complète basée sur les identités pour protéger et partager des données en toute sécurité)](https://myignite.microsoft.com/videos/2784)
-- [Learn how classification, labeling, and protection delivers persistent data protection (Découvrir comment la classification, l’étiquetage et la protection offrent une protection des données persistantes)](https://myignite.microsoft.com/videos/2786)
+- [Sécurité des e-mails à l’intérieur de votre organisation](https://myignite.microsoft.com/videos/2787)
+- [Adopter une solution complète basée sur les identités pour protéger et partager des données en toute sécurité](https://myignite.microsoft.com/videos/2784)
+- [Découvrir comment la classification, l’étiquetage et la protection offrent une protection des données persistantes](https://myignite.microsoft.com/videos/2786)
 
 ## <a name="other-resources"></a>Autres ressources
 
@@ -109,13 +116,13 @@ Ces vidéos sont extraites de la conférence Micorsoft 2016 Ignite
 - [Blog Coin du développeur RMS](https://blogs.msdn.microsoft.com/rms/)
 - [Forum aux questions sur Azure Information Protection](https://docs.microsoft.com/en-us/information-protection/get-started/faqs)
 
-### <a name="support-articles"></a>Articles complémentaires
+### <a name="support-articles"></a>Articles sur la prise en charge
 
 - [Formats de fichier pris en charge](supported-file-formats.md)
 - [Plateformes prises en charge](supported-platforms.md)
 - [Comprendre les restrictions d’utilisation](understanding-usage-restrictions.md)
 
-### <a name="api-reference"></a>Référence d'API
+### <a name="api-reference"></a>Informations de référence sur les API
 
 - [Informations de référence sur l’API Windows](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
   - [Codes d’erreur du SDK Windows](https://msdn.microsoft.com/library/hh535248.aspx)
@@ -137,6 +144,6 @@ Ces vidéos sont extraites de la conférence Micorsoft 2016 Ignite
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Jan17_HO5-->
 
 

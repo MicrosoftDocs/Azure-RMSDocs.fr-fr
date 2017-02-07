@@ -4,7 +4,7 @@ description: "Découvrez en détail le fonctionnement d’Azure RMS, les contrô
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 01/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 91a5485b2860edf6f2095027e1c0d69ec96141d7
+ms.sourcegitcommit: d47648a1e03a4da5eb6088932544d9e34ca4ae7a
+ms.openlocfilehash: 42583d3ed7fb0fd5df85699c56fe7abe41093546
 
 
 ---
@@ -30,7 +30,7 @@ Concernant le fonctionnement d'Azure RMS, il est important de comprendre que le 
 
 -   Quand un document protégé est utilisé par un utilisateur légitime, ou traité par un service autorisé, ses données sont déchiffrées et les droits définis dans la stratégie appliqués.
 
-À un niveau élevé, vous pouvez voir comment ce processus fonctionne dans l'image suivante. Un document contenant la formule secrète est protégé, puis ouvert correctement par un utilisateur ou un service autorisé. Le document est protégé par une clé de contenu (la clé verte sur cette image). Elle est unique pour chaque document et est placée dans l’en-tête du fichier où elle est protégée par votre clé racine de locataire Azure Information Protection (la clé rouge sur l’image). Microsoft peut générer et gérer votre clé de locataire. Vous pouvez également générer et gérer personnellement votre propre clé de locataire.
+Dans l’image suivante, vous pouvez voir comment ce processus fonctionne dans sa globalité. Un document contenant la formule secrète est protégé, puis ouvert correctement par un utilisateur ou un service autorisé. Le document est protégé par une clé de contenu (la clé verte sur cette image). Elle est unique pour chaque document et est placée dans l’en-tête du fichier où elle est protégée par votre clé racine de locataire Azure Information Protection (la clé rouge sur l’image). Microsoft peut générer et gérer votre clé de locataire. Vous pouvez également générer et gérer personnellement votre propre clé de locataire.
 
 Durant le processus de protection, quand Azure RMS chiffre, déchiffre, autorise et applique des restrictions, la formule secrète n'est jamais envoyée à Azure.
 
@@ -77,13 +77,13 @@ Après l'initialisation de l'environnement utilisateur, l'utilisateur peut prot�
 ### <a name="initializing-the-user-environment"></a>Initialisation de l'environnement utilisateur
 Pour qu'un utilisateur puisse protéger du contenu ou utiliser du contenu protégé sur un ordinateur Windows, l'environnement utilisateur doit être préparé sur l'appareil en question. Ce processus se produit une seule fois, sans intervention humaine, quand un utilisateur tente de protéger ou de consommer du contenu protégé :
 
-![Activation du client RMS : étape 1](../media/AzRMS.png)
+![Flux d’activation du client RMS : étape 1, authentification du client](../media/AzRMS.png)
 
 **Ce qui se passe à l’étape 1** : le client RMS sur l’ordinateur se connecte d’abord au service à Azure Rights Management, puis authentifie l’utilisateur à l’aide de son compte Azure Active Directory.
 
 Lorsque le compte de l'utilisateur est fédéré avec Azure Active Directory, cette authentification est automatique. L'utilisateur n'est donc pas invité à fournir d'informations d'identification.
 
-![Activation du client RMS : étape 2](../media/AzRMS_useractivation2.png)
+![Activation du client RMS : étape 2, les certificats sont téléchargés sur le client](../media/AzRMS_useractivation2.png)
 
 **Ce qui se passe à l’étape 2** : une fois l’utilisateur authentifié, la connexion est automatiquement redirigée vers le locataire Azure Information Protection de l’organisation, qui émet des certificats permettant à l’utilisateur de s’authentifier auprès du service Azure Rights Management, pour consommer du contenu protégé et protéger du contenu hors connexion.
 
@@ -92,17 +92,17 @@ Une copie du certificat de l’utilisateur est stockée dans Azure afin que, si 
 ### <a name="content-protection"></a>Protection du contenu
 Quand un utilisateur protège un document, le client RMS effectue les actions suivantes sur un document non protégé :
 
-![Protection de document RMS : étape 1](../media/AzRMS_documentprotection1.png)
+![Protection de document RMS : étape 1, le document est chiffré](../media/AzRMS_documentprotection1.png)
 
 **Ce qui se passe à l’étape 1** : le client RMS crée une clé aléatoire (la clé de contenu), puis chiffre le document en utilisant cette clé, avec l’algorithme de chiffrement symétrique AES.
 
-![Protection de document RMS : étape 2](../media/AzRMS_documentprotection2.png)
+![Protection de document RMS : étape 2, la stratégie est créée](../media/AzRMS_documentprotection2.png)
 
 **Ce qui se passe à l’étape 2** : le client RMS crée ensuite un certificat incluant une stratégie pour le document, soit en se basant sur un modèle, soit en spécifiant des droits spécifiques pour le document. Cette stratégie inclut les droits de différents utilisateurs ou groupes, ainsi que d'autres restrictions telles qu'une date d'expiration.
 
 Le client RMS utilise ensuite la clé de l'organisation obtenue lors de l'initialisation de l'environnement utilisateur, en se servant de cette clé pour chiffrer la stratégie et la clé symétrique de contenu. Le client RMS signe également la stratégie avec le certificat de l'utilisateur obtenu lors de l'initialisation de l'environnement utilisateur.
 
-![Protection de document RMS : étape 3](../media/AzRMS_documentprotection3.png)
+![Protection de document RMS : étape 3, la stratégie est incorporée dans le document](../media/AzRMS_documentprotection3.png)
 
 **Ce qui se passe à l’étape 3 **: enfin, le client RMS incorpore la stratégie dans un fichier avec le corps du document précédemment chiffré, pour constituer un document protégé.
 
@@ -111,21 +111,25 @@ Ce document peut être stocké partout, ou partagé à l'aide de n'importe quell
 ### <a name="content-consumption"></a>Consommation du contenu
 Quand un utilisateur veut consommer un document protégé, le client RMS commence par demander l’accès au service Azure Rights Management :
 
-![Consommation de document RMS : étape 1](../media/AzRMS_documentconsumption1.png)
+![Consommation de document RMS : étape 1, l’utilisateur est authentifié et obtient la liste des droits](../media/AzRMS_documentconsumption1.png)
 
 **Ce qui se passe à l’étape 1 **: l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur au service Azure Rights Management. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l'utilisateur sur le document.
 
-![Consommation de document RMS : étape 2](../media/AzRMS_documentconsumption2.png)
+![Consommation de document RMS : étape 2, la licence d’utilisation est retournée au client](../media/AzRMS_documentconsumption2.png)
 
 **Ce qui se passe à l’étape 2** : le service extrait ensuite la clé de contenu AES de la stratégie déchiffrée. Cette clé est alors chiffrée avec la clé RSA publique de l'utilisateur obtenue avec la demande.
 
 Après cela, la clé de contenu re-chiffrée est incorporée dans une licence d'utilisation chiffrée avec la liste des droits de l'utilisateur, qui est renvoyée au client RMS.
 
-![Consommation de document RMS : étape 3](../media/AzRMS_documentconsumption3.png)
+![Consommation de document RMS : étape 3, le document est déchiffré et les droits sont appliqués](../media/AzRMS_documentconsumption3.png)
 
 **Ce qui se passe à l’étape 3** : enfin, le client RMS prend la licence d’utilisation chiffrée et la déchiffre avec sa propre clé privée utilisateur. Cela permet au client RMS de déchiffrer le corps du document si nécessaire, et de l'afficher à l'écran.
 
 Le client déchiffre également la liste des droits, et transmet ceux-ci à l'application qui les applique dans son interface utilisateur.
+
+> [!NOTE]
+> Quand les utilisateurs externes à votre organisation consomment du contenu que vous avez protégé, le flux de consommation est le même. Ce qui change dans ce scénario, c’est le mode d’authentification de l’utilisateur. Pour plus d’informations, consultez [Lors du partage d’un document protégé avec une personne extérieure à mon organisation, comment cet utilisateur s’authentifie-t-il ?](../get-started/faqs-rms.md#when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated)
+
 
 ### <a name="variations"></a>Variantes
 Les procédures pas à pas précédentes couvrent les scénarios standard, mais il existe des variantes :
@@ -152,6 +156,6 @@ Si vous êtes prêt à déployer la protection des données pour votre organisat
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Jan17_HO5-->
 
 

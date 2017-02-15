@@ -13,7 +13,7 @@
 ## [Didacticiel de démarrage rapide](infoprotect-quick-start-tutorial.md)
 ### [Étape 1 : Activer le service](infoprotect-tutorial-step1.md)
 ### [Étape 2 : Configurer et publier la stratégie](infoprotect-tutorial-step2.md)
-### [Étape 3 : Installer le client et l’application](infoprotect-tutorial-step3.md)
+### [Étape 3 : Installer le client](infoprotect-tutorial-step3.md)
 ### [Étape 4 : Illustration du fonctionnement : classification, étiquetage et protection](infoprotect-tutorial-step4.md)
 ### [Étape 5 : Illustration du fonctionnement : partage protégé et suivi](infoprotect-tutorial-step5.md)
 ## [Guide de déploiement rapide](rapid-deployment-guide.md)
@@ -31,6 +31,6 @@
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

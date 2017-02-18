@@ -1,11 +1,11 @@
 ---
-title: "Guide et informations pour développeurs | Azure RMS"
-description: "Cette rubrique traite de recommandations propres à différents scénarios de développement importants."
+title: "Guide pour développeurs de l&quot;Azure Information Protection SDK 2.1 | Microsoft Docs"
+description: "Une collection de rubriques de procédures pour développer avec l&quot;AIP SDK 2.1"
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 10/18/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a3d58cc4c430fe2335ff8fbb7e23c77915e6b8ab
-ms.openlocfilehash: c09eebc8a950894038a758d8f968c5e3e5ae2a53
+ms.sourcegitcommit: 5df7da98abf4e7c8e39b610fe374d67cf2954338
+ms.openlocfilehash: 1c10eb8f7a68138761931d1c8a1715a03b7ff0a9
 
 
 ---
 
-# <a name="developer-guidance-and-information"></a>Guide et informations pour développeurs
+# <a name="developer-guidance"></a>Guide pour développeurs
 
 Cette section traite de recommandations spécifiques pour plusieurs scénarios de développement importants, ainsi que des informations générales sur le développement avec ce SDK. Les scénarios de cette section sont spécifiques à cette version du SDK Rights Management Services 2.1 et peuvent être modifiés dans les versions ultérieures.
 - [Comment : utiliser l’authentification ADAL](how-to-use-adal-authentication.md) - Authentification auprès d’Azure RMS pour votre application à l’aide de la bibliothèque d’authentification ADAL (Azure Active Directory Authentication Library).
@@ -47,6 +47,6 @@ Cette section traite de recommandations spécifiques pour plusieurs scénarios d
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -4,15 +4,15 @@ description: "Vous pouvez protéger vos documents et e-mails les plus sensibles 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 659f8d79a0ed0146fb94040ab7328e7b9530460a
+ms.sourcegitcommit: f71b5d98d03453ee49ea177fcb894c28f0f2688f
+ms.openlocfilehash: 9224cdbd5c7e1aa1453328150b903db386af2322
 
 
 ---
@@ -51,41 +51,52 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
 - Pour Exchange sur site, vous devez déployer le [connecteur RMS et configurer vos serveurs Exchange](../deploy-use/deploy-rms-connector.md). 
 
 
-## <a name="to-configure-a-label-to-apply-rights-management-protection"></a>Configuration d’une étiquette pour appliquer Rights Management protection
+## <a name="to-configure-a-label-for-rights-management-protection"></a>Configurer une étiquette pour la protection Rights Management
 
 1. Si ce n’est déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général, puis accédez au panneau **Azure Information Protection**. 
 
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. Si l’étiquette à configurer s’applique à tous les utilisateurs, sélectionnez l’étiquette à modifier à partir du panneau **Stratégie : Globale**. 
+2. Si l’étiquette à configurer s’applique à tous les utilisateurs, sélectionnez **Global** dans le panneau **Azure Information Protection**. Par contre, si l’étiquette à configurer se trouve dans une [stratégie délimitée](configure-policy-scope.md) pour qu’elle s’applique uniquement aux utilisateurs sélectionnés, choisissez plutôt la stratégie délimitée en question.
 
-     Si l’étiquette à configurer se trouve dans une [stratégie délimitée](configure-policy-scope.md) pour qu’elle s’applique uniquement aux utilisateurs sélectionnés, commencez par sélectionner cette stratégie à partir du panneau **Azure Information Protection** initial.
+3. Dans le panneau **Stratégie**, sélectionnez l’étiquette que vous souhaitez configurer. Le panneau **Étiquette** s’ouvre. 
 
-3. Dans le panneau **Étiquette**, dans la section **Définir le modèle RMS pour la protection des documents et e-mails contenant cette étiquette**, pour **Sélectionner le modèle RMS à partir de**, sélectionnez **Azure RMS** ou **AD RMS**.
+4. Dans le panneau **Étiquette**, recherchez **Définir des autorisations pour les documents et les e-mails contenant cette étiquette**. 
     
-    Dans la plupart des cas, vous devez sélectionner **Azure RMS**. Ne sélectionnez AD RMS que si vous avez lu et compris les conditions préalables et les restrictions qui accompagnent cette configuration, parfois appelée « *conservez votre propre clé* » (HYOK). Pour plus d’informations, consultez [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md).
+    Sélectionnez **Protéger** pour appliquer la protection, ou **Supprimer la protection** pour supprimer la protection pouvant être appliquée à un e-mail ou à un document :
+
+    - Si vous avez sélectionné **Protéger**, passez à l’étape 5.
+    - Si vous avez sélectionné **Supprimer la protection**, passez à l’étape 11.
+
+5. Si vous sélectionnez **Protéger**, cliquez maintenant sur la barre **Protection** pour ouvrir le panneau **Autorisations** :
     
-4. Si vous avez sélectionné Azure RMS : Pour **Sélectionner un modèle RMS**, cliquez sur la zone de liste déroulante et sélectionnez le [modèle](../deploy-use/configure-custom-templates.md) ou l’option Rights Management à utiliser pour protéger des documents et des e-mails avec cette étiquette.
+    ![Configurer la protection d’une étiquette Azure Information Protection](../media/info-protect-protection-bar.png)
+
+6. Dans le panneau **Autorisations**, sélectionnez **Azure RMS** ou **HYOK (AD RMS)**. 
     
-    Plus d’informations sur les options :
+    Dans la plupart des cas, vous devrez sélectionner **Azure RMS** pour vos paramètres d’autorisation. Ne sélectionnez **HYOK (AD RMS)** que si vous avez lu et compris les prérequis et les restrictions qui accompagnent cette configuration « *conservez votre propre clé* » (HYOK, hold your own key). Pour plus d’informations, consultez [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md).
     
-    - Avez-vous créé un modèle après avoir ouvert le panneau **Étiquette**? Fermez ce panneau et retournez à l’étape 2 pour que votre modèle nouvellement créé soit récupéré dans Azure et puisse être sélectionné.
+7. Sélectionnez **Ne pas transférer** si vous voulez définir cette option Outlook pour les e-mails ou **Sélectionner un modèle**. 
     
-    - Si vous sélectionnez un **modèle de service** ou que vous avez configuré des [contrôles d’intégration](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) :
+8. Si vous avez sélectionné **Sélectionner un modèle** pour **Azure RMS**, cliquez sur la zone de liste déroulante et sélectionnez le [modèle](../deploy-use/configure-custom-templates.md) à utiliser pour protéger les documents et les e-mails avec cette étiquette.
     
-        - Les utilisateurs en dehors de l’étendue configurée du modèle ou qui sont exclus de l’application de la protection d’Azure Rights Management continuent de voir l’étiquette, mais ne peuvent pas l’appliquer. S’ils sélectionnent l’étiquette, ils voient le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
-        
-            Notez que tous les modèles sont toujours affichés, même si vous configurez une stratégie délimitée. Par exemple, vous configurez une stratégie délimitée au groupe Marketing. Les modèles Azure RMS que vous pouvez sélectionner ne se limitent pas aux modèles délimités au groupe Marketing et il est possible de sélectionner un modèle de service que les utilisateurs sélectionnés ne peuvent pas utiliser. Pour faciliter la configuration et minimiser la résolution des problèmes, envisagez d’attribuer le même nom au modèle de service et à l’étiquette de votre stratégie délimitée. 
+    Si vous sélectionnez un **modèle de service** ou que vous avez configuré des [contrôles d’intégration](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) :
+    
+    - Les utilisateurs en dehors de l’étendue configurée du modèle ou qui sont exclus de l’application de la protection d’Azure Rights Management continuent de voir l’étiquette, mais ne peuvent pas l’appliquer. S’ils sélectionnent l’étiquette, ils voient le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
+    
+        Notez que tous les modèles sont toujours affichés, même si vous configurez une stratégie délimitée. Par exemple, vous configurez une stratégie délimitée au groupe Marketing. Les modèles Azure RMS que vous pouvez sélectionner ne se limitent pas aux modèles délimités au groupe Marketing et il est possible de sélectionner un modèle de service que les utilisateurs sélectionnés ne peuvent pas utiliser. Pour faciliter la configuration et minimiser la résolution des problèmes, envisagez d’attribuer le même nom au modèle de service et à l’étiquette de votre stratégie délimitée. 
             
-    - Si vous sélectionnez **Supprimer la Protection**:
-        
-        - Les utilisateurs doivent disposer des autorisations nécessaires pour supprimer la protection Rights Management et appliquer une étiquette qui contient cette option. Cette option implique qu’ils disposent du [droit d’utilisation](../deploy-use/configure-usage-rights.md) **Exporter** (pour les documents Office) ou **Control total**, ou qu’ils soient propriétaires de Rights Management (ce qui accorde automatiquement le droit d’utilisation Contrôle total), ou encore un [super utilisateur pour Azure Rights Management](../deploy-use/configure-super-users.md). Les modèles de gestion de droits par défaut n’incluent pas les droits d’utilisation qui permettent aux utilisateurs de supprimer la protection. 
+9. Si vous avez sélectionné **Sélectionner un modèle** pour **HYOK (AD RMS)** : indiquez le GUID du modèle et l’URL de licence de votre cluster AD RMS. [Plus d’informations](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-            Si les utilisateurs n’ont pas les autorisations nécessaires pour supprimer la protection Rights Management et qu’ils sélectionnent cette étiquette avec l’option **Supprimer la Protection**, ils reçoivent le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
+10. Cliquez sur **Terminé** pour fermer le panneau **Autorisations** et regardez s’afficher **Ne pas transférer** ou le modèle que vous avez choisi dans la barre **Protection** du panneau **Étiquette**.
 
-5. Si vous avez sélectionné AD RMS : indiquez le GUID du modèle et l’URL de licence de votre cluster AD RMS. [Plus d’informations](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
+11. Si vous sélectionnez **Supprimer la Protection**:
+    
+    Les utilisateurs doivent disposer des autorisations nécessaires pour supprimer la protection Rights Management et appliquer une étiquette qui contient cette option. Cette option implique qu’ils disposent du [droit d’utilisation](../deploy-use/configure-usage-rights.md) **Exporter** (pour les documents Office) ou **Control total**, ou qu’ils soient propriétaires de Rights Management (ce qui accorde automatiquement le droit d’utilisation Contrôle total), ou encore un [super utilisateur pour Azure Rights Management](../deploy-use/configure-super-users.md). Les modèles de gestion de droits par défaut n’incluent pas les droits d’utilisation qui permettent aux utilisateurs de supprimer la protection. 
+    
+    Si les utilisateurs n’ont pas les autorisations nécessaires pour supprimer la protection Rights Management et qu’ils sélectionnent cette étiquette avec l’option **Supprimer la Protection**, ils reçoivent le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
 
-6. Cliquez sur **Enregistrer**.
+6. Dans le panneau **Étiquette**, cliquez sur **Enregistrer**.
 
 7. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
 
@@ -96,6 +107,6 @@ Pour plus d’informations sur la configuration de votre stratégie Azure Inform
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO3-->
 
 

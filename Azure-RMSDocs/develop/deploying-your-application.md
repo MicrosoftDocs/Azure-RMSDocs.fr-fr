@@ -1,11 +1,11 @@
 ---
-title: "Déploiement de votre application | Azure Information Protection"
+title: "Déploiement de votre application"
 description: "Cette rubrique vous guide dans le déploiement de votre application"
 keywords: "déployer, RMS, AIP"
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 12/15/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 00bf0748f67afe3f81de86fa643e78652cc0d7a4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 0c16b7c6bd494a0350a511a3b415f781aecf613d
 
 
 ---
@@ -127,6 +127,6 @@ Pour plus d’informations sur l’activation de votre application pour utiliser
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO4-->
 
 

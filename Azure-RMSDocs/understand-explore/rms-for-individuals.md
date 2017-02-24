@@ -1,5 +1,5 @@
 ---
-title: RMS for individuals et Azure Information Protection | Azure Information Protection
+title: RMS for individuals et Azure Information Protection
 description: "Informations relatives à RMS for Individuals, un abonnement libre-service gratuit destiné aux utilisateurs d’une organisation qui reçoivent des fichiers sensibles protégés par le service Azure Rights Management, mais qui ne peuvent pas s’authentifier, car leur service informatique ne gère pas de compte en leur nom dans Azure."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9453354687b4b469989f0fe33d4abce0bde21570
-ms.openlocfilehash: 327e68131c8d432887a682c83a6e30f6c83c1a8e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: b864f8223865661184ce5742e23313e88cae1db5
 
 
 ---
@@ -43,6 +43,6 @@ Consultez [Inscription à RMS for individuals](rms-for-individuals-user-sign-up.
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

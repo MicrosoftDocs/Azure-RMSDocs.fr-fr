@@ -1,5 +1,5 @@
 ---
-title: Configuration requise pour Azure Information Protection | Azure Information Protection
+title: Configuration requise pour Azure Information Protection
 description: "Identifiez les critères de déploiement d’Azure Information Protection pour votre organisation."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,8 @@ ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 16e15a3f6509578a937e1d22926ce3cfb60f8ac2
-ms.openlocfilehash: 1b2cd262e4c384fe6e92100ec52b262edb0aa845
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: c0cbd02cf69ca8039af8f6b397cb71f140eaab50
 
 
 ---
@@ -56,6 +56,6 @@ Pour plus d’informations sur les conditions requises supplémentaires pour ce 
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

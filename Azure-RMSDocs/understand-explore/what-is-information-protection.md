@@ -1,5 +1,5 @@
 ---
-title: "Qu’est-ce qu’Azure Information Protection ? | Azure Information Protection"
+title: "Qu’est-ce qu’Azure Information Protection ?"
 description: "Présentation du service Azure Information Protection."
 author: cabailey
 ms.author: cabailey
@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: 4d20462f190042e1ac8d674123296f65c66d9921
-ms.openlocfilehash: 50b83f165dfbcf9b5f66ae8bfc596d1aa910f10d
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 7d5c759a6b7e206f30588926a8d480b50be20bc4
 
 
 ---
@@ -121,6 +121,6 @@ Vous connaissez Azure Information Protection ou Azure Rights Management sous un 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

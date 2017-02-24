@@ -4,7 +4,7 @@ description: "Exemple de script à copier et à modifier, comme indiqué dans le
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: d2f7a4d286e9b016e0b1e3a37dcf4616d2d0173a
+ms.sourcegitcommit: 06419438281e0d5a0b976e506d45be2b4eaaef70
+ms.openlocfilehash: 6bccd512c22055e59896e120d9638955ae609393
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: d2f7a4d286e9b016e0b1e3a37dcf4616d2d0173a
 
 Cette page contient l’exemple de script à copier et à modifier, comme indiqué dans [Protection RMS avec l’infrastructure de classification des fichiers de Windows Server](configure-fci.md).
 
-Ce script utilise **2.2.0.0** comme version minimale pour le module Protection RMS. Exécutez la commande suivante pour vérifier la version : `(Get-Module RMSProtection -ListAvailable).Version` 
+Ce script utilise **1.3.155.2** comme version minimale pour le module AzureInformationProtection. Exécutez la commande suivante pour vérifier la version : `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
 *&#42;&#42;Exclusion de responsabilité&#42;&#42; : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple*
 *de script est fourni TEL QUEL sans garantie d’aucune sorte.*
@@ -35,7 +35,7 @@ Ce script utilise **2.2.0.0** comme version minimale pour le module Protection R
 .SYNOPSIS 
      Helper script to protect all file types using the Azure Rights Management service and FCI.
 .DESCRIPTION
-     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID and RMS Protection module minimum version 2.2.0.0.   
+     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID and AzureInformationProtection module minimum version 1.3.155.2.   
 #>
 param(
             [Parameter(Mandatory = $false)]
@@ -59,7 +59,7 @@ param(
 ) 
 
 # script information
-[String] $Script:Version = 'version 2.0' 
+[String] $Script:Version = 'version 3.1' 
 [String] $Script:Name = "RMS-Protect-FCI.ps1"
 
 #global working variables
@@ -80,19 +80,16 @@ function Check-Module{
     [bool]$isResult = $False
 
     #try to load the module
-    if (get-module -list -name $Module) {
-        import-module $Module
-
-        if (get-module -name $Module ) {
+    if ((get-module -list -name $Module) -ne $nil)
+        {
 
             $isResult = $True
-        } else {
+        } else 
+        
+        {
             $isResult = $False
         } 
 
-    } else {
-            $isResult = $False
-    }
     return $isResult
 }
 
@@ -121,6 +118,7 @@ function Set-RMSConnection ($fappId, $fkey, $fbposId) {
     try {
                Set-RMSServerAuthentication -AppPrincipalId $fappId -Key $fkey -BposTenantId $fbposId
         Write-Host ("Information: " + "Connected to Azure RMS Service with BposTenantId: $fbposId using AppPrincipalId: $fappId")
+        Get-RMSTemplate
         $returnValue = $true
     } catch {
         Write-Host ("ERROR" + "During connection to Azure RMS Service with BposTenantId: $fbposId using AppPrincipalId: $fappId")
@@ -136,17 +134,17 @@ $Script:isScriptProcess = $True
 
 # Validate Azure RMS connection by checking the module and then connection
 if ($Script:isScriptProcess) {
-        if (Check-Module -Module RMSProtection){
+         if (Check-Module -Module AzureInformationProtection){
         $Script:isScriptProcess = $True
     } else {
 
-        Write-Host ("The RMSProtection module is not loaded") -foregroundcolor "yellow" -backgroundcolor "black"            
+        Write-Host ("The AzureInformationProtection module is not loaded") -foregroundcolor "yellow" -backgroundcolor "black"            
         $Script:isScriptProcess = $False
     }
 }
 
 if ($Script:isScriptProcess) {
-    #Write-Host ("Try to connect to Azure RMS with AppId: $AppPrincipalId and BPOSID: $BposTenantId" )  
+    #Write-Host ("Try to connect to Azure RMS with AppId: $AppPrincipalId and BPOSID: $BposTenantId" )    
     if (Set-RMSConnection $AppPrincipalId $SymmetricKey $BposTenantId) {
         Write-Host ("Connected to Azure RMS")
 
@@ -178,6 +176,6 @@ Retour à [Protection RMS avec l’infrastructure de classification des fichiers
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

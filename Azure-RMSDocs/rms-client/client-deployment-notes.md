@@ -4,7 +4,7 @@ description: "Informations sur la redistribution, l’installation, les système
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/28/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: d40a8b2062b0b8ccb2dd6115d179e45e64181798
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: ff9f1ba390fcad0569972fc65a2425266fd918b4
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: d40a8b2062b0b8ccb2dd6115d179e45e64181798
 
 Le client service Rights Management (client RMS) version 2 est également appelé client MSIPC. Il s'agit d'un logiciel pour ordinateurs Windows, qui communique avec les services Microsoft Rights Management localement ou dans le cloud pour protéger l'accès aux informations et leur utilisation quand celles-ci transitent par des applications et appareils, à l'intérieur ou à l'extérieur des limites managées de votre organisation. 
 
-Outre le fait qu’il est livré avec [l’application de partage Rights Management pour Windows](sharing-app-windows.md), le client RMS est disponible [sous la forme d’un téléchargement facultatif](http://www.microsoft.com/download/details.aspx?id=38396) qui peut, après réception et acceptation de son contrat de licence, être distribué gratuitement avec des logiciels tiers, de sorte que les clients peuvent protéger et utiliser du contenu protégé par les services RMS.
+Outre le fait qu’il est livré avec [le client Azure Information Protection pour Windows](aip-client.md), le client RMS est disponible [sous la forme d’un téléchargement facultatif](http://www.microsoft.com/download/details.aspx?id=38396) qui peut, après réception et acceptation de son contrat de licence, être distribué gratuitement avec des logiciels tiers, de sorte que les clients peuvent protéger et utiliser du contenu protégé par les services RMS.
 
 
 ## <a name="redistributing-the-rms-client"></a>Redistribution du client RMS
@@ -94,7 +94,7 @@ Si vous avez utilisé l’option d’installation silencieuse pour installer ce 
 La section suivante contient des informations de paramètres sur le client RMS. Ces informations peuvent être utiles si vous rencontrez des problèmes avec des applications ou services utilisant le client RMS.
 
 > [!NOTE]
-> Certains paramètres varient selon que l'application compatible avec RMS s'exécute en tant qu'application en mode client (par exemple, Microsoft Word et Outlook, ou l'application de partage RMS), ou en mode serveur (par exemple, SharePoint et Exchange). Dans les tableaux suivants, ces paramètres sont identifiés respectivement comme **Mode Client** et **Mode serveur**.
+> Certains paramètres varient selon que l’application compatible avec RMS s’exécute en tant qu’application en mode client (par exemple, Microsoft Word et Outlook, ou le client Azure Information Protection avec l’Explorateur de fichiers Windows), ou en mode serveur (par exemple, SharePoint et Exchange). Dans les tableaux suivants, ces paramètres sont identifiés respectivement comme **Mode Client** et **Mode serveur**.
 
 ### <a name="where-the-rms-client-stores-licenses-on-client-computers"></a>Où le client RMS stocke-t-il les licences sur les ordinateurs clients ?
 Le client RMS stocke les licences sur le disque local et met également en cache des informations dans le Registre Windows.
@@ -261,6 +261,6 @@ Dans certains cas, il se peut que vous deviez rediriger le trafic pendant la dé
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

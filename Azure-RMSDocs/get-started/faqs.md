@@ -4,7 +4,7 @@ description: "Certaines questions fréquentes sur Azure Information Protection e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/26/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: d55c21efebc0a3053c7b54b363a0085838a245b8
+ms.sourcegitcommit: d704751bcc7a968c204d0bab0dc55776411d9593
+ms.openlocfilehash: c62a8c087907914e249e119b288b9e3c557d04ea
 
 
 ---
@@ -56,19 +56,18 @@ Si votre question ne fait pas l’objet d’une réponse, utilisez les liens et 
 
 En outre, il existe des FAQ conçus pour les utilisateurs finaux :
 
--   [FAQ concernant l’application de partage Rights Management pour Windows](https://technet.microsoft.com/dn467883)
-
--   [FAQ relatif à l'application de partage Rights Management pour plateformes mobiles et Mac](https://technet.microsoft.com/dn451248)
-
 - [FAQ relatif à l’application Azure Information Protection pour iOS et Android](../rms-client/mobile-app-faq.md)
 
--   [FAQ pour le suivi de document](http://go.microsoft.com/fwlink/?LinkId=523977)
+- [FAQ relatif à l’application de partage RMS pour les ordinateurs Mac et Windows Phone](https://technet.microsoft.com/dn451248)
+
+- [FAQ concernant l’application de partage Rights Management pour Windows](https://technet.microsoft.com/dn467883)
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -4,7 +4,7 @@ description: "Découvrez en détail le fonctionnement d’Azure RMS, les contrô
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/27/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47648a1e03a4da5eb6088932544d9e34ca4ae7a
-ms.openlocfilehash: 42583d3ed7fb0fd5df85699c56fe7abe41093546
+ms.sourcegitcommit: d704751bcc7a968c204d0bab0dc55776411d9593
+ms.openlocfilehash: 0ff5deaaea73b7354d2b251c3ce9c768debd2269
 
 
 ---
@@ -52,7 +52,7 @@ Même si vous n'avez pas besoin de connaître le détail du fonctionnement de RM
 
 ###### <a name="footnote-1"></a>Note 1 
 
-La longueur de&256; bits est utilisée par l'application de partage Rights Management pour la protection en modes générique et natif quand le fichier a une extension de nom de fichier .ppdf, ou est un fichier image ou texte protégé (tel que .ptxt ou .pjpg).
+La longueur de&256; bits est utilisée par le client Azure Information Protection et l’application de partage Rights Management pour la protection en modes générique et natif quand le fichier a une extension de nom de fichier .ppdf, ou est un fichier image ou texte protégé (tel que .ptxt ou .pjpg).
 
 Mode de stockage et de sécurisation des clés de chiffrement :
 
@@ -140,7 +140,7 @@ Les procédures pas à pas précédentes couvrent les scénarios standard, mais 
 
 -   **Protection générique (.pfile)** : quand le service Azure Rights Management protège un fichier de façon générique, le flux est fondamentalement le même pour la protection du contenu, sauf que le client RMS crée une stratégie qui accorde tous les droits. Lorsque le fichier est consommé, il est déchiffré avant d'être transmis à l'application cible. Ce scénario vous permet de protéger tous les fichiers, même s'ils ne prennent pas en charge RMS en mode natif.
 
--   **PDF protégé (.ppdf)** : quand le service Azure Rights Management protège un fichier Office en mode natif, il en crée également une copie qu’il protège de la même façon. La seule différence est que la copie est un fichier au format PPDF, que l'application de partage RMS peut ouvrir en mode affichage. Ce scénario vous permet d'envoyer des pièces jointes protégées par courrier électronique, en sachant que le destinataire sur un appareil mobile sera toujours en mesure de les lire, même si son appareil n'a pas d'application prenant en charge en mode natif des fichiers Office protégés.
+-   **PDF protégé (.ppdf)** : quand le service Azure Rights Management protège un fichier Office en mode natif, il en crée également une copie qu’il protège de la même façon. La seule différence est que la copie est un fichier au format PPDF, que la visionneuse du client Azure Information Protection et l’application de partage RMS peuvent ouvrir en mode affichage uniquement. Ce scénario vous permet d'envoyer des pièces jointes protégées par courrier électronique, en sachant que le destinataire sur un appareil mobile sera toujours en mesure de les lire, même si son appareil n'a pas d'application prenant en charge en mode natif des fichiers Office protégés.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -156,6 +156,6 @@ Si vous êtes prêt à déployer la protection des données pour votre organisat
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO5-->
+<!--HONumber=Feb17_HO2-->
 
 

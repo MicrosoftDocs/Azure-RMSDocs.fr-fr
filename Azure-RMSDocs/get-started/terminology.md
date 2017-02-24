@@ -4,7 +4,7 @@ description: "Vous ne comprenez pas un mot, une expression ou un acronyme lié �
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: a5706c9cf8b81ec761865a800761c69584659578
+ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
+ms.openlocfilehash: 70657eb86ac3aeb53b8fb9983a33905100ca92b8
 
 
 ---
@@ -50,7 +50,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |Gestion des droits relatifs à l'information|Souvent abrégé *IRM*.<br /><br />Terme utilisé avec les services Office, comme Exchange Server, Word et SharePoint Online, pour décrire la capacité à prendre en charge les services Microsoft Rights Management.|
 |IRM|Voir *Gestion des droits relatifs à l’information*.|
 |MSDRM|Vu parfois comme référence au client RMS 1.0, qui est remplacé par le nouveau client, MSIPC. Cet ancien client prend en charge les applications développées avec RMS SDK 1.0, ainsi qu'Office 2010 et Office 2007, Exchange 2010 et Exchange 2013, SharePoint 2010 et SharePoint 2007.|
-|MSIPC|Vu parfois comme référence au client RMS 2.0, qui remplace l'ancien client RMS, MSDRM. Ce nouveau client prend en charge les applications développées avec RMS SDK 2.0, ainsi qu'Office 2016 et Office 2013, SharePoint 2013 et l'application de partage RMS.|
+|MSIPC|Vu parfois comme référence au client RMS 2.0, qui remplace l'ancien client RMS, MSDRM. Ce nouveau client prend en charge les applications développées avec RMS SDK 2.0, ainsi qu’Office 2016 et Office 2013, SharePoint 2013, l’application de partage RMS et le client Azure Information Protection.|
 |protection native|Niveau de protection disponible dans toutes les applications compatibles, qui empêche l'accès aux fichiers aux personnes non autorisées et qui permet également d'appliquer des stratégies restrictives, comme la lecture seule et l'interdiction d'impression. Il s'agit d'une protection permanente, même en cas de transfert des fichiers ou de sauvegarde dans un lieu public accessible à d'autres personnes.|
 |.pfile|Extension de nom de fichier annexée à tous les fichiers protégés via un service de gestion des droits.|
 |.ppdf|Extension de nom de fichier créée par un service de gestion des droits au moment de la création automatique d’une copie PDF d’un fichier (Word, Excel, PowerPoint ou PDF) que vous partagez par e-mail, afin que le fichier puisse être lu (mais pas modifié) sur tous les appareils.|
@@ -59,7 +59,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |publish|Protection des fichiers en vue d'empêcher tout accès et utilisation non autorisés.|
 |connecteur Rights Management|Relais de proxy sortant que vous pouvez déployer pour des services locaux, comme Exchange Server et SharePoint, afin de protéger les données à l’aide du service Azure Rights Management.|
 |services Rights Management|Terme générique qui s’applique à la fois à la version cloud de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ([!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]) et à la version locale de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] (AD RMS).|
-|application de partage Rights Management|Application téléchargeable optionnelle pour Windows et les appareils mobiles les plus courants, qui prend en charge le partage sécurisé de fichiers en local et par courrier électronique.|
+|application de partage Rights Management|Désormais remplacée par le client Azure Information Protection, une application en option pour Windows et les appareils mobiles les plus courants, qui prend en charge le partage sécurisé de fichiers en local et par courrier électronique.|
 |RMS|Voir *Services Rights Management*.|
 |connecteur RMS|Voir *Connecteur Rights Management*.|
 |RMS for individuals|Abonnement gratuit permettant à un utilisateur d’utiliser [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] quand son organisation ne possède pas d’abonnement Office 365 ou Azure Active Directory.|
@@ -73,6 +73,6 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -5,7 +5,7 @@ keywords: "Guide pratique pour afficher des e-mails ou des fichiers avec l’app
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -14,8 +14,8 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: b2fb20fb4613c688a8ab956fbe91d62041801959
+ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
+ms.openlocfilehash: 32e0315a8a4e6515b0b89b85afefa1bb17591e0b
 
 
 ---
@@ -32,9 +32,9 @@ Sur votre appareil mobile, vous devez accéder à l’un des fichiers que l’ap
     
     Utilisez un autre appareil pour vous envoyer un e-mail protégé par des droits auquel vous pouvez accéder à partir de votre appareil mobile. Par exemple, utilisez Outlook à partir d’un ordinateur Windows. Pour obtenir la liste des clients de messagerie prenant en charge la gestion des droits de manière native, consultez la colonne Adresse de messagerie dans [Applications prenant en charge la protection des données Azure Rights Management](../get-started/requirements-applications.md).
 
-- **Un fichier PDF protégé par des droits** : utilisez l’application de partage Rights Management à partir d’un ordinateur Windows ou une application PDF prenant en charge la gestion des droits de manière native pour vous envoyer un fichier PDF protégé par des droits comme pièce jointe dans un e-mail. Vous pouvez également télécharger un fichier PDF dans une bibliothèque protégée SharePoint, puis la partager en utilisant votre adresse e-mail.
+- **Un fichier PDF protégé par des droits** : à partir d’un ordinateur Windows, utilisez le client Azure Information Protection pour [protéger un fichier PDF](client-classify-protect.md), puis envoyez ce fichier PDF protégé par des droits par e-mail à votre adresse en tant que pièce jointe. Vous pouvez également télécharger un fichier PDF dans une bibliothèque protégée SharePoint, puis la partager en utilisant votre adresse e-mail.
 
-- **Un fichier .ptxt, .pjpg ou .ppng** : Utilisez l’application de partage Rights Management sur un ordinateur Windows et l’option [Partage protégé](sharing-app-protect-by-email.md) pour vous envoyer un fichier protégé comme pièce jointe d’e-mail. Pour obtenir la liste complète des types de fichiers que vous pouvez utiliser pour le test, consultez le premier tableau de la section [Types de fichier pris en charge et extensions de nom de fichier](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) dans le Guide de l'administrateur de l'application de partage Rights Management. 
+- **Un fichier ptxt, .pjpg ou .ppng** : à partir d’un ordinateur Windows, utilisez le client Azure Information Protection pour protéger un fichier texte ou image, puis envoyez ce fichier protégé par e-mail à votre adresse en tant que pièce jointe. Pour obtenir la liste complète des types de fichiers que vous pouvez utiliser pour le test, consultez la section [Types de fichiers pris en charge et extensions de noms de fichiers](client-admin-guide-file-types.md#supported-file-types-for-protection-and-their-file-name-extensions) du guide d’administration de client Azure Information Protection. 
 
 Pour afficher ces fichiers dans l’application de visionneuse Azure Information Protection, cliquez sur la pièce jointe ou le lien dans l’e-mail. Lorsque vous êtes invité à sélectionner une application avez laquelle les ouvrir, sélectionnez l’application **Visionneuse d’accès et de protection des informations**. Vous êtes ensuite invité à vous connecter avec votre compte professionnel ou scolaire. Une fois que vous êtes correctement authentifié, l’application Azure Information Protection affiche l’e-mail ou le fichier pour vous permettre de les lire.
 
@@ -47,6 +47,6 @@ Si vous avez d’autres questions, accédez à notre [site Yammer](https://www.y
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

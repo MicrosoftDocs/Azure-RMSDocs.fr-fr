@@ -1,18 +1,18 @@
 ---
-title: "Étape 1 du didacticiel de démarrage rapide | Azure Information Protection"
-description: "Étape 2 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 30 minutes."
+title: "Étape 2 du didacticiel de démarrage rapide | Azure Information Protection"
+description: "Étape 2 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 20 minutes."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 00d78bf12a7f400b3dfa7e35ada25177170e2d23
+ms.sourcegitcommit: 8ad1ff05f642571bfe7f4170cb88e29d05515e59
+ms.openlocfilehash: f3ec39af7bdbc63169c09eefa54c29cfc4cee40b
 
 
 ---
@@ -32,7 +32,7 @@ Bien qu’Azure Information Protection soit fourni avec une stratégie par défa
     > [!TIP] 
     > Sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous n’avez ainsi pas besoin d’accéder au service lors de votre prochaine connexion au portail.
 
-3.  Le panneau **Stratégie : Globale** qui s’affiche automatiquement indique la stratégie Information Protection par défaut automatiquement créée :
+3.  Sur le panneau Azure Information Protection, cliquez sur **Global** et explorez le panneau **Stratégie : Global**, qui indique la stratégie Information Protection par défaut qui est créée automatiquement :
     
     - Étiquettes de classification : **Personal**, **Public**, **Internal**, **Confidential** et **Secret**. Lisez l’info-bulle de chacune d’elles pour comprendre la façon dont les étiquettes sont censées être utilisées. Notez que **Secret** a deux sous-étiquettes (**All Company** et **My Group**), pour illustrer comment une classification peut avoir des sous-catégories.
 
@@ -114,7 +114,7 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
 
 Vous pouvez fermer le portail Azure, ou le laisser ouvert pour essayer des options de configuration supplémentaires après avoir terminé ce didacticiel.
 
-Ayant examiné la stratégie par défaut et apporté des modifications, vous pouvez passer à l’étape suivante, qui consiste à installer le client Azure Information Protection et l’application de partage Rights Management.
+Maintenant que vous avez examiné la stratégie par défaut et apporté des modifications, l’étape suivante consiste à installer le client Azure Information Protection.
 
 |Pour en savoir plus|Informations supplémentaires|
 |--------------------------------|--------------------------|
@@ -128,6 +128,6 @@ Ayant examiné la stratégie par défaut et apporté des modifications, vous pou
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

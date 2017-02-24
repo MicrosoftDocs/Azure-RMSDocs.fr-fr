@@ -4,15 +4,15 @@ description: "Présentation du service Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: c0ea97dc29855ad46271dac251c804ca602cee69
+ms.sourcegitcommit: 4d20462f190042e1ac8d674123296f65c66d9921
+ms.openlocfilehash: 50b83f165dfbcf9b5f66ae8bfc596d1aa910f10d
 
 
 ---
@@ -54,7 +54,7 @@ Ces modèles peuvent faire partie de la configuration d’une étiquette ; ains
 
 Cet exemple montre comment vous pouvez sélectionner un modèle pour une étiquette quand vous configurez la stratégie Azure Information Protection à partir du portail Azure :
 
-![Exemple de sélection de modèles dans le portail Azure](../media/templates-infoprotection-callouts.png)
+![Exemple de sélection de modèles dans le portail Azure](../media/info-protect-template-callout.png)
 
 Les mêmes modèles peuvent être sélectionnés à partir du centre d’administration Exchange pour configurer des règles de flux de messagerie Exchange Online, qui prennent en charge la technologie Azure Rights Management :
 
@@ -66,11 +66,21 @@ Pour plus d’informations sur la protection Azure Rights Management, consultez 
 
 Azure Information Protection s’intègre aux workflows existants des utilisateurs finaux quand le client Azure Information Protection est installé. Ce client installe la barre Information Protection dans les applications Office, illustrée dans la première image. La même barre est ajoutée à Excel, PowerPoint et Outlook. Exemple :
 
-![Exemple de la barre Azure Information Protection dans Excel](../media/excel2013-infoprotect-bar2.png)
+![Exemple de la barre Azure Information Protection dans Excel](../media/excel2016-infoprotect-bar.png)
 
 Cette barre Information Protection permet aux utilisateurs finaux de sélectionner des étiquettes pour définir la classification adéquate et, si nécessaire, ces étiquettes peuvent protéger automatiquement leurs documents et e-mails.
 
-Quand les utilisateurs partagent leurs documents protégés par e-mail, ils peuvent utiliser un site de suivi de document pour surveiller qui accède à ces documents et à quel moment. En outre, s’ils suspectent une utilisation incorrecte, ils peuvent révoquer l’accès à ces documents.
+Pour classifier et protéger d’autres types de fichiers et pour prendre en charge plusieurs fichiers à la fois, les utilisateurs peuvent cliquer avec le bouton droit sur les fichiers ou sur un dossier à partir de l’Explorateur de fichiers Windows :
+
+![Menu contextuel de l’Explorateur de fichiers, Classifier et protéger avec Azure Information Protection](../media/right-click-classify-protect-folder.png)
+
+Lorsque les utilisateurs sélectionnent l’option **Classifier et protéger**dans l’Explorateur de fichiers, ils peuvent ensuite sélectionner une étiquette de la même façon qu’ils utilisent la barre Information Protection dans leurs applications de bureau Office. Ils peuvent également définir leurs propres autorisations personnalisées, si nécessaire.
+
+Les utilisateurs avancés (et administrateurs) peuvent trouver l’utilisation des commandes PowerShell plus efficace pour la gestion et la configuration de la classification et de la protection de plusieurs fichiers. Les commandes PowerShell correspondantes sont incluses automatiquement avec le client, bien que vous puissiez également installer le module PowerShell séparément.
+
+Après qu’un document a été protégé, les utilisateurs et administrateurs peuvent utiliser un site de suivi des documents pour surveiller qui accède à ces documents et à quel moment. En outre, s’ils suspectent une utilisation incorrecte, ils peuvent révoquer l’accès à ces documents :
+
+![Icône Révoquer l’accès du site de suivi de document](../media/tracking-site-revoke-access-icon.png)
 
 
 ## <a name="resources-for-azure-information-protection"></a>Ressources pour Azure Information Protection
@@ -111,6 +121,6 @@ Vous connaissez Azure Information Protection ou Azure Rights Management sous un 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

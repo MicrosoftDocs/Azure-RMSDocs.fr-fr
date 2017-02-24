@@ -1,6 +1,6 @@
 ---
 title: "Étape 1 du didacticiel de démarrage rapide | Azure Information Protection"
-description: "Étape 1 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 30 minutes."
+description: "Étape 1 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 20 minutes."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 1b9a65619e2cbe9def71379dffc6c1df1729cdfa
+ms.sourcegitcommit: 420da63412f10431d29c01bad317c69cf72b66ad
+ms.openlocfilehash: a2631af6bf972a8c88d37e42149b90fb96f71763
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 1b9a65619e2cbe9def71379dffc6c1df1729cdfa
 > [!NOTE]
 >Si vous avez déjà activé le service Azure Rights Management pour votre locataire, passez directement à l’[étape suivante](infoprotect-tutorial-step2.md). 
 
-Quand le service Azure Rights Management est activé, vous pouvez protéger les documents et e-mails les plus sensibles de votre entreprise et suivre leur utilisation quand vous les partagez avec d’autres utilisateurs. Vous pouvez activer ce service de différentes façons, notamment en utilisant Windows PowerShell et par le biais des portails d’administration.
+Quand le service Azure Rights Management est activé, vous pouvez protéger les documents et e-mails les plus sensibles de votre entreprise et suivre l’utilisation des documents protégés quand vous les partagez avec d’autres utilisateurs. Vous pouvez activer ce service de différentes façons, notamment en utilisant Windows PowerShell et par le biais des portails d’administration.
 
 Pour ce didacticiel, nous allons passer directement à la page d’activation pour les administrateurs Office 365, qui est la même page pour le portail classique Office 365 et la préversion du centre d’administration Office 365. 
 
@@ -59,6 +59,6 @@ C’est tout ce que vous avez à faire pour cette première étape du didacticie
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

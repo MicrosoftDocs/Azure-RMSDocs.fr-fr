@@ -4,7 +4,7 @@ description: "Identifiez la configuration requise d’Azure AD pour utiliser Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 95d50707c362244972f286943abf9a07e3cedf38
+ms.sourcegitcommit: d704751bcc7a968c204d0bab0dc55776411d9593
+ms.openlocfilehash: ecb85e8fd2f09579536782f00a1babddb9466c54
 
 
 ---
@@ -52,9 +52,13 @@ Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Pro
 
     -   Si vous avez Office 2013, vous devez également installer la [mise à jour du 9 juin 2015 pour Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). Pour plus d’informations sur cette mise à jour et la manière dont l’authentification moderne introduit la connexion basée sur Azure Active Directory Authentication Library (ADAL) à Office 2013, consultez [Office 2013 modern authentication public preview announced](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) sur le blog Office.
 
+- Client Azure Information Protection :
+
+    - Le [client Azure Information Protection](../rms-client/aip-client.md) pour Windows et pour iOS et Android a toujours pris en charge l’authentification MFA ; aucune version minimale n’est requise. 
+
 -   Application de partage Rights Management pour Windows :
 
-    -   Vous devez avoir installé la version minimale 1.0.1908.0, ce que vous pouvez vérifier dans la rubrique Programmes et fonctionnalités du Panneau de configuration. Pour plus d’informations sur l’application de partage, consultez [Application de partage Rights Management pour Windows](../rms-client/sharing-app-windows.md).
+    -   Vous devez avoir installé la version minimale 1.0.1908.0, ce que vous pouvez vérifier dans la rubrique Programmes et fonctionnalités du Panneau de configuration. L’application de partage de Rights Management est désormais remplacée par le client Azure Information Protection. Pour plus d’informations sur l’application de partage, consultez [Application de partage Rights Management pour Windows](../rms-client/sharing-app-windows.md).
 
 -   Application de partage Rights Management pour appareils mobiles et ordinateurs Mac :
 
@@ -81,6 +85,6 @@ Pour vérifier les autres conditions requises, consultez [Configuration requise 
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

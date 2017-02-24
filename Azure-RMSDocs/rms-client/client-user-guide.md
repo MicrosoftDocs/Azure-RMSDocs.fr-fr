@@ -4,17 +4,17 @@ description: "Le client Azure Information Protection pour Windows vous permet de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
-ms.reviewer: esaggese
+ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 5b9713827dccc73828515c71f6e8527c2963b01d
+ms.sourcegitcommit: f8d41ff31b4512ea4c9335ce1ca243095526db84
+ms.openlocfilehash: 1303546ebc5073c0370c1da685cb4f1a74e3e7e1
 
 
 ---
@@ -23,13 +23,10 @@ ms.openlocfilehash: 5b9713827dccc73828515c71f6e8527c2963b01d
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 
-**[Cette version du client est une préversion susceptible d’être modifiée.]**
-
 Le client Azure Information Protection pour Windows vous permet de tenir des documents et e-mails importants à distance des personnes qui ne doivent pas les voir, même si vos e-mails sont transférés ou vos documents enregistrés à un autre emplacement. Vous pouvez également utiliser ce client pour ouvrir des documents que d’autres personnes ont protégés à l’aide de la technologie de protection Rights Management dans Azure Information Protection.
 
 Tout ce dont vous avez besoin, c’est d’un ordinateur exécutant au moins Windows 7 avec Service Pack 1. Ensuite, téléchargez auprès de Microsoft et installez ce client gratuit.
 
-Si vous avez des questions dont les réponses ne figurent pas dans ce guide, visitez notre [site Azure Information Protection Yammer](https://www.yammer.com/AskIPTeam). 
 
 ## <a name="what-do-you-want-to-do"></a>Que souhaitez-vous faire ?
 
@@ -41,9 +38,18 @@ Si vous avez des questions dont les réponses ne figurent pas dans ce guide, vis
 
 - [Ouvrir des fichiers protégés](client-view-use-files.md)
 
+- [Supprimer des étiquettes et la protection des fichiers et e-mails](client-remove-label-protection.md)
+
+- [Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS](upgrade-client-app.md)
+
+
+> [!NOTE]
+> Si vous êtes un administrateur responsable du client Azure Information Protection sur un réseau d’entreprise, consultez le [Guide de l’administrateur du client Azure Information Protection](client-admin-guide.md) pour des informations techniques supplémentaires. 
+
+
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

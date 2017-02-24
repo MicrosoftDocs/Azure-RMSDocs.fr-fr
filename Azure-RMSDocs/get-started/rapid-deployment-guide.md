@@ -1,10 +1,10 @@
 ---
-title: "Guide de déploiement rapide pour Azure Information Protection | Azure Information Protection"
-description: "Guide vous permettant de déployer et d’utiliser plus rapidement Azure Information Protection pour protéger les données de votre organisation. Commencez par choisir un scénario spécifique à implémenter dans une liste."
+title: "Guide de déploiement rapide pour Azure Rights Management | Azure Information Protection"
+description: "Guide vous permettant de déployer et d’utiliser plus rapidement le service Azure Rights Management pour protéger les données de votre organisation. Commencez par choisir un scénario spécifique à implémenter dans une liste."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: abe3de4cb972053179a87023c91509168ffeffc4
 
 
 ---
@@ -23,7 +23,10 @@ ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
 
 >*S’applique à : Azure Information Protection, Office 365*
 
-Utilisez ce guide en complément des informations de configuration fournies dans la section **Déployer et utiliser** pour vous aider à déployer et à utiliser rapidement Azure Information Protection en effectuant votre choix dans une liste de scénarios spécifiques à implémenter.
+Utilisez ce guide en complément des informations de configuration fournies dans la section **Déployer et utiliser** pour vous aider à déployer plus rapidement une solution de protection uniquement utilisant le service Azure Rights Management d’Azure Information Protection. Choisissez dans une liste un scénario spécifique à implémenter.
+
+> [!NOTE]
+> À ce stade, le guide contient des scénarios de protection uniquement et ne contient pas de scénarios pour la classification et la protection, ni pour le client Azure Information Protection. 
 
 Ces scénarios contiennent des instructions destinées aux administrateurs et une documentation associée à l’adresse des utilisateurs finaux. Avant de fournir la documentation (instructions ou annonces) à vos utilisateurs finaux, vous devez la personnaliser en fonction de vos besoins et des flux de travail existants. Un exemple d’instructions ou d’annonce montre à quoi peut ressembler la documentation destinée aux utilisateurs finaux.
 
@@ -33,8 +36,7 @@ Les scénarios répertoriés ici sont un échantillon des plus populaires. Étan
 
 Avant de déployer ces solutions, vous souhaiterez peut-être envoyer une annonce aux utilisateurs finaux pour leur signaler que certains changements vont avoir lieu pour aider à protéger les données de l’entreprise, et qu’ils seront peut-être mis à contribution. Un exemple d’annonce est fourni après le tableau suivant.
 
-> [!NOTE]
-> Si vous avez des questions et des commentaires concernant ce guide, utilisez les mécanismes de commentaires indiqués sur cette page ou envoyez un e-mail à [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
+Si vous avez des questions et des commentaires concernant ce guide, utilisez les mécanismes de commentaires indiqués sur cette page ou envoyez un e-mail à [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
 ## <a name="scenarios-for-azure-information-protection"></a>Scénarios pour Azure Information Protection
 Pour vous aider à déployer rapidement Azure Information Protection pour résoudre des problèmes professionnels spécifiques, choisissez les scénarios qui correspondent le plus à vos objectifs commerciaux et adaptez-les si nécessaire.
@@ -148,6 +150,6 @@ Les solutions que nous implémentons nous aideront à protéger nos données les
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

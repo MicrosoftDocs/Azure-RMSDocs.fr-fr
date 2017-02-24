@@ -4,7 +4,7 @@ description: "Informations vous permettant de configurer les serveurs locaux des
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/29/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: f262d64a1903eb47bf5f54577fa68df9d43c7f2d
+ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
+ms.openlocfilehash: faff30ed2115307ff51afc24db8d08233eee9d14
 
 
 ---
@@ -248,7 +248,7 @@ Pour utiliser le connecteur RMS et l'infrastructure de classification des fichie
 3.  Créez des règles de classification et des tâches de gestion de fichiers pour protéger les documents avec le chiffrement RMS, puis spécifiez un modèle RMS pour appliquer automatiquement des stratégies RMS. Pour plus d'informations, voir [Vue d'ensemble du Gestionnaire de ressources du serveur de fichiers](http://technet.microsoft.com/library/hh831701.aspx) dans la bibliothèque de documentation Windows Server.
 
 ## <a name="next-steps"></a>Étapes suivantes
-Maintenant que le connecteur RMS est installé et configuré, et que vos serveurs sont configurés pour l’utiliser, les administrateurs informatiques et les utilisateurs peuvent protéger et utiliser les e-mails et les documents à l’aide du service Azure Rights Management. Pour faciliter la tâche des utilisateurs, déployez l'application de partage RMS, qui installe un module complémentaire pour Office et ajoute de nouvelles options contextuelles à l'Explorateur de fichiers. Pour plus d’informations, consultez le [guide d’administration de l’application de partage Rights Management](../rms-client/sharing-app-admin-guide.md).
+Maintenant que le connecteur RMS est installé et configuré, et que vos serveurs sont configurés pour l’utiliser, les administrateurs informatiques et les utilisateurs peuvent protéger et utiliser les e-mails et les documents à l’aide du service Azure Rights Management. Pour faciliter la tâche des utilisateurs, déployez le client Azure Information Protection, qui installe un module complémentaire pour Office et ajoute de nouvelles options contextuelles à l’Explorateur de fichiers. Pour plus d’informations, consultez le [Guide de l’administrateur du client Azure Information Protection](../rms-client/client-admin-guide.md).
 
 Notez, que si vous configurez des modèles de services que vous souhaitez utiliser avec des règles de transport Exchange ou Windows Server FCI, la configuration de l’étendue doit inclure l’option de compatibilité des applications de manière à ce que la case à cocher **Afficher ce modèle à tous les utilisateurs lorsque les applications ne prennent pas en charge l'identité de l'utilisateur** soit activée.
 
@@ -259,6 +259,6 @@ Pour surveiller le connecteur RMS, consultez [Surveiller le connecteur Azure Rig
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

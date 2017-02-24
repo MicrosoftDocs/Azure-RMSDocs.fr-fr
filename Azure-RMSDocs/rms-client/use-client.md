@@ -4,7 +4,7 @@ description: "Microsoft Azure Information Protection fournit une solution client
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,15 +14,15 @@ ROBOTS: noindex,nofollow
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed836a1f64ccb3f7e176ad19d27af1021c423cd9
-ms.openlocfilehash: 11f4be72cfe1ab50286254bd4de18b66def0a6cb
+ms.sourcegitcommit: 190b5d2a25dc9479aa2ba34fd884795e0de40238
+ms.openlocfilehash: f52f3e04f41e33828bd9a9c5c1aad3ef460b2d23
 
 
 ---
 
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
->*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 
 Azure Information Protection fournit une solution client-serveur qui permet de protéger les documents et e-mails d’une organisation :
 
@@ -32,17 +32,19 @@ Azure Information Protection fournit une solution client-serveur qui permet de p
 
 Le client Azure Information Protection prend en charge la classification et l’étiquetage, en plus de la protection. Ce client s’intègre aux applications Office et doit être installé séparément.
 
-Le client Rights Management (RMS) est installé automatiquement avec certaines applications, telles que les applications Office, l’application de partage RMS et les applications d’éditeurs de logiciels compatibles avec RMS. Toutefois, il peut également être installé de manière autonome, par exemple quand des développeurs souhaitent intégrer la protection Rights Management à leurs applications métier ou quand des administrateurs ou des utilisateurs avec pouvoir souhaitent protéger en bloc des fichiers à l’aide de l’outil de protection RMS.
+Le client Rights Management (RMS) est installé automatiquement avec certaines applications, telles que les applications Office, le client Azure Information Protection, et les applications d’éditeurs de logiciels compatibles avec RMS. Toutefois, il peut également être installé de manière autonome, par exemple quand des développeurs souhaitent intégrer la protection Rights Management aux applications métier.
 
 Consultez la documentation suivante si vous avez besoin de plus d’informations sur la façon de déployer et d’utiliser ces clients, qui peuvent être utilisés avec Azure Information Protection et Active Directory Rights Management Services pour aider à protéger les données de votre organisation :
 
-- [Installation du client Azure Information Protection](info-protect-client.md)
+- [Client Azure Information Protection](AIP-client.md)
 
 - [Notes sur le déploiement du client RMS](client-deployment-notes.md)
 
 - [Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server](configure-fci.md)
 
 - [Application de partage Rights Management pour Windows](sharing-app-windows.md)
+
+L’application de partage de Rights Management pour Windows et l’outil de protection RMS sont désormais remplacés par le client Azure Information Protection. 
 
 
 ## <a name="see-also"></a>Voir aussi
@@ -51,6 +53,6 @@ Consultez la documentation suivante si vous avez besoin de plus d’informations
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -1,18 +1,18 @@
 ---
 title: "Didacticiel de démarrage rapide | Azure Information Protection"
-description: "Didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 30 minutes."
+description: "Didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 20 minutes."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 02/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 2a601d075245280d30b78d9c38bbb09e6387f8be
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 4d61cf28be8e41cad20ff2dbc3be2c71eac9d2ad
 
 
 ---
@@ -21,9 +21,9 @@ ms.openlocfilehash: 2a601d075245280d30b78d9c38bbb09e6387f8be
 
 >*S’applique à : Azure Information Protection*
 
-Utilisez ce didacticiel pour tester rapidement Azure Information Protection en seulement 5 étapes et environ 30 minutes. Ce didacticiel est conçu comme une démonstration autoguidée pour illustrer rapidement certaines des fonctions et fonctionnalités d’Azure Information Protection. Il n’inclut pas toutes les fonctionnalités disponibles et n’est pas destiné à servir de guide de déploiement au sein de votre organisation. Si vous envisagez de déployer Azure Information Protection dans votre organisation, consultez la [documentation relative à la feuille de route pour le déploiement](../plan-design/deployment-roadmap.md). 
+Utilisez ce didacticiel pour tester rapidement Azure Information Protection en seulement 5 étapes et environ 20 minutes. Ce didacticiel est conçu comme une démonstration autoguidée pour illustrer rapidement certaines des fonctions et fonctionnalités d’Azure Information Protection. Il n’inclut pas toutes les fonctionnalités disponibles et n’est pas destiné à servir de guide de déploiement au sein de votre organisation. Si vous envisagez de déployer Azure Information Protection dans votre organisation, consultez la [documentation relative à la feuille de route pour le déploiement](../plan-design/deployment-roadmap.md). 
 
-Ce didacticiel est destiné aux administrateurs et consultants en informatique, afin de les aider à évaluer Azure Information Protection comme solution de protection des informations pour une organisation. Dans un environnement de production, les étapes pour configurer la stratégie Information Protection et installer le client et l’application pour les utilisateurs reviennent à un administrateur. Quant aux étapes d’étiquetage d’un document, de son partage sécurisé par e-mail, puis de son suivi, elles incombent aux utilisateurs finaux. Ce didacticiel englobe toutes ces étapes pour illustrer des scénarios de bout en bout classiques consistant à classifier, à étiqueter et à protéger les données de votre organisation. 
+Ce didacticiel est destiné aux administrateurs et consultants en informatique, afin de les aider à évaluer Azure Information Protection comme solution de protection des informations pour une organisation. Dans un environnement de production, les étapes pour configurer la stratégie Information Protection et installer le client pour les utilisateurs reviennent à un administrateur. Quant aux étapes d’étiquetage d’un document, de son partage sécurisé par e-mail, puis de son suivi, elles incombent aux utilisateurs finaux. Ce didacticiel englobe toutes ces étapes pour illustrer des scénarios de bout en bout classiques consistant à classifier, à étiqueter et à protéger les données de votre organisation. 
 
 Si vous rencontrez des problèmes pour effectuer ce didacticiel, pour utiliser Azure Information Protection, ou si vous souhaitez savoir ce que d’autres en pensent, rendez-vous sur le [site Azure Information Protection Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
@@ -53,6 +53,6 @@ C’est parti !
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

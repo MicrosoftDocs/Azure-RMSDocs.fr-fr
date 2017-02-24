@@ -4,7 +4,7 @@ description: "Instructions à suivre pour obtenir ce compte gratuit et informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 1de26925961ad560cb9aa86ebc16f7354c7cff1f
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 57e7cb922c0701dbe1088d205cfc56a69dcc4e05
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: 1de26925961ad560cb9aa86ebc16f7354c7cff1f
 
 >*S’applique à : Azure Information Protection*
 
-Pour obtenir un compte gratuit, demandez-le via la [page Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) et indiquez votre adresse e-mail professionnelle. Le plus souvent, vous êtes redirigé vers cette page d’inscription après avoir reçu un e-mail avec une pièce jointe protégée qui explique la procédure d’inscription. Vous recevez alors un message électronique en réponse de Microsoft, et pouvez ensuite effectuer la procédure d'inscription en fournissant les détails nécessaires pour la création de votre compte. À la fin de cette procédure, vous voyez s’afficher une page à partir de laquelle vous pouvez télécharger l’application de partage pour différents appareils, un lien vers le guide de l’utilisateur et un lien pour obtenir la dernière liste des applications offrant une prise en charge native de la protection Rights Management. 
+Pour obtenir un compte gratuit, demandez-le via la [page Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) et indiquez votre adresse e-mail professionnelle. Le plus souvent, vous êtes redirigé vers cette page d’inscription après avoir reçu un e-mail avec une pièce jointe protégée qui explique la procédure d’inscription. Vous recevez alors un message électronique en réponse de Microsoft, et pouvez ensuite effectuer la procédure d'inscription en fournissant les détails nécessaires pour la création de votre compte. À la fin de cette procédure, vous voyez s’afficher une page à partir de laquelle vous pouvez télécharger le client Azure Information Protection pour différents appareils, un lien vers le guide de l’utilisateur et un lien pour obtenir la dernière liste des applications offrant une prise en charge native de la protection Rights Management. 
 
 ## <a name="to-sign-up-for-rms-for-individuals"></a>Inscription à RMS for individuals
 
@@ -44,7 +44,7 @@ Pour obtenir un compte gratuit, demandez-le via la [page Microsoft Azure Informa
 
 6.  Dans la page **Dernière chose...** qui s’affiche, vous allez maintenant entrer les informations de votre compte. Tapez vos nom et prénom, entrez et confirmez le mot de passe de votre choix, puis cliquez sur **Démarrer**.
 
-7. Une fois que votre compte est créé, vous voyez s’afficher une nouvelle page Microsoft Rights Management à partir de laquelle vous pouvez télécharger et installer l’application de partage, ou cliquer sur le lien [Plus d’informations](../rms-client/sharing-app-user-guide.md) pour consulter le guide de l’utilisateur de l’application de partage.
+7. Une fois votre compte créé, vous verrez une nouvelle page Microsoft Azure Information Protection où vous pouvez télécharger et installer le client Azure Information Protection, ou cliquer sur le lien [Guide de l’utilisateur](../rms-client/client-user-guide.md) pour obtenir des instructions sur les procédures pour les ordinateurs Windows.
 
 Votre compte étant créé, vous pouvez à présent protéger des fichiers et lire des fichiers protégés par d'autres personnes. Si vous êtes invité à vous connecter pour protéger des fichiers ou utiliser des fichiers protégés, entrez l’adresse e-mail et le mot de passe que vous avez utilisés pour créer le compte RMS for Individuals.
 
@@ -60,7 +60,7 @@ Voici ce qui se passe en arrière-plan quand un utilisateur s'inscrit à RMS for
 
     Si un client est trouvé, son compte est vérifié pour voir s'il dispose déjà un abonnement Azure RMS. À défaut, l'abonnement gratuit à RMS for Individuals peut être ajouté.
 
-2.  L'organisation reçoit un abonnement RMS for Individuals. Désormais, Azure peut authentifier cet utilisateur qui peut ensuite protéger des fichiers et lire des fichiers protégés par d'autres grâce à Azure Rights Management. Pour protéger des fichiers et lire des fichiers protégés, l’utilisateur doit disposer d’une application compatible RMS, telle que l’[application de partage Rights Management](../rms-client/sharing-app-windows.md) disponible gratuitement.
+2.  L'organisation reçoit un abonnement RMS for Individuals. Désormais, Azure peut authentifier cet utilisateur qui peut ensuite protéger des fichiers et lire des fichiers protégés par d'autres grâce à Azure Rights Management. Pour protéger des fichiers et lire des fichiers protégés, l’utilisateur doit disposer d’une application compatible RMS, telle que le [client Azure Information Protection](../rms-client/aip-client.md) disponible gratuitement.
 
 3.  Lorsque le deuxième utilisateur de la même organisation demande un abonnement RMS for individuals, un nouveau compte utilisateur est ajouté à l'annuaire Azure créé précédemment en utilisant l'abonnement RMS for individuals de l'organisation. Ce deuxième utilisateur a les mêmes droits que le premier (protéger des fichiers et lire des fichiers protégés), mais, en plus de cela, les deux utilisateurs peuvent désormais collaborer plus aisément en toute sécurité, car ils peuvent rapidement appliquer des modèles par défaut à des fichiers, qui restreignent l'accès aux comptes figurant dans l'annuaire Azure de leur organisation.
 
@@ -97,6 +97,6 @@ Consultez [Contrôle administrateur des comptes créés pour RMS for individuals
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

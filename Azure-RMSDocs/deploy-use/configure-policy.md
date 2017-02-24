@@ -4,7 +4,7 @@ description: "Pour configurer la classification, l’étiquetage et la protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 10c7d307cceb1ca5f1b9bf857fdbe9aea0dc321d
+ms.sourcegitcommit: 8ad1ff05f642571bfe7f4170cb88e29d05515e59
+ms.openlocfilehash: 2ad10e378c14dbaef09ccd321379a0dbd7c0d23d
 
 
 ---
@@ -31,7 +31,7 @@ Pour configurer la stratégie Azure Information Protection :
 
 2. Accédez au panneau **Azure Information Protection**: par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information Protection** dans la zone Filtrer. Dans les résultats, sélectionnez **Azure Information Protection**. 
 
-    S’affiche alors le panneau **Azure Information Protection**, qui ouvre automatiquement le panneau de la stratégie Information Protection globale que tous les utilisateurs obtiennent. Ce dernier contient les éléments suivants que vous pouvez configurer :
+    Vous verrez alors le panneau **Azure Information Protection**, où vous pouvez ouvrir la stratégie **Global** accessible par tous les utilisateurs. Vous pouvez également ajouter et modifier des stratégies délimitées. La stratégie **Global** Azure Information Protection contient les éléments suivants que vous pouvez configurer :
 
     - Les étiquettes qui permettent aux utilisateurs de classifier des documents et des e-mails.
 
@@ -83,6 +83,6 @@ Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

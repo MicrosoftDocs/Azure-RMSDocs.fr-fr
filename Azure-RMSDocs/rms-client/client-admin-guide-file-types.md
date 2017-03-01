@@ -1,10 +1,10 @@
 ---
-title: Types de fichiers pris en charge par le client Azure Information Protection | Azure Information Protection
+title: "Types de fichiers pris en charge par Azure Information Protection"
 description: "Détails techniques sur les types de fichiers pris en charge, les extensions de noms de fichiers et les niveaux de protection pour les administrateurs responsables du client Azure Information Protection pour Windows."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/09/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid:
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f4503c7383f9ffd9dc7e5cd3c676ec929bdc2802
-ms.openlocfilehash: c556769aa34282063ae10190202a746eee33abe6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 107bac4e318c08d4fdc6d24fc88a6f7cbe5c0a74
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -92,7 +93,6 @@ Pour les fichiers protégés de manière générique, l'extension de nom de fich
 |.tiff|.ptiff|
 |.bmp|.pbmp|
 |.gif|.pgif|
-|.giff|.pgiff|
 |.jpe|.pjpe|
 |.jfif|.pjfif|
 |.jt|.pjt|
@@ -176,9 +176,4 @@ Maintenant que vous avez identifié les types de fichiers pris en charge par le 
 - [Commandes PowerShell](client-admin-guide-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

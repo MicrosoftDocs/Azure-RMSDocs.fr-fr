@@ -1,10 +1,10 @@
 ---
-title: "Azure Information Protection : autres appellations | Azure Information Protection"
+title: "Azure Information Protection : autres appellations"
 description: "Azure Information Protection ayant changé plusieurs fois d’appellation, il est possible que vous le connaissiez sous un autre nom."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 1b5268a13538df1537dbf3ea6f66eeda2b5e2292
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 179a145e1b7079b2c5cec7317f6af3e93ee6cd3f
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -43,10 +44,5 @@ Pour plus d’informations sur l’achat ou l’évaluation d’Azure Informatio
 
 > [!NOTE]
 > En tant que solution de protection d’informations concernant l’entreprise, Azure Information Protection et Microsoft Rights Management Services n’assurent pas la gestion des droits numériques (DRM), généralement destinée à protéger contre la distribution illégale des logiciels. 
-
-
-
-
-<!--HONumber=Jan17_HO4-->
 
 

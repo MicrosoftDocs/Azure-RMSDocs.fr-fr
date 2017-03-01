@@ -1,5 +1,5 @@
 ---
-title: "Guide de déploiement rapide pour Azure Rights Management | Azure Information Protection"
+title: "Guide de déploiement rapide pour Azure RMS - AIP"
 description: "Guide vous permettant de déployer et d’utiliser plus rapidement le service Azure Rights Management pour protéger les données de votre organisation. Commencez par choisir un scénario spécifique à implémenter dans une liste."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: abe3de4cb972053179a87023c91509168ffeffc4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 2e50dc9d53550f35f5c589cdb1b384e0abf585e0
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -147,9 +148,4 @@ Les données (celles que nous générons, stockons et utilisons au quotidien) so
 Les solutions que nous implémentons nous aideront à protéger nos données les plus précieuses et vous donneront les outils nécessaires pour conserver le contrôle de ces données. Nous vous remercions de votre collaboration pendant l’implémentation de ces modifications.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

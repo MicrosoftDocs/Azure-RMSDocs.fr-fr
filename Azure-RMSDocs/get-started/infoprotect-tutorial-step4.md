@@ -1,5 +1,5 @@
 ---
-title: "Étape 4 du didacticiel de démarrage rapide | Azure Rights Management"
+title: "Didacticiel de démarrage rapide, étape 4 - AIP"
 description: "Étape 3 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 20 minutes."
 author: cabailey
 ms.author: cabailey
@@ -11,8 +11,9 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: bf438f4f7617b4cc05df7f4a7067c5ac57fd1d06
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 57a46c7afe34717dd4335b0f9a19bd539821fc72
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -73,8 +74,3 @@ La classification, l’étiquetage et la protection n’ayant plus de secret pou
 [Étape 5 &#187;](infoprotect-tutorial-step5.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

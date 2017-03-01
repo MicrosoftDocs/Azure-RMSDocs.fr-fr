@@ -1,5 +1,5 @@
 ---
-title: "Office 365 &colon; configuration pour les clients et services en ligne | Azure Information Protection"
+title: "Office 365&colon; Configurer des clients et des services en ligne - AIP"
 description: "Informations et instructions permettant aux administrateurs de configurer Office 365 pour qu’il fonctionne avec le service Azure Rights Management d’Azure Information Protection."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
-ms.openlocfilehash: 2b90ba203c8d1874eab193d24d16117af2442449
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f0f486620f4b13dc8d94fee742eec2f8e4753d78
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -561,7 +562,7 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
 
     2.  Recherchez `$tenantAdmin` et remplacez la valeur de l’exemple par votre propre compte d’administrateur général complet pour Office 365.
 
-        Cette valeur est identique à celle que vous utilisez pour vous connecter au portail d’administration d’Office 365 en tant qu’administrateur général. Son format est le suivant : user_name@*&lt;nom de domaine du locataire&gt;*.com
+        Cette valeur est identique à celle que vous utilisez pour vous connecter au portail d’administration d’Office 365 en tant qu’administrateur général. Son format est le suivant : nom_utilisateur@*&lt;nom de domaine du client&gt;*.com
 
         Par exemple, si le nom d’utilisateur de l’administrateur général d’Office 365 est « admin » pour le domaine de locataire « contoso.com », vous devez spécifier : **admin@contoso.com**
 
@@ -1112,9 +1113,4 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 ```
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

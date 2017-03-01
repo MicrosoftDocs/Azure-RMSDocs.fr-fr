@@ -1,5 +1,5 @@
 ---
-title: Configuration des serveurs pour le connecteur Azure Rights Management | Azure Information Protection
+title: "Configurer des serveurs pour le connecteur Azure Rights Management - AIP"
 description: "Informations vous permettant de configurer les serveurs locaux destinés à utiliser le connecteur Azure Rights Management (RMS). Ces procédures couvrent l’étape 5 de Déploiement du connecteur Azure Rights Management."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
-ms.openlocfilehash: faff30ed2115307ff51afc24db8d08233eee9d14
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 8837b6187aee8bc041df7185527470297e913f49
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -257,8 +258,3 @@ Vous pouvez utiliser la [Feuille de route pour le déploiement d’Azure Informa
 Pour surveiller le connecteur RMS, consultez [Surveiller le connecteur Azure Rights Management](monitor-rms-connector.md). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

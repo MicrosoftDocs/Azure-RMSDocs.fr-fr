@@ -1,10 +1,10 @@
 ---
-title: "Étape 2 &colon; Migration de clé protégée par logiciel à clé protégée par logiciel | Azure Information Protection"
+title: "Migrer une clé protégée par logiciel vers une autre clé protégée par logiciel - AIP"
 description: "Instructions qui font partie du chemin de migration d’AD RMS vers Azure Information Protection. Celles-ci s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous souhaitez procéder à la migration vers Azure Information Protection avec une clé de locataire protégée par logiciel."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ed9bc164a69eb15733ceb2f1b3cb4f4bd740b4d9
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 707d31d8cd2f012a4223a3654b2c1bbcefa2d1a8
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -68,10 +69,5 @@ La procédure suivante permet d’importer la configuration AD RMS dans Azure I
 Vous êtes maintenant prêt à passer à l’[Étape 3. Activez votre locataire Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Jan17_HO4-->
 
 

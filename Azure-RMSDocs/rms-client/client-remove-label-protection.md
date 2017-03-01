@@ -1,5 +1,5 @@
 ---
-title: "Supprimer des étiquettes de classification et la protection des fichiers et des e-mails | Azure Information Protection"
+title: "Supprimer des étiquettes Azure Information Protection"
 description: "Instructions pour supprimer des étiquettes de classification et la protection des fichiers qui ont été étiquetés par Azure Information Protection ou protégés par Rights Management."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid:
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0a720ab08596964ed04fdc800ce55f3932a7cc0f
-ms.openlocfilehash: fc401131a11426a17be4417d049199fb1c1a8f68
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: af6f57c265509f383dfe1354e5d1256665fc155b
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -74,8 +75,3 @@ Plus d’instructions pratiques dans le guide de l’utilisateur Azure Informati
 -   [Que voulez-vous faire ?](client-user-guide.md#what-do-you-want-to-do)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

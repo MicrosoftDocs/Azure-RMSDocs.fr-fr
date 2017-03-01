@@ -1,10 +1,10 @@
 ---
-title: "Configuration de la stratégie | Azure Information Protection"
+title: "Configurer la stratégie Azure Information Protection"
 description: "Pour configurer la classification, l’étiquetage et la protection, vous devez configurer la stratégie Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8ad1ff05f642571bfe7f4170cb88e29d05515e59
-ms.openlocfilehash: 2ad10e378c14dbaef09ccd321379a0dbd7c0d23d
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 2510c14fc10411783838516f45fdfd06fd73350d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -67,7 +68,7 @@ Utilisez les informations suivantes pour configurer votre stratégie Azure Infor
 
 - [Comment modifier ou personnaliser une étiquette existante](configure-policy-change-label.md)
 
-- [Comment configurer une étiquette pour appliquer la protection](configure-policy-protection.md)
+- [Comment configurer une étiquette pour la protection](configure-policy-protection.md)
 
 - [Comment configurer une étiquette pour appliquer des marquages visuels](configure-policy-markings.md)
 
@@ -80,9 +81,4 @@ Utilisez les informations suivantes pour configurer votre stratégie Azure Infor
 Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut et voir le comportement qui en résulte dans une application Office, essayez le [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

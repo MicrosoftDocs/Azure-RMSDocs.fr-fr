@@ -1,5 +1,5 @@
 ---
-title: Ce que voient les utilisateurs et les administrateurs | Azure Information Protection
+title: "Informations affichées aux administrateurs et aux utilisateurs par Azure RMS - AIP"
 description: "Découvrez quelques exemples classiques illustrant comment les administrateurs et les utilisateurs voient et peuvent utiliser la technologie Azure Rights Management (Azure RMS) pour protéger des informations sensibles ou confidentielles."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e47a065737c950d4b616230c2915b4f2c8b6ee88
-ms.openlocfilehash: d4dd6bed227f959b7791249af5f4103f25c27c6e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 4fb412ff1128842fd1f3c95d39a4a626c67f97a0
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -241,8 +242,3 @@ Si Bob transfère le message électronique avec la pièce jointe, ou l'enregistr
 Après avoir vu ces quelques exemples de ce qu'Azure RMS peut faire, peut-être souhaitez-vous savoir comment il le fait. Pour obtenir des informations techniques sur le fonctionnement d’Azure RMS, consultez [Fonctionnement d’Azure RMS](how-does-it-work.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

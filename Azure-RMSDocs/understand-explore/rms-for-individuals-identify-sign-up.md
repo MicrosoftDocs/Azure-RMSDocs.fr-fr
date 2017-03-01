@@ -1,5 +1,5 @@
 ---
-title: "Comment déterminer si des utilisateurs se sont inscrits à RMS for Individuals | Azure Information Protection"
+title: "Déterminer si des utilisateurs se sont inscrits à RMS for individuals - AIP"
 description: "En tant qu&quot;administrateur, vous souhaitez sûrement savoir si vos utilisateurs se sont inscrits à RMS for individuals. Vous pouvez utiliser l’une des méthodes décrites dans cet article ou une combinaison de ces méthodes."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 5dae8412277be37cd3ff8cfe76c71a8109277146
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: e696bf596255b5e28aa5589cfc18715f100c5b07
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -35,8 +36,3 @@ En tant qu'administrateur, vous souhaitez sûrement savoir si vos utilisateurs s
 -   Recherchez les extensions de nom de fichier créées par le client Azure Information Protection et l’application de partage Rights Management. Les extensions de nom de fichier .pfile et .ppdf sont les exemples les plus évidents, mais d’autres fichiers changent d’extension de nom de fichier quand ils sont protégés nativement par le service Rights Management. Pour plus d’informations, consultez la section [Types de fichiers pris en charge pour la protection](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) dans le guide de l’administrateur du client Azure Information Protection.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

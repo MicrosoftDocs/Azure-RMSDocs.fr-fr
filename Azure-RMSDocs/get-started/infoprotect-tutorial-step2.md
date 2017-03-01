@@ -1,18 +1,19 @@
 ---
-title: "Étape 2 du didacticiel de démarrage rapide | Azure Information Protection"
+title: "Didacticiel de démarrage rapide, étape 2 - AIP"
 description: "Étape 2 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 20 minutes."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 8ad1ff05f642571bfe7f4170cb88e29d05515e59
-ms.openlocfilehash: f3ec39af7bdbc63169c09eefa54c29cfc4cee40b
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 39dfa8a1c4dabf32f8b62f08a674152f41a5b96a
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -60,9 +61,15 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
     
     Dans le nouveau panneau **Étiquette : Confidentiel**, sont répertoriés les paramètres qui sont disponibles pour chaque étiquette. 
 
-2. Dans le panneau **Étiquette : Confidentiel**, recherchez la section **Définir le modèle RMS pour la protection des documents et e-mails contenant cette étiquette** :
+2. Dans le panneau **Étiquette : Confidentiel**, recherchez la section **Définir les autorisations relatives aux documents et e-mails contenant cette étiquette**.
+
+    Sélectionnez l’option **Protection** :
     
-    Pour l’option **Sélectionner le modèle RMS à partir de**, conservez la valeur par défaut **Azure RMS**. Cliquez ensuite pour **Sélectionner un modèle RMS** sur la zone de liste déroulante et sélectionnez le modèle par défaut **\<nom_de_votre_organisation> - Confidentiel**. 
+    ![Configurer la protection d’une étiquette Azure Information Protection](../media/info-protect-protection-bar.png) 
+    
+    Cette action ouvre le panneau **Autorisations**.
+    
+3. Dans le panneau **Autorisations**, assurez-vous que l’option **Azure RMS** est sélectionnée, ainsi que l’option **Sélectionner un modèle**, puis cliquez sur la zone de liste déroulante et choisissez le modèle par défaut **\<Nom de votre organisation > Confidentiel**.     
     
     Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous verrez et sélectionnerez **VanArsdel, Ltd - Confidential** : 
     
@@ -70,7 +77,9 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
     
     Si vous avez désactivé ce modèle Azure Rights Management par défaut, sélectionnez un autre modèle. Toutefois, si vous sélectionnez un modèle de service, vérifiez que votre compte est compris dans l’étendue.
     
-3. Recherchez la section **Définir un marquage visuel** :
+4. Cliquez sur **Terminé** pour enregistrer vos modifications et fermer le panneau **Autorisations**.
+
+5. Revenez au panneau **Étiquette : Confidentiel** et recherchez la section **Définir un marquage visuel** :
     
     Pour le paramètre **Les documents avec cette étiquette ont un filigrane**, cliquez sur **Activé** puis, dans la zone **Texte**, tapez le nom de votre organisation. Dans notre exemple, **VanArsdel, Ltd** : 
     
@@ -78,7 +87,7 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
     
     Bien que vous puissiez modifier la taille, la couleur et la disposition des filigranes, nous laisserons ces paramètres à leurs valeurs par défaut pour le moment.
     
-4. Recherchez la section **Configurer des conditions pour appliquer automatiquement cette étiquette** :
+6. Recherchez la section **Configurer des conditions pour appliquer automatiquement cette étiquette** :
     
     Cliquez sur **Ajouter une nouvelle condition**, puis dans le panneau **Condition**, sélectionnez les éléments suivants :
     
@@ -94,23 +103,23 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
     
     Cliquez sur **Enregistrer** pour revenir au panneau **Étiquette : Confidentiel**.
 
-5. Dans le panneau **Étiquette : Confidentiel**, vous verrez que **Numéro de carte de crédit** est affiché comme **NOM DE LA CONDITION**, avec **1** **OCCURRENCES** :
+7. Dans le panneau **Étiquette : Confidentiel**, vous verrez que **Numéro de carte de crédit** est affiché comme **NOM DE LA CONDITION**, avec **1** **OCCURRENCES** :
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Configurer la condition de la carte de crédit](../media/step2-see-condition.png)
 
-6. Pour **Sélectionner comment cette étiquette est appliquée** : conservez la valeur par défaut **Recommandée** et ne modifiez pas le conseil de stratégie par défaut :
+8. Pour **Sélectionner comment cette étiquette est appliquée** : conservez la valeur par défaut **Recommandée** et ne modifiez pas le conseil de stratégie par défaut :
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Classification recommandée](../media/step2-keep-recommended.png)
 
-7. Dans la zone **Saisir des notes pour les tâches de nettoyage internes**, tapez **À des fins de test uniquement** :
+9. Dans la zone **Saisir des notes pour les tâches de nettoyage internes**, tapez **À des fins de test uniquement** :
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Taper des remarques](../media/step2-type-notes.png)
 
-8. Cliquez sur **Enregistrer** dans le panneau **Étiquette : Confidentiel**. Puis, dans le panneau **Stratégie : Globale**, cliquez une nouvelle fois sur **Enregistrer**.
+10. Cliquez sur **Enregistrer** dans le panneau **Étiquette : Confidentiel**. Puis, dans le panneau **Stratégie : Globale**, cliquez une nouvelle fois sur **Enregistrer**.
 
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut configurée](../media/info-protect-policy-configured.png)
 
-9. Maintenant que nous avons apporté des modifications et les avons enregistrées, nous voulons les mettre à la disposition des utilisateurs. Pour cela, dans le panneau **Azure Information Protection** initial, cliquez sur **Publier**, puis sur **Oui** pour confirmer.
+11. Maintenant que nous avons apporté des modifications et les avons enregistrées, nous voulons les mettre à la disposition des utilisateurs. Pour cela, dans le panneau **Azure Information Protection** initial, cliquez sur **Publier**, puis sur **Oui** pour confirmer.
 
 Vous pouvez fermer le portail Azure, ou le laisser ouvert pour essayer des options de configuration supplémentaires après avoir terminé ce didacticiel.
 
@@ -126,8 +135,3 @@ Maintenant que vous avez examiné la stratégie par défaut et apporté des modi
 [Étape 3 &#187;](infoprotect-tutorial-step3.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

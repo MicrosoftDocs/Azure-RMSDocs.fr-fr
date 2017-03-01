@@ -1,10 +1,10 @@
 ---
-title: "Informations de référence sur PowerShell pour les modèles personnalisés | Azure Information Protection"
+title: "Utilisation de PowerShell pour des modèles Azure RMS personnalisés - AIP"
 description: "Toutes les opérations de création et de gestion des modèles de gestion des droits que vous pouvez effectuer via le portail Azure Classic sont également exécutables à partir de la ligne de commande de PowerShell. De plus, vous pouvez importer et exporter des modèles afin de pouvoir copier des modèles entre clients ou réaliser des modifications en bloc de propriétés complexes dans les modèles, par exemple, au niveau des noms et des descriptions dans plusieurs langues."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 6a62cb54fcf6129a66c4be23f2270ce56967d5e4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fac6f2180c8b108ea237cb36d29058b4907db18a
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -60,8 +61,3 @@ Applets de commande prenant en charge la création et la gestion de modèles :
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

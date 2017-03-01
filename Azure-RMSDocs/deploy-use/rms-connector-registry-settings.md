@@ -1,10 +1,10 @@
 ---
-title: "Paramètres du Registre pour le connecteur RMS | Azure Information Protection"
+title: "Paramètres de Registre pour le connecteur Rights Management - AIP"
 description: "Informations relatives aux paramètres du Registre sur les serveurs utilisant le connecteur RMS. La méthode recommandée pour configurer ces paramètres consiste à utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 715e904e74528227dc011bb18c997c68be4c8eda
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: b894be1ef3d41a9faf6c3fd3b3fd8c5b94a62517
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -217,8 +218,3 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 Retour à [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

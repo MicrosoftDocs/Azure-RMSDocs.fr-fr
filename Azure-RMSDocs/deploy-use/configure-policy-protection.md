@@ -1,29 +1,30 @@
 ---
-title: "Comment configurer une étiquette pour appliquer la protection Rights Management | Azure Information Protection"
-description: "Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’un service Rights Management qui utilise des stratégies de chiffrement, d’identité et d’autorisation pour éviter la perte de données. Cette protection est appliquée lorsque vous configurez une étiquette pour utiliser un modèle de gestion des droits."
+title: "Configurer une étiquette Azure Information Protection à des fins de protection"
+description: "Vous pouvez protéger vos documents et e-mails les plus sensibles lorsque vous configurez une étiquette, de façon à utiliser la protection offerte par Rights Management."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/16/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: f71b5d98d03453ee49ea177fcb894c28f0f2688f
-ms.openlocfilehash: 9224cdbd5c7e1aa1453328150b903db386af2322
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: cd0fa432bbec97b39e7c32f0b40594840d57fb04
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="how-to-configure-a-label-to-apply-rights-management-protection"></a>Comment configurer une étiquette pour appliquer Rights Management protection
+# <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
 >*S’applique à : Azure Information Protection*
 
-Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’un service Rights Management qui utilise des stratégies de chiffrement, d’identité et d’autorisation pour éviter la perte de données. Cette protection est appliquée lorsque vous configurez une étiquette pour utiliser un modèle de gestion des droits. 
+Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’un service Rights Management qui utilise des stratégies de chiffrement, d’identité et d’autorisation pour éviter la perte de données. Cette protection est appliquée lorsque vous configurez une étiquette de manière à utiliser un modèle Rights Management pour les documents et e-mails, ou l’option **Ne pas transférer** pour les messages électroniques de Microsoft Outlook. 
 
-Ce modèle peut être l’un des modèles par défaut créés automatiquement lorsque vous activez Azure Rights Management, ou un modèle personnalisé. Les modèles pour services Azure Rights Management sont pris en charge, mais appliquent la protection uniquement lorsque l’auteur du document ou de l’e-mail figure dans l’étendue configurée du modèle. Si l’utilisateur n’y figure pas, il reçoit un message indiquant qu’Azure Information Protection ne peut pas appliquer l’étiquette.
+Il peut s’agir de l’un des modèles par défaut créés automatiquement lorsque vous activez Azure Rights Management, ou d’un modèle personnalisé. Les modèles pour services Azure Rights Management sont pris en charge, mais appliquent la protection uniquement lorsque l’auteur du document ou de l’e-mail figure dans l’étendue configurée du modèle. Si l’utilisateur n’y figure pas, il reçoit un message indiquant qu’Azure Information Protection ne peut pas appliquer l’étiquette.
 
 ## <a name="how-the-protection-works"></a>Fonctionnement de la protection
 
@@ -61,20 +62,25 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
 
 3. Dans le panneau **Stratégie**, sélectionnez l’étiquette que vous souhaitez configurer. Le panneau **Étiquette** s’ouvre. 
 
-4. Dans le panneau **Étiquette**, recherchez **Définir des autorisations pour les documents et les e-mails contenant cette étiquette**. 
+4. Dans le panneau **Étiquette**, recherchez la zone **Définir des autorisations pour les documents et les e-mails contenant cette étiquette** et sélectionnez l’une des options suivantes.
     
-    Sélectionnez **Protéger** pour appliquer la protection, ou **Supprimer la protection** pour supprimer la protection pouvant être appliquée à un e-mail ou à un document :
+    - **Non configuré** : sélectionnez cette option si l’étiquette est actuellement configurée pour appliquer la protection et que vous ne voulez plus qu’elle le fasse. Passez ensuite à l’étape 10.
+    
+    - **Protéger** : sélectionnez cette option pour appliquer la protection, puis passez à l’étape 5.
+    
+    - **Supprimer la protection** : sélectionnez cette option pour supprimer la protection si elle est configurée pour un document ou un e-mail. Passez ensuite à l’étape 10.
+        
+        Remarque : les utilisateurs doivent disposer des autorisations nécessaires pour pouvoir supprimer la protection Rights Management et appliquer une étiquette associée à cette option. Cette option implique que l’utilisateur dispose du [droit d’utilisation](../deploy-use/configure-usage-rights.md) **Exporter** ou **Contrôle total**, ou qu’il soit propriétaire de Rights Management (ce qui accorde automatiquement le droit d’utilisation Contrôle total), ou encore qu’il soit un [super utilisateur dans Azure Rights Management](../deploy-use/configure-super-users.md). Les modèles Azure Rights Management par défaut n’incluent pas les droits d’utilisation qui permettent aux utilisateurs de supprimer la protection. 
+        
+        Si les utilisateurs ne disposent pas des autorisations nécessaires pour supprimer la protection Rights Management et qu’ils sélectionnent une étiquette configurée avec l’option **Supprimer la protection**, ils reçoivent le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
 
-    - Si vous avez sélectionné **Protéger**, passez à l’étape 5.
-    - Si vous avez sélectionné **Supprimer la protection**, passez à l’étape 11.
-
-5. Si vous sélectionnez **Protéger**, cliquez maintenant sur la barre **Protection** pour ouvrir le panneau **Autorisations** :
+5. Si vous avez sélectionné **Protéger**, cliquez sur **Protection** pour ouvrir le panneau **Autorisations** :
     
     ![Configurer la protection d’une étiquette Azure Information Protection](../media/info-protect-protection-bar.png)
 
 6. Dans le panneau **Autorisations**, sélectionnez **Azure RMS** ou **HYOK (AD RMS)**. 
     
-    Dans la plupart des cas, vous devrez sélectionner **Azure RMS** pour vos paramètres d’autorisation. Ne sélectionnez **HYOK (AD RMS)** que si vous avez lu et compris les prérequis et les restrictions qui accompagnent cette configuration « *conservez votre propre clé* » (HYOK, hold your own key). Pour plus d’informations, consultez [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md).
+    Dans la plupart des cas, vous devrez sélectionner **Azure RMS** pour vos paramètres d’autorisation. Ne sélectionnez **HYOK (AD RMS)** que si vous avez lu et compris les prérequis et les restrictions qui accompagnent cette configuration « *conservez votre propre clé* » (HYOK, hold your own key). Pour plus d’informations, consultez [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md). Pour poursuivre la configuration de la fonction HYOK (AD RMS), passez à l’étape 9.
     
 7. Sélectionnez **Ne pas transférer** si vous voulez définir cette option Outlook pour les e-mails ou **Sélectionner un modèle**. 
     
@@ -88,25 +94,14 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
             
 9. Si vous avez sélectionné **Sélectionner un modèle** pour **HYOK (AD RMS)** : indiquez le GUID du modèle et l’URL de licence de votre cluster AD RMS. [Plus d’informations](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-10. Cliquez sur **Terminé** pour fermer le panneau **Autorisations** et regardez s’afficher **Ne pas transférer** ou le modèle que vous avez choisi dans la barre **Protection** du panneau **Étiquette**.
+10. Cliquez sur **Terminé** pour fermer le panneau **Autorisations** et voir apparaître la valeur que vous avez choisie pour **Ne pas transférer** ou le modèle que vous avez sélectionné pour l’option **Protection** dans le panneau **Étiquette**.
 
-11. Si vous sélectionnez **Supprimer la Protection**:
-    
-    Les utilisateurs doivent disposer des autorisations nécessaires pour supprimer la protection Rights Management et appliquer une étiquette qui contient cette option. Cette option implique qu’ils disposent du [droit d’utilisation](../deploy-use/configure-usage-rights.md) **Exporter** (pour les documents Office) ou **Control total**, ou qu’ils soient propriétaires de Rights Management (ce qui accorde automatiquement le droit d’utilisation Contrôle total), ou encore un [super utilisateur pour Azure Rights Management](../deploy-use/configure-super-users.md). Les modèles de gestion de droits par défaut n’incluent pas les droits d’utilisation qui permettent aux utilisateurs de supprimer la protection. 
-    
-    Si les utilisateurs n’ont pas les autorisations nécessaires pour supprimer la protection Rights Management et qu’ils sélectionnent cette étiquette avec l’option **Supprimer la Protection**, ils reçoivent le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
+10. Dans le panneau **Étiquette**, cliquez sur **Enregistrer**.
 
-6. Dans le panneau **Étiquette**, cliquez sur **Enregistrer**.
-
-7. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
+11. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO3-->
-
-

@@ -1,10 +1,10 @@
 ---
-title: "Protéger un fichier sur un appareil (protéger sur place) à l’aide de l’application de partage Rights Management | Azure Information Protection"
+title: "Protéger des fichiers sur place via l’application de partage RMS - AIP"
 description: "Instructions à suivre pour stocker en toute sécurité un fichier sur votre ordinateur, un serveur ou un autre dispositif de stockage."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 9ae44cf7beba0f4af3078eedeac352e9792d497c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a0654dba53f493551b2cc4d1fbb8790f246e0c18
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -66,8 +67,3 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

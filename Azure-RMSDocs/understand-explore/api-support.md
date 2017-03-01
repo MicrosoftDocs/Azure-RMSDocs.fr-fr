@@ -1,10 +1,10 @@
 ---
-title: "Autres applications prenant en charge les API Rights Management : installation et configuration | Azure Information Protection"
+title: "Autres applications prenant en charge les API RMS : installation et configuration - AIP"
 description: "Découvrez comment le service Azure Rights Management d’Azure Information Protection peut prendre en charge d’autres applications pour protéger les données de votre organisation."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 05cb9695d83ba10cc2d7b69d8a1e29a61cb4beb7
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 0b48cdb5fc233886c41a1c8b963e1353c14dce75
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -34,8 +35,3 @@ De même, de nombreux éditeurs de logiciels proposent des applications pour fou
 Pour voir comment d’autres applications et services prennent en charge le service Azure Rights Management, consultez [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

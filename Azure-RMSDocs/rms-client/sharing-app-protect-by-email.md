@@ -1,10 +1,10 @@
 ---
-title: "Protéger un fichier que vous partagez par e-mail à l’aide de l’application de partage Rights Management | Azure Information Protection"
+title: "Partager des documents protégés avec l’application de partage RMS - AIP"
 description: "Instructions à suivre pour partager un document par e-mail en toute sécurité."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 7b8fe306b82e0eb964106b3ab3b890d1a115037d
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 4110050a0e45fd75633bc27dd220f71855d50672
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -92,8 +93,3 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

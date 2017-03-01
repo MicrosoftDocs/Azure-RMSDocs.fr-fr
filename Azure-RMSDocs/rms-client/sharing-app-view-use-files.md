@@ -1,10 +1,10 @@
 ---
-title: "Afficher et utiliser des fichiers qui ont été protégés par Rights Management | Azure Information Protection"
+title: "Ouvrir des fichiers protégés par RMS avec l’application de partage RMS - AIP"
 description: "Instructions à suivre pour afficher et utiliser un fichier protégé. Cette procédure nécessite l’installation de l’application de partage Rights Management (RMS)."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 92df54a09513de4a8ea2c42779679f1d76a1607e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a10162139f2b188640c446477fd9b4756d48c31e
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -107,8 +108,3 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

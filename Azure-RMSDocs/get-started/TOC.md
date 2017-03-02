@@ -1,6 +1,6 @@
 # [Comprendre et explorer](/information-protection/understand-explore/what-is-information-protection)
 # [Bien démarrer](requirements-azure-rms.md)
-## [Requirements](requirements.md)
+## [Configuration requise](requirements.md)
 ### [Configuration requise d’Azure Active Directory](requirements-azure-ad.md)
 ### [Prise en charge d’appareils clients pour la protection des données](requirements-client-devices.md)
 ### [Prise en charge d’applications pour la protection des données](requirements-applications.md)
@@ -28,9 +28,4 @@
 # [Déployer et utiliser le service](/information-protection/deploy-use/activate-service)
 # [Déployer et utiliser le client](/information-protection/rms-client/use-client)
 # [Développer et personnaliser des applications](/information-protection/develop/developers-guide)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

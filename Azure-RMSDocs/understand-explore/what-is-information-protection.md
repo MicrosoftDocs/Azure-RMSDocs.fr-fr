@@ -13,6 +13,7 @@ ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
 ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
 ms.openlocfilehash: 7d5c759a6b7e206f30588926a8d480b50be20bc4
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -119,8 +120,3 @@ Configurez et découvrez Azure Information Protection par vous-même avec notre 
 Vous connaissez Azure Information Protection ou Azure Rights Management sous un autre nom ? Consultez [notre liste d’autres termes pour le service](azure-rms-aka.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO4-->
-
-

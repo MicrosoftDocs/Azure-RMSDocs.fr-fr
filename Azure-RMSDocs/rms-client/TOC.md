@@ -37,8 +37,3 @@
 ##### [Utiliser les raccourcis clavier](sharing-app-keyboard-shortcuts.md)
 ##### [Options de la boîte de dialogue](sharing-app-dialog-box.md)
 # [Développer et personnaliser des applications](/information-protection/develop/developers-guide)
-
-
-<!--HONumber=Feb17_HO2-->
-
-

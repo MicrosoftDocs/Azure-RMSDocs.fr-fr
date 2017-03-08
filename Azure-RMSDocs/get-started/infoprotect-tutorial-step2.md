@@ -1,19 +1,19 @@
 ---
 title: "Didacticiel de démarrage rapide, étape 2 - AIP"
-description: "Étape 2 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 20 minutes."
+description: "Didacticiel de présentation expliquant comment tester rapidement Azure Information Protection, étape 2 : configurer la stratégie."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 39dfa8a1c4dabf32f8b62f08a674152f41a5b96a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: cecf91a6e8bea14002f6760ddbde15e934cb7ef7
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -63,13 +63,13 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
 
 2. Dans le panneau **Étiquette : Confidentiel**, recherchez la section **Définir les autorisations relatives aux documents et e-mails contenant cette étiquette**.
 
-    Sélectionnez l’option **Protection** :
+    Sélectionnez **Protéger**, puis l’option **Protection** :
     
     ![Configurer la protection d’une étiquette Azure Information Protection](../media/info-protect-protection-bar.png) 
     
-    Cette action ouvre le panneau **Autorisations**.
+    Cette action ouvre le panneau **Protection**.
     
-3. Dans le panneau **Autorisations**, assurez-vous que l’option **Azure RMS** est sélectionnée, ainsi que l’option **Sélectionner un modèle**, puis cliquez sur la zone de liste déroulante et choisissez le modèle par défaut **\<Nom de votre organisation > Confidentiel**.     
+3. Dans le panneau **Protection**, assurez-vous que l’option **Azure RMS** est sélectionnée, ainsi que l’option **Select template** (Sélectionner un modèle), puis cliquez sur la zone de liste déroulante et choisissez le modèle par défaut **\<Nom de votre organisation > Confidentiel**.     
     
     Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous verrez et sélectionnerez **VanArsdel, Ltd - Confidential** : 
     
@@ -77,7 +77,7 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
     
     Si vous avez désactivé ce modèle Azure Rights Management par défaut, sélectionnez un autre modèle. Toutefois, si vous sélectionnez un modèle de service, vérifiez que votre compte est compris dans l’étendue.
     
-4. Cliquez sur **Terminé** pour enregistrer vos modifications et fermer le panneau **Autorisations**.
+4. Cliquez sur **OK** pour enregistrer vos modifications, puis fermez le panneau **Protection**.
 
 5. Revenez au panneau **Étiquette : Confidentiel** et recherchez la section **Définir un marquage visuel** :
     

@@ -4,16 +4,16 @@ description: "Vous pouvez protéger vos documents et e-mails les plus sensibles 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: cd0fa432bbec97b39e7c32f0b40594840d57fb04
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5bc117cbff3226a2ee0ff375f0aa02fc3232a183
+ms.openlocfilehash: ed6bd63a945b73b792bcafcdc0d07e08e83fc344
+ms.lasthandoff: 02/27/2017
 
 
 ---
@@ -74,11 +74,11 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
         
         Si les utilisateurs ne disposent pas des autorisations nécessaires pour supprimer la protection Rights Management et qu’ils sélectionnent une étiquette configurée avec l’option **Supprimer la protection**, ils reçoivent le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
 
-5. Si vous avez sélectionné **Protéger**, cliquez sur **Protection** pour ouvrir le panneau **Autorisations** :
+5. Si vous avez sélectionné **Protéger**, sélectionnez maintenant **Protection** pour ouvrir le panneau **Protection** :
     
     ![Configurer la protection d’une étiquette Azure Information Protection](../media/info-protect-protection-bar.png)
 
-6. Dans le panneau **Autorisations**, sélectionnez **Azure RMS** ou **HYOK (AD RMS)**. 
+6. Dans le panneau **Protection**, sélectionnez **Azure RMS** ou **HYOK (AD RMS)**. 
     
     Dans la plupart des cas, vous devrez sélectionner **Azure RMS** pour vos paramètres d’autorisation. Ne sélectionnez **HYOK (AD RMS)** que si vous avez lu et compris les prérequis et les restrictions qui accompagnent cette configuration « *conservez votre propre clé* » (HYOK, hold your own key). Pour plus d’informations, consultez [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md). Pour poursuivre la configuration de la fonction HYOK (AD RMS), passez à l’étape 9.
     
@@ -94,7 +94,7 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
             
 9. Si vous avez sélectionné **Sélectionner un modèle** pour **HYOK (AD RMS)** : indiquez le GUID du modèle et l’URL de licence de votre cluster AD RMS. [Plus d’informations](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-10. Cliquez sur **Terminé** pour fermer le panneau **Autorisations** et voir apparaître la valeur que vous avez choisie pour **Ne pas transférer** ou le modèle que vous avez sélectionné pour l’option **Protection** dans le panneau **Étiquette**.
+10. Cliquez sur **Terminé** pour fermer le panneau **Protection** et voir apparaître la valeur que vous avez choisie pour **Ne pas transférer** ou le modèle que vous avez sélectionné pour l’option **Protection** dans le panneau **Étiquette**.
 
 10. Dans le panneau **Étiquette**, cliquez sur **Enregistrer**.
 

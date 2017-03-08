@@ -1,11 +1,11 @@
 ---
 title: "Didacticiel de démarrage rapide, étape 5 - AIP"
-description: "Étape 5 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 20 minutes."
+description: "Didacticiel de présentation expliquant comment tester rapidement Azure Information Protection, étape 5 : partage de fichiers protégés et suivi."
 keywords: 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/28/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -14,9 +14,9 @@ ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 351ba4f71ac36194494ed315466522120a61692c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: ea34b900855d43cb1458438b1d15a16fd7cf01bf
+ms.lasthandoff: 03/01/2017
 
 
 ---

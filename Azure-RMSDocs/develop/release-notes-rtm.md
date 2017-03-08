@@ -5,18 +5,19 @@ keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
+ms.sourcegitcommit: 8af3161946b2dfc6ea58d0565491d8e59736d565
+ms.openlocfilehash: 2f4c11f7661a814849ccea41c60edfc2ad2287e8
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -25,7 +26,13 @@ ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
 
 Cette rubrique contient des informations importantes sur cette version du Kit RMS SDK 2.1 et sur les versions précédentes.
 
-## <a name="new-for-the-february-2016---sdk-documentation-update"></a>Nouveautés dans la mise à jour de la documentation du SDK de février 2016
+## <a name="new-for-the-february-2017---sdk-documentation-update"></a>Nouveautés de février 2017 - Mise à jour de la documentation du SDK
+>[!Note]  
+> Les mises à jour de la documentation dans cette section s’appliquent au téléchargement du kit de développement logiciel (SDK) version 1.03102.0221.
+ 
+- **Collecte de données** : la collecte d’informations sur les performances et les erreurs d’application est maintenant disponible. Cette fonctionnalité est contrôlée via une nouvelle propriété, *IPC_EI_DATA_COLLECTION_ENABLED*, l’une des [propriétés d’environnement](https://msdn.microsoft.com/en-us/library/hh535247.aspx), et elle peut être remplacée au niveau administratif. 
+
+## <a name="february-2016---sdk-documentation-update"></a>Février 2016 - Mise à jour de la documentation du SDK
 
 >[!Note]
 > Les mises à jour de la documentation de fonctionnalités dans cette section s’appliquent au téléchargement du SDK daté du 11/12/2015.
@@ -162,8 +169,3 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 Si aucun nom et aucune description ne peuvent être récupérés, une erreur est renvoyée. Un LCID spécifique ne peut avoir qu’un seul nom et qu’une seule description.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

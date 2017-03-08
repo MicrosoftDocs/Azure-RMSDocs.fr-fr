@@ -4,7 +4,7 @@ description: "Découvrez et implémentez la fonctionnalité de super utilisateur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: f1c50d67ba03cee9846e81f98aad6da0da33a951
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 07236a2820e4d8d4d594eda755cb025d21b96d12
+ms.openlocfilehash: 591ca9ba080da9565e0143d887e3db179b810862
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -38,7 +38,9 @@ Grâce à la fonctionnalité de super utilisateur du service Azure Rights Manage
 
 Par défaut, la fonctionnalité de super utilisateur n’est pas activée et ce rôle n’est attribué à aucun utilisateur. Elle est automatiquement activée si vous configurez le connecteur Rights Management pour Exchange. Elle n’est pas requise pour les services standard qui exécutent Exchange Online, SharePoint Online ou SharePoint Server.
 
-Si vous devez activer manuellement la fonctionnalité de super utilisateur, utilisez l’applet de commande Windows PowerShell [Enable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629400.aspx), puis désignez des utilisateurs (ou des comptes de service) en fonction des besoins à l’aide de l’applet de commande [Add-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629411.aspx) ou [Set-AadrmSuperUserGroup](https://msdn.microsoft.com/library/azure/mt653943.aspx), puis ajoutez des utilisateurs (ou d’autres groupes) en fonction des besoins pour ce groupe. 
+Si vous devez activer manuellement la fonctionnalité de super utilisateur : utilisez la cmdlet Windows PowerShell [Enable-AadrmSuperUserFeature](/powershell/aadrm/vlatest/enable-aadrmsuperuserfeature), désignez des utilisateurs (ou des comptes de service) en fonction des besoins à l’aide de la cmdlet [Add-AadrmSuperUser](/powershell/aadrm/vlatest/add-aadrmsuperuser) ou [Set-AadrmSuperUserGroup](/powershell/aadrm/vlatest/set-aadrmsuperusergroup), puis ajoutez des utilisateurs (ou d’autres groupes) en fonction des besoins de ce groupe. 
+
+Bien que l’utilisation d’un groupe de super utilisateurs soit plus facile à gérer, n’oubliez pas que pour des raisons de performances, Azure Rights Management [met en cache l’appartenance au groupe](../plan-design/prepare.md#group-membership-caching). Par conséquent, si vous devez affecter un nouvel utilisateur en tant que super utilisateur afin de déchiffrer le contenu immédiatement, ajoutez-le à l’aide de la cmdlet Add-AadrmSuperUser, plutôt que de l’ajouter à un groupe existant configuré à l’aide de la cmdlet Set-AadrmSuperUserGroup.
 
 > [!NOTE]
 > Si vous n’avez pas encore installé le module Windows PowerShell pour [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], consultez [Installation de Windows PowerShell pour Azure Rights Management](install-powershell.md).

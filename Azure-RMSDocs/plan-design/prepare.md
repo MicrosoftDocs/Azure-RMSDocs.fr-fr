@@ -4,7 +4,7 @@ description: "Vérifiez que tout est en place pour utiliser le service Azure Rig
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 909becbdf902d552a967506b80f173e59cf756c7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 11ebd66a1ae05535814af159523bd49b7921d46d
+ms.openlocfilehash: fc80a4a65bd5fae1b8604c316a4e2354bbe8c8be
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -33,6 +33,10 @@ Avant de déployer Azure Information Protection dans votre organisation, vérifi
 -   Les groupes à extension messagerie du cloud que vous utiliserez avec Azure Information Protection. Ceux-ci peuvent être des groupes intégrés ou des groupes créés manuellement contenant les utilisateurs qui utiliseront des documents et e-mails protégés.
 
     Si vous avez Exchange Online, vous pouvez créer et utiliser des groupes à extension messagerie à l’aide du Centre d’administration Exchange. Si vous disposez d’AD DS et synchronisez sur Azure AD, vous pouvez créer et utiliser des groupes à extension messagerie qui sont des groupes de sécurité ou de distribution.
+
+### <a name="group-membership-caching"></a>Mise en cache de l’appartenance au groupe
+
+Pour des raisons de performances, l’appartenance au groupe est mise en cache par le service Azure Rights Management. Cela signifie que les modifications apportées à l’appartenance au groupe peuvent prendre jusqu’à 3 heures pour entrer en vigueur, et cette période est susceptible de changer. N’oubliez pas de tenir compte de ce délai dans toutes les modifications ou les tests que vous effectuez lorsque vous utilisez des groupes dans la configuration du service Azure Rights Management, par exemple, lorsque vous configurez des [modèles personnalisés](../deploy-use/configure-custom-templates.md) ou lorsque vous utilisez un groupe pour la [fonctionnalité de super utilisateur](../deploy-use/configure-super-users.md). 
 
 ## <a name="activate-the-rights-management-service-for-data-protection"></a>Activer le service Rights Management pour la protection des données
 Lorsque vous êtes prêt à commencer à protéger des documents et des e-mails, activez le service Rights Management pour activer cette technologie. Pour plus d’informations, consultez [Activation d’Azure Rights Management](../deploy-use/activate-service.md).

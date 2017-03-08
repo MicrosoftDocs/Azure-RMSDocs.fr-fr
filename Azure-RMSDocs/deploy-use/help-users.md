@@ -4,7 +4,7 @@ description: "Informations vous permettant de fournir de l’aide aux utilisateu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 61f7a7208b13a28f2e8cfb85489cceb2a2caf077
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1300b0abb3cb59ad09075418ab8c911466740a2c
+ms.openlocfilehash: f1d2db08951c1d017ea4f011855d99423fa9d577
+ms.lasthandoff: 03/03/2017
 
 
 ---
@@ -43,6 +43,8 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
 -   **Informations de support technique :**
 
     L'un des outils les plus utiles pour le support technique est l' [Analyseur RMS](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Les opérateurs du support technique peuvent l'exécuter avec l'option d'administrateur Azure RMS, et demander aux utilisateurs de l'exécuter avec l'option d'utilisateur Azure RMS. Cet outil permet, non seulement d'identifier des problèmes, mais également de les résoudre ou, à défaut, d'enregistrer des journaux de suivi.
+    
+    Si des utilisateurs exécutent le client Azure Information Protection, les opérateurs du support technique peuvent leur demander d’utiliser l’option **Aide et commentaires**, **Exécuter les diagnostics**, puis de réinitialiser le client. Toutefois, contrairement à l’Analyseur RMS, la réinitialisation ne déconnecte pas l’utilisateur ou n’effectue aucun rebootstrap du client, et aucune mise à jour automatique n’a lieu.
 
     S’il existe des demandes légitimes d’obtention de droits d’accès complets à des documents protégés, par exemple une demande émanant du service juridique ou d’un responsable après qu’un employé a quitté l’organisation, vérifiez que le support technique dispose des processus nécessaires pour effectuer une telle demande à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md) d’Azure Rights Management.
 

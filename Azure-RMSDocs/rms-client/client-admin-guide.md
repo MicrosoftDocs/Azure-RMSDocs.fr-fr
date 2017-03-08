@@ -4,7 +4,7 @@ description: "Instructions et informations destinées aux administrateurs d’un
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid:
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: b6a8477078a333aa23ccfe5904af3582216a1e96
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: b0ddf66acf0db37d0396647a5518ccf48195019c
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -79,7 +79,7 @@ De plus :
 
 - Si la visionneuse Azure Information Protection est installée séparément, une version minimale de Microsoft .NET Framework 4.5.2 est requise. Si cette version est manquante, le programme d’installation ne procède pas au téléchargement ni à l’installation.
 
-- Le module PowerShell nécessite Windows PowerShell version 4.0, que vous devrez peut-être installer sur les systèmes d’exploitation plus anciens. Pour en savoir plus, consultez la page relative à [l’installation de Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). Pour vérifier la version de Windows PowerShell que vous exécutez, saisissez la chaîne **$PSVersionTable** lors d’une session PowerShell.
+- Le module PowerShell nécessite Windows PowerShell version 4.0, que vous devrez peut-être installer sur les systèmes d’exploitation plus anciens. Pour en savoir plus, consultez la page relative à [l’installation de Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). Ce programme d’installation ne vérifie pas ou n’installe pas cette condition préalable pour vous. Pour vérifier la version de Windows PowerShell que vous exécutez, saisissez la chaîne **$PSVersionTable** lors d’une session PowerShell.
 
 - Les ordinateurs exécutant Windows 7 Service Pack 1 nécessitent [KB2533623](https://support.microsoft.com/en-us/kb/2533623) qui peut être installé après l’installation du client. Si cette mise à jour est requise et qu’elle n’est pas installée, vous êtes invité à l’installer.
 
@@ -108,9 +108,11 @@ Outre les instructions suivantes, le client Azure Information Protection est ég
     
     - Pour les autres versions d’Office, redémarrez les applications Office et toutes les instances de l’Explorateur de fichiers. 
         
-5. Vous pouvez vérifier que l’installation a réussi en consultant le fichier journal de l’installation, dans le dossier %temp%. Le nom du fichier suit le format suivant : `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`. Par exemple : **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+5. Vous pouvez vérifier que l’installation a réussi en consultant le fichier journal de l’installation, dans le dossier %temp%. Le nom du fichier a pour format : `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`.
     
-    Dans ce fichier journal, recherchez la chaîne suivante : **Produit : Microsoft Azure Information Protection -- Installation effectuée.**
+    Par exemple : **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+    
+    Dans ce fichier journal, recherchez la chaîne suivante : **Produit : Microsoft Azure Information Protection -- Installation effectuée.** En cas d’échec de l’installation, ce fichier journal contient des informations pour vous aider à identifier et résoudre les problèmes.
 
 ### <a name="additional-instructions-for-office-2010-only"></a>Instructions supplémentaires pour Office 2010 uniquement
 
@@ -154,7 +156,7 @@ Choisissez l’une des méthodes suivantes :
 - Exécutez le fichier exécutable avec **/uninstall**. Par exemple : `AzInfoProtection.exe /uninstall`
 
 
-## <a name="to-verify-installation-connection-status-or-send-feedback"></a>Vérification de l’installation et de l’état de la connexion, ou envoi de commentaires
+## <a name="additional-checks-to-verify-installation-connection-status-or-send-feedback"></a>Vérifications supplémentaires de l’installation, de l’état de la connexion ou envoi de commentaires
 
 1. Ouvrez une application Office et, dans l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger**, puis sur **Aide et commentaires**.
 

@@ -4,7 +4,7 @@ description: "Instructions destinées aux utilisateurs pour installer le client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/17/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 37bddeed5b81ce1cd6b881db0b71345bcf4cad49
+ms.sourcegitcommit: 92ad7198aad17664062b8d007fa95524fe535443
+ms.openlocfilehash: d4820070aff013b42ee49f4c7b81e78ffbc7a049
 ms.lasthandoff: 02/24/2017
 
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 02/24/2017
 
 # <a name="download-and-install-the-azure-information-protection-client"></a>Télécharger et installer le client Azure Information Protection
 
-Si votre administrateur n’installe pas le client Azure Information Protection pour vous, vous pouvez le faire vous-même. Vous devez être administrateur local de votre PC pour installer ce client. 
+Si votre administrateur n’installe pas le client Azure Information Protection pour vous, vous pouvez le faire vous-même. Vous devez être un administrateur local de votre PC pour installer ce client, de sorte qu’il puisse étiqueter et protéger vos documents et vos e-mails.
 
 De plus :
 
@@ -34,7 +34,7 @@ De plus :
 
 1.  Accédez à la page [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) sur le site web de Microsoft.
 
-    Cette page inclut des liens pour tous les appareils les plus couramment utilisés, afin que vous puissiez facilement télécharger une application visionneuse si elle est nécessaire pour ouvrir des fichiers protégés. Cependant, nous allons installer le client complet, qui vous permet d’étiqueter et de protéger les fichiers. 
+    Cette page inclut des liens pour tous les appareils les plus couramment utilisés, afin que vous puissiez facilement télécharger une application visionneuse si elle est nécessaire pour ouvrir des fichiers protégés. Si vous n’êtes pas un administrateur local de votre PC, vous pouvez toujours installer l’application de visionneuse pour Windows. Cependant, ces instructions concernent l’installation du client complet qui vous permet d’étiqueter et de protéger les fichiers. 
 
 2. Recherchez la section **Client Azure Information Protection** et cliquez sur l’icône Windows. Cliquez sur **Télécharger** et enregistrez le fichier **AzInfoProtection.exe**.     
 

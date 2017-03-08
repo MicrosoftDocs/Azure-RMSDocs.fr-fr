@@ -4,7 +4,7 @@ description: "Instructions à suivre pour créer et gérer des modèles personna
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: ebc0ad13952f2036f997fc5ba9207f02d1571021
+ms.sourcegitcommit: 11971a176b9c5f413bbe6daa208c062a131343be
+ms.openlocfilehash: 5ab725294d93540f35c395eca08f5f3fbc6ae392
 ms.lasthandoff: 02/24/2017
 
 
@@ -81,7 +81,9 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
     > [!NOTE]
     > Les utilisateurs ou groupes que vous sélectionnez doivent avoir une adresse de messagerie. Dans un environnement de production, ce sera presque toujours le cas, mais dans un simple environnement de test, vous devrez ajouter des adresses de messagerie aux comptes d'utilisateur ou groupes.
 
-    Nous vous recommandons d’utiliser des groupes plutôt que des utilisateurs, pour simplifier la gestion des modèles. Si vous disposez d’Active Directory localement et effectuez une synchronisation avec Azure AD, vous pouvez utiliser des groupes de sécurité ou de distribution à extension messagerie. Toutefois, si vous voulez accorder des droits à tous les utilisateurs de l'organisation, il est plus efficace de copier un des modèles par défaut que de spécifier plusieurs groupes. Pour plus d’informations, consultez [Comment copier un modèle](copy-template.md).
+    Nous vous recommandons d’utiliser des groupes plutôt que des utilisateurs, pour simplifier la gestion des modèles. Toutefois, si vous apportez des modifications à ce groupe, n’oubliez pas que pour des raisons de performances, Azure Rights Management [met en cache l’appartenance au groupe](../plan-design/prepare.md#group-membership-caching). 
+    
+    Si vous disposez d’Active Directory localement et effectuez une synchronisation avec Azure AD, vous pouvez utiliser des groupes de sécurité ou de distribution à extension messagerie. Si vous voulez accorder des droits à tous les utilisateurs de l’organisation, mieux vaut copier l’un des modèles par défaut que de spécifier plusieurs groupes. Pour plus d’informations, consultez [Comment copier un modèle](copy-template.md).
 
     > [!TIP]
     > Vous pouvez ajouter des utilisateurs extérieurs à votre organisation (« utilisateurs externes ») au modèle en sélectionnant un groupe à extension messagerie qui contient des contacts d’Office 365 ou Exchange Online. Cela vous permet d’attribuer des droits à ces utilisateurs de la même façon que vous pouvez attribuer des droits aux utilisateurs de votre organisation. Par exemple, vous pouvez empêcher les clients de modifier une liste de prix que vous leur envoyez. N’utilisez pas cette configuration de modèle pour protéger des e-mails si les utilisateurs extérieurs à votre organisation lisent les e-mails protégés à l’aide d’Outlook Web App.

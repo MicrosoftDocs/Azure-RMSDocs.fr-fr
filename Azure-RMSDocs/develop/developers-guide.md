@@ -4,7 +4,7 @@ description: "Les développeurs peuvent utiliser Azure Information Protection po
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
 translationtype: Human Translation
-ms.sourcegitcommit: d00a735328bf04aad365a7577ef33ea24706ffc7
-ms.openlocfilehash: 9a3e0f1ba6c563d6129ef824f565138b68b439b1
+ms.sourcegitcommit: 9a8b37f8e4e6d3a22c5ae4b43ffb82bfd0482037
+ms.openlocfilehash: ee257e733177077caaf3cf3b579a1b3718479121
+ms.lasthandoff: 02/10/2017
 
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guide du développeur Azure Information Protection
@@ -35,7 +36,7 @@ Les applications de service proposent des fonctionnalités pour protéger les in
 - [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms) est un exemple d’application DLP compatible RMS qui décrit les étapes de base que chaque application DLP compatible RMS doit effectuer à l’aide de l’API de fichier RMS pour protéger et consommer du contenu limité.
 - [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) est un exemple qui montre comment utiliser le SDK RMS dans des applications Azure pour protéger des données dans un Stockage Blob Azure.
 - [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) est un exemple qui montre comment générer une application Windows qui surveille des répertoires du système de fichiers et applique des stratégies de protection RMS lors de chaque modification, par exemple en cas d’ajout ou de modification de fichier.
-- [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/EncryptFilesInDir) est un exemple d’application de console simple qui prend un répertoire en tant qu’entrée et protège tous les fichiers dans ce répertoire uniquement, sans récursivité.
+- [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/ProtectFilesInDir) est un exemple d’application de console simple qui prend un répertoire en tant qu’entrée et protège tous les fichiers dans ce répertoire uniquement, sans récursivité.
 
 ## <a name="powershell-guides"></a>Guides PowerShell
 
@@ -142,8 +143,3 @@ Ces vidéos sont extraites de la conférence Micorsoft 2016 Ignite
 - [Terminologie liée à Azure Information Protection - ITPro](../get-started/terminology.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO5-->
-
-

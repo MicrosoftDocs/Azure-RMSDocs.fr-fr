@@ -1,10 +1,10 @@
 ---
-title: "Configuration de la stratégie | Azure Information Protection"
+title: "Configurer la stratégie Azure Information Protection"
 description: "Pour configurer la classification, l’étiquetage et la protection, vous devez configurer la stratégie Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 808f72be7c5b6a1f18a06ecefdfdf7fbf6febff6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 2510c14fc10411783838516f45fdfd06fd73350d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -31,7 +32,7 @@ Pour configurer la stratégie Azure Information Protection :
 
 2. Accédez au panneau **Azure Information Protection**: par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information Protection** dans la zone Filtrer. Dans les résultats, sélectionnez **Azure Information Protection**. 
 
-    S’affiche alors le panneau **Azure Information Protection**, qui ouvre automatiquement le panneau de la stratégie Information Protection globale que tous les utilisateurs obtiennent. Ce dernier contient les éléments suivants que vous pouvez configurer :
+    Vous verrez alors le panneau **Azure Information Protection**, où vous pouvez ouvrir la stratégie **Global** accessible par tous les utilisateurs. Vous pouvez également ajouter et modifier des stratégies délimitées. La stratégie **Global** Azure Information Protection contient les éléments suivants que vous pouvez configurer :
 
     - Les étiquettes qui permettent aux utilisateurs de classifier des documents et des e-mails.
 
@@ -67,7 +68,7 @@ Utilisez les informations suivantes pour configurer votre stratégie Azure Infor
 
 - [Comment modifier ou personnaliser une étiquette existante](configure-policy-change-label.md)
 
-- [Comment configurer une étiquette pour appliquer la protection](configure-policy-protection.md)
+- [Comment configurer une étiquette pour la protection](configure-policy-protection.md)
 
 - [Comment configurer une étiquette pour appliquer des marquages visuels](configure-policy-markings.md)
 
@@ -79,9 +80,5 @@ Utilisez les informations suivantes pour configurer votre stratégie Azure Infor
 
 Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut et voir le comportement qui en résulte dans une application Office, essayez le [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

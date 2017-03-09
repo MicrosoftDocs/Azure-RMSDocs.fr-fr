@@ -1,10 +1,10 @@
 ---
-title: "Guide d’administrateur sur l’application de partage Rights Management | Azure Information Protection"
+title: "Guide de l’administrateur de l’application de partage Rights Management - AIP"
 description: "Instructions et informations destinées aux administrateurs sur un réseau d’entreprise en charge du déploiement de l’application de partage Microsoft Rights Management pour Windows."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/11/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c9a5bcf46597ee65e2e0f36199f19935f8997048
-ms.openlocfilehash: adab568d173845f411fe5913786b137508485ef6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ee9d92752bb2839df859d01e80d3b0ecaeb678f9
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -24,6 +25,8 @@ ms.openlocfilehash: adab568d173845f411fe5913786b137508485ef6
 
 >*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
+> [!IMPORTANT]
+> **Notification de fin de prise en charge** : l’application de partage Rights Management pour Windows est remplacée par le [client Azure Information Protection](aip-client.md). La prise en charge de cette application plus ancienne cessera le 31 janvier 2018. 
 
 Utilisez les informations suivantes si vous êtes responsable de l’application de partage Microsoft Rights Management sur un réseau d’entreprise ou si vous souhaitez des informations plus techniques que celles qui figurent dans le [Guide de l’utilisateur de l’application de partage Rights Management](sharing-app-user-guide.md) ou sur le [Forum Aux Questions sur l’application de partage Microsoft Rights Management pour Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
@@ -169,7 +172,7 @@ Pour vérifier que l’opération a réussi, consultez la section [Vérification
 
 Pour vérifier que l’opération a réussi, consultez la section [Vérification de la réussite de l’installation](#verifying-installation-success) dans cet article.
 
-### <a name="to-install-the-rms-sharing-application-and-office-addin-only"></a>Pour installer l'application de partage RMS et le complément Office uniquement
+### <a name="to-install-the-rms-sharing-application-and-office-add-in-only"></a>Pour installer l'application de partage RMS et le complément Office uniquement
 
 1.  Installez le client AD RMS et l’application de partage RMS en utilisant la commande suivante, en spécifiant un dossier existant dans lequel créer le fichier journal :
 
@@ -273,7 +276,7 @@ Vous pouvez utiliser les fichiers journaux d'installation pour vérifier que l'i
 
         DefaultUser="&lt;default_user&gt;"
 
-### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-addin-only"></a>Pour vérifier la réussite de l'installation de l'application de partage RMS et du complément Office uniquement
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>Pour vérifier la réussite de l'installation de l'application de partage RMS et du complément Office uniquement
 
 1.  Pour vérifier la réussite de la commande Setup_ipviewer.exe, recherchez le texte suivant dans le fichier journal d’installation : **Réussite de l’installation ou état d’erreur : 0**
 
@@ -310,7 +313,7 @@ Certaines des commandes d'installation requises pour ces déploiements ne prenne
         x86\setup_ipviewer.exe /uninstall /quiet
         ```
 
-### <a name="to-uninstall-the-office-addin"></a>Pour désinstaller le complément Office
+### <a name="to-uninstall-the-office-add-in"></a>Pour désinstaller le complément Office
 
 -   Utilisez les commandes suivantes :
 
@@ -404,9 +407,5 @@ Si vous n'apportez pas cette modification au Registre, les utilisateurs risquent
 ## <a name="next-steps"></a>Étapes suivantes
 Pour obtenir des informations techniques supplémentaires sur notamment la différence entre les niveaux de protection (native et générique), les types de fichiers pris en charge, les extensions de nom de fichier et la façon de modifier le niveau de protection par défaut, consultez [Présentation technique de l’application de partage Rights Management](sharing-app-admin-guide-technical.md).
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

@@ -1,11 +1,11 @@
 ---
-title: "Modifier les autorisations des fichiers qui ont été protégés par Rights Management | Azure Information Protection"
+title: "Changer les autorisations sur des fichiers protégés par RMS - AIP"
 description: "Quand vous protégez un fichier avec Rights Management, vous pouvez modifier les autorisations en le reprotégeant, puis en spécifiant tous les utilisateurs qui doivent y avoir accès et quelles autorisations vous souhaitez leur accorder."
 keywords: 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,9 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3290b9436f75c2d0d37c401dd2e0be11bcf2d554
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -39,7 +40,7 @@ Par exemple, si quelqu’un d’autre a protégé le fichier à l’aide de l’
 
 Si vous souhaitez supprimer complètement toutes les autorisations pour que le fichier ne soit plus protégé, consultez [Supprimer la protection d’un fichier](sharing-app-remove-protection.md).
 
-## <a name="to-reprotect-a-file-inplace"></a>Pour reprotéger un fichier sur place
+## <a name="to-re-protect-a-file-in-place"></a>Pour reprotéger un fichier sur place
 
 1.  Dans l'Explorateur de fichiers, sélectionnez un fichier à protéger. Cliquez avec le bouton droit, sélectionnez **Protéger avec RMS**, puis sélectionnez **Protéger sur place**. Exemple :
 
@@ -72,7 +73,7 @@ Si vous souhaitez supprimer complètement toutes les autorisations pour que le f
 >     Lorsque vous vous inscrivez, utilisez l'adresse de messagerie de votre organisation plutôt qu'une adresse personnelle. Si vous vous inscrivez parce que vous reçu une pièce protégée jointe à un message électronique, utilisez l'adresse de messagerie à laquelle ce message a été envoyé.
 > -   Pour plus d’informations, consultez [RMS for individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## <a name="to-reprotect-a-file-that-you-have-emailed"></a>Pour reprotéger un fichier que vous avez envoyé par e-mail
+## <a name="to-re-protect-a-file-that-you-have-emailed"></a>Pour reprotéger un fichier que vous avez envoyé par e-mail
 
 Si vous souhaitez modifier les autorisations pour un fichier que vous avez envoyé par e-mail :
 
@@ -95,8 +96,4 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 ## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

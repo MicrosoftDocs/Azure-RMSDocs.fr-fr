@@ -1,10 +1,10 @@
 ---
-title: "Protéger un fichier sur un appareil (protéger sur place) à l’aide de l’application de partage Rights Management | Azure Information Protection"
+title: "Protéger des fichiers sur place via l’application de partage RMS - AIP"
 description: "Instructions à suivre pour stocker en toute sécurité un fichier sur votre ordinateur, un serveur ou un autre dispositif de stockage."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 1b95c1bf1c747808c7baed97daa449f5c8bb234d
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a0654dba53f493551b2cc4d1fbb8790f246e0c18
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="protect-a-file-on-a-device-protect-inplace-by-using-the-rights-management-sharing-application"></a>Protection d'un fichier sur un appareil (Protéger sur place) à l'aide de l'application de partage Rights Management
+# <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Protection d'un fichier sur un appareil (Protéger sur place) à l'aide de l'application de partage Rights Management
 
 >*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
@@ -28,7 +29,7 @@ Lorsque vous protégez un fichier sur place, celui-ci remplace le fichier non pr
 > [!TIP]
 > Si vous rencontrez des erreurs lorsque vous tentez de protéger des fichiers, reportez-vous au [FAQ relatif à l'application de partage Microsoft Rights Management pour Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
-## <a name="to-protect-a-file-on-a-device-protect-inplace"></a>Pour protéger un fichier sur un appareil (Protéger sur place)
+## <a name="to-protect-a-file-on-a-device-protect-in-place"></a>Pour protéger un fichier sur un appareil (Protéger sur place)
 
 1.  Dans l'Explorateur de fichiers, sélectionnez un fichier à protéger. Cliquez avec le bouton droit, sélectionnez **Protéger avec RMS**, puis sélectionnez **Protéger sur place**. Exemple :
 
@@ -65,8 +66,4 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 ## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

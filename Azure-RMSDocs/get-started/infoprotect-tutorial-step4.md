@@ -1,18 +1,19 @@
 ---
-title: "Étape 4 du didacticiel de démarrage rapide | Azure Rights Management"
-description: "Étape 3 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 30 minutes."
+title: "Didacticiel de démarrage rapide, étape 4 - AIP"
+description: "Didacticiel de présentation expliquant comment tester rapidement Azure Information Protection, étape 4 : étiquetage et protection en action."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: bcf1e9ee7a2d6cf8fb264533f150b350ce0a9e56
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: 8260da1905c6701675b5490e3919ae708f46a5a9
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -27,15 +28,33 @@ La classification et la protection ont lieu quand vous enregistrez le document, 
 
 ## <a name="to-manually-change-our-default-label"></a>Pour modifier manuellement notre étiquette par défaut
 
-Dans la barre Information Protection, sélectionnez l’étiquette **Personal** (Personnel). Vous êtes alors invité à indiquer pourquoi vous abaissez le niveau de classification :
+Dans la barre Information Protection, sélectionnez l’étiquette **Question secrète** pour voir la façon dont les sous-étiquettes s’affichent :
+
+![Didacticiel de démarrage rapide Azure Information Protection, étape 4 : choisir une sous-étiquette](../media/info-protect-sub-labels.png)
+
+Sélectionnez **All Company** (Toutes les sociétés). Vous verrez alors que les autres étiquettes n’apparaissent plus dans la barre maintenant que vous avez sélectionné une étiquette pour ce document. La valeur **Sensitivity** (Niveau de confidentialité) devient **Secret \ All Company** (Question secrète \ Toutes les sociétés) avec une modification correspondante de la couleur de l’étiquette :
+
+![Étape 4 du didacticiel de démarrage rapide Azure Information Protection - Sous-étiquette sélectionnée](../media/info-protect-sub-label-selected.png)
+
+Dans la barre Information Protection, cliquez sur l’icône **Edit Label** (Modifier l’étiquette) à côté de **Secret \ All Company** (Question secrète \ Toutes les sociétés) :
+
+![Didacticiel de démarrage rapide Azure Information Protection, étape 4 : icône Modifier l’étiquette](../media/info-protect-edit-label-selected.png)
+
+Les étiquettes disponibles apparaissent à nouveau.
+
+Sélectionnez maintenant l’étiquette **Personal** (Personnel). Étant donné que vous avez sélectionné une étiquette dont la classification est inférieure à l’étiquette précédemment sélectionnée pour ce document, vous êtes invité à justifier votre choix :
 
 ![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : invite de confirmation de l’abaissement](../media/info-protect-lower-justification.png)
 
-Sélectionnez **The previous label no longer applies** (L’étiquette précédente ne s’applique plus), cliquez sur **Confirm** (Confirmer). **Sensitivity** (Niveau de confidentialité) prend la valeur **Personal** (Personnel).
+Sélectionnez **The previous label no longer applies** (L’étiquette précédente ne s’applique plus), cliquez sur **Confirm** (Confirmer). La valeur **Sensitivity** (Niveau de confidentialité) devient **Personal** (Personnel) et les autres étiquettes sont masquées à nouveau.
 
 ## <a name="to-remove-the-classification-completely"></a>Pour supprimer complètement la classification
 
-Dans la barre Information Protection, cliquez sur l’icône **Edit label** (Modifier l’étiquette) à côté de **Personal** (Personnel). Les étiquettes disponibles apparaissent. Au lieu de choisir l’une des étiquettes, cliquez sur l’icône **Remove label** (Supprimer l’étiquette). Cliquez sur **OK** pour confirmer, puis indiquez la justification de cette action.  
+Dans la barre Information Protection, cliquez à nouveau sur l’icône **Edit Label** (Modifier l’étiquette). Toutefois, au lieu de choisir l’une des étiquettes, cliquez sur l’icône **Delete Label** (Supprimer l’étiquette) :
+
+![Didacticiel de démarrage rapide Azure Information Protection, étape 4 : icône Supprimer](../media/delete-icon-from-personal.png)
+
+Cette fois à l’invite, saisissez « Ce document n’a pas besoin d’être classé », puis cliquez sur **Confirm** (Confirmer).  
 
 La valeur **Sensitivity** (Niveau de confidentialité) indique **Not set** (Non défini), ce qui correspond à ce que les utilisateurs voient initialement si vous ne définissez pas d’étiquette par défaut :
 
@@ -56,15 +75,20 @@ La valeur **Sensitivity** (Niveau de confidentialité) indique **Not set** (Non 
 
     Le document est également protégé avec le modèle Azure Rights Management que vous avez spécifié, ce que vous pouvez vérifier en cliquant sur l’onglet **Fichier** et en affichant les informations **Protéger le document**. Si vous avez utilisé le modèle Confidential par défaut, un message précise que l’accès au document est limité aux utilisateurs internes (les utilisateurs extérieurs à votre organisation ne pourront pas l’ouvrir) et que son contenu ne peut pas être copié ou imprimé. En tant que propriétaire du document, vous pouvez le copier et l’imprimer, mais si vous l’envoyez à un autre utilisateur de votre organisation, il ne pourra pas effectuer ces actions.
 
+4. Vous pouvez maintenant fermer ce document.
+
 La classification, l’étiquetage et la protection n’ayant plus de secret pour vous, nous allons voir comment vous pouvez protéger vos documents même quand ils sont partagés avec d’autres personnes dans une autre organisation. Vous pouvez même suivre la façon dont ils sont utilisés et révoquer leur accessibilité.
+
+|Pour en savoir plus|Informations supplémentaires|
+|--------------------------------|--------------------------|
+|Instructions complètes pour l’étiquetage et la protection de fichiers |[Classifier et protéger un fichier ou un e-mail](../rms-client/client-classify-protect.md)|
+
+
+
+
 
 >[!div class="step-by-step"]
 [&#171; Étape 3](infoprotect-tutorial-step3.md)
 [Étape 5 &#187;](infoprotect-tutorial-step5.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO2-->
-
-

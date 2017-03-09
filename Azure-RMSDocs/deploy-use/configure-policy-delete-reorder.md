@@ -1,18 +1,19 @@
 ---
-title: "Comment supprimer ou réorganiser une étiquette | Azure Information Protection"
+title: "Supprimer ou réorganiser une étiquette Azure Information Protection"
 description: "Vous pouvez supprimer ou réorganiser les étiquettes que les utilisateurs voient dans la barre Information Protection en configurant la stratégie Azure Information Protection en conséquence."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: 55895dd6fd0e106c33914a232e2d00d98e8a154a
-ms.openlocfilehash: 195a4ff44d0edc9d35ee30786bdddbcc821fc106
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: df667a8580af71d808752d569a6148852faec82c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -27,7 +28,7 @@ Vous pouvez supprimer ou réorganiser les étiquettes que les utilisateurs voien
 
 Lorsque vous supprimez une étiquette ayant été appliquée à des documents et à des e-mails, puis publiez la stratégie Azure Information Protection, l’étiquette est automatiquement supprimée des documents et des e-mails lors de leur prochaine ouverture par le client Azure Information Protection.
 
-Au lieu de supprimer une étiquette, vous pouvez simplement la désactiver si vous souhaitez la conserver sans qu’elle ne s’affiche dans la barre Information Protection.
+Avant de supprimer une étiquette, pensez à plutôt la désactiver. Lorsque vous désactivez une étiquette qui a été appliquée à des documents et à des e-mails, l’étiquette appliquée ne sera pas supprimée de ces documents et e-mails, mais elle ne s’affiche plus comme étiquette que les utilisateurs peuvent sélectionner dans la barre Information Protection. La désactivation d’une étiquette vous permet également de conserver la configuration d’origine au cas où vous souhaiteriez que des utilisateurs sélectionnent l’étiquette ultérieurement, après une simple réactivation.
 
 Triez les étiquettes de manière à ce que les utilisateurs les voient dans un ordre de progression logique dans la barre Information Protection. Par exemple, triez les étiquettes dans leur ordre croissant de confidentialité afin que les utilisateurs voient l’étiquette la moins sensible en premier et l’étiquette la plus sensible en dernier. La [stratégie par défaut](configure-policy-default.md) utilise cette configuration.
 
@@ -57,10 +58,6 @@ Suivez la procédure indiquée ci-dessous pour effectuer ces modifications.
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

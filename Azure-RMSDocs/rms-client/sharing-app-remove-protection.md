@@ -1,10 +1,10 @@
 ---
-title: "Supprimer la protection d’un fichier à l’aide de l’application de partage Rights Management | Azure Information Protection"
+title: "Supprimer la protection d’un fichier via l’application de partage RMS - AIP"
 description: "Instructions à suivre pour supprimer la protection d’un fichier protégé (autrement dit, pour le déprotéger) à l’aide de l’application de partage RMS."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 3ef47e5dea1c6b56127e231ba6dba774c31cca90
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 370b19894efb53604c798b38be02dda3f8804b8b
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -50,8 +51,4 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 ## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

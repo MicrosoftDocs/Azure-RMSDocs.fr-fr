@@ -1,10 +1,10 @@
 ---
-title: "Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management | Azure Information Protection"
+title: "Aider les utilisateurs à protéger des fichiers à l’aide d’Azure RMS - AIP"
 description: "Informations vous permettant de fournir de l’aide aux utilisateurs, aux administrateurs et au support technique après le déploiement et la configuration du service Azure Rights Management d’Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 03/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: df9da739717465a905c9e6da281df652de63f8bd
+ms.sourcegitcommit: 1300b0abb3cb59ad09075418ab8c911466740a2c
+ms.openlocfilehash: f1d2db08951c1d017ea4f011855d99423fa9d577
+ms.lasthandoff: 03/03/2017
 
 
 ---
@@ -42,6 +43,8 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
 -   **Informations de support technique :**
 
     L'un des outils les plus utiles pour le support technique est l' [Analyseur RMS](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Les opérateurs du support technique peuvent l'exécuter avec l'option d'administrateur Azure RMS, et demander aux utilisateurs de l'exécuter avec l'option d'utilisateur Azure RMS. Cet outil permet, non seulement d'identifier des problèmes, mais également de les résoudre ou, à défaut, d'enregistrer des journaux de suivi.
+    
+    Si des utilisateurs exécutent le client Azure Information Protection, les opérateurs du support technique peuvent leur demander d’utiliser l’option **Aide et commentaires**, **Exécuter les diagnostics**, puis de réinitialiser le client. Toutefois, contrairement à l’Analyseur RMS, la réinitialisation ne déconnecte pas l’utilisateur ou n’effectue aucun rebootstrap du client, et aucune mise à jour automatique n’a lieu.
 
     S’il existe des demandes légitimes d’obtention de droits d’accès complets à des documents protégés, par exemple une demande émanant du service juridique ou d’un responsable après qu’un employé a quitté l’organisation, vérifiez que le support technique dispose des processus nécessaires pour effectuer une telle demande à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md) d’Azure Rights Management.
 
@@ -61,20 +64,16 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
 
 Utilisez les sections suivantes pour obtenir des informations spécifiques aux applications afin d'aider les utilisateurs à protéger les documents et les messages électroniques contenant des informations sensibles.
 
-## <a name="using-information-protection-with-the-rights-management-sharing-application"></a>Utilisation de la protection des données avec l'application de partage Rights Management
-L’application de partage Rights Management (RMS) peut être nécessaire pour que les utilisateurs puissent protéger du contenu et utiliser du contenu protégé s’ils utilisent Office 2010. Son utilisation est également recommandée pour tous les ordinateurs et appareils mobiles qui prennent en charge le service Azure Rights Management.
+## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Utilisation de la protection des informations avec le client Azure Information Protection
+Le client Azure Information Protection peut être requis pour que les utilisateurs sous Office 2010 protègent et utilisent des documents et des e-mails protégés, mais il est également recommandé pour les ordinateurs et appareils mobiles.
 
-En plus d'aider les utilisateurs à protéger des documents importants, l'application de partage RMS permet aux utilisateurs de suivre les documents qu'ils ont protégés et, si nécessaire, de révoquer l'accès à ceux-ci.
+En plus d’aider les utilisateurs à protéger des documents importants, le client Azure Information Protection permet aux utilisateurs de suivre les documents qu’ils ont protégés et, si nécessaire, de révoquer l’accès à ceux-ci.
 
-Pour obtenir des instructions sur l’utilisation de cette application pour les ordinateurs Windows, consultez le [Guide de l’utilisateur de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md).
+Pour savoir comment utiliser ce client pour les ordinateurs Windows, consultez le [Guide de l’utilisateur du client Azure Information Protection](../rms-client/client-user-guide.md).
 
-Pour les appareils mobiles, consultez la [FAQ relative à l’application de partage Microsoft Rights Management pour plateformes mobiles](http://technet.microsoft.com/dn451248).
-
-> [!TIP]
-> Pour obtenir un exemple de scénario complexe avec des captures d’écran, consultez [Partage en toute sécurité de pièces jointes avec des utilisateurs mobiles](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
 ## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Utilisation de la protection des informations avec Office 365, Office 2016 ou Office 2013
-Si vous utilisez le service Azure Rights Management et que vous n’avez pas installé l’application de partage Rights Management, les utilisateurs ne voient pas le bouton **Partage protégé** sur le ruban ni **Protéger sur place** dans l’Explorateur de fichiers, qui leur permettent de protéger des fichiers plus facilement. Ces utilisateurs doivent suivre des instructions similaires à celle-ci.
+Si vous utilisez le service Azure Rights Management et que vous n’avez pas installé le client Azure Information Protection, les utilisateurs ne voient pas la barre Azure Information Protection dans leurs applications de bureau Office, le bouton **Protéger** sur le ruban, ni l’option **Classifier et protéger** dans l’Explorateur de fichiers qui simplifie la protection des fichiers. Ces utilisateurs doivent suivre des instructions similaires aux suivantes.
 
 > [!TIP]
 > Pour trouver de l’aide et des instructions spécifiques à une application qui ont trait à l’utilisation de la protection des données avec ces applications, recherchez **IRM**, ainsi que le nom et la version de l’application.
@@ -112,10 +111,6 @@ Comme pour l'affichage d'un document protégé, lorsque les destinataires reçoi
 
 Comme pour l'affichage d'un document protégé, lorsque les destinataires reçoivent le message électronique, ceux-ci sont tout d'abord authentifiés. S'ils sont autorisés à afficher le message électronique, ce dernier s'ouvrira avec les droits d'utilisation restreints qui ont été définis pour cet utilisateur. Par exemple, si vous avez sélectionné **Ne pas répondre à tous**, l’option **RÉPONDRE À TOUS** dans la fenêtre du message ne sera pas disponible.
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

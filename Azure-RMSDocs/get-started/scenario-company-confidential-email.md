@@ -1,10 +1,10 @@
 ---
-title: "Scénario - Envoyer un e-mail confidentiel de l’entreprise | Azure Information Protection"
+title: "Scénario AIP : Envoyer un e-mail confidentiel de l’entreprise"
 description: "Ce scénario et la documentation utilisateur associée utilisent la protection Azure Rights Management afin que n’importe quel utilisateur de l’organisation puisse envoyer de manière sécurisée des communications par e-mail qui ne peuvent pas être lues à l’extérieur de l’organisation."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 04d8e694aa33bcc00deca602737e0ab11eafb53d
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-send-a-companyconfidential-email"></a>Scénario - Envoyer un e-mail confidentiel de l’entreprise
+# <a name="scenario---send-a-company-confidential-email"></a>Scénario - Envoyer un e-mail confidentiel de l’entreprise
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -92,7 +93,7 @@ L’exemple de documentation illustre la façon dont ces instructions se présen
 
 ![Modèle de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook
+### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook"></a>Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook
 
 1.  Dans Outlook, créez un message, ajoutez les pièces jointes que vous souhaitez inclure, puis sélectionnez les utilisateurs ou les groupes dans *&lt;nom de l’organisation&gt;*.
 
@@ -102,7 +103,7 @@ L’exemple de documentation illustre la façon dont ces instructions se présen
 
 3.  Envoyez le message.
 
-### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook Web App
+### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook-web-app"></a>Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook Web App
 
 1.  Dans Outlook Web App, créez un message, ajoutez les pièces jointes que vous souhaitez inclure, puis sélectionnez les utilisateurs ou les groupes de *&lt;nom de l’organisation&gt;* dans le carnet d’adresses.
 
@@ -125,7 +126,7 @@ Les destinataires de votre message pourront le transférer à d’autres personn
 ### <a name="example-customized-user-documentation"></a>Exemple de documentation utilisateur personnalisée
 ![Exemple de documentation utilisateur pour le déploiement rapide Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook
+#### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook"></a>Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook
 
 1.  Dans Outlook, créez un nouvel e-mail, ajoutez les pièces jointes que vous souhaitez inclure, puis sélectionnez les utilisateurs ou les groupes VanArsdel à partir du carnet d’adresses.
 
@@ -135,7 +136,7 @@ Les destinataires de votre message pourront le transférer à d’autres personn
 
 3.  Envoyez le message.
 
-#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook Web App
+#### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook-web-app"></a>Procédure d’envoi d’e-mails contenant des informations confidentielles de l’entreprise à l’aide d’Outlook Web App
 
 1.  Dans Outlook Web App, créez un nouvel e-mail, ajoutez les pièces jointes que vous souhaitez inclure, puis sélectionnez les utilisateurs ou les groupes VanArsdel à partir du carnet d’adresses.
 
@@ -155,9 +156,5 @@ Les destinataires de votre e-mail pourront le transférer à d’autres personne
 
     -   E-mail : helpdesk@vanarsdelltd.com
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

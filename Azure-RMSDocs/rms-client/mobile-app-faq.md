@@ -1,11 +1,11 @@
 ---
-title: "Forum aux questions sur l’application Azure Information Protection pour iOS et Android | Azure Information Protection"
+title: "FAQ relatives à l’application Azure Information Protection pour iOS et Android"
 description: 
 keywords: "Quelques questions fréquemment posées pour vous aider à utiliser l’application Azure Information Protection pour iOS et Android"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -14,8 +14,9 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 2c2a0281041f8f9241fd0e733f3c1b08099bae33
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 4ac26b3faa61f3a19e71f7f1d1d257c2ded934c7
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -33,6 +34,18 @@ Cette application vous permet d’afficher des e-mails protégés par des droits
 ## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>Puis-je ouvrir des fichiers PDF qui se trouvent dans des bibliothèques protégées SharePoint et dans OneDrive Entreprise ?
 
 Oui, vous pouvez ouvrir des fichiers PDF protégés que d’autres ont partagés avec vous par l’intermédiaire de SharePoint et de OneDrive Entreprise. Appuyez sur le lien, puis choisissez cette application pour ouvrir automatiquement le fichier. 
+
+Cette application peut également ouvrir les fichiers PDF qui ont été protégés en dehors de SharePoint et de OneDrive Entreprise (PDF protégés et fichiers .ppdf).
+
+## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>Mon appareil mobile peut-il exécuter l’application Azure Information Protection ?
+
+L’application Azure Information Protection nécessite comme version minimale **iOS 8** ou **Android 4.4**.
+
+Si vous disposez de ces versions ou de versions ultérieures, vous pouvez installer l’application pour l'exécuter sur votre appareil mobile :
+
+- Si votre appareil mobile est géré par Microsoft Intune, vous pourrez peut-être installer l’application Azure Information Protection à partir de votre portail d’entreprise.
+
+- Si votre appareil mobile n’est pas géré par Microsoft Intune ou si Azure Information Protection n’est pas disponible sur votre portail d’entreprise, vous pouvez installer l’application directement à partir de l’iTunes Store et du Google Play Store, ou par un clic sur l’icône iOS ou Android dans la section **Appareils mobiles** sur la [page de téléchargement Azure Information Protection](https://portal.azurerms.com/#/download). 
 
 ## <a name="how-do-i-get-started-with-the-viewer-app"></a>Comment commencer à utiliser l’application de visionneuse ?
 
@@ -60,8 +73,4 @@ Dans l’application, accédez à **Paramètres** > **Envoyer des commentaires**
 
 Publiez votre question sur notre [site Yammer](https://www.yammer.com/AskIPTeam), ou [envoyez un e-mail à l’équipe Information Protection](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

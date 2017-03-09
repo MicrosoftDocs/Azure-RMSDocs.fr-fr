@@ -1,10 +1,10 @@
 ---
-title: "Scénario - Sécuriser vos fichiers les plus précieux | Azure Information Protection"
+title: "Scénario AIP : Sécuriser vos fichiers les plus précieux"
 description: "Ce scénario et la documentation utilisateur associé utilisent Azure Rights Management pour protéger de manière manuelle et personnalisée un certain nombre de fichiers que vous considérez comme les plus précieux, qui assure le plus haut niveau de protection qui soit contre tout accès non autorisé."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ad75734c28c51ac68697f96e0e50a5d90314b76e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f096a4ad7333d24c7bce0dd729b40ebb203726c5
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-secure-your-most-few-valuable-files"></a>Scénario - Sécuriser vos fichiers les plus précieux
+# <a name="scenario---secure-your-most-few-valuable-files"></a>Scénario - Sécuriser vos fichiers les plus précieux
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -70,7 +71,7 @@ Pour ce scénario, les éléments suivants doivent être en place :
 
 2.  Publiez le nouveau modèle.
 
-### <a name="to-protect-the-files-inplace"></a>Pour protéger les fichiers sur place
+### <a name="to-protect-the-files-in-place"></a>Pour protéger les fichiers sur place
 
 1.  Dans l’Explorateur de fichiers, accédez au premier dossier qui contient les fichiers à protéger :
 
@@ -145,9 +146,4 @@ Un niveau de protection très élevé est désormais appliqué à ces fichiers d
 
 -   Si vous ne pouvez pas accéder à ces fichiers, ou si vous remarquez des modifications suspectes dans les fichiers, appelez le numéro du support technique disponible 24 heures sur 24 chargé de remonter les incidents qui vous a été envoyé par le département informatique dans un e-mail protégé.
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

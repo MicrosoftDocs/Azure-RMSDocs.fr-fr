@@ -1,18 +1,19 @@
 ---
-title: "Étape 1 du didacticiel de démarrage rapide | Azure Information Protection"
-description: "Étape 2 d’un didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 30 minutes."
+title: "Didacticiel de démarrage rapide, étape 2 - AIP"
+description: "Didacticiel de présentation expliquant comment tester rapidement Azure Information Protection, étape 2 : configurer la stratégie."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 2f996bb974b1d86b137e3a8fba387386276739a2
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: cecf91a6e8bea14002f6760ddbde15e934cb7ef7
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -32,7 +33,7 @@ Bien qu’Azure Information Protection soit fourni avec une stratégie par défa
     > [!TIP] 
     > Sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous n’avez ainsi pas besoin d’accéder au service lors de votre prochaine connexion au portail.
 
-3.  Le panneau **Stratégie : Globale** qui s’affiche automatiquement indique la stratégie Information Protection par défaut automatiquement créée :
+3.  Sur le panneau Azure Information Protection, cliquez sur **Global** et explorez le panneau **Stratégie : Global**, qui indique la stratégie Information Protection par défaut qui est créée automatiquement :
     
     - Étiquettes de classification : **Personal**, **Public**, **Internal**, **Confidential** et **Secret**. Lisez l’info-bulle de chacune d’elles pour comprendre la façon dont les étiquettes sont censées être utilisées. Notez que **Secret** a deux sous-étiquettes (**All Company** et **My Group**), pour illustrer comment une classification peut avoir des sous-catégories.
 
@@ -60,9 +61,15 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
     
     Dans le nouveau panneau **Étiquette : Confidentiel**, sont répertoriés les paramètres qui sont disponibles pour chaque étiquette. 
 
-2. Dans le panneau **Étiquette : Confidentiel**, recherchez la section **Définir le modèle RMS pour la protection des documents et e-mails contenant cette étiquette** :
+2. Dans le panneau **Étiquette : Confidentiel**, recherchez la section **Définir les autorisations relatives aux documents et e-mails contenant cette étiquette**.
+
+    Sélectionnez **Protéger**, puis l’option **Protection** :
     
-    Pour l’option **Sélectionner le modèle RMS à partir de**, conservez la valeur par défaut **Azure RMS**. Cliquez ensuite pour **Sélectionner un modèle RMS** sur la zone de liste déroulante et sélectionnez le modèle par défaut **\<nom_de_votre_organisation> - Confidentiel**. 
+    ![Configurer la protection d’une étiquette Azure Information Protection](../media/info-protect-protection-bar.png) 
+    
+    Cette action ouvre le panneau **Protection**.
+    
+3. Dans le panneau **Protection**, assurez-vous que l’option **Azure RMS** est sélectionnée, ainsi que l’option **Select template** (Sélectionner un modèle), puis cliquez sur la zone de liste déroulante et choisissez le modèle par défaut **\<Nom de votre organisation > Confidentiel**.     
     
     Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous verrez et sélectionnerez **VanArsdel, Ltd - Confidential** : 
     
@@ -70,7 +77,9 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
     
     Si vous avez désactivé ce modèle Azure Rights Management par défaut, sélectionnez un autre modèle. Toutefois, si vous sélectionnez un modèle de service, vérifiez que votre compte est compris dans l’étendue.
     
-3. Recherchez la section **Définir un marquage visuel** :
+4. Cliquez sur **OK** pour enregistrer vos modifications, puis fermez le panneau **Protection**.
+
+5. Revenez au panneau **Étiquette : Confidentiel** et recherchez la section **Définir un marquage visuel** :
     
     Pour le paramètre **Les documents avec cette étiquette ont un filigrane**, cliquez sur **Activé** puis, dans la zone **Texte**, tapez le nom de votre organisation. Dans notre exemple, **VanArsdel, Ltd** : 
     
@@ -78,7 +87,7 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
     
     Bien que vous puissiez modifier la taille, la couleur et la disposition des filigranes, nous laisserons ces paramètres à leurs valeurs par défaut pour le moment.
     
-4. Recherchez la section **Configurer des conditions pour appliquer automatiquement cette étiquette** :
+6. Recherchez la section **Configurer des conditions pour appliquer automatiquement cette étiquette** :
     
     Cliquez sur **Ajouter une nouvelle condition**, puis dans le panneau **Condition**, sélectionnez les éléments suivants :
     
@@ -94,27 +103,27 @@ Nous allons maintenant modifier les paramètres de l’une des étiquettes, **Co
     
     Cliquez sur **Enregistrer** pour revenir au panneau **Étiquette : Confidentiel**.
 
-5. Dans le panneau **Étiquette : Confidentiel**, vous verrez que **Numéro de carte de crédit** est affiché comme **NOM DE LA CONDITION**, avec **1** **OCCURRENCES** :
+7. Dans le panneau **Étiquette : Confidentiel**, vous verrez que **Numéro de carte de crédit** est affiché comme **NOM DE LA CONDITION**, avec **1** **OCCURRENCES** :
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Configurer la condition de la carte de crédit](../media/step2-see-condition.png)
 
-6. Pour **Sélectionner comment cette étiquette est appliquée** : conservez la valeur par défaut **Recommandée** et ne modifiez pas le conseil de stratégie par défaut :
+8. Pour **Sélectionner comment cette étiquette est appliquée** : conservez la valeur par défaut **Recommandée** et ne modifiez pas le conseil de stratégie par défaut :
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Classification recommandée](../media/step2-keep-recommended.png)
 
-7. Dans la zone **Saisir des notes pour les tâches de nettoyage internes**, tapez **À des fins de test uniquement** :
+9. Dans la zone **Saisir des notes pour les tâches de nettoyage internes**, tapez **À des fins de test uniquement** :
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Taper des remarques](../media/step2-type-notes.png)
 
-8. Cliquez sur **Enregistrer** dans le panneau **Étiquette : Confidentiel**. Puis, dans le panneau **Stratégie : Globale**, cliquez une nouvelle fois sur **Enregistrer**.
+10. Cliquez sur **Enregistrer** dans le panneau **Étiquette : Confidentiel**. Puis, dans le panneau **Stratégie : Globale**, cliquez une nouvelle fois sur **Enregistrer**.
 
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut configurée](../media/info-protect-policy-configured.png)
 
-9. Maintenant que nous avons apporté des modifications et les avons enregistrées, nous voulons les mettre à la disposition des utilisateurs. Pour cela, dans le panneau **Azure Information Protection** initial, cliquez sur **Publier**, puis sur **Oui** pour confirmer.
+11. Maintenant que nous avons apporté des modifications et les avons enregistrées, nous voulons les mettre à la disposition des utilisateurs. Pour cela, dans le panneau **Azure Information Protection** initial, cliquez sur **Publier**, puis sur **Oui** pour confirmer.
 
 Vous pouvez fermer le portail Azure, ou le laisser ouvert pour essayer des options de configuration supplémentaires après avoir terminé ce didacticiel.
 
-Ayant examiné la stratégie par défaut et apporté des modifications, vous pouvez passer à l’étape suivante, qui consiste à installer le client Azure Information Protection et l’application de partage Rights Management.
+Maintenant que vous avez examiné la stratégie par défaut et apporté des modifications, l’étape suivante consiste à installer le client Azure Information Protection.
 
 |Pour en savoir plus|Informations supplémentaires|
 |--------------------------------|--------------------------|
@@ -125,7 +134,4 @@ Ayant examiné la stratégie par défaut et apporté des modifications, vous pou
 [&#171; Étape 1](infoprotect-tutorial-step1.md)
 [Étape 3 &#187;](infoprotect-tutorial-step3.md)
 
-
-<!--HONumber=Dec16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

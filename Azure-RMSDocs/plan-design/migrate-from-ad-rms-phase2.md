@@ -1,10 +1,10 @@
 ---
-title: "Migration d’AD RMS vers Azure Information Protection - Phase 2 | Azure Information Protection"
+title: "Migrer un déploiement AD RMS vers Azure Information Protection - Phase 2"
 description: "Phase 2 de la migration d’AD RMS vers Azure Information Protection, couvrant l’étape 5 de la migration d’AD RMS vers Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,12 +13,13 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ca8d2ccb68b96095fccf9d55b9cb9392d3a455ec
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: aa1569749abbdd335c8fdff56441441d5c49b21d
+ms.lasthandoff: 02/24/2017
 
 
 ---
-# <a name="migration-phase-2-clientside-configuration"></a>Phase de migration 2 - Configuration côté client
+# <a name="migration-phase-2---client-side-configuration"></a>Phase de migration 2 - Configuration côté client
 
 >*S’applique à : Services AD RMS, Azure Information Protection, Office 365*
 
@@ -133,7 +134,4 @@ Redirect_OnPrem.cmd :
 ## <a name="next-steps"></a>Étapes suivantes
 Pour poursuivre la migration, passez à la [Phase 3 : Configuration des services de prise en charge](migrate-from-ad-rms-phase3.md).
 
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

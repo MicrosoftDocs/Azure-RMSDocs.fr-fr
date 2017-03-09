@@ -1,10 +1,10 @@
 ---
-title: "Installation de Windows PowerShell pour Azure Rights Management | Azure Information Protection"
+title: "Installer Windows PowerShell pour Azure Rights Management - AIP"
 description: "Instructions d’installation de Windows PowerShell pour le service Azure Rights Management d’Azure Information Protection. Le nom de ce module est AADRM."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: c114059e99f3caed4fa5e2c48fe0428cb5847f68
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 45b9415443de28d78b4bff28da25eaed02f3d052
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -74,8 +75,4 @@ Avant de pouvoir exécuter des commandes pour configurer le service [!INCLUDE[aa
 ## <a name="see-also"></a>Voir aussi
 [Administration d’Azure Rights Management à l'aide de Windows PowerShell](administer-powershell.md)
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

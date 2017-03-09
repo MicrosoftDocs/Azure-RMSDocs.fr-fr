@@ -1,10 +1,10 @@
 ---
-title: "Comment déterminer si des utilisateurs se sont inscrits à RMS for Individuals | Azure Information Protection"
+title: "Déterminer si des utilisateurs se sont inscrits à RMS for individuals - AIP"
 description: "En tant qu&quot;administrateur, vous souhaitez sûrement savoir si vos utilisateurs se sont inscrits à RMS for individuals. Vous pouvez utiliser l’une des méthodes décrites dans cet article ou une combinaison de ces méthodes."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: b9979d48af7146f8021de840248f71cb1399b777
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: e696bf596255b5e28aa5589cfc18715f100c5b07
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -28,15 +29,10 @@ En tant qu'administrateur, vous souhaitez sûrement savoir si vos utilisateurs s
 
 -   Demandez aux utilisateurs comment ils protègent les fichiers hautement confidentiels, en particulier lorsqu'ils collaborent avec des personnes extérieures à l'organisation.
 
--   Si vous avez un abonnement Azure pour votre organisation, utilisez l’applet de commande [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) pour voir si **RIGHTSMANAGEMENT_ADHOC** est retourné comme l’un des abonnements. Si c'est le cas, il s'agit de l'abonnement RMS for individuals qui a été accordé à l'organisation, avec un pool d'unités actives disponibles dont les utilisateurs peuvent se servir pour le processus d'inscription libre-service.
+-   Si vous avez un abonnement Azure pour votre organisation, utilisez l’applet de commande [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) pour voir si la licence **RIGHTSMANAGEMENT_ADHOC** est affectée à des utilisateurs. La licence est issue de l’abonnement RMS for individuals qui a été accordé à l’organisation, avec un pool d’unités actives disponibles dont les utilisateurs peuvent se servir pour le processus d’inscription libre-service.
 
--   Utilisez une solution de gestion de système, telle que System Center Configuration Manager, pour dresser l'inventaire des logiciels installés et utilisés. L'application de partage Rights Management s'exécute à l'aide du programme **ipviewer.exe** et vous pouvez [télécharger et installer l'application](http://go.microsoft.com/fwlink/?LinkId=303970) gratuitement pour identifier d'autres caractéristiques de cette application que vous utilisez ensuite pour l'inventaire logiciel.
+-   Utilisez une solution de gestion de système, telle que System Center Configuration Manager, pour dresser l'inventaire des logiciels installés et utilisés. Par exemple, recherchez **MSIP. App.exe**, qui est utilisé par le client Azure Information Protection, et **ipviewer.exe** pour l’application de partage Rights Management. Vous pouvez télécharger et installer ce client et cette application gratuitement pour identifier d’autres caractéristiques que vous utiliserez ensuite pour l’inventaire logiciel.
 
--   Recherchez les extensions de nom de fichier créées par l'application de partage Rights Management. Les extensions de nom de fichier .pfile et .ppdf sont les exemples les plus évidents, mais d’autres fichiers changent d’extension de nom de fichier quand ils sont protégés nativement par le service Rights Management. Pour plus d’informations, consultez la section [Types de fichiers pris en charge et extensions de nom de fichier](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) du [Guide de l’administrateur de l’application de partage Rights Management](http://technet.microsoft.com/library/dn339003.aspx).
+-   Recherchez les extensions de nom de fichier créées par le client Azure Information Protection et l’application de partage Rights Management. Les extensions de nom de fichier .pfile et .ppdf sont les exemples les plus évidents, mais d’autres fichiers changent d’extension de nom de fichier quand ils sont protégés nativement par le service Rights Management. Pour plus d’informations, consultez la section [Types de fichiers pris en charge pour la protection](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) dans le guide de l’administrateur du client Azure Information Protection.
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

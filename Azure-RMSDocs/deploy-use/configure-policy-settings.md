@@ -1,18 +1,19 @@
 ---
-title: "Guide pratique pour configurer les paramètres de stratégie | Azure Information Protection"
+title: "Configurer les paramètres de la stratégie Azure Information Protection"
 description: "Configurez les paramètres dans la stratégie Azure Information Protection qui s’appliquent à tous les utilisateurs et à tous les appareils."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 9611b1fb11a66bbe1bd2b717d3c16bec6f944874
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f91e7c322688a562a0060031896bce0827b328a0
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -62,17 +63,5 @@ Pour configurer ces paramètres :
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 
-
-
-
-
-
-
-
-
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

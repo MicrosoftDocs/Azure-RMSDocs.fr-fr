@@ -1,11 +1,11 @@
 ---
-title: "Conditions d’utilisation | Azure RMS"
-description: "Collection de définitions propres aux services Rights Management."
+title: "Terminologie de développeurs AIP | Microsoft Docs"
+description: "Une collection de définitions pour les développeurs propres aux services Rights Management."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,15 +15,15 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 38ed5a7128813f52cb62b906b0a5cef4e6d990be
+ms.sourcegitcommit: 9c0977c57ea8e85b6750fe1f5a063059ee343db9
+ms.openlocfilehash: 4ecf686d8e7e26909c8bda4a2d0df7fc61f413bb
 
 
 ---
 
 # <a name="terms"></a>Conditions d'utilisation
 
-Collection de définitions propres aux services Rights Management.
+Une collection de définitions pour les développeurs propres à Azure Information Protection.
 
 **Algorithme déprécié**  
 Paramètre modal qui implémente un ancien schéma de protection de contenu, se référant en particulier au mode de chiffrement ECB (Electronic CodeBook). Dans ce SDK, le paramètre vous permet de générer des licences compatibles avec la bibliothèque MSDRM utilisée par le Kit [AD Rights Management SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
@@ -42,6 +42,6 @@ Le format PFile est transparent pour le développeur d’applications, car il es
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

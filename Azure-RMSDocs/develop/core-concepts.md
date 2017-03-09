@@ -1,11 +1,11 @@
 ---
-title: "Aide et terminologie pour les développeurs | Azure RMS"
-description: "Le but principal de RMS SDK 4.2 est de vous aider à créer de la façon la plus simple possible des applications compatibles AD RMS tirant parti de la protection des informations AD RMS."
+title: "Guide pour développeurs d&quot;Azure Information Protection SDK 4.2 | Microsoft Docs"
+description: "Une collection de rubriques de procédures pour développer l&quot;AIP SDK 4.2"
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,13 +15,14 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 7adaf60ffc79edffc38a070d451c1f65c8a41300
+ms.sourcegitcommit: 5df7da98abf4e7c8e39b610fe374d67cf2954338
+ms.openlocfilehash: 9906d300debd4d28e21b8fab2c44c30574d47f4b
+ms.lasthandoff: 01/24/2017
 
 
 ---
 
-# <a name="developer-guidance-and-terms"></a>Aide et terminologie pour les développeurs
+# <a name="developer-guidance"></a>Guide pour développeurs
 Le but principal de Microsoft Rights Management Services (RMS) SDK 4.2 est de vous aider à créer de la façon la plus simple possible des applications compatibles AD RMS tirant parti d’Active Directory Rights Management Services (AD RMS).
 
 Les rubriques suivantes sont destinées à prendre en charge votre processus de conception pour le développement d’applications compatibles RMS.
@@ -30,11 +31,5 @@ Les rubriques suivantes sont destinées à prendre en charge votre processus de 
 - [Activation de la journalisation des erreurs et des performances](enabling-logging.md) - RMS SDK 4.2 gère le chargement des journaux de diagnostic et de performances par le biais d’une propriété d’appareil unique.
 - [Utilisation des droits intégrés](built-in-rights-usage-restriction-reference.md) - Décrit les droits intégrés fournis par RMS SDK 4.2 et les restrictions d’utilisation qu’une application doit appliquer pour respecter ces droits.
 - [Utilisation du suivi des documents](how-to-use-document-tracking.md) - L’utilisation de la fonctionnalité de suivi des documents nécessite une connaissance de base de la gestion des métadonnées associées et de l’inscription auprès du service.
-- [Terminologie](terms.md) - Collection de définitions propres à RMS.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

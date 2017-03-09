@@ -1,11 +1,11 @@
 ---
 title: "Procédure d’ajout des droits de propriétaire explicites | Azure RMS"
-description: Your application should explicitly add "Owner" rights when creating a license from scratch.
+description: "Votre application doit ajouter explicitement les droits « Propriétaire » lors de la création d’une licence à partir de rien."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -115,6 +115,6 @@ Les deux droits suivants sont ajoutés à ces utilisateurs :
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

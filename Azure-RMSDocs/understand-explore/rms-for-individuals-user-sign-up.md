@@ -1,10 +1,10 @@
 ---
-title: "Inscription des utilisateurs à RMS for individuals | Azure Information Protection"
+title: "Inscription à RMS for individuals - AIP"
 description: "Instructions à suivre pour obtenir ce compte gratuit et informations techniques sur le déroulement du processus."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1134bff1935b3fada661865f31104e0316e8fecd
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
 
 >*S’applique à : Azure Information Protection*
 
-Pour obtenir un compte gratuit, demandez-le via la [page Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) et indiquez votre adresse e-mail professionnelle. Le plus souvent, vous êtes redirigé vers cette page d’inscription après avoir reçu un e-mail avec une pièce jointe protégée qui explique la procédure d’inscription. Vous recevez alors un message électronique en réponse de Microsoft, et pouvez ensuite effectuer la procédure d'inscription en fournissant les détails nécessaires pour la création de votre compte. À la fin de cette procédure, vous voyez s’afficher une page à partir de laquelle vous pouvez télécharger l’application de partage pour différents appareils, un lien vers le guide de l’utilisateur et un lien pour obtenir la dernière liste des applications offrant une prise en charge native de la protection Rights Management. 
+Pour obtenir un compte gratuit, demandez-le via la [page Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) et indiquez votre adresse e-mail professionnelle. Le plus souvent, vous êtes redirigé vers cette page d’inscription après avoir reçu un e-mail avec une pièce jointe protégée qui explique la procédure d’inscription. Vous recevez alors un message électronique en réponse de Microsoft, et pouvez ensuite effectuer la procédure d'inscription en fournissant les détails nécessaires pour la création de votre compte. À la fin de cette procédure, vous voyez s’afficher une page à partir de laquelle vous pouvez télécharger le client Azure Information Protection pour différents appareils, un lien vers le guide de l’utilisateur et un lien pour obtenir la dernière liste des applications offrant une prise en charge native de la protection Rights Management. 
 
 ## <a name="to-sign-up-for-rms-for-individuals"></a>Inscription à RMS for individuals
 
@@ -38,17 +39,17 @@ Pour obtenir un compte gratuit, demandez-le via la [page Microsoft Azure Informa
 
     Microsoft utilise votre adresse e-mail pour vérifier si votre organisation a déjà un [abonnement payant pour Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) ou un [abonnement Office 365 qui inclut la protection des données à l’aide d’Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Si tel est le cas, vous n'avez pas besoin de RMS for Individuals. Vous êtes connecté immédiatement et l'inscription en libre-service à RMS for Individuals est annulée. Si aucun abonnement payant n’est trouvé, vous passez à l’étape suivante.
 
-4.  Attendez qu'un e-mail de confirmation soit envoyé à l'adresse que vous avez indiquée. Il provient de l’équipe Office 365 (support@email.microsoftonline.com) et a pour objet **Terminer l’inscription à Microsoft Azure Information Protection**.
+4.  Attendez qu'un e-mail de confirmation soit envoyé à l'adresse que vous avez indiquée. Il provient de l’équipe Office 365 (support@email.microsoftonline.com) et présente l’objet suivant : **Terminer l’inscription à Microsoft Azure Information Protection**.
 
 5.  À la réception de l’e-mail, cliquez sur **Oui, c’est moi** pour vérifier votre adresse e-mail et terminer le processus d’inscription.
 
 6.  Dans la page **Dernière chose...** qui s’affiche, vous allez maintenant entrer les informations de votre compte. Tapez vos nom et prénom, entrez et confirmez le mot de passe de votre choix, puis cliquez sur **Démarrer**.
 
-7. Une fois que votre compte est créé, vous voyez s’afficher une nouvelle page Microsoft Rights Management à partir de laquelle vous pouvez télécharger et installer l’application de partage, ou cliquer sur le lien [Plus d’informations](../rms-client/sharing-app-user-guide.md) pour consulter le guide de l’utilisateur de l’application de partage.
+7. Une fois votre compte créé, vous verrez une nouvelle page Microsoft Azure Information Protection où vous pouvez télécharger et installer le client Azure Information Protection, ou cliquer sur le lien [Guide de l’utilisateur](../rms-client/client-user-guide.md) pour obtenir des instructions sur les procédures pour les ordinateurs Windows.
 
 Votre compte étant créé, vous pouvez à présent protéger des fichiers et lire des fichiers protégés par d'autres personnes. Si vous êtes invité à vous connecter pour protéger des fichiers ou utiliser des fichiers protégés, entrez l’adresse e-mail et le mot de passe que vous avez utilisés pour créer le compte RMS for Individuals.
 
-## <a name="technical-overview-of-the-signup-process"></a>Présentation technique du processus d’inscription
+## <a name="technical-overview-of-the-sign-up-process"></a>Présentation technique du processus d’inscription
 RMS for Individuals utilise un processus d'inscription en libre-service dont se servent également d'autres services recourant à la technologie cloud de Microsoft pour l'authentification des utilisateurs.
 
 Voici ce qui se passe en arrière-plan quand un utilisateur s'inscrit à RMS for individuals alors que son organisation n'a pas d'abonnement Office 365 ou Azure, et donc pas d'annuaire dans Azure pour authentifier les utilisateurs :
@@ -60,7 +61,7 @@ Voici ce qui se passe en arrière-plan quand un utilisateur s'inscrit à RMS for
 
     Si un client est trouvé, son compte est vérifié pour voir s'il dispose déjà un abonnement Azure RMS. À défaut, l'abonnement gratuit à RMS for Individuals peut être ajouté.
 
-2.  L'organisation reçoit un abonnement RMS for Individuals. Désormais, Azure peut authentifier cet utilisateur qui peut ensuite protéger des fichiers et lire des fichiers protégés par d'autres grâce à Azure Rights Management. Pour protéger des fichiers et lire des fichiers protégés, l’utilisateur doit disposer d’une application compatible RMS, telle que l’[application de partage Rights Management](../rms-client/sharing-app-windows.md) disponible gratuitement.
+2.  L'organisation reçoit un abonnement RMS for Individuals. Désormais, Azure peut authentifier cet utilisateur qui peut ensuite protéger des fichiers et lire des fichiers protégés par d'autres grâce à Azure Rights Management. Pour protéger des fichiers et lire des fichiers protégés, l’utilisateur doit disposer d’une application compatible RMS, telle que le [client Azure Information Protection](../rms-client/aip-client.md) disponible gratuitement.
 
 3.  Lorsque le deuxième utilisateur de la même organisation demande un abonnement RMS for individuals, un nouveau compte utilisateur est ajouté à l'annuaire Azure créé précédemment en utilisant l'abonnement RMS for individuals de l'organisation. Ce deuxième utilisateur a les mêmes droits que le premier (protéger des fichiers et lire des fichiers protégés), mais, en plus de cela, les deux utilisateurs peuvent désormais collaborer plus aisément en toute sécurité, car ils peuvent rapidement appliquer des modèles par défaut à des fichiers, qui restreignent l'accès aux comptes figurant dans l'annuaire Azure de leur organisation.
 
@@ -94,10 +95,4 @@ Grâce à ce processus, aucun frais n'est imputé à l'organisation et aucune in
 ## <a name="next-steps"></a>Étapes suivantes
 Consultez [Contrôle administrateur des comptes créés pour RMS for individuals](rms-for-individuals-take-control.md).
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,10 +1,10 @@
 ---
-title: "Application de partage Rights Management &colon; Historique de publication des versions | Azure Information Protection"
+title: "Application de partage RMS &colon; historique de publication des versions - AIP"
 description: "Découvrez les nouveautés ou modifications apportées à une version de l’application de partage Rights Management pour Windows."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
-ms.openlocfilehash: 08ca0de6802aa001e5e2bcf7637592c2ad68864d
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 811c89ef6922f6939e7a7d13ed707c6ebe6aafd6
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -129,9 +130,5 @@ Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 
 -   **Prise en charge pour plusieurs domaines de messagerie dans votre organisation** : Si vous utilisez AD RMS et que des utilisateurs au sein de votre organisation disposent de plusieurs domaines de messagerie, cette mise à jour leur permet de consommer du contenu protégé par des utilisateurs d’autres domaines au sein de votre organisation. Pour plus d’informations, consultez la section [AD RMS uniquement : Prise en charge de plusieurs domaines de messagerie au sein de votre organisation](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) du [Guide de l’administrateur de l’application de partage Rights Management](sharing-app-admin-guide.md).
 
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

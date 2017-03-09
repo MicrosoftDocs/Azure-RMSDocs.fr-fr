@@ -1,10 +1,10 @@
 ---
-title: "Vérification d’Azure Rights Management | Azure Information Protection"
+title: "Vérification d’Azure Rights Management - AIP"
 description: "Instructions à suivre pour vérifier que le service fonctionne comme prévu. Pour cela, protégez un fichier ou un e-mail en utilisant un compte d’utilisateur, puis essayez d’ouvrir et d’utiliser ce contenu protégé à partir d’un autre compte d’utilisateur."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 8d10bc4aeeed6f5b3d150f6e765c6457f5741409
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 50da38ee5e852d72458845a97ebe005f4949d265
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -36,11 +37,7 @@ Si votre test échoue, passez en revue les étapes de configuration dans [Feuill
 
 Vous pouvez, à l’aide de la journalisation de l’utilisation, surveiller l’usage que fait votre organisation du service Azure Rights Management. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](log-analyze-usage.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
 
 

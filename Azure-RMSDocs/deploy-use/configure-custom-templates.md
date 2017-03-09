@@ -1,10 +1,10 @@
 ---
-title: "Configuration de modèles personnalisés pour le service Azure Rights Management | Azure Information Protection"
+title: "Configurer des modèles personnalisés pour Azure RMS - AIP"
 description: "Informations et instructions destinées aux administrateurs souhaitant configurer et gérer des modèles de droits d’utilisation. Grâce aux modèles, les utilisateurs et autres administrateurs peuvent appliquer facilement des stratégies à des fichiers sensibles qui limitent l’accès aux utilisateurs autorisés."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ea64bd17994a9ce38ed0d758ec63156a7f64c732
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 0818f8e65f2065e70ef66732819d21aa85c912fa
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -37,7 +38,7 @@ Une fois [activé](activate-service.md) le service Azure Rights Management, les 
 
     -   Autorisations spécifiques : Afficher le contenu, Enregistrer le fichier, Modifier le contenu, Afficher les droits affectés, Autoriser les macros, Transférer, Répondre, Répondre à tous
 
-En outre, l’[application de partage RMS](../rms-client/sharing-app-windows.md) permet aux utilisateurs de définir leur propre jeu d’autorisations. Et pour le client Outlook et Outlook Web Access, les utilisateurs peuvent sélectionner l’option [Ne pas transférer](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
+En outre, le [client Azure Information Protection ](../rms-client/aip-client.md) permet aux utilisateurs de définir leur propre jeu d’autorisations. Et pour le client Outlook et Outlook Web Access, les utilisateurs peuvent sélectionner l’option [Ne pas transférer](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
 
 Les modèles par défaut peuvent suffire à de nombreuses organisations. Mais si vous souhaitez créer vos propres modèles de stratégie de droits personnalisés, rien ne vous empêche de le faire. Les raisons justifiant la création d'un modèle personnalisé sont les suivantes :
 
@@ -63,10 +64,6 @@ Utilisez les informations suivantes pour vous aider à configurer et utiliser de
 
 -   [Utiliser PowerShell pour gérer les modèles](configure-templates-with-powershell.md)
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

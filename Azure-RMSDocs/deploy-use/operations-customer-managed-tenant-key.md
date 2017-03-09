@@ -1,10 +1,10 @@
 ---
-title: "Gérée par le client - Opérations de cycle de vie des clés de locataires | Azure Information Protection"
+title: "Gérée par le client : opérations de cycle de vie des clés de locataires AIP"
 description: "Informations sur les opérations de cycle de vie applicables si vous gérez votre clé de locataire pour Azure Information Protection (dans le cadre d’un scénario BYOK, ou Bring Your Own Key)."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
-ms.openlocfilehash: 03c2e885bfb997fda2a2f675be3dee6bc8ea8138
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fa92a0f3179c884b7e5fc278525a471a27cb2a96
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -22,7 +23,7 @@ ms.openlocfilehash: 03c2e885bfb997fda2a2f675be3dee6bc8ea8138
 
 # <a name="customer-managed-tenant-key-lifecycle-operations"></a>Gérée par le client : opérations de cycle de vie des clés de locataires
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : Azure Information Protection, Office 365*
 
 Si vous gérez votre clé de locataire pour Azure Information Protection (dans le cadre d’un scénario BYOK, ou Bring Your Own Key), utilisez les sections suivantes pour obtenir plus d’informations sur les opérations de cycle de vie qui s’appliquent à cette topologie.
 
@@ -33,7 +34,7 @@ Quand vous annulez votre abonnement Azure Information Protection, Azure Informat
 
 
 ## <a name="re-key-your-tenant-key"></a>Renouvellement de votre clé de locataire
-Le renouvellement de la clé est également appelé déploiement de la clé. Ne renouvelez pas votre clé de locataire à moins que ce soit vraiment nécessaire. Les clients plus anciens, tels qu'Office 2010, n'ont pas été conçu pour gérer naturellement les changements de clés. Dans ce scénario, vous devez effacer l’état Rights Management des ordinateurs à l’aide d’une stratégie de groupe ou d’un mécanisme similaire. Toutefois, certains événements légitimes peuvent vous obliger à renouveler votre clé de locataire. Par exemple :
+Le renouvellement de la clé est également appelé déploiement de la clé. Ne renouvelez pas votre clé de locataire à moins que ce soit vraiment nécessaire. Les clients plus anciens, tels qu’Office 2010, n’ont pas été conçus pour gérer naturellement les changements de clés. Dans ce scénario, vous devez effacer l’état Rights Management des ordinateurs à l’aide d’une stratégie de groupe ou d’un mécanisme similaire. Toutefois, certains événements légitimes peuvent vous obliger à renouveler votre clé de locataire. Par exemple :
 
 -   Votre entreprise s'est divisée en deux sociétés distinctes ou plus. Lorsque vous renouvelez votre clé de locataire, la nouvelle société n'aura pas accès au nouveau contenu publié par vos employés. Elle pourra toujours accéder à l'ancien contenu si elle dispose d'une copie de l'ancienne clé de locataire.
 
@@ -65,10 +66,6 @@ En cas de violation, la meilleure mesure que vous ou Microsoft puissiez prendre 
 |Vulnérabilité détectée dans la technologie HSM actuelle.|Microsoft doit mettre à jour les modules de sécurité matériels. S'il y a des raisons de penser que les clés ont été exposées via cette vulnérabilité, Microsoft demandera à tous les clients de renouveler leur clé de locataire.|
 |Une vulnérabilité a été découverte dans l'algorithme RSA ou la longueur de la clé, ou des attaques en force brute peuvent être envisagées au niveau informatique.|Microsoft doit mettre à jour Azure Key Vault ou Azure Information Protection pour prendre en charge de nouveaux algorithmes et des clés plus longues qui sont résilientes. Elle doit également indiquer à tous les clients qu’ils doivent renouveler leur clé de locataire.|
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

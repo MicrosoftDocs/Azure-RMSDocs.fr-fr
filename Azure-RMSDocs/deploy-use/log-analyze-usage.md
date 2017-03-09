@@ -1,10 +1,10 @@
 ---
-title: "Journalisation et analyse de l’utilisation du service Azure Rights Management | Azure Information Protection"
+title: "Journalisation et analyse de l’utilisation du service Azure Rights Management - AIP"
 description: "Informations et instructions sur la journalisation de l’utilisation avec Azure Rights Management (Azure RMS)."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 9dea728836d52249471d3dde69b63a9a2cd1467c
+ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
+ms.openlocfilehash: 5deea0dce593aae09c498e8b6696205890e9f232
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -67,7 +68,7 @@ Pour télécharger vos journaux d’utilisation, vous allez utiliser le module d
 
 ### <a name="to-download-your-usage-logs-by-using-powershell"></a>Pour télécharger vos journaux d’utilisation à l’aide de PowerShell
 
-1.  Démarrez Windows PowerShell avec l’option **Exécuter en tant qu’administrateur**, puis utilisez l’applet de commande [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) pour vous connecter au service Azure Rights Management :
+1.  Démarrez Windows PowerShell avec l’option **Exécuter en tant qu’administrateur**, puis utilisez l’applet de commande [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) pour vous connecter au service Azure Rights Management :
 
     ```
     Connect-AadrmService
@@ -100,7 +101,7 @@ Par défaut, cette applet de commande utilise trois threads pour télécharger l
 #### <a name="if-you-manually-enabled-azure-rights-management-usage-logging-before-the-logging-change-february-22-2016"></a>Si vous avez activé manuellement la journalisation de l’utilisation Azure Rights Management avant le changement de journalisation du 22 février 2016
 
 
-Si vous utilisiez la journalisation de l’utilisation avant le changement de journalisation, vous aurez des journaux d’utilisation dans votre compte de stockage Azure. Dans le cadre de ce changement de journalisation, Microsoft ne copie pas ces journaux de votre compte de stockage vers le nouveau compte de stockage géré par Azure Rights Management. Vous êtes responsable de la gestion du cycle de vie des journaux générés précédemment, et vous pouvez utiliser l’applet de commande [Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) pour télécharger vos anciens journaux. Exemple :
+Si vous utilisiez la journalisation de l’utilisation avant le changement de journalisation, vous aurez des journaux d’utilisation dans votre compte de stockage Azure. Dans le cadre de ce changement de journalisation, Microsoft ne copie pas ces journaux de votre compte de stockage vers le nouveau compte de stockage géré par Azure Rights Management. Vous êtes responsable de la gestion du cycle de vie des journaux générés précédemment, et vous pouvez utiliser l’applet de commande [Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) pour télécharger vos anciens journaux. Exemple :
 
 - Pour télécharger tous les journaux disponibles dans votre dossier E:\logs : `Get-AadrmUsageLog -Path "E:\Logs"`
     
@@ -145,19 +146,21 @@ Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des c
 |result|Chaîne|« Success » si la demande a été traitée correctement.<br /><br />Type d’erreur (entre guillemets simples) si la demande échoue.|« Success »|
 |correlation-id|Text|GUID commun au journal du client RMS et au journal du serveur pour une demande donnée.<br /><br />Cette valeur peut être utile pour résoudre les problèmes liés au client.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Text|GUID (entre accolades) qui identifie le contenu protégé (par exemple, un document).<br /><br />Ce champ contient une valeur uniquement si le champ request-type est égal à AcquireLicense. Sinon, il reste vierge pour les autres types de demande.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
-|owner-email|Chaîne|Adresse de messagerie du propriétaire du document.|alice@contoso.com|
-|issuer|Chaîne|Adresse de messagerie de l’émetteur du document.|alice@contoso.com (ou) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|template-id|Chaîne|ID du modèle utilisé pour protéger le document.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|Chaîne|Nom de fichier du document qui a été protégé. <br /><br />Actuellement, certains fichiers (tels que les documents Office) sont affichés sous forme de GUID plutôt que noms de fichiers réels.|TopSecretDocument.docx|
-|date-published|Date|Date à laquelle le document a été protégé.|2015-10-15T21:37:00|
+|owner-email|Chaîne|Adresse de messagerie du propriétaire du document.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|alice@contoso.com|
+|issuer|Chaîne|Adresse de messagerie de l’émetteur du document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|alice@contoso.com ou FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|template-id|Chaîne|ID du modèle utilisé pour protéger le document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|Chaîne|Nom de fichier du document qui a été protégé. <br /><br />Actuellement, certains fichiers (tels que les documents Office) sont affichés sous forme de GUID plutôt que noms de fichiers réels.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|TopSecretDocument.docx|
+|date-published|Date|Date à laquelle le document a été protégé.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|2015-10-15T21:37:00|
 |c-info|Chaîne|Informations concernant la plateforme du client d’où émane la demande.<br /><br />La chaîne spécifique varie selon l’application (par exemple, le système d’exploitation ou le navigateur).|’MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64’|
 |c-ip|Adresse|Adresse IP du client d’où émane la demande.|64.51.202.144|
+|admin-action|Bool|Définit si un administrateur a eu accès au site de suivi des documents en mode administrateur.|True|
+|acting-as-user|Chaîne|Adresse e-mail de l’utilisateur pour lequel un administrateur accède au site de suivi des documents. |« joe@contoso.com »|
 
 
-#### <a name="exceptions-for-the-userid-field"></a>Exceptions pour le champ user-id.
+#### <a name="exceptions-for-the-user-id-field"></a>Exceptions pour le champ user-id.
 Bien que le champ user-id indique généralement l’utilisateur qui effectue la demande, il existe deux exceptions pour lesquelles la valeur ne mappe pas à un utilisateur réel :
 
--   Valeur **'microsoftrmsonline@&lt;votre_ID_de_locataire&gt;.rms.&lt;région&gt;.aadrm.com’**.
+-   Valeur **'microsoftrmsonline@&lt;votreIDdeClient&gt;.rms.&lt;région&gt;.aadrm.com'**.
 
     Cette valeur indique qu’un service Office 365, tel qu’Exchange Online ou SharePoint Online, est à l’origine de la demande. Dans la chaîne, *&lt;votreIDdeClient&gt;* correspond au GUID de votre client, et *&lt;région&gt;* à la région dans laquelle votre client est inscrit. Par exemple, **AN** représente l’Amérique du Nord, **UE** correspond à l’Europe et **AP** correspond à l’Asie.
 
@@ -236,11 +239,7 @@ Si vous avez dans votre propre stockage Azure des journaux antérieurs au change
 
 Pour plus d’informations sur l’utilisation de Windows PowerShell pour le service Azure Rights Management, consultez [Administration du service Azure Rights Management à l’aide de Windows PowerShell](administer-powershell.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

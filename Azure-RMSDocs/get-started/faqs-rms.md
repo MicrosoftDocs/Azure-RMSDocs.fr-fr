@@ -1,10 +1,10 @@
 ---
-title: "Forum aux questions sur le service de protection des données, Azure Rights Management, d’Azure Information Protection | Azure Information Protection"
+title: "FAQ pour Azure RMS - AIP"
 description: "Certaines questions fréquentes sur le service de protection des données, Azure Rights Management (Azure RMS), d’Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 02/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eb9b9c1308abe6b1b5803cba7ba254d54cbac812
-ms.openlocfilehash: d3d11dba936ca8901b701008e55df8d73be8bded
+ms.sourcegitcommit: dccc643ae49521262d5327b4d3d98801f88b3894
+ms.openlocfilehash: ed200df12b3d0665920091c7772ed88a79143e70
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -36,14 +37,21 @@ Microsoft propose plusieurs technologies de chiffrement qui vous permettent de p
 
 Pour utiliser ces technologies de chiffrement complémentaires, vous devez les activer et les configurer indépendamment. À ce stade, vous pouvez être invité à fournir votre propre clé de chiffrement. Il s’agit du scénario BYOK (« Bring Your Own Key »). Le fait d’activer BYOK avec l’une de ces technologies n’affecte pas les autres. Vous pouvez ainsi utiliser BYOK avec Azure Information Protection et ne pas l’utiliser avec d’autres technologies de chiffrement, ou vice versa. Les clés utilisées par ces différentes technologies peuvent être identiques ou non, selon la façon dont vous configurez les options de chiffrement pour chaque service.
 
-## <a name="can-i-integrate-the-azure-rights-management-service-with-my-on-premises-servers"></a>Puis-je intégrer le service Azure Rights Management à mes serveurs locaux ?
-Oui. Vous pouvez intégrer Azure Rights Management à vos serveurs locaux, tels que les serveurs de fichiers Windows, Exchange Server et SharePoint. Pour ce faire, utilisez le [connecteur Rights Management](../deploy-use/deploy-rms-connector.md). Ou bien, si vous êtes simplement intéressé par l’utilisation de l’Infrastructure de classification des fichiers avec Windows Server, vous pouvez utiliser les [applets de commande de protection RMS](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx). Vous pouvez également synchroniser et fédérer vos contrôleurs de domaine Active Directory avec Azure AD pour une expérience d'authentification plus agréable pour les utilisateurs, par exemple, en utilisant [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
+## <a name="whats-the-difference-between-byok-and-hyok-and-when-should-i-use-them"></a>Quelle est la différence entre les dispositifs BYOK et HYOK et quand dois-je les utiliser ?
 
-Azure Rights Management génère et gère automatiquement les certificats XrML de façon appropriée. Il n’utilise donc pas d’infrastructure à clé publique (PKI) locale. Pour plus d’informations sur la façon dont Azure Rights Management utilise les certificats, consultez la section [Procédure pas à pas décrivant le fonctionnement d’Azure RMS : première utilisation, protection du contenu, consommation du contenu](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) dans l’article [Fonctionnement d’Azure RMS](../understand-explore/how-does-it-work.md).
+Dans Azure Information Protection, la solution **Bring Your Own Key** (BYOK) vous permet de créer votre propre clé en local pour la protection offerte par Azure Rights Management. Ensuite, vous transférez cette clé à un module de sécurité matériel (HSM, Hardware Security Module) dans Azure Key Vault, mais elle reste en votre possession et vous continuez à la gérer. Si vous ne procédez pas ainsi, la fonctionnalité de protection d’Azure Rights Management utilise une clé automatiquement créée et gérée pour vous dans Azure. Cette configuration par défaut est considérée comme « gérée par Microsoft » plutôt que « gérée par le client » (option BYOK).
+
+Pour en savoir plus sur la solution BYOK et déterminer si vous devez choisir cette topologie de clé pour votre organisation, voir [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md). 
+
+Dans Azure Information Protection, la solution **Hold Your Own Key** (HYOK) est destinée au petit nombre d’organisations disposant d’un ensemble de documents ou d’e-mails qui ne peuvent pas être protégés par une clé stockée dans le cloud. Pour ces organisations, cette restriction s’applique, même si elles ont créé la clé et la gèrent via la solution BYOK. Cette restriction a souvent pour origine des problèmes de conformité et de réglementation, la configuration HYOK devant uniquement être appliquée aux informations « Top Secret », qui ne seront jamais partagées en dehors de l’organisation et seront uniquement utilisées sur le réseau interne, et qui ne devront pas nécessairement être accessibles depuis des appareils mobiles. 
+
+Pour ces exceptions (soit un maximum de 10 % des contenus devant être protégés, en moyenne), les organisations peuvent utiliser une solution locale, à savoir Active Directory Rights Management Services, pour créer la clé, qui restera en local. Avec cette solution, les ordinateurs récupèrent leur stratégie Azure Information Protection à partir du cloud, mais ce contenu identifié peut être protégé à l’aide de la clé en local.
+
+Pour en savoir plus sur la solution HYOK et vous assurer que vous comprenez ses limitations et restrictions, tout en bénéficiant de conseils sur son utilisation, voir [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](../deploy-use/configure-adrms-restrictions.md).
 
 ## <a name="where-can-i-find-information-about-3rd-party-solutions-that-integrate-with-azure-rms"></a>Où puis-je trouver des informations sur les solutions tierces qui s’intègrent à Azure RMS ?
 
-De nombreux fournisseurs de logiciels disposent de solutions ou implémentent des solutions qui s’intègrent à Azure Rights Management, et la liste augmente très rapidement. Il peut s’avérer utile de consulter [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) (Blog de sécurité et de mobilité d’entreprise) et de récupérer les dernières mises à jour auprès de [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) sur Twitter. Toutefois, si vous avez une question, envoyez un e-mail à l’équipe Information Protection : askipteam@microsoft.com.
+De nombreux fournisseurs de logiciels disposent de solutions ou implémentent des solutions qui s’intègrent à Azure Rights Management, et la liste augmente très rapidement. Il peut s’avérer utile de consulter [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) (Blog de sécurité et de mobilité d’entreprise) et de récupérer les dernières mises à jour auprès de [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) sur Twitter. Toutefois, si vous avez une question, envoyez un e-mail à l’équipe Information Protection : askipteam@microsoft.com.
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>Existe-t-il un pack d’administration ou un mécanisme de surveillance similaire pour le connecteur RMS ?
 
@@ -86,9 +94,9 @@ Le service Azure Rights Management utilise toujours un compte Azure Active Direc
 La méthode d'authentification pour ces comptes peut varier en fonction de la manière dont l'administrateur de l'autre organisation a configuré les comptes Azure Active Directory. Par exemple, ils peuvent utiliser des mots de passe créés pour ces comptes, Multi-Factor Authentication (MFA), une fédération ou des mots de passe créés dans les services de domaine Active Directory, puis synchronisés avec Azure Active Directory.
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>Puis-je ajouter des utilisateurs externes (des personnes ne faisant pas partie de mon organisation) à des modèles personnalisés ?
-Oui. La création de modèles personnalisés que les utilisateurs finaux (et administrateurs) peuvent sélectionner à partir d'applications accélère et facilite l'application de la protection des informations à l'aide de stratégies prédéfinies que vous spécifiez. L'un des paramètres du modèle définit qui peut accéder au contenu, et vous pouvez spécifier des utilisateurs et des groupes au sein de votre organisation, ainsi que des utilisateurs extérieurs à celle-ci.
+Oui. La création de modèles personnalisés que les utilisateurs finaux (et administrateurs) peuvent sélectionner à partir d'applications accélère et facilite l'application de la protection des informations à l'aide de stratégies prédéfinies que vous spécifiez. L’un des paramètres du modèle définit qui peut accéder au contenu, et vous pouvez spécifier des utilisateurs et des groupes au sein de votre organisation, ainsi que des utilisateurs et des groupes extérieurs à celle-ci. 
 
-Pour spécifier des utilisateurs extérieurs à votre organisation, ajoutez-les en tant que contacts à un groupe que vous sélectionnez dans le portail Azure Classic lors de la configuration de vos modèles. Ou, utilisez le [module Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md) :
+Pour spécifier des utilisateurs extérieurs à votre organisation, ajoutez-les en tant que contacts à un groupe que vous sélectionnez dans le portail Azure Classic lors de la configuration de vos modèles. Pour spécifier des groupes en dehors de votre organisation, vous devez utiliser le [module Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md), qui vous permet également de spécifier des utilisateurs externes individuels, voire tous les utilisateurs d’une autre organisation :
 
 -   **utiliser un objet de définition de droits pour créer ou mettre à jour un modèle**.    Spécifiez les adresses de messagerie externes et leurs droits dans un objet de définition de droits, que vous pouvez ensuite utiliser pour créer ou mettre à jour un modèle. Spécifiez l’objet de définition de droits à l’aide de l’applet de commande [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) pour créer une variable, puis spécifiez cette variable dans le paramètre -RightsDefinition avec l’applet de commande [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx) (pour un nouveau modèle) ou l’applet de commande [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) (si vous modifiez un modèle existant). Cependant, si vous ajoutez ces utilisateurs à un modèle existant, vous devez définir des objets de définition de droits pour les groupes existants des modèles et pas seulement les utilisateurs externes.
 
@@ -97,15 +105,12 @@ Pour plus d’informations sur les modèles personnalisés, consultez [Configura
 ## <a name="does-azure-rms-work-with-dynamic-groups-in-azure-ad"></a>Azure RMS fonctionne-t-il avec des groupes dynamiques dans Azure AD ?
 Une fonctionnalité Azure AD Premium vous permet de configurer l’appartenance dynamique à des groupes en spécifiant des [règles basées sur des attributs](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). Quand vous créez un groupe de sécurité dans Azure AD, ce type de groupe prend en charge l’appartenance dynamique. Toutefois, il ne prend pas en charge les adresses e-mail et ne peut donc pas être utilisé avec le service Azure Rights Management. Néanmoins, vous pouvez désormais créer dans Azure AD un type de groupe à extension messagerie, qui prend en charge l’appartenance dynamique. Quand vous ajoutez un nouveau groupe dans le portail Azure Classic, vous pouvez choisir le **TYPE DE GROUPE** d’**Office 365 « Preview »**. Dans la mesure où ce groupe est à extension messagerie, vous pouvez l’utiliser avec la protection Azure Rights Management.
 
-Comme le montre clairement le nom de l’option, ce nouveau type de groupe est toujours en version préliminaire. Des fonctionnalités supplémentaires sont prévues, de même qu’une nouvelle documentation. En attendant, nous vous confirmons que vous pouvez utiliser ce nouveau type de groupe avec la protection Azure Rights Management.
-
-
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Quels appareils et types de fichier Azure RMS prend-il en charge ?
 Pour obtenir la liste des appareils qui prennent en charge le service Azure Rights Management, consultez [Appareils clients prenant en charge la protection des données Azure Rights Management](../get-started/requirements-client-devices.md). Les fonctionnalités Rights Management n’étant actuellement pas toutes disponibles sur tous les appareils pris en charge, pensez à consulter le tableau présenté dans [Applications prenant en charge la protection des données Azure Rights Management](../get-started/requirements-applications.md).
 
 Le service Azure Rights Management peut prendre en charge tous les types de fichiers. Dans le cas de texte, d’images, de fichiers Microsoft Office (Word, Excel, PowerPoint), de fichiers .pdf et d’autres types de fichier d’application, Azure Rights Management offre une protection native qui comprend le chiffrement et la mise en application de droits (autorisations). Pour tous les autres types de fichier et d'application, la protection générique offre l'encapsulation et l'authentification des fichiers afin de vérifier si un utilisateur est autorisé à ouvrir le fichier.
 
-Pour obtenir la liste des extensions prises en charge en mode natif par Azure Rights Management, consultez la section [Types et extensions de noms de fichiers pris en charge](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) dans le [Guide administrateur de l’application de partage Rights Management](../rms-client/sharing-app-admin-guide.md). Les extensions de nom de fichier qui ne figurent pas dans la liste sont prises en charge via l'utilisation de l'application de partage RMS qui applique automatiquement une protection générique à ces fichiers.
+Pour obtenir la liste des extensions de noms de fichiers pris en charge en mode natif par Azure Rights Management, consultez [Types de fichiers pris en charge par Azure Information Protection](../rms-client/client-admin-guide-file-types.md). Les extensions de nom de fichier qui ne figurent pas dans la liste sont prises en charge grâce à l’utilisation du client Azure Information Protection qui applique automatiquement une protection générique à ces fichiers.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Quand j’ouvre un document Office protégé par RMS, le fichier temporaire associé devient-il également protégé par RMS ?
 
@@ -124,7 +129,7 @@ Si vous êtes intéressé par une fonctionnalité spécifique qui n’est pas en
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>Comment configurer OneDrive Entreprise dans SharePoint Online, afin que les utilisateurs puissent partager en toute sécurité des fichiers avec des personnes à l'intérieur et à l'extérieur de l'organisation ?
 Par défaut, en votre qualité d’administrateur Office 365, ce n’est pas vous qui configurez cela, mais les utilisateurs.
 
-De la même manière qu’un administrateur de site SharePoint active et configure IRM pour une bibliothèque SharePoint dont il est propriétaire, OneDrive Entreprise a été conçu pour permettre aux utilisateurs d’activer et de configurer IRM pour leur propre bibliothèque OneDrive Entreprise.  Cependant, en utilisant PowerShell, vous pouvez le faire à leur place. Pour obtenir des instructions, consultez la section [SharePoint Online et OneDrive Entreprise : configuration de la gestion des droits relatifs à l’information](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) dans l’article [Office 365 : configuration pour les clients et services en ligne](../deploy-use/configure-office365.md).
+De la même manière qu’un administrateur de site SharePoint active et configure IRM pour une bibliothèque SharePoint dont il est propriétaire, OneDrive Entreprise a été conçu pour permettre aux utilisateurs d’activer et de configurer IRM pour leur propre bibliothèque OneDrive Entreprise. Cependant, en utilisant PowerShell, vous pouvez le faire à leur place. Pour obtenir des instructions, consultez la section [SharePoint Online et OneDrive Entreprise : configuration de la gestion des droits relatifs à l’information](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) dans l’article [Office 365 : configuration pour les clients et services en ligne](../deploy-use/configure-office365.md).
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Avez-vous des conseils ou des astuces pour réussir le déploiement ?
 Après avoir supervisé de nombreux déploiements et écouté nos clients, partenaires, consultants et ingénieurs du support technique, voici l'un des conseils les plus importants que nous pouvons vous donner : **Concevoir et déployer des stratégies de droits simples**.
@@ -132,9 +137,7 @@ Après avoir supervisé de nombreux déploiements et écouté nos clients, parte
 Puisqu’Azure Information Protection permet de partager des fichiers en toute sécurité, vous pouvez faire preuve d’ambition concernant la portée de la protection de vos données. Mais faites bien attention aux stratégies relatives aux droits. Pour de nombreuses organisations, la meilleure chose à faire est de prévenir la fuite des données en appliquant le modèle de stratégie de droits par défaut, qui restreint l’accès aux seuls membres de votre organisation. Bien sûr, vous pouvez être bien plus précis si vous devez empêcher des personnes d’imprimer, d’éditer, etc. Évitez néanmoins d’être trop précis pour des documents nécessitant un niveau de sécurité élevé. Au lieu d’implémenter ces stratégies restrictives le premier jour, adoptez une approche plus progressive.
 
 ## <a name="how-do-we-regain-access-to-files-that-were-protected-by-an-employee-who-has-now-left-the-organization"></a>Comment récupérer l'accès à des fichiers protégés par un employé qui a quitté l'organisation ?
-Utilisez la fonctionnalité de super utilisateur d'Azure RMS, qui permet à des utilisateurs autorisés d'exercer des droits de propriétaire sur toutes les licences d'utilisation accordées par le client RMS de votre organisation. Cette même fonctionnalité permet à des services autorisés d'indexer et d'inspecter des fichiers si nécessaire.
-
-Pour plus d’informations, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../deploy-use/configure-super-users.md).
+Utilisez la [fonctionnalité de super utilisateur](../deploy-use/configure-super-users.md) qui permet à des utilisateurs autorisés d’exercer des droits d’utilisation complète sur toutes les licences accordées par le locataire de votre organisation. Cette même fonctionnalité permet à des services autorisés d'indexer et d'inspecter des fichiers si nécessaire.
 
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>Lorsque je teste la révocation dans le site de suivi des documents, je vois un message m’indiquant que les autres utilisateurs continueront d’avoir accès au document pendant 30 jours. Cette durée est-elle configurable ?
 
@@ -143,8 +146,6 @@ Oui. Ce message indique la licence d’utilisation de ce fichier en particulier.
 La révocation d’un fichier ne peut être appliquée que lorsque l’utilisateur doit s’authentifier auprès du service Azure Rights Management. Par conséquent, si la période de validité de la licence d’utilisation du fichier est de 30 jours, et si l’utilisateur a déjà ouvert le document, il pourra continuer d’y accéder pendant toute la durée de la licence d’utilisation. Quand la licence d’utilisation expire, l’utilisateur doit se réauthentifier. C’est à ce moment-là que l’utilisateur se voit refuser l’accès au document, car celui-ci a été révoqué.
 
 Pour un locataire, la valeur par défaut de la période de validité de la licence est de 30 jours. Vous pouvez configurer cette valeur à l’aide de l’applet de commande PowerShell [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx). Ce paramètre peut être remplacé par un paramètre plus restrictif dans un modèle personnalisé. 
-
-Les utilisateurs peuvent modifier le paramètre du locataire et le paramètre du modèle en utilisant l’application de partage RMS et en sélectionnant l’option **M’autoriser à révoquer de suite l’accès à ces documents**. Ce paramètre définit la période de validité de la licence d’utilisation sur 0. 
 
 Pour plus d’informations et pour obtenir des exemples de la façon dont fonctionne la licence d’utilisation, consultez la description détaillée de [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx).
 
@@ -159,11 +160,7 @@ Comme le montrent ces exemples, même si la totalité des plateformes et logicie
 
 En dépit de son nom et de son apparence, l’option **Ne pas transférer** n’est ni le contraire du droit de transfert, ni un modèle. Il s’agit en fait d’un ensemble de droits qui incluent la restriction de copier, imprimer et enregistrer des pièces jointes, outre la restriction de transfert des e-mails. Les droits sont appliqués dynamiquement aux utilisateurs par le biais des destinataires choisis et non pas statiquement attribués par l’administrateur. Pour plus d’informations, consultez la section [Option Ne pas transférer pour les e-mails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) dans [Configuration des droits d’utilisation pour Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

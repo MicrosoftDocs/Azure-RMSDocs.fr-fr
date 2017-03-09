@@ -1,10 +1,10 @@
 ---
-title: "Présentation technique de l’application de partage Microsoft Rights Management | Azure Information Protection"
+title: "Vue d’ensemble technique de l’application de partage RMS - AIP"
 description: "Détails techniques destinés aux administrateurs de réseaux d’entreprise en charge du déploiement de l’application de partage RMS pour Windows."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 88b03e5e844e78db5dc8ac5f116d19899c5f354f
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 532a379aa303e65d111d6ba0e360f34082b25014
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -43,7 +44,7 @@ Avec la version d’octobre 2013 de RMS, vous pouvez protéger des documents en 
 
 Pour obtenir des informations sur le déploiement, consultez [Déploiement automatique de l’application de partage Microsoft Rights Management](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application).
 
-## <a name="levels-of-protection-native-and-generic"></a>Niveaux de protection : natif et générique
+## <a name="levels-of-protection--native-and-generic"></a>Niveaux de protection : natif et générique
 L’application de partage Microsoft Rights Management prend en charge la protection à deux niveaux différents, comme décrit dans le tableau suivant.
 
 |Type de protection|Natif|Générique|
@@ -75,7 +76,6 @@ Pour les fichiers protégés de manière générique, l'extension de nom de fich
 |.tiff|.ptiff|
 |.bmp|.pbmp|
 |.gif|.pgif|
-|.giff|.pgiff|
 |.jpe|.pjpe|
 |.jfif|.pjfif|
 |.jt|.pjt|
@@ -102,25 +102,25 @@ De même, vous pouvez forcer l'application de partage RMS à appliquer une prote
 
 Vous pouvez également forcer l'application de partage RMS à bloquer la protection des fichiers (ne pas appliquer de protection native ou générique). Par exemple, cela peut être nécessaire si vous avez une application automatisée ou un service qui doit être en mesure d'ouvrir un fichier spécifique pour traiter son contenu. Quand vous bloquez la protection pour un type de fichier particulier, les utilisateurs ne peuvent pas utiliser l'application de partage RMS pour protéger les fichiers de ce type. Quand ils essaient de le faire, un message indiquant que l'administrateur a empêché la protection s'affiche, et ils doivent annuler leur action pour protéger le fichier.
 
-Pour configurer l'application de partage RMS afin qu'elle applique une protection générique à tous les fichiers qui auraient par défaut une protection native, apportez les modifications suivantes au Registre :
+Pour configurer l'application de partage RMS afin qu'elle applique une protection générique à tous les fichiers qui auraient par défaut une protection native, apportez les modifications suivantes au Registre. Notez que, si les clés RmsSharingApp ou FileProtection n’existent pas, vous devez les créer manuellement.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection** : créez une clé nommée *.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection** : créez une clé nommée *.
 
     Ce réglage désigne les fichiers avec une extension de nom de fichier quelconque.
 
-2.  Dans la clé nouvellement ajoutée HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\\\*, créez une valeur de chaîne (REG_SZ) nommée **Encryption** avec la valeur de données **Pfile**.
+2.  Dans la clé nouvellement ajoutée HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\\\*, créez une valeur de chaîne (REG_SZ) nommée **Encryption** avec la valeur de données **Pfile**.
 
     Ce réglage entraîne l'application de la protection générique par l'application de partage RMS.
 
 Ces deux réglages entraînent l'application de la protection générique par l'application de partage RMS à tous les fichiers ayant une extension de nom de fichier. Si c'est l'objectif que vous recherchez, aucune configuration supplémentaire n'est requise. Toutefois, vous pouvez définir des exceptions pour des types de fichier spécifiques, afin qu'ils soient protégés en mode natif. Pour cela, vous devez effectuer trois modifications supplémentaires dans le Registre pour chaque type de fichier :
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection** : ajoutez une nouvelle clé dont le nom correspond à l’extension de nom de fichier (sans le point en préfixe).
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection** : ajoutez une nouvelle clé dont le nom correspond à l’extension de nom de fichier (sans le point en préfixe).
 
     Par exemple, pour les fichiers qui ont une extension de nom de fichier .docx, créez une clé nommée **DOCX**.
 
-2.  Dans la clé nouvellement ajoutée (par exemple **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\DOCX**, créez une valeur DWORD nommée **AllowPFILEEncryption** avec la valeur **0**.
+2.  Dans la clé nouvellement ajoutée (par exemple **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**), créez une valeur DWORD nommée **AllowPFILEEncryption** avec la valeur **0**.
 
-3.  Dans la clé de type de fichier nouvellement ajoutée (par exemple **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\DOCX**, créez une valeur de chaîne nommée **Encryption** avec la valeur **Native**.
+3.  Dans la clé de type de fichier nouvellement ajoutée, par exemple **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**, créez une valeur de chaîne nommée **Encryption** avec la valeur **Native**.
 
 Suite à ces réglages, tous les fichiers sont protégés de façon générique, à l'exception des fichiers qui ont une extension de nom de fichier .docx, qui sont protégés en mode natif par l'application de partage RMS.
 
@@ -137,9 +137,5 @@ Vous pouvez apporter des modifications similaires au Registre pour d'autres scé
 ## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

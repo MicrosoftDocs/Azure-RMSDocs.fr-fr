@@ -1,10 +1,10 @@
 ---
-title: "Guide d’utilisation de l’application de partage Rights Management | Azure Information Protection"
+title: "Guide d’utilisation de l’application de partage Rights Management - AIP"
 description: "L’application de partage Microsoft Rights Management (RMS) pour Windows vous aide à protéger vos images et documents importants afin qu’ils ne soient pas accessibles aux personnes non autorisées, même lorsque vous les envoyez par courrier électronique ou que vous les enregistrez sur un autre appareil."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: d6c88b1b9bc53dddea000ecff65abb73d06eb7ee
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 439b97bd6a23789b6729e2dc5b62777450f4cb63
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -22,6 +23,9 @@ ms.openlocfilehash: d6c88b1b9bc53dddea000ecff65abb73d06eb7ee
 # <a name="rights-management-sharing-application-user-guide"></a>Guide d’utilisation de l’application de partage Rights Management
 
 >*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+
+> [!IMPORTANT]
+> **Notification de fin de prise en charge** : l’application de partage Rights Management pour Windows est remplacée par le [client Azure Information Protection](aip-client.md). La prise en charge de cette application plus ancienne cessera le 31 janvier 2018. 
 
 L’application de partage Microsoft Rights Management (RMS) pour Windows vous aide à protéger vos images et documents importants afin qu’ils ne soient pas accessibles aux personnes non autorisées, même lorsque vous les envoyez par courrier électronique et que vous les enregistrez sur un autre appareil. Vous pouvez également utiliser cette application pour ouvrir et utiliser des fichiers protégés par d’autres personnes à l’aide de la même technologie de protection Rights Management.
 
@@ -63,11 +67,7 @@ Voici quelques exemples d’utilisation de l’application de partage RMS pour p
 
 - [Spécifier les paramètres dans la boîte de dialogue](sharing-app-dialog-box.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
 
 

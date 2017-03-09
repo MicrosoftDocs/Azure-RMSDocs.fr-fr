@@ -1,10 +1,10 @@
 ---
-title: "Scénario - Configurer des dossiers de travail pour la protection permanente | Azure Information Protection"
+title: "Scénario AIP : Configurer des dossiers de travail pour la protection RMS"
 description: "Ce scénario et la documentation utilisateur associée utilisent la protection Azure Rights Management pour appliquer une protection permanente aux documents Office des dossiers de travail."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 0d4b1cdc2620a1f8cf9ddced24a898a38d8e9b57
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1fa655cd91746d8e5c19f6a9eca0d93a3be8fb23
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-configure-work-folders-for-persistent-protection"></a>Scénario - Configurer des dossiers de travail pour la protection permanente
+# <a name="scenario---configure-work-folders-for-persistent-protection"></a>Scénario - Configurer des dossiers de travail pour la protection permanente
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -120,9 +121,4 @@ Si vous avez configuré le modèle personnalisé comme décrit pour ce scénario
 > 
 > Après un certain temps, si vous découvrez l’existence de nombreuses demandes du même type, vous pouvez décider de définir votre propre modèle personnalisé pour ce scénario qui accorde l’option Copropriétaire uniquement à des utilisateurs spécifiques (tels que les responsables ou le support technique), tandis que les utilisateurs standard se voient attribuer l’option Coauteur ou tout autre [droit](../deploy-use/configure-usage-rights.md) qui vous semble approprié.
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

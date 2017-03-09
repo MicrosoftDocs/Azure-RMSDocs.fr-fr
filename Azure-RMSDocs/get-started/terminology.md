@@ -1,10 +1,10 @@
 ---
-title: "Terminologie liée à Azure Information Protection | Azure Information Protection"
+title: "Terminologie liée à Azure Information Protection"
 description: "Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Azure Information Protection ? Recherchez ici la définition de termes et d’abréviations propres à Azure Information Protection, ou qui ont un sens particulier dans le contexte de ce service."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 8d2fc307bb531ab434e0bc43a22f7403555ef03f
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a5cfa773d440e92fe9d3e88e242dfb25f7174400
 
 
 ---
@@ -50,7 +50,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |Gestion des droits relatifs à l'information|Souvent abrégé *IRM*.<br /><br />Terme utilisé avec les services Office, comme Exchange Server, Word et SharePoint Online, pour décrire la capacité à prendre en charge les services Microsoft Rights Management.|
 |IRM|Voir *Gestion des droits relatifs à l’information*.|
 |MSDRM|Vu parfois comme référence au client RMS 1.0, qui est remplacé par le nouveau client, MSIPC. Cet ancien client prend en charge les applications développées avec RMS SDK 1.0, ainsi qu'Office 2010 et Office 2007, Exchange 2010 et Exchange 2013, SharePoint 2010 et SharePoint 2007.|
-|MSIPC|Vu parfois comme référence au client RMS 2.0, qui remplace l'ancien client RMS, MSDRM. Ce nouveau client prend en charge les applications développées avec RMS SDK 2.0, ainsi qu'Office 2016 et Office 2013, SharePoint 2013 et l'application de partage RMS.|
+|MSIPC|Vu parfois comme référence au client RMS 2.0, qui remplace l'ancien client RMS, MSDRM. Ce nouveau client prend en charge les applications développées avec RMS SDK 2.0, ainsi qu’Office 2016 et Office 2013, SharePoint 2013, l’application de partage RMS et le client Azure Information Protection.|
 |protection native|Niveau de protection disponible dans toutes les applications compatibles, qui empêche l'accès aux fichiers aux personnes non autorisées et qui permet également d'appliquer des stratégies restrictives, comme la lecture seule et l'interdiction d'impression. Il s'agit d'une protection permanente, même en cas de transfert des fichiers ou de sauvegarde dans un lieu public accessible à d'autres personnes.|
 |.pfile|Extension de nom de fichier annexée à tous les fichiers protégés via un service de gestion des droits.|
 |.ppdf|Extension de nom de fichier créée par un service de gestion des droits au moment de la création automatique d’une copie PDF d’un fichier (Word, Excel, PowerPoint ou PDF) que vous partagez par e-mail, afin que le fichier puisse être lu (mais pas modifié) sur tous les appareils.|
@@ -59,7 +59,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |publish|Protection des fichiers en vue d'empêcher tout accès et utilisation non autorisés.|
 |connecteur Rights Management|Relais de proxy sortant que vous pouvez déployer pour des services locaux, comme Exchange Server et SharePoint, afin de protéger les données à l’aide du service Azure Rights Management.|
 |services Rights Management|Terme générique qui s’applique à la fois à la version cloud de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ([!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]) et à la version locale de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] (AD RMS).|
-|application de partage Rights Management|Application téléchargeable optionnelle pour Windows et les appareils mobiles les plus courants, qui prend en charge le partage sécurisé de fichiers en local et par courrier électronique.|
+|application de partage Rights Management|Désormais remplacée par le client Azure Information Protection, une application en option pour Windows et les appareils mobiles les plus courants, qui prend en charge le partage sécurisé de fichiers en local et par courrier électronique.|
 |RMS|Voir *Services Rights Management*.|
 |connecteur RMS|Voir *Connecteur Rights Management*.|
 |RMS for individuals|Abonnement gratuit permettant à un utilisateur d’utiliser [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] quand son organisation ne possède pas d’abonnement Office 365 ou Azure Active Directory.|
@@ -69,11 +69,10 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |ôter la protection|Supprimer des contrôles de gestion des droits de fichiers ou d’e-mails, qui utilisent des stratégies de chiffrement, d’identité et de contrôle d’accès afin de sécuriser vos données.|
 |licence d'utilisation|Certificat associé à un document, qui est accordé à un utilisateur qui ouvre un fichier ou un e-mail protégé par un service de gestion des droits. Ce certificat contient les droits d'utilisateur du fichier ou de l'e-mail, la clé de chiffrement qui est utilisée pour chiffrer le contenu, ainsi que les restrictions d'accès supplémentaires définies dans la stratégie du document.|
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

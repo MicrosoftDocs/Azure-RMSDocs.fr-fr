@@ -1,18 +1,19 @@
 ---
-title: "Didacticiel de démarrage rapide | Azure Information Protection"
-description: "Didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 30 minutes."
+title: "Didacticiel de démarrage rapide pour Azure Information Protection"
+description: "Didacticiel de prise en main vous permettant de tester rapidement Microsoft Azure Information Protection dans votre organisation en environ 20 minutes."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: d300f3c130476974e39689edf9e1f0eabbc35da1
-ms.openlocfilehash: de3435767d161567003369fc55dd476283b64f41
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 78d019adfeed4f2bc9cb0924fa8f9b932862819a
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -21,9 +22,9 @@ ms.openlocfilehash: de3435767d161567003369fc55dd476283b64f41
 
 >*S’applique à : Azure Information Protection*
 
-Utilisez ce didacticiel pour tester rapidement Azure Information Protection en seulement 5 étapes et environ 30 minutes. Ce didacticiel est conçu comme une démonstration autoguidée pour illustrer rapidement certaines des fonctions et fonctionnalités d’Azure Information Protection. Il n’inclut pas toutes les fonctionnalités disponibles et n’est pas destiné à servir de guide de déploiement au sein de votre organisation. Si vous envisagez de déployer Azure Information Protection dans votre organisation, consultez la [documentation relative à la feuille de route pour le déploiement](../plan-design/deployment-roadmap.md). 
+Utilisez ce didacticiel pour tester rapidement Azure Information Protection en seulement 5 étapes et environ 20 minutes. Ce didacticiel est conçu comme une démonstration autoguidée pour illustrer rapidement certaines des fonctions et fonctionnalités d’Azure Information Protection. Il n’inclut pas toutes les fonctionnalités disponibles et n’est pas destiné à servir de guide de déploiement au sein de votre organisation. Si vous envisagez de déployer Azure Information Protection dans votre organisation, consultez la [documentation relative à la feuille de route pour le déploiement](../plan-design/deployment-roadmap.md). 
 
-Ce didacticiel est destiné aux administrateurs et consultants en informatique, afin de les aider à évaluer Azure Information Protection comme solution de protection des informations pour une organisation. Dans un environnement de production, les étapes pour configurer la stratégie Information Protection et installer le client et l’application pour les utilisateurs reviennent à un administrateur. Quant aux étapes d’étiquetage d’un document, de son partage sécurisé par e-mail, puis de son suivi, elles incombent aux utilisateurs finaux. Ce didacticiel englobe toutes ces étapes pour illustrer des scénarios de bout en bout classiques consistant à classifier, à étiqueter et à protéger les données de votre organisation. 
+Ce didacticiel est destiné aux administrateurs et consultants en informatique, afin de les aider à évaluer Azure Information Protection comme solution de protection des informations pour une organisation. Dans un environnement de production, les étapes pour configurer la stratégie Information Protection et installer le client pour les utilisateurs reviennent à un administrateur. Quant aux étapes d’étiquetage d’un document, de son partage sécurisé par e-mail, puis de son suivi, elles incombent aux utilisateurs finaux. Ce didacticiel englobe toutes ces étapes pour illustrer des scénarios de bout en bout classiques consistant à classifier, à étiqueter et à protéger les données de votre organisation. 
 
 Si vous rencontrez des problèmes pour effectuer ce didacticiel, pour utiliser Azure Information Protection, ou si vous souhaitez savoir ce que d’autres en pensent, rendez-vous sur le [site Azure Information Protection Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
@@ -48,10 +49,6 @@ C’est parti !
 >[!div class="step-by-step"]
 [&#187;Étape 1](infoprotect-tutorial-step1.md)
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

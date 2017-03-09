@@ -1,10 +1,10 @@
 ---
-title: "Suivre et révoquer vos documents quand vous utilisez l’application de partage RMS| Azure Information Protection"
+title: "Effectuer le suivi et révoquer des documents avec l’application de partage RMS - AIP"
 description: "Après avoir protégé vos documents à l’aide de l’application de partage RMS, vous pouvez voir comment les personnes utilisent vos documents protégés. Si nécessaire, vous pouvez aussi révoquer l’accès à ces documents dès lors que vous ne voulez plus qu’ils soient partagés."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 3b5b19ab2dfdf6b797f55134f3063948dcab33d5
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 36a25c44105d4fa0e8820f99b0b1c7c1568062ec
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -105,8 +106,4 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 ## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

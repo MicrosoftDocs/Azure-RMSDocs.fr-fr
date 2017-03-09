@@ -1,10 +1,10 @@
 ---
-title: "Contrôle administrateur des comptes créés pour RMS for individuals | Azure Information Protection"
+title: "Contrôler les comptes créés pour RMS for individuals - AIP"
 description: "Comment contrôler les comptes d’utilisateur dans Azure Active Directory si vous ne souhaitez pas convertir l’abonnement RMS for Individuals de votre organisation en un abonnement payant."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f9999db44758251f7b9b4c8f86549b1ee36e83d3
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ff8cd150ce438a7b9ad5203dfb6d9d01c1a0d85a
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -45,8 +46,4 @@ Pour contrôler les comptes d'utilisateur dans l'annuaire Azure, ou empêcher de
 
 Comment savoir si des utilisateurs autres que des administrateurs peuvent créer leurs comptes dans Azure Active Directory pour RMS for individuals ?  Consultez [Détermination des utilisateurs inscrits à RMS for Individuals](rms-for-individuals-identify-sign-up.md).
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

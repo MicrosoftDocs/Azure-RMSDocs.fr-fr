@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 1407a7bee800fec0ba8498d0439586378003ed54
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 3e4b1d6115d861e692197d9cb3fc850b7574e32e
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="scenario---executives-securely-exchange-privileged-information"></a>Scénario : échange sécurisé d’informations confidentielles entre cadres
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -132,4 +128,3 @@ Lors de l’envoi d’informations confidentielles de votre société à un autr
 -   Contactez le support technique : helpdesk@vanarsdelltd.com
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

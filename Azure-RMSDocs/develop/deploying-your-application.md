@@ -14,11 +14,9 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 0c16b7c6bd494a0350a511a3b415f781aecf613d
-
-
+ms.openlocfilehash: aaff9ff7cda961ab0d61115f84197e2c5c7ef8b0
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
 # <a name="deploy-into-production"></a>Déployer en production
 
@@ -125,8 +123,3 @@ Pour plus d’informations sur l’activation de votre application pour utiliser
 * [Permettre à votre application de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO4-->
-
-

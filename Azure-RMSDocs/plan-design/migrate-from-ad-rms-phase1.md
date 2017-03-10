@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: d38d7f89ba780b519ebe4a182161deb5bc9331b5
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: bbd5cd5be72dfe72f8312f7ee5049dec2e46ac96
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="migration-phase-1---server-side-configuration-for-ad-rms"></a>Phase de migration 1 : Configuration côté serveur pour AD RMS
 
 >*S’applique à : Services AD RMS, Azure Information Protection, Office 365*
@@ -43,18 +39,6 @@ Cette étape est un processus comprenant deux phases :
 2.  Importez les données de configuration dans Azure Information Protection. Il existe différents processus pour cette étape, en fonction de la configuration actuelle de votre déploiement AD RMS et de votre topologie préférée pour votre clé de client Azure RMS.
 
 ### <a name="export-the-configuration-data-from-ad-rms"></a>Exportation des données de configuration d'AD RMS
-
-> [!IMPORTANT]
-> Avant de suivre cette procédure, vérifiez d’abord que vos serveurs AD RMS sont en cours d’exécution en mode de chiffrement 2, qui est une condition requise pour Azure Information Protection.
-> 
-> Pour vérifier le mode de chiffrement :
-> 
-> - Pour Windows Server 2012 R2 et Windows 2012 : Propriétés du cluster AD RMS > Onglet **Général**. 
-> 
-> - Pour toutes les versions d’AD RMS prises en charge : utilisez [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) et l’option **AD RMS admin** pour consulter le mode de chiffrement dans les **informations du service RMS**.
-> 
-> Vérifiez que la valeur correspondant au mode de chiffrement est **2**. Si tel n’est pas le cas, consultez les instructions pour activer le mode de chiffrement 2 dans [Modes de chiffrement d’AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
-
 
 Procédez comme suit sur tous les clusters AD RMS, pour tous les domaines de publication approuvés comprenant un contenu protégé pour votre organisation. Il est inutile d'exécuter cette procédure sur des clusters dédiés uniquement à la gestion des licences.
 
@@ -224,4 +208,3 @@ Remove-PSDrive MyRmsAdmin -force
 Passez à la [Phase 2 : Configuration côté client](migrate-from-ad-rms-phase2.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

@@ -14,13 +14,10 @@ ms.assetid: F7145090-C2EB-405A-A4CF-0240D57A36DA
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 5075e0856f81561b3e74dd52a3629cfe2dfa5dce
-
-
+ms.openlocfilehash: dedc3fa6c5cab519a0d6fe8ba835d8d92a9da276
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="client"></a>Client
 
 Cette rubrique décrit l’objectif et la fonction du client RMS 2.1.
@@ -40,8 +37,3 @@ Pour plus d’informations, consultez la [documentation TechNet sur le client RM
 * [Documentation TechNet sur le client RMS 2.1](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

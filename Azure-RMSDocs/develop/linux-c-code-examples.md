@@ -14,13 +14,10 @@ ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ca3ec0fdde3b8aa2eeebf056c5e155daf79573b0
-
-
+ms.openlocfilehash: 7dfa61380067bcd2b1886c1e9a2674a4c1150bc9
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="linux-code-examples"></a>Exemples de code Linux
 
 Cette rubrique présente les éléments de code et les scénarios importants pour la version Linux du Kit RMS SDK.
@@ -592,8 +589,3 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
 **Remarque**  Toutes les méthodes de bibliothèque d’authentification peuvent lever **rmsauth::Exception**
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

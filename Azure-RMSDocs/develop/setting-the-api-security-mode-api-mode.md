@@ -14,13 +14,10 @@ ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 49e87a8bf7ec5e628cf76c6ec82df2bb1b0835a3
-
-
+ms.openlocfilehash: 9224aeee5730cd9bca84643d9391caba2f133683
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-set-the-api-security-mode"></a>Comment : définir le mode de sécurité de l’API
 
 Vous pouvez choisir le mode de sécurité qu’exécute votre application API de fichier à l’aide de la fonction [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx).
@@ -38,8 +35,3 @@ Pour plus d’informations sur le *mode serveur*, consultez [Application types](
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -10,14 +10,10 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-translationtype: Human Translation
-ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
-ms.openlocfilehash: 8260da1905c6701675b5490e3919ae708f46a5a9
-ms.lasthandoff: 03/01/2017
-
-
+ms.openlocfilehash: fb1334a2ee345125db6e2637a59a5ab1a69e62d8
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Étape 4 : classification, étiquetage et protection en action 
 
 >*S’applique à : Azure Information Protection*

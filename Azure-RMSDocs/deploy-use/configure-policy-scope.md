@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: e2112ca081ed0520330355734bb0913e4a612c66
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 4f64a0f29beb11e132dbabde099902e296f2e513
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées
 
 >*S’applique à : Azure Information Protection*
@@ -63,4 +59,3 @@ Le client Azure Information Protection vérifie toutes les modifications à chaq
 Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut et voir le comportement qui en résulte dans une application Office, essayez le [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

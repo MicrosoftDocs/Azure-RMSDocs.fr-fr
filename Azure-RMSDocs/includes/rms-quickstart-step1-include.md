@@ -53,8 +53,3 @@ Bien que ce ne soit pas inclus dans cette rubrique, pour un déploiement de prod
 |--------------------------------|--------------------------|
 |Activation de Rights Management et contrôle des personnes pouvant protéger des fichiers et des messages électroniques lorsque le service est activé   →|[Activation d’Azure Rights Management](../deploy-use/activate-azure-classic.md)|
 |Modèles par défaut et création de modèles personnalisés   →|[Configuration de modèles personnalisés pour Azure Rights Management](../deploy-use/create-template.md)|
-
-
-<!--HONumber=Jan17_HO1-->
-
-

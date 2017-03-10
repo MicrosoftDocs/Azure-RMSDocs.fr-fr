@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 2510c14fc10411783838516f45fdfd06fd73350d
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 64a3daa57d71087d11098a1e71465f17b6b8f3b7
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="configuring-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
@@ -81,4 +77,3 @@ Utilisez les informations suivantes pour configurer votre stratégie Azure Infor
 Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut et voir le comportement qui en résulte dans une application Office, essayez le [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

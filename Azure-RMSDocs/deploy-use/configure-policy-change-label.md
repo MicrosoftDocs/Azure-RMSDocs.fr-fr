@@ -10,14 +10,10 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 332160a0b2403313acc66f9b196ac068e370fb5c
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: e800818f87ab5b0b39ffdc244f871c04305039ae
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Comment modifier ou personnaliser une étiquette existante pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
@@ -49,6 +45,5 @@ Procédez comme suit pour modifier une étiquette.
 Pour plus d’informations sur la configuration des options disponibles pour une étiquette et d’autres paramètres de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

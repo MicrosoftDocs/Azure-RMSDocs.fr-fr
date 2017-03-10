@@ -14,13 +14,10 @@ ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: d4ee4581ebc485cf881c8d4970ee90ca4873820e
-ms.openlocfilehash: 07c6c6f918cc0e629583eb177222417dc420ea71
-
-
+ms.openlocfilehash: 8ed5897accf7bf4db08a5fc699af3f0f850740a2
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="understanding-usage-restrictions"></a>Comprendre les restrictions d’utilisation
 
 Toutes les applications prenant en charge RMS doivent appliquer des restrictions d’utilisation. Une restriction d’utilisation est une condition qui se produit quand un utilisateur tente d’effectuer une action (par exemple, imprimer d’un document), alors que la stratégie RMS pour ce document ne lui accorde pas l’autorisation ou le droit nécessaire pour mener à bien cette action (par exemple, le droit PRINT).
@@ -74,8 +71,3 @@ Pour chaque droit utilisateur répertorié dans la colonne Droit AD RMS, vous t
 * [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Nov16_HO4-->
-
-

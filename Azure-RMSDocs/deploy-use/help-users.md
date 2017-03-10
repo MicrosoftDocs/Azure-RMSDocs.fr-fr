@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 1300b0abb3cb59ad09075418ab8c911466740a2c
-ms.openlocfilehash: f1d2db08951c1d017ea4f011855d99423fa9d577
-ms.lasthandoff: 03/03/2017
-
-
+ms.openlocfilehash: 4b5dfe6e4c77a9b22e98cb2b7997a744730caac1
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -112,5 +108,4 @@ Comme pour l'affichage d'un document protégé, lorsque les destinataires reçoi
 Comme pour l'affichage d'un document protégé, lorsque les destinataires reçoivent le message électronique, ceux-ci sont tout d'abord authentifiés. S'ils sont autorisés à afficher le message électronique, ce dernier s'ouvrira avec les droits d'utilisation restreints qui ont été définis pour cet utilisateur. Par exemple, si vous avez sélectionné **Ne pas répondre à tous**, l’option **RÉPONDRE À TOUS** dans la fenêtre du message ne sera pas disponible.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

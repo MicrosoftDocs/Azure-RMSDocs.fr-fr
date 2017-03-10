@@ -14,13 +14,10 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: b5f1d44d950cd020c4b15d5f9505752bc960fa88
-
-
+ms.openlocfilehash: 46aba2289f0e3a41cc2fb09db3d5727cd77feb40
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="developing-your-application"></a>Développement de votre application
 
 Dans cet exemple, vous allez développer une application console simple qui interagit avec le service Azure Information Protection (AIP).  Celle-ci prend comme entrée le chemin d’un document à protéger, puis le protège à l’aide d’une stratégie ad hoc ou d’un modèle Azure. L’application applique ensuite les stratégies appropriées en fonction des entrées, ce qui permet de créer un document dont les informations sont protégées. L’exemple de code que vous allez utiliser est l’[application de test Azure IP](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) qui se trouve sur Github.
@@ -232,8 +229,3 @@ Une fois que tout est généré et en cours d’exécution, les sorties de l’a
 6. Enfin, vous entrez certaines métadonnées de stratégie : nom de la stratégie, description et nom complet de l’émetteur (locataire Azure AD) ![sortie de l’application - étape 6](../media/develop/app-output-6.png)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO4-->
-
-

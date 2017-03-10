@@ -13,15 +13,10 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
-ms.openlocfilehash: ea34b900855d43cb1458438b1d15a16fd7cf01bf
-ms.lasthandoff: 03/01/2017
-
-
+ms.openlocfilehash: 675a1411bff99983c35f301946e816f2e593caf8
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Étape 5 : Voir le partage de fichiers protégés en action et effectuer le suivi de votre document 
 
 >*S’applique à : Azure Information Protection*

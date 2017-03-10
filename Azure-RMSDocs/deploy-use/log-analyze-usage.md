@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
-ms.openlocfilehash: 5deea0dce593aae09c498e8b6696205890e9f232
-ms.lasthandoff: 02/28/2017
-
-
+ms.openlocfilehash: f179d9b4a9b883e6a7cff15ce3f8e713508b0bd3
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Journalisation et analyse de l’utilisation du service Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -240,6 +236,5 @@ Si vous avez dans votre propre stockage Azure des journaux antérieurs au change
 Pour plus d’informations sur l’utilisation de Windows PowerShell pour le service Azure Rights Management, consultez [Administration du service Azure Rights Management à l’aide de Windows PowerShell](administer-powershell.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

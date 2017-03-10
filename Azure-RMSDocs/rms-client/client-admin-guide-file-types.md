@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 107bac4e318c08d4fdc6d24fc88a6f7cbe5c0a74
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 8247b75a5e5835b1e091a4b9e380ca33487e60f1
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Types de fichiers pris en charge par le client Azure Information Protection
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
@@ -176,4 +171,3 @@ Maintenant que vous avez identifié les types de fichiers pris en charge par le 
 - [Commandes PowerShell](client-admin-guide-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

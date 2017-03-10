@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 34f77a0ff33a9a960e12bc53d62b38f4e6553c80
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: be37adc9cc8b55ff46e7358d033f0ea5eb93d749
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuration des droits d’utilisation pour Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -105,5 +101,4 @@ Une utilisatrice veut envoyer certaines informations par e-mail à certaines per
 [Configuration de modèles personnalisés pour le service Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

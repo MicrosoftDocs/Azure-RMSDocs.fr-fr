@@ -4,27 +4,25 @@ description: "Lorsque vous affectez une étiquette à un document ou un e-mail, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 4ddacf2be34cb7921dfbe282a0476a8cd47de2cf
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: f1ac1ed3aada5d332764db962794d8d6b5428bd7
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
 Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez sélectionner plusieurs options pour que la classification choisie soit facilement visible. Ces marquages visuels sont un filigrane, un en-tête et un pied de page :
 
-Les marquages visuels sont appliqués à des documents Word, Excel et PowerPoint lorsque l’étiquette est appliquée, et lorsque la documentation est enregistrée. Pour les e-mails, les marquages visuels sont appliqués lorsqu’un e-mail est envoyé.
+Les marquages visuels sont appliqués à des documents Word, Excel et PowerPoint au moment de l’application de l’étiquette et lorsque la documentation est enregistrée dans ces applications Office. Pour les e-mails, les marquages visuels sont appliqués lorsqu’un e-mail est envoyé depuis Outlook.
+
+Aucun marquage visuel n’est appliqué aux documents dont l’application de l’étiquette intervient à l’aide de l’Explorateur de fichiers et d’un clic droit, ou lorsqu’un document est classé à l’aide de PowerShell.
 
 Informations supplémentaires sur ces marqueurs visuels :
 
@@ -81,5 +79,4 @@ Exemple : Si vous spécifiez la chaîne `Document: ${item.name}  Classification
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

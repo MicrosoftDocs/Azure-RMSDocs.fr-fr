@@ -4,7 +4,7 @@ description: "Instructions à suivre pour créer et gérer des modèles personna
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 11971a176b9c5f413bbe6daa208c062a131343be
-ms.openlocfilehash: 5ab725294d93540f35c395eca08f5f3fbc6ae392
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 9d0b71db6245e49765a0f79aaa901141a155372d
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="create-configure-and-publish-a-custom-template"></a>Créer, configurer et publier un modèle personnalisé
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -49,16 +44,16 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
 
     -   À partir du [portail Azure Classic](http://go.microsoft.com/fwlink/p/?LinkID=275081) :
 
-        1.  Dans le volet gauche, cliquez sur **Active Directory**.
+        1. Dans le volet gauche, cliquez sur **Active Directory**.
 
-        2.  Dans la page **Active Directory** , cliquez sur **RIGHTS MANAGEMENT**.
+        2. Dans la page **Active Directory** , cliquez sur **RIGHTS MANAGEMENT**.
 
-        3.  Sélectionnez l'annuaire concerné par la Gestion des droits.
-
-        4.  Si vous n’avez pas encore activé Rights Management, cliquez sur **ACTIVER** et confirmez votre action.
+        3. Si **STATUT DE RIGHTS MANAGEMENT** affiche **Inactif**, cliquez sur **ACTIVER**, puis confirmez votre action.
 
             > [!NOTE]
-            > Pour plus d’informations, consultez [Activation d’Azure Rights Management](activate-service.md).
+            > Pour plus d’informations, consultez [Activation d’Azure Rights Management](activate-service.md)
+            >
+        4. Si **STATUT DE RIGHTS MANAGEMENT** affiche **Actif**, sélectionnez le nom de votre locataire Active Directory.
 
 2.  Créer un modèle :
 

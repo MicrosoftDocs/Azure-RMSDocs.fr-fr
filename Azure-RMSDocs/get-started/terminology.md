@@ -4,7 +4,7 @@ description: "Vous ne comprenez pas un mot, une expression ou un acronyme lié �
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: a5cfa773d440e92fe9d3e88e242dfb25f7174400
-
-
+ms.openlocfilehash: 5fecc61fb77625047a5ebedad4ff906fe8c27bbe
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="terminology-for-azure-information-protection"></a>Terminologie liée à Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -64,15 +61,10 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |connecteur RMS|Voir *Connecteur Rights Management*.|
 |RMS for individuals|Abonnement gratuit permettant à un utilisateur d’utiliser [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] quand son organisation ne possède pas d’abonnement Office 365 ou Azure Active Directory.|
 |Application de partage RMS|Voir *Application de partage Rights Management*.|
+|mode Protection uniquement|Mode de fonctionnement du client Azure Information Protection lorsqu’il n’existe aucune stratégie Azure Information Protection à appliquer aux étiquettes. Dans ce mode, les étiquettes de classification ne s’affichent pas, mais les utilisateurs peuvent continuer à appliquer la protection Rights Management.|
 |super utilisateur|Groupe d’administrateurs de confiance possédant un droit d’accès et de déchiffrement sur les fichiers protégés par l’organisation à l’aide d’un service de gestion des droits. Ce niveau d'accès est généralement requis pour le processus eDiscovery légal et les audits.|
 |clé de locataire|Ou clé de certificat de licence serveur (SLC).<br /><br />Clé propre à l’organisation, qui sécurise de façon optimale toutes les fonctions de chiffrement de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] qui lui sont associées.|
 |ôter la protection|Supprimer des contrôles de gestion des droits de fichiers ou d’e-mails, qui utilisent des stratégies de chiffrement, d’identité et de contrôle d’accès afin de sécuriser vos données.|
 |licence d'utilisation|Certificat associé à un document, qui est accordé à un utilisateur qui ouvre un fichier ou un e-mail protégé par un service de gestion des droits. Ce certificat contient les droits d'utilisateur du fichier ou de l'e-mail, la clé de chiffrement qui est utilisée pour chiffrer le contenu, ainsi que les restrictions d'accès supplémentaires définies dans la stratégie du document.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO4-->
-
-

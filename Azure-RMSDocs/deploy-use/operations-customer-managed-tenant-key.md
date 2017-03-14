@@ -4,7 +4,7 @@ description: "Informations sur les opérations de cycle de vie applicables si vo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: fa92a0f3179c884b7e5fc278525a471a27cb2a96
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 198de18664e2f94209ab3c7224e89c5a9d4c3196
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="customer-managed-tenant-key-lifecycle-operations"></a>Gérée par le client : opérations de cycle de vie des clés de locataires
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -42,7 +37,7 @@ Le renouvellement de la clé est également appelé déploiement de la clé. Ne 
 
 Lorsque vous renouvelez votre clé de locataire, le nouveau contenu est protégé à l'aide de la nouvelle clé de locataire. Vous obtenez ce résultat en plusieurs étapes. Ainsi, pendant un certain temps, certains nouveaux contenus continueront d'être protégés par l'ancienne clé de locataire. Le contenu précédemment protégé reste protégé par l'ancienne clé de locataire. Pour prendre en charge ce scénario, Azure Information Protection conserve votre ancienne clé de locataire afin de pouvoir émettre des licences pour l’ancien contenu.
 
-Pour recréer votre clé de locataire, recréez d’abord votre clé de locataire Azure Information Protection dans Key Vault. Ensuite, exécutez l’applet de commande Add-AadrmKeyVaultKey en spécifiant l’URL de la nouvelle clé.
+Pour recréer votre clé de locataire, recréez d’abord votre clé de locataire Azure Information Protection dans Key Vault. Exécutez ensuite la cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkey) en indiquant l’URL de la nouvelle clé.
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Sauvegarde et récupération de votre clé de locataire
 Vous êtes responsable de la sauvegarde de votre clé de locataire. Si vous avez généré votre clé de locataire dans un module de sécurité matériel Thales, pour sauvegarder la clé, il vous suffit de sauvegarder le fichier de clé tokénisée, le fichier Word ainsi que les cartes Administrateur.
@@ -67,5 +62,4 @@ En cas de violation, la meilleure mesure que vous ou Microsoft puissiez prendre 
 |Une vulnérabilité a été découverte dans l'algorithme RSA ou la longueur de la clé, ou des attaques en force brute peuvent être envisagées au niveau informatique.|Microsoft doit mettre à jour Azure Key Vault ou Azure Information Protection pour prendre en charge de nouveaux algorithmes et des clés plus longues qui sont résilientes. Elle doit également indiquer à tous les clients qu’ils doivent renouveler leur clé de locataire.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

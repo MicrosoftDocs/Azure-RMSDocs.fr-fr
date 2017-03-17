@@ -4,7 +4,7 @@ description: "Ressources pour les administrateurs, qui incluent des informations
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/01/2017
+ms.date: 03/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82a377e0b28e3f6614e8d79b5dae0e6f0abb9945
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: d5566f7d2c3ac802f2d8078241be3057d2cb2529
+ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
@@ -45,7 +45,7 @@ Les sections suivantes fournissent des informations sur les options de support e
 
 Si vous avez Support Premier, visitez le [portail pour les clients Support Premier](https://premier.microsoft.com/) afin d’envoyer des incidents, de rechercher des solutions et d’obtenir de l’aide.
 
-Vous pouvez avoir droit à **FastTrack** : vous pouvez utiliser l’offre du centre FastTrack quand vous achetez au moins 150 licences pour Azure Information Protection dans le cadre d’un plan éligible. L’offre du Centre FastTrack vous permet de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Offre du centre FastTrack pour Azure Rights Management](https://technet.microsoft.com/library/mt607025.aspx).
+Vous pouvez avoir droit à **FastTrack** : vous pouvez utiliser l’offre du centre FastTrack quand vous achetez au moins 150 licences pour Azure Information Protection dans le cadre d’un plan éligible. L’offre du Centre FastTrack vous permet de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Offre du centre FastTrack pour Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 Pour les autres clients, utilisez les canaux de support suivants, selon la façon dont vous avez obtenu Azure Information Protection :
 

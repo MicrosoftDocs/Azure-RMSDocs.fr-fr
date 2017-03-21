@@ -4,14 +4,14 @@ description: "Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-ms.openlocfilehash: 30bb78ede8d882e18bca516d0d8da4c3946f000b
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 61c0d2c97ae1db15bf2ec5c4586aa54270502117
+ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
 translationtype: HT
 ---
 # <a name="step-3-install-the-client"></a>Étape 3 : Installer le client
@@ -39,7 +39,7 @@ Lors du chargement du document, deux nouveaux éléments doivent apparaître :
 
 - Sous l’onglet **Accueil**, un nouveau groupe **Protection** avec un bouton intitulé **Protéger**.
 
-    Cliquez sur **Protéger** > **Aide et de commentaires** puis, dans la boîte de dialogue **Microsoft Azure Information Protection**, vérifiez l’état de votre client. La mention **Connecté en tant que** et votre nom d’utilisateur s’affichent. En outre, vous devriez également voir une heure et une date récente pour la dernière connexion et l’installation de la stratégie Information Protection. Vérifiez que le nom d’utilisateur affiché correspond à celui de votre locataire.
+    Cliquez sur **Protéger** > **Aide et commentaires** puis, dans la boîte de dialogue **Microsoft Azure Information Protection**, vérifiez l’état de votre client. La mention **Connecté en tant que** et votre nom d’utilisateur s’affichent. En outre, vous devriez également voir une heure et une date récente pour la dernière connexion et l’installation de la stratégie Information Protection. Vérifiez que le nom d’utilisateur affiché correspond à celui de votre locataire.
 
 - Une nouvelle barre sous le ruban, la barre Information Protection. Elle affiche le titre **Sensitivity** (Niveau de confidentialité) et l’étiquette par défaut **Internal** (Interne) que nous avons configurée. 
     

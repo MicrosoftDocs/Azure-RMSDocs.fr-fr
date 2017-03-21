@@ -4,7 +4,7 @@ description: "Identifiez les applications qui utilisent les API RMS pour prendre
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 85d77e7f60a6955ca29376583d7a6969bb1f74d1
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 842f1853a1a0d037907024633b77e90c27a79af1
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
 translationtype: HT
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
@@ -21,11 +21,15 @@ translationtype: HT
 >*S’applique à : Azure Information Protection, Office 365*
 
 
-Consultez le tableau suivant pour identifier les applications prenant en charge le service Azure Rights Management (Azure RMS) en mode natif, qui assure la protection des données pour Azure Information Protection. 
+Consultez le tableau suivant pour identifier les applications et solutions prenant en charge le service Azure Rights Management (Azure RMS) en mode natif, qui assure la protection des données pour Azure Information Protection. 
 
-Pour ces applications, la prise en charge de Rights Management est étroitement intégrée à l’aide des API Rights Management pour prendre en charge les restrictions d’utilisation. Ces applications sont également appelées « applications compatibles avec RMS ».
+Pour ces applications et solutions, la prise en charge de Rights Management est étroitement intégrée en utilisant les API Rights Management pour la prise en charge des restrictions d’utilisation. Ces applications et solutions sont également qualifiées de « compatibles avec RMS ».
 
 Sauf indication contraire, les fonctionnalités prises en charge s’appliquent à Azure RMS et à AD RMS. Par ailleurs, la prise en charge d’AD RMS sur iOS, Android, OS X et Windows Phone 8.1 nécessite [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx).
+
+## <a name="rms-enlightened-applications"></a>Applications compatibles avec RMS
+
+Le tableau suivant affiche les applications clientes compatibles avec RMS proposées par Microsoft et d’autres fournisseurs de logiciels.
 
 Informations sur les colonnes du tableau :
 
@@ -75,7 +79,7 @@ Pour plus d’informations, consultez le billet suivant sur le blog Office : [O
 Pour plus d’informations, consultez le billet suivant sur le blog Enterprise and Mobility : [SealPath apporte une protection RMS à AutoCAD](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
 
 
-## <a name="more-information-about-azure-rms-support-for-office"></a>Plus d’informations sur la prise en charge d’Azure RMS pour Office
+### <a name="more-information-about-azure-rms-support-for-office"></a>Plus d’informations sur la prise en charge d’Azure RMS pour Office
 
 Azure RMS est étroitement intégré aux applications Word, Excel, PowerPoint et Outlook, où cette fonctionnalité est souvent appelée Gestion des droits relatifs à l’information (IRM). Les éditions clientes Office suivantes prennent en charge la protection des fichiers et des e-mails à l’aide d’Azure RMS :
 
@@ -97,7 +101,7 @@ Azure RMS avec Office Professionnel Plus 2010 ou Office Professionnel 2010
 
 - Ne prend pas en charge l’authentification basée sur les formulaires pour les comptes d’utilisateur fédéré. Ces comptes doivent utiliser l’authentification intégrée de Windows.
 
-## <a name="more-information-about-the-azure-information-protection-app-for-ios-and-android"></a>Pour plus d’informations sur l’application Azure Information Protection pour iOS et Android
+### <a name="more-information-about-the-azure-information-protection-app-for-ios-and-android"></a>Pour plus d’informations sur l’application Azure Information Protection pour iOS et Android
 
 L’application Azure Information Protection pour iOS et Android remplace l’application de partage RMS pour ces appareils. Elle fournit les mêmes fonctionnalités et, en plus, prend en charge les e-mails protégés par des droits et les fichiers PDF protégés par des droits sur SharePoint Online.
 
@@ -106,7 +110,7 @@ Si vos appareils iOS et Android sont inscrits par Microsoft Intune, vous pouvez 
 Pour plus d’informations, consultez [FAQs for Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md) (Forum Aux Questions concernant l’application Azure Information Protection pour iOS et Android).
 
 
-## <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Plus d’informations sur le client Azure Information Protection pour Windows
+### <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Plus d’informations sur le client Azure Information Protection pour Windows
 
 Ce client remplace désormais l’application de partage Rights Management pour Windows. 
 
@@ -120,7 +124,7 @@ Pour plus d'informations, consultez les ressources suivantes :
 
 Téléchargez l’application correspondante à l’aide des liens de la [page Microsoft Azure Information Protection](http://go.microsoft.com/fwlink/?LinkId=303970).
 
-## <a name="more-information-about-the-rights-management-sharing-application"></a>Plus d’informations sur l’application de partage Rights Management
+### <a name="more-information-about-the-rights-management-sharing-application"></a>Plus d’informations sur l’application de partage Rights Management
 
 Cette application est remplacée par le client Azure Information Protection. Elle reste requise pour les ordinateurs Mac et les appareils mobiles Windows Phone. 
 
@@ -135,7 +139,7 @@ Pour plus d'informations, consultez les ressources suivantes :
 Télécharger l’application pour les ordinateurs Mac et Windows Phone en utilisant les liens sur la [page Microsoft Azure Information Protection](http://go.microsoft.com/fwlink/?LinkId=303970).
 
 
-## <a name="more-information-about-other-applications-that-support-azure-information-protection"></a>Plus d’informations sur les autres applications qui prennent en charge Azure Information Protection
+### <a name="more-information-about-other-applications-that-support-azure-information-protection"></a>Plus d’informations sur les autres applications qui prennent en charge Azure Information Protection
 
 En plus des applications indiquées dans le tableau, toute application qui prend en charge les API du service Azure Rights Management peut être intégrée à Azure Information Protection, notamment :
 
@@ -145,7 +149,7 @@ En plus des applications indiquées dans le tableau, toute application qui prend
 
 Pour plus d’informations, consultez le [guide du développeur Azure Information Protection](../develop/developers-guide.md).
 
-## <a name="applications-that-are-not-supported-by-azure-rms"></a>Applications non prises en charge par Azure RMS
+### <a name="applications-that-are-not-supported-by-azure-rms"></a>Applications non prises en charge par Azure RMS
 
 Les applications suivantes ne sont pas prises en charge actuellement par Azure RMS :
 
@@ -159,6 +163,25 @@ En outre, l’application de partage RMS et le client Azure Information Protecti
 
 -   Pour les ordinateurs Windows : nécessite au minimum la version Windows 7 Service Pack 1
 
+## <a name="rms-enlightened-solutions"></a>Solutions compatibles avec RMS
+
+Le tableau suivant affiche les solutions compatibles avec RMS proposées par différents fournisseurs de logiciels.
+
+Si vous êtes fournisseur de logiciels et que vous proposez une solution compatible avec RMS qui n’est pas répertoriée dans ce tableau, vous pouvez inscrire votre application avec Azure AD. Pour en savoir plus, consultez l’article [Procédure d’inscription et d’activation RMS de votre application dans Azure AD](../develop/authentication-integration.md).
+
+
+|Produit|Fabricant|Description|
+|-------------------------------|---------------------------|-----------------|
+|Absolu|Absolu|Protection contre la perte de données (DLP) pour protéger le contenu.|
+|Stockage sécurisé du contenu|VMware|Stocke, utilise et crée du contenu protégé.|
+|Contrôle|TakeControle|eDiscovery avec l’étiquetage et la protection.|
+|Halocore|Secude|Protège les fichiers exportés à partir d’environnements SAP.|
+|MaaS 360|IBM|Intégration pour utiliser et protéger les documents.|
+|Mobiliya|Mobiliya|Sécurise les documents provenant des référentiels Documentum EMC.
+|Ramessys|Ramessys|Intégration de Chemcart et Documentum.
+|Sealpath|Sealpath Technologies|Intégration avec les outils de conception CAO, comme AutoCAD et Siemens Jt2GO.
+|SecRMM|Sqaudra Technologies |Protection des documents pour supports amovibles.
+|Security Sheriff|CryptZone |Gestion des accès sur SharePoint et protection des documents, en fonction de leurs autorisations d’accès et de leur classification.
 
 
 ## <a name="next-steps"></a>Étapes suivantes

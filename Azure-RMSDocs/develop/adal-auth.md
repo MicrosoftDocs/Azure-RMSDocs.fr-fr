@@ -1,11 +1,11 @@
 ---
-title: "Configuration de votre application pour l’authentification ADAL | Microsoft Docs"
+title: "Configuration de votre application pour l’authentification ADAL - AIP"
 description: "Étapes de configuration de l&quot;application Azure Information Protection pour utiliser l’authentification Azure ADAL"
 keywords: authentification, RMS, ADAL, protection des informations,
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 880f022e53aa6c12b26d2d64782521de88d29399
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 27674aac7962c7a2f79fda8ccd6f90c366574b9b
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
 translationtype: HT
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>Configuration de votre application pour l’authentification ADAL
@@ -67,7 +67,7 @@ Après vous être inscrit à Microsoft Azure :
 ![Nommez votre application](../media/TellUsInput.png)
 
 - Ajoutez une URI de redirection et cliquez sur Suivant.
-  L’URI de redirection doit être un URI valide et unique dans votre annuaire. Par exemple, vous pouvez utiliser quelque chose comme `com.mycompany.myapplication://authorize`.
+  L’URI de redirection doit être un URI valide et unique dans votre annuaire. Par exemple, vous pouvez utiliser quelque chose comme `https://contoso.azurewebsites.net/.auth/login/done`.
 
 ![Ajoutez un URI de redirection](../media/RedirectURI.png)
 

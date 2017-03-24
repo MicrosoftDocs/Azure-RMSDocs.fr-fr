@@ -4,14 +4,14 @@ description: "Présentation du service Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 482338f186e3008da155f961c649a80cc61c5780
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: fc25cd11d950199f7ccd8e4e86e4d915c7fb6a95
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
@@ -22,7 +22,7 @@ Azure Information Protection est une solution basée sur le cloud qui permet à 
 
 L’image suivante illustre Azure Information Protection en action. L’administrateur a configuré des règles pour détecter les données sensibles (dans ce cas, des informations de carte de crédit). Quand un utilisateur enregistre un document Word qui contient des informations de carte de crédit, il voit une info-bulle personnalisée qui lui recommande d’appliquer une étiquette spécifique que l’administrateur a configurée, qui classifie et éventuellement protège le document. 
 
-![Exemple de classification recommandée pour Azure Information Protection](../media/info-protect-recommend-callouts.png)
+![Exemple de classification recommandée pour Azure Information Protection](../media/info-protect-recommend-calloutsv2.png)
 
 Une fois que votre contenu est classifié (et éventuellement protégé), vous pouvez suivre et contrôler son utilisation. Vous pouvez analyser les flux de données pour obtenir des informations sur vos activités, détecter les comportements à risque et prendre des mesures correctives, suivre l’accès aux documents, empêcher la fuite de données ou une mauvaise utilisation des données, etc.
 
@@ -32,7 +32,7 @@ Les étiquettes Azure Information Protection vous permettent d’appliquer une c
 
 Par exemple, le message suivant a été classifié comme « Interne ». Cette étiquette est ajoutée à l’e-mail en tant que pied de page ; grâce à cet indicateur visuel, tous les destinataires savent que l’e-mail est destiné à un usage interne et qu’il ne doit pas être envoyé à l’extérieur de l’organisation. Cette étiquette est également incorporée aux en-têtes d’e-mail afin que les services d’e-mail puissent inspecter cette valeur et éventuellement créer une entrée d’audit ou empêcher son envoi à l’extérieur de l’organisation.
 
-![Exemple d’en-têtes et de pied de page d’e-mail montrant la classification Azure Information Protection](../media/example-email-footer-header.png)
+![Exemple d’en-têtes et de pied de page d’e-mail montrant la classification Azure Information Protection](../media/example-email-footerv2.png)
 
 
 ## <a name="how-data-is-protected"></a>Comment les données sont protégées
@@ -63,7 +63,7 @@ Pour plus d’informations sur la protection Azure Rights Management, consultez 
 
 Azure Information Protection s’intègre aux workflows existants des utilisateurs finaux quand le client Azure Information Protection est installé. Ce client installe la barre Information Protection dans les applications Office, illustrée dans la première image. La même barre est ajoutée à Excel, PowerPoint et Outlook. Exemple :
 
-![Exemple de la barre Azure Information Protection dans Excel](../media/excel2016-infoprotect-bar.png)
+![Exemple de la barre Azure Information Protection dans Excel](../media/excel2016-infoprotect-barv2.png)
 
 Cette barre Information Protection permet aux utilisateurs finaux de sélectionner des étiquettes pour définir la classification adéquate et, si nécessaire, ces étiquettes peuvent protéger automatiquement leurs documents et e-mails.
 

@@ -4,7 +4,7 @@ description: "Identifiez les produits de serveurs locaux qui peuvent utiliser le
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/22/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0278d07ae5afdfc95ffdf3945e5d3df7eae2f459
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 37c354df794ca60271f7c04641a9de6009605179
+ms.sourcegitcommit: 047e6dfe8f44fd13585e902df5ea871b5d0adccb
 translationtype: HT
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Serveurs locaux prenant en charge la protection des données Azure Rights Management
@@ -41,6 +41,8 @@ Pour utiliser ce connecteur, vous devez configurer la synchronisation des annuai
     -   Office SharePoint Server 2010
 
 -   **Serveurs de fichiers qui exécutent Windows Server et utilisent l’infrastructure de classification des fichiers (ICF)** :
+
+    -   Windows Server 2016
 
     -   Windows Server 2012 R2
 

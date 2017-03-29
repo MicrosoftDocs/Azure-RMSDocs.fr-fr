@@ -4,14 +4,14 @@ description: "Même si Azure Information Protection est fourni avec des étiquet
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/06/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: eb9f68994d92695412c64a7795c6ae2b2b094218
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: ff0a5af172fa7ae20406ab4362a02a9de3fff5c0
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Comment créer une étiquette pour Azure Information Protection
@@ -20,7 +20,7 @@ translationtype: HT
 
 Même si Azure Information Protection est fourni avec des étiquettes par défaut que vous pouvez personnaliser, vous pouvez également créer vos propres étiquettes que les utilisateurs voient dans la barre Information Protection.
 
-Vous pouvez ajouter une étiquette ou ajouter une sous-étiquette à une étiquette existante lorsque vous avez besoin d’un niveau supplémentaire de classification. Par exemple, l’étiquette **Secret**, qui se trouve dans la [stratégie par défaut](configure-policy-default.md), contient des sous-étiquettes.
+Vous pouvez ajouter une étiquette ou ajouter une sous-étiquette à une étiquette existante lorsque vous avez besoin d’un niveau supplémentaire de classification. Par exemple, la dernière de la [stratégie par défaut](configure-policy-default.md) contient des sous-étiquettes.
 
 Utilisez les instructions suivantes pour ajouter une étiquette à la stratégie Azure Information Protection.
 
@@ -28,7 +28,7 @@ Utilisez les instructions suivantes pour ajouter une étiquette à la stratégie
     
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. Si la nouvelle étiquette à ajouter s’applique à tous les utilisateurs, procédez de l’une des manières suivantes à partir du panneau **Stratégie : Globale**. 
+2. Si la nouvelle étiquette à ajouter s’applique à tous les utilisateurs, procédez de l’une des manières suivantes à partir du panneau **Stratégie : Globale**. 
 
     - Pour créer une étiquette, cliquez sur **Ajouter une nouvelle étiquette**.
 

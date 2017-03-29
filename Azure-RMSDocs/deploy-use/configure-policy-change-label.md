@@ -10,8 +10,8 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
-ms.openlocfilehash: e800818f87ab5b0b39ffdc244f871c04305039ae
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 4111fbaf678509cfb5b961f19dcc4b62f77c7a4a
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Comment modifier ou personnaliser une étiquette existante pour Azure Information Protection
@@ -29,7 +29,7 @@ Procédez comme suit pour modifier une étiquette.
     
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. Pour modifier une étiquette de la stratégie globale pour qu’elle s’applique à tous les utilisateurs, sélectionnez l’étiquette à modifier à partir du panneau **Stratégie : Globale**, puis apportez vos modifications dans le panneau **Étiquette** et tous les panneaux suivants au besoin. Pour modifier une étiquette à partir d’une [stratégie délimitée](configure-policy-scope.md) afin qu’elle s’applique aux utilisateurs sélectionnés, sélectionnez d’abord cette stratégie dans le panneau **Azure Information Protection** initial.
+2. Pour modifier une étiquette de la stratégie globale pour qu’elle s’applique à tous les utilisateurs, sélectionnez l’étiquette à modifier à partir du panneau **Stratégie : Globale**, puis apportez vos modifications dans le panneau **Étiquette** et tous les panneaux suivants si nécessaire. Pour modifier une étiquette à partir d’une [stratégie délimitée](configure-policy-scope.md) afin qu’elle s’applique aux utilisateurs sélectionnés, sélectionnez d’abord cette stratégie dans le panneau **Azure Information Protection** initial.
 
     Il existe une exception si vous voulez réorganiser une étiquette, ce que vous faites dans le panneau de la stratégie globale ou de votre stratégie délimitée sélectionnée : cliquez avec le bouton droit sur l’étiquette ou sélectionnez le menu contextuel de l’étiquette, puis sélectionnez les options **Déplacer vers le haut** ou **Déplacer vers le bas**.
 

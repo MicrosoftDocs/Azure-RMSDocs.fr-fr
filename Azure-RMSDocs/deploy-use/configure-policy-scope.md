@@ -4,7 +4,7 @@ description: "Pour configurer d’autres paramètres et étiquettes pour des uti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 4f64a0f29beb11e132dbabde099902e296f2e513
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 2fc0059f0cc2d7c1a0eb08d6f8ee89ea2bf4bfbd
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
 translationtype: HT
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées
@@ -39,7 +39,7 @@ Pour configurer une stratégie délimitée pour Azure Information Protection :
 
     Dans le panneau **Azure Information Protection** initial, sélectionnez **Ajouter une nouvelle stratégie**. S’affiche alors le deuxième panneau qui sert à présenter l’actualisation de la stratégie globale, puis à configurer votre nouvelle stratégie délimitée.
 
-3. Spécifiez le nom et la description de la stratégie que seuls les administrateurs voient dans le portail Azure. Ce nom doit être unique pour votre locataire. Ensuite, cliquez sur **Spécifier les utilisateurs/groupes qui obtiennent cette stratégie** et dans les panneaux suivants, vous pouvez rechercher et sélectionner les utilisateurs et groupes pour cette stratégie. Les étiquettes et paramètres que vous configurez dans cette stratégie délimitée sont appliqués à ces utilisateurs uniquement. 
+3. Spécifiez le nom et la description de la stratégie que seuls les administrateurs voient dans le portail Azure. Ce nom doit être unique pour votre locataire. Ensuite, cliquez sur **Spécifier les utilisateurs/groupes qui obtiennent cette stratégie** et dans les panneaux suivants, vous pouvez rechercher et sélectionner les utilisateurs et groupes pour cette stratégie. Les étiquettes et paramètres que vous configurez dans cette stratégie délimitée sont appliqués à ces utilisateurs uniquement.
 
 4. Maintenant, créez des étiquettes ou configurez les paramètres de la stratégie délimitée. La stratégie globale est toujours appliquée en premier, afin de compléter la stratégie globale avec les nouvelles étiquettes et de remplacer les paramètres globaux. Par exemple, la stratégie globale peut ne pas avoir d’étiquette par défaut spécifiée et vous configurez une étiquette par défaut différente dans les différentes stratégies délimitées à des services spécifiques.
 

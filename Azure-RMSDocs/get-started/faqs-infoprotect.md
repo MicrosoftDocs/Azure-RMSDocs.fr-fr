@@ -4,7 +4,7 @@ description: "Vous avez une question au sujet de l’utilisation d’Azure Infor
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 6af0a81b31fb0a2e5437428dc8373dd997b18406
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: 7f2bd30603f88ec72ee51f980c40903362cfdeba
+ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
@@ -97,26 +97,5 @@ Vous pouvez également configurer des règles de transport pour effectuer le map
 
 Azure Information Protection utilisant des métadonnées persistantes pour la classification, notamment une étiquette de texte en clair, ces informations peuvent être lues par les solutions DLP et d’autres applications. Dans les fichiers, ces métadonnées sont stockées dans des propriétés personnalisées. Dans les e-mails, ces informations figurent dans les en-têtes.
 
-## <a name="how-do-i-sign-in-as-a-different-user"></a>Comment se connecter avec l'identité d'un autre utilisateur ?
-
-Dans un environnement de production, vous ne devez généralement pas vous connecter sous un autre nom lorsque vous utilisez le client Azure Information Protection. Toutefois, vous devrez peut-être le faire si vous disposez de plusieurs locataires. Par exemple, vous disposez d’un locataire test en plus du locataire Office 365 ou Azure utilisé par votre organisation.
-
-Vous pouvez vérifier le compte auquel vous êtes actuellement connecté à l’aide de la boîte de dialogue **Microsoft Azure Information Protection** : ouvrez une application Office et, dans l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger**, puis sur **Aide et commentaires**. Votre nom de votre compte s’affiche dans la section **État du client**.
-
-Vérifiez le nom de domaine du compte connecté qui s’affiche, en particulier lorsque vous utilisez un compte d’administrateur. Par exemple, si vous avez un compte d’administrateur dans deux locataires différents, il peut être facile d’oublier que vous êtes connecté avec un nom du compte correct mais dans un domaine incorrect. Vous pouvez vous en apercevoir en cas d’échec du téléchargement de la stratégie Azure Information Protection ou si vous ne voyez pas les étiquettes ou le comportement que vous attendez.
-
-Pour ouvrir une session sous un autre nom d’utilisateur, vous devez actuellement modifier le Registre :
-
-1. À l’aide d’un éditeur du Registre, accédez à **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** et supprimez la valeur **TokenCache**.
-
-2. Redémarrez les applications Office ouvertes et connectez-vous avec votre autre compte d’utilisateur. Si l’invite de connexion au service Azure Information Protection n’apparaît pas dans votre application Office, revenez à la boîte de dialogue **Microsoft Azure Information Protection** et cliquez sur **Connexion** depuis la section mise à jour **État du Client**.
-
-En outre :
-
-- Si vous utilisez l’authentification unique, vous devrez vous déconnecter de Windows et vous reconnecter avec votre autre compte d’utilisateur après avoir modifié le registre. Le client Azure Information Protection vous authentifiera automatiquement à l’aide du compte d’utilisateur connecté à ce moment-là.
-
-- Si vous souhaitez réinitialiser l’environnement pour le service Azure Rights Management (également appelé amorçage), vous pouvez utiliser l’option **Réinitialiser** depuis [l’outil d’analyse RMS](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
-
-- Si vous souhaitez supprimer la stratégie Azure Information Protection actuellement téléchargée, vous pouvez supprimer le fichier **Policy.msip** du dossier %localappdata%\Microsoft\MSIP.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

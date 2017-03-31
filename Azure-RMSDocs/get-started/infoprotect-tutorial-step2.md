@@ -4,14 +4,14 @@ description: "Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 7db581d07698edf50fda8379d622e35414ad3671
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: 98e65768651c77b4cc0616142e6b7515d275b7a9
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
 translationtype: HT
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Étape 2 : Configurer et publier la stratégie Azure Information Protection
@@ -29,11 +29,9 @@ Bien qu’Azure Information Protection soit fourni avec une stratégie par défa
     > [!TIP] 
     > Sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous n’avez ainsi pas besoin d’accéder au service lors de votre prochaine connexion au portail.
 
-3.  Sur le panneau Azure Information Protection, cliquez sur **Globale** et explorez le panneau **Stratégie : Globale**, qui montre la stratégie Information Protection par défaut créée automatiquement pour votre locataire.
+3.  Explorez le panneau **Stratégie : Globale**, qui s’ouvre automatiquement et affiche la stratégie Information Protection par défaut automatiquement créée pour votre client :
     
-    Sur le panneau **Stratégie : Globale**, notez les éléments suivants :
-    
-    - Étiquettes de classification : **Personnel**, **Public**, **Interne**, **Confidentiel** et **Hautement confidentiel**. Notez que les deux dernières étiquettes se développent pour afficher des sous-étiquettes : **Tous les employés** et **Tout le monde (sans protection)**, qui sont des exemples de sous-catégories dans une classification.
+    - Étiquettes de classification : **Personnel**, **Public**, **Interne**, **Confidentiel** et **Hautement confidentiel**. Les deux dernières étiquettes se développent pour afficher des sous-étiquettes : **Tous les employés** et **Tout le monde (sans protection)**, qui sont des exemples de sous-catégories dans une classification.
     
        > [!NOTE]
        > Votre stratégie par défaut peut différer légèrement de celle de ce didacticiel. Par exemple, vous avez une étiquette nommée **Interne** au lieu de **Général**, et **Secret** au lieu de **Hautement confidentiel**. Si tel est le cas, vous utilisez probablement une version plus ancienne de la stratégie par défaut. Vous pouvez aussi avoir l’avoir modifiée vous-même avant de commencer ce didacticiel.

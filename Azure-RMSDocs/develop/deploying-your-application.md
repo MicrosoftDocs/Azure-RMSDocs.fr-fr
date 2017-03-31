@@ -14,8 +14,8 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: a78520f3cdf316c7264cb0ca88460858b5a2bf07
-ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
+ms.openlocfilehash: 67ec662fb54ab9fdcd06bebd01df1a228afe5fb1
+ms.sourcegitcommit: 164c9ac31beb4811bbcd4527613a5d3b57b8ac6c
 translationtype: HT
 ---
 # <a name="deploy-into-production"></a>Déployer en production
@@ -79,7 +79,7 @@ Le client RMS 2.1 n’est pas un composant du système d’exploitation Windows
 
 ### <a name="creating-your-deployment-package"></a>Création de votre package de déploiement
 
-Nous recommandons de regrouper le package d’installation du client RMS avec votre application ou solution à l’aide de la technologie d’installation que vous préférez. Le client RMS peut être librement redistribué avec d'autres applications et solutions.
+Nous recommandons de regrouper le package d’installation du client RMS avec votre application ou solution à l’aide de la technologie d’installation que vous préférez. Le client RMS peut être librement redistribué avec d’autres applications et solutions.
 
 Vous pouvez choisir d’installer le client RMS 2.1 sans assistance ou de façon interactive en démarrant son programme d’installation. Les étapes d’intégration sont les suivantes :
 

@@ -4,7 +4,7 @@ description: "Instructions à suivre pour créer et gérer des modèles personna
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9d0b71db6245e49765a0f79aaa901141a155372d
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: cf11e0ac3bb13dcb31d14bad5f97ad117bd09953
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
 translationtype: HT
 ---
 # <a name="create-configure-and-publish-a-custom-template"></a>Créer, configurer et publier un modèle personnalisé
@@ -75,6 +75,8 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
 
     > [!NOTE]
     > Les utilisateurs ou groupes que vous sélectionnez doivent avoir une adresse de messagerie. Dans un environnement de production, ce sera presque toujours le cas, mais dans un simple environnement de test, vous devrez ajouter des adresses de messagerie aux comptes d'utilisateur ou groupes.
+    > 
+    > Si une adresse de messagerie est modifiée après que vous ayez sélectionné l’utilisateur ou le groupe et enregistré le modèle, consultez la section [Éléments à prendre en considération en cas de modification des adresses de messagerie](../plan-design/prepare.md#considerations-if-email-addresses-change) de la documentation relative à la planification. 
 
     Nous vous recommandons d’utiliser des groupes plutôt que des utilisateurs, pour simplifier la gestion des modèles. Toutefois, si vous apportez des modifications à ce groupe, n’oubliez pas que pour des raisons de performances, Azure Rights Management [met en cache l’appartenance au groupe](../plan-design/prepare.md#group-membership-caching). 
     

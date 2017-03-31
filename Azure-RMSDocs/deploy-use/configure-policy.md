@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b946dff4782d1b5571aa0438d1681030f0de092f
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: ec57bae71b11b6505ccb94fcdf692f215862191d
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
 translationtype: HT
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
@@ -28,7 +28,7 @@ Pour configurer la stratégie Azure Information Protection :
 
 2. Accédez au panneau **Azure Information Protection**: par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information Protection** dans la zone Filtrer. Dans les résultats, sélectionnez **Azure Information Protection**. 
 
-    Vous verrez alors le panneau **Azure Information Protection**, où vous pouvez ouvrir la stratégie **Global** accessible par tous les utilisateurs. Vous pouvez également ajouter et modifier des stratégies délimitées. La stratégie **Global** Azure Information Protection contient les éléments suivants que vous pouvez configurer :
+    Lors de son chargement, le panneau **Azure Information Protection** ouvre automatiquement le panneau **Stratégie : Globale**, où vous pouvez afficher et modifier la stratégie globale que tous les utilisateurs obtiennent. Toutefois, vous pouvez également ajouter et modifier des stratégies délimitées. Les stratégies Azure Information Protection contiennent les éléments suivants que vous pouvez configurer :
 
     - Les étiquettes qui permettent aux utilisateurs de classifier des documents et des e-mails.
 

@@ -4,7 +4,7 @@ description: "Instructions et informations destinées aux administrateurs d’un
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 03/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ffa336d352c60f36269cfb23236133bf1ca50d9f
-ms.sourcegitcommit: 9f542a5599ca6332b4b69ebbbbfb9ffdf5464731
+ms.openlocfilehash: 63843acfe9f7b4ded77ccbdcaaab8cb98598dd9f
+ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
 translationtype: HT
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
@@ -190,20 +190,64 @@ Plus d’informations sur l’option **Reset** :
 
 - La clé et les paramètres de Registre suivants sont supprimés : **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Si vous configurez des paramètres pour cette clé de Registre (par exemple des paramètres pour la redirection de votre locataire Azure Information Protection car vous migrez depuis AD RMS et vous avez toujours un point de connexion de service sur votre réseau), vous devez reconfigurer les paramètres du Registre après avoir réinitialisé le client.
 
-- Après avoir réinitialisé le client, vous devez réinitialiser l’environnement utilisateur (opération également appelée « amorçage »), ce qui télécharge des certificats pour le client et les derniers modèles. Pour cela, fermez toutes les instances d’Office et redémarrez une application Office. Cette action vérifie également que vous avez téléchargé la dernière stratégie Azure Information Protection. Ne réexécutez pas les tests de diagnostic tant que vous n’avez pas fait ceci.
+- Après avoir réinitialisé le client, vous devez réinitialiser l’environnement utilisateur, ce qui télécharge des certificats pour le client et les derniers modèles. Pour cela, fermez toutes les instances d’Office et redémarrez une application Office. Cette action vérifie également que vous avez téléchargé la dernière stratégie Azure Information Protection. Ne réexécutez pas les tests de diagnostic tant que vous n’avez pas fait ceci.
 
 
 ### <a name="client-status-section"></a>Section **État du client**
 
 Utilisez la valeur **Connecté en tant que** pour confirmer que le nom d’utilisateur affiché identifie le compte à utiliser pour l’authentification avec Azure Information Protection. Ce nom d’utilisateur doit correspondre à un compte utilisé pour Office 365 ou Azure Active Directory qui appartient à un locataire configuré pour Azure Information Protection.
 
-Si vous avez besoin de vous connecter avec un nom d’utilisateur différent de celui qui est affiché, consultez la section [Comment se connecter avec l'identité d'un autre utilisateur ?](../get-started/faqs-infoprotect.md#how-do-i-sign-in-as-a-different-user)
+Si vous avez besoin de vous connecter avec un nom d’utilisateur différent de celui qui est affiché, consultez la section [Se connecter avec l’identité d’un autre utilisateur](#sign-in-as-a-different-user) sur cette page.
 
 La valeur du paramètre **Dernière connexion** indique la dernière connexion du client au service Azure Information Protection de votre organisation et peut être utilisée avec les valeurs date et heure du paramètre **La stratégie Information Protection a été installée sur** pour vérifier quand la stratégie Azure Information Protection a été installée ou mise à jour pour la dernière fois. Lorsque le client se connecte au service, il télécharge automatiquement la dernière stratégie s’il détecte des modifications dans sa stratégie actuelle, ainsi que toutes les 24 heures. Si vous avez apporté des modifications à la stratégie après l’heure affichée, fermez et rouvrez l’application Office.
 
 Si vous voyez le message **Ce client n’est pas sous licence pour Office Professionnel Plus** : le client Azure Information Protection a détecté que l’édition d’Office installée ne prend pas en charge l’application de la protection Rights Management. Si ce problème est détecté, les étiquettes qui appliquent la protection ne s’affichent pas dans la barre Azure Information Protection.
 
 Utilisez l’information **Version** pour vérifier la version installée sur le client. Vous pouvez vérifier s’il s’agit de la dernière version et s’il existe des correctifs correspondants et des nouvelles fonctionnalités en cliquant sur le lien **Nouveautés** pour lire l’[historique de publication des versions](client-version-release-history.md) du client.
+
+## <a name="custom-configurations"></a>Configurations personnalisées
+
+Utilisez les informations suivantes pour les configurations avancées nécessaires pour des scénarios spécifiques ou un sous-ensemble d’utilisateurs. 
+
+### <a name="sign-in-as-a-different-user"></a>Se connecter avec l’identité d’un autre utilisateur
+
+Dans un environnement de production, les utilisateurs ne doivent généralement pas se connecter sous un autre nom lorsqu’ils utilisent le client Azure Information Protection. Toutefois, vous devrez peut-être le faire en tant qu’administrateur si vous disposez de plusieurs locataires. Par exemple, vous disposez d’un locataire test en plus du locataire Office 365 ou Azure utilisé par votre organisation.
+
+Vous pouvez vérifier le compte auquel vous êtes actuellement connecté à l’aide de la boîte de dialogue **Microsoft Azure Information Protection** : ouvrez une application Office et, dans l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger**, puis sur **Aide et commentaires**. Votre nom de votre compte s’affiche dans la section **État du client**.
+
+Vérifiez le nom de domaine du compte connecté qui s’affiche, en particulier lorsque vous utilisez un compte d’administrateur. Par exemple, si vous avez un compte d’administrateur dans deux locataires différents, il peut être facile d’oublier que vous êtes connecté avec un nom du compte correct mais dans un domaine incorrect. Vous pouvez vous en apercevoir en cas d’échec du téléchargement de la stratégie Azure Information Protection ou si vous ne voyez pas les étiquettes ou le comportement que vous attendez.
+
+Pour se connecter avec l’identité d’un autre utilisateur :
+
+1. À l’aide d’un éditeur du Registre, accédez à **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** et supprimez la valeur **TokenCache** (et les données de valeur associées).
+
+2. Redémarrez les applications Office ouvertes et connectez-vous avec votre autre compte d’utilisateur. Si l’invite de connexion au service Azure Information Protection n’apparaît pas dans votre application Office, revenez à la boîte de dialogue **Microsoft Azure Information Protection** et cliquez sur **Connexion** depuis la section mise à jour **État du Client**.
+
+En outre :
+
+- Si vous utilisez l’authentification unique, vous devrez vous déconnecter de Windows et vous reconnecter avec votre autre compte d’utilisateur après avoir modifié le registre. Le client Azure Information Protection vous authentifiera automatiquement à l’aide du compte d’utilisateur connecté à ce moment-là.
+
+- Si vous souhaitez réinitialiser l’environnement pour le service Azure Rights Management (également appelé amorçage), vous pouvez utiliser l’option **Réinitialiser** depuis [l’outil d’analyse RMS](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
+
+- Si vous souhaitez supprimer la stratégie Azure Information Protection actuellement téléchargée, supprimez le fichier **Policy.msip** du dossier **%localappdata%\Microsoft\MSIP**.
+
+### <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Masquer l’option de menu Classifier et protéger dans l’Explorateur de fichiers Windows
+
+Vous pouvez définir cette configuration avancée en modifiant le Registre lorsque vous disposez de la version 1.3.0.0 du client Azure Information Protection ou d’une version ultérieure. 
+
+Créez le nom de la valeur DWORD suivant (avec toutes données de la valeur) :
+
+**HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Microsoft.Azip.RightClick\LegacyDisable**
+
+### <a name="support-for-disconnected-computers"></a>Prise en charge des ordinateurs déconnectés
+
+Par défaut, le client Azure Information Protection tente automatiquement de se connecter au service Azure Information Protection pour télécharger la dernière stratégie Azure Information Protection. Si vous disposez d’ordinateur qui ne sera pas en mesure de se connecter à Internet pendant une période donnée, vous pouvez empêcher le client d’essayer de se connecter au service en modifiant le Registre. 
+
+Recherchez le nom de la valeur suivant et définissez les données de la valeur sur **0** :
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+
+Assurez-vous que le client dispose d’un fichier de stratégie valide nommé **Policy.msip**, dans le dossier **%localappdata%\Microsoft\MSIP**. Si nécessaire, vous pouvez exporter la stratégie à partir du portail Azure et copier le fichier exporté sur l’ordinateur client. Vous pouvez également utiliser cette méthode pour remplacer un fichier de stratégie obsolète par la dernière stratégie publiée.
 
 ## <a name="to-uninstall-the-azure-information-protection-client"></a>Désinstallation du client Azure Information Protection
 

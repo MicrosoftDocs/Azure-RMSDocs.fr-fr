@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 7553e2719195448c71653ead9950f92bac3928c5
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: c7c91c09ebcd7dcc35c7d91e056b5f83f93d53cd
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Comment les applications prennent en charge le service Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -62,4 +58,3 @@ Découvrez comment chacun des éléments suivants prend en charge le service Azu
 -   [Autres applications prenant en charge les API RMS](api-support.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

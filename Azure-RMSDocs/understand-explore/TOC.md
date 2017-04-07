@@ -21,8 +21,3 @@
 # [Déployer et utiliser le service](/information-protection/deploy-use/activate-service)
 # [Déployer et utiliser le client](/information-protection/rms-client/use-client)
 # [Développer et personnaliser des applications](/information-protection/develop/developers-guide)
-
-
-<!--HONumber=Feb17_HO2-->
-
-

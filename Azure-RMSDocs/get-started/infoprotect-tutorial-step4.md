@@ -4,20 +4,16 @@ description: "Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-translationtype: Human Translation
-ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
-ms.openlocfilehash: 8260da1905c6701675b5490e3919ae708f46a5a9
-ms.lasthandoff: 03/01/2017
-
-
+ms.openlocfilehash: 56ecd7b99f81a3b2399e166c1ca6a50797e65fa3
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+translationtype: HT
 ---
-
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Étape 4 : classification, étiquetage et protection en action 
 
 >*S’applique à : Azure Information Protection*
@@ -28,37 +24,37 @@ La classification et la protection ont lieu quand vous enregistrez le document, 
 
 ## <a name="to-manually-change-our-default-label"></a>Pour modifier manuellement notre étiquette par défaut
 
-Dans la barre Information Protection, sélectionnez l’étiquette **Question secrète** pour voir la façon dont les sous-étiquettes s’affichent :
+Dans la barre Information Protection, sélectionnez la dernière étiquette pour voir comment les sous-étiquettes s’affichent :
 
-![Didacticiel de démarrage rapide Azure Information Protection, étape 4 : choisir une sous-étiquette](../media/info-protect-sub-labels.png)
+![Didacticiel de démarrage rapide Azure Information Protection, étape 4 : choisir une sous-étiquette](../media/info-protect-sub-labelsv2.png)
 
-Sélectionnez **All Company** (Toutes les sociétés). Vous verrez alors que les autres étiquettes n’apparaissent plus dans la barre maintenant que vous avez sélectionné une étiquette pour ce document. La valeur **Sensitivity** (Niveau de confidentialité) devient **Secret \ All Company** (Question secrète \ Toutes les sociétés) avec une modification correspondante de la couleur de l’étiquette :
+Sélectionnez une de ces sous-étiquettes. Vous voyez alors que les autres étiquettes n’apparaissent plus dans la barre maintenant que vous avez sélectionné une étiquette pour ce document. La valeur **Sensibilité** change pour montrer le nom de l’étiquette et de la sous-étiquette avec une modification correspondante de la couleur de l’étiquette. Exemple :
 
-![Étape 4 du didacticiel de démarrage rapide Azure Information Protection - Sous-étiquette sélectionnée](../media/info-protect-sub-label-selected.png)
+![Étape 4 du didacticiel de démarrage rapide Azure Information Protection - Sous-étiquette sélectionnée](../media/info-protect-sub-label-selectedv2.png)
 
-Dans la barre Information Protection, cliquez sur l’icône **Edit Label** (Modifier l’étiquette) à côté de **Secret \ All Company** (Question secrète \ Toutes les sociétés) :
+Dans la barre Information Protection, cliquez sur l’icône **Modifier l’étiquette** en regard de la valeur de l’étiquette actuellement sélectionnée :
 
-![Didacticiel de démarrage rapide Azure Information Protection, étape 4 : icône Modifier l’étiquette](../media/info-protect-edit-label-selected.png)
+![Didacticiel de démarrage rapide Azure Information Protection, étape 4 : icône Modifier l’étiquette](../media/info-protect-edit-label-selectedv2.png)
 
 Les étiquettes disponibles apparaissent à nouveau.
 
-Sélectionnez maintenant l’étiquette **Personal** (Personnel). Étant donné que vous avez sélectionné une étiquette dont la classification est inférieure à l’étiquette précédemment sélectionnée pour ce document, vous êtes invité à justifier votre choix :
+Sélectionnez maintenant la première étiquette, **Personnel**. Étant donné que vous avez sélectionné une étiquette dont la classification est inférieure à l’étiquette précédemment sélectionnée pour ce document, vous êtes invité à justifier votre choix :
 
 ![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : invite de confirmation de l’abaissement](../media/info-protect-lower-justification.png)
 
-Sélectionnez **The previous label no longer applies** (L’étiquette précédente ne s’applique plus), cliquez sur **Confirm** (Confirmer). La valeur **Sensitivity** (Niveau de confidentialité) devient **Personal** (Personnel) et les autres étiquettes sont masquées à nouveau.
+Sélectionnez **L’étiquette précédente ne s’applique plus** et cliquez sur **Confirmer**. La valeur **Sensibilité** devient **Personnel** et les autres étiquettes sont masquées à nouveau.
 
 ## <a name="to-remove-the-classification-completely"></a>Pour supprimer complètement la classification
 
-Dans la barre Information Protection, cliquez à nouveau sur l’icône **Edit Label** (Modifier l’étiquette). Toutefois, au lieu de choisir l’une des étiquettes, cliquez sur l’icône **Delete Label** (Supprimer l’étiquette) :
+Dans la barre Information Protection, cliquez à nouveau sur l’icône **Modifier l’étiquette**. Toutefois, au lieu de choisir l’une des étiquettes, cliquez sur l’icône **Supprimer l’étiquette** :
 
-![Didacticiel de démarrage rapide Azure Information Protection, étape 4 : icône Supprimer](../media/delete-icon-from-personal.png)
+![Didacticiel de démarrage rapide Azure Information Protection, étape 4 : icône Supprimer](../media/delete-icon-from-personalv2.png)
 
-Cette fois à l’invite, saisissez « Ce document n’a pas besoin d’être classé », puis cliquez sur **Confirm** (Confirmer).  
+Cette fois à l’invite, entrez « Ce document n’a pas besoin d’être classé » et cliquez sur **Confirmer**.  
 
-La valeur **Sensitivity** (Niveau de confidentialité) indique **Not set** (Non défini), ce qui correspond à ce que les utilisateurs voient initialement si vous ne définissez pas d’étiquette par défaut :
+La valeur **Sensibilité** indique **Non défini**, ce qui correspond à ce que voient les utilisateurs au départ si vous ne définissez pas d’étiquette par défaut :
 
-![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : supprimer la classification](../media/sensitivity-not-set.png)
+![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : supprimer la classification](../media/sensitivity-not-setv2.png)
 
 
 ## <a name="to-see-a-recommendation-prompt-for-labeling-and-automatic-protection"></a>Pour afficher une invite de recommandation pour l’étiquetage et la protection automatique
@@ -67,11 +63,11 @@ La valeur **Sensitivity** (Niveau de confidentialité) indique **Not set** (Non 
 
 2. Enregistrez le document (utilisez n’importe quel nom de fichier et n’importe quel emplacement). 
 
-3. L’invite suivante s’affiche : **It is recommended to label this file as Confidential** (Nous vous recommandons d’étiqueter ce fichier comme Confidentiel). Cliquez sur **Change now** (Modifier maintenant).
+3. Vous voyez maintenant une invite à appliquer l’étiquette que vous avez configurée pour la protection quand des numéros de carte de crédit sont détectés. Si nous n’avez pas accepté la recommandation, notre paramètre de stratégie nous permet de la rejeter en sélectionnant **Abandonner**. En donnant une recommandation mais en permettant à un utilisateur de l’ignorer, vous réduisez les faux positifs quand vous utilisez la classification automatique. Pour ce didacticiel, cliquez sur **Modifier maintenant**.
 
-    ![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : invite de recommandation](../media/change-now.png)
+    ![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : invite de recommandation](../media/change-nowv2.png)
 
-    Outre le fait que l’étiquette du document est définie sur Confidential (Confidentiel), le filigrane de votre organisation apparaît immédiatement dans la page, et le pied de page **Sensitivity: Confidential** (Niveau de confidentialité : Confidentiel) est également appliqué. 
+    Outre le fait que le document montre maintenant que notre étiquette configurée est appliquée (par exemple **Confidentiel / Tous les employés**), vous voyez immédiatement en filigrane le nom de votre entreprise à travers la page et que le pied de page **Classé comme confidentiel** est également appliqué. 
 
     Le document est également protégé avec le modèle Azure Rights Management que vous avez spécifié, ce que vous pouvez vérifier en cliquant sur l’onglet **Fichier** et en affichant les informations **Protéger le document**. Si vous avez utilisé le modèle Confidential par défaut, un message précise que l’accès au document est limité aux utilisateurs internes (les utilisateurs extérieurs à votre organisation ne pourront pas l’ouvrir) et que son contenu ne peut pas être copié ou imprimé. En tant que propriétaire du document, vous pouvez le copier et l’imprimer, mais si vous l’envoyez à un autre utilisateur de votre organisation, il ne pourra pas effectuer ces actions.
 

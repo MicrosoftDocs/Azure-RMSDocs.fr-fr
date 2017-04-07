@@ -4,7 +4,7 @@ description: "Découvrez ce qui est nouveau ou ce qui a changé dans une version
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/01/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,26 +12,51 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 343ac5f79902379e45efcb6979a115ba4c00d1c5
-ms.openlocfilehash: 503cb76825d0092e8562d39281b1d702edaf6438
-ms.lasthandoff: 03/02/2017
-
-
+ms.openlocfilehash: 70c358954a39b02610a77ec81074379dc574158b
+ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
+translationtype: HT
 ---
-
 # <a name="azure-information-protection-client-version-release-history"></a>Client Azure Information Protection : historique des versions
 
 >*S’applique à : Azure Information Protection*
 
-L’équipe Azure Information Protection met régulièrement à jour le client Azure Information Protection avec des correctifs et des nouvelles fonctionnalités. Le client est inclus dans le catalogue Microsoft Update (catégorie : **Azure Information Protection**) et vous pouvez toujours télécharger la dernière version à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+L’équipe Azure Information Protection met régulièrement à jour le client Azure Information Protection avec des correctifs et des nouvelles fonctionnalités. Le client est intégré au Catalogue Microsoft Update (catégorie : **Azure Information Protection**) et vous pouvez continuer à télécharger la version de disponibilité générale (GA) la plus récente et la prochaine version (préliminaire) depuis le [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-Pour déterminer les nouveautés ou modifications apportées à une version, utilisez les informations suivantes. La dernière version est répertoriée en première position. Les versions antérieures à la version Disponibilité générale ne sont pas répertoriées.
+Les versions préliminaires ne doivent pas être déployées auprès des utilisateurs finaux sur les réseaux de production. Utilisez plutôt les versions préliminaires pour tester de nouvelles fonctionnalités ou de nouveaux correctifs à paraître dans la prochaine version en disponibilité générale. 
+
+Pour déterminer les nouveautés ou modifications apportées à une version en disponibilité générale, utilisez les informations ci-après. La dernière version est répertoriée en première position. Pour plus d’informations sur la version préliminaire, consultez les informations sur la page de téléchargement.
 
 > [!NOTE]
-> Les correctifs mineurs ne sont pas répertoriés : par conséquent, si vous rencontrez un problème avec le client Azure Information Protection, vérifiez d’abord qu’il ne s’agit pas d’un problème avec la dernière version.
+> Les correctifs mineurs n’y sont pas répertoriés. Par conséquent, si vous rencontrez un problème avec le client Azure Information Protection, vérifiez d’abord qu’il ne s’agit pas d’un problème avec la version en disponibilité générale la plus récente. Si tel est le cas, vérifiez la version préliminaire actuelle.
 >  
 > Si le problème persiste, consultez les informations dans [Options de support technique et ressources de la communauté](../get-started/information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
+
+## <a name="version-14210"></a>Version 1.4.21.0
+
+**Publiée le** : 15/03/2017
+
+**Modification de la configuration requise :**
+
+Avec la version précédente, il était obligatoire de disposer de Microsoft .NET Framework 4.6.2 pour profiter du client complet. Bien que cela ne soit pas conseillé, vous pouvez ignorer cette condition à l’aide d’un paramètre d’installation personnalisé : **DowngradeDotNetRequirement**. Pour plus d’informations, consultez la [section sur l’installation du client](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) dans le guide de l’administrateur.
+
+
+**Correctifs** :
+
+- Prise en charge des lecteurs mappés pour classifier et protéger les fichiers.
+
+- Prise en charge des fichiers volumineux (> 250 Mo) dans la visionneuse. 
+
+- Lorsque HYOK est configuré, Outlook peut appliquer des étiquettes qui sont configurées pour utiliser des modèles Azure Rights Management ou AD RMS.
+
+
+**Nouvelles fonctionnalités** :
+
+- Vous pouvez définir des autorisations personnalisées à partir de votre application Office. Vous pouvez définir une protection de différents niveaux : pour vous uniquement, pour des groupes externes ou pour tous les utilisateurs d’une autre organisation. Pour plus d’informations, consultez la section [Définir des autorisations personnalisées pour un document](client-classify-protect.md#set-custom-permissions-for-a-document) du guide de l’utilisateur.
+    
+- Les fichiers PDF prennent maintenant en charge les étiquettes qui appliquent la classification uniquement.
+
+- Pour les fichiers PDF, la visionneuse prend désormais en charge les options telles que la recherche, le zoom et le pivotement. Pour utiliser ces options, cliquez avec le bouton droit sur le fichier lorsqu’il est affiché dans la visionneuse.
+
 
 ## <a name="version-131552"></a>Version 1.3.155.2
 
@@ -77,7 +102,7 @@ Cette version du client est la [version en disponibilité générale](https://bl
 
 - Tests de diagnostic et option de réinitialisation qu’un utilisateur peut exécuter depuis l’application Office quand le client Azure Information Protection est installé : sous l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger**, cliquez sur **Aide et commentaires**, puis cliquez sur **Exécuter des diagnostics**. 
 
-    Pour plus d’informations sur cette option, consultez la section [Vérification de l’installation et de l’état de la connexion, ou envoi de commentaires](client-admin-guide.md#additional-checks-to-verify-installation-connection-status-or-send-feedback) de la documentation d’installation du client.
+    Pour plus d’informations sur cette option, consultez la section [Vérifications supplémentaires et dépannage](client-admin-guide.md#additional-checks-and-troubleshooting) du guide de l’administrateur.
 
 ## <a name="version-11230"></a>Version 1.1.23.0
 

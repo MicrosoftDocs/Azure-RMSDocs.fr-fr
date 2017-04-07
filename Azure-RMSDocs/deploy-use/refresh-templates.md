@@ -4,7 +4,7 @@ description: "Quand vous utilisez le service Azure Rights Management, les modèl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 84056058eedccf354cefb86792d92949bcfb22e8
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 77bd9e7bedf4a319f8f911782c995066a26a7055
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
+translationtype: HT
 ---
-
-
 # <a name="refreshing-templates-for-users"></a>Actualisation des modèles pour les utilisateurs
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -30,10 +25,12 @@ Quand vous utilisez le service Azure Rights Management d’Azure Information Pro
 |Application ou service|Mode d'actualisation des modèles après des modifications|
 |--------------------------|---------------------------------------------|
 |Exchange Online|Configuration manuelle requise pour actualiser les modèles.<br /><br />Pour connaître les étapes de configuration, consultez la section suivante, [Exchange Online uniquement : Configurer Exchange pour télécharger des modèles personnalisés modifiés](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
-|Office 365|Actualisation automatique (aucune étape supplémentaire nécessaire).|
-|Office 2016 et Office 2013<br /><br />Application de partage RMS pour Windows|Actualisation automatique (d’après une planification) :<br /><br />Pour ces versions ultérieures d’Office : l’intervalle d’actualisation par défaut est de sept jours.<br /><br />Pour l’application de partage RMS pour Windows : à partir de la version 1.0.1784.0, l’intervalle d’actualisation par défaut est d’une journée. Les versions antérieures ont, par défaut, un intervalle d'actualisation de sept jours.<br /><br />Pour forcer une actualisation avant cette planification, consultez la section suivante, [Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
-|Office 2010|Actualisation lors de la connexion des utilisateurs.<br /><br />Pour forcer une actualisation, demandez aux utilisateurs de se déconnecter, puis de se reconnecter ou forcez-les à le faire. Ou consultez la section [Office 2010 uniquement : Comment forcer une actualisation d’un modèle personnalisé modifié](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
-Pour les appareils mobiles qui utilisent l'application de partage RMS, les modèles sont automatiquement téléchargés (et actualisés au besoin) sans aucune qu'aucune configuration soit requise.
+|Client Azure Information Protection|Actualisation automatique chaque fois que la stratégie Azure Information Protection est actualisée sur le client :<br /><br /> - Lorsqu’une application Office qui prend en charge la barre Azure Information Protection s’ouvre. <br /><br /> - Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier. <br /><br /> - Lorsque vous exécutez les applets de commande PowerShell pour l’étiquetage et la protection (Get-AIPFileStatus et Set-AIPFileLabel).<br /><br /> - Toutes les 24 heures.<br /><br /> En outre, étant donné que le client Azure Information Protection est étroitement intégré à Office, les modèles actualisés pour Office 2016 ou Office 2013 le seront aussi pour le client Azure Information Protection.|
+|Office 2016 et Office 2013<br /><br />Application de partage RMS pour Windows|Actualisation automatique (d’après une planification) :<br /><br />- Pour ces versions ultérieures d’Office : l’intervalle d’actualisation par défaut est de sept jours.<br /><br />- Pour l’application de partage RMS pour Windows : à partir de la version 1.0.1784.0, l’intervalle d’actualisation par défaut est d’une journée. Les versions antérieures ont, par défaut, un intervalle d'actualisation de sept jours.<br /><br />Pour forcer une actualisation avant la planification, consultez la section [Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Office 2010|Actualisation automatique lorsque les utilisateurs se déconnectent de Windows, se reconnectent et attendent jusqu'à une heure.|
+|Office 2016 pour Mac|Actualisation automatique (aucune étape supplémentaire nécessaire).|
+|Application de partage RMS pour les appareils mobiles|Actualisation automatique (aucune étape supplémentaire nécessaire).|
+
 
 ## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Exchange Online uniquement : Comment configurer Exchange pour télécharger des modèles personnalisés modifiés
 Si vous avez déjà configuré la Gestion des droits relatifs à l'information (IRM) pour Exchange Online, les modèles personnalisés ne peuvent pas être téléchargés par les utilisateurs tant que vous n'apportez pas les modifications suivantes à l'aide de Windows PowerShell dans Exchange Online.
@@ -151,38 +148,6 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 
 3.  Redémarrez vos applications Office et les instances de l'Explorateur de fichiers.
 
-## <a name="office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2010 uniquement : Forcer une actualisation pour un modèle personnalisé modifié
-En modifiant le Registre sur les ordinateurs qui exécutent Office 2010, vous pouvez définir une valeur de façon à ce que les modèles modifiés soient actualisés sur les ordinateurs sans attendre que les utilisateurs se déconnectent, puis se reconnectent. Vous pouvez également forcer une actualisation immédiate en supprimant les données existantes dans une valeur de registre.
-
-> [!WARNING]
-> Si vous n'utilisez pas l'Éditeur du Registre correctement, vous risquez de provoquer de sérieux problèmes pouvant vous amener à devoir réinstaller le système d'exploitation. Microsoft ne peut pas garantir la résolution des problèmes engendrés par une utilisation incorrecte de l'Éditeur du Registre. Utilisez l’Éditeur du Registre à vos propres risques.
-
-### <a name="to-change-the-update-frequency"></a>Pour modifier la fréquence de mise à jour
-
-1.  À l'aide d'un éditeur du Registre, créez une nouvelle valeur de Registre nommée **UpdateFrequency** et définir une valeur entière pour les données, qui spécifiant la fréquence en jours pour télécharger les modifications dans un modèle téléchargé. Utilisez le tableau suivant pour rechercher le chemin d'accès du Registre afin de créer cette nouvelle valeur de Registre.
-
-    **Chemin de Registre :** HKEY_CURRENT_USER\Software\Microsoft\MSDRM\TemplateManagement
-
-    **Type :** REG_DWORD
-
-    **Valeur** : UpdateFrequency
-
-2.  Si vous souhaitez forcer une actualisation immédiate des modèles, passez à la procédure suivante. Dans le cas contraire, redémarrez vos applications Office.
-
-### <a name="to-force-an-immediate-refresh"></a>Pour forcer une actualisation immédiate
-
-1.  À l’aide d’un éditeur du Registre, supprimez les données de la valeur **LastUpdatedTime**. Par exemple, les données peuvent afficher **2015-04-20T15:52**. Supprimez 2015-04-20T15:52 pour qu’aucune donnée ne s’affiche. Utilisez le tableau suivant pour rechercher le chemin d’accès du registre pour supprimer cette valeur de registre.
-
-    **Chemin de Registre :** HKEY_CURRENT_USER\Software\Microsoft\MSDRM\TemplateManagement
-
-    **Type :** REG_SZ
-
-    **Valeur** : LastUpdatedTime
-
-
-2.  Supprimez le dossier suivant et tous les fichiers qu’il contient : **%localappdata%\Microsoft\MSIPC\Templates**
-
-3.  Redémarrez vos applications Office.
 
 ## <a name="see-also"></a>Voir aussi
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)

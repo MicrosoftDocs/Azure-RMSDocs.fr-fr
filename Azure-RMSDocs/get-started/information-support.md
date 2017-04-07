@@ -4,7 +4,7 @@ description: "Ressources pour les administrateurs, qui incluent des informations
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/01/2017
+ms.date: 03/30/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: cb0a66071937ed5afdf1f86833bbc47bdb4ddd50
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 5e836d99c59cbd055b219aab6499a67fb62bd1a5
+ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+translationtype: HT
 ---
-
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -49,11 +45,11 @@ Les sections suivantes fournissent des informations sur les options de support e
 
 Si vous avez Support Premier, visitez le [portail pour les clients Support Premier](https://premier.microsoft.com/) afin d’envoyer des incidents, de rechercher des solutions et d’obtenir de l’aide.
 
-Vous pouvez avoir droit à **FastTrack** : vous pouvez utiliser l’offre du centre FastTrack quand vous achetez au moins 150 licences pour Azure Information Protection dans le cadre d’un plan éligible. L’offre du Centre FastTrack vous permet de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Offre du centre FastTrack pour Azure Rights Management](https://technet.microsoft.com/library/mt607025.aspx).
+Vous pouvez avoir droit à **FastTrack** : vous pouvez utiliser l’offre du centre FastTrack quand vous achetez au moins 150 licences pour Azure Information Protection dans le cadre d’un plan éligible. L’offre du Centre FastTrack vous permet de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Offre du centre FastTrack pour Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 Pour les autres clients, utilisez les canaux de support suivants, selon la façon dont vous avez obtenu Azure Information Protection :
 
-- **Azure Information Protection Premium** (autonome) : ouvrez une [demande de support dans le portail Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Pour utiliser cette option, vous devez avoir un abonnement Azure et un plan de support Azure. Pour plus d’informations, consultez [Support technique Azure pour les clients](https://azure.microsoft.com/support/plans/). 
+- **Azure Information Protection Premium** (autonome) : ouvrez une [demande de support dans le portail Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Lorsque vous y êtes invité, sur le panneau **Informations de base**, choisissez **Technique** pour **Type de problème** et **Abonnement avec support technique inclus** pour l’option **Abonnement**.
 
 - **Azure Information Protection avec un abonnement Office 365** : consultez [Contacter le support Office 365 pour les entreprises - Aide de l’administrateur](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) pour obtenir les numéros de téléphone et les différentes options de contact du support dans le portail d’administration Office 365. 
 
@@ -81,6 +77,8 @@ Résolution des problèmes :
 
 - Si vous avez déployé le connecteur Rights Management pour vos serveurs locaux, consultez les informations sur la [surveillance](../deploy-use/monitor-rms-connector.md), qui incluent des détails sur les entrées du journal des événements, les compteurs de performances et la journalisation.
 
+- Pour le client Azure Information Protection pour Windows : consultez la section [Vérifications supplémentaires et dépannage](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) du guide de l’administrateur.
+
 - Pour les vérifications automatisées, la correction automatique et le suivi, téléchargez et exécutez l’[outil RMS Analyzer](http://www.microsoft.com/en-us/download/details.aspx?id=46437). Pour plus d’informations sur cet outil, consultez les sections **Détails** et **Instructions d’installation** dans la page de téléchargement. 
 
 ### <a name="community-resources"></a>Ressources de la communauté
@@ -92,4 +90,3 @@ Résolution des problèmes :
 -   [Forum : RMS pour les utilisateurs (applications)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmsapps)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

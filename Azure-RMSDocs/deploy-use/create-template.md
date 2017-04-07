@@ -4,7 +4,7 @@ description: "Instructions à suivre pour créer et gérer des modèles personna
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 11971a176b9c5f413bbe6daa208c062a131343be
-ms.openlocfilehash: 5ab725294d93540f35c395eca08f5f3fbc6ae392
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: cf11e0ac3bb13dcb31d14bad5f97ad117bd09953
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
+translationtype: HT
 ---
-
-
 # <a name="create-configure-and-publish-a-custom-template"></a>Créer, configurer et publier un modèle personnalisé
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -49,16 +44,16 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
 
     -   À partir du [portail Azure Classic](http://go.microsoft.com/fwlink/p/?LinkID=275081) :
 
-        1.  Dans le volet gauche, cliquez sur **Active Directory**.
+        1. Dans le volet gauche, cliquez sur **Active Directory**.
 
-        2.  Dans la page **Active Directory** , cliquez sur **RIGHTS MANAGEMENT**.
+        2. Dans la page **Active Directory** , cliquez sur **RIGHTS MANAGEMENT**.
 
-        3.  Sélectionnez l'annuaire concerné par la Gestion des droits.
-
-        4.  Si vous n’avez pas encore activé Rights Management, cliquez sur **ACTIVER** et confirmez votre action.
+        3. Si **STATUT DE RIGHTS MANAGEMENT** affiche **Inactif**, cliquez sur **ACTIVER**, puis confirmez votre action.
 
             > [!NOTE]
-            > Pour plus d’informations, consultez [Activation d’Azure Rights Management](activate-service.md).
+            > Pour plus d’informations, consultez [Activation d’Azure Rights Management](activate-service.md)
+            >
+        4. Si **STATUT DE RIGHTS MANAGEMENT** affiche **Actif**, sélectionnez le nom de votre locataire Active Directory.
 
 2.  Créer un modèle :
 
@@ -80,6 +75,8 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
 
     > [!NOTE]
     > Les utilisateurs ou groupes que vous sélectionnez doivent avoir une adresse de messagerie. Dans un environnement de production, ce sera presque toujours le cas, mais dans un simple environnement de test, vous devrez ajouter des adresses de messagerie aux comptes d'utilisateur ou groupes.
+    > 
+    > Si une adresse de messagerie est modifiée après que vous ayez sélectionné l’utilisateur ou le groupe et enregistré le modèle, consultez la section [Éléments à prendre en considération en cas de modification des adresses de messagerie](../plan-design/prepare.md#considerations-if-email-addresses-change) de la documentation relative à la planification. 
 
     Nous vous recommandons d’utiliser des groupes plutôt que des utilisateurs, pour simplifier la gestion des modèles. Toutefois, si vous apportez des modifications à ce groupe, n’oubliez pas que pour des raisons de performances, Azure Rights Management [met en cache l’appartenance au groupe](../plan-design/prepare.md#group-membership-caching). 
     

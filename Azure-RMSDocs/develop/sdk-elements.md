@@ -14,13 +14,10 @@ ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 6443c1955db5ab25caea349575cb376a6ce8dac2
-
-
+ms.openlocfilehash: 8f52c6b737603e8fd71b32c53991bb015f945abc
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="development-environment-files"></a>Fichiers d’environnement de développement
 
 Cette rubrique présente les fichiers d’environnement de développement et leurs emplacements d’installation relatifs sur votre ordinateur.
@@ -50,8 +47,3 @@ Rights Management Services SDK 2.1 comprend les fichiers suivants, qui sont ins
 |Genmanifest.exe|\tools|Génère un manifeste pour une utilisation pendant le développement d’une application prenant en charge RMS.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

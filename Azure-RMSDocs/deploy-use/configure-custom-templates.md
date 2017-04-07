@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 0818f8e65f2065e70ef66732819d21aa85c912fa
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 27ffbc6eb9e88840f1b33c59b76bdaa5d028cc36
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Configuration de modèles personnalisés pour le service Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -65,5 +61,4 @@ Utilisez les informations suivantes pour vous aider à configurer et utiliser de
 -   [Utiliser PowerShell pour gérer les modèles](configure-templates-with-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

@@ -14,13 +14,10 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 96b281d7bf3073cbe99a844a440a357572813b4a
-
-
+ms.openlocfilehash: 7027e3833344c7734818bf034bd8aa68f04409eb
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="ios-and-os-x-setup"></a>Installation iOS et OS X
 
 Les applications iOS et OS X peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’Azure Rights Management (Azure RMS).
@@ -112,8 +109,3 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 * [Informations de référence sur l’API iOS / OS X](https://msdn.microsoft.com/library/dn758306.aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

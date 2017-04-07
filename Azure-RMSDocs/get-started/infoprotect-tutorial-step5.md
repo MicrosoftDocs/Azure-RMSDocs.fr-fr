@@ -5,7 +5,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/21/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,15 +13,10 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
-ms.openlocfilehash: ea34b900855d43cb1458438b1d15a16fd7cf01bf
-ms.lasthandoff: 03/01/2017
-
-
+ms.openlocfilehash: 2b59cbd99430b5474280acc02b1a2c4a2738c793
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+translationtype: HT
 ---
-
-
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Étape 5 : Voir le partage de fichiers protégés en action et effectuer le suivi de votre document 
 
 >*S’applique à : Azure Information Protection*
@@ -62,7 +57,7 @@ Ensuite, vous pouvez partager en toute sécurité ce document par courrier élec
 
     **J’ai protégé ce fichier avec Microsoft Azure Information Protection. Pour une première utilisation, consultez ces instructions : https://aka.ms/rms-signup.** 
 
-    ![Didacticiel de démarrage rapide Azure Information Protection Étape 5 : Partager un document protégé par e-mail](../media/share-protected-email.png)
+    ![Didacticiel de démarrage rapide Azure Information Protection Étape 5 : Partager un document protégé par e-mail](../media/share-protected-emailv2.png)
 
     Cliquez sur **Envoyer**.
 
@@ -94,9 +89,9 @@ Maintenant que le destinataire a ouvert la pièce jointe et l’a éventuellemen
 
     ![Bannière d’informations pour une protection personnalisée](../media/information-banner-custom-protection.png)
 
-2.  Sur l’onglet **Accueil** , cliquez sur **Protéger** > **Suivre et révoquer** :
+2.  Sous l’onglet **Accueil**, cliquez sur **Protéger** > **Suivre et révoquer** :
 
-    ![Option Suivre l’utilisation](../media/track-usage-callout.png)
+    ![Option Suivre l’utilisation](../media/track-usage-calloutv2.png)
 
     Vous accédez ainsi au site de suivi de document.
 

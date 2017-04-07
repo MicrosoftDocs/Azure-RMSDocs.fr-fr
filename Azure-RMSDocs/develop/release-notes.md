@@ -13,13 +13,10 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: febd7d90a1a762de73894724f3cf3401aec0d7b9
-
-
+ms.openlocfilehash: acd6dc2190996787b5354407bbaedec921a5b48c
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
 
 ## <a name="whats-new"></a>Nouveautés
@@ -218,8 +215,3 @@ Cette section donne des informations sur les versions actuelles et précédentes
 **R** : Le kit de développement logiciel (SDK) du système d’exploitation OS X fonctionne avec Xcode 4.6 et versions ultérieures uniquement et OS X 10.8 et versions ultérieures.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -31,8 +31,3 @@ Maintenant que le destinataire a ouvert la pièce jointe et l’a éventuellemen
 |Abonnement gratuit RMS for individuals   →|[RMS for Individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md)|
 |Deux versions du fichier joint au courrier électronique   →|[Qu’est-ce que le fichier .ppdf créé automatiquement ?](../rms-client/sharing-app-dialog-box.md)|
 
-
-
-<!--HONumber=Jan17_HO1-->
-
-

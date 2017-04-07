@@ -1,24 +1,22 @@
 ---
-title: "Déploiement de votre application"
+title: "Déploiement de votre application - AIP"
 description: "Cette rubrique vous guide dans le déploiement de votre application"
 keywords: "déployer, RMS, AIP"
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 0c16b7c6bd494a0350a511a3b415f781aecf613d
-
-
+ms.openlocfilehash: 67ec662fb54ab9fdcd06bebd01df1a228afe5fb1
+ms.sourcegitcommit: 164c9ac31beb4811bbcd4527613a5d3b57b8ac6c
+translationtype: HT
 ---
 # <a name="deploy-into-production"></a>Déployer en production
 
@@ -81,7 +79,7 @@ Le client RMS 2.1 n’est pas un composant du système d’exploitation Windows
 
 ### <a name="creating-your-deployment-package"></a>Création de votre package de déploiement
 
-Nous recommandons de regrouper le package d’installation du client RMS avec votre application ou solution à l’aide de la technologie d’installation que vous préférez. Le client RMS peut être librement redistribué avec d'autres applications et solutions.
+Nous recommandons de regrouper le package d’installation du client RMS avec votre application ou solution à l’aide de la technologie d’installation que vous préférez. Le client RMS peut être librement redistribué avec d’autres applications et solutions.
 
 Vous pouvez choisir d’installer le client RMS 2.1 sans assistance ou de façon interactive en démarrant son programme d’installation. Les étapes d’intégration sont les suivantes :
 
@@ -98,14 +96,13 @@ Si le client n’est pas présent, fournissez un message d’erreur indiquant à
 
 Si le client est présent, poursuivez l’installation de votre application.
 
-## <a name="enabling-azure-information-protection--rights-management-services-with-your-application"></a>Activation des services Azure Information Protection / Rights Management dans votre application
+## <a name="enabling-azure-information-protection-services-with-your-application"></a>Activation des services Azure Information Protection dans votre application
 
 > [!NOTE]
 > Si vous avez migré vers le nouveau modèle ADAL pour l’authentification, il est inutile d’installer le **SIA**. Pour plus d’informations, consultez [Authentification ADAL pour votre application compatible RMS](adal-auth.md).
 > Vous pouvez également **certifier votre application pour Windows 10**. En mettant à jour votre application pour utiliser l’authentification ADAL plutôt que l’Assistant de connexion Microsoft Online, vous et vos clients pouvez : utiliser l’authentification multifacteur, installer le client RMS 2.1 sans avoir besoin de privilèges d’administration sur l’ordinateur.
 
-
-Pour que votre utilisateur final tire parti des services Information Protection / Rights Management, vous devez déployer *l'Assistant de connexion Online Services (SIA)*. En tant que développeur d’applications, vous ne savez pas si l’utilisateur final doit utiliser Information Protection via RMS (localement) ou Azure Information Protection.
+Pour que votre utilisateur final tire parti des services Information Protection, vous devez déployer *l'Assistant de connexion Online Services (SIA)*. En tant que développeur d’applications, vous ne savez pas si l’utilisateur final doit utiliser Information Protection via RMS (localement) ou Azure Information Protection.
 
 
 > [!IMPORTANT]
@@ -116,6 +113,8 @@ Pour que votre utilisateur final tire parti des services Information Protection 
 -   Vérifiez que votre déploiement d’une application avec gestion des droits inclut une vérification des composants requis pour la sélection de ce service.
 -   Pour l’utilisation du service en ligne dans le cadre de vos propres tests et par les utilisateurs finaux, consultez la rubrique TechNet [Configuration de Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx).
 
+Ce guide vous servira aussi pour configurer votre application : [Configurer votre application App Service pour utiliser la connexion Azure Active Directory](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication).
+
 Pour plus d’informations sur l’activation de votre application pour utiliser RMS pour les services Azure Rights Management, consultez [Permettre à votre application de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="related-topics"></a>Rubriques connexes
@@ -125,8 +124,3 @@ Pour plus d’informations sur l’activation de votre application pour utiliser
 * [Permettre à votre application de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO4-->
-
-

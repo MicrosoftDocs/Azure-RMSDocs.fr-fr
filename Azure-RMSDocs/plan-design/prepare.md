@@ -4,7 +4,7 @@ description: "Vérifiez que tout est en place pour utiliser le service Azure Rig
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 11ebd66a1ae05535814af159523bd49b7921d46d
-ms.openlocfilehash: fc80a4a65bd5fae1b8604c316a4e2354bbe8c8be
-ms.lasthandoff: 02/25/2017
-
-
+ms.openlocfilehash: 4b074f9a9a3d72b4d1ab5810b69e92b4792b0711
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
+translationtype: HT
 ---
-
 # <a name="preparing-for-azure-information-protection"></a>Préparation d’Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -38,10 +34,17 @@ Avant de déployer Azure Information Protection dans votre organisation, vérifi
 
 Pour des raisons de performances, l’appartenance au groupe est mise en cache par le service Azure Rights Management. Cela signifie que les modifications apportées à l’appartenance au groupe peuvent prendre jusqu’à 3 heures pour entrer en vigueur, et cette période est susceptible de changer. N’oubliez pas de tenir compte de ce délai dans toutes les modifications ou les tests que vous effectuez lorsque vous utilisez des groupes dans la configuration du service Azure Rights Management, par exemple, lorsque vous configurez des [modèles personnalisés](../deploy-use/configure-custom-templates.md) ou lorsque vous utilisez un groupe pour la [fonctionnalité de super utilisateur](../deploy-use/configure-super-users.md). 
 
+### <a name="considerations-if-email-addresses-change"></a>Éléments à prendre en considération en cas de modification des adresses de messagerie
+
+Lorsque vous configurez des droits d’utilisation pour les utilisateurs ou les groupes et les sélectionnez par leur nom complet, votre sélection enregistre et utilise l’adresse de messagerie de cet objet. Si l’adresse de messagerie est modifiée ultérieurement, les utilisateurs sélectionnés ne disposeront pas des autorisations.
+
+Si les adresses de messagerie sont modifiées, nous vous recommandons d’ajouter l’ancienne adresse de messagerie en tant qu’adresse de messagerie proxy (également appelée un alias ou une autre adresse de messagerie) à l’utilisateur ou au groupe, afin que les droits d’utilisation qui ont été attribués précédemment soient conservés. Si vous ne pouvez pas le faire, vous devez supprimer l’utilisateur ou le groupe de votre configuration et le sélectionner à nouveau pour enregistrer l’adresse de messagerie mise à jour afin que le contenu nouvellement protégé utilise la nouvelle adresse de messagerie.
+
+Les modèles Custom Rights Management constituent un exemple de l’emplacement à partir duquel vous pouvez sélectionner des utilisateurs ou des groupes en fonction du nom complet pour attribuer des droits d’utilisation. Les utilisateurs peuvent aussi sélectionner des utilisateurs et des groupes en fonction du nom complet lorsqu’ils configurent des autorisations personnalisées avec le client Azure Information Protection.
+
 ## <a name="activate-the-rights-management-service-for-data-protection"></a>Activer le service Rights Management pour la protection des données
 Lorsque vous êtes prêt à commencer à protéger des documents et des e-mails, activez le service Rights Management pour activer cette technologie. Pour plus d’informations, consultez [Activation d’Azure Rights Management](../deploy-use/activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

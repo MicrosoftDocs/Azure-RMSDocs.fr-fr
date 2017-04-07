@@ -1,26 +1,23 @@
 ---
-title: "Procédure d’inscription et d’activation RMS de votre application dans Azure AD | Azure RMS"
+title: "Procédure d’inscription de votre application dans Azure AD - AIP"
 description: "Décrit les principes fondamentaux de l’authentification utilisateur pour votre application RMS."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0f5b3de4607e5e889448b381f5835b4a75c9b0c2
-
-
+ms.openlocfilehash: a98b4eb3bd7705faf268a544f4efa7ba41712816
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
+translationtype: HT
 ---
-
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Procédure d’inscription et d’activation RMS de votre application dans Azure AD
 
 Cette rubrique décrit les concepts de base de l’inscription d’une application et de son activation RMS dans le portail Azure, puis l’authentification utilisateur avec Azure Active Directory Authentication Library (ADAL).
@@ -31,8 +28,8 @@ L’authentification utilisateur est une étape essentielle pour établir la com
 ## <a name="registration-via-azure-portal"></a>Inscription dans le portail Azure
 Commencez par suivre ce guide pour configurer l’inscription de votre application dans le portail Azure, [Configurer Azure RMS pour l’authentification ADAL](adal-auth.md). Copiez et enregistrez **l’ID client** et **l’URI de redirection** de ce processus pour les utiliser plus tard.
 
-## <a name="complete-your-rights-managagment-license-agreement-rmla"></a>Signer votre contrat de licence Rights Managagment (RMLA, Rights Managagment License Agreement)
-Avant de pouvoir déployer votre application, vous devez signer un contrat RMLA avec l’équipe Microsoft Rights Management. Pour plus d’informations, consultez la première section de la rubrique [Déployer en production - Demander un contrat de licence de production](deploying-your-application.md).
+## <a name="complete-your-information-protection-integration-agreement-ipia"></a>Signature d'un IPIA (Information Protection Integration Agreement)
+Avant de pouvoir déployer votre application, vous devez signer un contrat IPIA avec l’équipe Microsoft Information Protection. Pour plus d’informations, consultez la première section de la rubrique [Déployer en production](deploying-your-application.md).
 
 ## <a name="implement-user-authentication-for-your-app"></a>Implémenter l’authentification utilisateur pour votre application
 Chacune des API RMS a un rappel qui doit être implémenté pour activer l’authentification de l’utilisateur. RMS SDK 4.2 utilise votre implémentation du rappel quand vous ne fournissez pas de jeton d’accès, que votre jeton d’accès doit être actualisé ou que le jeton d’accès a expiré.
@@ -62,7 +59,7 @@ La bibliothèque ADAL nécessite plusieurs éléments d’information pour authe
 
 - **Autorité** : l’URL pour le point de terminaison d’authentification, généralement AAD ou ADFS.
 - **Ressource** : l’URL/URI de l’application de service à laquelle vous essayez d’accéder, généralement Azure RMS ou AD RMS.
-- **ID utilisateur** : l’UPN, généralement une adresses de messagerie, de l’utilisateur qui veut accéder à l’application. Ce paramètre peut être vide si l’utilisateur n’est pas encore connu ; il est également utilisé pour mettre en cache le jeton de l’utilisateur ou pour demander un jeton auprès du cache. Il est aussi généralement utilisé comme *indicateur* pour la confirmation de l’utilisateur.
+- **ID utilisateur** : l’UPN, généralement une adresse de messagerie, de l’utilisateur qui veut accéder à l’application. Ce paramètre peut être vide si l’utilisateur n’est pas encore connu ; il est également utilisé pour mettre en cache le jeton de l’utilisateur ou pour demander un jeton auprès du cache. Il est aussi généralement utilisé comme *indicateur* pour la confirmation de l’utilisateur.
 - **ID de client** : l’ID de votre application cliente. Il doit s’agir d’un ID d’application Azure AD valide.
 Il provient de l’étape d’inscription dans le portail Azure.
 - **URI de redirection** : fournit la bibliothèque d’authentification avec une cible d’URI pour le code d’authentification. Des formats spécifiques sont nécessaires pour iOS et Android. Ils sont expliqués dans les fichiers LISEZ-MOI des dépôts GitHub correspondants de la bibliothèque ADAL. Cette valeur provient de l’étape d’inscription dans le portail Azure.
@@ -268,8 +265,3 @@ Il provient de l’étape d’inscription dans le portail Azure.
     }
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

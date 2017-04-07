@@ -38,8 +38,3 @@ Ce didacticiel vous a présenté seulement un scénario dans lequel Azure RMS pe
 
 Si vous êtes prêt à déployer Azure RMS, consultez la [Feuille de route pour le déploiement d’Azure Rights Management](../plan-design/deployment-roadmap.md) pour connaître les étapes de déploiement et accéder à des liens vers des instructions.
 
-
-
-<!--HONumber=Jan17_HO1-->
-
-

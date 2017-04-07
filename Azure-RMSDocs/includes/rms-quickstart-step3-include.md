@@ -40,8 +40,3 @@ Maintenant que vous avez envoyé votre document protégé, vous pouvez demander 
 |--------------------------------|--------------------------|
 |Instructions détaillées et méthodes alternatives pour protéger des fichiers que vous partagez par courrier électronique   →|[Protégez un fichier partagé par courrier électronique à l’aide de l’application de partage Rights Management](../rms-client/sharing-app-protect-by-email.md)|
 |Options de la boîte de dialogue **partage protégé** →|[Options de boîte de dialogue pour l'application de partage Rights Management](../rms-client/sharing-app-dialog-box.md)|
-
-
-<!--HONumber=Jan17_HO1-->
-
-

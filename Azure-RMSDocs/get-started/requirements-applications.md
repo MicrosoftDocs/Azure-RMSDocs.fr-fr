@@ -4,7 +4,7 @@ description: "Identifiez les applications qui utilisent les API RMS pour prendre
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/14/2017
+ms.date: 04/05/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 842f1853a1a0d037907024633b77e90c27a79af1
-ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
+ms.openlocfilehash: 27c970216c2bc0166529270db11304f83f553a07
+ms.sourcegitcommit: 1f65f71f742063e2bebcac88f72180d3aa4318a4
 translationtype: HT
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
@@ -45,7 +45,7 @@ Informations sur les colonnes du tableau :
 |**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Applications Office Mobile (Azure RMS uniquement) [[1]](#footnote-1)<br /><br />Office Online [[2]](#footnote-2)|Client Azure Information Protection pour Windows <br /><br />Gaaiho Doc<br /><br />Client PDF GigaTrust Desktop pour Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />Application de partage RMS|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Outlook Web App (OWA) [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|Client Azure Information Protection pour Windows : texte, images, pfile<br /><br />Application de partage RMS pour Windows : texte, images, pfile<br /><br />Plug-in SealPath RMS pour AutoCAD [[8]](#footnote-8) : .dwg<br />|
 |**iOS**|Office pour iPad et iPhone [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />Docs TITUS|Application Azure Information Protection [[1]](#footnote-1)<br /><br /> Foxit Reader<br /><br />Docs TITUS|Application Azure Information Protection [[1]](#footnote-1)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Office pour iPad et iPhone [[4]](#footnote-4)<br /><br />OWA pour iOS [[3]](#footnote-3)<br /><br />TITUS Mail|Application Azure Information Protection [[1]](#footnote-1) : texte, images<br /><br />Docs TITUS : Pfile|
 |**Android**|GigaTrust App pour Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (Azure RMS uniquement)[[1]](#footnote-1)|Application Azure Information Protection [[1]](#footnote-1)<br /><br />GigaTrust App pour Android<br /><br />Foxit Reader<br /><br />Application de partage RMS [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />Application Azure Information Protection [[1]](#footnote-1)<br /><br />GigaTrust App pour Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook pour Android [[4]](#footnote-4)<br /><br />OWA pour Android [[3]](#footnote-3) et [[7]](#footnote-7)<br /><br />Samsung Email (S3 et versions ultérieures) [[7]](#footnote-7)<br /><br />TITUS Classification for Mobile|Application Azure Information Protection [[1]](#footnote-1) : texte, images|
-|**OS X**|Office 2011 (AD RMS uniquement)<br /><br />Office 2016 pour Mac<br /><br />Office Online [[2]](#footnote-2)|Foxit Reader<br /><br />Application de partage RMS [[1]](#footnote-1)|Outlook 2011 (AD RMS uniquement)<br /><br />Outlook 2016 pour Mac<br /><br />Outlook pour Mac|Application de partage RMS [[1]](#footnote-1) : texte, images, pfile|
+|**MacOS**|Office 2011 (AD RMS uniquement)<br /><br />Office 2016 pour Mac<br /><br />Office Online [[2]](#footnote-2)|Foxit Reader<br /><br />Application de partage RMS [[1]](#footnote-1)|Outlook 2011 (AD RMS uniquement)<br /><br />Outlook 2016 pour Mac<br /><br />Outlook pour Mac|Application de partage RMS [[1]](#footnote-1) : texte, images, pfile|
 |**Windows 10 Mobile**|Applications Office Mobile (Azure RMS uniquement) [[1]](#footnote-1)|Non prise en charge|Citrix WorxMail [[6]](#footnote-6)<br /><br />Courrier Outlook|Non prise en charge|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[2]](#footnote-2)|Non pris en charge|Outlook 2013 RT<br /><br />Application de messagerie pour Windows<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go : fichiers JT|
 |**Windows Phone 8.1**|Office Mobile (AD RMS uniquement)|Application de partage RMS [[1]](#footnote-1)|Outlook Mobile [[4]](#footnote-4)|Application de partage RMS [[1]](#footnote-1) : texte, images, pfile|

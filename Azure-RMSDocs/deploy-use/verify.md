@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 50da38ee5e852d72458845a97ebe005f4949d265
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 2ab4bfa8d27b44bb4d9cf9f3fecc86f281f0da2a
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="verifying-the-azure-rights-management-service"></a>Vérification du service Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -38,6 +34,5 @@ Si votre test échoue, passez en revue les étapes de configuration dans [Feuill
 Vous pouvez, à l’aide de la journalisation de l’utilisation, surveiller l’usage que fait votre organisation du service Azure Rights Management. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](log-analyze-usage.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

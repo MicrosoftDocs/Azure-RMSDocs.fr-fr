@@ -4,7 +4,7 @@ description: "Instructions et informations pour que les administrateurs gèrent 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
-ms.openlocfilehash: d180b0ff4390df45a61b7d50913c267fb3cf35e1
-ms.lasthandoff: 02/28/2017
-
-
+ms.openlocfilehash: 90b26239979b42eadb008b11a963e35a74698910
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
+translationtype: HT
 ---
-
-
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Utiliser PowerShell avec le client Azure Information Protection
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
@@ -137,9 +132,7 @@ Exécutez l’applet de commande Get-AadrmConfiguration à partir du module Azur
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>Pour obtenir l’AppPrincipalId et la clé symétrique
 
-Créez un principal du service en exécutant l’applet de commande `New-MsolServicePrincipal` à partir du module MSOnline PowerShell pour Azure Active Directory, ou `New-AzureADServicePrincipal` à partir du module plus récent Azure Active Directory version 2 PowerShell. 
-
-Les instructions suivantes concernent New-MsolServicePrincipal à partir du module MSOnline PowerShell pour Azure Active Directory :
+Créez un principal du service en exécutant l’applet de commande `New-MsolServicePrincipal` à partir du module MSOnline PowerShell pour Azure Active Directory : 
 
 1. Si ce module n’est pas déjà installé sur votre ordinateur, consultez [Installation du module Azure AD](/powershell/azuread/#install-the-azure-ad-module).
 
@@ -235,7 +228,7 @@ Tout d’abord, si vous avez besoin de vous authentifier auprès du service Azur
 
 Lorsque vous y êtes invité, entrez les trois identificateurs, comme décrit dans [Condition préalable 3 : protéger ou annuler la protection des fichiers sans intervention de l’utilisateur](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction).
 
-Avant de pouvoir protéger des fichiers, vous devez obtenir une liste des modèles Rights Management pour identifier celui à utiliser et le numéro d’identification correspondant. À partir du résultat, vous pouvez alors copier l’ID du modèle :
+Avant de pouvoir protéger les fichiers, vous devez télécharger les modèles Rights Management sur votre ordinateur, puis identifier celui à utiliser ainsi que le numéro d’identification correspondant. À partir du résultat, vous pouvez alors copier l’ID du modèle :
 
     Get-RMSTemplate
     
@@ -301,6 +294,7 @@ Votre résultat peut ressembler à ce qui suit :
     ---------                             -------------
     C:\Test.docx                          C:\Test.docx
 
+Notez que si les modèles Rights Management sont modifiés, vous devez les télécharger à nouveau à l’aide de `Get-RMSTemplate -force`. 
 
 ## <a name="active-directory-rights-management-services"></a>Active Directory Rights Management Services
 
@@ -430,4 +424,3 @@ Pour des informations supplémentaires nécessaires pour la prise en charge du c
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

@@ -4,7 +4,7 @@ description: "Découvrez en détail le fonctionnement d’Azure RMS, les contrô
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 3140f678c29771fc3328e312bc7e55d309554e66
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 1dcdb7017be2e2bdfbefcfaa348be977ed67f8c0
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -48,23 +43,32 @@ Même si vous n'avez pas besoin de connaître le détail du fonctionnement de RM
 |Contrôles de chiffrement|Utilisation dans Azure RMS|
 |-|-|
 |Algorithme : AES<br /><br />Longueur de clé : 128 bits et 256 bits [[1]](#footnote-1)|Protection de documentation|
-|Algorithme : RSA<br /><br />Longueur de clé : 2 048 bits|Protection de clé|
+|Algorithme : RSA<br /><br />Longueur de clé : 2 048 bits [[2]](#footnote-2)|Protection de clé|
 |SHA-256|Signature de certificat|
 
 ###### <a name="footnote-1"></a>Note 1 
 
 La longueur de&256; bits est utilisée par le client Azure Information Protection et l’application de partage Rights Management pour la protection en modes générique et natif quand le fichier a une extension de nom de fichier .ppdf, ou est un fichier image ou texte protégé (tel que .ptxt ou .pjpg).
 
-Mode de stockage et de sécurisation des clés de chiffrement :
+###### <a name="footnote-2"></a>Note 2
 
-- Pour chaque document ou e-mail protégé par Azure RMS, Azure RMS crée une clé AES unique (la « clé de contenu »), qui est incorporée au document et qui persiste au fil de ses modifications successives. 
+La longueur de la clé est de&2; 048 bits lorsque le service Azure Rights Management est activé. Une longueur de&1; 024 bits est prise en charge dans les scénarios facultatifs suivants :
 
-- La clé de contenu est protégée à l’aide de la clé RSA de l’organisation (la « clé de locataire Azure Information Protection ») dans le cadre de la stratégie définie dans le document. La stratégie est également signée par l’auteur du document. Cette clé de locataire est commune à tous les documents et e-mails protégés par Azure RMS pour l’organisation ; elle ne peut être modifiée par un administrateur Azure Information Protection que si l’organisation utilise une clé de locataire gérée par le client, également appelée BYOK (Bring Your Own Key). 
+- Lors d’une migration depuis un site local si le cluster AD RMS s’exécute en mode de chiffrement 1 et qu’il ne peut pas être mis à niveau vers le mode de chiffrement 2.
 
-    Cette clé de locataire est protégée dans les services en ligne de Microsoft, dans un environnement très contrôlé et sous étroite surveillance. Lorsque vous utilisez une clé de locataire gérée par le client (BYOK), cette sécurité est renforcée par l’utilisation d’une série de modules de sécurité matériels (HSM) haut de gamme dans chaque région Azure, ne laissant aucune possibilité d’extraire, exporter ou partager les clés, quelles que soient les circonstances. Pour plus d’informations sur les options de clé de locataire et les clés BYOK, consultez [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
+- Pour les clés archivées qui ont été créées en local avant la migration afin que le contenu qui a été protégé par AD RMS puisse continuer à être ouvert après la migration vers Azure Rights Management.
 
-- Les licences et certificats envoyés à un appareil Windows sont protégés par la clé privée d’appareil du client, créée quand un utilisateur utilise Azure RMS sur l’appareil pour la première fois. Cette clé privée est à son tour protégée par DPAPI sur le client, ce qui a pour effet de protéger ces clés secrètes à l’aide d’une clé dérivée du mot de passe de l’utilisateur. Sur les appareils mobiles, les clés ne sont utilisées qu’une seule fois. Ainsi, n’étant pas stockées sur les clients, elles ne nécessitent pas de protection sur l’appareil. 
+- Si les clients choisissent d’apporter leur propre clé (BYOK) à l’aide d’Azure Key Vault. C’est ce que nous recommandons, mais ne forcez pas l’application d’une taille de clé minimale de 2 048 bits.
 
+### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Mode de stockage et de sécurisation des clés de chiffrement Azure RMS
+
+Pour chaque document ou e-mail protégé par Azure RMS, Azure RMS crée une clé AES unique (la « clé de contenu »), qui est incorporée au document et qui persiste au fil de ses modifications successives. 
+
+La clé de contenu est protégée à l’aide de la clé RSA de l’organisation (la « clé de locataire Azure Information Protection ») dans le cadre de la stratégie définie dans le document. La stratégie est également signée par l’auteur du document. Cette clé de locataire est commune à tous les documents et e-mails protégés par le service Azure Rights Management pour l’organisation. Elle ne peut être modifiée par un administrateur Azure Information Protection que si l’organisation utilise une clé de locataire gérée par le client, également appelée BYOK (Bring Your Own Key). 
+
+Cette clé de locataire est protégée dans les services en ligne de Microsoft, dans un environnement très contrôlé et sous étroite surveillance. Lorsque vous utilisez une clé de locataire gérée par le client (BYOK), cette sécurité est renforcée par l’utilisation d’une série de modules de sécurité matériels (HSM) haut de gamme dans chaque région Azure, ne laissant aucune possibilité d’extraire, exporter ou partager les clés, quelles que soient les circonstances. Pour plus d’informations sur les options de clé de locataire et les clés BYOK, consultez [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
+
+Les licences et certificats envoyés à un appareil Windows sont protégés par la clé privée d’appareil du client, créée quand un utilisateur utilise Azure RMS sur l’appareil pour la première fois. Cette clé privée est à son tour protégée par DPAPI sur le client, ce qui a pour effet de protéger ces clés secrètes à l’aide d’une clé dérivée du mot de passe de l’utilisateur. Sur les appareils mobiles, les clés ne sont utilisées qu’une seule fois. Ainsi, n’étant pas stockées sur les clients, elles ne nécessitent pas de protection sur l’appareil. 
 
 
 ## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procédure pas à pas décrivant le fonctionnement d'Azure RMS : première utilisation, protection du contenu, consommation du contenu

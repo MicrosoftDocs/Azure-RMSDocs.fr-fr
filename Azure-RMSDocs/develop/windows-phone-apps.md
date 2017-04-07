@@ -14,13 +14,10 @@ ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: a71b5550193e2f92edf64d541393899c07899522
-
-
+ms.openlocfilehash: 96dfeb54c866facec73facee7c8356059b107a2f
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="windows-phone-setup"></a>Configuration pour Windows Phone
 
 
@@ -86,8 +83,3 @@ Vous êtes maintenant prêt à créer vos propres applications Windows Phone.
 [SDK Windows Phone](http://dev.windowsphone.com/en-us/downloadsdk)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

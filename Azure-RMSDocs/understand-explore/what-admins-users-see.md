@@ -4,7 +4,7 @@ description: "Découvrez quelques exemples classiques illustrant comment les adm
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/26/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 4fb412ff1128842fd1f3c95d39a4a626c67f97a0
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 254386ad7cda2d3e178eb9520e6282abe609c158
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="azure-rms-in-action-what-administrators-and-users-see"></a>Azure RMS en action : ce que voient les utilisateurs et les administrateurs
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -128,7 +123,7 @@ Dans cet exemple, l'administrateur configure une stratégie permettant à l'orga
 
 Les règles sont configurées de telle sorte que les messages électroniques contenant de telles informations, qui sont envoyés à l'extérieur de l'organisation, fassent automatiquement l'objet d'une protection des droits appliquée à l'aide d'un modèle RMS restreignant l'accès aux seuls employés de la société.
 
-Ici, la règle est configurée pour utiliser un des modèles par défaut, **VanArsdel, Ltd – Confidentiel**, de notre premier exemple. Mais vous pouvez également voir comment le choix de modèles inclut tous les modèles personnalisés que vous avez créés, ainsi qu'une option **Ne pas transférer** spécifique d'Exchange.
+Ici, la règle est configurée pour utiliser un des modèles par défaut, **VanArsdel, Ltd – Confidentiel**, de notre premier exemple. Toutefois, vous pouvez également voir comment le choix de modèles inclut tous les modèles personnalisés que vous avez créés, ainsi qu'une option **Ne pas transférer** spécifique à Exchange.
 
 > [!NOTE]
 > Si les options de configuration qui s’affichent sont légèrement différentes de celles de l’image, vous devez d’abord sélectionner **Plus d’options** quand vous configurez la règle. Vous pouvez ensuite sélectionner **Modifier la sécurité du message** > **Appliquer la protection des droits**, puis sélectionnez le modèle RMS.

@@ -12,13 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 0895050d1bc0528f9ab230bdeac9e2a3ee787b31
-
-
+ms.openlocfilehash: 24368df01f680958310b8d01c4f9a5a939e6f706
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="operations-for-your-azure-information-protection-tenant-key"></a>Opérations pour votre clé de locataire Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -44,9 +41,3 @@ Après avoir identifié la typologie implémentée, sélectionnez l’une des se
 - [Clé de locataire gérée par le client](operations-customer-managed-tenant-key.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO4-->
-
-

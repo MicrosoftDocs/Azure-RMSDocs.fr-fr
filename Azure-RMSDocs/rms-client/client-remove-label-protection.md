@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f77200fa8a305c0306c41470bda7aa5a54951909
-ms.openlocfilehash: e6fe5edfeb165839260371942cbf59922853a342
-ms.lasthandoff: 03/02/2017
-
-
+ms.openlocfilehash: 9aa72b53a53c3cd7f0e49e42403a1669cc777c30
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Supprimer des étiquettes et la protection des fichiers et des e-mails qui ont été étiquetés par Azure Information Protection ou protégés par Rights Management
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*

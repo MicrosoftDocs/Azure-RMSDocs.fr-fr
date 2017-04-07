@@ -4,7 +4,7 @@ description: "Instructions pour la migration de votre déploiement AD RMS (Acti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 12bd5b89cf9957521c7d7b4fb573e4ffcd6c865d
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: b82132d45f1d671c11355c44104dacf521e18082
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
 >*S’applique à : Services AD RMS, Azure Information Protection, Office 365*
@@ -59,12 +55,6 @@ Avant de procéder à la migration vers Azure Information Protection, assurez-vo
         
         - Windows Server 2016 (x64)
         
-    - Mode de chiffrement 2 :
-
-        - Vos serveurs et vos clients AD RMS doivent s’exécuter en mode de chiffrement 2 avant de pouvoir commencer la migration vers Azure Information Protection.
-        
-        Même si la clé de certificat de licence serveur (SLC) doit utiliser le mode de chiffrement 2, les clés configurées précédemment pour le mode de chiffrement 1 sont prises en charge par Azure Information Protection en tant que clés archivées. Pour plus d’informations sur les modes de chiffrement et pour savoir comment passer au mode de chiffrement 2, consultez [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx) (Modes de chiffrement AD RMS).
-        
     - Toutes les topologies AD RMS valides sont prises en charge :
     
         - Forêt unique, cluster RMS unique
@@ -73,7 +63,7 @@ Avant de procéder à la migration vers Azure Information Protection, assurez-vo
         
         - Plusieurs forêts, plusieurs clusters RMS
         
-    Remarque : Par défaut, plusieurs clusters RMS migrent vers un seul locataire Azure Information Protection. Si vous voulez des clients Azure Information Protection, vous devez les traiter comme des migrations différentes. Une clé d’un cluster RMS ne peut pas être importée dans plusieurs clients Azure Information Protection.
+    Remarque : par défaut, plusieurs clusters AD RMS migrent vers un seul locataire Azure Information Protection. Si vous voulez des clients Azure Information Protection, vous devez les traiter comme des migrations différentes. Une clé d’un cluster RMS ne peut pas être importée dans plusieurs clients Azure Information Protection.
 
 - **Toutes les configurations requises pour exécuter Azure Information Protection, notamment un locataire Azure Information Protection (non activé) :**
 
@@ -104,7 +94,22 @@ Avant de procéder à la migration vers Azure Information Protection, assurez-vo
     - Cette configuration facultative nécessite Azure Key Vault et un abonnement Azure qui prend en charge Key Vault avec des clés protégées par HSM. Pour plus d’informations, consultez la [page Tarification d’Azure Key Vault](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
 
 
-Limitations :
+### <a name="cryptographic-mode-considerations"></a>Considérations relatives au mode de chiffrement
+
+Bien que cela ne constitue pas une condition préalable pour la migration, nous recommandons que vos serveurs AD RMS et les clients s’exécutent en mode de chiffrement 2 avant de commencer la migration. 
+
+Pour plus d’informations sur les différents modes et la mise à niveau, consultez [Modes de chiffrement AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+
+Si votre cluster AD RMS est en mode de chiffrement 1 et si vous ne pouvez pas le mettre à niveau, vous devrez renouveler votre clé de locataire Azure Information Protection une fois la migration terminée. Le renouvellement de cette clé entraîne la création d’une nouvelle clé pour le locataire qui utilise le mode de chiffrement 2. L’utilisation du service Azure Rights Management avec le mode de chiffrement 1 est prise en charge uniquement pendant le processus de migration.
+
+Pour confirmer le mode de chiffrement AD RMS :
+ 
+- Pour Windows Server 2012 R2 et Windows 2012 : Propriétés du cluster AD RMS > Onglet **Général**. 
+
+- Pour toutes les versions d’AD RMS prises en charge : utilisez [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) et l’option **AD RMS admin** pour consulter le mode de chiffrement dans les **informations du service RMS**.
+
+
+### <a name="migration-limitations"></a>Limites de migration
 
 -   Bien que le processus de migration prenne en charge la migration de votre clé de certificat de licence serveur (SLC) vers un module de sécurité matériel (HSM) pour Azure Information Protection, Exchange Online ne prend pas actuellement en charge cette configuration pour le service Rights Management utilisé par Azure Information Protection. Si vous souhaitez disposer de toutes les fonctionnalités IRM avec Exchange Online après la migration vers Azure Information Protection, votre clé de locataire Azure Information Protection doit être [Gérée par Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). Vous pouvez également exécuter IRM avec des fonctionnalités réduites dans Exchange Online quand vous gérez vous-même votre locataire Azure Information Protection (à l’aide de la solution BYOK). Pour plus d’informations sur l’utilisation d’Exchange Online avec le service Azure Rights Management, consultez l’[Étape 6. Configurer l’intégration de l’IRM pour Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online) dans ces instructions de migration.
 
@@ -192,11 +197,10 @@ Les étapes de migration peuvent être divisées en quatre phases, qui peuvent �
 
 - **Étape 9 : Renouveler votre clé de locataire Azure Information Protection**
 
-    Cette étape est facultative, mais elle est recommandée si la topologie de clé de locataire Azure Information Protection choisie à l’étape 2 est Gérée par Microsoft. Cette étape n’est pas applicable si la topologie de clé de locataire Azure Information Protection choisie est Gérée par le client (BYOK).
+    Cette étape est obligatoire si vous n’utilisiez pas le mode de chiffrement 2 avant la migration, et facultative mais recommandée pour toutes les migrations afin de protéger la sécurité de votre clé de locataire Azure Information Protection.
 
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour démarrer la migration, passez à la [Phase 1 : Configuration côté serveur](migrate-from-ad-rms-phase1.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

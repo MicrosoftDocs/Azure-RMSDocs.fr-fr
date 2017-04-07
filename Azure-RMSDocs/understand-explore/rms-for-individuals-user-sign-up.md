@@ -4,7 +4,7 @@ description: "Instructions à suivre pour obtenir ce compte gratuit et informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 1134bff1935b3fada661865f31104e0316e8fecd
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 12f681ccfbcd7da2192df2be057f92d31a856bda
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-users-sign-up-for-rms-for-individuals"></a>Inscription à RMS for individuals
 
 >*S’applique à : Azure Information Protection*
@@ -87,7 +83,7 @@ Grâce à ce processus, aucun frais n'est imputé à l'organisation et aucune in
 
     -   Consigner l'ensemble de l'activité liée à Rights Management de votre organisation. Il s'agit d'informations précieuses puisque vous pouvez non seulement savoir quels fichiers sont protégés et qui y accède, mais également identifier le comportement potentiellement suspect de personnes non autorisées. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
-    -   Offrir aux utilisateurs la possibilité de suivre et révoquer leurs documents protégés, si ces fonctionnalités sont prises en charge par votre [abonnement Azure RMS](https://technet.microsoft.com/dn858608). Pour plus d’informations, consultez [Suivre et révoquer des fichiers](../rms-client/sharing-app-track-revoke.md) dans le [Guide d’utilisation de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md).
+    -   Offrir aux utilisateurs la possibilité de suivre et de révoquer leurs documents protégés, si ces fonctionnalités sont prises en charge par votre [abonnement](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features). Pour plus d’informations, consultez [Suivre et révoquer vos documents](../rms-client/client-track-revoke.md) dans le [guide d’utilisation d’Azure Information Protection](../rms-client/client-user-guide.md).
 
     -   Implémentez une solution BYOK pour que votre clé de locataire pour Azure Rights Management soit générée localement conformément à vos stratégies informatiques, puis transférée en toute sécurité à Microsoft grâce à un module de sécurité matériel. Pour plus d’informations, consultez [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md) (Planification et implémentation de la clé de locataire Azure Information Protection).
 

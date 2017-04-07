@@ -4,7 +4,7 @@ description: "Détails techniques sur les types de fichiers pris en charge, les 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 107bac4e318c08d4fdc6d24fc88a6f7cbe5c0a74
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: fe75945793d28ed78b46f6b9a421bd7aa9ae3dfd
+ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
+translationtype: HT
 ---
-
-
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Types de fichiers pris en charge par le client Azure Information Protection
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
@@ -39,6 +34,8 @@ Utilisez les informations suivantes pour vérifier les types de fichiers pris en
 
 Seule la classification est prise en charge pour les types de fichiers suivants. Les autres types de fichiers prennent en charge la classification quand ils sont aussi protégés.
 
+- **Adobe Portable Document Format** : .pdf
+
 - **Microsoft Visio** : .vsdx, .vsdm, .vssx, .vssm, .vsd, .vdw, .vst
 
 - **Microsoft Project** : .mpp, .mpt
@@ -46,7 +43,6 @@ Seule la classification est prise en charge pour les types de fichiers suivants.
 - **Microsoft Publisher** : .pub
 
 - **Microsoft Office 97, Office 2010, Office 2003** : .xls, .xlt, .doc, .dot, .ppt, .pps, .pot
-
 - **Microsoft XPS** : .xps .oxps
 
 - **Images** : .jpg, .jpe, .jpeg, .jif, .jfif,. jfi.png, .tif, .tiff
@@ -176,4 +172,3 @@ Maintenant que vous avez identifié les types de fichiers pris en charge par le 
 - [Commandes PowerShell](client-admin-guide-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

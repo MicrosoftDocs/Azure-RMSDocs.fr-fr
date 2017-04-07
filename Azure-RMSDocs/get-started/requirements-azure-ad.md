@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 1422db06905f342f930bce5cd63eb4e08fc8076a
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: fa0a9351177b44b4d770e37d24aee85e1e313c2d
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -83,4 +79,3 @@ Ensuite, configurez votre solution MFA :
 Pour vérifier les autres conditions requises, consultez [Configuration requise pour Azure Information Protection](requirements-azure-rms.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

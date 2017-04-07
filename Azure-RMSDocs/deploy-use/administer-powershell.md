@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: c1d107b650a9794abd9af367c2a3ae7ec423d827
-ms.openlocfilehash: 40d985ebafc6667c38078d33c6b9065cec2c3ca9
-ms.lasthandoff: 02/28/2017
-
-
+ms.openlocfilehash: 1e2ca63ef811ca6fbce01e79846f18d2fd93d833
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Administration du service Azure Rights Management à l’aide de Windows PowerShell
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -57,4 +53,3 @@ Outre ce module PowerShell côté service, le client Azure Information Protectio
 |migrer votre organisation d’Azure Information Protection vers un déploiement AD RMS local.|[Set-AadrmMigrationUrl](/powershell/aadrm/vlatest/set-aadrmmigrationurl)<br /><br />[Get-AadrmMigrationUrl](/powershell/aadrm/vlatest/get-aadrmmigrationurl)|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

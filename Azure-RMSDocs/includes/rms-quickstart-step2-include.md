@@ -25,8 +25,3 @@ Vous êtes maintenant prêt à protéger les fichiers contenant des informations
 |Installation locale de l’application de partage Rights Management pour Windows et instructions utilisateur   →|[Guide d’utilisation de l’application de partage Rights Management](../rms-client/sharing-app-user-guide.md)|
 |Installation par script de l’application de partage Rights Management pour Windows et informations techniques   →|[Guide de l’administrateur de l’application de partage Rights Management](../rms-client/sharing-app-admin-guide.md)|
 |Pour comprendre la différence entre la protection native et la protection générique   →|[Quelle est la différence entre la protection générique et la protection intégrée (native) ?](../rms-client/sharing-app-dialog-box.md)|
-
-
-<!--HONumber=Jan17_HO1-->
-
-

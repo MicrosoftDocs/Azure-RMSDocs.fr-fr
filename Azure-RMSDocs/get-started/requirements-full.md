@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 10cf9371-a61b-495f-9d42-898448806994
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 94259046ed2eb78bce9d7ce49a4dc3b9c99d55c3
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 11aea973a156556e14d474deae04deb97ee1dc73
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -287,4 +282,3 @@ Le connecteur Rights Management est pris en charge sur Windows Server 2012 R2,
 Pour plus d’informations sur la configuration du connecteur Rights Management pour ces serveurs locaux, consultez [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

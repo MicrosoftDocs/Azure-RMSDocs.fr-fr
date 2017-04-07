@@ -4,7 +4,7 @@ description: "Informations et instructions sur la journalisation de l’utilisat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
-ms.openlocfilehash: 5deea0dce593aae09c498e8b6696205890e9f232
-ms.lasthandoff: 02/28/2017
-
-
+ms.openlocfilehash: fd4fa09da3bffe9abdec5754185659393fdbf531
+ms.sourcegitcommit: 96410e06941ec414032d72cf96491884dc11aba0
+translationtype: HT
 ---
-
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Journalisation et analyse de l’utilisation du service Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -149,7 +145,7 @@ Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des c
 |owner-email|Chaîne|Adresse de messagerie du propriétaire du document.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|alice@contoso.com|
 |issuer|Chaîne|Adresse de messagerie de l’émetteur du document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|alice@contoso.com ou FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |template-id|Chaîne|ID du modèle utilisé pour protéger le document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|Chaîne|Nom de fichier du document qui a été protégé. <br /><br />Actuellement, certains fichiers (tels que les documents Office) sont affichés sous forme de GUID plutôt que noms de fichiers réels.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|TopSecretDocument.docx|
+|file-name|Chaîne|Nom de fichier d’un document protégé suivi à l’aide du client Azure Information Protection pour Windows ou l’application de partage Rights Management pour Windows. <br /><br />Actuellement, certains fichiers (tels que les documents Office) sont affichés sous forme de GUID plutôt que noms de fichiers réels.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|TopSecretDocument.docx|
 |date-published|Date|Date à laquelle le document a été protégé.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|2015-10-15T21:37:00|
 |c-info|Chaîne|Informations concernant la plateforme du client d’où émane la demande.<br /><br />La chaîne spécifique varie selon l’application (par exemple, le système d’exploitation ou le navigateur).|’MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64’|
 |c-ip|Adresse|Adresse IP du client d’où émane la demande.|64.51.202.144|
@@ -240,6 +236,5 @@ Si vous avez dans votre propre stockage Azure des journaux antérieurs au change
 Pour plus d’informations sur l’utilisation de Windows PowerShell pour le service Azure Rights Management, consultez [Administration du service Azure Rights Management à l’aide de Windows PowerShell](administer-powershell.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

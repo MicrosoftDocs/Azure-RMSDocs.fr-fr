@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 3d2e667f78eeccecb0bd837a9020ff188f67fb50
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: fbf39c45e5c3945863a473a0afecc366b72085d2
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de votre clé de locataire Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
@@ -143,4 +139,3 @@ Maintenant que vous avez planifié et, le cas échéant, généré votre clé de
     Pour plus d’informations, consultez [Opérations pour votre clé de locataire Azure Rights Management](../deploy-use/operations-tenant-key.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

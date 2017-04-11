@@ -4,7 +4,7 @@ description: "Vous avez une question au sujet de l’utilisation d’Azure Infor
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/29/2017
+ms.date: 03/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 7f2bd30603f88ec72ee51f980c40903362cfdeba
-ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+ms.openlocfilehash: b6980bdcecb02471159f7873e80a05d234726d0e
+ms.sourcegitcommit: 85aaded97659bbc0a3932569aab29b1bf472fea4
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
@@ -64,6 +64,10 @@ Lorsque vous utilisez des étiquettes secondaires, ne configurez pas de marquage
 
 Non. Quand vous étiquetez un e-mail comportant des pièces jointes, ces dernières n’héritent pas de la même étiquette. Les pièces jointes peuvent rester sans étiquette ou conserver une étiquette appliquée séparément. Toutefois, si l’étiquette de l’e-mail applique une protection, cette protection est appliquée aux pièces jointes.
 
+## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Comment faire pour intégrer les solutions DLP et autres applications avec Azure Information Protection ?
+
+Azure Information Protection utilisant des métadonnées persistantes pour la classification, notamment une étiquette de texte en clair, ces informations peuvent être lues par les solutions DLP et d’autres applications. Dans les fichiers, ces métadonnées sont stockées dans des propriétés personnalisées. Dans les e-mails, ces informations figurent dans les en-têtes.
+
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>En quoi la classification Azure Information Protection pour les e-mails est-elle différente de celle des messages Exchange ?
 
 La classification des messages Exchange est une ancienne fonctionnalité permettant de classer des e-mails. Elle est mise en œuvre indépendamment de la classification Azure Information Protection. Toutefois, vous pouvez intégrer les deux solutions pour que, quand les utilisateurs classifient un e-mail à l’aide d’Outlook Web App et de certaines applications de messagerie mobile, la classification Azure Information Protection et ses marquages d’étiquette correspondants soient automatiquement ajoutés. Exchange ajoute la classification, et le client Azure Information Protection applique les paramètres d’étiquette correspondant à cette classification.
@@ -76,10 +80,15 @@ Pour obtenir cette solution :
 
 2. Créez une règle de transport Exchange pour chaque étiquette : appliquez la règle quand les propriétés de message incluent la classification que vous avez configurée, puis modifiez les propriétés de message pour définir un en-tête de message. 
 
-    Pour l’en-tête de message, vous trouverez les informations à spécifier en inspectant les propriétés d’un fichier Office que vous avez classifié à l’aide de votre étiquette Azure Information Protection. Identifiez la propriété de fichier au format **MSIP_Label_<GUID>_Enabled** et spécifiez cette chaîne pour l’en-tête de message, puis spécifiez **True** pour la valeur de l’en-tête. Par exemple, votre en-tête de message peut ressembler à cette chaîne : **MSIP_Label_132616b8-f72d-5d1e-aec1-dfd89eb8c5b2_Enabled**
+    Pour l’en-tête de message, vous trouvez les informations à spécifier en examinant les en-têtes Internet d’un e-mail que vous avez envoyé et classifié à l’aide de votre étiquette Azure Information Protection. Recherchez l’en-tête **msip_labels** et la chaîne qui suit immédiatement, jusqu’au point-virgule inclus. Dans l’exemple précédent :
+    
+    **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
+    
+    Ensuite, pour l’en-tête du message dans la règle, spécifiez **msip_labels** pour l’en-tête, et le reste de cette chaîne pour la valeur de l’en-tête. Exemple :
+    
+    ![Exemple de règles de transport Exchange Online qui définit l’en-tête de message pour une étiquette Azure Information Protection spécifique](../media/exchange-rule-for-message-header.png)
 
-
-Voici ce qui se produit quand les utilisateurs utilisent Outlook Web Access ou un client d’appareil mobile qui prend en charge la protection de la gestion des droits : 
+Avant de tester ceci, n’oubliez pas qu’il y a souvent un délai quand vous créez ou que vous modifiez des règles de transport (attendez par exemple une heure). Mais quand la règle est effective, voici ce qui se produit quand les utilisateurs utilisent l’application Outlook Web Access ou un client d’appareil mobile qui prend en charge la protection RMS : 
 
 - Les utilisateurs sélectionnent la classification des messages Exchange et envoient l’e-mail.
 
@@ -91,11 +100,7 @@ Si vos étiquettes Azure Information Protection appliquent la protection de la g
 
 Vous pouvez également configurer des règles de transport pour effectuer le mappage inverse : quand une étiquette Azure Information Protection est détectée, définissez la classification de messages Exchange correspondante. Pour effectuer cette opération :
 
-- Pour chaque étiquette Azure Information Protection, créez une règle de transport devant être appliquée lorsque l’en-tête **msip_labels** inclut le nom de votre étiquette (par exemple, **Confidentiel**), puis appliquez une classification de messages qui corresponde à cette étiquette.
-
-## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Comment faire pour intégrer les solutions DLP et autres applications avec Azure Information Protection ?
-
-Azure Information Protection utilisant des métadonnées persistantes pour la classification, notamment une étiquette de texte en clair, ces informations peuvent être lues par les solutions DLP et d’autres applications. Dans les fichiers, ces métadonnées sont stockées dans des propriétés personnalisées. Dans les e-mails, ces informations figurent dans les en-têtes.
+- Pour chaque étiquette Azure Information Protection, créez une règle de transport appliquée quand l’en-tête **msip_labels** inclut le nom de votre étiquette (par exemple **Général**), puis appliquez une classification de messages qui correspond à cette étiquette.
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

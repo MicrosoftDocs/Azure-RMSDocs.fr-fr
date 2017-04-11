@@ -4,7 +4,7 @@ description: "Ressources pour les administrateurs, qui incluent des informations
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/04/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5e836d99c59cbd055b219aab6499a67fb62bd1a5
-ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+ms.openlocfilehash: c3838c29d26c8c1bed196ad0a86c63f5f78ad9cc
+ms.sourcegitcommit: d2bd2ddc68d9b5a095b57235b28a3b7e9307bd9b
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
@@ -49,13 +49,17 @@ Vous pouvez avoir droit à **FastTrack** : vous pouvez utiliser l’offre du ce
 
 Pour les autres clients, utilisez les canaux de support suivants, selon la façon dont vous avez obtenu Azure Information Protection :
 
-- **Azure Information Protection Premium** (autonome) : ouvrez une [demande de support dans le portail Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Lorsque vous y êtes invité, sur le panneau **Informations de base**, choisissez **Technique** pour **Type de problème** et **Abonnement avec support technique inclus** pour l’option **Abonnement**.
-
-- **Azure Information Protection avec un abonnement Office 365** : consultez [Contacter le support Office 365 pour les entreprises - Aide de l’administrateur](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) pour obtenir les numéros de téléphone et les différentes options de contact du support dans le portail d’administration Office 365. 
-
-- **Azure Information Protection avec Enterprise Mobility + Security (EMS)** : si vous avez également Office 365, vous pouvez utiliser les [canaux de support Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b). Pour plus d’informations, consultez [Enterprise Mobility Suite : FAQ sur le support](https://technet.microsoft.com/dn932057.aspx).
-
-- **Azure Information Protection avec Secure Productive Enterprise (SPÉ)** : utilisez les [canaux de support Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
+- **Azure Information Protection** (autonome) : 
+    - Créez une **Nouvelle demande de support** depuis [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) dans le portail Azure. Lorsque vous y êtes invité, sur le panneau **Informations de base**, choisissez **Technique** pour **Type de problème** et **Abonnement avec support technique inclus** pour l’option **Abonnement**.
+    
+- **Azure Information Protection avec un abonnement Office 365** : 
+    - Consultez [Contacter le support Office 365 pour les entreprises – Aide de l’administrateur](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) pour obtenir les numéros de téléphone et les différentes options de contact du support dans le portail d’administration Office 365. 
+    
+- **Azure Information Protection avec Enterprise Mobility + Security (EMS)** : 
+    - Créez une **Nouvelle demande de support** depuis [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) dans le portail Azure. Lorsque vous y êtes invité, sur le panneau **Informations de base**, choisissez **Technique** pour **Type de problème** et **Abonnement avec support technique inclus** pour l’option **Abonnement**.
+    
+- **Azure Information Protection avec Secure Productive Enterprise (SPE)** : 
+    - Utilisez les [canaux de support d’Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
 
 Pour connaître les autres options de support, adressez-vous à votre contact Microsoft. 
 

@@ -5,7 +5,7 @@ keywords: "Quelques questions fréquemment posées pour vous aider à utiliser l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/05/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.technology: techgroup-identity
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bc3d92cb0dc23ddd2d1f81daf2fc589ad4862977
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: d797dd31c44d985becc92ec81266afbe23cd970c
+ms.sourcegitcommit: 1671466a42e7e00e1cc2702b1f609fb112aac7db
 translationtype: HT
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android
@@ -45,7 +45,7 @@ Si vous disposez de ces versions ou de versions ultérieures, vous pouvez instal
 
 ## <a name="how-do-i-get-started-with-the-viewer-app"></a>Comment commencer à utiliser l’application de visionneuse ?
 
-Une fois que vous avez installé l’application, vous n’avez rien d’autre à faire à ce stade. Patientez jusqu'à ce que vous receviez un e-mail ou un fichier protégé que vous souhaitez afficher, puis choisissez la **visionneuse AIP** pour l’ouvrir. Vous serez invité à vous connecter avec votre compte professionnel ou scolaire. Une fois vos informations d’identification authentifiées, vous pourrez lire le contenu.
+Une fois que vous avez installé l’application, vous n’avez rien d’autre à faire à ce stade. Patientez jusqu'à ce que vous receviez un e-mail ou un fichier protégé que vous souhaitez afficher, puis choisissez la **visionneuse AIP** pour l’ouvrir. Vous serez invité à vous connecter avec votre compte professionnel ou scolaire, ou invité à sélectionner un certificat. Une fois ces informations d’identification authentifiées, vous pourrez lire le contenu.
 
 Toutefois, si vous ne souhaitez pas attendre, vous pouvez utiliser les instructions suivantes pour vous envoyer un e-mail ou un fichier protégé : [Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android](mobile-app-get-started.md) 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Quelles informations d’identification utiliser pour se connecter à cette application ?

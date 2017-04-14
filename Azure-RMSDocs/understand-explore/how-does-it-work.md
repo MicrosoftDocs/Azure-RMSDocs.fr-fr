@@ -111,7 +111,7 @@ Le client RMS utilise ensuite la clé de l'organisation obtenue lors de l'initia
 
 ![Protection de document RMS : étape 3, la stratégie est incorporée dans le document](../media/AzRMS_documentprotection3.png)
 
-**Ce qui se passe à l’étape 3 **: enfin, le client RMS incorpore la stratégie dans un fichier avec le corps du document précédemment chiffré, pour constituer un document protégé.
+**Ce qui se passe à l’étape 3**: enfin, le client RMS incorpore la stratégie dans un fichier avec le corps du document précédemment chiffré, pour constituer un document protégé.
 
 Ce document peut être stocké partout, ou partagé à l'aide de n'importe quelle méthode, et la stratégie reste toujours associée au document chiffré.
 
@@ -120,7 +120,7 @@ Quand un utilisateur veut consommer un document protégé, le client RMS commenc
 
 ![Consommation de document RMS : étape 1, l’utilisateur est authentifié et obtient la liste des droits](../media/AzRMS_documentconsumption1.png)
 
-**Ce qui se passe à l’étape 1 **: l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur au service Azure Rights Management. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l'utilisateur sur le document. Pour identifier l’utilisateur, l’attribut proxyAttribute d’Azure AD est utilisé pour le compte de l’utilisateur et les groupes dont l’utilisateur est membre. Pour des raisons de performances, l’appartenance au groupe est [mise en cache](../plan-design/prepare.md#group-membership-caching).
+**Ce qui se passe à l’étape 1** : l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur au service Azure Rights Management. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l'utilisateur sur le document. Pour identifier l’utilisateur, l’attribut proxyAttribute d’Azure AD est utilisé pour le compte de l’utilisateur et les groupes dont l’utilisateur est membre. Pour des raisons de performances, l’appartenance au groupe est [mise en cache](../plan-design/prepare.md#group-membership-caching).
 
 ![Consommation de document RMS : étape 2, la licence d’utilisation est retournée au client](../media/AzRMS_documentconsumption2.png)
 

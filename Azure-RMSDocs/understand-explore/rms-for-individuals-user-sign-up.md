@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 12f681ccfbcd7da2192df2be057f92d31a856bda
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 859ec4aa127b995ca9acb6409b8644a0c87d7ffd
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="how-users-sign-up-for-rms-for-individuals"></a>Inscription à RMS for individuals
@@ -33,7 +33,7 @@ Pour obtenir un compte gratuit, demandez-le via la [page Microsoft Azure Informa
 
 3.  Cliquez sur **S’inscrire**.
 
-    Microsoft utilise votre adresse e-mail pour vérifier si votre organisation a déjà un [abonnement payant pour Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) ou un [abonnement Office 365 qui inclut la protection des données à l’aide d’Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Si tel est le cas, vous n'avez pas besoin de RMS for Individuals. Vous êtes connecté immédiatement et l'inscription en libre-service à RMS for Individuals est annulée. Si aucun abonnement payant n’est trouvé, vous passez à l’étape suivante.
+    Microsoft utilise votre adresse e-mail pour vérifier si votre organisation a déjà un [abonnement payant pour Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou un [abonnement Office 365 qui inclut la protection des données à l’aide d’Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Si tel est le cas, vous n'avez pas besoin de RMS for Individuals. Vous êtes connecté immédiatement et l'inscription en libre-service à RMS for Individuals est annulée. Si aucun abonnement payant n’est trouvé, vous passez à l’étape suivante.
 
 4.  Attendez qu'un e-mail de confirmation soit envoyé à l'adresse que vous avez indiquée. Il provient de l’équipe Office 365 (support@email.microsoftonline.com) et présente l’objet suivant : **Terminer l’inscription à Microsoft Azure Information Protection**.
 
@@ -83,7 +83,7 @@ Grâce à ce processus, aucun frais n'est imputé à l'organisation et aucune in
 
     -   Consigner l'ensemble de l'activité liée à Rights Management de votre organisation. Il s'agit d'informations précieuses puisque vous pouvez non seulement savoir quels fichiers sont protégés et qui y accède, mais également identifier le comportement potentiellement suspect de personnes non autorisées. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
-    -   Offrir aux utilisateurs la possibilité de suivre et de révoquer leurs documents protégés, si ces fonctionnalités sont prises en charge par votre [abonnement](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features). Pour plus d’informations, consultez [Suivre et révoquer vos documents](../rms-client/client-track-revoke.md) dans le [guide d’utilisation d’Azure Information Protection](../rms-client/client-user-guide.md).
+    -   Offrir aux utilisateurs la possibilité de suivre et de révoquer leurs documents protégés, si ces fonctionnalités sont prises en charge par votre [abonnement](https://www.microsoft.com/cloud-platform/azure-information-protection-features). Pour plus d’informations, consultez [Suivre et révoquer vos documents](../rms-client/client-track-revoke.md) dans le [guide d’utilisation d’Azure Information Protection](../rms-client/client-user-guide.md).
 
     -   Implémentez une solution BYOK pour que votre clé de locataire pour Azure Rights Management soit générée localement conformément à vos stratégies informatiques, puis transférée en toute sécurité à Microsoft grâce à un module de sécurité matériel. Pour plus d’informations, consultez [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md) (Planification et implémentation de la clé de locataire Azure Information Protection).
 

@@ -4,7 +4,7 @@ description: "Ressources pour les administrateurs, qui incluent des informations
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/04/2017
+ms.date: 04/07/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3838c29d26c8c1bed196ad0a86c63f5f78ad9cc
-ms.sourcegitcommit: d2bd2ddc68d9b5a095b57235b28a3b7e9307bd9b
+ms.openlocfilehash: c8afaa635f34f6d052cd646387d37f68bbcdff45
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
@@ -27,7 +27,7 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure Infor
 |Consulter la documentation recommandée pour le service →|Utilisez la première page de la [Documentation sur Azure Information Protection](https://docs.microsoft.com/information-protection/).|
 |Formuler des commentaires ou poser une question sur la documentation →|Envoyez un e-mail à [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
 |Recevoir des tweets relatifs à Information Protection et des annonces relatives aux mises à jour de la documentation de la part du groupe de produits →|Suivez Dan Plastina, l’un des responsables de l’équipe Microsoft Information Protection. Voir [Dan Plastina @DanPlastina](https://twitter.com/DanPlastina)|
-|Vérifier les informations d’abonnement et les fonctionnalités prises en charge →|Utilisez les [informations sur les abonnements](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) du site Azure Information Protection.|
+|Vérifier les informations d’abonnement et les fonctionnalités prises en charge →|Utilisez les [informations sur les abonnements](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) du site Azure Information Protection.|
 
 
 ## <a name="information-about-new-releases-and-updated-documentation"></a>Informations sur les nouvelles versions et la documentation mise à jour

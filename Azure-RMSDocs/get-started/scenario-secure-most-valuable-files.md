@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f509efb599bd17d5a76c08e24a7d503394415785
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 8a0ca5fa2d7aa6f1f8f8b5ccab0a3a3bd122b50c
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="scenario---secure-your-most-few-valuable-files"></a>Scénario - Sécuriser vos fichiers les plus précieux
@@ -51,7 +51,7 @@ Pour ce scénario, les éléments suivants doivent être en place :
 |Vous avez configuré un modèle personnalisé comme décrit ci-après|[Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |L’application de partage Rights Management est déployée sur votre ordinateur Windows afin que vous puissiez protéger ces fichiers sur place, comme décrit dans la section suivante|[Télécharger et installer l'application de partage Rights Management](../rms-client/install-sharing-app.md)|
 |Les utilisateurs autorisés ont une version minimale d’Office 2013|Si les utilisateurs disposent d’Office 2010, ils doivent également installer l’application de partage Rights Management.|
-|Votre abonnement Azure Information Protection inclut le suivi des documents|Si votre abonnement n’inclut pas le suivi et la révocation des documents, vous ne pouvez pas utiliser le site de suivi des documents pour voir qui accède à ces documents et en révoquer l’accès si nécessaire. Dans ce cas, souscrivez un abonnement prenant en charge le suivi des documents ou acceptez cette restriction. Vous pouvez également envisager d’utiliser les fonctionnalités de [journalisation de l’utilisation](../deploy-use/log-analyze-usage.md) du service Azure Rights Management, qui peuvent fournir des informations indiquant par exemple qui a accédé à chaque fichier et quand, pour vous permettre de détecter un comportement suspect potentiel.<br /><br />Consultez la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) sur le site Azure Information Protection.|
+|Votre abonnement Azure Information Protection inclut le suivi des documents|Si votre abonnement n’inclut pas le suivi et la révocation des documents, vous ne pouvez pas utiliser le site de suivi des documents pour voir qui accède à ces documents et en révoquer l’accès si nécessaire. Dans ce cas, souscrivez un abonnement prenant en charge le suivi des documents ou acceptez cette restriction. Vous pouvez également envisager d’utiliser les fonctionnalités de [journalisation de l’utilisation](../deploy-use/log-analyze-usage.md) du service Azure Rights Management, qui peuvent fournir des informations indiquant par exemple qui a accédé à chaque fichier et quand, pour vous permettre de détecter un comportement suspect potentiel.<br /><br />Consultez la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) sur le site Azure Information Protection.|
 
 ### <a name="to-configure-the-custom-template"></a>Pour configurer le modèle personnalisé :
 

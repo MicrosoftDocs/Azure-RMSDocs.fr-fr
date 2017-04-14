@@ -4,7 +4,7 @@ description: "Identifiez la configuration requise d’Azure AD pour utiliser Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2017
+ms.date: 04/12/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 729d66e8d55d045b74ac5c794cf83ddcc2848d35
-ms.sourcegitcommit: 1671466a42e7e00e1cc2702b1f609fb112aac7db
+ms.openlocfilehash: 29bc3b414a1fde17aec03702a87f4364b565b848
+ms.sourcegitcommit: 65e2d607954dfb6c7529ff200602887b71c39312
 translationtype: HT
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
@@ -42,7 +42,7 @@ Ordinateurs qui exécutent Office 2010 :
 
 Prise en charge de l’authentification basée sur les certificats :
 
-- L’application Azure Information Protection pour Android prend en charge l’authentification basée sur les certificats quand vous avez Android 5.0 ou ultérieur. Pour des instructions sur la configuration de l’authentification basée sur les certificats, consultez [Bien démarrer avec l’authentification basée sur les certificats dans Azure Active Directory](/active-directory/active-directory-certificate-based-authentication-get-started).
+- L’application Azure Information Protection pour Android prend en charge l’authentification basée sur les certificats quand vous avez Android 5.0 ou ultérieur. Pour des instructions sur la configuration de l’authentification basée sur les certificats, consultez [Bien démarrer avec l’authentification basée sur les certificats dans Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
 
 Appareils mobiles ou ordinateurs Mac qui s’authentifient localement par le biais des services AD FS ou d’un fournisseur d’authentification équivalent :
 

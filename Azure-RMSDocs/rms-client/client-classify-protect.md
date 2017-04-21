@@ -4,7 +4,7 @@ description: Instructions sur la classification et la protection de vos document
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/16/2017
+ms.date: 04/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: edc8c7227a0f2b493a64f25a26a64aef3a314e39
-ms.sourcegitcommit: df8492aa3687974dc6105dc415c2d959f32e6630
+ms.openlocfilehash: f461b349440043bcf5d8624731eda86968194462
+ms.sourcegitcommit: 52b7502e7049358f9fc0a418625bb460bb81479f
 translationtype: HT
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classifier et protéger un fichier ou un e-mail avec Azure Information Protection
@@ -133,7 +133,7 @@ Le guide d’administration contient une liste complète des types de fichiers p
 
     - **Sélectionner des autorisations** : sélectionnez le niveau d’accès que vous voulez donner aux utilisateurs quand vous protégez les fichiers sélectionnés.
     
-    - **Sélectionner des utilisateurs** : spécifiez les personnes qui doivent disposer des autorisations que vous avez sélectionnées pour vos fichiers. Vous pouvez utiliser le carnet d’adresses pour rechercher et sélectionner les personnes et groupes de votre organisation. Pour les personnes extérieures à votre organisation, vous devez spécifier une adresse e-mail complète. Assurez-vous d’utiliser une adresse e-mail professionnelle, car les adresses personnelles ne sont pas prises en charge pour le moment.
+    - **Sélectionner des utilisateurs** : spécifiez les personnes qui doivent disposer des autorisations que vous avez sélectionnées pour vos fichiers. Entrez leur adresse e-mail complète, une adresse e-mail de groupe ou un nom de domaine de l’organisation pour tous les utilisateurs appartenant à cette organisation. Attention, les adresses e-mail personnelles ne sont actuellement pas prises en charge.
         
     - **Faire expirer l’accès** : sélectionnez cette option uniquement pour les fichiers urgents afin que les personnes que vous avez spécifiées ne puissent pas les ouvrir après une date que vous spécifiez. Vous pouvez toujours ouvrir le fichier d’origine mais, après minuit (dans votre fuseau horaire), le jour spécifié, les personnes que vous avez désignées ne peuvent plus l’ouvrir.
 

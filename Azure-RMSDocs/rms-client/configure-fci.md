@@ -4,7 +4,7 @@ description: "Instructions d’utilisation du client Rights Management (RMS) ave
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/22/2017
+ms.date: 04/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5e1a193ab54e5d0d85e4f7a22f53ac0b9b39036c
-ms.sourcegitcommit: 047e6dfe8f44fd13585e902df5ea871b5d0adccb
+ms.openlocfilehash: 6cb1cd8c70dff0c24125f875c91d23326538e56b
+ms.sourcegitcommit: d2bd2ddc68d9b5a095b57235b28a3b7e9307bd9b
 translationtype: HT
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
@@ -233,7 +233,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
 
         -   **Exécuter à**: Configurez la planification de votre choix.
 
-            Définissez un temps conséquent pour l'exécution du script. Bien que cette solution protège tous les fichiers figurant dans le dossier, le script s'exécute une fois pour chacun d'eux à chaque fois. Bien que cela prenne plus de temps que la protection simultanée de tous les fichiers, que l'outil de protection RMS prend en charge, cette configuration fichier par fichier pour l'ICF est plus puissante. Par exemple, les fichiers protégés peuvent avoir des propriétaires différents (conserver le propriétaire d'origine) lorsque vous utilisez la variable [Source File Owner Email], et cette action fichier par fichier sera requise si vous modifiez ultérieurement la configuration afin de protéger les fichiers de façon sélective plutôt que tous les fichiers d'un dossier.
+            Définissez un temps conséquent pour l'exécution du script. Bien que cette solution protège tous les fichiers du dossier, le script s'exécute une fois pour chacun d'eux à chaque fois. Bien que cela prenne plus de temps que de protéger tous les fichiers en même temps, ce qui est pris en charge le client Azure Information Protection, cette configuration fichier par fichier pour l'ICF est plus puissante. Par exemple, les fichiers protégés peuvent avoir des propriétaires différents (conserver le propriétaire d'origine) quand vous utilisez la variable [Source File Owner Email], et cette action fichier par fichier est nécessaire si vous modifiez ultérieurement la configuration pour protéger les fichiers de façon sélective plutôt que tous les fichiers d'un dossier.
 
         -   **Exécuter en continu sur les nouveaux fichiers**: Activez cette case à cocher.
 
@@ -253,7 +253,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
 
     2.  Cliquez sur **Attendre la fin de l’exécution de la tâche**, puis sur **OK**.
 
-4.  Attendez que la boîte de dialogue **Exécution de la tâche de gestion des fichiers** se ferme, puis consultez les résultats dans le rapport qui s'affiche automatiquement. Le champ **Fichiers** doit indiquer le nombre de fichiers figurant dans le dossier que vous avez choisi. Vérifiez que les fichiers figurant dans le dossier choisi sont à présent protégés par RMS. Par exemple, si votre dossier choisi est C:\FileShare, tapez ce qui suit dans une session Windows PowerShell, et vérifiez qu’aucun fichier ne présente l’état **Non protégé** :
+4.  Attendez que la boîte de dialogue **Exécution de la tâche de gestion des fichiers** se ferme, puis consultez les résultats dans le rapport qui s'affiche automatiquement. Le champ **Fichiers** doit indiquer le nombre de fichiers figurant dans le dossier que vous avez choisi. Vérifiez que les fichiers figurant dans le dossier choisi sont à présent protégés par Rights Management. Par exemple, si vous avez choisi le dossier C:\FileShare, tapez ce qui suit dans une session Windows PowerShell, et vérifiez qu’aucun fichier n’est dans l’état **Non protégé** :
 
     ```
     foreach ($file in (Get-ChildItem -Path C:\FileShare -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
@@ -261,9 +261,9 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
     > [!TIP]
     > Conseils de dépannage :
     > 
-    > -   Si le rapport indique **0** au lieu du nombre de fichiers figurant dans votre dossier, cela indique que le script ne s'est pas exécuté. Commencez par contrôler le script proprement dit en le chargeant dans Windows PowerShell ISE pour valider son contenu, puis essayez de l'exécuter pour voir si des erreurs s'affichent. Si aucun argument n'est spécifié, le script tente de se connecter et de s'authentifier auprès d'Azure RMS.
+    > -   Si le rapport indique **0** au lieu du nombre de fichiers figurant dans votre dossier, cela indique que le script ne s'est pas exécuté. Commencez par contrôler le script proprement dit en le chargeant dans Windows PowerShell ISE pour valider son contenu, puis essayez de l'exécuter pour voir si des erreurs s'affichent. Si aucun argument n'est spécifié, le script tente de se connecter et de s'authentifier auprès du service Azure Rights Management.
     > 
-    >     -   Si le script signale qu'il n'a pas pu se connecter à Azure RMS, vérifiez les valeurs affichées pour le compte de principal du service, que vous avez spécifiées dans le script. Pour plus d’informations sur la création de ce compte de principal du service, consultez la page [Condition préalable 3 : protéger ou annuler la protection des fichiers sans interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) dans le guide de l’administrateur du client Azure Information Protection.
+    >     -   Si le script signale qu'il n'a pas pu se connecter au service Azure Rights Management (Azure RMS), vérifiez les valeurs affichées pour le compte de principal du service que vous avez spécifiées dans le script. Pour plus d’informations sur la création de ce compte de principal du service, consultez la page [Condition préalable 3 : protéger ou annuler la protection des fichiers sans interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) dans le guide de l’administrateur du client Azure Information Protection.
     >     -   Si le script signale qu’il n’a pas pu se connecter à Azure RMS, vérifiez qu’il peut trouver le modèle spécifié en exécutant [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) directement à partir de Windows PowerShell sur le serveur. Le modèle que vous avez spécifié doit figurer dans les résultats.
     > -   Si le script s'exécute par lui-même dans Windows PowerShell ISE sans erreur, essayez de l'exécuter comme suit à partir d'une session PowerShell, en spécifiant un nom de fichier à protéger, sans le paramètre -OwnerEmail :
     > 
@@ -275,8 +275,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
     >         Si la tâche de gestion de fichier fonctionne correctement sans **-OwnerEmail [Source File Owner Email]**, vérifiez que les fichiers non protégés ont un utilisateur de domaine répertorié comme le propriétaire du fichier, plutôt que **SYSTEM**.  Pour ce faire, sous l’onglet **Sécurité** des propriétés du fichier, cliquez sur **Avancées**. La valeur **Propriétaire** s’affiche immédiatement après le **Nom** du fichier. Vérifiez également que le serveur de fichiers se trouve dans le même domaine ou domaine approuvé pour rechercher l'adresse électronique de l'utilisateur dans les services de domaine Active Directory.
     > -   Si l'état indique le nombre correct de fichiers, mais que ceux-ci ne sont pas protégés, essayez de les protéger manuellement à l'aide de l'applet de commande [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) pour voir si des erreurs s'affichent.
 
-Après avoir vérifié que ces tâches s'exécutent correctement, vous pouvez fermer le Gestionnaire de ressources de fichiers. Les nouveaux fichiers sont automatiquement protégés et tous les fichiers sont de nouveau protégés lors de l'exécution des planifications. Le renouvellement de la protection des fichiers garantit que toutes les modifications apportées aux modèles sont appliquées aux fichiers.
-
+Après avoir vérifié que ces tâches s'exécutent correctement, vous pouvez fermer le Gestionnaire de ressources de fichiers. Les nouveaux fichiers sont automatiquement classés et protégés quand les tâches planifiées s’exécutent. 
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Modification des instructions pour protéger des fichiers de façon sélective
 Lorsque les instructions précédentes fonctionnent, il est très facile de les modifier pour obtenir une configuration plus sophistiquée. Par exemple, vous pouvez protéger des fichiers en utilisant le même script, mais uniquement pour les fichiers contenant des informations d'identification personnelle, voire sélectionner un modèle associé à des droits plus restrictifs.

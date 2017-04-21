@@ -4,7 +4,7 @@ description: "Utilisez ces étapes pour préparer, implémenter et gérer Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9300c6d06042a489dd256069da4faa88426df9aa
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: ec5e257152cf64c6a52dbb8d94f1baab7a5ea0a4
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Feuille de route pour le déploiement d’Azure Information Protection
@@ -27,7 +27,7 @@ Toutefois, si vous souhaitez uniquement tester rapidement Azure Information Prot
 > [!IMPORTANT]
 > Avant de suivre les étapes ci-dessous, prenez le temps de consulter [Conditions requises pour Azure Information Protection](../get-started/requirements-azure-rms.md).
 
-Choisissez la feuille de route de déploiement qui s’applique à votre organisation et qui correspond aux [fonctionnalités de l’abonnement](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) dont vous avez besoin :
+Choisissez la feuille de route de déploiement qui s’applique à votre organisation et qui correspond aux [fonctionnalités de l’abonnement](https://www.microsoft.com/cloud-platform/azure-information-protection-features) dont vous avez besoin :
 
 - [Utiliser la classification, l’étiquetage et la protection](#deployment-roadmap-for-classification-labeling-and-protection)
 
@@ -40,7 +40,7 @@ Choisissez la feuille de route de déploiement qui s’applique à votre organis
 > Vous utilisez déjà le service Azure Rights Management pour la protection des données ? Vous pouvez ignorer la plupart de ces étapes et vous concentrer sur les étapes 3 et 5.1.
 
 ### <a name="step-1-confirm-your-subscription-and-assign-user-licenses"></a>Étape 1 : Vérifier votre abonnement et attribuer des licences utilisateur
-Examinez les [informations sur les abonnements](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) du site Azure Information Protection pour vérifier que votre organisation a un abonnement incluant les fonctionnalités attendues. Ensuite, attribuez une licence à partir de cet abonnement à chaque utilisateur de votre organisation susceptible de classifier, d’étiqueter et de protéger des documents et des e-mails.
+Examinez les [informations sur les abonnements](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) du site Azure Information Protection pour vérifier que votre organisation a un abonnement incluant les fonctionnalités attendues. Ensuite, attribuez une licence à partir de cet abonnement à chaque utilisateur de votre organisation susceptible de classifier, d’étiqueter et de protéger des documents et des e-mails.
 
 Remarque : N’attribuez pas manuellement de licences utilisateur à partir de l’abonnement gratuit RMS for individuals et n’utilisez pas cette licence pour administrer le service Azure Rights Management dans votre organisation. Ces licences apparaissent sous la forme **Rights Management Adhoc** dans le centre d’administration Office 365 et **RIGHTSMANAGEMENT_ADHOC** quand vous exécutez l’applet de commande PowerShell Azure AD [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). Pour plus d’informations sur la façon dont l’abonnement RMS for individuals est automatiquement accordé et attribué aux utilisateurs, consultez [RMS for individuals et Protection des informations Azure](../understand-explore/rms-for-individuals.md).
 
@@ -132,7 +132,7 @@ Quand vous commencez à utiliser le service Azure Rights Management, Windows Pow
 ## <a name="deployment-roadmap-for-data-protection-only"></a>Feuille de route de déploiement pour la protection des données uniquement
 
 ### <a name="step-1-confirm-that-you-have-a-subscription-that-includes-azure-rights-management"></a>Étape 1 : vérifier que vous disposez d'un abonnement incluant Azure Rights Management
-Examinez les [informations sur les abonnements](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) du site Azure Information Protection pour vérifier que votre organisation a un abonnement incluant les fonctionnalités attendues. Ensuite, attribuez une licence à partir de cet abonnement à chaque utilisateur de votre organisation susceptible de protéger des documents et des e-mails à l’aide du service Azure Rights Management.
+Examinez les [informations sur les abonnements](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) du site Azure Information Protection pour vérifier que votre organisation a un abonnement incluant les fonctionnalités attendues. Ensuite, attribuez une licence à partir de cet abonnement à chaque utilisateur de votre organisation susceptible de protéger des documents et des e-mails à l’aide du service Azure Rights Management.
 
 Remarque : N’attribuez pas manuellement de licences utilisateur à partir de l’abonnement gratuit RMS for individuals et n’utilisez pas cette licence pour administrer le service Azure Rights Management dans votre organisation. Ces licences apparaissent sous la forme **Rights Management Adhoc** dans le centre d’administration Office 365 et **RIGHTSMANAGEMENT_ADHOC** quand vous exécutez l’applet de commande PowerShell Azure AD [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). Pour plus d’informations sur la façon dont l’abonnement RMS for individuals est automatiquement accordé et attribué aux utilisateurs, consultez [RMS for individuals et Protection des informations Azure](../understand-explore/rms-for-individuals.md).
 

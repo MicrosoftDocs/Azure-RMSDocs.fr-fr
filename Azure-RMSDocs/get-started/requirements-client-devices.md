@@ -4,7 +4,7 @@ description: "Identifiez les appareils prenant en charge le service Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/06/2017
+ms.date: 04/05/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 72ec5e755e3a5defe753741ed4061c30b2db7e82
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 644e5566a5b2305a12139d7d2da666eec0ef8c71
+ms.sourcegitcommit: 1f65f71f742063e2bebcac88f72180d3aa4318a4
 translationtype: HT
 ---
 # <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Appareils clients prenant en charge la protection des données Azure Rights Management
@@ -33,7 +33,7 @@ Les systèmes d’exploitation d’ordinateur suivants prennent en charge le ser
 
 -   **Windows 10** (x86, x64)
 
--   **Mac OS X** : version minimale Mac OS X 10.8 (Mountain Lion)
+-   **macOS** : la version minimale de macOS est 10.8 (Mountain Lion)
 
 ## <a name="mobile-devices"></a>Appareils mobiles
 Les systèmes d’exploitation d’appareils mobiles suivants prennent en charge le service Azure Rights Management :
@@ -44,7 +44,7 @@ Les systèmes d’exploitation d’appareils mobiles suivants prennent en charge
 
 -   **iPhone et iPad** : version minimale iOS 7.0
      
-    Exception : le client Azure Information Protection pour iOS et Android pour version minimum iOS 8.
+    Exception : L’application Azure Information Protection nécessite au moins iOS 8.
 
 -   **Tablettes Windows** : Windows Mobile 10 et Windows 8.1 RT
 

@@ -4,7 +4,7 @@ description: "Le service Azure Rights Management doit être activé pour que vot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5f03b34b825b9fc693741336c54ee4049f636741
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a11add0b0c712dd52f7ac560748f7986c915d0d1
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="activating-azure-rights-management"></a>Activation d'Azure Rights Management
@@ -27,7 +27,7 @@ Si vous voulez en savoir plus sur le service Azure Rights Management avant de l�
 > [!IMPORTANT]
 > Avant d’activer [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], vérifiez que votre organisation a un plan de services incluant les services de protection des données Azure Rights Management. Si ce n’est pas le cas, vous ne pouvez pas activer Azure Rights Management.
 >
-> Vous devez avoir un [plan Premium Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) ou un [plan Office 365 incluant Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+> Vous devez avoir un [plan Premium Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou un [plan Office 365 incluant Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 Quand le service Azure Rights Management est activé, tous les utilisateurs de votre organisation peuvent appliquer la protection des informations à leurs fichiers, et tous les utilisateurs peuvent ouvrir (consommer) des fichiers protégés par ce service. Toutefois, si vous préférez, vous pouvez restreindre les personnes autorisées à appliquer la protection des informations, en utilisant des contrôles d'intégration pour un déploiement échelonné. Pour plus d’informations, consultez la section [Configuration de contrôles d’intégration pour un déploiement échelonné](#configuring-onboarding-controls-for-a-phased-deployment) de cet article.
 
@@ -57,17 +57,25 @@ Si vous ne souhaitez pas que tous les utilisateurs puissent protéger des fichie
 Par exemple, si vous souhaitez initialement que seuls les administrateurs du groupe « Département informatique » (dont l'ID d'objet est fbb99ded-32a0-45f1-b038-38b519009503) puissent protéger du contenu à des fins de test, utilisez la commande suivante :
 
 ```
-Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId fbb99ded-32a0-45f1-b038-38b519009503
-```
-Notez que pour cette option de configuration, vous devez spécifier un groupe. Vous ne pouvez pas spécifier des utilisateurs individuels. Pour obtenir l’ID d’objet du groupe, utilisez Azure AD PowerShell. Par exemple, pour la [version 1.0](https://msdn.microsoft.com/library/azure/jj151815\(v=azure.98\).aspx) du module, utilisez la commande [Get-MsolGroup](https://msdn.microsoft.com/library/azure/dn194130\(v=azure.98\).aspx).
-
-Ou bien, si vous souhaitez vous assurer que seuls les utilisateurs disposant d’une licence appropriée pour utiliser Azure Information Protection puissent protéger du contenu :
-
-```
-Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fbb99ded-32a0-45f1-b038-38b519009503"
 ```
 
-Pour plus d’informations sur cette applet de commande et pour obtenir des exemples supplémentaires, consultez l’aide de [Set-AadrmOnboardingControlPolicy](https://msdn.microsoft.com/library/dn857521.aspx).
+Notez que pour cette option de configuration, vous devez spécifier un groupe. Vous ne pouvez pas spécifier des utilisateurs individuels. Pour obtenir l’ID d’objet du groupe, vous pouvez utiliser Azure AD PowerShell. Par exemple, pour la version 1.0 du module, utilisez la commande [Get-MsolGroup](/powershell/msonline/v1/get-msolgroup). Vous pouvez aussi copier la valeur **ID d’objet** du groupe à partir du portail Azure.
+
+Si vous voulez que seuls les utilisateurs disposant d’une licence appropriée pour utiliser Azure Information Protection puissent protéger du contenu :
+
+```
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $True
+```
+
+Quand vous n’avez plus besoin d’utiliser des contrôles d’intégration, que vous ayez utilisé l’option de groupe ou de gestion des licences, exécutez :
+
+```
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+```
+
+
+Pour plus d’informations sur cette applet de commande et pour obtenir des exemples supplémentaires, consultez l’aide de [Set-AadrmOnboardingControlPolicy](/powershell/aadrm/vlatest/set-aadrmonboardingcontrolpolicy).
 
 Lorsque vous utilisez ces contrôles d'intégration, tous les utilisateurs de l'organisation peuvent toujours consommer du contenu protégé par votre sous-ensemble d'utilisateurs, mais ils ne peuvent pas appliquer la protection des informations à eux-mêmes à partir d'applications clientes. Par exemple, dans leurs clients Office, ils ne voient pas les modèles par défaut qui sont automatiquement publiés au moment de l’activation du service Azure Rights Management, ou les modèles personnalisés que vous pourriez configurer.  Les applications côté serveur, telles qu’Exchange, peuvent implémenter leurs propres contrôles utilisateur pour l’intégration de Rights Management et obtenir le même résultat.
 

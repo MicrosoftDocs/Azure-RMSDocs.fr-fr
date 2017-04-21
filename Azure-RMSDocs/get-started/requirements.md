@@ -4,7 +4,7 @@ description: "Identifiez les critères de déploiement d’Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/07/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8f249994c2ac1cf02c4572d3f7cb8ba6566cb142
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 90cfc530d8d4289e4c614e822cd666c50db86b90
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
@@ -24,7 +24,7 @@ Avant de déployer Azure Information Protection pour votre organisation, vérifi
 
 |Condition requise|Plus d’informations|
 |---------------|--------------------|
-|Un abonnement à Azure Information Protection|Examinez les [informations sur les abonnements](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) du site Azure Information Protection pour vérifier que l’abonnement de votre organisation inclut les fonctionnalités Azure Information Protection que vous voulez utiliser.|
+|Un abonnement à Azure Information Protection|Examinez les [informations sur les abonnements](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) du site Azure Information Protection pour vérifier que l’abonnement de votre organisation inclut les fonctionnalités Azure Information Protection que vous voulez utiliser.|
 |Azure Active Directory|Votre entreprise doit disposer d’Azure Active Directory afin de prendre en charge l’authentification utilisateur pour Azure Information Protection. De plus, si vous souhaitez utiliser les comptes d’utilisateur de votre annuaire local (AD DS), vous devez également configurer l’intégration d’annuaire.<br /><br />La solution d’authentification multifacteur (MFA) est prise en charge avec Azure Information Protection si vous disposez du logiciel client nécessaire et que vous avez correctement configuré l’infrastructure de prise en charge de MFA.<br /><br />Pour plus d’informations, consultez [Configuration requise d’Azure Active Directory pour Azure Information Protection](requirements-azure-ad.md).|
 |Appareils clients|Les utilisateurs doivent avoir des appareils clients (ordinateurs ou appareils mobiles) exécutant un système d’exploitation qui prend en charge Azure Information Protection.<br /><br />Les appareils suivants prennent en charge le client Azure Information Protection, qui permet aux utilisateurs de classer et d’étiqueter leurs e-mails et documents Office :<br /><br />- Windows 10 (x86, x64)<br /><br />- Windows 8.1 (x86, x64)<br /><br />- Windows 8 (x86, x64)<br /><br />- Windows 7 Service Pack 1 (x86, x64)<br /><br />Quand ce client protège les données à l’aide du service Azure Rights Management, ces données peuvent être utilisées par les mêmes appareils (Windows, Mac, iOS, Android) que ceux qui prennent en charge le service Azure Rights Management. <br /><br />Pour plus d’informations sur les appareils qui prennent en charge le service Azure Rights Management, consultez [Appareils clients prenant en charge la protection des données Azure Rights Management](../get-started/requirements-client-devices.md).|
 |Applications|Le client Azure Information Protection peut étiqueter et protéger les fichiers et les e-mails à l’aide des applications Office **Word**, **Excel**, **PowerPoint** et **Outlook** issues des suites Office suivantes :<br /><br /> - Office 365 ProPlus avec des applications 2016 ou 2013 (« Démarrer en un clic » ou installation basée sur Windows Installer)<br /><br />- Office Professionnel Plus 2016<br /><br />- Office Professionnel Plus 2013 avec Service Pack 1<br /><br />- Office Professionnel Plus 2010 <br /><br />Pour plus d’informations sur les éditions d’Office qui prennent en charge le service de protection des données, consultez [Applications prenant en charge la protection des données Azure Rights Management](requirements-applications.md).|

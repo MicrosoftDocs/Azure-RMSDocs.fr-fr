@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 629717055620af93c5870fff4ef833dc7931e622
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 89c563ebcf62dc80cbda15048780adf5e414e70b
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="scenario---share-an-office-file-with-users-in-another-organization"></a>Scenario : partager un fichier Office avec des utilisateurs d’une autre organisation
@@ -46,7 +46,7 @@ Pour que les instructions pour l'utilisateur décrites dans ce scénario fonctio
 |Azure Rights Management est activé|[Activation d’Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |L'application de partage Rights Management est déployée sur les ordinateurs des utilisateurs qui exécutent Windows|[Déploiement automatique de l'application de partage Microsoft Rights Management](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Les utilisateurs disposent d'Outlook version Office 2013|Si les utilisateurs disposent d’Office 2016 ou Office 2010, remplacez la capture d’écran par une version équivalente afin que l’image corresponde à ce que les utilisateurs voient.|
-|Votre abonnement Azure Information Protection inclut le suivi de document|Si votre abonnement n’inclut pas le suivi et la révocation de document, les utilisateurs ne seront pas en mesure de suivre toutes les étapes des instructions pour l’utilisateur. Dans ce cas, achetez un abonnement ne prenant pas en charge ces fonctionnalités, ou modifiez les instructions pour l'utilisateur en supprimant les étapes qui utilisent ces fonctionnalités.<br /><br />Consultez la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) sur le site Azure Information Protection.|
+|Votre abonnement Azure Information Protection inclut le suivi de document|Si votre abonnement n’inclut pas le suivi et la révocation de document, les utilisateurs ne seront pas en mesure de suivre toutes les étapes des instructions pour l’utilisateur. Dans ce cas, achetez un abonnement ne prenant pas en charge ces fonctionnalités, ou modifiez les instructions pour l'utilisateur en supprimant les étapes qui utilisent ces fonctionnalités.<br /><br />Consultez la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) sur le site Azure Information Protection.|
 
 ## <a name="user-documentation-instructions"></a>Instructions de la documentation utilisateur
 En utilisant le modèle suivant, copiez et collez les instructions utilisateur dans une communication à destination de vos utilisateurs finaux, puis apportez ces modifications en les adaptant à votre environnement :

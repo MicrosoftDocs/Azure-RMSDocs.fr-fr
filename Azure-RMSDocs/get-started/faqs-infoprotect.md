@@ -4,7 +4,7 @@ description: "Vous avez une question au sujet de l’utilisation d’Azure Infor
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: b6980bdcecb02471159f7873e80a05d234726d0e
-ms.sourcegitcommit: 85aaded97659bbc0a3932569aab29b1bf472fea4
+ms.openlocfilehash: 69ff30dea84717557153bbd0bf2013d3fc06d320
+ms.sourcegitcommit: 0b5aa77825463eccfb4856aa549a2dae80a1e361
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
@@ -48,9 +48,9 @@ Pour configurer la stratégie Azure Information Protection, vous devez vous conn
 
 Toutefois, si vous sélectionnez cette option pour installer la stratégie de démonstration au moment de l’installation du [client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), vous n’êtes pas obligé de vous connecter au portail pour voir et tester la fonctionnalité d’étiquetage. La stratégie de démonstration installe localement une stratégie par défaut pour Azure Information Protection. Vous pouvez donc essayer l’étiquetage des documents et des e-mails, mais vous ne pouvez pas modifier ni ajouter de nouvelles étiquettes sans vous connecter au portail Azure. 
 
-## <a name="which-options-in-the-azure-portal-are-p1-or-p2"></a>Que sont les options P1 et P2 dans le portail Azure ?
+## <a name="which-options-in-the-azure-portal-are-p2"></a>Quelles options dans le portail Azure sont des options P2 ?
 
-Pour vérifier les fonctionnalités qui sont incluses dans l’abonnement **Azure Information Protection Premium 1** (P1) et l’abonnement **Azure Information Protection Premium 2** (P2), consultez la [liste des fonctionnalités](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) sur le site Azure Information Protection. Toutefois, en règle générale, les fonctionnalités avancées telles que la classification automatique et HYOK (Hold Your Own Key) sont propres à l’abonnement Azure Information Protection Premium 2.
+Les options dans le portail Azure qui nécessitent un abonnement **Azure Information Protection Premium 2** (P2) comportent maintenant un message contextuel d’informations pour les identifier. Pour plus d’informations sur les fonctionnalités des abonnements P1 et P2, consultez la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) du site Azure Information Protection.
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>Un fichier peut-il avoir plusieurs classifications ?
 

@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: fbd76e377c8b11b8e64187685144010dce9bbb25
-ms.sourcegitcommit: ee432bdb6783bfe311a7ebbc9a5f20a7c2ae759c
+ms.openlocfilehash: 16e2137dead237e59ed1d4db9e88a2a29f9595a9
+ms.sourcegitcommit: bf103c02966357eccad0a4912851ceae6937c7b3
 translationtype: HT
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guide du développeur Azure Information Protection
@@ -82,6 +82,7 @@ Chacune des rubriques suivantes présente les instructions spécifiques d’un a
 - [Comment déployer votre application de service sur un autre locataire] (how-to-deploy-app.md)
 - [Guide pratique pour installer et configurer un serveur RMS (service)](how-to-install-and-configure-an-rms-server.md)
 - [Guide pratique pour utiliser le suivi de documents (utilisateur)](how-to-use-document-tracking.md)
+- [Guide pratique pour renouveler une clé symétrique dans Azure Information Protection](how-to-renew-symmetric-key.md)
 
 ### <a name="security-and-authentication"></a>Sécurité et authentification
 
@@ -101,7 +102,7 @@ Chacune des rubriques suivantes présente les instructions spécifiques d’un a
 
 ## <a name="videos"></a>Vidéos
 
-[Présentation d’Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) par Dan Plastina de Microsoft
+[Présentation d’Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) par Dan Plastina de Microsoft
 
 Ces vidéos sont extraites de la conférence Micorsoft 2016 Ignite
 

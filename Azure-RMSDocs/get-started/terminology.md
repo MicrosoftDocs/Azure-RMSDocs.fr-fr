@@ -4,7 +4,7 @@ description: "Vous ne comprenez pas un mot, une expression ou un acronyme lié �
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2017
+ms.date: 04/18/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5fecc61fb77625047a5ebedad4ff906fe8c27bbe
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 7ed60b1a2c02007668a11fdf8278bf196ee84521
+ms.sourcegitcommit: 9c033b7f5a6cbb20275aeecd48ff5071964eb587
 translationtype: HT
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie liée à Azure Information Protection
@@ -43,6 +43,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |protection générique|Niveau de protection permettant de chiffrer tout type de données et d'empêcher les personnes non autorisées d'accéder aux fichiers. Une fois le fichier ouvert, il est déchiffré et utilisable dans une application qui ne prend pas nativement en charge [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].|
 |HYOK|Voir *conservez votre propre clé*.|
 |conservez votre propre clé|Souvent abrégé *HYOK*.<br /><br />Option de configuration et de topologie d’une organisation qui souhaite générer et stocker sa propre clé au niveau local, en général pour des raisons de conformité et de respect de la réglementation.|
+|objet clé|Dans le contexte de la clé de locataire, entité qui contient les métadonnées exigées par le service Azure Rights Management pour les opérations de chiffrement.|
 |protection des informations|Souvent abrégé *IP*.<br /><br />Terme générique standard qui fait référence à la protection des données et des fichiers par le biais d'un accès limité, même après que les données et les fichiers ont quitté les frontières de l'organisation par courrier électronique ou via le partage de documents. Microsoft Azure Information Protection est un exemple de solution de protection des informations.|
 |Gestion des droits relatifs à l'information|Souvent abrégé *IRM*.<br /><br />Terme utilisé avec les services Office, comme Exchange Server, Word et SharePoint Online, pour décrire la capacité à prendre en charge les services Microsoft Rights Management.|
 |IRM|Voir *Gestion des droits relatifs à l’information*.|

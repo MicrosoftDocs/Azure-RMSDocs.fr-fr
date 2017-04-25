@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 855523925a6f774568cdbd55a7645223d015b013
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: c8f2c94da965dafd7f428b4d385253bc6dff4714
+ms.sourcegitcommit: 05b7e06e330a33936aeeef32934717f870963612
 translationtype: HT
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Guide de l'administrateur de l'application de partage Rights Management
@@ -340,7 +340,7 @@ Par défaut, les utilisateurs sont avertis s'il existe une version ultérieure d
 3.  Quand le test est terminé et que les problèmes sont résolus, déployez la dernière version vers tous les utilisateurs à l'aide des instructions de déploiement automatique de ce guide.
 
 ## <a name="azure-information-protection-only-configuring-document-tracking"></a>Azure Information Protection uniquement : configuration du suivi des documents
-Si votre [abonnement prend en charge le suivi des documents](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), le site de suivi des documents est activé par défaut pour tous les utilisateurs de votre organisation. Le suivi des documents fournit des informations telles que les adresses de messagerie des personnes qui ont tenté d'accéder aux documents protégés que les utilisateurs ont partagés et indique quand ces personnes ont tenté d'y accéder, ainsi que leur emplacement. Si l’affichage de ces informations est interdit dans votre organisation pour des raisons de confidentialité, vous pouvez désactiver l’accès au site de suivi des documents à l’aide de l’applet de commande [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032). Vous pouvez réactiver l’accès au site à tout moment en utilisant [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) et vérifier si l’accès est actuellement activé ou désactivé à l’aide de [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037).
+Si votre [abonnement prend en charge le suivi des documents](https://www.microsoft.com/cloud-platform/azure-information-protection-features), le site de suivi des documents est activé par défaut pour tous les utilisateurs de votre organisation. Le suivi des documents fournit des informations telles que les adresses de messagerie des personnes qui ont tenté d'accéder aux documents protégés que les utilisateurs ont partagés et indique quand ces personnes ont tenté d'y accéder, ainsi que leur emplacement. Si l’affichage de ces informations est interdit dans votre organisation pour des raisons de confidentialité, vous pouvez désactiver l’accès au site de suivi des documents à l’aide de l’applet de commande [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). Vous pouvez réactiver l’accès au site à tout moment en utilisant [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) et vérifier si l’accès est actuellement activé ou désactivé à l’aide de [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature).
 
 Pour exécuter ces applets de commande, vous devez disposer au moins de la version **2.3.0.0** du module Azure Rights Management pour Windows PowerShell. Pour obtenir des instructions d’installation, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md).
 

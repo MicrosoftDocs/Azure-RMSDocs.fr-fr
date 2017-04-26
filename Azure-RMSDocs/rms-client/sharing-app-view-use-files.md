@@ -42,7 +42,7 @@ Si vous voyez deux versions du fichier dont les extensions diffèrent, n'ouvrez 
 
 La manière dont le fichier s'ouvre dépend de la manière dont il a été protégé, ce que vous pouvez déterminer en examinant l'extension de son nom. Dans chaque cas, l'ouverture du fichier peut être auditée et reste auditée tant qu'il est protégé. En outre, si le fichier a été envoyé en pièce jointe à un e-mail, il se peut que l'expéditeur soit informé par e-mail chaque fois que vous ouvrez le fichier.
 
-- **L’extension du nom du fichier est*.pfile* **
+- **L’extension du nom du fichier est* .pfile***
 
     Le fichier fait l'objet d'une protection générique.
 
@@ -50,7 +50,7 @@ La manière dont le fichier s'ouvre dépend de la manière dont il a été prot�
 
     ![Boîte de dialogue d’un fichier .pfile partagé par e-mail quand vous faites appel à l’application de partage RMS](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **L’extension du nom du fichier est*.ppdf* ou le fichier est un fichier texte ou image protégé (par exemple, *.ptxt* ou *.pjpg*)**
+- **L’extension du nom du fichier est* .ppdf* ou le fichier est un fichier texte ou image protégé (par exemple, *.ptxt* ou *.pjpg*)**
 
     Le fichier fait l'objet d'une protection native en tant que copie en lecture seule.
 
@@ -74,7 +74,7 @@ Pour obtenir la liste complète des extensions de nom de fichier prises en charg
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>Pour utiliser un fichier protégé (par exemple, l'éditer et l'imprimer)
 Si, après avoir ouvert le fichier protégé, vous voulez le lire, mais aussi, par exemple, le modifier, le copier et l’imprimer :
 
-- **L’extension du nom du fichier est*.pfile* **
+- **L’extension du nom du fichier est* .pfile***
 
     Enregistrez le fichier ouvert en lui donnant une nouvelle extension de nom associée à l'application que vous souhaitez utiliser.
 
@@ -82,7 +82,7 @@ Si, après avoir ouvert le fichier protégé, vous voulez le lire, mais aussi, p
 
     Le nouveau fichier n'est plus protégé. Si vous souhaitez le protéger, vous devez le faire manuellement. Pour obtenir des instructions, consultez [Protéger un fichier sur un appareil (protéger sur place) à l’aide de l’application de partage Rights Management](sharing-app-protect-in-place.md).
 
-- **L’extension du nom du fichier est*.ppdf* ou le fichier est un fichier texte ou image protégé (par exemple, *.ptxt* ou *.pjpg*)**
+- **L’extension du nom du fichier est* .ppdf* ou le fichier est un fichier texte ou image protégé (par exemple, *.ptxt* ou *.pjpg*)**
 
     Vous pouvez uniquement afficher le fichier et, même si vous le renommez ou le déplacez, sa protection subsiste.
 

@@ -4,7 +4,7 @@ description: "Phase 2 de la migration d’AD RMS vers Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a2ef28f2db2a22a766d658294a7d68b0dc6eebb2
-ms.sourcegitcommit: 89e13f6be15a96293e0af0b2529a2e39563a63b6
+ms.openlocfilehash: f93458b5b2788aa2c7d780a9d0d2939e16221559
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
 translationtype: HT
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
@@ -52,7 +52,7 @@ Procédez comme suit sur tous les clusters AD RMS, pour tous les domaines de pub
 
 Après avoir exporté tous les domaines de publication approuvés, vous pouvez commencer la procédure d’importation de ces données dans Azure Information Protection.
 
-Notez que les domaines de publication approuvés incluent les clés pour déchiffrer les fichiers précédemment protégés. Il est donc important d’exporter (et d’importer ultérieurement dans Azure) tous les domaines de publication approuvés et pas uniquement le domaine actuellement actif.
+Notez que les domaines de publication approuvés incluent les clés de certificat de licence serveur (SLC) pour déchiffrer les fichiers précédemment protégés. Il est donc important d’exporter (et d’importer ultérieurement dans Azure) tous les domaines de publication approuvés et pas uniquement le domaine actuellement actif.
 
 Par exemple, vous aurez plusieurs domaines de publication approuvés si vous mettez à niveau vos serveurs AD RMS du Mode de chiffrement 1 au Mode de chiffrement 2. Si vous n’exportez et n’importez pas le domaine de publication approuvé qui contient votre clé archivée qui utilisait le Mode de chiffrement 1, les utilisateurs ne seront pas en mesure d’ouvrir le contenu protégé avec la clé du Mode de chiffrement 1 après la migration.
 

@@ -4,7 +4,7 @@ description: "Instructions qui font partie du chemin de migration d’AD RMS ve
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 60370cc34184b28f5cdecf6ad51f9ba58dd4816a
-ms.sourcegitcommit: 77b0936bea2700eb12b580e5738e077d447d5686
+ms.openlocfilehash: ef3b3f08dfc73703f2bb05943645176c22134a02
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
 translationtype: HT
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Étape 2 : Migration de clé protégée par logiciel à clé protégée par logiciel
@@ -36,16 +36,20 @@ La procédure suivante permet d’importer la configuration AD RMS dans Azure I
     ```
     Quand vous y êtes invité, entrez vos informations d’identification d’administrateur client [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (en général, vous utilisez un compte d’administrateur global pour Azure Active Directory ou Office 365).
 
-2. Utilisez l’applet de commande [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) pour charger le premier fichier (.xml) de domaine de publication approuvé exporté. Si vous avez plusieurs fichiers .xml parce que vous aviez plusieurs domaines de publication approuvés, sélectionnez le fichier contenant le domaine de publication approuvé exporté que vous voulez utiliser avec Azure Information Protection pour protéger le contenu après la migration. Utilisez la commande suivante :
-
-    ```
-    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword <secure string> -Active $True -Verbose
-    ```
-    Vous pouvez utiliser [ConvertTo-SecureString -AsPlaintext](https://technet.microsoft.com/library/hh849818.aspx) ou [Read-Host](https://technet.microsoft.com/library/hh849945.aspx) pour spécifier le mot de passe sous forme de chaîne sécurisée. Si vous utilisez ConvertTo-SecureString et que votre mot de passe contient des caractères spéciaux, entre ce dernier entre deux apostrophes ou utilisez des caractères d’échappement.
+2. Utilisez l’applet de commande [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) pour charger chaque fichier (.xml) de domaine de publication approuvé exporté. Par exemple, vous devez disposer d’au moins un fichier supplémentaire à importer si vous avez mis à niveau votre cluster AD RMS pour le Mode de chiffrement 2. 
     
-    Par exemple, commencez par exécuter la commande **$TPD_Password = Read-Host -AsSecureString**, puis entrez le mot de passe spécifié précédemment. Ensuite, exécutez la commande **Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Active $true -Verbose**. Lorsque vous y êtes invité, confirmez que vous souhaitez effectuer cette action.
+    Pour exécuter cette applet de commande, vous aurez besoin du mot de passe que vous avez spécifié précédemment pour chaque fichier de données de configuration. 
     
-3.  Une fois la commande terminée, répétez l’étape 3 pour chaque fichier .xml restant que vous avez créé en exportant vos domaines de publication approuvés. Par exemple, vous devez disposer d’au moins un fichier supplémentaire à importer si vous avez mis à niveau votre cluster AD RMS pour le Mode de chiffrement 2. Toutefois, pour ces fichiers, définissez **-Active** avec la valeur **false** quand vous exécutez la commande Import. Par exemple : **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword $TPD_Password -Active $false -Verbose**
+    Par exemple, exécutez tout d’abord la commande suivante pour stocker le mot de passe :
+    
+        $TPD_Password = Read-Host -AsSecureString
+    
+    Entrez le mot de passe que vous avez spécifié pour exporter le premier fichier de données de configuration. Ensuite, à l’aide de E:\contosokey1.xml comme exemple pour ce fichier de configuration, exécutez la commande suivante et confirmez que vous souhaitez effectuer cette action :
+    ```
+    Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
+    ```
+    
+3. Lorsque vous avez chargé chaque fichier, exécutez [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) pour identifier la clé importée qui correspond à la clé SLC actuellement active dans AD RMS. Cette clé devient la clé de locataire active pour votre service Azure Rights Management.
 
 4.  Utilisez l’applet de commande [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) pour vous déconnecter du service Azure Rights Management :
 
@@ -53,8 +57,7 @@ La procédure suivante permet d’importer la configuration AD RMS dans Azure I
     Disconnect-AadrmService
     ```
 
-
-Vous êtes maintenant prêt à passer à [l’Étape 5. Activez votre locataire Azure Information Protection](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
+Vous êtes maintenant prêt à passer à [l’Étape 5. Activez le service Azure Rights Management](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

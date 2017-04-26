@@ -4,7 +4,7 @@ description: "Instructions qui font partie du chemin de migration d’AD RMS ve
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d2e504b2ed387a5bce721fac12e017064006169d
-ms.sourcegitcommit: 384461f0e3fccd73cd7eda3229b02e51099538d4
+ms.openlocfilehash: bcb0d7ffe9576f02e6388451f16a8341ee4325c2
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
 translationtype: HT
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par logiciel à clé protégée par HSM
@@ -35,16 +35,16 @@ Avant de commencer, vérifiez que votre organisation dispose d’un coffre de cl
 
 
 > [!TIP]
-> Si vous voulez effectuer les étapes de configuration pour Azure Key Vault et que vous n’êtes pas familiarisé avec ce service Azure, il peut être utile de consulter d’abord [Prise en main d’Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
+> Si vous voulez effectuer les étapes de configuration pour Azure Key Vault et que vous n’êtes pas familiarisé avec ce service Azure, il peut être utile de consulter d’abord [Prise en main d’Azure Key Vault](/azure/key-vault/key-vault-get-started). 
 
 
 ## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-on-premises-hsm"></a>Partie 1 : Extraction de votre certificat de licence serveur des données de configuration et importation de la clé dans votre HSM local
 
-1.  Administrateur Azure Key Vault : utilisez les étapes suivantes de la section [Implémentation de BYOK pour Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) de la documentation d’Azure Key Vault :
+1.  Administrateur Azure Key Vault : pour chaque clé SLC exportée que vous voulez stocker dans Azure Key Vault, utilisez les étapes suivantes de la section [Implémentation de BYOK pour Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) de la documentation d’Azure Key Vault :
 
-    -   **Générer et transférer votre clé vers le HSM d’Azure Key Vault** : [Étape 1 : Préparation de la station de travail connectée à Internet](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
+    -   **Générer et transférer votre clé vers le HSM d’Azure Key Vault** : [Étape 1 : Préparation de la station de travail connectée à Internet](/azure/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
 
-    -   **Générer et transférer votre clé de locataire via Internet** : [Étape 2 : Préparation de votre poste de travail déconnecté](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
+    -   **Générer et transférer votre clé de locataire via Internet** : [Étape 2 : Préparation de votre poste de travail déconnecté](/azure/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
 
     Ne suivez pas ces étapes pour générer votre clé de client, car vous avez déjà l'équivalent dans le fichier (.xml) de données de configuration exporté. Exécutez plutôt un outil pour extraire cette clé du fichier et l’importer dans votre HSM local. L’outil crée deux fichiers quand vous l’exécutez :
 
@@ -110,7 +110,7 @@ Maintenant que votre clé de licence serveur a été extraite et importée dans 
 
 ## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>Partie 2 : Empaquetage et transfert de votre clé HSM vers Azure Key Vault
 
-Administrateur Azure Key Vault : utilisez les étapes suivantes de la section [Implémentation de BYOK pour Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) de la documentation d’Azure Key Vault :
+Administrateur Azure Key Vault : pour chaque clé SLC exportée que vous voulez stocker dans Azure Key Vault, utilisez les étapes suivantes de la section [Implémentation de BYOK pour Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) de la documentation d’Azure Key Vault :
 
 - [Étape 4 : Préparation de votre clé pour le transfert](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
 
@@ -122,40 +122,48 @@ Avant de transférer votre clé vers Azure Key Vault, vérifiez que l’utilitai
 
 Quand la clé se charge dans Azure Key Vault, vous voyez s’afficher les propriétés de la clé, notamment l’ID de clé. Elle ressemble à ceci : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Prenez note de cette URL, car l’administrateur Azure Information Protection en a besoin pour indiquer au service Azure Rights Management d’Azure Information Protection d’utiliser cette clé pour sa clé de locataire.
 
+Utilisez ensuite l’applet de commande [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) pour autoriser le principal du service Azure Rights Management à accéder au coffre de clés. Les autorisations nécessaires sont déchiffrer, chiffrer, désencapsuler la clé (unwrapkey), encapsuler la clé (wrapkey), vérifier et signer.
+
+Par exemple, si le coffre de clés que vous avez créé pour Azure Information Protection est nommé contosorms-bvok-ky et que votre groupe de ressources est nommé contosorms-byok-rg, exécutez la commande suivante :
+    
+    Set-AzureRmKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+
 Maintenant que vous avez transféré votre clé HSM dans Azure Key Vault, vous êtes prêt à importer vos données de configuration AD RMS.
 
 ## <a name="part-3-import-the-configuration-data-to-azure-information-protection"></a>Partie 3 : Importer les données de configuration dans Azure Information Protection
 
-1.  Administrateur Azure Information Protection : sur le poste de travail connecté à Internet et dans la session PowerShell, copiez vos nouveaux fichiers de données de configuration (.xml) où la clé de certificat de licence serveur (SLC) a été supprimée après l’exécution de l’outil TpdUtil.
+1. Administrateur Azure Information Protection : sur le poste de travail connecté à Internet et dans la session PowerShell, copiez vos nouveaux fichiers de données de configuration (.xml) où la clé de certificat de licence serveur (SLC) a été supprimée après l’exécution de l’outil TpdUtil.
 
-2. Chargez le premier fichier .xml en utilisant l’applet de commande [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd). Si vous avez plusieurs de ces fichiers parce que vous aviez plusieurs domaines de publication approuvés, choisissez le fichier correspondant à la clé HSM que vous voulez utiliser avec Azure Information Protection pour protéger le contenu après la migration.
+2. Chargez chaque fichier .xml en utilisant l’applet de commande [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd). Par exemple, vous devez disposer d’au moins un fichier supplémentaire à importer si vous avez mis à niveau votre cluster AD RMS pour le Mode de chiffrement 2.
 
-    Pour exécuter cette applet de commande, vous avez besoin de l’URL de la clé qui a été identifiée à l’étape précédente.
+    Pour exécuter cette applet de commande, vous aurez besoin du mot de passe que vous avez spécifié précédemment pour le fichier de données de configuration et de l’URL de la clé qui a été identifiée à l’étape précédente.
 
-    Par exemple, en utilisant notre valeur d’URL de clé de l’étape précédente et un fichier de données de configuration C:\contoso_keyless.xml, vous exécutez :
+    Par exemple, à l’aide d’un fichier de données de configuration de C:\contoso_keyless.xml et de l’URL de notre clé issue de l’étape précédente, exécutez d’abord la commande suivante pour stocker le mot de passe :
+    
+    ```
+    $TPD_Password = Read-Host -AsSecureString
+    ```
+    
+   Entrez le mot de passe que vous avez spécifié pour exporter le fichier de données de configuration. Ensuite, exécutez la commande suivante et confirmez que vous souhaitez effectuer cette action :
 
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
+    Import-AadrmTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
 
-    Quand vous y êtes invité, entrez le mot de passe que vous avez spécifié précédemment pour le fichier de données de configuration, puis confirmez que vous voulez effectuer cette action.
+    Dans le cadre de cette importation, la clé SLC est importée et définie automatiquement comme archivée.
 
-    Si vous avez plusieurs fichiers de données de configuration, répétez cette commande pour les autres fichiers. Par exemple, vous devez disposer d’au moins un fichier supplémentaire à importer si vous avez mis à niveau votre cluster AD RMS pour le Mode de chiffrement 2. Toutefois, pour ces fichiers, définissez **-Active** avec la valeur **false** quand vous exécutez la commande Import.
+3. Lorsque vous avez chargé chaque fichier, exécutez [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) pour spécifier quelle clé importée correspond à la clé SLC actuellement active dans votre cluster AD RMS.
 
-
-
-3.  Utilisez l’applet de commande [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) pour vous déconnecter du service Azure Rights Management :
+4. Utilisez l’applet de commande [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) pour vous déconnecter du service Azure Rights Management :
 
     ```
     Disconnect-AadrmService
     ```
 
-    > [!NOTE]
-    > Si vous avez besoin ultérieurement de vérifier quelle clé est utilisée par votre clé de locataire Azure Information Protection dans Azure Key Vault, utilisez l’applet de commande [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) d’Azure RMS.
+Si vous avez besoin ultérieurement de vérifier quelle clé est utilisée par votre clé de locataire Azure Information Protection dans Azure Key Vault, utilisez l’applet de commande [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) d’Azure RMS.
 
 
-Vous êtes maintenant prêt à passer à [l’Étape 5. Activez votre locataire Azure Information Protection](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
+Vous êtes maintenant prêt à passer à [l’Étape 5. Activez le service Azure Rights Management](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

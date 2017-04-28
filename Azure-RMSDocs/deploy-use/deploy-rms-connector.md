@@ -4,7 +4,7 @@ description: "Instructions pour déployer le connecteur RMS, qui fournit le serv
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d6fad45bb6a138fee439019b4ae454feb3fe752f
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 04073023841e95abacc0258e061f4742069fbfb0
+ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
 translationtype: HT
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Déploiement du connecteur Azure Rights Management
@@ -22,8 +22,6 @@ translationtype: HT
 
 Utilisez ces informations pour découvrir le connecteur Azure Rights Management et pour savoir comment le déployer correctement dans votre organisation. Ce connecteur assure la protection des données dans le cas des déploiements locaux existants qui utilisent **Microsoft Exchange Server**, **SharePoint Server** ou des serveurs de fichiers qui exécutent Windows Server et l’**Infrastructure de classification des fichiers** (ICF).
 
-> [!TIP]
-> Pour obtenir un exemple de scénario global illustré par des captures d’écran, consultez la section [Protection automatique de fichiers sur des serveurs de fichiers exécutant Windows Server et l’infrastructure de classification des fichiers](../understand-explore/what-admins-users-see.md#automatically-protecting-files-on-file-servers-running-windows-server-and-file-classification-infrastructure) dans l’article [Azure RMS en action](../understand-explore/what-admins-users-see.md).
 
 ## <a name="overview-of-the-microsoft-rights-management-connector"></a>Vue d'ensemble du connecteur Microsoft Rights Management
 Le connecteur Microsoft Rights Management (RMS) permet d'activer rapidement des serveurs locaux existants pour utiliser les services RMS avec le service Microsoft Rights Management (Azure RMS) basé sur le cloud. Cette fonctionnalité permet au service informatique et aux utilisateurs de protéger facilement des documents et des images à l'intérieur comme à l'extérieur de l'organisation, sans avoir à installer des infrastructures supplémentaires ou à établir des relations de confiance avec d'autres organisations. 

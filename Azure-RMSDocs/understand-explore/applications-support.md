@@ -4,7 +4,7 @@ description: "Découvrez comment les applications (comme Office Word, Excel, Pow
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c7c91c09ebcd7dcc35c7d91e056b5f83f93d53cd
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: db9f67c5baeea678bf288f4f10237ff4517d905b
+ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
 translationtype: HT
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Comment les applications prennent en charge le service Azure Rights Management
@@ -31,9 +31,6 @@ Les modèles permettent aux utilisateurs (et administrateurs qui configurent des
 Quand les utilisateurs doivent appliquer eux-mêmes la protection des informations, veillez à leur fournir des instructions et des conseils sur la manière de le faire et le moment auquel le faire. Ces instructions doivent être appropriées à l’application et aux versions qu’ils utilisent et à la manière dont ils les utilisent. Les conseils sur l’application de la protection des informations doivent refléter votre secteur d’activité. Pour plus d’informations, consultez [Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management](../deploy-use/help-users.md).
 
 Pour plus d’informations sur la configuration de ces applications pour le service Azure Rights Management d’Azure Information Protection, consultez [Configuration d’applications pour Azure Rights Management](../deploy-use/configure-applications.md).
-
-> [!TIP]
-> Pour des exemples et des captures d’écran d’applications utilisant le service Azure Rights Management, consultez [Azure RMS en action : ce que voient les administrateurs et les utilisateurs](what-admins-users-see.md).
 
 Les services de recherche peuvent s’intégrer à Rights Management de différentes manières. Exemple : 
 

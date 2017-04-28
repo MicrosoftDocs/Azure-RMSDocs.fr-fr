@@ -4,14 +4,14 @@ description: "Comprendre le processus de configuration de la stratégie par déf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 04/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 40a6c3eed95ef30b7540e31478257b1c851ae9b6
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: decc5e3462a80e307201933e634c3ecfa03ee074
+ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
 translationtype: HT
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut

@@ -4,14 +4,14 @@ description: "Vous pouvez protéger vos documents et e-mails les plus sensibles 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 696d744ae21d8957225a24d39547493515b63d76
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 608fa9fe48667c1419736243e5c069b48828ff1b
+ms.sourcegitcommit: 2358f76f9a039daff7d70ea68967a45362d3da35
 translationtype: HT
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
@@ -50,7 +50,7 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
 
 ## <a name="to-configure-a-label-for-rights-management-protection"></a>Configurer une étiquette pour la protection Rights Management
 
-1. Si ce n’est déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général, puis accédez au panneau **Azure Information Protection**. 
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**. 
 
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
@@ -78,9 +78,13 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
     
     Dans la plupart des cas, vous devrez sélectionner **Azure RMS** pour vos paramètres d’autorisation. Ne sélectionnez **HYOK (AD RMS)** que si vous avez lu et compris les prérequis et les restrictions qui accompagnent cette configuration « *conservez votre propre clé* » (HYOK, hold your own key). Pour plus d’informations, consultez [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md). Pour poursuivre la configuration de la fonction HYOK (AD RMS), passez à l’étape 9.
     
-7. Sélectionnez **Ne pas transférer** si vous voulez définir cette option Outlook pour les e-mails ou **Sélectionner un modèle**. 
+7. Sélectionnez **Ne pas transférer** si vous voulez définir cette option Outlook pour les e-mails, choisissez **Sélectionner un modèle prédéfini** pour utiliser l’un des modèles par défaut ou un modèle personnalisé que vous avez configuré, ou choisissez **Personnalisé (préversion)** pour définir de nouveaux paramètres de protection dans ce portail. 
     
-8. Si vous avez sélectionné **Sélectionner un modèle** pour **Azure RMS**, cliquez sur la zone de liste déroulante et sélectionnez le [modèle](../deploy-use/configure-custom-templates.md) à utiliser pour protéger les documents et les e-mails avec cette étiquette.
+    Notez que l’option **Personnalisé (préversion)** contient la plupart des options de configuration actuellement disponibles dans le portail Azure Classic. Par ailleurs, vous pouvez facilement ajouter tous les utilisateurs de votre organisation, et spécifier les adresses e-mail externes pour des utilisateurs individuels ou des groupes, ou pour tous les utilisateurs d’une autre organisation quand vous spécifiez un nom de domaine. 
+    
+    Pour plus d’informations sur la configuration de cette préversion, consultez le billet de blog [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/). Pour plus d’informations sur les autorisations disponibles, consultez [Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md).
+    
+8. Si vous avez choisi **Sélectionner un modèle prédéfini** pour **Azure RMS**, cliquez sur la zone de liste déroulante et sélectionnez le [modèle](../deploy-use/configure-custom-templates.md) à utiliser pour protéger les documents et les e-mails avec cette étiquette.
     
     Si vous sélectionnez un **modèle de service** ou que vous avez configuré des [contrôles d’intégration](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) :
     

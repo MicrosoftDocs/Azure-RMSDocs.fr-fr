@@ -4,14 +4,14 @@ description: "Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2017
+ms.date: 04/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 98e65768651c77b4cc0616142e6b7515d275b7a9
-ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
+ms.openlocfilehash: 9a2392df400356e7937db49cec3e0fe1e3d0f228
+ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
 translationtype: HT
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Étape 2 : Configurer et publier la stratégie Azure Information Protection
@@ -20,7 +20,7 @@ translationtype: HT
 
 Bien qu’Azure Information Protection soit fourni avec une stratégie par défaut que vous pouvez utiliser sans configuration, nous allons examiner cette stratégie et y apporter des modifications.
 
-1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général pour votre locataire.
+1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général ou administrateur de la sécurité pour votre locataire.
 
 2. Dans le menu Hub, cliquez sur **Nouveau**, puis, dans la liste **MARKETPLACE**, sélectionnez **Sécurité + Identité**. Dans le panneau **Sécurité + Identité**, dans la liste **Applications proposées**, sélectionnez **Azure Information Protection**. Dans le panneau **Azure Information Protection**, cliquez sur **Créer**.
 
@@ -74,7 +74,7 @@ Si votre étiquette **Confidentiel** n’a pas de sous-étiquettes car vous avez
     
     Cette action ouvre le panneau **Protection**.
     
-3. Dans le panneau **Protection**, assurez-vous que l’option **Azure RMS** est sélectionnée, ainsi que l’option **Sélectionner un modèle**, puis cliquez sur la zone de liste déroulante et choisissez le modèle par défaut **\<Nom de votre organisation > Confidentiel**.     
+3. Dans le panneau **Protection**, assurez-vous que l’option **Azure RMS** est sélectionnée, ainsi que l’option **Sélectionner un modèle prédéfini**, puis cliquez sur la zone de liste déroulante et choisissez le modèle par défaut **\<Nom de votre organisation > Confidentiel**.     
     
     Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous verrez et sélectionnerez **VanArsdel, Ltd - Confidential** : 
     

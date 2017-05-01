@@ -4,7 +4,7 @@ description: "Instructions et informations destinées aux administrateurs d’un
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d442a9540243cd020b885f7dc2c13d999bbad868
-ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
+ms.openlocfilehash: 74abbe0db07a155afe500388810945a3ff5a35a5
+ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
 translationtype: HT
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
@@ -209,6 +209,16 @@ Utilisez l’information **Version** pour vérifier la version installée sur le
 
 Utilisez les informations suivantes pour les configurations avancées nécessaires pour des scénarios spécifiques ou un sous-ensemble d’utilisateurs. 
 
+### <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Empêcher l’affichage des invites de connexion sur les ordinateurs AD RMS uniquement
+
+Par défaut, le client Azure Information Protection tente automatiquement de se connecter au service Azure Information Protection. Pour les ordinateurs qui communiquent uniquement avec AD RMS, cela peut entraîner inutilement l’affichage d’une invite de connexion pour les utilisateurs. Vous pouvez empêcher l’affichage de cette invite de connexion en modifiant le Registre :
+
+Recherchez le nom de valeur suivant et définissez la valeur à **0** :
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+
+Indépendamment de ce paramètre, le client Azure Information Protection se conforme au [processus de découverte du service RMS](../rms-client/client-deployment-notes.md#rms-service-discovery) pour trouver le cluster AD RMS associé.
+
 ### <a name="sign-in-as-a-different-user"></a>Se connecter avec l’identité d’un autre utilisateur
 
 Dans un environnement de production, les utilisateurs ne doivent généralement pas se connecter sous un autre nom lorsqu’ils utilisent le client Azure Information Protection. Toutefois, vous devrez peut-être le faire en tant qu’administrateur si vous disposez de plusieurs locataires. Par exemple, vous disposez d’un locataire test en plus du locataire Office 365 ou Azure utilisé par votre organisation.
@@ -241,9 +251,7 @@ Créez le nom de la valeur DWORD suivant (avec toutes données de la valeur) :
 
 ### <a name="support-for-disconnected-computers"></a>Prise en charge des ordinateurs déconnectés
 
-Par défaut, le client Azure Information Protection tente automatiquement de se connecter au service Azure Information Protection pour télécharger la dernière stratégie Azure Information Protection. Si vous disposez d’ordinateur qui ne sera pas en mesure de se connecter à Internet pendant une période donnée, vous pouvez empêcher le client d’essayer de se connecter au service en modifiant le Registre. 
-
-Recherchez le nom de la valeur suivant et définissez les données de la valeur sur **0** :
+Par défaut, le client Azure Information Protection tente automatiquement de se connecter au service Azure Information Protection pour télécharger la dernière stratégie Azure Information Protection. Si vous disposez d’ordinateur qui ne sera pas en mesure de se connecter à Internet pendant une période donnée, vous pouvez empêcher le client d’essayer de se connecter au service en modifiant le Registre. Recherchez le nom de la valeur suivant et définissez les données de la valeur sur **0** :
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 

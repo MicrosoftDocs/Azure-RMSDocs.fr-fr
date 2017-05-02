@@ -13,7 +13,7 @@
 ### [Tâches de post-migration](migrate-from-ad-rms-phase5.md)
 ## [Planification et implémentation de la clé de client](plan-implement-tenant-key.md)
 ### [Tarifs et restrictions BYOK](byok-price-restrictions.md)
-## [Préparation d’Azure Information Protection](prepare.md)
+## [Préparation des utilisateurs et groupes](prepare.md)
 # [Déployer et utiliser le service](/information-protection/deploy-use/activate-service)
 # [Déployer et utiliser le client](/information-protection/rms-client/use-client)
 # [Développer et personnaliser des applications](/information-protection/develop/developers-guide)

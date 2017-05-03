@@ -211,7 +211,7 @@ Si vous sélectionnez la stratégie ad hoc, l’utilisateur de l’application d
 
 Une fois que tout est généré et en cours d’exécution, les sorties de l’application doivent ressembler à ce qui suit :
 
-1. Vous êtes invité à sélectionner une méthode de chiffrement.
+1.Vous êtes invité à sélectionner une méthode de chiffrement.
 ![sortie de l’application - étape 1](../media/develop/app-output-1.png)
 
 2. Vous devez fournir le chemin du fichier à protéger.

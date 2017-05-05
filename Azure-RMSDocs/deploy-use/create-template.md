@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cf11e0ac3bb13dcb31d14bad5f97ad117bd09953
-ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
+ms.openlocfilehash: fe569124494f837e770e5f1f8c6de0c2188a6e40
+ms.sourcegitcommit: ed954c84c9009d205638f0ad54fdbfc02ef5b92c
 translationtype: HT
 ---
 # <a name="create-configure-and-publish-a-custom-template"></a>Créer, configurer et publier un modèle personnalisé
@@ -76,9 +76,9 @@ Utilisez les procédures suivantes pour créer, configurer et publier des modèl
     > [!NOTE]
     > Les utilisateurs ou groupes que vous sélectionnez doivent avoir une adresse de messagerie. Dans un environnement de production, ce sera presque toujours le cas, mais dans un simple environnement de test, vous devrez ajouter des adresses de messagerie aux comptes d'utilisateur ou groupes.
     > 
-    > Si une adresse de messagerie est modifiée après que vous ayez sélectionné l’utilisateur ou le groupe et enregistré le modèle, consultez la section [Éléments à prendre en considération en cas de modification des adresses de messagerie](../plan-design/prepare.md#considerations-if-email-addresses-change) de la documentation relative à la planification. 
+    > Si une adresse de messagerie est modifiée après que vous ayez sélectionné l’utilisateur ou le groupe et enregistré le modèle, consultez la section [Éléments à prendre en considération en cas de modification des adresses de messagerie](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) de la documentation relative à la planification. 
 
-    Nous vous recommandons d’utiliser des groupes plutôt que des utilisateurs, pour simplifier la gestion des modèles. Toutefois, si vous apportez des modifications à ce groupe, n’oubliez pas que pour des raisons de performances, Azure Rights Management [met en cache l’appartenance au groupe](../plan-design/prepare.md#group-membership-caching). 
+    Nous vous recommandons d’utiliser des groupes plutôt que des utilisateurs, pour simplifier la gestion des modèles. Toutefois, si vous apportez des modifications à ce groupe, n’oubliez pas que pour des raisons de performances, Azure Rights Management [met en cache l’appartenance au groupe](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). 
     
     Si vous disposez d’Active Directory localement et effectuez une synchronisation avec Azure AD, vous pouvez utiliser des groupes de sécurité ou de distribution à extension messagerie. Si vous voulez accorder des droits à tous les utilisateurs de l’organisation, mieux vaut copier l’un des modèles par défaut que de spécifier plusieurs groupes. Pour plus d’informations, consultez [Comment copier un modèle](copy-template.md).
 

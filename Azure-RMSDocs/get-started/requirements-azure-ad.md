@@ -4,7 +4,7 @@ description: "Identifiez la configuration requise d’Azure AD pour utiliser Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/12/2017
+ms.date: 05/01/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 29bc3b414a1fde17aec03702a87f4364b565b848
-ms.sourcegitcommit: 65e2d607954dfb6c7529ff200602887b71c39312
-translationtype: HT
+ms.openlocfilehash: 2022f86a32725ef9dfcf5692b1194348f6c39f3b
+ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 
@@ -43,6 +44,12 @@ Ordinateurs qui exécutent Office 2010 :
 Prise en charge de l’authentification basée sur les certificats :
 
 - L’application Azure Information Protection pour Android prend en charge l’authentification basée sur les certificats quand vous avez Android 5.0 ou ultérieur. Pour des instructions sur la configuration de l’authentification basée sur les certificats, consultez [Bien démarrer avec l’authentification basée sur les certificats dans Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
+
+La valeur UPN des utilisateurs ne correspond pas à leur adresse e-mail :
+
+- Cette configuration n’est pas recommandée et, si vous ne pouvez pas changer la valeur UPN, configurez un autre ID de connexion pour les utilisateurs et indiquez-leur comment se connecter à Office à l’aide de cette connexion de remplacement. Pour plus d’informations, consultez [Configuration d’un autre ID de connexion](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) et [Les applications Office demandent régulièrement des informations d’identification pour SharePoint Online, OneDrive et Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
+    
+    Quand le nom de domaine dans la valeur UPN est un domaine qui est vérifié pour votre locataire, ajoutez la valeur UPN de l’utilisateur comme une autre adresse e-mail à l’attribut proxyAddresses d’Azure AD. L’utilisateur est ainsi autorisé à utiliser Azure Rights Management si sa valeur UPN est spécifiée au moment où les droits d’utilisation sont accordés. Pour plus d’informations sur ce sujet et sur la façon dont les comptes d’utilisateur sont autorisés, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md).
 
 Appareils mobiles ou ordinateurs Mac qui s’authentifient localement par le biais des services AD FS ou d’un fournisseur d’authentification équivalent :
 

@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b1d643cdb28f46c03e9c0c2707d44f9ff9eedcb3
-ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
-translationtype: HT
+ms.openlocfilehash: cc11c4c9cfa9a6886180782c4ae88068bf280895
+ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
@@ -83,7 +84,7 @@ Avant de procéder à la migration vers Azure Information Protection, assurez-vo
 
     - Groupes à extension messagerie dans Azure Active Directory
 
-    Consultez [Préparation d’Azure Information Protection](prepare.md).
+    Consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md).
 
 - **Si vous avez utilisé la fonctionnalité de Gestion des droits relatifs à l’information (IRM) d’Exchange Server** (par exemple, règles de transport et Outlook Web Access) ou SharePoint Server avec AD RMS :
 

@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 526a0ef3bcc5ebf07c4993b9e5dd602683593a45
-ms.sourcegitcommit: 85261fbc9e6ce71a2001d954cb2fc2d190695f6a
-translationtype: HT
+ms.openlocfilehash: ed06deca76ed1241f0c9b3f104fd922263c5a6cd
+ms.sourcegitcommit: dd5a63bfee309c8b68ee9f8cd071a574ab0f6b4a
+ms.translationtype: HT
+ms.contentlocale: fr-FR
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuration des droits d’utilisation pour Azure Rights Management
 
@@ -51,20 +52,23 @@ Certaines applications regroupent les droits d’utilisation dans des niveaux d�
 
 Envisagez le tableau suivant comme une liste de ces niveaux d’autorisation et comme une liste complète des droits qu’ils renferment.
 
-
 |Niveau d’autorisation|Applications|Droits inclus (nom commun)|
 |---------------------|----------------|---------------------------------|
-|Observateur|Portail Azure Classic<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Répondre ; Répondre à tous<br /><br />Remarque : Pour les e-mails, utilisez plutôt le niveau d’autorisation Réviseur pour vous assurer que la réponse à un e-mail sera reçue sous forme d’e-mail, et non de pièce jointe. Le niveau Réviseur est également obligatoire pour envoyer un e-mail à une autre organisation qui utilise le client Outlook ou Outlook Web App.|
-|Réviseur|Portail Azure Classic<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Répondre [[1]](#footnote-1) ; Répondre à tous [[1]](#footnote-1) ; Transférer [[1]](#footnote-1)|
-|Coauteur|Portail Azure Classic<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Autoriser les macros ; Enregistrer sous, Exporter [[2]](#footnote-2) ; Imprimer ; Répondre [[1]](#footnote-1) ; Répondre à tous [[1]](#footnote-1) ; Transférer [[1]](#footnote-1)|
-|Copropriétaire|Portail Azure Classic<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Autoriser les macros ; Enregistrer sous, Exporter ; Imprimer ; Répondre [[1]](#footnote-1) ; Répondre à tous [[1]](#footnote-1) ; Transférer [[1]](#footnote-1) ; Contrôle total|
+|Observateur|Portail Azure Classic <br /><br />Portail Azure<br /><br /> Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Répondre ; Répondre à tous ; Autoriser les macros [[1]](#footnote-1)<br /><br />Remarque : Pour les e-mails, utilisez plutôt le niveau d’autorisation Réviseur pour vous assurer que la réponse à un e-mail sera reçue sous forme d’e-mail, et non de pièce jointe. Le niveau Réviseur est également obligatoire pour envoyer un e-mail à une autre organisation qui utilise le client Outlook ou Outlook Web App.|
+|Réviseur|Portail Azure Classic <br /><br />Portail Azure<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Répondre : Répondre à tous [[2]](#footnote-2) ; Transférer [[2]](#footnote-2) ; Autoriser les macros [[1]](#footnote-1)|
+|Coauteur|Portail Azure Classic <br /><br />Portail Azure<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Autoriser les macros ; Enregistrer sous, Exporter [[3]](#footnote-3) ; Imprimer ; Répondre [[2]](#footnote-2) ; Répondre à tous [[2]](#footnote-2) ; Transférer [[2]](#footnote-2)|
+|Copropriétaire|Portail Azure Classic <br /><br />Portail Azure<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Autoriser les macros ; Enregistrer sous, Exporter ; Imprimer ; Répondre [[2]](#footnote-2) ; Répondre à tous [[2]](#footnote-2) ; Transférer [[2]](#footnote-2) ; Contrôle total|
 
 ----
 
 ###### <a name="footnote-1"></a>Note 1
-Ne s’applique pas au client Azure Information Protection pour Windows, ni à l’application de partage Rights Management pour Windows.
+
+Pour le client Azure Information Protection pour Windows, ce droit est nécessaire pour la barre Information Protection dans les applications Office.
 
 ###### <a name="footnote-2"></a>Note 2
+Ne s’applique pas au client Azure Information Protection pour Windows, ni à l’application de partage Rights Management pour Windows.
+
+###### <a name="footnote-3"></a>Note 3
 Non inclus dans le client Azure Information Protection pour Windows. Dans ce client, le droit d’utilisation Exporter inclut la possibilité de supprimer la protection.
 
 

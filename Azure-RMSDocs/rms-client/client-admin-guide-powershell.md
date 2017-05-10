@@ -4,7 +4,7 @@ description: "Instructions et informations pour que les administrateurs gèrent 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2017
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 90b26239979b42eadb008b11a963e35a74698910
-ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
-translationtype: HT
+ms.openlocfilehash: 04e04f6e3243283b98df94143773e4aa81351f48
+ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Utiliser PowerShell avec le client Azure Information Protection
 
@@ -58,21 +59,27 @@ Avant de commencer à utiliser ces applets de commande, consultez les autres con
 Lisez cette section avant de commencer à utiliser les commandes PowerShell lorsque votre organisation utilise Azure Information Protection et le service de protection de données Azure Rights Management, ou seulement le service Azure Rights Management.
 
 
-### <a name="prerequisites-for-aip-and-azure-rms"></a>Conditions préalables pour AIP et Azure RMS
+### <a name="prerequisites"></a>Prérequis
 
 Outre la configuration requise pour l’installation du module AzureInformationProtection, des conditions préalables supplémentaires existent pour le service Azure Information Protection et le service de protection de données Azure Rights Management :
 
 1. Le service Azure Rights Management doit être activé.
 
-2. Pour supprimer la protection de fichiers pour les autres utilisateurs à l’aide de votre propre compte : la fonctionnalité de super utilisateur doit être activée pour votre organisation, et votre compte doit être configuré pour être un super utilisateur d’Azure Rights Management.
+2. Pour supprimer la protection des fichiers pour les autres utilisateurs à l’aide de votre propre compte : 
+    
+    - La fonctionnalité de super utilisateur doit être activée pour votre organisation et votre compte doit être configuré pour être un super utilisateur d’Azure Rights Management.
 
-3. Pour protéger ou annuler la protection de fichiers sans intervention de l’utilisateur directement : créez un compte de principal du service, exécutez Set-RMSServerAuthentication, et envisagez de faire de ce principal du service un super utilisateur pour Azure Rights Management.
+3. Pour protéger ou ôter la protection des fichiers directement sans intervention de l’utilisateur : 
+    
+    - Créez un compte de principal de service, exécutez Set-RMSServerAuthentication et envisagez de faire de ce principal de service un super utilisateur pour Azure Rights Management.
 
-4. Pour les régions en dehors de l’Amérique du Nord : modifiez le Registre pour l’authentification auprès du service.
+4. Pour les régions en dehors de l’Amérique du Nord : 
+    
+    - Modifiez le Registre pour l’authentification auprès du service.
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Condition préalable 1 : le service Azure Rights Management doit être activé
 
-Cette condition préalable s’applique si vous appliquez la protection des données à l’aide d’étiquettes ou en vous connectant directement au service Azure Rights Management. Configuré pour appliquer la protection des données.
+Cette condition préalable s’applique si vous appliquez la protection des données à l’aide d’étiquettes ou en vous connectant directement au service Azure Rights Management.
 
 Si votre locataire Azure Information Protection n’est pas activé, consultez les instructions [d’activation d’Azure Rights Management](../deploy-use/activate-service.md).
 
@@ -80,7 +87,7 @@ Si votre locataire Azure Information Protection n’est pas activé, consultez l
 
 Les scénarios classiques de suppression de la protection des fichiers pour les autres utilisateurs incluent la détection de données ou la récupération de données. Si vous utilisez des étiquettes pour appliquer la protection, vous pouvez supprimer la protection en définissant une nouvelle étiquette qui n’applique pas la protection ou en supprimant l’étiquette. Toutefois, il est plus probable que vous vous connectiez directement au service Azure Rights Management pour supprimer la protection.
 
-Pour supprimer la protection de fichiers, vous devez disposer d’autorisations Rights Management ou être un super utilisateur. Pour la découverte de données ou la récupération de données, la fonctionnalité de super utilisateur est généralement utilisée. Pour activer cette fonctionnalité et configurer votre compte pour un super utilisateur, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../deploy-use/configure-super-users.md).
+Pour supprimer la protection des fichiers, vous devez disposer d’un droit d’utilisation Rights Management ou être un super utilisateur. Pour la découverte de données ou la récupération de données, la fonctionnalité de super utilisateur est généralement utilisée. Pour activer cette fonctionnalité et configurer votre compte pour un super utilisateur, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../deploy-use/configure-super-users.md).
 
 #### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>Condition préalable 3 : protéger ou annuler la protection des fichiers sans intervention de l’utilisateur
 
@@ -132,9 +139,12 @@ Exécutez l’applet de commande Get-AadrmConfiguration à partir du module Azur
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>Pour obtenir l’AppPrincipalId et la clé symétrique
 
-Créez un principal du service en exécutant l’applet de commande `New-MsolServicePrincipal` à partir du module MSOnline PowerShell pour Azure Active Directory : 
+Créez un principal de service en exécutant l’applet de commande `New-MsolServicePrincipal` à partir du module MSOnline PowerShell pour Azure Active Directory et suivez les instructions ci-dessous. 
 
-1. Si ce module n’est pas déjà installé sur votre ordinateur, consultez [Installation du module Azure AD](/powershell/azuread/#install-the-azure-ad-module).
+> [!IMPORTANT]
+> N’utilisez pas l’applet de commande Azure AD PowerShell la plus récente, New-AzureADServicePrincipal, pour créer ce principal de service. Le service Azure Rights Management ne prend pas en charge New-AzureADServicePrincipal. 
+
+1. Si le module MSOnline n’est pas déjà installé sur votre ordinateur, exécutez `Install-Module MSOnline`.
 
 2. Démarrez Windows PowerShell avec l’option **Exécuter en tant qu’administrateur**.
 
@@ -187,7 +197,7 @@ Notre exemple de commande ressemblerait à ceci :
 
     Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
-Comme indiqué dans la commande précédente, vous pouvez fournir les valeurs avec une seule commande, ou simplement saisir Set-RMSServerAuthentication et fournir les valeurs une par une lorsque vous y êtes invité. Lorsque la commande est terminée, le message « **RmsServerAuthentication est défini sur ON s’affiche** ». Cela signifie que vous pouvez désormais protéger et annuler la protection de fichiers à l’aide de votre principal du service.
+Comme indiqué dans la commande précédente, vous pouvez fournir les valeurs avec une seule commande, ou simplement saisir Set-RMSServerAuthentication et fournir les valeurs une par une lorsque vous y êtes invité. Quand la commande est terminée, vous voyez un message de type « **RmsServerAuthentication a la valeur ON** », ce qui signifie que le client fonctionne maintenant en « mode serveur ». Ce message ne confirme pas que l’authentification a abouti en utilisant les valeurs que vous avez fournies, mais que le passage au mode serveur a réussi.
 
 Envisagez de faire de ce principal du service un super utilisateur : pour vous assurer que ce principal du service peut toujours annuler la protection de fichiers pour d’autres utilisateurs, il peut être configuré comme un super utilisateur. De la même façon, lorsque vous configurez un compte d’utilisateur standard comme un super utilisateur, vous utilisez l’applet de commande Azure RMS [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), mais vous spécifiez le paramètre **- ServicePrincipalId** avec votre valeur AppPrincipalId.
 
@@ -301,7 +311,7 @@ Notez que si les modèles Rights Management sont modifiés, vous devez les tél�
 Lisez cette section avant de commencer à utiliser les commandes PowerShell pour protéger ou annuler la protection des fichiers, lorsque votre organisation utilise simplement Active Directory Rights Management Services.
 
 
-### <a name="prerequisites-for-ad-rms"></a>Conditions préalables pour AD RMS
+### <a name="prerequisites"></a>Prérequis
 
 Outre la configuration requise pour l’installation du module AzureInformationProtection, votre compte doit disposer des autorisations de lecture et d’exécution pour accéder à ServerCertification.asmx :
 

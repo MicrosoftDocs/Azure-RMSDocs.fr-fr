@@ -4,15 +4,16 @@ description: "Identifiez les limitations, conditions préalables et recommandati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: b9217412778309917a5d259d09ab52a7bf121b41
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 984bc844187a419cb73ab30527278d1762b70fcb
+ms.sourcegitcommit: 45053160d956587fcf45e021065e452a4c48aa4c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 
@@ -62,6 +63,8 @@ En plus de ne pas prendre en charge les avantages associés à l’utilisation d
 - N’utilisez pas l’option **Ne pas transférer** lorsque vous configurez une étiquette pour la protection Azure RMS. Vous devez aussi demander aux utilisateurs de ne pas sélectionner manuellement cette option dans Outlook. 
 
     Si l’option Ne pas transférer est appliquée par une étiquette ou manuellement par les utilisateurs, l’option risque d’être appliquée par votre déploiement AD RMS, et non par le service de gestion des droits Azure voulu. Dans ce scénario, les personnes extérieures avec qui vous partagez ne pourront pas ouvrir les messages électroniques auxquels cette option Ne pas transférer a été appliquée.
+
+- Si les utilisateurs configurent des autorisations personnalisées quand vous utilisez les protections Azure RMS et AD RMS (HYOK), le document ou l’e-mail est toujours protégé par Azure Rights Management.
 
 - Si les utilisateurs choisissent dans Outlook une étiquette qui applique la protection AD RMS, puis changent d’avis avant d’envoyer l’e-mail et sélectionnent une étiquette qui applique la protection Azure RMS, la légende de l’étiquette qui vient d’être sélectionnée ne peut pas s’appliquer. Les utilisateurs voient apparaître le message d’erreur suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Vous n’avez pas l’autorisation requise pour effectuer cette action.**
     

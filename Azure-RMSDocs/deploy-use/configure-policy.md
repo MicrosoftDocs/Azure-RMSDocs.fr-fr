@@ -4,7 +4,7 @@ description: "Pour configurer la classification, l’étiquetage et la protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8b6bd6e44fb39c3787e2fe63577c7e7fd9948025
-ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
-translationtype: HT
+ms.openlocfilehash: f412d36e8c58d874360c55c5c90416c2629ed69e
+ms.sourcegitcommit: e3974cc1490581414084669632cad54b12b05d5a
+ms.translationtype: HT
+ms.contentlocale: fr-FR
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -58,6 +59,8 @@ Le client Azure Information Protection vérifie si des modifications ont été a
 
 - Toutes les 24 heures.
 
+>[!NOTE]
+>Quand le client télécharge la stratégie, attendez quelques minutes pour qu’elle soit entièrement opérationnelle. La durée varie en fonction de différents facteurs comme la taille et la complexité de la configuration de la stratégie et la connectivité réseau. Si l’action résultante des étiquettes ne correspond pas à vos derniers changements, attendez 15 minutes au plus et réessayez.
 
 ## <a name="configuring-your-organizations-policy"></a>Configuration de la stratégie de votre organisation
 

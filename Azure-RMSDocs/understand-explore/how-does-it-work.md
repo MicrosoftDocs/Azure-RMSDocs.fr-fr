@@ -4,7 +4,7 @@ description: "Découvrez en détail le fonctionnement d’Azure RMS, les contrô
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/21/2017
+ms.date: 04/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d3d174fabb4189d2f4ca7755b6355293261318d4
-ms.sourcegitcommit: 55d8a769084c6422f80aefc5f7c6594ea6855bfa
-translationtype: HT
+ms.openlocfilehash: 3d53e57b8bff94c39426b37755c643c1dc9d9fde
+ms.sourcegitcommit: dd5a63bfee309c8b68ee9f8cd071a574ab0f6b4a
+ms.translationtype: HT
+ms.contentlocale: fr-FR
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
@@ -105,7 +106,7 @@ Quand un utilisateur protège un document, le client RMS effectue les actions su
 
 **Ce qui se passe à l’étape 2** : le client RMS crée ensuite un certificat incluant une stratégie pour le document, qui inclut les [droits d’utilisation](../deploy-use/configure-usage-rights.md) pour les utilisateurs ou les groupes, ainsi que d’autres restrictions, comme une date d’expiration. Ces paramètres peuvent être définis dans un modèle qu’un administrateur a déjà configuré ou spécifié au moment où le contenu est protégé (parfois appelé « stratégie ad hoc »).   
 
-L’attribut utilisé pour identifier les utilisateurs et groupes sélectionnés est l’attribut proxyAddress d’Azure AD, qui stocke toutes les adresses e-mail pour un utilisateur ou un groupe.
+Le principal attribut Azure AD utilisé pour identifier les utilisateurs et groupes sélectionnés est l’attribut proxyAddress d’Azure AD, qui stocke toutes les adresses e-mail pour un utilisateur ou un groupe. Toutefois, si un compte d’utilisateur ne possède aucune valeur dans l’attribut ProxyAddresses d’Active Directory, la valeur UserPrincipalName de l’utilisateur est employée à la place.
 
 Le client RMS utilise ensuite la clé de l'organisation obtenue lors de l'initialisation de l'environnement utilisateur, en se servant de cette clé pour chiffrer la stratégie et la clé symétrique de contenu. Le client RMS signe également la stratégie avec le certificat de l'utilisateur obtenu lors de l'initialisation de l'environnement utilisateur.
 
@@ -120,7 +121,7 @@ Quand un utilisateur veut consommer un document protégé, le client RMS commenc
 
 ![Consommation de document RMS : étape 1, l’utilisateur est authentifié et obtient la liste des droits](../media/AzRMS_documentconsumption1.png)
 
-**Ce qui se passe à l’étape 1** : l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur au service Azure Rights Management. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l'utilisateur sur le document. Pour identifier l’utilisateur, l’attribut proxyAddress d’Azure AD est utilisé pour le compte de l’utilisateur et les groupes dont l’utilisateur est membre. Pour des raisons de performances, l’appartenance au groupe est [mise en cache](../plan-design/prepare.md#group-membership-caching).
+**Ce qui se passe à l’étape 1** : l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur au service Azure Rights Management. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l'utilisateur sur le document. Pour identifier l’utilisateur, l’attribut ProxyAddresses d’Azure AD est utilisé pour le compte de l’utilisateur et les groupes dont l’utilisateur est membre. Pour des raisons de performances, l’appartenance au groupe est [mise en cache](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). Si le compte d’utilisateur n’a aucune valeur pour l’attribut ProxyAddresses d’Azure AD, la valeur UserPrincipalName d’Azure AD est utilisée à la place.
 
 ![Consommation de document RMS : étape 2, la licence d’utilisation est retournée au client](../media/AzRMS_documentconsumption2.png)
 

@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6cb1cd8c70dff0c24125f875c91d23326538e56b
-ms.sourcegitcommit: d2bd2ddc68d9b5a095b57235b28a3b7e9307bd9b
-translationtype: HT
+ms.openlocfilehash: f3bdfee3a3dfa60c7cc81a553f3c889c30134a6a
+ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
@@ -34,36 +35,36 @@ Les instructions qui suivent ont trait à Windows Server 2012 R2 ou à Windows S
 ## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Conditions préalables pour l’utilisation de la protection Azure Rights Management avec l’ICF de Windows Server
 Conditions préalables pour ces instructions :
 
--   Sur chaque serveur de fichiers où vous allez exécuter le Gestionnaire de ressources de fichiers avec l'infrastructure de classification des fichiers :
-
-    -   Vous avez installé les outils de gestion de ressources pour serveur de fichiers comme l'un des services de rôle pour le rôle Services de fichiers.
-
-    -   Vous avez identifié un dossier local contenant des fichiers à protéger avec Rights Management. Par exemple, C:\FileShare.
-
-    -   Vous avez installé le module AzureInformationProtection et configuré les conditions préalables pour Azure Rights Management. Pour plus d’informations, consultez [Utilisation de PowerShell avec le client Azure Information Protection](client-admin-guide-powershell.md). En particulier, vous avez défini les valeurs suivantes pour la connexion au service Azure Rights Management à l’aide d’un principal du service : **BposTenantId**, **AppPrincipalId** et **clé symétrique**. 
-
-    -   Si vous souhaitez modifier le niveau par défaut de protection (native ou générique) pour des extensions de nom de fichier spécifiques, vous avez modifié le Registre comme décrit dans la section [Modification du niveau de protection par défaut des fichiers](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) du guide d’administrateur.
-
-    -   Vous disposez d'une connexion Internet, avec des paramètres d'ordinateur configurés, si nécessaire, pour un serveur proxy. Par exemple : `netsh winhttp import proxy source=ie`
-
--   Vous avez synchronisé vos comptes d'utilisateurs Active Directory locaux avec Azure Active Directory ou Office 365, y compris leurs adresses électroniques. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et le service Azure Rights Management. Si vous n’exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l’accès des utilisateurs à ces fichiers soit bloqué. Pour plus d’informations sur la configuration de ce compte, consultez [Préparation pour le service Azure Rights Management](../plan-design/prepare.md).
-
--   Vous avez téléchargé les modèles Rights Management sur le serveur de fichiers, puis identifié l’identifiant de modèle qui va protéger les fichiers. Pour cela, utilisez la cmdlet [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate). Ce scénario ne prend pas en charge les modèles de services. Par conséquent, vous devez utiliser un modèle qui n’est pas configuré pour une étendue ou la configuration de l’étendue doit inclure l’option de compatibilité des applications de manière à ce que la case à cocher **Afficher ce modèle à tous les utilisateurs lorsque les applications ne prennent pas en charge l’identité de l’utilisateur** soit activée.
+-  Sur chaque serveur de fichiers où vous allez exécuter le Gestionnaire de ressources de fichiers avec l'infrastructure de classification des fichiers :
+    
+    - Vous avez installé les outils de gestion de ressources pour serveur de fichiers comme l'un des services de rôle pour le rôle Services de fichiers.
+    
+    - Vous avez identifié un dossier local contenant des fichiers à protéger avec Rights Management. Par exemple, C:\FileShare.
+    
+    - Vous avez installé le module AzureInformationProtection et configuré les conditions préalables pour Azure Rights Management. Pour plus d’informations, consultez [Utilisation de PowerShell avec le client Azure Information Protection](client-admin-guide-powershell.md). En particulier, vous avez défini les valeurs suivantes pour la connexion au service Azure Rights Management à l’aide d’un principal du service : **BposTenantId**, **AppPrincipalId** et **clé symétrique**. 
+    
+    - Si vous souhaitez modifier le niveau par défaut de protection (native ou générique) pour des extensions de nom de fichier spécifiques, vous avez modifié le Registre comme décrit dans la section [Modification du niveau de protection par défaut des fichiers](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) du guide d’administrateur.
+    
+    - Vous disposez d'une connexion Internet, avec des paramètres d'ordinateur configurés, si nécessaire, pour un serveur proxy. Par exemple : `netsh winhttp import proxy source=ie`
+    
+- Vous avez synchronisé vos comptes d’utilisateur Active Directory locaux avec Azure Active Directory ou Office 365, dont leurs adresses e-mail. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et le service Azure Rights Management. Si vous n’exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l’accès des utilisateurs à ces fichiers soit bloqué. Si vous avez besoin de plus d’informations sur cette exigence, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md).
+    
+- Vous avez téléchargé les modèles Rights Management sur le serveur de fichiers, puis identifié l’identifiant de modèle qui va protéger les fichiers. Pour cela, utilisez la cmdlet [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate). Ce scénario ne prend pas en charge les modèles de services. Par conséquent, vous devez utiliser un modèle qui n’est pas configuré pour une étendue ou la configuration de l’étendue doit inclure l’option de compatibilité des applications de manière à ce que la case à cocher **Afficher ce modèle à tous les utilisateurs lorsque les applications ne prennent pas en charge l’identité de l’utilisateur** soit activée.
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Instructions de configuration de l’ICF des outils de gestion de ressources pour serveur de fichiers pour la protection Azure Rights Management
 Suivez ces instructions pour protéger automatiquement tous les fichiers figurant dans un dossier, en utilisant un script PowerShell en tant que tâche personnalisée. Exécutez les procédures suivantes, dans l'ordre indiqué :
 
-1.  Enregistrer le script PowerShell
+1. Enregistrer le script PowerShell
 
-2.  Création d'une propriété de classification pour Rights Management (RMS)
+2. Création d'une propriété de classification pour Rights Management (RMS)
 
-3.  Création d'une règle de classification (Classifier pour RMS)
+3. Création d'une règle de classification (Classifier pour RMS)
 
-4.  Configuration de la planification de la classification
+4. Configuration de la planification de la classification
 
-5.  Création d'une tâche de gestion de fichiers personnalisée (Protéger les fichiers avec RMS)
+5. Création d'une tâche de gestion de fichiers personnalisée (Protéger les fichiers avec RMS)
 
-6.  Test de la configuration en exécutant manuellement la règle et la tâche
+6. Test de la configuration en exécutant manuellement la règle et la tâche
 
 Quand vous aurez suivi ces instructions, tous les fichiers figurant dans votre dossier sélectionné seront classifiés avec la propriété personnalisée de RMS, et seront protégés par Rights Management. Pour une configuration plus complexe qui protège sélectivement certains fichiers et pas d'autres, vous pouvez ensuite créer ou utiliser une propriété et une règle de classification différentes, avec une tâche de gestion de fichiers qui protège uniquement ces fichiers.
 
@@ -74,8 +75,8 @@ Notez que si vous apportez des modifications au modèle Rights Management que v
 1.  Copiez le contenu du [script Windows PowerShell](fci-script.md) pour la protection Azure RMS à l’aide des outils de gestion de ressources pour serveur de fichiers. Collez le contenu du script et nommez le fichier **RMS-Protect-FCI.ps1** sur votre ordinateur.
 
 2.  Examinez le script et apportez les modifications suivantes :
-
-    -   Recherchez la chaîne suivante et remplacez-la par votre propre AppPrincipalId que vous utilisez avec l’applet de commande [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) pour vous connecter au service Azure Rights Management :
+    
+    - Recherchez la chaîne suivante et remplacez-la par votre propre AppPrincipalId que vous utilisez avec l’applet de commande [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) pour vous connecter au service Azure Rights Management :
 
         ```
         <enter your AppPrincipalId here>

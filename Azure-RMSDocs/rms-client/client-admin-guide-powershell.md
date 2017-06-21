@@ -73,7 +73,7 @@ Outre la configuration requise pour l’installation du module AzureInformationP
     
     - Créez un compte de principal de service, exécutez Set-RMSServerAuthentication et envisagez de faire de ce principal de service un super utilisateur pour Azure Rights Management.
 
-4. Pour les régions en dehors de l’Amérique du Nord : 
+4. 4. Pour les régions en dehors des États-Unis : 
     
     - Modifiez le Registre pour l’authentification auprès du service.
 

@@ -1,6 +1,6 @@
 ---
-title: "Informations de référence pour l&quot;API SDK 2.1 | Microsoft Docs"
-description: "L&quot;Azure Information Protection SDK 2.1 prend en charge l’activation de RMS de clients Windows."
+title: "Informations de référence pour l'API SDK 2.1 | Microsoft Docs"
+description: "L'Azure Information Protection SDK 2.1 prend en charge l’activation de RMS de clients Windows."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
@@ -14,9 +14,11 @@ ms.assetid: 6dcfa840-026b-4728-b53c-2c9c730fcf84
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 15cb1686fcdf92ebe078e816123dc8db4edd629c
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: c4d2934573ba16b1c39dee5e972d21323ebe6d98
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="api-reference"></a>Référence d'API
 

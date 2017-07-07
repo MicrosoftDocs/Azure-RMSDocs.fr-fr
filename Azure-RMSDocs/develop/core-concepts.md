@@ -1,6 +1,6 @@
 ---
-title: "Guide pour développeurs d&quot;Azure Information Protection SDK 4.2 | Microsoft Docs"
-description: "Une collection de rubriques de procédures pour développer l&quot;AIP SDK 4.2"
+title: "Guide pour développeurs d'Azure Information Protection SDK 4.2 | Microsoft Docs"
+description: "Une collection de rubriques de procédures pour développer l'AIP SDK 4.2"
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
@@ -14,9 +14,11 @@ ms.assetid: ae67523a-c094-44da-86b8-739bedba7111
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 476410d14e4fdc8b1ac71124491849f30048bf38
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 42318313069017869a9e061b06774faae4ce2f3c
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="developer-guidance"></a>Guide pour développeurs
 Le but principal de Microsoft Rights Management Services (RMS) SDK 4.2 est de vous aider à créer de la façon la plus simple possible des applications compatibles AD RMS tirant parti d’Active Directory Rights Management Services (AD RMS).

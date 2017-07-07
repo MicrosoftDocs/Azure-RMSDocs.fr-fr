@@ -4,7 +4,7 @@ description: "Informations et instructions sur la journalisation de l’utilisat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/24/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd4fa09da3bffe9abdec5754185659393fdbf531
-ms.sourcegitcommit: 96410e06941ec414032d72cf96491884dc11aba0
-translationtype: HT
+ms.openlocfilehash: 92b64867486f64dd5920c578faeb411104f00ebd
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Journalisation et analyse de l’utilisation du service Azure Rights Management
 
@@ -39,7 +41,7 @@ Vous pouvez ensuite utiliser ces journaux du service Azure Rights Management pou
     En cas de fuite d’informations, vous devrez très certainement fournir une liste des personnes qui ont accédé récemment à des documents spécifiques ainsi que le type d’informations auxquelles a pu accéder un individu suspecté. Vous pouvez répondre à ces types de questions quand vous utilisez cette journalisation, car les personnes qui consultent du contenu protégé doivent toujours obtenir une licence Rights Management pour ouvrir des documents et des images protégés par le service Azure Rights Management, même si ces fichiers sont déplacés par e-mail ou s’ils sont copiés sur des lecteurs USB ou d’autres dispositifs de stockage. Cela signifie que vous pouvez utiliser ces journaux en tant que source d’informations fiable pour une analyse légale quand vous protégez vos données à l’aide du service Azure Rights Management.
 
 > [!NOTE]
-> Si vous vous intéressez uniquement à la journalisation des tâches d’administration pour le service Azure Rights Management et que vous ne souhaitez pas suivre la manière dont les utilisateurs utilisent le service Rights Management, vous pouvez utiliser l’applet de commande Windows PowerShell [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) pour Azure Rights Management.
+> Si vous vous intéressez uniquement à la journalisation des tâches d’administration pour le service Azure Rights Management et que vous ne souhaitez pas suivre la manière dont les utilisateurs utilisent le service Rights Management, vous pouvez utiliser l’applet de commande Windows PowerShell [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) pour Azure Rights Management.
 > 
 > Vous pouvez également utiliser le portail Azure Classic pour obtenir des rapports détaillés tels que **Résumé RMS**, **Utilisateurs RMS actifs**, **Plateformes des appareils RMS** et **Utilisation d’applications RMS**. Pour accéder à ces rapports à partir du portail Azure Classic, cliquez sur **Active Directory**, sélectionnez et ouvrez un annuaire, puis cliquez sur **RAPPORTS**.
 
@@ -213,23 +215,23 @@ Il existe de nombreux types de demande dans le service Azure Rights Management. 
 
 
 ## <a name="windows-powershell-reference"></a>Référence Windows PowerShell
-À partir de février 2016, la seule applet de commande Windows PowerShell dont vous avez besoin pour la journalisation de l’utilisation d’Azure Rights Management est [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx). 
+À partir de février 2016, la seule applet de commande Windows PowerShell dont vous avez besoin pour la journalisation de l’utilisation d’Azure Rights Management est [Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog). 
 
 Avant ce changement, les applets de commande (désormais déconseillées) nécessaires pour les journaux d’utilisation d’Azure Rights Management étaient les suivantes :  
 
--   [Disable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629404.aspx)
+-   [Disable-AadrmUsageLogFeature](/powershell/module/aadrm/disable-aadrmusagelogfeature)
 
--   [Enable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629421.aspx)
+-   [Enable-AadrmUsageLogFeature](/powershell/module/aadrm/enable-aadrmusagelogfeature)
 
--   [Get-AadrmUsageLog](https://msdn.microsoft.com/library/azure/dn629401.aspx)
+-   [Get-AadrmUsageLog](/powershell/module/aadrm/get-aadrmusagelog)
 
--   [Get-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629425.aspx)
+-   [Get-AadrmUsageLogFeature](/powershell/module/aadrm/get-aadrmusagelogfeature)
 
--   [Get-AadrmUsageLogLastCounterValue](https://msdn.microsoft.com/library/azure/dn629423.aspx)
+-   [Get-AadrmUsageLogLastCounterValue](/powershell/module/aadrm/get-aadrmusageloglastcountervalue)
 
--   [Get-AadrmUsageLogStorageAccount](https://msdn.microsoft.com/library/azure/dn629419.aspx)
+-   [Get-AadrmUsageLogStorageAccount](/powershell/module/aadrm/get-aadrmusagelogstorageaccount)
 
--   [Set-AadrmUsageLogStorageAccount](https://msdn.microsoft.com/library/azure/dn629426.aspx)
+-   [Set-AadrmUsageLogStorageAccount](/powershell/module/aadrm/set-aadrmusagelogstorageaccount)
 
 Si vous avez dans votre propre stockage Azure des journaux antérieurs au changement de journalisation d’Azure Rights Management, vous pouvez les télécharger à l’aide de ces applets de commande plus anciennes, en utilisant Get-AadrmUsageLog et Get-AadrmUsageLogLastCounterValue, comme précédemment. En revanche, tous les nouveaux journaux d’utilisation sont consignés dans le nouveau stockage Azure RMS, et doivent être téléchargés à l’aide de l’applet de commande Get-AadrmUserLog.
 

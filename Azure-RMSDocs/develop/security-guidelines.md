@@ -12,9 +12,11 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: e940dfd1d3a053c14ea1adb6e72f4cde7d26bba0
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 37b91a1b3e0a25f6014198998609d33dcc0979ae
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Bonnes pratiques de sécurité pour Azure Information Protection
 
@@ -51,8 +53,8 @@ Microsoft n’effectue pas de tests ou ne révise pas les résultats de tests li
 
 |Niveau de norme|    Description|
 |---|---|
-|Norme minimale|    Une application qui traite des informations protégées par AIP doit être déterminée pour répondre à la norme minimale avant que l’application ne puisse être signée avec le certificat de production reçu de Microsoft. Les partenaires utilisent généralement le certificat de hiérarchie de production uniquement au moment de la version finale du logiciel lorsque les propres tests internes du partenaire ont vérifié que l’application répond à cette norme minimale. Le respect de la norme minimale n’est pas et ne doit pas être considéré comme une garantie de sécurité par Microsoft. Microsoft n’effectue pas de tests ou ne révise pas les résultats de tests liés au respect de la norme minimale. Il incombe entièrement au partenaire de garantir que les minimums sont respectés.|
-|Norme recommandée|    Les instructions recommandées permettent d’optimiser la sécurité des applications et d’indiquer de quelle manière AIP peut évoluer à mesure que des critères de sécurité supplémentaires sont implémentés. Les fournisseurs peuvent tenter de différencier leurs applications en développant ce niveau supérieur d’instructions de sécurité.|
+|Norme minimale|  Une application qui traite des informations protégées par AIP doit être déterminée pour répondre à la norme minimale avant que l’application ne puisse être signée avec le certificat de production reçu de Microsoft. Les partenaires utilisent généralement le certificat de hiérarchie de production uniquement au moment de la version finale du logiciel lorsque les propres tests internes du partenaire ont vérifié que l’application répond à cette norme minimale. Le respect de la norme minimale n’est pas et ne doit pas être considéré comme une garantie de sécurité par Microsoft. Microsoft n’effectue pas de tests ou ne révise pas les résultats de tests liés au respect de la norme minimale. Il incombe entièrement au partenaire de garantir que les minimums sont respectés.|
+|Norme recommandée|  Les instructions recommandées permettent d’optimiser la sécurité des applications et d’indiquer de quelle manière AIP peut évoluer à mesure que des critères de sécurité supplémentaires sont implémentés. Les fournisseurs peuvent tenter de différencier leurs applications en développant ce niveau supérieur d’instructions de sécurité.|
 |Norme préférée|    Il s’agit de la catégorie de sécurité la plus élevée actuellement définie. Les fournisseurs qui développent des applications commercialisées comme hautement sécurisées doivent respecter cette norme. Les applications conformes à cette norme sont susceptibles d’être moins vulnérables aux attaques.|
 
 
@@ -90,6 +92,6 @@ L’API autorise ou non un utilisateur à déchiffrer des informations . Les inf
 
 - Tout droit abstrait inclus dans de nouveaux droits implémentés par une application doit être mappé sur la nouvelle terminologie. Par exemple, un nouveau droit appelé GESTIONNAIRE peut inclure des droits de COPIE, d’IMPRESSION et de MODIFICATION comme droits abstraits.
 Norme recommandée : aucune à l’heure actuelle.
-Norme préférée : aucune à l’heure actuelle.
+Norme préférée: aucune à l’heure actuelle.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

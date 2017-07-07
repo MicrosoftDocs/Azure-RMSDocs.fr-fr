@@ -13,9 +13,10 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 8b915ad2bf58352c41f1b534aa6c88f1640fb589
-ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données
 
@@ -54,13 +55,13 @@ Recommandations de sécurité pour la fonctionnalité de super utilisateur :
 
 L’extrait de journal suivant montre des exemples d’entrées lors de l’utilisation de l’applet de commande Get-AadrmAdminLog. Dans cet exemple, l’administrateur pour la société Contoso Ltd confirme que la fonctionnalité de super utilisateur est désactivée, ajoute Richard Simone comme super utilisateur, vérifie que celui-ci est bien le seul super utilisateur configuré pour le service Azure Rights Management, puis active la fonctionnalité de super utilisateur pour permettre à Richard de déchiffrer des fichiers protégés par un employé qui a quitté la société.
 
-`2015-08-01T18:58:20    admin@contoso.com    GetSuperUserFeatureState    Passed    Disabled`
+`2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
 
-`2015-08-01T18:59:44    admin@contoso.com    AddSuperUser -id rsimone@contoso.com    Passed    True`
+`2015-08-01T18:59:44    admin@contoso.com   AddSuperUser -id rsimone@contoso.com    Passed  True`
 
-`2015-08-01T19:00:51    admin@contoso.com    GetSuperUser    Passed    rsimone@contoso.com`
+`2015-08-01T19:00:51    admin@contoso.com   GetSuperUser    Passed  rsimone@contoso.com`
 
-`2015-08-01T19:01:45    admin@contoso.com    SetSuperUserFeatureState -state Enabled    Passed    True`
+`2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
 
 ## <a name="scripting-options-for-super-users"></a>Options de script pour les super utilisateurs
 Une personne désignée comme super utilisateur pour [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] devra souvent supprimer la protection de plusieurs fichiers, dans plusieurs emplacements. Bien qu’il soit possible de le faire manuellement, il est plus efficace (et souvent plus fiable) de le faire à l’aide d’un script. Pour ce faire, vous pouvez utiliser les applets de commande [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) et [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) en fonction des besoins. 

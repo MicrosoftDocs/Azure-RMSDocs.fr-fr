@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2c21715f85ea5d1d10bd74effdb5a022f1435b21
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 370b19894efb53604c798b38be02dda3f8804b8b
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="remove-protection-from-a-file-by-using-the-rights-management-sharing-application"></a>Suppression de la protection d'un fichier avec l'application de partage Rights Management
 

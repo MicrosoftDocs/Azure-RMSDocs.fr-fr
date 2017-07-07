@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d7bf6d58bca32adfaef26001285598a593c7b7b5
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: c7e84cb9580721c1b0da91501419cb7697fd5da2
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="more-information-about-thales-hsms-and-microsoft-additions-retired-content"></a>Plus d’informations sur les modules de sécurité matériels Thales et les ajouts de Microsoft : CONTENU RETIRÉ
 

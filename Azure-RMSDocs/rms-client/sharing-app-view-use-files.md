@@ -12,12 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43f083ffaf8aefd9b79b2cb64a6408e565818b9b
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a10162139f2b188640c446477fd9b4756d48c31e
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Afficher et utiliser des fichiers qui ont été protégés par Rights Management
+<a id="view-and-use-files-that-have-been-protected-by-rights-management" class="xliff"></a>
+
+# Afficher et utiliser des fichiers qui ont été protégés par Rights Management
 
 >*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
@@ -33,7 +36,9 @@ Quand [l’application de partage Rights Management (RMS) est installée sur vot
 >     Lorsque vous vous inscrivez, utilisez l'adresse de messagerie de votre organisation plutôt qu'une adresse personnelle. Si vous vous inscrivez parce que vous reçu une pièce protégée jointe à un message électronique, utilisez l'adresse de messagerie à laquelle ce message a été envoyé.
 > -   Pour plus d’informations, consultez [RMS for individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## <a name="to-view-a-protected-file"></a>Pour afficher un fichier protégé
+<a id="to-view-a-protected-file" class="xliff"></a>
+
+## Pour afficher un fichier protégé
 Dans l'Explorateur de fichiers ou dans le message électronique contenant la pièce jointe, double-cliquez sur le fichier protégé, puis entrez vos informations d'identification si vous y êtes invité.
 
 Si vous voyez deux versions du fichier dont les extensions diffèrent, n'ouvrez celle dont l'extension est .ppdf uniquement si l'autre ne s'ouvre pas. Si vous ne pouvez pas non plus ouvrir la version .ppdf, installez l’[application de partage RMS](install-sharing-app.md), qui peut ouvrir des fichiers dont l’extension est .ppdf.
@@ -43,7 +48,7 @@ Si vous voyez deux versions du fichier dont les extensions diffèrent, n'ouvrez 
 
 La manière dont le fichier s'ouvre dépend de la manière dont il a été protégé, ce que vous pouvez déterminer en examinant l'extension de son nom. Dans chaque cas, l'ouverture du fichier peut être auditée et reste auditée tant qu'il est protégé. En outre, si le fichier a été envoyé en pièce jointe à un e-mail, il se peut que l'expéditeur soit informé par e-mail chaque fois que vous ouvrez le fichier.
 
-- **L’extension du nom du fichier est* .pfile***
+- **Le fichier a une extension de nom de fichier *.pfile***
 
     Le fichier fait l'objet d'une protection générique.
 
@@ -51,7 +56,7 @@ La manière dont le fichier s'ouvre dépend de la manière dont il a été prot�
 
     ![Boîte de dialogue d’un fichier .pfile partagé par e-mail quand vous faites appel à l’application de partage RMS](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **L’extension du nom du fichier est* .ppdf* ou le fichier est un fichier texte ou image protégé (par exemple, *.ptxt* ou *.pjpg*)**
+- **Le fichier a une extension de nom de fichier *.ppdf* ou est un fichier texte ou image protégé (par exemple *.ptxt* ou *.pjpg*).**
 
     Le fichier fait l'objet d'une protection native en tant que copie en lecture seule.
 
@@ -72,10 +77,12 @@ Pour obtenir la liste complète des extensions de nom de fichier prises en charg
 > [!NOTE]
 > Si, après avoir confirmé que le fichier est bien protégé par Rights Management, il ne s’ouvre pas, téléchargez et utilisez l’[outil Analyseur RMS](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Suivez les instructions contenues dans l’outil pour rechercher la présence de problèmes éventuels sur votre ordinateur qui pourraient empêcher l’ouverture d’un document protégé.
 
-## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>Pour utiliser un fichier protégé (par exemple, l'éditer et l'imprimer)
+<a id="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file" class="xliff"></a>
+
+## Pour utiliser un fichier protégé (par exemple, l'éditer et l'imprimer)
 Si, après avoir ouvert le fichier protégé, vous voulez le lire, mais aussi, par exemple, le modifier, le copier et l’imprimer :
 
-- **L’extension du nom du fichier est* .pfile***
+- **Le fichier a une extension de nom de fichier *.pfile***
 
     Enregistrez le fichier ouvert en lui donnant une nouvelle extension de nom associée à l'application que vous souhaitez utiliser.
 
@@ -83,7 +90,7 @@ Si, après avoir ouvert le fichier protégé, vous voulez le lire, mais aussi, p
 
     Le nouveau fichier n'est plus protégé. Si vous souhaitez le protéger, vous devez le faire manuellement. Pour obtenir des instructions, consultez [Protéger un fichier sur un appareil (protéger sur place) à l’aide de l’application de partage Rights Management](sharing-app-protect-in-place.md).
 
-- **L’extension du nom du fichier est* .ppdf* ou le fichier est un fichier texte ou image protégé (par exemple, *.ptxt* ou *.pjpg*)**
+- **Le fichier a une extension de nom de fichier *.ppdf* ou est un fichier texte ou image protégé (par exemple *.ptxt* ou *.pjpg*).**
 
     Vous pouvez uniquement afficher le fichier et, même si vous le renommez ou le déplacez, sa protection subsiste.
 
@@ -94,14 +101,18 @@ Si, après avoir ouvert le fichier protégé, vous voulez le lire, mais aussi, p
     Les applications compatibles Rights Management savent comment ouvrir des fichiers protégés par d'autres applications compatibles Rights Management. Elles conservent également la protection appliquée au fichier, même si vous modifiez celui-ci ou l'enregistrez sous un autre nom ou dans un autre emplacement. Ces applications vous permettent d'utiliser le fichier conformément aux autorisations qui lui sont appliquées de sorte que, si vous disposez des autorisations nécessaires, vous l'utiliser. Par exemple, il se peut que vous puissiez modifier le fichier mais pas l'imprimer.
 
 
-## <a name="examples-and-other-instructions"></a>Exemples et autres instructions
+<a id="examples-and-other-instructions" class="xliff"></a>
+
+## Exemples et autres instructions
 Pour obtenir des exemples et des instructions concernant l’utilisation de l’application de partage Rights Management, voir les sections suivantes dans le Guide d’utilisation de l’application de partage Rights Management :
 
 -   [Exemples d’utilisation de l’application de partage RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Que voulez-vous faire ?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## <a name="see-also"></a>Voir aussi
+<a id="see-also" class="xliff"></a>
+
+## Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

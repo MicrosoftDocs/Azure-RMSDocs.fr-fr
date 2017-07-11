@@ -4,7 +4,7 @@ description: "Découvrez les restrictions imposées quand vous utilisez des clé
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 06/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ab3b25ebd04565f8cd0e9236c1241f38d4a2e8b2
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: cfc4243d15112545219f82964d09ce9ce238355d
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="byok-pricing-and-restrictions"></a>Tarifs et restrictions BYOK
+<a id="byok-pricing-and-restrictions" class="xliff"></a>
+
+# Tarifs et restrictions BYOK
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -27,7 +31,9 @@ La clé doit être stockée dans Azure Key Vault, qui nécessite un abonnement A
 
 Quand vous utilisez Azure Key Vault pour votre clé de locataire Azure Information Protection, nous vous recommandons d’utiliser un coffre de clés dédié à cette clé avec un abonnement dédié, pour garantir qu’il est utilisé seulement par le service Azure Rights Management. 
 
-## <a name="benefits-of-using-azure-key-vault"></a>Avantages de l’utilisation d’Azure Key Vault
+<a id="benefits-of-using-azure-key-vault" class="xliff"></a>
+
+## Avantages de l’utilisation d’Azure Key Vault
 
 En plus de la journalisation de l’utilisation d’Azure Information Protection, vous pouvez doubler avec la [journalisation d’Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-logging/) pour surveiller de façon indépendante que seul le service Azure Rights Management utilise cette clé. Si nécessaire, vous pouvez révoquer immédiatement l’accès à la clé en supprimant les autorisations sur le coffre de clés.
 
@@ -46,19 +52,17 @@ Outre la gestion des clés, Azure Key Vault offre à vos administrateurs de séc
 Pour plus d’informations sur Azure Key Vault, consultez [Qu’est-ce qu’Azure Key Vault ?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) et visitez le [blog de l’équipe Azure Key Vault](https://blogs.technet.microsoft.com/kv/) pour obtenir les informations les plus récentes et découvrir comment d’autres services utilisent cette technologie.
 
 
-## <a name="restrictions-when-using-byok"></a>Restrictions lors de l’utilisation de BYOK
+<a id="restrictions-when-using-byok" class="xliff"></a>
 
-Si vous avez des utilisateurs qui ont souscrit un compte gratuit en utilisant RMS en tant que particuliers, vous ne pouvez pas utiliser BYOK ni la journalisation de l’utilisation car cette configuration n’a pas d’administrateur de locataire pour configurer ces fonctionnalités.
-
-
-> [!NOTE]
-> Pour plus d’informations sur RMS for individuals, consultez [RMS for individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md).
-
-![BYOK ne prend pas en charge Exchange Online](../media/RMS_BYOK_noExchange.png)
+## Restrictions lors de l’utilisation de BYOK
 
 BYOK et la journalisation de l’utilisation fonctionnent de façon transparente avec chaque application qui s’intègre au service Azure Rights Management (Azure RMS) utilisé par Azure Information Protection. Sont compris : les services cloud, comme SharePoint Online, les serveurs locaux exécutant Exchange et SharePoint qui fonctionnent avec Azure RMS grâce au connecteur RMS, et les applications clientes comme Office 2016 et Office 2013. Vous obtenez des journaux d'utilisation de la clé, quelle que soit l'application effectuant des requêtes Azure RMS.
 
-Il existe une exception : Actuellement, la solution **Azure RMS BYOK**n'est pas compatible avec Exchange Online. Si vous souhaitez utiliser Exchange Online, nous vous recommandons de déployer Azure RMS maintenant en mode de gestion de clés par défaut dans lequel Microsoft génère et gère votre clé. Vous avez la possibilité de passer à la solution BYOK ultérieurement, par exemple, quand Exchange Online prend en charge Azure RMS BYOK. Toutefois, si vous ne pouvez pas attendre, une autre option consiste à déployer Azure RMS avec la solution BYOK et des fonctionnalités RMS réduites pour Exchange Online (les pièces jointes et messages électroniques non protégés restent entièrement fonctionnels) :
+Il existe une exception : Actuellement, la solution **Azure RMS BYOK n'est pas compatible avec Exchange Online** :
+
+![BYOK ne prend pas en charge Exchange Online](../media/RMS_BYOK_noExchange.png)
+
+Si vous souhaitez utiliser Exchange Online, nous vous recommandons de déployer Azure RMS maintenant en mode de gestion de clés par défaut dans lequel Microsoft génère et gère votre clé. Vous avez la possibilité de passer à la solution BYOK ultérieurement, par exemple, quand Exchange Online prend en charge Azure RMS BYOK. Toutefois, si vous ne pouvez pas attendre, une autre option consiste à déployer Azure RMS avec la solution BYOK et des fonctionnalités RMS réduites pour Exchange Online (les pièces jointes et messages électroniques non protégés restent entièrement fonctionnels) :
 
 -   Il n'est pas possible d'afficher les pièces jointes ou messages électroniques protégés dans Outlook Web Access.
 
@@ -76,7 +80,9 @@ Si vous effectuez une migration vers Azure RMS depuis AD RMS, vous avez peut-ê
 
 Parfois, l'exception BYOK d'Azure RMS pour Exchange Online n'est pas un problème dans la pratique. Par exemple, les organisations qui souhaitent utiliser la solution BYOK et la journalisation exécutent leurs applications de données (Exchange, SharePoint, Office) en local et utilisent Azure RMS pour les fonctionnalités qui ne sont pas facilement disponibles avec AD RMS en local (par exemple, collaboration avec d'autres sociétés et accès à partir de clients mobiles). La solution BYOK et la journalisation fonctionnent bien dans ce scénario et offrent aux organisations un contrôle total sur leur abonnement Azure RMS.
 
-## <a name="next-steps"></a>Étapes suivantes
+<a id="next-steps" class="xliff"></a>
+
+## Étapes suivantes
 
 Si vous avez décidé de gérer votre propre clé, accédez à [Implémentation de votre clé de client Azure Rights Management](plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
 

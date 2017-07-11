@@ -4,18 +4,21 @@ description: "Même si Azure Information Protection est fourni avec des étiquet
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/05/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: 91feb6dfd9421d7c5cccf53b45f8a0f35e74007d
-ms.sourcegitcommit: e3974cc1490581414084669632cad54b12b05d5a
+ms.openlocfilehash: ac12ab9023499d5aac632159ef689a8f10a91418
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Comment créer une étiquette pour Azure Information Protection
+<a id="how-to-create-a-new-label-for-azure-information-protection" class="xliff"></a>
+
+# Comment créer une étiquette pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
@@ -43,7 +46,11 @@ Utilisez les instructions suivantes pour ajouter une étiquette à la stratégie
 
 4. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
 
-## <a name="next-steps"></a>Étapes suivantes
+5. Si vous souhaitez que ces nouveaux nom d’étiquette et description s’affichent dans différentes langues pour les utilisateurs, suivez les procédures de [Guide pratique pour configurer des étiquettes pour des langues différentes](configure-policy-languages.md). 
+
+<a id="next-steps" class="xliff"></a>
+
+## Étapes suivantes
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 

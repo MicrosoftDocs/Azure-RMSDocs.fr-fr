@@ -4,18 +4,21 @@ description: "Identifiez les limitations, conditions préalables et recommandati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/02/2017
+ms.date: 05/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 984bc844187a419cb73ab30527278d1762b70fcb
-ms.sourcegitcommit: 45053160d956587fcf45e021065e452a4c48aa4c
+ms.openlocfilehash: ca0fe89178840917fba4ae672547f6852123d699
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
+<a id="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection" class="xliff"></a>
+
+# HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 
 >*S’applique à : Azure Information Protection*
 
@@ -54,7 +57,9 @@ Les utilisateurs ne peuvent pas faire la distinction entre une étiquette qui ut
 
 Les [stratégies délimitées](configure-policy-scope.md) constituent un bon moyen de vous assurer que les utilisateurs qui ont besoin d’appliquer la protection AD RMS sont les seuls à voir les étiquettes configurées pour la protection AD RMS. 
 
-## <a name="additional-limitations-when-using-hyok"></a>Limitations supplémentaires lors de l’utilisation de la solution HYOK
+<a id="additional-limitations-when-using-hyok" class="xliff"></a>
+
+## Limitations supplémentaires lors de l’utilisation de la solution HYOK
 
 En plus de ne pas prendre en charge les avantages associés à l’utilisation de la protection Azure RMS, l’utilisation conjuguée d’AD RMS et d’Azure Information Protection s’accompagne des limitations suivantes :
 
@@ -70,7 +75,9 @@ En plus de ne pas prendre en charge les avantages associés à l’utilisation d
     
     La seule solution de contournement consiste à fermer l’e-mail et à recommencer. La même restriction s’applique lorsque les utilisateurs commencent par choisir une étiquette qui applique la protection Azure RMS, puis la remplacent par une étiquette qui applique la protection AD RMS.
 
-## <a name="requirements-for-hyok"></a>Exigences liées à HYOK
+<a id="requirements-for-hyok" class="xliff"></a>
+
+## Exigences liées à HYOK
 
 Vérifiez que votre déploiement AD RMS répond aux exigences suivantes pour fournir la protection AD RMS pour Azure Information Protection.
 
@@ -102,7 +109,9 @@ Vérifiez que votre déploiement AD RMS répond aux exigences suivantes pour fou
 Pour obtenir des informations et des instructions sur le déploiement pour AD RMS, consultez [Services AD RMS (Active Directory Rights Management Services)](https://technet.microsoft.com/library/hh831364.aspx) dans la bibliothèque Windows Server. 
 
 
-## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Recherche d’informations pour spécifier la protection AD RMS avec une étiquette Azure Information Protection
+<a id="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label" class="xliff"></a>
+
+## Recherche d’informations pour spécifier la protection AD RMS avec une étiquette Azure Information Protection
 
 Lorsque vous configurez une étiquette pour la protection **HYOK (AD RMS)**, vous devez spécifier le GUID du modèle et l’URL de licence de votre cluster AD RMS. Vous trouverez ces deux valeurs dans la console AD RMS (Active Directory Rights Management Services) :
 
@@ -112,7 +121,9 @@ Lorsque vous configurez une étiquette pour la protection **HYOK (AD RMS)**, vo
     
     Si vous disposez d’une valeur de licence extranet et d’une valeur de licence intranet qui sont différentes : spécifiez uniquement la valeur extranet si vous souhaitez partager des documents ou des e-mails protégés avec des partenaires définis avec des approbations point à point explicites. Sinon, utilisez la valeur intranet et vérifiez que tous les ordinateurs clients qui utilisent la protection AD RMS avec Azure Information Protection se connectent au moyen d’une connexion intranet (par exemple, les ordinateurs distants utilisent une connexion VPN).
 
-## <a name="next-steps"></a>Étapes suivantes
+<a id="next-steps" class="xliff"></a>
+
+## Étapes suivantes
 
 Pour en savoir plus sur cette fonctionnalité et obtenir des conseils sur son utilisation, consultez l’annonce sur le billet de blog [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
 

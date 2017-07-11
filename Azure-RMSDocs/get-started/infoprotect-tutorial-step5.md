@@ -5,7 +5,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 05/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,15 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2b59cbd99430b5474280acc02b1a2c4a2738c793
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
-translationtype: HT
+ms.openlocfilehash: c9964e013d24bb1f42acb5f1e7a180d2a85a8576
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Étape 5 : Voir le partage de fichiers protégés en action et effectuer le suivi de votre document 
+<a id="step-5-see-sharing-of-protected-files-in-action-and-track-your-document" class="xliff"></a>
+
+# Étape 5 : Voir le partage de fichiers protégés en action et effectuer le suivi de votre document 
 
 >*S’applique à : Azure Information Protection*
 
@@ -25,7 +29,9 @@ Pour cette étape finale du didacticiel, recherchez un document Word ou une feui
 
 Ensuite, vous pouvez partager en toute sécurité ce document par courrier électronique. 
 
-## <a name="to-safely-share-your-document-by-email"></a>Partage en toute sécurité d’un document par courrier électronique
+<a id="to-safely-share-your-document-by-email" class="xliff"></a>
+
+## Partage en toute sécurité d’un document par courrier électronique
 
 1. Dans l’Explorateur de fichiers, cliquez avec le bouton droit sur votre document et sélectionnez **Classifier et protéger**. La boîte de dialogue **Classifier et protéger - Azure Information Protection** s’ouvre :
 
@@ -63,7 +69,9 @@ Ensuite, vous pouvez partager en toute sécurité ce document par courrier élec
 
 Maintenant que vous avez envoyé votre document protégé, vous pouvez demander à vos destinataires de l’ouvrir dès qu’ils le reçoivent. 
 
-## <a name="ask-your-recipients-to-open-the-emailed-document"></a>demande au destinataires d’ouvrir le document envoyé par courrier électronique
+<a id="ask-your-recipients-to-open-the-emailed-document" class="xliff"></a>
+
+## demande au destinataires d’ouvrir le document envoyé par courrier électronique
 
 Vos destinataires peuvent utiliser de nombreux appareils pour lire le document protégé que vous avez envoyé en pièce jointe d’un courrier électronique. Les appareils incluent les iPad, les iPhone, les tablettes et les téléphones Android, les ordinateurs Mac, ainsi que les ordinateurs Windows.
 
@@ -71,7 +79,9 @@ Demandez-leur de lire le message électronique que vous leur avez envoyé. En su
 
 Lorsqu’ils cliquent sur **S’inscrire**, Azure Information Protection vérifie si leur organisation possède un abonnement qui inclut le service de protection de données Azure Rights Management. Si ce n’est pas le cas, ils peuvent demander un compte gratuit.
 
-### <a name="instructions-for-recipient-to-view-the-protected-document-attachment"></a>Instructions pour le destinataire : affichage de la pièce jointe du document protégé
+<a id="instructions-for-recipient-to-view-the-protected-document-attachment" class="xliff"></a>
+
+### Instructions pour le destinataire : affichage de la pièce jointe du document protégé
 
 1. Sur un PC ou un appareil mobile avec Office installé, ouvrez la pièce jointe pour lire le document.  
 
@@ -83,7 +93,9 @@ Votre destinataire peut éventuellement transférer l’e-mail à d’autres per
 
 Maintenant que le destinataire a ouvert la pièce jointe et l’a éventuellement transférée à un autre utilisateur, vous êtes prêt à suivre votre document.
 
-## <a name="to-track-your-protected-document"></a>Suivi du document protégé
+<a id="to-track-your-protected-document" class="xliff"></a>
+
+## Suivi du document protégé
 
 1.  Ouvrez le document que vous avez protégé et partagé. La bannière d’informations confirme les paramètres de protection personnalisés que vous avez spécifiés :
 
@@ -116,12 +128,14 @@ Vous pouvez revenir sur ce site pour suivre les autres activités de votre docum
 |À propos de l’utilisation du site de suivi de document|[Suivre et révoquer vos documents](../rms-client/client-track-revoke.md)
 
 
-## <a name="next-steps"></a>Étapes suivantes
+<a id="next-steps" class="xliff"></a>
+
+## Étapes suivantes
 
 Maintenant que vous avez vu comment personnaliser la stratégie Azure Information Protection par défaut et comment fonctionne l’étiquetage d’un document Word, essayez d’appliquer certains autres paramètres pour voir comment ils fonctionnent dans les autres applications Office qui prennent en charge Azure Information Protection : Excel, PowerPoint et Outlook. Si ces applications étaient ouvertes quand vous avez installé le client Azure Information Protection, fermez et rouvrez-les avant d’essayer de les utiliser avec Azure Information Protection.
 
 Essayez de partager davantage de documents, suivez leur utilisation et vérifiez le fonctionnement de la révocation des documents.
 
-Vous pouvez ensuite juger utile de consulter certains [forums aux questions](faqs.md) sur Azure Information Protection et de lire d’autres articles de la documentation. Mais si vous êtes prêt à déployer Azure Information Protection pour votre organisation, vous pouvez passer directement à la [Feuille de route pour le déploiement d’Azure Information Protection](../plan-design/deployment-roadmap.md). 
+Vous pouvez ensuite juger utile de revenir à la page [Démarrage rapide](faqs.md) dans le portail Azure, de consulter certains **forums aux questions** sur Azure Information Protection et de lire d’autres articles de la documentation. Mais si vous êtes prêt à déployer Azure Information Protection pour votre organisation, vous pouvez passer directement à la [Feuille de route pour le déploiement d’Azure Information Protection](../plan-design/deployment-roadmap.md). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

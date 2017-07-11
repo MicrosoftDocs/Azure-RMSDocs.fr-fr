@@ -4,14 +4,15 @@ Vos destinataires peuvent utiliser de nombreux appareils pour lire le document p
 
 Demandez-leur de lire le message électronique que vous leur avez envoyé. Avant de voir votre message électronique, ils verront le message suivant :
 
-**L’expéditeur a protégé les pièces jointes avec Microsoft RMS. Vous devez** [vous connecter](http://aka.ms/rms)
-      **pour les ouvrir.**
+**L’expéditeur a protégé les pièces jointes avec Microsoft RMS. Vous devez** [vous connecter](http://aka.ms/rms) **pour les ouvrir.**
 
 Lorsqu’ils cliquent sur le lien, ils sont redirigés vers les instructions pour installer l’application de partage RMS et pour se connecter à un compte gratuit, si nécessaire. Le compte gratuit leur accorde un abonnement à RMS for individuals, et garantit que les utilisateurs autorisés pourront toujours lire un document protégé, même si leur organisation ne dispose pas d’Azure RMS. Ils peuvent ensuite lire les pièces jointes protégées à l’aide des instructions suivantes.
 
 ![Captures d’écran du didacticiel RM](../media/AzRMS_Tutorial_4_Screenshots.png)
 
-#### <a name="to-view-the-protected-document-attachment"></a>Affichage de la pièce jointe du document protégé
+<a id="to-view-the-protected-document-attachment" class="xliff"></a>
+
+#### Affichage de la pièce jointe du document protégé
 
 1.  Étant donné qu’Azure Rights Management a protégé un document Word, il existe deux pièces jointes au courrier électronique. Il s’agit en fait de deux versions du même fichier, mais avec différentes extensions. Ouvrez la version avec l’extension de nom de fichier **.ppdf** (**Confidential.ppdf**).
 

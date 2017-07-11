@@ -4,17 +4,21 @@ description: "Présentation du service Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: fc25cd11d950199f7ccd8e4e86e4d915c7fb6a95
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
-translationtype: HT
+ms.openlocfilehash: 0ca0c2aa3d7b21c3e1143af51c9518aa85b7ee93
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
+<a id="what-is-azure-information-protection" class="xliff"></a>
+
+# Qu’est-ce qu’Azure Information Protection ?
 
 >*S’applique à : Azure Information Protection*
 
@@ -26,7 +30,9 @@ L’image suivante illustre Azure Information Protection en action. L’administ
 
 Une fois que votre contenu est classifié (et éventuellement protégé), vous pouvez suivre et contrôler son utilisation. Vous pouvez analyser les flux de données pour obtenir des informations sur vos activités, détecter les comportements à risque et prendre des mesures correctives, suivre l’accès aux documents, empêcher la fuite de données ou une mauvaise utilisation des données, etc.
 
-## <a name="how-labels-apply-classification"></a>Comment les étiquettes appliquent la classification
+<a id="how-labels-apply-classification" class="xliff"></a>
+
+## Comment les étiquettes appliquent la classification
 
 Les étiquettes Azure Information Protection vous permettent d’appliquer une classification aux documents et e-mails. Ainsi, la classification est identifiable à tout moment, quel que soit l’endroit où les données sont stockées ou avec qui elles sont partagées. Les étiquettes intègrent les marquages visuels comme les en-têtes, pieds de page ou filigranes. Des métadonnées sont ajoutées aux fichiers et aux en-têtes des messages en texte clair afin que les autres services (tels que les solutions de prévention de perte de données) puissent identifier la classification et prendre les mesures appropriées. 
 
@@ -35,7 +41,9 @@ Par exemple, le message suivant a été classifié comme « Interne ». Cette 
 ![Exemple d’en-têtes et de pied de page d’e-mail montrant la classification Azure Information Protection](../media/example-email-footerv2.png)
 
 
-## <a name="how-data-is-protected"></a>Comment les données sont protégées
+<a id="how-data-is-protected" class="xliff"></a>
+
+## Comment les données sont protégées
 
 La technologie de protection utilise *Azure Rights Management* (ou Azure RMS, dans sa forme abrégée courante). Cette technologie est intégrée à d’autres services cloud et applications Microsoft, tels qu’Office 365 et Azure Active Directory. Vous pouvez aussi l’utiliser avec vos propres applications métier et avec les solutions de protection des informations d’autres éditeurs de logiciels, que ces applications et solutions soient locales ou dans le cloud.
 
@@ -43,7 +51,9 @@ Cette technologie de protection utilise des stratégies de chiffrement, d’iden
 
 Par exemple, vous pouvez configurer un document (rapport, feuille de calcul de prévision de ventes, etc.) pour qu’il soit accessible uniquement par les personnes de votre organisation et déterminer s’il peut être modifié, s’il est disponible en lecture seule uniquement ou empêcher son impression. Vous pouvez configurer des messages électroniques de la même façon, et de plus, empêcher leur transfert ou l'utilisation de l'option Répondre à tous. Ces tâches de protection peuvent être simplifiées et rationalisées à l’aide de *modèles de gestion des droits*.
 
-### <a name="rights-management-templates"></a>Modèles de gestion des droits
+<a id="rights-management-templates" class="xliff"></a>
+
+### Modèles de gestion des droits
 
 Dès que vous activez le service Azure Rights Management, deux modèles par défaut sont automatiquement créés qui restreignent l’accès aux données aux utilisateurs appartenant à votre organisation. Vous pouvez utiliser ces modèles pour empêcher immédiatement une fuite des données hors de votre organisation. Vous pouvez également compléter ces modèles par défaut en configurant vos propres modèles personnalisés qui appliquent des contrôles plus restrictifs.
 
@@ -59,7 +69,9 @@ Les mêmes modèles peuvent être sélectionnés à partir du centre d’adminis
 
 Pour plus d’informations sur la protection Azure Rights Management, consultez [Qu’est-ce qu’Azure Rights Management ?](what-is-azure-rms.md)
 
-## <a name="integration-with-end-user-workflows"></a>Intégration aux workflows de l’utilisateur final
+<a id="integration-with-end-user-workflows" class="xliff"></a>
+
+## Intégration aux workflows de l’utilisateur final
 
 Azure Information Protection s’intègre aux workflows existants des utilisateurs finaux quand le client Azure Information Protection est installé. Ce client installe la barre Information Protection dans les applications Office, illustrée dans la première image. La même barre est ajoutée à Excel, PowerPoint et Outlook. Exemple :
 
@@ -80,7 +92,9 @@ Après qu’un document a été protégé, les utilisateurs et administrateurs p
 ![Icône Révoquer l’accès du site de suivi de document](../media/tracking-site-revoke-access-icon.png)
 
 
-## <a name="resources-for-azure-information-protection"></a>Ressources pour Azure Information Protection
+<a id="resources-for-azure-information-protection" class="xliff"></a>
+
+## Ressources pour Azure Information Protection
 
 - Annonce : [Azure Information Protection est maintenant mis à la disposition générale](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/04/azure-information-protection-is-now-generally-available/)
 
@@ -109,7 +123,9 @@ Après qu’un document a été protégé, les utilisateurs et administrateurs p
     - [BRK2128: Send secure email to anyone with the power of Microsoft Office 365 and Azure Information Protection (Envoyer un e-mail sécurisé à l’aide de la puissance de Microsoft Office 365 et d’Azure Information Protection)](https://myignite.microsoft.com/videos?q=BRK2128)
 
 
-## <a name="next-steps"></a>Étapes suivantes
+<a id="next-steps" class="xliff"></a>
+
+## Étapes suivantes
 
 Lisez le billet de blog [Azure Information Protection: Ready, set, protect!](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/).
 

@@ -4,7 +4,7 @@ description: "Identifiez les applications qui utilisent les API RMS pour prendre
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/20/2017
+ms.date: 05/31/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ae74cd40811f7af1da0c7288f574617f6fdaefa
-ms.sourcegitcommit: c7078f822cbcbb2bb33b841e8597c2a4163a54da
-translationtype: HT
+ms.openlocfilehash: 2c80ff43c07eab80527a3cb764ff3030f2459657
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
+<a id="applications-that-support-azure-rights-management-data-protection" class="xliff"></a>
+
+# Applications prenant en charge la protection des données Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -27,15 +31,17 @@ Pour ces applications et solutions, la prise en charge de Rights Management est 
 
 Sauf indication contraire, les fonctionnalités prises en charge s’appliquent à Azure RMS et à AD RMS. Par ailleurs, la prise en charge d’AD RMS sur iOS, Android, macOS et Windows Phone 8.1 nécessite l’[Extension d’appareils mobiles Active Directory Rights Management Services](https://technet.microsoft.com/library/dn673574.aspx).
 
-## <a name="rms-enlightened-applications"></a>Applications compatibles avec RMS
+<a id="rms-enlightened-applications" class="xliff"></a>
+
+## Applications compatibles avec RMS
 
 Le tableau suivant affiche les applications clientes compatibles avec RMS proposées par Microsoft et d’autres fournisseurs de logiciels.
 
 Informations sur les colonnes du tableau :
 
--   **PDF protégé** : fichiers avec l’extension de nom de fichier .ppdf qui sont créés automatiquement quand vous utilisez l’application de partage RMS pour partager des fichiers Office et des fichiers PDF par e-mail. L’application de partage RMS, l’application Azure Information Protection pour iOS et Android et le client Azure Information Protection pour Windows incluent un lecteur pour les fichiers PDF protégés. Si vous avez précédemment créé des fichiers PDF protégés avec Azure RMS or AD RMS, utilisez Foxit Reader ou Nitro Pro pour continuer à lire ces fichiers sur des appareils Windows, iOS et Android.
+-   **PDF protégé** : ces fichiers peuvent avoir une extension de nom de fichier .pdf ou .ppdf.
 
--   **E-mail** : les clients de messagerie répertoriés peuvent protéger le message électronique proprement dit, ce qui a pour effet de protéger automatiquement tout fichier joint. Dans ce scénario, la fonctionnalité d’aperçu du client peut afficher le contenu protégé (message et pièce jointe) aux destinataires autorisés. Cependant, si une pièce jointe est protégée mais pas le message électronique qui la contient, la fonctionnalité d’aperçu du client ne peut pas afficher la pièce jointe protégée aux destinataires autorisés.
+-   **E-mail** : les clients de messagerie répertoriés peuvent protéger le message électronique proprement dit, ce qui a pour effet de protéger automatiquement tout fichier Office joint qui n’est pas déjà protégé. Dans ce scénario, la fonctionnalité d’aperçu du client peut afficher le contenu protégé (message et pièce jointe) aux destinataires autorisés. Cependant, si une pièce jointe est protégée mais pas le message électronique qui la contient, la fonctionnalité d’aperçu du client ne peut pas afficher la pièce jointe protégée aux destinataires autorisés.
 
 -   **Autres types de fichier** : les fichiers texte et image incluent les fichiers ayant une extension de nom de fichier .txt, .xml, .jpg et .jpeg. Ces fichiers changent d’extension de nom de fichier une fois qu’ils sont protégés en mode natif par Rights Management, puis passent en lecture seule. Les fichiers qui ne peuvent pas être protégés en mode natif ont une extension de nom de fichier .pfile une fois qu’ils sont protégés de manière générique par Rights Management. Pour plus d’informations, consultez [Types de fichiers pris en charge](../rms-client/client-admin-guide-file-types.md) dans le guide de l’administrateur du client Azure Information Protection.
 
@@ -52,34 +58,52 @@ Informations sur les colonnes du tableau :
 |**Blackberry 10**|Non prise en charge|Non pris en charge|Messagerie Blackberry [[4]](#footnote-4)|Non pris en charge|
 
 
-###### <a name="footnote-1"></a>Note 1
+<a id="footnote-1" class="xliff"></a>
+
+###### Note 1
 Prend en charge l’affichage de contenu protégé.
 
-###### <a name="footnote-2"></a>Note 2 
+<a id="footnote-2" class="xliff"></a>
+
+###### Note 2 
 Prend en charge l’affichage des documents protégés quand un document non protégé est chargé dans une bibliothèque protégée dans SharePoint Online et OneDrive Entreprise. 
 
-###### <a name="footnote-3"></a>Note 3
+<a id="footnote-3" class="xliff"></a>
+
+###### Note 3
 Si un destinataire reçoit un e-mail protégé et qu’il n’utilise pas Exchange comme serveur de messagerie, ou si l’émetteur appartient à une autre organisation, ce contenu ne peut être ouvert que dans un client de messagerie riche, comme Outlook. Ce contenu ne peut être ouvert à partir d’Outlook Web Access.
 
-###### <a name="footnote-4"></a>Note 4
+<a id="footnote-4" class="xliff"></a>
+
+###### Note 4
 Utilise l’IRM Exchange ActiveSync, qui doit être activée par l’administrateur Exchange. Les utilisateurs peuvent afficher, répondre et répondre à tous pour les messages électroniques protégés, mais ne peuvent pas protéger eux-mêmes de nouveaux messages.
 
 Si un destinataire reçoit un e-mail protégé et qu’il n’utilise pas Exchange comme serveur de messagerie, ou si l’émetteur appartient à une autre organisation, ce contenu ne peut être ouvert que dans un client de messagerie riche, comme Outlook. Ce contenu ne peut pas être ouvert à partir d’Outlook Web Access ou de clients de messagerie mobile via Exchange Active Sync IRM.
 
-###### <a name="footnote-5"></a>Note 5
-Prend en charge l’affichage et la modification de documents protégés pour iOS ; prend en charge l’affichage de documents protégés pour Android. Pour plus d’informations, consultez le billet suivant sur le blog Office : [Azure Rights Management support comes to Office for iPad and iPhone](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)
+<a id="footnote-5" class="xliff"></a>
 
-###### <a name="footnote-6"></a>Note 6
+###### Note 5
+Prend en charge l’affichage et l’édition de documents protégés pour iOS. Pour plus d’informations, consultez le billet suivant sur le blog Office : [Azure Rights Management support comes to Office for iPad and iPhone](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)
+
+<a id="footnote-6" class="xliff"></a>
+
+###### Note 6
 Pour plus d’informations, consultez la [documentation produit Citrix pour WorxMail](http://docs.citrix.com/en-us/worx-mobile-apps/10/xmob-worx-mail.html).
 
-###### <a name="footnote-7"></a>Note 7
+<a id="footnote-7" class="xliff"></a>
+
+###### Note 7
 Pour plus d’informations, consultez le billet suivant sur le blog Office : [OWA for Android now available on select devices](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)
 
-###### <a name="footnote-8"></a>Note 8
+<a id="footnote-8" class="xliff"></a>
+
+###### Note 8
 Pour plus d’informations, consultez le billet suivant sur le blog Enterprise and Mobility : [SealPath apporte une protection RMS à AutoCAD](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
 
 
-### <a name="more-information-about-azure-rms-support-for-office"></a>Plus d’informations sur la prise en charge d’Azure RMS pour Office
+<a id="more-information-about-azure-rms-support-for-office" class="xliff"></a>
+
+### Plus d’informations sur la prise en charge d’Azure RMS pour Office
 
 Azure RMS est étroitement intégré aux applications Word, Excel, PowerPoint et Outlook, où cette fonctionnalité est souvent appelée Gestion des droits relatifs à l’information (IRM). Les éditions clientes Office suivantes prennent en charge la protection des fichiers et des e-mails à l’aide d’Azure RMS :
 
@@ -101,7 +125,9 @@ Azure RMS avec Office Professionnel Plus 2010 ou Office Professionnel 2010
 
 - Ne prend pas en charge l’authentification basée sur les formulaires pour les comptes d’utilisateur fédéré. Ces comptes doivent utiliser l’authentification intégrée de Windows.
 
-### <a name="more-information-about-the-azure-information-protection-app-for-ios-and-android"></a>Pour plus d’informations sur l’application Azure Information Protection pour iOS et Android
+<a id="more-information-about-the-azure-information-protection-app-for-ios-and-android" class="xliff"></a>
+
+### Pour plus d’informations sur l’application Azure Information Protection pour iOS et Android
 
 L’application Azure Information Protection pour iOS et Android remplace l’application de partage RMS pour ces appareils. Elle fournit les mêmes fonctionnalités et, en plus, prend en charge les e-mails protégés par des droits et les fichiers PDF protégés par des droits sur SharePoint Online.
 
@@ -110,7 +136,9 @@ Si vos appareils iOS et Android sont inscrits par Microsoft Intune, vous pouvez 
 Pour plus d’informations, consultez [FAQs for Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md) (Forum Aux Questions concernant l’application Azure Information Protection pour iOS et Android).
 
 
-### <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Plus d’informations sur le client Azure Information Protection pour Windows
+<a id="more-information-about-the-azure-information-protection-client-for-windows" class="xliff"></a>
+
+### Plus d’informations sur le client Azure Information Protection pour Windows
 
 Ce client remplace désormais l’application de partage Rights Management pour Windows. 
 
@@ -124,7 +152,9 @@ Pour plus d'informations, consultez les ressources suivantes :
 
 Téléchargez l’application correspondante à l’aide des liens de la [page Microsoft Azure Information Protection](http://go.microsoft.com/fwlink/?LinkId=303970).
 
-### <a name="more-information-about-the-rights-management-sharing-application"></a>Plus d’informations sur l’application de partage Rights Management
+<a id="more-information-about-the-rights-management-sharing-application" class="xliff"></a>
+
+### Plus d’informations sur l’application de partage Rights Management
 
 Cette application est remplacée par le client Azure Information Protection. Elle reste requise pour les ordinateurs Mac et les appareils mobiles Windows Phone. 
 
@@ -139,7 +169,9 @@ Pour plus d'informations, consultez les ressources suivantes :
 Télécharger l’application pour les ordinateurs Mac et Windows Phone en utilisant les liens sur la [page Microsoft Azure Information Protection](http://go.microsoft.com/fwlink/?LinkId=303970).
 
 
-### <a name="more-information-about-other-applications-that-support-azure-information-protection"></a>Plus d’informations sur les autres applications qui prennent en charge Azure Information Protection
+<a id="more-information-about-other-applications-that-support-azure-information-protection" class="xliff"></a>
+
+### Plus d’informations sur les autres applications qui prennent en charge Azure Information Protection
 
 En plus des applications indiquées dans le tableau, toute application qui prend en charge les API du service Azure Rights Management peut être intégrée à Azure Information Protection, notamment :
 
@@ -149,7 +181,9 @@ En plus des applications indiquées dans le tableau, toute application qui prend
 
 Pour plus d’informations, consultez le [guide du développeur Azure Information Protection](../develop/developers-guide.md).
 
-### <a name="applications-that-are-not-supported-by-azure-rms"></a>Applications non prises en charge par Azure RMS
+<a id="applications-that-are-not-supported-by-azure-rms" class="xliff"></a>
+
+### Applications non prises en charge par Azure RMS
 
 Les applications suivantes ne sont pas prises en charge actuellement par Azure RMS :
 
@@ -163,7 +197,9 @@ En outre, l’application de partage RMS et le client Azure Information Protecti
 
 -   Pour les ordinateurs Windows : nécessite au minimum la version Windows 7 Service Pack 1
 
-## <a name="rms-enlightened-solutions"></a>Solutions compatibles avec RMS
+<a id="rms-enlightened-solutions" class="xliff"></a>
+
+## Solutions compatibles avec RMS
 
 Le tableau suivant affiche les solutions compatibles avec RMS proposées par différents fournisseurs de logiciels.
 
@@ -184,7 +220,9 @@ Si vous êtes fournisseur de logiciels et que vous proposez une solution compati
 |Security Sheriff|CryptZone |Gestion des accès sur SharePoint et protection des documents, en fonction de leurs autorisations d’accès et de leur classification.
 |Symantec DLP|Symantec |Détection et analyse des fichiers protégés.
 
-## <a name="next-steps"></a>Étapes suivantes
+<a id="next-steps" class="xliff"></a>
+
+## Étapes suivantes
 Pour vérifier les autres conditions requises, consultez [Configuration requise pour Azure Information Protection](requirements-azure-rms.md).
 
 Pour plus d’informations sur la prise en charge d’Azure RMS par les applications les plus courantes, consultez [Comment les applications prennent en charge le service Azure Rights Management](../understand-explore/applications-support.md).

@@ -1,10 +1,10 @@
 ---
-title: "Afficher et utiliser des fichiers protégés à l’aide du client AIP"
-description: "Instructions pour afficher et utiliser un fichier protégé qui vous oblige à installer le client Azure Information Protection."
+title: "Afficher et utiliser des documents protégés à l’aide du client AIP"
+description: "Instructions pour afficher et utiliser un document protégé qui vous oblige à installer le client Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/10/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,23 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e68a0b0519cf8a613cbb8c8570eda0669e20e10b
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 6d73a8651b3bea3b8773b4aba49c7d2e85873a80
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Afficher et utiliser des fichiers qui ont été protégés par Rights Management
+<a id="view-and-use-files-that-have-been-protected-by-rights-management" class="xliff"></a>
+
+# Afficher et utiliser des fichiers qui ont été protégés par Rights Management
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 
-Souvent, vous pouvez afficher un fichier protégé simplement en l’ouvrant. Par exemple, vous pouvez double-cliquer sur une pièce jointe à un e-mail ou sur un fichier dans l’Explorateur de fichiers, ou bien vous pouvez cliquer sur un lien vers un fichier.
+Souvent, vous pouvez afficher un document protégé simplement en l’ouvrant. Par exemple, vous pouvez double-cliquer sur une pièce jointe à un e-mail ou sur un fichier dans l’Explorateur de fichiers, ou bien vous pouvez cliquer sur un lien vers un fichier.
 
-Si le fichier ne s’ouvre pas, vous pouvez utiliser la **visionneuse Azure Information Protection** pour l’ouvrir. Cette visionneuse s’installe automatiquement dans le cadre du client Azure Information Protection, ou vous pouvez l’installer séparément. Vous pouvez installer le client et la visionneuse à partir de la page [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft. Pour plus d’informations sur l’installation du client, consultez [Télécharger et installer le client Azure Information Protection](install-client-app.md).
+Si les fichiers ne s’ouvrent pas immédiatement, la **visionneuse Azure Information Protection** pourrait être en mesure de les ouvrir. Cette visionneuse peut ouvrir des fichiers texte protégés, des fichiers image protégés, des fichiers PDF protégés et tous les fichiers ayant une extension de nom de fichier **.pfile**.
+
+La visionneuse s’installe automatiquement dans le cadre du client Azure Information Protection, ou vous pouvez l’installer séparément. Vous pouvez installer le client et la visionneuse à partir de la page [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft. Pour plus d’informations sur l’installation du client, consultez [Télécharger et installer le client Azure Information Protection](install-client-app.md).
 
 > [!NOTE]
 > Bien que l’installation du client fournisse davantage de fonctionnalités, elle requiert des autorisations de l’administrateur local et le fonctionnement intégral requiert un service correspondant à votre organisation :
@@ -35,7 +41,18 @@ Si le fichier ne s’ouvre pas, vous pouvez utiliser la **visionneuse Azure Info
 > 
 > Installez la visionneuse si vous avez reçu un document protégé par un utilisateur d’une autre organisation ou si vous n’avez pas d’autorisations d’administrateur local sur votre PC.
 
-## <a name="prompts-for-authentication"></a>Invites pour l’authentification
+Pour être en mesure d’ouvrir un document protégé, l’application doit être « Compatible RMS ». Les applications Office et la visionneuse Azure Information Protection sont des exemples d’applications compatibles RMS. Pour obtenir une liste d’applications par type et les appareils pris en charge, consultez le tableau [applications compatibles RMS](../get-started/requirements-applications.md#rms-enlightened-applications).  
+<a id="messagerpmsg-as-an-email-attachment" class="xliff"></a>
+
+## Message.rpmsg en tant que pièce jointe de courrier électronique
+
+Si vous voyez **message.rpmsg** en tant que pièce jointe dans un e-mail, il ne s’agit pas d’un document protégé mais d’un message électronique protégé qui s’affiche comme pièce jointe. Vous ne pouvez pas utiliser la visionneuse Azure Information Protection pour Windows pour afficher ce message électronique protégé sur votre PC Windows. Vous devez à la place disposer d’une application de messagerie pour Windows qui prend en charge la protection Rights Management, comme Office Outlook. Ou vous pouvez utiliser Outlook sur le web.
+
+Toutefois, si vous avez un appareil iOS ou Android, vous pouvez utiliser l’application Azure Information Protection pour ouvrir ces messages électroniques protégés. Vous pouvez télécharger cette application pour ces appareils mobiles à partir de la page [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft.
+
+<a id="prompts-for-authentication" class="xliff"></a>
+
+## Invites pour l’authentification
 
 Pour que vous puissiez afficher le fichier protégé, le service Rights Management qui a été utilisé pour protéger le fichier doit confirmer que vous y êtes autorisé. Pour ce faire, il vérifie vos nom d’utilisateur et mot de passe. Dans certains cas, cette opération peut être mise en cache de sorte que vous ne voyez pas d'invite vous demandant vos informations d'identification. Dans d'autres cas, vous êtes invité à fournir vos informations d'identification.
 
@@ -47,7 +64,9 @@ Si votre organisation ne dispose pas d’un compte cloud que vous pouvez utilise
     
 -   Pour plus d’informations, consultez [RMS for individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## <a name="to-view-and-use-a-protected-file"></a>Pour afficher et utiliser un fichier protégé
+<a id="to-view-and-use-a-protected-document" class="xliff"></a>
+
+## Pour afficher et utiliser un document protégé
 
 1. Ouvrez le fichier protégé (par exemple, en double-cliquant sur le fichier ou la pièce jointe, ou en cliquant sur le lien vers le fichier). Si vous êtes invité à sélectionner une application, sélectionnez **Visionneuse Azure Information Protection**. 
 
@@ -69,7 +88,9 @@ Si votre organisation ne dispose pas d’un compte cloud que vous pouvez utilise
 > Si le fichier protégé ne s’ouvre pas, téléchargez et utilisez l’[outil Analyseur RMS](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Suivez les instructions contenues dans l’outil pour rechercher la présence de problèmes éventuels sur votre ordinateur qui pourraient empêcher l’ouverture d’un document protégé.
 
 
-## <a name="other-instructions"></a>Autres instructions
+<a id="other-instructions" class="xliff"></a>
+
+## Autres instructions
 Plus d’instructions pratiques dans le guide de l’utilisateur Azure Information Protection :
 
 -   [Que voulez-vous faire ?](client-user-guide.md#what-do-you-want-to-do)

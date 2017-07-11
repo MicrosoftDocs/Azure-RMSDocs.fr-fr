@@ -4,7 +4,7 @@ description: "Détails techniques destinés aux administrateurs de réseaux d’
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 06/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e168c68cfeb14b40c0922426e2d226c28dac26ff
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: b1bb3308dc6e0561109602411fea3e63252fb9d4
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Présentation technique de l’application de partage Microsoft Rights Management et détails sur la protection
+<a id="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application" class="xliff"></a>
+
+# Présentation technique de l’application de partage Microsoft Rights Management et détails sur la protection
 
 >*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
@@ -39,7 +43,9 @@ Avec la version d’octobre 2013 de RMS, vous pouvez protéger des documents en 
 
 Pour obtenir des informations sur le déploiement, consultez [Déploiement automatique de l’application de partage Microsoft Rights Management](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application).
 
-## <a name="levels-of-protection--native-and-generic"></a>Niveaux de protection : natif et générique
+<a id="levels-of-protection--native-and-generic" class="xliff"></a>
+
+## Niveaux de protection : natif et générique
 L’application de partage Microsoft Rights Management prend en charge la protection à deux niveaux différents, comme décrit dans le tableau suivant.
 
 |Type de protection|Natif|Générique|
@@ -49,7 +55,9 @@ L’application de partage Microsoft Rights Management prend en charge la protec
 |Valeur par défaut pour les types de fichier|Il s'agit du niveau de protection par défaut pour les types de fichiers suivants :<br /><br />- Fichiers texte et image<br /><br />- Fichiers Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Fichiers PDF (Portable Document Format) (.pdf)<br /><br />Pour plus d’informations, consultez la section suivante, [Types de fichier pris en charge et extensions de nom de fichier](#supported-file-types-and-file-name-extensions).|Il s’agit de la protection par défaut pour tous les autres types de fichier (comme .vsdx, .rtf, etc.), qui ne sont pas pris en charge par la fonctionnalité de protection complète.|
 Vous pouvez modifier le niveau de protection par défaut appliqué par l'application de partage RMS. Vous pouvez remplacer le niveau de protection native par défaut par une protection générique, et inversement, et même empêcher que l'application de partage RMS n'applique la protection. Pour plus d’informations, consultez la section [Modification du niveau de protection par défaut des fichiers](#changing-the-default-protection-level-of-files) dans cet article.
 
-## <a name="supported-file-types-and-file-name-extensions"></a>Types de fichier pris en charge et extensions de nom de fichier
+<a id="supported-file-types-and-file-name-extensions" class="xliff"></a>
+
+## Types de fichier pris en charge et extensions de nom de fichier
 Le tableau suivant répertorie les types de fichier pris en charge en mode natif par l'application de partage Microsoft Rights Management. Pour ces types de fichier, l'extension de nom de fichier d'origine est modifiée lorsque la protection native est appliquée, et ces fichiers sont alors en lecture seule.
 
 En outre, quand l'application de partage RMS protège en mode natif un fichier Word, Excel ou PowerPoint que les utilisateurs protègent par le partage, cette action crée automatiquement un deuxième fichier, qui est une copie du fichier d'origine avec le même nom, mais avec une extension de nom de fichier **.ppdf** ¹. Cette version du fichier permet de garantir que les destinataires qui installent l'application de partage RMS peuvent toujours ouvrir le fichier auquel une protection native est appliquée.
@@ -64,7 +72,7 @@ Pour les fichiers protégés de manière générique, l'extension de nom de fich
 |.txt|.ptxt|
 |.xml|.pxml|
 |.jpg|.pjpg|
-|.jpeg|.ppng|
+|.jpeg|.pjeg|
 |.pdf|.ppdf|
 |.png|.ppng|
 |.tif|.ptif|
@@ -82,7 +90,9 @@ Le tableau suivant répertorie les types de fichier pris en charge en mode natif
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
-### <a name="changing-the-default-protection-level-of-files"></a>Modification du niveau de protection par défaut des fichiers
+<a id="changing-the-default-protection-level-of-files" class="xliff"></a>
+
+### Modification du niveau de protection par défaut des fichiers
 Vous pouvez modifier la façon dont l'application de partage RMS protège les fichiers en modifiant le Registre. Par exemple, vous pouvez forcer les fichiers qui prennent en charge la protection native à être protégés de manière générique par l'application de partage RMS.
 
 Raisons pour lesquelles vous pourriez vouloir procéder ainsi :
@@ -129,7 +139,9 @@ Vous pouvez apporter des modifications similaires au Registre pour d'autres scé
 
 -   **Off**: bloquer la protection
 
-## <a name="see-also"></a>Voir aussi
+<a id="see-also" class="xliff"></a>
+
+## Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

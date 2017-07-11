@@ -4,7 +4,7 @@ description: "Identifiez les différents niveaux de contrôle et de responsabili
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 05/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 24368df01f680958310b8d01c4f9a5a939e6f706
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 10ce24e72dae1225505592508d4bf88cadb131a2
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="operations-for-your-azure-information-protection-tenant-key"></a>Opérations pour votre clé de locataire Azure Information Protection
+<a id="operations-for-your-azure-information-protection-tenant-key" class="xliff"></a>
+
+# Opérations pour votre clé de locataire Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -36,8 +40,9 @@ Le tableau suivant présente les opérations que vous pouvez faire, selon la typ
 
 Après avoir identifié la typologie implémentée, sélectionnez l’une des sections suivantes pour obtenir plus d’informations sur ces opérations pour votre clé de locataire Azure Information Protection :
 
-
 - [Clé de locataire gérée par Microsoft](operations-microsoft-managed-tenant-key.md)
 - [Clé de locataire gérée par le client](operations-customer-managed-tenant-key.md)
+
+Toutefois, si vous souhaitez créer une clé de client Azure Information Protection en important un domaine de publication approuvé (TPD) à partir d’Active Directory Rights Management Services, cette opération d’importation fait partie de la [migration d’AD RMS vers Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -4,7 +4,7 @@ description: "Instructions et informations pour que les administrateurs gèrent 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,27 +12,31 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 04e04f6e3243283b98df94143773e4aa81351f48
-ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.openlocfilehash: e39097a4786ddd71082eda4a5b445b3fb682f6b7
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="using-powershell-with-the-azure-information-protection-client"></a>Utiliser PowerShell avec le client Azure Information Protection
+<a id="using-powershell-with-the-azure-information-protection-client" class="xliff"></a>
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
+# Utiliser PowerShell avec le client Azure Information Protection
+
+>*S’applique à : Services Active Directory Rights Management, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 Lorsque vous installez le client Azure Information Protection, les commandes PowerShell sont installées automatiquement afin que vous puissiez gérer le client en exécutant des commandes que vous pouvez placer dans des scripts pour l’automatisation.
 
 Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**, qui remplace le module RMSProtection installé avec l’outil de protection RMS. Si vous disposez de l’outil RMSProtection lorsque vous installez le client Azure Information Protection, le module RMSProtection est automatiquement désinstallé.
 
-Le module AzureInformationProtection inclut toutes les applets de commande Rights Management de l’outil de protection RMS et deux nouvelles applets de commande qui utilisent le service Azure Information Protection (AIP) pour l’étiquetage :
+Le module AzureInformationProtection inclut toutes les applets de commande Rights Management de l’outil de protection RMS et trois nouvelles applets de commande qui utilisent le service Azure Information Protection (AIP) pour l’étiquetage :
 
 |Étiquetage des applets de commande|Exemple d’utilisation|
 |----------------|---------------|
-|[Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus)|Dans le cas d’un dossier partagé, identifiez tous les fichiers avec une étiquette spécifique.|
-|[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)|Pour un dossier partagé, appliquez une étiquette spécifiée à tous les fichiers dépourvus d’étiquette.|
+|[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|Dans le cas d’un dossier partagé, identifiez tous les fichiers avec une étiquette spécifique.|
+|[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Pour un dossier partagé, inspectez le contenu du fichier puis étiquetez automatiquement les fichiers sans étiquette, selon les conditions que vous avez spécifiées.|
+|[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Pour un dossier partagé, appliquez une étiquette spécifiée à tous les fichiers dépourvus d’étiquette.|
 
-Pour obtenir une liste de toutes les cmdlets et de l’aide associée, voir le [module Azure Information Protection](/powershell/azureinformationprotection/vlatest/aip).
+Pour obtenir une liste de toutes les cmdlets et de l’aide associée, voir le [module Azure Information Protection](/powershell/module/azureinformationprotection). Dans une session PowerShell, saisissez `Get-Help <cmdlet name> -online` pour afficher l’aide la plus récente, ainsi que les langues prises en charge autres que l’anglais.  
 
 Ce module s’installe dans **\ProgramFiles (x86)\Microsoft Azure Information Protection** et ajoute ce dossier à la variable système **PSModulePath**. Le fichier .dll de ce module est nommé **AIP.dll**.
 
@@ -54,12 +58,16 @@ Avant de commencer à utiliser ces applets de commande, consultez les autres con
     - S’applique si vous utilisez la protection uniquement avec la version locale d’Azure Rights Management ; Active Directory Rights Management Services (AD RMS).
 
 
-## <a name="azure-information-protection-service-and-azure-rights-management-service"></a>Service Azure Information Protection et service Azure Rights Management
+<a id="azure-information-protection-service-and-azure-rights-management-service" class="xliff"></a>
+
+## Service Azure Information Protection et service Azure Rights Management
 
 Lisez cette section avant de commencer à utiliser les commandes PowerShell lorsque votre organisation utilise Azure Information Protection et le service de protection de données Azure Rights Management, ou seulement le service Azure Rights Management.
 
 
-### <a name="prerequisites"></a>Prérequis
+<a id="prerequisites" class="xliff"></a>
+
+### Prérequis
 
 Outre la configuration requise pour l’installation du module AzureInformationProtection, des conditions préalables supplémentaires existent pour le service Azure Information Protection et le service de protection de données Azure Rights Management :
 
@@ -77,19 +85,25 @@ Outre la configuration requise pour l’installation du module AzureInformationP
     
     - Modifiez le Registre pour l’authentification auprès du service.
 
-#### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Condition préalable 1 : le service Azure Rights Management doit être activé
+<a id="prerequisite-1-the-azure-rights-management-service-must-be-activated" class="xliff"></a>
+
+#### Condition préalable 1 : le service Azure Rights Management doit être activé
 
 Cette condition préalable s’applique si vous appliquez la protection des données à l’aide d’étiquettes ou en vous connectant directement au service Azure Rights Management.
 
 Si votre locataire Azure Information Protection n’est pas activé, consultez les instructions [d’activation d’Azure Rights Management](../deploy-use/activate-service.md).
 
-#### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Condition préalable 2 : supprimer la protection de fichiers pour les autres utilisateurs à l’aide de votre propre compte
+<a id="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account" class="xliff"></a>
+
+#### Condition préalable 2 : supprimer la protection de fichiers pour les autres utilisateurs à l’aide de votre propre compte
 
 Les scénarios classiques de suppression de la protection des fichiers pour les autres utilisateurs incluent la détection de données ou la récupération de données. Si vous utilisez des étiquettes pour appliquer la protection, vous pouvez supprimer la protection en définissant une nouvelle étiquette qui n’applique pas la protection ou en supprimant l’étiquette. Toutefois, il est plus probable que vous vous connectiez directement au service Azure Rights Management pour supprimer la protection.
 
 Pour supprimer la protection des fichiers, vous devez disposer d’un droit d’utilisation Rights Management ou être un super utilisateur. Pour la découverte de données ou la récupération de données, la fonctionnalité de super utilisateur est généralement utilisée. Pour activer cette fonctionnalité et configurer votre compte pour un super utilisateur, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../deploy-use/configure-super-users.md).
 
-#### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>Condition préalable 3 : protéger ou annuler la protection des fichiers sans intervention de l’utilisateur
+<a id="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction" class="xliff"></a>
+
+#### Condition préalable 3 : protéger ou annuler la protection des fichiers sans intervention de l’utilisateur
 
 Actuellement, vous ne pouvez pas appliquer d’étiquettes en mode non interactif, mais vous pouvez vous connecter directement au service Azure Rights Management en mode non interactif pour protéger ou annuler la protection de fichiers.
 
@@ -103,7 +117,9 @@ Vous devez utiliser un principal du service pour vous connecter au service Azure
 
 Les sections suivantes expliquent comment obtenir ces identificateurs.
 
-##### <a name="to-get-the-bpostenantid"></a>Pour obtenir le BposTenantId
+<a id="to-get-the-bpostenantid" class="xliff"></a>
+
+##### Pour obtenir le BposTenantId
 
 Exécutez l’applet de commande Get-AadrmConfiguration à partir du module Azure RMS Windows PowerShell :
 
@@ -137,7 +153,9 @@ Exécutez l’applet de commande Get-AadrmConfiguration à partir du module Azur
     
         Disconnect-AadrmService
 
-##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>Pour obtenir l’AppPrincipalId et la clé symétrique
+<a id="to-get-the-appprincipalid-and-symmetric-key" class="xliff"></a>
+
+##### Pour obtenir l’AppPrincipalId et la clé symétrique
 
 Créez un principal de service en exécutant l’applet de commande `New-MsolServicePrincipal` à partir du module MSOnline PowerShell pour Azure Active Directory et suivez les instructions ci-dessous. 
 
@@ -206,7 +224,9 @@ Pour plus d’informations sur les super utilisateurs, consultez [Configuration 
 > [!NOTE]
 > Pour utiliser votre propre compte pour vous authentifier auprès du service Azure Rights Management, inutile d’exécuter Set-RMSServerAuthentication avant de protéger ou d’annuler la protection de fichiers, ou d’obtenir des modèles.
 
-#### <a name="prerequisite-4-for-regions-outside-north-america"></a>Condition préalable 4 : pour les régions en dehors de l’Amérique du Nord
+<a id="prerequisite-4-for-regions-outside-north-america" class="xliff"></a>
+
+#### Condition préalable 4 : pour les régions en dehors de l’Amérique du Nord
 
 Pour l’authentification en dehors de la région Amérique du Nord Azure, vous devez modifier le Registre comme suit. Si votre locataire Azure Information Protection est en Amérique du Nord, n’effectuez pas cette étape :
 
@@ -226,7 +246,9 @@ Pour l’authentification en dehors de la région Amérique du Nord Azure, vous 
 
 5. Fermez l'éditeur du Registre. Il est inutile de redémarrer votre ordinateur. Toutefois, si vous utilisez un compte de principal du service au lieu de votre propre compte d’utilisateur, vous devez exécuter la commande Set-RMSServerAuthentication après avoir effectué cette modification de Registre.
 
-### <a name="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service"></a>Exemples de scénarios d’utilisation des applets de commande pour Azure Information Protection et le service Azure Rights Management
+<a id="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service" class="xliff"></a>
+
+### Exemples de scénarios d’utilisation des applets de commande pour Azure Information Protection et le service Azure Rights Management
 
 Il est plus efficace d’utiliser des étiquettes pour classifier et protéger les fichiers, car il existe deux applets de commande dont vous avez besoin. Elles peuvent être exécutées seules ou ensemble : [Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus) et [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Consultez l’aide de ces deux applets de commande pour plus d’informations et d’exemples.
 
@@ -306,12 +328,16 @@ Votre résultat peut ressembler à ce qui suit :
 
 Notez que si les modèles Rights Management sont modifiés, vous devez les télécharger à nouveau à l’aide de `Get-RMSTemplate -force`. 
 
-## <a name="active-directory-rights-management-services"></a>Active Directory Rights Management Services
+<a id="active-directory-rights-management-services" class="xliff"></a>
+
+## Active Directory Rights Management Services
 
 Lisez cette section avant de commencer à utiliser les commandes PowerShell pour protéger ou annuler la protection des fichiers, lorsque votre organisation utilise simplement Active Directory Rights Management Services.
 
 
-### <a name="prerequisites"></a>Prérequis
+<a id="prerequisites" class="xliff"></a>
+
+### Prérequis
 
 Outre la configuration requise pour l’installation du module AzureInformationProtection, votre compte doit disposer des autorisations de lecture et d’exécution pour accéder à ServerCertification.asmx :
 
@@ -335,7 +361,9 @@ Outre la configuration requise pour l’installation du module AzureInformationP
 
 10.Cliquez deux fois sur **OK**.
 
-### <a name="example-scenarios-for-using-the-cmdlets-for-active-directory-rights-management-services"></a>Exemples de scénarios d’utilisation des applets de commande pour les services Active Directory Rights Management Services
+<a id="example-scenarios-for-using-the-cmdlets-for-active-directory-rights-management-services" class="xliff"></a>
+
+### Exemples de scénarios d’utilisation des applets de commande pour les services Active Directory Rights Management Services
 
 Un scénario standard pour ces applets de commande consiste à protéger tous les fichiers dans un dossier à l’aide d’un modèle de stratégie de droits, ou à annuler la protection d’un fichier. 
 
@@ -419,12 +447,16 @@ Votre résultat peut ressembler à ce qui suit :
     C:\Test.docx                          C:\Test.docx
 
 
-## <a name="next-steps"></a>Étapes suivantes
+<a id="next-steps" class="xliff"></a>
+
+## Étapes suivantes
 Pour obtenir l’aide de l’applet de commande lorsque vous êtes dans une session PowerShell, utilisez l’applet de commande Get-Help <cmdlet name>, où <cmdlet name> est le nom de l’applet de commande que vous souhaitez rechercher. Exemple : 
 
     Get-Help Get-RMSTemplate
 
 Pour des informations supplémentaires nécessaires pour la prise en charge du client Azure Information Protection, consultez les éléments suivants :
+
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Fichiers du client et journalisation de l’utilisation](client-admin-guide-files-and-logging.md)
 

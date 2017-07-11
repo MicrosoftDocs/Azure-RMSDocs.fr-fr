@@ -4,7 +4,7 @@ description: "Découvrez ce qui est nouveau ou ce qui a changé dans une version
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 06/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 70c358954a39b02610a77ec81074379dc574158b
-ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
-translationtype: HT
+ms.openlocfilehash: 9ee487f65f417c9faaf71f3c50b5d4e35659c55f
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="azure-information-protection-client-version-release-history"></a>Client Azure Information Protection : historique des versions
+<a id="azure-information-protection-client-version-release-history" class="xliff"></a>
+
+# Client Azure Information Protection : historique des versions
 
 >*S’applique à : Azure Information Protection*
 
@@ -31,7 +35,37 @@ Pour déterminer les nouveautés ou modifications apportées à une version en d
 >  
 > Si le problème persiste, consultez les informations dans [Options de support technique et ressources de la communauté](../get-started/information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
-## <a name="version-14210"></a>Version 1.4.21.0
+
+<a id="version-172100" class="xliff"></a>
+
+## Version 1.7.210.0
+
+**Publiée le** : 06/06/2017
+
+Cette version inclut MSIPC version 1.0.2217.1 du client RMS.
+
+**Correctifs** :
+
+- Toutes les applets de commande de classification et d’étiquetage sont désormais prises en charge sur les ordinateurs qui ne sont pas connectés à Internet mais qui ont une stratégie Azure Information Protection valide.
+
+- Par souci de cohérence, un paramètre de sortie de l’applet de commande [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) est modifié de l’anglais britannique (**IsLabelled**) vers l’anglais américain (**IsLabeled**). Si vous avez des scripts ou des processus automatisés qui ressemblent à ce paramètre, mettez à jour l’orthographe de ce paramètre.
+
+- Des correctifs de stabilité généraux qui incluent :
+
+    - Pour Outlook : Correctifs pour les plantages, la consommation élevée de la mémoire et les problèmes d’affichage pour les menus.
+    
+    - Pour Word, Excel et PowerPoint : Correctifs pour l’utilisation élevée du processeur, les problèmes d’affichage lors de l’enregistrement des fichiers Excel volumineux, et les problèmes pour lesquels l’application cesse de répondre. 
+    
+    Pour ces applications, les correctifs comprennent aussi l’amélioration des performances pour Office 2016 avec SharePoint Online et OneDrive Entreprise, l’étiquetage automatique et recommandé est appliqué lors de la fermeture du fichier plutôt que lorsque le fichier est enregistré (enregistre automatiquement ou demande à l’utilisateur de choisir d’enregistrer ou non). De même, si le paramètre **Tous les documents et e-mails doivent avoir une étiquette** est activé, les utilisateurs ne sont pas invités à sélectionner une étiquette jusqu'à ce que le fichier soit fermé. L’exception concerne Word 2016 et Excel 2016, lorsque l’utilisateur sélectionne l’option **Enregistrer sous**. Ensuite, cette action déclenche ces comportements d’étiquetage s’ils sont configurés. 
+
+**Nouvelles fonctionnalités** :
+
+- Nouvelle applet de commande PowerShell, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). Lorsque vous exécutez cette applet de commande, elle inspecte le contenu du fichier et applique automatiquement des étiquettes pour les fichiers sans étiquette, selon les conditions que vous spécifiez dans la stratégie Azure Information Protection.
+
+
+<a id="version-14210" class="xliff"></a>
+
+## Version 1.4.21.0
 
 **Publiée le** : 15/03/2017
 
@@ -58,7 +92,9 @@ Avec la version précédente, il était obligatoire de disposer de Microsoft .NE
 - Pour les fichiers PDF, la visionneuse prend désormais en charge les options telles que la recherche, le zoom et le pivotement. Pour utiliser ces options, cliquez avec le bouton droit sur le fichier lorsqu’il est affiché dans la visionneuse.
 
 
-## <a name="version-131552"></a>Version 1.3.155.2
+<a id="version-131552" class="xliff"></a>
+
+## Version 1.3.155.2
 
 **Date de publication** : 08/02/2017
 
@@ -86,7 +122,9 @@ Cette version du client est la [version en disponibilité générale](https://bl
 - [Azure Information Protection - Guide de l’utilisateur](client-user-guide.md)
 
 
-## <a name="version-1240"></a>Version 1.2.4.0
+<a id="version-1240" class="xliff"></a>
+
+## Version 1.2.4.0
 
 **Publiée le** : 27/10/2016
 
@@ -104,13 +142,17 @@ Cette version du client est la [version en disponibilité générale](https://bl
 
     Pour plus d’informations sur cette option, consultez la section [Vérifications supplémentaires et dépannage](client-admin-guide.md#additional-checks-and-troubleshooting) du guide de l’administrateur.
 
-## <a name="version-11230"></a>Version 1.1.23.0
+<a id="version-11230" class="xliff"></a>
+
+## Version 1.1.23.0
 
 **Publiée le** : 01/10/2016
 
 Disponibilité générale.
 
-## <a name="next-steps"></a>Étapes suivantes
+<a id="next-steps" class="xliff"></a>
+
+## Étapes suivantes
 
 Pour plus d’informations sur l’installation du client, consultez :
 

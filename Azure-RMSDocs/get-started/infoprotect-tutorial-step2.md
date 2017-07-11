@@ -4,17 +4,21 @@ description: "Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 9a2392df400356e7937db49cec3e0fe1e3d0f228
-ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
-translationtype: HT
+ms.openlocfilehash: b91bfea99170b747bb199b3c966ae8c89fae5359
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Étape 2 : Configurer et publier la stratégie Azure Information Protection
+<a id="step-2-configure-and-publish-the-azure-information-protection-policy" class="xliff"></a>
+
+# Étape 2 : Configurer et publier la stratégie Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
@@ -29,7 +33,7 @@ Bien qu’Azure Information Protection soit fourni avec une stratégie par défa
     > [!TIP] 
     > Sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous n’avez ainsi pas besoin d’accéder au service lors de votre prochaine connexion au portail.
 
-3.  Explorez le panneau **Stratégie : Globale**, qui s’ouvre automatiquement et affiche la stratégie Information Protection par défaut automatiquement créée pour votre client :
+3. Notez les informations sur la page **Démarrage rapide** qui s’ouvre automatiquement la première fois que vous vous connectez au service. Vous pouvez y revenir plus tard. Pour ce didacticiel, cliquez sur **Stratégie globale** pour ouvrir le panneau **Stratégie : Globale**. Ce panneau s’ouvre automatiquement lors des connexions ultérieures et affiche la stratégie Information Protection par défaut automatiquement créée pour votre client :
     
     - Étiquettes de classification : **Personnel**, **Public**, **Interne**, **Confidentiel** et **Hautement confidentiel**. Les deux dernières étiquettes se développent pour afficher des sous-étiquettes : **Tous les employés** et **Tout le monde (sans protection)**, qui sont des exemples de sous-catégories dans une classification.
     
@@ -46,7 +50,9 @@ Bien qu’Azure Information Protection soit fourni avec une stratégie par défa
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](../media/info-protect-policy-default-settings.png)
 
-## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>Modification des paramètres pour une étiquette par défaut et demande de justification
+<a id="changing-the-settings-for-a-default-label-and-prompt-for-justification" class="xliff"></a>
+
+## Modification des paramètres pour une étiquette par défaut et demande de justification
 
 Pour notre didacticiel, nous allons modifier deux de ces paramètres de stratégie pour vous permettre de voir comment ils fonctionnent :
 
@@ -56,7 +62,9 @@ Pour notre didacticiel, nous allons modifier deux de ces paramètres de stratég
 
 2. Pour **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection**, affectez la valeur **Activé**.
 
-## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>Configuration d’une étiquette pour la protection, d’un filigrane et d’une condition pour une demande de classification
+<a id="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification" class="xliff"></a>
+
+## Configuration d’une étiquette pour la protection, d’un filigrane et d’une condition pour une demande de classification
 
 Nous allons maintenant changer les paramètres d’une des sous-étiquettes, **Tous les employés**, de l’étiquette principale **Confidentiel**. 
 

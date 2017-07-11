@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27ffbc6eb9e88840f1b33c59b76bdaa5d028cc36
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: d141589c9dc9d90cf3a507db77f624c849f955b5
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Configuration de modèles personnalisés pour le service Azure Rights Management
+<a id="configuring-custom-templates-for-the-azure-rights-management-service" class="xliff"></a>
+
+# Configuration de modèles personnalisés pour le service Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -59,6 +63,10 @@ Utilisez les informations suivantes pour vous aider à configurer et utiliser de
 -   [Comment actualiser les modèles pour les utilisateurs](refresh-templates.md)
 
 -   [Utiliser PowerShell pour gérer les modèles](configure-templates-with-powershell.md)
+
+> [!TIP]
+> Les modèles et de nouvelles options de configuration de la protection Gestion des droits Azure sont déplacés vers le portail Azure. Cette fonctionnalité est actuellement en version préliminaire. Pour plus d’informations, consultez l’annonce de blog suivante : [L’administration unifiée d’Azure Information Protection est maintenant disponible en version préliminaire](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) 
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

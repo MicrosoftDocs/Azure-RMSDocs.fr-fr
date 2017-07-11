@@ -4,7 +4,7 @@ description: "Informations sur les fichiers du client et la journalisation de l�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,19 +12,25 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 78c355acd1bc87347ef2d4b02ffbb24f2c08bc70
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: bf695772d545daca602903e156903da2aadaae7a
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="azure-information-protection-client-files-and-client-usage-logging"></a>Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
+<a id="azure-information-protection-client-files-and-client-usage-logging" class="xliff"></a>
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
+# Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
+
+>*S’applique à : Services Active Directory Rights Management, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 Après avoir installé le client Azure Information Protection, vous aurez peut-être besoin de connaître l’emplacement des fichiers et de surveiller l’utilisation du client.
 
-## <a name="file-locations-for-the-azure-information-protection-client"></a>Emplacement des fichiers du client Azure Information Protection
+<a id="file-locations-for-the-azure-information-protection-client" class="xliff"></a>
 
-Fichiers du client :    
+## Emplacement des fichiers du client Azure Information Protection
+
+Fichiers du client :   
 
 - Pour les systèmes d’exploitation 64 bits : **\ProgramFiles (x86) \Microsoft Azure Information Protection**
 
@@ -34,7 +40,9 @@ Fichiers journaux du client et fichier de stratégie actuellement installé :
 
 - Pour les systèmes d’exploitation 64 bits et 32 bits : **%localappdata%\Microsoft\MSIP**
 
-## <a name="usage-logging-for-the-azure-information-protection-client"></a>Journalisation de l’utilisation du client Azure Information Protection
+<a id="usage-logging-for-the-azure-information-protection-client" class="xliff"></a>
+
+## Journalisation de l’utilisation du client Azure Information Protection
 
 Le client enregistre l’activité de l’utilisateur dans le journal des événements **Applications et services** Windows local, **Azure Information Protection**. Les événements incluent les informations suivantes :
 
@@ -85,9 +93,12 @@ Pour des informations sur la journalisation de l’utilisation pour le service A
 
 
 
-## <a name="next-steps"></a>Étapes suivantes
+<a id="next-steps" class="xliff"></a>
+
+## Étapes suivantes
 Maintenant que vous avez identifié tous les fichiers journaux associés au client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :
 
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Suivi des documents](client-admin-guide-document-tracking.md)
 

@@ -4,7 +4,7 @@ description: "Comment les applications Office (telles que Word, Excel, PowerPoin
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/21/2017
+ms.date: 05/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,23 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5c106d46befc2a2d3c42ba8840dac65a243220d9
-ms.sourcegitcommit: 9edcb4a55a331e02f999c78d97eb0beb21f96f07
-translationtype: HT
+ms.openlocfilehash: 7fe044ab9b8e253e3095af5828a33926271bc42b
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="office-applications-and-services"></a>Applications et services Office
+<a id="office-applications-and-services" class="xliff"></a>
+
+# Applications et services Office
 
 >*S’applique à : Azure Information Protection, Office 365*
 
 Les applications Office (telles que Word, Excel, PowerPoint et Outlook) et les services Office (tels qu’Exchange et SharePoint) pour utilisateurs finaux peuvent utiliser le service Azure Rights Management d’Azure Information Protection pour protéger les données de votre organisation.
 
-## <a name="office-applications-word-excel-powerpoint-outlook"></a>Applications Office : Word, Excel, PowerPoint, Outlook
+<a id="office-applications-word-excel-powerpoint-outlook" class="xliff"></a>
+
+## Applications Office : Word, Excel, PowerPoint, Outlook
 Ces applications prennent en charge la Gestion des droits de manière native grâce au service de Gestion des droits relatifs à l’information (IRM), et permettent aux utilisateurs d’appliquer une protection à un document enregistré ou à un message électronique à envoyer. Les utilisateurs peuvent appliquer des modèles ou, pour Word, Excel et PowerPoint, choisir des paramètres personnalisés pour l’accès, les droits et les restrictions d’utilisation. 
 
 Par exemple, ils peuvent configurer un document Word pour qu’il puisse être accessible uniquement par les personnes de votre organisation. Ils peuvent également déterminer si une feuille de calcul Excel peut être modifiée, si elle est disponible en lecture seule uniquement ou empêcher son impression. Pour les fichiers sensibles, ils peuvent configurer une date d’expiration (directement ou en appliquant un modèle) à laquelle le fichier ne sera plus accessible. Pour Outlook, les utilisateurs peuvent choisir l’option **Ne pas transférer** pour éviter toute fuite de données, en plus de choisir un modèle.
@@ -35,7 +41,9 @@ Si vous êtes prêt à configurer des applications Office et le client Azure Inf
 
 - Pour installer et configurer le client Azure Information Protection, consultez [Client Azure Information Protection : installation et configuration pour les clients](../deploy-use/configure-client.md).
 
-## <a name="exchange-online-and-exchange-server"></a>Exchange Online et Exchange Server
+<a id="exchange-online-and-exchange-server" class="xliff"></a>
+
+## Exchange Online et Exchange Server
 Quand vous utilisez Exchange Online ou Exchange Server, vous pouvez utiliser l’intégration de la Gestion des droits relatifs à l’information (IRM), laquelle propose des solutions supplémentaires de protection des informations :
 
 -   **Exchange ActiveSync IRM** pour que les appareils mobiles puissent protéger des messages électroniques et utiliser des messages électroniques protégés.
@@ -59,9 +67,13 @@ Si vous êtes prêt à configurer Exchange pour l’IRM :
 - Pour Exchange sur site, consultez [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
 
-## <a name="sharepoint-online-and-sharepoint-server"></a>SharePoint Online et SharePoint Server
+<a id="sharepoint-online-and-sharepoint-server" class="xliff"></a>
+
+## SharePoint Online et SharePoint Server
 
 Si vous utilisez SharePoint Online ou SharePoint Server, vous pouvez protéger vos documents à l’aide de la Gestion des droits relatifs à l’information (IRM). Cette configuration permet aux administrateurs de protéger des listes ou des bibliothèques pour que le fichier qui est téléchargé quand un utilisateur extrait un document soit protégé. Cela signifie que seules les personnes autorisées peuvent afficher et utiliser ce fichier conformément aux stratégies de protection des informations que vous spécifiez. Par exemple, le fichier peut être en lecture seule, vous pouvez désactiver la copie du texte, vous pouvez empêcher l’enregistrement d’une copie locale et l’impression du fichier.
+
+Par défaut, la protection est limitée à la personne qui télécharge le document. Mais vous pouvez modifier cela avec une option de configuration qui étend la protection à tous les utilisateurs qui ont accès au document sur SharePoint, ou à un groupe que vous spécifiez.
 
 Pour les listes et bibliothèques SharePoint, la protection des informations est toujours configurée par un administrateur, jamais par un utilisateur final. Vous définissez les autorisations au niveau du site, puis ces autorisations sont, par défaut, héritées par les listes ou les bibliothèques de ce site. Si vous utilisez SharePoint Online, les utilisateurs peuvent également configurer leur bibliothèque OneDrive Entreprise avec la protection IRM.
 
@@ -90,7 +102,9 @@ Si vous êtes prêt à configurer SharePoint pour l’IRM :
 - Pour SharePoint Server, consultez [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
 
-## <a name="next-steps"></a>Étapes suivantes
+<a id="next-steps" class="xliff"></a>
+
+## Étapes suivantes
 
 Pour voir comment d’autres applications et services prennent en charge le service Azure Rights Management d’Azure Information Protection, consultez [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md).
 

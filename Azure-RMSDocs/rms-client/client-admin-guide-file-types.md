@@ -4,7 +4,7 @@ description: "Détails techniques sur les types de fichiers pris en charge, les 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/08/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ffd2ed8aa59c3d9eb1ab6d36a9ccac71d449d978
-ms.sourcegitcommit: dabea768a37aa56635b9123f628c1c2b2d6a0f55
+ms.openlocfilehash: 4f187b3fa991fb4ed3a11ded34fa663dc6b4bafc
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2017
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="file-types-supported-by-the-azure-information-protection-client"></a>Types de fichiers pris en charge par le client Azure Information Protection
+<a id="file-types-supported-by-the-azure-information-protection-client" class="xliff"></a>
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
+# Types de fichiers pris en charge par le client Azure Information Protection
+
+>*S’applique à : Services Active Directory Rights Management, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 Le client Azure Information Protection peut appliquer les éléments suivants aux documents et e-mails :
 
@@ -32,7 +34,9 @@ Le client Azure Information Protection peut appliquer les éléments suivants au
 
 Utilisez les informations suivantes pour vérifier les types de fichiers pris en charge, les différents niveaux de protection, la manière de modifier le niveau de protection par défaut, et les fichiers qui sont automatiquement exclus (ignorés) de la classification et de la protection.
 
-## <a name="file-types-supported-for-classification-only"></a>Types de fichiers pris en charge pour la classification uniquement
+<a id="file-types-supported-for-classification-only" class="xliff"></a>
+
+## Types de fichiers pris en charge pour la classification uniquement
 
 Seule la classification est prise en charge pour les types de fichiers suivants. D’autres types de fichiers prennent en charge la classification quand ils sont également protégés (consultez la section [Types de fichiers pris en charge pour la classification et la protection](#supported-file-types-for-classification-and-protection).
 
@@ -57,7 +61,9 @@ Seule la classification est prise en charge pour les types de fichiers suivants.
 
 - **Digital Negative** : .dng
 
-## <a name="file-types-supported-for-protection"></a>Types de fichiers pris en charge pour la protection
+<a id="file-types-supported-for-protection" class="xliff"></a>
+
+## Types de fichiers pris en charge pour la protection
 
 Le client Azure Information Protection prend en charge la protection à deux niveaux différents, comme décrit dans le tableau suivant.
 
@@ -71,7 +77,25 @@ Vous pouvez modifier le niveau de protection par défaut que le client Azure Inf
 
 La protection des données peut être automatiquement appliquée lorsqu’un utilisateur sélectionne une étiquette qu’un administrateur a configurée. Les utilisateurs peuvent également spécifier leurs propres paramètres de protection personnalisés à l’aide des [niveaux d’autorisation](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
 
-### <a name="supported-file-types-for-classification-and-protection"></a>Types de fichiers pris en charge pour la classification et la protection
+<a id="file-sizes-supported-for-protection" class="xliff"></a>
+
+### Tailles de fichiers prises en charge pour la protection
+
+Il existe des tailles de fichier maximales que le client Azure Information Protection prend en charge pour la protection.
+
+- **Pour les fichiers Office :**
+    
+    |Application Office|Taille de fichier maximale prise en charge|
+    |--------------------------------|-------------------------------------|
+    |Word 2007 (pris en charge par AD RMS uniquement)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016|32 bits : 512 Mo<br /><br />64 bits : 512 Mo
+    |Excel 2007 (pris en charge par AD RMS uniquement)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32 bits : 2 Go<br /><br />64 bits : limité uniquement par l’espace disque disponible et la mémoire disponibles|
+    |PowerPoint 2007 (pris en charge par AD RMS uniquement)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32 bits : limité uniquement par l’espace disque disponible et la mémoire disponibles<br /><br />64 bits : limité uniquement par l’espace disque disponible et la mémoire disponibles
+
+- **Pour tous les autres fichiers** : 1 Go
+
+<a id="supported-file-types-for-classification-and-protection" class="xliff"></a>
+
+### Types de fichiers pris en charge pour la classification et la protection
 
 Le tableau suivant liste une partie des types de fichiers qui prennent en charge la protection native par le client Azure Information Protection et qui peuvent également être classés. 
 
@@ -85,7 +109,7 @@ Ces types de fichiers sont identifiés séparément, car quand ils sont protég�
 |.txt|.ptxt|
 |.xml|.pxml|
 |.jpg|.pjpg|
-|.jpeg|.ppng|
+|.jpeg|.pjpeg|
 |.pdf|.ppdf|
 |.png|.ppng|
 |.tif|.ptif|
@@ -104,7 +128,9 @@ Pour ces fichiers, l’extension de nom de fichier reste la même une fois que l
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
-### <a name="changing-the-default-protection-level-of-files"></a>Modification du niveau de protection par défaut des fichiers
+<a id="changing-the-default-protection-level-of-files" class="xliff"></a>
+
+### Modification du niveau de protection par défaut des fichiers
 Vous pouvez modifier la façon dont le client Azure Information Protection protège les fichiers en modifiant le Registre. Par exemple, vous pouvez forcer les fichiers qui prennent en charge la protection native à être protégés de manière générique par le client Azure Information Protection.
 
 Raisons pour lesquelles vous pourriez vouloir procéder ainsi :
@@ -153,7 +179,9 @@ Vous pouvez apporter des modifications similaires au Registre pour d'autres scé
 
 Pour plus d’informations, consultez [Configuration des API de fichier](../develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». 
 
-## <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client"></a>Types de fichiers exclus de la classification et de la protection par le client Azure Information Protection
+<a id="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client" class="xliff"></a>
+
+## Types de fichiers exclus de la classification et de la protection par le client Azure Information Protection
 
 Pour empêcher les utilisateurs de modifier des fichiers essentiels au fonctionnement de l’ordinateur, certains types de fichiers et de dossiers sont automatiquement exclus de classification et de la protection. Si les utilisateurs essaient de classifier ou de protéger ces fichiers, un message indiquant qu’ils sont exclus s’affiche.
 
@@ -166,8 +194,12 @@ Pour empêcher les utilisateurs de modifier des fichiers essentiels au fonctionn
     - \AppData (pour tous les utilisateurs)
 
 
-## <a name="next-steps"></a>Étapes suivantes
+<a id="next-steps" class="xliff"></a>
+
+## Étapes suivantes
 Maintenant que vous avez identifié les types de fichiers pris en charge par le client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :
+
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Fichiers du client et journalisation de l’utilisation](client-admin-guide-files-and-logging.md)
 

@@ -18,17 +18,13 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/30/2017
 ---
-<a id="configuring-azure-information-protection-policy" class="xliff"></a>
-
-# Configuration de la stratégie Azure Information Protection
+# <a name="configuring-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
 Pour configurer la classification, l’étiquetage et la protection, vous devez configurer la stratégie Azure Information Protection. Cette stratégie est ensuite téléchargée sur les ordinateurs sur lesquels est installé le [client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-<a id="subscription-support" class="xliff"></a>
-
-## Support d'abonnement
+## <a name="subscription-support"></a>Support d'abonnement
 
 La stratégie Azure Information Protection prend en charge différents niveaux d’abonnement :
 
@@ -46,9 +42,7 @@ Pour plus d’informations sur les abonnements, consultez [De quel abonnement ai
 
 Pour plus d’informations sur la façon de configurer des stratégies délimitées, consultez [Guide pratique pour configurer la stratégie pour des utilisateurs spécifiques avec des stratégies délimitées](configure-policy-scope.md).
 
-<a id="how-to-configure-the-azure-information-protection-policy" class="xliff"></a>
-
-## Guide de configuration de la stratégie Azure Information Protection
+## <a name="how-to-configure-the-azure-information-protection-policy"></a>Guide de configuration de la stratégie Azure Information Protection
 
 1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général.
 
@@ -91,9 +85,7 @@ Le client Azure Information Protection vérifie si des modifications ont été a
 >[!NOTE]
 >Quand le client télécharge la stratégie, attendez quelques minutes pour qu’elle soit entièrement opérationnelle. La durée varie en fonction de différents facteurs comme la taille et la complexité de la configuration de la stratégie et la connectivité réseau. Si l’action résultante de vos étiquettes ne correspond pas à vos derniers changements, attendez 15 minutes au plus et réessayez.
 
-<a id="configuring-your-organizations-policy" class="xliff"></a>
-
-### Configuration de la stratégie de votre organisation
+### <a name="configuring-your-organizations-policy"></a>Configuration de la stratégie de votre organisation
 
 Utilisez les informations suivantes pour configurer votre stratégie Azure Information Protection :
 
@@ -119,9 +111,7 @@ Utilisez les informations suivantes pour configurer votre stratégie Azure Infor
 
 - [Guide pratique pour configurer des étiquettes pour des langues différentes](configure-policy-languages.md)
 
-<a id="next-steps" class="xliff"></a>
-
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut et voir le comportement qui en résulte dans une application Office, essayez le [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 

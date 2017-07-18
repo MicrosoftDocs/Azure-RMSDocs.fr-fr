@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/30/2017
 ---
-<a id="frequently-asked-questions-for-azure-information-protection" class="xliff"></a>
-
-# Forum aux questions sur Azure Information Protection
+# <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -28,28 +26,20 @@ Vous avez une question sur Azure Information Protection ou sur le service Azure 
 
 Ces pages de FAQ seront régulièrement actualisées. Les nouveautés seront répertoriées dans les avis de mise à jour mensuels de la documentation, dans [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) (Blog de sécurité et de mobilité d’entreprise).
 
-<a id="whats-the-difference-between-azure-information-protection-and-azure-rights-management" class="xliff"></a>
-
-## Quelle est la différence entre Information Protection et Azure Rights Management ?
+## <a name="whats-the-difference-between-azure-information-protection-and-azure-rights-management"></a>Quelle est la différence entre Information Protection et Azure Rights Management ?
 
 Azure Information Protection permet à une organisation de classifier, d’étiqueter et de protéger ses documents et e-mails. La technologie de protection utilise le service Azure Rights Management, désormais un composant d’Azure Information Protection.
 
-<a id="what-is-the-role-of-identity-management-for-azure-information-protection" class="xliff"></a>
-
-## Quel est le rôle de gestion des identités pour Azure Information Protection ?
+## <a name="what-is-the-role-of-identity-management-for-azure-information-protection"></a>Quel est le rôle de gestion des identités pour Azure Information Protection ?
 
 Un utilisateur doit avoir un nom d’utilisateur et un mot de passe valides pour accéder au contenu protégé par Azure Information Protection. Pour en savoir plus sur la façon dont Azure Information Protection permet de sécuriser vos données, consultez [Rôle d’Azure Information Protection dans la sécurisation des données](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
 
-<a id="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included" class="xliff"></a>
-
-## De quel abonnement ai-je besoin pour Azure Information Protection et quelles sont les fonctionnalités incluses ?
+## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>De quel abonnement ai-je besoin pour Azure Information Protection et quelles sont les fonctionnalités incluses ?
 Consultez les [informations sur les abonnements](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) sur le site Azure Information Protection. 
 
 Si vous avez un abonnement Office 365 incluant Rights Management, téléchargez la [feuille de données des licences Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) à partir de la page **Fonctionnalités**.
 
-<a id="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling" class="xliff"></a>
-
-## Le client Azure Information Protection est-il réservé aux abonnements qui comprennent la classification et l’étiquetage ?
+## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Le client Azure Information Protection est-il réservé aux abonnements qui comprennent la classification et l’étiquetage ?
 
 Non. Bien que la plupart des présentations et démonstrations du client Azure Information Protection que vous avez vues montrent comment il prend en charge la classification et l’étiquetage, il peut également servir avec les abonnements incluant simplement le service Azure Rights Management pour la protection des données.
 
@@ -57,9 +47,7 @@ Lorsque le client Azure Information Protection pour Windows est installé et qu�
 
 Si vous utilisez actuellement l’application de partage Rights Management pour Windows, nous vous conseillons de la remplacer par le client Azure Information Protection. La prise en charge de l’application de partage prendra fin le 31 janvier 2018. Pour vous aider à effectuer la transition, consultez la section [Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS](../rms-client/upgrade-client-app.md).
 
-<a id="does-azure-information-protection-support-on-premises-and-hybrid-scenarios" class="xliff"></a>
-
-## La solution Azure Information Protection prend-elle en charge les scénarios sur site et hybrides ?
+## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>La solution Azure Information Protection prend-elle en charge les scénarios sur site et hybrides ?
 
 Oui. Bien qu’Azure Information Protection soit une solution basée sur le cloud, elle peut classer, étiqueter et protéger des documents et des e-mails stockés sur site, ainsi que dans le cloud.
 
@@ -67,29 +55,21 @@ Si vous possédez des serveurs de fichiers Windows, Exchange Server et SharePoi
 
 Le service Azure Rights Management génère et gère automatiquement les certificats XrML de façon appropriée. Il n’utilise donc pas d’infrastructure à clé publique (PKI) locale. Pour plus d’informations sur la façon dont Azure Rights Management utilise les certificats, consultez la section [Procédure pas à pas décrivant le fonctionnement d’Azure RMS : première utilisation, protection du contenu, consommation du contenu](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) dans l’article [Fonctionnement d’Azure RMS](../understand-explore/how-does-it-work.md).
 
-<a id="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released" class="xliff"></a>
-
-## J’ai entendu dire qu’une nouvelle version sera disponible prochainement pour Azure Information Protection : quand sera-t-elle publiée ?
+## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>J’ai entendu dire qu’une nouvelle version sera disponible prochainement pour Azure Information Protection : quand sera-t-elle publiée ?
 
 La documentation technique ne contient pas d’informations sur les versions à venir. Pour ce type d’informations et pour les annonces de version, consultez [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) (Blog de sécurité et de mobilité d’entreprise) et récupérez les dernières mises à jour auprès de [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) sur Twitter. Si vous êtes intéressé par une version d’Office, consultez également le [blog Office](https://blogs.office.com/).
 
-<a id="where-can-i-find-supporting-information-for-azure-information-protectionsuch-as-legal-compliance-and-slas" class="xliff"></a>
-
-## Où puis-je trouver des informations annexes sur Azure Information Protection (considérations juridiques, conformité, contrats de niveau de service, etc.) ?
+## <a name="where-can-i-find-supporting-information-for-azure-information-protectionsuch-as-legal-compliance-and-slas"></a>Où puis-je trouver des informations annexes sur Azure Information Protection (considérations juridiques, conformité, contrats de niveau de service, etc.) ?
 
 Consultez [Conformité et informations annexes pour Azure Information Protection](../understand-explore/compliance.md).
 
-<a id="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection" class="xliff"></a>
-
-## Comment puis-je signaler un problème ou envoyer des commentaires pour Azure Information Protection ?
+## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Comment puis-je signaler un problème ou envoyer des commentaires pour Azure Information Protection ?
 
 Pour le support technique, utilisez vos canaux de support standard ou [contactez le support technique Microsoft](information-support.md#to-contact-microsoft-support).
 
 Pour envoyer des commentaires, notamment des suggestions d’améliorations ou de nouvelles fonctionnalités : dans votre application Office, sous l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger**, puis sur **Aide et commentaires**. Dans la boîte de dialogue **Microsoft Azure Information Protection**, cliquez sur **Envoyez-nous des commentaires**. Un e-mail à envoyer à l’équipe Information Protection s’ouvre. Nous vous invitons également à contacter l’équipe d’ingénieurs sur son [site Yammer Azure Information Protection](https://www.yammer.com/askipteam/). 
 
-<a id="what-do-i-do-if-my-question-isnt-here" class="xliff"></a>
-
-## Que puis-je faire si ma question ne figure pas dans cette rubrique ?
+## <a name="what-do-i-do-if-my-question-isnt-here"></a>Que puis-je faire si ma question ne figure pas dans cette rubrique ?
 
 Tout d’abord, passez en revue les questions fréquentes qui sont spécifiques à la classification et à l’étiquetage ou spécifiques à la protection des données. Le service Azure Rights Management (Azure RMS) fournit la technologie de protection des données pour Azure Information Protection, et Azure RMS peut être utilisé avec ou sans la classification et l’étiquetage : 
 

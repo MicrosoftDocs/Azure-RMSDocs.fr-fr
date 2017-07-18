@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/30/2017
 ---
-<a id="refreshing-templates-for-users-and-services" class="xliff"></a>
-
-# Actualisation des modèles pour les utilisateurs et services
+# <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -38,9 +36,7 @@ Quand vous utilisez le service Azure Rights Management d’Azure Information Pro
 
 Lorsque les applications client ont besoin de télécharger des modèles (initialement ou actualisés pour des modifications), préparez-vous à attendre pendant jusqu'à 15 minutes avant que le téléchargement soit terminé et que les modèles nouveaux ou mis à jour soient entièrement opérationnels. La durée varie en fonction de différents facteurs comme la taille et la complexité de la configuration du modèle et la connectivité réseau. 
 
-<a id="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates" class="xliff"></a>
-
-## Exchange Online uniquement : Comment configurer Exchange pour télécharger des modèles personnalisés modifiés
+## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Exchange Online uniquement : Comment configurer Exchange pour télécharger des modèles personnalisés modifiés
 Si vous avez déjà configuré la Gestion des droits relatifs à l'information (IRM) pour Exchange Online, les modèles personnalisés ne peuvent pas être téléchargés par les utilisateurs tant que vous n'apportez pas les modifications suivantes à l'aide de Windows PowerShell dans Exchange Online.
 
 > [!NOTE]
@@ -48,9 +44,7 @@ Si vous avez déjà configuré la Gestion des droits relatifs à l'information (
 
 Vous devez suivre cette procédure chaque fois que vous modifiez un modèle.
 
-<a id="to-update-templates-for-exchange-online" class="xliff"></a>
-
-### Pour mettre à jour des modèles pour Exchange Online
+### <a name="to-update-templates-for-exchange-online"></a>Pour mettre à jour des modèles pour Exchange Online
 
 1.  À l’aide de Windows PowerShell dans Exchange Online, connectez-vous au service :
 
@@ -103,17 +97,13 @@ Pour que les utilisateurs ne voient plus ces modèles, connectez-vous au service
 Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
 ```
 
-<a id="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template" class="xliff"></a>
-
-## Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié
+## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié
 En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013 ou l'application de partage Rights Management (RMS) pour Windows, vous pouvez modifier la planification automatique afin que les modèles modifiés soient actualisés sur les ordinateurs à une fréquence supérieure à la fréquence par défaut. Vous pouvez également forcer une actualisation immédiate en supprimant les données existantes dans une valeur de registre.
 
 > [!WARNING]
 > Si vous n'utilisez pas l'Éditeur du Registre correctement, vous risquez de provoquer de sérieux problèmes pouvant vous amener à devoir réinstaller le système d'exploitation. Microsoft ne peut pas garantir la résolution des problèmes engendrés par une utilisation incorrecte de l'Éditeur du Registre. Utilisez l’Éditeur du Registre à vos propres risques.
 
-<a id="to-change-the-automatic-schedule" class="xliff"></a>
-
-### Pour modifier la planification automatique
+### <a name="to-change-the-automatic-schedule"></a>Pour modifier la planification automatique
 
 1.  Dans l'un Éditeur du Registre, créez et définissez l'une des valeurs de Registre suivantes :
 
@@ -137,9 +127,7 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 
 2.  Si vous souhaitez forcer une actualisation immédiate des modèles, passez à la procédure suivante. Dans le cas contraire, redémarrez maintenant vos applications et instances Office de l'Explorateur de fichiers.
 
-<a id="to-force-an-immediate-refresh" class="xliff"></a>
-
-### Pour forcer une actualisation immédiate
+### <a name="to-force-an-immediate-refresh"></a>Pour forcer une actualisation immédiate
 
 1.  À l’aide d’un éditeur du Registre, supprimez les données de la valeur **LastUpdatedTime**. Par exemple, les données peuvent afficher **2015-04-20T15:52**. Supprimez 2015-04-20T15:52 pour qu’aucune donnée ne s’affiche. Utilisez les informations suivantes pour rechercher le chemin de Registre et supprimer ces données de valeur de Registre.
 
@@ -165,9 +153,7 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 3.  Redémarrez vos applications Office et les instances de l'Explorateur de fichiers.
 
 
-<a id="see-also" class="xliff"></a>
-
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

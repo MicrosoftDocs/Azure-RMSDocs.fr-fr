@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/30/2017
 ---
-<a id="activating-azure-rights-management" class="xliff"></a>
-
-# Activation d'Azure Rights Management
+# <a name="activating-azure-rights-management"></a>Activation d'Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -55,9 +53,7 @@ En guise d’alternative, vous pouvez utiliser PowerShell pour activer [!INCLUDE
 
 3. Exécutez [Enable-Aadrm](/powershell/module/aadrm/enable-aadrm) pour activer le service Azure Rights Management.
 
-<a id="configuring-onboarding-controls-for-a-phased-deployment" class="xliff"></a>
-
-## Configuration de contrôles d'intégration pour un déploiement échelonné
+## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Configuration de contrôles d'intégration pour un déploiement échelonné
 Si vous ne souhaitez pas que tous les utilisateurs puissent protéger des fichiers immédiatement à l’aide d’Azure Rights Management, vous pouvez configurer des contrôles d’intégration d’utilisateur à l’aide de la commande PowerShell [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) . Vous pouvez exécuter cette commande avant ou après avoir activé le service Azure Rights Management.
 
 > [!IMPORTANT]
@@ -91,9 +87,7 @@ Pour plus d’informations sur cette applet de commande et pour obtenir des exem
 Lorsque vous utilisez ces contrôles d'intégration, tous les utilisateurs de l'organisation peuvent toujours consommer du contenu protégé par votre sous-ensemble d'utilisateurs, mais ils ne peuvent pas appliquer la protection des informations à eux-mêmes à partir d'applications clientes. Par exemple, dans leurs clients Office, ils ne voient pas les modèles par défaut qui sont automatiquement publiés au moment de l’activation du service Azure Rights Management, ou les modèles personnalisés que vous pourriez configurer.  Les applications côté serveur, telles qu’Exchange, peuvent implémenter leurs propres contrôles utilisateur pour l’intégration de Rights Management et obtenir le même résultat.
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] étant à présent activé pour votre organisation, consultez la [Feuille de route pour le déploiement d’Azure Information Protection](../plan-design/deployment-roadmap.md) pour déterminer si d’autres étapes de configuration peuvent s’avérer nécessaires avant de mettre Azure Information Protection à la disposition des utilisateurs et des administrateurs. 
 
 Par exemple, vous pouvez utiliser des [modèles personnalisés](configure-custom-templates.md) pour faciliter l’application par les utilisateurs de la protection des informations à des fichiers, connecter vos serveurs locaux pour l’utilisation de [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] via l’installation du [connecteur Rights Management](deploy-rms-connector.md) et déployer le [client Azure Information Protection](../rms-client/aip-client.md) qui prend en charge la protection de tous les types de fichiers sur tous les appareils. 

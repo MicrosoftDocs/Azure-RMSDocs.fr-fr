@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/30/2017
 ---
-<a id="configuring-and-managing-templates-in-the-azure-information-protection-policy" class="xliff"></a>
-
-# Configuration et gestion des modèles dans la stratégie Azure Information Protection
+# <a name="configuring-and-managing-templates-in-the-azure-information-protection-policy"></a>Configuration et gestion des modèles dans la stratégie Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
@@ -43,9 +41,7 @@ Les modèles de gestion des droits sont désormais intégrés à la stratégie A
 - Les modèles de gestion des droits pour votre client sont affichés en tant qu’étiquettes et, actuellement, les paramètres de configuration qui sont spécifiques à la classification et à l’étiquetage sont également disponibles. 
 
 
-<a id="considerations-for-templates-in-the-azure-portal" class="xliff"></a>
-
-## Considérations relatives aux modèles dans le portail Azure
+## <a name="considerations-for-templates-in-the-azure-portal"></a>Considérations relatives aux modèles dans le portail Azure
 
 Avant de modifier ces modèles ou de les convertir en étiquettes dans le portail Azure, tenez compte des modifications suivantes dans l’implémentation de la gestion des modèles dans le portail Azure Classic. Certaines limitations devraient être traitées lors de la période préliminaire :
 
@@ -69,9 +65,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes dans le portai
 
 - Vous ne créez pas un nouveau modèle à partir du conteneur **Modèles** ; au lieu de cela, créez une étiquette qui a le paramètre **Protéger** et configurez les droits d’utilisation et les paramètres à partir du panneau **Protection**. Pour obtenir des instructions, consultez [Pour créer un nouveau modèle](#to-create-a-new-template).
 
-<a id="to-configure-the-templates-in-the-azure-information-protection-policy" class="xliff"></a>
-
-## Pour configurer les modèles dans la stratégie Azure Information Protection
+## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Pour configurer les modèles dans la stratégie Azure Information Protection
 
 1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général.
 
@@ -93,9 +87,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes dans le portai
 
 6. Pour que les utilisateurs puissent voir les modifications apportées aux applications et services, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
 
-<a id="to-convert-templates-to-labels" class="xliff"></a>
-
-## Pour convertir des modèles en étiquettes
+## <a name="to-convert-templates-to-labels"></a>Pour convertir des modèles en étiquettes
 
 Si vous avez un abonnement qui inclut la classification, l’étiquetage et la protection, vous pouvez convertir des modèles en étiquettes. Lorsque vous faites cela, le modèle d’origine est conservé, mais dans le portail Azure, il s’affiche désormais comme étant inclus dans une nouvelle étiquette.
 
@@ -115,9 +107,7 @@ Lorsque vous convertissez un modèle en étiquette :
 
 - Le modèle d’origine n’est plus affiché sous **Modèles** et, pour le modifier dans le portail Azure, vous devez maintenant modifier l’étiquette qui a été créée. Le modèle reste disponible pour le service Azure Rights Management et peut toujours être géré à l’aide de [commandes PowerShell](administer-powershell.md).  
 
-<a id="to-create-a-new-template" class="xliff"></a>
-
-## Pour créer un nouveau modèle
+## <a name="to-create-a-new-template"></a>Pour créer un nouveau modèle
 
 Lorsque vous créez une nouvelle étiquette avec le paramètre de protection de **Azure RMS**, en pratique, cela crée un nouveau modèle personnalisé qui est ensuite accessible pour les services et applications qui s’intègrent avec les modèles Rights Management.
 
@@ -138,9 +128,7 @@ Lorsque vous créez une nouvelle étiquette avec le paramètre de protection de 
 5. Pour rendre ces modèles disponibles pour les applications et services de l’utilisateur, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Comme avec toutes les modifications apportées à la stratégie Azure Information Protection, il peut falloir jusqu'à 15 minutes pour qu’un ordinateur exécutant le client Azure Information Protection termine le téléchargement de ces modèles. Pour plus d’informations sur la façon dont les ordinateurs et les services téléchargent et actualisent les modèles, consultez [Actualisation des modèles pour les utilisateurs et services](refresh-templates.md).
 

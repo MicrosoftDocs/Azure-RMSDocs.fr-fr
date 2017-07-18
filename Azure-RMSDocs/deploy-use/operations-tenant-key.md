@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/30/2017
 ---
-<a id="operations-for-your-azure-information-protection-tenant-key" class="xliff"></a>
-
-# Opérations pour votre clé de locataire Azure Information Protection
+# <a name="operations-for-your-azure-information-protection-tenant-key"></a>Opérations pour votre clé de locataire Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
 

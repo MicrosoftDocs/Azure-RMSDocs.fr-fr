@@ -16,9 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/30/2017
 ---
-<a id="how-to-create-a-new-label-for-azure-information-protection" class="xliff"></a>
-
-# Comment créer une étiquette pour Azure Information Protection
+# <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Comment créer une étiquette pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
@@ -48,9 +46,7 @@ Utilisez les instructions suivantes pour ajouter une étiquette à la stratégie
 
 5. Si vous souhaitez que ces nouveaux nom d’étiquette et description s’affichent dans différentes langues pour les utilisateurs, suivez les procédures de [Guide pratique pour configurer des étiquettes pour des langues différentes](configure-policy-languages.md). 
 
-<a id="next-steps" class="xliff"></a>
-
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 

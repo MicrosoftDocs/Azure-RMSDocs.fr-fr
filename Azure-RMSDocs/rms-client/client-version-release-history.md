@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/30/2017
 ---
-<a id="azure-information-protection-client-version-release-history" class="xliff"></a>
-
-# Client Azure Information Protection : historique des versions
+# <a name="azure-information-protection-client-version-release-history"></a>Client Azure Information Protection : historique des versions
 
 >*S’applique à : Azure Information Protection*
 
@@ -36,9 +34,7 @@ Pour déterminer les nouveautés ou modifications apportées à une version en d
 > Si le problème persiste, consultez les informations dans [Options de support technique et ressources de la communauté](../get-started/information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
 
-<a id="version-172100" class="xliff"></a>
-
-## Version 1.7.210.0
+## <a name="version-172100"></a>Version 1.7.210.0
 
 **Publiée le** : 06/06/2017
 
@@ -63,9 +59,7 @@ Cette version inclut MSIPC version 1.0.2217.1 du client RMS.
 - Nouvelle applet de commande PowerShell, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). Lorsque vous exécutez cette applet de commande, elle inspecte le contenu du fichier et applique automatiquement des étiquettes pour les fichiers sans étiquette, selon les conditions que vous spécifiez dans la stratégie Azure Information Protection.
 
 
-<a id="version-14210" class="xliff"></a>
-
-## Version 1.4.21.0
+## <a name="version-14210"></a>Version 1.4.21.0
 
 **Publiée le** : 15/03/2017
 
@@ -92,9 +86,7 @@ Avec la version précédente, il était obligatoire de disposer de Microsoft .NE
 - Pour les fichiers PDF, la visionneuse prend désormais en charge les options telles que la recherche, le zoom et le pivotement. Pour utiliser ces options, cliquez avec le bouton droit sur le fichier lorsqu’il est affiché dans la visionneuse.
 
 
-<a id="version-131552" class="xliff"></a>
-
-## Version 1.3.155.2
+## <a name="version-131552"></a>Version 1.3.155.2
 
 **Date de publication** : 08/02/2017
 
@@ -122,9 +114,7 @@ Cette version du client est la [version en disponibilité générale](https://bl
 - [Azure Information Protection - Guide de l’utilisateur](client-user-guide.md)
 
 
-<a id="version-1240" class="xliff"></a>
-
-## Version 1.2.4.0
+## <a name="version-1240"></a>Version 1.2.4.0
 
 **Publiée le** : 27/10/2016
 
@@ -142,17 +132,13 @@ Cette version du client est la [version en disponibilité générale](https://bl
 
     Pour plus d’informations sur cette option, consultez la section [Vérifications supplémentaires et dépannage](client-admin-guide.md#additional-checks-and-troubleshooting) du guide de l’administrateur.
 
-<a id="version-11230" class="xliff"></a>
-
-## Version 1.1.23.0
+## <a name="version-11230"></a>Version 1.1.23.0
 
 **Publiée le** : 01/10/2016
 
 Disponibilité générale.
 
-<a id="next-steps" class="xliff"></a>
-
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur l’installation du client, consultez :
 

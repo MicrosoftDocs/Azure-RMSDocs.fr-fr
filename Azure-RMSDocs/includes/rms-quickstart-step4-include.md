@@ -10,9 +10,7 @@ Lorsqu’ils cliquent sur le lien, ils sont redirigés vers les instructions pou
 
 ![Captures d’écran du didacticiel RM](../media/AzRMS_Tutorial_4_Screenshots.png)
 
-<a id="to-view-the-protected-document-attachment" class="xliff"></a>
-
-#### Affichage de la pièce jointe du document protégé
+#### <a name="to-view-the-protected-document-attachment"></a>Affichage de la pièce jointe du document protégé
 
 1.  Étant donné qu’Azure Rights Management a protégé un document Word, il existe deux pièces jointes au courrier électronique. Il s’agit en fait de deux versions du même fichier, mais avec différentes extensions. Ouvrez la version avec l’extension de nom de fichier **.ppdf** (**Confidential.ppdf**).
 

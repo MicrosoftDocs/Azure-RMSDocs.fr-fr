@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/30/2017
 ---
-<a id="configuring-custom-templates-for-the-azure-rights-management-service" class="xliff"></a>
-
-# Configuration de modèles personnalisés pour le service Azure Rights Management
+# <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Configuration de modèles personnalisés pour le service Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
 

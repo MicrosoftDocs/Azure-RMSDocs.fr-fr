@@ -16,9 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/05/2017
 ---
-<a id="how-to-configure-labels-for-different-languages-in-azure-information-protection" class="xliff"></a>
-
-# Guide de configuration des étiquettes pour des langues différentes dans Azure Information Protection
+# <a name="how-to-configure-labels-for-different-languages-in-azure-information-protection"></a>Guide de configuration des étiquettes pour des langues différentes dans Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
@@ -29,9 +27,7 @@ Par défaut, les noms et descriptions des étiquettes prennent en charge une seu
 
 Sélectionnez les langues qui correspondent à la langue de vos utilisateurs pour Office et Windows. Ces noms d’étiquette et descriptions s’affichent alors dans la barre d’Azure Information Protection dans les applications Office et la boîte de dialogue **Classification et protection - Azure Information Protection**, respectivement. Pour plus d’informations sur la langue choisie, consultez la section [Comment le client Azure Information Protection détermine la langue à afficher](#how-the-azure-information-protection-client-determines-the-language-to- display) de cette page. 
 
-<a id="to-configure-labels-to-display-in-different-languages" class="xliff"></a>
-
-## Pour configurer les étiquettes pour un affichage multilingue
+## <a name="to-configure-labels-to-display-in-different-languages"></a>Pour configurer les étiquettes pour un affichage multilingue
 
 1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**. 
     
@@ -66,9 +62,7 @@ Sélectionnez les langues qui correspondent à la langue de vos utilisateurs pou
     
     Une fois l’importation terminée, les noms d’étiquettes et descriptions localisés sont téléchargés pour les utilisateurs la prochaine fois que vous publiez la stratégie Azure Information Protection. Vous pouvez cliquer sur **Publier** à partir du panneau **Stratégie globale** ou **Stratégies délimitées**.
 
-<a id="how-the-azure-information-protection-client-determines-the-language-to-display" class="xliff"></a>
-
-## Comment le client Azure Information Protection détermine la langue à afficher
+## <a name="how-the-azure-information-protection-client-determines-the-language-to-display"></a>Comment le client Azure Information Protection détermine la langue à afficher
 
 Lorsque les utilisateurs téléchargent une stratégie Azure Information Protection qui prend en charge différentes langues, la langue que les utilisateurs voient pour leurs noms d’étiquette et les info-bulles est déterminée par la logique suivante :
 
@@ -84,9 +78,7 @@ Lorsque les utilisateurs téléchargent une stratégie Azure Information Protect
 
 - Lorsqu’il n’existe aucune correspondance directe avec la langue de leur système d’exploitation, les descriptions et les noms d’étiquette s’affichent dans la langue spécifiée par défaut pour tous les utilisateurs. Cette langue est généralement l’anglais, qui est la langue utilisée dans la stratégie par défaut.
 
-<a id="when-localized-label-names-are-not-used" class="xliff"></a>
-
-## Si les noms d’étiquettes localisés ne sont pas utilisés
+## <a name="when-localized-label-names-are-not-used"></a>Si les noms d’étiquettes localisés ne sont pas utilisés
 
 Dans les scénarios suivants, les noms localisés des étiquettes (et sous-étiquettes) ne sont pas utilisés. Par souci de cohérence à travers votre client, la langue par défaut est toujours utilisée pour les éléments suivants :
 
@@ -97,9 +89,7 @@ Dans les scénarios suivants, les noms localisés des étiquettes (et sous-étiq
 - En-têtes de messagerie et métadonnées de document
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur la configuration des options disponibles pour une étiquette et d’autres paramètres de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).
 

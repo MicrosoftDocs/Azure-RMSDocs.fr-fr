@@ -16,9 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/05/2017
 ---
-<a id="how-to-configure-a-label-for-rights-management-protection" class="xliff"></a>
-
-# Comment configurer une étiquette pour la protection offerte par Rights Management
+# <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
 >*S’applique à : Azure Information Protection*
 
@@ -26,9 +24,7 @@ Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d�
 
 Il peut s’agir de l’un des modèles par défaut créés automatiquement lorsque vous activez Azure Rights Management, ou d’un modèle personnalisé. Les modèles pour services Azure Rights Management sont pris en charge, mais appliquent la protection uniquement lorsque l’auteur du document ou de l’e-mail figure dans l’étendue configurée du modèle. Si l’utilisateur n’y figure pas, il reçoit un message indiquant qu’Azure Information Protection ne peut pas appliquer l’étiquette.
 
-<a id="how-the-protection-works" class="xliff"></a>
-
-## Fonctionnement de la protection
+## <a name="how-the-protection-works"></a>Fonctionnement de la protection
 
 Quand un document ou un e-mail est protégé par Rights Management, il est chiffré au repos et en transit et peut uniquement être déchiffré par les utilisateurs autorisés. Ce chiffrement est conservé avec le document ou l’e-mail, même si ce dernier est renommé. En outre, vous pouvez configurer des droits d’utilisation et des restrictions, comme dans les exemples suivants :
 
@@ -54,9 +50,7 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
 - Pour Exchange sur site, vous devez déployer le [connecteur RMS et configurer vos serveurs Exchange](../deploy-use/deploy-rms-connector.md). 
 
 
-<a id="to-configure-a-label-for-rights-management-protection" class="xliff"></a>
-
-## Configurer une étiquette pour la protection Rights Management
+## <a name="to-configure-a-label-for-rights-management-protection"></a>Configurer une étiquette pour la protection Rights Management
 
 1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**. 
 
@@ -125,9 +119,7 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
 
 13. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
 
-<a id="next-steps" class="xliff"></a>
-
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 

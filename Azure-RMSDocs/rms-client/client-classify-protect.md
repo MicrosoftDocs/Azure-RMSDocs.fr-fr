@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/30/2017
 ---
-<a id="classify-and-protect-a-file-or-email-by-using-azure-information-protection" class="xliff"></a>
-
-# Classifier et protéger un fichier ou un e-mail avec Azure Information Protection
+# <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classifier et protéger un fichier ou un e-mail avec Azure Information Protection
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 
@@ -28,9 +26,7 @@ Le plus simple pour classifier et protéger vos documents et vos e-mails consist
 
 Toutefois, vous pouvez également classifier et protéger des fichiers à l’aide de l’**Explorateur de fichiers**, lequel prend en charge des types de fichiers supplémentaires et constitue un moyen pratique de classifier et protéger plusieurs fichiers à la fois. Cette méthode prend en charge la protection des documents Office, des fichiers PDF, des fichiers texte et image et d’un large éventail d’autres fichiers. 
 
-<a id="safely-share-a-file-with-people-outside-your-organization" class="xliff"></a>
-
-### Partager un fichier en toute sécurité avec des personnes extérieures à votre organisation
+### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Partager un fichier en toute sécurité avec des personnes extérieures à votre organisation
 
 Le partage de fichiers protégés avec d’autres utilisateurs est sécurisé. Par exemple, vous joignez le fichier à un e-mail ou envoyez une invitation à partir de votre site SharePoint.
 
@@ -41,9 +37,7 @@ Si vous définissez vos propres autorisations personnalisées et que le fichier 
 Lorsque le fichier est protégé avec vos autorisations personnalisées, partagez le fichier comme vous le faites habituellement. Si c’est la première fois que les utilisateurs avec lesquels vous partagez le fichier reçoivent un fichier protégé, ils auront peut-être besoin d’instructions pour l’afficher. Pour ces utilisateurs, vous pouvez copier et coller le message suivant : **J’ai protégé ce fichier avec Microsoft Azure Information Protection. Pour une première utilisation, consultez ces [instructions](https://aka.ms/rms-signup).**
 
 
-<a id="using-office-apps-to-classify-and-protect-your-documents-and-emails" class="xliff"></a>
-
-## Utilisation des applications Office pour classifier et protéger vos documents et vos e-mails
+## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Utilisation des applications Office pour classifier et protéger vos documents et vos e-mails
 
 Utilisez la barre Azure Information Protection et sélectionnez une des étiquettes qui a été configurée pour vous. 
 
@@ -59,19 +53,13 @@ Outre la sélection manuelle, les étiquettes peuvent également être appliqué
 
 - Votre administrateur a configuré recommandé des invites pour sélectionner une étiquette spécifique lorsque des données sensibles sont détectées. Vous pouvez accepter la recommandation (et l’étiquette est appliquée), ou la rejeter (l’étiquette recommandée n’est pas appliquée).
 
-<a id="exceptions-for-the-azure-information-protection-bar" class="xliff"></a>
+### <a name="exceptions-for-the-azure-information-protection-bar"></a>Exceptions de la barre Azure Information Protection 
 
-### Exceptions de la barre Azure Information Protection 
-
-<a id="dont-see-this-information-protection-bar-in-your-office-apps" class="xliff"></a>
-
-##### Vous ne voyez pas cette barre Information Protection dans vos applications Office ?
+##### <a name="dont-see-this-information-protection-bar-in-your-office-apps"></a>Vous ne voyez pas cette barre Information Protection dans vos applications Office ?
 
 - Le client Azure Information Protection n’est pas [installé](install-client-app.md), ou le client est en cours d’exécution en [mode Protection uniquement](client-protection-only-mode.md).
  
-<a id="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar" class="xliff"></a>
-
-##### L’étiquette que vous souhaitez voir ne s’affiche pas dans la barre ? 
+##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>L’étiquette que vous souhaitez voir ne s’affiche pas dans la barre ? 
 
 - Si votre administrateur a récemment configuré une nouvelle étiquette pour vous, essayez de fermer toutes les instances de votre application Office, puis de la rouvrir. Cette action recherche les modifications apportées à vos étiquettes.
 
@@ -79,9 +67,7 @@ Outre la sélection manuelle, les étiquettes peuvent également être appliqué
 
 - L’étiquette peut être dans une stratégie délimitée qui n’inclut pas votre compte. Contactez votre support technique ou votre administrateur.
 
-<a id="set-custom-permissions-for-a-document" class="xliff"></a>
-
-### Définir des autorisations personnalisées pour un document
+### <a name="set-custom-permissions-for-a-document"></a>Définir des autorisations personnalisées pour un document
 
 Vous pouvez spécifier vos propres paramètres de protection pour les documents plutôt que d’utiliser les paramètres de protection que votre administrateur peut avoir inclus dans votre étiquette sélectionnée.
 
@@ -104,9 +90,7 @@ Vous pouvez spécifier vos propres paramètres de protection pour les documents 
 5. Cliquez sur **Appliquer** et attendez que le message **Autorisations personnalisées appliquées** s’affiche. Cliquez ensuite sur **Fermer**.
 
 
-<a id="keyboard-shortcuts-for-the-azure-information-protection-bar" class="xliff"></a>
-
-### Raccourcis clavier de la barre Azure Information Protection
+### <a name="keyboard-shortcuts-for-the-azure-information-protection-bar"></a>Raccourcis clavier de la barre Azure Information Protection
 
 Pour accéder à la barre Azure Information Protection à l’aide du clavier, utilisez la combinaison de touches suivante :
 
@@ -114,9 +98,7 @@ Pour accéder à la barre Azure Information Protection à l’aide du clavier, u
 
 Utilisez ensuite la touche de tabulation pour sélectionner les étiquettes et autres commandes de la barre (icônes **Masquer les étiquettes** et **Supprimer l’étiquette**), puis appuyez sur la touche Entrée pour les sélectionner.
 
-<a id="using-file-explorer-to-classify-and-protect-files" class="xliff"></a>
-
-## Utilisation de l’Explorateur de fichiers pour classifier et protéger des fichiers
+## <a name="using-file-explorer-to-classify-and-protect-files"></a>Utilisation de l’Explorateur de fichiers pour classifier et protéger des fichiers
 
 Avec l’Explorateur de fichiers, vous pouvez rapidement classifier et protéger un seul fichier, plusieurs fichiers ou un dossier. 
 
@@ -129,9 +111,7 @@ Certains fichiers sont automatiquement exclus de la classification et de la prot
 Le guide d’administration contient une liste complète des types de fichiers pris en charge et des fichiers et dossiers qui sont automatiquement exclus : [Types de fichiers pris en charge par le client Azure Information Protection](client-admin-guide-file-types.md).
 
 
-<a id="to-classify-and-protect-a-file-by-using-file-explorer" class="xliff"></a>
-
-### Pour classer et protéger un fichier à l’aide de l’Explorateur de fichiers
+### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>Pour classer et protéger un fichier à l’aide de l’Explorateur de fichiers
 
 1. Dans l’Explorateur de fichiers, sélectionnez votre fichier, plusieurs fichiers ou un dossier. Cliquez avec le bouton droit, puis sélectionnez **Classifier et protéger**. Exemple :
     
@@ -172,9 +152,7 @@ Si vous changez d’avis sur la classification et la protection, ou avez besoin 
 La classification et la protection que vous avez spécifiées restent avec le fichier, même si vous l’envoyez par e-mail ou l’enregistrez à un autre emplacement. Si vous avez protégé le fichier, vous pouvez suivre son utilisation et au besoin, révoquer son accès. Pour plus d’informations, consultez [Suivre et révoquer vos documents protégés quand vous utilisez Azure Information Protection](client-track-revoke.md). 
 
 
-<a id="other-instructions" class="xliff"></a>
-
-## Autres instructions
+## <a name="other-instructions"></a>Autres instructions
 Plus d’instructions pratiques dans le guide de l’utilisateur Azure Information Protection :
 
 -   [Que voulez-vous faire ?](client-user-guide.md#what-do-you-want-to-do)

@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/30/2017
 ---
-<a id="planning-and-implementing-your-azure-information-protection-tenant-key" class="xliff"></a>
-
-# Planification et implémentation de votre clé de locataire Azure Information Protection
+# <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de votre clé de locataire Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -40,9 +38,7 @@ Utilisez les informations de cet article pour planifier et gérer votre clé de 
 Si nécessaire, vous pouvez changer la topologie de clé de locataire après le déploiement à l’aide de l’applet de commande [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
 
 
-<a id="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok" class="xliff"></a>
-
-## Choix de la topologie de clé de locataire : gestion Microsoft (par défaut) ou gestion BYOK
+## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Choix de la topologie de clé de locataire : gestion Microsoft (par défaut) ou gestion BYOK
 Choisissez la topologie de clé de locataire la plus adaptée à votre organisation. Par défaut, Azure Information Protection génère votre clé de locataire et gère la plupart des aspects de son cycle de vie. Il s'agit de l'option la plus simple, avec la charge administrative la plus faible. Dans la plupart des cas, les utilisateurs n'ont même pas conscience de l'existence de cette clé de locataire. Il leur suffit de s’inscrire à Azure Information Protection ; le reste du processus de gestion de la clé est traité par Microsoft.
 
 Vous pouvez aussi vouloir un contrôle total sur votre clé de locataire en utilisant [Azure Key Vault](https://azure.microsoft.com/services/key-vault/). Ce scénario implique la création de votre clé de locataire et la conservation de la copie principale sur votre serveur local. Il est souvent fait référence à ce scénario sous le terme « Bring your own key » (BYOK). Cette option implique les étapes suivantes :
@@ -58,9 +54,7 @@ Bien que cette action soit facultative, vous pouvez également utiliser les jour
 > [!NOTE]
 > En guise de mesure de protection supplémentaire, Azure Key Vault utilise des domaines de sécurité distincts pour ses centres de données dans des régions comme Amérique du Nord, EMEA (Europe, Moyen-Orient et Afrique) et Asie, de même que pour les différentes instances d’Azure, comme Microsoft Azure Allemagne et Azure Government. Quand vous gérez votre propre clé de locataire, celle-ci est liée au domaine de sécurité de la région ou de l’instance où votre locataire Azure Information Protection est inscrit. Par exemple, la clé de locataire d'un client européen ne peut pas être utilisée dans des centres de données en Amérique du Nord ou en Asie.
 
-<a id="the-tenant-key-lifecycle" class="xliff"></a>
-
-## Cycle de vie d'une clé de locataire
+## <a name="the-tenant-key-lifecycle"></a>Cycle de vie d'une clé de locataire
 Si vous choisissez de confier à Microsoft la gestion de votre clé de locataire, Microsoft traite la plupart des aspects de son cycle de vie. Cependant, si vous décidez de gérer votre clé de locataire, vous êtes responsable d’un grand nombre d’opérations du cycle de vie de la clé et de certaines procédures supplémentaires dans Azure Key Vault.
 
 Les schémas ci-dessous présentent et comparent ces deux options. Le premier schéma permet notamment de juger de la faible charge administrative qui vous incombe dans la configuration par défaut, lorsque Microsoft gère la clé de locataire.
@@ -75,9 +69,7 @@ Si vous choisissez de confier à Microsoft la gestion de votre clé de locataire
 
 Si vous décidez de gérer vous-même votre clé de locataire, lisez les sections suivantes pour plus d'informations.
 
-<a id="implementing-your-azure-information-protection-tenant-key" class="xliff"></a>
-
-## Implémentation de votre clé de locataire Azure Information Protection
+## <a name="implementing-your-azure-information-protection-tenant-key"></a>Implémentation de votre clé de locataire Azure Information Protection
 
 Utilisez les informations et les procédures de cette section si vous souhaitez générer et gérer vous-même votre clé de locataire (solution BYOK) :
 
@@ -87,9 +79,7 @@ Utilisez les informations et les procédures de cette section si vous souhaitez 
 > 
 > Vous pouvez aussi [contacter le support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) si votre organisation applique des stratégies spécifiques en matière de gestion des clés.
 
-<a id="prerequisites-for-byok" class="xliff"></a>
-
-### Conditions requises pour la solution BYOK
+### <a name="prerequisites-for-byok"></a>Conditions requises pour la solution BYOK
 Reportez-vous au tableau suivant pour connaître les conditions requises pour la solution Bring your own key (BYOK).
 
 |Condition requise|Plus d’informations|
@@ -101,9 +91,7 @@ Reportez-vous au tableau suivant pour connaître les conditions requises pour la
 
 Pour plus d’informations sur les modules de sécurité matériels Thales et comment ils sont utilisés avec Azure Key Vault, consultez le [site web de Thales](https://www.thales-esecurity.com/msrms/cloud).
 
-<a id="instructions-for-byok" class="xliff"></a>
-
-### Instructions pour BYOK
+### <a name="instructions-for-byok"></a>Instructions pour BYOK
 
 Pour générer et transférer votre propre clé de locataire dans Azure Key Vault, suivez les procédures de la rubrique [Comment générer et transférer les clés protégées par HSM pour Azure Ket Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) dans la documentation d’Azure Key Vault.
 
@@ -131,9 +119,7 @@ Si vous devez vérifier que l’URL de la clé est définie correctement dans le
 Enfin, si le service Azure Rights Management est déjà activé, exécutez [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) pour indiquer à Azure Rights Management d’utiliser cette clé comme clé de locataire active pour votre service Azure Rights Management. Si vous n’effectuez pas cette étape, Azure Rights Management continue à utiliser la clé par défaut gérée par Microsoft qui a été créée automatiquement au moment de l’activation du service.
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Maintenant que vous avez planifié et, le cas échéant, généré votre clé de locataire, procédez comme suit :
 

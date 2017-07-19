@@ -5,7 +5,7 @@ keywords: "Quelques questions fréquemment posées pour vous aider à utiliser l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2017
+ms.date: 07/08/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5ea28525653966d2de609c118bd18079cff99b2d
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: dc6b9ee8c557ce04019534c4713c526265c207e0
+ms.sourcegitcommit: 0b097f0817fee0fb025caef3c46fdd887c782a43
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/07/2017
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android
 
@@ -60,7 +60,9 @@ Pas encore. Aujourd’hui, vous pouvez vous inscrire uniquement avec votre adres
 
 ## <a name="which-file-extensions-can-i-open-with-this-app"></a>Quelles extensions de fichier puis-je ouvrir avec cette application ?
 
-Vous pouvez ouvrir les fichiers .rpmsg, .pdf, .ppdf, .pjpg, .ptxt et plusieurs autres formats de fichiers texte et images.
+Vous pouvez ouvrir les fichiers .rpmsg, .pdf, .ppdf, .pjpg, .pjpeg, .ptiff, .ppng, .ptxt, .pxml et plusieurs autres formats de fichiers texte et image.
+
+Pour obtenir la liste complète des extensions de nom de fichier texte et image, consultez la première table de la section [Types de fichier pris en charge pour la classification et la protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) du guide d’administration.
 
 ##  <a name="how-do-i-provide-feedback-about-this-app"></a>Comment envoyer des commentaires concernant cette application ?
 

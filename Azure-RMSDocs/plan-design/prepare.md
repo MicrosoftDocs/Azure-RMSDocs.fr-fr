@@ -4,7 +4,7 @@ description: "Vérifiez que vous disposez des comptes d’utilisateur et de grou
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/03/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 362c5108238a0561c35d72faa556417f0f0f8566
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f49d00317503f23d03ae64aa3608375b871b3854
+ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 
@@ -70,7 +70,7 @@ Pour affecter des droits d’utilisation et des contrôles d’accès, et config
 
 - Pour autoriser les utilisateurs, deux attributs dans Azure AD sont utilisés : **proxyAddresses** et **userPrincipalName**.
 
-- L’attribut **proxyAddresses d’Azure AD** stocke toutes les adresses e-mail pour un compte et peut être rempli de différentes façons. Par exemple, une adresse e-mail est automatiquement stockée dans cet attribut pour un utilisateur dans Office 365 qui possède une boîte aux lettres Exchange Online. Si vous attribuez une autre adresse e-mail pour un utilisateur Office 365, elle est également enregistrée dans cet attribut. Il peut également être rempli par les adresses e-mail qui sont synchronisées à partir de comptes locaux. 
+- L’attribut **proxyAddresses d’Azure AD** stocke toutes les adresses e-mail pour un compte et peut être rempli de différentes façons. Par exemple, un utilisateur dans Office 365 avec une boîte aux lettres Exchange Online a automatiquement une adresse e-mail stockée dans cet attribut. Si vous attribuez une autre adresse e-mail pour un utilisateur Office 365, elle est également enregistrée dans cet attribut. Il peut également être rempli par les adresses e-mail qui sont synchronisées à partir de comptes locaux. 
     
     Azure Information Protection peut utiliser n’importe quelle valeur dans cet attribut proxyAddresses d’Azure AD si le domaine a été ajouté à votre locataire (un « domaine vérifié »). Pour plus d’informations sur la vérification des domaines :
     
@@ -88,13 +88,13 @@ En plus d’utiliser les attributs proxyAddresses et userPrincipalName d’Azure
 
 Pour affecter des étiquettes :
 
-- Vous pouvez utiliser n’importe quel type de groupe dans Azure AD pour configurer des stratégies délimitées qui affectent des étiquettes supplémentaires aux membres de groupe.
+- Pour configurer des stratégies avec étendue qui attribuent des étiquettes supplémentaires aux membres du groupe, vous pouvez utiliser n’importe quel type de groupe dans Azure AD ayant une adresse e-mail avec un domaine vérifié pour le locataire de l’utilisateur. Un groupe qui possède une adresse e-mail est souvent appelé groupe à extension messagerie.
+    
+    Par exemple, vous pouvez utiliser un groupe de sécurité à extension messagerie, un groupe de distribution (qui peut être statique ou dynamique) et un groupe Office 365. Vous ne pouvez pas utiliser un groupe de sécurité (dynamique ou statique), car ce type de groupe n’a pas d’adresse e-mail.
 
 Pour affecter des droits d’utilisation et des contrôles d’accès :
 
 - Vous pouvez utiliser n’importe quel type de groupe dans Azure AD qui a une adresse e-mail contenant un domaine vérifié pour le locataire de l’utilisateur. Un groupe qui possède une adresse e-mail est souvent appelé groupe à extension messagerie. 
-    
-    Par exemple, vous pouvez utiliser un groupe de sécurité à extension messagerie, un groupe de distribution (qui peut être statique ou dynamique) et un groupe Office 365. Vous ne pouvez pas utiliser un groupe de sécurité (dynamique ou statique), car ce type de groupe n’a pas d’adresse e-mail.
 
 Pour configurer le service Azure Rights Management :
 
@@ -112,7 +112,7 @@ Si vous disposez de comptes qui sont gérés en local et que vous souhaitez util
 
 Quand vous synchronisez vos comptes, il est inutile de synchroniser tous les attributs. Pour obtenir la liste des attributs qui doivent être synchronisés, consultez la [section relative à Azure RMS](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#azure-rms) dans la documentation d’Azure Active Directory. 
 
-Dans la liste d’attributs pour Azure Rights Management, vous verrez que, pour les utilisateurs, les attributs AD locaux **mail**, **proxyAddresses** et **userPrincipalName** sont nécessaires pour la synchronisation. Les valeurs pour **mail** et **proxyAddresses** sont synchronisées avec l’attribut proxyAddresses d’Azure AD. Pour plus d’informations, consultez [Comment l’attribut proxyAddresses est rempli dans Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad)
+Dans la liste d’attributs d’Azure Rights Management, pour les utilisateurs, les attributs AD locaux **mail**, **proxyAddresses** et **userPrincipalName** sont nécessaires pour la synchronisation. Les valeurs pour **mail** et **proxyAddresses** sont synchronisées avec l’attribut proxyAddresses d’Azure AD. Pour plus d’informations, consultez [Comment l’attribut proxyAddresses est rempli dans Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad)
 
 ## <a name="confirming-your-users-and-groups-are-prepared-for-azure-information-protection"></a>Confirmation que vos utilisateurs et groupes sont préparés pour Azure Information Protection
 
@@ -139,7 +139,7 @@ Votre première vérification consiste à vous assurer que les utilisateurs que 
 
 Vérifiez ensuite si la colonne **ProxyAddresses** est remplie. Si tel est le cas, les valeurs de messagerie dans cette colonne peuvent être utilisées pour autoriser l’utilisateur à se servir du service Azure Rights Management. 
 
-Si la colonne **ProxyAddresses** n’est pas remplie, la valeur **UserPrincipalName** servira à autoriser l’utilisateur à se servir du service Azure Rights Management.
+Si la colonne **ProxyAddresses** n’est pas remplie, la valeur **UserPrincipalName** sert à autoriser l’utilisation du service Azure Rights Management.
 
 Exemple : 
     
@@ -154,7 +154,7 @@ Exemple :
 
 -  Le compte d’utilisateur pour Ankur Roy peut être autorisé en utilisant **ankur.roy@contoso.com** et **ankur.roy@onmicrosoft.contoso.com**, mais pas **ankurroy@contoso.com**.
 
-Dans la plupart des cas, la valeur pour UserPrincipalName correspondra à l’une des valeurs dans le champ ProxyAddresses. Cette configuration est recommandée, mais si vous ne pouvez pas changer votre valeur UPN pour qu’elle corresponde à l’adresse e-mail, vous devez suivre les étapes ci-après :
+Dans la plupart des cas, la valeur de UserPrincipalName correspond à une valeur du champ ProxyAddresses. Cette configuration est recommandée, mais si vous ne pouvez pas changer votre valeur UPN pour qu’elle corresponde à l’adresse e-mail, vous devez suivre les étapes ci-après :
 
 1. Si le nom de domaine dans la valeur UPN est un domaine vérifié pour votre locataire Azure AD, ajoutez la valeur UPN comme une autre adresse e-mail dans Azure AD afin que la valeur UPN puisse maintenant être utilisée pour autoriser le compte d’utilisateur pour Azure Information Protection.
     
@@ -193,7 +193,7 @@ Notez qu’il est rare qu’un groupe change son adresse e-mail et, si vous attr
 
 ## <a name="group-membership-caching-by-azure-rights-management"></a>Mise en cache de l’appartenance au groupe par Azure Rights Management
 
-Pour des raisons de performances, l’appartenance au groupe est mise en cache par le service Azure Rights Management. Cela signifie que les modifications apportées à l’appartenance au groupe dans Azure AD peuvent prendre jusqu’à 3 heures pour entrer en vigueur quand ces groupes sont utilisés par Azure Rights Management, et cette période est susceptible de changer. 
+Pour des raisons de performances, l’appartenance au groupe est mise en cache par le service Azure Rights Management. Cela signifie que les modifications apportées à l’appartenance au groupe dans Azure AD peuvent prendre jusqu’à 3 heures pour entrer en vigueur quand ces groupes sont utilisés par Azure Rights Management, et cette durée est susceptible de changer. 
 
 N’oubliez pas de tenir compte de ce délai dans l’ensemble des modifications ou tests que vous effectuez quand vous utilisez des groupes pour Azure Rights Management, par exemple quand vous attribuez des droits d’utilisation ou configurez le service Azure Rights Management. 
 

@@ -4,33 +4,29 @@ description: "Didacticiel de prise en main vous permettant de tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 023330bbd3909290e098bd7379d8cc2a24d36672
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 9afee2da9cb6fdd787dfb6bdafe2ae64fdef9475
+ms.sourcegitcommit: ea03477312b64c0a846701e46d991fe2c85b3a1f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/10/2017
 ---
-<a id="quick-start-tutorial-for-azure-information-protection" class="xliff"></a>
-
-# Didacticiel de démarrage rapide pour Azure Information Protection 
+# <a name="quick-start-tutorial-for-azure-information-protection"></a>Didacticiel de démarrage rapide pour Azure Information Protection 
 
 >*S’applique à : Azure Information Protection*
 
 Utilisez ce didacticiel pour tester rapidement Azure Information Protection en seulement 5 étapes et environ 20 minutes. Ce didacticiel est conçu comme une démonstration autoguidée pour illustrer rapidement certaines des fonctions et fonctionnalités d’Azure Information Protection. Il n’inclut pas toutes les fonctionnalités disponibles et n’est pas destiné à servir de guide de déploiement au sein de votre organisation. Si vous envisagez de déployer Azure Information Protection dans votre organisation, consultez la [documentation relative à la feuille de route pour le déploiement](../plan-design/deployment-roadmap.md). 
 
-Ce didacticiel est destiné aux administrateurs et consultants en informatique, afin de les aider à évaluer Azure Information Protection comme solution de protection des informations pour une organisation. Dans un environnement de production, les étapes pour configurer la stratégie Information Protection et installer le client pour les utilisateurs reviennent à un administrateur. Quant aux étapes d’étiquetage d’un document, de son partage sécurisé par e-mail, puis de son suivi, elles incombent aux utilisateurs finaux. Ce didacticiel englobe toutes ces étapes pour illustrer des scénarios de bout en bout classiques consistant à classifier, à étiqueter et à protéger les données de votre organisation. 
+Ce didacticiel est destiné aux administrateurs et consultants en informatique, afin de les aider à évaluer Azure Information Protection comme solution de protection des informations pour une organisation. Dans un environnement de production, les étapes pour configurer la stratégie Information Protection et installer le client pour les utilisateurs reviennent à un administrateur. Les étapes permettant d’étiqueter un document, de le partager en toute sécurité par e-mail et de le suivre sont effectuées par l’utilisateur final. Ce didacticiel englobe toutes ces étapes pour illustrer des scénarios de bout en bout classiques consistant à classifier, à étiqueter et à protéger les données de votre organisation. 
 
 Si vous rencontrez des problèmes pour effectuer ce didacticiel, pour utiliser Azure Information Protection, ou si vous souhaitez savoir ce que d’autres en pensent, rendez-vous sur le [site Azure Information Protection Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
-<a id="prerequisites" class="xliff"></a>
-
-## Conditions préalables 
+## <a name="prerequisites"></a>Conditions préalables 
 Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 
 - Un abonnement qui inclut Azure Information Protection pour la classification, l’étiquetage et la protection. Ce didacticiel inclut certaines des fonctionnalités avancées, telles que la classification automatique des données avec des recommandations pour l’utilisateur et le site de suivi de document. Assurez-vous que vous disposez d’un abonnement prenant en charge ces fonctionnalités pour ce didacticiel. Pour plus d’informations, consultez les [informations sur les abonnements](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) sur le site Azure Information Protection.
@@ -42,7 +38,7 @@ Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 
 - Un compte d’administrateur général pour vous connecter au portail Azure afin de configurer la stratégie Azure Information Protection. Ce compte doit également disposer d’une adresse de messagerie et d’un service de messagerie professionnel (par exemple, Exchange Online ou Exchange Server).
 
-- Un ordinateur Windows (au minimum Windows 7 avec le Service Pack 1) et sur lequel Office 365 ProPlus avec des applications 2016 ou 2013, Office Professionnel Plus 2016, Office Professionnel Plus 2013 avec le Service Pack 1 ou Office Professionnel Plus 2010 est installé. 
+- Un ordinateur Windows (au minimum Windows 7 avec le Service Pack 1) sur lequel est installé Office 365 ProPlus avec des applications 2016 ou 2013, Office Professionnel Plus 2016, Office Professionnel Plus 2013 avec le Service Pack 1 ou Office Professionnel Plus 2010 avec Service Pack 2. Vous devez être connecté à vos applications Office à l’aide de votre compte cloud.
 
 C’est parti !
 

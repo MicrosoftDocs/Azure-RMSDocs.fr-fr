@@ -4,21 +4,19 @@ description: "Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: b91bfea99170b747bb199b3c966ae8c89fae5359
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f6cd01357db99ee9d299606172aa85f7e2f44ba0
+ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/13/2017
 ---
-<a id="step-2-configure-and-publish-the-azure-information-protection-policy" class="xliff"></a>
-
-# Étape 2 : Configurer et publier la stratégie Azure Information Protection
+# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Étape 2 : Configurer et publier la stratégie Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
@@ -46,13 +44,11 @@ Bien qu’Azure Information Protection soit fourni avec une stratégie par défa
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](../media/info-protect-policy-default-labelsv2.png)
     
-    Certains paramètres de stratégie ne sont pas non plus définis. Ainsi, certains documents ou e-mails ne sont pas obligés d’avoir une étiquette, il n’y a pas d’étiquette par défaut et les utilisateurs n’ont pas à fournir de justification quand ils modifient les étiquettes :
+    Par ailleurs, certains paramètres de stratégie ne sont pas définis. Par exemple, tous les documents ou e-mails ne sont pas obligés d’avoir une étiquette, il n’y a pas d’étiquette par défaut et les utilisateurs n’ont pas à fournir de justification quand ils changent les étiquettes :
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](../media/info-protect-policy-default-settings.png)
 
-<a id="changing-the-settings-for-a-default-label-and-prompt-for-justification" class="xliff"></a>
-
-## Modification des paramètres pour une étiquette par défaut et demande de justification
+## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>Modification des paramètres pour une étiquette par défaut et demande de justification
 
 Pour notre didacticiel, nous allons modifier deux de ces paramètres de stratégie pour vous permettre de voir comment ils fonctionnent :
 
@@ -62,9 +58,7 @@ Pour notre didacticiel, nous allons modifier deux de ces paramètres de stratég
 
 2. Pour **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection**, affectez la valeur **Activé**.
 
-<a id="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification" class="xliff"></a>
-
-## Configuration d’une étiquette pour la protection, d’un filigrane et d’une condition pour une demande de classification
+## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>Configuration d’une étiquette pour la protection, d’un filigrane et d’une condition pour une demande de classification
 
 Nous allons maintenant changer les paramètres d’une des sous-étiquettes, **Tous les employés**, de l’étiquette principale **Confidentiel**. 
 
@@ -82,9 +76,11 @@ Si votre étiquette **Confidentiel** n’a pas de sous-étiquettes car vous avez
     
     Cette action ouvre le panneau **Protection**.
     
-3. Dans le panneau **Protection**, assurez-vous que l’option **Azure RMS** est sélectionnée, ainsi que l’option **Sélectionner un modèle prédéfini**, puis cliquez sur la zone de liste déroulante et choisissez le modèle par défaut **\<Nom de votre organisation > Confidentiel**.     
+3. Dans le panneau **Protection**, vérifiez que **Azure RMS** est sélectionné ainsi que **Sélectionner un modèle prédéfini**. Ensuite, cliquez sur la zone de liste déroulante et choisissez le modèle par défaut qui permet à tous les utilisateurs de votre organisation d’afficher et de modifier le contenu protégé. 
     
-    Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous verrez et sélectionnerez **VanArsdel, Ltd - Confidential** : 
+    Si vous avez récemment activé le service Azure Rights Management, ce modèle est nommé **Confidentiel \ Tous les employés**. 
+    
+    Si le service Azure Rights Management a déjà été activé avant de commencer ce didacticiel, votre modèle par défaut peut être nommé  **\<nom de votre organisation > - Confidentiel**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous voyez et sélectionnez **VanArsdel, Ltd - Confidentiel** : 
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Définir la protection Azure RMS](../media/step2-select-rms-template.png)
     
@@ -108,7 +104,7 @@ Si votre étiquette **Confidentiel** n’a pas de sous-étiquettes car vous avez
     
     a. **Choisir le type de condition** : conservez la valeur par défaut **Prédéfinie**.
     
-    b. **Sélectionner Prédéfinie** : dans la liste déroulante, sélectionnez **Numéro de carte de crédit**.
+    b. **Sélectionner Prédéfinie** : Dans la liste déroulante, sélectionnez **Numéro de carte de crédit**.
     
     c. **Nombre minimal d’occurrences** : conservez la valeur par défaut **1**.
     

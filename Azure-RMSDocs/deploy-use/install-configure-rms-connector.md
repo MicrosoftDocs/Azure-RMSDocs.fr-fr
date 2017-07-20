@@ -4,7 +4,7 @@ description: "Informations vous permettant d’installer et de configurer le con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e3444ee0812d54988ad12461e0f492fe07637209
-ms.sourcegitcommit: 1128ccda089727ac4a638e99532516474cef0ef4
+ms.openlocfilehash: be09e2c974d9d542b94bc16f140e764858cc9282
+ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/17/2017
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
@@ -55,7 +55,9 @@ Pour continuer, saisissez un compte et un mot de passe pour configurer le connec
 ## <a name="entering-credentials"></a>Saisie des informations d'identification
 Pour pouvoir configurer le connecteur RMS, vous devez saisir les identifiants d'un compte disposant des droits suffisants. Par exemple, vous pouvez taper **admin@contoso.com**, puis spécifier le mot de passe pour ce compte.
 
-Ce compte ne doit pas nécessiter l’authentification multifacteur (MFA), car le connecteur ne la prend pas en charge. Le connecteur applique également des restrictions de caractères à ce mot de passe. Vous ne pouvez pas utiliser un mot de passe qui comporte les caractères suivants : « et commercial » (**&**) ; crochet ouvrant (**[**) ; crochet fermant (**]**) ; guillemet droit (**"**) ; et apostrophe (**'**). Si votre mot de passe contient l’un de ces caractères, l’authentification échoue pour le connecteur RMS, et vous voyez le message d’erreur **Cette combinaison de nom d’utilisateur et mot de passe n’est pas correcte**, même si vous pouvez vous connecter à l’aide de ce compte et de ce mot de passe pour d’autres scénarios. Si ce scénario s’applique à votre mot de passe, utilisez un autre compte dont le mot de passe ne contient aucun de ces caractères spéciaux ou redéfinissez votre mot de passe de façon à ce qu’il n’en contienne pas.
+Ce compte ne doit pas requérir l’authentification multifacteur (MFA), car l’outil d’administration Microsoft Rights Management ne prend pas en charge l’authentification multifacteur pour ce compte. 
+
+Le connecteur applique également des restrictions de caractères à ce mot de passe. Vous ne pouvez pas utiliser un mot de passe qui comporte les caractères suivants : « et commercial » (**&**) ; crochet ouvrant (**[**) ; crochet fermant (**]**) ; guillemet droit (**"**) ; et apostrophe (**'**). Si votre mot de passe contient l’un de ces caractères, l’authentification échoue pour le connecteur RMS, et vous voyez le message d’erreur **Cette combinaison de nom d’utilisateur et mot de passe n’est pas correcte**, même si vous pouvez vous connecter à l’aide de ce compte et de ce mot de passe pour d’autres scénarios. Si ce scénario s’applique à votre mot de passe, utilisez un autre compte dont le mot de passe ne contient aucun de ces caractères spéciaux ou redéfinissez votre mot de passe de façon à ce qu’il n’en contienne pas.
 
 En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), vérifiez que le compte spécifié peut protéger le contenu. Par exemple, si vous avez limité la possibilité de protéger du contenu pour le groupe « Département informatique », le compte que vous spécifiez ici doit être un membre de ce groupe. Si ce n’est pas le cas, le message d’erreur suivant s’affiche : **Échec de la tentative de détection de l’emplacement du service d’administration et de l’organisation. Vérifiez que le service Microsoft Rights Management est activé pour votre organisation.**
 

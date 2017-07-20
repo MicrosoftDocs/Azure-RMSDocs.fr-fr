@@ -4,7 +4,7 @@ description: "Découvrez comment utiliser l’infrastructure de classification d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 909ff4f7c96af65172604bb903173dd38d95dcf9
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 7f49fc1613afcfdbad1f1f13e827a866b8ebe6f9
+ms.sourcegitcommit: 0fd2e63822280ec96ab957e22868c63de9ef3d47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci"></a>Serveurs de fichiers qui exécutent Windows Server et utilisent l’infrastructure de classification des fichiers (ICF)
 

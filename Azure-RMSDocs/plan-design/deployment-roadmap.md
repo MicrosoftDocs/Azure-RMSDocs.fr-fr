@@ -4,7 +4,7 @@ description: "Utilisez ces étapes pour préparer, implémenter et gérer Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2017
+ms.date: 07/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 52a99ee84f00588aed2ad332e3f46e3f1f9ae97c
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 54f72dad3f7dbc259df602f0f613124c46ce5846
+ms.sourcegitcommit: d42c6bb914563ae798d4171bb017c85b7077abfb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Feuille de route pour le déploiement d’Azure Information Protection
 
@@ -98,7 +98,7 @@ Configurez éventuellement les éléments suivants :
     
     Modifiez votre stratégie Azure Information Protection afin qu’une ou plusieurs étiquettes appliquent la protection Rights Management. Pour en savoir plus, voir [Comment configurer une étiquette pour la protection offerte par Rights Management](../deploy-use/configure-policy-protection.md).
     
-    Notez que les utilisateurs peuvent appliquer des étiquettes dans Outlook qui appliquent la protection Rights Management, même si Exchange n’est pas configuré pour la gestion des droits relatifs à l'information (IRM). Toutefois, votre organisation n’obtiendra pas toutes les fonctionnalités de la protection Azure Rights Management avec Exchange jusqu'à ce qu’Exchange soit configuré pour IRM. Cette configuration supplémentaire est incluse à l’étape 3 pour Exchange Online et à l’étape 6 pour Exchange sur site. 
+    Notez que les utilisateurs peuvent appliquer des étiquettes dans Outlook qui appliquent la protection Rights Management, même si Exchange n’est pas configuré pour la gestion des droits relatifs à l'information (IRM). Toutefois, votre organisation n’obtiendra pas toutes les fonctionnalités de la protection Azure Rights Management avec Exchange jusqu'à ce qu’Exchange soit configuré pour IRM. Cette configuration supplémentaire est incluse dans la liste suivante (l’étape 2 pour Exchange Online et l’étape 5 pour Exchange sur site). 
 
 2. Configurer des applications et services Office pour IRM
     
@@ -116,7 +116,7 @@ Configurez éventuellement les éléments suivants :
     
     Si vous voulez utiliser des services locaux avec le service Azure Rights Management, installez et configurez le connecteur Microsoft Rights Management. Pour plus d’informations, consultez [Déploiement du connecteur Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
-### <a name="step-4-use-and-monitor-your-data-protection-solutions"></a>Étape 4 : Utiliser et surveiller vos solutions de protection des données
+### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>Étape 6 : Utiliser et surveiller vos solutions de protection des données
 Vous êtes maintenant prêt à protéger vos données, et la manière dont votre entreprise utilise les étiquettes que vous avez configurées et la protection de données Rights Management. Pour plus d’informations sur la prise en charge de cette phase de déploiement, consultez les éléments suivants :
 
 - [Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management](../deploy-use/help-users.md)
@@ -127,7 +127,7 @@ Vous êtes maintenant prêt à protéger vos données, et la manière dont votre
 
 Si vous êtes intéressé par la protection automatique des fichiers à l’aide de l’infrastructure de classification des fichiers sur un serveur de fichiers Windows, consultez [Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server](../rms-client/configure-fci.md).
 
-### <a name="step-5-administer-the-rights-management-service-for-your-tenant-account-as-needed"></a>Étape 5 : Administrer le service Rights Management pour votre compte de locataire selon les besoins
+### <a name="step-7-administer-the-rights-management-service-for-your-tenant-account-as-needed"></a>Étape 7 : Administrer le service Rights Management pour votre compte de locataire selon les besoins
 Quand vous commencez à utiliser le service Azure Rights Management, Windows PowerShell peut s’avérer utile pour automatiser les changements administratifs ou générer des scripts sur ces changements. Pour plus d’informations, consultez [Administration du service Azure Rights Management à l’aide de Windows PowerShell](../deploy-use/administer-powershell.md).
 
 

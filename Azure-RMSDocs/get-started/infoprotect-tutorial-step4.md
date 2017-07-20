@@ -4,17 +4,17 @@ description: "Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 07/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: 9a21c10404582000a55ee0cea554aad9b5a552b3
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: d397ed8290d8b792b55ee78865cdbd41e330f8a9
+ms.sourcegitcommit: d42c6bb914563ae798d4171bb017c85b7077abfb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Étape 4 : classification, étiquetage et protection en action 
 
@@ -40,7 +40,7 @@ Dans la barre Information Protection, cliquez sur l’icône **Modifier l’éti
 
 Les étiquettes disponibles apparaissent à nouveau.
 
-Sélectionnez maintenant la première étiquette, **Personnel**. Étant donné que vous avez sélectionné une étiquette dont la classification est inférieure à l’étiquette précédemment sélectionnée pour ce document, vous êtes invité à justifier votre choix :
+Sélectionnez maintenant la première étiquette, **Personnel**. Étant donné que vous avez sélectionné une étiquette dont la classification est inférieure à l’étiquette précédemment sélectionnée pour ce document, vous êtes invité à justifier votre choix :
 
 ![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : invite de confirmation de l’abaissement](../media/info-protect-lower-justification.png)
 
@@ -54,7 +54,7 @@ Dans la barre Information Protection, cliquez à nouveau sur l’icône **Modifi
 
 Cette fois à l’invite, entrez « Ce document n’a pas besoin d’être classé » et cliquez sur **Confirmer**.  
 
-La valeur **Sensibilité** indique **Non défini**, ce qui correspond à ce que voient les utilisateurs au départ si vous ne définissez pas d’étiquette par défaut :
+La valeur **Sensibilité** indique **Non défini**, ce qui correspond à ce que voient les utilisateurs au départ si vous ne définissez pas d’étiquette par défaut :
 
 ![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : supprimer la classification](../media/sensitivity-not-setv2.png)
 
@@ -69,7 +69,7 @@ La valeur **Sensibilité** indique **Non défini**, ce qui correspond à ce que 
 
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : invite de recommandation](../media/change-nowv2.png)
 
-    Outre le fait que le document montre maintenant que notre étiquette configurée est appliquée (par exemple **Confidentiel / Tous les employés**), vous voyez immédiatement en filigrane le nom de votre entreprise à travers la page et que le pied de page **Classé comme confidentiel** est également appliqué. 
+    Outre le fait que le document montre maintenant que notre étiquette configurée est appliquée (par exemple **Confidentiel\Tous les employés**), vous voyez immédiatement en filigrane le nom de votre entreprise à travers la page et que le pied de page **Classé comme confidentiel** est également appliqué. 
 
     Le document est également protégé avec le modèle Azure Rights Management que vous avez spécifié, ce que vous pouvez vérifier en cliquant sur l’onglet **Fichier** et en affichant les informations **Protéger le document**. Si vous avez utilisé le modèle Confidential par défaut, un message précise que l’accès au document est limité aux utilisateurs internes (les utilisateurs extérieurs à votre organisation ne pourront pas l’ouvrir) et que son contenu ne peut pas être copié ou imprimé. En tant que propriétaire du document, vous pouvez le copier et l’imprimer, mais si vous l’envoyez à un autre utilisateur de votre organisation, il ne pourra pas effectuer ces actions.
 

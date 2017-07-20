@@ -4,7 +4,7 @@ description: "Informations vous permettant de surveiller le connecteur et l’ut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3d9f2e20abe0a4abce3220d53d6373d9c2baf8ee
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: c7d9e5a948aa0e81341eb99038302677268c522e
+ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Surveiller le connecteur Azure Rights Management
 
@@ -28,18 +28,24 @@ Après avoir installé et configuré le connecteur RMS, vous pouvez utiliser les
 
 Le connecteur RMS utilise le journal des événements de l’application pour enregistrer des entrées pour le **connecteur Microsoft RMS**. 
 
-Par exemple, les événements d’information comme l’ID 1000 confirment que le service du connecteur a démarré, l’ID 1002 quand un serveur se connecte correctement au connecteur RMS et l’ID 1004 chaque fois que la liste des comptes autorisés (chaque compte est répertorié) est téléchargée sur le connecteur. 
+Voici quelques exemples d’événements d’informations :
+
+- L’événement ID 1000 confirme que le service du connecteur a été démarré
+
+- L’événement ID 1002 indique que le serveur est désormais connecté au connecteur RMS
+- 
+- L’événement ID 1004 correspond au téléchargement de la liste des comptes autorisés (chaque compte de la liste) dans le connecteur 
 
 Si vous n’avez pas configuré le connecteur pour utiliser le protocole HTTPS, vous recevez un avertissement avec l’ID 2002 indiquant qu’un client utilise une connexion non sécurisée (HTTP).
 
-Si le connecteur ne parvient pas à se connecter au service Azure Rights Management, il est probable que l’erreur 3001 s’affiche. Il peut s’agir, par exemple, d’un problème DNS ou d’un manque d’accès à Internet pour un ou plusieurs serveurs exécutant le connecteur RMS. 
+Si le connecteur ne parvient pas à se connecter au service Azure Rights Management, il est probable que l’erreur 3001 s’affiche. Cet échec de connexion peut être dû à un problème DNS ou à l’absence d’une connexion Internet pour un ou plusieurs serveurs exécutant le connecteur RMS. 
 
 > [!TIP]
 > Quand les serveurs du connecteur RMS ne peuvent pas se connecter au service Azure Rights Management, les configurations de proxy web sont souvent à l’origine du problème.
 
 Comme avec toutes les entrées de journal des événements, examinez le message pour plus de détails.
 
-Outre la vérification du journal des événements quand vous déployez le connecteur pour la première fois, recherchez régulièrement les avertissements et les erreurs. Par exemple, le connecteur peut fonctionner comme prévu initialement, mais les autres administrateurs peuvent modifier les configurations dépendantes. Par exemple, un autre administrateur modifie la configuration du serveur proxy web et les serveurs du connecteur RMS ne peuvent plus se connecter à Internet (Erreur 3001) ou il supprime un compte d’ordinateur d’un groupe que vous avez autorisé à utiliser le connecteur (Avertissement 2001).
+Outre la vérification du journal des événements quand vous déployez le connecteur pour la première fois, recherchez régulièrement les avertissements et les erreurs. Le connecteur peut fonctionner comme prévu initialement, mais les autres administrateurs peuvent modifier les configurations dépendantes. Par exemple, un autre administrateur modifie la configuration du serveur proxy web et les serveurs du connecteur RMS ne peuvent plus se connecter à Internet (Erreur 3001) ou il supprime un compte d’ordinateur d’un groupe que vous avez autorisé à utiliser le connecteur (Avertissement 2001).
 
 ### <a name="event-log-ids-and-descriptions"></a>ID du journal des événements et descriptions
 
@@ -99,7 +105,7 @@ Avertissement **2001**
 
 **Tentative d’accès non autorisée au connecteur Microsoft RMS.**
 
-Cet événement est consigné quand un compte ne parvient pas à se connecter au connecteur RMS. En règle générale, cet événement est dû au fait que le compte qui effectue la connexion ne se trouve pas dans la liste des comptes autorisés téléchargée par le connecteur RMS à partir du service Azure Rights Management. Par exemple, la liste la plus récente n’est pas encore téléchargée (cette opération se produit toutes les 15 minutes) ou le compte est manquant dans la liste. 
+Cet événement est consigné quand un compte ne parvient pas à se connecter au connecteur RMS. En règle générale, cet avertissement est dû au fait que le compte qui effectue la connexion ne se trouve pas dans la liste des comptes autorisés téléchargée par le connecteur RMS à partir du service Azure Rights Management. Par exemple, la liste la plus récente n’est pas encore téléchargée (cet événement se produit toutes les 15 minutes) ou le compte est manquant dans la liste. 
 
 Il est également possible que vous ayez installé le connecteur RMS sur le serveur qui est configuré pour utiliser le connecteur. Par exemple, vous installez le connecteur RMS sur un serveur qui exécute Microsoft Exchange Server et vous autorisez un compte Exchange à utiliser le connecteur. Cette configuration n’est pas prise en charge, car le connecteur RMS ne peut pas identifier correctement le compte quand il tente de se connecter.
 
@@ -139,7 +145,7 @@ Erreur **3000**
 
 Cet événement est consigné chaque fois que le connecteur RMS rencontre une erreur inattendue, avec les détails de l’erreur dans le message d’événement.
 
-La présence du texte **Échec de la requête avec une réponse vide** dans le message d’événement peut révéler une cause possible. Si vous voyez ce texte, un appareil réseau effectue peut-être une inspection SSL sur les paquets entre les serveurs locaux et le serveur de connecteur RMS. Cette opération n’étant pas prise en charge, la communication échoue et ce message du journal des événements est généré.
+La présence du texte **Échec de la requête avec une réponse vide** dans le message d’événement peut révéler une cause possible. Si vous voyez ce texte, un appareil réseau effectue peut-être une inspection SSL sur les paquets entre les serveurs locaux et le serveur de connecteur RMS. Le service Azure Rights Management ne prend pas en charge cette configuration. Par conséquent, la connexion échoue et ce message du journal des événements s’affiche.
 
 ----
 
@@ -147,7 +153,7 @@ Erreur **3001**
 
 **Une exception s’est produite lors du téléchargement des informations d’autorisation.**
 
-Cet événement est consigné si le connecteur RMS ne peut pas télécharger la dernière liste des comptes autorisés à utiliser le connecteur RMS, avec les détails de l’erreur dans le message d’événement.
+Cet événement est consigné si le connecteur RMS ne peut pas télécharger la dernière liste des comptes autorisés à utiliser le connecteur RMS. Les détails de l’erreur sont indiqués dans le message de l’événement.
 
 
 
@@ -155,27 +161,21 @@ Cet événement est consigné si le connecteur RMS ne peut pas télécharger la 
 
 ## <a name="performance-counters"></a>Compteurs de performances
 
-Quand vous installez le connecteur RMS, il crée automatiquement les compteurs de performances du **connecteur Microsoft Rights Management** qui sont utiles pour surveiller les performances de l’utilisation du service Azure Rights Management par le biais du connecteur. Par exemple, si vous observez régulièrement des retards lors de la protection des documents ou des e-mails, ou lors de l’ouverture de documents ou e-mails protégés, les compteurs de performances peuvent vous aider à déterminer si le retard est dû au temps de traitement sur le connecteur, au temps de traitement dans le service Azure Rights Management ou au réseau. Pour vous permettre d’identifier l’origine du retard, recherchez les compteurs qui incluent des valeurs moyennes pour le **Temps de traitement du connecteur**, le **Temps de réponse du service** et le **Temps de réponse du connecteur**. Par exemple : **Temps de réponse moyen du connecteur pour les demandes de licences par lot réussies**.
+Quand vous installez le connecteur RMS, il crée automatiquement les compteurs de performances du **connecteur Microsoft Rights Management** qui sont utiles pour surveiller et améliorer les performances de l’utilisation du service Azure Rights Management. 
+
+Par exemple, vous pouvez subir régulièrement des retards lorsque les documents ou les e-mails sont protégés. Vous pouvez également subir des retards à l’ouverture des documents et des e-mails protégés. Dans ce cas, les compteurs de performances peuvent vous aider à déterminer si les retards sont dus au temps de traitement du connecteur, au temps de traitement du service Azure Rights Management ou à un délai réseau. 
+
+Pour vous permettre d’identifier l’origine du retard, recherchez les compteurs qui incluent des valeurs moyennes pour le **Temps de traitement du connecteur**, le **Temps de réponse du service** et le **Temps de réponse du connecteur**. Par exemple : **Temps de réponse moyen du connecteur pour les demandes de licences par lot réussies**.
 
 Si vous avez récemment ajouté des comptes de serveur pour utiliser le connecteur, le compteur à consulter est **Durée depuis la dernière mise à jour de la stratégie d’autorisation** pour vérifier que le connecteur a téléchargé la liste depuis que vous l’avez mise à jour, ou déterminer si vous devez attendre un peu plus longtemps (jusqu’à 15 minutes).
 
-## <a name="rms-analyzer"></a>RMS Analyzer
-
-Vous pouvez utiliser l’outil Rights Management Services Analyzer pour vous permettre de surveiller l’intégrité du connecteur et d’identifier les problèmes de configuration, même s’il n’est accompagné d’aucun support. Si ce n’est déjà fait, vous pouvez télécharger cet outil à partir du [Centre de téléchargement](https://www.microsoft.com/en-us/download/details.aspx?id=46437). 
-
-Connectez-vous à l’un des serveurs que vous avez configurés pour le connecteur RMS à l’aide d’un compte auquel vous avez donné l’autorisation d’utiliser le connecteur pour cette charge de travail. Par exemple, si vous avez configuré le connecteur RMS pour Exchange, connectez-vous à ce serveur à l’aide de l’un des comptes auxquels vous avez donné l’autorisation pour Exchange dans l’outil de configuration du connecteur RMS. Ensuite, exécutez l’outil RMS Analyzer avec l’option **Exécuter en tant qu’administrateur**.
-
-Lors du chargement de l’outil, dans la page **Bienvenue**, sélectionnez l’option **Connecteur Azure RMS**. Entrez l’URL de votre connecteur RMS comme adresse active, puis cliquez sur la flèche verte. Vous devez voir vos détails de locataire, qui confirment que le connecteur peut se connecter au service Azure Rights Management. Si ce test initial échoue, veillez à vérifier la configuration du serveur proxy et les pare-feu susceptibles de bloquer le trafic du serveur. Une fois vos détails de client affichés, vous pouvez continuer à exécuter les tests de diagnostic pour cette charge de travail du serveur, qui recherchent des éléments tels que les numéros de version pris en charge, les prérequis et les paramètres de Registre.
-
-Pour des informations et des instructions supplémentaires sur cet outil, consultez les sections **Détails** et **Instructions d’installation** dans la page de téléchargement.
-
 ## <a name="logging"></a>Journalisation
 
-La journalisation de l’utilisation vous aide à identifier quand les e-mails et les documents sont protégés et consommés. Quand vous utilisez le connecteur RMS, le champ ID d’utilisateur dans les journaux contient le nom principal de service **Aadrm_S-1-7-0** qui est créé automatiquement pour le connecteur RMS.
+La journalisation de l’utilisation vous aide à identifier quand les e-mails et les documents sont protégés et consommés. Lorsque le connecteur RMS est utilisé pour protéger et utiliser du contenu, le champ ID d’utilisateur des journaux contient le nom de principal du service : **Aadrm_S-1-7-0**. Ce nom est automatiquement créé pour le connecteur RMS.
 
 Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](log-analyze-usage.md).
 
-Si vous avez besoin d’une journalisation plus détaillée à des fins de diagnostic, vous pouvez utiliser [Debugview](http://go.microsoft.com/fwlink/?LinkID=309277) dans Windows Sysinternals et activer le suivi pour le connecteur RMS en modifiant le fichier web.config pour le site par défaut dans IIS. Pour effectuer cette opération :
+Si vous avez besoin d’une journalisation plus détaillée à des fins de diagnostic, vous pouvez utiliser [Debugview](http://go.microsoft.com/fwlink/?LinkID=309277) dans Windows Sysinternals. Activez le traçage pour le connecteur RMS en modifiant le fichier web.config du site par défaut dans IIS :
 
 1. Recherchez le fichier web.config dans **%programfiles%\Microsoft Rights Management connector\Web Service**.
 
@@ -183,7 +183,7 @@ Si vous avez besoin d’une journalisation plus détaillée à des fins de diagn
 
         <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
 
-3. Remplacez cette ligne par la suivante :
+3. Remplacez cette ligne par le texte suivant :
 
         <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
 

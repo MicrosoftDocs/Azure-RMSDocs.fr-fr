@@ -4,17 +4,17 @@ description: "Identifiez les limitations, conditions préalables et recommandati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/07/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: f1ae8d75b3fd3900b7c863be332656b71c647e1f
-ms.sourcegitcommit: 834b6bcab70a185018b4876b2d24b145e5089ac4
+ms.openlocfilehash: ac4068885df92c58ecba2a90e7aa0aeaaa34e8e9
+ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2017
+ms.lasthandoff: 07/17/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 
@@ -64,6 +64,8 @@ En plus de ne pas prendre en charge les avantages associés à l’utilisation d
 - N’utilisez pas l’option **Ne pas transférer** lorsque vous configurez une étiquette pour la protection Azure RMS. Vous devez aussi demander aux utilisateurs de ne pas sélectionner manuellement cette option dans Outlook. 
 
     Si l’option Ne pas transférer est appliquée par une étiquette ou manuellement par les utilisateurs, l’option risque d’être appliquée par votre déploiement AD RMS, et non par le service de gestion des droits Azure voulu. Dans ce scénario, les personnes extérieures avec qui vous partagez du contenu ne peuvent pas ouvrir les e-mails auxquels l’option Ne pas transférer est appliquée.
+    
+    À partir de la version 1.9.58.0 du client Azure Information Protection (actuellement en préversion), le bouton **Ne pas transférer** dans Outlook utilise toujours Azure RMS. Ce paramètre n’affecte pas l’option de menu **Ne pas transférer** d’Outlook, ni l’option **Ne pas transférer** lorsque vous configurez une étiquette pour la protection. Si vous ne souhaitez pas voir ce comportement, vous pouvez masquer le bouton **Ne pas transférer** dans Outlook en configurant un [paramètre client avancé](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook).
 
 - Si les utilisateurs configurent des autorisations personnalisées quand vous utilisez les protections Azure RMS et AD RMS (HYOK), le document ou l’e-mail est toujours protégé par Azure Rights Management.
 

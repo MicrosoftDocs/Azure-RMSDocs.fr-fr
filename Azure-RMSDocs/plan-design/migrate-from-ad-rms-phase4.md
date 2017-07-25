@@ -4,7 +4,7 @@ description: "Phase 4 de la migration d’AD RMS vers Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4157148c0109317851ed2f128a5ae74603d82af2
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6c93f38b0ae725c1bc1d3423baf64931593af3b7
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Phase de migration 4 : Configuration des services de prise en charge
 
@@ -56,7 +56,7 @@ Si vous avez choisi une topologie de clé de locataire Azure Information Protect
 
 Si vous avez utilisé la fonctionnalité IRM (Information Rights Management) d’Exchange Server ou de SharePoint Server avec AD RMS, vous devez déployer le connecteur RMS (Rights Management) qui fait office d’interface de communication (un relais) entre vos serveurs locaux et le service de protection pour Azure Information Protection.
 
-Cette étape aborde l’installation et la configuration du connecteur, la désactivation d’IRM pour Exchange et SharePoint ainsi que la configuration de ces serveurs pour utiliser le connecteur. Enfin, si vous avez importé des fichiers de configuration de données (.xml) AD RMS dans Azure Information Protection qui ont été utilisés pour protéger des e-mails, vous devez modifier manuellement le Registre sur les ordinateurs Exchange Server pour rediriger toutes les URL de domaine de publication approuvé vers le connecteur RMS.
+Cette étape aborde l’installation et la configuration du connecteur, la désactivation d’IRM pour Exchange et SharePoint, ainsi que la configuration de ces serveurs pour utiliser le connecteur. Enfin, si vous avez importé des fichiers de configuration de données (.xml) AD RMS dans Azure Information Protection qui ont été utilisés pour protéger des e-mails, vous devez modifier manuellement le Registre sur les ordinateurs Exchange Server pour rediriger toutes les URL de domaine de publication approuvé vers le connecteur RMS.
 
 > [!NOTE]
 > Avant de commencer, vérifiez les versions des serveurs locaux prises en charge par le service Azure Rights Management, dans [Serveurs locaux prenant en charge Azure RMS](../get-started/requirements-servers.md).
@@ -75,7 +75,7 @@ Suivez les instructions de l’article [Déploiement du connecteur Azure Rights 
 
         $irmConfig = Get-IRMConfiguration
         $list = $irmConfig.LicensingLocation 
-        $list + "<Your Tenant URL>/_wmcs/licensing"
+        $list += "<Your Tenant URL>/_wmcs/licensing"
         Set-IRMConfiguration -LicensingLocation $list
 
 3.  Désactivez maintenant les fonctionnalités IRM pour les messages envoyés à des destinataires internes :

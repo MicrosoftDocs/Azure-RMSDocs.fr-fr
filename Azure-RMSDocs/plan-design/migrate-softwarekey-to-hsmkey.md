@@ -4,7 +4,7 @@ description: "Instructions qui font partie du chemin de migration d’AD RMS ve
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0965ac3547449a23f4c40fe3f40bac2a6e0365e3
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: d942e51994c6db3ee0c3e1127991a7007ed91f92
+ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par logiciel à clé protégée par HSM
 
@@ -37,12 +37,12 @@ Avant de commencer, vérifiez que votre organisation dispose d’un coffre de cl
 
 
 > [!TIP]
-> Si vous voulez effectuer les étapes de configuration pour Azure Key Vault et que vous n’êtes pas familiarisé avec ce service Azure, il peut être utile de consulter d’abord [Prise en main d’Azure Key Vault](/azure/key-vault/key-vault-get-started). 
+> Si vous effectuez les étapes de configuration pour Azure Key Vault et que vous n’êtes pas familiarisé avec ce service Azure, il peut être utile de consulter d’abord [Prise en main d’Azure Key Vault](/azure/key-vault/key-vault-get-started). 
 
 
 ## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-on-premises-hsm"></a>Partie 1 : Extraction de votre certificat de licence serveur des données de configuration et importation de la clé dans votre HSM local
 
-1.  Administrateur Azure Key Vault : pour chaque clé SLC exportée que vous voulez stocker dans Azure Key Vault, utilisez les étapes suivantes de la section [Implémentation de BYOK pour Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) de la documentation d’Azure Key Vault :
+1.  Administrateur Azure Key Vault : pour chaque clé SLC exportée que vous voulez stocker dans Azure Key Vault, utilisez les étapes suivantes de la section [Implémentation de BYOK pour Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azurekey-vault) de la documentation d’Azure Key Vault :
 
     -   **Générer et transférer votre clé vers le HSM d’Azure Key Vault** : [Étape 1 : Préparation de la station de travail connectée à Internet](/azure/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
 
@@ -89,7 +89,7 @@ Avant de commencer, vérifiez que votre organisation dispose d’un coffre de cl
 
     **application &nbsp;&nbsp;&nbsp;&nbsp;Application&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; simple**
 
-    **vérifier &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vérifier la sécurité de la clé de configuration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; oui**
+    **verify &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vérifier la sécurité de la clé de configuration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; oui**
 
     **type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type de clé&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RSA**
 
@@ -108,15 +108,15 @@ Ce résultat confirme que la clé privée est maintenant migrée vers votre appa
 Maintenant que votre clé de licence serveur a été extraite et importée dans votre HSM local, vous êtes prêt à empaqueter la clé protégée par HSM et à la transférer dans Azure Key Vault.
 
 > [!IMPORTANT]
-> Quand vous avez terminé cette étape, pour des raisons de sécurité, effacez ces fichiers PEM sur la station de travail déconnectée pour qu’ils ne soient pas accessibles à des personnes non autorisées. Par exemple, exécutez « cipher /w:E » pour supprimer de façon sûre tous les fichiers du lecteur E:.
+> Quand vous avez terminé cette étape, pour des raisons de sécurité, effacez ces fichiers PEM sur la station de travail déconnectée pour qu’ils ne soient pas accessibles à des personnes non autorisées. Par exemple, exécutez « cipher /w: E » pour supprimer de façon sûre tous les fichiers du lecteur E:.
 
 ## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>Partie 2 : Empaquetage et transfert de votre clé HSM vers Azure Key Vault
 
-Administrateur Azure Key Vault : pour chaque clé SLC exportée que vous voulez stocker dans Azure Key Vault, utilisez les étapes suivantes de la section [Implémentation de BYOK pour Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) de la documentation d’Azure Key Vault :
+Administrateur Azure Key Vault : pour chaque clé SLC exportée que vous voulez stocker dans Azure Key Vault, utilisez les étapes suivantes de la section [Implémentation de BYOK pour Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azurekey-vault) de la documentation d’Azure Key Vault :
 
 - [Étape 4 : Préparation de votre clé pour le transfert](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
 
-- [Étape 5 : Transfert de votre clé vers Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azure-key-vault)
+- [Étape 5 : Transfert de votre clé vers Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azurekey-vault)
 
 Ne suivez pas les étapes pour générer votre paire de clés, car vous avez déjà la clé. Exécutez plutôt une commande pour transférer cette clé (dans notre exemple, notre paramètre KeyIdentifier utilise « contosobyok ») depuis votre HSM local.
 
@@ -138,7 +138,7 @@ Maintenant que vous avez transféré votre clé HSM dans Azure Key Vault, vous �
 
 2. Chargez chaque fichier .xml en utilisant l’applet de commande [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd). Par exemple, vous devez disposer d’au moins un fichier supplémentaire à importer si vous avez mis à niveau votre cluster AD RMS pour le Mode de chiffrement 2.
 
-    Pour exécuter cette applet de commande, vous aurez besoin du mot de passe que vous avez spécifié précédemment pour le fichier de données de configuration et de l’URL de la clé qui a été identifiée à l’étape précédente.
+    Pour exécuter cette applet de commande, vous avez besoin du mot de passe que vous avez spécifié précédemment pour le fichier de données de configuration et de l’URL de la clé qui a été identifiée à l’étape précédente.
 
     Par exemple, à l’aide d’un fichier de données de configuration de C:\contoso_keyless.xml et de l’URL de notre clé issue de l’étape précédente, exécutez d’abord la commande suivante pour stocker le mot de passe :
     

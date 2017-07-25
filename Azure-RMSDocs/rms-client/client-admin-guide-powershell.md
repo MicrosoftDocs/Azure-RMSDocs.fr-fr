@@ -4,7 +4,7 @@ description: "Instructions et informations pour que les administrateurs gèrent 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2f8ad221d1193f5a6f40cc773548b9342ffd6659
-ms.sourcegitcommit: 0fd2e63822280ec96ab957e22868c63de9ef3d47
+ms.openlocfilehash: 8dd4917b23b3732e0d835f957191db9c4578f60d
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Utiliser PowerShell avec le client Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 07/18/2017
 
 Lorsque vous installez le client Azure Information Protection, les commandes PowerShell sont installées automatiquement afin que vous puissiez gérer le client en exécutant des commandes que vous pouvez placer dans des scripts pour l’automatisation.
 
-Les cmdlets sont installées avec le module PowerShell **AzureInformationProtection**. Ce module remplace le module de protection RMS installé avec l’outil de protection RMS. Si vous disposez de l’outil RMSProtection lorsque vous installez le client Azure Information Protection, le module RMSProtection est automatiquement désinstallé.
+Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module remplace le module de protection RMS installé avec l’outil de protection RMS. Si vous disposez de l’outil RMSProtection lorsque vous installez le client Azure Information Protection, le module RMSProtection est automatiquement désinstallé.
 
 Le module AzureInformationProtection inclut toutes les applets de commande Rights Management de l’outil de protection RMS et trois nouvelles applets de commande qui utilisent le service Azure Information Protection (AIP) pour l’étiquetage :
 
@@ -34,7 +34,7 @@ Le module AzureInformationProtection inclut toutes les applets de commande Right
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Pour un dossier partagé, inspectez le contenu du fichier puis étiquetez automatiquement les fichiers sans étiquette, selon les conditions que vous avez spécifiées.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Pour un dossier partagé, appliquez une étiquette spécifiée à tous les fichiers dépourvus d’étiquette.|
 
-Pour obtenir une liste de toutes les cmdlets et de l’aide associée, voir le [module Azure Information Protection](/powershell/module/azureinformationprotection). Dans une session PowerShell, saisissez `Get-Help <cmdlet name> -online` pour afficher l’aide la plus récente, ainsi que les langues prises en charge autres que l’anglais.  
+Pour obtenir une liste de toutes les applets de commande et de l’aide associée, voir le [module Azure Information Protection](/powershell/module/azureinformationprotection). Dans une session PowerShell, saisissez `Get-Help <cmdlet name> -online` pour afficher l’aide la plus récente, ainsi que les langues prises en charge autres que l’anglais.  
 
 Ce module s’installe dans **\ProgramFiles (x86)\Microsoft Azure Information Protection** et ajoute ce dossier à la variable système **PSModulePath**. Le fichier .dll de ce module est nommé **AIP.dll**.
 
@@ -214,7 +214,7 @@ Pour l’authentification en dehors de la région Amérique du Nord Azure, vous 
 
 1. Exécutez de nouveau l’applet de commande Get-AadrmConfiguration et notez les valeurs pour **CertificationExtranetDistributionPointUrl** et **LicensingExtranetDistributionPointUrl**.
 
-2. Sur tous les ordinateurs où vous allez exécuter les cmdlets AzureInformationProtection, ouvrez l’Éditeur du Registre et accédez à : `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
+2. Sur tous les ordinateurs où vous allez exécuter les applets de commande AzureInformationProtection, ouvrez l’Éditeur du Registre et accédez à : `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
 
 3. Si vous ne voyez pas de clé **ServiceLocation**, créez-en une afin que le chemin d’accès du Registre soit **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation**
 
@@ -341,7 +341,7 @@ Outre la configuration requise pour l’installation du module AzureInformationP
 
 Un scénario standard pour ces applets de commande consiste à protéger tous les fichiers dans un dossier à l’aide d’un modèle de stratégie de droits, ou à annuler la protection d’un fichier. 
 
-Tout d’abord, si vous comptez plus d’un déploiement d’AD RMS, vous devez disposer des noms de vos serveurs AD RMS. Utilisez la cmdlet Get-RMSServer pour afficher la liste des serveurs disponibles :
+Tout d’abord, si vous comptez plus d’un déploiement d’AD RMS, vous devez disposer des noms de vos serveurs AD RMS. Utilisez l’applet de commande Get-RMSServer pour afficher la liste des serveurs disponibles :
 
     Get-RMSServer
 
@@ -422,17 +422,17 @@ Votre résultat peut ressembler à ce qui suit :
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Comment étiqueter des fichiers de manière non interactive pour Azure Information Protection
 
-À partir de la version 1.8.41.0 du client Azure Information Protection (actuellement en préversion), vous pouvez exécuter les cmdlets d’étiquetage de manière non interactive à l’aide de la cmdlet **Set-AIPAuthentication**.
+À partir de la version 1.8.41.0 du client Azure Information Protection (actuellement en préversion), vous pouvez exécuter les applets de commande d’étiquetage de manière non interactive à l’aide de l’applet de commande **Set-AIPAuthentication**.
 
-Par défaut, lorsque vous exécutez les cmdlets d’étiquetage, les commandes s’exécutent dans votre propre contexte utilisateur dans une session PowerShell interactive. Pour les exécuter sans assistance, créez un compte d’utilisateur Azure AD à cet effet. Ensuite, dans le contexte de cet utilisateur, exécutez la cmdlet Set-AIPAuthentication pour définir et stocker les informations d’identification à l’aide d’un jeton d’accès Azure AD. Ce compte d’utilisateur est ensuite authentifié et initialisé pour le service Azure Rights Management. Le compte télécharge la stratégie Azure Information Protection et tous les modèles Rights Management utilisés par les étiquettes.
+Par défaut, lorsque vous exécutez les applets de commande d’étiquetage, les commandes s’exécutent dans votre propre contexte utilisateur dans une session PowerShell interactive. Pour les exécuter sans assistance, créez un compte d’utilisateur Azure AD à cet effet. Ensuite, dans le contexte de cet utilisateur, exécutez l’applet de commande Set-AIPAuthentication pour définir et stocker les informations d’identification à l’aide d’un jeton d’accès Azure AD. Ce compte d’utilisateur est ensuite authentifié et initialisé pour le service Azure Rights Management. Le compte télécharge la stratégie Azure Information Protection et tous les modèles Rights Management utilisés par les étiquettes.
 
-La première fois que vous exécutez cette cmdlet, vous êtes invité à vous connecter à Azure Information Protection. Spécifiez le nom et le mot de passe du compte d’utilisateur que vous avez créé pour l’utilisateur sans assistance. Ce compte peut alors exécuter les cmdlets d’étiquetage de manière non interactive jusqu’à ce que le jeton d’authentification expire. Lorsque le jeton expire, exécutez la cmdlet pour acquérir un nouveau jeton :
+La première fois que vous exécutez cette applet de commande, vous êtes invité à vous connecter à Azure Information Protection. Spécifiez le nom et le mot de passe du compte d’utilisateur que vous avez créé pour l’utilisateur sans assistance. Ce compte peut alors exécuter les applets de commande d’étiquetage de manière non interactive jusqu’à ce que le jeton d’authentification expire. Lorsque le jeton expire, exécutez l’applet de commande pour acquérir un nouveau jeton :
 
-Si vous exécutez cette cmdlet sans paramètres, le compte acquiert un jeton d’accès qui est valide 90 jours ou jusqu’à ce que votre mot de passe expire.  
+Si vous exécutez cette applet de commande sans paramètres, le compte acquiert un jeton d’accès qui est valide 90 jours ou jusqu’à ce que votre mot de passe expire.  
 
-Pour contrôler à quel moment le jeton d’accès expire, exécutez cette cmdlet avec des paramètres. Vous pouvez ainsi configurer le jeton d’accès pour qu’il expire au bout d’un an, de deux ans ou jamais. Cette configuration nécessite que vous disposiez de deux applications inscrites dans Azure Active Directory : une application de type **application web/API** et une **application native**. Les paramètres de cette cmdlet utilisent les valeurs de ces applications.
+Pour contrôler à quel moment le jeton d’accès expire, exécutez cette applet de commande avec des paramètres. Vous pouvez ainsi configurer le jeton d’accès pour qu’il expire au bout d’un an, de deux ans ou jamais. Cette configuration nécessite que vous disposiez de deux applications inscrites dans Azure Active Directory : une application de type **application web/API** et une **application native**. Les paramètres de cette applet de commande utilisent les valeurs de ces applications.
 
-Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiquetage dans le contexte du compte d’utilisateur que vous avez créé. Si vous souhaitez utiliser plusieurs comptes, chaque compte doit avoir ses propres applications inscrites dans Azure AD. Vous devez donc exécuter cette cmdlet pour chaque compte.
+Après avoir exécuté cette applet de commande, vous pouvez exécuter les applets de commande d’étiquetage dans le contexte du compte d’utilisateur que vous avez créé.
 
 ### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>Pour créer et configurer les applications Azure AD pour Set-AIPAuthentication
 
@@ -444,29 +444,33 @@ Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiq
     
     - Nom : **AIPOnBehalfOf**
     
+    Si vous le souhaitez, spécifiez un autre nom. Il doit être unique pour chaque locataire.
+    
     - Type d’application : **Application/API web**
     
     - URL de connexion : **http://localhost**
-    
-4. Sélectionnez l’application que vous venez de créer (**AIPOnBehalfOf**), puis, dans le panneau **Paramètres**, sélectionnez **Propriétés**. Dans le panneau **Propriétés**, copiez la valeur du champ **ID d’application**, puis fermez ce panneau. 
-    
-    Cette valeur est utilisée pour le paramètre `WebAppId` lorsque vous exécutez la cmdlet Set-AIPAuthentication.
 
-5. Dans le panneau **Paramètres**, sélectionnez **Clés**. Ajoutez une nouvelle clé en spécifiant une description et la durée de votre choix (1 an, 2 ans ou sans expiration). Ensuite, sélectionnez **Enregistrer**, puis copiez la chaîne correspondant à la **Valeur** qui s’affiche. Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée.
+4. Sélectionnez l’application que vous venez de créer, par exemple **AIPOnBehalfOf**. Ensuite, dans le panneau **Paramètres**, sélectionnez **Propriétés**. Dans le panneau **Propriétés**, copiez la valeur du champ **ID d’application**, puis fermez ce panneau. 
     
-    Cette valeur est utilisée pour le paramètre `WebAppKey` lorsque vous exécutez la cmdlet Set-AIPAuthentication.
+    Cette valeur est utilisée pour le paramètre `WebAppId` lorsque vous exécutez l’applet de commande Set-AIPAuthentication.
+
+5. Dans le panneau **Paramètres**, sélectionnez **Clés**. Ajoutez une nouvelle clé en spécifiant une description et la durée de votre choix (1 an, 2 ans ou sans expiration). Ensuite, sélectionnez **Enregistrer**, puis copiez la chaîne correspondant à la **Valeur** qui s’affiche. Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée. Comme pour toute autre clé que vous utilisez, stockez la valeur enregistrée dans un endroit sûr et limitez l’accès à cette valeur.
+    
+    Cette valeur est utilisée pour le paramètre `WebAppKey` lorsque vous exécutez l’applet de commande Set-AIPAuthentication.
 
 6. Dans le panneau **Inscriptions des applications**, sélectionnez **Nouvelle inscription d’application** pour créer votre application native. Dans l’étiquette **Créer**, spécifiez les valeurs suivantes, puis cliquez sur **Créer** :
     
     - Nom : **AIPClient**
     
+    Si vous le souhaitez, spécifiez un autre nom. Il doit être unique pour chaque locataire.
+    
     - Type d’application : **Native**
     
     - URL de connexion : **http://localhost**
 
-7. Sélectionnez l’application que vous venez de créer (**AIPClient**), puis, dans le panneau **Paramètres**, sélectionnez **Propriétés**. Dans le panneau **Propriétés**, copiez la valeur du champ **ID d’application**, puis fermez ce panneau.
+7. Sélectionnez l’application que vous venez de créer, par exemple **AIPClient**. Ensuite, dans le panneau **Paramètres**, sélectionnez **Propriétés**. Dans le panneau **Propriétés**, copiez la valeur du champ **ID d’application**, puis fermez ce panneau.
     
-    Cette valeur est utilisée pour le paramètre `NativeAppId` lorsque vous exécutez la cmdlet Set-AIPAuthentication.
+    Cette valeur est utilisée pour le paramètre `NativeAppId` lorsque vous exécutez l’applet de commande Set-AIPAuthentication.
 
 8. Dans le panneau **Paramètres**, sélectionnez **Autorisations nécessaires**. 
 
@@ -478,7 +482,7 @@ Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiq
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour obtenir de l’aide concernant les cmdlets lorsque vous avez ouvert une session PowerShell, tapez `Get-Help <cmdlet name> cmdlet`, puis utilisez le paramètre -online pour lire les informations les plus récentes. Exemple : 
+Pour obtenir de l’aide concernant les applets de commande lorsque vous avez ouvert une session PowerShell, tapez `Get-Help <cmdlet name> cmdlet`, puis utilisez le paramètre -online pour lire les informations les plus récentes. Exemple : 
 
     Get-Help Get-RMSTemplate -online
 

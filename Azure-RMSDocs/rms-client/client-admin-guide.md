@@ -4,7 +4,7 @@ description: "Instructions et informations destinées aux administrateurs d’un
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 491d3191a713bf30ef0da58e359249869d3c82a9
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: 036fae62087bf71e0f3bf5ef2859acac701c5e62
+ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -252,16 +252,46 @@ L’option **Exporter les journaux** permet de collecter et de joindre automatiq
 
 Pour des informations de diagnostic et pour réinitialiser le client, sélectionnez **Exécuter les diagnostics**. Quand les tests de diagnostic sont terminés, cliquez sur **Copier les résultats** pour coller les informations dans un e-mail que vous pouvez envoyer au support technique Microsoft ou que vos utilisateurs finaux peuvent envoyer à votre support technique. Une fois les tests terminés, vous pouvez aussi réinitialiser le client.
 
-Plus d’informations sur l’option **Reset** :
+> [!NOTE]
+> Dans la préversion du client, la fonctionnalité **Exécuter les diagnostics** est remplacée par **Réinitialiser les paramètres**. En outre, le comportement de cette option est [différent](#more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client).
+
+#### <a name="more-information-about-the-reset-option-for-the-general-availability-ga-version-of-the-azure-information-protection-client"></a>Informations supplémentaires sur l’option de réinitialisation de la version grand public du client Azure Information Protection
 
 - Il n’est pas obligatoire d’être un administrateur local pour utiliser cette option, et cette action n’est pas enregistrée dans l’Observateur d’événements. 
 
-- Sauf si des fichiers sont verrouillés, cette action supprime tous les fichiers de **%localappdata%\Microsoft\MSIPC**, qui est l’emplacement où les certificats clients et les modèles de gestion des droits sont stockés. Elle ne supprime pas la stratégie Azure Information Protection ni les fichiers journaux du client, et elle ne déconnecte pas l’utilisateur.
+- Sauf si des fichiers sont verrouillés, cette action supprime tous les fichiers de **%LocalAppData%\Microsoft\MSIPC**, qui est l’emplacement où les certificats clients et les modèles de gestion des droits sont stockés. Elle ne supprime pas la stratégie Azure Information Protection ni les fichiers journaux du client, et elle ne déconnecte pas l’utilisateur.
 
 - La clé et les paramètres de Registre suivants sont supprimés : **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Si vous avez configuré les paramètres de cette clé de Registre, vous devez reconfigurer les paramètres du Registre après avoir réinitialisé le client. Par exemple, vous avec configuré des paramètres pour une redirection vers votre locataire Azure Information Protection ,car vous effectuez la migration à partir d’AD RMS et vous avez toujours un point de connexion de service sur votre réseau.
 
 - Après avoir réinitialisé le client, vous devez réinitialiser l’environnement utilisateur, ce qui télécharge des certificats pour le client et les derniers modèles. Pour cela, fermez toutes les instances d’Office et redémarrez une application Office. Cette action vérifie également que vous avez téléchargé la dernière stratégie Azure Information Protection. Ne réexécutez pas les tests de diagnostic tant que vous n’avez pas fait ceci.
 
+#### <a name="more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client"></a>Informations supplémentaires sur l’option de réinitialisation de la préversion actuelle du client Azure Information Protection
+
+- Il n’est pas obligatoire d’être un administrateur local pour utiliser cette option, et cette action n’est pas enregistrée dans l’Observateur d’événements. 
+
+- Sauf si des fichiers sont verrouillés, cette action supprime tous les fichiers dans les emplacements suivants. Ces fichiers incluent les certificats clients, les modèles Rights Management, la stratégie Azure Information Protection et les informations d’identification de l’utilisateur mises en cache. Les fichiers journaux clients ne sont pas supprimés.
+    
+    - %LocalAppData%\Microsoft\DRM
+    
+    - %LocalAppData%\Microsoft\MSIPC
+    
+    - %LocalAppData%\Microsoft\MSIP\Policy.msip
+    
+    - %LocalAppData%\Microsoft\MSIP\TokenCache
+
+- Les clés de Registre et les paramètres suivants sont supprimés. Si vous avez configuré des paramètres pour l’une de ces clés de Registre, vous devez les reconfigurer après avoir réinitialisé le client. Par exemple, vous avez configuré des paramètres pour une redirection vers votre locataire Azure Information Protection ,car vous effectuez la migration à partir d’AD RMS et vous avez toujours un point de connexion de service sur votre réseau :
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+
+- L’utilisateur actuellement connecté est déconnecté.
 
 ### <a name="client-status-section"></a>Section **État du client**
 

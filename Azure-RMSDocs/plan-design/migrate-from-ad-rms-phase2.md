@@ -4,7 +4,7 @@ description: "Phase 2 de la migration d’AD RMS vers Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7fb7beccf2f9fdf788f13e76796702ff64bffbbc
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 24e832c63ce7ff4f774bbc2ec10a7b35f72e050a
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -34,7 +34,7 @@ Cette étape est un processus comprenant deux phases :
 
 ### <a name="export-the-configuration-data-from-ad-rms"></a>Exportation des données de configuration d'AD RMS
 
-Procédez comme suit sur tous les clusters AD RMS, pour tous les domaines de publication approuvés comprenant un contenu protégé pour votre organisation. Il est inutile d'exécuter cette procédure sur des clusters dédiés uniquement à la gestion des licences.
+Procédez comme suit sur tous les clusters AD RMS, pour tous les domaines de publication approuvés comprenant un contenu protégé pour votre organisation. Il est inutile d’exécuter cette procédure sur des clusters dédiés uniquement à la gestion des licences.
 
 #### <a name="to-export-the-configuration-data-trusted-publishing-domain-information"></a>Pour exporter les données de configuration (informations du domaine de publication approuvé)
 
@@ -62,7 +62,7 @@ Par exemple, vous aurez plusieurs domaines de publication approuvés si vous met
 ### <a name="import-the-configuration-data-to-azure-information-protection"></a>Importer les données de configuration dans Azure Information Protection
 La procédure exacte de cette étape dépend de la configuration actuelle de votre déploiement AD RMS, ainsi que de votre topologie préférée pour votre clé de propriétaire Azure Information Protection.
 
-Votre déploiement AD RMS actuel utilisera l'une des configurations suivantes pour votre clé de certificat de licence serveur (SLC) :
+Votre déploiement AD RMS actuel utilise l’une des configurations suivantes pour votre clé de certificat de licence serveur (SLC) :
 
 - Protection par mot de passe dans la base de données AD RMS. Il s'agit de la configuration par défaut.
 
@@ -80,16 +80,19 @@ Les deux options de topologie de clé de locataire Azure Information Protection 
 > [!IMPORTANT]
 > Exchange Online n’est actuellement pas compatible avec BYOK dans Azure Information Protection. Si vous souhaitez utiliser la solution BYOK après la migration et envisagez d'utiliser Exchange Online, assurez-vous que vous comprenez la manière dont cette configuration réduit les fonctionnalités de l'IRM pour Exchange Online. Passez en revue les informations contenues dans la section [Tarifs et restrictions BYOK](byok-price-restrictions.md) pour choisir la meilleure topologie de clé de locataire Azure Information Protection pour votre migration.
 
-Le tableau suivant permet d'identifier la procédure à utiliser pour votre migration. Les combinaisons non répertoriées ne sont pas prises en charge.
+Le tableau suivant permet d'identifier la procédure à utiliser pour votre migration. 
 
 |Déploiement AD RMS actuel|Topologie de clé de locataire Azure Information Protection choisie|Instructions de migration|
 |-----------------------------|----------------------------------------|--------------------------|
 |Protection par mot de passe dans la base de données AD RMS|Gérée par Microsoft|Consultez la procédure **Migration de clé protégée par logiciel à clé protégée par logiciel** après ce tableau.<br /><br />Ce chemin de migration, qui est le plus simple, nécessite uniquement que vous transfériez vos données de configuration vers Azure Information Protection.|
-|Protection HSM à l'aide d'un module de sécurité matériel Thales nShield (HSM)|Gérée par le client (BYOK)|Consultez la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.<br /><br />Cette opération nécessite l’ensemble d’outils BYOK d’Azure Key Vault et trois procédures, d’abord pour transférer la clé de votre module HSM local vers les modules HSM Azure Key Vault, puis pour autoriser le service Azure Rights Management d’Azure Information Protection à utiliser votre clé de locataire, et enfin pour transférer vos données de configuration vers Azure Information Protection.|
+|Protection HSM à l'aide d'un module de sécurité matériel Thales nShield (HSM) |Gérée par le client (BYOK)|Consultez la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.<br /><br />Cette opération nécessite l’ensemble d’outils BYOK d’Azure Key Vault et trois procédures, d’abord pour transférer la clé de votre module HSM local vers les modules HSM Azure Key Vault, puis pour autoriser le service Azure Rights Management d’Azure Information Protection à utiliser votre clé de locataire, et enfin pour transférer vos données de configuration vers Azure Information Protection.|
 |Protection par mot de passe dans la base de données AD RMS|Gérée par le client (BYOK)|Consultez la procédure **Migration de clé protégée par logiciel à clé protégée par HSM** après ce tableau.<br /><br />Cette opération nécessite l’ensemble d’outils BYOK d’Azure Key Vault et quatre procédures, d’abord pour extraire votre clé logicielle et l’importer dans un module HSM local, puis pour transférer la clé de votre module HSM local vers les modules HSM Azure Information Protection, ensuite pour transférer vos données Key Vault vers Azure Information Protection, et enfin pour transférer vos données de configuration vers Azure Information Protection.|
-|Protection HSM à l'aide d'un module de sécurité matériel d'un fournisseur que Thales|Gérée par le client (BYOK)|Contactez le fournisseur de votre HSM pour obtenir des instructions sur le transfert de votre clé de ce HSM vers un HSM nShield Thales. Suivez ensuite les instructions de la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.|
+|Protection HSM à l'aide d'un module de sécurité matériel d'un fournisseur que Thales |Gérée par le client (BYOK)|Contactez le fournisseur de votre HSM pour obtenir des instructions sur le transfert de votre clé de ce HSM vers un HSM nShield Thales. Suivez ensuite les instructions de la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.|
 |Protection par mot de passe à l'aide d'un fournisseur de services de chiffrement externe|Gérée par le client (BYOK)|Contactez le fournisseur de votre HSM pour obtenir des instructions concernant le transfert de votre clé vers un HSM nShield Thales. Suivez ensuite les instructions de la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.|
-Avant de commencer ces procédures, assurez-vous que vous avez accès aux fichiers .xml créés lors de l'exportation des domaines de publication approuvés. Par exemple, ceux-ci peuvent être enregistrés sur une clé USB que vous déplacez du serveur AD RMS vers la station de travail connectée à Internet.
+
+Si vous avez une clé protégée par HSM que vous ne pouvez pas exporter, vous pouvez quand même migrer vers Azure Information Protection en configurant votre cluster AD RMS pour un mode en lecture seule. Dans ce mode, le contenu précédemment protégé peut toujours être ouvert, mais le contenu nouvellement protégé utilise une nouvelle clé de locataire que vous gérez vous-même (BYOK) ou qui est gérée par Microsoft. Pour plus d’informations, consultez [Une mise à jour d’Office est disponible pour prendre en charge les migrations d’AD RMS vers Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to).
+
+Avant de commencer ces procédures de migration de clés, vérifiez que vous avez accès aux fichiers .xml créés lors de l’exportation des domaines de publication approuvés. Par exemple, ceux-ci peuvent être enregistrés sur une clé USB que vous déplacez du serveur AD RMS vers la station de travail connectée à Internet.
 
 > [!NOTE]
 > Quelle que soit la manière dont vous stockez ces fichiers, suivez les meilleures pratiques pour les protéger, car ces données incluent votre clé privée.

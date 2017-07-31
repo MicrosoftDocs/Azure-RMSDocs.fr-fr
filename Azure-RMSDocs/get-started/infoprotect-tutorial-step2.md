@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: f6cd01357db99ee9d299606172aa85f7e2f44ba0
-ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
+ms.openlocfilehash: db87ffaa15802f081439f7983ef1060a60c0b24c
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Étape 2 : Configurer et publier la stratégie Azure Information Protection
 
@@ -78,9 +78,9 @@ Si votre étiquette **Confidentiel** n’a pas de sous-étiquettes car vous avez
     
 3. Dans le panneau **Protection**, vérifiez que **Azure RMS** est sélectionné ainsi que **Sélectionner un modèle prédéfini**. Ensuite, cliquez sur la zone de liste déroulante et choisissez le modèle par défaut qui permet à tous les utilisateurs de votre organisation d’afficher et de modifier le contenu protégé. 
     
-    Si vous avez récemment activé le service Azure Rights Management, ce modèle est nommé **Confidentiel \ Tous les employés**. 
+    Si vous avez récemment obtenu votre abonnement, ce modèle se nomme **Confidentiel \ Tous les employés**. 
     
-    Si le service Azure Rights Management a déjà été activé avant de commencer ce didacticiel, votre modèle par défaut peut être nommé  **\<nom de votre organisation > - Confidentiel**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous voyez et sélectionnez **VanArsdel, Ltd - Confidentiel** : 
+    Si vous avez votre abonnement depuis un certain temps, il est possible que votre modèle par défaut se nomme **\<nom de votre organisation> - Confidentiel**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous voyez et sélectionnez **VanArsdel, Ltd - Confidentiel** : 
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : Définir la protection Azure RMS](../media/step2-select-rms-template.png)
     

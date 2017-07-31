@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 07/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 41e9e8aff35727a40413e0bf18e46f1ad14e9222
-ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
+ms.openlocfilehash: 32226274c8b50b02e453f1c1b6655fb01b4ec942
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Configurations personnalisées pour le client Azure Information Protection
 
@@ -24,11 +24,11 @@ ms.lasthandoff: 07/21/2017
 
 Utilisez les informations suivantes pour les configurations avancées nécessaires dont vous pourrez avoir besoin pour des scénarios spécifiques, ou pour un sous-ensemble d’utilisateurs lorsque vous gérez le client Azure Information Protection.
 
-Certains de ces paramètres nécessitent une modification du Registre, et certains autres utilisent des paramètres avancés que vous devez configurer dans le portail Azure, puis publier pour les clients à télécharger. 
-
-En outre, certains paramètres peuvent n’être disponibles que dans une préversion du client Azure Information Protection. Pour ces paramètres, il existe une documentation concernant la version minimale du client. Pour les paramètres et les configurations pris en charge dans la version publique du client, il n’existe aucune documentation relative à la version minimale du client.
+Certains de ces paramètres nécessitent une modification du Registre, et certains autres utilisent des paramètres avancés que vous devez configurer dans le portail Azure, puis publier pour les clients à télécharger. En outre, certains paramètres peuvent n’être disponibles que dans une préversion du client Azure Information Protection. Pour ces paramètres, il existe une documentation concernant la version minimale du client. Pour les paramètres et les configurations pris en charge dans la version publique du client, il n’existe aucune documentation relative à la version minimale du client.
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Comment configurer les paramètres avancés de configuration du client dans le portail
+
+Cette configuration est actuellement en préversion.
 
 1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**.
 
@@ -86,6 +86,8 @@ En outre :
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Masquer l’option de menu Classifier et protéger dans l’Explorateur de fichiers Windows
 
+Cette configuration est actuellement en préversion.
+
 Vous pouvez définir cette configuration avancée en modifiant le Registre lorsque vous disposez de la version 1.3.0.0 du client Azure Information Protection ou d’une version ultérieure. 
 
 Créez le nom de la valeur DWORD suivant (avec toutes données de la valeur) :
@@ -104,6 +106,8 @@ Assurez-vous que le client dispose d’un fichier de stratégie valide nommé **
 
 ## <a name="hide-the-do-not-forward-button-in-outlook"></a>Masquer le bouton Ne pas transférer dans Outlook
 
+Cette option de configuration est actuellement en préversion.
+
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Ce paramètre nécessite également la préversion **1.8.41.0** du client Azure Information Protection ou une version ultérieure.
 
 Lorsque vous configurez ce paramètre, celui-ci masque le bouton **Ne pas transférer** du ruban Outlook. Ce paramètre ne permet pas de masquer cette option dans les menus Office.
@@ -115,6 +119,8 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 - Valeur : **True**
 
 ## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>Désactiver les options d’autorisations personnalisées pour les utilisateurs
+
+Cette option de configuration est actuellement en préversion.
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 

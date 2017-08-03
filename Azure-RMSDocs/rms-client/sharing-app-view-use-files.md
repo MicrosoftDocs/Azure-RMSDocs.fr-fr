@@ -44,7 +44,7 @@ Si vous voyez deux versions du fichier dont les extensions diffèrent, n'ouvrez 
 
 La manière dont le fichier s'ouvre dépend de la manière dont il a été protégé, ce que vous pouvez déterminer en examinant l'extension de son nom. Dans chaque cas, l'ouverture du fichier peut être auditée et reste auditée tant qu'il est protégé. En outre, si le fichier a été envoyé en pièce jointe à un e-mail, il se peut que l'expéditeur soit informé par e-mail chaque fois que vous ouvrez le fichier.
 
-- **Le fichier a une extension de nom de fichier *.pfile***
+- **Le fichier a une** extension de nom de fichier** .pfile
 
     Le fichier fait l'objet d'une protection générique.
 
@@ -73,7 +73,7 @@ Pour obtenir la liste complète des extensions de nom de fichier prises en charg
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>Pour utiliser un fichier protégé (par exemple, l'éditer et l'imprimer)
 Si, après avoir ouvert le fichier protégé, vous voulez le lire, mais aussi, par exemple, le modifier, le copier et l’imprimer :
 
-- **Le fichier a une extension de nom de fichier *.pfile***
+- **Le fichier a une** extension de nom de fichier** .pfile
 
     Enregistrez le fichier ouvert en lui donnant une nouvelle extension de nom associée à l'application que vous souhaitez utiliser.
 

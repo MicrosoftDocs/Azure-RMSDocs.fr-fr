@@ -4,7 +4,7 @@ description: "Informations vous permettant de surveiller le connecteur et l’ut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c7d9e5a948aa0e81341eb99038302677268c522e
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: e759d47e45455616cac34d2b5703a567907a826f
+ms.sourcegitcommit: 2a1c690ca84611e5774ac8fac0fb4caba09fef2e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Surveiller le connecteur Azure Rights Management
 
@@ -33,7 +33,7 @@ Voici quelques exemples d’événements d’informations :
 - L’événement ID 1000 confirme que le service du connecteur a été démarré
 
 - L’événement ID 1002 indique que le serveur est désormais connecté au connecteur RMS
-- 
+
 - L’événement ID 1004 correspond au téléchargement de la liste des comptes autorisés (chaque compte de la liste) dans le connecteur 
 
 Si vous n’avez pas configuré le connecteur pour utiliser le protocole HTTPS, vous recevez un avertissement avec l’ID 2002 indiquant qu’un client utilise une connexion non sécurisée (HTTP).

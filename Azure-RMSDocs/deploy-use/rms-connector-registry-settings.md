@@ -4,7 +4,7 @@ description: "Informations relatives aux paramètres du Registre sur les serveur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,36 +12,40 @@ ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b894be1ef3d41a9faf6c3fd3b3fd8c5b94a62517
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: d8925b2bf7cf599d580f1e3e25a8b96a433bfe8e
+ms.sourcegitcommit: e4199d243d9f6c80efccc0f0d5574d069d69f46d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/02/2017
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Paramètres de Registre pour le connecteur Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
 
 
-Reportez-vous aux tableaux des sections suivantes uniquement si vous voulez ajouter ou vérifier manuellement les paramètres de Registre des serveurs exécutant Exchange, SharePoint ou Windows Server, qui configure les serveurs pour utiliser le [connecteur RMS](deploy-rms-connector.md). La méthode recommandée pour configurer ces serveurs consiste à utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS.
+Utilisez les tableaux fournis dans les sections suivantes seulement si vous voulez ajouter ou vérifier manuellement les paramètres de Registre sur les serveurs qui exécutent Exchange, SharePoint ou Windows Server. Ces paramètres de Registre configurent les serveurs pour qu’ils utilisent le [connecteur RMS](deploy-rms-connector.md). La méthode recommandée pour configurer ces serveurs consiste à utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS.
 
 Voici quelques indications pour savoir quand utiliser ces paramètres :
 
--   *MicrosoftRMSURL* est l'URL de service Microsoft RMS de votre organisation. Pour obtenir cette valeur :
+-   *\<URL_votre_locataire>* est l’URL de votre service Azure Rights Management pour votre locataire Azure Information Protection. Pour obtenir cette valeur :
 
-    1.  Exécutez l’applet de commande [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) pour Azure RMS. Si vous n’avez pas déjà installé le module Windows PowerShell pour Azure RMS, consultez [Installation de Windows PowerShell pour Azure Rights Management](install-powershell.md).
+    1.  Exécutez l’applet de commande [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) pour le service Azure Rights Management. Si vous n’avez pas déjà installé le module Windows PowerShell pour Azure RMS, consultez [Installation de Windows PowerShell pour Azure Rights Management](install-powershell.md).
 
     2.  Dans le résultat de l'applet de commande, identifiez la valeur **LicensingIntranetDistributionPointUrl**.
 
         Par exemple : **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
-    3.  À partir de la valeur, supprimez la section **_wmcs/licensing** de cette chaîne. La chaîne restante correspond à votre URL Microsoft RMS. Dans notre exemple, l'URL Microsoft RMS correspond à la valeur suivante :
+    3.  À partir de la valeur, supprimez la section **_wmcs/licensing** de cette chaîne. La chaîne restante est l’URL de votre service Azure Rights Management. Dans notre exemple, l’URL du service Azure Rights Management aurait la valeur suivante :
 
         **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+        
+        Vous pouvez vérifier que vous avez la valeur correcte en exécutant la commande PowerShell suivante :
+        
+            (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
--   *ConnectorFQDN* est le nom d’équilibrage de charge que vous avez défini dans le système DNS pour le connecteur. Par exemple, **rmsconnector.contoso.com**.
+-   *\<FQDN_connecteur>* est le nom de l’équilibrage de charge que vous avez défini dans le système DNS pour le connecteur. Par exemple, **rmsconnector.contoso.com**.
 
--   Utilisez le préfixe HTTPS pour l'URL du connecteur si vous avez configuré le connecteur pour utiliser le protocole HTTPS pour communiquer avec vos serveurs locaux. Pour plus d’informations, consultez la section [Configuration du connecteur RMS pour le protocole HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) dans les instructions principales. Notez que les URL Microsoft RMS utilisent toujours le protocole HTTPS.
+-   Utilisez le préfixe HTTPS pour l'URL du connecteur si vous avez configuré le connecteur pour utiliser le protocole HTTPS pour communiquer avec vos serveurs locaux. Pour plus d’informations, consultez la section [Configuration du connecteur RMS pour le protocole HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) dans les instructions principales. L’URL du service Azure Rights Management utilise toujours HTTPS.
 
 
 ## <a name="exchange-2016-or-exchange-2013-registry-settings"></a>Paramètres de Registre Exchange 2013 ou Exchange 2016
@@ -52,7 +56,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Valeur :** Par défaut
 
-**Données :** https://*MicrosoftRMSURL*/_wmcs/certification
+**Données :** https://*\<URL_votre_locataire>*/_wmcs/certification
 
 ---
 
@@ -62,7 +66,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Valeur :** Par défaut
 
-**Données :** https://*MicrosoftRMSURL*/_wmcs/Licensing
+**Données :** https://*\<URL_votre_locataire>*/_wmcs/Licensing
 
 ---
 
@@ -70,14 +74,14 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Valeur :** https://*MicrosoftRMSURL*
+**Valeur :** https://*\<URL_votre_locataire>*
 
 
 **Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
 
-- http://*ConnectorFQDN*
+- http://*<\FQDN_connecteur>*
 
-- https://*ConnectorFQDN*
+- https://*<\FQDN_connecteur>*
 
 ---
 
@@ -85,14 +89,14 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Valeur :** https://*MicrosoftRMSURL*
+**Valeur :** https://*<\URL_votre_locataire>*
 
 
 **Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
 
-- http://*ConnectorFQDN*
+- http://*<\FQDN_connecteur>*
 
-- https://*ConnectorFQDN*
+- https://*<\FQDN_connecteur>*
 
 
 ## <a name="exchange-2010-registry-settings"></a>Paramètres de Registre Exchange 2010
@@ -103,7 +107,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Valeur :** Par défaut
 
-**Données :** https://*MicrosoftRMSURL*/_wmcs/certification
+**Données :** https://*<\URL_votre_locataire>*/_wmcs/certification
 
 ---
 
@@ -113,7 +117,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Valeur :** Par défaut
 
-**Données :** https://*MicrosoftRMSURL*/_wmcs/Licensing
+**Données :** https://*<\URL_votre_locataire>*/_wmcs/Licensing
 
 ---
 
@@ -121,13 +125,13 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Valeur :** https://*MicrosoftRMSURL*
+**Valeur :** https://*<\URL_votre_locataire>*
 
 **Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
 
-- http://*ConnectorFQDN*
+- http://*<\FQDN_connecteur>*
 
-- https://*ConnectorFQDN*
+- https://*<\FQDN_connecteur>*
 
 ---
 
@@ -135,13 +139,13 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Valeur :** https://*MicrosoftRMSURL*
+**Valeur :** https://*<\URL_votre_locataire>*
 
 **Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
 
-- http://*ConnectorFQDN*
+- http://*<\FQDN_connecteur>*
 
-- https://*ConnectorFQDN*
+- https://*<\FQDN_connecteur>*
 
 
 ## <a name="sharepoint-2016-or-sharepoint-2013-registry-settings"></a>Paramètres de Registre SharePoint 2016 ou SharePoint 2013
@@ -150,14 +154,14 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Valeur :** https://*MicrosoftRMSURL*/_wmcs/licensing
+**Valeur :** https://*<\URL_votre_locataire>*/_wmcs/licensing
 
 
 **Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur SharePoint et le connecteur RMS :
 
-- http://*ConnectorFQDN*/_wmcs/licensing
+- http://*<\FQDN_connecteur>*/_wmcs/licensing
 
-- https://*ConnectorFQDN*/_wmcs/licensing
+- https://*<\FQDN_connecteur>*/_wmcs/licensing
 
 ---
 
@@ -169,9 +173,9 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur SharePoint et le connecteur RMS :
 
-- http://*ConnectorFQDN*/_wmcs/certification
+- http://*<\FQDN_connecteur>*/_wmcs/certification
 
-- https://*ConnectorFQDN*/_wmcs/certification
+- https://*<\FQDN_connecteur>*/_wmcs/certification
 
 ---
 
@@ -184,9 +188,9 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur SharePoint et le connecteur RMS :
 
-- http://*ConnectorFQDN*/_wmcs/licensing
+- http://*<\FQDN_connecteur>*/_wmcs/licensing
 
-- https://*ConnectorFQDN*/_wmcs/licensing
+- https://*<\FQDN_connecteur>*/_wmcs/licensing
 
 
 
@@ -199,7 +203,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Valeur :** Par défaut
 
-**Données :** http://*ConnectorFQDN*/_wmcs/licensing
+**Données :** http://*</FQDN_connecteur*/_wmcs/licensing
 
 ---
 
@@ -209,7 +213,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Valeur :** Par défaut
 
-**Données :** http://*ConnectorFQDN*/_wmcs/certification
+**Données :** http://*</FQDN_connecteur>*/_wmcs/certification
 
 
 Retour à [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md)

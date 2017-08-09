@@ -4,7 +4,7 @@ description: "Phase 2 de la migration d’AD RMS vers Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 24e832c63ce7ff4f774bbc2ec10a7b35f72e050a
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 9f04698064037343719d274e793eb560b703b031
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -125,7 +125,7 @@ En outre, si vous avez créé des modèles personnalisés que vous souhaitez uti
 
 Étant donné que l’état par défaut des modèles importés est **Archivé**, vous devez définir cet état sur **Publié** si vous voulez que les utilisateurs soient en mesure d’utiliser ces modèles avec le service Azure Rights Management.
 
-Les modèles que vous importez à partir d’AD RMS ressemblent et se comportent comme des modèles personnalisés que vous pouvez créer dans le portail Azure Classic. Pour convertir des modèles importés en modèles publiés pour que les utilisateurs puissent les afficher et les sélectionner à partir d’applications, consultez [Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md).
+Les modèles que vous importez à partir d’AD RMS ressemblent à et se comportent comme des modèles personnalisés que vous pouvez créer dans le portail Azure. Pour changer des modèles importés et les publier pour que les utilisateurs puissent les voir et les sélectionner à partir d’applications, consultez [Configuration et gestion des modèles pour Azure Rights Management](../deploy-use/configure-policy-templates.md).
 
 En plus de publier vos modèles nouvellement importés, vous devrez peut-être effectuer deux modifications importantes pour les modèles avant de poursuivre la migration. Pour offrir une expérience plus cohérente aux utilisateurs pendant le processus de migration, n’apportez pas de modifications supplémentaires aux modèles importés et évitez de publier les deux modèles par défaut fournis avec Azure Information Protection ou d’en créer à ce stade. Au lieu de cela, attendez que le processus de migration soit terminé et d’avoir annulé l’approvisionnement des serveurs AD RMS.
 

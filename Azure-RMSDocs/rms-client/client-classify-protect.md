@@ -4,7 +4,7 @@ description: Instructions sur la classification et la protection de vos document
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/06/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 960fe1abf2fa4f5b8976f190454d31849736298a
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: c7678be03106719af4679ae06e2aaa84aff8ca3e
+ms.sourcegitcommit: 87f0c7a8f9f1fdf7eece0f9d0c114ecf91f57683
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classifier et protéger un fichier ou un e-mail avec Azure Information Protection
 
@@ -24,18 +24,19 @@ ms.lasthandoff: 06/30/2017
 
 Le plus simple pour classifier et protéger vos documents et vos e-mails consiste à le faire quand vous les créez ou les modifiez à partir de vos applications bureautiques Office : **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
-Toutefois, vous pouvez également classifier et protéger des fichiers à l’aide de l’**Explorateur de fichiers**, lequel prend en charge des types de fichiers supplémentaires et constitue un moyen pratique de classifier et protéger plusieurs fichiers à la fois. Cette méthode prend en charge la protection des documents Office, des fichiers PDF, des fichiers texte et image et d’un large éventail d’autres fichiers. 
+Cependant, vous pouvez également classer et protéger les fichiers à l’aide de **l’Explorateur de fichiers**. Cette méthode prend en charge d’autres types de fichiers et est un moyen pratique pour classer et protéger plusieurs fichiers à la fois. Cette méthode prend en charge la protection des documents Office, des fichiers PDF, des fichiers texte et image et d’un large éventail d’autres fichiers. 
+
+Si votre étiquette applique une protection à un document, il n’est pas approprié d’enregistrer un document protégé sur SharePoint ou OneDrive. Ces emplacements ne prennent pas en charge les fonctionnalités suivantes pour les fichiers protégés : co-édition, Office Online, recherche, aperçu du document, miniature et eDiscovery. 
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Partager un fichier en toute sécurité avec des personnes extérieures à votre organisation
 
-Le partage de fichiers protégés avec d’autres utilisateurs est sécurisé. Par exemple, vous joignez le fichier à un e-mail ou envoyez une invitation à partir de votre site SharePoint.
+Le partage de fichiers protégés avec d’autres utilisateurs est sécurisé. Par exemple, vous joignez le fichier à un e-mail.
 
 Si vous partagez régulièrement des fichiers avec des personnes extérieures à votre organisation, votre administrateur peut avoir configuré une étiquette pour vous qui définit la protection de sorte que ces personnes puissent les lire. Sinon, vous pouvez utiliser votre [application Office pour définir des autorisations personnalisées](#set-custom-permissions-for-a-document) ou utiliser l’[Explorateur de fichiers pour définir des autorisations personnalisées](#using-file-explorer-to-classify-and-protect-files) pour un fichier avant de le partager. 
 
 Si vous définissez vos propres autorisations personnalisées et que le fichier est déjà protégé pour une utilisation interne, commencez par en faire une copie afin de conserver les autorisations d’origine. Utilisez ensuite cette copie pour définir des autorisations personnalisées.  
 
 Lorsque le fichier est protégé avec vos autorisations personnalisées, partagez le fichier comme vous le faites habituellement. Si c’est la première fois que les utilisateurs avec lesquels vous partagez le fichier reçoivent un fichier protégé, ils auront peut-être besoin d’instructions pour l’afficher. Pour ces utilisateurs, vous pouvez copier et coller le message suivant : **J’ai protégé ce fichier avec Microsoft Azure Information Protection. Pour une première utilisation, consultez ces [instructions](https://aka.ms/rms-signup).**
-
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Utilisation des applications Office pour classifier et protéger vos documents et vos e-mails
 
@@ -63,7 +64,7 @@ Outre la sélection manuelle, les étiquettes peuvent également être appliqué
 
 - Si votre administrateur a récemment configuré une nouvelle étiquette pour vous, essayez de fermer toutes les instances de votre application Office, puis de la rouvrir. Cette action recherche les modifications apportées à vos étiquettes.
 
-- Si l’étiquette manquante applique la protection, il est possible que vous disposiez d’une édition d’Office qui ne prend pas en charge l’application de la protection Rights Management. Pour vérifier, cliquez sur **Protéger** > **Aide et commentaires**, et vérifiez si vous avez un message dans la section **État du client** indiquant **Ce client n'est pas sous licence pour Office Professionnel Plus.** 
+- Si l’étiquette manquante applique la protection, il est possible que vous disposiez d’une édition d’Office qui ne prend pas en charge l’application de la protection Rights Management. Pour vérifier, cliquez sur **Protéger** > **Aide et commentaires**. Dans la boîte de dialogue, vérifiez si vous avez un message dans la section **État du client** indiquant **Ce client n’est pas sous licence pour Office Professionnel Plus**. 
 
 - L’étiquette peut être dans une stratégie délimitée qui n’inclut pas votre compte. Contactez votre support technique ou votre administrateur.
 
@@ -84,8 +85,10 @@ Vous pouvez spécifier vos propres paramètres de protection pour les documents 
     - **Sélectionner des autorisations** : si vous souhaitez protéger le fichier afin que vous seul puissiez y accéder, sélectionnez **Pour moi uniquement**. Dans le cas contraire, sélectionnez le niveau d’accès que vous souhaitez accorder aux personnes spécifiées.
 
     - **Sélectionner des utilisateurs, des groupes ou des organisations** : spécifiez les personnes qui doivent disposer des autorisations que vous avez sélectionnées pour vos fichiers. Entrez leur adresse e-mail complète, une adresse e-mail de groupe ou un nom de domaine de l’organisation pour tous les utilisateurs appartenant à cette organisation. Attention, les adresses e-mail personnelles ne sont actuellement pas prises en charge.
+    
+    Si vous avez la préversion actuelle du client Azure Information Protection, vous pouvez également utiliser le bouton **Sélectionner des utilisateurs, des groupes ou une organisation**. Ce bouton affiche la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** pour votre annuaire Active Directory local. Si les utilisateurs ou les groupes que vous voulez spécifier se trouvent dans Active Directory, vous pouvez les rechercher et les sélectionner à partir de cette boîte de dialogue. Pour utiliser cette option, votre ordinateur doit être connecté au réseau interne et être joint au domaine, et vous devez disposer d’un annuaire Active Directory local. Si une de ces conditions n’est pas remplie, le message suivant s’affiche : **Le programme ne peut pas ouvrir la boîte de dialogue requise car aucun emplacement n’a été trouvé.**
         
-    - **Faire expirer l’accès** : sélectionnez cette option uniquement pour les fichiers pour lesquels le temps est un facteur critique afin que les personnes que vous avez spécifiées ne soient pas en mesure d’ouvrir le fichier ou les fichiers sélectionnés après une date que vous définissez. Vous serez toujours en mesure d’ouvrir le fichier d’origine mais après minuit (sur votre fuseau horaire), au jour que vous définissez, les personnes que vous avez spécifiées ne pourront pas ouvrir le fichier.
+    - **Faire expirer l’accès** : sélectionnez cette option uniquement pour les fichiers ayant des contraintes de temps, afin que les personnes que vous avez spécifiées ne puissent pas les ouvrir après une date que vous définissez. Vous pouvez toujours ouvrir le fichier d’origine mais, le jour spécifié, après minuit (dans votre fuseau horaire), les personnes que vous avez désignées ne pourront plus l’ouvrir.
 
 5. Cliquez sur **Appliquer** et attendez que le message **Autorisations personnalisées appliquées** s’affiche. Cliquez ensuite sur **Fermer**.
 
@@ -135,7 +138,9 @@ Le guide d’administration contient une liste complète des types de fichiers p
 
     - **Sélectionner des autorisations** : sélectionnez le niveau d’accès que vous voulez donner aux utilisateurs quand vous protégez les fichiers sélectionnés.
     
-    - **Sélectionner des utilisateurs** : spécifiez les personnes qui doivent disposer des autorisations que vous avez sélectionnées pour vos fichiers. Vous serez peut-être en mesure de les sélectionner dans le carnet d’adresses (par exemple, les personnes de votre organisation et vos contacts d’autres organisations). Pour les autres, saisissez leur adresse e-mail complète, une adresse e-mail de groupe ou un nom de domaine de l’organisation pour tous les utilisateurs appartenant à cette organisation. Attention, les adresses e-mail personnelles ne sont actuellement pas prises en charge.
+    - **Sélectionner des utilisateurs, des groupes ou des organisations** : spécifiez les personnes qui doivent disposer des autorisations que vous avez sélectionnées pour vos fichiers. Entrez leur adresse e-mail complète, une adresse e-mail de groupe ou un nom de domaine de l’organisation pour tous les utilisateurs appartenant à cette organisation. Attention, les adresses e-mail personnelles ne sont actuellement pas prises en charge.
+    
+    Vous pouvez aussi utiliser le bouton **Sélectionner des utilisateurs, des groupes ou une organisation** pour sélectionner des utilisateurs ou des groupes dans le carnet d’adresses Outlook. Si vous avez la préversion actuelle du client Azure Information Protection, ce bouton affiche la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** pour votre annuaire Active Directory local. Si les utilisateurs ou les groupes que vous voulez spécifier se trouvent dans Active Directory, vous pouvez les rechercher et les sélectionner à partir de cette boîte de dialogue. Pour utiliser cette option, votre ordinateur doit être connecté au réseau interne et être joint au domaine, et vous devez disposer d’un annuaire Active Directory local. Si une de ces conditions n’est pas remplie, le message suivant s’affiche : **Le programme ne peut pas ouvrir la boîte de dialogue requise car aucun emplacement n’a été trouvé.**
         
     - **Faire expirer l’accès** : sélectionnez cette option uniquement pour les fichiers pour lesquels le temps est un facteur critique afin que les personnes que vous avez spécifiées ne soient pas en mesure d’ouvrir le fichier ou les fichiers sélectionnés après une date que vous définissez. Vous serez toujours en mesure d’ouvrir le fichier d’origine mais après minuit (sur votre fuseau horaire), au jour que vous définissez, les personnes que vous avez spécifiées ne pourront pas ouvrir le fichier.
     

@@ -4,7 +4,7 @@ description: "Actuellement en version préliminaire : vous pouvez désormais con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,38 +12,72 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 1f41aad2d132e087e9122b2683be4b45185527de
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: b9c6b808de6c5967885f4937965b4e0e759668f3
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
-# <a name="configuring-and-managing-templates-in-the-azure-information-protection-policy"></a>Configuration et gestion des modèles dans la stratégie Azure Information Protection
+# <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
 >[!NOTE]
->Cette fonctionnalité est actuellement en version préliminaire et susceptible d’être modifiée fréquemment.
+>Cette fonctionnalité remplace la configuration de modèles personnalisés dans le portail Azure Classic.
 >
->Avant de tester cette fonctionnalité en version préliminaire avec des modèles personnalisés que vous avez créés dans le portail Azure Classic, déterminez si vous disposez d’une sauvegarde récente de vos modèles. Vous pouvez sauvegarder vos modèles personnalisés à l’aide de l’applet de commande PowerShell [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate). Vous pouvez, si nécessaire, utiliser [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate) pour les restaurer.
->
->En raison de différences dans l’implémentation, nous vous déconseillons de gérer les mêmes modèles à partir du portail Azure Classic et du portail Azure.
+>Même si vous pouvez toujours créer et gérer les modèles dans le portail Azure Classic, nous vous déconseillons de gérer les mêmes modèles à partir du portail Azure Classic et du portail Azure. L’implémentation de la configuration des modèles dans ces différents portails a changé : configurer le même modèle dans des portails différents peut aboutir à une configuration non fiable.
 
 
-Les modèles de gestion des droits sont désormais intégrés à la stratégie Azure Information Protection. 
+Les modèles Rights Management sont désormais intégrés à la stratégie Azure Information Protection. 
 
 **Si vous avez un abonnement qui inclut la classification, l’étiquetage et la protection (Azure Information Protection P1 or P2) :**
 
-- Les modèles de gestion des droits pour votre client sont affichés dans la nouvelle section **Modèles** après les étiquettes. Vous pouvez convertir ces modèles en étiquettes, ou vous pouvez continuer à les gérer en tant que modèles distincts et les lier lorsque vous configurez la protection pour vos étiquettes. 
+- Les modèles Rights Management qui ne sont pas intégrés aux étiquettes pour votre locataire sont affichés dans la section **Modèles** après les étiquettes du panneau **Azure Information Protection - Stratégie globale**. Vous pouvez convertir ces modèles en étiquettes, ou vous pouvez continuer à les gérer en tant que modèles distincts et vous y lier quand vous configurez la protection pour vos étiquettes. 
 
 **Lorsque vous avez un abonnement qui inclut uniquement la protection (un abonnement Office 365 qui inclut le service Azure Rights Management) :**
 
-- Les modèles de gestion des droits pour votre client sont affichés en tant qu’étiquettes et, actuellement, les paramètres de configuration qui sont spécifiques à la classification et à l’étiquetage sont également disponibles. 
+- Les modèles Rights Management pour votre locataire sont affichés dans le panneau **Azure Information Protection - Stratégie globale**, dans la section **Modèles**. Aucune étiquette n’est affichée. Vous voyez également les paramètres de configuration qui sont spécifiques à la classification et l’étiquetage, mais ceux-ci n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
 
+## <a name="default-templates"></a>Modèles par défaut
+
+Quand vous obtenez votre abonnement pour Azure Information Protection ou pour un abonnement Office 365 qui inclut le service Azure Rights Management, deux modèles par défaut sont créés automatiquement pour votre locataire, qui limitent l’accès aux utilisateurs autorisés de votre organisation. Ces deux modèles ont les restrictions suivantes : 
+
+- Autorisations de lecture ou de modification du contenu protégé
+    
+    - Autorisations spécifiques : Afficher le contenu, Enregistrer le fichier, Modifier le contenu, Afficher les droits affectés, Autoriser les macros, Transférer, Répondre, Répondre à tous
+
+- Affichage en lecture seule du contenu protégé
+    
+    - Autorisation spécifique : Afficher le contenu
+
+Ces modèles permettent à vous-même et d’autres personnes de commencer facilement à protéger les données sensibles de votre organisation. Ces modèles peuvent être utilisés avec des étiquettes d’Azure Information Protection, ou par eux-mêmes avec [des applications et des services](../understand-explore/applications-support.md) qui peuvent utiliser des modèles Rights Management.
+
+Vous pouvez également créer vos propres modèles personnalisés. Même si vous n’aurez probablement besoin que de quelques modèles, vous pouvez enregistrer au maximum 500 modèles personnalisés dans Azure.
+
+### <a name="default-template-names"></a>Noms des modèles par défaut
+
+Si vous avez obtenu récemment un abonnement pour Azure Information Protection, les noms de vos modèles par défaut sont les suivants :
+
+- **Confidentiel \ Tous les employés** pour les autorisations de lecture ou de modification du contenu protégé.
+
+- **Hautement confidentiel \ Tous les employés** pour les autorisations d’affichage en lecture seule du contenu protégé.
+
+Si vous avez obtenu votre abonnement Azure Information Protection il y a quelque temps, ou si vous n’avez pas d’abonnement Azure Information Protection mais que vous avez un abonnement Office 365 incluant Azure Rights Management, les noms de vos modèles par défaut sont les suivants :
+
+- **\<nom organisation> - Confidentiel** pour les autorisations de lecture ou de modification du contenu protégé.
+
+- **\<nom organisation> - Affichage confidentiel uniquement** pour l’affichage en lecture seule du contenu protégé. 
+
+>[!NOTE]
+>Si vous ne voyez pas vos modèles par défaut dans le panneau **Azure Information Protection - Stratégie globale**, c’est qu’ils sont convertis en étiquettes. Ils existent encore en tant que modèles, mais dans le portail Azure, ils apparaissent comme faisant partie d’une configuration d’étiquettes qui inclut la protection Azure RMS. Vous pouvez toujours vérifier les modèles dont dispose votre locataire en exécutant l’applet de commande [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) à partir du [module PowerShell AADRM](administer-powershell.md).
+>
+>Vous pouvez convertir manuellement des modèles, comme expliqué dans une section ultérieure, [Pour convertir des modèles en étiquettes](#to-convert-templates-to-labels), puis les renommer si vous le voulez. Ils seront convertis automatiquement pour vous si votre stratégie Azure Information Protection par défaut a été créée récemment et que le service Azure Rights Management pour votre locataire a été activé à ce moment.
+
+Les modèles archivés apparaissent comme étant indisponibles dans le panneau **Azure Information Protection - Stratégie globale**. Ces modèles ne peuvent pas être sélectionnés pour les étiquettes, mais ils peuvent être convertis en étiquettes.
 
 ## <a name="considerations-for-templates-in-the-azure-portal"></a>Considérations relatives aux modèles dans le portail Azure
 
-Avant de modifier ces modèles ou de les convertir en étiquettes dans le portail Azure, tenez compte des modifications suivantes dans l’implémentation de la gestion des modèles dans le portail Azure Classic. Certaines limitations devraient être traitées lors de la période préliminaire :
+Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte des changements et des considérations qui suivent. En raison des changements dans l’implémentation, la liste suivante est particulièrement importante si vous avez géré précédemment des modèles dans le portail Azure Classic.
 
 - Une fois que vous modifiez ou convertissez un modèle et enregistrez la stratégie Azure Information Protection, les modifications suivantes sont apportées aux [droits d’utilisation](configure-usage-rights.md) d’origine. Si nécessaire, vous pouvez ajouter ou supprimer des droits d’utilisation individuels à l’aide de PowerShell avec les applets de commande [New-AadrmRightsDefinition](/powershell/module/aadrm/set-aadrmtemplateproperty) et [Set-AadrmTemplateProperty](/powershell/module/aadrm/new-aadrmrightsdefinition).
     
@@ -51,19 +85,22 @@ Avant de modifier ces modèles ou de les convertir en étiquettes dans le portai
     
     - **Autoriser les macros** (nom commun) est automatiquement ajouté. Ce droit d’utilisation est requis pour la barre Azure Information Protection dans les applications Office.
     
-- Actuellement, les modèles par défaut sont affichés mais ne peuvent pas être modifiés ou convertis. 
 
-- Impossible de copier ou supprimer un modèle. Pour supprimer un modèle, utilisez l’applet de commande PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate). 
+- Les paramètres **Publié** et **Archivé** sous la forme **Activé** : **Oui** et **Activé** : **Non** respectivement sur le panneau **Étiquette**. Pour les modèles que vous voulez conserver mais qui ne doivent pas être visibles par les utilisateurs ou les services, définissez pour ceux-ci **Activé** : **Désactivé**.
 
-- Actuellement, les modèles qui ont été configurés pour les langues à l’aide du portail Azure Classic ou de PowerShell n’affichent pas ces langues pour le nom et la description, mais ils sont conservés.
-
-- Les paramètres **Publié** et **Archivé** sous la forme **Activé** : **Oui** et **Activé** : **Non** respectivement sur le panneau **Étiquette**.
+- Vous ne pouvez pas copier ou supprimer un modèle dans le portail Azure. Quand le modèle est converti en étiquette, vous pouvez configurer l’étiquette pour qu’elle cesse d’utiliser le modèle en sélectionnant **Non configuré** pour l’option **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**. Vous pouvez aussi supprimer l’étiquette. Dans les deux cas cependant, le modèle n’est pas supprimé et reste dans un état archivé.
+    
+    Vous pouvez maintenant supprimer le modèle en utilisant l’applet de commande PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate). Vous pouvez également utiliser cette applet de commande PowerShell pour les modèles qui ne sont pas convertis en étiquettes. Cependant, si vous supprimez un modèle qui a été utilisé pour protéger du contenu, ce contenu ne peut plus être ouvert. Supprimez des modèles seulement si vous êtes sûr qu’ils n’ont pas été utilisés pour protéger des documents ou des e-mails en production. À titre de précaution, vous pouvez d’abord exporter le modèle en tant que sauvegarde, en utilisant l’applet de commande [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate). 
 
 - Les modèles de service (les modèles qui sont configurés pour une étendue) s’affichent dans la stratégie globale. Actuellement, si vous modifiez et enregistrez un modèle de service, il supprime la configuration d’étendue. L’équivalent d’un modèle délimité dans la stratégie Azure Information Protection est une [stratégie délimitée](configure-policy-scope.md). Si vous convertissez le modèle en étiquette, vous pouvez sélectionner une étendue existante.
     
     En outre, vous ne pouvez actuellement pas définir le paramètre de compatibilité d’application pour un modèle de service. Si nécessaire, vous pouvez définir cela à l’aide de PowerShell avec l’applet de commande [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
 
-- Vous ne créez pas un nouveau modèle à partir du conteneur **Modèles** ; au lieu de cela, créez une étiquette qui a le paramètre **Protéger** et configurez les droits d’utilisation et les paramètres à partir du panneau **Protection**. Pour obtenir des instructions, consultez [Pour créer un nouveau modèle](#to-create-a-new-template).
+- Actuellement, les modèles que vous avez configurés pour plusieurs langues à l’aide du portail Azure Classic ou de PowerShell n’affichent pas ces langues pour le nom et les descriptions, mais elles sont conservées.
+
+- Quand vous convertissez ou que vous liez un modèle à une étiquette, il ne peut plus être utilisé par d’autres étiquettes.
+
+- Vous ne créez pas un nouveau modèle à partir du conteneur **Modèles**. Au lieu de cela, créez une étiquette qui a le paramètre **Protéger** et configurez les droits d’utilisation et les paramètres à partir du panneau **Protection**. Pour obtenir des instructions, consultez [Pour créer un nouveau modèle](#to-create-a-new-template).
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Pour configurer les modèles dans la stratégie Azure Information Protection
 
@@ -105,7 +142,7 @@ Lorsque vous convertissez un modèle en étiquette :
 
 - Les paramètres de protection sont conservés, et vous pouvez les modifier si nécessaire, puis ajouter également d’autres paramètres à l’étiquette, comme des marqueurs visuels et des conditions.
 
-- Le modèle d’origine n’est plus affiché sous **Modèles** et, pour le modifier dans le portail Azure, vous devez maintenant modifier l’étiquette qui a été créée. Le modèle reste disponible pour le service Azure Rights Management et peut toujours être géré à l’aide de [commandes PowerShell](administer-powershell.md).  
+- Le modèle d’origine n’est plus affiché sous **Modèles** et il ne peut pas être sélectionné comme modèle prédéfini quand vous configurez la protection pour une étiquette. Pour modifier ce modèle dans le portail Azure, vous modifiez maintenant l’étiquette qui a été créée quand vous avez converti le modèle. Le modèle reste disponible pour le service Azure Rights Management et peut toujours être géré à l’aide de [commandes PowerShell](administer-powershell.md).  
 
 ## <a name="to-create-a-new-template"></a>Pour créer un nouveau modèle
 
@@ -131,6 +168,8 @@ Lorsque vous créez une nouvelle étiquette avec le paramètre de protection de 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Comme avec toutes les modifications apportées à la stratégie Azure Information Protection, il peut falloir jusqu'à 15 minutes pour qu’un ordinateur exécutant le client Azure Information Protection termine le téléchargement de ces modèles. Pour plus d’informations sur la façon dont les ordinateurs et les services téléchargent et actualisent les modèles, consultez [Actualisation des modèles pour les utilisateurs et services](refresh-templates.md).
+
+Tout ce que vous pouvez configurer dans le portail Azure pour créer et gérer vos modèles, vous pouvez le faire en utilisant PowerShell. En outre, PowerShell offre des options supplémentaires qui ne sont pas disponibles dans le portail. Pour plus d’informations, consultez [Informations de référence sur PowerShell pour les modèles de protection](configure-templates-with-powershell.md). 
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 

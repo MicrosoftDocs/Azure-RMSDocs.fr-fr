@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/25/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 32226274c8b50b02e453f1c1b6655fb01b4ec942
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 28b4e89cd6300c9b206abdf45f5d580b4474eaa5
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Configurations personnalisées pour le client Azure Information Protection
 
@@ -102,7 +102,20 @@ Recherchez le nom de la valeur suivant et définissez les données de la valeur 
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Assurez-vous que le client dispose d’un fichier de stratégie valide nommé **Policy.msip**, dans le dossier **%localappdata%\Microsoft\MSIP**. Si nécessaire, vous pouvez exporter la stratégie à partir du portail Azure et copier le fichier exporté sur l’ordinateur client. Vous pouvez également utiliser cette méthode pour remplacer un fichier de stratégie obsolète par la dernière stratégie publiée.
+Vérifiez que le client a d’un fichier de stratégie valide nommé **Policy.msip** dans le dossier **%LocalAppData%\Microsoft\MSIP**. Si nécessaire, vous pouvez exporter la stratégie à partir du portail Azure et copier le fichier exporté sur l’ordinateur client. Vous pouvez également utiliser cette méthode pour remplacer un fichier de stratégie obsolète par la dernière stratégie publiée.
+
+Quand vous exportez la stratégie, cette action télécharge un fichier compressé avec plusieurs versions de la stratégie qui correspondent à différentes versions du client Azure Information Protection :
+
+1. Décompressez le fichier et utilisez le tableau suivant pour identifier le fichier de stratégie dont vous avez besoin. 
+    
+    |Nom du fichier|Version du client correspondante|
+    |--------------------------|---------------------------------------------|
+    |Policy1.1.msip |version 1.2|
+    |Policy1.2.msip |version 1.3 - 1.7|
+    |Policy1.3.msip |version 1.8 et ultérieure|
+    
+2. Renommez le fichier identifié en **Policy.msip** et copiez-le dans le dossier **%LocalAppData%\Microsoft\MSIP** sur les ordinateurs où le client Azure Information Protection est installé. 
+
 
 ## <a name="hide-the-do-not-forward-button-in-outlook"></a>Masquer le bouton Ne pas transférer dans Outlook
 

@@ -4,7 +4,7 @@ description: "Quand vous utilisez le service Azure Rights Management, les modèl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 374c807862d4922679e8622ee0d0d5a16a156bb0
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a9a4e01bd23f7f6107b4021cc792839cf38ee3b5
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
@@ -154,6 +154,6 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 
 
 ## <a name="see-also"></a>Voir aussi
-[Configurer des modèles personnalisés pour Azure Rights Management](configure-custom-templates.md)
+[Configuration et gestion des modèles dans la stratégie Azure Information Protection](../deploy-use/configure-policy-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -4,7 +4,7 @@ description: "Découvrez et identifiez les droits spécifiques qui sont utilisé
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/24/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a093ca8cdd02448c877554ff87e971e956eab789
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 62ea1579b61b096e1f7fe6900d72b1b8077c9ff1
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuration des droits d’utilisation pour Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
 
-Quand vous définissez la protection de fichiers ou d’e-mails à l’aide du service Azure Rights Management d’Azure Information Protection et que vous n’utilisez pas de modèle, vous devez configurer les droits d’utilisation vous-même. En outre, quand vous configurez des modèles personnalisés pour Azure Rights Management, vous sélectionnez les droits d’utilisation qui seront ensuite appliqués automatiquement quand le modèle sera sélectionné par des utilisateurs, administrateurs ou services configurés. Par exemple, dans le portail Azure Classic, vous pouvez sélectionner des rôles qui configurent un regroupement logique de droits d’utilisation, ou configurer les droits de façon individuelle.
+Quand vous définissez la protection de fichiers ou d’e-mails à l’aide du service Azure Rights Management d’Azure Information Protection et que vous n’utilisez pas de modèle, vous devez configurer les droits d’utilisation vous-même. En outre, quand vous configurez des modèles ou des étiquettes pour la protection Azure Rights Management, vous sélectionnez les droits d’utilisation qui sont ensuite appliqués automatiquement quand le modèle est sélectionné par des utilisateurs, des administrateurs ou des services configurés. Par exemple, dans le portail Azure, vous pouvez sélectionner des rôles qui configurent un regroupement logique de droits d’utilisation, ou vous pouvez configurer les droits individuels.
 
 Utilisez cet article pour vous aider à configurer les droits d’utilisation de l’application que vous utilisez et pour comprendre comment ces droits sont interprétés par les applications.
 
@@ -85,7 +85,7 @@ Les droits inclus avec les modèles par défaut sont les suivants :
 
 Les clients et services Exchange (par exemple, le client Outlook, l’application Outlook Web Access et les règles de transport Exchange) ont une option de protection des droits d’information supplémentaire pour les e-mails : **Ne pas transférer**. 
 
-Même si cette option apparaît aux utilisateurs (les administrateurs Exchange) comme s’il s’agissait d’un modèle de gestion des droits par défaut qu’ils peuvent sélectionner, **Ne pas transférer** n’est pas un modèle. Cela explique pourquoi vous ne pouvez pas la voir dans le portail classique Azure quand vous affichez et gérez des modèles pour Azure Rights Management. L’option **Ne pas transférer** correspond plutôt à un ensemble de droits appliqué dynamiquement par les utilisateurs à leurs destinataires.
+Même si cette option apparaît aux utilisateurs (les administrateurs Exchange) comme s’il s’agissait d’un modèle de gestion des droits par défaut qu’ils peuvent sélectionner, **Ne pas transférer** n’est pas un modèle. Ceci explique pourquoi vous ne pouvez pas la voir dans le portail Azure quand vous visualisez et que vous gérez des modèles pour Azure Rights Management. L’option **Ne pas transférer** correspond plutôt à un ensemble de droits appliqué dynamiquement par les utilisateurs à leurs destinataires.
 
 Quand l’option **Ne pas transférer** est appliquée à un e-mail, les destinataires ne peuvent pas le transférer, l’imprimer, en copier le contenu, enregistrer des pièces jointes ou l’enregistrer sous un autre nom. Par exemple, dans le client Outlook, le bouton Transférer n’est pas disponible. Les options de menu **Enregistrer sous**, **Enregistrer les pièces jointes** et **Imprimer** ne sont pas disponibles non plus. Vous ne pouvez pas ajouter ou modifier des destinataires dans les zones **À**, **Cc** ou **Cci**.
 
@@ -129,7 +129,7 @@ Le propriétaire Rights Management d’un document ou d’un e-mail est enregist
 Notez que le propriétaire Rights Management est indépendant du propriétaire du système de fichiers Windows. Les deux propriétaires sont souvent les mêmes, mais ils peuvent être différents, même si vous n’utilisez pas les kits SDK ou PowerShell.
 
 ## <a name="see-also"></a>Voir aussi
-[Configuration de modèles personnalisés pour le service Azure Rights Management](configure-custom-templates.md)
+[Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md)
 
 [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](configure-super-users.md)
 

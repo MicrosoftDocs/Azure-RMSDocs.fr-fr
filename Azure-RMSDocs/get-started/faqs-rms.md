@@ -4,7 +4,7 @@ description: "Certaines questions fréquentes sur le service de protection des d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a73dcc5e2a38c5874361f0fc2845229f505b2d3e
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 5a9f592584c090d8b0bb62acabd5775238b5e411
+ms.sourcegitcommit: 7cd6ff39731c7abe990a72a49bc10d104f47764d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 08/01/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
@@ -63,20 +63,22 @@ Comme ces noms de rôles le suggèrent, le premier rôle accorde des autorisatio
 
 Quelques éléments à prendre en compte :
 
-- Seuls les administrateurs généraux pour Office 365 et les administrateurs généraux pour Azure AD peuvent utiliser les portails de gestion (Centre d’administration Office 365 ou portail Azure Classic) pour configurer Azure RMS. Les utilisateurs auxquels vous affectez le rôle d’administrateur général pour Azure RMS doivent utiliser des commandes PowerShell d’Azure RMS pour configurer Azure RMS. Pour déterminer les bonnes applets de commande suivant les tâches à effectuer, consultez [Administration d’Azure Rights Management à l’aide de Windows PowerShell](../deploy-use/administer-powershell.md).
+- Seuls les administrateurs généraux pour Office 365 et les administrateurs généraux pour Azure AD peuvent utiliser le Centre d’administration Office 365 ou le portail Azure Classic pour configurer Azure RMS. Si vous utilisez le portail Azure pour Azure Information Protection, vous pouvez également vous connecter en tant qu’administrateur de sécurité.
+
+- Les utilisateurs auxquels vous affectez le rôle d’administrateur général pour Azure RMS doivent utiliser des commandes PowerShell d’Azure RMS pour configurer Azure RMS. Pour déterminer les bonnes applets de commande suivant les tâches à effectuer, consultez [Administration d’Azure Rights Management à l’aide de Windows PowerShell](../deploy-use/administer-powershell.md).
 
 - Si vous avez configuré des [contrôles d’intégration](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), cette configuration n’affecte pas la possibilité d’administrer Azure RMS, à l’exception du connecteur RMS. Par exemple, si vous avez configuré des contrôles d’intégration de manière à ce que seul le groupe « Département informatique » puisse protéger du contenu, le compte que vous utilisez pour installer et configurer le connecteur RMS doit être membre de ce groupe. 
 
-- Aucun administrateur pour Azure RMS (l’administrateur général du client ou un administrateur général Azure RMS) ne peut supprimer automatiquement la protection des documents ou e-mails qui ont été protégés par Azure RMS. Seuls les utilisateurs ayant le statut de super utilisateurs pour Azure RMS peuvent effectuer cette opération, sous réserve que la fonctionnalité de super utilisateur soit activée. Toutefois, l’administrateur général du client et n’importe quel administrateur général Azure RMS peuvent affecter des utilisateurs comme super utilisateurs, y compris leur propre compte. Ils peuvent également activer la fonctionnalité de super utilisateur. Ces actions sont enregistrées dans le journal de l’administrateur Azure RMS. Pour plus d’informations, consultez la section des bonnes pratiques dans [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../deploy-use/configure-super-users.md). 
+- Aucun administrateur pour Azure RMS (par exemple l’administrateur général du locataire ou un administrateur général d’Azure RMS) ne peut supprimer automatiquement la protection des documents ou des e-mails qui ont été protégés par Azure RMS. Seuls les utilisateurs ayant le statut de super utilisateurs pour Azure RMS peuvent effectuer cette opération, sous réserve que la fonctionnalité de super utilisateur soit activée. Toutefois, l’administrateur général du client et n’importe quel administrateur général Azure RMS peuvent affecter des utilisateurs comme super utilisateurs, y compris leur propre compte. Ils peuvent également activer la fonctionnalité de super utilisateur. Ces actions sont enregistrées dans le journal de l’administrateur Azure RMS. Pour plus d’informations, consultez la section des bonnes pratiques dans [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../deploy-use/configure-super-users.md). 
 
 >[!NOTE]
-> Les modèles et nouvelles options pour configurer la protection Azure Rights Management sont déplacées vers le portail Azure, qui prend en charge les administrateurs de sécurité en plus de l’accès administrateur général. Pour plus d’informations, consultez l’annonce de blog suivante : [L’administration unifiée d’Azure Information Protection est maintenant disponible en version préliminaire](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) et [Administration unifiée d’Azure Information Protection, phase deux](https://blogs.technet.microsoft.com/enterprisemobility/2017/05/23/azure-information-protection-unified-administration-phase-two/).
+> Les modèles et de nouvelles options pour configurer la protection Azure Rights Management ont été déplacées dans le portail Azure, qui prend en charge les administrateurs de sécurité en plus de l’accès de l’administrateur général. 
 
 ## <a name="how-do-i-create-a-new-custom-template-in-the-azure-portal"></a>Comment créer un nouveau modèle personnalisé dans le portail Azure ?
 
-Actuellement en version préliminaire, les modèles personnalisés sont déplacés vers le portail Azure où vous pouvez continuer à les gérer en tant que modèles, ou les convertir en étiquettes. Pour créer un nouveau modèle, créez une nouvelle étiquette et configurez les paramètres de protection des données pour Azure RMS. En pratique, cela crée un nouveau modèle qui est ensuite accessible pour les services et applications qui s’intègrent avec les modèles Rights Management.
+Les modèles personnalisés ont été déplacés dans le portail Azure, où vous pouvez continuer à les gérer en tant que modèles, ou les convertir en étiquettes. Pour créer un nouveau modèle, créez une nouvelle étiquette et configurez les paramètres de protection des données pour Azure RMS. En pratique, cela crée un nouveau modèle qui est ensuite accessible pour les services et applications qui s’intègrent avec les modèles Rights Management.
 
-Pour plus d’informations sur la configuration des modèles dans le portail Azure, consultez [Configurer et gérer des modèles dans la stratégie Azure Information Protection](../deploy-use/configure-policy-templates.md).
+Pour plus d’informations sur les modèles dans le portail Azure, consultez [Configuration et gestion des modèles pour Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>J'ai un déploiement hybride d'Exchange avec certains utilisateurs sur Exchange Online et d'autres utilisateurs sur Exchange Server. Est-ce compatible avec Azure RMS ?
 Absolument, et l'avantage est que les utilisateurs peuvent protéger et consommer sans problème des e-mails et pièces jointes entre les deux déploiements Exchange. Pour cette configuration, activez [Azure RMS](../deploy-use/activate-service.md) et [Gestion des droits relatifs à l’information (IRM) pour Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), puis [déployez et configurez le connecteur RMS](../deploy-use/deploy-rms-connector.md) pour Exchange Server.
@@ -99,19 +101,14 @@ Le service Azure Rights Management utilise toujours un compte Azure Active Direc
 
 La méthode d'authentification pour ces comptes peut varier en fonction de la manière dont l'administrateur de l'autre organisation a configuré les comptes Azure Active Directory. Par exemple, ils peuvent utiliser des mots de passe créés pour ces comptes, Multi-Factor Authentication (MFA), une fédération ou des mots de passe créés dans les services de domaine Active Directory, puis synchronisés avec Azure Active Directory.
 
-## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>Puis-je ajouter des utilisateurs externes (des personnes ne faisant pas partie de mon organisation) à des modèles personnalisés ?
-Oui. La création de modèles personnalisés que les utilisateurs finaux (et administrateurs) peuvent sélectionner à partir d'applications accélère et facilite l'application de la protection des informations à l'aide de stratégies prédéfinies que vous spécifiez. L’un des paramètres du modèle définit qui peut accéder au contenu, et vous pouvez spécifier des utilisateurs et des groupes au sein de votre organisation, ainsi que des utilisateurs et des groupes extérieurs à celle-ci. 
+## <a name="can-i-add-external-users-people-from-outside-my-company-to-templates"></a>Puis-je ajouter des utilisateurs externes (des personnes ne faisant pas partie de mon organisation) à des modèles ?
+Oui. La création de modèles que les utilisateurs finaux (et les administrateurs) peuvent sélectionner à partir d’applications accélère et facilite l’application de la protection des informations à l’aide de stratégies prédéfinies que vous spécifiez. L’un des paramètres du modèle définit qui peut accéder au contenu, et vous pouvez spécifier des utilisateurs et des groupes au sein de votre organisation, ainsi que des utilisateurs et des groupes extérieurs à celle-ci. Vous pouvez même spécifier tous les utilisateurs d’une autre organisation.
 
-Pour spécifier des utilisateurs extérieurs à votre organisation, ajoutez-les en tant que contacts à un groupe que vous sélectionnez dans le portail Azure Classic lors de la configuration de vos modèles. Pour spécifier des groupes en dehors de votre organisation, vous devez utiliser le [module Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md), qui vous permet également de spécifier des utilisateurs externes individuels, voire tous les utilisateurs d’une autre organisation :
+Vous pouvez effectuer cette configuration à l’aide du portail Azure, quand vous configurez les [paramètres de protection](../deploy-use/configure-policy-protection.md). Vous pouvez aussi faire cette configuration en utilisant PowerShell. Pour utiliser PowerShell :
 
--   **utiliser un objet de définition de droits pour créer ou mettre à jour un modèle**.    Spécifiez les adresses de messagerie externes et leurs droits dans un objet de définition de droits, que vous pouvez ensuite utiliser pour créer ou mettre à jour un modèle. Spécifiez l’objet de définition de droits à l’aide de l’applet de commande [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) pour créer une variable, puis spécifiez cette variable dans le paramètre -RightsDefinition avec l’applet de commande [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) (pour un nouveau modèle) ou l’applet de commande [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) (si vous modifiez un modèle existant). Cependant, si vous ajoutez ces utilisateurs à un modèle existant, vous devez définir des objets de définition de droits pour les groupes existants des modèles et pas seulement les utilisateurs externes.
+-   **utiliser un objet de définition de droits pour créer ou mettre à jour un modèle**.  Spécifiez les adresses de messagerie externes et leurs droits dans un objet de définition de droits, que vous pouvez ensuite utiliser pour créer ou mettre à jour un modèle. Spécifiez l’objet de définition de droits à l’aide de l’applet de commande [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) pour créer une variable, puis spécifiez cette variable dans le paramètre -RightsDefinition avec l’applet de commande [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) (pour un nouveau modèle) ou l’applet de commande [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) (si vous modifiez un modèle existant). Cependant, si vous ajoutez ces utilisateurs à un modèle existant, vous devez définir des objets de définition de droits pour les groupes existants des modèles et pas seulement les utilisateurs externes.
 
-Pour plus d’informations sur les modèles personnalisés, consultez [Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md).
-
-> [!TIP]
-> Les modèles et de nouvelles options de configuration de la protection Gestion des droits Azure sont déplacés vers le portail Azure. Ces nouvelles options facilitent la spécification des utilisateurs externes, pour que vous n’ayez plus à utiliser PowerShell ou des groupes contenant des utilisateurs externes. Cette fonctionnalité est actuellement en version préliminaire : [L’administration unifiée d’Azure Information Protection est maintenant disponible en version préliminaire](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/). 
-
-> Pour obtenir des instructions documentées, consultez [Configurer une étiquette pour la protection Rights Management](../deploy-use/configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
+Pour plus d’informations sur les modèles, consultez [Configuration et gestion des modèles pour Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 ## <a name="does-azure-rms-work-with-dynamic-groups-in-azure-ad"></a>Azure RMS fonctionne-t-il avec des groupes dynamiques dans Azure AD ?
 Une fonctionnalité Azure AD Premium vous permet de configurer l’appartenance dynamique à des groupes de sécurité en spécifiant des [règles basées sur des attributs](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). Ce type de groupe ne prend pas en charge une adresse de messagerie et ne peut donc pas être utilisé avec le service Azure Rights Management. Toutefois, les groupes Office 365 prennent en charge l’appartenance au groupe dynamique et sont compatibles avec la messagerie. Dans la mesure où ce groupe est à extension messagerie, vous pouvez l’utiliser avec la protection Azure Rights Management.
@@ -120,7 +117,7 @@ Pour plus d’informations sur la configuration requise pour les utilisateurs et
 
 ## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>Comment envoyer un e-mail protégé sur un compte Gmail ou Hotmail ?
 
-Vous avez peut-être vu des références ou démonstrations d’Azure Information Protection où des courriers électroniques protégés sont envoyés aux comptes Gmail ou Hotmail. Cette fonctionnalité n’est encore qu’une préversion privée, vous n’aurez donc pas d’informations supplémentaires dans ce document jusqu'à ce que la fonctionnalité soit publiée sous la forme de préversion publique.
+Vous avez peut-être vu des références ou démonstrations d’Azure Information Protection où des courriers électroniques protégés sont envoyés aux comptes Gmail ou Hotmail. Cette fonctionnalité n’est encore qu’une préversion privée, vous n’aurez donc pas d’informations supplémentaires dans ce document jusqu’à ce que la fonctionnalité soit publiée sans limitation.
 
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Quels appareils et types de fichier Azure RMS prend-il en charge ?
 Pour obtenir la liste des appareils qui prennent en charge le service Azure Rights Management, consultez [Appareils clients prenant en charge la protection des données Azure Rights Management](../get-started/requirements-client-devices.md). Les fonctionnalités Rights Management n’étant pas toutes disponibles sur tous les appareils pris en charge, pensez à consulter le tableau des [applications compatibles avec RMS](../get-started/requirements-applications.md#rms-enlightened-applications).
@@ -154,7 +151,7 @@ Ne laissez pas cette limitation retarder l’utilisation du service Azure Rights
 Toutefois, si vos stratégies d’entreprise vous obligent à utiliser un module de sécurité matériel (HSM) sans lequel votre déploiement d’Azure Information Protection serait bloqué, vous pouvez déployer Azure Information Protection avec l’option BYOK, et des fonctionnalités de protection Rights Management réduites pour Exchange. Pour plus d’informations, consultez [Tarifs et restrictions BYOK](../plan-design/byok-price-restrictions.md) dans [Planification et implémentation de la clé de locataire Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
 
 ## <a name="a-feature-i-am-looking-for-doesnt-seem-to-work-with-sharepoint-protected-librariesis-support-for-my-feature-planned"></a>Il semble qu'une fonctionnalité que je recherche ne fonctionne pas avec les bibliothèques protégées SharePoint. Une prise en charge de ma fonctionnalité est-elle prévue ?
-Actuellement, SharePoint prend en charge les documents protégés par Rights Management en utilisant des bibliothèques protégées par IRM, qui ne prennent pas en charge les modèles personnalisés, le suivi de document et d’autres fonctionnalités. Pour plus d’informations, consultez la section [SharePoint Online et SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) dans l’article [Applications et services Office](../understand-explore/office-apps-services-support.md).
+Actuellement, SharePoint prend en charge les documents protégés par RMS en utilisant des bibliothèques protégées par IRM, qui ne prennent pas en charge les modèles Rights Management, le suivi de document et certaines autres fonctionnalités. Pour plus d’informations, consultez la section [SharePoint Online et SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) dans l’article [Applications et services Office](../understand-explore/office-apps-services-support.md).
 
 Si vous êtes intéressé par une fonctionnalité spécifique qui n’est pas encore prise en charge, surveillez les annonces publiées dans [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) (Blog de sécurité et de mobilité d’entreprise).
 
@@ -164,7 +161,7 @@ Par défaut, en votre qualité d’administrateur Office 365, ce n’est pas vo
 De la même manière qu’un administrateur de site SharePoint active et configure IRM pour une bibliothèque SharePoint dont il est propriétaire, OneDrive Entreprise a été conçu pour permettre aux utilisateurs d’activer et de configurer IRM pour leur propre bibliothèque OneDrive Entreprise. Cependant, en utilisant PowerShell, vous pouvez le faire à leur place. Pour obtenir des instructions, consultez la section [SharePoint Online et OneDrive Entreprise : configuration de la gestion des droits relatifs à l’information](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) dans l’article [Office 365 : configuration pour les clients et services en ligne](../deploy-use/configure-office365.md).
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Avez-vous des conseils ou des astuces pour réussir le déploiement ?
-Après avoir supervisé de nombreux déploiements et écouté nos clients, partenaires, consultants et ingénieurs du support technique, voici l'un des conseils les plus importants que nous pouvons vous donner : **Concevoir et déployer des stratégies simples**.
+Après avoir supervisé de nombreux déploiements et écouté nos clients, partenaires, consultants et ingénieurs du support technique, voici l’un des conseils les plus importants que nous pouvons vous donner : **Concevoir et déployer des stratégies simples**.
 
 Puisqu’Azure Information Protection permet de partager des fichiers en toute sécurité, vous pouvez faire preuve d’ambition concernant la portée de la protection de vos données. Mais faites bien attention aux stratégies relatives aux droits. Pour de nombreuses organisations, la meilleure chose à faire est de prévenir la fuite des données en appliquant le modèle de stratégie de droits par défaut, qui restreint l’accès aux seuls membres de votre organisation. Bien sûr, vous pouvez être bien plus précis si vous devez empêcher des personnes d’imprimer, d’éditer, etc. Évitez néanmoins d’être trop précis pour des documents nécessitant un niveau de sécurité élevé. Au lieu d’implémenter ces stratégies restrictives le premier jour, adoptez une approche plus progressive.
 
@@ -179,7 +176,7 @@ La révocation d’un fichier ne peut être appliquée que lorsque l’utilisate
 
 L’utilisateur qui a protégé le document, [l’émetteur Rights Management](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) n’est pas concerné par cette révocation et peut toujours accéder à ses documents. 
 
-Pour un locataire, la valeur par défaut de la période de validité de la licence est de 30 jours. Vous pouvez configurer cette valeur à l’aide de l’applet de commande PowerShell **Set-AadrmMaxUseLicenseValidityTime**. Ce paramètre peut être remplacé par un paramètre plus restrictif dans un modèle personnalisé. 
+Pour un locataire, la valeur par défaut de la période de validité de la licence est de 30 jours. Vous pouvez configurer cette valeur à l’aide de l’applet de commande PowerShell **Set-AadrmMaxUseLicenseValidityTime**. Ce paramètre peut être remplacé par un paramètre plus restrictif dans un modèle. 
 
 Pour plus d’informations et pour obtenir des exemples de la façon dont fonctionne la licence d’utilisation, consultez la description détaillée de [Set-AadrmMaxUseLicenseValidityTime](/powershell/module/aadrm/set-aadrmmaxuselicensevaliditytime).
 

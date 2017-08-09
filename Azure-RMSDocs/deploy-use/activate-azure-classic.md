@@ -4,7 +4,7 @@ description: "Instructions d’activation du service Azure Rights Management qua
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,20 @@ ms.technology: techgroup-identity
 ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1066ff9dc628c5df379fe3ce9126b42639ed23b1
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: d757d4fa93bfb1277ed38a955f563bcd2595fe4e
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-classic-portal"></a>Comment activer Azure Rights Management à partir du portail classique Azure
 
 >*S’applique à : Azure Information Protection*
 
+> [!NOTE]
+>Cette fonctionnalité a été déplacée dans le portail Azure et est actuellement en préversion. Pour plus d’informations, consultez [Comment activer Azure Rights Management à partir du portail Azure](activate-azure.md).
 
-Utilisez ces instructions si vous avez accès au portail Azure. Par exemple, vous avez un abonnement à Enterprise Mobility Suite ou êtes abonné à Azure Information Protection Premium.
+Utilisez ces instructions si vous avez accès au portail Azure Classic. Par exemple, vous avez un abonnement à Enterprise Mobility Suite ou êtes abonné à Azure Information Protection Premium.
 
 > [!TIP]
 > Regardez une vidéo de 2 minutes : [Comment activer Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)
@@ -55,6 +57,6 @@ En plus de l'état **Actif** qui indique que le service Rights Management est ac
 |**Non autorisé**|Vous n’êtes pas autorisé à consulter l’état du service [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]. Par exemple, votre compte est verrouillé ou vous êtes l'administrateur global du locataire sélectionné.|
 
 ## <a name="next-steps"></a>Étapes suivantes
-Retour à [Activation d’Azure Rights Management](activate-service.md)
+Reprenez la lecture de [Activation d’Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

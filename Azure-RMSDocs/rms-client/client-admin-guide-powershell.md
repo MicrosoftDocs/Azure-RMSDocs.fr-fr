@@ -4,7 +4,7 @@ description: "Instructions et informations pour que les administrateurs gèrent 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8dd4917b23b3732e0d835f957191db9c4578f60d
-ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
+ms.openlocfilehash: 618e8b6a160ccc699658bf8c317c40ed2ded3bee
+ms.sourcegitcommit: 87f0c7a8f9f1fdf7eece0f9d0c114ecf91f57683
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Utiliser PowerShell avec le client Azure Information Protection
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
-Lorsque vous installez le client Azure Information Protection, les commandes PowerShell sont installées automatiquement afin que vous puissiez gérer le client en exécutant des commandes que vous pouvez placer dans des scripts pour l’automatisation.
+Quand vous installez le client Azure Information Protection, des commandes PowerShell sont installés automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
 Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module remplace le module de protection RMS installé avec l’outil de protection RMS. Si vous disposez de l’outil RMSProtection lorsque vous installez le client Azure Information Protection, le module RMSProtection est automatiquement désinstallé.
 
@@ -46,7 +46,7 @@ Comme avec le module RMSProtection, la version actuelle du module AzureInformati
 
 Avant de commencer à utiliser ces applets de commande, consultez les autres conditions préalables et instructions correspondant à votre déploiement :
 
-- [Service Azure Information Protection et service Azure Rights Management](#azure-information-protection-service-and-azure-rights-management-service)
+- [Azure Information Protection et le service Azure Rights Management](#azure-information-protection-service-and-azure-rights-management-service)
 
     - Applicable si vous utilisez la classification uniquement ou la classification avec la protection Rights Management : vous avez un abonnement qui inclut Azure Information Protection (par exemple, Enterprise Mobility + Security).
     - S’applique si vous utilisez la protection uniquement avec le service Azure Rights Management : vous avez un abonnement qui inclut le service Azure Rights Management (par exemple, Office 365 E3 et Office 365 E5).
@@ -56,14 +56,14 @@ Avant de commencer à utiliser ces applets de commande, consultez les autres con
     - S’applique si vous utilisez la protection uniquement avec la version locale d’Azure Rights Management ; Active Directory Rights Management Services (AD RMS).
 
 
-## <a name="azure-information-protection-service-and-azure-rights-management-service"></a>Service Azure Information Protection et service Azure Rights Management
+## <a name="azure-information-protection-and-azure-rights-management-service"></a>Azure Information Protection et le service Azure Rights Management
 
-Lisez cette section avant de commencer à utiliser les commandes PowerShell lorsque votre organisation utilise Azure Information Protection et le service de protection de données Azure Rights Management, ou seulement le service Azure Rights Management.
+Lisez cette section avant de commencer à utiliser les commandes PowerShell quand votre organisation utilise Azure Information Protection pour la classification et la protection, ou seulement le service Azure Rights Management pour la protection des données.
 
 
 ### <a name="prerequisites"></a>Prérequis
 
-Outre les prérequis pour l’installation du module Azure Information Protection, il existe d’autres prérequis pour le service Azure Information Protection et le service de protection de données Azure Rights Management :
+En plus des prérequis pour l’installation du module Azure Information Protection, il existe d’autres prérequis pour l’étiquetage Azure Information Protection et pour le service de protection de données Azure Rights Management :
 
 1. Le service Azure Rights Management doit être activé.
 
@@ -93,9 +93,9 @@ Pour supprimer la protection des fichiers, vous devez disposer d’un droit d’
 
 #### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>Condition préalable 3 : protéger ou annuler la protection des fichiers sans intervention de l’utilisateur
 
-Actuellement, vous ne pouvez pas appliquer d’étiquettes en mode non interactif, mais vous pouvez vous connecter directement au service Azure Rights Management en mode non interactif pour protéger ou annuler la protection de fichiers.
+Vous pouvez vous connecter directement au service Azure Rights Management en mode non interactif pour protéger ou déprotéger des fichiers.
 
-Vous devez utiliser un principal du service pour vous connecter au service Azure Rights Management en mode non interactif, en utilisant l’applet de commande `Set-RMSServerAuthentication`. Vous devez effectuer cette opération pour chaque session Windows PowerShell exécutant des applets de commande qui se connectent directement au service Azure Rights Management. Avant d’exécuter cette applet de commande, assurez-vous que vous disposez des trois identificateurs suivants :
+Vous devez utiliser un principal du service pour vous connecter au service Azure Rights Management en mode non interactif, en utilisant l’applet de commande `Set-RMSServerAuthentication`. Vous devez effectuer cette opération pour chaque session Windows PowerShell exécutant des applets de commande qui se connectent directement au service Azure Rights Management. Avant d’exécuter cette applet de commande, vous devez disposer de ces trois identificateurs :
 
 - BposTenantId
 
@@ -103,7 +103,28 @@ Vous devez utiliser un principal du service pour vous connecter au service Azure
 
 - Clé symétrique
 
-Les sections suivantes expliquent comment obtenir ces identificateurs.
+Vous pouvez utiliser les commandes PowerShell et les instructions commentées suivantes pour obtenir automatiquement les valeurs des identificateurs et exécuter l’applet de commande Set-RMSServerAuthentication. Vous pouvez aussi obtenir et spécifier manuellement les valeurs.
+
+Pour obtenir les valeurs et exécuter Set-RMSServerAuthentication automatiquement :
+
+````
+# Make sure that you have the AADRM and MSOnline modules installed
+
+$newServicePrincipalName="<new service principal name>"
+Connect-AadrmService
+$bposTenantID=(Get-AadrmConfiguration).BPOSId
+Disconnect-AadrmService
+New-MsolServicePrincipal -DisplayName $servicePrincipalName
+
+# Copy the value of the generated symmetric key
+
+$symmetricKey="<value from the display of the New-MsolServicePrincipal command>"
+$appPrincipalID=(Get-MsolServicePrincipal | Where { $_.DisplayName -eq $servicePrincipalName }).AppPrincipalId
+Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -BposTenantId $bposTenantID
+
+````
+
+Les sections suivantes expliquent comment obtenir et spécifier ces valeurs manuellement, avec plus d’informations sur chacune d’elles.
 
 ##### <a name="to-get-the-bpostenantid"></a>Pour obtenir le BposTenantId
 
@@ -117,7 +138,7 @@ Exécutez l’applet de commande Get-AadrmConfiguration à partir du module Azur
     
         Connect-AadrmService
     
-    Quand vous y êtes invité, entrez vos informations d’identification d’administrateur client Azure Information Protection (en général, vous utilisez un compte d’administrateur global pour Azure Active Directory ou Office 365).
+    Quand vous y êtes invité, entrez vos informations d’identification d’administrateur du locataire Azure Information Protection. Normalement, vous utilisez un compte d’administrateur général pour Azure Active Directory ou Office 365.
     
 4. Exécutez `Get-AadrmConfiguration` et copiez la valeur BPOSId.
     
@@ -154,7 +175,7 @@ Créez un principal de service en exécutant l’applet de commande `New-MsolSer
     
         Connect-MsolService
     
-    Quand vous y êtes invité, entrez vos informations d’identification d’administrateur client Azure AD (en général, vous utilisez un compte d’administrateur global pour Azure Active Directory ou Office 365).
+    Quand vous y êtes invité, entrez vos informations d’identification d’administrateur du locataire Azure AD (normalement, vous utilisez un compte d’administrateur général pour Azure Active Directory ou Office 365).
 
 4. Exécutez l’applet de commande New-MsolServicePrincipal pour créer un principal du service :
     
@@ -185,7 +206,7 @@ Créez un principal de service en exécutant l’applet de commande `New-MsolSer
 
 5. À partir de cette sortie, notez la clé symétrique et l’AppPrincipalId.
 
-    Il est important de copier la clé symétrique, car vous ne pourrez pas la récupérer complètement ultérieurement. Si vous ne le connaissez pas, vous devez créer un principal du service lors de votre prochaine authentification auprès du service Azure Rights Management.
+    Il est important d’effectuer maintenant une copie de cette clé symétrique. Vous ne pourrez pas récupérer cette clé plus tard : si vous ne la connaissez pas lors de votre prochaine authentification auprès du service Azure Rights Management, vous devrez créer un nouveau principal du service.
 
 À partir de ces instructions et de nos exemples, trois identificateurs sont nécessaires à l’exécution de Set-RMSServerAuthentication :
 
@@ -201,12 +222,15 @@ Notre exemple de commande ressemblerait à ceci :
 
 Comme indiqué dans la commande précédente, vous pouvez fournir les valeurs avec une seule commande, ou simplement saisir Set-RMSServerAuthentication et fournir les valeurs une par une lorsque vous y êtes invité. Quand la commande est terminée, vous voyez un message de type « **RmsServerAuthentication a la valeur ON** », ce qui signifie que le client fonctionne maintenant en « mode serveur ». Ce message ne confirme pas que l’authentification a abouti en utilisant les valeurs que vous avez fournies, mais que le passage au mode serveur a réussi.
 
-Envisagez de faire de ce principal du service un super utilisateur : pour vous assurer que ce principal du service peut toujours annuler la protection de fichiers pour d’autres utilisateurs, il peut être configuré comme un super utilisateur. De la même façon, lorsque vous configurez un compte d’utilisateur standard comme un super utilisateur, vous utilisez l’applet de commande Azure RMS [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), mais vous spécifiez le paramètre **- ServicePrincipalId** avec votre valeur AppPrincipalId.
+Envisagez de faire de ce principal du service un super utilisateur : pour vous assurer que ce principal du service peut toujours annuler la protection de fichiers pour d’autres utilisateurs, il peut être configuré comme un super utilisateur. De la même façon que quand vous configurez un compte d’utilisateur standard comme super utilisateur, vous utilisez l’applet de commande Azure RMS [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), mais vous spécifiez le paramètre **- ServicePrincipalId** avec votre valeur AppPrincipalId.
 
 Pour plus d’informations sur les super utilisateurs, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../deploy-use/configure-super-users.md).
 
 > [!NOTE]
 > Pour utiliser votre propre compte pour vous authentifier auprès du service Azure Rights Management, inutile d’exécuter Set-RMSServerAuthentication avant de protéger ou d’annuler la protection de fichiers, ou d’obtenir des modèles.
+
+
+
 
 #### <a name="prerequisite-4-for-regions-outside-north-america"></a>Condition préalable 4 : pour les régions en dehors de l’Amérique du Nord
 
@@ -220,11 +244,15 @@ Pour l’authentification en dehors de la région Amérique du Nord Azure, vous 
 
 4. Pour la clé **ServiceLocation**, créez deux clés, le cas échéant, nommées **EnterpriseCertification** et **EnterprisePublishing**. 
     
-    Lorsque vous créez ces clés REG_SZ, ne modifiez pas le nom (« Par défaut »), mais définissez les données Valeur :
+    Pour la valeur de chaîne qui est automatiquement créée pour ces clés, ne modifiez pas le nom de « (Par défaut) », mais modifiez la chaîne pour définir les données de la valeur :
 
     - Pour **EnterpriseCertification**, collez votre valeur CertificationExtranetDistributionPointUrl.
     
     - Pour **EnterprisePublishing**, collez votre valeur LicensingExtranetDistributionPointUrl.
+    
+    Par exemple, votre entrée de Registre pour EnterpriseCertification doit être similaire à ceci :
+    
+    ![Modification du Registre pour le module PowerShell d’Azure Information Protection pour les régions en dehors de l’Amérique du Nord](../media/registry-example-rmsprotection.png)
 
 5. Fermez l'éditeur du Registre. Il est inutile de redémarrer votre ordinateur. Toutefois, si vous utilisez un compte de principal du service au lieu de votre propre compte d’utilisateur, vous devez exécuter la commande Set-RMSServerAuthentication après avoir effectué cette modification de Registre.
 
@@ -296,7 +324,7 @@ Votre résultat peut ressembler à ce qui suit :
     --------                              ------
     \Server1\Documents\Test1.docx         Protected
 
-Pour annuler la protection d’un fichier, vous devez disposer de droits de propriétaire ou d’extraction à partir du moment où le fichier a été protégé, ou vous devez exécuter les applets de commande en tant que super utilisateur. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Exemple :
+Pour déprotéger un fichier, vous devez disposer des droits Propriétaire ou Extraction correspondant au moment où le fichier a été protégé, ou vous devez exécuter les applets de commande en tant que super utilisateur. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Exemple :
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -400,7 +428,7 @@ Votre résultat peut ressembler à ce qui suit :
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-Lorsque l’extension du nom de fichier n’est pas modifiée après l’application de la protection RMS, vous pouvez toujours utiliser l’applet de commande Get-RMSFileStatus plus tard pour vérifier si le fichier est protégé. Exemple : 
+Quand l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande Get-RMSFileStatus ultérieurement pour vérifier si le fichier est protégé. Exemple : 
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 

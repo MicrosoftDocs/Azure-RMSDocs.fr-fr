@@ -4,7 +4,7 @@ description: "Instructions d’utilisation du client Rights Management (RMS) ave
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/18/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b56955d8a01876f4107cafa5b1b8df922c0f8ad0
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: e67bc3d82c1269343cd4e64f8a608a2a86d381ef
+ms.sourcegitcommit: 7cd6ff39731c7abe990a72a49bc10d104f47764d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/01/2017
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
@@ -46,11 +46,11 @@ Conditions préalables pour ces instructions :
     
     Le module PowerShell AzureInformationProtection est fourni avec le client Azure Information Protection. Pour des instructions d’installation détaillées, consultez [Procédure d’installation du client Azure Information Protection pour les utilisateurs](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) dans le guide de l’administrateur d’Azure Information Protection. Si nécessaire, vous pouvez installer uniquement le module PowerShell à l’aide du paramètre `PowerShellOnly=true`.
     
-    Les [conditions préalables pour l’utilisation de ce module PowerShell](client-admin-guide-powershell.md#azure-information-protection-service-and-azure-rights-management-service) comprennent l’activation du service Azure Rights Management, la création d’un principal de service et la modification du registre si votre client se trouve en dehors de l’Amérique du Nord. Avant de commencer à suivre les instructions fournies dans cet article, assurez-vous d’avoir des valeurs pour **BposTenantId**, **AppPrincipalId** et **Clé symétrique**, comme indiqué dans ces conditions préalables. 
+    Les [conditions préalables pour l’utilisation de ce module PowerShell](client-admin-guide-powershell.md#azure-information-protection-and-azure-rights-management-service) comprennent l’activation du service Azure Rights Management, la création d’un principal de service et la modification du registre si votre client se trouve en dehors de l’Amérique du Nord. Avant de commencer à suivre les instructions fournies dans cet article, assurez-vous d’avoir des valeurs pour **BposTenantId**, **AppPrincipalId** et **Clé symétrique**, comme indiqué dans ces conditions préalables. 
     
     - Si vous souhaitez modifier le niveau par défaut de protection (native ou générique) pour des extensions de nom de fichier spécifiques, vous avez modifié le Registre comme décrit dans la section [Modification du niveau de protection par défaut des fichiers](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) du guide d’administrateur.
     
-    - Vous disposez d'une connexion Internet, avec des paramètres d'ordinateur configurés, si nécessaire, pour un serveur proxy. Par exemple : `netsh winhttp import proxy source=ie`
+    - Vous disposez d’une connexion Internet et vous avez configuré les paramètres de votre ordinateur s’ils sont nécessaires pour un serveur proxy. Par exemple : `netsh winhttp import proxy source=ie`
     
 - Vous avez synchronisé vos comptes d’utilisateur Active Directory locaux avec Azure Active Directory ou Office 365, dont leurs adresses e-mail. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et le service Azure Rights Management. Si vous n’exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l’accès des utilisateurs à ces fichiers soit bloqué. Si vous avez besoin de plus d’informations sur cette exigence, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md).
     
@@ -73,7 +73,7 @@ Suivez ces instructions pour protéger automatiquement tous les fichiers figuran
 
 Quand vous aurez suivi ces instructions, tous les fichiers figurant dans votre dossier sélectionné seront classifiés avec la propriété personnalisée de RMS, et seront protégés par Rights Management. Pour une configuration plus complexe qui protège sélectivement certains fichiers et pas d'autres, vous pouvez ensuite créer ou utiliser une propriété et une règle de classification différentes, avec une tâche de gestion de fichiers qui protège uniquement ces fichiers.
 
-Notez que si vous apportez des modifications au modèle Rights Management que vous utilisez pour l’ICF, vous devez exécuter `Get-RMSTemplate -Force` sur l’ordinateur du serveur de fichiers pour obtenir le modèle mis à jour. Ce modèle mis à jour servira ensuite à protéger de nouveaux fichiers. Si les modifications apportées au modèle sont suffisamment importantes pour protéger de nouveau les fichiers sur le serveur de fichiers, vous intervenez en exécutant la cmdlet Protect-RMSFile de façon interactive avec un compte possédant des droits d’utilisation Contrôle total ou Exportation sur les fichiers. Si vous publiez un nouveau modèle que vous souhaitez utiliser pour l’ICF, vous devez également exécuter `Get-RMSTemplate -Force` sur ce serveur de fichiers.
+Notez que si vous apportez des modifications au modèle Rights Management que vous utilisez pour l’ICF, vous devez exécuter `Get-RMSTemplate -Force` sur l’ordinateur du serveur de fichiers pour obtenir le modèle mis à jour. Le modèle mis à jour est ensuite utilisé pour protéger de nouveaux fichiers. Si les modifications apportées au modèle sont suffisamment importantes pour protéger de nouveau les fichiers sur le serveur de fichiers, vous faites cela en exécutant l’applet de commande Protect-RMSFile de façon interactive avec un compte ayant des droits d’utilisation Contrôle total ou Exportation sur les fichiers. Si vous publiez un nouveau modèle que vous souhaitez utiliser pour l’ICF, vous devez également exécuter `Get-RMSTemplate -Force` sur ce serveur de fichiers.
 
 ### <a name="save-the-windows-powershell-script"></a>Exécution du script Windows PowerShell
 
@@ -118,7 +118,7 @@ Notez que si vous apportez des modifications au modèle Rights Management que v
 
     Pour plus d'informations sur la signature des scripts Windows PowerShell, voir [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) dans la bibliothèque de documentation PowerShell.
 
-4.  Enregistrez le fichier localement sur chaque serveur de fichiers devant exécuter le Gestionnaire de ressources de fichiers avec l'infrastructure de classification des fichiers. Par exemple, enregistrez le fichier dans **C:\RMS-Protection**. Si vous utilisez un chemin ou un nom de dossier différent, choisissez un chemin et un dossier ne contenant pas d’espaces. Sécurisez ce fichier à l'aide d'autorisations NTFS afin que les utilisateurs non autorisés ne puissent pas le modifier.
+4.  Enregistrez le fichier localement sur chaque serveur de fichiers qui exécute le Gestionnaire de ressources de fichier avec l’infrastructure de classification des fichiers. Par exemple, enregistrez le fichier dans **C:\RMS-Protection**. Si vous utilisez un chemin ou un nom de dossier différent, choisissez un chemin et un dossier ne contenant pas d’espaces. Sécurisez ce fichier à l'aide d'autorisations NTFS afin que les utilisateurs non autorisés ne puissent pas le modifier.
 
 Vous êtes maintenant prêt à configurer les outils de gestion de ressources pour serveur de fichiers.
 
@@ -162,7 +162,7 @@ Nous pouvons maintenant créer une règle de classification utilisant cette prop
 
     -   **Valeur** de propriété : sélectionnez **Oui**.
 
-Bien que vous puissiez exécuter les règles de classification manuellement pour les opérations en cours, vous souhaitez probablement que cette règle s'exécute selon une planification, afin que les nouveaux fichiers soient classifiés avec la propriété RMS.
+Bien que vous puissiez exécuter les règles de classification manuellement, pour les opérations en cours, vous voulez que cette règle s’exécute selon une planification, afin que les nouveaux fichiers soient classifiés avec la propriété RMS.
 
 ### <a name="configure-the-classification-schedule"></a>Configuration de la planification de la classification
 
@@ -172,7 +172,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
 
     -   Configurez la planification pour toutes les règles de classification à exécuter, qui inclut notre nouvelle règle de classification des fichiers avec la propriété RMS.
 
-    -   **Autoriser la classification continue de nouveaux fichiers** : activez cette case à cocher pour que les nouveaux fichiers soient classifiés.
+    -   **Autoriser la classification continue de nouveaux fichiers** : activez cette case à cocher pour que les nouveaux fichiers soient classifiés.
 
     -   Facultatif : Apportez toutes les autres modifications souhaitées, par exemple, en configurant des options pour les rapports et notifications.
 
@@ -216,14 +216,14 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
 
             `-Noprofile -Command "C:\RMS-Protection\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerMail [Source File Owner Email]"`
 
-            Dans cette commande, **[Source File Path]** et **[Source File Owner Email]** étant deux variables spécifiques de l’ICF, tapez-les exactement telles qu’elles apparaissent dans la commande ci-dessus. La première est utilisée par l'ICF pour spécifier automatiquement le fichier identifié dans le dossier, et la deuxième pour récupérer automatiquement l'adresse de messagerie du propriétaire nommé du fichier identifié. Cette commande est répétée pour chaque fichier figurant, dans notre exemple, dans le dossier C:\FileShare qui dispose en outre de RMS en tant que propriété de classification des fichiers.
+            Dans cette commande, **[Source File Path]** et **[Source File Owner Email]** étant deux variables spécifiques de l’ICF, tapez-les exactement telles qu’elles apparaissent dans la commande précédente. La première variable est utilisée par l’ICF pour spécifier automatiquement le fichier identifié dans le dossier, et la deuxième variable pour récupérer automatiquement l’adresse e-mail du propriétaire nommé du fichier identifié. Cette commande est répétée pour chaque fichier figurant, dans notre exemple, dans le dossier C:\FileShare qui dispose en outre de RMS en tant que propriété de classification des fichiers.
 
             > [!NOTE]
-            > Le paramètre **-OwnerMail [Source File Owner Email]** et sa valeur garantissent que le propriétaire d’origine du fichier est le propriétaire des droits de gestion du fichier après la protection de celui-ci. Il est ainsi certain que le propriétaire d'origine du fichier dispose de tous les droits de gestion sur ses propres fichiers. Quand un utilisateur de domaine crée des fichiers, l'adresse de messagerie est automatiquement extraite d'Active Directory à l'aide du nom de compte d'utilisateur figurant dans la propriété Owner du fichier. À cette fin, le serveur de fichiers doit se trouver dans le même domaine ou domaine approuvé que l'utilisateur.
+            > Le paramètre **-OwnerMail [Source File Owner Email]** et sa valeur garantissent que le propriétaire d’origine du fichier est le propriétaire des droits de gestion du fichier après la protection de celui-ci. Cette configuration garantit que le propriétaire d’origine du fichier dispose de tous les droits Rights Management sur ses propres fichiers. Quand un utilisateur de domaine crée des fichiers, l'adresse de messagerie est automatiquement extraite d'Active Directory à l'aide du nom de compte d'utilisateur figurant dans la propriété Owner du fichier. À cette fin, le serveur de fichiers doit se trouver dans le même domaine ou domaine approuvé que l'utilisateur.
             > 
-            > Autant que possible, affectez les propriétaires d'origine aux documents protégés, pour vous assurer que ces utilisateurs continuent à contrôler pleinement les fichiers qu'ils ont créés. Toutefois, si vous utilisez la variable [Source File Owner Email] comme indiqué ci-dessus, et si un fichier n'a pas d'utilisateur de domaine défini comme propriétaire (par exemple, un compte local a été utilisé pour créer le fichier, de sorte que l'utilisateur affiche SYSTEM), l'exécution du script échoue.
+            > Autant que possible, affectez les propriétaires d'origine aux documents protégés, pour vous assurer que ces utilisateurs continuent à contrôler pleinement les fichiers qu'ils ont créés. Cependant, si vous utilisez la variable [Source File Owner Email] comme dans la commande précédente, et si un fichier n’a pas d’utilisateur de domaine défini comme propriétaire (par exemple, un compte local a été utilisé pour créer le fichier, de sorte que le propriétaire affiché est SYSTEM), le script échoue.
             > 
-            > Pour les fichiers n'ayant pas d'utilisateur de domaine en tant que propriétaire, vous pouvez les copier et enregistrer vous-même en tant qu'utilisateur de domaine afin d'en devenir le propriétaire. Si vous disposez d'autorisations, vous pouvez aussi modifier manuellement le propriétaire.  Ou bien, vous pouvez fournir une adresse de messagerie spécifique (par exemple, la vôtre ou une adresse de groupe pour le département informatique) au lieu de la variable [Source File Owner Email], de sorte que tous les fichiers que vous protégez à l'aide de ce script utilisent cette adresse de messagerie pour définir le nouveau propriétaire.
+            > Pour les fichiers n'ayant pas d'utilisateur de domaine en tant que propriétaire, vous pouvez les copier et enregistrer vous-même en tant qu'utilisateur de domaine afin d'en devenir le propriétaire. Si vous disposez d'autorisations, vous pouvez aussi modifier manuellement le propriétaire.  Vous pouvez aussi fournir une adresse e-mail spécifique (par exemple, la vôtre ou une adresse de groupe pour le département informatique) au lieu de la variable [Source File Owner Email], de sorte que tous les fichiers que vous protégez à l’aide de ce script utilisent cette adresse e-mail pour définir le nouveau propriétaire.
 
     -   **Exécuter la commande en tant que**: Sélectionnez **Système local**
 
@@ -239,7 +239,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
 
         -   **Exécuter à**: Configurez la planification de votre choix.
 
-            Définissez un temps conséquent pour l'exécution du script. Bien que cette solution protège tous les fichiers du dossier, le script s'exécute une fois pour chacun d'eux à chaque fois. Bien que cela prenne plus de temps que de protéger tous les fichiers en même temps, ce qui est pris en charge le client Azure Information Protection, cette configuration fichier par fichier pour l'ICF est plus puissante. Par exemple, les fichiers protégés peuvent avoir des propriétaires différents (conserver le propriétaire d'origine) quand vous utilisez la variable [Source File Owner Email], et cette action fichier par fichier est nécessaire si vous modifiez ultérieurement la configuration pour protéger les fichiers de façon sélective plutôt que tous les fichiers d'un dossier.
+            Définissez un temps conséquent pour l'exécution du script. Bien que cette solution protège tous les fichiers du dossier, le script s'exécute une fois pour chacun d'eux à chaque fois. Bien que cela prenne plus de temps que de protéger tous les fichiers en même temps, ce qui est pris en charge le client Azure Information Protection, cette configuration fichier par fichier pour l'ICF est plus puissante. Par exemple, les fichiers protégés peuvent avoir des propriétaires différents (conserver le propriétaire d’origine) quand vous utilisez la variable [Source File Owner Email], et cette action fichier par fichier est nécessaire si vous modifiez ultérieurement la configuration pour protéger les fichiers de façon sélective plutôt que tous les fichiers d’un dossier.
 
         -   **Exécuter en continu sur les nouveaux fichiers**: Activez cette case à cocher.
 
@@ -259,7 +259,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
 
     2.  Cliquez sur **Attendre la fin de l’exécution de la tâche**, puis sur **OK**.
 
-4.  Attendez que la boîte de dialogue **Exécution de la tâche de gestion des fichiers** se ferme, puis consultez les résultats dans le rapport qui s'affiche automatiquement. Le champ **Fichiers** doit indiquer le nombre de fichiers figurant dans le dossier que vous avez choisi. Vérifiez que les fichiers figurant dans le dossier choisi sont à présent protégés par Rights Management. Par exemple, si vous avez choisi le dossier C:\FileShare, tapez ce qui suit dans une session Windows PowerShell, et vérifiez qu’aucun fichier n’est dans l’état **Non protégé** :
+4.  Attendez que la boîte de dialogue **Exécution de la tâche de gestion des fichiers** se ferme, puis consultez les résultats dans le rapport qui s'affiche automatiquement. Le champ **Fichiers** doit indiquer le nombre de fichiers figurant dans le dossier que vous avez choisi. Vérifiez que les fichiers figurant dans le dossier choisi sont à présent protégés par Rights Management. Par exemple, si vous avez choisi le dossier C:\FileShare, tapez la commande suivante dans une session Windows PowerShell, et vérifiez qu’aucun fichier n’est dans l’état **Non protégé** :
 
     ```
     foreach ($file in (Get-ChildItem -Path C:\FileShare -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
@@ -267,7 +267,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
     > [!TIP]
     > Conseils de dépannage :
     > 
-    > -   Si le rapport indique **0** au lieu du nombre de fichiers figurant dans votre dossier, cela indique que le script ne s'est pas exécuté. Commencez par contrôler le script proprement dit en le chargeant dans Windows PowerShell ISE pour valider son contenu, puis essayez de l'exécuter pour voir si des erreurs s'affichent. Si aucun argument n'est spécifié, le script tente de se connecter et de s'authentifier auprès du service Azure Rights Management.
+    > -   Si le rapport indique **0** au lieu du nombre de fichiers figurant dans votre dossier, cela indique que le script ne s’est pas exécuté. Commencez par contrôler le script proprement dit en le chargeant dans Windows PowerShell ISE pour valider son contenu, puis essayez de l'exécuter pour voir si des erreurs s'affichent. Si aucun argument n’est spécifié, le script tente de se connecter et de s’authentifier auprès du service Azure Rights Management.
     > 
     >     -   Si le script signale qu'il n'a pas pu se connecter au service Azure Rights Management (Azure RMS), vérifiez les valeurs affichées pour le compte de principal du service que vous avez spécifiées dans le script. Pour plus d’informations sur la création de ce compte de principal du service, consultez la page [Condition préalable 3 : protéger ou annuler la protection des fichiers sans interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) dans le guide de l’administrateur du client Azure Information Protection.
     >     -   Si le script signale qu’il n’a pas pu se connecter à Azure RMS, vérifiez qu’il peut trouver le modèle spécifié en exécutant [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) directement à partir de Windows PowerShell sur le serveur. Le modèle que vous avez spécifié doit figurer dans les résultats.
@@ -278,15 +278,15 @@ Bien que vous puissiez exécuter les règles de classification manuellement pour
     >     ```
     >     -   Si le script s'exécute correctement dans cette session Windows PowerShell, vérifiez les entrées **Executive** et **Argument** dans l'action de tâche de gestion de fichiers.  Si vous avez spécifié **-OwnerEmail [Source File Owner Email]**, essayez de supprimer ce paramètre.
     > 
-    >         Si la tâche de gestion de fichier fonctionne correctement sans **-OwnerEmail [Source File Owner Email]**, vérifiez que les fichiers non protégés ont un utilisateur de domaine répertorié comme le propriétaire du fichier, plutôt que **SYSTEM**.  Pour ce faire, sous l’onglet **Sécurité** des propriétés du fichier, cliquez sur **Avancées**. La valeur **Propriétaire** s’affiche immédiatement après le **Nom** du fichier. Vérifiez également que le serveur de fichiers se trouve dans le même domaine ou domaine approuvé pour rechercher l'adresse électronique de l'utilisateur dans les services de domaine Active Directory.
+    >         Si la tâche de gestion de fichier fonctionne correctement sans **-OwnerEmail [Source File Owner Email]**, vérifiez que les fichiers non protégés ont un utilisateur de domaine répertorié comme le propriétaire du fichier, plutôt que **SYSTEM**.  Pour faire cette vérification, sous l’onglet **Sécurité** des propriétés du fichier, cliquez sur **Avancé**. La valeur **Propriétaire** s’affiche immédiatement après le **Nom** du fichier. Vérifiez également que le serveur de fichiers se trouve dans le même domaine ou dans un domaine approuvé pour rechercher l’adresse e-mail de l’utilisateur dans les services de domaine Active Directory.
     > -   Si l'état indique le nombre correct de fichiers, mais que ceux-ci ne sont pas protégés, essayez de les protéger manuellement à l'aide de l'applet de commande [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) pour voir si des erreurs s'affichent.
 
-Après avoir vérifié que ces tâches s'exécutent correctement, vous pouvez fermer le Gestionnaire de ressources de fichiers. Les nouveaux fichiers sont automatiquement classés et protégés quand les tâches planifiées s’exécutent. 
+Après avoir vérifié que ces tâches s'exécutent correctement, vous pouvez fermer le Gestionnaire de ressources de fichiers. Les nouveaux fichiers sont automatiquement classifiés et protégés quand les tâches planifiées s’exécutent. 
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Modification des instructions pour protéger des fichiers de façon sélective
-Lorsque les instructions précédentes fonctionnent, il est très facile de les modifier pour obtenir une configuration plus sophistiquée. Par exemple, vous pouvez protéger des fichiers en utilisant le même script, mais uniquement pour les fichiers contenant des informations d'identification personnelle, voire sélectionner un modèle associé à des droits plus restrictifs.
+Quand les instructions précédentes fonctionnent, il est facile de les modifier pour obtenir une configuration plus sophistiquée. Par exemple, vous pouvez protéger des fichiers en utilisant le même script, mais uniquement pour les fichiers contenant des informations d'identification personnelle, voire sélectionner un modèle associé à des droits plus restrictifs.
 
-Pour ce faire, utilisez l’une des propriétés de classification intégrées (par exemple, **Informations d’identification personnelle**) ou créez votre propre propriété. Créez ensuite une règle utilisant cette propriété. Par exemple, vous pouvez sélectionner le **Classifieur de contenus**, choisir la propriété **Informations d'identification personnelle** avec une valeur **Haute**, et configurer le modèle de chaîne ou d'expression qui identifie le fichier à configurer pour cette propriété (par exemple, la chaîne «**Date de naissance**»).
+Pour faire cette modification, utilisez une des propriétés de classification prédéfinie (par exemple, **Informations d’identification personnelle**) ou créez votre propre propriété. Créez ensuite une règle utilisant cette propriété. Par exemple, vous pouvez sélectionner le **Classifieur de contenus**, choisir la propriété **Informations d'identification personnelle** avec une valeur **Haute**, et configurer le modèle de chaîne ou d'expression qui identifie le fichier à configurer pour cette propriété (par exemple, la chaîne «**Date de naissance**»).
 
 À présent, il ne vous reste plus qu'à créer une tâche de gestion de fichiers utilisant le même script, éventuellement avec un autre modèle, puis à configurer la condition pour la propriété de classification que vous venez de configurer. Par exemple, au lieu de la condition que nous avons configurée précédemment (propriété**RMS** , **Égal**, **Oui**), sélectionnez la propriété **Informations d'identification personnelle** avec la valeur **Opérateur** définie sur **Égal** et la **Valeur** **Haute**.
 

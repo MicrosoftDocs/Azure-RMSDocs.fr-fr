@@ -4,7 +4,7 @@ description: "Ressources pour les administrateurs, qui incluent des informations
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 07/31/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 666ea0288a06b7a7e7f25b4a6cff0ac62888587c
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 0d8c6a1ccfaf52af25ab0cfb5fb8074019939b90
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
@@ -27,7 +27,7 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure Infor
 |Pour effectuer cette opération...|... procédez ainsi :|
 |----------------|---------------|
 |Consulter la documentation recommandée pour le service|Utilisez la première page de la [Documentation sur Azure Information Protection](https://docs.microsoft.com/information-protection/).|
-|Formuler des commentaires ou poser une question sur la documentation|Envoyez un e-mail à [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
+|Formuler des commentaires ou poser une question sur la documentation|Envoyez un e-mail à [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback).|
 |Recevoir des tweets relatifs à Azure Information Protection et des annonces relatives aux mises à jour de la documentation de la part du groupe de produits|Suivez [@DanPlastina](https://twitter.com/DanPlastina), qui aide à diriger l’équipe Azure Information Protection chez Microsoft.|
 |Vérifier les informations d’abonnement et les fonctionnalités prises en charge|Utilisez les [informations sur les abonnements](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) du site Azure Information Protection.|
 
@@ -35,12 +35,13 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure Infor
 ## <a name="information-about-new-releases-and-updated-documentation"></a>Informations sur les nouvelles versions et la documentation mise à jour
 L’équipe en charge du produit Azure Information Protection publie des annonces sur les nouvelles versions et mises à jour dans le [blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). Ces billets de blog complètent la documentation du produit et les informations de support technique.
 
-Vous trouverez également des informations sur les nouvelles fonctionnalités et les versions préliminaires sur le [site Yammer Azure Information Protection](https://www.yammer.com/AskIPTeam), où vous pouvez également demander de nouvelles fonctionnalités.
+Chaque mois, nous publions les [ **mises à jour**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) suivantes pour vous tenir informé :
 
-En fin de mois, nous publions un billet de blog, « **Azure Information Protection Documentation Update for \<mois année>** », regroupant les modifications apportées à la documentation. Ces billets, qui ont l’étiquette de type de contenu [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates), recensent les mises à jour de la documentation des nouvelles versions, ainsi que des corrections et des précisions relatives aux versions existantes.
+- Une mise à jour de la situation, avec les nouveautés et ce qui va venir. Ces publications sont intitulées : « **Azure Information Protection status update – \<mois année>** »
 
-> [!TIP]
-> Si vous développez des applications qui utilisent les services Microsoft Rights Management (Azure RMS or AD RMS), vous pouvez également être intéressé par le blog [Active Directory Rights Management Services (AD RMS) Developer’s Corner](https://blogs.msdn.microsoft.com/rms/).
+- Un récapitulatif des modifications de la documentation qui incluent la documentation pour les nouvelles versions, des mises à jour pour les instructions liées au support, et des corrections et des éclaircissements pour les versions existantes. Ces publications sont intitulées : « **Azure Information Protection Documentation Update for – \<mois année>** » 
+
+Vous pouvez également trouver des informations sur les nouvelles fonctionnalités et les préversions sur le [site Yammer d’Azure Information Protection](https://www.yammer.com/AskIPTeam), où vous pouvez aussi poser des questions sur Azure Information Protection. Pour proposer de nouvelles fonctionnalités ou voter pour celles-ci, visitez le [site User Voice](https://msip.uservoice.com) pour Azure Information Protection.
 
 ## <a name="support-options-and-community-resources"></a>Options de support technique et ressources de la communauté
 Les sections suivantes fournissent des informations sur les options de support et de résolution de problème ainsi que des ressources de la communauté.
@@ -49,13 +50,13 @@ Les sections suivantes fournissent des informations sur les options de support e
 
 Si vous avez Support Premier, visitez le [portail pour les clients Support Premier](https://premier.microsoft.com/) afin d’envoyer des incidents, de rechercher des solutions et d’obtenir de l’aide.
 
-Vous pouvez avoir droit à **FastTrack** : vous pouvez utiliser l’offre du centre FastTrack quand vous achetez au moins 150 licences pour Azure Information Protection dans le cadre d’un plan éligible. L’offre du Centre FastTrack vous permet de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Offre du centre FastTrack pour Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
+Vous êtes peut-être éligible à **FastTrack** : vous pouvez utiliser l’offre du centre FastTrack quand vous achetez au moins 150 licences dans un plan éligible pour Azure Information Protection. L’offre du Centre FastTrack vous permet de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Offre du centre FastTrack pour Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 Pour les autres clients, utilisez les canaux de support dans le tableau suivant, en fonction de votre abonnement à Azure Information Protection.
 
 |Abonnement|Instructions|
 |----------------|---------------|
-|Azure Information Protection (autonome)|Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />Vérifiez également que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : cette option est visible si vous avez un abonnement d’évaluation ou payant à Azure.<br /><br /> - **Support technique - inclus** : cette option est visible si vous avez un abonnement Azure gratuit pour configurer des modèles personnalisés Azure Active Directory et Azure Rights Management, ou si vous n’avez pas d’abonnement Azure.|
+|Azure Information Protection (autonome)|Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />Vérifiez également que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : cette option est visible si vous avez un abonnement d’évaluation ou payant à Azure.<br /><br /> - **Support technique - inclus** : vous voyez cette option si vous avez un abonnement Azure gratuit pour configurer Azure Active Directory et Azure Rights Management dans le portail Azure Classic, ou si vous n’avez pas d’abonnement Azure.|
 |Azure Information Protection et un abonnement Office 365<br /><br />Azure Rights Management avec un abonnement Office 365|Consultez [Contacter le support Office 365 pour les entreprises – Aide de l’administrateur](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) pour obtenir les numéros de téléphone et les différentes options de contact du support dans le portail d’administration Office 365.|
 |Azure Information Protection avec EMS (Enterprise Mobility + Security)|Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />Vérifiez également que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : cette option est visible si vous avez un abonnement d’évaluation ou payant à Azure.<br /><br /> - **Support technique - inclus** : cette option est visible si vous avez un abonnement Azure gratuit pour configurer des modèles personnalisés Azure Active Directory et Azure Rights Management, ou si vous n’avez pas d’abonnement Azure.|
 |Azure Information Protection avec SPE (Secure Productive Enterprise)|Utilisez les [canaux de support d’Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
@@ -67,9 +68,9 @@ Pour connaître les autres options de support, adressez-vous à votre contact Mi
 
 Vidéos à la demande :
 
-- Sessions Microsoft Ignite 2016 pour [Azure Information Protection et Azure Rights Management](https://myignite.microsoft.com/videos?f=%5B%7B%22name%22:%22Azure%20Rights%20Management%22,%22facetName%22:%22products%22%7D,%7B%22name%22:%22Azure%20Information%20Protection%22,%22facetName%22:%22products%22%7D%5D)
+- Sessions Microsoft Ignite 2016 pour [Azure Information Protection](https://myignite.microsoft.com/videos?f=%5B%7B%22name%22:%22Azure%20Rights%20Management%22,%22facetName%22:%22products%22%7D,%7B%22name%22:%22Azure%20Information%20Protection%22,%22facetName%22:%22products%22%7D%5D).
 
-- Microsoft Virtual Academy [Azure Rights Management Services Core Skills](https://mva.microsoft.com/en-us/training-courses/azure-rights-management-services-core-skills-10500?l=QLoxMwuCB_1805094681) (Principales compétences d’Azure Rights Management Services)
+- Sessions Microsoft Virtual Academy incluant [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection).
 
 Résolution des problèmes :
 
@@ -85,7 +86,7 @@ Résolution des problèmes :
 
 ### <a name="community-resources"></a>Ressources de la communauté
 
-Nous vous recommandons de consulter le [site Yammer pour Azure Information Protection](https://www.yammer.com/AskIPTeam). Sur ce site, vous pourrez obtenir des réponses directement de l’équipe Azure Information Protection et bénéficier de l’expérience partagée et des connaissances des autres administrateurs et consultants.
+Nous vous recommandons de consulter le [site Yammer pour Azure Information Protection](https://www.yammer.com/AskIPTeam). Sur ce site, vous pouvez obtenir des réponses directement de l’équipe Azure Information Protection et bénéficier de l’expérience partagée et des connaissances d’autres administrateurs et consultants.
 
 Si vous n’avez pas accès à Yammer, essayez le [forum TechNet pour Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 

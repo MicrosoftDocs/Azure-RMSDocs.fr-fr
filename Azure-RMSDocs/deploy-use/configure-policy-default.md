@@ -4,17 +4,17 @@ description: "Comprendre le processus de configuration de la stratégie par déf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: decc5e3462a80e307201933e634c3ecfa03ee074
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 51b5f7d332a86c16ceb6928ea99039812dd54802
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
@@ -28,9 +28,80 @@ Vous pouvez référencer les valeurs suivantes pour rétablir votre stratégie a
 
 ## <a name="current-default-policy"></a>Stratégie par défaut actuelle
 
-Cette version de la stratégie par défaut date du 21 mars 2017.
+Cette version de la stratégie par défaut date du 31 juillet 2017.
 
-Notez que les descriptions de cette stratégie font référence aux données qui nécessitent une protection, ainsi qu’au suivi et à la révocation des données. La stratégie ne configure pas cette protection pour ces étiquettes : vous devez donc effectuer des étapes supplémentaires pour compléter cette description. Par exemple, configurez l’étiquette pour appliquer la protection Azure RMS ou utilisez une solution de protection contre la perte de données. Avant de pouvoir suivre et révoquer un document en utilisant le site de suivi des documents, ce document doit être protégé par Azure RMS. 
+Cette stratégie par défaut est créée seulement si le service Azure Rights Management a été activé lors de la création de la stratégie. Si ce service n’a pas été activé, la stratégie par défaut ne configure pas de protection pour les sous-étiquettes suivantes :
+
+- **Confidentiel \ Tous les employés**
+
+- **Confidentiel \ Destinataires uniquement**
+
+- **Hautement confidentiel \ Tous les employés** 
+
+- **Hautement confidentiel \ Destinataires uniquement** 
+
+Quand ces sous-étiquettes ne sont pas configurées automatiquement pour la protection, la stratégie par défaut reste identique à la [stratégie par défaut précédente](#default-policy-before-july-31-2017).
+
+Quand la protection est appliquée aux sous-étiquettes **Tous les employés**, la protection est configurée à l’aide des modèles par défaut qui sont convertis automatiquement en étiquettes dans le portail Azure. Pour plus d’informations sur ces modèles, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).
+
+#### <a name="more-information-about-the-recipients-only-sub-label"></a>Plus d’informations sur les sous-étiquettes Destinataires uniquement
+
+Les utilisateurs voient cette étiquette seulement dans Outlook. Ils ne voient pas cette étiquette dans Word, Excel et PowerPoint, ni depuis l’Explorateur de fichiers. 
+
+Quand les utilisateurs sélectionnent cette étiquette, l’option Outlook Ne pas transférer est appliquée automatiquement à l’e-mail. Les destinataires spécifiés par les utilisateurs ne peuvent pas transférer l’e-mail, et ils ne peuvent pas copier ou en imprimer le contenu, ni enregistrer les pièces jointes.
+
+
+### <a name="labels"></a>Étiquettes
+
+|Étiquette|Info-bulle|Paramètres|
+|-------------------------------|---------------------------|-----------------|
+|Personnel|Données autres que les données d’entreprise, uniquement pour une utilisation personnelle.|**Activé** : Oui <br /><br />**Couleur** : Vert clair<br /><br />**Marquages visuels** : Désactivés <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Public|Données d’entreprise qui sont spécifiquement préparées et approuvées pour une consommation publique.|**Activé** : Oui <br /><br />**Couleur** : vert<br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Général|Données d’entreprise qui ne sont pas destinées à la consommation publique. Cependant, elles peuvent être partagées avec des partenaires externes, en fonction des besoins. Il peut s’agir par exemple d’un annuaire téléphonique interne d’une entreprise, d’organigrammes, de normes internes et de la plupart des communications internes.|**Activé** : Oui <br /><br />**Couleur** : Bleu <br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Confidentiel|Données d’entreprise sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Il peut s’agir entre autres de contrats, de rapports de sécurité, de résumés de prévision et de données commerciales.|**Activé** : Oui <br /><br />**Couleur** : Orange<br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Hautement confidentiel|Données d’entreprise très sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|**Activé** : Oui <br /><br />**Couleur** : Rouge<br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+
+
+### <a name="sub-labels"></a>Sous-étiquettes
+
+|Étiquette|Info-bulle|Paramètres|
+|-------------------------------|---------------------------|-----------------|
+|Confidentiel \ Tous les employés|Données confidentielles qui nécessitent une protection, qui permettent toutes les autorisations complètes des employés. Les propriétaires des données peuvent suivre et révoquer le contenu.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé comme confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Azure RMS [[1]](#footnote-1)|
+|Confidentiel \ Tout le monde (sans protection)|Données ne nécessitant pas de protection. Utilisez cette option avec précaution et avec une justification métier appropriée.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé comme confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Confidentiel \ Destinataires uniquement|Données confidentielles qui nécessitent la protection et qui peuvent être visualisées seulement par les destinataires.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (e-mail)<br /><br />Classé comme confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Ne pas transférer|
+|Hautement confidentiel \ Tous les employés|Données hautement confidentielles, qui permettent les autorisations d’afficher, de modifier et de répondre de tous les employés sur ce contenu. Les propriétaires des données peuvent suivre et révoquer le contenu.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé hautement confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Azure RMS [[2]](#footnote-2)|
+|Hautement confidentiel \ Tout le monde (sans protection)|Données ne nécessitant pas de protection. Utilisez cette option avec précaution et avec une justification métier appropriée.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé hautement confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Hautement confidentiel \ Destinataires uniquement|Données hautement confidentielles qui nécessitent la protection et qui peuvent être visualisées seulement par les destinataires.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (e-mail)<br /><br />Classé hautement confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Ne pas transférer|
+
+###### <a name="footnote-1"></a>Note 1
+Les paramètres de protection utilisent le modèle par défaut, **Confidentiel \ Tous les employés**.
+
+###### <a name="footnote-2"></a>Note 2 
+Les paramètres de protection utilisent le modèle par défaut, **Hautement confidentiel \ Tous les employés**.
+
+
+### <a name="information-protection-bar"></a>Barre Information Protection
+
+|Paramètre|Valeur|
+|-------------------------------|---------------------------|
+|Titre|Sensibilité|
+|Info-bulle|L’étiquette actuelle pour ce contenu. Ce paramètre identifie les risques pour l’entreprise si ce contenu est partagé avec des personnes non autorisées à l’intérieur ou à l’extérieur de l’organisation.|
+
+
+### <a name="settings"></a>Paramètres
+
+|Paramètre|Valeur|
+|-------------------------------|---------------------------|
+|Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
+|Sélectionner l’étiquette par défaut|Aucune|
+|Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection|Désactivé|
+|Pour les e-mails avec des pièces jointes, appliquez une étiquette qui correspond à la classification la plus élevée de ces pièces jointes|Désactivé|
+|Spécifiez une URL personnalisée pour la page web « En savoir plus » du client Azure Information Protection|Vide|
+
+
+## <a name="default-policy-before-july-31-2017"></a>Stratégie par défaut avant le 31 juillet 2017
+
+Notez que les descriptions de cette stratégie font référence aux données qui nécessitent une protection, ainsi qu’au suivi et à la révocation des données. La stratégie ne configure pas cette protection pour ces étiquettes : vous devez donc effectuer des étapes supplémentaires pour compléter cette description. Par exemple, configurez l’étiquette pour appliquer la protection Azure RMS ou utilisez une solution de protection contre la perte de données. Avant de pouvoir suivre et révoquer un document en utilisant le site de suivi des documents, ce document doit être protégé par Azure RMS et suivi par la personne qui l’a protégé. 
 
 
 ### <a name="labels"></a>Étiquettes

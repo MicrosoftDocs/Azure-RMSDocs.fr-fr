@@ -4,7 +4,7 @@ description: "Utilisez ces étapes pour préparer, implémenter et gérer Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/14/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 54f72dad3f7dbc259df602f0f613124c46ce5846
-ms.sourcegitcommit: d42c6bb914563ae798d4171bb017c85b7077abfb
+ms.openlocfilehash: fabb31e2945b47cda688129d7ecd7cc3c26fd802
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Feuille de route pour le déploiement d’Azure Information Protection
 
@@ -88,7 +88,7 @@ Quand les utilisateurs sont à l’aise avec l’étiquetage des documents et de
 
 Configurez éventuellement les éléments suivants :
 
--   Des modèles personnalisés si les modèles de stratégie de droits par défaut ne suffisent pas à votre organisation. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md).
+-   Des modèles personnalisés si les modèles de stratégie de droits par défaut ne suffisent pas à votre organisation. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [Configuration et gestion des modèles pour Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 -   La journalisation de l'utilisation pour pouvoir surveiller l'usage que fait votre organisation de la Gestion des droits. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
@@ -154,7 +154,7 @@ Avant de commencer à utiliser [!INCLUDE[aad_rightsmanagement_2](../includes/aad
 
 Configurez éventuellement les éléments suivants :
 
--   Des modèles personnalisés si les modèles de stratégie de droits par défaut ne suffisent pas à votre organisation. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [Configuration de modèles personnalisés pour le service Azure Rights Management](../deploy-use/configure-custom-templates.md).
+-   Des modèles personnalisés si les modèles par défaut ne suffisent pas à votre organisation. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [Configuration et gestion des modèles pour Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 -   La journalisation de l'utilisation pour pouvoir surveiller l'usage que fait votre organisation de la Gestion des droits. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../deploy-use/log-analyze-usage.md).
 

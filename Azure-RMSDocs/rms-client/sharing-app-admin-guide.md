@@ -4,7 +4,7 @@ description: "Instructions et informations destinées aux administrateurs sur un
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cfe5822e426748dcf6df3bb0c25949a85f69db1f
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 4cd74b6fcee53acc99e0c89d7cbb606d8aab2d54
+ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Guide de l'administrateur de l'application de partage Rights Management
 
 >*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
-> **Notification de fin de prise en charge** : l’application de partage Rights Management pour Windows est remplacée par le [client Azure Information Protection](aip-client.md). La prise en charge de cette application plus ancienne cessera le 31 janvier 2018. 
+> **Notification de fin de prise en charge** : l’application de partage Rights Management pour Windows est remplacée par le [client Azure Information Protection](aip-client.md). La prise en charge de cette application plus ancienne cessera le 31 janvier 2019. 
 
 Utilisez les informations suivantes si vous êtes responsable de l’application de partage Microsoft Rights Management sur un réseau d’entreprise ou si vous souhaitez des informations plus techniques que celles qui figurent dans le [Guide de l’utilisateur de l’application de partage Rights Management](sharing-app-user-guide.md) ou sur le [Forum Aux Questions sur l’application de partage Microsoft Rights Management pour Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
@@ -44,7 +44,7 @@ Les seules conditions préalables à l'installation sont que les ordinateurs ex�
 
 3.  Extrayez les fichiers des packages d’installation compressés, par exemple, en double-cliquant dessus. Ensuite, copiez les fichiers extraits dans un emplacement réseau auquel les ordinateurs clients peuvent accéder.
 
-Les packages d'installation pour l'application de partage RMS prennent en charge différents scénarios de déploiement et incluent les éléments suivants :
+Les packages d’installation pour l’application de partage RMS prennent en charge différents scénarios de déploiement et incluent les éléments suivants :
 
 |Description|Scénario de déploiement|
 |---------------|-----------------------|

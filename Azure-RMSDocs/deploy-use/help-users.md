@@ -4,7 +4,7 @@ description: "Informations vous permettant de fournir de l’aide aux utilisateu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8bc262e8f79b0c0485104b5bb0152dd0609c35c5
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 192f4ade987e9f9f88f5f30bb17c70e113569002
+ms.sourcegitcommit: 8b6fc2201d99d72ee9bb43bb73356040893eceeb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/02/2017
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -24,55 +24,58 @@ ms.lasthandoff: 07/18/2017
 
 Après avoir déployé et configuré Azure Information Protection pour votre organisation, vous pouvez fournir de l’aide et des instructions aux utilisateurs, aux administrateurs et au support technique :
 
--   **Informations pour les utilisateurs finaux :**
-
-    Expliquez à vos utilisateurs comment et quand protéger des documents et messages électroniques contenant des informations sensibles. Autant que possible, fournissez ces informations pour leurs flux de travail existants afin qu’ils puissent intégrer les étapes supplémentaires à un processus déjà familier, au lieu d’introduire des processus nouveaux. Pensez à leur faire part des avantages et des risques inhérents à votre activité et proposez-leur des conseils sur la protection des fichiers et des messages électroniques. Si vous avez configuré des [modèles personnalisés](configure-custom-templates.md), fournissez des instructions concernant le modèle à sélectionner si le nom et la description des modèles ne suffisent pas à identifier le bon modèle.
-
+-   **Informations à l’attention des utilisateurs finaux**
+    
+    Expliquez à vos utilisateurs comment et quand protéger des documents et messages électroniques contenant des informations sensibles. Autant que possible, fournissez ces informations pour leurs flux de travail existants afin qu’ils puissent intégrer les étapes supplémentaires à un processus déjà familier, au lieu d’introduire des processus nouveaux. Pensez à leur faire part des avantages et des risques inhérents à votre activité et proposez-leur des conseils sur la protection des fichiers et des messages électroniques. Si vous avez configuré des [modèles](configure-policy-templates.md), fournissez des instructions concernant le modèle à sélectionner si le nom et la description des modèles ne suffisent pas à identifier le bon modèle.
+    
     > [!TIP]
     > Exemples de vidéos à l’attention des utilisateurs finaux :
-    >
     > -   [Expérience utilisateur d'Azure RMS](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-user-experience)
     > -   [Révocation et suivi de document Azure RMS](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
--   **Informations à l'attention des administrateurs :**
-
-    Certaines applications implémentent automatiquement la protection des données à l'aide de stratégies et de paramètres configurés par les administrateurs. Pour ces applications, vous devrez peut-être fournir des instructions aux autres administrateurs qui gèrent ces applications et services. Pour plus d’informations, consultez [Comment les applications prennent en charge le service Azure Rights Management](../understand-explore/applications-support.md) et [Configuration d’applications pour le service Azure Rights Management](configure-applications.md).
-
--   **Informations de support technique :**
-
+-   **Informations à l’attention des administrateurs**
     
-    Si des utilisateurs exécutent le client Azure Information Protection, les opérateurs du support technique peuvent leur demander d’utiliser l’option **Aide et commentaires**, **Exécuter les diagnostics**, puis de réinitialiser le client. Toutefois, la réinitialisation ne déconnecte pas l’utilisateur et n’effectue aucun rebootstrap du client, et aucune mise à jour automatique n’a lieu.
-
+    Certaines applications implémentent automatiquement la protection des données à l'aide de stratégies et de paramètres configurés par les administrateurs. Pour ces applications, vous devrez peut-être fournir des instructions aux autres administrateurs qui gèrent ces applications et services. 
+    
+    Pour plus d’informations, consultez [Comment les applications prennent en charge le service Azure Rights Management](../understand-explore/applications-support.md) et [Configuration d’applications pour le service Azure Rights Management](configure-applications.md).
+    
+-   **Informations de support technique**
+    
+    Si des utilisateurs ont le client Azure Information Protection, les opérateurs du support technique peuvent leur demander d’utiliser l’option **Aide et commentaires**, **Exécuter les diagnostics**, puis de réinitialiser le client. Toutefois, la réinitialisation ne déconnecte pas l’utilisateur et n’effectue aucun rebootstrap du client, et aucune mise à jour automatique n’a lieu.
+    
     S’il existe des demandes légitimes d’obtention de droits d’accès complets à des documents protégés, vérifiez que le support technique dispose des processus nécessaires pour effectuer une telle demande à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md) d’Azure Rights Management. Par exemple, ces demandes peuvent émaner du service juridique ou d’un manager après le départ d’un employé. 
-
+    
     Voici en outre certaines catégories de problèmes que les utilisateurs peuvent signaler :
-
-    -   **Aide à la connexion :**
-
-        Les utilisateurs peuvent être invités à fournir des informations d’identification quand le service Azure Rights Management doit authentifier un utilisateur et qu’il ne peut pas utiliser les informations d’identification mises en cache. Les informations d’identification nécessaires correspondent au compte professionnel ou scolaire de l’utilisateur et au mot de passe associé à votre locataire Office 365 ou Azure Active Directory. Les informations d’identification nécessaires ne correspondent pas à un compte Microsoft (anciennement Windows Live ID) ni à un compte de messagerie personnel, car ceux-ci ne sont pas encore pris en charge par le service Azure Rights Management. Proposez aux utilisateurs et au support technique des instructions sur le compte à utiliser quand des utilisateurs sont invités à entrer des informations d’identification pendant l’utilisation de ces applications avec le service Azure Rights Management.
-
-    -   **Problèmes de protection ou de consommation de contenu :**
-
-        Assurez-vous que les utilisateurs disposent d’instructions appropriées pour les applications qu’ils utilisent, et se servent d’applications et d’appareils pris en charge par le service Azure Rights Management. Pour plus d’informations sur les appareils et les applications pris en charge, consultez [Configuration requise pour Azure Rights Management](../get-started/requirements-azure-rms.md).
-
-        Le système d’authentification et d’autorisation repose sur les comptes et les groupes Azure Active Directory. Pour vérifier qu’un utilisateur ou un groupe est autorisé à utiliser du contenu protégé, servez-vous des vérifications mentionnées dans la rubrique [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md).
-
-        Si un utilisateur vous signale qu’il peut ouvrir du contenu protégé alors qu’il n’a pas les autorisations nécessaires, il est possible que l’utilisateur ne soit pas dans le groupe configuré pour le modèle Rights Management. Il est également possible que le [modèle doive être reconfiguré](configure-policy-template.md) pour l’utilisateur ou le groupe. 
+    
+    - **Aide à la connexion**
         
-        Si les droits dont disposent les utilisateurs ne sont pas ceux attendus, consultez leur description et toute implémentation spécifique à l’application dans le [tableau des droits d’utilisation](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions).
+        Les utilisateurs peuvent être invités à fournir des informations d’identification quand le service Azure Rights Management doit authentifier un utilisateur et qu’il ne peut pas utiliser les informations d’identification mises en cache. Les informations d’identification nécessaires correspondent au compte professionnel ou scolaire de l’utilisateur et au mot de passe associé à votre locataire Office 365 ou Azure Active Directory. Les informations d’identification nécessaires ne correspondent pas à un compte Microsoft (anciennement Windows Live ID) ni à un compte de messagerie personnel, car ceux-ci ne sont pas encore pris en charge par le service Azure Rights Management. 
+        
+        Donnez aux utilisateurs et au support technique des instructions sur le compte à utiliser quand des utilisateurs sont invités à entrer des informations d’identification quand ils ont des applications utilisant le service Azure Rights Management.
+        
+    - **Problèmes de protection ou de consommation de contenu**
+        
+        Vérifiez que les utilisateurs disposent d’instructions appropriées pour les applications qu’ils utilisent, et se servent d’applications et d’appareils pris en charge par le service Azure Rights Management. Pour plus d’informations sur les appareils et les applications pris en charge, consultez [Configuration requise pour Azure Rights Management](../get-started/requirements-azure-rms.md).
+        
+        Le système d’authentification et d’autorisation repose sur les comptes et les groupes Azure Active Directory. Pour vérifier qu’un utilisateur ou un groupe est autorisé à utiliser du contenu protégé, servez-vous des vérifications mentionnées dans la rubrique [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md).
+        
+        Si un utilisateur vous signale qu’il peut ouvrir du contenu protégé alors qu’il n’a pas les autorisations nécessaires, il est possible que l’utilisateur ne soit pas dans le bon groupe configuré pour le modèle Rights Management. Il est également possible que le [modèle doive être reconfiguré](configure-policy-templates.md) pour l’utilisateur ou le groupe. 
+        
+        Si les droits dont disposent les utilisateurs ne sont pas ceux attendus, vérifiez leur description et les implémentations spécifiques à l’application dans le [tableau des droits d’utilisation](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions).
 
-Utilisez les sections suivantes pour obtenir des informations spécifiques aux applications afin d'aider les utilisateurs à protéger les documents et les messages électroniques contenant des informations sensibles.
+Utilisez les sections suivantes pour obtenir des informations spécifiques aux applications afin d’aider les utilisateurs à protéger les documents et les e-mails.
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Utilisation de la protection des informations avec le client Azure Information Protection
-Si les utilisateurs disposent d’Office 2010, le client Azure Information Protection (ou l’ancienne application, c’est-à-dire l’application de partage RMS) est nécessaire pour protéger et utiliser des documents et des e-mails protégés. Cependant, le client Azure Information Protection est recommandé pour tous les ordinateurs et appareils mobiles.
 
-En plus d’aider les utilisateurs à protéger des documents et e-mails importants, le client Azure Information Protection leur permet d’effectuer le suivi des documents qu’ils ont protégés. Les documents suivis peuvent également être révoqués si les utilisateurs précédemment autorisés ne doivent plus y avoir accès.
+Si les utilisateurs disposent d’Office 2010, le client Azure Information Protection (ou l’ancienne application, c’est-à-dire l’application de partage RMS) est nécessaire pour protéger et utiliser des documents et des e-mails protégés. Cependant, le client Azure Information Protection est recommandé pour tous les ordinateurs et appareils mobiles qui prennent en charge ce service.
+
+En plus d’aider les utilisateurs à protéger des documents et des e-mails, le client Azure Information Protection leur permet d’effectuer le suivi des documents qu’ils ont protégés. Les documents suivis peuvent également être révoqués si les utilisateurs précédemment autorisés ne doivent plus y avoir accès.
 
 Pour savoir comment utiliser ce client pour les ordinateurs Windows, consultez le [Guide de l’utilisateur du client Azure Information Protection](../rms-client/client-user-guide.md).
 
 
 ## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Utilisation de la protection des informations avec Office 365, Office 2016 ou Office 2013
-Si vous utilisez le service Azure Rights Management et que vous n’avez pas installé le client Azure Information Protection, les utilisateurs ne voient pas la barre Azure Information Protection dans leurs applications de bureau Office, ni le bouton **Protéger** sur le ruban, ni l’option **Classifier et protéger** dans l’Explorateur de fichiers. Ces ajouts facilitent la protection des documents et des e-mails. Ces utilisateurs doivent suivre des instructions similaires aux suivantes.
+Si vous utilisez le service Azure Rights Management et que vous n’avez pas installé le client Azure Information Protection, les utilisateurs ne voient pas la barre Azure Information Protection dans leurs applications Office pour poste de travail. Ils ne voient pas non plus le bouton **Protéger** sur le ruban, ni **Classer et protéger** dans l’Explorateur de fichiers. Ces ajouts facilitent la protection des documents et des e-mails. Ces utilisateurs doivent suivre des instructions similaires aux suivantes.
 
 > [!TIP]
 > Pour trouver de l’aide et des instructions spécifiques à une application qui ont trait à l’utilisation de la protection des données avec ces applications, recherchez **IRM**, ainsi que le nom et la version de l’application.
@@ -98,9 +101,9 @@ Les droits d'utilisation sont affichés en haut du document grâce à une banni�
 
 #### <a name="to-protect-an-email-message-using-outlook-2013-and-exchange-online"></a>Pour protéger un message électronique à l'aide d'Outlook 2013 et d'Exchange Online
 
-1.  Dans Outlook, créez un e-mail destiné à une personne au sein de votre organisation.
+1.  Dans Outlook, créez un e-mail adressé à un destinataire au sein de votre organisation.
 
-2.  À partir de l’onglet **OPTIONS** , cliquez sur **Autorisation**, puis sélectionnez une option. Par exemple : **Ne pas transférer**, **&lt;Nom de la société&gt; - Confidentiel** ou **&lt;Nom de la société&gt; - Affichage confidentiel uniquement**.
+2.  À partir de l’onglet **OPTIONS** , cliquez sur **Autorisation**, puis sélectionnez une option. Par exemple : **Ne pas transférer**, **\<Nom de la société>- Confidentiel** ou **\<Nom de la société>- Affichage confidentiel uniquement**.
 
 3.  Envoyez le message.
 
@@ -112,7 +115,7 @@ Par exemple, si l’e-mail est protégé à l’aide de l’option **Ne pas tran
 
 1.  Dans Outlook sur le web, créez un e-mail destiné à une personne de votre organisation.
 
-2.  Cliquez sur  **…**, puis sur **Définir l’autorisation**et sélectionnez une option. Par exemple : **Ne pas transférer**, **Ne pas répondre à tous**, **&lt;Nom de la société&gt; - Confidentiel** ou **&lt;Nom de la société&gt; - Affichage confidentiel uniquement**.
+2.  Cliquez sur  **…**, puis sur **Définir l’autorisation**et sélectionnez une option. Par exemple : **Ne pas transférer** ou **Ne pas répondre à tous**. Ou **\<Nom de la société> - Confidentiel** ou **\<Nom de la société> - Affichage confidentiel uniquement**.
 
 3.  Envoyez le message.
 

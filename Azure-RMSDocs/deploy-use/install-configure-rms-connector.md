@@ -4,7 +4,7 @@ description: "Informations vous permettant d’installer et de configurer le con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: be09e2c974d9d542b94bc16f140e764858cc9282
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: a8cfa6a5baf1661495fc8b485ac0a6535c22233d
+ms.sourcegitcommit: 2a1c690ca84611e5774ac8fac0fb4caba09fef2e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
@@ -59,7 +59,7 @@ Ce compte ne doit pas requérir l’authentification multifacteur (MFA), car l�
 
 Le connecteur applique également des restrictions de caractères à ce mot de passe. Vous ne pouvez pas utiliser un mot de passe qui comporte les caractères suivants : « et commercial » (**&**) ; crochet ouvrant (**[**) ; crochet fermant (**]**) ; guillemet droit (**"**) ; et apostrophe (**'**). Si votre mot de passe contient l’un de ces caractères, l’authentification échoue pour le connecteur RMS, et vous voyez le message d’erreur **Cette combinaison de nom d’utilisateur et mot de passe n’est pas correcte**, même si vous pouvez vous connecter à l’aide de ce compte et de ce mot de passe pour d’autres scénarios. Si ce scénario s’applique à votre mot de passe, utilisez un autre compte dont le mot de passe ne contient aucun de ces caractères spéciaux ou redéfinissez votre mot de passe de façon à ce qu’il n’en contienne pas.
 
-En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), vérifiez que le compte spécifié peut protéger le contenu. Par exemple, si vous avez limité la possibilité de protéger du contenu pour le groupe « Département informatique », le compte que vous spécifiez ici doit être un membre de ce groupe. Si ce n’est pas le cas, le message d’erreur suivant s’affiche : **Échec de la tentative de détection de l’emplacement du service d’administration et de l’organisation. Vérifiez que le service Microsoft Rights Management est activé pour votre organisation.**
+En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), vérifiez que le compte spécifié peut protéger le contenu. Par exemple, si vous avez limité la possibilité de protéger du contenu pour le groupe « Département informatique », le compte que vous spécifiez ici doit être un membre de ce groupe. Si ce n’est pas le cas, le message d’erreur suivant s’affiche : **Échec de la tentative de détection de l’emplacement du service d’administration et de l’organisation. Vérifiez que le service Microsoft Rights Management est activé pour votre organisation.**
 
 Vous pouvez utiliser un compte possédant l'un des privilèges suivants :
 
@@ -117,6 +117,10 @@ Exécutez les actions suivantes sur la dernière page de l'Assistant, puis cliqu
 
 Si vous avez besoin de désinstaller le connecteur RMS, exécutez à nouveau l'Assistant et sélectionnez l'option Désinstaller.
 
+Si vous rencontrez des problèmes lors de l’installation, vérifiez le journal d’installation : **%LocalAppData%\Temp\Microsoft Rights Management connector_\<date et heure>.log** 
+
+Par exemple, le nom de votre journal d’installation peut être similaire à C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log
+
 ## <a name="authorizing-servers-to-use-the-rms-connector"></a>Définition des serveurs autorisés à utiliser le connecteur RMS
 Dès lors que le connecteur RMS est installé sur au moins deux ordinateurs, vous êtes en mesure d'autoriser les serveurs et les services souhaités à utiliser le connecteur RMS. Par exemple, les serveurs exécutant Exchange Server 2013 ou SharePoint Server 2013.
 
@@ -126,7 +130,7 @@ Prenez en compte les considérations suivantes lors de la définition des serveu
 
 - Les serveurs ajoutés reçoivent des privilèges particuliers. Tous les comptes que vous spécifiez pour le rôle serveur Exchange dans la configuration du connecteur reçoivent le [rôle super utilisateur](configure-super-users.md) dans Azure RMS, ce qui leur donne accès à tout le contenu de ce locataire RMS. La fonctionnalité de super utilisateur est automatiquement activée à ce stade, si nécessaire. Pour éviter le risque de sécurité lié à l'élévation de privilèges, veillez à spécifier uniquement les comptes utilisés par les serveurs Exchange de votre organisation. Tous les serveurs configurés comme serveurs SharePoint ou serveurs de fichiers utilisant l'infrastructure de classification des fichiers (ICF) reçoivent des privilèges d’utilisateur standard.
 
-- Vous pouvez ajouter plusieurs serveurs sous la forme d'une entrée unique en spécifiant un groupe de distribution ou de sécurité Active Directory ou un compte de service utilisé par plus d'un serveur. Dans cette configuration, les serveurs partagent les mêmes certificats RMS et sont tous considérés comme étant propriétaires de l'ensemble du contenu protégé. Pour minimiser la charge administrative, nous vous conseillons d'adopter cette configuration de groupe unique plutôt que de serveurs multiples pour autoriser les serveurs Exchange ou la batterie de serveurs SharePoint de votre organisation.
+- Vous pouvez ajouter plusieurs serveurs sous la forme d'une entrée unique en spécifiant un groupe de distribution ou de sécurité Active Directory ou un compte de service utilisé par plus d'un serveur. Quand vous utilisez cette configuration, le groupe de serveurs partage les mêmes certificats RMS et ils sont tous considérés comme étant propriétaires de l’ensemble du contenu protégé par un des serveurs. Pour minimiser la charge administrative, nous vous conseillons d'adopter cette configuration de groupe unique plutôt que de serveurs multiples pour autoriser les serveurs Exchange ou la batterie de serveurs SharePoint de votre organisation.
 
 Sur la page **Serveurs autorisés à utiliser le connecteur**, cliquez sur **Ajouter**.
 

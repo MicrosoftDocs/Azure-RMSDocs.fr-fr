@@ -4,17 +4,17 @@ description: "Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-ms.openlocfilehash: 0edde6cb304a4ad6b34d53ee798a5fbf7ede3b48
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: c3260d82c13c01bb16b22e472d57720777e82f7b
+ms.sourcegitcommit: a4f4edcbf0f0a7de74d1dcec9ce6e661c6882a74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="step-3-install-the-client"></a>Étape 3 : Installer le client
 
@@ -25,9 +25,11 @@ Lors de cette étape, vous allez installer le client Azure Information Protectio
 
 ## <a name="install-the-azure-information-protection-client"></a>Installer le client Azure Information Protection
 
-1. Sur un PC où Office est installé (mais où Word n’est pas ouvert), [téléchargez le client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) à partir du Centre de téléchargement Microsoft. 
+1. Sur un PC sur lequel Office est installé (mais sur lequel Word n’est pas ouvert), accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et téléchargez **AzInfoProtection.exe**. Il s’agit de la version grand public du client qui est prise en charge sur les réseaux de production. Si vous préférez essayer la préversion qui comprend toutes les fonctionnalités et corrections les plus récentes, téléchargez **AzInfoProtection_PREVIEW_1.10.52.0.exe**.
+    
+    Vous pouvez utiliser l’une ou l’autre version du client avec ce didacticiel, mais les images qu’il contient correspondent à la version grand public. Par ailleurs, le didacticiel ne traite pas des nouvelles fonctionnalités offertes par la préversion du client.
 
-2. Exécutez **AzInfoProtection.exe** et suivez les invites pour installer le client.
+2. Lancez l’exécutable que vous venez de télécharger, puis suivez les invites pour installer le client.
 
     Pour ce didacticiel, peu importe si vous sélectionnez l’option d’installation d’une stratégie de démonstration, étant donné que la stratégie que nous venons de configurer sera téléchargée à partir d’Azure et remplacera la stratégie de démonstration installée. Toutefois, vous pouvez utiliser l’option de stratégie de démonstration si vous souhaitez simplement découvrir les étiquettes par défaut sans connexion à Azure Information Protection. 
 
@@ -45,7 +47,7 @@ Lors du chargement du document, deux nouveaux éléments doivent apparaître :
 
     Cliquez sur **Protéger** > **Aide et commentaires** puis, dans la boîte de dialogue **Microsoft Azure Information Protection**, vérifiez l’état de votre client. La mention **Connecté en tant que** et votre nom d’utilisateur s’affichent. En outre, vous devriez également voir une heure et une date récente pour la dernière connexion et l’installation de la stratégie Information Protection. Vérifiez que le nom d’utilisateur affiché correspond à celui de votre locataire.
 
-- Une nouvelle barre sous le ruban, la barre Information Protection. Elle affiche le titre **Sensibilité** et l’étiquette par défaut **Général** que nous avons configurée. 
+- Une nouvelle barre sous le ruban, la barre Information Protection. Elle affiche le titre **Sensibilité** et les étiquettes que nous avons vues dans le portail Azure. 
 
 Vous êtes maintenant prêt à voir Azure Information Protection en action.
 

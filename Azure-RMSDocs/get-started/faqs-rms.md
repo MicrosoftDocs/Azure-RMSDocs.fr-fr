@@ -4,7 +4,7 @@ description: "Certaines questions fréquentes sur le service de protection des d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5a9f592584c090d8b0bb62acabd5775238b5e411
-ms.sourcegitcommit: 7cd6ff39731c7abe990a72a49bc10d104f47764d
+ms.openlocfilehash: a2c0a8ef4534f8d5149178986688c4d00b4cee9f
+ms.sourcegitcommit: 5ea919b1b2bcb9c4b3e5dd1939ff8d0d937e1168
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
@@ -101,14 +101,11 @@ Le service Azure Rights Management utilise toujours un compte Azure Active Direc
 
 La méthode d'authentification pour ces comptes peut varier en fonction de la manière dont l'administrateur de l'autre organisation a configuré les comptes Azure Active Directory. Par exemple, ils peuvent utiliser des mots de passe créés pour ces comptes, Multi-Factor Authentication (MFA), une fédération ou des mots de passe créés dans les services de domaine Active Directory, puis synchronisés avec Azure Active Directory.
 
-## <a name="can-i-add-external-users-people-from-outside-my-company-to-templates"></a>Puis-je ajouter des utilisateurs externes (des personnes ne faisant pas partie de mon organisation) à des modèles ?
-Oui. La création de modèles que les utilisateurs finaux (et les administrateurs) peuvent sélectionner à partir d’applications accélère et facilite l’application de la protection des informations à l’aide de stratégies prédéfinies que vous spécifiez. L’un des paramètres du modèle définit qui peut accéder au contenu, et vous pouvez spécifier des utilisateurs et des groupes au sein de votre organisation, ainsi que des utilisateurs et des groupes extérieurs à celle-ci. Vous pouvez même spécifier tous les utilisateurs d’une autre organisation.
+## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>Puis-je ajouter des utilisateurs externes (des personnes ne faisant pas partie de mon organisation) à des modèles personnalisés ?
 
-Vous pouvez effectuer cette configuration à l’aide du portail Azure, quand vous configurez les [paramètres de protection](../deploy-use/configure-policy-protection.md). Vous pouvez aussi faire cette configuration en utilisant PowerShell. Pour utiliser PowerShell :
+Oui. Quand vous convertissez un modèle en étiquette dans le portail Azure, vous pouvez configurer les [paramètres de protection](../deploy-use/configure-policy-protection.md) pour ajouter des autorisations à des utilisateurs et groupes extérieurs à votre organisation, et même à tous les utilisateurs d’une autre organisation. Vous pouvez aussi faire cette configuration en utilisant PowerShell.
 
--   **utiliser un objet de définition de droits pour créer ou mettre à jour un modèle**.  Spécifiez les adresses de messagerie externes et leurs droits dans un objet de définition de droits, que vous pouvez ensuite utiliser pour créer ou mettre à jour un modèle. Spécifiez l’objet de définition de droits à l’aide de l’applet de commande [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) pour créer une variable, puis spécifiez cette variable dans le paramètre -RightsDefinition avec l’applet de commande [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) (pour un nouveau modèle) ou l’applet de commande [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) (si vous modifiez un modèle existant). Cependant, si vous ajoutez ces utilisateurs à un modèle existant, vous devez définir des objets de définition de droits pour les groupes existants des modèles et pas seulement les utilisateurs externes.
-
-Pour plus d’informations sur les modèles, consultez [Configuration et gestion des modèles pour Azure Information Protection](../deploy-use/configure-policy-templates.md).
+Pour plus d’informations sur la conversion de modèles personnalisés en étiquettes dans le but de faciliter l’ajout d’utilisateurs externes, consultez [Configuration et gestion des modèles pour Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 ## <a name="does-azure-rms-work-with-dynamic-groups-in-azure-ad"></a>Azure RMS fonctionne-t-il avec des groupes dynamiques dans Azure AD ?
 Une fonctionnalité Azure AD Premium vous permet de configurer l’appartenance dynamique à des groupes de sécurité en spécifiant des [règles basées sur des attributs](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). Ce type de groupe ne prend pas en charge une adresse de messagerie et ne peut donc pas être utilisé avec le service Azure Rights Management. Toutefois, les groupes Office 365 prennent en charge l’appartenance au groupe dynamique et sont compatibles avec la messagerie. Dans la mesure où ce groupe est à extension messagerie, vous pouvez l’utiliser avec la protection Azure Rights Management.

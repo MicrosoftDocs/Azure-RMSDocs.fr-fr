@@ -4,7 +4,7 @@ description: "Azure Rights Management (Azure RMS) est la technologie de protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2017
+ms.date: 08/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 61b549c38e3e86bc686747adb5f9ebfd1851f446
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: b002ebf624fe2d314af2cf1df1a1cb452042138e
+ms.sourcegitcommit: a4f4edcbf0f0a7de74d1dcec9ce6e661c6882a74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="what-is-azure-rights-management"></a>En quoi consiste Azure Rights Management ?
 
@@ -29,24 +29,26 @@ Ce service basé sur le cloud utilise des stratégies de chiffrement, d’identi
 
 Par exemple, un employé peut envoyer un document par e-mail à une entreprise partenaire, ou l’enregistrer sur son lecteur cloud. La protection permanente offerte par Azure RMS permet de sécuriser les données de votre entreprise. Elle peut également être nécessaire à des fins de conformité, de communication préalable ou simplement de bonne gestion des informations.
 
-Mais plus important encore, les personnes et services autorisés (recherche et indexation, par exemple) peuvent continuer à lire et examiner les données protégées par Azure RMS, ce qui n'est pas chose facile avec les autres solutions de protection des informations qui utilisent le chiffrement pair à pair. Cette capacité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise.
+Mais plus important encore, les personnes et services autorisés (recherche et indexation, par exemple) peuvent continuer à lire et inspecter les données protégées par Azure RMS. Ceci n’est pas facile à mettre en œuvre avec d’autres solutions de protection des informations qui utilisent le chiffrement pair à pair. Cette fonctionnalité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise.
 
-L’illustration suivante montre qu’Azure RMS fait office de solution de gestion des droits pour Office 365 ainsi que pour les serveurs et services locaux. Elle montre également que cette solution prend en charge les appareils d'utilisateurs finaux courants qui exécutent Windows, Mac OS, iOS, Android et Windows Phone.
+L’illustration suivante montre qu’Azure RMS fait office de solution de gestion des droits pour Office 365, ainsi que pour les serveurs et services locaux. Elle montre également qu’Azure RMS prend en charge les appareils d’utilisateurs finaux courants qui exécutent Windows, Mac OS, iOS, Android et Windows Phone.
 
 
 ![Fonctionnement d'Azure RMS](../media/AzRMS_elements.png)
 
-La protection Azure RMS est utilisable avec différents abonnements cloud et prend en charge plusieurs fonctionnalités. Vous trouverez plus d’informations sur les abonnements disponibles et les fonctionnalités qu’ils prennent en charge sur le site [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection).
+La protection Azure RMS est utilisable avec différents abonnements cloud et prend en charge plusieurs fonctionnalités. Pour plus d’informations sur les abonnements disponibles et les fonctionnalités qu’ils prennent en charge, visitez le site [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour en savoir plus sur ce service de protection des données d’Azure Information Protection :
 
--   [Quels problèmes Azure RMS résout-il ?](azure-rms-problems-it-solves.md)
+- [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md)
 
--   [Comment fonctionne Azure RMS ? En coulisse](how-does-it-work.md)
+- [Quels problèmes Azure RMS résout-il ?](azure-rms-problems-it-solves.md)
 
-Si vous voulez vous y plonger directement et essayer par vous-même de protéger des documents, utilisez le [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md). Ce didacticiel vous invite à protéger un document quand des données sensibles sont détectées. Il inclut également la protection d’un document que vous partagez par e-mail, que vous pouvez ensuite suivre pour voir comment il est utilisé et en révoquer l’accès si nécessaire.
+- [Comment fonctionne Azure RMS ? En coulisse](how-does-it-work.md)
+
+Si vous voulez vous y plonger et essayer par vous-même de protéger des documents, utilisez le [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md). Ce didacticiel vous invite à protéger un document quand des données sensibles sont détectées. Il inclut également la protection d’un document que vous partagez par e-mail, que vous pouvez ensuite suivre pour voir comment il est utilisé et en révoquer l’accès si nécessaire.
 
 Cependant, si vous êtes prêt à déployer Azure Information Protection dans votre organisation afin que les administrateurs et les utilisateurs puissent commencer à protéger des documents et des e-mails, utilisez le [Guide de déploiement d’Azure Information Protection](../plan-design/deployment-roadmap.md) pour vos étapes de déploiement et des liens vers des instructions sur les procédures.
 

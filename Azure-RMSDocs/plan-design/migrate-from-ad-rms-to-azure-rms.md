@@ -4,7 +4,7 @@ description: "Instructions pour la migration de votre déploiement AD RMS (Acti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6ce3936b36a716cfdc2651cda9f59eb9b552eeb3
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: 1e9a124e4b115491c014bb54977cdb9d922cad45
+ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
@@ -102,18 +102,15 @@ Avant de procéder à la migration vers Azure Information Protection, assurez-vo
 
 ### <a name="cryptographic-mode-considerations"></a>Considérations relatives au mode de chiffrement
 
-Bien que cela ne constitue pas une condition préalable pour la migration, nous recommandons que vos serveurs AD RMS et les clients s’exécutent en mode de chiffrement 2 avant de commencer la migration. 
+Si votre cluster AD RMS est actuellement en mode de chiffrement 1, ne le mettez pas à niveau vers le mode de chiffrement 2 avant de commencer la migration. Au lieu de cela, effectuez la migration en mode de chiffrement  1 et renouvelez votre clé une fois la migration terminée (dans le cadre des tâches suivant la migration).
 
-Pour plus d’informations sur les différents modes et la mise à niveau, consultez [Modes de chiffrement AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
-
-Si votre cluster AD RMS est en mode de chiffrement 1 et si vous ne pouvez pas le mettre à niveau, vous devez renouveler votre clé de locataire Azure Information Protection une fois la migration terminée. Le renouvellement de cette clé entraîne la création d’une clé de locataire qui utilise le mode de chiffrement 2. L’utilisation du service Azure Rights Management avec le mode de chiffrement 1 est prise en charge uniquement pendant le processus de migration.
+Le mode de chiffrement 1 est uniquement pris en charge pendant le processus de migration.
 
 Pour confirmer le mode de chiffrement AD RMS :
  
 - Pour Windows Server 2012 R2 et Windows 2012 : Propriétés du cluster AD RMS > Onglet **Général**. 
 
 - Pour toutes les versions d’AD RMS prises en charge : utilisez [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) et l’option **AD RMS admin** pour consulter le mode de chiffrement dans les **informations du service RMS**.
-
 
 ### <a name="migration-limitations"></a>Limites de migration
 

@@ -4,7 +4,7 @@ description: "Instructions pour la migration de votre déploiement AD RMS (Acti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e9a124e4b115491c014bb54977cdb9d922cad45
-ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
+ms.openlocfilehash: 8f81eee3c15b771e60c24a83f66d13a4a654a7e3
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
@@ -110,7 +110,7 @@ Pour confirmer le mode de chiffrement AD RMS :
  
 - Pour Windows Server 2012 R2 et Windows 2012 : Propriétés du cluster AD RMS > Onglet **Général**. 
 
-- Pour toutes les versions d’AD RMS prises en charge : utilisez [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) et l’option **AD RMS admin** pour consulter le mode de chiffrement dans les **informations du service RMS**.
+- Pour Windows Server 2008 R2 : vérifiez si le correctif [La longueur de clé RSA est augmentée à 2 048 bits pour AD RMS dans Windows Server 2008 R2 et dans Windows Server 2008](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server ) est installé. Dans le cas contraire, votre cluster AD RMS est exécuté en Mode de chiffrement 1.
 
 ### <a name="migration-limitations"></a>Limites de migration
 

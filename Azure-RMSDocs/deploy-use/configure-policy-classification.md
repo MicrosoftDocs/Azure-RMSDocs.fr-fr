@@ -4,17 +4,17 @@ description: "Lorsque vous configurez des conditions pour une étiquette, vous p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 510375dec4fc4e28197270e62655375698580b95
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 3aad6eb4956b6565e44c4b1019c984a28cb41fdc
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -26,7 +26,7 @@ Lorsque vous configurez des conditions pour une étiquette, vous pouvez affecter
  
 - La classification recommandée s’applique à Word, Excel et PowerPoint lors de l’enregistrement de fichiers.
 
-Lorsque vous configurez des conditions, vous pouvez utiliser des modèles prédéfinis, tels que « Numéros de carte de crédit » ou « Numéro de sécurité sociale (USA) ». Vous pouvez aussi définir une chaîne ou un modèle personnalisé comme condition de classification automatique. Ces conditions s’appliquent au corps de texte dans les documents et les e-mails, ainsi qu’aux en-têtes et pieds de page. Pour plus d’informations sur les conditions, consultez la section [Informations sur les conditions intégrées](#information-about-the-built-in-conditions).
+Lorsque vous configurez des conditions, vous pouvez utiliser des modèles prédéfinis, tels que « Numéros de carte de crédit » ou « Numéro de sécurité sociale (US) ». Vous pouvez aussi définir une chaîne ou un modèle personnalisé comme condition de classification automatique. Ces conditions s’appliquent au corps de texte dans les documents et les e-mails, ainsi qu’aux en-têtes et pieds de page. Pour plus d’informations sur les conditions, consultez la section [Informations sur les conditions intégrées](#information-about-the-built-in-conditions).
 
 Évaluation de plusieurs conditions lorsqu’elles s’appliquent à plusieurs étiquettes :
 
@@ -41,9 +41,9 @@ Lorsque vous configurez des conditions, vous pouvez utiliser des modèles préd�
 
 Un exemple d’invite s’affiche lorsque vous configurez une condition d’application d’une étiquette en tant qu’action recommandée, avec un conseil de stratégie personnalisé :
 
-![Détection et recommandations Azure Information Protection](../media/info-protect-recommend-callouts.png)
+![Détection et recommandations Azure Information Protection](../media/info-protect-recommend-calloutsv2.png)
 
-Dans cet exemple, l’utilisateur peut cliquer sur **Modifier maintenant** pour appliquer l’étiquette recommandée ou remplacer la recommandation en fermant la barre.
+Dans cet exemple, l’utilisateur peut cliquer sur **Modifier maintenant** pour appliquer l’étiquette recommandée ou remplacer la recommandation en sélectionnant **Ignorer**.
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Pour configurer la classification automatique ou recommandée pour une étiquette
 

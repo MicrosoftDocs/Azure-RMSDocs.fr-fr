@@ -4,27 +4,23 @@ description: "Lorsque vous affectez une étiquette à un document ou un e-mail, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: efc60ee6126a6a0b2798f66c46c2242942878829
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a65299651abd97adb0fc7641be2f2f3c6f1d8d2f
+ms.sourcegitcommit: adb38b008656ac706920a8488fd2beafedadbc97
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
-Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez sélectionner plusieurs options pour que la classification choisie soit facilement visible. Ces marquages visuels sont un filigrane, un en-tête et un pied de page :
-
-Les marquages visuels sont appliqués à des documents Word, Excel et PowerPoint au moment de l’application de l’étiquette et lorsque la documentation est enregistrée dans ces applications Office. Pour les e-mails, les marquages visuels sont appliqués lorsqu’un e-mail est envoyé depuis Outlook.
-
-Aucun marquage visuel n’est appliqué aux documents dont l’application de l’étiquette intervient à l’aide de l’Explorateur de fichiers et d’un clic droit, ou lorsqu’un document est classé à l’aide de PowerShell.
+Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez sélectionner plusieurs options pour que la classification choisie soit facilement visible. Ces marquages visuels sont un filigrane, un en-tête et un pied de page.
 
 Informations supplémentaires sur ces marqueurs visuels :
 
@@ -33,10 +29,32 @@ Informations supplémentaires sur ces marqueurs visuels :
 - Les filigranes s’appliquent à Word, Excel et PowerPoint :
 
     - Excel : les filigranes avec Excel sont visibles uniquement en mode Mise en page et Aperçu avant impression, ainsi que lors de l’impression.
-
+    
     - PowerPoint : les filigranes sont appliqués au masque des diapositives comme image d’arrière-plan.
+    
+    - Plusieurs lignes de texte sont prises en charge lorsque vous utilisez la préversion actuelle du client Azure Information Protection.
 
 - Vous pouvez spécifier simplement une chaîne de texte ou utiliser des [variables](#using-variables-in-the-text-string) pour créer dynamiquement la chaîne de texte quand l’en-tête, le pied de page ou le filigrane est appliqué.
+
+## <a name="when-visual-markings-are-applied"></a>Application des marquages visuels
+
+Pour les e-mails, les marquages visuels sont appliqués lorsqu’un e-mail est envoyé depuis Outlook.
+
+Pour les documents, les marquages visuels sont appliqués comme suit :
+
+- **Pour la version à disponibilité générale** du client Azure Information Protection : 
+    
+    - Dans une application Office, les marquages visuels d’une étiquette sont appliqués lorsque l’étiquette est appliquée et à chaque fois que le document est enregistré. 
+    
+    - Lorsqu’un document est étiqueté à l’aide de l’Explorateur de fichiers ou de PowerShell, les marquages visuels ne sont pas appliqués immédiatement, mais lorsque ce document est ouvert dans une application Office et à chaque fois que le document est enregistré.
+
+- **Pour la préversion actuelle** du client Azure Information Protection : 
+    
+    - Dans une application Office, les marquages visuels d’une étiquette sont appliqués lorsque l’étiquette est appliquée. Les marquages visuels sont également appliqués lors de l’ouverture d’un document étiqueté et lors du premier enregistrement document.  
+    
+    - Lorsqu’un document est étiqueté à l’aide de l’Explorateur de fichiers ou de PowerShell, les marquages visuels ne sont pas appliqués immédiatement, mais lorsque ce document est ouvert dans une application Office et lors du premier enregistrement du document.
+
+## <a name="to-configure-visual-markings-for-a-label"></a>Pour configurer les marquages visuels pour une étiquette
 
 Utilisez les instructions suivantes pour configurer les marquages visuels d’une étiquette.
 

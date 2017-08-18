@@ -4,17 +4,17 @@ description: "Identifiez les limitations, conditions préalables et recommandati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: ac4068885df92c58ecba2a90e7aa0aeaaa34e8e9
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: 4730c2e27a78ec8bf106f43b3ac7097a40e0555d
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 
@@ -83,7 +83,7 @@ Vérifiez que votre déploiement AD RMS répond aux exigences suivantes pour fou
     
     - Cluster racine AD RMS unique.
     
-    - [Mode de chiffrement 2](https://technet.microsoft.com/library/hh867439.aspx) : vous pouvez vérifier la version du mode de chiffrement du cluster AD RMS et son intégrité globale en utilisant l’outil [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437).   
+    - [Mode de chiffrement 2](https://technet.microsoft.com/library/hh867439.aspx): vous pouvez confirmer le mode en vérifiant les propriétés du cluster AD RMS, onglet **Général**.
     
     - Un point de connexion de service (SCP) n’est pas inscrit dans Active Directory : aucun SCP n’est utilisé quand vous appliquez la protection AD RMS avec Azure Information Protection. Si vous avez inscrit un SCP pour votre déploiement AD RMS, vous devez le supprimer pour que la [découverte du service](../rms-client/client-deployment-notes.md#rms-service-discovery) fonctionne pour la protection Azure Rights Management.
     

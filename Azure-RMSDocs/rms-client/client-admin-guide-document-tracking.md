@@ -4,7 +4,7 @@ description: Instructions et informations pour les administrateurs pour configur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f815fb9f9f1092ce83e9edc72f91381d3e8b46f3
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: dd8b2dcf785d47ec779b314072fb5edddf556163
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="configuring-and-using-document-tracking-for-azure-information-protection"></a>Configuration et utilisation du suivi des documents pour Azure Information Protection
 
@@ -32,11 +32,13 @@ Cette applet de commande désactive l’accès au site de suivi de documents afi
 
 Lorsque le site de suivi des documents est activé, il fournit des informations telles que les adresses de messagerie des personnes qui ont tenté d'accéder aux documents protégés et indique quand ces personnes ont tenté d'y accéder, ainsi que leur emplacement. Ce niveau d’informations peut être utile pour déterminer comment les documents partagés sont utilisés et s’ils doivent être révoqués en cas d’activité suspecte. Toutefois, pour des raisons de confidentialité, vous devrez peut-être désactiver ces informations utilisateur pour une partie ou l’intégralité des utilisateurs. 
 
-Si vous avez des utilisateurs qui ne doivent pas avoir le suivi pour cette activité, ajoutez-les à un groupe qui est stocké dans Azure AD, et spécifiez ce groupe avec l’applet de commande [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup). Lorsque vous exécutez cette applet de commande, vous devez spécifier un groupe unique. Toutefois, le groupe peut contenir des groupes imbriqués. 
+Si vous avez des utilisateurs pour lesquels cette activité ne doit pas être suivie par d’autres utilisateurs, ajoutez-les à un groupe qui est stocké dans Azure AD, et spécifiez ce groupe avec l’applet de commande [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup). Lorsque vous exécutez cette applet de commande, vous devez spécifier un groupe unique. Toutefois, le groupe peut contenir des groupes imbriqués. 
 
-Pour ces membres du groupe, leur activité liée à des documents que d’autres ont partagés avec eux n’est pas connectée à votre site de suivi de documents. En outre, aucune notification par e-mail n’est envoyée à l’utilisateur qui a partagé le document.
+Pour ces membres du groupe, les utilisateurs ne peuvent pas voir les activités sur le site de suivi du document lorsque cette activité est liée à des documents qu’ils partagent avec eux. En outre, aucune notification par e-mail n’est envoyée à l’utilisateur qui a partagé le document.
 
 Lorsque vous utilisez cette configuration, tous les utilisateurs peuvent toujours utiliser le site de suivi de documents et révoquer l’accès à des documents qu’ils ont protégés. Toutefois, ils ne voient pas l’activité des utilisateurs que vous avez spécifiés à l’aide de l’applet de commande Set-AadrmDoNotTrackUserGroup.
+
+Ce paramètre affecte uniquement les utilisateurs finaux. Les administrateurs pour Azure Information Protection peuvent toujours suivre les activités de tous les utilisateurs, même lorsque ces utilisateurs sont spécifiés à l’aide de Set-AadrmDoNotTrackUserGroup. Pour plus d’informations sur la façon dont les administrateurs peuvent suivre les documents pour les utilisateurs, consultez la section [Suivi et révocation de documents pour les utilisateurs](#tracking-and-revoking-documents-for-users).
 
 Vous pouvez utiliser [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) si vous n’avez plus besoin de cette option. Ou, pour supprimer sélectivement des utilisateurs, supprimez-les du groupe, mais attention à la [mise en cache de groupe](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). Vous pouvez vérifier si cette option est actuellement en cours d’utilisation à l’aide de [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). Pour exécuter les applets de commande pour cette configuration de groupe, vous devez disposer au moins de la version **2.10.0.0** du module Azure Rights Management (AADRM) pour PowerShell.
 

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 53d60803b09133bc9e2bd5c1399d1b3cec1f0ded
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 94ec0107930e64d42ed55bce407c4b8c92f1df32
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Administration du service Azure Rights Management à l’aide de Windows PowerShell
 
@@ -41,7 +41,7 @@ Outre ce module PowerShell côté service, le client Azure Information Protectio
 |-------------------|------------------------------|
 |migrer de Rights Management local (AD RMS ou Windows RMS) vers Azure Information Protection.|[Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd)<br /><br />[Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties)|
 |vous connecter au service [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ou vous en déconnecter pour votre organisation.|[Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice)<br /><br />[Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice)|
-|Générer et gérer votre propre clé de locataire : scénario BYOK (Bring Your Own Key).|[Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey)<br /><br />[Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys)|
+|Générer et gérer votre propre clé de locataire : scénario BYOK (Bring Your Own Key).|[Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties)<br /><br />[Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey)<br /><br />[Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys)|
 |activer ou désactiver le service [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] pour votre organisation.<br /><br />Vous pouvez également effectuer ces actions dans les portails de gestion. Pour plus d’informations, consultez [Activation du service Azure Rights Management](activate-service.md).|[Enable-Aadrm](/powershell/aadrm/vlatest/enable-aadrm)<br /><br />[Disable-Aadrm](/powershell/aadrm/vlatest/disable-aadrm)|
 |Désactiver ou activer le site de suivi de document pour Azure Information Protection.|[Disable-AadrmDocumentTrackingFeature](/powershell/aadrm/vlatest/disable-aadrmdocumenttrackingfeature)<br /><br />[Enable-AadrmDocumentTrackingFeature](/powershell/aadrm/vlatest/enable-aadrmdocumenttrackingfeature)<br /><br />[Get-AadrmDocumentTrackingFeature](/powershell/aadrm/vlatest/get-aadrmdocumenttrackingfeature)<br /><br />[Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/set-aadrmdonottrackusergroup)<br /><br />[Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup)<br /><br />[Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup)|
 |Configurer des contrôles d’intégration pour un déploiement échelonné du service Azure Rights Management.|[Get-AadrmOnboardingControlPolicy](/powershell/aadrm/vlatest/get-aadrmonboardingcontrolpolicy)<br /><br />[Set-AadrmOnboardingControlPolicy](/powershell/aadrm/vlatest/set-aadrmonboardingcontrolpolicy)|

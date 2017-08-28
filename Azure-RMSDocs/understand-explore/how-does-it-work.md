@@ -4,7 +4,7 @@ description: "Découvrez en détail le fonctionnement d’Azure RMS, les contrô
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3d53e57b8bff94c39426b37755c643c1dc9d9fde
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 26c82884c706c8397eae63197ed0307faa3562d3
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
@@ -56,11 +56,13 @@ La longueur de 256 bits est utilisée par le client Azure Information Protectio
 
 La longueur de la clé est de 2 048 bits lorsque le service Azure Rights Management est activé. Une longueur de 1 024 bits est prise en charge dans les scénarios facultatifs suivants :
 
-- Lors d’une migration depuis un site local si le cluster AD RMS s’exécute en mode de chiffrement 1 et qu’il ne peut pas être mis à niveau vers le mode de chiffrement 2.
+- Durant une migration à partir d’un site local, si le cluster AD RMS s’exécute en mode de chiffrement 1.
+
+- Après une migration à partir d’un site local, si le cluster AD RMS utilisait Exchange Online.
 
 - Pour les clés archivées qui ont été créées en local avant la migration afin que le contenu qui a été protégé par AD RMS puisse continuer à être ouvert après la migration vers Azure Rights Management.
 
-- Si les clients choisissent d’apporter leur propre clé (BYOK) à l’aide d’Azure Key Vault. C’est ce que nous recommandons, mais ne forcez pas l’application d’une taille de clé minimale de 2 048 bits.
+- Si les clients choisissent d’apporter leur propre clé (BYOK) à l’aide d’Azure Key Vault. Azure Information Protection prend en charge les clés d’une longueur de 1 024 bits ou de 2 048 bits. Pour une sécurité accrue, nous vous recommandons une clé d’une longueur de 2 048 bits.
 
 ### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Mode de stockage et de sécurisation des clés de chiffrement Azure RMS
 
@@ -68,7 +70,7 @@ Pour chaque document ou e-mail protégé par Azure RMS, Azure RMS crée une clé
 
 La clé de contenu est protégée à l’aide de la clé RSA de l’organisation (la « clé de locataire Azure Information Protection ») dans le cadre de la stratégie définie dans le document. La stratégie est également signée par l’auteur du document. Cette clé de locataire est commune à tous les documents et e-mails protégés par le service Azure Rights Management pour l’organisation. Elle ne peut être modifiée par un administrateur Azure Information Protection que si l’organisation utilise une clé de locataire gérée par le client, également appelée BYOK (Bring Your Own Key). 
 
-Cette clé de locataire est protégée dans les services en ligne de Microsoft, dans un environnement très contrôlé et sous étroite surveillance. Lorsque vous utilisez une clé de locataire gérée par le client (BYOK), cette sécurité est renforcée par l’utilisation d’une série de modules de sécurité matériels (HSM) haut de gamme dans chaque région Azure, ne laissant aucune possibilité d’extraire, exporter ou partager les clés, quelles que soient les circonstances. Pour plus d’informations sur les options de clé de locataire et les clés BYOK, consultez [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
+Cette clé de locataire est protégée dans les services en ligne de Microsoft, dans un environnement très contrôlé et sous étroite surveillance. Quand vous utilisez une clé de locataire gérée par le client (BYOK), cette sécurité est renforcée par l’utilisation d’une série de modules de sécurité matériels (HSM) haut de gamme dans chaque région Azure, sans possibilité d’extraire, d’exporter ou de partager les clés, quelles que soient les circonstances. Pour plus d’informations sur les options de clé de locataire et les clés BYOK, consultez [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
 Les licences et certificats envoyés à un appareil Windows sont protégés par la clé privée d’appareil du client, créée quand un utilisateur utilise Azure RMS sur l’appareil pour la première fois. Cette clé privée est à son tour protégée par DPAPI sur le client, ce qui a pour effet de protéger ces secrets à l’aide d’une clé dérivée du mot de passe de l’utilisateur. Sur les appareils mobiles, les clés ne sont utilisées qu’une seule fois. Ainsi, n’étant pas stockées sur les clients, elles ne nécessitent pas de protection sur l’appareil. 
 
@@ -130,7 +132,7 @@ Quand un utilisateur veut consommer un document protégé, le client RMS commenc
 
 Après cela, la clé de contenu re-chiffrée est incorporée dans une licence d'utilisation chiffrée avec la liste des droits de l'utilisateur, qui est renvoyée au client RMS.
 
-![Consommation de document RMS : étape 3, le document est déchiffré et les droits sont appliqués](../media/AzRMS_documentconsumption3.png)
+![Consommation de document RMS : étape 3, le document est déchiffré et les droits sont appliqués](../media/AzRMS_documentconsumption3.png)
 
 **Ce qui se passe à l’étape 3** : enfin, le client RMS prend la licence d’utilisation chiffrée et la déchiffre avec sa propre clé privée utilisateur. Cela permet au client RMS de déchiffrer le corps du document si nécessaire, et de l'afficher à l'écran.
 
@@ -149,7 +151,7 @@ Les procédures pas à pas précédentes couvrent les scénarios standard, mais 
 
 -   **Protection générique (.pfile)** : quand le service Azure Rights Management protège un fichier de façon générique, le flux est fondamentalement le même pour la protection du contenu, sauf que le client RMS crée une stratégie qui accorde tous les droits. Lorsque le fichier est consommé, il est déchiffré avant d'être transmis à l'application cible. Ce scénario vous permet de protéger tous les fichiers, même s'ils ne prennent pas en charge RMS en mode natif.
 
--   **PDF protégé (.ppdf)** : quand le service Azure Rights Management protège un fichier Office en mode natif, il en crée également une copie qu’il protège de la même façon. La seule différence est que la copie est un fichier au format PPDF, que la visionneuse du client Azure Information Protection et l’application de partage RMS peuvent ouvrir en mode affichage uniquement. Ce scénario vous permet d'envoyer des pièces jointes protégées par courrier électronique, en sachant que le destinataire sur un appareil mobile sera toujours en mesure de les lire, même si son appareil n'a pas d'application prenant en charge en mode natif des fichiers Office protégés.
+-   **PDF protégé (.ppdf)** : quand le service Azure Rights Management protège un fichier Office en mode natif, il en crée également une copie qu’il protège de la même façon. La seule différence est que la copie est un fichier au format PPDF, que la visionneuse du client Azure Information Protection et l’application de partage RMS peuvent ouvrir en mode affichage uniquement. Ce scénario vous permet d’envoyer des pièces jointes protégées par e-mail, en sachant que le destinataire sur un appareil mobile peut toujours les lire, même si son appareil n’a pas d’application prenant en charge en mode natif des fichiers Office protégés.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -4,7 +4,7 @@ description: "Phase 5 de la migration d’AD RMS vers Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aeffd9780001f4c91ea8600f11d8fc3b36abce73
-ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
+ms.openlocfilehash: 11775c64cbd5abd7c10a145a2d48f335db2d5b69
+ms.sourcegitcommit: 8251e4db274519a2eb8033d3135a22c27130bd30
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Phase de migration 5 : Tâches de post-migration
 
@@ -71,19 +71,27 @@ Pour supprimer les contrôles d’intégration :
     Dans la sortie, **Licence** doit indiquer **False** et aucun GUID n’est affiché pour **SecurityGroupOjbectId**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Étape 12. Renouveler votre clé de locataire Azure Information Protection
-Cette étape est obligatoire au terme de la migration si votre déploiement AD RMS utilisait le mode de chiffrement RMS 1. Le renouvellement de la clé entraîne la création d’une clé de locataire qui utilise le mode de chiffrement RMS 2. Le mode de chiffrement 1 est uniquement pris en charge pour Azure Information Protection pendant le processus de migration.
 
-Le renouvellement de clé au terme de la migration permet également de protéger votre clé de locataire Azure Information Protection contre les failles de sécurité potentielles de votre clé AD RMS.
+Cette étape est recommandée au terme de la migration si votre déploiement AD RMS utilisait le mode de chiffrement RMS 1. Le renouvellement de la clé donne lieu à une protection qui utilise le mode de chiffrement RMS 2. 
 
-Quand vous renouvelez votre clé de locataire Azure Information Protection (opération également appelée « déploiement de votre clé »), une clé est créée et la clé d’origine est archivée. Toutefois, le passage d’une clé à une autre ne se produit pas immédiatement mais sur plusieurs semaines. Pour cette raison, n’attendez pas de soupçonner une violation de votre clé d’origine, mais renouvelez votre clé de locataire Azure Information Protection dès la fin de la migration.
+Même si votre déploiement AD RMS utilisait le mode de chiffrement 2, nous vous recommandons d’effectuer cette étape dans la mesure où une nouvelle clé contribue à protéger votre locataire contre d’éventuelles infractions à la sécurité de votre clé AD RMS.
+
+Toutefois, ne renouvelez pas votre clé si vous utilisiez Exchange Online avec AD RMS. Exchange Online ne prend pas en charge le changement du mode de chiffrement. 
+
+Quand vous renouvelez votre clé de locataire Azure Information Protection (opération également appelée « déploiement de votre clé »), la clé active est archivée et Azure Information Protection commence à utiliser une autre clé que vous spécifiez. Cette autre clé peut être une nouvelle clé que vous créez dans Azure Key Vault ou la clé par défaut qui a été automatiquement créée pour votre locataire.
+
+Le passage d’une clé à une autre ne se produit pas immédiatement mais sur plusieurs semaines. Pour cette raison, n’attendez pas de soupçonner une violation de votre clé d’origine, mais effectuez cette étape dès la fin de la migration.
 
 Pour renouveler votre clé de locataire Azure Information Protection :
 
-- Si votre clé de locataire est gérée par Microsoft : contactez le [support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) et ouvrez un **dossier de support Azure Information Protection dans lequel vous demandez le renouvellement de votre clé Azure Information Protection après une migration à partir d’AD RMS**. Vous devez prouver que vous êtes administrateur de votre locataire Azure Information Protection et comprendre que la confirmation de ce processus prend plusieurs jours. Des frais de prise en charge standard s’appliquent. Le renouvellement de votre clé de locataire n’est pas un service de support gratuit.
+- **Si votre clé de locataire est gérée par Microsoft** : exécutez l’applet de commande PowerShell [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) et spécifiez l’identificateur de la clé qui a été automatiquement créée pour votre locataire. Vous pouvez identifier la valeur à spécifier en exécutant l’applet de commande [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys). La clé créée automatiquement pour votre locataire a la date de création la plus ancienne. Vous pouvez donc l’identifier à l’aide de la commande suivante :
+    
+        (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- Si vous gérez vous-même votre clé de locataire (BYOK) : dans Azure Key Vault, renouvelez la clé que vous utilisez pour votre locataire Azure Information Protection, puis réexécutez l’applet de commande [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) pour spécifier l’URL de nouvelle clé. 
+- **Si vous gérez vous-même votre clé de locataire (BYOK)** : dans Azure Key Vault, répétez le processus de création de la clé pour votre locataire Azure Information Protection, puis réexécutez l’applet de commande [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) pour spécifier l’URL de cette nouvelle clé. 
 
 Pour plus d’informations sur la gestion de votre clé de locataire Azure Information Protection, consultez [Opérations pour votre clé de locataire Azure Rights Management](../deploy-use/operations-tenant-key.md).
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 

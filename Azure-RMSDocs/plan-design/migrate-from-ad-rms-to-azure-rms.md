@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8f81eee3c15b771e60c24a83f66d13a4a654a7e3
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: a4337d197e08cd75b974594fdd797c9bb383c1f9
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
@@ -102,9 +102,7 @@ Avant de procéder à la migration vers Azure Information Protection, assurez-vo
 
 ### <a name="cryptographic-mode-considerations"></a>Considérations relatives au mode de chiffrement
 
-Si votre cluster AD RMS est actuellement en mode de chiffrement 1, ne le mettez pas à niveau vers le mode de chiffrement 2 avant de commencer la migration. Au lieu de cela, effectuez la migration en mode de chiffrement  1 et renouvelez votre clé une fois la migration terminée (dans le cadre des tâches suivant la migration).
-
-Le mode de chiffrement 1 est uniquement pris en charge pendant le processus de migration.
+Si votre cluster AD RMS est actuellement en mode de chiffrement 1, ne le mettez pas à niveau vers le mode de chiffrement 2 avant de commencer la migration. Au lieu de cela, effectuez la migration en mode de chiffrement 1. Vous pouvez alors renouveler votre clé une fois la migration terminée (dans le cadre des tâches suivant la migration).
 
 Pour confirmer le mode de chiffrement AD RMS :
  
@@ -215,7 +213,7 @@ Les étapes de migration peuvent être divisées en cinq phases qui peuvent êtr
 
 - **Étape 12 : Renouveler votre clé de locataire Azure Information Protection**
 
-    Cette étape est obligatoire si vous n’utilisiez pas le mode de chiffrement 2 avant la migration, et facultative mais recommandée pour toutes les migrations afin de protéger la sécurité de votre clé de locataire Azure Information Protection.
+    Cette étape est recommandée si vous n’utilisiez pas le mode de chiffrement 2 avant la migration.
 
 
 ## <a name="next-steps"></a>Étapes suivantes

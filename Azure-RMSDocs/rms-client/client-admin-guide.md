@@ -4,7 +4,7 @@ description: "Instructions et informations destinées aux administrateurs d’un
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e942555c7a985db10054aa3f13be5ebcda2269a3
-ms.sourcegitcommit: 5ea919b1b2bcb9c4b3e5dd1939ff8d0d937e1168
+ms.openlocfilehash: f07d39e5110ae9bfb58a81585a042e8afdbbc639
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -330,7 +330,7 @@ Le client Azure Information Protection prend en charge les mêmes langues qu’O
 
 Pour ces langues, les options de menu, boîtes de dialogue et messages du client Azure Information Protection s’affichent dans la langue de l’utilisateur. Il existe un programme d’installation unique qui détecte la langue. Ainsi, aucune configuration supplémentaire n’est nécessaire pour installer le client Azure Information Protection pour différentes langues. 
 
-Toutefois, les noms d’étiquettes visibles par les utilisateurs ne sont pas traduits automatiquement pour la [stratégie par défaut](../deploy-use/configure-policy-default.md), de même que les noms d’étiquettes que vous spécifiez. Pour que les utilisateurs puissent voir les étiquettes dans différentes langues, vous devez fournir vos propres traductions et configurer la stratégie Azure Information Protection pour utiliser ces traductions. Pour plus d’informations, consultez le [Guide de configuration des étiquettes pour des langues différentes dans Azure Information Protection](../deploy-use/configure-policy-languages.md).
+Toutefois, les noms et les descriptions d’étiquette que vous spécifiez ne sont pas traduits automatiquement quand vous configurez des étiquettes dans la stratégie Azure Information Protection. Depuis le 30 août 2017, la [stratégie par défaut](../deploy-use/configure-policy-default.md) actuelle inclut la prise en charge de certaines langues. Pour que les utilisateurs puissent voir les étiquettes dans la langue de leur choix, fournissez vos propres traductions et configurez la stratégie Azure Information Protection pour les utiliser. Pour plus d’informations, consultez le [Guide de configuration des étiquettes pour des langues différentes dans Azure Information Protection](../deploy-use/configure-policy-languages.md). Les marquages visuels ne sont pas traduits et ne prennent pas en charge plusieurs langues.
 
 ## <a name="to-uninstall-the-azure-information-protection-client"></a>Désinstallation du client Azure Information Protection
 

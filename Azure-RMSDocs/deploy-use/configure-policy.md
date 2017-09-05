@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 88843833b87eb054f534a7c85e6a7c2e52797e9b
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 7f3b64e5e4b0dfbccf694a986a85f1c207580915
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -48,7 +48,7 @@ Pour plus d’informations sur la façon de configurer des stratégies délimit�
 
 2. Accédez au panneau **Azure Information Protection**: par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information Protection** dans la zone Filtrer. Dans les résultats, sélectionnez **Azure Information Protection**. 
     
-    La première fois que vous vous connectez au service, la page **Démarrage rapide** s’ouvre automatiquement. Pour configurer la stratégie que tous les utilisateurs obtiennent, cliquez sur **Stratégie globale** pour ouvrir le panneau **Stratégie : Globale**. Ce panneau s’ouvre automatiquement pour les connexions suivantes au service pour afficher et modifier la stratégie globale que tous les utilisateurs obtiennent. 
+    La première fois que vous vous connectez au service, le panneau **Azure Information Protection - Démarrage rapide** s’ouvre automatiquement. Pour configurer la stratégie appliquée à tous les utilisateurs, dans la sélection de menu **STRATÉGIES**, sélectionnez **Stratégie globale** pour ouvrir le panneau **Azure Information Protection - Stratégie globale**. Ce panneau s’ouvre automatiquement pour les connexions suivantes au service pour afficher et modifier la stratégie globale que tous les utilisateurs obtiennent. 
     
     La stratégie Azure Information Protection contient les éléments suivants que vous pouvez configurer :
     
@@ -70,7 +70,7 @@ Azure Information Protection est livré avec une [stratégie par défaut](config
 
 Vous pouvez utiliser les étiquettes par défaut sans les modifier, vous pouvez les personnaliser, ou encore les supprimer et créer de nouvelles étiquettes. Pour plus d’informations, utilisez les liens dans la section suivante pour vous aider à localiser les options appropriées et découvrir comment les configurer. 
 
-Lorsque vous apportez des modifications dans un panneau Azure Information Protection, cliquez sur **Enregistrer** pour enregistrer les modifications, ou cliquez sur **Ignorer** pour rétablir les derniers paramètres enregistrés. 
+Lorsque vous apportez des modifications dans un panneau Azure Information Protection, cliquez sur **Enregistrer** pour enregistrer les modifications, ou cliquez sur **Ignorer** pour rétablir les derniers paramètres enregistrés.
 
 Lorsque vous avez terminé les modifications souhaitées, cliquez sur **Publier**. 
 

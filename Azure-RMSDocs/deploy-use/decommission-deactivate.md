@@ -4,7 +4,7 @@ description: "Informations et instructions à prendre en compte si vous décidez
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 277630708fb1d88d59b418146d0e42615ebf495c
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: bebc3bf5593c2e8d166645b6cc18ad02d739d9ba
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="decommissioning-and-deactivating-azure-rights-management"></a>Désaffectation et désactivation d’Azure Rights Management
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 07/31/2017
 
 Vous pouvez toujours contrôler si votre organisation protège le contenu en utilisant le service Azure Rights Management à partir d’Azure Information Protection. Si vous décidez de ne plus utiliser ce service de protection des informations, vous aurez toujours accès au contenu précédemment protégé.
 
-Si vous n’avez pas besoin d’un accès permanent à un contenu précédemment protégé, vous pouvez simplement désactiver le service et laisser votre abonnement Azure Information Protection expirer. Cela est approprié si, par exemple, vous avez testé Azure Information Protection avant de le déployer dans un environnement de production.
+Si vous n’avez pas besoin d’un accès permanent à un contenu précédemment protégé, désactivez le service et laissez votre abonnement Azure Information Protection expirer. Cela est approprié si, par exemple, vous avez testé Azure Information Protection avant de le déployer dans un environnement de production.
 
 Cependant, si vous avez déployé Azure Information Protection en production et que vous avez protégé des documents et des e-mails, vérifiez que vous disposez d’une copie de votre clé de locataire Azure Information Protection avant de désactiver le service Azure Rights Management. Vérifiez que vous disposez d’une copie de votre clé avant que votre abonnement expire pour pouvoir conserver l’accès au contenu protégé par Azure Rights Management après la désactivation du service. Si vous avez utilisé la solution BYOK qui vous permet de générer et gérer votre propre clé dans un module de sécurité matériel, vous disposez déjà de votre clé de locataire Azure Information Protection. Toutefois, si celle-ci était gérée par Microsoft (par défaut), consultez les instructions relatives à l’exportation de votre clé de locataire dans l’article [Opérations pour votre clé de client Azure Rights Management](operations-tenant-key.md).
 
@@ -67,29 +67,15 @@ Exécutez l’une des procédures suivantes pour désactiver [!INCLUDE[aad_right
 
 Le message **Rights Management n’est pas activé** s’affiche alors, avec une option pour l’activer.
 
-#### <a name="to-deactivate-rights-management-from-the-azure-classic-portal"></a>Pour désactiver Rights Management à partir du portail Azure Classic
-
-1.  Connectez-vous au [portail Azure Classic](http://go.microsoft.com/fwlink/p/?LinkID=275081).
-
-2.  Dans le volet gauche, cliquez sur **Active Directory**.
-
-3.  Dans la page **Active Directory** , cliquez sur **RIGHTS MANAGEMENT**.
-
-4.  Assurez-vous que le nom de votre locataire est sélectionné, cliquez sur **DÉSACTIVER**, puis confirmez votre action.
-
-Le **STATUT DE RIGHTS MANAGEMENT** apparaît alors comme **Inactif** l’option **DÉSACTIVER** est remplacée par **ACTIVER**.
-
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>Pour désactiver Rights Management à partir du portail Azure
 
-Cette méthode est actuellement en préversion.
-
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**.
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général. Accédez ensuite au panneau **Azure Information Protection**.
     
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. Dans le panneau initial **d’Azure Information Protection**, sélectionnez **Paramètres RMS (préversion)**. 
+2. Dans le panneau **Azure Information Protection** initial, sélectionnez **Paramètres RMS**. 
 
-3.  Dans le panneau **Azure Information Protection - Paramètres RMS (préversion)**, sélectionnez **Désactiver**. Sélectionnez **Oui** pour confirmer votre choix.
+3.  Dans le panneau **Azure Information Protection - Paramètres RMS**, sélectionnez **Désactiver**. Sélectionnez **Oui** pour confirmer votre choix.
 
 La barre d’informations affiche **Désactivation terminée** et **Désactiver** est maintenant remplacé par **Activer**. 
 

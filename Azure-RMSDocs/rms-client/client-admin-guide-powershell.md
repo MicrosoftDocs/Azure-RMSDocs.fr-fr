@@ -4,7 +4,7 @@ description: "Instructions et informations pour que les administrateurs gèrent 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6077b9eba8ee04bf22c17612183f3d41b6b71e35
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 3a4a84356d59692dd3693b4bbaa00a3e39c95597
+ms.sourcegitcommit: adeab31c7aa99eab115dd12035fc5d9dffec4e9c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 08/29/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Utiliser PowerShell avec le client Azure Information Protection
 
@@ -220,7 +220,7 @@ Notre exemple de commande ressemblerait à ceci :
 
     Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
-Comme indiqué dans la commande précédente, vous pouvez fournir les valeurs avec une seule commande, ou simplement saisir Set-RMSServerAuthentication et fournir les valeurs une par une lorsque vous y êtes invité. Quand la commande est terminée, vous voyez un message de type « **RmsServerAuthentication a la valeur ON** », ce qui signifie que le client fonctionne maintenant en « mode serveur ». Ce message ne confirme pas que l’authentification a abouti en utilisant les valeurs que vous avez fournies, mais que le passage au mode serveur a réussi.
+Comme indiqué dans la commande précédente, vous pouvez fournir les valeurs avec une seule commande en utilisant un script à exécuter en mode non interactif. Mais pour les besoins du test, vous pouvez simplement taper Set-RMSServerAuthentication et fournir les valeurs une par une quand vous y êtes invité. Quand la commande est terminée, le client fonctionne en « mode serveur », qui convient à une utilisation non interactive comme les scripts et l’infrastructure de classification des fichiers Windows Server.
 
 Envisagez de faire de ce principal du service un super utilisateur : pour vous assurer que ce principal du service peut toujours annuler la protection de fichiers pour d’autres utilisateurs, il peut être configuré comme un super utilisateur. De la même façon que quand vous configurez un compte d’utilisateur standard comme super utilisateur, vous utilisez l’applet de commande Azure RMS [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), mais vous spécifiez le paramètre **- ServicePrincipalId** avec votre valeur AppPrincipalId.
 

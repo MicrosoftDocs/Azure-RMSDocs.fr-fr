@@ -4,17 +4,17 @@ description: "Comprendre le processus de configuration de la stratégie par déf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 51b5f7d332a86c16ceb6928ea99039812dd54802
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 712d273e735d2c9fc791a1f15c3f8dc9e917a1c3
+ms.sourcegitcommit: 5bcb916106021f624a69d620bbcc2c4a51398771
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
@@ -44,6 +44,8 @@ Quand ces sous-étiquettes ne sont pas configurées automatiquement pour la prot
 
 Quand la protection est appliquée aux sous-étiquettes **Tous les employés**, la protection est configurée à l’aide des modèles par défaut qui sont convertis automatiquement en étiquettes dans le portail Azure. Pour plus d’informations sur ces modèles, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).
 
+Depuis le 30 août 2017, cette version de la stratégie par défaut inclut les versions traduites des noms et descriptions d’étiquette. 
+
 #### <a name="more-information-about-the-recipients-only-sub-label"></a>Plus d’informations sur les sous-étiquettes Destinataires uniquement
 
 Les utilisateurs voient cette étiquette seulement dans Outlook. Ils ne voient pas cette étiquette dans Word, Excel et PowerPoint, ni depuis l’Explorateur de fichiers. 
@@ -68,16 +70,16 @@ Quand les utilisateurs sélectionnent cette étiquette, l’option Outlook Ne pa
 |-------------------------------|---------------------------|-----------------|
 |Confidentiel \ Tous les employés|Données confidentielles qui nécessitent une protection, qui permettent toutes les autorisations complètes des employés. Les propriétaires des données peuvent suivre et révoquer le contenu.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé comme confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Azure RMS [[1]](#footnote-1)|
 |Confidentiel \ Tout le monde (sans protection)|Données ne nécessitant pas de protection. Utilisez cette option avec précaution et avec une justification métier appropriée.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé comme confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Confidentiel \ Destinataires uniquement|Données confidentielles qui nécessitent la protection et qui peuvent être visualisées seulement par les destinataires.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (e-mail)<br /><br />Classé comme confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Ne pas transférer|
+|Confidentiel \ Destinataires uniquement|Données confidentielles qui nécessitent la protection et qui peuvent être visualisées seulement par les destinataires.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (e-mail)<br /><br />Classé comme confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Configurer des autorisations définies par l’utilisateur (préversion), dans Outlook appliquer Ne pas transférer|
 |Hautement confidentiel \ Tous les employés|Données hautement confidentielles, qui permettent les autorisations d’afficher, de modifier et de répondre de tous les employés sur ce contenu. Les propriétaires des données peuvent suivre et révoquer le contenu.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé hautement confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Azure RMS [[2]](#footnote-2)|
 |Hautement confidentiel \ Tout le monde (sans protection)|Données ne nécessitant pas de protection. Utilisez cette option avec précaution et avec une justification métier appropriée.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé hautement confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Hautement confidentiel \ Destinataires uniquement|Données hautement confidentielles qui nécessitent la protection et qui peuvent être visualisées seulement par les destinataires.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (e-mail)<br /><br />Classé hautement confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Ne pas transférer|
+|Hautement confidentiel \ Destinataires uniquement|Données hautement confidentielles qui nécessitent la protection et qui peuvent être visualisées seulement par les destinataires.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (e-mail)<br /><br />Classé hautement confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Configurer des autorisations définies par l’utilisateur (préversion), dans Outlook appliquer Ne pas transférer|
 
 ###### <a name="footnote-1"></a>Note 1
-Les paramètres de protection utilisent le modèle par défaut, **Confidentiel \ Tous les employés**.
+Les autorisations de protection sont celles définies dans le [modèle par défaut](configure-policy-templates.md#default-templates), **Confidentiel\Tous les employés**.
 
 ###### <a name="footnote-2"></a>Note 2 
-Les paramètres de protection utilisent le modèle par défaut, **Hautement confidentiel \ Tous les employés**.
+Les autorisations de protection sont celles définies dans le [modèle par défaut](configure-policy-templates.md#default-templates), **Hautement confidentiel\Tous les employés**.
 
 
 ### <a name="information-protection-bar"></a>Barre Information Protection

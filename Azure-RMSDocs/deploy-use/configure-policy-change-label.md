@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
-ms.openlocfilehash: ff32ea4759b46683398a86c0a549d50710f9a943
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 343b38caa14d3f67a932eedae37ed10c55f371ff
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Comment modifier ou personnaliser une étiquette existante pour Azure Information Protection
 
@@ -26,12 +26,11 @@ Par exemple, vous pouvez modifier un nom d’étiquette ou de sous-étiquette, u
 
 Procédez comme suit pour modifier une étiquette.
 
-
-1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**. 
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général. Accédez ensuite au panneau **Azure Information Protection**. 
     
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. Pour modifier une étiquette de la stratégie globale pour qu’elle s’applique à tous les utilisateurs, sélectionnez l’étiquette à modifier à partir du panneau **Stratégie : Globale**, puis apportez vos modifications dans le panneau **Étiquette** et tous les panneaux suivants si nécessaire. Pour modifier une étiquette à partir d’une [stratégie délimitée](configure-policy-scope.md) afin qu’elle s’applique aux utilisateurs sélectionnés, sélectionnez d’abord cette stratégie dans le panneau **Azure Information Protection** initial.
+2. Pour changer une étiquette de la stratégie globale afin qu’elle s’applique à tous les utilisateurs, sélectionnez l’étiquette à changer dans le panneau **Azure Information Protection : Stratégie globale** ainsi que tous les panneaux suivants si nécessaire. Pour changer une étiquette d’une [stratégie délimitée](configure-policy-scope.md) pour qu’elle s’applique uniquement aux utilisateurs sélectionnés, sélectionnez d’abord **Stratégies délimitées** dans la sélection de menu **STRATÉGIES**. Sélectionnez ensuite votre stratégie délimitée dans le panneau **Azure Information Protection - Stratégies délimitées**.
 
     Il existe une exception si vous voulez réorganiser une étiquette, ce que vous faites dans le panneau de la stratégie globale ou de votre stratégie délimitée sélectionnée : cliquez avec le bouton droit sur l’étiquette ou sélectionnez le menu contextuel de l’étiquette, puis sélectionnez les options **Déplacer vers le haut** ou **Déplacer vers le bas**.
 

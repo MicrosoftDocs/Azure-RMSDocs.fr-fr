@@ -4,7 +4,7 @@ description: "Vous avez une question au sujet de l’utilisation d’Azure Infor
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2017
+ms.date: 08/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 80efd633bc814af1ac28e4b6bf2d0b3062b27d01
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 2ac8211b338b9d35bb7962455a117d02f9c1fa32
+ms.sourcegitcommit: 4b7f025e9f78d25c6f3079cceb42bc33f3f3a612
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
 
@@ -30,19 +30,15 @@ Essayez notre didacticiel de démarrage rapide pour obtenir une démonstration e
 
 Pour être informé de la mise à disposition de fonctionnalités de classification supplémentaires, consultez les annonces publiées sur le [blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) et sur notre [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). La version actuelle présente quelques limites, notamment :
 
-- Les noms des étiquettes et des info-bulles sont pris en charge dans une seule langue uniquement. Cependant, la prise en charge multilingue est actuellement en version préliminaire. Pour plus d’informations, consultez [Guide pratique pour configurer les étiquettes pour des langues différentes](../deploy-use/configure-policy-languages.md).
+- Les noms des étiquettes et des info-bulles sont pris en charge dans une seule langue uniquement. Cependant, la prise en charge multilingue est actuellement en version préliminaire. Pour plus d’informations, consultez [Guide pratique pour configurer des étiquettes et des modèles dans différentes langues](../deploy-use/configure-policy-languages.md).
 
 - Il n’existe aucun enregistrement centralisé pour la classification et l’étiquetage.
 
-- Les conditions de classification automatique doivent être des expressions ou des modèles.
-
-- L’étiquetage n’est pas pris en charge pour les applications Office pour appareils mobiles (iOS et Android) et les ordinateurs Mac ou pour les applications web Office (Office Online).
+- L’étiquetage n’est pas pris en charge pour les applications Office pour appareils mobiles (iOS et Android) et les ordinateurs Mac, ni pour les applications web Office (Office Online).
 
 - Aucune intégration de classification et d’étiquetage n’est assurée avec Exchange Online ou SharePoint Online.
 
-- Le SDK pour les développeurs et les partenaires n’inclut pas encore la classification et l’étiquetage.
-
-La version de février supprime un grand nombre des limites précédentes. Pour plus d’informations, voir cette [annonce faite dans un billet du blog](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
+Demandez de nouvelles fonctionnalités et votez pour les demandes en visitant le [site User Voice](https://msip.uservoice.com/) pour Azure Information Protection.
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>Dois-je être un administrateur global pour configurer la classification et les étiquettes ?
 

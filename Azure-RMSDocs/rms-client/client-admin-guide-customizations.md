@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 28b4e89cd6300c9b206abdf45f5d580b4474eaa5
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 9e7e5e67b664d177f60a445aa54df3f6072ff9c7
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Configurations personnalisées pour le client Azure Information Protection
 
@@ -134,6 +134,9 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 ## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>Désactiver les options d’autorisations personnalisées pour les utilisateurs
 
 Cette option de configuration est actuellement en préversion.
+
+> [!IMPORTANT]
+> N’utilisez pas cette option si vous avez des étiquettes configurées pour des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers. Si vous le faites, quand l’étiquette est appliquée, les utilisateurs ne sont pas invités à configurer les autorisations personnalisées. Par conséquent, le document est étiqueté, mais n’est pas protégé comme prévu.
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 

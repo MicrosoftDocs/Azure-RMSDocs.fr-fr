@@ -1,66 +1,78 @@
 ---
-title: "Configurer les étiquettes pour des langues différentes dans Azure Information Protection"
-description: "Vous pouvez ajouter la prise en charge de langues différentes pour les étiquettes que les utilisateurs voient dans la barre Information Protection, en spécifiant les langues dans la stratégie Azure Information Protection et en important vos traductions."
+title: "Configurer des étiquettes et des modèles dans différentes langues dans Azure Information Protection"
+description: "Vous pouvez ajouter la prise en charge de différentes langues pour les étiquettes que les utilisateurs voient dans la barre Information Protection et pour tous les modèles visibles par l’utilisateur, en spécifiant les langues dans la stratégie Azure Information Protection et en important vos traductions."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/05/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: ec99bf36e8904a7304a9d33c32d17ba92e2e22d2
-ms.sourcegitcommit: 8b768e7e249e124f24acdf630d165eaf743f9c21
+ms.openlocfilehash: 33666be46b9b2fc022e541ec710a0be596f4ede0
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 08/30/2017
 ---
-# <a name="how-to-configure-labels-for-different-languages-in-azure-information-protection"></a>Guide de configuration des étiquettes pour des langues différentes dans Azure Information Protection
+# <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Guide pratique pour configurer des étiquettes et des modèles dans différentes langues dans Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
 >[!NOTE]
->Cette fonctionnalité en version préliminaire et peut uniquement être utilisée conjointement avec la **préversion** du client Azure Information Protection que vous pouvez télécharger à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+>Cette fonctionnalité est actuellement en préversion et doit être utilisée conjointement avec la **préversion** actuelle du client Azure Information Protection, que vous pouvez télécharger à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-Par défaut, les noms et descriptions des étiquettes prennent en charge une seule langue affichée pour tous les utilisateurs de votre organisation. Vous pouvez ajouter la prise en charge d’autres langues en sélectionnant celles dont vous avez besoin, exporter les noms d’étiquette actuels et leurs descriptions dans un fichier, modifier le fichier pour fournir vos traductions et réimporter le fichier dans votre stratégie Azure Information Protection.
+Bien que les étiquettes par défaut pour Azure Information Protection prennent en charge plusieurs langues, vous devez configurer la prise en charge pour les noms et les descriptions d’étiquette que vous spécifiez. Cette configuration nécessite les actions suivantes :
+
+1. Sélectionnez les langues utilisées par vos utilisateurs. 
+
+2. Exportez vos noms et descriptions d’étiquette actuels dans un fichier.
+
+3. Modifiez le fichier pour fournir vos traductions.
+
+4. Réimportez le fichier dans votre stratégie Azure Information Protection.
+
+Vous pouvez aussi configurer des modèles dans différentes langues quand l’une des conditions suivantes s’applique. Cette configuration est appropriée si les utilisateurs ou les administrateurs doivent voir le nom et la description du modèle actuel dans leur langue localisée.
+
+- Le modèle a été créé dans le portail Azure Classic ou à l’aide de PowerShell, et le modèle n’est pas associé à une étiquette à l’aide du paramètre de protection **Sélectionner un modèle prédéfini**.
+
+- Vous n’avez pas d’abonnement qui prend en charge les étiquettes, vous pouvez uniquement créer et gérer des modèles dans le portail Azure.
 
 Sélectionnez les langues qui correspondent à la langue de vos utilisateurs pour Office et Windows. Ces noms d’étiquette et descriptions s’affichent alors dans la barre d’Azure Information Protection dans les applications Office et la boîte de dialogue **Classification et protection - Azure Information Protection**, respectivement. Pour plus d’informations sur la langue choisie, consultez la section [Comment le client Azure Information Protection détermine la langue à afficher](#how-the-azure-information-protection-client-determines-the-language-to- display) de cette page. 
 
-## <a name="to-configure-labels-to-display-in-different-languages"></a>Pour configurer les étiquettes pour un affichage multilingue
+## <a name="to-configure-labels-and-templates-for-different-languages"></a>Pour configurer des étiquettes et des modèles dans différentes langues
 
-1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**. 
+1. Si vous ne l’avez pas déjà fait, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**. 
     
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. Dans le premier panneau **Azure Information Protection**, recherchez **GÉRER**, puis sélectionnez **Langues (version préliminaire)**.
+2. Dans la sélection de menu **Gérer**, sélectionnez **Langues (préversion)**.
 
-3. Dans le panneau **Azure Information Protection - Langues (version préliminaire)**, recherchez la première langue que vous souhaitez ajouter en tapant son nom dans la zone de recherche, ou en faisant défiler la liste des langues disponibles. 
+3. Dans le panneau **Azure Information Protection - Langues (préversion)**, sélectionnez **Ajouter une langue pour la traduction**. Sélectionnez les langues à ajouter, puis sélectionnez **OK**. Vous pouvez taper le nom de la langue dans la zone de recherche ou faire défiler la liste des langues disponibles
 
-4. Sélectionnez votre langue, puis sélectionnez **OK**.
-
-5. Dans le panneau suivant, vous verrez la langue sélectionnée ajoutée à une liste :
+4. Les langues sélectionnées s’affichent désormais dans le panneau **Azure Information Protection - Langues (préversion)** :
     
-    - Pour ajouter une autre langue, sélectionnez **Ajouter une nouvelle langue pour traduction** et répétez les étapes 3 et 4. 
+    - Pour ajouter une autre langue, sélectionnez **Ajouter une langue pour la traduction** et répétez l’étape précédente. 
         
         > [!NOTE]
         > Veillez à sélectionner les langues de vos utilisateurs pour Office et Windows. Dans certains cas, cela peut nécessiter deux sélections différentes par ordinateur.
         
     - Si vous changez d’avis pour une langue que vous avez ajoutée, sélectionnez cette entrée dans la liste, puis cliquez sur **Supprimer**.
 
-6. Lorsque toutes les langues que vous souhaitez prendre en charge sont répertoriées, sélectionnez la case à cocher à côté **NOM DE LA LANGUE** pour sélectionner toutes les entrées (ou vous pouvez également sélectionner des entrées individuelles), puis cliquez sur **Exporter** pour enregistrer une copie locale des noms d’étiquette et descriptions existants dans un fichier. 
+5. Lorsque toutes les langues que vous souhaitez prendre en charge sont répertoriées, sélectionnez la case à cocher à côté **NOM DE LA LANGUE** pour sélectionner toutes les entrées (ou vous pouvez également sélectionner des entrées individuelles), puis cliquez sur **Exporter** pour enregistrer une copie locale des noms d’étiquette et descriptions existants dans un fichier. 
     
     Le fichier téléchargé est nommé **exported localization.zip** et est enregistré dans le dossier Téléchargements. Il est également accessible en sélectionnant ce nom de fichier dans la barre d’état du portail Azure.
 
-7. Extrayez les fichiers de **exported localization.zip** afin de disposer des fichiers .xml pour chaque langue que vous avez sélectionnée pour le téléchargement. 
+6. Extrayez les fichiers de **exported localization.zip** afin de disposer des fichiers .xml pour chaque langue que vous avez sélectionnée pour le téléchargement. 
 
-8. Modifier chaque fichier .xml : pour chaque chaîne dans les balises `<LocalizedText>`, fournissez les traductions que vous souhaitez pour chaque langue choisie. 
+7. Modifier chaque fichier .xml : pour chaque chaîne dans les balises `<LocalizedText>`, fournissez les traductions que vous souhaitez pour chaque langue choisie. 
 
-9. Lorsque vous avez modifié chaque fichier .xml, créez un nouveau dossier compressé qui contient ces fichiers. Le dossier compressé peut avoir n’importe quel nom, mais il doit avoir une extension .zip.
+8. Lorsque vous avez modifié chaque fichier .xml, créez un nouveau dossier compressé qui contient ces fichiers. Le dossier compressé peut avoir n’importe quel nom, mais il doit avoir une extension .zip.
 
-10. Revenez au panneau du portail Azure et sélectionnez **Importer**. Si cette option n’est pas disponible, désactivez d’abord la case à cocher **NOM DE LA LANGUE** ou les cases à cocher pour les langues sélectionnées individuellement.
+9. Revenez au panneau **Azure Information Protection - Langues (préversion)**, puis sélectionnez **Importer**. Si cette option n’est pas disponible, désactivez d’abord la case à cocher **NOM DE LA LANGUE** ou les cases à cocher pour les langues sélectionnées individuellement.
     
-    Une fois l’importation terminée, les noms d’étiquettes et descriptions localisés sont téléchargés pour les utilisateurs la prochaine fois que vous publiez la stratégie Azure Information Protection. Vous pouvez cliquer sur **Publier** à partir du panneau **Stratégie globale** ou **Stratégies délimitées**.
+    Une fois l’importation terminée, les noms et descriptions d’étiquette localisés sont téléchargés pour les utilisateurs la prochaine fois que vous publiez la stratégie Azure Information Protection. Vous pouvez cliquer sur **Publier** à partir du panneau **Stratégie globale** ou **Stratégies délimitées**.
 
 ## <a name="how-the-azure-information-protection-client-determines-the-language-to-display"></a>Comment le client Azure Information Protection détermine la langue à afficher
 

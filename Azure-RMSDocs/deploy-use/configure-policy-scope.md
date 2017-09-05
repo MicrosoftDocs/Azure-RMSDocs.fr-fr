@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d3138cd16e1bd86d63243feea30d23db9aa45bdb
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: e790b669298bb40b3397150d1b2c3ed7e26c10ab
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées
 
@@ -35,26 +35,30 @@ Par exemple, si vous disposez d’une étiquette nommée **Confidentiel** dans l
 
 Pour configurer une stratégie délimitée pour Azure Information Protection :
 
-1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général.
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général. Accédez ensuite au panneau **Azure Information Protection**. 
 
-2. Accédez au panneau **Azure Information Protection**: par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information Protection** dans la zone Filtrer. Dans les résultats, sélectionnez **Azure Information Protection**. 
+    Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-    Dans le panneau **Azure Information Protection** initial, sélectionnez **Ajouter une nouvelle stratégie**. S’affiche alors le deuxième panneau qui sert à présenter l’actualisation de la stratégie globale, puis à configurer votre nouvelle stratégie délimitée.
+2. Dans la sélection de menu **STRATÉGIES**, sélectionnez **Stratégies délimitées**.
 
-3. Spécifiez le nom et la description de la stratégie que seuls les administrateurs voient dans le portail Azure. Ce nom doit être unique pour votre locataire. Ensuite, cliquez sur **Spécifier les utilisateurs/groupes qui obtiennent cette stratégie** et dans les panneaux suivants, vous pouvez rechercher et sélectionner les utilisateurs et groupes pour cette stratégie. Les étiquettes et paramètres que vous configurez dans cette stratégie délimitée sont appliqués à ces utilisateurs uniquement.
+3. Dans le panneau **Azure Information Protection - Stratégie délimitée**, sélectionnez **Ajouter une nouvelle stratégie**. Vous voyez alors le panneau **Stratégie** qui affiche votre stratégie globale existante, où vous pouvez désormais configurer votre nouvelle stratégie délimitée.
 
-4. Maintenant, créez des étiquettes ou configurez les paramètres de la stratégie délimitée. La stratégie globale est toujours appliquée en premier, afin de compléter la stratégie globale avec les nouvelles étiquettes et de remplacer les paramètres globaux. Par exemple, la stratégie globale peut ne pas avoir d’étiquette par défaut spécifiée et vous configurez une étiquette par défaut différente dans les différentes stratégies délimitées à des services spécifiques.
+4. Spécifiez le nom et la description de la stratégie que seuls les administrateurs voient dans le portail Azure. Ce nom doit être unique pour votre locataire. Ensuite, sélectionnez **Spécifier les utilisateurs/groupes qui obtiennent cette stratégie** et dans les panneaux suivants, vous pouvez rechercher et sélectionner les utilisateurs et groupes concernés par cette stratégie. Les étiquettes et paramètres que vous configurez dans cette stratégie délimitée sont appliqués à ces utilisateurs uniquement.
+
+5. Maintenant, créez des étiquettes ou configurez les paramètres de la stratégie délimitée. La stratégie globale est toujours appliquée en premier, afin de compléter la stratégie globale avec les nouvelles étiquettes et de remplacer les paramètres globaux. Par exemple, la stratégie globale peut ne pas avoir d’étiquette par défaut spécifiée et vous configurez une étiquette par défaut différente dans les différentes stratégies délimitées à des services spécifiques.
 
     Si vous avez besoin d’aide pour configurer des étiquettes ou paramètres, utilisez les liens fournis dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).
 
-5. Comme quand vous modifiez la stratégie globale, quand vous apportez des modifications dans un panneau Azure Information Protection, cliquez sur **Enregistrer** pour enregistrer les modifications, ou cliquez sur **Ignorer** pour rétablir les derniers paramètres enregistrés. 
+6. Comme quand vous modifiez la stratégie globale, quand vous apportez des modifications dans un panneau Azure Information Protection, cliquez sur **Enregistrer** pour enregistrer les modifications, ou cliquez sur **Ignorer** pour rétablir les derniers paramètres enregistrés. 
 
-6. Quand vous avez fini d’apporter les modifications souhaitées pour cette stratégie délimitée, dans le panneau **Azure Information Protection** initial, vérifiez que cette stratégie délimitée respecte l’ordre dans lequel vous voulez l’appliquer. Cette vérification s’avère importante quand vous avez sélectionné le même utilisateur pour plusieurs stratégies délimitées. Ensuite, cliquez sur **Publier**. 
+7. Quand vous avez fini de modifier cette stratégie délimitée, dans le panneau **Azure Information Protection - Stratégies délimitées**, vérifiez que cette stratégie délimitée respecte l’ordre dans lequel vous voulez l’appliquer. Cette vérification s’avère importante quand vous avez sélectionné le même utilisateur pour plusieurs stratégies délimitées. Pour changer l’ordre, sélectionnez le menu contextuel (**...**), puis **Monter** ou **Descendre**. 
+
+8. Pour déployer vos modifications, cliquez sur **Publier**. 
 
 Le client Azure Information Protection vérifie toutes les modifications à chaque démarrage d’une application Office prise en charge ou à chaque ouverture de l'Explorateur de fichiers. Il télécharge les modifications dans la stratégie globale ou les stratégies délimitées qui s’appliquent à cet utilisateur.
 
 > [!TIP]
-> Une fois que vous avez enregistré votre stratégie délimitée, vous pouvez utiliser le **Cross Policy Editor** dans le panneau **Azure Information Protection** pour afficher et reconfigurer toutes les étiquettes de votre stratégie Azure Information Protection. Cette méthode fournit un moyen simple de comparer les étiquettes de plusieurs stratégies (votre stratégie globale et toutes les stratégies délimitées). Toutefois, cet éditeur ne vous permet pas d’ajouter ou de réorganiser des étiquettes, ni d'afficher ou de configurer les paramètres de stratégie.
+> Une fois que vous avez enregistré votre stratégie délimitée, dans la section **STRATÉGIES**, vous pouvez utiliser l’option **Tout - affichage des stratégies croisées** pour afficher et reconfigurer toutes les étiquettes de votre stratégie Azure Information Protection. Cette méthode permet de comparer facilement les étiquettes de votre stratégie globale et de toutes les stratégies délimitées. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 

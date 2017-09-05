@@ -4,17 +4,17 @@ description: "Didacticiel de prise en main vous permettant de tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 9afee2da9cb6fdd787dfb6bdafe2ae64fdef9475
-ms.sourcegitcommit: ea03477312b64c0a846701e46d991fe2c85b3a1f
+ms.openlocfilehash: 34a20c3e83b2d3d6fde15d1226535ccb90431126
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Didacticiel de démarrage rapide pour Azure Information Protection 
 
@@ -36,9 +36,11 @@ Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
   > [!TIP] 
   > Si vous avez besoin de demander un abonnement, essayez de vous y prendre à l’avance, car ce processus peut parfois nécessiter un certain temps.
 
-- Un compte d’administrateur général pour vous connecter au portail Azure afin de configurer la stratégie Azure Information Protection. Ce compte doit également disposer d’une adresse de messagerie et d’un service de messagerie professionnel (par exemple, Exchange Online ou Exchange Server).
+- Un compte d’administrateur général ou un compte d’administrateur de la sécurité pour vous connecter au portail Azure afin de configurer la stratégie Azure Information Protection. Ce compte doit également avoir une adresse e-mail et un service de messagerie professionnel, par exemple, Exchange Online.
 
-- Un ordinateur Windows (au minimum Windows 7 avec le Service Pack 1) sur lequel est installé Office 365 ProPlus avec des applications 2016 ou 2013, Office Professionnel Plus 2016, Office Professionnel Plus 2013 avec le Service Pack 1 ou Office Professionnel Plus 2010 avec Service Pack 2. Vous devez être connecté à vos applications Office à l’aide de votre compte cloud.
+- Un ordinateur Windows (au minimum Windows 7 avec le Service Pack 1) sur lequel est installé Office 365 ProPlus avec des applications 2016 ou 2013, Office Professionnel Plus 2016, Office Professionnel Plus 2013 avec le Service Pack 1 ou Office Professionnel Plus 2010 avec Service Pack 2. 
+    
+    Pour utiliser ces applications avec Azure Information Protection, vous devez avoir un [abonnement Office 365 qui inclut l’utilisation du service Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Par exemple, un abonnement Office 365 E3 ou Office 365 E5. Si vous utilisez une licence de cet abonnement, vous devez être connecté à vos applications Office.
 
 C’est parti !
 

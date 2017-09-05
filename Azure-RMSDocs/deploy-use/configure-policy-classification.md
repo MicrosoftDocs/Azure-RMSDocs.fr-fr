@@ -4,17 +4,17 @@ description: "Lorsque vous configurez des conditions pour une étiquette, vous p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 3aad6eb4956b6565e44c4b1019c984a28cb41fdc
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: ef84f3ceb8f732dd475b4db8eae489e715d4b7da
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -26,7 +26,7 @@ Lorsque vous configurez des conditions pour une étiquette, vous pouvez affecter
  
 - La classification recommandée s’applique à Word, Excel et PowerPoint lors de l’enregistrement de fichiers.
 
-Lorsque vous configurez des conditions, vous pouvez utiliser des modèles prédéfinis, tels que « Numéros de carte de crédit » ou « Numéro de sécurité sociale (US) ». Vous pouvez aussi définir une chaîne ou un modèle personnalisé comme condition de classification automatique. Ces conditions s’appliquent au corps de texte dans les documents et les e-mails, ainsi qu’aux en-têtes et pieds de page. Pour plus d’informations sur les conditions, consultez la section [Informations sur les conditions intégrées](#information-about-the-built-in-conditions).
+Quand vous configurez des conditions, vous pouvez utiliser des modèles prédéfinis, comme **Numéro de carte de crédit** ou **Numéro de sécurité sociale (USA)**. Vous pouvez aussi définir une chaîne ou un modèle personnalisé comme condition de classification automatique. Ces conditions s’appliquent au corps de texte dans les documents et les e-mails, ainsi qu’aux en-têtes et pieds de page. Pour plus d’informations sur les conditions, consultez la section [Détails des types d’informations](#details-about-the-information-types).
 
 Évaluation de plusieurs conditions lorsqu’elles s’appliquent à plusieurs étiquettes :
 
@@ -47,37 +47,42 @@ Dans cet exemple, l’utilisateur peut cliquer sur **Modifier maintenant** pour 
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Pour configurer la classification automatique ou recommandée pour une étiquette
 
-1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**. 
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général. Accédez ensuite au panneau **Azure Information Protection**. 
     
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. Si l’étiquette à configurer pour la classification automatique ou recommandée s’applique à tous les utilisateurs, sélectionnez l’étiquette à modifier à partir du panneau **Stratégie : Globale**, puis apportez vos modifications dans le panneau **Étiquette** et tous les panneaux suivants si nécessaire. 
+2. Si l’étiquette à configurer s’applique à tous les utilisateurs, restez dans le panneau **Azure Information Protection - Stratégie globale**.
+    
+    Si l’étiquette à configurer se trouve dans une [stratégie délimitée](configure-policy-scope.md) pour s’appliquer uniquement aux utilisateurs sélectionnés, dans la sélection de menu **STRATÉGIES**, sélectionnez **Stratégies délimitées**. Sélectionnez ensuite votre stratégie délimitée dans le panneau **Azure Information Protection - Stratégies délimitées**.
 
-     Si l’étiquette à configurer se trouve dans une [stratégie délimitée](configure-policy-scope.md) pour qu’elle s’applique uniquement aux utilisateurs sélectionnés, commencez par sélectionner cette stratégie à partir du panneau **Azure Information Protection** initial.  
+3. Dans le panneau **Azure Information Protection - Stratégie globale** ou le panneau **Stratégie :\<nom>**, sélectionnez l’étiquette à configurer. 
 
-3. Dans le panneau **Étiquette**, dans la section **Configurer des conditions pour appliquer automatiquement cette étiquette**, cliquez sur **Ajouter une condition**.
+4. Dans le panneau **Étiquette**, dans la section **Configurer des conditions pour appliquer automatiquement cette étiquette**, cliquez sur **Ajouter une condition**.
 
-4. Dans le panneau **Condition**, sélectionnez **Intégré** si vous souhaitez utiliser une condition prédéfinie, ou **Personnalisé** si vous souhaitez spécifier votre propre condition, puis cliquez sur **Enregistrer** :
-
-    - Pour **Intégré** : faites votre sélection dans la liste des conditions disponibles, puis sélectionnez le nombre minimal d’occurrences et déterminez si l’occurrence doit avoir une valeur unique pour être incluse dans le nombre d’occurrences.
+5. Dans le panneau **Condition**, sélectionnez **Types d’informations** si vous voulez utiliser une condition prédéfinie, ou **Personnalisé** si vous voulez spécifier votre propre condition, puis cliquez sur **Enregistrer** :
+    - Pour **Types d’informations** : sélectionnez une condition dans la liste des conditions disponibles, puis sélectionnez le nombre minimal d’occurrences et déterminez si l’occurrence doit avoir une valeur unique pour être incluse dans le nombre d’occurrences.
         
-        Pour obtenir plus d’informations sur les règles de détection pour ces conditions et des exemples, consultez la section [Informations sur les conditions intégrées](#information-about-the-built-in-conditions).
-
+        Pour utiliser la liste complète des conditions, vous devez avoir la préversion actuelle du client Azure Information Protection. Si vous avez la version actuelle de disponibilité générale du client, seules les cinq conditions suivantes sont prises en charge : **Code SWIFT**, **Numéro de carte de crédit**, **Numéro d’acheminement ABA**, **Numéro de sécurité sociale (USA)** et **Numéro de compte bancaire international (IBAN)**. [Plus d’informations](#details-about-the-information-types)
+    
     - Pour **Personnalisé** : spécifiez un nom et une expression pour la correspondance, sans guillemets ni caractères spéciaux. Spécifiez ensuite s’il s’agit d’une expression régulière, si la casse doit être respectée, le nombre minimal d’occurrences, et si l’occurrence doit avoir une valeur unique pour être incluse dans le nombre d’occurrences.
         
-    **Exemple d’options occurrences** : vous sélectionnez l’option de numéro de sécurité sociale intégrée et définissez le nombre minimal d’occurrences sur 2, et si le même numéro de sécurité sociale est répertorié deux fois dans un document : si vous définissez **Compter les occurrences avec des valeurs uniques uniquement** sur **Activé**, la condition n’est pas remplie. Si vous définissez cette option sur **Désactivé**, la condition est remplie.
+        Si vous avez la préversion actuelle du client Azure Information Protection, les expressions régulières utilisent les modèles regex d’Office 365. Pour plus d’informations, consultez [Définition de correspondances basées sur des expressions régulières](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2) dans la documentation Office. 
+        
+    **Exemple d’options occurrences** : vous sélectionnez l’option de numéro de sécurité sociale (USA) intégrée et définissez le nombre minimal d’occurrences sur 2, et un document contient deux fois le même numéro de sécurité sociale (USA) : si vous définissez **Compter les occurrences avec des valeurs uniques uniquement** sur **Activé**, la condition n’est pas remplie. Si vous définissez cette option sur **Désactivé**, la condition est remplie.
 
-5. Dans le panneau **Étiquette**, configurez les options suivantes, puis cliquez sur **Enregistrer** :
-
+6. Dans le panneau **Étiquette**, configurez les options suivantes, puis cliquez sur **Enregistrer** :
+    
     - Choisissez la classification automatique ou recommandée : pour l’option **Sélectionner comment cette étiquette est appliquée : automatiquement ou recommandée à l’utilisateur**, sélectionnez **Automatique** ou **Recommandée**.
-
+    
     - Spécifiez le texte de l’invite utilisateur ou du conseil de stratégie : conservez le texte par défaut ou spécifiez votre propre chaîne.
 
-6. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
+7. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** initial sur **Publier**.
 
-## <a name="information-about-the-built-in-conditions"></a>Informations sur les conditions intégrées
+## <a name="details-about-the-information-types"></a>Détails des types d’informations
 
-Vous pouvez sélectionner les conditions suivantes :
+Si vous avez la préversion actuelle du client Azure Information Protection, la liste complète des types d’informations est prise en charge et utilise les types d’informations sensibles et la détection de modèle de prévention de perte de données (DLP) d’Office 365. Vous avez le choix entre les nombreux types courants d’informations sensibles, dont certains sont spécifiques à certaines régions. Pour plus d’informations, consultez [Éléments recherchés par les types d’informations sensibles](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) dans la documentation Office. Quand Azure Information Protection évalue ces types d’informations, il n’utilise pas le paramètre de niveau de confiance DLP d’Office, mais recherche celui avec le niveau de confiance le plus faible.  
+
+Si vous avez la version actuelle de disponibilité générale du client, seuls les types d’informations suivants sont pris en charge :
 
 - [Code SWIFT](#swift-code )
 
@@ -89,6 +94,7 @@ Vous pouvez sélectionner les conditions suivantes :
 
 - [Numéro de compte bancaire international (IBAN)](#international-banking-account-number-iban)
 
+Consultez les sections suivantes pour plus de détails sur chaque type d’informations de la version de disponibilité générale du client.
 
 ### <a name="swift-code"></a>Code SWIFT
 

@@ -4,17 +4,17 @@ description: "Identifiez les limitations, conditions préalables et recommandati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 4730c2e27a78ec8bf106f43b3ac7097a40e0555d
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: 80e7cb411132fa3c3fdff7f8c80febde68b071fa
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 
@@ -61,13 +61,17 @@ En plus de ne pas prendre en charge les avantages associés à l’utilisation d
 
 - Absence de prise en charge d’Office 2010 ou Office 2007.
 
-- N’utilisez pas l’option **Ne pas transférer** lorsque vous configurez une étiquette pour la protection Azure RMS. Vous devez aussi demander aux utilisateurs de ne pas sélectionner manuellement cette option dans Outlook. 
+- Demandez aux utilisateurs de ne pas sélectionner **Ne pas transférer** dans Outlook ou fournissez des instructions spécifiques. 
 
-    Si l’option Ne pas transférer est appliquée par une étiquette ou manuellement par les utilisateurs, l’option risque d’être appliquée par votre déploiement AD RMS, et non par le service de gestion des droits Azure voulu. Dans ce scénario, les personnes extérieures avec qui vous partagez du contenu ne peuvent pas ouvrir les e-mails auxquels l’option Ne pas transférer est appliquée.
+    Même si vous pouvez configurer une étiquette pour **Ne pas transférer** afin d’utiliser HYOK ou le service Azure Rights Management, les utilisateurs peuvent également sélectionner Ne pas transférer eux-mêmes. Ils peuvent sélectionner cette option à l’aide du bouton **Ne pas transférer** sous l’onglet **Message** du ruban Office ou à l’aide des options de menu d’Outlook. Les options de menu **Ne pas transférer** sont situées sous **Fichier** > **Autorisations** et en cliquant sur le bouton **Autorisations** de l’onglet **Options** sur le ruban. 
     
-    À partir de la version 1.9.58.0 du client Azure Information Protection (actuellement en préversion), le bouton **Ne pas transférer** dans Outlook utilise toujours Azure RMS. Ce paramètre n’affecte pas l’option de menu **Ne pas transférer** d’Outlook, ni l’option **Ne pas transférer** lorsque vous configurez une étiquette pour la protection. Si vous ne souhaitez pas voir ce comportement, vous pouvez masquer le bouton **Ne pas transférer** dans Outlook en configurant un [paramètre client avancé](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook).
+    Quand les utilisateurs sélectionnent le bouton Ne pas transférer, Azure RMS ou AD RMS peut être utilisé et le choix n’est pas déterminant. Quand les utilisateurs sélectionnent **Ne pas transférer** à partir d’une option de menu Outlook, ils peuvent choisir Azure RMS ou AD RMS, mais risquent de ne pas savoir quelle option choisir pour leur e-mail. Dans les deux scénarios, si AD RMS est utilisé par erreur à la place d’Azure RMS, les personnes externes avec qui vous partagez du contenu ne peuvent pas ouvrir ces e-mails.
+    
+    La préversion actuelle du client Azure Information Protection utilise toujours Azure RMS quand les utilisateurs sélectionnent le bouton **Ne pas transférer** dans Outlook. Si vous ne souhaitez pas voir ce comportement, vous pouvez masquer le bouton **Ne pas transférer** dans Outlook en configurant un [paramètre client avancé](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook). 
 
-- Si les utilisateurs configurent des autorisations personnalisées quand vous utilisez les protections Azure RMS et AD RMS (HYOK), le document ou l’e-mail est toujours protégé par Azure Rights Management.
+- Pour la version actuelle de disponibilité générale du client Azure Information Protection : si les utilisateurs configurent des autorisations personnalisées quand vous utilisez les protections Azure RMS et AD RMS (HYOK), le document ou l’e-mail est toujours protégé par Azure Rights Management. Cette limitation ne s’applique pas à la préversion actuelle du client.
+
+- Si vous configurez des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers, ce qui est pris en charge dans la préversion actuelle du client Azure Information Protection : dans l’Explorateur de fichiers, la protection est toujours appliquée à l’aide d’Azure RMS au lieu de la protection HYOK (AD RMS). 
 
 - Si un utilisateur choisit dans Outlook une étiquette qui applique la protection AD RMS, puis change d’avis avant d’envoyer l’e-mail et sélectionne une étiquette qui applique la protection Azure RMS, la dernière étiquette sélectionnée ne peut pas s’appliquer. Les utilisateurs voient apparaître le message d’erreur suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Vous n’avez pas l’autorisation requise pour effectuer cette action.**
     
@@ -107,9 +111,11 @@ Pour obtenir des informations et des instructions sur le déploiement pour AD RM
 
 ## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Recherche d’informations pour spécifier la protection AD RMS avec une étiquette Azure Information Protection
 
-Lorsque vous configurez une étiquette pour la protection **HYOK (AD RMS)**, vous devez spécifier le GUID du modèle et l’URL de licence de votre cluster AD RMS. Vous trouverez ces deux valeurs dans la console AD RMS (Active Directory Rights Management Services) :
+Quand vous configurez une étiquette pour la protection **HYOK (AD RMS)**, vous devez spécifier l’URL de licence de votre cluster AD RMS. Par ailleurs, vous devez spécifier un modèle que vous avez configuré pour les autorisations à accorder aux utilisateurs ou permettre aux utilisateurs de définir les autorisations et les utilisateurs. 
 
-- Pour trouver le GUID du modèle : développez le cluster, puis cliquez sur **Modèles de stratégies de droits**. Vous pouvez ensuite copier le GUID des informations **Modèles de stratégies de droits distribués** à partir du modèle à utiliser. Par exemple : 82bf3474-6efe-4fa1-8827-d1bd93339119
+Les valeurs du GUID de modèle et de l’URL de licence sont disponibles dans la console des services AD RMS (Active Directory Rights Management Services) :
+
+- Pour rechercher le GUID du modèle : développez le cluster, puis cliquez sur **Modèles de stratégies de droits**. Vous pouvez ensuite copier le GUID des informations **Modèles de stratégies de droits distribués** à partir du modèle à utiliser. Par exemple : 82bf3474-6efe-4fa1-8827-d1bd93339119
 
 - Pour trouver l’URL de licence : cliquez sur le nom du cluster. Dans **Détails du cluster**, copiez la valeur **Gestion des licences** valeur sans la chaîne **/_wmcs/licensing**. Par exemple : https://rmscluster.contoso.com 
     

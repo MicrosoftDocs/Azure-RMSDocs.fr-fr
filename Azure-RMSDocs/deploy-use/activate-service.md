@@ -4,7 +4,7 @@ description: "Le service Azure Rights Management doit être activé pour que vot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f6d13d05c7139635c9a43770e418c1d7e11f880e
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 6aa009795e45281df1c9406357f810b8d25302bc
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="activating-azure-rights-management"></a>Activation d'Azure Rights Management
 
@@ -42,11 +42,9 @@ Avant d’activer [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanage
 
 Quand le service Azure Rights Management est activé, tous les utilisateurs de votre organisation peuvent appliquer la protection des informations à leurs fichiers, et tous les utilisateurs peuvent ouvrir (consommer) des fichiers protégés par ce service. Toutefois, si vous préférez, vous pouvez restreindre les personnes autorisées à appliquer la protection des informations, en utilisant des contrôles d'intégration pour un déploiement échelonné. Pour plus d’informations, consultez la section [Configuration de contrôles d’intégration pour un déploiement échelonné](#configuring-onboarding-controls-for-a-phased-deployment) de cet article.
 
-Pour découvrir comment activer le service Rights Management à partir de votre portail de gestion, choisissez d’utiliser le centre d’administration Office 365, le portail Azure Classic ou le portail Azure (cette dernière méthode est actuellement en préversion) :
+Pour obtenir des instructions sur l’activation du service Rights Management à partir de votre portail de gestion, choisissez si vous utilisez le centre d’administration Office 365 ou le portail Azure :
 
 - [**Centre d’administration Office 365**](activate-office365.md) : nécessite un compte d’administrateur général
-
-- [**Portail Azure Classic**](activate-azure-classic.md) : nécessite un compte d’administrateur général
 
 - [**Portail Azure**](activate-azure.md) : nécessite un compte d’administrateur général ou un [compte d’administrateur de sécurité](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles)
 

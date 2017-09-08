@@ -4,7 +4,7 @@ description: Instructions sur la classification et la protection de vos document
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 954b69213c055c4b94981fabef40df29aa0e19ba
-ms.sourcegitcommit: 5a087ff509162a98f3d09fda4ef5a114028e5664
+ms.openlocfilehash: 5e8329a441dcc871a155ef1b1484544732bec212
+ms.sourcegitcommit: 23aeb2bcce05968b850313333e359c99dd99a56f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/05/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classifier et protéger un fichier ou un e-mail avec Azure Information Protection
 
@@ -85,8 +85,6 @@ Vous pouvez spécifier vos propres paramètres de protection pour les documents 
     - **Sélectionner des autorisations** : si vous souhaitez protéger le fichier afin que vous seul puissiez y accéder, sélectionnez **Pour moi uniquement**. Dans le cas contraire, sélectionnez le niveau d’accès que vous souhaitez accorder aux personnes spécifiées.
 
     - **Sélectionner des utilisateurs, des groupes ou des organisations** : spécifiez les personnes qui doivent disposer des autorisations que vous avez sélectionnées pour vos fichiers. Entrez leur adresse e-mail complète, une adresse e-mail de groupe ou un nom de domaine de l’organisation pour tous les utilisateurs appartenant à cette organisation. Attention, les adresses e-mail personnelles ne sont actuellement pas prises en charge.
-    
-    Si vous avez la préversion actuelle du client Azure Information Protection, vous pouvez également utiliser le bouton **Sélectionner des utilisateurs, des groupes ou une organisation**. Ce bouton affiche la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** pour votre annuaire Active Directory local. Si les utilisateurs ou les groupes que vous voulez spécifier se trouvent dans Active Directory, vous pouvez les rechercher et les sélectionner à partir de cette boîte de dialogue. Pour utiliser cette option, votre ordinateur doit être connecté au réseau interne et être joint au domaine, et vous devez disposer d’un annuaire Active Directory local. Si une de ces conditions n’est pas remplie, le message suivant s’affiche : **Le programme ne peut pas ouvrir la boîte de dialogue requise car aucun emplacement n’a été trouvé.**
         
     - **Faire expirer l’accès** : sélectionnez cette option uniquement pour les fichiers ayant des contraintes de temps, afin que les personnes que vous avez spécifiées ne puissent pas les ouvrir après une date que vous définissez. Vous pouvez toujours ouvrir le fichier d’origine mais, le jour spécifié, après minuit (dans votre fuseau horaire), les personnes que vous avez désignées ne pourront plus l’ouvrir.
 
@@ -131,7 +129,7 @@ Le guide d’administration contient une liste complète des types de fichiers p
     
     - **Sélectionner des utilisateurs, des groupes ou des organisations** : spécifiez les personnes qui doivent disposer des autorisations que vous avez sélectionnées pour vos fichiers. Entrez leur adresse e-mail complète, une adresse e-mail de groupe ou un nom de domaine de l’organisation pour tous les utilisateurs appartenant à cette organisation. Attention, les adresses e-mail personnelles ne sont actuellement pas prises en charge.
     
-    Vous pouvez aussi utiliser le bouton **Sélectionner des utilisateurs, des groupes ou une organisation** pour sélectionner des utilisateurs ou des groupes dans le carnet d’adresses Outlook. Si vous avez la préversion actuelle du client Azure Information Protection, ce bouton affiche la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** pour votre annuaire Active Directory local. Si les utilisateurs ou les groupes que vous voulez spécifier se trouvent dans Active Directory, vous pouvez les rechercher et les sélectionner à partir de cette boîte de dialogue. Pour utiliser cette option, votre ordinateur doit être connecté au réseau interne et être joint au domaine, et vous devez disposer d’un annuaire Active Directory local. Si une de ces conditions n’est pas remplie, le message suivant s’affiche : **Le programme ne peut pas ouvrir la boîte de dialogue requise car aucun emplacement n’a été trouvé.**
+    Vous pouvez également utiliser l’icône de carnet d’adresses pour sélectionner des utilisateurs ou des groupes dans le carnet d’adresses Outlook.
         
     - **Faire expirer l’accès** : sélectionnez cette option uniquement pour les fichiers pour lesquels le temps est un facteur critique afin que les personnes que vous avez spécifiées ne soient pas en mesure d’ouvrir le fichier ou les fichiers sélectionnés après une date que vous définissez. Vous serez toujours en mesure d’ouvrir le fichier d’origine mais après minuit (sur votre fuseau horaire), au jour que vous définissez, les personnes que vous avez spécifiées ne pourront pas ouvrir le fichier.
     

@@ -4,7 +4,7 @@ description: "Informations et instructions sur la journalisation de l’utilisat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 032fb5525d1bd4f32419358cdeae5efe1be30f56
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: ebfd7ce4266061cef3099fb8fb096c95b01e6fb4
+ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Journalisation et analyse de l’utilisation du service Azure Rights Management
 
 >*S’applique à : Azure Information Protection, Office 365*
 
-Utilisez ces informations pour comprendre comment vous pouvez utiliser la journalisation de l’utilisation pour le service Azure Rights Management d’Azure Information Protection. Ce service fournit la protection des données pour les documents et e-mails de votre organisation. Il peut également consigner chaque demande qui lui est soumise, notamment les demandes faites par les utilisateurs, les actions effectuées par vos administrateurs pour ce service et les actions effectuées par les opérateurs Microsoft pour prendre en charge votre déploiement Azure Information Protection.
+Utilisez ces informations pour comprendre comment vous pouvez utiliser la journalisation de l’utilisation pour le service Azure Rights Management d’Azure Information Protection. Ce service assure la protection des données des documents et e-mails de votre organisation et peut journaliser chaque demande adressée à ce dernier. Ces demandes incluent les cas où les utilisateurs protègent des documents et des e-mails, mais également consomment ce contenu, les actions effectuées par vos administrateurs pour ce service et les actions effectuées par des opérateurs Microsoft pour prendre en charge votre déploiement Azure Information Protection. 
 
 Vous pouvez ensuite utiliser ces journaux du service Azure Rights Management pour prendre en charge les scénarios d’entreprise suivants :
 
@@ -40,12 +40,18 @@ Vous pouvez ensuite utiliser ces journaux du service Azure Rights Management pou
 
     En cas de fuite d’informations, vous devrez très certainement fournir une liste des personnes qui ont accédé récemment à des documents spécifiques ainsi que le type d’informations auxquelles a pu accéder un individu suspecté. Vous pouvez répondre à ces types de questions quand vous utilisez cette journalisation, car les personnes qui consultent du contenu protégé doivent toujours obtenir une licence Rights Management pour ouvrir des documents et des images protégés par le service Azure Rights Management, même si ces fichiers sont déplacés par e-mail ou s’ils sont copiés sur des lecteurs USB ou d’autres dispositifs de stockage. Cela signifie que vous pouvez utiliser ces journaux en tant que source d’informations fiable pour une analyse légale quand vous protégez vos données à l’aide du service Azure Rights Management.
 
-> [!NOTE]
-> Si vous vous intéressez uniquement à la journalisation des tâches d’administration pour le service Azure Rights Management et que vous ne souhaitez pas suivre la manière dont les utilisateurs utilisent le service Rights Management, vous pouvez utiliser l’applet de commande Windows PowerShell [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) pour Azure Rights Management.
-> 
-> Vous pouvez également utiliser le portail Azure Classic pour obtenir des rapports détaillés tels que **Résumé RMS**, **Utilisateurs RMS actifs**, **Plateformes des appareils RMS** et **Utilisation d’applications RMS**. Pour accéder à ces rapports à partir du portail Azure Classic, cliquez sur **Active Directory**, sélectionnez et ouvrez un annuaire, puis cliquez sur **RAPPORTS**.
+En plus de cette journalisation de l’utilisation, vous disposez également des options de journalisation suivantes :
 
-Pour plus d’informations sur la journalisation de l’utilisation d’Azure Rights Management, consultez les sections suivantes.
+|Option de journalisation|Description|
+|----------------|---------------|
+|Journal d’administration|Enregistre les tâches d’administration pour le service Azure Rights Management. Par exemple, si le service est désactivé, lorsque la fonctionnalité de super utilisateur est activée et lorsque des utilisateurs délèguent des autorisations d’administrateur au service. <br /><br />Pour plus d'informations, consultez l’applet de commande PowerShell, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
+|Rapports web|Rapport d’utilisation de haut niveau depuis le portail Azure Classic : **Résumé RMS**, **Utilisateurs RMS actifs**, **Plateformes des appareils RMS** et **Utilisation d’applications RMS**. <br /><br />Pour accéder à ces rapports depuis le portail Azure Classic, cliquez sur **Active Directory**, sélectionnez et ouvrez un répertoire, puis cliquez sur **RAPPORTS**.|
+|Suivi des documents|Permet aux utilisateurs d’effectuer le suivi et de révoquer les documents dont ils ont effectué le suivi avec le client Azure Information Protection ou l’application de partage RMS. Les administrateurs généraux peuvent également effectuer le suivi de ces documents au nom des utilisateurs. <br /><br />Pour plus d’informations, consultez [Configuration et utilisation du suivi des documents pour Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
+|Journaux des événements clients|Activité d’utilisation pour le client Azure Information Protection, enregistrée dans le journal des événements **Applications et services** Windows local, **Azure Information Protection**. <br /><br />Pour plus d’informations, consultez [Journalisation de l’utilisation du client Azure Information Protection](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
+|Fichiers journaux clients|Journaux de dépannage pour le client Azure Information Protection, situé dans **%localappdata%\Microsoft\MSIP**. <br /><br />Ces fichiers sont destinés au Support Microsoft.|
+
+
+Pour plus d’informations sur la journalisation de l’utilisation pour le service Azure Rights Management, consultez les sections suivantes. 
 
 ## <a name="how-to-enable-azure-rights-management-usage-logging"></a>Comment activer la journalisation de l’utilisation d’Azure Rights Management
 Depuis février 2016, la journalisation de l’utilisation d’Azure Rights Management est activée par défaut pour tous les clients. Cela s’applique aux clients qui ont activé leur service Azure Rights Management avant février 2016 et à ceux qui l’activent après février 2016. 

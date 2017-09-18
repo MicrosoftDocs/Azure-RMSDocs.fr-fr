@@ -4,17 +4,17 @@ description: "Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: dbe198f84ed092f815e2c419d039d4f926fb5892
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: cf84cef5d6bc4d3df32a4e3c8bc3a6ac7380655c
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Étape 2 : Configurer et publier la stratégie Azure Information Protection
 
@@ -67,7 +67,7 @@ Nous allons créer maintenant une sous-étiquette pour **Confidentiel**.
     
     ![Protection configurée pour une étiquette Azure Information Protection](../media/info-protect-protection-bar-configured.png) 
     
-4. Dans le panneau **Protection**, vérifiez que **Azure RMS** est sélectionné ainsi que **Définir des autorisations**. Ensuite, sélectionnez **Ajouter des autorisations**.
+4. Dans le panneau **Protection**, vérifiez qu’**Azure RMS** ou **Azure (clé du cloud)** est sélectionné. Le nom de cette option est en cours de modification. Vérifiez que **Définir des autorisations** est également sélectionné. Ensuite, sélectionnez **Ajouter des autorisations**.
 
 5. Dans le panneau **Ajouter des autorisations**, sélectionnez **Ajouter \<nom de l’organisation> - Tous les membres**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous voyez et sélectionnez l’option suivante :
     
@@ -123,7 +123,7 @@ Nous allons créer maintenant une sous-étiquette pour **Confidentiel**.
 
 13. Cliquez sur **Enregistrer** dans ce panneau **Sous-étiquette**. Puis, dans le panneau **Stratégie : Globale**, cliquez une nouvelle fois sur **Enregistrer**.
     
-    Vous voyez maintenant votre nouvelle sous-étiquette, configurée pour la protection Azure RMS et les marquages visuels :
+    Vous voyez maintenant votre nouvelle sous-étiquette, configurée pour la protection et les marquages visuels. Exemple :
 
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut configurée](../media/info-protect-policy-configuredv2.png)
     

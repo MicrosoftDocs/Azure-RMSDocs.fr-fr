@@ -4,17 +4,17 @@ description: "Identifiez les limitations, conditions préalables et recommandati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 80e7cb411132fa3c3fdff7f8c80febde68b071fa
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: ef39c5489e63a67e0880e4faab4d9675a49f5f90
+ms.sourcegitcommit: 4e31a4797eb8df64af3ae8932d2b49839e7a4524
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 
@@ -85,9 +85,17 @@ Vérifiez que votre déploiement AD RMS répond aux exigences suivantes pour fou
     
     - Version minimale de Windows Server 2012 R2 : obligatoire pour les environnements de production, mais à des fins de test ou d’évaluation, vous pouvez utiliser une version minimale de Windows Server 2008 R2 avec Service Pack 1.
     
-    - Cluster racine AD RMS unique.
+    - Une des topologies suivantes :
+        
+        - Forêt unique avec un seul cluster racine AD RMS. 
+        
+        - Plusieurs forêts avec des clusters racines AD RMS indépendants, les utilisateurs n’ayant pas accès au contenu protégé par les utilisateurs des autres forêts.
+        
+        - Plusieurs forêts avec des clusters AD RMS dans chacune d’elles. Chaque cluster AD RMS partage une URL de licence qui pointe vers le même cluster AD RMS. Sur ce cluster AD RMS, vous devez importer tous les certificats de domaine utilisateur approuvé à partir de tous les autres clusters AD RMS. Pour plus d’informations concernant cette topologie, consultez [Domaine utilisateur approuvé](https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx).
+        
+    Quand vous avez plusieurs clusters AD RMS dans des forêts distinctes, supprimez toutes les étiquettes de la stratégie globale qui appliquent la protection HYOK (AD RMS) et qui configurent une [stratégie délimitée](configure-policy-scope.md) pour chaque cluster. Affectez ensuite les utilisateurs de chaque cluster à leur stratégie délimitée, en vous assurant que vous n’utilisez pas des groupes qui entraîneraient l’affectation d’un utilisateur à plusieurs stratégies délimitées. Chaque utilisateur doit avoir des étiquettes pour un seul cluster AD RMS. 
     
-    - [Mode de chiffrement 2](https://technet.microsoft.com/library/hh867439.aspx): vous pouvez confirmer le mode en vérifiant les propriétés du cluster AD RMS, onglet **Général**.
+    - [Mode de chiffrement 2](https://technet.microsoft.com/library/hh867439.aspx) : vous pouvez confirmer le mode en vérifiant les propriétés du cluster AD RMS, onglet **Général**.
     
     - Un point de connexion de service (SCP) n’est pas inscrit dans Active Directory : aucun SCP n’est utilisé quand vous appliquez la protection AD RMS avec Azure Information Protection. Si vous avez inscrit un SCP pour votre déploiement AD RMS, vous devez le supprimer pour que la [découverte du service](../rms-client/client-deployment-notes.md#rms-service-discovery) fonctionne pour la protection Azure Rights Management.
     

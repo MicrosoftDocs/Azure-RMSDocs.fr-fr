@@ -4,17 +4,17 @@ description: "Lorsque vous configurez des conditions pour une étiquette, vous p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: ef84f3ceb8f732dd475b4db8eae489e715d4b7da
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 09ee8587e6b254584f70dbe2475063831fd5b845
+ms.sourcegitcommit: 6636defa6eca24360f15fb9ef93c2b82dc36cf76
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -80,7 +80,13 @@ Dans cet exemple, l’utilisateur peut cliquer sur **Modifier maintenant** pour 
 
 ## <a name="details-about-the-information-types"></a>Détails des types d’informations
 
-Si vous avez la préversion actuelle du client Azure Information Protection, la liste complète des types d’informations est prise en charge et utilise les types d’informations sensibles et la détection de modèle de prévention de perte de données (DLP) d’Office 365. Vous avez le choix entre les nombreux types courants d’informations sensibles, dont certains sont spécifiques à certaines régions. Pour plus d’informations, consultez [Éléments recherchés par les types d’informations sensibles](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) dans la documentation Office. Quand Azure Information Protection évalue ces types d’informations, il n’utilise pas le paramètre de niveau de confiance DLP d’Office, mais recherche celui avec le niveau de confiance le plus faible.  
+Si vous avez la préversion actuelle du client Azure Information Protection, la liste complète des types d’informations qui s’affiche dans le portail est prise en charge :
+
+- Les types d’informations utilisent les types d’informations sensibles et la détection de modèle de protection contre la perte de données (DLP) intégrés d’Office 365. Vous avez le choix entre les nombreux types courants d’informations sensibles, dont certains sont spécifiques à certaines régions. Pour plus d’informations sur les types d’informations que vous pouvez sélectionner, consultez [Éléments recherchés par les types d’informations sensibles](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) dans la documentation Office. 
+
+- La liste des types d’informations que vous pouvez sélectionner à partir du portail Azure est régulièrement mise à jour pour inclure les nouveaux ajouts DLP Office. Toutefois, elle exclut tous les types d’informations sensibles personnalisés que vous avez définis et téléchargés sous la forme d’un package de règles dans le Centre de sécurité et conformité Office 365. 
+
+- Quand Azure Information Protection évalue les types d’informations que vous sélectionnez, il n’utilise pas le paramètre de niveau de confiance DLP d’Office, mais recherche celui avec le niveau de confiance le plus faible.
 
 Si vous avez la version actuelle de disponibilité générale du client, seuls les types d’informations suivants sont pris en charge :
 
@@ -130,7 +136,7 @@ Faire correspondre ce type d’information lorsque le contenu inclut les éléme
 
     - **Avec mise en forme** :
     
-        - 16 chiffres: (cccc-cccc-cccc-cccc)  
+        - 16 chiffres : (cccc-cccc-cccc-cccc)  
         
     - **Sans mise en forme** :
     

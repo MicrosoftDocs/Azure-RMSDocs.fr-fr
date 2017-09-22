@@ -4,7 +4,7 @@ description: "Phase 2 de la migration d’AD RMS vers Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 22b43c2b149c7a7fd5ce79ca3ceef8100b9d5e7b
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 3274cb1ddd457647159034b955c47e9ab775f00c
+ms.sourcegitcommit: f7ef0f040ae4af4bf1283ebcb0750b65b6939313
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -113,7 +113,7 @@ Ouvrez une session PowerShell et exécutez les commandes suivantes :
 
 2. Activez le service Azure Rights Management :
     
-        Enable-Aadrmservice
+        Enable-Aadrm
 
 **Que se passe-t-il si votre locataire Azure Information Protection est déjà activé ?** Si le service Azure Rights Management est déjà activé pour votre organisation, les utilisateurs ont peut-être déjà utilisé Azure Information Protection pour protéger du contenu avec une clé de locataire générée automatiquement (et les modèles par défaut) au lieu de vos clés existantes (et les modèles associés) d’AD RMS. Il est peu probable que cela se produise sur des ordinateurs bien gérés sur votre intranet, car ceux-ci sont automatiquement configurés pour votre infrastructure AD RMS. En revanche, cela peut se produire sur des ordinateurs de groupe de travail ou des ordinateurs qui se connectent rarement à votre intranet. Malheureusement, il est également difficile d'identifier ces ordinateurs. C'est pourquoi nous vous recommandons de ne pas activer le service avant d'importer les données de configuration d'AD RMS.
 

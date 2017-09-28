@@ -4,7 +4,7 @@ description: Instructions sur la classification et la protection de vos document
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/04/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5e8329a441dcc871a155ef1b1484544732bec212
-ms.sourcegitcommit: 23aeb2bcce05968b850313333e359c99dd99a56f
+ms.openlocfilehash: b82904da81b73f0ae7ab5ab758a4cf3a982eb6ee
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classifier et protéger un fichier ou un e-mail avec Azure Information Protection
 
@@ -42,11 +42,14 @@ Lorsque le fichier est protégé avec vos autorisations personnalisées, partage
 
 Utilisez la barre Azure Information Protection et sélectionnez une des étiquettes qui a été configurée pour vous. 
 
-Par exemple, l’image suivante montre que le document n’a pas encore été étiqueté, car la **Sensibilité** affiche **Non défini**. Pour définir une étiquette, par exemple « Interne », cliquez sur **Interne**. Si vous ne savez pas quelle étiquette appliquer au document ou à l’e-mail actifs, utilisez les info-bulles pour en savoir plus sur chaque étiquette et sur le moment de l’appliquer.
+Par exemple, l’image suivante montre que le document n’a pas encore été étiqueté, car la **Sensibilité** affiche **Non défini**. Pour définir une étiquette, comme « Général », cliquez sur **Général**. Si vous ne savez pas quelle étiquette appliquer au document ou à l’e-mail actifs, utilisez les info-bulles pour en savoir plus sur chaque étiquette et sur le moment de l’appliquer. 
 
 ![Exemple de barre Azure Information Protection](../media/info-protect-bar-not-set-callout.png)
 
 Si une étiquette est déjà appliquée au document et que vous souhaitez la modifier, vous pouvez sélectionner une autre étiquette. Si les étiquettes ne sont pas affichées dans la barre, cliquez d’abord sur l’icône **Modifier l’étiquette**, en regard de la valeur actuelle de l’étiquette.
+
+> [!TIP]
+> Vous pouvez également sélectionner des étiquettes à l’aide du bouton **Protéger** sous l’onglet **Fichier**.
 
 Outre la sélection manuelle, les étiquettes peuvent également être appliquées comme suit :
 
@@ -83,9 +86,11 @@ Vous pouvez spécifier vos propres paramètres de protection pour les documents 
     - **Protéger avec des autorisations personnalisées** : assurez-vous de sélectionner cette option afin de pouvoir spécifier et appliquer vos autorisations personnalisées. Désactivez cette option pour supprimer toutes les autorisations personnalisées.
     
     - **Sélectionner des autorisations** : si vous souhaitez protéger le fichier afin que vous seul puissiez y accéder, sélectionnez **Pour moi uniquement**. Dans le cas contraire, sélectionnez le niveau d’accès que vous souhaitez accorder aux personnes spécifiées.
-
+    
     - **Sélectionner des utilisateurs, des groupes ou des organisations** : spécifiez les personnes qui doivent disposer des autorisations que vous avez sélectionnées pour vos fichiers. Entrez leur adresse e-mail complète, une adresse e-mail de groupe ou un nom de domaine de l’organisation pour tous les utilisateurs appartenant à cette organisation. Attention, les adresses e-mail personnelles ne sont actuellement pas prises en charge.
         
+        Si vous disposez de la préversion actuelle du client, vous pouvez également utiliser l’icône de carnet d’adresses pour sélectionner des utilisateurs ou des groupes dans le carnet d’adresses Outlook.
+    
     - **Faire expirer l’accès** : sélectionnez cette option uniquement pour les fichiers ayant des contraintes de temps, afin que les personnes que vous avez spécifiées ne puissent pas les ouvrir après une date que vous définissez. Vous pouvez toujours ouvrir le fichier d’origine mais, le jour spécifié, après minuit (dans votre fuseau horaire), les personnes que vous avez désignées ne pourront plus l’ouvrir.
 
 5. Cliquez sur **Appliquer** et attendez que le message **Autorisations personnalisées appliquées** s’affiche. Cliquez ensuite sur **Fermer**.

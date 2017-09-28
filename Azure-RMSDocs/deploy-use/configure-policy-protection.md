@@ -4,27 +4,27 @@ description: "Vous pouvez protéger vos documents et e-mails les plus sensibles 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: fce3c905f2f48c2723ee7f0b55ff5ddb77f6258a
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: dccd5f86dd75cf053336426df161e927b4cd9e5b
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
 >*S’applique à : Azure Information Protection*
 
-Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’un service Rights Management. Ce service utilise des stratégies de chiffrement, d’identité et d’autorisation pour vous aider à éviter les pertes de données. La protection est appliquée quand vous configurez une étiquette de façon la protection Rights Management pour des documents et des e-mails, ou l’option **Ne pas transférer** pour les e-mails Outlook. 
+Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’un service Rights Management. Ce service utilise des stratégies de chiffrement, d’identité et d’autorisation pour vous aider à éviter les pertes de données. La protection est appliquée quand une étiquette est configurée de manière à utiliser la protection Rights Management pour les documents et les e-mails. Les utilisateurs peuvent aussi sélectionner l’option **Ne pas transférer** dans Outlook. 
 
 ## <a name="how-the-protection-works"></a>Fonctionnement de la protection
 
-Quand un document ou un e-mail est protégé par Rights Management, il est chiffré au repos et en transit et peut uniquement être déchiffré par les utilisateurs autorisés. Ce chiffrement est conservé avec le document ou l’e-mail, même si ce dernier est renommé. En outre, vous pouvez configurer des droits d’utilisation et des restrictions, comme dans les exemples suivants :
+Quand un document ou un e-mail est protégé par un service Rights Management, il est chiffré au repos et en transit. Il peut ensuite être uniquement déchiffré par les utilisateurs autorisés. Ce chiffrement est conservé avec le document ou l’e-mail, même si ce dernier est renommé. En outre, vous pouvez configurer des droits d’utilisation et des restrictions, comme dans les exemples suivants :
 
 - Seuls les utilisateurs de votre organisation peuvent ouvrir le document ou l’e-mail confidentiel de l’entreprise.
 
@@ -41,7 +41,7 @@ Pour plus d’informations sur la protection Azure Rights Management et son fonc
 
 Quand l’étiquette applique une protection, il n’est pas approprié d’enregistrer un document protégé sur SharePoint ou OneDrive. Ces emplacements ne prennent pas en charge les fonctionnalités suivantes pour les fichiers protégés : co-édition, Office Online, recherche, aperçu du document, miniature, eDiscovery et protection contre la perte de données (DLP). 
 
-Exchange ne doit pas être configuré pour IRM (Information Rights Management, Gestion des droits relatifs à l'information) avant que les utilisateurs ne puissent appliquer des étiquettes dans Outlook pour protéger leurs e-mails. Toutefois, vous n’obtiendrez pas toutes les fonctionnalités de la protection Azure Rights Management avec Exchange jusqu'à ce qu’Exchange soit configuré pour IRM. Par exemple, les utilisateurs ne seront pas en mesure d’afficher des e-mails protégés sur un téléphone mobile ou la version web d’Outlook. Les e-mails protégés ne peuvent pas être indexés pour la recherche, et vous ne pourrez pas configurer DLP Exchange Online pour la protection Rights Management. Consultez les ressources suivantes pour configurer Exchange de manière à prendre en charge ces scénarios supplémentaires :
+Exchange ne doit pas être configuré pour IRM (Information Rights Management, Gestion des droits relatifs à l’information) avant que les utilisateurs ne puissent appliquer des étiquettes dans Outlook pour protéger leurs e-mails. Toutefois, vous n’obtiendrez pas toutes les fonctionnalités de la protection Azure Rights Management avec Exchange jusqu'à ce qu’Exchange soit configuré pour IRM. Par exemple, les utilisateurs ne pourront pas afficher des e-mails protégés sur un téléphone mobile ou la version web d’Outlook. Les e-mails protégés ne peuvent pas être indexés pour la recherche, et vous ne pourrez pas configurer DLP Exchange Online pour la protection Rights Management. Consultez les ressources suivantes pour configurer Exchange de manière à prendre en charge ces scénarios supplémentaires :
 
 - Pour Exchange Online, consultez les instructions figurant dans [Exchange Online : configuration de la gestion des droits relatifs à l'information](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
 
@@ -73,13 +73,15 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
     
     ![Configurer la protection d’une étiquette Azure Information Protection](../media/info-protect-protection-bar-configured.png)
 
-6. Dans le panneau **Protection**, sélectionnez **Azure RMS**, **Azure (clé du cloud)** ou **HYOK (AD RMS)**. Le nom de la première option est en cours de modification.
+6. Dans le panneau **Protection**, sélectionnez **Azure (clé du cloud)** ou **HYOK (AD RMS)**.
     
-    Dans la plupart des cas, sélectionnez **Azure RMS** ou **Azure (clé du cloud)** pour vos paramètres d’autorisation. Ne sélectionnez **HYOK (AD RMS)** que si vous avez lu et compris les prérequis et les restrictions qui accompagnent cette configuration « *conservez votre propre clé* » (HYOK, hold your own key). Pour plus d’informations, consultez [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md). Pour poursuivre la configuration de la fonction HYOK (AD RMS), passez à l’étape 10.
+    Dans la plupart des cas, sélectionnez **Azure (clé du cloud)** pour vos paramètres d’autorisation. Ne sélectionnez **HYOK (AD RMS)** que si vous avez lu et compris les prérequis et les restrictions qui accompagnent cette configuration « *conservez votre propre clé* » (HYOK, hold your own key). Pour plus d’informations, consultez [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md). Pour poursuivre la configuration de la fonction HYOK (AD RMS), passez à l’étape 10.
     
 7. Sélectionnez l’une des options suivantes :
     
     - **Sélectionner un modèle prédéfini** : utilisez un des modèles par défaut ou un modèle personnalisé que vous avez configuré. Ce modèle doit être publié (pas archivé) et ne doit pas être déjà lié à une autre étiquette. Quand vous sélectionnez cette option, vous pouvez utiliser le bouton **Modifier le modèle** pour [convertir le modèle en étiquette](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Conseil : Si vous utilisez le bouton **Modifier le modèle**, il peut s’avérer utile de consulter [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
     
     - **Définir des autorisations** : Permet de définir de nouveaux paramètres de protection dans ce portail.
     
@@ -87,9 +89,9 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
         
         Si vous choisissez l’option pour Outlook : l’étiquette est affichée dans Outlook et le comportement obtenu quand les utilisateurs appliquent l’étiquette est identique à celui de l’option Ne pas transférer.
         
-        Si vous choisissez l’option pour Word, Excel, PowerPoint et l’Explorateur de fichiers : cette option nécessite la préversion du client Azure Information Protection. Quand cette option est définie et que les utilisateurs ont la préversion du client, l’étiquette est affichée dans ces applications. Le comportement obtenu quand les utilisateurs appliquent l’étiquette affiche la boîte de dialogue pour permettre aux utilisateurs de sélectionner des autorisations personnalisées. Dans cette boîte de dialogue, les utilisateurs doivent spécifier les autorisations, les utilisateurs ou les groupes et une date d’expiration. Vérifiez que les utilisateurs disposent des instructions et des conseils qui permettent de fournir ces valeurs.
+        Si vous choisissez l’option pour Word, Excel, PowerPoint et l’Explorateur de fichiers : Quand cette option est définie, l’étiquette est affichée dans ces applications. Le comportement obtenu quand les utilisateurs appliquent l’étiquette affiche la boîte de dialogue pour permettre aux utilisateurs de sélectionner des autorisations personnalisées. Dans cette boîte de dialogue, les utilisateurs doivent spécifier les autorisations, les utilisateurs ou les groupes et une date d’expiration. Vérifiez que les utilisateurs disposent des instructions et des conseils qui permettent de fournir ces valeurs.
 
-8. Si vous avez choisi **Sélectionner un modèle prédéfini** pour **Azure RMS** ou **Azure (clé du cloud)**, cliquez sur la zone de liste déroulante, puis sélectionnez le [modèle](../deploy-use/configure-policy-templates.md) à utiliser pour protéger les documents et les e-mails avec cette étiquette. Vous ne voyez pas les modèles archivés ou les modèles qui sont déjà sélectionnés pour une autre étiquette.
+8. Si vous avez choisi **Sélectionner un modèle prédéfini** pour **Azure (clé du cloud)**, cliquez sur la zone de liste déroulante, puis sélectionnez le [modèle](../deploy-use/configure-policy-templates.md) à utiliser pour protéger les documents et les e-mails avec cette étiquette. Vous ne voyez pas les modèles archivés ou les modèles qui sont déjà sélectionnés pour une autre étiquette.
     
     Si vous sélectionnez un **modèle de service** ou que vous avez configuré des [contrôles d’intégration](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) :
     
@@ -97,7 +99,7 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
         
         Notez que tous les modèles publiés sont toujours affichés, même si vous configurez une stratégie délimitée. Par exemple, vous configurez une stratégie délimitée au groupe Marketing. Les modèles que vous pouvez sélectionner ne se limitent pas aux modèles délimités au groupe Marketing, et il est possible de sélectionner un modèle de service que les utilisateurs sélectionnés ne peuvent pas utiliser. Pour faciliter la configuration et minimiser la résolution des problèmes, envisagez d’attribuer le même nom au modèle de service et à l’étiquette de votre stratégie délimitée. 
             
-9. Si vous avez sélectionné **Définir les autorisations** pour **Azure RMS** ou **Azure (clé du cloud)**, cette option vous permet de configurer les mêmes paramètres que ceux que vous pouvez configurer dans un modèle. 
+9. Si vous avez sélectionné **Définir les autorisations** pour **Azure (clé du cloud)**, cette option vous permet de configurer les mêmes paramètres que ceux que vous pouvez configurer dans un modèle. 
     
     Sélectionnez **Ajouter des autorisations** puis, dans le panneau **Ajouter des autorisations**, sélectionnez le premier ensemble d’utilisateurs et de groupes qui auront des droits d’utilisation du contenu à protéger par l’étiquette sélectionnée :
     
@@ -134,21 +136,21 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
     
     Pour obtenir des instructions afin de spécifier un GUID de modèle et votre URL de licence, consultez [Recherche d’informations pour spécifier la protection AD RMS avec une étiquette Azure Information Protection](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
     
-    Pour utiliser l’option des autorisations définies par l’utilisateur, vous devez disposer de la préversion du client Azure Information Protection. Cette option permet aux utilisateurs de spécifier qui doit avoir des autorisations et quelles sont ces autorisations. Vous pouvez ensuite affiner cette option et choisir Outlook uniquement (la valeur par défaut) ou Word, Excel, PowerPoint et l’Explorateur de fichiers. 
+    L’option de configuration des autorisations définies par l’utilisateur permet aux utilisateurs de spécifier qui doit avoir des autorisations et quelles sont ces autorisations. Vous pouvez ensuite affiner cette option et choisir Outlook uniquement (la valeur par défaut) ou Word, Excel, PowerPoint et l’Explorateur de fichiers. 
     
     Si vous choisissez l’option pour Outlook : l’étiquette est affichée dans Outlook et le comportement obtenu quand les utilisateurs appliquent l’étiquette est identique à celui de l’option Ne pas transférer.
     
-    Si vous choisissez l’option pour Word, Excel, PowerPoint et l’Explorateur de fichiers : l’étiquette est affichée dans ces applications. Le comportement obtenu quand les utilisateurs appliquent l’étiquette affiche la boîte de dialogue pour permettre aux utilisateurs de sélectionner des autorisations personnalisées. Dans cette boîte de dialogue, les utilisateurs doivent spécifier les autorisations, les utilisateurs ou les groupes et une date d’expiration. Vérifiez que les utilisateurs disposent des instructions et des conseils qui permettent de fournir ces valeurs. Actuellement, cette option dans l’Explorateur de fichiers utilise toujours la protection Azure RMS au lieu de la protection HYOK (AD RMS).
+    Si vous choisissez l’option pour Word, Excel, PowerPoint et l’Explorateur de fichiers : l’étiquette est affichée dans ces applications. Le comportement obtenu quand les utilisateurs appliquent l’étiquette affiche la boîte de dialogue pour permettre aux utilisateurs de sélectionner des autorisations personnalisées. Dans cette boîte de dialogue, les utilisateurs doivent spécifier les autorisations, les utilisateurs ou les groupes et une date d’expiration. Vérifiez que les utilisateurs disposent des instructions et des conseils qui permettent de fournir ces valeurs. Sauf si vous disposez de la préversion du client, notez que cette option pour l’Explorateur de fichiers utilise toujours la protection Azure RMS au lieu de la protection HYOK (AD RMS).
 
-11. Cliquez sur **Terminé** pour fermer le panneau **Protection** et voir apparaître la valeur que vous avez choisie pour **Ne pas transférer** ou le modèle que vous avez sélectionné pour l’option **Protection** dans le panneau **Étiquette**.
+11. Cliquez sur **OK** pour fermer le panneau **Protection** et voir apparaître la valeur que vous avez choisie pour **Ne pas transférer** ou le modèle que vous avez sélectionné pour l’option **Protection** dans le panneau **Étiquette**.
 
 12. Dans le panneau **Étiquette**, cliquez sur **Enregistrer**.
 
 13. Dans le panneau **Azure Information Protection**, utilisez la colonne **PROTECTION** pour vérifier que votre étiquette affiche maintenant le paramètre de protection souhaité :
     
-    - **Azure RMS** ou **HYOK (AD RMS)** ou une coche si vous avez configuré la protection. 
+    - Une coche si vous avez configuré la protection. 
     
-    - **Supprimer la protection** ou une marque x pour désigner l’annulation si vous avez configuré une étiquette pour supprimer la protection.
+    - Une croix (x) pour désigner l’annulation si vous avez configuré une étiquette pour supprimer la protection.
     
     - Champ vide quand la protection n’est pas définie. 
 

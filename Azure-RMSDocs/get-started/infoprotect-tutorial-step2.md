@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: cf84cef5d6bc4d3df32a4e3c8bc3a6ac7380655c
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: 4fb571f84e9916fb5573d551ec0f0bf374e5df2f
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Étape 2 : Configurer et publier la stratégie Azure Information Protection
 
@@ -67,7 +67,7 @@ Nous allons créer maintenant une sous-étiquette pour **Confidentiel**.
     
     ![Protection configurée pour une étiquette Azure Information Protection](../media/info-protect-protection-bar-configured.png) 
     
-4. Dans le panneau **Protection**, vérifiez qu’**Azure RMS** ou **Azure (clé du cloud)** est sélectionné. Le nom de cette option est en cours de modification. Vérifiez que **Définir des autorisations** est également sélectionné. Ensuite, sélectionnez **Ajouter des autorisations**.
+4. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé du cloud)** est sélectionnée. Cette option utilise le service Azure Rights Management pour protéger les documents et les e-mails. Vérifiez que **Définir des autorisations** est également sélectionné. Ensuite, sélectionnez **Ajouter des autorisations**.
 
 5. Dans le panneau **Ajouter des autorisations**, sélectionnez **Ajouter \<nom de l’organisation> - Tous les membres**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous voyez et sélectionnez l’option suivante :
     

@@ -4,7 +4,7 @@ description: "Détails techniques sur les types de fichiers pris en charge, les 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 219f39913261d22709238ee5393e8cc8080070f5
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: 9db73573eb6ccb6ab5f09d926e395a31f94404ea
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Types de fichiers pris en charge par le client Azure Information Protection
 
@@ -81,11 +81,7 @@ Il existe des tailles de fichier maximales que le client Azure Information Prote
     |Excel 2007 (pris en charge par AD RMS uniquement)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32 bits : 2 Go<br /><br />64 bits : limité uniquement par l’espace disque disponible et la mémoire disponibles|
     |PowerPoint 2007 (pris en charge par AD RMS uniquement)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32 bits : limité uniquement par l’espace disque disponible et la mémoire disponibles<br /><br />64 bits : limité uniquement par l’espace disque disponible et la mémoire disponibles
 
-- **Pour tous les autres fichiers** :
-    
-    - Pour la version publique du client : 1 Go
-    
-    - Pour la préversion du client (version minimale **1.8.41.0**) : limitée uniquement par l’espace disque et la mémoire disponibles
+- **Pour tous les autres fichiers** : Limité uniquement par l’espace disque et la mémoire disponibles.
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Types de fichiers pris en charge pour la classification et la protection
 

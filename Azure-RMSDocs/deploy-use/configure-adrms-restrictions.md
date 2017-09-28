@@ -4,17 +4,17 @@ description: "Identifiez les limitations, conditions préalables et recommandati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: ef39c5489e63a67e0880e4faab4d9675a49f5f90
-ms.sourcegitcommit: 4e31a4797eb8df64af3ae8932d2b49839e7a4524
+ms.openlocfilehash: cceacbe94983e66bdde6de0947ae59b44e29a54e
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 
@@ -65,13 +65,11 @@ En plus de ne pas prendre en charge les avantages associés à l’utilisation d
 
     Même si vous pouvez configurer une étiquette pour **Ne pas transférer** afin d’utiliser HYOK ou le service Azure Rights Management, les utilisateurs peuvent également sélectionner Ne pas transférer eux-mêmes. Ils peuvent sélectionner cette option à l’aide du bouton **Ne pas transférer** sous l’onglet **Message** du ruban Office ou à l’aide des options de menu d’Outlook. Les options de menu **Ne pas transférer** sont situées sous **Fichier** > **Autorisations** et en cliquant sur le bouton **Autorisations** de l’onglet **Options** sur le ruban. 
     
-    Quand les utilisateurs sélectionnent le bouton Ne pas transférer, Azure RMS ou AD RMS peut être utilisé et le choix n’est pas déterminant. Quand les utilisateurs sélectionnent **Ne pas transférer** à partir d’une option de menu Outlook, ils peuvent choisir Azure RMS ou AD RMS, mais risquent de ne pas savoir quelle option choisir pour leur e-mail. Dans les deux scénarios, si AD RMS est utilisé par erreur à la place d’Azure RMS, les personnes externes avec qui vous partagez du contenu ne peuvent pas ouvrir ces e-mails.
+    Le client Azure Information Protection utilise toujours Azure RMS quand les utilisateurs sélectionnent le bouton **Ne pas transférer** dans Outlook. Si vous ne souhaitez pas voir ce comportement, vous pouvez masquer le bouton **Ne pas transférer** dans Outlook en configurant un [paramètre client avancé](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook). 
     
-    La préversion actuelle du client Azure Information Protection utilise toujours Azure RMS quand les utilisateurs sélectionnent le bouton **Ne pas transférer** dans Outlook. Si vous ne souhaitez pas voir ce comportement, vous pouvez masquer le bouton **Ne pas transférer** dans Outlook en configurant un [paramètre client avancé](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook). 
+    Quand les utilisateurs sélectionnent **Ne pas transférer** à partir d’une option de menu Outlook, ils peuvent choisir Azure RMS ou AD RMS, mais risquent de ne pas savoir quelle option choisir pour leur e-mail. Si AD RMS est utilisé par erreur à la place d’Azure RMS, les personnes externes avec qui vous partagez du contenu ne peuvent pas ouvrir ces e-mails.
 
-- Pour la version actuelle de disponibilité générale du client Azure Information Protection : si les utilisateurs configurent des autorisations personnalisées quand vous utilisez les protections Azure RMS et AD RMS (HYOK), le document ou l’e-mail est toujours protégé par Azure Rights Management. Cette limitation ne s’applique pas à la préversion actuelle du client.
-
-- Si vous configurez des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers, ce qui est pris en charge dans la préversion actuelle du client Azure Information Protection : dans l’Explorateur de fichiers, la protection est toujours appliquée à l’aide d’Azure RMS au lieu de la protection HYOK (AD RMS). 
+- Si vous configurez des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers : dans l’Explorateur de fichiers, la protection est toujours appliquée à l’aide d’Azure RMS et non à l’aide de la protection HYOK (AD RMS). Cette limitation ne s’applique pas à la préversion actuelle du client.
 
 - Si un utilisateur choisit dans Outlook une étiquette qui applique la protection AD RMS, puis change d’avis avant d’envoyer l’e-mail et sélectionne une étiquette qui applique la protection Azure RMS, la dernière étiquette sélectionnée ne peut pas s’appliquer. Les utilisateurs voient apparaître le message d’erreur suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Vous n’avez pas l’autorisation requise pour effectuer cette action.**
     
@@ -95,7 +93,7 @@ Vérifiez que votre déploiement AD RMS répond aux exigences suivantes pour fou
         
     Quand vous avez plusieurs clusters AD RMS dans des forêts distinctes, supprimez toutes les étiquettes de la stratégie globale qui appliquent la protection HYOK (AD RMS) et qui configurent une [stratégie délimitée](configure-policy-scope.md) pour chaque cluster. Affectez ensuite les utilisateurs de chaque cluster à leur stratégie délimitée, en vous assurant que vous n’utilisez pas des groupes qui entraîneraient l’affectation d’un utilisateur à plusieurs stratégies délimitées. Chaque utilisateur doit avoir des étiquettes pour un seul cluster AD RMS. 
     
-    - [Mode de chiffrement 2](https://technet.microsoft.com/library/hh867439.aspx) : vous pouvez confirmer le mode en vérifiant les propriétés du cluster AD RMS, onglet **Général**.
+    - [Mode de chiffrement 2](https://technet.microsoft.com/library/hh867439.aspx): vous pouvez confirmer le mode en vérifiant les propriétés du cluster AD RMS, onglet **Général**.
     
     - Un point de connexion de service (SCP) n’est pas inscrit dans Active Directory : aucun SCP n’est utilisé quand vous appliquez la protection AD RMS avec Azure Information Protection. Si vous avez inscrit un SCP pour votre déploiement AD RMS, vous devez le supprimer pour que la [découverte du service](../rms-client/client-deployment-notes.md#rms-service-discovery) fonctionne pour la protection Azure Rights Management.
     

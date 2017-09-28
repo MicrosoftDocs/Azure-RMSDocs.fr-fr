@@ -4,7 +4,7 @@ description: "Configurer et gérer des modèles Rights Management à partir du p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 1094c0a711b3691b8186baafc06d1fb72daf5613
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: c27f239467bf546479827c7ca215a8892553e9c0
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
 >[!NOTE]
->Cette fonctionnalité remplace la configuration de modèles personnalisés dans le portail Azure Classic.
+>Cette fonctionnalité remplace la configuration de modèles personnalisés dans le portail Azure Classic. Pour trouver rapidement les fonctionnalités de remplacement, consultez [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
 >
 >Même si vous pouvez toujours créer et gérer les modèles dans le portail Azure Classic, nous vous déconseillons de gérer les mêmes modèles à partir du portail Azure Classic et du portail Azure. L’implémentation de la configuration des modèles dans ces différents portails a changé : configurer le même modèle dans des portails différents peut aboutir à une configuration non fiable.
 
@@ -109,8 +109,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Pour configurer les modèles dans la stratégie Azure Information Protection
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général. Accédez ensuite au panneau **Azure Information Protection**. 
-    
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général. Accédez ensuite au panneau **Azure Information Protection**.     
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
 2. Si le modèle à configurer concerne tous les utilisateurs, restez dans le panneau **Azure Information Protection - Stratégie globale**.
@@ -119,11 +118,11 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
 
 3. Dans le panneau **Azure Information Protection - Stratégie globale** ou le panneau **Stratégie :\<nom>**, recherchez le modèle à configurer :
     
-    - Si vous avez un abonnement qui inclut la classification, l’étiquetage et la protection : développez **Modèles** ou **Modèles de protection** après vos étiquettes.
+    - Si vous avez un abonnement qui inclut la classification, l’étiquetage et la protection : développez **Modèles de protection** après vos étiquettes.
     
     - Lorsque vous avez un abonnement qui inclut uniquement la protection : les modèles s’affichent sous forme d’étiquettes.
 
-4. Sélectionnez le modèle, puis, dans le panneau **Étiquette**, vous pouvez modifier le nom du modèle et la description si nécessaire, en modifiant **Nom d’étiquette** et **Description**. Ensuite, sélectionnez **Protection**, qui a la valeur **Azure RMS** ou **Azure (clé du cloud)**, pour ouvrir le panneau **Protection**.
+4. Sélectionnez le modèle, puis, dans le panneau **Étiquette**, vous pouvez modifier le nom du modèle et la description si nécessaire, en modifiant **Nom d’étiquette** et **Description**. Ensuite, sélectionnez **Protection**, qui a la valeur **Azure (clé du cloud)**, pour ouvrir le panneau **Protection**.
 
 5. Sur le panneau **Protection**, vous pouvez modifier les autorisations, l’expiration du contenu et les paramètres d’accès hors connexion. Pour en savoir plus sur la configuration des paramètres de protection, voir [Comment configurer une étiquette pour la protection offerte par Rights Management](configure-policy-protection.md)
     

@@ -4,7 +4,7 @@ description: "Informations vous permettant de fournir de l’aide aux utilisateu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 192f4ade987e9f9f88f5f30bb17c70e113569002
-ms.sourcegitcommit: 8b6fc2201d99d72ee9bb43bb73356040893eceeb
+ms.openlocfilehash: d4ce0ea6a3c04c5ca52dae1750e48d5618eeef76
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -26,7 +26,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
 
 -   **Informations à l’attention des utilisateurs finaux**
     
-    Expliquez à vos utilisateurs comment et quand protéger des documents et messages électroniques contenant des informations sensibles. Autant que possible, fournissez ces informations pour leurs flux de travail existants afin qu’ils puissent intégrer les étapes supplémentaires à un processus déjà familier, au lieu d’introduire des processus nouveaux. Pensez à leur faire part des avantages et des risques inhérents à votre activité et proposez-leur des conseils sur la protection des fichiers et des messages électroniques. Si vous avez configuré des [modèles](configure-policy-templates.md), fournissez des instructions concernant le modèle à sélectionner si le nom et la description des modèles ne suffisent pas à identifier le bon modèle.
+    Expliquez à vos utilisateurs comment et quand protéger des documents et des e-mails contenant des informations sensibles. Autant que possible, fournissez ces informations pour leurs flux de travail existants afin qu’ils puissent intégrer les étapes supplémentaires à un processus déjà familier, au lieu d’introduire des processus nouveaux. Pensez à leur faire part des avantages et des risques inhérents à votre activité et proposez-leur des conseils sur la protection des fichiers et des e-mails. Si vous avez configuré des [modèles](configure-policy-templates.md), fournissez des instructions concernant le modèle à sélectionner si le nom et la description des modèles ne suffisent pas à identifier le bon modèle.
     
     > [!TIP]
     > Exemples de vidéos à l’attention des utilisateurs finaux :
@@ -41,9 +41,9 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
     
 -   **Informations de support technique**
     
-    Si des utilisateurs ont le client Azure Information Protection, les opérateurs du support technique peuvent leur demander d’utiliser l’option **Aide et commentaires**, **Exécuter les diagnostics**, puis de réinitialiser le client. Toutefois, la réinitialisation ne déconnecte pas l’utilisateur et n’effectue aucun rebootstrap du client, et aucune mise à jour automatique n’a lieu.
+    Si les utilisateurs disposent du client Azure Information Protection, les opérateurs du support technique peuvent leur demander d’utiliser l’option **Aide et commentaires** pour savoir si l’édition d’Office prend ou non en charge la protection et obtenir le compte d’utilisateur actuellement connecté. Vous pouvez également utiliser cette option pour collecter des fichiers journaux et réinitialiser le client. Pour plus d’informations, consultez [Vérifications supplémentaires et dépannage](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) dans le guide de l’administrateur.
     
-    S’il existe des demandes légitimes d’obtention de droits d’accès complets à des documents protégés, vérifiez que le support technique dispose des processus nécessaires pour effectuer une telle demande à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md) d’Azure Rights Management. Par exemple, ces demandes peuvent émaner du service juridique ou d’un manager après le départ d’un employé. 
+    S’il existe des demandes légitimes d’obtention de droits d’accès complets à des documents protégés, vérifiez que le support technique dispose des processus nécessaires pour effectuer une telle demande à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md) d’Azure Rights Management. Par exemple, ces demandes peuvent émaner du service juridique ou d’un responsable après le départ d’un employé.
     
     Voici en outre certaines catégories de problèmes que les utilisateurs peuvent signaler :
     
@@ -99,19 +99,19 @@ Par exemple, un droit d'utilisation Affichage uniquement ne permet pas à l'util
 
 Les droits d'utilisation sont affichés en haut du document grâce à une bannière de restriction. La bannière peut afficher les autorisations appliquées au document, ou un lien pour afficher celles-ci.
 
-#### <a name="to-protect-an-email-message-using-outlook-2013-and-exchange-online"></a>Pour protéger un message électronique à l'aide d'Outlook 2013 et d'Exchange Online
+#### <a name="to-protect-an-email-message-using-outlook-2013-and-exchange-online"></a>Pour protéger un e-mail dans Outlook 2013 et Exchange Online
 
 1.  Dans Outlook, créez un e-mail adressé à un destinataire au sein de votre organisation.
 
-2.  À partir de l’onglet **OPTIONS** , cliquez sur **Autorisation**, puis sélectionnez une option. Par exemple : **Ne pas transférer**, **\<Nom de la société>- Confidentiel** ou **\<Nom de la société>- Affichage confidentiel uniquement**.
+2.  À partir de l’onglet **OPTIONS**, cliquez sur **Autorisation**, puis sélectionnez une option. Par exemple : **Ne pas transférer**, **\<Nom de la société>- Confidentiel** ou **\<Nom de la société>- Affichage confidentiel uniquement**.
 
 3.  Envoyez le message.
 
-Comme pour l’affichage d’un document protégé, lorsque les destinataires ouvrent l’e-mail protégé, ceux-ci sont tout d’abord authentifiés. S’ils sont autorisés à afficher le message électronique, ce dernier s’ouvrira avec les [droits d’utilisation](../deploy-use/configure-usage-rights.md) restreints qui ont été définis pour cet utilisateur. 
+Comme pour l’affichage d’un document protégé, lorsque les destinataires ouvrent l’e-mail protégé, ceux-ci sont tout d’abord authentifiés. S’ils sont autorisés à afficher l’e-mail, ce dernier s’ouvre avec les [droits d’utilisation](../deploy-use/configure-usage-rights.md) restreints qui ont été définis pour cet utilisateur. 
 
 Par exemple, si l’e-mail est protégé à l’aide de l’option **Ne pas transférer**, le bouton Transférer n’est pas disponible dans le ruban.
 
-#### <a name="to-protect-an-email-message-using-outlook-on-the-web"></a>Pour protéger un e-mail à l’aide d’Outlook sur le web
+#### <a name="to-protect-an-email-message-using-outlook-on-the-web"></a>Pour protéger un e-mail dans Outlook sur le web
 
 1.  Dans Outlook sur le web, créez un e-mail destiné à une personne de votre organisation.
 
@@ -119,7 +119,7 @@ Par exemple, si l’e-mail est protégé à l’aide de l’option **Ne pas tran
 
 3.  Envoyez le message.
 
-Comme pour un document protégé, les destinataires sont authentifiés avant de pouvoir ouvrir l’e-mail. S’ils sont autorisés à afficher le message électronique, ce dernier s’ouvrira avec les [droits d’utilisation](../deploy-use/configure-usage-rights.md) restreints qui ont été définis pour cet utilisateur. 
+Comme pour un document protégé, les destinataires sont authentifiés avant de pouvoir ouvrir l’e-mail. S’ils sont autorisés à afficher l’e-mail, ce dernier s’ouvre avec les [droits d’utilisation](../deploy-use/configure-usage-rights.md) restreints qui ont été définis pour cet utilisateur. 
 
 Par exemple, si vous avez sélectionné **Ne pas répondre à tous**, l’option **RÉPONDRE À TOUS** dans la fenêtre du message ne sera pas disponible.
 

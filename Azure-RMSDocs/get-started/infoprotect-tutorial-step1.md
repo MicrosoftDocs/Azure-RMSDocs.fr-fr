@@ -4,17 +4,17 @@ description: "Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: e80d47d1a477c03296b9a2e0eb4373929cfaa66b
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: c168f54d873d8e5b1f2d455c9ae2d12cda8926b3
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="step-1-activate-the-rights-management-service"></a>Étape 1 : activation du service Rights Management
  
@@ -40,15 +40,15 @@ Pour ce didacticiel, nous utilisons le portail Azure, où vous configurez égale
     > [!TIP] 
     > Sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous n’avez ainsi pas besoin d’accéder au service lors de votre prochaine connexion au portail.
 
-4. Notez les informations sur la page **Démarrage rapide** qui s’ouvre automatiquement la première fois que vous vous connectez au service. Vous pouvez y revenir plus tard. Pour ce didacticiel, sélectionnez **Paramètres RMS** ou **Activation de la protection**. Le nom de cette option est en cours de modification. 
+4. Notez les informations sur la page **Démarrage rapide** qui s’ouvre automatiquement la première fois que vous vous connectez au service. Vous pouvez y revenir plus tard. Pour ce didacticiel, sélectionnez **Activation de la protection**. 
 
 5. Vous pouvez maintenant vérifier si le service Azure Rights Management est activé pour votre locataire. 
     
-    - Si le service est activé, une confirmation semblable à la suivante s’affiche :
+    - Si le service est activé, la confirmation suivante s’affiche :
         
         ![État d’Azure Information Protection pour Azure RMS](../media/info-protect-azurerms-activated.png)
         
-    - Quand le service n’est pas activé, les informations d’état vous l’indiquent et l’option d’activation est disponible. Exemple :
+    - Les informations d’état vous indiquent quand le service n’est pas activé et l’option d’activation est disponible :
         
         ![État d’Azure Information Protection pour Azure RMS](../media/info-protect-azurerms-deactivated.png)
 

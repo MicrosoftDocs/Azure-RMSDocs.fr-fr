@@ -4,7 +4,7 @@ description: "Informations sur les fichiers du client et la journalisation de l�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 63249b98578b952177351cc5547ef92c67164f06
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: d1802fbd3c659b154d585224a3f7b412b8995e5b
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="azure-information-protection-client-files-and-client-usage-logging"></a>Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 
@@ -75,6 +75,11 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
     - Automatique  
     
     - Système (pour la stratégie de connexion et de téléchargement)
+    
+    - DefaultAutomatic
+        
+        L’action source **DefaultAutomatic** s’applique uniquement au client en préversion et fait référence à l’étiquette définie à l’aide de l’option **Sélectionner l’étiquette par défaut** dans la stratégie Azure Information Protection.
+
     
 - Étiquette avant et après l’action 
     

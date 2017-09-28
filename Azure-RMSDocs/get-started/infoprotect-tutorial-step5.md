@@ -5,7 +5,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 09/18/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c9964e013d24bb1f42acb5f1e7a180d2a85a8576
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6d62b6dd588b035ded582a87f5faf04a04df6ab6
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Étape 5 : Voir le partage de fichiers protégés en action et effectuer le suivi de votre document 
 
@@ -25,9 +25,9 @@ ms.lasthandoff: 06/30/2017
 
 Pour cette étape finale du didacticiel, recherchez un document Word ou une feuille de calcul que vous avez déjà créés et que vous allez envoyer à un partenaire ou à un collègue. Dans le cadre de ce didacticiel, faites en sorte que le document contienne du texte, quel qu’il soit, afin de pouvoir confirmer plus facilement que le destinataire autorisé a pu le lire.
 
-Ensuite, vous pouvez partager en toute sécurité ce document par courrier électronique. 
+Ensuite, vous pouvez partager en toute sécurité ce document par e-mail. 
 
-## <a name="to-safely-share-your-document-by-email"></a>Partage en toute sécurité d’un document par courrier électronique
+## <a name="to-safely-share-your-document-by-email"></a>Partage en toute sécurité d’un document par e-mail
 
 1. Dans l’Explorateur de fichiers, cliquez avec le bouton droit sur votre document et sélectionnez **Classifier et protéger**. La boîte de dialogue **Classifier et protéger - Azure Information Protection** s’ouvre :
 
@@ -39,9 +39,11 @@ Ensuite, vous pouvez partager en toute sécurité ce document par courrier élec
 
     Avec ces paramètres, les destinataires seront en mesure d’afficher le document, mais pas de le modifier ou de l’imprimer.
 
-4. Dans la zone **Sélectionnez les utilisateurs**, tapez une ou plusieurs adresses e-mail professionnelles, comme lorsque vous envoyez un document à une personne avec laquelle votre organisation entretient des relations commerciales. Veillez à indiquer une adresse e-mail professionnelle, comme **janetm@contoso.com** ou **p.dover@fabrikam.com**, car Azure Information Protection ne prend pas en charge les adresses e-mail personnelles. 
+4. Dans la zone **Sélectionnez les utilisateurs**, tapez une ou plusieurs adresses e-mail professionnelles, comme lorsque vous envoyez un document à une personne avec laquelle votre organisation entretient des relations commerciales. Pour spécifier plusieurs adresses, vous utilisez un point-virgule ou appuyez sur Entrée. 
 
-    Sinon, cliquez sur le carnet d’adresses pour sélectionner l’adresse e-mail d’un collègue :
+    Veillez à indiquer une adresse e-mail professionnelle, comme **janetm@contoso.com** ou **p.dover@fabrikam.com**, car Azure Information Protection ne prend pas en charge les adresses e-mail personnelles pour ce scénario. 
+
+    Sinon, cliquez sur l’icône **Sélectionner des utilisateurs, des groupes ou une organisation** pour sélectionner l’adresse e-mail d’un collègue :
 
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 5 : Protéger avec des autorisations personnalisées](../media/protect-custom-permissions.png)  
     
@@ -65,11 +67,11 @@ Ensuite, vous pouvez partager en toute sécurité ce document par courrier élec
 
 Maintenant que vous avez envoyé votre document protégé, vous pouvez demander à vos destinataires de l’ouvrir dès qu’ils le reçoivent. 
 
-## <a name="ask-your-recipients-to-open-the-emailed-document"></a>demande au destinataires d’ouvrir le document envoyé par courrier électronique
+## <a name="ask-your-recipients-to-open-the-emailed-document"></a>demande au destinataires d’ouvrir le document envoyé par e-mail
 
-Vos destinataires peuvent utiliser de nombreux appareils pour lire le document protégé que vous avez envoyé en pièce jointe d’un courrier électronique. Les appareils incluent les iPad, les iPhone, les tablettes et les téléphones Android, les ordinateurs Mac, ainsi que les ordinateurs Windows.
+Vos destinataires disposent d’un grand choix d’appareils pour lire le document protégé que vous avez envoyé en pièce jointe d’un e-mail. En effet, ils peuvent utiliser un iPad, un iPhone, une tablette et un téléphone Android, un ordinateur Mac, ainsi qu’un ordinateur Windows.
 
-Demandez-leur de lire le message électronique que vous leur avez envoyé. En supposant que c’est la première fois qu’ils ont reçu des pièces jointes protégées par Rights Management, demandez-leur de cliquer sur le lien des instructions. Les utilisateurs voient alors la page de **bienvenue** de Microsoft Azure Information Protection, qui les invite à entrer leur adresse e-mail professionnelle.
+Demandez-leur de lire l’e-mail que vous leur avez envoyé. En supposant que c’est la première fois qu’ils ont reçu des pièces jointes protégées par Rights Management, demandez-leur de cliquer sur le lien des instructions. Les utilisateurs voient alors la page de **bienvenue** de Microsoft Azure Information Protection, qui les invite à entrer leur adresse e-mail professionnelle.
 
 Lorsqu’ils cliquent sur **S’inscrire**, Azure Information Protection vérifie si leur organisation possède un abonnement qui inclut le service de protection de données Azure Rights Management. Si ce n’est pas le cas, ils peuvent demander un compte gratuit.
 
@@ -77,7 +79,7 @@ Lorsqu’ils cliquent sur **S’inscrire**, Azure Information Protection vérifi
 
 1. Sur un PC ou un appareil mobile avec Office installé, ouvrez la pièce jointe pour lire le document.  
 
-2.  Si vous êtes invité à saisir votre nom d’utilisateur et votre mot de passe, indiquez votre nom d’utilisateur dans le même format que l’adresse de messagerie utilisée pour vous envoyer le courrier électronique et la pièce jointe. Par exemple, **janetm@contoso.com** ou **p.dover@fabrikam.com**. En ce qui concerne votre mot de passe, saisissez celui que vous avez fourni lors de votre inscription à RMS for individuals. Ou, si votre organisation dispose d’un service cloud tel qu’Office 365 ou qu’elle utilise Azure, entrez votre mot de passe de travail habituel.
+2.  Si vous êtes invité à entrer votre nom d’utilisateur et votre mot de passe, indiquez votre nom d’utilisateur dans le même format que l’adresse e-mail utilisée pour vous envoyer l’e-mail et la pièce jointe. Par exemple, **janetm@contoso.com** ou **p.dover@fabrikam.com**. En ce qui concerne votre mot de passe, saisissez celui que vous avez fourni lors de votre inscription à RMS for individuals. Ou, si votre organisation dispose d’un service cloud tel qu’Office 365 ou qu’elle utilise Azure, entrez votre mot de passe professionnel habituel.
 
 3. Lisez le contenu du document quand il s’ouvre. Étant donné que le document est en lecture seule, vous ne pouvez pas modifier son contenu.
 
@@ -93,7 +95,7 @@ Maintenant que le destinataire a ouvert la pièce jointe et l’a éventuellemen
 
 2.  Sous l’onglet **Accueil**, cliquez sur **Protéger** > **Suivre et révoquer** :
 
-    ![Option Suivre l’utilisation](../media/track-usage-calloutv2.png)
+    ![Option Suivre l’utilisation](../media/track-usage-calloutv3.png)
 
     Vous accédez ainsi au site de suivi de document.
 
@@ -101,7 +103,7 @@ Maintenant que le destinataire a ouvert la pièce jointe et l’a éventuellemen
 
 3.  Dans la page **Vos documents partagés** apparaît le nom du document que vous avez partagé. À ce stade, il s’agit du seul fichier affiché, mais la liste s’allongera à mesure que vous partagerez des fichiers.
 
-    Sur cette page, vous pouvez voir le moment où vous avez partagé le document (moment de l’envoi du courrier électronique contenant la pièce jointe protégée), la date de la dernière activité et le nom du destinataire auquel vous avez envoyé le courrier. Cliquez sur le nom du document pour plus de détails.
+    Sur cette page, vous pouvez voir le moment où vous avez partagé le document (moment de l’envoi de l’e-mail contenant la pièce jointe protégée), la date de la dernière activité et le nom du destinataire auquel vous avez envoyé l’e-mail. Cliquez sur le nom du document pour plus de détails.
 
 4.  Sur la nouvelle page qui porte le nom du fichier sur lequel vous avez cliqué, vous pouvez voir les détails du résumé de ce document, ainsi qu’une liste d’autres options disponibles pour le document (**Liste**, **Chronologie**, **Carte**, **Paramètres**).
 

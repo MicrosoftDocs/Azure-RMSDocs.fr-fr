@@ -4,17 +4,17 @@ description: "Lorsque vous affectez une étiquette à un document ou un e-mail, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 09e8bfdc9bae9979db6e6bc39457bdcdcf6dabca
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 0da5df139d98f0468f49e7e3f17cd1cd2358a015
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -32,7 +32,7 @@ Informations supplémentaires sur ces marqueurs visuels :
     
     - PowerPoint : les filigranes sont appliqués au masque des diapositives comme image d’arrière-plan.
     
-    - Plusieurs lignes de texte sont prises en charge lorsque vous utilisez la préversion actuelle du client Azure Information Protection.
+    - Plusieurs lignes de texte sont prises en charge.
 
 - Vous pouvez spécifier simplement une chaîne de texte ou utiliser des [variables](#using-variables-in-the-text-string) pour créer dynamiquement la chaîne de texte quand l’en-tête, le pied de page ou le filigrane est appliqué.
 
@@ -44,17 +44,9 @@ Pour les e-mails, les marquages visuels sont appliqués lorsqu’un e-mail est e
 
 Pour les documents, les marquages visuels sont appliqués comme suit :
 
-- **Pour la version à disponibilité générale** du client Azure Information Protection : 
-    
-    - Dans une application Office, les marquages visuels d’une étiquette sont appliqués lorsque l’étiquette est appliquée et à chaque fois que le document est enregistré. 
-    
-    - Lorsqu’un document est étiqueté à l’aide de l’Explorateur de fichiers ou de PowerShell, les marquages visuels ne sont pas appliqués immédiatement, mais lorsque ce document est ouvert dans une application Office et à chaque fois que le document est enregistré.
+- Dans une application Office, les marquages visuels d’une étiquette sont appliqués lorsque l’étiquette est appliquée. Les marquages visuels sont également appliqués lors de l’ouverture d’un document étiqueté et lors du premier enregistrement document.  
 
-- **Pour la préversion actuelle** du client Azure Information Protection : 
-    
-    - Dans une application Office, les marquages visuels d’une étiquette sont appliqués lorsque l’étiquette est appliquée. Les marquages visuels sont également appliqués lors de l’ouverture d’un document étiqueté et lors du premier enregistrement document.  
-    
-    - Lorsqu’un document est étiqueté à l’aide de l’Explorateur de fichiers ou de PowerShell, les marquages visuels ne sont pas appliqués immédiatement, mais lorsque ce document est ouvert dans une application Office et lors du premier enregistrement du document.
+- Lorsqu’un document est étiqueté à l’aide de l’Explorateur de fichiers ou de PowerShell, les marquages visuels ne sont pas appliqués immédiatement, mais lorsque ce document est ouvert dans une application Office et lors du premier enregistrement du document.
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Pour configurer les marquages visuels pour une étiquette
 
@@ -69,12 +61,12 @@ Utilisez les instructions suivantes pour configurer les marquages visuels d’un
     Si l’étiquette à configurer se trouve dans une [stratégie délimitée](configure-policy-scope.md) pour s’appliquer uniquement aux utilisateurs sélectionnés, dans la sélection de menu **STRATÉGIES**, sélectionnez **Stratégies délimitées**. Sélectionnez ensuite votre stratégie délimitée dans le panneau **Azure Information Protection - Stratégies délimitées**.
 
 3. Dans le panneau **Étiquette**, dans la section **Définir un marquage visuel (par exemple, un en-tête ou un pied de page)**, configurez les paramètres pour les marquages visuels que vous souhaitez, puis cliquez sur **Enregistrer** :
-
-    - Pour configurer un en-tête : pour **Les documents avec cette étiquette ont un en-tête**, sélectionnez **Activé** si vous souhaitez un en-tête, et **Désactivé** si ce n’est pas le cas. Si vous sélectionnez **Activé**, spécifiez ensuite le texte, la taille, la couleur et l’alignement de l’en-tête.
-
-    - Pour configurer un pied de page : pour **Les documents avec cette étiquette ont un pied de page**, sélectionnez **Activé** si vous souhaitez un pied de page, et **Désactivé** si ce n’est pas le cas. Si vous sélectionnez **Activé**, spécifiez ensuite le texte, la taille, la couleur et l’alignement du pied de page.
-
-    - Pour configurer un filigrane : pour **Les documents avec cette étiquette ont un filigrane**, sélectionnez **Activé** si vous souhaitez un filigrane, et **Désactivé** si ce n’est pas le cas. Si vous sélectionnez **Activé**, spécifiez ensuite le texte, la taille, la couleur et la mise en page du filigrane.
+    
+    - Pour configurer un en-tête : pour **Les documents avec cette étiquette ont un en-tête**, sélectionnez **Activé** si vous souhaitez un en-tête, et **Désactivé** si ce n’est pas le cas. Si vous sélectionnez **Activé**, spécifiez ensuite le texte, la taille, la [police](#setting-the-font-name), la [couleur](#setting-the-font-color) et l’alignement de l’en-tête.
+    
+    - Pour configurer un pied de page : pour **Les documents avec cette étiquette ont un pied de page**, sélectionnez **Activé** si vous souhaitez un pied de page, et **Désactivé** si ce n’est pas le cas. Si vous sélectionnez **Activé**, spécifiez ensuite le texte, la taille, la [police](#setting-the-font-name), la [couleur](#setting-the-font-color) et l’alignement du pied de page.
+    
+    - Pour configurer un filigrane : pour **Les documents avec cette étiquette ont un filigrane**, sélectionnez **Activé** si vous souhaitez un filigrane, et **Désactivé** si ce n’est pas le cas. Si vous sélectionnez **Activé**, spécifiez ensuite le texte, la taille, la [police](#setting-the-font-name), la [couleur](#setting-the-font-color) et l’alignement du filigrane.
 
 4. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
 
@@ -95,6 +87,18 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
 - `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Par exemple : 16/08/2016 13:30
 
 Exemple : Si vous spécifiez la chaîne `Document: ${item.name}  Classification: ${item.label}` pour le pied de page de l’étiquette **Général**, le texte du pied de page appliqué à un document nommé project.docx est **Document : project.docx Classification : Général**.
+
+### <a name="setting-the-font-name"></a>Définition du nom de la police
+
+Ce paramètre est actuellement en préversion.
+
+Calibri est la police par défaut pour le texte des en-têtes, pieds de page et filigranes. Si vous spécifiez une autre police, vérifiez qu’elle est disponible sur les appareils clients qui appliqueront les marqueurs visuels. Sinon, la police utilisée sera non déterministe. 
+
+### <a name="setting-the-font-color"></a>Définition de la couleur de la police
+
+Vous pouvez choisir une couleur dans la liste des couleurs disponibles ou spécifier une couleur personnalisée en entrant un code (triplet hexadécimal) représentant les composants RVB (rouge, vert, bleu) de la couleur. Par exemple, **#DAA520**. 
+
+Si vous avez besoin d’une référence pour ces codes, l’article [Couleurs par nom](https://msdn.microsoft.com/library/aa358802\(v=vs.85) de la documentation MSDN constitue un bon point de départ. Ces codes sont utilisés dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

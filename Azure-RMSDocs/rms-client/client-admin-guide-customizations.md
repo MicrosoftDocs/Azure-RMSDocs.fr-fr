@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e590bd7983b0f3e4e4d1348fbe120452e9ceb79b
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: d5345f794fb69ddbfb4d6ffcddfcffd41ecacff5
+ms.sourcegitcommit: ff2fadacf9ef4c6ee27d9d08c4c455ffd48f21f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Configurations personnalisées pour le client Azure Information Protection
 
@@ -24,11 +24,9 @@ ms.lasthandoff: 09/08/2017
 
 Utilisez les informations suivantes pour les configurations avancées nécessaires dont vous pourrez avoir besoin pour des scénarios spécifiques, ou pour un sous-ensemble d’utilisateurs lorsque vous gérez le client Azure Information Protection.
 
-Certains de ces paramètres nécessitent une modification du Registre, et certains autres utilisent des paramètres avancés que vous devez configurer dans le portail Azure, puis publier pour les clients à télécharger. En outre, certains paramètres peuvent n’être disponibles que dans une préversion du client Azure Information Protection. Pour ces paramètres, il existe une documentation concernant la version minimale du client. Pour les paramètres et les configurations pris en charge dans la version publique du client, il n’existe aucune documentation relative à la version minimale du client.
+Certains de ces paramètres nécessitent une modification du Registre, et certains autres utilisent des paramètres avancés que vous devez configurer dans le portail Azure, puis publier pour les clients à télécharger.  
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Comment configurer les paramètres avancés de configuration du client dans le portail
-
-Cette configuration est actuellement en préversion.
 
 1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**.
 
@@ -64,11 +62,7 @@ Pensez à vérifier le nom de domaine du compte connecté. En effet, vous pouvez
 
 Pour se connecter avec l’identité d’un autre utilisateur :
 
-1. Selon la version du client Azure Information Protection : 
-    
-    - Pour obtenir la version grand public du client Azure Information Protection : à l’aide d’un éditeur du Registre, accédez à **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** et supprimez la valeur **TokenCache** (et les données de valeur associées).
-    
-    - Pour la préversion actuelle du client Azure Information Protection : accédez à **%localappdata%\Microsoft\MSIP** et supprimez le fichier **TokenCache**.
+1. Accédez à **%localappdata%\Microsoft\MSIP** et supprimez le fichier **TokenCache**.
 
 2. Redémarrez les applications Office ouvertes et connectez-vous avec votre autre compte d’utilisateur. Si l’invite de connexion au service Azure Information Protection n’apparaît pas dans votre application Office, revenez à la boîte de dialogue **Microsoft Azure Information Protection** et cliquez sur **Connexion** depuis la section mise à jour **État du Client**.
 
@@ -78,11 +72,7 @@ En outre :
 
 - Si vous utilisez l’authentification unique, vous devrez vous déconnecter de Windows et vous reconnecter avec votre autre compte d’utilisateur après avoir modifié le Registre. Le client Azure Information Protection peut alors vous authentifier automatiquement à l’aide du compte d’utilisateur connecté à ce moment-là.
 
-- Si vous souhaitez réinitialiser les paramètres utilisateur pour le service Azure Rights Management, utilisez l’option **Aide et commentaires**.
-
-- Si vous souhaitez supprimer la stratégie Azure Information Protection actuellement téléchargée, supprimez le fichier **Policy.msip** du dossier **%localappdata%\Microsoft\MSIP**.
-
-- Si vous avez la préversion actuelle du client Azure Information Protection, vous pouvez utiliser l’option **Réinitialiser les paramètres** dans **Aide et commentaires** pour vous déconnecter et supprimer la stratégie Azure Information Protection téléchargée.
+- Vous pouvez utiliser l’option **Réinitialiser les paramètres** dans **Aide et commentaires** pour vous déconnecter et supprimer la stratégie Azure Information Protection téléchargée.
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>Appliquer le mode Protection uniquement si votre organisation possède différents types de licences
 
@@ -99,10 +89,6 @@ Recherchez le nom de la valeur suivant et définissez les données de la valeur 
 Vérifiez par ailleurs que ces ordinateurs n’ont pas de fichier nommé **Policy.msip** dans le dossier **%LocalAppData%\Microsoft\MSIP**. S’il existe, supprimez-le. Ce fichier contient la stratégie Azure Information Protection et peut avoir été téléchargé avant que vous n’ayez modifié le Registre ou si le client Azure Information Protection a été installé avec l’option de démonstration.
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Masquer l’option de menu Classifier et protéger dans l’Explorateur de fichiers Windows
-
-Cette configuration est actuellement en préversion.
-
-Vous pouvez définir cette configuration avancée en modifiant le Registre lorsque vous disposez de la version 1.3.0.0 du client Azure Information Protection ou d’une version ultérieure. 
 
 Créez le nom de la valeur DWORD suivant (avec toutes données de la valeur) :
 
@@ -133,9 +119,7 @@ Quand vous exportez la stratégie, cette action télécharge un fichier compress
 
 ## <a name="hide-the-do-not-forward-button-in-outlook"></a>Masquer le bouton Ne pas transférer dans Outlook
 
-Cette option de configuration est actuellement en préversion.
-
-Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Ce paramètre nécessite également la préversion **1.8.41.0** du client Azure Information Protection ou une version ultérieure.
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
 
 Lorsque vous configurez ce paramètre, celui-ci masque le bouton **Ne pas transférer** du ruban Outlook. Ce paramètre ne permet pas de masquer cette option dans les menus Office.
 
@@ -147,10 +131,8 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 ## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>Désactiver les options d’autorisations personnalisées pour les utilisateurs
 
-Cette option de configuration est actuellement en préversion.
-
 > [!IMPORTANT]
-> N’utilisez pas cette option si vous avez des étiquettes configurées pour des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers. Si vous le faites, quand l’étiquette est appliquée, les utilisateurs ne sont pas invités à configurer les autorisations personnalisées. Par conséquent, le document est étiqueté, mais n’est pas protégé comme prévu.
+> Sauf si vous disposez de la préversion actuelle du client, n’utilisez pas cette option si vous avez des étiquettes configurées pour des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers. Si vous le faites, quand l’étiquette est appliquée, les utilisateurs ne sont pas invités à configurer les autorisations personnalisées. Par conséquent, le document est étiqueté, mais n’est pas protégé comme prévu.
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 
@@ -170,7 +152,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Masquer définitivement la barre Azure Information Protection
 
-Cette configuration utilise un paramètre avancé que vous devez configurer dans le portail Azure. Ce paramètre nécessite également la préversion **1.9.58.0** du client Azure Information Protection ou une version ultérieure.
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 
 Lorsque vous configurez ce paramètre et publiez la stratégie pour les utilisateurs, si un utilisateur choisit de ne pas afficher la barre Azure Information Protection dans ses applications Office, la barre reste masquée. Cela se produit lorsque l’utilisateur décoche l’option **Afficher la barre** dans l’onglet **Accueil**, groupe **Protection** groupe, bouton **Protéger**. Ce paramètre n’a aucun effet si l’utilisateur ferme la barre à l’aide de l’icône **Fermer cette barre**.
 
@@ -181,6 +163,39 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 - Clé : **EnableBarHiding**
 
 - Valeur : **True**
+
+
+## <a name="enable-recommended-classification-in-outlook"></a>Activer la classification recommandée dans Outlook
+
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
+
+Quand vous configurez une étiquette pour la classification recommandée, les utilisateurs sont invités à accepter ou ignorer l’étiquette recommandée dans Word, Excel et PowerPoint. Ce paramètre affiche également cette recommandation d’étiquette dans Outlook.
+
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
+
+- Clé : **OutlookRecommendationEnabled**
+
+- Valeur : **True**
+
+
+## <a name="set-a-different-default-label-for-outlook"></a>Définir une autre étiquette par défaut pour Outlook
+
+Cette option de configuration est actuellement en préversion et nécessite la préversion du client.
+
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
+
+Quand vous configurez ce paramètre, Outlook n’applique pas l’étiquette par défaut qui est configurée dans la stratégie Azure Information Protection pour le paramètre **Sélectionner l’étiquette par défaut**. Au lieu de cela, Outlook peut appliquer une autre étiquette ou ne rien appliquer.
+
+Pour appliquer une autre étiquette, vous devez spécifier son ID. L’ID de l’étiquette figure dans le panneau **Étiquette** quand vous affichez ou configurez la stratégie Azure Information Protection dans le portail Azure. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier l’ID de l’étiquette (MainLabelId ou SubLabelId). Si une étiquette comprend des sous-étiquettes, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parent.
+
+Pour qu’Outlook n’applique pas l’étiquette par défaut, spécifiez **None**.
+
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
+
+- Clé : **OutlookDefaultLabel**
+
+- Valeur : \< **ID d’étiquette**> ou **None**
+
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Intégration avec la classification des messages Exchange pour une solution d’étiquetage des appareils mobiles
 

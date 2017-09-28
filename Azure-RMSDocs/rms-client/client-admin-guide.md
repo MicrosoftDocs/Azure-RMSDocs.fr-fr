@@ -4,7 +4,7 @@ description: "Instructions et informations destinées aux administrateurs d’un
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f07d39e5110ae9bfb58a81585a042e8afdbbc639
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 6786ffde8d9903ee5c9d553159710052a6d5e7a2
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -269,22 +269,9 @@ Utilisez le lien **Envoyez-nous des commentaires** pour envoyer des suggestions 
 
 L’option **Exporter les journaux** permet de collecter et de joindre automatiquement des fichiers journaux pour le client Azure Information Protection si vous devez les envoyer au support Microsoft. Cette option peut également être utilisée par les utilisateurs finaux pour envoyer ces fichiers journaux à votre support technique.
 
-Pour des informations de diagnostic et pour réinitialiser le client, sélectionnez **Exécuter les diagnostics**. Quand les tests de diagnostic sont terminés, cliquez sur **Copier les résultats** pour coller les informations dans un e-mail que vous pouvez envoyer au support technique Microsoft ou que vos utilisateurs finaux peuvent envoyer à votre support technique. Une fois les tests terminés, vous pouvez aussi réinitialiser le client.
+L’option **Réinitialiser les paramètres** déconnecte l’utilisateur, supprime la stratégie Azure Information Protection téléchargée et rétablit les paramètres utilisateur pour le service Azure Rights Management.
 
-> [!NOTE]
-> Dans la préversion du client, la fonctionnalité **Exécuter les diagnostics** est remplacée par **Réinitialiser les paramètres**. En outre, le comportement de cette option est [différent](#more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client).
-
-#### <a name="more-information-about-the-reset-option-for-the-general-availability-ga-version-of-the-azure-information-protection-client"></a>Informations supplémentaires sur l’option de réinitialisation de la version grand public du client Azure Information Protection
-
-- Il n’est pas obligatoire d’être un administrateur local pour utiliser cette option, et cette action n’est pas enregistrée dans l’Observateur d’événements. 
-
-- Sauf si des fichiers sont verrouillés, cette action supprime tous les fichiers de **%LocalAppData%\Microsoft\MSIPC**, qui est l’emplacement où les certificats clients et les modèles de gestion des droits sont stockés. Elle ne supprime pas la stratégie Azure Information Protection ni les fichiers journaux du client, et elle ne déconnecte pas l’utilisateur.
-
-- La clé et les paramètres de Registre suivants sont supprimés : **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Si vous avez configuré les paramètres de cette clé de Registre, vous devez reconfigurer les paramètres du Registre après avoir réinitialisé le client. Par exemple, vous avec configuré des paramètres pour une redirection vers votre locataire Azure Information Protection ,car vous effectuez la migration à partir d’AD RMS et vous avez toujours un point de connexion de service sur votre réseau.
-
-- Après avoir réinitialisé le client, vous devez réinitialiser l’environnement utilisateur, ce qui télécharge des certificats pour le client et les derniers modèles. Pour cela, fermez toutes les instances d’Office et redémarrez une application Office. Cette action vérifie également que vous avez téléchargé la dernière stratégie Azure Information Protection. Ne réexécutez pas les tests de diagnostic tant que vous n’avez pas fait ceci.
-
-#### <a name="more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client"></a>Informations supplémentaires sur l’option de réinitialisation de la préversion actuelle du client Azure Information Protection
+#### <a name="more-information-about-the-reset-settings-option"></a>Informations supplémentaires sur l’option Réinitialiser les paramètres
 
 - Il n’est pas obligatoire d’être un administrateur local pour utiliser cette option, et cette action n’est pas enregistrée dans l’Observateur d’événements. 
 

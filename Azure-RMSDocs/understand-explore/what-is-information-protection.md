@@ -4,17 +4,17 @@ description: "Présentation du service Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: fff96103544242510b7e53b1636f1f95fbd4bb2b
-ms.sourcegitcommit: c5e117f5329c6e5a93d5858a3b4609aadd8a6e7e
+ms.openlocfilehash: ba39c332437e2710554d1e8f69c3f676f0d870db
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
@@ -43,13 +43,13 @@ La technologie de protection utilise *Azure Rights Management* (ou Azure RMS, da
 
 Cette technologie de protection utilise des stratégies de chiffrement, d’identité et d’autorisation. À l’image des étiquettes appliquées, la protection avec Rights Management reste associée aux documents et aux e-mails, indépendamment de leur emplacement (à l’intérieur ou en dehors de votre organisation, de vos réseaux, de vos serveurs de fichiers et de vos applications). Cette solution de protection des informations vous permet de garder le contrôle de vos données, même quand vous les partagez avec d'autres personnes.
 
-Par exemple, vous pouvez configurer un document (rapport, feuille de calcul de prévision de ventes, etc.) pour qu’il soit accessible uniquement par les personnes de votre organisation et déterminer s’il peut être modifié, s’il est disponible en lecture seule uniquement ou empêcher son impression. Vous pouvez configurer les e-mails de la même façon et également empêcher leur transfert ou l'utilisation de l'option Répondre à tous. Ces tâches de protection peuvent être simplifiées et rationalisées à l’aide de *modèles de gestion des droits*.
+Par exemple, vous pouvez configurer un document (rapport, feuille de calcul de prévision de ventes, etc.) pour qu’il soit accessible uniquement par les personnes de votre organisation et déterminer s’il peut être modifié, s’il est disponible en lecture seule uniquement ou empêcher son impression. Vous pouvez configurer les e-mails de la même façon et également empêcher leur transfert ou l'utilisation de l'option Répondre à tous. Ces tâches de protection peuvent être simplifiées et rationalisées à l’aide de *modèles Rights Management*.
 
-### <a name="rights-management-templates"></a>Modèles de gestion des droits
+### <a name="rights-management-templates"></a>Modèles Rights Management
 
-Dès que vous activez le service Azure Rights Management, deux modèles par défaut sont automatiquement créés qui restreignent l’accès aux données aux utilisateurs appartenant à votre organisation. Vous pouvez utiliser ces modèles pour empêcher immédiatement une fuite des données hors de votre organisation. Vous pouvez également compléter ces modèles par défaut en configurant vos propres modèles personnalisés qui appliquent des contrôles plus restrictifs.
+Dès que vous activez le service Azure Rights Management, deux modèles par défaut sont disponibles, qui vous permettent de limiter l’accès aux données aux utilisateurs appartenant à votre organisation. Vous pouvez utiliser ces modèles pour empêcher immédiatement une fuite des données hors de votre organisation. Vous pouvez également compléter ces modèles par défaut en configurant vos propres paramètres de protection qui appliquent des contrôles plus restrictifs.
 
-Ces modèles peuvent faire partie de la configuration d’une étiquette. Ainsi, quand une étiquette spécifique est appliquée à un document (ou à un e-mail), les données sont automatiquement classées et protégées. Les modèles peuvent également être sélectionnés par les utilisateurs ou les administrateurs dans les produits et services qui prennent en charge la technologie Azure Rights Management.
+Les modèles peuvent faire partie de la configuration d’une étiquette. Quand cette étiquette est appliquée à un document ou à un e-mail, les données sont classées et protégées automatiquement. Les modèles peuvent également être sélectionnés par les utilisateurs ou les administrateurs dans les produits et services qui prennent en charge la technologie Azure Rights Management.
 
 Cet exemple montre comment vous pouvez sélectionner un modèle pour une étiquette quand vous configurez la stratégie Azure Information Protection à partir du portail Azure :
 
@@ -84,8 +84,6 @@ Après qu’un document a été protégé, les utilisateurs et administrateurs p
 
 ## <a name="resources-for-azure-information-protection"></a>Ressources pour Azure Information Protection
 
-- Annonce : [Azure Information Protection est maintenant mis à la disposition générale](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/04/azure-information-protection-is-now-generally-available/)
-
 - Version d’évaluation gratuite : [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
 - Téléchargement du client : [Client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
@@ -98,17 +96,7 @@ Après qu’un document a été protégé, les utilisateurs et administrateurs p
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
 
-    De plus, Microsoft Ignite 2016 propose plusieurs sessions à la demande pour Azure Information Protection :
-
-    - [BRK2127: Adopt a comprehensive identity-driven solution for protecting and sharing data securely (Adopter une solution complète basée sur les identités pour protéger et partager des données en toute sécurité)](https://myignite.microsoft.com/videos?q=BRK2127)
-    
-    - [THR2107: Collaborate securely using Azure Information Protection (Collaborer en toute sécurité à l’aide d’Azure Information Protection)](https://myignite.microsoft.com/videos?q=THR2107)
-    
-    - [THR2108: Ensure comprehensive protection of your data with Azure Information Protection (Garantir une protection complète de vos données avec Azure Information Protection)](https://myignite.microsoft.com/videos?q=THR2108)
-    
-    - [BRK3095: Learn how classification, labeling, and protection delivers persistent data protection (Découvrir comment la classification, l’étiquetage et la protection offrent une protection des données persistantes)](https://myignite.microsoft.com/videos?q=BRK3095)
-    
-    - [BRK2128: Send secure email to anyone with the power of Microsoft Office 365 and Azure Information Protection (Envoyer un e-mail sécurisé à l’aide de la puissance de Microsoft Office 365 et d’Azure Information Protection)](https://myignite.microsoft.com/videos?q=BRK2128)
+De plus, **Microsoft Ignite 2017** propose plusieurs sessions pour Azure Information Protection, qui seront disponibles sur demande. Vous pouvez [rechercher et trouver](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522) ces sessions sur le site web Ignite dès qu’elles sont disponibles. Pour un résumé des annonces, consultez [Nouveautés d’Azure Information Protection @ Ignite 2017](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/).
 
 
 ## <a name="next-steps"></a>Étapes suivantes

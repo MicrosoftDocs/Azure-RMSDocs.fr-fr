@@ -4,7 +4,7 @@ description: "Informations sur les opérations de cycle de vie applicables si vo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3220b1cbe93b110c838a4e85cc143b44de0d2d14
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 2f3ae7a0558cf209f3ec710a5114dbbc9a0dda9d
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gérée par le client : opérations de cycle de vie des clés de locataires
 
@@ -30,7 +30,7 @@ Dans Azure Key Vault, vous pouvez modifier les autorisations sur le coffre de cl
 Quand vous annulez votre abonnement Azure Information Protection, Azure Information Protection arrête d’utiliser votre clé de locataire, et aucune action n’est nécessaire de votre part.
 
 ## <a name="rekey-your-tenant-key"></a>Renouvellement de votre clé de locataire
-Le renouvellement de la clé est également appelé déploiement de la clé. Quand vous effectuez cette opération, Azure Information Protection arrête d’utiliser la clé de locataire existante pour protéger les documents et les e-mails, et commence à utiliser une autre clé. Les stratégies et les modèles sont immédiatement abandonnés, mais ce changement est progressif pour les clients et les services existants qui utilisent Azure Information Protection. Ainsi, pendant quelque temps, certains nouveaux contenus continuent d’être protégés par l’ancienne clé de locataire.
+Le renouvellement de la clé est également appelé déploiement de la clé. Quand vous effectuez cette opération, Azure Information Protection cesse d’utiliser la clé de locataire existante pour protéger les documents et les e-mails, et commence à utiliser une autre clé. Les stratégies et les modèles sont immédiatement abandonnés, mais ce changement est progressif pour les clients et les services existants qui utilisent Azure Information Protection. Ainsi, pendant quelque temps, certains nouveaux contenus continuent d’être protégés par l’ancienne clé de locataire.
 
 Pour renouveler la clé, vous devez configurer l’objet de clé de locataire et spécifier la clé de remplacement à utiliser. Ensuite, la clé précédemment utilisée est automatiquement marquée comme archivée pour Azure Information Protection. Cette configuration garantit que le contenu protégé à l’aide de cette clé reste accessible.
 
@@ -38,22 +38,28 @@ Exemples de scénarios dans lesquels il peut être nécessaire de renouveler la 
 
 - Votre entreprise s'est divisée en deux sociétés distinctes ou plus. Quand vous renouvelez votre clé de locataire, la nouvelle société n’a pas accès au nouveau contenu publié par vos employés. Elle pourra toujours accéder à l'ancien contenu si elle dispose d'une copie de l'ancienne clé de locataire.
 
+- Vous voulez passer d’une topologie de gestion des clés à une autre. 
+
 - Vous pensez que la copie principale de votre clé de locataire (celle en votre possession) est compromise.
 
-Pour renouveler la clé, vous pouvez créer une clé dans Azure Key Vault ou utiliser une autre clé déjà présente dans Azure Key Vault. Suivez ensuite les mêmes procédures que celles que vous avez effectuées pour implémenter la solution BYOK pour Azure Information Protection :
+Pour renouveler la clé et obtenir ainsi une autre clé que vous gérez, vous pouvez créer une clé dans Azure Key Vault ou utiliser une autre clé déjà présente dans Azure Key Vault. Suivez ensuite les mêmes procédures que celles que vous avez effectuées pour implémenter BYOK pour Azure Information Protection.
 
 1. Uniquement si la nouvelle clé se trouve dans un coffre de clés différent de celui que vous utilisez déjà pour Azure Information Protection : autorisez Azure Information Protection à utiliser le coffre de clés à l’aide de l’applet de commande [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy).
 
-2. Configurez Azure Information Protection pour utiliser la nouvelle clé à l’aide de l’applet de commande [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey).
+2. Si Azure Information Protection n’a pas encore d’informations sur la clé que vous voulez utiliser, exécutez l’applet de commande [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey).
 
 3. Configurez l’objet clé du locataire à l’aide de l’applet de commande [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
 
-Pour plus d’informations sur chacune de ces étapes, consultez [Implémentation de votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
+Pour plus d’informations sur chacune de ces étapes :
+
+- Pour renouveler la clé et obtenir ainsi une autre clé que vous gérez, consultez [Implémentation de BYOK pour votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+
+- Pour renouveler la clé en la remplaçant par une clé que Microsoft gère pour vous, consultez la section [Renouveler votre clé de locataire](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) pour les opérations gérées par Microsoft.
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Sauvegarde et récupération de votre clé de locataire
 Vous êtes responsable de la sauvegarde de votre clé de locataire. Si vous avez généré votre clé de locataire dans un module de sécurité matériel Thales, pour sauvegarder la clé, il vous suffit de sauvegarder le fichier de clé tokénisée, le fichier Word ainsi que les cartes Administrateur.
 
-Comme vous avez transféré votre clé en suivant les procédures décrites dans [Implémentation de BYOK (Bring Your Own Key)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key), Key Vault conserve le fichier de clé tokenisée pour se protéger des défaillances des nœuds du service. Ce fichier est lié à la sécurité de l’instance ou de la région Azure spécifique. Cependant, il ne s'agit pas là d'une sauvegarde complète. Par exemple, si vous avez besoin d’une copie en texte brut de votre clé pour l’utiliser en dehors d’un HSM Thales, Azure Key Vault ne peut pas la récupérer à votre place car il a seulement une copie non récupérable.
+Comme vous avez transféré votre clé en suivant les procédures décrites dans [Implémentation de BYOK pour votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key), Key Vault conserve le fichier de clé tokenisée pour protéger des défaillances des nœuds du service. Ce fichier est lié à la sécurité de l’instance ou de la région Azure spécifique. Cependant, il ne s'agit pas là d'une sauvegarde complète. Par exemple, si vous avez besoin d’une copie en texte brut de votre clé pour l’utiliser en dehors d’un HSM Thales, Azure Key Vault ne peut pas la récupérer à votre place car il a seulement une copie non récupérable.
 
 ## <a name="export-your-tenant-key"></a>Exportation de votre clé de locataire
 Si vous utilisez BYOK, vous ne pouvez pas exporter votre clé de locataire à partir d’Azure Key Vault ou d’Azure Information Protection. La copie dans Azure Key Vault est non récupérable. 

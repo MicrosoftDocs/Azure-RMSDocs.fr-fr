@@ -4,7 +4,7 @@ description: "Quand vous utilisez le service Azure Rights Management, les modèl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9a4e01bd23f7f6107b4021cc792839cf38ee3b5
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 9a5feea87df01507520da6a118372de0f6364452
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
@@ -26,7 +26,7 @@ Quand vous utilisez le service Azure Rights Management d’Azure Information Pro
 
 |Application ou service|Mode d'actualisation des modèles après des modifications|
 |--------------------------|---------------------------------------------|
-|Exchange Online<br /><br />Applicable aux règles de transport, aux règles DLP et à Outlook Web App|Configuration manuelle requise pour actualiser les modèles.<br /><br />Pour connaître les étapes de configuration, consultez la section suivante, [Exchange Online uniquement : Configurer Exchange pour télécharger des modèles personnalisés modifiés](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
+|Exchange Online<br /><br />Applicable aux règles de transport et à Outlook Web App |Actualisé automatiquement dans l’heure (aucune étape supplémentaire nécessaire).<br /><br />C’est le cas si vous utilisez le [chiffrement de messages Office 365 avec les nouvelles fonctionnalités](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Si vous avez configuré Exchange Online pour l’utilisation du service Azure Rights Management en important votre domaine de publication approuvé, utilisez le même ensemble d’instructions pour activer les nouvelles fonctionnalités dans Exchange Online.|
 |Client Azure Information Protection|Actualisation automatique chaque fois que la stratégie Azure Information Protection est actualisée sur le client :<br /><br /> - Lorsqu’une application Office qui prend en charge la barre Azure Information Protection s’ouvre. <br /><br /> - Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier. <br /><br /> - Lorsque vous exécutez les applets de commande PowerShell pour l’étiquetage et la protection (Get-AIPFileStatus et Set-AIPFileLabel).<br /><br /> - Toutes les 24 heures.<br /><br /> En outre, étant donné que le client Azure Information Protection est étroitement intégré à Office, les modèles actualisés pour Office 2016 ou Office 2013 le seront aussi pour le client Azure Information Protection.|
 |Office 2016 et Office 2013<br /><br />Application de partage RMS pour Windows|Actualisation automatique (d’après une planification) :<br /><br />- Pour ces versions ultérieures d’Office : l’intervalle d’actualisation par défaut est de sept jours.<br /><br />- Pour l’application de partage RMS pour Windows : à partir de la version 1.0.1784.0, l’intervalle d’actualisation par défaut est d’une journée. Les versions antérieures ont, par défaut, un intervalle d'actualisation de sept jours.<br /><br />Pour forcer une actualisation avant la planification, consultez la section [Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|Actualisation automatique lorsque les utilisateurs se déconnectent de Windows, se reconnectent et attendent jusqu'à une heure.|
@@ -35,67 +35,6 @@ Quand vous utilisez le service Azure Rights Management d’Azure Information Pro
 |Application de partage RMS pour les ordinateurs Mac|Actualisation automatique (aucune étape supplémentaire nécessaire).|
 
 Lorsque les applications client ont besoin de télécharger des modèles (initialement ou actualisés pour des modifications), préparez-vous à attendre pendant jusqu'à 15 minutes avant que le téléchargement soit terminé et que les modèles nouveaux ou mis à jour soient entièrement opérationnels. La durée varie en fonction de différents facteurs comme la taille et la complexité de la configuration du modèle et la connectivité réseau. 
-
-## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Exchange Online uniquement : Comment configurer Exchange pour télécharger des modèles personnalisés modifiés
-Si vous avez déjà configuré la Gestion des droits relatifs à l'information (IRM) pour Exchange Online, les modèles personnalisés ne peuvent pas être téléchargés par les utilisateurs tant que vous n'apportez pas les modifications suivantes à l'aide de Windows PowerShell dans Exchange Online.
-
-> [!NOTE]
-> Pour plus d’informations sur l’utilisation de Windows PowerShell dans Exchange Online, consultez [Utilisation de PowerShell avec Exchange Online](https://technet.microsoft.com/library/jj200677%28v=exchg.160%29.aspx).
-
-Vous devez suivre cette procédure chaque fois que vous modifiez un modèle.
-
-### <a name="to-update-templates-for-exchange-online"></a>Pour mettre à jour des modèles pour Exchange Online
-
-1.  À l’aide de Windows PowerShell dans Exchange Online, connectez-vous au service :
-
-    1.  Indiquez vos nom d’utilisateur et mot de passe Office 365 :
-
-        ```
-        $UserCredential = Get-Credential
-        ```
-
-    2.  Connectez-vous au service Exchange Online en exécutant les deux commandes suivantes :
-
-        ```
-        $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-        ```
-
-        ```
-        Import-PSSession $Session
-        ```
-
-2.  Utilisez l’applet de commande [Import-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200724%28v=exchg.160%29.aspx) pour réimporter votre domaine de publication approuvé (TPD) à partir d’Azure RMS :
-
-    ```
-    Import-RMSTrustedPublishingDomain -Name "<TPD name>" -RefreshTemplates -RMSOnline
-    ```
-    Par exemple, si le nom de votre TPD est **RMS Online - 1** (nom par défaut pour de nombreuses organisations), entrez : **Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates -RMSOnline**
-
-    > [!NOTE]
-    > Pour vérifier le nom de votre TPD, vous pouvez utiliser l’applet de commande [Get-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200707%28v=exchg.160%29.aspx).
-
-3.  Pour vérifier que les modèles ont été importés correctement, patientez quelques minutes, puis exécutez l’applet de commande [Get-RMSTemplate](http://technet.microsoft.com/library/dd297960%28v=exchg.160%29.aspx) et définissez le Type sur All. Exemple :
-
-    ```
-    Get-RMSTemplate -TrustedPublishingDomain "RMS Online - 1" -Type All
-    ```
-    > [!TIP]
-    > Il est utile de conserver une copie de la sortie afin de pouvoir facilement copier les noms ou GUID de modèles si vous archivez un modèle ultérieurement.
-
-4.  Si vous voulez qu’un modèle importé soit disponible dans Outlook Web App, vous devez utiliser l’applet de commande [Set-RMSTemplate](http://technet.microsoft.com/library/hh529923%28v=exchg.160%29.aspx) et définir le Type sur Distributed :
-
-    ```
-    Set-RMSTemplate -Identity "<name  or GUID of the template>" -Type Distributed
-    ```
-    Outlook Web Access mettant en cache l’interface utilisateur pendant 24 heures, il se peut que les utilisateurs ne voient pas le nouveau modèle avant un jour.
-
-De plus, si vous archivez un modèle (personnalisé ou par défaut) et utilisez Exchange Online avec Office 365, les utilisateurs vont continuer de voir les modèles archivés s'ils utilisent Outlook Web App ou des appareils mobiles qui utilisent le protocole Exchange ActiveSync.
-
-Pour que les utilisateurs ne voient plus ces modèles, connectez-vous au service à l’aide de Windows PowerShell dans Exchange Online, puis utilisez l’applet de commande [Set-RMSTemplate](http://technet.microsoft.com/library/hh529923%28v=exchg.160%29.aspx) en exécutant la commande suivante :
-
-```
-Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
-```
 
 ## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié
 En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013 ou l'application de partage Rights Management (RMS) pour Windows, vous pouvez modifier la planification automatique afin que les modèles modifiés soient actualisés sur les ordinateurs à une fréquence supérieure à la fréquence par défaut. Vous pouvez également forcer une actualisation immédiate en supprimant les données existantes dans une valeur de registre.
@@ -142,10 +81,10 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 
     > 1.  Exécutez l’applet de commande [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) pour Azure RMS. Si vous n’avez pas encore installé le module Windows PowerShell pour Azure RMS, consultez [Installation de Windows PowerShell pour Azure Rights Management](install-powershell.md).
     > 2.  Dans le résultat de l'applet de commande, identifiez la valeur **LicensingIntranetDistributionPointUrl**.
-    > 
+    >
     >     Par exemple : **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
     > 3.  Dans la valeur, supprimez **https://** et **/_wmcs/licensing** de cette chaîne. La valeur restante est votre nom de domaine complet (FQDN) du service Microsoft RMS. Dans notre exemple, le nom de domaine complet (FQDN) du service Microsoft RMS a la valeur suivante :
-    > 
+    >
     >     **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 2.  Supprimez le dossier suivant et tous les fichiers qu’il contient : **%localappdata%\Microsoft\MSIPC\Templates**

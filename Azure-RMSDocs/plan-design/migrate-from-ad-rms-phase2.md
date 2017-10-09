@@ -4,7 +4,7 @@ description: "Phase 2 de la migration d’AD RMS vers Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/19/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3274cb1ddd457647159034b955c47e9ab775f00c
-ms.sourcegitcommit: f7ef0f040ae4af4bf1283ebcb0750b65b6939313
+ms.openlocfilehash: db8f8de9cdda00f5983ff448aa895a5767d953b1
+ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -75,10 +75,7 @@ Votre déploiement AD RMS actuel utilise l’une des configurations suivantes po
 > [!NOTE]
 > Pour plus d'informations sur l'utilisation des modules de sécurité matériels avec AD RMS, consultez [Utilisation d'AD RMS avec des modules de sécurité matériels](http://technet.microsoft.com/library/jj651024.aspx).
 
-Les deux options de topologie de clé de locataire Azure Information Protection sont les suivantes : Microsoft gère votre clé de locataire (**Gérée par Microsoft**) ou vous la gérez vous-même (**Gérée par le client**) dans Azure Key Vault. Quand vous gérez votre propre clé de locataire Azure Information Protection, ce scénario, parfois appelé BYOK (« Bring Your Own Key »), nécessite un module de sécurité matériel (HSM) de Thales. Pour plus d’informations, consultez l’article [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
-
-> [!IMPORTANT]
-> Exchange Online n’est actuellement pas compatible avec BYOK dans Azure Information Protection. Si vous souhaitez utiliser la solution BYOK après la migration et envisagez d'utiliser Exchange Online, assurez-vous que vous comprenez la manière dont cette configuration réduit les fonctionnalités de l'IRM pour Exchange Online. Passez en revue les informations contenues dans la section [Tarifs et restrictions BYOK](byok-price-restrictions.md) pour choisir la meilleure topologie de clé de locataire Azure Information Protection pour votre migration.
+Les deux options de topologie de clé de locataire Azure Information Protection sont les suivantes : Microsoft gère votre clé de locataire (**Gérée par Microsoft**) ou vous la gérez vous-même (**Gérée par le client**) dans Azure Key Vault. Le scénario dans lequel vous gérez votre propre clé de locataire Azure Information Protection est parfois appelé BYOK (« Bring Your Own Key »). Pour plus d’informations, consultez l’article [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
 
 Le tableau suivant permet d'identifier la procédure à utiliser pour votre migration. 
 

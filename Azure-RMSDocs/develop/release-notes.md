@@ -1,36 +1,60 @@
 ---
-title: "Nouveautés et notes de publication | Azure RMS"
+title: "Nouveautés et notes de publication"
 description: "Décrit les modifications et les fonctionnalités importantes de cette nouvelle version du kit de développement logiciel (SDK) RMS."
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 09/25/2017
 ms.topic: article
-ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 9fd96c934d4f7a8e09035ff7eda4517f65a27e17
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: df78d1f1740128c79c944a6b5d33353141933d78
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
 
 ## <a name="whats-new"></a>Nouveautés
-Le kit de développement logiciel (SDK) Microsoft Rights Management 4.2 améliore encore le niveau de simplicité et de flexibilité relatives à l’activation de l’application RMS. Cette rubrique décrit les modifications et les fonctionnalités importantes de cette version du SDK RMS.
 
-### <a name="new-for-june-2016"></a>Nouveau en juin 2016
+Cette rubrique décrit les modifications et les fonctionnalités importantes de cette nouvelle version du kit RMS SDK v4.X.
 
-- **Prise en charge de l’authentification moderne** : intègre la connexion basée sur la bibliothèque ADAL (Active Directory Authentication Library) aux applications compatibles avec RMS. Elle autorise les fonctionnalités de connexion telles que Multi-Factor Authentication (MFA), les fournisseurs d’identité tiers SAML avec les applications clientes RMS, l’authentification basée sur les cartes à puce et les certificats. Grâce à cette prise en charge, il n’est plus nécessaire d’utiliser le protocole d’authentification de base pour les applications compatibles avec RMS.
+-   [Nouveau en juillet 2017](#new-for-july-2017)
+-   [Mise à jour d’octobre 2016](#October-2016-update)
+-   [Mise à jour de juin 2016](#new-for-June-2016)
+-   [Mise à jour de décembre 2015](#december-2015-update)
+-   [Mise à jour de juillet 2015 : ajout de la prise en charge du développement Linux/C++](#july-2015-update-adds-support-for-linux-c-developm)
+-   [Mise à jour de mai 2015 : ajout du contrôle de la journalisation](#may-2015-update-adds-logging-control)
+-   [Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store](#february-2015-update-adds-windows-store-application-support)
+-   [Mise à jour de janvier 2015 : ajout de la prise en charge de la plateforme WinPhone](#january-2015-update-adds-winphone-platform-support)
+-   [Mise à jour d’octobre 2014 : mise à niveau vers Microsoft RMS SDK 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
+-   [Notes de publication](#release-notes)
+-   [Forum Aux Questions](#frequently-asked-questions)
+
+### <a name="new-for-july-2017"></a>Nouveau en juillet 2017
+
+La mise à jour pour la version de juillet incluait l’incrémentation de la version du SDK, qui est maintenant 4.2.5.
+
+- Android SDK : Votre application peut désormais **définir le niveau de journalisation à la volée** avec le kit Android SDK. Pour plus d’informations, voir [Procédure : activation de la journalisation des erreurs et des performances](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging)
+- Le kit iOS SDK ne prend pas en charge les niveaux de journalisation. 
+- Le SDK retourne désormais une erreur pour un jeton d’accès NULL.
+
+### <a name="october-2016-update"></a>Mise à jour d’octobre 2016
+
+- Implémentation de quelques correctifs de bogues du backend.
+- Activation du bitcode pour le kit Apple iOS/OSX SDK.
+
+### <a name="june-2016-update"></a>Mise à jour de juin 2016
+
+- **Prise en charge de l’authentification moderne** : intègre la connexion basée sur la bibliothèque ADAL (Active Directory Authentication Library) aux applications compatibles avec RMS. Elle permet les fonctionnalités de connexion comme l’authentification multifacteur, les fournisseurs d’identité tiers SAML avec les applications clientes RMS et l’authentification basée sur les cartes à puce et les certificats. Grâce à cette prise en charge, il n’est plus nécessaire d’utiliser le protocole d’authentification de base pour les applications compatibles avec RMS.
 - **Prise en charge du suivi des documents** : les développeurs peuvent désormais activer le suivi des documents quand ils protègent des documents dans leurs applications.
 - Améliorations apportées aux performances
 - Corrections de bogues
-
 
 ### <a name="december-2015-update"></a>Mise à jour de décembre 2015
 
@@ -38,7 +62,7 @@ Le Kit de développement logiciel (SDK) passe désormais à la version 4.2 et b
 
 -   Suivi des documents, RMS On-line uniquement, pour systèmes d’exploitation iOS/OS X et Android.
 
-    Pour plus d’informations et de conseils sur iOS/OS X, reportez-vous à la classe [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) qui fournit des informations de suivi et à la méthode d’enregistrement de suivi des documents supplémentaire sur [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). Des ajouts similaires ont été effectués pour Android pour [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) et [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx).
+    Pour plus d’informations et de conseils sur iOS/OS X, reportez-vous à la classe [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) qui fournit des informations de suivi et à la méthode d’inscription de suivi des documents supplémentaire sur [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). Des ajouts similaires ont été effectués pour Android pour [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) et [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx).
 
     Pour obtenir une description détaillée de la fonctionnalité de suivi des documents, consultez [Procédure : utilisation du suivi des documents](how-to-use-document-tracking.md).
 
@@ -66,7 +90,7 @@ Le Kit de développement logiciel (SDK) passe désormais à la version 4.2 et b
 
 ### <a name="july-2015-update---adds-support-for-linux--c-development"></a>Mise à jour de juillet 2015 : ajout de la prise en charge du développement Linux/C++
 
-L’élément suivant est ajouté à cette version :
+Cette version ajoute les mises à jour suivantes :
 
 -   Kit de développement logiciel (SDK) RMS 4.1 pour les plateformes Linux
 
@@ -74,7 +98,7 @@ L’élément suivant est ajouté à cette version :
 
 ### <a name="may-2015-update---adds-logging-control"></a>Mise à jour de mai 2015 : ajout du contrôle d’enregistrement
 
-Cette version permet la prise en charge des éléments suivants :
+Cette version ajoute la prise en charge des mises à jour suivantes :
 
 -   iOS
 
@@ -92,7 +116,7 @@ Cette version permet la prise en charge des éléments suivants :
 
 ### <a name="february-2015-update---adds-windows-store-application-support"></a>Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store
 
-Cette version ajoute la prise en charge des applications du Windows Store et assure la parité fonctionnelle avec la version Windows Phone, Android et iOS/OS X du kit de développement logiciel (SDK) RMS 4.1.
+Cette version ajoute la prise en charge des applications du Windows Store, et assure la parité fonctionnelle avec la version Windows Phone, Android et iOS/OS X de RMS SDK 4.1.
 
 ### <a name="january-2015-update---adds-winphone-platform-support"></a>Mise à jour de janvier 2015 : ajout de la prise en charge de la plate-forme WinPhone
 
@@ -117,10 +141,10 @@ Cette section donne des informations sur les versions actuelles et précédentes
 **AD RMS SDK 4.1 - Version en disponibilité globale des plateformes iOS/OS X et Android**
 
 -   **Prise en charge d’AD RMS** : les administrateurs informatiques peuvent utiliser des applications compatibles avec RMS sur des appareils mobiles avec les nouvelles extensions pour appareils mobiles du serveur AD RMS.
--   **Consommation en mode hors connexion** : les utilisateurs finaux peuvent accéder hors connexion aux données protégées par RMS.
+-   **Consommation en mode hors connexion** : les utilisateurs finaux peuvent accéder hors connexion aux données protégées par RMS.
 -   **Authentification séparée** : les développeurs peuvent utiliser leur propre bibliothèque d’authentification pour Azure RMS et AD RMS (ou utiliser la [bibliothèque d’authentification Azure AD (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)).
 -   **Interface utilisateur séparée** : les développeurs peuvent créer leur interface utilisateur afin de protéger et d’utiliser des documents protégés par RMS.
--   **Reconception de l’API** : les développeurs peuvent bénéficier désormais d’une API de chiffrement et de déchiffrement, qui assure la cohérence des comportements RMS et de l’expérience utilisateur avec un minimum d’effort.
+-   **Reconception de l’API** : les développeurs peuvent bénéficier désormais d’une API de chiffrement et de déchiffrement simple et transparente, qui assure la cohérence des comportements RMS et de l’expérience utilisateur avec un minimum d’effort.
 
 **Commun à toutes les plateformes**
 
@@ -130,7 +154,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 -   Lorsque vous utilisez un exemple d’application sur un appareil Amazon® Kindle pour afficher des pièces jointes .ptxt, vous devez d’abord télécharger le fichier avant de l’afficher.
 
-    **Solution** : il s’agit d’un problème connu qui sera traité ultérieurement.
+    **Solution** : Il s’agit d’un problème connu qui sera traité ultérieurement.
 
 -   Une application qui utilise le kit de développement logiciel peut se bloquer si plusieurs instances sont autorisées.
 
@@ -152,17 +176,17 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 -   Le kit de développement logiciel (SDK) RMS 4.x n’affiche pas le voyant d’activité réseau.
 
-    Il s’agit d’un comportement facultatif connu pour iOS selon les instructions relatives à l’interface humaine Apple.
+    Il s’agit d’un comportement facultatif connu pour iOS, d’après les instructions relatives à l’interface humaine Apple.
 
 **OS X uniquement**
 
 -   Le kit de développement logiciel (SDK) RMS 4.x n’affiche pas le voyant d’activité réseau.
 
-    Il s’agit d’un comportement facultatif connu pour OS X selon les instructions relatives à l’interface humaine Apple.
+    Il s’agit d’un comportement facultatif connu pour OS X, d’après les instructions relatives à l’interface humaine Apple.
 
 -   **Solution** : pour créer une application MDI à l’aide de notre kit de développement logiciel (SDK) OS X, utilisez les instructions suivantes.
 
-    Les méthodes suivantes ne doivent pas être exécutées simultanément. Afin de vérifier que l’exécution est terminée, utilisez l’approche de fin comme indiqué.
+    Les méthodes suivantes ne doivent pas être exécutées simultanément. Pour pouvoir surveiller l’achèvement de l’exécution, utilisez l’approche de bloc d’achèvement comme indiqué.
 
     - [MSProtectedData.protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx)
     - [MSCustomProtectedData.customProtectedDataWithPolicy](https://msdn.microsoft.com/library/dn758315.aspx)
@@ -181,13 +205,13 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 **Q** : Comment obtenir de nouveaux locataires d’organisation pour essayer le Kit de développement logiciel (SDK) et les exemples d’applications ?
 
-**R** : Pour demander des informations d’identification pour les organisations de test Azure AD RMS, envoyez un e-mail à <rmcstbeta@microsoft.com>.
+**R** : Pour demander des informations d’identification pour les organisations de test Azure AD RMS, envoyez un e-mail à <rmcstbeta@microsoft.com>.
 
 **Q** : Je ne vois aucune discussion relative à la hiérarchie de test dans la documentation. Pourquoi ?
 
 **R** : Le concept de hiérarchie de test n’existe pas dans les nouveaux kits de développement logiciel (SDK) AD RMS. Vous travaillerez toujours avec la hiérarchie de production.
 
-**R** : Dans la version 2.1 du kit de développement logiciel (SDK) RMS un manifeste généré était nécessaire pour chaque application mettant en œuvre la protection des informations. Est ce toujours vrai pour les versions 4.0 et ultérieures de ce kit de développement logiciel ?
+**Q** : Dans la version 2.1 du SDK RMS, un manifeste généré était nécessaire pour chaque application implémentant la protection des informations. Est ce toujours vrai pour les versions 4.0 et ultérieures du SDK ?
 
 **R** : Non, les manifestes ne sont plus nécessaires pour les versions 3.0 et ultérieures du kit de développement logiciel (SDK) Rights Management.
 
@@ -212,7 +236,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 **OS X**
 
-**Q** : L’infrastructure de l’exemple d’application est adaptée à Xcode 5. Puis-je travailler avec Xcode 4.6 ?
+**Q** : L’infrastructure de l’exemple d’application est adaptée à Xcode 5. Puis-je utiliser Xcode 4.6 ?
 
 **R** : Le kit de développement logiciel (SDK) du système d’exploitation OS X fonctionne avec Xcode 4.6 et versions ultérieures uniquement et OS X 10.8 et versions ultérieures.
 

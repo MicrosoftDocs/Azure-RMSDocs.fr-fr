@@ -4,27 +4,39 @@ description: "Vous pouvez supprimer ou réorganiser les étiquettes que les util
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 2d11eb649ecec835d2ddf0045d8672c5b45af95f
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: f17e149dcd8cfb7398909cbe3a83cdcf71b80b33
+ms.sourcegitcommit: 2bca892231ca8393b88bd5da7d0890a573770a09
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Comment supprimer ou réorganiser une étiquette pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
-Vous pouvez supprimer ou réorganiser les étiquettes que les utilisateurs voient dans la barre Information Protection en configurant la stratégie Azure Information Protection en conséquence.
+Vous pouvez supprimer ou réorganiser les étiquettes que les utilisateurs voient dans la barre Information Protection en sélectionnant ces actions dans la stratégie Azure Information Protection.
 
 ![Suppression ou réorganisation d’étiquettes dans la stratégie Azure Information Protection](../media/info-protect-contextmenu.png)
 
 Lorsque vous supprimez une étiquette ayant été appliquée à des documents et à des e-mails, puis publiez la stratégie Azure Information Protection, l’étiquette est automatiquement supprimée des documents et des e-mails lors de leur prochaine ouverture par le client Azure Information Protection.
+
+Cependant, si l’étiquette appliquait une protection, cette protection n’est pas supprimée. Les paramètres de protection de l’étiquette sont conservés et s’affichent dans les **Modèles de protection**. Ce modèle peut maintenant être converti en une nouvelle étiquette ou lié à une étiquette. Tant que ce modèle est conservé, vous ne pouvez pas créer une étiquette avec le même nom que l’étiquette que vous avez supprimée. Si c’est ce que vous voulez faire, vous disposez des options suivantes :
+
+- Convertir le modèle en étiquette. 
+    
+    Cette action est recommandée, car si nécessaire, vous pouvez ensuite changer le nom du modèle et modifier les paramètres de protection.
+
+- Utiliser PowerShell pour renommer le modèle ou le supprimer.
+    
+    Avant d’effectuer cette action, vérifiez si d’autres administrateurs ou services utilisent le modèle et l’identifient par son nom actuel. Supprimez un modèle seulement si vous n’avez pas besoin d’ouvrir des documents ou des e-mails qui ont été protégés par le modèle.
+
+Pour plus d’informations sur la gestion des modèles de protection, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).
 
 Avant de supprimer une étiquette, pensez à plutôt la désactiver. Lorsque vous désactivez une étiquette qui a été appliquée à des documents et à des e-mails, l’étiquette appliquée ne sera pas supprimée de ces documents et e-mails, mais elle ne s’affiche plus comme étiquette que les utilisateurs peuvent sélectionner dans la barre Information Protection. La désactivation d’une étiquette vous permet également de conserver la configuration d’origine au cas où vous souhaiteriez que des utilisateurs sélectionnent l’étiquette ultérieurement, après une simple réactivation.
 

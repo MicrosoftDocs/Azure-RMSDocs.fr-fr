@@ -4,7 +4,7 @@ description: "Voici comment les programmes Office (comme Word et Outlook) et les
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 09/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ede24547a01bc38e528ce02dac9abe0ade396c2d
-ms.sourcegitcommit: 6636defa6eca24360f15fb9ef93c2b82dc36cf76
+ms.openlocfilehash: eb40f6d2b43f175af71fd58b3bef4eb3d992152b
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Prise en charge d’Azure Rights Management par les programmes et services Office 
 
@@ -50,7 +50,7 @@ Quand vous utilisez Exchange Online ou Exchange Server, vous pouvez configurer d
 
 -   **Stratégies de protection contre la perte de données (DLP)** qui contiennent des ensembles de conditions permettant de filtrer des e-mails et de prendre des mesures de prévention contre la perte de données pour le contenu confidentiel ou sensible. Les informations de carte de crédit ou des informations personnelles sont des exemples de contenu confidentiel ou sensible. Vous pouvez utiliser des conseils de stratégie quand des données sensibles sont détectées, pour alerter les utilisateurs qu’il peut être nécessaire d’appliquer une protection. Pour plus d’informations, consultez [Protection contre la perte de données] (https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) dans la bibliothèque Exchange.
 
--   **Chiffrement de messages Office 365** qui utilise des règles de transport pour envoyer des e-mails chiffrés aux personnes extérieures à votre entreprise. Ces messages sont lus dans un navigateur doté d’une interface similaire à celle d’Outlook sur le web. Vous pouvez personnaliser le texte de la clause d’exclusion de responsabilité et le texte d’en-tête dans les e-mails chiffrés de votre entreprise, et même ajouter son logo. Pour plus d’informations, consultez [Chiffrement de messages Office 365](https://office.microsoft.com/o365-message-encryption-FX104179182.aspx) sur le site web Office.
+-   Le **chiffrement de messages Office 365**, qui prend en charge l’envoi d’un e-mail protégé et de documents Office protégés en tant que pièces jointes, à n’importe quelle adresse sur n’importe quel appareil. Pour les comptes d’utilisateur sans Azure AD, une expérience web prend en charge les fournisseurs d’identité sociale ou un code secret à usage unique. Pour plus d’informations, consultez [Configurer de nouvelles fonctionnalités de chiffrement de messages Office 365 reposant sur Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) sur le site web Office.
 
 Si vous utilisez Exchange local, vous pouvez utiliser les fonctionnalités IRM avec le service Azure Rights Management en déployant le connecteur Azure Rights Management. Ce connecteur fait office de relais entre vos serveurs locaux et le service Azure Rights Management.
 

@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 34a20c3e83b2d3d6fde15d1226535ccb90431126
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: c851eb1ecf1551caee1ab2a6aac6f05c550cb96b
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Didacticiel de démarrage rapide pour Azure Information Protection 
 
@@ -36,7 +36,7 @@ Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
   > [!TIP] 
   > Si vous avez besoin de demander un abonnement, essayez de vous y prendre à l’avance, car ce processus peut parfois nécessiter un certain temps.
 
-- Un compte d’administrateur général ou un compte d’administrateur de la sécurité pour vous connecter au portail Azure afin de configurer la stratégie Azure Information Protection. Ce compte doit également avoir une adresse e-mail et un service de messagerie professionnel, par exemple, Exchange Online.
+- Un compte d’administrateur général ou un compte d’administrateur de la sécurité pour vous connecter au portail Azure afin d’activer la protection et de configurer la stratégie Azure Information Protection. Ce compte doit également avoir une adresse e-mail et un service de messagerie professionnel, par exemple, Exchange Online.
 
 - Un ordinateur Windows (au minimum Windows 7 avec le Service Pack 1) sur lequel est installé Office 365 ProPlus avec des applications 2016 ou 2013, Office Professionnel Plus 2016, Office Professionnel Plus 2013 avec le Service Pack 1 ou Office Professionnel Plus 2010 avec Service Pack 2. 
     

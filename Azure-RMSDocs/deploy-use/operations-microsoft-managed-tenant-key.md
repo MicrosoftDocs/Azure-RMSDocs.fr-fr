@@ -4,7 +4,7 @@ description: "Informations sur les opérations de cycle de vie applicables si Mi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e4a484660aaf5a1820b04892ff006c08cceb5080
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 5aaf4393e39412a8c8b18678f4edea7a61c148dc
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/23/2017
 ---
-# <a name="microsoft-managed-tenant-key-lifecycle-operations"></a>Gérée par Microsoft : opérations de cycle de vie des clés de locataires
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gérée par Microsoft : opérations de cycle de vie des clés de locataire
 
 >*S’applique à : Azure Information Protection, Office 365*
 
-Si Microsoft gère votre clé de locataire pour Azure Information Protection (option par défaut), utilisez les sections suivantes pour obtenir plus d’informations sur les opérations de cycle de vie qui s’appliquent à cette topologie.
+Si Microsoft gère votre clé de locataire pour Azure Information Protection (l’option par défaut), utilisez les sections suivantes pour obtenir plus d’informations sur les opérations de cycle de vie qui s’appliquent à cette topologie.
 
 ## <a name="revoke-your-tenant-key"></a>Révocation de votre clé de locataire
 Quand vous annulez votre abonnement Azure Information Protection, Azure Information Protection arrête d’utiliser votre clé de locataire, et aucune action n’est nécessaire de votre part.
@@ -38,6 +38,8 @@ Exemples de scénarios dans lesquels il peut être nécessaire de renouveler la 
 
 - Votre entreprise s'est divisée en deux sociétés distinctes ou plus. Quand vous renouvelez votre clé de locataire, la nouvelle société n’a pas accès au nouveau contenu publié par vos employés. Elle pourra toujours accéder à l'ancien contenu si elle dispose d'une copie de l'ancienne clé de locataire.
 
+- Vous voulez passer d’une topologie de gestion des clés à une autre.
+
 - Vous pensez que la copie principale de votre clé de locataire a été compromise.
 
 Pour renouveler la clé, vous pouvez sélectionner une autre clé gérée par Microsoft comme clé de locataire, mais vous ne pouvez pas créer une clé gérée par Microsoft. Pour créer une clé, vous devez passer à une topologie de clé gérée par le client (BYOK).
@@ -48,7 +50,7 @@ Pour sélectionner une autre clé comme clé de locataire actif pour Azure Infor
 
     (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-Pour passer à une topologie de clé gérée par le client (BYOK), consultez [Implémentation de votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
+Pour passer à une topologie de clé gérée par le client (BYOK), consultez [Implémentation de BYOK pour votre clé de locataire Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Sauvegarde et récupération de votre clé de locataire
 Microsoft se charge de sauvegarder votre clé de locataire. Aucune action n'est requise de votre part.
@@ -62,11 +64,11 @@ Vous pouvez exporter votre clé de locataire et votre configuration Azure Inform
 
 ### <a name="step-2-wait-for-verification"></a>Étape 2 : attente de la vérification
 
--   Microsoft vérifie la légitimité de votre demande d’émission de votre clé de locataire Azure Information Protection. Cela peut prendre jusqu’à trois semaines.
+- Microsoft vérifie la légitimité de votre demande d’émission de votre clé de locataire Azure Information Protection. Cela peut prendre jusqu’à trois semaines.
 
 ### <a name="step-3-receive-key-instructions-from-css"></a>Étape 3 : réception d'instructions concernant la clé de la part du support technique
 
--   Les services de support technique Microsoft vous envoient votre clé de locataire et votre configuration Azure Information Protection sous forme chiffrée dans un fichier protégé par mot de passe. L’extension de nom de fichier est **.tpd**. Pour ce faire, le support technique vous envoie (vous, la personne ayant demandé un export) tout d'abord un outil par e-mail. Vous devez exécuter cet outil à partir d'une invite de commande, comme suit :
+- Les services de support technique Microsoft vous envoient votre clé de locataire et votre configuration Azure Information Protection sous forme chiffrée dans un fichier protégé par mot de passe. L’extension de nom de fichier est **.tpd**. Pour ce faire, le support technique vous envoie (vous, la personne ayant demandé un export) tout d'abord un outil par e-mail. Vous devez exécuter cet outil à partir d'une invite de commande, comme suit :
 
     ```
     AadrmTpd.exe -createkey
@@ -93,9 +95,9 @@ Après avoir reçu votre clé de locataire, conservez-la en lieu sûr, car toute
 Si vous exportez votre clé de locataire parce que vous ne voulez plus utiliser Azure Information Protection, nous vous conseillons de désactiver le service Azure Rights Management à partir de votre locataire Azure Information Protection. Ne reportez pas cela à plus tard après avoir reçu votre clé de locataire, car cette précaution vous permet de minimiser les conséquences éventuelles d’un accès à votre clé de locataire par une personne non autorisée. Pour obtenir des instructions, consultez [Mise hors service et désactivation d’Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="respond-to-a-breach"></a>Réponse à une violation
-Un système de sécurité est incomplet sans un processus de réponse aux violations. Votre clé de locataire peut être compromise ou volée. Même si elle est bien protégée, des vulnérabilités peuvent être détectées dans la technologie actuelle de clé ou dans les longueurs et algorithmes actuels des clés.
+Un système de sécurité est incomplet sans un processus de réponse aux violations. Votre clé de locataire peut être compromise ou volée. Même si elle est bien protégée, des vulnérabilités peuvent être détectées dans la technologie actuelle de la clé ou dans les longueurs et algorithmes des clés.
 
-Microsoft dispose d'une équipe chargée de répondre aux incidents de sécurité survenant dans ses produits et services. Dès la réception d'un rapport d'incident avéré, cette équipe met tout en œuvre pour analyser la portée, la cause première et les actions de correction à mettre en place. Si ces incidents affectent vos ressources, Microsoft envoie une notification par e-mail (à l’adresse fournie lors de la création de l’abonnement) aux administrateurs de votre locataire Azure Information Protection.
+Microsoft dispose d'une équipe chargée de répondre aux incidents de sécurité survenant dans ses produits et services. Dès la réception d'un rapport d'incident avéré, cette équipe met tout en œuvre pour analyser la portée, la cause première et les actions de correction à mettre en place. Si cet incident affecte vos ressources, Microsoft envoie une notification par e-mail (à l’adresse fournie lors de la création de l’abonnement) aux administrateurs de votre locataire Azure Information Protection.
 
 En cas de violation, la meilleure mesure que vous ou Microsoft puissiez prendre dépend de la portée de la violation. Microsoft vous accompagnera dans ce processus. Le tableau suivant présente des situations type et les réponses que vous pouvez mettre en place. Toutefois, la réponse exacte que vous apporterez dépend des informations obtenues lors de l’analyse.
 

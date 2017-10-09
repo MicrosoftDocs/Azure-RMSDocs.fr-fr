@@ -4,7 +4,7 @@ description: "Détails techniques sur les types de fichiers pris en charge, les 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9db73573eb6ccb6ab5f09d926e395a31f94404ea
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 5a3d13861e3eff0cfaf4a92eb005b8192f2b447c
+ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Types de fichiers pris en charge par le client Azure Information Protection
 
@@ -177,11 +177,27 @@ Pour empêcher les utilisateurs de modifier des fichiers essentiels au fonctionn
     - \ProgramData 
     - \AppData (pour tous les utilisateurs)
 
+### <a name="files-that-cannot-be-protected-by-default"></a>Fichiers qui ne peuvent pas être protégés par défaut
+
+Les fichiers protégés par mot de passe ne peuvent pas tous être protégés en mode natif par le client Azure Information Protection. Les fichiers PDF protégés par mot de passe sont très courants, mais d’autres applications, comme les applications Office, offrent aussi cette fonctionnalité.
+
+De plus, le client Azure Information Protection pour Windows ne peut pas protéger (ou déprotéger) en mode natif les fichiers PDF dans les cas suivants :
+
+- Un ficher PDF basé sur un formulaire.
+
+- Un fichier PDF protégé qui a une extension de nom de fichier .pdf. 
+    
+    Le client Azure Information Protection peut protéger un fichier PDF non protégé et reprotéger un fichier PDF protégé qui a une extension de nom de fichier .ppdf.
+
+La solution de contournement pour ces fichiers consiste à les protéger de façon générique en suivant les instructions de la section [Modification du niveau de protection par défaut des fichiers](#changing-the-default-protection-level-of-files). Toutefois, cette méthode change le niveau de protection de tous les fichiers qui ont une extension de nom de fichier .pdf, au niveau de l’ordinateur. Vous ne pouvez pas définir une protection générique seulement pour les fichiers qui répondent aux critères listés.
+
+Si la protection de ces fichiers est importante, vous pouvez les copier provisoirement sur un autre ordinateur pour les protéger de manière générique, puis les copier de nouveau sur votre ordinateur.
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez identifié les types de fichiers pris en charge par le client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :
 
-- [Customizations](client-admin-guide-customizations.md)
+- [Personnalisations](client-admin-guide-customizations.md)
 
 - [Fichiers du client et journalisation de l’utilisation](client-admin-guide-files-and-logging.md)
 

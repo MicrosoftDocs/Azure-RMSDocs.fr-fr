@@ -4,7 +4,7 @@ description: Instructions sur la classification et la protection de vos document
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b82904da81b73f0ae7ab5ab758a4cf3a982eb6ee
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 996835254652a307f66c472fdc74707a59041fe0
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classifier et protéger un fichier ou un e-mail avec Azure Information Protection
 
@@ -32,9 +32,7 @@ Si votre étiquette applique une protection à un document, il n’est pas appro
 
 Le partage de fichiers protégés avec d’autres utilisateurs est sécurisé. Par exemple, vous joignez le fichier à un e-mail.
 
-Si vous partagez régulièrement des fichiers avec des personnes extérieures à votre organisation, votre administrateur peut avoir configuré une étiquette pour vous qui définit la protection de sorte que ces personnes puissent les lire. Sinon, vous pouvez utiliser votre [application Office pour définir des autorisations personnalisées](#set-custom-permissions-for-a-document) ou utiliser l’[Explorateur de fichiers pour définir des autorisations personnalisées](#using-file-explorer-to-classify-and-protect-files) pour un fichier avant de le partager. 
-
-Si vous définissez vos propres autorisations personnalisées et que le fichier est déjà protégé pour une utilisation interne, commencez par en faire une copie afin de conserver les autorisations d’origine. Utilisez ensuite cette copie pour définir des autorisations personnalisées.  
+Si vous partagez régulièrement des fichiers avec des personnes extérieures à votre organisation, votre administrateur peut avoir configuré une étiquette pour vous qui définit la protection de sorte que ces personnes puissent les lire. Sinon, vous pouvez utiliser votre [application Office pour définir des autorisations personnalisées](#set-custom-permissions-for-a-document) ou utiliser l’[Explorateur de fichiers pour définir des autorisations personnalisées](#using-file-explorer-to-classify-and-protect-files) pour un fichier avant de le partager. Si vous définissez vos propres autorisations personnalisées et que le fichier est déjà protégé pour une utilisation interne, commencez par en faire une copie afin de conserver les autorisations d’origine. Utilisez ensuite cette copie pour définir des autorisations personnalisées.  
 
 Lorsque le fichier est protégé avec vos autorisations personnalisées, partagez le fichier comme vous le faites habituellement. Si c’est la première fois que les utilisateurs avec lesquels vous partagez le fichier reçoivent un fichier protégé, ils auront peut-être besoin d’instructions pour l’afficher. Pour ces utilisateurs, vous pouvez copier et coller le message suivant : **J’ai protégé ce fichier avec Microsoft Azure Information Protection. Pour une première utilisation, consultez ces [instructions](https://aka.ms/rms-signup).**
 
@@ -94,6 +92,16 @@ Vous pouvez spécifier vos propres paramètres de protection pour les documents 
     - **Faire expirer l’accès** : sélectionnez cette option uniquement pour les fichiers ayant des contraintes de temps, afin que les personnes que vous avez spécifiées ne puissent pas les ouvrir après une date que vous définissez. Vous pouvez toujours ouvrir le fichier d’origine mais, le jour spécifié, après minuit (dans votre fuseau horaire), les personnes que vous avez désignées ne pourront plus l’ouvrir.
 
 5. Cliquez sur **Appliquer** et attendez que le message **Autorisations personnalisées appliquées** s’affiche. Cliquez ensuite sur **Fermer**.
+
+### <a name="safely-sharing-by-email"></a>Partage sécurisé par e-mail
+
+Quand vous partagez des documents Office par e-mail, vous pouvez attacher le document à un e-mail que vous protégez : le document est alors automatiquement protégé avec les mêmes restrictions que celles qui s’appliquent à l’e-mail. 
+
+Cependant, nous vous recommandons de commencer par protéger le document avant de l’attacher à l’e-mail. Protégez également l’e-mail si son contenu présente des informations sensibles. Protéger le document avant de l’attacher à un e-mail a deux avantages :
+
+- Vous pouvez tracer et révoquer si nécessaire le document une fois que vous l’avez envoyé par e-mail.
+
+- Vous pouvez appliquer des autorisations différentes au document et à l’e-mail.
 
 ## <a name="using-file-explorer-to-classify-and-protect-files"></a>Utilisation de l’Explorateur de fichiers pour classifier et protéger des fichiers
 

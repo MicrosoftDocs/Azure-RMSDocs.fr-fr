@@ -1,6 +1,6 @@
 ---
 title: "Didacticiel de démarrage rapide, étape 1 - AIP"
-description: "Didacticiel de présentation expliquant comment tester rapidement Azure Information Protection, étape 1 : activation du service Azure Rights Management."
+description: "Étape 1 d’un didacticiel de présentation expliquant comment tester rapidement Azure Information Protection : Activer le service de protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -10,20 +10,20 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: c168f54d873d8e5b1f2d455c9ae2d12cda8926b3
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: 91eb9ec61f4fa1ebd7aac3cf0c244878ef450bb9
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="step-1-activate-the-rights-management-service"></a>Étape 1 : activation du service Rights Management
+# <a name="step-1-activate-protection"></a>Étape 1 : Activer la protection
  
 >*S’applique à : Azure Information Protection*
 
 > [!NOTE]
 >Même si vous avez déjà activé le service Azure Rights Management pour votre locataire, effectuez cette étape pour confirmer l’état d’activation. Les instructions incluent la connexion au portail Azure et la création du panneau Azure Information Protection, en préparation de l’étape 2. 
 
-Quand le service Azure Rights Management est activé, vous pouvez protéger les documents et e-mails les plus sensibles de votre entreprise et suivre l’utilisation des documents protégés quand vous les partagez avec d’autres utilisateurs. Vous pouvez activer ce service de différentes façons, notamment en utilisant Windows PowerShell et par le biais des portails d’administration.
+Quand le service Azure Rights Management est activé, vous pouvez protéger les documents et e-mails les plus sensibles de votre entreprise et suivre l’utilisation des documents protégés quand vous les partagez avec d’autres utilisateurs. Vous pouvez activer la protection de différentes façons, notamment en utilisant Windows PowerShell et via les portails d’administration.
 
 Pour ce didacticiel, nous utilisons le portail Azure, où vous configurez également les étiquettes pour les utilisateurs. 
 

@@ -4,7 +4,7 @@ description: "Si vous connaissez ou avez déjà déployé Active Directory Right
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7b3a49925fc0486f7be161da501a59c1ec2ebdfc
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 4e9aa6a3e1742fc88f3c1e8e297f1391e2e89b75
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Comparaison d’Azure Information Protection avec AD RMS
 
@@ -52,6 +52,7 @@ Pour plus d’informations et pour connaître les autres différences, consultez
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------|
 |Prend en charge les fonctionnalités de Gestion des droits relatifs à l'information (IRM) dans les services Microsoft Online Services tels qu'Exchange Online et SharePoint Online, ou encore Office 365.<br /><br />Prend également en charge les produits serveur Microsoft locaux, tels qu’Exchange Server, SharePoint Server et les serveurs de fichiers qui exécutent Windows Server et l’infrastructure de classification des fichiers (ICF).|Prend en charge les produits serveur Microsoft locaux, tels qu’Exchange Server, SharePoint Server et les serveurs de fichiers qui exécutent Windows Server et l’infrastructure de classification des fichiers (ICF).|
 |Permet une approbation implicite entre des organisations et les utilisateurs de ces organisations. Cela signifie que le contenu protégé peut être partagé entre les utilisateurs au sein d’une même organisation ou entre plusieurs organisations quand ils disposent de [!INCLUDE[o365_1](../includes/o365_1_md.md)] ou d’[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], ou quand ils s’inscrivent pour obtenir un compte RMS for individuals.|Les approbations doivent être définies explicitement dans une relation de point à point entre deux organisations à l’aide de domaines d’utilisateurs approuvés ou d’approbations fédérées que vous créez en utilisant les services AD FS (Active Directory Federation Services).|
+|Envoyez un e-mail protégé (avec des pièces jointes de documents Office qui sont automatiquement protégées) aux utilisateurs quand il n’existe aucune relation d’approbation, en utilisant la fédération avec des fournisseurs d’identité sociale ou un code secret à usage unique, et un navigateur web pour l’affichage.|Ne prend pas en charge pas l’envoi d’e-mails protégés quand il n’existe aucune relation d’approbation.|
 |Fournit deux modèles de stratégies de droits par défaut qui limitent l'accès du contenu à votre propre organisation : un modèle qui permet d'afficher en lecture seule le contenu protégé et un autre qui offre des autorisations d'écriture ou de modification pour le contenu protégé.<br /><br />Vous pouvez également créer vos propres modèles personnalisés, qui comprennent des modèles par département qui sont visibles uniquement pour un sous-ensemble d'utilisateurs. Pour plus d’informations, consultez [Configuration et gestion des modèles pour Azure Information Protection](../deploy-use/configure-policy-templates.md).<br /><br />En outre, les utilisateurs peuvent définir leur propre jeu d'autorisations si les modèles ne suffisent pas.|Il n’existe aucun modèle par défaut ; vous devez les créer puis les distribuer. Pour plus d'informations, consultez la page [Considérations relatives au modèle de stratégie AD RMS](http://go.microsoft.com/fwlink/?LinkId=154765).<br /><br />En outre, les utilisateurs peuvent définir leur propre jeu d'autorisations si les modèles ne suffisent pas.|
 |La version minimale prise en charge de Microsoft Office est Office 2010, qui nécessite le [client Azure Information Protection](../rms-client/aip-client.md) ou l’application de partage RMS.<br /><br />Microsoft Office pour Mac :<br /><br />- Microsoft Office pour Mac 2016 : pris en charge<br /><br />- Microsoft Office pour Mac 2011 : non pris en charge|La version minimale prise en charge de Microsoft Office est Office 2007.<br /><br />Microsoft Office pour Mac :<br /><br />- Microsoft Office pour Mac 2016 : pris en charge<br /><br />- Microsoft Office pour Mac 2011 : pris en charge|
 |Prend en charge le [client Azure Information Protection](../rms-client/aip-client.md) pour Windows, iOS et Android. Les ordinateurs Mac et Windows Phone restent pris en charge par l’application de partage RMS.<br /><br />En outre, le client Azure Information Protection prend en charge les éléments suivants :<br /><br />- Partage avec des personnes dans une autre organisation.<br /><br />- Site de suivi des documents permettant notamment aux utilisateurs de révoquer des documents.|Prend en charge le [client Azure Information Protection](../rms-client/aip-client.md) pour Windows, iOS et Android. Les ordinateurs Mac et Windows Phone restent pris en charge par l’application de partage RMS. Toutefois, le partage n’inclut pas le partage avec des personnes extérieures à l’organisation ni le site de suivi de document permettant aux utilisateurs de révoquer des documents.|

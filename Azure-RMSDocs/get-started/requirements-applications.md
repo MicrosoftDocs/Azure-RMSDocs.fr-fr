@@ -4,7 +4,7 @@ description: "Identifiez les applications qui utilisent les API RMS pour prendre
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 09/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d5371ad1a5fb89176e47406b6c051efd1fa33b37
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: ba8dbc42771a590e18ede4e45782741b12ef897e
+ms.sourcegitcommit: 2bca892231ca8393b88bd5da7d0890a573770a09
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 
@@ -45,12 +45,12 @@ Informations sur les colonnes du tableau :
 |**Système d’exploitation de l’appareil**|Word, Excel, PowerPoint|PDF protégé|E-mail|Autres types de fichiers|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
 |**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online [[1]](#footnote-1)<br /><br />Navigateur web [[2]](#footnote-2)|Client Azure Information Protection pour Windows <br /><br />Gaaiho Doc<br /><br />Client PDF GigaTrust Desktop pour Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />Application de partage RMS|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Navigateur web [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4) |Client Azure Information Protection pour Windows : texte, images, pfile<br /><br />Application de partage RMS pour Windows : texte, images, pfile<br /><br />Plug-in SealPath RMS pour AutoCAD : .dwg|
-|**iOS**|Office Mobile (affichage et édition de documents protégés)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> Docs TITUS<br /><br />Navigateur web [[2]](#footnote-2)|Application Azure Information Protection (affichage de documents protégés)<br /><br /> Foxit Reader<br /><br />Docs TITUS|Application Azure Information Protection (affichage d’e-mails protégés)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Office pour iPad et iPhone [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Navigateur web [[3]](#footnote-3)|Application Azure Information Protection (affichage et protection de textes et d’images)<br /><br />Docs TITUS : Pfile|
-|**Android**|GigaTrust App pour Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (affichage de documents protégés) <br /><br />Navigateur web [[2]](#footnote-2)|Application Azure Information Protection (affichage de documents protégés) <br /><br />GigaTrust App pour Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Application Azure Information Protection (affichage d’e-mails protégés)<br /><br />GigaTrust App pour Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook pour Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 et ultérieur) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Navigateur web [[3]](#footnote-3)|Application Azure Information Protection (affichage de textes et d’images protégés)|
-|**MacOS**|Office 2011 (AD RMS uniquement)<br /><br />Office 2016 pour Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Navigateur web [[2]](#footnote-2)|Foxit Reader<br /><br />Application de partage RMS (affichage de documents protégés)|Outlook 2011 (AD RMS uniquement)<br /><br />Outlook 2016 pour Mac<br /><br />Outlook pour Mac <br /><br />Navigateur web [[3]](#footnote-3)|Application de partage RMS (affichage de textes et d’images protégés, fichiers protégés de façon générique)|
-|**Windows 10 Mobile**|Applications Office Mobile (affichage de documents protégé à l’aide d’Azure RMS) <br /><br />Navigateur web [[2]](#footnote-2)|Non prise en charge|Citrix WorxMail <br /><br />Courrier Outlook <br /><br />Navigateur web [[3]](#footnote-3)|Non prise en charge|
+|**iOS**|Office Mobile (affichage et édition des documents protégés)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> Docs TITUS<br /><br />Navigateur web [[2]](#footnote-2)|Application Azure Information Protection (affichage des documents protégés)<br /><br /> Foxit Reader<br /><br />Docs TITUS|Application Azure Information Protection (affichage des e-mails protégés)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Office pour iPad et iPhone [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Navigateur web [[3]](#footnote-3)|Application Azure Information Protection (affichage et protection du texte et des images)<br /><br />Docs TITUS : Pfile|
+|**Android**|GigaTrust App pour Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (affichage des documents protégés) <br /><br />Navigateur web [[2]](#footnote-2)|Application Azure Information Protection (affichage des documents protégés) <br /><br />GigaTrust App pour Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Application Azure Information Protection (affichage des e-mails protégés)<br /><br />GigaTrust App pour Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook pour Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 et ultérieur) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Navigateur web [[3]](#footnote-3)|Application Azure Information Protection (affichage du texte et des images protégés)|
+|**MacOS**|Office 2011 (AD RMS uniquement)<br /><br />Office 2016 pour Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Navigateur web [[2]](#footnote-2)|Foxit Reader<br /><br />Application de partage RMS (affichage des documents protégés)|Outlook 2011 (AD RMS uniquement)<br /><br />Outlook 2016 pour Mac<br /><br />Outlook pour Mac <br /><br />Navigateur web [[3]](#footnote-3)|Application de partage RMS (affichage du texte/des images protégés et des fichiers protégés de façon générique)|
+|**Windows 10 Mobile**|Applications Office Mobile (affichage des documents protégés avec Azure RMS) <br /><br />Navigateur web [[2]](#footnote-2)|Non prise en charge|Citrix WorxMail <br /><br />Courrier Outlook (affichage des e-mails protégés) <br /><br />Navigateur web [[3]](#footnote-3)|Non prise en charge|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[1]](#footnote-1)<br /><br />Navigateur web [[2]](#footnote-2)|Non prise en charge|Outlook 2013 RT<br /><br />Application de messagerie pour Windows<br /><br />Navigateur web [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go : fichiers JT|
-|**Windows Phone 8.1**|Office Mobile (AD RMS uniquement)<br /><br />Navigateur web [[2]](#footnote-2)|Application de partage RMS (affichage de documents protégés)|Outlook Mobile [[4]](#footnote-4) <br /><br />Navigateur web [[3]](#footnote-3)|Application de partage RMS (affichage de textes et d’images protégés, fichiers protégés de façon générique)|
+|**Windows Phone 8.1**|Office Mobile (AD RMS uniquement)<br /><br />Navigateur web [[2]](#footnote-2)|Application de partage RMS (affichage des documents protégés)|Outlook Mobile [[4]](#footnote-4) <br /><br />Navigateur web [[3]](#footnote-3)|Application de partage RMS (affichage du texte/des images protégés et des fichiers protégés de façon générique)|
 |**Blackberry 10**|Navigateur web [[2]](#footnote-2)|Non prise en charge|Messagerie Blackberry [[4]](#footnote-4) <br /><br />Navigateur web [[3]](#footnote-3)|Non prise en charge|
 
 
@@ -114,7 +114,7 @@ L’application Azure Information Protection pour iOS et Android remplace l’ap
 
 Si vos appareils iOS et Android sont inscrits par Microsoft Intune, vous pouvez déployer et gérer cette application à l’aide d’une application gérée par une stratégie. Pour plus d’informations, consultez [Configurer et déployer des stratégies de gestion des applications mobiles dans la console Microsoft Intune](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) dans la documentation Intune. Pour l’étape 2 de cette documentation Intune, suivez les instructions pour publier une application gérée par une stratégie.
 
-Pour plus d’informations, consultez [Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android](../rms-client/mobile-app-faq.md).
+Pour plus d’informations, consultez [FAQs for Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md) (Forum Aux Questions concernant l’application Azure Information Protection pour iOS et Android).
 
 
 ### <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Plus d’informations sur le client Azure Information Protection pour Windows

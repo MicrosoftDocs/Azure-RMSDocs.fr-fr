@@ -4,7 +4,7 @@ description: "Phase 1 de la migration d’AD RMS vers Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/27/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a1f448a51ee4bfecfd0d680b842eed44aa816ed1
-ms.sourcegitcommit: e4199d243d9f6c80efccc0f0d5574d069d69f46d
+ms.openlocfilehash: 198698bbef8fbb778545c2599798afd1255a01bc
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migration-phase-1---preparation"></a>Phase de migration 1 : Préparation
 
@@ -70,13 +70,13 @@ Pour la plupart des migrations, comme il n’est pas pratique de migrer tous les
 
     Configurez ensuite ce groupe pour les contrôles d’intégration en remplaçant l’ID d’objet de groupe dans cet exemple par le vôtre, puis entrez **O** pour confirmer quand vous y êtes invité :
 
-        Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501"
+        Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope WindowsApp
 
 3. [Téléchargez le fichier suivant](https://go.microsoft.com/fwlink/?LinkId=524619) qui contient les scripts de migration de clients :
     
-    **ClientMigration.zip**
+    **Migration-Scripts.zip**
     
-4. Extrayez les fichiers et suivez les instructions de **PrepareClient.cmd** pour ajouter le nom du serveur pour votre URL de licence extranet du cluster AD RMS. 
+4. Extrayez les fichiers et suivez les instructions de **Prepare-Client.cmd** pour ajouter le nom du serveur pour votre URL de licence extranet du cluster AD RMS. 
     
     Pour trouver ce nom : dans la console Active Directory Rights Management Services, cliquez sur le nom du cluster. À partir des informations dans **Détails du cluster**, copiez le nom du serveur issu de la valeur **Licensing** (Licences) dans la section relative aux URL de cluster extranet. Par exemple : **rmscluster.contoso.com**.
 

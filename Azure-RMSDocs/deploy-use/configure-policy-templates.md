@@ -4,7 +4,7 @@ description: "Configurer et gérer des modèles Rights Management à partir du p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c27f239467bf546479827c7ca215a8892553e9c0
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: 5afd71e059ef22eed61347e6916b9cbb6c2dc7f0
+ms.sourcegitcommit: 326930de25b259c18469f4100ec5774a04bedc7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/08/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
@@ -40,15 +40,7 @@ Les modèles Rights Management sont désormais intégrés à la stratégie Azure
 
 ## <a name="default-templates"></a>Modèles par défaut
 
-Quand vous obtenez votre abonnement pour Azure Information Protection ou pour un abonnement Office 365 qui inclut le service Azure Rights Management, deux modèles par défaut sont créés automatiquement pour votre locataire, qui limitent l’accès aux utilisateurs autorisés de votre organisation. Quand ces deux modèles sont créés, ils ont les restrictions suivantes : 
-
-- Autorisations de lecture ou de modification du contenu protégé
-    
-    - **Autorisations spécifiques** : Afficher le contenu, Enregistrer le fichier, Modifier le contenu, Afficher les droits affectés, Autoriser les macros, Transférer, Répondre, Répondre à tous
-
-- Affichage en lecture seule du contenu protégé
-    
-    - **Autorisation spécifique** : Afficher le contenu
+Quand vous obtenez votre abonnement pour Azure Information Protection ou pour un abonnement Office 365 qui inclut le service Azure Rights Management, deux modèles par défaut sont créés automatiquement pour votre locataire, qui limitent l’accès aux utilisateurs autorisés de votre organisation. Quand ces deux modèles sont créés, ils ont les autorisations qui sont répertoriées dans la documentation [Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md#rights-included-in-the-default-templates).
 
 Par ailleurs, les modèles sont configurés pour autoriser l’accès hors connexion pendant sept jours et n’ont pas de date d’expiration.
 
@@ -63,22 +55,22 @@ Vous pouvez également créer vos propres modèles personnalisés. Même si vous
 
 Si vous avez obtenu récemment un abonnement à Azure Information Protection, vos modèles par défaut sont créés avec les noms suivants :
 
-- **Confidentiel \ Tous les employés** pour les autorisations de lecture ou de modification du contenu protégé.
+- **Confidentiel \ Tous les employés**, qui accorde des autorisations de lecture ou de modification du contenu protégé.
 
-- **Hautement confidentiel \ Tous les employés** pour les autorisations d’affichage en lecture seule du contenu protégé.
+- **Hautement confidentiel \ Tous les employés**, qui accorde des autorisations d’accès en lecture seule au contenu protégé.
 
 Si vous avez obtenu votre abonnement Azure Information Protection il y a un certain temps, ou si vous n’avez pas d’abonnement Azure Information Protection, mais un abonnement Office 365 incluant Azure Rights Management, vos modèles par défaut sont créés avec les noms suivants :
 
-- **\<nom organisation> - Confidentiel** pour les autorisations de lecture ou de modification du contenu protégé.
+- **\<nom organisation> - Confidentiel** : accorde des autorisations de lecture ou de modification du contenu protégé.
 
-- **\<nom organisation> - Affichage confidentiel uniquement** pour l’affichage en lecture seule du contenu protégé. 
+- **\<nom organisation> - Affichage confidentiel uniquement** : accorde des autorisations d’accès en lecture seule au contenu protégé. 
 
 Vous pouvez renommer (et reconfigurer) ces modèles par défaut quand vous utilisez le portail Azure.
 
 >[!NOTE]
 >Si vous ne voyez pas vos modèles par défaut dans le panneau **Azure Information Protection - Stratégie globale**, c’est qu’ils sont convertis en étiquettes ou liés à une étiquette. Ils existent encore en tant que modèles, mais dans le portail Azure, ils apparaissent comme faisant partie d’une configuration d’étiquettes qui inclut la protection Azure RMS. Vous pouvez toujours vérifier les modèles dont dispose votre locataire en exécutant l’applet de commande [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) à partir du [module PowerShell AADRM](administer-powershell.md).
 >
->Vous pouvez convertir manuellement des modèles, comme expliqué dans une section ultérieure, [Pour convertir des modèles en étiquettes](#to-convert-templates-to-labels), puis les renommer si vous le voulez. Ils seront convertis automatiquement pour vous si votre stratégie Azure Information Protection par défaut a été créée récemment et que le service Azure Rights Management pour votre locataire a été activé à ce moment.
+>Vous pouvez convertir manuellement des modèles, comme expliqué dans une section ultérieure, [Pour convertir des modèles en étiquettes](#to-convert-templates-to-labels), puis les renommer si vous le voulez. Ils sont convertis automatiquement pour vous si votre stratégie Azure Information Protection par défaut a été créée récemment et que le service Azure Rights Management pour votre locataire a été activé à ce moment.
 
 Les modèles archivés apparaissent comme étant indisponibles dans le panneau **Azure Information Protection - Stratégie globale**. Ces modèles ne peuvent pas être sélectionnés pour les étiquettes, mais ils peuvent être convertis en étiquettes.
 
@@ -101,7 +93,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
 
 - Les modèles de service (les modèles qui sont configurés pour une étendue) s’affichent dans la stratégie globale. Actuellement, si vous modifiez et enregistrez un modèle de service, il supprime la configuration d’étendue. L’équivalent d’un modèle délimité dans la stratégie Azure Information Protection est une [stratégie délimitée](configure-policy-scope.md). Si vous convertissez le modèle en étiquette, vous pouvez sélectionner une étendue existante.
     
-    En outre, vous ne pouvez actuellement pas définir le paramètre de compatibilité d’application pour un modèle de service. Si nécessaire, vous pouvez définir cela à l’aide de PowerShell avec l’applet de commande [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
+    En outre, vous ne pouvez actuellement pas définir le paramètre de compatibilité d’application pour un modèle de service. Si nécessaire, vous pouvez définir le paramètre de compatibilité d’application à l’aide de l’applet de commande PowerShell [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
 
 - Quand vous convertissez ou que vous liez un modèle à une étiquette, il ne peut plus être utilisé par d’autres étiquettes. Par ailleurs, ce modèle ne s’affiche plus dans la section **Modèles** ou **Modèles de protections**. Le nom de cette section est en cours de modification.
 
@@ -149,7 +141,7 @@ Lorsque vous convertissez un modèle en étiquette :
 
 - Le nom du modèle est converti en un nouveau nom d’étiquette, et la description du modèle est convertie en info-bulle pour l’étiquette. 
 
-- Si l’état du modèle a été publié, ce paramètre est mappé sur **Activé** : **Oui** pour l’étiquette, qui s’affiche désormais comme cette étiquette pour les utilisateurs lorsque vous publiez ensuite la stratégie Azure Information Protection. Si l’état du modèle a été archivé, ce paramètre est mappé sur **Activé** : **Non** pour l’étiquette et ne s’affiche pas comme une étiquette disponible pour les utilisateurs.
+- Si l’état du modèle a été publié, ce paramètre est mappé sur **Activé** : **Oui** pour l’étiquette, qui s’affiche désormais comme cette étiquette pour les utilisateurs lorsque vous publiez ensuite la stratégie Azure Information Protection. Si l’état du modèle a été archivé, ce paramètre est mappé à **Activé** : **Non** pour l’étiquette et ne s’affiche pas comme une étiquette disponible pour les utilisateurs.
 
 - Les paramètres de protection sont conservés, et vous pouvez les modifier si nécessaire, puis ajouter également d’autres paramètres à l’étiquette, comme des marqueurs visuels et des conditions.
 

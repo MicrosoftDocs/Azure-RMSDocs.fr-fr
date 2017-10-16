@@ -4,7 +4,7 @@ description: "Détails techniques sur les types de fichiers pris en charge, les 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5a3d13861e3eff0cfaf4a92eb005b8192f2b447c
-ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
+ms.openlocfilehash: 0bd9bbdc6b29e8cd9497712dddb7205f3d8372b1
+ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Types de fichiers pris en charge par le client Azure Information Protection
 
@@ -34,7 +34,7 @@ Utilisez les informations suivantes pour vérifier les types de fichiers pris en
 
 ## <a name="file-types-supported-for-classification-only"></a>Types de fichiers pris en charge pour la classification uniquement
 
-Seule la classification est prise en charge pour les types de fichiers suivants. D’autres types de fichiers prennent en charge la classification quand ils sont également protégés (consultez la section [Types de fichiers pris en charge pour la classification et la protection](#supported-file-types-for-classification-and-protection).
+Vous pouvez classifier les types de fichiers suivants même s’ils ne sont pas protégés.
 
 - **Adobe Portable Document Format** : .pdf
 
@@ -45,15 +45,22 @@ Seule la classification est prise en charge pour les types de fichiers suivants.
 - **Microsoft Publisher** : .pub
 
 - **Microsoft Office 97, Office 2010, Office 2003** : .xls, .xlt, .doc, .dot, .ppt, .pps, .pot
+
 - **Microsoft XPS** : .xps .oxps
 
-- **Images** : .jpg, .jpe, .jpeg, .jif, .jfif,. jfi.png, .tif, .tiff
+- **Images** : .jpg, .jpe, .jpeg, .jif, .jfif, .jfi, png, .tif, .tiff
 
 - **Autodesk Design Review 2013** : .dwfx
 
 - **Adobe Photoshop** : .psd
 
 - **Digital Negative** : .dng
+
+D’autres types de fichiers prennent en charge la classification quand ils sont aussi protégés. Pour ces types de fichiers, consultez la section [Types de fichiers pris en charge pour la classification et la protection](#supported-file-types-for-classification-and-protection).
+
+Par exemple, dans la [stratégie par défaut](../deploy-use/configure-policy-default.md) actuelle, l’étiquette **Général** applique la classification et n’applique pas de protection. Vous pouvez appliquer l’étiquette **Général** à un fichier nommé sales.pdf, mais vous ne pouvez pas l’appliquer à un fichier nommé sales.txt. 
+
+Par ailleurs, dans la stratégie par défaut actuelle, **Confidentiel \ Tous les emplyés** applique la classification et la protection. Vous pouvez appliquer cette étiquette à un fichier nommé sales.pdf et à un fichier nommé sales.txt. Vous pouvez également appliquer juste une protection à ces fichiers, sans classification.
 
 ## <a name="file-types-supported-for-protection"></a>Types de fichiers pris en charge pour la protection
 
@@ -108,13 +115,15 @@ Ces types de fichiers sont identifiés séparément, car quand ils sont protég�
 |.jfif|.pjfif|
 |.jt|.pjt|
 
+
 Le tableau suivant liste les types de fichiers restants qui prennent en charge la protection native par le client Azure Information Protection et qui peuvent également être classés. Vous y trouvez les types de fichiers pour les applications Microsoft Office. 
 
 Pour ces fichiers, l’extension de nom de fichier reste la même une fois que le fichier est protégé par un service Rights Management.
 
 |Types de fichier pris en charge par Office|Types de fichier pris en charge par Office|
 |----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.pptx<br /><br />.thmx|.vsdm<br /><br />.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+
 
 ### <a name="changing-the-default-protection-level-of-files"></a>Modification du niveau de protection par défaut des fichiers
 Vous pouvez modifier la façon dont le client Azure Information Protection protège les fichiers en modifiant le Registre. Par exemple, vous pouvez forcer les fichiers qui prennent en charge la protection native à être protégés de manière générique par le client Azure Information Protection.
@@ -181,15 +190,15 @@ Pour empêcher les utilisateurs de modifier des fichiers essentiels au fonctionn
 
 Les fichiers protégés par mot de passe ne peuvent pas tous être protégés en mode natif par le client Azure Information Protection. Les fichiers PDF protégés par mot de passe sont très courants, mais d’autres applications, comme les applications Office, offrent aussi cette fonctionnalité.
 
-De plus, le client Azure Information Protection pour Windows ne peut pas protéger (ou déprotéger) en mode natif les fichiers PDF dans les cas suivants :
+De plus, le client Azure Information Protection pour Windows peut afficher les fichiers suivants, mais il ne peut ni protéger ni déprotéger en mode natif les fichiers PDF dans les cas suivants :
 
 - Un ficher PDF basé sur un formulaire.
 
 - Un fichier PDF protégé qui a une extension de nom de fichier .pdf. 
     
-    Le client Azure Information Protection peut protéger un fichier PDF non protégé et reprotéger un fichier PDF protégé qui a une extension de nom de fichier .ppdf.
+    Le client Azure Information Protection peut protéger un fichier PDF non protégé, et il peut déprotéger et reprotéger un fichier PDF protégé qui a une extension de nom de fichier .ppdf.
 
-La solution de contournement pour ces fichiers consiste à les protéger de façon générique en suivant les instructions de la section [Modification du niveau de protection par défaut des fichiers](#changing-the-default-protection-level-of-files). Toutefois, cette méthode change le niveau de protection de tous les fichiers qui ont une extension de nom de fichier .pdf, au niveau de l’ordinateur. Vous ne pouvez pas définir une protection générique seulement pour les fichiers qui répondent aux critères listés.
+Pour ces fichiers, une solution de contournement consiste à les protéger de façon générique en suivant les instructions de la section [Changement du niveau de protection par défaut des fichiers](#changing-the-default-protection-level-of-files). Toutefois, cette méthode change le niveau de protection de tous les fichiers qui ont une extension de nom de fichier .pdf, au niveau de l’ordinateur. Vous ne pouvez pas définir une protection générique seulement pour les fichiers qui répondent aux critères listés.
 
 Si la protection de ces fichiers est importante, vous pouvez les copier provisoirement sur un autre ordinateur pour les protéger de manière générique, puis les copier de nouveau sur votre ordinateur.
 
@@ -197,7 +206,7 @@ Si la protection de ces fichiers est importante, vous pouvez les copier provisoi
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez identifié les types de fichiers pris en charge par le client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :
 
-- [Personnalisations](client-admin-guide-customizations.md)
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Fichiers du client et journalisation de l’utilisation](client-admin-guide-files-and-logging.md)
 

@@ -4,7 +4,7 @@ description: "Découvrez ce qui est nouveau ou ce qui a changé dans une version
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2b6e6e4d824c8f76be605d9e728c0405aba960e5
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: ccd6d0cec6a71527fad0303369baad90dd733958
+ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="azure-information-protection-client-version-release-history"></a>Client Azure Information Protection : historique des versions
 
@@ -24,12 +24,12 @@ ms.lasthandoff: 09/18/2017
 
 L’équipe Azure Information Protection met régulièrement à jour le client Azure Information Protection avec des correctifs et des nouvelles fonctionnalités. Le client est intégré au Catalogue Microsoft Update (catégorie : **Azure Information Protection**) et vous pouvez continuer à télécharger la version de disponibilité générale la plus récente et la prochaine version (préversion) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-Les préversions ne doivent pas être déployées pour les utilisateurs finaux sur des réseaux de production. Utilisez plutôt les préversions pour tester de nouvelles fonctionnalités ou de nouveaux correctifs à paraître dans la prochaine version en disponibilité générale. 
+Les versions préliminaires ne doivent pas être déployées auprès des utilisateurs finaux sur les réseaux de production. Utilisez plutôt les versions préliminaires pour tester de nouvelles fonctionnalités ou de nouveaux correctifs à paraître dans la prochaine version en disponibilité générale. 
 
 Pour déterminer les nouveautés ou modifications apportées à une version en disponibilité générale, utilisez les informations ci-après. La dernière version est répertoriée en première position. Pour connaître les changements apportés à la préversion actuelle, consultez les informations contenues dans la page de téléchargement.
 
 > [!NOTE]
-> Les correctifs mineurs n’y sont pas répertoriés. Par conséquent, si vous rencontrez un problème avec le client Azure Information Protection, vérifiez d’abord qu’il ne s’agit pas d’un problème avec la version en disponibilité générale la plus récente. Si tel est le cas, vérifiez la préversion actuelle.
+> Les correctifs mineurs n’y sont pas répertoriés. Par conséquent, si vous rencontrez un problème avec le client Azure Information Protection, vérifiez d’abord qu’il ne s’agit pas d’un problème avec la version en disponibilité générale la plus récente. Si tel est le cas, vérifiez la version préliminaire actuelle.
 >  
 > Si le problème persiste, consultez les informations dans [Options de support technique et ressources de la communauté](../get-started/information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
@@ -47,6 +47,8 @@ Cette version inclut MSIPC version 1.0.3219.0619 du client RMS.
 
 - Pour afficher les étiquettes, utilisez le bouton **Protéger** dans le ruban Office. Les étiquettes figurent également dans la barre Information Protection. 
 
+- Protection native pour les types de fichiers Visio suivants : .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx
+
 - Prise en charge des configurations de client avancées que vous configurez dans le portail Azure. Ces configurations sont les suivantes :
     
     - [Masquer le bouton Ne pas transférer dans Outlook](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)
@@ -59,7 +61,7 @@ Cette version inclut MSIPC version 1.0.3219.0619 du client RMS.
 
 - Pour PowerShell, prise en charge de l’étiquetage des fichiers d’étiquette de manière non interactive à l’aide des nouvelles applets de commande PowerShell [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) et [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). Pour plus d’informations sur l’utilisation de ces applets de commande, consultez la [section PowerShell](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) du guide de l’administrateur.
 
-- Les applets de commande PowerShell [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) et [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) disposent de nouveaux paramètres : **Owner** et **PreserveFileDetails **. Ces paramètres vous permettent de spécifier une adresse e-mail pour la propriété personnalisée Owner. La date des documents que vous étiquetez est inchangée.
+- Les applets de commande PowerShell [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) et [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) disposent de nouveaux paramètres : **Owner** et **PreserveFileDetails** . Ces paramètres vous permettent de spécifier une adresse e-mail pour la propriété personnalisée Owner. La date des documents que vous étiquetez est inchangée.
 
 **Correctifs** :
 

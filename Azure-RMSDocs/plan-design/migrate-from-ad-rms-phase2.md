@@ -4,7 +4,7 @@ description: "Phase 2 de la migration d’AD RMS vers Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: db8f8de9cdda00f5983ff448aa895a5767d953b1
-ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
+ms.openlocfilehash: c81d7131bfb2a5f1e0742cd8dd55d52e3a65984a
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -112,11 +112,7 @@ Ouvrez une session PowerShell et exécutez les commandes suivantes :
     
         Enable-Aadrm
 
-**Que se passe-t-il si votre locataire Azure Information Protection est déjà activé ?** Si le service Azure Rights Management est déjà activé pour votre organisation, les utilisateurs ont peut-être déjà utilisé Azure Information Protection pour protéger du contenu avec une clé de locataire générée automatiquement (et les modèles par défaut) au lieu de vos clés existantes (et les modèles associés) d’AD RMS. Il est peu probable que cela se produise sur des ordinateurs bien gérés sur votre intranet, car ceux-ci sont automatiquement configurés pour votre infrastructure AD RMS. En revanche, cela peut se produire sur des ordinateurs de groupe de travail ou des ordinateurs qui se connectent rarement à votre intranet. Malheureusement, il est également difficile d'identifier ces ordinateurs. C'est pourquoi nous vous recommandons de ne pas activer le service avant d'importer les données de configuration d'AD RMS.
-
-Si votre locataire Azure Information Protection est déjà activé et que vous pouvez identifier ces ordinateurs, exécutez le script CleanUpRMS.cmd sur ces ordinateurs, comme décrit à [l’Étape 7](migrate-from-ad-rms-phase3.md#step-7-reconfigure-clients-to-use-azure-information-protection). L'exécution de ce script force ceux-ci à réinitialiser l'environnement utilisateur, de sorte qu'ils téléchargent la clé de client et les modèles importés mis à jour.
-
-En outre, si vous avez créé des modèles personnalisés que vous souhaitez utiliser après la migration, vous devez les exporter et importer. Cette procédure est détaillée dans l’étape suivante. 
+**Que se passe-t-il si votre locataire Azure Information Protection est déjà activé ?** Si le service Azure Rights Management est déjà activé pour votre organisation et que vous avez créé des modèles personnalisés que vous souhaitez utiliser après la migration, vous devez exporter et importer ces modèles. Cette procédure est détaillée dans l’étape suivante. 
 
 ## <a name="step-6-configure-imported-templates"></a>Étape 6. Configurer les modèles importés
 

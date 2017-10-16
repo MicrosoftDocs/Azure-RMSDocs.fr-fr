@@ -4,7 +4,7 @@ description: "Phase 5 de la migration d’AD RMS vers Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 11775c64cbd5abd7c10a145a2d48f335db2d5b69
-ms.sourcegitcommit: 8251e4db274519a2eb8033d3135a22c27130bd30
+ms.openlocfilehash: db6cb1c6327808616ee98b9e5b14f2a92a590bff
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Phase de migration 5 : Tâches de post-migration
 
@@ -48,11 +48,35 @@ Après avoir déprovisionné vos serveurs AD RMS, vous pouvez en profiter pour p
 >[!IMPORTANT]
 > À la fin de cette migration, vous ne pouvez pas utiliser votre cluster AD RMS avec Azure Information Protection et l’option HYOK (Hold Your Own Key). Si vous décidez d’utiliser HYOK pour une étiquette Azure Information Protection en raison des redirections maintenant en place, le cluster AD RMS que vous utilisez doit avoir des URL de licences différentes de celles des clusters que vous avez migrés.
 
-## <a name="step-11-remove-onboarding-controls"></a>Étape 11. Supprimer les contrôles d’intégration
+## <a name="step-11-reconfigure-mobile-device-clients-and-mac-computers-and-remove-onboarding-controls"></a>Étape 11. Reconfigurer les clients d’appareils mobiles et les ordinateurs Mac, et supprimer les contrôles d’intégration
 
-Quand tous vos clients existants ont migré vers Azure Information Protection, il n’existe aucune raison de continuer à utiliser les contrôles d’intégration et gérer le groupe **AIPMigrated** que vous avez créé pour le processus de migration. 
+Pour les clients d’appareils mobiles et les ordinateurs Mac : Supprimez les enregistrements SRV DNS que vous avez créés lors du déploiement de l’[extension d’appareil mobile AD RMS](http://technet.microsoft.com/library/dn673574.aspx).
 
-Supprimez d’abord les contrôles d’intégration, puis éventuellement le groupe **AIPMigrated** et toute tâche de déploiement de logiciel que vous avez créée pour déployer les redirections.
+Une fois ces changements DNS propagés, ces clients découvrent automatiquement le service Azure Rights Management et commencent à l’utiliser. Toutefois, les ordinateurs Mac qui exécutent Office Mac mettent en cache les informations d’AD RMS. Pour ces ordinateurs, ce processus peut prendre jusqu’à 30 jours. 
+
+Pour forcer les ordinateurs Mac à exécuter immédiatement le processus de découverte, dans le trousseau, recherchez « adal » et supprimez toutes les entrées ADAL. Ensuite, exécutez les commandes suivantes sur ces ordinateurs :
+
+````
+
+rm -r ~/Library/Cache/MSRightsManagement
+
+rm -r ~/Library/Caches/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Caches/Microsoft\ Rights\ Management\ Services
+
+rm -r ~/Library/Containers/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Containers/com.microsoft.RMSTestApp
+
+rm ~/Library/Group\ Containers/UBF8T346G9.Office/DRM.plist
+
+killall cfprefsd
+
+````
+
+Quand tous vos ordinateurs Windows existants ont migré vers Azure Information Protection, il n’y a aucune raison de continuer à utiliser les contrôles d’intégration et à conserver le groupe **AIPMigrated** que vous avez créé pour le processus de migration. 
+
+Supprimez d’abord les contrôles d’intégration, puis éventuellement le groupe **AIPMigrated** et toute méthode de déploiement de logiciels que vous avez créée pour déployer les scripts de migration.
 
 Pour supprimer les contrôles d’intégration :
 
@@ -63,6 +87,8 @@ Pour supprimer les contrôles d’intégration :
 2. Exécutez la commande suivante, puis entrez **O** pour confirmer :
 
         Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+    
+    Notez que cette commande supprime toute application de licence pour le service de protection Azure Rights Management, et ce pour que tous les ordinateurs puissent protéger les documents et les e-mails.
 
 3. Vérifiez que les contrôles d’intégration ne sont plus définis :
 

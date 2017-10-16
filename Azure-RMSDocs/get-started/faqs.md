@@ -4,7 +4,7 @@ description: "Certaines questions fréquentes sur Azure Information Protection e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dd576541ab7cb6f1f1132d2a826a5b602ab71328
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 54116659e37c22dbc20221d335e2e55443dff899
+ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -54,6 +54,13 @@ Oui. Bien qu’Azure Information Protection soit une solution basée sur le clou
 Si vous possédez des serveurs de fichiers Windows, Exchange Server et SharePoint Server, vous pouvez déployer le [connecteur Rights Management](../deploy-use/deploy-rms-connector.md) afin de permettre à ces serveurs locaux d’utiliser le service Azure Rights Management pour protéger vos messages e-mails et documents. Vous pouvez également synchroniser et fédérer vos contrôleurs de domaine Active Directory avec Azure AD pour une expérience d'authentification plus agréable pour les utilisateurs, par exemple, en utilisant [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
 
 Le service Azure Rights Management génère et gère automatiquement les certificats XrML de façon appropriée. Il n’utilise donc pas d’infrastructure à clé publique (PKI) locale. Pour plus d’informations sur la façon dont Azure Rights Management utilise les certificats, consultez la section [Procédure pas à pas décrivant le fonctionnement d’Azure RMS : première utilisation, protection du contenu, consommation du contenu](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) dans l’article [Fonctionnement d’Azure RMS](../understand-explore/how-does-it-work.md).
+
+## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>Quelle est la différence entre les étiquettes dans Azure Information Protection et celles dans Office 365 ?
+
+Les étiquettes dans Azure Information Protection vous permettent d’appliquer une stratégie de classification et de protection cohérente aux documents et aux e-mails, qu’ils soient locaux ou dans le cloud. Cette stratégie de classification et de protection est indépendante de l’emplacement de stockage ou du mode de déplacement du contenu. Les [étiquettes dans Office 365 Security & Compliance](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) vous permettent de classifier les documents et les e-mails à des fins d’audit et de rétention quand ce contenu se trouve dans les services Office 365. 
+
+Si pour le moment vous appliquez et gérez ces étiquettes séparément, Microsoft travaille à la mise en place d’une stratégie d’étiquetage complète et unifiée pour plusieurs services, dont Azure Information Protection, Office 365, Microsoft Cloud App Security et Windows Information Protection. Les mêmes schéma et magasin d’étiquetage seront également disponibles pour les éditeurs de logiciels. Pour plus d’informations, consultez la session Microsoft Ignite 2017, [Protecting complete data lifecycle using Microsoft information protection capabilities](https://myignite.microsoft.com/videos/55397).
+
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>J’ai entendu dire qu’une nouvelle version sera disponible prochainement pour Azure Information Protection : quand sera-t-elle publiée ?
 

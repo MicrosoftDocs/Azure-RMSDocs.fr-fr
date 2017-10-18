@@ -1,10 +1,10 @@
 ---
 layout: LandingPage
-ms.openlocfilehash: 713d2484288d1297fd72f976e0dbf000eba7f018
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 7b26e03c121847008f5f507e6fef3263871c1621
+ms.sourcegitcommit: c37b7a95dbef32377ddfba4b24e063a3ede2642a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="azure-information-protection-documentation"></a>Documentation sur Azure Information Protection
 
@@ -131,22 +131,6 @@ Contrôlez et sécurisez les e-mails, les documents et les données sensibles qu
                 <div class="card">
                     <div class="cardText">
                         <p><a href="/enterprise-mobility-security/solutions/infoprotect-secure-classify-scenario">Guide du développeur</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>  
-</ul>
-
-<h2>Solutions</h2>
-<ul class="panelContent cardsW">
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <p><a href="/enterprise-mobility-security/solutions/infoprotect-secure-classify-scenario">Sécuriser les données en utilisant la classification, l’étiquetage et la protection</a></p>
-                        <p><a href="/enterprise-mobility-security/solutions/share-sensitive-data">Partager les données sensibles en interne et en externe</a></p>
                     </div>
                 </div>
             </div>

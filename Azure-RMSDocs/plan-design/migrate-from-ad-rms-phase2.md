@@ -4,7 +4,7 @@ description: "Phase 2 de la migration d’AD RMS vers Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2017
+ms.date: 10/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c81d7131bfb2a5f1e0742cd8dd55d52e3a65984a
-ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
+ms.openlocfilehash: b65e3d803f94e6c8a494217e2a494c704640e5fc
+ms.sourcegitcommit: 3952fc01c6182c143df7f0d2e748594e49bf1da8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -193,6 +193,6 @@ Remove-PSDrive MyRmsAdmin -force
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-Passez à la [Phase 3 : Configuration côté client](migrate-from-ad-rms-phase2.md).
+Passez à la [Phase 3 : Configuration côté client](migrate-from-ad-rms-phase3.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5de30d095e1c279babb8f8be74a5a9b9d54db204
-ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
+ms.openlocfilehash: ca2c8156489b55911ee340fd52f85e68b5280915
+ms.sourcegitcommit: 3952fc01c6182c143df7f0d2e748594e49bf1da8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Phase de migration 3 : Configuration côté client
 
@@ -76,6 +76,6 @@ Quand vous ne pouvez pas migrer tous vos clients Windows à la fois, exécutez l
 3. À l’aide des instructions fournies au début de cette étape, configurez les méthodes de déploiement de votre script pour exécuter **Migrate-Client.cmd** et **Migrate-User.cmd** sur les ordinateurs clients Windows utilisés par les membres du groupe AIPMigrated. 
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour poursuivre la migration, passez à la [Phase 4 : Configuration des services de prise en charge](migrate-from-ad-rms-phase3.md).
+Pour poursuivre la migration, passez à la [Phase 4 : Configuration des services de prise en charge](migrate-from-ad-rms-phase4.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

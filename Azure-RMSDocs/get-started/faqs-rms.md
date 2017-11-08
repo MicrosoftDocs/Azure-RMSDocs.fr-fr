@@ -4,7 +4,7 @@ description: "Certaines questions fréquentes sur le service de protection des d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 11/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9983b088b5856f8c2223d05624c3bee21b80fd15
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 038cb3a81bac9f16055038f33d825daed6642479
+ms.sourcegitcommit: 91585427fe62956fd78d4e7897ec8abe55b3c11d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
@@ -124,16 +124,24 @@ Si vous protégez un e-mail avec un document Office en pièce jointe envoyé à 
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>Puis-je ajouter des utilisateurs externes (des personnes ne faisant pas partie de mon organisation) à des modèles personnalisés ?
 
-Oui. Quand vous convertissez un modèle en étiquette dans le portail Azure, vous pouvez configurer les [paramètres de protection](../deploy-use/configure-policy-protection.md) pour ajouter des autorisations à des utilisateurs et groupes extérieurs à votre organisation, et même à tous les utilisateurs d’une autre organisation. Vous pouvez aussi faire cette configuration en utilisant PowerShell.
+Oui. Les [paramètres de protection](../deploy-use/configure-policy-protection.md) que vous configurez dans le portail Azure vous permettent d’ajouter des autorisations à des utilisateurs et groupes extérieurs à votre organisation, et même à tous les utilisateurs d’une autre organisation. N’ajoutez pas de comptes provenant d’identités sociales (comme Gmail et Microsoft) ni d’autres comptes extérieurs à Azure AD, sauf si le modèle est utilisé exclusivement pour l’envoi d’e-mails à l’aide des [nouvelles fonctionnalités de chiffrement de messages Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
-Pour plus d’informations sur la conversion de modèles personnalisés en étiquettes dans le but de faciliter l’ajout d’utilisateurs externes, consultez [Configuration et gestion des modèles pour Azure Information Protection](../deploy-use/configure-policy-templates.md).
+Notez que si vous avez des étiquettes Azure Information Protection, vous devez d’abord convertir votre modèle personnalisé en étiquette pour pouvoir configurer ces paramètres de protection dans le portail Azure. Pour plus d’informations, consultez [Configuration et gestion des modèles pour Azure Information Protection](../deploy-use/configure-policy-templates.md).
+
+Vous pouvez aussi ajouter des utilisateurs externes aux modèles personnalisés (et étiquettes) à l’aide de PowerShell. Cette configuration vous oblige à utiliser un objet de définition de droits pour mettre à jour votre modèle :
+
+1. Spécifiez les adresses e-mail externes et leurs droits dans un objet de définition de droits en utilisant l’applet de commande [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) pour créer une variable.
+
+2. Fournissez cette variable au paramètre RightsDefinition avec l’applet de commande [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
+    
+    Lorsque vous ajoutez des utilisateurs à un modèle existant, vous devez définir des objets de définition de droits pour les utilisateurs existants dans les modèles, ainsi que pour les nouveaux utilisateurs. Pour ce scénario, n’hésitez pas à consulter l’**exemple 3 : ajouter de nouveaux utilisateurs et droits à un modèle personnalisé** dans la section [Exemples](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) de l’applet de commande. 
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Quels types de groupes puis-je utiliser avec Azure RMS ?
 Pour la plupart des scénarios, vous pouvez utiliser n’importe quel type de groupe d’Azure AD qui a une adresse e-mail. Cette règle s’applique toujours quand vous affectez des droits d’utilisation, mais il existe certaines exceptions pour l’administration du service Azure Rights Management. Pour plus d’informations, consultez [Configuration requise d’Azure Information Protection pour les comptes de groupe](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
 
 ## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>Comment envoyer un e-mail protégé sur un compte Gmail ou Hotmail ?
 
-Quand vous utilisez Exchange Online et le service Azure Rights Management, vous envoyez simplement l’e-mail en tant que message protégé. Par exemple, vous pouvez sélectionner le nouveau bouton **Protéger** dans la barre de commandes dans Outlook sur le Web, utilisez l’option Outlook Ne pas transférer, sélectionner une étiquette Azure Information Protection qui applique une protection d’Azure Rights Management, ou la protection peut être appliquée par les règles de transport d’Exchange Online.
+Quand vous utilisez Exchange Online et le service Azure Rights Management, vous envoyez simplement l’e-mail à l’utilisateur sous forme de message protégé. Par exemple, vous pouvez sélectionner le nouveau bouton **Protéger** dans la barre de commandes Outlook sur le web, ou bien utiliser le bouton ou l’option de menu **Ne pas transférer** dans Outlook. Vous pouvez aussi sélectionner une étiquette Azure Information Protection qui applique l’option Ne pas transférer et classifie automatiquement l’e-mail. 
 
 Le destinataire voit une option qui lui permet de se connecter à son compte Gmail, Yahoo ou Microsoft, puis de lire l’e-mail protégé. Ils peuvent également choisir l’option de demander un code secret à usage unique pour lire l’e-mail dans un navigateur.
 

@@ -4,17 +4,17 @@ description: "Lorsque vous affectez une étiquette à un document ou un e-mail, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 0da5df139d98f0468f49e7e3f17cd1cd2358a015
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: ff444afb1912239ec817882c76fc735f6d35ed1e
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -93,6 +93,8 @@ Exemple : Si vous spécifiez la chaîne `Document: ${item.name}  Classification:
 Ce paramètre est actuellement en préversion.
 
 Calibri est la police par défaut pour le texte des en-têtes, pieds de page et filigranes. Si vous spécifiez une autre police, vérifiez qu’elle est disponible sur les appareils clients qui appliqueront les marqueurs visuels. Sinon, la police utilisée sera non déterministe. 
+
+Si vous utilisez la préversion du client Azure Information Protection et que la police spécifiée n’est pas disponible, le client revient à l’utilisation de la police Calibri.
 
 ### <a name="setting-the-font-color"></a>Définition de la couleur de la police
 

@@ -4,17 +4,17 @@ description: "Vous pouvez protéger vos documents et e-mails les plus sensibles 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: dccd5f86dd75cf053336426df161e927b4cd9e5b
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: f6661668a73b708f292261dde70181bd22bdf332
+ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/30/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -79,27 +79,19 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
     
 7. Sélectionnez l’une des options suivantes :
     
-    - **Sélectionner un modèle prédéfini** : utilisez un des modèles par défaut ou un modèle personnalisé que vous avez configuré. Ce modèle doit être publié (pas archivé) et ne doit pas être déjà lié à une autre étiquette. Quand vous sélectionnez cette option, vous pouvez utiliser le bouton **Modifier le modèle** pour [convertir le modèle en étiquette](configure-policy-templates.md#to-convert-templates-to-labels).
-    
-    Conseil : Si vous utilisez le bouton **Modifier le modèle**, il peut s’avérer utile de consulter [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
-    
     - **Définir des autorisations** : Permet de définir de nouveaux paramètres de protection dans ce portail.
     
-    - **Configurer des autorisations définies par l’utilisateur (préversion)** : Permet aux utilisateurs de spécifier qui doit avoir des autorisations et quelles sont ces autorisations. Vous pouvez ensuite affiner cette option et choisir Outlook uniquement (la valeur par défaut) ou Word, Excel, PowerPoint et l’Explorateur de fichiers. 
+    - **Configurer des autorisations définies par l’utilisateur (préversion)** : Permet aux utilisateurs de spécifier qui doit avoir des autorisations et quelles sont ces autorisations. Vous pouvez ensuite affiner cette option et choisir Outlook uniquement ou Word, Excel, PowerPoint et l’Explorateur de fichiers. Cette option n’est pas prise en charge et ne fonctionnera pas, lorsqu’une étiquette est configurée pour une [classification automatique](configure-policy-classification.md).
         
         Si vous choisissez l’option pour Outlook : l’étiquette est affichée dans Outlook et le comportement obtenu quand les utilisateurs appliquent l’étiquette est identique à celui de l’option Ne pas transférer.
         
         Si vous choisissez l’option pour Word, Excel, PowerPoint et l’Explorateur de fichiers : Quand cette option est définie, l’étiquette est affichée dans ces applications. Le comportement obtenu quand les utilisateurs appliquent l’étiquette affiche la boîte de dialogue pour permettre aux utilisateurs de sélectionner des autorisations personnalisées. Dans cette boîte de dialogue, les utilisateurs doivent spécifier les autorisations, les utilisateurs ou les groupes et une date d’expiration. Vérifiez que les utilisateurs disposent des instructions et des conseils qui permettent de fournir ces valeurs.
+    
+    - **Sélectionner un modèle prédéfini** : utilisez un des modèles par défaut ou un modèle personnalisé que vous avez configuré. Ce modèle doit être publié (pas archivé) et ne doit pas être déjà lié à une autre étiquette. Quand vous sélectionnez cette option, vous pouvez utiliser le bouton **Modifier le modèle** pour [convertir le modèle en étiquette](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Conseil : Si vous utilisez le bouton **Modifier le modèle**, il peut s’avérer utile de consulter [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
 
-8. Si vous avez choisi **Sélectionner un modèle prédéfini** pour **Azure (clé du cloud)**, cliquez sur la zone de liste déroulante, puis sélectionnez le [modèle](../deploy-use/configure-policy-templates.md) à utiliser pour protéger les documents et les e-mails avec cette étiquette. Vous ne voyez pas les modèles archivés ou les modèles qui sont déjà sélectionnés pour une autre étiquette.
-    
-    Si vous sélectionnez un **modèle de service** ou que vous avez configuré des [contrôles d’intégration](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) :
-    
-    - Les utilisateurs en dehors de l’étendue configurée du modèle ou qui sont exclus de l’application de la protection d’Azure Rights Management continuent de voir l’étiquette, mais ne peuvent pas l’appliquer. S’ils sélectionnent l’étiquette, ils voient le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
-        
-        Notez que tous les modèles publiés sont toujours affichés, même si vous configurez une stratégie délimitée. Par exemple, vous configurez une stratégie délimitée au groupe Marketing. Les modèles que vous pouvez sélectionner ne se limitent pas aux modèles délimités au groupe Marketing, et il est possible de sélectionner un modèle de service que les utilisateurs sélectionnés ne peuvent pas utiliser. Pour faciliter la configuration et minimiser la résolution des problèmes, envisagez d’attribuer le même nom au modèle de service et à l’étiquette de votre stratégie délimitée. 
-            
-9. Si vous avez sélectionné **Définir les autorisations** pour **Azure (clé du cloud)**, cette option vous permet de configurer les mêmes paramètres que ceux que vous pouvez configurer dans un modèle. 
+8. Si vous avez sélectionné **Définir les autorisations** pour **Azure (clé du cloud)**, cette option vous permet de configurer les mêmes paramètres que ceux que vous pouvez configurer dans un modèle. 
     
     Sélectionnez **Ajouter des autorisations** puis, dans le panneau **Ajouter des autorisations**, sélectionnez le premier ensemble d’utilisateurs et de groupes qui auront des droits d’utilisation du contenu à protéger par l’étiquette sélectionnée :
     
@@ -132,11 +124,19 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
     
     Ce regroupement de paramètres crée un modèle personnalisé pour le service Azure Rights Management. Ces modèles peuvent être utilisés avec les applications et services qui s’intègrent à Azure Rights Management. Pour plus d’informations sur la façon dont les ordinateurs et les services téléchargent et actualisent ces modèles, consultez [Actualisation des modèles pour les utilisateurs et services](refresh-templates.md).
 
+9. Si vous avez choisi **Sélectionner un modèle prédéfini** pour **Azure (clé du cloud)**, cliquez sur la zone de liste déroulante, puis sélectionnez le [modèle](../deploy-use/configure-policy-templates.md) à utiliser pour protéger les documents et les e-mails avec cette étiquette. Vous ne voyez pas les modèles archivés ou les modèles qui sont déjà sélectionnés pour une autre étiquette.
+    
+    Si vous sélectionnez un **modèle de service** ou que vous avez configuré des [contrôles d’intégration](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) :
+    
+    - Les utilisateurs en dehors de l’étendue configurée du modèle ou qui sont exclus de l’application de la protection d’Azure Rights Management continuent de voir l’étiquette, mais ne peuvent pas l’appliquer. S’ils sélectionnent l’étiquette, ils voient le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
+        
+        Notez que tous les modèles publiés sont toujours affichés, même si vous configurez une stratégie délimitée. Par exemple, vous configurez une stratégie délimitée au groupe Marketing. Les modèles que vous pouvez sélectionner ne se limitent pas aux modèles délimités au groupe Marketing, et il est possible de sélectionner un modèle de service que les utilisateurs sélectionnés ne peuvent pas utiliser. Pour faciliter la configuration et minimiser la résolution des problèmes, envisagez d’attribuer le même nom au modèle de service et à l’étiquette de votre stratégie délimitée. 
+
 10. Si vous avez sélectionné **HYOK (AD RMS)**, sélectionnez **Définir les détails des modèles AD RMS** ou **Configurer des autorisations définies par l’utilisateur (préversion)**, puis spécifiez l’URL de licence de votre cluster AD RMS.
     
     Pour obtenir des instructions afin de spécifier un GUID de modèle et votre URL de licence, consultez [Recherche d’informations pour spécifier la protection AD RMS avec une étiquette Azure Information Protection](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
     
-    L’option de configuration des autorisations définies par l’utilisateur permet aux utilisateurs de spécifier qui doit avoir des autorisations et quelles sont ces autorisations. Vous pouvez ensuite affiner cette option et choisir Outlook uniquement (la valeur par défaut) ou Word, Excel, PowerPoint et l’Explorateur de fichiers. 
+    L’option de configuration des autorisations définies par l’utilisateur permet aux utilisateurs de spécifier qui doit avoir des autorisations et quelles sont ces autorisations. Vous pouvez ensuite affiner cette option et choisir Outlook uniquement (la valeur par défaut) ou Word, Excel, PowerPoint et l’Explorateur de fichiers. Cette option n’est pas prise en charge et ne fonctionnera pas, lorsqu’une étiquette est configurée pour une [classification automatique](configure-policy-classification.md).
     
     Si vous choisissez l’option pour Outlook : l’étiquette est affichée dans Outlook et le comportement obtenu quand les utilisateurs appliquent l’étiquette est identique à celui de l’option Ne pas transférer.
     
@@ -155,6 +155,92 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
     - Champ vide quand la protection n’est pas définie. 
 
 13. Pour que les modifications soient disponibles pour les utilisateurs, cliquez sur **Publier**.
+
+## <a name="example-configurations"></a>Exemples de configurations
+
+Les sous-étiquettes **Tous les employés** et **Destinataires uniquement** des étiquettes **Confidentiel** et **Hautement confidentiel** de la [stratégie par défaut](configure-policy-default.md) fournissent des exemples de configurations d’étiquettes qui appliquent une protection. Vous pouvez également utiliser les exemples suivants pour vous aider à configurer la protection pour différents scénarios. 
+
+Pour chaque exemple qui suit, dans votre panneau \<*nom de l’étiquette*>, sélectionnez **Protéger**, puis **Protection** pour ouvrir le panneau **Protection**.
+
+### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Exemple 1 : Étiquette qui applique Ne pas transférer pour envoyer un e-mail protégé à un compte Gmail
+
+Cette étiquette est uniquement disponible dans Outlook et convient quand Exchange Online est configuré pour les [nouvelles fonctionnalités dans Chiffrement de messages Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Demandez aux utilisateurs de sélectionner cette étiquette quand ils ont besoin d’envoyer un e-mail protégé à des personnes qui utilisent un compte Gmail (ou tout autre compte e-mail à l’extérieur de votre organisation). 
+
+Vos utilisateurs tapent l’adresse e-mail Gmail dans la zone **À**.  Ensuite, ils sélectionnent l’étiquette et l’option Ne pas transférer est automatiquement ajoutée à l’e-mail afin que les destinataires ne puissent pas le transférer, l’imprimer, en copier du contenu, enregistrer les pièces jointes ou l’enregistrer sous un autre nom. 
+
+1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
+    
+2. Sélectionnez **Configurer les autorisations définies par l’utilisateur (aperçu)**.
+
+3. Vérifiez que l’option suivante est activée : **Dans Outlook appliquer Ne pas transférer**.
+
+4. Si l’option suivante est cochée, décochez-la : **Dans Word, Excel, PowerPoint et l’Explorateur de fichiers, demander à l’utilisateur des autorisations personnalisées**.
+
+5. Cliquez sur **OK** dans le panneau **Protection**, puis publiez vos modifications.
+
+
+### <a name="example-2-label-that-restricts-read-only-permission-to-all-users-in-another-organization-and-that-supports-immediate-revocation"></a>Exemple 2 : Étiquette qui limite l’autorisation de lecture seule à tous les utilisateurs d’une autre organisation et qui prend en charge une révocation immédiate
+
+Cette étiquette convient au partage des documents très sensibles (en lecture seule) qui exigent toujours une connexion Internet pour les afficher. Si l’autorisation est révoquée, les utilisateurs ne sont plus en mesure d’afficher le document la prochaine fois qu’ils tentent de l’ouvrir.
+
+Cette étiquette ne convient pas aux e-mails.
+
+1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
+    
+2. Vérifiez que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
+
+3. Dans le panneau **Ajouter des autorisations**, sélectionnez **Entrez les détails**.
+
+4. Entrez le nom d’un domaine de l’autre organisation, par exemple, **fabrikam.com**. Puis sélectionnez **Ajouter**.
+
+5. Dans **Choisir des autorisations à partir des autorisations prédéfinies**, sélectionnez **Observateur**, puis sélectionnez **OK**.
+
+6. De retour dans le panneau **Protection**, pour le **paramètre Autoriser l’accès hors connexion**, sélectionnez **Jamais**.
+
+7. Cliquez sur **OK** dans le panneau **Protection**, puis publiez vos modifications.
+
+
+### <a name="example-3-add-external-users-to-an-existing-label"></a>Exemple 3 : Ajouter des utilisateurs externes à une étiquette existante
+
+Les nouveaux utilisateurs que vous ajoutez seront en mesure d’ouvrir les documents et e-mails qui ont déjà été protégés avec cette étiquette. Les autorisations que vous accordez à ces utilisateurs peuvent être différentes de celles des utilisateurs existants.
+
+1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
+    
+2. Vérifiez que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
+
+3. Dans le panneau **Ajouter des autorisations**, sélectionnez **Entrez les détails**.
+
+4. Entrez l’adresse e-mail du premier utilisateur (ou groupe) à ajouter, puis sélectionnez **Ajouter**.
+
+5. Sélectionnez les autorisations de cet utilisateur (ou groupe).
+
+6. Répétez les étapes 4 et 5 pour chaque utilisateur (ou groupe) à ajouter à cette étiquette. Cliquez sur **OK**.
+
+7. Cliquez sur **OK** dans le panneau **Protection**, puis publiez vos modifications.
+
+### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Exemple 4 : Étiquette pour des e-mails protégés qui prend en charge des autorisations moins restrictives que l’option Ne pas transférer
+
+Cette étiquette ne peut pas être limitée à Outlook, mais elle fournit des contrôles moins restrictifs que l’option Ne pas transférer. Par exemple, vous voulez que les destinataires puissent copier du contenu de l’e-mail ou d’une pièce jointe, ou qu’ils puissent imprimer et enregistrer une pièce jointe. Si vous spécifiez des utilisateurs externes qui n’ont pas de compte dans Azure AD, veillez à demander à vos utilisateurs de ne pas utiliser cette étiquette pour les documents, mais uniquement pour les e-mails. De plus, pour prendre en charge ces utilisateurs externes, Exchange Online doit être configuré pour les [nouvelles fonctionnalités dans Chiffrement de messages Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+
+Lorsque vos utilisateurs spécifient les adresses e-mail dans la zone **À**, celles-ci doivent correspondre aux mêmes utilisateurs que ceux que vous spécifiez pour cette configuration d’étiquette. Étant donné que les utilisateurs peuvent appartenir à des groupes et avoir plusieurs adresses e-mail, l’adresse e-mail qu’ils spécifient ne doit pas nécessairement correspondre exactement à l’adresse e-mail que vous spécifiez pour les autorisations, même s’il s’agit du moyen le plus simple de vous assurer que le destinataire sera correctement autorisé. Pour plus d’informations sur la façon dont les utilisateurs reçoivent les autorisations, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md). 
+
+1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
+    
+2. Vérifiez que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
+
+3. Dans le panneau **Ajouter des autorisations**, pour accorder des autorisations aux utilisateurs de votre organisation, sélectionnez **Ajouter \<nom de l’organisation> - Tous les membres** pour sélectionner tous les utilisateurs de votre abonné, ou sélectionnez **Parcourir le répertoire** pour sélectionner un groupe spécifique. Pour accorder des autorisations à des utilisateurs externes, sélectionnez **Entrer les détails** et tapez l’adresse e-mail de l’utilisateur ou du groupe Azure AD.
+    
+    Répétez cette étape pour spécifier des utilisateurs supplémentaires qui doivent avoir les mêmes autorisations.
+
+4. Pour **Choisir des autorisations à partir des autorisations prédéfinies**, sélectionnez **Copropriétaire**, **Co-auteur**, **Réviseur** ou **Personnalisé** pour sélectionner les autorisations à accorder. 
+    
+    Remarque : Ne sélectionnez pas **Observateur** pour les e-mails et si vous sélectionnez **Personnalisé**, veillez à inclure **Modifier et enregistrer**. 
+
+5. Pour spécifier des utilisateurs supplémentaires qui doivent disposer d’autorisations différentes, répétez les étapes 3 et 4.
+
+6. Cliquez sur **OK** dans le panneau **Ajouter des autorisations**. 
+
+7. Cliquez sur **OK** dans le panneau **Protection**, puis publiez vos modifications.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -4,24 +4,24 @@ description: "Les développeurs peuvent utiliser Azure Information Protection po
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: ea13c3dbf37dd22a6e93786390bd6be4da7a6959
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: a9a94744aa2eacb3ddb4bbda3989ae857ff708fd
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guide du développeur Azure Information Protection
 
-Ce guide vous présente les outils permettant de développer et intégrer le service de gestion des droits d’Azure Informations Protection. L’objectif de ce guide est de permettre aux développeurs qui veulent exploiter le système de gestion des droits de créer différents types d’applications pour un éventail de plateformes prises en charge.
+Ce guide vous présente les outils permettant de développer et intégrer le service de gestion des droits d’Azure Informations Protection.
 
->Le SDK Azure Information Protection actuel inclut le composant de gestion des droits ; la classification et l’étiquetage sont en cours de développement.
+>Le SDK Azure Information Protection actuel inclut le composant de gestion des droits. Un composant de classification et d’étiquetage est en cours de développement.
 
 ## <a name="service-applications"></a>Applications de service
 
@@ -39,10 +39,7 @@ Les applications de service proposent des fonctionnalités pour protéger les in
 
 ## <a name="powershell-guides"></a>Guides PowerShell
 
-Ces scripts, généralement utilisés par les administrateurs Azure Rights Management, sont utiles pour développer et tester vos applications de service.
-
-- Les [applets de commande Azure Rights Management ](https://msdn.microsoft.com/library/azure/dn629398.aspx) vous permettent d’administrer Azure RMS à partir de la ligne de commande. Bien que cela active l'automatisation, elles prennent également en charge des processus fiables et répétés qui permettent de réduire la charge administrative. De plus, certaines opérations et configurations avancées d’Azure RMS nécessitent Azure PowerShell.
-- Les [applets de commande de la protection RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx) peuvent être utilisées avec la protection des données Azure Rights Management (Azure RMS) ou avec AD RMS, et compléter les autres modules PowerShell pour ces déploiements de Rights Management. Utiliser ces applets de commande de la protection RMS pour protéger et déprotéger en bloc des fichiers de tout type
+Généralement utilisées par les administrateurs Azure Rights Management, les applets de commande PowerShell s’avèrent également utiles pour développer et tester vos applications de service. Pour plus d’informations, consultez [Utilisation de PowerShell avec le client Azure Information Protection](/information-protection/rms-client/client-admin-guide-powershell).
 
 ## <a name="user-applications"></a>Applications utilisateur
 
@@ -105,7 +102,7 @@ Chacune des rubriques suivantes présente les instructions spécifiques d’un a
 
 [Présentation d’Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)
 
-Ces vidéos sont extraites de la conférence Micorsoft 2016 Ignite
+Ces vidéos sont extraites de la conférence Microsoft 2016 Ignite
 
 - [Sécurité des e-mails à l’intérieur de votre organisation](https://myignite.microsoft.com/videos/2787)
 - [Adopter une solution complète basée sur les identités pour protéger et partager des données en toute sécurité](https://myignite.microsoft.com/videos/2784)
@@ -123,6 +120,17 @@ Ces vidéos sont extraites de la conférence Micorsoft 2016 Ignite
 - [Plateformes prises en charge](supported-platforms.md)
 - [Comprendre les restrictions d’utilisation](understanding-usage-restrictions.md)
 
+### <a name="message-protocol-and-file-formats"></a>Protocole de message et formats de fichiers
+
+- [Protocole client vers serveur](https://msdn.microsoft.com/library/cc243191.aspx)
+- [Protocole d’objet e-mail géré par des droits](https://msdn.microsoft.com/library/cc463909(v=EXCHG.80).aspx)
+- [Format de fichier binaire de fichier composé](https://msdn.microsoft.com/library/dd942138.aspx)
+
+#### <a name="rights-managed-email-message"></a>E-mail géré par des droits
+
+- [Format de fichier .MSG (partie 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
+- [Format de fichier .MSG (partie 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
+
 ### <a name="api-reference"></a>Informations de référence sur les API
 
 - [Informations de référence sur l’API Windows](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
@@ -139,7 +147,7 @@ Ces vidéos sont extraites de la conférence Micorsoft 2016 Ignite
 
 ### <a name="see-also"></a>Voir aussi
 
-- [Terminologie du développement](terms.md)
+- [Terminologie du développeur](terms.md)
 - [Terminologie liée à Azure Information Protection - ITPro](../get-started/terminology.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

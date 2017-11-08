@@ -4,7 +4,7 @@ description: "Une fois que vous avez protégé vos documents, vous pouvez suivre
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8a908097e4207889b6441e3224e7e4110fa2f9ae
-ms.sourcegitcommit: ea03477312b64c0a846701e46d991fe2c85b3a1f
+ms.openlocfilehash: d5c8d326b68b5f60e8223112d2d5bd28ed3925bc
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Suivre et révoquer vos documents quand vous utilisez Azure Information Protection
+# <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guide de l’utilisateur : Suivre et révoquer vos documents quand vous utilisez Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 
@@ -49,6 +49,8 @@ Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos do
     - Les administrateurs d’Azure Information Protection peuvent cliquer sur l’icône Administrateur pour suivre et révoquer des documents protégés quand les utilisateurs ont inscrit leurs documents sur le site de suivi des documents. Cette icône n’est accessible qu’aux administrateurs :
         
         ![Icône Administrateur du site de suivi de document](../media/tracking-site-admin-icon.png)
+        
+        Si vous ne voyez pas cette icône, alors que vous êtes administrateur général, cela signifie que vous n’avez pas encore partagé de documents. Dans ce cas, utilisez l’URL suivante pour accéder au site de suivi des documents : https://portal.azurerms.com/#/admin
 
 À moins d’être un administrateur, vous pouvez suivre et révoquer uniquement les documents que vous avez protégés. Vous ne pouvez pas effectuer le suivi de vos messages électroniques protégés en utilisant le site de suivi de document.
 
@@ -109,5 +111,8 @@ Une fois que vous avez enregistré le document protégé à l’aide de vos appl
 Plus d’instructions pratiques dans le guide de l’utilisateur Azure Information Protection :
 
 - [Que voulez-vous faire ?](client-user-guide.md#what-do-you-want-to-do)
+
+## <a name="additional-information-for-administrators"></a>Informations supplémentaires pour les administrateurs    
+Consultez [Configuration et utilisation du suivi des documents pour Azure Information Protection](client-admin-guide-document-tracking.md) dans le [guide de l’administrateur](client-admin-guide.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

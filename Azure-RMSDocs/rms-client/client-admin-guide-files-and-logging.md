@@ -4,7 +4,7 @@ description: "Informations sur les fichiers du client et la journalisation de l�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d1802fbd3c659b154d585224a3f7b412b8995e5b
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 64e6e17beb134fca1e51b35b39ff9f130c88ecbb
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="azure-information-protection-client-files-and-client-usage-logging"></a>Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
+# <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -76,9 +76,9 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
     
     - Système (pour la stratégie de connexion et de téléchargement)
     
-    - DefaultAutomatic
+    - Par défaut
         
-        L’action source **DefaultAutomatic** s’applique uniquement au client en préversion et fait référence à l’étiquette définie à l’aide de l’option **Sélectionner l’étiquette par défaut** dans la stratégie Azure Information Protection.
+        L’action source **Default** s’applique uniquement au client en préversion et fait référence à l’étiquette définie avec l’option **Sélectionner l’étiquette par défaut** dans la stratégie Azure Information Protection.
 
     
 - Étiquette avant et après l’action 

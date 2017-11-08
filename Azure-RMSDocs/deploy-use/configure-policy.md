@@ -4,7 +4,7 @@ description: "Pour configurer la classification, l’étiquetage et la protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 660f29506e22feb742edf4041d7baed0cf749b8c
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: b04c7881f982b33094107b6de33920a83b17b960
+ms.sourcegitcommit: a7cdf911088fdf663e43894484530ea15150284f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 10/25/2017
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -44,14 +44,30 @@ Si votre organisation a différents types d’abonnements, vous êtes responsabl
 
 Pour plus d’informations sur les abonnements, consultez [De quel abonnement ai-je besoin pour Azure Information Protection et quelles sont les fonctionnalités incluses ?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
+## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Pour accéder au panneau Azure Information Protection pour la première fois
+
+1. Connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général ou administrateur de la sécurité pour votre locataire.
+
+2. Dans le menu Hub, cliquez sur **Nouveau**, puis, dans la liste **MARKETPLACE**, sélectionnez **Sécurité + Identité**. 
+    
+3. Dans le panneau **Sécurité + Identité**, dans la liste **APPLICATIONS PROPOSÉES**, sélectionnez **Azure Information Protection**. Ensuite, dans le panneau **Azure Information Protection**, cliquez sur **Créer**.
+    
+    Cette action crée le panneau **Azure Information Protection** pour votre abonné. De cette façon, vous pouvez sélectionner le service dans la liste **Autres services** du hub lors de votre prochaine connexion au portail. 
+    
+    > [!TIP] 
+    > Sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous n’avez ainsi pas besoin d’accéder au service lors de votre prochaine connexion au portail.
+
+4. Vous voyez la page **Démarrage rapide** qui s’ouvre automatiquement la première fois que vous vous connectez au service. Parcourez les ressources suggérées ou utilisez les autres options de menu. Pour configurer les étiquettes que les utilisateurs peuvent sélectionner, utilisez la procédure suivante.
+
+La prochaine fois que vous accéderez au panneau **Azure Information Protection**, l’option **STRATÉGIES** > **Stratégie globale** sera automatiquement sélectionnée pour vous permettre de configurer des étiquettes pour tous les utilisateurs. Vous pouvez revenir à la page **Démarrage rapide** en la sélectionnant à partir du menu **GÉNÉRAL**.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Guide de configuration de la stratégie Azure Information Protection
 
-1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général.
+1. Vérifiez que vous êtes connecté au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général.
 
-2. Accédez au panneau **Azure Information Protection**: par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information Protection** dans la zone Filtrer. Dans les résultats, sélectionnez **Azure Information Protection**. 
+2. Si besoin, accédez au panneau **Azure Information Protection** : par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information Protection** dans la zone Filtrer. Dans les résultats, sélectionnez **Azure Information Protection**. 
     
-    La première fois que vous vous connectez au service, le panneau **Azure Information Protection - Démarrage rapide** s’ouvre automatiquement. Pour configurer la stratégie appliquée à tous les utilisateurs, dans la sélection de menu **STRATÉGIES**, sélectionnez **Stratégie globale** pour ouvrir le panneau **Azure Information Protection - Stratégie globale**. Ce panneau s’ouvre automatiquement pour les connexions suivantes au service pour afficher et modifier la stratégie globale que tous les utilisateurs obtiennent. 
+    Le panneau **Azure Information Protection - Stratégie globale** s’ouvre automatiquement pour vous permettre d’afficher et de modifier la stratégie globale que tous les utilisateurs obtiennent. 
     
     La stratégie Azure Information Protection contient les éléments suivants que vous pouvez configurer :
     
@@ -69,7 +85,9 @@ Pour plus d’informations sur les abonnements, consultez [De quel abonnement ai
     
     - L’option permettant de fournir un lien d’aide personnalisé aux utilisateurs.
 
-Azure Information Protection est livré avec une [stratégie par défaut](configure-policy-default.md), qui contient cinq étiquettes principales. Ces étiquettes peuvent être utilisées avec la gamme complète des données généralement créées et stockées par une organisation, de la classification la plus basse des données personnelles à la classification la plus élevée des données hautement confidentielles. 
+Azure Information Protection est livré avec une [stratégie par défaut](configure-policy-default.md), qui contient cinq étiquettes principales. Deux de ces étiquettes contiennent des sous-étiquettes pour fournir des sous-catégories, si nécessaire. Lorsqu’une étiquette est configurée pour des sous-étiquettes, les utilisateurs ne peuvent pas sélectionner l’étiquette principale mais doivent sélectionner une des sous-étiquettes.
+
+Les étiquettes Azure Information Protection peuvent être utilisées avec la gamme complète des données généralement créées et stockées par une organisation, de la classification la plus basse des données personnelles à la classification la plus élevée des données hautement confidentielles. 
 
 Vous pouvez utiliser les étiquettes par défaut sans les modifier, vous pouvez les personnaliser, ou encore les supprimer et créer de nouvelles étiquettes. Pour plus d’informations, utilisez les liens dans la section suivante pour vous aider à localiser les options appropriées et découvrir comment les configurer.
 
@@ -86,6 +104,9 @@ Le client Azure Information Protection vérifie si des modifications ont été a
 - Lorsque vous exécutez les [applets de commande PowerShell](../rms-client/client-admin-guide-powershell.md) pour l’étiquetage et la protection (Get-AIPFileStatus, Set-AIPFileClassification et Set-AIPFileLabel).
 
 - Toutes les 24 heures.
+
+- Pour le [scanneur Azure Information Protection](deploy-aip-scanner.md) : au démarrage du service, puis toutes les heures.
+
 
 >[!NOTE]
 >Quand le client télécharge la stratégie, attendez quelques minutes pour qu’elle soit entièrement opérationnelle. La durée varie en fonction de différents facteurs comme la taille et la complexité de la configuration de la stratégie et la connectivité réseau. Si l’action résultante de vos étiquettes ne correspond pas à vos derniers changements, attendez 15 minutes au plus et réessayez.

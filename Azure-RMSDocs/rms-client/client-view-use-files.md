@@ -4,7 +4,7 @@ description: "Instructions pour afficher et utiliser un document protégé qui v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8ed2480892d5a48075d986ee64733b0144bbc5b4
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: a2eb82d81945793eb0b29d05ff8c6bd995481faf
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Afficher et utiliser des fichiers qui ont été protégés par Rights Management
+# <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guide de l’utilisateur : Afficher et utiliser des fichiers qui ont été protégés par Rights Management
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 

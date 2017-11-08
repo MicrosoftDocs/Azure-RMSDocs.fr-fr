@@ -4,7 +4,7 @@ description: Instructions et informations pour les administrateurs pour configur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dd8b2dcf785d47ec779b314072fb5edddf556163
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: bca186ebe78d79926a6ef775b1f5be7006e89df5
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="configuring-and-using-document-tracking-for-azure-information-protection"></a>Configuration et utilisation du suivi des documents pour Azure Information Protection
+# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -64,6 +64,9 @@ Ces URL sont standard pour le service Azure Rights Management, à l’exception 
 Quand les utilisateurs se connectent au site de suivi des documents, ils peuvent suivre et révoquer des documents qu’ils ont protégés à l’aide du client Azure Information Protection, ou qu’ils ont partagés à l’aide de l’application de partage RMS. Quand vous vous connectez comme administrateur pour Azure Information Protection (administrateur général), vous pouvez cliquer sur l’icône Administrateur pour passer en mode Administrateur. Ce mode vous permet d’afficher les documents que les utilisateurs de votre organisation ont choisi de suivre à l’aide du client Azure Information Protection ou ont partagé à l’aide de l’application de partage Rights Management :
 
 ![Icône Administrateur du site de suivi de document](../media/tracking-site-admin-icon.png)
+
+> [!NOTE] 
+> Si vous ne voyez pas cette icône, alors que vous êtes administrateur général, cela signifie que vous n’avez pas encore partagé de documents. Dans ce cas, utilisez l’URL suivante pour accéder au site de suivi des documents : https://portal.azurerms.com/#/admin
 
 Les actions que vous prenez en mode Administrateur sont auditées et consignées dans les fichiers journaux d’utilisation, et vous devez confirmer pour continuer. Pour plus d’informations sur la journalisation, consultez la section suivante.
 

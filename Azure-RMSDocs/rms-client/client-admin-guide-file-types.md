@@ -4,7 +4,7 @@ description: "Détails techniques sur les types de fichiers pris en charge, les 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0bd9bbdc6b29e8cd9497712dddb7205f3d8372b1
-ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
+ms.openlocfilehash: a6a1c477a06c695a2183ad379c22492ea59d4bee
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="file-types-supported-by-the-azure-information-protection-client"></a>Types de fichiers pris en charge par le client Azure Information Protection
+# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -88,7 +88,11 @@ Il existe des tailles de fichier maximales que le client Azure Information Prote
     |Excel 2007 (pris en charge par AD RMS uniquement)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32 bits : 2 Go<br /><br />64 bits : limité uniquement par l’espace disque disponible et la mémoire disponibles|
     |PowerPoint 2007 (pris en charge par AD RMS uniquement)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32 bits : limité uniquement par l’espace disque disponible et la mémoire disponibles<br /><br />64 bits : limité uniquement par l’espace disque disponible et la mémoire disponibles
 
-- **Pour tous les autres fichiers** : Limité uniquement par l’espace disque et la mémoire disponibles.
+- **Pour tous les autres fichiers** : 
+    
+    - Pour protéger ces fichiers : la taille de fichier est limitée uniquement par l’espace disque disponible et la mémoire.
+    
+    - Pour ouvrir ces fichiers dans la visionneuse Azure Information Protection : la taille de fichier maximale prise en charge pour les fichiers texte (.ptxt et .pxml) est de 20 Mo. Pour les fichiers image et PDF, la taille de fichier maximale est limitée uniquement par la mémoire.
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Types de fichiers pris en charge pour la classification et la protection
 
@@ -202,6 +206,13 @@ Pour ces fichiers, une solution de contournement consiste à les protéger de fa
 
 Si la protection de ces fichiers est importante, vous pouvez les copier provisoirement sur un autre ordinateur pour les protéger de manière générique, puis les copier de nouveau sur votre ordinateur.
 
+### <a name="limitations-for-container-files-such-as-zip-files"></a>Limitations pour les fichiers conteneurs, comme les fichiers .zip
+
+Les fichiers conteneurs sont des fichiers qui incluent d’autres fichiers, comme l’exemple classique des fichiers .zip qui contiennent des fichiers compressés. Les fichiers .rar, .7z et. msg sont d’autres exemples.
+
+Vous pouvez classifier et protéger ces fichiers conteneurs, mais la classification et la protection ne sont pas appliquées à chaque fichier situé à l’intérieur du conteneur.
+
+Si vous avez un fichier conteneur qui inclut des fichiers classifiés et protégés, vous devez d’abord extraire ces fichiers pour modifier leurs paramètres de classification ou de protection. Toutefois, vous pouvez supprimer la protection pour tous les fichiers inclus dans des fichiers conteneurs pris en charge à l’aide de l’applet de commande [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile).
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez identifié les types de fichiers pris en charge par le client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :

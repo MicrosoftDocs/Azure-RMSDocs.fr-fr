@@ -4,7 +4,7 @@ description: "Ressources pour les administrateurs, qui incluent des informations
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2017
+ms.date: 10/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 00167de7ff0c4448c558473bbd429e08a5615c6b
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 25a3baea4b1a25f23e06cc785d12f439c28ca8ea
+ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
@@ -83,7 +83,7 @@ Résolution des problèmes :
 
 - Si vous avez déployé le connecteur Rights Management pour vos serveurs locaux, consultez les informations sur la [surveillance](../deploy-use/monitor-rms-connector.md), qui incluent des détails sur les entrées du journal des événements, les compteurs de performances et la journalisation.
 
-- Pour le client Azure Information Protection pour Windows : consultez la section [Vérifications supplémentaires et dépannage](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) du guide de l’administrateur.
+- Pour le client Azure Information Protection pour Windows : consultez la section [Vérifications et résolution des problèmes liés à l’installation](../rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) du guide de l’administrateur.
 
 ### <a name="community-resources"></a>Ressources de la communauté
 

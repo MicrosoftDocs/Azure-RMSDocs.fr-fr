@@ -5,7 +5,7 @@ keywords: "Guide pratique pour afficher des e-mails ou des fichiers avec l’app
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 10/16/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,19 +13,26 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 351074937c45866f882d51b19e3cd3e4792ae649
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: db44f73c20d7440d403b1d3a7a7ea0201f8a7abb
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android
 
 *S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection*
 
-La plupart des gens utilisent généralement l’application Azure Information Protection automatiquement quand ils ont besoin d’ouvrir un fichier ou un e-mail protégé. Toutefois, si vous êtes administrateur et que vous souhaitez tester l’application pour vos utilisateurs, ou simplement faire un essai avant d’en avoir besoin, vous pouvez utiliser les instructions suivantes.
+Avant d’utiliser les instructions de cette page, veillez à lire les [questions fréquentes sur l’application Azure Information Protection pour iOS et Android](mobile-app-faq.md). Cette page décrit à quoi sert l’application, quels appareils sont pris en charge et donne des informations élémentaires sur l’utilisation de l’application.
 
-Sur votre appareil mobile, vous devez accéder à l’un des fichiers que l’application prend en charge pour voir la visionneuse en action. Exemple :
+La plupart des utilisateurs se servent généralement de l’application Azure Information Protection quand ils ont besoin d’ouvrir un fichier ou un e-mail protégé. Toutefois, si vous êtes administrateur et que vous souhaitez tester l’application pour vos utilisateurs, ou simplement faire un essai avant d’en avoir besoin, vous pouvez utiliser les instructions suivantes.
+
+> [!NOTE]
+> Ne commencez pas par ouvrir l’application pour sélectionner ensuite les documents et e-mails à afficher. Ouvrez plutôt votre document ou votre e-mail, puis sélectionnez cette application pour l’afficher.
+>
+> De même, n’essayez pas de vous connecter à l’application tant que vous n’y êtes pas invité.
+
+Pour utiliser les instructions suivantes, vous devez avoir accès, depuis votre appareil mobile, à un des fichiers pris en charge par l’application. Exemple :
 
 - **Un fichier .rpmsg** : il s’agit d’un e-mail protégé par des droits qui s’affiche comme pièce jointe dans un e-mail lorsque votre application de messagerie sur votre appareil mobile ne prend pas en charge la protection des données Rights Management de manière native. 
     
@@ -39,8 +46,8 @@ Pour afficher ces fichiers dans l’application de visionneuse Azure Information
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous avez d’autres questions concernant cette application, vérifiez si elles sont traitées dans le [FAQ pour l’application Azure Information Protection pour iOS et Android](mobile-app-faq.md). 
+Pour poser des questions ou laisser des commentaires sur cette application, qui ne sont pas traités dans les [questions fréquentes](mobile-app-faq.md), visitez notre [site Yammer](https://www.yammer.com/AskIPTeam).
 
-Si vous avez d’autres questions, accédez à notre [site Yammer](https://www.yammer.com/AskIPTeam) ou [envoyez un e-mail à l’équipe Information Protection](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
+Si l’application ne fonctionne pas comme décrit, consultez les ressources listées dans notre page de [règlement interne](../house-rules.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

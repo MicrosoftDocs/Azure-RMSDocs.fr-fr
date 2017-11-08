@@ -4,7 +4,7 @@ description: "Identifiez les applications qui utilisent les API RMS pour prendre
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2017
+ms.date: 10/26/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ba8dbc42771a590e18ede4e45782741b12ef897e
-ms.sourcegitcommit: 2bca892231ca8393b88bd5da7d0890a573770a09
+ms.openlocfilehash: 6dd3345d2064b87c307583b63d36b5263318bd53
+ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2017
+ms.lasthandoff: 10/30/2017
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 
@@ -44,18 +44,18 @@ Informations sur les colonnes du tableau :
 
 |**Système d’exploitation de l’appareil**|Word, Excel, PowerPoint|PDF protégé|E-mail|Autres types de fichiers|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
-|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online [[1]](#footnote-1)<br /><br />Navigateur web [[2]](#footnote-2)|Client Azure Information Protection pour Windows <br /><br />Gaaiho Doc<br /><br />Client PDF GigaTrust Desktop pour Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />Application de partage RMS|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Navigateur web [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4) |Client Azure Information Protection pour Windows : texte, images, pfile<br /><br />Application de partage RMS pour Windows : texte, images, pfile<br /><br />Plug-in SealPath RMS pour AutoCAD : .dwg|
-|**iOS**|Office Mobile (affichage et édition des documents protégés)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> Docs TITUS<br /><br />Navigateur web [[2]](#footnote-2)|Application Azure Information Protection (affichage des documents protégés)<br /><br /> Foxit Reader<br /><br />Docs TITUS|Application Azure Information Protection (affichage des e-mails protégés)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Office pour iPad et iPhone [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Navigateur web [[3]](#footnote-3)|Application Azure Information Protection (affichage et protection du texte et des images)<br /><br />Docs TITUS : Pfile|
-|**Android**|GigaTrust App pour Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (affichage des documents protégés) <br /><br />Navigateur web [[2]](#footnote-2)|Application Azure Information Protection (affichage des documents protégés) <br /><br />GigaTrust App pour Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Application Azure Information Protection (affichage des e-mails protégés)<br /><br />GigaTrust App pour Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook pour Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 et ultérieur) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Navigateur web [[3]](#footnote-3)|Application Azure Information Protection (affichage du texte et des images protégés)|
-|**MacOS**|Office 2011 (AD RMS uniquement)<br /><br />Office 2016 pour Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Navigateur web [[2]](#footnote-2)|Foxit Reader<br /><br />Application de partage RMS (affichage des documents protégés)|Outlook 2011 (AD RMS uniquement)<br /><br />Outlook 2016 pour Mac<br /><br />Outlook pour Mac <br /><br />Navigateur web [[3]](#footnote-3)|Application de partage RMS (affichage du texte/des images protégés et des fichiers protégés de façon générique)|
+|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online (affichage des documents protégés) [[1]](#footnote-1)<br /><br />Navigateur web [[2]](#footnote-2)|Client Azure Information Protection pour Windows <br /><br />Gaaiho Doc<br /><br />Client PDF GigaTrust Desktop pour Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />Application de partage RMS|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Navigateur web [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4) |Client Azure Information Protection pour Windows : texte, images, pfile<br /><br />Application de partage RMS pour Windows : texte, images, pfile<br /><br />Plug-in SealPath RMS pour AutoCAD : .dwg|
+|**iOS**|Office Mobile (affichage et édition de documents protégés)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> Docs TITUS<br /><br />Navigateur web [[2]](#footnote-2)|Application Azure Information Protection (affichage de documents protégés)<br /><br /> Foxit Reader<br /><br />Docs TITUS|Application Azure Information Protection (affichage d’e-mails protégés)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Office pour iPad et iPhone [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Navigateur web [[3]](#footnote-3)|Application Azure Information Protection (affichage et protection de textes et d’images)<br /><br />Docs TITUS : Pfile|
+|**Android**|GigaTrust App pour Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (affichage et édition de documents protégés) <br /><br />Navigateur web [[2]](#footnote-2)|Application Azure Information Protection (affichage de documents protégés) <br /><br />GigaTrust App pour Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Application Azure Information Protection (affichage d’e-mails protégés)<br /><br />GigaTrust App pour Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook pour Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 et ultérieur) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Navigateur web [[3]](#footnote-3)|Application Azure Information Protection (affichage de textes et d’images protégés)|
+|**MacOS**|Office 2011 (AD RMS uniquement)<br /><br />Office 2016 pour Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Navigateur web [[2]](#footnote-2)|Foxit Reader<br /><br />Application de partage RMS (affichage de documents protégés)|Outlook 2011 (AD RMS uniquement)<br /><br />Outlook 2016 pour Mac<br /><br />Outlook pour Mac <br /><br />Navigateur web [[3]](#footnote-3)|Application de partage RMS (affichage de textes et d’images protégés, fichiers protégés de façon générique)|
 |**Windows 10 Mobile**|Applications Office Mobile (affichage des documents protégés avec Azure RMS) <br /><br />Navigateur web [[2]](#footnote-2)|Non prise en charge|Citrix WorxMail <br /><br />Courrier Outlook (affichage des e-mails protégés) <br /><br />Navigateur web [[3]](#footnote-3)|Non prise en charge|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[1]](#footnote-1)<br /><br />Navigateur web [[2]](#footnote-2)|Non prise en charge|Outlook 2013 RT<br /><br />Application de messagerie pour Windows<br /><br />Navigateur web [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go : fichiers JT|
-|**Windows Phone 8.1**|Office Mobile (AD RMS uniquement)<br /><br />Navigateur web [[2]](#footnote-2)|Application de partage RMS (affichage des documents protégés)|Outlook Mobile [[4]](#footnote-4) <br /><br />Navigateur web [[3]](#footnote-3)|Application de partage RMS (affichage du texte/des images protégés et des fichiers protégés de façon générique)|
+|**Windows Phone 8.1**|Office Mobile (AD RMS uniquement)<br /><br />Navigateur web [[2]](#footnote-2)|Application de partage RMS (affichage de documents protégés)|Outlook Mobile [[4]](#footnote-4) <br /><br />Navigateur web [[3]](#footnote-3)|Application de partage RMS (affichage de textes et d’images protégés, fichiers protégés de façon générique)|
 |**Blackberry 10**|Navigateur web [[2]](#footnote-2)|Non prise en charge|Messagerie Blackberry [[4]](#footnote-4) <br /><br />Navigateur web [[3]](#footnote-3)|Non prise en charge|
 
 
 ###### <a name="footnote-1"></a>Note 1
-Prend en charge l’affichage des documents protégés quand un document non protégé est chargé dans une bibliothèque protégée dans SharePoint Online et OneDrive Entreprise.
+Pour afficher les documents stockés dans SharePoint Online et OneDrive Entreprise, la protection des documents doit être retirée avant leur chargement sur une bibliothèque protégée.
 
 ###### <a name="footnote-2"></a>Note 2
 Pour les [pièces jointes Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) qui sont protégées avec le [chiffrement de messages Office 365 avec les nouvelles fonctionnalités](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
@@ -182,6 +182,7 @@ Si vous êtes fournisseur de logiciels et que vous proposez une solution compati
 |Absolu|Absolu|Protection contre la perte de données (DLP) pour protéger le contenu.|
 |Stockage sécurisé du contenu|VMware|Stocke, utilise et crée du contenu protégé.|
 |Contrôle|TakeControle|eDiscovery avec l’étiquetage et la protection.|
+|Forcepoint|Protection contre la perte de données Forcepoint|Solution de protection contre la perte de données du point de terminaison pour appliquer les stratégies de sécurité des données d’une organisation.|
 |Halocore|Secude|Protège les fichiers exportés à partir d’environnements SAP.|
 |MaaS 360|IBM|Intégration pour utiliser et protéger les documents.|
 |Mobiliya|Mobiliya|Sécurise les documents provenant des référentiels Documentum EMC.

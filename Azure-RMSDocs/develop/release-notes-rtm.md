@@ -1,11 +1,11 @@
 ---
-title: Notes de publication | Azure RMS
-description: 
+title: Notes de publication
+description: "Mises à jour du SDK par révision et autres informations destinées aux développeurs."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,15 +14,20 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 875584683bcf1d35037691f21ac7d78d17806a07
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 52733dd7cac356879408e774c79331d705a71ea0
+ms.sourcegitcommit: 02e48f0e5137ba777ec9a2bccde08130e6075c20
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/19/2017
 ---
 # <a name="release-notes"></a>Notes de publication
 
-Cette rubrique contient des informations importantes sur cette version du Kit RMS SDK 2.1 et sur les versions précédentes.
+Cet article contient des informations importantes sur cette version du kit SDK RMS 2.1 et sur les versions précédentes.
+
+## <a name="october-2017---update"></a>Mise à jour d’octobre 2017
+
+- Ajout de deux nouvelles API pour l’initialisation et désinitialisation de l’environnement. Pour plus d’informations, consultez [IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx) et [IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx).
+- Les types de fichiers Visio sont désormais pris en charge. Pour plus d’informations, voir [Configuration de l’API de fichier](file-api-configuration.md).
 
 ## <a name="february-2016---sdk-documentation-update"></a>Février 2016 - Mise à jour de la documentation du SDK
 
@@ -48,11 +53,11 @@ Cette rubrique contient des informations importantes sur cette version du Kit RM
 
 - Nombreuses mises à jour pour améliorer les messages d’erreur et le dépannage.
 - Notez également que la liste des [plates-formes prises en charge](supported-platforms.md) est également mise à jour.
-- Le besoin d’un environnement de préproduction et l’utilisation de manifestes d’application ont été supprimés de RMS SDK 2.1. Les sections de cet ensemble de documentation pour développeurs ont été supprimées et l’ensemble de la documentation simplifié et réorganisé.
+- Le besoin d’un environnement de préproduction et l’utilisation d’un manifeste d’application ont été supprimés du kit SDK RMS 2.1. Les sections de cet ensemble de documentation pour développeurs ont été supprimées et l’ensemble de la documentation simplifié et réorganisé.
 
 ## <a name="may-2015-update"></a>Mise à jour de mai 2015
 
--   **Applications de service et service RMS cloud** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) a besoin de trois informations : la clé symétrique, **AppPrincipalId** et **TenantBposId**. La rubrique traitant de ce sujet a été mise à jour pour fournir des conseils sur le traitement de ces informations. Pour cette mise à jour, consultez la version mise à jour de [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Applications de service et service RMS cloud** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) a besoin de trois informations : la clé symétrique, **AppPrincipalId** et **TenantBposId**. L’article traitant de ce sujet a été mis à jour pour fournir des conseils sur le traitement de ces informations. Pour cette mise à jour, consultez la version mise à jour de [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="april-2015-update"></a>Mise à jour d’avril 2015
 
@@ -78,7 +83,7 @@ Cette rubrique contient des informations importantes sur cette version du Kit RM
 ## <a name="october-2014-update"></a>Mise à jour d’octobre 2014
 
 -   Les comportements par défaut du composant de l’API de fichier du SDK a été mis à jour. Pour plus d’informations, voir [Configuration de l’API de fichier](file-api-configuration.md).
--   La notification par courrier électronique, qui est une nouvelle fonctionnalité, est décrite dans la rubrique des remarques à l’attention des développeurs [Activation des notifications par courrier électronique](how-to-enable-email-notification.md).
+-   La notification par e-mail, qui est une nouvelle fonctionnalité, est décrite dans l’article sur les remarques à l’attention des développeurs [Activation des notifications par e-mail](how-to-enable-email-notification.md).
 
 ## <a name="july-2014-update"></a>Mise à jour de juillet 2014
 
@@ -89,7 +94,7 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 
     Fonctions ajoutées dans cette version :
 
-    **Remarque** D’autres types et structures de données de prise en charge, non répertoriés ici, ont été ajoutés pour les extensions d’API de fichier. Toutes les rubriques mises à jour pour cette version sont marquées comme étant **préliminaires et susceptible d’être modifiées**.
+    **Remarque** D’autres types et structures de données de prise en charge, non répertoriés ici, ont été ajoutés pour les extensions d’API de fichier. Tous les articles mis à jour pour cette version sont marqués comme étant **préliminaires et susceptible d’être modifiés**.
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)

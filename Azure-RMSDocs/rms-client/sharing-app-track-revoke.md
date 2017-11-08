@@ -4,7 +4,7 @@ description: "Après avoir protégé vos documents à l’aide de l’applicatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 34025b7080b4365c0c1fdd77355e78a7c8742ce2
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 71f08e7500fbc9326bed3a5b37d694ecc5e37984
+ms.sourcegitcommit: 02e48f0e5137ba777ec9a2bccde08130e6075c20
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/19/2017
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS
 
@@ -37,6 +37,8 @@ Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos do
 -   Si vous souhaitez configurer des notifications par courrier électronique : cliquez sur **Paramètres** et indiquez si vous souhaitez recevoir des messages électroniques lorsque quelqu’un accède au document et de quelle manière.
 
 - Si vous souhaitez suivre et révoquer des documents partagés pour d’autres utilisateurs : les administrateurs pour Azure Information Protection peuvent cliquer sur l’icône Administrateur pour effectuer le suivi et la révocation de documents pour d’autres utilisateurs. Cette icône n’est accessible qu’aux administrateurs.
+    
+    Remarque : Si vous ne voyez pas cette icône alors que vous êtes administrateur général, cela signifie que vous n’avez pas encore partagé de documents. Dans ce cas, utilisez l’URL suivante pour accéder au site de suivi des documents : https://portal.azurerms.com/#/admin
 
 -   Si vous avez des questions ou souhaitez fournir des commentaires sur le site de suivi de document : cliquez sur l’icône d’aide pour accéder au [Forum aux questions sur le suivi de documents](http://go.microsoft.com/fwlink/?LinkId=523977).
 

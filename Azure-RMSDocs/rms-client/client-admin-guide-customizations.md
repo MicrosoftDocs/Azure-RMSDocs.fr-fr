@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2017
+ms.date: 11/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 304425a2c64fb306615bbd5c6edf5e78e10b8e80
-ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
+ms.openlocfilehash: 67ef633fe429eef208f1f24e71a274959ad7077b
+ms.sourcegitcommit: 8810f9d68489a89601c43ce0aacff737728b1d02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -30,11 +30,11 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 
 1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**.
 
-2. Dans le premier panneau Azure Information Protection, sélectionnez **Stratégies étendues**.
+2. Dans le premier panneau Azure Information Protection, sélectionnez **Stratégies délimitées**.
 
-3. Dans la panneau **Azure Information Protection - Stratégies étendues**, sélectionnez le menu contextuel (**...**) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
+3. Dans la panneau **Azure Information Protection - Stratégies délimitées**, sélectionnez le menu contextuel (**...**) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
     
-    Vous pouvez configurer des paramètres avancés pour la stratégie globale et pour les stratégies étendues.
+    Vous pouvez configurer des paramètres avancés pour la stratégie globale et pour les stratégies délimitées.
 
 4. Dans le panneau **Paramètres avancés**, tapez le nom et la valeur du paramètre avancé, puis sélectionnez **Enregistrer et fermer**.
 
@@ -198,6 +198,33 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Valeur : \< **ID d’étiquette**> ou **None**
 
+## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Étiquette d’un document Office en utilisant une propriété personnalisée existante
+
+Cette option de configuration est en préversion et susceptible de changer. 
+
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
+
+Lorsque vous configurez ce paramètre, vous pouvez classer (et éventuellement protéger) un document Office quand celui-ci a une propriété personnalisée existante avec une valeur qui correspond à l’un de vos noms d’étiquette. Cette propriété personnalisée peut être définie à partir d’une autre solution de classification ou définie comme propriété par SharePoint.
+
+Suite à cette configuration, lorsqu’un document sans étiquette Azure Information Protection est ouvert et enregistré par un utilisateur dans une application Office, il est étiqueté pour correspondre à la valeur de propriété. 
+
+Pour cette configuration, vous devez spécifier deux paramètres avancés qui fonctionnent ensemble. Le premier s’appelle **SyncPropertyName**, qui est le nom de la propriété personnalisée qui a été définie à partir de l’autre solution de classification ou une propriété qui est définie par SharePoint. Le second s’appelle **SyncPropertyState** et doit être défini sur OneWay.
+
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
+
+- Clé 1 : **SyncPropertyName**
+
+- Valeur de la clé 1 : \< **nom de la propriété**> 
+
+- Clé 2 : **SyncPropertyState**
+
+- Valeur de la clé 2 : **OneWay**
+
+Comme exemple, vous avez une colonne SharePoint nommée **Classification** qui a les valeurs possibles **Public**, **Général** et **Confidentiel**. Les documents sont stockés dans SharePoint et ont l’une de ces valeurs définies pour la propriété Classification.
+
+Pour étiqueter un document Office avec l’une de ces valeurs de classification, définissez **SyncPropertyName** sur **Classification** et **SyncPropertyState** sur **OneWay**. 
+
+À partir de maintenant, quand un utilisateur ouvre et enregistre un de ces documents Office, il est étiqueté **Public**, **Général** ou **Confidentiel** si vous avez des étiquettes avec ces noms dans votre stratégie Azure Information Protection. Si vous n’avez pas d’étiquettes avec ces noms, le document reste sans étiquette.
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Intégration avec la classification des messages Exchange pour une solution d’étiquetage des appareils mobiles
 

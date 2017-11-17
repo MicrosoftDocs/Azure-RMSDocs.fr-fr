@@ -4,19 +4,20 @@ description: "Découvrez les nouveautés ou modifications apportées à une vers
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
+ms.custom: askipteam
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 811c89ef6922f6939e7a7d13ed707c6ebe6aafd6
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: ed3725f65d5e1b357a2cd1cda1e28a8ddcb8fae6
+ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="rights-management-sharing-application-version-release-history"></a>Application de partage Rights Management : Historique de publication des versions
 
@@ -26,8 +27,8 @@ L’équipe Azure Information Protection met régulièrement à jour l’applica
 
 Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 
-> [!NOTE]
-> Si vous avez des commentaires ou une question concernant l’application de partage RMS, envoyez un message électronique à [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+> [!IMPORTANT]
+> **Notification de fin de prise en charge** : l’application de partage Rights Management pour Windows est remplacée par le [client Azure Information Protection](aip-client.md). La prise en charge de cette application plus ancienne cessera le 31 janvier 2019. 
 
 ## <a name="version-1022170"></a>Version 1.0.2217.0
 

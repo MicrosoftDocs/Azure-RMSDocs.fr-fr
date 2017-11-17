@@ -4,7 +4,7 @@ description: "Instructions pour installer, configurer et exécuter le scanneur A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 924a9e0b19203f60827693adecc9b74fa62edef1
-ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
+ms.openlocfilehash: 5df68e177d9e3d77a4fd9441e07f1779fa714b23
+ms.sourcegitcommit: a63b3ac3949e66cc38e20d7f14ac129b8e3224c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -41,7 +41,7 @@ Quand vous avez configuré votre [stratégie Azure Information Protection](confi
 
 ![Présentation du scanneur Azure Information Protection](../media/infoprotect-scanner.png)
 
-La classification automatique utilise la détection de modèles et les types d’informations sensibles de protection contre la perte de données intégrée Office 365 ou les modèles regex Office 365. Étant donné que le scanneur utilise le client Azure Information Protection, il peut classifier et protéger les mêmes [types de fichiers](../rms-client/client-admin-guide-file-types.md).
+Le scanneur peut inspecter les fichiers que Windows peut indexer à l’aide des iFilters installés sur l’ordinateur. Ensuite, pour déterminer si les fichiers doivent être étiquetés, le scanneur utilise la détection de modèles et les types d’informations sensibles de protection contre la perte de données intégrée à Office 365 ou les modèles regex Office 365. Étant donné que le scanneur utilise le client Azure Information Protection, il peut classifier et protéger les mêmes [types de fichiers](../rms-client/client-admin-guide-file-types.md).
 
 Vous pouvez exécuter le scanneur en mode découverte uniquement, dans lequel vous utilisez les rapports pour vérifier ce qui se passerait si les fichiers étaient étiquetés. Ou bien, vous pouvez exécuter le scanneur pour appliquer automatiquement les étiquettes.
 
@@ -52,9 +52,9 @@ Avant d’installer le scanneur Azure Information Protection, vérifiez que les 
 
 |Condition requise|Plus d'informations|
 |---------------|--------------------|
-|Ordinateur Windows Server pour exécuter le service du scanneur :<br /><br />- 4 processus<br /><br />- 4 Go de RAM|Windows Server 2016 ou Windows Server 2012 R2.<br /><br />Ce serveur peut être un ordinateur physique ou virtuel doté d’une connexion réseau rapide et fiable aux magasins de données à scanner. <br /><br />Vérifiez que ce serveur est doté de la [connectivité Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) dont il a besoin pour Azure Information Protection. Ou bien, vous devez le configurer en tant qu’[ordinateur déconnecté](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).|
+|Ordinateur Windows Server pour exécuter le service du scanneur :<br /><br />- 4 processus<br /><br />- 4 Go de RAM|Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Remarque : À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez utiliser un système d’exploitation client Windows qui est [pris en charge par le client Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Il peut s’agir d’un ordinateur physique ou virtuel doté d’une connexion réseau rapide et fiable aux magasins de données à scanner. <br /><br />Vérifiez que cet ordinateur dispose de la [connectivité Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) dont il a besoin pour Azure Information Protection. Ou bien, vous devez le configurer en tant qu’[ordinateur déconnecté](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
 |SQL Server pour stocker la configuration du scanneur :<br /><br />- Instance locale ou distante|SQL Server 2012 R2 est la version minimale pour les éditions suivantes :<br /><br />- SQL Server Entreprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
-|Compte de service pour exécuter le service du scanneur|Ce compte doit être un compte Active Directory synchronisé sur Azure AD, avec les conditions supplémentaires suivantes :<br /><br />Droit d’- **ouverture de session locale**. Ce droit est exigé pour l’installation et la configuration du scanneur, mais pas pour son fonctionnement. Vous devez accorder ce droit au compte de service, mais vous pouvez le supprimer après avoir vérifié que le scanneur peut détecter, classifier et protéger des fichiers.<br /><br />Droit d’- **ouverture de session en tant que service**. Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur. <br /><br />- Autorisations d’accès aux dépôts de données : vous devez accorder des autorisations de **Lecture** et **Écriture** pour l’analyse des fichiers, puis l’application d’une classification et d’une protection aux fichiers qui remplissent les conditions stipulées dans la stratégie Azure Information Protection. Pour exécuter le scanneur en mode découverte uniquement, des autorisations de **Lecture** suffisent.<br /><br />- Pour les étiquettes qui reprotègent ou retire la protection : pour veiller à ce que le scanneur ait toujours accès aux fichiers protégés, faites de ce compte un [super utilisateur](configure-super-users.md) du service Azure Rights Management et vérifiez que la fonctionnalité de super utilisateur est activée. Pour plus d’informations sur la configuration requise des comptes pour appliquer la protection, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md).|
+|Compte de service pour exécuter le service du scanneur|Ce compte doit être un compte Active Directory synchronisé sur Azure AD, avec les conditions supplémentaires suivantes :<br /><br />Droit d’- **ouverture de session locale**. Ce droit est exigé pour l’installation et la configuration du scanneur, mais pas pour son fonctionnement. Vous devez accorder ce droit au compte de service, mais vous pouvez le supprimer après avoir vérifié que le scanneur peut détecter, classifier et protéger des fichiers.<br /><br />Droit d’- **ouverture de session en tant que service**. Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur. <br /><br />- Autorisations d’accès aux dépôts de données : vous devez accorder des autorisations de **Lecture** et **Écriture** pour l’analyse des fichiers, puis l’application d’une classification et d’une protection aux fichiers qui remplissent les conditions stipulées dans la stratégie Azure Information Protection. Pour exécuter le scanneur en mode découverte uniquement, l’autorisation **Lecture** suffit.<br /><br />- Pour les étiquettes qui reprotègent ou retire la protection : pour veiller à ce que le scanneur ait toujours accès aux fichiers protégés, faites de ce compte un [super utilisateur](configure-super-users.md) du service Azure Rights Management et vérifiez que la fonctionnalité de super utilisateur est activée. Pour plus d’informations sur la configuration requise des comptes pour appliquer la protection, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md).|
 |Le client Azure Information Protection est installé sur l’ordinateur Windows Server|Actuellement, le scanneur Azure Information Protection exige la préversion du client Azure Information Protection.<br /><br />Si vous préférez, vous pouvez installer le client uniquement avec le module PowerShell (AzureInformationProtection) utilisé pour installer et configurer le scanneur.<br /><br />Pour obtenir des instructions d’installation du client, consultez le [guide de l’administrateur](../rms-client/client-admin-guide.md).|
 |Étiquettes configurées qui appliquent une classification automatique et éventuellement une protection|Pour plus d’informations sur la manière de configurer les conditions, consultez [Guide pratique pour configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection](/deploy-use/configure-policy-classification.md).<br /><br />Pour plus d’informations sur la façon de configurer les étiquettes pour appliquer une protection aux fichiers, consultez [Guide pratique pour configurer une étiquette pour la protection Rights Management](../deploy-use/configure-policy-protection.md). |
 
@@ -129,7 +129,7 @@ Avec la configuration par défaut du scanneur, vous êtes maintenant prêt à ex
 
 1. En utilisant **Outils d’administration** > **Services**, démarrez le service **Scanneur Azure Information Protection**.
 
-2. Attendez que le scanneur termine son cycle. Une fois que le scanneur a parcouru tous les fichiers inclus dans les magasins de données que vous avez spécifiés, le service s’arrête. Vous pouvez utiliser le journal des événements **Application** de Windows, **Scanneur Azure Information Protection**, pour vérifier que le service est arrêté. Recherchez l’ID d’événement d’information **911**.
+2. Attendez que le scanneur termine son cycle. Une fois que le scanneur a parcouru tous les fichiers inclus dans les magasins de données que vous avez spécifiés, le service s’arrête. Vous pouvez utiliser le journal des événements **Applications et service** Windows local, **Azure Information Protection**, pour vérifier que le service est arrêté. Recherchez l’ID d’événement d’information **911**.
 
 3. Passez en revue les rapports stockés dans %*localappdata*%\Microsoft\MSIP\Scanner\Reports et dont le format de fichier est .csv. Avec la configuration par défaut du scanneur, seuls les fichiers qui remplissent les conditions de la classification automatique sont inclus dans ces rapports.
     
@@ -178,7 +178,7 @@ D’autres applets de commande propres au scanneur vous permettent de modifier s
 
 ## <a name="event-log-ids-and-descriptions"></a>ID du journal des événements et descriptions
 
-Utilisez les sections suivantes pour identifier les ID d’événement possibles et les descriptions du scanneur.
+Utilisez les sections suivantes pour identifier les ID d’événement possibles et les descriptions du scanneur. Ces événements sont journalisés sur le serveur qui exécute le service de scanneur, dans le journal des événements **Applications et services** Windows, **Azure Information Protection**.
 
 -----
 
@@ -202,9 +202,9 @@ Informations **913**
 
 **Le scanneur est arrêté car il a la valeur Jamais.**
 
-Cet événement est enregistré lorsque le scanneur est configuré pour s’exécuter une seule fois plutôt qu’en continu. Le service du scanneur Azure Information Protection a donc été redémarré manuellement depuis le démarrage de l’ordinateur.  
+Cet événement est journalisé quand le scanneur est configuré pour s’exécuter une seule fois plutôt qu’en continu. Le service du scanneur Azure Information Protection a donc été redémarré manuellement depuis le démarrage de l’ordinateur.  
 
-Pour réanalyser les fichiers, vous devez démarrer manuellement le service. Pour modifier ce comportement afin que le scanneur s’exécute en continu, utilisez l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) et affectez au paramètre **Planification** la valeur **Continue**.
+Pour rescanner les fichiers, vous devez définir une planification **Une fois** ou **Continue**, puis redémarrer manuellement le service. Pour changer la planification, utilisez l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) et le paramètre **Schedule**.
 
 ----
 

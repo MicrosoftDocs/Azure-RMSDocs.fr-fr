@@ -4,7 +4,7 @@ description: "Conseils si vous avez Azure Rights Management avec AD RMS déploy�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 11/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2e8f6596216e06e2af773c0a19a2c5eaafd096b8
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: b20bbc1fe0de90b9b0151098e1b77d3c7a98c431
+ms.sourcegitcommit: e9a24fc5303b21f5eeebf16afed44db0d163ac77
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Préparation de l’environnement pour Azure Rights Management quand vous avez également Active Directory Rights Management Services (AD RMS)
 
@@ -24,9 +24,9 @@ ms.lasthandoff: 08/30/2017
 
 Conseils importants si vous utilisez déjà Active Directory Rights Management Services (AD RMS) et que le scénario suivant s’applique :
 
-## <a name="you-see-an-option-to-activate-azure-rms-when-you-configure-azure-information-protection"></a>Vous voyez une option pour activer Azure RMS quand vous configurez Azure Information Protection
+## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Vous voyez une option pour activer la protection quand vous configurez Azure Information Protection
 
-Le panneau **Azure Information Protection - Paramètres RMS** comporte une option pour activer le service Azure Rights Management (Azure RMS). 
+Le panneau **Azure Information Protection - Activation de la protection** contient une option permettant d’activer le service Azure Rights Management (Azure RMS). 
 
 Si vous utilisez également d’Active Directory Rights Management Services (AD RMS), ne sélectionnez pas l’option **Activer**. L’activation d’Azure Rights Management quand vous avez également AD RS n’est pas une combinaison compatible. Ce scénario n’est pas pris en charge et provoque des résultats imprévisibles. Il est donc important de ne pas activer Azure Rights Management à ce stade. 
 
@@ -44,7 +44,7 @@ Suivez les instructions de migration : [Migration d’AD RMS vers Azure Informa
 
 ### <a name="step-3-start-to-configure-labels-for-protection"></a>Étape 3 : Commencer à configurer les étiquettes pour la protection
 
-Une fois que vous avez activé le service Azure Rights Management dans le cadre du processus de migration, vous pouvez configurer des étiquettes pour la protection des données. Toutefois, si vous migrez des utilisateurs par lots, vérifiez que les étiquettes qui appliquent la protection [ont pour portée uniquement les utilisateurs migrés](configure-policy-scope.md).
+Une fois que vous avez activé le service Azure Rights Management dans le cadre du processus de migration, vous pouvez configurer des étiquettes pour la protection des données. Toutefois, si vous migrez des utilisateurs par lot, vérifiez que les étiquettes qui appliquent la protection [sont limitées](configure-policy-scope.md) aux utilisateurs migrés.
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

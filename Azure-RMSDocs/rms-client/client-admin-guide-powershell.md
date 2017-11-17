@@ -4,7 +4,7 @@ description: "Instructions et informations pour que les administrateurs gèrent 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 197e3c8e908849665231040fd86cd79bd47cd1eb
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: dc3545c8212907786aa2fcf11e819b4cbdcf1ab5
+ms.sourcegitcommit: 4c6d9c55ff5dc5dbb10dc8a5abed9319fd3efb98
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -454,9 +454,12 @@ Votre résultat peut ressembler à ce qui suit :
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Comment étiqueter des fichiers de manière non interactive pour Azure Information Protection
 
-Vous pouvez exécuter les applets de commande d’étiquetage de manière non interactive à l’aide de l’applet de commande **Set-AIPAuthentication**.
+Vous pouvez exécuter les applets de commande d’étiquetage de manière non interactive à l’aide de l’applet de commande **Set-AIPAuthentication**. L’opération non interactive est également nécessaire pour le scanneur Azure Information Protection, actuellement en préversion.
 
 Par défaut, lorsque vous exécutez les applets de commande d’étiquetage, les commandes s’exécutent dans votre propre contexte utilisateur dans une session PowerShell interactive. Pour les exécuter sans assistance, créez un compte d’utilisateur Azure AD à cet effet. Ensuite, dans le contexte de cet utilisateur, exécutez l’applet de commande Set-AIPAuthentication pour définir et stocker les informations d’identification à l’aide d’un jeton d’accès Azure AD. Ce compte d’utilisateur est ensuite authentifié et initialisé pour le service Azure Rights Management. Le compte télécharge la stratégie Azure Information Protection et tous les modèles Rights Management utilisés par les étiquettes.
+
+> [!NOTE]
+> Si vous utilisez des [stratégies délimitées](../deploy-use/configure-policy-scope.md), n’oubliez pas que vous devrez peut-être ajouter ce compte à vos stratégies délimitées.
 
 La première fois que vous exécutez cette applet de commande, vous êtes invité à vous connecter à Azure Information Protection. Spécifiez le nom et le mot de passe du compte d’utilisateur que vous avez créé pour l’utilisateur sans assistance. Ce compte peut alors exécuter les applets de commande d’étiquetage de manière non interactive jusqu’à ce que le jeton d’authentification expire. Lorsque le jeton expire, exécutez l’applet de commande pour acquérir un nouveau jeton :
 
@@ -512,6 +515,13 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     
     Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec des paramètres.
 
+
+> [!TIP]
+> Si Set-AIPAuthentication n’a pas réussi et que vous avez utilisé des applications existantes plutôt que d’en créer de nouvelles en utilisant les instructions précédentes, vous devrez peut-être réinitialiser les autorisations obligatoires pour vos applications. Cela peut être également le cas si vous avez suivi les instructions pour créer de nouvelles applications pour Set-AIPAuthentication, mais que vous avez ensuite modifié leurs paramètres.
+> 
+> Pour réinitialiser les autorisations obligatoires pour les deux applications, utilisez les étapes de configuration suivantes : sélectionnez **Tous les paramètres** > **Autorisations nécessaires** > **Accorder des autorisations**, puis cliquez sur **Oui** pour confirmer.
+> 
+> Vous pouvez également créer de nouvelles applications en utilisant les instructions précédentes.
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour obtenir de l’aide concernant les applets de commande lorsque vous avez ouvert une session PowerShell, tapez `Get-Help <cmdlet name> cmdlet`, puis utilisez le paramètre -online pour lire les informations les plus récentes. Exemple : 

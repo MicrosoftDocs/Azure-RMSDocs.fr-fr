@@ -4,17 +4,17 @@ description: "Étape 1 d’un didacticiel de présentation expliquant comment te
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 91eb9ec61f4fa1ebd7aac3cf0c244878ef450bb9
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 84ee36c4bc936841196c7fcc3668b16dec25b522
+ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-activate-protection"></a>Étape 1 : Activer la protection
  

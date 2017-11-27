@@ -4,7 +4,7 @@ description: "Instructions relatives à l’activation de la protection dans le 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 23133038e2a845aae6a86a014cdef31843668ef8
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: 430e84ac0a634052eb48e19347eafca436c47659
+ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Guide pratique pour activer Azure Rights Management à partir du portail Azure
 
@@ -28,6 +28,8 @@ Utilisez ces instructions si vous voulez activer le service Azure Rights Managem
 1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général. Accédez ensuite au panneau **Azure Information Protection**.
     
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    
+    Si vous n’avez pas accédé au panneau Azure Information Protection avant, consultez les [étapes supplémentaires](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) à suivre une seule fois pour ajouter ce panneau au portail.
     
     Pour ouvrir le panneau Azure Information Protection, vous devez avoir un [plan Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou un [plan Office 365 incluant Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Si vous avez un de ces abonnements mais que vous voyez un message indiquant qu’un abonnement valide est introuvable, [contactez le Support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) ou utilisez vos canaux de support standard.
 

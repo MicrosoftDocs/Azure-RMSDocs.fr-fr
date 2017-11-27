@@ -4,17 +4,17 @@ description: "Identifiez les limitations, conditions préalables et recommandati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: cceacbe94983e66bdde6de0947ae59b44e29a54e
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 8684188a4c01f9e90ee073d1d378e55dba1fc1eb
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 
@@ -65,7 +65,7 @@ En plus de ne pas prendre en charge les avantages associés à l’utilisation d
 
     Même si vous pouvez configurer une étiquette pour **Ne pas transférer** afin d’utiliser HYOK ou le service Azure Rights Management, les utilisateurs peuvent également sélectionner Ne pas transférer eux-mêmes. Ils peuvent sélectionner cette option à l’aide du bouton **Ne pas transférer** sous l’onglet **Message** du ruban Office ou à l’aide des options de menu d’Outlook. Les options de menu **Ne pas transférer** sont situées sous **Fichier** > **Autorisations** et en cliquant sur le bouton **Autorisations** de l’onglet **Options** sur le ruban. 
     
-    Le client Azure Information Protection utilise toujours Azure RMS quand les utilisateurs sélectionnent le bouton **Ne pas transférer** dans Outlook. Si vous ne souhaitez pas voir ce comportement, vous pouvez masquer le bouton **Ne pas transférer** dans Outlook en configurant un [paramètre client avancé](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook). 
+    Le client Azure Information Protection utilise toujours Azure RMS quand les utilisateurs sélectionnent le bouton **Ne pas transférer** dans Outlook. Si vous ne souhaitez pas ce comportement, vous pouvez masquer ce bouton en définissant le [paramètre de stratégie](../deploy-use/configure-policy-settings.md) **Ajouter le bouton Ne pas transférer au ruban Outlook** sur **Désactivé**. 
     
     Quand les utilisateurs sélectionnent **Ne pas transférer** à partir d’une option de menu Outlook, ils peuvent choisir Azure RMS ou AD RMS, mais risquent de ne pas savoir quelle option choisir pour leur e-mail. Si AD RMS est utilisé par erreur à la place d’Azure RMS, les personnes externes avec qui vous partagez du contenu ne peuvent pas ouvrir ces e-mails.
 

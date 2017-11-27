@@ -4,17 +4,17 @@ description: "Vous pouvez protéger vos documents et e-mails les plus sensibles 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: f6661668a73b708f292261dde70181bd22bdf332
-ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
+ms.openlocfilehash: 17f95d9875320c64d2983fcd176e371ee45d2f48
+ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -87,9 +87,11 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
         
         Si vous choisissez l’option pour Word, Excel, PowerPoint et l’Explorateur de fichiers : Quand cette option est définie, l’étiquette est affichée dans ces applications. Le comportement obtenu quand les utilisateurs appliquent l’étiquette affiche la boîte de dialogue pour permettre aux utilisateurs de sélectionner des autorisations personnalisées. Dans cette boîte de dialogue, les utilisateurs doivent spécifier les autorisations, les utilisateurs ou les groupes et une date d’expiration. Vérifiez que les utilisateurs disposent des instructions et des conseils qui permettent de fournir ces valeurs.
     
-    - **Sélectionner un modèle prédéfini** : utilisez un des modèles par défaut ou un modèle personnalisé que vous avez configuré. Ce modèle doit être publié (pas archivé) et ne doit pas être déjà lié à une autre étiquette. Quand vous sélectionnez cette option, vous pouvez utiliser le bouton **Modifier le modèle** pour [convertir le modèle en étiquette](configure-policy-templates.md#to-convert-templates-to-labels).
+    - **Sélectionner un modèle prédéfini** : utilisez un des modèles par défaut ou un modèle personnalisé que vous avez configuré. Notez que cette option ne s’affiche pas si vous modifiez une étiquette qui utilisait l’option **Définir les autorisations**.
     
-    Conseil : Si vous utilisez le bouton **Modifier le modèle**, il peut s’avérer utile de consulter [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
+    Pour sélectionner un modèle prédéfini, le modèle doit être publié (pas archivé) et ne pas être déjà lié à une autre étiquette. Quand vous sélectionnez cette option, vous pouvez utiliser un bouton **Modifier le modèle** pour [convertir le modèle en étiquette](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Conseil : Si vous avez l’habitude de créer et de modifier des modèles personnalisés, il peut s’avérer utile de consulter [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
 
 8. Si vous avez sélectionné **Définir les autorisations** pour **Azure (clé du cloud)**, cette option vous permet de configurer les mêmes paramètres que ceux que vous pouvez configurer dans un modèle. 
     
@@ -168,7 +170,7 @@ Cette étiquette est uniquement disponible dans Outlook et convient quand Exchan
 
 Vos utilisateurs tapent l’adresse e-mail Gmail dans la zone **À**.  Ensuite, ils sélectionnent l’étiquette et l’option Ne pas transférer est automatiquement ajoutée à l’e-mail afin que les destinataires ne puissent pas le transférer, l’imprimer, en copier du contenu, enregistrer les pièces jointes ou l’enregistrer sous un autre nom. 
 
-1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
+1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé du cloud)** est sélectionnée.
     
 2. Sélectionnez **Configurer les autorisations définies par l’utilisateur (aperçu)**.
 
@@ -185,7 +187,7 @@ Cette étiquette convient au partage des documents très sensibles (en lecture s
 
 Cette étiquette ne convient pas aux e-mails.
 
-1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
+1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé du cloud)** est sélectionnée.
     
 2. Vérifiez que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
 
@@ -224,7 +226,7 @@ Cette étiquette ne peut pas être limitée à Outlook, mais elle fournit des co
 
 Lorsque vos utilisateurs spécifient les adresses e-mail dans la zone **À**, celles-ci doivent correspondre aux mêmes utilisateurs que ceux que vous spécifiez pour cette configuration d’étiquette. Étant donné que les utilisateurs peuvent appartenir à des groupes et avoir plusieurs adresses e-mail, l’adresse e-mail qu’ils spécifient ne doit pas nécessairement correspondre exactement à l’adresse e-mail que vous spécifiez pour les autorisations, même s’il s’agit du moyen le plus simple de vous assurer que le destinataire sera correctement autorisé. Pour plus d’informations sur la façon dont les utilisateurs reçoivent les autorisations, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md). 
 
-1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
+1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé du cloud)** est sélectionnée.
     
 2. Vérifiez que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
 

@@ -4,7 +4,7 @@ description: Instructions sur la classification et la protection de vos document
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 13d751bf9754ba3645cb7bb7417e7f5be394eb27
-ms.sourcegitcommit: 769057f5ffb366fc645bff542a32b2eab4f20c70
+ms.openlocfilehash: 683764d005e3223f6e5bdaa49b1d4c881a8daed4
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guide de l’utilisateur : Classifier et protéger un fichier ou un e-mail avec Azure Information Protection
 
@@ -41,16 +41,13 @@ Lorsque le fichier est protégé avec vos autorisations personnalisées, partage
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Utilisation des applications Office pour classifier et protéger vos documents et vos e-mails
 
-Utilisez la barre Azure Information Protection et sélectionnez une des étiquettes qui a été configurée pour vous. 
+Utilisez la barre Azure Information Protection ou le bouton **Protéger** dans le ruban pour sélectionner une des étiquettes qui a été configurée pour vous. 
 
-Par exemple, l’image suivante montre que le document n’a pas encore été étiqueté, car la **Sensibilité** affiche **Non défini**. Pour définir une étiquette, comme « Général », cliquez sur **Général**. Si vous ne savez pas quelle étiquette appliquer au document ou à l’e-mail actifs, utilisez les info-bulles pour en savoir plus sur chaque étiquette et sur le moment de l’appliquer. 
+Par exemple, l’image suivante montre que le document n’a pas encore été étiqueté, car la **Sensibilité** affiche **Non définie** dans la barre Azure Information Protection. Pour définir une étiquette, comme « Général », cliquez sur **Général**. Si vous ne savez pas quelle étiquette appliquer au document ou à l’e-mail actifs, utilisez les info-bulles pour en savoir plus sur chaque étiquette et sur le moment de l’appliquer. 
 
 ![Exemple de barre Azure Information Protection](../media/info-protect-bar-not-set-callout.png)
 
 Si une étiquette est déjà appliquée au document et que vous souhaitez la modifier, vous pouvez sélectionner une autre étiquette. Si les étiquettes ne sont pas affichées dans la barre, cliquez d’abord sur l’icône **Modifier l’étiquette**, en regard de la valeur actuelle de l’étiquette.
-
-> [!TIP]
-> Vous pouvez également sélectionner des étiquettes à l’aide du bouton **Protéger** sous l’onglet **Fichier**.
 
 Outre la sélection manuelle, les étiquettes peuvent également être appliquées comme suit :
 
@@ -62,9 +59,17 @@ Outre la sélection manuelle, les étiquettes peuvent également être appliqué
 
 ##### <a name="dont-see-this-information-protection-bar-in-your-office-apps"></a>Vous ne voyez pas cette barre Information Protection dans vos applications Office ?
 
-- Le client Azure Information Protection n’est pas [installé](install-client-app.md), ou le client est en cours d’exécution en [mode Protection uniquement](client-protection-only-mode.md).
+Raisons possibles :
+
+- Le client Azure Information Protection n’est pas [installé](install-client-app.md).
+
+- Le client est installé, mais votre administrateur a configuré un paramètre qui n’affiche pas la barre. Sélectionnez plutôt des étiquettes en utilisant le bouton **Protéger** sous l’onglet **Fichier** dans le ruban Office. 
+
+- Votre client s’exécute en [mode Protection uniquement](client-protection-only-mode.md).
  
-##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>L’étiquette que vous souhaitez voir ne s’affiche pas dans la barre ? 
+##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>L’étiquette que vous souhaitez voir ne s’affiche pas dans la barre ? 
+
+Raisons possibles :
 
 - Si votre administrateur a récemment configuré une nouvelle étiquette pour vous, essayez de fermer toutes les instances de votre application Office, puis de la rouvrir. Cette action recherche les modifications apportées à vos étiquettes.
 
@@ -74,11 +79,13 @@ Outre la sélection manuelle, les étiquettes peuvent également être appliqué
 
 ### <a name="set-custom-permissions-for-a-document"></a>Définir des autorisations personnalisées pour un document
 
-Vous pouvez spécifier vos propres paramètres de protection pour les documents plutôt que d’utiliser les paramètres de protection que votre administrateur peut avoir inclus dans votre étiquette sélectionnée.
+Si vous y êtes autorisé par votre administrateur, vous pouvez spécifier vos propres paramètres de protection pour les documents au lieu d’utiliser les paramètres de protection que votre administrateur peut avoir inclus dans votre étiquette sélectionnée.
 
 1. Dans l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger** > **Autorisations personnalisées** :
 
     ![Option Autorisations personnalisées](../media/custom-permissions-callout.png)
+    
+    Si vous ne pouvez pas sélectionner **Autorisations personnalisées**, votre administrateur ne vous permet pas d’utiliser cette option.
     
     Notez que toute autorisation personnalisée que vous spécifiez remplace (plutôt que complète) les paramètres de protection que votre administrateur peut avoir définis pour l’étiquette de votre choix.  
 
@@ -135,7 +142,9 @@ Le guide d’administration contient une liste complète des types de fichiers p
     
     ![Aucune étiquette dans la boîte de dialogue Classifier et protéger - Azure Information Protection**](../media/info-protect-dialog-labels-protection-only.png)
     
-3. Si vous souhaitez spécifier vos propres paramètres de protection plutôt que d’utiliser les paramètres de protection que votre administrateur peut avoir inclus dans votre étiquette sélectionnée, sélectionnez la protection **Protéger avec des autorisations personnalisées**.
+3. Si vous y êtes autorisé par votre administrateur, vous pouvez spécifier vos propres paramètres de protection plutôt que d’utiliser les paramètres de protection que votre administrateur peut avoir inclus dans votre étiquette sélectionnée. Pour ce faire, sélectionnez **Protéger par des autorisations personnalisées**.
+    
+    Si vous ne pouvez pas sélectionner **Protéger par des autorisations personnalisées**, votre administrateur ne vous permet pas d’utiliser cette option.
     
     Toute autorisation personnalisée que vous spécifiez remplace (plutôt que complète) les paramètres de protection que votre administrateur peut avoir définis pour l’étiquette de votre choix.  
 

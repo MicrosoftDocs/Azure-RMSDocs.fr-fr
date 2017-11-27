@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/13/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 67ef633fe429eef208f1f24e71a274959ad7077b
-ms.sourcegitcommit: 8810f9d68489a89601c43ce0aacff737728b1d02
+ms.openlocfilehash: 0bd05c0553cdcab792c674c6945d7dfea5f02eaf
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -30,11 +30,11 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 
 1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**.
 
-2. Dans le premier panneau Azure Information Protection, sélectionnez **Stratégies délimitées**.
+2. Dans le premier panneau Azure Information Protection, sélectionnez **Stratégies étendues**.
 
-3. Dans la panneau **Azure Information Protection - Stratégies délimitées**, sélectionnez le menu contextuel (**...**) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
+3. Dans la panneau **Azure Information Protection - Stratégies étendues**, sélectionnez le menu contextuel (**...**) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
     
-    Vous pouvez configurer des paramètres avancés pour la stratégie globale et pour les stratégies délimitées.
+    Vous pouvez configurer des paramètres avancés pour la stratégie globale et pour les stratégies étendues.
 
 4. Dans le panneau **Paramètres avancés**, tapez le nom et la valeur du paramètre avancé, puis sélectionnez **Enregistrer et fermer**.
 
@@ -117,46 +117,40 @@ Quand vous exportez la stratégie, cette action télécharge un fichier compress
 2. Renommez le fichier identifié en **Policy.msip** et copiez-le dans le dossier **%LocalAppData%\Microsoft\MSIP** sur les ordinateurs où le client Azure Information Protection est installé. 
 
 
-## <a name="hide-the-do-not-forward-button-in-outlook"></a>Masquer le bouton Ne pas transférer dans Outlook
+## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Masquer ou afficher le bouton Ne pas transférer dans Outlook
 
-Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
+La méthode recommandée pour configurer cette option consiste à utiliser le [paramètre de stratégie](../deploy-use/configure-policy-settings.md) **Ajouter le bouton Ne pas transférer au ruban Outlook**. Cela dit, vous pouvez également configurer cette option en utilisant un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous configurez dans le portail Azure.
 
-Lorsque vous configurez ce paramètre, celui-ci masque le bouton **Ne pas transférer** du ruban Outlook. Ce paramètre ne permet pas de masquer cette option dans les menus Office.
+Lorsque vous configurez ce paramètre, celui-ci masque ou affiche le bouton **Ne pas transférer** dans le ruban Outlook. Ce paramètre n’a aucun effet sur l’option Ne pas transférer à partir des menus Office.
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Clé : **DisableDNF**
 
-- Valeur : **True**
+- Valeur : **True** pour masquer le bouton, ou **False** pour afficher le bouton
 
-## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>Désactiver les options d’autorisations personnalisées pour les utilisateurs
+## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Activer ou désactiver les options d’autorisations personnalisées pour les utilisateurs
 
-> [!IMPORTANT]
-> Sauf si vous disposez de la préversion actuelle du client, n’utilisez pas cette option si vous avez des étiquettes configurées pour des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers. Si vous le faites, quand l’étiquette est appliquée, les utilisateurs ne sont pas invités à configurer les autorisations personnalisées. Par conséquent, le document est étiqueté, mais n’est pas protégé comme prévu.
+La méthode recommandée pour configurer cette option consiste à utiliser le [paramètre de stratégie](../deploy-use/configure-policy-settings.md) **Activer l’option des autorisations personnalisées pour les utilisateurs**. Cela dit, vous pouvez également configurer cette option en utilisant un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous configurez dans le portail Azure. 
 
-Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
-
-Lorsque vous configurez ce paramètre et publiez la stratégie pour les utilisateurs, les options relatives aux autorisations personnalisées deviennent indisponibles dans les emplacements suivants :
-
-- Dans les applications Office : onglet **Accueil** > groupe **Protection** > **Protéger** > **Autorisations personnalisées**
-
-- Dans l’Explorateur de fichiers : cliquez avec le bouton droit sur > **Classifier et protéger** > **Autorisations personnalisées**
-
-Ce paramètre n’a aucun effet sur les autorisations personnalisées que vous pouvez configurer à l’aide des options de menu Office. 
+Lorsque vous configurez ce paramètre et que vous publiez la stratégie pour les utilisateurs, les options des autorisations personnalisées deviennent disponibles pour les utilisateurs qui peuvent ainsi sélectionner leurs propres paramètres de protection, ou non disponibles et les utilisateurs ne peuvent pas sélectionner leurs propres paramètres de protection à moins d’y être invités.
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Clé : **EnableCustomPermissions**
 
-- Valeur : **False**
+- Valeur : **True** pour rendre l’option des autorisations personnalisées disponible, ou **False** pour que cette option ne soit pas disponible
+
+> [!IMPORTANT]
+> À moins de disposer de la préversion actuelle du client, ne définissez pas cette option sur **False** si vous avez des étiquettes configurées pour des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers. Si vous le faites, quand l’étiquette est appliquée, les utilisateurs ne sont pas invités à configurer les autorisations personnalisées. Par conséquent, le document est étiqueté, mais n’est pas protégé comme prévu.
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Masquer définitivement la barre Azure Information Protection
 
-Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Utilisez-le uniquement lorsque le [paramètre de stratégie](../deploy-use/configure-policy-settings.md) **Afficher la barre Information Protection dans les applications Office** est défini sur **Activé**.
 
 Lorsque vous configurez ce paramètre et publiez la stratégie pour les utilisateurs, si un utilisateur choisit de ne pas afficher la barre Azure Information Protection dans ses applications Office, la barre reste masquée. Cela se produit lorsque l’utilisateur décoche l’option **Afficher la barre** dans l’onglet **Accueil**, groupe **Protection** groupe, bouton **Protéger**. Ce paramètre n’a aucun effet si l’utilisateur ferme la barre à l’aide de l’icône **Fermer cette barre**.
 
-Même si la barre Azure Information Protection reste masquée, les utilisateurs peuvent encore sélectionner une étiquette dans la barre d’outils qui s’affiche temporairement si vous avez configuré la classification recommandée ou si un document ou un e-mail doit avoir une étiquette. Le paramètre n’a aucun effet sur les étiquettes que vous ou d’autres avez configurées, telles que la classification automatique ou manuelle, ou la définition d’une étiquette par défaut.
+Même si la barre Azure Information Protection reste masquée, les utilisateurs peuvent encore sélectionner une étiquette dans la barre d’outils qui s’affiche temporairement si vous avez configuré la classification recommandée ou si un document ou un e-mail doit avoir une étiquette. 
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
@@ -219,6 +213,8 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 - Clé 2 : **SyncPropertyState**
 
 - Valeur de la clé 2 : **OneWay**
+
+Utilisez ces clés et les valeurs correspondantes pour une seule propriété personnalisée.
 
 Comme exemple, vous avez une colonne SharePoint nommée **Classification** qui a les valeurs possibles **Public**, **Général** et **Confidentiel**. Les documents sont stockés dans SharePoint et ont l’une de ces valeurs définies pour la propriété Classification.
 

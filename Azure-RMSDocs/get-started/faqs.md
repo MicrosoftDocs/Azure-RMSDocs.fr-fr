@@ -4,7 +4,7 @@ description: "Certaines questions fréquentes sur Azure Information Protection e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 11/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 324eb3eb5d749021da93213e807f6316ca784485
-ms.sourcegitcommit: a8140a7215c8704f34c247f602e1f12eb7b49aa2
+ms.openlocfilehash: da0ba7876b1098671428e87117bed97c4f464071
+ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -78,6 +78,27 @@ Informations complémentaires :
 Les étiquettes dans Azure Information Protection vous permettent d’appliquer une stratégie de classification et de protection cohérente aux documents et aux e-mails, qu’ils soient locaux ou dans le cloud. Cette stratégie de classification et de protection est indépendante de l’emplacement de stockage ou du mode de déplacement du contenu. Les [étiquettes dans Office 365 Security & Compliance](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) vous permettent de classifier les documents et les e-mails à des fins d’audit et de rétention quand ce contenu se trouve dans les services Office 365. 
 
 Si pour le moment vous appliquez et gérez ces étiquettes séparément, Microsoft travaille à la mise en place d’une stratégie d’étiquetage complète et unifiée pour plusieurs services, dont Azure Information Protection, Office 365, Microsoft Cloud App Security et Windows Information Protection. Les mêmes schéma et magasin d’étiquetage seront également disponibles pour les éditeurs de logiciels. Pour plus d’informations, consultez la session Microsoft Ignite 2017, [Protecting complete data lifecycle using Microsoft information protection capabilities](https://myignite.microsoft.com/videos/55397).
+
+## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>Quelle différence y a-t-il entre l’ICF de Windows Server et le scanneur d’Azure Information Protection ?
+
+Jusqu’ici, vous pouviez utiliser l’Infrastructure de classification des fichiers (ICF) de Windows Server pour classer les documents et les protéger à l’aide du [connecteur Rights Management](../deploy-use/deploy-rms-connector.md) (documents Office uniquement) ou d’un [script PowerShell](../rms-client/configure-fci.md) (tous types de fichiers). 
+
+Désormais, vous pouvez utiliser le [scanneur Azure Information Protection](../deploy-use/deploy-aip-scanner.md), actuellement en préversion. Ce scanneur utilise le client Azure Information Protection ainsi que votre stratégie Azure Information Protection pour étiqueter les documents (tous les types de fichiers) afin que ces documents soient ensuite classés, et si vous le souhaitez, protégés.
+
+Les principales différences entre ces deux solutions sont les suivantes :
+
+|ICF de Windows Server|Scanneur Azure Information Protection|
+|--------------------------------|-------------------------------------|
+|Magasins de données pris en charge : <br /><br />- Dossiers locaux sur Windows Server|Magasins de données pris en charge : <br /><br />- Dossiers locaux sur Windows Server<br /><br />- Dispositif de stockage NAS et partages de fichiers Windows<br /><br />- SharePoint Server 2016 et SharePoint Server 2013|
+|Mode de fonctionnement : <br /><br />- Temps réel|Mode de fonctionnement : <br /><br />- Analyse systématiquement les magasins de données et ce cycle peut s’exécuter une ou plusieurs fois|
+
+Actuellement, il existe une différence dans la définition du [propriétaire de Rights Management](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) pour les fichiers qui sont protégés sur un partage réseau ou dans un dossier local. Par défaut, dans les deux solutions, le propriétaire de Rights Management est défini sur le compte qui protège le fichier, mais vous pouvez remplacer ce paramètre :
+
+- Pour l’ICF de Windows Server, vous pouvez définir le propriétaire de Rights Management sur un seul compte pour tous les fichiers, ou définir de façon dynamique ce propriétaire pour chaque fichier. Pour définir le propriétaire de Rights Management de façon dynamique, utilisez le paramètre et la valeur **- OwnerMail [Source File Owner Email]**. Cette configuration récupère l’adresse e-mail de l’utilisateur à partir d’Active Directory en utilisant le nom du compte d’utilisateur dans la propriété Propriétaire du fichier.
+
+- Pour le scanneur Azure Information Protection, vous pouvez définir le propriétaire de Rights Management sur un seul compte pour tous les fichiers, mais vous ne pouvez pas définir de façon dynamique ce propriétaire pour chaque fichier. Pour définir le compte, spécifiez le paramètre facultatif **-DefaultOwner** pour la [configuration du scanneur](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration?view=azureipps#optional-parameters).
+
+Lorsque le scanneur protège les fichiers sur les sites et bibliothèques SharePoint, le propriétaire de Rights Management est défini dynamiquement pour chaque fichier à l’aide de la valeur d’auteur de SharePoint.
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>J’ai entendu dire qu’une nouvelle version sera disponible prochainement pour Azure Information Protection : quand sera-t-elle publiée ?
 

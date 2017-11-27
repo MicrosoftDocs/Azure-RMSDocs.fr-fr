@@ -4,7 +4,7 @@ description: "Configurer et gérer des modèles Rights Management à partir du p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5afd71e059ef22eed61347e6916b9cbb6c2dc7f0
-ms.sourcegitcommit: 326930de25b259c18469f4100ec5774a04bedc7b
+ms.openlocfilehash: 74f3f9e22e5607c8b85b752bcd3881d5b7a092b1
+ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
@@ -32,11 +32,11 @@ Les modèles Rights Management sont désormais intégrés à la stratégie Azure
 
 **Si vous avez un abonnement qui inclut la classification, l’étiquetage et la protection (Azure Information Protection P1 or P2) :**
 
-- Les modèles Rights Management qui ne sont pas intégrés aux étiquettes pour votre locataire sont affichés dans la section **Modèles** après les étiquettes du panneau **Azure Information Protection - Stratégie globale**. Vous pouvez convertir ces modèles en étiquettes ou créer un lien vers celles-ci quand vous configurez la protection pour vos étiquettes. 
+- Les modèles Rights Management qui ne sont pas intégrés aux étiquettes de votre locataire sont affichés à la section **Modèles de protection**, après les étiquettes dans le panneau **Azure Information Protection - Stratégie globale**. Vous pouvez convertir ces modèles en étiquettes ou créer un lien vers celles-ci quand vous configurez la protection pour vos étiquettes. 
 
 **Lorsque vous avez un abonnement qui inclut uniquement la protection (un abonnement Office 365 qui inclut le service Azure Rights Management) :**
 
-- Les modèles Rights Management pour votre locataire sont affichés dans le panneau **Azure Information Protection - Stratégie globale**, dans la section **Modèles**. Aucune étiquette n’est affichée. Vous voyez également les paramètres de configuration qui sont spécifiques à la classification et l’étiquetage, mais ceux-ci n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
+- Les modèles Rights Management de votre locataire sont affichés dans le panneau **Azure Information Protection - Stratégie globale**, à la section **Modèles de protection**. Aucune étiquette n’est affichée. Vous voyez également les paramètres de configuration qui sont spécifiques à la classification et l’étiquetage, mais ceux-ci n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
 
 ## <a name="default-templates"></a>Modèles par défaut
 
@@ -95,9 +95,9 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
     
     En outre, vous ne pouvez actuellement pas définir le paramètre de compatibilité d’application pour un modèle de service. Si nécessaire, vous pouvez définir le paramètre de compatibilité d’application à l’aide de l’applet de commande PowerShell [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
 
-- Quand vous convertissez ou que vous liez un modèle à une étiquette, il ne peut plus être utilisé par d’autres étiquettes. Par ailleurs, ce modèle ne s’affiche plus dans la section **Modèles** ou **Modèles de protections**. Le nom de cette section est en cours de modification.
+- Quand vous convertissez ou que vous liez un modèle à une étiquette, il ne peut plus être utilisé par d’autres étiquettes. Par ailleurs, ce modèle ne s’affiche plus dans la section **Modèles de protection**. 
 
-- Vous ne créez pas un modèle à partir de la section **Modèles** ou **Modèles de protection**. Au lieu de cela, créez une étiquette qui a le paramètre **Protéger** et configurez les droits d’utilisation et les paramètres à partir du panneau **Protection**. Pour obtenir des instructions, consultez [Pour créer un nouveau modèle](#to-create-a-new-template).
+- Vous ne créez pas de modèle à partir de la section **Modèles de protection**. Au lieu de cela, créez une étiquette qui a le paramètre **Protéger** et configurez les droits d’utilisation et les paramètres à partir du panneau **Protection**. Pour obtenir des instructions, consultez [Pour créer un nouveau modèle](#to-create-a-new-template).
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Pour configurer les modèles dans la stratégie Azure Information Protection
 
@@ -145,7 +145,7 @@ Lorsque vous convertissez un modèle en étiquette :
 
 - Les paramètres de protection sont conservés, et vous pouvez les modifier si nécessaire, puis ajouter également d’autres paramètres à l’étiquette, comme des marqueurs visuels et des conditions.
 
-- Le modèle d’origine n’est plus affiché sous **Modèles** ou **Modèles de protection**, et il ne peut pas être sélectionné comme modèle prédéfini quand vous configurez la protection pour une étiquette. Pour modifier ce modèle dans le portail Azure, vous modifiez maintenant l’étiquette qui a été créée quand vous avez converti le modèle. Le modèle reste disponible pour le service Azure Rights Management et peut toujours être géré à l’aide de [commandes PowerShell](administer-powershell.md).  
+- Le modèle d’origine n’est plus affiché dans **Modèles de protection** et ne peut pas être sélectionné comme modèle prédéfini quand vous configurez la protection d’une étiquette. Pour modifier ce modèle dans le portail Azure, vous modifiez maintenant l’étiquette qui a été créée quand vous avez converti le modèle. Le modèle reste disponible pour le service Azure Rights Management et peut toujours être géré à l’aide de [commandes PowerShell](administer-powershell.md).  
 
 ## <a name="to-create-a-new-template"></a>Pour créer un nouveau modèle
 

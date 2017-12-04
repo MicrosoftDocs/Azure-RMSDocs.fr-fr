@@ -4,7 +4,7 @@ description: "Configurer et gérer des modèles Rights Management à partir du p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 74f3f9e22e5607c8b85b752bcd3881d5b7a092b1
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: bb6aeea8f939614b9c1903d8e006815228f99723
+ms.sourcegitcommit: f6ba613445463c3c4c64b1620095d54b48194650
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
@@ -53,13 +53,13 @@ Vous pouvez également créer vos propres modèles personnalisés. Même si vous
 
 ### <a name="default-template-names"></a>Noms des modèles par défaut
 
-Si vous avez obtenu récemment un abonnement à Azure Information Protection, vos modèles par défaut sont créés avec les noms suivants :
+Si vous avez obtenu votre abonnement récemment, vos modèles par défaut sont créés avec les noms suivants :
 
 - **Confidentiel \ Tous les employés**, qui accorde des autorisations de lecture ou de modification du contenu protégé.
 
 - **Hautement confidentiel \ Tous les employés**, qui accorde des autorisations d’accès en lecture seule au contenu protégé.
 
-Si vous avez obtenu votre abonnement Azure Information Protection il y a un certain temps, ou si vous n’avez pas d’abonnement Azure Information Protection, mais un abonnement Office 365 incluant Azure Rights Management, vos modèles par défaut sont créés avec les noms suivants :
+Si vous avez obtenu votre abonnement il y a quelque temps, vos modèles par défaut sont créés avec les noms suivants :
 
 - **\<nom organisation> - Confidentiel** : accorde des autorisations de lecture ou de modification du contenu protégé.
 

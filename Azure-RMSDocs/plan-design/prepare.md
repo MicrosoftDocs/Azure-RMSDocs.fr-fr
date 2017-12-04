@@ -4,7 +4,7 @@ description: "Vérifiez que vous disposez des comptes d’utilisateur et de grou
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 09/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 41269f709df4b00a6f127e81aa060a062ab1005f
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: 8f29aec107c344489ae38afabfa79129fd3fa000
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 
@@ -207,7 +207,7 @@ Pour les deux scénarios de configuration du service Azure Rights Management qui
 
 Si vous modifiez l’adresse e-mail d’un utilisateur ou d’un groupe, nous vous recommandons d’ajouter l’ancienne adresse e-mail comme une deuxième adresse e-mail (également appelée adresse proxy, alias ou autre adresse e-mail) à l’utilisateur ou au groupe. Quand vous effectuez cette opération, l’ancienne adresse e-mail est ajoutée à l’attribut proxyAddresses d’Azure AD. Cette administration des comptes permet d’assurer la continuité d’activité pour les droits d’utilisation ou d’autres configurations enregistrées quand l’ancienne adresse e-mail était utilisée. 
 
-Si vous ne pouvez pas le faire, l’utilisateur ou le groupe avec la nouvelle adresse e-mail peut se voir refuser l’accès aux documents et e-mails qui étaient précédemment protégés, et peut être confronté à d’autres erreurs de configuration dues à l’utilisation de l’ancienne valeur. Dans ce cas, vous devez répéter la configuration pour enregistrer la nouvelle adresse e-mail.
+Si vous ne pouvez pas le faire, l’utilisateur ou le groupe avec la nouvelle adresse e-mail peut se voir refuser l’accès aux documents et e-mails qui étaient protégés avec l’ancienne adresse e-mail. Dans ce cas, vous devez répéter la configuration de protection pour enregistrer la nouvelle adresse e-mail. Par exemple, si l’utilisateur ou le groupe a obtenu les droits d’utilisation pour des modèles ou des étiquettes, modifiez les modèles ou les étiquettes et spécifiez la nouvelle adresse e-mail avec les mêmes droits d’utilisation que vous aviez accordés à l’ancienne adresse e-mail.
 
 Notez qu’il est rare qu’un groupe change son adresse e-mail et, si vous attribuez des droits d’utilisation à un groupe plutôt qu’à des utilisateurs individuels, peu importe si l’adresse e-mail de l’utilisateur est modifiée. Dans ce scénario, les droits d’utilisation sont affectés à l’adresse e-mail de groupe et non aux adresses e-mail des utilisateurs individuels. Il s’agit de la méthode la plus probable (et recommandée) pour un administrateur qui souhaite configurer des droits d’utilisation qui protègent des documents et e-mails. Toutefois, les utilisateurs peuvent attribuer plus généralement des autorisations personnalisées aux utilisateurs individuels. Comme vous ne pouvez pas toujours savoir si un compte d’utilisateur ou un groupe a été utilisé pour accorder l’accès, il est plus sûr de toujours ajouter l’ancienne adresse e-mail comme une deuxième adresse e-mail.
 

@@ -4,17 +4,17 @@ description: "Vous pouvez protéger vos documents et e-mails les plus sensibles 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 17f95d9875320c64d2983fcd176e371ee45d2f48
-ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
+ms.openlocfilehash: 1b16d3ab7923592a011b6be39586a02a378f39f0
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -101,7 +101,7 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
         
         Les utilisateurs ou les groupes doivent avoir une adresse e-mail. Dans un environnement de production, ce sera presque toujours le cas, mais dans un simple environnement de test, il peut être nécessaire d’ajouter des adresses e-mails aux comptes d’utilisateur ou aux groupes.
         
-    - Choisissez **Entrer les détails** pour spécifier manuellement des adresses e-mail pour les utilisateurs individuels ou les groupes (internes ou externes). Vous pouvez aussi spécifier tous les utilisateurs d’une autre organisation en entrant un nom de domaine de cette organisation. 
+    - Choisissez **Entrer les détails** pour spécifier manuellement des adresses e-mail pour les utilisateurs individuels ou les groupes (internes ou externes). Vous pouvez aussi spécifier tous les utilisateurs d’une autre organisation en entrant un nom de domaine de cette organisation. N’entrez pas les noms de domaine des fournisseurs de réseaux sociaux qui prennent en charge les comptes e-mail personnels. Par exemple, n’entrez pas **gmail.com**, **hotmail.com** ou encore **outlook.com**.
         
     >[!NOTE]
     >Si une adresse e-mail est modifiée une fois que vous avez sélectionné l’utilisateur ou le groupe, consultez la section [Éléments à prendre en considération en cas de modification des adresses de messagerie](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) de la documentation relative à la planification.

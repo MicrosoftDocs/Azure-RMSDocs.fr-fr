@@ -4,17 +4,17 @@ description: "Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 0e10a1809aaf792ac8c5960e30917aabd5c44548
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: 3dd58454709dd5a73edc23578f12e79d85a9b9c9
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Étape 2 : Configurer et publier la stratégie Azure Information Protection
 
@@ -50,6 +50,10 @@ Pour notre didacticiel, nous allons modifier deux de ces paramètres de stratég
     Si vous n’avez pas cette étiquette car vous avez une version plus ancienne de la stratégie, choisissez **Interne** comme étiquette équivalente.
 
 2. Pour **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection**, définissez cette option sur **Activé**.
+
+3. De plus, recherchez le paramètre **Mettre l’option des autorisations personnalisées à la disposition des utilisateurs**. S’il est défini sur **Désactivé**, changez-le en **Activé**.
+    
+    Vous n’aurez peut-être pas à changer ce paramètre, car la valeur par défaut dépend du moment où vous avez obtenu votre abonnement. Nous allons utiliser des autorisations personnalisées plus loin dans le didacticiel pour partager un document protégé avec un utilisateur que vous spécifiez quand vous cliquez avec le bouton droit sur le fichier dans l’Explorateur de fichiers.
 
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Création d’une étiquette pour la protection, de marquages visuels et d’une condition pour une demande de classification
 
@@ -142,7 +146,7 @@ Maintenant que vous avez examiné la stratégie par défaut et apporté des modi
 |Pour en savoir plus|Informations supplémentaires|
 |--------------------------------|--------------------------|
 |À propos de la stratégie par défaut et des différentes versions|[La stratégie Azure Information Protection par défaut](../deploy-use/configure-policy-default.md)|
-|À propos des options de configuration de la stratégie|[Configuration de la stratégie Azure Information Protection](../deploy-use/configure-policy.md)|
+|À propos de la configuration de la stratégie|[Configuration de la stratégie Azure Information Protection](../deploy-use/configure-policy.md)|
 |Instructions détaillées pour la configuration d’une étiquette pour la protection|[Guide pratique pour configurer une étiquette pour la protection Rights Management](../deploy-use/configure-policy-protection.md)|
 |Informations détaillées sur les autorisations|[Configuration des droits d’utilisation pour Azure Rights Management](../deploy-use/configure-usage-rights.md)|
 

@@ -4,7 +4,7 @@ description: "Si vous connaissez ou avez déjà déployé Active Directory Right
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2017
+ms.date: 12/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 60765865a0c422f4baac72ed88a6bca9b96ed66f
-ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
+ms.openlocfilehash: 124bef6f9c54fc154bdf95322ca418d01f5b5636
+ms.sourcegitcommit: 3cbea6b4191b97c69d06d04cbbd852aacacdd9c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Comparaison d’Azure Information Protection avec AD RMS
 
@@ -57,7 +57,7 @@ Pour plus d’informations et pour connaître les autres différences, consultez
 |La version minimale prise en charge de Microsoft Office est Office 2010, qui nécessite le [client Azure Information Protection](../rms-client/aip-client.md) ou l’application de partage RMS.<br /><br />Microsoft Office pour Mac :<br /><br />- Microsoft Office pour Mac 2016 : pris en charge<br /><br />- Microsoft Office pour Mac 2011 : non pris en charge|La version minimale prise en charge de Microsoft Office est Office 2007.<br /><br />Microsoft Office pour Mac :<br /><br />- Microsoft Office pour Mac 2016 : pris en charge<br /><br />- Microsoft Office pour Mac 2011 : pris en charge|
 |Prend en charge le [client Azure Information Protection](../rms-client/aip-client.md) pour Windows, iOS et Android. Les ordinateurs Mac et Windows Phone restent pris en charge par l’application de partage RMS.<br /><br />En outre, le client Azure Information Protection prend en charge les éléments suivants :<br /><br />- Partage avec des personnes dans une autre organisation.<br /><br />- Site de suivi des documents permettant notamment aux utilisateurs de révoquer des documents.|Prend en charge le [client Azure Information Protection](../rms-client/aip-client.md) pour Windows, iOS et Android. Les ordinateurs Mac et Windows Phone restent pris en charge par l’application de partage RMS. Toutefois, le partage n’inclut pas le partage avec des personnes extérieures à l’organisation ni le site de suivi de document permettant aux utilisateurs de révoquer des documents.|
 |La plupart des [types de fichiers](../rms-client/client-admin-guide-file-types.md) peuvent être classifiés et protégés lorsque vous utilisez le client Azure Information Protection.<br /><br />Pour les autres applications, consultez le tableau dans [Applications prenant en charge la protection des données Azure Rights Management](../get-started/requirements-applications.md).|La plupart des [types de fichiers](../rms-client/client-admin-guide-file-types.md) peuvent être protégés lorsque vous utilisez le client Azure Information Protection.<br /><br />Pour les autres applications, consultez le tableau dans [Applications prenant en charge la protection des données Azure Rights Management](../get-started/requirements-applications.md).|
-|La version minimale prise en charge du client Windows est Windows 7 SP1.|La version minimale prise en charge du client Windows est Windows Vista Service Pack 2.|
+|La version minimale prise en charge du client Windows est Windows 7 SP1.|La version minimale prise en charge du client Windows est Windows 7 SP1.|
 |Les appareils mobiles pris en charge sont les appareils Windows Phone, Android, iOS et Windows RT.<br /><br />L'assistance par e-mail via les services RMS d'Exchange ActiveSync est également prise en charge sur toutes les plateformes mobiles acceptant ce protocole.|La prise en charge des appareils mobiles inclut Windows Phone, Android, iOS et Windows RT et nécessite [Active Directory Rights Management Services Mobile Device Extension](http://technet.microsoft.com/library/dn673574.aspx).<br /><br />Une assistance par courrier électronique à l'aide d'Exchange ActiveSync IRM est prise en charge sur toutes les plateformes d'appareils mobiles qui acceptent ce protocole.|
 |Prend en charge l’authentification multifacteur (MFA) pour les ordinateurs et les appareils mobiles.<br /><br />Pour plus d’informations, consultez [Multi-Factor Authentication (MFA) et Azure Information Protection](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection).|Prend en charge l'authentification par carte à puce si IIS est configuré pour demander des certificats.|
 |Prend en charge le mode de chiffrement 2 sans configuration supplémentaire, lequel permet de renforcer la sécurité des longueurs de clé et des algorithmes de chiffrement.<br /><br />Pour plus d’informations, consultez la section [Contrôles de chiffrement pour la signature et le chiffrement](#cryptographic-controls-for-signing-and-encryption) de cet article, ainsi que la page [Modes de chiffrement d’AD RMS](http://go.microsoft.com/fwlink/?LinkId=266659).|Prend en charge le mode de chiffrement 1 par défaut et requiert une configuration supplémentaire pour prendre en charge le mode de chiffrement 2 pour une sécurité renforcée.<br /><br />Pour plus d’informations, consultez la section [Contrôles de chiffrement pour la signature et le chiffrement](#cryptographic-controls-for-signing-and-encryption) de cet article, ainsi que la page [Modes de chiffrement d’AD RMS](http://go.microsoft.com/fwlink/?LinkId=266659).|

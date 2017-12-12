@@ -4,7 +4,7 @@ description: "Découvrez en détail le fonctionnement d’Azure RMS, les contrô
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 26c82884c706c8397eae63197ed0307faa3562d3
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 1a7075287eebe2c68534de95d01cef455ebe63b5
+ms.sourcegitcommit: f185b1d742c345a465927f88e606413421fe1150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
 >*S’applique à : Azure Information Protection, Office 365*
 
-Concernant le fonctionnement d'Azure RMS, il est important de comprendre que le service Rights Management, et plus généralement Microsoft, ne consultent ni ne stockent vos données dans le cadre du processus de protection des informations. Les informations que vous protégez ne sont jamais stockées dans Azure, sauf si vous indiquez expressément votre volonté de les y stocker, ou si vous utilisez un autre service cloud qui les stocke dans Azure. Azure RMS rend simplement les données d'un document illisibles pour toute personne autre que des utilisateurs et services autorisés :
+En ce qui concerne le fonctionnement d’Azure RMS, il est important de comprendre que ce service de protection des données fourni par Azure Information Protection n’affiche pas et ne stocke pas vos données dans le cadre du processus de protection. Les informations que vous protégez ne sont jamais stockées dans Azure, sauf si vous indiquez expressément votre volonté de les y stocker, ou si vous utilisez un autre service cloud qui les stocke dans Azure. Azure RMS rend simplement les données d'un document illisibles pour toute personne autre que des utilisateurs et services autorisés :
 
 - Les données sont chiffrées au niveau de l'application, et incluent une stratégie qui définit l'utilisation autorisée du document.
 
@@ -39,7 +39,7 @@ Pour obtenir une description détaillée de ce qui se passe, consultez la sectio
 Pour obtenir des détails techniques sur les algorithmes et les longueurs de clé qu'Azure RMS utilise, consultez la section suivante.
 
 ## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Contrôles de chiffrement utilisés par Azure RMS : Algorithmes et longueurs de clé
-Même si vous n'avez pas besoin de connaître le détail du fonctionnement de RMS, il se peut que l'on vous interroge sur les contrôles de chiffrement utilisés, pour s'assurer que la protection de sécurité est conforme aux normes.
+Même si vous n’avez pas besoin de connaître en détail le fonctionnement de cette technologie, vous devrez peut-être fournir certaines informations sur les contrôles de chiffrement utilisés, par exemple, pour confirmer que la protection de sécurité répond aux normes.
 
 
 |Contrôles de chiffrement|Utilisation dans Azure RMS|
@@ -54,15 +54,15 @@ La longueur de 256 bits est utilisée par le client Azure Information Protectio
 
 ###### <a name="footnote-2"></a>Note 2
 
-La longueur de la clé est de 2 048 bits lorsque le service Azure Rights Management est activé. Une longueur de 1 024 bits est prise en charge dans les scénarios facultatifs suivants :
+La longueur de la clé est de 2 048 bits quand le service Azure Rights Management est activé. Une longueur de 1 024 bits est prise en charge dans les autres scénarios suivants :
 
 - Durant une migration à partir d’un site local, si le cluster AD RMS s’exécute en mode de chiffrement 1.
 
 - Après une migration à partir d’un site local, si le cluster AD RMS utilisait Exchange Online.
 
-- Pour les clés archivées qui ont été créées en local avant la migration afin que le contenu qui a été protégé par AD RMS puisse continuer à être ouvert après la migration vers Azure Rights Management.
+- Pour les clés archivées qui ont été créées localement avant la migration, afin que le contenu préalablement protégé par AD RMS puisse continuer à être ouvert par la post-migration du service Azure Rights Management.
 
-- Si les clients choisissent d’apporter leur propre clé (BYOK) à l’aide d’Azure Key Vault. Azure Information Protection prend en charge les clés d’une longueur de 1 024 bits ou de 2 048 bits. Pour une sécurité accrue, nous vous recommandons une clé d’une longueur de 2 048 bits.
+- Si les clients choisissent d’apporter leur propre clé (BYOK) à l’aide d’Azure Key Vault. Azure Information Protection prend en charge les clés d’une longueur de 1 024 bits ou de 2 048 bits. Pour une sécurité accrue, nous vous recommandons d’utiliser une clé d’une longueur de 2 048 bits.
 
 ### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Mode de stockage et de sécurisation des clés de chiffrement Azure RMS
 
@@ -107,7 +107,7 @@ Quand un utilisateur protège un document, le client RMS effectue les actions su
 
 ![Protection de document RMS : étape 2, la stratégie est créée](../media/AzRMS_documentprotection2.png)
 
-**Ce qui se passe à l’étape 2** : le client RMS crée ensuite un certificat incluant une stratégie pour le document, qui inclut les [droits d’utilisation](../deploy-use/configure-usage-rights.md) pour les utilisateurs ou les groupes, ainsi que d’autres restrictions, comme une date d’expiration. Ces paramètres peuvent être définis dans un modèle qu’un administrateur a déjà configuré ou spécifié au moment où le contenu est protégé (parfois appelé « stratégie ad hoc »).   
+**Ce qui se passe à l’étape 2** : le client RMS crée ensuite un certificat incluant une stratégie pour le document, qui inclut les [droits d’utilisation](../deploy-use/configure-usage-rights.md) pour les utilisateurs ou les groupes, ainsi que d’autres restrictions, comme une date d’expiration. Ces paramètres peuvent être définis dans un modèle qu’un administrateur a déjà configuré ou spécifié au moment de la protection du contenu (parfois appelé « stratégie ad hoc »).   
 
 Le principal attribut Azure AD utilisé pour identifier les utilisateurs et groupes sélectionnés est l’attribut proxyAddress d’Azure AD, qui stocke toutes les adresses e-mail pour un utilisateur ou un groupe. Toutefois, si un compte d’utilisateur ne possède aucune valeur dans l’attribut ProxyAddresses d’Active Directory, la valeur UserPrincipalName de l’utilisateur est employée à la place.
 

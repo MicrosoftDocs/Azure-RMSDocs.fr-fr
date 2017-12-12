@@ -4,7 +4,7 @@ description: "Découvrez les restrictions imposées quand vous utilisez des clé
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 12/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: afc25e638cff4bddc342ed29dee7fab304d67bd7
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 981f7349c9ae279d48f5cb4795ffc2087f5ae4d8
+ms.sourcegitcommit: 850869505942f9d1b74720085d253de4b54b19c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="byok-pricing-and-restrictions"></a>Tarifs et restrictions BYOK
 
@@ -27,7 +27,11 @@ Les organisations qui ont un abonnement incluant Azure Information Protection pe
 
 La clé doit être stockée dans Azure Key Vault, ce qui nécessite un abonnement Azure. Pour utiliser une clé protégée par module HSM, vous devez utiliser le niveau de service Azure Key Vault Premium. L’utilisation d’une clé dans Azure Key Vault entraîne des frais mensuels. Pour plus d’informations, consultez la [page Tarification d’Azure Key Vault](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
 
-Quand vous utilisez Azure Key Vault pour votre clé de locataire Azure Information Protection, nous vous recommandons d’utiliser un coffre de clés dédié à cette clé, avec un abonnement dédié. Cette configuration permet de garantir qu’elle est utilisée seulement par le service Azure Rights Management. 
+Quand vous utilisez Azure Key Vault pour votre clé de locataire Azure Information Protection, nous vous recommandons d’utiliser un coffre de clés dédié à cette clé pour garantir qu’il est utilisé seulement par le service Azure Rights Management. Cette configuration permet d’éviter que des appels effectués par d’autres services n’entraînent un dépassement des [limites de service](/azure/key-vault/key-vault-service-limits) pour le coffre de clés, ce qui peut limiter les temps de réponse pour le service Azure Rights Management.  
+
+De plus, étant donné que chaque service qui utilise Azure Key Vault a généralement des exigences différentes pour la gestion des clés, nous vous recommandons d’utiliser un abonnement Azure distinct avec ce coffre de clés afin de limiter les risques de configuration incorrecte. 
+
+Toutefois, si vous souhaitez partager un abonnement Azure avec d’autres services qui utilisent Azure Key Vault, assurez-vous que l’abonnement partage un groupe d’administrateurs commun. De cette façon, les administrateurs qui utilisent cet abonnement ont une bonne compréhension de toutes les clés auxquelles ils ont accès et risquent moins de les configurer incorrectement. Par exemple, utilisez un abonnement Azure partagé si les administrateurs de votre clé de locataire Azure Information Protection sont aussi ceux qui gèrent les clés pour la clé de client Office 365 et CRM Online. En revanche, si les administrateurs qui gèrent les clés pour la clé de client ou CRM Online ne sont pas ceux qui administrent votre clé de locataire Azure Information Protection, nous vous recommandons de ne pas partager votre abonnement Azure pour Azure Information Protection.
 
 ## <a name="benefits-of-using-azure-key-vault"></a>Avantages de l’utilisation d’Azure Key Vault
 

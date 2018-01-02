@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 3beb637b4a9ffe662455f32281e24ecfeb230bca
-ms.sourcegitcommit: 43d77093d97509170bbdfa72bc28e1c2100228ee
+ms.openlocfilehash: 194c746298024ef294c8a6a6fa0361d21cbd869e
+ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tâches que vous aviez l’habitude d’effectuer dans le portail Azure Classic
 
@@ -27,7 +27,7 @@ Jusqu’à présent, vous utilisiez le portail Azure Classic pour gérer le serv
 > [!NOTE]
 > Le portail Azure Classic va être mis hors service le **08 janvier 2018**. Après cette date, si vous essayez d’utiliser ce portail, vous serez automatiquement redirigé vers le nouveau portail Azure. 
 > 
-> Pour plus d’informations, consultez le billet de blog [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/) faisant suite à cette annonce. Pour plus d’informations sur la prolongation temporaire jusqu’à la date de mise hors service, consultez [Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
+> Pour plus d’informations, consultez le billet de blog [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/) faisant suite à cette annonce. Pour plus d’informations sur la prolongation temporaire jusqu’à la date de mise hors service d’origine, consultez [Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Comment effectuer les tâches d’administration courantes
 
@@ -41,7 +41,7 @@ Utilisez les informations suivantes pour vous aider à passer rapidement au dern
 |Archiver un modèle|Affectez à l’étiquette l’état **Désactivé**.
 |Créer un modèle délimité|Créez une stratégie délimitée, puis créez une étiquette dans cette étendue qui applique une protection. <br /><br />Pour plus d’informations, consultez [Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées](configure-policy-scope.md).
 |Copier un modèle|Vous ne pouvez pas copier un modèle dans le portail Azure. Pour que deux étiquettes aient les mêmes paramètres de protection, vous devez définir les autorisations sur chaque étiquette. <br /><br />Pour en savoir plus, consultez [Configurer une étiquette pour la protection Rights Management](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
-|Suppression d'un modèle|Le portail Azure ne prend pas en charge la suppression de modèles, car cette action peut rendre les données inaccessibles. Vous pouvez toutefois supprimer l’étiquette, puis utiliser l’applet de commande PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) pour supprimer le modèle. <br /><br />Pour plus d’informations, consultez [Guide pratique pour supprimer ou réorganiser une étiquette pour Azure Information Protection](configure-policy-delete-reorder.md).
+|suppression d'un modèle|Le portail Azure ne prend pas en charge la suppression de modèles, car cette action peut rendre les données inaccessibles. Vous pouvez toutefois supprimer l’étiquette, puis utiliser l’applet de commande PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) pour supprimer le modèle. <br /><br />Pour plus d’informations, consultez [Guide pratique pour supprimer ou réorganiser une étiquette pour Azure Information Protection](configure-policy-delete-reorder.md).
 |Prise en charge multilingue|Dans le menu **GÉRER**, sélectionnez **Langues (préversion)** pour exporter les champs personnalisables qui incluent le nom et la description du modèle. Traduisez les chaînes, puis importez-les dans le portail. <br /><br />Pour plus d’informations, consultez [Guide pratique pour configurer des étiquettes et des modèles pour différentes langues dans Azure Information Protection](configure-policy-languages.md).
 |Rapports web Rights Management|Utilisez l’applet de commande PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) pour télécharger les journaux d’utilisation du service Azure Rights Management. Vous pouvez ensuite utiliser ces données pour créer des rapports personnalisés. <br /><br />Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](log-analyze-usage.md).<br /><br />Conseil : Consultez le [blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) où seront postées des annonces sur la nouvelle solution de création de rapports centralisée pour Azure Information Protection. 
 |Activer et désactiver le service Rights Management|Dans les options du menu **GÉRER**, sélectionnez **Paramètres RMS** ou **Activation de la protection**. Le nom de cette option est en cours de modification.<br /><br />Pour plus d’informations, consultez [Comment activer Azure Rights Management à partir du portail Azure](activate-azure.md).

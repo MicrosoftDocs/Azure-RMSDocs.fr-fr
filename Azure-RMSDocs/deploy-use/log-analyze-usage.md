@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ebfd7ce4266061cef3099fb8fb096c95b01e6fb4
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: a7a983ed075e41ee6f3328634b451107e579134d
+ms.sourcegitcommit: e089661f23f199b122b0ca9ba4748792b349bc27
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Journalisation et analyse de l’utilisation du service Azure Rights Management
 
@@ -44,8 +44,8 @@ En plus de cette journalisation de l’utilisation, vous disposez également des
 
 |Option de journalisation|Description|
 |----------------|---------------|
-|Journal d’administration|Enregistre les tâches d’administration pour le service Azure Rights Management. Par exemple, si le service est désactivé, lorsque la fonctionnalité de super utilisateur est activée et lorsque des utilisateurs délèguent des autorisations d’administrateur au service. <br /><br />Pour plus d'informations, consultez l’applet de commande PowerShell, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
-|Rapports web|Rapport d’utilisation de haut niveau depuis le portail Azure Classic : **Résumé RMS**, **Utilisateurs RMS actifs**, **Plateformes des appareils RMS** et **Utilisation d’applications RMS**. <br /><br />Pour accéder à ces rapports depuis le portail Azure Classic, cliquez sur **Active Directory**, sélectionnez et ouvrez un répertoire, puis cliquez sur **RAPPORTS**.|
+|Journal d’administration|Journalise les tâches d’administration du service Azure Rights Management. Par exemple, si le service est désactivé, lorsque la fonctionnalité de super utilisateur est activée et lorsque des utilisateurs délèguent des autorisations d’administrateur au service. <br /><br />Pour plus d'informations, consultez l’applet de commande PowerShell, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
+|Rapports web|Rapport d’utilisation général depuis le portail Azure Classic : **Résumé RMS**, **Utilisateurs RMS actifs**, **Plateformes des appareils RMS** et **Utilisation d’applications RMS**. <br /><br />Pour accéder à ces rapports depuis le portail Azure Classic, cliquez sur **Active Directory**, sélectionnez et ouvrez un répertoire, puis cliquez sur **RAPPORTS**.|
 |Suivi des documents|Permet aux utilisateurs d’effectuer le suivi et de révoquer les documents dont ils ont effectué le suivi avec le client Azure Information Protection ou l’application de partage RMS. Les administrateurs généraux peuvent également effectuer le suivi de ces documents au nom des utilisateurs. <br /><br />Pour plus d’informations, consultez [Configuration et utilisation du suivi des documents pour Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
 |Journaux des événements clients|Activité d’utilisation pour le client Azure Information Protection, enregistrée dans le journal des événements **Applications et services** Windows local, **Azure Information Protection**. <br /><br />Pour plus d’informations, consultez [Journalisation de l’utilisation du client Azure Information Protection](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Fichiers journaux clients|Journaux de dépannage pour le client Azure Information Protection, situé dans **%localappdata%\Microsoft\MSIP**. <br /><br />Ces fichiers sont destinés au Support Microsoft.|

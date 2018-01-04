@@ -100,8 +100,8 @@ Le client RMS stocke les licences sur le disque local et met également en cache
 
 |Description|Chemins d'accès du mode client|Chemins d'accès du mode serveur|
 |---------------|---------------------|---------------------|
-|Emplacement du magasin de licences|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\*<SID>*\|
-|Emplacement du magasin de modèles|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\Templates\*<SID>*\|
+|Emplacement du magasin de licences|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\*<SID>\*\|
+|Emplacement du magasin de modèles|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\Templates\*<SID>\*\|
 |Emplacement du Registre|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \*<SID>*|
 > [!NOTE]
 > *\<SID\>* est l’identificateur sécurisé du compte sous lequel s’exécute l’application serveur. Par exemple, si l’application s’exécute sous le compte de service réseau intégré, remplacez *<SID>* par la valeur du SID connu pour ce compte (S-1-5-20).
@@ -126,7 +126,7 @@ Les modèles aident les utilisateurs et les administrateurs à appliquer rapidem
 
 **Mode client:** %localappdata%\Microsoft\MSIPC\UnmanagedTemplates
 
-**Mode serveur:**%allusersprofile%\Microsoft\MSIPC\Server\UnmanagedTemplates\\*\<SID\>\*
+**Mode serveur:**%allusersprofile%\Microsoft\MSIPC\Server\UnmanagedTemplates\\\*\<SID\>\*
 
 Lorsque vous utilisez ce dossier, aucune convention d'affectation de noms particulière ne s'impose, sauf que les modèles doivent être émis par le serveur ou le service RMS, et doivent avoir l'extension de nom de fichier .xml. Par exemple, Contoso-Confidential.xml ou Contoso-ReadOnly.xml sont des noms valides.
 

@@ -4,7 +4,7 @@ description: "Instructions et informations pour que les administrateurs gèrent 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2017
+ms.date: 01/03/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dc3545c8212907786aa2fcf11e819b4cbdcf1ab5
-ms.sourcegitcommit: 4c6d9c55ff5dc5dbb10dc8a5abed9319fd3efb98
+ms.openlocfilehash: aee9a9f665d3aa0a0e8a8c568f3abbd044469fc7
+ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -26,7 +26,7 @@ Quand vous installez le client Azure Information Protection, des commandes Power
 
 Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module remplace le module de protection RMS installé avec l’outil de protection RMS. Si vous disposez de l’outil RMSProtection lorsque vous installez le client Azure Information Protection, le module RMSProtection est automatiquement désinstallé.
 
-Le module AzureInformationProtection inclut toutes les applets de commande Rights Management de l’outil de protection RMS. Il propose également de nouvelles applets de commande qui utilisent le service AIP (Azure Information Protection) pour l’étiquetage. Exemple :
+Le module AzureInformationProtection inclut toutes les applets de commande Rights Management de l’outil de protection RMS. Il propose également de nouvelles applets de commande qui utilisent le service AIP (Azure Information Protection) pour l’étiquetage. Par exemple :
 
 |Étiquetage des applets de commande|Exemple d’utilisation|
 |----------------|---------------|
@@ -260,7 +260,7 @@ Quand vous utilisez un compte de principal de service pour protéger des fichier
 
 ### <a name="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service"></a>Exemples de scénarios d’utilisation des applets de commande pour Azure Information Protection et le service Azure Rights Management
 
-Il est plus efficace d’utiliser des étiquettes pour classifier et protéger les fichiers, car il existe deux applets de commande dont vous avez besoin. Elles peuvent être exécutées seules ou ensemble : [Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus) et [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Consultez l’aide de ces deux applets de commande pour plus d’informations et d’exemples.
+Il est plus efficace d’utiliser des étiquettes pour classifier et protéger les fichiers, car il existe deux applets de commande dont vous avez besoin. Elles peuvent être exécutées seules ou ensemble : [Get-AIPFileStatus](/powershell/azureinformationprotection/get-aipfilestatus) et [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Consultez l’aide de ces deux applets de commande pour plus d’informations et d’exemples.
 
 Toutefois, pour protéger ou annuler la protection de fichiers en vous connectant directement au service Azure Rights Management, vous devez généralement exécuter une série d’applets de commande comme décrit ci-après.
 
@@ -303,7 +303,7 @@ Votre résultat peut ressembler à ce qui suit :
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-Pour protéger tous les fichiers d’un dossier, utilisez le paramètre **-Folder** avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Exemple :
+Pour protéger tous les fichiers d’un dossier, utilisez le paramètre **-Folder** avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Par exemple :
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -316,7 +316,7 @@ Votre résultat peut ressembler à ce qui suit :
     \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
     \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 
-Lorsque l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande `Get-RMSFileStatus` plus tard pour vérifier si le fichier est protégé. Exemple :
+Lorsque l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande `Get-RMSFileStatus` plus tard pour vérifier si le fichier est protégé. Par exemple :
 
     Get-RMSFileStatus -File \Server1\Documents\Test1.docx
 
@@ -326,7 +326,7 @@ Votre résultat peut ressembler à ce qui suit :
     --------                              ------
     \Server1\Documents\Test1.docx         Protected
 
-Pour déprotéger un fichier, vous devez disposer des droits Propriétaire ou Extraction correspondant au moment où le fichier a été protégé, ou vous devez exécuter les applets de commande en tant que super utilisateur. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Exemple :
+Pour déprotéger un fichier, vous devez disposer des droits Propriétaire ou Extraction correspondant au moment où le fichier a été protégé, ou vous devez exécuter les applets de commande en tant que super utilisateur. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Par exemple :
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -419,7 +419,7 @@ Votre résultat peut ressembler à ce qui suit :
     ---------             -------------
     C:\Test.docx          C:\Test.docx   
 
-Pour protéger tous les fichiers d’un dossier, utilisez le paramètre -Folder avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Exemple :
+Pour protéger tous les fichiers d’un dossier, utilisez le paramètre -Folder avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Par exemple :
 
     Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -432,7 +432,7 @@ Votre résultat peut ressembler à ce qui suit :
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-Quand l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande Get-RMSFileStatus ultérieurement pour vérifier si le fichier est protégé. Exemple : 
+Quand l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande Get-RMSFileStatus ultérieurement pour vérifier si le fichier est protégé. Par exemple : 
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
@@ -442,7 +442,7 @@ Votre résultat peut ressembler à ce qui suit :
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-Pour déprotéger un fichier, vous devez disposer de droits d’utilisation de propriétaire ou d’extraction à compter du moment où le fichier a été protégé, ou être un super utilisateur AD RMS. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Exemple :
+Pour déprotéger un fichier, vous devez disposer de droits d’utilisation de propriétaire ou d’extraction à compter du moment où le fichier a été protégé, ou être un super utilisateur AD RMS. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Par exemple :
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -487,13 +487,15 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 
 4. Sélectionnez l’application que vous venez de créer, par exemple **AIPOnBehalfOf**. Ensuite, dans le panneau **Paramètres**, sélectionnez **Propriétés**. Dans le panneau **Propriétés**, copiez la valeur du champ **ID d’application**, puis fermez ce panneau. 
     
-    Cette valeur est utilisée pour le paramètre `WebAppId` lorsque vous exécutez l’applet de commande Set-AIPAuthentication.
+    Cette valeur est utilisée pour le paramètre `WebAppId` lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez-la et enregistrez-la pour vous y référer ultérieurement.
 
-5. Dans le panneau **Paramètres**, sélectionnez **Clés**. Ajoutez une nouvelle clé en spécifiant une description et la durée de votre choix (1 an, 2 ans ou sans expiration). Ensuite, sélectionnez **Enregistrer**, puis copiez la chaîne correspondant à la **Valeur** qui s’affiche. Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée. Comme pour toute autre clé que vous utilisez, stockez la valeur enregistrée dans un endroit sûr et limitez l’accès à cette valeur.
+5. De retour dans le panneau **Paramètres**, sélectionnez **Autorisations nécessaires**. Dans le panneau **Autorisations nécessaires**, sélectionnez **Accorder des autorisations**, cliquez sur **Oui** pour confirmer, puis fermez ce panneau.
+
+6. De retour dans le panneau **Paramètres**, sélectionnez **Clés**. Ajoutez une nouvelle clé en spécifiant une description et la durée de votre choix (1 an, 2 ans ou sans expiration). Ensuite, sélectionnez **Enregistrer**, puis copiez la chaîne correspondant à la **Valeur** qui s’affiche. Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée. Comme pour toute autre clé que vous utilisez, stockez la valeur enregistrée dans un endroit sûr et limitez l’accès à cette valeur.
     
     Cette valeur est utilisée pour le paramètre `WebAppKey` lorsque vous exécutez l’applet de commande Set-AIPAuthentication.
 
-6. Dans le panneau **Inscriptions des applications**, sélectionnez **Nouvelle inscription d’application** pour créer votre application native. Dans l’étiquette **Créer**, spécifiez les valeurs suivantes, puis cliquez sur **Créer** :
+7. Dans le panneau **Inscriptions des applications**, sélectionnez **Nouvelle inscription d’application** pour créer votre application native. Dans l’étiquette **Créer**, spécifiez les valeurs suivantes, puis cliquez sur **Créer** :
     
     - Nom : **AIPClient**
     
@@ -503,28 +505,22 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     
     - URL de connexion : **http://localhost**
 
-7. Sélectionnez l’application que vous venez de créer, par exemple **AIPClient**. Ensuite, dans le panneau **Paramètres**, sélectionnez **Propriétés**. Dans le panneau **Propriétés**, copiez la valeur du champ **ID d’application**, puis fermez ce panneau.
+8. Sélectionnez l’application que vous venez de créer, par exemple **AIPClient**. Ensuite, dans le panneau **Paramètres**, sélectionnez **Propriétés**. Dans le panneau **Propriétés**, copiez la valeur du champ **ID d’application**, puis fermez ce panneau.
     
-    Cette valeur est utilisée pour le paramètre `NativeAppId` lorsque vous exécutez l’applet de commande Set-AIPAuthentication.
+    Cette valeur est utilisée pour le paramètre `NativeAppId` lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez-la et enregistrez-la pour vous y référer ultérieurement.
 
-8. Dans le panneau **Paramètres**, sélectionnez **Autorisations nécessaires**. 
+9. Dans le panneau **Paramètres**, sélectionnez **Autorisations nécessaires**. 
 
-9. Dans le panneau **Autorisations nécessaires**, cliquez sur **Ajouter**, puis cliquez sur **Sélectionner une API**. Dans la zone de recherche, tapez **AIPOnBehalfOf**. Sélectionnez cette valeur dans la zone de liste, puis cliquez sur **Sélectionner**.
+10. Dans le panneau **Autorisations nécessaires**, cliquez sur **Ajouter**, puis cliquez sur **Sélectionner une API**. Dans la zone de recherche, tapez **AIPOnBehalfOf**. Sélectionnez cette valeur dans la zone de liste, puis cliquez sur **Sélectionner**.
 
-10. Dans le panneau **Activer l’accès**, sélectionnez **AIPOnBehalfOf**, cliquez sur **Sélectionner**, puis cliquez sur **Terminé**.
+11. Dans le panneau **Activer l’accès**, sélectionnez **AIPOnBehalfOf**, cliquez sur **Sélectionner**, puis cliquez sur **Terminé**.
+
+12. De retour dans le panneau **Autorisations nécessaires**, sélectionnez **Accorder des autorisations**, cliquez sur **Oui** pour confirmer, puis fermez ce panneau.
     
-    Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec des paramètres.
-
-
-> [!TIP]
-> Si Set-AIPAuthentication n’a pas réussi et que vous avez utilisé des applications existantes plutôt que d’en créer de nouvelles en utilisant les instructions précédentes, vous devrez peut-être réinitialiser les autorisations obligatoires pour vos applications. Cela peut être également le cas si vous avez suivi les instructions pour créer de nouvelles applications pour Set-AIPAuthentication, mais que vous avez ensuite modifié leurs paramètres.
-> 
-> Pour réinitialiser les autorisations obligatoires pour les deux applications, utilisez les étapes de configuration suivantes : sélectionnez **Tous les paramètres** > **Autorisations nécessaires** > **Accorder des autorisations**, puis cliquez sur **Oui** pour confirmer.
-> 
-> Vous pouvez également créer de nouvelles applications en utilisant les instructions précédentes.
+Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec des paramètres.
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour obtenir de l’aide concernant les applets de commande lorsque vous avez ouvert une session PowerShell, tapez `Get-Help <cmdlet name> cmdlet`, puis utilisez le paramètre -online pour lire les informations les plus récentes. Exemple : 
+Pour obtenir de l’aide concernant les applets de commande lorsque vous avez ouvert une session PowerShell, tapez `Get-Help <cmdlet name> cmdlet`, puis utilisez le paramètre -online pour lire les informations les plus récentes. Par exemple : 
 
     Get-Help Get-RMSTemplate -online
 

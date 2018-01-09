@@ -4,7 +4,7 @@ description: "Découvrez et identifiez les droits spécifiques qui sont utilisé
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f82eb8bc415b064793c1efd9b7b88795b1ec6ff2
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 5d57f1cc7728fef1b877fc25fce01bbc9c768b3c
+ms.sourcegitcommit: 24b35e27b3aa861ae8ba6bacab571b0071b058d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuration des droits d’utilisation pour Azure Rights Management
 
@@ -36,7 +36,7 @@ La **Constante ou valeur d’API** est le nom SDK d’un appel d’API MSIPC uti
 |-------------------------------|---------------------------|-----------------|
 |Nom commun : **Modifier le contenu, Modifier** <br /><br />Encodage dans la stratégie : **DOCEDIT**|Permet à l'utilisateur de modifier, réorganiser, mettre en forme ou filtrer le contenu de l'application. N'accorde pas le droit d'enregistrer la copie modifiée.|Droits personnalisés Office : En relation avec les options **Modifier** et **Contrôle total**. <br /><br />Nom dans le portail Azure Classic : **Modifier le contenu**<br /><br />Nom dans le portail Azure : Inclus dans **Modifier et enregistrer**<br /><br />Nom dans les modèles AD RMS : **Modifier** <br /><br />Constante ou valeur d’API : Non applicable|
 |Nom commun : **Enregistrer** <br /><br />Encodage dans la stratégie : **EDIT**|Permet à l'utilisateur d'enregistrer le document à son emplacement actuel.<br /><br />Dans les applications Office, ce droit permet également à l'utilisateur de modifier le document.|Droits personnalisés Office : En relation avec les options **Modifier** et **Contrôle total**. <br /><br />Nom dans le portail Azure Classic : **Enregistrer le fichier**<br /><br />Nom dans le portail Azure : Inclus dans **Modifier et enregistrer**<br /><br />Nom dans les modèles AD RMS : **Enregistrer** <br /><br />Constante ou valeur d’API : `IPC_GENERIC_WRITE L"EDIT"`|
-|Nom commun : **Commentaire** <br /><br />Encodage dans la stratégie : **COMMENT**|Active l'option d'ajout d'annotations ou de commentaires au contenu.<br /><br />Ce droit, disponible dans le SDK, est disponible en tant que stratégie ad hoc dans le module AzureInformationProtection et de protection RMS pour Windows PowerShell. Il a été implémenté dans certaines applications de fournisseur de logiciel. Toutefois, il n’est pas largement utilisé et n’est pas actuellement pris en charge par les applications Office.|Droits personnalisés Office : Non implémenté. <br /><br />Nom dans le portail Azure Classic : Non implémenté.<br /><br />Nom dans le portail Azure : Non implémenté.<br /><br />Nom dans les modèles AD RMS : Non implémenté. <br /><br />Constante ou valeur d’API : `IPC_GENERIC_COMMENT L"COMMENT`|
+|Nom commun : **Commentaire** <br /><br />Encodage dans la stratégie : **COMMENT**|Active l’option d’ajout d’annotations ou de commentaires au contenu.<br /><br />Ce droit, disponible dans le SDK, est disponible en tant que stratégie ad hoc dans le module AzureInformationProtection et de protection RMS pour Windows PowerShell. Il a été implémenté dans certaines applications de fournisseur de logiciel. Toutefois, il n’est pas largement utilisé et n’est pas actuellement pris en charge par les applications Office.|Droits personnalisés Office : Non implémenté. <br /><br />Nom dans le portail Azure Classic : Non implémenté.<br /><br />Nom dans le portail Azure : Non implémenté.<br /><br />Nom dans les modèles AD RMS : Non implémenté. <br /><br />Constante ou valeur d’API : `IPC_GENERIC_COMMENT L"COMMENT`|
 |Nom commun : **Enregistrer sous, Exporter** <br /><br />Encodage dans la stratégie : **EXPORT**|Active l'option d'enregistrement du contenu sous un autre nom de fichier (Enregistrer sous). Pour les documents Office et le client Azure Information Protection, le fichier peut être enregistré sans protection.<br /><br />Ce droit permet également à l'utilisateur d'utiliser d'autres options d'exportation dans les applications, telles que **Envoyer à OneNote**.<br /><br /> Remarque : si ce droit n’est pas accordé, les applications Office permettent à un utilisateur d’enregistrer un document sous un nouveau nom si le format de fichier sélectionné en mode natif prend en charge la protection Rights Management.|Droits personnalisés Office : En relation avec les options **Modifier** et **Contrôle total**. <br /><br />Nom dans le portail Azure Classic : **Exporter le contenu (Enregistrer sous)** <br /><br />Nom dans le portail Azure : Inclus dans **Contrôle total**<br /><br />Nom dans les modèles AD RMS : **Exporter (Enregistrer sous)** <br /><br />Constante ou valeur d’API : `IPC_GENERIC_EXPORT L"EXPORT"`|
 |Nom commun : **Transférer** <br /><br />Encodage dans la stratégie : **FORWARD**|Active l'option de transfert de message électronique et d'ajout de destinataires aux lignes **À** et **CC** . Ce droit ne s’applique pas aux documents, mais uniquement aux e-mails.<br /><br />N'autorise pas le redirecteur à accorder des droits à d'autres utilisateurs dans le cadre de l'action de transfert. <br /><br />Quand vous accordez ce droit, vous devez également accorder le droit **Modifier le contenu, Modifier** (nom commun) pour que l’e-mail d’origine soit inclus dans le corps de l’e-mail transféré, et pas sous forme de pièce jointe. Ce droit est également obligatoire pour envoyer un e-mail à une autre organisation qui utilise le client Outlook ou Outlook Web App. Il est également obligatoire pour les utilisateurs de votre organisation qui sont exemptés de l’utilisation du service Azure Rights Management, car vous avez implémenté des [contrôles d’intégration](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|Droits personnalisés Office : Refusés en cas d’utilisation de la stratégie standard **Ne pas transférer**.<br /><br />Nom dans le portail Azure Classic : **Transférer**<br /><br />Nom dans le portail Azure : **Transférer**<br /><br />Nom dans les modèles AD RMS : **Transférer** <br /><br />Constante ou valeur d’API : `IPC_EMAIL_FORWARD L"FORWARD"`|
 |Nom commun : **Contrôle total** <br /><br />Encodage dans la stratégie : **OWNER**|Accorde tous les droits sur le document. Toutes les actions disponibles peuvent être effectuées.<br /><br />Inclut la possibilité de supprimer la protection et de reprotéger un document. <br /><br />Notez que ce droit d’utilisation n’est pas le même que le [propriétaire Rights Management](#rights-management-issuer-and-rights-management-owner).|Droits personnalisés Office : Comme l’option personnalisée **Contrôle total**.<br /><br />Nom dans le portail Azure Classic : **Contrôle total**<br /><br />Nom dans le portail Azure : **Contrôle total**<br /><br />Nom dans les modèles AD RMS : **Contrôle total** <br /><br />Constante ou valeur d’API : `IPC_GENERIC_ALL L"OWNER"`|
@@ -57,8 +57,8 @@ Utilisez le tableau suivant pour obtenir la liste de ces niveaux d’autorisatio
 |---------------------|----------------|---------------------------------|
 |Observateur|Portail Azure Classic <br /><br />Portail Azure<br /><br /> Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Répondre ; Répondre à tous ; Autoriser les macros [[1]](#footnote-1)<br /><br />Remarque : Pour les e-mails, utilisez plutôt le niveau d’autorisation Réviseur pour vous assurer que la réponse à un e-mail sera reçue sous forme d’e-mail, et non de pièce jointe. Le niveau Réviseur est également obligatoire pour envoyer un e-mail à une autre organisation qui utilise le client Outlook ou Outlook Web App. Il est également obligatoire pour les utilisateurs de votre organisation qui sont exemptés de l’utilisation du service Azure Rights Management, car vous avez implémenté des [contrôles d’intégration](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
 |Réviseur|Portail Azure Classic <br /><br />Portail Azure<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Répondre : Répondre à tous [[2]](#footnote-2) ; Transférer [[2]](#footnote-2) ; Autoriser les macros [[1]](#footnote-1)|
-|Coauteur|Portail Azure Classic <br /><br />Portail Azure<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Autoriser les macros ; Enregistrer sous, Exporter [[3]](#footnote-3) ; Imprimer ; Répondre [[2]](#footnote-2) ; Répondre à tous [[2]](#footnote-2) ; Transférer [[2]](#footnote-2)|
-|Copropriétaire|Portail Azure Classic <br /><br />Portail Azure<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Autoriser les macros ; Enregistrer sous, Exporter ; Imprimer ; Répondre [[2]](#footnote-2) ; Répondre à tous [[2]](#footnote-2) ; Transférer [[2]](#footnote-2) ; Contrôle total|
+|Coauteur|Portail Azure Classic <br /><br />Portail Azure<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Autoriser les macros ; Enregistrer sous, Exporter [[3]](#footnote-3) ; Imprimer ; Répondre [[2]](#footnote-2) ; Répondre à tous [[2]](#footnote-2) ; Transférer [[2]](#footnote-2)|
+|Copropriétaire|Portail Azure Classic <br /><br />Portail Azure<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Autoriser les macros ; Enregistrer sous, Exporter ; Imprimer ; Répondre [[2]](#footnote-2) ; Répondre à tous [[2]](#footnote-2) ; Transférer [[2]](#footnote-2) ; Contrôle total|
 
 ----
 
@@ -70,8 +70,7 @@ Pour le client Azure Information Protection pour Windows, ce droit est nécessai
 Ne s’applique pas au client Azure Information Protection pour Windows, ni à l’application de partage Rights Management pour Windows.
 
 ###### <a name="footnote-3"></a>Note 3
-Non inclus dans le client Azure Information Protection pour Windows. Dans ce client, le droit d’utilisation Exporter inclut la possibilité de supprimer la protection.
-
+Non inclus dans le portail Azure ou le client Azure Information Protection pour Windows.
 
 ## <a name="rights-included-in-the-default-templates"></a>Droits inclus dans les modèles par défaut
 Le tableau suivant répertorie les droits d’utilisation inclus quand les modèles par défaut sont créés. Les droits d’utilisation sont répertoriés selon leur [nom commun](#usage-rights-and-descriptions).
@@ -114,7 +113,7 @@ L’émetteur Rights Management a toujours le droit d’utilisation Contrôle to
 
 - L’émetteur Rights Management garde le droit d’ouvrir un document ayant été révoqué. 
 
-Par défaut, ce compte est également le **propriétaire Rights Management** de ce contenu, ce qui est le cas quand le créateur du document ou de l’e-mail démarre la protection. Dans certains scénarios, un administrateur ou un service peut protéger du contenu pour le compte d’utilisateurs. Exemple :
+Par défaut, ce compte est également le **propriétaire Rights Management** de ce contenu, ce qui est le cas quand le créateur du document ou de l’e-mail démarre la protection. Dans certains scénarios, un administrateur ou un service peut protéger du contenu pour le compte d’utilisateurs. Par exemple :
 
 - Un administrateur protège les fichiers en bloc sur un partage de fichiers : le compte Administrateur dans Azure AD protège les documents des utilisateurs.
 

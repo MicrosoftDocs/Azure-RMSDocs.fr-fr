@@ -4,7 +4,7 @@ description: "Vous ne comprenez pas un mot, une expression ou un acronyme lié �
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 12/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f2c0053a8f1f4cde5193b65e5b8e521a2b6934c1
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: da20ac2ea327b5b97f021c85f62d97b9aa1b9824
+ms.sourcegitcommit: fc205eae0c0b378d41da5f1eceb0c699e60ad66f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie liée à Azure Information Protection
 
@@ -26,8 +26,8 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 
 |Terme|Définition|
 |--------|--------------|
-|AADRM|Nom du module Windows PowerShell pour le service Azure Rights Management, dérivé de l’abréviation non officielle d’[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] quand la solution s’appelait (Windows) Azure Active Directory Rights Management.|
-|activer|Permet d’activer le service [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] pour qu’une organisation puisse protéger ses documents et ses e-mails. Cette action active également les fonctionnalités Rights Management dans Exchange Online et SharePoint Online.|
+|AADRM|Nom du module Windows PowerShell pour le service Azure Rights Management, dérivé de l’abréviation non officielle d’Azure Rights Management quand la solution s’appelait (Windows) Azure Active Directory Rights Management.|
+|activer|Permet d’activer le service Azure Rights Management pour qu’une organisation puisse protéger ses documents et ses e-mails. Cette action active également les fonctionnalités Rights Management dans Exchange Online et SharePoint Online.|
 |Active Directory Rights Management Services|Souvent abrégé *AD RMS*.<br /><br />Rôle Windows Server qui assure la protection par la gestion des droits par le biais du chiffrement et de stratégies, à des fins de sécurisation des documents, des fichiers et des e-mails.|
 |AD RMS|Voir *Services Active Directory Rights Management*.|
 |Azure Information Protection|Service cloud qui utilise la classification, l’étiquetage et la protection pour aider à sécuriser des documents et des e-mails. Azure Rights Management offre une protection à l’aide de stratégies de chiffrement, d’identité et d’autorisation.|
@@ -56,8 +56,10 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |.ppdf|Extension de nom de fichier créée par un service de gestion des droits au moment de la création automatique d’une copie PDF d’un fichier (Word, Excel, PowerPoint ou PDF) que vous partagez par e-mail, afin que le fichier puisse être lu (mais pas modifié) sur tous les appareils.|
 |niveau d’autorisation|Regroupement logique des droits d’utilisation qui permet aux utilisateurs finals et aux administrateurs de choisir plus facilement les options de configuration basées sur des rôles. Par exemple, Réviseur et Coauteur.|
 |protéger|Appliquer des contrôles de gestion des droits à des fichiers ou à des e-mails via des stratégies de chiffrement, d’identité et de contrôle d’accès afin de sécuriser vos données.|
-|publish|Protection des fichiers en vue d'empêcher tout accès et utilisation non autorisés.|
+|publier|Protection des fichiers en vue d'empêcher tout accès et utilisation non autorisés.|
 |connecteur Rights Management|Relais de proxy sortant que vous pouvez déployer pour des services locaux, comme Exchange Server et SharePoint, afin de protéger les données à l’aide du service Azure Rights Management.|
+|Émetteur Rights Management|Compte qui a protégé un document ou un e-mail.|
+|Propriétaire Rights Management|Compte qui conserve le contrôle total sur un document ou un e-mail protégé quand il se voit automatiquement octroyé le droit d’utilisation Contrôle total de la gestion des droits et exempté de toute date d’expiration ou de paramètre hors connexion.|
 |services Rights Management|Terme générique qui s’applique à la fois à la version cloud de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ([!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]) et à la version locale de [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] (AD RMS).|
 |application de partage Rights Management|Désormais remplacée par le client Azure Information Protection, une application en option pour Windows et les appareils mobiles les plus courants, qui prend en charge le partage sécurisé de fichiers en local et par courrier électronique.|
 |RMS|Voir *Services Rights Management*.|

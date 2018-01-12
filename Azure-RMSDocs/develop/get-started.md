@@ -2,8 +2,8 @@
 title: Prise en main | Azure RMS
 description: "Une approche rapide pour développer une première application se fait via les guides de configuration de l’environnement de développement pour chacun des systèmes d’exploitation/plateformes."
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d5af47409ba4f12cb7265532f2212a231ee2c0e4
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: bddbc42a555ee6ccbd4dd7b41a4183374a1db070
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -52,6 +52,6 @@ Pour cette version de Microsoft Rights Management SDK 4.2, une approche rapide 
   |[Nouveautés](release-notes.md)|MS RMS SDK 4.2 améliore encore le niveau de simplicité et de flexibilité pour la mise en œuvre d’applications RMS.|
   |[Configurer l’environnement de développement](setup-developer-environment.md)|Les rubriques suivantes vous montrent comment configurer votre environnement de développement pour l’utilisation des API d’AD RMS SDK pour votre système d’exploitation.|
   |[Exemples de code](code-examples.md)|MS RMS SDK 4.2 comprend un exemple de code et des projets de travail pour certains des systèmes d’exploitation pris en charge.|
-  |[Ressources de la communauté](community-resources.md)|Active Directory Rights Management Services est également pris en charge par une communauté croissante de développeurs sur plusieurs plateformes.|
+  |[Ressources de la communauté](community-resources.md)|Active Directory Rights Management Services est bien pris en charge par une communauté croissante de développeurs sur plusieurs plateformes.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

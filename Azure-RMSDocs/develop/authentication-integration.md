@@ -2,8 +2,8 @@
 title: "Procédure d’inscription de votre application dans Azure AD - AIP"
 description: "Décrit les principes fondamentaux de l’authentification utilisateur pour votre application RMS."
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 6034f922cccbe7e91bf420543749f1de6091e4e3
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 1d7a5a41c16a8a1354933b13449875de7ec0902e
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Procédure d’inscription et d’activation RMS de votre application dans Azure AD
 

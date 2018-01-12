@@ -2,8 +2,8 @@
 title: Installation iOS et OS X | Azure RMS
 description: "Les applications iOS et OS X peuvent utiliser RMS SDK 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’AAD RM."
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,17 +14,17 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: ed077a6d908ae5d9b6b3b187cee9c63f47dc826d
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f2cb573f8c347215f130fd76321886ade2877a16
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="ios-and-os-x-setup"></a>Installation iOS et OS X
 
 Les applications iOS et OS X peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’Azure Rights Management (Azure RMS).
 
-Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
+Cette rubrique vous guide tout au long du processus de configuration de votre environnement pour créer vos propres applications.
 
 **Remarque**  Ce SDK ne prend pas en charge l’iPod Touch.
 
@@ -34,7 +34,7 @@ Cette rubrique explique comment configurer votre environnement pour créer vos p
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 Nous vous recommandons de disposer des logiciels suivants sur votre système de développement :
 

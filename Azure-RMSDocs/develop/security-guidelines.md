@@ -1,8 +1,8 @@
 ---
 title: "Bonnes pratiques de sécurité | Microsoft Information Protection"
 description: "Vous développez de meilleures applications compatibles RMS en suivant les bonnes pratiques Azure Information Protection."
-author: BrucePerlerMS
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -12,11 +12,11 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 37b91a1b3e0a25f6014198998609d33dcc0979ae
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 04fc73bac667b461a37e87a1c726c5a645495197
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Bonnes pratiques de sécurité pour Azure Information Protection
 

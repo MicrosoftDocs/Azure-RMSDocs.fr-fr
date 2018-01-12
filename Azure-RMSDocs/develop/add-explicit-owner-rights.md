@@ -2,8 +2,8 @@
 title: "Procédure d’ajout des droits de propriétaire explicites | Azure RMS"
 description: "Votre application doit ajouter explicitement les droits « Propriétaire » lors de la création d’une licence à partir de rien."
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,17 +14,17 @@ ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 5d4f38e90747f67209e66def1a7b2cb03bab7e4f
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 8426b8c1425677e7ddc5772d4f3c4f6d38b01083
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="how-to-add-explicit-owner-rights"></a>Comment : ajouter des droits de propriétaire explicites
 
 Votre application doit ajouter explicitement les droits « Owner » lors de la création d’une licence à partir de rien (à l’aide de [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 Quand votre application crée un handle de licence en utilisant [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx), elle doit également accorder explicitement les droits (autorisations) complets de propriétaire.
 

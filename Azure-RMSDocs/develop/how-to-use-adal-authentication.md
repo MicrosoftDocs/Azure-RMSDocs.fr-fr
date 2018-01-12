@@ -2,8 +2,8 @@
 title: Authentification ADAL pour votre application compatible RMS | Azure RMS
 description: "Décrit le processus d’authentification avec la bibliothèque ADAL"
 keywords: authentification, RMS, ADAL
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 9144ee7c9eef7f8b573feafd7372fa339a426e03
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 422234063eaa28eefed5e195cd6a2c3131a880d5
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="how-to-use-adal-authentication"></a>Comment : utiliser l’authentification ADAL
 

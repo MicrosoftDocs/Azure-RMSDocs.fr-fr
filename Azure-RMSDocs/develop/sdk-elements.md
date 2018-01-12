@@ -2,8 +2,8 @@
 title: "Fichiers d’environnement de développement | Azure RMS"
 description: "Cette rubrique présente les fichiers d’environnement de développement et leurs emplacements d’installation relatifs sur votre ordinateur."
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2a3d658e420c7306526aaf85aec61f3e13ef67af
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f79c0d60bf460c0f8cca68f6b0447303a383c686
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="development-environment-files"></a>Fichiers d’environnement de développement
 

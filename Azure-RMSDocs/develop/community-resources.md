@@ -2,8 +2,8 @@
 title: "Ressources de la communauté de développeurs | Microsoft Docs"
 description: "Azure Information Protection est bien pris en charge par une communauté croissante de développeurs sur plusieurs plates-formes."
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
@@ -14,15 +14,15 @@ ms.assetid: e3bdaa6d-e8ca-421a-a429-553bfc54b78b
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 8690536d3880c465fb5d42812324d1057cf60f38
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: daec2cd2d27245f2eb741eedc1f84ea69c8c0e4f
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="community-resources"></a>Ressources de la communauté
 
-Active Directory Rights Management Services est également pris en charge par une communauté croissante de développeurs sur plusieurs plateformes.
+Active Directory Rights Management Services est bien pris en charge par une communauté croissante de développeurs sur plusieurs plateformes.
 
 ## <a name="developers-blog"></a>Blog du développeur
 Le blog [RMS Developer’s Corner](http://blogs.msdn.com/b/rms/) est un hub actif destiné aux développeurs de solutions de protection des informations.

@@ -2,8 +2,8 @@
 title: "Procédure d’activation du suivi et de la révocation de documents | Azure RMS"
 description: "Instructions de base pour implémenter le suivi des documents pour le contenu ainsi qu’un exemple de code pour les mises à jour de métadonnées et un bouton Suivre l’utilisation pour votre application."
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,13 +14,11 @@ ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-experimental: True
-experiment_id: priyamo-test-20160729
-ms.openlocfilehash: 6cc1b9d6e1dbc27ca178965bd9bfffd884d0ec9a
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: e632e99f42947afa10223bb1b11fcc18cdec6f7a
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>Comment : activer le suivi et la révocation de documents
 

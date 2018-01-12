@@ -2,8 +2,8 @@
 title: "Informations de référence pour l'API SDK 4.2 | Microsoft Docs"
 description: "L'Azure Information Protection SDK 4.2 prend en charge plusieurs systèmes d’exploitation : Android, iOS, OS X, Linux, Windows Phone et Windows Store."
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 6a8df1d8-1279-4189-b17d-f128b7ca5643
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: b1547df59050e496242706cc9a789ae46ffccd20
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 078f7900cb15631e875d01539bc0a62c99cbf73c
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="api-sdk-42-reference"></a>Référence pour l'API SDK 4.2
 

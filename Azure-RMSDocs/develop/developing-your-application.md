@@ -2,8 +2,8 @@
 title: "Développement de votre application - AIP"
 description: "Instructions pour une application console de base qui implémente la protection des documents avec Azure Information Protection (AIP)"
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1854329b9cb949a6b4318d00f981f0be9065a33e
-ms.sourcegitcommit: 1b6af3c85ed32e8d80ed10cb6ba86fc61026eaa4
+ms.openlocfilehash: 794e0b89f58944c6734992c57e1ad3a7aa58238a
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="developing-your-application"></a>Développement de votre application
 

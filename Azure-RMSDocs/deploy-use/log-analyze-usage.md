@@ -4,7 +4,7 @@ description: "Informations et instructions sur la journalisation de l’utilisat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a7a983ed075e41ee6f3328634b451107e579134d
-ms.sourcegitcommit: e089661f23f199b122b0ca9ba4748792b349bc27
+ms.openlocfilehash: cf919749b74727412ab6fa76cc52a5c71b69efcd
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Journalisation et analyse de l’utilisation du service Azure Rights Management
 
@@ -45,7 +45,6 @@ En plus de cette journalisation de l’utilisation, vous disposez également des
 |Option de journalisation|Description|
 |----------------|---------------|
 |Journal d’administration|Journalise les tâches d’administration du service Azure Rights Management. Par exemple, si le service est désactivé, lorsque la fonctionnalité de super utilisateur est activée et lorsque des utilisateurs délèguent des autorisations d’administrateur au service. <br /><br />Pour plus d'informations, consultez l’applet de commande PowerShell, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
-|Rapports web|Rapport d’utilisation général depuis le portail Azure Classic : **Résumé RMS**, **Utilisateurs RMS actifs**, **Plateformes des appareils RMS** et **Utilisation d’applications RMS**. <br /><br />Pour accéder à ces rapports depuis le portail Azure Classic, cliquez sur **Active Directory**, sélectionnez et ouvrez un répertoire, puis cliquez sur **RAPPORTS**.|
 |Suivi des documents|Permet aux utilisateurs d’effectuer le suivi et de révoquer les documents dont ils ont effectué le suivi avec le client Azure Information Protection ou l’application de partage RMS. Les administrateurs généraux peuvent également effectuer le suivi de ces documents au nom des utilisateurs. <br /><br />Pour plus d’informations, consultez [Configuration et utilisation du suivi des documents pour Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
 |Journaux des événements clients|Activité d’utilisation pour le client Azure Information Protection, enregistrée dans le journal des événements **Applications et services** Windows local, **Azure Information Protection**. <br /><br />Pour plus d’informations, consultez [Journalisation de l’utilisation du client Azure Information Protection](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Fichiers journaux clients|Journaux de dépannage pour le client Azure Information Protection, situé dans **%localappdata%\Microsoft\MSIP**. <br /><br />Ces fichiers sont destinés au Support Microsoft.|
@@ -105,7 +104,7 @@ Par défaut, cette applet de commande utilise trois threads pour télécharger l
 #### <a name="if-you-manually-enabled-azure-rights-management-usage-logging-before-the-logging-change-february-22-2016"></a>Si vous avez activé manuellement la journalisation de l’utilisation Azure Rights Management avant le changement de journalisation du 22 février 2016
 
 
-Si vous utilisiez la journalisation de l’utilisation avant le changement de journalisation, vous aurez des journaux d’utilisation dans votre compte de stockage Azure. Dans le cadre de ce changement de journalisation, Microsoft ne copie pas ces journaux de votre compte de stockage vers le nouveau compte de stockage géré par Azure Rights Management. Vous êtes responsable de la gestion du cycle de vie des journaux générés précédemment, et vous pouvez utiliser l’applet de commande [Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) pour télécharger vos anciens journaux. Exemple :
+Si vous utilisiez la journalisation de l’utilisation avant le changement de journalisation, vous aurez des journaux d’utilisation dans votre compte de stockage Azure. Dans le cadre de ce changement de journalisation, Microsoft ne copie pas ces journaux de votre compte de stockage vers le nouveau compte de stockage géré par Azure Rights Management. Vous êtes responsable de la gestion du cycle de vie des journaux générés précédemment, et vous pouvez utiliser l’applet de commande [Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) pour télécharger vos anciens journaux. Par exemple :
 
 - Pour télécharger tous les journaux disponibles dans votre dossier E:\logs : `Get-AadrmUsageLog -Path "E:\Logs"`
     
@@ -148,8 +147,8 @@ Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des c
 |request-type|Nom|Nom de l’API RMS demandée.|AcquireLicense|
 |user-id|Chaîne|Utilisateur ayant adressé la demande.<br /><br />La valeur est placée entre guillemets simples. Les appels à partir d’une clé de locataire gérée par vous (BYOK) ont la valeur **"**, qui s’applique également quand les types de demande sont anonymes.|‘joe@contoso.com’|
 |result|Chaîne|« Success » si la demande a été traitée correctement.<br /><br />Type d’erreur (entre guillemets simples) si la demande échoue.|« Success »|
-|correlation-id|Text|GUID commun au journal du client RMS et au journal du serveur pour une demande donnée.<br /><br />Cette valeur peut être utile pour résoudre les problèmes liés au client.|cab52088-8925-4371-be34-4b71a3112356|
-|content-id|Text|GUID (entre accolades) qui identifie le contenu protégé (par exemple, un document).<br /><br />Ce champ contient une valeur uniquement si le champ request-type est égal à AcquireLicense. Sinon, il reste vierge pour les autres types de demande.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
+|correlation-id|Texte|GUID commun au journal du client RMS et au journal du serveur pour une demande donnée.<br /><br />Cette valeur peut être utile pour résoudre les problèmes liés au client.|cab52088-8925-4371-be34-4b71a3112356|
+|content-id|Texte|GUID (entre accolades) qui identifie le contenu protégé (par exemple, un document).<br /><br />Ce champ contient une valeur uniquement si le champ request-type est égal à AcquireLicense. Sinon, il reste vierge pour les autres types de demande.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|Chaîne|Adresse de messagerie du propriétaire du document.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|alice@contoso.com|
 |issuer|Chaîne|Adresse de messagerie de l’émetteur du document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|alice@contoso.com ou FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |template-id|Chaîne|ID du modèle utilisé pour protéger le document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|

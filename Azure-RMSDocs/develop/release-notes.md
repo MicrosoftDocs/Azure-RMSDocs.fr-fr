@@ -1,23 +1,9 @@
+# <a name="required-metadata"></a>métadonnées obligatoires
+
+titre : Description des nouveautés et des notes de publication : décrit les modifications et fonctionnalités importantes de cette version et des précédentes.
+auteur: lleonard-msft ms.author: alleonar manager: mbaldwin ms.date: 25/09/2017 ms.topic: article ms.service: information-protection ms.technology: techgroup-identity ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af public : developer ms.reviewer: kartikk ms.suite: ems
 ---
-title: "Nouveautés et notes de publication"
-description: "Décrit les fonctionnalités et modifications importantes de cette version et des précédentes."
-author: bruceperlerms
-ms.author: bruceper
-manager: mbaldwin
-ms.date: 09/25/2017
-ms.topic: article
-ms.service: information-protection
-ms.technology: techgroup-identity
-ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
-audience: developer
-ms.reviewer: kartikk
-ms.suite: ems
-ms.openlocfilehash: 6587685e3bd40d696ce24a9aa0ed80d1f6f43f55
-ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2017
----
+
 # <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
 
 ## <a name="whats-new"></a>Nouveautés
@@ -148,7 +134,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 **Commun à toutes les plateformes**
 
--   Les API du kit SDK RMS 4.x ne sont pas *thread-safe*.
+-   Les API du Kit de développement logiciel (SDK) RMS 4.x ne sont pas *thread-safe*.
 
 **Android**
 

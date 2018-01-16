@@ -4,7 +4,7 @@ description: "Configurer et gérer des modèles Rights Management à partir du p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,20 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb6aeea8f939614b9c1903d8e006815228f99723
-ms.sourcegitcommit: f6ba613445463c3c4c64b1620095d54b48194650
+ms.openlocfilehash: f69a163566a9654ee6286c4bf9ca4d018e8f8db5
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
 >*S’applique à : Azure Information Protection*
 
 >[!NOTE]
->Cette fonctionnalité remplace la configuration de modèles personnalisés dans le portail Azure Classic. Pour trouver rapidement les fonctionnalités de remplacement, consultez [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
->
->Même si vous pouvez toujours créer et gérer les modèles dans le portail Azure Classic, nous vous déconseillons de gérer les mêmes modèles à partir du portail Azure Classic et du portail Azure. L’implémentation de la configuration des modèles dans ces différents portails a changé : configurer le même modèle dans des portails différents peut aboutir à une configuration non fiable.
+>Cette fonctionnalité remplace la configuration de modèles personnalisés dans le portail Azure Classic. Le portail classique est maintenant hors service, vous devez utiliser le portail Azure. Pour trouver rapidement les fonctionnalités de remplacement, consultez [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
 
 
 Les modèles Rights Management sont désormais intégrés à la stratégie Azure Information Protection. 
@@ -36,11 +34,11 @@ Les modèles Rights Management sont désormais intégrés à la stratégie Azure
 
 **Lorsque vous avez un abonnement qui inclut uniquement la protection (un abonnement Office 365 qui inclut le service Azure Rights Management) :**
 
-- Les modèles Rights Management de votre locataire sont affichés dans le panneau **Azure Information Protection - Stratégie globale**, à la section **Modèles de protection**. Aucune étiquette n’est affichée. Vous voyez également les paramètres de configuration qui sont spécifiques à la classification et l’étiquetage, mais ceux-ci n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
+- Les modèles Rights Management de votre locataire sont affichés dans le panneau **Azure Information Protection - Stratégie globale**, à la section **Modèles de protection**. Aucune étiquette n’est affichée. Vous voyez également les paramètres de configuration qui sont spécifiques à la classification et l’étiquetage, mais ces paramètres n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
 
 ## <a name="default-templates"></a>Modèles par défaut
 
-Quand vous obtenez votre abonnement pour Azure Information Protection ou pour un abonnement Office 365 qui inclut le service Azure Rights Management, deux modèles par défaut sont créés automatiquement pour votre locataire, qui limitent l’accès aux utilisateurs autorisés de votre organisation. Quand ces deux modèles sont créés, ils ont les autorisations qui sont répertoriées dans la documentation [Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md#rights-included-in-the-default-templates).
+Quand vous obtenez votre abonnement pour Azure Information Protection ou pour un abonnement Office 365 qui inclut le service Azure Rights Management, deux modèles par défaut sont créés automatiquement pour votre locataire. Ces modèles limitent l’accès aux utilisateurs autorisés de votre organisation. Quand ces modèles sont créés, ils ont les autorisations listées dans la documentation [Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md#rights-included-in-the-default-templates).
 
 Par ailleurs, les modèles sont configurés pour autoriser l’accès hors connexion pendant sept jours et n’ont pas de date d’expiration.
 
@@ -85,7 +83,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
     - **Autoriser les macros** (nom commun) est automatiquement ajouté. Ce droit d’utilisation est requis pour la barre Azure Information Protection dans les applications Office.
     
 
-- Les paramètres **Publié** et **Archivé** sous la forme **Activé** : **Oui** et **Activé** : **Non** respectivement sur le panneau **Étiquette**. Pour les modèles que vous voulez conserver mais qui ne doivent pas être visibles par les utilisateurs ou les services, définissez pour ceux-ci **Activé** : **Désactivé**.
+- Les paramètres **Publié** et **Archivé** sous la forme **Activé** : **Oui** et **Activé** : **Non** respectivement sur le panneau **Étiquette**. Pour les modèles que vous voulez conserver mais qui ne doivent pas être visibles par les utilisateurs ou les services, définissez-les sur **Activé** : **Désactivé**.
 
 - Vous ne pouvez pas copier ou supprimer un modèle dans le portail Azure. Quand le modèle est converti en étiquette, vous pouvez configurer l’étiquette pour qu’elle cesse d’utiliser le modèle en sélectionnant **Non configuré** pour l’option **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**. Vous pouvez aussi supprimer l’étiquette. Dans les deux cas cependant, le modèle n’est pas supprimé et reste dans un état archivé.
     
@@ -102,6 +100,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Pour configurer les modèles dans la stratégie Azure Information Protection
 
 1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général. Accédez ensuite au panneau **Azure Information Protection**.     
+    
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
 2. Si le modèle à configurer concerne tous les utilisateurs, restez dans le panneau **Azure Information Protection - Stratégie globale**.
@@ -127,7 +126,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
 
 ## <a name="to-convert-templates-to-labels"></a>Pour convertir des modèles en étiquettes
 
-Si vous avez un abonnement qui inclut la classification, l’étiquetage et la protection, vous pouvez convertir des modèles en étiquettes. Lorsque vous faites cela, le modèle d’origine est conservé, mais dans le portail Azure, il s’affiche désormais comme étant inclus dans une nouvelle étiquette.
+Si vous avez un abonnement qui inclut la classification, l’étiquetage et la protection, vous pouvez convertir des modèles en étiquettes. Lorsque vous convertissez un modèle, le modèle d’origine est conservé, mais dans le portail Azure, il s’affiche désormais comme étant inclus dans une nouvelle étiquette.
 
 Par exemple, si vous convertissez une étiquette nommée **Marketing** qui accorde des droits d’utilisation pour le groupe marketing dans le portail Azure il s’affiche maintenant comme une étiquette nommée **Marketing** qui a les mêmes paramètres de protection. Si vous modifiez les paramètres de protection de cette nouvelle étiquette, vous les changez dans le modèle et n’importe quel utilisateur ou service qui utilise ce modèle obtient les nouveaux paramètres de protection lors de la prochaine actualisation des modèles. 
 
@@ -149,7 +148,7 @@ Lorsque vous convertissez un modèle en étiquette :
 
 ## <a name="to-create-a-new-template"></a>Pour créer un nouveau modèle
 
-Quand vous créez une étiquette avec le paramètre de protection **Azure RMS** ou **Azure (clé du cloud)**, en arrière-plan, cela crée un modèle personnalisé qui est ensuite accessible pour les services et applications qui sont intégrés aux modèles Rights Management.
+Quand vous créez une étiquette avec le paramètre de protection **Azure RMS** ou **Azure (clé du cloud)**, en arrière-plan, cette action crée un modèle personnalisé qui est ensuite accessible pour les services et applications qui sont intégrés aux modèles Rights Management.
 
 1. Si le nouveau modèle concerne tous les utilisateurs, restez dans le panneau **Azure Information Protection - Stratégie globale**.
     

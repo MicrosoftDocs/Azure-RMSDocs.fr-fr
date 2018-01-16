@@ -4,7 +4,7 @@ description: "Instructions pour afficher et utiliser un document protégé qui v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 01/10/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a2eb82d81945793eb0b29d05ff8c6bd995481faf
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: aa222d484e67d5f1e08ac08b3839100de8390e4e
+ms.sourcegitcommit: d4c63df8436b2e490f196585fcb78afe8c2e8de8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guide de l’utilisateur : Afficher et utiliser des fichiers qui ont été protégés par Rights Management
 
@@ -31,24 +31,24 @@ La visionneuse s’installe automatiquement dans le cadre du client Azure Inform
 > [!NOTE]
 > Bien que l’installation du client fournisse davantage de fonctionnalités, elle requiert des autorisations de l’administrateur local et le fonctionnement intégral requiert un service correspondant à votre organisation :
 > 
-> - Azure Information Protection
+>-Azure Information Protection
 > 
-> - Gestion des droits Azure
+>-Azure Rights Management
 > 
-> - Active Directory Rights Management Services 
+>-Active Directory Rights Management Services 
 > 
 > Installez la visionneuse si vous avez reçu un document protégé par un utilisateur d’une autre organisation ou si vous n’avez pas d’autorisations d’administrateur local sur votre PC.
 
 Pour être en mesure d’ouvrir un document protégé, l’application doit être « Compatible RMS ». Les applications Office et la visionneuse Azure Information Protection sont des exemples d’applications compatibles RMS. Pour obtenir une liste d’applications par type et les appareils pris en charge, consultez le tableau [applications compatibles RMS](../get-started/requirements-applications.md#rms-enlightened-applications).  
-## <a name="messagerpmsg-as-an-email-attachment"></a>Message.rpmsg en tant que pièce jointe de courrier électronique
+## <a name="messagerpmsg-as-an-email-attachment"></a>Message.rpmsg en tant que pièce jointe  à un e-mail
 
-Si vous voyez **message.rpmsg** en tant que pièce jointe dans un e-mail, il ne s’agit pas d’un document protégé mais d’un message électronique protégé qui s’affiche comme pièce jointe. Vous ne pouvez pas utiliser la visionneuse Azure Information Protection pour Windows pour afficher ce message électronique protégé sur votre PC Windows. Vous devez à la place disposer d’une application de messagerie pour Windows qui prend en charge la protection Rights Management, comme Office Outlook. Ou vous pouvez utiliser Outlook sur le web.
+Si vous voyez **message.rpmsg** en tant que pièce jointe dans un e-mail, il ne s’agit pas d’un document protégé mais d’un message électronique protégé qui s’affiche comme pièce jointe. Vous ne pouvez pas utiliser la visionneuse Azure Information Protection pour Windows pour afficher ce message électronique protégé sur votre PC Windows. Vous avez plutôt besoin d’une application de messagerie pour Windows qui prend en charge la protection Rights Management, comme Office Outlook. Ou vous pouvez utiliser Outlook sur le web.
 
-Toutefois, si vous avez un appareil iOS ou Android, vous pouvez utiliser l’application Azure Information Protection pour ouvrir ces messages électroniques protégés. Vous pouvez télécharger cette application pour ces appareils mobiles à partir de la page [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft.
+Toutefois, si vous avez un appareil iOS ou Android, vous pouvez utiliser l’application Azure Information Protection pour ouvrir ces e-mails protégés. Vous pouvez télécharger cette application pour ces appareils mobiles à partir de la page [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft.
 
 ## <a name="prompts-for-authentication"></a>Invites pour l’authentification
 
-Pour que vous puissiez afficher le fichier protégé, le service Rights Management qui a été utilisé pour protéger le fichier doit confirmer que vous y êtes autorisé. Pour ce faire, il vérifie vos nom d’utilisateur et mot de passe. Dans certains cas, cette opération peut être mise en cache de sorte que vous ne voyez pas d'invite vous demandant vos informations d'identification. Dans d'autres cas, vous êtes invité à fournir vos informations d'identification.
+Pour que vous puissiez afficher le fichier protégé, le service Rights Management qui a été utilisé pour protéger le fichier doit confirmer que vous y êtes autorisé. Pour ce faire, il vérifie votre nom d’utilisateur et votre mot de passe. Dans certains cas, ces informations d’identification peuvent être mises en cache et donc vous ne voyez pas d’invite vous demandant de vous connecter. Dans d'autres cas, vous êtes invité à fournir vos informations d’identification.
 
 Si votre organisation ne dispose pas d’un compte cloud dont vous pouvez vous servir (pour Office 365 ou Azure) et n’utilise pas une version locale équivalente (AD RMS), vous avez deux options :
 
@@ -75,7 +75,9 @@ Si votre organisation ne dispose pas d’un compte cloud dont vous pouvez vous s
 5. Si vous avez des fichiers protégés supplémentaires à ouvrir, vous pouvez y accéder directement depuis la visionneuse, en utilisant l’option **Ouvrir**. Votre fichier sélectionné remplace le fichier d’origine dans la visionneuse. 
 
 > [!TIP]
-> Si le fichier protégé ne s’ouvre pas, vous pouvez utiliser l’option **Exécuter les diagnostics** depuis **Protéger** > **Aide et commentaires** pour que le client Azure Information Protection vérifie si des problèmes sur votre ordinateur peuvent empêcher l’ouverture d’un document protégé.
+> Si le fichier protégé ne s’ouvre pas alors que vous avez installé le client Azure Information Protection complet, essayez l’option **Réinitialiser les paramètres**. Pour accéder à cette option, à partir d’une application Office, sélectionnez le bouton **Protéger** > **Aide et commentaires** > **Réinitialiser les paramètres**. 
+> 
+> [Informations supplémentaires sur l’option Réinitialiser les paramètres](client-admin-guide.md#more-information-about-the-reset-settings-option)
 
 ## <a name="other-instructions"></a>Autres instructions
 Plus d’instructions pratiques dans le guide de l’utilisateur Azure Information Protection :

@@ -4,7 +4,7 @@ description: "Ressources pour les administrateurs, qui incluent des informations
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/29/2017
+ms.date: 01/08/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e1fb9251722656811752f7d47cb52388b5d18dc5
-ms.sourcegitcommit: 42c1e72320197534f720ca78bf25da9f139a17de
+ms.openlocfilehash: 1021d9ddfef8a9fcb256aaf71c7dc575e3befe2e
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
@@ -40,7 +40,7 @@ De plus, le responsable des PM du groupe principal en charge des informations et
 
 Un récapitulatif des modifications de la documentation est publié chaque mois sur le [blog technique d’Azure Information Protection](https://aka.ms/AIPblog). Les récapitulatifs précédents ont été publiés sur le [blog Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). Ces mises à jour de la documentation incluent des informations sur les nouvelles versions, les mises à jour des instructions de support, ainsi que les corrections et les éclaircissements apportés aux versions existantes. Ces posts sont intitulés : « **Azure Information Protection Documentation Update for – \<mois année>** ».
 
-## <a name="support-options-and-community-resources"></a>Options de support technique et ressources de la communauté
+## <a name="support-options-and-community-resources"></a>Options de support et ressources de la communauté
 Les sections suivantes fournissent des informations sur les options de support et de résolution de problème ainsi que des ressources de la communauté.
 
 ### <a name="to-contact-microsoft-support"></a>Pour contacter le support Microsoft
@@ -53,9 +53,9 @@ Pour les autres clients, utilisez les canaux de support dans le tableau suivant,
 
 |Abonnement|Instructions|
 |----------------|---------------|
-|Azure Information Protection (autonome)|Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />Vérifiez également que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : cette option est visible si vous avez un abonnement d’évaluation ou payant à Azure.<br /><br /> - **Support technique - inclus** : vous voyez cette option si vous avez un abonnement Azure gratuit pour configurer Azure Active Directory et Azure Rights Management dans le portail Azure Classic, ou si vous n’avez pas d’abonnement Azure.|
+|Azure Information Protection (autonome)|Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />Vérifiez également que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : cette option est visible si vous avez un abonnement d’évaluation ou payant à Azure.<br /><br /> - **Support technique - Inclus** : vous voyez cette option si vous n’avez pas d’abonnement Azure.|
 |Azure Information Protection et un abonnement Office 365<br /><br />Azure Rights Management avec un abonnement Office 365|Consultez [Contacter le support Office 365 pour les entreprises – Aide de l’administrateur](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) pour obtenir les numéros de téléphone et les différentes options de contact du support dans le portail d’administration Office 365.|
-|Azure Information Protection avec EMS (Enterprise Mobility + Security)|Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />Vérifiez également que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : cette option est visible si vous avez un abonnement d’évaluation ou payant à Azure.<br /><br /> - **Support technique - inclus** : cette option est visible si vous avez un abonnement Azure gratuit pour configurer des modèles personnalisés Azure Active Directory et Azure Rights Management, ou si vous n’avez pas d’abonnement Azure.|
+|Azure Information Protection avec EMS (Enterprise Mobility + Security)|Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />Vérifiez également que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : cette option est visible si vous avez un abonnement d’évaluation ou payant à Azure.<br /><br /> - **Support technique - Inclus** : vous voyez cette option si vous n’avez pas d’abonnement Azure.|
 |Azure Information Protection avec Microsoft 365 Entreprise|Utilisez les [canaux de support d’Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
 Pour connaître les autres options de support, adressez-vous à votre contact Microsoft. 
@@ -69,7 +69,7 @@ Vidéos à la demande :
 
 - Sessions Microsoft Virtual Academy incluant [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection).
 
-Résolution des problèmes :
+Résolution de problèmes :
 
 - Si vous avez une question sur un point spécifique, consultez la page [Forum Aux Questions](faqs.md).
 

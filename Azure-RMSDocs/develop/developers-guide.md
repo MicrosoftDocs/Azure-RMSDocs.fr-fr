@@ -1,8 +1,8 @@
 ---
 title: "Guide du développeur Azure Information Protection"
 description: "Les développeurs peuvent utiliser Azure Information Protection pour protéger et gérer des fichiers de tout type"
-author: BrucePerlerMS
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: article
@@ -11,11 +11,11 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 2aba222457dfb56cca29e1a2948cc08041552d9f
-ms.sourcegitcommit: f3d5a1de317b9bd114d802b3965bf6b679d7ccf2
+ms.openlocfilehash: a32f4d774b67007ccc6638e3151bd6038e3f274c
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guide du développeur Azure Information Protection
 
@@ -98,15 +98,9 @@ Chacune des rubriques suivantes présente les instructions spécifiques d’un a
 - [Guide pratique pour utiliser des droits intégrés (utilisateur)](built-in-rights-usage-restriction-reference.md)
 - [Guide pratique pour activer la journalisation des erreurs et des performances (utilisateur)](enabling-logging.md)
 
-## <a name="videos"></a>Vidéos
+## <a name="introduction-and-datasheets"></a>Introduction et feuilles de données
 
 [Présentation d’Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)
-
-Ces vidéos sont extraites de la conférence Microsoft 2016 Ignite
-
-- [Sécurité des e-mails à l’intérieur de votre organisation](https://myignite.microsoft.com/videos/2787)
-- [Adopter une solution complète basée sur les identités pour protéger et partager des données en toute sécurité](https://myignite.microsoft.com/videos/2784)
-- [Découvrir comment la classification, l’étiquetage et la protection offrent une protection des données persistantes](https://myignite.microsoft.com/videos/2786)
 
 ## <a name="other-resources"></a>Autres ressources
 

@@ -4,7 +4,7 @@ description: "Instructions et informations destinées aux administrateurs pour l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/04/2018
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d4ad7c3419d3ad83389baece95c1e30c32f06da6
-ms.sourcegitcommit: 7b90b3692bbef6fafab41c0f8c56bd4350985f37
+ms.openlocfilehash: 3ff9a63f5b8565cac131e7b69a674fc8be902d0f
+ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 
@@ -74,7 +74,7 @@ Ensuite, vérifiez les prérequis supplémentaires qui peuvent être nécessaire
 
 - Pour les versions d’Office 16.0.8628.2010 et ultérieures (Démarrer en un clic) : activer la prise en charge héritée pour les moniteurs
     
-    Pour empêcher que la barre Azure Information Protection ne s’affiche en dehors des logiciels Office de ces versions Office, activez la prise en charge héritée pour les moniteurs. Pour configurer les logiciels Office : **Fichier** > **Général** > **Options de l’interface utilisateur** :
+    Pour empêcher que la barre Azure Information Protection ne s’affiche en dehors des logiciels Office de ces versions Office, activez la prise en charge héritée pour les moniteurs. Pour configurer les applications Office : **Fichier** > **Options** > **Général** > **Options de l’interface utilisateur** :
     
     - Si vous voyez que l’option **Lors de l’utilisation de plusieurs écrans** est définie avec **Ajuster afin d’obtenir la meilleure apparence**, sélectionnez plutôt **Optimiser pour la compatibilité (redémarrage obligatoire du logiciel)**. 
         
@@ -191,7 +191,7 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     
     |Version d’Office|Système d'exploitation|Logiciels|Action|
     |--------------------|--------------|----------------|---------------------|
-    |Office 2016|Toutes les versions prises en charge|64 bits : [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55073)<br /><br />32 bits : [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55058)<br /><br /> Version : 1.0|Installer|
+    |Office 2016|Toutes les versions prises en charge|64 bits : [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bits : [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installer|
     |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installer|
     |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installer|
     |Office 2010|Windows 8.1 et Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB2843630 ou KB2919355 n’est pas installé|
@@ -215,7 +215,7 @@ Une fois que vous avez installé le client, vous être prêt à installer le sca
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez installé le client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :
 
-- [Personnalisations](client-admin-guide-customizations.md)
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Fichiers du client et journalisation de l’utilisation](client-admin-guide-files-and-logging.md)
 

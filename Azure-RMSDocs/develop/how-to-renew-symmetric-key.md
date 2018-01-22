@@ -2,20 +2,20 @@
 title: "Guide pratique pour renouveler la clé symétrique dans Azure Information Protection"
 description: "Cet article décrit le processus de renouvellement d’une clé symétrique dans Azure Information Protection."
 keywords: 
-author: kkanakas
+author: lleonard-msft
 manager: mbaldwin
-ms.author: kartikk
+ms.author: alleonar
 ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
-ms.openlocfilehash: 6153067c308206cb93ad99de1075913c68d1fa3b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 159e5b58883490e4417ecbdb9815340c9ccaa66d
+ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>Guide pratique pour renouveler la clé symétrique dans Azure Information Protection
 
@@ -23,7 +23,7 @@ Une **clé symétrique** est un secret qui chiffre et déchiffre un message dans
 
 Dans Azure AD (Azure Active Directory), quand vous créez un objet principal de service pour représenter une application, le processus génère également une clé symétrique 256 bits pour vérifier l’application. Par défaut, cette clé symétrique est valable un an. 
 
-Les étapes ci-dessous décrivent comment renouveler la clé symétrique. 
+Les étapes suivantes montrent comment renouveler la clé symétrique. 
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -60,7 +60,7 @@ EndDate : 3/22/2018 3:27:53 PM
 Usage : Verify
 ```
 
-La clé symétrique créée dans l’exemple ci-dessus expire le 22/03/2018 à 15:27:53. Pour pouvoir continuer à utiliser le principal de service après cette date, vous devez renouveler la clé symétrique. Vous pouvez le faire avec la commande [`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential). 
+Cette clé symétrique expire le 22/03/2018 à 15:27:53. Pour utiliser le principal de service après cette date, vous devez renouveler la clé symétrique. Pour ce faire, utilisez la commande [`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential). 
 
 ```
 New-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963
@@ -71,10 +71,10 @@ Elle crée une clé symétrique pour l’élément **AppPrincipalId** spécifié
 ```
 The following symmetric key was created as one was not supplied ON8YYaMYNmwSfMX625Ei4eC6N1zaeCxbc219W090v28-
 ```
-Vous pouvez utiliser la commande [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) pour vérifier que la nouvelle clé symétrique est associée au principal de service approprié comme indiqué. Notez que la commande liste toutes les clés qui sont associées au principal de service.
+Vous pouvez utiliser la commande [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) pour vérifier que la nouvelle clé symétrique est associée au principal de service approprié comme indiqué. Notez que la commande liste toutes les clés actuellement associées au principal de service.
 
 ```
-Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues true
+Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues $true
 
 Type : Symmetric
 Value :

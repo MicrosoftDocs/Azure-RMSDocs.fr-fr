@@ -4,7 +4,7 @@ description: "Identifiez les critères de déploiement d’Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 01/18/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e6fa7c2912f2598f8eb2ad31d237caab80fd0273
-ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
+ms.openlocfilehash: 21faf358d5e0aa137e615dab9b411ecdcd5a7a73
+ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -65,7 +65,7 @@ Les appareils suivants prennent en charge le client Azure Information Protection
 
 - Windows Server 2012 R2 et Windows Server 2012
 
-- Windows Server 2008 R2 
+- Windows Server 2008 R2 
 
 Pour les versions de serveur répertoriées, le client Azure Information Protection est pris en charge pour les Services Bureau à distance. Si vous supprimez des profils utilisateur quand vous utilisez le client Azure Information Protection avec les Services Bureau à distance, ne supprimez pas le dossier **%Appdata%\Microsoft\Protect**.
 
@@ -97,10 +97,15 @@ En plus des informations de l’article relatif à Office, voici des information
 
 - Autorisez le trafic HTTPS sur le port TCP 443 pour **api.informationprotection.azure.com**.
 
-- N’interrompez pas la connexion du client au service TLS (par exemple, pour effectuer un inspection au niveau du paquet). Cela a pour effet d’interrompre l’épinglage de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour sécuriser leur communication avec Azure RMS.
-
 - Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour qu’il utilise l’authentification Windows intégrée avec les informations d’identification d’ouverture de session Active Directory de l’utilisateur.
 
+- N’interrompez pas la connexion du client au service TLS (par exemple, pour effectuer un inspection au niveau du paquet). Cela a pour effet d’interrompre l’épinglage de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour sécuriser leur communication avec le service Azure Rights Management.
+    
+    - Conseil : en raison de la façon dont Chrome affiche les connexions sécurisées dans la barre d’adresses, vous pouvez utiliser ce navigateur pour vérifier rapidement si la connexion de votre client est terminée avant d’atteindre le service Azure Rights Management. Dans la barre d’adresse du navigateur, entrez l’URL suivante : `https://admin.na.aadrm.com/admin/admin.svc` 
+    
+        Ne vous inquiétez pas de ce qu’affiche la fenêtre du navigateur. Cliquez sur le verrou dans la barre d’adresses pour afficher les informations du site. Les informations du site vous permettent de voir l’autorité de certification (CA) émettrice. Si le certificat n’est pas émis par une autorité de certification Microsoft, il est très probable que votre connexion client au service est arrêtée et doit reconfigurer votre pare-feu. L’image suivante illustre un exemple d’une autorité de certification Microsoft. Si vous constatez qu’une autorité de certification interne a émis le certificat, cette configuration n’est pas compatible avec Azure Information Protection.
+        
+        ![Vérification du certificat émis pour les connexions Azure Information Protection](../media/certificate-checking.png)
 
 ### <a name="on-premises-servers"></a>Serveurs locaux
 

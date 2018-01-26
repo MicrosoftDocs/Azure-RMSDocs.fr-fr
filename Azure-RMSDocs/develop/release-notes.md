@@ -1,4 +1,4 @@
-# <a name="required-metadata"></a>métadonnées obligatoires
+# <a name="required-metadata"></a>métadonnées requises
 
 titre : Description des nouveautés et des notes de publication : décrit les modifications et fonctionnalités importantes de cette version et des précédentes.
 auteur: lleonard-msft ms.author: alleonar manager: mbaldwin ms.date: 25/09/2017 ms.topic: article ms.service: information-protection ms.technology: techgroup-identity ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af public : developer ms.reviewer: kartikk ms.suite: ems
@@ -26,7 +26,7 @@ Cette rubrique décrit les modifications et les fonctionnalités importantes de 
 
 La mise à jour pour la version de juillet incluait l’incrémentation de la version du SDK, qui est maintenant 4.2.5.
 
-- Android SDK : Votre application peut désormais **définir le niveau de journalisation à la volée** avec le kit Android SDK. Pour plus d’informations, voir [Procédure : activation de la journalisation des erreurs et des performances](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging)
+- Android SDK : Votre application peut désormais **définir le niveau de journalisation à la volée** avec le kit Android SDK. Pour plus d’informations, voir [Procédure : activation de la journalisation des erreurs et des performances](https://docs.microsoft.com/information-protection/develop/enabling-logging)
 - Le kit iOS SDK ne prend pas en charge les niveaux de journalisation. 
 - Le SDK retourne désormais une erreur pour un jeton d’accès NULL.
 

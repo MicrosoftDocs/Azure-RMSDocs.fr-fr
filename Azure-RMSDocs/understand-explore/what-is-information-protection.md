@@ -4,17 +4,17 @@ description: "Présentation du service Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2017
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 18ec6241d09eb8de2417dd939237de0544a401e8
-ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
+ms.openlocfilehash: 0eeb9a6cf8eb819c19a32dbcf76e4d0104c18b99
+ms.sourcegitcommit: ae4cdee7211796182c47a11c1853232464673834
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
@@ -61,7 +61,7 @@ Pour plus d’informations sur la protection Azure Rights Management, consultez 
 
 ## <a name="integration-with-end-user-workflows-for-documents-and-emails"></a>Intégration avec les flux de travail de l’utilisateur final pour les documents et les e-mails
 
-Azure Information Protection s’intègre aux workflows existants des utilisateurs finaux quand le client Azure Information Protection est installé. Ce client installe la barre Information Protection dans les applications Office, comme illustré dans la première image qui montre cette barre dans Word. La même barre Information Protection est ajoutée à Excel, PowerPoint et Outlook. Exemple :
+Azure Information Protection s’intègre aux workflows existants des utilisateurs finaux quand le client Azure Information Protection est installé. Ce client installe la barre Information Protection dans les applications Office, comme illustré dans la première image qui montre cette barre dans Word. La même barre Information Protection est ajoutée à Excel, PowerPoint et Outlook. Par exemple :
 
 ![Exemple de la barre Azure Information Protection dans Excel](../media/excel2016-infoprotect-barv2.png)
 
@@ -73,7 +73,7 @@ Pour classer et protéger d’autres types de fichiers, et pour prendre en charg
 
 Lorsque les utilisateurs sélectionnent l’option **Classifier et protéger**dans l’Explorateur de fichiers, ils peuvent ensuite sélectionner une étiquette de la même façon qu’ils utilisent la barre Information Protection dans leurs applications de bureau Office. Ils peuvent également définir leurs propres autorisations personnalisées, si nécessaire.
 
-Les utilisateurs avancés (et administrateurs) peuvent trouver l’utilisation des commandes PowerShell plus efficace pour la gestion et la configuration de la classification et de la protection de plusieurs fichiers. Les commandes PowerShell correspondantes sont incluses automatiquement avec le client, bien que vous puissiez également installer le module PowerShell séparément.
+Les utilisateurs avancés (et administrateurs) peuvent trouver l’utilisation des commandes PowerShell plus efficace pour la gestion et la configuration de la classification et de la protection de plusieurs fichiers. Les commandes PowerShell pour effectuer ces actions sont automatiquement incluses dans le client, même si vous pouvez également installer le module PowerShell séparément.
 
 Après qu’un document a été protégé, les utilisateurs et administrateurs peuvent utiliser un site de suivi des documents pour surveiller qui accède à ces documents et à quel moment. En outre, s’ils suspectent une utilisation incorrecte, ils peuvent révoquer l’accès à ces documents :
 
@@ -131,8 +131,8 @@ Vous pouvez [rechercher](https://myignite.microsoft.com/videos?q=%2522azure%2520
 
 Lisez le billet de blog [Azure Information Protection: Ready, set, protect!](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/).
 
-Configurez et découvrez Azure Information Protection par vous-même avec notre [Didacticiel de démarrage rapide pour Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md) en cinq étapes.
+Configurez et découvrez Azure Information Protection par vous-même avec notre [Didacticiel de démarrage rapide](../get-started/infoprotect-quick-start-tutorial.md) en 5 étapes. Ou, si vous êtes prêt à déployer ce service dans votre organisation, consultez la [feuille de route du déploiement d’Azure Information Protection](../plan-design/deployment-roadmap.md).
 
-Vous connaissez peut-être Azure Information Protection ou Azure Rights Management sous un autre nom ? Consultez [notre liste d’autres termes pour le service](azure-rms-aka.md).
+Vous connaissez peut-être Azure Information Protection sous un autre nom ? Consultez nos [autres termes pour le service](azure-rms-aka.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

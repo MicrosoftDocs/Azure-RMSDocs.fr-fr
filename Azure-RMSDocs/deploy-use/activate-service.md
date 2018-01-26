@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 75c0bf83c84cb8b5d2116b05dbf2def790562b4e
-ms.sourcegitcommit: fd3932ab19a00229b56efc3e301abaf9cff3f70b
+ms.openlocfilehash: e8fede85cddc44318ce93497a9ac454c689673d3
+ms.sourcegitcommit: c3d57b175a4e7b5e136f7183c837fa08e7ac982e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="activating-azure-rights-management"></a>Activation d'Azure Rights Management
 

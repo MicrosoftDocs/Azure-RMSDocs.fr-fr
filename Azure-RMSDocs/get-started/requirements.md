@@ -4,7 +4,7 @@ description: "Identifiez les critères de déploiement d’Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/18/2018
+ms.date: 01/22/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 21faf358d5e0aa137e615dab9b411ecdcd5a7a73
-ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
+ms.openlocfilehash: 9496696791c343b01f5c311cb140333bcbbe7b2c
+ms.sourcegitcommit: eeeb1123349ab5e7eb2d352509670af6217123de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -85,6 +85,8 @@ Le client Azure Information Protection peut étiqueter et protéger les document
 
 Les autres éditions d’Office ne peuvent pas protéger les documents et messages électroniques à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour la classification uniquement. Les étiquettes qui appliquent la protection ne s’affichent pas dans la barre Azure Information Protection. 
 
+Le client Azure Information Protection ne prend pas en charge plusieurs versions d’Office sur le même ordinateur. Ce client ne prend pas non plus en charge le changement de comptes d’utilisateur dans Office.
+
 Pour plus d’informations sur les éditions d’Office qui prennent en charge le service de protection des données, consultez [Applications prenant en charge la protection des données Azure Rights Management](requirements-applications.md).
 
 ## <a name="firewalls-and-network-infrastructure"></a>Pare-feu et infrastructure réseau
@@ -103,7 +105,7 @@ En plus des informations de l’article relatif à Office, voici des information
     
     - Conseil : en raison de la façon dont Chrome affiche les connexions sécurisées dans la barre d’adresses, vous pouvez utiliser ce navigateur pour vérifier rapidement si la connexion de votre client est terminée avant d’atteindre le service Azure Rights Management. Dans la barre d’adresse du navigateur, entrez l’URL suivante : `https://admin.na.aadrm.com/admin/admin.svc` 
     
-        Ne vous inquiétez pas de ce qu’affiche la fenêtre du navigateur. Cliquez sur le verrou dans la barre d’adresses pour afficher les informations du site. Les informations du site vous permettent de voir l’autorité de certification (CA) émettrice. Si le certificat n’est pas émis par une autorité de certification Microsoft, il est très probable que votre connexion client au service est arrêtée et doit reconfigurer votre pare-feu. L’image suivante illustre un exemple d’une autorité de certification Microsoft. Si vous constatez qu’une autorité de certification interne a émis le certificat, cette configuration n’est pas compatible avec Azure Information Protection.
+        Ne vous inquiétez pas de ce qu’affiche la fenêtre du navigateur. Cliquez sur le verrou dans la barre d’adresses pour afficher les informations du site. Les informations du site vous permettent de voir l’autorité de certification (CA) émettrice. Si le certificat n’est pas émis par une Autorité de certification Microsoft, il est très probable que votre connexion client-à-service sécurisée s’arrête et nécessite une reconfiguration sur votre pare-feu. L’image suivante illustre un exemple d’une autorité de certification Microsoft. Si vous constatez qu’une autorité de certification interne a émis le certificat, cette configuration n’est pas compatible avec Azure Information Protection.
         
         ![Vérification du certificat émis pour les connexions Azure Information Protection](../media/certificate-checking.png)
 

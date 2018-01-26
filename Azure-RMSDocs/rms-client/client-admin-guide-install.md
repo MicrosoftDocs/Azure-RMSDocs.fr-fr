@@ -4,7 +4,7 @@ description: "Instructions et informations destinées aux administrateurs pour l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/18/2018
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3ff9a63f5b8565cac131e7b69a674fc8be902d0f
-ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
+ms.openlocfilehash: 0af9b6847c920d486d727cb6748b84aa581012d1
+ms.sourcegitcommit: d3b82dd8dbafb86ddbe698cdcd0edee445fff416
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 
@@ -72,13 +72,17 @@ Ensuite, vérifiez les prérequis supplémentaires qui peuvent être nécessaire
     
     Pour plus d’informations sur ce paramètre de stratégie de groupe, consultez [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Aucun complément n’est chargé à cause des paramètres de stratégie de groupe pour les programmes Office 2013 et Office 2016).
 
-- Pour les versions d’Office 16.0.8628.2010 et ultérieures (Démarrer en un clic) : activer la prise en charge héritée pour les moniteurs
+- Pour les versions d’Office 16.0.8628.2010 et ultérieures (Démarrer en un clic) : activer la prise en charge héritée pour les écrans
     
-    Pour empêcher que la barre Azure Information Protection ne s’affiche en dehors des logiciels Office de ces versions Office, activez la prise en charge héritée pour les moniteurs. Pour configurer les applications Office : **Fichier** > **Options** > **Général** > **Options de l’interface utilisateur** :
+    Pour empêcher que la barre Azure Information Protection ne s’affiche en dehors des logiciels Office de ces versions Office, vous devrez peut-être activer la prise en charge héritée pour les écrans. Lorsque la barre ne s’affiche pas correctement dans ce scénario, vous risquez de la voir sous la forme **AdxTaskPane**. 
+    
+    Pour configurer les applications Office afin de remplir cette condition : **Fichier** > **Options** > **Général** > **Options de l’interface utilisateur** :
     
     - Si vous voyez que l’option **Lors de l’utilisation de plusieurs écrans** est définie avec **Ajuster afin d’obtenir la meilleure apparence**, sélectionnez plutôt **Optimiser pour la compatibilité (redémarrage obligatoire du logiciel)**. 
         
     - Si vous voyez que l’option **Utiliser les meilleurs paramètres pour mon écran** est sélectionnée, supprimez cette sélection.
+    
+    - Si vous ne voyez aucune de ces options, aucune configuration supplémentaire n’est nécessaire.
 
 > [!IMPORTANT]
 > L’installation du client Azure Information Protection nécessite les autorisations d’administrateur local.

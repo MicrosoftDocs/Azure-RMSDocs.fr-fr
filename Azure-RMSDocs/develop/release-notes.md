@@ -66,7 +66,7 @@ Le Kit de développement logiciel (SDK) passe désormais à la version 4.2 et b
 
     [Méthode synchrone UserPolicy.acquire](https://msdn.microsoft.com/library/mt631384.aspx)
 
-    [Méthode synchrone UserPolicy.create (PolicyDescriptor…)**](https://msdn.microsoft.com/library/mt631385.aspx)
+    [Méthode synchrone UserPolicy.create (PolicyDescriptor…)** ](https://msdn.microsoft.com/library/mt631385.aspx)
 
     [Méthode synchrone UserPolicy.create (TempalteDescriptor…)](https://msdn.microsoft.com/library/mt631386.aspx)
 

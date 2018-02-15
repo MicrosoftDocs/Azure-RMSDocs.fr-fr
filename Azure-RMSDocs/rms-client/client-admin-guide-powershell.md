@@ -4,7 +4,7 @@ description: "Instructions et informations pour que les administrateurs gèrent 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/03/2018
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: aee9a9f665d3aa0a0e8a8c568f3abbd044469fc7
-ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
+ms.openlocfilehash: 27799ff64e8c224c64b0ffc858b79818650d74af
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -65,7 +65,7 @@ Avant de commencer à utiliser ces applets de commande, consultez les autres con
 Lisez cette section avant de commencer à utiliser les commandes PowerShell quand votre organisation utilise Azure Information Protection pour la classification et la protection, ou seulement le service Azure Rights Management pour la protection des données.
 
 
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Conditions préalables
 
 En plus des prérequis pour l’installation du module Azure Information Protection, il existe d’autres prérequis pour l’étiquetage Azure Information Protection et pour le service de protection de données Azure Rights Management :
 
@@ -343,7 +343,7 @@ Notez que si les modèles Rights Management sont modifiés, vous devez les tél�
 Lisez cette section avant de commencer à utiliser les commandes PowerShell pour protéger ou annuler la protection des fichiers, lorsque votre organisation utilise simplement Active Directory Rights Management Services.
 
 
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Conditions préalables
 
 Outre les prérequis pour l’installation du module AzureInformationProtection, le compte utilisé pour protéger ou déprotéger des fichiers doit disposer des autorisations de lecture et d’exécution pour accéder à ServerCertification.asmx :
 
@@ -461,7 +461,11 @@ Par défaut, lorsque vous exécutez les applets de commande d’étiquetage, les
 > [!NOTE]
 > Si vous utilisez des [stratégies délimitées](../deploy-use/configure-policy-scope.md), n’oubliez pas que vous devrez peut-être ajouter ce compte à vos stratégies délimitées.
 
-La première fois que vous exécutez cette applet de commande, vous êtes invité à vous connecter à Azure Information Protection. Spécifiez le nom et le mot de passe du compte d’utilisateur que vous avez créé pour l’utilisateur sans assistance. Ce compte peut alors exécuter les applets de commande d’étiquetage de manière non interactive jusqu’à ce que le jeton d’authentification expire. Lorsque le jeton expire, exécutez l’applet de commande pour acquérir un nouveau jeton :
+La première fois que vous exécutez cette applet de commande, vous êtes invité à vous connecter à Azure Information Protection. Spécifiez le nom et le mot de passe du compte d’utilisateur que vous avez créé pour l’utilisateur sans assistance. Ce compte peut alors exécuter les applets de commande d’étiquetage de manière non interactive jusqu’à ce que le jeton d’authentification expire. 
+
+Pour que le compte d’utilisateur puisse se connecter interactivement cette première fois, le compte doit avoir le droit d’**Ouvrir une session locale**. Ce droit est standard pour les comptes d’utilisateur, mais vos stratégies d’entreprise peuvent interdire cette configuration pour les comptes de service. Si tel est le cas, vous pouvez exécuter Set-AIPAuthentication avec le paramètre *Jeton* afin que l’authentification se termine sans l’invite de connexion. Vous pouvez exécuter cette commande en tant que tâche planifiée et accorder au compte le droit inférieur d’**Ouvrir une session en tant que programme de traitement par lots**. Pour plus d’informations, consultez les sections suivantes. 
+
+Lorsque le jeton expire, exécutez l’applet de commande pour acquérir un nouveau jeton.
 
 Si vous exécutez cette applet de commande sans paramètres, le compte acquiert un jeton d’accès qui est valide 90 jours ou jusqu’à ce que votre mot de passe expire.  
 
@@ -517,7 +521,85 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 
 12. De retour dans le panneau **Autorisations nécessaires**, sélectionnez **Accorder des autorisations**, cliquez sur **Oui** pour confirmer, puis fermez ce panneau.
     
-Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec des paramètres.
+Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *WebAppId*, *WebAppKey* and *NativeAppId*. Par exemple :
+
+`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+
+Exécutez cette commande dans le contexte du compte qui étiquettera et protégera les documents de manière non interactive. Par exemple, un compte d’utilisateur pour vos scripts PowerShell ou le compte de service pour exécuter le scanneur Azure Information Protection.  
+
+Lorsque vous exécutez cette commande pour la première fois, vous êtes invité à vous connecter, ce qui crée et stocke en toute sécurité le jeton d’accès de votre compte dans %localappdata%\Microsoft\MSIP. Après cette première connexion, vous pouvez étiqueter et protéger les fichiers de manière non interactive sur l’ordinateur. Toutefois, si vous utilisez un compte de service pour étiqueter et protéger les fichiers, et que ce compte de service ne peut pas vous connecter de manière interactive, suivez les instructions dans la section suivante afin que le compte de service puisse authentifier à l’aide d’un jeton.
+
+### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Spécifier et utiliser le paramètre Jeton pour Set-AIPAuthentication
+
+> [!NOTE]
+> Cette option est en préversion et nécessite la préversion actuelle du client Azure Information Protection.
+
+Suivez les étapes et instructions supplémentaires suivantes afin d’éviter la première connexion interactive pour un compte qui étiquette et protège des fichiers. En règle générale, ces étapes supplémentaires ne sont nécessaires que si ce compte ne peut pas obtenir le droit d’**Ouvrir une session localement**, mais qu’il obtient le droit **Ouvrir une session en tant que programme de traitement par lots**. Par exemple, cela peut être le cas pour votre compte de service qui exécute le scanneur Azure Information Protection.
+
+1. Créez un script PowerShell sur votre ordinateur local.
+
+2. Exécutez Set-AIPAuthentication pour obtenir un jeton d’accès et copiez-le dans le Presse-papiers.
+
+2. Modifiez le script PowerShell pour inclure le jeton.
+
+3. Créer une tâche qui exécute le script PowerShell dans le contexte du compte de service qui étiquettera et protégera les fichiers.
+
+4. Vérifiez que le jeton est enregistré pour le compte de service, et supprimez le script PowerShell.
+
+
+#### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Étape 1 : créer un script PowerShell sur votre ordinateur local
+
+1. Sur votre ordinateur, créez un nouveau script PowerShell nommé Aipauthentication.ps1.
+
+2. Copiez et collez les commandes suivantes dans ce script :
+    
+         Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
+
+3. En suivant les instructions de la section précédente, modifiez cette commande en spécifiant vos propres valeurs pour les paramètres **WebAppId**, **WebAppkey**, et **NativeAppId**. À ce stade, vous n’avez pas encore la valeur pour le paramètre **Jeton**, que vous spécifierez plus tard. 
+    
+    Par exemple : `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
+    
+#### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Étape 2 : exécuter Set-AIPAuthentication pour obtenir un jeton d’accès et le copier dans le Presse-papiers
+
+1. Ouvrez une session Windows PowerShell.
+
+2. En utilisant les mêmes valeurs que vous avez spécifiées dans le script, exécutez la commande suivante :
+    
+        (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
+    
+    Par exemple : `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+
+#### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Étape 3 : modifier le script PowerShell pour fournir le jeton
+
+1. Dans votre script PowerShell, spécifiez la valeur du jeton en collant la chaîne depuis le Presse-papiers, puis enregistrez le fichier.
+
+2. Exécutez le script. Si vous ne vous signez pas le script (plus sécurisé), vous devez configurer Windows PowerShell sur l’ordinateur qui exécutera les commandes d’étiquetage. Par exemple, exécutez une session Windows PowerShell à l’aide de l’option **Exécuter en tant qu’administrateur**, puis tapez : `Set-ExecutionPolicy RemoteSigned`. Toutefois, cette configuration laisse s’exécuter tous les scripts non signés quand ils sont stockés sur cet ordinateur (moins sécurisé).
+    
+    Pour plus d'informations sur la signature des scripts Windows PowerShell, voir [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) dans la bibliothèque de documentation PowerShell.
+
+3. Copiez ce script PowerShell sur l’ordinateur qui étiquettera et protégera les fichiers, puis supprimez la version d’origine sur votre ordinateur. Par exemple, vous copiez le script PowerShell sur C:\Scripts\Aipauthentication.ps1 sur un ordinateur Windows Server.
+
+#### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>Étape 4 : créer une tâche qui exécute le script PowerShell
+
+1. Assurez-vous que le compte de service qui étiquettera et protégera les fichiers a le droit d’**Ouvrir une session en tant que programme de traitement par lots**.
+
+2. Sur l’ordinateur qui étiquettera et protégera les fichiers, ouvrez le Planificateur de tâches et créez une nouvelle tâche. Configurez cette tâche pour qu’elle s’exécute en tant que le compte de service qui étiquettera et protégera les fichiers, puis configurez les valeurs suivantes pour les **Actions** :
+    
+    - **Action** : `Start a program`
+    - **Programme/script** : `Powershell.exe`
+    - **Ajouter des arguments (facultatif)** : `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+    
+    Pour la ligne d’argument, spécifiez vos propres noms de chemin d’accès et de fichier, s’ils sont différents de ceux de l’exemple.
+
+3. Exécuter cette tâche manuellement.
+
+#### <a name="step-4-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>Étape 4 : vérifier que le jeton est enregistré et supprimer le script PowerShell
+
+1. Vérifiez que le jeton est maintenant stocké dans le dossier %localappdata%\Microsoft\MSIP pour le profil de compte de service. Cette valeur est protégée par le compte de service.
+
+2. Supprimez le script PowerShell qui contient la valeur du jeton (par exemple, Aipauthentication.ps1).
+    
+    Vous pouvez supprimer la tâche si vous le souhaitez. Si votre jeton expire, vous devez répéter ce processus, auquel cas il peut être plus pratique de laisser la tâche configurée afin qu’elle soit prête à s’exécuter à nouveau lorsque vous copierez le nouveau script PowerShell avec la nouvelle valeur du jeton.
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour obtenir de l’aide concernant les applets de commande lorsque vous avez ouvert une session PowerShell, tapez `Get-Help <cmdlet name> cmdlet`, puis utilisez le paramètre -online pour lire les informations les plus récentes. Par exemple : 

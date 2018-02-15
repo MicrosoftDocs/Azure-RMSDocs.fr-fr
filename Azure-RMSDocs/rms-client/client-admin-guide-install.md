@@ -4,7 +4,7 @@ description: "Instructions et informations destinées aux administrateurs pour l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2018
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 0af9b6847c920d486d727cb6748b84aa581012d1
-ms.sourcegitcommit: d3b82dd8dbafb86ddbe698cdcd0edee445fff416
+ms.openlocfilehash: d91c52ac5ae1f70ed664e54a549c906d934fdb16
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 
@@ -72,7 +72,9 @@ Ensuite, vérifiez les prérequis supplémentaires qui peuvent être nécessaire
     
     Pour plus d’informations sur ce paramètre de stratégie de groupe, consultez [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Aucun complément n’est chargé à cause des paramètres de stratégie de groupe pour les programmes Office 2013 et Office 2016).
 
-- Pour les versions d’Office 16.0.8628.2010 et ultérieures (Démarrer en un clic) : activer la prise en charge héritée pour les écrans
+- Pour les versions d’Office 16.0.8628.2010 et ultérieures (Démarrer en un clic) : activer la prise en charge héritée pour les moniteurs
+    
+    Remarque : ce prérequis n’est pas nécessaire pour la préversion actuelle du client Azure Information Protection. 
     
     Pour empêcher que la barre Azure Information Protection ne s’affiche en dehors des logiciels Office de ces versions Office, vous devrez peut-être activer la prise en charge héritée pour les écrans. Lorsque la barre ne s’affiche pas correctement dans ce scénario, vous risquez de la voir sous la forme **AdxTaskPane**. 
     
@@ -197,12 +199,12 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     |--------------------|--------------|----------------|---------------------|
     |Office 2016|Toutes les versions prises en charge|64 bits : [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bits : [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installer|
     |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installer|
-    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installer|
-    |Office 2010|Windows 8.1 et Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB2843630 ou KB2919355 n’est pas installé|
-    |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer|
-    |Office 2010|Windows 7|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB3125574 n’est pas installé|
-    |Non applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Installer|
-    |Non applicable|Windows 7|KB2627273 <br /><br /> Numéro de version inclus dans le nom de fichier : v4|Désinstaller|
+    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installer|
+    |Office 2010|Windows 8.1 et Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB2843630 ou KB2919355 n’est pas installé|
+    |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer|
+    |Office 2010|Windows 7 et Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB3125574 n’est pas installé|
+    |Non applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Installer|
+    |Non applicable|Windows 7|KB2627273 <br /><br /> Numéro de version inclus dans le nom de fichier : v4|Désinstaller|
 
 3. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/**, par exemple, `AzInfoProtection.msi /quiet`. Toutefois, vous devrez peut-être spécifier des paramètres d’installation supplémentaires qui sont documentés dans les [instructions du programme d’installation exécutable](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).  
 

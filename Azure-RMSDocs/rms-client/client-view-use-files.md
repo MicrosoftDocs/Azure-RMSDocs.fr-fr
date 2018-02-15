@@ -4,7 +4,7 @@ description: "Instructions pour afficher et utiliser un document protégé qui v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/10/2018
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aa222d484e67d5f1e08ac08b3839100de8390e4e
-ms.sourcegitcommit: d4c63df8436b2e490f196585fcb78afe8c2e8de8
+ms.openlocfilehash: 87ae9b546a791c20b71625f938265c584980ae43
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guide de l’utilisateur : Afficher et utiliser des fichiers qui ont été protégés par Rights Management
 
@@ -40,11 +40,11 @@ La visionneuse s’installe automatiquement dans le cadre du client Azure Inform
 > Installez la visionneuse si vous avez reçu un document protégé par un utilisateur d’une autre organisation ou si vous n’avez pas d’autorisations d’administrateur local sur votre PC.
 
 Pour être en mesure d’ouvrir un document protégé, l’application doit être « Compatible RMS ». Les applications Office et la visionneuse Azure Information Protection sont des exemples d’applications compatibles RMS. Pour obtenir une liste d’applications par type et les appareils pris en charge, consultez le tableau [applications compatibles RMS](../get-started/requirements-applications.md#rms-enlightened-applications).  
-## <a name="messagerpmsg-as-an-email-attachment"></a>Message.rpmsg en tant que pièce jointe  à un e-mail
+## <a name="messagerpmsg-as-an-email-attachment"></a>Message.rpmsg en tant que pièce jointe de courrier électronique
 
 Si vous voyez **message.rpmsg** en tant que pièce jointe dans un e-mail, il ne s’agit pas d’un document protégé mais d’un message électronique protégé qui s’affiche comme pièce jointe. Vous ne pouvez pas utiliser la visionneuse Azure Information Protection pour Windows pour afficher ce message électronique protégé sur votre PC Windows. Vous avez plutôt besoin d’une application de messagerie pour Windows qui prend en charge la protection Rights Management, comme Office Outlook. Ou vous pouvez utiliser Outlook sur le web.
 
-Toutefois, si vous avez un appareil iOS ou Android, vous pouvez utiliser l’application Azure Information Protection pour ouvrir ces e-mails protégés. Vous pouvez télécharger cette application pour ces appareils mobiles à partir de la page [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft.
+Toutefois, si vous avez un appareil iOS ou Android, vous pouvez utiliser l’application Azure Information Protection pour ouvrir ces messages électroniques protégés. Vous pouvez télécharger cette application pour ces appareils mobiles à partir de la page [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft.
 
 ## <a name="prompts-for-authentication"></a>Invites pour l’authentification
 
@@ -71,6 +71,8 @@ Si votre organisation ne dispose pas d’un compte cloud dont vous pouvez vous s
     Pour plus d’informations sur les autorisations et les droits d’utilisation de chacune d’elle, consultez [Droits inclus dans les niveaux d’autorisation](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels).
 
 4. Pour modifier le fichier, cliquez sur **Enregistrer sous**, ce qui vous permet d’enregistrer le fichier sans protection avec son extension de nom de fichier d’origine. Vous pouvez ensuite le modifier à l’aide de l’application associée à son type.
+    
+    Si plus tard, vous utilisez l’Explorateur de fichiers pour cliquer avec le bouton droit sur le fichier qui vient d’être enregistré et que vous tentez de le protéger de nouveau, vous ne serez pas en mesure de le faire. Ce problème connu est traité dans la préversion actuelle du client Azure Information Protection. Pour la préversion du client, choisir **Enregistrer sous** supprime l’étiquette en plus de la protection. Lorsque vous cliquez ensuite sur le fichier avec le bouton droit, vous pouvez réappliquer l’étiquette, qui à son tour réapplique la protection.
 
 5. Si vous avez des fichiers protégés supplémentaires à ouvrir, vous pouvez y accéder directement depuis la visionneuse, en utilisant l’option **Ouvrir**. Votre fichier sélectionné remplace le fichier d’origine dans la visionneuse. 
 

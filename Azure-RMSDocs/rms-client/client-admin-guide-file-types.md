@@ -4,7 +4,7 @@ description: "Détails techniques sur les types de fichiers pris en charge, les 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a6a1c477a06c695a2183ad379c22492ea59d4bee
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: e1adb23e00b447d5633b37b310e3b9ce96d0becf
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 
@@ -92,7 +92,7 @@ Il existe des tailles de fichier maximales que le client Azure Information Prote
     
     - Pour protéger ces fichiers : la taille de fichier est limitée uniquement par l’espace disque disponible et la mémoire.
     
-    - Pour ouvrir ces fichiers dans la visionneuse Azure Information Protection : la taille de fichier maximale prise en charge pour les fichiers texte (.ptxt et .pxml) est de 20 Mo. Pour les fichiers image et PDF, la taille de fichier maximale est limitée uniquement par la mémoire.
+    - Pour ouvrir ces fichiers dans la visionneuse Azure Information Protection : sauf si vous avez la version actuelle de la préversion du client Azure Information Protection, la taille de fichier maximale prise en charge pour les fichiers texte (.ptxt et .pxml) est de 20 Mo. Pour les fichiers image et PDF, la taille de fichier maximale est limitée uniquement par la mémoire.
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Types de fichiers pris en charge pour la classification et la protection
 
@@ -132,7 +132,7 @@ Pour ces fichiers, l’extension de nom de fichier reste la même une fois que l
 ### <a name="changing-the-default-protection-level-of-files"></a>Modification du niveau de protection par défaut des fichiers
 Vous pouvez modifier la façon dont le client Azure Information Protection protège les fichiers en modifiant le Registre. Par exemple, vous pouvez forcer les fichiers qui prennent en charge la protection native à être protégés de manière générique par le client Azure Information Protection.
 
-Raisons pour lesquelles vous pourriez vouloir procéder ainsi :
+Raisons pour lesquelles vous pourriez vouloir procéder ainsi :
 
 - Pour vous assurer que tous les utilisateurs peuvent ouvrir le fichier s'ils ne possèdent pas d'application prenant en charge la protection native.
 
@@ -154,7 +154,7 @@ Pour configurer le client Azure Information Protection afin qu’il applique une
 
     Avec ce paramètre, le client Azure Information Protection applique une protection générique.
 
-Ces deux réglages entraînent l’application de la protection générique par le client Azure Information Protection à tous les fichiers ayant une extension de nom de fichier. Si c'est l'objectif que vous recherchez, aucune configuration supplémentaire n'est requise. Toutefois, vous pouvez définir des exceptions pour des types de fichier spécifiques, afin qu'ils soient protégés en mode natif. Pour cela, vous devez effectuer trois modifications supplémentaires dans le Registre pour chaque type de fichier :
+Ces deux réglages entraînent l’application de la protection générique par le client Azure Information Protection à tous les fichiers ayant une extension de nom de fichier. Si c'est l'objectif que vous recherchez, aucune configuration supplémentaire n'est requise. Toutefois, vous pouvez définir des exceptions pour des types de fichier spécifiques, afin qu'ils soient protégés en mode natif. Pour cela, vous devez effectuer trois modifications supplémentaires dans le Registre pour chaque type de fichier :
 
 1. Pour **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** (Windows 32 bits) ou **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (Windows 64 bits) : ajoutez une nouvelle clé qui porte le nom de l’extension de nom de fichier (sans le point qui précède).
 

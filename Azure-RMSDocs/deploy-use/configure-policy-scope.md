@@ -1,10 +1,10 @@
 ---
-title: "Configurer des stratégies délimitées pour Azure Information Protection"
-description: "Pour configurer d’autres paramètres et étiquettes pour des utilisateurs spécifiques, vous devez configurer une stratégie délimitée pour Azure Information Protection."
+title: "Configurer des stratégies délimitées pour Azure Information Protection"
+description: "Pour configurer différents paramètres et étiquettes pour des utilisateurs spécifiques, vous devez configurer une stratégie délimitée pour Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 01/29/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e790b669298bb40b3397150d1b2c3ed7e26c10ab
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: c7aa1c3aa18a246457c00a5a61c6004e55f76b4b
+ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées
 
->*S’applique à : Azure Information Protection*
+>*S’applique à : Azure Information Protection*
 
 Quand la stratégie Azure Information Protection se télécharge sur des ordinateurs sur lesquels est installé le [client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), tous les utilisateurs obtiennent les paramètres et étiquettes de la stratégie par défaut ou les modifications que vous avez configurées pour la stratégie globale. Si vous voulez les compléter en donnant d’autres paramètres et étiquettes à des utilisateurs spécifiques, vous devez créer une **stratégie délimitée** configurée pour ces utilisateurs.
 
@@ -30,20 +30,21 @@ Les stratégies délimitées, comme les étiquettes, sont classées dans le port
 
 Étant donné qu’une stratégie délimitée hérite toujours des étiquettes et paramètres de la stratégie globale, les étiquettes de la stratégie globale s’affichent quand vous créez ou modifiez une stratégie délimitée. Toutefois, vous ne pouvez pas modifier les étiquettes de la stratégie globale quand vous modifiez une stratégie délimitée. En revanche, vous pouvez ajouter des sous-étiquettes à ces étiquettes héritées.
 
-Par exemple, si vous disposez d’une étiquette nommée **Confidentiel** dans la stratégie globale, tous les utilisateurs la voient. Vous ne pouvez pas la supprimer ni la réorganiser avec une stratégie délimitée. Mais vous pouvez éventuellement créer une stratégie délimitée pour le service Marketing permettant d’ajouter une nouvelle sous-étiquette à Confidentiel, afin que ces utilisateurs voient **Confidentiel\Promotions**. Vous devez également créer une autre stratégie étendue pour le service commercial qui ajoute une nouvelle sous-étiquette à la sous-étiquette Confidentiel, afin que ces utilisateurs voient **Confidentiel\Partenaires**. Chaque sous-étiquette peut alors être configurée pour des paramètres différents et la sous-étiquette est uniquement visible pour les utilisateurs relevant des services respectifs.
+Par exemple, si vous disposez d’une étiquette nommée **Confidentiel** dans la stratégie globale, tous les utilisateurs la voient. Vous ne pouvez pas la supprimer ni la réorganiser avec une stratégie délimitée. Mais vous pouvez éventuellement créer une stratégie délimitée pour le service Marketing permettant d’ajouter une nouvelle sous-étiquette à Confidentiel, afin que ces utilisateurs voient **Confidentiel\Promotions**. Vous devez également créer une autre stratégie délimitée pour le service commercial qui ajoute une nouvelle sous-étiquette à la sous-étiquette Confidentiel, afin que ces utilisateurs voient **Confidentiel\Partenaires**. Chaque sous-étiquette peut alors être configurée pour des paramètres différents et la sous-étiquette est uniquement visible pour les utilisateurs relevant des services respectifs.
 
-
-Pour configurer une stratégie délimitée pour Azure Information Protection :
+Pour configurer une stratégie délimitée pour Azure Information Protection :
 
 1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général. Accédez ensuite au panneau **Azure Information Protection**. 
 
-    Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    Par exemple, dans le menu hub, cliquez sur **Autres services** et commencez à écrire **Informations** dans la zone de filtre. Sélectionnez **Azure Information Protection**.
 
 2. Dans la sélection de menu **STRATÉGIES**, sélectionnez **Stratégies délimitées**.
 
-3. Dans le panneau **Azure Information Protection - Stratégie délimitée**, sélectionnez **Ajouter une nouvelle stratégie**. Vous voyez alors le panneau **Stratégie** qui affiche votre stratégie globale existante, où vous pouvez désormais configurer votre nouvelle stratégie délimitée.
+3. Dans le panneau **Azure Information Protection - Stratégies étendues**, sélectionnez **Ajouter une nouvelle stratégie**. Vous voyez alors le panneau **Stratégie** qui affiche votre stratégie globale existante, où vous pouvez désormais configurer votre nouvelle stratégie délimitée.
 
 4. Spécifiez le nom et la description de la stratégie que seuls les administrateurs voient dans le portail Azure. Ce nom doit être unique pour votre locataire. Ensuite, sélectionnez **Spécifier les utilisateurs/groupes qui obtiennent cette stratégie** et dans les panneaux suivants, vous pouvez rechercher et sélectionner les utilisateurs et groupes concernés par cette stratégie. Les étiquettes et paramètres que vous configurez dans cette stratégie délimitée sont appliqués à ces utilisateurs uniquement.
+    
+    Pour des raisons de performances, l’appartenance au groupe des stratégies délimitées est [mise en cache](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection).
 
 5. Maintenant, créez des étiquettes ou configurez les paramètres de la stratégie délimitée. La stratégie globale est toujours appliquée en premier, afin de compléter la stratégie globale avec les nouvelles étiquettes et de remplacer les paramètres globaux. Par exemple, la stratégie globale peut ne pas avoir d’étiquette par défaut spécifiée et vous configurez une étiquette par défaut différente dans les différentes stratégies délimitées à des services spécifiques.
 
@@ -55,7 +56,7 @@ Pour configurer une stratégie délimitée pour Azure Information Protection :
 
 8. Pour déployer vos modifications, cliquez sur **Publier**. 
 
-Le client Azure Information Protection vérifie toutes les modifications à chaque démarrage d’une application Office prise en charge ou à chaque ouverture de l'Explorateur de fichiers. Il télécharge les modifications dans la stratégie globale ou les stratégies délimitées qui s’appliquent à cet utilisateur.
+Le client Azure Information Protection vérifie toutes les modifications à chaque démarrage d’une application Office prise en charge ou à chaque ouverture de l’Explorateur de fichiers. Il télécharge les modifications dans la stratégie globale ou les stratégies délimitées qui s’appliquent à cet utilisateur.
 
 > [!TIP]
 > Une fois que vous avez enregistré votre stratégie délimitée, dans la section **STRATÉGIES**, vous pouvez utiliser l’option **Tout - affichage des stratégies croisées** pour afficher et reconfigurer toutes les étiquettes de votre stratégie Azure Information Protection. Cette méthode permet de comparer facilement les étiquettes de votre stratégie globale et de toutes les stratégies délimitées. 

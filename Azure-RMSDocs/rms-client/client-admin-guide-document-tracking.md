@@ -1,10 +1,10 @@
 ---
-title: "Suivi des documents pour Azure Information Protection"
-description: Instructions et informations pour les administrateurs pour configurer et utiliser le suivi des documents pour Azure Information Protection.
+title: Suivi des documents pour Azure Information Protection
+description: "Instructions et informations à l’attention des administrateurs pour la configuration et l’utilisation du suivi des documents pour Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 01/29/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bca186ebe78d79926a6ef775b1f5be7006e89df5
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: bbbc9a274ea815577109276bceb0b08617f03809
+ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
+# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -28,9 +28,9 @@ Si votre [abonnement prend en charge le suivi des documents](https://www.microso
 
 Si l’affichage de toutes les informations de suivi des documents est interdit dans votre organisation pour des raisons de confidentialité, vous pouvez désactiver le suivi des documents à l’aide de l’applet de commande [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). 
 
-Cette applet de commande désactive l’accès au site de suivi de documents afin que tous les utilisateurs de votre organisation ne puissent pas effectuer le suivi ou révoquer l’accès à des documents qu’ils ont protégés. Vous pouvez réactiver le suivi des documents à tout moment en utilisant [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) et vérifier si le suivi des documents est actuellement activé ou désactivé à l’aide de [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). Pour exécuter ces applets de commande, vous devez disposer au moins de la version **2.3.0.0** du module Azure Rights Management (AADRM) pour PowerShell. 
+Cette applet de commande désactive l’accès au site de suivi de documents afin que tous les utilisateurs de votre organisation ne puissent pas effectuer le suivi ou révoquer l’accès à des documents qu’ils ont protégés. Vous pouvez réactiver le suivi des documents à tout moment en utilisant [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) et vérifier si le suivi des documents est actuellement activé ou désactivé à l’aide de [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). Pour exécuter ces applets de commande, vous devez disposer au moins de la version **2.3.0.0** du module Azure Rights Management (AADRM) pour PowerShell. 
 
-Lorsque le site de suivi des documents est activé, il fournit des informations telles que les adresses de messagerie des personnes qui ont tenté d'accéder aux documents protégés et indique quand ces personnes ont tenté d'y accéder, ainsi que leur emplacement. Ce niveau d’informations peut être utile pour déterminer comment les documents partagés sont utilisés et s’ils doivent être révoqués en cas d’activité suspecte. Toutefois, pour des raisons de confidentialité, vous devrez peut-être désactiver ces informations utilisateur pour une partie ou l’intégralité des utilisateurs. 
+Lorsque le site de suivi des documents est activé, il fournit par défaut des informations telles que les adresses de messagerie des personnes qui ont tenté d’accéder aux documents protégés et indique quand ces personnes ont tenté d’y accéder, ainsi que leur emplacement. Ce niveau d’informations peut être utile pour déterminer comment les documents partagés sont utilisés et s’ils doivent être révoqués en cas d’activité suspecte. Toutefois, pour des raisons de confidentialité, vous devrez peut-être désactiver ces informations utilisateur pour une partie ou l’intégralité des utilisateurs. 
 
 Si vous avez des utilisateurs pour lesquels cette activité ne doit pas être suivie par d’autres utilisateurs, ajoutez-les à un groupe qui est stocké dans Azure AD, et spécifiez ce groupe avec l’applet de commande [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup). Lorsque vous exécutez cette applet de commande, vous devez spécifier un groupe unique. Toutefois, le groupe peut contenir des groupes imbriqués. 
 
@@ -38,9 +38,9 @@ Pour ces membres du groupe, les utilisateurs ne peuvent pas voir les activités 
 
 Lorsque vous utilisez cette configuration, tous les utilisateurs peuvent toujours utiliser le site de suivi de documents et révoquer l’accès à des documents qu’ils ont protégés. Toutefois, ils ne voient pas l’activité des utilisateurs que vous avez spécifiés à l’aide de l’applet de commande Set-AadrmDoNotTrackUserGroup.
 
-Ce paramètre affecte uniquement les utilisateurs finaux. Les administrateurs pour Azure Information Protection peuvent toujours suivre les activités de tous les utilisateurs, même lorsque ces utilisateurs sont spécifiés à l’aide de Set-AadrmDoNotTrackUserGroup. Pour plus d’informations sur la façon dont les administrateurs peuvent suivre les documents pour les utilisateurs, consultez la section [Suivi et révocation de documents pour les utilisateurs](#tracking-and-revoking-documents-for-users).
+Ce paramètre affecte uniquement les utilisateurs finaux. Les administrateurs d’Azure Information Protection peuvent toujours suivre les activités de tous les utilisateurs, même lorsque ces utilisateurs sont spécifiés à l’aide de Set-AadrmDoNotTrackUserGroup. Pour plus d’informations sur la façon dont les administrateurs peuvent suivre les documents pour les utilisateurs, consultez la section [Suivi et révocation de documents pour les utilisateurs](#tracking-and-revoking-documents-for-users).
 
-Vous pouvez utiliser [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) si vous n’avez plus besoin de cette option. Ou, pour supprimer sélectivement des utilisateurs, supprimez-les du groupe, mais attention à la [mise en cache de groupe](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). Vous pouvez vérifier si cette option est actuellement en cours d’utilisation à l’aide de [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). Pour exécuter les applets de commande pour cette configuration de groupe, vous devez disposer au moins de la version **2.10.0.0** du module Azure Rights Management (AADRM) pour PowerShell.
+Vous pouvez utiliser [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) si vous n’avez plus besoin de cette option. Ou, pour supprimer sélectivement des utilisateurs, supprimez-les du groupe, mais attention à la [mise en cache de groupe](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). Vous pouvez vérifier si cette option est actuellement en cours d’utilisation à l’aide de [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). Pour exécuter les applets de commande pour cette configuration de groupe, vous devez disposer au moins de la version **2.10.0.0** du module Azure Rights Management (AADRM) pour PowerShell.
 
 Pour plus d’informations sur chacune de ces applets de commande, utilisez les liens fournis. Pour obtenir des instructions d’installation pour le module PowerShell, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md). Si vous avez précédemment téléchargé et installé le module, vérifiez le numéro de version en exécutant la commande suivante : `(Get-Module aadrm –ListAvailable).Version`
 
@@ -61,12 +61,12 @@ Ces URL sont standard pour le service Azure Rights Management, à l’exception 
 
 ## <a name="tracking-and-revoking-documents-for-users"></a>Suivi et révocation de documents pour les utilisateurs
 
-Quand les utilisateurs se connectent au site de suivi des documents, ils peuvent suivre et révoquer des documents qu’ils ont protégés à l’aide du client Azure Information Protection, ou qu’ils ont partagés à l’aide de l’application de partage RMS. Quand vous vous connectez comme administrateur pour Azure Information Protection (administrateur général), vous pouvez cliquer sur l’icône Administrateur pour passer en mode Administrateur. Ce mode vous permet d’afficher les documents que les utilisateurs de votre organisation ont choisi de suivre à l’aide du client Azure Information Protection ou ont partagé à l’aide de l’application de partage Rights Management :
+Quand les utilisateurs se connectent au site de suivi des documents, ils peuvent suivre et révoquer des documents qu’ils ont protégés à l’aide du client Azure Information Protection, ou qu’ils ont partagés à l’aide de l’application de partage RMS. Quand vous vous connectez comme administrateur d’Azure Information Protection (administrateur général), vous pouvez cliquer sur l’icône Administrateur pour passer en mode Administrateur. Ce mode vous permet d’afficher les documents que les utilisateurs de votre organisation ont choisi de suivre à l’aide du client Azure Information Protection ou ont partagé à l’aide de l’application de partage Rights Management :
 
-![Icône Administrateur du site de suivi de document](../media/tracking-site-admin-icon.png)
+![Icône Administrateur sur le site de suivi des documents](../media/tracking-site-admin-icon.png)
 
 > [!NOTE] 
-> Si vous ne voyez pas cette icône, alors que vous êtes administrateur général, cela signifie que vous n’avez pas encore partagé de documents. Dans ce cas, utilisez l’URL suivante pour accéder au site de suivi des documents : https://portal.azurerms.com/#/admin
+> Si vous ne voyez pas cette icône, alors que vous êtes administrateur général, cela signifie que vous n’avez pas encore partagé de documents. Dans ce cas, utilisez l’URL suivante pour accéder au site de suivi des documents : https://portal.azurerms.com/#/admin
 
 Les actions que vous prenez en mode Administrateur sont auditées et consignées dans les fichiers journaux d’utilisation, et vous devez confirmer pour continuer. Pour plus d’informations sur la journalisation, consultez la section suivante.
 
@@ -74,31 +74,31 @@ Quand vous êtes en mode Administrateur, vous pouvez lancer une recherche par ut
 
 Si vous effectuez une recherche par document, vous affichez tous les utilisateurs de votre organisation qui ont suivi ce document à l’aide du client Azure Information Protection ou l’ont partagé à l’aide de l’application de partage Rights Management. Vous pouvez ensuite affiner les résultats de la recherche pour suivre les documents que les utilisateurs ont protégé et révoquer ces documents, si nécessaire. 
 
-Pour quitter le mode Administrateur, cliquez sur **X** en regard de **Quitter le mode Administrateur** :
+Pour quitter le mode Administrateur, cliquez sur **X** en regard de **Quitter le mode Administrateur** :
 
-![Quitter le mode administrateur dans le site de suivi des documents](../media/tracking-site-exit-admin-icon.png)
+![Quitter le mode Administrateur dans le site de suivi des documents](../media/tracking-site-exit-admin-icon.png)
 
 Pour obtenir des instructions sur l’utilisation du site de suivi des documents, consultez [Suivre et révoquer vos documents](client-track-revoke.md) dans le guide de l’utilisateur.
 
 ## <a name="usage-logging-for-the-document-tracking-site"></a>Journalisation de l’utilisation du site de suivi des documents
 
-Dans les fichiers journaux d’utilisation, deux champs s’appliquent au suivi des documents : **AdminAction** et **ActingAsUser**.
+Dans les fichiers journaux d’utilisation, deux champs s’appliquent au suivi des documents : **AdminAction** et **ActingAsUser**.
 
-**AdminAction** Ce champ a la valeur True quand un administrateur utilise le site de suivi des documents en mode Administrateur, par exemple pour révoquer un document au nom d’un utilisateur ou pour voir quand il a été partagé. Ce champ est vide quand un utilisateur se connecte au site de suivi des documents.
+**AdminAction** : ce champ a la valeur True quand un administrateur utilise le site de suivi des documents en mode Administrateur, par exemple pour révoquer un document au nom d’un utilisateur ou pour voir quand il a été partagé. Ce champ est vide quand un utilisateur se connecte au site de suivi des documents.
 
-**ActingAsUser**: Quand le champ AdminAction a la valeur True, ce champ contient le nom de l’utilisateur au nom duquel l’administrateur agit (comme propriétaire du document ou utilisateur recherché). Ce champ est vide quand un utilisateur se connecte au site de suivi des documents. 
+**ActingAsUser** : quand le champ AdminAction a la valeur True, ce champ contient le nom de l’utilisateur au nom duquel l’administrateur agit (comme propriétaire du document ou utilisateur recherché). Ce champ est vide quand un utilisateur se connecte au site de suivi des documents. 
 
 Il existe également des types de demandes qui journalisent la façon dont les utilisateurs et les administrateurs utilisent le site de suivi des documents. Par exemple, **RevokeAccess** est le type de demande quand un utilisateur (ou un administrateur au nom d’un utilisateur) a révoqué un document dans le site de suivi des documents. Utilisez ce type de demande conjointement avec le champ AdminAction pour déterminer si l’utilisateur a révoqué son propre document (le champ AdminAction est vide) ou si un administrateur a révoqué un document au nom d’un d’utilisateur (AdminAction a la valeur True).
 
 
-Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../deploy-use/log-analyze-usage.md)
+Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-Maintenant que vous avez configuré le site de suivi des documents pour le client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :
+Maintenant que vous avez configuré le site de suivi des documents pour le client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :
 
-- [Customizations](client-admin-guide-customizations.md)
+- [Personnalisations](client-admin-guide-customizations.md)
 
 - [Fichiers du client et journalisation de l’utilisation](client-admin-guide-files-and-logging.md)
 

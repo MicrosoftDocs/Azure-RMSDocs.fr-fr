@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: d7788b909da4219ae80475bac4bd26b2a2ec8da9
-ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
+ms.openlocfilehash: 00b17536467e2990d807c3494c645fa8a559f241
+ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 
@@ -129,7 +129,7 @@ Les valeurs du GUID de modèle et de l’URL de licence sont disponibles dans la
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur cette fonctionnalité et obtenir des conseils sur son utilisation, consultez l’annonce sur le billet de blog [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
+Pour en savoir plus sur cette fonctionnalité et obtenir des conseils sur son utilisation, consultez l’annonce sur le billet de blog [Azure Information Protection with HYOK (Hold Your Own Key)](https://cloudblogs.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
 
 Pour savoir comment configurer une étiquette pour la protection AD RMS, voir [Comment configurer une étiquette pour la protection offerte par Rights Management](../deploy-use/configure-policy-protection.md). 
 

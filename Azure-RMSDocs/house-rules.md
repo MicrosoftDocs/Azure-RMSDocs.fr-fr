@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 4eafbe72-f537-4e66-80ae-d11894d373f7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4040e67a7bae2ee5a208d61134b842762ef4ace1
-ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
+ms.openlocfilehash: 014b4d7100a0be36951a21db9a1dcf35bdbe5dd6
+ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="house-rules-for-comments-on-the-azure-information-protection-documentation"></a>Règles régissant les commentaires sur la documentation pour Azure Information Protection
 
@@ -33,7 +33,7 @@ N’utilisez pas de commentaires Livefyre dans les cas suivants :
 
 - **Support technique**. Par exemple, une fonctionnalité ne s’exécute pas correctement alors que vous avez vérifié les exigences et suivi les instructions de la documentation, Vous avez vérifié également que vous utilisez une [version prise en charge](./rms-client/client-version-release-history.md#servicing-information-and-timelines) du client Azure Information Protection. Dans ce cas, contactez le [support Microsoft](./get-started/information-support.md#to-contact-microsoft-support) ou utilisez vos canaux de support standard. Vous pouvez également prendre contact avec la communauté sur le [site Yammer](https://www.yammer.com/AskIPTeam) Azure Information Protection.
 
-- **Feuille de route informative**. Par exemple, lorsqu’une nouvelle version sera disponible ou si une autre fonctionnalité est prévue. Pour obtenir ces informations, visitez le [blog Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) ou posez une question sur le [site Yammer](https://www.yammer.com/AskIPTeam) Azure Information Protection. Vous pouvez également visiter le [site User Voice](https://msip.uservoice.com) pour Azure Information Protection et utiliser cette ressource pour demander de nouvelles fonctionnalités.
+- **Feuille de route informative**. Par exemple, lorsqu’une nouvelle version sera disponible ou si une autre fonctionnalité est prévue. Pour obtenir ces informations, visitez le [blog Enterprise Mobility + Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) ou posez une question sur le [site Yammer](https://www.yammer.com/AskIPTeam) Azure Information Protection. Vous pouvez également visiter le [site User Voice](https://msip.uservoice.com) pour Azure Information Protection et utiliser cette ressource pour demander de nouvelles fonctionnalités.
 
 - **Commentaires sur les produits**. Par exemple, des suggestions d’amélioration du produit ou d’une nouvelle fonctionnalité. Visitez plutôt le [site User Voice](https://msip.uservoice.com) pour Azure Information Protection afin de proposer de nouvelles fonctionnalités, voter pour les idées que d’autres personnes ont publiées et consulter l’état actuel selon le tri de l’équipe Azure Information Protection. Pour des commentaires, des questions et des conseils d’ordre général, prenez contact avec la communauté sur le [site Yammer](https://www.yammer.com/AskIPTeam) Azure Information Protection. 
 

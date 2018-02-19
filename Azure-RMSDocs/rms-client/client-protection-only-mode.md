@@ -4,7 +4,7 @@ description: "Informations pour les utilisateurs qui exécutent le client Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/02/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ea865f91751ed171779c587d1af4cb0f4226a59e
-ms.sourcegitcommit: bc47834ae7180491ed1d9bc9f69eab398bcdc0a8
+ms.openlocfilehash: 201415526b57d691d999ddba6af2451df4d36de4
+ms.sourcegitcommit: 2733b1df2ebdda02b60d9471db29e545552f99ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guide de l’utilisateur : Mode Protection uniquement pour le client Azure Information Protection
 
@@ -33,6 +33,10 @@ Le mode Protection uniquement s’exécute dans les scénarios suivants :
 - Votre organisation a un abonnement à Azure Information Protection uniquement pour un sous-ensemble d’utilisateurs :
     
     - Pour cette combinaison d’abonnements, l’administrateur est responsable de s’assurer que seul le sous-ensemble d’utilisateurs peut utiliser les fonctionnalités de classification et d’étiquetage. Les autres utilisateurs doivent exécuter le client Azure Information Protection en mode Protection uniquement. 
+
+- Votre organisation a un abonnement à Azure Information Protection, mais vous n’avez pas d’étiquette configurée pour vous.
+    
+    - Cela peut se produire quand toutes les étiquettes de la stratégie globale sont désactivées et que votre compte n’est pas ajouté à une stratégie délimitée. Votre service informatique commence peut-être tout juste le lancement d’Azure Information Protection et ne vous a pas encore fourni les étiquettes permettant de classer vos documents et e-mails. En attendant, vous pouvez utiliser le client Azure Information Protection pour protéger des fichiers et afficher des fichiers protégés.
 
 - Votre organisation dispose d’un abonnement à Azure Information Protection, mais vous ne pouvez pas télécharger la stratégie Azure Information Protection. 
     

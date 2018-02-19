@@ -4,17 +4,17 @@ description: "Étape 1 d’un didacticiel de présentation expliquant comment te
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 84ee36c4bc936841196c7fcc3668b16dec25b522
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: 30f86870bb2302ff61641ffa4c10e3da6b5c3f9b
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="step-1-activate-protection"></a>Étape 1 : Activer la protection
  
@@ -29,7 +29,9 @@ Pour ce didacticiel, nous utilisons le portail Azure, où vous configurez égale
 
 ## <a name="to-activate-the-azure-rights-management-service"></a>Pour activer le service Azure Rights Management
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général ou administrateur de la sécurité pour votre locataire.
+1. Connectez-vous au [portail Azure](https://portal.azure.com) avec le compte Administrateur général de votre locataire. 
+    
+    Si vous n’êtes pas l’administrateur général, vous pouvez utiliser l’un des [rôles d’administration](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) suivants : **Administrateur Information Protection** ou **Administrateur de sécurité**.
 
 2. Dans le menu Hub, cliquez sur **Nouveau**, puis, dans la liste **MARKETPLACE**, sélectionnez **Sécurité + Identité**. 
     

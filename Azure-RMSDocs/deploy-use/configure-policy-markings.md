@@ -4,17 +4,17 @@ description: "Lorsque vous affectez une étiquette à un document ou un e-mail, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 01208dda12b5989e546c1042b48c17e166d48687
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: 53a6e42ef0ecdb1388c82e3af4090bb3d6778983
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -52,7 +52,7 @@ Pour les documents, les marquages visuels sont appliqués comme suit :
 
 Utilisez les instructions suivantes pour configurer les marquages visuels d’une étiquette.
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général. Accédez ensuite au panneau **Azure Information Protection**. 
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**. 
     
     Par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
@@ -92,7 +92,7 @@ Exemple : Si vous spécifiez la chaîne `Document: ${item.name}  Classification:
 
 Ce paramètre est actuellement en préversion et nécessite la préversion du client Azure Information Protection.
 
-Par défaut, les marquages visuels que vous spécifiez sont appliqués dans Word, Excel, PowerPoint et Outlook. Toutefois, vous pouvez spécifier des marquages visuels par type d’application Office lorsque vous utilisez une instruction de variable « If.App » dans la chaîne de texte et identifier le type d’application en utilisant les valeurs **Word**, **Excel**, **PowerPoint**, ou **Outlook**. Vous pouvez également abréger ces valeurs, ce qui est nécessaire si vous souhaitez en spécifier plusieurs dans la même instruction If.App.
+Par défaut, les marquages visuels que vous spécifiez sont appliqués dans Word, Excel, PowerPoint et Outlook. Toutefois, vous pouvez spécifier des marquages visuels par type d’application Office lorsque vous utilisez une instruction de variable « If.App » dans la chaîne de texte et identifier le type d’application en utilisant les valeurs **Word**, **Excel**, **PowerPoint**, ou **Outlook**. Vous pouvez également abréger ces valeurs, ce qui est nécessaire pour en spécifier plusieurs dans la même instruction If.App.
 
 Utilisez la syntaxe suivante :
 
@@ -100,7 +100,7 @@ Utilisez la syntaxe suivante :
 
 La syntaxe de cette instruction respecte la casse.
 
-Exemples :
+Exemples :
 
 - **Définir un texte d’en-tête pour les documents Word uniquement :**
     

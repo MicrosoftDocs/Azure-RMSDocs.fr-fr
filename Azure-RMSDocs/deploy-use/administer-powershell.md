@@ -4,7 +4,7 @@ description: "Découvrez comment utiliser le module PowerShell pour le service A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,19 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 94ec0107930e64d42ed55bce407c4b8c92f1df32
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 597590dbf33dd43329d27ccadf081e5e8d9fd0b6
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Administration du service Azure Rights Management à l’aide de Windows PowerShell
 
 >*S’applique à : Azure Information Protection, Office 365*
 
-Devez-vous utiliser PowerShell pour administrer le service Azure Rights Management pour Azure Information Protection ? Ce n’est peut-être pas le cas si vous êtes un administrateur général ou un [administrateur de sécurité](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles), et si la seule configuration requise pour ce service est l’activation (ou la désactivation), et la configuration de modèles Rights Management.
-
-Cependant, vous devez utiliser PowerShell pour les configurations plus complexes, et aussi au cas où vous n’êtes pas administrateur général ou administrateur de sécurité, mais où vous disposez d’autorisations d’administration du service accordées par un administrateur général. Vous préférerez peut-être utiliser PowerShell pour un contrôle plus efficace des lignes de commande et des scripts.
+Devez-vous utiliser PowerShell pour administrer le service Azure Rights Management pour Azure Information Protection ? Ce n’est peut-être pas nécessaire si l’ensemble de votre configuration peut être effectuée dans le portail Azure ou le portail Office 365. Toutefois, vous devez utiliser PowerShell pour certaines configurations avancées et vous pouvez aussi préférer utiliser PowerShell pour avoir un contrôle de ligne de commande et des scripts plus efficaces.
 
 Le tableau de la section suivante répertorie certains des scénarios de configuration avancée qui utilisent PowerShell. Lorsque la configuration peut également être effectuée sans utiliser PowerShell, cette information est également incluse dans le tableau.
 

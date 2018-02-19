@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/02/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3ee5bd789b62261867d6de4f56efaa3890dc1a57
-ms.sourcegitcommit: bc47834ae7180491ed1d9bc9f69eab398bcdc0a8
+ms.openlocfilehash: 662ed627fc6138e1ff16efb731b209964784432f
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -28,13 +28,13 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Comment configurer les paramètres avancés de configuration du client dans le portail
 
-1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général, puis accédez au panneau **Azure Information Protection**.
+1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, [connectez-vous au portail Azure](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal), puis accédez au panneau **Azure Information Protection**.
 
-2. Dans le premier panneau Azure Information Protection, sélectionnez **Stratégies étendues**.
+2. Dans le premier panneau Azure Information Protection, sélectionnez **Stratégies délimitées**.
 
-3. Dans la panneau **Azure Information Protection - Stratégies étendues**, sélectionnez le menu contextuel (**...**) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
+3. Dans la panneau **Azure Information Protection - Stratégies délimitées**, sélectionnez le menu contextuel (**...**) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
     
-    Vous pouvez configurer des paramètres avancés pour la stratégie globale et pour les stratégies étendues.
+    Vous pouvez configurer des paramètres avancés pour la stratégie globale et pour les stratégies délimitées.
 
 4. Dans le panneau **Paramètres avancés**, tapez le nom et la valeur du paramètre avancé, puis sélectionnez **Enregistrer et fermer**.
 
@@ -54,7 +54,7 @@ Indépendamment de ce paramètre, le client Azure Information Protection se conf
 
 ## <a name="suppress-the-initial-congratulations-welcome-page"></a>Supprimer le « Félicitations ! » initial. page de bienvenue
 
-Lorsque le client Azure Information Protection est installé pour la première fois sur un ordinateur et qu’un utilisateur ouvre Word, Excel, PowerPoint ou Outlook, une page **Félicitations !** s’affiche avec de courtes instructions sur la manière d’utiliser la nouvelle barre Information Protection pour sélectionner des étiquettes. Vous pouvez supprimer cette page en modifiant le registre.
+Quand le client Azure Information Protection est installé pour la première fois sur un ordinateur et qu’un utilisateur ouvre Word, Excel, PowerPoint ou Outlook, une page **Félicitations !** s’affiche avec de courtes instructions sur la manière d’utiliser la nouvelle barre Information Protection pour sélectionner des étiquettes. Vous pouvez supprimer cette page en modifiant le registre.
 
 Recherchez le nom de la valeur suivant, et définissez les données de la valeur sur **0** :
 
@@ -192,7 +192,7 @@ Cette configuration utilise un [paramètre client avancé](#how-to-configure-adv
 
 Quand vous configurez ce paramètre, Outlook n’applique pas l’étiquette par défaut qui est configurée dans la stratégie Azure Information Protection pour le paramètre **Sélectionner l’étiquette par défaut**. Au lieu de cela, Outlook peut appliquer une autre étiquette par défaut ou ne rien appliquer.
 
-Pour appliquer une autre étiquette, vous devez spécifier son ID. L’ID de l’étiquette figure dans le panneau **Étiquette** quand vous affichez ou configurez la stratégie Azure Information Protection dans le portail Azure. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier l’ID de l’étiquette (MainLabelId ou SubLabelId). Si une étiquette comprend des sous-étiquettes, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parent.
+Pour appliquer une autre étiquette, vous devez spécifier son ID. L’ID de l’étiquette figure dans le panneau **Étiquette** quand vous affichez ou configurez la stratégie Azure Information Protection dans le portail Azure. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier l’ID de l’étiquette (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente.
 
 Pour qu’Outlook n’applique pas l’étiquette par défaut, spécifiez **None**.
 
@@ -230,7 +230,7 @@ Comme exemple, vous avez une colonne SharePoint nommée **Classification** qui a
 
 Pour étiqueter un document Office avec l’une de ces valeurs de classification, définissez **SyncPropertyName** sur **Classification** et **SyncPropertyState** sur **OneWay**. 
 
-À partir de maintenant, quand un utilisateur ouvre et enregistre un de ces documents Office, il est étiqueté **Public**, **Général** ou **Confidentiel** si vous avez des étiquettes avec ces noms dans votre stratégie Azure Information Protection. Si vous n’avez pas d’étiquettes avec ces noms, le document reste sans étiquette.
+À partir de maintenant, quand un utilisateur ouvre et enregistre un de ces documents Office, le document est étiqueté **Public**, **Général** ou **Confidentiel** si vous avez des étiquettes avec ces noms dans votre stratégie Azure Information Protection. Si vous n’avez pas d’étiquettes avec ces noms, le document reste sans étiquette.
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Intégration avec la classification des messages Exchange pour une solution d’étiquetage des appareils mobiles
 

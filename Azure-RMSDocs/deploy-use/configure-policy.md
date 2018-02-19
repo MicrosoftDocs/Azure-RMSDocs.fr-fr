@@ -4,7 +4,7 @@ description: "Pour configurer la classification, l’étiquetage et la protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b04c7881f982b33094107b6de33920a83b17b960
-ms.sourcegitcommit: a7cdf911088fdf663e43894484530ea15150284f
+ms.openlocfilehash: 6b0556755597fe20755e7b798a24498a780b87b5
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -44,9 +44,24 @@ Si votre organisation a différents types d’abonnements, vous êtes responsabl
 
 Pour plus d’informations sur les abonnements, consultez [De quel abonnement ai-je besoin pour Azure Information Protection et quelles sont les fonctionnalités incluses ?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
+## <a name="signing-in-to-the-azure-portal"></a>Connexion au portail Azure
+
+Pour vous connecter au portail Azure et configurer et gérer Azure Information Protection :
+
+- Utilisez le lien suivant : https://portal.azure.com
+
+- Utilisez un compte avec l’un des [rôles d’administrateur](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) suivants :
+    
+    - **Administrateur Information Protection** (actuellement en préversion)
+
+    - **Administrateur de sécurité**
+
+    - **Administrateur général/administrateur de la société**
+
+
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Pour accéder au panneau Azure Information Protection pour la première fois
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général ou administrateur de la sécurité pour votre locataire.
+1. Connectez-vous au portail Azure.
 
 2. Dans le menu Hub, cliquez sur **Nouveau**, puis, dans la liste **MARKETPLACE**, sélectionnez **Sécurité + Identité**. 
     
@@ -63,7 +78,7 @@ La prochaine fois que vous accéderez au panneau **Azure Information Protection*
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Guide de configuration de la stratégie Azure Information Protection
 
-1. Vérifiez que vous êtes connecté au [portail Azure](https://portal.azure.com) en tant qu’administrateur de la sécurité ou administrateur général.
+1. Vérifiez que vous êtes connecté au portail Azure avec l’un de ces rôles d’administration : Administrateur Information Protection, Administrateur de sécurité ou Administrateur général. Consultez la [section précédente](#signing-in-to-the-azure-portal) pour plus d’informations sur ces rôles d’administration.
 
 2. Si besoin, accédez au panneau **Azure Information Protection** : par exemple, dans le menu du hub, cliquez sur **Autres services** et commencez à taper **Information Protection** dans la zone Filtrer. Dans les résultats, sélectionnez **Azure Information Protection**. 
     
@@ -85,7 +100,7 @@ La prochaine fois que vous accéderez au panneau **Azure Information Protection*
     
     - L’option permettant de fournir un lien d’aide personnalisé aux utilisateurs.
 
-Azure Information Protection est livré avec une [stratégie par défaut](configure-policy-default.md), qui contient cinq étiquettes principales. Deux de ces étiquettes contiennent des sous-étiquettes pour fournir des sous-catégories, si nécessaire. Lorsqu’une étiquette est configurée pour des sous-étiquettes, les utilisateurs ne peuvent pas sélectionner l’étiquette principale mais doivent sélectionner une des sous-étiquettes.
+Azure Information Protection est livré avec une [stratégie par défaut](configure-policy-default.md), qui contient cinq étiquettes principales. Deux de ces étiquettes contiennent des sous-étiquettes pour fournir des sous-catégories, si nécessaire. Quand une étiquette est configurée pour des sous-étiquettes, les utilisateurs ne peuvent pas sélectionner l’étiquette principale, mais doivent sélectionner une des sous-étiquettes.
 
 Les étiquettes Azure Information Protection peuvent être utilisées avec la gamme complète des données généralement créées et stockées par une organisation, de la classification la plus basse des données personnelles à la classification la plus élevée des données hautement confidentielles. 
 

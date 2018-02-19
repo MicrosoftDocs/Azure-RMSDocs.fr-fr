@@ -4,7 +4,7 @@ description: "Instructions et informations pour que les administrateurs gèrent 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 27799ff64e8c224c64b0ffc858b79818650d74af
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: a6ca8145768559a556b051974f59620a0750c660
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -24,9 +24,7 @@ ms.lasthandoff: 02/09/2018
 
 Quand vous installez le client Azure Information Protection, des commandes PowerShell sont installés automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
-Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module remplace le module de protection RMS installé avec l’outil de protection RMS. Si vous disposez de l’outil RMSProtection lorsque vous installez le client Azure Information Protection, le module RMSProtection est automatiquement désinstallé.
-
-Le module AzureInformationProtection inclut toutes les applets de commande Rights Management de l’outil de protection RMS. Il propose également de nouvelles applets de commande qui utilisent le service AIP (Azure Information Protection) pour l’étiquetage. Par exemple :
+Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module comprend toutes les applets de commande Rights Management de l’outil de protection RMS (qui n’est plus pris en charge). Il propose également de nouvelles applets de commande qui utilisent le service AIP (Azure Information Protection) pour l’étiquetage. Par exemple :
 
 |Étiquetage des applets de commande|Exemple d’utilisation|
 |----------------|---------------|
@@ -36,13 +34,13 @@ Le module AzureInformationProtection inclut toutes les applets de commande Right
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Étiquetez les fichiers de manière non interactive, par exemple à l’aide d’un script qui s’exécute selon une planification.|
 
 
-De plus, le [scanneur Azure Information Protection](../deploy-use/deploy-aip-scanner.md) (actuellement en préversion) utilise des applets de commande pour installer et configurer un service sur Windows Server. Ce scanneur vous permet de découvrir, classifier et protéger des fichiers sur des magasins de données.
+De plus, le [scanneur Azure Information Protection](../deploy-use/deploy-aip-scanner.md) utilise des applets de commande pour installer et configurer un service sur Windows Server. Ce scanneur vous permet de découvrir, classifier et protéger des fichiers sur des magasins de données.
 
 Pour obtenir une liste de toutes les applets de commande et de l’aide associée, voir le [module Azure Information Protection](/powershell/module/azureinformationprotection). Dans une session PowerShell, tapez `Get-Help <cmdlet name> -online` pour afficher l’aide la plus récente.  
 
 Ce module s’installe dans **\ProgramFiles (x86)\Microsoft Azure Information Protection** et ajoute ce dossier à la variable système **PSModulePath**. Le fichier .dll de ce module est nommé **AIP.dll**.
 
-Comme avec le module RMSProtection, la version actuelle du module AzureInformationProtection présente les limitations suivantes :
+La version actuelle du module AzureInformationProtection a les limitations suivantes :
 
 - Vous pouvez annuler la protection des dossiers personnels Outlook (fichiers .pst), mais vous ne pouvez pas actuellement protéger en mode natif ces fichiers ou d’autres fichiers de conteneur à l’aide de ce module PowerShell.
 
@@ -65,7 +63,7 @@ Avant de commencer à utiliser ces applets de commande, consultez les autres con
 Lisez cette section avant de commencer à utiliser les commandes PowerShell quand votre organisation utilise Azure Information Protection pour la classification et la protection, ou seulement le service Azure Rights Management pour la protection des données.
 
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Prérequis
 
 En plus des prérequis pour l’installation du module Azure Information Protection, il existe d’autres prérequis pour l’étiquetage Azure Information Protection et pour le service de protection de données Azure Rights Management :
 
@@ -343,7 +341,7 @@ Notez que si les modèles Rights Management sont modifiés, vous devez les tél�
 Lisez cette section avant de commencer à utiliser les commandes PowerShell pour protéger ou annuler la protection des fichiers, lorsque votre organisation utilise simplement Active Directory Rights Management Services.
 
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Prérequis
 
 Outre les prérequis pour l’installation du module AzureInformationProtection, le compte utilisé pour protéger ou déprotéger des fichiers doit disposer des autorisations de lecture et d’exécution pour accéder à ServerCertification.asmx :
 
@@ -454,7 +452,7 @@ Votre résultat peut ressembler à ce qui suit :
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Comment étiqueter des fichiers de manière non interactive pour Azure Information Protection
 
-Vous pouvez exécuter les applets de commande d’étiquetage de manière non interactive à l’aide de l’applet de commande **Set-AIPAuthentication**. L’opération non interactive est également nécessaire pour le scanneur Azure Information Protection, actuellement en préversion.
+Vous pouvez exécuter les applets de commande d’étiquetage de manière non interactive à l’aide de l’applet de commande **Set-AIPAuthentication**. L’opération non interactive est également nécessaire pour le scanneur Azure Information Protection.
 
 Par défaut, lorsque vous exécutez les applets de commande d’étiquetage, les commandes s’exécutent dans votre propre contexte utilisateur dans une session PowerShell interactive. Pour les exécuter sans assistance, créez un compte d’utilisateur Azure AD à cet effet. Ensuite, dans le contexte de cet utilisateur, exécutez l’applet de commande Set-AIPAuthentication pour définir et stocker les informations d’identification à l’aide d’un jeton d’accès Azure AD. Ce compte d’utilisateur est ensuite authentifié et initialisé pour le service Azure Rights Management. Le compte télécharge la stratégie Azure Information Protection et tous les modèles Rights Management utilisés par les étiquettes.
 
@@ -463,7 +461,7 @@ Par défaut, lorsque vous exécutez les applets de commande d’étiquetage, les
 
 La première fois que vous exécutez cette applet de commande, vous êtes invité à vous connecter à Azure Information Protection. Spécifiez le nom et le mot de passe du compte d’utilisateur que vous avez créé pour l’utilisateur sans assistance. Ce compte peut alors exécuter les applets de commande d’étiquetage de manière non interactive jusqu’à ce que le jeton d’authentification expire. 
 
-Pour que le compte d’utilisateur puisse se connecter interactivement cette première fois, le compte doit avoir le droit d’**Ouvrir une session locale**. Ce droit est standard pour les comptes d’utilisateur, mais vos stratégies d’entreprise peuvent interdire cette configuration pour les comptes de service. Si tel est le cas, vous pouvez exécuter Set-AIPAuthentication avec le paramètre *Jeton* afin que l’authentification se termine sans l’invite de connexion. Vous pouvez exécuter cette commande en tant que tâche planifiée et accorder au compte le droit inférieur d’**Ouvrir une session en tant que programme de traitement par lots**. Pour plus d’informations, consultez les sections suivantes. 
+Pour que le compte d’utilisateur puisse se connecter interactivement cette première fois, le compte doit avoir le droit d’**Ouvrir une session locale**. Ce droit est standard pour les comptes d’utilisateur, mais vos stratégies d’entreprise peuvent interdire cette configuration pour les comptes de service. Si tel est le cas, vous pouvez exécuter Set-AIPAuthentication avec le paramètre *Jeton* afin que l’authentification se termine sans l’invite de connexion. Vous pouvez exécuter cette commande comme une tâche planifiée et accorder au compte le droit inférieur qui consiste à **Ouvrir une session comme programme de traitement par lots**. Pour plus d’informations, consultez les sections suivantes. 
 
 Lorsque le jeton expire, exécutez l’applet de commande pour acquérir un nouveau jeton.
 
@@ -521,6 +519,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 
 12. De retour dans le panneau **Autorisations nécessaires**, sélectionnez **Accorder des autorisations**, cliquez sur **Oui** pour confirmer, puis fermez ce panneau.
     
+
 Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *WebAppId*, *WebAppKey* and *NativeAppId*. Par exemple :
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
@@ -532,7 +531,7 @@ Lorsque vous exécutez cette commande pour la première fois, vous êtes invité
 ### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Spécifier et utiliser le paramètre Jeton pour Set-AIPAuthentication
 
 > [!NOTE]
-> Cette option est en préversion et nécessite la préversion actuelle du client Azure Information Protection.
+> Cette option nécessite la version de disponibilité générale du scanneur Azure Information Protection ou la préversion actuelle du client Azure Information Protection.
 
 Suivez les étapes et instructions supplémentaires suivantes afin d’éviter la première connexion interactive pour un compte qui étiquette et protège des fichiers. En règle générale, ces étapes supplémentaires ne sont nécessaires que si ce compte ne peut pas obtenir le droit d’**Ouvrir une session localement**, mais qu’il obtient le droit **Ouvrir une session en tant que programme de traitement par lots**. Par exemple, cela peut être le cas pour votre compte de service qui exécute le scanneur Azure Information Protection.
 
@@ -540,12 +539,11 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
 2. Exécutez Set-AIPAuthentication pour obtenir un jeton d’accès et copiez-le dans le Presse-papiers.
 
-2. Modifiez le script PowerShell pour inclure le jeton.
+3. Modifiez le script PowerShell pour inclure le jeton.
 
-3. Créer une tâche qui exécute le script PowerShell dans le contexte du compte de service qui étiquettera et protégera les fichiers.
+4. Créer une tâche qui exécute le script PowerShell dans le contexte du compte de service qui étiquettera et protégera les fichiers.
 
-4. Vérifiez que le jeton est enregistré pour le compte de service, et supprimez le script PowerShell.
-
+5. Vérifiez que le jeton est enregistré pour le compte de service et supprimez le script PowerShell.
 
 #### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Étape 1 : créer un script PowerShell sur votre ordinateur local
 

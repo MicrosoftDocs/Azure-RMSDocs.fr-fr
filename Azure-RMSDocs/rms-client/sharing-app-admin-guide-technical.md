@@ -101,7 +101,7 @@ Vous pouvez également forcer l'application de partage RMS à bloquer la protect
 
 Pour configurer l'application de partage RMS afin qu'elle applique une protection générique à tous les fichiers qui auraient par défaut une protection native, apportez les modifications suivantes au Registre. Notez que, si les clés RmsSharingApp ou FileProtection n’existent pas, vous devez les créer manuellement.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection** : créez une clé nommée *.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection** : créez une clé nommée \*.
 
     Ce réglage désigne les fichiers avec une extension de nom de fichier quelconque.
 

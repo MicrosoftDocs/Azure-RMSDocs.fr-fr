@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9e8b7f3bbebe50fb6f219142a17961dc8b565f6c
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 7a3ed134c84c5293ecc2391fdaec32ccfc425910
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de votre clé de locataire Azure Information Protection
+# <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
 >*S’applique à : Azure Information Protection, Office 365*
 
@@ -82,7 +82,7 @@ Cette option implique les étapes suivantes :
 
 > [!NOTE]
 
-> En guise de mesure de protection supplémentaire, Azure Key Vault utilise des domaines de sécurité distincts pour ses centres de données dans des régions comme Amérique du Nord, EMEA (Europe, Moyen-Orient et Afrique) et Asie. Azure Key Vault utilise aussi différentes instances d’Azure, comme Microsoft Azure Allemagne et Azure Government. 
+> En guise de mesure de protection supplémentaire, Azure Key Vault utilise des domaines de sécurité distincts pour ses centres de données dans des régions comme Amérique du Nord, EMEA (Europe, Moyen-Orient et Afrique) et Asie, Azure Key Vault utilise aussi différentes instances d’Azure, comme Microsoft Azure Allemagne et Azure Government. 
 
 Bien que cette action soit facultative, vous pouvez également utiliser les journaux d’utilisation quasiment en temps réel à partir d’Azure Information Protection pour voir exactement quand et comment votre clé de locataire est utilisée.
 
@@ -106,11 +106,11 @@ Utilisez les informations et les procédures de cette section si vous souhaitez 
 ### <a name="prerequisites-for-byok"></a>Conditions requises pour la solution BYOK
 Reportez-vous au tableau suivant pour connaître les conditions requises pour la solution Bring your own key (BYOK).
 
-|Condition requise|Plus d'informations|
+|Condition requise|Plus d’informations|
 |---------------|--------------------|
 |Votre locataire Azure Information Protection doit avoir un abonnement Azure. Si vous n’en avez pas, vous pouvez vous inscrire pour un [compte gratuit](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> Pour utiliser une clé protégée par module HSM, vous devez avoir le niveau de service Azure Key Vault Premium.|L’abonnement Azure gratuit qui fournit l’accès pour configurer Azure Active Directory et la configuration de modèles personnalisés Azure Rights Management (**Accès à Azure Active Directory**) n’est pas suffisant pour utiliser Azure Key Vault. Pour vérifier que vous disposez d’un abonnement Azure que vous pouvez utiliser pour la solution BYOK, utilisez les applets de commande PowerShell d’[Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) : <br /><br /> 1. Démarrez une session Azure PowerShell en activant l’option **Exécuter en tant qu’administrateur** et connectez-vous en tant qu’administrateur global pour votre locataire Azure Information Protection, via la commande suivante :`Login-AzureRmAccount`<br /><br />2. Saisissez ce qui suit et vérifiez que des valeurs s’affichent pour le nom et l’ID de votre abonnement ainsi que votre ID de locataire AIP, et que l’état est activé : `Get-AzureRmSubscription`<br /><br />Si aucune valeur n’est affichée et que vous revenez simplement à l’invite, c’est que vous n’avez pas d’abonnement Azure utilisable pour la solution BYOK. <br /><br />**Remarque** : En plus des prérequis de la solution BYOK, si vous migrez d’AD RMS vers Azure Information Protection en passant d’une clé logicielle à une clé matérielle, vous devez disposer au minimum de la version 11.62 pour le microprogramme Thales.|
 |Pour utiliser une clé protégée par module HSM que vous créez localement : tous les prérequis répertoriés pour Key Vault BYOK. |Consultez [Prérequis pour la solution BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) dans la documentation d’Azure Key Vault. <br /><br /> **Remarque** : En plus des prérequis de la solution BYOK, si vous migrez d’AD RMS vers Azure Information Protection en passant d’une clé logicielle à une clé matérielle, vous devez disposer au minimum de la version 11.62 pour le microprogramme Thales.|
-|Le module d’administration Azure Rights Management pour Windows PowerShell.|Pour obtenir des instructions d’installation, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />Si vous avez déjà installé ce module Windows PowerShell, exécutez la commande suivante pour vérifier que le numéro de votre version est au minimum **2.9.0.0** : `(Get-Module aadrm -ListAvailable).Version`|
+|Le module d’administration Azure Rights Management pour Windows PowerShell.|Pour connaître les instructions d'installation, voir [Installation du module PowerShell AADRM](../deploy-use/install-powershell.md). <br /><br />Si vous avez déjà installé ce module Windows PowerShell, exécutez la commande suivante pour vérifier que le numéro de votre version est au minimum **2.9.0.0** : `(Get-Module aadrm -ListAvailable).Version`|
 
 Pour plus d’informations sur les modules de sécurité matériels Thales et comment ils sont utilisés avec Azure Key Vault, consultez le [site web de Thales](https://www.thales-esecurity.com/msrms/cloud).
 
@@ -124,7 +124,7 @@ Faites votre choix en tenant d’abord compte de la conformité, et ensuite pour
 
 - Étant donné que tous les appels de chiffrement pour la protection sont chaînés à votre clé de locataire Azure Information Protection, vous souhaitez minimiser la latence réseau subie par ces appels. Pour cela, créez votre coffre de clés dans la même région ou la même instance Azure que votre locataire Azure Information Protection.
 
-Pour identifier l’emplacement de votre locataire Azure Information Protection, utilisez l’applet de commande PowerShell [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) et identifiez la région à partir des URL. Exemple :
+Pour identifier l’emplacement de votre locataire Azure Information Protection, utilisez l’applet de commande PowerShell [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) et identifiez la région à partir des URL. Par exemple :
 
     LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
@@ -151,7 +151,7 @@ Pour créer une clé locale protégée par module HSM et la transférer à votre
 
 Une clé qui est stockée dans Key Vault a un ID de clé. Cet ID de clé est une URL contenant le nom du coffre de clés, le conteneur de clés, le nom de la clé et la version de la clé. Par exemple : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Vous devez configurer Azure Information Protection pour l’utilisation de cette clé en spécifiant son URL Key Vault.
 
-Avant qu’Azure Information Protection puisse utiliser la clé, le service Azure Rights Management doit être autorisé à utiliser la clé dans le coffre de clés de votre organisation. Pour cela, l’administrateur d’Azure Key Vault utilise l’applet de commande PowerShell de Key Vault, [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy), et accorde des autorisations au principal du service Azure Rights Management à l’aide du GUID 00000012-0000-0000-c000-000000000000. Exemple :
+Avant qu’Azure Information Protection puisse utiliser la clé, le service Azure Rights Management doit être autorisé à utiliser la clé dans le coffre de clés de votre organisation. Pour cela, l’administrateur d’Azure Key Vault utilise l’applet de commande PowerShell de Key Vault, [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy), et accorde des autorisations au principal du service Azure Rights Management à l’aide du GUID 00000012-0000-0000-c000-000000000000. Par exemple :
 
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 
@@ -159,7 +159,7 @@ Vous êtes maintenant prêt à configurer Azure Information Protection pour util
 
     Connect-AadrmService
 
-Ensuite, exécutez l’applet de commande [Add-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) en spécifiant l’URL de la clé. Exemple :
+Ensuite, exécutez l’applet de commande [Add-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) en spécifiant l’URL de la clé. Par exemple :
 
     Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 

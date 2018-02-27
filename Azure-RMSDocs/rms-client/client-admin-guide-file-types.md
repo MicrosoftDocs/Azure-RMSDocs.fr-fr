@@ -4,7 +4,7 @@ description: "Détails techniques sur les types de fichiers pris en charge, les 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e1adb23e00b447d5633b37b310e3b9ce96d0becf
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: e9b281fbce9ad423249137c5dfff5a6f88dd2178
+ms.sourcegitcommit: bf3967c5b74d2bc57b0f93239a297ccd56682178
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 
@@ -30,7 +30,7 @@ Le client Azure Information Protection peut appliquer les éléments suivants au
 
 - Protection uniquement
 
-Utilisez les informations suivantes pour vérifier les types de fichiers pris en charge, les différents niveaux de protection, la manière de modifier le niveau de protection par défaut, et les fichiers qui sont automatiquement exclus (ignorés) de la classification et de la protection.
+Utilisez les informations suivantes pour vérifier les types de fichiers pris en charge par le client Azure Information Protection, pour comprendre les différents niveaux de protection et comment modifier le niveau de protection par défaut, et pour identifier les fichiers qui sont automatiquement exclus (ignorés) de la classification et de la protection.
 
 ## <a name="file-types-supported-for-classification-only"></a>Types de fichiers pris en charge pour la classification uniquement
 
@@ -38,13 +38,9 @@ Vous pouvez classifier les types de fichiers suivants même s’ils ne sont pas 
 
 - **Adobe Portable Document Format** : .pdf
 
-- **Microsoft Visio** : .vsdx, .vsdm, .vssx, .vssm, .vsd, .vdw, .vst
-
 - **Microsoft Project** : .mpp, .mpt
 
 - **Microsoft Publisher** : .pub
-
-- **Microsoft Office 97, Office 2010, Office 2003** : .xls, .xlt, .doc, .dot, .ppt, .pps, .pot
 
 - **Microsoft XPS** : .xps .oxps
 
@@ -55,6 +51,12 @@ Vous pouvez classifier les types de fichiers suivants même s’ils ne sont pas 
 - **Adobe Photoshop** : .psd
 
 - **Digital Negative** : .dng
+
+- **Microsoft Office** : types de fichiers dans le tableau suivant :
+    
+    |Type de fichier Office|Type de fichier Office|
+    |----------------------------------|----------------------------------|
+    |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vdw<br /><br />.vsd<br /><br />.vsdm|.vsdx<br /><br />.vss<br /><br />.vssm<br /><br />.vst<br /><br />.vstm<br /><br />.vssx<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx|
 
 D’autres types de fichiers prennent en charge la classification quand ils sont aussi protégés. Pour ces types de fichiers, consultez la section [Types de fichiers pris en charge pour la classification et la protection](#supported-file-types-for-classification-and-protection).
 
@@ -69,7 +71,7 @@ Le client Azure Information Protection prend en charge la protection à deux niv
 |Type de protection|Natif|Générique|
 |----------------------|----------|-----------|
 |Description|Dans le cas de fichiers texte, image, Microsoft Office (Word, Excel, PowerPoint), .pdf et d’autres types de fichier d’application qui prennent en charge un service Rights Management, la protection native fournit un niveau de protection élevé, qui comprend le chiffrement et la mise en application de droits (autorisations).|Pour toutes les autres applications et tous les autres types de fichier, la protection générique fournit un niveau de protection qui inclut à la fois l’encapsulation de fichier avec le type de fichier .pfile et l’authentification pour déterminer si un utilisateur est autorisé à ouvrir le fichier.|
-|Protection|La protection des fichiers est appliquée comme suit :<br /><br />- Pour afficher le contenu protégé, les personnes qui reçoivent le fichier par e-mail ou qui y ont accès grâce aux autorisations de fichier ou de partage doivent être authentifiées.<br /><br />- De plus, la stratégie et les droits d’utilisation, définis par le propriétaire du contenu quand les fichiers sont protégés, sont entièrement appliqués quand le contenu est affiché dans la visionneuse Azure Information Protection (pour les fichiers texte et image protégés) ou dans l’application associée (pour tous les autres types de fichiers pris en charge).|La protection des fichiers est appliquée comme suit :<br /><br />- Pour afficher le contenu protégé, les personnes autorisées à ouvrir le fichier et qui y ont accès doivent être authentifiées. Si l'autorisation échoue, le fichier ne s'ouvre pas.<br /><br />- Les droits d’utilisation et la stratégie définis par le propriétaire du contenu sont affichés pour informer les utilisateurs autorisés de la stratégie d’utilisation prévue.<br /><br />- La journalisation de l’audit de l’ouverture et de l’accès aux fichiers par les utilisateurs autorisés est effectuée. Cependant, les droits d’utilisation ne sont pas appliqués.|
+|Protection|La protection des fichiers est appliquée comme suit :<br /><br />- Pour afficher le contenu protégé, les personnes qui reçoivent le fichier par e-mail ou qui y ont accès grâce aux autorisations de fichier ou de partage doivent être authentifiées.<br /><br />- De plus, la stratégie et les droits d’utilisation qui ont été définis par le propriétaire du contenu quand les fichiers ont été protégés sont appliqués quand le contenu est affiché dans la visionneuse Azure Information Protection (pour les fichiers texte et image protégés) ou dans l’application associée (pour tous les autres types de fichiers pris en charge).|La protection des fichiers est appliquée comme suit :<br /><br />- Pour afficher le contenu protégé, les personnes autorisées à ouvrir le fichier et qui y ont accès doivent être authentifiées. Si l'autorisation échoue, le fichier ne s'ouvre pas.<br /><br />- Les droits d’utilisation et la stratégie définis par le propriétaire du contenu sont affichés pour informer les utilisateurs autorisés de la stratégie d’utilisation prévue.<br /><br />- La journalisation de l’audit de l’ouverture et de l’accès aux fichiers par les utilisateurs autorisés est effectuée. Cependant, les droits d’utilisation ne sont pas appliqués.|
 |Valeur par défaut pour les types de fichier|Il s'agit du niveau de protection par défaut pour les types de fichiers suivants :<br /><br />- Fichiers texte et image<br /><br />- Fichiers Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Fichiers PDF (Portable Document Format) (.pdf)<br /><br />Pour plus d’informations, consultez la section suivante, [Types de fichiers pris en charge pour la classification et la protection](#supported-file-types-for-classification-and-protection).|Il s’agit de la protection par défaut pour tous les autres types de fichiers (comme .vsdx, .rtf, etc.) qui ne sont pas pris en charge par la fonctionnalité de protection native.|
 
 Vous pouvez modifier le niveau de protection par défaut que le client Azure Information Protection applique. Vous pouvez remplacer le niveau de protection native par défaut par une protection générique, et inversement, et même empêcher que le client Azure Information Protection n’applique la protection. Pour plus d’informations, consultez la section [Modification du niveau de protection par défaut des fichiers](#changing-the-default-protection-level-of-files) dans cet article.
@@ -101,7 +103,7 @@ Le tableau suivant liste une partie des types de fichiers qui prennent en charge
 Ces types de fichiers sont identifiés séparément, car quand ils sont protégés en mode natif, l’extension de nom de fichier d’origine change et ces fichiers passent en lecture seule. Notez que quand des fichiers sont protégés de façon générique, l’extension de nom de fichier d’origine est toujours remplacée par .pfile.
 
 > [!WARNING]
-> Si vous disposez de pare-feu, proxys web ou logiciels de sécurité qui contrôlent et prennent des mesures en fonction des extensions de nom de fichier, vous devrez peut-être les reconfigurer pour qu'ils prennent en charge ces nouvelles extensions de nom de fichier.
+> Si vous disposez de pare-feu, proxys web ou logiciels de sécurité qui contrôlent et prennent des mesures en fonction des extensions de nom de fichier, vous devrez peut-être reconfigurer ces appareils et logiciels réseau pour qu'ils prennent en charge ces nouvelles extensions de nom de fichier.
 
 |Extension de nom de fichier d'origine|Extension de nom d’un fichier protégé|
 |--------------------------------|-------------------------------------|
@@ -126,21 +128,21 @@ Pour ces fichiers, l’extension de nom de fichier reste la même une fois que l
 
 |Types de fichier pris en charge par Office|Types de fichier pris en charge par Office|
 |----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.pptx<br /><br />.thmx|.vsdm<br /><br />.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
 
 ### <a name="changing-the-default-protection-level-of-files"></a>Modification du niveau de protection par défaut des fichiers
 Vous pouvez modifier la façon dont le client Azure Information Protection protège les fichiers en modifiant le Registre. Par exemple, vous pouvez forcer les fichiers qui prennent en charge la protection native à être protégés de manière générique par le client Azure Information Protection.
 
-Raisons pour lesquelles vous pourriez vouloir procéder ainsi :
+Raisons pour lesquelles vous pourriez vouloir procéder ainsi :
 
 - Pour vous assurer que tous les utilisateurs peuvent ouvrir le fichier s'ils ne possèdent pas d'application prenant en charge la protection native.
 
 - Pour tenir compte des systèmes de sécurité qui agissent sur les fichiers selon leur extension de nom de fichier et peuvent être reconfigurés pour prendre en charge l'extension de nom de fichier .pfile, mais ne peuvent pas être reconfigurés pour prendre en charge plusieurs extensions de nom de fichier pour la protection native.
 
-De même, vous pouvez forcer le client Azure Information Protection à appliquer une protection native aux fichiers qui auraient une protection générique par défaut. Cela peut être approprié si vous avez une application qui prend en charge les API RMS, par exemple une application métier écrite par vos développeurs internes ou une application achetée auprès d'un éditeur de logiciels indépendant.
+De même, vous pouvez forcer le client Azure Information Protection à appliquer une protection native aux fichiers qui auraient une protection générique par défaut. Cette action peut être appropriée si vous avez une application qui prend en charge les API RMS. Par exemple une application métier écrite par vos développeurs internes ou une application achetée auprès d'un éditeur de logiciels indépendant.
 
-Vous pouvez également forcer le client Azure Information Protection à bloquer la protection des fichiers (ne pas appliquer de protection native ou générique). Par exemple, cela peut être nécessaire si vous avez une application automatisée ou un service qui doit être en mesure d'ouvrir un fichier spécifique pour traiter son contenu. Quand vous bloquez la protection pour un type de fichier particulier, les utilisateurs ne peuvent pas utiliser le client Azure Information Protection pour protéger les fichiers de ce type. Quand ils essaient de le faire, un message indiquant que l'administrateur a empêché la protection s'affiche, et ils doivent annuler leur action pour protéger le fichier.
+Vous pouvez également forcer le client Azure Information Protection à bloquer la protection des fichiers (ne pas appliquer de protection native ou générique). Par exemple, cette action peut être nécessaire si vous avez une application ou un service automatisé qui doit être en mesure d'ouvrir un fichier spécifique pour traiter son contenu. Quand vous bloquez la protection pour un type de fichier particulier, les utilisateurs ne peuvent pas utiliser le client Azure Information Protection pour protéger les fichiers de ce type. Quand ils essaient de le faire, un message indiquant que l'administrateur a empêché la protection s'affiche, et ils doivent annuler leur action pour protéger le fichier.
 
 Pour configurer le client Azure Information Protection afin qu’il applique une protection générique à tous les fichiers qui auraient par défaut une protection native, apportez les modifications suivantes au Registre. Si la clé FileProtection n’existe pas, vous devez la créer manuellement.
 
@@ -154,7 +156,7 @@ Pour configurer le client Azure Information Protection afin qu’il applique une
 
     Avec ce paramètre, le client Azure Information Protection applique une protection générique.
 
-Ces deux réglages entraînent l’application de la protection générique par le client Azure Information Protection à tous les fichiers ayant une extension de nom de fichier. Si c'est l'objectif que vous recherchez, aucune configuration supplémentaire n'est requise. Toutefois, vous pouvez définir des exceptions pour des types de fichier spécifiques, afin qu'ils soient protégés en mode natif. Pour cela, vous devez effectuer trois modifications supplémentaires dans le Registre pour chaque type de fichier :
+Ces deux réglages entraînent l’application de la protection générique par le client Azure Information Protection à tous les fichiers ayant une extension de nom de fichier. Si c'est l'objectif que vous recherchez, aucune configuration supplémentaire n'est requise. Toutefois, vous pouvez définir des exceptions pour des types de fichier spécifiques, afin qu'ils soient protégés en mode natif. Pour cela, vous devez effectuer trois modifications supplémentaires dans le Registre pour chaque type de fichier :
 
 1. Pour **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** (Windows 32 bits) ou **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (Windows 64 bits) : ajoutez une nouvelle clé qui porte le nom de l’extension de nom de fichier (sans le point qui précède).
 
@@ -164,7 +166,7 @@ Ces deux réglages entraînent l’application de la protection générique par 
 
 3. Dans la clé de type de fichier nouvellement ajoutée, par exemple **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX**), créez une valeur de chaîne nommée **Encryption** avec la valeur **Native**.
 
-Suite à ces réglages, tous les fichiers sont protégés de façon générique, à l’exception des fichiers qui ont une extension de nom de fichier .docx, qui sont protégés en mode natif par le client Azure Information Protection.
+Suite à ces réglages, tous les fichiers sont protégés de façon générique, à l'exception des fichiers qui ont une extension de nom de fichier .docx. Ces fichiers sont protégés en mode natif par le client Azure Information Protection.
 
 Répétez ces trois étapes pour les autres types de fichier que vous souhaitez définir en tant qu’exceptions car ils prennent en charge la protection native et vous ne souhaitez pas qu’ils soient protégés de manière générique par le client Azure Information Protection.
 
@@ -176,7 +178,7 @@ Vous pouvez apporter des modifications similaires au Registre pour d'autres scé
 
 - **Off**: bloquer la protection
 
-Pour plus d’informations, consultez [Configuration des API de fichier](../develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». 
+Pour plus d’informations, consultez [Configuration de l’API de fichier](../develop/file-api-configuration.md) dans le Guide pour développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». 
 
 ## <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client"></a>Types de fichiers exclus de la classification et de la protection par le client Azure Information Protection
 
@@ -215,7 +217,7 @@ Vous pouvez classifier et protéger ces fichiers conteneurs, mais la classificat
 Si vous avez un fichier conteneur qui inclut des fichiers classifiés et protégés, vous devez d’abord extraire ces fichiers pour modifier leurs paramètres de classification ou de protection. Toutefois, vous pouvez supprimer la protection pour tous les fichiers inclus dans des fichiers conteneurs pris en charge à l’aide de l’applet de commande [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile).
 
 ## <a name="next-steps"></a>Étapes suivantes
-Maintenant que vous avez identifié les types de fichiers pris en charge par le client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :
+Maintenant que vous avez identifié les types de fichiers pris en charge par le client Azure Information Protection, consultez les ressources suivantes pour des informations supplémentaires nécessaires à la prise en charge de ce client :
 
 - [Customizations](client-admin-guide-customizations.md)
 

@@ -4,7 +4,7 @@ description: "Instructions pour la migration de votre déploiement AD RMS (Acti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a65e1178594e14c7d8f4faaedee96d827a9412e5
-ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
+ms.openlocfilehash: 2ba3ae79308ddee15dc77700b7b660fd4bd91b49
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
@@ -140,9 +140,9 @@ Les étapes de migration peuvent être divisées en cinq phases qui peuvent êtr
 
 [**PHASE 1 : PRÉPARATION DE LA MIGRATION**](migrate-from-ad-rms-phase1.md)
 
-- **Étape 1 : Télécharger l’outil d’administration Azure Rights Management et identifier l’URL de votre locataire**
+- **Étape 1 : Installer le module PowerShell AADRM et identifier l’URL de votre locataire**
 
-    Le processus de migration impose l’exécution d’une ou de plusieurs des applets de commande PowerShell à partir du module Azure RMS qui est installé avec l’outil d’administration Azure Rights Management. Vous devez également connaître l’URL du service Azure Rights Management de votre locataire pour accomplir un grand nombre des étapes de migration. Vous pouvez identifier cette valeur à l’aide de PowerShell.
+    Le processus de migration vous oblige à exécuter une ou plusieurs des applets de commande PowerShell du module AADRM. Vous devez également connaître l’URL du service Azure Rights Management de votre locataire pour pouvoir réaliser différentes étapes de migration, et vous pouvez identifier cette valeur à l’aide de PowerShell.
 
 - **Étape 2. Préparer la migration des clients**
 

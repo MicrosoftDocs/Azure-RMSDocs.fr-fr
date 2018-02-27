@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3b1662275b051ea75dcc104c4f09b5db53dbe3e
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: d8e31eb4f573a149ae39c32c89607775de61bfce
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="powershell-reference-for-custom-templates"></a>Informations de référence sur PowerShell pour les modèles personnalisés
 
@@ -31,7 +31,7 @@ Vous pouvez aussi avoir recours à l’exportation et à l’importation pour sa
 > 
 > Si vous avez déjà installé ce module PowerShell, exécutez la commande suivante dans une fenêtre PowerShell pour vérifier le numéro de version : `(Get-Module aadrm -ListAvailable).Version`
 
-Pour obtenir des instructions d’installation, consultez [Installation de Windows PowerShell pour Azure Rights Management](install-powershell.md).
+Pour connaître les instructions d'installation, consultez [Installation du module PowerShell AADRM](install-powershell.md).
 
 Applets de commande prenant en charge la création et la gestion de modèles :
 

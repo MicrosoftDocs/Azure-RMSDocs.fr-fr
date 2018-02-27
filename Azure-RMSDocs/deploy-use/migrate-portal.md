@@ -4,7 +4,7 @@ description: "Récapitulatif des tâches d’administration dans le portail Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 5f160d766abb4a81864ac1ff466362b8ae24027d
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: 25604d8537aedb4421b460850ce34723c8047964
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tâches que vous aviez l’habitude d’effectuer dans le portail Azure Classic
 
@@ -37,7 +37,7 @@ Toutefois, les clients qui ont un abonnement pour Office 365 US Government (Gove
 
 |Portail Azure Classic|Comment effectuer cette tâche dans le portail Azure
 |-----------|--------------------|
-|Accéder aux paramètres de configuration pour la première fois|1. [Connectez-vous au Portail Azure](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Dans le menu Hub, cliquez sur **Nouveau**, puis, dans la liste **MARKETPLACE**, sélectionnez **Sécurité + Identité**.<br /><br />3. Dans le panneau **Sécurité + Identité**, dans la liste **APPLICATIONS PROPOSÉES**, sélectionnez **Azure Information Protection**. Ensuite, dans le panneau **Azure Information Protection**, cliquez sur **Créer**.<br /><br />Cette action crée le panneau **Azure Information Protection**. De cette façon, vous pouvez sélectionner le service dans la liste **Autres services** du hub lors de votre prochaine connexion au portail.
+|Accéder aux paramètres de configuration pour la première fois|1. [Connectez-vous au Portail Azure](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Dans le menu hub, cliquez sur **Créer une ressource**, puis, dans la liste **PLACE DE MARCHÉ**, sélectionnez **Sécurité + Identité**.<br /><br />3. Dans le panneau **Sécurité + Identité**, dans la liste **APPLICATIONS PROPOSÉES**, sélectionnez **Azure Information Protection**. Ensuite, dans le panneau **Azure Information Protection**, cliquez sur **Créer**.<br /><br />Cette action crée le panneau **Azure Information Protection**. De cette façon, vous pouvez sélectionner le service dans la liste **Tous les services** du hub lors de votre prochaine connexion au portail.
 |Créer un modèle|Créez une étiquette qui applique une protection et utilisez **Définir des autorisations** pour définir les autorisations, l’expiration et l’accès hors connexion. <br /><br />En pratique, cette configuration crée un modèle personnalisé qui est ensuite accessible aux services et aux applications intégrés aux modèles Rights Management.<br /><br />Pour plus d’informations, consultez [Créer un modèle](configure-policy-templates.md#to-create-a-new-template).
 |Modifiez les propriétés du modèle : <br /><br />- Nom et description du modèle<br /><br />- Droits d’utilisation, expiration du contenu et paramètres d’accès hors connexion|Si vous ne l’avez pas encore fait, [convertissez le modèle en étiquette](configure-policy-templates.md#to-convert-templates-to-labels), puis effectuez les étapes suivantes :<br /><br />1. Changez le nom et la description de l’étiquette.<br /><br />2. Changez les paramètres de protection sur l’étiquette pour mettre à jour les autorisations, l’expiration et les paramètres d’accès hors connexion.<br /><br />Pour en savoir plus, consultez [Configurer une étiquette pour la protection Rights Management](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
 |Archiver un modèle|Affectez à l’étiquette l’état **Désactivé**.

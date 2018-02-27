@@ -4,17 +4,17 @@ description: "Comprendre le processus de configuration de la stratégie par déf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 86b04d47797f7e3201dd4fd7b7e5a9c662254d12
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: da8557be0a70cee0e7a207a8ed285f6e843ac626
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
@@ -30,7 +30,7 @@ Vous pouvez référencer les valeurs suivantes pour rétablir votre stratégie a
 
 Cette version de la stratégie par défaut date du 31 juillet 2017.
 
-Cette stratégie par défaut est créée seulement si le service Azure Rights Management a été activé lors de la création de la stratégie. Si ce service n’a pas été activé, la stratégie par défaut ne configure pas de protection pour les sous-étiquettes suivantes :
+Cette stratégie par défaut est créée seulement si le service Azure Rights Management a été [activé](activate-service.md) lors de la création de la stratégie. Si ce service n’a pas été activé, la stratégie par défaut ne configure pas de protection pour les sous-étiquettes suivantes :
 
 - **Confidentiel \ Tous les employés**
 
@@ -46,7 +46,7 @@ Quand la protection est appliquée aux sous-étiquettes **Tous les employés**, 
 
 Depuis le 30 août 2017, cette version de la stratégie par défaut inclut les versions multilingues des noms et descriptions d’étiquette. 
 
-#### <a name="more-information-about-the-recipients-only-sub-label"></a>Plus d’informations sur les sous-étiquettes Destinataires uniquement
+#### <a name="more-information-about-the-recipients-only-sublabel"></a>Plus d’informations sur les sous-étiquettes Destinataires uniquement
 
 Les utilisateurs voient cette étiquette seulement dans Outlook. Ils ne voient pas cette étiquette dans Word, Excel et PowerPoint, ni depuis l’Explorateur de fichiers. 
 
@@ -64,7 +64,7 @@ Quand les utilisateurs sélectionnent cette étiquette, l’option Outlook Ne pa
 |Hautement confidentiel|Données d’entreprise très sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|**Activé** : Oui <br /><br />**Couleur** : Rouge<br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
 
 
-### <a name="sub-labels"></a>Sous-étiquettes
+### <a name="sublabels"></a>Sous-étiquettes
 
 |Étiquette|Info-bulle|Paramètres|
 |-------------------------------|---------------------------|-----------------|
@@ -117,7 +117,7 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 |Hautement confidentiel|Données d’entreprise très sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|**Activé** : Oui <br /><br />**Couleur** : Rouge<br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
 
 
-### <a name="sub-labels"></a>Sous-étiquettes
+### <a name="sublabels"></a>Sous-étiquettes
 
 |Étiquette|Info-bulle|Paramètres|
 |-------------------------------|---------------------------|-----------------|
@@ -157,7 +157,7 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 |Secret|Ces données incluent des informations hautement confidentielles de l’entreprise qui doivent être protégées. Une exposition de ces données secrètes à des utilisateurs non autorisés peut nuire gravement à l’organisation. Les informations secrètes sont, par exemple, des informations d’identification personnelles, des enregistrements de clients, des codes source et des rapports financiers préalablement annoncés.|**Activé** : Oui <br /><br />**Couleur** : Rouge<br /><br />**Marquages visuels** : Pied de page (document et e-mail) :<br /><br /> Sensibilité : Secret<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
 
 
-### <a name="sub-labels"></a>Sous-étiquettes
+### <a name="sublabels"></a>Sous-étiquettes
 
 |Étiquette|Info-bulle|Paramètres|
 |-------------------------------|---------------------------|-----------------|

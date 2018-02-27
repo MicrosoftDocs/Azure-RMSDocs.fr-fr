@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4cd74b6fcee53acc99e0c89d7cbb606d8aab2d54
-ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
+ms.openlocfilehash: 46ed6ac05e696ec65527d39ab38c312f6aba8411
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="rights-management-sharing-application-administrator-guide"></a>Guide de l'administrateur de l'application de partage Rights Management
+# <a name="rights-management-sharing-application-administrator-guide"></a>guide de l’administrateur de l’application de partage Rights Management
 
 >*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
@@ -298,13 +298,13 @@ Certaines des commandes d'installation requises pour ces déploiements ne prenne
 
 -   Utilisez les commandes suivantes :
 
-    -   Pour Windows 64 bits :
+    -   Pour Windows 64 bits :
 
         ```
         x64\setup_ipviewer.exe /uninstall /quiet
         ```
 
-    -   Pour Windows 32 bits :
+    -   Pour Windows 32 bits :
 
         ```
         x86\setup_ipviewer.exe /uninstall /quiet
@@ -314,7 +314,7 @@ Certaines des commandes d'installation requises pour ces déploiements ne prenne
 
 -   Utilisez les commandes suivantes :
 
-    -   Pour Windows 64 bits :
+    -   Pour Windows 64 bits :
 
         ```
         msiexec /x \x64\Setup[64].msi /quiet
@@ -344,7 +344,7 @@ Par défaut, les utilisateurs sont avertis s'il existe une version ultérieure d
 ## <a name="azure-information-protection-only-configuring-document-tracking"></a>Azure Information Protection uniquement : configuration du suivi des documents
 Si votre [abonnement prend en charge le suivi des documents](https://www.microsoft.com/cloud-platform/azure-information-protection-features), le site de suivi des documents est activé par défaut pour tous les utilisateurs de votre organisation. Le suivi des documents fournit des informations telles que les adresses de messagerie des personnes qui ont tenté d'accéder aux documents protégés que les utilisateurs ont partagés et indique quand ces personnes ont tenté d'y accéder, ainsi que leur emplacement. Si l’affichage de ces informations est interdit dans votre organisation pour des raisons de confidentialité, vous pouvez désactiver l’accès au site de suivi des documents à l’aide de l’applet de commande [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). Vous pouvez réactiver l’accès au site à tout moment en utilisant [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) et vérifier si l’accès est actuellement activé ou désactivé à l’aide de [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature).
 
-Pour exécuter ces applets de commande, vous devez disposer au moins de la version **2.3.0.0** du module Azure Rights Management pour Windows PowerShell. Pour obtenir des instructions d’installation, consultez [Installation de Windows PowerShell pour Azure Rights Management](../deploy-use/install-powershell.md).
+Pour exécuter ces applets de commande, vous devez disposer au moins de la version **2.3.0.0** du module Azure Rights Management pour Windows PowerShell. Pour connaître les instructions d'installation, voir [Installation du module PowerShell AADRM](../deploy-use/install-powershell.md).
 
 > [!TIP]
 > Si vous avez précédemment téléchargé et installé le module, vérifiez le numéro de version en exécutant la commande suivante : `(Get-Module aadrm –ListAvailable).Version`

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4817736329fe78084d66467f68ea2f5392ec95e2
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: d521b105b3cc8077a5e30a825007e18f9b5a59f0
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="activating-azure-rights-management"></a>Activation d'Azure Rights Management
 
@@ -36,7 +36,7 @@ Quand le service Azure Rights Management d’Azure Information Protection est ac
 
 Si vous disposez d’un plan de service incluant Azure Rights Management, vous n’aurez peut-être pas besoin d’activer le service :
 
-- Si votre abonnement incluant Azure Rights Management ou Azure Information Protection a été obtenu en **février 2018** ou après, le service est automatiquement activé pour vous. Vous n’avez pas à activer le service, sauf si vous ou un autre administrateur global pour votre organisation a désactivé Azure Rights Management.
+- Si vous avez obtenu votre abonnement incluant Azure Rights Management ou Azure Information Protection fin **février 2018** ou après, le service est automatiquement activé pour vous. Vous n’avez pas à activer le service, sauf si vous ou un autre administrateur global pour votre organisation a désactivé Azure Rights Management.
 
 - Si votre abonnement a été obtenu avant février 2018, vous devez activer le service vous-même. 
 
@@ -65,7 +65,7 @@ Pour obtenir des instructions sur l’activation du service Rights Management à
 
 Vous pouvez également utiliser la commande Windows PowerShell suivante :
 
-1. Installez le module AADRM pour configurer et gérer le service de protection. Pour obtenir des instructions, consultez [Installation du module PowerShell AADRM](../deploy-use/install-powershell.md).
+1. Installez le module AADRM pour configurer et gérer le service de protection. Pour connaître les instructions d'installation, voir [Installation du module PowerShell AADRM](../deploy-use/install-powershell.md).
 
 2. À partir d’une session PowerShell, exécutez [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice) et, à l’invite, fournissez les détails du compte Administrateur général de votre locataire Azure Information Protection.
 

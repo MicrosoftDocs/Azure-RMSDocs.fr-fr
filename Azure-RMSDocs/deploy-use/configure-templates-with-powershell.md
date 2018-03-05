@@ -1,10 +1,10 @@
 ---
-title: "Utilisation de PowerShell pour des modèles Azure RMS personnalisés - AIP"
-description: "Tout ce que vous pouvez faire dans le portail Azure pour créer et gérer des modèles de gestion des droits, vous pouvez le faire également à partir de la ligne de commande via PowerShell. De plus, vous pouvez importer et exporter des modèles afin de pouvoir copier des modèles entre clients ou réaliser des modifications en bloc de propriétés complexes dans les modèles, par exemple, au niveau des noms et des descriptions dans plusieurs langues."
+title: "PowerShell pour les modèles de protection | Azure Information Protection"
+description: "Tout ce que vous pouvez faire dans le portail Azure pour créer et gérer des modèles de protection, vous pouvez le faire également à partir de la ligne de commande via PowerShell. De plus, vous pouvez importer et exporter des modèles afin de pouvoir copier des modèles entre clients ou réaliser des modifications en bloc de propriétés complexes dans les modèles, par exemple, au niveau des noms et des descriptions dans plusieurs langues."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,28 +12,25 @@ ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d8e31eb4f573a149ae39c32c89607775de61bfce
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 051144562b1c26a22953f6e83a41b4902404fd2f
+ms.sourcegitcommit: 85250f5ea80c2ee22197058ff2f65a79503b0f0c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="powershell-reference-for-custom-templates"></a>Informations de référence sur PowerShell pour les modèles personnalisés
+# <a name="powershell-reference-for-protection-templates"></a>Informations de référence sur PowerShell pour les modèles de protection
 
 >*S’applique à : Azure Information Protection, Office 365*
 
-Tout ce que vous pouvez faire dans le portail Azure pour créer et gérer des modèles, vous pouvez le faire également à partir de la ligne de commande via PowerShell. De plus, vous pouvez importer et exporter des modèles afin de pouvoir copier des modèles entre clients ou réaliser des modifications en bloc de propriétés complexes dans les modèles, par exemple, au niveau des noms et des descriptions dans plusieurs langues.
+Les paramètres de protection pour Azure Information Protection sont enregistrés dans des modèles de protection. Tout ce que vous pouvez faire dans le portail Azure pour créer et gérer des paramètres de protection, vous pouvez le faire également à partir de la ligne de commande via PowerShell. 
 
-Vous pouvez aussi avoir recours à l’exportation et à l’importation pour sauvegarder et restaurer vos modèles personnalisés. Nous vous recommandons de sauvegarder régulièrement vos modèles personnalisés. De cette manière, si vous apportez une modification qui n’était pas désirée, vous pourrez facilement rétablir une version antérieure.
+Vous pouvez aussi exporter et importer des modèles de protection. Ces deux actions vous permettent de copier des modèles de protection entre locataires ou d’effectuer des modifications en bloc de propriétés complexes, telles que les noms et les descriptions multilingues.
 
-> [!IMPORTANT]
-> Pour utiliser PowerShell pour créer et gérer des modèles Azure Rights Management, vous devez disposer au minimum de la version 2.0.0.0 du [module Windows PowerShell pour Azure RMS](https://go.microsoft.com/fwlink/?LinkId=257721).
-> 
-> Si vous avez déjà installé ce module PowerShell, exécutez la commande suivante dans une fenêtre PowerShell pour vérifier le numéro de version : `(Get-Module aadrm -ListAvailable).Version`
+Vous pouvez également utiliser l’exportation et l’importation pour sauvegarder et restaurer vos modèles de protection. Comme bonne pratique, sauvegardez régulièrement vos modèles. Ensuite, si vous apportez une modification aux paramètres de protection qui n’était pas volontaire, vous pouvez facilement revenir à une version antérieure.
 
-Pour connaître les instructions d'installation, consultez [Installation du module PowerShell AADRM](install-powershell.md).
+Pour connaître les instructions d'installation, voir [Installation du module PowerShell AADRM](install-powershell.md).
 
-Applets de commande prenant en charge la création et la gestion de modèles :
+Applets de commande prenant en charge la création et la gestion de modèles de protection :
 
 - [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate)
 

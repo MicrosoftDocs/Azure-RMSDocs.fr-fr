@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5ab34172a4e822373161752142d9e082014285e1
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: de42f0d87f42c304c2df906fe037816be7f2ba25
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Préparation de l’environnement pour Azure Rights Management quand vous avez également Active Directory Rights Management Services (AD RMS)
 
@@ -30,7 +30,7 @@ Conseils importants si vous utilisez déjà Active Directory Rights Management S
 
 ## <a name="your-subscription-was-purchased-during-or-after-february-2018"></a>Votre abonnement a été acheté en février 2018 ou après
 
-Si votre abonnement incluant Azure Rights Management a été acheté en février 2018 ou après, le service Azure Rights Management est activé par défaut. Si vous utilisez également Active Directory Rights Management Services (AD RMS), cette combinaison n’est pas compatible. Sans étapes supplémentaires, certains ordinateurs peuvent automatiquement commencer à utiliser le service Azure Rights Management et se connecter à votre cluster AD RMS. Ce scénario n’est pas pris en charge et provoque des résultats imprévisibles. Il est donc important de désactiver Azure Rights Management dès que possible. 
+Depuis fin février 2018, de nouveaux abonnements incluant Azure Information Protection activent le service Azure Rights Management par défaut. Si ce service est automatiquement activé pour vous alors que vous utilisez également Active Directory Rights Management Services (AD RMS), cette combinaison n’est pas compatible. Sans étapes supplémentaires, certains ordinateurs peuvent automatiquement commencer à utiliser le service Azure Rights Management et se connecter à votre cluster AD RMS. Ce scénario n’est pas pris en charge et provoque des résultats imprévisibles. Il est donc important de désactiver Azure Rights Management dès que possible. 
 
 Quand vous êtes prêt à migrer les ordinateurs d’AD RMS vers le service Azure Rights Management, vous pouvez démarrer le processus de migration. L’une des étapes de la migration consiste à réactiver le service, mais cette opération s’effectue une fois que vous avez exporté les informations de configuration d’AD RMS vers le service Azure Rights Management. Cet ordre garantit que les documents et les e-mails qui étaient protégés par AD RMS peuvent toujours être ouverts.
 

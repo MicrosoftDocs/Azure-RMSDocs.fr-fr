@@ -4,17 +4,17 @@ description: "Vous pouvez protéger vos documents et e-mails les plus sensibles 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: e4f4ced3495af71cd36caf8fc54258cd77befd99
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: a00c6e669f01a8166b53ae1ae0a5a63737253d61
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -60,10 +60,14 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
 4. Dans le panneau **Étiquette**, recherchez la zone **Définir des autorisations pour les documents et les e-mails contenant cette étiquette** et sélectionnez une des options suivantes :
     
     - **Non configuré** : sélectionnez cette option si l’étiquette est actuellement configurée pour appliquer la protection et que vous ne voulez plus qu’elle le fasse. Passez ensuite à l'étape 11.
+        
+        Les paramètres de protection précédemment configurés sont conservés sous la forme de modèle de protection archivé et réapparaissent si vous redéfinissez l’option sur **Protéger**. Vous ne voyez pas ce modèle dans le portail Azure, mais si besoin, vous pouvez toujours le gérer à l’aide de [PowerShell](configure-templates-with-powershell.md). Ce comportement signifie que le contenu reste accessible s’il a cette étiquette avec les paramètres de protection appliqués précédemment.
     
     - **Protéger** : sélectionnez cette option pour appliquer la protection, puis passez à l’étape 5.
     
     - **Supprimer la protection** : Sélectionnez cette option pour supprimer la protection si un document ou un e-mail est protégé. Passez ensuite à l'étape 11.
+        
+        Les paramètres de protection précédemment configurés sont conservés sous la forme de modèle de protection archivé et réapparaissent si vous redéfinissez l’option sur **Protéger**. Vous ne voyez pas ce modèle dans le portail Azure, mais si besoin, vous pouvez toujours le gérer à l’aide de [PowerShell](configure-templates-with-powershell.md). Ce comportement signifie que le contenu reste accessible s’il a cette étiquette avec les paramètres de protection appliqués précédemment.
         
         Notez que pour que les utilisateurs puissent appliquer une étiquette avec cette option, ils doivent avoir les autorisations nécessaires pour supprimer la protection Rights Management. Cela signifie que les utilisateurs doivent avoir le [droit d’utilisation](../deploy-use/configure-usage-rights.md) **Exporter** ou **Contrôle total**. ou ils doivent être propriétaires de Rights Management (ce qui accorde automatiquement le droit d’utilisation Contrôle total), ou être un [super utilisateur dans Azure Rights Management](../deploy-use/configure-super-users.md). Les modèles Azure Rights Management par défaut n’incluent pas les droits d’utilisation qui permettent aux utilisateurs de supprimer la protection. 
         
@@ -113,7 +117,7 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
     Si nécessaire, vous pouvez maintenant ajouter un deuxième ensemble d’utilisateurs et de groupes avec des droits d’utilisation. Répétez cette opération jusqu’à avoir spécifié tous les utilisateurs et les groupes avec leurs autorisations respectives.
 
     >[!TIP]
-    >Ajoutez l’autorisation personnalisée **Copier et extraire le contenu** et accordez-la à des administrateurs de récupération de données ou à d’autres personnes dans l’entreprise ayant la responsabilité de récupérer des informations. Si nécessaire, ces utilisateurs peuvent alors supprimer la protection des fichiers et des e-mails qui seront protégés à l’aide de cette étiquette ou de ce modèle. Cette possibilité de supprimer la protection au niveau des autorisations pour un document ou un e-mail offre un contrôle plus précis que la [fonctionnalité de super utilisateur](configure-super-users.md).
+    >Ajoutez l’autorisation personnalisée **Enregistrer sous, Exporter (EXPORTER)** et accordez-la à des administrateurs de récupération de données ou à d’autres personnes dans l’entreprise ayant la responsabilité de récupérer des informations. Si nécessaire, ces utilisateurs peuvent alors supprimer la protection des fichiers et des e-mails qui seront protégés à l’aide de cette étiquette ou de ce modèle. Cette possibilité de supprimer la protection au niveau des autorisations pour un document ou un e-mail offre un contrôle plus précis que la [fonctionnalité de super utilisateur](configure-super-users.md).
     
     Pour tous les utilisateurs et les groupes que vous avez spécifiés dans le panneau **Protection**, vérifiez maintenant si des modifications doivent être apportées aux paramètres suivants. Notez que ces paramètres, comme avec les autorisations, ne s’appliquent pas à [l’émetteur ou au propriétaire de Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), ou n’importe quel [super utilisateur](configure-super-users.md) que vous avez affecté.
     
@@ -225,6 +229,8 @@ Les nouveaux utilisateurs que vous ajoutez seront en mesure d’ouvrir les docum
 Cette étiquette ne peut pas être limitée à Outlook, mais elle fournit des contrôles moins restrictifs que l’option Ne pas transférer. Par exemple, vous voulez que les destinataires puissent copier du contenu de l’e-mail ou d’une pièce jointe, ou qu’ils puissent imprimer et enregistrer une pièce jointe.
 
 Si vous spécifiez des utilisateurs externes qui n’ont pas de compte dans Azure AD, demandez à vos utilisateurs de ne pas utiliser cette étiquette pour les documents, mais uniquement pour les e-mails. De plus, pour prendre en charge ces utilisateurs externes, Exchange Online doit être configuré pour les [nouvelles fonctionnalités dans Chiffrement de messages Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+> [!NOTE]
+> Exchange Online déploie actuellement une nouvelle option appelée [Chiffrement seul](configure-usage-rights.md#encrypt-only-option-for-emails). Cette option n'est pas disponible pour la configuration des étiquettes.
 
 Lorsque vos utilisateurs spécifient les adresses e-mail dans la zone **À**, celles-ci doivent correspondre aux mêmes utilisateurs que ceux que vous spécifiez pour cette configuration d’étiquette. Étant donné que les utilisateurs peuvent appartenir à des groupes et avoir plusieurs adresses e-mail, celle qu’ils spécifient ne doit pas nécessairement correspondre exactement à l’adresse e-mail que vous spécifiez pour les autorisations. Toutefois, l’utilisation de la même adresse e-mail est le moyen le plus simple d’être sûr que le destinataire est autorisé. Pour plus d’informations sur la façon dont les utilisateurs reçoivent les autorisations, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md). 
 

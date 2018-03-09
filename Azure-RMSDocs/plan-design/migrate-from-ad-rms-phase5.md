@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2cf486a5319d6addcd150351054d44db62c250b0
-ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
+ms.openlocfilehash: 0c15bcca607992a2782611286205509377f9fd4d
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Phase de migration 5 : Tâches de post-migration
 
@@ -103,8 +103,6 @@ Enfin, si vous utilisez Office 2010 et que vous avez activé la tâche de **ges
 Cette étape est recommandée au terme de la migration si votre déploiement AD RMS utilisait le mode de chiffrement RMS 1. Le renouvellement de la clé donne lieu à une protection qui utilise le mode de chiffrement RMS 2. 
 
 Même si votre déploiement AD RMS utilisait le mode de chiffrement 2, nous vous recommandons d’effectuer cette étape dans la mesure où une nouvelle clé contribue à protéger votre locataire contre d’éventuelles infractions à la sécurité de votre clé AD RMS.
-
-Toutefois, ne renouvelez pas votre clé si vous utilisiez Exchange Online avec AD RMS. Exchange Online ne prend pas en charge le changement du mode de chiffrement. 
 
 Quand vous renouvelez votre clé de locataire Azure Information Protection (opération également appelée « déploiement de votre clé »), la clé active est archivée et Azure Information Protection commence à utiliser une autre clé que vous spécifiez. Cette autre clé peut être une nouvelle clé que vous créez dans Azure Key Vault ou la clé par défaut qui a été automatiquement créée pour votre locataire.
 

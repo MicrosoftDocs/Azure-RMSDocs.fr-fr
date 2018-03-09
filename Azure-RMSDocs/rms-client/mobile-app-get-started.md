@@ -5,7 +5,7 @@ keywords: "Guide pratique pour afficher des e-mails ou des fichiers avec l’app
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2017
+ms.date: 03/05/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: db44f73c20d7440d403b1d3a7a7ea0201f8a7abb
-ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
+ms.openlocfilehash: d4fbec69d4185004f4ce10bcc8904b2dfb9a7f24
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android
 
@@ -32,7 +32,7 @@ La plupart des utilisateurs se servent généralement de l’application Azure I
 >
 > De même, n’essayez pas de vous connecter à l’application tant que vous n’y êtes pas invité.
 
-Pour utiliser les instructions suivantes, vous devez avoir accès, depuis votre appareil mobile, à un des fichiers pris en charge par l’application. Exemple :
+Pour utiliser les instructions suivantes, vous devez avoir accès, depuis votre appareil mobile, à un des fichiers pris en charge par l’application. Par exemple :
 
 - **Un fichier .rpmsg** : il s’agit d’un e-mail protégé par des droits qui s’affiche comme pièce jointe dans un e-mail lorsque votre application de messagerie sur votre appareil mobile ne prend pas en charge la protection des données Rights Management de manière native. 
     

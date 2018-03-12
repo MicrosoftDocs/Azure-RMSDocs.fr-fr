@@ -4,7 +4,7 @@ description: "Instructions pour installer, configurer et exécuter le scanneur A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2018
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: badc9ea2db84e0537ab394ccb616c0d172469e35
-ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
+ms.openlocfilehash: 3c15fe1e43f5a9d93ad70e6ac401592bbd41754b
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -202,10 +202,14 @@ Pour le premier cycle d’analyse, le scanneur inspecte tous les fichiers des ma
 
 Vous pouvez forcer le scanneur à réinspecter tous les fichiers en exécutant [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) avec le paramètre `-Type` défini sur **Complet**. Cette configuration est utile quand vous voulez que les rapports contiennent tous les fichiers. Elle est généralement utilisée lorsque le scanneur s’exécute en mode découverte. Lorsqu’une analyse complète est terminée, le scanneur passe automatiquement en mode incrémentiel pour inspecter uniquement les fichiers nouveaux ou modifiés lors des analyses suivantes.
 
-De plus, tous les fichiers sont inspectés quand le scanneur télécharge une stratégie Azure Information Protection qui présente des conditions nouvelles ou modifiées. Le scanneur actualise la stratégie toutes les heures, quand le service démarre et que la stratégie remonte à plus d’une heure.
+De plus, tous les fichiers sont inspectés quand le scanneur télécharge une stratégie Azure Information Protection qui présente des conditions nouvelles ou modifiées. Le scanneur actualise la stratégie toutes les heures, quand le service démarre et que la stratégie remonte à plus d’une heure.  
 
 > [!TIP]
-> Si vous avez besoin d’actualiser la stratégie avant cet intervalle d’une heure, par exemple, pendant une période de test : supprimez manuellement le fichier de stratégie, **%LocalAppData%\Microsoft\MSIP\Policy.msip** et redémarrez le service de l’analyseur Azure Information Protection.
+> Si vous avez besoin d’actualiser la stratégie avant cet intervalle d’une heure, par exemple, pendant une période de test : supprimez manuellement le fichier de stratégie **Policy.msip** de **%LocalAppData%\Microsoft\MSIP\Policy.msip** et de **%LocalAppData%\Microsoft\MSIP\Scanner**. Ensuite, redémarrez le service du scanneur Azure Information Protection.
+> 
+> Si vous avez changé les paramètres de protection de la stratégie, attendez 15 minutes après l’enregistrement des paramètres de protection avant de redémarrer le service.
+
+Si le scanneur a téléchargé une stratégie sans conditions automatiques, la copie du fichier de stratégie dans le dossier du scanneur n’est pas mise à jour. Dans ce scénario, vous devez supprimer le fichier **%LocalAppData%\Microsoft\MSIP\Scanner\Policy.msip** pour que le scanneur puisse utiliser un fichier de stratégie récemment téléchargé avec des étiquettes correctement configurées pour les conditions automatiques.
 
 ## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Optimisation des performances de l’analyseur Azure Information Protection
 

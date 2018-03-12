@@ -4,7 +4,7 @@ description: "Informations sur les opérations de cycle de vie applicables si Mi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5aaf4393e39412a8c8b18678f4edea7a61c148dc
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: dea6fffc32876b548e5daa33a76e7891088f1e9b
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gérée par Microsoft : opérations de cycle de vie des clés de locataire
 
@@ -75,7 +75,7 @@ Vous pouvez exporter votre clé de locataire et votre configuration Azure Inform
     ```
     Cette opération génère une paire de clés RSA et enregistre les moitiés publique et privée sous forme de fichiers dans le dossier actuel. Par exemple : **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** et **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
-    Répondez à l’e-mail que vous a envoyé le support technique et joignez à celui-ci le fichier portant un nom commençant par **PublicKey**. Le support technique vous envoie ensuite un fichier TPD au format .xml, chiffré à l’aide de votre clé RSA. Copiez ce fichier dans le dossier dans lequel vous avez initialement exécuté l’outil AadrmTpd, puis réexécutez l’outil à l’aide de votre fichier dont le nom commence par **PrivateKey** et du fichier reçu du support technique. Exemple :
+    Répondez à l’e-mail que vous a envoyé le support technique et joignez à celui-ci le fichier portant un nom commençant par **PublicKey**. Le support technique vous envoie ensuite un fichier TPD au format .xml, chiffré à l’aide de votre clé RSA. Copiez ce fichier dans le dossier dans lequel vous avez initialement exécuté l’outil AadrmTpd, puis réexécutez l’outil à l’aide de votre fichier dont le nom commence par **PrivateKey** et du fichier reçu du support technique. Par exemple :
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
@@ -103,9 +103,9 @@ En cas de violation, la meilleure mesure que vous ou Microsoft puissiez prendre 
 
 |Description de l'incident|Réponse possible|
 |------------------------|-------------------|
-|Votre clé de locataire a fait l'objet d'une fuite.|Renouvelez votre clé de locataire. Consultez la section [Renouvellement de votre clé de locataire](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) dans cet article.|
+|Votre clé de locataire a fait l'objet d'une fuite.|Renouvelez votre clé de locataire. Consultez la section [Renouvellement de votre clé de locataire](#rekey-your-tenant-key) dans cet article.|
 |Une personne non autorisée ou un programme malveillant a obtenu le droit d'utiliser votre clé de locataire, sans que celle-ci ait fait l'objet d'une fuite.|Dans ce cas, le renouvellement de votre clé de locataire n’est pas utile et une analyse de la cause première est obligatoire. Si un bogue au niveau d'un processus ou d'un logiciel est responsable de l'accès de l'individu non autorisé, cette situation doit être résolue.|
-|Une vulnérabilité a été découverte dans l'algorithme RSA ou la longueur de la clé, ou des attaques en force brute peuvent être envisagées au niveau informatique.|Microsoft doit mettre à jour Azure Information Protection pour prendre en charge de nouveaux algorithmes et des clés plus longues qui sont résilientes. Elle doit également indiquer à tous les clients qu’ils doivent renouveler leur clé de locataire.|
+|Une vulnérabilité a été découverte dans l'algorithme RSA ou la longueur de la clé, ou des attaques en force brute peuvent être envisagées au niveau informatique.|Microsoft doit mettre à jour Azure Information Protection pour prendre en charge de nouveaux algorithmes et des clés plus longues qui sont résilientes. Il est aussi demandé à tous les clients de recréer leur clé de locataire.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

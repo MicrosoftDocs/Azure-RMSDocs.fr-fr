@@ -4,7 +4,7 @@ description: "Informations sur les opérations de cycle de vie applicables si vo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 47f2e19e7eed107a44ac1bed744015c878876e9f
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 70d34253300e2bef442cdd7d8cf2c06ac8a9fd88
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gérée par le client : opérations de cycle de vie des clés de locataires
 
@@ -59,7 +59,7 @@ Pour plus d’informations sur chacune de ces étapes :
 ## <a name="backup-and-recover-your-tenant-key"></a>Sauvegarde et récupération de votre clé de locataire
 Étant donné que vous gérez votre clé de locataire, vous êtes responsable de la sauvegarde de la clé utilisée par Azure Information Protection. 
 
-Si vous avez généré votre clé de locataire localement, dans un HSM Thales : Pour sauvegarder la clé, sauvegardez le fichier de clé tokenisée, le fichier du monde et les cartes d’administrateur. Quand vous transférez votre clé vers Azure Key Vault, le service enregistre le fichier de clé tokenisée pour se protéger des défaillances des nœuds de service. Ce fichier est lié à la sécurité de l’instance ou de la région Azure spécifique. Cependant, il ne s'agit pas là d'une sauvegarde complète. Par exemple, si vous avez besoin d’une copie en texte brut de votre clé pour l’utiliser en dehors d’un HSM Thales, Azure Key Vault ne peut pas la récupérer à votre place car il a seulement une copie non récupérable.
+Si vous avez généré votre clé de locataire localement, dans un HSM Thales : Pour sauvegarder la clé, sauvegardez le fichier de clé tokenisée, le fichier du monde et les cartes d’administrateur. Quand vous transférez votre clé vers Azure Key Vault, le service enregistre le fichier de clé tokenisée pour se protéger des défaillances des nœuds de service. Ce fichier est lié à la sécurité de l’instance ou de la région Azure spécifique. Cependant, ce fichier de clé tokenisée n’est pas une sauvegarde complète. Par exemple, si vous avez besoin d’une copie en texte brut de votre clé pour l’utiliser en dehors d’un HSM Thales, Azure Key Vault ne peut pas la récupérer à votre place car il a seulement une copie non récupérable.
 
 Azure Key Vault dispose d’une [applet de commande de sauvegarde](/powershell/module/azurerm.keyvault/Backup-AzureKeyVaultKey) que vous pouvez utiliser pour sauvegarder une clé en la téléchargeant et en la stockant dans un fichier. Le contenu téléchargé étant chiffré, il ne peut pas être utilisé à l’extérieur d’Azure Key Vault. 
 
@@ -75,10 +75,10 @@ En cas de violation, la meilleure mesure que vous ou Microsoft puissiez prendre 
 
 |Description de l'incident|Réponse possible|
 |------------------------|-------------------|
-|Votre clé de locataire a fait l'objet d'une fuite.|Renouvelez votre clé de locataire. Consultez [Renouvellement de votre clé de locataire](#rkey-your-tenant-key).|
+|Votre clé de locataire a fait l'objet d'une fuite.|Renouvelez votre clé de locataire. Consultez [Renouvellement de votre clé de locataire](#rekey-your-tenant-key).|
 |Une personne non autorisée ou un programme malveillant a obtenu le droit d'utiliser votre clé de locataire, sans que celle-ci ait fait l'objet d'une fuite.|Dans ce cas, le renouvellement de votre clé de locataire n’est pas utile et une analyse de la cause première est obligatoire. Si un bogue au niveau d'un processus ou d'un logiciel est responsable de l'accès de l'individu non autorisé, cette situation doit être résolue.|
-|Vulnérabilité détectée dans la technologie HSM actuelle.|Microsoft doit mettre à jour les modules de sécurité matériels. S’il y a des raisons de penser que les clés ont été exposées à cause de cette vulnérabilité, Microsoft demande à tous les clients de renouveler leur clé de locataire.|
-|Une vulnérabilité a été découverte dans l'algorithme RSA ou la longueur de la clé, ou des attaques en force brute peuvent être envisagées au niveau informatique.|Microsoft doit mettre à jour Azure Key Vault ou Azure Information Protection pour prendre en charge de nouveaux algorithmes et des clés plus longues qui sont résilientes. Elle doit également indiquer à tous les clients qu’ils doivent renouveler leur clé de locataire.|
+|Vulnérabilité détectée dans la technologie HSM actuelle.|Microsoft doit mettre à jour les modules de sécurité matériels. S’il y a des raisons de penser que les clés ont été exposées à cause de cette vulnérabilité, Microsoft demande à tous les clients de recréer leur clé de locataire.|
+|Une vulnérabilité a été découverte dans l'algorithme RSA ou la longueur de la clé, ou des attaques en force brute peuvent être envisagées au niveau informatique.|Microsoft doit mettre à jour Azure Key Vault ou Azure Information Protection pour prendre en charge de nouveaux algorithmes et des clés plus longues qui sont résilientes. Il est aussi demandé à tous les clients de recréer leur clé de locataire.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

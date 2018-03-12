@@ -4,7 +4,7 @@ description: "Phase 3 de la migration d’AD RMS vers Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ca2c8156489b55911ee340fd52f85e68b5280915
-ms.sourcegitcommit: 3952fc01c6182c143df7f0d2e748594e49bf1da8
+ms.openlocfilehash: 18ddadd2f46cdf20d437b2f754084bc25f737d8e
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Phase de migration 3 : Configuration côté client
 
@@ -26,7 +26,70 @@ Utilisez les informations suivantes pour la Phase 3 de la migration d’AD RMS
 
 ## <a name="step-7-reconfigure-windows-computers-to-use-azure-information-protection"></a>Étape 7. Reconfigurer les ordinateurs Windows pour qu’ils utilisent Azure Information Protection
 
-Pour les ordinateurs Windows, utilisez deux scripts de migration pour reconfigurer les clients AD RMS :
+Pour les ordinateurs Windows qui utilisent des applications de bureau Office 2016 « Démarrer en un clic » :
+
+- Vous pouvez reconfigurer ces clients pour qu’ils utilisent Azure Information Protection à l’aide de la redirection DNS. Cette méthode est recommandée pour la migration des clients car elle est la plus simple. Toutefois, cette méthode est limitée aux applications de bureau Office 2016 « Démarrer en un clic » (ou ultérieur) pour les ordinateurs Windows.
+    
+    S vous utilisez cette méthode, vous devez créer un enregistrement SRV et définir une autorisation de refus NTFS pour les utilisateurs sur le point de terminaison de publication AD RMS.
+
+- Pour les ordinateurs Windows qui n’utilisent pas Office 2016 « Démarrer en un clic » :
+    
+    Vous ne pouvez pas utiliser la redirection DNS. Vous devez utiliser des modifications du Registre à la place. Si vous utilisez à la fois Office 2016 et d’autres versions d’Office, vous pouvez recourir à cette méthode unique pour tous les ordinateurs Windows ou combiner la redirection DNS et les modifications du Registre. 
+    
+    Pour changer plus facilement le Registre, vous pouvez modifier et déployer des scripts disponibles en téléchargement. 
+
+Pour plus d’informations sur la reconfiguration des clients Windows, consultez les sections suivantes.
+
+## <a name="client-reconfiguration-by-using-dns-redirection"></a>Reconfiguration des clients à l’aide de la redirection DNS
+
+Cette méthode convient uniquement aux clients Windows qui exécutent des applications de bureau Office 2016 (ou ultérieur) « Démarrer en un clic ». 
+
+1. Créez un enregistrement DNS SRVS au format suivant :
+    
+    `_rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.`
+    
+    Remplacez *\<AD RMS cluster>* par le nom de domaine complet de votre cluster AD RMS. Par exemple, **rmscluster.contoso.com**.
+    
+    Si vous n’avez qu’un seul cluster AD RMS dans ce domaine, vous pouvez spécifier uniquement le nom de domaine du cluster AD RMS. Dans notre exemple, il s’agit de **contoso.com**. Quand vous spécifiez le nom de domaine dans cet enregistrement, la redirection s’applique à tous les clusters AD RMS de ce domaine.
+    
+    Le numéro de *\<port>* est ignoré.
+    
+    Remplacez *\<your tenant URL\>* par votre propre [URL du service Azure Rights Management pour votre locataire](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
+    
+    Si vous utilisez le rôle de serveur DNS sur Windows Server, vous pouvez utiliser le tableau suivant en guise d’exemple pour spécifier les propriétés d’un enregistrement SRV dans la console Gestionnaire DNS.
+    
+    |Champ|Valeur|  
+    |-----------|-----------|  
+    |**Domaine**|_tcp.rmscluster.contoso.com|  
+    |**Service**|_rmsredir|  
+    |**Protocole**|_http|  
+    |**Priorité**|0|  
+    |**Poids**|0|  
+    |**Numéro de port**|80|  
+    |**Hôte offrant ce service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
+
+2. Définissez une autorisation Refuser pour les utilisateurs Office 2016 sur le point de terminaison de publication AD RMS :
+
+    a. Sur l’un de vos serveurs AD RMS dans le cluster, démarrez la console Gestionnaire des services Internet (IIS).
+
+    b. Accédez à **Site web par défaut** > **_wmcs** > **licensing** > **publish.asmx**.
+
+    c. Cliquez avec le bouton droit sur **publish.asmx** > **Propriétés** > **Modifier**
+
+    d. Dans la boîte de dialogue **Autorisations pour publish.asmx**, sélectionnez **Utilisateurs** si vous souhaitez définir la redirection pour tous les utilisateurs ou cliquez sur **Ajouter** et spécifiez un groupe contenant les utilisateurs à rediriger.
+    
+    Même si tous vos utilisateurs se servent d’Office 2016, vous préférerez peut-être spécifier initialement un sous-ensemble d’utilisateurs pour une migration en plusieurs phases.
+    
+    e. Pour votre groupe sélectionné, sélectionnez **Refuser** pour les autorisations **Lecture et exécution** et **Lecture**, puis cliquez deux fois sur **OK**.
+
+    f. Pour vérifier que cette configuration fonctionne comme prévu, essayez de vous connecter au fichier publish.asmx directement à partir d’un navigateur. Le message d’erreur suivant doit s’afficher. Le client exécutant Office 2016 recherche alors l’enregistrement SRV :
+    
+    **Message d’erreur 401.3 : vous ne disposez pas des autorisations permettant d’afficher ce répertoire ou cette page à l’aide des informations d’identification que vous avez fournies (accès refusé en raison des listes de contrôle d’accès).**
+
+
+## <a name="client-reconfiguration-by-using-registry-edits"></a>Reconfiguration du client à l’aide des modifications du Registre
+
+Cette méthode convient à tous les clients Windows. Vous devez l’utiliser si les clients exécutent une version antérieure à Office 2016. Cette méthode utilise deux scripts de migration pour reconfigurer les clients AD RMS :
 
 - Migrate-Client.cmd
 
@@ -42,7 +105,7 @@ Le script de configuration du client (Migrate-Client.cmd) configure les paramèt
 
 - Utilisez un script d’ouverture de session si l’utilisateur dispose de privilèges d’administrateur local.
 
-Le script de configuration utilisateur (Migrate-User.cmd) configure les paramètres au niveau de l’utilisateur et nettoie le magasin de licences de client. Cela signifie que ce script doit s’exécuter dans le contexte de l’utilisateur réel. Exemple :
+Le script de configuration utilisateur (Migrate-User.cmd) configure les paramètres au niveau de l’utilisateur et nettoie le magasin de licences de client. Cela signifie que ce script doit s’exécuter dans le contexte de l’utilisateur réel. Par exemple :
 
 - Utilisez un script d’ouverture de session.
 
@@ -60,17 +123,17 @@ Le script de configuration de l’utilisateur, conçu pour s’exécuter après 
 
 Quand vous ne pouvez pas migrer tous vos clients Windows à la fois, exécutez les procédures suivantes pour des lots de clients. Pour chaque utilisateur disposant d’un ordinateur Windows que vous souhaitez migrer dans votre lot, ajoutez l’utilisateur au groupe **AIPMigrated** que vous avez créé précédemment.
 
-### <a name="windows-client-reconfiguration-by-using-registry-edits"></a>Reconfiguration des clients Windows à l’aide des modifications du Registre
+### <a name="modifying-the-scripts-for-registry-edits"></a>Modification des scripts pour les modifications du Registre
 
 1. Retournez aux scripts de migration **Migrate-Client.cmd** et **Migrate-User.cmd**  que vous avez extraits après les avoir téléchargés au cours de la [phase de préparation](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
 2.  Suivez les instructions de **Migrate-Client.cmd** pour modifier le script afin qu’il contienne l’URL du service Azure Rights Management de votre locataire ainsi que les noms des serveurs pour les URL de licences extranet et intranet du cluster AD RMS. Ensuite, incrémentez la version du script comme expliqué précédemment. Une bonne pratique pour le suivi des versions de script consite à utiliser la date d’aujourd’hui au format suivant : AAAAMMJJ.
-
+    
     > [!IMPORTANT]
     > Comme avant, veillez à ne pas introduire d’espaces supplémentaires avant ou après les adresses.
     > 
     > De plus, si vos serveurs AD RMS utilisent des certificats de serveur SSL/TLS, vérifiez si les valeurs des URL de licence incluent le numéro de port **443** dans la chaîne. Par exemple : https:// rms.treyresearch.net:443/_wmcs/licensing. Ces informations sont disponibles dans la console Active Directory Rights Management Services quand vous cliquez sur le nom du cluster et que vous consultez les informations **Détails du cluster**. Si vous voyez le numéro de port 443 dans l’URL, incluez cette valeur quand vous modifiez le script. Par exemple, https://rms.treyresearch.net**:443**. 
-
+    
     Si vous devez récupérer l’URL du service Azure Rights Management pour *&lt;URLdevotrelocataire&gt;*, consultez [Pour identifier l’URL du service Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
 3. À l’aide des instructions fournies au début de cette étape, configurez les méthodes de déploiement de votre script pour exécuter **Migrate-Client.cmd** et **Migrate-User.cmd** sur les ordinateurs clients Windows utilisés par les membres du groupe AIPMigrated. 

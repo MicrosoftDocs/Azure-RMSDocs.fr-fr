@@ -1,5 +1,5 @@
 ---
-title: "Restrictions liées à HYOK pour Azure Information Protection"
+title: Protection HYOK pour Azure Information Protection
 description: "Identifiez les limitations, conditions préalables et recommandations associées à la sélection de la protection HYOK (AD RMS) avec Azure Information Protection."
 author: cabailey
 ms.author: cabailey
@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 00b17536467e2990d807c3494c645fa8a559f241
-ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
+ms.openlocfilehash: 6167b99593bacdf9e717c3b57839440bac39ecec
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 

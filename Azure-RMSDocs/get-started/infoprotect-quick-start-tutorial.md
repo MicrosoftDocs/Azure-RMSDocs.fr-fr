@@ -4,17 +4,17 @@ description: "Didacticiel de prise en main vous permettant de tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: a93b226f80382d4c751ca88d037398939db9d61b
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: e20b3e4d84b2230cf7bcbc64c31970fd53d5a7ae
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Didacticiel de démarrage rapide pour Azure Information Protection 
 
@@ -29,7 +29,7 @@ Si vous rencontrez des problèmes pour effectuer ce didacticiel, pour utiliser A
 ## <a name="prerequisites"></a>Prérequis 
 Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 
-- Un abonnement qui inclut Azure Information Protection pour la classification, l’étiquetage et la protection. Ce didacticiel inclut certaines des fonctionnalités avancées, telles que la classification automatique des données avec des recommandations pour l’utilisateur et le site de suivi de document. Assurez-vous que vous disposez d’un abonnement prenant en charge ces fonctionnalités pour ce didacticiel. Pour plus d’informations, consultez les [informations sur les abonnements](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) sur le site Azure Information Protection.
+- Un abonnement qui inclut Azure Information Protection pour la classification, l’étiquetage et la protection. Ce didacticiel inclut certaines des fonctionnalités avancées, telles que la classification automatique des données avec des recommandations pour l’utilisateur et le site de suivi de document. Assurez-vous que vous disposez d’un abonnement prenant en charge ces fonctionnalités pour ce didacticiel. Pour plus d’informations, consultez la liste des fonctionnalités de la page [Tarification Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).
     
     Si vous n’avez pas d’abonnement pour ces fonctionnalités, vous pouvez vous inscrire à une évaluation gratuite pour [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7).
     

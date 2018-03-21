@@ -4,7 +4,7 @@ description: "Découvrez et identifiez les droits spécifiques qui sont utilisé
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 03/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: faa00eee76e6c084db1a4dfb1d477e491fae5fee
-ms.sourcegitcommit: 3e9b3c2206807e82cc4721a50862b74152906f63
+ms.openlocfilehash: 8411fd46305da69e8fe06ae3851d5066695cdc24
+ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuration des droits d’utilisation pour Azure Rights Management
 
@@ -95,7 +95,7 @@ Ces modèles par défaut sont créés quand vous achetez votre abonnement, et vo
 
 ## <a name="do-not-forward-option-for-emails"></a>Option Ne pas transférer pour les e-mails
 
-Les clients et services Exchange (par exemple, le client Outlook, l’application Outlook Web Access et les règles de transport Exchange) disposent d’une option de protection des droits d’information supplémentaire pour les e-mails : **Ne pas transférer**. 
+Les clients et services Exchange (par exemple, le client Outlook, l’application Outlook Web Access et les règles de flux de messagerie Exchange) disposent d’une option de protection des droits d’information supplémentaire pour les e-mails : **Ne pas transférer**. 
 
 Même si cette option apparaît aux utilisateurs (les administrateurs Exchange) comme s’il s’agissait d’un modèle de gestion des droits par défaut qu’ils peuvent sélectionner, **Ne pas transférer** n’est pas un modèle. Ceci explique pourquoi vous ne pouvez pas la voir dans le portail Azure quand vous visualisez et que vous gérez des modèles pour Azure Rights Management. L’option **Ne pas transférer** correspond plutôt à un ensemble de droits appliqué dynamiquement par les utilisateurs à leurs destinataires.
 
@@ -116,7 +116,7 @@ Une utilisatrice veut envoyer certaines informations par e-mail à certaines per
 
 Quand Exchange Online utilise les nouvelles fonctionnalités de chiffrement des messages Office 365, une nouvelle option d’e-mail est disponible : **Chiffrement seul**.
 
-Cette option est en cours de déploiement pour les locataires qui utilisent Exchange Online, réservée à la base à Outlook sur le web et comme nouvelle option de protection des droits pour une règle de transport. Pour plus d’informations, consultez le billet de blog suivant de l’équipe Office : [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
+Cette option est en cours de déploiement pour les locataires qui utilisent Exchange Online, réservée à la base à Outlook sur le web et comme nouvelle option de protection des droits pour une règle de flux de messagerie. Pour plus d’informations, consultez le billet de blog suivant de l’équipe Office : [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
 
 Lorsque cette option est sélectionnée, l’e-mail est chiffré et les destinataires doivent être authentifiés. Ensuite, les destinataires ont tous les droits d’utilisation, à l’exception de Contrôle total. Cette combinaison de droits d’utilisation signifie que les destinataires n’ont aucune restriction, mis à part qu’ils ne peuvent pas supprimer la protection. Par exemple, un destinataire peut copier, imprimer et transférer l’e-mail. De même, tout document Office qui est joint et automatiquement protégé peut être enregistré, copié et imprimé.
 
@@ -165,7 +165,6 @@ Pour un locataire, la période de validité par défaut de la licence est de 30�
 - Quand vous configurez un modèle à l’aide de PowerShell, la période de validité de la licence d’utilisation est définie avec la valeur du paramètre *LicenseValidityDuration* dans les applets de commande [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) et [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate).
     
     Pour plus d’informations et de conseils sur la configuration de ce paramètre à l’aide de PowerShell, consultez l’aide de chaque applet de commande.
-
 
 ## <a name="see-also"></a>Voir aussi
 [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md)

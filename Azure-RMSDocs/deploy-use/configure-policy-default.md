@@ -4,17 +4,17 @@ description: "Comprendre le processus de configuration de la stratégie par déf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: da8557be0a70cee0e7a207a8ed285f6e843ac626
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: d89acde3a2d9e4db529c429fdedf2f3ed05e2fe5
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
@@ -30,7 +30,11 @@ Vous pouvez référencer les valeurs suivantes pour rétablir votre stratégie a
 
 Cette version de la stratégie par défaut date du 31 juillet 2017.
 
-Cette stratégie par défaut est créée seulement si le service Azure Rights Management a été [activé](activate-service.md) lors de la création de la stratégie. Si ce service n’a pas été activé, la stratégie par défaut ne configure pas de protection pour les sous-étiquettes suivantes :
+Cette stratégie par défaut est créée lorsque le service Azure Rights Management est activé, ce qui est le cas pour les nouveaux locataires à partir de février 2018. Pour plus d’informations, consultez le billet de blog de lancement [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection) (Améliorations de la pile de protection dans Azure Information Protection).
+
+Cette stratégie par défaut est également créée si vous avez manuellement [activé le service](activate-service.md) avant la création de la stratégie. 
+
+Si le service n’a pas été activé, la stratégie par défaut ne configure pas de protection pour les sous-étiquettes suivantes :
 
 - **Confidentiel \ Tous les employés**
 

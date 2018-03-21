@@ -4,17 +4,17 @@ description: "Identifiez les limitations, conditions préalables et recommandati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2017
+ms.date: 03/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 6167b99593bacdf9e717c3b57839440bac39ecec
-ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
+ms.openlocfilehash: a0329d66ee71ee815c0700a63172617d1fddf30a
+ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS
 
@@ -89,13 +89,19 @@ Vérifiez que votre déploiement AD RMS répond aux exigences suivantes pour fou
         
         - Plusieurs forêts avec des clusters racines AD RMS indépendants, les utilisateurs n’ayant pas accès au contenu protégé par les utilisateurs des autres forêts.
         
-        - Plusieurs forêts avec des clusters AD RMS dans chacune d’elles. Chaque cluster AD RMS partage une URL de licence qui pointe vers le même cluster AD RMS. Sur ce cluster AD RMS, vous devez importer tous les certificats de domaine utilisateur approuvé à partir de tous les autres clusters AD RMS. Pour plus d’informations concernant cette topologie, consultez [Domaine utilisateur approuvé](https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx).
+        - Plusieurs forêts avec des clusters AD RMS dans chacune d’elles. Chaque cluster AD RMS partage une URL de licence qui pointe vers le même cluster AD RMS. Sur ce cluster AD RMS, vous devez importer tous les certificats de domaine utilisateur approuvé à partir de tous les autres clusters AD RMS. Pour plus d’informations sur cette topologie, consultez [Domaine d’utilisateur approuvé] (https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx).
         
     Quand vous avez plusieurs clusters AD RMS dans des forêts distinctes, supprimez toutes les étiquettes de la stratégie globale qui appliquent la protection HYOK (AD RMS) et qui configurent une [stratégie délimitée](configure-policy-scope.md) pour chaque cluster. Affectez ensuite les utilisateurs de chaque cluster à leur stratégie délimitée, en vous assurant que vous n’utilisez pas des groupes qui entraîneraient l’affectation d’un utilisateur à plusieurs stratégies délimitées. Chaque utilisateur doit avoir des étiquettes pour un seul cluster AD RMS. 
     
     - [Mode de chiffrement 2](https://technet.microsoft.com/library/hh867439.aspx): vous pouvez confirmer le mode en vérifiant les propriétés du cluster AD RMS, onglet **Général**.
     
-    - Un point de connexion de service (SCP) n’est pas inscrit dans Active Directory : aucun SCP n’est utilisé quand vous appliquez la protection AD RMS avec Azure Information Protection. Si vous avez inscrit un SCP pour votre déploiement AD RMS, vous devez le supprimer pour que la [découverte du service](../rms-client/client-deployment-notes.md#rms-service-discovery) fonctionne pour la protection Azure Rights Management.
+    - Chaque serveur AD RMS est configuré pour l’URL de certification. [Instructions](#configuring-ad-rms-servers-to-locate-the-certification-url) 
+    
+    - Un point de connexion de service (SCP) n’est pas inscrit dans Active Directory : aucun SCP n’est utilisé quand vous appliquez la protection AD RMS avec Azure Information Protection. 
+    
+        - Si vous avez inscrit un SCP pour votre déploiement AD RMS, vous devez le supprimer pour que la [découverte du service](../rms-client/client-deployment-notes.md#rms-service-discovery) fonctionne pour la protection Azure Rights Management. 
+        
+        - Si vous installez un nouveau cluster AD RMS pour HYOK, ignorez l’étape qui consiste à inscrire le SCP lors de la configuration du premier nœud. Pour chaque nœud supplémentaire, assurez-vous que le serveur est configuré pour l’URL de certification avant d’ajouter le rôle AD RMS et de rejoindre le cluster existant.
     
     - Les serveurs AD RMS sont configurés pour utiliser SSL/TLS avec un certificat x.509 valide qui est approuvé par les clients qui se connectent : obligatoire pour les environnements de production, mais non obligatoire à des fins de test ou d’évaluation.
     
@@ -115,6 +121,24 @@ Vérifiez que votre déploiement AD RMS répond aux exigences suivantes pour fou
 Pour obtenir des informations et des instructions sur le déploiement pour AD RMS, consultez [Services AD RMS (Active Directory Rights Management Services)](https://technet.microsoft.com/library/hh831364.aspx) dans la bibliothèque Windows Server. 
 
 
+## <a name="configuring-ad-rms-servers-to-locate-the-certification-url"></a>Configuration de serveurs AD RMS pour localiser l’URL de certification
+
+1. Sur chaque serveur AD RMS dans le cluster, créez l’entrée de registre suivante :
+
+    `Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
+    
+    Pour la \<valeur de chaîne>, spécifiez l’une des valeurs suivantes :
+    
+    - Pour les clusters AD RMS utilisant SSL/TLS :
+
+            https://<cluster_name>/_wmcs/certification/certification.asmx
+    
+    - Pour les clusters AD RMS qui n’utilisent pas SSL/TLS (test des réseaux uniquement) :
+        
+            http://<cluster_name>/_wmcs/certification/certification.asmx
+
+2. Redémarrez IIS.
+
 ## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Recherche d’informations pour spécifier la protection AD RMS avec une étiquette Azure Information Protection
 
 Quand vous configurez une étiquette pour la protection **HYOK (AD RMS)**, vous devez spécifier l’URL de licence de votre cluster AD RMS. Par ailleurs, vous devez spécifier un modèle que vous avez configuré pour les autorisations à accorder aux utilisateurs ou permettre aux utilisateurs de définir les autorisations et les utilisateurs. 
@@ -123,7 +147,7 @@ Les valeurs du GUID de modèle et de l’URL de licence sont disponibles dans la
 
 - Pour rechercher le GUID du modèle : développez le cluster, puis cliquez sur **Modèles de stratégies de droits**. Vous pouvez ensuite copier le GUID des informations **Modèles de stratégies de droits distribués** à partir du modèle à utiliser. Par exemple : 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- Pour trouver l’URL de licence : cliquez sur le nom du cluster. Dans **Détails du cluster**, copiez la valeur **Gestion des licences** valeur sans la chaîne **/_wmcs/licensing**. Par exemple : https://rmscluster.contoso.com 
+- Pour trouver l’URL de licence : cliquez sur le nom du cluster. Dans **Détails du cluster**, copiez la valeur **Gestion des licences** valeur sans la chaîne **/_wmcs/licensing**. Par exemple : https://rmscluster.contoso.com 
     
     Si vous disposez d’une valeur de licence extranet et d’une valeur de licence intranet différentes : spécifiez la valeur extranet uniquement si vous voulez partager des documents ou des e-mails protégés avec des partenaires qui ont été définis avec des approbations point à point explicites. Sinon, utilisez la valeur intranet et vérifiez que tous les ordinateurs clients qui utilisent la protection AD RMS avec Azure Information Protection se connectent au moyen d’une connexion intranet (par exemple, les ordinateurs distants utilisent une connexion VPN).
 

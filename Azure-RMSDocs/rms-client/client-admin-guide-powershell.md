@@ -4,7 +4,7 @@ description: "Instructions et informations pour que les administrateurs gèrent 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 714afa8c839d91ba61043a643433c5045a4aad7d
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 5bd2af4da402c0096cb58bba1d44684ad73656d6
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -535,6 +535,8 @@ Lorsque vous exécutez cette commande pour la première fois, vous êtes invité
 
 Suivez les étapes et instructions supplémentaires suivantes afin d’éviter la première connexion interactive pour un compte qui étiquette et protège des fichiers. En règle générale, ces étapes supplémentaires ne sont nécessaires que si ce compte ne peut pas obtenir le droit d’**Ouvrir une session localement**, mais qu’il obtient le droit **Ouvrir une session en tant que programme de traitement par lots**. Par exemple, cela peut être le cas pour votre compte de service qui exécute le scanneur Azure Information Protection.
 
+Étapes principales :
+
 1. Créez un script PowerShell sur votre ordinateur local.
 
 2. Exécutez Set-AIPAuthentication pour obtenir un jeton d’accès et copiez-le dans le Presse-papiers.
@@ -543,7 +545,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
 4. Créer une tâche qui exécute le script PowerShell dans le contexte du compte de service qui étiquettera et protégera les fichiers.
 
-5. Vérifiez que le jeton est enregistré pour le compte de service et supprimez le script PowerShell.
+5. Vérifiez que le jeton est enregistré pour le compte de service, et supprimez le script PowerShell.
 
 #### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Étape 1 : créer un script PowerShell sur votre ordinateur local
 

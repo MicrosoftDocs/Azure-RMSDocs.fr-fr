@@ -1,22 +1,22 @@
 ---
 title: Client Azure Information Protection&colon; historique des versions et politique du support
-description: "Découvrez les nouveautés et les modifications d’une version du client Azure Information Protection pour Windows, ainsi que la politique du cycle de vie du support."
+description: Découvrez les nouveautés et les modifications d’une version du client Azure Information Protection pour Windows, ainsi que la politique du cycle de vie du support.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 03/19/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 19390c05719ebfee7e3442437d3f5bdfd303c652
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: 10fe839ff24994af0c50fff6aeac303d57a19ea6
+ms.sourcegitcommit: 65d6b0ecfbca5071afe29e63aea6226ad7a911b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
 
@@ -154,30 +154,6 @@ Des correctifs ont été apportés pour améliorer l’expérience utilisateur 
 - Validation par e-mail quand des utilisateurs spécifient des autorisations personnalisées. De plus, vous pouvez à présent spécifier plusieurs adresses e-mail en appuyant sur Entrée.
 
 - L’étiquette parent n’est pas affichée si toutes ses sous-étiquettes sont configurées pour la protection et que le client ne dispose pas d’une édition d’Office prenant en charge la protection. 
-
-## <a name="version-172100"></a>Version 1.7.210.0
-
-**Publiée le** : 06/06/2017
-
-Cette version inclut MSIPC version 1.0.2217.1 du client RMS.
-
-**Nouvelles fonctionnalités** :
-
-- Nouvelle applet de commande PowerShell, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). Lorsque vous exécutez cette applet de commande, elle inspecte le contenu du fichier et applique automatiquement des étiquettes pour les fichiers sans étiquette, selon les conditions que vous spécifiez dans la stratégie Azure Information Protection.
-
-**Correctifs** :
-
-- Toutes les applets de commande de classification et d’étiquetage sont désormais prises en charge sur les ordinateurs qui ne sont pas connectés à Internet mais qui ont une stratégie Azure Information Protection valide.
-
-- Par souci de cohérence, un paramètre de sortie de l’applet de commande [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) est modifié de l’anglais britannique (**IsLabelled**) vers l’anglais américain (**IsLabeled**). Si vous avez des scripts ou des processus automatisés qui ressemblent à ce paramètre, mettez à jour l’orthographe de ce paramètre.
-
-- Des correctifs de stabilité généraux qui incluent :
-
-    - Pour Outlook : Correctifs pour les plantages, la consommation élevée de la mémoire et les problèmes d’affichage pour les menus.
-    
-    - Pour Word, Excel et PowerPoint : Correctifs pour l’utilisation élevée du processeur, les problèmes d’affichage lors de l’enregistrement des fichiers Excel volumineux, et les problèmes pour lesquels l’application cesse de répondre. 
-    
-    Pour ces applications, les correctifs comprennent aussi l’amélioration des performances pour Office 2016 avec SharePoint Online et OneDrive Entreprise, l’étiquetage automatique et recommandé est appliqué lors de la fermeture du fichier plutôt que lorsque le fichier est enregistré (enregistre automatiquement ou demande à l’utilisateur de choisir d’enregistrer ou non). De même, si le paramètre **Tous les documents et e-mails doivent avoir une étiquette** est activé, les utilisateurs ne sont pas invités à sélectionner une étiquette avant la fermeture du fichier. L’exception concerne Word 2016 et Excel 2016, lorsque l’utilisateur sélectionne l’option **Enregistrer sous**. Ensuite, cette action déclenche ces comportements d’étiquetage s’ils sont configurés. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 

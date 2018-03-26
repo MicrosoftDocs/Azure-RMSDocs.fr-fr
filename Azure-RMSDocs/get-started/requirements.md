@@ -1,22 +1,22 @@
 ---
 title: Configuration requise pour Azure Information Protection
-description: "Identifiez les critères de déploiement d’Azure Information Protection pour votre organisation."
+description: Identifiez les critères de déploiement d’Azure Information Protection pour votre organisation.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 03/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 20726f99a10328fac777dc22cb59372db0ab384d
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: 9542eb6f679d931de556f706afa3b51cfd9d2bb8
+ms.sourcegitcommit: 58cd89cc6f6407648854e2e2d28a61325b5c8922
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -38,12 +38,16 @@ Pour vérifier que l’abonnement de votre organisation inclut les fonctionnalit
 > [Description du service Exchange Online](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
 >
 > [Office 365 Éducation](https://technet.microsoft.com/library/mt844095.aspx)
+>
+> [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
 
 Si vous avez des questions sur les abonnements ou les licences, ne les publiez pas sur cette page, mais contactez votre responsable de compte Microsoft ou le [support Microsoft](information-support.md#to-contact-microsoft-support).
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
 Votre organisation doit disposer d’un annuaire Azure AD (Azure Active Directory) afin de prendre en charge l’authentification utilisateur et l’autorisation pour Azure Information Protection. De plus, si vous souhaitez utiliser les comptes d’utilisateur de votre annuaire local (AD DS), vous devez également configurer l’intégration d’annuaire.
+
+L’authentification unique (SSO) étant prise en charge pour Azure Information Protection, les utilisateurs ne sont pas invités de manière répétée à fournir leurs informations d’identification. Si vous utilisez une autre solution de fournisseur pour la fédération, vérifiez auprès de ce dernier comment la configurer pour Azure AD. WS-Trust est une exigence courante pour ces solutions afin de prendre en charge l’authentification unique. 
 
 La solution d’authentification multifacteur (MFA) est prise en charge avec Azure Information Protection si vous disposez du logiciel client nécessaire et que vous avez correctement configuré l’infrastructure de prise en charge de MFA.
 

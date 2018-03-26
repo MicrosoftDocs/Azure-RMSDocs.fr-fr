@@ -1,22 +1,22 @@
 ---
-title: "Désaffecter et désactiver Azure RMS"
-description: "Informations et instructions à prendre en compte si vous décidez de ne plus utiliser ce service de protection basé sur le cloud d’Azure Information Protection."
+title: Désaffecter et désactiver Azure RMS
+description: Informations et instructions à prendre en compte si vous décidez de ne plus utiliser ce service de protection basé sur le cloud d’Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 18eff00f6b316c48dbca5a9a8ec2c2ab4e58f76c
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: fc2fd8d043c04c3820de30d2087ff498b4ea4e90
+ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Désaffectation et désactivation de la protection pour Azure Information Protection
 
@@ -26,7 +26,7 @@ Vous pouvez toujours contrôler si votre organisation protège le contenu en uti
 
 Si vous n’avez pas besoin d’un accès permanent à un contenu précédemment protégé, désactivez le service et laissez votre abonnement Azure Information Protection expirer. Cela est approprié si, par exemple, vous avez testé Azure Information Protection avant de le déployer dans un environnement de production.
 
-Cependant, si vous avez déployé Azure Information Protection en production et que vous avez protégé des documents et des e-mails, vérifiez que vous disposez d’une copie de votre clé de locataire Azure Information Protection avant de désactiver le service Azure Rights Management. Vérifiez que vous disposez d’une copie de votre clé avant que votre abonnement expire pour pouvoir conserver l’accès au contenu protégé par Azure Rights Management après la désactivation du service. Si vous avez utilisé la solution BYOK qui vous permet de générer et gérer votre propre clé dans un module de sécurité matériel, vous avez déjà votre clé de locataire Azure Information Protection. Toutefois, si celle-ci était gérée par Microsoft (par défaut), consultez les instructions relatives à l’exportation de votre clé de locataire dans l’article [Opérations pour votre clé de client Azure Rights Management](operations-tenant-key.md).
+Cependant, si vous avez déployé Azure Information Protection en production et que vous avez protégé des documents et des e-mails, vérifiez que vous disposez d’une copie de votre clé de locataire Azure Information Protection avant de désactiver le service Azure Rights Management. Vérifiez que vous disposez d’une copie de votre clé avant que votre abonnement expire pour pouvoir conserver l’accès au contenu protégé par Azure Rights Management après la désactivation du service. Si vous avez utilisé la solution BYOK qui vous permet de générer et gérer votre propre clé dans un module de sécurité matériel, vous avez déjà votre clé de locataire Azure Information Protection. Mais, si la gestion a été assurée par Microsoft (par défaut), consultez les instructions d’exportation de votre clé de locataire dans l’article [Opérations pour votre clé de locataire Azure Information Protection](operations-tenant-key.md).
 
 > [!TIP]
 > Même après l’expiration de votre abonnement, votre locataire Azure Information Protection reste disponible pour la consommation de contenu pendant une période prolongée. En revanche, vous ne pouvez plus exporter votre clé de locataire.

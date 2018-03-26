@@ -1,22 +1,22 @@
 ---
-title: "Migrer un déploiement AD RMS vers Azure Information Protection - Phase 5"
-description: "Phase 5 de la migration d’AD RMS vers Azure Information Protection, couvrant les étapes 10 à 12 de la migration d’AD RMS vers Azure Information Protection."
+title: Migrer un déploiement AD RMS vers Azure Information Protection - Phase 5
+description: Phase 5 de la migration d’AD RMS vers Azure Information Protection, couvrant les étapes 10 à 12 de la migration d’AD RMS vers Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/16/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0c15bcca607992a2782611286205509377f9fd4d
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: 520773a2a893e7e88feb970a2539db4100287a72
+ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Phase de migration 5 : Tâches de post-migration
 
@@ -116,7 +116,7 @@ Pour renouveler votre clé de locataire Azure Information Protection :
 
 - **Si vous gérez vous-même votre clé de locataire (BYOK)** : dans Azure Key Vault, répétez le processus de création de la clé pour votre locataire Azure Information Protection, puis réexécutez l’applet de commande [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) pour spécifier l’URL de cette nouvelle clé. 
 
-Pour plus d’informations sur la gestion de votre clé de locataire Azure Information Protection, consultez [Opérations pour votre clé de locataire Azure Rights Management](../deploy-use/operations-tenant-key.md).
+Pour plus d’informations sur la gestion de votre clé de locataire Azure Information Protection, consultez [Opérations pour votre clé de locataire Azure Information Protection](../deploy-use/operations-tenant-key.md).
 
 
 ## <a name="next-steps"></a>Étapes suivantes

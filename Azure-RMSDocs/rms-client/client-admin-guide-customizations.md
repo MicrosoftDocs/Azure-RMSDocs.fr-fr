@@ -1,22 +1,22 @@
 ---
-title: "Configurations personnalisées pour le client Azure Information Protection"
+title: Configurations personnalisées pour le client Azure Information Protection
 description: Informations sur la personnalisation du client Azure Information Protection pour Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 662ed627fc6138e1ff16efb731b209964784432f
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: e5c71068f979c13b2d8c9ee7c9c5c43e2ad3a7ad
+ms.sourcegitcommit: 32b233bc1f8cef0885d9f4782874f1781170b83d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -30,11 +30,11 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 
 1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, [connectez-vous au portail Azure](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal), puis accédez au panneau **Azure Information Protection**.
 
-2. Dans le premier panneau Azure Information Protection, sélectionnez **Stratégies délimitées**.
+2. Dans le premier panneau Azure Information Protection, sélectionnez **Stratégies étendues**.
 
-3. Dans la panneau **Azure Information Protection - Stratégies délimitées**, sélectionnez le menu contextuel (**...**) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
+3. Dans la panneau **Azure Information Protection - Stratégies étendues**, sélectionnez le menu contextuel (**...**) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
     
-    Vous pouvez configurer des paramètres avancés pour la stratégie globale et pour les stratégies délimitées.
+    Vous pouvez configurer des paramètres avancés pour la stratégie globale et pour les stratégies étendues.
 
 4. Dans le panneau **Paramètres avancés**, tapez le nom et la valeur du paramètre avancé, puis sélectionnez **Enregistrer et fermer**.
 
@@ -202,9 +202,91 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Valeur : \< **ID d’étiquette**> ou **None**
 
+## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Migrer des étiquettes de Secure Islands et d’autres solutions d’étiquetage
+
+Cette option de configuration est en préversion et susceptible de changer. De plus, elle exige la préversion du client.
+
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
+
+Vous pouvez ré-étiqueter les documents Office et PDF étiquetés par Secure Islands avec une étiquette Azure Information Protection à l’aide d’un mappage défini par vos soins. Cette méthode permet également de réutiliser les étiquettes d’autres solutions qui se trouvent sur des documents Office. 
+
+Cette option de configuration permet au client Azure Information Protection d’appliquer la nouvelle étiquette Azure Information Protection comme suit :
+
+- Pour les documents Office : lorsque le document est ouvert dans l’application de Bureau, la nouvelle étiquette Azure Information Protection est affichée comme définie et appliquée lorsque le document est enregistré.
+
+- Pour l’Explorateur de fichiers : dans la boîte de dialogue Azure Information Protection, la nouvelle étiquette Azure Information Protection est affichée comme définie et appliquée lorsque l’utilisateur sélectionne **Appliquer**. Si l’utilisateur sélectionne **Annuler**, la nouvelle étiquette n’est pas appliquée.
+
+- Pour PowerShell : [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) applique la nouvelle étiquette Azure Information Protection. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) n’affiche pas la nouvelle étiquette Azure Information Protection tant qu’elle n’est pas définie par une autre méthode.
+
+- Pour le scanneur Azure Information Protection : rapport de détection lorsque la nouvelle étiquette Azure Information Protection est définie et qu’elle peut être appliquée avec le mode d’application.
+
+Cette configuration nécessite que vous spécifiiez un paramètre client avancé nommé **LabelbyCustomProperty** pour chaque étiquette Azure Information Protection que vous souhaitez associer à l’ancienne étiquette. Ensuite, définissez la valeur à utiliserpour chaque entrée avec la syntaxe suivante :
+
+`[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
+
+L’ID de l’étiquette figure dans le panneau **Étiquette** quand vous affichez ou configurez la stratégie Azure Information Protection dans le portail Azure. Pour spécifier une sous-étiquette, l’étiquette parente doit être dans la même étendue, ou dans la stratégie globale.
+
+Spécifiez votre choix d’un nom de règle de migration. Utilisez un nom descriptif qui vous aide à identifier la manière dont une ou plusieurs étiquettes de votre solution d’étiquetage précédente doivent être mappées à une étiquette Azure Information Protection. Le nom s’affiche dans les rapports d’analyse et dans l’observateur d’événements. 
+
+### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Exemple 1 : mappage du même nom d’étiquette
+
+Les documents qui ont une étiquette Secure Islands « Confidentiel » doivent être à nouveau libellées « Confidentiel » par Azure Information Protection.
+
+Exemple :
+
+- L’étiquette Azure Information Protection **Confidentiel** a l’ID d’étiquette 1ace2cc3-14bc-4142-9125-bf946a70542c. 
+
+- L’étiquette Secure Islands est stockée dans la propriété personnalisée nommée **Classification**.
+
+Le paramètre client avancé :
+
+    
+|Nom|Valeur|
+|---------------------|---------|
+|LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, « L’étiquette Secure Islands est confidentiel », Classification, Confidentiel|
+
+### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Exemple 2 : un mappage pour un autre nom d’étiquette
+
+Les documents qui ont une étiquette « Sensible » chez Secure Islands doivent être à nouveau libellés « Hautement confidentiel » par Azure Information Protection.
+
+Exemple :
+
+- L’étiquette Azure Information Protection **Hautement confidentiel** a un ID d’étiquette 3e9df74d-3168-48af-8b11-037e3021813f.
+
+- L’étiquette Secure Islands est stockée dans la propriété personnalisée nommée **Classification**.
+
+Le paramètre client avancé :
+
+    
+|Nom|Valeur|
+|---------------------|---------|
+|LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, «L’étiquette Secure Islands est sensible », Classification, Sensible|
+
+
+### <a name="example-3-many-to-one-mapping-of-label-names"></a>Exemple 3 : mappage de plusieurs noms d’étiquettes en un
+
+Vous avez deux étiquettes Secure Islands qui contiennent le mot « Interne » et vous souhaitez que les documents dotés d’une de ces étiquettes Secure Islands soient ré-étiquetés comme « Général » par Azure Information Protection.
+
+Exemple :
+
+- L’étiquette Azure Information Protection **Général** a un ID d’étiquette 2beb8fe7-8293-444c-9768-7fdc6f75014d.
+
+- L’étiquette Secure Islands est stockée dans la propriété personnalisée nommée **Classification**.
+
+Le paramètre client avancé :
+
+    
+|Nom|Valeur|
+|---------------------|---------|
+|LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, «L’étiquette Secure Islands contient Interne », Classification,. \*Interne.\*|
+
+
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Étiquette d’un document Office en utilisant une propriété personnalisée existante
 
-Cette option de configuration est en préversion et susceptible de changer. 
+Cette option de configuration est en préversion et susceptible de changer.
+
+> [!NOTE]
+> Si vous utilisez cette configuration et la configuration de la section précédente pour migrer à partir d’une autre solution d’étiquetage, le paramètre de la migration de l’étiquetage est prioritaire. 
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 

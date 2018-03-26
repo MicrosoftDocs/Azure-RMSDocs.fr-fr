@@ -1,22 +1,22 @@
 ---
-title: "Déployer le connecteur Azure Rights Management - AIP"
-description: "Instructions pour déployer le connecteur RMS, qui fournit le service de protection des données dans le cas des déploiements locaux existants utilisant Exchange Server, SharePoint Server ou Windows Server et l’Infrastructure de classification des fichiers (ICF)."
+title: Déployer le connecteur Azure Rights Management - AIP
+description: Instructions pour déployer le connecteur RMS, qui fournit le service de protection des données dans le cas des déploiements locaux existants utilisant Exchange Server, SharePoint Server ou Windows Server et l’Infrastructure de classification des fichiers (ICF).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/07/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6560381eb07d582d817d00cc76be880998f676f2
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: 87746ad526f191907ad2670604c357e5e926b84e
+ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Déploiement du connecteur Azure Rights Management
 
@@ -51,12 +51,12 @@ Vous pouvez utiliser ce connecteur RMS même si certains de vos utilisateurs se 
 
 Si vous gérez votre propre clé de locataire pour Azure RMS (scénario BYOK, Bring You Own Key), le connecteur RMS et les serveurs locaux qui l’utilisent n’accèdent pas au module de sécurité matériel (HSM) qui contient votre clé de locataire. En effet, toutes les opérations de chiffrement qui utilisent la clé de locataire sont effectuées dans Azure RMS et non en local.
 
-Si vous voulez découvrir plus en détail ce scénario dans lequel vous gérez votre clé de locataire, consultez [Planification et implémentation de votre clé de locataire Azure Rights Management](../plan-design\plan-implement-tenant-key.md).
+Si vous voulez découvrir plus en détail ce scénario dans lequel vous gérez votre clé de locataire, consultez [Planification et implémentation de votre clé de locataire Azure Information Protection](../plan-design\plan-implement-tenant-key.md).
 
 ## <a name="prerequisites-for-the-rms-connector"></a>Conditions requises pour l'installation du connecteur RMS
 Avant d'installer le connecteur RMS, assurez-vous que les conditions requises suivantes sont remplies.
 
-|Condition requise|Plus d'informations|
+|Condition requise|Plus d’informations|
 |---------------|--------------------|
 |Service Rights Management (RMS) activé|[Activation d’Azure Rights Management](activate-service.md)|
 |Synchronisation des annuaires entre vos forêts Active Directory locales et Azure Active Directory|Une fois RMS activé, Azure Active Directory doit être configuré pour travailler avec les utilisateurs et les groupes de votre base de données Active Directory.<br /><br />**Important** : vous devez effectuer cette étape de synchronisation des annuaires pour que le connecteur RMS fonctionne, même pour un réseau de test. Même si vous pouvez utiliser Office 365 et Azure Active Directory avec des comptes crées manuellement dans Azure Active Directory, ce connecteur nécessite que les comptes Azure Active Directory soient synchronisés avec les services de domaine Active Directory. La synchronisation manuelle des mots de passe n'est pas suffisante.<br /><br />Pour plus d'informations, consultez les ressources suivantes :<br /><br />[Intégration de vos identités locales à Azure Active Directory](/active-directory/active-directory-aadconnect)<br /><br />[Comparaison des outils d’intégration d’annuaire d’identités hybrides](/active-directory/active-directory-hybrid-identity-design-considerations-tools-comparison)|

@@ -1,22 +1,22 @@
 ---
-title: "Configuration d’Azure Active Directory requise pour AIP"
-description: "Identifiez la configuration requise d’Azure AD pour utiliser Azure Information Protection afin de permettre l’authentification des utilisateurs."
+title: Configuration d’Azure Active Directory requise pour AIP
+description: Identifiez la configuration requise d’Azure AD pour utiliser Azure Information Protection afin de permettre l’authentification des utilisateurs.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2017
+ms.date: 03/19/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2a079dbc1df01c8c9402d7d79e3f587f13b44654
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 62c9bba17c561fda86393ed4e76c00895613d0e3
+ms.sourcegitcommit: 1b44f6bd25b756fa85fa5f47aa4c0486f9486832
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 
@@ -73,7 +73,7 @@ Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Pro
 
 -   Application de partage Rights Management pour appareils mobiles et ordinateurs Mac :
 
-    -   Assurez-vous d’avoir installé la dernière version. La prise en charge de MFA a été introduite dans la version de septembre 2015 de l’application de partage RMS.
+    -   Assurez-vous que vous avez installé la dernière version. La prise en charge de MFA a été introduite dans la version de septembre 2015 de l’application de partage RMS.
 
 Ensuite, configurez votre solution MFA :
 
@@ -89,7 +89,13 @@ Ensuite, configurez votre solution MFA :
 
         Pour plus d’informations sur ce scénario, consultez [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sur le blog Office.
 
-Le connecteur Rights Management ne prend pas en charge l’authentification MFA. Si vous déployez ce connecteur pour vos serveurs locaux, vous devez utiliser pour le connecteur un compte qui ne nécessite pas l’authentification MFA.
+Le connecteur Azure Rights Management et le moteur d’analyse Azure Information Protection ne prennent pas en charge la MFA. Si vous déployez le connecteur ou le moteur d’analyse, les comptes suivants ne doivent pas exiger l’authentification multifacteur :
+
+- Le compte qui installe et configure le connecteur.
+
+- Le compte principal du service dans Azure AD, **Aadrm_S-1-7-0** créé par le connecteur.
+ 
+- Le compte de service qui exécute le moteur d’analyse.
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour vérifier les autres conditions requises, consultez [Configuration requise pour Azure Information Protection](requirements-azure-rms.md).

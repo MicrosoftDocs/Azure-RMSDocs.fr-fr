@@ -1,22 +1,22 @@
 ---
-title: "Tarifs et restrictions liés à BYOK - Azure Information Protection"
-description: "Découvrez les restrictions imposées quand vous utilisez des clés gérées par le client (BYOK, Bring Your Own Key) avec Azure Information Protection."
+title: Tarifs et restrictions liés à BYOK - Azure Information Protection
+description: Découvrez les restrictions imposées quand vous utilisez des clés gérées par le client (BYOK, Bring Your Own Key) avec Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 12/07/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6e0f63857e3b11af82dae18c23080aa849a9d03b
-ms.sourcegitcommit: 25146c649d5f4c95debebdf3823785139f2d9ea1
+ms.openlocfilehash: ac9324a0418a557682714b6f2b5621a2d9f7530e
+ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="byok-pricing-and-restrictions"></a>Tarifs et restrictions BYOK
 
@@ -45,7 +45,7 @@ Voici d’autres avantages de l’utilisation d’Azure Key Vault pour votre cl�
 
 - Azure Key Vault offre une séparation des rôles, qui est une bonne pratique reconnue en matière de sécurité. Les administrateurs d’Azure Information Protection peuvent se concentrer sur la gestion de la protection et la classification des données, tandis que les administrateurs d’Azure Key Vault peuvent se concentrer sur la gestion des clés de chiffrement et des stratégies spéciales qui peuvent nécessiter une sécurité ou une conformité.
 
-- Certaines organisations ont des restrictions quant à l’emplacement où doit se trouver leur clé principale. Azure Key Vault offre un niveau élevé de contrôle quant à l’emplacement où la clé principale est stockée car le service est disponible dans de nombreuses régions Azure. Actuellement, vous pouvez choisir parmi 28 régions Azure, ce nombre étant appelé à augmenter. Pour plus d’informations, consultez la page [Disponibilité des produits par région] (https://azure.microsoft.com/regions/services/) sur le site Azure.
+- Certaines organisations ont des restrictions quant à l’emplacement où doit se trouver leur clé principale. Azure Key Vault offre un niveau élevé de contrôle quant à l’emplacement où la clé principale est stockée car le service est disponible dans de nombreuses régions Azure. Actuellement, vous pouvez choisir parmi 28 régions Azure, ce nombre étant appelé à augmenter. Pour plus d’informations, consultez la page [Disponibilité des produits par région] (page https://azure.microsoft.com/regions/services/) sur le site Azure.
 
 Outre la gestion des clés, Azure Key Vault offre à vos administrateurs de sécurité la même expérience de gestion pour stocker, utiliser et gérer les certificats et les secrets (comme les mots de passe) pour d’autres services et applications qui utilisent le chiffrement. 
 
@@ -59,8 +59,8 @@ Si vous avez activé Exchange Online IRM en important votre domaine de publicati
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous avez décidé de gérer votre propre clé, accédez à [Implémentation de votre clé de client Azure Rights Management](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+Si vous avez décidé de gérer votre propre clé, accédez à [Implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 
-Si vous souhaitez que Microsoft gère votre clé de client (configuration par défaut), consultez la section [Étapes suivantes](plan-implement-tenant-key.md#next-steps) de l’article Planification et implémentation de votre clé de client Azure Rights Management.
+Si vous souhaitez que Microsoft gère votre clé de client (configuration par défaut), consultez la section [Étapes suivantes](plan-implement-tenant-key.md#next-steps) de l’article Planification et implémentation de votre clé locataire Azure Information Protection.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

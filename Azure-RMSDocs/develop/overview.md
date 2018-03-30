@@ -1,26 +1,26 @@
 ---
-title: "Présentation - RMS SDK 4.2 | Azure RMS"
-description: "AD RMS et Azure RMS sont une technologie de protection des informations qui vous aide à protéger les informations numériques contre toute utilisation non autorisée."
-keywords: 
+title: Présentation - RMS SDK 4.2 | Azure RMS
+description: AD RMS et Azure RMS sont une technologie de protection des informations qui vous aide à protéger les informations numériques contre toute utilisation non autorisée.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8A13494E-C1D7-407D-BCD1-A406915EA578
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: b5d0bd9972776319a73a049e3400b394614e8f0e
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 9c142de580e6e77c0f1c84f12d60158f11751c15
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
-# <a name="overview"></a>Vue d'ensemble
+# <a name="overview"></a>Vue d’ensemble
 
 Microsoft Rights Management SDK 4.2 est une technologie de protection des informations disponible pour plusieurs plateformes.  Elle fournit un Kit de développement logiciel (SDK), ou framework, conçu pour les ordinateurs clients et les appareils, qui a pour objectif d’aider à protéger l’accès et l’utilisation des informations qui circulent entre les applications compatibles avec la gestion des droits. Les SDK pour ces plateformes fournissent une API simple permettant à un développeur d’applications de protéger ou de consommer du contenu numérique, de récupérer des modèles et d’acquérir des stratégies à partir d’un serveur, ainsi que d’autres tâches de gestion des droits.
 
@@ -53,7 +53,7 @@ Utilisez le guide de [Prise en main](get-started.md) pour commencer votre projet
 
 * [SDK Microsoft Rights Management](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
 * [Prise en main](get-started.md)
-* [Bibliothèque d’authentification Azure AD](https://msdn.microsoft.com/en-us/library/jj573266.aspx)
+* [Bibliothèque d’authentification Azure AD](https://msdn.microsoft.com/library/jj573266.aspx)
 * [Compte GitHub](https://github.com/AzureAD/)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

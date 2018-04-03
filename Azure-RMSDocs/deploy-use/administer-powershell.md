@@ -1,26 +1,26 @@
 ---
-title: "Administration d’Azure Rights Management à l’aide de Windows PowerShell - AIP"
-description: "Découvrez comment utiliser le module PowerShell pour le service Azure Rights Management (AADRM) pour Azure Information Protection afin d’administrer ce service dans votre organisation."
+title: Administration d’Azure Rights Management à l’aide de Windows PowerShell - AIP
+description: Découvrez comment utiliser le module PowerShell pour le service Azure Rights Management (AADRM) pour Azure Information Protection afin d’administrer ce service dans votre organisation.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/13/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cdd35669360b172d456254c1e8e9f1d980117cdb
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 55142c61b5ba7ee8b800bae94231401e74be9a38
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Administration du service Azure Rights Management à l’aide de Windows PowerShell
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Devez-vous utiliser PowerShell pour administrer le service Azure Rights Management pour Azure Information Protection ? Ce n’est peut-être pas nécessaire si l’ensemble de votre configuration peut être effectuée dans le portail Azure ou le portail Office 365. Toutefois, vous devez utiliser PowerShell pour certaines configurations avancées et vous pouvez aussi préférer utiliser PowerShell pour avoir un contrôle de ligne de commande et des scripts plus efficaces.
 

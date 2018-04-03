@@ -1,24 +1,24 @@
 ---
-title: "Stratégie Azure Information Protection par défaut"
-description: "Comprendre le processus de configuration de la stratégie par défaut pour Azure Information Protection. Si vous modifiez la stratégie par défaut, vous pouvez référencer ces valeurs de manière à réinitialiser votre stratégie sur les valeurs par défaut."
+title: Stratégie Azure Information Protection par défaut
+description: Comprendre le processus de configuration de la stratégie par défaut pour Azure Information Protection. Si vous modifiez la stratégie par défaut, vous pouvez référencer ces valeurs de manière à réinitialiser votre stratégie sur les valeurs par défaut.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/09/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: d89acde3a2d9e4db529c429fdedf2f3ed05e2fe5
-ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
+ms.openlocfilehash: 57c7321f9bcff12ff0afe4030038495ad4668020
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
->*S’applique à : Azure Information Protection*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Utilisez les informations suivantes pour comprendre la configuration de la stratégie par défaut pour Azure Information Protection.
 
@@ -88,15 +88,15 @@ Les autorisations de protection sont celles définies dans le [modèle par défa
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|Valeur|
+|Paramètre|Value|
 |-------------------------------|---------------------------|
-|Titre|Sensibilité|
+|Title|Sensibilité|
 |Info-bulle|L’étiquette actuelle pour ce contenu. Ce paramètre identifie les risques pour l’entreprise si ce contenu est partagé avec des personnes non autorisées à l’intérieur ou à l’extérieur de l’organisation.|
 
 
 ### <a name="settings"></a>Paramètres
 
-|Paramètre|Valeur|
+|Paramètre|Value|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Sélectionner l’étiquette par défaut|Aucune|
@@ -132,15 +132,15 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|Valeur|
+|Paramètre|Value|
 |-------------------------------|---------------------------|
-|Titre|Sensibilité|
+|Title|Sensibilité|
 |Info-bulle|L’étiquette actuelle pour ce contenu. Ce paramètre identifie les risques pour l’entreprise si ce contenu est partagé avec des personnes non autorisées à l’intérieur ou à l’extérieur de l’organisation.|
 
 
 ### <a name="settings"></a>Paramètres
 
-|Paramètre|Valeur|
+|Paramètre|Value|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Sélectionner l’étiquette par défaut|Aucune|
@@ -170,15 +170,15 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|Valeur|
+|Paramètre|Value|
 |-------------------------------|---------------------------|
-|Titre|Sensibilité|
+|Title|Sensibilité|
 |Info-bulle|La confidentialité des informations est composée de quatre niveaux distincts (public, interne, confidentiel, secret), qui permettent à l’utilisateur d’identifier le risque d’exposition d’informations à des utilisateurs non autorisés à l’intérieur ou à l’extérieur de l’entreprise.|
 
 
 ### <a name="settings"></a>Paramètres
 
-|Paramètre|Valeur|
+|Paramètre|Value|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Sélectionner l’étiquette par défaut|Aucune|

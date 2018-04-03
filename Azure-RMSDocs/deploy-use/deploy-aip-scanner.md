@@ -1,26 +1,26 @@
 ---
-title: "Déployer le scanneur Azure Information Protection"
-description: "Instructions pour installer, configurer et exécuter le scanneur Azure Information Protection qui permet de découvrir, classifier et protéger des fichiers sur des magasins de données."
+title: Déployer le scanneur Azure Information Protection
+description: Instructions pour installer, configurer et exécuter le scanneur Azure Information Protection qui permet de découvrir, classifier et protéger des fichiers sur des magasins de données.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/09/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: f3c302b2379262a6dac87873cb607cf3cd408bcd
-ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
+ms.openlocfilehash: c4e71ec21d6ec06a3bab32bf6bb62e6f614a7e33
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
->*S’applique à : Azure Information Protection, Windows Server 2016, Windows Server 2012 R2*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2*
 
 Utilisez ces informations pour en savoir plus sur le scanneur Azure Information Protection, puis sur la manière de l’installer, de le configurer et de l’exécuter correctement. 
 
@@ -47,7 +47,7 @@ Notez que le scanneur ne découvre pas et n’étiquette pas en temps réel. Il 
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Prérequis pour le scanneur Azure Information Protection
 Avant d’installer le scanneur Azure Information Protection, vérifiez que les conditions suivantes sont respectées.
 
-|Condition requise|Plus d’informations|
+|Condition requise|Autres informations|
 |---------------|--------------------|
 |Ordinateur Windows Server pour exécuter le service du scanneur :<br /><br />- 4 processeurs<br /><br />- 4 Go de RAM|Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Remarque : À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez utiliser un système d’exploitation client Windows qui est [pris en charge par le client Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Il peut s’agir d’un ordinateur physique ou virtuel doté d’une connexion réseau rapide et fiable aux magasins de données à scanner. <br /><br />Vérifiez que cet ordinateur dispose de la [connectivité Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) dont il a besoin pour Azure Information Protection. Ou bien, vous devez le configurer en tant qu’[ordinateur déconnecté](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
 |SQL Server pour stocker la configuration du scanneur :<br /><br />- Instance locale ou distante<br /><br />-Rôle sysadmin pour installer le scanneur|SQL Server 2012 est la version minimale pour les éditions suivantes :<br /><br />- SQL Server Entreprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Le compte qui installe le scanneur doit être autorisé à écrire dans la base de données master (doit être un membre du rôle db_datawriter). Le processus d’installation accorde le rôle db-owner au compte de service qui exécute le scanneur. Ou bien, vous pouvez créer manuellement la base de données AzInfoProtectionScanner avant d’installer le scanneur et attribuer le rôle db-owner au compte de service du scanneur.|
@@ -172,7 +172,7 @@ Puis le scanneur utilise Windows iFilter pour analyser les types de fichiers sui
 |PowerPoint|.ppt ; .pps ; .pot ; .pptx ; .ppsx ; .pptm ; .ppsm ; .potx ; .potm|
 |Projet|.mpp ; .mpt|
 |PDF|.pdf|
-|Text|.txt ; .xml ; .csv|
+|Texte|.txt ; .xml ; .csv|
 
 
 Enfin, pour les autres types de fichiers, le scanneur applique l’étiquette par défaut dans la stratégie Azure Information Protection.

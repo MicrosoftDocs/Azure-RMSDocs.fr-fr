@@ -1,26 +1,26 @@
 ---
-title: "Prise en charge des serveurs pour la protection des données Azure RMS - AIP"
-description: "Identifiez les produits de serveurs locaux qui peuvent utiliser le service Azure Rights Management d’Azure Information Protection, à l’aide du connecteur Rights Management."
+title: Prise en charge des serveurs pour la protection des données Azure RMS - AIP
+description: Identifiez les produits de serveurs locaux qui peuvent utiliser le service Azure Rights Management d’Azure Information Protection, à l’aide du connecteur Rights Management.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/22/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 87e887bb121b3d92065153a5d264767ef87d517b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: dbd75a31d5c4105f5a22051ca1460b62371ac413
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Serveurs locaux prenant en charge la protection des données Azure Rights Management
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Les produits de serveurs locaux suivants sont pris en charge avec Azure Information Protection quand vous utilisez le connecteur Azure Rights Management. Ce connecteur fait office d’interface de communication (relais) entre les serveurs locaux et le service Azure Rights Management utilisé par Azure Information Protection pour protéger les e-mails et les documents Office. 
 
@@ -46,7 +46,7 @@ Pour utiliser ce connecteur, vous devez configurer la synchronisation des annuai
 
     -   Windows Server 2016
 
-    -   Windows Server 2012 R2
+    -   Windows Server 2012 R2
 
     -   Windows Server 2012
 

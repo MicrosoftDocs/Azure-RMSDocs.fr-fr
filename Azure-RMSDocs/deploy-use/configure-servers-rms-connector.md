@@ -1,26 +1,26 @@
 ---
-title: "Configurer des serveurs pour le connecteur Azure Rights Management - AIP"
-description: "Informations vous permettant de configurer les serveurs locaux destinés à utiliser le connecteur Azure Rights Management (RMS). Ces procédures couvrent l’étape 5 de Déploiement du connecteur Azure Rights Management."
+title: Configurer des serveurs pour le connecteur Azure Rights Management - AIP
+description: Informations vous permettant de configurer les serveurs locaux destinés à utiliser le connecteur Azure Rights Management (RMS). Ces procédures couvrent l’étape 5 de Déploiement du connecteur Azure Rights Management.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/16/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 674acfafb305d8ac6ff530710ba311160c850288
-ms.sourcegitcommit: 8ba50d1fc813214b6e66baea140e626c74c5a518
+ms.openlocfilehash: c15c18f7d0a0f43e4f91193ee4a11b324f0187f2
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configuration des serveurs pour le connecteur Azure Rights Management
 
->*S’applique à : Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2012, Windows Server 2012 R2*
 
 
 Utilisez les informations suivantes pour vous aider à configurer les serveurs locaux destinés à utiliser le connecteur Azure Rights Management (RMS). Ces procédures couvrent l’étape 5 de [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md).

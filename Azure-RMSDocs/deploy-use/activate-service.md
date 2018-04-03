@@ -1,26 +1,26 @@
 ---
-title: "Activation d’Azure Rights Management - AIP"
-description: "Le service Azure Rights Management doit être activé pour que votre organisation puisse commencer à protéger des documents et e-mails importants à l’aide d’applications et de services prenant en charge cette solution de protection des informations."
+title: Activation d’Azure Rights Management - AIP
+description: Le service Azure Rights Management doit être activé pour que votre organisation puisse commencer à protéger des documents et e-mails importants à l’aide d’applications et de services prenant en charge cette solution de protection des informations.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d521b105b3cc8077a5e30a825007e18f9b5a59f0
-ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
+ms.openlocfilehash: 7c257b16737a916d597be858fcfeaf6c475bb423
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="activating-azure-rights-management"></a>Activation d'Azure Rights Management
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!NOTE]
 > Ces informations de configuration sont destinées aux administrateurs qui sont responsables d’un service qui s’applique à tous les utilisateurs dans une organisation. Si vous recherchez des informations et une aide utilisateur sur l’utilisation des fonctionnalités de Rights Management pour une application spécifique ou sur l’ouverture d’un fichier ou e-mail protégé par des droits, utilisez l’aide et les conseils qui accompagnent votre application.

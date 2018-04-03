@@ -1,26 +1,28 @@
 ---
-title: "Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS - AIP"
-description: "Instructions pour les utilisateurs ayant effectué la mise à niveau de l’application de partage RMS vers le client Azure Information Protection."
+title: Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS - AIP
+description: Instructions pour les utilisateurs ayant effectué la mise à niveau de l’application de partage RMS vers le client Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dc0345ed289ecc95643c08ad86c1757848026826
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: 58b0ab62b260e407aa9ae6a36b4a063fe147889b
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Guide de l’utilisateur : Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS
 
-Vous avez récemment effectué la mise à niveau de l’application de partage Rights Management (également appelée « application de partage RMS ») vers le client Azure Information Protection ? 
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+>Vous avez récemment effectué la mise à niveau de l’application de partage Rights Management (également appelée « application de partage RMS ») vers le client Azure Information Protection ? 
 
 Utilisez les informations suivantes pour être opérationnel rapidement.
 

@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 62c9bba17c561fda86393ed4e76c00895613d0e3
-ms.sourcegitcommit: 1b44f6bd25b756fa85fa5f47aa4c0486f9486832
+ms.openlocfilehash: 82e2fcb1cdbce0476e95b35b0faef7ada7637795
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Vous avez besoin d’un annuaire Azure AD pour utiliser Azure Information Protection. Vous utilisez le compte de votre organisation correspondant à cet annuaire pour vous connecter au portail Azure, où vous pouvez par exemple configurer et gérer les modèles Rights Management.
 

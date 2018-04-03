@@ -1,26 +1,26 @@
 ---
-title: "Guide de l’utilisateur Azure Information Protection"
-description: "Le client Azure Information Protection pour Windows vous permet de tenir des documents et e-mails importants à distance des personnes qui ne doivent pas les voir, même si vos e-mails sont transférés ou vos documents enregistrés à un autre emplacement."
+title: Guide de l’utilisateur Azure Information Protection
+description: Le client Azure Information Protection pour Windows vous permet de tenir des documents et e-mails importants à distance des personnes qui ne doivent pas les voir, même si vos e-mails sont transférés ou vos documents enregistrés à un autre emplacement.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f1ea192bcacc856b1a4452e2ad3b21f4de45d511
-ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
+ms.openlocfilehash: 1e6ce5660a0ccc8385c6ab728c4d2c1c202023ed
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="azure-information-protection-user-guide"></a>Guide de l’utilisateur Azure Information Protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 
 Le client Azure Information Protection pour Windows vous permet de tenir des documents et e-mails importants à distance des personnes qui ne doivent pas les voir, même si vos e-mails sont transférés ou vos documents enregistrés à un autre emplacement. Vous pouvez également utiliser ce client pour ouvrir des documents que d’autres personnes ont protégés à l’aide de la technologie de protection Rights Management dans Azure Information Protection.
 

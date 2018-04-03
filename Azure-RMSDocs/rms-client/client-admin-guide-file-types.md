@@ -1,26 +1,26 @@
 ---
-title: "Types de fichiers pris en charge par Azure Information Protection"
-description: "Détails techniques sur les types de fichiers pris en charge, les extensions de noms de fichiers et les niveaux de protection pour les administrateurs responsables du client Azure Information Protection pour Windows."
+title: Types de fichiers pris en charge par Azure Information Protection
+description: Détails techniques sur les types de fichiers pris en charge, les extensions de noms de fichiers et les niveaux de protection pour les administrateurs responsables du client Azure Information Protection pour Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 
+ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e9b281fbce9ad423249137c5dfff5a6f88dd2178
-ms.sourcegitcommit: bf3967c5b74d2bc57b0f93239a297ccd56682178
+ms.openlocfilehash: a8a159813dba899cf79a13f15d10e2ff10c11494
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Le client Azure Information Protection peut appliquer les éléments suivants aux documents et e-mails :
 
@@ -194,7 +194,7 @@ Pour empêcher les utilisateurs de modifier des fichiers essentiels au fonctionn
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>Fichiers qui ne peuvent pas être protégés par défaut
 
-Les fichiers protégés par mot de passe ne peuvent pas tous être protégés en mode natif par le client Azure Information Protection. Les fichiers PDF protégés par mot de passe sont très courants, mais d’autres applications, comme les applications Office, offrent aussi cette fonctionnalité.
+Aucun fichier protégé par mot de passe ne peut être protégé en mode natif par le client Azure Information Protection, à moins que le fichier soit actuellement ouvert dans l’application qui applique la protection. Les fichiers PDF protégés par mot de passe sont très courants, mais d’autres applications, comme les applications Office, offrent aussi cette fonctionnalité.
 
 De plus, le client Azure Information Protection pour Windows peut afficher les fichiers suivants, mais il ne peut ni protéger ni déprotéger en mode natif les fichiers PDF dans les cas suivants :
 

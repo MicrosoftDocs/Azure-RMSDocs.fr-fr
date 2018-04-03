@@ -1,31 +1,31 @@
 ---
-title: "Migrer un déploiement AD RMS vers Azure Information Protection - Phase 2"
-description: "Phase 2 de la migration d’AD RMS vers Azure Information Protection, couvrant les étapes 4 à 6 de la migration d’AD RMS vers Azure Information Protection."
+title: Migrer un déploiement AD RMS vers Azure Information Protection - Phase 2
+description: Phase 2 de la migration d’AD RMS vers Azure Information Protection, couvrant les étapes 4 à 6 de la migration d’AD RMS vers Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 12/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0dff1b664cbac830dda2750cc6120ab4476c8183
-ms.sourcegitcommit: c5408506170bdb00d9e677b02161b9f61d4d5d3c
+ms.openlocfilehash: 9871c5890be8b5aa019d9788ecdfe929cfab0eb9
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
->*S’applique à : Services AD RMS, Azure Information Protection, Office 365*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilisez les informations suivantes pour la Phase 2 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent les étapes 4 à 6 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Étape 4. Exporter les données de configuration d’AD RMS, puis les importer dans Azure Information Protection
+## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Étape 4. Exporter les données de configuration d’AD RMS, puis les importer dans Azure Information Protection
 Cette étape est un processus comprenant deux phases :
 
 1. Exporter les données de configuration d'AD RMS en exportant les domaines de publication approuvés (TPD) dans un fichier .xml. Ce processus est identique pour toutes les migrations.
@@ -100,7 +100,7 @@ Pour effectuer l’étape 4, sélectionnez les instructions correspondant à vot
 - [Clé protégée par HSM vers clé protégée par HSM](migrate-hsmkey-to-hsmkey.md)
 - [Clé protégée par logiciel vers clé protégée par HSM](migrate-softwarekey-to-hsmkey.md)
 
-## <a name="step-5-activate-the-azure-rights-management-service"></a>Étape 5. Activer le service Azure Rights Management
+## <a name="step-5-activate-the-azure-rights-management-service"></a>Étape 5. Activer le service Azure Rights Management
 
 Ouvrez une session PowerShell et exécutez les commandes suivantes :
 

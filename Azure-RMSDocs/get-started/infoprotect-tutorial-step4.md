@@ -1,24 +1,24 @@
 ---
-title: "Didacticiel de démarrage rapide, étape 4 - AIP"
-description: "Didacticiel de présentation expliquant comment tester rapidement Azure Information Protection, étape 4 : étiquetage et protection en action."
+title: Didacticiel de démarrage rapide, étape 4 - AIP
+description: 'Didacticiel de présentation expliquant comment tester rapidement Azure Information Protection, étape 4 : étiquetage et protection en action.'
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/30/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: 3a5e3fc018bb19480a52729345ad2ac6d4c851be
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: f92953acfe652238ef8a36f67cdd8051324c6f18
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Étape 4 : classification, étiquetage et protection en action 
 
->*S’applique à : Azure Information Protection*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Maintenant que vous avez un document Word ouvert avec le client Azure Information Protection installé, vous allez voir combien il est facile d’étiqueter et de protéger votre document à l’aide de la stratégie que nous avons configurée.
 
@@ -30,7 +30,7 @@ Dans la barre Information Protection, sélectionnez la dernière étiquette pour
 
 ![Didacticiel de démarrage rapide Azure Information Protection, étape 4 : choisir une sous-étiquette](../media/info-protect-sub-labelsv2.png)
 
-Sélectionnez une de ces sous-étiquettes. Vous voyez alors que les autres étiquettes n’apparaissent plus dans la barre maintenant que vous avez sélectionné une étiquette pour ce document. La valeur **Sensibilité** change pour montrer le nom de l’étiquette et de la sous-étiquette avec une modification correspondante de la couleur de l’étiquette. Exemple :
+Sélectionnez une de ces sous-étiquettes. Vous voyez alors que les autres étiquettes n’apparaissent plus dans la barre maintenant que vous avez sélectionné une étiquette pour ce document. La valeur **Sensibilité** change pour montrer le nom de l’étiquette et de la sous-étiquette avec une modification correspondante de la couleur de l’étiquette. Par exemple :
 
 ![Étape 4 du didacticiel de démarrage rapide Azure Information Protection - Sous-étiquette sélectionnée](../media/info-protect-sub-label-selectedv2.png)
 
@@ -76,7 +76,7 @@ La valeur **Sensibilité** indique **Non défini**, ce qui correspond à ce que 
 
 La classification, l’étiquetage et la protection n’ayant plus de secret pour vous, nous allons voir comment vous pouvez protéger vos documents même quand ils sont partagés avec d’autres personnes dans une autre organisation. Vous pouvez même suivre la façon dont ils sont utilisés et révoquer leur accessibilité.
 
-|Pour en savoir plus|Informations supplémentaires|
+|Pour en savoir plus|Informations complémentaires|
 |--------------------------------|--------------------------|
 |Instructions complètes pour l’étiquetage et la protection de fichiers |[Classifier et protéger un fichier ou un e-mail](../rms-client/client-classify-protect.md)|
 |Emplacement des journaux de l’activité d’étiquetage |[Journalisation de l’utilisation du client Azure Information Protection](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)|

@@ -1,26 +1,26 @@
 ---
-title: "Migration de clé protégée par logiciel vers une clé protégée par HSM - AIP"
-description: "Instructions qui font partie du chemin de migration d’AD RMS vers Azure Information Protection. Celles-ci s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous souhaitez procéder à la migration vers Azure Information Protection avec une clé de locataire protégée par HSM dans Azure Key Vault."
+title: Migration de clé protégée par logiciel vers une clé protégée par HSM - AIP
+description: Instructions qui font partie du chemin de migration d’AD RMS vers Azure Information Protection. Celles-ci s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous souhaitez procéder à la migration vers Azure Information Protection avec une clé de locataire protégée par HSM dans Azure Key Vault.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/19/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d942e51994c6db3ee0c3e1127991a7007ed91f92
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: 659fbe634326e7571f489b1ae2e1bc4176eadb0a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par logiciel à clé protégée par HSM
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 
 Ces instructions font partie du [chemin de migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). Elles s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous souhaitez procéder à la migration vers Azure Information Protection avec une clé de locataire protégée par HSM dans Azure Key Vault. 
@@ -122,7 +122,7 @@ Ne suivez pas les étapes pour générer votre paire de clés, car vous avez dé
 
 Avant de transférer votre clé vers Azure Key Vault, vérifiez que l’utilitaire KeyTransferRemote.exe retourne **Résultat : RÉUSSITE** quand vous créez une copie de votre clé avec des autorisations réduites (étape 4.1) et quand vous chiffrez votre clé (étape 4.3).
 
-Quand la clé se charge dans Azure Key Vault, vous voyez s’afficher les propriétés de la clé, notamment l’ID de clé. Elle ressemble à ceci : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Prenez note de cette URL, car l’administrateur Azure Information Protection en a besoin pour indiquer au service Azure Rights Management d’Azure Information Protection d’utiliser cette clé pour sa clé de locataire.
+Quand la clé se charge dans Azure Key Vault, vous voyez s’afficher les propriétés de la clé, notamment l’ID de clé. Il doit ressembler à **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Prenez note de cette URL, car l’administrateur Azure Information Protection en a besoin pour indiquer au service Azure Rights Management d’Azure Information Protection d’utiliser cette clé pour sa clé de locataire.
 
 Utilisez ensuite l’applet de commande [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) pour autoriser le principal du service Azure Rights Management à accéder au coffre de clés. Les autorisations nécessaires sont déchiffrer, chiffrer, désencapsuler la clé (unwrapkey), encapsuler la clé (wrapkey), vérifier et signer.
 

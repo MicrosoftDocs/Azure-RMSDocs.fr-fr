@@ -1,30 +1,30 @@
 ---
-title: "Bonnes pratiques de sécurité | Microsoft Information Protection"
-description: "Vous développez de meilleures applications compatibles RMS en suivant les bonnes pratiques Azure Information Protection."
+title: Bonnes pratiques de sécurité | Microsoft Information Protection
+description: Vous développez de meilleures applications compatibles RMS en suivant les bonnes pratiques Azure Information Protection.
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 04fc73bac667b461a37e87a1c726c5a645495197
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 6c3669c1ada24afcf3b9ec48ea5bb9c38939b47e
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Bonnes pratiques de sécurité pour Azure Information Protection
 
 Le Kit SDK Azure Information Protection (AIP) fournit un système robuste pour la publication et l’utilisation de tous les types d’informations protégées. Pour rendre un système AIP aussi fort que possible, les applications compatibles AIP doivent être créées sur la base des bonnes pratiques AIP. Les applications compatibles AIP partagent la responsabilité de la maintenance de la sécurité de cet écosystème. L’identification des risques de sécurité et la limitation de ces risques introduits au cours du développement d’applications permet de réduire la probabilité d’une implémentation logicielle moins sécurisée.
 
 Les bonnes pratiques d’implémentation d’applications à l’aide du Kit SDK Azure Information Protection incluent les catégories de suggestion suivantes :
-- [Modèles de menace et prévention](https://msdn.microsoft.com/en-us/library/aa362751.aspx)
-- [Attaques de sécurité](https://msdn.microsoft.com/en-us/library/aa362736.aspx)
+- [Modèles de menace et prévention](https://msdn.microsoft.com/library/aa362751.aspx)
+- [Attaques de sécurité](https://msdn.microsoft.com/library/aa362736.aspx)
 
 Ces informations complètent l’accord juridique qui doit être signé afin d’obtenir les certificats numériques nécessaires pour implémenter des applications à l’aide du SDK AIP.
 
@@ -86,7 +86,7 @@ Le système AIP organise les droits de plusieurs regroupements. Pour plus d’in
 L’API autorise ou non un utilisateur à déchiffrer des informations . Les informations ne comprennent aucune protection inhérente. Si un utilisateur dispose de droits pour déchiffrer des informations, l’API l’y autorise, et l’application est responsable de la gestion ou de la protection de ces informations lorsqu’elles sont déchiffrées. Une application est responsable de la gestion de son environnement et de son interface pour empêcher une utilisation non autorisée d’informations, par exemple en désactivant les boutons **Imprimer** et **Copier** si une licence accorde uniquement un droit de LECTURE. La suite de tests doit vérifier que votre application fonctionne correctement avec tous les droits de licence qu’elle reconnaît.
 
 ### <a name="minimum-standard"></a>Norme minimale
-- L’implémentation par le client de droits XrML versions v.1.2 doit être cohérente avec les définitions de ces droits, comme décrit dans les spécifications XrML disponibles sur le site web de XrML (http://www.xrml.org). Tout droit spécifique à votre application doit être défini pour toutes les entités qui présentent un intérêt dans votre application.
+- L’implémentation par le client de droits XrML v.1.2 doit être cohérente avec les définitions de ces droits, comme décrit dans les spécifications XrML disponibles sur le site web de XrML (http://www.xrml.org). Tout droit spécifique à votre application doit être défini pour toutes les entités qui présentent un intérêt dans votre application.
 - Votre processus de suite de tests et de test doit vérifier que votre application s’exécute correctement en fonction des droits qu’elle prend en charge et qu’elle n’agit pas sur la base de droits non pris en charge.
 - Si vous développez une application de publication, vous devez rendre des informations disponibles expliquant les droits intrinsèques et les droits non pris en charge par l’application de publication, ainsi que la manière dont ces droits doivent être interprétés. En outre, l’interface utilisateur doit indiquer clairement à l’utilisateur final les implications de chaque droit accordé ou refusé pour une information spécifique.
 

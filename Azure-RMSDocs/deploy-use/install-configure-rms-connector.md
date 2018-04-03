@@ -1,26 +1,26 @@
 ---
-title: "Installer et configurer le connecteur Azure Rights Management - AIP"
-description: "Informations vous permettant d’installer et de configurer le connecteur Azure Rights Management (RMS). Ces procédures couvrent les étapes 1 à 4 de Déploiement du connecteur Azure Rights Management."
+title: Installer et configurer le connecteur Azure Rights Management - AIP
+description: Informations vous permettant d’installer et de configurer le connecteur Azure Rights Management (RMS). Ces procédures couvrent les étapes 1 à 4 de Déploiement du connecteur Azure Rights Management.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 73cbcc73b2ce96b2e41f6fef90d70cee71ee3dff
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: a1526c3efea1a03a82baed526d65b748d2aa7bae
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilisez les informations suivantes pour vous aider à installer et à configurer le connecteur Azure Rights Management (RMS). Ces procédures couvrent les étapes 1 à 4 de [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md).
 
@@ -74,7 +74,7 @@ Vous pouvez utiliser un compte possédant l'un des privilèges suivants :
     > 
     > Pour exécuter le connecteur RMS avec des privilèges minimum, créez un compte dédié à cet effet, auquel vous affectez ensuite le rôle d’administrateur du connecteur Azure RMS en procédant comme suit :
     >
-    > 1.  Si ce n’est déjà fait, téléchargez et installez Windows PowerShell pour Rights Management. Pour plus d’informations, voir [Installation du module PowerShell AADRM](install-powershell.md).
+    > 1.  Si ce n’est déjà fait, téléchargez et installez Windows PowerShell pour Rights Management. Pour plus d’informations, voir [Installation du module PowerShell AADMR](install-powershell.md).
     >
     >     Démarrez Windows PowerShell avec la commande **Exécuter en tant qu'administrateur**, et connectez-vous au service Azure RMS à l'aide de la commande [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice):
     >

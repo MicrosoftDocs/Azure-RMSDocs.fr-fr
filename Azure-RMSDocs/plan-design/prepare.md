@@ -1,26 +1,26 @@
 ---
-title: "Préparer des utilisateurs et groupes pour Azure Information Protection"
-description: "Vérifiez que vous disposez des comptes d’utilisateur et de groupe dont vous avez besoin pour démarrer la classification, l’étiquetage et la protection des documents et e-mails de votre organisation."
+title: Préparer des utilisateurs et groupes pour Azure Information Protection
+description: Vérifiez que vous disposez des comptes d’utilisateur et de groupe dont vous avez besoin pour démarrer la classification, l’étiquetage et la protection des documents et e-mails de votre organisation.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 45f75834d687247808107708e082ff61d8510899
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: 7d9c58649eb06b614a25e28c909d34318ea80133
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Avant de déployer Azure Information Protection dans votre organisation, vérifiez que vous avez des comptes pour les utilisateurs et groupes dans Azure AD pour le locataire de votre organisation.
 

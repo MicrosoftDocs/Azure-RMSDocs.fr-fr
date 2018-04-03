@@ -1,26 +1,26 @@
 ---
-title: "Utiliser PowerShell avec le client Azure Information Protection"
-description: "Instructions et informations pour que les administrateurs gèrent le client Azure Information Protection à l’aide de PowerShell."
+title: Utiliser PowerShell avec le client Azure Information Protection
+description: Instructions et informations pour que les administrateurs gèrent le client Azure Information Protection à l’aide de PowerShell.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5bd2af4da402c0096cb58bba1d44684ad73656d6
-ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
+ms.openlocfilehash: 32ae599bc9251fd1504adc2b7c60190e9d78f5fd
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Quand vous installez le client Azure Information Protection, des commandes PowerShell sont installés automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
@@ -238,9 +238,11 @@ Quand vous utilisez un compte de principal de service pour protéger des fichier
 
 1. Exécutez de nouveau l’applet de commande Get-AadrmConfiguration et notez les valeurs pour **CertificationExtranetDistributionPointUrl** et **LicensingExtranetDistributionPointUrl**.
 
-2. Sur tous les ordinateurs où vous allez exécuter les applets de commande AzureInformationProtection, ouvrez l’Éditeur du Registre et accédez à : `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
+2. Sur tous les ordinateurs où vous allez exécuter les applets de commande AzureInformationProtection, ouvrez l’Éditeur du Registre.
 
-3. Si vous ne voyez pas de clé **ServiceLocation**, créez-en une afin que le chemin d’accès du Registre soit **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation**
+3. Accédez à la clé de Registre suivante : `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation`. 
+    
+    Si vous ne voyez pas la clé **MSIPC** ni la clé **ServiceLocation**, créez-les.
 
 4. Pour la clé **ServiceLocation**, créez deux clés, le cas échéant, nommées **EnterpriseCertification** et **EnterprisePublishing**. 
     
@@ -336,7 +338,7 @@ Votre résultat peut ressembler à ce qui suit :
 
 Notez que si les modèles Rights Management sont modifiés, vous devez les télécharger à nouveau à l’aide de `Get-RMSTemplate -force`. 
 
-## <a name="active-directory-rights-management-services"></a>Active Directory Rights Management Services
+## <a name="active-directory-rights-management-services"></a>Services AD RMS (Active Directory Rights Management Services)
 
 Lisez cette section avant de commencer à utiliser les commandes PowerShell pour protéger ou annuler la protection des fichiers, lorsque votre organisation utilise simplement Active Directory Rights Management Services.
 
@@ -485,7 +487,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     
     - Type d’application : **Application/API web**
     
-    - URL de connexion : **http://localhost**
+    - URL de connexion : **http://localhost**
 
 4. Sélectionnez l’application que vous venez de créer, par exemple **AIPOnBehalfOf**. Ensuite, dans le panneau **Paramètres**, sélectionnez **Propriétés**. Dans le panneau **Propriétés**, copiez la valeur du champ **ID d’application**, puis fermez ce panneau. 
     
@@ -505,7 +507,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     
     - Type d’application : **Native**
     
-    - URL de connexion : **http://localhost**
+    - URL de connexion : **http://localhost**
 
 8. Sélectionnez l’application que vous venez de créer, par exemple **AIPClient**. Ensuite, dans le panneau **Paramètres**, sélectionnez **Propriétés**. Dans le panneau **Propriétés**, copiez la valeur du champ **ID d’application**, puis fermez ce panneau.
     

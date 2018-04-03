@@ -1,26 +1,26 @@
 ---
-title: "Migrer un déploiement AD RMS vers Azure Information Protection - Phase 1"
-description: "Phase 1 de la migration d’AD RMS vers Azure Information Protection, couvrant les étapes 1 à 3 de la migration d’AD RMS vers Azure Information Protection."
+title: Migrer un déploiement AD RMS vers Azure Information Protection - Phase 1
+description: Phase 1 de la migration d’AD RMS vers Azure Information Protection, couvrant les étapes 1 à 3 de la migration d’AD RMS vers Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c74bbf88adced03ba73c2431c4c3ccd2ea3359d1
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: ea4c121d8945aabb4bb5a13a043a100e32e5924a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="migration-phase-1---preparation"></a>Phase de migration 1 : Préparation
 
->*S’applique à : Services AD RMS, Azure Information Protection, Office 365*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilisez les informations suivantes pour la Phase 1 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent les étapes 1 à 3 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) et préparent votre environnement pour la migration sans aucun impact sur vos utilisateurs.
 
@@ -56,7 +56,7 @@ Par exemple : **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
     
             (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
-## <a name="step-2-prepare-for-client-migration"></a>Étape 2. Préparer la migration des clients
+## <a name="step-2-prepare-for-client-migration"></a>Étape 2. Préparer la migration des clients
 
 Pour la plupart des migrations, comme il n’est pas pratique de migrer tous les clients à la fois, vous pouvez les migrer par lots. Cela signifie que, pendant une période donnée, certains clients utilisent Azure Information Protection et d’autres continuent à utiliser AD RMS. Pour prendre en charge les utilisateurs avant et après la migration, utilisez les contrôles d’intégration et déployez un script de prémigration. Cette étape est nécessaire pendant le processus de migration afin que les utilisateurs qui n’ont pas encore migré puissent consommer le contenu qui a été protégé par les utilisateurs migrés qui utilisent maintenant Azure Rights Management.
 
@@ -88,7 +88,7 @@ Pour la plupart des migrations, comme il n’est pas pratique de migrer tous les
 
     Vous pouvez utiliser une stratégie de groupe ou un autre mécanisme de déploiement de logiciel pour déployer ce script.
 
-## <a name="step-3-prepare-your-exchange-deployment-for-migration"></a>Étape 3. Préparer le déploiement Exchange pour la migration
+## <a name="step-3-prepare-your-exchange-deployment-for-migration"></a>Étape 3. Préparer le déploiement Exchange pour la migration
 
 Si vous utilisez Exchange Online ou Exchange sur site, vous avez peut-être déjà intégré Exchange à votre déploiement AD RMS. Dans cette étape, vous allez les configurer pour utiliser la configuration AD RMS existante pour prendre en charge le contenu protégé par Azure RMS. 
 

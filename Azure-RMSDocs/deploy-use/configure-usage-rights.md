@@ -4,7 +4,7 @@ description: Découvrez et identifiez les droits spécifiques qui sont utilisés
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d597be35e509fae655ee18fe9fc0344603385382
-ms.sourcegitcommit: 58cd89cc6f6407648854e2e2d28a61325b5c8922
+ms.openlocfilehash: 0ec4710618227573fa7442a8fe1f0bd52b2c8f6f
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuration des droits d’utilisation pour Azure Rights Management
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Quand vous définissez la protection de fichiers ou d’e-mails à l’aide du service Azure Rights Management d’Azure Information Protection et que vous n’utilisez pas de modèle, vous devez configurer les droits d’utilisation vous-même. En outre, quand vous configurez des modèles ou des étiquettes pour la protection Azure Rights Management, vous sélectionnez les droits d’utilisation qui sont ensuite appliqués automatiquement quand le modèle est sélectionné par des utilisateurs, des administrateurs ou des services configurés. Par exemple, dans le portail Azure, vous pouvez sélectionner des rôles qui configurent un regroupement logique de droits d’utilisation, ou vous pouvez configurer les droits individuels.
 
@@ -97,11 +97,15 @@ Ces modèles par défaut sont créés quand vous achetez votre abonnement, et vo
 
 Les clients et services Exchange (par exemple, le client Outlook, l’application Outlook Web Access et les règles de flux de messagerie Exchange) disposent d’une option de protection des droits d’information supplémentaire pour les e-mails : **Ne pas transférer**. 
 
-Même si cette option apparaît aux utilisateurs (les administrateurs Exchange) comme s’il s’agissait d’un modèle de gestion des droits par défaut qu’ils peuvent sélectionner, **Ne pas transférer** n’est pas un modèle. Ceci explique pourquoi vous ne pouvez pas la voir dans le portail Azure quand vous visualisez et que vous gérez des modèles pour Azure Rights Management. L’option **Ne pas transférer** correspond plutôt à un ensemble de droits appliqué dynamiquement par les utilisateurs à leurs destinataires.
+Même si cette option apparaît aux utilisateurs (les administrateurs Exchange) comme s’il s’agissait d’un modèle de gestion des droits par défaut qu’ils peuvent sélectionner, **Ne pas transférer** n’est pas un modèle. Cela explique pourquoi vous ne pouvez pas la voir dans le portail Azure quand vous affichez et gérez les modèles de protection. L’option **Ne pas transférer** correspond plutôt à un ensemble de droits d’utilisation appliqué dynamiquement par les utilisateurs à leurs destinataires.
 
 Lorsque l’option **Ne pas transférer** est appliquée à un e-mail, cet e-mail est chiffré et les destinataires doivent être authentifiés. Les destinataires ne peuvent alors pas le transférer, l’imprimer, en copier le contenu, enregistrer des pièces jointes ou l’enregistrer sous un autre nom. Par exemple, dans le client Outlook, le bouton Transférer n’est pas disponible. Les options de menu **Enregistrer sous**, **Enregistrer les pièces jointes** et **Imprimer** ne sont pas disponibles non plus. Vous ne pouvez pas ajouter ou modifier des destinataires dans les zones **À**, **Cc** ou **Cci**.
 
-Il existe une distinction importante entre l’application de l’option **Ne pas transférer** et celle d’un modèle qui n’accorde pas le droit d’être transféré à un e-mail : l’option **Ne pas transférer** utilise une liste dynamique des utilisateurs autorisés qui se base sur les destinataires choisis de l’utilisateur de l’e-mail d’origine, tandis que les droits du modèle ont une liste statique d’utilisateurs autorisés que l’administrateur a spécifiée au préalable. Quelle est la différence ? Prenons un exemple : 
+Les [documents Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) non protégés qui sont joints à l’e-mail héritent automatiquement des mêmes restrictions. Les droits d’utilisation appliqués à ces documents sont **Modifier le contenu, Modifier** ; **Enregistrer** ; **Afficher, Ouvrir, Lire** et **Autoriser les macros**. Si vous souhaitez des droits d’utilisation différents pour une pièce jointe ou si votre pièce jointe n’est pas un document Office prenant en charge cette protection héritée, protégez le fichier avant de le joindre à l’e-mail. Vous pouvez alors affecter les droits d’utilisation spécifiques dont vous avez besoin pour le fichier. 
+
+### <a name="difference-between-do-not-forward-and-not-granting-the-forward-usage-right"></a>Différence entre l’option Ne pas transférer et le fait de ne pas accorder le droit d’utilisation Transférer
+
+Il existe une distinction importante entre l’application de l’option **Ne pas transférer** et celle d’un modèle qui n’accorde pas le droit d’utilisation **Transférer** à un e-mail : l’option **Ne pas transférer** utilise une liste dynamique des utilisateurs autorisés qui se base sur les destinataires choisis par l’utilisateur dans l’e-mail d’origine, tandis que les droits du modèle ont une liste statique d’utilisateurs autorisés que l’administrateur a spécifiés au préalable. Quelle est la différence ? Prenons un exemple : 
 
 Une utilisatrice veut envoyer certaines informations par e-mail à certaines personnes du service Marketing. Ces informations ne doivent être partagées avec personne d’autre. A-t-elle intérêt à protéger l’e-mail avec un modèle qui restreint les droits (affichage, réponse et enregistrement) au service Marketing ?  Ou doit-elle choisir d’utiliser l’option **Ne pas transférer** ? Ces deux possibilités ont pour résultat d’empêcher les destinataires de transférer l’e-mail. 
 
@@ -118,7 +122,9 @@ Quand Exchange Online utilise les nouvelles fonctionnalités de chiffrement des 
 
 Cette option est en cours de déploiement pour les locataires qui utilisent Exchange Online, réservée à la base à Outlook sur le web et comme nouvelle option de protection des droits pour une règle de flux de messagerie. Pour plus d’informations, consultez le billet de blog suivant de l’équipe Office : [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
 
-Lorsque cette option est sélectionnée, l’e-mail est chiffré et les destinataires doivent être authentifiés. Ensuite, les destinataires ont tous les droits d’utilisation, à l’exception de Contrôle total. Cette combinaison de droits d’utilisation signifie que les destinataires n’ont aucune restriction, mis à part qu’ils ne peuvent pas supprimer la protection. Par exemple, un destinataire peut copier, imprimer et transférer l’e-mail. De même, tout document Office qui est joint et automatiquement protégé peut être enregistré, copié et imprimé.
+Lorsque cette option est sélectionnée, l’e-mail est chiffré et les destinataires doivent être authentifiés. Ensuite, les destinataires ont tous les droits d’utilisation, à l’exception de **Enregistrer sous, Exporter** et de **Contrôle total**. Cette combinaison de droits d’utilisation signifie que les destinataires n’ont aucune restriction, mis à part qu’ils ne peuvent pas supprimer la protection. Par exemple, un destinataire peut copier à partir de l’e-mail, l’imprimer et le transférer. 
+
+De façon similaire, les [documents Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) non protégés qui sont joints à l’e-mail héritent des mêmes autorisations. Ces documents sont automatiquement protégés et peuvent être enregistrés, modifiés, copiés et imprimés par les destinataires. Lorsque le document est enregistré par un destinataire, il peut être enregistré sous un nouveau nom et même dans un format différent. Toutefois, seuls les formats de fichier qui prennent en charge la protection sont disponibles, de sorte que le document ne peut pas être enregistré sans la protection d’origine. Si vous souhaitez des droits d’utilisation différents pour une pièce jointe ou si votre pièce jointe n’est pas un document Office prenant en charge cette protection héritée, protégez le fichier avant de le joindre à l’e-mail. Vous pouvez alors affecter les droits d’utilisation spécifiques dont vous avez besoin pour le fichier.
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Émetteur Rights Management et propriétaire Rights Management
 

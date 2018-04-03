@@ -1,26 +1,26 @@
 ---
-title: "Partager des documents protégés avec l’application de partage RMS - AIP"
-description: "Instructions à suivre pour partager un document par e-mail en toute sécurité."
+title: Partager des documents protégés avec l’application de partage RMS - AIP
+description: Instructions à suivre pour partager un document par e-mail en toute sécurité.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4110050a0e45fd75633bc27dd220f71855d50672
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 71bc303aaadf6856cce2f63db0acf5280fbe172b
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application"></a>Protégez un fichier partagé par courrier électronique à l’aide de l’application de partage Rights Management
 
->*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Lorsque vous protégez un fichier que vous le partagez par e-mail, il crée une nouvelle version du fichier d’origine. Le fichier d’origine reste non protégé et la nouvelle version est protégée et automatiquement jointe à un e-mail que vous envoyez ensuite.
 
@@ -67,7 +67,7 @@ En plus de partager un fichier protégé à l’aide d’Outlook, vous pouvez é
 
 3.  Il se peut qu’une boîte de dialogue s’affiche brièvement pour vous informer que le fichier est protégé et un e-mail spécialement créé pour vous pour indiquer aux destinataires que les pièces jointes sont protégées avec Microsoft RMS et qu’ils doivent se connecter. Lorsqu’ils cliquent sur le lien pour se connecter, ils voient des instructions et des liens pour pouvoir ouvrir vos pièces jointes protégées.
 
-    Exemple :
+    Exemple :
 
     ![E-mail pour Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 

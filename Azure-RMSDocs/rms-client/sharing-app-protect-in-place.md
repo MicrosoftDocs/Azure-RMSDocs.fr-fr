@@ -1,26 +1,26 @@
 ---
-title: "Protéger des fichiers sur place via l’application de partage RMS - AIP"
-description: "Instructions à suivre pour stocker en toute sécurité un fichier sur votre ordinateur, un serveur ou un autre dispositif de stockage."
+title: Protéger des fichiers sur place via l’application de partage RMS - AIP
+description: Instructions à suivre pour stocker en toute sécurité un fichier sur votre ordinateur, un serveur ou un autre dispositif de stockage.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a0654dba53f493551b2cc4d1fbb8790f246e0c18
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 0d819fd242e57402a790e9acb40ffa48eeb701b4
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Protection d'un fichier sur un appareil (Protéger sur place) à l'aide de l'application de partage Rights Management
 
->*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Lorsque vous protégez un fichier sur place, celui-ci remplace le fichier non protégé d'origine. Vous pouvez ensuite laisser le fichier là où il est, le copier vers un autre dossier ou appareil, ou partager le dossier dans lequel il se trouve : le fichier reste protégé. Vous pouvez aussi joindre le fichier protégé à un e-mail, même si la méthode recommandée pour partager un fichier protégé par e-mail consiste à le faire directement à partir de l’Explorateur de fichiers ou d’une application Office (consultez [Protéger un fichier que vous partagez par e-mail en utilisant l’application de partage Rights Management](sharing-app-protect-by-email.md)).
 
@@ -29,14 +29,14 @@ Lorsque vous protégez un fichier sur place, celui-ci remplace le fichier non pr
 
 ## <a name="to-protect-a-file-on-a-device-protect-in-place"></a>Pour protéger un fichier sur un appareil (Protéger sur place)
 
-1.  Dans l'Explorateur de fichiers, sélectionnez un fichier à protéger. Cliquez avec le bouton droit, sélectionnez **Protéger avec RMS**, puis sélectionnez **Protéger sur place**. Exemple :
+1.  Dans l'Explorateur de fichiers, sélectionnez un fichier à protéger. Cliquez avec le bouton droit, sélectionnez **Protéger avec RMS**, puis sélectionnez **Protéger sur place**. Par exemple :
 
     ![Option de menu Protéger sur place](../media/ADRMS_MSRMSApp_SP_CompanyDefined.png)
 
     > [!NOTE]
     > Si vous ne voyez pas l'option **Protéger avec RMS** , il est probable que l'application de partage RMS ne soit pas installée sur votre ordinateur ou que celui-ci nécessite un redémarrage pour terminer l'installation. Pour plus d’informations sur l’installation de l’application de partage RMS, consultez [Télécharger et installer l’application de partage Rights Management](install-sharing-app.md).
 
-2.  Effectuez l'une des opérations suivantes :
+2.  Effectuez l'une des opérations suivantes :
 
     -   Sélectionnez un modèle de stratégie : il s'agit d'une autorisation prédéfinie qui restreint généralement l'accès et l'utilisation à certaines personnes au sein de votre organisation. Par exemple, si le nom de votre organisation est « Contoso, Ltd », voici ce que vous pouvez lire : **Contoso, Ltd - Affichage confidentiel uniquement**. Si vous protégez un fichier sur cet ordinateur pour la première fois, vous devez commencer par sélectionner **Protection définie par la société** pour télécharger les modèles.
 
@@ -46,7 +46,7 @@ Lorsque vous protégez un fichier sur place, celui-ci remplace le fichier non pr
 
     -   Sélectionnez **Autorisations personnalisées**: Choisissez cette option si les modèles n'offrent pas le niveau de protection nécessaire, ou si vous souhaitez définir vous-même explicitement les options de protection. Spécifiez les options souhaitées pour ce fichier dans la boîte de dialogue [Ajouter une protection](sharing-app-dialog-box.md), puis cliquez sur **Appliquer**.
 
-3.  Avant que le focus revienne sur l'Explorateur de fichiers, il se peut qu'une boîte de dialogue s'affiche brièvement pour vous informer que le fichier est protégé. Les fichiers sélectionnés sont désormais protégés. Dans certains cas (lorsque l'ajout d'une protection modifie l'extension du nom du fichier), le fichier d'origine dans l'Explorateur de fichiers est remplacé par un nouveau fichier associé à l'icône de verrou de protection de Rights Management. Exemple :
+3.  Avant que le focus revienne sur l'Explorateur de fichiers, il se peut qu'une boîte de dialogue s'affiche brièvement pour vous informer que le fichier est protégé. Les fichiers sélectionnés sont désormais protégés. Dans certains cas (lorsque l'ajout d'une protection modifie l'extension du nom du fichier), le fichier d'origine dans l'Explorateur de fichiers est remplacé par un nouveau fichier associé à l'icône de verrou de protection de Rights Management. Par exemple :
 
     ![Fichier protégé avec une icône de verrou pour l’application de partage RMS](../media/ADRMS_MSRMSApp_Pfile.png)
 

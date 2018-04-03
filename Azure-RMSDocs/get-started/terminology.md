@@ -1,26 +1,26 @@
 ---
-title: "Terminologie liée à Azure Information Protection"
-description: "Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Azure Information Protection ? Recherchez ici la définition de termes et d’abréviations propres à Azure Information Protection, ou qui ont un sens particulier dans le contexte de ce service."
+title: Terminologie liée à Azure Information Protection
+description: Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Azure Information Protection ? Recherchez ici la définition de termes et d’abréviations propres à Azure Information Protection, ou qui ont un sens particulier dans le contexte de ce service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 12/15/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: da20ac2ea327b5b97f021c85f62d97b9aa1b9824
-ms.sourcegitcommit: fc205eae0c0b378d41da5f1eceb0c699e60ad66f
+ms.openlocfilehash: b3513a4ec00abf8727e2a5e07f9b4a67c96b7574
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie liée à Azure Information Protection
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Azure Information Protection ? Recherchez ici la définition de termes et d’abréviations propres à Azure Information Protection, ou qui ont un sens particulier dans le contexte de ce service.
 
@@ -28,8 +28,8 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |--------|--------------|
 |AADRM|Nom du module Windows PowerShell pour le service Azure Rights Management, dérivé de l’abréviation non officielle d’Azure Rights Management quand la solution s’appelait (Windows) Azure Active Directory Rights Management.|
 |activer|Permet d’activer le service Azure Rights Management pour qu’une organisation puisse protéger ses documents et ses e-mails. Cette action active également les fonctionnalités Rights Management dans Exchange Online et SharePoint Online.|
-|Active Directory Rights Management Services|Souvent abrégé *AD RMS*.<br /><br />Rôle Windows Server qui assure la protection par la gestion des droits par le biais du chiffrement et de stratégies, à des fins de sécurisation des documents, des fichiers et des e-mails.|
-|AD RMS|Voir *Services Active Directory Rights Management*.|
+|Services AD RMS (Active Directory Rights Management Services)|Souvent abrégé *AD RMS*.<br /><br />Rôle Windows Server qui assure la protection par la gestion des droits par le biais du chiffrement et de stratégies, à des fins de sécurisation des documents, des fichiers et des e-mails.|
+|AD RMS|Voir *Services Active Directory Rights Management*.|
 |Azure Information Protection|Service cloud qui utilise la classification, l’étiquetage et la protection pour aider à sécuriser des documents et des e-mails. Azure Rights Management offre une protection à l’aide de stratégies de chiffrement, d’identité et d’autorisation.|
 |Gestion des droits Azure|Souvent abrégée en *Azure RMS*.<br /><br />Service Azure utilisé par Azure Information Protection qui recourt au chiffrement et à des stratégies, à des fins de sécurisation des documents, des fichiers et des e-mails.  Également appelé *service Rights Management Azure*. Les noms précédents étaient les suivants :<br /><br />- *Windows Azure Active Directory Rights Management* : souvent abrégé en service Windows Azure AD Rights Management.<br /><br />- *RMS Online* : nom proposé à l’origine, que vous pouvez rencontrer parfois dans les messages d’erreur et les entrées de fichier journal.|
 |Azure RMS|Voir *Azure Rights Management*.|
@@ -56,7 +56,7 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 |.ppdf|Extension de nom de fichier créée par un service de gestion des droits au moment de la création automatique d’une copie PDF d’un fichier (Word, Excel, PowerPoint ou PDF) que vous partagez par e-mail, afin que le fichier puisse être lu (mais pas modifié) sur tous les appareils.|
 |niveau d’autorisation|Regroupement logique des droits d’utilisation qui permet aux utilisateurs finals et aux administrateurs de choisir plus facilement les options de configuration basées sur des rôles. Par exemple, Réviseur et Coauteur.|
 |protéger|Appliquer des contrôles de gestion des droits à des fichiers ou à des e-mails via des stratégies de chiffrement, d’identité et de contrôle d’accès afin de sécuriser vos données.|
-|publier|Protection des fichiers en vue d'empêcher tout accès et utilisation non autorisés.|
+|publish|Protection des fichiers en vue d'empêcher tout accès et utilisation non autorisés.|
 |connecteur Rights Management|Relais de proxy sortant que vous pouvez déployer pour des services locaux, comme Exchange Server et SharePoint, afin de protéger les données à l’aide du service Azure Rights Management.|
 |Émetteur Rights Management|Compte qui a protégé un document ou un e-mail.|
 |Propriétaire Rights Management|Compte qui conserve le contrôle total sur un document ou un e-mail protégé quand il se voit automatiquement octroyé le droit d’utilisation Contrôle total de la gestion des droits et exempté de toute date d’expiration ou de paramètre hors connexion.|

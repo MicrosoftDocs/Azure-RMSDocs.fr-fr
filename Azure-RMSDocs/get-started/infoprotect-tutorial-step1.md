@@ -1,24 +1,24 @@
 ---
-title: "Didacticiel de démarrage rapide, étape 1 - AIP"
-description: "Étape 1 d’un didacticiel de présentation expliquant comment tester rapidement Azure Information Protection : Activer le service de protection."
+title: Didacticiel de démarrage rapide, étape 1 - AIP
+description: 'Étape 1 d’un didacticiel de présentation expliquant comment tester rapidement Azure Information Protection : Activer le service de protection.'
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 952431771e89e934be4a725ece4f3d9cd47165fe
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: cfeed994bb23469694e906132e175aabf925290e
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-1-activate-protection"></a>Étape 1 : Activer la protection
  
->*S’applique à : Azure Information Protection*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!NOTE]
 >Même si le service Azure Rights Management est activé pour votre locataire, effectuez cette étape pour confirmer l’état d’activation. Les instructions incluent la connexion au portail Azure et la création du panneau Azure Information Protection, en préparation de l’étape 2.
@@ -33,7 +33,7 @@ Il existe différentes manières d’activer la protection. Vous pouvez utiliser
     
     Si vous n’êtes pas l’administrateur général, vous pouvez utiliser l’un des [rôles d’administration](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) suivants : **Administrateur Information Protection** ou **Administrateur de sécurité**.
 
-2. Dans le menu Hub, cliquez sur **Créer une ressource**, puis, dans la liste **PLACE DE MARCHÉ**, sélectionnez **Sécurité + Identité**. 
+2. Dans le menu hub, cliquez sur **Créer une ressource**, puis, dans la liste **PLACE DE MARCHÉ**, sélectionnez **Sécurité + Identité**. 
     
 3.  Dans le panneau **Sécurité + Identité**, dans la liste **APPLICATIONS PROPOSÉES**, sélectionnez **Azure Information Protection**. Ensuite, dans le panneau **Azure Information Protection**, cliquez sur **Créer**.
     
@@ -60,7 +60,7 @@ Il existe différentes manières d’activer la protection. Vous pouvez utiliser
 
 C’est tout ce que vous avez à faire pour cette première étape du didacticiel. Vous êtes maintenant prêt à passer à l’étape 2.
 
-|Pour en savoir plus|Informations supplémentaires|
+|Pour en savoir plus|Informations complémentaires|
 |--------------------------------|--------------------------|
 |À propos de l’activation de Rights Management|[Activation d’Azure Rights Management](../deploy-use/activate-service.md)|
 

@@ -1,26 +1,26 @@
 ---
-title: "Application de partage RMS &colon; installation et configuration"
-description: "Informations destinées aux administrateurs sur le déploiement de l’application de partage Rights Management (RMS) sur les ordinateurs et appareils mobiles Windows."
+title: Application de partage RMS &colon; installation et configuration
+description: Informations destinées aux administrateurs sur le déploiement de l’application de partage Rights Management (RMS) sur les ordinateurs et appareils mobiles Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/27/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 65b4a60909f93090fa2e6d27660e1ed20f410955
-ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
+ms.openlocfilehash: 6acedb72d270bb5d4153701a6d42aa2757fbacbd
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rights-management-sharing-application-installation-and-configuration-for-clients"></a>Application de partage Rights Management : installation et configuration pour les clients
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > **Notification de fin de prise en charge** : l’application de partage Rights Management pour Windows est remplacée par le [client Azure Information Protection](../rms-client/aip-client.md). La prise en charge de cette application plus ancienne cessera le 31 janvier 2019. 

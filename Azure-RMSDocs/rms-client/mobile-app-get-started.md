@@ -1,7 +1,7 @@
 ---
-title: "Bien démarrer : application AIP pour iOS et Android"
-description: 
-keywords: "Guide pratique pour afficher des e-mails ou des fichiers avec l’application Azure Information Protection pour iOS et Android"
+title: 'Bien démarrer : application AIP pour iOS et Android'
+description: ''
+keywords: Guide pratique pour afficher des e-mails ou des fichiers avec l’application Azure Information Protection pour iOS et Android
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -13,15 +13,15 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d4fbec69d4185004f4ce10bcc8904b2dfb9a7f24
-ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
+ms.openlocfilehash: ccee69ba4f0b17440e9748787502a480e692de7c
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android
 
-*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection*
+*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Avant d’utiliser les instructions de cette page, veillez à lire les [questions fréquentes sur l’application Azure Information Protection pour iOS et Android](mobile-app-faq.md). Cette page décrit à quoi sert l’application, quels appareils sont pris en charge et donne des informations élémentaires sur l’utilisation de l’application.
 

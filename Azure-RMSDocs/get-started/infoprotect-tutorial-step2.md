@@ -1,24 +1,24 @@
 ---
-title: "Didacticiel de démarrage rapide, étape 2 - AIP"
-description: "Didacticiel de présentation expliquant comment tester rapidement Azure Information Protection, étape 2 : configurer la stratégie."
+title: Didacticiel de démarrage rapide, étape 2 - AIP
+description: 'Didacticiel de présentation expliquant comment tester rapidement Azure Information Protection, étape 2 : configurer la stratégie.'
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/29/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 3dd58454709dd5a73edc23578f12e79d85a9b9c9
-ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
+ms.openlocfilehash: fecf9887937d3d17347e85759e2ed10b124ae8a1
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Étape 2 : Configurer et publier la stratégie Azure Information Protection
 
->*S’applique à : Azure Information Protection*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Bien qu’Azure Information Protection soit fourni avec une stratégie par défaut que vous pouvez utiliser sans configuration, nous allons examiner cette stratégie et y apporter des modifications.
 
@@ -33,7 +33,7 @@ Bien qu’Azure Information Protection soit fourni avec une stratégie par défa
        > 
        > Si votre stratégie par défaut est différente, vous pouvez néanmoins utiliser ce didacticiel, mais n’oubliez pas ces différences quand vous utilisez les instructions et les images qui suivent. Si vous voulez modifier votre stratégie par défaut pour qu’elle corresponde à la stratégie par défaut actuelle, consultez [La stratégie Azure Information Protection par défaut](../deploy-use/configure-policy-default.md).
     
-    - Avec la configuration par défaut, des marquages visuels ne sont pas configurés pour certaines étiquettes. Les marquages visuels sont un pied de page, un en-tête et un filigrane. En fonction de votre stratégie par défaut, la protection peut ou non être définie pour certaines étiquettes. Exemple : 
+    - Avec la configuration par défaut, des marquages visuels ne sont pas configurés pour certaines étiquettes. Les marquages visuels sont un pied de page, un en-tête et un filigrane. En fonction de votre stratégie par défaut, la protection peut ou non être définie pour certaines étiquettes. Par exemple : 
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](../media/info-protect-policy-default-labelsv2.png)
     
@@ -85,7 +85,7 @@ Nous allons créer maintenant une sous-étiquette pour **Confidentiel**.
     
     Vous pouvez sélectionner différents niveaux d’autorisation ou spécifier des droits d’utilisation individuels à l’aide de l’option **Personnalisé**. Dans ce didacticiel, nous utilisons l’option **Réviseur**. Vous pourrez tester différentes autorisations par la suite et découvrir comment limiter les actions des utilisateurs spécifiés sur le document protégé ou l’e-mail.
 
-7. Cliquez sur **OK** pour fermer le panneau **Ajouter des autorisations**. Le panneau **Protection** est mis à jour pour refléter votre configuration. Exemple :
+7. Cliquez sur **OK** pour fermer le panneau **Ajouter des autorisations**. Le panneau **Protection** est mis à jour pour refléter votre configuration. Par exemple :
     
      ![Panneau Protection affichant la configuration des autorisations pour une étiquette Azure Information Protection](../media/info-protect-protection-configured.png)
     
@@ -127,7 +127,7 @@ Nous allons créer maintenant une sous-étiquette pour **Confidentiel**.
 
 13. Cliquez sur **Enregistrer** dans ce panneau **Sous-étiquette**. Puis, dans le panneau **Stratégie : Globale**, cliquez une nouvelle fois sur **Enregistrer**.
     
-    Vous voyez maintenant votre nouvelle sous-étiquette, configurée pour la protection et les marquages visuels. Exemple :
+    Vous voyez maintenant votre nouvelle sous-étiquette, configurée pour la protection et les marquages visuels. Par exemple :
 
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut configurée](../media/info-protect-policy-configuredv2.png)
     
@@ -143,7 +143,7 @@ Vous pouvez fermer le portail Azure, ou le laisser ouvert pour essayer des optio
 
 Maintenant que vous avez examiné la stratégie par défaut et apporté des modifications, l’étape suivante consiste à installer le client Azure Information Protection.
 
-|Pour en savoir plus|Informations supplémentaires|
+|Pour en savoir plus|Informations complémentaires|
 |--------------------------------|--------------------------|
 |À propos de la stratégie par défaut et des différentes versions|[La stratégie Azure Information Protection par défaut](../deploy-use/configure-policy-default.md)|
 |À propos de la configuration de la stratégie|[Configuration de la stratégie Azure Information Protection](../deploy-use/configure-policy.md)|

@@ -1,26 +1,26 @@
 ---
-title: "Guide de l’administrateur de l’application de partage Rights Management - AIP"
-description: "Instructions et informations destinées aux administrateurs sur un réseau d’entreprise en charge du déploiement de l’application de partage Microsoft Rights Management pour Windows."
+title: Guide de l’administrateur de l’application de partage Rights Management - AIP
+description: Instructions et informations destinées aux administrateurs sur un réseau d’entreprise en charge du déploiement de l’application de partage Microsoft Rights Management pour Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/27/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 46ed6ac05e696ec65527d39ab38c312f6aba8411
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: e1f3520a74b3ae57984e635ca68ba429dd6ad131
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>guide de l’administrateur de l’application de partage Rights Management
 
->*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
 > **Notification de fin de prise en charge** : l’application de partage Rights Management pour Windows est remplacée par le [client Azure Information Protection](aip-client.md). La prise en charge de cette application plus ancienne cessera le 31 janvier 2019. 

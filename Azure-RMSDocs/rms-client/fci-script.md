@@ -1,26 +1,26 @@
 ---
-title: "Script PowerShell pour Azure RMS et l’infrastructure ICF - AIP"
-description: "Exemple de script à copier et à modifier, comme indiqué dans les instructions Protection RMS avec l’infrastructure de classification des fichiers de Windows Server."
+title: Script PowerShell pour Azure RMS et l’infrastructure ICF - AIP
+description: Exemple de script à copier et à modifier, comme indiqué dans les instructions Protection RMS avec l’infrastructure de classification des fichiers de Windows Server.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dc43fa78b7c13dc1b4891690e0e29bfe4b0cc07c
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: d00e0037634601cd92b9f0858c197975ea9f896b
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Script Windows PowerShell pour la protection Azure RMS à l’aide de l’ICF des outils de gestion de ressources pour serveur de fichiers
 
->*S’applique à : Azure Information Protection, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 
 Cette page contient l’exemple de script à copier et à modifier, comme indiqué dans [Protection RMS avec l’infrastructure de classification des fichiers de Windows Server](configure-fci.md).
 

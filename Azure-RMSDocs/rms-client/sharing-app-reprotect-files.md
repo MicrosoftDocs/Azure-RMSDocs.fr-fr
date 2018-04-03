@@ -1,27 +1,27 @@
 ---
-title: "Changer les autorisations sur des fichiers protégés par RMS - AIP"
-description: "Quand vous protégez un fichier avec Rights Management, vous pouvez modifier les autorisations en le reprotégeant, puis en spécifiant tous les utilisateurs qui doivent y avoir accès et quelles autorisations vous souhaitez leur accorder."
-keywords: 
+title: Changer les autorisations sur des fichiers protégés par RMS - AIP
+description: Quand vous protégez un fichier avec Rights Management, vous pouvez modifier les autorisations en le reprotégeant, puis en spécifiant tous les utilisateurs qui doivent y avoir accès et quelles autorisations vous souhaitez leur accorder.
+keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3290b9436f75c2d0d37c401dd2e0be11bcf2d554
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 766acd68d1c5c5f59530b0b61fadee315185ec4a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Modifier les autorisations des fichiers qui ont été protégés par Rights Management
 
->*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Quand vous protégez un fichier avec Rights Management, vous pouvez modifier les autorisations en le reprotégeant, puis en spécifiant tous les utilisateurs qui doivent y avoir accès et quelles autorisations vous souhaitez leur accorder.
 
@@ -40,14 +40,14 @@ Si vous souhaitez supprimer complètement toutes les autorisations pour que le f
 
 ## <a name="to-re-protect-a-file-in-place"></a>Pour reprotéger un fichier sur place
 
-1.  Dans l'Explorateur de fichiers, sélectionnez un fichier à protéger. Cliquez avec le bouton droit, sélectionnez **Protéger avec RMS**, puis sélectionnez **Protéger sur place**. Exemple :
+1.  Dans l'Explorateur de fichiers, sélectionnez un fichier à protéger. Cliquez avec le bouton droit, sélectionnez **Protéger avec RMS**, puis sélectionnez **Protéger sur place**. Par exemple :
 
     ![Option de menu Protéger sur place](../media/ADRMS_MSRMSApp_SP_CompanyDefined.png)
 
     > [!NOTE]
     > Si vous ne voyez pas l'option **Protéger avec RMS** , il est probable que l'application de partage RMS ne soit pas installée sur votre ordinateur ou que celui-ci nécessite un redémarrage pour terminer l'installation. Pour plus d’informations sur l’installation de l’application de partage RMS, consultez [Télécharger et installer l’application de partage Rights Management](install-sharing-app.md).
 
-2.  Effectuez l'une des opérations suivantes :
+2.  Effectuez l'une des opérations suivantes :
 
     -   Sélectionnez un modèle de stratégie : il s'agit d'une autorisation prédéfinie qui restreint généralement l'accès et l'utilisation à certaines personnes au sein de votre organisation. Par exemple, si le nom de votre organisation est « Contoso, Ltd », voici ce que vous pouvez lire : **Contoso, Ltd - Affichage confidentiel uniquement**. Si vous protégez un fichier sur cet ordinateur pour la première fois, vous devez commencer par sélectionner **Protection définie par la société** pour télécharger les modèles.
 

@@ -1,26 +1,26 @@
 ---
-title: "Journalisation et analyse de l’utilisation du service Azure Rights Management - AIP"
-description: "Informations et instructions sur la journalisation de l’utilisation avec Azure Rights Management (Azure RMS)."
+title: Journalisation et analyse de l’utilisation du service Azure Rights Management - AIP
+description: Informations et instructions sur la journalisation de l’utilisation avec Azure Rights Management (Azure RMS).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 09d076299f70718b65bb3746486f559a880a2660
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: b4a9c6b259e5863bb5be276f89beb0de33002ca4
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Journalisation et analyse de l’utilisation du service Azure Rights Management
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilisez ces informations pour comprendre comment vous pouvez utiliser la journalisation de l’utilisation pour le service Azure Rights Management d’Azure Information Protection. Ce service assure la protection des données des documents et e-mails de votre organisation et peut journaliser chaque demande adressée à ce dernier. Ces demandes incluent les cas où les utilisateurs protègent des documents et des e-mails, mais également consomment ce contenu, les actions effectuées par vos administrateurs pour ce service et les actions effectuées par des opérateurs Microsoft pour prendre en charge votre déploiement Azure Information Protection. 
 
@@ -67,7 +67,7 @@ Le service Azure Rights Management écrit des journaux enregistrés dans votre c
 
 Les journaux peuvent mettre un certain temps à apparaître dans votre compte de stockage après une action Azure Rights Management. La plupart des journaux apparaissent dans un délai de 15 minutes. Nous vous conseillons de télécharger les journaux vers un espace de stockage local, tel qu’un dossier, une base de données ou un référentiel Map/Reduce.
 
-Pour télécharger vos journaux d’utilisation, vous allez utiliser le module d’administration Azure Rights Management pour Windows PowerShell. Pour connaître les instructions d'installation, consultez [Installation du module PowerShell AADRM](install-powershell.md). Si vous avez déjà téléchargé ce module Windows PowerShell, exécutez la commande suivante pour vérifier que le numéro de votre version est au minimum **2.4.0.0** : `(Get-Module aadrm -ListAvailable).Version` 
+Pour télécharger vos journaux d’utilisation, vous allez utiliser le module d’administration Azure Rights Management pour Windows PowerShell. Pour connaître les instructions d'installation, voir [Installation du module PowerShell AADRM](install-powershell.md). Si vous avez déjà téléchargé ce module Windows PowerShell, exécutez la commande suivante pour vérifier que le numéro de votre version est au minimum **2.4.0.0** : `(Get-Module aadrm -ListAvailable).Version` 
 
 ### <a name="to-download-your-usage-logs-by-using-powershell"></a>Pour télécharger vos journaux d’utilisation à l’aide de PowerShell
 
@@ -145,19 +145,19 @@ Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des c
 |heure|Heure|Heure UTC (au format 24 h) du traitement de la demande.<br /><br />La source est l’horloge locale du serveur qui a traité la demande.|21:59:28|
 |row-id|Text|GUID unique de cet enregistrement de journal. En l’absence de valeur, utilisez la valeur correlation-id pour identifier l’entrée.<br /><br />Cette valeur est utile lorsque vous agrégez des journaux ou lorsque vous copiez des journaux dans un autre format.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
 |request-type|Nom|Nom de l’API RMS demandée.|AcquireLicense|
-|user-id|Chaîne|Utilisateur ayant adressé la demande.<br /><br />La valeur est placée entre guillemets simples. Les appels à partir d’une clé de locataire gérée par vous (BYOK) ont la valeur **"**, qui s’applique également quand les types de demande sont anonymes.|‘joe@contoso.com’|
-|result|Chaîne|« Success » si la demande a été traitée correctement.<br /><br />Type d’erreur (entre guillemets simples) si la demande échoue.|« Success »|
-|correlation-id|Text|GUID commun au journal du client RMS et au journal du serveur pour une demande donnée.<br /><br />Cette valeur peut être utile pour résoudre les problèmes liés au client.|cab52088-8925-4371-be34-4b71a3112356|
-|content-id|Text|GUID (entre accolades) qui identifie le contenu protégé (par exemple, un document).<br /><br />Ce champ contient une valeur uniquement si le champ request-type est égal à AcquireLicense. Sinon, il reste vierge pour les autres types de demande.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
-|owner-email|Chaîne|Adresse de messagerie du propriétaire du document.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|alice@contoso.com|
-|issuer|Chaîne|Adresse de messagerie de l’émetteur du document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|alice@contoso.com ou FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|template-id|Chaîne|ID du modèle utilisé pour protéger le document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|Chaîne|Nom de fichier d’un document protégé suivi à l’aide du client Azure Information Protection pour Windows ou l’application de partage Rights Management pour Windows. <br /><br />Actuellement, certains fichiers (tels que les documents Office) sont affichés sous forme de GUID plutôt que noms de fichiers réels.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|TopSecretDocument.docx|
+|user-id|String|Utilisateur ayant adressé la demande.<br /><br />La valeur est placée entre guillemets simples. Les appels à partir d’une clé de locataire gérée par vous (BYOK) ont la valeur **"**, qui s’applique également quand les types de demande sont anonymes.|‘joe@contoso.com’|
+|result|String|« Success » si la demande a été traitée correctement.<br /><br />Type d’erreur (entre guillemets simples) si la demande échoue.|« Success »|
+|correlation-id|Texte|GUID commun au journal du client RMS et au journal du serveur pour une demande donnée.<br /><br />Cette valeur peut être utile pour résoudre les problèmes liés au client.|cab52088-8925-4371-be34-4b71a3112356|
+|content-id|Texte|GUID (entre accolades) qui identifie le contenu protégé (par exemple, un document).<br /><br />Ce champ contient une valeur uniquement si le champ request-type est égal à AcquireLicense. Sinon, il reste vierge pour les autres types de demande.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
+|owner-email|String|Adresse de messagerie du propriétaire du document.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|alice@contoso.com|
+|issuer|String|Adresse de messagerie de l’émetteur du document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|alice@contoso.com ou FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|template-id|String|ID du modèle utilisé pour protéger le document. <br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|String|Nom de fichier d’un document protégé suivi à l’aide du client Azure Information Protection pour Windows ou l’application de partage Rights Management pour Windows. <br /><br />Actuellement, certains fichiers (tels que les documents Office) sont affichés sous forme de GUID plutôt que noms de fichiers réels.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|TopSecretDocument.docx|
 |date-published|Date|Date à laquelle le document a été protégé.<br /><br /> Ce champ est vide si le type de demande est RevokeAccess.|2015-10-15T21:37:00|
-|c-info|Chaîne|Informations concernant la plateforme du client d’où émane la demande.<br /><br />La chaîne spécifique varie selon l’application (par exemple, le système d’exploitation ou le navigateur).|’MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64’|
+|c-info|String|Informations concernant la plateforme du client d’où émane la demande.<br /><br />La chaîne spécifique varie selon l’application (par exemple, le système d’exploitation ou le navigateur).|’MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64’|
 |c-ip|Adresse|Adresse IP du client d’où émane la demande.|64.51.202.144|
 |admin-action|Bool|Définit si un administrateur a eu accès au site de suivi des documents en mode administrateur.|True|
-|acting-as-user|Chaîne|Adresse e-mail de l’utilisateur pour lequel un administrateur accède au site de suivi des documents. |« joe@contoso.com »|
+|acting-as-user|String|Adresse e-mail de l’utilisateur pour lequel un administrateur accède au site de suivi des documents. |« joe@contoso.com »|
 
 
 #### <a name="exceptions-for-the-user-id-field"></a>Exceptions pour le champ user-id.

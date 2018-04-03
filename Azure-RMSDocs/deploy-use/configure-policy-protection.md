@@ -1,24 +1,24 @@
 ---
-title: "Configurer une étiquette Azure Information Protection à des fins de protection"
-description: "Vous pouvez protéger vos documents et e-mails les plus sensibles lorsque vous configurez une étiquette, de façon à utiliser la protection offerte par Rights Management."
+title: Configurer une étiquette Azure Information Protection à des fins de protection
+description: Vous pouvez protéger vos documents et e-mails les plus sensibles lorsque vous configurez une étiquette, de façon à utiliser la protection offerte par Rights Management.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: a00c6e669f01a8166b53ae1ae0a5a63737253d61
-ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
+ms.openlocfilehash: d27dcff090aa33cb5c7a3bcb6641ac635ed8a104
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
->*S’applique à : Azure Information Protection*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’un service Rights Management. Ce service utilise des stratégies de chiffrement, d’identité et d’autorisation pour vous aider à éviter les pertes de données. La protection est appliquée quand une étiquette est configurée de manière à utiliser la protection Rights Management pour les documents et les e-mails. Les utilisateurs peuvent aussi sélectionner l’option **Ne pas transférer** dans Outlook. 
 
@@ -63,7 +63,9 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
         
         Les paramètres de protection précédemment configurés sont conservés sous la forme de modèle de protection archivé et réapparaissent si vous redéfinissez l’option sur **Protéger**. Vous ne voyez pas ce modèle dans le portail Azure, mais si besoin, vous pouvez toujours le gérer à l’aide de [PowerShell](configure-templates-with-powershell.md). Ce comportement signifie que le contenu reste accessible s’il a cette étiquette avec les paramètres de protection appliqués précédemment.
     
-    - **Protéger** : sélectionnez cette option pour appliquer la protection, puis passez à l’étape 5.
+    - **Protéger** : sélectionnez cette option pour appliquer la protection, puis passez à l’étape 5 pour configurer les paramètres de protection.
+    
+    Remarque : Vous pouvez enregistrer une nouvelle étiquette à ce stade sans configuration supplémentaire. Si vous le faites, l’étiquette est configurée pour appliquer une protection telle que seule la personne qui applique l’étiquette peut ouvrir le document ou l’e-mail sans restriction d’utilisation. Dans certains cas, cela peut être le résultat requis, afin qu’un utilisateur puisse enregistrer un fichier dans n’importe quel emplacement et être assuré d’être le seul à pouvoir l’ouvrir. Si ce résultat correspond à vos besoins et qu’aucun autre utilisateur n’est tenu de collaborer sur le contenu protégé, passez directement à l’étape 12 au lieu de l’étape 5.
     
     - **Supprimer la protection** : Sélectionnez cette option pour supprimer la protection si un document ou un e-mail est protégé. Passez ensuite à l'étape 11.
         
@@ -81,7 +83,7 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
     
     Dans la plupart des cas, sélectionnez **Azure (clé du cloud)** pour vos paramètres d’autorisation. Ne sélectionnez **HYOK (AD RMS)** que si vous avez lu et compris les prérequis et les restrictions qui accompagnent cette configuration « *conservez votre propre clé* » (HYOK, hold your own key). Pour plus d’informations, consultez [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md). Pour poursuivre la configuration de la fonction HYOK (AD RMS), passez à l’étape 10.
     
-7. Sélectionnez l’une des options suivantes :
+7. Vous pouvez sélectionner l'une des options suivantes :
     
     - **Définir des autorisations** : Permet de définir de nouveaux paramètres de protection dans ce portail.
     
@@ -121,7 +123,7 @@ Exchange ne doit pas être configuré pour IRM (Information Rights Management, G
     
     Pour tous les utilisateurs et les groupes que vous avez spécifiés dans le panneau **Protection**, vérifiez maintenant si des modifications doivent être apportées aux paramètres suivants. Notez que ces paramètres, comme avec les autorisations, ne s’appliquent pas à [l’émetteur ou au propriétaire de Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), ou n’importe quel [super utilisateur](configure-super-users.md) que vous avez affecté.
     
-    |Paramètre|Plus d’informations|Paramètre recommandé
+    |Paramètre|Autres informations|Paramètre recommandé
     |-----------|--------------------|--------------------|
     |**expiration du contenu**|Définissez une date ou un nombre de jours limites pour l’ouverture par les utilisateurs sélectionnés des documents ou e-mails protégés par ces paramètres. Vous pouvez spécifier une date ou un nombre de jours à partir du moment où la protection est appliquée au contenu.<br /><br />Lorsque vous spécifiez une date, celle-ci prend effet à minuit, dans votre fuseau horaire actuel.|**Le contenu n’expire jamais**, sauf s'il comporte une spécification de durée.|
     |**Autoriser l’accès hors connexion**|Utilisez ce paramètre pour équilibrer les éventuelles exigences de sécurité que vous avez (dont l’accès après la révocation) avec la possibilité pour les utilisateurs sélectionnés d’ouvrir du contenu protégé lorsqu’ils ne disposent pas d’une connexion Internet.<br /><br />Si vous spécifiez que le contenu n’est pas disponible sans connexion Internet ou que ce contenu est disponible seulement pour un nombre de jours spécifié, quand ce seuil est atteint, ces utilisateurs doivent se réauthentifier et leur accès est journalisé. Dans ce cas, si leurs informations d’identification ne sont pas mises en cache, les utilisateurs sont invités à se connecter préalablement pour pouvoir ouvrir le ou e-mail.<br /><br />En plus de la réauthentification, la stratégie et l’appartenance au groupe d’utilisateurs sont réévaluées. Cela signifie que les utilisateurs peuvent accéder de nouveau ou ne plus accéder à un même document ou e-mail si des modifications ont été apportées à la stratégie ou à l'appartenance au groupe depuis leur dernier accès. Cela peut inclure l’absence d’accès si le document a été [révoqué](../rms-client/client-track-revoke.md).|En fonction de la sensibilité du contenu :<br /><br />- **Nombre de jours pendant lesquels le contenu est disponible sans connexion Internet** = **7** pour les données métier sensibles pouvant nuire à l’entreprise si elles sont partagées avec des personnes non autorisées. Cette recommandation offre un compromis entre sécurité et flexibilité. Il peut s’agir entre autres de contrats, de rapports de sécurité, de résumés de prévision et de données commerciales.<br /><br />- **Jamais** pour les données d’entreprise très sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Cette recommandation donne la priorité à la sécurité par rapport à la souplesse et garantit que si le document est révoqué, tous les utilisateurs autorisés perdent instantanément la possibilité d’ouvrir le document. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|
@@ -229,8 +231,9 @@ Les nouveaux utilisateurs que vous ajoutez seront en mesure d’ouvrir les docum
 Cette étiquette ne peut pas être limitée à Outlook, mais elle fournit des contrôles moins restrictifs que l’option Ne pas transférer. Par exemple, vous voulez que les destinataires puissent copier du contenu de l’e-mail ou d’une pièce jointe, ou qu’ils puissent imprimer et enregistrer une pièce jointe.
 
 Si vous spécifiez des utilisateurs externes qui n’ont pas de compte dans Azure AD, demandez à vos utilisateurs de ne pas utiliser cette étiquette pour les documents, mais uniquement pour les e-mails. De plus, pour prendre en charge ces utilisateurs externes, Exchange Online doit être configuré pour les [nouvelles fonctionnalités dans Chiffrement de messages Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+
 > [!NOTE]
-> Exchange Online déploie actuellement une nouvelle option appelée [Chiffrement seul](configure-usage-rights.md#encrypt-only-option-for-emails). Cette option n'est pas disponible pour la configuration des étiquettes.
+> Exchange Online déploie actuellement une nouvelle option appelée [Chiffrement seul](configure-usage-rights.md#encrypt-only-option-for-emails). Cette option n'est pas disponible pour la configuration des étiquettes. Toutefois, vous pouvez utiliser cet exemple pour configurer une étiquette avec le même ensemble de droits d’utilisation.
 
 Lorsque vos utilisateurs spécifient les adresses e-mail dans la zone **À**, celles-ci doivent correspondre aux mêmes utilisateurs que ceux que vous spécifiez pour cette configuration d’étiquette. Étant donné que les utilisateurs peuvent appartenir à des groupes et avoir plusieurs adresses e-mail, celle qu’ils spécifient ne doit pas nécessairement correspondre exactement à l’adresse e-mail que vous spécifiez pour les autorisations. Toutefois, l’utilisation de la même adresse e-mail est le moyen le plus simple d’être sûr que le destinataire est autorisé. Pour plus d’informations sur la façon dont les utilisateurs reçoivent les autorisations, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md). 
 
@@ -242,9 +245,11 @@ Lorsque vos utilisateurs spécifient les adresses e-mail dans la zone **À**, ce
     
     Répétez cette étape pour spécifier des utilisateurs supplémentaires qui doivent avoir les mêmes autorisations.
 
-4. Pour **Choisir des autorisations à partir des autorisations prédéfinies**, sélectionnez **Copropriétaire**, **Co-auteur**, **Réviseur** ou **Personnalisé** pour sélectionner les autorisations à accorder. 
+4. Pour **Choisir des autorisations à partir des autorisations prédéfinies**, sélectionnez **Copropriétaire**, **Co-auteur**, **Réviseur** ou **Personnalisé** pour sélectionner les autorisations à accorder.
     
-    Remarque : Ne sélectionnez pas **Observateur** pour les e-mails et si vous sélectionnez **Personnalisé**, veillez à inclure **Modifier et enregistrer**. 
+    Remarque : Ne sélectionnez pas **Observateur** pour les e-mails et si vous sélectionnez **Personnalisé**, veillez à inclure **Modifier et enregistrer**.
+    
+    Pour sélectionner les autorisations qui correspondent à la nouvelle option **Chiffrement seul** d’Exchange Online, sélectionnez **Personnalisé**. Ensuite, sélectionnez toutes les autorisations sauf **Enregistrer sous, Exporter (EXPORT)** et **Contrôle total (OWNER)**.
 
 5. Pour spécifier des utilisateurs supplémentaires qui doivent disposer d’autorisations différentes, répétez les étapes 3 et 4.
 

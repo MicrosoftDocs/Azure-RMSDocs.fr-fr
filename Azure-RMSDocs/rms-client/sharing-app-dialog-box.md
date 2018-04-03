@@ -1,26 +1,26 @@
 ---
-title: "Options des boîtes de dialogue de l’application de partage RMS - AIP"
-description: "Informations vous permettant de spécifier les options des boîtes de dialogue Ajouter une protection ou Partage protégé de l’application de partage RMS. Ces boîtes de dialogue s’affichent quand vous voulez protéger un fichier à partager ou protéger un fichier sur place et que vous choisissez des autorisations personnalisées."
+title: Options des boîtes de dialogue de l’application de partage RMS - AIP
+description: Informations vous permettant de spécifier les options des boîtes de dialogue Ajouter une protection ou Partage protégé de l’application de partage RMS. Ces boîtes de dialogue s’affichent quand vous voulez protéger un fichier à partager ou protéger un fichier sur place et que vous choisissez des autorisations personnalisées.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 190d8ac29bec0fc3825eb9fe099e06bd16e2112f
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 429be436bc1a9fec3d31933d9cb6e8f88de7506a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Options de boîte de dialogue pour l'application de partage Rights Management
 
->*S’applique à : Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 Ces informations vous aident à spécifier les options des boîtes de dialogue **Ajouter une protection** ou **Partage protégé** de l'application de partage RMS. Ces boîtes de dialogue s’affichent quand vous voulez [protéger un fichier à partager](sharing-app-protect-by-email.md) ou [protéger un fichier sur place](sharing-app-protect-in-place.md) et que vous choisissez des autorisations personnalisées.
 

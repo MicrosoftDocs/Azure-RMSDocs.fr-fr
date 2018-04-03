@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bce7efc1f35f5e455f76a24f2f96e7d62f568425
-ms.sourcegitcommit: 1b44f6bd25b756fa85fa5f47aa4c0486f9486832
+ms.openlocfilehash: fadaac4b5ea7828c53544485b1685226176a2a75
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals et Azure Information Protection
 
->*S’applique à : Azure Information Protection*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 RMS for individuals est un abonnement gratuit en libre-service destiné aux utilisateurs qui doivent ouvrir des fichiers protégés par Azure Information Protection. Si ces utilisateurs ne peuvent pas être authentifiés par Azure Active Directory et que leur organisation ne dispose pas d’Active Directory Rights Management (AD RMS), ce service d’abonnement gratuit peut créer un compte dans Azure Active Directory pour un utilisateur. Ainsi, ces utilisateurs peuvent s’authentifier avec leur e-mail professionnel et lire les fichiers protégés sur des ordinateurs ou des appareils mobiles.
 

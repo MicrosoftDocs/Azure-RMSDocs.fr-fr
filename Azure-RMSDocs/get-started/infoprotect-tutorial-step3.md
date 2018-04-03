@@ -1,24 +1,24 @@
 ---
-title: "Didacticiel de démarrage rapide, étape 3 - AIP"
-description: "Didacticiel de présentation expliquant comment tester rapidement Azure Information Protection, étape 3 : installer le client."
+title: Didacticiel de démarrage rapide, étape 3 - AIP
+description: 'Didacticiel de présentation expliquant comment tester rapidement Azure Information Protection, étape 3 : installer le client.'
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-ms.openlocfilehash: cfe2fdf41174caf6184d3e160ce9f4d439d55566
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 363902fac8036b118ce28c3ea87c812e262c3d47
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-3-install-the-client"></a>Étape 3 : Installer le client
 
->*S’applique à : Azure Information Protection*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Lors de cette étape, vous allez installer le client Azure Information Protection pour que la stratégie que vous venez de configurer soit téléchargée sur un PC Windows, et vous allez afficher les étiquettes dans les applications Office.
 
@@ -49,7 +49,7 @@ Lors du chargement du document, deux nouveaux éléments doivent apparaître :
 
 Vous êtes maintenant prêt à voir Azure Information Protection en action.
 
-|Pour en savoir plus|Informations supplémentaires|
+|Pour en savoir plus|Informations complémentaires|
 |--------------------------------|--------------------------|
 |À propos de l’installation du client Azure Information Protection|[Télécharger et installer le client Azure Information Protection](../rms-client/install-client-app.md)|
 |Instructions de l’administrateur pour le client Azure Information Protection|[Client Azure Information Protection - Guide de l’administrateur](../rms-client/client-admin-guide.md)|

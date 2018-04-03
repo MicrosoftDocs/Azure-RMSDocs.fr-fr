@@ -1,26 +1,26 @@
 ---
-title: "Notes sur le déploiement du client RMS - Azure Information Protection"
-description: "Informations à propos de l’installation, des systèmes d’exploitation pris en charge, des paramètres du Registre et de la découverte du service pour le client Rights Management Service (client RMS) version 2, également appelé client MSIPC."
+title: Notes sur le déploiement du client RMS - Azure Information Protection
+description: Informations à propos de l’installation, des systèmes d’exploitation pris en charge, des paramètres du Registre et de la découverte du service pour le client Rights Management Service (client RMS) version 2, également appelé client MSIPC.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6518b9d91e8f73b9ac6c0fb9e4bb5c2bbcebd612
-ms.sourcegitcommit: 704700acf7302d258e9c58c365c3244e833a86cd
+ms.openlocfilehash: edaa24b6e86fc1cacecfa79185b7fe4ddb1d34c9
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rms-client-deployment-notes"></a>Notes sur le déploiement du client RMS
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), Azure Information Protection, Windows 7 avec SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 7 avec SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016*
 
 Le client service Rights Management (client RMS) version 2 est également appelé client MSIPC. Il s'agit d'un logiciel pour ordinateurs Windows, qui communique avec les services Microsoft Rights Management localement ou dans le cloud pour protéger l'accès aux informations et leur utilisation quand celles-ci transitent par des applications et appareils, à l'intérieur ou à l'extérieur des limites managées de votre organisation. 
 
@@ -56,10 +56,10 @@ La section suivante contient des questions fréquemment posées sur le client RM
 ### <a name="which-operating-systems-support-the-rms-client"></a>Quels systèmes d'exploitation prennent en charge le client RMS ?
 Le client RMS est pris en charge par les systèmes d'exploitation suivants :
 
-|Système d'exploitation Windows Server|Système d'exploitation client Windows|
+|Système d'exploitation Windows Server|Système d'exploitation Windows Client|
 |-----------------------------------|-----------------------------------|
 |Windows Server 2016|Windows 10|
-|Windows Server 2012 R2|Windows 8.1|
+|Windows Server 2012 R2|Windows 8.1|
 |Windows Server 2012|Windows 8|
 |Windows Server 2008 R2|Windows 7 avec au minimum SP1|
 
@@ -118,7 +118,7 @@ Vous pouvez utiliser des clés de Registre Windows pour définir ou modifier des
 |**Pour modifier la fréquence en jours d’actualisation des modèles**|Les valeurs suivantes du Registre spécifient la fréquence à laquelle les modèles sont actualisés sur l’ordinateur de l’utilisateur si la valeur TemplateUpdateFrequencyInSeconds n'est pas définie.  Si aucune de ces valeurs n'est définie, l'intervalle d'actualisation par défaut pour les applications utilisant le client RMS (version 1.0.1784.0) pour télécharger des modèles est de 1 jour. Les versions antérieures ont une valeur par défaut : tous les 7 jours.<br /><br />**Mode client:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valeur:** Valeur entière spécifiant le nombre de jours (au minimum 1) entre les téléchargements.<br /><br />**Mode serveur:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<SID\><br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Value:** Valeur entière spécifiant le nombre de jours (au minimum 1) entre les téléchargements.|
 |**Pour modifier la fréquence en secondes d’actualisation des modèles**<br /><br />Important : Si ce paramètre est spécifié, la valeur d’actualisation en jours des modèles est ignorée. Spécifiez une ou l'autre, pas les deux.|Les valeurs de Registre suivantes spécifient la fréquence à laquelle les modèles sont actualisés sur l'ordinateur de l'utilisateur. Si cette valeur ou la valeur modifiant la fréquence en jours (TemplateUpdateFrequency) n’est pas définie, l’intervalle d’actualisation par défaut pour les applications utilisant le client RMS (version 1.0.1784.0) pour télécharger des modèles est d’une journée. Les versions antérieures ont une valeur par défaut : tous les 7 jours.<br /><br />**Mode client:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Valeur:** Valeur entière spécifiant le nombre de secondes (au minimum 1) entre les téléchargements.<br /><br />**Mode serveur:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<*SID*><br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Valeur:** Valeur entière spécifiant le nombre de secondes (au minimum 1) entre les téléchargements.|
 |AD RMS uniquement :<br /><br />**Pour télécharger les modèles immédiatement à la prochaine demande de publication**|Durant les tests et évaluations, il se peut que vous souhaitiez que le client RMS télécharge les modèles dès que possible. Pour cette configuration, supprimez la clé de Registre suivante. Ainsi, le client RMS télécharge les modèles immédiatement à la prochaine demande de publication au lieu d’attendre l’heure spécifiée par le paramètre de Registre TemplateUpdateFrequency :<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*Nom de serveur*>\Template <br /><br />**Remarque** : \<*Nom de serveur*> peut avoir une URL externe (corprights.contoso.com) et une URL interne (corprights), et donc deux entrées différentes.|
-|AD RMS uniquement :<br /><br />**Pour activer la prise en charge de l’authentification fédérée**|Si l'ordinateur client RMS se connecte à un cluster AD RMS en utilisant une approbation fédérée, vous devez configurer le domaine d'accueil de fédération.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**Valeur:** la valeur de cette entrée de Registre est l’URI (Uniform Resource Identifier) du service de fédération (par exemple « http://TreyADFS.trey.net/adfs/services/trust »).<br /><br /> **Remarque** : il est important de spécifier http et non https pour cette valeur. De plus, si votre application MSIPC 32 bits s’exécute sur une version 64 bits de Windows, l’emplacement est HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Federation. Pour obtenir un exemple de configuration, consultez [Déploiement des services AD RMS (Active Directory Rights Management Services) avec les services ADFS (Active Directory Federation Services)](https://technet.microsoft.com/library/dn758110.aspx).|
+|AD RMS uniquement :<br /><br />**Pour activer la prise en charge de l’authentification fédérée**|Si l'ordinateur client RMS se connecte à un cluster AD RMS en utilisant une approbation fédérée, vous devez configurer le domaine d'accueil de fédération.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**Valeur :** la valeur de cette entrée de Registre est l’URI (Uniform Resource Identifier) du service de fédération (par exemple, « http://TreyADFS.trey.net/adfs/services/trust »).<br /><br /> **Remarque** : il est important de spécifier http et non https pour cette valeur. De plus, si votre application MSIPC 32 bits s’exécute sur une version 64 bits de Windows, l’emplacement est HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Federation. Pour obtenir un exemple de configuration, consultez [Déploiement des services AD RMS (Active Directory Rights Management Services) avec les services ADFS (Active Directory Federation Services)](https://technet.microsoft.com/library/dn758110.aspx).|
 |AD RMS uniquement :<br /><br />**Pour prendre en charge les serveurs de fédération de partenaires qui requièrent une authentification basée sur les formulaires pour l’entrée utilisateur**|Par défaut, le client RMS fonctionne en mode silencieux et l’entrée utilisateur n’est pas nécessaire. Toutefois, les serveurs de fédération de partenaires peuvent être configurés pour exiger une entrée utilisateur, telle qu'une authentification basée sur les formulaires. Dans ce cas, vous devez configurer le client RMS pour ignorer le mode silencieux afin que le formulaire d’authentification fédérée s’affiche dans une fenêtre de navigateur et que l’utilisateur soit invité à s’authentifier.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_DWORD: EnableBrowser<br /><br />**Remarque** : Si le serveur de fédération est configuré pour utiliser l’authentification basée sur les formulaires, cette clé est obligatoire. Si le serveur de fédération est configuré pour utiliser l’authentification Windows intégrée, cette clé n’est pas nécessaire.|
 |AD RMS uniquement :<br /><br />**Pour bloquer la consommation de services ILS**|Par défaut, le client RMS autorise la consommation de contenu protégé par le service ILS, mais vous pouvez configurer le client pour bloquer ce service en définissant la clé de Registre suivante. Si cette clé de Registre est définie pour bloquer le service ILS, toute tentative d’ouvrir et de consommer du contenu protégé par le service ILS retourne l’erreur suivante :<br />HRESULT_FROM_WIN32(ERROR_ACCESS_DISABLED_BY_POLICY)<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: **DisablePassportCertification**<br /><br />**Value:** 1 pour bloquer la consommation ILS, 0 pour l'autoriser ILS (par défaut)|
 

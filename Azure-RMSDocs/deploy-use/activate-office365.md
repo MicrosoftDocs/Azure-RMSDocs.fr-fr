@@ -1,33 +1,33 @@
 ---
-title: "Activer Azure RMS avec le Centre d’administration Office 365 - AIP"
-description: "Instructions d’activation du service Azure Rights Management quand vous utilisez la nouvelle version du Centre d’administration Office 365."
+title: Activer Azure RMS avec le Centre d’administration Office 365 - AIP
+description: Instructions d’activation du service Azure Rights Management quand vous utilisez la nouvelle version du Centre d’administration Office 365.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a614e65e4c8e401c9add41d4594d8261eef69d12
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: 77d511cc466441ffc28d813be9a0ec86ff3d8fa7
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Comment activer Azure Rights Management à partir du centre d’administration Office 365
 
->*S’applique à : Azure Information Protection, Office 365*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilisez ces instructions si vous avez accès au service Azure Rights Management à partir du centre d’administration Office 365. Par exemple, vous avez un abonnement pour Office 365 E3 ou Office 365 E5.
 
 1. Après avoir souscrit un plan Office 365 incluant Rights Management, [connectez-vous à Office 365](https://portal.office.com/) avec votre compte professionnel ou scolaire qui a le rôle d’administrateur général de votre déploiement d’Office 365.
 
-2. Si le centre d’administration Office 365 ne s’affiche pas automatiquement, sélectionnez l’icône de lancement d’application en haut à gauche, puis choisissez **Administrer**. La vignette **Admin** s'affiche uniquement pour les administrateurs Office 365.
+2. Si le Centre d’administration Office 365 ne s’affiche pas automatiquement, sélectionnez l’icône de lancement d’application dans l’angle supérieur gauche, puis choisissez **Admin**. La vignette **Admin** s'affiche uniquement pour les administrateurs Office 365.
 
     > [!TIP]
     > Pour obtenir l'aide du centre d'administration, consultez [À propos du Centre d'administration Office 365](https://support.office.com/article/About-the-Office-365-Admin-Center-758befc4-0888-4009-9f14-0d147402fd23).
@@ -45,7 +45,7 @@ Utilisez ces instructions si vous avez accès au service Azure Rights Management
     
     Si vous avez besoin d’aide pour activer le service ou si vous avez des questions sur les exigences de l’abonnement, [contactez le support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) ou utilisez vos canaux de support standard.
 
-4. Dans la page **Rights Management** , cliquez sur **Activer**.
+4. Dans la page **Rights Management**, cliquez sur **Activer**.
 
 5. À l'invite **Voulez-vous activer Rights Management ?**, cliquez sur **Activer**.
 

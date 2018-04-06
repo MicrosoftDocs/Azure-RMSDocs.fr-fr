@@ -4,7 +4,7 @@ description: Informations à propos de l’installation, des systèmes d’explo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 04/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: edaa24b6e86fc1cacecfa79185b7fe4ddb1d34c9
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: df86d75cd7337fa4642a9b758312923a3577325f
+ms.sourcegitcommit: 40ac805183589a1c8ef22bc1bd9556bcc92f65e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="rms-client-deployment-notes"></a>Notes sur le déploiement du client RMS
 
@@ -59,7 +59,7 @@ Le client RMS est pris en charge par les systèmes d'exploitation suivants :
 |Système d'exploitation Windows Server|Système d'exploitation Windows Client|
 |-----------------------------------|-----------------------------------|
 |Windows Server 2016|Windows 10|
-|Windows Server 2012 R2|Windows 8.1|
+|Windows Server 2012 R2|Windows 8.1|
 |Windows Server 2012|Windows 8|
 |Windows Server 2008 R2|Windows 7 avec au minimum SP1|
 
@@ -112,7 +112,7 @@ Vous pouvez utiliser des clés de Registre Windows pour définir ou modifier des
 
 |Tâche|Paramètres|
 |--------|------------|
-|Si la version du client est la version 1.03102.0221 ou une version ultérieure :<br /><br />**Pour contrôler la collecte de données d’application**|**Important** : en tant qu’administrateur et afin de respecter la confidentialité de l’utilisateur, vous devez lui demander son consentement avant d’activer la collecte de données.<br /><br />Si vous activez la collecte de données, vous acceptez d’envoyer des données à Microsoft via Internet. Microsoft utilise ces données pour garantir et améliorer la qualité, la sécurité et l’intégrité des produits et services Microsoft. Par exemple, Microsoft analyse les performances et la fiabilité, comme les fonctionnalités que vous utilisez, la rapidité de réponse des fonctionnalités, les performances de l’appareil, les interactions de l’interface utilisateur et tous les problèmes que vous rencontrez avec le produit. Ces données incluent également des informations sur la configuration de vos logiciels, comme le logiciel en cours d’exécution et l’adresse IP.<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticState<br /><br />**Valeur:** 0 pour l’application définie (par défaut) à l’aide de la propriété d’environnement [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx), 1 pour désactivé, 2 pour activé<br /><br />**Remarque** : Si votre application MSIPC 32 bits s’exécute sur une version 64 bits de Windows, l’emplacement est HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC.|
+|Si la version du client est la version 1.03102.0221 ou une version ultérieure :<br /><br />**Pour contrôler la collecte de données d’application**|**Important** : en tant qu’administrateur et afin de respecter la confidentialité de l’utilisateur, vous devez lui demander son consentement avant d’activer la collecte de données.<br /><br />Si vous activez la collecte de données, vous acceptez d’envoyer des données à Microsoft via Internet. Microsoft utilise ces données pour garantir et améliorer la qualité, la sécurité et l’intégrité des produits et services Microsoft. Par exemple, Microsoft analyse les performances et la fiabilité, comme les fonctionnalités que vous utilisez, la rapidité de réponse des fonctionnalités, les performances de l’appareil, les interactions de l’interface utilisateur et tous les problèmes que vous rencontrez avec le produit. Ces données incluent également des informations sur la configuration de vos logiciels, comme le logiciel en cours d’exécution et l’adresse IP.<br /><br />Pour la version 1.0.3356 ou ultérieure : <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticAvailability<br /><br />Pour les versions antérieures à 1.0.3356 : <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticState<br /><br />**Valeur:** 0 pour l’application définie (par défaut) à l’aide de la propriété d’environnement [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx), 1 pour désactivé, 2 pour activé<br /><br />**Remarque** : Si votre application MSIPC 32 bits s’exécute sur une version 64 bits de Windows, l’emplacement est HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC.|
 |AD RMS uniquement :<br /><br />**Pour mettre à jour l’emplacement du service d’entreprise d’un ordinateur client**|Modifiez la clé de Registre suivante :<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification<br />REG_SZ: default<br /><br />**Valeur:**\<http ou https>://*RMS_Cluster_Name*/_wmcs/Certification<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing<br />REG_SZ: default<br /><br />**Valeur :** \<http ou https>://*RMS_Cluster_Name*/_wmcs/Licensing|
 |**Pour activer et désactiver le suivi**|Mettez à jour la clé de registre suivante :<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC<br />REG_DWORD: Trace<br /><br />**Value:** 1 pour activer le traçage, 0 pour le désactiver (par défaut)|
 |**Pour modifier la fréquence en jours d’actualisation des modèles**|Les valeurs suivantes du Registre spécifient la fréquence à laquelle les modèles sont actualisés sur l’ordinateur de l’utilisateur si la valeur TemplateUpdateFrequencyInSeconds n'est pas définie.  Si aucune de ces valeurs n'est définie, l'intervalle d'actualisation par défaut pour les applications utilisant le client RMS (version 1.0.1784.0) pour télécharger des modèles est de 1 jour. Les versions antérieures ont une valeur par défaut : tous les 7 jours.<br /><br />**Mode client:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valeur:** Valeur entière spécifiant le nombre de jours (au minimum 1) entre les téléchargements.<br /><br />**Mode serveur:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<SID\><br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Value:** Valeur entière spécifiant le nombre de jours (au minimum 1) entre les téléchargements.|

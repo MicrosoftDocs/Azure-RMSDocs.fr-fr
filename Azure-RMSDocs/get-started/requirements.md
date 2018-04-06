@@ -4,7 +4,7 @@ description: Identifiez les critères de déploiement d’Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91c7ec9b7d9c0ed1d85ccbdd0b4c7750fd5b007c
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 380b2f715ead6f3f8c8e497c911ff425c12424e8
+ms.sourcegitcommit: 40ac805183589a1c8ef22bc1bd9556bcc92f65e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -87,7 +87,7 @@ Le client Azure Information Protection peut étiqueter et protéger les document
 
 - Office 365 ProPlus avec des applications 2016 ou 2013 (« Démarrer en un clic » ou installation basée sur Windows Installer)
     
-    Ces éditions d’Office sont incluses dans la plupart (mais pas dans la totalité) des abonnements Office 365 qui incluent la protection des données à partir d’Azure Information Protection. Vérifiez vos informations d’abonnement pour voir si Office 365 ProPlus est inclus. Vous trouverez également ces informations dans la [feuille de données Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+    Ces éditions d’Office sont proposées dans la plupart (mais pas dans la totalité) des abonnements Office 365 qui incluent la protection des données à partir d’Azure Information Protection. Vérifiez vos informations d’abonnement pour voir si Office 365 ProPlus est inclus. Vous trouverez également ces informations dans la [feuille de données Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professionnel Plus 2016
 
@@ -111,9 +111,11 @@ En plus des informations de l’article relatif à Office, voici des information
 
 - Autorisez le trafic HTTPS sur le port TCP 443 pour **api.informationprotection.azure.com**.
 
+- Autorisez le trafic HTTPS sur le port TCP 443 pour **mobile.pipe.aria.microsoft.com**.
+
 - Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour qu’il utilise l’authentification Windows intégrée avec les informations d’identification d’ouverture de session Active Directory de l’utilisateur.
 
-- N’interrompez pas la connexion du client au service TLS (par exemple, pour effectuer un inspection au niveau du paquet). Cela a pour effet d’interrompre l’épinglage de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour sécuriser leur communication avec le service Azure Rights Management.
+- N’interrompez pas la connexion du client au service TLS (par exemple, pour effectuer une inspection au niveau du paquet) dans le service Azure Rights Management. Cela a pour effet d’interrompre l’épinglage de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour sécuriser leur communication avec le service Azure Rights Management.
     
     - Conseil : en raison de la façon dont Chrome affiche les connexions sécurisées dans la barre d’adresses, vous pouvez utiliser ce navigateur pour vérifier rapidement si la connexion de votre client est terminée avant d’atteindre le service Azure Rights Management. Dans la barre d’adresse du navigateur, entrez l’URL suivante : `https://admin.na.aadrm.com/admin/admin.svc` 
     

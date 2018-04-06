@@ -4,17 +4,17 @@ description: Lorsque vous configurez des conditions pour une étiquette, vous po
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 80537b32bee11df72673b869932f2d59cef11469
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f7242c05d830ecd1b702e4e9bb049e72740843f3
+ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -62,9 +62,11 @@ Dans cet exemple, l’utilisateur peut cliquer sur **Modifier maintenant** pour 
 
 #### <a name="more-information-about-running-continuously"></a>Plus d’informations sur l’exécution en continu
 
-La préversion actuelle du client Azure Information Protection vérifie régulièrement les règles des conditions que vous spécifiez dans les documents. Ce comportement active la classification automatique et recommandée, ainsi que la protection des documents stockés dans SharePoint Online. Les fichiers volumineux s’enregistrent également plus rapidement car les règles des conditions se sont déjà exécutées. 
+Par défaut, la préversion actuelle du client Azure Information Protection vérifie régulièrement les règles des conditions que vous spécifiez dans les documents. Ce comportement active la classification automatique et recommandée, ainsi que la protection des documents stockés dans SharePoint Online. Les fichiers volumineux s’enregistrent également plus rapidement car les règles des conditions se sont déjà exécutées. 
 
-Les règles des conditions ne s’exécutent pas en temps réel pendant la saisie de l’utilisateur. Elles s’exécutent plutôt à intervalles réguliers sous la forme d’une tâche en arrière-plan si le document est modifié. 
+Les règles des conditions ne s’exécutent pas en temps réel pendant la saisie de l’utilisateur. Elles s’exécutent plutôt à intervalles réguliers sous la forme d’une tâche en arrière-plan si le document est modifié.
+
+Vous pouvez changer ce comportement afin que le client Azure Information Protection applique des étiquettes automatiques et recommandées de la même façon que dans la version en disponibilité générale du client. Cette configuration nécessite un [paramètre client avancé](../rms-client/client-admin-guide-customizations.md#turn-off-classification-running-continuously-in-the-background).
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Évaluation de plusieurs conditions lorsqu’elles s’appliquent à plusieurs étiquettes
 

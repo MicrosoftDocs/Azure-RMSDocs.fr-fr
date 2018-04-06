@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/22/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 47b7a82ba7dc6ba7dc3fc21ed114452578b62593
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 08412c2c1cf1182b6d8bdae6e68d53d0b46f4b41
+ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -202,6 +202,20 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Valeur : \< **ID d’étiquette**> ou **None**
 
+## <a name="turn-off-classification-running-continuously-in-the-background"></a>Désactiver la classification qui s’exécute en continu en arrière-plan
+
+Cette option de configuration est en préversion et susceptible de changer. De plus, elle exige la préversion du client.
+
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
+
+Quand vous configurez ce paramètre, la préversion du client Azure Information Protection ne vérifie pas régulièrement les règles des conditions que vous spécifiez dans les documents. À la place, les étiquettes automatiques et recommandées sont appliquées de la [même façon que dans la version en disponibilité générale du client Azure Information Protection](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied). Ce paramètre peut s’avérer nécessaire pour des raisons de performances.
+
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
+
+- Clé : **RunPolicyInBackground**
+
+- Valeur : **False**
+
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Migrer des étiquettes de Secure Islands et d’autres solutions d’étiquetage
 
 Cette option de configuration est en préversion et susceptible de changer. De plus, cette option de configuration exige la préversion du client ou du scanneur Azure Information Protection.
@@ -241,7 +255,7 @@ Exemple :
 Le paramètre client avancé :
 
     
-|Nom|Value|
+|Nom|Valeur|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, « L’étiquette Secure Islands est confidentiel », Classification, Confidentiel|
 
@@ -258,7 +272,7 @@ Exemple :
 Le paramètre client avancé :
 
     
-|Nom|Value|
+|Nom|Valeur|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, «L’étiquette Secure Islands est sensible », Classification, Sensible|
 
@@ -276,7 +290,7 @@ Exemple :
 Le paramètre client avancé :
 
     
-|Nom|Value|
+|Nom|Valeur|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, «L’étiquette Secure Islands contient Interne », Classification,. \*Interne.\*|
 

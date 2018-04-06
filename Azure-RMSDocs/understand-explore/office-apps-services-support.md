@@ -4,7 +4,7 @@ description: Voici comment les programmes Office (comme Word et Outlook) et les 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 03/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: be1c41c2f17720d522770f9e023c7468602ceb67
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f7ca9a9e85a1d76d2d7bdc505c884ee9f02ddb42
+ms.sourcegitcommit: d1987b1abb65f3466bbbb8f8c28e30668d629e50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Prise en charge d’Azure Rights Management par les programmes et services Office 
 
@@ -99,7 +99,7 @@ Si vous êtes prêt à configurer SharePoint pour l’IRM :
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous avez Office 365, consultez [Solutions de protection des fichiers dans Office 365](https://technet.microsoft.com/library/dn919927.aspx#BKMK_O365fileprotect), qui fournit des fonctionnalités recommandées pour la protection des fichiers dans Office 365.
+Si vous avez Office 365, consultez [Solutions de protection des fichiers dans Office 365](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect), qui fournit des fonctionnalités recommandées pour la protection des fichiers dans Office 365.
 
 Pour voir comment d’autres applications et services prennent en charge le service Azure Rights Management d’Azure Information Protection, consultez [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md).
 

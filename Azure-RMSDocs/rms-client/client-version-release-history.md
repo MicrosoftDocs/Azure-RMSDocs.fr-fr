@@ -1,5 +1,5 @@
 ---
-title: Client Azure Information Protection&colon; historique des versions et politique du support
+title: Client Azure Information Protection - historique des versions et politique du support
 description: Découvrez les nouveautés et les modifications d’une version du client Azure Information Protection pour Windows, ainsi que la politique du cycle de vie du support.
 author: cabailey
 ms.author: cabailey
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1da6a647715389f912af5192b5b70a80f0bd35e9
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: ff9d6a4ce66deed8add68d7b1efc889ee9448f53
+ms.sourcegitcommit: 5866509c17872e274720d3014fe218ed95e86ee3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 L’équipe Azure Information Protection met régulièrement à jour le client Azure Information Protection avec des correctifs et des nouvelles fonctionnalités. 
 
@@ -53,17 +53,17 @@ Cette version inclut MSIPC version 1.0.3403.1224 du client RMS.
 
 - Analyseur Azure Information Protection : le module PowerShell inclus avec le client dispose de nouvelles applets de commande pour installer et configurer le moteur d’analyse qui va permettre de détecter, classer et protéger les fichiers sur vos magasins de données locaux. Pour obtenir des instructions, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](../deploy-use/deploy-aip-scanner.md). 
 
-- Pour les applications Office, la classification automatique et recommandée s’exécute en continu en arrière-plan, au lieu de s’exécuter lors de l’enregistrement de documents. Ce changement de comportement permet désormais d’appliquer la classification automatique et recommandée aux documents stockés dans SharePoint Online. [Plus d’informations](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
+- Pour les applications Office, la classification automatique et recommandée s’exécute en continu en arrière-plan, au lieu de s’exécuter lors de l’enregistrement de documents. Ce changement de comportement permet désormais d’appliquer la classification automatique et recommandée aux documents stockés dans SharePoint Online. [Informations complémentaires](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
 
-- Vous pouvez maintenant définir des marquages visuels différents pour Word, Excel, PowerPoint et Outlook à l’aide d’une déclaration de variable « If.App » dans la chaîne de texte et identifier le type d’application. [Plus d’informations](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
+- Vous pouvez maintenant définir des marquages visuels différents pour Word, Excel, PowerPoint et Outlook à l’aide d’une déclaration de variable « If.App » dans la chaîne de texte et identifier le type d’application. [Informations complémentaires](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
 
 - Prise en charge du [paramètre de stratégie](../deploy-use/configure-policy-settings.md) **Afficher la barre Information Protection dans les applications Office**. Lorsque ce paramètre est désactivé, les utilisateurs peuvent sélectionner des étiquettes au moyen du bouton **Protéger** dans le ruban.
 
-- Nouveau paramètre avancé du client, qui permet à Outlook de ne pas appliquer l’étiquette par défaut qui est configurée dans la stratégie Azure Information Protection. Au lieu de cela, Outlook peut appliquer une autre étiquette par défaut ou ne rien appliquer. [Plus d’informations](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
+- Nouveau paramètre avancé du client, qui permet à Outlook de ne pas appliquer l’étiquette par défaut qui est configurée dans la stratégie Azure Information Protection. Au lieu de cela, Outlook peut appliquer une autre étiquette par défaut ou ne rien appliquer. [Informations complémentaires](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
 
 - Pour les applications Office, lorsque vous spécifiez des autorisations personnalisées, vous pouvez maintenant parcourir et sélectionner les utilisateurs à partir d’une icône de carnet d’adresses. Cette option apporte une certaine parité à l’expérience utilisateur lorsque vous spécifiez des autorisations personnalisées à l’aide de l’Explorateur de fichiers.
 
-- Prise en charge d’une méthode d’authentification non interactive, pour les comptes de service qui utilisent PowerShell et qui ne peuvent pas bénéficier de la **connexion en local** directement. Cette méthode d’authentification requiert l’utilisation du nouveau paramètre *Token* avec [Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication), et l’exécution d’un script PowerShell en tant que tâche. [Plus d’informations](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
+- Prise en charge d’une méthode d’authentification non interactive, pour les comptes de service qui utilisent PowerShell et qui ne peuvent pas bénéficier de la **connexion en local** directement. Cette méthode d’authentification requiert l’utilisation du nouveau paramètre *Token* avec [Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication), et l’exécution d’un script PowerShell en tant que tâche. [Informations complémentaires](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
 
 - Nouveau paramètre, *IntegratedAuth* pour [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication). Ce paramètre prend en charge le mode serveur pour AD RMS, qui est nécessaire pour qu’AD RMS puisse prendre en charge l’infrastructure de classification des fichiers de Windows Server.
 
@@ -88,7 +88,7 @@ Correctifs apportés pour accroître la stabilité et prendre en charge des scé
 
 - Bon fonctionnement de Bootstrap dans Office 64 bits pour une protection des documents et des e-mails.
 
-- Vous pouvez désormais configurer une étiquette pour les autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers et également utiliser le paramètre avancé du client pour masquer les options des autorisations personnalisées. [Plus d’informations](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
+- Vous pouvez désormais configurer une étiquette pour les autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers et également utiliser le paramètre avancé du client pour masquer les options des autorisations personnalisées. [Informations complémentaires](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
 
 - Retour à la police Calibri si les marqueurs visuels de la stratégie Azure Information Protection sont configurés pour un nom de police qui n’est pas installé sur le client.
 

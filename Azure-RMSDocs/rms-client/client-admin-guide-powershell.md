@@ -4,7 +4,7 @@ description: Instructions et informations pour que les administrateurs gèrent l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/26/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 32ae599bc9251fd1504adc2b7c60190e9d78f5fd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: c791baa300fff3c251c49ddb92b6bf3765933a99
+ms.sourcegitcommit: 2eb5245b6afb291eae5ba87034e1698f096139dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Quand vous installez le client Azure Information Protection, des commandes PowerShell sont installés automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
@@ -338,7 +338,7 @@ Votre résultat peut ressembler à ce qui suit :
 
 Notez que si les modèles Rights Management sont modifiés, vous devez les télécharger à nouveau à l’aide de `Get-RMSTemplate -force`. 
 
-## <a name="active-directory-rights-management-services"></a>Services AD RMS (Active Directory Rights Management Services)
+## <a name="active-directory-rights-management-services"></a>Active Directory Rights Management Services
 
 Lisez cette section avant de commencer à utiliser les commandes PowerShell pour protéger ou annuler la protection des fichiers, lorsque votre organisation utilise simplement Active Directory Rights Management Services.
 
@@ -363,7 +363,7 @@ Outre les prérequis pour l’installation du module AzureInformationProtection,
 
 8. Ajoutez le nom de votre compte. Si d’autres administrateurs AD RMS ou comptes de service vont également utiliser ces applets de commande pour protéger et déprotéger les fichiers, ajoutez aussi ces comptes. 
     
-    Pour protéger ou déprotéger des fichiers de manière non interactive, ajoutez le ou les comptes d’ordinateur appropriés. Par exemple, ajoutez le compte de l’ordinateur Windows Server qui est configuré pour l’infrastructure de classification des fichiers et qui utilise un script PowerShell pour protéger les fichiers. Ce scénario nécessite la préversion actuelle du client Azure Information Protection.
+    Pour protéger ou déprotéger des fichiers de manière non interactive, ajoutez le ou les comptes d’ordinateur appropriés. Par exemple, ajoutez le compte de l’ordinateur Windows Server qui est configuré pour l’infrastructure de classification des fichiers et qui utilise un script PowerShell pour protéger les fichiers.
 
 9. Dans la colonne **Autoriser**, assurez-vous que les cases à cocher **Lecture et exécution** et **Lecture** sont sélectionnées.
 
@@ -531,9 +531,6 @@ Exécutez cette commande dans le contexte du compte qui étiquettera et protége
 Lorsque vous exécutez cette commande pour la première fois, vous êtes invité à vous connecter, ce qui crée et stocke en toute sécurité le jeton d’accès de votre compte dans %localappdata%\Microsoft\MSIP. Après cette première connexion, vous pouvez étiqueter et protéger les fichiers de manière non interactive sur l’ordinateur. Toutefois, si vous utilisez un compte de service pour étiqueter et protéger les fichiers, et que ce compte de service ne peut pas vous connecter de manière interactive, suivez les instructions dans la section suivante afin que le compte de service puisse authentifier à l’aide d’un jeton.
 
 ### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Spécifier et utiliser le paramètre Jeton pour Set-AIPAuthentication
-
-> [!NOTE]
-> Cette option nécessite la version de disponibilité générale du scanneur Azure Information Protection ou la préversion actuelle du client Azure Information Protection.
 
 Suivez les étapes et instructions supplémentaires suivantes afin d’éviter la première connexion interactive pour un compte qui étiquette et protège des fichiers. En règle générale, ces étapes supplémentaires ne sont nécessaires que si ce compte ne peut pas obtenir le droit d’**Ouvrir une session localement**, mais qu’il obtient le droit **Ouvrir une session en tant que programme de traitement par lots**. Par exemple, cela peut être le cas pour votre compte de service qui exécute le scanneur Azure Information Protection.
 

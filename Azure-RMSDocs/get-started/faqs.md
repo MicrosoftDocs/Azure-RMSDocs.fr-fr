@@ -4,7 +4,7 @@ description: Certaines questions fréquentes sur Azure Information Protection et
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/03/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 37619ad71fea842617556219c1684a3e837c3cc7
-ms.sourcegitcommit: 3af39b88d321d75038caad266e906f6e622011d9
+ms.openlocfilehash: 54106b67888f8c8a669d2c93e60f9967d484ebf3
+ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 

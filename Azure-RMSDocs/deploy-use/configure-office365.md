@@ -4,7 +4,7 @@ description: Informations et instructions permettant aux administrateurs de conf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ecf30ece9370a732e0bf302be5733273b64eea1a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 22182613f3bc12e5ed5aec0079c7b3e54ba8f69d
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365 : configuration pour les clients et les services en ligne utilisant le service Azure Rights Management
 
@@ -110,7 +110,7 @@ Donnez aux utilisateurs les instructions suivantes pour qu'ils puissent configur
 
 3. Sélectionnez l'icône **Paramètres**. Dans le volet **Paramètres**, si le paramètre **Ruban** a la valeur **Désactivé**, sélectionnez ce paramètre pour activer le ruban.
 
-4. Pour configurer tous les fichiers OneDrive Entreprise pour qu’ils soient protégés, sélectionnez l’onglet **BIBLIOTHÈQUE** dans le ruban, puis sélectionnez **Paramètres de la bibliothèque**. Pour sélectionner tous les fichiers d’un dossier spécifique pour les protéger, commencez par sélectionner le dossier.
+4. Pour configurer tous les fichiers OneDrive Entreprise pour qu’ils soient protégés, sélectionnez l’onglet **BIBLIOTHÈQUE** dans le ruban, puis sélectionnez **Paramètres de la bibliothèque**.
 
 5. Dans la page **Documents > Paramètres**, dans la section **Autorisations et gestion**, sélectionnez **Gestion des droits relatifs à l'information**.
 
@@ -129,7 +129,7 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
 
 3.  Copiez le contenu du script suivant et nommez le fichier Set-IRMOnOneDriveForBusiness.ps1 sur votre ordinateur.
 
-    *&#42;&#42;Exclusion de responsabilité&#42;&#42;* : cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
+    *&#42;&#42;Exclusion de responsabilité&#42;&#42;*  : cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
 
     ```
     # Requires Windows PowerShell version 3
@@ -536,7 +536,7 @@ Pour l'étape 4c ci-dessus, vous pouvez utiliser le script Windows PowerShell s
 
 Ce script nécessite également le [SDK des composants du client SharePoint Online](http://www.microsoft.com/en-us/download/details.aspx?id=42038) et [SharePoint Online Management Shell](http://www.microsoft.com/en-us/download/details.aspx?id=35588). Suivez les mêmes instructions pour le copier et le coller, enregistrez le fichier localement (par exemple, sous « Report-OneDriveForBusinessSiteInfo.ps1 »), modifiez les valeurs `$sharepointAdminCenterUrl` et `$tenantAdmin` comme précédemment, puis exécutez le script.
 
-*&#42;&#42;Exclusion de responsabilité&#42;&#42;* : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
+*&#42;&#42;Exclusion de responsabilité&#42;&#42;*  : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
 
 ```
 # Requires Windows PowerShell version 3
@@ -761,7 +761,7 @@ Si vous devez désactiver IRM pour le OneDrive Entreprise d'un utilisateur, util
 
 Ce script nécessite également le [SDK des composants du client SharePoint Online](http://www.microsoft.com/en-us/download/details.aspx?id=42038) et [SharePoint Online Management Shell](http://www.microsoft.com/en-us/download/details.aspx?id=35588). Copiez et collez le contenu, enregistrez le fichier localement (par exemple, sous « Disable-IRMOnOneDriveForBusiness.ps1 »), puis modifiez les valeurs `$sharepointAdminCenterUrl` et `$tenantAdmin`. Spécifiez manuellement les URL de OneDrive Entreprise ou utilisez le script de la section précédente pour les importer, puis exécutez le script.
 
-*&#42;&#42;Exclusion de responsabilité&#42;&#42;* : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
+*&#42;&#42;Exclusion de responsabilité&#42;&#42;*  : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
 
 ```
 # Requires Windows PowerShell version 3

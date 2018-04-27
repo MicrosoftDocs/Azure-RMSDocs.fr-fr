@@ -16,6 +16,7 @@
 ### [Stratégie par défaut](configure-policy-default.md)
 ### [Configurer les paramètres de stratégie](configure-policy-settings.md)
 ### [Créer une étiquette](configure-policy-new-label.md)
+### [Ajouter ou supprimer une étiquette](configure-policy-add-remove-label.md)
 ### [Supprimer ou réorganiser une étiquette](configure-policy-delete-reorder.md)
 ### [Modifier une étiquette](configure-policy-change-label.md)
 ### [Configuration de la protection](configure-policy-protection.md)

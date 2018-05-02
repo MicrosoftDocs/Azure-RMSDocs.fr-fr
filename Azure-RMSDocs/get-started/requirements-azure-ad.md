@@ -4,7 +4,7 @@ description: Identifiez la configuration requise d’Azure AD pour utiliser Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/19/2018
+ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,27 +12,23 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82e2fcb1cdbce0476e95b35b0faef7ada7637795
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 53d9d9b25ab71c91275bf770a6038eccbaa2659c
+ms.sourcegitcommit: f4a97427d61e4b539c91c49c952658aa2dc729ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Vous avez besoin d’un annuaire Azure AD pour utiliser Azure Information Protection. Vous utilisez le compte de votre organisation correspondant à cet annuaire pour vous connecter au portail Azure, où vous pouvez par exemple configurer et gérer les modèles Rights Management.
+Vous avez besoin d’un annuaire Azure AD pour utiliser Azure Information Protection. Vous utilisez un compte de cet annuaire pour vous connecter au portail Azure, où vous pouvez par exemple configurer et gérer des étiquettes Azure Information Protection et des modèles Azure Rights Management.
 
-Si vous n’avez pas d’abonnement Azure pour votre organisation, vous pouvez en obtenir un en vous inscrivant pour une évaluation gratuite. Consultez la page [Bien démarrer avec Azure](https://account.windowsazure.com/organization) et suivez les instructions.
+Si vous avez un abonnement incluant Azure Information Protection ou Azure Rights Management, votre annuaire Azure AD est créé automatiquement pour vous si nécessaire.  
 
-Pour plus d’informations, consultez les ressources suivantes dans la documentation Azure Active Directory :
+Pour plus d’informations sur Azure AD, consultez [Qu’est-ce que l’annuaire Azure AD ?](/active-directory/active-directory-whatis)
 
--   [Qu’est-ce qu’Azure AD Directory ?](/active-directory/active-directory-whatis)
-
--   [Comment les abonnements Azure sont-ils associés à Azure Active Directory ?](/active-directory/active-directory-how-subscriptions-associated-directory)
-
-Si vous souhaitez intégrer votre annuaire Azure AD à vos forêts AD locales, consultez [Intégration de vos identités locales avec Azure Active Directory](/active-directory/active-directory-aadconnect).
+Pour intégrer votre annuaire Azure AD à vos forêts AD locales, consultez [Intégration de vos identités locales à Azure Active Directory](/active-directory/active-directory-aadconnect).
 
 ### <a name="scenarios-that-have-specific-requirements"></a>Scénarios avec des exigences spécifiques 
 

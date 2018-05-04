@@ -4,7 +4,7 @@ description: Découvrez en détail le fonctionnement d’Azure RMS, les contrôl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a261e356e167687190cc71eed4b2da715ab45697
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 321b18946c934878a422bd28a115c06d443b8d18
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
@@ -96,7 +96,9 @@ Lorsque le compte de l'utilisateur est fédéré avec Azure Active Directory, ce
 
 **Ce qui se passe à l’étape 2** : une fois l’utilisateur authentifié, la connexion est automatiquement redirigée vers le locataire Azure Information Protection de l’organisation, qui émet des certificats permettant à l’utilisateur de s’authentifier auprès du service Azure Rights Management, pour consommer du contenu protégé et protéger du contenu hors connexion.
 
-Une copie du certificat de l’utilisateur est stockée dans Azure afin que, si l’utilisateur utilise un autre appareil, les certificats soient créés en utilisant les mêmes clés.
+Le certificat de compte de droits, ou certificat RAC, est l’un de ces certificats. Ce certificat authentifie l’utilisateur dans Azure Active Directory et reste valide pendant 31 jours. Le certificat est renouvelé automatiquement par le client RMS, à condition que le compte d’utilisateur existe toujours dans Azure Active Directory et qu’il soit activé. Ce certificat n’est pas configurable par un administrateur. 
+
+Une copie de ce certificat est stockée dans Azure pour permettre la création d’autres certificats avec les mêmes clés si l’utilisateur change d’appareil.
 
 ### <a name="content-protection"></a>Protection du contenu
 Quand un utilisateur protège un document, le client RMS effectue les actions suivantes sur un document non protégé :
@@ -149,9 +151,9 @@ Les procédures pas à pas précédentes couvrent les scénarios standard, mais 
 
 -   **Connecteur RMS** : quand le service Azure Rights Management est utilisé avec le connecteur RMS, le flux du processus reste identique. La seule différence est que le connecteur fait office de relais entre les services locaux (comme Exchange Server et SharePoint Server) et le service Azure Rights Management. Le connecteur proprement dit n'effectue aucune opération telle qu'une initialisation de l'environnement utilisateur, un chiffrement ou un déchiffrement. Il relaie simplement la communication qui accède généralement à un serveur AD RMS, en gérant la traduction entre les protocoles utilisés de part et d'autre. Ce scénario vous permet d’utiliser le service Azure Rights Management avec des services locaux.
 
--   **Protection générique (.pfile)** : quand le service Azure Rights Management protège un fichier de façon générique, le flux est fondamentalement le même pour la protection du contenu, sauf que le client RMS crée une stratégie qui accorde tous les droits. Lorsque le fichier est consommé, il est déchiffré avant d'être transmis à l'application cible. Ce scénario vous permet de protéger tous les fichiers, même s'ils ne prennent pas en charge RMS en mode natif.
+-   **Protection générique (.pfile)**  : quand le service Azure Rights Management protège un fichier de façon générique, le flux est fondamentalement le même pour la protection du contenu, sauf que le client RMS crée une stratégie qui accorde tous les droits. Lorsque le fichier est consommé, il est déchiffré avant d'être transmis à l'application cible. Ce scénario vous permet de protéger tous les fichiers, même s'ils ne prennent pas en charge RMS en mode natif.
 
--   **PDF protégé (.ppdf)** : quand le service Azure Rights Management protège un fichier Office en mode natif, il en crée également une copie qu’il protège de la même façon. La seule différence est que la copie est un fichier au format PPDF, que la visionneuse du client Azure Information Protection et l’application de partage RMS peuvent ouvrir en mode affichage uniquement. Ce scénario vous permet d’envoyer des pièces jointes protégées par e-mail, en sachant que le destinataire sur un appareil mobile peut toujours les lire, même si son appareil n’a pas d’application prenant en charge en mode natif des fichiers Office protégés.
+-   **PDF protégé (.ppdf)**  : quand le service Azure Rights Management protège un fichier Office en mode natif, il en crée également une copie qu’il protège de la même façon. La seule différence est que la copie est un fichier au format PPDF, que la visionneuse du client Azure Information Protection et l’application de partage RMS peuvent ouvrir en mode affichage uniquement. Ce scénario vous permet d’envoyer des pièces jointes protégées par e-mail, en sachant que le destinataire sur un appareil mobile peut toujours les lire, même si son appareil n’a pas d’application prenant en charge en mode natif des fichiers Office protégés.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

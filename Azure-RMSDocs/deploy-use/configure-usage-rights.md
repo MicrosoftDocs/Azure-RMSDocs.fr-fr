@@ -4,7 +4,7 @@ description: Découvrez et identifiez les droits spécifiques qui sont utilisés
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/26/2018
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0ec4710618227573fa7442a8fe1f0bd52b2c8f6f
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 297e530406c33ca50d1e8287509e4c3a6f3c7a80
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuration des droits d’utilisation pour Azure Rights Management
 
@@ -158,7 +158,9 @@ Notez que le propriétaire Rights Management est indépendant du propriétaire d
 
 Quand un utilisateur ouvre un document ou un e-mail protégé par Azure Rights Management, une licence d’utilisation Rights Management est accordée à l’utilisateur pour ce contenu. Cette licence d’utilisation est un certificat qui contient les droits d’utilisation de l’utilisateur pour le document ou l’e-mail, ainsi que la clé de chiffrement utilisée pour chifrer le contenu. La licence d’utilisation contient également une date d’expiration, si celle-ci a été définie, et une durée de validité.
 
-Pendant la durée de la licence d’utilisation, l’utilisateur n’est ni réauthentifié ni réautorisé. Il peut ainsi continuer à ouvrir le document ou l’e-mail protégé sans connexion Internet. Au terme de la période de validité de la licence d’utilisation, l’utilisateur doit être réauthentifié et réautorisé s’il souhaite accéder au document ou à l’e-mail protégé. 
+Un utilisateur doit disposer d’une licence d’utilisation valide pour ouvrir le contenu en plus de son certificat de compte de droits (RAC), certificat accordé quand [l’environnement utilisateur est initialisé](../understand-explore/how-does-it-work.md#initializing-the-user-environment), puis renouvelé tous les 31 jours.
+
+Pendant la durée de la licence d’utilisation, l’utilisateur n’est ni réauthentifié ni réautorisé pour le contenu. Il peut ainsi continuer à ouvrir le document ou l’e-mail protégé sans connexion Internet. Au terme de la période de validité de la licence d’utilisation, l’utilisateur doit être réauthentifié et réautorisé s’il souhaite accéder au document ou à l’e-mail protégé. 
 
 Quand les documents et les e-mails sont protégés à l’aide d’une étiquette ou d’un modèle définissant les paramètres de protection, vous pouvez changer ces paramètres dans votre étiquette ou votre modèle sans avoir à reprotéger le contenu. Si l’utilisateur a déjà accédé au contenu, les changements prennent effet après l’expiration de sa licence d’utilisation. Cependant, quand des utilisateurs appliquent des autorisations personnalisées (ou « stratégie de droits ad hoc ») et que ces autorisations doivent être changées après la protection du document ou de l’e-mail, ce contenu doit être reprotégé avec les nouvelles autorisations. Les autorisations personnalisées pour un e-mail sont implémentées avec l’option Ne pas transférer.
 

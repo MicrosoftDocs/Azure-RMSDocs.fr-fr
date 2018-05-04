@@ -1,32 +1,35 @@
 ---
 title: Supprimer ou réorganiser une étiquette Azure Information Protection
-description: Vous pouvez supprimer ou réorganiser les étiquettes que les utilisateurs voient dans la barre Information Protection en configurant la stratégie Azure Information Protection en conséquence.
+description: Vous pouvez supprimer ou réorganiser les étiquettes Azure Information Protection que voient les utilisateurs.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: c24cd0bb9aae5b3a6b830151579d70561d56f7e0
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 6b790eddb4e111333cbd78fc0b8ec09963393494
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Comment supprimer ou réorganiser une étiquette pour Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Vous pouvez supprimer ou réorganiser les étiquettes que les utilisateurs voient dans la barre Information Protection en sélectionnant ces actions dans la stratégie Azure Information Protection.
+>[!NOTE]
+> Cet article reflète les dernières mises à jour du portail Azure, qui vous permettent de créer une étiquette indépendamment de la stratégie globale ou de la stratégie délimitée. De plus, l’option de publication de stratégies est supprimée. Si votre locataire n’a pas encore été mis à jour avec ces modifications (par exemple, vous voyez toujours une option **Publier** pour Azure Information Protection à la place de l’option de menu **CLASSIFICATIONS**), veuillez patienter quelques jours, puis revenez à ces instructions.
+
+Vous pouvez supprimer ou réorganiser les étiquettes Azure Information Protection que les utilisateurs voient dans leurs applications Office en sélectionnant ces actions pour les étiquettes.
 
 ![Suppression ou réorganisation d’étiquettes dans la stratégie Azure Information Protection](../media/info-protect-contextmenu.png)
 
-Quand vous supprimez une étiquette qui a été appliquée à des documents et des e-mails, puis que vous publiez la stratégie Azure Information Protection, l’étiquette est automatiquement supprimée des documents et des e-mails lors de leur prochaine ouverture par le client Azure Information Protection.
+Quand vous supprimez une étiquette qui a été appliquée à des documents et à des e-mails et que ces derniers sont ensuite ouverts par le client Azure Information Protection, les utilisateurs voient **Non défini** en guise d’état pour l’étiquette. Toutefois, les informations de l’étiquette sont conservées dans les métadonnées et peuvent donc être lues par les services qui les recherchent.
 
-Cependant, si l’étiquette appliquait une protection, cette protection n’est pas supprimée. Les paramètres de protection de l’étiquette sont conservés et s’affichent dans les **Modèles de protection**. Ce modèle peut maintenant être converti en une nouvelle étiquette ou lié à une étiquette. Tant que ce modèle est conservé, vous ne pouvez pas créer une étiquette avec le même nom que l’étiquette que vous avez supprimée. Si c’est ce que vous voulez faire, vous disposez des options suivantes :
+En outre, si l’étiquette supprimée appliquait une protection, cette protection n’est pas supprimée. Les paramètres de protection de l’étiquette sont conservés et s’affichent dans la section **Modèles de protection**. Ce modèle peut maintenant être converti en une nouvelle étiquette ou lié à une étiquette. Tant que ce modèle est conservé, vous ne pouvez pas créer une étiquette avec le même nom que l’étiquette que vous avez supprimée. Si c’est ce que vous voulez faire, vous disposez des options suivantes :
 
 - Convertir le modèle en étiquette. 
     
@@ -38,7 +41,11 @@ Cependant, si l’étiquette appliquait une protection, cette protection n’est
 
 Pour plus d’informations sur la gestion des modèles de protection, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).
 
-Avant de supprimer une étiquette, pensez à plutôt la désactiver. Quand vous désactivez une étiquette qui a été appliquée à des documents et des e-mails, l’étiquette appliquée n’est pas supprimée de ces documents et e-mails, mais elle ne s’affiche plus comme une étiquette que les utilisateurs peuvent sélectionner dans la barre Information Protection. La désactivation d’une étiquette vous permet également de conserver la configuration d’origine au cas où vous souhaiteriez que des utilisateurs sélectionnent l’étiquette ultérieurement, après une simple réactivation.
+Avant de supprimer une étiquette, envisagez plutôt de la désactiver ou de la supprimer de la stratégie :
+    
+- Quand vous désactivez une étiquette qui a été appliquée à des documents et e-mails, elle n’est pas supprimée de ces derniers. L’étiquette demeure dans la stratégie, mais ne s’affiche plus en tant qu’étiquette que les utilisateurs peuvent sélectionner dans la barre Information Protection. La désactivation d’une étiquette vous permet de conserver la configuration d’origine au cas où vous souhaiteriez que des utilisateurs dans la même stratégie sélectionnent l’étiquette ultérieurement, après une simple réactivation de celle-ci.
+
+- En outre, quand vous supprimez une étiquette d’une stratégie, l’étiquette appliquée n’est pas supprimée de ces documents et e-mails. Toutefois, quand vous supprimez l’étiquette de la stratégie, vous pouvez l’ajouter à une autre stratégie. Pour plus d’informations, consultez [Ajouter une étiquette à une stratégie Azure Information Protection ou la supprimer de celle-ci](configure-policy-add-remove-label.md).
 
 Triez les étiquettes de manière à ce que les utilisateurs les voient dans un ordre de progression logique dans la barre Information Protection. Par exemple, triez les étiquettes dans leur ordre croissant de confidentialité afin que les utilisateurs voient l’étiquette la moins sensible en premier et l’étiquette la plus sensible en dernier. La [stratégie par défaut](configure-policy-default.md) utilise cette configuration et reflète la sensibilité croissante dans les noms des étiquettes.
 
@@ -52,19 +59,13 @@ Suivez la procédure indiquée ci-dessous pour effectuer ces modifications.
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. Si l’étiquette à configurer s’applique à tous les utilisateurs, restez dans le panneau **Azure Information Protection - Stratégie globale**.
-    
-    Si l’étiquette à configurer se trouve dans une [stratégie délimitée](configure-policy-scope.md) pour s’appliquer uniquement aux utilisateurs sélectionnés, dans la sélection de menu **STRATÉGIES**, sélectionnez **Stratégies délimitées**. Sélectionnez ensuite votre stratégie délimitée dans le panneau **Azure Information Protection - Stratégies délimitées**.
+2. À partir de l’option de menu **CLASSIFICATIONS** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, effectuez une ou plusieurs des actions suivantes : 
 
-3. Dans le panneau **Azure Information Protection - Stratégie globale** ou le panneau **Stratégie :\<nom>**, effectuez une ou plusieurs des actions suivantes : 
+    - Pour supprimer une étiquette : cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette que vous souhaitez supprimer, cliquez sur **Supprimer cette étiquette**, puis cliquez sur **OK** pour confirmer. 
 
-    - Pour supprimer une étiquette : cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette que vous souhaitez supprimer, cliquez sur **Supprimer cette étiquette**, puis cliquez sur **Oui** pour confirmer. Cliquez ensuite sur **Enregistrer**. 
+    - Pour désactiver une étiquette : sélectionnez l’étiquette que vous souhaitez désactiver. Dans le Panneau **Étiquette**, pour l’option **Activé**, sélectionnez **Désactivé**, puis cliquez sur **Enregistrer**.
 
-    - Pour désactiver une étiquette : sélectionnez l’étiquette que vous souhaitez désactiver. Dans le Panneau **Étiquette**, pour l’option **Activé**, cliquez sur **Désactivé**, puis sur **Enregistrer**.
-
-    - Pour réorganiser une étiquette : cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette à réorganiser, cliquez sur **Déplacer vers le haut** ou **Déplacer vers le bas** jusqu'à ce que l’étiquette se trouve à l’endroit souhaité. Cliquez ensuite sur **Enregistrer**. 
-
-4. Pour que les utilisateurs puissent voir ces modifications, cliquez dans le panneau **Azure Information Protection** sur **Publier**.
+    - Pour réorganiser une étiquette : cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette à réorganiser, cliquez sur **Déplacer vers le haut** ou **Déplacer vers le bas** jusqu'à ce que l’étiquette se trouve à l’endroit souhaité.  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

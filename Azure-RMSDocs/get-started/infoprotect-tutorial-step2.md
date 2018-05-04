@@ -4,32 +4,35 @@ description: 'Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: fecf9887937d3d17347e85759e2ed10b124ae8a1
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e2850a0f67f18febdbd98e59d01b2f28b00bff2a
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
-# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Étape 2 : Configurer et publier la stratégie Azure Information Protection
+# <a name="step-2-configure-the-azure-information-protection-policy"></a>Étape 2 : Configurer la stratégie Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
+>[!NOTE]
+> Cette étape du tutoriel reflète les dernières mises à jour du portail Azure. Si vous ne voyez pas l’option de menu **CLASSIFICATIONS** à la place de l’option **Publier**, les instructions de navigation ne correspondront pas exactement à ce que vous voyez. Dans ce cas, réessayez cette étape du tutoriel dans quelques jours, quand votre locataire aura été mis à jour avec les dernières modifications.
+
 Bien qu’Azure Information Protection soit fourni avec une stratégie par défaut que vous pouvez utiliser sans configuration, nous allons examiner cette stratégie et y apporter des modifications.
 
-1. Toujours à partir de l’[étape 1](infoprotect-tutorial-step1.md) dans le portail Azure, sélectionnez **Stratégie globale** pour ouvrir le panneau **Stratégie : Globale**. Ce panneau s’ouvre automatiquement lors des connexions ultérieures au service et affiche la stratégie Information Protection par défaut créée pour votre locataire.
+1. Toujours à partir de l’[étape 1](infoprotect-tutorial-step1.md) dans le portail Azure, sélectionnez **CLASSIFICATIONS** > **Stratégies** > **Globale** pour ouvrir le panneau **Stratégie : Globale**. Ce panneau affiche la stratégie Azure Information Protection par défaut qui est créée pour votre locataire.
 
 2. Prenez quelques minutes pour vous familiariser avec les étiquettes affichées :
     
     - Étiquettes de classification : **Personnel**, **Public**, **Interne**, **Confidentiel** et **Hautement confidentiel**. Les deux dernières étiquettes se développent pour afficher des sous-étiquettes, qui sont des exemples de sous-catégories dans une classification :
     
        > [!NOTE]
-       > Votre stratégie par défaut peut différer légèrement de celle de ce didacticiel. Par exemple, vous avez une étiquette nommée **Interne** au lieu de **Général**, et **Secret** au lieu de **Hautement confidentiel**. Vous n’avez peut-être pas les sous-étiquettes nommées **Destinataires uniquement** ou vous n’avez aucune étiquette. La raison de ces changements est qu’il existe différentes versions de la stratégie par défaut, selon le moment où elle a été créée pour votre locataire. Vous pouvez aussi avoir l’avoir modifiée vous-même avant de commencer ce didacticiel.
+       > Votre stratégie par défaut peut différer légèrement de celle de ce didacticiel. Par exemple, vous avez une étiquette nommée **Interne** au lieu de **Général**, et **Secret** au lieu de **Hautement confidentiel**. Vous ne voyez peut-être pas les sous-étiquettes nommées **Destinataires uniquement** ou vous n’avez aucune étiquette. La raison de ces changements est qu’il existe différentes versions de la stratégie par défaut, selon le moment où elle a été créée pour votre locataire. Vous pouvez aussi avoir l’avoir modifiée vous-même avant de commencer ce didacticiel.
        > 
        > Si votre stratégie par défaut est différente, vous pouvez néanmoins utiliser ce didacticiel, mais n’oubliez pas ces différences quand vous utilisez les instructions et les images qui suivent. Si vous voulez modifier votre stratégie par défaut pour qu’elle corresponde à la stratégie par défaut actuelle, consultez [La stratégie Azure Information Protection par défaut](../deploy-use/configure-policy-default.md).
     
@@ -57,7 +60,7 @@ Pour notre didacticiel, nous allons modifier deux de ces paramètres de stratég
 
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Création d’une étiquette pour la protection, de marquages visuels et d’une condition pour une demande de classification
 
-Nous allons créer maintenant une sous-étiquette pour **Confidentiel**.
+Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
 
 1. Cliquez avec le bouton droit sur l’étiquette **Confidentiel** et sélectionnez **Ajouter une sous-étiquette**.
     
@@ -135,15 +138,11 @@ Nous allons créer maintenant une sous-étiquette pour **Confidentiel**.
     
     ![Didacticiel de démarrage rapide Azure Information Protection - Étape 3 : Paramètres configurés](../media/info-protect-settings-configuredv2.png)
     
-14. Maintenant que nous avons effectué et enregistré nos modifications, nous voulons qu’elles soient accessibles aux utilisateurs. Cliquez sur **Publier**, puis sur **Oui** pour confirmer.
-
-    ![Didacticiel de démarrage rapide Azure Information Protection - Étape 3 : Publier la stratégie configurée](../media/info-protect-publish.png)
-
 Vous pouvez fermer le portail Azure, ou le laisser ouvert pour essayer des options de configuration supplémentaires après avoir terminé ce didacticiel.
 
 Maintenant que vous avez examiné la stratégie par défaut et apporté des modifications, l’étape suivante consiste à installer le client Azure Information Protection.
 
-|Pour en savoir plus|Informations complémentaires|
+|Pour en savoir plus|Informations supplémentaires|
 |--------------------------------|--------------------------|
 |À propos de la stratégie par défaut et des différentes versions|[La stratégie Azure Information Protection par défaut](../deploy-use/configure-policy-default.md)|
 |À propos de la configuration de la stratégie|[Configuration de la stratégie Azure Information Protection](../deploy-use/configure-policy.md)|

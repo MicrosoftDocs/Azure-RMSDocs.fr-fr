@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/02/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 08412c2c1cf1182b6d8bdae6e68d53d0b46f4b41
-ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
+ms.openlocfilehash: bb48a3e35d18c111d3df1907b7cc7a2832e0ae13
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -28,19 +28,22 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Comment configurer les paramètres avancés de configuration du client dans le portail
 
+>[!NOTE]
+> Ces instructions reflètent les dernières mises à jour du portail Azure. Si vous ne voyez pas l’option de menu **CLASSIFICATIONS** à la place de l’option **Publier**, les instructions de navigation ne correspondront pas exactement à ce que vous voyez. Dans ce cas, essayez de refaire cette procédure dans quelques jours, quand votre locataire aura été mis à jour avec les dernières modifications.
+
 1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, [connectez-vous au portail Azure](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal), puis accédez au panneau **Azure Information Protection**.
 
-2. Dans le premier panneau Azure Information Protection, sélectionnez **Stratégies étendues**.
+2. À partir de l’option de menu **CLASSIFICATIONS** > **Étiquettes** : sélectionnez **Stratégies**.
 
-3. Dans la panneau **Azure Information Protection - Stratégies étendues**, sélectionnez le menu contextuel (**...**) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
+3. Dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel (**...**) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
     
     Vous pouvez configurer des paramètres avancés pour la stratégie globale et pour les stratégies étendues.
 
 4. Dans le panneau **Paramètres avancés**, tapez le nom et la valeur du paramètre avancé, puis sélectionnez **Enregistrer et fermer**.
 
-5. Cliquez sur **Publier**, puis veillez à ce que les utilisateurs de cette stratégie redémarrent toutes les applications Office qu’ils avaient ouvertes.
+5. Assurez-vous que les utilisateurs de cette stratégie redémarrent toutes les applications Office qu’ils avaient ouvertes.
 
-6. Si vous n’avez plus besoin de ce paramètre et souhaitez rétablir le comportement par défaut : dans le panneau **Paramètres avancés**, sélectionnez le menu contextuel (**...**) à côté du paramètre dont vous n’avez plus besoin, puis sélectionnez **Supprimer**. Ensuite, cliquez sur **Enregistrer et fermer**, puis republier la stratégie modifiée.
+6. Si vous n’avez plus besoin de ce paramètre et souhaitez rétablir le comportement par défaut : dans le panneau **Paramètres avancés**, sélectionnez le menu contextuel (**...**) à côté du paramètre dont vous n’avez plus besoin, puis sélectionnez **Supprimer**. Ensuite, cliquez sur **Enregistrer et fermer**.
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Empêcher l’affichage des invites de connexion sur les ordinateurs AD RMS uniquement
 
@@ -151,8 +154,6 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Valeur : **True** pour rendre l’option des autorisations personnalisées disponible, ou **False** pour que cette option ne soit pas disponible
 
-> [!IMPORTANT]
-> À moins de disposer de la préversion actuelle du client, ne définissez pas cette option sur **False** si vous avez des étiquettes configurées pour des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers. Si vous le faites, quand l’étiquette est appliquée, les utilisateurs ne sont pas invités à configurer les autorisations personnalisées. Par conséquent, le document est étiqueté, mais n’est pas protégé comme prévu.
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Masquer définitivement la barre Azure Information Protection
 
@@ -171,9 +172,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Activer la classification recommandée dans Outlook
 
-Cette option de configuration est en préversion et susceptible de changer.
-
-Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Ce paramètre est en préversion et est susceptible de changer.
 
 Quand vous configurez une étiquette pour la classification recommandée, les utilisateurs sont invités à accepter ou ignorer l’étiquette recommandée dans Word, Excel et PowerPoint. Ce paramètre affiche également cette recommandation d’étiquette dans Outlook.
 
@@ -185,8 +184,6 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Définir une autre étiquette par défaut pour Outlook
-
-Cette option de configuration est en préversion et susceptible de changer. De plus, elle exige la préversion du client.
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 
@@ -202,19 +199,45 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Valeur : \< **ID d’étiquette**> ou **None**
 
-## <a name="turn-off-classification-running-continuously-in-the-background"></a>Désactiver la classification qui s’exécute en continu en arrière-plan
-
-Cette option de configuration est en préversion et susceptible de changer. De plus, elle exige la préversion du client.
+## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>Supprimer « Pas maintenant » pour les documents quand vous utilisez l’étiquetage obligatoire
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 
-Quand vous configurez ce paramètre, la préversion du client Azure Information Protection ne vérifie pas régulièrement les règles des conditions que vous spécifiez dans les documents. À la place, les étiquettes automatiques et recommandées sont appliquées de la [même façon que dans la version en disponibilité générale du client Azure Information Protection](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied). Ce paramètre peut s’avérer nécessaire pour des raisons de performances.
+Quand vous utilisez le [paramètre de stratégie](../deploy-use/configure-policy-settings.md) **All documents and emails must have a label** (Tous les documents et e-mails doivent avoir une étiquette), les utilisateurs sont invités à sélectionner une étiquette au moment du premier enregistrement d’un document Office et de l’envoi d’un e-mail. Pour les documents, les utilisateurs peuvent sélectionner **Pas maintenant** pour ignorer temporairement l’invite à sélectionner une étiquette et revenir au document. En revanche, ils ne peuvent pas fermer le document enregistré sans l’étiqueter. 
+
+Quand vous configurez ce paramètre, l’option **Pas maintenant** n’est pas proposée, et les utilisateurs sont obligés de sélectionner une étiquette au premier enregistrement du document.
+
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
+
+- Clé : **PostponeMandatoryBeforeSave**
+
+- Valeur : **False**
+
+## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Activer la classification pour qu’elle s’exécute en continu en arrière-plan
+
+Cette option de configuration est en préversion et susceptible de changer.
+
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
+
+Quand vous configurez ce paramètre, le [comportement par défaut](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) du client Azure Information Protection pour appliquer les étiquettes automatiques et recommandées est changé comme suit :
+
+- La classification automatique s’applique à Word, Excel, PowerPoint et Outlook. Pour les documents, la classification automatique s’exécute en continu en arrière-plan. Pour Outlook, la classification automatique s’exécute lors de l’envoi des e-mails. 
+    
+    Vous ne pouvez pas utiliser la classification automatique pour des documents qui ont été déjà été étiquetés manuellement ou automatiquement avec une classification plus élevée. Une exception à ce comportement existe si vous utilisez le scanneur Azure Information Protection avec le paramètre OverrideLabel activé.
+
+- La classification recommandée s’applique à Word, Excel et PowerPoint. Pour ces documents, la classification recommandée s’exécute en continu en arrière-plan. Vous ne pouvez pas utiliser la classification recommandée pour Outlook.
+    
+    Vous pouvez utiliser la classification recommandée pour les documents qui ont préalablement été étiquetés, avec ou sans classification plus élevée. 
+
+Quand le client Azure Information Protection vérifie à intervalles réguliers si les règles de condition que vous spécifiez sont exécutées pour les documents, ce comportement permet la classification et la protection automatiques et recommandées des documents stockés dans SharePoint Online. Les fichiers volumineux s’enregistrent également plus rapidement car les règles des conditions se sont déjà exécutées. 
+
+Les règles des conditions ne s’exécutent pas en temps réel pendant la saisie de l’utilisateur. Elles s’exécutent plutôt à intervalles réguliers sous la forme d’une tâche en arrière-plan si le document est modifié.
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Clé : **RunPolicyInBackground**
 
-- Valeur : **False**
+- Valeur : **True**
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Migrer des étiquettes de Secure Islands et d’autres solutions d’étiquetage
 
@@ -234,7 +257,7 @@ Cette option de configuration permet au client Azure Information Protection d’
 
 - Pour le scanneur Azure Information Protection : rapport de détection lorsque la nouvelle étiquette Azure Information Protection est définie et qu’elle peut être appliquée avec le mode d’application.
 
-Cette configuration nécessite que vous spécifiiez un paramètre client avancé nommé **LabelbyCustomProperty** pour chaque étiquette Azure Information Protection que vous souhaitez associer à l’ancienne étiquette. Ensuite, définissez la valeur à utiliserpour chaque entrée avec la syntaxe suivante :
+Cette configuration nécessite que vous spécifiiez un paramètre client avancé nommé **LabelbyCustomProperty** pour chaque étiquette Azure Information Protection que vous souhaitez associer à l’ancienne étiquette. Ensuite, définissez la valeur à utiliser pour chaque entrée avec la syntaxe suivante :
 
 `[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
 
@@ -296,8 +319,6 @@ Le paramètre client avancé :
 
 
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Étiquette d’un document Office en utilisant une propriété personnalisée existante
-
-Cette option de configuration est en préversion et susceptible de changer.
 
 > [!NOTE]
 > Si vous utilisez cette configuration et la configuration de la section précédente pour migrer à partir d’une autre solution d’étiquetage, le paramètre de la migration de l’étiquetage est prioritaire. 

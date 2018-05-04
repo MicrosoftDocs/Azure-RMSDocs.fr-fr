@@ -4,7 +4,7 @@ description: Pour configurer la classification, l’étiquetage et la protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a0194b1cf6b1b134c3fd37ae9f042f117570d9ce
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 0b95db2e96ca2fc250e7031f394e2e0bd8d4fdef
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -74,7 +74,7 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
 
 4. Vous voyez la page **Démarrage rapide** qui s’ouvre automatiquement la première fois que vous vous connectez au service. Parcourez les ressources suggérées ou utilisez les autres options de menu. Pour configurer les étiquettes que les utilisateurs peuvent sélectionner, utilisez la procédure suivante.
 
-La prochaine fois que vous accéderez au panneau **Azure Information Protection**, l’option **STRATÉGIES** > **Stratégie globale** sera automatiquement sélectionnée pour vous permettre de configurer des étiquettes pour tous les utilisateurs. Vous pouvez revenir à la page **Démarrage rapide** en la sélectionnant à partir du menu **GÉNÉRAL**.
+La prochaine fois que vous accéderez au panneau **Azure Information Protection**, l’option **Étiquettes** sera automatiquement sélectionnée pour vous permettre de voir et de configurer des étiquettes pour tous les utilisateurs. Vous pouvez revenir à la page **Démarrage rapide** en la sélectionnant à partir du menu **GÉNÉRAL**.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Guide de configuration de la stratégie Azure Information Protection
 
@@ -82,21 +82,29 @@ La prochaine fois que vous accéderez au panneau **Azure Information Protection*
 
 2. Si besoin, accédez au panneau **Azure Information Protection** : par exemple, dans le menu hub, cliquez sur **Tous les services** et commencez à taper **Information Protection** dans la zone Filtrer. Dans les résultats, sélectionnez **Azure Information Protection**. 
     
-    Le panneau **Azure Information Protection - Stratégie globale** s’ouvre automatiquement pour vous permettre d’afficher et de modifier la stratégie globale que tous les utilisateurs obtiennent. 
+    Le panneau **Azure Information Protection - Étiquettes** s’ouvre automatiquement pour vous permettre d’afficher et de modifier les étiquettes disponibles. Vous pouvez mettre les étiquettes à la disposition de tous les utilisateurs, de certains utilisateurs ou d’aucun utilisateur en les ajoutant à une stratégie ou en les supprimant de celle-ci.
+
+3. Pour afficher et modifier les stratégies, sélectionnez **Stratégies** parmi les options de menu. Pour afficher et modifier la stratégie que reçoivent tous les utilisateurs, sélectionnez la stratégie **Globale**. Pour créer une stratégie personnalisée pour certains utilisateurs, sélectionnez **Ajouter une nouvelle stratégie**.
     
-    La stratégie Azure Information Protection contient les éléments suivants que vous pouvez configurer :
+    Une stratégie Azure Information Protection contient les éléments suivants que vous pouvez configurer :
     
-    - Les étiquettes qui permettent aux utilisateurs de classifier des documents et des e-mails.
+    - Les étiquettes incluses permettant aux administrateurs et aux utilisateurs de classer les documents et les e-mails.
     
     - Le titre et l’info-bulle de la barre Information Protection, que les utilisateurs voient dans leurs applications Office.
     
-    - L’option permettant d’appliquer la classification lorsque des utilisateurs enregistrent des documents et envoient des e-mails.
-    
     - L’option permettant de définir une étiquette par défaut comme point de départ de la classification de documents et d’e-mails.
+     
+    - L’option permettant d’appliquer la classification lorsque des utilisateurs enregistrent des documents et envoient des e-mails.
     
     - L’option invitant les utilisateurs à fournir une raison lorsqu’ils sélectionnent une étiquette qui a une sensibilité inférieure à l’étiquette originale.
     
     - L’option d’étiqueter automatiquement un e-mail en fonction de ses pièces jointes.
+
+    - L’option permettant de contrôler si la barre Information Protection est affichée dans les applications Office.
+
+    - L’option permettant de contrôler si le bouton Ne pas transférer s’affiche dans Outlook.
+    
+    - L’option permettant aux utilisateurs de spécifier leurs propres autorisations pour les documents.
     
     - L’option permettant de fournir un lien d’aide personnalisé aux utilisateurs.
 
@@ -108,9 +116,7 @@ Vous pouvez utiliser les étiquettes par défaut sans les modifier, vous pouvez 
 
 Vous pouvez créer autant d’étiquettes que vous le souhaitez. Cependant, quand il commence à y en avoir trop pour que les utilisateurs puissent voir et sélectionner facilement la bonne étiquette, créez des stratégies délimitées de façon que les utilisateurs voient seulement les étiquettes qui sont pertinentes pour eux. Il existe une limite supérieure pour les étiquettes qui appliquent la protection, qui est de 500.
 
-Lorsque vous apportez des modifications dans un panneau Azure Information Protection, cliquez sur **Enregistrer** pour enregistrer les modifications, ou cliquez sur **Ignorer** pour rétablir les derniers paramètres enregistrés.
-
-Lorsque vous avez terminé les modifications souhaitées, cliquez sur **Publier**. 
+Lorsque vous apportez des modifications dans un panneau Azure Information Protection, cliquez sur **Enregistrer** pour enregistrer les modifications, ou cliquez sur **Ignorer** pour rétablir les derniers paramètres enregistrés. Quand vous enregistrez des modifications dans une stratégie ou apportez des modifications à des étiquettes qui sont ajoutées à des stratégies, ces modifications sont automatiquement publiées. Il n’y a pas d’option de publication distincte.
 
 Le client Azure Information Protection vérifie si des modifications ont été apportées au démarrage d’une application Office prise en charge et télécharge les modifications en tant que dernière stratégie Azure Information Protection. Autres déclencheurs qui actualisent la stratégie sur le client :
 
@@ -136,6 +142,8 @@ Utilisez les informations suivantes pour configurer votre stratégie Azure Infor
 
 - [Comment créer une étiquette](configure-policy-new-label.md)
 
+- [Guide pratique pour ajouter ou supprimer une étiquette](configure-policy-add-remove-label.md)
+ 
 - [Comment supprimer ou réorganiser une étiquette](configure-policy-delete-reorder.md)
 
 - [Comment modifier ou personnaliser une étiquette existante](configure-policy-change-label.md)

@@ -4,7 +4,7 @@ description: Configurer et gérer des modèles Rights Management à partir du po
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 4f0cc5be090a425c7be28c81f20b85eef485772d
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: d26b69bc06a4c0d4f9c097e791b8b10bfc9feb1d
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
@@ -30,11 +30,11 @@ Les modèles Rights Management sont désormais intégrés à la stratégie Azure
 
 **Si vous avez un abonnement qui inclut la classification, l’étiquetage et la protection (Azure Information Protection P1 or P2) :**
 
-- Les modèles Rights Management qui ne sont pas intégrés aux étiquettes de votre locataire sont affichés à la section **Modèles de protection**, après les étiquettes dans le panneau **Azure Information Protection - Tout - affichage des stratégies croisées**. Vous pouvez convertir ces modèles en étiquettes ou créer un lien vers celles-ci quand vous configurez la protection pour vos étiquettes. 
+- Les modèles Rights Management qui ne sont pas intégrés aux étiquettes de votre locataire sont affichés à la section **Modèles de protection**, après vos étiquettes dans le panneau **Azure Information Protection - Étiquettes**. Pour accéder à ce panneau, sélectionnez l’option de menu **CLASSIFICATIONS** > **Étiquettes**. Vous pouvez convertir ces modèles en étiquettes ou créer un lien vers celles-ci quand vous configurez la protection pour vos étiquettes. 
 
 **Lorsque vous avez un abonnement qui inclut uniquement la protection (un abonnement Office 365 qui inclut le service Azure Rights Management) :**
 
-- Les modèles Rights Management de votre locataire sont affichés dans le panneau **Azure Information Protection - Tout - affichage des stratégies croisées** de la section **Modèles de protection**. Aucune étiquette n’est affichée. Vous voyez également les paramètres de configuration qui sont spécifiques à la classification et l’étiquetage, mais ces paramètres n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
+- Les modèles Rights Management de votre locataire sont affichés à la section **Modèles de protection** dans le panneau **Azure Information Protection - Étiquettes**. Pour accéder à ce panneau, sélectionnez l’option de menu **CLASSIFICATIONS** > **Étiquettes**. Aucune étiquette n’est affichée. Vous voyez également les paramètres de configuration qui sont spécifiques à la classification et l’étiquetage, mais ces paramètres n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
 
 ## <a name="default-templates"></a>Modèles par défaut
 
@@ -66,11 +66,11 @@ Si vous avez obtenu votre abonnement il y a quelque temps, vos modèles par déf
 Vous pouvez renommer (et reconfigurer) ces modèles par défaut quand vous utilisez le portail Azure.
 
 >[!NOTE]
->Si vous ne voyez pas vos modèles par défaut dans le panneau **Azure Information Protection - Tout - affichage des stratégies croisées**, c’est qu’ils sont convertis en étiquettes ou liés à une étiquette. Ils existent encore en tant que modèles, mais dans le portail Azure, ils apparaissent comme faisant partie d’une configuration d’étiquettes qui comprend les paramètres de protection d’une clé cloud. Vous pouvez toujours vérifier les modèles dont dispose votre locataire en exécutant l’applet de commande [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) à partir du [module PowerShell AADRM](administer-powershell.md).
+>Si vous ne voyez pas vos modèles par défaut dans le panneau **Azure Information Protection - Étiquettes**, c’est qu’ils sont convertis en étiquettes ou liés à une étiquette. Ils existent encore en tant que modèles, mais dans le portail Azure, ils apparaissent comme faisant partie d’une configuration d’étiquettes qui comprend les paramètres de protection d’une clé cloud. Vous pouvez toujours vérifier les modèles dont dispose votre locataire en exécutant l’applet de commande [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) à partir du [module PowerShell AADRM](administer-powershell.md).
 >
 >Vous pouvez convertir manuellement des modèles, comme expliqué dans une section ultérieure, [Pour convertir des modèles en étiquettes](#to-convert-templates-to-labels), puis les renommer si vous le voulez. Ils sont convertis automatiquement pour vous si votre stratégie Azure Information Protection par défaut a été créée récemment et que le service Azure Rights Management pour votre locataire a été activé à ce moment.
 
-Les modèles archivés apparaissent comme n’étant pas disponibles dans le panneau **Azure Information Protection - Tout - affichage des stratégies croisées**. Ces modèles ne peuvent pas être sélectionnés pour les étiquettes, mais ils peuvent être convertis en étiquettes.
+Les modèles archivés apparaissent comme étant indisponibles dans le panneau **Azure Information Protection - Étiquettes**. Ces modèles ne peuvent pas être sélectionnés pour les étiquettes, mais ils peuvent être convertis en étiquettes.
 
 ## <a name="considerations-for-templates-in-the-azure-portal"></a>Considérations relatives aux modèles dans le portail Azure
 
@@ -96,24 +96,21 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Pour configurer les modèles dans la stratégie Azure Information Protection
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection - Tout - affichage des stratégies croisées**.
+>[!NOTE]
+> Ces instructions reflètent les dernières mises à jour du portail Azure. Si vous ne voyez pas l’option de menu **CLASSIFICATIONS** à la place de l’option **Publier**, les instructions de navigation ne correspondront pas exactement à ce que vous voyez. Dans ce cas, essayez de refaire cette procédure dans quelques jours, quand votre locataire aura été mis à jour avec les dernières modifications.
+
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection - Étiquettes**.
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. Dans le panneau **Azure Information Protection - Tout - affichage des stratégies croisées**, recherchez le modèle à configurer :
+2. À partir de l’option de menu **CLASSIFICATIONS** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, développez **Modèles de protection**, puis recherchez le modèle que vous souhaitez configurer.
     
-    - Si vous avez un abonnement qui inclut la classification, l’étiquetage et la protection : développez **Modèles de protection** après vos étiquettes.
-    
-    - Lorsque vous avez un abonnement qui inclut uniquement la protection : les modèles s’affichent sous forme d’étiquettes.
+3. Sélectionnez le modèle, puis, dans le panneau **Étiquette**, vous pouvez changer le nom du modèle et la description si nécessaire en modifiant le **Nom d’étiquette** et la **Description**. Ensuite, sélectionnez **Protection**, qui a la valeur **Azure (clé du cloud)**, pour ouvrir le panneau **Protection**.
 
-4. Sélectionnez le modèle, puis, dans le panneau **Étiquette**, vous pouvez changer le nom du modèle et la description si nécessaire en modifiant le **Nom d’étiquette** et la **Description**. Ensuite, sélectionnez **Protection**, qui a la valeur **Azure (clé du cloud)**, pour ouvrir le panneau **Protection**.
-
-5. Sur le panneau **Protection**, vous pouvez modifier les autorisations, l’expiration du contenu et les paramètres d’accès hors connexion. Pour en savoir plus sur la configuration des paramètres de protection, voir [Comment configurer une étiquette pour la protection offerte par Rights Management](configure-policy-protection.md)
+4. Sur le panneau **Protection**, vous pouvez modifier les autorisations, l’expiration du contenu et les paramètres d’accès hors connexion. Pour en savoir plus sur la configuration des paramètres de protection, voir [Comment configurer une étiquette pour la protection offerte par Rights Management](configure-policy-protection.md)
     
     Cliquez sur **OK** pour conserver vos modifications, puis, dans le panneau **Étiquette**, cliquez sur **Enregistrer**.
     
-    Il n’est pas nécessaire de cliquer sur **Publier** pour cette modification.
-
 > [!NOTE]
 > Vous pouvez également modifier un modèle à l’aide du bouton **Modifier le modèle** du panneau **Protection**, si vous avez configuré une étiquette pour utiliser un modèle prédéfini. Si aucune autre étiquette utilise le modèle sélectionné, ce bouton convertit le modèle en étiquette et vous ramène à l’étape 5. Pour plus d’informations sur ce qui se passe quand les modèles sont convertis en étiquettes, consultez la section suivante.
 
@@ -141,25 +138,36 @@ Lorsque vous convertissez un modèle en étiquette :
 
 ## <a name="to-create-a-new-template"></a>Pour créer un nouveau modèle
 
+>[!NOTE]
+> Ces instructions reflètent les dernières mises à jour du portail Azure. Si vous ne voyez pas l’option de menu **CLASSIFICATIONS** à la place de l’option **Publier**, les instructions de navigation ne correspondront pas exactement à ce que vous voyez. Dans ce cas, essayez de refaire cette procédure dans quelques jours, quand votre locataire aura été mis à jour avec les dernières modifications.
+
 Quand vous créez une étiquette avec le paramètre de protection **Azure (clé cloud)**, en arrière-plan, cette action crée un modèle personnalisé qui est ensuite accessible pour les services et applications qui sont intégrés aux modèles Rights Management.
 
-1. Si le nouveau modèle concerne tous les utilisateurs, accédez au panneau **Azure Information Protection - Stratégie globale**.
-    
-     Si le nouveau modèle doit être un modèle de service pour s’appliquer uniquement aux utilisateurs sélectionnés, dans la sélection de menu **STRATÉGIES**, sélectionnez **Stratégies délimitées**. Ensuite, créez ou sélectionnez votre [stratégie délimitée](configure-policy-scope.md) dans le panneau **Azure Information Protection - Stratégies délimitées**.
+1. À partir de l’option de menu **CLASSIFICATIONS** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez **Ajouter une nouvelle étiquette**.
 
-2. Dans le panneau **Azure Information Protection - Stratégie globale** ou le panneau **Stratégie :\<nom>**, cliquez sur **Ajouter une nouvelle étiquette**.
+2. Dans le panneau **Étiquette**, conservez la valeur par défaut **Activé** : **Oui** pour publier ce nouveau modèle, ou modifiez ce paramètre sur **Non** pour créer le modèle comme étant archivé. Saisissez ensuite un nom d’étiquette et une description pour le nom du modèle et la description.
 
-3. Dans le panneau **Étiquette**, conservez la valeur par défaut **Activé** : **Oui** pour publier ce nouveau modèle, ou modifiez ce paramètre sur **Non** pour créer le modèle comme étant archivé. Saisissez ensuite un nom d’étiquette et une description pour le nom du modèle et la description.
-
-4. Pour **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Protéger**, puis **Protection** :
+3. Pour **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Protéger**, puis **Protection** :
     
      ![Configurer la protection d’une étiquette Azure Information Protection](../media/info-protect-protection-bar-configured.png)
 
-5. Sur le panneau **Protection**, vous pouvez modifier les autorisations, l’expiration du contenu et les paramètres d’accès hors connexion. Pour en savoir plus sur la configuration de ces paramètres de protection, voir [Comment configurer une étiquette pour la protection offerte par Rights Management](configure-policy-protection.md)
+4. Sur le panneau **Protection**, vous pouvez modifier les autorisations, l’expiration du contenu et les paramètres d’accès hors connexion. Pour en savoir plus sur la configuration de ces paramètres de protection, voir [Comment configurer une étiquette pour la protection offerte par Rights Management](configure-policy-protection.md)
     
     Cliquez sur **OK** pour conserver vos modifications, puis, dans le panneau **Étiquette**, cliquez sur **Enregistrer**.
+    
+    Dans le panneau **Azure Information Protection - Étiquettes**, vous voyez maintenant votre nouvelle étiquette, accompagnée de la colonne **PROTECTION** indiquant qu’elle contient des paramètres de protection. Ces paramètres de protection s’affichent en tant que modèles pour les applications et services qui prennent en charge le service Azure Rights Management.
 
-6. Dans le panneau **Azure Information Protection** initial, cliquez sur **Publier**.
+5. Si vous ne souhaitez pas mettre le modèle créé à la disposition de tous les utilisateurs, vous devez ajouter l’étiquette que vous venez de créer à une stratégie autre que la stratégie Globale :
+    
+    a. À partir de l’option de menu **CLASSIFICATIONS** > **Stratégies**, sélectionnez **Stratégies**.
+    
+    b. Sélectionnez **Ajouter une nouvelle stratégie** puis, dans le panneau **Stratégie**, spécifiez un nom pour l’étendue des utilisateurs et une description. Ensuite, utilisez l’option suivante pour sélectionner la partie des utilisateurs : **Sélectionnez les utilisateurs ou groupes devant recevoir cette stratégie. La fonction de courrier des groupes doit être activée.**
+    
+    Ou bien, si une stratégie existe déjà pour cette partie d’utilisateurs, sélectionnez-la à partir du panneau **Stratégie**.
+    
+    c. À partir du panneau **Stratégie**, sélectionnez **Ajouter ou supprimer des étiquettes**. Ensuite, dans le panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette créée qui contient vos paramètres de protection, puis cliquez sur **OK**.
+    
+    d. Dans le panneau **Stratégie**, cliquez sur **Enregistrer**.  
 
 
 ## <a name="next-steps"></a>Étapes suivantes

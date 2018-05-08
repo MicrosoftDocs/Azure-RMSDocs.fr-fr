@@ -4,7 +4,7 @@ description: Ressources pour les administrateurs, qui incluent des informations 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/23/2018
+ms.date: 05/01/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9eafa28bb6a259c7f845f54268a30c8cdc6fc988
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: 3ed8c53c235520d53c3d0a3666aa4aba45c174f5
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
@@ -26,7 +26,7 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure Infor
 
 |Pour effectuer cette opération...|procédez ainsi :|
 |----------------|---------------|
-|Voir la documentation la plus fréquemment utilisée|Lire les cinq pages les plus consultées :<br /><br /> - [Configuration des droits d’utilisation pour Azure Rights Management](../deploy-use/configure-usage-rights.md)<br /> - [Questions fréquentes (FAQ) sur Azure Information Protection](../get-started/faqs.md)<br />- [Configuration requise pour Azure Information Protection](requirements.md) <br />- [Déployer le scanneur Azure Information Protection](../deploy-use/deploy-aip-scanner.md)<br />- [La stratégie Azure Information Protection par défaut](../deploy-use/configure-policy-default.md)|
+|Voir la documentation la plus fréquemment utilisée|Lire les cinq pages les plus consultées :<br /><br /> - [Qu’est-ce qu’Azure Information Protection ?](../understand-explore/what-is-information-protection.md)<br /> - [Installer le client Azure Information Protection pour les utilisateurs](../rms-client/client-admin-guide-install.md)<br />- [Configuration requise pour Azure Information Protection](requirements.md) <br />- [Déployer le scanneur Azure Information Protection](../deploy-use/deploy-aip-scanner.md)<br />- [La stratégie Azure Information Protection par défaut](../deploy-use/configure-policy-default.md)|
 |Prendre contact avec l’équipe du produit et vos collègues|Visitez le [site Yammer](https://www.yammer.com/AskIPTeam) pour Azure Information Protection.|
 |Demander une nouvelle fonctionnalité ou la modification d’une fonctionnalité|Visitez le site [User Voice](https://msip.uservoice.com) pour Azure Information Protection.|
 |Recevoir des tweets du groupe de produits|Suivez [MicrosoftMobility@MSFTMobility](https://twitter.com/MSFTMobility) sur Twitter.|
@@ -37,8 +37,6 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure Infor
 L’équipe en charge du produit Azure Information Protection publie des annonces sur les nouvelles versions et mises à jour dans le [blog Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). Ces billets de blog complètent la documentation du produit et les informations de support technique.
 
 Par ailleurs, un récapitulatif des changements apportés à la documentation est publié chaque mois sur le [blog technique d’Azure Information Protection](https://aka.ms/AIPblog). Ces mises à jour de la documentation incluent des informations sur les nouvelles versions, les mises à jour des instructions de support, ainsi que les corrections et les éclaircissements apportés aux versions existantes. Ces posts sont intitulés : « **Azure Information Protection Documentation Update for – \<mois année>** ».
-
-Les récapitulatifs précédents ont été publiés sur le [blog Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates). 
 
 ## <a name="support-options-and-community-resources"></a>Options de support technique et ressources de la communauté
 Les sections suivantes fournissent des informations sur les options de support et de résolution de problème ainsi que des ressources de la communauté.

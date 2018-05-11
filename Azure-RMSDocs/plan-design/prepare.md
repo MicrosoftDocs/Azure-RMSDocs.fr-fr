@@ -4,7 +4,7 @@ description: Vérifiez que vous disposez des comptes d’utilisateur et de group
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7d9c58649eb06b614a25e28c909d34318ea80133
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 760fe51d8c864ff28f599dd3cf1f84ae72c03343
+ms.sourcegitcommit: 2b031166026b4b6dd87e0dbaec44a99204c8691c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 
@@ -41,24 +41,6 @@ Quand vous créez des utilisateurs et groupes à l’aide des trois premières m
 ## <a name="how-users-and-groups-are-used-by-azure-information-protection"></a>Comment les utilisateurs et groupes sont utilisés par Azure Information Protection
 
 Il existe trois scénarios d’utilisation des utilisateurs et des groupes avec Azure Information Protection :
-
-- **Pour affecter des étiquettes aux utilisateurs** quand vous utilisez l’étiquetage et la classification. Seuls les administrateurs sélectionnent ces groupes :
-    
-    - La stratégie Azure Information Protection par défaut est automatiquement attribuée à tous les utilisateurs de l’annuaire Azure AD de votre locataire. Toutefois, vous pouvez également affecter d’autres étiquettes à des utilisateurs ou groupes spécifiés à l’aide de stratégies délimitées.
-
-- **Pour affecter des droits d’utilisation et des contrôles d’accès** quand vous utilisez le service Azure Rights Management pour protéger les documents et e-mails. Les administrateurs et utilisateurs peuvent sélectionner ces utilisateurs et groupes :
-
-    - Les droits d’utilisation déterminent si un utilisateur peut ouvrir un document ou e-mail et comment il peut l’utiliser, par exemple s’il peut uniquement le lire, le lire et l’imprimer, ou le lire et le modifier.
-
-    - Les contrôles d’accès incluent une date d’expiration et indiquent si une connexion à Internet est nécessaire pour l’accès.
-
-- **Pour configurer le service Azure Rights Management** afin de prendre en charge des scénarios spécifiques. Par conséquent, seuls les administrateurs sélectionnent ces groupes. Les exemples incluent la configuration des éléments suivants :
-
-    - Super utilisateurs, afin que les personnes ou services désignés puissent ouvrir le contenu chiffré si cela est nécessaire pour la récupération de données ou découverte électronique (eDiscovery).
-
-    - Administration déléguée du service Azure Rights Management.
-
-    - Contrôles d’intégration pour prendre en charge un déploiement à plusieurs phases.
 
 **Pour affecter des étiquettes aux utilisateurs** quand vous configurez la stratégie Azure Information Protection afin que les étiquettes puissent être appliquées à des documents et e-mails. Seuls les administrateurs peuvent sélectionner ces utilisateurs et groupes :
 

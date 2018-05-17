@@ -4,24 +4,21 @@ description: 'Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: e2850a0f67f18febdbd98e59d01b2f28b00bff2a
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: ffae0c9ef0e9ffd1fc9a4c25ef5c60e8da6de5ca
+ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Étape 2 : Configurer la stratégie Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
->[!NOTE]
-> Cette étape du tutoriel reflète les dernières mises à jour du portail Azure. Si vous ne voyez pas l’option de menu **CLASSIFICATIONS** à la place de l’option **Publier**, les instructions de navigation ne correspondront pas exactement à ce que vous voyez. Dans ce cas, réessayez cette étape du tutoriel dans quelques jours, quand votre locataire aura été mis à jour avec les dernières modifications.
 
 Bien qu’Azure Information Protection soit fourni avec une stratégie par défaut que vous pouvez utiliser sans configuration, nous allons examiner cette stratégie et y apporter des modifications.
 
@@ -58,11 +55,13 @@ Pour notre didacticiel, nous allons modifier deux de ces paramètres de stratég
     
     Vous n’aurez peut-être pas à changer ce paramètre, car la valeur par défaut dépend du moment où vous avez obtenu votre abonnement. Nous allons utiliser des autorisations personnalisées plus loin dans le didacticiel pour partager un document protégé avec un utilisateur que vous spécifiez quand vous cliquez avec le bouton droit sur le fichier dans l’Explorateur de fichiers.
 
+4. Sélectionnez **Enregistrer** sur ce panneau **Stratégie : Globale** et, si vous êtes invité à confirmer votre action, sélectionnez **OK**. Fermez ce panneau.
+
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Création d’une étiquette pour la protection, de marquages visuels et d’une condition pour une demande de classification
 
 Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
 
-1. Cliquez avec le bouton droit sur l’étiquette **Confidentiel** et sélectionnez **Ajouter une sous-étiquette**.
+1. À partir de l’option de menu **CLASSIFICATIONS** > **Étiquettes** : cliquez avec le bouton droit sur l’étiquette **Confidentiel** et sélectionnez **Ajouter une sous-étiquette**.
     
     Si vous n’avez pas d’étiquette nommée **Confidentiel**, vous pouvez sélectionner une autre étiquette ou créer une étiquette, puis suivre le didacticiel avec des différences mineures.
 
@@ -128,9 +127,13 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
 
 12. Dans la zone **Enter notes for internal housekeeping** (Entrer des remarques de maintenance interne), tapez **À des fins de test uniquement**.
 
-13. Cliquez sur **Enregistrer** dans ce panneau **Sous-étiquette**. Puis, dans le panneau **Stratégie : Globale**, cliquez une nouvelle fois sur **Enregistrer**.
-    
-    Vous voyez maintenant votre nouvelle sous-étiquette, configurée pour la protection et les marquages visuels. Par exemple :
+13. Cliquez sur **Enregistrer** dans ce panneau **Sous-étiquette**. Si vous êtes invité à confirmer, cliquez sur **OK**. La nouvelle étiquette est créée et enregistrée, mais elle n’est pas encore ajoutée à une stratégie.
+
+14. À partir de l’option de menu **CLASSIFICATIONS** > **Stratégies** : sélectionnez à nouveau **Globale**, puis sélectionnez le lien **Ajouter ou supprimer des étiquettes** situé en regard des étiquettes.
+
+15. À partir du panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette que vous venez de créer, la sous-étiquette nommée **Finance** et cliquez sur **OK**.
+
+16. Dans le panneau **Stratégie : Globale**, votre nouvelle sous-étiquette s’affiche désormais dans votre stratégie globale, qui est configurée pour le marquage visuel et la protection. Par exemple :
 
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut configurée](../media/info-protect-policy-configuredv2.png)
     
@@ -138,6 +141,9 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
     ![Didacticiel de démarrage rapide Azure Information Protection - Étape 3 : Paramètres configurés](../media/info-protect-settings-configuredv2.png)
     
+
+17. Cliquez sur **Enregistrer** sur ce panneau **Stratégie : Globale**. Si vous êtes invité à confirmer cette action, cliquez sur **OK**.
+
 Vous pouvez fermer le portail Azure, ou le laisser ouvert pour essayer des options de configuration supplémentaires après avoir terminé ce didacticiel.
 
 Maintenant que vous avez examiné la stratégie par défaut et apporté des modifications, l’étape suivante consiste à installer le client Azure Information Protection.

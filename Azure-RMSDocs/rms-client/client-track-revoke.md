@@ -4,7 +4,7 @@ description: Une fois que vous avez protégé vos documents, vous pouvez suivre 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 05/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 84f5f0ed8b98895b8c056ff03295afef379e6b74
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e4e35659ab964a636c6ca0c7066b1c809cc5958b
+ms.sourcegitcommit: 6a67fc50bd8b8a06974de647c15115a673f0217c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guide de l’utilisateur : Suivre et révoquer vos documents quand vous utilisez Azure Information Protection
 
@@ -24,7 +24,9 @@ ms.lasthandoff: 03/28/2018
 
 Une fois que vous avez protégé vos documents avec Azure Information Protection, vous pouvez suivre leur utilisation. Si nécessaire, vous pouvez également révoquer l’accès à ces documents si des personnes ne doivent plus être en mesure de les lire. Pour ce faire, vous utilisez le **site de suivi des documents**. Vous pouvez accéder à ce site à partir d’un ordinateur Windows ou Mac, d’une tablette ou d’un téléphone.
 
-Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos documents. Sous réserve que votre organisation dispose d’un [abonnement prenant en charge le suivi et la révocation de documents](https://www.microsoft.com/cloud-platform/azure-information-protection-features) et qu’une licence vous a été attribuée dans le cadre de cet abonnement, vous pouvez voir qui a essayé d’ouvrir les fichiers que vous avez protégés et si ces personnes y sont parvenues (ont bien été authentifiées) ou pas. Vous voyez également le nombre de tentatives d’accès au document ainsi que l’emplacement à partir duquel l’accès a eu lieu. De plus :
+Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos documents. Sous réserve que votre organisation dispose d’un [abonnement prenant en charge le suivi et la révocation de documents](https://www.microsoft.com/cloud-platform/azure-information-protection-features) et qu’une licence vous a été attribuée dans le cadre de cet abonnement, vous pouvez voir qui a essayé d’ouvrir les fichiers que vous avez protégés et si ces personnes y sont parvenues (ont bien été authentifiées) ou pas. Vous voyez également le nombre de tentatives d’accès au document ainsi que l’emplacement à partir duquel l’accès a eu lieu. Toutefois, en de rares cas, l’emplacement indiqué peut ne pas être exact. Par exemple, lorsqu’un utilisateur ouvre un document protégé à l’aide d’une connexion VPN ou que son ordinateur a une adresse IPv6.
+
+Actions que vous pouvez entreprendre sur le site de suivi de documents :
 
 - Si vous voulez cesser le partage d'un document : 
     

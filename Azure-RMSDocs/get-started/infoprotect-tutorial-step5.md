@@ -5,7 +5,7 @@ keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 05/09/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 718c15769e5719d5e8dde612cf66e4215f1e235d
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 7c6acb5a4b5c8f33193cbf5d8833201e0d68287e
+ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Étape 5 : Voir le partage de fichiers protégés en action et effectuer le suivi de votre document 
 
@@ -103,7 +103,7 @@ Maintenant que le destinataire a ouvert la pièce jointe et l’a éventuellemen
 
 3.  Dans la page **Vos documents partagés** apparaît le nom du document que vous avez partagé. À ce stade, il s’agit du seul fichier affiché, mais la liste s’allongera à mesure que vous partagerez des fichiers.
 
-    Sur cette page, vous pouvez voir le moment où vous avez partagé le document (moment de l’envoi du courrier électronique contenant la pièce jointe protégée), la date de la dernière activité et le nom du destinataire auquel vous avez envoyé le courrier. Cliquez sur le nom du document pour plus de détails.
+    Sur cette page, vous pouvez voir le moment où vous avez partagé le document (moment de l’envoi du courrier électronique contenant la pièce jointe protégée), son état actuel (actif, révoqué ou expiré) et le nom du destinataire auquel vous avez envoyé le courrier. Cliquez sur le nom du document pour plus de détails.
 
 4.  Sur la nouvelle page qui porte le nom du fichier sur lequel vous avez cliqué, vous pouvez voir les détails du résumé de ce document, ainsi qu’une liste d’autres options disponibles pour le document (**Liste**, **Chronologie**, **Carte**, **Paramètres**).
 
@@ -113,7 +113,7 @@ Vous pouvez revenir sur ce site pour suivre les autres activités de votre docum
 
 
 
-|Pour en savoir plus|Informations complémentaires|
+|Pour en savoir plus|Informations supplémentaires|
 |--------------------------------|--------------------------|
 |Instructions complètes pour la protection des fichiers que vous pouvez partager en toute sécurité|[Classifier et protéger un fichier ou un e-mail](../rms-client/client-classify-protect.md)|
 |À propos du compte gratuit pour l’inscription d’autres utilisateurs|[RMS for individuals et Azure Rights Management](../understand-explore/rms-for-individuals.md)|

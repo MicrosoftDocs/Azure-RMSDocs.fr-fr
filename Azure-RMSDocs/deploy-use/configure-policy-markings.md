@@ -4,17 +4,17 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 1fc9e3babd83368f1fa6389da3e2b66e8080d308
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 3a732f49a299b4d66af70da3d26df193eaca36ac
+ms.sourcegitcommit: 6a67fc50bd8b8a06974de647c15115a673f0217c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -47,6 +47,8 @@ Pour les documents, les marquages visuels sont appliqués comme suit :
 - Dans une application Office, les marquages visuels d’une étiquette sont appliqués lorsque l’étiquette est appliquée. Les marquages visuels sont également appliqués lors de l’ouverture d’un document étiqueté et lors du premier enregistrement document.  
 
 - Lorsqu’un document est étiqueté à l’aide de l’Explorateur de fichiers ou de PowerShell, les marquages visuels ne sont pas appliqués immédiatement, mais lorsque ce document est ouvert dans une application Office et lors du premier enregistrement du document.
+    
+    Cette exception se produit lorsque vous utilisez [Enregistrement automatique](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) avec Office 2016 pour des fichiers qui sont enregistrés dans SharePoint Online, OneDrive ou OneDrive Entreprise : lorsque la fonctionnalité Enregistrement automatique est activée, les marquages visuels ne sont pas appliqués sauf si vous configurez le [paramètre client avancé](../rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) afin que la classification s’exécute en continu en arrière-plan. 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Pour configurer les marquages visuels pour une étiquette
 

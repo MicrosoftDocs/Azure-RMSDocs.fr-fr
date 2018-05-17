@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/23/2018
+ms.date: 05/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb48a3e35d18c111d3df1907b7cc7a2832e0ae13
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: 0b71519002816f5bae272f002bfec123186a65a1
+ms.sourcegitcommit: 22072325721cfd26b6546ef625e8b38f5551d30b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -27,9 +27,6 @@ Utilisez les informations suivantes pour les configurations avancées nécessair
 Certains de ces paramètres nécessitent une modification du Registre, et certains autres utilisent des paramètres avancés que vous devez configurer dans le portail Azure, puis publier pour les clients à télécharger.  
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Comment configurer les paramètres avancés de configuration du client dans le portail
-
->[!NOTE]
-> Ces instructions reflètent les dernières mises à jour du portail Azure. Si vous ne voyez pas l’option de menu **CLASSIFICATIONS** à la place de l’option **Publier**, les instructions de navigation ne correspondront pas exactement à ce que vous voyez. Dans ce cas, essayez de refaire cette procédure dans quelques jours, quand votre locataire aura été mis à jour avec les dernières modifications.
 
 1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, [connectez-vous au portail Azure](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal), puis accédez au panneau **Azure Information Protection**.
 
@@ -59,10 +56,21 @@ Indépendamment de ce paramètre, le client Azure Information Protection se conf
 
 Quand le client Azure Information Protection est installé pour la première fois sur un ordinateur et qu’un utilisateur ouvre Word, Excel, PowerPoint ou Outlook, une page **Félicitations !** s’affiche avec de courtes instructions sur la manière d’utiliser la nouvelle barre Information Protection pour sélectionner des étiquettes. Vous pouvez supprimer cette page en modifiant le registre.
 
-Recherchez le nom de la valeur suivant, et définissez les données de la valeur sur **0** :
+1. Si la clé de registre suivante n’existe pas, créez-la :
+    
+    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
 
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableWelcomeExperience** 
+2. Si une valeur DWORD (32 bits) (REG-DWORD) nommée **EnableWelcomeExperience** n’existe pas, créez-la et définissez la valeur des données sur **0** :
 
+## <a name="suppress-the-whats-new-in-azure-information-protection-page"></a>Supprimer la page « Nouveautés dans Azure Information Protection » page
+
+Lors de l’installation initiale du client Azure Information Protection ou après sa mise à niveau sur un ordinateur, et si la barre Azure Information Protection est affichée dans Word, Excel, PowerPoint ou Outlook, une page **Nouveautés dans Azure Information Protection** s’affiche pour informer les utilisateurs concernant les autorisations personnalisées et le suivi de l’utilisation. Vous pouvez supprimer cette page en modifiant le registre.
+
+1. Si la clé de registre suivante n’existe pas, créez-la :
+    
+    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
+
+2.  Si une valeur de chaîne (REG-SZ) nommée **WhatsNewVersion** n’existe pas, créez-la et définissez la valeur des données sur **1.4**.
 
 ## <a name="sign-in-as-a-different-user"></a>Se connecter avec l’identité d’un autre utilisateur
 
@@ -257,7 +265,7 @@ Cette option de configuration permet au client Azure Information Protection d’
 
 - Pour le scanneur Azure Information Protection : rapport de détection lorsque la nouvelle étiquette Azure Information Protection est définie et qu’elle peut être appliquée avec le mode d’application.
 
-Cette configuration nécessite que vous spécifiiez un paramètre client avancé nommé **LabelbyCustomProperty** pour chaque étiquette Azure Information Protection que vous souhaitez associer à l’ancienne étiquette. Ensuite, définissez la valeur à utiliser pour chaque entrée avec la syntaxe suivante :
+Cette configuration nécessite que vous spécifiiez un paramètre client avancé nommé **LabelbyCustomProperty** pour chaque étiquette Azure Information Protection que vous souhaitez associer à l’ancienne étiquette. Ensuite, définissez la valeur à utiliserpour chaque entrée avec la syntaxe suivante :
 
 `[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
 

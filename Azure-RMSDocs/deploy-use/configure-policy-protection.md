@@ -4,17 +4,17 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: bcbc3e79da3c158ca3d6582e5dcd4882c327f7b6
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 8b1024a26e086cb8cbd4696dc37d66350968a0b4
+ms.sourcegitcommit: fbc83d699b9e4e9c8e0e7d36f574630af6a4e3d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -87,7 +87,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
     - **Définir des autorisations** : Permet de définir de nouveaux paramètres de protection dans ce portail.
     
-    - **Configurer des autorisations définies par l’utilisateur (préversion)**  : Permet aux utilisateurs de spécifier qui doit avoir des autorisations et quelles sont ces autorisations. Vous pouvez ensuite affiner cette option et choisir Outlook uniquement ou Word, Excel, PowerPoint et l’Explorateur de fichiers. Cette option n’est pas prise en charge et ne fonctionne pas quand une étiquette est configurée pour une [classification automatique](configure-policy-classification.md).
+    - **Configurer des autorisations définies par l’utilisateur (préversion)**  : permet aux utilisateurs de spécifier qui doit avoir des autorisations et quelles sont ces autorisations. Vous pouvez ensuite affiner cette option et choisir Outlook uniquement ou Word, Excel, PowerPoint et l’Explorateur de fichiers. Cette option n’est pas prise en charge et ne fonctionne pas quand une étiquette est configurée pour une [classification automatique](configure-policy-classification.md).
         
         Si vous choisissez l’option pour Outlook : l’étiquette est affichée dans Outlook et le comportement obtenu quand les utilisateurs appliquent l’étiquette est identique à celui de l’option Ne pas transférer.
         
@@ -103,7 +103,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
     Sélectionnez **Ajouter des autorisations** puis, dans le panneau **Ajouter des autorisations**, sélectionnez le premier ensemble d’utilisateurs et de groupes qui auront des droits d’utilisation du contenu à protéger par l’étiquette sélectionnée :
     
-    - Choisissez **Sélectionner dans la liste** pour ajouter tous les utilisateurs de votre organisation ou parcourez l’annuaire.
+    - Choisissez **Sélectionner dans la liste** pour ajouter tous les utilisateurs de votre organisation en sélectionnant **Ajouter \<nom de l’organisation > - Tous les membres**. Ce paramètre exclut les comptes invités. Ou, accédez au répertoire.
         
         Les utilisateurs ou les groupes doivent avoir une adresse e-mail. Dans un environnement de production, les utilisateurs et les groupes ont presque toujours une adresse e-mail, mais dans un simple environnement de test, vous devrez peut-être ajouter des adresses e-mail aux comptes d’utilisateur ou aux groupes.
         
@@ -181,7 +181,7 @@ Vos utilisateurs tapent l’adresse e-mail Gmail dans la zone **À**.  Ensuite, 
 
 1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé du cloud)** est sélectionnée.
     
-2. Sélectionnez **Configurer les autorisations définies par l’utilisateur (aperçu)**.
+2. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)**.
 
 3. Vérifiez que l’option suivante est sélectionnée : **Dans Outlook appliquer Ne pas transférer**.
 
@@ -244,7 +244,7 @@ Lorsque vos utilisateurs spécifient les adresses e-mail dans la zone **À**, ce
     
 2. Vérifiez que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
 
-3. Dans le panneau **Ajouter des autorisations**, pour accorder des autorisations aux utilisateurs de votre organisation, sélectionnez **Ajouter \<nom de l’organisation> - Tous les membres** pour sélectionner tous les utilisateurs de votre locataire, ou sélectionnez **Parcourir le répertoire** pour sélectionner un groupe spécifique. Pour accorder des autorisations à des utilisateurs externes ou si vous préférez taper l’adresse e-mail, sélectionnez **Entrer les détails** et tapez l’adresse e-mail de l’utilisateur, le groupe Azure AD ou un nom de domaine.
+3. Dans le panneau **Ajouter des autorisations** : pour accorder des autorisations aux utilisateurs de votre organisation, sélectionnez **Ajouter \<nom de l’organisation> - Tous les membres** pour sélectionner tous les utilisateurs de votre locataire. Ce paramètre exclut les comptes invités. Ou sélectionnez **Parcourir le répertoire** pour sélectionner un groupe spécifique. Pour accorder des autorisations à des utilisateurs externes ou si vous préférez taper l’adresse e-mail, sélectionnez **Entrer les détails** et tapez l’adresse e-mail de l’utilisateur, le groupe Azure AD ou un nom de domaine.
     
     Répétez cette étape pour spécifier des utilisateurs supplémentaires qui doivent avoir les mêmes autorisations.
 

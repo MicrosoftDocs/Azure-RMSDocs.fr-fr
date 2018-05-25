@@ -1,13 +1,13 @@
 ---
 title: Installer le SDK | Azure RMS
-description: "Cette rubrique vous guide tout au long de l’installation des outils de développement."
-keywords: 
+description: Cette rubrique vous guide tout au long de l’installation des outils de développement.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: C827E6B8-8CF2-4C86-AF97-60D66851827E
@@ -15,12 +15,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 33401c6119d56ad8b24dbbc70b209bf5cbd92a6b
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.sourcegitcommit: d1a3f35ea2d2c246a5b1e3f3da75df9c182fd0da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="install-the-sdk"></a>Installer le Kit de développement logiciel (SDK)
+# <a name="install-the-sdk"></a>Installer le SDK
 
 Cette rubrique vous guide tout au long de l’installation des outils de développement.
 

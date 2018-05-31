@@ -4,7 +4,7 @@ description: Découvrez et identifiez les droits spécifiques qui sont utilisés
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/02/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f5006ef3d0401b6a7f018be1f65979c079cf04fc
-ms.sourcegitcommit: fdcfc006108f61fcd380ff6f3c3208c78ecf4056
+ms.openlocfilehash: 697fa4674699fd3b24f7f7353ff9f9d476040bd8
+ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "34423355"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuration des droits d’utilisation pour Azure Rights Management
 
@@ -156,7 +157,7 @@ Notez que le propriétaire Rights Management est indépendant du propriétaire d
 
 ## <a name="rights-management-use-license"></a>Licence d’utilisation Rights Management
 
-Quand un utilisateur ouvre un document ou un e-mail protégé par Azure Rights Management, une licence d’utilisation Rights Management est accordée à l’utilisateur pour ce contenu. Cette licence d’utilisation est un certificat qui contient les droits d’utilisation de l’utilisateur pour le document ou l’e-mail, ainsi que la clé de chiffrement utilisée pour chiffrer le contenu. La licence d’utilisation contient également une date d’expiration, si celle-ci a été définie, et une durée de validité.
+Quand un utilisateur ouvre un document ou un e-mail protégé par Azure Rights Management, une licence d’utilisation Rights Management est accordée à l’utilisateur pour ce contenu. Cette licence d’utilisation est un certificat qui contient les droits d’utilisation de l’utilisateur pour le document ou l’e-mail, ainsi que la clé de chiffrement utilisée pour chifrer le contenu. La licence d’utilisation contient également une date d’expiration, si celle-ci a été définie, et une durée de validité.
 
 Un utilisateur doit disposer d’une licence d’utilisation valide pour ouvrir le contenu en plus de son certificat de compte de droits (RAC), certificat accordé quand [l’environnement utilisateur est initialisé](../understand-explore/how-does-it-work.md#initializing-the-user-environment), puis renouvelé tous les 31 jours.
 
@@ -168,7 +169,7 @@ Pour un locataire, la période de validité par défaut de la licence est de 30�
 
 - Quand vous configurez une étiquette ou un modèle dans le portail Azure, la période de validité de la licence d’utilisation est définie avec la valeur du paramètre **Autoriser l’accès hors connexion**. 
     
-    Pour plus d’informations et de conseils sur la configuration de ce paramètre dans le portail Azure, consultez le tableau à l’étape 9 du [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md).
+    Pour plus d’informations et de conseils sur la configuration de ce paramètre dans le portail Azure, consultez le tableau [Informations sur les paramètres de protection](../deploy-use/configure-policy-protection.md#information-about-the-protection-settings) dans les instructions relatives à la configuration d’une étiquette pour la protection Rights Management.
 
 - Quand vous configurez un modèle à l’aide de PowerShell, la période de validité de la licence d’utilisation est définie avec la valeur du paramètre *LicenseValidityDuration* dans les applets de commande [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) et [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate).
     

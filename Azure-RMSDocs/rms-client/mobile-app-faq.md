@@ -5,7 +5,7 @@ keywords: Quelques questions fréquemment posées pour vous aider à utiliser l�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -14,11 +14,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 655829682f6fe962a27eb48ecf73deb9cabc481a
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 190fce3f1725775ae699dbc523a810dc79b96f88
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444246"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android
 
@@ -51,13 +52,18 @@ Si vous disposez de ces versions ou de versions ultérieures, vous pouvez instal
 Une fois que vous avez installé l’application, vous n’avez rien d’autre à faire à ce stade. Patientez jusqu'à ce que vous receviez un e-mail ou un fichier protégé que vous souhaitez afficher, puis choisissez la **visionneuse AIP** pour l’ouvrir. Vous serez invité à vous connecter avec votre compte professionnel ou scolaire, ou invité à sélectionner un certificat. Une fois ces informations d’identification authentifiées, vous pourrez lire le contenu.
 
 Toutefois, si vous ne souhaitez pas attendre, vous pouvez utiliser les instructions suivantes pour vous envoyer un e-mail ou un fichier protégé : [Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android](mobile-app-get-started.md) 
+
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Quelles informations d’identification utiliser pour se connecter à cette application ?
 
-Si votre organisation dispose déjà d’AD RMS en local (avec l’extension Appareils mobiles) ou utilise le service Azure Rights Management, vous pouvez utiliser vos informations d’identification pour vous connecter. Dans le cas contraire, vous pouvez vous inscrire pour obtenir un nouveau compte gratuit à l’aide de la [page Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
+Si votre organisation dispose déjà d’AD RMS en local (avec l’extension Appareils mobiles) ou utilise le service Azure Rights Management, servez-vous de vos informations d’identification pour vous connecter. 
+
+Si votre adresse e-mail personnelle a été utilisée pour protéger le fichier, utilisez les informations d’identification d’un [compte Microsoft](https://signup.live.com) gratuit pour vous connecter.
 
 ## <a name="can-i-sign-up-for-the-free-account-with-my-personal-email-address-such-as-a-hotmail-or-gmail-account"></a>Puis-je m’inscrire au compte gratuit avec mon adresse e-mail personnelle, comme un compte Hotmail ou Gmail ?
 
-Pas encore. Aujourd’hui, vous pouvez vous inscrire uniquement avec votre adresse e-mail professionnelle (compte professionnel ou scolaire). Nous travaillons à la prise en charge des adresses e-mail personnelles et mettrons à jour cette entrée quand elle sera disponible.
+Oui, lorsque vous demandez un compte Microsoft, vous pouvez spécifier votre adresse Hotmail ou Gmail, ou toute autre adresse e-mail que vous possédez. 
+
+Toutefois, même si cette visionneuse peut ouvrir des fichiers protégés avec ce compte, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="which-file-extensions-can-i-open-with-this-app"></a>Quelles extensions de fichier puis-je ouvrir avec cette application ?
 

@@ -4,17 +4,18 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/10/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 8b1024a26e086cb8cbd4696dc37d66350968a0b4
-ms.sourcegitcommit: fbc83d699b9e4e9c8e0e7d36f574630af6a4e3d9
+ms.openlocfilehash: 00305b1ba4f9ff750dd0fde9eb6a524cead39094
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444212"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -231,9 +232,14 @@ Les nouveaux utilisateurs que vous ajoutez seront en mesure d’ouvrir les docum
 
 ### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Exemple 4 : Étiquette pour des e-mails protégés qui prend en charge des autorisations moins restrictives que l’option Ne pas transférer
 
-Cette étiquette ne peut pas être limitée à Outlook, mais elle fournit des contrôles moins restrictifs que l’option Ne pas transférer. Par exemple, vous voulez que les destinataires puissent copier du contenu de l’e-mail ou d’une pièce jointe, ou qu’ils puissent imprimer et enregistrer une pièce jointe.
+Cette étiquette ne peut pas être limitée à Outlook, mais elle fournit des contrôles moins restrictifs que l’option Ne pas transférer. Par exemple, vous voulez que les destinataires puissent copier du contenu de l’e-mail ou d’une pièce jointe, ou qu’ils puissent enregistrer et modifier une pièce jointe.
 
-Si vous spécifiez des utilisateurs externes qui n’ont pas de compte dans Azure AD, demandez à vos utilisateurs de ne pas utiliser cette étiquette pour les documents, mais uniquement pour les e-mails. De plus, pour prendre en charge ces utilisateurs externes, Exchange Online doit être configuré pour les [nouvelles fonctionnalités dans Chiffrement de messages Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+Si vous spécifiez des utilisateurs externes ne possédant pas de compte dans Azure AD :
+
+- Cette étiquette peut être utilisée pour les-mails si Exchange Online utilise les [nouvelles fonctionnalités dans Chiffrement des messages Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
+ 
+- Pour les pièces jointes Office qui sont protégées automatiquement, ces documents peuvent être affichés dans le navigateur. Pour modifier ces documents, modifiez-les à l’aide d’Office 2016 « Démarrer en un clic » après les avoir téléchargés. [Plus d’informations](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+
 
 > [!NOTE]
 > Exchange Online déploie actuellement une nouvelle option appelée [Chiffrement seul](configure-usage-rights.md#encrypt-only-option-for-emails). Cette option n'est pas disponible pour la configuration des étiquettes. Toutefois, vous pouvez utiliser cet exemple pour configurer une étiquette avec le même ensemble de droits d’utilisation.

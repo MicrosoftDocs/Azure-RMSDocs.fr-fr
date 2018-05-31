@@ -4,7 +4,7 @@ description: Instructions pour installer, configurer et exécuter le scanneur Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: e13dc2a6307dfa11cd812586762ec4c496d33fcf
-ms.sourcegitcommit: 2eb5245b6afb291eae5ba87034e1698f096139dc
+ms.openlocfilehash: 207f3b91e656bb65820a42137ce3bd66109f36e1
+ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "34423321"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -40,21 +41,31 @@ Quand vous avez configuré votre [stratégie Azure Information Protection](confi
 
 Le scanneur peut inspecter les fichiers que Windows peut indexer à l’aide des iFilters installés sur l’ordinateur. Ensuite, pour déterminer si les fichiers doivent être étiquetés, le scanneur utilise la détection de modèles et les types d’informations sensibles de protection contre la perte de données intégrée à Office 365 ou les modèles regex Office 365. Étant donné que le scanneur utilise le client Azure Information Protection, il peut classifier et protéger les mêmes [types de fichiers](../rms-client/client-admin-guide-file-types.md).
 
-Vous pouvez exécuter le scanneur en mode découverte uniquement, dans lequel vous utilisez les rapports pour vérifier ce qui se passerait si les fichiers étaient étiquetés. Ou bien, vous pouvez exécuter le scanneur pour appliquer automatiquement les étiquettes.
+Vous pouvez exécuter le scanneur en mode découverte uniquement, dans lequel vous utilisez les rapports pour vérifier ce qui se passerait si les fichiers étaient étiquetés. Ou bien, vous pouvez exécuter le scanneur pour appliquer automatiquement les étiquettes. Pour la préversion uniquement, vous pouvez également exécuter le scanneur pour découvrir les fichiers contenant des types d’informations sensibles, sans configurer d’étiquettes pour les conditions qui appliquent la classification automatique.
 
 Notez que le scanneur ne découvre pas et n’étiquette pas en temps réel. Il analyse systématiquement les fichiers dans les magasins de données que vous spécifiez. Vous pouvez configurer ce cycle pour s’exécuter une ou plusieurs fois.
+
+Spécifique à la préversion du scanneur :
+
+- Par défaut, seuls les documents Office sont protégés, et non tous les types de fichiers. Vous trouverez la liste complète des types de fichiers Office pris en charge dans le tableau **Types de fichier pris en charge par Office** du [Guide d’administration](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection). 
+    
+    Pour modifier ce comportement par défaut, par exemple, afin de protéger de façon générique d’autres types de fichiers, vous devez modifier manuellement le Registre et indiquer les types de fichiers supplémentaires qui doivent être protégés. Pour obtenir des instructions, consultez [Configuration de l’API de fichier](../develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ».
+
+- Vous pouvez indiquer quels types de fichiers analyser ou exclure de l’analyse. Pour limiter les fichiers inspectés par le scanneur, définissez une liste de types de fichiers à l’aide de l’applet de commande [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType).
+
+- Vous pouvez configurer le scanneur de manière à ce qu’il inspecte les fichiers afin de trouver tous les types d’informations sensibles ou appliquer une étiquette par défaut sans inspection des fichiers. [Plus d’informations](#using-the-scanner-with-alternative-configurations)
 
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Prérequis pour le scanneur Azure Information Protection
 Avant d’installer le scanneur Azure Information Protection, vérifiez que les conditions suivantes sont respectées.
 
 |Condition requise|Plus d’informations|
 |---------------|--------------------|
-|Ordinateur Windows Server pour exécuter le service du scanneur :<br /><br />- 4 processeurs<br /><br />- 4 Go de RAM|Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Remarque : À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez utiliser un système d’exploitation client Windows qui est [pris en charge par le client Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Il peut s’agir d’un ordinateur physique ou virtuel doté d’une connexion réseau rapide et fiable aux magasins de données à scanner. <br /><br />Vérifiez que cet ordinateur dispose de la [connectivité Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) dont il a besoin pour Azure Information Protection. Ou bien, vous devez le configurer en tant qu’[ordinateur déconnecté](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
+|Ordinateur Windows Server pour exécuter le service du scanneur :<br /><br />- 4 processeurs<br /><br />- 4 Go de RAM|Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Remarque : À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez utiliser un système d’exploitation client Windows qui est [pris en charge par le client Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Il peut s’agir d’un ordinateur physique ou virtuel doté d’une connexion réseau rapide et fiable aux magasins de données à scanner. <br /><br />Vérifiez que cet ordinateur dispose de la [connectivité Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) dont il a besoin pour Azure Information Protection. Ou bien, vous devez le configurer en tant qu’[ordinateur déconnecté](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).|
 |SQL Server pour stocker la configuration du scanneur :<br /><br />- Instance locale ou distante<br /><br />-Rôle sysadmin pour installer le scanneur|SQL Server 2012 est la version minimale pour les éditions suivantes :<br /><br />- SQL Server Entreprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Le compte qui installe le scanneur doit être autorisé à écrire dans la base de données master (doit être un membre du rôle db_datawriter). Le processus d’installation accorde le rôle db-owner au compte de service qui exécute le scanneur. Ou bien, vous pouvez créer manuellement la base de données AzInfoProtectionScanner avant d’installer le scanneur et attribuer le rôle db-owner au compte de service du scanneur.|
 |Compte de service pour exécuter le service du scanneur|En plus d’exécuter le service du scanneur, ce compte s’authentifie auprès d’Azure AD, puis télécharge la stratégie Azure Information Protection. Ce compte doit donc être un compte Active Directory synchronisé sur Azure AD, avec les conditions supplémentaires suivantes :<br /><br />Droit d’- **ouverture de session locale**. Ce droit est exigé pour l’installation et la configuration du scanneur, mais pas pour son fonctionnement. Vous devez accorder ce droit au compte de service, mais vous pouvez le supprimer après avoir vérifié que le scanneur peut détecter, classifier et protéger des fichiers. <br /><br />Remarque : si les stratégies internes ne permettent pas aux comptes de service de bénéficier de ce droit, mais si les comptes de service peuvent bénéficier du droit **Ouvrir une session en tant que tâche**, vous pouvez satisfaire cette exigence avec une configuration supplémentaire. Pour obtenir des instructions, consultez [Spécifier et utiliser le paramètre Jeton pour Set-AIPAuthentication](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) dans le guide de l’administrateur.<br /><br />Droit d’- **ouverture de session en tant que service**. Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur. <br /><br />- Autorisations d’accès aux dépôts de données : vous devez accorder des autorisations de **Lecture** et **Écriture** pour l’analyse des fichiers, puis l’application d’une classification et d’une protection aux fichiers qui remplissent les conditions stipulées dans la stratégie Azure Information Protection. Pour exécuter le scanneur en mode découverte uniquement, l’autorisation **Lecture** suffit.<br /><br />- Pour les étiquettes qui reprotègent ou retire la protection : pour veiller à ce que le scanneur ait toujours accès aux fichiers protégés, faites de ce compte un [super utilisateur](configure-super-users.md) du service Azure Rights Management et vérifiez que la fonctionnalité de super utilisateur est activée. Pour plus d’informations sur la configuration requise des comptes pour appliquer la protection, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md).|
-|Le client Azure Information Protection est installé sur l’ordinateur Windows Server|Vous devez installer le client complet pour le scanneur. N’installez pas le client avec juste le module PowerShell.<br /><br />Pour obtenir des instructions d’installation du client, consultez le [guide de l’administrateur](../rms-client/client-admin-guide.md).|
-|Étiquettes configurées qui appliquent une classification automatique et éventuellement une protection|Pour plus d’informations sur la manière de configurer les conditions dans la stratégie Azure Information Protection, consultez [Guide pratique pour configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection](configure-policy-classification.md).<br /><br />Pour plus d’informations sur la façon de configurer les étiquettes pour appliquer une protection aux fichiers, consultez [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md).<br /><br />Ces étiquettes peuvent être dans la stratégie globale, ou dans une ou plusieurs [stratégies délimitées](configure-policy-scope.md).|
-|Si tous les fichiers dans un ou plusieurs référentiels de données doivent avoir une étiquette :<br /><br />- Une étiquette par défaut configurée comme un paramètre de stratégie|Pour plus d’informations sur la configuration du paramètre d’étiquette par défaut, consultez [Guide pratique pour configurer les paramètres de stratégie pour Azure Information Protection](configure-policy-settings.md).<br /><br />Ce paramètre d’étiquette par défaut doit être dans la stratégie globale ou une stratégie délimitée du scanneur. Toutefois, ce paramètre d’étiquette par défaut peut être remplacé par une autre étiquette par défaut que vous configurez au niveau du référentiel de données.| 
+|Le client Azure Information Protection est installé sur l’ordinateur Windows Server|Vous devez installer le client complet pour le scanneur. N’installez pas le client avec juste le module PowerShell.<br /><br />Pour obtenir des instructions d’installation du client, consultez le [guide de l’administrateur](../rms-client/client-admin-guide.md).<br /><br />Remarque : Il existe désormais une préversion du scanner que vous pouvez installer à des fins de test. Téléchargez et installez la préversion du client à partir du Centre de téléchargement Microsoft.|
+|Étiquettes configurées qui appliquent une classification automatique et éventuellement une protection|Pour plus d’informations sur la manière de configurer les conditions dans la stratégie Azure Information Protection, consultez [Guide pratique pour configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection](configure-policy-classification.md).<br /><br />Pour plus d’informations sur la façon de configurer les étiquettes pour appliquer une protection aux fichiers, consultez [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md).<br /><br />Ces étiquettes peuvent être dans la stratégie globale, ou dans une ou plusieurs [stratégies délimitées](configure-policy-scope.md).<br /><br />Remarque : Pour la préversion, vous pouvez désormais exécuter le scanneur même si vous n’avez pas configuré les étiquettes qui appliquent la classification automatique, mais ce scénario n’est pas abordé dans ces instructions. [Plus d’informations](#using-the-scanner-without-automatic-classification)|
+|Si tous les fichiers dans un ou plusieurs référentiels de données doivent avoir une étiquette :<br /><br />- Une étiquette par défaut configurée comme un paramètre de stratégie|Pour plus d’informations sur la configuration du paramètre d’étiquette par défaut, consultez [Guide pratique pour configurer les paramètres de stratégie pour Azure Information Protection](configure-policy-settings.md).<br /><br />Ce paramètre d’étiquette par défaut doit être dans la stratégie globale ou une stratégie délimitée du scanneur. Toutefois, ce paramètre d’étiquette par défaut peut être remplacé par une autre étiquette par défaut que vous configurez au niveau du référentiel de données.<br /><br />Remarque : Pour la préversion, vous n’avez plus besoin de configurer une étiquette par défaut dans la stratégie.| 
 
 
 ## <a name="install-the-azure-information-protection-scanner"></a>Guide pratique pour installer le scanneur Azure Information Protection
@@ -149,7 +160,13 @@ Dans son paramétrage par défaut, le scanneur s’exécute une seule fois en mo
 
 1. Sur l’ordinateur Windows Server, dans la session PowerShell, exécutez la commande suivante :
     
+    Pour la version en disponibilité générale :
+    
         Set-AIPScannerConfiguration -ScanMode Enforce -Schedule Continuous
+    
+    Pour la préversion :
+    
+        Set-AIPScannerConfiguration -Enforce On -Schedule Continuous
     
     Il existe d’autres paramètres de configuration que vous pouvez modifier. Par exemple, si les attributs de fichier sont modifiés et ce qui est enregistré dans les rapports. De plus, si votre stratégie Azure Information Protection inclut le paramètre qui exige un message de justification pour diminuer le niveau de classification ou supprimer la protection, spécifiez ce message à l’aide de cette applet de commande. Utilisez l’[aide en ligne](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) pour plus d’informations sur chaque paramètre de configuration. 
 
@@ -164,6 +181,8 @@ Puisque nous avons configuré la planification pour qu’elle s’exécute en co
 
 Le scanneur ignore automatiquement les fichiers qui sont [exclus de la classification et de la protection](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client), comme les fichiers exécutables et les fichiers système.
 
+Dans la préversion, vous pouvez modifier ce comportement en définissant une liste de types de fichiers à analyser ou à exclure de l’analyse. Lorsque vous définissez cette liste sans spécifier de référentiel de données, la liste s’applique à tous les référentiels de données qui n’ont pas leur propre liste spécifiée. Pour définir cette liste, utilisez l’applet de commande [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType). Après avoir spécifié votre liste de types de fichiers, vous pouvez ajouter un nouveau type de fichier à l’aide de l’applet de commande [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType) et en supprimer un à l’aide de l’applet de commande [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType).
+
 Puis le scanneur utilise Windows iFilter pour analyser les types de fichiers suivants. Pour ces types de fichiers, le document est étiqueté selon les conditions que vous avez spécifiées pour vos étiquettes.
 
 |Type d'application|Type de fichier|
@@ -176,7 +195,7 @@ Puis le scanneur utilise Windows iFilter pour analyser les types de fichiers sui
 |Text|.txt ; .xml ; .csv|
 
 
-Enfin, pour les autres types de fichiers, le scanneur applique l’étiquette par défaut dans la stratégie Azure Information Protection.
+Enfin, pour les autres types de fichiers, le scanneur applique l’étiquette par défaut de la stratégie Azure Information Protection, ou l’étiquette par défaut que vous configurez pour le scanneur.
 
 |Type d'application|Type de fichier|
 |--------------------------------|-------------------------------------|
@@ -196,7 +215,16 @@ Enfin, pour les autres types de fichiers, le scanneur applique l’étiquette pa
 
 Lorsqu’une étiquette applique une protection générique à des documents, l’extension de nom de fichier devient .pfile. En outre, le fichier est en lecture seule jusqu’à ce qu’il soit ouvert par un utilisateur autorisé et enregistré dans son format natif. Les fichiers texte et les images peuvent également modifier leur extension de nom de fichier et passer en lecture seule. Si vous ne le souhaitez pas, vous pouvez empêcher la protection de fichiers d’un type spécifique. Par exemple, vous pouvez empêcher un fichier PDF de devenir un fichier PDF protégé (.ppdf), ou empêcher un fichier .txt de devenir un fichier texte protégé (.ptxt).
 
-Pour obtenir plus d’informations sur les différents niveaux de protection des différents types de fichiers et pour savoir comment contrôler le comportement de protection, consultez la section [Types de fichiers pris en charge pour la protection](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) du guide de l’administrateur.
+Pour plus d’informations sur les différents niveaux de protection des différents types de fichiers et pour savoir comment contrôler le comportement de protection en modifiant le Registre, consultez la section [Types de fichiers pris en charge pour la protection](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) du guide de l’administrateur.
+
+Pour la version en disponibilité générale du scanneur :
+
+- Par défaut, tous les types de fichiers sont protégés.
+
+
+Pour la préversion du scanneur :
+
+- Par défaut, seuls les types de fichiers Office sont protégés.
 
 
 ## <a name="when-files-are-rescanned-by-the-azure-information-protection-scanner"></a>Quand les fichiers sont rescannés par le scanneur Azure Information Protection
@@ -213,6 +241,23 @@ De plus, tous les fichiers sont inspectés quand le scanneur télécharge une st
 > Si vous avez changé les paramètres de protection de la stratégie, attendez 15 minutes après l’enregistrement des paramètres de protection avant de redémarrer le service.
 
 Si le scanneur a téléchargé une stratégie sans conditions automatiques, la copie du fichier de stratégie dans le dossier du scanneur n’est pas mise à jour. Dans ce scénario, vous devez supprimer le fichier de stratégie **Policy.msip** dans **%LocalAppData%\Microsoft\MSIP\Policy.msip** et dans **%LocalAppData%\Microsoft\MSIP\Scanner** pour que le scanneur puisse utiliser un fichier de stratégie récemment téléchargé avec des étiquettes correctement configurées pour les conditions automatiques.
+
+## <a name="using-the-scanner-with-alternative-configurations"></a>Utilisation du scanneur avec d’autres configurations
+
+Lorsque vous utilisez la préversion du scanneur, il existe deux scénarios pris en charge par le scanneur dans lesquels il n’est pas nécessaire que des étiquettes soient configurées pour des conditions quelles qu’elles soient : 
+
+- Appliquer une étiquette par défaut à tous les fichiers dans un référentiel de données.
+    
+    Pour cette configuration, utilisez l’applet de commande [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository) et définissez le paramètre *MatchPolicy* sur **Off**. 
+    
+    Le contenu des fichiers n’est pas inspecté et tous les fichiers du référentiel de données sont étiquetés avec l’étiquette par défaut que vous spécifiez pour le référentiel de données (avec le paramètre *SetDefaultLabel*) ou si celle-ci n’est pas spécifié, l’étiquette par défaut qui est spécifiée comme paramètre de stratégie pour le compte d’analyse.
+    
+
+- Identifier toutes les conditions personnalisées et tous les types d’informations sensibles connus.
+    
+    Pour cette configuration, utilisez l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) et définissez le paramètre *DiscoverInformationTypes* sur **All**.
+    
+    Le scanneur utilise toute condition personnalisée que vous avez spécifiée pour les étiquettes dans la stratégie Azure Information Protection et la liste des types d’informations qui sont disponibles pour les étiquettes dans la stratégie Azure Information Protection. 
 
 ## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Optimisation des performances de l’analyseur Azure Information Protection
 
@@ -256,6 +301,15 @@ Autres facteurs qui affectent les performances de l’analyseur :
     
     - Les gros fichiers prennent évidemment plus de temps à analyser que les petits fichiers.
 
+- Pour la préversion du scanneur :
+    
+    - Vérifiez que le compte de service qui exécute le scanneur dispose seulement des droits documentés dans la section [prérequis du scanneur](#prerequisites-for-the-azure-information-protection-scanner), puis configurez la [propriété client avancée](../rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) de manière à désactiver le niveau d’intégrité faible pour le scanneur.
+    
+    - Le scanneur s’exécute plus rapidement lorsque vous utilisez la [configuration de remplacement](#using-the-scanner-with-alternative-configurations) pour appliquer une étiquette par défaut à tous les fichiers, car le scanneur n’inspecte pas le contenu du fichier.
+    
+    - Le scanneur s’exécute plus lentement lorsque vous utilisez la [configuration de remplacement](#using-the-scanner-with-alternative-configurations) pour identifier toutes les conditions personnalisées et les types d’informations sensibles connus.
+    
+
 ## <a name="list-of-cmdlets-for-the-azure-information-protection-scanner"></a>Liste des applets de commande pour le scanneur Azure Information Protection 
 
 D’autres applets de commande propres au scanneur vous permettent de modifier son compte de service et sa base de données, d’obtenir ses paramètres actuels et de désinstaller son service. Le scanneur utilise les applets de commande suivantes :
@@ -277,6 +331,14 @@ D’autres applets de commande propres au scanneur vous permettent de modifier s
 - [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
+
+Applets de commande supplémentaires dans la préversion du scanneur :
+
+- [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType)
+
+- [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType)
+
+- [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes)
 
 
 ## <a name="event-log-ids-and-descriptions"></a>ID du journal des événements et descriptions

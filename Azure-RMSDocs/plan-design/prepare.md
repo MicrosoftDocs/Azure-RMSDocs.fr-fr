@@ -4,7 +4,7 @@ description: Vérifiez que vous disposez des comptes d’utilisateur et de group
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/07/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 760fe51d8c864ff28f599dd3cf1f84ae72c03343
-ms.sourcegitcommit: 2b031166026b4b6dd87e0dbaec44a99204c8691c
+ms.openlocfilehash: bb38d33972fb99596fcde8bc54e53c38e3817336
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444110"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 
@@ -84,7 +85,11 @@ Pour affecter des droits d’utilisation et des contrôles d’accès, et config
 
 En plus d’utiliser les attributs proxyAddresses et userPrincipalName d’Azure AD pour les utilisateurs dans votre locataire, Azure Information Protection utilise également ces attributs de la même manière pour autoriser les utilisateurs d’un autre locataire.
 
-Quand un e-mail est envoyé en utilisant le chiffrement de messages Office 365 avec de nouvelles fonctionnalités à un utilisateur qui n’a pas de compte dans Azure AD, cet utilisateur est d’abord authentifié via la fédération avec un fournisseur d’identité sociale ou avec un code secret à usage unique. L’adresse e-mail spécifiée dans l’e-mail protégé est alors utilisée pour autoriser l’utilisateur.
+Autres méthodes d'autorisation :
+
+- Pour les adresses e-mail qui ne sont pas dans Azure AD, Azure Information Protection peut les autoriser si elles sont authentifiées avec un compte Microsoft. Toutefois, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+
+- Quand un e-mail est envoyé en utilisant le chiffrement de messages Office 365 avec de nouvelles fonctionnalités à un utilisateur qui n’a pas de compte dans Azure AD, cet utilisateur est d’abord authentifié via la fédération avec un fournisseur d’identité sociale ou avec un code secret à usage unique. L’adresse e-mail spécifiée dans l’e-mail protégé est alors utilisée pour autoriser l’utilisateur.
 
 ## <a name="azure-information-protection-requirements-for-group-accounts"></a>Configuration requise d’Azure Information Protection pour les comptes de groupe
 

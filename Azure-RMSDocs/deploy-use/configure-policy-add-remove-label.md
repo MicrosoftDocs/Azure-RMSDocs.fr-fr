@@ -4,24 +4,22 @@ description: Ajouter ou supprimer une étiquette Azure Information Protection à
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: 73152d2202096775d315f874b30269c89213f8e1
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: ad74efff44738c5475e988d861fda8d93686e794
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32326301"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Ajouter une étiquette à une stratégie Azure Information Protection ou la supprimer de celle-ci
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
->[!NOTE]
-> Cet article reflète les dernières mises à jour du portail Azure, qui vous permettent de créer une étiquette indépendamment de la stratégie globale ou de la stratégie délimitée. De plus, l’option de publication de stratégies est supprimée. Si votre locataire n’a pas encore été mis à jour avec ces modifications (par exemple, vous voyez toujours une option **Publier** pour Azure Information Protection à la place de l’option de menu **CLASSIFICATIONS**), veuillez patienter quelques jours, puis revenez à ces instructions.  
 
 Après avoir créé une étiquette Azure Information Protection, vous pouvez l’ajouter à une stratégie afin qu’elle soit disponible pour les utilisateurs. Si l’étiquette est destinée à tous les utilisateurs, ajoutez-la à la stratégie globale. Si l’étiquette est destinée à une partie des utilisateurs, ajoutez-la à une stratégie délimitée. Vous ne pouvez ajouter une étiquette qu’à une seule stratégie. Pour ajouter une sous-étiquette, son étiquette parente doit être dans la même stratégie, ou dans la stratégie globale.
 

@@ -25,7 +25,7 @@ Même si vous avez un abonnement prenant en charge Azure Rights Management, le s
 
 6.  Dans la page **Rights Management** , cliquez sur **Activer**.
 
-7.  Lorsque l’invite **Voulez-vous activer Rights Management ?**apparaît, cliquez sur **activer**.
+7.  Lorsque l’invite **Voulez-vous activer Rights Management ?** apparaît, cliquez sur **activer**.
 
 Vous devriez maintenant voir **Rights management est activé** , ainsi que l’option de désactivation (vous devrez peut-être actualiser la page manuellement).
 

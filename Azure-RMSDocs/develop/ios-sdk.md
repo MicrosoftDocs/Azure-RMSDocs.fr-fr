@@ -1,13 +1,13 @@
 ---
 title: Installation iOS et OS X | Azure RMS
-description: "Les applications iOS et OS X peuvent utiliser RMS SDK 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’AAD RM."
-keywords: 
+description: Les applications iOS et OS X peuvent utiliser RMS SDK 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’AAD RM.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765624"
 ---
 # <a name="ios-and-os-x-setup"></a>Installation iOS et OS X
 

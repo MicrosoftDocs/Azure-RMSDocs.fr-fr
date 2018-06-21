@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30207435"
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Options de boîte de dialogue pour l'application de partage Rights Management
 

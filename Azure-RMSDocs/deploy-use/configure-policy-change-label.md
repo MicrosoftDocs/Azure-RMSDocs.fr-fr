@@ -4,25 +4,23 @@ description: Vous pouvez modifier ou optimiser les étiquettes que les utilisate
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
-ms.openlocfilehash: 9bd9c249cdd969a2742390831c2feef8d515b837
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: a8c745ac51c34139792367d55c5a83592c191571
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32326257"
 ---
 # <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Comment modifier ou personnaliser une étiquette existante pour Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
->[!NOTE]
-> Cet article reflète les dernières mises à jour du portail Azure, qui vous permettent de créer une étiquette indépendamment de la stratégie globale ou de la stratégie délimitée. De plus, l’option de publication de stratégies est supprimée. Si votre locataire n’a pas encore été mis à jour avec ces modifications (par exemple, vous voyez toujours une option **Publier** pour Azure Information Protection à la place de l’option de menu **CLASSIFICATIONS**), veuillez patienter quelques jours, puis revenez à ces instructions.
- 
 Vous pouvez modifier ou optimiser les étiquettes que les utilisateurs voient dans la barre Information Protection ou à partir du bouton **Protéger** du ruban Office en les configurant dans le portail Azure.
 
 Par exemple, vous pouvez changer le nom d’une étiquette ou sous-étiquette, l’info-bulle, la couleur et l’ordre. Vous pouvez choisir si l’étiquette applique des marquages visuels comme un pied de page ou un filigrane. Vous pouvez aussi choisir si l’étiquette applique une protection, ainsi qu’une classification recommandée ou automatique.

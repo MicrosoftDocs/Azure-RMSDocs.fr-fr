@@ -19,6 +19,7 @@ ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/29/2018
+ms.locfileid: "30259028"
 ---
 # <a name="release-notes"></a>Notes de publication
 
@@ -72,7 +73,7 @@ Cet article contient des informations importantes sur cette version du kit SDK R
 
 ## <a name="january-2015-update"></a>Mise à jour de janvier 2015
 
--   **Prise en charge de l’augmentation de la taille du fichier protégé (pfile)** : prise en charge de tailles de fichiers supérieures à un gigaoctet (1 Go). Pour plus d’informations sur les fichiers pfile, consultez [Formats de fichiers pris en charge](supported-file-formats.md).
+-   **Prise en charge de l’augmentation de la taille du fichier protégé (pfile)**  : prise en charge de tailles de fichiers supérieures à un gigaoctet (1 Go). Pour plus d’informations sur les fichiers pfile, consultez [Formats de fichiers pris en charge](supported-file-formats.md).
 -   **Amélioration de la journalisation pour un meilleur diagnostic** : les niveaux de journalisation indiquent **ERREUR** ou **AVERTISSEMENT** pour les messages qui doivent être examinés. Tous les autres messages, y compris les exceptions qui sont toujours affichées, seront enregistrés en tant que **INFO**.
 
     Nous avons choisi cette approche afin de ne perdre aucun détail. À présent, seuls les messages importants ayant le niveau AVERTISSEMENT sont affichés.

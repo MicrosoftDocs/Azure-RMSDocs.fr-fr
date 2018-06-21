@@ -1,13 +1,13 @@
 ---
 title: Exemples de code Linux | Azure RMS
-description: "Cette rubrique présente les éléments de code et les scénarios importants pour la version Linux du Kit RMS SDK."
-keywords: 
+description: Cette rubrique présente les éléments de code et les scénarios importants pour la version Linux du Kit RMS SDK.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765508"
 ---
 # <a name="linux-code-examples"></a>Exemples de code Linux
 
@@ -33,7 +34,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **Description** : Après obtention d’un nom de fichier auprès de l’utilisateur, lecture des certificats (voir *MainWindow::addCertificates*), configuration du rappel d’autorisation avec l’ID client et l’URL de redirection, appel de *ConvertFromPFile* (voir l’exemple de code suivant), puis lecture de la description, de la date de validité du contenu et du nom de la stratégie de protection.
 
-**C++** :
+**C++**  :
 
     void MainWindow::ConvertFromPFILE(const string& fileIn,
         const string& clientId,
@@ -101,7 +102,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **Description** : Cette méthode crée un flux de fichier protégé à partir du flux de sauvegarde passé par le biais de la méthode du SDK, *ProtectedFileStream::Aquire*, qui est ensuite retourné à l’appelant.
 
-**C++** :
+**C++**  :
 
     shared_ptr<GetProtectedFileStreamResult>PFileConverter::ConvertFromPFile(
     const string           & userId,
@@ -153,7 +154,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **Description** : Après obtention d’un nom de fichier auprès de l’utilisateur, lecture des certificats (voir *MainWindow::addCertificates*) et configuration du rappel d’autorisation avec l’ID client et l’URL de redirection, le fichier sélectionné est protégé en appelant *ConvertToPFileTemplates* (voir l’exemple de code suivant).
 
-**C++** :
+**C++**  :
 
     void MainWindow::ConvertToPFILEUsingTemplates(const string& fileIn,
                                               const string& clientId,
@@ -216,7 +217,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **Description**: Une liste de modèles associés à l’utilisateur est récupérée et le modèle sélectionné est ensuite utilisé pour créer une stratégie qui, à son tour, est utilisée pour protéger le fichier.
 
-**C++** :
+**C++**  :
 
     void PFileConverter::ConvertToPFileTemplates(const string           & userId,
                                              shared_ptr<istream>      inStream,
@@ -249,7 +250,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **Description**: Créer un flux de fichier protégé à l’aide de la stratégie donnée, puis protéger ce fichier.
 
-**C++** :
+**C++**  :
 
     void PFileConverter::ConvertToPFileUsingPolicy(shared_ptr<UserPolicy>   policy,
                                                shared_ptr<istream>      inStream,
@@ -293,7 +294,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **Description** : Après obtention d’un nom de fichier auprès de l’utilisateur, lecture des certificats (voir *MainWindow::addCertificates*), collecte des informations sur les droits auprès de l’utilisateur et configuration du rappel d’autorisation avec l’ID client et l’URL de redirection, le fichier sélectionné est protégé en appelant *ConvertToPFileTemplates* (voir l’exemple de code suivant).
 
-**C++** :
+**C++**  :
 
     void MainWindow::ConvertToPFILEUsingRights(const string            & fileIn,
                                            const vector<UserRights>& userRights,
@@ -376,7 +377,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 **Description** : Créer un descripteur de stratégie et le remplir avec les informations sur les droits de l’utilisateur, puis utiliser le descripteur de stratégie pour créer une stratégie utilisateur. Cette stratégie est utilisée pour protéger le fichier sélectionné par le biais d’un appel à *ConvertToPFileUsingPolicy* (voir la description fournie dans une section précédente de cette rubrique).
 
-**C++** :
+**C++**  :
 
     void PFileConverter::ConvertToPFilePredefinedRights(
     const string            & userId,
@@ -408,7 +409,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 
 La méthode *WorkerThread()* est appelée par deux des exemples de scénarios précédents (**Créer un flux de fichier protégé** et **Protège un fichier conformément à une stratégie**) de la manière suivante :
 
-**C++** :
+**C++**  :
 
     threadPool.push_back(thread(WorkerThread,
                                   static_pointer_cast<iostream>(outStream), pfs,
@@ -417,7 +418,7 @@ La méthode *WorkerThread()* est appelée par deux des exemples de scénarios pr
 
 **Méthode de prise en charge, WorkerThread()**
 
-**C++** :
+**C++**  :
 
     static mutex   threadLocker;
     static int64_t totalSize     = 0;
@@ -507,14 +508,14 @@ Les exemples suivants montrent deux approches d’authentification : obtention 
 **Étape 1** : Créer un point partagé de l’objet **rmsauth::FileCache**
 Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par défaut.
 
-**C++** :
+**C++**  :
 
     auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
 
 
 **Étape 2** : Créer l’objet **rmsauth::AuthenticationContext** Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*.
 
-**C++** :
+**C++**  :
 
     AuthenticationContext authContext(
                               std::string(“https://sts.aadrm.com/_sts/oauth/authorize”),
@@ -530,7 +531,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
 -   *Comportement de l’invite d’authentification* : Si vous définissez **PromptBehavior::Auto**, la bibliothèque essaie d’utiliser le cache et d’actualiser le jeton si nécessaire
 -   *ID d’utilisateur* : Nom d’utilisateur affiché dans la fenêtre d’invite
 
-**C++** :
+**C++**  :
 
     auto result = authContext.acquireToken(
                 std::string(“api.aadrm.com”),
@@ -550,14 +551,14 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
 
 **Étape 1** : Créer un point partagé de l’objet **rmsauth::FileCache** Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par défaut
 
-**C++** :
+**C++**  :
 
     auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
 
 
 **Étape 2** : Créer l’objet **UserCredential** Description : Spécifier la *connexion utilisateur* et le *mot de passe*
 
-**C++** :
+**C++**  :
 
     auto userCred = std::make_shared<UserCredential>("john.smith@msopentechtest01.onmicrosoft.com",
                                                  "SomePass");
@@ -565,7 +566,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
 
 **Étape 3** : Créer l’objet **rmsauth::AuthenticationContext** Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*
 
-**C++** :
+**C++**  :
 
     AuthenticationContext authContext(
                         std::string(“https://sts.aadrm.com/_sts/oauth/authorize”),
@@ -578,7 +579,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
 -   *ID du client unique* : Généralement un GUID
 -   *Informations d’identification de l’utilisateur* : passer l’objet créé
 
-**C++** :
+**C++**  :
 
     auto result = authContext.acquireToken(
                 std::string(“api.aadrm.com”),

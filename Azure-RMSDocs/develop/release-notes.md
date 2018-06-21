@@ -1,6 +1,6 @@
 ---
-title: "Nouveautés et notes de publication"
-description: "Décrit les modifications et les fonctionnalités importantes de cette version et des versions précédentes."
+title: Nouveautés et notes de publication
+description: Décrit les modifications et les fonctionnalités importantes de cette version et des versions précédentes.
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/29/2018
+ms.locfileid: "28878933"
 ---
 # <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
 

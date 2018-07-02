@@ -4,7 +4,7 @@ description: Une fois que vous avez protégé vos documents, vous pouvez suivre 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/04/2018
+ms.date: 06/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e4e35659ab964a636c6ca0c7066b1c809cc5958b
-ms.sourcegitcommit: 6a67fc50bd8b8a06974de647c15115a673f0217c
+ms.openlocfilehash: 610a1e5f147ab8ce0cca3adb59191d145d01a1ae
+ms.sourcegitcommit: 78d368a4480cc1febedc8535c6c3e184e69caf7f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33823525"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37088274"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guide de l’utilisateur : Suivre et révoquer vos documents quand vous utilisez Azure Information Protection
 
@@ -64,7 +64,7 @@ Pour effectuer le suivi d’un document que vous avez protégé, vous devez util
 
 ## <a name="using-office-to-track-or-revoke-the-document"></a>Utilisation d’Office pour suivre ou révoquer le document
 
-Pour les applications Office, Word, Excel, PowerPoint et Outlook : 
+Pour les applications Office, Word, Excel et PowerPoint : 
 
 1. Ouvrez le document protégé que vous souhaitez suivre ou révoquer.
 

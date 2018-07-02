@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs pour le
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b8cd6aeb13398bdfd65ba3e743e3e12bf3cc5f53
-ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
+ms.openlocfilehash: 511fea3a6176cf047eb4c1568d2efa755c46f39c
+ms.sourcegitcommit: e0a47ccee898b50907374cc74fcfd9abf59cd98d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34423287"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36949825"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 
@@ -74,14 +74,6 @@ Ensuite, vérifiez les prérequis supplémentaires qui peuvent être nécessaire
     Même si vous n’avez pas configuré ce paramètre de stratégie de groupe **Liste des compléments gérés**, vous devrez peut-être le configurer si vous recevez des rapports signalant que le complément Microsoft Azure Information Protection est désactivé. Quand ce complément est désactivé, les utilisateurs ne voient pas la barre Azure Information Protection dans l’application Office.
     
     Pour plus d’informations sur ce paramètre de stratégie de groupe, consultez [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Aucun complément n’est chargé à cause des paramètres de stratégie de groupe pour les programmes Office 2013 et Office 2016).
-
-- Pour les versions d’Outlook « Démarrer en un clic » 16.0.9324.1000 et ultérieures : activer la prise en charge héritée pour les écrans
-    
-    Pour empêcher que la barre Azure Information Protection ne s’affiche en dehors d’Outlook pour les versions « Démarrer en un clic » identifiées, vous devrez peut-être activer la prise en charge héritée pour les écrans. Lorsque la barre ne s’affiche pas correctement dans ce scénario, vous risquez de la voir sous la forme **AdxTaskPane**. 
-    
-    Pour configurer ce paramètre dans Outlook : **Fichier** > **Options** > **Général** :
-    
-    - Dans la section **Options de l’interface utilisateur**, si vous voyez que l’option **Utiliser les meilleurs paramètres pour mon écran** est sélectionnée, supprimez cette sélection.
 
 > [!IMPORTANT]
 > L’installation du client Azure Information Protection nécessite les autorisations d’administrateur local.

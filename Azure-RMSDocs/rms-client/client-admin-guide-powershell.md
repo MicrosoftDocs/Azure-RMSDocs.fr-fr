@@ -4,7 +4,7 @@ description: Instructions et informations pour que les administrateurs gèrent l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 06/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b4376d9f2b0cde836b37553eb83efd8068e6c2f8
-ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
+ms.openlocfilehash: a830fa6172df3dab2701109fd30484156c69fc29
+ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "35726828"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/17/2018
 
 Quand vous installez le client Azure Information Protection, des commandes PowerShell sont installés automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
-Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module comprend toutes les applets de commande Rights Management de l’outil de protection RMS (qui n’est plus pris en charge). Il propose également de nouvelles applets de commande qui utilisent le service AIP (Azure Information Protection) pour l’étiquetage. Par exemple :
+Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module comprend toutes les applets de commande Rights Management de l’outil de protection RMS (qui n’est plus pris en charge). Il propose également des applets de commande qui utilisent Azure Information Protection pour l’étiquetage. Par exemple :
 
 |Étiquetage des applets de commande|Exemple d’utilisation|
 |----------------|---------------|
@@ -33,8 +34,12 @@ Les applets de commande sont installées avec le module PowerShell **AzureInform
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Pour un dossier partagé, appliquez une étiquette spécifiée à tous les fichiers dépourvus d’étiquette.|
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Étiquetez les fichiers de manière non interactive, par exemple à l’aide d’un script qui s’exécute selon une planification.|
 
+> [!TIP]
+> Pour utiliser des applets de commande avec des chemins d’accès dépassant 260 caractères, utilisez le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) disponible avec la mise à jour anniversaire de Windows 10 :<br /> **Stratégie Ordinateur local** > **Configuration de l’ordinateur** > **Modèles d’administration** > **Tous les paramètres** > **NTFS** > **Activer les noms de chemin d’accès Win32 longs** 
+> 
+> Pour Windows Server 2016, vous pouvez utiliser le même paramètre de stratégie de groupe lorsque vous installez les derniers modèles d’administration (.admx) pour Windows 10.
 
-De plus, le [scanneur Azure Information Protection](../deploy-use/deploy-aip-scanner.md) utilise des applets de commande pour installer et configurer un service sur Windows Server. Ce scanneur vous permet de découvrir, classifier et protéger des fichiers sur des magasins de données.
+Le [scanneur Azure Information Protection](../deploy-use/deploy-aip-scanner.md) utilise les applets de commande du module AzureInformationProtection pour installer et configurer un service sur Windows Server. Ce scanneur vous permet de découvrir, classifier et protéger des fichiers sur des magasins de données.
 
 Pour obtenir une liste de toutes les applets de commande et de l’aide associée, voir le [module Azure Information Protection](/powershell/module/azureinformationprotection). Dans une session PowerShell, tapez `Get-Help <cmdlet name> -online` pour afficher l’aide la plus récente.  
 

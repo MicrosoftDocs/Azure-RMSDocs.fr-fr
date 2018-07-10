@@ -4,7 +4,7 @@ description: Informations vous permettant de planifier et de gérer votre clé d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/05/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 714d00036d263cc64e44b67b547d743ff4cbab4b
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 6456bb5e124b1ec29090132e0bce750260c10f25
+ms.sourcegitcommit: b993c332e53d7aa48d93d4bbd42c80abcf79b351
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208649"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37107013"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
@@ -107,10 +107,11 @@ Utilisez les informations et les procédures de cette section si vous souhaitez 
 ### <a name="prerequisites-for-byok"></a>Conditions requises pour la solution BYOK
 Reportez-vous au tableau suivant pour connaître les conditions requises pour la solution Bring your own key (BYOK).
 
-|Condition requise|Autres informations|
+|Condition requise|Plus d’informations|
 |---------------|--------------------|
 |Votre locataire Azure Information Protection doit avoir un abonnement Azure. Si vous n’en avez pas, vous pouvez vous inscrire pour un [compte gratuit](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> Pour utiliser une clé protégée par module HSM, vous devez avoir le niveau de service Azure Key Vault Premium.|L’abonnement Azure gratuit qui fournit l’accès pour configurer Azure Active Directory et la configuration de modèles personnalisés Azure Rights Management (**Accès à Azure Active Directory**) n’est pas suffisant pour utiliser Azure Key Vault. Pour vérifier que vous disposez d’un abonnement Azure que vous pouvez utiliser pour la solution BYOK, utilisez les applets de commande PowerShell d’[Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) : <br /><br /> 1. Démarrez une session Azure PowerShell en activant l’option **Exécuter en tant qu’administrateur** et connectez-vous en tant qu’administrateur global pour votre locataire Azure Information Protection, via la commande suivante :`Login-AzureRmAccount`<br /><br />2. Saisissez ce qui suit et vérifiez que des valeurs s’affichent pour le nom et l’ID de votre abonnement ainsi que votre ID de locataire AIP, et que l’état est activé : `Get-AzureRmSubscription`<br /><br />Si aucune valeur n’est affichée et que vous revenez simplement à l’invite, c’est que vous n’avez pas d’abonnement Azure utilisable pour la solution BYOK. <br /><br />**Remarque** : En plus des prérequis de la solution BYOK, si vous migrez d’AD RMS vers Azure Information Protection en passant d’une clé logicielle à une clé matérielle, vous devez disposer au minimum de la version 11.62 pour le microprogramme Thales.|
-|Pour utiliser une clé protégée par module HSM que vous créez localement : tous les prérequis répertoriés pour Key Vault BYOK. |Consultez [Prérequis pour la solution BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) dans la documentation d’Azure Key Vault. <br /><br /> **Remarque** : En plus des prérequis de la solution BYOK, si vous migrez d’AD RMS vers Azure Information Protection en passant d’une clé logicielle à une clé matérielle, vous devez disposer au minimum de la version 11.62 pour le microprogramme Thales.|
+|Pour utiliser une clé protégée par module HSM que vous créez localement : <br /><br />- Tous les prérequis répertoriés pour BYOK dans Key Vault. |Consultez [Prérequis pour la solution BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) dans la documentation d’Azure Key Vault. <br /><br /> **Remarque** : En plus des prérequis de la solution BYOK, si vous migrez d’AD RMS vers Azure Information Protection en passant d’une clé logicielle à une clé matérielle, vous devez disposer au minimum de la version 11.62 pour le microprogramme Thales.|
+|Si le coffre de clés qui doit contenir votre clé de locataire utilise des points de terminaison de service de réseau virtuel pour Key Vault (actuellement en préversion) : <br /><br />- Sélectionnez l’option qui permet d’autoriser les services Microsoft approuvés pour contourner ce pare-feu.|Pour plus d’informations, consultez [Annonce des points de terminaison de service de réseau virtuel pour Key Vault (préversion)](https://blogs.technet.microsoft.com/kv/2018/06/25/announcing-virtual-network-service-endpoints-for-key-vault-preview/).|
 |Le module d’administration Azure Rights Management pour Windows PowerShell.|Pour connaître les instructions d'installation, voir [Installation du module PowerShell AADRM](../deploy-use/install-powershell.md). <br /><br />Si vous avez déjà installé ce module Windows PowerShell, exécutez la commande suivante pour vérifier que le numéro de votre version est au minimum **2.9.0.0** : `(Get-Module aadrm -ListAvailable).Version`|
 
 Pour plus d’informations sur les modules de sécurité matériels Thales et comment ils sont utilisés avec Azure Key Vault, consultez le [site web de Thales](https://www.thales-esecurity.com/msrms/cloud).
@@ -135,11 +136,16 @@ Utilisez le tableau suivant pour identifier la région ou l’instance Azure rec
 
 |Région ou instance Azure|Emplacement recommandé pour votre coffre de clés|
 |---------------|--------------------|
-|rms.**na**.aadrm.com|**Nord-Centre des États-Unis** ou **Est des États-Unis**|
-|rms.**eu**.aadrm.com|**Europe du Nord** ou **Europe de l’Ouest**|
-|rms.**ap**.aadrm.com|**Asie de l’Est** ou **Asie du Sud-Est**|
-|rms.**sa**.aadrm.com|**États-Unis de l’Ouest** ou **Est des États-Unis**|
-|rms.**govus**.aadrm.com|**Centre des États-Unis** ou **Est des États-Unis 2**|
+|rms.**na**.aadrm.com|
+  **Nord du centre des États-Unis** ou **États-Unis de l'Est**|
+|rms.**eu**.aadrm.com|
+  **Europe du Nord** ou **Europe de l’Ouest**|
+|rms.**ap**.aadrm.com|
+  **Asie de l’Est** ou **Sud-Est asiatique**|
+|rms.**sa**.aadrm.com|
+  **États-Unis de l’Ouest** ou **États-Unis de l'Est**|
+|rms.**govus**.aadrm.com|
+  **États-Unis du Centre** ou **États-Unis de l'Est 2**|
 
 
 ### <a name="instructions-for-byok"></a>Instructions pour BYOK

@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs d’un 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 17fa8d2269bce0d6ef01506bcbadafd01fc768b6
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 50eefe938a4d37dc63d2209a71b5a06f84a24587
+ms.sourcegitcommit: b5cefaefdd460ed5249db8747f232972b470c619
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444229"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36263312"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -168,9 +168,19 @@ Toutefois, les noms et les descriptions d’étiquette que vous spécifiez ne so
 
 L’équipe Azure Information Protection met régulièrement à jour le client Azure Information Protection avec des nouvelles fonctionnalités et des correctifs. Les annonces sont postées sur le [site Yammer](https://www.yammer.com/AskIPTeam) de l’équipe.
 
-Si vous avez installé le client à l’aide du fichier exécutable ou du fichier Windows Installer, vous devez télécharger manuellement les nouvelles versions à partir du Centre de téléchargement Microsoft pour installer les mises à jour du client. Lorsque vous installez le client à l’aide de Windows Update, les nouvelles versions sont automatiquement disponibles en téléchargement dans le catalogue quelques semaines après leur sortie. 
+Si vous utilisez Windows Update, le client Azure Information Protection met automatiquement à niveau la version en disponibilité générale du client, indépendamment de la manière dont ce dernier a été installé. Les nouvelles versions de client sont publiées dans le catalogue quelques semaines après le lancement.
+
+Vous pouvez également mettre à niveau manuellement le client en téléchargeant la nouvelle version à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Installez ensuite la nouvelle version pour mettre à niveau le client. Vous devez utiliser cette méthode pour mettre à niveau des préversions.
+
+Lorsque vous mettez à niveau manuellement, ne désinstallez la version précédente que si vous changez de méthode d’installation. Par exemple, si vous passez de la version du fichier exécutable (.exe) du client à la version du programme d’installation (.msi) Windows du client. Ou si vous devez installer une version antérieure du client. Par exemple, vous avez installé la préversion actuelle pour la tester et vous devez maintenant revenir à la version actuelle en disponibilité générale.
 
 Consultez [Historique des versions et politique du support](../rms-client/client-version-release-history.md) pour comprendre la politique de support du client Azure Information Protection, savoir quelles versions sont actuellement prises en charge et prendre connaissance des nouveautés et modifications des versions prises en charge. 
+
+### <a name="upgrading-the-azure-information-protection-scanner"></a>Mise à niveau du scanneur Azure Information Protection
+
+Pour mettre à niveau le scanneur Azure Information Protection, installez la dernière version du client Azure Information Protection.
+
+Ensuite, si votre version précédemment installée du client est la version 1.26.6.0 ou une version antérieure, réexécutez la commande d’installation de scanneur avec [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner). Vos paramètres de configuration pour le scanneur et les référentiels seront conservés. La réinstallation du scanneur accorde au compte de service du scanneur des autorisations de suppression pour la base de données du scanneur, qui seront nécessaires pour les rapports.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Désinstallation du client Azure Information Protection
 

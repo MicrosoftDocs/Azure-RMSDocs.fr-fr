@@ -4,7 +4,7 @@ description: Instructions pour les utilisateurs ayant effectué la mise à nivea
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 06/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 58b0ab62b260e407aa9ae6a36b4a063fe147889b
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 79befd96ba20fa3dcb86dbb5a511e0fec6bc8447
+ms.sourcegitcommit: b993c332e53d7aa48d93d4bbd42c80abcf79b351
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206857"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106996"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Guide de l’utilisateur : Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
->
->Vous avez récemment effectué la mise à niveau de l’application de partage Rights Management (également appelée « application de partage RMS ») vers le client Azure Information Protection ? 
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+
+Vous avez récemment effectué la mise à niveau de l’application de partage Rights Management (également appelée « application de partage RMS ») vers le client Azure Information Protection ? 
 
 Utilisez les informations suivantes pour être opérationnel rapidement.
 
@@ -32,7 +32,7 @@ Utilisez les informations suivantes pour être opérationnel rapidement.
 |Protéger un fichier sur un appareil <br /><br />Également appelé « protéger sur place »|Pour les applications Office : sélectionnez une étiquette qui applique la protection nécessaire ou définissez des autorisations personnalisées.<br /><br />Pour les autres fichiers : dans le menu Explorateur de fichiers, utilisez l’option **Classifier et protéger** pour ouvrir la boîte de dialogue **Classifier et protéger - Azure Information Protection**. Ensuite, sélectionnez une étiquette qui applique la protection nécessaire ou spécifiez vos propres autorisations personnalisées. <br /><br />Pour plus d’informations, voir [Classifier et protéger un fichier ou un e-mail](client-classify-protect.md).
 |Protéger un fichier que vous partagez par courrier électronique <br /><br />Également appelé « partage protégé »|Avec Outlook, appliquez une étiquette avec la protection requise à votre e-mail, ou sélectionnez l’option **Ne pas transférer** dans Outlook. Les pièces jointes non protégées qui ont un [type de fichier pris en charge](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) sont protégées automatiquement.<br /><br />Remarque : Pour effectuer le suivi d’un document protégé que vous envoyez par e-mail, commencez par le protéger avant de l’attacher à l’e-mail.<br /><br />Pour plus d’informations, voir [Classifier et protéger un fichier ou un e-mail](client-classify-protect.md).
 |Modifier des autorisations sur les fichiers protégés <br /><br />Également appelé « reprotéger »|Pour les applications Office qui affichent la barre Azure Information Protection : sélectionnez une étiquette qui applique la protection nécessaire.<br /><br />Pour les autres fichiers, et si le client Azure Information Protection est en [mode protection uniquement](client-protection-only-mode.md) : utilisez l’option du menu Explorateur de fichiers **Classifier et protéger** pour ouvrir la boîte de dialogue **Classifier et protéger - Azure Information Protection**. Ensuite, sélectionnez une étiquette qui applique la protection nécessaire ou spécifiez vos propres autorisations personnalisées.<br /><br />Pour plus d’informations, voir [Classifier et protéger un fichier ou un e-mail](client-classify-protect.md).
-|Suivre et révoquer des documents|Pour les applications Office : ouvrez le document puis, cliquez sur l’onglet **Accueil** > groupe **Protection** > **Protéger** > **Suivre et révoquer**<br /><br />Depuis l’Explorateur de fichiers : cliquez avec le bouton droit sur un fichier ou dossier > **Classifier et protéger**. Ensuite, à partir de la boîte de dialogue **Classifier et protéger - Azure Information Protection**, cliquez sur **Suivre et révoquer**. <br /><br />Pour plus d’informations, consultez [Suivre et révoquer vos documents](client-track-revoke.md).
+|Suivre et révoquer des documents|À partir de Word, Excel et PowerPoint : ouvrez le document puis, cliquez sur l’onglet **Accueil** > groupe **Protection** > **Protéger** > **Suivre et révoquer**<br /><br />Depuis l’Explorateur de fichiers : cliquez avec le bouton droit sur un fichier ou dossier > **Classifier et protéger**. Ensuite, à partir de la boîte de dialogue **Classifier et protéger - Azure Information Protection**, cliquez sur **Suivre et révoquer**. <br /><br />Pour plus d’informations, consultez [Suivre et révoquer vos documents](client-track-revoke.md).
 |Afficher et utiliser des fichiers protégés|Pour les documents Office protégés, Office doit être installé. La visionneuse Azure Information Protection peut ouvrir de nombreux autres fichiers protégés, vous permettant ainsi de les lire, les imprimer et les enregistrer si vous disposez des autorisations appropriées pour effectuer ces actions. Cette visionneuse est installée automatiquement avec le client, ou vous pouvez l’installer séparément.<br /><br />Pour plus d’informations, consultez [Ouvrir des fichiers protégés](client-view-use-files.md).
 |Supprimer la protection des fichiers|Utilisez l’option de menu Explorateur de fichiers, **Classifier et protéger** pour ouvrir la boîte de dialogue **Classifier et protéger - Azure Information Protection**. <br /><br />Ensuite, dans le cas d’un seul fichier, désactivez l’option **Protéger avec des autorisations personnalisées**. Dans le cas de plusieurs fichiers ou d’un dossier, cliquez sur **Supprimer des autorisations personnalisées**.<br /><br />Pour plus d’informations, consultez [Supprimer des étiquettes et la protection des fichiers et e-mails](client-remove-label-protection.md).|
 
@@ -42,14 +42,18 @@ Si vous recherchez une option spécifique que vous utilisiez avec l’applicatio
 
 |Option dans l’application de partage RMS|Informations
 |-----------|--------------------|
-|**Partage protégé**|Cette option n’est plus disponible dans le ruban Office. Au lieu de partager directement à partir de votre application Office, utilisez l’option contextuelle de l’Explorateur de fichiers, **Classifier et protéger** pour protéger une copie du document avec des autorisations personnalisées, puis partagez le fichier à l’aide du client de messagerie de votre choix ou d’un emplacement de partage. <br /><br /> Vous pouvez également attacher un document non protégé à un e-mail que vous protégez : ce document est alors protégé automatiquement avec les mêmes restrictions. Vous ne pouvez cependant pas suivre ni révoquer ce document.
+|**Partage protégé**|Cette option n’est plus disponible dans le ruban Office. Au lieu de partager directement à partir de votre application Office, utilisez l’option contextuelle de l’Explorateur de fichiers, **Classifier et protéger** pour protéger une copie du document avec des autorisations personnalisées, puis partagez le fichier à l’aide du client de messagerie de votre choix ou d’un emplacement de partage. <br /><br /> Vous pouvez également attacher un document Office non protégé à un e-mail que vous protégez : ce document est alors protégé automatiquement avec les mêmes restrictions. Vous ne pouvez cependant pas suivre ni révoquer ce document.
 |**M’envoyer un e-mail quand quelqu’un tente d’ouvrir ces documents**|Utilisez le site de suivi des documents pour configurer vos paramètres de notification d’e-mail préférés : recherchez le document protégé que vous avez partagé > **Paramètres** > **Notifications d’e-mail**
-|**M’autoriser à révoquer de suite l’accès à ces documents**|Cette option n’est plus disponible. Configurez des modèles qui n’autorisent pas l’accès hors connexion. En outre, déterminez si vous devez réduire la période de validité de la licence d’utilisation pour votre locataire, en exécutant [Set-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/set-aadrmmaxuselicensevaliditytime).
+|**M’autoriser à révoquer de suite l’accès à ces documents**|Cette option n’est plus disponible. Utilisez les paramètres de protection définis par l’administrateur qui n’autorisent pas l’accès hors connexion. En outre, un administrateur peut réduire la période de validité de la licence d’utilisation pour votre locataire, en exécutant [Set-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/set-aadrmmaxuselicensevaliditytime).
+|**Effectuer le suivi de l’utilisation** dans Outlook|La possibilité d’accéder au site de suivi des documents à partir d’Outlook n’est plus disponible. Au lieu de cela, utilisez l’option **Suivre et révoquer** à partir de Word, PowerPoint, Excel ou l’Explorateur de fichiers. Ou, à l’aide d’un navigateur, vous pouvez accéder directement au [site de suivi des documents](https://go.microsoft.com/fwlink/?LinkId=529562).
 
+## <a name="next-steps"></a>Étapes suivantes
+Plus d’instructions pratiques dans le guide de l’utilisateur Azure Information Protection :
 
+- [Que voulez-vous faire ?](client-user-guide.md#what-do-you-want-to-do)
 
-
-
+## <a name="additional-information-for-administrators"></a>Informations supplémentaires pour les administrateurs    
+Consultez le [Guide de l’administrateur du client Azure Information Protection](client-admin-guide.md).
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  

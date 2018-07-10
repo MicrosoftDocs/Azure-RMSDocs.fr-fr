@@ -4,7 +4,7 @@ description: Flux de travail de bout en bout pour la collaboration autour de doc
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d5c24747bcb05f7004f7d42b0145ce6cc1bbade5
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 4a642960e81a7d1a5cb6f8433e4098bed06a663d
+ms.sourcegitcommit: dc98226f339339c10fd01535a1adf7e30a817a41
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444333"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36300021"
 ---
 # <a name="secure-document-collaboration-by-using-azure-information-protection"></a>Sécuriser la collaboration autour de documents à l’aide d’Azure Information Protection
 
@@ -27,7 +27,7 @@ Lorsque vous utilisez Azure Information Protection, vous pouvez protéger vos do
 
 Ces autorisations sont appelées des droits d’utilisation et incluent des autorisations comme afficher, modifier et imprimer. Vous pouvez définir des droits d’utilisation individuels lorsqu’un document est protégé, ou vous pouvez définir un groupe de droits d’utilisation, appelé niveau d’autorisation. Les niveaux d’autorisation facilitent la sélection de droits d’utilisation qui sont généralement utilisés ensemble, par exemple, réviseur et coauteur. Pour plus d’informations sur les droits d’utilisation et les niveaux d’autorisation, consultez [Configuration des droits d’utilisation pour Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
-Lorsque vous configurez ces autorisations, vous spécifiez également les utilisateurs auxquels elles s’adressent :
+Lorsque vous configurez ces autorisations, vous pouvez spécifier les utilisateurs auxquels elles s’adressent :
 
 - **Pour les utilisateurs de votre organisation ou d’une autre organisation qui utilisent Azure Active Directory** : vous pouvez spécifier des comptes d’utilisateur Azure AD, des groupes Azure AD ou tous les utilisateurs de cette organisation. 
 
@@ -35,14 +35,18 @@ Lorsque vous configurez ces autorisations, vous spécifiez également les utilis
     
     Pour ouvrir des documents avec un compte Microsoft, les utilisateurs doivent utiliser Office 2016 « Démarrer en un clic ». Les autres éditions et versions de Microsoft Office ne prennent pas encore en charge l’ouverture de documents Office protégés avec un compte Microsoft.
 
+- **Pour tout utilisateur authentifié** : cette option est appropriée lorsque vous n’avez pas besoin de contrôler l’accès au document protégé, à condition que l’utilisateur puisse être authentifié. L’authentification peut avoir lieu via Azure AD, à l’aide d’un compte Microsoft, ou même via un fournisseur de réseaux sociaux fédérés ou un code secret à usage unique quand le contenu est protégé par les nouvelles fonctionnalités d’Office 365 Message Encryption. 
+
 En tant qu’administrateur, vous pouvez configurer une étiquette Azure Information Protection pour appliquer les autorisations et les utilisateurs autorisés. Avec cette configuration, les utilisateurs et autres administrateurs peuvent facilement appliquer les paramètres de protection corrects, car il leur suffit d’appliquer l’étiquette, sans avoir à indiquer les détails. Les sections suivantes fournissent un exemple de procédure pas à pas qui permet de protéger un document prenant en charge la collaboration sécurisée avec les utilisateurs internes et externes.
 
 
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>Exemple de configuration d’une étiquette afin d’appliquer une protection prenant en charge la collaboration interne et externe
 
-Cet exemple décrit la procédure de configuration d’une étiquette existante afin d’appliquer une protection permettant aux utilisateurs de votre organisation de collaborer autour de documents avec tous les utilisateurs d’une autre organisation disposant d’Office 365 ou d’Azure AD, avec un groupe d’une autre organisation disposant d’Office 365 ou d’Azure AD et avec un utilisateur qui n’a pas de compte dans Azure AD et utilise à la place une adresse e-mail Gmail. 
+Cet exemple décrit la procédure de configuration d’une étiquette existante afin d’appliquer une protection permettant aux utilisateurs de votre organisation de collaborer autour de documents avec tous les utilisateurs d’une autre organisation disposant d’Office 365 ou d’Azure AD, avec un groupe d’une autre organisation disposant d’Office 365 ou d’Azure AD et avec un utilisateur qui n’a pas de compte dans Azure AD et utilise à la place une adresse e-mail Gmail.
 
-1. Sélectionnez l’étiquette qui existe déjà dans la stratégie globale ou la stratégie délimitée. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé du cloud)** est sélectionnée.
+Étant donné que le scénario restreint l’accès de personnes spécifiques, il n’inclut pas le paramètre pour tous les utilisateurs authentifiés. Pour obtenir un exemple de la manière dont vous pouvez configurer une étiquette avec ce paramètre, consultez [Exemple 5 : étiquette qui crypte le contenu, mais n’en restreint pas l’accès](../deploy-use/configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
+
+1. Sélectionnez l’étiquette qui existe déjà dans la stratégie globale ou la stratégie délimitée. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
     
 2. Vérifiez que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
 
@@ -62,11 +66,11 @@ Cet exemple décrit la procédure de configuration d’une étiquette existante 
         
     ![Configuration d’autorisations pour une collaboration sécurisée](../media/collaboration-permissions.png)
 
-
-
 5. Cliquez sur **OK** dans le panneau **Ajouter des autorisations**.
 
-6. Dans le panneau **Protection**, cliquez sur **OK**. 
+6. Dans le panneau **Protection**, cliquez sur **OK**.
+
+7. Dans le panneau **Étiquette**, sélectionnez **Enregistrer**. 
 
 ## <a name="applying-the-label-that-supports-secure-collaboration"></a>Application de l’étiquette qui prend en charge la collaboration sécurisée
 
@@ -98,8 +102,9 @@ S’ils sélectionnent **Afficher l’autorisation**, ils voient les autorisatio
 
 ![Exemple de boîte de dialogue Azure Information Protection pour les autorisations](../media/example-permisisons-popup.png)
 
+Remarque : Si le document est ouvert par des utilisateurs externes qui utilisent également Azure Information Protection, l’application Office n’affiche pas votre étiquette de classification pour le document, bien que les marquages visuels de l’étiquette restent. Au lieu de cela, les utilisateurs externes peuvent appliquer leur propre étiquette conformément à la taxonomie de classification de leur organisation. Si ces utilisateurs externes renvoient ensuite le document modifié, Office affiche votre étiquette de classification d’origine lorsque vous rouvrez le document.
 
-Avant l’ouverture du document, un des flux d’authentification suivants se produit :
+Avant l’ouverture du document protégé, un des flux d’authentification suivants se produit :
 
 - Les utilisateurs ayant un compte Azure AD utilisent les informations d’identification de ce compte pour être authentifiés par Azure AD, puis le document s’ouvre. 
 
@@ -109,7 +114,7 @@ Avant l’ouverture du document, un des flux d’authentification suivants se pr
    
     ![Ajout d’un compte Microsoft pour ouvrir un document protégé](../media/add-account-msa.png)
 
-   Dans la page **Se connecter**, sélectionnez **Créez-en un !** et suivez les invites afin de créer un compte Microsoft avec l’adresse e-mail utilisée pour accorder les autorisations :
+   À la page de **Connexion**, sélectionnez **Créez-en un !** et suivez les invites afin de créer un compte Microsoft avec l’adresse e-mail utilisée pour accorder les autorisations :
     
     ![Création d’un compte Microsoft pour ouvrir un document protégé](../media/create-account-msa.png)
     
@@ -118,15 +123,19 @@ Avant l’ouverture du document, un des flux d’authentification suivants se pr
 
 ### <a name="supported-scenarios-for-opening-protected-documents"></a>Scénarios pris en charge pour l’ouverture de documents protégés
 
-Le tableau suivant récapitule les différentes méthodes d’authentification qui sont prises en charge pour ouvrir et modifier des documents protégés.
+Le tableau suivant récapitule les différentes méthodes d’authentification qui sont prises en charge pour afficher et modifier des documents protégés.
 
-De plus, le scanneur Azure Information Protection pour iOS et Android peut ouvrir des fichiers à l’aide d’un compte Microsoft.
+En outre, les scénarios suivants prennent en charge l’affichage de documents :
 
-|Plateformes pour l’ouverture et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />compte Microsoft|
+- La visionneuse Azure Information Protection pour Windows ainsi que pour iOS et Android peut ouvrir des fichiers à l’aide d’un compte Microsoft. 
+
+- Un navigateur peut ouvrir des pièces jointes protégées lorsque des fournisseurs de réseaux sociaux et des codes secrets à usage unique sont utilisés pour l’authentification avec Exchange Online et avec les nouvelles fonctionnalités d’Office 365 Message Encryption. 
+
+|Plateformes pour l’affichage et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />compte Microsoft|
 |---------------|----------|-----------|-----------|
 |Windows|Oui [[1]](#footnote-1)|Oui [[2]](#footnote-2)|
 |iOS|Oui [[1]](#footnote-1)|Non|
-|Android|Oui [[1]](#footnote-1)|Non |
+|Android|Oui [[1]](#footnote-1)|Non|
 |MacOS|Oui [[1]](#footnote-1)|Non|
 
 ###### <a name="footnote-1"></a>Note 1
@@ -134,6 +143,8 @@ Prend en charge les comptes d’utilisateur, les groupes à extension messagerie
 
 ###### <a name="footnote-2"></a>Note 2
 Actuellement pris en charge par Office 2016 « Démarrer en un clic » seulement.
+
+
 
 
 ## <a name="next-steps"></a>Étapes suivantes

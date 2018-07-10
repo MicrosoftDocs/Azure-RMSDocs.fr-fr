@@ -10,11 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: 221b4228bc06868fb491a1a591939afb5baba8b8
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 5cfacba692cfd2c0e27981e8c41e45e4d9dcb3a3
+ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "34562583"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Comment créer une étiquette pour Azure Information Protection
 
@@ -44,7 +45,7 @@ Utilisez les instructions suivantes pour ajouter une nouvelle étiquette, qui po
     
     Notez que la couleur noire est automatiquement affectée aux nouvelles étiquettes. Choisissez une couleur distinctive dans la liste des couleurs ou entrez un code (triplet hexadécimal) représentant les composants RVB (rouge, vert, bleu) de la couleur. Par exemple, **#DAA520**. Si vous souhaitez obtenir des informations de référence sur ces codes, la page [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) dans la documentation MSDN constitue un bon point de départ. Ces codes sont utilisés dans de nombreux programmes de retouche d’images, par exemple Microsoft Paint. Quand vous choisissez une couleur personnalisée à partir d’une palette, les valeurs RVB s’affichent automatiquement.
 
-5. Pour mettre votre nouvelle étiquette à la disposition des utilisateurs : à partir de l’option de menu **CLASSIFICATIONS** > **Stratégies**, sélectionnez la stratégie destinée à contenir la nouvelle étiquette, sélectionnez **Ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette à partir du panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez **OK**, puis sélectionnez **Enregistrer**.
+5. Pour rendre votre nouvelle étiquette disponible aux utilisateurs : à partir de l’option de menu **CLASSIFICATIONS** > **Stratégies**, sélectionnez la stratégie qui doit contenir la nouvelle étiquette. Sélectionnez **Ajouter ou supprimer des étiquettes**. Sélectionnez l’étiquette à partir du panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez **OK**, puis **Enregistrer**.
     
     >[!TIP]
     >Dans le cas des nouvelles étiquettes, nous vous conseillons de les ajouter d’abord à une stratégie délimitée que vous utilisez à des fins de test. Quand vous êtes satisfait des résultats, supprimez l’étiquette de cette étendue de test, puis ajoutez-la à une stratégie que vous utilisez en production.     

@@ -4,7 +4,7 @@ description: Ressources pour les administrateurs, qui incluent des informations 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2018
+ms.date: 05/31/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3ed8c53c235520d53c3d0a3666aa4aba45c174f5
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: f6b65ef43535152e03d456533b48e2c792cedd48
+ms.sourcegitcommit: 2e85f87f7276b284b4f17de1d4e752c790eff651
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34686674"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
@@ -28,7 +29,7 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure Infor
 |----------------|---------------|
 |Voir la documentation la plus fréquemment utilisée|Lire les cinq pages les plus consultées :<br /><br /> - [Qu’est-ce qu’Azure Information Protection ?](../understand-explore/what-is-information-protection.md)<br /> - [Installer le client Azure Information Protection pour les utilisateurs](../rms-client/client-admin-guide-install.md)<br />- [Configuration requise pour Azure Information Protection](requirements.md) <br />- [Déployer le scanneur Azure Information Protection](../deploy-use/deploy-aip-scanner.md)<br />- [La stratégie Azure Information Protection par défaut](../deploy-use/configure-policy-default.md)|
 |Prendre contact avec l’équipe du produit et vos collègues|Visitez le [site Yammer](https://www.yammer.com/AskIPTeam) pour Azure Information Protection.|
-|Demander une nouvelle fonctionnalité ou la modification d’une fonctionnalité|Visitez le site [User Voice](https://msip.uservoice.com) pour Azure Information Protection.|
+|Demander une nouvelle fonctionnalité ou la modification d’une fonctionnalité|Visitez le site [UserVoice](https://msip.uservoice.com) pour Azure Information Protection et utilisez l’adresse e-mail de votre entreprise pour vous connecter.|
 |Recevoir des tweets du groupe de produits|Suivez [MicrosoftMobility@MSFTMobility](https://twitter.com/MSFTMobility) sur Twitter.|
 |Vérifier les informations d’abonnement et les fonctionnalités prises en charge|Utilisez les informations sur les abonnements et la liste des fonctionnalités de la page [Tarification Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).|
 

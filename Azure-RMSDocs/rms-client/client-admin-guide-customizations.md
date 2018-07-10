@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c0e1011da16c9e3e91595cd06375cb744aa8fe00
-ms.sourcegitcommit: 10f530fa1a43928581da4830a32f020c96736bc8
+ms.openlocfilehash: c078536a3f8501b52c8980b4d71f9138971a8e05
+ms.sourcegitcommit: b1e739bd911579ab9af09654b5517c4d0a23f482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34402266"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271451"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -52,30 +52,6 @@ Recherchez le nom de valeur suivant et définissez la valeur à **0** :
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
 Indépendamment de ce paramètre, le client Azure Information Protection se conforme au [processus de découverte du service RMS](../rms-client/client-deployment-notes.md#rms-service-discovery) pour trouver le cluster AD RMS associé.
-
-## <a name="suppress-the-initial-congratulations-welcome-page"></a>Supprimer le « Félicitations ! » initial. page de bienvenue
-
-Le client en préversion n’affiche plus la page de bienvenue « Félicitations ! ».
-
-Quand le client Azure Information Protection est installé pour la première fois sur un ordinateur et qu’un utilisateur ouvre Word, Excel, PowerPoint ou Outlook, une page **Félicitations !** s’affiche avec de courtes instructions sur la manière d’utiliser la nouvelle barre Information Protection pour sélectionner des étiquettes. Vous pouvez supprimer cette page en modifiant le registre.
-
-1. Si la clé de registre suivante n’existe pas, créez-la :
-    
-    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
-
-2. Si une valeur DWORD (32 bits) (REG-DWORD) nommée **EnableWelcomeExperience** n’existe pas, créez-la et définissez la valeur des données sur **0** :
-
-## <a name="suppress-the-whats-new-in-azure-information-protection-page"></a>Supprimer la page « Nouveautés dans Azure Information Protection » page
-
-Le client en préversion n’affiche plus la page « Nouveautés d’Azure Information Protection » .
-
-Lors de l’installation initiale du client Azure Information Protection ou après sa mise à niveau sur un ordinateur, et si la barre Azure Information Protection est affichée dans Word, Excel, PowerPoint ou Outlook, une page **Nouveautés dans Azure Information Protection** s’affiche pour informer les utilisateurs concernant les autorisations personnalisées et le suivi de l’utilisation. Vous pouvez supprimer cette page en modifiant le registre.
-
-1. Si la clé de registre suivante n’existe pas, créez-la :
-    
-    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
-
-2. Si une valeur de chaîne (REG-SZ) nommée **WhatsNewVersion** n’existe pas, créez-la et définissez la valeur des données sur **1.4**.
 
 ## <a name="sign-in-as-a-different-user"></a>Se connecter avec l’identité d’un autre utilisateur
 
@@ -338,7 +314,7 @@ Le paramètre client avancé :
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 
-Lorsque vous configurez ce paramètre, vous pouvez classer (et éventuellement protéger) un document Office quand celui-ci a une propriété personnalisée existante avec une valeur qui correspond à l’un de vos noms d’étiquette. Cette propriété personnalisée peut être définie à partir d’une autre solution de classification ou définie comme propriété par SharePoint.
+Lorsque vous configurez ce paramètre, vous pouvez classer (et éventuellement protéger) un document Office quand celui-ci a une propriété personnalisée existante avec une valeur qui correspond à l’un de vos noms d’étiquette. Cette propriété personnalisée peut être définie à partir d’une autre solution de classification, ou définie comme propriété par SharePoint.
 
 Suite à cette configuration, lorsqu’un document sans étiquette Azure Information Protection est ouvert et enregistré par un utilisateur dans une application Office, il est étiqueté pour correspondre à la valeur de propriété. 
 
@@ -356,19 +332,17 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 Utilisez ces clés et les valeurs correspondantes pour une seule propriété personnalisée.
 
-Comme exemple, vous avez une colonne SharePoint nommée **Classification** qui a les valeurs possibles **Public**, **Général** et **Confidentiel**. Les documents sont stockés dans SharePoint et ont l’une de ces valeurs définies pour la propriété Classification.
+Par exemple, vous avez une colonne SharePoint nommée **Classification** qui a les valeurs possibles **Public**, **Général** et **Hautement confidentiel Tous les employés**. Les documents sont stockés dans SharePoint et ont des valeurs définies **Public**, **Général** ou **Hautement confidentiel Tous les employés** pour la propriété Classification.
 
 Pour étiqueter un document Office avec l’une de ces valeurs de classification, définissez **SyncPropertyName** sur **Classification** et **SyncPropertyState** sur **OneWay**. 
 
-À partir de maintenant, quand un utilisateur ouvre et enregistre un de ces documents Office, le document est étiqueté **Public**, **Général** ou **Confidentiel** si vous avez des étiquettes avec ces noms dans votre stratégie Azure Information Protection. Si vous n’avez pas d’étiquettes avec ces noms, le document reste sans étiquette.
+À partir de maintenant, quand un utilisateur ouvre et enregistre un de ces documents Office, le document est étiqueté **Public**, **Général** ou **Hautement confidentiel\Tous les employés** si vous avez des étiquettes avec ces noms dans votre stratégie Azure Information Protection. Si vous n’avez pas d’étiquettes avec ces noms, le document reste sans étiquette.
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Désactiver le niveau d’intégrité faible pour le scanneur
 
-Cette option de configuration est en préversion et susceptible de changer. Par ailleurs, elle nécessite la préversion actuelle du client Azure Information Protection.
-
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 
-Par défaut, la préversion du scanneur Azure Information Protection s’exécute avec un niveau d’intégrité faible. Ce paramètre offre une isolation de sécurité plus élevée, mais au détriment des performances. Un niveau d’intégrité faible est adapté si vous exécutez le scanneur avec un compte qui dispose de droits privilégiés (comme un compte d’administrateur local), car ce paramètre permet de protéger l’ordinateur exécutant le scanneur.
+Par défaut, le scanneur Azure Information Protection s’exécute avec un niveau d’intégrité faible. Ce paramètre offre une isolation de sécurité plus élevée, mais au détriment des performances. Un niveau d’intégrité faible est adapté si vous exécutez le scanneur avec un compte qui dispose de droits privilégiés (comme un compte d’administrateur local), car ce paramètre permet de protéger l’ordinateur exécutant le scanneur.
 
 Toutefois, lorsque le compte de service qui exécute le scanneur dispose seulement des droits documentés dans les [prérequis du scanneur](../deploy-use/deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), le niveau d’intégrité faible n’est pas nécessaire et n’est pas recommandé, car il a un impact négatif sur les performances. 
 
@@ -407,7 +381,7 @@ Avant de tester cette configuration, n’oubliez pas qu’il y a souvent un dél
 
 - La règle Exchange détecte la classification Exchange et modifie en conséquence l’en-tête de message pour ajouter la classification Azure Information Protection.
 
-- Quand les destinataires qui disposent du client Azure Information Protection affichent l’e-mail dans Outlook, ils voient l’étiquette Azure Information Protection attribuée et tout en-tête, pied de page ou filigrane correspondants. 
+- Quand les destinataires internes qui disposent du client Azure Information Protection affichent l’e-mail dans Outlook, ils voient l’étiquette Azure Information Protection attribuée. 
 
 Si vos étiquettes Azure Information Protection appliquent la protection, ajoutez la protection à la configuration de la règle en sélectionnant l’option permettant de modifier la sécurité des messages, appliquez la protection des droits, puis sélectionnez le modèle RMS ou l’option Ne pas transférer.
 

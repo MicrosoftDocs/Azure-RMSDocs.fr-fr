@@ -4,18 +4,18 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 00305b1ba4f9ff750dd0fde9eb6a524cead39094
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 0cac50caf3a7ecf9189d7731f1248e543871be9a
+ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444212"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37068936"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -100,13 +100,26 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
     Conseil : Si vous avez l’habitude de créer et de modifier des modèles personnalisés, il peut s’avérer utile de consulter [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
 
+    - **Sélectionner un modèle prédéfini** : utilisez un des modèles par défaut ou un modèle personnalisé que vous avez configuré. Notez que cette option ne s’affiche pas si vous modifiez une étiquette qui utilisait l’option **Définir les autorisations**.
+    
+    Pour sélectionner un modèle prédéfini, le modèle doit être publié (pas archivé) et ne pas être déjà lié à une autre étiquette. Quand vous sélectionnez cette option, vous pouvez utiliser un bouton **Modifier le modèle** pour [convertir le modèle en étiquette](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Conseil : Si vous avez l’habitude de créer et de modifier des modèles personnalisés, il peut s’avérer utile de consulter [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
+
 7. Si vous avez sélectionné **Définir les autorisations** pour **Azure (clé du cloud)**, cette option vous permet de configurer les mêmes paramètres que ceux que vous pouvez configurer dans un modèle. 
     
     Sélectionnez **Ajouter des autorisations** puis, dans le panneau **Ajouter des autorisations**, sélectionnez le premier ensemble d’utilisateurs et de groupes qui auront des droits d’utilisation du contenu à protéger par l’étiquette sélectionnée :
     
-    - Choisissez **Sélectionner dans la liste** pour ajouter tous les utilisateurs de votre organisation en sélectionnant **Ajouter \<nom de l’organisation > - Tous les membres**. Ce paramètre exclut les comptes invités. Ou, accédez au répertoire.
+    - Choisissez **Sélectionner dans la liste**, où vous pouvez alors ajouter tous les utilisateurs de votre organisation en sélectionnant **Ajouter \<nom de l’organisation > - Tous les membres**. Ce paramètre exclut les comptes invités. Vous pouvez également sélectionner **Ajouter tous les utilisateurs authentifiés (préversion)** ou parcourir le répertoire.
         
-        Les utilisateurs ou les groupes doivent avoir une adresse e-mail. Dans un environnement de production, les utilisateurs et les groupes ont presque toujours une adresse e-mail, mais dans un simple environnement de test, vous devrez peut-être ajouter des adresses e-mail aux comptes d’utilisateur ou aux groupes.
+        Lorsque vous choisissez tous les membres ou que vous parcourez le répertoire, les utilisateurs ou les groupes doivent avoir une adresse e-mail. Dans un environnement de production, les utilisateurs et les groupes ont presque toujours une adresse e-mail, mais dans un simple environnement de test, vous devrez peut-être ajouter des adresses e-mail aux comptes d’utilisateur ou aux groupes.
+        
+        ###### <a name="more-information-about-add-any-authenticated-users"></a>Informations supplémentaires sur **Ajouter tous les utilisateurs authentifiés** 
+        Ce paramètre ne restreint pas l’accès au contenu protégé par l’étiquette, tout en chiffrant le contenu et en vous proposant des options permettant de limiter la façon d’accéder au contenu (expiration et l’accès hors connexion) et l’utilisation qui peut en être faite (autorisations). Toutefois, l’application qui ouvre le contenu protégé doit être en mesure de prendre en charge l’authentification utilisée. Pour cette raison, les fournisseurs de réseaux sociaux fédérés, tels que Google, et l’authentification unique par code secret doivent être utilisés uniquement pour les e-mails, et seulement lorsque vous utilisez Exchange Online et les nouvelles fonctionnalités de chiffrement de messages Office 365. Les comptes Microsoft peuvent être utilisées avec la visionneuse Azure Information Protection et avec Office 2016 Démarrer en un clic. 
+        
+        Quelques scénarios classiques pour tous les paramètres utilisateurs authentifiés : tous les utilisateurs peuvent afficher le contenu, mais vous souhaitez restreindre son utilisation. Par exemple, vous ne souhaitez pas que le contenu soit modifié, copié ou imprimé.
+            - Vous n’avez pas besoin de restreindre l’accès au contenu, mais vous souhaitez pouvoir suivre qui l’ouvre et, éventuellement, le révoquer.
+            - Vous voulez que le contenu soit chiffré au repos et en transit, mais aucun contrôle d’accès n’est nécessaire.     
         
     - Choisissez **Entrer les détails** pour spécifier manuellement des adresses e-mail pour les utilisateurs individuels ou les groupes (internes ou externes). Vous pouvez utiliser cette option pour spécifier tous les utilisateurs d’une autre organisation en entrant un nom de domaine de cette organisation. Vous pouvez aussi utiliser cette option pour les fournisseurs de réseaux sociaux, en entrant leur nom de domaine comme **gmail.com**, **hotmail.com** ou **outlook.com**.
         
@@ -188,7 +201,7 @@ Vos utilisateurs tapent l’adresse e-mail Gmail dans la zone **À**.  Ensuite, 
 
 4. Si l’option suivante est cochée, décochez-la : **Dans Word, Excel, PowerPoint et l’Explorateur de fichiers, demander à l’utilisateur des autorisations personnalisées**.
 
-5. Dans le panneau **Protection**, cliquez sur **OK**.
+5. Cliquez sur **OK** dans le panneau **Protection**, puis sur **Enregistrer** dans le panneau **Étiquette**.
 
 
 ### <a name="example-2-label-that-restricts-read-only-permission-to-all-users-in-another-organization-and-that-supports-immediate-revocation"></a>Exemple 2 : Étiquette qui limite l’autorisation de lecture seule à tous les utilisateurs d’une autre organisation et qui prend en charge une révocation immédiate
@@ -209,7 +222,7 @@ Cette étiquette ne convient pas aux e-mails.
 
 6. De retour dans le panneau **Protection**, pour le **paramètre Autoriser l’accès hors connexion**, sélectionnez **Jamais**.
 
-7. Dans le panneau **Protection**, cliquez sur **OK**.
+7. Cliquez sur **OK** dans le panneau **Protection**, puis sur **Enregistrer** dans le panneau **Étiquette**.
 
 
 ### <a name="example-3-add-external-users-to-an-existing-label"></a>Exemple 3 : Ajouter des utilisateurs externes à une étiquette existante
@@ -228,7 +241,7 @@ Les nouveaux utilisateurs que vous ajoutez seront en mesure d’ouvrir les docum
 
 6. Répétez les étapes 4 et 5 pour chaque utilisateur (ou groupe) à ajouter à cette étiquette. Cliquez sur **OK**.
 
-7. Dans le panneau **Protection**, cliquez sur **OK**.
+7. Cliquez sur **OK** dans le panneau **Protection**, puis sur **Enregistrer** dans le panneau **Étiquette**.
 
 ### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Exemple 4 : Étiquette pour des e-mails protégés qui prend en charge des autorisations moins restrictives que l’option Ne pas transférer
 
@@ -238,11 +251,11 @@ Si vous spécifiez des utilisateurs externes ne possédant pas de compte dans Az
 
 - Cette étiquette peut être utilisée pour les-mails si Exchange Online utilise les [nouvelles fonctionnalités dans Chiffrement des messages Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
  
-- Pour les pièces jointes Office qui sont protégées automatiquement, ces documents peuvent être affichés dans le navigateur. Pour modifier ces documents, modifiez-les à l’aide d’Office 2016 « Démarrer en un clic » après les avoir téléchargés. [Plus d’informations](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Les pièces jointes Office qui sont protégées automatiquement peuvent être affichées dans un navigateur. Pour modifier ces documents, modifiez-les à l’aide d’Office 2016 « Démarrer en un clic » après les avoir téléchargés. [Plus d’informations](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 
 > [!NOTE]
-> Exchange Online déploie actuellement une nouvelle option appelée [Chiffrement seul](configure-usage-rights.md#encrypt-only-option-for-emails). Cette option n'est pas disponible pour la configuration des étiquettes. Toutefois, vous pouvez utiliser cet exemple pour configurer une étiquette avec le même ensemble de droits d’utilisation.
+> Exchange Online déploie actuellement une nouvelle option appelée [Chiffrement seul](configure-usage-rights.md#encrypt-only-option-for-emails). Cette option n'est pas disponible pour la configuration des étiquettes. Toutefois, lorsque vous savez qui seront les destinataires, vous pouvez utiliser cet exemple pour configurer une étiquette avec le même ensemble de droits d’utilisation. 
 
 Lorsque vos utilisateurs spécifient les adresses e-mail dans la zone **À**, celles-ci doivent correspondre aux mêmes utilisateurs que ceux que vous spécifiez pour cette configuration d’étiquette. Étant donné que les utilisateurs peuvent appartenir à des groupes et avoir plusieurs adresses e-mail, celle qu’ils spécifient ne doit pas nécessairement correspondre exactement à l’adresse e-mail que vous spécifiez pour les autorisations. Toutefois, l’utilisation de la même adresse e-mail est le moyen le plus simple d’être sûr que le destinataire est autorisé. Pour plus d’informations sur la façon dont les utilisateurs reçoivent les autorisations, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md). 
 
@@ -264,10 +277,30 @@ Lorsque vos utilisateurs spécifient les adresses e-mail dans la zone **À**, ce
 
 6. Cliquez sur **OK** dans le panneau **Ajouter des autorisations**.
 
-7. Dans le panneau **Protection**, cliquez sur **OK**.
+7. Cliquez sur **OK** dans le panneau **Protection**, puis sur **Enregistrer** dans le panneau **Étiquette**.
+
+
+### <a name="example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it"></a>Exemple 5 : Étiquette qui chiffre le contenu, mais n’en restreint pas l’accès
+
+L’avantage de cette configuration est que vous n’avez pas besoin de spécifier des utilisateurs, des groupes ou des domaines pour protéger un e-mail ou un document. Le contenu sera toujours chiffré, et vous pouvez toujours spécifier des droits d’utilisation, une date d’expiration et un accès hors connexion. Utilisez cette configuration uniquement lorsque vous n’avez pas besoin de restreindre qui peut ouvrir le document ou l’e-mail protégé. [Pour plus d'informations sur ce paramètre](#more-information-about-add-any-authenticated-users)
+
+1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
+    
+2. Vérifiez que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
+
+3. Dans le panneau **Ajouter des permissions**, sur l’onglet **Sélectionner dans la liste**, sélectionnez **Ajoutez des utilisateurs authentifiés (préversion)**.
+
+4. Sélectionnez les autorisations souhaitées, puis cliquez sur **OK**.
+
+5. De retour dans le panneau **Protection**, si nécessaire, configurez les paramètres pour **Expiration du contenu** et **Autoriser l’accès hors connexion**, puis cliquez sur **OK**.
+
+6. Dans le panneau **Étiquettre**, sélectionnez **Enregistrer**.
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
+Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy). 
+
+Les règles de flux de messagerie Exchange peuvent également appliquer une protection, en fonction de vos étiquettes. Pour plus d’informations et d’exemples, consultez [Configuration des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection](configure-exo-rules.md).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

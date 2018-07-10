@@ -4,7 +4,7 @@ description: Configurer et gérer des modèles Rights Management à partir du po
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 05/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d26b69bc06a4c0d4f9c097e791b8b10bfc9feb1d
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 44c1166ce4205d6e77b4877d6aca0eaf16911530
+ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "34562141"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
@@ -96,9 +97,6 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Pour configurer les modèles dans la stratégie Azure Information Protection
 
->[!NOTE]
-> Ces instructions reflètent les dernières mises à jour du portail Azure. Si vous ne voyez pas l’option de menu **CLASSIFICATIONS** à la place de l’option **Publier**, les instructions de navigation ne correspondront pas exactement à ce que vous voyez. Dans ce cas, essayez de refaire cette procédure dans quelques jours, quand votre locataire aura été mis à jour avec les dernières modifications.
-
 1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection - Étiquettes**.
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
@@ -138,14 +136,11 @@ Lorsque vous convertissez un modèle en étiquette :
 
 ## <a name="to-create-a-new-template"></a>Pour créer un nouveau modèle
 
->[!NOTE]
-> Ces instructions reflètent les dernières mises à jour du portail Azure. Si vous ne voyez pas l’option de menu **CLASSIFICATIONS** à la place de l’option **Publier**, les instructions de navigation ne correspondront pas exactement à ce que vous voyez. Dans ce cas, essayez de refaire cette procédure dans quelques jours, quand votre locataire aura été mis à jour avec les dernières modifications.
-
 Quand vous créez une étiquette avec le paramètre de protection **Azure (clé cloud)**, en arrière-plan, cette action crée un modèle personnalisé qui est ensuite accessible pour les services et applications qui sont intégrés aux modèles Rights Management.
 
 1. À partir de l’option de menu **CLASSIFICATIONS** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez **Ajouter une nouvelle étiquette**.
 
-2. Dans le panneau **Étiquette**, conservez la valeur par défaut **Activé** : **Oui** pour publier ce nouveau modèle, ou modifiez ce paramètre sur **Non** pour créer le modèle comme étant archivé. Saisissez ensuite un nom d’étiquette et une description pour le nom du modèle et la description.
+2. Dans le panneau **Étiquette**, conservez la valeur par défaut **Activé** : **On**, puis entrez un nom d’étiquette et une description pour le nom du modèle et la description.
 
 3. Pour **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Protéger**, puis **Protection** :
     
@@ -156,19 +151,10 @@ Quand vous créez une étiquette avec le paramètre de protection **Azure (clé 
     Cliquez sur **OK** pour conserver vos modifications, puis, dans le panneau **Étiquette**, cliquez sur **Enregistrer**.
     
     Dans le panneau **Azure Information Protection - Étiquettes**, vous voyez maintenant votre nouvelle étiquette, accompagnée de la colonne **PROTECTION** indiquant qu’elle contient des paramètres de protection. Ces paramètres de protection s’affichent en tant que modèles pour les applications et services qui prennent en charge le service Azure Rights Management.
+    
+    Bien que l’étiquette soit activée, par défaut, le modèle est archivé. Afin que les applications et services puissent utiliser le modèle pour protéger des documents et des e-mails, exécutez la dernière étape pour publier le modèle.
 
-5. Si vous ne souhaitez pas mettre le modèle créé à la disposition de tous les utilisateurs, vous devez ajouter l’étiquette que vous venez de créer à une stratégie autre que la stratégie Globale :
-    
-    a. À partir de l’option de menu **CLASSIFICATIONS** > **Stratégies**, sélectionnez **Stratégies**.
-    
-    b. Sélectionnez **Ajouter une nouvelle stratégie** puis, dans le panneau **Stratégie**, spécifiez un nom pour l’étendue des utilisateurs et une description. Ensuite, utilisez l’option suivante pour sélectionner la partie des utilisateurs : **Sélectionnez les utilisateurs ou groupes devant recevoir cette stratégie. La fonction de courrier des groupes doit être activée.**
-    
-    Ou bien, si une stratégie existe déjà pour cette partie d’utilisateurs, sélectionnez-la à partir du panneau **Stratégie**.
-    
-    c. À partir du panneau **Stratégie**, sélectionnez **Ajouter ou supprimer des étiquettes**. Ensuite, dans le panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette créée qui contient vos paramètres de protection, puis cliquez sur **OK**.
-    
-    d. Dans le panneau **Stratégie**, cliquez sur **Enregistrer**.  
-
+5. À partir de l’option de menu **CLASSIFICATIONS** > **Stratégies**, sélectionnez la stratégie qui doit contenir les nouveaux paramètres de protection. Puis, sélectionnez **Ajouter ou supprimer des étiquettes**. Dans le panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette créée qui contient vos paramètres de protection, cliquez sur **OK**, puis sélectionnez **Enregistrer**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -4,7 +4,7 @@ description: Découvrez les nouveautés et les modifications d’une version du 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ff64b5bb4f73533352aa5497a98263c86842800
-ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
+ms.openlocfilehash: 732eb98b1cbd1af575f15ddc992349d77b436131
+ms.sourcegitcommit: 78d368a4480cc1febedc8535c6c3e184e69caf7f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34423253"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37088257"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
 
@@ -25,7 +25,9 @@ ms.locfileid: "34423253"
 
 L’équipe Azure Information Protection met régulièrement à jour le client Azure Information Protection avec des correctifs et des nouvelles fonctionnalités. 
 
-Vous pouvez télécharger la dernière version en disponibilité générale (GA) et la préversion actuelle à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Ces versions se trouvent également dans le catalogue Microsoft Update (catégorie : **Azure Information Protection**), ce qui vous permet de déployer le client à l’aide de WSUS, de Configuration Manager ou d’autres systèmes de déploiement de logiciels qui utilisent Microsoft Update.
+Vous pouvez télécharger la dernière version en disponibilité générale (GA) et la préversion actuelle (si elle est disponible) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). La version en disponibilité générale se trouve également dans le catalogue Microsoft Update (catégorie : **Azure Information Protection**), ce qui vous permet de mettre à niveau le client à l’aide de WSUS, de Configuration Manager ou d’autres systèmes de déploiement de logiciels qui utilisent Microsoft Update.
+
+Pour plus d’informations, consultez [Mise à niveau et maintenance du client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
 ### <a name="servicing-information-and-timelines"></a>Informations de maintenance et chronologies
 
@@ -42,19 +44,34 @@ Utilisez les informations suivantes pour découvrir les nouveautés et les modif
 >  
 > Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../get-started/information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
-## <a name="versions-later-than-12660"></a>Versions supérieures à 1.26.6.0
+## <a name="version-12950"></a>Version 1.29.5.0 
 
-Si votre version du client est supérieure à la version 1.26.6.0, il s’agit d’une préversion mise à disposition à des fins de test et d’évaluation. 
- 
-**Date de publication** : 21/05/2018 
+**Date de publication** : 26/06/2018
 
-La préversion actuelle est **1.27.48.0** et intègre les modifications suivantes depuis la version GA actuelle du client.  
+Cette version inclut MSIPC version 1.0.3403.1224 du client RMS.
+
+**Correctifs** :
+
+- Pour les versions d’Outlook 16.0.9324.1000 et ultérieures (Office « Démarrer en un clic »), la barre Azure Information Protection prend en charge les dernières options d’affichage du moniteur qui auparavant pouvaient entraîner l’affichage de la barre en dehors de l’application Outlook.
+
+- Les marquages visuels que vous configurez [par type d’application Office](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) remplacent maintenant un en-tête ou un pied de page qui était précédemment appliqué par une étiquette Azure Information Protection.
+
+- Désormais, quand un fichier Excel porte déjà un étiquette et que celle-ci applique des marquages visuels, une nouvelle feuille possède également les marquages visuels de l’étiquette appliqués.
+
+- Lorsque vous utilisez le paramètre client avancé pour [étiqueter un document Office à l’aide d’une propriété personnalisée existante](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property), l’étiquetage automatique ne remplace pas l’étiquetage manuel.
+
+
+## <a name="version-127480"></a>Version 1.27.48.0
+
+**Date de publication** : 30/05/2018
+
+Cette version inclut MSIPC version 1.0.3403.1224 du client RMS.
 
 **Nouvelles fonctionnalités** : 
 
 - Pour le scanneur Azure Information Protection :
     
-    - Vous pouvez établir une liste de types de fichiers à inclure ou exclure de l’analyse. Pour établir cette liste, utilisez [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Après avoir établi votre liste de types de fichiers, vous pouvez ajouter un nouveau type de fichier à l’aide de l’applet de commande [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType) et en supprimer un à l’aide de l’applet de commande [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType).
+    - Vous pouvez établir une liste de types de fichiers à inclure ou exclure de l’analyse. Pour établir cette liste, utilisez [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Après avoir spécifié votre liste de types de fichiers, vous pouvez ajouter un nouveau type de fichier à l’aide de [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) et en supprimer un à l’aide de [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
     
     - Vous pouvez appliquer une étiquette aux fichiers sans en inspecter le contenu en spécifiant une étiquette par défaut. Utilisez l’applet de commande [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository) et définissez le paramètre *MatchPolicy* sur **Off**. 
     
@@ -70,11 +87,13 @@ La préversion actuelle est **1.27.48.0** et intègre les modifications suivante
 
 - Pour le scanneur Azure Information Protection : 
     
+    - Si vous avez installé une version précédente du scanneur, réexécutez la commande d’installation du scanneur avec [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) une fois que vous avez mis à niveau le client Azure Information Protection. Vos paramètres de configuration pour le scanneur et les référentiels sont conservés. La réinstallation du scanneur accorde au compte de service du scanneur des autorisations de suppression pour la base de données du scanneur, qui seront nécessaires pour les rapports.    
+    
     - Le paramètre *ScanMode* de l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) a été renommé **Enforce**, avec les valeurs Off et On.
     
     - Pour utiliser une étiquette par défaut, vous n’avez plus besoin de la configurer dans les paramètres de stratégie. Il suffit de la spécifier dans la configuration du référentiel. 
 
-- Suppression des pages « Félicitations ! » et « Nouveautés dans Azure Information Protection » qui s’affichaient lors de la première utilisation dans les applications Office.
+- Suppression de la page d’accueil « Félicitations ! » et de la page « Nouveautés dans Azure Information Protection » qui s’affichaient lors de la première utilisation dans les applications Office.
 
 ## <a name="version-12660"></a>Version 1.26.6.0
 
@@ -128,7 +147,7 @@ Correctifs apportés pour accroître la stabilité et prendre en charge des scé
 
 - Bon fonctionnement de Bootstrap dans Office 64 bits pour une protection des documents et des e-mails.
 
-- Vous pouvez désormais configurer une étiquette pour les autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers et également utiliser le paramètre avancé du client pour masquer les options des autorisations personnalisées. [Plus d’informations](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
+- Vous pouvez désormais configurer une étiquette pour les autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers, et également utiliser le paramètre avancé du client pour masquer les options des autorisations personnalisées. [Plus d’informations](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
 
 - Retour à la police Calibri si les marqueurs visuels de la stratégie Azure Information Protection sont configurés pour un nom de police qui n’est pas installé sur le client.
 
@@ -140,6 +159,9 @@ Correctifs apportés pour accroître la stabilité et prendre en charge des scé
 
 - Pour une expérience de gestion plus cohérente, sublabels n’hérite plus des marqueurs visuels et des paramètres de protection de son étiquette parent.
 
+**Autres modifications** :
+
+- Pour la [journalisation de l’utilisation client](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client ) : l’ID d’événement 102 et l’ID d’événement 103 sont remplacés par l’ID d’événement 101.
 
 ## <a name="version-110560"></a>Version 1.10.56.0
 

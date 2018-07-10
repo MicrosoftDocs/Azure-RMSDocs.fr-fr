@@ -4,7 +4,7 @@ description: Phase 4 de la migration d’AD RMS vers Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7aaec205863bf855cc68887f3eafed27386ee49f
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 254e3ecc1292d2b9db0e291f9c45af343f3ccb9c
+ms.sourcegitcommit: 93e83ed71250e408e11fb098551e486282494013
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324304"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Phase de migration 4 : Configuration des services de prise en charge
 
@@ -34,9 +35,11 @@ Utilisez les informations suivantes pour la Phase 4 de la migration d’AD RMS
 
 Indépendamment de la topologie de la clé du locataire Azure Information Protection que vous avez choisie, effectuez les actions suivantes :
 
-1. Pour vérifier que les utilisateurs pourront lire les e-mails envoyés à l’aide de la protection AD RMS, veillez à disposer d’un enregistrement DNS SRV pour votre cluster AD RMS. Si vous n’avez pas créé l’enregistrement DNS SRV pour la reconfiguration du client à l’étape 7, créez-le maintenant pour prendre en charge Exchange Online. [Instructions](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
+1. Pour qu’Exchange Online puisse déchiffrer des e-mails protégés par AD RMS, il doit savoir que l’URL AD RMS de votre cluster correspond à la clé disponible dans votre client. Pour ce faire, la SRV du DNS doit être enregistrée pour votre cluster AD RMS, qui est également utilisé pour reconfigurer les clients Office afin d’utiliser Azure Information Protection. Si vous n’avez pas créé l’enregistrement DNS SRV pour la reconfiguration du client à l’étape 7, créez-le maintenant pour prendre en charge Exchange Online. [Instructions](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
+    
+    Quand cet enregistrement DNS est en place, les utilisateurs d’Outlook sur des clients de messagerie web et mobiles peuvent afficher les e-mails protégés par les services AD RMS dans ces applications, et Exchange sera en mesure d’utiliser la clé que vous avez importée à partir d’AD RMS pour déchiffrer, indexer, journaliser et protéger le contenu qui a été protégé par AD RMS.  
 
-2. Exécutez la commande Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx). Si vous avez besoin d’aide pour exécuter cette commande, consultez les instructions détaillées dans [Exchange Online : Configuration d’IRM](/..deploy-use/configure-office365.md#exchange-online-irm-configuration).
+2. Exécutez la commande Exchange Online [Get-IRMConfiguration]https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx). Si vous avez besoin d’aide pour exécuter cette commande, consultez les instructions détaillées dans [Exchange Online : Configuration d’IRM](/..deploy-use/configure-office365.md#exchange-online-irm-configuration).
     
     Dans la sortie, vérifiez si **AzureRMSLicensingEnabled** a la valeur **True**:
     
@@ -118,12 +121,9 @@ Suivez les instructions de l’article [Déploiement du connecteur Azure Rights 
 
 #### <a name="registry-edits-for-exchange"></a>Modifications du Registre pour Exchange
 
-Pour tous les serveurs Exchange, supprimez les valeurs de Registre que vous avez ajoutées pour LicenseServerRedirection pendant la phase de préparation. Ces valeurs ont été ajoutées aux chemins suivants :
+Pour tous les serveurs Exchange, ajoutez les valeurs de registre suivantes pour LicenseServerRedirection, selon les versions d’Exchange :
 
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
-
+---
 
 Pour Exchange 2013 et Exchange 2016 - Modification du Registre 1 :
 
@@ -147,7 +147,7 @@ L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS 
 
 ---
 
-Pour Exchange 2013 - Modification du Registre 2 :
+Exchange 2013 – modification du registre 2 :
 
 **Chemin du Registre :**
 

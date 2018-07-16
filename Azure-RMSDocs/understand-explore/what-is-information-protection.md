@@ -4,26 +4,26 @@ description: Présentation du service Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/16/2018
+ms.date: 07/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 5a9edbb36384af4aee531854b973adfa28362bda
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: c851c2f6af3d355b017c7fbc3de188d15ed16e90
+ms.sourcegitcommit: 7a58d6bec0b504b889980c83e8551301d49e44f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208122"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37910089"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Azure Information Protection (parfois appelée AIP) est une solution basée sur le cloud qui permet à une organisation de classifier, d’étiqueter et de protéger ses documents et les e-mails. Ces opérations peuvent être effectuées automatiquement par les administrateurs qui définissent des règles et des conditions ou manuellement par les utilisateurs, qui peuvent éventuellement se voir proposer des recommandations. 
+Azure Information Protection (parfois appelée AIP) est une solution basée sur le cloud qui permet à une organisation de classifier et, facultativement, de protéger ses documents et e-mails en y appliquant des étiquettes. Les étiquettes peuvent être appliquées automatiquement par les administrateurs qui définissent des règles et des conditions ou manuellement par les utilisateurs, qui peuvent éventuellement recevoir des suggestions. 
 
-L’image suivante illustre Azure Information Protection en action. L’administrateur a configuré des règles pour détecter les données sensibles (dans ce cas, des informations de carte de crédit). Quand un utilisateur enregistre un document Word qui contient des informations de carte de crédit, il voit une info-bulle personnalisée qui lui recommande d’appliquer une étiquette spécifique que l’administrateur a configurée. Cette étiquette classe et, selon la configuration, peut également protéger le document. 
+L’image suivante illustre Azure Information Protection en action sur l’ordinateur d’un utilisateur. L’administrateur a configuré une étiquette avec des règles qui détectent les données sensibles. Dans notre exemple, il s’agit d’informations sur une carte de crédit. Quand un utilisateur enregistre un document Word qui contient un numéro de carte de crédit, il voit une info-bulle personnalisée qui lui recommande l’étiquette que l’administrateur a configurée. Cette étiquette classifie le document et le protège. 
 
 ![Exemple de classification recommandée pour Azure Information Protection](../media/info-protect-recommend-calloutsv2.png)
 
@@ -31,9 +31,9 @@ Une fois que votre contenu est classifié (et éventuellement protégé), vous p
 
 ## <a name="how-labels-apply-classification"></a>Comment les étiquettes appliquent la classification
 
-Les étiquettes Azure Information Protection vous permettent d’appliquer une classification aux documents et e-mails. Ainsi, la classification est identifiable à tout moment, quel que soit l’endroit où les données sont stockées ou avec qui elles sont partagées. Les étiquettes intègrent les marquages visuels comme les en-têtes, pieds de page ou filigranes. Les métadonnées sont ajoutées aux fichiers et aux en-têtes d’e-mail en texte clair. Le texte clair fait en sorte que les autres services, comme les solutions de prévention de perte de données, puissent identifier la classification et prendre les mesures appropriées. 
+Les étiquettes Azure Information Protection vous permettent d’appliquer une classification aux documents et e-mails. Ainsi, la classification est identifiable, quel que soit l’endroit où les données sont stockées ou les personnes avec lesquelles elles sont partagées. Les étiquettes peuvent intégrer des marquages visuels comme les en-têtes, pieds de page ou filigranes. Les métadonnées sont ajoutées aux fichiers et aux en-têtes d’e-mail en texte clair. Le texte clair fait en sorte que les autres services, comme les solutions de prévention de perte de données, puissent identifier la classification et prendre les mesures appropriées. 
 
-Par exemple, l’e-mail suivant a été classé sous l’étiquette « Général ». Cette étiquette est ajoutée sous forme de pied de page à l’e-mail. Ce pied de page est un indicateur visuel pour tous les destinataires auxquels il est destiné spécifiant qu’il s’agit de données métier d’ordre général qui ne doivent pas être envoyées à l’extérieur de l’organisation. Cette étiquette est également incorporée aux en-têtes d’e-mail afin que les services d’e-mail puissent inspecter cette valeur et éventuellement créer une entrée d’audit ou empêcher son envoi à l’extérieur de l’organisation.
+Par exemple, l’e-mail suivant a été classé sous l’étiquette « Général ». L’étiquette a ajouté un pied de page « Sensibilité : générale » au message électronique. Ce pied de page est un indicateur visuel pour tous les destinataires auxquels il est destiné spécifiant qu’il s’agit de données métier d’ordre général qui ne doivent pas être envoyées à l’extérieur de l’organisation. Cette étiquette est incorporée aux en-têtes d’e-mail afin que les services d’e-mail puissent inspecter cette valeur et éventuellement créer une entrée d’audit ou empêcher son envoi à l’extérieur de l’organisation.
 
 ![Exemple d’en-têtes et de pied de page d’e-mail montrant la classification Azure Information Protection](../media/example-email-footerv2.png)
 
@@ -50,7 +50,7 @@ Ces paramètres de protection peuvent être inclus dans votre configuration d’
 
 ### <a name="rights-management-templates"></a>Modèles Rights Management
 
-Dès que vous activez le service Azure Rights Management, deux modèles par défaut sont disponibles, qui vous permettent de limiter l’accès aux données aux utilisateurs appartenant à votre organisation. Vous pouvez utiliser ces modèles pour empêcher immédiatement une fuite des données hors de votre organisation. Vous pouvez également compléter ces modèles par défaut en configurant vos propres paramètres de protection qui appliquent des contrôles plus restrictifs.
+Dès que le service Azure Rights Management est activé, deux modèles par défaut sont disponibles, qui vous permettent de limiter l’accès aux données aux utilisateurs appartenant à votre organisation. Vous pouvez utiliser ces modèles pour empêcher immédiatement une fuite des données hors de votre organisation. Vous pouvez également compléter ces modèles par défaut en configurant vos propres paramètres de protection qui appliquent des contrôles plus restrictifs.
 
 Quand vous créez une étiquette pour Azure Information Protection qui inclut des paramètres de protection, cette action crée en fait un modèle Rights Management correspondant. Vous pouvez ensuite utiliser aussi ce modèle avec les applications et services qui prennent en charge Azure Rights Management.
 
@@ -99,6 +99,17 @@ Pour les utilisateurs qui envoient l’e-mail, leur flux de travail ne diffère 
 Vous pouvez aussi fournir automatiquement une protection aux utilisateurs avec des règles de flux de messagerie qui appliquent une protection des droits. 
 
 Quand vous joignez des documents Office à ces e-mails, ces documents sont eux aussi automatiquement protégés.
+
+## <a name="classifying-and-protecting-existing-documents"></a>Classification et la protection de documents existants
+
+Dans l’idéal, les documents et e-mails sont étiquetés lors de leur création. Mais vous avez probablement dans vos banques de données de nombreux documents que vous souhaitez classifier pour les protéger également. Ces magasins de données peut être locaux ou dans le cloud.
+
+Pour vos magasins de données locaux, utilisez le scanneur Azure Information Protection pour détecter, classifier et protéger des documents sur des dossiers locaux, des partages réseau et des sites SharePoint Server, ainsi que des bibliothèques. Le scanneur s’exécute en tant que service sur Windows Server. Vous pouvez utiliser les mêmes règles en termes de stratégie pour détecter les informations sensibles et appliquer des étiquettes spécifiques aux documents. Ou vous pouvez appliquer une étiquette par défaut à tous les documents dans un référentiel de données sans inspecter le contenu des fichiers. Vous pouvez également utiliser l’Analyseur de fichier uniquement en mode de création de rapports pour vous aider à découvrir des informations sensibles dont vous ignorez peut-être qu’elles sont en votre possession. 
+
+Pour en savoir plus sur le déploiement et l’utilisation du scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](../deploy-use/deploy-rms-connector.md).
+
+Pour vos magasins de données cloud, utilisez Microsoft Cloud App Security pour appliquer vos étiquettes aux documents dans Box, SharePoint Online et OneDrive entreprise. Pour plus d’informations, consultez [Appliquer automatiquement des étiquettes de classification Azure Information Protection](/cloud-app-security/use-case-information-protection) et [Intégration d’Azure Information Protection](/cloud-app-security/azip-integration).
+
 
 ## <a name="resources-for-azure-information-protection"></a>Ressources pour Azure Information Protection
 

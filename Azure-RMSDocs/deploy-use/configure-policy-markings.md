@@ -4,17 +4,18 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/07/2018
+ms.date: 07/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 3a732f49a299b4d66af70da3d26df193eaca36ac
-ms.sourcegitcommit: 6a67fc50bd8b8a06974de647c15115a673f0217c
+ms.openlocfilehash: c41dcb0a11e61be4a2dfd974d9bf6803a992b858
+ms.sourcegitcommit: ef3d187da900107095d499de7e7dac5c947e4b13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947452"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/07/2018
 
 Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez sélectionner plusieurs options pour que la classification choisie soit facilement visible. Ces marquages visuels sont un filigrane, un en-tête et un pied de page.
 
-Informations supplémentaires sur ces marqueurs visuels :
+Informations supplémentaires sur ces marquages visuels :
 
 - Les en-têtes et pieds de page s’appliquent à Word, Excel, PowerPoint et Outlook.
 
@@ -30,11 +31,13 @@ Informations supplémentaires sur ces marqueurs visuels :
 
     - Excel : les filigranes avec Excel sont visibles uniquement en mode Mise en page et Aperçu avant impression, ainsi que lors de l’impression.
     
-    - PowerPoint : les filigranes sont appliqués au masque des diapositives comme image d’arrière-plan.
+    - PowerPoint : les filigranes sont appliqués au masque des diapositives comme image d’arrière-plan. Sur l’onglet **Affichage**, **Masque des diapositives**, vérifiez que la case à cocher **Masquer les graphiques en arrière-plan** n’est pas sélectionnée.
     
     - Plusieurs lignes de texte sont prises en charge.
 
 - Vous pouvez spécifier simplement une chaîne de texte ou utiliser des [variables](#using-variables-in-the-text-string) pour créer dynamiquement la chaîne de texte quand l’en-tête, le pied de page ou le filigrane est appliqué.
+
+- Word, PowerPoint et Outlook prennent en charge les marquages visuels dans différentes couleurs. Les marquages visuels configurés pour des couleurs sont toujours affichés en noir dans Excel.
 
 - Les marquages visuels prennent en charge une seule langue.
 
@@ -46,7 +49,7 @@ Pour les documents, les marquages visuels sont appliqués comme suit :
 
 - Dans une application Office, les marquages visuels d’une étiquette sont appliqués lorsque l’étiquette est appliquée. Les marquages visuels sont également appliqués lors de l’ouverture d’un document étiqueté et lors du premier enregistrement document.  
 
-- Lorsqu’un document est étiqueté à l’aide de l’Explorateur de fichiers ou de PowerShell, les marquages visuels ne sont pas appliqués immédiatement, mais lorsque ce document est ouvert dans une application Office et lors du premier enregistrement du document.
+- Lorsqu’un document est étiqueté à l’aide de l’Explorateur de fichiers, de PowerShell ou du scanneur Azure Information Protection, les marquages visuels ne sont pas appliqués immédiatement, mais le sont par le client Azure Information Protection lorsque ce document est ouvert dans une application Office et lors du premier enregistrement du document.
     
     Cette exception se produit lorsque vous utilisez [Enregistrement automatique](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) avec Office 2016 pour des fichiers qui sont enregistrés dans SharePoint Online, OneDrive ou OneDrive Entreprise : lorsque la fonctionnalité Enregistrement automatique est activée, les marquages visuels ne sont pas appliqués sauf si vous configurez le [paramètre client avancé](../rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) afin que la classification s’exécute en continu en arrière-plan. 
 
@@ -60,7 +63,7 @@ Utilisez les instructions suivantes pour configurer les marquages visuels d’un
 
 2. À partir de l’option de menu **CLASSIFICATIONS** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette qui contient les marquages visuels que vous souhaitez ajouter ou changer.
 
-3. Dans le panneau **Étiquette**, dans la section **Définir un marquage visuel (par exemple, un en-tête ou un pied de page)**, configurez les paramètres pour les marquages visuels que vous souhaitez, puis cliquez sur **Enregistrer** :
+3. Dans le panneau **Étiquette**, dans la section **Définir un marquage visuel (par exemple, un en-tête ou un pied de page)**, configurez les paramètres pour les marquages visuels que vous souhaitez, puis cliquez sur **Enregistrer** :
     
     - Pour configurer un en-tête : pour **Les documents avec cette étiquette ont un en-tête**, sélectionnez **Activé** si vous souhaitez un en-tête, et **Désactivé** si ce n’est pas le cas. Si vous sélectionnez **Activé**, spécifiez ensuite le texte, la taille, la [police](#setting-the-font-name), la [couleur](#setting-the-font-color) et l’alignement de l’en-tête.
     
@@ -121,7 +124,7 @@ Exemples :
 
 ### <a name="setting-the-font-name"></a>Définition du nom de la police
 
-Calibri est la police par défaut pour le texte des en-têtes, pieds de page et filigranes. Si vous spécifiez une autre police, vérifiez qu’elle est disponible sur les appareils clients qui appliqueront les marqueurs visuels. 
+Calibri est la police par défaut pour le texte des en-têtes, pieds de page et filigranes. Si vous spécifiez une autre police, vérifiez qu’elle est disponible sur les appareils clients qui appliqueront les marquages visuels. 
 
 Si la police spécifiée n’est pas disponible, le client utilise la police Calibri.
 

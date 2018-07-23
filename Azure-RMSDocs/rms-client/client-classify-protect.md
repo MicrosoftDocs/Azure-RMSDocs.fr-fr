@@ -4,7 +4,7 @@ description: Instructions sur la classification et la protection de vos document
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 223dd5681b6b5c6911a90cf6540b2ab4c9d7f54e
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 07abfb8da932dea6fe29507cca9f3066eaf546cf
+ms.sourcegitcommit: 56a49619c0c52fa5296810b27161f23b3380eab9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444133"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39029897"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guide de l’utilisateur : Classifier et protéger un fichier ou un e-mail avec Azure Information Protection
 
@@ -89,7 +89,7 @@ Si vous y êtes autorisé par votre administrateur, vous pouvez spécifier vos p
 
     ![Option Autorisations personnalisées](../media/custom-permissions-callout.png)
     
-    Si vous ne pouvez pas sélectionner **Autorisations personnalisées**, votre administrateur ne vous permet pas d’utiliser cette option.
+    Si vous ne voyez pas **Autorisations personnalisées**, votre administrateur ne vous permet pas d’utiliser cette option.
     
     Notez que toute autorisation personnalisée que vous spécifiez remplace (plutôt que complète) les paramètres de protection que votre administrateur peut avoir définis pour l’étiquette de votre choix.  
 
@@ -146,9 +146,9 @@ Le guide d’administration contient une liste complète des types de fichiers p
     
     ![Aucune étiquette dans la boîte de dialogue Classifier et protéger - Azure Information Protection**](../media/info-protect-dialog-labels-protection-only.png)
     
-3. Si vous y êtes autorisé par votre administrateur, vous pouvez spécifier vos propres paramètres de protection plutôt que d’utiliser les paramètres de protection que votre administrateur peut avoir inclus dans votre étiquette sélectionnée. Pour ce faire, sélectionnez **Protéger par des autorisations personnalisées**.
+3. Si vous y êtes autorisé par votre administrateur, vous pouvez spécifier vos propres paramètres de protection plutôt que d’utiliser les paramètres de protection que votre administrateur peut avoir inclus dans l’étiquette que vous avez sélectionnée. Pour ce faire, sélectionnez **Protéger par des autorisations personnalisées**.
     
-    Si vous ne pouvez pas sélectionner **Protéger par des autorisations personnalisées**, votre administrateur ne vous permet pas d’utiliser cette option.
+    Si vous ne voyez pas **Protéger par des autorisations personnalisées**, votre administrateur ne vous permet pas d’utiliser cette option.
     
     Toute autorisation personnalisée que vous spécifiez remplace (plutôt que complète) les paramètres de protection que votre administrateur peut avoir définis pour l’étiquette de votre choix.  
 
@@ -181,6 +181,8 @@ Plus d’instructions pratiques dans le guide de l’utilisateur Azure Informati
 -   [Que voulez-vous faire ?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informations supplémentaires pour les administrateurs    
-Consultez [Configuration de la stratégie Azure Information Protection](../deploy-use/configure-policy.md).
+Pour des instructions de configuration permettant d’activer le paramètre de stratégie **Rendre l’option des autorisations personnalisées disponible aux utilisateurs**, consultez [Configuration des paramètres de stratégie Azure Information Protection](../deploy-use/configure-policy-settings.md).
+
+Autres instructions de configuration : [Configuration de la stratégie Azure Information Protection](../deploy-use/configure-policy.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

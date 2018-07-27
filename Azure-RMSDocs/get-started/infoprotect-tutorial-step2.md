@@ -4,18 +4,18 @@ description: 'Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2018
+ms.date: 07/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: ffae0c9ef0e9ffd1fc9a4c25ef5c60e8da6de5ca
-ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
+ms.openlocfilehash: 994b9fb3db3c4a1616896ffac7fcd68b0aff7887
+ms.sourcegitcommit: c7e943700189eeaad3f4c919cc0fa3410fd4df5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33946366"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204456"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Étape 2 : Configurer la stratégie Azure Information Protection
 
@@ -38,13 +38,13 @@ Bien qu’Azure Information Protection soit fourni avec une stratégie par défa
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](../media/info-protect-policy-default-labelsv2.png)
     
-3. Vous voyez aussi qu’il y a quelques paramètres de stratégie. Par exemple, aucune étiquette par défaut n’est définie, les documents ou e-mails ne doivent pas obligatoirement avoir une étiquette et les utilisateurs n’ont pas à fournir de justification quand ils changent les étiquettes :
+3. Après les étiquettes, dans la section **Configurer les paramètres à afficher et à appliquer aux utilisateurs finaux d’Information Protection**, vous voyez également certains paramètres de stratégie. Par exemple, aucune étiquette par défaut n’est définie, les documents ou e-mails ne doivent pas obligatoirement avoir une étiquette et les utilisateurs n’ont pas à fournir de justification quand ils changent les étiquettes :
     
     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](../media/info-protect-policy-default-settings.png)
 
 ## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>Modification des paramètres pour une étiquette par défaut et demande de justification
 
-Pour notre didacticiel, nous allons modifier deux de ces paramètres de stratégie pour vous permettre de voir comment ils fonctionnent :
+Pour ce tutoriel, nous allons modifier deux de ces paramètres de stratégie pour vous permettre de voir comment ils fonctionnent :
 
 1. Pour **Sélectionner l’étiquette par défaut**, choisissez **Général**. 
 
@@ -52,7 +52,7 @@ Pour notre didacticiel, nous allons modifier deux de ces paramètres de stratég
 
 2. Pour **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection**, définissez cette option sur **Activé**.
 
-3. De plus, recherchez le paramètre **Mettre l’option des autorisations personnalisées à la disposition des utilisateurs**. S’il est défini sur **Désactivé**, changez-le en **Activé**.
+3. De plus, recherchez le paramètre **Mettre l’option des autorisations personnalisées à la disposition des utilisateurs**. Si ce paramètre est défini sur **Off** (Désactivé), définissez-le sur **On** (Activé).
     
     Vous n’aurez peut-être pas à changer ce paramètre, car la valeur par défaut dépend du moment où vous avez obtenu votre abonnement. Nous allons utiliser des autorisations personnalisées plus loin dans le didacticiel pour partager un document protégé avec un utilisateur que vous spécifiez quand vous cliquez avec le bouton droit sur le fichier dans l’Explorateur de fichiers.
 
@@ -74,7 +74,7 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
     ![Protection configurée pour une étiquette Azure Information Protection](../media/info-protect-protection-bar-configured.png) 
     
-4. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé du cloud)** est sélectionnée. Cette option utilise le service Azure Rights Management pour protéger les documents et les e-mails. Vérifiez que **Définir des autorisations** est également sélectionné. Ensuite, sélectionnez **Ajouter des autorisations**.
+4. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé du cloud)** est sélectionnée. Cette option utilise le service Azure Rights Management pour protéger les documents et les e-mails. Vérifiez aussi que l’option **Définir les autorisations** est sélectionnée. Ensuite, sélectionnez **Ajouter des autorisations**.
 
 5. Dans le panneau **Ajouter des autorisations**, sélectionnez **Ajouter \<nom de l’organisation> - Tous les membres**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous voyez et sélectionnez l’option suivante :
     

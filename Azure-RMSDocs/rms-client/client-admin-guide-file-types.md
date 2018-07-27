@@ -4,7 +4,7 @@ description: Détails techniques sur les types de fichiers pris en charge, les e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d8472b8146aa80f00ae8c66f04ee253f7a0777da
-ms.sourcegitcommit: 3276c1f3f32137cb5450f335f4f55e3b5858694d
+ms.openlocfilehash: 90dac73ce15382b4be58e5eb191e44167bdee56f
+ms.sourcegitcommit: 1f5a5cb650be2b4c302ad4b7a0b109246da3eb80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39157780"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39295438"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 
@@ -55,7 +55,7 @@ Vous pouvez classifier les types de fichiers suivants même s’ils ne sont pas 
 
 - **Microsoft Office** : types de fichiers dans le tableau suivant.
     
-    Formats de fichier pris en charge pour ces types de fichiers : documents Office 97-2003 minimum et Open Office XML
+    Les formats de fichiers pris en charge pour ces types de fichiers sont les formats 97-2003 et les formats Office Open XML pour les programmes Office suivants : Word, Excel et PowerPoint. 
     
     |Type de fichier Office|Type de fichier Office|
     |----------------------------------|----------------------------------|
@@ -95,9 +95,9 @@ Il existe des tailles de fichier maximales que le client Azure Information Prote
 
 - **Pour tous les autres fichiers** : 
     
-    - Pour protéger ces fichiers : la taille de fichier est limitée uniquement par l’espace disque disponible et la mémoire.
+    - Pour protéger d’autres types de fichiers et ouvrir ces types de fichiers dans la visionneuse Azure Information Protection : la taille de fichier maximale est limitée uniquement par l’espace disque et la mémoire disponibles.
     
-    - Pour ouvrir ces fichiers dans la visionneuse Azure Information Protection : sauf si vous avez la version actuelle de la préversion du client Azure Information Protection, la taille de fichier maximale prise en charge pour les fichiers texte (.ptxt et .pxml) est de 20 Mo. Pour les fichiers image et PDF, la taille de fichier maximale est limitée uniquement par la mémoire.
+    - Pour ôter la protection de fichiers à l’aide de la cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) : la taille de fichier maximale prise en charge pour les fichiers .pst est de 5 Go. Les autres types de fichiers sont limités uniquement par l’espace disque et la mémoire disponibles.
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Types de fichiers pris en charge pour la classification et la protection
 
@@ -125,7 +125,7 @@ Ces types de fichiers sont identifiés séparément, car quand ils sont protég�
 |.jt|.pjt|
 
 
-Le tableau suivant liste les types de fichiers restants qui prennent en charge la protection native par le client Azure Information Protection et qui peuvent également être classés. Vous y trouvez les types de fichiers pour les applications Microsoft Office. Les formats de fichier pris en charge sont au minimum les documents Office 97-2003 et Open Office XML. 
+Le tableau suivant liste les types de fichiers restants qui prennent en charge la protection native par le client Azure Information Protection et qui peuvent également être classés. Vous y trouvez les types de fichiers pour les applications Microsoft Office. Les formats de fichiers pris en charge pour ces types de fichiers sont les formats 97-2003 et les formats Office Open XML pour les programmes Office suivants : Word, Excel et PowerPoint.
 
 Pour ces fichiers, l’extension de nom de fichier reste la même une fois que le fichier est protégé par un service Rights Management.
 

@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6b5a2856f54ec6d38ae69007e80d9eb22d416799
-ms.sourcegitcommit: 56a49619c0c52fa5296810b27161f23b3380eab9
+ms.openlocfilehash: fe04cc36f99e641cb11ef832e967699106728749
+ms.sourcegitcommit: dc46351ac5a9646499b90e9565260c3ecd45d305
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39029931"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39217839"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -98,13 +98,13 @@ Créez le nom de la valeur DWORD suivant (avec toutes données de la valeur) :
 
 ## <a name="support-for-disconnected-computers"></a>Prise en charge des ordinateurs déconnectés
 
-Par défaut, le client Azure Information Protection tente automatiquement de se connecter au service Azure Information Protection pour télécharger la dernière stratégie Azure Information Protection. Si vous disposez d’ordinateur qui ne sera pas en mesure de se connecter à Internet pendant une période donnée, vous pouvez empêcher le client d’essayer de se connecter au service en modifiant le Registre. 
+Par défaut, le client Azure Information Protection tente automatiquement de se connecter au service Azure Information Protection pour télécharger la dernière stratégie Azure Information Protection. Si vous disposez d’ordinateurs qui ne peuvent pas se connecter à Internet pendant une période donnée, vous pouvez empêcher le client d’essayer de se connecter au service en modifiant le Registre. 
 
 Recherchez le nom de la valeur suivant et définissez les données de la valeur sur **0** :
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Vérifiez que le client a d’un fichier de stratégie valide nommé **Policy.msip** dans le dossier **%LocalAppData%\Microsoft\MSIP**. Si nécessaire, vous pouvez exporter la stratégie à partir du portail Azure et copier le fichier exporté sur l’ordinateur client. Vous pouvez également utiliser cette méthode pour remplacer un fichier de stratégie obsolète par la dernière stratégie publiée.
+Vérifiez que le client a d’un fichier de stratégie valide nommé **Policy.msip** dans le dossier **%LocalAppData%\Microsoft\MSIP**. Si nécessaire, vous pouvez exporter la stratégie globale ou une stratégie délimitée à partir du portail Azure, et copier le fichier exporté sur l’ordinateur client. Vous pouvez également utiliser cette méthode pour remplacer un fichier de stratégie obsolète par la dernière stratégie publiée. Toutefois, l’exportation de la stratégie ne prend pas en charge le scénario où un utilisateur appartient à plusieurs stratégies délimitées.
 
 Quand vous exportez la stratégie, cette action télécharge un fichier compressé avec plusieurs versions de la stratégie qui correspondent à différentes versions du client Azure Information Protection :
 

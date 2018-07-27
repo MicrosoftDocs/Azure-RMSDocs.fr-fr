@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs d’un 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/19/2018
+ms.date: 07/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 50eefe938a4d37dc63d2209a71b5a06f84a24587
-ms.sourcegitcommit: b5cefaefdd460ed5249db8747f232972b470c619
+ms.openlocfilehash: 45e1f405c751449148b0bfe3a7249640155778c6
+ms.sourcegitcommit: 1f5a5cb650be2b4c302ad4b7a0b109246da3eb80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36263312"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39295523"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -163,6 +163,28 @@ Le client Azure Information Protection prend en charge les mêmes langues qu’O
 Pour ces langues, les options de menu, boîtes de dialogue et messages du client Azure Information Protection s’affichent dans la langue de l’utilisateur. Il existe un programme d’installation unique qui détecte la langue. Ainsi, aucune configuration supplémentaire n’est nécessaire pour installer le client Azure Information Protection pour différentes langues. 
 
 Toutefois, les noms et les descriptions d’étiquette que vous spécifiez ne sont pas traduits automatiquement quand vous configurez des étiquettes dans la stratégie Azure Information Protection. Depuis le 30 août 2017, la [stratégie par défaut](../deploy-use/configure-policy-default.md) actuelle inclut la prise en charge de certaines langues. Pour que les utilisateurs puissent voir les étiquettes dans la langue de leur choix, fournissez vos propres traductions et configurez la stratégie Azure Information Protection pour les utiliser. Pour plus d’informations, consultez le [Guide de configuration des étiquettes pour des langues différentes dans Azure Information Protection](../deploy-use/configure-policy-languages.md). Les marquages visuels ne sont pas traduits et ne prennent pas en charge plusieurs langues.
+
+## <a name="post-installation-tasks"></a>Tâches post-installation
+
+Une fois que vous avez installé le client Azure Information Protection, assurez-vous de donner aux utilisateurs les instructions pour savoir comment étiqueter leurs e-mails et documents, ainsi que des conseils sur les étiquettes à choisir pour des scénarios spécifiques. Par exemple :
+
+- Instructions pour l’utilisateur en ligne : [Guide de l’utilisateur Azure Information Protection](client-user-guide.md)
+
+- Téléchargement d’un guide d’utilisation personnalisable : [Guide d’adoption Azure Information Protection pour l’utilisateur final](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+
+### <a name="update-macros-in-excel-spreadsheets"></a>Mettre à jour les macros dans les feuilles de calcul Excel
+
+Si vous avez des feuilles de calcul Excel qui contiennent des macros, modifiez les macros comme suit pour vous assurer qu’elles continuent à fonctionner comme prévu après l’installation du client Azure Information Protection :
+
+1. Au début de la macro, ajoutez :
+
+        Application.EnableEvents = False
+
+2. À la fin de la macro, ajoutez :
+
+        Application.EnableEvents = True
+
+Pour plus d’informations, consultez [Propriété Application.EnableEvents (Excel)](https://msdn.microsoft.com/vba/excel-vba/articles/application-enableevents-property-excel).
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-client"></a>Mise à niveau et maintenance du client Azure Information Protection
 

@@ -39,7 +39,7 @@ Indépendamment de la topologie de la clé du locataire Azure Information Protec
     
     Quand cet enregistrement DNS est en place, les utilisateurs d’Outlook sur des clients de messagerie web et mobiles peuvent afficher les e-mails protégés par les services AD RMS dans ces applications, et Exchange sera en mesure d’utiliser la clé que vous avez importée à partir d’AD RMS pour déchiffrer, indexer, journaliser et protéger le contenu qui a été protégé par AD RMS.  
 
-2. Exécutez la commande Exchange Online [Get-IRMConfiguration]https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx). Si vous avez besoin d’aide pour exécuter cette commande, consultez les instructions détaillées dans [Exchange Online : Configuration d’IRM](/..deploy-use/configure-office365.md#exchange-online-irm-configuration).
+2. Exécutez la commande Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx). Si vous avez besoin d’aide pour exécuter cette commande, consultez les instructions détaillées dans [Exchange Online : Configuration d’IRM](/..deploy-use/configure-office365.md#exchange-online-irm-configuration).
     
     Dans la sortie, vérifiez si **AzureRMSLicensingEnabled** a la valeur **True**:
     

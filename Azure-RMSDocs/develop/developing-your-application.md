@@ -14,12 +14,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 794e0b89f58944c6734992c57e1ad3a7aa58238a
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: ecbc6ced2b67f3f378a03e98cd6a12b488efbce4
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765814"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373037"
 ---
 # <a name="developing-your-application"></a>Développement de votre application
 
@@ -231,4 +231,3 @@ Une fois que tout est généré et en cours d’exécution, les sorties de l’a
 
 6. Enfin, vous entrez certaines métadonnées de stratégie : nom de la stratégie, description et nom complet de l’émetteur (locataire Azure AD) ![sortie de l’application - étape 6](../media/develop/app-output-6.png)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

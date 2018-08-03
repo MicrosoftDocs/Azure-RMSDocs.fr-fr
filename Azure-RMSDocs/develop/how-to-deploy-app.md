@@ -14,12 +14,12 @@ ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 3b7ff758abeb3f1ddc1ae82349233e437d05dacc
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 3299981f6e45cc8c82da66e2fce07cece552c81f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
-ms.locfileid: "20232834"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372272"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Déploiement d’une application de service sur un autre locataire
 
@@ -51,5 +51,3 @@ Si l’expérience souhaitée n’est pas de fournir à l’administrateur infor
 ## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>Flux 2 : l’administrateur informatique *d’ABC* fournit la clé à l’équipe de *CoolApp*.
 
 Une fois que l’administrateur informatique *d’ABC* crée le principal du service, comme indiqué dans la **Figure 1**, *ABC* transfère les informations à l’équipe de *CoolApp*. L’équipe de *CoolApp* continue ensuite en intégrant les informations dans l’application *CoolApp* pour pouvoir les utiliser dans le locataire *d’ABC*.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

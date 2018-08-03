@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c361c3fadb1bc4a65d94c79f7a41f8aebb6f247a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 55a44324df67cbead2dd1b0bcf2169929e747c42
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207367"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373122"
 ---
 # <a name="rights-management-sharing-application-user-guide"></a>Guide d’utilisation de l’application de partage Rights Management
 
@@ -66,6 +66,5 @@ Voici quelques exemples d’utilisation de l’application de partage RMS pour p
 
 - [Spécifier les paramètres dans la boîte de dialogue](sharing-app-dialog-box.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

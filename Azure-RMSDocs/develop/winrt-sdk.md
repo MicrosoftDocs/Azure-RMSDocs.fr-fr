@@ -14,12 +14,12 @@ ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: dde2b47ddf91c6f79d50df5ad776d981c1494047
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 330ce41da93004209e6fe00c46fa8491d0fbcd49
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30258994"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375191"
 ---
 # <a name="windows-store-setup"></a>Configuration pour le Windows Store
 
@@ -84,5 +84,3 @@ Vous êtes maintenant prêt à créer vos propres applications du Windows Store.
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
 [Informations de référence sur l’API Windows](https://msdn.microsoft.com/library/dn891914.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

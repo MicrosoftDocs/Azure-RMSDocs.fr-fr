@@ -14,12 +14,12 @@ ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 8f99338daf79b2a59ddacb914d424da81d2b630b
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 90013f4ee1285afbf112b1309a5e7b7826802584
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30258959"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374580"
 ---
 # <a name="testing-your-application"></a>Test de votre application
 
@@ -50,4 +50,3 @@ Ce guide n’est pas exhaustif. Pour découvrir comment configurer le client RMS
 * [Installer le SDK](install-the-rms-sdk.md)
 * [Notes sur le déploiement du client RMS 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

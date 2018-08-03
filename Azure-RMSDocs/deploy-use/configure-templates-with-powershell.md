@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 30dbfbe2cd9ef7d8acd89a9a76cd1108d7c03ab2
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: aad2683fb5c30eda8b94f2208a1c72f46d4a0e13
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205718"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370599"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>Informations de référence sur PowerShell pour les modèles de protection
 
@@ -54,4 +54,3 @@ Applets de commande prenant en charge la création et la gestion de modèles de 
 ## <a name="see-also"></a>Voir aussi
 [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

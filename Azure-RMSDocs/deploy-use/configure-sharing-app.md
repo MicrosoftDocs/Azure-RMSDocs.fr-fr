@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6acedb72d270bb5d4153701a6d42aa2757fbacbd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 4da8df0696ce011e2bbe91ee8a1fd53fd5e854f5
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30204813"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371915"
 ---
 # <a name="rights-management-sharing-application-installation-and-configuration-for-clients"></a>Application de partage Rights Management : installation et configuration pour les clients
 
@@ -40,6 +40,5 @@ Vous pouvez télécharger et installer l’application de partage RMS pour les o
 Vous ne pouvez pas télécharger l’application de partage RMS pour iOS et Android à partir de cette page. Les liens pour ces appareils mobiles permettent à présent de télécharger le client Azure Information Protection. 
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

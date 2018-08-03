@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e467557f8e22c1bb41fdab07ae6335c85bdc2987
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 82763779561d57ac43838d14b2b728d19d2a409b
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205531"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374254"
 ---
 # <a name="remove-protection-from-a-file-by-using-the-rights-management-sharing-application"></a>Suppression de la protection d'un fichier avec l'application de partage Rights Management
 
@@ -49,5 +49,3 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 ## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 71bc303aaadf6856cce2f63db0acf5280fbe172b
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: a8ab30fc9b4f8775ef2bb9503c620a8811b18b8d
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206493"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373683"
 ---
 # <a name="protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application"></a>Protégez un fichier partagé par courrier électronique à l’aide de l’application de partage Rights Management
 
@@ -68,7 +68,7 @@ En plus de partager un fichier protégé à l’aide d’Outlook, vous pouvez é
 
 3.  Il se peut qu’une boîte de dialogue s’affiche brièvement pour vous informer que le fichier est protégé et un e-mail spécialement créé pour vous pour indiquer aux destinataires que les pièces jointes sont protégées avec Microsoft RMS et qu’ils doivent se connecter. Lorsqu’ils cliquent sur le lien pour se connecter, ils voient des instructions et des liens pour pouvoir ouvrir vos pièces jointes protégées.
 
-    Exemple :
+    Exemple :
 
     ![E-mail pour Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
@@ -90,5 +90,3 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 
 ## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

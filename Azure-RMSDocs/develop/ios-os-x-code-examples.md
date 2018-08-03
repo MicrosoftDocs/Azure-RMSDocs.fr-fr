@@ -14,12 +14,12 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 121296ed8d2e160bd602ae9d88843eb1580f17f6
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: c57b825146b209a688133ce79e421bbf78670200
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30258895"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375332"
 ---
 # <a name="iosos-x-code-examples"></a>Exemples de code iOS/OS X
 
@@ -279,5 +279,3 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
 
             }];
           }
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

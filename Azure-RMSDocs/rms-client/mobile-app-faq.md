@@ -14,12 +14,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 190fce3f1725775ae699dbc523a810dc79b96f88
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 09e75b1d8fd841295924dccfbacf8dcb6d753182
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444246"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473472"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android
 
@@ -63,7 +63,7 @@ Si votre adresse e-mail personnelle a été utilisée pour protéger le fichier,
 
 Oui, lorsque vous demandez un compte Microsoft, vous pouvez spécifier votre adresse Hotmail ou Gmail, ou toute autre adresse e-mail que vous possédez. 
 
-Toutefois, même si cette visionneuse peut ouvrir des fichiers protégés avec ce compte, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+Toutefois, même si cette visionneuse peut ouvrir des fichiers protégés avec ce compte, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="which-file-extensions-can-i-open-with-this-app"></a>Quelles extensions de fichier puis-je ouvrir avec cette application ?
 
@@ -79,5 +79,3 @@ Dans l’application, accédez à **Paramètres** > **Envoyer des commentaires**
 ## <a name="my-question-has-not-been-answeredwhat-should-i-do"></a>Aucune réponse n’a été apportée à ma question. Que dois-je faire ?
 
 Postez votre question sur notre [site Yammer](https://www.yammer.com/AskIPTeam).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -14,12 +14,12 @@ ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2869fc76bb45ca6f1e22cd1d7ffc232bbc60c0b4
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 29512c1b98fee619eb8a9bf2086529205b8c04d0
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765831"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369654"
 ---
 # <a name="how-to-enable-email-notification"></a>Comment : activer les notifications par e-mail
 
@@ -47,7 +47,7 @@ Si vous voulez configurer les notifications par e-mail pour une licence donnée,
 Le tableau suivant contient les champs de données de l’application (les paires nom/valeur des propriétés) pour les e-mails de notification RMS.
 
 
-|Nom de propriété | Type de données | Exemple de valeur | Remarques |
+|Nom de la propriété | Type de données | Exemple de valeur | Remarques |
 |--------------|-----------|---------------|-------|
 |MS.Content.Name|string|« FinancialReport.docx »|Il s’agit d’un identificateur associé au contenu protégé.<br><br> Pour les fichiers protégés, cette valeur doit être le nom du fichier, sans les informations de chemin.<br><br> Pour les autres types de contenu, par exemple, les e-mails, cette valeur peut correspondre à l’objet de l’e-mail ou bien être vide.|
 |MS.Notify.Enabled|string|« true » &#124; « false »|Si cette valeur est définie sur « true », un e-mail de notification est envoyé au propriétaire de la licence de publication quand un utilisateur tente d’utiliser sa licence pour obtenir une licence utilisateur final.|
@@ -62,5 +62,3 @@ Le tableau suivant contient les champs de données de l’application (les paire
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
 - [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx)
 - [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

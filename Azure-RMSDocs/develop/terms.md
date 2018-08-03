@@ -14,12 +14,12 @@ ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c99a87deb6c333ed61e13c5d98f59d6623f75cbd
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: a0b63f08041c7cf57dd079136bd55a95b1659fd3
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27764520"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375366"
 ---
 # <a name="terms"></a>Conditions d'utilisation
 
@@ -38,5 +38,3 @@ Ce format, également appelé PFile, est le format de fichier par défaut pour A
 
 Le format PFile est transparent pour le développeur d’applications, car il est intégré dans la conception de Microsoft Rights Management SDK 4.2.
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

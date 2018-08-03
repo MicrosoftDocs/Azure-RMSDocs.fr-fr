@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6456bb5e124b1ec29090132e0bce750260c10f25
-ms.sourcegitcommit: b993c332e53d7aa48d93d4bbd42c80abcf79b351
+ms.openlocfilehash: e38f2c84e450b11ea8d86aa8b1680e4754a5aae4
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107013"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372649"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
@@ -203,5 +203,3 @@ Maintenant que vous avez planifié et, le cas échéant, créé et configuré vo
 3.  Gérez votre clé de locataire.
     
     Pour plus d’informations sur les opérations du cycle de vie de votre clé de locataire, consultez [Opérations pour votre clé de locataire Azure Information Protection](../deploy-use/operations-tenant-key.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

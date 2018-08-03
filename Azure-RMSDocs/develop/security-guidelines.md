@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 6c3669c1ada24afcf3b9ec48ea5bb9c38939b47e
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 194e676807145dffdf326fe782f4b4051876552d
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30258773"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371847"
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Bonnes pratiques de sécurité pour Azure Information Protection
 
@@ -94,5 +94,3 @@ L’API autorise ou non un utilisateur à déchiffrer des informations . Les inf
 - Tout droit abstrait inclus dans de nouveaux droits implémentés par une application doit être mappé sur la nouvelle terminologie. Par exemple, un nouveau droit appelé GESTIONNAIRE peut inclure des droits de COPIE, d’IMPRESSION et de MODIFICATION comme droits abstraits.
 Norme recommandée : aucune à l’heure actuelle.
 Norme préférée: aucune à l’heure actuelle.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

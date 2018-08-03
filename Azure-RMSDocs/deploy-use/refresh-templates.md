@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5bbefccbcf5d529d64b613220013a0988fa4808a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: ce9e189ffdad0ab2020aa38258c06ac27230a280
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206015"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369888"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
@@ -98,4 +98,3 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 ## <a name="see-also"></a>Voir aussi
 [Configuration et gestion des modèles dans la stratégie Azure Information Protection](../deploy-use/configure-policy-templates.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

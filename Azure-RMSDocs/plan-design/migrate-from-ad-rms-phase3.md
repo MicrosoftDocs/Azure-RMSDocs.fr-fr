@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 62f854264f48b51e6177c033d95dabaf75e2dc5d
-ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
+ms.openlocfilehash: 07da614bf7971ee4ef89ec9ec3830be188483201
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31009115"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371762"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Phase de migration 3 : Configuration côté client
 
@@ -141,5 +141,3 @@ Quand vous ne pouvez pas migrer tous vos clients Windows à la fois, exécutez l
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour poursuivre la migration, passez à la [Phase 4 : Configuration des services de prise en charge](migrate-from-ad-rms-phase4.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

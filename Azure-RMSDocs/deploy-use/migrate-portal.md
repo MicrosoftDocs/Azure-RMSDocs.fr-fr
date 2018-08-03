@@ -4,7 +4,7 @@ description: Récapitulatif des tâches d’administration dans le portail Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 06/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: ff1cae1695ac37c3e884053e6633a631e236efbe
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 0eb56adc41c18427a2f5058affc525ecfbbf68ba
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376523"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tâches que vous aviez l’habitude d’effectuer dans le portail Azure Classic
 
@@ -31,9 +32,6 @@ Pour plus d’informations sur le retrait du portail Classic, consultez le bille
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Comment effectuer les tâches d’administration courantes
 
 Utilisez les informations suivantes pour vous aider à passer rapidement au portail actuel.
-
-Toutefois, les clients qui ont un abonnement pour Office 365 US Government (Government Community Cloud) ne peuvent pas utiliser le portail Azure et doivent utiliser [PowerShell](configure-templates-with-powershell.md) à la place pour gérer leurs modèles.
-
 
 |Portail Azure Classic|Comment effectuer cette tâche dans le portail Azure
 |-----------|--------------------|
@@ -66,4 +64,3 @@ Les applets de commande PowerShell utilisées pour créer et gérer des modèles
 ## <a name="see-also"></a>Voir aussi
 Pour plus d’informations, consultez [Configuration et gestion des modèles dans la stratégie Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

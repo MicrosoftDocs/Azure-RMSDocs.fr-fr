@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bb38d33972fb99596fcde8bc54e53c38e3817336
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: e14844a5bd1b0ace4085eaaa9c15be6b3c814146
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444110"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473744"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 
@@ -87,7 +87,7 @@ En plus d’utiliser les attributs proxyAddresses et userPrincipalName d’Azure
 
 Autres méthodes d'autorisation :
 
-- Pour les adresses e-mail qui ne sont pas dans Azure AD, Azure Information Protection peut les autoriser si elles sont authentifiées avec un compte Microsoft. Toutefois, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Pour les adresses e-mail qui ne sont pas dans Azure AD, Azure Information Protection peut les autoriser si elles sont authentifiées avec un compte Microsoft. Toutefois, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 - Quand un e-mail est envoyé en utilisant le chiffrement de messages Office 365 avec de nouvelles fonctionnalités à un utilisateur qui n’a pas de compte dans Azure AD, cet utilisateur est d’abord authentifié via la fédération avec un fournisseur d’identité sociale ou avec un code secret à usage unique. L’adresse e-mail spécifiée dans l’e-mail protégé est alors utilisée pour autoriser l’utilisateur.
 
@@ -215,4 +215,3 @@ Après avoir confirmé que vos utilisateurs et groupes peuvent être utilisés a
 
 Pour plus d’informations, notamment sur la vérification de l’état d’activation, consultez [Activation d’Azure Rights Management](../deploy-use/activate-service.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

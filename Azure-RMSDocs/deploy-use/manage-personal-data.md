@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: f0fc9b01b042c3210abf69804d552607d92c5928
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: f42e1318e8be0d805216cffd402a9b87a1259e1e
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444334"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473846"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
 
@@ -254,7 +254,7 @@ Pour supprimer des données personnelles dans les fichiers journaux du client et
 Utilisez les trois étapes suivantes pour demander à Microsoft de supprimer des données personnelles dans les journaux de suivi des documents, les journaux d’administration ou les journaux d’utilisation du service Azure Rights Management. 
 
 **Étape 1 : Lancer la demande de suppression**
-[Contactez le Support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) afin qu’il ouvre un dossier de support Azure Information Protection en vue de la suppression de données de votre locataire. Vous devez prouver que vous êtes administrateur de votre locataire Azure Information Protection et comprendre que la confirmation de ce processus prend plusieurs jours. Lors de l’envoi de votre demande, vous devrez fournir des informations supplémentaires en fonction des données qui doivent être supprimées.
+[Contactez le Support Microsoft](../information-support.md#to-contact-microsoft-support) afin qu’il ouvre un dossier de support Azure Information Protection en vue de la suppression de données de votre locataire. Vous devez prouver que vous êtes administrateur de votre locataire Azure Information Protection et comprendre que la confirmation de ce processus prend plusieurs jours. Lors de l’envoi de votre demande, vous devrez fournir des informations supplémentaires en fonction des données qui doivent être supprimées.
 
 - Pour supprimer le journal d’administration, fournissez la **date de fin**. Tous les journaux d’administration jusqu'à cette date de fin seront supprimés.
 - Pour supprimer les journaux d’utilisation, fournissez la **date de fin**. Tous les journaux d’utilisation jusqu'à cette date de fin seront supprimés.
@@ -277,4 +277,3 @@ Seuls les utilisateurs ayant reçu des [autorisations d’administrateur](#secur
 
 Pour les actions de suppression, la demande de support sert de piste d’audit et de création de rapports pour les actions réalisées par Microsoft. Une fois supprimées, les données ne sont plus disponibles pour la recherche et l’exportation, ce qui peut-être vérifié par l’administrateur à l’aide des applets de commande Get du module AADRM.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

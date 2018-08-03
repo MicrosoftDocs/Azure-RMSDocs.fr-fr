@@ -13,12 +13,12 @@ ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 77d511cc466441ffc28d813be9a0ec86ff3d8fa7
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 9cc8d49b62155354b96ad04f76c335be2124f15a
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205034"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473506"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Comment activer Azure Rights Management à partir du centre d’administration Office 365
 
@@ -44,7 +44,7 @@ Utilisez ces instructions si vous avez accès au service Azure Rights Management
     >
     >Pour activer le service Azure Rights Management, vous devez avoir un [plan Premium Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou un [plan Office 365 incluant Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). 
     
-    Si vous avez besoin d’aide pour activer le service ou si vous avez des questions sur les exigences de l’abonnement, [contactez le support Microsoft](../get-started/information-support.md#to-contact-microsoft-support) ou utilisez vos canaux de support standard.
+    Si vous avez besoin d’aide pour activer le service ou si vous avez des questions sur les exigences de l’abonnement, [contactez le support Microsoft](../information-support.md#to-contact-microsoft-support) ou utilisez vos canaux de support standard.
 
 4. Dans la page **Rights Management**, cliquez sur **Activer**.
 
@@ -56,4 +56,3 @@ Vous devez maintenant voir **Rights Management est activé** , ainsi qu'une opti
 ## <a name="next-steps"></a>Étapes suivantes
 Reprenez la lecture de [Activation d’Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

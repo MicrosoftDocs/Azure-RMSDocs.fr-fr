@@ -12,17 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 011fff0d11527a8abd1bb93f3dbc0e914cd6bd43
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 5c0ecb9cd27387cff73e88334e6a7d7cd06567be
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205163"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375621"
 ---
 # <a name="generate-and-transfer-your-tenant-key--over-the-internet-retired-content"></a>Génération et transfert de votre clé de locataire – via Internet : CONTENU RETIRÉ
 
 >*S’applique à : Azure Rights Management, [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Les informations contenues dans cet article ont été supprimées car elles ne sont plus pertinentes maintenant qu’Azure Rights Management utilise Azure Key Vault pour les clés de locataire gérées par le client (également appelées BYOK ou Bring Your Own Key). 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

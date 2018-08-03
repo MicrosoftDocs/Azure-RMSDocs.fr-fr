@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6c9fe3e28cb44812a6f3a5830546128975522b5f
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 80ae87e28e02a208af9ea4ece2b74df1a7f841b0
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206638"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374556"
 ---
 # <a name="download-and-install-the-rights-management-sharing-application"></a>Télécharger et installer l'application de partage Rights Management
 
@@ -70,4 +70,3 @@ Pour obtenir des exemples et des instructions concernant l’utilisation de l’
 ## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

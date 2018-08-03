@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c49306a731bf629f3678dc9aa95b23b8ee46190e
-ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
+ms.openlocfilehash: 5e7003c2b2dbcd81ee980dda1dfab14291e81088
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34217020"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473397"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Déploiement du connecteur Azure Rights Management
 
@@ -41,7 +41,7 @@ Le connecteur RMS prend en charge les serveurs locaux suivants : Exchange Server
 > [!NOTE]
 > Si vous voulez protéger plusieurs types de fichiers (pas seulement les documents Office) à l’aide de l’Infrastructure de classification des fichiers, n’utilisez pas le connecteur RMS, mais des [applets de commande AzureInformationProtection](/powershell/azureinformationprotection/vlatest/aip).
 
-Pour connaître les versions de ces serveurs locaux qui sont prises en charge par le connecteur RMS, consultez [Serveurs locaux qui prennent en charge Azure RMS](..\get-started\requirements-servers.md).
+Pour connaître les versions de ces serveurs locaux qui sont prises en charge par le connecteur RMS, consultez [Serveurs locaux qui prennent en charge Azure RMS](../requirements-servers.md).
 
 
 ### <a name="support-for-hybrid-scenarios"></a>Prise en charge des scénarios hybrides
@@ -94,5 +94,3 @@ Avant d'installer le connecteur RMS, assurez-vous que les conditions requises su
 ## <a name="next-steps"></a>Étapes suivantes
 
 Accédez à l’étape 1 : [Installation et configuration du connecteur Azure Rights Management](install-configure-rms-connector.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

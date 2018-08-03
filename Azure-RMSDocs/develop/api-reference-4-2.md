@@ -14,12 +14,12 @@ ms.assetid: 6a8df1d8-1279-4189-b17d-f128b7ca5643
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 078f7900cb15631e875d01539bc0a62c99cbf73c
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 9ea9569f8c1baabad8d7d19cf151ce8361249dca
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27764311"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374831"
 ---
 # <a name="api-sdk-42-reference"></a>Référence pour l'API SDK 4.2
 
@@ -40,5 +40,3 @@ L'Azure Information Protection SDK 4.2 prend en charge plusieurs systèmes d’e
 ## <a name="related-topics"></a>Rubriques connexes
 
 * [Prise en main](get-started.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

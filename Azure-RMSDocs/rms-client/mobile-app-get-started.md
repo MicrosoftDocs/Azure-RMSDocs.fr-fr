@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3f012c58255e86c3a133348733e31327faa0417
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 6c8561a54f80ff623881713c8dd05e334ec56ead
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32327379"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474407"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android
 
@@ -37,7 +37,7 @@ Pour utiliser les instructions suivantes, vous devez avoir accès, depuis votre 
 
 - **Un fichier .rpmsg** : il s’agit d’un e-mail protégé par des droits qui s’affiche comme pièce jointe dans un e-mail lorsque votre application de messagerie sur votre appareil mobile ne prend pas en charge la protection des données Rights Management de manière native. 
     
-    Utilisez un autre appareil pour vous envoyer un e-mail protégé par des droits auquel vous pouvez accéder à partir de votre appareil mobile. Par exemple, utilisez Outlook à partir d’un ordinateur Windows. Pour obtenir la liste des clients de messagerie prenant en charge la gestion des droits de manière native, consultez la colonne Adresse de messagerie dans [Applications prenant en charge la protection des données Azure Rights Management](../get-started/requirements-applications.md).
+    Utilisez un autre appareil pour vous envoyer un e-mail protégé par des droits auquel vous pouvez accéder à partir de votre appareil mobile. Par exemple, utilisez Outlook à partir d’un ordinateur Windows. Pour obtenir la liste des clients de messagerie prenant en charge la gestion des droits de manière native, consultez la colonne Adresse de messagerie dans [Applications prenant en charge la protection des données Azure Rights Management](../requirements-applications.md).
 
 - **Un fichier PDF protégé par des droits** : à partir d’un ordinateur Windows, utilisez le client Azure Information Protection pour [protéger un fichier PDF](client-classify-protect.md), puis envoyez ce fichier PDF protégé par des droits par e-mail à votre adresse en tant que pièce jointe. Vous pouvez également télécharger un fichier PDF dans une bibliothèque protégée SharePoint, puis la partager en utilisant votre adresse e-mail.
 
@@ -48,7 +48,3 @@ Pour afficher ces fichiers dans l’application de visionneuse Azure Information
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour poser des questions ou laisser des commentaires sur cette application, qui ne sont pas traités dans les [questions fréquentes](mobile-app-faq.md), visitez notre [site Yammer](https://www.yammer.com/AskIPTeam).
-
-Si l’application ne fonctionne pas comme décrit, consultez les ressources listées dans notre page de [règlement interne](../house-rules.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

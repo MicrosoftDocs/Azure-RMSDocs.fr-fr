@@ -14,12 +14,12 @@ ms.assetid: 4ee4fa26-b4f7-478f-b360-be6f421c5718
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: efa05d43cc8541f6781951addc3f6c1ed4268ea5
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 770bbc39f44d0ee4fe6a2221f9aa6fd336343c77
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765625"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375002"
 ---
 # <a name="rights-management-sdk-42"></a>Rights Management SDK 4.2
 
@@ -38,7 +38,7 @@ La version 4.2 est disponible pour les systèmes d’exploitation suivants :
 - Google Android
 - Apple iOS et Mac OS X
 - Windows Phone
-- Windows Store
+- Windows Store
 - C++ portable pour les systèmes d’exploitation de type Linux
 
 ## <a name="sections"></a>Sections
@@ -50,5 +50,3 @@ La version 4.2 est disponible pour les systèmes d’exploitation suivants :
 [Aide et terminologie pour les développeurs](core-concepts.md) : le but principal de ce kit est de vous aider à créer de la façon la plus simple des applications compatibles AD RMS, qui tirent parti de la solution Right Management Services.
 
 [Informations de référence sur l’API](api-reference-4-2.md) : ce kit prend en charge plusieurs systèmes d’exploitation, qui figurent dans la table des matières qui suit.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

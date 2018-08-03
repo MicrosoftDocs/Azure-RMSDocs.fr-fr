@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6bda82a913e4a9d8984a0354cde28bef3c119e81
-ms.sourcegitcommit: 2e85f87f7276b284b4f17de1d4e752c790eff651
+ms.openlocfilehash: 74cd50008213b9a78745a14e7753d252b1adcf53
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34568869"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374632"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 
@@ -102,4 +102,3 @@ Maintenant que vous avez identifié tous les fichiers journaux associés au clie
 
 - [Commandes PowerShell](client-admin-guide-powershell.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

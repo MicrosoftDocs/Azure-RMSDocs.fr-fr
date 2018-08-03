@@ -14,12 +14,12 @@ ms.assetid: 634df601-79d2-4bc2-b845-4df886d7c589
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 95ca0b174e7d5ad7c1ed52e2898f11221add72df
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 559d9a4b3bd98a4c9fdb46d78e7f713c60931a1b
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27764460"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370354"
 ---
 # <a name="code-examples"></a>Exemples de code
 
@@ -37,5 +37,3 @@ Ces rubriques présentent des éléments de code importants pour la version asso
 - [Exemples de code Android](android-code.md)
 - [Exemples de code Linux](linux-c-code-examples.md)
 - [Exemples de code iOS/OS X](ios-os-x-code-examples.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

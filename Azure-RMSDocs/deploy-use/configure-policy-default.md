@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 57c7321f9bcff12ff0afe4030038495ad4668020
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e8830047e57352d71810d43315ca033ec4ae91e5
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208054"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371422"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
@@ -89,15 +89,15 @@ Les autorisations de protection sont celles définies dans le [modèle par défa
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|Value|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
-|Title|Sensibilité|
+|Titre|Sensibilité|
 |Info-bulle|L’étiquette actuelle pour ce contenu. Ce paramètre identifie les risques pour l’entreprise si ce contenu est partagé avec des personnes non autorisées à l’intérieur ou à l’extérieur de l’organisation.|
 
 
 ### <a name="settings"></a>Paramètres
 
-|Paramètre|Value|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Sélectionner l’étiquette par défaut|Aucune|
@@ -133,15 +133,15 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|Value|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
-|Title|Sensibilité|
+|Titre|Sensibilité|
 |Info-bulle|L’étiquette actuelle pour ce contenu. Ce paramètre identifie les risques pour l’entreprise si ce contenu est partagé avec des personnes non autorisées à l’intérieur ou à l’extérieur de l’organisation.|
 
 
 ### <a name="settings"></a>Paramètres
 
-|Paramètre|Value|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Sélectionner l’étiquette par défaut|Aucune|
@@ -171,15 +171,15 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|Value|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
-|Title|Sensibilité|
+|Titre|Sensibilité|
 |Info-bulle|La confidentialité des informations est composée de quatre niveaux distincts (public, interne, confidentiel, secret), qui permettent à l’utilisateur d’identifier le risque d’exposition d’informations à des utilisateurs non autorisés à l’intérieur ou à l’extérieur de l’entreprise.|
 
 
 ### <a name="settings"></a>Paramètres
 
-|Paramètre|Value|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Sélectionner l’étiquette par défaut|Aucune|
@@ -190,5 +190,3 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy). 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

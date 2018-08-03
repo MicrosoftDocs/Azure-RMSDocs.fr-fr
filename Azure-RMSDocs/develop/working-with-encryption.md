@@ -14,12 +14,12 @@ ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 9c6f24491a23af8b7123ccdee7762111f14749f4
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: f5d50aef96520e390bd83a450e2c1bb456aba323
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765252"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375417"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>Comment : utiliser des paramètres de chiffrement
 
@@ -98,5 +98,3 @@ Cet exemple montre également la nouvelle façon de prendre en charge des *algor
                            IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
                            &amp;dwEncryptionMode);
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

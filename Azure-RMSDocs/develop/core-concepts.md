@@ -14,12 +14,12 @@ ms.assetid: ae67523a-c094-44da-86b8-739bedba7111
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 1cd646a7c4685b2cda270fca23a8201e80c2222e
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 38eda4cf3f29443deed7887308096d5e4dfff8eb
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27764566"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375495"
 ---
 # <a name="developer-guidance"></a>Guide pour développeurs
 Le but principal de Microsoft Rights Management Services (RMS) SDK 4.2 est de vous aider à créer de la façon la plus simple possible des applications compatibles AD RMS tirant parti d’Active Directory Rights Management Services (AD RMS).
@@ -30,5 +30,3 @@ Les rubriques suivantes sont destinées à prendre en charge votre processus de 
 - [Activation de la journalisation des erreurs et des performances](enabling-logging.md) - RMS SDK 4.2 gère le chargement des journaux de diagnostic et de performances par le biais d’une propriété d’appareil unique.
 - [Utilisation des droits intégrés](built-in-rights-usage-restriction-reference.md) - Décrit les droits intégrés fournis par RMS SDK 4.2 et les restrictions d’utilisation qu’une application doit appliquer pour respecter ces droits.
 - [Utilisation du suivi des documents](how-to-use-document-tracking.md) - L’utilisation de la fonctionnalité de suivi des documents nécessite une connaissance de base de la gestion des métadonnées associées et de l’inscription auprès du service.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -14,12 +14,12 @@ ms.assetid: 17B05780-B0EF-4805-8304-52DCDEB3AADB
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: bb611b01129e1c79421621485606adc30fedfeae
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: bb8ff34d90d531f11aae56509c46b6377383c21d
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765067"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370446"
 ---
 # <a name="server"></a>Serveur
 
@@ -52,5 +52,3 @@ Parmi les nombreux services web installés, ceux-ci sont importants pour le dév
 * [Activation d’un ordinateur](https://msdn.microsoft.com/library/Cc530377)
 * [Activation d’un utilisateur](https://msdn.microsoft.com/library/Cc530378)
 * [Création d’une licence d’émission](https://msdn.microsoft.com/library/Aa362355)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

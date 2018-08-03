@@ -13,12 +13,12 @@ ms.custom: askipteam
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e3dc88f69b1fb4ed178f3f2d1268c47fae13621
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 1ebeef2847a8404d5970673acd3163b336cf0406
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208615"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473353"
 ---
 # <a name="rights-management-sharing-application-version-release-history"></a>Application de partage Rights Management : Historique de publication des versions
 
@@ -81,7 +81,7 @@ Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 
 -   Prise en charge de Multi-Factor Authentication (MFA) pour Azure RMS, ayant également pour effet d’éliminer la dépendance vis-à-vis de l’Assistant de connexion Microsoft pour les applications qui utilisent l’authentification moderne.
 
-    Pour plus d’informations, consultez la section [Authentification multifacteur et Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection) dans [Configuration requise d’Active Directory pour Azure Information Protection](../get-started/requirements-azure-ad.md).
+    Pour plus d’informations, consultez la section [Authentification multifacteur et Azure RMS](../requirements-servers.md) dans [Configuration requise d’Active Directory pour Azure Information Protection](../requirements-servers.md).
 
 ## <a name="version-1017840"></a>Version 1.0.1784.0
 **Publiée le** : 30/7/2015
@@ -130,4 +130,3 @@ Les versions antérieures au 1er janvier 2015 ne sont pas répertoriées.
 
 -   **Prise en charge pour plusieurs domaines de messagerie dans votre organisation** : Si vous utilisez AD RMS et que des utilisateurs au sein de votre organisation disposent de plusieurs domaines de messagerie, cette mise à jour leur permet de consommer du contenu protégé par des utilisateurs d’autres domaines au sein de votre organisation. Pour plus d’informations, consultez la section [AD RMS uniquement : Prise en charge de plusieurs domaines de messagerie au sein de votre organisation](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) du [Guide de l’administrateur de l’application de partage Rights Management](sharing-app-admin-guide.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

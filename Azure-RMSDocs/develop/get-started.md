@@ -14,12 +14,12 @@ ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: bddbc42a555ee6ccbd4dd7b41a4183374a1db070
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 34ad679cf5af056b1397a8ec4bdab6542f29c7f8
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27764535"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371704"
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -54,5 +54,3 @@ Pour cette version de Microsoft Rights Management SDK 4.2, une approche rapide 
   |[Configurer l’environnement de développement](setup-developer-environment.md)|Les rubriques suivantes vous montrent comment configurer votre environnement de développement pour l’utilisation des API d’AD RMS SDK pour votre système d’exploitation.|
   |[Exemples de code](code-examples.md)|MS RMS SDK 4.2 comprend un exemple de code et des projets de travail pour certains des systèmes d’exploitation pris en charge.|
   |[Ressources de la communauté](community-resources.md)|Active Directory Rights Management Services est bien pris en charge par une communauté croissante de développeurs sur plusieurs plateformes.|
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

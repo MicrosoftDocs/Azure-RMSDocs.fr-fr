@@ -14,12 +14,12 @@ ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: b711e68f970c26f627802c05a3a9417734e72fb5
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 610356d02579cd37baacc97588fe3193eb2eef00
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765508"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371082"
 ---
 # <a name="linux-code-examples"></a>Exemples de code Linux
 
@@ -590,5 +590,3 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
 **Étape 5** : Obtenir le jeton d’accès à partir du résultat Description : Appeler la méthode **result-> accessToken()**
 
 **Remarque**  Toutes les méthodes de bibliothèque d’authentification peuvent lever **rmsauth::Exception**
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

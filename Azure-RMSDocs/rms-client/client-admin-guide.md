@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs d’un 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/26/2018
+ms.date: 07/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 45e1f405c751449148b0bfe3a7249640155778c6
-ms.sourcegitcommit: 1f5a5cb650be2b4c302ad4b7a0b109246da3eb80
+ms.openlocfilehash: 74cb6b6cd03621f52860012331fbf4cf518459dc
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39295523"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473965"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -59,7 +59,7 @@ Le client Azure Information Protection inclut les éléments suivants :
 
 - Le client Rights Management qui communique avec Azure Rights Management (Azure RMS) ou Active Directory Rights Management Services (AD RMS).
 
-Le client Azure Information Protection est plus adapté pour fonctionner avec ses services Azure ; Azure Information Protection et son service de protection des données, Azure Rights Management. Toutefois, avec certaines restrictions, le client Azure Information Protection fonctionne également avec la version locale de Rights Management, AD RMS. Pour une comparaison complète des fonctionnalités prises en charge par Azure Information Protection et AD RMS, consultez [Comparaison d’Azure Information Protection avec AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). 
+Le client Azure Information Protection est plus adapté pour fonctionner avec ses services Azure ; Azure Information Protection et son service de protection des données, Azure Rights Management. Toutefois, avec certaines restrictions, le client Azure Information Protection fonctionne également avec la version locale de Rights Management, AD RMS. Pour une comparaison complète des fonctionnalités prises en charge par Azure Information Protection et AD RMS, consultez [Comparaison d’Azure Information Protection avec AD RMS](../compare-on-premise.md). 
 
 Si vous avez AD RMS et que vous souhaitez migrer AD RMS vers Azure Information Protection, consultez [Migration d’AD RMS vers Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
@@ -108,7 +108,7 @@ Quand le client est installé, utilisez l’option **Aide et commentaires** pour
 
 Le **lien En savoir plus** pointe par défaut sur le site web [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection), mais vous pouvez le configurer pour qu’il pointe sur une URL personnalisée dans le cadre des [paramètres de stratégie](../deploy-use/configure-policy-settings.md) Azure Information Protection.
 
-Utilisez le lien **Envoyez-nous des commentaires** pour envoyer des suggestions ou des requêtes à l’équipe Information Protection. N’utilisez pas cette option pour le support technique, mais consultez plutôt [Options de support technique et ressources de la communauté](../get-started/information-support.md#support-options-and-community-resources). 
+Utilisez le lien **Envoyez-nous des commentaires** pour envoyer des suggestions ou des requêtes à l’équipe Information Protection. N’utilisez pas cette option pour le support technique, mais consultez plutôt [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). 
 
 L’option **Exporter les journaux** permet de collecter et de joindre automatiquement des fichiers journaux pour le client Azure Information Protection si vous devez les envoyer au support Microsoft. Cette option peut également être utilisée par les utilisateurs finaux pour envoyer ces fichiers journaux à votre support technique.
 
@@ -200,9 +200,15 @@ Consultez [Historique des versions et politique du support](../rms-client/client
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Mise à niveau du scanneur Azure Information Protection
 
-Pour mettre à niveau le scanneur Azure Information Protection, installez la dernière version du client Azure Information Protection.
+Pour mettre à niveau le scanneur Azure Information Protection, installez la dernière version du client Azure Information Protection. Ensuite, effectuez l’une des actions uniques suivantes :
 
-Ensuite, si votre version précédemment installée du client est la version 1.26.6.0 ou une version antérieure, réexécutez la commande d’installation de scanneur avec [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner). Vos paramètres de configuration pour le scanneur et les référentiels seront conservés. La réinstallation du scanneur accorde au compte de service du scanneur des autorisations de suppression pour la base de données du scanneur, qui seront nécessaires pour les rapports.
+Pour la version en disponibilité générale actuelle : 
+
+- Si votre version précédemment installée du client est la version 1.26.6.0 ou une version antérieure, réexécutez la commande d’installation du scanneur avec [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner). Vos paramètres de configuration pour le scanneur et les référentiels seront conservés. La réinstallation du scanneur accorde au compte de service du scanneur des autorisations de suppression pour la base de données du scanneur, qui seront nécessaires pour les rapports.
+
+Pour la préversion : 
+
+- Si votre version précédemment installée du client était la version 1.26.6.0 ou une version antérieure, exécutez [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) après avoir installé le client. Vos paramètres de configuration pour le scanneur et les référentiels seront conservés. L’exécution de cette applet de commande est nécessaire pour mettre à jour le schéma de base de données pour le scanneur et si nécessaire, le compte de service du scanneur se voit également accorder des autorisations de suppression pour la base de données du scanneur. Tant que vous n’avez pas exécuté cette applet de commande de mise à jour, le scanneur ne s’exécute pas.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Désinstallation du client Azure Information Protection
 
@@ -230,4 +236,3 @@ Si vous avez déjà installé le client, consultez les informations supplémenta
 - [Commandes PowerShell](client-admin-guide-powershell.md)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

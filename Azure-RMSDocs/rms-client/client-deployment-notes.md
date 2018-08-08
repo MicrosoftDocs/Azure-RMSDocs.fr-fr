@@ -4,7 +4,7 @@ description: Informations à propos de l’installation, des systèmes d’explo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/04/2018
+ms.date: 06/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: df86d75cd7337fa4642a9b758312923a3577325f
-ms.sourcegitcommit: 40ac805183589a1c8ef22bc1bd9556bcc92f65e6
+ms.openlocfilehash: 751f1a5bf2728a848bd450ce1081a15ea1e35456
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376533"
 ---
 # <a name="rms-client-deployment-notes"></a>Notes sur le déploiement du client RMS
 
@@ -172,13 +173,15 @@ Pour réaliser la découverte du service, le client RMS vérifie les éléments 
     *\<URL_de_votre_locataire\>* a le format suivant: **{GUID}.rms.[Région].aadrm.com**. Vous pouvez trouver cette valeur en identifiant la valeur de **RightsManagementServiceId** quand vous exécutez l’applet de commande [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) pour Azure RMS.
 
 > [!NOTE]
-> Il existe trois exceptions importantes pour ce flux de découverte de service :
+> Il existe quatre exceptions importantes pour ce flux de découverte de service :
 > 
 > - Les appareils mobiles sont mieux adaptés pour utiliser un service cloud : par défaut, ils utilisent donc la découverte de service pour le service Azure Rights Management (https://discover.aadrm.com). Pour remplacer cette option par défaut afin que les appareils mobiles utilisent AD RMS au lieu du service Azure Rights Management, spécifiez les enregistrements SRV dans DNS et installez l’extension d’appareils mobiles comme documenté dans [Extension d’appareils mobiles d’Active Directory Rights Management Services](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx). 
 >
-> - Quand le service Rights Management est appelé par une étiquette Azure Information Protection, la découverte de service n’est pas réalisée. Au lieu de cela, l’URL est spécifiée directement dans la valeur de l’étiquette qui est configurée dans la stratégie Azure Information Protection.  
-
+> - Quand le service Rights Management est appelé par une étiquette Azure Information Protection, la découverte de service n’est pas réalisée. Au lieu de cela, l’URL est spécifiée directement dans la valeur de l’étiquette qui est configurée dans la stratégie Azure Information Protection. 
+>  
 > - Quand un utilisateur se connecte à une application Office, le nom d’utilisateur (et le domaine) de l’authentification est utilisé pour identifier le locataire Azure Information Protection à utiliser. Dans ce cas, les paramètres du Registre ne sont pas nécessaires et le point de connexion de service n’est pas vérifié.
+> 
+> - Lorsque vous avez configuré la [redirection DNS](../plan-design/migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) pour les applications de bureau Démarrer en un clic Office 2016, le client RMS recherche le service Azure Rights Management en ayant l’accès refusé au cluster AD RMS qu’il avait trouvé. Cette action de refus pousse le client à rechercher l’enregistrement SRV, qui redirige le client vers le service Azure Rights Management pour votre locataire. Cet enregistrement SRV laisse aussi Exchange Online déchiffrer les e-mails qui ont été protégés par votre cluster AD RMS. 
 
 ### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>AD RMS uniquement : activation de la découverte du service côté serveur à l’aide d’Active Directory
 Si votre compte dispose de privilèges suffisants (Administrateurs de l’entreprise et administrateur local pour le serveur AD RMS), vous pouvez inscrire automatiquement un point de connexion de service (SCP) lorsque vous installez le serveur de clusters racine AD RMS. S'il existe déjà un SCP dans la forêt, vous devez le supprimer avant de pouvoir en inscrire un nouveau.
@@ -259,4 +262,3 @@ Dans certains cas, il se peut que vous deviez rediriger le trafic pendant la dé
 
 6.  Fermez l'Éditeur du Registre.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

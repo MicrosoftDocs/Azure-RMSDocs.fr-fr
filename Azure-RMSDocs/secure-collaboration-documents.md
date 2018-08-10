@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e8f2facdeda749987bb1fffae84a3f1bf033e1ad
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: f08c458ce779149d34d573ba145452f98d612c8c
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474716"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489499"
 ---
 # <a name="secure-document-collaboration-by-using-azure-information-protection"></a>Sécuriser la collaboration autour de documents à l’aide d’Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "39474716"
 
 Lorsque vous utilisez Azure Information Protection, vous pouvez protéger vos documents sans pour autant devoir renoncer à la collaboration avec des utilisateurs autorisés. Les documents créés par un utilisateur puis partagés avec d’autres afin que ceux-ci puissent les consulter et les modifier sont en majorité des documents Office Word, Excel et PowerPoint. Ces documents prennent en charge la protection native, autrement dit, en plus des fonctionnalités de protection que sont le chiffrement et l’autorisation, ils prennent également en charge l’autorisation restreinte pour un contrôle plus précis. 
 
-Ces autorisations sont appelées des droits d’utilisation et incluent des autorisations comme afficher, modifier et imprimer. Vous pouvez définir des droits d’utilisation individuels lorsqu’un document est protégé, ou vous pouvez définir un groupe de droits d’utilisation, appelé niveau d’autorisation. Les niveaux d’autorisation facilitent la sélection de droits d’utilisation qui sont généralement utilisés ensemble, par exemple, réviseur et coauteur. Pour plus d’informations sur les droits d’utilisation et les niveaux d’autorisation, consultez [Configuration des droits d’utilisation pour Azure Rights Management](./deploy-use/configure-usage-rights.md).
+Ces autorisations sont appelées des droits d’utilisation et incluent des autorisations comme afficher, modifier et imprimer. Vous pouvez définir des droits d’utilisation individuels lorsqu’un document est protégé, ou vous pouvez définir un groupe de droits d’utilisation, appelé niveau d’autorisation. Les niveaux d’autorisation facilitent la sélection de droits d’utilisation qui sont généralement utilisés ensemble, par exemple, réviseur et coauteur. Pour plus d’informations sur les droits d’utilisation et les niveaux d’autorisation, consultez [Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md).
 
 Lorsque vous configurez ces autorisations, vous pouvez spécifier les utilisateurs auxquels elles s’adressent :
 
@@ -44,7 +44,7 @@ En tant qu’administrateur, vous pouvez configurer une étiquette Azure Informa
 
 Cet exemple décrit la procédure de configuration d’une étiquette existante afin d’appliquer une protection permettant aux utilisateurs de votre organisation de collaborer autour de documents avec tous les utilisateurs d’une autre organisation disposant d’Office 365 ou d’Azure AD, avec un groupe d’une autre organisation disposant d’Office 365 ou d’Azure AD et avec un utilisateur qui n’a pas de compte dans Azure AD et utilise à la place une adresse e-mail Gmail.
 
-Étant donné que le scénario restreint l’accès de personnes spécifiques, il n’inclut pas le paramètre pour tous les utilisateurs authentifiés. Pour obtenir un exemple de la manière dont vous pouvez configurer une étiquette avec ce paramètre, consultez [Exemple 5 : étiquette qui crypte le contenu, mais n’en restreint pas l’accès](./deploy-use/configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
+Étant donné que le scénario restreint l’accès de personnes spécifiques, il n’inclut pas le paramètre pour tous les utilisateurs authentifiés. Pour obtenir un exemple de la manière dont vous pouvez configurer une étiquette avec ce paramètre, consultez [Exemple 5 : étiquette qui crypte le contenu, mais n’en restreint pas l’accès](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
 1. Sélectionnez l’étiquette qui existe déjà dans la stratégie globale ou la stratégie délimitée. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
     
@@ -79,10 +79,10 @@ Maintenant que cette étiquette est configurée, elle peut être appliquée aux 
 |Différentes manières d’appliquer l’étiquette|Plus d’informations|
 |---------------|----------|
 |Un utilisateur sélectionne manuellement l’étiquette lorsque le document est créé dans l’application Office.|Les utilisateurs sélectionnent l’étiquette à partir du bouton **Protéger** du ruban Office ou à partir de la barre Azure Information Protection.|
-|Les utilisateurs sont invités à sélectionner une étiquette au moment de l’enregistrement d’un nouveau document.|Vous avez configuré le [paramètre de stratégie](./deploy-use/configure-policy-settings.md) Azure Information Protection nommé **Tous les documents et e-mails doivent avoir une étiquette**.|
+|Les utilisateurs sont invités à sélectionner une étiquette au moment de l’enregistrement d’un nouveau document.|Vous avez configuré le [paramètre de stratégie](configure-policy-settings.md) Azure Information Protection nommé **Tous les documents et e-mails doivent avoir une étiquette**.|
 |Un utilisateur partage le document par e-mail et sélectionne manuellement l’étiquette dans Outlook.|Les utilisateurs sélectionnent l’étiquette à partir du bouton **Protéger** du ruban Office ou à partir de la barre Azure Information Protection. Le document joint est alors automatiquement protégé avec les mêmes paramètres.|
 |Un administrateur applique l’étiquette au document à l’aide de PowerShell.|Utilisez l’applet de commande [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) pour appliquer l’étiquette à un document spécifique ou à tous les documents d’un dossier.|
-|Vous avez en plus configuré l’étiquette de sorte qu’elle applique la classification automatique. Celle-ci peut désormais être appliquée à l’aide du scanneur Azure Information Protection ou de PowerShell.|Consultez [Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection](./deploy-use/configure-policy-classification.md).|
+|Vous avez en plus configuré l’étiquette de sorte qu’elle applique la classification automatique. Celle-ci peut désormais être appliquée à l’aide du scanneur Azure Information Protection ou de PowerShell.|Consultez [Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection](configure-policy-classification.md).|
 
 Pour effectuer cette procédure pas à pas, appliquez manuellement l’étiquette lorsque vous créez le document dans l’application Office : 
 
@@ -149,9 +149,9 @@ Actuellement pris en charge par Office 2016 « Démarrer en un clic » seulem
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Consultez d’autres [exemples de configuration](./deploy-use/configure-policy-protection.md#example-configurations) pour que les étiquettes appliquent une protection dans des scénarios courants. Cet article contient également des informations supplémentaires sur les paramètres de protection.
+Consultez d’autres [exemples de configuration](configure-policy-protection.md#example-configurations) pour que les étiquettes appliquent une protection dans des scénarios courants. Cet article contient également des informations supplémentaires sur les paramètres de protection.
 
-Pour plus d’informations sur les autres options et paramètres que vous pouvez configurer pour votre étiquette, consultez [Configuration de la stratégie Azure Information Protection](./deploy-use/configure-policy.md). 
+Pour plus d’informations sur les autres options et paramètres que vous pouvez configurer pour votre étiquette, consultez [Configuration de la stratégie Azure Information Protection](configure-policy.md). 
 
 L’étiquette qui a été configurée dans cet article crée également un modèle de protection portant le même nom. Si vous avez des applications et services qui s’intègrent aux modèles de protection d’Azure Information Protection, ils peuvent appliquer ce modèle. Par exemple, les solutions DLP et les règles de flux de messagerie. Outlook sur le web affiche automatiquement des modèles de protection de la stratégie globale Azure Information Protection. 
 

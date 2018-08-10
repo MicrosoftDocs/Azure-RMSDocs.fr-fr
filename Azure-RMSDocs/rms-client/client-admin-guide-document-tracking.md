@@ -4,7 +4,7 @@ description: Instructions et informations pour les administrateurs pour configur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8153b189a6e4f77e2a4c1f7d630fbb2f32b667f1
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 00e044274f27409b39c06b4e6cbd2beaa58eb8f2
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39373734"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575428"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
 
@@ -27,7 +27,7 @@ Si votre [abonnement prend en charge le suivi des documents](https://www.microso
 
 ## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Utilisation de PowerShell pour gérer le site de suivi de documents
 
-Les sections suivantes contiennent des informations sur la façon de gérer le site de suivi de documents à l’aide de PowerShell. Pour connaître les instructions d'installation du module PowerShell, consultez [Installation du module PowerShell AADRM](../deploy-use/install-powershell.md). Si vous avez précédemment téléchargé et installé le module, vérifiez le numéro de version en exécutant la commande suivante : `(Get-Module aadrm –ListAvailable).Version`
+Les sections suivantes contiennent des informations sur la façon de gérer le site de suivi de documents à l’aide de PowerShell. Pour connaître les instructions d'installation du module PowerShell, consultez [Installation du module PowerShell AADRM](../install-powershell.md). Si vous avez précédemment téléchargé et installé le module, vérifiez le numéro de version en exécutant la commande suivante : `(Get-Module aadrm –ListAvailable).Version`
 
 Pour plus d’informations sur chacune des applets de commande, utilisez les liens fournis.
 
@@ -108,7 +108,7 @@ Dans les fichiers journaux d’utilisation, deux champs s’appliquent au suivi 
 Il existe également des types de demandes qui journalisent la façon dont les utilisateurs et les administrateurs utilisent le site de suivi des documents. Par exemple, **RevokeAccess** est le type de demande quand un utilisateur (ou un administrateur au nom d’un utilisateur) a révoqué un document dans le site de suivi des documents. Utilisez ce type de demande conjointement avec le champ AdminAction pour déterminer si l’utilisateur a révoqué son propre document (le champ AdminAction est vide) ou si un administrateur a révoqué un document au nom d’un d’utilisateur (AdminAction a la valeur True).
 
 
-Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../deploy-use/log-analyze-usage.md)
+Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../log-analyze-usage.md)
 
 
 

@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 194e676807145dffdf326fe782f4b4051876552d
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: cb4195b1b63c39d1d6e47d1c94d2f7e1c2c83e63
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371847"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575843"
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Bonnes pratiques de sécurité pour Azure Information Protection
 
@@ -81,7 +81,7 @@ AIP ne prend pas en charge la modification de code en cours d’exécution ou la
 
 Si votre application n’interprète pas et n’applique pas correctement les droits spécifiés dans la licence d’émission AIP, vous pouvez rendre des informations disponibles de manières non prévues par le propriétaire. Par exemple, l’application peut permettre à un utilisateur d’enregistrer des informations non chiffrées sur un nouveau support alors que la licence d’émission confère uniquement le droit de les afficher.
 
-Le système AIP organise les droits de plusieurs regroupements. Pour plus d’informations, consultez [Configuration des droits d’utilisation pour Azure Rights Management](../deploy-use/configure-usage-rights.md).
+Le système AIP organise les droits de plusieurs regroupements. Pour plus d’informations, consultez [Configuration des droits d’utilisation pour Azure Rights Management](../configure-usage-rights.md).
 
 ### <a name="azure-information-protection"></a>Azure Information Protection  
 L’API autorise ou non un utilisateur à déchiffrer des informations . Les informations ne comprennent aucune protection inhérente. Si un utilisateur dispose de droits pour déchiffrer des informations, l’API l’y autorise, et l’application est responsable de la gestion ou de la protection de ces informations lorsqu’elles sont déchiffrées. Une application est responsable de la gestion de son environnement et de son interface pour empêcher une utilisation non autorisée d’informations, par exemple en désactivant les boutons **Imprimer** et **Copier** si une licence accorde uniquement un droit de LECTURE. La suite de tests doit vérifier que votre application fonctionne correctement avec tous les droits de licence qu’elle reconnaît.

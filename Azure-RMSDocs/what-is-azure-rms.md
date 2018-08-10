@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c7af3c166eafda4d0fa5ec5a85c47353b593776b
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 96eb395f9fb8a73d903422d2f6afbba22b7df91b
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475036"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489246"
 ---
 # <a name="what-is-azure-rights-management"></a>En quoi consiste Azure Rights Management ?
 
@@ -51,7 +51,7 @@ Pour en savoir plus sur ce service de protection des données d’Azure Informat
 
 Si vous voulez vous lancer et essayer par vous-même de protéger des documents avec des étiquettes Azure Information Protection, utilisez le [Tutoriel de démarrage rapide pour Azure Information Protection](infoprotect-quick-start-tutorial.md). Ce didacticiel vous invite à protéger un document quand des données sensibles sont détectées. Il inclut également la protection d’un document que vous partagez par e-mail, que vous pouvez ensuite suivre pour voir comment il est utilisé et en révoquer l’accès si nécessaire.
 
-Cependant, si vous êtes prêt à déployer Azure Information Protection dans votre organisation afin que les administrateurs et les utilisateurs puissent commencer à protéger des documents et des e-mails, utilisez le [Guide de déploiement d’Azure Information Protection](./plan-design/deployment-roadmap.md) pour vos étapes de déploiement et des liens vers des instructions sur les procédures.
+Cependant, si vous êtes prêt à déployer Azure Information Protection dans votre organisation afin que les administrateurs et les utilisateurs puissent commencer à protéger des documents et des e-mails, utilisez le [Guide de déploiement d’Azure Information Protection](deployment-roadmap.md) pour vos étapes de déploiement et des liens vers des instructions sur les procédures.
 
 > [!TIP]
 > Pour obtenir plus d’informations et de l’aide supplémentaire, utilisez les ressources et les liens dans [Informations et support pour Azure Information Protection](information-support.md).

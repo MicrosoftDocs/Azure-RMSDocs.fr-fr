@@ -4,7 +4,7 @@ description: Instructions d’utilisation du client Rights Management (RMS) avec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9780e355839edaa4b6eccea9692b2a1058affaa
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 850f57534287a7df0a93bfd88399e3417f6aff09
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474186"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575622"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
@@ -28,7 +28,7 @@ Cet article contient des instructions et un script pour utiliser le client Azure
 Cette solution vous permet de protéger automatiquement tous les fichiers figurant dans un dossier sur un serveur de fichiers exécutant Windows Server, ou des fichiers répondant à un critère spécifique. Il s'agit, par exemple, de fichiers qui ont été classés comme contenant des informations confidentielles ou sensibles. Cette solution se connecte directement au service Azure Rights Management d’Azure Information Protection pour protéger les fichiers, vous devez déployer ce service pour votre organisation.
 
 > [!NOTE]
-> Bien qu’Azure Information Protection inclue un [connecteur](../deploy-use/deploy-rms-connector.md) prenant en charge l’infrastructure de classification des fichiers, cette solution prend en charge uniquement la protection native (par exemple, celle des fichiers Office).
+> Bien qu’Azure Information Protection inclue un [connecteur](../deploy-rms-connector.md) prenant en charge l’infrastructure de classification des fichiers, cette solution prend en charge uniquement la protection native (par exemple, celle des fichiers Office).
 > 
 > Pour prendre en charge plusieurs types de fichiers avec l’infrastructure de classification des fichiers Windows Server, vous devez utiliser le module **AzureInformationProtection** de PowerShell, comme décrit dans cet article. Les applets de commande Azure Information Protection, telles que le client Azure Information Protection, prennent en charge la protection générique ainsi que la protection native, ce qui signifie que les types de fichiers autres que les documents Office peuvent être protégés. Pour plus d’informations, consultez [Types de fichiers pris en charge par le client Azure Information Protection](client-admin-guide-file-types.md) dans le guide de l’administrateur du client Azure Information Protection.
 
@@ -53,7 +53,7 @@ Conditions préalables pour ces instructions :
     
     - Vous disposez d’une connexion Internet et vous avez configuré les paramètres de votre ordinateur s’ils sont nécessaires pour un serveur proxy. Par exemple : `netsh winhttp import proxy source=ie`
     
-- Vous avez synchronisé vos comptes d’utilisateur Active Directory locaux avec Azure Active Directory ou Office 365, dont leurs adresses e-mail. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et le service Azure Rights Management. Si vous n’exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l’accès des utilisateurs à ces fichiers soit bloqué. Si vous avez besoin de plus d’informations sur cette exigence, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../plan-design/prepare.md).
+- Vous avez synchronisé vos comptes d’utilisateur Active Directory locaux avec Azure Active Directory ou Office 365, dont leurs adresses e-mail. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et le service Azure Rights Management. Si vous n’exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l’accès des utilisateurs à ces fichiers soit bloqué. Si vous avez besoin de plus d’informations sur cette exigence, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../prepare.md).
     
 - Vous avez téléchargé les modèles Rights Management sur le serveur de fichiers, puis identifié l’identifiant de modèle qui va protéger les fichiers. Pour cela, utilisez la cmdlet [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate). Ce scénario ne prend pas en charge les modèles de services. Par conséquent, vous devez utiliser un modèle qui n’est pas configuré pour une étendue ou la configuration de l’étendue doit inclure l’option de compatibilité des applications de manière à ce que la case à cocher **Afficher ce modèle à tous les utilisateurs lorsque les applications ne prennent pas en charge l’identité de l’utilisateur** soit activée.
 

@@ -13,12 +13,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ee408c47572bcdfcbfccc6d193ed432b92c6f4a1
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 1fccd7712c75ea6f0b45e706377d444b0ae46507
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474766"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489652"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
@@ -41,13 +41,13 @@ Pour utiliser ces technologies de chiffrement complémentaires, vous devez les a
 
 Dans Azure Information Protection, la solution **Bring Your Own Key** (BYOK) vous permet de créer votre propre clé en local pour la protection offerte par Azure Rights Management. Ensuite, vous transférez cette clé à un module de sécurité matériel (HSM, Hardware Security Module) dans Azure Key Vault, mais elle reste en votre possession et vous continuez à la gérer. Si vous ne procédez pas ainsi, la fonctionnalité de protection d’Azure Rights Management utilise une clé automatiquement créée et gérée pour vous dans Azure. Cette configuration par défaut est considérée comme « gérée par Microsoft » plutôt que « gérée par le client » (option BYOK).
 
-Pour en savoir plus sur la solution BYOK et déterminer si vous devez choisir cette topologie de clé pour votre organisation, voir [Planification et implémentation de votre clé de locataire Azure Information Protection](./plan-design/plan-implement-tenant-key.md).
+Pour en savoir plus sur la solution BYOK et déterminer si vous devez choisir cette topologie de clé pour votre organisation, voir [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
 
 Dans Azure Information Protection, la solution **Hold Your Own Key** (HYOK) est destinée au petit nombre d’organisations disposant d’un ensemble de documents ou d’e-mails qui ne peuvent pas être protégés par une clé stockée dans le cloud. Pour ces organisations, cette restriction s’applique, même si elles ont créé la clé et la gèrent via la solution BYOK. Cette restriction a souvent pour origine des problèmes de conformité et de réglementation, la configuration HYOK devant uniquement être appliquée aux informations « Top Secret », qui ne seront jamais partagées en dehors de l’organisation et seront uniquement utilisées sur le réseau interne, et qui ne devront pas nécessairement être accessibles depuis des appareils mobiles.
 
 Pour ces exceptions (soit un maximum de 10 % des contenus devant être protégés, en moyenne), les organisations peuvent utiliser une solution locale, à savoir Active Directory Rights Management Services, pour créer la clé, qui restera en local. Avec cette solution, les ordinateurs récupèrent leur stratégie Azure Information Protection à partir du cloud, mais ce contenu identifié peut être protégé à l’aide de la clé en local.
 
-Pour en savoir plus sur la solution HYOK et vous assurer que vous comprenez ses limitations et restrictions, tout en bénéficiant de conseils sur son utilisation, voir [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](./deploy-use/configure-adrms-restrictions.md).
+Pour en savoir plus sur la solution HYOK et vous assurer que vous comprenez ses limitations et restrictions, tout en bénéficiant de conseils sur son utilisation, voir [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md).
 
 ## <a name="can-i-now-use-byok-with-exchange-online"></a>Puis-je désormais utiliser BYOK avec Exchange Online ?
 
@@ -61,7 +61,7 @@ De nombreux fournisseurs de logiciels disposent de solutions ou implémentent de
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>Existe-t-il un pack d’administration ou un mécanisme de surveillance similaire pour le connecteur RMS ?
 
-Bien que le connecteur Rights Management consigne les messages d’information, d’avertissement et d’erreur dans le journal des événements, il n’existe pas de pack d’administration qui inclut la surveillance de ces événements. Toutefois, la liste des événements et leurs descriptions, ainsi que des informations supplémentaires pour vous aider à prendre une action corrective, sont documentées dans [Surveiller le connecteur Azure Rights Management](./deploy-use/monitor-rms-connector.md).
+Bien que le connecteur Rights Management consigne les messages d’information, d’avertissement et d’erreur dans le journal des événements, il n’existe pas de pack d’administration qui inclut la surveillance de ces événements. Toutefois, la liste des événements et leurs descriptions, ainsi que des informations supplémentaires pour vous aider à prendre une action corrective, sont documentées dans [Surveiller le connecteur Azure Rights Management](monitor-rms-connector.md).
 
 ## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators"></a>Dois-je être administrateur général pour configurer Azure RMS ou puis-je déléguer cette opération à d’autres administrateurs ?
 
@@ -71,7 +71,7 @@ Avec le nouveau rôle Administrateur Information Protection, cette question (et 
 
 Les modèles personnalisés ont été déplacés dans le portail Azure, où vous pouvez continuer à les gérer en tant que modèles, ou les convertir en étiquettes. Pour créer un nouveau modèle, créez une nouvelle étiquette et configurez les paramètres de protection des données pour Azure RMS. En pratique, cela crée un nouveau modèle qui est ensuite accessible pour les services et applications qui s’intègrent avec les modèles Rights Management.
 
-Pour plus d’informations sur les modèles dans le portail Azure, consultez [Configuration et gestion des modèles pour Azure Information Protection](./deploy-use/configure-policy-templates.md).
+Pour plus d’informations sur les modèles dans le portail Azure, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).
 
 ## <a name="ive-protected-a-document-and-now-want-to-change-the-usage-rights-or-add-usersdo-i-need-to-reprotect-the-document"></a>J’ai protégé un document et je souhaite à présent changer les droits d’utilisation ou ajouter des utilisateurs. Dois-je reprotéger le document ?
 
@@ -79,22 +79,22 @@ Si le document est protégé à l’aide d’une étiquette ou d’un modèle, i
 
 - Si un utilisateur n’as pas accédé au document avant la publication des changements, ceux-ci prennent effet quand il ouvre le document.
 
-- Si un utilisateur a déjà accédé au document, les changements prennent effet quand sa [licence d’utilisation](./deploy-use/configure-usage-rights.md#rights-management-use-license) arrive à expiration. Ne reprotégez le document que si vous ne pouvez pas attendre l’expiration de la licence d’utilisation. La reprotection crée une nouvelle version du document, et donc une nouvelle licence d’utilisation pour l’utilisateur.
+- Si un utilisateur a déjà accédé au document, les changements prennent effet quand sa [licence d’utilisation](configure-usage-rights.md#rights-management-use-license) arrive à expiration. Ne reprotégez le document que si vous ne pouvez pas attendre l’expiration de la licence d’utilisation. La reprotection crée une nouvelle version du document, et donc une nouvelle licence d’utilisation pour l’utilisateur.
 
-Si vous avez déjà configuré un groupe pour les autorisations nécessaires, vous pouvez également changer l’appartenance dans le groupe pour inclure ou exclure des utilisateurs. Dans ce cas, il est inutile de changer l’étiquette ou le modèle. Il peut y avoir un bref délai avant l’entrée en vigueur des changements, car l’appartenance dans le groupe est [mise en cache](./plan-design/prepare.md#group-membership-caching-by-azure-information-protection) par le service Azure Rights Management.
+Si vous avez déjà configuré un groupe pour les autorisations nécessaires, vous pouvez également changer l’appartenance dans le groupe pour inclure ou exclure des utilisateurs. Dans ce cas, il est inutile de changer l’étiquette ou le modèle. Il peut y avoir un bref délai avant l’entrée en vigueur des changements, car l’appartenance dans le groupe est [mise en cache](prepare.md#group-membership-caching-by-azure-information-protection) par le service Azure Rights Management.
 
 Si le document est protégé au moyen d’autorisations personnalisées, vous ne pouvez pas changer les autorisations du document existant. Vous devez reprotéger le document et spécifier tous les utilisateurs et droits d’utilisation exigés pour cette nouvelle version du document. Pour reprotéger un document protégé, vous devez avoir le droit d’utilisation Contrôle total.
 
 Conseil : Pour vérifier si un document a été protégé avec un modèle ou une autorisation personnalisée, utilisez l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus). Vous verrez systématiquement une description de modèle **Accès limité** pour les autorisations personnalisées, avec un ID de modèle unique qui ne s’affiche pas quand vous exécutez [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate).
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>J'ai un déploiement hybride d'Exchange avec certains utilisateurs sur Exchange Online et d'autres utilisateurs sur Exchange Server. Est-ce compatible avec Azure RMS ?
-Absolument et l’avantage est que les utilisateurs peuvent protéger et utiliser sans problème des e-mails et pièces jointes entre les deux déploiements Exchange. Pour cette configuration, activez [Azure RMS](./deploy-use/activate-service.md) et [Gestion des droits relatifs à l’information (IRM) pour Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), puis [déployez et configurez le connecteur RMS](./deploy-use/deploy-rms-connector.md) pour Exchange Server.
+Absolument et l’avantage est que les utilisateurs peuvent protéger et utiliser sans problème des e-mails et pièces jointes entre les deux déploiements Exchange. Pour cette configuration, activez [Azure RMS](activate-service.md) et [Gestion des droits relatifs à l’information (IRM) pour Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), puis [déployez et configurez le connecteur RMS](deploy-rms-connector.md) pour Exchange Server.
 
 ## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azure-rms"></a>Si j’utilise cette protection pour mon environnement de production, ma société est-elle enfermée dans la solution ou risque-t-elle de perdre l’accès au contenu protégé par Azure RMS ?
-Non, vous gardez toujours le contrôle de vos données et pouvez continuer à y accéder, même si vous décidez de ne plus utiliser le service Azure Rights Management. Pour plus d’informations, consultez [Désaffectation et désactivation d’Azure Rights Management](./deploy-use/decommission-deactivate.md).
+Non, vous gardez toujours le contrôle de vos données et pouvez continuer à y accéder, même si vous décidez de ne plus utiliser le service Azure Rights Management. Pour plus d’informations, consultez [Désaffectation et désactivation d’Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Puis-je contrôler les utilisateurs pouvant utiliser Azure RMS pour protéger du contenu ?
-Oui, le service Azure Rights Management dispose de contrôles d’intégration d’utilisateur pour ce scénario. Pour plus d’informations, consultez la section [Configuration de contrôles d’intégration pour un déploiement échelonné](./deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) dans l’article [Activation d’Azure Rights Management](./deploy-use/activate-service.md).
+Oui, le service Azure Rights Management dispose de contrôles d’intégration d’utilisateur pour ce scénario. Pour plus d’informations, consultez la section [Configuration de contrôles d’intégration pour un déploiement échelonné](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) dans l’article [Activation d’Azure Rights Management](activate-service.md).
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>Puis-je empêcher des utilisateurs de partager des documents protégés avec des organisations spécifiques ?
 L’un des avantages majeurs de l’utilisation du service Azure Rights Management pour la protection des données est qu’il prend en charge la collaboration interentreprises sans que vous soyez obligé de configurer des approbations explicites pour chaque organisation partenaire, car Azure AD se charge de l’authentification à votre place.
@@ -115,9 +115,9 @@ Autres méthodes d'authentification :
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>Puis-je ajouter des utilisateurs externes (des personnes ne faisant pas partie de mon organisation) à des modèles personnalisés ?
 
-Oui. Les [paramètres de protection](./deploy-use/configure-policy-protection.md) que vous configurez dans le portail Azure vous permettent d’ajouter des autorisations à des utilisateurs et groupes extérieurs à votre organisation, et même à tous les utilisateurs d’une autre organisation. Vous trouverez peut-être utile de consulter l’exemple pas à pas, [Sécuriser la collaboration autour de documents à l’aide d’Azure Information Protection](secure-collaboration-documents.md). 
+Oui. Les [paramètres de protection](configure-policy-protection.md) que vous configurez dans le portail Azure vous permettent d’ajouter des autorisations à des utilisateurs et groupes extérieurs à votre organisation, et même à tous les utilisateurs d’une autre organisation. Vous trouverez peut-être utile de consulter l’exemple pas à pas, [Sécuriser la collaboration autour de documents à l’aide d’Azure Information Protection](secure-collaboration-documents.md). 
 
-Notez que si vous avez des étiquettes Azure Information Protection, vous devez d’abord convertir votre modèle personnalisé en étiquette pour pouvoir configurer ces paramètres de protection dans le portail Azure. Pour plus d’informations, consultez [Configuration et gestion des modèles pour Azure Information Protection](./deploy-use/configure-policy-templates.md).
+Notez que si vous avez des étiquettes Azure Information Protection, vous devez d’abord convertir votre modèle personnalisé en étiquette pour pouvoir configurer ces paramètres de protection dans le portail Azure. Pour plus d’informations, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).
 
 Vous pouvez aussi ajouter des utilisateurs externes aux modèles personnalisés (et étiquettes) à l’aide de PowerShell. Cette configuration vous oblige à utiliser un objet de définition de droits pour mettre à jour votre modèle :
 
@@ -128,7 +128,7 @@ Vous pouvez aussi ajouter des utilisateurs externes aux modèles personnalisés 
     Lorsque vous ajoutez des utilisateurs à un modèle existant, vous devez définir des objets de définition de droits pour les utilisateurs existants dans les modèles, ainsi que pour les nouveaux utilisateurs. Pour ce scénario, n’hésitez pas à consulter l’**exemple 3 : ajouter de nouveaux utilisateurs et droits à un modèle personnalisé** dans la section [Exemples](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) de l’applet de commande.
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Quels types de groupes puis-je utiliser avec Azure RMS ?
-Pour la plupart des scénarios, vous pouvez utiliser n’importe quel type de groupe d’Azure AD qui a une adresse e-mail. Cette règle s’applique toujours quand vous affectez des droits d’utilisation, mais il existe certaines exceptions pour l’administration du service Azure Rights Management. Pour plus d’informations, consultez [Configuration requise d’Azure Information Protection pour les comptes de groupe](./plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
+Pour la plupart des scénarios, vous pouvez utiliser n’importe quel type de groupe d’Azure AD qui a une adresse e-mail. Cette règle s’applique toujours quand vous affectez des droits d’utilisation, mais il existe certaines exceptions pour l’administration du service Azure Rights Management. Pour plus d’informations, consultez [Configuration requise d’Azure Information Protection pour les comptes de groupe](prepare.md#azure-information-protection-requirements-for-group-accounts).
 
 ## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>Comment envoyer un e-mail protégé sur un compte Gmail ou Hotmail ?
 
@@ -136,7 +136,7 @@ Quand vous utilisez Exchange Online et le service Azure Rights Management, vous 
 
 Le destinataire voit une option qui lui permet de se connecter à son compte Gmail, Yahoo ou Microsoft, puis de lire l’e-mail protégé. Ils peuvent également choisir l’option de demander un code secret à usage unique pour lire l’e-mail dans un navigateur.
 
-Pour prendre en charge ce scénario, Exchange Online doit être activé pour le service Azure Rights Management et pour les nouvelles fonctionnalités de chiffrement de messages Office 365. Pour plus d’informations sur cette configuration, consultez [Exchange Online : Configuration d’IRM](./deploy-use/configure-office365.md#exchange-online-irm-configuration).
+Pour prendre en charge ce scénario, Exchange Online doit être activé pour le service Azure Rights Management et pour les nouvelles fonctionnalités de chiffrement de messages Office 365. Pour plus d’informations sur cette configuration, consultez [Exchange Online : Configuration d’IRM](configure-office365.md#exchange-online-irm-configuration).
 
 Pour plus d’informations sur les nouvelles fonctionnalités, parmi lesquelles la prise en charge de tous les comptes e-mail sur tous les appareils, consultez le billet de blog suivant : [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
@@ -174,7 +174,7 @@ Si vous êtes intéressé par une fonctionnalité spécifique qui n’est pas en
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>Comment configurer OneDrive Entreprise dans SharePoint Online, afin que les utilisateurs puissent partager en toute sécurité des fichiers avec des personnes à l'intérieur et à l'extérieur de l'organisation ?
 Par défaut, en votre qualité d’administrateur Office 365, ce n’est pas vous qui configurez cela, mais les utilisateurs.
 
-De la même manière qu’un administrateur de site SharePoint active et configure IRM pour une bibliothèque SharePoint dont il est propriétaire, OneDrive Entreprise a été conçu pour permettre aux utilisateurs d’activer et de configurer IRM pour leur propre bibliothèque OneDrive Entreprise. Cependant, en utilisant PowerShell, vous pouvez le faire à leur place. Pour obtenir des instructions, consultez la section [SharePoint Online et OneDrive Entreprise : configuration de la gestion des droits relatifs à l’information](./deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) dans l’article [Office 365 : configuration pour les clients et services en ligne](./deploy-use/configure-office365.md).
+De la même manière qu’un administrateur de site SharePoint active et configure IRM pour une bibliothèque SharePoint dont il est propriétaire, OneDrive Entreprise a été conçu pour permettre aux utilisateurs d’activer et de configurer IRM pour leur propre bibliothèque OneDrive Entreprise. Cependant, en utilisant PowerShell, vous pouvez le faire à leur place. Pour obtenir des instructions, consultez la section [SharePoint Online et OneDrive Entreprise : configuration de la gestion des droits relatifs à l’information](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) dans l’article [Office 365 : configuration pour les clients et services en ligne](configure-office365.md).
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Avez-vous des conseils ou des astuces pour réussir le déploiement ?
 
@@ -183,20 +183,20 @@ Après avoir supervisé de nombreux déploiements et écouté nos clients, parte
 Puisqu’Azure Information Protection permet de partager des fichiers en toute sécurité, vous pouvez faire preuve d’ambition concernant la portée de la protection de vos données. Soyez prudent quand vous configurez les restrictions des droits d’utilisation. Pour de nombreuses organisations, la meilleure chose à faire est d’empêcher la fuite des données en limitant l’accès aux seuls membres de votre organisation. Bien sûr, vous pouvez être bien plus précis si vous devez empêcher des personnes d’imprimer, d’éditer, etc. Appliquez néanmoins les restrictions les plus fortes à titre exceptionnel pour les documents nécessitant réellement un niveau de sécurité élevé. Au lieu d’implémenter ces droits d’utilisation plus restrictifs dès le premier jour, adoptez une approche plus progressive.
 
 ## <a name="how-do-we-regain-access-to-files-that-were-protected-by-an-employee-who-has-now-left-the-organization"></a>Comment récupérer l'accès à des fichiers protégés par un employé qui a quitté l'organisation ?
-Utilisez la [fonctionnalité de super utilisateur](./deploy-use/configure-super-users.md), qui accorde les droits d’utilisation Contrôle total aux utilisateurs autorisés pour tous les documents et e-mails protégés par votre locataire. Les super utilisateurs peuvent toujours lire ce contenu protégé et, si nécessaire, supprimer la protection ou le reprotéger pour d’autres utilisateurs. Cette même fonctionnalité permet à des services autorisés d'indexer et d'inspecter des fichiers si nécessaire.
+Utilisez la [fonctionnalité de super utilisateur](configure-super-users.md), qui accorde les droits d’utilisation Contrôle total aux utilisateurs autorisés pour tous les documents et e-mails protégés par votre locataire. Les super utilisateurs peuvent toujours lire ce contenu protégé et, si nécessaire, supprimer la protection ou le reprotéger pour d’autres utilisateurs. Cette même fonctionnalité permet à des services autorisés d'indexer et d'inspecter des fichiers si nécessaire.
 
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>Lorsque je teste la révocation dans le site de suivi des documents, je vois un message m’indiquant que les autres utilisateurs continueront d’avoir accès au document pendant 30 jours. Cette durée est-elle configurable ?
 
-Oui. Ce message indique la [licence d’utilisation](./deploy-use/configure-usage-rights.md#rights-management-use-license) de ce fichier en particulier.
+Oui. Ce message indique la [licence d’utilisation](configure-usage-rights.md#rights-management-use-license) de ce fichier en particulier.
 
 La révocation d’un fichier ne peut être appliquée que lorsque l’utilisateur doit s’authentifier auprès du service Azure Rights Management. Par conséquent, si la période de validité de la licence d’utilisation du fichier est de 30 jours et que l’utilisateur a déjà ouvert le document, il peut continuer d’y accéder pendant toute la durée de la licence d’utilisation. Quand la licence d’utilisation expire, l’utilisateur doit se réauthentifier et l’accès lui est refusé, car le document a été révoqué.
 
-L’utilisateur qui a protégé le document, [l’émetteur Rights Management](./deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) n’est pas concerné par cette révocation et peut toujours accéder à ses documents.
+L’utilisateur qui a protégé le document, [l’émetteur Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) n’est pas concerné par cette révocation et peut toujours accéder à ses documents.
 
-Pour un locataire, la période de validité par défaut d’une licence d’utilisation est de 30 jours. Vous pouvez remplacer ce paramètre par un paramètre plus restrictif dans une étiquette ou un modèle. Pour plus d’informations sur la licence d’utilisation et sa configuration, consultez la documentation [Licence d’utilisation Rights Management](./deploy-use/configure-usage-rights.md#rights-management-use-license).
+Pour un locataire, la période de validité par défaut d’une licence d’utilisation est de 30 jours. Vous pouvez remplacer ce paramètre par un paramètre plus restrictif dans une étiquette ou un modèle. Pour plus d’informations sur la licence d’utilisation et sa configuration, consultez la documentation [Licence d’utilisation Rights Management](configure-usage-rights.md#rights-management-use-license).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Est-ce que Rights Management peut empêcher les captures d’écran ?
-En n’accordant pas le [droit d’utilisation](./deploy-use/configure-usage-rights.md) **Copy**, Rights Management peut empêcher des captures d’écran de nombreux outils de capture écran couramment utilisés sur les plates-formes Windows (Windows 7, Windows 8.1, Windows 10, Windows Phone) et Android. En revanche, les appareils iOS et Mac n’autorisent aucune application à empêcher les captures d’écran, et les navigateurs (par exemple, utilisés avec Outlook Web App et Office Online) ne peuvent pas non plus empêcher les captures d’écran.
+En n’accordant pas le [droit d’utilisation](configure-usage-rights.md) **Copy**, Rights Management peut empêcher des captures d’écran de nombreux outils de capture écran couramment utilisés sur les plates-formes Windows (Windows 7, Windows 8.1, Windows 10, Windows Phone) et Android. En revanche, les appareils iOS et Mac n’autorisent aucune application à empêcher les captures d’écran, et les navigateurs (par exemple, utilisés avec Outlook Web App et Office Online) ne peuvent pas non plus empêcher les captures d’écran.
 
 La possibilité d’empêcher les captures d’écran peut également aider à éviter la divulgation accidentelle ou involontaire de renseignements confidentiels ou sensibles. Il existe par ailleurs de nombreuses façons de partager des données affichées sur un écran, et la capture d’écran n’est qu’une méthode parmi d’autres. Par exemple, un utilisateur désireux de partager des informations affichées peut parfaitement les photographier avec son téléphone, recopier les données ou simplement les communiquer verbalement à un tiers.
 
@@ -204,5 +204,5 @@ Comme le montrent ces exemples, même si la totalité des plateformes et logicie
 
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>Quelle différence y a-t-il entre un utilisateur qui protège un e-mail avec l’option Ne pas transférer et un modèle qui n’inclut pas de droit de transfert ?
 
-En dépit de son nom et de son apparence, l’option **Ne pas transférer** n’est ni le contraire du droit de transfert, ni un modèle. Il s’agit en fait d’un ensemble de droits qui incluent la restriction de copier, imprimer et enregistrer des pièces jointes, outre la restriction de transfert des e-mails. Les droits sont appliqués dynamiquement aux utilisateurs par le biais des destinataires choisis et non pas statiquement attribués par l’administrateur. Pour plus d’informations, consultez la section [Option Ne pas transférer pour les e-mails](./deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) dans [Configuration des droits d’utilisation pour Azure Rights Management](./deploy-use/configure-usage-rights.md).
+En dépit de son nom et de son apparence, l’option **Ne pas transférer** n’est ni le contraire du droit de transfert, ni un modèle. Il s’agit en fait d’un ensemble de droits qui incluent la restriction de copier, imprimer et enregistrer des pièces jointes, outre la restriction de transfert des e-mails. Les droits sont appliqués dynamiquement aux utilisateurs par le biais des destinataires choisis et non pas statiquement attribués par l’administrateur. Pour plus d’informations, consultez la section [Option Ne pas transférer pour les e-mails](configure-usage-rights.md#do-not-forward-option-for-emails) dans [Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md).
 

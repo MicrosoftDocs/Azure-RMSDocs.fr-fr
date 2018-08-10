@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f529b761ef757612b621e948a49805448f9414ba
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: a450aabe8b2e318e4cb7be65f9c4d7d48941dc95
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474666"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488758"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Comment les applications prennent en charge le service Azure Rights Management
 
@@ -30,11 +30,11 @@ Utilisez les informations suivantes pour comprendre comment les applications et 
 
 Dans certains cas, le service Azure Rights Management applique automatiquement la protection, en fonction des stratégies configurées par les administrateurs. C’est le cas, par exemple, avec les bibliothèques SharePoint et les règles de transport Exchange. Dans d’autres cas, les utilisateurs finaux doivent appliquer eux-mêmes la protection à partir de leurs applications. Par exemple, les utilisateurs sélectionnent une étiquette de classification qui est configurée pour appliquer la protection, ou ils sélectionnent un modèle ou des options spécifiques. La protection appliquée par les utilisateurs est classique quand ils décident de protéger un fichier à partager, et quand ils limitent également l’accès ou l’utilisation à des utilisateurs sélectionnés ou à des utilisateurs en dehors de l’organisation.
 
-Les modèles permettent aux utilisateurs (et administrateurs qui configurent des stratégies) d’appliquer facilement le niveau adéquat de protection et de restreindre l’accès aux personnes internes de l’organisation. Deux modèles par défaut sont livrés avec le service Azure Rights Management, mais vous voudrez probablement créer des modèles personnalisés pour réduire le temps passé par les utilisateurs et les administrateurs à spécifier des options individuelles. Pour plus d’informations sur les modèles, consultez [Configuration et gestion des modèles pour Azure Information Protection](./deploy-use/configure-policy-templates.md).
+Les modèles permettent aux utilisateurs (et administrateurs qui configurent des stratégies) d’appliquer facilement le niveau adéquat de protection et de restreindre l’accès aux personnes internes de l’organisation. Deux modèles par défaut sont livrés avec le service Azure Rights Management, mais vous voudrez probablement créer des modèles personnalisés pour réduire le temps passé par les utilisateurs et les administrateurs à spécifier des options individuelles. Pour plus d’informations sur les modèles, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).
 
-Pour les cas où les utilisateurs doivent appliquer eux-mêmes la protection, veillez à leur fournir des instructions et des conseils sur la façon et le moment de le faire. Fournissez des instructions spécifiques pour l’application et les versions qu’ils utilisent et la façon dont ils les utilisent. Fournissez également des conseils sur le moment et la façon dont les utilisateurs doivent appliquer la protection qui convient à votre entreprise. Pour plus d’informations, consultez [Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management](./deploy-use/help-users.md).
+Pour les cas où les utilisateurs doivent appliquer eux-mêmes la protection, veillez à leur fournir des instructions et des conseils sur la façon et le moment de le faire. Fournissez des instructions spécifiques pour l’application et les versions qu’ils utilisent et la façon dont ils les utilisent. Fournissez également des conseils sur le moment et la façon dont les utilisateurs doivent appliquer la protection qui convient à votre entreprise. Pour plus d’informations, consultez [Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management](help-users.md).
 
-Pour plus d’informations sur la configuration de ces applications pour le service Azure Rights Management d’Azure Information Protection, consultez [Configuration d’applications pour Azure Rights Management](./deploy-use/configure-applications.md).
+Pour plus d’informations sur la configuration de ces applications pour le service Azure Rights Management d’Azure Information Protection, consultez [Configuration d’applications pour Azure Rights Management](configure-applications.md).
 
 Les services de recherche peuvent s’intégrer à Rights Management de différentes manières. Par exemple : 
 

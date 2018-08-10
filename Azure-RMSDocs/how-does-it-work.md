@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 93e5af9843ef215ec074024179c71d577722096b
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: cebca1f9ce2bb7d73f29e3e1ea7d6fd2fc6a5742
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474746"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489880"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
@@ -71,13 +71,13 @@ Pour chaque document ou e-mail protégé par Azure RMS, Azure RMS crée une clé
 
 La clé de contenu est protégée à l’aide de la clé RSA de l’organisation (la « clé de locataire Azure Information Protection ») dans le cadre de la stratégie définie dans le document. La stratégie est également signée par l’auteur du document. Cette clé de locataire est commune à tous les documents et e-mails protégés par le service Azure Rights Management pour l’organisation. Elle ne peut être modifiée par un administrateur Azure Information Protection que si l’organisation utilise une clé de locataire gérée par le client, également appelée BYOK (Bring Your Own Key). 
 
-Cette clé de locataire est protégée dans les services en ligne de Microsoft, dans un environnement très contrôlé et sous étroite surveillance. Quand vous utilisez une clé de locataire gérée par le client (BYOK), cette sécurité est renforcée par l’utilisation d’une série de modules de sécurité matériels (HSM) haut de gamme dans chaque région Azure, sans possibilité d’extraire, d’exporter ou de partager les clés, quelles que soient les circonstances. Pour plus d’informations sur les options de clé de locataire et les clés BYOK, consultez [Planification et implémentation de votre clé de locataire Azure Information Protection](./plan-design/plan-implement-tenant-key.md).
+Cette clé de locataire est protégée dans les services en ligne de Microsoft, dans un environnement très contrôlé et sous étroite surveillance. Quand vous utilisez une clé de locataire gérée par le client (BYOK), cette sécurité est renforcée par l’utilisation d’une série de modules de sécurité matériels (HSM) haut de gamme dans chaque région Azure, sans possibilité d’extraire, d’exporter ou de partager les clés, quelles que soient les circonstances. Pour plus d’informations sur les options de clé de locataire et les clés BYOK, consultez [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
 
 Les licences et certificats envoyés à un appareil Windows sont protégés par la clé privée d’appareil du client, créée quand un utilisateur utilise Azure RMS sur l’appareil pour la première fois. Cette clé privée est à son tour protégée par DPAPI sur le client, ce qui a pour effet de protéger ces secrets à l’aide d’une clé dérivée du mot de passe de l’utilisateur. Sur les appareils mobiles, les clés ne sont utilisées qu’une seule fois. Ainsi, n’étant pas stockées sur les clients, elles ne nécessitent pas de protection sur l’appareil. 
 
 
 ## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procédure pas à pas décrivant le fonctionnement d'Azure RMS : première utilisation, protection du contenu, consommation du contenu
-Pour comprendre plus en détails le fonctionnement d’Azure RMS, examinons un flux classique tel qu’il se produit après l’[activation du service Azure Rights Management](./deploy-use/activate-service.md), quand un utilisateur utilise le service Rights Management pour la première fois sur son ordinateur Windows (un processus parfois nommé **initialisation de l’environnement utilisateur** ou amorçage), **protège du contenu** (un document ou un e-mail), puis **consomme** (ouvre et utilise) du contenu protégé par quelqu’un d’autre.
+Pour comprendre plus en détails le fonctionnement d’Azure RMS, examinons un flux classique tel qu’il se produit après l’[activation du service Azure Rights Management](activate-service.md), quand un utilisateur utilise le service Rights Management pour la première fois sur son ordinateur Windows (un processus parfois nommé **initialisation de l’environnement utilisateur** ou amorçage), **protège du contenu** (un document ou un e-mail), puis **consomme** (ouvre et utilise) du contenu protégé par quelqu’un d’autre.
 
 Après l'initialisation de l'environnement utilisateur, l'utilisateur peut protéger des documents ou consommer des documents protégés sur cet ordinateur.
 
@@ -110,7 +110,7 @@ Quand un utilisateur protège un document, le client RMS effectue les actions su
 
 ![Protection de document RMS : étape 2, la stratégie est créée](./media/AzRMS_documentprotection2.png)
 
-**Ce qui se passe à l’étape 2** : le client RMS crée ensuite un certificat incluant une stratégie pour le document, qui inclut les [droits d’utilisation](./deploy-use/configure-usage-rights.md) pour les utilisateurs ou les groupes, ainsi que d’autres restrictions, comme une date d’expiration. Ces paramètres peuvent être définis dans un modèle qu’un administrateur a déjà configuré ou spécifié au moment de la protection du contenu (parfois appelé « stratégie ad hoc »).   
+**Ce qui se passe à l’étape 2** : le client RMS crée ensuite un certificat incluant une stratégie pour le document, qui inclut les [droits d’utilisation](configure-usage-rights.md) pour les utilisateurs ou les groupes, ainsi que d’autres restrictions, comme une date d’expiration. Ces paramètres peuvent être définis dans un modèle qu’un administrateur a déjà configuré ou spécifié au moment de la protection du contenu (parfois appelé « stratégie ad hoc »).   
 
 Le principal attribut Azure AD utilisé pour identifier les utilisateurs et groupes sélectionnés est l’attribut proxyAddress d’Azure AD, qui stocke toutes les adresses e-mail pour un utilisateur ou un groupe. Toutefois, si un compte d’utilisateur ne possède aucune valeur dans l’attribut ProxyAddresses d’Active Directory, la valeur UserPrincipalName de l’utilisateur est employée à la place.
 
@@ -127,7 +127,7 @@ Quand un utilisateur veut consommer un document protégé, le client RMS commenc
 
 ![Consommation de document RMS : étape 1, l’utilisateur est authentifié et obtient la liste des droits](./media/AzRMS_documentconsumption1.png)
 
-**Ce qui se passe à l’étape 1** : l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur au service Azure Rights Management. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l'utilisateur sur le document. Pour identifier l’utilisateur, l’attribut ProxyAddresses d’Azure AD est utilisé pour le compte de l’utilisateur et les groupes dont l’utilisateur est membre. Pour des raisons de performances, l’appartenance au groupe est [mise en cache](./plan-design/prepare.md#group-membership-caching-by-azure-information-protection). Si le compte d’utilisateur n’a aucune valeur pour l’attribut ProxyAddresses d’Azure AD, la valeur UserPrincipalName d’Azure AD est utilisée à la place.
+**Ce qui se passe à l’étape 1** : l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur au service Azure Rights Management. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l'utilisateur sur le document. Pour identifier l’utilisateur, l’attribut ProxyAddresses d’Azure AD est utilisé pour le compte de l’utilisateur et les groupes dont l’utilisateur est membre. Pour des raisons de performances, l’appartenance au groupe est [mise en cache](prepare.md#group-membership-caching-by-azure-information-protection). Si le compte d’utilisateur n’a aucune valeur pour l’attribut ProxyAddresses d’Azure AD, la valeur UserPrincipalName d’Azure AD est utilisée à la place.
 
 ![Consommation de document RMS : étape 2, la licence d’utilisation est retournée au client](./media/AzRMS_documentconsumption2.png)
 
@@ -166,7 +166,7 @@ Pour en savoir plus sur le service Azure Rights Management, reportez-vous aux au
 
 Consultez [Terminologie liée à Azure Information Protection](./terminology.md) pour vous familiariser avec les termes que vous allez rencontrer lors de la configuration et de l’utilisation du service Azure Rights Management, et n’oubliez pas de lire aussi [Requirements for Azure Information Protection](requirements.md) avant d’entamer votre déploiement. Si vous voulez vous y plonger directement et essayer par vous-même, utilisez le [Didacticiel de démarrage rapide pour Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
-Si vous êtes prêt à déployer la protection des données pour votre organisation, utilisez la [Feuille de route pour le déploiement d’Azure Information Protection](./plan-design/deployment-roadmap.md) pour connaître les étapes de déploiement et accéder à des liens vers des instructions.
+Si vous êtes prêt à déployer la protection des données pour votre organisation, utilisez la [Feuille de route pour le déploiement d’Azure Information Protection](deployment-roadmap.md) pour connaître les étapes de déploiement et accéder à des liens vers des instructions.
 
 > [!TIP]
 > Pour obtenir plus d’informations et de l’aide supplémentaire, utilisez les ressources et les liens dans [Informations et support pour Azure Information Protection](information-support.md).

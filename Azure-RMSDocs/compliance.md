@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e4db3996a201909fcf861a4190cbe6647a7326c
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 55d3b303a84a557ad5f65760d963221878a7b521
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474616"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488849"
 ---
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Conformité et informations annexes pour Azure Information Protection
 
@@ -33,7 +33,7 @@ Toutefois, certaines informations utiles peuvent aider votre conseiller juridiqu
 
 - Toutes les clés de chiffrement utilisées par Azure Information Protection sont protégées avec une clé racine propre au client qui utilise RSA 2048 bits. RSA 1024 est également pris en charge pour la compatibilité descendante. [Plus d’informations](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Les clés racines propres au client sont gérées par Microsoft ou provisionnées par le client dans un module HSM Thales via [BYOK](./plan-design/plan-implement-tenant-key.md) (Bring Your Own Key). Azure Information Protection prend également en charge des fonctionnalités limitées avec une clé locale via [HYOK](./deploy-use/configure-adrms-restrictions.md) (Hold Your Own Key) pour le contenu qui est affecté par les spécifications indiquant qu’il ne doit pas être protégé avec une clé basée sur le cloud.
+- Les clés racines propres au client sont gérées par Microsoft ou provisionnées par le client dans un module HSM Thales via [BYOK](plan-implement-tenant-key.md) (Bring Your Own Key). Azure Information Protection prend également en charge des fonctionnalités limitées avec une clé locale via [HYOK](configure-adrms-restrictions.md) (Hold Your Own Key) pour le contenu qui est affecté par les spécifications indiquant qu’il ne doit pas être protégé avec une clé basée sur le cloud.
 
 - Le service Azure Information Protection est hébergé dans les centres de données régionaux du monde entier. Les clés et les stratégies Azure Information Protection restent toujours dans la région dans laquelle elles sont déployées à l’origine.
  

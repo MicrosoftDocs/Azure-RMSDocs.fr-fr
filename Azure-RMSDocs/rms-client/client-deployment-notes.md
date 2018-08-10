@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 751f1a5bf2728a848bd450ce1081a15ea1e35456
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 571545905a0fac6bb1ea9b80c351b96f9f70899b
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376533"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489441"
 ---
 # <a name="rms-client-deployment-notes"></a>Notes sur le déploiement du client RMS
 
@@ -158,7 +158,7 @@ Pour réaliser la découverte du service, le client RMS vérifie les éléments 
 
 1. **Le Registre Windows sur l’ordinateur local** : si des paramètres de découverte du service sont configurés dans le Registre, ils sont essayés en premier. 
 
-    Par défaut, ces paramètres ne sont pas configurés dans le Registre, mais un administrateur peut les configurer pour AD RMS, comme documenté dans une [section suivante](#enabling-client-side-service-discovery-by-using-the-windows-registry). Un administrateur configure généralement ces paramètres pour le service Azure Rights Management lors du [processus de migration](../plan-design/migrate-from-ad-rms-phase2.md) d’AD RMS vers Azure Information Protection.
+    Par défaut, ces paramètres ne sont pas configurés dans le Registre, mais un administrateur peut les configurer pour AD RMS, comme documenté dans une [section suivante](#enabling-client-side-service-discovery-by-using-the-windows-registry). Un administrateur configure généralement ces paramètres pour le service Azure Rights Management lors du [processus de migration](../migrate-from-ad-rms-phase2.md) d’AD RMS vers Azure Information Protection.
 
 2. **Services de domaine Active Directory** : un ordinateur joint à un domaine interroge Active Directory pour connaître un point de connexion de service. 
 
@@ -181,7 +181,7 @@ Pour réaliser la découverte du service, le client RMS vérifie les éléments 
 >  
 > - Quand un utilisateur se connecte à une application Office, le nom d’utilisateur (et le domaine) de l’authentification est utilisé pour identifier le locataire Azure Information Protection à utiliser. Dans ce cas, les paramètres du Registre ne sont pas nécessaires et le point de connexion de service n’est pas vérifié.
 > 
-> - Lorsque vous avez configuré la [redirection DNS](../plan-design/migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) pour les applications de bureau Démarrer en un clic Office 2016, le client RMS recherche le service Azure Rights Management en ayant l’accès refusé au cluster AD RMS qu’il avait trouvé. Cette action de refus pousse le client à rechercher l’enregistrement SRV, qui redirige le client vers le service Azure Rights Management pour votre locataire. Cet enregistrement SRV laisse aussi Exchange Online déchiffrer les e-mails qui ont été protégés par votre cluster AD RMS. 
+> - Lorsque vous avez configuré la [redirection DNS](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) pour les applications de bureau Démarrer en un clic Office 2016, le client RMS recherche le service Azure Rights Management en ayant l’accès refusé au cluster AD RMS qu’il avait trouvé. Cette action de refus pousse le client à rechercher l’enregistrement SRV, qui redirige le client vers le service Azure Rights Management pour votre locataire. Cet enregistrement SRV laisse aussi Exchange Online déchiffrer les e-mails qui ont été protégés par votre cluster AD RMS. 
 
 ### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>AD RMS uniquement : activation de la découverte du service côté serveur à l’aide d’Active Directory
 Si votre compte dispose de privilèges suffisants (Administrateurs de l’entreprise et administrateur local pour le serveur AD RMS), vous pouvez inscrire automatiquement un point de connexion de service (SCP) lorsque vous installez le serveur de clusters racine AD RMS. S'il existe déjà un SCP dans la forêt, vous devez le supprimer avant de pouvoir en inscrire un nouveau.

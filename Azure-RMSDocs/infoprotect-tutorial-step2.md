@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 403d5d2222438136e5d449dbe4b26b693ad566d0
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: eb99fb447702dd2f453c1caacbb8ccd341ed127b
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474636"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489482"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Étape 2 : Configurer la stratégie Azure Information Protection
 
@@ -32,7 +32,7 @@ Bien qu’Azure Information Protection soit fourni avec une stratégie par défa
        > [!NOTE]
        > Votre stratégie par défaut peut différer légèrement de celle de ce didacticiel. Par exemple, vous avez une étiquette nommée **Interne** au lieu de **Général**, et **Secret** au lieu de **Hautement confidentiel**. Vous ne voyez peut-être pas les sous-étiquettes nommées **Destinataires uniquement** ou vous n’avez aucune étiquette. La raison de ces changements est qu’il existe différentes versions de la stratégie par défaut, selon le moment où elle a été créée pour votre locataire. Vous pouvez aussi avoir l’avoir modifiée vous-même avant de commencer ce didacticiel.
        > 
-       > Si votre stratégie par défaut est différente, vous pouvez néanmoins utiliser ce didacticiel, mais n’oubliez pas ces différences quand vous utilisez les instructions et les images qui suivent. Si vous voulez modifier votre stratégie par défaut pour qu’elle corresponde à la stratégie par défaut actuelle, consultez [La stratégie Azure Information Protection par défaut](./deploy-use/configure-policy-default.md).
+       > Si votre stratégie par défaut est différente, vous pouvez néanmoins utiliser ce didacticiel, mais n’oubliez pas ces différences quand vous utilisez les instructions et les images qui suivent. Si vous voulez modifier votre stratégie par défaut pour qu’elle corresponde à la stratégie par défaut actuelle, consultez [La stratégie Azure Information Protection par défaut](configure-policy-default.md).
     
     - Avec la configuration par défaut, des marquages visuels ne sont pas configurés pour certaines étiquettes. Les marquages visuels sont un pied de page, un en-tête et un filigrane. En fonction de votre stratégie par défaut, la protection peut ou non être définie pour certaines étiquettes. Par exemple : 
     
@@ -151,10 +151,10 @@ Maintenant que vous avez examiné la stratégie par défaut et apporté des modi
 
 |Pour en savoir plus|Informations supplémentaires|
 |--------------------------------|--------------------------|
-|À propos de la stratégie par défaut et des différentes versions|[La stratégie Azure Information Protection par défaut](./deploy-use/configure-policy-default.md)|
-|À propos de la configuration de la stratégie|[Configuration de la stratégie Azure Information Protection](./deploy-use/configure-policy.md)|
-|Instructions détaillées pour la configuration d’une étiquette pour la protection|[Guide pratique pour configurer une étiquette pour la protection Rights Management](./deploy-use/configure-policy-protection.md)|
-|Informations détaillées sur les autorisations|[Configuration des droits d’utilisation pour Azure Rights Management](./deploy-use/configure-usage-rights.md)|
+|À propos de la stratégie par défaut et des différentes versions|[La stratégie Azure Information Protection par défaut](configure-policy-default.md)|
+|À propos de la configuration de la stratégie|[Configuration de la stratégie Azure Information Protection](configure-policy.md)|
+|Instructions détaillées pour la configuration d’une étiquette pour la protection|[Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md)|
+|Informations détaillées sur les autorisations|[Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md)|
 
 
 

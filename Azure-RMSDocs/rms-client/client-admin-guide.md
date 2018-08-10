@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs d’un 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 74cb6b6cd03621f52860012331fbf4cf518459dc
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: f9189de08c7089087ba37964a9d7acee3f537d02
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39473965"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575673"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -55,13 +55,13 @@ Le client Azure Information Protection inclut les éléments suivants :
 
 - Un module PowerShell pour appliquer et supprimer des étiquettes de classification et la protection de fichiers. 
     
-    Ce module comprend des applets de commande pour installer et configurer le [scanneur Azure Information Protection](../deploy-use/deploy-aip-scanner.md) qui s’exécute comme un service sur Windows Server. Ce service vous permet de découvrir, classifier et protéger des fichiers sur des magasins de données tels que des partages réseau et des bibliothèques SharePoint Server.
+    Ce module comprend des applets de commande pour installer et configurer le [scanneur Azure Information Protection](../deploy-aip-scanner.md) qui s’exécute comme un service sur Windows Server. Ce service vous permet de découvrir, classifier et protéger des fichiers sur des magasins de données tels que des partages réseau et des bibliothèques SharePoint Server.
 
 - Le client Rights Management qui communique avec Azure Rights Management (Azure RMS) ou Active Directory Rights Management Services (AD RMS).
 
 Le client Azure Information Protection est plus adapté pour fonctionner avec ses services Azure ; Azure Information Protection et son service de protection des données, Azure Rights Management. Toutefois, avec certaines restrictions, le client Azure Information Protection fonctionne également avec la version locale de Rights Management, AD RMS. Pour une comparaison complète des fonctionnalités prises en charge par Azure Information Protection et AD RMS, consultez [Comparaison d’Azure Information Protection avec AD RMS](../compare-on-premise.md). 
 
-Si vous avez AD RMS et que vous souhaitez migrer AD RMS vers Azure Information Protection, consultez [Migration d’AD RMS vers Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+Si vous avez AD RMS et que vous souhaitez migrer AD RMS vers Azure Information Protection, consultez [Migration d’AD RMS vers Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md).
 
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Devez-vous déployer le client Azure Information Protection ?
@@ -106,7 +106,7 @@ Quand le client est installé, utilisez l’option **Aide et commentaires** pour
 
 #### <a name="help-and-feedback-section"></a>Section **Aide et commentaires**
 
-Le **lien En savoir plus** pointe par défaut sur le site web [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection), mais vous pouvez le configurer pour qu’il pointe sur une URL personnalisée dans le cadre des [paramètres de stratégie](../deploy-use/configure-policy-settings.md) Azure Information Protection.
+Le **lien En savoir plus** pointe par défaut sur le site web [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection), mais vous pouvez le configurer pour qu’il pointe sur une URL personnalisée dans le cadre des [paramètres de stratégie](../configure-policy-settings.md) Azure Information Protection.
 
 Utilisez le lien **Envoyez-nous des commentaires** pour envoyer des suggestions ou des requêtes à l’équipe Information Protection. N’utilisez pas cette option pour le support technique, mais consultez plutôt [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). 
 
@@ -162,7 +162,7 @@ Le client Azure Information Protection prend en charge les mêmes langues qu’O
 
 Pour ces langues, les options de menu, boîtes de dialogue et messages du client Azure Information Protection s’affichent dans la langue de l’utilisateur. Il existe un programme d’installation unique qui détecte la langue. Ainsi, aucune configuration supplémentaire n’est nécessaire pour installer le client Azure Information Protection pour différentes langues. 
 
-Toutefois, les noms et les descriptions d’étiquette que vous spécifiez ne sont pas traduits automatiquement quand vous configurez des étiquettes dans la stratégie Azure Information Protection. Depuis le 30 août 2017, la [stratégie par défaut](../deploy-use/configure-policy-default.md) actuelle inclut la prise en charge de certaines langues. Pour que les utilisateurs puissent voir les étiquettes dans la langue de leur choix, fournissez vos propres traductions et configurez la stratégie Azure Information Protection pour les utiliser. Pour plus d’informations, consultez le [Guide de configuration des étiquettes pour des langues différentes dans Azure Information Protection](../deploy-use/configure-policy-languages.md). Les marquages visuels ne sont pas traduits et ne prennent pas en charge plusieurs langues.
+Toutefois, les noms et les descriptions d’étiquette que vous spécifiez ne sont pas traduits automatiquement quand vous configurez des étiquettes dans la stratégie Azure Information Protection. Depuis le 30 août 2017, la [stratégie par défaut](../configure-policy-default.md) actuelle inclut la prise en charge de certaines langues. Pour que les utilisateurs puissent voir les étiquettes dans la langue de leur choix, fournissez vos propres traductions et configurez la stratégie Azure Information Protection pour les utiliser. Pour plus d’informations, consultez le [Guide de configuration des étiquettes pour des langues différentes dans Azure Information Protection](../configure-policy-languages.md). Les marquages visuels ne sont pas traduits et ne prennent pas en charge plusieurs langues.
 
 ## <a name="post-installation-tasks"></a>Tâches post-installation
 
@@ -196,7 +196,7 @@ Vous pouvez également mettre à niveau manuellement le client en téléchargean
 
 Lorsque vous mettez à niveau manuellement, ne désinstallez la version précédente que si vous changez de méthode d’installation. Par exemple, si vous passez de la version du fichier exécutable (.exe) du client à la version du programme d’installation (.msi) Windows du client. Ou si vous devez installer une version antérieure du client. Par exemple, vous avez installé la préversion actuelle pour la tester et vous devez maintenant revenir à la version actuelle en disponibilité générale.
 
-Consultez [Historique des versions et politique du support](../rms-client/client-version-release-history.md) pour comprendre la politique de support du client Azure Information Protection, savoir quelles versions sont actuellement prises en charge et prendre connaissance des nouveautés et modifications des versions prises en charge. 
+Consultez [Historique des versions et politique du support](client-version-release-history.md) pour comprendre la politique de support du client Azure Information Protection, savoir quelles versions sont actuellement prises en charge et prendre connaissance des nouveautés et modifications des versions prises en charge. 
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Mise à niveau du scanneur Azure Information Protection
 

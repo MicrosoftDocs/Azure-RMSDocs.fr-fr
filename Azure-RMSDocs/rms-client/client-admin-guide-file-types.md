@@ -4,7 +4,7 @@ description: Détails techniques sur les types de fichiers pris en charge, les e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cdf710737c4bcf5ffbfdd3ab6476f6b5cd118854
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: fcba3a4bf59c3c18dab53de9e06d5484e092465c
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371279"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575588"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 
@@ -63,7 +63,7 @@ Vous pouvez classifier les types de fichiers suivants même s’ils ne sont pas 
 
 D’autres types de fichiers prennent en charge la classification quand ils sont aussi protégés. Pour ces types de fichiers, consultez la section [Types de fichiers pris en charge pour la classification et la protection](#supported-file-types-for-classification-and-protection).
 
-Par exemple, dans la [stratégie par défaut](../deploy-use/configure-policy-default.md) actuelle, l’étiquette **Général** applique la classification et n’applique pas de protection. Vous pouvez appliquer l’étiquette **Général** à un fichier nommé sales.pdf, mais vous ne pouvez pas l’appliquer à un fichier nommé sales.txt. 
+Par exemple, dans la [stratégie par défaut](../configure-policy-default.md) actuelle, l’étiquette **Général** applique la classification et n’applique pas de protection. Vous pouvez appliquer l’étiquette **Général** à un fichier nommé sales.pdf, mais vous ne pouvez pas l’appliquer à un fichier nommé sales.txt. 
 
 Par ailleurs, dans la stratégie par défaut actuelle, **Confidentiel \ Tous les emplyés** applique la classification et la protection. Vous pouvez appliquer cette étiquette à un fichier nommé sales.pdf et à un fichier nommé sales.txt. Vous pouvez également appliquer juste une protection à ces fichiers, sans classification.
 
@@ -79,7 +79,7 @@ Le client Azure Information Protection prend en charge la protection à deux niv
 
 Vous pouvez modifier le niveau de protection par défaut que le client Azure Information Protection applique. Vous pouvez remplacer le niveau de protection native par défaut par une protection générique, et inversement, et même empêcher que le client Azure Information Protection n’applique la protection. Pour plus d’informations, consultez la section [Modification du niveau de protection par défaut des fichiers](#changing-the-default-protection-level-of-files) dans cet article.
 
-La protection des données peut être automatiquement appliquée lorsqu’un utilisateur sélectionne une étiquette qu’un administrateur a configurée. Les utilisateurs peuvent également spécifier leurs propres paramètres de protection personnalisés à l’aide des [niveaux d’autorisation](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
+La protection des données peut être automatiquement appliquée lorsqu’un utilisateur sélectionne une étiquette qu’un administrateur a configurée. Les utilisateurs peuvent également spécifier leurs propres paramètres de protection personnalisés à l’aide des [niveaux d’autorisation](../configure-usage-rights.md#rights-included-in-permissions-levels). 
 
 ### <a name="file-sizes-supported-for-protection"></a>Tailles de fichiers prises en charge pour la protection
 

@@ -4,7 +4,7 @@ description: Instructions sur la classification et la protection de vos document
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: baf3edc435672c8339c15ea74f5b5e14d6951f96
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: dbe983b1c777308a01a2c1c9b7a97571cb9a7d08
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371541"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575455"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guide de l’utilisateur : Classifier et protéger un fichier ou un e-mail avec Azure Information Protection
 
@@ -181,7 +181,7 @@ Plus d’instructions pratiques dans le guide de l’utilisateur Azure Informati
 -   [Que voulez-vous faire ?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informations supplémentaires pour les administrateurs    
-Pour des instructions de configuration permettant d’activer le paramètre de stratégie **Rendre l’option des autorisations personnalisées disponible aux utilisateurs**, consultez [Configuration des paramètres de stratégie Azure Information Protection](../deploy-use/configure-policy-settings.md).
+Pour des instructions de configuration permettant d’activer le paramètre de stratégie **Rendre l’option des autorisations personnalisées disponible aux utilisateurs**, consultez [Configuration des paramètres de stratégie Azure Information Protection](../configure-policy-settings.md).
 
-Autres instructions de configuration : [Configuration de la stratégie Azure Information Protection](../deploy-use/configure-policy.md).
+Autres instructions de configuration : [Configuration de la stratégie Azure Information Protection](../configure-policy.md).
 

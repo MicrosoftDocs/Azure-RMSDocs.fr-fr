@@ -10,18 +10,18 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 601b60d7ece2cf1c67865b25b6e897b8f2905dc8
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: b060288efd080397f754d6aecd71abc4bbaabf81
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475146"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488808"
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Didacticiel de démarrage rapide pour Azure Information Protection 
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Utilisez ce didacticiel pour tester rapidement Azure Information Protection en seulement 5 étapes et environ 20 minutes. Ce didacticiel est conçu comme une démonstration autoguidée pour illustrer rapidement certaines des fonctions et fonctionnalités d’Azure Information Protection. Il n’inclut pas toutes les fonctionnalités disponibles et n’est pas destiné à servir de guide de déploiement au sein de votre organisation. Si vous envisagez de déployer Azure Information Protection dans votre organisation, consultez la [documentation relative à la feuille de route pour le déploiement](./plan-design/deployment-roadmap.md). 
+Utilisez ce didacticiel pour tester rapidement Azure Information Protection en seulement 5 étapes et environ 20 minutes. Ce didacticiel est conçu comme une démonstration autoguidée pour illustrer rapidement certaines des fonctions et fonctionnalités d’Azure Information Protection. Il n’inclut pas toutes les fonctionnalités disponibles et n’est pas destiné à servir de guide de déploiement au sein de votre organisation. Si vous envisagez de déployer Azure Information Protection dans votre organisation, consultez la [documentation relative à la feuille de route pour le déploiement](deployment-roadmap.md). 
 
 Ce didacticiel est destiné aux administrateurs et consultants en informatique, afin de les aider à évaluer Azure Information Protection comme solution de protection des informations pour une organisation. Dans un environnement de production, les étapes pour configurer la stratégie Information Protection et installer le client pour les utilisateurs reviennent à un administrateur. Les étapes permettant d’étiqueter un document, de le partager en toute sécurité par e-mail et de le suivre sont effectuées par l’utilisateur final. Ce didacticiel englobe toutes ces étapes pour illustrer des scénarios de bout en bout classiques consistant à classifier, à étiqueter et à protéger les données de votre organisation. 
 

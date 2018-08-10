@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 01bf7e0e090482a74c8f5e162bb8771cf8ee941b
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 288b945f785f3f12226d48ad7a91aab8a2747c77
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474576"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489346"
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Étape 5 : Voir le partage de fichiers protégés en action et effectuer le suivi de votre document 
 
@@ -127,4 +127,4 @@ Maintenant que vous avez vu comment personnaliser la stratégie Azure Informatio
 
 Essayez de partager davantage de documents, suivez leur utilisation et vérifiez le fonctionnement de la révocation des documents.
 
-Vous pouvez ensuite juger utile de revenir à la page [Démarrage rapide](faqs.md) dans le portail Azure, de consulter certains **forums aux questions** sur Azure Information Protection et de lire d’autres articles de la documentation. Mais si vous êtes prêt à déployer Azure Information Protection pour votre organisation, vous pouvez passer directement à la [Feuille de route pour le déploiement d’Azure Information Protection](./plan-design/deployment-roadmap.md). 
+Vous pouvez ensuite juger utile de revenir à la page [Démarrage rapide](faqs.md) dans le portail Azure, de consulter certains **forums aux questions** sur Azure Information Protection et de lire d’autres articles de la documentation. Mais si vous êtes prêt à déployer Azure Information Protection pour votre organisation, vous pouvez passer directement à la [Feuille de route pour le déploiement d’Azure Information Protection](deployment-roadmap.md). 

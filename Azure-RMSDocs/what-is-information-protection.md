@@ -4,18 +4,18 @@ description: Présentation du service Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/23/2018
+ms.date: 08/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 9031309c7fbc109d23ea3ddba6fe97dc6db8c00d
-ms.sourcegitcommit: cf930d768536980b7754f7992f604aa99548ee73
+ms.openlocfilehash: 11ac7ab7a1c1b55811f2f62b426dceedfa9c4874
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39476956"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489397"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
@@ -106,7 +106,7 @@ Dans l’idéal, les documents et e-mails sont étiquetés lors de leur créatio
 
 Pour vos magasins de données locaux, utilisez le scanneur Azure Information Protection pour détecter, classifier et protéger des documents sur des dossiers locaux, des partages réseau et des sites SharePoint Server, ainsi que des bibliothèques. Le scanneur s’exécute en tant que service sur Windows Server. Vous pouvez utiliser les mêmes règles en termes de stratégie pour détecter les informations sensibles et appliquer des étiquettes spécifiques aux documents. Ou vous pouvez appliquer une étiquette par défaut à tous les documents dans un référentiel de données sans inspecter le contenu des fichiers. Vous pouvez également utiliser l’Analyseur de fichier uniquement en mode de création de rapports pour vous aider à découvrir des informations sensibles dont vous ignorez peut-être qu’elles sont en votre possession. 
 
-Pour en savoir plus sur le déploiement et l’utilisation du scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](./deploy-use/deploy-rms-connector.md).
+Pour en savoir plus sur le déploiement et l’utilisation du scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-rms-connector.md).
 
 Pour vos magasins de données cloud, utilisez Microsoft Cloud App Security pour appliquer vos étiquettes aux documents dans Box, SharePoint Online et OneDrive entreprise. Pour plus d’informations, consultez [Appliquer automatiquement des étiquettes de classification Azure Information Protection](/cloud-app-security/use-case-information-protection) et [Intégration d’Azure Information Protection](/cloud-app-security/azip-integration).
 
@@ -125,8 +125,11 @@ Pour vos magasins de données cloud, utilisez Microsoft Cloud App Security pour 
 
 - Yammer : [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
+Ressources supplémentaires : [Informations et prise en charge pour Azure Information Protection](information-support.md)
 
-De plus, **Microsoft Ignite 2017** a proposé de nombreuses sessions pour Azure Information Protection qui sont disponibles sur demande. Pour avoir un aperçu des annonces qui ont été faites pendant cette conférence, consultez [Nouveautés d’Azure Information Protection @ Ignite 2017](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
+### <a name="microsoft-ignite"></a>Microsoft Ignite
+
+Microsoft Ignite 2017 a proposé de nombreuses sessions pour Azure Information Protection qui sont disponibles sur demande. Pour avoir un aperçu des annonces qui ont été faites pendant cette conférence, consultez [Nouveautés d’Azure Information Protection @ Ignite 2017](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
 
 Vous pouvez [rechercher](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522) les sessions qui sont marquées pour Azure Information Protection sur le site Web Ignite. Toutefois, nous vous recommandons de commencer avec les sessions suivantes :
 
@@ -145,7 +148,7 @@ Vous pouvez [rechercher](https://myignite.microsoft.com/videos?q=%2522azure%2520
 
 Lisez le billet de blog [Azure Information Protection: Ready, set, protect!](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/).
 
-Configurez et découvrez Azure Information Protection par vous-même avec notre [Didacticiel de démarrage rapide](infoprotect-quick-start-tutorial.md) en 5 étapes. Ou, si vous êtes prêt à déployer ce service dans votre organisation, consultez la [feuille de route du déploiement d’Azure Information Protection](./plan-design/deployment-roadmap.md).
+Configurez et découvrez Azure Information Protection par vous-même avec notre [Didacticiel de démarrage rapide](infoprotect-quick-start-tutorial.md) en 5 étapes. Ou, si vous êtes prêt à déployer ce service dans votre organisation, consultez la [feuille de route du déploiement d’Azure Information Protection](deployment-roadmap.md).
 
 Vous connaissez peut-être Azure Information Protection sous un autre nom ? Consultez nos [autres termes pour le service](aka.md).
 

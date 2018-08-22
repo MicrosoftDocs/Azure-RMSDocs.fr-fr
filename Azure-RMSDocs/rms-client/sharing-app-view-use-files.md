@@ -74,7 +74,7 @@ Pour obtenir la liste complète des extensions de nom de fichier prises en charg
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>Pour utiliser un fichier protégé (par exemple, l'éditer et l'imprimer)
 Si, après avoir ouvert le fichier protégé, vous voulez le lire, mais aussi, par exemple, le modifier, le copier et l’imprimer :
 
-- **Le fichier a une extension de nom de fichier *.pfile***
+- **Le fichier a une extension de nom de fichier *.pfile*** 
 
     Enregistrez le fichier ouvert en lui donnant une nouvelle extension de nom associée à l'application que vous souhaitez utiliser.
 

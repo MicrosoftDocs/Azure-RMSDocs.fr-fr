@@ -4,20 +4,18 @@ description: Informations vous permettant de planifier et de gérer votre clé d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 05aee77b60b5fd5a7239b51665e2afb122704afb
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 65f1b158e9745efa39d4088dcb615016ddecb206
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490122"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42807267"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
@@ -36,14 +34,13 @@ Qu’est-ce la clé de locataire Azure Information Protection ?
 |Besoin de l'entreprise|Topologie de clé de locataire recommandée|
 |------------------------|-----------------------------------|
 |Déployez Azure Information Protection rapidement et sans matériel spécial, sans logiciel supplémentaire et sans abonnement Azure.<br /><br />Par exemple : des environnements de test et quand votre organisation n’a pas de spécifications réglementaires pour la gestion des clés.|Gestion par Microsoft|
-|Réglementations de conformité, sécurité supplémentaire et contrôle sur toutes les opérations du cycle de vie. <br /><br />Par exemple : votre clé doit être protégée par un module de sécurité matériel (HSM).|BYOK [[1]](#footnote-1)|
+|Réglementations de conformité, sécurité supplémentaire et contrôle sur toutes les opérations du cycle de vie. <br /><br />Par exemple : votre clé doit être protégée par un module de sécurité matériel (HSM).|BYOK|
 
 
 Si nécessaire, vous pouvez changer la topologie de clé de locataire après le déploiement à l’aide de l’applet de commande [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
 
 
 ## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Choix de la topologie de clé de locataire : gestion Microsoft (par défaut) ou gestion BYOK
-Choisissez la topologie de clé de locataire la plus adaptée à votre organisation. Par défaut, Azure Information Protection génère votre clé de locataire et gère la plupart des aspects de son cycle de vie. Il s'agit de l'option la plus simple, avec la charge administrative la plus faible. Dans la plupart des cas, les utilisateurs n'ont même pas conscience de l'existence de cette clé de locataire. Il leur suffit de s’inscrire à Azure Information Protection ; le reste du processus de gestion de la clé est traité par Microsoft.
 
 Choisissez la topologie de clé de locataire la plus adaptée à votre organisation :
 
@@ -93,7 +90,7 @@ Si vous décidez de laisser Microsoft gérer votre clé de locataire :
 
 - Sauf si vous migrez depuis AD RMS, aucune autre action n’est nécessaire de votre part pour générer la clé pour votre locataire. Vous pouvez passer directement à [Étapes suivantes](plan-implement-tenant-key.md#next-steps).
 
-- Si vous avez AD RMS et que vous voulez migrer AD RMS vers Azure Information Protection, utilisez les instructions de migration : Migration d’AD RMS vers Azure Information Protection. 
+- Si vous avez AD RMS et que vous voulez migrer AD RMS vers Azure Information Protection, utilisez les instructions de migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). 
 
 Si vous décidez de gérer vous-même votre clé de locataire, lisez les sections suivantes pour plus d'informations.
 
@@ -177,7 +174,7 @@ Ensuite, exécutez l’applet de commande [Add-AadrmKeyVaultKey](/powershell/mod
 
 Si vous devez vérifier que l’URL de la clé est définie correctement pour Azure Information Protection : dans Azure Key Vault, exécutez [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) pour voir l’URL de la clé.
 
-Enfin, si le service Azure Rights Management est déjà activé, exécutez [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) pour indiquer à Azure Information Protection d’utiliser cette clé comme clé de locataire active pour le service Azure Rights Management. Si vous n’effectuez pas cette étape, Azure Information Protection continue à utiliser la clé par défaut gérée par Microsoft qui a été créée automatiquement pour votre locataire.
+Enfin, si le service Azure Rights Management est déjà activé, exécutez [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) pour indiquer à Azure Information Protection d’utiliser cette clé comme clé de locataire active pour le service Azure Rights Management. Si vous n’exécutez pas cette étape, Azure Information Protection continuera d’utiliser la clé managée par Microsoft par défaut créée automatiquement pour votre locataire.
 
 
 ## <a name="next-steps"></a>Étapes suivantes
@@ -186,7 +183,7 @@ Maintenant que vous avez planifié et, le cas échéant, créé et configuré vo
 
 1.  Commencez à utiliser votre clé de locataire :
     
-    - Si ce n’est déjà fait, vous devez maintenant activer le service Rights Management pour que votre organisation puisse commencer à utiliser Azure Information Protection. Les utilisateurs peuvent commencer immédiatement à utiliser votre clé de locataire (gérée par Microsoft ou par vous dans Azure Key Vault).
+    - Si le service de protection n’est pas encore activé, vous devez maintenant activer le service Rights Management pour que votre organisation puisse commencer à utiliser Azure Information Protection. Les utilisateurs peuvent commencer immédiatement à utiliser votre clé de locataire (gérée par Microsoft ou par vous dans Azure Key Vault).
     
         Pour plus d’informations sur l’activation, consultez [Activation d’Azure Rights Management](./activate-service.md).
         

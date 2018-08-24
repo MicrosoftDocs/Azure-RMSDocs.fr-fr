@@ -4,38 +4,35 @@ description: Configurer et gérer des modèles Rights Management à partir du po
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2018
+ms.date: 08/20/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9f3dc55f8443b4280cd5e108f1b5c5e3093748d4
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 0ce3fd1da5ee17baf8a778447f9e3aa6188d6eee
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490062"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42806707"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
->[!NOTE]
->Cette fonctionnalité remplace la configuration de modèles personnalisés dans le portail Azure Classic. Le portail classique est maintenant hors service, vous devez utiliser le portail Azure. Pour trouver rapidement les fonctionnalités de remplacement, consultez [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
-
-
-Les modèles Rights Management sont désormais intégrés à la stratégie Azure Information Protection. 
+Les modèles de protection, également appelés modèles Rights Management, sont un regroupement de paramètres de protection définis par l’administrateur pour Azure Information Protection. Ces paramètres incluent les [droits d’utilisation](configure-usage-rights.md) que vous avez choisis pour les utilisateurs autorisés et les contrôles d’accès pour l’accès hors connexion et après l’expiration. Ces modèles sont intégrés à la stratégie Azure Information Protection : 
 
 **Si vous avez un abonnement qui inclut la classification, l’étiquetage et la protection (Azure Information Protection P1 or P2) :**
 
-- Les modèles Rights Management qui ne sont pas intégrés aux étiquettes de votre locataire sont affichés à la section **Modèles de protection**, après vos étiquettes dans le panneau **Azure Information Protection - Étiquettes**. Pour accéder à ce panneau, sélectionnez l’option de menu **CLASSIFICATIONS** > **Étiquettes**. Vous pouvez convertir ces modèles en étiquettes ou créer un lien vers celles-ci quand vous configurez la protection pour vos étiquettes. 
+- Les modèles qui ne sont pas intégrés aux étiquettes de votre locataire sont affichés à la section **Modèles de protection**, après vos étiquettes dans le panneau **Azure Information Protection - Étiquettes**. Pour accéder à ce panneau, sélectionnez l’option de menu **CLASSIFICATIONS** > **Étiquettes**. Vous pouvez convertir ces modèles en étiquettes ou créer un lien vers celles-ci quand vous configurez la protection pour vos étiquettes. 
 
 **Lorsque vous avez un abonnement qui inclut uniquement la protection (un abonnement Office 365 qui inclut le service Azure Rights Management) :**
 
-- Les modèles Rights Management de votre locataire sont affichés à la section **Modèles de protection** dans le panneau **Azure Information Protection - Étiquettes**. Pour accéder à ce panneau, sélectionnez l’option de menu **CLASSIFICATIONS** > **Étiquettes**. Aucune étiquette n’est affichée. Vous voyez également les paramètres de configuration qui sont spécifiques à la classification et l’étiquetage, mais ces paramètres n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
+- Les modèles de votre locataire sont affichés à la section **Modèles de protection** dans le panneau **Azure Information Protection - Étiquettes**. Pour accéder à ce panneau, sélectionnez l’option de menu **CLASSIFICATIONS** > **Étiquettes**. Aucune étiquette n’est affichée. Vous voyez également les paramètres de configuration qui sont spécifiques à la classification et l’étiquetage, mais ces paramètres n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
+
+>[!NOTE]
+>Dans certains services et applications, vous pouvez voir [Ne pas transférer](configure-usage-rights.md#do-not-forward-option-for-emails) et [Chiffrement seul](configure-usage-rights.md#encrypt-only-option-for-emails) (ou **Chiffrer**) affichés sous la forme d’un modèle. Ils ne s’agit pas de modèles que vous pouvez modifier ou supprimer, mais d’options fournies par défaut avec le service Exchange.
 
 ## <a name="default-templates"></a>Modèles par défaut
 
@@ -49,6 +46,7 @@ Par ailleurs, les modèles sont configurés pour autoriser l’accès hors conne
 Ces modèles par défaut permettent de commencer facilement à protéger les données sensibles de votre organisation. Ces modèles peuvent être utilisés avec des étiquettes d’Azure Information Protection, ou par eux-mêmes avec [des applications et des services](applications-support.md) qui peuvent utiliser des modèles Rights Management.
 
 Vous pouvez également créer vos propres modèles personnalisés. Même si vous n’aurez probablement besoin que de quelques modèles, vous pouvez enregistrer au maximum 500 modèles personnalisés dans Azure.
+
 
 ### <a name="default-template-names"></a>Noms des modèles par défaut
 

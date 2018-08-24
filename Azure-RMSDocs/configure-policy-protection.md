@@ -4,18 +4,16 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2018
+ms.date: 08/14/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: b41add3430fbf00a372a5ec54d1ecd8c27fa7fa6
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 16cb22a7f16b82056d58d569dc0d65b3b16d0ae1
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490672"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42807064"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -90,9 +88,9 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
     - **Configurer des autorisations définies par l’utilisateur (préversion)**  : permet aux utilisateurs de spécifier qui doit avoir des autorisations et quelles sont ces autorisations. Vous pouvez ensuite affiner cette option et choisir Outlook uniquement ou Word, Excel, PowerPoint et l’Explorateur de fichiers. Cette option n’est pas prise en charge et ne fonctionne pas quand une étiquette est configurée pour une [classification automatique](configure-policy-classification.md).
         
-        Si vous choisissez l’option pour Outlook : l’étiquette est affichée dans Outlook et le comportement obtenu quand les utilisateurs appliquent l’étiquette est identique à celui de l’option Ne pas transférer.
+        Si vous choisissez l’option pour Outlook : l’étiquette est affichée dans Outlook et le comportement obtenu quand les utilisateurs appliquent l’étiquette est identique à celui de l’option [Ne pas transférer](configure-usage-rights.md#do-not-forward-option-for-emails).
         
-        Si vous choisissez l’option pour Word, Excel, PowerPoint et l’Explorateur de fichiers : Quand cette option est définie, l’étiquette est affichée dans ces applications. Le comportement obtenu quand les utilisateurs appliquent l’étiquette affiche la boîte de dialogue pour permettre aux utilisateurs de sélectionner des autorisations personnalisées. Dans cette boîte de dialogue, les utilisateurs doivent spécifier les autorisations, les utilisateurs ou les groupes et une date d’expiration. Vérifiez que les utilisateurs disposent des instructions et des conseils qui permettent de fournir ces valeurs.
+        Si vous choisissez l’option pour Word, Excel, PowerPoint et l’Explorateur de fichiers : Quand cette option est définie, l’étiquette est affichée dans ces applications. Le comportement obtenu quand les utilisateurs appliquent l’étiquette affiche la boîte de dialogue pour permettre aux utilisateurs de sélectionner des autorisations personnalisées. Dans cette boîte de dialogue, les utilisateurs choisissent l’un des [niveaux d’autorisation prédéfinis](configure-usage-rights.md#rights-included-in-permissions-levels), accèdent aux utilisateurs ou groupes, ou les spécifient, et s’ils le souhaitent, définissent une date d’expiration. Vérifiez que les utilisateurs disposent des instructions et des conseils qui permettent de fournir ces valeurs.
     
     - **Sélectionner un modèle prédéfini** : utilisez un des modèles par défaut ou un modèle personnalisé que vous avez configuré. Notez que cette option ne s’affiche pas pour les nouvelles étiquettes si vous modifiez une étiquette qui utilisait l’option **Définir les autorisations**.
     
@@ -110,10 +108,11 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
         
         ###### <a name="more-information-about-add-any-authenticated-users"></a>Informations supplémentaires sur **Ajouter tous les utilisateurs authentifiés** 
         Ce paramètre ne restreint pas l’accès au contenu protégé par l’étiquette, tout en chiffrant le contenu et en vous proposant des options permettant de limiter la façon d’accéder au contenu (expiration et l’accès hors connexion) et l’utilisation qui peut en être faite (autorisations). Toutefois, l’application qui ouvre le contenu protégé doit être en mesure de prendre en charge l’authentification utilisée. Pour cette raison, les fournisseurs de réseaux sociaux fédérés, tels que Google, et l’authentification unique par code secret doivent être utilisés uniquement pour les e-mails, et seulement lorsque vous utilisez Exchange Online et les nouvelles fonctionnalités de chiffrement de messages Office 365. Les comptes Microsoft peuvent être utilisées avec la visionneuse Azure Information Protection et avec Office 2016 Démarrer en un clic. 
-        
-        Quelques scénarios classiques pour tous les paramètres utilisateurs authentifiés : tous les utilisateurs peuvent afficher le contenu, mais vous souhaitez restreindre son utilisation. Par exemple, vous ne souhaitez pas que le contenu soit modifié, copié ou imprimé.
-            - Vous n’avez pas besoin de restreindre l’accès au contenu, mais vous souhaitez pouvoir suivre qui l’ouvre et, éventuellement, le révoquer.
-            - Vous voulez que le contenu soit chiffré au repos et en transit, mais aucun contrôle d’accès n’est nécessaire.     
+          
+        Quelques scénarios classiques pour la définition des utilisateurs authentifiés :  
+                - Peu vous importe qui affiche le contenu, mais vous souhaitez restreindre son utilisation. Par exemple, vous ne souhaitez pas que le contenu soit modifié, copié ou imprimé.  
+                - Vous n’avez pas besoin de restreindre l’accès au contenu, mais vous souhaitez pouvoir suivre qui l’ouvre et, éventuellement, le révoquer.  
+                - Vous voulez que le contenu soit chiffré au repos et en transit, mais aucun contrôle d’accès n’est nécessaire.  
         
     - Choisissez **Entrer les détails** pour spécifier manuellement des adresses e-mail pour les utilisateurs individuels ou les groupes (internes ou externes). Vous pouvez utiliser cette option pour spécifier tous les utilisateurs d’une autre organisation en entrant un nom de domaine de cette organisation. Vous pouvez aussi utiliser cette option pour les fournisseurs de réseaux sociaux, en entrant leur nom de domaine comme **gmail.com**, **hotmail.com** ou **outlook.com**.
         
@@ -156,9 +155,9 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
     L’option de configuration des autorisations définies par l’utilisateur permet aux utilisateurs de spécifier qui doit avoir des autorisations et quelles sont ces autorisations. Vous pouvez ensuite affiner cette option et choisir Outlook uniquement (la valeur par défaut) ou Word, Excel, PowerPoint et l’Explorateur de fichiers. Cette option n’est pas prise en charge et ne fonctionne pas quand une étiquette est configurée pour une [classification automatique](configure-policy-classification.md).
     
-    Si vous choisissez l’option pour Outlook : l’étiquette est affichée dans Outlook et le comportement obtenu quand les utilisateurs appliquent l’étiquette est identique à celui de l’option Ne pas transférer.
+    Si vous choisissez l’option pour Outlook : l’étiquette est affichée dans Outlook et le comportement obtenu quand les utilisateurs appliquent l’étiquette est identique à celui de l’option [Ne pas transférer](configure-usage-rights.md#do-not-forward-option-for-emails).
     
-    Si vous choisissez l’option pour Word, Excel, PowerPoint et l’Explorateur de fichiers : l’étiquette est affichée dans ces applications. Le comportement obtenu quand les utilisateurs appliquent l’étiquette affiche la boîte de dialogue pour permettre aux utilisateurs de sélectionner des autorisations personnalisées. Dans cette boîte de dialogue, les utilisateurs doivent spécifier les autorisations, les utilisateurs ou les groupes et une date d’expiration. Vérifiez que les utilisateurs disposent des instructions et des conseils qui permettent de fournir ces valeurs.
+    Si vous choisissez l’option pour Word, Excel, PowerPoint et l’Explorateur de fichiers : Quand cette option est définie, l’étiquette est affichée dans ces applications. Le comportement obtenu quand les utilisateurs appliquent l’étiquette affiche la boîte de dialogue pour permettre aux utilisateurs de sélectionner des autorisations personnalisées. Dans cette boîte de dialogue, les utilisateurs choisissent l’un des [niveaux d’autorisation prédéfinis](configure-usage-rights.md#rights-included-in-permissions-levels), accèdent aux utilisateurs ou groupes, ou les spécifient, et s’ils le souhaitent, définissent une date d’expiration. Vérifiez que les utilisateurs disposent des instructions et des conseils qui permettent de fournir ces valeurs.
 
 10. Cliquez sur **OK** pour fermer le panneau **Protection** et voir apparaître la valeur que vous avez choisie pour **Ne pas transférer** ou le modèle que vous avez sélectionné pour l’option **Protection** dans le panneau **Étiquette**.
 

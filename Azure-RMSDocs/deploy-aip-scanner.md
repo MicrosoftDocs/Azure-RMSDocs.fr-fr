@@ -4,20 +4,18 @@ description: Instructions pour installer, configurer et exécuter le scanneur Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 1545c7bd931ab6aa4a76ddfd256a916d31d262bc
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 77d24243d4f6b38338b2a6d709a252cc4859a2b3
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490562"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42806049"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -246,9 +244,14 @@ Puis le scanneur utilise Windows iFilter pour analyser les types de fichiers sui
 |Word|.docx ; .docm ; .dotm ; .dotx|
 |Excel|.xls ; .xlt ; .xlsx ; .xltx ; .xltm ; .xlsm ; .xlsb|
 |PowerPoint|.ppt ; .pps ; .pot ; .pptx ; .ppsx ; .pptm ; .ppsm ; .potx ; .potm|
-|PDF|.pdf|
+|PDF |.pdf|
 |Text|.txt ; .xml ; .csv|
 
+Par défaut, seuls les types de fichiers Office sont protégés par le scanneur, donc les fichiers PDF et les fichiers texte ne sont pas protégés, sauf si vous [modifiez le Registre](develop/file-api-configuration.md) pour spécifier les types de fichiers :
+
+- Si vous n’ajoutez pas le type de fichier .pdf dans le Registre : les fichiers ayant cette extension de nom seront étiquetés, mais si l’étiquette est configurée pour la protection, la protection n’est pas appliquée.
+
+- Si vous n’ajoutez pas les types de fichiers .txt, .xml ou .csv dans le Registre : les fichiers ayant ces extensions de nom ne seront pas étiquetés, car ces types de fichiers ne gèrent pas classification uniquement.
 
 Enfin, pour les autres types de fichiers, le scanneur applique l’étiquette par défaut de la stratégie Azure Information Protection, ou l’étiquette par défaut que vous configurez pour le scanneur.
 
@@ -270,7 +273,11 @@ Enfin, pour les autres types de fichiers, le scanneur applique l’étiquette pa
 
 Lorsque le scanneur applique une étiquette avec une protection, par défaut, seuls les types de fichiers Office sont protégés. Vous pouvez modifier ce comportement afin que les autres types de fichiers soient protégés. Toutefois, lorsqu’une étiquette applique une protection générique à des documents, l’extension de nom de fichier devient .pfile. En outre, le fichier est en lecture seule jusqu’à ce qu’il soit ouvert par un utilisateur autorisé et enregistré dans son format natif. Les fichiers texte et les images peuvent également modifier leur extension de nom de fichier et passer en lecture seule. 
 
-Pour modifier le comportement par défaut du scanneur, par exemple, afin de protéger de façon générique d’autres types de fichiers, vous devez modifier manuellement le Registre et indiquer les types de fichiers supplémentaires qui doivent être protégés. Pour obtenir des instructions, consultez [Configuration de l’API de fichier](develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». Pour le scanneur, vous devez spécifier des extensions de nom de fichier spécifiques sans utiliser le caractère générique `*`.
+Pour modifier le comportement par défaut du scanneur, par exemple, afin de protéger de façon générique d’autres types de fichiers, vous devez modifier manuellement le Registre et indiquer les types de fichiers supplémentaires qui doivent être protégés. Pour obtenir des instructions, consultez [Configuration de l’API de fichier](develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». En outre, spécifiquement pour le scanneur :
+
+- Vous devez spécifier des extensions de nom de fichier spécifiques sans utiliser le caractère générique `*`.
+
+- Le scanneur a son propre comportement par défaut : seuls les formats de fichiers Office sont protégés par défaut. Tout autre format de fichier non ajouté au Registre ne sera pas protégé par le scanneur.
 
 ## <a name="when-files-are-rescanned"></a>Lorsque les fichiers sont réanalysés
 

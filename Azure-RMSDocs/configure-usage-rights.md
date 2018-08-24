@@ -4,20 +4,18 @@ description: Découvrez et identifiez les droits spécifiques qui sont utilisés
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/30/2018
+ms.date: 08/22/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 48a2cf7c8d827ce5a9be9b35e6f03e5d5479aa71
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 61d57cb33175c3c3e87d615cee65e2b82f21ab74
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490482"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42808770"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuration des droits d’utilisation pour Azure Rights Management
 
@@ -127,7 +125,13 @@ Lorsque cette option est sélectionnée, l’e-mail est chiffré et les destinat
 
 De façon similaire, par défaut, les [documents Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) non protégés qui sont joints à l’e-mail héritent des mêmes autorisations. Ces documents sont automatiquement protégés et, lorsqu’ils sont téléchargés, ils peuvent être enregistrés, modifiés, copiés et imprimés à partir des applications Office par les destinataires. Lorsque le document est enregistré par un destinataire, il peut être enregistré sous un nouveau nom et même dans un format différent. Toutefois, seuls les formats de fichier qui prennent en charge la protection sont disponibles, de sorte que le document ne peut pas être enregistré sans la protection d’origine. Si vous souhaitez des droits d’utilisation différents pour une pièce jointe ou si votre pièce jointe n’est pas un document Office prenant en charge cette protection héritée, protégez le fichier avant de le joindre à l’e-mail. Vous pouvez alors affecter les droits d’utilisation spécifiques dont vous avez besoin pour le fichier.
 
-Vous pouvez également modifier cet héritage de chiffrement des documents pour les destinataires qui visualisent le document dans leur navigateur. Envisagez d’utiliser cette configuration lorsque vous n’avez pas besoin de conserver la protection d’origine pour le document une fois que l’utilisateur est authentifié. Pour ce faire, utilisez la commande Exchange Online PowerShell : `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Ensuite, lorsque ces destinataires téléchargement le document, la protection est supprimée. Pour plus d’informations, consultez le billet de blog Office, [Contrôle d’administrateur pour les pièces jointes désormais disponible dans le chiffrement des messages Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). Si vous n’avez pas besoin que le document conserve la protection d’origine après le téléchargement, consultez [Sécuriser la collaboration sur les documents à l’aide d’Azure Information Protection](secure-collaboration-documents.md).      
+Vous pouvez également modifier cet héritage de la protection des documents à l’aide des paramètres de configuration suivants que vous définissez avec la commande [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps), **Set-IRMConfiguration** . Utilisez ces options lorsque vous n’avez pas besoin de conserver la protection d’origine pour le document une fois que l’utilisateur est authentifié :
+
+- Pour supprimer la protection du document uniquement pour les destinataires qui visualisent le document dans leur navigateur (généralement, car il est envoyé à une adresse de fournisseur de réseau social, comme Gmail) : `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Lorsque ces destinataires téléchargent le document, la protection est supprimée.
+
+- Pour toujours supprimer la protection du document pour tous les destinataires : `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. Lorsque ces destinataires ouvrent l’e-mail, le document n’est pas protégé.
+
+Pour plus d’informations sur la suppression de la protection uniquement pour les destinataires qui visualisent le document dans leur navigateur, consultez le billet de blog Office, [Contrôle d’administrateur pour les pièces jointes désormais disponible dans le chiffrement des messages Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). Si vous n’avez pas besoin qu’un document joint conserve la protection d’origine, consultez [Sécuriser la collaboration sur les documents à l’aide d’Azure Information Protection](secure-collaboration-documents.md).
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Émetteur Rights Management et propriétaire Rights Management
 

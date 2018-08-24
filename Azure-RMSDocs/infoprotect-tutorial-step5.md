@@ -7,18 +7,16 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2018
 ms.topic: get-started-article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 288b945f785f3f12226d48ad7a91aab8a2747c77
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: dda9bf1ae16f76bcfa8d4abf95529ce933c71a67
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489346"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42807337"
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Étape 5 : Voir le partage de fichiers protégés en action et effectuer le suivi de votre document 
 

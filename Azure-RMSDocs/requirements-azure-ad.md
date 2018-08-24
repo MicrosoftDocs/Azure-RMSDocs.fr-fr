@@ -6,18 +6,16 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 04/26/2018
 ms.topic: get-started-article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f6aa26cb64a07e8ccc2415b874e7240897633cd0
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 7bbcb636d282ff436ddd602a28eea4a8a6ab6405
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489250"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42802911"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 

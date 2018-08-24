@@ -6,18 +6,16 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/31/2017
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a450aabe8b2e318e4cb7be65f9c4d7d48941dc95
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: b2c21ba2c7030b0757aeb0fd901b900863a962d1
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39488758"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42807539"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Comment les applications prennent en charge le service Azure Rights Management
 

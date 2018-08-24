@@ -6,18 +6,16 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5c0ecb9cd27387cff73e88334e6a7d7cd06567be
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: a8f911b2053df28b67ceef7c74b23ebb57056fb3
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39491012"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42803137"
 ---
 # <a name="generate-and-transfer-your-tenant-key--over-the-internet-retired-content"></a>Génération et transfert de votre clé de locataire – via Internet : CONTENU RETIRÉ
 

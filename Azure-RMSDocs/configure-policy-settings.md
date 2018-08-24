@@ -6,16 +6,14 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/12/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 3a83af73b6e17f77c2423c961b49d73d6b0ac298
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 36dc3e0c8e6780440b0272ed7a4dae1ae34633e7
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490232"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42803720"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Guide pratique pour configurer les paramètres de stratégie pour Azure Information Protection
 

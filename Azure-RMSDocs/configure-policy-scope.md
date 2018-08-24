@@ -6,18 +6,16 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 04/30/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b8605ee1ab0232464ef974020660c23ecf5d70b4
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 87f722bb62af93e90d9e88452e6a3a92d82d1e75
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490192"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42803912"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées
 

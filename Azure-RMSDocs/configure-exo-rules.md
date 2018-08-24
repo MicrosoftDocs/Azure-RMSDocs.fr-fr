@@ -6,18 +6,16 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 06/27/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: 546becbaa6cf7b20bb0daddc74a9cfa885f32d23
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 322972000ff68194f0df94949b919aef5b2a1c3c
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490172"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42804407"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configuration des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection
 

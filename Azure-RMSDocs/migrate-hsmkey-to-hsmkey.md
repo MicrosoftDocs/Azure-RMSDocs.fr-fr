@@ -4,20 +4,18 @@ description: Instructions qui font partie du chemin de migration d’AD RMS ver
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/30/2018
+ms.date: 08/13/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ccd62b7a539906c6e1f375e8bfc51e461f4cd547
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 778d83926e67a3f15fb182de3d2658d9881c29a5
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490152"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42807080"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par HSM à clé protégée par HSM
 
@@ -56,7 +54,7 @@ Ces procédures sont effectuées par l’administrateur d’Azure Key Vault.
     
     Par exemple, si le coffre de clés que vous avez créé pour Azure Information Protection est nommé contoso-byok-ky et que votre groupe de ressources est nommé contoso-byok-rg, exécutez la commande suivante :
     
-        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 
 
 Maintenant que vous avez préparé votre clé HSM dans Azure Key Vault pour le service Azure Rights Management d’Azure Information Protection, vous êtes prêt à importer vos données de configuration AD RMS.

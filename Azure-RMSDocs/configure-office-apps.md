@@ -6,18 +6,16 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 14582c362fe94e1e6ed44f3cc8e152d484d869cf
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 6f9fa296f1be237080281db1ea45d92303c21e47
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39491062"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42807924"
 ---
 # <a name="office-apps-configuration-for-clients-to-use-the-azure-rights-management-service"></a>Applications Office : configuration pour les clients utilisant le service Azure Rights Management
 

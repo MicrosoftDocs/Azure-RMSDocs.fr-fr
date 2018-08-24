@@ -6,18 +6,16 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 06/28/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c62179f67d7b7176886f6bb8c003a1cb58868a58
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: bda02ae68f1032ea9aae626963a69b7b86819297
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39372214"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42802975"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guide de l’utilisateur : Suivre et révoquer vos documents quand vous utilisez Azure Information Protection
 

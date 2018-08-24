@@ -6,18 +6,16 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 71ab8c0ab309e219850ad118d6acf2d3fba9a52d
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: c10558c9a24d5348bd3188cbdf352653df993867
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474390"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42808914"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Client Azure Information Protection pour Windows
 

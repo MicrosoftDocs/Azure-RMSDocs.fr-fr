@@ -133,16 +133,11 @@ Utilisez le tableau suivant pour identifier la région ou l’instance Azure rec
 
 |Région ou instance Azure|Emplacement recommandé pour votre coffre de clés|
 |---------------|--------------------|
-|rms.**na**.aadrm.com|
-  **Nord du centre des États-Unis** ou **États-Unis de l'Est**|
-|rms.**eu**.aadrm.com|
-  **Europe du Nord** ou **Europe de l’Ouest**|
-|rms.**ap**.aadrm.com|
-  **Asie de l’Est** ou **Sud-Est asiatique**|
-|rms.**sa**.aadrm.com|
-  **États-Unis de l’Ouest** ou **États-Unis de l'Est**|
-|rms.**govus**.aadrm.com|
-  **États-Unis du Centre** ou **États-Unis de l'Est 2**|
+|rms.**na**.aadrm.com|**Nord du centre des États-Unis** ou **États-Unis de l'Est**|
+|rms.**eu**.aadrm.com|**Europe du Nord** ou **Europe de l’Ouest**|
+|rms.**ap**.aadrm.com|**Asie de l’Est** ou **Sud-Est asiatique**|
+|rms.**sa**.aadrm.com|**États-Unis de l’Ouest** ou **États-Unis de l'Est**|
+|rms.**govus**.aadrm.com|**États-Unis du Centre** ou **États-Unis de l'Est 2**|
 
 
 ### <a name="instructions-for-byok"></a>Instructions pour BYOK

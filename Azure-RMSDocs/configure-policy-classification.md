@@ -4,16 +4,16 @@ description: Lorsque vous configurez des conditions pour une étiquette, vous po
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/16/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 7d9e128dd771f6d4d4882bedcd7f49aeefb41809
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 605173136442ed3af5b50e565cae79a94b16fb27
+ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804181"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43297988"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -96,9 +96,6 @@ Vous pouvez changer ce comportement afin que le client Azure Information Protect
 Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement disponibles pour les utilisateurs et les services. Il n’y a plus d’option de publication distincte.
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Types d’informations sensibles nécessitant une version minimale du client
-
-> [!NOTE]
-> Les types d’informations sensibles suivants sont maintenant déployés sur les locataires, mais vous risquez de ne pas les voir ni de pouvoir les sélectionner. Toutefois, si vous configurez le scanneur Azure Information Protection pour [identifier toutes les conditions personnalisées et les types d’informations sensibles connus](deploy-aip-scanner.md#using-the-scanner-with-alternative-configurations), la préversion du scanneur peut détecter ces nouveaux types d’informations même si vous ne pouvez pas les sélectionner dans le portail Azure.
 
 Les types d’informations sensibles suivants nécessitent actuellement la préversion du client Azure Information Protection :
 

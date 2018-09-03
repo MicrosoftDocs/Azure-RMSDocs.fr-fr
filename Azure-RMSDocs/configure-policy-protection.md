@@ -4,16 +4,16 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/14/2018
+ms.date: 08/24/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 16cb22a7f16b82056d58d569dc0d65b3b16d0ae1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: bc60f1791cd7c36f179851b1759a46ba3980dd96
+ms.sourcegitcommit: b2d5c77bf8a0271d8d23f170314c0f49c3a328b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807064"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42920316"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -62,9 +62,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
         
         Les paramètres de protection précédemment configurés sont conservés sous la forme de modèle de protection archivé et réapparaissent si vous redéfinissez l’option sur **Protéger**. Vous ne voyez pas ce modèle dans le portail Azure, mais si besoin, vous pouvez toujours le gérer à l’aide de [PowerShell](configure-templates-with-powershell.md). Ce comportement signifie que le contenu reste accessible s’il a cette étiquette avec les paramètres de protection appliqués précédemment.
     
-    - **Protéger** : sélectionnez cette option pour appliquer la protection, puis passez à l’étape 5 pour configurer les paramètres de protection.
-    
-    Remarque : Vous pouvez enregistrer une nouvelle étiquette à ce stade sans configuration supplémentaire. Si vous le faites, l’étiquette est configurée pour appliquer une protection telle que seule la personne qui applique l’étiquette peut ouvrir le document ou l’e-mail sans restriction d’utilisation. Dans certains cas, cela peut être le résultat requis, afin qu’un utilisateur puisse enregistrer un fichier dans n’importe quel emplacement et être assuré d’être le seul à pouvoir l’ouvrir. Si ce résultat correspond à vos besoins et qu’aucun autre utilisateur n’est tenu de collaborer sur le contenu protégé, passez directement à l’étape 12 au lieu de l’étape 5.
+    - **Protéger** : sélectionnez cette option pour appliquer la protection, puis passez à l’étape 4.
     
     - **Supprimer la protection** : Sélectionnez cette option pour supprimer la protection si un document ou un e-mail est protégé. Passez ensuite à l'étape 11.
         

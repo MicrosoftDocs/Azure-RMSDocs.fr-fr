@@ -4,18 +4,18 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb724f8c35ae5ae34f81cfec01fcbabffcbcff44
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 8a91b39b0f503ebb53b8b652de21423ef4cae9c8
+ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805113"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43298012"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -88,6 +88,20 @@ Recherchez le nom de la valeur suivant et définissez les données de la valeur 
 
 Vérifiez par ailleurs que ces ordinateurs n’ont pas de fichier nommé **Policy.msip** dans le dossier **%LocalAppData%\Microsoft\MSIP**. S’il existe, supprimez-le. Ce fichier contient la stratégie Azure Information Protection et peut avoir été téléchargé avant que vous n’ayez modifié le Registre ou si le client Azure Information Protection a été installé avec l’option de démonstration.
 
+## <a name="modify-the-email-address-for-the-report-an-issue-link"></a>Modifier l’adresse e-mail du lien Signaler un problème
+
+Cette option de configuration est en préversion et susceptible de changer. Par ailleurs, elle nécessite la préversion du client Azure Information Protection.
+
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
+
+Par défaut, lorsque les utilisateurs sélectionnent le lien **Signaler un problème** dans la boîte de dialogue cliente **Aide et commentaires**, une adresse Microsoft est préremplie dans un e-mail. Utilisez le paramètre client avancé suivant pour la modifier. Par exemple, spécifiez `mailto:helpdesk@contoso.com` pour indiquer l’adresse e-mail de votre support technique. 
+
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
+
+- Clé : **ReportAnIssueLink**
+
+- Valeur : **\<chaîne HTTP >**
+
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Masquer l’option de menu Classifier et protéger dans l’Explorateur de fichiers Windows
 
 Créez le nom de la valeur DWORD suivant (avec toutes données de la valeur) :
@@ -98,7 +112,9 @@ Créez le nom de la valeur DWORD suivant (avec toutes données de la valeur) :
 
 Par défaut, le client Azure Information Protection tente automatiquement de se connecter au service Azure Information Protection pour télécharger la dernière stratégie Azure Information Protection. Si vous disposez d’ordinateurs qui ne peuvent pas se connecter à Internet pendant une période donnée, vous pouvez empêcher le client d’essayer de se connecter au service en modifiant le Registre. 
 
-Recherchez le nom de la valeur suivant et définissez les données de la valeur sur **0** :
+Notez que, sans connexion web, le client ne peut pas appliquer la protection (ou la supprimer) à l’aide de la clé cloud de votre organisation. Il ne peut qu’utiliser les étiquettes qui appliquent seulement la classification, ou la protection qui utilise [HYOK](../configure-adrms-restrictions.md).
+
+Pour configurer ce paramètre, recherchez le nom de valeur suivant dans le registre et définissez les données de valeur sur **0** :
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
@@ -223,25 +239,21 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Valeur : **True**
 
-## <a name="protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Protéger les fichiers PDF à l’aide de la norme ISO pour le chiffrement PDF
+## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Ne pas protéger les fichiers PDF suivant la norme ISO pour le chiffrement PDF
 
 Cette option de configuration est en préversion et susceptible de changer. Par ailleurs, elle nécessite la préversion du client Azure Information Protection.
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 
-Par défaut, quand le client Azure Information Protection protège un fichier PDF, le fichier résultant a une extension de nom de fichier .ppdf. Vous pouvez changer ce comportement pour que l’extension de nom de fichier reste .pdf et adhère à la norme ISO pour le chiffrement PDF. Pour plus d’informations sur cette norme, consultez la section **7.6 Chiffrement** dans le [document qui est dérivé d’ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) et publié par Adobe Systems Incorporated.  
+Quand la version en disponibilité générale du client Azure Information Protection protège un fichier PDF, le fichier résultant a une extension de nom de fichier .ppdf. Lorsque, en revanche, c’est la préversion actuelle du client Azure Information Protection qui le protège, l’extension de nom de fichier résultante reste .pdf et adhère à la norme ISO pour le chiffrement PDF. Pour plus d’informations sur cette norme, consultez la section **7.6 Chiffrement** dans le [document qui est dérivé d’ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) et publié par Adobe Systems Incorporated.
 
-Pour configurer ce paramètre avancé, entrez la chaîne suivante :
+Si vous souhaitez que la préversion actuelle du client revienne au comportement de la disponibilité générale, utilisez le paramètre avancé ci-dessous en entrant la chaîne suivante :
 
 - Clé : **EnablePDFv2Protection**
 
-- Valeur : **True**
-
-Résultat de cette option de configuration, quand le client Azure Information Protection protège un fichier PDF, cette action crée un document PDF protégé qui peut être ouvert avec la préversion du client Azure Information Protection pour Windows et d’autres lecteurs PDF prenant en charge la norme ISO pour le chiffrement PDF. Actuellement, l’application Azure Information Protection pour iOS et Android ne prend pas en charge la norme ISO pour le chiffrement PDF.
+- Valeur : **False**
 
 Pour que le scanneur Azure Information Protection utilise le nouveau paramètre, le service du scanneur doit être redémarré.
-
-Problème connu avec la préversion actuelle : dans les propriétés du document, le fichier PDF protégé affiche une valeur incorrecte pour l’auteur.
 
 ## <a name="support-for-files-protected-by-secure-islands"></a>Prise en charge des fichiers protégés par Secure Islands
 

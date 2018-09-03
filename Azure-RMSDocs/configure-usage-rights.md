@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 61d57cb33175c3c3e87d615cee65e2b82f21ab74
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 9f7c9ef4e6a6eccc1f42fa60a78550f53d4a64b6
+ms.sourcegitcommit: b2d5c77bf8a0271d8d23f170314c0f49c3a328b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808770"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42920667"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuration des droits d’utilisation pour Azure Rights Management
 
@@ -98,7 +98,7 @@ Les clients et services Exchange (par exemple, le client Outlook, l’applicatio
 
 Même si cette option apparaît aux utilisateurs (les administrateurs Exchange) comme s’il s’agissait d’un modèle de gestion des droits par défaut qu’ils peuvent sélectionner, **Ne pas transférer** n’est pas un modèle. Cela explique pourquoi vous ne pouvez pas la voir dans le portail Azure quand vous affichez et gérez les modèles de protection. L’option **Ne pas transférer** correspond plutôt à un ensemble de droits d’utilisation appliqué dynamiquement par les utilisateurs à leurs destinataires.
 
-Lorsque l’option **Ne pas transférer** est appliquée à un e-mail, cet e-mail est chiffré et les destinataires doivent être authentifiés. Les destinataires ne peuvent alors pas le transférer, l’imprimer, en copier le contenu, enregistrer des pièces jointes ou l’enregistrer sous un autre nom. Par exemple, dans le client Outlook, le bouton Transférer n’est pas disponible. Les options de menu **Enregistrer sous**, **Enregistrer les pièces jointes** et **Imprimer** ne sont pas disponibles non plus. Vous ne pouvez pas ajouter ou modifier des destinataires dans les zones **À**, **Cc** ou **Cci**.
+Lorsque l’option **Ne pas transférer** est appliquée à un e-mail, cet e-mail est chiffré et les destinataires doivent être authentifiés. Ils ne peuvent pas le transférer, l’imprimer ou le copier. Par exemple, dans le client Outlook, le bouton Transférer n’est pas accessible. Les options de menu **Enregistrer sous** et **Imprimer** ne sont pas disponibles non plus. Il n’est pas possible d’ajouter ou de modifier les destinataires dans les zones **À**, **Cc** et **Cci**.
 
 Les [documents Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) non protégés qui sont joints à l’e-mail héritent automatiquement des mêmes restrictions. Les droits d’utilisation appliqués à ces documents sont **Modifier le contenu, Modifier** ; **Enregistrer** ; **Afficher, Ouvrir, Lire** et **Autoriser les macros**. Si vous souhaitez des droits d’utilisation différents pour une pièce jointe ou si votre pièce jointe n’est pas un document Office prenant en charge cette protection héritée, protégez le fichier avant de le joindre à l’e-mail. Vous pouvez alors affecter les droits d’utilisation spécifiques dont vous avez besoin pour le fichier. 
 
@@ -127,9 +127,9 @@ De façon similaire, par défaut, les [documents Office](https://support.office.
 
 Vous pouvez également modifier cet héritage de la protection des documents à l’aide des paramètres de configuration suivants que vous définissez avec la commande [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps), **Set-IRMConfiguration** . Utilisez ces options lorsque vous n’avez pas besoin de conserver la protection d’origine pour le document une fois que l’utilisateur est authentifié :
 
-- Pour supprimer la protection du document uniquement pour les destinataires qui visualisent le document dans leur navigateur (généralement, car il est envoyé à une adresse de fournisseur de réseau social, comme Gmail) : `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Lorsque ces destinataires téléchargent le document, la protection est supprimée.
+- Pour supprimer la protection du document pour tous les destinataires : `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. Lorsque ces destinataires ouvrent l’e-mail, le document n’est pas protégé.
 
-- Pour toujours supprimer la protection du document pour tous les destinataires : `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. Lorsque ces destinataires ouvrent l’e-mail, le document n’est pas protégé.
+- Pour supprimer la protection du document uniquement pour les destinataires qui visualisent le document dans leur navigateur (généralement, car il est envoyé à une adresse de fournisseur de réseau social, comme Gmail) : `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Lorsque ces destinataires téléchargent le document, la protection est supprimée.
 
 Pour plus d’informations sur la suppression de la protection uniquement pour les destinataires qui visualisent le document dans leur navigateur, consultez le billet de blog Office, [Contrôle d’administrateur pour les pièces jointes désormais disponible dans le chiffrement des messages Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). Si vous n’avez pas besoin qu’un document joint conserve la protection d’origine, consultez [Sécuriser la collaboration sur les documents à l’aide d’Azure Information Protection](secure-collaboration-documents.md).
 

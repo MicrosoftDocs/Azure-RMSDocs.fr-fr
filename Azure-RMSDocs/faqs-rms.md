@@ -4,19 +4,19 @@ description: Certaines questions fréquentes sur le service de protection des do
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0964d6de3f06d8620de89d9c4c9cca65a64b71c1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 67a3720f38faab750f04e91d7a4848cf88ae4eef
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805951"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242212"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
@@ -73,7 +73,7 @@ Pour plus d’informations sur les modèles dans le portail Azure, consultez [Co
 
 ## <a name="ive-protected-a-document-and-now-want-to-change-the-usage-rights-or-add-usersdo-i-need-to-reprotect-the-document"></a>J’ai protégé un document et je souhaite à présent changer les droits d’utilisation ou ajouter des utilisateurs. Dois-je reprotéger le document ?
 
-Si le document est protégé à l’aide d’une étiquette ou d’un modèle, il est inutile de le reprotéger. Modifiez l’étiquette ou le modèle en changeant les droits d’utilisation ou en ajoutant de nouveaux groupes (ou utilisateurs), puis enregistrez et publiez ces changements :
+Si le document est protégé à l’aide d’une étiquette ou d’un modèle, il est inutile de le reprotéger. Modifiez l’étiquette ou le modèle en changeant les droits d’utilisation ou en ajoutant de nouveaux groupes (ou utilisateurs), puis enregistrez ces changements :
 
 - Si un utilisateur n’as pas accédé au document avant la publication des changements, ceux-ci prennent effet quand il ouvre le document.
 

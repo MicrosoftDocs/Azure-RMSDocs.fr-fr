@@ -4,18 +4,18 @@ description: Découvrez comment les applications (comme Office Word, Excel, Powe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b2c21ba2c7030b0757aeb0fd901b900863a962d1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: f468e82f71914e15aacc4a1a9c1d38e0fe5b4372
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807539"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242120"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Comment les applications prennent en charge le service Azure Rights Management
 
@@ -40,11 +40,11 @@ Les services de recherche peuvent s’intégrer à Rights Management de différe
 
 - SharePoint Online et SharePoint Server appliquent la protection Rights Management aux fichiers seulement lors du téléchargement. Cette implémentation signifie que les résultats de l’indexation et de la recherche sur SharePoint ne sont pas affectés par cette solution de protection des documents. Cependant, si vous avez un document que vous voulez stocker dans SharePoint et que ce document ne doit pas être retourné dans les résultats de la recherche, protégez le document avant de le charger dans SharePoint.
 
-- Windows Desktop Search utilise un index partagé entre différents utilisateurs de l’appareil. Ainsi, pour sécuriser les données dans les documents protégés, il n’indexe pas les fichiers protégés. Cela signifie que même si vos résultats de recherche n’incluent pas les fichiers que vous avez protégés, vous pouvez être sûr que vos fichiers contenant des données sensibles ne seront pas affichés dans les résultats de recherche pour d’autres utilisateurs susceptibles de se connecter à votre PC. 
+- Windows Desktop Search utilise un index partagé entre différents utilisateurs de l’appareil. Ainsi, pour sécuriser les données dans les documents protégés, il n’indexe pas les fichiers protégés. Cela signifie que, même si vos résultats de recherche n’incluent pas les fichiers que vous avez protégés, vos fichiers contenant des données sensibles ne s’afficheront pas dans les résultats de recherche des éventuels autres utilisateurs qui se connectent à votre PC ou y ouvrent une session. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Découvrez comment chacun des services ou applications suivants prend en charge le service Azure Rights Management :
+Découvrez comment chacun des services et applications suivants prend en charge le service Azure Rights Management :
 
 -   [Application de partage RMS pour Windows et les plateformes mobiles](sharing-app-support.md)
 

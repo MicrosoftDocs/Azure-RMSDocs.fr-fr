@@ -4,18 +4,18 @@ description: Instructions pour installer, configurer et exécuter le scanneur Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 77d24243d4f6b38338b2a6d709a252cc4859a2b3
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: ddf9ebcdce4cf51e35dfc76b099194873796919f
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806049"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117883"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -275,9 +275,9 @@ Lorsque le scanneur applique une étiquette avec une protection, par défaut, se
 
 Pour modifier le comportement par défaut du scanneur, par exemple, afin de protéger de façon générique d’autres types de fichiers, vous devez modifier manuellement le Registre et indiquer les types de fichiers supplémentaires qui doivent être protégés. Pour obtenir des instructions, consultez [Configuration de l’API de fichier](develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». En outre, spécifiquement pour le scanneur :
 
-- Vous devez spécifier des extensions de nom de fichier spécifiques sans utiliser le caractère générique `*`.
+- Le scanneur a son propre comportement par défaut : seuls les formats de fichiers Office sont protégés par défaut. Si le registre n’est pas modifié, aucun des autres types de fichiers ne sera protégé par le scanneur.
 
-- Le scanneur a son propre comportement par défaut : seuls les formats de fichiers Office sont protégés par défaut. Tout autre format de fichier non ajouté au Registre ne sera pas protégé par le scanneur.
+- À moins d’utiliser la préversion actuelle du scanneur, il est nécessaire de spécifier des extensions de nom de fichier spécifiques sans utiliser le caractère générique `*`. La préversion du scanneur ne prend pas en charge ce caractère générique.
 
 ## <a name="when-files-are-rescanned"></a>Lorsque les fichiers sont réanalysés
 

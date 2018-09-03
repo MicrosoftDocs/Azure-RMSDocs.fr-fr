@@ -4,18 +4,18 @@ description: Instructions pour supprimer des étiquettes de classification et la
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a18014a210607b2c9a38cc4c68e955e01403c986
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 4031a332d900e91f66026dd661d83fb07d47e6d7
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805780"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117853"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guide de l’utilisateur : Supprimer des étiquettes et retirer la protection des fichiers et e-mails étiquetés par Azure Information Protection ou protégés par Rights Management
 
@@ -43,6 +43,8 @@ Dans la barre Information Protection, cliquez sur l’icône **Supprimer l’ét
 Si l’icône **Supprimer l’étiquette** n’est pas immédiatement disponible, cliquez d’abord sur l’icône **Modifier l’étiquette** :
 
 ![Barre Azure Information Protection : modifier l’étiquette](../media/edit-label.png)
+
+Si vous ne voyez toujours pas l’icône **Supprimer l’étiquette**, c’est que votre administrateur ne vous permet pas d’utiliser cette option.
 
 > [!NOTE]
 > Si vous ne voyez pas cette barre Information Protection dans vos applications Office :

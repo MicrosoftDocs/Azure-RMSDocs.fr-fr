@@ -4,18 +4,18 @@ description: Instructions pour afficher et utiliser un document protégé qui vo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 518fd44053f6a6ee0c4b45024d5be0ac0122ec22
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 54042dfd49c1f12fc50eca127dfc0441686b1513
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808219"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117956"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guide de l’utilisateur : Afficher et utiliser des fichiers qui ont été protégés par Rights Management
 
@@ -23,25 +23,19 @@ ms.locfileid: "42808219"
 
 Souvent, vous pouvez afficher un document protégé simplement en l’ouvrant. Par exemple, vous pouvez double-cliquer sur une pièce jointe à un e-mail ou sur un fichier dans l’Explorateur de fichiers, ou bien vous pouvez cliquer sur un lien vers un fichier.
 
-Si les fichiers ne s’ouvrent pas immédiatement, la **visionneuse Azure Information Protection** pourrait être en mesure de les ouvrir. Cette visionneuse peut ouvrir des fichiers texte protégés, des fichiers image protégés, des fichiers PDF protégés et tous les fichiers ayant une extension de nom de fichier **.pfile**.
+Si les fichiers ne s’ouvrent pas immédiatement, la **visionneuse Azure Information Protection** pourra peut-être le faire. Cette visionneuse peut ouvrir des fichiers texte protégés, des fichiers image protégés, des fichiers PDF protégés et tous les fichiers ayant une extension de nom de fichier **.pfile**.
 
 La visionneuse s’installe automatiquement dans le cadre du client Azure Information Protection, ou vous pouvez l’installer séparément. Vous pouvez installer le client et la visionneuse à partir de la page [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft. Pour plus d’informations sur l’installation du client, consultez [Télécharger et installer le client Azure Information Protection](install-client-app.md).
 
 > [!NOTE]
-> Bien que l’installation du client fournisse davantage de fonctionnalités, elle requiert des autorisations de l’administrateur local et le fonctionnement intégral requiert un service correspondant à votre organisation :
-> 
->-Azure Information Protection
-> 
->-Azure Rights Management
-> 
->-Active Directory Rights Management Services 
+> Bien que l’installation du client offre davantage de fonctionnalités, elle réclame des autorisations d’administrateur local, et un service correspondant pour votre organisation est requis pour pouvoir profiter de l’ensemble des fonctionnalités : par exemple, Azure Information Protection ou les services AD RMS (Active Directory Rights Management Services).
 > 
 > Installez la visionneuse si vous avez reçu un document protégé par un utilisateur d’une autre organisation ou si vous n’avez pas d’autorisations d’administrateur local sur votre PC.
 
 Pour être en mesure d’ouvrir un document protégé, l’application doit être « Compatible RMS ». Les applications Office et la visionneuse Azure Information Protection sont des exemples d’applications compatibles RMS. Pour obtenir une liste d’applications par type et les appareils pris en charge, consultez le tableau [applications compatibles RMS](../requirements-applications.md#rms-enlightened-applications).  
 ## <a name="messagerpmsg-as-an-email-attachment"></a>Message.rpmsg en tant que pièce jointe de courrier électronique
 
-Si vous voyez **message.rpmsg** en tant que pièce jointe dans un e-mail, il ne s’agit pas d’un document protégé mais d’un message électronique protégé qui s’affiche comme pièce jointe. Vous ne pouvez pas utiliser la visionneuse Azure Information Protection pour Windows pour afficher ce message électronique protégé sur votre PC Windows. Vous avez plutôt besoin d’une application de messagerie pour Windows qui prend en charge la protection Rights Management, comme Office Outlook. Ou vous pouvez utiliser Outlook sur le web.
+Si vous voyez **message.rpmsg** en tant que pièce jointe dans un e-mail, il ne s’agit pas d’un document protégé mais d’un message électronique protégé qui s’affiche comme pièce jointe. Il n’est pas possible d’utiliser la visionneuse Azure Information Protection pour Windows pour afficher cet e-mail protégé sur un PC Windows. Vous avez plutôt besoin d’une application de messagerie pour Windows qui prend en charge la protection Rights Management, comme Office Outlook. Ou vous pouvez utiliser Outlook sur le web.
 
 Toutefois, si vous avez un appareil iOS ou Android, vous pouvez utiliser l’application Azure Information Protection pour ouvrir ces messages électroniques protégés. Vous pouvez télécharger cette application pour ces appareils mobiles à partir de la page [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft.
 

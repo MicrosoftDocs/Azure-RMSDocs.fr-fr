@@ -4,18 +4,18 @@ description: Instructions et informations destinées aux administrateurs d’un 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/13/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f0f3c6a5f46024083d8e4d105dd535abc1b46552
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 7510350957c867e144704af261053b73fa04651a
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805440"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118004"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -106,7 +106,9 @@ Quand le client est installé, utilisez l’option **Aide et commentaires** pour
 
 Le **lien En savoir plus** pointe par défaut sur le site web [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection), mais vous pouvez le configurer pour qu’il pointe sur une URL personnalisée dans le cadre des [paramètres de stratégie](../configure-policy-settings.md) Azure Information Protection.
 
-Utilisez le lien **Envoyez-nous des commentaires** pour envoyer des suggestions ou des requêtes à l’équipe Information Protection. N’utilisez pas cette option pour le support technique, mais consultez plutôt [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). 
+Utilisez le lien **Envoyez-nous vos commentaires** (versions en disponibilité générale) pour envoyer des suggestions ou des demandes à l’équipe Information Protection. N’utilisez pas cette option pour le support technique, mais consultez plutôt [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). 
+
+Le lien **Signaler un problème** remplace le lien **Envoyez-nous vos commentaires** dans la préversion du client. Par défaut, cette option envoie un e-mail à Microsoft, mais vous pouvez configurer la chaîne HTTP de vos utilisateurs en spécifiant un [paramètre client avancé](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link). Par exemple, indiquez l’adresse e-mail de votre support technique.
 
 L’option **Exporter les journaux** permet de collecter et de joindre automatiquement des fichiers journaux pour le client Azure Information Protection si vous devez les envoyer au support Microsoft. Cette option peut également être utilisée par les utilisateurs finaux pour envoyer ces fichiers journaux à votre support technique.
 
@@ -206,7 +208,7 @@ Pour la version en disponibilité générale actuelle :
 
 Pour la préversion : 
 
-- Exécutez [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) après l’installation du client. Vos paramètres de configuration pour le scanneur et les référentiels seront conservés. L’exécution de cette applet de commande est nécessaire pour mettre à jour le schéma de base de données pour le scanneur et si nécessaire, le compte de service du scanneur se voit également accorder des autorisations de suppression pour la base de données du scanneur. 
+- Exécutez [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) après avoir mis à niveau le client Azure Information Protection à partir de la version en disponibilité générale 1.29.5.0 ou d’une version antérieure. Vos paramètres de configuration pour le scanneur et les référentiels seront conservés. L’exécution de cette applet de commande est nécessaire pour mettre à jour le schéma de base de données pour le scanneur et si nécessaire, le compte de service du scanneur se voit également accorder des autorisations de suppression pour la base de données du scanneur. 
     
     Tant que vous n’avez pas exécuté cette cmdlet de mise à jour, le scanneur ne s’exécute pas et l’ID d’événement **1000** s’affiche dans le journal des événements Windows, avec le message d’erreur suivant : **Nom d’objet non valide 'ScannerStatus'**.
 

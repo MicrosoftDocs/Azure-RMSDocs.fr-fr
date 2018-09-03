@@ -4,16 +4,16 @@ description: 'Didacticiel de présentation expliquant comment tester rapidement 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: caa7ea12daf9bd946e967dc71bcc5ed275e1a965
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 2429a56163c79468bab681a9544c828c6d218392
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42803223"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242188"
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Étape 4 : classification, étiquetage et protection en action 
 
@@ -21,17 +21,17 @@ ms.locfileid: "42803223"
 
 Maintenant que vous avez un document Word ouvert avec le client Azure Information Protection installé, vous allez voir combien il est facile d’étiqueter et de protéger votre document à l’aide de la stratégie que nous avons configurée.
 
-La classification et la protection ont lieu quand vous enregistrez le document, mais avant cela, nous allons utiliser notre document non enregistré pour voir combien il est facile d’appliquer et de modifier les étiquettes.
+La classification et la protection se produisent à l’enregistrement du document. Mais avant cela, nous allons utiliser notre document non enregistré pour voir combien il est facile d’appliquer et de modifier les étiquettes.
 
 ## <a name="to-manually-change-our-default-label"></a>Pour modifier manuellement notre étiquette par défaut
 
-Dans la barre Information Protection, sélectionnez la dernière étiquette pour voir comment les sous-étiquettes s’affichent :
+Sur la barre Information Protection, sélectionnez la dernière étiquette pour voir comment s’affichent les sous-étiquettes :
 
-![Didacticiel de démarrage rapide Azure Information Protection, étape 4 : choisir une sous-étiquette](./media/info-protect-sub-labelsv2.png)
+![Tutoriel de démarrage rapide Azure Information Protection, étape 4 : choisir une sous-étiquette](./media/info-protect-sub-labelsv2.png)
 
-Sélectionnez une de ces sous-étiquettes. Vous voyez alors que les autres étiquettes n’apparaissent plus dans la barre maintenant que vous avez sélectionné une étiquette pour ce document. La valeur **Sensibilité** change pour montrer le nom de l’étiquette et de la sous-étiquette avec une modification correspondante de la couleur de l’étiquette. Par exemple :
+Sélectionnez une de ces sous-étiquettes. Les autres étiquettes n’apparaissent plus sur la barre maintenant que vous avez sélectionné une étiquette pour ce document. La valeur **Sensibilité** change pour montrer le nom de l’étiquette et de la sous-étiquette avec une modification correspondante de la couleur de l’étiquette. Par exemple :
 
-![Étape 4 du didacticiel de démarrage rapide Azure Information Protection - Sous-étiquette sélectionnée](./media/info-protect-sub-label-selectedv2.png)
+![Tutoriel de démarrage rapide Azure Information Protection, étape 4 : sélectionner une sous-étiquette](./media/info-protect-sub-label-selectedv2.png)
 
 Dans la barre Information Protection, cliquez sur l’icône **Modifier l’étiquette** en regard de la valeur de l’étiquette actuellement sélectionnée :
 
@@ -39,7 +39,7 @@ Dans la barre Information Protection, cliquez sur l’icône **Modifier l’éti
 
 Les étiquettes disponibles apparaissent à nouveau.
 
-Sélectionnez maintenant la première étiquette, **Personnel**. Étant donné que vous avez sélectionné une étiquette dont la classification est inférieure à l’étiquette précédemment sélectionnée pour ce document, vous êtes invité à justifier votre choix :
+Sélectionnez maintenant la première étiquette, **Personnel**. Comme vous avez sélectionné une étiquette dont la classification est inférieure à la précédente pour ce document, vous devez justifier votre choix :
 
 ![Didacticiel de démarrage rapide Azure Information Protection Étape 4 : invite de confirmation de l’abaissement](./media/info-protect-lower-justification.png)
 
@@ -51,7 +51,7 @@ Dans la barre Information Protection, cliquez à nouveau sur l’icône **Modifi
 
 ![Didacticiel de démarrage rapide Azure Information Protection, étape 4 : icône Supprimer](./media/delete-icon-from-personalv2.png)
 
-Cette fois à l’invite, entrez « Ce document n’a pas besoin d’être classé » et cliquez sur **Confirmer**.  
+Cette fois, à l’invite, entrez « Ce document n’a pas besoin d’être classé » et cliquez sur **Confirmer**.  
 
 La valeur **Sensibilité** indique **Non défini**, ce qui correspond à ce que voient les utilisateurs au départ si vous ne définissez pas d’étiquette par défaut.
 
@@ -69,7 +69,7 @@ La valeur **Sensibilité** indique **Non défini**, ce qui correspond à ce que 
 
     Le document est aussi protégé par les autorisations que vous avez spécifiées pour cette étiquette. Vous pouvez vérifier que le document est protégé en cliquant sur l’onglet **Fichier** et en examinant les informations sous **Protéger le document**. Vous voyez que le document est protégé par **Confidentiel\Finance** et avez accès à la description de l’étiquette. 
     
-    En raison de la configuration de protection de l’étiquette, seuls les employés peuvent ouvrir le document et certaines actions uniquement leur sont accessibles. Par exemple, parce qu’ils n’ont pas les autorisations pour imprimer, copier et extraire du contenu, ils ne peuvent pas imprimer le document ni copier son contenu. Ces restrictions permettent d’éviter la perte de données. En tant que propriétaire du document, vous pouvez l’imprimer et copier son contenu, mais si vous l’envoyez par e-mail à un autre utilisateur de votre organisation, il ne peut pas effectuer ces actions.
+    En raison de la configuration de protection de l’étiquette, seuls les employés peuvent ouvrir le document et certaines actions uniquement leur sont accessibles. Par exemple, parce qu’ils n’ont pas les autorisations pour imprimer, copier et extraire du contenu, ils ne peuvent pas imprimer le document ni copier son contenu. Ces restrictions permettent d’éviter la perte de données. En tant que propriétaire du document, vous pouvez l’imprimer et le copier. Toutefois, si vous l’envoyez par e-mail à un autre utilisateur de votre organisation, ce dernier ne pourra pas effectuer ces actions.
 
 4. Vous pouvez maintenant fermer ce document.
 

@@ -4,18 +4,18 @@ description: Instructions destinées aux utilisateurs pour installer le client A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 08/31/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f80fa184c524cd577bd0812c41f02b361292d438
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 4b862e9f80fb5bee62a0581f74d7ab0358408dd3
+ms.sourcegitcommit: 99b33cee47bc4588174d44e90ade16edba12ee44
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42803843"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43380823"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Guide de l’utilisateur : Télécharger et installer le client Azure Information Protection
 

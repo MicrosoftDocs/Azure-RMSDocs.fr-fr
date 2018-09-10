@@ -4,18 +4,18 @@ description: Ressources d’informations sur le client Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 08/31/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c10558c9a24d5348bd3188cbdf352653df993867
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 33312efdaaa9a9b65e79f2f5b40fd910db35a686
+ms.sourcegitcommit: 99b33cee47bc4588174d44e90ade16edba12ee44
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808914"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43380699"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Client Azure Information Protection pour Windows
 
@@ -30,8 +30,15 @@ Le client Azure Information Protection pour Windows est un client gratuit et té
 - [Azure Information Protection - Guide de l’utilisateur](client-user-guide.md)
 
 > [!TIP]
-> Il existe également une application Azure Information Protection pour iOS et Android. Pour plus d’informations, consultez [FAQs for Azure Information Protection app for iOS and Android](mobile-app-faq.md ) (Forum Aux Questions sur l’application Azure Information Protection pour iOS et Android).
+> Il existe également une application Azure Information Protection pour iOS et Android. Pour plus d’informations, consultez [Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android](mobile-app-faq.md ).
 > 
-> Pour les ordinateurs Mac et les téléphones Windows Phone : utilisez l’application de partage RMS pour les appareils mobiles, et consultez [FAQ concernant l’application de partage Rights Management pour plateformes mobiles et Mac](http://technet.microsoft.com/dn451248).
+> Pour les ordinateurs Mac et les téléphones Windows Phone : utilisez l’application de partage RMS pour les appareils mobiles et consultez le [Forum aux questions sur l’application de partage Rights Management pour plateformes mobiles et Mac](http://technet.microsoft.com/dn451248).
+
+## <a name="install-instructions"></a>Instructions d’installation
+
+- [Administrateurs](client-admin-guide-install.md)
+
+- [Utilisateurs finaux](install-client-app.md)
+
 
 

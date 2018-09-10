@@ -1,21 +1,21 @@
 ---
 title: Client Azure Information Protection - historique des versions et politique du support
-description: Découvrez les nouveautés et les modifications d’une version du client Azure Information Protection pour Windows, ainsi que la politique du cycle de vie du support.
+description: Découvrez les nouveautés et les changements d’une version du client Azure Information Protection pour Windows, ainsi que la politique du cycle de vie du support.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 08/31/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 945b05a99122b7caf1d9a73ea8b75717a5522660
-ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
+ms.openlocfilehash: 3e067f42b216efda48d46cd95be66c4939bf6240
+ms.sourcegitcommit: ba7ef4fe439bbf00cdad888017cbb8f44c801f77
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43117925"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348689"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
 
@@ -31,11 +31,11 @@ Pour plus d’informations, consultez [Mise à niveau et maintenance du client A
 
 Chaque version en disponibilité générale (GA) du client Azure Information Protection est prise en charge jusqu'à six mois après la publication de la version GA suivante. Les versions non prises en charge du client ne sont pas incluses dans cette page. Les correctifs et les nouvelles fonctionnalités sont toujours appliqués à la dernière version GA, pas aux anciennes versions GA.
 
-Les versions préliminaires ne doivent pas être déployées auprès des utilisateurs finaux sur les réseaux de production. Utilisez plutôt la dernière préversion pour tester les nouvelles fonctionnalités ou les correctifs à paraître dans la prochaine version GA. Les préversions qui ne sont pas actuelles ne sont pas prises en charge.
+Les préversions ne doivent pas être déployées pour des utilisateurs finaux sur les réseaux de production. Utilisez plutôt la dernière préversion pour tester les nouvelles fonctionnalités ou les correctifs à paraître dans la prochaine version GA. Les préversions qui ne sont pas actuelles ne sont pas prises en charge.
 
 ### <a name="release-history"></a>Historique des versions
 
-Utilisez les informations suivantes pour découvrir les nouveautés et les modifications d’une version prise en charge du client Azure Information Protection pour Windows. La dernière version est répertoriée en première position. 
+Utilisez les informations suivantes pour découvrir les nouveautés et les changements d’une version prise en charge du client Azure Information Protection pour Windows. La dernière version est la première sur la liste. 
 
 > [!NOTE]
 > Les correctifs mineurs ne sont pas listés. Par conséquent, si vous rencontrez un problème avec le client Azure Information Protection, nous vous recommandons de vérifier s’il n’est pas résolu dans la toute dernière version GA. Si le problème persiste, consultez la préversion actuelle.
@@ -56,13 +56,15 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Prise en charge d’étiquetage pour le format **Strict Open XML Document** dans les fichiers Word, Excel et PowerPoint. Pour plus d’informations sur les formats Open XML, consultez le billet de blog Office, [Nouvelles options de format de fichier dans le nouvel Office](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
 
-- Prise en charge des fichiers qui sont protégés par Secure Islands quand ils ne sont pas des documents PDF et Office. Par exemple, des fichiers texte et image protégés. Ou des fichiers avec une extension de nom de fichier .pfile. Cette prise en charge permet de nouveaux scénarios, par exemple le scanneur Azure Information Protection peut inspecter ces fichiers pour y rechercher des informations sensibles et les réétiqueter automatiquement pour Azure Information Protection. [Plus d’informations](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
+- Prise en charge des fichiers qui sont protégés par Secure Islands quand ils ne sont pas des documents PDF et Office. Par exemple, des fichiers texte et image protégés. Ou des fichiers avec une extension de nom de fichier .pfile. Cette prise en charge offre de nouveaux scénarios, par exemple le scanneur Azure Information Protection peut inspecter ces fichiers pour y rechercher des informations sensibles et les réétiqueter automatiquement pour Azure Information Protection. [Plus d’informations](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
 
-- Le lien **Envoyez-nous vos commentaires** de la boîte de dialogue **Aide et commentaires** est remplacé par le lien personnalisable **Signaler un problème**. Par défaut, cette option envoie un e-mail à Microsoft. Vous pouvez modifier cette adresse e-mail pour que, lorsque vos utilisateurs sélectionnent cette option, elle utilise la chaîne HTTP spécifiée par vos soins (par exemple, une page web personnalisée permettant aux utilisateurs de signaler des problèmes, ou une adresse e-mail qui pointe vers votre support technique). Pour modifier cette adresse, utilisez un [paramètre client avancé](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
+- Le lien **Envoyez-nous vos commentaires** de la boîte de dialogue **Aide et commentaires** est remplacé par le lien personnalisable **Signaler un problème**. Par défaut, cette option envoie un e-mail à Microsoft. Vous pouvez changer cette adresse e-mail pour que, lorsque vos utilisateurs sélectionnent cette option, celle-ci utilise la chaîne HTTP spécifiée par vos soins (par exemple, une page web personnalisée permettant aux utilisateurs de signaler des problèmes, ou une adresse e-mail qui pointe vers votre support technique). Pour modifier cette adresse, utilisez un [paramètre client avancé](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
+
+- Nouveaux paramètres clients avancés servant à supprimer les en-têtes et pieds de page qui ont été appliqués aux documents par d’autres solutions d’étiquetage. [Plus d’informations](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
 
 - Pour le scanneur Azure Information Protection :
 
-    - Nouvelle cmdlet, [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) : Doit être exécutée une seule fois après la mise à niveau à partir de la version actuellement en disponibilité générale (1.29.5.0) ou d’une version antérieure.
+    - Nouvelle applet de commande, [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) : Doit être exécutée une seule fois après la mise à niveau à partir de la version actuellement en disponibilité générale (1.29.5.0) ou d’une version antérieure.
     
     - Nouvelle applet de commande, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus) : Obtient l’état actuel du service pour le scanneur.  
     
@@ -114,7 +116,7 @@ Cette version inclut MSIPC version 1.0.3403.1224 du client RMS.
 
 - Les marquages visuels que vous configurez [par type d’application Office](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) remplacent maintenant un en-tête ou un pied de page qui était précédemment appliqué par une étiquette Azure Information Protection.
 
-- Désormais, quand un fichier Excel porte déjà un étiquette et que celle-ci applique des marquages visuels, une nouvelle feuille possède également les marquages visuels de l’étiquette appliqués.
+- Désormais, quand un fichier Excel porte déjà un étiquette et que celle-ci applique des marquages visuels, une nouvelle feuille présente également les marquages visuels de l’étiquette appliqués.
 
 - Lorsque vous utilisez le paramètre client avancé pour [étiqueter un document Office à l’aide d’une propriété personnalisée existante](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property), l’étiquetage automatique ne remplace pas l’étiquetage manuel.
 
@@ -161,7 +163,6 @@ Cette version inclut MSIPC version 1.0.3403.1224 du client RMS.
 **Nouvelles fonctionnalités** :
 
 - Analyseur Azure Information Protection : le module PowerShell inclus avec le client dispose de nouvelles applets de commande pour installer et configurer le moteur d’analyse qui va permettre de détecter, classer et protéger les fichiers sur vos magasins de données locaux. Pour obtenir des instructions, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](../deploy-aip-scanner.md). 
-
 - Vous pouvez maintenant définir des marquages visuels différents pour Word, Excel, PowerPoint et Outlook à l’aide d’une déclaration de variable « If.App » dans la chaîne de texte et identifier le type d’application. [Plus d’informations]configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
 
 - Prise en charge du [paramètre de stratégie](../configure-policy-settings.md) **Afficher la barre Information Protection dans les applications Office**. Lorsque ce paramètre est désactivé, les utilisateurs peuvent sélectionner des étiquettes au moyen du bouton **Protéger** dans le ruban.

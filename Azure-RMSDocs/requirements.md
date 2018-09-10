@@ -4,18 +4,18 @@ description: Identifiez les critères de déploiement d’Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2018
+ms.date: 08/31/2018
 ms.topic: get-started-article
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 03b97ca4324b9352db7abec37666e7de262e6f39
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 0cfaaa199178b7bede1d5b0d3fe54dd43dcfbf01
+ms.sourcegitcommit: beb4e480e0e821e32c9d35e86f2cf4321005c521
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808032"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43663397"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -102,7 +102,7 @@ Les autres éditions d’Office ne peuvent pas protéger les documents et messag
 
 Le client Azure Information Protection ne prend pas en charge plusieurs versions d’Office sur le même ordinateur. Ce client ne prend pas non plus en charge le changement de comptes d’utilisateur dans Office.
 
-Pour plus d’informations sur les éditions d’Office qui prennent en charge le service de protection des données, consultez [Applications prenant en charge la protection des données Azure Rights Management](requirements-applications.md).
+Pour plus d’informations sur les éditions d’Office qui prennent en charge le service de protection, consultez [Applications prenant en charge la protection des données Azure Rights Management](requirements-applications.md).
 
 ## <a name="firewalls-and-network-infrastructure"></a>Pare-feu et infrastructure réseau
 
@@ -110,7 +110,7 @@ Si vous avez un pare-feu ou des appareils réseau intervenants similaires qui n�
 
 En plus des informations de l’article relatif à Office, voici des informations propres à Azure Information Protection :
 
-- Autorisez le trafic HTTPS sur le port TCP 443 pour **api.informationprotection.azure.com**.
+- Autorisez le trafic HTTPS sur le port TCP 443 pour **informationprotection.hosting.portal.azure.net**.
 
 - Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour qu’il utilise l’authentification Windows intégrée avec les informations d’identification d’ouverture de session Active Directory de l’utilisateur.
 

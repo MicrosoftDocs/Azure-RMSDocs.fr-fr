@@ -4,18 +4,18 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 09/04/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8a91b39b0f503ebb53b8b652de21423ef4cae9c8
-ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
+ms.openlocfilehash: 3e6d5f30e3db48eced850649976ac4da56271622
+ms.sourcegitcommit: a42bb93adbb5be2cd39606fed3de0785ac52dd65
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43298012"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43703928"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -76,7 +76,7 @@ En outre :
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>Appliquer le mode Protection uniquement si votre organisation possède différents types de licences
 
-Si votre organisation n’a pas de licences pour Azure Information Protection, mais possède des licences pour Office 365 qui incluent le service Azure Rights Management pour la protection des données, le client Azure Information Protection pour Windows s’exécute automatiquement en mode [Protection uniquement](client-protection-only-mode.md).
+Si votre organisation n’a pas de licences pour Azure Information Protection, mais a des licences pour Office 365 qui incluent le service Azure Rights Management pour la protection des données, le client Azure Information Protection pour Windows s’exécute automatiquement en mode [Protection uniquement](client-protection-only-mode.md).
 
 Toutefois, si votre organisation a un abonnement à Azure Information Protection, tous les ordinateurs Windows peuvent, par défaut, télécharger la stratégie Azure Information Protection. Le client Azure Information Protection ne procède pas à la vérification et l’application de la licence. 
 
@@ -309,6 +309,8 @@ L’ID de l’étiquette figure dans le panneau **Étiquette** quand vous affich
 
 Spécifiez votre choix d’un nom de règle de migration. Utilisez un nom descriptif qui vous aide à identifier la manière dont une ou plusieurs étiquettes de votre solution d’étiquetage précédente doivent être mappées à une étiquette Azure Information Protection. Le nom s’affiche dans les rapports d’analyse et dans l’observateur d’événements. 
 
+Notez que ce paramètre ne supprime pas les marquages visuels que l’ancienne étiquette a éventuellement appliqués. Pour supprimer des en-têtes et des pieds de page, consultez la section suivante, [Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions).
+
 ### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Exemple 1 : mappage du même nom d’étiquette
 
 Les documents qui ont une étiquette Secure Islands « Confidentiel » doivent être à nouveau libellées « Confidentiel » par Azure Information Protection.
@@ -362,10 +364,107 @@ Le paramètre client avancé :
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, «L’étiquette Secure Islands contient Interne », Classification,. \*Interne.\*|
 
 
+## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage
+
+Cette option de configuration est en préversion et susceptible de changer. Par ailleurs, elle nécessite la préversion du client Azure Information Protection.
+
+Cette configuration utilise plusieurs [paramètres clients avancés](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
+
+Ces paramètres vous permettent de supprimer ou de remplacer des en-têtes ou des pieds de page de documents lorsque ces marquages visuels ont été appliqués par une autre solution d’étiquetage. Par exemple, l’ancien pied de page contient le nom d’une ancienne étiquette que vous avez migrée vers Azure Information Protection avec un nouveau nom d’étiquette et son propre pied de page.
+
+Lorsque le client obtient cette configuration dans sa stratégie, les anciens en-têtes et pieds de page sont supprimés ou remplacés lorsque le document est ouvert dans l’application Office et une étiquette Azure Information Protection est appliquée au document.
+
+Cette configuration n’est pas prise en charge pour Outlook. Sachez également que quand vous l’utilisez avec Word, Excel et PowerPoint, elle peut affecter négativement les performances de ces applications pour les utilisateurs. La configuration vous permet de définir des paramètres par application, par exemple, rechercher du texte dans les en-têtes et les pieds de page des documents Word, mais pas dans les feuilles de calcul Excel ni dans les présentations PowerPoint.
+
+Étant donné que les caractères génériques affectent les performances pour les utilisateurs, nous vous recommandons de limiter les types d’application Office (**W**ord, **E**xcel, **P**owerPoint) à ceux qui doivent faire l’objet de recherche uniquement :
+
+- Clé : **RemoveExternalContentMarkingInApp**
+
+- Valeur : \< **Types d’application Office WXP**> 
+
+Exemples :
+
+- Pour rechercher dans des documents Word uniquement, spécifiez **W**.
+
+- Pour rechercher dans des documents Word et des présentations PowerPoint, spécifiez **WP**.
+
+Ensuite, vous avez besoin d’au moins un paramètre client avancé de plus, **ExternalContentMarkingToRemove**, pour spécifier le contenu de l’en-tête ou du pied de page et comment les supprimer ou les remplacer.
+
+### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Comment configurer ExternalContentMarkingToRemove
+
+Lorsque vous spécifiez la valeur de chaîne pour la clé **ExternalContentMarkingToRemove**, vous disposez de trois options qui utilisent des expressions régulières :
+
+- Correspondance partielle pour tout supprimer dans l’en-tête ou le pied de page.
+    
+    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXTE À SUPPRIMER**. Vous souhaitez entièrement supprimer ces en-têtes ou pieds de page. Spécifiez la valeur : `*TEXT*`.
+
+- Correspondance totale pour juste supprimer des mots spécifiques dans l’en-tête ou le pied de page.
+    
+    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXTE À SUPPRIMER**. Vous souhaitez supprimer le mot **TEXTE** uniquement, ce qui laisse la chaîne d’en-tête ou de pied de page avec **À SUPPRIMER**. Spécifiez la valeur : `TEXT `.
+
+- Correspondance totale pour tout supprimer dans l’en-tête ou le pied de page.
+    
+    Exemple : Les en-têtes ou les pieds de page ont la chaîne **TEXTE À SUPPRIMER**. Vous voulez supprimer les en-têtes ou les pieds de page qui ont exactement cette chaîne. Spécifiez la valeur : `^TEXT TO REMOVE$`.
+    
+
+Les caractères génériques de la chaîne que vous spécifiez sont sensibles à la casse. La longueur maximale de la chaîne est de 255 caractères.
+
+Étant donné que des documents peuvent contenir des caractères invisibles ou différents types d’espaces ou des tabulations, la chaîne que vous spécifiez pour une expression ou une phrase peut ne pas être détectée. Si possible, spécifiez un seul mot distinctif pour la valeur et veillez à tester les résultats avant de procéder au déploiement en production.
+
+- Clé : **ExternalContentMarkingToRemove**
+
+- Valeur : \< **chaîne à trouver, définie comme expression régulière**> 
+
+#### <a name="multiline-headers-or-footers"></a>En-têtes ou pieds de page multilignes
+
+Si un texte d’en-tête ou de pied de page prend plus d’une ligne, créez une clé et une valeur pour chaque ligne. Par exemple, vous avez le pied de page suivant sur deux lignes :
+
+**Le fichier est classé confidentiel**
+
+**Étiquette appliquée manuellement**
+
+Pour supprimer ce pied de page multiligne, créez les deux entrées suivantes :
+
+- Clé 1 : **ExternalContentMarkingToRemove**
+
+- Valeur de la clé 1 :  **\*Confidentiel***
+
+- Clé 2 : **ExternalContentMarkingToRemove**
+
+- Valeur de la clé 2 :  **\*Étiquette appliquée*** 
+
+#### <a name="optimization-for-powerpoint"></a>Optimisation pour PowerPoint
+
+Les pieds de page dans PowerPoint sont implémentés en tant que formes. Pour éviter de supprimer les formes qui contiennent le texte que vous avez spécifié, mais qui ne sont ni des en-têtes ni des pieds de page, utilisez un paramètre client avancé supplémentaire nommé **PowerPointShapeNameToRemove**. Nous recommandons également d’utiliser ce paramètre pour éviter de vérifier le texte dans toutes les formes, qui est un processus gourmand en ressources.
+
+Si vous ne spécifiez pas ce paramètre client avancé supplémentaire et si PowerPoint est inclus dans la valeur de la clé **RemoveExternalContentMarkingInApp**, toutes les formes sont vérifiées à la recherche du texte que vous spécifiez dans la valeur  **ExternalContentMarkingToRemove**. 
+
+Pour rechercher le nom de la forme que vous utilisez comme en-tête ou pied de page :
+
+1. Dans PowerPoint, affichez le volet **Sélection** : onglet **Mise en forme** > groupe **Organiser** > **volet sélection**.
+
+2. Sélectionnez la forme sur la diapositive qui contient votre en-tête ou votre pied de page. Le nom de la forme sélectionnée est maintenant en surbrillance dans le volet **Sélection**.
+
+Utilisez le nom de la forme afin de spécifier une valeur de chaîne pour la clé **PowerPointShapeNameToRemove**. 
+
+Exemple : Le nom de la forme est **fc**. Pour supprimer la forme portant ce nom, spécifiez la valeur : `fc`.
+
+- Clé : **PowerPointShapeNameToRemove**
+
+- Valeur : \< **Nom de la forme PowerPoint**> 
+
+Lorsque vous avez plusieurs formes PowerPoint à supprimer, créez autant de clés **PowerPointShapeNameToRemove** que vous avez de formes à supprimer. Pour chaque entrée, spécifiez le nom de la forme à supprimer.
+
+Par défaut, seuls les en-têtes et les pieds de page qui se trouvent dans les diapositives principales sont recherchés. Pour étendre cette recherche à toutes les diapositives, processus beaucoup plus gourmand en ressources, utilisez un paramètre client avancé supplémentaire nommé **RemoveExternalContentMarkingInAllSlides**:
+
+- Clé : **RemoveExternalContentMarkingInAllSlides**
+
+- Valeur : **True**
+
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Étiquette d’un document Office en utilisant une propriété personnalisée existante
 
 > [!NOTE]
-> Si vous utilisez cette configuration et la configuration de la section précédente pour migrer à partir d’une autre solution d’étiquetage, le paramètre de la migration de l’étiquetage est prioritaire. 
+> Si vous utilisez cette configuration et la configuration pour [migrer les étiquettes à partir de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions), le paramètre de migration de l’étiquetage est prioritaire. 
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 

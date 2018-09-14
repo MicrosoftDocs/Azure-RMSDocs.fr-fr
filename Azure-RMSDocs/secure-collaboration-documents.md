@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 06/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 50182f5d0df5d204e8ffbfe3f1d27feafa3eee8e
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 5cacc32cab0526e1083ec9e3caa7203a70a0ec6a
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807664"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44148171"
 ---
 # <a name="secure-document-collaboration-by-using-azure-information-protection"></a>Sécuriser la collaboration autour de documents à l’aide d’Azure Information Protection
 

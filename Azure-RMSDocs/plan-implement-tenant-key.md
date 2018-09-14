@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/31/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5113c53f3dc6700e8cb3bf00f49b0c2d00ebcd7c
-ms.sourcegitcommit: 99b33cee47bc4588174d44e90ade16edba12ee44
+ms.openlocfilehash: 72b2fe408f77742b8ca5f1ba8727e3a065818322
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43380512"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44151144"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
@@ -148,7 +148,7 @@ Vérifiez que la longueur de clé est de 2 048 bits (recommandé) ou de 1 024 bi
 
 Pour créer une clé locale protégée par module HSM et la transférer à votre coffre de clés comme clé protégée par module HSM, suivez les procédures décrites dans [Génération et transfert de clés protégées par HSM pour Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
 
-Pour qu’Azure Information Protection utilise la clé, toutes les opérations Key Vault doivent être autorisées pour cette clé. Il s’agit de la configuration par défaut ; les opérations sont les suivantes : chiffrer, déchiffrer, wrapper, dé-wrapper, signer et vérifier. Pour connaître les opérations autorisées d’une clé, utilisez [Get-AzureKeyVauktKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) et étudiez les valeurs *key_ops* retournées dans les détails **Clé**. Si nécessaire, ajoutez des opérations autorisées avec [Update-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/update-azurekeyvaultkey) et le paramètre *KeyOps*.
+Pour qu’Azure Information Protection utilise la clé, toutes les opérations Key Vault doivent être autorisées pour cette clé. Il s’agit de la configuration par défaut ; les opérations sont les suivantes : chiffrer, déchiffrer, inclure dans un wrapper, exclure d’un wrapper, signer et vérifier. Pour connaître les opérations autorisées d’une clé, utilisez [Get-AzureKeyVauktKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) et étudiez les valeurs *key_ops* retournées dans les détails **Clé**. Si nécessaire, ajoutez des opérations autorisées avec [Update-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/update-azurekeyvaultkey) et le paramètre *KeyOps*.
 
 Une clé qui est stockée dans Key Vault a un ID de clé. Cet ID de clé est une URL contenant le nom du coffre de clés, le conteneur de clés, le nom de la clé et la version de la clé. Par exemple : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Vous devez configurer Azure Information Protection pour l’utilisation de cette clé en spécifiant son URL Key Vault.
 

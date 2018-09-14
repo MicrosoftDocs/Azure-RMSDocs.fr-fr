@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/31/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0ec3346af01ac259df603a268b1a25d154addacb
-ms.sourcegitcommit: 99b33cee47bc4588174d44e90ade16edba12ee44
+ms.openlocfilehash: e7c10a24db234196ae772fd6406a0dc66555b81d
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43380639"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44147258"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Script Windows PowerShell pour la protection Azure RMS à l’aide de l’ICF des outils de gestion de ressources pour serveur de fichiers
 

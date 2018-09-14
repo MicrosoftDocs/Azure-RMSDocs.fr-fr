@@ -5,18 +5,18 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/29/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 67a3720f38faab750f04e91d7a4848cf88ae4eef
-ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
+ms.openlocfilehash: df069aaf45b1108de1243419c22706cbca64273e
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43242212"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44149444"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 

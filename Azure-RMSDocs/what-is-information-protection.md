@@ -5,15 +5,15 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/03/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: e85395dcd8b2d839d4baa0a21ce7aedcf99d0957
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 08d77cda9eeedada562ac4610cbc04b5f6f558aa
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805188"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44150073"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 

@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d5ff45ee8c48e1843010692cbd22d146a3fa9970
-ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
+ms.openlocfilehash: 2f96a9c395b2a5df11a05acb4ce7dac0da516164
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43117908"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44151824"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 

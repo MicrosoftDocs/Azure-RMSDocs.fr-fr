@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 05591010744af7ba1640557778895887e00c7905
-ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
+ms.openlocfilehash: 496912a8dea0c73957d979d3f2cd42d785d532aa
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43242068"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44149954"
 ---
 # <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection : autres appellations
 

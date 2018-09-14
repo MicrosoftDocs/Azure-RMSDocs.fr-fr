@@ -5,15 +5,15 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/16/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 050ffcf6e500316912ac4b0894594b99b441aab5
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: d4d653f5244467b29fc2be7d4554d92d035d0f87
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804304"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44151756"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protection HYOK (Hold your own key) pour Azure Information Protection
 

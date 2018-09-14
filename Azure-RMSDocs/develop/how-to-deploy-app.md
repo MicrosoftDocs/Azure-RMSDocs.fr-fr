@@ -6,18 +6,18 @@ author: kkanakas
 ms.author: kartikk
 manager: mbaldwin
 ms.date: 02/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: f3d9bcefb622182c1f4ec65364dcfc5c74ae24f3
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 878f19d56b4a2714c0495925ddfb88918a2a92a6
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805077"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44145820"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Déploiement d’une application de service sur un autre locataire
 

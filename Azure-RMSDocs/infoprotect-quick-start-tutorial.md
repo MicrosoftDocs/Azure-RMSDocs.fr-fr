@@ -5,15 +5,15 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/08/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 4989b0feb9bb355fac1813b8730f436295e8beab
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: c98667de0b0c103b9dfbd278c0665db39f999491
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804386"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44146843"
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Didacticiel de démarrage rapide pour Azure Information Protection 
 

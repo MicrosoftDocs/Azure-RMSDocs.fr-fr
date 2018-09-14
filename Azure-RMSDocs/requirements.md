@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/31/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0cfaaa199178b7bede1d5b0d3fe54dd43dcfbf01
-ms.sourcegitcommit: beb4e480e0e821e32c9d35e86f2cf4321005c521
+ms.openlocfilehash: e471cd5e4de5c4bd4c24fd5c5627e69f7db1ec90
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43663397"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44148339"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 

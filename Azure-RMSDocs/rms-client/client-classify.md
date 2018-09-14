@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/31/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ee88a5aa0aee8b4ecd300a57710f73c2263cfa0f
-ms.sourcegitcommit: 99b33cee47bc4588174d44e90ade16edba12ee44
+ms.openlocfilehash: e49cd5da0c34c8dd6fa537bca3d90ba56c32e690
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43380593"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44150226"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>Guide de l’utilisateur : Classifier un fichier ou un e-mail avec Azure Information Protection
 

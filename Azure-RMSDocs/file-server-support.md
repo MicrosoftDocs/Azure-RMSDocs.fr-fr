@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5df573af6350e26300569b9e7952de2d78bce081
-ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
+ms.openlocfilehash: 0b73eedc1fe1d1f36d6285a71c723037f0b97814
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43242140"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44151722"
 ---
 # <a name="how-file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci-support-azure-rights-management"></a>Prise en charge d’Azure Rights Management par les serveurs de fichiers exécutant Windows Server et utilisant l’infrastructure de classification des fichiers (ICF)
 

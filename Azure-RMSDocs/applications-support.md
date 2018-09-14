@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/29/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f468e82f71914e15aacc4a1a9c1d38e0fe5b4372
-ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
+ms.openlocfilehash: 8fa2bfd1957713f2c95deaf59bb740371c1ad375
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43242120"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44151007"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Comment les applications prennent en charge le service Azure Rights Management
 

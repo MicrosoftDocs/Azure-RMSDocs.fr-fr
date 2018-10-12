@@ -4,18 +4,18 @@ description: Informations sur les fichiers du client et la journalisation de l�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7e72aa9af0d248f54880f8b5bb6df0ce75018f2b
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: d935d5eafd3d893b67bbdccb1893bf67d418ae79
+ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47211222"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866116"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 
@@ -85,8 +85,6 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
 
 - Autorisations personnalisées (le cas échéant) qui incluent les [droits d’utilisation par leur nom d’encodage](../configure-usage-rights.md#usage-rights-and-descriptions) pour les utilisateurs, groupes ou organisations spécifiés
     
-Pour obtenir des informations sur la journalisation de l’utilisation du service de protection, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../log-analyze-usage.md)
-
 Pour obtenir des informations sur la journalisation de l’utilisation du service de protection, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../log-analyze-usage.md)
 
 ## <a name="next-steps"></a>Étapes suivantes

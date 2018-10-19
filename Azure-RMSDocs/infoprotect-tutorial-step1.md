@@ -8,12 +8,12 @@ ms.date: 05/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 82a3f71a4c1bb99fc4d0af74f49dd43a706cb132
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: af3958d7c3bafc37772944e2cb39a9b3244eccc2
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147693"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169972"
 ---
 # <a name="step-1-activate-protection"></a>Étape 1 : Activer la protection
  
@@ -41,7 +41,7 @@ Il existe différentes manières d’activer la protection. Vous pouvez utiliser
     
     Cliquez sur **Créer** à nouveau.
 
-4. Notez les informations sur la page **Démarrage rapide** qui s’ouvre automatiquement la première fois que vous vous connectez au service. Vous pouvez y revenir plus tard. Pour ce tutoriel, sélectionnez **GÉRER** > **Activation de la protection**. 
+4. Notez les informations sur la page **Démarrage rapide** qui s’ouvre automatiquement la première fois que vous vous connectez au service. Vous pouvez y revenir plus tard. Pour ce tutoriel, sélectionnez **Gérer** > **Activation de la protection**. 
 
 5. Vous voyez maintenant si la protection est activée pour votre locataire. 
     

@@ -4,18 +4,18 @@ description: Instructions d’utilisation du client Rights Management (RMS) avec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8c97e4591343c0c6f04c39b5fa162acb1feacdd1
-ms.sourcegitcommit: 62da5075a6b3d13e4688d2d7d82beff53cade440
+ms.openlocfilehash: 099b4985a0e595c22ec29fd2d682d092a5b445b5
+ms.sourcegitcommit: 395918e9e3513e1d791bbfc16c0fc90e4dd605eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45540086"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750626"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
@@ -53,7 +53,7 @@ Conditions préalables pour ces instructions :
     
 - Vous avez synchronisé vos comptes d’utilisateur Active Directory locaux avec Azure Active Directory ou Office 365, dont leurs adresses e-mail. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et le service Azure Rights Management. Si vous n’exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l’accès des utilisateurs à ces fichiers soit bloqué. Si vous avez besoin de plus d’informations sur cette exigence, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../prepare.md).
     
-- Vous avez téléchargé les modèles Rights Management sur le serveur de fichiers, puis identifié l’identifiant de modèle qui va protéger les fichiers. Pour cela, utilisez la cmdlet [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate). Ce scénario ne prend pas en charge les modèles de services. Par conséquent, vous devez utiliser un modèle qui n’est pas configuré pour une étendue ou la configuration de l’étendue doit inclure l’option de compatibilité des applications de manière à ce que la case à cocher **Afficher ce modèle à tous les utilisateurs lorsque les applications ne prennent pas en charge l’identité de l’utilisateur** soit activée.
+- Ce scénario ne prend pas en charge les modèles de service. Vous devez soit utiliser un modèle qui n’est pas configuré pour une étendue, soit utiliser l’applet de commande [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) et le paramètre *EnableInLegacyApps*.
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Instructions de configuration de l’ICF des outils de gestion de ressources pour serveur de fichiers pour la protection Azure Rights Management
 Suivez ces instructions pour protéger automatiquement tous les fichiers figurant dans un dossier, en utilisant un script PowerShell en tant que tâche personnalisée. Exécutez les procédures suivantes, dans l'ordre indiqué :
@@ -72,7 +72,7 @@ Suivez ces instructions pour protéger automatiquement tous les fichiers figuran
 
 Quand vous aurez suivi ces instructions, tous les fichiers figurant dans votre dossier sélectionné seront classifiés avec la propriété personnalisée de RMS, et seront protégés par Rights Management. Pour une configuration plus complexe qui protège sélectivement certains fichiers et pas d'autres, vous pouvez ensuite créer ou utiliser une propriété et une règle de classification différentes, avec une tâche de gestion de fichiers qui protège uniquement ces fichiers.
 
-Notez que si vous apportez des modifications au modèle Rights Management que vous utilisez pour l’ICF, vous devez exécuter `Get-RMSTemplate -Force` sur l’ordinateur du serveur de fichiers pour obtenir le modèle mis à jour. Le modèle mis à jour est ensuite utilisé pour protéger de nouveaux fichiers. Si les modifications apportées au modèle sont suffisamment importantes pour protéger de nouveau les fichiers sur le serveur de fichiers, vous faites cela en exécutant l’applet de commande Protect-RMSFile de façon interactive avec un compte ayant des droits d’utilisation Contrôle total ou Exportation sur les fichiers. Si vous publiez un nouveau modèle que vous souhaitez utiliser pour l’ICF, vous devez également exécuter `Get-RMSTemplate -Force` sur ce serveur de fichiers.
+Notez que si vous apportez des changements au modèle Rights Management que vous utilisez pour l’ICF, le compte d’ordinateur qui exécute le script pour protéger les fichiers n’obtient pas automatiquement le modèle mis à jour. Pour ce faire, dans le script, recherchez la commande `Get-RMSTemplate -Force` mise en commentaire, puis supprimez le caractère de commentaire `#`. Quand le modèle mis à jour est téléchargé (que le script a été exécuté au moins une fois), vous pouvez mettre en commentaire cette commande supplémentaire afin que les modèles ne soient pas téléchargés inutilement à chaque fois. Si les changements apportés au modèle sont suffisamment importants pour protéger de nouveau les fichiers sur le serveur de fichiers, vous effectuez cette opération de façon interactive en exécutant l’applet de commande Protect-RMSFile avec un compte ayant des droits d’utilisation Contrôle total ou Exportation sur les fichiers. Si vous publiez un nouveau modèle que vous souhaitez utiliser pour l’ICF, vous devez également exécuter `Get-RMSTemplate -Force`.
 
 ### <a name="save-the-windows-powershell-script"></a>Exécution du script Windows PowerShell
 
@@ -266,7 +266,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
     > [!TIP]
     > Conseils de dépannage :
     > 
-    > -   Si le rapport indique **0** au lieu du nombre de fichiers figurant dans votre dossier, cela indique que le script ne s’est pas exécuté. Commencez par contrôler le script proprement dit en le chargeant dans Windows PowerShell ISE pour valider son contenu, puis essayez de l'exécuter pour voir si des erreurs s'affichent. Si aucun argument n’est spécifié, le script tente de se connecter et de s’authentifier auprès du service Azure Rights Management.
+    > -   Si le rapport indique **0** au lieu du nombre de fichiers figurant dans votre dossier, cela indique que le script ne s’est pas exécuté. Commencez par contrôler le script proprement dit en le chargeant dans Windows PowerShell ISE pour valider son contenu, puis essayez de l’exécuter une fois dans la même session PowerShell pour voir si des erreurs s’affichent. Si aucun argument n’est spécifié, le script tente de se connecter et de s’authentifier auprès du service Azure Rights Management.
     > 
     >     -   Si le script signale qu'il n'a pas pu se connecter au service Azure Rights Management (Azure RMS), vérifiez les valeurs affichées pour le compte de principal du service que vous avez spécifiées dans le script. Pour plus d’informations sur la création de ce compte de principal du service, consultez la page [Condition préalable 3 : protéger ou annuler la protection des fichiers sans interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) dans le guide de l’administrateur du client Azure Information Protection.
     >     -   Si le script signale qu’il n’a pas pu se connecter à Azure RMS, vérifiez qu’il peut trouver le modèle spécifié en exécutant [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) directement à partir de Windows PowerShell sur le serveur. Le modèle que vous avez spécifié doit figurer dans les résultats.
@@ -281,6 +281,14 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
     > -   Si l'état indique le nombre correct de fichiers, mais que ceux-ci ne sont pas protégés, essayez de les protéger manuellement à l'aide de l'applet de commande [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) pour voir si des erreurs s'affichent.
 
 Après avoir vérifié que ces tâches s'exécutent correctement, vous pouvez fermer le Gestionnaire de ressources de fichiers. Les nouveaux fichiers sont automatiquement classifiés et protégés quand les tâches planifiées s’exécutent. 
+
+## <a name="action-required-if-you-make-changes-to-the-rights-management-template"></a>Action obligatoire si vous apportez des changements au modèle Rights Management
+
+Si vous apportez des changements au modèle Rights Management que le script référence, le compte d’ordinateur qui exécute le script pour protéger les fichiers n’obtient pas automatiquement le modèle mis à jour. Dans le script, recherchez la commande `Get-RMSTemplate -Force` mise en commentaire dans la fonction Set-RMSConnection, puis supprimez le caractère de commentaire situé au début de la ligne. Lors de la prochaine exécution du script, le modèle mis à jour est téléchargé. Pour optimiser les performances afin que les modèles ne se téléchargent pas inutilement, vous pouvez remettre cette ligne en commentaire. 
+
+Si les changements apportés au modèle sont suffisamment importants pour protéger de nouveau les fichiers sur le serveur de fichiers, vous effectuez cette opération de façon interactive en exécutant l’applet de commande Protect-RMSFile avec un compte ayant des droits d’utilisation Contrôle total ou Exportation sur les fichiers. 
+
+Exécutez également cette ligne du script si vous publiez un nouveau modèle que vous voulez utiliser pour l’ICF, puis changez l’ID de modèle dans la ligne d’argument correspondant à la tâche de gestion de fichier personnalisée.
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Modification des instructions pour protéger des fichiers de façon sélective
 Quand les instructions précédentes fonctionnent, il est facile de les modifier pour obtenir une configuration plus sophistiquée. Par exemple, vous pouvez protéger des fichiers en utilisant le même script, mais uniquement pour les fichiers contenant des informations d'identification personnelle, voire sélectionner un modèle associé à des droits plus restrictifs.

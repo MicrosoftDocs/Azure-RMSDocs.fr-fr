@@ -4,24 +4,24 @@ description: Découvrez et implémentez la fonctionnalité de super utilisateur 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/31/2018
+ms.date: 10/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 762b46ac33b57bd81b5c1ab36d07f4d33305b4c0
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 07b780721bc0f22de6c36d88d98a2c8360af67b8
+ms.sourcegitcommit: f5395541fa3f74839402805dab68d0c2de395249
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150991"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101832"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Grâce à la fonctionnalité de super utilisateur du service Azure Rights Management d’Azure Information Protection, les personnes et services autorisés peuvent toujours lire et inspecter les données qu’Azure Rights Management protège pour votre organisation. Si nécessaire, supprimez la protection ou modifiez la protection appliquée précédemment. 
+Grâce à la fonctionnalité de super utilisateur du service Azure Rights Management d’Azure Information Protection, les personnes et services autorisés peuvent toujours lire et inspecter les données qu’Azure Rights Management protège pour votre organisation. Si nécessaire, la protection peut ensuite être supprimée ou modifiée.
 
 Un super utilisateur a toujours le [droit d’utilisation](configure-usage-rights.md) Contrôle total Rights Management pour les documents et e-mails qui ont été protégés par le locataire Azure Information Protection de votre organisation. Cette fonctionnalité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise. Par exemple, vous pouvez utiliser cette fonctionnalité pour les scénarios suivants :
 
@@ -78,6 +78,23 @@ Si vous utilisez la classification et la protection, vous pouvez également util
 Pour plus d’informations sur ces applets de commande, consultez [Utilisation de PowerShell avec le client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) dans le guide de l’administrateur du client Azure Information Protection.
 
 > [!NOTE]
-> Le module AzureInformationProtection remplace le module PowerShell de protection RMS installé avec l’outil de protection RMS. Ces deux modules sont différents et viennent en complément du [module PowerShell pour Azure Rights Management](administer-powershell.md). Le module AzureInformationProtection prend en charge Azure Information Protection, le service Azure Rights Management (Azure RMS) d’Azure Information Protection et les services Active Directory Rights Management Services (AD RMS).
+> Le module AzureInformationProtection est différent et vient en complément du [module PowerShell AADRM](administer-powershell.md) qui gère le service Azure Rights Management pour Azure Information Protection.
 
+### <a name="guidance-for-using-unprotect-rmsfile-for-ediscovery"></a>Conseils d’utilisation d’Unprotect-RMSFile pour eDiscovery
+
+Même si vous pouvez utiliser l’applet de commande Unprotect-RMSFile pour déchiffrer le contenu protégé dans des fichiers PST, utilisez cette applet de commande stratégiquement dans le cadre de votre processus eDiscovery. L’exécution d’Unprotect-RMSFile sur des fichiers volumineux d’un ordinateur nécessite de nombreuses ressources (mémoire et espace disque) et la taille de fichier maximale prise en charge pour cette applet de commande est de 5 Go.
+
+Dans l’idéal, utilisez [Office 365 eDiscovery](/office365/securitycompliance/ediscovery) pour rechercher dans les e-mails protégés et extraire une pièce jointe protégée dans les e-mails. La capacité de super utilisateur est automatiquement intégrée à Exchange Online afin qu’eDiscovery dans le Centre de sécurité et conformité Office 365 puisse rechercher des éléments chiffrés avant l’exportation, ou déchiffrer un e-mail chiffré lors de l’exportation.
+
+Si vous ne pouvez pas utiliser Office 365 eDiscovery, vous pouvez recourir à une autre solution eDiscovery qui s’intègre au service Azure Rights Management pour exploiter les données de la même façon. Par ailleurs, si votre solution e-Discovery ne peut pas lire et déchiffrer automatiquement le contenu protégé, vous pouvez toujours utiliser cette solution dans un processus à plusieurs étapes qui vous permet d’exécuter Unprotect-RMSFile plus efficacement :
+
+1. Exportez l’e-mail en question dans un fichier PST depuis Exchange Online ou Exchange Server, ou à partir de la station de travail où l’utilisateur a stocké son e-mail.
+
+2. Importez le fichier PST dans votre outil eDiscovery. Étant donné que l’outil ne peut pas lire le contenu protégé, il est probable que ces éléments vont générer des erreurs.
+
+3. À partir de tous les éléments que l’outil n’a pas pu ouvrir, générez un fichier PST qui, cette fois, contient uniquement des éléments protégés. Ce second fichier PST sera probablement beaucoup plus petit que le fichier PST d’origine.
+
+4. Exécutez Unprotect-RMSFile sur ce second fichier PST pour déchiffrer le contenu de ce fichier beaucoup plus petit. À partir de la sortie, importez le fichier PST maintenant déchiffré dans votre outil de découverte.
+
+Pour obtenir plus d’informations et de conseils sur l’exécution d’eDiscovery sur les boîtes aux lettres et les fichiers PST, consultez le billet de blog suivant : [Azure Information Process and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).
 

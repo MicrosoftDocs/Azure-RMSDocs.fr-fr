@@ -1,3 +1,18 @@
+---
+title: mip AddContentHeaderAction, classe
+description: Informations de référence pour la classe mip AddContentHeaderAction
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: bc60fe32005a0c6bc8088ab7687a3f711ae7a99a
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445646"
+---
 # <a name="class-mipaddcontentheaderaction"></a>mip::AddContentHeaderAction, classe 
 Classe d’action qui spécifie l’ajout d’un en-tête de contenu.
   
@@ -43,7 +58,7 @@ Obtenir la taille de la police utilisée pour afficher l’en-tête de contenu.
 Obtenir la couleur de la police utilisée pour afficher l’en-tête de contenu.
 
   
-**Retourne** : la couleur de la police sous forme de chaîne (par exemple « #000000 »).
+**Retourne** : couleur de la police sous forme de chaîne (par exemple, #000000).
   
 ### <a name="getalignment"></a>GetAlignment
 Obtenir l’alignement de l’en-tête.
@@ -57,7 +72,7 @@ Obtenir l’alignement de l’en-tête.
 Obtenir la marge de l’en-tête à partir du bas.
 
   
-**Retourne** : un nombre entier représentant les marges à partir du bas du document (par exemple 10 mm).
+**Retourne** : marges à partir du bas du document (par exemple, 10 mm).
   
 ### <a name="actiontype"></a>ActionType
 Obtenir le type de [Action](class_mip_action.md).

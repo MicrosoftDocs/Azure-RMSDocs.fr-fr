@@ -4,18 +4,18 @@ description: Instructions pour installer, configurer et exécuter le scanneur Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 09/09/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: c1ad35bde57822460f0f3e7346d05d95647eedd6
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b4306a45f8bfa1f6c865f634e270ba8eafa6e8d8
+ms.sourcegitcommit: aaa3eabffc9cdc2389955de770b43ffa9fa984fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151858"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889459"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -29,7 +29,7 @@ Ce scanneur s’exécute en tant que service sur Windows Server et vous permet d
 
 - Chemins UNC pour les partages réseau qui utilisent le protocole SMB (Server Message Block).
 
-- Sites et bibliothèques pour SharePoint Server 2016 et SharePoint Server 2013. SharePoint 2010 est également pris en charge pour les clients qui bénéficient d’un [support étendu de cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) et qui utilisent la préversion du scanneur.
+- Sites et bibliothèques pour SharePoint Server 2016 et SharePoint Server 2013. SharePoint 2010 est également pris en charge pour les clients qui bénéficient d’un [support étendu pour cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 Pour analyser et étiqueter des fichiers sur des référentiels cloud, utilisez [Cloud App Security](https://docs.microsoft.com/cloud-app-security/).
 
@@ -54,7 +54,7 @@ Avant d’installer le scanneur Azure Information Protection, vérifiez que les 
 |Condition requise|Plus d’informations|
 |---------------|--------------------|
 |Ordinateur Windows Server pour exécuter le service du scanneur :<br /><br />- Processeurs 4 cœurs<br /><br />- 4 Go de RAM<br /><br />- 10 Go d’espace libre (en moyenne) pour les fichiers temporaires|Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Remarque : À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez utiliser un système d’exploitation client Windows qui est [pris en charge par le client Azure Information Protection](requirements.md#client-devices).<br /><br />Il peut s’agir d’un ordinateur physique ou virtuel doté d’une connexion réseau rapide et fiable aux magasins de données à scanner.<br /><br /> Le scanneur nécessite suffisamment d’espace disque disponible pour créer des fichiers temporaires pour chaque fichier qu’il analyse, quatre fichiers par cœur. L’espace disque recommandé de 10 Go permet de disposer de processeurs 4 cœurs analysant 16 fichiers qui ont chacun une taille de 625 Mo. <br /><br />Vérifiez que cet ordinateur dispose de la [connectivité Internet](requirements.md#firewalls-and-network-infrastructure) dont il a besoin pour Azure Information Protection. Si une connexion Internet n’est pas possible en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).|
-|SQL Server pour stocker la configuration du scanneur :<br /><br />- Instance locale ou distante<br /><br />-Rôle sysadmin pour installer le scanneur|SQL Server 2012 est la version minimale pour les éditions suivantes :<br /><br />- SQL Server Entreprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Lorsque vous installez le scanneur et si votre compte a le rôle Sysadmin, le processus d’installation crée automatiquement la base de données AzInfoProtectionScanner et accorde le rôle db_owner requis au compte de service qui exécute le scanneur.  Si vous ne pouvez pas disposer du rôle Sysadmin ou si les stratégies de votre organisation requièrent que les bases de données soient créées et configurées manuellement, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).|
+|SQL Server pour stocker la configuration du scanneur :<br /><br />- Instance locale ou distante<br /><br />-Rôle sysadmin pour installer le scanneur|SQL Server 2012 est la version minimale pour les éditions suivantes :<br /><br />- SQL Server Entreprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Si vous installez plusieurs instances du scanneur, chacune nécessite sa propre base de données SQL Server.<br /><br />Lorsque vous installez le scanneur et si votre compte a le rôle Sysadmin, le processus d’installation crée automatiquement la base de données AzInfoProtectionScanner et accorde le rôle db_owner requis au compte de service qui exécute le scanneur.  Si vous ne pouvez pas disposer du rôle Sysadmin ou si les stratégies de votre organisation requièrent que les bases de données soient créées et configurées manuellement, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).|
 |Compte de service pour exécuter le service du scanneur|En plus d’exécuter le service du scanneur, ce compte s’authentifie auprès d’Azure AD, puis télécharge la stratégie Azure Information Protection. Ce compte doit être un compte Active Directory et synchronisé avec Azure AD. Si vous ne pouvez pas synchroniser ce compte en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />Ce compte de service a la configuration suivante :<br /><br />Droit d’- **ouverture de session locale**. Ce droit est exigé pour l’installation et la configuration du scanneur, mais pas pour son fonctionnement. Vous devez accorder ce droit au compte de service, mais vous pouvez le supprimer après avoir vérifié que le scanneur peut détecter, classifier et protéger des fichiers. Si l’attribution de ce droit, même pendant une courte période, n’est pas possible en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />Droit d’- **ouverture de session en tant que service**. Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur. <br /><br />- Autorisations d’accès aux dépôts de données : vous devez accorder des autorisations de **Lecture** et **Écriture** pour l’analyse des fichiers, puis l’application d’une classification et d’une protection aux fichiers qui remplissent les conditions stipulées dans la stratégie Azure Information Protection. Pour exécuter le scanneur en mode découverte uniquement, l’autorisation **Lecture** suffit.<br /><br />- Pour les étiquettes qui reprotègent ou retire la protection : pour veiller à ce que le scanneur ait toujours accès aux fichiers protégés, faites de ce compte un [super utilisateur](configure-super-users.md) du service Azure Rights Management et vérifiez que la fonctionnalité de super utilisateur est activée. Pour plus d’informations sur la configuration requise des comptes pour appliquer la protection, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md). En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) pour un déploiement échelonné, assurez-vous que ce compte est inclus dans les contrôles d’intégration que vous avez configurés.|
 |Le client Azure Information Protection est installé sur l’ordinateur Windows Server|Vous devez installer le client complet pour le scanneur. N’installez pas le client avec juste le module PowerShell.<br /><br />Pour obtenir des instructions d’installation du client, consultez le [guide de l’administrateur](./rms-client/client-admin-guide.md). Si vous avez déjà installé le scanneur et que vous devez maintenant le mettre à niveau vers une version ultérieure, consultez [Mise à niveau du scanneur Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 |Étiquettes configurées qui appliquent une classification automatique et éventuellement une protection|Pour plus d’informations sur la manière de configurer les conditions dans la stratégie Azure Information Protection, consultez [Guide pratique pour configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection](configure-policy-classification.md).<br /><br />Pour plus d’informations sur la façon de configurer les étiquettes pour appliquer une protection aux fichiers, consultez [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md).<br /><br />Ces étiquettes peuvent être dans la stratégie globale, ou dans une ou plusieurs [stratégies délimitées](configure-policy-scope.md).<br /><br />Remarque : bien que vous puissiez exécuter le scanneur même si vous n’avez pas configuré les étiquettes qui appliquent la classification automatique, ce scénario n’est pas abordé dans ces instructions. [Plus d’informations](#using-the-scanner-with-alternative-configurations)|
@@ -168,7 +168,7 @@ Vous êtes maintenant prêt à spécifier les magasins de données à analyser.
 
 Utilisez l’applet de commande [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) pour spécifier les magasins de données à analyser à l’aide du scanneur Azure Information Protection. Vous pouvez spécifier des dossiers locaux, des chemins UNC et des URL SharePoint Server de sites et bibliothèques SharePoint. 
 
-Versions prises en charge pour SharePoint : SharePoint Server 2016 et SharePoint Server 2013. SharePoint Server 2010 est également pris en charge pour les clients qui bénéficient d’un [support étendu de cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) et qui utilisent la préversion du scanneur.
+Versions prises en charge pour SharePoint : SharePoint Server 2016 et SharePoint Server 2013. SharePoint Server 2010 est également pris en charge pour les clients qui bénéficient d’un [support étendu pour cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 1. À partir du même ordinateur Windows Server, dans votre session PowerShell, ajoutez votre premier magasin de données en exécutant la commande suivante :
     
@@ -188,43 +188,34 @@ Avec la configuration par défaut du scanneur, vous êtes maintenant prêt à ex
 
 ## <a name="run-a-discovery-cycle-and-view-reports-for-the-scanner"></a>Exécuter un cycle de découverte et afficher les rapports pour le scanneur
 
-1. En utilisant **Outils d’administration** > **Services**, démarrez le service **Scanneur Azure Information Protection**.
+1. Dans votre session PowerShell, redémarrez le service **Scanneur Azure Information Protection** en exécutant la commande suivante :
     
-    Si vous avez la préversion actuelle du scanneur, vous pouvez également exécuter [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) dans votre session PowerShell.
+        Start-AIPScan
 
 2. Attendez que le scanneur termine son cycle. Une fois que le scanneur a parcouru tous les fichiers inclus dans les magasins de données que vous avez spécifiés, le service s’arrête. Vous pouvez utiliser le journal des événements **Applications et service** Windows local, **Azure Information Protection**, pour vérifier que le service est arrêté. Recherchez l’ID d’événement d’information **911**.
 
 3. Passez en revue les rapports stockés dans %*localappdata*%\Microsoft\MSIP\Scanner\Reports et dont le format de fichier est .csv. Avec la configuration par défaut du scanneur, seuls les fichiers qui remplissent les conditions de la classification automatique sont inclus dans ces rapports.
     
+    > [!TIP]
+    > Actuellement en préversion, les informations de ces rapports sont désormais envoyées vers Azure Information Protection afin que vous puissiez les afficher à partir du portail Azure. Pour plus d’informations, consultez [Création de rapports pour Azure Information Protection](reports-aip.md). 
+        
     Si les résultats ne correspondent pas à ce que vous attendez, vous devez peut-être ajuster les conditions que vous avez spécifiées dans votre stratégie Azure Information Protection. Si tel est le cas, répétez les étapes 1 à 3 jusqu’à ce que vous soyez prêt à modifier la configuration pour appliquer la classification et éventuellement la protection. 
-    
-    Pour la version en disponibilité générale actuelle du scanneur : chaque fois que vous répétez ces étapes, commencez par exécuter la commande PowerShell suivante sur l’ordinateur Windows Server :
-  
-        Set-AIPScannerConfiguration -Schedule OneTime
-    
-    Si vous avez la préversion actuelle du scanneur, n’exécutez pas la commande Set-AIPScannerConfiguration.
-  
+
 Quand vous êtes prêt à étiqueter automatiquement les fichiers que le scanneur découvre, passez à la procédure suivante. 
 
 ## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>Configurer le scanneur pour appliquer la classification et la protection
 
 Dans son paramétrage par défaut, le scanneur s’exécute une seule fois en mode création de rapports uniquement. Pour modifier ces paramètres, exécutez l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
 
-1. Sur l’ordinateur Windows Server, dans la session PowerShell, exécutez l’une des commandes suivantes :
+1. Sur l’ordinateur Windows Server, dans la session PowerShell, exécutez la commande suivante :
     
-    Pour la version en disponibilité générale actuelle du scanneur :
-       
-        Set-AIPScannerConfiguration -Enforce On -Schedule Continuous
-    
-    Pour la préversion du scanneur :
-       
         Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
     Il existe d’autres paramètres de configuration que vous pouvez modifier. Par exemple, si les attributs de fichier sont modifiés et ce qui est enregistré dans les rapports. De plus, si votre stratégie Azure Information Protection inclut le paramètre qui exige un message de justification pour diminuer le niveau de classification ou supprimer la protection, spécifiez ce message à l’aide de cette applet de commande. Utilisez l’[aide en ligne](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) pour plus d’informations sur chaque paramètre de configuration. 
 
-2. En utilisant **Outils d’administration** > **Services**, redémarrez le service **Scanneur Azure Information Protection**.
+2. Redémarrez le service **Scanneur Azure Information Protection** en exécutant la commande suivante :
     
-    Si vous avez la préversion actuelle du scanneur, vous pouvez également exécuter [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) dans votre session PowerShell.
+        Start-AIPScan
 
 3. Comme avant, examinez le journal des événements et les rapports pour déterminer quels fichiers ont été étiquetés, quelle classification a été appliquée et si une protection a été appliquée.
 
@@ -273,25 +264,16 @@ Enfin, pour les autres types de fichiers, le scanneur applique l’étiquette pa
 
 Lorsque le scanneur applique une étiquette avec une protection, par défaut, seuls les types de fichiers Office sont protégés. Vous pouvez modifier ce comportement afin que les autres types de fichiers soient protégés. Toutefois, lorsqu’une étiquette applique une protection générique à des documents, l’extension de nom de fichier devient .pfile. En outre, le fichier est en lecture seule jusqu’à ce qu’il soit ouvert par un utilisateur autorisé et enregistré dans son format natif. Les fichiers texte et les images peuvent également modifier leur extension de nom de fichier et passer en lecture seule. 
 
-Pour modifier le comportement par défaut du scanneur, par exemple, afin de protéger de façon générique d’autres types de fichiers, vous devez modifier manuellement le Registre et indiquer les types de fichiers supplémentaires qui doivent être protégés. Pour obtenir des instructions, consultez [Configuration de l’API de fichier](develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». En outre, spécifiquement pour le scanneur :
+Pour modifier le comportement par défaut du scanneur, par exemple, afin de protéger de façon générique d’autres types de fichiers, vous devez modifier manuellement le Registre et indiquer les types de fichiers supplémentaires qui doivent être protégés. Vous pouvez aussi protéger tous les types de fichiers en spécifiant le caractère générique `*`. Pour obtenir des instructions, consultez [Configuration de l’API de fichier](develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». En outre, spécifiquement pour le scanneur :
 
 - Le scanneur a son propre comportement par défaut : seuls les formats de fichiers Office sont protégés par défaut. Si le registre n’est pas modifié, aucun des autres types de fichiers ne sera protégé par le scanneur.
 
-- À moins d’utiliser la préversion actuelle du scanneur, il est nécessaire de spécifier des extensions de nom de fichier spécifiques sans utiliser le caractère générique `*`. La préversion du scanneur ne prend pas en charge ce caractère générique.
 
 ## <a name="when-files-are-rescanned"></a>Lorsque les fichiers sont réanalysés
 
 Pour le premier cycle d’analyse, le scanneur inspecte tous les fichiers des magasins de données configurés. Pour les analyses suivantes, il inspecte uniquement les fichiers nouveaux ou modifiés. 
 
-Vous pouvez forcer le scanneur pour réinspecter tous les fichiers en exécutant la commande suivante :
-
-- Pour la version en disponibilité générale actuelle du scanneur :
-    
-    Exécutez [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) avec le paramètre `-Type` défini sur **Complet**.
-
-- Pour la préversion du scanneur :
-    
-    Exécutez [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) avec le paramètre `-Reset`. Le scanneur doit être configuré pour une planification manuelle, donc le paramètre `-Schedule` doit être défini sur **Manuel** avec [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
+Vous pouvez forcer le scanneur à réinspecter tous les fichiers en exécutant [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) avec le paramètre `-Reset`. Le scanneur doit être configuré pour une planification manuelle, donc le paramètre `-Schedule` doit être défini sur **Manuel** avec [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
 
 La réinspection de tous les fichiers est utile quand vous voulez que les rapports contiennent tous les fichiers. Ce choix de configuration est généralement utilisé lorsque le scanneur s’exécute en mode découverte. Lorsqu’une analyse complète est terminée, le scanneur passe automatiquement en mode incrémentiel pour inspecter uniquement les fichiers nouveaux ou modifiés lors des analyses suivantes.
 
@@ -339,6 +321,8 @@ Pour optimiser les performances de l’analyseur :
     
     Si vous avez des dossiers à analyser sur un serveur Windows, installez l’analyseur sur un autre ordinateur et configurez ces dossiers comme partages réseau à analyser. En séparant les deux fonctions d’hébergement des fichiers et d’analyse des fichiers, les ressources informatiques de ces services n’entrent pas en concurrence.
 
+Si nécessaire, installez plusieurs instances du scanneur. Chaque instance du scanneur nécessite sa propre base de données de configuration.
+
 Autres facteurs qui affectent les performances de l’analyseur :
 
 - La charge actuelle et les temps de réponse des magasins de données qui contiennent les fichiers à analyser
@@ -384,6 +368,8 @@ D’autres applets de commande propres au scanneur vous permettent de modifier s
 
 - [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/Get-AIPScannerRepository)
 
+- [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
+
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
 
 - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository)
@@ -398,14 +384,9 @@ D’autres applets de commande propres au scanneur vous permettent de modifier s
 
 - [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository)
 
+- [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
+
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
-
-
-Applets de commande supplémentaires dans la préversion :
-
-- [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
-
-- [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) 
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
 

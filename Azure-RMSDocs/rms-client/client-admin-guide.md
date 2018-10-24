@@ -4,18 +4,18 @@ description: Instructions et informations destinées aux administrateurs d’un 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 10/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 63e84e8a5d072f0bb57bb72754f97ca8963a2c76
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b5eccdd62d828bc5104815746458d4c7036594fd
+ms.sourcegitcommit: 39403f0e9fe5912d467b119ed45da94bccd1cc80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149104"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100631"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -106,9 +106,7 @@ Quand le client est installé, utilisez l’option **Aide et commentaires** pour
 
 Le **lien En savoir plus** pointe par défaut sur le site web [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection), mais vous pouvez le configurer pour qu’il pointe sur une URL personnalisée dans le cadre des [paramètres de stratégie](../configure-policy-settings.md) Azure Information Protection.
 
-Utilisez le lien **Envoyez-nous vos commentaires** (versions en disponibilité générale) pour envoyer des suggestions ou des demandes à l’équipe Information Protection. N’utilisez pas cette option pour le support technique, mais consultez plutôt [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). 
-
-Le lien **Signaler un problème** remplace le lien **Envoyez-nous vos commentaires** dans la préversion du client. Par défaut, cette option envoie un e-mail à Microsoft, mais vous pouvez configurer la chaîne HTTP de vos utilisateurs en spécifiant un [paramètre client avancé](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link). Par exemple, indiquez l’adresse e-mail de votre support technique.
+Le lien **Signaler un problème** s’affiche dans les préversions du client, et pas dans les versions en disponibilité générale. Par défaut, cette option envoie un e-mail à Microsoft, mais vous pouvez configurer la chaîne HTTP de vos utilisateurs en spécifiant un [paramètre client avancé](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link). Par exemple, indiquez l’adresse e-mail de votre support technique.
 
 L’option **Exporter les journaux** permet de collecter et de joindre automatiquement des fichiers journaux pour le client Azure Information Protection si vous devez les envoyer au support Microsoft. Cette option peut également être utilisée par les utilisateurs finaux pour envoyer ces fichiers journaux à votre support technique.
 
@@ -200,7 +198,7 @@ Consultez [Historique des versions et politique du support](client-version-relea
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Mise à niveau du scanneur Azure Information Protection
 
-Pour mettre à niveau le scanneur Azure Information Protection, installez la dernière version du client Azure Information Protection. Ensuite, effectuez l’une des actions uniques suivantes :
+Pour mettre à niveau le scanneur Azure Information Protection, installez la dernière version du client Azure Information Protection. Effectuez ensuite l’une des actions uniques suivantes. Après cela, il n’est pas nécessaire de relancer l’analyse de fichiers déjà scannés.
 
 Pour la version en disponibilité générale actuelle : 
 

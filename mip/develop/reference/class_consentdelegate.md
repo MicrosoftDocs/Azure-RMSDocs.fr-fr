@@ -1,3 +1,18 @@
+---
+title: classe ConsentDelegate
+description: Informations de référence pour la classe ConsentDelegate
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 841049b1e6b369eb2f6a34d9701ed34eca028af6
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446360"
+---
 # <a name="class-consentdelegate"></a>classe ConsentDelegate 
 Délégué pour les opérations relatives au consentement.
 Ce délégué est implémenté par une application cliente pour savoir quand une notification de requête de consentement doit être présentée à l’utilisateur.

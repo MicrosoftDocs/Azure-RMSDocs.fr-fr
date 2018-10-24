@@ -1,3 +1,18 @@
+---
+title: mip RemoveContentFooterAction, classe
+description: Informations de référence pour la classe mip RemoveContentFooterAction
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: d275e2256c8a65bf63fd16d5761f42563d7a7f07
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445629"
+---
 # <a name="class-mipremovecontentfooteraction"></a>mip::RemoveContentFooterAction, classe 
 Classe d’action qui spécifie la suppression du pied de page de contenu du document.
   

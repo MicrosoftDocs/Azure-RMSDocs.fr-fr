@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f147ad04ec61e7a5796cbb1f02c7fa33afdeae7d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 1deea1b4353e2d48c85ae24625ab29eca96a3968
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149682"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211324"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Journalisation et analyse de l’utilisation du service Azure Rights Management
 
@@ -48,6 +48,7 @@ En plus de cette journalisation de l’utilisation, vous disposez également des
 |Journaux des événements clients|Activité d’utilisation pour le client Azure Information Protection, enregistrée dans le journal des événements **Applications et services** Windows local, **Azure Information Protection**. <br /><br />Pour plus d’informations, consultez [Journalisation de l’utilisation du client Azure Information Protection](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Fichiers journaux clients|Journaux de dépannage pour le client Azure Information Protection, qui se trouvent dans **%localappdata%\Microsoft\MSIP**. <br /><br />Ces fichiers sont destinés au Support Microsoft.|
 
+En outre, les informations dans les journaux d’utilisation du client Azure Information Protection et le scanneur Azure Information Protection sont collectées et agrégées afin de créer des rapports dans le portail Azure. Pour plus d’informations, consultez [Création de rapports pour Azure Information Protection](reports-aip.md).
 
 Pour plus d’informations sur la journalisation de l’utilisation pour le service Azure Rights Management, consultez les sections suivantes. 
 
@@ -58,8 +59,6 @@ Depuis février 2016, la journalisation de l’utilisation d’Azure Rights Ma
 > Le stockage des journaux ou la fonctionnalité de journalisation n’entraînent pas de frais supplémentaires.
 > 
 > Si vous utilisiez la journalisation de l’utilisation pour Azure Rights Management avant février 2016, vous aviez besoin d’un abonnement à Azure et d’une capacité de stockage suffisante sur Azure, ce qui n’est plus le cas.
-
-
 
 ## <a name="how-to-access-and-use-your-azure-rights-management-usage-logs"></a>Comment accéder aux journaux d’utilisation Azure Rights Management et les utiliser
 Le service Azure Rights Management écrit des journaux enregistrés dans votre compte de stockage Azure sous la forme d’une série d’objets blob. Chaque objet blob contient un ou plusieurs enregistrements journal au format W3C étendu. Les noms des objets blob sont des chiffres et sont classés dans leur ordre de création. La section [Comment interpréter vos journaux d’utilisation d’Azure Rights Management](#how-to-interpret-your-azure-rights-management-usage-logs) (plus loin dans ce document) contient des informations supplémentaires sur le contenu des journaux et leur création.

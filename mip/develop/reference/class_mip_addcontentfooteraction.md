@@ -1,3 +1,18 @@
+---
+title: mip AddContentFooterAction, classe
+description: Informations de référence pour la classe mip AddContentFooterAction
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 73f641d965c3cf0236919557128af2ed07705672
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445833"
+---
 # <a name="class-mipaddcontentfooteraction"></a>mip::AddContentFooterAction, classe 
 Classe d’action qui spécifie l’ajout d’un pied de page de contenu au document.
   
@@ -43,7 +58,7 @@ Obtenir la taille de la police utilisée pour afficher le pied de page de conten
 Obtenir la couleur de la police utilisée pour afficher le pied de page de contenu.
 
   
-**Retourne** : la couleur de la police sous forme de chaîne (par exemple « #000000 »).
+**Retourne** : couleur de la police sous forme de chaîne (par exemple, #000000).
   
 ### <a name="getalignment"></a>GetAlignment
 Obtenir l’alignement du pied de page.
@@ -57,7 +72,7 @@ Obtenir l’alignement du pied de page.
 Obtenir la marge du pied de page à partir du bas.
 
   
-**Retourne** : un nombre entier représentant les marges à partir du bas du document (par exemple 10 mm).
+**Retourne** : marges à partir du bas du document (par exemple, 10 mm).
   
 ### <a name="actiontype"></a>ActionType
 Obtenir le type de [Action](class_mip_action.md).

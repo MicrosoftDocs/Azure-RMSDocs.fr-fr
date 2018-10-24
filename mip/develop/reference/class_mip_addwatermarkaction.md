@@ -1,3 +1,18 @@
+---
+title: mip AddWatermarkAction, classe
+description: Informations de référence pour la classe mip AddWatermarkAction
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: f49bd7aa16ae12aef240d05fff6acf507ddc341d
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446088"
+---
 # <a name="class-mipaddwatermarkaction"></a>mip::AddWatermarkAction, classe 
 Classe d’action qui spécifie l’ajout d’un filigrane.
   
@@ -48,7 +63,7 @@ Obtenir la taille de la police utilisée pour afficher le filigrane.
 Obtenir la couleur de la police utilisée pour afficher le filigrane.
 
   
-**Retourne** : la couleur de la police sous forme de chaîne (par exemple « #000000 »).
+**Retourne** : couleur de la police sous forme de chaîne (par exemple, #000000).
   
 ### <a name="actiontype"></a>ActionType
 Obtenir le type de [Action](class_mip_action.md).

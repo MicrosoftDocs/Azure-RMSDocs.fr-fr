@@ -4,18 +4,18 @@ description: Informations pour les utilisateurs qui exécutent le client Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5a2b01af0e246e732d087a344ecf037c13a47546
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c9f8408c4417b1b5131a51276a829a16687f1870
+ms.sourcegitcommit: ccc99efd2402a8b93912c8df4df330fa1311aacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151568"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48812416"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guide de l’utilisateur : Mode Protection uniquement pour le client Azure Information Protection
 
@@ -34,7 +34,7 @@ Le mode Protection uniquement s’exécute dans les scénarios suivants :
 
 - Votre organisation a un abonnement à Azure Information Protection uniquement pour un sous-ensemble d’utilisateurs :
     
-    - Pour cette combinaison d’abonnements, l’administrateur est responsable de s’assurer que seul le sous-ensemble d’utilisateurs peut utiliser les fonctionnalités de classification et d’étiquetage. Les autres utilisateurs doivent exécuter le client Azure Information Protection en mode Protection uniquement. 
+    - Pour cette combinaison d’abonnements, est de la responsabilité de l’administrateur de s’assurer que seul le sous-ensemble d’utilisateurs peut utiliser les fonctionnalités de classification et d’étiquetage. Les autres utilisateurs doivent exécuter le client Azure Information Protection en mode Protection uniquement. 
 
 - Votre organisation a un abonnement à Azure Information Protection, mais vous n’avez pas d’étiquette configurée pour vous.
     

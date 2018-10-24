@@ -4,16 +4,16 @@ description: Vous pouvez supprimer ou réorganiser les étiquettes Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 9589985fa0ab5f80ce78483dedac8c7bc4b9879e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0b4631cd5664ba7951db04ce9ba221a19c0674ff
+ms.sourcegitcommit: 1cedaa9cefea49775f574f2ede61539bc6f0b813
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151705"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48794308"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Comment supprimer ou réorganiser une étiquette pour Azure Information Protection
 
@@ -25,7 +25,7 @@ Vous pouvez supprimer ou réorganiser les étiquettes Azure Information Protecti
 
 Quand vous supprimez une étiquette qui a été appliquée à des documents et à des e-mails et que ces derniers sont ensuite ouverts par le client Azure Information Protection, les utilisateurs voient **Non défini** en guise d’état pour l’étiquette. Toutefois, les informations de l’étiquette sont conservées dans les métadonnées et peuvent donc être lues par les services qui les recherchent.
 
-En outre, si l’étiquette supprimée appliquait une protection, cette protection n’est pas supprimée. Les paramètres de protection de l’étiquette sont conservés et s’affichent dans la section **Modèles de protection**. Ce modèle peut maintenant être converti en une nouvelle étiquette ou lié à une étiquette. Tant que ce modèle est conservé, vous ne pouvez pas créer une étiquette avec le même nom que l’étiquette que vous avez supprimée. Si c’est ce que vous voulez faire, vous disposez des options suivantes :
+En outre, si l’étiquette supprimée appliquait une protection, cette protection n’est pas supprimée. Les paramètres de protection de l’étiquette sont conservés et s’affichent dans la section **Modèles de protection**. Ce modèle peut maintenant être converti en une nouvelle étiquette. Tant que ce modèle est conservé, vous ne pouvez pas créer une étiquette avec le même nom que l’étiquette que vous avez supprimée. Si c’est ce que vous voulez faire, vous disposez des options suivantes :
 
 - Convertir le modèle en étiquette. 
     

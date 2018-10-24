@@ -4,18 +4,18 @@ description: Instructions pour afficher et utiliser un document protégé qui vo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 358463bbfd7cd89ccd11c815e73516f688086817
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 3b4dfc62950166ca7221002169005fa3693a5998
+ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150753"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862088"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guide de l’utilisateur : Afficher et utiliser des fichiers qui ont été protégés par Rights Management
 
@@ -63,11 +63,13 @@ Si votre organisation ne dispose pas d’un compte cloud dont vous pouvez vous s
     
     Pour plus d’informations sur les autorisations et les droits d’utilisation de chacune d’elle, consultez [Droits inclus dans les niveaux d’autorisation](../configure-usage-rights.md#rights-included-in-permissions-levels).
 
-4. Pour modifier le fichier, cliquez sur **Enregistrer sous**, ce qui vous permet d’enregistrer le fichier sans étiquette et sans protection avec son extension de nom de fichier d’origine. Vous pouvez ensuite le modifier à l’aide de l’application associée à son type. 
+4. Pour modifier le fichier, cliquez sur **Enregistrer sous**, ce qui vous permet d’enregistrer le fichier protégé avec son extension de nom de fichier d’origine. Vous pouvez ensuite le modifier à l’aide de l’application associée à son type. À ce stade, l’étiquette et la protection du fichier sont supprimées.
     
-    Une fois que vous avez terminé les modifications du fichier, dans l’Explorateur de fichiers, cliquez avec le bouton droit sur le fichier pour réappliquer l’étiquette, et ainsi réappliquer la protection.
+    Notez qu’étant donné que la visionneuse est destinée aux fichiers protégés, le bouton **Enregistrer sous** est activé uniquement pour ces fichiers.
+    
+5. Une fois que vous avez terminé les modifications du fichier, dans l’Explorateur de fichiers, cliquez avec le bouton droit sur le fichier pour réappliquer l’étiquette. Cette action réapplique la protection.
 
-5. Si vous avez des fichiers protégés supplémentaires à ouvrir, vous pouvez y accéder directement depuis la visionneuse, en utilisant l’option **Ouvrir**. Votre fichier sélectionné remplace le fichier d’origine dans la visionneuse. 
+6. Si vous avez des fichiers protégés supplémentaires à ouvrir, vous pouvez y accéder directement depuis la visionneuse, en utilisant l’option **Ouvrir**. Votre fichier sélectionné remplace le fichier d’origine dans la visionneuse. 
 
 > [!TIP]
 > Si le fichier protégé ne s’ouvre pas alors que vous avez installé le client Azure Information Protection complet, essayez l’option **Réinitialiser les paramètres**. Pour accéder à cette option, à partir d’une application Office, sélectionnez le bouton **Protéger** > **Aide et commentaires** > **Réinitialiser les paramètres**. 

@@ -1,5 +1,20 @@
+---
+title: mip UserRights, classe
+description: Informations de référence pour la classe mip UserRights
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: c1ef7aaba00bf595d80f07f318aa5808f3a56409
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445119"
+---
 # <a name="class-mipuserrights"></a>mip::UserRights, classe 
-Représente un groupe d’utilisateurs et les droits qui leur sont associés.
+Groupe d’utilisateurs et droits qui leur sont associés.
   
 ## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                

@@ -4,18 +4,18 @@ description: Voici comment les programmes Office (comme Word et Outlook) et les 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b6b2a696ac6006754ece851a97701939df9e7870
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b17e0f850fbd319011e0a50cccc2b661f773adc8
+ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148940"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866167"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Prise en charge d’Azure Rights Management par les programmes et services Office 
 
@@ -24,9 +24,9 @@ ms.locfileid: "44148940"
 Les programmes Office et les services Office pour utilisateurs finaux peuvent utiliser le service Azure Rights Management d’Azure Information Protection pour protéger les données de votre organisation. Ces programmes Office sont Word, Excel, PowerPoint et Outlook. Les services Office sont Exchange et SharePoint. Les configurations Office prenant en charge le service Azure Rights Management utilisent souvent le terme **gestion des droits relatifs à l’information (IRM)**.
 
 ## <a name="office-applications-word-excel-powerpoint-outlook"></a>Programmes Office : Word, Excel, PowerPoint, Outlook
-Ces programmes prennent en charge la Gestion des droits de façon native et permettent aux utilisateurs d’appliquer la protection à un document enregistré ou à un e-mail à envoyer. Les utilisateurs peuvent utiliser des modèles pour appliquer la protection. Autre possibilité pour Word, Excel et PowerPoint : les utilisateurs appliquent des paramètres personnalisés pour l’accès, les droits et les restrictions d’utilisation. 
+Ces programmes prennent en charge la Gestion des droits de façon native et permettent aux utilisateurs d’appliquer la protection à un document enregistré ou à un e-mail à envoyer. Les utilisateurs peuvent utiliser des [modèles](configure-policy-templates.md) pour appliquer la protection. Autre possibilité pour Word, Excel et PowerPoint : les utilisateurs appliquent des paramètres personnalisés pour l’accès, les droits et les restrictions d’utilisation.
 
-Par exemple, les utilisateurs peuvent configurer un document Word pour qu’il soit accessible seulement par des personnes de votre organisation. Vous pouvez contrôler si une feuille de calcul Excel peut être modifiée ou limitée à la lecture seule, ou l’empêcher d’être imprimée. Pour les fichiers ayant des contraintes de temps, un délai d’expiration peut être configuré, au terme duquel le fichier ne sera plus accessible. Cette configuration peut être faite directement par les utilisateurs ou en appliquant un modèle. Pour Outlook, les utilisateurs peuvent également choisir l’option **Ne pas transférer** pour éviter toute fuite de données.
+Par exemple, les utilisateurs peuvent configurer un document Word pour qu’il soit accessible seulement par des personnes de votre organisation. Vous pouvez contrôler si une feuille de calcul Excel peut être modifiée ou limitée à la lecture seule, ou l’empêcher d’être imprimée. Pour les fichiers ayant des contraintes de temps, un délai d’expiration peut être configuré, au terme duquel le fichier ne sera plus accessible. Cette configuration peut être faite directement par les utilisateurs ou en appliquant un modèle de protection. Pour Outlook, les utilisateurs peuvent également choisir l’option **Ne pas transférer** pour éviter toute fuite de données.
 
 En plus de la prise en charge native par Office d’Azure Rights Management, ces programmes prennent en charge la barre Azure Information Protection qui est installée avec le [client Azure Information Protection](./rms-client/aip-client.md). Cette barre affiche des étiquettes permettant aux utilisateurs d’appliquer automatiquement une protection à des documents et des e-mails qui contiennent des données sensibles.
 
@@ -37,23 +37,27 @@ Si vous êtes prêt à configurer des programmes Office et le client Azure Infor
 - Pour installer et configurer le client Azure Information Protection, consultez [Client Azure Information Protection : installation et configuration pour les clients](configure-client.md).
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online et Exchange Server
-Quand vous utilisez Exchange Online ou Exchange Server, vous pouvez configurer des options de gestion des droits relatifs à l’information (IRM) qui prennent en charge Azure Rights Management. Cette configuration permet à Exchange d’offrir les solutions de protection suivantes :
+Quand vous utilisez Exchange Online ou Exchange Server, vous pouvez configurer des options pour Azure Information Protection. Cette configuration permet à Exchange d’offrir les solutions de protection suivantes :
 
 -   **Exchange ActiveSync IRM** pour que les appareils mobiles puissent protéger les e-mails et utiliser des e-mails protégés.
 
--   Prise en charge de la protection des e-mails pour **Outlook sur le web**, qui est implémentée de façon similaire à celle du client Outlook. Cette configuration permet aux utilisateurs de protéger des e-mails à l’aide de modèles ou en spécifiant des options individuelles. Les utilisateurs peuvent lire et utiliser les e-mails protégés qui leur sont envoyés.
+-   Prise en charge de la protection des e-mails pour **Outlook sur le web**, qui est implémentée de façon similaire à celle du client Outlook. Cette configuration permet aux utilisateurs de protéger des e-mails à l’aide de modèles de protection ou en spécifiant des options. Les utilisateurs peuvent lire et utiliser les e-mails protégés qui leur sont envoyés.
 
--   **Règles de protection** pour les clients Outlook qu’un administrateur configure afin d’appliquer automatiquement des modèles de protection aux e-mails envoyés à des destinataires spécifiés. Par exemple, quand des e-mails internes sont envoyés à votre service juridique, ils peuvent uniquement être lus par les membres du service juridique et ne peuvent pas être transférés. Les utilisateurs voient la protection appliquée à l’e-mail avant de l’envoyer. Ils peuvent aussi, par défaut, supprimer cette protection s’ils décident qu’elle est inutile. Les e-mails sont chiffrés avant d’être envoyés. Pour plus d’informations, consultez [Règles de protection Outlook](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) et [Créer une règle de protection d’Outlook](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) dans la bibliothèque Exchange.
+-   **Règles de protection** pour les clients Outlook qu’un administrateur configure afin d’appliquer automatiquement des modèles de protection et des options aux e-mails envoyés à des destinataires spécifiés. Par exemple, quand des e-mails internes sont envoyés à votre service juridique, ils peuvent uniquement être lus par les membres du service juridique et ne peuvent pas être transférés. Les utilisateurs voient la protection appliquée à l’e-mail avant de l’envoyer. Ils peuvent aussi, par défaut, supprimer cette protection s’ils décident qu’elle est inutile. Les e-mails sont chiffrés avant d’être envoyés. Pour plus d’informations, consultez [Règles de protection Outlook](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) et [Créer une règle de protection d’Outlook](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) dans la bibliothèque Exchange.
 
--   **Règles de flux de courrier** qu’un administrateur configure pour appliquer automatiquement des modèles de protection aux e-mails. Ces règles sont basées sur des propriétés, comme l’expéditeur, le destinataire, l’objet du message et le contenu. Ces règles sont similaires par leur concept aux règles de protection, mais elles ne permettent pas aux utilisateurs de supprimer la protection. Les règles peuvent être appliquées à Outlook sur le web et aux e-mails envoyés par des appareils mobiles. De plus, ces règles ne chiffrent pas les e-mails avant leur envoi à partir du client. Pour plus d’informations, consultez [Créer une règle de protection de transport](https://technet.microsoft.com/library/dd302432.aspx) dans la bibliothèque Exchange.
+-   **Règles de flux de courrier** qu’un administrateur configure pour appliquer automatiquement des modèles de protection ou des options aux e-mails. Ces règles sont basées sur des propriétés, comme l’expéditeur, le destinataire, l’objet du message et le contenu. Ces règles sont similaires par leur concept aux règles de protection, mais elles ne permettent pas aux utilisateurs de supprimer la protection, car celle-ci est définie par le service Exchange plutôt que par le client. Étant donné que la protection est définie par le service, peu importe l’appareil ou le système d’exploitation dont disposent les utilisateurs. Pour plus d’informations, consultez [Règles de flux de courrier (règles de transport) dans Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) et [Créer une règle de protection de transport](https://technet.microsoft.com/library/dd302432.aspx) pour Exchange sur site.
 
--   **Stratégies de protection contre la perte de données (DLP)** qui contiennent des ensembles de conditions permettant de filtrer des e-mails et de prendre des mesures de prévention contre la perte de données pour le contenu confidentiel ou sensible. Les informations de carte de crédit ou des informations personnelles sont des exemples de contenu confidentiel ou sensible. Vous pouvez utiliser des conseils de stratégie quand des données sensibles sont détectées, pour alerter les utilisateurs qu’il peut être nécessaire d’appliquer une protection. Pour plus d’informations, consultez [Protection contre la perte de données] (https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx)) dans la bibliothèque Exchange.
+-   **Stratégies de protection contre la perte de données (DLP)** qui contiennent des ensembles de conditions permettant de filtrer des e-mails et de prendre des mesures de prévention contre la perte de données pour le contenu confidentiel ou sensible. L’une des actions que vous pouvez spécifier consiste à appliquer le chiffrement comme protection, en spécifiant l’une des options ou l’un des modèles de protection. Vous pouvez utiliser des conseils de stratégie quand des données sensibles sont détectées, pour alerter les utilisateurs qu’il peut être nécessaire d’appliquer une protection. Pour plus d’informations, consultez [Protection contre la perte de données](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) dans la documentation Exchange Online.
 
--   Le **chiffrement de messages Office 365**, qui prend en charge l’envoi d’un e-mail protégé et de documents Office protégés en tant que pièces jointes, à n’importe quelle adresse sur n’importe quel appareil. Pour les comptes d’utilisateur sans Azure AD, une expérience web prend en charge les fournisseurs d’identité sociale ou un code secret à usage unique. Pour plus d’informations, consultez [Configurer de nouvelles fonctionnalités de chiffrement de messages Office 365 reposant sur Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) sur le site web Office.
+-   **Chiffrement de messages Office 365**, qui prend en charge l’envoi d’un e-mail protégé et de documents Office protégés en tant que pièces jointes, à n’importe quelle adresse e-mail sur n’importe quel appareil. Pour les comptes d’utilisateur sans Azure AD, une expérience web prend en charge les fournisseurs d’identité sociale ou un code secret à usage unique. Pour plus d’informations, consultez [Configurer de nouvelles fonctionnalités de chiffrement de messages Office 365 reposant sur Azure Information Protection](/office365/securitycompliance/set-up-new-message-encryption-capabilities) dans la documentation Office 365. Pour vous aider à trouver des informations supplémentaires qui sont liées à cette configuration, consultez [Chiffrement de messages Office 365](https://docs.microsoft.com/office365/securitycompliance/ome).
 
 Si vous utilisez Exchange local, vous pouvez utiliser les fonctionnalités IRM avec le service Azure Rights Management en déployant le connecteur Azure Rights Management. Ce connecteur fait office de relais entre vos serveurs locaux et le service Azure Rights Management.
 
-Si vous êtes prêt à configurer Exchange pour l’IRM :
+Pour plus d’informations sur les modèles de protection, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).
+
+Pour plus d’informations sur les options de messagerie que vous pouvez utiliser pour protéger des e-mails, consultez [Option Ne pas transférer pour les e-mails](configure-usage-rights.md#do-not-forward-option-for-emails) et [Option Chiffrement seul pour les e-mails](configure-usage-rights.md#encrypt-only-option-for-emails).
+
+Si vous êtes prêt à configurer Exchange pour protéger les e-mails :
 
 - Pour Exchange Online, consultez [Exchange Online : configuration de la Gestion des droits relatifs à l’information (IRM)](configure-office365.md#exchange-online-irm-configuration).
 
@@ -81,7 +85,7 @@ Si vous utilisez SharePoint Server, vous pouvez utiliser cette protection IRM en
 > 
 > - Les fichiers qui ont une extension .ppdf (pour « fichiers PDF protégés ») ne sont pas pris en charge. Les fichiers ayant une extension .pdf sont pris en charge et, lorsqu’ils sont téléchargés, ils peuvent être ouverts à l’aide d’une application PDF qui prend en charge Rights Management en mode natif. Par exemple, le client Azure Information Protection pour Windows comprend une visionneuse pour ces fichiers PDF protégés. Les autres visionneuses PDF sont répertoriées dans la [table des applications compatibles avec RMS](./requirements-applications.md#rms-enlightened-applications).
 > 
-> - La co-édition, c’est-à-dire lorsque plusieurs personnes modifient un document simultanément, n’est pas prise en charge. Pour modifier un document dans une bibliothèque protégée par IRM, vous devez tout d’abord extraire le document et le télécharger, puis le modifier dans votre application Office. Par conséquent, une seule personne peut modifier le document à la fois.
+> - La co-création, c’est-à-dire quand plusieurs personnes modifient un document simultanément, n’est pas prise en charge. Pour modifier un document dans une bibliothèque protégée par IRM, vous devez tout d’abord extraire le document et le télécharger, puis le modifier dans votre application Office. Par conséquent, une seule personne peut modifier le document à la fois.
 
 Pour les bibliothèques qui ne sont pas protégées par IRM, si vous protégez un fichier que vous chargez ensuite dans SharePoint ou OneDrive, les fonctionnalités suivantes ne sont pas opérationnelles avec ce fichier : co-édition, Office Online, recherche, aperçu du document, miniature, eDiscovery et protection contre la perte de données (DLP).
 

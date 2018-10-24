@@ -1,3 +1,18 @@
+---
+title: mip RemoveContentHeaderAction, classe
+description: Informations de référence pour la classe mip RemoveContentHeaderAction
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: dc79ebf5d5c7cd35a8fc5ed854315179ed9190f0
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446445"
+---
 # <a name="class-mipremovecontentheaderaction"></a>mip::RemoveContentHeaderAction, classe 
 Classe d’action qui spécifie la suppression de l’en-tête de contenu du document.
   

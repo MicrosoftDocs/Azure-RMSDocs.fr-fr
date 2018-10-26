@@ -8,12 +8,12 @@ ms.date: 07/21/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: d399edf1e8b367ad45118447a5d3a88257953f4d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 8ceda2342638b77de40844a9b5dc00d4f3b1494f
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148747"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49170040"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Étape 2 : Configurer la stratégie Azure Information Protection
 
@@ -21,7 +21,7 @@ ms.locfileid: "44148747"
 
 Bien qu’Azure Information Protection soit fourni avec une stratégie par défaut que vous pouvez utiliser sans configuration, nous allons examiner cette stratégie et y apporter des modifications.
 
-1. Toujours à partir de l’[étape 1](infoprotect-tutorial-step1.md) dans le portail Azure, sélectionnez **CLASSIFICATIONS** > **Stratégies** > **Globale** pour ouvrir le panneau **Stratégie : Globale**. Ce panneau affiche la stratégie Azure Information Protection par défaut qui est créée pour votre locataire.
+1. Toujours à partir de l’[étape 1](infoprotect-tutorial-step1.md) dans le portail Azure, sélectionnez **Classifications** > **Stratégies** > **Globale** pour ouvrir le panneau **Stratégie : Globale**. Ce panneau affiche la stratégie Azure Information Protection par défaut qui est créée pour votre locataire.
 
 2. Prenez quelques minutes pour vous familiariser avec les étiquettes affichées :
     
@@ -60,7 +60,7 @@ Pour ce tutoriel, nous allons modifier deux de ces paramètres de stratégie pou
 
 Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
 
-1. À partir de l’option de menu **CLASSIFICATIONS** > **Étiquettes** : cliquez avec le bouton droit sur l’étiquette **Confidentiel** et sélectionnez **Ajouter une sous-étiquette**.
+1. À partir de l’option de menu **Classifications** > **Étiquettes** : cliquez avec le bouton droit sur l’étiquette **Confidentiel** et sélectionnez **Ajouter une sous-étiquette**.
     
     Si vous n’avez pas d’étiquette nommée **Confidentiel**, vous pouvez sélectionner une autre étiquette ou créer une étiquette, puis suivre le didacticiel avec des différences mineures.
 
@@ -128,7 +128,7 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
 
 13. Cliquez sur **Enregistrer** dans ce panneau **Sous-étiquette**. Si vous êtes invité à confirmer, cliquez sur **OK**. La nouvelle étiquette est créée et enregistrée, mais elle n’est pas encore ajoutée à une stratégie.
 
-14. À partir de l’option de menu **CLASSIFICATIONS** > **Stratégies** : sélectionnez à nouveau **Globale**, puis sélectionnez le lien **Ajouter ou supprimer des étiquettes** situé en regard des étiquettes.
+14. À partir de l’option de menu **Classifications** > **Stratégies** : sélectionnez à nouveau **Globale**, puis sélectionnez le lien **Ajouter ou supprimer des étiquettes** situé en regard des étiquettes.
 
 15. À partir du panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette que vous venez de créer, la sous-étiquette nommée **Finance** et cliquez sur **OK**.
 

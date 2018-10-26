@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 867fd325b5c41ce500689d92868ca96c88ceb9da
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 71444804ab21dfbe09e0cf13ab1b75425f7a84d0
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149291"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169819"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
@@ -25,11 +25,11 @@ Les modèles de protection, également appelés modèles Rights Management, sont
 
 **Si vous avez un abonnement qui inclut la classification, l’étiquetage et la protection (Azure Information Protection P1 or P2) :**
 
-- Les modèles qui ne sont pas intégrés aux étiquettes de votre locataire sont affichés à la section **Modèles de protection**, après vos étiquettes dans le panneau **Azure Information Protection - Étiquettes**. Pour accéder à ce panneau, sélectionnez l’option de menu **CLASSIFICATIONS** > **Étiquettes**. Vous pouvez convertir ces modèles en étiquettes ou créer un lien vers celles-ci quand vous configurez la protection pour vos étiquettes. 
+- Les modèles qui ne sont pas intégrés aux étiquettes de votre locataire sont affichés à la section **Modèles de protection**, après vos étiquettes dans le panneau **Azure Information Protection - Étiquettes**. Pour accéder à ce panneau, sélectionnez l’option de menu **Classifications** > **Étiquettes**. Vous pouvez convertir ces modèles en étiquettes ou créer un lien vers celles-ci quand vous configurez la protection pour vos étiquettes. 
 
 **Lorsque vous avez un abonnement qui inclut uniquement la protection (un abonnement Office 365 qui inclut le service Azure Rights Management) :**
 
-- Les modèles de votre locataire sont affichés à la section **Modèles de protection** dans le panneau **Azure Information Protection - Étiquettes**. Pour accéder à ce panneau, sélectionnez l’option de menu **CLASSIFICATIONS** > **Étiquettes**. Aucune étiquette n’est affichée. Vous voyez également les paramètres de configuration qui sont spécifiques à la classification et l’étiquetage, mais ces paramètres n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
+- Les modèles de votre locataire sont affichés à la section **Modèles de protection** dans le panneau **Azure Information Protection - Étiquettes**. Pour accéder à ce panneau, sélectionnez l’option de menu **Classifications** > **Étiquettes**. Aucune étiquette n’est affichée. Vous voyez également les paramètres de configuration qui sont spécifiques à la classification et l’étiquetage, mais ces paramètres n’ont aucun effet sur vos modèles ou ne peuvent pas être configurés. 
 
 >[!NOTE]
 >Dans certains services et applications, vous pouvez voir [Ne pas transférer](configure-usage-rights.md#do-not-forward-option-for-emails) et [Chiffrement seul](configure-usage-rights.md#encrypt-only-option-for-emails) (ou **Chiffrer**) affichés sous la forme d’un modèle. Ils ne s’agit pas de modèles que vous pouvez modifier ou supprimer, mais d’options fournies par défaut avec le service Exchange.
@@ -99,7 +99,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. À partir de l’option de menu **CLASSIFICATIONS** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, développez **Modèles de protection**, puis recherchez le modèle que vous souhaitez configurer.
+2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, développez **Modèles de protection**, puis recherchez le modèle que vous souhaitez configurer.
     
 3. Sélectionnez le modèle, puis, dans le panneau **Étiquette**, vous pouvez changer le nom du modèle et la description si nécessaire en modifiant le **Nom d’étiquette** et la **Description**. Ensuite, sélectionnez **Protection**, qui a la valeur **Azure (clé du cloud)**, pour ouvrir le panneau **Protection**.
 
@@ -136,7 +136,7 @@ Lorsque vous convertissez un modèle en étiquette :
 
 Quand vous créez une étiquette avec le paramètre de protection **Azure (clé cloud)**, en arrière-plan, cette action crée un modèle personnalisé qui est ensuite accessible pour les services et applications qui sont intégrés aux modèles Rights Management.
 
-1. À partir de l’option de menu **CLASSIFICATIONS** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez **Ajouter une nouvelle étiquette**.
+1. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez **Ajouter une nouvelle étiquette**.
 
 2. Dans le panneau **Étiquette**, conservez la valeur par défaut **Activé** : **On**, puis entrez un nom d’étiquette et une description pour le nom du modèle et la description.
 
@@ -152,7 +152,7 @@ Quand vous créez une étiquette avec le paramètre de protection **Azure (clé 
     
     Bien que l’étiquette soit activée, par défaut, le modèle est archivé. Afin que les applications et services puissent utiliser le modèle pour protéger des documents et des e-mails, exécutez la dernière étape pour publier le modèle.
 
-5. À partir de l’option de menu **CLASSIFICATIONS** > **Stratégies**, sélectionnez la stratégie qui doit contenir les nouveaux paramètres de protection. Puis, sélectionnez **Ajouter ou supprimer des étiquettes**. Dans le panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette créée qui contient vos paramètres de protection, cliquez sur **OK**, puis sélectionnez **Enregistrer**.
+5. À partir de l’option de menu **Classifications** > **Stratégies**, sélectionnez la stratégie qui doit contenir les nouveaux paramètres de protection. Puis, sélectionnez **Ajouter ou supprimer des étiquettes**. Dans le panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette créée qui contient vos paramètres de protection, cliquez sur **OK**, puis sélectionnez **Enregistrer**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

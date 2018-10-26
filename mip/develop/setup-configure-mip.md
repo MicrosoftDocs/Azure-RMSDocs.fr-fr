@@ -6,32 +6,26 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: c889c736b6e67ef3c581ee1acaa3c04138773d20
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: 430e130a5ba2026c0a3c69a59dddd6f9d6b4e8f0
+ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862139"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "49476202"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installation et configuration du kit SDK Microsoft Information Protection (MIP) 
 
 Les guides de démarrage rapide et les tutoriels sont centrés sur la création d’applications qui utilisent les API et les bibliothèques du kit SDK MIP. Cet article explique comment installer et configurer votre abonnement Office 365 et votre station de travail cliente, en préparation à l’utilisation du kit SDK.
+
+Le kit SDK MIP est pris en charge sur les plateformes suivantes :  
+
+[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
 
 Veillez à consulter les rubriques suivantes avant de commencer :
 
 - [Qu’est-ce que le Centre de sécurité et conformité Office 365 ?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [Qu’est-ce qu’Azure Information Protection ?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [Comment la protection fonctionne-t-elle dans Azure Information Protection ?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
-
-Le kit SDK MIP est pris en charge sur les plateformes suivantes :
-
-| Système d'exploitation | Versions |  
-|------------------|----------|
-| Ubuntu  |  16.04 |
-| RedHat Enterprise Linux | 7 avec devtoolset-7 |
-| Debian  | 9 |
-| macOS   | High Sierra et versions ultérieures |
-| Windows | Toutes les versions prises en charge, 32 bits et 64 bits |
 
 ## <a name="sign-up-for-an-office-365-subscription"></a>S’abonner à Office 365
 

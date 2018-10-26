@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e63b98118cda3a927577a90c7c0999d8781f8d93
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 39c72d332c30ac8e9c1293dedb5ead50203aa941
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47211290"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169989"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -79,7 +79,7 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
 
 4. Vous voyez la page **Démarrage rapide** qui s’ouvre automatiquement la première fois que vous vous connectez au service. Parcourez les ressources suggérées ou utilisez les autres options de menu. Pour configurer les étiquettes que les utilisateurs peuvent sélectionner, utilisez la procédure suivante.
 
-La prochaine fois que vous accéderez au panneau **Azure Information Protection**, l’option **Étiquettes** sera automatiquement sélectionnée pour vous permettre de voir et de configurer des étiquettes pour tous les utilisateurs. Vous pouvez revenir à la page **Démarrage rapide** en la sélectionnant à partir du menu **GÉNÉRAL**.
+La prochaine fois que vous accéderez au panneau **Azure Information Protection**, l’option **Étiquettes** sera automatiquement sélectionnée pour vous permettre de voir et de configurer des étiquettes pour tous les utilisateurs. Vous pouvez revenir à la page **Démarrage rapide** en la sélectionnant à partir du menu **Général**.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Guide de configuration de la stratégie Azure Information Protection
 

@@ -4,18 +4,18 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b7aed6f8cdf6cf95b6b7af0bfa06554bde79dc02
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: 4ccf6468ff1cfb2ee786e1f1bef95c9c07f39afe
+ms.sourcegitcommit: 00e508f97c9191035763384959a8b8fa9f742d4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862173"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49399907"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
 
@@ -44,7 +44,10 @@ Utilisez les informations suivantes pour découvrir les nouveautés et les chang
 
 ## <a name="versions-later-than-137190"></a>Versions ultérieures à 1.37.19.0
 
-Si vous disposez d’une version 1 du client ultérieure à la version 1.37.19.0, il s’agit d’une préversion générée à des fins de test et d’évaluation.
+Si vous disposez d’une version 1 du client ultérieure à la version 1.37.19.0, il s’agit d’une préversion générée à des fins de test et d’évaluation. 
+
+> [!TIP]
+> Vous vous intéressez à l’évaluation au client d’étiquetage unifié Azure Information Protection, car vos étiquettes sont publiées à partir du Centre de sécurité et de conformité Office 365 ? Consultez [Client d’étiquetage unifié Azure Information Protection : informations de version](unifiedlabelingclient-version-release-history.md).
 
 **Date de publication** : 20/09/2018
 
@@ -54,13 +57,19 @@ Si vous disposez d’une version 1 du client ultérieure à la version 1.37.19
 
 **Informations supplémentaires :**
 
-Uniquement pour cette préversion, pour utiliser le scanneur, vous devez effectuer les étapes suivantes :
+Uniquement pour cette préversion, spécifique au scanneur :
 
-1. Installez la version actuellement en disponibilité générale (1.37.19.0) du client.
-2. Installez et configurez le scanneur.
-3. Démarrez le scanneur.
-4. Mettez à niveau le client Azure Information Protection vers cette préversion.
-5. Démarrez le scanneur.
+- Installez le scanneur en suivant ces étapes :
+    
+    1. Installez la version actuellement en disponibilité générale (1.37.19.0) du client.
+    2. Installez et configurez le scanneur.
+    3. Démarrez le scanneur.
+    4. Mettez à niveau le client Azure Information Protection vers cette préversion.
+    5. Démarrez le scanneur.
+
+- Problème connu avec l’analyse des jeux de données volumineux :
+    
+    Avec cette préversion, augmentez progressivement le nombre de fichiers à analyser et surveillez la progression. Si l’état de l’analyseur signale qu’il est en cours d’exécution mais que les nouveaux fichiers ne sont pas analysés, réduisez le nombre de fichiers à analyser et redémarrez le scanneur. 
 
 Pour obtenir des instructions sur l’utilisation, la configuration et le démarrage du scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](../deploy-aip-scanner.md).
 
@@ -246,60 +255,6 @@ Correctifs apportés pour accroître la stabilité et prendre en charge des scé
 **Autres modifications** :
 
 - Pour la [journalisation de l’utilisation client](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client ) : l’ID d’événement 102 et l’ID d’événement 103 sont remplacés par l’ID d’événement 101.
-
-## <a name="version-110560"></a>Version 1.10.56.0
-
-**Date de publication** : 18/09/2017
-
-Cette version inclut MSIPC version 1.0.3219.0619 du client RMS.
-
-**Nouvelles fonctionnalités** :
-
-- Prise en charge des nouvelles conditions DLP Office 365 que vous pouvez configurer pour une étiquette. Pour plus d’informations, consultez [Configurer les conditions d’une étiquette Azure Information Protection](../configure-policy-classification.md).
-
-- Prise en charge des étiquettes configurées pour les actions définies par l’utilisateur. Pour Outlook, cette étiquette applique automatiquement l’option Outlook Ne pas transférer. Pour Word, Excel, PowerPoint et l’Explorateur de fichiers, cette étiquette invite l’utilisateur à spécifier des autorisations personnalisées. Pour plus d’informations, consultez [Configurer une étiquette Azure Information Protection à des fins de protection](../configure-policy-protection.md).
-
-- Les étiquettes prennent en charge plusieurs langues. Depuis le 30 août 2017, la [stratégie par défaut](../configure-policy-default.md) inclut la prise en charge de plusieurs langues que cette version du client affiche aux utilisateurs. Pour que les utilisateurs puissent voir les étiquettes dans la langue de leur choix à partir d’une stratégie par défaut avant cette date, ainsi que les étiquettes que vous configurez, consultez [Guide pratique pour configurer des étiquettes en plusieurs langues dans Azure Information Protection]configure-policy-languages.md).
-
-- Pour afficher les étiquettes, utilisez le bouton **Protéger** dans le ruban Office. Les étiquettes figurent également dans la barre Information Protection. 
-
-- Protection native pour les types de fichiers Visio suivants : .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx
-
-- Prise en charge des configurations de client avancées que vous configurez dans le portail Azure. Ces configurations sont les suivantes :
-    
-    - [Masquer ou afficher le bouton Ne pas transférer dans Outlook](client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
-    
-    - [Activer ou désactiver les options d’autorisations personnalisées pour les utilisateurs](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
-    
-    - [Masquer définitivement la barre Azure Information Protection](client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
-    
-    - [Activer la classification recommandée dans Outlook](client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
-
-- Pour PowerShell, prise en charge de l’étiquetage des fichiers d’étiquette de manière non interactive à l’aide des nouvelles applets de commande PowerShell [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) et [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). Pour plus d’informations sur l’utilisation de ces applets de commande, consultez la [section PowerShell](client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) du guide de l’administrateur.
-
-- Les applets de commande PowerShell [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) et [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) disposent de nouveaux paramètres : **Owner** et **PreserveFileDetails** . Ces paramètres vous permettent de spécifier une adresse e-mail pour la propriété personnalisée Owner. La date des documents que vous étiquetez est inchangée.
-
-**Correctifs** :
-
-Correctifs apportés pour accroître la stabilité et prendre en charge des scénarios spécifiques :
-
-- Prise en charge de la protection générique des fichiers volumineux (supérieurs à 1 Go) qui causaient précédemment des dysfonctionnements. À présent, la taille de fichier est uniquement limitée par l’espace disque et la mémoire disponibles. Pour plus d’informations sur les limitations de taille de fichier, consultez [Tailles de fichiers prises en charge pour la protection](client-admin-guide-file-types.md#file-sizes-supported-for-protection) dans le guide de l’administrateur.
-
-- La visionneuse du client Azure Information Protection ouvre les fichiers PDF protégés (.ppdf) en lecture seule.
-
-- Prise en charge de l’étiquetage et de la protection des fichiers stockés sur un serveur SharePoint.
-
-- Les filigranes prennent désormais en charge plusieurs lignes. De plus, les marquages visuels sont à présent appliqués à un document au [premier enregistrement uniquement]configure-policy-markings.md#when-visual-markings-are-applied), et non à chaque enregistrement.
-
-- L’option **Exécuter des diagnostics** dans la boîte de dialogue **Aide et commentaires** est remplacée par **Réinitialiser les paramètres**. Le comportement de cette action inclut désormais la déconnexion de l’utilisateur et la suppression de la stratégie Azure Information Protection. Pour plus d’informations, consultez [Informations supplémentaires sur l’option Réinitialiser les paramètres](..\rms-client\client-admin-guide.md#more-information-about-the-reset-settings-option) dans le guide de l’administrateur.
-
-- Prise en charge pour l’authentification proxy.
-
-Des correctifs ont été apportés pour améliorer l’expérience utilisateur :
-
-- Validation par e-mail quand des utilisateurs spécifient des autorisations personnalisées. De plus, vous pouvez à présent spécifier plusieurs adresses e-mail en appuyant sur Entrée.
-
-- L’étiquette parent n’est pas affichée si toutes ses sous-étiquettes sont configurées pour la protection et que le client ne dispose pas d’une édition d’Office prenant en charge la protection. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 

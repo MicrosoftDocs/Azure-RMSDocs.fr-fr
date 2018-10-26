@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 07b780721bc0f22de6c36d88d98a2c8360af67b8
-ms.sourcegitcommit: f5395541fa3f74839402805dab68d0c2de395249
+ms.openlocfilehash: c4b4df01be10ce033dd7369e71420e949750e667
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101832"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169905"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données
 
@@ -96,5 +96,5 @@ Si vous ne pouvez pas utiliser Office 365 eDiscovery, vous pouvez recourir à u
 
 4. Exécutez Unprotect-RMSFile sur ce second fichier PST pour déchiffrer le contenu de ce fichier beaucoup plus petit. À partir de la sortie, importez le fichier PST maintenant déchiffré dans votre outil de découverte.
 
-Pour obtenir plus d’informations et de conseils sur l’exécution d’eDiscovery sur les boîtes aux lettres et les fichiers PST, consultez le billet de blog suivant : [Azure Information Process and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).
+Pour obtenir plus d’informations et de conseils sur l’exécution d’eDiscovery sur les boîtes aux lettres et les fichiers PST, consultez le billet de blog suivant : [Azure Information Protection and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).
 

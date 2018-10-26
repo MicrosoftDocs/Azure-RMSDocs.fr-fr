@@ -4,19 +4,19 @@ description: Guide pratique pour utiliser la création de rapports centralisée 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: cf951bba3cc74a82e31841986dde9e75ec34a630
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: 424be5910d6a4498bc9d2684888cd2bf9af010af
+ms.sourcegitcommit: 26e1ccdd0c4339a51ec7812082b399f13ef73b2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862122"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324882"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -90,7 +90,7 @@ Pour afficher les rapports Azure Information Protection et créer les vôtres, v
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
     
-2. Recherchez les options du menu **GÉRER**, puis sélectionnez **Configurer l’analytique (préversion)**.
+2. Recherchez les options du menu **Gérer**, puis sélectionnez **Configurer l’analytique (préversion)**.
 
 3. Dans le panneau **Azure Information Protection - Log Analytics**, vous pouvez voir une liste des espaces de travail Log Analytics qui sont détenus par votre locataire. Effectuez l'une des opérations suivantes :
     
@@ -104,11 +104,11 @@ Quand l’espace de travail est configuré, vous êtes prêt à afficher les rap
 
 ## <a name="how-to-view-the-reports"></a>Comment afficher les rapports
 
-Dans le panneau Azure Information Protection, recherchez les options du menu **TABLEAUX DE BORD (PRÉVERSION)**, puis sélectionnez l’une des options suivantes :
+Dans le panneau Azure Information Protection, recherchez les options du menu **Tableaux de bord**, puis sélectionnez l’une des options suivantes :
 
-- **Rapport d’utilisation** : utilisez ce rapport pour voir comment vos étiquettes sont utilisées. 
+- **Rapport d’utilisation (préversion)**  : utilisez ce rapport pour voir comment vos étiquettes sont utilisées. 
 
-- **Découverte de données** : utilisez ce rapport pour afficher des informations sur les fichiers détectés par les scanneurs.
+- **Découverte de données (préversion)**  : utilisez ce rapport pour afficher des informations sur les fichiers détectés par les scanneurs.
 
 ## <a name="how-to-modify-the-reports"></a>Comment modifier les rapports
 
@@ -116,6 +116,8 @@ Sélectionnez l’icône de requête dans le tableau de bord pour ouvrir un pann
 
 ![Icône Log Analytics pour personnaliser les rapports Azure Information Protection](./media/log-analytics-icon.png)
 
+
+Les données enregistrées pour Azure Information Protection sont stockées dans le tableau suivant : **InformationProtectionLogs_CL**
 
 ## <a name="next-steps"></a>Étapes suivantes
 Après avoir examiné les informations contenues dans les rapports, vous pouvez décider d’apporter des modifications à votre stratégie Azure Information Protection. Pour obtenir des instructions, consultez [Configuration de la stratégie Azure Information Protection](configure-policy.md).

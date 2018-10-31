@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 5c5b5e807a80c8db3cbdb69ea5d09da1e79aec6e
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.openlocfilehash: 9999b450d614b4465f151f0b2df80892a83bc143
+ms.sourcegitcommit: 4cd90fcf94ac6e2543d8be10e6e29e8218d5fd9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446581"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49651343"
 ---
 # <a name="class-mipprotectionengineobserver"></a>class mip::ProtectionEngine::Observer 
 Interface qui reçoit les notifications relatives à [ProtectionEngine](class_mip_protectionengine.md).
@@ -24,7 +24,7 @@ public virtual void OnGetTemplatesSuccess(const std::shared_ptr<std::vector<std:
 public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Appelé lorsque la récupération de modèles a généré une erreur.
 public virtual void OnGetRightsForLabelIdSuccess(const std::shared_ptr<std::vector<std::string>>& rights, const std::shared_ptr<void>& context)  |  Appelé en cas de récupération réussie des droits.
 public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Appelé lors de la récupération des droits pour un ID d’étiquette pour l’utilisateur.
-public virtual void OnGetGrantingLabelIdsSuccess(const std::shared_ptr<std::vector<std::string>>& lableIds, const std::shared_ptr<void>& context)  |  Appelé en cas de récupération réussie des ID d’étiquettes.
+public virtual void OnGetGrantingLabelIdsSuccess(const std::shared_ptr<std::vector<std::string>>& labelIds, const std::shared_ptr<void>& context)  |  Appelé en cas de récupération réussie des ID d’étiquettes.
 public virtual void OnGetGrantingLabelIdsFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Appelé lors de la récupération des ID d’étiquettes pour l’utilisateur.
   
 ## <a name="members"></a>Membres

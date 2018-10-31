@@ -4,17 +4,17 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: f05c1e96222eb70a7257123301d14ef7d885564d
-ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
+ms.openlocfilehash: a1544e0fa3c6d09328d1801a75ffbccd496e3482
+ms.sourcegitcommit: b275c1f82bf9176fe3fb36016c6f8692b8418295
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382593"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951837"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Client d’étiquetage unifié Azure Information Protection : informations sur les versions
 
@@ -50,6 +50,8 @@ Cette préversion du client d’étiquetage unifié Azure Information Protection
 - Demandes de justification si les utilisateurs abaissent le niveau de confidentialité
 
 - Boîte de dialogue Aide et commentaires, qui inclut la réinitialisation des paramètres et l’exportation des journaux
+
+- Actualisation de la stratégie à partir du Centre de sécurité et de conformité toutes les 4 heures, par l’application Office.
 
 Les fonctionnalités suivantes ne fonctionnent pas dans cette préversion :
 

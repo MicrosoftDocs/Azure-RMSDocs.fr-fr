@@ -4,16 +4,16 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: dae8f654fbb6a5603d0324d474bd1f25e7c36118
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: 0ee7333baebd0a34f518ff9500df95ed57ed2b01
+ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169768"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751166"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -54,7 +54,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous souhaitez changer. 
+2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous souhaitez changer. 
 
 3. Dans le panneau **Étiquette**, recherchez la zone **Définir des autorisations pour les documents et les e-mails contenant cette étiquette**, puis sélectionnez une des options suivantes :
     
@@ -100,17 +100,16 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
     Sélectionnez **Ajouter des autorisations** puis, dans le panneau **Ajouter des autorisations**, sélectionnez le premier ensemble d’utilisateurs et de groupes qui auront des droits d’utilisation du contenu à protéger par l’étiquette sélectionnée :
     
-    - Choisissez **Sélectionner dans la liste**, où vous pouvez alors ajouter tous les utilisateurs de votre organisation en sélectionnant **Ajouter \<nom de l’organisation > - Tous les membres**. Ce paramètre exclut les comptes invités. Vous pouvez également sélectionner **Ajouter tous les utilisateurs authentifiés (préversion)** ou parcourir le répertoire.
+    - Choisissez **Sélectionner dans la liste**, où vous pouvez alors ajouter tous les utilisateurs de votre organisation en sélectionnant **Ajouter \<nom de l’organisation > - Tous les membres**. Ce paramètre exclut les comptes invités. Vous pouvez également sélectionner **Ajouter tous les utilisateurs authentifiés** ou parcourir le répertoire.
         
         Lorsque vous choisissez tous les membres ou que vous parcourez le répertoire, les utilisateurs ou les groupes doivent avoir une adresse e-mail. Dans un environnement de production, les utilisateurs et les groupes ont presque toujours une adresse e-mail, mais dans un simple environnement de test, vous devrez peut-être ajouter des adresses e-mail aux comptes d’utilisateur ou aux groupes.
         
         ###### <a name="more-information-about-add-any-authenticated-users"></a>Informations supplémentaires sur **Ajouter tous les utilisateurs authentifiés** 
         Ce paramètre ne restreint pas l’accès au contenu protégé par l’étiquette, tout en chiffrant le contenu et en vous proposant des options permettant de limiter la façon d’accéder au contenu (expiration et l’accès hors connexion) et l’utilisation qui peut en être faite (autorisations). Toutefois, l’application qui ouvre le contenu protégé doit être en mesure de prendre en charge l’authentification utilisée. Pour cette raison, les fournisseurs de réseaux sociaux fédérés, tels que Google, et l’authentification unique par code secret doivent être utilisés uniquement pour les e-mails, et seulement lorsque vous utilisez Exchange Online et les nouvelles fonctionnalités de chiffrement de messages Office 365. Les comptes Microsoft peuvent être utilisées avec la visionneuse Azure Information Protection et avec Office 2016 Démarrer en un clic. 
           
-        Quelques scénarios classiques pour la définition des utilisateurs authentifiés :  
-                - Peu vous importe qui affiche le contenu, mais vous souhaitez restreindre son utilisation. Par exemple, vous ne souhaitez pas que le contenu soit modifié, copié ou imprimé.  
-                - Vous n’avez pas besoin de restreindre l’accès au contenu, mais vous souhaitez pouvoir suivre qui l’ouvre et, éventuellement, le révoquer.  
-                - Vous voulez que le contenu soit chiffré au repos et en transit, mais aucun contrôle d’accès n’est nécessaire.  
+        Quelques scénarios classiques pour tous les paramètres utilisateurs authentifiés : tous les utilisateurs peuvent afficher le contenu, mais vous souhaitez restreindre son utilisation. Par exemple, vous ne souhaitez pas que le contenu soit modifié, copié ou imprimé.  
+            - Vous n’avez pas besoin de restreindre l’accès au contenu, mais vous souhaitez pouvoir suivre qui l’ouvre et, éventuellement, le révoquer.  
+            - Vous voulez que le contenu soit chiffré au repos et en transit, mais aucun contrôle d’accès n’est nécessaire.
         
     - Choisissez **Entrer les détails** pour spécifier manuellement des adresses e-mail pour les utilisateurs individuels ou les groupes (internes ou externes). Vous pouvez utiliser cette option pour spécifier tous les utilisateurs d’une autre organisation en entrant un nom de domaine de cette organisation. Vous pouvez aussi utiliser cette option pour les fournisseurs de réseaux sociaux, en entrant leur nom de domaine comme **gmail.com**, **hotmail.com** ou **outlook.com**.
         
@@ -133,7 +132,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     |Paramètre|Plus d’informations|Paramètre recommandé
     |-----------|--------------------|--------------------|
     |**expiration du contenu**|Définissez une date ou un nombre de jours limites pour l’ouverture par les utilisateurs sélectionnés des documents ou e-mails protégés par ces paramètres. Vous pouvez spécifier une date ou un nombre de jours à partir du moment où la protection est appliquée au contenu.<br /><br />Lorsque vous spécifiez une date, celle-ci prend effet à minuit, dans votre fuseau horaire actuel.|**Le contenu n’expire jamais**, sauf s'il comporte une spécification de durée.|
-    |**Autoriser l’accès hors connexion**|Utilisez ce paramètre pour équilibrer les éventuelles exigences de sécurité que vous avez (./dont l’accès après la révocation) avec la possibilité pour les utilisateurs sélectionnés d’ouvrir du contenu protégé lorsqu’ils ne disposent pas d’une connexion Internet.<br /><br />Si vous spécifiez que le contenu n’est pas disponible sans connexion Internet ou que ce contenu est disponible seulement pour un nombre de jours spécifié, quand ce seuil est atteint, ces utilisateurs doivent se réauthentifier et leur accès est journalisé. Dans ce cas, si leurs informations d’identification ne sont pas mises en cache, les utilisateurs sont invités à se connecter préalablement pour pouvoir ouvrir le ou e-mail.<br /><br />En plus de la réauthentification, la stratégie et l’appartenance au groupe d’utilisateurs sont réévaluées. Cela signifie que les utilisateurs peuvent accéder de nouveau ou ne plus accéder à un même document ou e-mail si des modifications ont été apportées à la stratégie ou à l'appartenance au groupe depuis leur dernier accès. Cela peut inclure l’absence d’accès si le document a été [révoqué](./rms-client/client-track-revoke.md).|En fonction de la sensibilité du contenu :<br /><br />- **Nombre de jours pendant lesquels le contenu est disponible sans connexion Internet** = **7** pour les données métier sensibles pouvant nuire à l’entreprise si elles sont partagées avec des personnes non autorisées. Cette recommandation offre un compromis entre sécurité et flexibilité. Il peut s’agir entre autres de contrats, de rapports de sécurité, de résumés de prévision et de données commerciales.<br /><br />- **Jamais** pour les données d’entreprise très sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Cette recommandation donne la priorité à la sécurité par rapport à la souplesse et garantit que si le document est révoqué, tous les utilisateurs autorisés perdent instantanément la possibilité d’ouvrir le document. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|
+    |**Autoriser l’accès hors connexion**|Utilisez ce paramètre pour équilibrer les éventuelles exigences de sécurité que vous avez (dont l’accès après la révocation) avec la possibilité pour les utilisateurs sélectionnés d’ouvrir du contenu protégé lorsqu’ils ne disposent pas d’une connexion Internet.<br /><br />Si vous spécifiez que le contenu n’est pas disponible sans connexion Internet ou que ce contenu est disponible seulement pour un nombre de jours spécifié, quand ce seuil est atteint, ces utilisateurs doivent se réauthentifier et leur accès est journalisé. Dans ce cas, si leurs informations d’identification ne sont pas mises en cache, les utilisateurs sont invités à se connecter préalablement pour pouvoir ouvrir le ou e-mail.<br /><br />En plus de la réauthentification, la stratégie et l’appartenance au groupe d’utilisateurs sont réévaluées. Cela signifie que les utilisateurs peuvent accéder de nouveau ou ne plus accéder à un même document ou e-mail si des modifications ont été apportées à la stratégie ou à l'appartenance au groupe depuis leur dernier accès. Cela peut inclure l’absence d’accès si le document a été [révoqué](./rms-client/client-track-revoke.md).|En fonction de la sensibilité du contenu :<br /><br />- **Nombre de jours pendant lesquels le contenu est disponible sans connexion Internet** = **7** pour les données métier sensibles pouvant nuire à l’entreprise si elles sont partagées avec des personnes non autorisées. Cette recommandation offre un compromis entre sécurité et flexibilité. Il peut s’agir entre autres de contrats, de rapports de sécurité, de résumés de prévision et de données commerciales.<br /><br />- **Jamais** pour les données d’entreprise très sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Cette recommandation donne la priorité à la sécurité par rapport à la souplesse et garantit que si le document est révoqué, tous les utilisateurs autorisés perdent instantanément la possibilité d’ouvrir le document. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|
     
     Une fois terminée la configuration des autorisations et des paramètres, cliquez sur **OK**. 
     
@@ -216,7 +215,7 @@ Cette étiquette ne convient pas aux e-mails.
 7. Cliquez sur **OK** dans le panneau **Protection**, puis sur **Enregistrer** dans le panneau **Étiquette**.
 
 
-### <a name="example-3-add-external-users-to-an-existing-label"></a>Exemple 3 : Ajouter des utilisateurs externes à une étiquette existante
+### <a name="example-3-add-external-users-to-an-existing-label-that-protects-content"></a>Exemple 3 : Ajouter des utilisateurs externes à une étiquette existante qui protège le contenu
 
 Les nouveaux utilisateurs que vous ajoutez seront en mesure d’ouvrir les documents et e-mails qui ont déjà été protégés avec cette étiquette. Les autorisations que vous accordez à ces utilisateurs peuvent être différentes de celles des utilisateurs existants.
 
@@ -279,7 +278,7 @@ L’avantage de cette configuration est que vous n’avez pas besoin de spécifi
     
 2. Vérifiez que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
 
-3. Dans le panneau **Ajouter des permissions**, sur l’onglet **Sélectionner dans la liste**, sélectionnez **Ajoutez des utilisateurs authentifiés (préversion)**.
+3. Dans le panneau **Ajouter des permissions**, sur l’onglet **Sélectionner dans la liste**, sélectionnez **Ajoutez des utilisateurs authentifiés**.
 
 4. Sélectionnez les autorisations souhaitées, puis cliquez sur **OK**.
 

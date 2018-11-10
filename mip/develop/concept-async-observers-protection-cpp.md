@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: d7077678ba336b031f7a8f812a3c4e90d8c5b05a
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
-ms.translationtype: HT
+ms.openlocfilehash: 35c0fb8eb358c5872ab378755d303425cc8e80a4
+ms.sourcegitcommit: 2c4e72120213407516a49286368f9b2860505f56
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251707"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236813"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-observers"></a>Kit SDK Microsoft Information Protection – Observateurs de l’API de protection
 
@@ -25,7 +25,7 @@ Lorsqu’une opération asynchrone se termine, la fonction membre `OnXxx()` corr
 
 Les exemples ci-dessous illustrent le modèle de promesse/futur, qui est également utilisé par les exemples du kit SDK et qui peut être étendu pour implémenter le comportement de rappel souhaité. 
 
-## <a name="protection-protection-observer-implementation"></a>Implémentation d’observateurs de protection Protection
+## <a name="protectionprofile-observer-implementation"></a>Implémentation d’un observateur protectionProfile
 
 Dans l’exemple suivant, nous avons créé une classe, `ProtectionProfileObserverImpl`, qui est dérivée de `mip::ProtectionProfile::Observer`. Les fonctions membres ont été remplacées pour utiliser le modèle de promesse/futur utilisé dans tous les exemples.
 
@@ -53,7 +53,7 @@ Chaque membre accepte deux paramètres. Le premier est un pointeur partagé vers
 
 Le second est un pointeur partagé vers le *contexte*. Dans notre implémentation, le contexte est une référence à un objet `std::promise`, transmise en tant que `shared_ptr<void>`. La première ligne de la fonction caste ceci en `std::promise`, puis le stocke dans un objet appelé `promise`.
 
-Enfin, le futur est préparé en définissant `promise->set_value()` et en lui transmettant l’objet `mip::ProtectionProtection`.
+Enfin, le futur est préparé en définissant `promise->set_value()` et en lui passant l’objet `mip::ProtectionProtection`.
 
 ```cpp
 //protection_observers.cpp

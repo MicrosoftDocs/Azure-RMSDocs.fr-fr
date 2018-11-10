@@ -4,18 +4,18 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/18/2018
+ms.date: 10/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ccf6468ff1cfb2ee786e1f1bef95c9c07f39afe
-ms.sourcegitcommit: 00e508f97c9191035763384959a8b8fa9f742d4c
+ms.openlocfilehash: b05b41b802b54d874d13dcf13f541374d4150564
+ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49399907"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751251"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
 
@@ -103,6 +103,8 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
     
     - SharePoint Server 2010 est pris en charge pour les clients qui bénéficient d’un [support étendu pour cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
+- Prise en charge du nouveau panneau **Azure Information Protection - Nodes (préversion)** dans le portail Azure, ce qui vous permet de gérer les scanneurs depuis un emplacement central. Les informations provenant de vos scanneurs déployés et qui disposent d’une connectivité à Azure sont mises à jour toutes les cinq minutes. Dans ce panneau, vous pouvez démarrer le scanneur afin de lancer une analyse ponctuelle, relancer l’analyse de tous les fichiers, vérifier l’état d’un scanneur, et afficher le taux d’analyse.
+
 **Correctifs**
 
 - Pour le scanneur Azure Information Protection :
@@ -111,7 +113,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
     
     - Les rapports du scanneur incluent « Dernière modification par » pour les documents Office.
     
-    - Vous pouvez désormais protéger tous les types de fichiers à l’aide du caractère générique `*` quand vous modifiez le Registre comme décrit dans les instructions [Configuration d’API de fichier](../develop/file-api-configuration.md).
+    - Vous pouvez désormais protéger tous les types de fichiers à l’aide du caractère générique `*` quand vous modifiez le Registre comme décrit dans la section [Modification du registre pour le scanneur](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
 
 - Lorsque vous classez et protégez en utilisant PowerShell ou le scanneur, les métadonnées des documents Office ne sont pas supprimées ou chiffrées.
 

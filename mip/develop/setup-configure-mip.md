@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 430e130a5ba2026c0a3c69a59dddd6f9d6b4e8f0
-ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
-ms.translationtype: HT
+ms.openlocfilehash: 6c0b9a878f98081312a0b81b965e75bcc0ade7e8
+ms.sourcegitcommit: 13b5b8e7457b09e1b828dad3cdfae086fd019819
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "49476202"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51508440"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installation et configuration du kit SDK Microsoft Information Protection (MIP) 
 
@@ -169,7 +169,49 @@ Lorsque vous avez terminé, l’inscription de l’application et les autorisati
 
 Pour plus d’informations sur l’ajout d’API et d’autorisations à une inscription, consultez [Mise à jour d’une application, section Configurer une application cliente pour accéder aux API web](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Vous y trouverez des informations sur l’ajout des API et des autorisations requises par une application cliente.  
 
+## <a name="request-an-information-protection-integration-agreement-ipia"></a>Demande d'un IPIA (Information Protection Integration Agreement)
+
+Avant de pouvoir publier une application développée avec MIP, vous devez demander et conclure un accord formel avec Microsoft.
+
+1. Obtenez votre IPIA en envoyant un e-mail à [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting%20IPIA%20for%20<company-name>) avec les informations suivantes :
+
+   **Objet :** demande d'IPIA pour *Nom de la société*
+
+   Dans le corps du message électronique, incluez :
+   - Nom de l’application et du produit
+   - Nom et prénom du demandeur
+   - Adresse de messagerie du demandeur
+
+2. Après réception de votre demande d'IPIA, nous vous enverrons un formulaire (sous forme de document Word). Passez en revue les termes et conditions de l'IPIA et renvoyez le formulaire à l'adresse [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) avec les informations suivantes :
+
+   - Raison sociale de la société
+   - État/Province (États-Unis / Canada) ou pays d'immatriculation
+   - URL de l’entreprise
+   - Adresse e-mail du contact
+   - Adresses supplémentaires de la société (facultatif)
+   - Nom de l'application d'entreprise
+   - Brève description de l'application
+   - *ID de locataire Azure*
+   - *ID de l’application* pour l’application
+   - Contacts de la société, e-mail et téléphone pour la correspondance en cas de situation critique
+
+3. Après réception de votre formulaire, nous vous enverrons le lien IPIA final à signer numériquement. Après votre signature, il sera signé par le représentant de Microsoft approprié, ce qui finalisera l’accord.
+
+### <a name="already-have-a-signed-ipia"></a>Vous disposez déjà d'un IPIA signé ?
+
+Si vous disposez déjà d'un IPIA signé et souhaitez ajouter un nouvel *ID de l’application* pour une application que vous lancez, envoyez un e-mail à l'adresse [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Updating%20IPIA%20for%20<company-name>) et fournissez-nous les informations suivantes :
+
+- Nom de l'application d'entreprise
+- Brève description de l'application
+- ID de client Azure (même s'il est identique au précédent)
+- ID de l’application pour l’application
+- Contacts de la société, e-mail et téléphone pour la correspondance en cas de situation critique
+
+Patientez jusqu'à 72 heures après l'envoi de l'e-mail pour recevoir un accusé de réception.
+
 ## <a name="next-steps"></a>Étapes suivantes
 
 - Avant de commencer la section Démarrages rapides, consultez [Observateurs dans le kit SDK MIP](concept-async-observers.md), car le kit SDK MIP est conçu pour être presque entièrement asynchrone.
 - Si vous êtes prêt à obtenir une expérience pratique avec le kit SDK, commencez avec [Démarrage rapide : Initialisation de l’application cliente (C++)](quick-app-initialization-cpp.md).
+
+

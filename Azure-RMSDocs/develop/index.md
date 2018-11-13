@@ -1,27 +1,26 @@
 ---
-title: "Guide du développeur RMS | Azure RMS"
-description: "Trois générations du Kit Rights Management SDK sont désormais disponibles."
-keywords: 
-author: bruceperlerms
+title: Guide du développeur RMS | Azure RMS
+description: Trois générations du Kit Rights Management SDK sont désormais disponibles.
+keywords: ''
+author: bryanla
 manager: mbaldwin
-ms.date: 02/23/2017
-ms.topic: article
-ms.prod: azure
+ms.date: 09/07/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 899c05d233ec31db27cee058982c98d8dd809c3a
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6f964c6a6cf36cbd6f78cf58096f8c912fb0ff68
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "51527866"
 ---
 # <a name="rms-developers-guide"></a>Guide du développeur RMS
 
-## <a name="overview"></a>Vue d'ensemble ##
+## <a name="overview"></a>Vue d’ensemble ##
 Trois générations du Kit Rights Management SDK sont désormais disponibles : **Microsoft Rights Management 4.2 SDK** pour Android, iOS/OS X, appareils Windows et Linux, **Microsoft Rights Management SDK 2.1** pour le client Windows Desktop et le désormais obsolète Kit **AD RMS SDK**.
 
 ## <a name="software-development-kits"></a>Kits de développement logiciel (SDK) ##
@@ -48,5 +47,3 @@ Cette collection d’exemples de code RMS fournis par Microsoft et d’outils de
 | [Bibliothèque d’interface utilisateur et exemple d’application](https://github.com/AzureAD/rms-sdk-ui-for-ios) |iOS|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) et versions ultérieures du SDK 4.x|**Les bibliothèques d’interface utilisateur et l’exemple d’application pour iOS** disponibles dans GitHub vous permettent d’être rapidement opérationnel et de réutiliser notre interface utilisateur standard dans vos applications.|
 | [Bibliothèque d’interface utilisateur et exemple d’application](https://github.com/AzureAD/rms-sdk-ui-for-android) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) et versions ultérieures du SDK 4.x|**Les bibliothèques d’interface utilisateur et l’exemple d’application pour Android** disponibles dans GitHub vous permettent d’être rapidement opérationnel et de réutiliser notre interface utilisateur standard dans vos applications.|
 | [Scénarios d’utilisation d'Android](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) et versions ultérieures du SDK 4.x|**Exemples de code Java** représentant des scénarios de développement importants pour vous familiariser avec le Kit RMS SDK. Ces exemples traitent entre autres de l’utilisation du format de fichier protégé Microsoft, des formats de fichiers protégés personnalisés et des contrôles d’interface utilisateur personnalisés.|
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

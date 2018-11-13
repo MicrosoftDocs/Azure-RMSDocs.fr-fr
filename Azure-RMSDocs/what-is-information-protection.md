@@ -4,16 +4,16 @@ description: Présentation du service Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: b789697a398a0e201cbf041b36d7cd41a82a9e0d
-ms.sourcegitcommit: 2c4e72120213407516a49286368f9b2860505f56
+ms.openlocfilehash: 979f0acfc2177ba05e57f7c36d5bf3ca3840a65f
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236830"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026689"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
@@ -144,9 +144,4 @@ Pour avoir un aperçu des annonces qui ont été faites lors de cette conférenc
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Lisez le billet de blog [Azure Information Protection: Ready, set, protect!](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/).
-
-Configurez et découvrez Azure Information Protection par vous-même avec notre [Didacticiel de démarrage rapide](infoprotect-quick-start-tutorial.md) en 5 étapes. Ou, si vous êtes prêt à déployer ce service dans votre organisation, consultez la [feuille de route du déploiement d’Azure Information Protection](deployment-roadmap.md).
-
-Vous connaissez peut-être Azure Information Protection sous un autre nom ? Consultez nos [autres termes pour le service](aka.md).
-
+Configurez et découvrez Azure Information Protection par vous-même avec nos [démarrages rapides](quickstart-viewpolicy.md) et nos [tutoriels](infoprotect-quick-start-tutorial.md). Ou, si vous êtes prêt à déployer ce service pour votre organisation, consultez les [guides pratiques pour les scénarios courants](how-to-guides.md).

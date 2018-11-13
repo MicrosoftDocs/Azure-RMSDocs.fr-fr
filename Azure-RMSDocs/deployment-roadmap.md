@@ -4,18 +4,18 @@ description: Utilisez ces étapes pour préparer, implémenter et gérer Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4d1a63ac3ea5fae9782588b1779d7c7950738e23
-ms.sourcegitcommit: 3b41a6e730fa40660a2bdf5b1a73d155c87aacc2
+ms.openlocfilehash: 4e2fa20d542a9509476c78ebe21143e49863b788
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48834604"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026823"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Feuille de route pour le déploiement d’Azure Information Protection
 
@@ -23,7 +23,7 @@ ms.locfileid: "48834604"
 
 Utilisez les étapes suivantes comme des recommandations visant à faciliter la préparation, l’implémentation et la gestion d’Azure Information Protection pour votre organisation.
 
-Toutefois, si vous souhaitez uniquement tester rapidement Azure Information Protection pour vous-même, au lieu de le déployer dans un environnement de production, consultez [Didacticiel de démarrage rapide pour Azure Information Protection](./infoprotect-quick-start-tutorial.md).
+Toutefois, si vous recherchez des instructions basées sur un scénario, consultez [Guides pratiques pour les scénarios courants qui utilisent Azure Information Protection](how-to-guides.md).
 
 > [!NOTE]
 > Si vous recherchez une feuille de route des versions d’un produit, consultez notre section [Informations sur les nouvelles versions et mises à jour](information-support.md#information-about-new-releases-and-updates).
@@ -32,7 +32,7 @@ Toutefois, si vous souhaitez uniquement tester rapidement Azure Information Prot
 
 ### <a name="identify-your-deployment-roadmap"></a>Identifier la feuille de route de votre déploiement
 
-Avant de suivre les étapes ci-dessous pour déployer Azure Information Protection, prenez le temps de consulter [Conditions requises pour Azure Information Protection](./requirements.md).
+Avant d’implémenter une des étapes ci-dessous pour déployer Azure Information Protection, prenez le temps de consulter [Conditions requises pour Azure Information Protection](./requirements.md).
 
 Choisissez ensuite la feuille de route de déploiement qui s’applique à votre organisation et qui correspond aux [fonctionnalités de l’abonnement](https://azure.microsoft.com/pricing/details/information-protection/) dont vous avez besoin :
 
@@ -59,7 +59,7 @@ Pour plus d’informations, consultez [Préparation des utilisateurs et groupes 
 ### <a name="step-3-configure-and-deploy-classification-and-labeling"></a>Étape 3 : Configurer et déployer la classification et l’étiquetage
 
 > [!TIP]
-> **Facultatif, mais recommandé** : envisagez de déployer le [scanneur Azure Information Protection](deploy-aip-scanner.md) pour découvrir les informations sensibles contenues dans vos banques de données locales. Les informations trouvées par le scanneur peuvent vous aider dans votre taxonomie de classification ainsi que fournir de précieuses informations sur les étiquettes dont vous avez besoin et les fichiers à protéger.
+> **Facultatif, mais recommandé** : envisagez de déployer le scanneur Azure Information Protection pour découvrir les informations sensibles contenues dans vos banques de données locales. Nous proposons un [démarrage rapide](quickstart-findsensitiveinfo.md) qui couvre ce scénario. Les informations trouvées par le scanneur peuvent vous aider dans votre taxonomie de classification ainsi que fournir de précieuses informations sur les étiquettes dont vous avez besoin et les fichiers à protéger.
 > 
 > Le scanneur peut être configuré pour rechercher des types connus d’informations sensibles dans les fichiers locaux sur Windows Server, les fichiers sur les partages réseau et les fichiers dans les versions locales de SharePoint. Comme cette configuration ne vous demande pas de configurer des étiquettes ni même de définir votre taxonomie de classification, l’exécution du scanneur de cette façon est adaptée à ce stade très précoce de votre déploiement. Vous pouvez également utiliser cette configuration du scanneur en parallèle avec les étapes de déploiement suivantes, jusqu’à ce que vous configuriez des conditions pour vos étiquettes.
 

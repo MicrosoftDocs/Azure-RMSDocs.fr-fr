@@ -4,16 +4,16 @@ description: Configurez les paramètres dans la stratégie Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 03736896f73fc83f699191677846e757eaf17be7
-ms.sourcegitcommit: d6c29e0d23c079045f9a9a2a270cf3cf22d628d5
+ms.openlocfilehash: f8967b16f864939bfcb06f786e8ee1eff0603ac2
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336457"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026602"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Guide pratique pour configurer les paramètres de stratégie pour Azure Information Protection
 
@@ -83,5 +83,7 @@ Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement d
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
+Pour voir comment certains de ces paramètres de stratégie peuvent fonctionner ensemble, essayez le tutoriel [Configurer des paramètres Azure Information Protection qui fonctionnent ensemble](infoprotect-settings-tutorial.md).
+
+Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).
 

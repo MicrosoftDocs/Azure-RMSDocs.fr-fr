@@ -4,18 +4,18 @@ description: Découvrez en détail le fonctionnement d’Azure RMS, les contrôl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 821038f555a73e89748541d5b512d5a631094fa8
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 19b45c3e24de5eba9f0bd243baf73797b66431f7
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149359"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026772"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
@@ -150,7 +150,7 @@ Les procédures pas à pas précédentes couvrent les scénarios standard, mais 
 
 - **Appareils mobiles** : quand des appareils mobiles protègent ou consomment des fichiers avec le service Azure Rights Management, les flux du processus sont beaucoup plus simples. Les appareils mobiles ne passent pas par le processus d'initialisation utilisateur, car chaque transaction (pour protéger ou consommer du contenu) est indépendante. Comme avec les ordinateurs Windows, les appareils mobiles se connectent au service Azure Rights Management et s’authentifient. Pour protéger du contenu, les appareils mobiles soumettent une stratégie, puis le service Azure Rights Management leur envoie une licence de publication et une clé symétrique pour protéger le document. Pour consommer du contenu, quand des appareils mobiles se connectent au service Azure Rights Management et s’authentifient, ils envoient la stratégie de document au service Azure Rights Management et demandent une licence d’utilisation pour consommer le document. En réponse, le service Azure Rights Management leur envoie les clés nécessaires et les restrictions. Les deux processus utilisent TLS pour protéger l'échange de clés et d'autres communications.
 
-- **Connecteur RMS** : quand le service Azure Rights Management est utilisé avec le connecteur RMS, le flux du processus reste identique. La seule différence est que le connecteur fait office de relais entre les services locaux (comme Exchange Server et SharePoint Server) et le service Azure Rights Management. Le connecteur proprement dit n'effectue aucune opération telle qu'une initialisation de l'environnement utilisateur, un chiffrement ou un déchiffrement. Il relaie simplement la communication qui accède généralement à un serveur AD RMS, en gérant la traduction entre les protocoles utilisés de part et d'autre. Ce scénario vous permet d’utiliser le service Azure Rights Management avec des services locaux.
+- **Connecteur RMS** : quand le service Azure Rights Management est utilisé avec le connecteur RMS, les flux de processus restent identiques. La seule différence est que le connecteur fait office de relais entre les services locaux (comme Exchange Server et SharePoint Server) et le service Azure Rights Management. Le connecteur proprement dit n'effectue aucune opération telle qu'une initialisation de l'environnement utilisateur, un chiffrement ou un déchiffrement. Il relaie simplement la communication qui accède généralement à un serveur AD RMS, en gérant la traduction entre les protocoles utilisés de part et d'autre. Ce scénario permet d’utiliser le service Azure Rights Management avec des services locaux.
 
 - **Protection générique (.pfile)**  : quand le service Azure Rights Management protège un fichier de façon générique, le flux est fondamentalement le même pour la protection du contenu, sauf que le client RMS crée une stratégie qui accorde tous les droits. Lorsque le fichier est consommé, il est déchiffré avant d'être transmis à l'application cible. Ce scénario vous permet de protéger tous les fichiers, même s'ils ne prennent pas en charge RMS en mode natif.
 
@@ -160,9 +160,9 @@ Les procédures pas à pas précédentes couvrent les scénarios standard, mais 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur le service Azure Rights Management, reportez-vous aux autres articles de la section **Comprendre et explorer**, comme [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md), pour savoir comment intégrer vos applications existantes avec Azure Rights Management afin de bénéficier d’une solution de protection des informations. 
+Pour plus d’informations sur le service Azure Rights Management, utilisez les autres articles de la section **Comprendre et explorer**, comme [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md), pour savoir comment intégrer vos applications existantes avec Azure Rights Management afin de bénéficier d’une solution de protection des informations. 
 
-Consultez [Terminologie liée à Azure Information Protection](./terminology.md) pour vous familiariser avec les termes que vous allez rencontrer lors de la configuration et de l’utilisation du service Azure Rights Management, et n’oubliez pas de lire aussi [Requirements for Azure Information Protection](requirements.md) avant d’entamer votre déploiement. Si vous voulez vous y plonger directement et essayer par vous-même, utilisez le [Didacticiel de démarrage rapide pour Azure Information Protection](infoprotect-quick-start-tutorial.md).
+Consultez [Terminologie liée à Azure Information Protection](./terminology.md) pour vous familiariser avec les termes que vous allez rencontrer lors de la configuration et de l’utilisation du service Azure Rights Management, et n’oubliez pas de lire aussi [Requirements for Azure Information Protection](requirements.md) avant d’entamer votre déploiement. Si vous voulez vous lancer directement et essayer par vous-même, suivez le tutoriel [Modifier la stratégie et créer un nouvelle étiquette](infoprotect-quick-start-tutorial.md).
 
 Si vous êtes prêt à déployer la protection des données pour votre organisation, utilisez la [Feuille de route pour le déploiement d’Azure Information Protection](deployment-roadmap.md) pour connaître les étapes de déploiement et accéder à des liens vers des instructions.
 

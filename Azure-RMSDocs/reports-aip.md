@@ -4,19 +4,19 @@ description: Guide pratique pour utiliser la création de rapports centralisée 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/15/2018
+ms.date: 11/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 424be5910d6a4498bc9d2684888cd2bf9af010af
-ms.sourcegitcommit: 26e1ccdd0c4339a51ec7812082b399f13ef73b2b
+ms.openlocfilehash: 4cb496e6cca01d7a4ad6636acc315bd40dc4c58c
+ms.sourcegitcommit: 8e43a41998045fe574710e9da0b7747eaeccdba1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324882"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51273580"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -62,17 +62,25 @@ Pour générer ces rapports, les points de terminaison envoient les types suivan
 
 - Action d’étiquette. Par exemple, définir une étiquette, modifier une étiquette, ajouter ou supprimer la protection, étiquettes automatiques et recommandées.
 
+- Nom de l’étiquette avant et après l’action d’étiquette.
+
 - ID de locataire de votre organisation.
 
 - ID d’utilisateur (adresse e-mail ou UPN).
 
-- Chemin et nom de fichier des documents qui sont étiquetés.
+- Nom de l’appareil de l’utilisateur.
+
+- Pour les documents : chemin et nom de fichier des documents qui sont étiquetés.
+
+- Pour les e-mails : objet de l’e-mail, expéditeur de l’e-mail et destinataires de l’e-mail pour les e-mails étiquetés. 
+
+- Types d’informations sensibles ([prédéfinis](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) et personnalisés) détectés dans le contenu.
 
 - Version du client Azure Information Protection.
 
 - Version du système d’exploitation client.
 
-Ces informations sont stockées dans un espace de travail Azure Log Analytics qui vous appartient.
+Ces informations sont stockées dans un espace de travail Log Analytics Azure que vous possédez et que les utilisateurs peuvent consulter s’ils disposent des droits d’accès à cet espace de travail. Pour plus d’informations sur la configuration de l’accès à votre espace de travail, consultez la section [Gérer les comptes et les utilisateurs](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) dans la documentation Azure.
 
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Prérequis pour l’analytique Azure Information Protection
 Pour afficher les rapports Azure Information Protection et créer les vôtres, vérifiez que les conditions suivantes sont respectées.

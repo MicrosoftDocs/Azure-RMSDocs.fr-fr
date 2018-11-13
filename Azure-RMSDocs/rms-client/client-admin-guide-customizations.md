@@ -4,18 +4,18 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/15/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7657969916f69424a2823cb8b1dd79f9a50b6011
-ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
+ms.openlocfilehash: 62d53acd482b9efdd0425d5a944d2241f8a33b30
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382644"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223991"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -40,6 +40,25 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 5. Assurez-vous que les utilisateurs de cette stratégie redémarrent toutes les applications Office qu’ils avaient ouvertes.
 
 6. Si vous n’avez plus besoin de ce paramètre et souhaitez rétablir le comportement par défaut : dans le panneau **Paramètres avancés**, sélectionnez le menu contextuel (**...**) à côté du paramètre dont vous n’avez plus besoin, puis sélectionnez **Supprimer**. Ensuite, cliquez sur **Enregistrer et fermer**.
+
+#### <a name="available-advanced-client-settings"></a>Paramètres client avancés disponibles
+
+|Paramètre|Scénario et instructions|
+|----------------|---------------|
+|DisableDNF|[Masquer ou afficher le bouton Ne pas transférer dans Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
+|EnableBarHiding|[Masquer définitivement la barre Azure Information Protection](#permanently-hide-the-azure-information-protection-bar)|
+|EnableCustomPermissions|[Activer ou désactiver les options d’autorisations personnalisées pour les utilisateurs](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
+|EnablePDFv2Protection|[Protéger les fichiers PDF à l’aide de la norme ISO pour le chiffrement PDF](#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
+|LabelbyCustomProperty|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|OutlookDefaultLabel|[Définir une autre étiquette par défaut pour Outlook](#set-a-different-default-label-for-outlook)|
+|OutlookRecommendationEnabled|[Activer la classification recommandée dans Outlook](#enable-recommended-classification-in-outlook)|
+|PostponeMandatoryBeforeSave|[Supprimer « Pas maintenant » pour les documents quand l’étiquetage obligatoire est utilisé](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
+|ProcessUsingLowIntegrity|[Désactiver le niveau d’intégrité faible pour le scanneur](#disable-the-low-integrity-level-for-the-scanner)|
+|RemoveExternalContentMarkingInApp|[Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions)|
+|ReportAnIssueLink|[Modifier l’adresse e-mail du lien Signaler un problème](#modify-the-email-address-for-the-report-an-issue-link)|
+|RunPolicyInBackground|[Activer la classification pour qu’elle s’exécute en continu en arrière-plan](#turn-on-classification-to-run-continuously-in-the-background)|
+|SyncPropertyName|[Étiqueter un document Office en utilisant une propriété personnalisée existante](#label-an-office-document-by-using-an-existing-custom-property)|
+|SyncPropertyState|[Étiqueter un document Office en utilisant une propriété personnalisée existante](#label-an-office-document-by-using-an-existing-custom-property)|
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Empêcher l’affichage des invites de connexion sur les ordinateurs AD RMS uniquement
 
@@ -302,13 +321,11 @@ Suite à cette modification du Registre, les scénarios suivants sont pris en ch
 
 - La visionneuse Azure Information Protection peut ouvrir ces fichiers protégés.
 
-- L’Explorateur de fichiers et PowerShell peuvent déprotéger ces fichiers ou les reprotéger avec Azure Information Protection.
-
-- L’Explorateur de fichiers, PowerShell et le scanneur Azure Information Protection peuvent étiqueter ces fichiers.
-
 - Le scanneur Azure Information Protection peut inspecter ces fichiers à la recherche d’informations sensibles.
 
-- Vous pouvez utiliser la [personnalisation du client de migration d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions) pour convertir l’étiquette Secure Islands de ces fichiers protégés en étiquette Azure Information Protection.
+- L’Explorateur de fichiers, PowerShell et le scanneur Azure Information Protection peuvent étiqueter ces fichiers. Par conséquent, vous pouvez appliquer une étiquette Azure Information Protection qui applique le nouveau groupe de protection d’Azure Information Protection, ou qui supprime la protection existante de Secure Islands.
+
+- Vous pouvez utiliser la [personnalisation du client de migration d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions) pour convertir automatiquement l’étiquette Secure Islands de ces fichiers protégés en étiquette Azure Information Protection.
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Migrer des étiquettes de Secure Islands et d’autres solutions d’étiquetage
 

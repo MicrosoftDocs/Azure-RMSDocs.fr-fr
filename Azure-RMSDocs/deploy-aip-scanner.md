@@ -4,18 +4,18 @@ description: Instructions pour installer, configurer et exécuter le scanneur Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 315c1e04d6d941643ee6625053b1cae8bd08b292
-ms.sourcegitcommit: 51c99ea4c98b867cde964f51c35450eaa22fac27
+ms.openlocfilehash: b97b000aaeb545592910a32b00e88ad6dd579ab1
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991375"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026789"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -191,13 +191,23 @@ Avec la configuration par défaut du scanneur, vous êtes maintenant prêt à ex
 1. Dans votre session PowerShell, redémarrez le service **Scanneur Azure Information Protection** en exécutant la commande suivante :
     
         Start-AIPScan
+    
+    Vous pouvez également démarrer le scanneur à partir du panneau **Azure Information Protection** panneau dans le portail Azure, lorsque vous utilisez l’option **Scanner** > **Nodes (préversion)** > \**<* scanner node*>**> **Scan now** option.
 
-2. Attendez que le scanneur termine son cycle. Une fois que le scanneur a parcouru tous les fichiers inclus dans les magasins de données que vous avez spécifiés, le service s’arrête alors que le service du scanneur continue de s’exécuter. Vous pouvez utiliser le journal des événements **Applications et service** Windows local, **Azure Information Protection**, pour vérifier quand le service s’arrête. Recherchez l’ID d’événement d’information **911**.
+2. Attendez que le scanneur termine son cycle en exécutant la commande suivante :
+    
+    Get-AIPScannerStatus
+    
+    Recherchez l’état pour afficher **Idle** (Inactif) plutôt que **Scanning** (Analyse). Une fois que le scanneur a parcouru tous les fichiers inclus dans les magasins de données que vous avez spécifiés, le service s’arrête alors que le service du scanneur continue de s’exécuter. 
+    
+    Vous pouvez également afficher l’état à partir du panneau **Azure Information Protection** dans le portail Azure, dans la colonne **Scanner** > **Nodes (préversion)** > \**<* scanner node*>**> **STATUS**.
+    
+    Consultez le journal des événements **Applications et services** Windows local, **Azure Information Protection**. Ce journal indique également lorsque le scanneur a terminé l’analyse, avec un résumé des résultats. Recherchez l’ID d’événement d’information **911**.
 
 3. Passez en revue les rapports stockés dans %*localappdata*%\Microsoft\MSIP\Scanner\Reports et dont le format de fichier est .csv. Avec la configuration par défaut du scanneur, seuls les fichiers qui remplissent les conditions de la classification automatique sont inclus dans ces rapports.
     
     > [!TIP]
-    > Actuellement en préversion, les informations de ces rapports sont désormais envoyées vers Azure Information Protection afin que vous puissiez les afficher à partir du portail Azure. Pour plus d’informations, consultez [Création de rapports pour Azure Information Protection](reports-aip.md). 
+    > Actuellement en préversion, les scanneurs envoient ces informations à Azure Information Protection toutes les cinq minutes si vous disposez de la préversion du scanneur, ce qui vous permet d’afficher les résultats en temps quasi réel sur le portail Azure. Pour plus d’informations, consultez [Création de rapports pour Azure Information Protection](reports-aip.md). 
         
     Si les résultats ne correspondent pas à ce que vous attendez, vous devez peut-être ajuster les conditions que vous avez spécifiées dans votre stratégie Azure Information Protection. Si tel est le cas, répétez les étapes 1 à 3 jusqu’à ce que vous soyez prêt à modifier la configuration pour appliquer la classification et éventuellement la protection. 
 
@@ -213,11 +223,15 @@ Dans son paramétrage par défaut, le scanneur s’exécute une seule fois en mo
     
     Il existe d’autres paramètres de configuration que vous pouvez modifier. Par exemple, si les attributs de fichier sont modifiés et ce qui est enregistré dans les rapports. De plus, si votre stratégie Azure Information Protection inclut le paramètre qui exige un message de justification pour diminuer le niveau de classification ou supprimer la protection, spécifiez ce message à l’aide de cette applet de commande. Utilisez l’[aide en ligne](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) pour plus d’informations sur chaque paramètre de configuration. 
 
-2. Redémarrez le service **Scanneur Azure Information Protection** en exécutant la commande suivante :
+2. Notez l’heure actuelle et redémarrez le scanneur en exécutant la commande suivante :
     
         Start-AIPScan
+    
+    Vous pouvez également démarrer le scanneur à partir du panneau **Azure Information Protection** panneau dans le portail Azure, lorsque vous utilisez l’option **Scanner** > **Nodes (préversion)** > \**<* scanner node*>**> **Scan now** option.
 
-3. Comme avant, examinez le journal des événements et les rapports pour déterminer quels fichiers ont été étiquetés, quelle classification a été appliquée et si une protection a été appliquée.
+3. Recherchez dans le journal des événements le type d’information **911** dont l’heure horodatée est ultérieure à l’heure du démarrage du scanneur à l’étape précédente. 
+    
+    Puis examinez les rapports pour déterminer quels fichiers ont été étiquetés, quelle classification a été appliquée et si une protection a été appliquée. Ou bien, utilisez le portail Azure pour consulter plus facilement ces informations.
 
 Puisque nous avons configuré la planification pour qu’elle s’exécute en continu, quand le scanneur a parcouru tous les fichiers, il démarre un nouveau cycle pour découvrir les fichiers nouveaux et modifiés.
 
@@ -284,6 +298,8 @@ Pour le premier cycle d’analyse, le scanneur inspecte tous les fichiers des ma
 
 Vous pouvez forcer le scanneur à réinspecter tous les fichiers en exécutant [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) avec le paramètre `-Reset`. Le scanneur doit être configuré pour une planification manuelle, donc le paramètre `-Schedule` doit être défini sur **Manuel** avec [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
 
+Vous pouvez également forcer le scanneur à inspecter à nouveau tous les fichiers à partir du panneau **Azure Information Protection** panneau dans le portail Azure, lorsque vous utilisez l’option **Scanner** > **Nodes (préversion)** > \**<* scanner node*>**> **Rescan all files**.
+
 La réinspection de tous les fichiers est utile quand vous voulez que les rapports contiennent tous les fichiers. Ce choix de configuration est généralement utilisé lorsque le scanneur s’exécute en mode découverte. Lorsqu’une analyse complète est terminée, le scanneur passe automatiquement en mode incrémentiel pour inspecter uniquement les fichiers nouveaux ou modifiés lors des analyses suivantes.
 
 De plus, tous les fichiers sont inspectés quand le scanneur télécharge une stratégie Azure Information Protection qui présente des conditions nouvelles ou modifiées. Le scanneur actualise la stratégie toutes les heures, quand le service démarre et que la stratégie remonte à plus d’une heure.  
@@ -310,7 +326,9 @@ Il existe deux scénarios pris en charge par le scanneur Azure Information Prote
     
     Pour cette configuration, utilisez l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) et définissez le paramètre *DiscoverInformationTypes* sur **All**.
     
-    Le scanneur utilise toute condition personnalisée que vous avez spécifiée pour les étiquettes dans la stratégie Azure Information Protection et la liste des types d’informations qui sont disponibles pour les étiquettes dans la stratégie Azure Information Protection. 
+    Le scanneur utilise toute condition personnalisée que vous avez spécifiée pour les étiquettes dans la stratégie Azure Information Protection et la liste des types d’informations qui sont disponibles pour les étiquettes dans la stratégie Azure Information Protection.
+    
+    Le démarrage rapide suivant utilise cette configuration : [Démarrage rapide : Identifier ses informations sensibles](quickstart-findsensitiveinfo.md).
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Optimisation des performances du scanneur
 
@@ -425,6 +443,8 @@ Si le scanneur a été configuré pour s’exécuter une seule fois, plutôt que
 ----
 
 ## <a name="next-steps"></a>Étapes suivantes
+
+Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automatiser la protection des données avec le scanneur Azure Information Protection](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
 Vous vous demandez peut-être : [Quelle différence y a-t-il entre l’ICF de Windows Server et le scanneur d’Azure Information Protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 

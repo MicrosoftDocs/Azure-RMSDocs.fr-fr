@@ -4,18 +4,18 @@ description: Identifiez les critères de déploiement d’Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/19/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 00daf488568fef8569f97db378b771383a221ce3
-ms.sourcegitcommit: 07af86511a394274f10cf1340de4cf4bad6d1675
+ms.openlocfilehash: 92b7ca3feceb70bc9b8b085b58c26231d2ae70ce
+ms.sourcegitcommit: 8a4bab8dc6ee4c322a54d79091af04ec9449e5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473815"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51020052"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -44,7 +44,7 @@ Si vous avez des questions sur les abonnements ou les licences, ne les publiez p
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
-Votre organisation doit disposer d’un annuaire Azure AD (Azure Active Directory) afin de prendre en charge l’authentification utilisateur et l’autorisation pour Azure Information Protection. De plus, si vous souhaitez utiliser les comptes d’utilisateur de votre annuaire local (AD DS), vous devez également configurer l’intégration d’annuaire.
+Votre organisation doit disposer d’un annuaire Azure AD (Azure Active Directory) afin de prendre en charge l’authentification utilisateur et l’autorisation pour Azure Information Protection. De plus, si vous souhaitez utiliser vos comptes d’utilisateur à partir de votre annuaire local (AD DS), vous devez également configurer une intégration d’annuaire.
 
 L’authentification unique (SSO) étant prise en charge pour Azure Information Protection, les utilisateurs ne sont pas invités de manière répétée à fournir leurs informations d’identification. Si vous utilisez une autre solution de fournisseur pour la fédération, vérifiez auprès de ce dernier comment la configurer pour Azure AD. WS-Trust est une exigence courante pour ces solutions afin de prendre en charge l’authentification unique. 
 
@@ -112,8 +112,6 @@ Si vous avez un pare-feu ou des appareils réseau intervenants similaires qui n�
 
 En plus des informations de l’article relatif à Office, voici des informations propres à Azure Information Protection :
 
-- Autorisez le trafic HTTPS sur le port TCP 443 pour **informationprotection.hosting.portal.azure.net**.
-
 - Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour qu’il utilise l’authentification Windows intégrée avec les informations d’identification d’ouverture de session Active Directory de l’utilisateur.
 
 - N’interrompez pas la connexion du client au service TLS (par exemple, pour effectuer une inspection au niveau du paquet) vers l’URL **aadrm.com**. Cela a pour effet d’interrompre l’épinglage de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour sécuriser leur communication avec le service Azure Rights Management.
@@ -140,9 +138,9 @@ Pour plus d’informations sur les conditions requises supplémentaires pour ce 
 
 Le scénario de déploiement suivant n’est pas pris en charge, sauf si vous utilisez AD RMS pour la [protection HYOK](configure-adrms-restrictions.md) avec Azure Information Protection (la configuration « conservez votre propre clé ») :
 
-- En cas d’exécution d’AD RMS et d’Azure RMS côte à côte dans la même organisation, sauf pendant la migration, comme décrit dans [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+- En cas d’exécution d’AD RMS et d’Azure RMS côte à côte dans la même organisation, sauf pendant la migration, comme le décrit la rubrique [Migrer d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-Il existe un chemin de migration pris en charge [d’AD RMS vers Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx) et [Azure Information Protection vers AD RM](/powershell/module/aadrm/Set-AadrmMigrationUrl). Si vous déployez Azure Information Protection et que vous décidez ensuite que vous ne voulez plus utiliser ce service cloud, consultez [Désaffectation et désactivation d’Azure Information Protection](decommission-deactivate.md).
+Il existe un chemin de migration pris en charge [d’AD RMS vers Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx) et [d’Azure Information Protection vers AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). Si vous déployez Azure Information Protection et que vous décidez ensuite que vous ne voulez plus utiliser ce service cloud, consultez [Désaffectation et désactivation d’Azure Information Protection](decommission-deactivate.md).
 
 
 

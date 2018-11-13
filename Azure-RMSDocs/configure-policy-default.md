@@ -4,16 +4,15 @@ description: Comprendre le processus de configuration de la stratégie par défa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
-ms.topic: article
+ms.date: 11/06/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: ada4e4b2b7f8ef4bcf95307184d9c262a930c9f0
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: d74dfcd35dca2f3ab5e88a66eaaba37b13636e4d
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807320"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223974"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
@@ -21,19 +20,19 @@ ms.locfileid: "42807320"
 
 Utilisez les informations suivantes pour comprendre la configuration de la stratégie par défaut pour Azure Information Protection.
 
-Quand un administrateur se connecte pour la première fois au service Azure Information Protection en utilisant le portail Azure, la stratégie par défaut pour ce locataire est créée. Microsoft peut parfois apporter des modifications à la stratégie par défaut, mais si vous utilisiez déjà le service avant que la stratégie par défaut ait été révisée, votre version précédente de la stratégie par défaut n’est pas mise à jour, car vous pouvez l’avoir configurée et déployée en production.
+Quand un administrateur se connecte pour la première fois au service Azure Information Protection à l’aide du Portail Azure, la stratégie Azure Information Protection par défaut de ce locataire est créée. Il peut arriver que Microsoft apporte des modifications à cette stratégie par défaut ; cependant, si vous utilisiez déjà le service avant cette révision, votre version antérieure de la stratégie Azure Information Protection par défaut n’est pas mise à jour, car vous pouvez l’avoir configurée et déployée en production.
 
-Vous pouvez référencer les valeurs suivantes pour rétablir votre stratégie aux valeurs par défaut ou mettre à jour votre stratégie avec les valeurs les plus récentes.
+Vous pouvez référencer les valeurs suivantes pour rétablir les valeurs par défaut de votre stratégie Azure Information Protection ou la mettre à jour avec les dernières valeurs.
 
 ## <a name="current-default-policy"></a>Stratégie par défaut actuelle
 
-Cette version de la stratégie par défaut date du 31 juillet 2017.
+Cette version de la stratégie Azure Information Protection par défaut date du 31 juillet 2017.
 
-Cette stratégie par défaut est créée lorsque le service Azure Rights Management est activé, ce qui est le cas pour les nouveaux locataires à partir de février 2018. Pour plus d’informations, consultez le billet de blog de lancement [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection) (Améliorations de la pile de protection dans Azure Information Protection).
+Cette stratégie Azure Information Protection par défaut est créée lorsque le service Azure Rights Management est activé, ce qui est le cas pour les nouveaux locataires à partir de février 2018. Pour plus d’informations, consultez le billet de blog de lancement [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection) (Améliorations de la pile de protection dans Azure Information Protection).
 
-Cette stratégie par défaut est également créée si vous avez manuellement [activé le service](activate-service.md) avant la création de la stratégie. 
+Cette stratégie Azure Information Protection par défaut est également créée si vous avez [activé manuellement le service](activate-service.md) avant la création de la stratégie Azure Information Protection. 
 
-Si le service n’a pas été activé, la stratégie par défaut ne configure pas de protection pour les sous-étiquettes suivantes :
+Si le service n’a pas été activé, la stratégie Azure Information Protection par défaut ne configure pas de protection pour les sous-étiquettes suivantes :
 
 - **Confidentiel \ Tous les employés**
 
@@ -43,11 +42,11 @@ Si le service n’a pas été activé, la stratégie par défaut ne configure pa
 
 - **Hautement confidentiel \ Destinataires uniquement** 
 
-Quand ces sous-étiquettes ne sont pas configurées automatiquement pour la protection, la stratégie par défaut reste identique à la [stratégie par défaut précédente](#default-policy-before-july-31-2017).
+Quand ces sous-étiquettes ne sont pas configurées automatiquement pour la protection, la stratégie Azure Information Protection par défaut reste identique à la [stratégie par défaut précédente](#default-policy-before-july-31-2017).
 
 Quand la protection est appliquée aux sous-étiquettes **Tous les employés**, la protection est configurée à l’aide des modèles par défaut qui sont convertis automatiquement en étiquettes dans le portail Azure. Pour plus d’informations sur ces modèles, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).
 
-Depuis le 30 août 2017, cette version de la stratégie par défaut inclut les versions multilingues des noms et descriptions d’étiquette. 
+Depuis le 30 août 2017, cette version de la stratégie Azure Information Protection par défaut comporte les versions multilingues des noms et des descriptions d’étiquettes. 
 
 #### <a name="more-information-about-the-recipients-only-sublabel"></a>Plus d’informations sur les sous-étiquettes Destinataires uniquement
 

@@ -4,18 +4,18 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b05b41b802b54d874d13dcf13f541374d4150564
-ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
+ms.openlocfilehash: d4b9419ee12dfef0db29604dc7a396eedd7225fc
+ms.sourcegitcommit: a547dee247e4961e8f7c1f08e39b03dff710a74c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751251"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51628069"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
 
@@ -114,8 +114,6 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
     - Les rapports du scanneur incluent « Dernière modification par » pour les documents Office.
     
     - Vous pouvez désormais protéger tous les types de fichiers à l’aide du caractère générique `*` quand vous modifiez le Registre comme décrit dans la section [Modification du registre pour le scanneur](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
-
-- Lorsque vous classez et protégez en utilisant PowerShell ou le scanneur, les métadonnées des documents Office ne sont pas supprimées ou chiffrées.
 
 - L’affichage des e-mails à l’aide des icônes des flèches Élément suivant et Élément précédent dans la barre d’outils Accès rapide montre la bonne étiquette pour chaque e-mail.
 

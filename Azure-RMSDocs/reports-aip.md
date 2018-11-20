@@ -4,19 +4,19 @@ description: Guide pratique pour utiliser la création de rapports centralisée 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2018
+ms.date: 11/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 4cb496e6cca01d7a4ad6636acc315bd40dc4c58c
-ms.sourcegitcommit: 8e43a41998045fe574710e9da0b7747eaeccdba1
+ms.openlocfilehash: 85ca097a1808c2940ce534c7ce3d0542aaf3f27a
+ms.sourcegitcommit: 0f9e2ba05b61f8db08387576a697b8deff45fd36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51273580"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51611418"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -28,7 +28,7 @@ ms.locfileid: "51273580"
 
 Utilisez l’analytique Azure Information Protection pour la création de rapports centralisée afin de suivre l’adoption de vos étiquettes Azure Information Protection et de superviser l’accès utilisateur aux e-mails et documents étiquetés ainsi que les modifications apportées à leur classification. Vous pouvez également identifier les documents qui contiennent des informations sensibles à protéger.
 
-Les données que vous voyez sont agrégées à partir de vos clients Azure Information Protection, scanneurs Azure Information Protection et [clients qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
+Actuellement, les données que vous voyez sont agrégées à partir de vos clients Azure Information Protection et scanneurs Azure Information Protection.
 
 Par exemple, vous serez en mesure de voir ce qui suit :
 

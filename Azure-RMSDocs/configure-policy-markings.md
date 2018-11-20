@@ -4,16 +4,16 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: dbc63a0ddca9e7583693219103268048b524121c
-ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
+ms.openlocfilehash: 0e40e0044c38e58690b3e4130a4980042296edf4
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358973"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644724"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -23,7 +23,7 @@ Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez s�
 
 Informations supplémentaires sur ces marquages visuels :
 
-- Les en-têtes et pieds de page s’appliquent à Word, Excel, PowerPoint et Outlook.
+- Les en-têtes et pieds de page prennent en charge les lignes de texte uniques qui s’appliquent à Word, Excel, PowerPoint et Outlook.
 
 - Les filigranes s’appliquent à Word, Excel et PowerPoint :
 

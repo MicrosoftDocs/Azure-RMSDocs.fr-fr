@@ -4,18 +4,18 @@ description: Phase 2 de la migration d’AD RMS vers Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 04ca9cdfe3f528d71ee45a88a81b59268a6357aa
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: ebc5a9867bad267b71f2f4ae6ebe0e22c9e7a607
+ms.sourcegitcommit: 4c4af9766342272eaa18df720ba3738d44ba99c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150464"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51707757"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -125,9 +125,9 @@ Voici les modifications que vous pouvez être amené à apporter aux modèles po
 
 - Si vous avez créé des modèles personnalisés Azure Information Protection avant la migration, vous devez les exporter et importer manuellement.
 
-- Si vos modèles dans AD RMS utilisaient le groupe **ANYONE**, vous devrez peut-être ajouter des utilisateurs ou des groupes extérieurs à votre organisation. 
+- Si vos modèles dans AD RMS utilisaient le groupe **ANYONE**, vous devrez peut-être ajouter manuellement des utilisateurs ou des groupes. 
     
-    Dans AD RMS, le groupe ANYONE accordait des droits à tous les utilisateurs authentifiés. Ce groupe est automatiquement converti à tous les utilisateurs dans votre locataire Azure AD. Si vous n’avez pas besoin d’accorder des droits à d’autres utilisateurs, aucune action supplémentaire n’est nécessaire. En revanche, si vous utilisiez le groupe ANYONE pour inclure des utilisateurs externes, vous devez ajouter manuellement ces utilisateurs et les droits que vous souhaitez leur accorder.
+    Dans AD RMS, le groupe ANYONE accordait des droits à tous les utilisateurs authentifiés par votre Active Directory local, et ce groupe n’est pas pris en charge par Azure Information Protection. L’équivalent le plus proche est un groupe qui est créé automatiquement pour tous les utilisateurs dans votre locataire Azure AD. Si vous utilisiez le groupe ANYONE pour vos modèles AD RMS, vous devrez peut-être ajouter des utilisateurs et les droits que vous souhaitez leur accorder.
 
 ### <a name="procedure-if-you-created-custom-templates-before-the-migration"></a>Procédure à effectuer si vous avez créé des modèles personnalisés avant la migration
 
@@ -143,7 +143,7 @@ Vous pouvez ensuite publier ou archiver ces modèles comme vous le feriez pour t
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Procédure à effectuer si vos modèles dans AD RMS utilisaient le groupe **ANYONE**
 
-Si vos modèles AD RMS utilisaient le groupe **ANYONE**, celui-ci est automatiquement converti pour utiliser le groupe nommé **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<nom_client>.onmicrosoft.com**. Par exemple, ce groupe peut se présenter sous la même forme que dans l’exemple suivant pour Contoso : **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Ce groupe contient tous les utilisateurs de votre locataire Azure AD.
+Si vos modèles AD RMS utilisaient le groupe **ANYONE**, le groupe équivalent le plus proche dans Azure Information Protection est nommé **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<nom_locataire>.onmicrosoft.com**. Par exemple, ce groupe peut se présenter sous la même forme que dans l’exemple suivant pour Contoso : **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Ce groupe contient tous les utilisateurs de votre locataire Azure AD.
 
 Quand vous gérez des modèles et des étiquettes dans le portail Azure, ce groupe apparaît comme le nom de domaine de votre locataire dans Azure AD. Par exemple, ce groupe peut se présenter comme suit pour Contoso : **contoso.onmicrosoft.com**. Pour ajouter ce groupe, l’option affiche **Ajouter \<nom_organisation> - Tous les membres**.
 

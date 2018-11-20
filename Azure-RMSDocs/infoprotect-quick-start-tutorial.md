@@ -4,15 +4,15 @@ description: Tutoriel de prise en main d’environ 15 minutes, permettant de mod
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2018
+ms.date: 11/14/2018
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: 9e5fb752e75a6b6616fa0ef347c6a6102cd859fa
-ms.sourcegitcommit: 8e43a41998045fe574710e9da0b7747eaeccdba1
+ms.openlocfilehash: 7f8fc76b0ad3d90d422cc18229d10b1f1a8d6e8d
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51273597"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644741"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Tutoriel : Modifier la stratégie Azure Information Protection et créer une nouvelle étiquette
 
@@ -67,9 +67,11 @@ C’est parti !
 
 ### <a name="edit-the-policy-settings"></a>Modifier les paramètres de stratégie
 
-1. Ouvrez une nouvelle fenêtre de navigateur, puis [connectez-vous au portail Azure](https://portal.azure.com). Accédez ensuite à **Azure Information Protection**. 
+1. Ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général. Accédez ensuite à **Azure Information Protection**. 
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    
+    Si vous n’êtes pas l’administrateur général, utilisez le lien suivant pour les autres rôles : [Connexion au portail Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Sélectionnez **Classifications** > **Stratégies** > **Global** pour ouvrir le panneau **Stratégie : Global**. 
 
@@ -89,7 +91,7 @@ C’est parti !
 
 6. Par ailleurs, assurez-vous que le paramètre **Afficher la barre Information Protection dans les applications Office** est défini sur **Activé**.
 
-7. Sélectionnez **Enregistrer** sur ce panneau **Stratégie : Globale** et, s’il vous est demandé de confirmer votre action, sélectionnez **OK**. Fermez ce panneau.
+7. Sélectionnez **Enregistrer** dans ce panneau **Stratégie : Globale** et, s’il vous est demandé de confirmer votre action, sélectionnez **OK**. Fermez ce panneau.
 
 ### <a name="create-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Créer une étiquette pour la protection, de marquages visuels et d’une condition pour une demande de classification
 

@@ -4,15 +4,15 @@ description: Créez et configurez une nouvelle étiquette qui classifie les docu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 921b1343e533b4643d97098350c34f5a69bfcf3e
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: dca90c7635702226e7414947aad6f3d89cf91efd
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026983"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644645"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques
 
@@ -20,7 +20,7 @@ Ce démarrage rapide vise à créer une nouvelle étiquette qui n’est visible 
 
 Cette configuration utilise une stratégie délimitée.
 
-Elle prend moins de 10 minutes.
+Cette configuration prend moins de 10 minutes.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -48,9 +48,11 @@ Pour obtenir la liste complète des prérequis d’Azure Information Protection,
 
 Commencez par créer votre nouvelle étiquette.
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**.
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**.
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    
+    Si vous n’êtes pas l’administrateur général, utilisez le lien suivant pour les autres rôles : [Connexion au portail Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Dans l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection – Étiquettes**, cliquez sur **Ajouter une nouvelle étiquette**.
 

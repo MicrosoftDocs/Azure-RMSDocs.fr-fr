@@ -4,15 +4,15 @@ description: Tutoriel d’introduction qui vous guide dans la configuration des 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: ead65d9fef1b6c4f0087757e044caccee14805df
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: b9f60d0e8cc61a1d38b2992c0d430507bf494d18
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027000"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644644"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutoriel : Configurer des paramètres de stratégie Azure Information Protection qui fonctionnent ensemble
 
@@ -41,7 +41,7 @@ Pour suivre ce tutoriel, il vous faut :
 
 2. Vous avez ajouté le panneau Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
 
-    Pour obtenir de l’aide sur ces actions, voir [Démarrage rapide : Ajouter Azure Information Protection au Portail Azure et afficher la stratégie](quickstart-viewpolicy.md).
+    Pour obtenir de l’aide sur ces actions, voir [Démarrage rapide : Ajouter Azure Information Protection au Portail Azure et afficher la stratégie](quickstart-viewpolicy.md)
 
 3. Le client Azure Information Protection est installé sur votre ordinateur. 
     
@@ -69,9 +69,11 @@ Au lieu de demander aux utilisateurs d’étiqueter manuellement leurs documents
 
 Sur le Portail Azure, nous allons modifier la stratégie globale de façon à changer les paramètres de stratégie pour tous les utilisateurs.
 
-1. Ouvrez une nouvelle fenêtre de navigateur, puis [connectez-vous au Portail Azure](https://portal.azure.com). Accédez ensuite à **Azure Information Protection**. 
+1. Ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général. Accédez ensuite à **Azure Information Protection**. 
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    
+    Si vous n’êtes pas l’administrateur général, utilisez le lien suivant pour les autres rôles : [Connexion au portail Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Sélectionnez **Classifications** > **Stratégies** > **Global** pour ouvrir le panneau **Stratégie : Global**. 
 

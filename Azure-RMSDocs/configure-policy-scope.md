@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f1623c14377feb545f945a447363e7f3d12e8dd3
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: a55a073a0b567e9e92b11fdcb1a5c8032c4e94c7
+ms.sourcegitcommit: 03a9fc3f1b96a4edc0e2a9d538ce04a0579023be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026568"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52268051"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées
 
@@ -28,6 +28,8 @@ Pour les applications prenant en charge le client Azure Information Protection, 
 Notez qu’en plus des applications de bureau Office qui prennent en charge le client Azure Information Protection, les étiquettes sont aussi prises en charge avec PowerShell et le scanneur Azure Information Protection. Vous pouvez donc créer et configurer des stratégies délimitées pour les comptes qui exécutent des commandes PowerShell, ou le scanneur. 
 
 Les stratégies délimitées, comme les étiquettes, sont classées dans le portail Azure. Si un utilisateur est configuré pour plusieurs étendues, une stratégie effective est calculée pour cet utilisateur avant d’être téléchargée. Selon l’ordre des stratégies, le dernier paramètre de stratégie est appliqué. Les étiquettes que l’utilisateur voit proviennent de la stratégie globale et des étiquettes supplémentaires des stratégies délimitées auxquelles appartient l’utilisateur.
+
+L’exception est lorsqu’un utilisateur de votre locataire ouvre un document ou un e-mail étiqueté et que cet utilisateur n’est pas inclus dans l’étendue de l’étiquette. Dans ce scénario, l’utilisateur voit le nom de l’ensemble d’étiquettes, mais l’étiquette n’est pas affichée comme étant disponible pour la sélection.  
 
 Étant donné qu’une stratégie délimitée hérite toujours des étiquettes et paramètres de la stratégie globale, les étiquettes de la stratégie globale s’affichent quand vous créez ou modifiez une stratégie délimitée. Toutefois, vous ne pouvez pas modifier les étiquettes de la stratégie globale quand vous modifiez une stratégie délimitée. En revanche, vous pouvez ajouter des sous-étiquettes à ces étiquettes héritées.
 
@@ -58,4 +60,3 @@ Le client Azure Information Protection vérifie toutes les modifications à chaq
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour obtenir un exemple montrant comment personnaliser la stratégie par défaut et voir le comportement qui en résulte dans une application Office, suivez le tutoriel [Modifier la stratégie et créer une nouvelle étiquette](infoprotect-quick-start-tutorial.md).
-

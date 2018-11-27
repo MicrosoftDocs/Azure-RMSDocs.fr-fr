@@ -5,7 +5,7 @@ items:
   items:
   - name: À propos du kit SDK Microsoft Information Protection
     href: overview.md
-- name: Configuration
+- name: Setup
   href: setup-configure-mip.md
 - name: Guides de démarrage rapide
   items:
@@ -55,16 +55,18 @@ items:
     - name: Gestionnaire de l’API de stratégie (C++)
       href: concept-handler-policy-cpp.md
       items:
-      - name: Audit
-        href: concept-auditing-policy-cpp.md
       - name: État de l’exécution
-        href: concept-auditing-policy-executionstate-cpp.md
+        href: concept-handler-policy-executionstate-cpp.md
       - name: Actions de calcul
-        href: concept-auditing-policy-computeactions-cpp.md
+        href: concept-handler-policy-computeactions-cpp.md
+      - name: Audit
+        href: concept-handler-policy-auditing-cpp.md
     - name: Gestionnaire de l’API de protection (C++)
       href: concept-handler-protection-cpp.md
   - name: Étiquettes
     href: concept-classification-labels.md
+  - name: Métadonnées
+    href: concept-mip-metadata.md
   - name: Observateurs pour async (C++)
     href: concept-async-observers.md
     items:
@@ -74,7 +76,7 @@ items:
       href: concept-async-observers-policy-cpp.md
     - name: Observateurs de l’API de protection (C++)
       href: concept-async-observers-protection-cpp.md
-- name: Informations de référence
+- name: Référence
   items:
   - name: Bibliothèque C++
     href: reference/mip-sdk-reference.md
@@ -109,7 +111,7 @@ items:
         href: reference/class_mip_contentlabel.md
       - name: CustomAction
         href: reference/class_mip_customaction.md
-      - name: Error
+      - name: Erreur
         href: reference/class_mip_error.md
       - name: ExecutionState
         href: reference/class_mip_executionstate.md
@@ -141,7 +143,7 @@ items:
         href: reference/class_mip_justificationrequirederror.md
       - name: JustifyAction
         href: reference/class_mip_justifyaction.md
-      - name: Label
+      - name: Étiquette
         href: reference/class_mip_label.md
       - name: LabelingOptions
         href: reference/class_mip_labelingoptions.md
@@ -205,7 +207,7 @@ items:
         href: reference/class_mip_removeprotectionaction.md
       - name: RemoveWatermarkAction
         href: reference/class_mip_removewatermarkaction.md
-      - name: Stream
+      - name: Flux
         href: reference/class_mip_stream.md
       - name: TransientNetworkError
         href: reference/class_mip_transientnetworkerror.md
@@ -223,11 +225,11 @@ items:
     href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
   - name: SDK (préversion publique)
     href: http://aka.ms/mipsdk
-  - name: Exemples
+  - name: exemples
     href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
-ms.openlocfilehash: 44d1e464abc351e4e4e270c6992172d783e3f09e
-ms.sourcegitcommit: 05fdaf43f74013eecb5886b95b09dd5e00670753
+ms.openlocfilehash: 62fe0af32efa5c68828cb8ab307f70350c8992be
+ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51527922"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52304012"

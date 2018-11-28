@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 6c0b9a878f98081312a0b81b965e75bcc0ade7e8
-ms.sourcegitcommit: 13b5b8e7457b09e1b828dad3cdfae086fd019819
+ms.openlocfilehash: 2790c64095a6fca4a33f70aeada68fa0c6668020
+ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51508440"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52386727"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installation et configuration du kit SDK Microsoft Information Protection (MIP) 
 
@@ -21,11 +21,18 @@ Le kit SDK MIP est pris en charge sur les plateformes suivantes :
 
 [!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
 
+## <a name="prerequisites"></a>Prérequis
+
 Veillez à consulter les rubriques suivantes avant de commencer :
 
 - [Qu’est-ce que le Centre de sécurité et conformité Office 365 ?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [Qu’est-ce qu’Azure Information Protection ?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [Comment la protection fonctionne-t-elle dans Azure Information Protection ?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
+
+> [!IMPORTANT]
+> **Afin de respecter la confidentialité de l’utilisateur, vous devez demander à l’utilisateur à donner son consentement avant d’activer la journalisation automatique.** L’exemple suivant est un message standard que Microsoft utilise pour la notification de journalisation :
+>
+> *En activant la journalisation des erreurs et des performances, vous acceptez d’envoyer les données des erreurs et des performances à Microsoft. Microsoft collecte les données des erreurs et des performances via Internet (« Données »). Microsoft utilise ces données pour fournir et améliorer la qualité, la sécurité et l’intégrité des produits et des services Microsoft. Par exemple, nous analysons les performances et la fiabilité, comme les fonctionnalités que vous utilisez, la rapidité de réponse des fonctionnalités, les performances de l’appareil, les interactions de l’interface utilisateur et tous les problèmes que vous rencontrez avec le produit. Les données incluent également des informations sur la configuration de votre logiciel, comme le logiciel en cours d’exécution et l’adresse IP.*
 
 ## <a name="sign-up-for-an-office-365-subscription"></a>S’abonner à Office 365
 
@@ -41,7 +48,7 @@ De nombreux exemples du kit SDK requièrent l’accès à un abonnement Office 3
 
 ## <a name="configure-sensitivity-labels"></a>Configurer les étiquettes de sensibilité
 
-Si vous utilisez actuellement Azure Information Protection, vous devez prendre les mesures nécessaires pour migrer vos étiquettes vers le Centre de sécurité et conformité Office 365. Pour plus d’informations sur ce processus, consultez [Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365](/azure/information-protection/configure-policy-migrate-labels). 
+Si vous utilisez actuellement Azure Information Protection, vous devez migrer vos étiquettes au centre de conformité et de sécurité Office 365. Pour plus d’informations sur ce processus, consultez [Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365](/azure/information-protection/configure-policy-migrate-labels). 
 
 ## <a name="configure-your-client-workstation"></a>Configurer votre station de travail cliente
 

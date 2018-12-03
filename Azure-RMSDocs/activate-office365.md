@@ -4,52 +4,44 @@ description: Instructions d’activation du service Azure Rights Management quan
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: be52339918224f8a7a9996efbd5cfd8d937e5d7b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: ab3d976a1aa39829e83aaef0c34fdf5f3f377fe7
+ms.sourcegitcommit: eefbf103e5360594248969281b8091c8c096b352
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148211"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671027"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Comment activer Azure Rights Management à partir du centre d’administration Office 365
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Utilisez ces instructions si vous avez accès au service Azure Rights Management à partir du centre d’administration Office 365. Par exemple, vous avez un abonnement pour Office 365 E3 ou Office 365 E5.
+Suivez ces instructions si vous avez accès au service Azure Rights Management à partir du Centre d’administration Office 365 et que vous êtes administrateur général. 
 
-1. Après avoir souscrit un plan Office 365 incluant Rights Management, [connectez-vous à Office 365](https://portal.office.com/) avec votre compte professionnel ou scolaire qui a le rôle d’administrateur général de votre déploiement d’Office 365.
+Pour activer le service Azure Rights Management, vous devez avoir un [plan Premium Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou un [plan Office 365 incluant Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Par exemple, votre organisation dispose d’un plan Office 365 E3 ou Office 365 E5. 
 
-2. Si le Centre d’administration Office 365 ne s’affiche pas automatiquement, sélectionnez l’icône de lancement d’application dans l’angle supérieur gauche, puis choisissez **Admin**. La vignette **Admin** s'affiche uniquement pour les administrateurs Office 365.
+Si vous avez des questions sur les exigences de l’abonnement ou que vous avez besoin d’aide pour activer le service, [contactez le Support Microsoft](information-support.md#to-contact-microsoft-support) ou utilisez vos canaux de support standard.
 
+1. Après avoir vérifié que votre organisation dispose d’un plan incluant Azure Rights Management, accédez à la [page Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) du Centre d’administration Office 365.
+    
+    Si vous êtes invité à vous connecter, utilisez un compte qui est administrateur général pour Office 365.
+    
     > [!TIP]
     > Pour obtenir l'aide du centre d'administration, consultez [À propos du Centre d'administration Office 365](https://support.office.com/article/About-the-Office-365-Admin-Center-758befc4-0888-4009-9f14-0d147402fd23).
+    
+    Si vous préférez accéder à la page **Rights Management** sur le Centre d’administration : **Paramètres** > **Services et compléments** > **Microsoft Azure Information Protection** > **Gérer les paramètres de Microsoft Azure Information Protection**.
 
-3. Accédez à la page **Rights Management** ou utilisez la fonctionnalité de recherche.
-    
-    - Pour naviguer : **Paramètres** > **Services et compléments** > **Microsoft Azure Information Protection** > **Gérer les paramètres de Microsoft Azure Information Protection**
-    
-    - Pour rechercher : dans la zone de recherche de la page **Accueil**, tapez **rights management** puis, dans les résultats de la recherche, cliquez sur **Paramètres Azure Rights Management**, puis sur **Gérer les paramètres Microsoft Azure Information Protection**. 
-    
-    > [!NOTE]
-    >En fonction de votre écran d’affichage, vous pouvez être amené à faire défiler pour accéder à cette option. Cependant, si elle n’apparaît pas dans la page et qu’elle n’est pas retournée dans les résultats de la recherche, il est possible que votre plan de services n’inclue pas le service Azure Rights Management pour Azure Information Protection.
-    >
-    >Pour activer le service Azure Rights Management, vous devez avoir un [plan Premium Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou un [plan Office 365 incluant Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). 
-    
-    Si vous avez besoin d’aide pour activer le service ou si vous avez des questions sur les exigences de l’abonnement, [contactez le support Microsoft](information-support.md#to-contact-microsoft-support) ou utilisez vos canaux de support standard.
+2. Dans la page **Rights Management**, cliquez sur **Activer**.
 
-4. Dans la page **Rights Management**, cliquez sur **Activer**.
-
-5. À l'invite **Voulez-vous activer Rights Management ?**, cliquez sur **Activer**.
+3. Lorsque le message **Voulez-vous activer Rights Management ?** apparaît, cliquez sur **Activer**.
 
 Vous devez maintenant voir **Rights Management est activé** , ainsi qu'une option de désactivation.
-
 
 ## <a name="next-steps"></a>Étapes suivantes
 Reprenez la lecture de [Activation d’Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).

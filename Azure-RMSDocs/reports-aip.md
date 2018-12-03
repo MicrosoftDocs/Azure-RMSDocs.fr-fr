@@ -4,19 +4,19 @@ description: Guide pratique pour utiliser la création de rapports centralisée 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/13/2018
+ms.date: 11/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 85ca097a1808c2940ce534c7ce3d0542aaf3f27a
-ms.sourcegitcommit: 0f9e2ba05b61f8db08387576a697b8deff45fd36
+ms.openlocfilehash: 98403232311731b137719c613b2ce061a236b706
+ms.sourcegitcommit: ff77e4da1f7c7cf2262c208f8e58b85cfdb54903
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51611418"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52421009"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -44,6 +44,18 @@ Par exemple, vous serez en mesure de voir ce qui suit :
     
     - Applications utilisées pour l’étiquetage
 
+- Dans **Journaux d’activité**, en sélectionnant une période :
+    
+    - Quelles actions d’étiquetage ont été effectuées par un utilisateur donné
+    
+    - Quelles actions d’étiquetage ont été effectuées sur un appareil donné
+    
+    - Quels utilisateurs ont accédé à un document étiqueté donné
+    
+    - Quelles actions d’étiquetage ont été effectuées pour un chemin d’accès donné
+    
+    - Quelles actions d’étiquetage ont été effectuées par une application donnée, comme l’Explorateur de fichiers et le clic droit, ou le module PowerShell AzureInformationProtection
+
 - À partir du rapport de **découverte de données** :
 
     - Fichiers qui se trouvent sur vos référentiels de données analysés
@@ -52,7 +64,7 @@ Par exemple, vous serez en mesure de voir ce qui suit :
     
     - Fichiers qui contiennent des informations sensibles pour des catégories connues, telles que les données financières et les informations personnelles, et emplacement des fichiers en fonction de ces catégories
     
-Les rapports utilisent [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) pour stocker les données dans un espace de travail qui vous appartient. Si vous êtes familiarisé avec le langage de requête, vous pouvez modifier les requêtes ainsi que créer des rapports et tableaux de bord Power BI. Le tutoriel suivant peut s’avérer utile pour comprendre le langage de requête : [Prise en main du portail Analytics](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
+Les rapports utilisent [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) pour stocker les données dans un espace de travail appartenant à votre organisation. Si vous êtes familiarisé avec le langage de requête, vous pouvez modifier les requêtes ainsi que créer des rapports et tableaux de bord Power BI. Le tutoriel suivant peut s’avérer utile pour comprendre le langage de requête : [Prise en main du portail Analytics](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
 
 Pour plus d’informations, lisez le billet de blog : [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
 
@@ -80,7 +92,7 @@ Pour générer ces rapports, les points de terminaison envoient les types suivan
 
 - Version du système d’exploitation client.
 
-Ces informations sont stockées dans un espace de travail Log Analytics Azure que vous possédez et que les utilisateurs peuvent consulter s’ils disposent des droits d’accès à cet espace de travail. Pour plus d’informations sur la configuration de l’accès à votre espace de travail, consultez la section [Gérer les comptes et les utilisateurs](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) dans la documentation Azure.
+Ces informations sont stockées dans un espace de travail Azure Log Analytics appartenant à votre organisation et consultable par les utilisateurs qui disposent des droits d’accès correspondants. Pour plus d’informations sur la configuration de l’accès à votre espace de travail, consultez la section [Gérer les comptes et les utilisateurs](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) dans la documentation Azure.
 
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Prérequis pour l’analytique Azure Information Protection
 Pour afficher les rapports Azure Information Protection et créer les vôtres, vérifiez que les conditions suivantes sont respectées.
@@ -88,7 +100,7 @@ Pour afficher les rapports Azure Information Protection et créer les vôtres, v
 |Condition requise|Plus d’informations|
 |---------------|--------------------|
 |Abonnement Azure qui inclut Log Analytics|Consultez la page [Tarifs Azure Log Analytics](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Si vous ne possédez pas un abonnement Azure ou n’utilisez pas Azure Log Analytics, la page des tarifs inclut un lien pour un essai gratuit.|
-|Préversion actuelle du client Azure Information Protection.|Si vous n’avez pas déjà installé la préversion actuelle du client, vous pouvez la télécharger et l’installer à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
+|Version en disponibilité générale du client Azure Information Protection.|Si vous n’avez pas déjà installé cette version du client, vous pouvez la télécharger et l’installer sur le [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
 |Pour le rapport de **découverte et des risques** : <br /><br />- Vous avez déployé au moins une instance du scanneur Azure Information Protection (préversion actuelle)|Pour obtenir des instructions d’installation, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md). <br /><br />Si vous effectuez la mise à niveau à partir d’une version précédente du scanneur, consultez [Mise à niveau du scanneur Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 
 
@@ -115,6 +127,12 @@ Quand l’espace de travail est configuré, vous êtes prêt à afficher les rap
 Dans le panneau Azure Information Protection, recherchez les options du menu **Tableaux de bord**, puis sélectionnez l’une des options suivantes :
 
 - **Rapport d’utilisation (préversion)**  : utilisez ce rapport pour voir comment vos étiquettes sont utilisées. 
+
+- **Journaux d’activité (préversion)** : utilisez ce rapport pour voir les actions d’étiquetage effectuées par les utilisateurs sur les appareils et les chemins d'accès.
+    
+    Ce rapport est actuellement en cours de déploiement auprès des locataires ; si vous ne le voyez pas, réessayez quelques jours plus tard. 
+    
+    Ce rapport comporte une option **Colonnes** qui permet d’afficher plus d’informations sur l’activité que l’affichage par défaut. L’une de ces colonnes, **Risque des appareils**, affiche des données issues de Windows Defender lorsque cette application est intégrée à Azure Information Protection.
 
 - **Découverte de données (préversion)**  : utilisez ce rapport pour afficher des informations sur les fichiers détectés par les scanneurs.
 

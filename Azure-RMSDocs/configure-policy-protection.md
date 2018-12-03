@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 0ee7333baebd0a34f518ff9500df95ed57ed2b01
-ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
+ms.openlocfilehash: e16c50422268a05596ebc28e09d464959fd1e0b2
+ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751166"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52303921"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -107,9 +107,10 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
         ###### <a name="more-information-about-add-any-authenticated-users"></a>Informations supplémentaires sur **Ajouter tous les utilisateurs authentifiés** 
         Ce paramètre ne restreint pas l’accès au contenu protégé par l’étiquette, tout en chiffrant le contenu et en vous proposant des options permettant de limiter la façon d’accéder au contenu (expiration et l’accès hors connexion) et l’utilisation qui peut en être faite (autorisations). Toutefois, l’application qui ouvre le contenu protégé doit être en mesure de prendre en charge l’authentification utilisée. Pour cette raison, les fournisseurs de réseaux sociaux fédérés, tels que Google, et l’authentification unique par code secret doivent être utilisés uniquement pour les e-mails, et seulement lorsque vous utilisez Exchange Online et les nouvelles fonctionnalités de chiffrement de messages Office 365. Les comptes Microsoft peuvent être utilisées avec la visionneuse Azure Information Protection et avec Office 2016 Démarrer en un clic. 
           
-        Quelques scénarios classiques pour tous les paramètres utilisateurs authentifiés : tous les utilisateurs peuvent afficher le contenu, mais vous souhaitez restreindre son utilisation. Par exemple, vous ne souhaitez pas que le contenu soit modifié, copié ou imprimé.  
-            - Vous n’avez pas besoin de restreindre l’accès au contenu, mais vous souhaitez pouvoir suivre qui l’ouvre et, éventuellement, le révoquer.  
-            - Vous voulez que le contenu soit chiffré au repos et en transit, mais aucun contrôle d’accès n’est nécessaire.
+        Quelques scénarios classiques pour la définition des utilisateurs authentifiés :
+        - Tout le monde peut consulter le contenu, mais vous souhaitez imposer des restrictions à son utilisation. Par exemple, vous ne souhaitez pas que le contenu soit modifié, copié ou imprimé.
+        - Vous n’avez pas besoin de restreindre l’accès au contenu, mais vous souhaitez savoir qui l’ouvre et, éventuellement, le révoquer.
+        - Vous voulez que le contenu soit chiffré au repos et en transit, mais aucun contrôle d’accès n’est nécessaire.
         
     - Choisissez **Entrer les détails** pour spécifier manuellement des adresses e-mail pour les utilisateurs individuels ou les groupes (internes ou externes). Vous pouvez utiliser cette option pour spécifier tous les utilisateurs d’une autre organisation en entrant un nom de domaine de cette organisation. Vous pouvez aussi utiliser cette option pour les fournisseurs de réseaux sociaux, en entrant leur nom de domaine comme **gmail.com**, **hotmail.com** ou **outlook.com**.
         

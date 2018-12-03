@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9813f71535de9058c2cb3382ae590ba5f8102fd1
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: d6870982e86c1740b2492dac720578d6c771666c
+ms.sourcegitcommit: aae91cee32c59277a6dfffab35177cd4247169e4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644792"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52450102"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -64,7 +64,7 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
     - **Administrateur général/administrateur de la société**
     
     > [!NOTE] 
-    > Si votre locataire a été migré vers le magasin d’étiquetage unifié, pour gérer les étiquettes à partir du portail Azure, votre compte doit également être autorisé à accéder au Centre de sécurité et de conformité Office 365. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Si votre locataire a été migré vers le magasin d’étiquetage unifié, votre compte doit également être autorisé à accéder au Centre de sécurité et de conformité Office 365 pour pouvoir gérer les étiquettes sur le Portail Azure. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Pour accéder au panneau Azure Information Protection pour la première fois
 

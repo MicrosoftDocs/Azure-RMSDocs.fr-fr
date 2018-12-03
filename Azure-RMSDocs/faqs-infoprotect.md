@@ -4,18 +4,18 @@ description: Vous avez une question au sujet de l’utilisation d’Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 2c0d391e2d00ec7d0bc09d98de3fe6f502f999a4
-ms.sourcegitcommit: 4c4af9766342272eaa18df720ba3738d44ba99c8
+ms.openlocfilehash: a4aa5b1a6375655b9b6ab20f092a7def47187225
+ms.sourcegitcommit: ff77e4da1f7c7cf2262c208f8e58b85cfdb54903
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51707740"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52421039"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
 
@@ -68,6 +68,24 @@ Non. Quand vous étiquetez un e-mail comportant des pièces jointes, ces derniè
 Azure Information Protection utilisant des métadonnées persistantes pour la classification, notamment une étiquette de texte en clair, ces informations peuvent être lues par les solutions DLP et d’autres applications. 
 
 Pour plus d’informations et pour obtenir des exemples d’utilisation de ces métadonnées avec des règles de flux de messagerie Exchange Online, consultez [Configuration des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection](configure-exo-rules.md).
+
+## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>Peut-on créer un modèle de document qui inclut automatiquement la classification ?
+
+Oui. Vous pouvez configurer une étiquette qui [applique un en-tête ou un pied de page comportant le nom d’étiquette](configure-policy-markings.md). Si toutefois cela ne répond pas à vos besoins, vous pouvez créer un modèle de document présentant la mise en forme de votre choix et ajouter la classification comme code de champ. 
+
+Par exemple, vous pouvez avoir une table dans l’en-tête de votre document qui affiche la classification, ou utiliser une formulation spécifique pour une introduction faisant référence à la classification du document.
+
+Pour ajouter ce code de champ dans votre document :
+
+1. Étiquetez le document et enregistrez-le. Cette action crée de nouveaux champs de métadonnées que vous pouvez alors utiliser dans votre code de champ.
+
+2. Dans le document, placez le curseur à l’endroit où vous souhaitez ajouter la classification de l’étiquette ; ensuite, dans l’onglet **Insérer**, sélectionnez **Texte** > **QuickPart** > **Champ**.
+
+3. Dans la liste déroulante **Catégories** de la boîte de dialogue **Champ**, sélectionnez **Informations sur le document**. Ensuite, dans la liste déroulante **Noms de champs**, sélectionnez **DocProperty**.
+
+4. Dans la liste déroulante **Propriété**, sélectionnez **Sensibilité**, puis **OK**.
+
+La classification de l’étiquette actuelle s’affiche dans le document ; cette valeur est actualisée automatiquement à chaque fois que vous ouvrez le document ou que vous utilisez le modèle. Par conséquent, lorsque l’étiquette change, la classification qui s’affiche pour ce code de champ est automatiquement mise à jour dans le document.
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>En quoi la classification Azure Information Protection pour les e-mails est-elle différente de celle des messages Exchange ?
 

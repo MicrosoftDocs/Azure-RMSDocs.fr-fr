@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 435432c1c759c040482096393c3a36cdee02691b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: f6e84919653d68fb4f09671b233ccdc31bf1a82f
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148492"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024278"
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Options de boîte de dialogue pour l'application de partage Rights Management
 
@@ -24,7 +24,7 @@ ms.locfileid: "44148492"
 Ces informations vous aident à spécifier les options des boîtes de dialogue **Ajouter une protection** ou **Partage protégé** de l'application de partage RMS. Ces boîtes de dialogue s’affichent quand vous voulez [protéger un fichier à partager](sharing-app-protect-by-email.md) ou [protéger un fichier sur place](sharing-app-protect-in-place.md) et que vous choisissez des autorisations personnalisées.
 
 > [!IMPORTANT]
-> Si les options diffèrent de celles présentées ici, vous ne disposez probablement pas de la dernière version de l'application de partage installée. Vous pouvez télécharger la version la plus récente à partir de la page [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) .
+> Si les options diffèrent de celles présentées ici, vous ne disposez probablement pas de la dernière version de l'application de partage installée. Vous pouvez télécharger la version la plus récente à partir de la page [Microsoft Rights Management](https://go.microsoft.com/fwlink/?LinkId=303970) .
 > 
 > Comment savoir si vous disposez de la dernière version ? Recherchez l'**application de partage Microsoft Rights Management** répertoriée dans Programmes et fonctionnalités, puis vérifiez le numéro de version correspondant. Pour pouvoir afficher et utiliser les options du tableau, la version doit être au moins **1.0.1770.0**. Vous pouvez vérifier le numéro de la dernière version dans la page de téléchargement.
 

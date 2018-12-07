@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 218f20f7ad42b3f7b6e1a47a8c1f57556df612c3
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 9156f7af9cb7915595f911b6d0ff8fa70332d8d7
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150719"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023445"
 ---
 # <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Protection d'un fichier sur un appareil (Protéger sur place) à l'aide de l'application de partage Rights Management
 
@@ -24,7 +24,7 @@ ms.locfileid: "44150719"
 Lorsque vous protégez un fichier sur place, celui-ci remplace le fichier non protégé d'origine. Vous pouvez ensuite laisser le fichier là où il est, le copier vers un autre dossier ou appareil, ou partager le dossier dans lequel il se trouve : le fichier reste protégé. Vous pouvez aussi joindre le fichier protégé à un e-mail, même si la méthode recommandée pour partager un fichier protégé par e-mail consiste à le faire directement à partir de l’Explorateur de fichiers ou d’une application Office (consultez [Protéger un fichier que vous partagez par e-mail en utilisant l’application de partage Rights Management](sharing-app-protect-by-email.md)).
 
 > [!TIP]
-> Si vous rencontrez des erreurs lorsque vous tentez de protéger des fichiers, reportez-vous au [FAQ relatif à l'application de partage Microsoft Rights Management pour Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
+> Si vous rencontrez des erreurs lorsque vous tentez de protéger des fichiers, reportez-vous au [FAQ relatif à l'application de partage Microsoft Rights Management pour Windows](https://go.microsoft.com/fwlink/?LinkId=303971).
 
 ## <a name="to-protect-a-file-on-a-device-protect-in-place"></a>Pour protéger un fichier sur un appareil (Protéger sur place)
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 283e3dc21997f455301fcd7a6edb3caf84f82572
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 9ca34cc149f86fa99174ea9792d05d7dfecc35dc
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150821"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023571"
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Modifier les autorisations des fichiers qui ont été protégés par Rights Management
 
@@ -65,7 +65,7 @@ Si vous souhaitez supprimer complètement toutes les autorisations pour que le f
 >
 > Si votre organisation n’utilise pas Azure Information Protection ou AD RMS, vous pouvez demander un compte gratuit acceptant vos informations d’identification pour pouvoir utiliser des fichiers protégés à l’aide de RMS :
 >
-> -   Pour demander ce compte, cliquez sur le lien [RMS for Individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
+> -   Pour demander ce compte, cliquez sur le lien [RMS for Individuals](https://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     Lorsque vous vous inscrivez, utilisez l'adresse de messagerie de votre organisation plutôt qu'une adresse personnelle. Si vous vous inscrivez parce que vous reçu une pièce protégée jointe à un message électronique, utilisez l'adresse de messagerie à laquelle ce message a été envoyé.
 > -   Pour plus d’informations, consultez [RMS for individuals et Azure Rights Management](../rms-for-individuals.md).

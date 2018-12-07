@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 944d47d77efa06999e21ebe42b03a5b35733cc05
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 139198780f5a83b1336715dccf8540c2962cda00
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150090"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023293"
 ---
 # <a name="download-and-install-the-rights-management-sharing-application"></a>Télécharger et installer l'application de partage Rights Management
 
@@ -28,7 +28,7 @@ Pour installer l’application de partage RMS, vous ne devez pas nécessairement
 
 ## <a name="to-download-and-install-the-rights-management-sharing-application"></a>Pour télécharger et installer l’application de partage Rights Management
 
-1.  Accédez à la page [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft.
+1.  Accédez à la page [Microsoft Rights Management](https://go.microsoft.com/fwlink/?LinkId=303970) sur le site web Microsoft.
 
 2.  Dans la section **Ordinateurs**, cliquez sur l’icône de l’**application RMS pour Windows** et enregistrez le fichier **Setup.exe** pour installer l’application de partage Microsoft Rights Management.
 

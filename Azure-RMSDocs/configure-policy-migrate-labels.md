@@ -1,5 +1,5 @@
 ---
-title: Migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365
+title: Migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365 - AIP
 description: Migrez les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365 pour les clients qui prennent en charge l’étiquetage unifié.
 author: cabailey
 ms.author: cabailey
@@ -9,12 +9,12 @@ ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 771cbb26a842cbf19184ace94ae47ba9d549a33f
-ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
+ms.openlocfilehash: be48797931dc0e8c76f29094715df37d6488f800
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52953327"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024006"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365
 
@@ -29,7 +29,7 @@ Une fois que vous avez migré vos étiquettes, vous pouvez ensuite les modifier 
 
 ### <a name="important-information-about-administrative-roles"></a>Informations importantes sur les rôles administratifs
 
-Les [rôles Azure AD](/active-directory/users-groups-roles/directory-assign-admin-roles) **Administrateur de la sécurité** et **Administrateur Information Protection** ne sont pas pris en charge par la plateforme d’étiquetage unifié. Si ces rôles administratifs sont utilisés dans votre organisation, avant de migrer vos étiquettes, ajoutez les utilisateurs qui disposent de ces rôles aux groupes de rôles **Administrateur de conformité** ou **Gestion de l’organisation** pour le Centre de sécurité et de conformité Office 365. Vous pouvez aussi créer un nouveau groupe de rôles pour ces utilisateurs et ajouter les rôles **Gestion de la rétention** ou **Configuration de l’organisation** à ce groupe. Pour obtenir des instructions, consultez [Donner aux utilisateurs accès au Centre de sécurité et de conformité Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
+Les [rôles Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) **Administrateur de la sécurité** et **Administrateur Information Protection** ne sont pas pris en charge par la plateforme d’étiquetage unifié. Si ces rôles administratifs sont utilisés dans votre organisation, avant de migrer vos étiquettes, ajoutez les utilisateurs qui disposent de ces rôles aux groupes de rôles **Administrateur de conformité** ou **Gestion de l’organisation** pour le Centre de sécurité et de conformité Office 365. Vous pouvez aussi créer un nouveau groupe de rôles pour ces utilisateurs et ajouter les rôles **Gestion de la rétention** ou **Configuration de l’organisation** à ce groupe. Pour obtenir des instructions, consultez [Donner aux utilisateurs accès au Centre de sécurité et de conformité Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
 
 Si vous ne donnez pas à ces utilisateurs accès au Centre de sécurité et de conformité à l’aide de l’une de ces configurations, ils perdront l’accès aux étiquettes et stratégies dans le portail Azure une fois vos étiquettes migrées.
 

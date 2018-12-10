@@ -4,18 +4,18 @@ description: Instructions pour installer, configurer et exécuter le scanneur Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/30/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: d29203359bcfdda09d7792f1f65a7c85723ee18f
-ms.sourcegitcommit: c1c34529f10dd7c1545ca37be9629b52be87e33e
+ms.openlocfilehash: 153009e9c9760649bd42d85bece421e3b8ee5afd
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52731147"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024244"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -62,7 +62,7 @@ Avant d’installer le scanneur Azure Information Protection, vérifiez que les 
 
 Si vous ne pouvez pas respecter toutes les conditions dans la table, car votre organisation l’interdit, consultez la section suivante pour obtenir des alternatives.
 
-Si toutes les conditions requises sont remplies, passez directement à la [section sur l’installation](#install-the-azure-information-protection-scanner).
+Si toutes les conditions requises sont remplies, passez directement à la [section sur l’installation](#install-the-scanner).
 
 ### <a name="deploying-the-scanner-with-alternative-configurations"></a>Déploiement du scanneur avec d’autres configurations
 
@@ -221,7 +221,7 @@ Dans son paramétrage par défaut, le scanneur s’exécute une seule fois en mo
     
         Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
-    Il existe d’autres paramètres de configuration que vous pouvez modifier. Par exemple, si les attributs de fichier sont modifiés et ce qui est enregistré dans les rapports. De plus, si votre stratégie Azure Information Protection inclut le paramètre qui exige un message de justification pour diminuer le niveau de classification ou supprimer la protection, spécifiez ce message à l’aide de cette applet de commande. Utilisez l’[aide en ligne](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) pour plus d’informations sur chaque paramètre de configuration. 
+    Il existe d’autres paramètres de configuration que vous pouvez modifier. Par exemple, si les attributs de fichier sont modifiés et ce qui est enregistré dans les rapports. De plus, si votre stratégie Azure Information Protection inclut le paramètre qui exige un message de justification pour diminuer le niveau de classification ou supprimer la protection, spécifiez ce message à l’aide de cette applet de commande. Utilisez l’[aide en ligne](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#optional-parameters) pour plus d’informations sur chaque paramètre de configuration. 
 
 2. Notez l’heure actuelle et redémarrez le scanneur en exécutant la commande suivante :
     
@@ -364,7 +364,7 @@ Autres facteurs qui affectent les performances de l’analyseur :
 
 - Le changement des conditions d’Azure Information Protection
     
-    Votre premier cycle d’analyse quand l’analyseur doit inspecter chaque fichier prend bien évidemment plus temps que les cycles d’analyse suivants qui, par défaut, inspectent uniquement les fichiers nouveaux et modifiés. Toutefois, si vous changez les conditions dans la stratégie Azure Information Protection, tous les fichiers sont réanalysés, comme décrit dans la [section précédente](#when-files-are-rescanned-by-the-azure-information-protection-scanner).
+    Votre premier cycle d’analyse quand l’analyseur doit inspecter chaque fichier prend bien évidemment plus temps que les cycles d’analyse suivants qui, par défaut, inspectent uniquement les fichiers nouveaux et modifiés. Toutefois, si vous changez les conditions dans la stratégie Azure Information Protection, tous les fichiers sont réanalysés, comme décrit dans la [section précédente](#when-files-are-rescanned).
 
 - Le niveau de journalisation que vous avez choisi
     

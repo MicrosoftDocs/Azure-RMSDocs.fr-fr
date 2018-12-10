@@ -4,18 +4,18 @@ description: Informations vous permettant de fournir de l’aide aux utilisateur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0359329513bdd2825f7121a95d4e940a76c401a5
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 43bc10ce43a4ba7a26958e562c4acc6e245ad76a
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148798"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024074"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -30,7 +30,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
     > [!TIP]
     > Exemples de vidéos à l’attention des utilisateurs finaux :
     > -   [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
-    > -   [Révocation et suivi de document Azure RMS](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
+    > -   [Révocation et suivi de document Azure RMS](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
 -   **Informations à l’attention des administrateurs**
     
@@ -48,7 +48,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
     
     - **Aide à la connexion**
         
-        Les utilisateurs peuvent être invités à fournir des informations d’identification quand le service Azure Rights Management doit authentifier un utilisateur et qu’il ne peut pas utiliser les informations d’identification mises en cache. Les informations d’identification nécessaires correspondent généralement au compte professionnel ou scolaire de l’utilisateur et au mot de passe associé à votre locataire Office 365 ou Azure Active Directory. Même si le service Azure Rights Management peut authentifier des comptes Azure AD, certaines applications peuvent également ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
+        Les utilisateurs peuvent être invités à fournir des informations d’identification quand le service Azure Rights Management doit authentifier un utilisateur et qu’il ne peut pas utiliser les informations d’identification mises en cache. Les informations d’identification nécessaires correspondent généralement au compte professionnel ou scolaire de l’utilisateur et au mot de passe associé au client (tenant) Office 365 ou Azure Active Directory. Même si le service Azure Rights Management peut authentifier des comptes Azure AD, certaines applications peuvent également ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Donnez aux utilisateurs et au support technique des instructions sur le compte à utiliser quand des utilisateurs sont invités à entrer des informations d’identification quand ils ont des applications utilisant le service Azure Rights Management.
         
@@ -73,13 +73,13 @@ En plus d’aider les utilisateurs à protéger des documents et des e-mails, le
 Pour savoir comment utiliser ce client pour les ordinateurs Windows, consultez le [Guide de l’utilisateur du client Azure Information Protection](./rms-client/client-user-guide.md).
 
 
-## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Utilisation de la protection des informations avec Office 365, Office 2016 ou Office 2013
+## <a name="using-information-protection-with-office365-office-2016-or-office2013"></a>Utilisation de la protection des informations avec Office 365, Office 2016 ou Office 2013
 Si vous utilisez le service Azure Rights Management et que vous n’avez pas installé le client Azure Information Protection, les utilisateurs ne voient pas la barre Azure Information Protection dans leurs applications Office pour poste de travail. Ils ne voient pas non plus le bouton **Protéger** sur le ruban, ni **Classer et protéger** dans l’Explorateur de fichiers. Ces ajouts facilitent la protection des documents et des e-mails. Ces utilisateurs doivent suivre des instructions similaires aux suivantes.
 
 > [!TIP]
 > Pour trouver de l’aide et des instructions spécifiques à une application qui ont trait à l’utilisation de la protection des données avec ces applications, recherchez **IRM**, ainsi que le nom et la version de l’application.
 
-#### <a name="to-protect-a-document-in-word-2013"></a>Pour protéger un document dans Word 2013
+#### <a name="to-protect-a-document-in-word2013"></a>Pour protéger un document dans Word 2013
 
 1.  Dans Microsoft Word, créez un document.
 
@@ -98,7 +98,7 @@ Par exemple, un droit d'utilisation Affichage uniquement ne permet pas à l'util
 
 Les droits d'utilisation sont affichés en haut du document grâce à une bannière de restriction. La bannière peut afficher les autorisations appliquées au document, ou un lien pour afficher celles-ci.
 
-#### <a name="to-protect-an-email-message-using-outlook-2013-and-exchange-online"></a>Pour protéger un message électronique à l'aide d'Outlook 2013 et d'Exchange Online
+#### <a name="to-protect-an-email-message-using-outlook2013-and-exchange-online"></a>Pour protéger un message électronique à l'aide d'Outlook 2013 et d'Exchange Online
 
 1.  Dans Outlook, créez un e-mail adressé à un destinataire au sein de votre organisation.
 

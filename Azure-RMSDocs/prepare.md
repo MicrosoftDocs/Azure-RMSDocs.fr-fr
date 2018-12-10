@@ -4,18 +4,18 @@ description: Vérifiez que vous disposez des comptes d’utilisateur et de group
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0277b638f9d069d2cfb1084136068d7ef58b1e2b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: abbb7e5af52952dc3ed69f2825a8e32d25ab9982
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151620"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024096"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 
@@ -73,9 +73,9 @@ Pour affecter des droits d’utilisation et des contrôles d’accès, et config
     
     Azure Information Protection peut utiliser n’importe quelle valeur dans cet attribut proxyAddresses d’Azure AD si le domaine a été ajouté à votre locataire (un « domaine vérifié »). Pour plus d’informations sur la vérification des domaines :
     
-    - Pour Azure AD : [Ajouter un nom de domaine personnalisé à Azure Active Directory](/active-directory/active-directory-add-domain)
+    - Pour Azure AD : [Ajouter un nom de domaine personnalisé à Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Pour Office 365 : [Ajouter un domaine et des utilisateurs à Office 365](https://go.microsoft.com/fwlinkid/?linkid=847121)
+    - Pour Office 365 : [Ajouter un domaine à Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - L’attribut **userPrincipalName d’Azure AD** est utilisé uniquement quand un compte dans votre locataire n’a aucune valeur dans l’attribut proxyAddresses d’Azure AD. Par exemple, vous créez un utilisateur dans le portail Azure, ou créez un utilisateur pour Office 365 qui n’a pas de boîte aux lettres.
 

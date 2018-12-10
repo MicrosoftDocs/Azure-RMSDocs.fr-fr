@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27de9df7062f6072e7e15b66759f540d5ce81dba
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 926a6d34b34b486577f6a8481010d058e465b3e8
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148050"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023989"
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Afficher et utiliser des fichiers qui ont été protégés par Rights Management
 
@@ -28,7 +28,7 @@ Quand [l’application de partage Rights Management (RMS) est installée sur vot
 >
 > Si votre organisation n’utilise pas Azure Information Protection ou AD RMS, vous pouvez demander un compte gratuit acceptant vos informations d’identification afin de pouvoir ouvrir des fichiers protégés à l’aide de RMS :
 >
-> -   Pour demander ce compte, cliquez sur le lien [RMS for Individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
+> -   Pour demander ce compte, cliquez sur le lien [RMS for Individuals](https://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     Lorsque vous vous inscrivez, utilisez l'adresse de messagerie de votre organisation plutôt qu'une adresse personnelle. Si vous vous inscrivez parce que vous reçu une pièce protégée jointe à un message électronique, utilisez l'adresse de messagerie à laquelle ce message a été envoyé.
 > -   Pour plus d’informations, consultez [RMS for individuals et Azure Rights Management](../rms-for-individuals.md).
@@ -86,7 +86,7 @@ Si, après avoir ouvert le fichier protégé, vous voulez le lire, mais aussi, p
 
 - **Autres extensions de nom de fichier**
 
-    Pour utiliser de tels fichiers, votre appareil doit disposer d’une application comprenant la protection Rights Management. Les applications de ce type sont qualifiées de « compatibles RMS ». Les applications Office 2016, Office 2013 et Office 2010 (telles que Word, Excel, PowerPoint et Outlook) sont des exemples d’applications compatibles avec Rights Management. Toutefois, des applications ne provenant pas de Microsoft, telles que celles publiées par d'autres éditeurs de logiciels ou vos propres applications métier, peuvent également être compatibles Rights Management.
+    Pour utiliser de tels fichiers, votre appareil doit disposer d’une application comprenant la protection Rights Management. Les applications de ce type sont qualifiées de « compatibles RMS ». Les applications Office 2016, Office 2013 et Office 2010 (notamment Word, Excel, PowerPoint et Outlook) sont des exemples d’applications compatibles avec Rights Management. Toutefois, des applications ne provenant pas de Microsoft, telles que celles publiées par d'autres éditeurs de logiciels ou vos propres applications métier, peuvent également être compatibles Rights Management.
 
     Les applications compatibles Rights Management savent comment ouvrir des fichiers protégés par d'autres applications compatibles Rights Management. Elles conservent également la protection appliquée au fichier, même si vous modifiez celui-ci ou l'enregistrez sous un autre nom ou dans un autre emplacement. Ces applications vous permettent d'utiliser le fichier conformément aux autorisations qui lui sont appliquées de sorte que, si vous disposez des autorisations nécessaires, vous l'utiliser. Par exemple, il se peut que vous puissiez modifier le fichier mais pas l'imprimer.
 

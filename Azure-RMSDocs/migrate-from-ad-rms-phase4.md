@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 84bd09aef5390c9ff8eee299febf41e91c2cb606
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6ea5a80ad9d08873f817f21a9f6ac4d059618af7
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149478"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024040"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Phase de migration 4 : Configuration des services de prise en charge
 
@@ -37,7 +37,7 @@ Indépendamment de la topologie de la clé du locataire Azure Information Protec
     
     Quand cet enregistrement DNS est en place, les utilisateurs d’Outlook sur des clients de messagerie web et mobiles peuvent afficher les e-mails protégés par les services AD RMS dans ces applications, et Exchange sera en mesure d’utiliser la clé que vous avez importée à partir d’AD RMS pour déchiffrer, indexer, journaliser et protéger le contenu qui a été protégé par AD RMS.  
 
-2. Exécutez la commande Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx). Si vous avez besoin d’aide pour exécuter cette commande, consultez les instructions détaillées dans [Exchange Online : Configuration d’IRM](/..deploy-use/configure-office365.md#exchange-online-irm-configuration).
+2. Exécutez la commande Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx). Si vous avez besoin d’aide pour exécuter cette commande, consultez les instructions détaillées dans [Exchange Online : Configuration d’IRM](configure-office365.md#exchange-online-irm-configuration).
     
     Dans la sortie, vérifiez si **AzureRMSLicensingEnabled** a la valeur **True**:
     
@@ -47,7 +47,7 @@ Indépendamment de la topologie de la clé du locataire Azure Information Protec
 
 ## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>Étape 9. Configurer l’intégration d’IRM pour Exchange Server et SharePoint Server
 
-Si vous avez utilisé la fonctionnalité IRM (Information Rights Management) d’Exchange Server ou de SharePoint Server avec AD RMS, vous devez déployer le connecteur RMS (Rights Management) qui fait office d’interface de communication (un relais) entre vos serveurs locaux et le service de protection pour Azure Information Protection.
+Si vous avez utilisé la fonctionnalité IRM (Gestion des droits relatifs à l'information) d’Exchange Server ou de SharePoint Server avec AD RMS, vous devez déployer le connecteur RMS (Rights Management), qui fait office d’interface de communication (de relais) entre vos serveurs locaux et le service de protection pour Azure Information Protection.
 
 Cette étape aborde l’installation et la configuration du connecteur, la désactivation d’IRM pour Exchange et SharePoint, ainsi que la configuration de ces serveurs pour utiliser le connecteur. Enfin, si vous avez importé des fichiers de configuration de données (.xml) AD RMS dans Azure Information Protection qui ont été utilisés pour protéger des e-mails, vous devez modifier manuellement le Registre sur les ordinateurs Exchange Server pour rediriger toutes les URL de domaine de publication approuvé vers le connecteur RMS.
 
@@ -77,7 +77,7 @@ Suivez les instructions de l’article [Déploiement du connecteur Azure Rights 
     Set-IRMConfiguration -InternalLicensingEnabled $false
     ```
 
-4. Utilisez ensuite la même applet de commande pour désactiver IRM dans Microsoft Office Outlook Web App et dans Microsoft Exchange ActiveSync :
+4. Utilisez ensuite la même cmdlet pour désactiver IRM dans Microsoft Office Outlook Web App et dans Microsoft Exchange ActiveSync :
 
     ```
     Set-IRMConfiguration -ClientAccessServerEnabled $false

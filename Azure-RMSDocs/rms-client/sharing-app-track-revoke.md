@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c20ead2b01b2a37d63bbf3b2b0295f37c9421fdd
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: d0efb37ee0d424593b9cdb4c2690088e11afc29d
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151688"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024057"
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Suivre et révoquer vos documents lorsque vous utilisez l’application de partage RMS
 
@@ -37,7 +37,7 @@ Actions que vous pouvez entreprendre sur le site de suivi de documents :
     
     Remarque : Si vous ne voyez pas cette icône alors que vous êtes administrateur général, cela signifie que vous n’avez pas encore partagé de documents. Dans ce cas, utilisez l’URL suivante pour accéder au site de suivi des documents : https://portal.azurerms.com/#/admin
 
-- Si vous avez des questions ou souhaitez fournir des commentaires sur le site de suivi de document : cliquez sur l’icône d’aide pour accéder au [Forum aux questions sur le suivi de documents](http://go.microsoft.com/fwlink/?LinkId=523977).
+- Si vous avez des questions ou souhaitez fournir des commentaires sur le site de suivi de document : cliquez sur l’icône d’aide pour accéder au [Forum aux questions sur le suivi de documents](https://go.microsoft.com/fwlink/?LinkId=523977).
 
 ## <a name="using-office-to-access-the-document-tracking-site"></a>Utilisation d’Office pour accéder au site de suivi de document
 
@@ -67,9 +67,9 @@ Outre le suivi de vos documents sur les ordinateurs Windows à l’aide des appl
 
 #### <a name="using-a-web-browser-to-access-the-doc-tracking-site"></a>Utilisation d’un navigateur web pour accéder au site de suivi de document
 
-- Dans un navigateur pris en charge, accédez au [site de suivi de document](http://go.microsoft.com/fwlink/?LinkId=529562).
+- Dans un navigateur pris en charge, accédez au [site de suivi de document](https://go.microsoft.com/fwlink/?LinkId=529562).
 
-    Navigateurs pris en charge : nous vous recommandons d’utiliser Internet Explorer (version 10 ou ultérieure). Toutefois, vous pouvez accéder au site de suivi de document depuis tous les navigateurs répertoriés ci-après :
+    Navigateurs pris en charge : nous vous recommandons d’utiliser au moins la version 10 d’Internet Explorer. Toutefois, vous pouvez accéder au site de suivi des documents sur tous les navigateurs suivants :
 
     -   Internet Explorer : version 10 ou ultérieure
 

@@ -4,18 +4,18 @@ description: Informations annexes pour Azure Information Protection qui concerne
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/12/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0269888af84f4f1b17ce5523bb5bbc8648d0d1a7
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 96746e39d564c87471205fa442976a3904ddf992
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026704"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023789"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Conformité et informations annexes pour Azure Information Protection
 
@@ -63,7 +63,7 @@ Pour obtenir des informations techniques approfondies sur le fonctionnement de l
 
 ## <a name="documentation"></a>Documentation
 
-- Documentation Azure Active Directory : [Azure Active Directory](/active-directory/)
+- Documentation Azure Active Directory : [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- Bibliothèque Office 365 : [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
+- Documentation Office 365 Entreprise : [Office 365](https://docs.microsoft.com/en-us/Office365/Enterprise/)
 

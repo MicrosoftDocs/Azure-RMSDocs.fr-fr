@@ -1,7 +1,6 @@
 ---
 title: 'Bien démarrer : application AIP pour iOS et Android'
-description: ''
-keywords: Guide pratique pour afficher des e-mails ou des fichiers avec l’application Azure Information Protection pour iOS et Android
+description: Afficher des e-mails ou des fichiers avec l’application Azure Information Protection pour iOS et Android
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -11,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c1a8722c91e456dcc1686d6edb51b906e288f5ba
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: aea2c8734aa36cb5ca735e351abe27e4e6dcc4e2
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147608"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023777"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android
 

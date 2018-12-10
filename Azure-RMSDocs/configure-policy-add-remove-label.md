@@ -1,5 +1,5 @@
 ---
-title: Ajouter une étiquette à une stratégie Azure Information Protection ou la supprimer de celle-ci
+title: Ajouter une étiquette à une stratégie Azure Information Protection ou l’en supprimer – AIP
 description: Ajouter ou supprimer une étiquette Azure Information Protection à la stratégie globale pour tous les utilisateurs, ou à une stratégie délimitée pour une partie des utilisateurs, ou l’en supprimer.
 author: cabailey
 ms.author: cabailey
@@ -8,12 +8,12 @@ ms.date: 04/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: a5e5e50f5271476c3690280cbe026be9ada7ceb2
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: f097ec2f0e3db75d679e6c0a6251fb128f583d4b
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170245"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023285"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Ajouter une étiquette à une stratégie Azure Information Protection ou la supprimer de celle-ci
 

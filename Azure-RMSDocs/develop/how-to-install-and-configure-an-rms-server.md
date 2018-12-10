@@ -12,17 +12,17 @@ ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2a239c802ae818a3b51eb0fb05f98f509f469e3c
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5a3fabd4d76dc86b52d0d8891b7032d1e017cf28
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146317"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023287"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Comment : installer, configurer et tester avec un serveur RMS
 
 Cette rubrique décrit les étapes de connexion à un serveur RMS ou à Azure RMS à des fins de test de votre application avec gestion des droits.
- 
+ 
 ## <a name="instructions"></a>Instructions
 
 ### <a name="step-1-setup-your-rms-server"></a>Étape 1 : Configurer votre serveur RMS
@@ -38,7 +38,7 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
 
     À partir de Windows Server 2008, les composants client et serveur sont compris dans le système d’exploitation. Vous pouvez télécharger les composants serveur des systèmes d’exploitation antérieurs à l’emplacement suivant.
 
-    -   [Serveur RMS v1.0 SP2](http://go.microsoft.com/fwlink/p/?linkid=73722)
+    -   [Serveur RMS v1.0 SP2](https://go.microsoft.com/fwlink/p/?linkid=73722)
 
     Pour configurer le composant serveur sur Windows Server 2008, vous devez installer le rôle AD RMS. Si vous développez des applications sur une version antérieure d’un système d’exploitation serveur, configurez le Registre après l’installation du serveur RMS v1.0 SP2, mais avant l’approvisionnement du service RMS.
 
@@ -48,7 +48,7 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
 
     -   **Inscription automatique**
 
-        Windows Server 2008 et versions ultérieures vous permettent d’inscrire un serveur RMS dans la hiérarchie appropriée sans envoyer d’informations à Microsoft. Quand vous installez le rôle RMS, un certificat d’inscription automatique et une clé privée sont également installés. Ceux-ci sont utilisés pour créer automatiquement le certificat de licence serveur. Aucune information n’est échangée avec Microsoft.
+        Windows Server 2008 et les versions ultérieures permettent d’inscrire un serveur RMS dans la hiérarchie correspondante sans envoyer d’informations à Microsoft. Quand vous installez le rôle RMS, un certificat d’inscription automatique et une clé privée sont également installés. Ceux-ci sont utilisés pour créer automatiquement le certificat de licence serveur. Aucune information n’est échangée avec Microsoft.
 
     -   **Inscription en ligne**
 

@@ -1,33 +1,33 @@
 ---
-title: Configuration d’Azure Active Directory requise pour AIP
+title: Configuration requise d’Azure AD pour Azure Information Protection – AIP
 description: Identifiez la configuration requise d’Azure AD pour utiliser Azure Information Protection afin de permettre l’authentification des utilisateurs.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 442c1b6ec44421696aef928c38692ded70911966
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 58de817eec541c4bbb1b5d4541469cda0d93e417
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146868"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024193"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Vous avez besoin d’un annuaire Azure AD pour utiliser Azure Information Protection. Vous utilisez un compte de cet annuaire pour vous connecter au portail Azure, où vous pouvez par exemple configurer et gérer des étiquettes Azure Information Protection et des modèles Azure Rights Management.
+Un annuaire Azure AD est nécessaire pour pouvoir utiliser Azure Information Protection. Vous utilisez un compte de cet annuaire pour vous connecter au portail Azure, où vous pouvez par exemple configurer et gérer des étiquettes Azure Information Protection et des modèles Azure Rights Management.
 
 Si vous avez un abonnement incluant Azure Information Protection ou Azure Rights Management, votre annuaire Azure AD est créé automatiquement pour vous si nécessaire.  
 
-Pour plus d’informations sur Azure AD, consultez [Qu’est-ce que l’annuaire Azure AD ?](/active-directory/active-directory-whatis)
+Pour plus d’informations sur Azure AD, consultez [Qu’est-ce que l’annuaire Azure AD ?](/azure/active-directory/fundamentals/active-directory-whatis)
 
-Pour intégrer votre annuaire Azure AD à vos forêts AD locales, consultez [Intégration de vos identités locales à Azure Active Directory](/active-directory/active-directory-aadconnect).
+Pour intégrer un annuaire Azure AD à des forêts AD locales, voir [Intégrer des domaines Active Directory locaux à Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
 ### <a name="scenarios-that-have-specific-requirements"></a>Scénarios avec des exigences spécifiques 
 
@@ -47,9 +47,9 @@ La valeur UPN des utilisateurs ne correspond pas à leur adresse e-mail :
     
     Quand le nom de domaine dans la valeur UPN est un domaine qui est vérifié pour votre locataire, ajoutez la valeur UPN de l’utilisateur comme une autre adresse e-mail à l’attribut proxyAddresses d’Azure AD. L’utilisateur est ainsi autorisé à utiliser Azure Rights Management si sa valeur UPN est spécifiée au moment où les droits d’utilisation sont accordés. Pour plus d’informations sur ce sujet et sur la façon dont les comptes d’utilisateur sont autorisés, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md).
 
-Appareils mobiles ou ordinateurs Mac qui s’authentifient localement par le biais des services AD FS ou d’un fournisseur d’authentification équivalent :
+Appareils mobiles ou ordinateurs Mac qui s’authentifient localement avec AD FS ou un fournisseur d’authentification équivalent :
 
-- Vous devez utiliser les services AD FS sur la version serveur minimale de **Windows Server 2012 R2** ou un autre fournisseur d’authentification prenant en charge le protocole OAuth 2.0.
+- Vous devez utiliser AD FS sur la version serveur minimale de **Windows Server 2012 R2**, ou un autre fournisseur d’authentification prenant en charge le protocole OAuth 2.0.
 
 ## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>Authentification multifacteur (MFA) et Azure Information Protection
 Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Protection, vous devez avoir au moins l’un des éléments suivants :

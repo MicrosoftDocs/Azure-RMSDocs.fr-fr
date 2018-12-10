@@ -4,17 +4,17 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 12/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b0dc98bb1c626737fb087c78691bb3a9e35a445e
-ms.sourcegitcommit: e72c89e35cae6a19dca060f688838d78dc8f0448
+ms.openlocfilehash: bfca9c6aab0625a9d35d7648a53f7cce6b74bce6
+ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586007"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861215"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
 
@@ -22,7 +22,7 @@ ms.locfileid: "52586007"
 
 L’équipe Azure Information Protection met régulièrement à jour le client Azure Information Protection avec des correctifs et des nouvelles fonctionnalités. 
 
-Vous pouvez télécharger la dernière version en disponibilité générale (GA) et la préversion actuelle (si elle est disponible) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). La version en disponibilité générale se trouve également dans le catalogue Microsoft Update (catégorie : **Azure Information Protection**), ce qui vous permet de mettre à niveau le client à l’aide de WSUS, de Configuration Manager ou d’autres systèmes de déploiement de logiciels qui utilisent Microsoft Update.
+Vous pouvez télécharger la dernière version en disponibilité générale (GA) et la préversion actuelle (si elle est disponible) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Après un court délai d’environ deux semaines en général, la version à disponibilité générale est également incluse dans le catalogue Microsoft Update (catégorie : **Azure Information Protection**). Cette inclusion dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou de Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
 
 Pour plus d’informations, consultez [Mise à niveau et maintenance du client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
@@ -52,6 +52,10 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 **Nouvelles fonctionnalités :**
 
+- Le client Azure Information Protection par défaut protège maintenant les fichiers PDF à l’aide de la norme ISO pour le chiffrement PDF. Auparavant, vous deviez activer cette prise en charge avec un paramètre client avancé.
+    
+    Si vous souhaitez que le client rétablisse la protection des fichiers PDF à l’aide d’une extension de nom de fichier .ppdf, utilisez le même [paramètre client avancé](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), mais spécifiez **False**.
+
 - Prise en charge de la [création de rapports centralisée](../reports-aip.md) pour les fonctionnalités d’analyse Azure Information Protection annoncées au Microsoft Ignite.
 
 - Prise en charge des [marquages visuels](../configure-policy-markings.md) de différentes couleurs dans Excel.
@@ -78,6 +82,8 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Quand la planification du scanneur est définie sur **Toujours**, il y a maintenant un délai de 30 secondes entre les analyses.
 
+- Le scanneur ne modifie plus le propriétaire de Rights Management pour les fichiers qu’il étiquette lorsque le fichier est déjà protégé.
+
 ## <a name="version-137190"></a>Version 1.37.19.0
 
 **Date de publication** : 17/09/2018
@@ -86,7 +92,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 **Nouvelles fonctionnalités** : 
 
-- Prise en charge de la norme ISO pour le chiffrement PDF en configurant une nouvelle [configuration avancée du client](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). Quand cette option est configurée, les documents PDF que vous protégez conservent leur extension de nom de fichier .pdf (plutôt que de devenir .ppdf) et peuvent être ouverts sur les lecteurs de fichiers PDF prenant en charge cette norme ISO. Actuellement, vous devez donner aux utilisateurs l’instruction d’ouvrir manuellement ces documents PDF protégés avec la visionneuse Azure Information Protection. Pour les y aider, une page apparaît à l’ouverture d’un de ces documents ; elle comporte des icônes à sélectionner en fonction du système d’exploitation.
+- Prise en charge de la norme ISO pour le chiffrement PDF en configurant une nouvelle [configuration avancée du client](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). Quand cette option est définie sur **True**, les documents PDF que vous protégez conservent leur extension de nom de fichier .pdf (plutôt que de devenir .ppdf) et peuvent être ouverts sur les lecteurs de fichiers PDF prenant en charge cette norme ISO. Actuellement, vous devez donner aux utilisateurs l’instruction d’ouvrir manuellement ces documents PDF protégés avec la visionneuse Azure Information Protection. Pour les y aider, une page apparaît à l’ouverture d’un de ces documents ; elle comporte des icônes à sélectionner en fonction du système d’exploitation.
 
 - Prise en charge de nouveaux types d’informations sensibles pour vous aider à classer les documents qui contiennent des informations personnelles. [Plus d’informations](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
@@ -196,76 +202,6 @@ Cette version inclut MSIPC version 1.0.3403.1224 du client RMS.
 
 - Suppression de la page d’accueil « Félicitations ! » et de la page « Nouveautés dans Azure Information Protection » qui s’affichaient lors de la première utilisation dans les applications Office.
 
-## <a name="version-12660"></a>Version 1.26.6.0
-
-**Date de publication** : 17/04/2018
-
-Cette version inclut MSIPC version 1.0.3403.1224 du client RMS.
-
-**Nouvelles fonctionnalités** :
-
-- Analyseur Azure Information Protection : le module PowerShell inclus avec le client dispose de nouvelles applets de commande pour installer et configurer le moteur d’analyse qui va permettre de détecter, classer et protéger les fichiers sur vos magasins de données locaux. Pour obtenir des instructions, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](../deploy-aip-scanner.md). 
-
-- Vous pouvez maintenant définir des marquages visuels différents pour Word, Excel, PowerPoint et Outlook à l’aide d’une déclaration de variable « If.App » dans la chaîne de texte et identifier le type d’application. [Plus d’informations](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
-
-- Prise en charge du [paramètre de stratégie](../configure-policy-settings.md) **Afficher la barre Information Protection dans les applications Office**. Lorsque ce paramètre est désactivé, les utilisateurs peuvent sélectionner des étiquettes au moyen du bouton **Protéger** dans le ruban.
-
-- Les en-têtes et pieds de page dans Word, Excel et PowerPoint acceptent maintenant du texte sur plusieurs lignes.
-
-- Nouveau paramètre client avancé (encore en préversion) pour activer l’exécution de la classification en continu en arrière-plan. Quand ce paramètre est configuré, pour les applications Office, la classification automatique et recommandée s’exécute en continu en arrière-plan, au lieu de s’exécuter lors de l’enregistrement de documents. Ce changement de comportement permet désormais d’appliquer la classification automatique et recommandée aux documents stockés dans SharePoint Online. [Plus d’informations](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)
-
-- Nouveau paramètre avancé du client, qui permet à Outlook de ne pas appliquer l’étiquette par défaut qui est configurée dans la stratégie Azure Information Protection. Au lieu de cela, Outlook peut appliquer une autre étiquette par défaut ou ne rien appliquer. [Plus d’informations](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
-
-- Pour les applications Office, lorsque vous spécifiez des autorisations personnalisées, vous pouvez maintenant parcourir et sélectionner les utilisateurs à partir d’une icône de carnet d’adresses. Cette option apporte une certaine parité à l’expérience utilisateur lorsque vous spécifiez des autorisations personnalisées à l’aide de l’Explorateur de fichiers.
-
-- Prise en charge d’une méthode d’authentification non interactive, pour les comptes de service qui utilisent PowerShell et qui ne peuvent pas bénéficier de la **connexion en local** directement. Cette méthode d’authentification requiert l’utilisation du nouveau paramètre *Token* avec [Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication), et l’exécution d’un script PowerShell en tant que tâche. [Plus d’informations](client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
-
-- Nouveau paramètre, *IntegratedAuth* pour [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication). Ce paramètre prend en charge le mode serveur pour AD RMS, qui est nécessaire pour qu’AD RMS puisse prendre en charge l’infrastructure de classification des fichiers de Windows Server.
-
-
-**Correctifs** :
-
-Correctifs apportés pour accroître la stabilité et prendre en charge des scénarios spécifiques :
-
-- Pour les versions d’Office 16.0.8628.2010 et ultérieures (Office « Démarrer en un clic »), la barre Azure Information Protection prend en charge les dernières options d’affichage du moniteur qui pourrait entraîner l’affichage d’applications Office externes dans la barre.
-
-- Lorsque deux organisations utilisant Azure Information Protection partagent des documents et des e-mails étiquetés, leurs propres étiquettes sont conservées et ne sont pas remplacées par les étiquettes de l’autre organisation.
-
-- Pour Excel :
-        
-    - Prise en charge de la modification des thèmes Office ou Windows, ce qui précédemment empêchait Excel d’afficher les données une fois le thème modifié.
-        
-    - Prise en charge des cellules qui contiennent des références croisées, ce qui provoquait auparavant une altération du texte dans cette cellule.
-    
-    - Prise en charge de la saisie de caractères japonais, chinois et coréens, ce qui provoquait auparavant la fermeture d’une fenêtre et empêchait la sélection de ces caractères.
-    
-    - Prise en charge des commentaires, ce qui provoquait auparavant la fermeture du commentaire pendant sa saisie.
-
-- Pour PowerPoint : prise en charge de la co-création, qui pouvait auparavant entraîner la perte de données.
-
-- Il est maintenant possible d’inspecter les fichiers portant l’extension de nom de fichier .xml à des fins de classification automatique ou recommandée.
-
-- La visionneuse peut maintenant ouvrir des fichiers texte protégés (.ptxt et .pxml) supérieurs à 20 Mo. 
-- Blocage d’Outlook lors de l’utilisation de rappels Outlook évité.
-
-- Bon fonctionnement de Bootstrap dans Office 64 bits pour une protection des documents et des e-mails.
-
-- Vous pouvez désormais configurer une étiquette pour les autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers, et également utiliser le paramètre avancé du client pour masquer les options des autorisations personnalisées. [Plus d’informations](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
-
-- Retour à la police Calibri si les marqueurs visuels de la stratégie Azure Information Protection sont configurés pour un nom de police qui n’est pas installé sur le client.
-
-- Pannes d’Office suite à la mise à niveau du client Azure Information Protection évitées.
-
-- Amélioration des performances et de l’utilisation de la mémoire pour les applications Office.
-
-- Lorsque vous configurez une étiquette pour des autorisations définies par l’utilisateur et la protection HYOK (AD RMS), la protection n’utilise plus les services AD RMS (Active Directory Rights Management Services) de manière incorrecte.
-
-- Pour une expérience de gestion plus cohérente, sublabels n’hérite plus des marqueurs visuels et des paramètres de protection de son étiquette parent.
-
-**Autres modifications** :
-
-- Pour la [journalisation de l’utilisation client](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client ) : l’ID d’événement 102 et l’ID d’événement 103 sont remplacés par l’ID d’événement 101.
-
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur l’installation et l’utilisation du client : 
@@ -273,5 +209,4 @@ Pour plus d’informations sur l’installation et l’utilisation du client :
 - Pour les utilisateurs : [Télécharger et installer le client](install-client-app.md)
 
 - Pour les administrateurs : [Guide de l’administrateur du client Azure Information Protection](client-admin-guide.md)
-
 

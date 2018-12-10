@@ -4,17 +4,17 @@ description: Migrez les étiquettes Azure Information Protection vers le Centre 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 2d0ed8103ce4e0b42d67ea87b6b464dfb8f04f36
-ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
+ms.openlocfilehash: 771cbb26a842cbf19184ace94ae47ba9d549a33f
+ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382610"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52953327"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365
 
@@ -48,7 +48,7 @@ Avant de migrer vos étiquettes, tenez compte des changements et des considérat
     
     Pour une expérience utilisateur plus cohérente, nous vous recommandons de publier les mêmes étiquettes dans les mêmes étendues du Centre de sécurité et conformité.
 
-- Les paramètres issus d’une étiquette migrée ne sont pas tous pris en charge par le Centre de sécurité et conformité. Utilisez le tableau de la section [Paramètres d’étiquette qui ne sont pas pris en charge dans le Centre de sécurité et conformité](#label-settings-that-are-not-supported-in-the-security--compliance-center) pour vous aider à identifier ces paramètres et savoir si vous devez exclure les étiquettes migrées de la publication dans le Centre de sécurité et conformité.
+- Les paramètres issus d’une étiquette migrée ne sont pas tous pris en charge par le Centre de sécurité et conformité. Utilisez le tableau de la section [Paramètres d’étiquette qui ne sont pas pris en charge dans le Centre de sécurité et de conformité](#label-settings-that-are-not-supported-in-the-security--compliance-center) pour vous aider à identifier les paramètres qui ne sont pas pris en charge dans le Centre de sécurité et de conformité.
 
 - Modèles de protection :
     
@@ -66,17 +66,15 @@ Avant de migrer vos étiquettes, tenez compte des changements et des considérat
 
 - Aucune chaîne localisée pour les étiquettes n’est migrée. Vous devez définir de nouvelles chaînes localisées pour les étiquettes migrées dans le Centre de sécurité et conformité.
 
-- Après la migration, quand vous modifiez une étiquette migrée dans le portail Azure, la même modification est automatiquement répercutée dans le Centre de sécurité et conformité. Toutefois, quand vous modifiez une étiquette migrée dans le Centre de sécurité et conformité, vous devez ensuite mettre à jour l’étiquette dans le portail Azure pour qu’elle récupère la modification. Par exemple, modifiez la zone **Add notes for administrator use** (Ajouter des notes pour l’administrateur) dans le panneau **Étiquette**. 
-
-- L’étiquetage unifié est toujours en cours de déploiement sur les locataires. S’il n’est pas encore pris en charge pour votre locataire, la migration n’aboutit pas et annule normalement toutes les modifications. Jusqu’à sa prise en charge pour tous les locataires, vous devez utiliser un lien spécial pour accéder à l’option de migration de vos locataire et étiquettes. Ce lien est fourni dans les instructions qui suivent.
+- Après la migration, quand vous modifiez une étiquette migrée dans le portail Azure, la même modification est automatiquement répercutée dans le Centre de sécurité et conformité. Toutefois, lorsque vous modifiez une étiquette migrée dans le Centre de sécurité et de conformité, vous devez retourner au portail Azure, dans le panneau **Azure Information Protection - Étiquetage unifié**, puis sélectionner **Publier**. Cette action supplémentaire est nécessaire pour que les clients Azure Information Protection récupèrent les modifications de l’étiquette.
 
 ### <a name="label-settings-that-are-not-supported-in-the-security--compliance-center"></a>Paramètres d’étiquette qui ne sont pas pris en charge dans le Centre de sécurité et conformité
 
-Utilisez le tableau suivant pour identifier les paramètres de configuration d’une étiquette migrée qui ne sont pas pris en charge pour les clients qui utilisent ces étiquettes, et pour savoir si vous devez modifier et publier l’étiquette migrée dans le Centre de sécurité et conformité. Si vous publiez des étiquettes identifiées comme devant être exclues de la publication, aucune étiquette ne s’affiche pour les clients qui prennent en charge l’étiquetage unifié.
+Utilisez le tableau suivant pour identifier les paramètres de configuration d’une étiquette migrée qui ne sont pas pris en charge par les clients d’étiquetage unifié ou qui sont pris en charge avec des limitations. Pour éviter toute confusion, nous vous recommandons de ne configurer les paramètres qui n’ont aucun effet sur les clients d’étiquetage unifié.
 
 Les clients Azure Information Protection peuvent utiliser ces paramètres d’étiquette sans aucun problème, car ils continuent de télécharger les étiquettes à partir du portail Azure.
 
-|Configuration d’étiquettes|Prise en charge dans le Centre de sécurité et conformité|Exclure de la modification et de la publication dans le Centre de sécurité et conformité|
+|Configuration d’étiquettes|Pris en charge par les clients d’étiquetage unifié|Exclure de la modification dans le Centre de sécurité et de conformité|
 |-------------------|---------------------------------------------|-------------------------|
 |État activé ou désactivé<br /><br />Remarques : Pas de synchronisation avec le Centre de sécurité et conformité |Non applicable|Non applicable|
 |Couleur d’étiquette : sélectionnez une valeur dans la liste ou spécifiez-la à l’aide du code RVB<br /><br />Remarques : Les couleurs d’étiquettes ne sont pas prises en charge par le Centre de sécurité et conformité |Non applicable|Non applicable|
@@ -91,12 +89,7 @@ Les clients Azure Information Protection peuvent utiliser ces paramètres d’é
 
 ## <a name="to-migrate-azure-information-protection-labels"></a>Pour migrer des étiquettes Azure Information Protection
 
-> [!IMPORTANT]
-> Ne migrez pas vos étiquettes tant que vous n’avez pas confirmé que vous pouvez modifier et publier des étiquettes de sensibilité dans le Centre de sécurité et conformité Office 365. Les étiquettes de sensibilité commencent à se déployer sur les locataires Office 365, mais ne sont pas encore disponibles pour tous les locataires.
-> 
-> Pour vérifier : dans le Centre de sécurité et conformité Office 365, accédez à **Classifications** > **Étiquettes** et voyez si vous disposez d’un onglet **Sensibilité**. Si vous ne voyez pas cet onglet, votre locataire n’est pas encore prêt pour les étiquettes de sensibilité et vous ne devez pas migrer vos étiquettes Azure Information Protection pour l’instant.
-
-Après avoir confirmé que votre locataire prend en charge les étiquettes de sensibilité dans le Centre de sécurité et conformité, utilisez les instructions suivantes pour migrer votre locataire et les étiquettes Azure Information Protection.
+Utilisez les instructions suivantes pour migrer votre locataire et étiquettes Azure Information Protection pour utiliser le nouveau magasin d’étiquetage unifié.
 
 Vous devez être un administrateur général pour migrer vos étiquettes.
 
@@ -106,6 +99,8 @@ Vous devez être un administrateur général pour migrer vos étiquettes.
 
 Les étiquettes qui ont correctement migré peuvent désormais être utilisées par les [clients qui prennent en charge l’étiquetage unifié](#clients-that-support-unified-labeling). Toutefois, vous devez tout d’abord publier ces étiquettes dans le Centre de sécurité et conformité.
 
+> [!IMPORTANT]
+> Si vous modifiez les étiquettes en dehors du portail Azure, pour les clients Azure Information Protection, revenez dans ce panneau **Azure Information Protection - Étiquetage unifié**, puis sélectionnez **Publier**.
 
 ### <a name="clients-that-support-unified-labeling"></a>Clients qui prennent en charge l’étiquetage unifié
 

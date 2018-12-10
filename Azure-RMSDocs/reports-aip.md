@@ -4,19 +4,19 @@ description: Guide pratique pour utiliser la création de rapports centralisée 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 98403232311731b137719c613b2ce061a236b706
-ms.sourcegitcommit: ff77e4da1f7c7cf2262c208f8e58b85cfdb54903
+ms.openlocfilehash: 8dc53c6bad6c8f68ac5786afb0600cafb6398765
+ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52421009"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52953310"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -25,10 +25,13 @@ ms.locfileid: "52421009"
 > [!NOTE]
 > Cette fonctionnalité est disponible en préversion et susceptible d’être modifiée. Des données collectées au cours de cette préversion peuvent ne pas être prises en charge quand la fonctionnalité passe en disponibilité générale.
 
+Utiliser l’analytique d’Azure Information Protection pour la création de rapports centralisée afin d’effectuer le suivi de l’adoption de vos étiquettes Azure Information Protection. De plus :
 
-Utilisez l’analytique Azure Information Protection pour la création de rapports centralisée afin de suivre l’adoption de vos étiquettes Azure Information Protection et de superviser l’accès utilisateur aux e-mails et documents étiquetés ainsi que les modifications apportées à leur classification. Vous pouvez également identifier les documents qui contiennent des informations sensibles à protéger.
+- Surveillez l’accès utilisateur aux documents et e-mails étiquetés, et les modifications apportées à leur classification. 
 
-Actuellement, les données que vous voyez sont agrégées à partir de vos clients Azure Information Protection et scanneurs Azure Information Protection.
+- Identifiez les documents qui contiennent des informations sensibles à protéger.
+
+Actuellement, les données que vous voyez sont agrégées à partir de vos clients Azure Information Protection et des scanneurs Azure Information Protection, et des ordinateurs Windows exécutant [Windows Defender Advanced Threat Protection (Windows Defender ATP)](/windows/security/threat-protection/windows-defender-atp/overview).
 
 Par exemple, vous serez en mesure de voir ce qui suit :
 
@@ -58,7 +61,7 @@ Par exemple, vous serez en mesure de voir ce qui suit :
 
 - À partir du rapport de **découverte de données** :
 
-    - Fichiers qui se trouvent sur vos référentiels de données analysés
+    - Fichiers qui se trouvent sur vos référentiels de données analysés ou vos ordinateurs Windows 10
     
     - Fichiers étiquetés et protégés, et emplacement des fichiers en fonction des étiquettes
     
@@ -101,8 +104,7 @@ Pour afficher les rapports Azure Information Protection et créer les vôtres, v
 |---------------|--------------------|
 |Abonnement Azure qui inclut Log Analytics|Consultez la page [Tarifs Azure Log Analytics](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Si vous ne possédez pas un abonnement Azure ou n’utilisez pas Azure Log Analytics, la page des tarifs inclut un lien pour un essai gratuit.|
 |Version en disponibilité générale du client Azure Information Protection.|Si vous n’avez pas déjà installé cette version du client, vous pouvez la télécharger et l’installer sur le [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
-|Pour le rapport de **découverte et des risques** : <br /><br />- Vous avez déployé au moins une instance du scanneur Azure Information Protection (préversion actuelle)|Pour obtenir des instructions d’installation, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md). <br /><br />Si vous effectuez la mise à niveau à partir d’une version précédente du scanneur, consultez [Mise à niveau du scanneur Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
-
+|Pour le rapport de **découverte et des risques** : <br /><br />- Pour afficher les données à partir de magasins de données locaux, vous avez déployé au moins une instance du scanneur Azure Information Protection (version à disponibilité générale actuelle) <br /><br />- Pour afficher les données à partir d’ordinateurs Windows 10, ils doivent au minimum avoir la build 1809, vous utilisez Windows Defender Advanced Threat Protection (Windows Defender ATP), et vous avez activé la fonctionnalité d’intégration Azure Information Protection à partir de Windows Defender Security Center|Pour obtenir des instructions d’installation pour le scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md). Si vous effectuez la mise à niveau à partir d’une version précédente du scanneur, consultez [Mise à niveau du scanneur Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).<br /><br />Pour obtenir des informations sur la configuration et l’utilisation de la fonctionnalité d’intégration Azure Information Protection à partir de Windows Defender Security Center, consultez [Vue d’ensemble de la protection des informations dans Windows](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurer un espace de travail Log Analytics pour les rapports
 
@@ -130,11 +132,11 @@ Dans le panneau Azure Information Protection, recherchez les options du menu **T
 
 - **Journaux d’activité (préversion)** : utilisez ce rapport pour voir les actions d’étiquetage effectuées par les utilisateurs sur les appareils et les chemins d'accès.
     
-    Ce rapport est actuellement en cours de déploiement auprès des locataires ; si vous ne le voyez pas, réessayez quelques jours plus tard. 
+    Ce rapport est actuellement en cours de déploiement auprès des locataires ; si vous ne le voyez pas, réessayez quelques jours plus tard.
     
-    Ce rapport comporte une option **Colonnes** qui permet d’afficher plus d’informations sur l’activité que l’affichage par défaut. L’une de ces colonnes, **Risque des appareils**, affiche des données issues de Windows Defender lorsque cette application est intégrée à Azure Information Protection.
+    Ce rapport comporte une option **Colonnes** qui permet d’afficher plus d’informations sur l’activité que l’affichage par défaut.
 
-- **Découverte de données (préversion)**  : utilisez ce rapport pour afficher des informations sur les fichiers détectés par les scanneurs.
+- **Découverte de données (préversion)**  : utilisez ce rapport pour afficher des informations sur les fichiers détectés par les scanneurs ou Windows Defender ATP.
 
 ## <a name="how-to-modify-the-reports"></a>Comment modifier les rapports
 

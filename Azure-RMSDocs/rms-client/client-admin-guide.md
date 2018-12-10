@@ -4,18 +4,18 @@ description: Instructions et informations destinées aux administrateurs d’un 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b5eccdd62d828bc5104815746458d4c7036594fd
-ms.sourcegitcommit: 39403f0e9fe5912d467b119ed45da94bccd1cc80
+ms.openlocfilehash: be6477edae471bddbcf3a5d4e6c7bb0cfcec1e4e
+ms.sourcegitcommit: 4f22874c3c2fb9632d57932148664c40b3907a78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100631"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52831253"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -198,15 +198,9 @@ Consultez [Historique des versions et politique du support](client-version-relea
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Mise à niveau du scanneur Azure Information Protection
 
-Pour mettre à niveau le scanneur Azure Information Protection, installez la dernière version du client Azure Information Protection. Effectuez ensuite l’une des actions uniques suivantes. Après cela, il n’est pas nécessaire de relancer l’analyse de fichiers déjà scannés.
+Pour mettre à niveau le scanneur Azure Information Protection, installez la dernière version du client Azure Information Protection. Effectuez ensuite l’action unique suivante. Après cela, il n’est pas nécessaire de relancer l’analyse de fichiers déjà scannés.
 
-Pour la version en disponibilité générale actuelle : 
-
-- Réexécutez la commande d’installation du scanneur avec [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner). Vos paramètres de configuration pour le scanneur et les référentiels sont conservés. La réinstallation du scanneur accorde au compte de service du scanneur des autorisations de suppression pour la base de données du scanneur, qui seront nécessaires pour les rapports.
-
-Pour la préversion : 
-
-- Exécutez [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) après avoir mis à niveau le client Azure Information Protection à partir de la version en disponibilité générale 1.29.5.0 ou d’une version antérieure. Vos paramètres de configuration pour le scanneur et les référentiels sont conservés. L’exécution de cette applet de commande est nécessaire pour mettre à jour le schéma de base de données pour le scanneur et si nécessaire, le compte de service du scanneur se voit également accorder des autorisations de suppression pour la base de données du scanneur. 
+- Exécutez [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) après avoir mis à niveau le client Azure Information Protection. Vos paramètres de configuration pour le scanneur et les référentiels sont conservés. L’exécution de cette applet de commande est nécessaire pour mettre à jour le schéma de base de données pour le scanneur et si nécessaire, le compte de service du scanneur se voit également accorder des autorisations de suppression pour la base de données du scanneur. 
     
     Tant que vous n’avez pas exécuté cette cmdlet de mise à jour, le scanneur ne s’exécute pas et l’ID d’événement **1000** s’affiche dans le journal des événements Windows, avec le message d’erreur suivant : **Nom d’objet non valide 'ScannerStatus'**.
 

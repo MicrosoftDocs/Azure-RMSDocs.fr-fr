@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 54eaa9819ce1bffd85bb11b7e1936abacbd5457b
-ms.sourcegitcommit: 07af86511a394274f10cf1340de4cf4bad6d1675
+ms.openlocfilehash: 122a7b3c8614e8f5a18b1a2a87d4d673d5dae049
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473798"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266713"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guide du développeur Azure Information Protection
 
@@ -105,8 +105,7 @@ Chacune des rubriques suivantes présente les instructions spécifiques d’un a
 ## <a name="other-resources"></a>Autres ressources
 
 - [Guide des bonnes pratiques en matière de sécurité](security-guidelines.md)
-- [Blog Coin du développeur RMS](https://blogs.msdn.microsoft.com/rms/)
-- [Forum aux questions sur Azure Information Protection](https://docs.microsoft.com/information-protection/get-started/faqs)
+- [Forum aux questions sur Azure Information Protection](/azure/information-protection/faqs)
 
 ### <a name="support-articles"></a>Articles sur la prise en charge
 
@@ -132,7 +131,7 @@ Chacune des rubriques suivantes présente les instructions spécifiques d’un a
 - [Informations de référence sur les API du Windows Store et de Windows Phone](https://msdn.microsoft.com/library/dn891914.aspx)
 - [Informations de référence sur les API iOS/OSX](https://msdn.microsoft.com/library/dn758306.aspx)
 - [Informations de référence sur les API Android](https://msdn.microsoft.com/library/dn758245.aspx)
-- [Référence d’API Linux](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)
+- [Référence d’API Linux](https://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 
 ### <a name="previous-versions"></a>Versions précédentes
 

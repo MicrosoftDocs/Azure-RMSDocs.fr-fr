@@ -12,12 +12,12 @@ ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 054121899523056e9d61a673c01f70022e77d13c
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 481922859e14009e345a38853c15e51b065d5387
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149631"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266373"
 ---
 # <a name="testing-your-application"></a>Test de votre application
 
@@ -32,7 +32,7 @@ Vous pouvez réaliser le test avec Azure RMS ou un serveur RMS en cours d’exé
 - Pour installer le runtime développeur :
 
    Le client Rights Management Services 2.1 doit être installé sur l’ordinateur sur lequel vous testez votre application.
-   - Pour tester votre application sur un ordinateur autre que votre ordinateur de développement, installez le client RMS 2.1 sur cet ordinateur à partir de la [page de téléchargement du client AD RMS](http://www.microsoft.com/en-us/download/details.aspx?id=38396).
+   - Pour tester votre application sur un ordinateur autre que votre ordinateur de développement, installez le client RMS 2.1 sur cet ordinateur à partir de la [page de téléchargement du client AD RMS](https://www.microsoft.com/download/details.aspx?id=38396).
    - Rights Management Services SDK 2.1 doit avoir déjà été installé sur votre ordinateur de développement.
 
    Pour obtenir de l’aide sur l’installation de RMS SDK 2.1, consultez [Installer le kit SDK](install-the-rms-sdk.md).

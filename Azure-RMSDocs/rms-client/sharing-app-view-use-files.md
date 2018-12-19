@@ -1,5 +1,5 @@
 ---
-title: Ouvrir des fichiers protégés par RMS avec l’application de partage RMS - AIP
+title: Ouvrir des fichiers protégés par RMS avec l’application de partage RMS
 description: Instructions à suivre pour afficher et utiliser un fichier protégé. Cette procédure nécessite l’installation de l’application de partage Rights Management (RMS).
 author: cabailey
 ms.author: cabailey
@@ -10,28 +10,31 @@ ms.service: information-protection
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 926a6d34b34b486577f6a8481010d058e465b3e8
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: f3e3158e8cd5fb054daab65a3b86a0e99074bee3
+ms.sourcegitcommit: db60fe8f74ffaa4f6ffbf5defb22efc476c28312
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023989"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53319463"
 ---
-# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Afficher et utiliser des fichiers qui ont été protégés par Rights Management
+# <a name="use-the-rights-management-sharing-application-to-view-and-use-protected-files"></a>Utiliser l’application de partage Rights Management pour visualiser et utiliser des fichiers protégés
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
-Quand [l’application de partage Rights Management (RMS) est installée sur votre ordinateur](install-sharing-app.md), vous pouvez afficher un fichier protégé simplement en double-cliquant dessus. Le fichier peut être une pièce jointe à un message électronique, ou un fichier apparaissant dans l'Explorateur de fichiers.
+> [!IMPORTANT]
+> **Notification de fin du support** : L’application de partage Rights Management pour Windows est remplacée par le [client Azure Information Protection](aip-client.md). La prise en charge de cette application plus ancienne cessera le 31 janvier 2019.
 
-> [!NOTE]
-> Pour que vous puissiez afficher le fichier protégé, le service Rights Management doit confirmer que vous y êtes autorisé. Pour ce faire, il vérifie vos nom d’utilisateur et mot de passe. Dans certains cas, cette opération peut être mise en cache de sorte que vous ne voyez pas d'invite vous demandant vos informations d'identification. Dans d'autres cas, vous êtes invité à fournir vos informations d'identification.
->
-> Si votre organisation n’utilise pas Azure Information Protection ou AD RMS, vous pouvez demander un compte gratuit acceptant vos informations d’identification afin de pouvoir ouvrir des fichiers protégés à l’aide de RMS :
->
-> -   Pour demander ce compte, cliquez sur le lien [RMS for Individuals](https://go.microsoft.com/fwlink/?LinkId=309469).
->
->     Lorsque vous vous inscrivez, utilisez l'adresse de messagerie de votre organisation plutôt qu'une adresse personnelle. Si vous vous inscrivez parce que vous reçu une pièce protégée jointe à un message électronique, utilisez l'adresse de messagerie à laquelle ce message a été envoyé.
-> -   Pour plus d’informations, consultez [RMS for individuals et Azure Rights Management](../rms-for-individuals.md).
+Quand [l’application de partage Rights Management (RMS) est installée sur votre ordinateur](install-sharing-app.md), vous pouvez visualiser un fichier protégé en double-cliquant simplement sur celui-ci. Le fichier peut être une pièce jointe à un message électronique, ou un fichier apparaissant dans l'Explorateur de fichiers.
+
+Pour que vous puissiez afficher le fichier protégé, le service Rights Management doit confirmer que vous y êtes autorisé. Pour ce faire, il vérifie vos nom d’utilisateur et mot de passe. Dans certains cas, cette opération peut être mise en cache de sorte que vous ne voyez pas d'invite vous demandant vos informations d'identification. Dans d'autres cas, vous êtes invité à fournir vos informations d'identification.
+
+Si votre organisation n’utilise pas Azure Information Protection ou AD RMS, vous pouvez demander un compte gratuit acceptant vos informations d’identification afin de pouvoir ouvrir des fichiers protégés à l’aide de RMS :
+
+- Pour demander ce compte, cliquez sur le lien [RMS for Individuals](https://go.microsoft.com/fwlink/?LinkId=309469). 
+    
+    Lorsque vous vous inscrivez, utilisez l'adresse de messagerie de votre organisation plutôt qu'une adresse personnelle. Si vous vous inscrivez parce que vous reçu une pièce protégée jointe à un message électronique, utilisez l'adresse de messagerie à laquelle ce message a été envoyé.
+
+- Pour plus d’informations, consultez [RMS for individuals et Azure Rights Management](../rms-for-individuals.md).
 
 ## <a name="to-view-a-protected-file"></a>Pour afficher un fichier protégé
 Dans l'Explorateur de fichiers ou dans le message électronique contenant la pièce jointe, double-cliquez sur le fichier protégé, puis entrez vos informations d'identification si vous y êtes invité.

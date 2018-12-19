@@ -12,12 +12,12 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d6a851cc5568b14b1f18ad71169b2c0e6efc136b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 242700c089e34bc69eef10a45ea761f9668f4a42
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147520"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266645"
 ---
 # <a name="android-setup"></a>Configuration pour Android
 
@@ -34,24 +34,24 @@ Cette rubrique explique comment configurer votre environnement pour créer vos p
 
 Nous recommandons les logiciels suivants sur votre système de développement :
 
--   Système d’exploitation Windows ou OS X pour exécuter l’environnement de développement [Eclipse](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html).
+-   Système d’exploitation Windows ou OS X pour exécuter l’environnement de développement [Eclipse](https://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html).
 -   Ce guide suppose que vous utilisez le SDK Eclipse à partir d’Eclipse Juno 4.2 et avec une installation par défaut.
 -   Java à partir de Java 1.6.
--   [Plug-in Outils ADT (Android Developer Tools)](http://developer.android.com/sdk/installing/index.html). REMARQUE : Vous devrez peut-être redémarrer Eclipse pour terminer l’installation.
+-   [Plug-in Outils ADT (Android Developer Tools)](https://developer.android.com/studio/install). REMARQUE : Vous devrez peut-être redémarrer Eclipse pour terminer l’installation.
 
-     
+     
 
--   Le package MS RMS SDK 4.2 pour Android. Pour plus d’informations, consultez [Prise en main](get-started.md).
+-   Package MS RMS SDK 4.2 pour Android. Pour plus d’informations, consultez [Prise en main](get-started.md).
 
     Ce SDK peut être utilisé pour développer pour Android 4.0.3 (API niveau 15) et ultérieur.
 
--   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Vous pouvez cependant utiliser aussi d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
+-   Bibliothèque d’authentification : Nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Vous pouvez cependant utiliser aussi d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
 
     Pour plus d’informations, consultez [ADAL pour Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
-    **Remarque** : Si votre application ne doit pas utiliser la bibliothèque ADAL comme bibliothèque d’authentification OAuth 2.0, il est conseillé d’examiner ces conseils qui concernent Android : [Some SecureRandom Thoughts](http://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
+    **Remarque**   Si votre application ne doit pas utiliser la bibliothèque ADAL comme bibliothèque d’authentification OAuth 2.0, il est conseillé de lire ces conseils qui concernent Android : [Some SecureRandom Thoughts](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
 
-     
+     
 
 Lisez la rubrique [Nouveautés](release-notes.md) pour obtenir des informations sur les mises à jour des API, les notes de publication et les questions les plus fréquentes (FAQ).
 
@@ -61,9 +61,9 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 ## <a name="configuring-your-development-environment"></a>Configuration de votre environnement de développement
 
-**Remarque** : Version préliminaire de MS RMS SDK 4.2 : dans cette version préliminaire, les captures d’écran n’ont pas été mises à jour pour montrer la modification du nom des chemins, de com/microsoft/protection en com/microsoft/rightsmanagment. Le texte a cependant été mis à jour.
+**Remarque**   Préversion de MS RMS SDK 4.2 : Dans cette préversion, les captures d’écran n’ont pas été mises à jour pour montrer le changement du nom des chemins de com/microsoft/protection en com/microsoft/rightsmanagment. Le texte a cependant été mis à jour.
 
- 
+ 
 -   Ouvrez l’environnement de développement Eclipse.
 -   Pour créer un projet d’application Android, dans le menu **Fichier**, cliquez sur **Nouveau**, cliquez sur **Projet**, puis sélectionnez **Projet d’application Android**.
 
@@ -117,7 +117,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 -   Cliquez sur **OK**.
 
-    Comme MS RMS SDK 4.2 se connecte avec AAD RM, **INTERNET** et **ACCESS\_NETWORK\_STATE** doivent être accordés à l’application. Pour cela, ouvrez le fichier *AndroidManifest.xml* à la racine du projet.
+    Comme MS RMS SDK 4.2 se connecte avec AAD RM, les droits **INTERNET** et **ACCESS\_NETWORK\_STATE** doivent être accordés à l’application. Pour cela, ouvrez le fichier *AndroidManifest.xml* à la racine du projet.
 
     Pour ajouter les autorisations, cliquez sur **Ajouter**, puis sélectionnez **Utilise les autorisations**.
 
@@ -134,7 +134,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
     <uses-permission/>
    ```
 
-**Remarque** : Le SDK utilise *android.support.v4*
+**Remarque**   Le SDK utilise *android.support.v4*
 
 -   Vous êtes maintenant prêt à créer vos propres applications Android.
 

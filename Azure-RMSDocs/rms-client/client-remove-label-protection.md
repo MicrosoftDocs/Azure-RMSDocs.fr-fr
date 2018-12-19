@@ -4,22 +4,22 @@ description: Instructions pour supprimer des étiquettes de classification et la
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 31a325e31c8a7829f660080311f60181aa595ee7
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: ab98e211bf0f346359c6f6627a68db3071f7482e
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148033"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305078"
 ---
-# <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guide de l’utilisateur : Supprimer des étiquettes et retirer la protection des fichiers et e-mails étiquetés par Azure Information Protection ou protégés par Rights Management
+# <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guide de l’utilisateur : Supprimer des étiquettes et la protection des fichiers et des e-mails qui ont été étiquetés par Azure Information Protection ou protégés par Rights Management
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 
 Lorsque le [client Azure Information Protection est installé sur votre ordinateur](install-client-app.md), vous pouvez supprimer des étiquettes de classification et la protection de fichiers et messages électroniques.
 
@@ -30,7 +30,7 @@ Lorsque l’étiquette que vous supprimez est configurée pour appliquer la prot
 
 Si vous souhaitez choisir une autre étiquette ou un autre jeu de paramètres de protection, il est inutile de supprimer l’étiquette ou la protection. Choisissez plutôt une nouvelle étiquette et si nécessaire, définissez des autorisations personnalisées si votre administrateur autorise cette configuration. 
 
-Vous pouvez supprimer des étiquettes et des protections des documents Office quand vous les créez ou les modifiez à partir de vos applications bureautiques Office : **Word**, **Excel**, **PowerPoint**, **Outlook**. 
+Vous pouvez supprimer des étiquettes et des protections des documents Office quand vous les créez ou que vous les modifiez à partir de vos applications bureautiques Office : **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
 Vous pouvez également supprimer les étiquettes et la protection à l’aide de l’**Explorateur de fichiers**, qui prend en charge des types de fichiers supplémentaires et constitue un moyen pratique de supprimer les étiquettes et la protection de plusieurs fichiers à la fois.
 
@@ -49,7 +49,7 @@ Si vous ne voyez toujours pas l’icône **Supprimer l’étiquette**, c’est q
 > [!NOTE]
 > Si vous ne voyez pas cette barre Information Protection dans vos applications Office :
 >
-> - Si vous voyez un bouton **Protéger** sur le ruban, sélectionnez **Protéger**, puis sélectionnez **Afficher la barre**.
+> - Si vous voyez un bouton **Protéger** sur le ruban : Sélectionnez **Protéger**, puis **Afficher la barre**.
 > 
 > - Le client Azure Information Protection n’est pas [installé](install-client-app.md), ou le client est en cours d’exécution en [mode Protection uniquement](client-protection-only-mode.md).
 
@@ -59,13 +59,13 @@ Avec l’Explorateur de fichiers, vous pouvez rapidement supprimer les étiquett
 
 1. Dans l’Explorateur de fichiers, sélectionnez votre fichier, plusieurs fichiers ou un dossier. Cliquez avec le bouton droit, puis sélectionnez **Classifier et protéger**.
 
-2. Pour supprimer une étiquette : dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, sélectionnez **Supprimer l’étiquette**. Si l’étiquette a été configurée pour appliquer la protection, cette protection est automatiquement supprimée.
+2. Pour supprimer une étiquette : Dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, sélectionnez **Supprimer l’étiquette**. Si l’étiquette a été configurée pour appliquer la protection, cette protection est automatiquement supprimée.
 
-3. Pour supprimer la protection personnalisée d’un seul fichier : dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, désactivez l’option **Protéger avec des autorisations personnalisées**. 
+3. Pour supprimer la protection personnalisée d’un seul fichier : Dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, désactivez l’option **Protéger avec des autorisations personnalisées**. 
     
     Si vous ne voyez pas l’option **Protéger par des autorisations personnalisées**, votre administrateur ne vous permet pas d’utiliser cette option.
     
-4. Pour supprimer la protection personnalisée de plusieurs fichiers : dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, cliquez sur **Supprimer les autorisations personnalisées**.
+4. Pour supprimer la protection personnalisée de plusieurs fichiers : Dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, cliquez sur **Supprimer les autorisations personnalisées**.
     
     Si vous ne voyez pas l’option **Supprimer les autorisations personnalisées**, votre administrateur ne vous permet pas d’utiliser cette option.
 

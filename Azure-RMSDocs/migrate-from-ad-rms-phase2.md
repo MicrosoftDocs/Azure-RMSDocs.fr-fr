@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 861d262a04f80a6e1326f15b06942afd27f41990
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 35b2211b9ca6eb3f8c0f160a80850c3cb899562c
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024295"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174180"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilisez les informations suivantes pour la Phase 2 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent les étapes 4 à 6 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -74,7 +74,7 @@ Votre déploiement AD RMS actuel utilise l’une des configurations suivantes po
 > [!NOTE]
 > Pour plus d'informations sur l'utilisation des modules de sécurité matériels avec AD RMS, consultez [Utilisation d'AD RMS avec des modules de sécurité matériels](https://technet.microsoft.com/library/jj651024.aspx).
 
-Les deux options de topologie de clé de locataire Azure Information Protection sont les suivantes : Microsoft gère votre clé de locataire (**Gérée par Microsoft**) ou vous la gérez vous-même (**Gérée par le client**) dans Azure Key Vault. Le scénario dans lequel vous gérez votre propre clé de locataire Azure Information Protection est parfois appelé BYOK (« Bring Your Own Key »). Pour plus d’informations, consultez l’article [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
+Les deux options de topologie des clés de locataire Azure Information Protection sont : Microsoft gère votre clé de locataire (**Gérée par Microsoft**) ou vous la gérez vous-même (**gérée par le client**) dans Azure Key Vault. Le scénario dans lequel vous gérez votre propre clé de locataire Azure Information Protection est parfois appelé BYOK (« Bring Your Own Key »). Pour plus d’informations, consultez l’article [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
 
 Le tableau suivant permet d'identifier la procédure à utiliser pour votre migration. 
 
@@ -145,7 +145,7 @@ Vous pouvez ensuite publier ou archiver ces modèles comme vous le feriez pour t
 
 Si vos modèles AD RMS utilisaient le groupe **ANYONE**, le groupe équivalent le plus proche dans Azure Information Protection est nommé **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<nom_locataire>.onmicrosoft.com**. Par exemple, ce groupe peut se présenter sous la même forme que dans l’exemple suivant pour Contoso : **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Ce groupe contient tous les utilisateurs de votre locataire Azure AD.
 
-Quand vous gérez des modèles et des étiquettes dans le portail Azure, ce groupe apparaît comme le nom de domaine de votre locataire dans Azure AD. Par exemple, ce groupe peut se présenter comme suit pour Contoso : **contoso.onmicrosoft.com**. Pour ajouter ce groupe, l’option affiche **Ajouter \<nom_organisation> - Tous les membres.
+Quand vous gérez des modèles et des étiquettes dans le portail Azure, ce groupe apparaît comme le nom de domaine de votre locataire dans Azure AD. Par exemple, ce groupe peut se présenter comme suit pour Contoso : **contoso.onmicrosoft.com**. Pour ajouter ce groupe, l’option affiche **Ajouter \<nom_organisation> - Tous les membres**.
 
 Si vous n’êtes pas sûr que vos modèles AD RMS incluent le groupe ANYONE, vous pouvez utiliser l’exemple de script Windows PowerShell suivant pour identifier ces modèles. Pour plus d’informations sur l’utilisation de Windows PowerShell avec AD RMS, consultez [Utilisation de Windows PowerShell pour administrer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
@@ -156,7 +156,7 @@ Pour plus d’informations sur cette configuration, consultez [Comment configure
 #### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Exemple de script Windows PowerShell permettant d’identifier les modèles AD RMS qui incluent le groupe ANYONE
 Cette section contient l’exemple de script qui vous permet d’identifier n’importe quel modèle AD RMS pour lequel le groupe ANYONE a été défini, comme décrit dans la section précédente.
 
-**Exclusion de responsabilité** : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
+**Exclusion de responsabilité :** Cet exemple de script n'est pas pris en charge dans le cadre de tout programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
 
 ```
 import-module adrmsadmin 

@@ -4,22 +4,22 @@ description: Quand vous utilisez le service Azure Rights Management, les modèle
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 90c046f0cf2f954e70a17d127bc99b0479115928
-ms.sourcegitcommit: a5fd0afd84b62f84c3b9f0d076fab1b674267bf3
+ms.openlocfilehash: 10e381e68c75f2f401439ee330bf952b01b22c30
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083878"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305282"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Quand vous utilisez le service Azure Rights Management d’Azure Information Protection, les modèles sont automatiquement téléchargés vers les ordinateurs clients pour que les utilisateurs puissent les sélectionner à partir de leurs applications. En revanche, vous devrez peut-être effectuer d'autres étapes si vous apportez des modifications aux modèles :
 
@@ -28,7 +28,7 @@ Quand vous utilisez le service Azure Rights Management d’Azure Information Pro
 |Exchange Online<br /><br />Applicable aux règles de transport et à Outlook Web App |Actualisé automatiquement dans l’heure (aucune étape supplémentaire nécessaire).<br /><br />C’est le cas si vous utilisez le [chiffrement de messages Office 365 avec les nouvelles fonctionnalités](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Si vous avez configuré Exchange Online pour l’utilisation du service Azure Rights Management en important votre domaine de publication approuvé, utilisez le même ensemble d’instructions pour activer les nouvelles fonctionnalités dans Exchange Online.|
 |Client Azure Information Protection|Actualisation automatique chaque fois que la stratégie Azure Information Protection est actualisée sur le client :<br /><br /> - Lorsqu’une application Office qui prend en charge la barre Azure Information Protection s’ouvre. <br /><br /> - Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier. <br /><br /> - Lorsque vous exécutez les applets de commande PowerShell pour l’étiquetage et la protection (Get-AIPFileStatus et Set-AIPFileLabel).<br /><br /> - Lorsque le service du scanneur Azure Information Protection démarre et que la stratégie locale remonte à plus d’une heure. De plus, le service du scanneur vérifie les modifications apportées toutes les heures et utilise ces modifications pour le prochain cycle d’analyse.<br /><br /> - Toutes les 24 heures.<br /><br /> De plus, étant donné que ce client est étroitement intégré à Office, les modèles actualisés pour Office 2016 ou Office 2013 le seront aussi pour le client Azure Information Protection.|
 |Client d’étiquetage unifié Azure Information Protection (préversion)|Actualisé automatiquement toutes les 4 heures par l’application Office.<br /><br /> De plus, étant donné que ce client est étroitement intégré à Office, les modèles actualisés pour Office 2016 ou Office 2013 le seront aussi pour le client d’étiquetage unifié Azure Information Protection.|
-|Office 2016 et Office 2013<br /><br />Application de partage RMS pour Windows|Actualisation automatique (d’après une planification) :<br /><br />- Pour ces versions ultérieures d’Office : l’intervalle d’actualisation par défaut est de sept jours.<br /><br />- Pour l’application de partage RMS pour Windows : à partir de la version 1.0.1784.0, l’intervalle d’actualisation par défaut est d’une journée. Les versions antérieures ont, par défaut, un intervalle d'actualisation de sept jours.<br /><br />Pour forcer une actualisation avant la planification, consultez la section [Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Office 2016 et Office 2013<br /><br />Application de partage RMS pour Windows|Actualisation automatique (d’après une planification) :<br /><br />- Pour ces versions ultérieures d’Office : l’intervalle d’actualisation par défaut est de 7 jours.<br /><br />- Pour l’application de partage RMS pour Windows : depuis la version 1.0.1784.0, l’intervalle d’actualisation par défaut est quotidien. Les versions antérieures ont, par défaut, un intervalle d'actualisation de sept jours.<br /><br />Pour forcer une actualisation avant la planification, consultez la section [Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|Actualisation automatique lorsque les utilisateurs se déconnectent de Windows, se reconnectent et attendent jusqu'à une heure.|
 |Exchange sur site avec le connecteur Azure Rights Management<br /><br />Applicable aux règles de transport et à Outlook Web App|Actualisation automatique (aucune étape supplémentaire nécessaire). Toutefois, Outlook Web App met l’interface utilisateur en cache pendant un jour.|
 |Office 2016 pour Mac|Actualisation automatique (aucune étape supplémentaire nécessaire).|
@@ -45,19 +45,19 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 
 ### <a name="to-change-the-automatic-schedule"></a>Pour modifier la planification automatique
 
-1.  Dans l'un Éditeur du Registre, créez et définissez l'une des valeurs de Registre suivantes :
+1.  Dans l’un Éditeur du Registre, créez et définissez l’une des valeurs de Registre suivantes :
 
-    - Pour définir une fréquence de mise à jour en jours (au moins 1 jour) :  créez une valeur de Registre nommée **TemplateUpdateFrequency**, et définissez une valeur entière pour les données, spécifiant la fréquence en jours de téléchargement des modifications dans un modèle téléchargé. Utilisez les informations suivantes pour rechercher le chemin du Registre pour créer cette nouvelle valeur de Registre.
+    - Pour définir une fréquence de mise à jour en jours (au moins 1 jour) :  Créez une valeur de Registre nommée **TemplateUpdateFrequency** et définissez une valeur entière pour les données, spécifiant la fréquence (en jours) de téléchargement des modifications d’un modèle téléchargé. Utilisez les informations suivantes pour rechercher le chemin du Registre pour créer cette nouvelle valeur de Registre.
 
-        **Chemin de Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
+        **Chemin du Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
         **Type :** REG_DWORD
 
-        **Valeur** : TemplateUpdateFrequency
+        **Valeur :** TemplateUpdateFrequency
 
-    - Pour définir une fréquence de mise à jour en secondes (au moins 1 seconde) :  créez une valeur de Registre nommée **TemplateUpdateFrequencyInSeconds**, et définissez une valeur entière pour les données, spécifiant la fréquence en secondes de téléchargement des modifications dans un modèle téléchargé. Utilisez les informations suivantes pour rechercher le chemin du Registre pour créer cette nouvelle valeur de Registre.
+    - Pour définir une fréquence de mise à jour en secondes (au moins 1 seconde) :  Créez une valeur de Registre nommée **TemplateUpdateFrequencyInSeconds** et définissez une valeur entière pour les données, spécifiant la fréquence (en secondes) de téléchargement des modifications d’un modèle téléchargé. Utilisez les informations suivantes pour rechercher le chemin du Registre pour créer cette nouvelle valeur de Registre.
 
-        **Chemin de Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
+        **Chemin du Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
         **Type :** REG_DWORD
 
@@ -71,16 +71,16 @@ En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013
 
 1.  À l’aide d’un éditeur du Registre, supprimez les données de la valeur **LastUpdatedTime**. Par exemple, les données peuvent afficher **2015-04-20T15:52**. Supprimez 2015-04-20T15:52 pour qu’aucune donnée ne s’affiche. Utilisez les informations suivantes pour rechercher le chemin de Registre et supprimer ces données de valeur de Registre.
 
-    **Chemin de Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
+    **Chemin du Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*alias_utilisateur*>
 
     **Type :** REG_SZ
 
-    **Valeur** : LastUpdatedTime
+    **Valeur :** LastUpdatedTime
 
     > [!TIP]
     > Dans le chemin de Registre, *<MicrosoftRMS_FQDN>* fait référence au nom de domaine complet de votre service Microsoft RMS. Si vous souhaitez vérifier cette valeur :
 
-    > Exécutez l’applet de commande [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) pour Azure RMS. Si vous n’avez pas encore installé le module Windows PowerShell pour Azure RMS, consultez [Installation du module PowerShell AADRM](install-powershell.md).
+    > Exécutez l’applet de commande [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) pour Azure RMS. Si vous n’avez pas encore installé le module Windows PowerShell pour Azure RMS, consultez [Installation du module PowerShell AADRM](install-powershell.md).
     >
     > Dans le résultat de l'applet de commande, identifiez la valeur **LicensingIntranetDistributionPointUrl**.
     >

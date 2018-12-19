@@ -4,18 +4,18 @@ description: Informations vous permettant de configurer les serveurs locaux dest
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e66b4941cdfa86fbb1dcfe8593b39b59eb45ed9e
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 606ca10f04ad9fa21d90fdf4bfcbc368db6febb1
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024125"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305622"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configuration des serveurs pour le connecteur Azure Rights Management
 
@@ -30,15 +30,15 @@ Avant de commencer, vérifiez que le connecteur RMS est installé et configuré.
 ## <a name="configuring-servers-to-use-the-rms-connector"></a>Configuration de serveurs afin d'utiliser le connecteur RMS
 Une fois que vous avez installé et configuré le connecteur RMS, vous êtes en mesure de configurer les serveurs locaux destinés à se connecter au service Azure Rights Management et à utiliser cette technologie de protection par le biais du connecteur. Cela suppose de configurer les serveurs suivants :
 
--   **Pour Exchange 2016 et Exchange 2013** : serveurs d’accès au client et serveurs de boîte aux lettres
+-   **Pour Exchange 2016 et Exchange 2013** : Serveurs d'accès au client et serveurs de boîte aux lettres
 
--   **Pour Exchange 2010** : serveurs d’accès au client et serveurs de transport Hub
+-   **Pour Exchange 2010** : serveurs d'accès au client et serveurs de transport Hub
 
--   **Pour SharePoint** : serveurs web frontaux SharePoint, notamment ceux hébergeant le serveur d’administration centrale
+-   **Pour SharePoint** : serveurs web frontaux SharePoint, y compris ceux hébergeant le serveur d'administration centrale
 
 -   **Pour l’infrastructure de classification des fichiers** : ordinateurs Windows Server sur lesquels le Gestionnaire de ressources de fichiers est installé
 
-Cette configuration nécessite des paramètres de registre. Pour ce faire, deux options de configuration s’offrent à vous : automatique (en utilisant l’outil de configuration de serveur pour le connecteur Microsoft RMS) ou manuelle (en modifiant le Registre).
+Cette configuration nécessite des paramètres de registre. Pour ce faire, vous avez deux options : Automatiquement, avec l’outil de configuration de serveur pour le connecteur Microsoft RMS, ou manuellement, en modifiant le Registre.
 
 ---
 
@@ -90,11 +90,11 @@ Après avoir modifié la configuration de ces serveurs, vous devez les redémarr
 
 3.  Déterminez de quelle façon exécuter l'outil :
 
-    -   **En local**: vous pouvez exécuter l'outil de manière interactive à partir du serveur à configurer pour communiquer avec le connecteur RMS. Cette option est adaptée aux configurations uniques, comme un environnement de test.
+    -   **Localement** : vous pouvez exécuter l'outil de manière interactive à partir du serveur à configurer pour communiquer avec le connecteur RMS. Cette option est adaptée aux configurations uniques, comme un environnement de test.
 
-    -   **Déploiement logiciel**: vous pouvez exécuter l'outil pour générer des fichiers de registre que vous déployez ensuite sur un ou plusieurs serveurs pertinents à l'aide d'une application de gestion des systèmes prenant en charge le déploiement logiciel, telle que System Center Configuration Manager.
+    -   **Déploiement logiciel** : Vous pouvez exécuter l’outil pour générer des fichiers de Registre, que vous déployez ensuite sur un ou plusieurs serveurs pertinents avec une application de gestion des systèmes prenant en charge le déploiement logiciel, comme System Center Configuration Manager.
 
-    -   **Stratégie de groupe**: vous pouvez exécuter l'outil pour générer un script, que vous pouvez ensuite transmettre à un administrateur capable de créer des objets de stratégie de groupe pour les serveurs à configurer. Ce script créé un objet de stratégie de groupe pour chaque type de serveur à configurer, auquel l'administrateur peut assigner les serveurs pertinents.
+    -   **Stratégie de groupe** : vous pouvez exécuter l'outil pour générer un script, que vous pouvez ensuite transmettre à un administrateur capable de créer des objets de stratégie de groupe pour les serveurs à configurer. Ce script créé un objet de stratégie de groupe pour chaque type de serveur à configurer, auquel l'administrateur peut assigner les serveurs pertinents.
 
     > [!NOTE]
     > Cet outil configure les serveurs qui sont appelés à communiquer avec le connecteur RMS et qui sont répertoriés au début de cette section. N'exécutez pas cet outil sur les serveurs qui exécutent le connecteur RMS.
@@ -128,9 +128,9 @@ Consultez les sections suivantes pour obtenir des informations spécifiques pour
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>Configuration d'un serveur Exchange afin d'utiliser le connecteur
 Les rôles Exchange qui communiquent avec le connecteur RMS sont les suivants :
 
--   Pour Exchange 2016 et Exchange 2013 : serveur d’accès au client et serveur de boîte aux lettres
+-   Pour Exchange 2016 et Exchange 2013 : Serveur d'accès au client et serveur de boîte aux lettres
 
--   Pour Exchange 2010 : serveur d'accès au client et serveur de transport Hub
+-   Pour Exchange 2010 : serveur d'accès au client et serveur de transport Hub
 
 Pour utiliser le connecteur RMS, ces serveurs Exchange doivent exécuter l'une des versions logicielles suivantes :
 

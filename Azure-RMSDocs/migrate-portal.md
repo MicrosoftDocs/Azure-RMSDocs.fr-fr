@@ -10,22 +10,22 @@ ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 0f94a36f7653ef4aff590bb6815c75210768f7c5
-ms.sourcegitcommit: 227f54a8e90aa57d778ab60c646179c10e5edb44
+ms.openlocfilehash: 1988552916494ec6673f7439c0b132ccf87786c2
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51272361"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174078"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tâches que vous aviez l’habitude d’effectuer dans le portail Azure Classic
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Jusqu’à présent, vous utilisiez le portail Azure Classic pour gérer le service Azure Rights Management et vous avez besoin d’aide pour passer au portail Azure ?
 
 Le portail Azure Classic a été mis hors service le **8 janvier 2018**. Après cette date, vous n’êtes plus en mesure de gérer le service Azure Rights Management et les modèles personnalisés du portail Classic. Si vous essayez d’accéder au portail Classic, vous voyez un lien qui vous redirige vers le nouveau portail Azure.
 
-Pour plus d’informations sur le retrait du portail Classic, consultez le billet de blog [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://cloudblogs.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/) faisant suite à cette annonce. Pour plus d’informations sur la prolongation temporaire jusqu’à la date de mise hors service d’origine, consultez [Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
+Pour plus d’informations sur le retrait du portail Classic, consultez cette annonce faite dans un billet du blog : [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://cloudblogs.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/). Pour plus d’informations sur la prolongation temporaire jusqu’à la date de mise hors service d’origine, consultez [Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Comment effectuer les tâches d’administration courantes
 
@@ -55,7 +55,7 @@ Nouvelles fonctionnalités dans le portail Azure :
 
 - Au lieu de gérer un modèle et une étiquette séparément, la conversion de modèles en étiquettes vous permet de gérer un seul objet. Pour obtenir des instructions, consultez [Convertir des modèles en étiquettes](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Prise en charge d’autres rôles d’administrateur : Dans le portail Azure Classic, vous deviez vous connecter comme Administrateur général pour configurer Azure Rights Management. Pour configurer Azure Information Protection dans le portail Azure, vous pouvez vous connecter à l’aide d’un compte ayant l’un des rôles d’administration suivants : **Administrateur général**, **Administrateur de sécurité** ou **Administrateur Information Protection**. Pour plus d’informations sur chacun de ces rôles, consultez la section [Rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) dans la documentation d’Azure Active Directory.
+- Prise en charge d’autres rôles d’administrateur : Alors que vous deviez vous connecter en tant qu’administrateur général dans le portail Azure Classic pour configurer Azure Rights Management, vous pouvez maintenant vous connecter au portail Azure pour configurer Azure Information Protection en utilisant un compte qui présente l’un des rôles d’administration suivants : **Administrateur général**, **Administrateur de sécurité** ou **Administrateur Information Protection**. Pour plus d’informations sur chacun de ces rôles, consultez la section [Rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) dans la documentation d’Azure Active Directory.
 
 Les applets de commande PowerShell utilisées pour créer et gérer des modèles et pour activer ou désactiver le service restent inchangées.
 

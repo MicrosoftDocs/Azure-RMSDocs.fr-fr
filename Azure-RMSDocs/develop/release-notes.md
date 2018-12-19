@@ -4,19 +4,19 @@ description: Décrit les fonctionnalités et modifications importantes de cette 
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: e3b4812f06c7ee86c48c0984e440d34f858bb4e7
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6433352f05401fcaafc84704a0441941ff87bdf3
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148781"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266696"
 ---
 # <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
 
@@ -26,13 +26,13 @@ Cette rubrique décrit les modifications et les fonctionnalités importantes de 
 
 -   [Nouveau en juillet 2017](#new-for-july-2017)
 -   [Mise à jour d’octobre 2016](#October-2016-update)
--   [Mise à jour de juin 2016](#new-for-June-2016)
+-   [Mise à jour de juin 2016](#june-2016-update)
 -   [Mise à jour de décembre 2015](#december-2015-update)
--   [Mise à jour de juillet 2015 : ajout de la prise en charge du développement Linux/C++](#july-2015-update-adds-support-for-linux-c-developm)
--   [Mise à jour de mai 2015 : ajout du contrôle de la journalisation](#may-2015-update-adds-logging-control)
--   [Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store](#february-2015-update-adds-windows-store-application-support)
--   [Mise à jour de janvier 2015 : ajout de la prise en charge de la plateforme WinPhone](#january-2015-update-adds-winphone-platform-support)
--   [Mise à jour d’octobre 2014 : mise à niveau vers Microsoft RMS SDK 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
+-   [Mise à jour de juillet 2015 : ajout de la prise en charge du développement Linux/C++](#july-2015-update---adds-support-for-linux--c-development)
+-   [Mise à jour de mai 2015 : ajout du contrôle de la journalisation](#may-2015-update---adds-logging-control)
+-   [Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store](#february-2015-update---adds-windows-store-application-support)
+-   [Mise à jour de janvier 2015 : ajout de la prise en charge de la plateforme WinPhone](#january-2015-update---adds-winphone-platform-support)
+-   [Mise à jour d’octobre 2014 : mise à niveau vers Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-4-1)
 -   [Notes de publication](#release-notes)
 -   [Forum Aux Questions](#frequently-asked-questions)
 
@@ -40,7 +40,7 @@ Cette rubrique décrit les modifications et les fonctionnalités importantes de 
 
 La mise à jour pour la version de juillet incluait l’incrémentation de la version du SDK, qui est maintenant 4.2.5.
 
-- Android SDK : Votre application peut désormais **définir le niveau de journalisation à la volée** avec le kit Android SDK. Pour plus d’informations, voir [Procédure : activation de la journalisation des erreurs et des performances](https://docs.microsoft.com/information-protection/develop/enabling-logging)
+- SDK Android : Votre application peut désormais **définir le niveau de journalisation à la volée** avec le SDK Android. Pour plus d’informations, consultez [Guide pratique pour activer la journalisation des erreurs et des performances](https://docs.microsoft.com/information-protection/develop/enabling-logging)
 - Le kit iOS SDK ne prend pas en charge les niveaux de journalisation. 
 - Le SDK retourne désormais une erreur pour un jeton d’accès NULL.
 
@@ -64,7 +64,7 @@ Le Kit de développement logiciel (SDK) passe désormais à la version 4.2 et b
 
     Pour plus d’informations et de conseils sur iOS/OS X, reportez-vous à la classe [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) qui fournit des informations de suivi et à la méthode d’inscription de suivi des documents supplémentaire sur [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). Des ajouts similaires ont été effectués pour Android pour [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) et [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx).
 
-    Pour obtenir une description détaillée de la fonctionnalité de suivi des documents, consultez [Procédure : utilisation du suivi des documents](how-to-use-document-tracking.md).
+    Pour obtenir une description détaillée de la fonctionnalité de suivi des documents, consultez [Guide pratique pour utiliser le suivi des documents](how-to-use-document-tracking.md).
 
 -   Ensemble de méthodes synchrones parallèles aux versions asynchrones de l’API Android :
 
@@ -108,7 +108,7 @@ Cette version ajoute la prise en charge des mises à jour suivantes :
 
     Activation des paramètres de contrôle du niveau de journalisation.
 
-    Pour plus d’informations, voir [Procédure : activation de la journalisation des erreurs et des performances](enabling-logging.md)
+    Pour plus d’informations, consultez [Guide pratique pour activer la journalisation des erreurs et des performances](enabling-logging.md)
 
     Ajout de la prise en charge de l’effacement du cache.
 
@@ -193,7 +193,7 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 
 
-**Remarque** : les applications MDI ne sont pas prises en charge par notre API iOS.
+**Remarque**   Les applications MDI ne sont pas prises en charge par notre API iOS.
 
 ## <a name="frequently-asked-questions"></a>Forum aux questions
 
@@ -203,40 +203,40 @@ Cette section donne des informations sur les versions actuelles et précédentes
 
 **R** : Il s’agit d’un problème connu qui sera traité ultérieurement.
 
-**Q** : Comment obtenir de nouveaux locataires d’organisation pour essayer le Kit de développement logiciel (SDK) et les exemples d’applications ?
+**Q** : Comment obtenir de nouveaux locataires d’organisation pour essayer le SDK et les exemples d’applications ?
 
-**R** : Pour demander des informations d’identification pour les organisations de test Azure AD RMS, envoyez un e-mail à <rmcstbeta@microsoft.com>.
+**R** : Pour demander des informations d’identification pour les organisations de test Azure AD RMS, envoyez un e-mail à <rmcstbeta@microsoft.com>.
 
 **Q** : Je ne vois aucune discussion relative à la hiérarchie de test dans la documentation. Pourquoi ?
 
-**R** : Le concept de hiérarchie de test n’existe pas dans les nouveaux kits de développement logiciel (SDK) AD RMS. Vous travaillerez toujours avec la hiérarchie de production.
+**R** : Le concept de hiérarchie de test n’existe pas dans les nouveaux SDK AD RMS. Vous travaillerez toujours avec la hiérarchie de production.
 
-**Q** : Dans la version 2.1 du SDK RMS, un manifeste généré était nécessaire pour chaque application implémentant la protection des informations. Est ce toujours vrai pour les versions 4.0 et ultérieures du SDK ?
+**Q** : Dans la version 2.1 du SDK RMS, un manifeste généré était nécessaire pour chaque application implémentant la protection des informations. Est ce toujours vrai pour les versions 4.0 et ultérieures du SDK ?
 
-**R** : Non, les manifestes ne sont plus nécessaires pour les versions 3.0 et ultérieures du kit de développement logiciel (SDK) Rights Management.
+**R** : Non, les manifestes ne sont plus nécessaires pour les versions 3.0 et ultérieures du SDK Rights Management.
 
 **Android**
 
-**Q** : Avec quels environnements de développement le kit de développement logiciel a-t-il été testé ?
+**Q** : Avec quels environnements de développement le SDK a-t-il été testé ?
 
-**R** : Eclipse Juno avec l’API Google 15 et version ultérieure.
+**R** : Eclipse Juno avec l’API Google 15 et ultérieur.
 
 **Q** : Puis-je appeler cancel(), une méthode d’annulation à partir du thread d’interface utilisateur ?
-**R** : vous devez appeler cancel() à partir d’un thread autre qu’un thread d’interface utilisateur, sous peine de provoquer l’interruption d’une connexion réseau.
+**R** : Vous devez appeler cancel() à partir d’un thread autre qu’un thread d’interface utilisateur, sous peine de provoquer l’interruption d’une connexion réseau.
 
 **iOS**
 
-**Q** : Quelles plates-formes ont été vérifiées pour le développement du kit de développement logiciel ?
+**Q** : Quelles plateformes ont été vérifiées pour le développement avec le SDK ?
 
-**R** : Xcode 5.0 avec iOS 7 et versions ultérieures.
+**R** : Xcode 5.0 avec iOS 7 et ultérieur.
 
-**Q** : J’ai appelé une méthode cancel() sur une opération, toutefois, j’obtiens toujours la notification m’indiquant que l’opération est terminée. Pourquoi ?
+**Q** : J’ai appelé une méthode cancel() sur une opération, mais j’obtiens toujours une notification m’indiquant que l’opération est terminée. Pourquoi ?
 
-**R** : Toutes les opérations ne peuvent pas être annulées. Une opération d’annulation est exécutée dans les meilleures conditions possible.
+**R** : Toutes les opérations ne peuvent pas être annulées. Une opération d’annulation est exécutée dans les meilleures conditions possibles.
 
 **OS X**
 
-**Q** : L’infrastructure de l’exemple d’application est adaptée à Xcode 5. Puis-je utiliser Xcode 4.6 ?
+**Q** : L’infrastructure de l’exemple d’application est adaptée à Xcode 5. Puis-je utiliser Xcode 4.6 ?
 
 **R** : Le kit de développement logiciel (SDK) du système d’exploitation OS X fonctionne avec Xcode 4.6 et versions ultérieures uniquement et OS X 10.8 et versions ultérieures.
 

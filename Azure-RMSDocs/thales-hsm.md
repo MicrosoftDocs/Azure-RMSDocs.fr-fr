@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ac508190d48bc24b4c8ccc366d4136337269d48f
-ms.sourcegitcommit: 03a9fc3f1b96a4edc0e2a9d538ce04a0579023be
+ms.openlocfilehash: 679f8d2a59ff088ddec230d3d13113f7725cf769
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52268119"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173619"
 ---
-# <a name="more-information-about-thales-hsms-and-microsoft-additions-retired-content"></a>Plus d’informations sur les modules de sécurité matériels Thales et les ajouts de Microsoft : CONTENU RETIRÉ
+# <a name="more-information-about-thales-hsms-and-microsoft-additions-retired-content"></a>Informations complémentaires sur les modules de sécurité matériels Thales et les compléments Microsoft : CONTENU SUPPRIMÉ
 
->*S’applique à : Azure Rights Management, [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : Azure Rights Management, [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Les informations contenues dans cet article ont été supprimées car elles ne sont plus pertinentes maintenant qu’Azure Rights Management utilise Azure Key Vault pour les clés de locataire gérées par le client (également appelées BYOK ou Bring Your Own Key). 
 

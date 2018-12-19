@@ -4,22 +4,22 @@ description: Identifiez les différents niveaux de contrôle et de responsabilit
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 07364d1b4feea8d9f0c901b4f386aedaf4700bb5
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 72607226c594e3b9d8b7fa203c38f9ee86ca4283
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150855"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304806"
 ---
 # <a name="operations-for-your-azure-information-protection-tenant-key"></a>Opérations pour votre clé de locataire Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Selon la topologie de votre clé de locataire pour Azure Information Protection, différents niveaux de contrôle et de responsabilité sont possibles pour votre clé de locataire Azure Information Protection. Les deux topologies de clé sont : **Gérée par Microsoft** et **Gérée par le client**.
 

@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43bc10ce43a4ba7a26958e562c4acc6e245ad76a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 25471f9e047b4b3c1dac94cdf0856d7413de268a
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024074"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173891"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Après avoir déployé et configuré Azure Information Protection pour votre organisation, vous pouvez fournir de l’aide et des instructions aux utilisateurs, aux administrateurs et au support technique :
 
@@ -40,7 +40,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
     
 -   **Informations de support technique**
     
-    Si les utilisateurs disposent du client Azure Information Protection, les opérateurs du support technique peuvent leur demander d’utiliser l’option **Aide et commentaires** pour savoir si l’édition d’Office prend ou non en charge la protection et obtenir le compte d’utilisateur actuellement connecté. Vous pouvez également utiliser cette option pour collecter des fichiers journaux et réinitialiser le client. Pour plus d’informations, consultez le guide de l’administrateur : [Vérifications et résolution des problèmes liés à l’installation](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
+    Si les utilisateurs disposent du client Azure Information Protection, les opérateurs du support technique peuvent leur demander d’utiliser l’option **Aide et commentaires** pour savoir si l’édition d’Office prend ou non en charge la protection et obtenir le compte d’utilisateur actuellement connecté. Vous pouvez également utiliser cette option pour collecter des fichiers journaux et réinitialiser le client. Pour plus d’informations, consultez le guide de l’administrateur : [Vérifications et résolution des problèmes de l’installation](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
     
     S’il existe des demandes légitimes d’obtention de droits d’accès complets à des documents protégés, vérifiez que le support technique dispose des processus nécessaires pour effectuer une telle demande à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md) d’Azure Rights Management. Par exemple, ces demandes peuvent émaner du service juridique ou d’un responsable après le départ d’un employé.
     
@@ -102,7 +102,7 @@ Les droits d'utilisation sont affichés en haut du document grâce à une banni�
 
 1.  Dans Outlook, créez un e-mail adressé à un destinataire au sein de votre organisation.
 
-2.  À partir de l’onglet **OPTIONS** , cliquez sur **Autorisation**, puis sélectionnez une option. Par exemple : **Ne pas transférer**, **\<Nom de la société>- Confidentiel** ou **\<Nom de la société>- Affichage confidentiel uniquement**.
+2.  À partir de l’onglet **OPTIONS** , cliquez sur **Autorisation**, puis sélectionnez une option. Par exemple : **Ne pas transférer**, ou **\<Nom de la société> - Confidentiel** ou **\<Nom de la société> - Affichage confidentiel uniquement**.
 
 3.  Envoyez le message.
 
@@ -114,7 +114,7 @@ Par exemple, si l’e-mail est protégé à l’aide de l’option **Ne pas tran
 
 1.  Dans Outlook sur le web, créez un e-mail destiné à une personne de votre organisation.
 
-2.  Cliquez sur  **…**, puis sur **Définir l’autorisation**et sélectionnez une option. Par exemple : **Ne pas transférer** ou **Ne pas répondre à tous**. Ou **\<Nom de la société> - Confidentiel** ou **\<Nom de la société> - Affichage confidentiel uniquement**.
+2.  Cliquez sur  **…**, puis sur **Définir l’autorisation**et sélectionnez une option. Par exemple : **Ne pas transférer** ou **Ne pas répondre à tous**. Ou **\<Nom de la société> - Confidentiel** ou **\<Nom de la société> - Affichage confidentiel uniquement**.
 
 3.  Envoyez le message.
 

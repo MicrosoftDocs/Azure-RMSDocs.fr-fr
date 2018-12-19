@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ec0c231e2036dc66b941be7f764bb5e5fd5c518a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 7104da9852458cbe9100600c3e14b43ee4aa7986
+ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023783"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53218474"
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Présentation technique de l’application de partage Microsoft Rights Management et détails sur la protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 
 L'application de partage Microsoft Rights Management est une application téléchargeable facultative pour Microsoft Windows et d’autres plateformes. Elle offre les fonctionnalités suivantes :
@@ -34,7 +34,7 @@ L'application de partage Microsoft Rights Management est une application téléc
 
 -   Interopérabilité complète avec les fichiers PDF protégés à l’aide de l’Infrastructure de classification des fichiers (ICF) et des outils de création de fichiers PDF pris en charge.
 
-L’application de partage Microsoft Rights Management utilise le [runtime du client AD RMS 2.1](http://www.microsoft.com/download/details.aspx?id=38396). Grâce aux fonctionnalités d'AD RMS 2.1, l'application de partage Microsoft Rights Management fournit aux utilisateurs finaux une expérience simple de protection et de consommation.
+L’application de partage Microsoft Rights Management utilise le [runtime du client AD RMS 2.1](https://www.microsoft.com/download/details.aspx?id=38396). Grâce aux fonctionnalités d'AD RMS 2.1, l'application de partage Microsoft Rights Management fournit aux utilisateurs finaux une expérience simple de protection et de consommation.
 
 Avec la version d’octobre 2013 de RMS, vous pouvez protéger des documents en mode natif à l’aide d’Office 2010 et les envoyer à des employés d’une autre entreprise, qui peuvent alors les utiliser avec le service Azure Rights Management d’Azure Information Protection. Par ailleurs, si AD RMS est en mode de chiffrement 2, vous pouvez vous servir de RMS for Individuals et utiliser du contenu envoyé par des employés d’une autre entreprise qui utilisent le service Azure Rights Management. Pour plus d’informations sur le mode de chiffrement 2, voir [Modes de chiffrement AD RMS](https://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
 
@@ -100,7 +100,7 @@ Vous pouvez également forcer l'application de partage RMS à bloquer la protect
 
 Pour configurer l'application de partage RMS afin qu'elle applique une protection générique à tous les fichiers qui auraient par défaut une protection native, apportez les modifications suivantes au Registre. Notez que, si les clés RmsSharingApp ou FileProtection n’existent pas, vous devez les créer manuellement.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection** : créez une clé nommée *.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection** : Créez une clé nommée *.
 
     Ce réglage désigne les fichiers avec une extension de nom de fichier quelconque.
 
@@ -110,7 +110,7 @@ Pour configurer l'application de partage RMS afin qu'elle applique une protectio
 
 Ces deux réglages entraînent l'application de la protection générique par l'application de partage RMS à tous les fichiers ayant une extension de nom de fichier. Si c'est l'objectif que vous recherchez, aucune configuration supplémentaire n'est requise. Toutefois, vous pouvez définir des exceptions pour des types de fichier spécifiques, afin qu'ils soient protégés en mode natif. Pour cela, vous devez effectuer trois modifications supplémentaires dans le Registre pour chaque type de fichier :
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection** : ajoutez une nouvelle clé dont le nom correspond à l’extension de nom de fichier (sans le point en préfixe).
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection** : Ajoutez une nouvelle clé qui porte le nom de l'extension de nom de fichier (sans le point qui précède).
 
     Par exemple, pour les fichiers qui ont une extension de nom de fichier .docx, créez une clé nommée **DOCX**.
 
@@ -124,11 +124,11 @@ Répétez ces trois étapes pour les autres types de fichier que vous souhaitez 
 
 Vous pouvez apporter des modifications similaires au Registre pour d'autres scénarios en modifiant la valeur de la chaîne **Encryption** qui prend en charge les valeurs suivantes :
 
--   **Pfile**: protection générique
+-   **Pfile** : Protection générique
 
--   **Native**: protection native
+-   **Natif** : Protection native
 
--   **Off**: bloquer la protection
+-   **Désactivé** : Bloquer la protection
 
 ## <a name="see-also"></a>Voir aussi
 [Guide d’utilisation de l’application de partage Rights Management](sharing-app-user-guide.md)

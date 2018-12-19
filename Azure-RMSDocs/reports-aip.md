@@ -4,19 +4,19 @@ description: Guide pratique pour utiliser la création de rapports centralisée 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 12/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 8dc53c6bad6c8f68ac5786afb0600cafb6398765
-ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
+ms.openlocfilehash: 58ea955deef9341ec80b516b89feec609389b9ad
+ms.sourcegitcommit: 4caf3aa13506554928c5fda38994301ddcbdfb41
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52953310"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068807"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -67,9 +67,13 @@ Par exemple, vous serez en mesure de voir ce qui suit :
     
     - Fichiers qui contiennent des informations sensibles pour des catégories connues, telles que les données financières et les informations personnelles, et emplacement des fichiers en fonction de ces catégories
     
-Les rapports utilisent [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) pour stocker les données dans un espace de travail appartenant à votre organisation. Si vous êtes familiarisé avec le langage de requête, vous pouvez modifier les requêtes ainsi que créer des rapports et tableaux de bord Power BI. Le tutoriel suivant peut s’avérer utile pour comprendre le langage de requête : [Prise en main du portail Analytics](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
+Les rapports utilisent [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) pour stocker les données dans un espace de travail appartenant à votre organisation. Si vous êtes familiarisé avec le langage de requête, vous pouvez modifier les requêtes ainsi que créer des rapports et tableaux de bord Power BI. Le tutoriel suivant peut s’avérer utile pour comprendre le langage de requête : [Bien démarrer avec le portail Analytics](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
 
-Pour plus d’informations, lisez le billet de blog : [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
+Pour plus d’informations, lisez le billet de blog suivant : 
+
+- [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)
+
+- [Discover and protect sensitive data through Azure Information Protection and Windows Defender ATP](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292)
 
 ### <a name="information-collected-and-sent-to-microsoft"></a>Informations collectées et envoyées à Microsoft
 
@@ -85,9 +89,9 @@ Pour générer ces rapports, les points de terminaison envoient les types suivan
 
 - Nom de l’appareil de l’utilisateur.
 
-- Pour les documents : chemin et nom de fichier des documents qui sont étiquetés.
+- Pour les documents : Chemin et nom de fichier des documents qui sont étiquetés.
 
-- Pour les e-mails : objet de l’e-mail, expéditeur de l’e-mail et destinataires de l’e-mail pour les e-mails étiquetés. 
+- Pour les e-mails : Objet de l’e-mail, expéditeur de l’e-mail et destinataires de l’e-mail pour les e-mails étiquetés. 
 
 - Types d’informations sensibles ([prédéfinis](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) et personnalisés) détectés dans le contenu.
 
@@ -116,9 +120,9 @@ Pour afficher les rapports Azure Information Protection et créer les vôtres, v
 
 3. Dans le panneau **Azure Information Protection - Log Analytics**, vous pouvez voir une liste des espaces de travail Log Analytics qui sont détenus par votre locataire. Effectuez l'une des opérations suivantes :
     
-    - Pour créer un espace de travail Log Analytics : sélectionnez **Créer un espace de travail** puis, dans le panneau **Espace de travail Log Analytics**, fournissez les informations demandées.
+    - Pour créer un espace de travail Log Analytics : Sélectionnez **Créer un espace de travail** puis, dans le panneau **Espace de travail Log Analytics**, spécifiez les informations demandées.
     
-    - Pour utiliser un espace de travail Log Analytics existant : sélectionnez l’espace de travail dans la liste.
+    - Pour utiliser un espace de travail Log Analytics : Sélectionnez l’espace de travail dans la liste.
 
 Si vous avez besoin d’aide pour créer l’espace de travail Log Analytics, consultez [Créer un espace de travail Log Analytics dans le portail Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
@@ -128,15 +132,15 @@ Quand l’espace de travail est configuré, vous êtes prêt à afficher les rap
 
 Dans le panneau Azure Information Protection, recherchez les options du menu **Tableaux de bord**, puis sélectionnez l’une des options suivantes :
 
-- **Rapport d’utilisation (préversion)**  : utilisez ce rapport pour voir comment vos étiquettes sont utilisées. 
+- **Rapport d’utilisation (préversion)**  : Utilisez ce rapport pour voir comment vos étiquettes sont utilisées. 
 
-- **Journaux d’activité (préversion)** : utilisez ce rapport pour voir les actions d’étiquetage effectuées par les utilisateurs sur les appareils et les chemins d'accès.
+- **Journaux d’activité (préversion)**  : Utilisez ce rapport pour voir les actions d’étiquetage effectuées par les utilisateurs sur les appareils et les chemins de fichiers.
     
     Ce rapport est actuellement en cours de déploiement auprès des locataires ; si vous ne le voyez pas, réessayez quelques jours plus tard.
     
     Ce rapport comporte une option **Colonnes** qui permet d’afficher plus d’informations sur l’activité que l’affichage par défaut.
 
-- **Découverte de données (préversion)**  : utilisez ce rapport pour afficher des informations sur les fichiers détectés par les scanneurs ou Windows Defender ATP.
+- **Découverte de données (préversion)**  : Utilisez ce rapport pour voir des informations sur les fichiers détectés par les scanneurs ou Windows Defender ATP.
 
 ## <a name="how-to-modify-the-reports"></a>Comment modifier les rapports
 
@@ -145,7 +149,7 @@ Sélectionnez l’icône de requête dans le tableau de bord pour ouvrir un pann
 ![Icône Log Analytics pour personnaliser les rapports Azure Information Protection](./media/log-analytics-icon.png)
 
 
-Les données enregistrées pour Azure Information Protection sont stockées dans le tableau suivant : **InformationProtectionLogs_CL**
+Les données consignées pour Azure Information Protection sont stockées dans la table suivante : **InformationProtectionLogs_CL**
 
 ## <a name="next-steps"></a>Étapes suivantes
 Après avoir examiné les informations contenues dans les rapports, vous pouvez décider d’apporter des modifications à votre stratégie Azure Information Protection. Pour obtenir des instructions, consultez [Configuration de la stratégie Azure Information Protection](configure-policy.md).

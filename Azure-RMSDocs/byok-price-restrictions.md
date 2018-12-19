@@ -4,22 +4,22 @@ description: Découvrez les restrictions imposées quand vous utilisez des clés
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 93e538b882da557715b04e8675b5a3b86de018b0
-ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
+ms.openlocfilehash: 68e479eb7f19f60d6d68b913eae46dd287b5a04f
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52330274"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305146"
 ---
 # <a name="byok-pricing-and-restrictions"></a>Tarifs et restrictions BYOK
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Les organisations qui ont un abonnement incluant Azure Information Protection peuvent configurer leur locataire Azure Information Protection pour utiliser une clé gérée par le client (BYOK) et [consigner son utilisation](./log-analyze-usage.md). 
@@ -44,11 +44,11 @@ Voici d’autres avantages de l’utilisation d’Azure Key Vault pour votre cl�
 
 - Azure Key Vault offre une séparation des rôles, qui est une bonne pratique reconnue en matière de sécurité. Les administrateurs d’Azure Information Protection peuvent se concentrer sur la gestion de la protection et la classification des données, tandis que les administrateurs d’Azure Key Vault peuvent se concentrer sur la gestion des clés de chiffrement et des stratégies spéciales qui peuvent nécessiter une sécurité ou une conformité.
 
-- Certaines organisations ont des restrictions quant à l’emplacement où doit se trouver leur clé principale. Azure Key Vault offre un niveau élevé de contrôle quant à l’emplacement où la clé principale est stockée car le service est disponible dans de nombreuses régions Azure. Actuellement, vous pouvez choisir parmi 28 régions Azure, ce nombre étant appelé à augmenter. Pour plus d’informations, consultez la page [Disponibilité des produits par région] (page https://azure.microsoft.com/regions/services/) sur le site Azure.
+- Certaines organisations ont des restrictions quant à l’emplacement où doit se trouver leur clé principale. Azure Key Vault offre un niveau élevé de contrôle quant à l’emplacement où la clé principale est stockée car le service est disponible dans de nombreuses régions Azure. Actuellement, vous pouvez choisir parmi 28 régions Azure, ce nombre étant appelé à augmenter. Pour plus d’informations, consultez la page [Disponibilité des produits par région](https://azure.microsoft.com/regions/services/) sur le site Azure.
 
 Outre la gestion des clés, Azure Key Vault offre à vos administrateurs de sécurité la même expérience de gestion pour stocker, utiliser et gérer les certificats et les secrets (comme les mots de passe) pour d’autres services et applications qui utilisent le chiffrement. 
 
-Pour plus d’informations sur Azure Key Vault, consultez [Qu’est-ce qu’Azure Key Vault ?](/azure/key-vault/key-vault-whatis) et visitez le [blog de l’équipe Azure Key Vault](https://cloudblogs.microsoft.com/kv/) pour obtenir les informations les plus récentes et découvrir comment d’autres services utilisent cette technologie.
+Pour plus d’informations sur Azure Key Vault, consultez [Qu’est-ce qu’Azure Key Vault ?](/azure/key-vault/key-vault-whatis) et visitez le [blog de l’équipe Azure Key Vault](https://blogs.technet.microsoft.com/kv/) pour obtenir les informations les plus récentes et découvrir comment d’autres services utilisent cette technologie.
 
 ## <a name="restrictions-when-using-byok"></a>Restrictions lors de l’utilisation de BYOK
 

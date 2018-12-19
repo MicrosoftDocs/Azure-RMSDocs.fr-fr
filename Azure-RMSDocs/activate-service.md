@@ -4,22 +4,22 @@ description: Le service Azure Rights Management doit être activé pour que votr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/06/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0642dcf6b2d8db1921cd2c5d4d662a36e8f78ead
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 4eb4b477091990bfff036288cf2d33795bafeb3d
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149393"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305425"
 ---
 # <a name="activating-azure-rights-management"></a>Activation d'Azure Rights Management
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!NOTE]
 > Ces informations de configuration sont destinées aux administrateurs qui sont responsables d’un service qui s’applique à tous les utilisateurs dans une organisation. Si vous recherchez des informations et une aide utilisateur sur l’utilisation des fonctionnalités de Rights Management pour une application spécifique ou sur l’ouverture d’un fichier ou e-mail protégé par des droits, utilisez l’aide et les conseils qui accompagnent votre application.
@@ -35,9 +35,9 @@ Quand le service Azure Rights Management d’Azure Information Protection est ac
 
 Si vous disposez d’un plan de service incluant Azure Rights Management, vous n’aurez peut-être pas besoin d’activer le service :
 
-- **Si vous avez obtenu votre abonnement incluant Azure Rights Management ou Azure Information Protection fin février 2018 ou après :** le service est automatiquement activé pour vous. Vous n’avez pas à activer le service, sauf si vous ou un autre administrateur global pour votre organisation a désactivé Azure Rights Management.
+- **Si vous avez obtenu votre abonnement incluant Azure Rights Management ou Azure Information Protection fin février 2018 ou après :** le service est automatiquement activé pour vous. Vous n’avez pas à activer le service, sauf si vous ou un autre administrateur global pour votre organisation a désactivé Azure Rights Management.
 
-- **Si votre abonnement incluant Azure Rights Management ou Azure Information Protection a été obtenu avant ou pendant février 2018 :** Microsoft commence à activer le service Azure Rights Management pour ces abonnements si votre locataire utilise Exchange Online. Pour ces abonnements, l’activation automatique commencera le 1er août 2018 lorsque le service sera activé pour vous, sauf si vous constatez que **AutomaticServiceUpdateEnabled** est défini sur **false** lorsque vous exécutez [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps). 
+- **Si vous avez obtenu votre abonnement incluant Azure Rights Management ou Azure Information Protection avant ou courant février 2018 :** Microsoft commence à activer le service Azure Rights Management pour ces abonnements si votre locataire utilise Exchange Online. Pour ces abonnements, l’activation automatique commencera le 1er août 2018 lorsque le service sera activé pour vous, sauf si vous constatez que **AutomaticServiceUpdateEnabled** est défini sur **false** lorsque vous exécutez [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps). 
 
 Si aucun des scénarios suivants ne s’applique à vous, vous devez activer manuellement le service de protection. 
 
@@ -48,11 +48,11 @@ Quand le service est activé, tous les utilisateurs de votre organisation peuven
 > [!IMPORTANT]
 > Si Active Directory Rights Management Services (AD RMS) est déployé pour votre organisation, n’activez pas le service Azure Rights Management. [Plus d’informations](prepare-environment-adrms.md)
 
-Pour utiliser cette solution de protection des données, votre organisation doit disposer d’un plan de service qui inclut le service Azure Rights Management d’Azure Information Protection. Sans cela, le service Azure Rights Management ne peut pas être activé. Vous devez disposer d’un des éléments suivants :
+Pour utiliser cette solution de protection des données, votre organisation doit disposer d’un plan de service qui inclut le service Azure Rights Management d’Azure Information Protection. Sans cela, le service Azure Rights Management ne peut pas être activé. Vous devez disposer d’un des éléments suivants :
 
 - Un [plan Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) 
 
-- Un [plan Office 365 incluant Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+- Un [plan Office 365 incluant Rights Management](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 Quand le service Azure Rights Management est activé, tous les utilisateurs de votre organisation peuvent appliquer la protection des informations à leurs documents et e-mails, et tous les utilisateurs peuvent ouvrir (consommer) des documents et e-mails protégés par ce service. Toutefois, si vous préférez, vous pouvez restreindre les personnes autorisées à appliquer la protection des informations, en utilisant des contrôles d'intégration pour un déploiement échelonné. Pour plus d’informations, consultez la section [Configuration de contrôles d’intégration pour un déploiement échelonné](#configuring-onboarding-controls-for-a-phased-deployment) de cet article.
 
@@ -75,12 +75,12 @@ Vous pouvez également utiliser la commande Windows PowerShell suivante :
 4. Pour activer le service, exécutez [Enable-Aadrm](/powershell/aadrm/vlatest/enable-aadrm).
 
 ## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Configuration de contrôles d'intégration pour un déploiement échelonné
-Si vous ne souhaitez pas que tous les utilisateurs puissent protéger des documents et e-mails immédiatement à l’aide d’Azure Rights Management, vous pouvez configurer des contrôles d’intégration d’utilisateur à l’aide de la commande PowerShell [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy). Vous pouvez exécuter cette commande avant ou après avoir activé le service Azure Rights Management.
+Si vous ne souhaitez pas que tous les utilisateurs puissent protéger des documents et e-mails immédiatement à l’aide d’Azure Rights Management, vous pouvez configurer des contrôles d’intégration d’utilisateur à l’aide de la commande PowerShell [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy). Vous pouvez exécuter cette commande avant ou après avoir activé le service Azure Rights Management.
 
 > [!IMPORTANT]
-> Pour utiliser cette commande, vous devez disposer au moins de la version **2.1.0.0** du [module Azure Rights Management PowerShell](https://go.microsoft.com/fwlink/?LinkId=257721).
+> Pour utiliser cette commande, vous devez disposer au moins de la version **2.1.0.0** du [module Azure Rights Management PowerShell](https://www.powershellgallery.com/packages/AADRM).
 >
-> Pour vérifier la version que vous avez installée, exécutez : **(Get-Module aadrm – ListAvailable).Version**
+> Pour déterminer la version que vous avez installée, exécutez la commande suivante : **(Get-Module aadrm –ListAvailable).Version**
 
 Par exemple, si vous souhaitez initialement que seuls les administrateurs du groupe « Département informatique » (dont l'ID d'objet est fbb99ded-32a0-45f1-b038-38b519009503) puissent protéger du contenu à des fins de test, utilisez la commande suivante :
 

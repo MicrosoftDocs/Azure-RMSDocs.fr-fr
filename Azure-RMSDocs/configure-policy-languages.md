@@ -4,16 +4,16 @@ description: Vous pouvez ajouter la prise en charge de différentes langues pour
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 489850c6311fae95d92fa4cbf88441f1a57da150
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 4c9bc0f8e09b71637b5b731d8e7236bbd8e1fc27
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023377"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305401"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Guide pratique pour configurer des étiquettes et des modèles dans différentes langues dans Azure Information Protection
 
@@ -43,7 +43,7 @@ Sélectionnez les langues qui correspondent à la langue de vos utilisateurs pou
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. À partir de l’option de menu **Gérer** > **Langues** : dans le panneau **Azure Information Protection - Langues**, sélectionnez **Ajouter une langue pour la traduction**. Sélectionnez les langues à ajouter, puis sélectionnez **OK**. Vous pouvez taper le nom de la langue dans la zone de recherche ou faire défiler la liste des langues disponibles
+2. À partir de l’option de menu **Gérer** > **Langues** : Dans le panneau **Azure Information Protection - Langues**, sélectionnez **Ajouter une langue pour la traduction**. Sélectionnez les langues à ajouter, puis sélectionnez **OK**. Vous pouvez taper le nom de la langue dans la zone de recherche ou faire défiler la liste des langues disponibles
 
 3. Les langues sélectionnées s’affichent désormais dans le panneau **Azure Information Protection - Langues** :
     
@@ -60,7 +60,7 @@ Sélectionnez les langues qui correspondent à la langue de vos utilisateurs pou
 
 5. Extrayez les fichiers de **exported localization.zip** afin de disposer des fichiers .xml pour chaque langue que vous avez sélectionnée pour le téléchargement. 
 
-6. Modifier chaque fichier .xml : pour chaque chaîne dans les balises `<LocalizedText>`, fournissez les traductions que vous souhaitez pour chaque langue choisie. 
+6. Modifiez chaque fichier .xml : pour chaque chaîne dans les balises `<LocalizedText>`, fournissez les traductions souhaitées pour chaque langue choisie. 
 
 7. Lorsque vous avez modifié chaque fichier .xml, créez un nouveau dossier compressé qui contient ces fichiers. Le dossier compressé peut avoir n’importe quel nom, mais il doit avoir une extension .zip.
 

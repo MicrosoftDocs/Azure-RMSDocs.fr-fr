@@ -4,18 +4,18 @@ description: Informations sur les données personnelles qui sont utilisées par 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 6904c8c1e879a4d076486fae17a1dbdbd71cb4b4
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 4e44796d3bd2fdf1fd2f0c39cc759f16d87267a1
+ms.sourcegitcommit: db60fe8f74ffaa4f6ffbf5defb22efc476c28312
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150430"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53319412"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
 
@@ -251,7 +251,7 @@ Pour supprimer des données personnelles dans les fichiers journaux du client et
 
 Utilisez les trois étapes suivantes pour demander à Microsoft de supprimer des données personnelles dans les journaux de suivi des documents, les journaux d’administration ou les journaux d’utilisation du service Azure Rights Management. 
 
-**Étape 1 : Lancer la demande de suppression**
+**Étape 1 : Lancer la demande de suppression**
 [Contactez le Support Microsoft](information-support.md#to-contact-microsoft-support) afin qu’il ouvre un dossier de support Azure Information Protection en vue de la suppression de données de votre locataire. Vous devez prouver que vous êtes administrateur de votre locataire Azure Information Protection et comprendre que la confirmation de ce processus prend plusieurs jours. Lors de l’envoi de votre demande, vous devrez fournir des informations supplémentaires en fonction des données qui doivent être supprimées.
 
 - Pour supprimer le journal d’administration, fournissez la **date de fin**. Tous les journaux d’administration jusqu'à cette date de fin seront supprimés.
@@ -260,9 +260,9 @@ Utilisez les trois étapes suivantes pour demander à Microsoft de supprimer des
 
 La suppression de ces données est irréversible. Il n’existe aucun moyen de récupérer les données après le traitement d’une demande de suppression. Il est recommandé aux administrateurs d’exporter les données requises avant de soumettre une demande de suppression.
 
-**Étape 2 : Attendre la vérification** Microsoft doit vérifier que votre demande de suppression d’un ou plusieurs journaux est légitime. Cela peut prendre jusqu’à cinq jours ouvrés.
+**Étape 2 : Attendre la vérification** Microsoft doit vérifier que votre demande de suppression d’un ou plusieurs journaux est légitime. Cela peut prendre jusqu’à cinq jours ouvrés.
 
-**Étape 3 : Obtenir la confirmation de la suppression** Les services de support technique Microsoft (CSS) vous enverront un e-mail de confirmation de la suppression des données. 
+**Étape 3 : Obtenir la confirmation de la suppression** Les services de support technique Microsoft vous enverront un e-mail de confirmation de la suppression des données. 
 
 ## <a name="exporting-personal-data"></a>Exportation des données personnelles
 Lorsque vous utilisez les applets de commande PowerShell du module AADRM, les données personnelles sont disponibles pour la recherche et l’exportation en tant qu’objet PowerShell. L’objet PowerShell peut être converti en objet JSON et être enregistré à l’aide de l’applet de commande `ConvertTo-Json`.

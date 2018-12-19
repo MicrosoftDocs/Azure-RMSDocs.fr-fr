@@ -12,12 +12,12 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: a3385f260928dabc7254a49f3265b647c2920703
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b1525665fb488aed1ad98a77ac66f92f7ee4509b
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150056"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266679"
 ---
 # <a name="deploy-into-production"></a>Déployer en production
 
@@ -29,7 +29,7 @@ Avant de pouvoir lancer une application développée avec AIP/RMS, vous devez pa
 ### <a name="begin-the-process"></a>Lancement du processus
 Obtenez votre IPIA en envoyant un e-mail à **IPIA@microsoft.com** avec les informations suivantes :
 
-**Objet :** demande d'IPIA pour *Nom de la société*
+**Objet :** Demande d’IPIA pour *Nom de la société*
 
 Dans le corps du message électronique, incluez :
 - Nom de l’application et du produit
@@ -67,7 +67,7 @@ Patientez jusqu'à 72 heures après l'envoi de l'e-mail pour recevoir un accusé
 
 Pour déployer votre application créée avec des outils Azure Information Protection (AIP) / Rights Management Services (RMS), vous devez déployer le client RMS 2.1 sur l’ordinateur de l’utilisateur final.
 
-### <a name="rms-client-21"></a>Client RMS 2.1
+### <a name="rmsclient21"></a>Client RMS 2.1
 Le client RMS 2.1 est conçu pour protéger l’accès aux informations qui circulent à travers des applications compatibles AIP/RMS, qu’elles soient installées en local ou dans un centre de données Microsoft, ainsi que leur utilisation.
 
 Le client RMS 2.1 n’est pas un composant du système d’exploitation Windows. Le client envoie un téléchargement facultatif qui peut être distribué gratuitement avec votre application, avec accusé de réception et acceptation du contrat de licence.
@@ -76,7 +76,7 @@ Le client RMS 2.1 n’est pas un composant du système d’exploitation Windows
 > Le client RMS Client 2.1 est spécifique à l’architecture et doit correspondre à celle de votre système d’exploitation cible.
 
 
-## <a name="rms-client-21-installation-options"></a>Options d’installation du client RMS 2.1
+## <a name="rmsclient21-installation-options"></a>Options d’installation du client RMS 2.1
 
 ### <a name="creating-your-deployment-package"></a>Création de votre package de déploiement
 
@@ -89,7 +89,7 @@ Vous pouvez choisir d’installer le client RMS 2.1 sans assistance ou de façon
 
 Un exemple d’intégration du client RMS 2.1 à votre application est le package [Rights Protected Folder Explorer](https://technet.microsoft.com/library/rights-protected-folder-explorer(v=ws.10).aspx). Essayez de l'installer vous-même pour comprendre l’approche.
 
-### <a name="make-rms-client-21-a-pre-requisite-for-your-application-install"></a>Faire du client RMS 2.1 un composant requis pour l’installation de votre application
+### <a name="make-rmsclient21-a-pre-requisite-for-your-application-install"></a>Faire du client RMS 2.1 un prérequis pour l’installation de votre application
 
 Ici, vous allez créer un composant requis de manière à ce que l’installation de votre application échoue si le client RMS 2.1 n’est pas présent sur l’ordinateur de l’utilisateur final.
 
@@ -101,16 +101,16 @@ Si le client est présent, poursuivez l’installation de votre application.
 
 > [!NOTE]
 > Si vous avez migré vers le nouveau modèle ADAL pour l’authentification, il est inutile d’installer le **SIA**. Pour plus d’informations, consultez [Authentification ADAL pour votre application compatible RMS](adal-auth.md).
-> Vous pouvez également **certifier votre application pour Windows 10**. En mettant à jour votre application pour utiliser l’authentification ADAL plutôt que l’Assistant de connexion Microsoft Online, vous et vos clients pouvez : utiliser l’authentification multifacteur, installer le client RMS 2.1 sans avoir besoin de privilèges d’administration sur l’ordinateur.
+> Vous pouvez aussi **certifier votre application pour Windows 10** : en mettant à jour votre application pour utiliser l’authentification ADAL au lieu de l’Assistant de connexion Microsoft Online, vous et vos clients pouvez : Utiliser l’authentification multifacteur pour installer le client RMS 2.1 sans nécessiter de privilèges d’administration sur l’ordinateur
 
 Pour que votre utilisateur final tire parti des services Information Protection, vous devez déployer *l'Assistant de connexion Online Services (SIA)*. En tant que développeur d’applications, vous ne savez pas si l’utilisateur final doit utiliser Information Protection via RMS (localement) ou Azure Information Protection.
 
 
 > [!IMPORTANT]
-> Si vous devez exécuter votre application cliente avec Azure RMS, vous devez créer vos propres locataires. Pour plus d’informations, consultez [Conditions requises pour Azure RMS : abonnements cloud qui prennent en charge Azure RMS](../requirements.md).
+> Si vous devez exécuter votre application cliente avec Azure RMS, vous devez créer vos propres locataires. Pour plus d’informations, consultez [Configuration requise d’Azure RMS : Abonnements cloud prenant en charge Azure RMS](../requirements.md).
 > Pour plus d’informations sur l’exécution d’Azure RMS, consultez [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
--   Téléchargez l’[Assistant de connexion Microsoft Online Services](http://www.microsoft.com/download/details.aspx?id=28177) à partir du Centre de téléchargement Microsoft.
+-   Téléchargez l’[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177) à partir du Centre de téléchargement Microsoft.
 -   Vérifiez que votre déploiement d’une application avec gestion des droits inclut une vérification des composants requis pour la sélection de ce service.
 -   Pour l’utilisation du service en ligne dans le cadre de vos propres tests et par les utilisateurs finaux, consultez la rubrique TechNet [Configuration de Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx).
 
@@ -120,7 +120,7 @@ Pour plus d’informations sur l’activation de votre application pour utiliser
 
 ## <a name="related-topics"></a>Rubriques connexes
 
-* [Assistant de connexion Microsoft Online Services](http://www.microsoft.com/download/details.aspx?id=28177)
+* [Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177)
 * [Configuration de Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx)
 * [Permettre à votre application de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md)
 

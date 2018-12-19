@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 40cc70864d68b4bdcc1081f908539663ba8366a8
-ms.sourcegitcommit: d969a82dc801f3d653163de2b18a3a772607b74c
+ms.openlocfilehash: 72735ea07a00f37377bbbab781c03c4516f032de
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50915561"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173789"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals et Azure Information Protection
 
@@ -43,7 +43,7 @@ Une fois le compte créé, la dernière page affiche des liens pour télécharge
 
 3. Cliquez sur **S’inscrire**.
 
-    Microsoft utilise votre adresse e-mail pour vérifier si votre organisation a déjà un [abonnement pour Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou un [abonnement Office 365 qui inclut la protection des données par le biais d’Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Si aucun de ces abonnements n’est détecté, vous n’avez pas besoin de RMS for Individuals. Vous êtes connecté immédiatement et l’inscription en libre-service à RMS for Individuals est annulée. Si aucun abonnement n’est détecté, vous passez à l’étape suivante.
+    Microsoft utilise votre adresse e-mail pour vérifier si votre organisation a déjà un [abonnement pour Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) ou un [abonnement Office 365 qui inclut la protection des données par le biais d’Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Si aucun de ces abonnements n’est détecté, vous n’avez pas besoin de RMS for Individuals. Vous êtes connecté immédiatement et l’inscription en libre-service à RMS for Individuals est annulée. Si aucun abonnement n’est détecté, vous passez à l’étape suivante.
 
 4. Attendez qu'un e-mail de confirmation soit envoyé à l'adresse que vous avez indiquée. Il provient de l’équipe Office 365 (support@email.microsoftonline.com) et présente l’objet suivant : **Terminer l’inscription à Microsoft Azure Information Protection**.
 

@@ -4,22 +4,22 @@ description: Instructions qui font partie du chemin de migration d’AD RMS ver
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2018
-ms.topic: article
+ms.date: 12/11/2018
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e33b31150d769ea32ebab19002fb6fb5a5c3b2ae
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 959df427bc9424eea526ef09c00fbcecdef5a878
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808454"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305061"
 ---
-# <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Étape 2 : Migration de clé protégée par logiciel à clé protégée par logiciel
+# <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Étape 2 : Migration de clé protégée par logiciel à clé protégée par logiciel
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Ces instructions font partie du [chemin de migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). Elles s’appliquent uniquement si votre clé AD RMS est protégée par logiciel et que vous souhaitez procéder à la migration vers Azure Information Protection avec une clé de locataire protégée par logiciel. 
@@ -35,7 +35,7 @@ La procédure suivante permet d’importer la configuration AD RMS dans Azure I
     ```
     Connect-AadrmService
     ```
-    Quand vous y êtes invité, entrez vos informations d’identification d’administrateur de locataires Azure Rights Management (en général, vous utilisez un compte d’administrateur général pour Azure Active Directory ou Office 365).
+    Quand vous y êtes invité, entrez vos informations d’identification d’administrateur locataire Azure Rights Management (en général, vous utilisez un compte d’administrateur général pour Azure Active Directory ou Office 365).
 
 2. Utilisez l’applet de commande [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) pour charger chaque fichier (.xml) de domaine de publication approuvé exporté. Par exemple, vous devez disposer d’au moins un fichier supplémentaire à importer si vous avez mis à niveau votre cluster AD RMS pour le Mode de chiffrement 2. 
     

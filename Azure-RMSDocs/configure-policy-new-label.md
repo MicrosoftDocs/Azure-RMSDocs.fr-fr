@@ -4,16 +4,16 @@ description: Même si Azure Information Protection est fourni avec des étiquett
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: 963a86e37112fb2c4a2f9ca10162995a131c49ac
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 7302e0e0e76f6ca94eba678390e7d938172e40c4
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023428"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304993"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Comment créer une étiquette pour Azure Information Protection
 
@@ -31,11 +31,11 @@ Utilisez les instructions suivantes pour ajouter une nouvelle étiquette, qui po
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, effectuez l’une des actions suivantes :
+2. À partir de l’option de menu **Classifications** > **Étiquettes** : Dans le panneau **Azure Information Protection - Étiquettes**, effectuez l’une des actions suivantes :
     
-    - Pour créer une étiquette, cliquez sur **Ajouter une nouvelle étiquette**.
+    - Pour créer une étiquette : Cliquez sur **Ajouter une nouvelle étiquette**.
     
-    - Pour créer une sous-étiquette, cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette pour laquelle vous voulez créer une sous-étiquette, puis cliquez sur **Ajouter une sous-étiquette**.
+    - Pour créer une sous-étiquette : Cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette pour laquelle vous voulez créer une sous-étiquette, puis cliquez sur **Ajouter une sous-étiquette**.
 
 4. Dans le panneau **Étiquette** ou **Sous-étiquette**, sélectionnez les options que vous souhaitez pour cette nouvelle étiquette, puis cliquez sur **Enregistrer**.
     
@@ -43,7 +43,7 @@ Utilisez les instructions suivantes pour ajouter une nouvelle étiquette, qui po
     
     Notez que la couleur noire est automatiquement affectée aux nouvelles étiquettes. Choisissez une couleur distinctive dans la liste des couleurs ou entrez un code (triplet hexadécimal) représentant les composants RVB (rouge, vert, bleu) de la couleur. Par exemple, **#DAA520**. Si vous souhaitez obtenir des informations de référence sur ces codes, la page [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) dans la documentation MSDN constitue un bon point de départ. Ces codes sont utilisés dans de nombreux programmes de retouche d’images, par exemple Microsoft Paint. Quand vous choisissez une couleur personnalisée à partir d’une palette, les valeurs RVB s’affichent automatiquement.
 
-5. Pour rendre votre nouvelle étiquette disponible aux utilisateurs : à partir de l’option de menu **Classifications** > **Stratégies**, sélectionnez la stratégie qui doit contenir la nouvelle étiquette. Sélectionnez **Ajouter ou supprimer des étiquettes**. Sélectionnez l’étiquette à partir du panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez **OK**, puis **Enregistrer**.
+5. Pour rendre votre nouvelle étiquette disponible aux utilisateurs : À partir de l’option de menu **Classifications** > **Stratégies**, sélectionnez la stratégie qui doit contenir la nouvelle étiquette. Sélectionnez **Ajouter ou supprimer des étiquettes**. Sélectionnez l’étiquette à partir du panneau **Stratégie : Ajouter ou supprimer des étiquettes**, sélectionnez **OK**, puis **Enregistrer**.
     
     >[!TIP]
     >Dans le cas des nouvelles étiquettes, nous vous conseillons de les ajouter d’abord à une stratégie délimitée que vous utilisez à des fins de test. Quand vous êtes satisfait des résultats, supprimez l’étiquette de cette étendue de test, puis ajoutez-la à une stratégie que vous utilisez en production.     
@@ -52,7 +52,7 @@ Utilisez les instructions suivantes pour ajouter une nouvelle étiquette, qui po
     
     Vos modifications sont automatiquement disponibles pour les utilisateurs et les services. Il n’y a plus d’option de publication distincte.
 
-6. Si vous souhaitez que ces nouveaux nom d’étiquette et description s’affichent dans différentes langues pour les utilisateurs, suivez les procédures indiquées dans le [Guide pratique pour configurer des étiquettes pour des langues différentes](configure-policy-languages.md). 
+6. Si vous souhaitez que le nom et la description de cette nouvelle étiquette s’affichent dans différentes langues pour les utilisateurs : Suivez les procédures mentionnées dans le [Guide pratique pour configurer des étiquettes pour des langues différentes](configure-policy-languages.md). 
 
 ## <a name="next-steps"></a>Étapes suivantes
 

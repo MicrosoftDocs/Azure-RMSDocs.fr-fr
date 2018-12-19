@@ -10,19 +10,19 @@ ms.service: information-protection
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7be58d201ddd24497ff79935554c2a68efd04a3f
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 84f013014f0256a01c30d9518089f2604ed9a668
+ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024431"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246188"
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>guide de l’administrateur de l’application de partage Rights Management
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
+>*S’applique à : Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 avec SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
-> **Notification de fin de prise en charge** : l’application de partage Rights Management pour Windows est remplacée par le [client Azure Information Protection](aip-client.md). La prise en charge de cette application plus ancienne cessera le 31 janvier 2019. 
+> **Notification de fin du support** : L’application de partage Rights Management pour Windows est remplacée par le [client Azure Information Protection](aip-client.md). La prise en charge de cette application plus ancienne cessera le 31 janvier 2019. 
 
 Utilisez les informations suivantes si vous êtes responsable de l’application de partage Microsoft Rights Management sur un réseau d’entreprise ou si vous souhaitez des informations plus techniques que celles qui figurent dans le [Guide de l’utilisateur de l’application de partage Rights Management](sharing-app-user-guide.md) ou sur le [Forum Aux Questions sur l’application de partage Microsoft Rights Management pour Windows](https://go.microsoft.com/fwlink/?LinkId=303971).
 
@@ -33,11 +33,11 @@ Pour obtenir une présentation technique de l’application de partage Rights Ma
 ## <a name="automatic-deployment-for-the-microsoft-rights-management-sharing-application"></a>Déploiement automatique de l'application de partage Microsoft Rights Management
 La version Windows de l'application de partage RMS prend en charge une installation scriptée, ce qui la rend appropriée pour les déploiements d'entreprise.
 
-Les seules conditions préalables à l'installation sont que les ordinateurs exécutent une version minimale de Windows 7 Service Pack 1 et que Microsoft Framework, version minimale 4.0, soit installé. Si vous souhaitez installer Microsoft .NET Framework 4.0, vous pouvez pour cela le [télécharger sur le Centre de téléchargement Microsoft](http://www.microsoft.com/download/details.aspx?id=17718).
+Les seules conditions préalables à l'installation sont que les ordinateurs exécutent une version minimale de Windows 7 Service Pack 1 et que Microsoft Framework, version minimale 4.0, soit installé. Si vous souhaitez installer Microsoft .NET Framework 4.0, vous pouvez pour cela le [télécharger sur le Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=17718).
 
 ### <a name="to-download-the-rms-sharing-application-for-automatic-deployment"></a>Pour télécharger l’application de partage RMS pour un déploiement automatique
 
-1.  Accédez à la page [Microsoft Rights Management sharing application for Windows - Français](http://www.microsoft.com/download/details.aspx?id=40857) dans le Centre de téléchargement Microsoft, puis cliquez sur **Télécharger**.
+1.  Accédez à la page [Microsoft Rights Management sharing application for Windows - Français](https://www.microsoft.com/download/details.aspx?id=40857) dans le Centre de téléchargement Microsoft, puis cliquez sur **Télécharger**.
 
 2.  Sélectionnez et téléchargez les fichiers dont vous avez besoin. Il existe deux packages d’installation client : un pour Windows 64 bits (Microsoft Rights Management sharing application x64.zip) et un autre pour Windows 32 bits (Microsoft Rights Management sharing application x86.zip).
 
@@ -92,7 +92,7 @@ Pour vérifier que l’opération a réussi, consultez la section [Vérification
 
     1.  Connectez-vous à un ordinateur à l'aide d'un compte d'administrateur local.
 
-    2.  Sur cet ordinateur, [téléchargez et installez l'Assistant d'inscription en ligne Microsoft](http://www.microsoft.com/download/details.aspx?id=28177).
+    2.  Sur cet ordinateur, [téléchargez et installez l'Assistant d'inscription en ligne Microsoft](https://www.microsoft.com/download/details.aspx?id=28177).
 
     3.  Exécutez la commande suivante pour afficher l'URL du service de certification à l'écran, que vous pouvez ensuite copier et enregistrer pour l'étape suivante :
 
@@ -274,21 +274,21 @@ Vous pouvez utiliser les fichiers journaux d'installation pour vérifier que l'i
 
 ### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>Pour vérifier la réussite de l'installation de l'application de partage RMS et du complément Office uniquement
 
-1.  Pour vérifier la réussite de la commande Setup_ipviewer.exe, recherchez le texte suivant dans le fichier journal d’installation : **Réussite de l’installation ou état d’erreur : 0**
+1.  Pour vérifier la réussite de la commande Setup_ipviewer.exe, recherchez le texte suivant dans le fichier journal d'installation : **Réussite de l'installation ou état d'erreur : 0**
 
     Exemples de lignes pour une installation réussie :
 
-    **MSI (s) (F0:B8) [14:19:57:854]: Produit: Active Directory Rights Management Services Client 2.1 -- Installation effectuée.**
+    **MSI (s) (F0:B8) [14:19:57:854] : Produit : Client des services AD RMS (Active Directory Rights Management Services) version 2.1 -- Installation effectuée.**
 
-    **MSI (s) (F0:B8) [14:19:57:854]: Windows Installer a installé le produit. Nom du produit : Active Directory Rights Management Services Client 2.1. Version du produit : 1.0.1179.1. Langue du produit : 1033. Fabricant : Microsoft Corporation. Réussite de l’installation ou état d’erreur : 0.**
+    **MSI (s) (F0:B8) [14:19:57:854] : Windows Installer a installé le produit. Nom du produit : Active Directory Rights Management Services Client 2.1. Version du produit : 1.0.1179.1. Product Language: 1033. Fabricant : Microsoft Corporation. Réussite de l'installation ou état d'erreur : 0.**
 
-2.  Pour vérifier la réussite du complément Office, recherchez le texte suivant dans le fichier journal d’installation : **Réussite de l’installation ou état d’erreur : 0**
+2.  Pour vérifier la réussite du complément Office, sur chaque ordinateur, recherchez le texte suivant dans le fichier journal d'installation : **Réussite de l'installation ou état d'erreur : 0**
 
     Exemples de lignes pour une installation réussie :
 
-    **MSI (s) (9C:88) [18:49:04:007]: Produit : Microsoft RMS Office Addins -- Installation effectuée.**
+    **MSI (s) (9C:88) [18:49:04:007] : Produit : Compléments Office Microsoft RMS -- Installation effectuée.**
 
-    **MSI (s) (9C:88) [18:49:04:007]: Windows Installer a installé le produit. Nom du produit : Microsoft RMS Office Addins. Version du produit : 1.0.7. Langue du produit : 1033. Fabricant : Microsoft. Réussite de l’installation ou état d’erreur : 0.**
+    **MSI (s) (9C:88) [18:49:04:007] : Windows Installer a installé le produit. Product Name: Microsoft RMS Office Addins. Product Version: 1.0.7. Langue du produit : 1033. Fabricant : Microsoft. Réussite de l'installation ou état d'erreur : 0.**
 
 ## <a name="uninstall-commands"></a>Commandes de désinstallation
 Certaines des commandes d'installation requises pour ces déploiements ne prennent pas de commande de désinstallation en charge. Vous pouvez désinstaller le client AD RMS et l’application de partage et vous pouvez désinstaller le complément Office. Utilisez les commandes suivantes pour désinstaller ces éléments.
@@ -377,7 +377,7 @@ Pour obtenir des instructions sur l’utilisation du site de suivi des documents
 
 ### <a name="usage-logging-for-the-document-tracking-site"></a>Journalisation de l’utilisation du site de suivi des documents
 
-Dans les fichiers journaux d’utilisation, deux champs s’appliquent au suivi des documents : **AdminAction** et **ActingAsUser**.
+Deux champs des fichiers journaux d’utilisation s’appliquent au suivi des documents : **AdminAction** et **ActingAsUser**.
 
 **AdminAction** Ce champ a la valeur True quand un administrateur utilise le site de suivi des documents en mode Administrateur, par exemple pour révoquer un document au nom d’un utilisateur ou pour voir quand il a été partagé. Ce champ est vide quand un utilisateur se connecte au site de suivi des documents.
 
@@ -388,14 +388,14 @@ Il existe également des types de demandes qui journalisent la façon dont les u
 
 Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../log-analyze-usage.md)
 
-## <a name="ad-rms-only-support-for-multiple-email-domains-within-your-organization"></a>AD RMS uniquement : prise en charge de plusieurs domaines de messagerie au sein de votre organisation
+## <a name="ad-rms-only-support-for-multiple-email-domains-within-your-organization"></a>AD RMS uniquement : prise en charge de plusieurs domaines de messagerie au sein de votre organisation
 Si vous utilisez les services AD RMS et que les utilisateurs de votre organisation disposent de plusieurs domaines de messagerie, peut-être à la suite d'une fusion ou d'une acquisition, vous devez apporter la modification suivante au Registre :
 
 1.  Accédez à **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC** et, si elle n’est pas déjà présente, créez une clé nommée **RmsSharingApp**.
 
 2.  Sélectionnez **RmsSharingApp**, créez une valeur de chaînes multiples nommée **FederatedDomains**, puis ajoutez les domaines et tous les sous-domaines utilisés par votre organisation. Les caractères génériques ne sont pas pris en charge.
 
-    Par exemple : la société Coho Vineyard &amp; Winery dispose du domaine de messagerie standard **cohovineyardandwinery.com** mais, à la suite de fusions, elle utilise également les domaines de messagerie **cohowinery.com**, **eastcoast.cohowinery.com** et **cohovineyard**. Pour les données de valeur **FederatedDomains**, l’administrateur entre **cohowinery.com; eastcoast.cohowinery.com; cohovineyard**
+    Par exemple : la société Coho Vineyard &amp; Winery a un domaine de messagerie standard **cohovineyardandwinery.com** mais à la suite de fusions, elle utilise également les domaines de messagerie **cohowinery.com**, **eastcoast.cohowinery.com** et **cohovineyard**. Pour les données de valeur **FederatedDomains**, l’administrateur entre **cohowinery.com; eastcoast.cohowinery.com; cohovineyard**
 
 Si vous n'apportez pas cette modification au Registre, les utilisateurs risquent de ne pas pouvoir consommer le contenu qui a été protégé par d'autres utilisateurs de leur organisation. Cette modification du Registre n’est pas nécessaire si vous utilisez Azure Information Protection.
 

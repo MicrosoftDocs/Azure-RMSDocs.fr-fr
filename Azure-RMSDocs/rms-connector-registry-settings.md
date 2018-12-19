@@ -4,18 +4,18 @@ description: Informations relatives aux paramètres du Registre sur les serveurs
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
-ms.topic: article
+ms.date: 12/06/2018
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9b99f914e78adafbcfd0f01f0937c6d636f43159
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 6af7fe3a7b23f655a79d67421f67292416792792
+ms.sourcegitcommit: 0632c89a316ff31f588e9752dd474445983b1690
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808694"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53120579"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Paramètres de Registre pour le connecteur Rights Management
 
@@ -28,7 +28,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 -   *\<URL_votre_locataire>* est l’URL de votre service Azure Rights Management pour votre locataire Azure Information Protection. Pour obtenir cette valeur :
 
-    1.  Exécutez l’applet de commande [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) pour le service Azure Rights Management. Si vous n’avez pas encore installé le module Windows PowerShell pour Azure RMS, consultez [Installation du module PowerShell AADRM](install-powershell.md).
+    1.  Exécutez l’applet de commande [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) pour le service Azure Rights Management. Si vous n’avez pas encore installé le module Windows PowerShell pour Azure RMS, consultez [Installation du module PowerShell AADRM](install-powershell.md).
 
     2.  Dans le résultat de l'applet de commande, identifiez la valeur **LicensingIntranetDistributionPointUrl**.
 
@@ -76,7 +76,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 **Valeur :** https://*\<URL_votre_locataire>*
 
 
-**Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
+**Données :** L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
 
 - http://*<\FQDN_connecteur>*
 
@@ -91,7 +91,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 **Valeur :** https://*<\URL_votre_locataire>*
 
 
-**Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
+**Données :** L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
 
 - http://*<\FQDN_connecteur>*
 
@@ -126,7 +126,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Valeur :** https://*<\URL_votre_locataire>*
 
-**Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
+**Données :** L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
 
 - http://*<\FQDN_connecteur>*
 
@@ -140,7 +140,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Valeur :** https://*<\URL_votre_locataire>*
 
-**Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
+**Données :** L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et votre connecteur RMS :
 
 - http://*<\FQDN_connecteur>*
 
@@ -156,7 +156,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 **Valeur :** https://*<\URL_votre_locataire>*/_wmcs/licensing
 
 
-**Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur SharePoint et le connecteur RMS :
+**Données :** L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et le connecteur RMS :
 
 - http://*<\FQDN_connecteur>*/_wmcs/licensing
 
@@ -170,7 +170,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Valeur :** Par défaut
 
-**Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur SharePoint et le connecteur RMS :
+**Données :** L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et le connecteur RMS :
 
 - http://*<\FQDN_connecteur>*/_wmcs/certification
 
@@ -185,7 +185,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 **Valeur :** Par défaut
 
 
-**Données :** L’une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur SharePoint et le connecteur RMS :
+**Données :** L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et le connecteur RMS :
 
 - http://*<\FQDN_connecteur>*/_wmcs/licensing
 

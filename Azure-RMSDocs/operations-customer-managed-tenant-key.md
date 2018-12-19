@@ -4,22 +4,22 @@ description: Informations sur les opérations de cycle de vie applicables si vou
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 098f7834e4765dcb020817014f9357139e42207a
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 92b5b2dad15c2ec33169e72e69f87bddec5e56df
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147098"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305316"
 ---
-# <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gérée par le client : opérations de cycle de vie des clés de locataires
+# <a name="customer-managed-tenant-key-life-cycle-operations"></a>Géré par le client : Opérations de cycle de vie des clés de locataire
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Si vous gérez votre clé de locataire pour Azure Information Protection (dans le cadre d’un scénario BYOK, ou Bring Your Own Key), utilisez les sections suivantes pour obtenir plus d’informations sur les opérations de cycle de vie qui s’appliquent à cette topologie.
 
@@ -43,7 +43,7 @@ Exemples de scénarios dans lesquels il peut être nécessaire de renouveler la 
 
 Pour renouveler la clé et obtenir ainsi une autre clé que vous gérez, vous pouvez créer une clé dans Azure Key Vault ou utiliser une autre clé déjà présente dans Azure Key Vault. Suivez ensuite les mêmes procédures que celles que vous avez effectuées pour implémenter BYOK pour Azure Information Protection. 
 
-1. Uniquement si la nouvelle clé se trouve dans un coffre de clés différent de celui que vous utilisez déjà pour Azure Information Protection : autorisez Azure Information Protection à utiliser le coffre de clés à l’aide de l’applet de commande [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy).
+1. Seulement si la nouvelle clé se trouve dans un coffre de clés différent de celui que vous utilisez déjà pour Azure Information Protection : Autorisez Azure Information Protection à utiliser le coffre de clés avec l’applet de commande [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy).
 
 2. Si Azure Information Protection n’a pas encore d’informations sur la clé que vous voulez utiliser, exécutez l’applet de commande [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey).
 
@@ -60,7 +60,7 @@ Pour plus d’informations sur chacune de ces étapes :
 ## <a name="backup-and-recover-your-tenant-key"></a>Sauvegarde et récupération de votre clé de locataire
 Étant donné que vous gérez votre clé de locataire, vous êtes responsable de la sauvegarde de la clé utilisée par Azure Information Protection. 
 
-Si vous avez généré votre clé de locataire localement, dans un HSM Thales : Pour sauvegarder la clé, sauvegardez le fichier de clé tokenisée, le fichier du monde et les cartes d’administrateur. Quand vous transférez votre clé vers Azure Key Vault, le service enregistre le fichier de clé tokenisée pour se protéger des défaillances des nœuds de service. Ce fichier est lié à la sécurité de l’instance ou de la région Azure spécifique. Cependant, ce fichier de clé tokenisée n’est pas une sauvegarde complète. Par exemple, si vous avez besoin d’une copie en texte brut de votre clé pour l’utiliser en dehors d’un HSM Thales, Azure Key Vault ne peut pas la récupérer à votre place car il a seulement une copie non récupérable.
+Si vous avez généré votre clé de locataire en local dans un module de sécurité matériel Thales : Pour sauvegarder la clé, sauvegardez le fichier de clé tokenisée, le fichier world et que les cartes Administrateur. Quand vous transférez votre clé vers Azure Key Vault, le service enregistre le fichier de clé tokenisée pour se protéger des défaillances des nœuds de service. Ce fichier est lié à la sécurité de l’instance ou de la région Azure spécifique. Cependant, ce fichier de clé tokenisée n’est pas une sauvegarde complète. Par exemple, si vous avez besoin d’une copie en texte brut de votre clé pour l’utiliser en dehors d’un HSM Thales, Azure Key Vault ne peut pas la récupérer à votre place car il a seulement une copie non récupérable.
 
 Azure Key Vault dispose d’une [applet de commande de sauvegarde](/powershell/module/azurerm.keyvault/Backup-AzureKeyVaultKey) que vous pouvez utiliser pour sauvegarder une clé en la téléchargeant et en la stockant dans un fichier. Le contenu téléchargé étant chiffré, il ne peut pas être utilisé à l’extérieur d’Azure Key Vault. 
 

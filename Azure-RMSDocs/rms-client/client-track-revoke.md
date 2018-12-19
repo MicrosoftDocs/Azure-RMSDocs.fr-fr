@@ -4,18 +4,18 @@ description: Une fois que vous avez protégé vos documents, vous pouvez suivre 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/28/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 485b999ce8b5adcbe284d0ea8286cdf1183ac8da
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 251de2d7e959dc46bcf95c003fd8924cc4c34d13
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151020"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305220"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guide de l’utilisateur : Suivre et révoquer vos documents quand vous utilisez Azure Information Protection
 
@@ -95,17 +95,17 @@ Une fois que vous avez enregistré le document protégé à l’aide de vos appl
 
 - Sur votre PC Windows, ordinateur Mac ou appareil mobile, visitez le [site de suivi des documents](https://go.microsoft.com/fwlink/?LinkId=529562).
 
-    **Navigateurs pris en charge** : nous vous recommandons d’utiliser Internet Explorer (version 10 ou ultérieure). Toutefois, vous pouvez accéder au site de suivi de document depuis tous les navigateurs répertoriés ci-après :
+    **Navigateurs pris en charge** : nous vous recommandons d’utiliser Internet Explorer (version 10 ou ultérieure). Toutefois, vous pouvez accéder au site de suivi de document depuis tous les navigateurs répertoriés ci-après :
 
-    - Internet Explorer : version 10 ou ultérieure
+    - Internet Explorer : version 10 ou ultérieure
 
-    - Internet Explorer 9 avec MS12-037 minimum : mise à jour de sécurité cumulative pour Internet Explorer : 12 juin 2012
+    - Internet Explorer 9 avec MS12-037 minimum : Mise à jour de sécurité cumulative pour Internet Explorer : 12 juin 2012
 
-    - Mozilla Firefox : version 12 ou ultérieure
+    - Mozilla Firefox : version 12 ou ultérieure
 
-    - Apple Safari 5 : version 5 ou ultérieure
+    - Apple Safari 5 : version 5 ou ultérieure
 
-    - Google Chrome : version 18 ou ultérieure
+    - Google Chrome : version 18 ou ultérieure
 
 
 ## <a name="other-instructions"></a>Autres instructions

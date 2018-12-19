@@ -4,26 +4,26 @@ description: Informations et instructions sur la journalisation de l’utilisati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1deea1b4353e2d48c85ae24625ab29eca96a3968
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 3d287df4fbea3f4b040444182aed89da7c470ea1
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47211324"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305639"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Journalisation et analyse de l’utilisation du service Azure Rights Management
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Utilisez ces informations pour comprendre comment vous pouvez utiliser la journalisation de l’utilisation pour le service Azure Rights Management d’Azure Information Protection. Ce service assure la protection des données des documents et e-mails de votre organisation et peut journaliser chaque demande adressée à ce dernier. Ces demandes incluent les cas où les utilisateurs protègent des documents et des e-mails, mais également consomment ce contenu, les actions effectuées par vos administrateurs pour ce service et les actions effectuées par des opérateurs Microsoft pour prendre en charge votre déploiement Azure Information Protection. 
+Utilisez ces informations pour comprendre comment vous pouvez utiliser la journalisation de l’utilisation pour le service Azure Rights Management d’Azure Information Protection. Ce service assure la protection des données des documents et e-mails de votre organisation et peut journaliser chaque demande adressée à ce dernier. Ces demandes incluent les cas où les utilisateurs protègent des documents et des e-mails, mais également consomment ce contenu, les actions effectuées par vos administrateurs pour ce service et les actions effectuées par des opérateurs Microsoft pour prendre en charge votre déploiement Azure Information Protection. 
 
-Vous pouvez ensuite utiliser ces journaux du service Azure Rights Management pour prendre en charge les scénarios d’entreprise suivants :
+Vous pouvez ensuite utiliser ces journaux du service Azure Rights Management pour prendre en charge les scénarios d’entreprise suivants :
 
 -   **Analyser pour obtenir des informations sur l’activité**
 
@@ -31,28 +31,28 @@ Vous pouvez ensuite utiliser ces journaux du service Azure Rights Management pou
 
 -   **Surveiller les abus**
 
-    Les informations de journalisation d’Azure Rights Management mises à votre disposition quasiment en temps réel vous permettent de surveiller en continu l’utilisation du service Rights Management au sein de votre entreprise. 99,9 % des journaux sont disponibles pour le service dans un délai de 15 minutes suivant le début d’une action initiée.
+    Les informations de journalisation d’Azure Rights Management mises à votre disposition quasiment en temps réel vous permettent de superviser en continu l’utilisation du service Rights Management au sein de votre entreprise. 99,9 % des journaux sont disponibles pour le service dans un délai de 15 minutes suivant le début d’une action initiée.
 
     Par exemple, vous pouvez souhaiter recevoir une alerte en cas d’augmentation soudaine du nombre de personnes qui consultent des données protégées en dehors des heures de travail, ce qui pourrait signifier qu’un utilisateur malveillant recueille des informations pour les revendre à des concurrents, ou si un même utilisateur accède visiblement à des données à partir d’adresses IP différentes dans un court laps de temps, cela peut indiquer qu’un compte d’utilisateur a été compromis.
 
 -   **Réaliser une analyse d’investigation**
 
-    En cas de fuite d’informations, vous devrez très certainement fournir une liste des personnes qui ont accédé récemment à des documents spécifiques ainsi que le type d’informations auxquelles a pu accéder un individu suspecté. Vous pouvez répondre à ces types de questions quand vous utilisez cette journalisation, car les personnes qui consultent du contenu protégé doivent toujours obtenir une licence Rights Management pour ouvrir des documents et des images protégés par le service Azure Rights Management, même si ces fichiers sont déplacés par e-mail, ou s’ils sont copiés sur des lecteurs USB ou d’autres dispositifs de stockage. Cela signifie que vous pouvez utiliser ces journaux en tant que source d’informations fiable pour une analyse légale quand vous protégez vos données à l’aide du service Azure Rights Management.
+    En cas de fuite d’informations, vous devrez très certainement fournir une liste des personnes qui ont accédé récemment à des documents spécifiques ainsi que le type d’informations auxquelles a pu accéder un individu suspecté. Vous pouvez répondre à ces types de questions quand vous utilisez cette journalisation, car les personnes qui consultent du contenu protégé doivent toujours obtenir une licence Rights Management pour ouvrir des documents et des images protégés par le service Azure Rights Management, même si ces fichiers sont déplacés par e-mail ou s’ils sont copiés sur des lecteurs USB ou d’autres dispositifs de stockage. Cela signifie que vous pouvez utiliser ces journaux en tant que source d’informations fiable pour une analyse d’investigation quand vous protégez vos données à l’aide du service Azure Rights Management.
 
 En plus de cette journalisation de l’utilisation, vous disposez également des options de journalisation suivantes :
 
 |Option de journalisation|Description|
 |----------------|---------------|
-|Journal d’administration|Journalise les tâches d’administration du service Azure Rights Management. Par exemple, si le service est désactivé, lorsque la fonctionnalité de super utilisateur est activée et lorsque des utilisateurs délèguent des autorisations d’administrateur au service. <br /><br />Pour plus d'informations, consultez l’applet de commande PowerShell, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
+|Journal d’administration|Journalise les tâches d’administration du service Azure Rights Management. Par exemple, si le service est désactivé, lorsque la fonctionnalité de super utilisateur est activée et lorsque des utilisateurs délèguent des autorisations d’administrateur au service. <br /><br />Pour plus d'informations, consultez l’applet de commande PowerShell, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
 |Suivi des documents|Permet aux utilisateurs d’effectuer le suivi et de révoquer les documents dont ils ont effectué le suivi avec le client Azure Information Protection ou l’application de partage RMS. Les administrateurs généraux peuvent également effectuer le suivi de ces documents au nom des utilisateurs. <br /><br />Pour plus d’informations, consultez [Configuration et utilisation du suivi des documents pour Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
 |Journaux des événements clients|Activité d’utilisation pour le client Azure Information Protection, enregistrée dans le journal des événements **Applications et services** Windows local, **Azure Information Protection**. <br /><br />Pour plus d’informations, consultez [Journalisation de l’utilisation du client Azure Information Protection](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Fichiers journaux clients|Journaux de dépannage pour le client Azure Information Protection, qui se trouvent dans **%localappdata%\Microsoft\MSIP**. <br /><br />Ces fichiers sont destinés au Support Microsoft.|
 
 En outre, les informations dans les journaux d’utilisation du client Azure Information Protection et le scanneur Azure Information Protection sont collectées et agrégées afin de créer des rapports dans le portail Azure. Pour plus d’informations, consultez [Création de rapports pour Azure Information Protection](reports-aip.md).
 
-Pour plus d’informations sur la journalisation de l’utilisation pour le service Azure Rights Management, consultez les sections suivantes. 
+Pour plus d’informations sur la journalisation de l’utilisation pour le service Azure Rights Management, consultez les sections suivantes. 
 
-## <a name="how-to-enable-azure-rights-management-usage-logging"></a>Comment activer la journalisation de l’utilisation d’Azure Rights Management
+## <a name="how-to-enable-azure-rightsmanagement-usage-logging"></a>Comment activer la journalisation de l’utilisation du service Gestion des droits Azure
 Depuis février 2016, la journalisation de l’utilisation d’Azure Rights Management est activée par défaut pour tous les clients. Cela s’applique aux clients qui ont activé leur service Azure Rights Management avant février 2016 et à ceux qui l’activent après février 2016. 
 
 > [!NOTE]
@@ -133,7 +133,7 @@ La première ligne indique qu’il s’agit de journaux Azure Rights Management.
 
 La troisième ligne énumère une liste de noms de champs séparés par des tabulations :
 
-**#Fields: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip            admin-action            acting-as-user**
+**#Fields: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip            admin-action            acting-as-user**
 
 Chacune des lignes suivantes est un enregistrement de journal. Les valeurs des champs sont dans le même ordre que celui de la ligne précédente et sont séparées par des tabulations. Utilisez le tableau suivant pour interpréter les champs.
 
@@ -163,7 +163,7 @@ Bien que le champ user-id indique généralement l’utilisateur qui effectue la
 
 -   Valeur **'microsoftrmsonline@&lt;votreIDdeClient&gt;.rms.&lt;région&gt;.aadrm.com'**.
 
-    Cette valeur indique qu’un service Office 365, tel qu’Exchange Online ou SharePoint Online, est à l’origine de la demande. Dans la chaîne, *&lt;votreIDdeClient&gt;* correspond au GUID de votre client, et *&lt;région&gt;* à la région dans laquelle votre client est inscrit. Par exemple, **AN** représente l’Amérique du Nord, **UE** correspond à l’Europe et **AP** correspond à l’Asie.
+    Cette valeur indique qu’un service Office 365, tel qu’Exchange Online ou SharePoint Online, est à l’origine de la demande. Dans la chaîne, *&lt;votreIDdeClient&gt;* correspond au GUID de votre client, et *&lt;région&gt;* à la région dans laquelle votre client est inscrit. Par exemple, **AN** représente l’Amérique du Nord, **UE** correspond à l’Europe et **AP** correspond à l’Asie.
 
 -   Si vous utilisez le connecteur RMS :
 
@@ -190,7 +190,7 @@ Il existe de nombreux types de demande dans le service Azure Rights Management. 
 |FECreatePublishingLicenseV1|Identique à Certify et GetClientLicensorCert combinés, mais à partir de clients mobiles.|
 |FEGetAllTemplates|Un appel est fait à partir d’un appareil mobile (frontal) pour obtenir les modèles.|
 |FindServiceLocationsForUser|Un appel est fait pour rechercher des URL utilisées pour appeler Certify ou AcquireLicense.|
-|GetAllDocs|Un appel est effectué à partir du site de suivi des documents pour charger la page **tous les documents** pour un utilisateur ou rechercher tous les documents pour le client. Utilisez cette valeur avec les champs admin-action et acting-as-admin :<br /><br />- admin-action est vide : un utilisateur affiche la page **tous les documents** page pour ses propres documents.<br /><br />- admin-action a la valeur true et acting-as-user est vide : un administrateur affiche tous les documents pour son client.<br /><br />- admin-action a la valeur true et acting-as-user n’est pas vide : un administrateur affiche la page **tous les documents** pour un utilisateur.|
+|GetAllDocs|Un appel est effectué à partir du site de suivi des documents pour charger la page **tous les documents** pour un utilisateur ou rechercher tous les documents pour le client. Utilisez cette valeur avec les champs admin-action et acting-as-admin :<br /><br />-admin-action est vide : un utilisateur affiche la page **tous les documents** pour ses propres documents.<br /><br />-admin-action a la valeur true et acting-as-user est vide : un administrateur affiche tous les documents pour son locataire.<br /><br />-admin-action a la valeur true et acting-as-user n’est pas vide : un administrateur affiche la page **tous les documents** pour un utilisateur.|
 |GetAllTemplates|Un appel est fait à partir du portail Azure pour obtenir tous les modèles.|
 |GetClientLicensorCert|Le client demande un certificat de publication (qui sera ensuite utilisé pour protéger du contenu) à partir d’un ordinateur Windows.|
 |GetConfiguration|Une applet de commande Azure PowerShell est appelée pour obtenir la configuration du client Azure RMS.|

@@ -1,23 +1,23 @@
 ---
 title: Configuration pour Windows Phone | Azure RMS
-description: Les applications Windows Phone peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leurs applications.
+description: Les applications Windows Phone peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations.
 keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 50480fef2983f715a54b68ae1b21dbcf28e9b554
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 2c85449615fd0db5f88c452031cbc5b837cb0f82
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151501"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266390"
 ---
 # <a name="windows-phone-setup"></a>Configuration pour Windows Phone
 
@@ -35,10 +35,10 @@ Cette rubrique explique comment configurer votre environnement pour créer vos p
 
 Vous devez disposer des logiciels suivants sur votre système de développement :
 
--   Système d’exploitation [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet)
--   [Outils de développement Windows Phone 8.1 (SDK)](http://dev.windowsphone.com/en-us/downloadsdk)
--   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) ou version ultérieure, ou Visual Studio 2012 Express (inclus dans le SDK Windows Phone 8.0/8.1)
--   Package RMS SDK 4.2 pour Windows Phone Pour plus d’informations, consultez [Prise en main](get-started.md).
+-   Système d’exploitation [Windows 8.1](https://windows.microsoft.com/windows-8/meet)
+-   [Outils de développement Windows Phone 8.1 (SDK)](https://developer.microsoft.com/windows/downloads/sdk-archive)
+-   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) ou version ultérieure, ou Visual Studio 2012 Express (inclus dans le SDK Windows Phone 8.0/8.1)
+-   Package MS RMS SDK 4.2 pour Windows Phone. Pour plus d’informations, consultez [Prise en main](get-started.md).
 -   Bibliothèque d’authentification : Nous vous recommandons d’utiliser la [bibliothèque Azure ADAL (Active Directory Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx), mais vous pouvez aussi recourir à d’autres bibliothèques d’authentification.
 
 Lisez la rubrique [Nouveautés](release-notes.md) pour obtenir des informations sur les mises à jour des API, des informations sur les appareils et les environnements, les notes de publication et les questions les plus fréquentes (FAQ).
@@ -79,6 +79,6 @@ Vous êtes maintenant prêt à créer vos propres applications Windows Phone.
 
 [Informations de référence sur l’API Windows](https://msdn.microsoft.com/library/dn891914.aspx)
 
-[Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
+[Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 
-[SDK Windows Phone](http://dev.windowsphone.com/en-us/downloadsdk)
+[SDK Windows Phone](https://developer.microsoft.com/windows/downloads/sdk-archive)

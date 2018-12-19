@@ -4,18 +4,18 @@ description: Instructions d’utilisation du client Rights Management (RMS) avec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/14/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 099b4985a0e595c22ec29fd2d682d092a5b445b5
-ms.sourcegitcommit: 395918e9e3513e1d791bbfc16c0fc90e4dd605eb
+ms.openlocfilehash: 19a295076ce86da0c93685250cd62b0ca1ca41e6
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750626"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305696"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
@@ -113,7 +113,7 @@ Notez que si vous apportez des changements au modèle Rights Management que vous
 
         `[string]$BposTenantId = "23976bc6-dcd4-4173-9d96-dad1f48efd42",`
 
-3.  Exécutez le script. Si vous ne vous signez pas le script (plus sécurisé), vous devez configurer Windows PowerShell sur les serveurs qui l'exécutent. Par exemple, exécutez une session Windows PowerShell avec l’option **Exécuter en tant qu’administrateur**, puis tapez : **Set-ExecutionPolicy RemoteSigned**. Toutefois, cette configuration laisse s’exécuter tous les scripts non signés quand ils sont stockés sur ce serveur (moins sécurisé).
+3.  Exécutez le script. Si vous ne vous signez pas le script (plus sécurisé), vous devez configurer Windows PowerShell sur les serveurs qui l'exécutent. Par exemple, exécutez une session Windows PowerShell avec l’option **Exécuter en tant qu’administrateur**, puis tapez : **Set-ExecutionPolicy RemoteSigned**. Toutefois, cette configuration laisse s’exécuter tous les scripts non signés quand ils sont stockés sur ce serveur (moins sécurisé).
 
     Pour plus d'informations sur la signature des scripts Windows PowerShell, voir [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) dans la bibliothèque de documentation PowerShell.
 
@@ -125,13 +125,13 @@ Vous êtes maintenant prêt à configurer les outils de gestion de ressources po
 
 -   Dans Outils de gestion de ressources pour serveur de fichiers, Gestion de la classification, créez une propriété locale :
 
-    -   **Nom**: Tapez **RMS**
+    -   **Nom** : Tapez **RMS**
 
-    -   **Description**:   Tapez **Protection de Rights Management**
+    -   **Description** :   Tapez **Rights Management protection**
 
-    -   **Type de propriété** : sélectionnez **Oui/Non**
+    -   **Type de propriété** : Sélectionnez **Oui/Non**.
 
-    -   **Valeur**: Sélectionnez **Oui**
+    -   **Valeur** : Sélectionnez **Oui**
 
 Nous pouvons maintenant créer une règle de classification utilisant cette propriété.
 
@@ -141,25 +141,25 @@ Nous pouvons maintenant créer une règle de classification utilisant cette prop
 
     -   Sous l'onglet **Général** :
 
-        -   **Nom**: Tapez **Classifier pour RMS**
+        -   **Nom** : Tapez **Classifier pour RMS**
 
-        -   **Activé**: Conservez la valeur par défaut, c'est-à-dire que cette case à cocher est activée.
+        -   **Activé** : Conservez la valeur par défaut, c'est-à-dire que cette case à cocher est activée.
 
-        -   **Description** : Tapez **Classifier tous les fichiers dans le dossier &lt;nom de dossier&gt; pour Rights Management**.
+        -   **Description** : Tapez **Classifier tous les fichiers dans le dossier &lt;nom de dossier&gt; pour Rights Management**.
 
             Remplacez *&lt;nom de dossier&gt;* par le nom du dossier choisi. Par exemple, **Classifier tous les fichiers dans le dossier C:\FileShare pour Rights Management**.
 
-        -   **Étendue**: Ajoutez le dossier que vous avez choisi. Par exemple, **C:\FileShare**.
+        -   **Étendue** : Ajoutez le dossier que vous avez choisi. Par exemple, **C:\FileShare**.
 
             N'activez pas les cases à cocher.
 
     -   Sous l'onglet **Classification** :
 
-    -   **Méthode de classification**: Sélectionnez **Classificateur de dossiers**
+    -   **Méthode de classification** : Sélectionnez **Classificateur de dossiers**.
 
-    -   Nom de**Propriété** : Sélectionnez **RMS**.
+    -   Nom de la **propriété** : Sélectionnez **RMS**.
 
-    -   **Valeur** de propriété : sélectionnez **Oui**.
+    -   **Valeur** de la propriété : Sélectionnez **Oui**
 
 Bien que vous puissiez exécuter les règles de classification manuellement, pour les opérations en cours, vous voulez que cette règle s’exécute selon une planification, afin que les nouveaux fichiers soient classifiés avec la propriété RMS.
 
@@ -167,15 +167,15 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
 -   Sous l'onglet **Classification automatique** :
 
-    -   **Activer la planification fixe**: Activez cette case à cocher.
+    -   **Activer la planification fixe** : Activez cette case à cocher.
 
     -   Configurez la planification pour toutes les règles de classification à exécuter, qui inclut notre nouvelle règle de classification des fichiers avec la propriété RMS.
 
-    -   **Autoriser la classification continue de nouveaux fichiers** : activez cette case à cocher pour que les nouveaux fichiers soient classifiés.
+    -   **Autoriser la classification continue de nouveaux fichiers** : Cochez cette case pour que les nouveaux fichiers soient classifiés.
 
-    -   Facultatif : Apportez toutes les autres modifications souhaitées, par exemple, en configurant des options pour les rapports et notifications.
+    -   Facultatif : Apportez toutes les autres modifications souhaitées, par exemple, en configurant des options pour les rapports et notifications.
 
-À présent que vous avez terminé la configuration de la classification, vous êtes prêt à configurer une tâche de gestion pour appliquer la protection RMS aux fichiers.
+À présent que vous avez terminé la configuration de la classification, vous êtes prêt à configurer une tâche de gestion pour appliquer la protection RMS aux fichiers.
 
 ### <a name="create-a-custom-file-management-task-protect-files-with-rms"></a>Création d'une tâche de gestion de fichiers personnalisée (Protéger les fichiers avec RMS)
 
@@ -183,7 +183,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
     -   Sous l'onglet **Général** :
 
-        -   **Nom de la tâche**: Tapez **Protéger les fichiers avec RMS**
+        -   **Nom de tâche** : Tapez **Protéger les fichiers avec RMS**
 
         -   Conservez la case à cocher **Activer** sélectionnée.
 
@@ -191,15 +191,15 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
             Remplacez *&lt;nom de dossier&gt;* par le nom du dossier choisi. Par exemple, **Protéger les fichiers dans C:\FileShare avec Rights Management et un modèle à l’aide d’un script Windows PowerShell**.
 
-        -   **Étendue**: Sélectionnez le dossier que vous avez choisi. Par exemple, **C:\FileShare**.
+        -   **Étendue** : Sélectionnez le dossier que vous avez choisi. Par exemple, **C:\FileShare**.
 
             N'activez pas les cases à cocher.
 
     -   Sous l'onglet **Action** :
 
-        -   **Type**: Sélectionnez **Personnalisée**
+        -   **Type** : Sélectionnez **Personnalisée**
 
-        -   **Exécutable**: Spécifiez ce qui suit :
+        -   **Exécutable** : Spécifiez les informations suivantes :
 
             ```
             C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
@@ -224,23 +224,23 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
             > 
             > Pour les fichiers n'ayant pas d'utilisateur de domaine en tant que propriétaire, vous pouvez les copier et enregistrer vous-même en tant qu'utilisateur de domaine afin d'en devenir le propriétaire. Si vous disposez d'autorisations, vous pouvez aussi modifier manuellement le propriétaire.  Vous pouvez aussi fournir une adresse e-mail spécifique (par exemple, la vôtre ou une adresse de groupe pour le département informatique) au lieu de la variable [Source File Owner Email], de sorte que tous les fichiers que vous protégez à l’aide de ce script utilisent cette adresse e-mail pour définir le nouveau propriétaire.
 
-    -   **Exécuter la commande en tant que**: Sélectionnez **Système local**
+    -   **Exécuter la commande en tant que** : Sélectionnez **Système local**
 
     -   Sous l'onglet **Condition** :
 
-        -   **Propriété**: Sélectionnez **RMS**
+        -   **Propriété** : Sélectionnez **RMS**.
 
-        -   **Opérateur**: Sélectionnez **Égal**
+        -   **Opérateur** : Sélectionnez **Égal**
 
-        -   **Valeur**: Sélectionnez **Oui**
+        -   **Valeur** : Sélectionnez **Oui**
 
     -   Sous l'onglet **Planifier** :
 
-        -   **Exécuter à**: Configurez la planification de votre choix.
+        -   **Exécuter à** : Configurez la planification de votre choix.
 
             Définissez un temps conséquent pour l'exécution du script. Bien que cette solution protège tous les fichiers du dossier, le script s'exécute une fois pour chacun d'eux à chaque fois. Bien que cela prenne plus de temps que de protéger tous les fichiers en même temps, ce qui est pris en charge le client Azure Information Protection, cette configuration fichier par fichier pour l'ICF est plus puissante. Par exemple, les fichiers protégés peuvent avoir des propriétaires différents (conserver le propriétaire d’origine) quand vous utilisez la variable [Source File Owner Email], et cette action fichier par fichier est nécessaire si vous modifiez ultérieurement la configuration pour protéger les fichiers de façon sélective plutôt que tous les fichiers d’un dossier.
 
-        -   **Exécuter en continu sur les nouveaux fichiers**: Activez cette case à cocher.
+        -   **Exécuter en continu sur les nouveaux fichiers** : Activez cette case à cocher.
 
 ### <a name="test-the-configuration-by-manually-running-the-rule-and-task"></a>Test de la configuration en exécutant manuellement la règle et la tâche
 
@@ -268,7 +268,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
     > 
     > -   Si le rapport indique **0** au lieu du nombre de fichiers figurant dans votre dossier, cela indique que le script ne s’est pas exécuté. Commencez par contrôler le script proprement dit en le chargeant dans Windows PowerShell ISE pour valider son contenu, puis essayez de l’exécuter une fois dans la même session PowerShell pour voir si des erreurs s’affichent. Si aucun argument n’est spécifié, le script tente de se connecter et de s’authentifier auprès du service Azure Rights Management.
     > 
-    >     -   Si le script signale qu'il n'a pas pu se connecter au service Azure Rights Management (Azure RMS), vérifiez les valeurs affichées pour le compte de principal du service que vous avez spécifiées dans le script. Pour plus d’informations sur la création de ce compte de principal du service, consultez la page [Condition préalable 3 : protéger ou annuler la protection des fichiers sans interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) dans le guide de l’administrateur du client Azure Information Protection.
+    >     -   Si le script signale qu'il n'a pas pu se connecter au service Azure Rights Management (Azure RMS), vérifiez les valeurs affichées pour le compte de principal du service que vous avez spécifiées dans le script. Pour plus d’informations sur la création de ce compte de principal du service, consultez [Prérequis 3 : Pour protéger ou déprotéger des fichiers sans interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) dans le Guide de l’administrateur du client Azure Information Protection.
     >     -   Si le script signale qu’il n’a pas pu se connecter à Azure RMS, vérifiez qu’il peut trouver le modèle spécifié en exécutant [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) directement à partir de Windows PowerShell sur le serveur. Le modèle que vous avez spécifié doit figurer dans les résultats.
     > -   Si le script s'exécute par lui-même dans Windows PowerShell ISE sans erreur, essayez de l'exécuter comme suit à partir d'une session PowerShell, en spécifiant un nom de fichier à protéger, sans le paramètre -OwnerEmail :
     > 

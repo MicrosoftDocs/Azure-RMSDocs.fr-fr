@@ -4,19 +4,18 @@ description: Découvrez les documents PDF qui sont étiquetés pour la classific
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2018
+ms.date: 12/12/2018
 ms.topic: article
-ms.prod: azure
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: 4a4d396db6eaac2709577023d873587697327bef
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: fc1a6c136d0b44671cbae0e6eb15202364e356d4
+ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023598"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246120"
 ---
 # <a name="supported-pdf-readers-for-microsoft-information-protection"></a>Lecteurs PDF pris en charge pour Microsoft Information Protection
 
@@ -42,7 +41,7 @@ Les lecteurs PDF suivants peuvent ouvrir des fichiers PDF protégés qui respect
 
 |Système d'exploitation|Lecteurs pris en charge et lien de téléchargement|
 |----------------|-----------------------------------|
-|Windows 10 et versions antérieures<br />via Windows 7 Service Pack 1|Adobe Acrobat Reader (recommandé) :<br />-  [Lire les conditions générales d’utilisation d’Adobe](https://www.adobe.com/legal/terms.html) <br />- [Télécharger la préversion](https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/misc/MIP_Preview/1900820120/Adobe_MIP_Preview_1900820120.zip) <br /><br /> Visionneuse Azure Information Protection : [Télécharger](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader : [Télécharger](https://www.foxitsoftware.com/pdf-reader/)|
+|Windows 10 et versions antérieures<br />via Windows 7 Service Pack 1|Adobe Acrobat Reader (recommandé) :<br />-  1. Lisez les [conditions générales d’utilisation d’Adobe](https://www.adobe.com/legal/terms.html) <br />- 2. Installez Adobe Reader à partir du [site Adobe](https://www.adobe.com/)<br />- 3. Installez le [plug-in Adobe](https://go.microsoft.com/fwlink/?linkid=2050049)<br />- 4. Si vous y êtes invité, contactez votre administrateur pour [autoriser le plug-in](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396) <br /><br /> Visionneuse Azure Information Protection : [Télécharger](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader : [Télécharger](https://www.foxitsoftware.com/pdf-reader/)|
 |Android|Application Azure Information Protection : [Télécharger](https://go.microsoft.com/fwlink/?LinkId=325340)|
 |iOS|Application Azure Information Protection : [Télécharger](https://go.microsoft.com/fwlink/?LinkId=325338)|
 

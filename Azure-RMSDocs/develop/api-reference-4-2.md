@@ -1,6 +1,6 @@
 ---
 title: Informations de référence pour l'API SDK 4.2 | Microsoft Docs
-description: "L'Azure Information Protection SDK 4.2 prend en charge plusieurs systèmes d’exploitation : Android, iOS, OS X, Linux, Windows Phone et Windows Store."
+description: Azure Information Protection SDK 4.2 prend en charge plusieurs systèmes d’exploitation, notamment Android, iOS, OS X, Linux, Windows Phone et Windows Store.
 keywords: ''
 author: lleonard-msft
 ms.author: alleonar
@@ -12,16 +12,16 @@ ms.assetid: 6a8df1d8-1279-4189-b17d-f128b7ca5643
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 939870b13d98d7ece7e67944d358c175dff0939c
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 79b5bb05e92dae9edfbd8c574ba6aeea9feb3f1d
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149875"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266424"
 ---
 # <a name="api-sdk-42-reference"></a>Référence pour l'API SDK 4.2
 
-L'Azure Information Protection SDK 4.2 prend en charge plusieurs systèmes d’exploitation. Pour plus d’informations sur des points spécifiques, consultez [Nouveautés](release-notes.md).
+Azure Information Protection SDK 4.2 prend en charge plusieurs systèmes d’exploitation. Pour plus d’informations sur des points spécifiques, consultez [Nouveautés](release-notes.md).
 
 ### <a name="apple"></a>Apple
 - [Informations de référence sur l’API iOS / OS X](https://msdn.microsoft.com/library/dn758306.aspx) : informations de référence sur l’API pour les systèmes d’exploitation Apple iOS et OS X.
@@ -30,7 +30,7 @@ L'Azure Information Protection SDK 4.2 prend en charge plusieurs systèmes d’e
 - [Espaces de noms Android](https://msdn.microsoft.com/library/dn758245.aspx)
 
 ### <a name="linux"></a>Linux
-- [Informations de référence sur l’API Linux](linux-c-api-reference.md) : les informations de référence sur l’API pour notre prise en charge du système d’exploitation de type Linux sont hébergées sur Github, dans [RMS SDK for C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
+- [Informations de référence sur l’API Linux](linux-c-api-reference.md) : les informations de référence sur l’API pour notre prise en charge du système d’exploitation de type Linux sont hébergées sur Github, dans [RMS SDK for C++](https://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
 ### <a name="microsoft"></a>Microsoft
 - [Informations de référence sur l’API Windows](https://msdn.microsoft.com/library/dn891914.aspx) : informations de référence sur l’API pour les SDK des applications Windows Phone et Windows Store.

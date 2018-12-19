@@ -5,28 +5,28 @@ keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: bf1958dca3c4c1c461fa7c66758a9a6f97377569
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 8537a4a9e51b99e0dd37e7abc720473b364cd879
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147455"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173687"
 ---
 # <a name="android-code-examples"></a>Exemples de code Android
 
 Cet article explique comment coder des éléments pour la version Android du Kit RMS SDK.
 
-**Remarque** Dans cet article, le terme _MSIPC_ (Microsoft Information Protection and Control) fait référence au processus client.
+**Remarque** Dans cet article, le terme _MSIPC_ (Microsoft Information Protection and Control) fait référence au processus client.
 
 
-## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Utilisation de Microsoft Rights Management SDK 4.2 : principaux scénarios
+## <a name="using-the-microsoft-rights-management-sdk42---key-scenarios"></a>Utilisation de Microsoft Rights Management SDK 4.2 : principaux scénarios
 
 Ces exemples de code sont tirés d’un exemple d’application plus large représentant des scénarios de développement importants pour votre compréhension de ce Kit SDK. Ils montrent comment utiliser :
 
@@ -36,13 +36,13 @@ Ces exemples de code sont tirés d’un exemple d’application plus large repr�
 
 L’exemple d’application *MSIPCSampleApp* est disponible pour une utilisation avec ce Kit SDK pour le système d’exploitation Android. Pour plus d’informations, consultez [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android).
 
-### <a name="scenario-consume-an-rms-protected-file"></a>Scénario : Consommer un fichier protégé RMS
+### <a name="scenario-consume-an-rms-protected-file"></a>Scénario : Consommer un fichier protégé par RMS
 
-- **Étape 1** : Créer un [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx).
+- **Étape 1** : Créer un [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx).
 
     **Source** : *MsipcAuthenticationCallback.java*
 
-    **Description** : instancier un objet [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) et implémenter l’authentification du service.  Utilisez [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) pour obtenir un jeton en passant une instance de **AuthenticationRequestCallback**, comme le paramètre *mRmsAuthCallback*, à l’API MSIPC. Reportez-vous à l’appel à [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) vers la fin de la section de l’exemple de code suivant.
+    **Description** : Instancier un objet [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) et implémenter l’authentification du service.  Utilisez [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) pour obtenir un jeton en passant une instance de **AuthenticationRequestCallback**, comme le paramètre *mRmsAuthCallback*, à l’API MSIPC. Reportez-vous à l’appel à [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) vers la fin de la section de l’exemple de code suivant.
 
     ``` java
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
@@ -104,11 +104,11 @@ L’exemple d’application *MSIPCSampleApp* est disponible pour une utilisation
         }
     ```
 
-- **Étape 2** : Configurer l’authentification à l’aide de la bibliothèque d’authentification Active Directory (ADAL).
+- **Étape 2** : Configurer l’authentification avec la bibliothèque d’authentification Active Directory (ADAL).
 
     **Source** : *MsipcAuthenticationCallback.java*.
 
-    **Description** : cette étape utilise la bibliothèque ADAL pour implémenter un [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) avec des exemples de paramètres d’authentification. Pour en savoir plus, consultez la [bibliothèque d'authentification Azure AD (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
+    **Description** : Cette étape utilise la bibliothèque ADAL pour implémenter un [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) avec des exemples de paramètres d’authentification. Pour en savoir plus, consultez la [bibliothèque d'authentification Azure AD (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
 
 
     ``` java
@@ -185,7 +185,7 @@ L’exemple d’application *MSIPCSampleApp* est disponible pour une utilisation
                       }
     ```
 
-- **Étape 3** : Vérifier l’existence de l’autorisation **Edit** pour cet utilisateur avec ce contenu via la méthode [UserPolicy.accessCheck](https://msdn.microsoft.comlibrary/dn790885.aspx).
+- **Étape 3** : Vérifier l’existence de l’autorisation **Edit** pour cet utilisateur avec ce contenu via la méthode [UserPolicy.accessCheck](https://msdn.microsoft.com/library/dn790885.aspx).
 
     **Source** : *TextEditorFragment.java*
 
@@ -201,11 +201,11 @@ L’exemple d’application *MSIPCSampleApp* est disponible pour une utilisation
     ```
 
 
-### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scénario : Créer un fichier protégé à l’aide d’un modèle
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scénario : Créer un fichier protégé en utilisant un modèle
 
 Ce scénario commence par obtenir une liste de modèles, sélectionne le premier pour créer une stratégie, puis nous crée et écrit dans le nouveau fichier protégé.
 
-- **Étape 1** : Afficher la liste de modèles via un objet [TemplateDescriptor](https://msdn.microsoft.com/library/dn790871.aspx).
+- **Étape 1** : Obtenir la liste de modèles via un objet [TemplateDescriptor](https://msdn.microsoft.com/library/dn790871.aspx).
 
     **Source** : *MsipcTaskFragment.java*
 
@@ -247,7 +247,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
       }
     ```
 
-- **Étape 2** : Créer un [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) en utilisant le premier modèle de la liste.
+- **Étape 2** : Créer une [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) en utilisant le premier modèle de la liste.
 
     **Source** : *MsipcTaskFragment.java*
 
@@ -355,9 +355,9 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
     ```
 
 
-### <a name="scenario-open-a-custom-protected-file"></a>Scénario : Ouvrir un fichier protégé personnalisé
+### <a name="scenario-open-a-custom-protected-file"></a>Scénario : Ouvrir un fichier protégé personnalisé
 
-- **Étape 1** : Créer un [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) à partir d’un *serializedContentPolicy*.
+- **Étape 1** : Créer une [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) à partir d’une *serializedContentPolicy*.
 
     **Source** : *MsipcTaskFragment.java*
 
@@ -417,7 +417,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
     ```
 
 
-- **Étape 2** : Créer un [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) en utilisant le [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) de l’**Étape 1**.
+- **Étape 2** : Créer un [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) en utilisant la [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) de l’**Étape 1**.
 
     **Source** : *MsipcTaskFragment.java*
 
@@ -523,13 +523,13 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
     }
     ```
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>Scénario : Créer un fichier protégé personnalisé à l’aide d’une stratégie personnalisée
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>Scénario : Créer un fichier protégé personnalisé en utilisant une stratégie personnalisée
 
-- **Étape 1** : Avec une adresse e-mail fournie par l’utilisateur, créer un descripteur de stratégie.
+- **Étape 1** : Avec une adresse e-mail fournie par l’utilisateur, créez un descripteur de stratégie.
 
     **Source** : *MsipcTaskFragment.java*
 
-    **Description** : Dans la pratique, les objets suivants sont créés en utilisant des entrées de l’utilisateur à partir de l’interface de l’appareil : [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) et [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx).
+    **Description** : En pratique, les objets suivants sont créés en utilisant des entrées de l’utilisateur à partir de l’interface de l’appareil : [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) et [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx).
 
     ``` java
       // create userRights list
@@ -546,7 +546,7 @@ Ce scénario commence par obtenir une liste de modèles, sélectionne le premier
     ```
 
 
-- **Étape 2** : Créer un [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) personnalisé à partir du descripteur de stratégie *selectedDescriptor*.
+- **Étape 2** : Créer une [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) personnalisée à partir du descripteur de stratégie *selectedDescriptor*.
 
     **Source** : *MsipcTaskFragment.java*
 

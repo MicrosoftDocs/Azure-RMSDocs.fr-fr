@@ -4,22 +4,22 @@ description: Informations pour les utilisateurs qui exécutent le client Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c9f8408c4417b1b5131a51276a829a16687f1870
-ms.sourcegitcommit: ccc99efd2402a8b93912c8df4df330fa1311aacb
+ms.openlocfilehash: 2f73f8bf107aaebe0e87588c410e1e7f66093ef7
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48812416"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305095"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guide de l’utilisateur : Mode Protection uniquement pour le client Azure Information Protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 
 
 Lorsque le client Azure Information Protection ne dispose pas d’étiquettes pour classifier vos documents et e-mails, il s’exécute en mode **Protection uniquement**. Par exemple, dans ce mode, vous pouvez voir les informations suivantes lorsque vous utilisez l’Explorateur de fichiers Windows, cliquez avec le bouton droit et sélectionnez **Classifier et protéger** :
@@ -55,9 +55,9 @@ Le mode Protection uniquement s’exécute dans les scénarios suivants :
 
 ## <a name="supported-tasks-for-protection-only-mode"></a>Tâches prises en charge dans le mode protection uniquement
 
-- Protégez (et annulez la protection) des documents et des e-mails à partir de vos applications Office, à l’aide de la fonctionnalité Information Rights Management (IRM) d’Office. Par exemple : cliquez sur **Fichier** > **Info** > **Protéger le document** > **Restreindre l’accès**. Pour plus d’informations, consultez [Utilisation de la protection des informations avec Office 365, Office 2016 ou Office 2013](../help-users.md).
+- Protégez (et déprotégez) des documents et des e-mails à partir de vos applications Office, à l’aide de la fonctionnalité Information Rights Management (IRM) d’Office : Par exemple : Cliquez sur **Fichier** > **Informations** > **Protéger le document** > **Restreindre l’accès**. Pour plus d’informations, consultez [Utilisation de la protection des informations avec Office 365, Office 2016 ou Office 2013](../help-users.md).
 
-- Protégez (et annulez la protection) des fichiers à l’aide de l’Explorateur de fichiers Windows : cliquez avec le bouton droit sur le ou les fichiers ou sur le dossier > **Classifier et protéger**. Pour appliquer la protection qui a été configurée par votre administrateur, dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, cliquez sur **Sélectionner un modèle** et choisissez l’un des modèles disponibles.
+- Protégez (et déprotégez) des fichiers avec l’Explorateur de fichiers Windows : Cliquez avec le bouton droit sur le fichier, les fichiers ou le dossier > **Classifier et protéger**. Pour appliquer la protection qui a été configurée par votre administrateur, dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, cliquez sur **Sélectionner un modèle** et choisissez l’un des modèles disponibles.
 
 - Affichez des fichiers protégés à l’aide de la visionneuse Azure Information Protection.
 

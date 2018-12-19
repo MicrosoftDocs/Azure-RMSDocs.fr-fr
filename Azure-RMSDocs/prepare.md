@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: abbb7e5af52952dc3ed69f2825a8e32d25ab9982
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: e5717d83ece5f188476c0f7bca677088aa4373ae
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024096"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173874"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Avant de déployer Azure Information Protection dans votre organisation, vérifiez que vous avez des comptes pour les utilisateurs et groupes dans Azure AD pour le locataire de votre organisation.
 
@@ -73,9 +73,9 @@ Pour affecter des droits d’utilisation et des contrôles d’accès, et config
     
     Azure Information Protection peut utiliser n’importe quelle valeur dans cet attribut proxyAddresses d’Azure AD si le domaine a été ajouté à votre locataire (un « domaine vérifié »). Pour plus d’informations sur la vérification des domaines :
     
-    - Pour Azure AD : [Ajouter un nom de domaine personnalisé à Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
+    - Pour Azure AD : [Ajouter un nom de domaine personnalisé à Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Pour Office 365 : [Ajouter un domaine à Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - Pour Office 365 : [Ajouter un domaine à Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - L’attribut **userPrincipalName d’Azure AD** est utilisé uniquement quand un compte dans votre locataire n’a aucune valeur dans l’attribut proxyAddresses d’Azure AD. Par exemple, vous créez un utilisateur dans le portail Azure, ou créez un utilisateur pour Office 365 qui n’a pas de boîte aux lettres.
 
@@ -113,7 +113,7 @@ En plus d’utiliser l’attribut proxyAddresses d’Azure AD pour les groupes d
 
 ## <a name="using-accounts-from-active-directory-on-premises-for-azure-information-protection"></a>Utilisation de comptes de l’annuaire Active Directory local pour Azure Information Protection
 
-Si vous disposez de comptes qui sont gérés en local et que vous souhaitez utiliser avec Azure Information Protection, vous devez les synchroniser avec Azure AD. Pour faciliter le déploiement, nous vous recommandons d’utiliser [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect). Toutefois, vous pouvez utiliser toute méthode de synchronisation d’annuaires qui aboutit au même résultat.
+Si vous disposez de comptes qui sont gérés en local et que vous souhaitez utiliser avec Azure Information Protection, vous devez les synchroniser avec Azure AD. Pour faciliter le déploiement, nous vous recommandons d’utiliser [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect). Toutefois, vous pouvez utiliser toute méthode de synchronisation d’annuaires qui aboutit au même résultat.
 
 Quand vous synchronisez vos comptes, il est inutile de synchroniser tous les attributs. Pour obtenir la liste des attributs qui doivent être synchronisés, consultez la [section relative à Azure RMS](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#azure-rms) dans la documentation d’Azure Active Directory.
 
@@ -128,7 +128,7 @@ Par exemple, à l’aide du module PowerShell V1 pour Azure Active Directory, [M
     Connect-MsolService
 
 
-Remarque : Si cette commande ne fonctionne pas, vous pouvez exécuter `Install-Module MSOnline` pour installer le module MSOnline.
+Remarque : Si cette commande ne fonctionne pas, vous pouvez exécuter `Install-Module MSOnline` pour installer le module MSOnline.
 
 Configurez ensuite votre session PowerShell afin de ne pas tronquer les valeurs :
 
@@ -207,9 +207,9 @@ N’oubliez pas de tenir compte de ce délai dans l’ensemble des modifications
 
 Après avoir confirmé que vos utilisateurs et groupes peuvent être utilisés avec Azure Information Protection et que vous êtes prêt à commencer à protéger des documents et des e-mails, vérifiez que vous avez besoin d’activer le service Azure Rights Management. Ce service doit être activé avant de pouvoir protéger les documents et les e-mails de votre organisation : 
 
-- À partir de février 2018 : si votre abonnement incluant Azure Rights Management ou Azure Information Protection a été obtenu pendant ou après ce mois, le service est automatiquement activé pour vous. 
+- À compter de février 2018 : Si votre abonnement incluant Azure Rights Management ou Azure Information Protection a été obtenu pendant ou après ce mois, le service est automatiquement activé pour vous. 
 
-- Si votre abonnement a été obtenu avant février 2018 : vous devez activer le service vous-même. 
+- Si votre abonnement a été obtenu avant février 2018 : Vous devez activer le service vous-même. 
 
 Pour plus d’informations, notamment sur la vérification de l’état d’activation, consultez [Activation d’Azure Rights Management](./activate-service.md).
 

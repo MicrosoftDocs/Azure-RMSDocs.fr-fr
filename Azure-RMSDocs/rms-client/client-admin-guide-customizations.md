@@ -4,18 +4,18 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d4e2af4a9123b7276f2afad6f0d41232f3555d62
-ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
+ms.openlocfilehash: 2ecb0376ac7d4d4ddd476e76a60053ff408e2bbd
+ms.sourcegitcommit: db24caa96033fd0c7a0fad4e36518a816a570c94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52861181"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53335538"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -29,7 +29,7 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 
 1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, [connectez-vous au portail Azure](../configure-policy.md#signing-in-to-the-azure-portal), puis accédez au panneau **Azure Information Protection**.
 
-2. À partir de l’option de menu **Classifications** > **Étiquettes** : sélectionnez **Stratégies**.
+2. À partir de l’option de menu **Classifications** > **Étiquettes** : Sélectionnez **Stratégies**.
 
 3. Dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel (**...**) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
     
@@ -39,7 +39,7 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 
 5. Assurez-vous que les utilisateurs de cette stratégie redémarrent toutes les applications Office qu’ils avaient ouvertes.
 
-6. Si vous n’avez plus besoin de ce paramètre et souhaitez rétablir le comportement par défaut : dans le panneau **Paramètres avancés**, sélectionnez le menu contextuel (**...**) à côté du paramètre dont vous n’avez plus besoin, puis sélectionnez **Supprimer**. Ensuite, cliquez sur **Enregistrer et fermer**.
+6. Si vous n’avez plus besoin de ce paramètre et que vous voulez rétablir le comportement par défaut : Dans le panneau **Paramètres avancés**, sélectionnez le menu contextuel (**...**) en regard du paramètre dont vous n’avez plus besoin, puis sélectionnez **Supprimer**. Ensuite, cliquez sur **Enregistrer et fermer**.
 
 #### <a name="available-advanced-client-settings"></a>Paramètres client avancés disponibles
 
@@ -57,7 +57,7 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 |ProcessUsingLowIntegrity|[Désactiver le niveau d’intégrité faible pour le scanneur](#disable-the-low-integrity-level-for-the-scanner)|
 |PullPolicy|[Prendre en charge les ordinateurs déconnectés](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions)|
-|ReportAnIssueLink|[Modifier l’adresse e-mail du lien Signaler un problème](#modify-the-email-address-for-the-report-an-issue-link)|
+|ReportAnIssueLink|[Ajouter « Signaler un problème » pour les utilisateurs](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Activer la classification pour qu’elle s’exécute en continu en arrière-plan](#turn-on-classification-to-run-continuously-in-the-background)|
 |SyncPropertyName|[Étiqueter un document Office en utilisant une propriété personnalisée existante](#label-an-office-document-by-using-an-existing-custom-property)|
 |SyncPropertyState|[Étiqueter un document Office en utilisant une propriété personnalisée existante](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -76,7 +76,7 @@ Indépendamment de ce paramètre, le client Azure Information Protection se conf
 
 Dans un environnement de production, les utilisateurs ne doivent généralement pas se connecter sous un autre nom lorsqu’ils utilisent le client Azure Information Protection. Toutefois, en tant qu’administrateur, vous devrez peut-être vous connecter sous un autre nom d’utilisateur pendant une phase de test. 
 
-Vous pouvez vérifier le compte auquel vous êtes actuellement connecté à l’aide de la boîte de dialogue **Microsoft Azure Information Protection** : ouvrez une application Office et, dans l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger**, puis sur **Aide et commentaires**. Votre nom de votre compte s’affiche dans la section **État du client**.
+Vous pouvez vérifier sous quel compte vous êtes actuellement connecté en utilisant la boîte de dialogue **Microsoft Azure Information Protection** : Ouvrez une application Office et, dans l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger**, puis sur **Aide et commentaires**. Votre nom de votre compte s’affiche dans la section **État du client**.
 
 Pensez à vérifier le nom de domaine du compte connecté. En effet, vous pouvez accidentellement vous connecter avec le bon nom de compte, mais avec le mauvais domaine. Vous pouvez vous apercevoir que vous utilisez le mauvais compte en cas d’échec du téléchargement de la stratégie Azure Information Protection ou si vous ne voyez pas les étiquettes ou le comportement auxquels vous vous attendez.
 
@@ -111,17 +111,17 @@ Recherchez le nom de la valeur suivant et définissez les données de la valeur 
 
 Vérifiez par ailleurs que ces ordinateurs n’ont pas de fichier nommé **Policy.msip** dans le dossier **%LocalAppData%\Microsoft\MSIP**. S’il existe, supprimez-le. Ce fichier contient la stratégie Azure Information Protection et peut avoir été téléchargé avant que vous n’ayez modifié le Registre ou si le client Azure Information Protection a été installé avec l’option de démonstration.
 
-## <a name="modify-the-email-address-for-the-report-an-issue-link"></a>Modifier l’adresse e-mail du lien Signaler un problème
+## <a name="add-report-an-issue-for-users"></a>Ajouter « Signaler un problème » pour les utilisateurs
 
-Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Ce paramètre s’applique uniquement aux préversions du client Azure Information Protection, car les versions en disponibilité générale du client n’affichent pas le lien **Signaler un problème**.
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 
-Par défaut, quand les utilisateurs sélectionnent le lien **Signaler un problème** dans la boîte de dialogue **Aide et commentaires** des préversions du client, une adresse Microsoft est préremplie dans un e-mail. Utilisez le paramètre client avancé suivant pour la modifier. Par exemple, spécifiez `mailto:helpdesk@contoso.com` pour indiquer l’adresse e-mail de votre support technique. 
+Quand vous spécifiez le paramètre client avancé suivant, les utilisateurs voient une option **Signaler un problème** qu’ils peuvent sélectionner dans la boîte de dialogue **Aide et commentaires** du client. Spécifiez une chaîne HTTP pour le lien. (par exemple, une page web personnalisée permettant aux utilisateurs de signaler des problèmes, ou une adresse e-mail qui pointe vers votre support technique). 
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Clé : **ReportAnIssueLink**
 
-- Valeur : **\<chaîne HTTP >**
+- Value : **\<Chaîne HTTP>**
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Masquer l’option de menu Classifier et protéger dans l’Explorateur de fichiers Windows
 
@@ -141,9 +141,9 @@ Vous pouvez empêcher l’affichage d’une invite de connexion au service Azure
     
     1. Entrez les chaînes suivantes :
     
-        - Clé : **PullPolicy**
+        - Clé : **PullPolicy**
         
-        - Valeur : **False**
+        - Value : **False**
     
     2. Téléchargez la stratégie avec ce paramètre et installez-la sur les ordinateurs en suivant les instructions ci-dessous.
 
@@ -180,9 +180,9 @@ Lorsque vous configurez ce paramètre, celui-ci masque ou affiche le bouton **Ne
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
-- Clé : **DisableDNF**
+- Clé : **DisableDNF**
 
-- Valeur : **True** pour masquer le bouton, ou **False** pour afficher le bouton
+- Value : **True** pour masquer le bouton, ou **False** pour afficher le bouton
 
 ## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Activer ou désactiver les options d’autorisations personnalisées pour les utilisateurs
 
@@ -192,9 +192,9 @@ Lorsque vous configurez ce paramètre et que vous publiez la stratégie pour les
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
-- Clé : **EnableCustomPermissions**
+- Clé : **EnableCustomPermissions**
 
-- Valeur : **True** pour rendre l’option des autorisations personnalisées visible, ou **False** pour masquer cette option
+- Value : **True** pour rendre l’option des autorisations personnalisées visible, ou **False** pour masquer cette option
 
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Masquer définitivement la barre Azure Information Protection
@@ -207,9 +207,9 @@ Même si la barre Azure Information Protection reste masquée, les utilisateurs 
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
-- Clé : **EnableBarHiding**
+- Clé : **EnableBarHiding**
 
-- Valeur : **True**
+- Value : **True**
 
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Activer la classification recommandée dans Outlook
@@ -222,7 +222,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Clé : **OutlookRecommendationEnabled**
 
-- Valeur : **True**
+- Value : **True**
 
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Définir une autre étiquette par défaut pour Outlook
@@ -255,11 +255,11 @@ L’ID de l’étiquette figure dans le panneau **Étiquette** quand vous affich
 
 L’action S/MIME peut être :
 
-- `Sign;Encrypt` : pour appliquer une signature numérique et le chiffrement S/MIME ;
+- `Sign;Encrypt` : Pour appliquer une signature numérique et le chiffrement S/MIME
 
-- `Encrypt` : pour appliquer uniquement le chiffrement S/MIME ;
+- `Encrypt` : Pour appliquer uniquement le chiffrement S/MIME
 
-- `Sign` : pour appliquer uniquement une signature numérique.
+- `Sign` : Pour appliquer uniquement une signature numérique
 
 Exemples de valeurs pour l’ID d’étiquette **dcf781ba-727f-4860-b3c1-73479e31912b** :
 
@@ -279,7 +279,7 @@ Dans cette configuration, lorsque l’étiquette est associée à un e-mail, la 
 
 Si l’étiquette spécifiée est configurée avec la protection Rights sur le Portail Azure, la protection S/MIME ne remplace la protection Rights Management que dans Outlook. Dans tous les autres scénarios qui gèrent l’étiquetage, la protection Rights Management s’applique.
 
-Si vous souhaitez que l’étiquette ne soit visible que dans Outlook, configurez-la de façon à ce qu’elle applique l’action unique définie par l’utilisateur **Ne pas transférer**, conformément au [Démarrage rapide : Configurer une étiquette permettant aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles](../quickstart-label-dnf-protectedemail.md).
+Si vous voulez que l’étiquette soit visible seulement dans Outlook, configurez-la de façon à ce qu’elle applique l’action unique définie par l’utilisateur **Ne pas transférer**, comme décrit dans [Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles](../quickstart-label-dnf-protectedemail.md).
 
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>Supprimer « Pas maintenant » pour les documents quand vous utilisez l’étiquetage obligatoire
 
@@ -291,9 +291,9 @@ Quand vous configurez ce paramètre, l’option **Pas maintenant** n’est pas p
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
-- Clé : **PostponeMandatoryBeforeSave**
+- Clé : **PostponeMandatoryBeforeSave**
 
-- Valeur : **False**
+- Value : **False**
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Activer la classification pour qu’elle s’exécute en continu en arrière-plan
 
@@ -313,7 +313,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Clé : **RunPolicyInBackground**
 
-- Valeur : **True**
+- Value : **True**
 
 ## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Ne pas protéger les fichiers PDF suivant la norme ISO pour le chiffrement PDF
 
@@ -325,9 +325,9 @@ Si vous voulez que le client rétablisse le comportement des versions antérieur
 
 - Clé : **EnablePDFv2Protection**
 
-- Valeur : **False**
+- Value : **False**
 
-Pour que le scanneur Azure Information Protection utilise le nouveau paramètre, le service du scanneur doit être redémarré.
+Pour que le scanneur Azure Information Protection utilise le nouveau paramètre, le service du scanneur doit être redémarré. De plus, le scanneur ne protègera plus par défaut les documents PDF. Si vous voulez que les documents PDF soient protégés par le scanneur quand EnablePDFv2Protection est défini sur False, vous devez [modifier le Registre](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
 
 Pour plus d’informations sur le nouveau chiffrement PDF, consultez le billet de blog [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
@@ -391,7 +391,7 @@ Suite à cette modification du Registre, les scénarios suivants sont pris en ch
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Ce paramètre est en préversion et est susceptible de changer.
 
-Cette configuration n’est actuellement pas compatible avec le paramètre permettant de [protéger les fichiers PDF à l’aide de la norme ISO pour le chiffrement PDF](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). Quand vous utilisez les deux paramètres ensemble, les fichiers .ppdf ne peuvent pas être ouverts par l’Explorateur de fichiers, PowerShell ou le scanneur.
+Cette configuration n’est actuellement pas compatible avec le nouveau comportement par défaut qui protège les fichiers PDF en utilisant la norme ISO pour le chiffrement des PDF. Dans ce scénario, les fichiers .ppdf ne peuvent pas être ouverts par l’Explorateur de fichiers, PowerShell ou le scanneur. Pour résoudre ce problème, utilisez le paramètre client avancé [Ne pas utiliser la norme ISO pour le chiffrement des PDF](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
 Vous pouvez ré-étiqueter les documents Office et PDF étiquetés par Secure Islands avec une étiquette Azure Information Protection à l’aide d’un mappage défini par vos soins. Cette méthode permet également de réutiliser les étiquettes d’autres solutions qui se trouvent sur des documents Office. 
 
@@ -400,13 +400,13 @@ Vous pouvez ré-étiqueter les documents Office et PDF étiquetés par Secure Is
 
 Cette option de configuration permet au client Azure Information Protection d’appliquer la nouvelle étiquette Azure Information Protection comme suit :
 
-- Pour les documents Office : lorsque le document est ouvert dans l’application de Bureau, la nouvelle étiquette Azure Information Protection est affichée comme définie et appliquée lorsque le document est enregistré.
+- Pour les documents Office : Quand le document est ouvert dans l’application du poste de travail, la nouvelle étiquette Azure Information Protection est affichée comme définie et est appliquée quand le document est enregistré.
 
-- Pour l’Explorateur de fichiers : dans la boîte de dialogue Azure Information Protection, la nouvelle étiquette Azure Information Protection est affichée comme définie et appliquée lorsque l’utilisateur sélectionne **Appliquer**. Si l’utilisateur sélectionne **Annuler**, la nouvelle étiquette n’est pas appliquée.
+- Pour l'Explorateur de fichiers : Dans la boîte de dialogue Azure Information Protection, la nouvelle étiquette Azure Information Protection est affichée comme définie et appliquée quand l’utilisateur sélectionne **Appliquer**. Si l’utilisateur sélectionne **Annuler**, la nouvelle étiquette n’est pas appliquée.
 
 - Pour PowerShell : [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) applique la nouvelle étiquette Azure Information Protection. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) n’affiche pas la nouvelle étiquette Azure Information Protection tant qu’elle n’est pas définie par une autre méthode.
 
-- Pour le scanneur Azure Information Protection : rapport de détection lorsque la nouvelle étiquette Azure Information Protection est définie et qu’elle peut être appliquée avec le mode d’application.
+- Pour le scanneur Azure Information Protection : La découverte signale quand la nouvelle étiquette Azure Information Protection est définie ; cette étiquette peut être appliquée avec le mode Appliquer.
 
 Cette configuration nécessite que vous spécifiiez un paramètre client avancé nommé **LabelbyCustomProperty** pour chaque étiquette Azure Information Protection que vous souhaitez associer à l’ancienne étiquette. Ensuite, définissez la valeur à utiliserpour chaque entrée avec la syntaxe suivante :
 
@@ -418,7 +418,7 @@ Spécifiez votre choix d’un nom de règle de migration. Utilisez un nom descri
 
 Notez que ce paramètre ne supprime pas les marquages visuels que l’ancienne étiquette a éventuellement appliqués. Pour supprimer des en-têtes et des pieds de page, consultez la section suivante, [Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions).
 
-### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Exemple 1 : mappage du même nom d’étiquette
+### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Exemple 1 : Mappage un-à-un du même nom d’étiquette
 
 Les documents qui ont une étiquette Secure Islands « Confidentiel » doivent être à nouveau libellées « Confidentiel » par Azure Information Protection.
 
@@ -435,7 +435,7 @@ Le paramètre client avancé :
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, « L’étiquette Secure Islands est confidentiel », Classification, Confidentiel|
 
-### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Exemple 2 : un mappage pour un autre nom d’étiquette
+### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Exemple 2 : Mappage un-à-un pour un autre nom d’étiquette
 
 Les documents qui ont une étiquette « Sensible » chez Secure Islands doivent être à nouveau libellés « Hautement confidentiel » par Azure Information Protection.
 
@@ -453,7 +453,7 @@ Le paramètre client avancé :
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, «L’étiquette Secure Islands est sensible », Classification, Sensible|
 
 
-### <a name="example-3-many-to-one-mapping-of-label-names"></a>Exemple 3 : mappage de plusieurs noms d’étiquettes en un
+### <a name="example-3-many-to-one-mapping-of-label-names"></a>Exemple 3 : Mappage plusieurs-à-un de noms d’étiquettes
 
 Vous avez deux étiquettes Secure Islands qui contiennent le mot « Interne » et vous souhaitez que les documents dotés d’une de ces étiquettes Secure Islands soient ré-étiquetés comme « Général » par Azure Information Protection.
 
@@ -485,7 +485,7 @@ Cette configuration n’est pas prise en charge pour Outlook. Sachez également 
 
 - Clé : **RemoveExternalContentMarkingInApp**
 
-- Valeur : \< **Types d’application Office WXP**> 
+- Value : \<**Types d’application Office WXP**> 
 
 Exemples :
 
@@ -501,15 +501,15 @@ Lorsque vous spécifiez la valeur de chaîne pour la clé **ExternalContentMarki
 
 - Correspondance partielle pour tout supprimer dans l’en-tête ou le pied de page.
     
-    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXTE À SUPPRIMER**. Vous souhaitez entièrement supprimer ces en-têtes ou pieds de page. Spécifiez la valeur : `*TEXT*`.
+    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXT TO REMOVE** (TEXTE À SUPPRIMER). Vous souhaitez entièrement supprimer ces en-têtes ou pieds de page. Spécifiez la valeur : `*TEXT*`.
 
 - Correspondance totale pour juste supprimer des mots spécifiques dans l’en-tête ou le pied de page.
     
-    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXTE À SUPPRIMER**. Vous souhaitez supprimer le mot **TEXTE** uniquement, ce qui laisse la chaîne d’en-tête ou de pied de page avec **À SUPPRIMER**. Spécifiez la valeur : `TEXT `.
+    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXT TO REMOVE** (TEXTE À SUPPRIMER). Vous souhaitez supprimer le mot **TEXTE** uniquement, ce qui laisse la chaîne d’en-tête ou de pied de page avec **À SUPPRIMER**. Spécifiez la valeur : `TEXT `.
 
 - Correspondance totale pour tout supprimer dans l’en-tête ou le pied de page.
     
-    Exemple : Les en-têtes ou les pieds de page ont la chaîne **TEXTE À SUPPRIMER**. Vous voulez supprimer les en-têtes ou les pieds de page qui ont exactement cette chaîne. Spécifiez la valeur : `^TEXT TO REMOVE$`.
+    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXT TO REMOVE** (TEXTE À SUPPRIMER). Vous voulez supprimer les en-têtes ou les pieds de page qui ont exactement cette chaîne. Spécifiez la valeur : `^TEXT TO REMOVE$`.
     
 
 Les caractères génériques de la chaîne que vous spécifiez sont sensibles à la casse. La longueur maximale de la chaîne est de 255 caractères.
@@ -532,11 +532,11 @@ Pour supprimer ce pied de page multiligne, créez les deux entrées suivantes :
 
 - Clé 1 : **ExternalContentMarkingToRemove**
 
-- Valeur de la clé 1 :  **\*Confidentiel***
+- Valeur de la clé 1 : **\*Confidentiel***
 
 - Clé 2 : **ExternalContentMarkingToRemove**
 
-- Valeur de la clé 2 :  **\*Étiquette appliquée*** 
+- Valeur de la clé 2 : **\*Étiquette appliquée*** 
 
 #### <a name="optimization-for-powerpoint"></a>Optimisation pour PowerPoint
 
@@ -546,7 +546,7 @@ Si vous ne spécifiez pas ce paramètre client avancé supplémentaire et si Pow
 
 Pour rechercher le nom de la forme que vous utilisez comme en-tête ou pied de page :
 
-1. Dans PowerPoint, affichez le volet **Sélection** : onglet **Mise en forme** > groupe **Organiser** > **volet sélection**.
+1. Dans PowerPoint, affichez le volet **Sélection** : Onglet **Format** > Groupe **Organiser** > Volet **Sélection**.
 
 2. Sélectionnez la forme sur la diapositive qui contient votre en-tête ou votre pied de page. Le nom de la forme sélectionnée est maintenant en surbrillance dans le volet **Sélection**.
 
@@ -556,7 +556,7 @@ Exemple : Le nom de la forme est **fc**. Pour supprimer la forme portant ce nom
 
 - Clé : **PowerPointShapeNameToRemove**
 
-- Valeur : \< **Nom de la forme PowerPoint**> 
+- Value : \<**Nom de la forme PowerPoint**> 
 
 Lorsque vous avez plusieurs formes PowerPoint à supprimer, créez autant de clés **PowerPointShapeNameToRemove** que vous avez de formes à supprimer. Pour chaque entrée, spécifiez le nom de la forme à supprimer.
 
@@ -564,7 +564,7 @@ Par défaut, seuls les en-têtes et les pieds de page qui se trouvent dans les d
 
 - Clé : **RemoveExternalContentMarkingInAllSlides**
 
-- Valeur : **True**
+- Value : **True**
 
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Étiquette d’un document Office en utilisant une propriété personnalisée existante
 
@@ -611,7 +611,7 @@ Pour configurer ce paramètre avancé afin que le scanneur s’exécute avec un 
 
 - Clé : **ProcessUsingLowIntegrity**
 
-- Valeur : **False**
+- Value : **False**
 
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Intégration avec la classification des messages Exchange pour une solution d’étiquetage des appareils mobiles
@@ -622,17 +622,17 @@ Pour obtenir cette solution :
 
 1. Utilisez l’applet de commande PowerShell Exchange [New-MessageClassification](https://technet.microsoft.com/library/bb124400) pour créer des classifications des messages avec la propriété Name qui correspond à vos noms d’étiquette dans votre stratégie Azure Information Protection. 
 
-2. Créez une règle de flux de messagerie Exchange pour chaque étiquette : appliquez la règle quand les propriétés de message incluent la classification que vous avez configurée, puis modifiez les propriétés de message pour définir un en-tête de message. 
+2. Créez une règle de flux de messagerie Exchange pour chaque étiquette : Appliquez la règle quand les propriétés des messages incluent la classification que vous avez configurée, puis modifiez les propriétés des messages pour définir un en-tête de message. 
 
      Pour l’en-tête de message, vous trouvez les informations à spécifier en examinant les en-têtes Internet d’un e-mail que vous avez envoyé et classifié à l’aide de votre étiquette Azure Information Protection. Recherchez l’en-tête **msip_labels** et la chaîne qui suit immédiatement, jusqu’au point-virgule inclus. Par exemple :
     
-    **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
+    **msip_labels : MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     
     Ensuite, pour l’en-tête du message dans la règle, spécifiez **msip_labels** pour l’en-tête, et le reste de cette chaîne pour la valeur de l’en-tête. Par exemple :
     
     ![Exemple de règles de flux de messagerie Exchange Online qui définit l’en-tête de message pour une étiquette Azure Information Protection spécifique](../media/exchange-rule-for-message-header.png)
     
-    Remarque : Quand l’étiquette est une sous-étiquette, vous devez également spécifier l’étiquette parent avant la sous-étiquette dans la valeur de l’en-tête, en utilisant le même format. Par exemple, si votre sous-étiquette a le GUID 27efdf94-80a0-4d02-b88c-b615c12d69a9, votre valeur doit ressembler à ceci : `MSIP_Label_ab70158b-bdcc-42a3-8493-2a80736e9cbd_Enabled=True;MSIP_Label_27efdf94-80a0-4d02-b88c-b615c12d69a9_Enabled=True;`
+    Remarque : Quand l’étiquette est une sous-étiquette, vous devez également spécifier l’étiquette parente avant la sous-étiquette dans la valeur de l’en-tête, en utilisant le même format. Par exemple, si votre sous-étiquette a le GUID 27efdf94-80a0-4d02-b88c-b615c12d69a9, votre valeur doit ressembler à ceci : `MSIP_Label_ab70158b-bdcc-42a3-8493-2a80736e9cbd_Enabled=True;MSIP_Label_27efdf94-80a0-4d02-b88c-b615c12d69a9_Enabled=True;`
 
 Avant de tester cette configuration, n’oubliez pas qu’il y a souvent un délai quand vous créez ou modifiez des règles de flux de messagerie (attendez par exemple une heure). Quand la règle est effective, les événements suivants se produisent si les utilisateurs se servent d’Outlook sur le web ou sur un client d’appareil mobile qui prend en charge la protection Exchange ActiveSync IRM : 
 
@@ -642,11 +642,11 @@ Avant de tester cette configuration, n’oubliez pas qu’il y a souvent un dél
 
 - Quand les destinataires internes qui disposent du client Azure Information Protection affichent l’e-mail dans Outlook, ils voient l’étiquette Azure Information Protection attribuée. 
 
-Si vos étiquettes Azure Information Protection appliquent la protection, ajoutez la protection à la configuration de la règle en sélectionnant l’option permettant de modifier la sécurité des messages, appliquez la protection des droits, puis sélectionnez le modèle RMS ou l’option Ne pas transférer.
+Si vos étiquettes Azure Information Protection appliquent la protection, ajoutez la protection à la configuration de règle : En sélectionnant l’option pour modifier la sécurité des messages, appliquez la protection des droits, puis sélectionnez le modèle RMS ou l’option Ne pas transférer.
 
 Vous pouvez également configurer des règles de flux de messagerie pour effectuer le mappage inverse. Quand une étiquette Azure Information Protection est détectée, définissez la classification de messages Exchange correspondante :
 
-- Pour chaque étiquette Azure Information Protection : créez une règle de flux de messagerie appliquée quand l’en-tête **msip_labels** inclut le nom de votre étiquette (par exemple **Général**), puis appliquez une classification de messages qui correspond à cette étiquette.
+- Pour chaque étiquette Azure Information Protection : Créez une règle de flux de messagerie appliquée quand l’en-tête **msip_labels** inclut le nom de votre étiquette (par exemple **Général**), puis appliquez une classification des messages qui correspond à cette étiquette.
 
 
 ## <a name="next-steps"></a>Étapes suivantes

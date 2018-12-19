@@ -5,21 +5,21 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 04/11/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 86b21f531521a5f56d90dfb2ddb1764d091f898e
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 13729d124ce0e49eddeda6c4c19aeae2c62eb8c6
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806951"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174248"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Phase de migration 3 : Configuration côté client
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilisez les informations suivantes pour la Phase 3 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent l’étape 7 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -83,7 +83,7 @@ Cette méthode convient uniquement aux clients Windows qui exécutent des applic
 
     f. Pour vérifier que cette configuration fonctionne comme prévu, essayez de vous connecter au fichier licensing.asmx directement à partir d’un navigateur. Le message d’erreur suivant doit s’afficher. Le client exécutant Office 2016 recherche alors l’enregistrement SRV :
     
-    **Message d’erreur 401.3 : vous ne disposez pas des autorisations permettant d’afficher ce répertoire ou cette page à l’aide des informations d’identification que vous avez fournies (accès refusé en raison des listes de contrôle d’accès).**
+    **Message d’erreur 401.3 : vous ne disposez pas des autorisations permettant d’afficher ce répertoire ou cette page à l’aide des informations d’identification que vous avez fournies (accès refusé en raison des listes de contrôle d’accès).**
 
 
 ## <a name="client-reconfiguration-by-using-registry-edits"></a>Reconfiguration du client à l’aide des modifications du Registre
@@ -126,7 +126,7 @@ Quand vous ne pouvez pas migrer tous vos clients Windows à la fois, exécutez l
 
 1. Retournez aux scripts de migration **Migrate-Client.cmd** et **Migrate-User.cmd** que vous avez extraits après les avoir téléchargés au cours de la [phase de préparation](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
-2.  Suivez les instructions de **Migrate-Client.cmd** pour modifier le script afin qu’il contienne l’URL du service Azure Rights Management de votre locataire ainsi que les noms des serveurs pour les URL de licences extranet et intranet du cluster AD RMS. Ensuite, incrémentez la version du script comme expliqué précédemment. Une bonne pratique pour le suivi des versions de script consite à utiliser la date d’aujourd’hui au format suivant : AAAAMMJJ.
+2.  Suivez les instructions de **Migrate-Client.cmd** pour modifier le script afin qu’il contienne l’URL du service Azure Rights Management de votre locataire ainsi que les noms des serveurs pour les URL de licences extranet et intranet du cluster AD RMS. Ensuite, incrémentez la version du script comme expliqué précédemment. Une bonne pratique pour le suivi des versions de script consiste à utiliser la date du jour au format suivant : AAAAMMJJ
     
     > [!IMPORTANT]
     > Comme avant, veillez à ne pas introduire d’espaces supplémentaires avant ou après les adresses.

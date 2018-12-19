@@ -12,12 +12,12 @@ ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1adb21ac41a922ebb3636fcce9e13c9fd785930d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 42a1944dcb643c1647ee7299456307815f1023b4
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151654"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266628"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Procédure d’inscription et d’activation RMS de votre application dans Azure AD
 
@@ -33,12 +33,12 @@ Commencez par suivre ce guide pour configurer l’inscription de votre applicati
 Avant de pouvoir déployer votre application, vous devez signer un contrat IPIA avec l’équipe Microsoft Information Protection. Pour plus d’informations, consultez la première section de la rubrique [Déployer en production](deploying-your-application.md).
 
 ## <a name="implement-user-authentication-for-your-app"></a>Implémenter l’authentification utilisateur pour votre application
-Chacune des API RMS a un rappel qui doit être implémenté pour activer l’authentification de l’utilisateur. RMS SDK 4.2 utilise votre implémentation du rappel quand vous ne fournissez pas de jeton d’accès, que votre jeton d’accès doit être actualisé ou que le jeton d’accès a expiré.
+Chacune des API RMS a un rappel qui doit être implémenté pour activer l’authentification de l’utilisateur. RMS SDK 4.2 utilise votre implémentation du rappel quand vous ne fournissez pas de jeton d’accès, quand votre jeton d’accès doit être actualisé ou quand le jeton d’accès a expiré.
 
 - Android - Interfaces [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) et [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx).
 - iOS/OS X - Protocole [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx).
 -  Windows Phone/Windows RT - Interface [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx).
-- Linux - Interface [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
+- Linux - Interface [IAuthenticationCallback](https://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
 
 ### <a name="what-library-to-use-for-authentication"></a>Bibliothèque à utiliser pour l’authentification
 Pour implémenter votre rappel d’authentification, vous devez télécharger une bibliothèque appropriée et de configurer votre environnement de développement pour qu’il l’utilise. Les bibliothèques ADAL pour ces plateformes se trouvent sur GitHub.
@@ -51,8 +51,7 @@ Chacune des ressources suivantes contient de l’aide pour la configuration de v
 -   [Bibliothèque d’authentification Windows Azure Active Directory (ADAL) pour dotnet](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   Pour le SDK Linux, la bibliothèque ADAL est fournie avec la source du SDK, disponible via [Github](https://github.com/AzureAD/rms-sdk-for-cpp).
 
->[!NOTE]  
-> Nous vous recommandons d’utiliser une des bibliothèques ADAL, même si vous pouvez utiliser d’autres bibliothèques d’authentification.
+>[!NOTE]   Nous vous recommandons d’utiliser une des bibliothèques ADAL, même si vous pouvez utiliser d’autres bibliothèques d’authentification.
 
 ### <a name="authentication-parameters"></a>Paramètres d’authentification
 
@@ -72,8 +71,7 @@ Il provient de l’étape d’inscription dans le portail Azure.
 
     iOS: `<app-scheme>://<bundle-id>`
 
->[!NOTE] 
-> Si votre application ne suit pas ces instructions, les flux de travail Azure RMS et Azure AD risquent d’échouer et ne sont pas pris en charge par Microsoft.com. En outre, il peut se produire une violation du contrat RMLA si un ID de client non valide est utilisé dans une application de production.
+>[!NOTE]  Si votre application ne suit pas ces instructions, les workflows Azure RMS et Azure AD risquent d’échouer et ne sont pas pris en charge par Microsoft.com. En outre, il peut se produire une violation du contrat RMLA si un ID de client non valide est utilisé dans une application de production.
 
 ### <a name="what-should-an-authentication-callback-implementation-look-like"></a>Exemple d’implémentation d’un rappel d’authentification
 **Exemples de code d’authentification** : ce SDK comprend un exemple de code montrant l’utilisation de rappels d’authentification. Pour votre commodité, ces exemples de code sont représentés ici, ainsi que dans chacune des rubriques liées.

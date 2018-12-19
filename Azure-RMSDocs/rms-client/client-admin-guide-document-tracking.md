@@ -4,18 +4,18 @@ description: Instructions et informations pour les administrateurs pour configur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 181183d701cb5fa4891be0aa3e0ea3028682bea7
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5add56fb5c033243acccb5308b7b9569b0c72624
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150838"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305179"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
 
@@ -97,7 +97,7 @@ Pour obtenir des instructions sur l’utilisation du site de suivi des documents
 
 ## <a name="usage-logging-for-the-document-tracking-site"></a>Journalisation de l’utilisation du site de suivi des documents
 
-Dans les fichiers journaux d’utilisation, deux champs s’appliquent au suivi des documents : **AdminAction** et **ActingAsUser**.
+Deux champs des fichiers journaux d’utilisation s’appliquent au suivi des documents : **AdminAction** et **ActingAsUser**.
 
 **AdminAction** Ce champ a la valeur True quand un administrateur utilise le site de suivi des documents en mode Administrateur, par exemple pour révoquer un document au nom d’un utilisateur ou pour voir quand il a été partagé. Ce champ est vide quand un utilisateur se connecte au site de suivi des documents.
 

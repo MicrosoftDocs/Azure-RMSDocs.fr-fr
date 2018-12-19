@@ -4,17 +4,17 @@ description: Identifier les cas d’usage qui classent et protègent les donnée
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d537453395657309fe3f37d65b66b783890acdd8
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 7986648999a830985c4dbd1f31855bb222a443c2
+ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026989"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53218372"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guides pratiques pour les scénarios courants qui utilisent Azure Information Protection
 
@@ -24,11 +24,11 @@ Il existe de nombreux scénarios dans lesquels vous pouvez utiliser Azure Inform
 
 Les déploiements les plus performants sont ceux qui identifient des cas d’utilisation spécifiques qui offrent le plus d’avantages à l’organisation. Utilisez la liste suivante de scénarios courants et d’instructions pour optimiser votre déploiement.
 
+## <a name="common-scenarios"></a>Scénarios courants
 
-
-|Scénario : je souhaite...|Instructions|
+|Scénario : Je veux ...|Instructions|
 |----------------|---------------|
-|Identifier les informations sensibles stockées localement par mon entreprise|[Démarrage rapide : Rechercher les informations sensibles consignées dans des fichiers stockés localement](quickstart-findsensitiveinfo.md)|
+|Identifier les informations sensibles stockées localement par mon entreprise|[Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement](quickstart-findsensitiveinfo.md)|
 |Aider les utilisateurs à protéger leurs e-mails contenant des informations sensibles|[Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles](quickstart-label-dnf-protectedemail.md)|
 |Aider les utilisateurs à classer les données qu’ils ont créées ou modifiées, et à les protéger si elles contiennent des informations sensibles| [Tutoriel : Modifier la stratégie et créer une nouvelle étiquette](infoprotect-quick-start-tutorial.md)|
 |Aider les utilisateurs à collaborer sur un document protégé|[Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection](secure-collaboration-documents.md)|
@@ -36,6 +36,18 @@ Les déploiements les plus performants sont ceux qui identifient des cas d’uti
 |Classer et protéger automatiquement les données existantes dans mes banques de données locales|[Déploiement du scanneur Azure Information Protection](deploy-aip-scanner.md)|
 |Utiliser ma propre clé pour protéger les données de mon organisation| [Planification et implémentation de la clé de client](plan-implement-tenant-key.md)|
 |Migrer à partir d’AD RMS|[Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)|
+
+## <a name="additional-deployment-instructions"></a>Instructions de déploiement supplémentaires
+
+Notre [blog technique d’Azure Information Protection](https://aka.ms/AIPblog) contient des instructions détaillées supplémentaires de notre équipe d’ingénierie de l’expérience utilisateur. Par exemple :
+
+- [Using Azure Information Protection to protect PDF’s and Adobe Acrobat Reader to view them](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010)
+
+- [Cataloging your Sensitive Data with AIP, Even Before Configuring Labels!](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cataloging-your-Sensitive-Data-with-AIP-Even-Before-Configuring/ba-p/267241)
+
+- [Azure Information Protection Scanner Express Installation](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Scanner-Express-Installation/ba-p/265424)
+
+- [Discovery of Sensitive Data Using the AIP Scanner (AIP Premium P1)](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discovery-of-Sensitive-Data-Using-the-AIP-Scanner-AIP-Premium-P1/ba-p/252040)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

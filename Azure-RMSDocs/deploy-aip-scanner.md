@@ -4,18 +4,18 @@ description: Instructions pour installer, configurer et exécuter le scanneur Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 153009e9c9760649bd42d85bece421e3b8ee5afd
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: fba2a1a804c085c44efc79d0f0ac69988f681aaa
+ms.sourcegitcommit: c9a0d81c18ea79a2520baa4b3777b06a72f87f60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024244"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53382518"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -55,9 +55,9 @@ Avant d’installer le scanneur Azure Information Protection, vérifiez que les 
 |---------------|--------------------|
 |Ordinateur Windows Server pour exécuter le service du scanneur :<br /><br />- Processeurs 4 cœurs<br /><br />- 4 Go de RAM<br /><br />- 10 Go d’espace libre (en moyenne) pour les fichiers temporaires|Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Remarque : À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez utiliser un système d’exploitation client Windows qui est [pris en charge par le client Azure Information Protection](requirements.md#client-devices).<br /><br />Il peut s’agir d’un ordinateur physique ou virtuel doté d’une connexion réseau rapide et fiable aux magasins de données à scanner.<br /><br /> Le scanneur nécessite suffisamment d’espace disque disponible pour créer des fichiers temporaires pour chaque fichier qu’il analyse, quatre fichiers par cœur. L’espace disque recommandé de 10 Go permet de disposer de processeurs 4 cœurs analysant 16 fichiers qui ont chacun une taille de 625 Mo. <br /><br />Vérifiez que cet ordinateur dispose de la [connectivité Internet](requirements.md#firewalls-and-network-infrastructure) dont il a besoin pour Azure Information Protection. Si une connexion Internet n’est pas possible en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).|
 |SQL Server pour stocker la configuration du scanneur :<br /><br />- Instance locale ou distante<br /><br />-Rôle sysadmin pour installer le scanneur|SQL Server 2012 est la version minimale pour les éditions suivantes :<br /><br />- SQL Server Entreprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Si vous installez plusieurs instances du scanneur, chacune nécessite sa propre instance SQL Server.<br /><br />Lorsque vous installez le scanneur et si votre compte a le rôle Sysadmin, le processus d’installation crée automatiquement la base de données AzInfoProtectionScanner et accorde le rôle db_owner requis au compte de service qui exécute le scanneur. Si vous ne pouvez pas disposer du rôle Sysadmin ou si les stratégies de votre organisation requièrent que les bases de données soient créées et configurées manuellement, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />La taille de la base de données de configuration varie pour chaque déploiement, mais nous vous recommandons d’allouer 500 Mo pour chaque lot de 1 000 000 fichiers que vous souhaitez analyser. |
-|Compte de service pour exécuter le service du scanneur|En plus d’exécuter le service du scanneur, ce compte s’authentifie auprès d’Azure AD, puis télécharge la stratégie Azure Information Protection. Ce compte doit être un compte Active Directory et synchronisé avec Azure AD. Si vous ne pouvez pas synchroniser ce compte en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />Ce compte de service a la configuration suivante :<br /><br />Droit d’- **ouverture de session locale**. Ce droit est exigé pour l’installation et la configuration du scanneur, mais pas pour son fonctionnement. Vous devez accorder ce droit au compte de service, mais vous pouvez le supprimer après avoir vérifié que le scanneur peut détecter, classifier et protéger des fichiers. Si l’attribution de ce droit, même pendant une courte période, n’est pas possible en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />Droit d’- **ouverture de session en tant que service**. Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur. <br /><br />- Autorisations d’accès aux dépôts de données : vous devez accorder des autorisations de **Lecture** et **Écriture** pour l’analyse des fichiers, puis l’application d’une classification et d’une protection aux fichiers qui remplissent les conditions stipulées dans la stratégie Azure Information Protection. Pour exécuter le scanneur en mode découverte uniquement, l’autorisation **Lecture** suffit.<br /><br />- Pour les étiquettes qui reprotègent ou retire la protection : pour veiller à ce que le scanneur ait toujours accès aux fichiers protégés, faites de ce compte un [super utilisateur](configure-super-users.md) du service Azure Rights Management et vérifiez que la fonctionnalité de super utilisateur est activée. Pour plus d’informations sur la configuration requise des comptes pour appliquer la protection, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md). En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) pour un déploiement échelonné, assurez-vous que ce compte est inclus dans les contrôles d’intégration que vous avez configurés.|
+|Compte de service pour exécuter le service du scanneur|En plus d’exécuter le service du scanneur, ce compte s’authentifie auprès d’Azure AD, puis télécharge la stratégie Azure Information Protection. Ce compte doit être un compte Active Directory et synchronisé avec Azure AD. Si vous ne pouvez pas synchroniser ce compte en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />Ce compte de service a la configuration suivante :<br /><br />Droit d’- **ouverture de session locale**. Ce droit est exigé pour l’installation et la configuration du scanneur, mais pas pour son fonctionnement. Vous devez accorder ce droit au compte de service, mais vous pouvez le supprimer après avoir vérifié que le scanneur peut détecter, classifier et protéger des fichiers. Si l’attribution de ce droit, même pendant une courte période, n’est pas possible en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />Droit d’- **ouverture de session en tant que service**. Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur. <br /><br />- Autorisations sur les référentiels de données : Vous devez accorder les autorisations **Lecture** et **Écriture** pour l’analyse des fichiers, puis pour l’application d’une classification et d’une protection aux fichiers qui remplissent les conditions spécifiées dans la stratégie Azure Information Protection. Pour exécuter le scanneur en mode découverte uniquement, l’autorisation **Lecture** suffit.<br /><br />- Pour les étiquettes qui reprotègent ou suppriment la protection : Pour que le scanneur ait toujours accès aux fichiers protégés, faites de ce compte un [super utilisateur](configure-super-users.md) du service Azure Rights Management et vérifiez que la fonctionnalité de super utilisateur est activée. Pour plus d’informations sur la configuration requise des comptes pour appliquer la protection, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md). En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) pour un déploiement échelonné, assurez-vous que ce compte est inclus dans les contrôles d’intégration que vous avez configurés.|
 |Le client Azure Information Protection est installé sur l’ordinateur Windows Server|Vous devez installer le client complet pour le scanneur. N’installez pas le client avec juste le module PowerShell.<br /><br />Pour obtenir des instructions d’installation du client, consultez le [guide de l’administrateur](./rms-client/client-admin-guide.md). Si vous avez déjà installé le scanneur et que vous devez maintenant le mettre à niveau vers une version ultérieure, consultez [Mise à niveau du scanneur Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
-|Étiquettes configurées qui appliquent une classification automatique et éventuellement une protection|Pour plus d’informations sur la manière de configurer les conditions dans la stratégie Azure Information Protection, consultez [Guide pratique pour configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection](configure-policy-classification.md).<br /><br />Pour plus d’informations sur la façon de configurer les étiquettes pour appliquer une protection aux fichiers, consultez [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md).<br /><br />Ces étiquettes peuvent être dans la stratégie globale, ou dans une ou plusieurs [stratégies délimitées](configure-policy-scope.md).<br /><br />Remarque : bien que vous puissiez exécuter le scanneur même si vous n’avez pas configuré les étiquettes qui appliquent la classification automatique, ce scénario n’est pas abordé dans ces instructions. [Plus d’informations](#using-the-scanner-with-alternative-configurations)|
+|Étiquettes configurées qui appliquent une classification automatique et éventuellement une protection|Pour plus d’informations sur la manière de configurer les conditions dans la stratégie Azure Information Protection, consultez [Guide pratique pour configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection](configure-policy-classification.md).<br /><br />Pour plus d’informations sur la façon de configurer les étiquettes pour appliquer une protection aux fichiers, consultez [Guide pratique pour configurer une étiquette pour la protection Rights Management](configure-policy-protection.md).<br /><br />Ces étiquettes peuvent être dans la stratégie globale, ou dans une ou plusieurs [stratégies délimitées](configure-policy-scope.md).<br /><br />Remarque : Bien que vous puissiez exécuter le scanneur même si vous n’avez pas configuré les étiquettes qui appliquent la classification automatique, ce scénario n’est pas abordé dans ces instructions. [Plus d’informations](#using-the-scanner-with-alternative-configurations)|
 |Pour scanner des documents Office :<br /><br />- formats de fichier 97-2003 et formats Office Open XML pour Word, Excel et PowerPoint|Pour plus d’informations sur les types de fichiers pris en charge par le scanneur pour ces formats de fichiers, consultez [Types de fichiers pris en charge par le client Azure Information Protection](./rms-client/client-admin-guide-file-types.md). 
 
 Si vous ne pouvez pas respecter toutes les conditions dans la table, car votre organisation l’interdit, consultez la section suivante pour obtenir des alternatives.
@@ -79,13 +79,13 @@ Les prérequis répertoriés dans la table correspondent aux exigences par défa
 Le scanneur peut prendre en charge ces restrictions, mais celles-ci nécessitent une configuration supplémentaire.
 
 
-#### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Restriction : le serveur du scanneur n’est pas autorisé à se connecter à Internet
+#### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Restriction : Le serveur du scanneur n’est pas autorisé à se connecter à Internet
 
 Suivez les instructions pour un [ordinateur déconnecté](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). 
 
 Notez que dans cette configuration, le scanneur ne peut pas appliquer la protection (ou supprimer la protection) à l’aide de la clé cloud de votre organisation. Au lieu de cela, le scanneur est limité à l’utilisation d’étiquettes qui appliquent la classification uniquement, ou la protection qui utilise [HYOK](configure-adrms-restrictions.md). 
 
-#### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Restriction : vous ne pouvez pas obtenir le rôle Sysadmin ou les bases de données doivent être créées et configurées manuellement
+#### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Restriction : Vous ne pouvez pas obtenir le rôle Sysadmin ou les bases de données doivent être créées et configurées manuellement
 
 Si le rôle Sysadmin peut vous être attribué temporairement pour installer le scanneur, vous pouvez supprimer ce rôle lorsque l’installation du scanneur est terminée. Lorsque vous utilisez cette configuration, la base de données est automatiquement créée pour vous et le compte de service du scanneur obtient automatiquement les autorisations nécessaires. Toutefois, le compte utilisateur qui configure le scanneur nécessite le rôle db_owner pour la base de données AzInfoProtectionScanner, et vous devez attribuer manuellement ce rôle au compte utilisateur.
 
@@ -99,11 +99,11 @@ Si vous ne pouvez pas obtenir le rôle Sysadmin même temporairement, vous devez
 
 En règle générale, vous utilisez le même compte utilisateur pour installer et configurer le scanneur. Mais si vous utilisez des comptes différents, ils ont tous les deux besoin du rôle db_owner pour la base de données AzInfoProtectionScanner.
 
-#### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restriction : le compte de service pour le scanneur ne peut pas obtenir le droit **Ouvrir une session localement**
+#### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restriction : Le compte de service pour le scanneur ne peut pas avoir le droit **Ouvrir une session localement**
 
 Si les stratégies de votre organisation interdisent le droit **Ouvrir une session localement** pour les comptes de service, mais autorisent le droit **Se connecter en tant que traitement par lots**, suivez les instructions sous [Spécifier et utiliser le paramètre Jeton pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) dans le guide de l’administrateur.
 
-#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>Restriction : le compte de service du scanneur ne peut pas être synchronisé avec Azure Active Directory, mais le serveur a accès à Internet
+#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>Restriction : Le compte de service du scanneur ne peut pas être synchronisé avec Azure Active Directory, mais le serveur a accès à Internet
 
 Vous pouvez avoir un compte pour exécuter le service du scanneur et un autre compte pour l’authentification auprès d’Azure Active Directory :
 
@@ -150,7 +150,7 @@ Le jeton Azure AD permet au compte de service du scanneur de s’authentifier au
     
     Pour créer ces applications, suivez les instructions données dans [Guide pratique pour étiqueter des fichiers de manière non interactive pour Azure Information Protection](./rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) dans le guide de l’administrateur.
 
-2. À partir de l’ordinateur Windows Server, si votre compte de service de scanneur a reçu l’autorisation **Ouvrir une session localement** pour l’installation : connectez-vous avec ce compte et démarrez une session PowerShell. Exécutez [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), en spécifiant les valeurs copiées à partir de l’étape précédente :
+2. À partir de l’ordinateur Windows Server, si votre compte de service de scanneur a reçu l’autorisation **Ouvrir une session localement** pour l’installation : Connectez-vous avec ce compte et démarrez une session PowerShell. Exécutez [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), en spécifiant les valeurs copiées à partir de l’étape précédente :
     
     ```
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application> -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application>
@@ -158,7 +158,7 @@ Le jeton Azure AD permet au compte de service du scanneur de s’authentifier au
     
     Lorsque vous y êtes invité, spécifiez le mot de passe des informations d’identification de votre compte de service pour Azure AD, puis cliquez sur **Accepter**.
     
-    Si l’autorisation **Ouvrir une session localement** ne peut pas être accordée à votre compte de service de scanneur pour l’installation : suivez les instructions de la section [Spécifier et utiliser le paramètre Jeton pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) du guide de l’administrateur. 
+    Le compte de service pour le scanneur ne peut pas obtenir le droit **Ouvrir une session localement** pour l’installation : Suivez les instructions de la section [Spécifier et utiliser le paramètre Jeton pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) du guide de l’administrateur. 
 
 Le scanneur a maintenant un jeton pour s’authentifier auprès d’Azure AD, lequel jeton est valide pendant un an, deux ans, ou définitivement (il n’expire jamais), selon votre configuration de l’**application web/API** dans Azure AD. Quand le jeton expire, vous devez répéter les étapes 1 et 2.
 
@@ -254,13 +254,11 @@ Le scanneur utilise ensuite Windows IFilter pour analyser les types de fichiers 
 
 Par ailleurs, le scanneur peut également utiliser la reconnaissance optique de caractères (OCR) pour inspecter les images TIFF avec une extension de nom de fichier .tiff lorsque vous installez la fonctionnalité Windows TIFF IFilter et configurez les [paramètres TIFF Windows IFilter](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) sur l’ordinateur qui exécute le scanneur.
 
-Par défaut, seuls les types de fichiers Office sont protégés par le scanneur ; les documents PDF, les fichiers texte et les images TIFF ne sont pas protégés, sauf si vous [modifiez le Registre](#editing-the-registry-for-the-scanner) pour spécifier les types de fichiers :
+Par défaut, seuls les types de fichiers Office et les fichiers PDF sont protégés par le scanneur : les fichiers texte et image ne sont donc pas protégés, sauf si vous [modifiez le Registre](#editing-the-registry-for-the-scanner) pour spécifier les types de fichiers :
 
-- Si vous n’ajoutez pas le type de fichier .pdf dans le Registre : les fichiers ayant cette extension de nom seront étiquetés, mais si l’étiquette est configurée pour la protection, la protection n’est pas appliquée.
+- Si vous n’ajoutez pas les types de fichiers .txt, .xml ou .csv au Registre : Les fichiers ayant ces extensions de nom ne seront pas étiquetés, car ces types de fichiers ne prennent pas en charge la « classification uniquement ».
 
-- Si vous n’ajoutez pas les types de fichiers .txt, .xml ou .csv dans le Registre : les fichiers ayant ces extensions de nom ne seront pas étiquetés, car ces types de fichiers ne gèrent pas classification uniquement.
-
-- Si vous n’ajoutez pas le type de fichier .tiff dans le Registre après avoir configuré le filtre TIFF Windows IFilter : les fichiers portant cette extension de nom sont étiquetés, mais la protection ne s’applique pas même si l’étiquette est configurée en ce sens.
+- Si vous n’ajoutez pas le type de fichier .tiff au Registre après avoir configuré IFilter TIFF Windows : Les fichiers ayant cette extension de nom seront étiquetés, mais si l’étiquette est configurée pour la protection, la protection n’est pas appliquée.
 
 Enfin, en ce qui concerne les autres types de fichiers, le scanneur applique l’étiquette par défaut de la stratégie Azure Information Protection ou l’étiquette configurée par défaut pour le scanneur, sans les inspecter.
 
@@ -280,19 +278,19 @@ Enfin, en ce qui concerne les autres types de fichiers, le scanneur applique l�
 |DigitalNegative|.dng|
 |Pfile|.pfile|
 
-Lorsque le scanneur applique une étiquette avec une protection, par défaut, seuls les types de fichiers Office sont protégés. Vous pouvez modifier ce comportement afin que les autres types de fichiers soient protégés. Toutefois, lorsqu’une étiquette applique une protection générique à des documents, l’extension de nom de fichier devient .pfile. D’autres types de fichiers peuvent aussi changer leur extension de nom de fichier. Par ailleurs, ces fichiers passent en lecture seule jusqu’à ce qu’ils soient ouverts par un utilisateur autorisé et enregistrés dans leur format natif.
+Quand le scanneur applique une étiquette avec une protection, par défaut, seuls les types de fichiers Office et les fichiers PDF sont protégés. Vous pouvez modifier ce comportement afin que les autres types de fichiers soient protégés. Toutefois, lorsqu’une étiquette applique une protection générique à des documents, l’extension de nom de fichier devient .pfile. D’autres types de fichiers peuvent aussi changer leur extension de nom de fichier. Par ailleurs, ces fichiers passent en lecture seule jusqu’à ce qu’ils soient ouverts par un utilisateur autorisé et enregistrés dans leur format natif.
 
 ### <a name="editing-the-registry-for-the-scanner"></a>Modification du Registre pour le scanneur
 
-Pour modifier le comportement par défaut du scanneur pour protéger d’autres types de fichiers que les fichiers Office, vous devez modifier manuellement le Registre et indiquer les types de fichiers supplémentaires qui doivent être protégés. Pour obtenir des instructions, consultez [Configuration de l’API de fichier](develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». En outre, spécifiquement pour le scanneur :
+Pour modifier le comportement par défaut du scanneur pour protéger d’autres types de fichiers que les fichiers Office et les fichiers PDF, vous devez modifier manuellement le Registre et indiquer les types de fichiers supplémentaires qui doivent être protégés. Pour obtenir des instructions, consultez [Configuration de l’API de fichier](develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». En outre, spécifiquement pour le scanneur :
 
-- Le scanneur a son propre comportement par défaut : seuls les formats de fichiers Office sont protégés par défaut. Si le registre n’est pas modifié, aucun des autres types de fichiers ne sera protégé par le scanneur.
+- Le scanneur a son propre comportement par défaut : Seuls les formats de fichier Office et les documents PDF sont protégés par défaut. Si le registre n’est pas modifié, aucun des autres types de fichiers ne sera protégé par le scanneur.
 
-- Si vous souhaitez le même comportement de protection par défaut du client Azure Information Protection, où tous les fichiers sont automatiquement protégés avec une protection native ou générique : spécifiez le caractère générique `*` comme clé de Registre et `Default` comme données de valeur.
+- Si vous voulez le même comportement de protection par défaut du client Azure Information Protection, où tous les fichiers sont automatiquement protégés avec une protection native ou générique : Spécifiez le caractère générique `*` comme clé de Registre et `Default` comme données de valeur.
 
 Lorsque vous modifiez le Registre, créez manuellement la clé **MSIPC** et la clé **FileProtection** si elles n’existent pas, ainsi qu’une clé pour chaque extension de nom de fichier.
 
-Par exemple, pour que le scanneur protège les fichiers PDF en plus des fichiers Office, le Registre devrait ressembler à l’image suivante, une fois que vous l’avez modifié :
+Par exemple, pour que le scanneur protège les fichiers TIFF en plus des fichiers Office et PDF, le Registre devrait se présenter comme dans l’image suivante, une fois que vous l’avez modifié :
 
 ![Modification du Registre pour que le scanneur applique une protection](./media/editregistry-scanner.png)
 
@@ -309,7 +307,7 @@ La réinspection de tous les fichiers est utile quand vous voulez que les rappor
 De plus, tous les fichiers sont inspectés quand le scanneur télécharge une stratégie Azure Information Protection qui présente des conditions nouvelles ou modifiées. Le scanneur actualise la stratégie toutes les heures, quand le service démarre et que la stratégie remonte à plus d’une heure.  
 
 > [!TIP]
-> Si vous avez besoin d’actualiser la stratégie avant cet intervalle d’une heure, par exemple, pendant une période de test : supprimez manuellement le fichier de stratégie **Policy.msip** de **%LocalAppData%\Microsoft\MSIP\Policy.msip** et de **%LocalAppData%\Microsoft\MSIP\Scanner**. Ensuite, redémarrez le service du scanneur Azure Information Protection.
+> Si vous avez besoin d’actualiser la stratégie avant cet intervalle d’une heure, par exemple pendant une période de test : Supprimez manuellement le fichier de stratégie **Policy.msip** dans **%LocalAppData%\Microsoft\MSIP\Policy.msip** et dans **%LocalAppData%\Microsoft\MSIP\Scanner**. Ensuite, redémarrez le service du scanneur Azure Information Protection.
 > 
 > Si vous avez changé les paramètres de protection de la stratégie, attendez 15 minutes après l’enregistrement des paramètres de protection avant de redémarrer le service.
 
@@ -332,7 +330,7 @@ Il existe deux scénarios pris en charge par le scanneur Azure Information Prote
     
     Le scanneur utilise toute condition personnalisée que vous avez spécifiée pour les étiquettes dans la stratégie Azure Information Protection et la liste des types d’informations qui sont disponibles pour les étiquettes dans la stratégie Azure Information Protection.
     
-    Le démarrage rapide suivant utilise cette configuration : [Démarrage rapide : Identifier ses informations sensibles](quickstart-findsensitiveinfo.md).
+    Le guide de démarrage rapide suivant utilise cette configuration : [Démarrage rapide : Trouver quelles sont vos informations sensibles](quickstart-findsensitiveinfo.md).
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Optimisation des performances du scanneur
 
@@ -448,7 +446,7 @@ Si le scanneur a été configuré pour s’exécuter une seule fois, plutôt que
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automatiser la protection des données avec le scanneur Azure Information Protection](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
+Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
 Vous vous demandez peut-être : [Quelle différence y a-t-il entre l’ICF de Windows Server et le scanneur d’Azure Information Protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 

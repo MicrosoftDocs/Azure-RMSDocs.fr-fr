@@ -4,16 +4,16 @@ description: Vous pouvez supprimer ou réorganiser les étiquettes Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: ccb5f4ff84e590640ed4e5204d2170384611775f
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 1f957874649fe9e5697c3dd0164b0b0b255d1e6e
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023394"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304874"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Comment supprimer ou réorganiser une étiquette pour Azure Information Protection
 
@@ -55,13 +55,13 @@ Suivez la procédure indiquée ci-dessous pour effectuer ces modifications.
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, effectuez une ou plusieurs des actions suivantes : 
+2. À partir de l’option de menu **Classifications** > **Étiquettes** : Dans le panneau **Azure Information Protection - Étiquettes**, effectuez une ou plusieurs des actions suivantes : 
 
-    - Pour supprimer une étiquette : cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette que vous souhaitez supprimer, cliquez sur **Supprimer cette étiquette**, puis cliquez sur **OK** pour confirmer. 
+    - Pour supprimer une étiquette : Cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette que vous voulez supprimer, cliquez sur **Supprimer cette étiquette**, puis cliquez sur **OK** pour confirmer. 
 
-    - Pour désactiver une étiquette : sélectionnez l’étiquette que vous souhaitez désactiver. Dans le Panneau **Étiquette**, pour l’option **Activé**, sélectionnez **Désactivé**, puis cliquez sur **Enregistrer**.
+    - Pour désactiver une étiquette : Sélectionnez l’étiquette que vous voulez désactiver. Dans le Panneau **Étiquette**, pour l’option **Activé**, sélectionnez **Désactivé**, puis cliquez sur **Enregistrer**.
 
-    - Pour réorganiser une étiquette : cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette à réorganiser, cliquez sur **Déplacer vers le haut** ou **Déplacer vers le bas** jusqu'à ce que l’étiquette se trouve à l’endroit souhaité.  
+    - Pour reclasser une étiquette : Cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette à reclasser, cliquez sur **Déplacer vers le haut** ou **Déplacer vers le bas** jusqu’à ce que l’étiquette se trouve à l’endroit souhaité.  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

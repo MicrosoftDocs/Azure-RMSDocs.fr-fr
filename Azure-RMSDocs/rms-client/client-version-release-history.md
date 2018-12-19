@@ -4,25 +4,25 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/05/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bfca9c6aab0625a9d35d7648a53f7cce6b74bce6
-ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
+ms.openlocfilehash: c6312d3f10a70ffcb3cc48447fcbc751b7072a0d
+ms.sourcegitcommit: db24caa96033fd0c7a0fad4e36518a816a570c94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52861215"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53335521"
 ---
-# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
+# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 L’équipe Azure Information Protection met régulièrement à jour le client Azure Information Protection avec des correctifs et des nouvelles fonctionnalités. 
 
-Vous pouvez télécharger la dernière version en disponibilité générale (GA) et la préversion actuelle (si elle est disponible) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Après un court délai d’environ deux semaines en général, la version à disponibilité générale est également incluse dans le catalogue Microsoft Update (catégorie : **Azure Information Protection**). Cette inclusion dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou de Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
+Vous pouvez télécharger la dernière version en disponibilité générale (GA) et la préversion actuelle (si elle est disponible) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Après un court délai, généralement de deux semaines, la version en disponibilité générale est également incluse dans le catalogue Microsoft Update (catégorie : **Azure Information Protection**). Cette inclusion dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou de Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
 
 Pour plus d’informations, consultez [Mise à niveau et maintenance du client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
@@ -44,7 +44,7 @@ Utilisez les informations suivantes pour découvrir les nouveautés et les chang
 ## <a name="version-141510"></a>Version 1.41.51.0
 
 > [!TIP]
-> Vous vous intéressez à l’évaluation au client d’étiquetage unifié Azure Information Protection, car vos étiquettes sont publiées à partir du Centre de sécurité et de conformité Office 365 ? Consultez [Client d’étiquetage unifié Azure Information Protection : informations de version](unifiedlabelingclient-version-release-history.md).
+> Vous vous intéressez à l’évaluation au client d’étiquetage unifié Azure Information Protection, car vos étiquettes sont publiées à partir du Centre de sécurité et de conformité Office 365 ? Consultez [Client d’étiquetage unifié Azure Information Protection : Informations sur la version](unifiedlabelingclient-version-release-history.md).
 
 **Date de publication** : 27/11/2018
 
@@ -74,7 +74,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
     
     - Les marquages visuels sont maintenant appliqués si la feuille de calcul est enregistrée pendant la modification d’une cellule.
     
-    - Excel 2010 : pour une feuille de calcul protégée au [niveau d’autorisation](../configure-usage-rights.md#rights-included-in-permissions-levels) Co-auteur, le bouton **Supprimer l’étiquette** est maintenant disponible lorsque vous cliquez avec le bouton droit sur le fichier et choisissez **Classer et protéger**.
+    - Excel 2010 : Pour une feuille de calcul protégée au [niveau d’autorisation](../configure-usage-rights.md#rights-included-in-permissions-levels) Co-auteur, le bouton **Supprimer l’étiquette** est désormais disponible quand vous cliquez avec le bouton droit sur le fichier et que vous choisissez **Classer et protéger**.
 
 - Les paramètres client avancés permettant de [supprimer les en-têtes et pieds de page d’autres solutions d’étiquetage](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) prennent désormais en charge les dispositions personnalisées.
 
@@ -106,11 +106,13 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Pour le scanneur Azure Information Protection :
 
-    - Nouvelle applet de commande, [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) : doit être exécutée une seule fois après la mise à niveau à partir de la précédente version en disponibilité générale (1.29.5.0) ou d’une version antérieure.
+    - Nouvelle applet de commande [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) : Doit être exécutée une seule fois après la mise à niveau à partir de la précédente version en disponibilité générale (1.29.5.0) ou d’une version antérieure.
     
-    - Nouvelle applet de commande, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus) : Obtient l’état actuel du service pour le scanneur.  
+    - Nouvelle applet de commande [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus) : Obtient l’état actuel du service pour le scanneur.  
     
-    - Nouvelle applet de commande, [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) : Demande au scanneur de démarrer un seul cycle d’analyse quand la planification est définie sur Manuelle.
+    - Nouvelle applet de commande [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) : Indique au scanneur de démarrer un seul cycle d’analyse quand la planification est définie sur Manuelle.
+    
+    - Les documents PDF sont désormais protégés par défaut quand vous utilisez la norme ISO pour le chiffrement des fichiers PDF.
     
     - SharePoint Server 2010 est pris en charge pour les clients qui bénéficient d’un [support étendu pour cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
@@ -150,7 +152,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - La version de stratégie est remplacée par 1.4. L’identification du numéro de version est obligatoire pour la [configuration des ordinateurs déconnectés](client-admin-guide-customizations.md#support-for-disconnected-computers).
 
-- Le lien **Envoyez-nous des commentaires** de la boîte de dialogue **Aide et commentaires** est supprimé. Il a été temporairement remplacé par **Signaler un problème**, mais il s’affiche désormais dans les préversions uniquement. Par défaut, cette option envoie un e-mail à Microsoft, mais vous pouvez remplacer cette adresse e-mail par une chaîne HTTP que vous spécifiez. (par exemple, une page web personnalisée permettant aux utilisateurs de signaler des problèmes, ou une adresse e-mail qui pointe vers votre support technique). Pour modifier cette adresse, utilisez un [paramètre client avancé](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
+- Le lien **Envoyez-nous des commentaires** de la boîte de dialogue **Aide et commentaires** est supprimé. Il a été temporairement remplacé par **Signaler un problème** qui, par défaut, envoie un e-mail à Microsoft. À compter de décembre 2018, l’option **Signaler un problème** n’est pas affichée par défaut, mais elle peut être ajoutée avec un [paramètre client avancé](client-admin-guide-customizations.md#add-report-an-issue-for-users) où vous spécifiez une chaîne HTTP pour le lien. (par exemple, une page web personnalisée permettant aux utilisateurs de signaler des problèmes, ou une adresse e-mail qui pointe vers votre support technique). 
 
 ## <a name="version-12950"></a>Version 1.29.5.0 
 
@@ -208,5 +210,5 @@ Pour plus d’informations sur l’installation et l’utilisation du client :
 
 - Pour les utilisateurs : [Télécharger et installer le client](install-client-app.md)
 
-- Pour les administrateurs : [Guide de l’administrateur du client Azure Information Protection](client-admin-guide.md)
+- Pour les administrateurs : [Client Azure Information Protection - Guide de l’administrateur](client-admin-guide.md)
 

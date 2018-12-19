@@ -4,22 +4,22 @@ description: Instructions et exemples pour configurer des règles de flux de mes
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: 9d30e7c3e15e9aa6b67c2e1b653d56c1af36ffe0
-ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
+ms.openlocfilehash: c6f220e995aa785c44d4227884da2c7379918a8d
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49366986"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305469"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configuration des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Les informations suivantes vous permettent de configurer des règles de flux de messagerie dans Exchange Online pour utiliser des étiquettes Azure Information Protection et appliquer une protection supplémentaire dans des scénarios spécifiques. Par exemple :
 
@@ -37,7 +37,7 @@ Pour plus d’informations sur la configuration des règles de flux de messageri
 
 Étant donné qu’une étiquette Azure Information Protection est stockée dans les métadonnées, les règles de flux de messagerie dans Exchange Online peuvent lire ces informations pour les messages et les pièces jointes des documents :
 
-- Dans les e-mails, ces informations sont stockées dans l’en-tête x- : **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
+- Dans les e-mails, ces informations sont stockées dans l’en-tête x- : **msip_labels: MSIP_Label_\<GUID > _Enabled = True ;** 
 
 - Pour les documents Word (.doc et .docx), les feuilles de calcul Excel (.xls et .xlsx), les présentations PowerPoint (.ppt et .pptx) et les documents PDF (.pdf), ces métadonnées sont stockées dans la propriété personnalisée suivante : **MSIP_Label_\<GUID>_Enabled=True**  
 
@@ -63,7 +63,7 @@ Pour les exemples suivants, créez une nouvelle règle de flux de messagerie en 
 Les exemples ont une seule condition qui applique une protection quand un e-mail est envoyé à l’extérieur de l’organisation. Pour plus d’informations sur les autres conditions que vous pouvez sélectionner, consultez [conditions de règle de flux de messagerie et exceptions (prédicats) dans Exchange Online] (https://technet.microsoft.com/library/jj919235(v=exchg.150\).aspx).
 
 
-### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>Exemple 1 : Règle qui applique l’option Ne pas transférer à des e-mails étiquetés **Général** lorsqu’ils sont envoyés en dehors de l’organisation
+### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>Exemple 1 : Règle qui applique l’option Ne pas transférer à des e-mails étiquetés **Général** quand ils sont envoyés en dehors de l’organisation
 
 Dans cet exemple, l’étiquette **Général** a un GUID de 0e421e6d-ea17-4fdb-8f01-93a3e71333b8. Remplacez par votre propre étiquette ou sous-étiquette GUID que vous souhaitez utiliser avec cette règle. 
 
@@ -71,11 +71,11 @@ Dans la stratégie Azure Information Protection, cette étiquette a été config
 
 1. Dans **Nom**, donnez un nom à la règle, par exemple `Apply Do Not Forward for General emails sent externally`.
  
-2. Pour **Appliquer cette règle si** : sélectionnez **Le destinataire se trouve**, **En dehors de l’organisation**, puis **OK**.
+2. Pour **Appliquer cette règle si** : Sélectionnez **Le destinataire se trouve**, **En dehors de l’organisation**, puis **OK**.
 
 3. Sélectionnez **Davantage d’options**, puis **Ajouter une condition**.
  
-4. Pour **et** : sélectionnez **Un en-tête de message**, puis **Inclut au moins un de ces mots** :
+4. Pour **et** : Sélectionnez **Un en-tête de message**, puis **Inclut au moins un de ces mots** :
      
     a. Sélectionnez **Entrer du texte**, puis entrez `msip_labels`.
      
@@ -83,15 +83,15 @@ Dans la stratégie Azure Information Protection, cette étiquette a été config
     
     c. Sélectionnez **+**, puis **OK**.
 
-5. Pour **Procédez comme suit** : sélectionnez **Modifier la sécurité des messages** > **Appliquer le chiffrement de messages Office 365 et la protection des droits**  >  **Ne pas transférer**, puis sélectionnez **OK**.
+5. Pour **Exécutez les opérations suivantes** : Sélectionnez **Modifier la sécurité des messages** > **Appliquer le chiffrement de messages Office 365 et la protection des droits**  > **Ne pas transférer**, puis sélectionnez **OK**.
     
-    La configuration de votre règle doit maintenant ressembler à ce qui suit : ![Règle de flux de messagerie Exchange Online configurée pour une étiquette Azure Information Protection – exemple1](./media/aip-exo-rule-ex1.png)
+    Votre règle de configuration doit maintenant se présenter comme suit :  ![Règle de flux de messagerie Exchange Online configurée pour une étiquette Azure Information Protection - Exemple 1](./media/aip-exo-rule-ex1.png)
 
 7. Sélectionnez **Enregistrer**. 
 
 Pour plus d’informations sur l’option Ne pas transférer, consultez [option Ne pas transférer pour les e-mails](configure-usage-rights.md#do-not-forward-option-for-emails).
 
-### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Exemple 2 : Règle qui applique l’option Chiffrement seul à des e-mails qui ont des pièces jointes étiquetées **Confidentiel\Partenaires** et ces e-mails sont envoyés en dehors de l’organisation
+### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Exemple 2 : Règle qui applique l’option Chiffrer uniquement à des e-mails qui ont des pièces jointes étiquetées **Confidentiel\Partenaires** quand ces e-mails sont envoyés en dehors de l’organisation
 
 Dans cet exemple, la sous-étiquette **Confidentiel\Partenaires** a le GUID 0e421e6d-ea17-4fdb-8f01-93a3e71333b8. Remplacez par votre propre étiquette ou sous-étiquette GUID que vous souhaitez utiliser avec cette règle. 
 
@@ -99,11 +99,11 @@ Cette étiquette est utilisée pour classifier et protéger des documents que vo
 
 1. Dans **Nom**, donnez un nom à la règle, par exemple `Apply Encrypt to emails sent externally if protected attachments`.
  
-2. Pour **Appliquer cette règle si** : sélectionnez **Le destinataire se trouve**, **En dehors de l’organisation**, puis **OK**.
+2. Pour **Appliquer cette règle si** : Sélectionnez **Le destinataire se trouve**, **En dehors de l’organisation**, puis **OK**.
 
 3. Sélectionnez **Davantage d’options**, puis **Ajouter une condition**.
  
-4. Pour **et** : sélectionnez **Toutes les pièces jointes**, puis **a ces propriétés, y compris tous ces mots** :
+4. Pour **et** : Sélectionnez **Toute pièce jointe**, puis **possède ces propriétés, lesquelles contiennent l’un de ces mots** :
      
     a. Sélectionnez **+** > **Spécifier une propriété de pièce jointe personnalisée**.
   
@@ -113,9 +113,9 @@ Cette étiquette est utilisée pour classifier et protéger des documents que vo
     
     d. Sélectionnez **Enregistrer**, puis **OK**.
 
-5. Pour **Procédez comme suit** : sélectionnez **Modifier la sécurité des messages** > **Appliquer le chiffrement de messages Office 365 et la protection des droits**  >  **Chiffrer**, puis sélectionnez **OK**.
+5. Pour **Exécutez les opérations suivantes** : Sélectionnez **Modifier la sécurité des messages** > **Appliquer le chiffrement de messages Office 365 et la protection des droits**  > **Chiffrer**, puis sélectionnez **OK**.
     
-    La configuration de votre règle doit maintenant ressembler à ce qui suit : ![Règle de flux de messagerie Exchange Online configurée pour une étiquette Azure Information Protection – exemple1](./media/aip-exo-rule-ex2.png)
+    Votre règle de configuration doit maintenant se présenter comme suit :  ![Règle de flux de messagerie Exchange Online configurée pour une étiquette Azure Information Protection - Exemple 1](./media/aip-exo-rule-ex2.png)
 
 6. Sélectionnez **Enregistrer**. 
 
@@ -126,6 +126,6 @@ Pour plus d’informations sur l’option de chiffrement, consultez [option Chif
 
 Pour plus d’informations sur la création et la configuration des étiquettes à utiliser avec les règles de flux de messagerie Exchange Online, consultez [Stratégie de configuration d’Azure Information Protection](configure-policy.md).
 
-En outre, pour aider à classifier les messages électroniques contenant des pièces jointes, envisagez d’utiliser le [paramètre de stratégie](configure-policy-settings.md) Azure Information Protection suivant : **pour les messages électroniques avec des pièces jointes, appliquez une étiquette qui correspond à la classification la plus élevée de ces pièces jointes**.
+En outre, pour faciliter la classification des messages e-mail contenant des pièces jointes, envisagez d’utiliser le [paramètre de stratégie](configure-policy-settings.md) d’Azure Information Protection : **Pour les messages électroniques contenant des pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes**.
 
 

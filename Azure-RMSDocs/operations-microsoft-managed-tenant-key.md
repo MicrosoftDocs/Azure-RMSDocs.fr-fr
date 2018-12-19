@@ -4,22 +4,22 @@ description: Informations sur les opérations de cycle de vie applicables si Mic
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6fd356e88cbd7581bfafaf9a946eaa8fd9eba15e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 3cddb4660ddae7bb19ff2ef1994fb4fa3c0bf9a6
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149512"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305384"
 ---
-# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gérée par Microsoft : opérations de cycle de vie des clés de locataire
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Géré par Microsoft : Opérations de cycle de vie de la clé de locataire
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Si Microsoft gère votre clé de locataire pour Azure Information Protection (l’option par défaut), utilisez les sections suivantes pour obtenir plus d’informations sur les opérations de cycle de vie qui s’appliquent à cette topologie.
 
@@ -57,15 +57,15 @@ Microsoft se charge de sauvegarder votre clé de locataire. Aucune action n'est 
 ## <a name="export-your-tenant-key"></a>Exportation de votre clé de locataire
 Vous pouvez exporter votre clé de locataire et votre configuration Azure Information Protection en suivant les instructions contenues dans les trois étapes suivantes :
 
-### <a name="step-1-initiate-export"></a>Étape 1 : initiation d'une exportation
+### <a name="step-1-initiate-export"></a>Étape 1 : initiation d'une exportation
 
 - [Contactez le support Microsoft](information-support.md#to-contact-microsoft-support) pour ouvrir un **dossier de support Azure Information Protection dans lequel vous demandez l’exportation d’une clé Azure Information Protection**. Vous devez prouver que vous êtes administrateur de votre locataire Azure Information Protection et comprendre que la confirmation de ce processus prend plusieurs jours. Des frais de prise en charge standard s’appliquent. L’exportation de votre clé de locataire n’est pas un service de support technique gratuit.
 
-### <a name="step-2-wait-for-verification"></a>Étape 2 : attente de la vérification
+### <a name="step-2-wait-for-verification"></a>Étape 2 : attente de la vérification
 
 - Microsoft vérifie la légitimité de votre demande d’émission de votre clé de locataire Azure Information Protection. Cela peut prendre jusqu’à trois semaines.
 
-### <a name="step-3-receive-key-instructions-from-css"></a>Étape 3 : réception d'instructions concernant la clé de la part du support technique
+### <a name="step-3-receive-key-instructions-from-css"></a>Étape 3 : réception d'instructions concernant la clé de la part du support technique
 
 - Les services de support technique Microsoft vous envoient votre clé de locataire et votre configuration Azure Information Protection sous forme chiffrée dans un fichier protégé par mot de passe. L’extension de nom de fichier est **.tpd**. Pour ce faire, le support technique vous envoie (vous, la personne ayant demandé un export) tout d'abord un outil par e-mail. Vous devez exécuter cet outil à partir d'une invite de commande, comme suit :
 
@@ -79,7 +79,7 @@ Vous pouvez exporter votre clé de locataire et votre configuration Azure Inform
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    Cette commande doit générer deux fichiers : l’un contient le mot de passe en clair pour le TPD protégé par mot de passe, tandis que l’autre contient le TPD protégé par mot de passe en question. Les fichiers ont un nouveau GUID, par exemple :
+    Cette commande doit générer deux fichiers : l’un contient le mot de passe en texte brut pour le TPD protégé par mot de passe, tandis que l’autre contient le TPD protégé par mot de passe lui-même. Les fichiers ont un nouveau GUID, par exemple :
      
     - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 
@@ -87,7 +87,7 @@ Vous pouvez exporter votre clé de locataire et votre configuration Azure Inform
 
     Sauvegardez ces fichiers et stockez-les dans un emplacement sécurisé de façon à pouvoir continuer à déchiffrer le contenu protégé par cette clé de locataire. De plus, si vous migrez vers AD RMS, vous pouvez importer ce fichier de TPD (dont le nom commence par **ExportedTDP**) sur votre serveur AD RMS.
 
-### <a name="step-4-ongoing-protect-your-tenant-key"></a>Étape 4 : En cours : Protection de votre clé de locataire
+### <a name="step-4-ongoing-protect-your-tenant-key"></a>Étape 4 : En cours : Protection de votre clé de locataire
 
 Après avoir reçu votre clé de locataire, conservez-la en lieu sûr, car toute personne y ayant accès peut déchiffrer tous les documents qu'elle protège.
 

@@ -4,18 +4,18 @@ description: Instructions et informations destinées aux administrateurs d’un 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: be6477edae471bddbcf3a5d4e6c7bb0cfcec1e4e
-ms.sourcegitcommit: 4f22874c3c2fb9632d57932148664c40b3907a78
+ms.openlocfilehash: a9f54931d8409fd88bddb6be85f1a0d7c2b416a1
+ms.sourcegitcommit: 40ea9568688b9da95d72b48f02b4152e54da17c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52831253"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029402"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -98,15 +98,15 @@ Utilisez les sections suivantes pour plus d’informations sur l’installation 
 
 Quand le client est installé, utilisez l’option **Aide et commentaires** pour ouvrir la boîte de dialogue **Microsoft Azure Information Protection** :
 
-- Dans une application Office, sous l’onglet **Accueil**, dans le groupe **Protection**, sélectionnez **Protéger**, puis **Aide et commentaires**.
+- Depuis une application Office : Sous l’onglet **Accueil**, dans le groupe **Protection**, sélectionnez **Protéger**, puis **Aide et commentaires**.
 
-- Dans l’Explorateur de fichiers : cliquez avec le bouton droit sur un ou plusieurs fichiers ou sur un dossier, sélectionnez **Classifier et protéger**, puis **Aide et commentaires**. 
+- Depuis l'Explorateur de fichiers : Cliquez avec le bouton droit sur un ou plusieurs fichiers ou sur un dossier, sélectionnez **Classifier et protéger**, puis **Aide et commentaires**. 
 
 #### <a name="help-and-feedback-section"></a>Section **Aide et commentaires**
 
 Le **lien En savoir plus** pointe par défaut sur le site web [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection), mais vous pouvez le configurer pour qu’il pointe sur une URL personnalisée dans le cadre des [paramètres de stratégie](../configure-policy-settings.md) Azure Information Protection.
 
-Le lien **Signaler un problème** s’affiche dans les préversions du client, et pas dans les versions en disponibilité générale. Par défaut, cette option envoie un e-mail à Microsoft, mais vous pouvez configurer la chaîne HTTP de vos utilisateurs en spécifiant un [paramètre client avancé](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link). Par exemple, indiquez l’adresse e-mail de votre support technique.
+Le lien **Signaler un problème** s’affiche seulement si vous spécifiez un [paramètre client avancé](client-admin-guide-customizations.md#add-report-an-issue-for-users). Quand vous configurez ce paramètre, vous spécifiez un lien HTTP, comme l’adresse e-mail de votre support technique.
 
 L’option **Exporter les journaux** permet de collecter et de joindre automatiquement des fichiers journaux pour le client Azure Information Protection si vous devez les envoyer au support Microsoft. Cette option peut également être utilisée par les utilisateurs finaux pour envoyer ces fichiers journaux à votre support technique.
 
@@ -150,7 +150,7 @@ Si vous avez besoin de vous connecter avec un nom d’utilisateur différent de 
 
 La **Dernière connexion** affiche la date/l’heure de la dernière connexion du client au service Azure Information Protection de votre organisation. Vous pouvez utiliser ces informations avec la date et l’heure auxquelles la **stratégie Information Protection a été installée** pour confirmer la date et l’heure de la dernière installation ou mise à jour de la stratégie Azure Information Protection. Lorsque le client se connecte au service, il télécharge automatiquement la dernière stratégie s’il détecte des modifications dans sa stratégie actuelle, ainsi que toutes les 24 heures. Si vous avez apporté des modifications à la stratégie après l’heure affichée, fermez et rouvrez l’application Office.
 
-Si vous voyez le message **Ce client n’est pas sous licence pour Office Professionnel Plus** : le client Azure Information Protection a détecté que l’édition d’Office installée ne prend pas en charge l’application de la protection Rights Management. Si ce problème est détecté, les étiquettes qui appliquent la protection ne s’affichent pas dans la barre Azure Information Protection.
+Si vous voyez **Ce client n’a pas de licence pour Office Professionnel Plus** : Le client Azure Information Protection a détecté que l’édition d’Office installée ne prend pas en charge l’application de la protection Rights Management. Si ce problème est détecté, les étiquettes qui appliquent la protection ne s’affichent pas dans la barre Azure Information Protection.
 
 Utilisez l’information **Version** pour vérifier la version installée sur le client. Vous pouvez vérifier s’il s’agit de la dernière version et s’il existe des correctifs correspondants et des nouvelles fonctionnalités en cliquant sur le lien **Nouveautés** pour lire l’[historique de publication des versions](client-version-release-history.md) du client.
 
@@ -166,9 +166,9 @@ Toutefois, les noms et les descriptions d’étiquette que vous spécifiez ne so
 
 Une fois que vous avez installé le client Azure Information Protection, assurez-vous de donner aux utilisateurs les instructions pour savoir comment étiqueter leurs e-mails et documents, ainsi que des conseils sur les étiquettes à choisir pour des scénarios spécifiques. Par exemple :
 
-- Instructions pour l’utilisateur en ligne : [Guide de l’utilisateur Azure Information Protection](client-user-guide.md)
+- Instructions en ligne pour l’utilisateur : [Azure Information Protection - Guide de l’utilisateur](client-user-guide.md)
 
-- Téléchargement d’un guide d’utilisation personnalisable : [Guide d’adoption Azure Information Protection pour l’utilisateur final](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- Téléchargez un guide d’utilisation personnalisable : [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
 ### <a name="update-macros-in-excel-spreadsheets"></a>Mettre à jour les macros dans les feuilles de calcul Excel
 
@@ -202,13 +202,13 @@ Pour mettre à niveau le scanneur Azure Information Protection, installez la der
 
 - Exécutez [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) après avoir mis à niveau le client Azure Information Protection. Vos paramètres de configuration pour le scanneur et les référentiels sont conservés. L’exécution de cette applet de commande est nécessaire pour mettre à jour le schéma de base de données pour le scanneur et si nécessaire, le compte de service du scanneur se voit également accorder des autorisations de suppression pour la base de données du scanneur. 
     
-    Tant que vous n’avez pas exécuté cette cmdlet de mise à jour, le scanneur ne s’exécute pas et l’ID d’événement **1000** s’affiche dans le journal des événements Windows, avec le message d’erreur suivant : **Nom d’objet non valide 'ScannerStatus'**.
+    Tant que vous n’avez pas exécuté cette applet de commande de mise à jour, le scanneur ne s’exécute pas et vous voyez en général l’ID d’événement **1000** s’afficher dans le journal des événements Windows, avec le message d’erreur suivant : **Nom d’objet non valide « ScannerStatus »**.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Désinstallation du client Azure Information Protection
 
 Vous pouvez utiliser l’une des options suivantes pour désinstaller le client :
 
-- Utilisez le panneau de configuration pour désinstaller un programme : cliquez sur **Microsoft Azure Information Protection** > **Désinstaller**
+- Utiliser le Panneau de configuration pour désinstaller un programme : Cliquez sur **Microsoft Azure Information Protection** > **Désinstaller**
 
 - Réexécutez le fichier exécutable (par exemple, **AzInfoProtection.exe**) et dans la page **Modifier l’installation**, cliquez sur **Désinstaller**. 
 

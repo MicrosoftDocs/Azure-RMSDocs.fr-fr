@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2f0088cb2b95a9c0f7a50c780d89dec0b91111f4
-ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
+ms.openlocfilehash: 3efae21dfabdb347826b177d5c58a3498d3276c5
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52330291"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173959"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Utilisez les informations de cet article pour planifier et gérer votre clé de locataire Azure Information Protection. Par exemple, au lieu que Microsoft gère votre clé de locataire (par défaut), vous pouvez gérer votre propre clé de locataire afin de vous conformer à des réglementations spécifiques s'appliquant à votre organisation. La gestion de votre propre clé de locataire est également appelée BYOK (Bring Your Own Key).
 
@@ -29,26 +29,26 @@ Qu’est-ce la clé de locataire Azure Information Protection ?
 
 - La clé de locataire Azure Information Protection est l’équivalent en ligne de la clé de certificat de licence serveur d’Active Directory Rights Management Services (AD RMS). 
 
-**Aperçu rapide :** Utilisez le tableau suivant comme guide rapide pour votre topologie de clé de locataire recommandée. Ensuite, utilisez la documentation supplémentaire pour obtenir plus d’informations.
+**Aperçu rapide :** Le tableau suivant offre un aperçu rapide de la topologie de clé de locataire recommandée. Ensuite, utilisez la documentation supplémentaire pour obtenir plus d’informations.
 
 |Besoin de l'entreprise|Topologie de clé de locataire recommandée|
 |------------------------|-----------------------------------|
-|Déployez Azure Information Protection rapidement et sans matériel spécial, sans logiciel supplémentaire et sans abonnement Azure.<br /><br />Par exemple : des environnements de test et quand votre organisation n’a pas de spécifications réglementaires pour la gestion des clés.|Gestion par Microsoft|
-|Réglementations de conformité, sécurité supplémentaire et contrôle sur toutes les opérations du cycle de vie. <br /><br />Par exemple : votre clé doit être protégée par un module de sécurité matériel (HSM).|BYOK|
+|Déployez Azure Information Protection rapidement et sans matériel spécial, sans logiciel supplémentaire et sans abonnement Azure.<br /><br />Par exemple : des environnements de test et quand votre organisation n’a pas de spécifications réglementaires pour la gestion des clés.|Gestion par Microsoft|
+|Réglementations de conformité, sécurité supplémentaire et contrôle sur toutes les opérations du cycle de vie. <br /><br />Par exemple : votre clé doit être protégée par un module de sécurité matériel (HSM).|BYOK|
 
 
 Si nécessaire, vous pouvez changer la topologie de clé de locataire après le déploiement à l’aide de l’applet de commande [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
 
 
-## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Choix de la topologie de clé de locataire : gestion Microsoft (par défaut) ou gestion BYOK
+## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Choix de la topologie de clé de locataire : gestion Microsoft (par défaut) ou gestion BYOK
 
 Choisissez la topologie de clé de locataire la plus adaptée à votre organisation :
 
-- **Gérée par Microsoft** : Microsoft génère automatiquement une clé de locataire pour votre organisation, et cette clé est utilisée exclusivement pour Azure Information Protection. Par défaut, Microsoft utilise cette clé pour votre locataire et gère la plupart des aspects du cycle de vie de votre clé de locataire. 
+- **Gérée par Microsoft** : Microsoft génère automatiquement une clé de locataire pour votre organisation, et cette clé est utilisée exclusivement pour Azure Information Protection. Par défaut, Microsoft utilise cette clé pour votre locataire et gère la plupart des aspects du cycle de vie de votre clé de locataire. 
     
     Il s'agit de l'option la plus simple, avec la charge administrative la plus faible. Dans la plupart des cas, les utilisateurs n'ont même pas conscience de l'existence de cette clé de locataire. Il leur suffit de s’inscrire à Azure Information Protection ; le reste du processus de gestion de la clé est traité par Microsoft.
 
-- **Gérée par vous (BYOK)** : pour un contrôle total sur votre clé de locataire, utilisez [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) avec Azure Information Protection. Pour cette topologie de clé de locataire, vous créez la clé, directement dans Key Vault ou localement. Si vous la créez localement, vous transférez ou vous importez ensuite cette clé dans Key Vault. Vous configurez ensuite Azure Information Protection pour utiliser cette clé, et vous la gérez dans Azure Key Vault.
+- **Gérée par vous (BYOK)**  : pour un contrôle total sur votre clé de locataire, utilisez [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) avec Azure Information Protection. Pour cette topologie de clé de locataire, vous créez la clé, directement dans Key Vault ou localement. Si vous la créez localement, vous transférez ou vous importez ensuite cette clé dans Key Vault. Vous configurez ensuite Azure Information Protection pour utiliser cette clé, et vous la gérez dans Azure Key Vault.
     
 
 ### <a name="more-information-about-byok"></a>Plus d’informations sur BYOK
@@ -90,7 +90,7 @@ Si vous décidez de laisser Microsoft gérer votre clé de locataire :
 
 - Sauf si vous migrez depuis AD RMS, aucune autre action n’est nécessaire de votre part pour générer la clé pour votre locataire. Vous pouvez passer directement à [Étapes suivantes](plan-implement-tenant-key.md#next-steps).
 
-- Si vous avez AD RMS et que vous voulez migrer AD RMS vers Azure Information Protection, utilisez les instructions de migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). 
+- Si vous avez AD RMS et que vous voulez migrer vers Azure Information Protection, utilisez les instructions de migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). 
 
 Si vous décidez de gérer vous-même votre clé de locataire, lisez les sections suivantes pour plus d'informations.
 
@@ -106,8 +106,8 @@ Reportez-vous au tableau suivant pour connaître les conditions requises pour la
 
 |Condition requise|Plus d’informations|
 |---------------|--------------------|
-|Votre locataire Azure Information Protection doit avoir un abonnement Azure. Si vous n’en avez pas, vous pouvez vous inscrire pour un [compte gratuit](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> Pour utiliser une clé protégée par module HSM, vous devez avoir le niveau de service Azure Key Vault Premium.|L’abonnement Azure gratuit qui fournit l’accès pour configurer Azure Active Directory et la configuration de modèles personnalisés Azure Rights Management (**Accès à Azure Active Directory**) n’est pas suffisant pour utiliser Azure Key Vault. Pour vérifier que vous disposez d’un abonnement Azure que vous pouvez utiliser pour la solution BYOK, utilisez les applets de commande PowerShell d’[Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) : <br /><br /> 1. Démarrez une session Azure PowerShell en activant l’option **Exécuter en tant qu’administrateur** et connectez-vous en tant qu’administrateur global pour votre locataire Azure Information Protection, via la commande suivante :`Login-AzureRmAccount`<br /><br />2. Saisissez ce qui suit et vérifiez que des valeurs s’affichent pour le nom et l’ID de votre abonnement ainsi que votre ID de locataire AIP, et que l’état est activé : `Get-AzureRmSubscription`<br /><br />Si aucune valeur n’est affichée et que vous revenez simplement à l’invite, vous n’avez pas d’abonnement Azure utilisable pour la solution BYOK. <br /><br />**Remarque** : En plus des prérequis de la solution BYOK, si vous migrez d’AD RMS à Azure Information Protection en passant d’une clé logicielle à une clé matérielle, vous devez disposer au minimum de la version 11.62 du microprogramme Thales.|
-|Pour utiliser une clé protégée par module HSM que vous créez localement : <br /><br />- Tous les prérequis répertoriés pour BYOK dans Key Vault. |Consultez [Prérequis pour la solution BYOK](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok) dans la documentation d’Azure Key Vault. <br /><br /> **Remarque** : En plus des prérequis de la solution BYOK, si vous migrez d’AD RMS à Azure Information Protection en passant d’une clé logicielle à une clé matérielle, vous devez disposer au minimum de la version 11.62 du microprogramme Thales.|
+|Votre locataire Azure Information Protection doit avoir un abonnement Azure. Si vous n’en avez pas, vous pouvez vous inscrire pour un [compte gratuit](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> Pour utiliser une clé protégée par module HSM, vous devez avoir le niveau de service Azure Key Vault Premium.|L’abonnement Azure gratuit qui fournit l’accès pour configurer Azure Active Directory et la configuration de modèles personnalisés Azure Rights Management (**Accès à Azure Active Directory**) n’est pas suffisant pour utiliser Azure Key Vault. Pour vérifier que vous disposez d’un abonnement Azure que vous pouvez utiliser pour la solution BYOK, utilisez les applets de commande PowerShell d’[Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) : <br /><br /> 1. Démarrez une session Azure PowerShell en activant l’option **Exécuter en tant qu’administrateur** et connectez-vous en tant qu’administrateur global pour votre locataire Azure Information Protection, via la commande suivante :`Login-AzureRmAccount`<br /><br />2. Saisissez ce qui suit et vérifiez que des valeurs s’affichent pour le nom et l’ID de votre abonnement ainsi que votre ID de locataire AIP, et que l’état est activé : `Get-AzureRmSubscription`<br /><br />Si aucune valeur n’est affichée et que vous revenez simplement à l’invite, vous n’avez pas d’abonnement Azure utilisable pour la solution BYOK. <br /><br />**Remarque** : En plus des prérequis de la solution BYOK, si vous migrez d’AD RMS vers Azure Information Protection en passant d’une clé logicielle à une clé matérielle, vous devez disposer au minimum de la version 11.62 du microprogramme Thales.|
+|Pour utiliser une clé protégée par module HSM que vous créez localement : <br /><br />- Tous les prérequis répertoriés pour BYOK dans Key Vault. |Consultez [Prérequis pour la solution BYOK](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok) dans la documentation d’Azure Key Vault. <br /><br /> **Remarque** : En plus des prérequis de la solution BYOK, si vous migrez d’AD RMS vers Azure Information Protection en passant d’une clé logicielle à une clé matérielle, vous devez disposer au minimum de la version 11.62 du microprogramme Thales.|
 |Si le coffre de clés qui doit contenir votre clé de locataire utilise des points de terminaison de service de réseau virtuel pour Azure Key Vault : <br /><br />- Autorisez les services Microsoft approuvés pour contourner ce pare-feu.|Pour plus d’informations, consultez [Points de terminaison du service de réseau virtuel pour Azure Key Vault](/azure/key-vault/key-vault-overview-vnet-service-endpoints).|
 |Le module d’administration Azure Rights Management pour Windows PowerShell.|Pour connaître les instructions d'installation, voir [Installation du module PowerShell AADRM](./install-powershell.md). <br /><br />Si vous avez déjà installé ce module Windows PowerShell, exécutez la commande suivante pour vérifier que le numéro de votre version est au minimum **2.9.0.0** : `(Get-Module aadrm -ListAvailable).Version`|
 
@@ -184,7 +184,7 @@ Ensuite, exécutez l’applet de commande [Add-AadrmKeyVaultKey](/powershell/mod
 >
 >Veillez à spécifier la version de clé en plus du nom de clé quand vous exécutez cette commande. Vous pouvez utiliser la commande Azure Key Vault ([Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey)) afin d’obtenir le numéro de version de la clé actuelle. Par exemple : `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
-Si vous devez vérifier que l’URL de la clé est définie correctement pour Azure Information Protection : dans Azure Key Vault, exécutez [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) pour voir l’URL de la clé.
+Si vous devez vérifier que l’URL de la clé est définie correctement pour Azure Information Protection : dans Azure Key Vault, exécutez [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) pour voir l’URL de la clé.
 
 Enfin, si le service Azure Rights Management est déjà activé, exécutez [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) pour indiquer à Azure Information Protection d’utiliser cette clé comme clé de locataire active pour le service Azure Rights Management. Si vous n’exécutez pas cette étape, Azure Information Protection continuera d’utiliser la clé managée par Microsoft par défaut créée automatiquement pour votre locataire.
 

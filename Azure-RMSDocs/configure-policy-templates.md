@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 1571939554e64459acd7ec0b7c32e9d40f7bd7eb
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 412b84b705d12efd7259066c0fece68e2ab8c099
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024312"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173941"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Les modèles de protection, également appelés modèles Rights Management, sont un regroupement de paramètres de protection définis par l’administrateur pour Azure Information Protection. Ces paramètres incluent les [droits d’utilisation](configure-usage-rights.md) que vous avez choisis pour les utilisateurs autorisés et les contrôles d’accès pour l’accès hors connexion et après l’expiration. Ces modèles sont intégrés à la stratégie Azure Information Protection : 
 
@@ -79,7 +79,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
     
     - **Autoriser les macros** (nom commun) est automatiquement ajouté. Ce droit d’utilisation est requis pour la barre Azure Information Protection dans les applications Office.
 
-- Les paramètres **Publié** et **Archivé** sous la forme **Activé** : **Oui** et **Activé** : **Non** respectivement sur le panneau **Étiquette**. Pour les modèles que vous voulez conserver mais qui ne doivent pas être visibles par les utilisateurs ou les services, définissez-les sur **Activé** : **Désactivé**.
+- Les paramètres **Publié** et **Archivé** s’affichent en tant que **Activé** : **Oui** et **Activé** : **Non** respectivement sur le panneau **Étiquette**. Pour les modèles que vous voulez conserver mais qui ne doivent pas être visibles par les utilisateurs ou les services, définissez-les sur **Activé** : **Désactivé**.
 
 - Vous ne pouvez pas copier ou supprimer un modèle dans le portail Azure. Quand le modèle est converti en étiquette, vous pouvez configurer l’étiquette pour qu’elle cesse d’utiliser le modèle en sélectionnant **Non configuré** pour l’option **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**. Vous pouvez aussi supprimer l’étiquette. Dans les deux cas cependant, le modèle n’est pas supprimé et reste dans un état archivé.
     
@@ -99,7 +99,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, développez **Modèles de protection**, puis recherchez le modèle que vous souhaitez configurer.
+2. À partir de l’option de menu **Classifications** > **Étiquettes** : Dans le panneau **Azure Information Protection - Étiquettes**, développez **Modèles de protection**, puis recherchez le modèle que vous voulez configurer.
     
 3. Sélectionnez le modèle, puis, dans le panneau **Étiquette**, vous pouvez changer le nom du modèle et la description si nécessaire en modifiant le **Nom d’étiquette** et la **Description**. Ensuite, sélectionnez **Protection**, qui a la valeur **Azure (clé du cloud)**, pour ouvrir le panneau **Protection**.
 
@@ -126,7 +126,7 @@ Lorsque vous convertissez un modèle en étiquette :
 
 - Le nom du modèle est converti en un nouveau nom d’étiquette, et la description du modèle est convertie en info-bulle pour l’étiquette. 
 
-- Si l’état du modèle a été publié, ce paramètre est mappé sur **Activé** : **Oui** pour l’étiquette, qui s’affiche désormais comme cette étiquette pour les utilisateurs lorsque vous publiez ensuite la stratégie Azure Information Protection. Si l’état du modèle a été archivé, ce paramètre est mappé à **Activé** : **Non** pour l’étiquette et ne s’affiche pas comme une étiquette disponible pour les utilisateurs.
+- Si l’état du modèle a été publié, ce paramètre est mappé à **Activé** : **Oui** pour l’étiquette, qui s’affiche désormais comme étiquette pour les utilisateurs quand vous publiez ensuite la stratégie Azure Information Protection. Si l’état du modèle a été archivé, ce paramètre est mappé à **Activé** : **Non** pour l’étiquette et ne s’affiche pas comme étiquette disponible pour les utilisateurs.
 
 - Les paramètres de protection sont conservés, et vous pouvez les modifier si nécessaire, puis ajouter également d’autres paramètres à l’étiquette, comme des marqueurs visuels et des conditions.
 
@@ -136,9 +136,9 @@ Lorsque vous convertissez un modèle en étiquette :
 
 Quand vous créez une étiquette avec le paramètre de protection **Azure (clé cloud)**, en arrière-plan, cette action crée un modèle personnalisé qui est ensuite accessible pour les services et applications qui sont intégrés aux modèles Rights Management.
 
-1. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez **Ajouter une nouvelle étiquette**.
+1. À partir de l’option de menu **Classifications** > **Étiquettes** : Dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez **Ajouter une nouvelle étiquette**.
 
-2. Dans le panneau **Étiquette**, conservez la valeur par défaut **Activé** : **On**, puis entrez un nom d’étiquette et une description pour le nom du modèle et la description.
+2. Dans le panneau **Étiquette**, conservez la valeur par défaut, **Activé** : **Oui**, puis entrez un nom d’étiquette et une description pour le nom et la description du modèle.
 
 3. Pour **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Protéger**, puis **Protection** :
     
@@ -152,7 +152,7 @@ Quand vous créez une étiquette avec le paramètre de protection **Azure (clé 
     
     Bien que l’étiquette soit activée, par défaut, le modèle est archivé. Afin que les applications et services puissent utiliser le modèle pour protéger des documents et des e-mails, exécutez la dernière étape pour publier le modèle.
 
-5. À partir de l’option de menu **Classifications** > **Stratégies**, sélectionnez la stratégie qui doit contenir les nouveaux paramètres de protection. Puis, sélectionnez **Ajouter ou supprimer des étiquettes**. Dans le panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette créée qui contient vos paramètres de protection, cliquez sur **OK**, puis sélectionnez **Enregistrer**.
+5. À partir de l’option de menu **Classifications** > **Stratégies**, sélectionnez la stratégie qui doit contenir les nouveaux paramètres de protection. Puis, sélectionnez **Ajouter ou supprimer des étiquettes**. Dans le panneau **Stratégie : Ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette créée qui contient vos paramètres de protection, cliquez sur **OK**, puis sélectionnez **Enregistrer**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

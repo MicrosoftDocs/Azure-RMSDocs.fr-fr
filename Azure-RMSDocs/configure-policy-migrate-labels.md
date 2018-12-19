@@ -9,16 +9,16 @@ ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: be48797931dc0e8c76f29094715df37d6488f800
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 84f3aa3cc5dc7955056c98a957fa5d307340da1d
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024006"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174129"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > Cette fonctionnalité est en préversion et migre votre locataire vers une nouvelle plateforme qui est également en préversion. La migration est irréversible. La nouvelle plateforme prend en charge l’étiquetage unifié afin que les étiquettes que vous créez et gérez puissent être utilisées par plusieurs clients et services.
@@ -84,7 +84,7 @@ Les clients Azure Information Protection peuvent utiliser ces paramètres d’é
 |Supprimer la protection |Non|Oui|
 |Marquages visuels (en-tête, pied de page, filigrane) : police personnalisée et couleur de police personnalisée par code RVB|Non|Recommandée si vous utilisez des variables<br /><br />- Sur les clients, les variables s’affichent sous forme de texte au lieu d’afficher les valeurs dynamiques|
 |Marquages visuels par application|Non|Recommandée si vous utilisez des variables<br /><br />- Sur les clients, les variables s’affichent sous forme de texte au lieu d’afficher les valeurs dynamiques|
-|Conditions et paramètres associés <br /><br />Remarques : Inclut l’étiquetage automatique et recommandé ainsi que les info-bulles|Non applicable|Non|
+|Conditions et paramètres associés <br /><br />Remarques : Inclut l’étiquetage automatique et recommandé ainsi que leurs info-bulles|Non applicable|Non|
 
 
 ## <a name="to-migrate-azure-information-protection-labels"></a>Pour migrer des étiquettes Azure Information Protection
@@ -117,4 +117,4 @@ Les clients qui prennent en charge l’étiquetage unifié sont notamment :
 
 Pour plus d’informations sur vos étiquettes migrées qui peuvent maintenant être configurées et publiées dans le Centre de sécurité et de conformité Office 365, consultez [Vue d’ensemble des étiquettes de sensibilité](/Office365/SecurityCompliance/sensitivity-labels).
 
-Pour lire le billet de blog d’annonce : [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (Annonce de la disponibilité de la gestion de l’étiquetage unifié dans le Centre de sécurité et conformité).
+Pour lire le billet de blog d’annonce : [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).

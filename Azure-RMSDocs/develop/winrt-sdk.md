@@ -1,23 +1,23 @@
 ---
 title: Configuration pour le Windows Store | Azure RMS
-description: Les applications du Windows Store peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leurs applications.
+description: Les applications du Windows Store peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations.
 keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f7fde149e080607633b0e916123d4da1e06d7715
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6d16237ff8d4fbfe1b26a73577c16b78b31849e1
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147502"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266356"
 ---
 # <a name="windows-store-setup"></a>Configuration pour le Windows Store
 
@@ -35,10 +35,10 @@ Cette rubrique vous guide tout au long du processus de configuration de votre en
 
 Vous devez disposer des logiciels suivants sur votre système de développement :
 
--   Système d’exploitation [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet)
+-   Système d’exploitation [Windows 8.1](https://windows.microsoft.com/windows-8/meet)
 -   [SDK Windows pour Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
--   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) ou version ultérieure, ou Visual Studio 2012 Express (inclus dans le SDK Windows pour Windows 8.0/8.1)
--   Package RMS SDK 4.2 pour les applications du Windows Store Pour plus d’informations, consultez [Prise en main](get-started.md).
+-   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) ou version ultérieure, ou Visual Studio 2012 Express (inclus dans le SDK Windows pour Windows 8.0/8.1)
+-   Package RMS SDK 4.2 pour les applications du Windows Store. Pour plus d’informations, consultez [Prise en main](get-started.md).
 -   Bibliothèque d’authentification : Nous vous recommandons d’utiliser la [bibliothèque Azure ADAL (Active Directory Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx), mais vous pouvez aussi recourir à d’autres bibliothèques d’authentification.
 
 Lisez la rubrique [Nouveautés](release-notes.md) pour obtenir des informations sur les mises à jour des API, des informations sur les appareils et les environnements, les notes de publication et les questions les plus fréquentes (FAQ).
@@ -77,8 +77,8 @@ Vous êtes maintenant prêt à créer vos propres applications du Windows Store.
 
 [Terminologie et concepts du développement](core-concepts.md)
 
-[Windows 8](http://windows.microsoft.com/en-US/windows-8/meet)
+[Windows 8](https://windows.microsoft.com/windows-8/meet)
 
-[Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
+[Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 
 [Informations de référence sur l’API Windows](https://msdn.microsoft.com/library/dn891914.aspx)

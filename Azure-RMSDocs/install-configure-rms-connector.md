@@ -4,18 +4,18 @@ description: Informations vous permettant d’installer et de configurer le conn
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2e3babe4a402b8f77700e9b9890dc5f826a5850a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: c0fc5812eedd7cce5c0e17231d9ee19dbf4edd1b
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53026932"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305673"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
@@ -57,15 +57,15 @@ Pour pouvoir configurer le connecteur RMS, vous devez saisir les identifiants d'
 
 Ce compte ne doit pas requérir l’authentification multifacteur (MFA), car l’outil d’administration Microsoft Rights Management ne prend pas en charge l’authentification multifacteur pour ce compte. 
 
-Le connecteur applique également des restrictions de caractères à ce mot de passe. Vous ne pouvez pas utiliser un mot de passe qui comporte les caractères suivants : « et commercial » (**&**) ; crochet ouvrant (**[**) ; crochet fermant (**]**) ; guillemet droit (**"**) ; et apostrophe (**'**). Si votre mot de passe contient l’un de ces caractères, l’authentification échoue pour le connecteur RMS, et vous voyez le message d’erreur **Cette combinaison de nom d’utilisateur et mot de passe n’est pas correcte**, même si vous pouvez vous connecter à l’aide de ce compte et de ce mot de passe pour d’autres scénarios. Si ce scénario s’applique à votre mot de passe, utilisez un autre compte dont le mot de passe ne contient aucun de ces caractères spéciaux ou redéfinissez votre mot de passe de façon à ce qu’il n’en contienne pas.
+Le connecteur applique également des restrictions de caractères à ce mot de passe. Vous ne pouvez pas utiliser un mot de passe contenant un ou plusieurs des caractères suivants : Esperluette ( **&** ), crochet gauche ( **[** ), crochet droite ( **]** ), guillemets droits ( **"** ) et apostrophe ( **’** ). Si votre mot de passe contient l’un de ces caractères, l’authentification échoue pour le connecteur RMS, et vous voyez le message d’erreur **Cette combinaison de nom d’utilisateur et mot de passe n’est pas correcte**, même si vous pouvez vous connecter à l’aide de ce compte et de ce mot de passe pour d’autres scénarios. Si ce scénario s’applique à votre mot de passe, utilisez un autre compte dont le mot de passe ne contient aucun de ces caractères spéciaux ou redéfinissez votre mot de passe de façon à ce qu’il n’en contienne pas.
 
-En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), vérifiez que le compte spécifié peut protéger le contenu. Par exemple, si vous avez limité la possibilité de protéger du contenu pour le groupe « Département informatique », le compte que vous spécifiez ici doit être un membre de ce groupe. Si ce n’est pas le cas, le message d’erreur suivant s’affiche : **Échec de la tentative de détection de l’emplacement du service d’administration et de l’organisation. Vérifiez que le service Microsoft Rights Management est activé pour votre organisation.**
+En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), vérifiez que le compte spécifié peut protéger le contenu. Par exemple, si vous avez limité la possibilité de protéger du contenu pour le groupe « Département informatique », le compte que vous spécifiez ici doit être un membre de ce groupe. Sinon, le message d’erreur suivant s’affiche : **Échec de la tentative de détection de l’emplacement du service d’administration et de l’organisation. Vérifiez que le service Microsoft Rights Management est activé pour votre organisation.**
 
 Vous pouvez utiliser un compte possédant l'un des privilèges suivants :
 
--   **Administrateur général pour votre client** : compte d’administrateur général pour votre client Office 365 ou Azure AD.
+-   **Administrateur général pour votre locataire** : Compte d’administrateur général pour votre locataire Office 365 ou votre locataire Azure AD.
 
--   **Administrateur général Azure Rights Management** : compte dans Azure Active Directory auquel a été affecté le rôle d’administrateur général Azure RMS.
+-   **Administrateur général Azure Rights Management** : Compte dans Azure Active Directory auquel a été affecté le rôle d’administrateur général Azure RMS.
 
 -   **Administrateur du connecteur Azure Rights Management** : compte dans Azure Active Directory disposant de droits permettant d’installer et d’administrer le connecteur RMS pour votre organisation.
 
@@ -94,7 +94,7 @@ Vous pouvez utiliser un compte possédant l'un des privilèges suivants :
     >     ```
     >     Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
     >     ```
-    >     Par exemple, tapez : **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
+    >     Par exemple, entrez : **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
     >
     >     Même si ces commandes affectent le rôle d’administrateur du connecteur, vous pouvez également utiliser le rôle GlobalAdministrator ici aussi.
 
@@ -145,7 +145,7 @@ Il est important d'autoriser l'objet adéquat. Pour qu'un serveur utilise le con
 
 Voici quelques informations relatives aux différents rôles de serveur :
 
--   Pour les serveurs exécutant Exchange : vous devez spécifier un groupe de sécurité. Notez que vous pouvez utiliser le groupe par défaut (**Serveurs Exchange**) créé et mis à jour automatiquement par Exchange, regroupant tous les serveurs Exchange de la forêt.
+-   Pour les serveurs exécutant Exchange : Vous devez spécifier un groupe de sécurité. Notez que vous pouvez utiliser le groupe par défaut (**Serveurs Exchange**) créé et mis à jour automatiquement par Exchange, regroupant tous les serveurs Exchange de la forêt.
 
 -   Pour les serveurs exécutant SharePoint :
 
@@ -178,13 +178,13 @@ Une fois le nom créé dans le système DNS et associé à une adresse IP, conf
 
 Utilisez les paramètres suivants pour configurer le cluster NLB :
 
--   Ports : 80 (HTTP) ou 443 (HTTPS)
+-   Ports : 80 (HTTP) ou 443 (HTTPS)
 
     Pour plus d'informations sur le choix du protocole HTTP ou du protocole HTTPS, consultez la section suivante.
 
--   Affinité : Aucune
+-   Affinité : Aucune
 
--   Méthode de distribution : Égal
+-   Méthode de distribution : Égal
 
 Ce nom que vous définissez pour le système d'équilibrage de charge (pour les serveurs exécutant le service de connecteur RMS) est le nom du connecteur RMS de votre organisation que vous utilisez par la suite afin de configurer les serveurs locaux pour qu’ils utilisent Azure RMS.
 

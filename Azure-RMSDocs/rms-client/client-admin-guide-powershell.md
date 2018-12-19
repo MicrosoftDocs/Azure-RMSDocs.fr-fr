@@ -4,18 +4,18 @@ description: Instructions et informations pour que les administrateurs gèrent l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 834c408e87e34415bb76041968f5bdee6db3e848
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: d707f32062df54975237d9ae6f7218d33cfe337a
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151025"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305656"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -53,10 +53,10 @@ La version actuelle du module AzureInformationProtection a les limitations suiva
 
 Avant de commencer à utiliser ces applets de commande, consultez les autres conditions préalables et instructions correspondant à votre déploiement :
 
-- [Azure Information Protection et le service Azure Rights Management](#azure-information-protection-service-and-azure-rights-management-service)
+- [Azure Information Protection et le service Azure Rights Management](#azure-information-protection-and-azure-rights-management-service)
 
-    - Applicable si vous utilisez la classification uniquement ou la classification avec la protection Rights Management : vous avez un abonnement qui inclut Azure Information Protection (par exemple, Enterprise Mobility + Security).
-    - S’applique si vous utilisez la protection uniquement avec le service Azure Rights Management : vous avez un abonnement qui inclut le service Azure Rights Management (par exemple, Office 365 E3 et Office 365 E5).
+    - Applicable si vous utilisez la classification uniquement ou la classification avec la protection Rights Management : Vous avez un abonnement incluant Azure Information Protection (par exemple Enterprise Mobility + Security).
+    - Applicable si vous utilisez la protection uniquement avec le service Azure Rights Management : Vous avez un abonnement qui inclut le service Azure Rights Management (par exemple Office 365 E3 et Office 365 E5).
 
 - [Active Directory Rights Management Services](#active-directory-rights-management-services)
 
@@ -86,19 +86,19 @@ En plus des prérequis pour l’installation du module Azure Information Protect
     
     - Modifier le Registre pour la découverte de service.
 
-#### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Condition préalable 1 : le service Azure Rights Management doit être activé
+#### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Prérequis 1 : Le service Azure Rights Management doit être activé
 
 Cette condition préalable s’applique si vous appliquez la protection des données à l’aide d’étiquettes ou en vous connectant directement au service Azure Rights Management.
 
 Si votre locataire Azure Information Protection n’est pas activé, consultez les instructions [d’activation d’Azure Rights Management](../activate-service.md).
 
-#### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Condition préalable 2 : supprimer la protection de fichiers pour les autres utilisateurs à l’aide de votre propre compte
+#### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Prérequis 2 : Pour supprimer la protection des fichiers pour les autres utilisateurs en utilisant votre propre compte
 
 Les scénarios classiques de suppression de la protection des fichiers pour les autres utilisateurs incluent la détection de données ou la récupération de données. Si vous utilisez des étiquettes pour appliquer la protection, vous pouvez supprimer la protection en définissant une nouvelle étiquette qui n’applique pas la protection ou en supprimant l’étiquette. Toutefois, il est plus probable que vous vous connectiez directement au service Azure Rights Management pour supprimer la protection.
 
 Pour supprimer la protection des fichiers, vous devez disposer d’un droit d’utilisation Rights Management ou être un super utilisateur. Pour la découverte de données ou la récupération de données, la fonctionnalité de super utilisateur est généralement utilisée. Pour activer cette fonctionnalité et configurer votre compte pour un super utilisateur, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../configure-super-users.md).
 
-#### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>Condition préalable 3 : protéger ou annuler la protection des fichiers sans intervention de l’utilisateur
+#### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>Prérequis 3 : Pour protéger ou déprotéger des fichiers sans intervention de l’utilisateur
 
 Vous pouvez vous connecter directement au service Azure Rights Management en mode non interactif pour protéger ou déprotéger des fichiers.
 
@@ -230,14 +230,14 @@ Notre exemple de commande ressemblerait à ceci :
 
 Comme indiqué dans la commande précédente, vous pouvez fournir les valeurs avec une seule commande en utilisant un script à exécuter en mode non interactif. Mais pour les besoins du test, vous pouvez simplement taper Set-RMSServerAuthentication et fournir les valeurs une par une quand vous y êtes invité. Quand la commande est terminée, le client fonctionne en « mode serveur », qui convient à une utilisation non interactive comme les scripts et l’infrastructure de classification des fichiers Windows Server.
 
-Envisagez de faire de ce compte de principal de service un super utilisateur : pour vérifier que ce compte peut toujours déprotéger des fichiers pour d’autres utilisateurs, vous pouvez le configurer comme super utilisateur. De la même façon que quand vous configurez un compte d’utilisateur standard comme super utilisateur, vous utilisez l’applet de commande Azure RMS [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), mais vous spécifiez le paramètre **- ServicePrincipalId** avec votre valeur AppPrincipalId.
+Envisagez de faire de ce compte de principal du service un super utilisateur : Pour garantir que ce compte peut toujours déprotéger des fichiers pour d’autres utilisateurs, vous pouvez le configurer comme super utilisateur. De la même façon que quand vous configurez un compte d’utilisateur standard comme super utilisateur, vous utilisez l’applet de commande Azure RMS [Add-AadrmSuperUser](/powershell/module/aadrm/add-aadrmsuperuser), mais vous spécifiez le paramètre **- ServicePrincipalId** avec votre valeur AppPrincipalId.
 
 Pour plus d’informations sur les super utilisateurs, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../configure-super-users.md).
 
 > [!NOTE]
 > Pour utiliser votre propre compte pour vous authentifier auprès du service Azure Rights Management, inutile d’exécuter Set-RMSServerAuthentication avant de protéger ou d’annuler la protection de fichiers, ou d’obtenir des modèles.
 
-#### <a name="prerequisite-4-for-regions-outside-north-america"></a>Condition préalable 4 : pour les régions en dehors de l’Amérique du Nord
+#### <a name="prerequisite-4-for-regions-outside-north-america"></a>Prérequis 4 : Pour les régions en dehors de l’Amérique du Nord
 
 Quand vous utilisez un compte de principal de service pour protéger des fichiers et télécharger des modèles à l’extérieur de la région Azure Amérique du Nord, vous devez modifier le Registre : 
 
@@ -265,7 +265,7 @@ Quand vous utilisez un compte de principal de service pour protéger des fichier
 
 ### <a name="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service"></a>Exemples de scénarios d’utilisation des applets de commande pour Azure Information Protection et le service Azure Rights Management
 
-Il est plus efficace d’utiliser des étiquettes pour classifier et protéger les fichiers, car il existe deux applets de commande dont vous avez besoin. Elles peuvent être exécutées seules ou ensemble : [Get-AIPFileStatus](/powershell/azureinformationprotection/get-aipfilestatus) et [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Consultez l’aide de ces deux applets de commande pour plus d’informations et d’exemples.
+Il est plus efficace d’utiliser des étiquettes pour classifier et protéger les fichiers, car deux applets de commande seulement sont nécessaires. Elles peuvent être exécutées seules ou ensemble : [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) et [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Consultez l’aide de ces deux applets de commande pour plus d’informations et d’exemples.
 
 Toutefois, pour protéger ou annuler la protection de fichiers en vous connectant directement au service Azure Rights Management, vous devez généralement exécuter une série d’applets de commande comme décrit ci-après.
 
@@ -273,7 +273,7 @@ Tout d’abord, si vous avez besoin de vous authentifier auprès du service Azur
 
     Set-RMSServerAuthentication
 
-Lorsque vous y êtes invité, entrez les trois identificateurs, comme décrit dans [Condition préalable 3 : protéger ou annuler la protection des fichiers sans intervention de l’utilisateur](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction).
+Quand vous y êtes invité, entrez les trois identificateurs comme décrit dans [Prérequis 3 : Pour protéger ou déprotéger des fichiers sans intervention de l’utilisateur](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction).
 
 Avant de pouvoir protéger les fichiers, vous devez télécharger les modèles Rights Management sur votre ordinateur, puis identifier celui à utiliser ainsi que le numéro d’identification correspondant. À partir du résultat, vous pouvez alors copier l’ID du modèle :
 
@@ -474,7 +474,7 @@ Lorsque le jeton expire, exécutez l’applet de commande pour acquérir un nouv
 
 Si vous exécutez cette applet de commande sans paramètres, le compte acquiert un jeton d’accès qui est valide 90 jours ou jusqu’à ce que votre mot de passe expire.  
 
-Pour contrôler à quel moment le jeton d’accès expire, exécutez cette applet de commande avec des paramètres. Vous pouvez ainsi configurer le jeton d’accès pour qu’il expire au bout d’un an, de deux ans ou jamais. Cette configuration nécessite que vous disposiez de deux applications inscrites dans Azure Active Directory : une application de type **application web/API** et une **application native**. Les paramètres de cette applet de commande utilisent les valeurs de ces applications.
+Pour contrôler à quel moment le jeton d’accès expire, exécutez cette applet de commande avec des paramètres. Vous pouvez ainsi configurer le jeton d’accès pour qu’il expire au bout d’un an, de deux ans ou jamais. Cette configuration nécessite de disposer de deux applications inscrites dans Azure Active Directory : Une application **Web / API** et une **application native**. Les paramètres de cette applet de commande utilisent les valeurs de ces applications.
 
 Après avoir exécuté cette applet de commande, vous pouvez exécuter les applets de commande d’étiquetage dans le contexte du compte d’utilisateur que vous avez créé.
 
@@ -490,7 +490,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     
     Si vous le souhaitez, spécifiez un autre nom. Il doit être unique pour chaque locataire.
     
-    - Type d’application : **Application/API web**
+    - Type d’application : **Application/API web**
     
     - URL de connexion : **http://localhost**
 
@@ -510,7 +510,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     
     Si vous le souhaitez, spécifiez un autre nom. Il doit être unique pour chaque locataire.
     
-    - Type d’application : **Native**
+    - Type d’application : **Native**
     
     - URL de connexion : **http://localhost**
 
@@ -551,7 +551,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
 5. Vérifiez que le jeton est enregistré pour le compte de service, et supprimez le script PowerShell.
 
-#### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Étape 1 : créer un script PowerShell sur votre ordinateur local
+#### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Étape 1 : Créez un script PowerShell sur votre ordinateur local.
 
 1. Sur votre ordinateur, créez un nouveau script PowerShell nommé Aipauthentication.ps1.
 
@@ -563,7 +563,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
     
     Par exemple : `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
     
-#### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Étape 2 : exécuter Set-AIPAuthentication pour obtenir un jeton d’accès et le copier dans le Presse-papiers
+#### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Étape 2 : Exécutez Set-AIPAuthentication pour obtenir un jeton d’accès et copiez-le dans le Presse-papiers.
 
 1. Ouvrez une session Windows PowerShell.
 
@@ -573,7 +573,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
     
     Par exemple : `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
 
-#### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Étape 3 : modifier le script PowerShell pour fournir le jeton
+#### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Étape 3 : Modifier le script PowerShell pour fournir le jeton
 
 1. Dans votre script PowerShell, spécifiez la valeur du jeton en collant la chaîne depuis le Presse-papiers, puis enregistrez le fichier.
 
@@ -583,7 +583,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
 3. Copiez ce script PowerShell sur l’ordinateur qui étiquettera et protégera les fichiers, puis supprimez la version d’origine sur votre ordinateur. Par exemple, vous copiez le script PowerShell sur C:\Scripts\Aipauthentication.ps1 sur un ordinateur Windows Server.
 
-#### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>Étape 4 : créer une tâche qui exécute le script PowerShell
+#### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>Étape 4 : Créer une tâche qui exécute le script PowerShell
 
 1. Assurez-vous que le compte de service qui étiquettera et protégera les fichiers a le droit d’**Ouvrir une session en tant que programme de traitement par lots**.
 
@@ -597,7 +597,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
 3. Exécuter cette tâche manuellement.
 
-#### <a name="step-4-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>Étape 4 : vérifier que le jeton est enregistré et supprimer le script PowerShell
+#### <a name="step-4-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>Étape 4 : Vérifier que le jeton est enregistré et supprimer le script PowerShell
 
 1. Vérifiez que le jeton est maintenant stocké dans le dossier %localappdata%\Microsoft\MSIP pour le profil de compte de service. Cette valeur est protégée par le compte de service.
 

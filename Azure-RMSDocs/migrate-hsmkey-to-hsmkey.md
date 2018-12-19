@@ -4,20 +4,20 @@ description: Instructions qui font partie du chemin de migration d’AD RMS ver
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/13/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7ddaf0a54aa116a317cee8699caf437faae9676f
-ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
+ms.openlocfilehash: 77037f5ab82e7b36899c4b1bdb2399d27b662a5d
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52330318"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305033"
 ---
-# <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par HSM à clé protégée par HSM
+# <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par HSM à clé protégée par HSM
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
@@ -40,7 +40,7 @@ Avant de commencer, vérifiez que votre organisation dispose d’un coffre de cl
 > Si vous effectuez les étapes de configuration pour Azure Key Vault et que vous n’êtes pas familiarisé avec ce service Azure, il peut être utile de consulter d’abord [Prise en main d’Azure Key Vault](/azure/key-vault/key-vault-get-started). 
 
 
-## <a name="part-1-transfer-your-hsm-key-to-azure-key-vault"></a>Partie 1 : Transfert de votre clé HSM vers Azure Key Vault
+## <a name="part-1-transfer-your-hsm-key-to-azure-key-vault"></a>Partie 1 : Transfert de votre clé HSM vers Azure Key Vault
 
 Ces procédures sont effectuées par l’administrateur d’Azure Key Vault.
 

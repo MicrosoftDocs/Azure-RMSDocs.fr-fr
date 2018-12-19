@@ -4,18 +4,18 @@ description: Informations sur les fichiers du client et la journalisation de l�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/08/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d935d5eafd3d893b67bbdccb1893bf67d418ae79
-ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
+ms.openlocfilehash: 2aa0e470d9a2801b695c6b2c9d922836c010690c
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866116"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304908"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 
@@ -47,23 +47,23 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
 
 - Action :
 
-    - Définir l’étiquette : ID d’informations 101
+    - Définir l’étiquette :  ID d’information 101
     
-    - Définir l’étiquette (inférieure) : ID d’informations 101
+    - Définir l’étiquette (inférieure) :  ID d’information 101
     
-    - Définir l’étiquette (supérieure) : ID d’informations 101
+    - Définir l’étiquette (supérieure) : ID d’information 101
     
-    - Supprimer l’étiquette : ID d’informations 104
+    - Supprimer l’étiquette : ID d’information 104
    
-    - Astuce recommandée : ID d’informations 105
+    - Recommandé : Information 105
     
-    - Appliquer la protection personnalisée : ID d’informations 201
+    - Appliquer la protection personnalisée : ID d’information 201
     
-    - Supprimer la protection personnalisée : ID d’informations 202
+    - Supprimer la protection personnalisée : ID d’information 202
     
-    - Connexion (opérationnelle) : ID d’informations 902
+    - Connexion (opérationnelle) : ID d’information 902
     
-    - Télécharger la stratégie (opérationnelle) : ID d’informations 901
+    - Télécharger la stratégie (opérationnelle) : ID d’information 901
     
 - Source de l’action :
     

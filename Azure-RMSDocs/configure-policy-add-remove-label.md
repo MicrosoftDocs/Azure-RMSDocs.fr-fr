@@ -4,16 +4,16 @@ description: Ajouter ou supprimer une étiquette Azure Information Protection à
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: f097ec2f0e3db75d679e6c0a6251fb128f583d4b
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 367426324af487cbdf0ddaac53eb86aa89c168b7
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023285"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304847"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Ajouter une étiquette à une stratégie Azure Information Protection ou la supprimer de celle-ci
 
@@ -33,13 +33,13 @@ Pour créer une stratégie délimitée afin que l’étiquette s’applique à u
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. À partir de l’option de menu **Classifications** > **Stratégies** : dans le panneau **Azure Information Protection** - **Stratégies**, sélectionnez **Globale** si l’étiquette à ajouter ou supprimer s’applique à tous les utilisateurs.
+2. À partir de l’option de menu **Classifications** > **Stratégies** : Dans le panneau **Azure Information Protection** - **Stratégies**, sélectionnez **Globale** si l’étiquette à ajouter ou supprimer s’applique à tous les utilisateurs.
 
     Si l’étiquette à ajouter ou supprimer s’applique à une partie des utilisateurs, sélectionnez votre stratégie délimitée à la place.
 
 3. Dans le panneau **Stratégie**, sélectionnez **Ajouter ou supprimer des étiquettes**.
 
-4. Dans le panneau **Stratégie : ajouter ou supprimer des étiquettes**, toutes les étiquettes se trouvant déjà dans une stratégie sont accompagnées d’une case cochée et du nom de la stratégie correspondante dans la colonne **STRATÉGIE**.
+4. Dans le panneau **Stratégie : Ajouter ou supprimer des étiquettes**, vous voyez une case cochée en regard de toutes les étiquettes qui se trouvent déjà dans une stratégie, et le nom de la stratégie correspondante dans la colonne **STRATÉGIE**.
      
     Les sous-étiquettes sont mises en retrait. Dans une stratégie délimitée, les étiquettes qui sont héritées de la stratégie globale s’affichent comme étant non disponibles.
     

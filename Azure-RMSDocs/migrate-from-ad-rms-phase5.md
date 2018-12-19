@@ -4,22 +4,22 @@ description: Phase 5 de la migration d’AD RMS vers Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e535295c4393d2d7267174f587fcbbf34fa986b0
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 49d91c616967e81e306cc296703a5a1bac8fa277
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023870"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305367"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Phase de migration 5 : Tâches de post-migration
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Utilisez les informations suivantes pour la Phase 5 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent les étapes 10 à 12 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
@@ -38,7 +38,7 @@ Pour supprimer le point de connexion de service, assurez-vous que vous êtes con
 
 4. Sélectionnez **Supprimer le point de connexion de service actuel**, puis cliquez sur **OK**.
 
-Effectuez à présent le monitoring de l’activité de vos serveurs AD RMS. Par exemple, vérifiez [les demandes dans le rapport sur l’intégrité du système](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), [la table ServiceRequest](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) ou [l’audit de l’accès utilisateur au contenu protégé](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). 
+Effectuez à présent le monitoring de l’activité de vos serveurs AD RMS. Par exemple, vérifiez [les demandes dans le rapport sur l’intégrité du système](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), [la table ServiceRequest](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) ou [l’audit de l’accès utilisateur au contenu protégé](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). 
 
 Après avoir confirmé que les clients RMS ne communiquent plus avec ces serveurs et que les clients utilisent avec succès Azure Information Protection, vous pouvez supprimer le rôle serveur AD RMS de ces serveurs. Si vous utilisez des serveurs dédiés, vous pouvez, par mesure de précaution, les arrêter pendant un certain temps. Cela vous donne le temps de confirmer l’absence de problèmes qui pourraient vous obliger à redémarrer ces serveurs pour garantir la continuité de service pendant que vous étudiez la raison pour laquelle les clients n’utilisent pas Azure Information Protection.
 
@@ -49,7 +49,7 @@ Après avoir déprovisionné vos serveurs AD RMS, vous pouvez en profiter pour p
 
 ## <a name="step-11-complete-client-migration-tasks"></a>Étape 11. Effectuer les tâches de migration des clients
 
-Pour les clients d’appareils mobiles et les ordinateurs Mac : Supprimez les enregistrements SRV DNS que vous avez créés lors du déploiement de l’[extension d’appareil mobile AD RMS](https://technet.microsoft.com/library/dn673574.aspx).
+Pour des clients appareils mobiles et des ordinateurs Mac : Supprimez les enregistrements SRV DNS que vous avez créés lors du déploiement de l’ [extension d'appareil mobile AD RMS](https://technet.microsoft.com/library/dn673574.aspx).
 
 Une fois ces changements DNS propagés, ces clients découvrent automatiquement le service Azure Rights Management et commencent à l’utiliser. Toutefois, les ordinateurs Mac qui exécutent Office Mac mettent en cache les informations d’AD RMS. Pour ces ordinateurs, ce processus peut prendre jusqu’à 30 jours. 
 
@@ -95,7 +95,7 @@ Pour supprimer les contrôles d’intégration :
 
     Dans la sortie, **Licence** doit indiquer **False** et aucun GUID n’est affiché pour **SecurityGroupOjbectId**
 
-Enfin, si vous utilisez Office 2010 et que vous avez activé la tâche de **gestion des modèles de stratégie de droits AD RMS (automatique)** dans la bibliothèque du Planificateur de tâches Windows, désactivez cette tâche parce qu’elle n’est pas utilisée par le client Azure Information Protection. Cette tâche est généralement activée par l’utilisation d’une stratégie de groupe et prend en charge un déploiement AD RMS. Vous trouverez cette tâche à l’emplacement suivant : **Microsoft** > **Windows** > **Active Directory Rights Management Services Client**
+Enfin, si vous utilisez Office 2010 et que vous avez activé la tâche de **gestion des modèles de stratégie de droits AD RMS (automatique)** dans la bibliothèque du Planificateur de tâches Windows, désactivez cette tâche parce qu’elle n’est pas utilisée par le client Azure Information Protection. Cette tâche est généralement activée par l’utilisation d’une stratégie de groupe et prend en charge un déploiement AD RMS. Vous trouverez cette tâche à l’emplacement suivant : **Microsoft** > **Windows** > **Client AD RMS (Active Directory Rights Management Services)**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Étape 12. Renouveler votre clé de locataire Azure Information Protection
 
@@ -113,7 +113,7 @@ Pour renouveler votre clé de locataire Azure Information Protection :
     
         (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Si vous gérez vous-même votre clé de locataire (BYOK)**  : dans Azure Key Vault, répétez le processus de création de la clé pour votre locataire Azure Information Protection, puis réexécutez l’applet de commande [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) pour spécifier l’URL de cette nouvelle clé. 
+- **Si vous gérez vous-même votre clé de locataire (BYOK)**  : dans Azure Key Vault, répétez le processus de création de votre clé pour votre locataire Azure Information Protection, puis réexécutez l’applet de commande [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) pour spécifier l’URI de cette nouvelle clé. 
 
 Pour plus d’informations sur la gestion de votre clé de locataire Azure Information Protection, consultez [Opérations pour votre clé de locataire Azure Information Protection](./operations-tenant-key.md).
 

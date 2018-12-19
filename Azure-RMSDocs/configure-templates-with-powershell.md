@@ -4,22 +4,22 @@ description: Tout ce que vous pouvez faire dans le portail Azure pour créer et 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2018
-ms.topic: article
+ms.date: 12/12/2018
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 200a8ab379a6e29fcbe59b60eacaf40ac47569c4
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: ee40d0c742695d449fd807f364e87d9c30f6079f
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805657"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304959"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>Informations de référence sur PowerShell pour les modèles de protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Les paramètres de protection pour Azure Information Protection sont enregistrés dans des modèles de protection. Tout ce que vous pouvez faire dans le portail Azure pour créer et gérer des paramètres de protection, vous pouvez le faire également à partir de la ligne de commande via PowerShell. 
 

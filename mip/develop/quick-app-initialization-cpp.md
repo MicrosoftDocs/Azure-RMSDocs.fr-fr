@@ -4,16 +4,16 @@ description: Guide de démarrage rapide vous montrant comment écrire la logique
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/08/2019
 ms.author: bryanla
-ms.openlocfilehash: 578c5aa69faa986663ea6c164d94e5940580167d
-ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
-ms.translationtype: HT
+ms.openlocfilehash: 686321c4f376679103b92419b5b86abaa74dc394
+ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866134"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136228"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C++)
+# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation de l’application cliente (C++)
 
 Ce guide de démarrage rapide montre comment implémenter le modèle d’initialisation de client utilisé par le kit SDK C++ MIP au moment de l’exécution. 
 
@@ -25,7 +25,7 @@ Ce guide de démarrage rapide montre comment implémenter le modèle d’initial
 Si vous ne l’avez pas déjà fait, veillez à :
 
 - Exécuter la procédure fournie dans [Installation et configuration du kit SDK Microsoft Information Protection (MIP)](setup-configure-mip.md). Ce guide de démarrage rapide « initialisation d’une application cliente » s’appuie sur une installation et une configuration correctes du kit SDK.
-- Si vous le souhaitez :
+- Si vous le souhaitez :
   - Passez en revue [Objets de profil et moteur](concept-profile-engine-cpp.md). Les objets de profil et moteur sont des concepts universels, requis par les clients qui utilisent les API MIP de fichier/stratégie/protection. 
   - Passez en revue les [concepts d’authentification](concept-authentication-cpp.md) pour savoir comment l’authentification et le consentement sont implémentés par le kit SDK et l’application cliente.
   - Passez en revue les [concepts liés aux observateurs](concept-async-observers.md) pour en savoir plus sur les observateurs et la manière dont ils sont implémentés. Le kit SDK MIP utilise le modèle d’observateur pour implémenter des notifications d’événements asynchrones.
@@ -259,8 +259,8 @@ Comme mentionné, des objets de profil et de moteur sont requis pour les clients
    int main()
    {
      // Construct/initialize objects required by the application's profile object
-     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, friendly name)
-                 "<friendly-name>" };
+     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, app name)
+                 "<application-name>" };
      auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
@@ -310,10 +310,10 @@ Comme mentionné, des objets de profil et de moteur sont requis pour les clients
 
 3. Remplacez les valeurs d’espace réservé dans le code source que vous venez de coller, en utilisant les valeurs suivantes :
 
-   | Espace réservé | Valeur | Exemple |
+   | Espace réservé | Value | Exemple |
    |:----------- |:----- |:--------|
-   | \<application-id\> | L’ID d’application Azure AD affecté à l’application inscrite dans « Installation et configuration du kit SDK MIP » (2 instances).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
-   | \<friendly-name\> | Un nom convivial défini par l’utilisateur pour votre application. | AppInitialization |
+   | \<application-id\> | L’Azure AD Application ID (GUID) affecté à l’application inscrite dans [étape #2 du « programme d’installation du SDK MIP et la configuration »](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) article. Remplacez les instances de 2.  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
+   | \<nom de l’application\> | Un nom convivial défini par l’utilisateur pour votre application. Doit contenir des caractères ASCII valides (à l’exclusion des « ; ») et dans l’idéal, correspond au nom d’application que vous avez utilisé dans votre inscription Azure AD. | AppInitialization |
    | \<engine-account\> | Le compte utilisé pour l’identité du moteur. Lorsque vous vous authentifiez avec un compte d’utilisateur lors de l’acquisition du jeton, il doit correspondre à cette valeur. | user1@tenant.onmicrosoft.com |
    | \<engine-state\> | L’état défini par l’utilisateur à associer au moteur. | MyAppState |
 

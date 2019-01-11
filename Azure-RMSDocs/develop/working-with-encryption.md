@@ -2,8 +2,8 @@
 title: Procédure d’utilisation des paramètres de chiffrement | Azure RMS
 description: Orientation pour les packages de chiffrement Azure RMS et les captures de code pour leur utilisation.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d8d5c76c08c7518c8279267a6c1e15f559d6ea54
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6c46df1ac7aca8d4668ff71bb91195d059f8a3a6
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147149"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071719"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>Comment : utiliser des paramètres de chiffrement
 
@@ -30,7 +30,7 @@ Cette rubrique vous oriente vers nos offres de chiffrement et présente quelques
 > [!IMPORTANT]
 > La consommation des fichiers protégés par le chiffrement *AES 256* est prise en charge depuis la [version d’octobre 2014](release-notes-rtm.md). Si vous exécutez des applications créées avec une version du SDK antérieure à octobre 2014, cette mise à jour interrompra vos applications. Vérifiez que les clients des applications que vous créez utilisent le SDK mis à jour ou acceptent de passer immédiatement à la version la plus récente de votre application.
 
- 
+ 
 ## <a name="api-encryption-support"></a>Prise en charge du chiffrement dans l’API
 
 À compter de la [mise à jour de mars 2015](release-notes-rtm.md), nos API et les packages de chiffrement associés comprennent les trois indicateurs suivants :

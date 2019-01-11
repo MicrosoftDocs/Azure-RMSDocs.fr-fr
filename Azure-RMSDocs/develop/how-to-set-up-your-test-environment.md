@@ -2,8 +2,8 @@
 title: Test de votre application | Azure RMS
 description: Instructions de configuration de votre application pour le test.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 481922859e14009e345a38853c15e51b065d5387
-ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
+ms.openlocfilehash: 323816b04f59d8a18015157052f097531b34cf03
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266373"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071775"
 ---
 # <a name="testing-your-application"></a>Test de votre application
 

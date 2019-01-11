@@ -1,8 +1,8 @@
 ---
 title: Bonnes pratiques de sécurité pour Information Protection
 description: Vous développez de meilleures applications compatibles RMS en suivant les bonnes pratiques pour Information Protection.
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 12/13/2018
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: c3a342dfa6be9640504bac4b44ef910534b1497d
-ms.sourcegitcommit: c9a0d81c18ea79a2520baa4b3777b06a72f87f60
+ms.openlocfilehash: 3b22a8723a232cd05349a19987686c25dc5f320f
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53382450"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070296"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Bonnes pratiques de sécurité pour Information Protection
 
@@ -89,7 +89,7 @@ Azure Information Protection permet à un utilisateur de déchiffrer ou non des 
 - L’implémentation par le client de droits XrML v.1.2 doit être cohérente avec les définitions de ces droits, comme décrit dans les spécifications XrML disponibles sur le site web de XrML (http://www.xrml.org). Tout droit spécifique à votre application doit être défini pour toutes les entités qui présentent un intérêt dans votre application.
 - Votre suite de tests et votre processus de test doit vérifier que votre application s’exécute correctement en fonction des droits qu’elle prend en charge. Elle doit également vérifier qu’elle **n’agit pas** en utilisant des droits non pris en charge.
 - Si vous créez une application de publication, vous devez rendre disponible des informations expliquant les droits intrinsèques utilisés. Il s’agit des droits qui sont et de ceux qui ne sont pas pris en charge par l’application de publication, et de la façon dont ces droits doivent être interprétés. En outre, l’interface utilisateur doit indiquer clairement à l’utilisateur final les implications de chaque droit accordé ou refusé pour une information spécifique.
-- Les droits abstraits inclus dans de nouveaux droits implémentés par une application doivent être mappés à la nouvelle terminologie. Par exemple, un nouveau droit appelé GESTIONNAIRE peut inclure des droits de COPIE, IMPRESSION et MODIFICATION comme droits abstraits.
+- Les droits abstraits inclus dans de nouveaux droits implémentés par une application doivent être mappés à la nouvelle terminologie. Par exemple, un nouveau droit appelé GESTIONNAIRE peut inclure des droits de COPIE, d’IMPRESSION et de MODIFICATION comme droits abstraits.
 
 ### <a name="recommended-standard"></a>Norme recommandée
 

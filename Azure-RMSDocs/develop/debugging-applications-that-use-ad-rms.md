@@ -2,8 +2,8 @@
 title: 'Procédure : Débogage d’une application avec gestion des droits | Azure RMS'
 description: La rubrique suivante indique comment déboguer une application et utiliser le journal des événements Windows.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: ed627c98238028fc14f977f2ce7475f356ceb889
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: cb77177ecb0c92f3e991e0f6d06a55fa2c332873
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147370"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071548"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>Comment : déboguer une application avec gestion des droits
 
@@ -32,21 +32,21 @@ Vous pouvez activer le suivi du débogage à l’aide de la clé de Registre sui
 
 ```
 HKEY_LOCAL_MACHINE
-   SOFTWARE
-      Microsoft
-         MSIPC
-            "Trace" = 00000001
-            Data type
-            dword
+   SOFTWARE
+      Microsoft
+         MSIPC
+            "Trace" = 00000001
+            Data type
+            dword
 ```
 
 ### <a name="application-logging-by-using-the-windows-event-log"></a>Journalisation des applications à l’aide du journal des événements Windows
 
 Le nom du journal des événements est Microsoft-RMS-MSIPC/Debug. Cela signifie que votre journal apparaît dans l’Observateur d’événements Windows sous la forme « Journaux des applications et des services\\Microsoft\\RMS\\MSIPC\\Debug ».
 
-**Remarque** Le journal est activé par défaut et la valeur 3 est définie pour le niveau de commentaires.
+**Remarque**  Le journal est activé par défaut et la valeur 3 est définie pour le niveau de commentaires.
 
- 
+ 
 
 Pour modifier les paramètres de la fonctionnalité de journalisation, vous pouvez utiliser l’interface utilisateur pour l’Observateur d’événements Windows ou Wevtutil, un outil de ligne de commande intégré à Windows.
 
@@ -62,4 +62,4 @@ Par exemple, la commande suivante active le journal des événements MSIPC et af
 
 **wevtutil sl Microsoft-RMS-MSIPC/Debug /e:true /l:4**
 
-**Remarque** Dans l’Observateur d’événements Windows, dans le menu **Affichage**, sélectionnez **Afficher les journaux d’analyse et de débogage** pour afficher le journal de débogage MSIPC.
+**Remarque**  Dans l’Observateur d’événements Windows, dans le menu **Affichage**, sélectionnez **Afficher les journaux d’analyse et de débogage** pour afficher le journal de débogage MSIPC.

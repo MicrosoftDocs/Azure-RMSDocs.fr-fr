@@ -2,8 +2,8 @@
 title: Procédure pour autoriser le fonctionnement de votre application de service avec le service RMS cloud | Azure RMS
 description: Cette rubrique décrit les étapes qui permettent de configurer votre application de service pour qu’elle utilise Azure Rights Management.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,18 +12,18 @@ ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 7f9965628cce150c8bb53e02b206c4291677f8bc
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: d495abaec5bd32eb7082e8c1774011f9b765448b
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023466"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070223"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Comment : permettre à votre application de service de fonctionner avec le service RMS cloud
 
 Cette rubrique décrit les étapes qui permettent de configurer votre application de service pour qu’elle utilise Azure Rights Management. Pour plus d’informations, consultez [Prise en main d’Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
 
-**Important**   Pour pouvoir utiliser votre application de service du kit de développement logiciel (SDK) Rights Management Services 2.1 avec Azure RMS, vous devez créer vos propres clients (tenants). Pour plus d’informations, consultez [Conditions requises pour Azure RMS : abonnements cloud qui prennent en charge Azure RMS](../requirements.md).
+**Important**   Pour pouvoir utiliser votre application de service du kit de développement logiciel (SDK) Rights Management Services 2.1 avec Azure RMS, vous devez créer vos propres clients (tenants). Pour plus d’informations, consultez [Configuration requise d’Azure RMS : Abonnements cloud prenant en charge Azure RMS](../requirements.md)
 
 ## <a name="prerequisites"></a>Prérequis
 

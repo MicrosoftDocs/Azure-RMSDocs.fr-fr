@@ -2,8 +2,8 @@
 title: Configuration de l’API de fichier | Azure RMS
 description: Le comportement de l’API de fichier peut être configuré via les paramètres du Registre.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1323984258b64e9d28142a0209a89d3791ab03dd
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0b05498730d064dfa2b7fb2183b1a8694c1fbf63
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148645"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070619"
 ---
 # <a name="file-api-configuration"></a>Configuration de l’API de fichier
 
@@ -45,7 +45,7 @@ Les sections suivantes décrivent les clés et valeurs de clés qui contrôlent 
 
 **Type** : Clé
 
-**Description** : Spécifie les informations de configuration d’une extension de fichier spécifique ; par exemple TXT, JPG, etc.
+**Description** : Spécifie les informations de configuration d’une extension de fichier spécifique ; par exemple TXT, JPG, etc.
 
 - Le caractère générique « * » est autorisé. Toutefois, le paramètre d’une extension spécifique est prioritaire sur le paramètre du caractère générique. Le caractère générique n’affecte pas les paramètres des fichiers Microsoft Office. Vous devez désactiver explicitement ces derniers à l’aide du type de fichier.
 - Pour spécifier des fichiers qui n’ont pas d’extension, utilisez « . »
@@ -60,12 +60,12 @@ Pour spécifier le comportement de la protection, définissez la valeur **Encryp
 
 **Description** : Contient l’une des trois valeurs suivantes :
 
-- **Off** : Le chiffrement est désactivé.
+- **Désactivé** : Le chiffrement est désactivé.
 
 > [!Note]
 > Ce paramètre n’a aucune incidence sur le déchiffrement. Tout fichier chiffré, que ce soit via la protection Native ou la protection Pfile, peut être déchiffré du moment que l’utilisateur dispose du droit **EXTRACT**.
 
-- **Native** : Le chiffrement natif est utilisé. Pour les fichiers Office, le fichier chiffré a la même extension que le fichier d’origine. Par exemple, un fichier avec l’extension de fichier .docx est chiffré en fichier avec l’extension .docx. Les autres fichiers auxquels une protection native peut être appliquée sont chiffrés en fichiers avec une extension au format p*zzz*, où *zzz* représente l’extension de fichier d’origine. Par exemple, les fichiers .txt sont chiffrés en fichiers portant l’extension .ptxt. La liste des extensions de fichiers pouvant bénéficier d’une protection native est dressée ci-après.
+- **Natif** :  Le chiffrement natif est utilisé. Pour les fichiers Office, le fichier chiffré a la même extension que le fichier d’origine. Par exemple, un fichier avec l’extension de fichier .docx est chiffré en fichier avec l’extension .docx. Les autres fichiers auxquels une protection native peut être appliquée sont chiffrés en fichiers avec une extension au format p*zzz*, où *zzz* représente l’extension de fichier d’origine. Par exemple, les fichiers .txt sont chiffrés en fichiers portant l’extension .ptxt. La liste des extensions de fichiers pouvant bénéficier d’une protection native est dressée ci-après.
 
 - **Pfile** : Le chiffrement PFile est utilisé. L’extension .pfile est ajoutée à l’extension d’origine du fichier chiffré. Par exemple, une fois le chiffrement effectué, un fichier .txt a l’extension .txt.pfile.
 
@@ -91,19 +91,19 @@ Vous pouvez ajouter une prise en charge native pour tous les types de fichiers (
 
 -   Extensions de fichiers : doc, dot, xla, xls, xlt, pps, ppt, docm, docx, dotm, dotx, xlam, xlsb, xlsm, xlsx, xltm, xltx, xps, potm, potx, ppsx, ppsm, pptm, pptx, thmx, vsdx, vsdm, vssx, vssm, vstx, and vstm. 
 -   Type de protection = Native (par défaut) : sample.docx est chiffré en sample.docx
--   Type de protection = Pfile : pour les fichiers Office, le résultat est le même qu’avec la protection native.
--   Off : Désactive le chiffrement.
+-   Type de protection = Pfile : pour les fichiers Office, le résultat est le même qu’avec la protection native.
+-   Off : désactive le chiffrement.
 
 **Fichiers PDF**
 
 -   Type de protection = Native : sample.pdf est chiffré et nommé sample.ppdf
 -   Type de protection = Pfile : sample.pdf est chiffré et nommé sample.pdf.pfile.
--   Off : Désactive le chiffrement.
+-   Off : désactive le chiffrement.
 
 **Tous les autres formats de fichiers**
 
 -   Type de protection = Pfile : sample.*zzz* est chiffré et nommé sample.*zzz*.pfile, où *zzz* représente l’extension de fichier d’origine.
--   Off : Désactive le chiffrement.
+-   Off : désactive le chiffrement.
 
 ### <a name="examples"></a>Exemples
 
@@ -111,38 +111,38 @@ Les paramètres suivants activent le chiffrement PFile pour les fichiers txt. La
 
 ```
 HKEY_LOCAL_MACHINE
-   Software
-      Microsoft
-         MSIPC
-            FileProtection
-               txt
-                  Encryption = Pfile
+   Software
+      Microsoft
+         MSIPC
+            FileProtection
+               txt
+                  Encryption = Pfile
 ```
 
 Les paramètres suivants activent le chiffrement PFile pour tous les fichiers non-Office, à l’exception des fichiers txt. La protection native est appliquée aux fichiers Office (par défaut) mais la protection est bloquée pour les fichiers txt. Pour tous les autres fichiers, la protection PFile est appliquée.
 
 ```
 HKEY_LOCAL_MACHINE
-   Software
-      Microsoft
-         MSIPC
-            FileProtection
-               *
-                  Encryption = Pfile
-               txt
-                  Encryption = Off
+   Software
+      Microsoft
+         MSIPC
+            FileProtection
+               *
+                  Encryption = Pfile
+               txt
+                  Encryption = Off
 ```
 
 Les paramètres suivants désactivent le chiffrement natif pour les fichiers docx. Pour les fichiers Office, à l’exception des fichiers docx, la protection native est appliquée (par défaut). Pour tous les autres fichiers, la protection est bloquée (par défaut).
 
 ```
 HKEY_LOCAL_MACHINE
-   Software
-      Microsoft
-         MSIPC
-            FileProtection
-               docx
-                  Encryption = Off
+   Software
+      Microsoft
+         MSIPC
+            FileProtection
+               docx
+                  Encryption = Off
 ```
 
 ## <a name="related-articles"></a>Articles connexes

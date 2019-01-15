@@ -2,8 +2,8 @@
 title: Fichiers d’environnement de développement | Azure RMS
 description: Cette rubrique présente les fichiers d’environnement de développement et leurs emplacements d’installation relatifs sur votre ordinateur.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,20 +12,20 @@ ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 3dffcdddae1ba7522671694cb909c21b4e096c89
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 80993b63a50e4d180429f841698638219f7725a0
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147761"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071435"
 ---
 # <a name="development-environment-files"></a>Fichiers d’environnement de développement
 
 Cette rubrique présente les fichiers d’environnement de développement et leurs emplacements d’installation relatifs sur votre ordinateur.
 
-Rights Management Services SDK 2.1 comprend les fichiers suivants, qui sont installés sur votre ordinateur à l’emplacement par défaut ou à l’emplacement que vous avez spécifié : %MsipcSDKDir%.
+Le SDK Rights Management Services 2.1 comprend les fichiers suivants, qui sont installés sur votre ordinateur à l’emplacement par défaut ou à l’emplacement que vous avez spécifié : %MsipcSDKDir%.
 
-|Fichier|Chemin|Description|
+|File|Chemin|Description|
 |----|----|-----------|
 |ReadMe.htm| \ | Contient un lien vers l’aide de RMS et les [notes de publication](release-notes-rtm.md).|
 |Isvtier5appsigningprivkey.dat|\bin|Contient la clé privée utilisée pour générer un manifeste pour une utilisation pendant le développement d’une application prenant en charge RMS.|
@@ -33,7 +33,7 @@ Rights Management Services SDK 2.1 comprend les fichiers suivants, qui sont ins
 |Isvtier5appsignsdk_client.xml|\bin|Utilisé pour générer un manifeste pour une utilisation pendant le développement d’une application prenant en charge RMS.|
 |NomApp.isv.mcf|\bin|Fichier de configuration de manifeste réutilisable que vous pouvez utiliser pour générer un manifeste pendant le développement d’une application prenant en charge RMS.|
 |Ipcsecproc_isv.dll|\bin\x86|DLL utilisée en interne, pour les applications x86, par Active Directory Rights Management Services Client 2.1 quand la hiérarchie des éditeurs de logiciels est employée.|
-|Ipcsecproc_ssp_isv.dll|\bin\x86|DLL utilisée en interne, pour les applications x86, par AD RMS 2.1 quand la hiérarchie des éditeurs de logiciels est employée.|
+|Ipcsecproc_ssp_isv.dll|\bin\x86|DLL utilisée en interne, pour les applications x86, par AD RMS 2.1 quand la hiérarchie des éditeurs de logiciels est employée.|
 |Ipcsecproc_isv.dll|\bin\x64|DLL utilisée en interne, pour les applications x64, par AD RMS Client 2.1 quand la hiérarchie des éditeurs de logiciels est employée.|
 |Ipcsecproc_ssp_isv.dll|\bin\x64|DLL utilisée en interne, pour les applications x64, par AD RMS Client 2.1 quand la hiérarchie des éditeurs de logiciels est employée.|
 |Msipc.h|\inc|Principal fichier include de RMS SDK 2.1.|

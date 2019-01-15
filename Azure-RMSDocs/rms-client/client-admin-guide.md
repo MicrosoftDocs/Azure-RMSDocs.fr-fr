@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a9f54931d8409fd88bddb6be85f1a0d7c2b416a1
-ms.sourcegitcommit: 40ea9568688b9da95d72b48f02b4152e54da17c6
+ms.openlocfilehash: e66ad53b23a76a263d4ec74e184597db12fdaa9d
+ms.sourcegitcommit: 8deca8163a6adea73f28aaf300a958154f842e4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53029402"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210496"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -90,7 +90,7 @@ Exemple qui illustre le complément du client Azure Information Protection pour 
 
 ## <a name="installing-and-supporting-the-azure-information-protection-client"></a>Installation et prise en charge du client Azure Information Protection
 
-Vous pouvez installer le client Azure Information Protection en utilisant Windows Update, un fichier exécutable ou un fichier Windows Installer. Pour plus d’informations sur chaque option et pour obtenir des instructions, consultez [Installer le client Azure Information Protection pour les utilisateurs](client-admin-guide-install.md).  
+Vous pouvez installer le client Azure Information Protection en utilisant un fichier exécutable ou un fichier Windows Installer. Pour plus d’informations sur chaque option et pour obtenir des instructions, consultez [Installer le client Azure Information Protection pour les utilisateurs](client-admin-guide-install.md).  
 
 Utilisez les sections suivantes pour plus d’informations sur l’installation du client. 
 

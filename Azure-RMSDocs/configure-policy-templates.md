@@ -4,18 +4,18 @@ description: Configurer et gérer des modèles Rights Management à partir du po
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 12/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 412b84b705d12efd7259066c0fece68e2ab8c099
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 6147a065f6aff31dd40c339699f0dc35f1ebaa82
+ms.sourcegitcommit: b10df82d9f00b3f826bce38beb7b666ce3f56e84
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173941"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814235"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
@@ -83,7 +83,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
 
 - Vous ne pouvez pas copier ou supprimer un modèle dans le portail Azure. Quand le modèle est converti en étiquette, vous pouvez configurer l’étiquette pour qu’elle cesse d’utiliser le modèle en sélectionnant **Non configuré** pour l’option **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**. Vous pouvez aussi supprimer l’étiquette. Dans les deux cas cependant, le modèle n’est pas supprimé et reste dans un état archivé.
     
-    Vous pouvez maintenant supprimer le modèle en utilisant l’applet de commande PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate). Vous pouvez également utiliser cette applet de commande PowerShell pour les modèles qui ne sont pas convertis en étiquettes. Cependant, si vous supprimez un modèle qui a été utilisé pour protéger du contenu, ce contenu ne peut plus être ouvert. Supprimez des modèles seulement si vous êtes sûr qu’ils n’ont pas été utilisés pour protéger des documents ou des e-mails en production. À titre de précaution, vous pouvez d’abord exporter le modèle en tant que sauvegarde, en utilisant l’applet de commande [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate). 
+    Vous pouvez maintenant supprimer le modèle en utilisant l’applet de commande PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate). Vous pouvez également utiliser cette applet de commande PowerShell pour les modèles qui ne sont pas convertis en étiquettes. Cependant, pour garantir que le contenu précédemment protégé puisse être ouvert et utilisé comme prévu, nous vous déconseillons généralement de supprimer des modèles. En guise de bonne pratique, supprimez uniquement des modèles si vous êtes sûr qu’ils n’ont pas été utilisés pour protéger des documents ou des e-mails en production. À titre de précaution, vous pouvez d’abord exporter le modèle en tant que sauvegarde, en utilisant l’applet de commande [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate). 
 
 - Actuellement, si vous modifiez et enregistrez un modèle de service, il supprime la configuration d’étendue. L’équivalent d’un modèle délimité dans la stratégie Azure Information Protection est une [stratégie délimitée](configure-policy-scope.md). Si vous convertissez le modèle en étiquette, vous pouvez sélectionner une étendue existante.
     

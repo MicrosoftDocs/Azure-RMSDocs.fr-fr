@@ -1,9 +1,9 @@
 ---
 title: Installation iOS et OS X | Azure RMS
-description: Les applications iOS et OS X peuvent utiliser RMS SDK 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’AAD RM.
+description: Les applications iOS et OS X peuvent utiliser le SDK RMS 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’AAD RM.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,20 +12,20 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 39856dc34396e1aa32a73f436da9744583519c86
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 620412b55ca583d8a84cf8d167ba890cea742b7f
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150362"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070221"
 ---
 # <a name="ios-and-os-x-setup"></a>Installation iOS et OS X
 
-Les applications iOS et OS X peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’Azure Rights Management (Azure RMS).
+Les applications iOS et OS X peuvent utiliser le SDK Microsoft Rights Management 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’Azure Rights Management (Azure RMS).
 
 Cette rubrique vous guide tout au long du processus de configuration de votre environnement pour créer vos propres applications.
 
-**Remarque**  Ce SDK ne prend pas en charge l’iPod Touch.
+**Remarque**  Ce SDK ne prend pas en charge l’iPod Touch.
 
 
 -   [Prérequis](#prerequisites)
@@ -42,11 +42,11 @@ Nous vous recommandons de disposer des logiciels suivants sur votre système de 
 
     Xcode est disponible par le biais du [Mac App Store](https://developer.apple.com/technologies/mac/).
 
--   Package MS RMS SDK 4.2 pour iOS et OS X. Pour plus d’informations, consultez [Prise en main](get-started.md).
+-   Package SDK MS RMS 4.2 pour iOS et OS X. Pour plus d’informations, consultez [Bien démarrer](get-started.md).
 
     Vous pouvez utiliser ce SDK pour développer pour iOS 7.0 et OS X 10.8 et versions ultérieures.
 
--   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Toutefois, vous pouvez aussi utiliser d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
+-   Bibliothèque d’authentification : Nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Vous pouvez cependant utiliser aussi d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
 
     Pour plus d’informations, consultez [ADAL pour iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios) ou [ADAL pour OS X](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)
 
@@ -78,12 +78,12 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
     ![Définissez la référence au dossier d’installation du SDK](../media/iOS-create-groups.png)
 
--   Pour ajouter MS RMS SDK 4.2 pour le groupe de ressources, faites glisser le fichier MSRightsManagementResources.bundle du dossier MSRightsManagement.framework/Resources vers la section **Frameworks** de votre Project Navigator.
+-   Pour ajouter le SDK MS RMS 4.2 pour le bundle de ressources, faites glisser le fichier MSRightsManagementResources.bundle du dossier MSRightsManagement.framework/Resources vers la section **Frameworks** de votre Project Navigator.
 
     ![Ajoutez le groupe de ressources](../media/iOS-add-resource-bundle-02a.png)
 
 -   Comme vous l’avez fait quand vous avez copié le Framework, sélectionnez la case d’option **Create groups for any added folders** (Créer des groupes pour tout dossier ajouté) et décochez la case **Copy items into destination group’s folder (if needed)** (Copier les éléments dans le dossier du groupe de destination si nécessaire).
--   Le SDK s’appuie sur d’autres infrastructures, notamment : **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** et **Security**. Pour ajouter ces infrastructures, accédez à la section **Linked Frameworks and Libraries** (Infrastructures et bibliothèques liées) du volet **Summary** (Résumé) de la cible et développez cette section pour les ajouter.
+-   Le SDK s’appuie sur d’autres frameworks, notamment : **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** et **Security**. Pour ajouter ces infrastructures, accédez à la section **Linked Frameworks and Libraries** (Infrastructures et bibliothèques liées) du volet **Summary** (Résumé) de la cible et développez cette section pour les ajouter.
 
     Les infrastructures **UIKit** et **Foundation** sont obligatoires et généralement présentes par défaut.
 

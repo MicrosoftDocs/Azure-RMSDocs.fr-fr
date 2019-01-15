@@ -4,19 +4,19 @@ description: Guide pratique pour utiliser la création de rapports centralisée 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2018
+ms.date: 12/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 58ea955deef9341ec80b516b89feec609389b9ad
-ms.sourcegitcommit: 4caf3aa13506554928c5fda38994301ddcbdfb41
+ms.openlocfilehash: 0c2309fb635a05f6b0c836b7d4caf04d1c17a23a
+ms.sourcegitcommit: 6651546fa69538e2099b5c2b92ab0902d568a96a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068807"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815120"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -101,6 +101,11 @@ Pour générer ces rapports, les points de terminaison envoient les types suivan
 
 Ces informations sont stockées dans un espace de travail Azure Log Analytics appartenant à votre organisation et consultable par les utilisateurs qui disposent des droits d’accès correspondants. Pour plus d’informations sur la configuration de l’accès à votre espace de travail, consultez la section [Gérer les comptes et les utilisateurs](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) dans la documentation Azure.
 
+> [!NOTE]
+> Votre espace de travail Azure Log Analytics pour Azure Information Protection inclut une case à cocher pour les correspondances de contenu de document. Quand vous cochez cette case, les données réelles identifiées par les types d’informations sensibles ou vos conditions personnalisées sont également collectées. Il peut s’agir, par exemple, de numéros de carte de crédit trouvés, mais aussi de numéros de sécurité sociale, de passeport et de compte bancaire. Si vous ne souhaitez pas collecter ces données, ne cochez pas cette case.
+>
+> Ces informations ne figurent pas actuellement dans les rapports, mais vous pouvez les consulter et les récupérer au moyen de requêtes.
+
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Prérequis pour l’analytique Azure Information Protection
 Pour afficher les rapports Azure Information Protection et créer les vôtres, vérifiez que les conditions suivantes sont respectées.
 
@@ -141,6 +146,9 @@ Dans le panneau Azure Information Protection, recherchez les options du menu **T
     Ce rapport comporte une option **Colonnes** qui permet d’afficher plus d’informations sur l’activité que l’affichage par défaut.
 
 - **Découverte de données (préversion)**  : Utilisez ce rapport pour voir des informations sur les fichiers détectés par les scanneurs ou Windows Defender ATP.
+
+> [!NOTE]
+> Les caractères non-ASCII dans les chemins et les noms de fichiers sont remplacés par des points d’interrogation (**?**) quand les paramètres régionaux du système d’exploitation d’envoi sont configurés en anglais. Il s’agit d’un problème connu.
 
 ## <a name="how-to-modify-the-reports"></a>Comment modifier les rapports
 

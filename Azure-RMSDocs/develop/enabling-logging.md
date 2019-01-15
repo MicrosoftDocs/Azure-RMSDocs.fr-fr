@@ -1,9 +1,9 @@
 ---
 title: 'Comment : activer la journalisation des erreurs et des performances | Azure RMS'
-description: Microsoft Rights Management SDK 4.2 gère le chargement des journaux de diagnostic et de performances via une propriété d’appareil unique.
+description: Le SDK Microsoft Rights Management 4.2 gère le chargement des journaux de diagnostic et de performances par le biais d’une propriété d’appareil unique.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,15 +12,15 @@ ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 4dece185bdbfd83d8ee98d815ead5545ca007754
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5b454ea2917fc5807326493fdf303e508bda7f0f
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147353"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071809"
 ---
-# <a name="how-to-enable-error-and-performance-logging"></a>Comment : activer la journalisation des erreurs et des performances
-Microsoft Rights Management SDK 4.2 gère le chargement des journaux de diagnostic et de performances via une propriété d’appareil unique.
+# <a name="how-to-enable-error-and-performance-logging"></a>Procédure : activer la journalisation des erreurs et des performances
+Le SDK Microsoft Rights Management 4.2 gère le chargement des journaux de diagnostic et de performances par le biais d’une propriété d’appareil unique.
 
 ## <a name="overview"></a>Vue d’ensemble ##
 Vous pouvez améliorer l’expérience de vos utilisateurs et faciliter la résolution de leurs problèmes en activant le chargement automatique des données des journaux de diagnostic, de performances et de télémétrie vers Microsoft. 
@@ -79,7 +79,7 @@ Définir le contrôle de niveau de journalisation
 Obtenir le paramètre de contrôle de niveau de journalisation
 
     [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcLogLevel&quot;];
- 
+ 
 
 ## <a name="windows"></a>Windows ##
 Activer la journalisation automatique

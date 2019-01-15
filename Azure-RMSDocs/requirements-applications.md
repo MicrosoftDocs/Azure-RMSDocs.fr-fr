@@ -4,18 +4,18 @@ description: Identifiez les applications qui utilisent les API RMS pour prendre 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/13/2018
+ms.date: 12/15/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cc823bcb175c9f4181d365a8caf99da33171c338
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 51883da128580be5f6bfd4dd725b8dfdf10f844f
+ms.sourcegitcommit: 5b48131ace3bbaf82f22fcb7eedf735c2f73d962
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173908"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429880"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 
@@ -115,6 +115,8 @@ Les suites clientes Office suivantes prennent en charge la protection des fichie
 - Office 365 ProPlus : Office 2016
 
 - Office Standard 2016 pour Mac
+
+Toutes les éditions d’Office pour Mac 2016 prennent en charge l’utilisation du contenu protégé.
 
 Conseil : Pour bien démarrer avec la protection des documents en utilisant Office pour Mac, consultez la question fréquente suivante : [Comment configurer un ordinateur Mac pour protéger et suivre les documents ?](faqs-rms.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
 

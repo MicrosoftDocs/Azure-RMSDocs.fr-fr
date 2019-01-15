@@ -2,8 +2,8 @@
 title: Notes de publication
 description: Mises à jour du SDK par révision et autres informations destinées aux développeurs.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/18/2017
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 05ac80a9032467fafe09e39941117c6b4c52d439
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 8132fd2afba45402f8f9c835f2d6db69dd8e81f2
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151348"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071197"
 ---
 # <a name="release-notes"></a>Notes de publication
 
-Cet article contient des informations importantes sur cette version du kit SDK RMS 2.1 et sur les versions précédentes.
+Cet article contient des informations importantes sur cette version du SDK RMS 2.1 et les précédentes.
 
 ## <a name="october-2017---update"></a>Mise à jour d’octobre 2017
 
@@ -63,7 +63,7 @@ Cet article contient des informations importantes sur cette version du kit SDK R
 -   Le **suivi des documents** est maintenant possible grâce à un ensemble de nouvelles API. Pour plus d’informations, consultez [Suivi de contenu](tracking-content.md).
 -   **Type de chiffrement** : nous prenons désormais en charge le contrôle au niveau de l’API pour la sélection du package de chiffrement. Pour plus d’informations, voir [Utilisation du chiffrement](working-with-encryption.md).
 
-    **Remarque** Nous n’exposerons plus l’indicateur **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** dans notre API. Cela signifie que les futures applications ne seront plus compilées si elles font référence à cet indicateur. Toutefois les applications déjà créées continueront de fonctionner dans la mesure où nous respecterons de manière privée l’indicateur dans le code de l’API. Il est encore possible de tirer parti de l’ancien indicateur obsolète des algorithmes de chiffrement en modifiant simplement un indicateur. Pour plus d’informations, voir [Utilisation du chiffrement](working-with-encryption.md).
+    **Remarque**  Nous n’exposerons plus l’indicateur **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** dans notre API. Cela signifie que les futures applications ne seront plus compilées si elles font référence à cet indicateur. Toutefois les applications déjà créées continueront de fonctionner dans la mesure où nous respecterons de manière privée l’indicateur dans le code de l’API. Il est encore possible de tirer parti de l’ancien indicateur obsolète des algorithmes de chiffrement en modifiant simplement un indicateur. Pour plus d’informations, voir [Utilisation du chiffrement](working-with-encryption.md).
 
 -   Les **applications en mode serveur**, celles utilisant des [valeurs du mode API](https://msdn.microsoft.com/library/hh535236.aspx) de **IPC\_API\_MODE\_SERVER**, n’ont plus besoin d’installer de manifeste d’application. Vous pouvez tester votre application sur un serveur RMS de production et vous n’êtes pas obligé d’obtenir une licence de production quand vous passez à l’environnement de production. Pour plus d’informations sur les applications en mode serveur, consultez [Types d’applications](application-types.md).
 -   La **journalisation** est maintenant implémentée par le biais du fichier et de méthodes de suivi d’événements pour Windows.
@@ -93,7 +93,7 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 
     Fonctions ajoutées dans cette version :
 
-    **Remarque** D’autres types et structures de données de prise en charge, non répertoriés ici, ont été ajoutés pour les extensions d’API de fichier. Tous les articles mis à jour pour cette version sont marqués comme étant **préliminaires et susceptible d’être modifiés**.
+    **Remarque**  D’autres types et structures de données de prise en charge, non répertoriés ici, ont été ajoutés pour les extensions d’API de fichier. Tous les articles mis à jour pour cette version sont marqués comme étant **préliminaires et susceptible d’être modifiés**.
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
@@ -120,11 +120,11 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 
     Pour plus d’informations sur les types de fichier pris en charge, voir [Configuration de l’API de fichier](file-api-configuration.md).
 
--   Les **ordinateurs Windows 7 SP1 et Windows Server 2008 R2 SP1** non dotés de la mise à jour [KB2533623](https://support.microsoft.com/kb/2533623) peuvent afficher l’erreur suivante lors de la protection des fichiers Office : « Le paramètre est incorrect. Code d’erreur 0x80070057 ». Si vous voyez cette erreur, installez de nouveau la mise à jour et réessayez. Si cette erreur persiste, contactez l’alias de commentaires de la version bêta du kit SDK RMS <rmcstbeta@microsoft.com>.
+-   Les **ordinateurs Windows 7 SP1 et Windows Server 2008 R2 SP1** non dotés de la mise à jour [KB2533623](https://support.microsoft.com/kb/2533623) peuvent afficher l’erreur suivante lors de la protection de fichiers Office : « Le paramètre est incorrect. Code d’erreur 0x80070057 ». Si vous voyez cette erreur, installez de nouveau la mise à jour et réessayez. Si cette erreur persiste, contactez l’alias de commentaires de la version bêta du kit SDK RMS <rmcstbeta@microsoft.com>.
 
-    **Remarque**  : à compter de la version d’avril 2015, une vérification a été ajoutée au processus d’installation pour cette base de connaissances.
+    **Remarque**  À compter de la version d’avril 2015, une vérification a été ajoutée au processus d’installation pour cette mise à jour issue de la Base de connaissances.
 
-     
+     
 
 -   **Intégration de l’API de fichier**
 
@@ -136,27 +136,27 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 
       - Tous les fichiers, à l’exception des fichiers système et des fichiers Office peuvent être protégés à l’aide du format de fichier de protégé par RMS (PFile).
 
-    L’API de fichier est implémentée par le biais des quatre nouvelles fonctions suivantes : [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx) et [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
+    L’API de fichier est implémentée au moyen des quatre nouvelles fonctions suivantes : [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx) et [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
 
     L’API de fichier exige l’installation du client RMS (Rights Management Services) 2.1 sur l’ordinateur client et la connectivité de l’ordinateur avec un serveur RMS. Pour plus d’informations sur le serveur RMS, sur le client RMS et sur leurs fonctionnalités, consultez le contenu TechNet de la [documentation RMS pour les professionnels de l’informatique](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx).
 
 -   **Problème** : lors de la création d’une nouvelle licence, les droits de propriété doivent être accordés de manière explicite.
 
-    **Solution** : Votre application doit ajouter explicitement les droits **Owner** au propriétaire de la licence lors de la création d’une nouvelle licence à l’aide de [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). Pour plus d’informations, voir [Ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md).
+    **Solution** : votre application doit ajouter explicitement les droits **Owner** au propriétaire de la licence lors de la création d’une nouvelle licence à l’aide de [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). Pour plus d’informations, voir [Ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md).
 
--   **Problème** : Si une application appelle [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) ou [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) deux fois pour la même fenêtre à l’aide de son handle, RMS SDK 2.1 renvoie un échec dans **HRESULT**.
+-   **Problème** : si une application appelle [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) ou [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) deux fois pour la même fenêtre à l’aide de son handle, le SDK RMS 2.1 retourne un échec dans **HRESULT**.
 
-    **Solution** : Pour obtenir des conseils spécifiques concernant ce problème, consultez la section « Remarques » dans [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) et [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx).
+    **Solution** : pour obtenir des conseils spécifiques concernant ce problème, consultez la section « Remarques » dans [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) et [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx).
 
 -   **Problème** : lors de la création de plusieurs architectures, vous devez utiliser ce guide.
 
-    **Solution** : si vous souhaitez utiliser le fichier Ipcsecproc\*isv.dll pour une architecture différente (par exemple, vous avez installé le SDK 64 bits sur un ordinateur 64 bits et vous souhaitez maintenant effectuer le déploiement sur un ordinateur 32 bits qui nécessite Ipcsecproc\*isv.dll), vous devez installer le SDK 32 bits sur un autre ordinateur et copier les fichiers Ipcsecproc\*isv.dll à cet emplacement à partir du dossier « "%PROGRAMFILES%\\Microsoft Information Protection And Control » (l’emplacement par défaut ou là où vous avez choisi d’installer le SDK).
+    **Solution** : si vous souhaitez utiliser le fichier Ipcsecproc\*isv.dll pour une architecture différente (par exemple, vous avez installé le SDK 64 bits sur un ordinateur 64 bits et vous souhaitez maintenant effectuer le déploiement sur un ordinateur 32 bits qui nécessite Ipcsecproc\*isv.dll), vous devez installer le SDK 32 bits sur un autre ordinateur et copier les fichiers Ipcsecproc\*isv.dll à cet emplacement à partir du dossier « %PROGRAMFILES%\\Microsoft Information Protection And Control » (l’emplacement par défaut ou celui où vous avez choisi d’installer le SDK).
 
 ## <a name="frequently-asked-questions"></a>Forum aux questions
 
-**Q** : Comment se comporte la langue par défaut avec des fonctions qui prennent un paramètre LCID ?
+**Q** : comment se comporte la langue par défaut avec des fonctions qui prennent un paramètre LCID ?
 
-**R** : Utilisez 0 pour les paramètres régionaux par défaut. Dans ce cas, le client AD RMS 2.1 recherche les noms et les descriptions dans l’ordre suivant et récupère le premier disponible :
+**R** : utilisez 0 pour les paramètres régionaux par défaut. Dans ce cas, le client AD RMS 2.1 recherche les noms et les descriptions dans l’ordre suivant et récupère le premier disponible :
 
     1 - User preferred LCID.
     2 - System locale LCID.

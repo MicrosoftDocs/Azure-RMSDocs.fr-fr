@@ -2,8 +2,8 @@
 title: Types d’applications | Azure RMS
 description: Cette rubrique traite des types d’applications que vous pouvez choisir de créer avec une gestion des droits.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,19 +12,19 @@ ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: fbd49df82faec0f9ea198e0ba7ad334bc5b2a831
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 744a5648bc436bb903cf1b8feb47ca91b19bb7fc
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149937"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071656"
 ---
 # <a name="application-types"></a>Application types (Types d’applications)
 
 
 Cette rubrique traite des types d’applications que vous pouvez choisir de créer avec une gestion des droits.
 
-Les types d’application suivants sont actuellement pris en charge par Rights Management Services SDK 2.1
+Les types d’application suivants sont actuellement pris en charge par le SDK Rights Management Services 2.1.
 
 ## <a name="simple-applications"></a>Applications simples
 
@@ -34,7 +34,7 @@ Une application simple peut être un outil de ligne de commande conçu pour chif
 
 Le *mode serveur* est conçu pour les applications non interactives qui consomment, protègent ou traitent du contenu protégé par RMS. Un exemple est une application de *protection contre la perte de données* qui s’exécute en tant que service sur un serveur de fichiers et qui protège automatiquement les documents sensibles. Consultez l’[exemple IpcDlp](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp) pour un exemple de ce type d’application.
 
-Si votre application utilise le *mode serveur*, elle doit s’authentifier auprès du serveur RMS en mode silencieux. Contrairement au *mode client*, RMS SDK 2.1 n’ouvre pas une invite demandant des informations d’identification quand il échoue à s’authentifier en mode silencieux. En outre, lors de l’exécution en *mode serveur*, un manifeste d’application n’est pas nécessaire.
+Si votre application utilise le *mode serveur*, elle doit s’authentifier auprès du serveur RMS en mode silencieux. Contrairement au *mode client*, le SDK RMS 2.1 n’ouvre pas une invite demandant des informations d’identification quand il échoue à s’authentifier en mode silencieux. En outre, lors de l’exécution en *mode serveur*, un manifeste d’application n’est pas nécessaire.
 
 Pour plus d’informations sur la définition du mode de sécurité de l’API, consultez [Définition du mode de sécurité de l’API](setting-the-api-security-mode-api-mode.md).
 
@@ -42,7 +42,7 @@ Pour plus d’informations sur la définition du mode de sécurité de l’API, 
 
 Une application cliente enrichie permet aux utilisateurs d’afficher et de manipuler des données via une interface utilisateur graphique. Souvent, les données présentées dans cette interface utilisateur sont importantes et sensibles au vol ou à une exposition accidentelle. La prise en charge de la protection des informations améliore généralement les scénarios existants, mais elle n’est pas l’objectif principal du développement de l’application.
 
-L’utilisation de RMS SDK 2.1 avec des applications clientes enrichies vous aide à :
+L’utilisation du SDK RMS 2.1 avec des applications clientes enrichies vous aide à :
 
 -   Vérifier que ces données sont toujours chiffrées.
 

@@ -4,18 +4,18 @@ description: Instructions et informations pour que les administrateurs gèrent l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 12/25/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d707f32062df54975237d9ae6f7218d33cfe337a
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 8c46dfb6aafa9162be6725202516f8d1fa871cc8
+ms.sourcegitcommit: 60223377a914269c93d73b3522d87b8161ecf854
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305656"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53786315"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -33,9 +33,11 @@ Les applets de commande sont installées avec le module PowerShell **AzureInform
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Étiquetez les fichiers de manière non interactive, par exemple à l’aide d’un script qui s’exécute selon une planification.|
 
 > [!TIP]
-> Pour utiliser des applets de commande avec des chemins d’accès dépassant 260 caractères, utilisez le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) disponible avec la mise à jour anniversaire de Windows 10 :<br /> **Stratégie Ordinateur local** > **Configuration de l’ordinateur** > **Modèles d’administration** > **Tous les paramètres** > **NTFS** > **Activer les noms de chemin d’accès Win32 longs** 
+> Pour utiliser des applets de commande avec des chemins comprenant plus de 260 caractères, utilisez le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) disponible à compter de la version 1607 de Windows 10 :<br /> **Stratégie Ordinateur local** > **Configuration de l’ordinateur** > **Modèles d’administration** > **Tous les paramètres** > **NTFS** > **Activer les noms de chemin d’accès Win32 longs** 
 > 
 > Pour Windows Server 2016, vous pouvez utiliser le même paramètre de stratégie de groupe lorsque vous installez les derniers modèles d’administration (.admx) pour Windows 10.
+>
+> Pour plus d’informations, consultez la section consacréee à la [longueur maximale des chemins](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation pour développeurs Windows 10.
 
 Le [scanneur Azure Information Protection](../deploy-aip-scanner.md) utilise les applets de commande du module AzureInformationProtection pour installer et configurer un service sur Windows Server. Ce scanneur vous permet de découvrir, classifier et protéger des fichiers sur des magasins de données.
 

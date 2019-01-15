@@ -2,8 +2,8 @@
 title: Guide pour développeurs de l'Azure Information Protection SDK 2.1 | Microsoft Docs
 description: Une collection de rubriques de procédures pour développer avec l'AIP SDK 2.1
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: conceptual
@@ -12,18 +12,18 @@ ms.assetid: 5A9F04FD-0FCD-482F-8671-36FE93B783B0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 5e85005cd497be45a2b92631a682121482e5997f
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 4e6f4cbf9ec795ca73424bbd2ca35e5f1ae59fa7
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147473"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070586"
 ---
 # <a name="developer-guidance"></a>Guide pour développeurs
 
 Cette section traite de recommandations spécifiques pour plusieurs scénarios de développement importants, ainsi que des informations générales sur le développement avec ce SDK. Les scénarios de cette section sont spécifiques à cette version du SDK Rights Management Services 2.1 et peuvent être modifiés dans les versions ultérieures.
 - [Comment : utiliser l’authentification ADAL](how-to-use-adal-authentication.md) - Authentification auprès d’Azure RMS pour votre application à l’aide de la bibliothèque d’authentification ADAL (Azure Active Directory Authentication Library).
-- [Comment : ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md) - Votre application doit ajouter explicitement des droits « Owner » lors de la création d’une licence ex nihilo ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
+- [Guide pratique pour ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md) : votre application doit ajouter explicitement des droits « Propriétaire » lors de la création d’une licence ex nihilo ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
 - [Comment : déboguer une application avec gestion des droits](debugging-applications-that-use-ad-rms.md) - Cette rubrique indique comment déboguer votre application et utiliser le journal des événements Windows.
 - [Comment déployer une application dans un locataire du client](how-to-deploy-app.md) - Cette rubrique souligne les étapes nécessaires au déploiement d’une application depuis son locataire Azure AD de développement dans un locataire Azure AD de production.
 - [Comment : activer le suivi et la révocation des documents](tracking-content.md) - Cette rubrique décrit les instructions de base pour implémenter le suivi des documents pour le contenu ainsi que l’exemple de code pour les mises à jour de métadonnées et la création d’un bouton **Suivre l'utilisation** pour votre application.
@@ -39,6 +39,6 @@ Cette section traite de recommandations spécifiques pour plusieurs scénarios d
 - [Plateformes prises en charge](supported-platforms.md) - Cette rubrique identifie les plateformes client et serveur prises en charge par RMS SDK 2.1.
 - [Comprendre les restrictions d’utilisation](understanding-usage-restrictions.md) : toutes les applications compatibles RMS doivent appliquer des restrictions d’utilisation définies par les constantes répertoriées dans cette rubrique.
 
- 
+ 
 ## <a name="related-topics"></a>Rubriques connexes
 * [Vue d'ensemble](ad-rms-overview.md)

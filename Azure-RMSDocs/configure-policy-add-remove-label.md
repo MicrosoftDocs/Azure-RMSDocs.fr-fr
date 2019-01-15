@@ -4,22 +4,24 @@ description: Ajouter ou supprimer une étiquette Azure Information Protection à
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: 367426324af487cbdf0ddaac53eb86aa89c168b7
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 154b8d5b61169208cdc01a2445be918ea6e2f77b
+ms.sourcegitcommit: b10df82d9f00b3f826bce38beb7b666ce3f56e84
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304847"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814201"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Ajouter une étiquette à une stratégie Azure Information Protection ou la supprimer de celle-ci
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Après avoir créé une étiquette Azure Information Protection, vous pouvez l’ajouter à une stratégie afin qu’elle soit disponible pour les utilisateurs. Si l’étiquette est destinée à tous les utilisateurs, ajoutez-la à la stratégie globale. Si l’étiquette est destinée à une partie des utilisateurs, ajoutez-la à une stratégie délimitée. Vous ne pouvez ajouter une étiquette qu’à une seule stratégie. Pour ajouter une sous-étiquette, son étiquette parente doit être dans la même stratégie, ou dans la stratégie globale.
+Après avoir créé une étiquette Azure Information Protection, vous pouvez l’ajouter à une stratégie afin qu’elle soit disponible pour les utilisateurs. Si l’étiquette est destinée à tous les utilisateurs, ajoutez-la à la stratégie globale. Si l’étiquette est destinée à une partie des utilisateurs, ajoutez-la à une stratégie délimitée. Vous ne pouvez ajouter une étiquette qu’à une seule stratégie. 
+
+Pour ajouter une sous-étiquette, son étiquette parente doit être dans la même stratégie, ou dans la stratégie globale. Quand vous ajoutez une sous-étiquette, les paramètres de l’étiquette principale ne sont pas hérités. Pour les utilisateurs auxquels la sous-étiquette est affectée dans leur stratégie, l’étiquette principale est uniquement prise en charge comme conteneur d’affichage pour le nom et la couleur. Dans ce scénario, les autres paramètres de configuration dans l’étiquette principale ne sont pas pris en charge pour les marquages visuels, la protection et les conditions. Bien que vous puissiez toujours les configurer, ces paramètres dans l’étiquette principale ne sont pris en charge que pour les utilisateurs qui ont l’étiquette principale dans leur stratégie sans la sous-étiquette.
 
 En ce qui concerne les étiquettes qui se trouvent déjà dans une stratégie, vous pouvez les supprimer de celle-ci. Cette action ne supprime pas l’étiquette. Elle demeure utilisable dans une autre stratégie.
 
@@ -56,5 +58,4 @@ Pour créer une stratégie délimitée afin que l’étiquette s’applique à u
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
-
+Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).

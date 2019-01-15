@@ -4,16 +4,16 @@ description: Vous pouvez supprimer ou réorganiser les étiquettes Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 12/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 1f957874649fe9e5697c3dd0164b0b0b255d1e6e
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 6e5348eb55451747ff9f10b3bd4f7a2f868b03c5
+ms.sourcegitcommit: 95f16f89a46d9dffa8a114f7683816024d65ff02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304874"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996063"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Comment supprimer ou réorganiser une étiquette pour Azure Information Protection
 
@@ -33,7 +33,7 @@ En outre, si l’étiquette supprimée appliquait une protection, cette protecti
 
 - Utiliser PowerShell pour renommer le modèle ou le supprimer.
     
-    Avant d’effectuer ces actions, vérifiez si d’autres administrateurs ou services utilisent le modèle et l’identifient par son nom actuel. Supprimez un modèle seulement si vous n’avez pas besoin d’ouvrir des documents ou des e-mails qui ont été protégés par le modèle.
+    Avant d’effectuer ces actions, vérifiez si d’autres administrateurs ou services utilisent le modèle et s’ils l’ont déjà utilisé. Vous pouvez identifier le modèle par son ID de modèle (qui ne change pas) ou son nom (qui peut être changé). En guise de bonne pratique, supprimez un modèle seulement si vous êtes certain que les utilisateurs n’auront pas à ouvrir les documents ou les e-mails qui ont été protégés par le modèle.
 
 Pour plus d’informations sur la gestion des modèles de protection, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).
 

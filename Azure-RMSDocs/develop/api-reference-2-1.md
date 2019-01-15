@@ -1,9 +1,9 @@
 ---
 title: Informations de référence pour l'API SDK 2.1 | Microsoft Docs
-description: L'Azure Information Protection SDK 2.1 prend en charge l’activation de RMS de clients Windows.
+description: Le SDK Azure Information Protection 2.1 prend en charge l’activation de RMS de clients Windows.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 6dcfa840-026b-4728-b53c-2c9c730fcf84
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6ea8508531981a784d0f0c23291dbaf42533e6bc
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 80cab10e904134d5f01c49b094bc3ef946041773
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44145816"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071622"
 ---
-# <a name="api-reference"></a>Référence d'API
+# <a name="api-reference"></a>Informations de référence sur les API
 
-Microsoft Rights Management SDK 2.1 prend en charge l’activation RMS des clients Windows. Pour plus d’informations sur des points spécifiques, consultez [Notes de publication](release-notes-rtm.md).
+Le SDK Microsoft Rights Management 2.1 prend en charge l’activation de RMS de clients Windows. Pour plus d’informations sur des points spécifiques, consultez [Notes de publication](release-notes-rtm.md).
 - [Constantes](https://msdn.microsoft.com/library/hh535291.aspx)
 - [Types de données](https://msdn.microsoft.com/library/hh535288.aspx)
 - [Fonctions](https://msdn.microsoft.com/library/hh535289.aspx)

@@ -2,8 +2,8 @@
 title: Présentation - RMS SDK 2.1 | Azure RMS
 description: Rights Management Services (RMS) est une technologie de protection des informations qui vous aide à protéger les informations numériques contre les utilisations non autorisées.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 50dc99a83cbd45b977c2ddb22a2a3034f648c396
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: edd4cb0d28c68491348e61ac5a90d03087059144
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147418"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070279"
 ---
 # <a name="overview"></a>Vue d’ensemble
 
@@ -29,7 +29,7 @@ Le composant [client](ad-rms-client.md) peut être exécuté sur un système d�
 
 Pour plus d’informations, voir [Types d’applications](application-types.md).
 
-Voici quelques scénarios pour lesquels des applications basées sur Rights Management Services SDK 2.1 peuvent être utilisées.
+Voici quelques scénarios pour lesquels des applications basées sur le SDK Rights Management Services 2.1 peuvent être utilisées.
 
 -   Un cabinet juridique veut empêcher que les e-mails sensibles soient imprimés ou transférés.
 -   Les développeurs de logiciels de conception et de fabrication assistées par ordinateur veulent limiter l’accès au module de dessin à un petit groupe d’utilisateurs de la division recherche sans exiger l’utilisation de mots de passe.

@@ -4,17 +4,17 @@ description: Si Azure Information Protection est nouveau pour votre organisation
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/15/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: f5cf70b0827e36ffae6644634ef198385ef6d11a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: c890d6acf2557093441a175bc8ed8657e8d1d9da
+ms.sourcegitcommit: bc082cffaa698b89b28aef7034290553c26f667b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023513"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411811"
 ---
-# <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection sur le Portail Azure
+# <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
 
 Dans ce démarrage rapide, vous allez ajouter Azure Information Protection au Portail Azure, vérifier que le service de protection est activé et afficher la stratégie par défaut de votre organisation. 
 
@@ -75,7 +75,7 @@ La première fois que vous vous connectez au service Azure Information Protectio
     
 2. Prenez quelques minutes pour vous familiariser avec les étiquettes affichées :
     
-    - Étiquettes de classification : **Personnel**, **Public**, **Interne**, **Confidentiel** et **Hautement confidentiel**. Les deux dernières étiquettes se développent pour afficher des sous-étiquettes, qui sont des exemples de sous-catégories dans une classification :
+    - Étiquettes de classification : **Personnel**, **Public**, **Général**, **Confidentiel** et **Hautement confidentiel**. Les deux dernières étiquettes se développent pour afficher des sous-étiquettes, qui sont des exemples de sous-catégories dans une classification :
     
     - Avec la configuration par défaut, des marquages visuels ne sont pas configurés pour certaines étiquettes. Les marquages visuels sont un pied de page, un en-tête et un filigrane. En fonction de votre stratégie par défaut, la protection peut ou non être définie pour certaines étiquettes. Par exemple : 
     
@@ -83,12 +83,12 @@ La première fois que vous vous connectez au service Azure Information Protectio
     
 3. Après les étiquettes, dans la section **Configurer les paramètres à afficher et à appliquer aux utilisateurs finaux d’Information Protection**, vous voyez également certains paramètres de stratégie. Par exemple, aucune étiquette par défaut n’est définie, les documents ou e-mails ne doivent pas obligatoirement avoir une étiquette et les utilisateurs n’ont pas à fournir de justification quand ils changent les étiquettes :
     
-    ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](./media/info-protect-policy-default-settings.png) 
+    ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](./media/info-protect-policy-default-settings-quickstart.png) 
 
 4. Dans la mesure où vous ne voyez que les étiquettes et les paramètres, vous pouvez fermer tous les panneaux que vous avez ouverts.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Maintenant que vous avez vu les étiquettes et les paramètres de stratégie sur le Portail Azure, le tutoriel suivant pourra vous être utile : [Modifier la stratégie et créer une étiquette pour Azure Information Protection](infoprotect-quick-start-tutorial.md).
+Maintenant que vous avez vu les étiquettes et les paramètres de stratégie sur le portail Azure, le tutoriel suivant pourra vous être utile : [Modifier la stratégie et créer une étiquette pour Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
 Pour obtenir des instructions détaillées sur la configuration de tous les aspects de la stratégie Azure Information Protection, voir [Configurer la stratégie Azure Information Protection](configure-policy.md).

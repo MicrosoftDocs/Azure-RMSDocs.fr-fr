@@ -2,8 +2,8 @@
 title: Développement de votre application - AIP
 description: Instructions pour une application console de base qui implémente la protection des documents avec Azure Information Protection (AIP)
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: ef75dcff64d5ad2adaf2ffc9938490a65ac9bee9
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6f0fdcaf6d21047f28c470dc896a1cd64fee752d
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148730"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071299"
 ---
 # <a name="developing-your-application"></a>Développement de votre application
 
@@ -25,8 +25,8 @@ Dans cet exemple, vous allez développer une application console simple qui inte
 
 ## <a name="sample-app-prerequisites"></a>Prérequis de l’exemple d’application
 - **Système d’exploitation** : Windows 10, Windows 8, Windows 7, Windows Server 2008, Windows Server 2008 R2 ou Windows Server 2012
-- **Langage de programmation** : C# (.NET Framework 3.0 et versions ultérieures)
-- **Environnement de développement** : Visual Studio 2015 (et versions ultérieures)
+- **Langage de programmation** : C# (.NET Framework 3.0 et ultérieur)
+- **Environnement de développement** : Visual Studio 2015 (et ultérieur)
 
 ## <a name="setting-up-your-azure-configuration"></a>Définition de votre configuration Azure
 

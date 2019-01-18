@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 35b2211b9ca6eb3f8c0f160a80850c3cb899562c
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 5fb3e3ab5d32bf5e590bec5b0a1380bf13a7d066
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174180"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394197"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -143,7 +143,7 @@ Vous pouvez ensuite publier ou archiver ces modèles comme vous le feriez pour t
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Procédure à effectuer si vos modèles dans AD RMS utilisaient le groupe **ANYONE**
 
-Si vos modèles AD RMS utilisaient le groupe **ANYONE**, le groupe équivalent le plus proche dans Azure Information Protection est nommé **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<nom_locataire>.onmicrosoft.com**. Par exemple, ce groupe peut se présenter sous la même forme que dans l’exemple suivant pour Contoso : **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Ce groupe contient tous les utilisateurs de votre locataire Azure AD.
+Si vos modèles AD RMS utilisaient le groupe **ANYONE**, le groupe équivalent le plus proche dans Azure Information Protection est nommé **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<nom_locataire>.onmicrosoft.com**. Par exemple, ce groupe peut se présenter sous la même forme que dans l’exemple suivant pour Contoso : <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong>. Ce groupe contient tous les utilisateurs de votre locataire Azure AD.
 
 Quand vous gérez des modèles et des étiquettes dans le portail Azure, ce groupe apparaît comme le nom de domaine de votre locataire dans Azure AD. Par exemple, ce groupe peut se présenter comme suit pour Contoso : **contoso.onmicrosoft.com**. Pour ajouter ce groupe, l’option affiche **Ajouter \<nom_organisation> - Tous les membres**.
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6afbf2e95f6e9d21d1bfa9c4c05df288accf716d
-ms.sourcegitcommit: f13c6db055c1fc69cf92e47609465270a42bbdac
+ms.openlocfilehash: 3085799d9cb8da168c68a1a2eea04528daeb7737
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54085073"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394046"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -57,11 +57,11 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
 
 - Utilisez un compte avec l’un des [rôles d’administrateur](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) suivants :
     
-    - **Administrateur Information Protection**
+  - **Administrateur Information Protection**
 
-    - **Administrateur de sécurité**
+  - **Administrateur de sécurité**
 
-    - **Administrateur général/administrateur de la société**
+  - **Administrateur général/administrateur de la société**
     
     > [!NOTE] 
     > Si votre locataire a été migré vers le magasin d’étiquetage unifié, votre compte doit également être autorisé à accéder au Centre de sécurité et de conformité Office 365 pour pouvoir gérer les étiquettes sur le Portail Azure. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)

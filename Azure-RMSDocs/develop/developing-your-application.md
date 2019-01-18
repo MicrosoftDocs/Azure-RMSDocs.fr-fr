@@ -12,12 +12,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 6f0fdcaf6d21047f28c470dc896a1cd64fee752d
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 580dc90bae499a5cc64238a6157612bea5eb3282
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071299"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394188"
 ---
 # <a name="developing-your-application"></a>Développement de votre application
 
@@ -62,7 +62,7 @@ Suivez ces étapes pour créer un principal du service :
 - Connectez-vous à votre service en ligne avec les informations d’identification de l’utilisateur affecté : `Connect-MsolService`
 - Créez un principal du service en exécutant : `New-MsolServicePrincipal`
 - Fournissez un nom à votre principal du service.
-> Enregistrez la clé symétrique et l’ID de principal d’application pour une utilisation ultérieure.
+  > Enregistrez la clé symétrique et l’ID de principal d’application pour une utilisation ultérieure.
 
 *Exemple de sortie*
 ![sortie de l’applet de commande](../media/develop/output-of-NewMsolServicePrincipal.png)
@@ -80,8 +80,8 @@ Le diagramme suivant illustre une architecture et un flux de processus pour l’
 ![résumé de conception](../media/develop/design-summary.png)
 
 1. L’utilisateur entre :
-  - Le chemin du fichier à protéger
-  - Sélectionne un modèle ou crée une stratégie ad hoc.
+   - Le chemin du fichier à protéger
+   - Sélectionne un modèle ou crée une stratégie ad hoc.
 2. L’application demande une authentification auprès d’AIP.
 3. AIP confirme l’authentification.
 4. L’application demande des modèles à AIP.
@@ -216,16 +216,16 @@ Une fois que tout est généré et en cours d’exécution, les sorties de l’a
 ![sortie de l’application - étape 1](../media/develop/app-output-1.png)
 
 2. Vous devez fournir le chemin du fichier à protéger.
-![sortie de l’application - étape 2](../media/develop/app-output-2.png)
+   ![sortie de l’application - étape 2](../media/develop/app-output-2.png)
 
 3. Vous êtes invité à entrer l’adresse e-mail d’un détenteur de licence (ce détenteur doit posséder des privilèges d’administrateur général sur le locataire Azure AD).
-![sortie de l’application - étape 3](../media/develop/app-output-3.png)
+   ![sortie de l’application - étape 3](../media/develop/app-output-3.png)
 
 4. Vous entrez les adresses e-mail des utilisateurs qui vont disposer de droits d’accès au fichier (en les séparant par des espaces).
-![sortie de l’application - étape 4](../media/develop/app-output-4.png)
+   ![sortie de l’application - étape 4](../media/develop/app-output-4.png)
 
 5. Vous sélectionnez les droits à octroyer aux utilisateurs autorisés dans la liste.
-![sortie de l’application - étape 5](../media/develop/app-output-5.png)
+   ![sortie de l’application - étape 5](../media/develop/app-output-5.png)
 
 6. Enfin, vous entrez certaines métadonnées de stratégie : nom de la stratégie, description et nom complet de l’émetteur (locataire Azure AD) ![sortie de l’application - étape 6](../media/develop/app-output-6.png)
 

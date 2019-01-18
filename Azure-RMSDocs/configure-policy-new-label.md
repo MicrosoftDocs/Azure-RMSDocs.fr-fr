@@ -8,12 +8,12 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: 7302e0e0e76f6ca94eba678390e7d938172e40c4
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 3bc01282e579368105687fe53157ce2a05dbe4ff
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304993"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393517"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Comment créer une étiquette pour Azure Information Protection
 
@@ -37,13 +37,13 @@ Utilisez les instructions suivantes pour ajouter une nouvelle étiquette, qui po
     
     - Pour créer une sous-étiquette : Cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette pour laquelle vous voulez créer une sous-étiquette, puis cliquez sur **Ajouter une sous-étiquette**.
 
-4. Dans le panneau **Étiquette** ou **Sous-étiquette**, sélectionnez les options que vous souhaitez pour cette nouvelle étiquette, puis cliquez sur **Enregistrer**.
+3. Dans le panneau **Étiquette** ou **Sous-étiquette**, sélectionnez les options que vous souhaitez pour cette nouvelle étiquette, puis cliquez sur **Enregistrer**.
     
     Lorsque vous spécifiez un nom d’affichage, certains caractères ne peuvent pas être spécifiés (par exemple la barre oblique inverse et l’esperluette), car ils ne sont pas pris en charge pour tous les services et applications utilisant Azure Information Protection. Outre les caractères qui sont bloqués, ne spécifiez pas le caractère **#**.    
     
-    Notez que la couleur noire est automatiquement affectée aux nouvelles étiquettes. Choisissez une couleur distinctive dans la liste des couleurs ou entrez un code (triplet hexadécimal) représentant les composants RVB (rouge, vert, bleu) de la couleur. Par exemple, **#DAA520**. Si vous souhaitez obtenir des informations de référence sur ces codes, la page [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) dans la documentation MSDN constitue un bon point de départ. Ces codes sont utilisés dans de nombreux programmes de retouche d’images, par exemple Microsoft Paint. Quand vous choisissez une couleur personnalisée à partir d’une palette, les valeurs RVB s’affichent automatiquement.
+    Notez que la couleur noire est automatiquement affectée aux nouvelles étiquettes. Choisissez une couleur distinctive dans la liste des couleurs ou entrez un code (triplet hexadécimal) représentant les composants RVB (rouge, vert, bleu) de la couleur. Par exemple, **#DAA520**. Si vous voulez obtenir des informations de référence sur ces codes, la page [Colors by Name](https://msdn.microsoft.com/library/aa358802(v=vs.85).aspx) dans la documentation MSDN constitue un bon point de départ. Ces codes sont utilisés dans de nombreux programmes de retouche d’images comme Microsoft Paint, où vous choisissez une couleur personnalisée dans une palette et les valeurs RVB s’affichent automatiquement.
 
-5. Pour rendre votre nouvelle étiquette disponible aux utilisateurs : À partir de l’option de menu **Classifications** > **Stratégies**, sélectionnez la stratégie qui doit contenir la nouvelle étiquette. Sélectionnez **Ajouter ou supprimer des étiquettes**. Sélectionnez l’étiquette à partir du panneau **Stratégie : Ajouter ou supprimer des étiquettes**, sélectionnez **OK**, puis **Enregistrer**.
+4. Pour rendre votre nouvelle étiquette disponible aux utilisateurs : À partir de l’option de menu **Classifications** > **Stratégies**, sélectionnez la stratégie qui doit contenir la nouvelle étiquette. Sélectionnez **Ajouter ou supprimer des étiquettes**. Sélectionnez l’étiquette à partir du panneau **Stratégie : Ajouter ou supprimer des étiquettes**, sélectionnez **OK**, puis **Enregistrer**.
     
     >[!TIP]
     >Dans le cas des nouvelles étiquettes, nous vous conseillons de les ajouter d’abord à une stratégie délimitée que vous utilisez à des fins de test. Quand vous êtes satisfait des résultats, supprimez l’étiquette de cette étendue de test, puis ajoutez-la à une stratégie que vous utilisez en production.     
@@ -52,7 +52,7 @@ Utilisez les instructions suivantes pour ajouter une nouvelle étiquette, qui po
     
     Vos modifications sont automatiquement disponibles pour les utilisateurs et les services. Il n’y a plus d’option de publication distincte.
 
-6. Si vous souhaitez que le nom et la description de cette nouvelle étiquette s’affichent dans différentes langues pour les utilisateurs : Suivez les procédures mentionnées dans le [Guide pratique pour configurer des étiquettes pour des langues différentes](configure-policy-languages.md). 
+5. Si vous souhaitez que le nom et la description de cette nouvelle étiquette s’affichent dans différentes langues pour les utilisateurs : Suivez les procédures mentionnées dans le [Guide pratique pour configurer des étiquettes pour des langues différentes](configure-policy-languages.md). 
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 12/15/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: c890d6acf2557093441a175bc8ed8657e8d1d9da
-ms.sourcegitcommit: bc082cffaa698b89b28aef7034290553c26f667b
+ms.openlocfilehash: 91a9a124c53d7c8f1aab31213595a8fc2f3627dd
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411811"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393981"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
 
@@ -75,11 +75,11 @@ La première fois que vous vous connectez au service Azure Information Protectio
     
 2. Prenez quelques minutes pour vous familiariser avec les étiquettes affichées :
     
-    - Étiquettes de classification : **Personnel**, **Public**, **Général**, **Confidentiel** et **Hautement confidentiel**. Les deux dernières étiquettes se développent pour afficher des sous-étiquettes, qui sont des exemples de sous-catégories dans une classification :
+   - Étiquettes de classification : **Personnel**, **Public**, **Général**, **Confidentiel** et **Hautement confidentiel**. Les deux dernières étiquettes se développent pour afficher des sous-étiquettes, qui sont des exemples de sous-catégories dans une classification :
     
-    - Avec la configuration par défaut, des marquages visuels ne sont pas configurés pour certaines étiquettes. Les marquages visuels sont un pied de page, un en-tête et un filigrane. En fonction de votre stratégie par défaut, la protection peut ou non être définie pour certaines étiquettes. Par exemple : 
+   - Avec la configuration par défaut, des marquages visuels ne sont pas configurés pour certaines étiquettes. Les marquages visuels sont un pied de page, un en-tête et un filigrane. En fonction de votre stratégie par défaut, la protection peut ou non être définie pour certaines étiquettes. Par exemple : 
     
-    ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](./media/info-protect-policy-default-labelsv2.png)
+     ![Didacticiel de démarrage rapide Azure Information Protection Étape 3 : stratégie par défaut](./media/info-protect-policy-default-labelsv2.png)
     
 3. Après les étiquettes, dans la section **Configurer les paramètres à afficher et à appliquer aux utilisateurs finaux d’Information Protection**, vous voyez également certains paramètres de stratégie. Par exemple, aucune étiquette par défaut n’est définie, les documents ou e-mails ne doivent pas obligatoirement avoir une étiquette et les utilisateurs n’ont pas à fournir de justification quand ils changent les étiquettes :
     

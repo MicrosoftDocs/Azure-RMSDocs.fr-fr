@@ -12,12 +12,12 @@ ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 3922236e6118045b6f01f55926a9c6de8aa9df72
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 2cdd5f88edd8cad446ebaecbdd4065fdc18de51e
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071639"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394106"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Procédure d’inscription et d’activation RMS de votre application dans Azure AD
 
@@ -51,7 +51,8 @@ Chacune des ressources suivantes contient de l’aide pour la configuration de v
 -   [Bibliothèque d’authentification Windows Azure Active Directory (ADAL) pour dotnet](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   Pour le SDK Linux, la bibliothèque ADAL est fournie avec la source du SDK, disponible via [Github](https://github.com/AzureAD/rms-sdk-for-cpp).
 
->[!NOTE]   Nous vous recommandons d’utiliser une des bibliothèques ADAL, même si vous pouvez utiliser d’autres bibliothèques d’authentification.
+> [!NOTE]
+> Nous vous recommandons d’utiliser une des bibliothèques ADAL, même si vous pouvez utiliser d’autres bibliothèques d’authentification.
 
 ### <a name="authentication-parameters"></a>Paramètres d’authentification
 
@@ -64,14 +65,15 @@ La bibliothèque ADAL nécessite plusieurs éléments d’information pour authe
 Il provient de l’étape d’inscription dans le portail Azure.
 - **URI de redirection** : fournit la bibliothèque d’authentification avec une cible d’URI pour le code d’authentification. Des formats spécifiques sont nécessaires pour iOS et Android. Ils sont expliqués dans les fichiers LISEZ-MOI des dépôts GitHub correspondants de la bibliothèque ADAL. Cette valeur provient de l’étape d’inscription dans le portail Azure.
 
->[!NOTE]
+> [!NOTE]
 > **L’étendue** n’est pas utilisée, mais peut l’être et est donc réservée à une utilisation future.
 
     Android: `msauth://packagename/Base64UrlencodedSignature`
 
     iOS: `<app-scheme>://<bundle-id>`
 
->[!NOTE]  Si votre application ne suit pas ces instructions, les workflows Azure RMS et Azure AD risquent d’échouer et ne sont pas pris en charge par Microsoft.com. En outre, il peut se produire une violation du contrat RMLA si un ID de client non valide est utilisé dans une application de production.
+> [!NOTE]
+> Si votre application ne suit pas ces instructions, les flux de travail Azure RMS et Azure AD risquent d’échouer et ne sont pas pris en charge par Microsoft.com. En outre, il peut se produire une violation du contrat RMLA si un ID de client non valide est utilisé dans une application de production.
 
 ### <a name="what-should-an-authentication-callback-implementation-look-like"></a>Exemple d’implémentation d’un rappel d’authentification
 **Exemples de code d’authentification** : ce SDK comprend un exemple de code montrant l’utilisation de rappels d’authentification. Pour votre commodité, ces exemples de code sont représentés ici, ainsi que dans chacune des rubriques liées.

@@ -12,12 +12,12 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 8132fd2afba45402f8f9c835f2d6db69dd8e81f2
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 695251277b62d44166e7a4569881b804db34279e
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071197"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394248"
 ---
 # <a name="release-notes"></a>Notes de publication
 
@@ -37,9 +37,9 @@ Cet article contient des informations importantes sur cette version du SDK RMS 
 
 - **Mise à jour vers la bibliothèque ADAL** : en mettant à jour votre application pour utiliser l’authentification ADAL au lieu de l’Assistant de connexion Microsoft Online, vous et vos clients pouvez :
 
- - Utiliser l’authentification multifacteur.
- - Installer le client RMS 2.1 sans nécessiter de privilèges d’administration sur l’ordinateur.
- - Certifier votre application pour Windows 10
+  - Utiliser l’authentification multifacteur.
+  - Installer le client RMS 2.1 sans nécessiter de privilèges d’administration sur l’ordinateur.
+  - Certifier votre application pour Windows 10
 
 - **La prise en charge de l’Assistant de connexion Microsoft Online avec le SDK RMS est supprimée.** Nous continuerons à prendre en charge l’utilisation de l’Assistant de connexion pendant six mois, après quoi la prise en charge cessera.
 
@@ -124,7 +124,7 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 
     **Remarque**  À compter de la version d’avril 2015, une vérification a été ajoutée au processus d’installation pour cette mise à jour issue de la Base de connaissances.
 
-     
+     
 
 -   **Intégration de l’API de fichier**
 

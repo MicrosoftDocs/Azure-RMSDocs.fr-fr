@@ -12,12 +12,12 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: daad2483fb850d06bbd62ff6b9a721160341d8b7
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: bc1e1e3dc66b3dee00dbfac7db11a1aaaeeab4e3
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070313"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394303"
 ---
 # <a name="deploy-into-production"></a>Déployer en production
 
@@ -27,7 +27,7 @@ Cette rubrique vous guide à travers le processus de déploiement de votre appli
 Avant de pouvoir lancer une application développée avec AIP/RMS, vous devez passer un accord formel avec Microsoft.
 
 ### <a name="begin-the-process"></a>Lancement du processus
-Obtenez votre IPIA en envoyant un e-mail à **IPIA@microsoft.com** avec les informations suivantes :
+Obtenez votre IPIA en envoyant un e-mail à <strong>IPIA@microsoft.com</strong> avec les informations suivantes :
 
 **Objet :** Demande d’IPIA pour *Nom de la société*
 
@@ -38,7 +38,7 @@ Dans le corps du message électronique, incluez :
 
 ### <a name="next-steps"></a>Étapes suivantes
 Après réception de votre demande d'IPIA, nous vous enverrons un formulaire (sous forme de document Word).
-Passez en revue les termes et conditions de l'IPIA et renvoyez le formulaire à l'adresse **IPIA@microsoft.com** avec les informations suivantes :
+Passez en revue les termes et conditions de l'IPIA et renvoyez le formulaire à l'adresse <strong>IPIA@microsoft.com</strong> avec les informations suivantes :
 - Raison sociale de la société
 - État/Province (États-Unis / Canada) ou pays d'immatriculation
 - URL de l’entreprise
@@ -54,7 +54,7 @@ Passez en revue les termes et conditions de l'IPIA et renvoyez le formulaire à 
 Après réception de votre formulaire, nous vous enverrons le lien IPIA final à signer numériquement. Après votre signature, il sera signé par le représentant de Microsoft approprié, ce qui finalisera l’accord.
 
 ### <a name="already-have-a-signed-ipia"></a>Vous disposez déjà d'un IPIA signé ?
-Si vous disposez déjà d'un IPIA signé et souhaitez ajouter un nouvel *ID de l’application* pour une application que vous lancez, envoyez un e-mail à l'adresse **IPIA@microsoft.com** et fournissez-nous les informations suivantes :
+Si vous disposez déjà d'un IPIA signé et souhaitez ajouter un nouvel *ID de l’application* pour une application que vous lancez, envoyez un e-mail à l'adresse <strong>IPIA@microsoft.com</strong> et fournissez-nous les informations suivantes :
 - Nom de l'application d'entreprise
 - Brève description de l'application
 - ID de client Azure (même s'il est identique au précédent)

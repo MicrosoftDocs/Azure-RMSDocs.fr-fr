@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3efae21dfabdb347826b177d5c58a3498d3276c5
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 17de145dc063b7a79f07562b111a932aa5959065
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173959"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394385"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
@@ -79,7 +79,7 @@ Cette option implique les étapes suivantes :
 3. La copie de la clé est protégée par Azure Key Vault.
 
 > [!NOTE]
-
+> 
 > Par mesure de protection, Azure Key Vault utilise des domaines de sécurité distincts pour ses centres de données dans des régions comme l’Amérique du Nord, l’EMEA (Europe, Moyen-Orient et Afrique) et l’Asie. Azure Key Vault utilise aussi différentes instances d’Azure, comme Microsoft Azure Allemagne et Azure Government. 
 
 Bien que cette action soit facultative, vous pouvez également utiliser les journaux d’utilisation quasiment en temps réel à partir d’Azure Information Protection pour voir exactement quand et comment votre clé de locataire est utilisée.
@@ -181,10 +181,10 @@ Ensuite, exécutez l’applet de commande [Add-AadrmKeyVaultKey](/powershell/mod
 
 > [!IMPORTANT]
 > Dans cet exemple, « aaaabbbbcccc111122223333 » est la version de la clé à utiliser. Si vous ne spécifiez pas la version, la version actuelle de la clé est utilisée sans avertissement, et la commande semble fonctionner. Toutefois, si votre clé dans Key Vault est ultérieurement mise à jour (renouvelée), le service Azure Rights Management cessera de fonctionner pour votre locataire, même si vous réexécutez la commande Use-AadrmKeyVaultKey.
->
->Veillez à spécifier la version de clé en plus du nom de clé quand vous exécutez cette commande. Vous pouvez utiliser la commande Azure Key Vault ([Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey)) afin d’obtenir le numéro de version de la clé actuelle. Par exemple : `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+> 
+> Veillez à spécifier la version de clé en plus du nom de clé quand vous exécutez cette commande. Vous pouvez utiliser la commande Azure Key Vault ([Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey)) afin d’obtenir le numéro de version de la clé actuelle. Par exemple : `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
-Si vous devez vérifier que l’URL de la clé est définie correctement pour Azure Information Protection : dans Azure Key Vault, exécutez [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) pour voir l’URL de la clé.
+Si vous devez vérifier que l’URL de la clé est définie correctement pour Azure Information Protection : dans Azure Key Vault, exécutez [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) pour voir l’URL de la clé.
 
 Enfin, si le service Azure Rights Management est déjà activé, exécutez [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) pour indiquer à Azure Information Protection d’utiliser cette clé comme clé de locataire active pour le service Azure Rights Management. Si vous n’exécutez pas cette étape, Azure Information Protection continuera d’utiliser la clé managée par Microsoft par défaut créée automatiquement pour votre locataire.
 

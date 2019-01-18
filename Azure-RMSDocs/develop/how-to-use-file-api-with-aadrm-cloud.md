@@ -12,22 +12,23 @@ ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d495abaec5bd32eb7082e8c1774011f9b765448b
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: a8c1917d8a73fd31020f06fec1d69bdd93d572ff
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070223"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393807"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Comment : permettre à votre application de service de fonctionner avec le service RMS cloud
 
 Cette rubrique décrit les étapes qui permettent de configurer votre application de service pour qu’elle utilise Azure Rights Management. Pour plus d’informations, consultez [Prise en main d’Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
 
-**Important**   Pour pouvoir utiliser votre application de service du kit de développement logiciel (SDK) Rights Management Services 2.1 avec Azure RMS, vous devez créer vos propres clients (tenants). Pour plus d’informations, consultez [Configuration requise d’Azure RMS : Abonnements cloud prenant en charge Azure RMS](../requirements.md)
+**Important**  
+Pour utiliser votre application de service de Rights Management Services SDK 2.1 avec Azure RMS, vous devez créer vos propres locataires. Pour plus d’informations, consultez [Configuration requise d’Azure RMS : Abonnements cloud prenant en charge Azure RMS](../requirements.md)
 
 ## <a name="prerequisites"></a>Prérequis
 
--   Le kit SDK RMS 2.1 doit être installé et configuré. Pour plus d’informations, voir [Bien démarrer avec le kit SDK RMS 2.1](getting-started-with-ad-rms-2-0.md).
+-   RMS SDK 2.1 doit être installé et configuré. Pour plus d’informations, consultez [Prise en main de RMS SDK 2.1](getting-started-with-ad-rms-2-0.md).
 -   Vous devez [créer une identité de service par le biais d’ACS](https://msdn.microsoft.com/library/gg185924.aspx) à l’aide de l’option de clé symétrique, ou par d’autres moyens, et noter les informations clés de ce processus.
 
 ## <a name="connecting-to-the-azure-rights-management-service"></a>Connexion au service Rights Management Azure
@@ -40,9 +41,9 @@ Cette rubrique décrit les étapes qui permettent de configurer votre applicatio
         IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
 
-  **Remarque**  Pour plus d’informations, voir [Définir le mode de sécurité d’API](setting-the-api-security-mode-api-mode.md).
+  **Remarque**  Pour plus d’informations, consultez [Définition du mode de sécurité d’API](setting-the-api-security-mode-api-mode.md)
 
-     
+
 -   Les étapes suivantes permettent de créer une instance de structure [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx) avec le membre *pcCredential* ([IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)) rempli avec les informations de connexion du service Azure Rights Management.
 -   Utilisez les informations obtenues lors de la création de votre identité de service de clé symétrique (voir la configuration requise plus haut dans cette rubrique) pour définir les paramètres *wszServicePrincipal*, *wszBposTenantId* et *cbKey* quand vous créez une instance de structure [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx).
 
@@ -55,7 +56,7 @@ Cette rubrique décrit les étapes qui permettent de configurer votre applicatio
 -   Installez l’[Assistant de connexion Microsoft Online](https://go.microsoft.com/fwlink/p/?LinkID=286152).
 -   Installez le [Module Powershell Azure AD](https://bposast.vo.msecnd.net/MSOPMW/8073.4/amd64/AdministrationConfig-en.msi).
 
-**Remarque**  Vous devez être administrateur client (tenant) pour pouvoir utiliser les cmdlets Powershell.
+**Remarque** : Vous devez être un administrateur client pour utiliser les applets de commande Powershell.
 
 - Démarrez Powershell et exécutez les commandes suivantes pour générer une clé.
 
@@ -103,7 +104,7 @@ Pour plus d’informations, consultez [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://
 
 -   Créez une instance de structure [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx) contenant votre instance de [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx).
 
-**Remarque**  Les membres de *connectionInfo* sont définis avec des URL obtenues à partir de l’appel précédent à `Get-AadrmConfiguration` et notées ici avec ces noms de champs.
+**Remarque** : Les membres de *connectionInfo* sont définis avec des URL obtenues à partir de l’appel précédent à `Get-AadrmConfiguration` et notées ici avec ces noms de champs.
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};
@@ -132,9 +133,17 @@ Pour plus d’informations, consultez [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://
     Appelez [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) en passant la même instance de [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx).
 
 
-    PCIPC_TIL pTemplates = NULL; IPC_TEMPLATE_ISSUER templateIssuer = (pTemplateIssuerList->aTi)[0];
+~~~
+PCIPC_TIL pTemplates = NULL;
+IPC_TEMPLATE_ISSUER templateIssuer = (pTemplateIssuerList->aTi)[0];
 
-    hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),        IPC_GTL_FLAG_FORCE_DOWNLOAD,        0,        &promptCtx,        NULL,        &pTemplates);
+hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),
+       IPC_GTL_FLAG_FORCE_DOWNLOAD,
+       0,
+       &promptCtx,
+       NULL,
+       &pTemplates);
+~~~
 
 
 -   Avec le modèle indiqué plus haut dans cette rubrique, appelez [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx), en passant la même instance de [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx).
@@ -163,7 +172,7 @@ Vous avez maintenant terminé les étapes nécessaires pour permettre à votre a
 ## <a name="related-topics"></a>Rubriques connexes
 
 * [Bien démarrer avec Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx)
-* [Bien démarrer avec le kit SDK RMS 2.1](getting-started-with-ad-rms-2-0.md)
+* [Bien démarrer avec RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
 * [Créer une identité de service via ACS](https://msdn.microsoft.com/library/gg185924.aspx)
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
 * [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)

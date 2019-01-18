@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 29c79d3da5e82b0d5702a1d85a22608f9177d271
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: b1d46cb3c98c520ab6900f910f691af920337334
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305695"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393470"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guide de l’utilisateur : Classifier et protéger un fichier ou un e-mail avec Azure Information Protection
 
@@ -138,13 +138,13 @@ Le guide d’administration contient une liste complète des types de fichiers p
 
 2. Dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, utilisez les étiquettes comme vous le feriez dans une application Office, qui définit la classification et la protection comme les a effectuées votre administrateur. 
 
-    - Si aucune des étiquettes ne peut être sélectionnée (elles apparaissent estompées) : Le fichier sélectionné ne prend pas en charge la classification, mais vous pouvez le protéger avec des autorisations personnalisées (étape 3). Par exemple :
+   - Si aucune des étiquettes ne peut être sélectionnée (elles apparaissent estompées) : Le fichier sélectionné ne prend pas en charge la classification, mais vous pouvez le protéger avec des autorisations personnalisées (étape 3). Par exemple :
 
-    ![Aucune étiquette n’est disponible dans la boîte de dialogue Classifier et protéger - Azure Information Protection**](../media/info-protect-dialog-labels-dimmed.png)
+     ![Aucune étiquette n’est disponible dans la boîte de dialogue Classifier et protéger - Azure Information Protection**](../media/info-protect-dialog-labels-dimmed.png)
     
-    - Si vous ne voyez pas les étiquettes, mais une option **Protection prédéfinie par l’entreprise** dans cette boîte de dialogue : Le client s’exécute en [mode Protection uniquement](client-protection-only-mode.md). Sélectionnez un modèle pour appliquer la protection que votre administrateur a configurée pour vous, ou bien sélectionnez **Autorisations personnalisées** pour spécifier vos propres paramètres de protection, puis passez à l’étape 4.
+   - Si vous ne voyez pas les étiquettes, mais une option **Protection prédéfinie par l’entreprise** dans cette boîte de dialogue : Le client s’exécute en [mode Protection uniquement](client-protection-only-mode.md). Sélectionnez un modèle pour appliquer la protection que votre administrateur a configurée pour vous, ou bien sélectionnez **Autorisations personnalisées** pour spécifier vos propres paramètres de protection, puis passez à l’étape 4.
     
-    ![Aucune étiquette dans la boîte de dialogue Classifier et protéger - Azure Information Protection**](../media/info-protect-dialog-labels-protection-only.png)
+     ![Aucune étiquette dans la boîte de dialogue Classifier et protéger - Azure Information Protection**](../media/info-protect-dialog-labels-protection-only.png)
     
 3. Si vous y êtes autorisé par votre administrateur, vous pouvez spécifier vos propres paramètres de protection plutôt que d’utiliser les paramètres de protection que votre administrateur peut avoir inclus dans l’étiquette que vous avez sélectionnée. Pour ce faire, sélectionnez **Protéger par des autorisations personnalisées**.
     
@@ -154,15 +154,15 @@ Le guide d’administration contient une liste complète des types de fichiers p
 
 4. Si vous avez sélectionné l’option d'autorisations personnalisées, spécifiez maintenant ce qui suit :
 
-    - **Sélectionner des autorisations** : Sélectionnez le niveau d’accès que vous voulez donner aux utilisateurs quand vous protégez les fichiers sélectionnés.
+   - **Sélectionner des autorisations** : Sélectionnez le niveau d’accès que vous voulez donner aux utilisateurs quand vous protégez les fichiers sélectionnés.
     
-    - **Sélectionner des utilisateurs, des groupes ou des organisations** : Spécifiez les personnes qui doivent disposer des autorisations que vous avez sélectionnées pour vos fichiers. Entrez leur adresse e-mail complète, une adresse e-mail de groupe ou un nom de domaine de l’organisation pour tous les utilisateurs appartenant à cette organisation. 
+   - **Sélectionner des utilisateurs, des groupes ou des organisations** : Spécifiez les personnes qui doivent disposer des autorisations que vous avez sélectionnées pour vos fichiers. Entrez leur adresse e-mail complète, une adresse e-mail de groupe ou un nom de domaine de l’organisation pour tous les utilisateurs appartenant à cette organisation. 
     
-    Vous pouvez également utiliser l’icône de carnet d’adresses pour sélectionner des utilisateurs ou des groupes dans le carnet d’adresses Outlook.
+     Vous pouvez également utiliser l’icône de carnet d’adresses pour sélectionner des utilisateurs ou des groupes dans le carnet d’adresses Outlook.
         
-    - **Expiration d’accès** : Sélectionnez cette option uniquement pour les fichiers pour lesquels le temps est un facteur critique afin que les personnes que vous avez spécifiées ne soient pas en mesure d’ouvrir le ou les fichiers sélectionnés après une date que vous définissez. Vous serez toujours en mesure d’ouvrir le fichier d’origine mais après minuit (sur votre fuseau horaire), au jour que vous définissez, les personnes que vous avez spécifiées ne pourront plus ouvrir le fichier.
+   - **Expiration d’accès** : Sélectionnez cette option uniquement pour les fichiers pour lesquels le temps est un facteur critique afin que les personnes que vous avez spécifiées ne soient pas en mesure d’ouvrir le ou les fichiers sélectionnés après une date que vous définissez. Vous serez toujours en mesure d’ouvrir le fichier d’origine mais après minuit (sur votre fuseau horaire), au jour que vous définissez, les personnes que vous avez spécifiées ne pourront plus ouvrir le fichier.
     
-    Notez que si ce paramètre a été précédemment configuré à l’aide des autorisations personnalisées à partir d’une application Office 2010, la date d’expiration spécifiée ne s’affiche pas dans cette boîte de dialogue, mais est toujours définie. Il s’agit seulement d’un problème d’affichage lorsque la date d’expiration a été configurée dans Office 2010.
+     Notez que si ce paramètre a été précédemment configuré à l’aide des autorisations personnalisées à partir d’une application Office 2010, la date d’expiration spécifiée ne s’affiche pas dans cette boîte de dialogue, mais est toujours définie. Il s’agit seulement d’un problème d’affichage lorsque la date d’expiration a été configurée dans Office 2010.
 
 5. Cliquez sur **Appliquer** et attendez le message **Tâche terminée** pour voir les résultats. Cliquez ensuite sur **Fermer**.
 

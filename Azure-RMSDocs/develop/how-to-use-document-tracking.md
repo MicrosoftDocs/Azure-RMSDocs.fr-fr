@@ -12,12 +12,12 @@ ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 7415e1408c5e3c3c782506a9ce25b4b8d90403f2
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: f1d8030fd4453ff5ec0720f30d22278297e580c8
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071843"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394149"
 ---
 # <a name="how-to-use-document-tracking"></a>Procédure : utiliser le suivi des documents
 
@@ -31,9 +31,9 @@ Du point de vue opérationnel, seules les propriétés **nom du contenu** et **t
 
 La séquence d’étapes que vous utiliserez pour configurer le suivi des documents pour un élément de contenu donné est la suivante :
 
--   Créez un objet de **métadonnées de licence**, puis définissez le **nom du contenu** et le **type de notification**. Ce sont les seules propriétés requises.
-   - Android - [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx)
-   -  iOS - [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)
+- Créez un objet de **métadonnées de licence**, puis définissez le **nom du contenu** et le **type de notification**. Ce sont les seules propriétés requises.
+  - Android - [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx)
+  -  iOS - [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)
 
 Choisissez un type de stratégie, modèle ou ad hoc :
 - Pour le suivi des document en fonction du modèle, créez un objet **stratégie utilisateur** qui passe les métadonnées de licence en tant que paramètre.
@@ -46,8 +46,8 @@ Choisissez un type de stratégie, modèle ou ad hoc :
 
     **Remarque**  L’objet de métadonnées de licence n’est directement accessible que pendant le processus de configuration du suivi des documents pour la stratégie d’utilisateur donnée. Une fois l’objet de stratégie utilisateur créé, les métadonnées de licence associées ne sont plus accessibles. Par conséquent, la modification des valeurs des métadonnées de licence n’aura aucun effet.
 
-     
+     
 
--   Enfin, appelez la méthode d’inscription de plateforme pour le suivi des documents.
+- Enfin, appelez la méthode d’inscription de plateforme pour le suivi des documents.
   - Android - [UserPolicy.registerForDocTracking asynchronous](https://msdn.microsoft.com/library/mt573699.aspx) ou [UserPolicy.registerForDocTracking synchronous](https://msdn.microsoft.com/library/mt631387.aspx)
   - iOS - [MSUserPolicy.registerForDocTracking](https://msdn.microsoft.com/library/mt573694.aspx)

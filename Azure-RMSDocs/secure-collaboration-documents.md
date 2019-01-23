@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: eb2e2538246ea5c8ca42f6270e535c73dda71774
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: a5a1c0069a35073d9362e28ef18ad4c09d95df3d
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305503"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393962"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
@@ -50,13 +50,13 @@ Cet exemple décrit la procédure de configuration d’une étiquette existante 
 
 3. Dans le panneau **Ajouter des autorisations** : 
     
-    - Pour votre groupe interne : sélectionnez **Parcourir le répertoire** pour sélectionner le groupe qui doit avoir une fonction de messagerie activée.
+   - Pour votre groupe interne : sélectionnez **Parcourir le répertoire** pour sélectionner le groupe qui doit avoir une fonction de messagerie activée.
     
-    - Pour tous les utilisateurs de la première organisation externe : sélectionnez **Entrez les détails** et tapez le nom d’un domaine dans le locataire de l’organisation. Par exemple, fabrikam.com.
+   - Pour tous les utilisateurs de la première organisation externe : sélectionnez **Entrez les détails** et tapez le nom d’un domaine dans le locataire de l’organisation. Par exemple, fabrikam.com.
     
-    - Pour le groupe dans la seconde organisation externe : sous l’onglet **Entrez les détails**, tapez l’adresse e-mail du groupe dans le locataire de l’organisation. Par exemple, sales@contoso.com.
+   - Pour le groupe dans la seconde organisation externe : sous l’onglet **Entrez les détails**, tapez l’adresse e-mail du groupe dans le locataire de l’organisation. Par exemple, sales@contoso.com.
     
-    - Pour l’utilisateur qui n’a pas de compte Azure AD : toujours sous l’onglet **Entrez les détails**, tapez l’adresse e-mail de l’utilisateur. Par exemple, bengi.turan@gmail.com. 
+   - Pour l’utilisateur qui n’a pas de compte Azure AD : toujours sous l’onglet **Entrez les détails**, tapez l’adresse e-mail de l’utilisateur. Par exemple, bengi.turan@gmail.com. 
 
 4. Pour accorder les mêmes autorisations à tous les utilisateurs : Pour **Choisir des autorisations à partir des autorisations prédéfinies**, sélectionnez **Copropriétaire**, **Co-auteur**, **Réviseur** ou **Personnalisé** pour sélectionner les autorisations à accorder.
     
@@ -129,7 +129,7 @@ En outre, les scénarios suivants prennent en charge l’affichage de documents�
 
 - Un navigateur peut ouvrir des pièces jointes protégées lorsque des fournisseurs de réseaux sociaux et des codes secrets à usage unique sont utilisés pour l’authentification avec Exchange Online et avec les nouvelles fonctionnalités d’Office 365 Message Encryption. 
 
-|Plateformes pour l’affichage et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />compte Microsoft|
+|Plateformes pour l’affichage et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />Compte Microsoft|
 |---------------|----------|-----------|-----------|
 |Windows|Oui [[1]](#footnote-1)|Oui [[2]](#footnote-2)|
 |iOS|Oui [[1]](#footnote-1)|Non|

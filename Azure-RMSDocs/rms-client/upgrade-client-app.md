@@ -4,18 +4,18 @@ description: Instructions pour les utilisateurs ayant effectué la mise à nivea
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c882c917a3a612b3fa362661cdcd94e77ec145f1
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 7c39527945eb5f92c19e6cf8f89db6e8d7ae9a5a
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305520"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314711"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Guide de l’utilisateur : Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS
 
@@ -30,7 +30,7 @@ Utilisez les informations suivantes pour être opérationnel rapidement.
 |Protéger un fichier sur un appareil <br /><br />Également appelé « protéger sur place »|Pour les applications Office : Sélectionnez une étiquette qui applique la protection nécessaire ou définissez des autorisations personnalisées.<br /><br />Pour les autres fichiers : Utilisez l’option de menu Explorateur de fichiers, **Classifier et protéger** pour ouvrir la boîte de dialogue **Classifier et protéger - Azure Information Protection**. Ensuite, sélectionnez une étiquette qui applique la protection nécessaire ou spécifiez vos propres autorisations personnalisées. <br /><br />Pour plus d’informations, voir [Classifier et protéger un fichier ou un e-mail](client-classify-protect.md).
 |Protéger un fichier que vous partagez par courrier électronique <br /><br />Également appelé « partage protégé »|Avec Outlook, appliquez une étiquette avec la protection requise à votre e-mail, ou sélectionnez l’option **Ne pas transférer** dans Outlook. Les pièces jointes non protégées qui ont un [type de fichier pris en charge](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) sont protégées automatiquement.<br /><br />Remarque : Pour effectuer le suivi d’un document protégé que vous envoyez par e-mail, commencez par le protéger avant de l’attacher à l’e-mail.<br /><br />Pour plus d’informations, voir [Classifier et protéger un fichier ou un e-mail](client-classify-protect.md).
 |Modifier des autorisations sur les fichiers protégés <br /><br />Également appelé « reprotéger »|Dans les applications Office qui affichent la barre Azure Information Protection : Sélectionnez une étiquette qui applique la protection nécessaire.<br /><br />Pour les autres fichiers, et si le client Azure Information Protection est en [mode protection uniquement](client-protection-only-mode.md) : Utilisez l’option de menu Explorateur de fichiers, **Classifier et protéger** pour ouvrir la boîte de dialogue **Classifier et protéger - Azure Information Protection**. Ensuite, sélectionnez une étiquette qui applique la protection nécessaire ou spécifiez vos propres autorisations personnalisées.<br /><br />Pour plus d’informations, voir [Classifier et protéger un fichier ou un e-mail](client-classify-protect.md).
-|Suivre et révoquer des documents|Dans Word, Excel et PowerPoint : Ouvrez le document, puis cliquez sur l’onglet **Accueil** > Groupe **Protection** > **Protéger** > **Suivre et révoquer**<br /><br />Depuis l'Explorateur de fichiers : Cliquez avec le bouton droit sur un fichier ou un dossier > **Classifier et protéger**. Ensuite, à partir de la boîte de dialogue **Classifier et protéger - Azure Information Protection**, cliquez sur **Suivre et révoquer**. <br /><br />Pour plus d’informations, consultez [Suivre et révoquer vos documents](client-track-revoke.md).
+|Suivre et révoquer des documents|Dans Word, Excel et PowerPoint : Ouvrez le document, puis cliquez sur l’onglet **Accueil** > Groupe **Protection** > **Protéger** > **Suivre et révoquer**<br /><br />Depuis l'Explorateur de fichiers : Cliquez avec le bouton droit sur un fichier ou un dossier > **Classifier et protéger**. Ensuite, à partir de la boîte de dialogue **Classifier et protéger - Azure Information Protection**, cliquez sur **Suivre et révoquer**. <br /><br />Lorsque vous utilisez PowerShell à partir de la préversion actuelle du client Azure Information Protection : Utilisez le paramètre *EnableTracking* avec la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) pour inscrire le document étiqueté pour le suivi.<br /><br />Pour plus d’informations, consultez [Suivre et révoquer vos documents](client-track-revoke.md).
 |Afficher et utiliser des fichiers protégés|Pour les documents Office protégés, Office doit être installé. La visionneuse Azure Information Protection peut ouvrir de nombreux autres fichiers protégés, vous permettant ainsi de les lire, les imprimer et les enregistrer si vous disposez des autorisations appropriées pour effectuer ces actions. Cette visionneuse est installée automatiquement avec le client, ou vous pouvez l’installer séparément.<br /><br />Pour plus d’informations, consultez [Ouvrir des fichiers protégés](client-view-use-files.md).
 |Supprimer la protection des fichiers|Utilisez l’option de menu Explorateur de fichiers, **Classifier et protéger** pour ouvrir la boîte de dialogue **Classifier et protéger - Azure Information Protection**. <br /><br />Ensuite, dans le cas d’un seul fichier, désactivez l’option **Protéger avec des autorisations personnalisées**. Dans le cas de plusieurs fichiers ou d’un dossier, cliquez sur **Supprimer des autorisations personnalisées**.<br /><br />Pour plus d’informations, consultez [Supprimer des étiquettes et la protection des fichiers et e-mails](client-remove-label-protection.md).|
 

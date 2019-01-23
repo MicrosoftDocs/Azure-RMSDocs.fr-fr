@@ -4,18 +4,18 @@ description: Identifiez les applications qui utilisent les API RMS pour prendre 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/15/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 51883da128580be5f6bfd4dd725b8dfdf10f844f
-ms.sourcegitcommit: 5b48131ace3bbaf82f22fcb7eedf735c2f73d962
+ms.openlocfilehash: 0f83401b8cac96820f2628a501ca2f731d678126
+ms.sourcegitcommit: 2daa75cda8475028a3dac83d70505fcfccef42a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53429880"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361798"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 
@@ -122,11 +122,11 @@ Conseil : Pour bien démarrer avec la protection des documents en utilisant Offi
 
 ### <a name="more-information-about-the-azure-information-protection-app-for-ios-and-android"></a>Pour plus d’informations sur l’application Azure Information Protection pour iOS et Android
 
-La visionneuse Azure Information Protection pour iOS et Android remplace l’application de partage RMS pour ces appareils. Elle fournit les mêmes fonctionnalités et, en plus, prend en charge les e-mails protégés par des droits et les fichiers PDF protégés par des droits sur SharePoint Online.
+L’application Azure Information Protection pour iOS et Android fournit une visionneuse pour les e-mails protégés par des droits (fichiers .rpmsg) lorsque ces appareils mobiles n’ont pas d’application de messagerie capable d’ouvrir les e-mails protégés. Cette application permet également d’ouvrir des fichiers PDF, images et fichiers texte protégés par des droits.
 
-Si vos appareils iOS et Android sont inscrits par Microsoft Intune, vous pouvez déployer et gérer cette application à l’aide d’une application gérée par une stratégie. Pour plus d’informations, consultez [Configurer et déployer des stratégies de gestion des applications mobiles dans la console Microsoft Intune](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) dans la documentation Intune. Pour l’étape 2 de cette documentation Intune, suivez les instructions pour publier une application gérée par une stratégie.
+Si vos appareils iOS et Android sont inscrits par Microsoft Intune, les utilisateurs peuvent installer l’application à partir du portail d’entreprise et vous pouvez gérer l’application à l’aide de [stratégies de protection des applications](/intune/app-protection-policies) d’Intune.
 
-Pour plus d’informations, consultez [FAQs for Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md) (Forum Aux Questions concernant l’application Azure Information Protection pour iOS et Android).
+Pour plus d’informations sur l’utilisation de l’application, consultez [FAQs for Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md) (Forum Aux Questions concernant l’application Azure Information Protection pour iOS et Android).
 
 
 ### <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Plus d’informations sur le client Azure Information Protection pour Windows

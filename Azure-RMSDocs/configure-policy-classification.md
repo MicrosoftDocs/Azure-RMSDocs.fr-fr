@@ -4,16 +4,16 @@ description: Les conditions permettent d’affecter automatiquement une étiquet
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: adf877a3f5f08d0adefd1cbe8864a0c0c2bb17b1
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: da76767b7538706f596653b77f3f29f8717e1442
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023853"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314796"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -50,7 +50,7 @@ Vous pouvez changer ce comportement afin que le client Azure Information Protect
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Évaluation de plusieurs conditions lorsqu’elles s’appliquent à plusieurs étiquettes
 
-1. Les étiquettes sont triées en vue de leur évaluation, en fonction de leur position que vous spécifiez dans la stratégie : l’étiquette positionnée en premier a la position la plus basse (la moins sensible) et l’étiquette positionnée en dernier a la position la plus élevée (la plus sensible).
+1. Les étiquettes sont triées pour l’évaluation, en fonction de leur position que vous spécifiez dans la stratégie : L’étiquette en premier a la position la plus faible (moins sensible) et l’étiquette en dernier a la position la plus élevée (plus sensible).
 
 2. L’étiquette la plus sensible est appliquée.
  
@@ -63,12 +63,12 @@ Vous pouvez changer ce comportement afin que le client Azure Information Protect
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous souhaitez configurer.
+2. À partir de l’option de menu **Classifications** > **Étiquettes** : Dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette à configurer.
 
 3. Dans le panneau **Étiquette**, dans la section **Configurer des conditions pour appliquer automatiquement cette étiquette**, cliquez sur **Ajouter une condition**.
 
 4. Dans le panneau **Condition**, sélectionnez **Types d’informations** pour utiliser une condition prédéfinie ou **Personnalisé** pour spécifier votre propre condition :
-    - Pour **Types d’informations** : sélectionnez une condition dans la liste des conditions disponibles, puis sélectionnez le nombre minimal d’occurrences et déterminez si l’occurrence doit avoir une valeur unique pour être incluse dans le nombre d’occurrences.
+    - Pour **Types d’informations** : Sélectionnez une condition dans la liste des conditions disponibles, puis sélectionnez le nombre minimal d’occurrences et déterminez si l’occurrence doit avoir une valeur unique pour être incluse dans le nombre d’occurrences.
         
         Les types d’informations utilisent les types d’informations sensibles et la détection de modèle de protection contre la perte de données (DLP) d’Office 365. Vous avez le choix entre les nombreux types courants d’informations sensibles, dont certains sont spécifiques à certaines régions. Pour plus d’informations, voir [Éléments recherchés par les types d’informations sensibles](/office365/securitycompliance/what-the-sensitive-information-types-look-for) dans la documentation d’Office 365.
         
@@ -79,19 +79,19 @@ Vous pouvez changer ce comportement afin que le client Azure Information Protect
         
         Quand Azure Information Protection évalue les types d’informations que vous sélectionnez, il n’utilise pas le paramètre de niveau de confiance DLP d’Office, mais recherche celui avec le niveau de confiance le plus faible.
     
-    - Pour **Personnalisé** : spécifiez un nom et une expression pour la correspondance, sans guillemets ni caractères spéciaux. Spécifiez ensuite s’il s’agit d’une expression régulière, si la casse doit être respectée, le nombre minimal d’occurrences, et si l’occurrence doit avoir une valeur unique pour être incluse dans le nombre d’occurrences.
+    - Pour **Personnalisé** : Spécifiez un nom et une expression pour la correspondance, sans guillemets ni caractères spéciaux. Spécifiez ensuite s’il s’agit d’une expression régulière, si la casse doit être respectée, le nombre minimal d’occurrences, et si l’occurrence doit avoir une valeur unique pour être incluse dans le nombre d’occurrences.
         
         Les expressions régulières utilisent les modèles regex d’Office 365. Pour vous aider à spécifier des expressions régulières pour vos conditions personnalisées, consultez la version spécifique suivante de la [syntaxe des expressions régulières Perl](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) dans Boost.
         
 5. Si nécessaire, changez les options **Nombre minimal d’occurrences** et **Comptabiliser seulement les occurrences avec des valeurs uniques**, puis sélectionnez **Enregistrer**. 
     
-    Exemple d’options occurrences : Vous sélectionnez le numéro de sécurité sociale (USA) comme type d’informations et affectez au nombre minimal d’occurrences la valeur 2, et un document contient deux fois le même numéro de sécurité sociale. Si vous définissez **Comptabiliser seulement les occurrences avec des valeurs uniques** sur **Activé**, la condition n’est pas remplie. Si vous définissez cette option sur **Désactivé**, la condition est remplie.
+    Exemples d’options d’occurrences : Vous sélectionnez le type d’information pour le numéro de sécurité sociale, définissez le nombre minimal d’occurrences sur 2 et un document a le même numéro de sécurité sociale répertorié deux fois : Si vous définissez l’option **Comptabiliser seulement les occurrences avec des valeurs uniques** à **Activé**, la condition n’est pas remplie. Si vous définissez cette option sur **Désactivé**, la condition est remplie.
 
 6. Dans le panneau **Étiquette**, configurez les options suivantes, puis cliquez sur **Enregistrer** :
     
-    - Choisissez la classification automatique ou recommandée : pour l’option **Sélectionner comment cette étiquette est appliquée : automatiquement ou recommandée à l’utilisateur**, sélectionnez **Automatique** ou **Recommandée**.
+    - Choisissez la classification automatique ou recommandée : Pour l’option **Sélectionner comment cette étiquette est appliquée : automatiquement ou recommandée à l’utilisateur**, sélectionnez **Automatique** ou **Recommandée**.
     
-    - Spécifiez le texte de l’invite utilisateur ou du conseil de stratégie : conservez le texte par défaut ou spécifiez votre propre chaîne.
+    - Spécifiez le texte de l’invite utilisateur ou du conseil de stratégie : Conservez le texte par défaut ou spécifiez votre propre chaîne.
 
 Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement disponibles pour les utilisateurs et les services. Il n’y a plus d’option de publication distincte.
 
@@ -99,11 +99,9 @@ Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement d
 
 Les types d’informations sensibles suivants nécessitent au minimum la version 1.37.19.0 pour le client Azure Information Protection :
 
-- **Numéro de téléphone dans l’UE**
 - **Numéro de téléphone mobile dans l’UE**
 - **Numéro de passeport dans l’UE**
 - **Numéro de permis de conduire dans l’UE**
-- **Coordonnées GPS dans l’UE**
 - **Numéro d’identification nationale dans l’UE**
 - **Numéro de sécurité sociale ou équivalent dans l’UE**
 - **Numéro de T.V.A. intra-communautaire dans l’UE**
@@ -111,6 +109,24 @@ Les types d’informations sensibles suivants nécessitent au minimum la version
 - **Numéro d’identification nationale en Turquie**
 - **Numéro de carte de résidence au Japon**
 
+
+Les types d’informations sensibles suivants nécessitent la préversion actuelle du client Azure Information Protection :
+
+- **Chaîne de connexion Azure Service Bus**
+- **Chaîne de connexion Azure IoT**
+- **Compte de stockage Azure**
+- **Chaîne de connexion de la base de données Azure IAAS et chaîne de connexion SQL Azure**
+- **Chaîne de connexion du Cache Redis Azure**
+- **Azure SAS**
+- **Chaîne de connexion SQL Server**
+- **Clé d’authentification Azure DocumentDB**
+- **Mot de passe de paramètre de publication Azure**
+- **Clé de compte de stockage Azure (générique)**
+
+En outre, les types d’informations sensibles suivants ne sont pas pris en charge pour la préversion actuelle du client Azure Information Protection et n’apparaissent plus dans le portail Azure :
+
+- **Numéro de téléphone dans l’UE**
+- **Coordonnées GPS dans l’UE**
 
 ## <a name="next-steps"></a>Étapes suivantes
 

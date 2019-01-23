@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: c6f220e995aa785c44d4227884da2c7379918a8d
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 39abf4586f00cb40cb096841261993225b8c8387
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305469"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393356"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configuration des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection
 
@@ -29,7 +29,7 @@ Les informations suivantes vous permettent de configurer des règles de flux de 
 
 Les règles de flux de messagerie qui appliquent la protection en tant qu’action sont ignorées si l’e-mail est déjà protégé. Par exemple, un message électronique qui a été protégé par Ne pas transférer ne peut pas être modifié par une règle de flux de messagerie Exchange pour utiliser l’option Chiffrement seul.  
 
-Vous pouvez étendre ces exemples ainsi que les modifier. Par exemple, ajoutez plus de conditions. Pour plus d’informations sur la configuration des règles de flux de messagerie, consultez [messagerie règles de flux (règles de transport) dans Exchange Online] (https://technet.microsoft.com/library/jj919238(v=exchg.150\).aspx) dans la documentation d’Exchange Online.
+Vous pouvez étendre ces exemples ainsi que les modifier. Par exemple, ajoutez plus de conditions. Pour plus d’informations sur la configuration des règles de flux de messagerie, consultez les [règles de flux de messagerie (règles de transport) dans Exchange Online](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx) dans la documentation d’Exchange Online.
 
 Pour plus d’informations sur la configuration des règles de flux de messagerie afin de chiffrer des messages électroniques, consultez [Définir des règles de flux de messagerie pour chiffrer des messages électroniques dans Office 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) dans la documentation d’Office. 
 
@@ -60,7 +60,7 @@ Pour les exemples suivants, créez une nouvelle règle de flux de messagerie en 
 > [!TIP]
 > Si vous rencontrez des problèmes avec l’interface utilisateur lorsque vous configurez vos règles, essayez un autre navigateur, tel qu’Internet Explorer.
 
-Les exemples ont une seule condition qui applique une protection quand un e-mail est envoyé à l’extérieur de l’organisation. Pour plus d’informations sur les autres conditions que vous pouvez sélectionner, consultez [conditions de règle de flux de messagerie et exceptions (prédicats) dans Exchange Online] (https://technet.microsoft.com/library/jj919235(v=exchg.150\).aspx).
+Les exemples ont une seule condition qui applique une protection quand un e-mail est envoyé à l’extérieur de l’organisation. Pour plus d’informations sur les autres conditions que vous pouvez sélectionner, consultez les [conditions de règle de flux de messagerie et exceptions (prédicats) dans Exchange Online](https://technet.microsoft.com/library/jj919235(v=exchg.150).aspx).
 
 
 ### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>Exemple 1 : Règle qui applique l’option Ne pas transférer à des e-mails étiquetés **Général** quand ils sont envoyés en dehors de l’organisation

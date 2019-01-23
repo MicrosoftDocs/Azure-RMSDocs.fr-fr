@@ -11,12 +11,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cd07ed5d1c4bf2f4192f400c699e6e6dc3447713
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 29c7d333131c0b85b9cdb83e9a2212420f60077f
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023751"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393651"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android
 
@@ -26,7 +26,9 @@ Cette page fournit des réponses aux questions les plus fréquemment posées sur
 
 ## <a name="what-can-i-do-with-the-azure-information-protection-app"></a>Que puis-je faire avec l’application Azure Information Protection ?
 
-Cette application vous permet d’afficher des e-mails protégés par des droits (fichiers .rpmsg) si votre application de messagerie ne prend pas en charge la protection des données Rights Management. Cette application vous permet également d’afficher les fichiers PDF, les images et les fichiers texte protégés par des droits. Actuellement, vous ne pouvez pas utiliser cette application pour créer des e-mails protégés, y répondre, ou créer ou modifier des fichiers protégés.
+Cette application vous permet d’afficher des e-mails protégés par des droits (fichiers .rpmsg) si votre application de messagerie ne prend pas en charge la protection des données Rights Management. Cette application vous permet également d’afficher les documents PDF, les images et les fichiers texte protégés par des droits. 
+
+Cette application étant une visionneuse, vous ne pouvez pas l’utiliser pour créer des e-mails protégés, y répondre, ou créer ou modifier des fichiers protégés. En outre, l’application ne peut pas ouvrir de pièces jointes pour les fichiers que vous affichez. Par exemple, des pièces jointes dans des documents PDF protégés ou dans des e-mails protégés par des droits.
 
 ## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>Puis-je ouvrir des fichiers PDF qui se trouvent dans des bibliothèques protégées SharePoint et dans OneDrive Entreprise ?
 
@@ -48,7 +50,7 @@ Si vous disposez de ces versions ou de versions ultérieures, vous pouvez instal
 
 Une fois que vous avez installé l’application, vous n’avez rien d’autre à faire à ce stade. Patientez jusqu'à ce que vous receviez un e-mail ou un fichier protégé que vous souhaitez afficher, puis choisissez la **visionneuse AIP** pour l’ouvrir. Vous serez invité à vous connecter avec votre compte professionnel ou scolaire, ou invité à sélectionner un certificat. Une fois ces informations d’identification authentifiées, vous pourrez lire le contenu.
 
-Toutefois, si vous ne souhaitez pas attendre, vous pouvez utiliser les instructions suivantes pour vous envoyer un e-mail ou un fichier protégé : [Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android](mobile-app-get-started.md) 
+Toutefois, si vous ne souhaitez pas attendre, vous pouvez utiliser les instructions suivantes pour vous envoyer un e-mail protégé ou un fichier à afficher : [Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android](mobile-app-get-started.md) 
 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Quelles informations d’identification utiliser pour se connecter à cette application ?
 

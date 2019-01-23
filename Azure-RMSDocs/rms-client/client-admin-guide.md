@@ -4,18 +4,18 @@ description: Instructions et informations destinées aux administrateurs d’un 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e66ad53b23a76a263d4ec74e184597db12fdaa9d
-ms.sourcegitcommit: 8deca8163a6adea73f28aaf300a958154f842e4a
+ms.openlocfilehash: 1ece9ab39045d1bb6f1388a33784a733618dd0d4
+ms.sourcegitcommit: 24c464bcb80db2d193cfd17ea8c264a327dcf54a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210496"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54366208"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -198,11 +198,69 @@ Consultez [Historique des versions et politique du support](client-version-relea
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Mise à niveau du scanneur Azure Information Protection
 
+La méthode de mise à niveau du scanneur varie selon que vous mettez à niveau vers la version en disponibilité générale actuelle ou la préversion actuelle.
+
+#### <a name="to-upgrade-the-scanner-to-the-current-ga-version"></a>Pour mettre à niveau le scanneur vers la version en disponibilité générale actuelle
+
 Pour mettre à niveau le scanneur Azure Information Protection, installez la dernière version du client Azure Information Protection. Effectuez ensuite l’action unique suivante. Après cela, il n’est pas nécessaire de relancer l’analyse de fichiers déjà scannés.
 
 - Exécutez [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) après avoir mis à niveau le client Azure Information Protection. Vos paramètres de configuration pour le scanneur et les référentiels sont conservés. L’exécution de cette applet de commande est nécessaire pour mettre à jour le schéma de base de données pour le scanneur et si nécessaire, le compte de service du scanneur se voit également accorder des autorisations de suppression pour la base de données du scanneur. 
     
     Tant que vous n’avez pas exécuté cette applet de commande de mise à jour, le scanneur ne s’exécute pas et vous voyez en général l’ID d’événement **1000** s’afficher dans le journal des événements Windows, avec le message d’erreur suivant : **Nom d’objet non valide « ScannerStatus »**.
+
+#### <a name="to-upgrade-the-scanner-to-the-current-preview-version"></a>Pour mettre à niveau le scanneur vers la préversion actuelle
+
+> [!IMPORTANT]
+> Pour un chemin de mise à niveau correct, n’installez pas la préversion du client Azure Information Protection sur l’ordinateur qui exécute le scanneur comme première étape de mise à niveau du scanneur. Utilisez plutôt les instructions de mise à niveau suivantes.
+
+Pour la préversion actuelle du scanneur, le processus de mise à niveau est différent des versions précédentes. La mise à niveau automatique du scanneur modifie le scanneur pour qu’il obtienne ses paramètres de configuration à partir du portail Azure. Le schéma est également mis à jour pour la base de données de configuration du scanneur, et cette base de données est également renommée à partir d’AzInfoProtection :
+
+- Si vous ne spécifiez pas votre propre nom de profil, la base de données de configuration est renommée **AIPScanner_\<nom_ordinateur>**. 
+
+- Si vous spécifiez votre propre nom de profil, la base de données de configuration est renommée **AIPScanner_\<nom_profil>**.
+
+Bien qu’il soit possible de suivre une autre séquence pour mettre à niveau le scanneur, nous vous recommandons les étapes suivantes :
+
+1. Utilisez le portail Azure pour créer un nouveau profil de scanneur qui inclut des paramètres pour le scanneur et vos référentiels de données avec tous les paramètres dont ils ont besoin. Pour obtenir de l’aide sur cette étape, consultez la section [Configurer le scanneur dans le portail Azure](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal) dans les instructions de déploiement du scanneur en préversion.
+    
+    Si l’ordinateur qui exécute le scanneur est déconnecté d’Internet, vous devez toujours effectuer cette étape. Ensuite, à partir du portail Azure, utilisez l’option **Exporter** pour exporter votre profil de scanneur dans un fichier.
+
+2. Sur l’ordinateur du scanneur, arrêtez le service du scanneur, **Scanneur Azure Information Protection**.
+
+3. Mettez à niveau le client Azure Information Protection en installant la préversion actuelle depuis le [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+4. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le même nom de profil que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile USWest`
+
+5. Uniquement si le scanneur est exécuté sur un ordinateur déconnecté : Exécutez maintenant [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) et spécifiez le fichier qui contient les paramètres exportés.
+
+6. Redémarrez le service **Scanneur Azure Information Protection**.
+
+##### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>Mise à niveau selon une séquence différente des étapes recommandées
+
+Si vous ne configurez pas le scanneur dans le portail Azure avant d’exécuter la commande Update-AIPScanner, vous ne devrez pas spécifier de nom de profil qui identifie vos paramètres de configuration de scanneur pour le processus de mise à niveau. 
+
+Dans ce scénario, lorsque vous configurez le scanneur dans le portail Azure, vous devez spécifier exactement le même nom de profil que celui utilisé lors de l’exécution de la commande Update-AIPScanner. Si le nom ne correspond pas, le scanneur ne sera pas configuré pour vos paramètres. 
+
+> [!TIP]
+> Pour identifier les scanneurs dont la configuration est incorrecte, utilisez le panneau **Azure Information Protection - Nœuds** dans le portail Azure.
+>  
+> Les scanneurs connectés à Internet affichent leur nom d’ordinateur avec le numéro de préversion du client Azure Information Protection, mais pas de nom de profil. Seuls les scanneurs portant le numéro de version 1.41.51.0 ne doivent pas afficher de nom de profil dans ce panneau. 
+
+Si vous n’avez pas spécifié de nom de profil lors de l’exécution de la commande Update-AIPScanner, le nom d’ordinateur est utilisé pour créer automatiquement le nom du profil du scanneur.
+
+#### <a name="moving-the-scanner-configuration-database-to-a-different-sql-server-instance"></a>Déplacement de la base de données de configuration du scanneur vers une autre instance SQL Server
+
+Dans la préversion actuelle, il existe un problème connu si vous essayez de déplacer la base de données de configuration du scanneur vers une nouvelle instance SQL Server après avoir exécuté la commande de mise à niveau.
+
+Si vous savez si vous déplacerez la base de données de configuration du scanneur pour la préversion, procédez comme suit :
+
+1. Désinstallez le scanneur à l’aide de [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner).
+
+2. Si vous n’avez pas encore mis à niveau vers la préversion du client Azure Information Protection, mettez le client à niveau maintenant.
+
+3. Installez le scanneur à l’aide de [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), en spécifiant la nouvelle instance SQL Server et le nom du profil.
+
+4. Facultatif : Si vous ne souhaitez pas que le scanneur relance l’analyse de tous les fichiers, exportez la table ScannerFiles et importez-la dans la nouvelle base de données.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Désinstallation du client Azure Information Protection
 

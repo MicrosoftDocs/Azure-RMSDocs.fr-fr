@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: ffb919e0d48687a3a1c46a12651734c85c578aa6
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 075441ef848f3ebe5e106f5989a99981037711bd
+ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393363"
+ms.locfileid: "54397842"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -44,7 +44,7 @@ Quand l’étiquette applique une protection, il n’est pas approprié d’enre
 
 Exchange ne doit pas être configuré pour Azure Information Protection avant que les utilisateurs ne puissent appliquer des étiquettes dans Outlook pour protéger leurs e-mails. Toutefois, tant qu’Exchange n’est pas configuré pour Azure Information Protection, vous n’obtenez pas toutes les fonctionnalités de la protection Azure Rights Management avec Exchange. Par exemple, les utilisateurs ne peuvent pas afficher des e-mails protégés sur un téléphone mobile ou dans la version web d’Outlook. Les e-mails protégés ne peuvent pas être indexés pour la recherche et vous ne pouvez pas configurer la DLP Exchange Online pour la protection Rights Management. Pour qu’Exchange puisse prendre en charge ces scénarios supplémentaires, consultez les ressources suivantes :
 
-- Pour Exchange Online, consultez les instructions figurant dans [Exchange Online : Configuration de la Gestion des droits relatifs à l’information](configure-office365.md#exchange-online-irm-configuration).
+- Pour Exchange Online, consultez les instructions figurant dans [Exchange Online : Configuration de la Gestion des droits relatifs à l’information](configure-office365.md#exchangeonline-irm-configuration).
 
 - Pour Exchange sur site, vous devez déployer le [connecteur RMS et configurer vos serveurs Exchange](deploy-rms-connector.md). 
 

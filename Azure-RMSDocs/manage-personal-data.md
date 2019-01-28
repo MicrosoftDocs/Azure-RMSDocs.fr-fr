@@ -4,18 +4,18 @@ description: Informations sur les données personnelles qui sont utilisées par 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 4e44796d3bd2fdf1fd2f0c39cc759f16d87267a1
-ms.sourcegitcommit: db60fe8f74ffaa4f6ffbf5defb22efc476c28312
+ms.openlocfilehash: 08ae5875437a1e443247a5a57b1bb621b6627ce3
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53319412"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898781"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
 
@@ -196,6 +196,12 @@ Lorsque des étiquettes et la protection sont appliquées à des documents et de
 Par ailleurs, le client Azure Information Protection journalise ces données personnelles dans le journal des événements Windows local **Journaux des applications et des services** > **Azure Information Protection**.
 
 Lorsque le client Azure Information Protection exécute le scanneur, les données personnelles sont enregistrées dans %localappdata%\Microsoft\MSIP\Scanner\Reports sur l’ordinateur Windows Server qui exécute le scanneur.
+
+Pour désactiver la journalisation des informations pour le scanneur et le client Azure Information Protection, utilisez les configurations suivantes :
+
+- Pour le client Azure Information Protection : créez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) qui configure **LogLevel** sur **Désactivé**.
+
+- Pour le scanneur Azure Information Protection : utilisez la cmdlet [Set-AIPScannerConfiguration](/azureinformationprotection/set-aipscannerconfiguration) pour définir le paramètre *ReportLevel* sur **Désactivé**.
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 

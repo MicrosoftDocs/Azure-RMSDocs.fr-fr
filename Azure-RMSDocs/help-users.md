@@ -4,18 +4,18 @@ description: Informations vous permettant de fournir de l’aide aux utilisateur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 25471f9e047b4b3c1dac94cdf0856d7413de268a
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 0f62134663cd7c784a694d25369698b4b7c9538c
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173891"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898798"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -79,11 +79,11 @@ Si vous utilisez le service Azure Rights Management et que vous n’avez pas ins
 > [!TIP]
 > Pour trouver de l’aide et des instructions spécifiques à une application qui ont trait à l’utilisation de la protection des données avec ces applications, recherchez **IRM**, ainsi que le nom et la version de l’application.
 
-#### <a name="to-protect-a-document-in-word2013"></a>Pour protéger un document dans Word 2013
+#### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Pour protéger un document dans Word d’Office 365 ProPlus
 
 1.  Dans Microsoft Word, créez un document.
 
-2.  Dans le menu **Fichier**, cliquez sur **Info**, cliquez sur **Protéger le document**, puis cliquez sur **Restreindre l’accès**.
+2.  Dans le menu **Fichier** : **Informations** > **Protéger le document** >  **Restreindre l’accès**.
 
 3. Choisissez un modèle pour appliquer rapidement les droits d’utilisation appropriés ou sélectionnez **Restreindre l’accès** et sélectionnez vous-même les droits d’utilisation.
 
@@ -98,11 +98,11 @@ Par exemple, un droit d'utilisation Affichage uniquement ne permet pas à l'util
 
 Les droits d'utilisation sont affichés en haut du document grâce à une bannière de restriction. La bannière peut afficher les autorisations appliquées au document, ou un lien pour afficher celles-ci.
 
-#### <a name="to-protect-an-email-message-using-outlook2013-and-exchange-online"></a>Pour protéger un message électronique à l'aide d'Outlook 2013 et d'Exchange Online
+#### <a name="to-protect-an-email-message-using-outlookfrom-office-365-proplus-connecting-to-exchange-online"></a>Pour protéger un e-mail à l’aide d’Outlook d’Office 365 ProPlus, en se connectant à Exchange Online
 
 1.  Dans Outlook, créez un e-mail adressé à un destinataire au sein de votre organisation.
 
-2.  À partir de l’onglet **OPTIONS** , cliquez sur **Autorisation**, puis sélectionnez une option. Par exemple : **Ne pas transférer**, ou **\<Nom de la société> - Confidentiel** ou **\<Nom de la société> - Affichage confidentiel uniquement**.
+2.  Sous l’onglet **OPTIONS** : **Autorisation** > sélectionnez une option. Par exemple : **Ne pas transférer**, ou **\<Nom de la société> - Confidentiel** ou **\<Nom de la société> - Affichage confidentiel uniquement**.
 
 3.  Envoyez le message.
 
@@ -114,12 +114,10 @@ Par exemple, si l’e-mail est protégé à l’aide de l’option **Ne pas tran
 
 1.  Dans Outlook sur le web, créez un e-mail destiné à une personne de votre organisation.
 
-2.  Cliquez sur  **…**, puis sur **Définir l’autorisation**et sélectionnez une option. Par exemple : **Ne pas transférer** ou **Ne pas répondre à tous**. Ou **\<Nom de la société> - Confidentiel** ou **\<Nom de la société> - Affichage confidentiel uniquement**.
+2.  Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **Modifier les autorisations**, puis sélectionnez une option dans la liste déroulante. Par exemple : **Chiffrer** ou **\<Nom de la société> – Confidentiel**.
 
 3.  Envoyez le message.
 
 Comme pour un document protégé, les destinataires sont authentifiés avant de pouvoir ouvrir l’e-mail. S’ils sont autorisés à afficher le message électronique, ce dernier s’ouvrira avec les [droits d’utilisation](configure-usage-rights.md) restreints qui ont été définis pour cet utilisateur. 
 
-Par exemple, si vous avez sélectionné **Ne pas répondre à tous**, l’option **RÉPONDRE À TOUS** dans la fenêtre du message ne sera pas disponible.
-
-
+Par exemple, avec l’option par défaut **Ne pas transférer**, l’option **Transférer** n’est pas disponible dans la fenêtre de message.

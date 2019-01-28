@@ -4,18 +4,18 @@ description: Détails techniques sur les types de fichiers pris en charge, les e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cd0279bb45c04bc6f62c9eb20ffc006c7838b286
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 3d4285b77e0ccbfd21b4ed536f8c002ffa8d2a28
+ms.sourcegitcommit: fb0a9593f1e69306040fabda9bc9ad4977b21be8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751534"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 
@@ -188,7 +188,9 @@ Vous pouvez apporter des modifications similaires au Registre pour d'autres scé
 
 - **Désactivé** : Bloquer la protection
 
-Pour plus d’informations, consultez [Configuration de l’API de fichier](../develop/file-api-configuration.md) dans le Guide pour développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». 
+Il n’est pas nécessaire de redémarrer l’ordinateur après avoir apporté ces modifications au Registre. Toutefois, si vous utilisez des commandes PowerShell pour protéger des fichiers, vous devez démarrer une nouvelle session PowerShell pour que les modifications soient effectives.
+
+Pour savoir comment modifier le Registre afin de changer le niveau de protection par défaut des fichiers, voir [Configuration de l’API des fichiers](../develop/file-api-configuration.md) dans l’aide aux développeurs. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ».
 
 ## <a name="file-types-that-are-excluded-from-classification-and-protection"></a>Types de fichiers exclus de la classification et de la protection
 
@@ -254,11 +256,11 @@ Vous pouvez classifier et protéger ces fichiers conteneurs, mais la classificat
 
 Si vous avez un fichier conteneur qui inclut des fichiers classifiés et protégés, vous devez d’abord extraire ces fichiers pour modifier leurs paramètres de classification ou de protection. Toutefois, vous pouvez supprimer la protection pour tous les fichiers inclus dans des fichiers conteneurs pris en charge à l’aide de l’applet de commande [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile).
 
-La visionneuse Azure Information Protection ne peut pas ouvrir les pièces jointes dans un document PDF protégé.
+La visionneuse Azure Information Protection ne peut pas ouvrir les pièces jointes dans un document PDF protégé. Dans ce scénario, lorsque le document est ouvert dans la visionneuse, les pièces jointes ne sont pas visibles.
 
 ## <a name="file-types-supported-for-inspection"></a>Types de fichiers pris en charge pour l’inspection
 
-Sans configuration supplémentaire, le client Azure Information Protection utilise Windows IFilter pour inspecter le contenu des documents. Windows IFilter est utilisé par Windows Search pour l’indexation. Les types de fichiers suivants peuvent donc être inspectés quand vous utilisez le [scanneur Azure Information Protection ](../deploy-aip-scanner.md) ou la commande PowerShell [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification).
+Sans configuration supplémentaire, le client Azure Information Protection utilise Windows IFilter pour inspecter le contenu des documents. Windows IFilter est utilisé par Windows Search pour l’indexation. Les types de fichiers suivants peuvent donc être inspectés quand vous utilisez le [scanneur Azure Information Protection](../deploy-aip-scanner.md) ou la commande PowerShell [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification).
 
 |Type d'application|Type de fichier|
 |--------------------------------|-------------------------------------|
@@ -276,7 +278,7 @@ Les sections suivantes contiennent des instructions de configuration pour inspec
 
 ### <a name="to-inspect-zip-files"></a>Pour inspecter les fichiers .zip
 
-Le scanneur Azure Information Protection et la commande PowerShell [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) permettent d’inspecter les fichiers .zip si vous suivez les instructions suivantes :
+Le scanneur Azure Information Protection et la commande PowerShell [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) permettent d’inspecter les fichiers .zip suivant ces instructions :
 
 1. Pour l’ordinateur exécutant le scanneur ou la session PowerShell, installez [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
 

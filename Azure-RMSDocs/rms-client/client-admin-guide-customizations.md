@@ -4,18 +4,18 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9386889c41706e0603c5e758be09b0d2baafc7e8
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 71ef2607355cbe84003aaf9fc77dfa5d9a72beff
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394365"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898849"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -51,6 +51,7 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 |EnablePDFv2Protection|[Ne pas protéger les fichiers PDF suivant la norme ISO pour le chiffrement PDF](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
+|LogLevel|[Modifier le niveau de journalisation local](#change-the-local-logging-level)
 |OutlookDefaultLabel|[Définir une autre étiquette par défaut pour Outlook](#set-a-different-default-label-for-outlook)|
 |OutlookRecommendationEnabled|[Activer la classification recommandée dans Outlook](#enable-recommended-classification-in-outlook)|
 |PostponeMandatoryBeforeSave|[Supprimer « Pas maintenant » pour les documents quand l’étiquetage obligatoire est utilisé](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
@@ -603,7 +604,7 @@ Pour étiqueter un document Office avec l’une de ces valeurs de classification
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Désactiver le niveau d’intégrité faible pour le scanneur
 
-Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
 
 Par défaut, le scanneur Azure Information Protection s’exécute avec un niveau d’intégrité faible. Ce paramètre offre une isolation de sécurité plus élevée, mais au détriment des performances. Un niveau d’intégrité faible est adapté si vous exécutez le scanneur avec un compte qui dispose de droits privilégiés (comme un compte d’administrateur local), car ce paramètre permet de protéger l’ordinateur exécutant le scanneur.
 
@@ -617,6 +618,32 @@ Pour configurer ce paramètre avancé afin que le scanneur s’exécute avec un 
 
 - Value : **False**
 
+
+## <a name="change-the-local-logging-level"></a>Modifier le niveau de journalisation local
+
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
+
+Par défaut, le client Azure Information Protection écrit les fichiers journaux clients dans le dossier **%localappdata%\Microsoft\MSIP**. Ces fichiers servent à la résolution des problèmes par le Support Microsoft.
+ 
+Pour modifier le niveau de journalisation de ces fichiers, configurez le paramètre client avancé suivant :
+
+- Clé : **LogLevel**
+
+- Valeur : **\<niveau de journalisation>**
+
+Définissez le niveau de journalisation sur l'une des valeurs suivantes :
+
+- **Désactivé** : aucune journalisation locale.
+
+- **Erreur** : erreurs uniquement.
+
+- **Info** : journalisation minimale, qui n’inclut aucun ID d’événement.
+
+- **Debug** : informations complètes (paramètre par défaut).
+
+- **Trace** : journalisation très détaillée qui a un impact sur les performances et ne doit être activée qu’à la demande du Support Microsoft. S’il vous est demandé de définir ce niveau de journalisation, pensez à fixer une valeur différente lorsque les journaux souhaités ont été collectés.
+
+Ce paramètre client avancé ne modifie ni les informations envoyées à Azure Information Protection pour le [reporting central](../reports-aip.md), ni les informations écrites dans le [journal des événements](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) local.
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Intégration avec la classification des messages Exchange pour une solution d’étiquetage des appareils mobiles
 

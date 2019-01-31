@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: fe7445f2cde82849883e9789e7def22147982cbe
-ms.sourcegitcommit: 69ad76d613f6347f3e81229c99524819d7c103ba
+ms.openlocfilehash: fc63a72d5bb275990255ca425cb166478662dedc
+ms.sourcegitcommit: 1cf0e50a6278d697ac93de6b698318b7c3cce903
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53637965"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479339"
 documentType: LandingData
 title: Documentation sur Azure Information Protection
 metadata:
@@ -17,7 +17,7 @@ metadata:
   ms.tgt_pltfrm: na
   ms.devlang: na
   ms.topic: landing-page
-  ms.date: 12/14/2018
+  ms.date: 01/30/2019
   ms.author: mbaldwin
   layout: LandingPage
 abstract:
@@ -39,6 +39,11 @@ sections:
       image:
         src: https://docs.microsoft.com/media/common/i_quick-start.svg
         href: quickstart-viewpolicy.md
+    - title: Explorer Microsoft 365, solution complète qui comprend Azure Information Protection
+      href: https://docs.microsoft.com/microsoft-365/
+      image:
+        src: /office/media/icons/caret-right-blue.svg
+        href: https://docs.microsoft.com/microsoft-365/
 - title: Guides de démarrage rapide de 5 minutes
   items:
   - type: paragraph

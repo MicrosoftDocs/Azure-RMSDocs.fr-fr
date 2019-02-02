@@ -5,14 +5,14 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 651fc73c00f18d06ad1a824337a096331bc7e897
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
-ms.translationtype: HT
+ms.openlocfilehash: 4898aefc996c26df5f4831c95be63c9fa1a45dc4
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251741"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651205"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C++)
 
@@ -22,20 +22,20 @@ Ce guide de démarrage rapide vous montre comment utiliser plus d’API de fichi
 
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
-- Commencez par suivre le guide [Démarrage rapide : Répertorier les étiquettes de sensibilité (C++)](quick-file-list-labels-cpp.md), qui génère une solution Visual Studio de démarrage afin de lister les étiquettes de sensibilité d’une organisation. Ce guide de démarrage rapide « Définir et obtenir une étiquette de sensibilité » s’appuie sur le guide précédent.
-- Si vous le souhaitez : passez en revue les concepts liés aux [gestionnaires de fichiers dans le kit SDK MIP](concept-handler-file-cpp.md).
+- Complète [Guide de démarrage rapide : Répertorier les étiquettes de sensibilité (C++)](quick-file-list-labels-cpp.md) first, qui génère un solution Visual Studio, starter pour répertorier les étiquettes de sensibilité d’une organisation. Ce guide de démarrage rapide « Définir et obtenir une étiquette de sensibilité » s’appuie sur le guide précédent.
+- Si vous le souhaitez : Révision [gestionnaires de fichiers dans le SDK MIP](concept-handler-file-cpp.md) concepts.
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>Implémenter une classe d’observateur pour superviser l’objet de gestionnaire de fichiers
 
 Comme avec l’observateur que vous avez implémenté (pour le profil et le moteur de fichier) dans Démarrage rapide – Initialisation de l’application, vous implémentez maintenant une classe d’observateur pour un objet de gestionnaire de fichier.
 
-Créez une implémentation de base pour une classe d’observateur, en étendant la classe `mip::FileHandler::Observer` du kit SDK. L’observateur est instancié et utilisé plus tard pour suivre les opérations du Gestionnaire de fichiers.
+Créer une implémentation de base pour un observateur de gestionnaire de fichier, en étendant le Kit de développement logiciel `mip::FileHandler::Observer` classe. L’observateur est instancié et utilisé plus tard pour suivre les opérations du Gestionnaire de fichiers.
 
-1. Ouvrez la solution Visual Studio sur laquelle vous avez travaillé dans l’article précédent « Démarrage rapide : Répertorier les étiquettes de sensibilité (C++) ».
+1. Ouvrez la solution Visual Studio que vous avez travaillé dans le précédent « Guide de démarrage rapide : Répertorier les étiquettes de sensibilité (C++) « article.
 
 2. Ajoutez une nouvelle classe dans votre projet, ce qui génère les fichiers header/.h et implementation/.cpp pour vous :
 
-   - Dans l’**Explorateur de solutions**, cliquez de nouveau avec le bouton droit sur le nœud du projet, sélectionnez **Ajouter**, puis **Classe**.
+   - Dans le **l’Explorateur de solutions**, cliquez à nouveau sur le nœud du projet, sélectionnez **ajouter**, puis sélectionnez **classe**.
    - Dans la boîte de dialogue **Ajouter une classe** :
      - Dans le champ **Nom de la classe**, entrez « filehandler_observer ». Notez que les champs **Fichier .h** et **Fichier .cpp** sont remplis automatiquement en fonction du nom que vous entrez.
      - Une fois terminé, cliquez sur le bouton **OK**.
@@ -105,12 +105,19 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
    ```cpp
    // Set up async FileHandler for input file operations
    string filePathIn = "<input-file-path>";
+   string contentIdentifier = "<content-identifier>";
    std::shared_ptr<FileHandler> handler;
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(filePathIn, mip::ContentState::REST, std::make_shared<FileHandlerObserver>(), handlerPromise);
+        engine->CreateFileHandlerAsync(
+             filePathIn, 
+             contentIdentifier,
+             mip::ContentState::REST, 
+             true, 
+             std::make_shared<FileHandlerObserver>(), 
+             handlerPromise);
         handler = handlerFuture.get();
    }
    catch (const std::exception& e)
@@ -160,11 +167,19 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
    system("pause");
 
    // Set up async FileHandler for output file operations
+   contentIdentifier = "<content-identifier>";
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(filePathOut, mip::ContentState::REST, std::make_shared<FileHandlerObserver>(), handlerPromise);
+        engine->CreateFileHandlerAsync(
+             filePathOut, 
+             contentIdentifier,
+             mip::ContentState::REST,
+             true,
+             std::make_shared<FileHandlerObserver>(),
+             handlerPromise);
+
         handler = handlerFuture.get();
    }
    catch (const std::exception& e)
@@ -191,13 +206,14 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
    system("pause");
    ```
 
-4. Remplacez les valeurs d’espace réservé dans le code source que vous venez de coller, en utilisant les valeurs suivantes :
+4. Remplacez les valeurs d’espace réservé dans le code source que vous venez de coller dans comme suit, à l’aide de constantes de chaîne :
 
-   | Espace réservé | Valeur |
+   | Espace réservé | Value |
    |:----------- |:----- |
-   | \<input-file-path\> | Le chemin complet vers un fichier d’entrée de test, par exemple : `c:\\Test\\Test.docx`. |
-   | \<label-id\> | Un ID d’étiquette de sensibilité, copié à partir de la sortie de la console dans le guide de démarrage rapide précédent, par exemple : `f42a3342-8706-4288-bd31-ebb85995028z`. |
-   | \<output-file-path\> | Le chemin complet vers le fichier de sortie, qui sera une copie étiquetée du fichier d’entrée, par exemple : `c:\\Test\\Test_labeled.docx`. |
+   | \<input-file-path\> | Le chemin complet vers un fichier d’entrée de test, par exemple : `"c:\\Test\\Test.docx"`. |
+   | \<content-identifier\> | Un identificateur contrôlable de visu pour le contenu. Exemple : <ul><li>pour un fichier, tenez compte des Chemin\Nomfichier : `"c:\Test\Test.docx"`</li><li>un courrier électronique, pour prendre en compte : l’expéditeur de l’objet : `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<label-id\> | Un ID d’étiquette de sensibilité, copié à partir de la sortie de la console dans le guide de démarrage rapide précédent, par exemple : `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
+   | \<output-file-path\> | Le chemin complet vers le fichier de sortie, qui sera une copie étiquetée du fichier d’entrée, par exemple : `"c:\\Test\\Test_labeled.docx"`. |
 
 ## <a name="build-and-test-the-application"></a>Générer et tester l'application
 
@@ -205,7 +221,7 @@ Générez et testez votre application cliente.
 
 1. Utilisez la touche F6 (**Générer la solution**) pour générer votre application cliente. Si vous n’avez aucune erreur de génération, utilisez F5 (**Démarrer le débogage**) pour exécuter votre application.
 
-2. Si votre projet est généré correctement et s’exécute correctement, l’application demande un jeton d’accès, chaque fois que le kit SDK appelle votre méthode `AcquireOAuth2Token()`. Comme vous l’avez fait précédemment dans le guide de démarrage rapide « Répertorier les étiquettes de sensibilité », exécutez votre script PowerShell pour acquérir le jeton chaque fois, en utilisant les valeurs fournies. `AcquireOAuth2Token()` tentera d’utiliser un jeton généré précédemment, si la ressource et l’autorité demandées sont les mêmes :
+2. Si votre projet est généré et s’exécute avec succès, l’application demande un jeton d’accès, chaque fois que le Kit de développement logiciel appelle votre `AcquireOAuth2Token()` (méthode). Comme vous l’avez fait précédemment dans la « Liste des étiquettes de sensibilité » démarrage rapide, exécutez votre script PowerShell pour acquérir le jeton chaque fois, en utilisant les valeurs fournies pour $authority et $resourceUrl. 
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:

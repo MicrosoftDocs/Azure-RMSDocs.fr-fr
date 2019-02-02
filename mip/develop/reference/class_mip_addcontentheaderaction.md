@@ -1,81 +1,81 @@
 ---
-title: mip AddContentHeaderAction, classe
-description: Informations de référence pour la classe mip AddContentHeaderAction
+title: mip::AddContentHeaderAction, classe
+description: Décrit la classe mip::addcontentheaderaction de Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: bc60fe32005a0c6bc8088ab7687a3f711ae7a99a
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 8cd04bc610944bbbdf00873267161b06a9c09038
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445646"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650933"
 ---
 # <a name="class-mipaddcontentheaderaction"></a>mip::AddContentHeaderAction, classe 
 Classe d’action qui spécifie l’ajout d’un en-tête de contenu.
   
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetUIElementName()  |  API utilisée pour marquer l’élément d’en-tête de contenu.
- public const std::string& GetText() const  |  Obtenir le texte devant être placé dans l’en-tête de contenu.
- public const std::string& GetFontName() const  |  Obtenir le nom de la police utilisée pour afficher l’en-tête de contenu.
- public int GetFontSize() const  |  Obtenir la taille de la police utilisée pour afficher l’en-tête de contenu.
- public const std::string& GetFontColor() const  |  Obtenir la couleur de la police utilisée pour afficher l’en-tête de contenu.
- public ContentMarkAlignment GetAlignment() const  |  Obtenir l’alignement de l’en-tête.
- public int GetMargin() const  |  Obtenir la marge de l’en-tête à partir du bas.
- public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
+public const std::string& GetUIElementName()  |  API utilisée pour marquer l’élément d’en-tête de contenu.
+public const std::string& GetText() const  |  Obtenir le texte devant être placé dans l’en-tête de contenu.
+public const std::string& GetFontName() const  |  Obtenir le nom de la police utilisée pour afficher l’en-tête de contenu.
+public int GetFontSize() const  |  Obtenir la taille de la police utilisée pour afficher l’en-tête de contenu.
+public const std::string& GetFontColor() const  |  Obtenir la couleur de la police utilisée pour afficher l’en-tête de contenu.
+public ContentMarkAlignment GetAlignment() const  |  Obtenir l’alignement de l’en-tête.
+public int GetMargin() const  |  Obtenir la marge de l’en-tête à partir du bas.
+public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
   
 ## <a name="members"></a>Membres
   
-### <a name="getuielementname"></a>GetUIElementName
+### <a name="getuielementname-function"></a>GetUIElementName (fonction)
 API utilisée pour marquer l’élément d’en-tête de contenu.
 
   
-**Retourne** : le nom à utiliser pour l’élément d’interface utilisateur qui contient l’en-tête de contenu. Le même nom est retourné dans [RemoveContentHeaderAction](class_mip_removecontentheaderaction.md) si l’en-tête de contenu doit être supprimé.
+**Retourne**: Le nom doit être utilisé pour l’élément d’interface qui contient l’en-tête de contenu. Le même nom est retourné dans [RemoveContentHeaderAction](class_mip_removecontentheaderaction.md) si l’en-tête de contenu doit être supprimé.
   
-### <a name="gettext"></a>GetText
+### <a name="gettext-function"></a>GetText (fonction)
 Obtenir le texte devant être placé dans l’en-tête de contenu.
 
   
-**Retourne** : le texte de l’en-tête de contenu.
+**Retourne**: Texte d’en-tête de contenu.
   
-### <a name="getfontname"></a>GetFontName
+### <a name="getfontname-function"></a>GetFontName (fonction)
 Obtenir le nom de la police utilisée pour afficher l’en-tête de contenu.
 
   
-**Retourne** : le nom de la police. La valeur par défaut est Calibri si rien n’est défini par la stratégie.
+**Retourne**: Nom de la police. La valeur par défaut est Calibri si rien n’est défini par la stratégie.
   
-### <a name="getfontsize"></a>GetFontSize
+### <a name="getfontsize-function"></a>GetFontSize (fonction)
 Obtenir la taille de la police utilisée pour afficher l’en-tête de contenu.
 
   
-**Retourne** : la taille de la police sous forme de nombre entier.
+**Retourne**: Taille de police en tant qu’entier.
   
-### <a name="getfontcolor"></a>GetFontColor
+### <a name="getfontcolor-function"></a>GetFontColor (fonction)
 Obtenir la couleur de la police utilisée pour afficher l’en-tête de contenu.
 
   
-**Retourne** : couleur de la police sous forme de chaîne (par exemple, #000000).
+**Retourne**: Couleur de police sous forme de chaîne (par exemple, #000000 »).
   
-### <a name="getalignment"></a>GetAlignment
+### <a name="getalignment-function"></a>GetAlignment (fonction)
 Obtenir l’alignement de l’en-tête.
 
   
-**Retourne** : l’énumérateur ContentMarkAlignment : LEFT|RIGHT|CENTER. 
+**Retourne**: L’énumérateur ContentMarkAlignment : GAUCHE | DROITE | CENTER. 
   
-**Voir aussi** : ContentMarkAlignment
+**Voir aussi**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
-### <a name="getmargin"></a>GetMargin
+### <a name="getmargin-function"></a>GetMargin (fonction)
 Obtenir la marge de l’en-tête à partir du bas.
 
   
-**Retourne** : marges à partir du bas du document (par exemple, 10 mm).
+**Retourne**: Les marges à partir du bas du document (par exemple, 10 mm).
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Fonction GetType
 Obtenir le type de [Action](class_mip_action.md).
 
   
-**Retourne** : ActionType - le type d’action dérivée vers lequel cette classe de base peut être castée.
+**Retourne**: ActionType : type d’action dérivée vers lequel cette classe de base peut être castée.

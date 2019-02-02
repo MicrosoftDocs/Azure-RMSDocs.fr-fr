@@ -1,64 +1,64 @@
 ---
-title: mip NetworkError, classe
-description: Informations de référence pour la classe mip NetworkError
+title: mip::NetworkError, classe
+description: Décrit la classe mip::networkerror de Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 9033a1a2c2eac34e49a4e4c9d745c34a686da230
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 3a53683e910a380fed1adc0498ccf170be7087b2
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446207"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651222"
 ---
 # <a name="class-mipnetworkerror"></a>mip::NetworkError, classe 
 Erreur de mise en réseau. Causée par un comportement inattendu lors d’appels réseau aux points de terminaison du service.
   
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public char const* what() const  |  Obtenir le message d’erreur.
-public std::shared_ptr<Error> Clone() const  |  Cloner l’erreur.
- public virtual ErrorType GetErrorType() const  |  Obtenir le type de l’erreur.
- public virtual const std::string& GetErrorName() const  |  Obtenir le nom de l’erreur.
- public virtual const std::string& GetMessage() const  |  Obtenir le message d’erreur.
- public virtual void SetMessage(const std::string& msg)  |  Définir le message d’erreur.
+public char const* what() const  |  Obtenir le message d’erreur.
+public std::shared_ptr\<erreur\> Clone() const  |  Cloner l’erreur.
+public virtual ErrorType GetErrorType() const  |  Obtenir le type de l’erreur.
+public virtual const std::string& GetErrorName() const  |  Obtenir le nom de l’erreur.
+public virtual const std::string& GetMessage() const  |  Obtenir le message d’erreur.
+public virtual void SetMessage(const std::string& msg)  |  Définir le message d’erreur.
   
 ## <a name="members"></a>Membres
   
-### <a name="what"></a>what
+### <a name="what-function"></a>Quelle est la fonction
 Obtenir le message d’erreur.
 
   
-**Retourne** : message d’erreur
+**Retourne**: Le message d’erreur
   
-### <a name="error"></a>Erreur
+### <a name="clone-function"></a>Clone, fonction
 Cloner l’erreur.
 
   
-**Retourne** : un clone de l’erreur.
+**Retourne**: Un clone de l’erreur.
   
-### <a name="errortype"></a>ErrorType
+### <a name="geterrortype-function"></a>GetErrorType (fonction)
 Obtenir le type de l’erreur.
 
   
-**Retourne** : le type de l’erreur.
+**Retourne**: Le type d’erreur.
   
-### <a name="geterrorname"></a>GetErrorName
+### <a name="geterrorname-function"></a>GetErrorName (fonction)
 Obtenir le nom de l’erreur.
 
   
-**Retourne** : le nom de l’erreur.
+**Retourne**: Le nom de l’erreur.
   
-### <a name="getmessage"></a>GetMessage
+### <a name="getmessage-function"></a>Fonction GetMessage
 Obtenir le message d’erreur.
 
   
-**Retourne** : le message d’erreur.
+**Retourne**: Le message d’erreur.
   
-### <a name="setmessage"></a>SetMessage
+### <a name="setmessage-function"></a>SetMessage (fonction)
 Définir le message d’erreur.
 
 Paramètres :  

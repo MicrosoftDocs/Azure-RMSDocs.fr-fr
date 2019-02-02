@@ -1,42 +1,42 @@
 ---
-title: mip PolicyHandler, classe
-description: Informations de référence pour la classe mip PolicyHandler
+title: mip::PolicyHandler, classe
+description: Décrit la classe mip::policyhandler de Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 23de5616558a298189cb885727d69a20373a3609
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: ca644716d730a43d4455919b7555852e770e0cda
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445935"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651494"
 ---
 # <a name="class-mippolicyhandler"></a>mip::PolicyHandler, classe 
 Cette classe fournit une interface pour toutes les fonctions de gestionnaire de stratégie sur un fichier.
   
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr<ContentLabel> GetSensitivityLabel(const ExecutionState& state)  |  Obtenir l’étiquette de sensibilité à partir du contenu existant.
-public std::vector<std::shared_ptr<Action>> ComputeActions(const ExecutionState& state)  |  Exécute les règles dans le gestionnaire en fonction de l’état fourni et retourne la liste des actions à exécuter.
- public void NotifyCommittedActions(const ExecutionState& state)  |  Appelé une fois que les actions calculées ont été appliquées et les données validées sur le disque.
+public std::shared_ptr\<ContentLabel\> GetSensitivityLabel (ExecutionState const & state)  |  Obtenir l’étiquette de sensibilité à partir du contenu existant.
+public std::vector\<std::shared_ptr\<Action\> \> ComputeActions (ExecutionState const & state)  |  Exécute les règles dans le gestionnaire en fonction de l’état fourni et retourne la liste des actions à exécuter.
+public void NotifyCommittedActions(const ExecutionState& state)  |  Appelé une fois que les actions calculées ont été appliquées et les données validées sur le disque.
   
 ## <a name="members"></a>Membres
   
-### <a name="contentlabel"></a>ContentLabel
+### <a name="getsensitivitylabel-function"></a>GetSensitivityLabel (fonction)
 Obtenir l’étiquette de sensibilité à partir du contenu existant.
 
 Paramètres :  
-* **state** : état actuel du contenu 
+* **state** : État actuel du contenu 
 
 
 
   
-**Retourne** : étiquette actuellement appliquée au contenu. En l’absence d’étiquette, retourne une valeur vide.
+**Retourne**: L’étiquette actuellement appliqué au contenu. En l’absence d’étiquette, retourne une valeur vide.
   
-### <a name="action"></a>Action
+### <a name="computeactions-function"></a>ComputeActions (fonction)
 Exécute les règles dans le gestionnaire en fonction de l’état fourni et retourne la liste des actions à exécuter.
 
 Paramètres :  
@@ -45,13 +45,13 @@ Paramètres :
 
 
   
-**Retourne** : une liste des actions à appliquer au contenu.
+**Retourne**: Liste des actions qui doivent être appliquées sur le contenu.
   
-### <a name="notifycommittedactions"></a>NotifyCommittedActions
+### <a name="notifycommittedactions-function"></a>NotifyCommittedActions (fonction)
 Appelé une fois que les actions calculées ont été appliquées et les données validées sur le disque.
 
 Paramètres :  
 * **state** : état actuel de l’exécution du contenu une fois que les actions ont été validées 
 
 
-Cet appel envoie un événement d’audit
+: Cet appel envoie un événement d’audit

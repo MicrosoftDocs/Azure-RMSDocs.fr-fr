@@ -4,20 +4,23 @@ description: Microsoft Information Protection (MIP) réunit les services de clas
 author: BryanLa
 ms.service: information-protection
 ms.topic: overview
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 775ae3d524947c8300de0e011b92c2cad106905a
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
-ms.translationtype: HT
+ms.openlocfilehash: 77d8fb8d32c0f75be49b29e95316f8da873d14c6
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251724"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651137"
 ---
-# <a name="overview"></a>Vue d’ensemble
+# <a name="overview"></a>Vue d'ensemble
 
 ## <a name="microsoft-information-protection"></a>Microsoft Information Protection
 
-Microsoft Information Protection (MIP) réunit les services de classification, d’étiquetage et de protection de Microsoft dans un kit SDK assurant une expérience d’administration unique. L’administration unifiée recouvre Office 365, Azure Information Protection, Windows Information Protection et d’autres services Microsoft. Des tiers peuvent utiliser ce kit SDK pour intégrer des applications à l’aide d’un service standard et complet de protection et de schéma d’étiquetage de données.
+Microsoft Information Protection (MIP) est l’unification de la classification de Microsoft, l’étiquetage et les services de protection :
+
+- L’administration unifiée recouvre Office 365, Azure Information Protection, Windows Information Protection et d’autres services Microsoft. 
+- Des tiers peuvent utiliser le SDK MIP pour intégrer des applications à l’aide d’un étiquetage service schéma et la protection de données standard et cohérentes.
 
 * [Qu’est-ce que le Centre de sécurité et conformité Office 365 ?](https://docs.microsoft.com/office365/securitycompliance/)
 * [Qu’est-ce qu’Azure Information Protection ?](/azure/information-protection/understand-explore/what-is-information-protection)
@@ -25,7 +28,7 @@ Microsoft Information Protection (MIP) réunit les services de classification, d
 
 ## <a name="microsoft-information-protection-sdk"></a>Kit SDK Microsoft Information Protection
 
-Le kit SDK MIP expose les services de protection et d’étiquetage du Centre de sécurité et conformité Office 365 à des applications et des services tiers. Les développeurs peuvent utiliser le kit SDK pour générer une prise en charge native afin d’appliquer des étiquettes et une protection aux fichiers. Les développeurs peuvent réfléchir aux actions à entreprendre lorsque des étiquettes spécifiques sont détectées et penser aux informations chiffrées par MIP. 
+Le SDK MIP expose les services de l’étiquetage et la protection à partir d’Office 365 centre de sécurité et conformité, aux services et applications de fournisseurs tiers. Les développeurs peuvent utiliser le kit SDK pour générer une prise en charge native afin d’appliquer des étiquettes et une protection aux fichiers. Les développeurs peuvent réfléchir aux actions à entreprendre lorsque des étiquettes spécifiques sont détectées et penser aux informations chiffrées par MIP. 
 
 La protection et les étiquettes appliquées aux informations sur la suite de services de Microsoft sont **cohérentes**. La cohérence permet aux applications et aux services qui prennent en charge MIP de lire et d’écrire les étiquettes d’une manière prévisible et commune.
 
@@ -39,5 +42,5 @@ Pour obtenir une liste plus complète, consultez [Concepts liés aux API](concep
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Vous êtes maintenant prêt à commencer avec le kit SDK. La première chose que vous devez faire est de suivre les [étapes d’installation et de configuration du kit SDK MIP](setup-configure-mip.md), pour vérifier que votre machine cliente et votre abonnement Office 365 sont correctement configurés.
+Vous êtes maintenant prêt à commencer avec le kit SDK. La première chose que vous devrez faire est [effectuer les étapes d’installation et la configuration du SDK MIP](setup-configure-mip.md). Ces étapes garantissent que votre abonnement Office 365 et l’ordinateur client sont définies correctement.
 

@@ -1,64 +1,64 @@
 ---
-title: mip ConsentDeniedError, classe
-description: Informations de référence pour la classe mip ConsentDeniedError
+title: mip::ConsentDeniedError, classe
+description: Décrit la classe mip::consentdeniederror de Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: ca12f18424de77bfd2c872bbeadd90706b77a79d
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: c85e5d14fa02c42b322a240f6266efcf97c92c85
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445697"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650559"
 ---
 # <a name="class-mipconsentdeniederror"></a>mip::ConsentDeniedError, classe 
 Une opération nécessitant le consentement de l’utilisateur ne l’a pas obtenu.
   
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public char const* what() const  |  Obtenir le message d’erreur.
-public std::shared_ptr<Error> Clone() const  |  Cloner l’erreur.
- public virtual ErrorType GetErrorType() const  |  Obtenir le type de l’erreur.
- public virtual const std::string& GetErrorName() const  |  Obtenir le nom de l’erreur.
- public virtual const std::string& GetMessage() const  |  Obtenir le message d’erreur.
- public virtual void SetMessage(const std::string& msg)  |  Définir le message d’erreur.
+public char const* what() const  |  Obtenir le message d’erreur.
+public std::shared_ptr\<erreur\> Clone() const  |  Cloner l’erreur.
+public virtual ErrorType GetErrorType() const  |  Obtenir le type de l’erreur.
+public virtual const std::string& GetErrorName() const  |  Obtenir le nom de l’erreur.
+public virtual const std::string& GetMessage() const  |  Obtenir le message d’erreur.
+public virtual void SetMessage(const std::string& msg)  |  Définir le message d’erreur.
   
 ## <a name="members"></a>Membres
   
-### <a name="what"></a>what
+### <a name="what-function"></a>Quelle est la fonction
 Obtenir le message d’erreur.
 
   
-**Retourne** : message d’erreur
+**Retourne**: Le message d’erreur
   
-### <a name="error"></a>Erreur
+### <a name="clone-function"></a>Clone, fonction
 Cloner l’erreur.
 
   
-**Retourne** : un clone de l’erreur.
+**Retourne**: Un clone de l’erreur.
   
-### <a name="errortype"></a>ErrorType
+### <a name="geterrortype-function"></a>GetErrorType (fonction)
 Obtenir le type de l’erreur.
 
   
-**Retourne** : le type de l’erreur.
+**Retourne**: Le type d’erreur.
   
-### <a name="geterrorname"></a>GetErrorName
+### <a name="geterrorname-function"></a>GetErrorName (fonction)
 Obtenir le nom de l’erreur.
 
   
-**Retourne** : le nom de l’erreur.
+**Retourne**: Le nom de l’erreur.
   
-### <a name="getmessage"></a>GetMessage
+### <a name="getmessage-function"></a>Fonction GetMessage
 Obtenir le message d’erreur.
 
   
-**Retourne** : le message d’erreur.
+**Retourne**: Le message d’erreur.
   
-### <a name="setmessage"></a>SetMessage
+### <a name="setmessage-function"></a>SetMessage (fonction)
 Définir le message d’erreur.
 
 Paramètres :  

@@ -1,82 +1,94 @@
 ---
-title: mip PolicyEngine, classe
-description: Informations de référence pour la classe mip PolicyEngine
+title: mip::PolicyEngine, classe
+description: Décrit la classe mip::policyengine de Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 57dd325e9c00a3cb2a4056f7ef0b522efef5d0c4
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 298d9789fb46c2725401425af51a9de8b3436f53
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446037"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650967"
 ---
 # <a name="class-mippolicyengine"></a>mip::PolicyEngine, classe 
 Cette classe fournit une interface pour toutes les fonctions de moteur.
   
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const Settings& GetSettings() const  |  Obtenir les [Settings](class_mip_policyengine_settings.md) du moteur de stratégie.
-public const std::vector<std::shared_ptr<Label>>& ListSensitivityLabels()  |  répertorier les étiquettes de sensibilité associées au moteur de stratégie.
- public const std::string& GetMoreInfoUrl() const  |  Fournir une URL pour la recherche d’autres informations sur la stratégie/les étiquettes.
- public bool IsLabelingRequired() const  |  Vérifie si la stratégie détermine qu’un document doit être étiqueté ou non.
-public std::shared_ptr<Label> GetDefaultSensitivityLabel()  |  Obtenir l’étiquette de sensibilité par défaut.
-public std::shared_ptr<PolicyHandler> CreatePolicyHandler(const std::string& contentIdentifier)  |  Créer un gestionnaire de stratégie pour exécuter des fonctions liées à la stratégie sur l’état d’exécution d’un fichier.
- public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Consigne un événement spécifique à l’application dans le pipeline d’audit.
+public const Settings& GetSettings() const  |  Obtenir les [Settings](class_mip_policyengine_settings.md) du moteur de stratégie.
+public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  répertorier les étiquettes de sensibilité associées au moteur de stratégie.
+public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  Répertorie les types de sensibilité associées au moteur de stratégie.
+public const std::string& GetMoreInfoUrl() const  |  Fournir une URL pour la recherche d’autres informations sur la stratégie/les étiquettes.
+public bool IsLabelingRequired() const  |  Vérifie si la stratégie détermine qu’un document doit être étiqueté ou non.
+public std::shared_ptr\<Label\> GetDefaultSensitivityLabel()  |  Obtenir l’étiquette de sensibilité par défaut.
+public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  Créer un gestionnaire de stratégie pour exécuter des fonctions liées à la stratégie sur l’état d’exécution d’un fichier.
+public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Consigne un événement spécifique à l’application dans le pipeline d’audit.
+public const std::string& GetPolicyDataXml() const  |  Obtient les données de stratégie XML qui décrit les paramètres, les étiquettes et les règles associées à cette stratégie.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtient une liste de paramètres personnalisés.
   
 ## <a name="members"></a>Membres
   
-### <a name="settings"></a>Paramètres
+### <a name="getsettings-function"></a>GetSettings (fonction)
 Obtenir les [Settings](class_mip_policyengine_settings.md) du moteur de stratégie.
 
   
-**Retourne** : les paramètres du moteur de stratégie. 
+**Retourne**: Paramètres du moteur de stratégie. 
   
 **Voir aussi** : [mip::PolicyEngine::Settings](class_mip_policyengine_settings.md)
   
-### <a name="label"></a>Étiquette
+### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels (fonction)
 répertorier les étiquettes de sensibilité associées au moteur de stratégie.
 
   
-**Retourne** : une liste d’étiquettes de sensibilité.
+**Retourne**: Une liste d’étiquettes de sensibilité.
   
-### <a name="getmoreinfourl"></a>GetMoreInfoUrl
+### <a name="listsensitivitytypes-function"></a>ListSensitivityTypes (fonction)
+Répertorie les types de sensibilité associées au moteur de stratégie.
+
+  
+**Retourne**: Une liste d’étiquettes de sensibilité. vide si LoadSensitivityTypesEnabled était faux)
+  
+**Voir aussi**: [PolicyEngine::Settings](class_mip_policyengine_settings.md)).
+  
+### <a name="getmoreinfourl-function"></a>GetMoreInfoUrl (fonction)
 Fournir une URL pour la recherche d’autres informations sur la stratégie/les étiquettes.
 
   
-**Retourne** : URL au format de chaîne.
+**Retourne**: Une url au format de chaîne.
   
-### <a name="islabelingrequired"></a>IsLabelingRequired
+### <a name="islabelingrequired-function"></a>IsLabelingRequired (fonction)
 Vérifie si la stratégie détermine qu’un document doit être étiqueté ou non.
 
   
-**Retourne** : True si l’étiquetage est obligatoire ; sinon, False.
+**Retourne**: True si l’étiquetage est obligatoire ; sinon, false.
   
-### <a name="label"></a>Étiquette
+### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel (fonction)
 Obtenir l’étiquette de sensibilité par défaut.
 
   
-**Retourne** : étiquette de sensibilité par défaut si elle existe, nullptr si aucune étiquette par défaut n’est définie.
+**Retourne**: À défaut d’étiquette de sensibilité existe, nullptr si aucun jeu d’étiquette par défaut.
   
-### <a name="policyhandler"></a>PolicyHandler
+### <a name="createpolicyhandler-function"></a>CreatePolicyHandler (fonction)
 Créer un gestionnaire de stratégie pour exécuter des fonctions liées à la stratégie sur l’état d’exécution d’un fichier.
 
 Paramètres :  
-* **contentIdentifier** : identificateur explicite pour le contenu. Exemple pour un fichier : « C:\mip-sdk-for-cpp\files\audit.docx » [chemin], exemple pour un e-mail : « RE : Audit design:user1@contoso.com » [objet : expéditeur]
+* **Un**: bool représentant si la découverte de l’audit est activé ou non
 
 
 
   
-**Retourne** : gestionnaire de stratégie.
+**Retourne**: Gestionnaire de stratégie.
+Application doit conserver l’objet de gestionnaire de stratégie pour la durée de vie du document
   
-### <a name="sendapplicationauditevent"></a>SendApplicationAuditEvent
+### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent (fonction)
 Consigne un événement spécifique à l’application dans le pipeline d’audit.
 
 Paramètres :  
-* **description** : du niveau de journalisation : Info/Erreur/Avertissement 
+* **niveau**: du niveau de journal : Informations/avertissement/erreur 
 
 
 * **eventType** : description du type d’événement 
@@ -84,3 +96,16 @@ Paramètres :
 
 * **eventData** : données associées à l’événement
 
+
+  
+### <a name="getpolicydataxml-function"></a>GetPolicyDataXml (fonction)
+Obtient les données de stratégie XML qui décrit les paramètres, les étiquettes et les règles associées à cette stratégie.
+
+  
+**Retourne**: Données de stratégie XML
+  
+### <a name="getcustomsettings-function"></a>GetCustomSettings (fonction)
+Obtient une liste de paramètres personnalisés.
+
+  
+**Retourne**: Un vecteur de paramètres personnalisés

@@ -1,100 +1,100 @@
 ---
-title: mip ProtectionDescriptorBuilder, classe
-description: Informations de référence pour la classe mip ProtectionDescriptorBuilder
+title: class mip::ProtectionDescriptorBuilder
+description: Décrit la classe mip::protectiondescriptorbuilder de Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 42e44cfaf269a43d0210c0c040ea70ccc1fb192e
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: b6ac49c7cb4d6f7592abac041365191d90951b7a
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446632"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651283"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>class mip::ProtectionDescriptorBuilder 
 Construit un [ProtectionDescriptor](class_mip_protectiondescriptor.md) qui décrit la protection associée à un élément de contenu.
   
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr<ProtectionDescriptor> Build()  |  Crée un [ProtectionDescriptor](class_mip_protectiondescriptor.md) dont les autorisations d’accès sont définies par cette instance [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md).
- public void SetName(const std::string& value)  |  Définit un nom pour la stratégie de protection.
- public void SetDescription(const std::string& value)  |  Définit la description de la stratégie de protection.
-public void SetContentValidUntil(const std::chrono::time_point<std::chrono::system_clock>& value)  |  Définit l’heure d’expiration de la stratégie de protection.
- public void SetAllowOfflineAccess(bool value)  |  Définit si la stratégie de protection autorise l’accès au contenu hors connexion ou non.
- public void SetReferrer(const std::string& uri)  |  Définit l’adresse du référent de stratégie de protection.
-public void SetEncryptedAppData(const std::map<std::string, std::string>& value)  |  Définit les données spécifiques de l’application qui doivent être chiffrées.
-public void SetSignedAppData(const std::map<std::string, std::string>& value)  |  Définit les données spécifiques de l’application qui doivent être signées.
- public virtual ~ProtectionDescriptorBuilder()  | _Pas encore documenté._
+public std::shared_ptr MIP_API\<ProtectionDescriptor\> Build()  |  Crée un [ProtectionDescriptor](class_mip_protectiondescriptor.md) dont les autorisations d’accès sont définies par cette instance [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md).
+public void SetName(const std::string& value)  |  Définit un nom pour la stratégie de protection.
+public void SetDescription(const std::string& value)  |  Définit la description de la stratégie de protection.
+public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  Définit l’heure d’expiration de la stratégie de protection.
+public void SetAllowOfflineAccess(bool value)  |  Définit si la stratégie de protection autorise l’accès au contenu hors connexion ou non.
+public void SetReferrer(const std::string& uri)  |  Définit l’adresse du référent de stratégie de protection.
+public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  Définit les données spécifiques de l’application qui doivent être chiffrées.
+public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  Définit les données spécifiques de l’application qui doivent être signées.
+public virtual ~ProtectionDescriptorBuilder()  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
   
-### <a name="protectiondescriptor"></a>ProtectionDescriptor
+### <a name="build-function"></a>Build (fonction)
 Crée un [ProtectionDescriptor](class_mip_protectiondescriptor.md) dont les autorisations d’accès sont définies par cette instance [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md).
 
   
-**Retourne** : nouvelle instance [ProtectionDescriptor](class_mip_protectiondescriptor.md)
+**Retourne**: Nouvelle [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance
   
-### <a name="setname"></a>SetName
+### <a name="setname-function"></a>SetName (fonction)
 Définit un nom pour la stratégie de protection.
 
 Paramètres :  
-* **value** : nom de la stratégie de protection
+* **Valeur**: Nom de stratégie de protection
 
 
   
-### <a name="setdescription"></a>SetDescription
+### <a name="setdescription-function"></a>SetDescription (fonction)
 Définit la description de la stratégie de protection.
 
 Paramètres :  
-* **value** : description de la stratégie
+* **Valeur**: Description de la stratégie
 
 
   
-### <a name="setcontentvaliduntil"></a>SetContentValidUntil
+### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil function
 Définit l’heure d’expiration de la stratégie de protection.
 
 Paramètres :  
-* **value** : heure d’expiration de la stratégie
+* **Valeur**: Heure d’expiration de la stratégie
 
 
   
-### <a name="setallowofflineaccess"></a>SetAllowOfflineAccess
+### <a name="setallowofflineaccess-function"></a>SetAllowOfflineAccess (fonction)
 Définit si la stratégie de protection autorise l’accès au contenu hors connexion ou non.
 
 Paramètres :  
-* **value** : valeur indiquant si la stratégie autorise l’accès au contenu hors connexion ou non
+* **Valeur**: Si la stratégie autorise l’accès au contenu hors connexion ou non
 
 
   
-### <a name="setreferrer"></a>SetReferrer
+### <a name="setreferrer-function"></a>SetReferrer (fonction)
 Définit l’adresse du référent de stratégie de protection.
 
 Paramètres :  
-* **uri** : adresse du référent de la stratégie
+* **URI**: Adresse du référent de stratégie
 
 
 Le référent est un URI qui peut être montré à l’utilisateur en cas d’échec de l’acquisition de la stratégie de protection. L’URI contient des informations sur la façon dont cet utilisateur peut obtenir l’autorisation d’accéder au contenu.
   
-### <a name="setencryptedappdata"></a>SetEncryptedAppData
+### <a name="setencryptedappdata-function"></a>SetEncryptedAppData (fonction)
 Définit les données spécifiques de l’application qui doivent être chiffrées.
 
 Paramètres :  
-* **value** : données spécifiques à l’application
+* **Valeur**: Données spécifiques de l’application
 
 
 Une application peut spécifier un dictionnaire des données spécifiques à l’application qui seront chiffrées par le service de protection. Ces données chiffrées ne dépendent pas des données signées définies par SetSignedAppData.
   
-### <a name="setsignedappdata"></a>SetSignedAppData
+### <a name="setsignedappdata-function"></a>SetSignedAppData function
 Définit les données spécifiques de l’application qui doivent être signées.
 
 Paramètres :  
-* **value** : données spécifiques à l’application
+* **Valeur**: Données spécifiques de l’application
 
 
 Une application peut spécifier un dictionnaire des données spécifiques à l’application qui seront signées par le service de protection. Ces données signées ne dépendent pas des données chiffrées définies par SetEncryptedAppData.
   
-### <a name="protectiondescriptorbuilder"></a>~ProtectionDescriptorBuilder
+### <a name="protectiondescriptorbuilder-function"></a>~ ProtectionDescriptorBuilder (fonction)
 _Pas encore documenté._

@@ -1,37 +1,37 @@
 ---
-title: mip ProtectByTemplateAction, classe
-description: Informations de référence pour la classe mip ProtectByTemplateAction
+title: class mip::ProtectByTemplateAction
+description: Décrit la classe mip::protectbytemplateaction de Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: cb5f42b25e6f499bc09f3f460ec4a253627b45a5
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 1c05a04df39e6454eb934b5db48e96339afdac0c
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445459"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650814"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>class mip::ProtectByTemplateAction 
 Classe d’action qui spécifie l’ajout de la protection par modèle au document.
   
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetTemplateId() const  |  Obtenir l’ID du modèle de protection associé à l’action.
- public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
+public const std::string& GetTemplateId() const  |  Obtenir l’ID du modèle de protection associé à l’action.
+public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
   
 ## <a name="members"></a>Membres
   
-### <a name="gettemplateid"></a>GetTemplateId
+### <a name="gettemplateid-function"></a>GetTemplateId (fonction)
 Obtenir l’ID du modèle de protection associé à l’action.
 
   
-**Retourne** : ID du modèle de protection.
+**Retourne**: L’ID de modèle de protection.
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Fonction GetType
 Obtenir le type de [Action](class_mip_action.md).
 
   
-**Retourne** : ActionType - le type d’action dérivée vers lequel cette classe de base peut être castée.
+**Retourne**: ActionType : type d’action dérivée vers lequel cette classe de base peut être castée.

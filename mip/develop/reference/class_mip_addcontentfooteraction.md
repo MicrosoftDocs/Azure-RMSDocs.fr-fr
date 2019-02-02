@@ -1,81 +1,81 @@
 ---
-title: mip AddContentFooterAction, classe
-description: Informations de référence pour la classe mip AddContentFooterAction
+title: mip::AddContentFooterAction, classe
+description: Décrit la classe mip::addcontentfooteraction de Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 73f641d965c3cf0236919557128af2ed07705672
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 064581d2b3a3c0ab9b926f0defe161dba46dfe49
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445833"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650848"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>mip::AddContentFooterAction, classe 
 Classe d’action qui spécifie l’ajout d’un pied de page de contenu au document.
   
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetUIElementName()  |  API utilisée pour marquer l’élément de pied de page de contenu.
- public const std::string& GetText() const  |  Obtenir le texte devant être placé dans le pied de page de contenu.
- public const std::string& GetFontName() const  |  Obtenir le nom de la police utilisée pour afficher le pied de page de contenu.
- public int GetFontSize() const  |  Obtenir la taille de la police utilisée pour afficher le pied de page de contenu.
- public const std::string& GetFontColor() const  |  Obtenir la couleur de la police utilisée pour afficher le pied de page de contenu.
- public ContentMarkAlignment GetAlignment() const  |  Obtenir l’alignement du pied de page.
- public int GetMargin() const  |  Obtenir la marge du pied de page à partir du bas.
- public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
+public const std::string& GetUIElementName()  |  API utilisée pour marquer l’élément de pied de page de contenu.
+public const std::string& GetText() const  |  Obtenir le texte devant être placé dans le pied de page de contenu.
+public const std::string& GetFontName() const  |  Obtenir le nom de la police utilisée pour afficher le pied de page de contenu.
+public int GetFontSize() const  |  Obtenir la taille de la police utilisée pour afficher le pied de page de contenu.
+public const std::string& GetFontColor() const  |  Obtenir la couleur de la police utilisée pour afficher le pied de page de contenu.
+public ContentMarkAlignment GetAlignment() const  |  Obtenir l’alignement du pied de page.
+public int GetMargin() const  |  Obtenir la marge du pied de page à partir du bas.
+public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
   
 ## <a name="members"></a>Membres
   
-### <a name="getuielementname"></a>GetUIElementName
+### <a name="getuielementname-function"></a>GetUIElementName (fonction)
 API utilisée pour marquer l’élément de pied de page de contenu.
 
   
-**Retourne** : le nom à utiliser pour l’élément d’interface utilisateur qui contient le pied de page de contenu. Le même nom est retourné dans [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) si le pied de page de contenu doit être supprimé.
+**Retourne**: Le nom doit être utilisé pour l’élément d’interface utilisateur qui contient le pied de page de contenu. Le même nom est retourné dans [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) si le pied de page de contenu doit être supprimé.
   
-### <a name="gettext"></a>GetText
+### <a name="gettext-function"></a>GetText (fonction)
 Obtenir le texte devant être placé dans le pied de page de contenu.
 
   
-**Retourne** : le texte du pied de page de contenu.
+**Retourne**: Texte de pied de page de contenu.
   
-### <a name="getfontname"></a>GetFontName
+### <a name="getfontname-function"></a>GetFontName (fonction)
 Obtenir le nom de la police utilisée pour afficher le pied de page de contenu.
 
   
-**Retourne** : le nom de la police. La valeur par défaut est Calibri si rien n’est défini par la stratégie.
+**Retourne**: Nom de la police. La valeur par défaut est Calibri si rien n’est défini par la stratégie.
   
-### <a name="getfontsize"></a>GetFontSize
+### <a name="getfontsize-function"></a>GetFontSize (fonction)
 Obtenir la taille de la police utilisée pour afficher le pied de page de contenu.
 
   
-**Retourne** : la taille de la police sous forme de nombre entier.
+**Retourne**: Taille de police en tant qu’entier.
   
-### <a name="getfontcolor"></a>GetFontColor
+### <a name="getfontcolor-function"></a>GetFontColor (fonction)
 Obtenir la couleur de la police utilisée pour afficher le pied de page de contenu.
 
   
-**Retourne** : couleur de la police sous forme de chaîne (par exemple, #000000).
+**Retourne**: Couleur de police sous forme de chaîne (par exemple, « #000000 »).
   
-### <a name="getalignment"></a>GetAlignment
+### <a name="getalignment-function"></a>GetAlignment (fonction)
 Obtenir l’alignement du pied de page.
 
   
-**Retourne** : l’énumérateur ContentMarkAlignment : LEFT|RIGHT|CENTER. 
+**Retourne**: L’énumérateur ContentMarkAlignment : GAUCHE | DROITE | CENTER. 
   
-**Voir aussi** : ContentMarkAlignment
+**Voir aussi**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
-### <a name="getmargin"></a>GetMargin
+### <a name="getmargin-function"></a>GetMargin (fonction)
 Obtenir la marge du pied de page à partir du bas.
 
   
-**Retourne** : marges à partir du bas du document (par exemple, 10 mm).
+**Retourne**: Les marges à partir du bas du document (par exemple, 10 mm).
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Fonction GetType
 Obtenir le type de [Action](class_mip_action.md).
 
   
-**Retourne** : ActionType - le type d’action dérivée vers lequel cette classe de base peut être castée.
+**Retourne**: ActionType : type d’action dérivée vers lequel cette classe de base peut être castée.

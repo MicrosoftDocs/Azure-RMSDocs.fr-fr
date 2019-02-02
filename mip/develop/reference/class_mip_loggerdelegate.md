@@ -1,32 +1,32 @@
 ---
-title: mip LoggerDelegate, classe
-description: Informations de référence pour la classe mip LoggerDelegate
+title: class mip::LoggerDelegate
+description: Décrit la classe mip::loggerdelegate de Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: b25cdb177735feccfa5c4d344613e4747d18b77f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: d93bfb863bf97629a8b2361425a0d78187c88cdc
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445850"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55649998"
 ---
 # <a name="class-miploggerdelegate"></a>class mip::LoggerDelegate 
 Une classe qui définit l’interface de l’enregistreur d’événements SDK MIP.
   
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public void Init(const std::string& storagePath, LogLevel logLevel)  |  Initialiser l’enregistreur d’événements.
- public LogLevel GetLogLevel() const  |  Obtenir le niveau de journalisation le plus bas qui doit déclencher un événement de journalisation.
- public void Flush()  |  Vider le l’enregistreur d’événements.
- public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Écrire une instruction de journal dans le fichier journal.
+public void Init(const std::string& storagePath, LogLevel logLevel)  |  Initialiser l’enregistreur d’événements.
+public LogLevel GetLogLevel() const  |  Obtenir le niveau de journalisation le plus bas qui doit déclencher un événement de journalisation.
+public void Flush()  |  Vider le l’enregistreur d’événements.
+public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Écrire une instruction de journal dans le fichier journal.
   
 ## <a name="members"></a>Membres
   
-### <a name="init"></a>Init
+### <a name="init-function"></a>Init (fonction)
 Initialiser l’enregistreur d’événements.
 
 Paramètres :  
@@ -37,16 +37,16 @@ Paramètres :
 
 
   
-### <a name="loglevel"></a>LogLevel
+### <a name="getloglevel-function"></a>GetLogLevel (fonction)
 Obtenir le niveau de journalisation le plus bas qui doit déclencher un événement de journalisation.
 
   
-**Retourne** : niveau de journalisation le plus bas qui doit déclencher un événement de journalisation.
+**Retourne**: Le niveau de journalisation la plus basse qui déclenche un événement de journalisation.
   
-### <a name="flush"></a>Purge
+### <a name="flush-function"></a>Flush (fonction)
 Vider le l’enregistreur d’événements.
   
-### <a name="writetolog"></a>WriteToLog
+### <a name="writetolog-function"></a>WriteToLog (fonction)
 Écrire une instruction de journal dans le fichier journal.
 
 Paramètres :  

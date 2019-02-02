@@ -1,23 +1,21 @@
 ---
-title: Référence du SDK MIP pour C++ (préversion)
-description: Référence du SDK MIP pour C++ (préversion)
+title: SDK MIP pour C++ référence
+description: SDK MIP pour C++ référence
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 06d8bb26a8e3026562006d68d4ae8d1630eba81c
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: cae7955684d0fae0f61e2a7319cbb036263e129b
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446326"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650584"
 ---
-# <a name="mip-sdk-for-c-preview-reference"></a>Référence du SDK MIP pour C++ (préversion)
+# <a name="mip-sdk-for-c-reference"></a>SDK MIP pour C++ référence
 
-Le SDK MIP (Microsoft Information Protection) pour C++ (préversion) permet aux développeurs de gérer des stratégies de protection des données et de les appliquer à des données et d’autres ressources numériques.  
-
-Pour plus d’informations, consultez le [blog des développeurs MIP](https://aka.ms/MIPDevelopers)<!-- and [MIP samples](https://aka.ms/mipsdksamples)-->.
+Microsoft Information Protection (MIP) SDK pour C++ permet aux développeurs de gérer et appliquer des stratégies de protection des données aux données et autres ressources numériques.  
 
 Le SDK MIP pour C++ inclut :
 
@@ -25,69 +23,67 @@ Le SDK MIP pour C++ inclut :
 - [Fonctions](mip-functions.md)
 - Les classes suivantes :
 
-| Nom de la classe | Description |
+| Nom de namespace::Class | Description |
 | :----------|:------------|
-[AccessDeniedError](class_mip_accessdeniederror.md)  |  L’utilisateur n’a pas pu obtenir l’accès au contenu. Par exemple, aucune autorisation, contenu révoqué.
-[Action](class_mip_action.md)  |  Interface pour une action. Chaque action se traduit par une étape qui doit être effectuée par l’application pour appliquer l’étiquette (comme défini dans la stratégie)
-[AddContentFooterAction](class_mip_addcontentfooteraction.md)  |  Classe d’action qui spécifie l’ajout d’un pied de page de contenu au document.
-[AddContentHeaderAction](class_mip_addcontentheaderaction.md)  |  Classe d’action qui spécifie l’ajout d’un en-tête de contenu.
-[AddWatermarkAction](class_mip_addwatermarkaction.md)  |  Classe d’action qui spécifie l’ajout d’un filigrane.
-[ApplyLabelAction](class_mip_applylabelaction.md)  |  Appliquer les actions de l’étiquette requiert d’appeler l’application pour appliquer une étiquette spécifique.
-[BadInputError](class_mip_badinputerror.md)  |  Erreur d’entrée incorrecte, levée quand l’entrée dans une API SDK n’est pas valide.
-[ClassificationResult](class_mip_classificationresult.md)  |  Classe qui contient le résultat d’un appel de classification sur l’État d’exécution.
-[ConsentDelegate](class_consentdelegate.md)  |  Délégué pour les opérations relatives au consentement.
-[ConsentDeniedError](class_mip_consentdeniederror.md)  |  Une opération nécessitant le consentement de l’utilisateur ne l’a pas obtenu.
-[ContentLabel](class_mip_contentlabel.md)  |  Abstraction d’une étiquette Microsoft Information Protection appliquée à un élément de contenu, généralement un document.
-[CustomAction](class_mip_customaction.md)  |  [CustomAction](class_mip_customaction.md) est une classe d’action générique qui capture toutes les sous-propriétés de l’action sous la forme d’un jeu de propriétés. Il appartient à l’appelant de comprendre la signification de l’action.
-[Erreur](class_mip_error.md)  |  Classe de base pour toutes les erreurs qui seront signalées (levées ou retournées) à partir du SDK MIP.
-[ExecutionState](class_mip_executionstate.md)  |  Interface pour tous les états nécessaires à l’exécution du moteur.
-[FileEngine::Settings](class_mip_fileengine_settings.md)  | _Pas encore documenté._
-[FileEngine](class_mip_fileengine.md)  |  Cette classe fournit une interface pour toutes les fonctions de moteur.
-[FileHandler::Observer](class_mip_filehandler_observer.md)  |  Interface [Observer](class_mip_filehandler_observer.md) permettant aux clients d’obtenir les notifications des événements liés au gestionnaire de fichiers.
-[FileHandler](class_mip_filehandler.md)  |  Interface pour toutes les fonctions de gestion de fichiers.
-[FileIOError](class_mip_fileioerror.md)  |  Erreur d’E/S de fichier.
-[FileProfile::Observer](class_mip_fileprofile_observer.md)  |  Interface [Observer](class_mip_fileprofile_observer.md) permettant aux clients d’obtenir les notifications des événements liés aux profils.
-[FileProfile::Settings](class_mip_fileprofile_settings.md)  |  [Settings](class_mip_fileprofile_settings.md) utilisé par [FileProfile](class_mip_fileprofile.md) lors de sa création et tout au long de sa durée de vie.
-[FileProfile](class_mip_fileprofile.md)  |  La classe [FileProfile](class_mip_fileprofile.md) est la classe de base pour l’utilisation des opérations Microsoft Information Protection.
-[HttpDelegate](class_mip_httpdelegate.md)  |  Interface pour le remplacement de la gestion HTTP.
-[HttpRequest](class_mip_httprequest.md)  |  Interface qui décrit une seule requête HTTP.
-[HttpResponse](class_mip_httpresponse.md)  |  Interface qui décrit une seule réponse HTTP, implémentée par l’application cliente lors du remplacement de [HttpDelegate](class_mip_httpdelegate.md).
-[InternalError](class_mip_internalerror.md)  |  Erreur interne. Cette erreur est levée quand un événement inattendu se produit pendant l’exécution.
-[JustificationRequiredError](class_mip_justificationrequirederror.md)  | _Pas encore documenté._
-[JustifyAction](class_mip_justifyaction.md)  |  Justify [Action](class_mip_action.md) nécessite de fournir une justification de rétrogradation d’une étiquette et de définir la réponse dans l’état d’exécution.
-[Étiquette](class_mip_label.md)  |  Abstraction d’une étiquette unique Microsoft Information Protection.
-[LabelingOptions](class_mip_labelingoptions.md)  |  Interface pour la configuration des options d’étiquetage des méthodes SetLabel/DeleteLabel.
-[LoggerDelegate](class_mip_loggerdelegate.md)  |  Une classe qui définit l’interface de l’enregistreur d’événements SDK MIP.
-[MetadataAction](class_mip_metadataaction.md)  |  Une [Action](class_mip_action.md) qui ajoute des informations de métadonnées au contenu.
-[NetworkError](class_mip_networkerror.md)  |  Erreur de mise en réseau. Causée par un comportement inattendu lors d’appels réseau aux points de terminaison du service.
-[NotSupportedError](class_mip_notsupportederror.md)  |  L’opération demandée par l’application n’est pas prise en charge par le kit SDK.
-[PolicyEngine::Settings](class_mip_policyengine_settings.md)  |  Définit les paramètres associés à un [PolicyEngine](class_mip_policyengine.md).
-[PolicyEngine](class_mip_policyengine.md)  |  Cette classe fournit une interface pour toutes les fonctions de moteur.
-[PolicyHandler](class_mip_policyhandler.md)  |  Cette classe fournit une interface pour toutes les fonctions de gestionnaire de stratégie sur un fichier.
-[PolicyProfile::Observer](class_mip_policyprofile_observer.md)  |  Interface [Observer](class_mip_policyprofile_observer.md) permettant aux clients d’obtenir les notifications des événements liés aux profils.
-[PolicyProfile::Settings](class_mip_policyprofile_settings.md)  |  [Paramètres](class_mip_policyprofile_settings.md) utilisés par [PolicyProfile](class_mip_policyprofile.md) lors de sa création et tout au long de sa durée de vie.
-[PolicyProfile](class_mip_policyprofile.md)  |  La classe [PolicyProfile](class_mip_policyprofile.md) est la classe de base pour l’utilisation des opérations Microsoft Information Protection. Une application classique a besoin d’une seule classe [PolicyProfile](class_mip_policyprofile.md), mais elle peut créer plusieurs profils si nécessaire.
-[PolicySyncError](class_mip_policysyncerror.md)  |  Une tentative de synchronisation des données de stratégie a échoué.
-[PrivilegedRequiredError](class_mip_privilegedrequirederror.md)  |  L’étiquette actuelle a été affectée en tant qu’opération avec des privilèges (l’équivalent d’une opération administrateur), par conséquent, elle ne peut pas être remplacée.
-[ProtectAdhocAction](class_mip_protectadhocaction.md)  |  Classe d’action qui spécifie l’ajout de la protection ad hoc au document.
-[ProtectByTemplateAction](class_mip_protectbytemplateaction.md)  |  Classe d’action qui spécifie l’ajout de la protection par modèle au document.
-[ProtectDoNotForwardAction](class_mip_protectdonotforwardaction.md)  |  Classe d’action qui spécifie l’ajout de la protection Ne pas transférer au document.
-[ProtectionDescriptor](class_mip_protectiondescriptor.md)  |  Description de la protection associée à un élément de contenu.
-[ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md)  |  Construit un [ProtectionDescriptor](class_mip_protectiondescriptor.md) qui décrit la protection associée à un élément de contenu.
-[ProtectionEngine::Observer](class_mip_protectionengine_observer.md)  |  Interface qui reçoit les notifications relatives à [ProtectionEngine](class_mip_protectionengine.md).
-[ProtectionEngine::Settings](class_mip_protectionengine_settings.md)  |  [Settings](class_mip_protectionengine_settings.md) utilisé par [ProtectionEngine](class_mip_protectionengine.md) lors de sa création et tout au long de sa durée de vie.
-[ProtectionEngine](class_mip_protectionengine.md)  |  Gère les actions liées à la protection sur une identité spécifique.
-[ProtectionHandler::Observer](class_mip_protectionhandler.md)  |  Interface qui reçoit les notifications relatives à [ProtectionHandler](class_mip_protectionhandler.md).
-[ProtectionHandler](class_mip_protectionhandler.md)  |  Gère les actions liées à la protection pour une configuration de protection spécifique.
-[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md)  |  Interface qui reçoit les notifications relatives à [ProtectionProfile](class_mip_protectionprofile.md).
-[ProtectionProfile::Settings](class_mip_protectionprofile_settings.md)  |  [Settings](class_mip_protectionprofile_settings.md) utilisé par [ProtectionProfile](class_mip_protectionprofile.md) lors de sa création et tout au long de sa durée de vie.
-[ProtectionProfile](class_mip_protectionprofile.md)  |  [ProtectionProfile](class_mip_protectionprofile.md) est la classe racine utilisée pour effectuer des opérations de protection.
-[RecommendLabelAction](class_mip_recommendlabelaction.md)  |  Les actions d’étiquette recommandées sont conçues pour suggérer une étiquette aux utilisateurs. La suppression de cet appel lorsqu’un utilisateur ignore l’étiquette recommandée doit être effectuée via les actions prises en charge sur l’état d’exécution.
-[RemoveContentFooterAction](class_mip_removecontentfooteraction.md)  |  Classe d’action qui spécifie la suppression du pied de page de contenu du document.
-[RemoveContentHeaderAction](class_mip_removecontentheaderaction.md)  |  Classe d’action qui spécifie la suppression de l’en-tête de contenu du document.
-[RemoveProtectionAction](class_mip_removeprotectionaction.md)  |  Classe d’action qui spécifie la suppression de la protection appliquée au document.
-[RemoveWatermarkAction](class_mip_removewatermarkaction.md)  |  Classe d’action qui spécifie la suppression du filigrane du document.
-[Flux](class_mip_stream.md)  |  Classe qui définit l’interface entre le SDK MIP et le contenu basé sur le flux de données (Stream).
-[TransientNetworkError](class_mip_transientnetworkerror.md)  |  Erreur de mise en réseau temporaire. Causée par un comportement inattendu lors d’appels réseau aux points de terminaison du service. L’opération peut être retentée, car cette erreur est une erreur temporaire.
-[UserRights](class_mip_userrights.md)  |  Groupe d’utilisateurs et droits qui leur sont associés.
-[UserRoles](class_mip_userroles.md)  |  Groupe d’utilisateurs et rôles qui leur sont associés.
+[mip::AccessDeniedError](class_mip_AccessDeniedError.md)  |  L’utilisateur n’a pas pu obtenir l’accès au contenu. Par exemple, aucune autorisation, contenu révoqué.
+[mip::Action](class_mip_Action.md)  |  Interface pour une action. Chaque action se traduit par une étape qui doit être effectuée par l’application pour appliquer l’étiquette (comme défini dans la stratégie)
+[mip::AddContentFooterAction](class_mip_AddContentFooterAction.md)  |  Classe d’action qui spécifie l’ajout d’un pied de page de contenu au document.
+[mip::AddContentHeaderAction](class_mip_AddContentHeaderAction.md)  |  Classe d’action qui spécifie l’ajout d’un en-tête de contenu.
+[mip::AddWatermarkAction](class_mip_AddWatermarkAction.md)  |  Classe d’action qui spécifie l’ajout d’un filigrane.
+[mip::ApplyLabelAction](class_mip_ApplyLabelAction.md)  |  Appliquer les actions de l’étiquette requiert d’appeler l’application pour appliquer une étiquette spécifique.
+[mip::AuthDelegate](class_mip_AuthDelegate.md)  |  Délégué pour l’authentification des opérations associées.
+[mip::BadInputError](class_mip_BadInputError.md)  |  Erreur d’entrée incorrecte, levée quand l’entrée dans une API SDK n’est pas valide.
+[mip::ClassificationRequest](class_mip_ClassificationRequest.md)  |  Classe qui contient la demande d’un appel de classification sur l’état d’exécution.
+[mip::ClassificationResult](class_mip_ClassificationResult.md)  |  Classe qui contient le résultat d’un appel de classification sur l’État d’exécution.
+[mip::ConsentDelegate](class_mip_ConsentDelegate.md)  |  Délégué pour les opérations relatives au consentement.
+[mip::ConsentDeniedError](class_mip_ConsentDeniedError.md)  |  Une opération nécessitant le consentement de l’utilisateur ne l’a pas obtenu.
+[mip::ContentLabel](class_mip_ContentLabel.md)  |  Abstraction d’une étiquette Microsoft Information Protection appliquée à un élément de contenu, généralement un document.
+[mip::CustomAction](class_mip_CustomAction.md)  |  [CustomAction](class_mip_customaction.md) est une classe d’action générique qui capture toutes les sous-propriétés de l’action sous la forme d’un jeu de propriétés. Il appartient à l’appelant de comprendre la signification de l’action.
+[mip::Error](class_mip_Error.md)  |  Classe de base pour toutes les erreurs qui seront signalées (levées ou retournées) à partir du SDK MIP.
+[mip::ExecutionState](class_mip_ExecutionState.md)  |  Interface pour tous les états nécessaires à l’exécution du moteur.
+[mip::FileEngine](class_mip_FileEngine.md)  |  Cette classe fournit une interface pour toutes les fonctions de moteur.
+[mip::FileExecutionState](class_mip_FileExecutionState.md)  | _Pas encore documenté._
+[mip::FileHandler](class_mip_FileHandler.md)  |  Interface pour toutes les fonctions de gestion de fichiers.
+[mip::FileIOError](class_mip_FileIOError.md)  |  Erreur d’E/S de fichier.
+[mip::FileProfile](class_mip_FileProfile.md)  |  La classe [FileProfile](class_mip_fileprofile.md) est la classe de base pour l’utilisation des opérations Microsoft Information Protection.
+[mip::HttpDelegate](class_mip_HttpDelegate.md)  |  Interface pour le remplacement de la gestion HTTP.
+[mip::HttpRequest](class_mip_HttpRequest.md)  |  Interface qui décrit une seule requête HTTP.
+[mip::HttpResponse](class_mip_HttpResponse.md)  |  Interface qui décrit une seule réponse HTTP, implémentée par l’application cliente lors du remplacement de [HttpDelegate](class_mip_httpdelegate.md).
+[mip::Identity](class_mip_Identity.md)  |  Abstraction d’identité.
+[mip::InternalError](class_mip_InternalError.md)  |  Erreur interne. Cette erreur est levée quand un événement inattendu se produit pendant l’exécution.
+[mip::JustificationRequiredError](class_mip_JustificationRequiredError.md)  | _Pas encore documenté._
+[mip::JustifyAction](class_mip_JustifyAction.md)  |  Justify [Action](class_mip_action.md) nécessite de fournir une justification de rétrogradation d’une étiquette et de définir la réponse dans l’état d’exécution.
+[mip::Label](class_mip_Label.md)  |  Abstraction d’une étiquette unique Microsoft Information Protection.
+[mip::LabelingOptions](class_mip_LabelingOptions.md)  |  Interface pour la configuration des options d’étiquetage des méthodes SetLabel/DeleteLabel.
+[mip::LoggerDelegate](class_mip_LoggerDelegate.md)  |  Une classe qui définit l’interface de l’enregistreur d’événements SDK MIP.
+[mip::MetadataAction](class_mip_MetadataAction.md)  |  Une [Action](class_mip_action.md) qui ajoute des informations de métadonnées au contenu.
+[mip::NetworkError](class_mip_NetworkError.md)  |  Erreur de mise en réseau. Causée par un comportement inattendu lors d’appels réseau aux points de terminaison du service.
+[mip::NoAuthTokenError](class_mip_NoAuthTokenError.md)  |  L’utilisateur n’a pas pu obtenir l’accès au contenu en raison du manque de jeton d’authentification.
+[mip::NoPermissionsError](class_mip_NoPermissionsError.md)  |  L’utilisateur n’a pas pu obtenir l’accès au contenu. Par exemple, aucune autorisation, contenu révoqué.
+[mip::NoPolicyError](class_mip_NoPolicyError.md)  |  Stratégie de client n’est pas configurée pour les étiquettes de classification /.
+[mip::NotSupportedError](class_mip_NotSupportedError.md)  |  L’opération demandée par l’application n’est pas prise en charge par le kit SDK.
+[mip::PolicyEngine](class_mip_PolicyEngine.md)  |  Cette classe fournit une interface pour toutes les fonctions de moteur.
+[mip::PolicyHandler](class_mip_PolicyHandler.md)  |  Cette classe fournit une interface pour toutes les fonctions de gestionnaire de stratégie sur un fichier.
+[mip::PolicyProfile](class_mip_PolicyProfile.md)  |  La classe [PolicyProfile](class_mip_policyprofile.md) est la classe de base pour l’utilisation des opérations Microsoft Information Protection. Une application classique a besoin d’une seule classe [PolicyProfile](class_mip_policyprofile.md), mais elle peut créer plusieurs profils si nécessaire.
+[mip::PolicySyncError](class_mip_PolicySyncError.md)  |  Une tentative de synchronisation des données de stratégie a échoué.
+[mip::PrivilegedRequiredError](class_mip_PrivilegedRequiredError.md)  |  L’étiquette actuelle a été affectée en tant qu’opération avec des privilèges (l’équivalent d’une opération administrateur), par conséquent, elle ne peut pas être remplacée.
+[mip::ProtectAdhocAction](class_mip_ProtectAdhocAction.md)  |  Classe d’action qui spécifie l’ajout de la protection ad hoc au document.
+[mip::ProtectByTemplateAction](class_mip_ProtectByTemplateAction.md)  |  Classe d’action qui spécifie l’ajout de la protection par modèle au document.
+[mip::ProtectDoNotForwardAction](class_mip_ProtectDoNotForwardAction.md)  |  Classe d’action qui spécifie l’ajout de la protection Ne pas transférer au document.
+[mip::ProtectionDescriptor](class_mip_ProtectionDescriptor.md)  |  Description de la protection associée à un élément de contenu.
+[mip::ProtectionDescriptorBuilder](class_mip_ProtectionDescriptorBuilder.md)  |  Construit un [ProtectionDescriptor](class_mip_protectiondescriptor.md) qui décrit la protection associée à un élément de contenu.
+[mip::ProtectionEngine](class_mip_ProtectionEngine.md)  |  Gère les actions liées à la protection sur une identité spécifique.
+[mip::ProtectionHandler](class_mip_ProtectionHandler.md)  |  Gère les actions liées à la protection pour une configuration de protection spécifique.
+[mip::ProtectionProfile](class_mip_ProtectionProfile.md)  |  [ProtectionProfile](class_mip_protectionprofile.md) est la classe racine utilisée pour effectuer des opérations de protection.
+[mip::ProxyAuthenticationError](class_mip_ProxyAuthenticationError.md)  |  Échec de l’authentification de proxy.
+[mip::RecommendLabelAction](class_mip_RecommendLabelAction.md)  |  Les actions d’étiquette recommandées sont conçues pour suggérer une étiquette aux utilisateurs. La suppression de cet appel lorsqu’un utilisateur ignore l’étiquette recommandée doit être effectuée via les actions prises en charge sur l’état d’exécution.
+[mip::RemoveContentFooterAction](class_mip_RemoveContentFooterAction.md)  |  Classe d’action qui spécifie la suppression du pied de page de contenu du document.
+[mip::RemoveContentHeaderAction](class_mip_RemoveContentHeaderAction.md)  |  Classe d’action qui spécifie la suppression de l’en-tête de contenu du document.
+[mip::RemoveProtectionAction](class_mip_RemoveProtectionAction.md)  |  Classe d’action qui spécifie la suppression de la protection appliquée au document.
+[mip::RemoveWatermarkAction](class_mip_RemoveWatermarkAction.md)  |  Classe d’action qui spécifie la suppression du filigrane du document.
+[mip::SensitivityTypesRulePackage](class_mip_SensitivityTypesRulePackage.md)  | _Pas encore documenté._
+[mip::ServiceDisabledError](class_mip_ServiceDisabledError.md)  |  L’utilisateur n’a pas pu obtenir l’accès au contenu en raison d’un service en cours de désactivation.
+[mip::Stream](class_mip_Stream.md)  |  Classe qui définit l’interface entre le SDK MIP et le contenu basé sur le flux de données (Stream).
+[mip::TransientNetworkError](class_mip_TransientNetworkError.md)  |  Erreur de mise en réseau temporaire. Causée par un comportement inattendu lors d’appels réseau aux points de terminaison du service. L’opération peut être retentée, car cette erreur est une erreur temporaire.
+[mip::UserRights](class_mip_UserRights.md)  |  Groupe d’utilisateurs et droits qui leur sont associés.
+[mip::UserRoles](class_mip_UserRoles.md)  |  Groupe d’utilisateurs et rôles qui leur sont associés.

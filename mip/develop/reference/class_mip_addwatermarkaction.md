@@ -1,72 +1,72 @@
 ---
-title: mip AddWatermarkAction, classe
-description: Informations de référence pour la classe mip AddWatermarkAction
+title: mip::AddWatermarkAction, classe
+description: Décrit la classe mip::addwatermarkaction de Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: f49bd7aa16ae12aef240d05fff6acf507ddc341d
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: d9a2049238e2b45f1c19265ed2f940b3fea079e6
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446088"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650831"
 ---
 # <a name="class-mipaddwatermarkaction"></a>mip::AddWatermarkAction, classe 
 Classe d’action qui spécifie l’ajout d’un filigrane.
   
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetUIElementName()  |  API utilisée pour marquer l’élément de filigrane.
- public WatermarkLayout GetLayout() const  |  API utilisée pour obtenir la disposition du filigrane.
- public const std::string& GetText() const  |  Obtenir le texte devant être placé dans le filigrane.
- public const std::string& GetFontName() const  |  Obtenir le nom de la police utilisée pour afficher le filigrane.
- public int GetFontSize() const  |  Obtenir la taille de la police utilisée pour afficher le filigrane.
- public const std::string& GetFontColor() const  |  Obtenir la couleur de la police utilisée pour afficher le filigrane.
- public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
+public const std::string& GetUIElementName()  |  API utilisée pour marquer l’élément de filigrane.
+public WatermarkLayout GetLayout() const  |  API utilisée pour obtenir la disposition du filigrane.
+public const std::string& GetText() const  |  Obtenir le texte devant être placé dans le filigrane.
+public const std::string& GetFontName() const  |  Obtenir le nom de la police utilisée pour afficher le filigrane.
+public int GetFontSize() const  |  Obtenir la taille de la police utilisée pour afficher le filigrane.
+public const std::string& GetFontColor() const  |  Obtenir la couleur de la police utilisée pour afficher le filigrane.
+public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
   
 ## <a name="members"></a>Membres
   
-### <a name="getuielementname"></a>GetUIElementName
+### <a name="getuielementname-function"></a>GetUIElementName (fonction)
 API utilisée pour marquer l’élément de filigrane.
 
   
-**Retourne** : le nom à utiliser pour l’élément d’interface utilisateur qui contient le filigrane. Le même nom est retourné dans RemoveWatermarkingAction si le filigrane doit être supprimé.
+**Retourne**: Le nom doit être utilisé pour l’élément d’interface utilisateur qui contient le filigrane. Le même nom est retourné dans RemoveWatermarkingAction si le filigrane doit être supprimé.
   
-### <a name="getlayout"></a>GetLayout
+### <a name="getlayout-function"></a>GetLayout (fonction)
 API utilisée pour obtenir la disposition du filigrane.
 
   
-**Retourne** : WatermarkLayout - la disposition du filigrane sous forme d’enum HORIZONTAL|DIAGONAL. ,
+**Retourne**: WatermarkLayout : disposition du filigrane sous forme d’enum HORIZONTAL|DIAGONAL. ,
   
-### <a name="gettext"></a>GetText
+### <a name="gettext-function"></a>GetText (fonction)
 Obtenir le texte devant être placé dans le filigrane.
 
   
-**Retourne** : le texte de l’en-tête de contenu.
+**Retourne**: Texte d’en-tête de contenu.
   
-### <a name="getfontname"></a>GetFontName
+### <a name="getfontname-function"></a>GetFontName (fonction)
 Obtenir le nom de la police utilisée pour afficher le filigrane.
 
   
-**Retourne** : le nom de la police. La valeur par défaut est Calibri si rien n’est défini par la stratégie.
+**Retourne**: Nom de la police. La valeur par défaut est Calibri si rien n’est défini par la stratégie.
   
-### <a name="getfontsize"></a>GetFontSize
+### <a name="getfontsize-function"></a>GetFontSize (fonction)
 Obtenir la taille de la police utilisée pour afficher le filigrane.
 
   
-**Retourne** : la taille de la police sous forme de nombre entier.
+**Retourne**: Taille de police en tant qu’entier.
   
-### <a name="getfontcolor"></a>GetFontColor
+### <a name="getfontcolor-function"></a>GetFontColor (fonction)
 Obtenir la couleur de la police utilisée pour afficher le filigrane.
 
   
-**Retourne** : couleur de la police sous forme de chaîne (par exemple, #000000).
+**Retourne**: Couleur de police sous forme de chaîne (par exemple, « #000000 »).
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Fonction GetType
 Obtenir le type de [Action](class_mip_action.md).
 
   
-**Retourne** : ActionType - le type d’action dérivée vers lequel cette classe de base peut être castée.
+**Retourne**: ActionType : type d’action dérivée vers lequel cette classe de base peut être castée.

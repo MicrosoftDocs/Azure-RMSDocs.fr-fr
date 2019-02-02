@@ -1,177 +1,177 @@
 ---
-title: mip FileProfile Settings, classe
-description: Informations de référence pour la classe mip FileProfile Settings
+title: mip::FileProfile::Settings, classe
+description: Décrit la classe mip::fileprofile de Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 4b79d8eb75a54a56f1b3e48645bdd5eec0afaa19
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 1e94e149a99fa48a69a830d5915ce4b33b55b322
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446377"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650899"
 ---
 # <a name="class-mipfileprofilesettings"></a>mip::FileProfile::Settings, classe 
 [Settings](class_mip_fileprofile_settings.md) utilisé par [FileProfile](class_mip_fileprofile.md) lors de sa création et tout au long de sa durée de vie.
   
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& path, bool useInMemoryStorage, std::shared_ptr<AuthDelegate> authDelegate, std::shared_ptr<ConsentDelegate> consentDelegate, std::shared_ptr<Observer> observer, const ApplicationInfo& applicationInfo)  |  Constructeur [FileProfile::Settings](class_mip_fileprofile_settings.md).
- public const std::string& GetPath() const  |  Obtient le chemin où sont stockés les informations de journalisation, les données de télémétrie et l’état persistant.
- public bool GetUseInMemoryStorage() const  |  Détermine si tous les états doivent être stockés dans la mémoire (plutôt que sur le disque)
-public std::shared_ptr<AuthDelegate> GetAuthDelegate() const  |  Obtient le délégué d’authentification utilisé pour l’acquisition des jetons d’authentification.
-public std::shared_ptr<ConsentDelegate> GetConsentDelegate() const  |  Obtient le délégué de consentement utilisé pour demander le consentement de l’utilisateur pour la connexion aux services.
-public std::shared_ptr<Observer> GetObserver() const  |  Obtient l’observateur qui reçoit les notifications des événements liés à [FileProfile](class_mip_fileprofile.md).
- public const ApplicationInfo GetApplicationInfo() const  |  Obtient des informations sur l’application qui utilise le SDK.
- public bool GetSkipTelemetryInit() const  |  Indique si l’initialisation de la télémétrie doit être ignorée ou non.
- public void SetSkipTelemetryInit()  |  Désactive l’initialisation de la télémétrie.
- public void SetNewFeaturesDisabled()  |  Désactive les nouvelles fonctionnalités.
- public bool AreNewFeaturesDisabled() const  |  Indique si les nouvelles fonctionnalités sont désactivées ou non.
-public std::shared_ptr<LoggerDelegate> GetLoggerDelegate() const  |  Obtenir le délégué d’enregistreur d’événements (le cas échéant) fourni par l’application.
-public void SetLoggerDelegate(const std::shared_ptr<LoggerDelegate>& loggerDelegate)  |  Remplacer l’enregistreur d’événements par défaut.
-public std::shared_ptr<HttpDelegate> GetHttpDelegate() const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
-public void SetHttpDelegate(const std::shared_ptr<HttpDelegate>& httpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
- public void OptOutTelemetry()  |  Refuse la collecte des données de télémétrie.
- public bool IsTelemetryOptedOut() const  |  Indique si la collecte des données de télémétrie doit être désactivée ou non.
- public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de la session.
- public const std::string& GetSessionId() const  |  Obtient l’ID de la session.
- public void SetMinimumLogLevel(LogLevel logLevel)  |  Définir le niveau de journalisation le plus bas qui va déclencher un événement de journalisation.
- public LogLevel GetMinimumLogLevel() const  |  Obtenir le niveau de journalisation le plus bas qui va déclencher un événement de journalisation.
+Paramètres publics (const std::shared_ptr std::string & chemin d’accès, useinmemorystorage : bool,\<authdelegate :\> authdelegate :, std::shared_ptr\<ConsentDelegate\> consentDelegate, std::shared_ptr\< Observateur\> observer, const ApplicationInfo & applicationInfo)  |  Constructeur [FileProfile::Settings](class_mip_fileprofile_settings.md).
+public const std::string& GetPath() const  |  Obtient le chemin où sont stockés les informations de journalisation, les données de télémétrie et l’état persistant.
+public bool GetUseInMemoryStorage() const  |  Détermine si tous les états doivent être stockés dans la mémoire (plutôt que sur le disque)
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Obtient le délégué d’authentification utilisé pour l’acquisition des jetons d’authentification.
+public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Obtient le délégué de consentement utilisé pour demander le consentement de l’utilisateur pour la connexion aux services.
+public std::shared_ptr\<Observateur\> GetObserver() const  |  Obtient l’observateur qui reçoit les notifications des événements liés à [FileProfile](class_mip_fileprofile.md).
+public const ApplicationInfo GetApplicationInfo() const  |  Obtient des informations sur l’application qui utilise le SDK.
+public bool GetSkipTelemetryInit() const  |  Indique si l’initialisation de la télémétrie doit être ignorée ou non.
+public void SetSkipTelemetryInit()  |  Désactive l’initialisation de la télémétrie.
+public void SetNewFeaturesDisabled()  |  Désactive les nouvelles fonctionnalités.
+public bool AreNewFeaturesDisabled() const  |  Indique si les nouvelles fonctionnalités sont désactivées ou non.
+public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Obtenir le délégué d’enregistreur d’événements (le cas échéant) fourni par l’application.
+public SetLoggerDelegate void (const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Remplacer l’enregistreur d’événements par défaut.
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
+public SetHttpDelegate void (const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
+public void OptOutTelemetry()  |  Refuse la collecte des données de télémétrie.
+public bool IsTelemetryOptedOut() const  |  Indique si la collecte des données de télémétrie doit être désactivée ou non.
+public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de la session.
+public const std::string& GetSessionId() const  |  Obtient l’ID de la session.
+public void SetMinimumLogLevel(LogLevel logLevel)  |  Définir le niveau de journalisation le plus bas qui va déclencher un événement de journalisation.
+public LogLevel GetMinimumLogLevel() const  |  Obtenir le niveau de journalisation le plus bas qui va déclencher un événement de journalisation.
   
 ## <a name="members"></a>Membres
   
-### <a name="settings"></a>Paramètres
+### <a name="settings-function"></a>Fonction de paramètres
 Constructeur [FileProfile::Settings](class_mip_fileprofile_settings.md).
 
 Paramètres :  
-* **path** : le chemin où sont stockés les informations de journalisation, les données de télémétrie et l’état persistant 
+* **Chemin d’accès**: Chemin d’accès de fichier sous l’enregistrement, données de télémétrie et les autres état persistant est stocké 
 
 
 * **useInMemoryStorage** : True si tous les états doivent être stockés dans la mémoire, False si l’état peut être mis en cache sur le disque 
 
 
-* **authDelegate** : le délégué d’authentification utilisé pour l’acquisition des jetons d’authentification 
+* **authDelegate**: Délégué d’authentification utilisé pour l’acquisition des jetons d’authentification 
 
 
-* **observer** : instance de [l’observateur](class_mip_fileprofile_observer.md) qui reçoit les notifications des événements liés à [FileProfile](class_mip_fileprofile.md)
+* **Observateur**: [Observateur](class_mip_fileprofile_observer.md) instance qui recevra les notifications d’événements liés à [FileProfile](class_mip_fileprofile.md)
 
 
-* **applicationInfo** : informations sur l’application qui utilise le SDK
+* **applicationInfo**: Plus d’informations sur l’application qui consomme le Kit de développement
 
 
   
-### <a name="getpath"></a>GetPath
+### <a name="getpath-function"></a>GetPath (fonction)
 Obtient le chemin où sont stockés les informations de journalisation, les données de télémétrie et l’état persistant.
 
   
-**Retourne** : le chemin où sont stockés les informations de journalisation, les données de télémétrie et l’état persistant
+**Retourne**: Chemin d’accès sous l’enregistrement, données de télémétrie et les autres état persistant est stocké
   
-### <a name="getuseinmemorystorage"></a>GetUseInMemoryStorage
+### <a name="getuseinmemorystorage-function"></a>GetUseInMemoryStorage (fonction)
 Détermine si tous les états doivent être stockés dans la mémoire (plutôt que sur le disque)
 
   
-**Retourne** : valeur indiquant si tous les états doivent être stockés dans la mémoire (plutôt que sur le disque)
+**Retourne**: Si tous les États doivent être stockées en mémoire (plutôt que sur le disque)
   
-### <a name="getauthdelegate"></a>GetAuthDelegate
+### <a name="getauthdelegate-function"></a>GetAuthDelegate (fonction)
 Obtient le délégué d’authentification utilisé pour l’acquisition des jetons d’authentification.
 
   
-**Retourne** : le délégué d’authentification utilisé pour l’acquisition des jetons d’authentification
+**Retourne**: Délégué d’authentification utilisé pour l’acquisition des jetons d’authentification
   
-### <a name="consentdelegate"></a>ConsentDelegate
+### <a name="getconsentdelegate-function"></a>GetConsentDelegate (fonction)
 Obtient le délégué de consentement utilisé pour demander le consentement de l’utilisateur pour la connexion aux services.
 
   
-**Retourne** : le délégué consentement utilisé pour demander le consentement de l’utilisateur
+**Retourne**: Délégué utilisé pour demander le consentement de l’utilisateur de consentement
   
-### <a name="observer"></a>Observateur
+### <a name="getobserver-function"></a>GetObserver (fonction)
 Obtient l’observateur qui reçoit les notifications des événements liés à [FileProfile](class_mip_fileprofile.md).
 
   
-**Retourne** : [observateur](class_mip_fileprofile_observer.md) qui reçoit les notifications des événements liés à [FileProfile](class_mip_fileprofile.md)
+**Retourne**: [Observateur](class_mip_fileprofile_observer.md) qui reçoit des notifications d’événements liés à [FileProfile](class_mip_fileprofile.md)
   
-### <a name="applicationinfo"></a>ApplicationInfo
+### <a name="getapplicationinfo-function"></a>GetApplicationInfo (fonction)
 Obtient des informations sur l’application qui utilise le SDK.
 
   
-**Retourne** : informations sur l’application qui utilise le SDK
+**Retourne**: Plus d’informations sur l’application qui consomme le Kit de développement
   
-### <a name="getskiptelemetryinit"></a>GetSkipTelemetryInit
+### <a name="getskiptelemetryinit-function"></a>GetSkipTelemetryInit (fonction)
 Indique si l’initialisation de la télémétrie doit être ignorée ou non.
 
   
-**Retourne** : valeur indiquant si l’initialisation de la télémétrie doit être ignorée ou non
+**Retourne**: Si l’initialisation de télémétrie doit être ignorée ou non
   
-### <a name="setskiptelemetryinit"></a>SetSkipTelemetryInit
+### <a name="setskiptelemetryinit-function"></a>SetSkipTelemetryInit (fonction)
 Désactive l’initialisation de la télémétrie.
 Cette méthode n’est généralement pas appelée par les applications clientes, mais plutôt utilisée par le SDK de fichier pour empêcher l’initialisation en double
   
-### <a name="setnewfeaturesdisabled"></a>SetNewFeaturesDisabled
+### <a name="setnewfeaturesdisabled-function"></a>SetNewFeaturesDisabled (fonction)
 Désactive les nouvelles fonctionnalités.
 Pour les applications qui ne veulent pas essayer de nouvelles fonctionnalités
   
-### <a name="arenewfeaturesdisabled"></a>AreNewFeaturesDisabled
+### <a name="arenewfeaturesdisabled-function"></a>AreNewFeaturesDisabled (fonction)
 Indique si les nouvelles fonctionnalités sont désactivées ou non.
 
   
-**Retourne** : valeur indiquant si les nouvelles fonctionnalités sont désactivées ou non
+**Retourne**: Si les nouvelles fonctionnalités sont désactivées ou non
   
-### <a name="loggerdelegate"></a>LoggerDelegate
+### <a name="getloggerdelegate-function"></a>GetLoggerDelegate (fonction)
 Obtenir le délégué d’enregistreur d’événements (le cas échéant) fourni par l’application.
 
   
-**Retourne** : enregistreur d’événements
+**Retourne**: Enregistreur d’événements
   
-### <a name="setloggerdelegate"></a>SetLoggerDelegate
+### <a name="setloggerdelegate-function"></a>SetLoggerDelegate (fonction)
 Remplacer l’enregistreur d’événements par défaut.
 
 Paramètres :  
-* **loggerDelegate** : interface de rappel de journalisation implémentée par les applications clientes
+* **loggerDelegate**: Interface de rappel de journalisation implémentée par les applications clientes
 
 
 Cette méthode doit être appelée par les applications clientes qui utilisent leur propre implémentation de l’enregistreur d’événements
   
-### <a name="httpdelegate"></a>HttpDelegate
+### <a name="gethttpdelegate-function"></a>GetHttpDelegate function
 Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
 
   
-**Retourne** : délégué HTTP à utiliser pour les opérations HTTP
+**Retourne**: Délégué HTTP à utiliser pour les opérations HTTP
   
-### <a name="sethttpdelegate"></a>SetHttpDelegate
+### <a name="sethttpdelegate-function"></a>SetHttpDelegate (fonction)
 Remplacer la pile HTTP par défaut par celle du client.
 
 Paramètres :  
-* **httpDelegate** : interface de rappel HTTP implémentée par l’application cliente
+* **httpDelegate**: Interface de rappel HTTP implémentée par l’application cliente
 
 
   
-### <a name="optouttelemetry"></a>OptOutTelemetry
+### <a name="optouttelemetry-function"></a>OptOutTelemetry (fonction)
 Refuse la collecte des données de télémétrie.
   
-### <a name="istelemetryoptedout"></a>IsTelemetryOptedOut
+### <a name="istelemetryoptedout-function"></a>IsTelemetryOptedOut function
 Indique si la collecte des données de télémétrie doit être désactivée ou non.
 
   
-**Retourne** : valeur indiquant si la collecte des données de télémétrie doit être désactivée ou non
+**Retourne**: Si la collecte des données de télémétrie doivent être désactivée ou non
   
-### <a name="setsessionid"></a>SetSessionId
+### <a name="setsessionid-function"></a>SetSessionId function
 Définit l’ID de la session.
 
 Paramètres :  
-* **sessionId** : ID de session à utiliser pour mettre en corrélation des journaux et la télémétrie
+* **sessionId**: ID de session qui sera utilisé pour mettre en corrélation des journaux et la télémétrie
 
 
   
-### <a name="getsessionid"></a>GetSessionId
+### <a name="getsessionid-function"></a>GetSessionId (fonction)
 Obtient l’ID de la session.
 
   
-**Retourne** : ID de session à utiliser pour mettre en corrélation des journaux et la télémétrie
+**Retourne**: ID de session qui sera utilisé pour mettre en corrélation des journaux et la télémétrie
   
-### <a name="setminimumloglevel"></a>SetMinimumLogLevel
+### <a name="setminimumloglevel-function"></a>SetMinimumLogLevel (fonction)
 Définir le niveau de journalisation le plus bas qui va déclencher un événement de journalisation.
 
 Paramètres :  
@@ -180,10 +180,10 @@ Paramètres :
 
 
   
-**Retourne** : True
+**Retourne**: True
   
-### <a name="loglevel"></a>LogLevel
+### <a name="getminimumloglevel-function"></a>GetMinimumLogLevel (fonction)
 Obtenir le niveau de journalisation le plus bas qui va déclencher un événement de journalisation.
 
   
-**Retourne** : niveau de journalisation le plus bas qui va déclencher un événement de journalisation.
+**Retourne**: Le plus bas niveau de journal qui va déclencher un événement de journalisation.

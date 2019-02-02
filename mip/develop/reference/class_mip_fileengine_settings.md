@@ -1,112 +1,134 @@
 ---
-title: mip FileEngine Settings, classe
-description: Informations de référence pour la classe mip FileEngine Settings
+title: mip::FileEngine::Settings, classe
+description: Décrit la classe mip::fileengine de Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 656ad1cf21a2d761dfb4c857b278b7421ee2b790
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: db189020c13340409d2aca2f0bdc054dfc961b09
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446479"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650763"
 ---
 # <a name="class-mipfileenginesettings"></a>mip::FileEngine::Settings, classe 
   
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  Constructeur [FileEngine::Settings](class_mip_fileengine_settings.md) pour le chargement d’un moteur existant.
- public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  Constructeur [FileProfile::Settings](class_mip_fileprofile_settings.md) pour la création d’un moteur.
- public const std::string& GetEngineId() const  |  Retourne l’ID du moteur.
- public const Identity& GetIdentity() const  |  Retourne l’identité du moteur.
- public void SetIdentity(const Identity& identity)  |  Définit l’identité du moteur.
- public const std::string& GetClientData() const  |  Retourne les données clientes du moteur.
- public const std::string& GetLocale() const  |  Retourne les paramètres régionaux du moteur.
-public void SetCustomSettings(const std::vector<std::pair<std::string, std::string>>& value)  |  Définit une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
-public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  Obtient une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
- public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de session du moteur.
- public const std::string& GetSessionId() const  |  Retourne l’ID de session du moteur.
- public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Définit l’URL de base du point de terminaison du cloud de protection, utilisée pour spécifier la limite du cloud.
- public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Obtient cloudEndpointBaseUrl.
- public void SetProtectionOnlyEngine(const bool protectionOnly)  |  Définit l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.
- public const bool IsProtectionOnlyEngine() const  |  Retourne l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.
+public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  Constructeur [FileEngine::Settings](class_mip_fileengine_settings.md) pour le chargement d’un moteur existant.
+public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  Constructeur [FileProfile::Settings](class_mip_fileprofile_settings.md) pour la création d’un moteur.
+public const std::string& GetEngineId() const  |  Retourne l’ID du moteur.
+public void SetEngineId(const std::string& id)  |  Définir l’ID du moteur.
+public const Identity& GetIdentity() const  |  Retourne le moteur [identité](class_mip_identity.md).
+public void SetIdentity(const Identity& identity)  |  Définit l’identité du moteur.
+public const std::string& GetClientData() const  |  Retourne les données clientes du moteur.
+public const std::string& GetLocale() const  |  Retourne les paramètres régionaux du moteur.
+public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& value)  |  Définit une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtient une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
+public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de session du moteur.
+public const std::string& GetSessionId() const  |  Retourne l’ID de session du moteur.
+public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Définit l’URL de base du point de terminaison du cloud de protection, utilisée pour spécifier la limite du cloud.
+public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Obtient cloudEndpointBaseUrl.
+public void SetProtectionOnlyEngine(const bool protectionOnly)  |  Définit l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.
+public const bool IsProtectionOnlyEngine() const  |  Retourne l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.
+public bool IsLoadSensitivityTypesEnabled() const  |  Obtenir l’indicateur spécifiant si les étiquettes de sensibilité de charge est activée.
   
 ## <a name="members"></a>Membres
   
-### <a name="settings"></a>Paramètres
+### <a name="settings-function"></a>Fonction de paramètres
 Constructeur [FileEngine::Settings](class_mip_fileengine_settings.md) pour le chargement d’un moteur existant.
 
 Paramètres :  
-* **engineId** : affectez à ce paramètre l’ID de moteur unique généré par AddEngineAsync. 
+* **engineId**: Affectez-lui la valeur de l’ID de moteur unique généré par AddEngineAsync. 
 
 
 * **clientData** : données clientes personnalisables qui peuvent être stockées avec le moteur lors du déchargement, et être récupérées à partir d’un moteur chargé. 
 
 
-* **locale** : la sortie localisable du moteur est fournie dans ces paramètres régionaux.
+* **locale** : la sortie localisable du moteur est fournie dans ces paramètres régionaux. 
+
+
+* **loadSensitivityTypes**: Indicateur facultatif indiquant quand le moteur est chargé doit charger également les types de sensibilité personnalisée, si true OnPolicyChange Observateur sur le profil sera appelée sur les mises à jour des types de sensibilité personnalisée, ainsi que des modifications de stratégie. Si vous appelez ListSensitivityTypes false retourne toujours une liste vide.
 
 
   
-### <a name="settings"></a>Paramètres
+### <a name="settings-function"></a>Fonction de paramètres
 Constructeur [FileProfile::Settings](class_mip_fileprofile_settings.md) pour la création d’un moteur.
 
 Paramètres :  
-* **identity** : informations d’identité de l’utilisateur associé au nouveau moteur. 
+* **identité**: [Identité](class_mip_identity.md) info de l’utilisateur associé avec le nouveau moteur. 
 
 
 * **clientData** : données clientes personnalisables qui peuvent être stockées avec le moteur lors du déchargement, et être récupérées à partir d’un moteur chargé. 
 
 
-* **locale** : la sortie localisable du moteur est fournie dans ces paramètres régionaux.
+* **locale** : la sortie localisable du moteur est fournie dans ces paramètres régionaux. 
+
+
+* **loadSensitivityTypes**: Indicateur facultatif indiquant quand le moteur est chargé doit charger également les types de sensibilité personnalisée, si true OnPolicyChange Observateur sur le profil sera appelée sur les mises à jour des types de sensibilité personnalisée, ainsi que des modifications de stratégie. Si vous appelez ListSensitivityTypes false retourne toujours une liste vide.
 
 
   
-### <a name="getengineid"></a>GetEngineId
+### <a name="getengineid-function"></a>GetEngineId (fonction)
 Retourne l’ID du moteur.
   
-### <a name="getidentity"></a>GetIdentity
-Retourne l’identité du moteur.
+### <a name="setengineid-function"></a>SetEngineId (fonction)
+Définir l’ID du moteur.
+
+Paramètres :  
+* **id** : ID du moteur.
+
+
   
-### <a name="setidentity"></a>SetIdentity
+### <a name="getidentity-function"></a>GetIdentity (fonction)
+Retourne le moteur [identité](class_mip_identity.md).
+  
+### <a name="setidentity-function"></a>SetIdentity (fonction)
 Définit l’identité du moteur.
   
-### <a name="getclientdata"></a>GetClientData
+### <a name="getclientdata-function"></a>GetClientData function
 Retourne les données clientes du moteur.
   
-### <a name="getlocale"></a>GetLocale
+### <a name="getlocale-function"></a>GetLocale (fonction)
 Retourne les paramètres régionaux du moteur.
   
-### <a name="setcustomsettings"></a>SetCustomSettings
+### <a name="setcustomsettings-function"></a>SetCustomSettings (fonction)
 Définit une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
   
-### <a name="getcustomsettings"></a>SetCustomSettings
+### <a name="getcustomsettings-function"></a>GetCustomSettings (fonction)
 Obtient une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
   
-### <a name="setsessionid"></a>SetSessionId
+### <a name="setsessionid-function"></a>SetSessionId function
 Définit l’ID de session du moteur.
   
-### <a name="getsessionid"></a>GetSessionId
+### <a name="getsessionid-function"></a>GetSessionId (fonction)
 Retourne l’ID de session du moteur.
   
-### <a name="setprotectioncloudendpointbaseurl"></a>SetProtectionCloudEndpointBaseUrl
+### <a name="setprotectioncloudendpointbaseurl-function"></a>SetProtectionCloudEndpointBaseUrl function
 Définit l’URL de base du point de terminaison du cloud de protection, utilisée pour spécifier la limite du cloud.
 
 Paramètres :  
-* **protectionCloudEndpointBaseUrl** : URL de base associée aux points de terminaison de protection
+* **protectionCloudEndpointBaseUrl**: Url de base associés aux points de terminaison de protection
 
 
   
-### <a name="getprotectioncloudendpointbaseurl"></a>GetProtectionCloudEndpointBaseUrl
+### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl function
 Obtient cloudEndpointBaseUrl.
 
   
-**Retourne** : URL de base associée aux points de terminaison de protection
+**Retourne**: Url de base associés aux points de terminaison de protection
   
-### <a name="setprotectiononlyengine"></a>SetProtectionOnlyEngine
+### <a name="setprotectiononlyengine-function"></a>SetProtectionOnlyEngine (fonction)
 Définit l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.
   
-### <a name="isprotectiononlyengine"></a>IsProtectionOnlyEngine
+### <a name="isprotectiononlyengine-function"></a>IsProtectionOnlyEngine (fonction)
 Retourne l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.
+  
+### <a name="isloadsensitivitytypesenabled-function"></a>IsLoadSensitivityTypesEnabled (fonction)
+Obtenir l’indicateur spécifiant si les étiquettes de sensibilité de charge est activée.
+
+  
+**Retourne**: True si activé ; sinon, false.

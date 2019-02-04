@@ -4,17 +4,17 @@ description: Configurez une étiquette qui protège l’e-mail d’un utilisateu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/29/2019
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 217fbdc45967b5677f554410bca2ac1da58552d2
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 6b892b1c845ea7d2e8670f054e0166eb160f3294
+ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023496"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231002"
 ---
-# <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles
+# <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles
 
 Dans ce démarrage rapide, vous allez configurer une étiquette existante pour appliquer automatiquement le paramètre de protection Ne pas transférer.
 
@@ -38,21 +38,23 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
 
 2. Vous avez ajouté le panneau Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
 
-    Pour obtenir une aide avec ces actions, voir [Démarrage rapide : Bien démarrer avec le Portail Azure](quickstart-viewpolicy.md).
+    Si vous avez besoin d’aide avec ces actions, consultez [Démarrage rapide : Bien démarrer avec le portail Azure](quickstart-viewpolicy.md).
 
 3. Une étiquette Azure Information Protection à configurer. 
     
-    Vous pouvez utiliser une des étiquettes par défaut, ou une étiquette que vous avez créée. Si vous avez besoin d’aide pour créer une nouvelle étiquette, consultez le guide [Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques](quickstart-label-specificusers.md).
+    Vous pouvez utiliser une des étiquettes par défaut, ou une étiquette que vous avez créée. Si vous avez besoin d’aide pour créer une étiquette, consultez [Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques](quickstart-label-specificusers.md).
 
 4. Pour tester la nouvelle étiquette : le client Azure Information Protection doit être installé sur les ordinateurs des utilisateurs. 
     
     Pour tester l’étiquette par vous-même, vous pouvez installer le client en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection.
 
-5. Pour tester une nouvelle étiquette : un ordinateur exécutant Windows (au minimum Windows 7 avec Service Pack 1). Sur cet ordinateur, vous êtes connecté aux applications Office de l’une des catégories suivantes :
+5. Pour tester la nouvelle étiquette : Un ordinateur exécutant Windows (au minimum Windows 7 avec Service Pack 1). Sur cet ordinateur, vous êtes connecté aux applications Office de l’une des catégories suivantes :
     
-    - Office 365 avec des applications Office 2016 (version minimale 1805, build 9330.2078). Pour utiliser cette option, une licence pour Azure Rights Management doit être affectée à votre compte. Cette licence est incluse dans l’abonnement Azure Information Protection.
+    - Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) vous est affectée.
     
-    - Office 365 ProPlus avec des applications 2016 ou 2013 (« Démarrer en un clic » ou installation basée sur Windows Installer).
+    - Office 365 ProPlus.
+    
+    - Office Professionnel Plus 2019.
     
     - Office Professionnel Plus 2016.
     
@@ -82,7 +84,7 @@ Pour obtenir la liste complète des prérequis d’Azure Information Protection,
 
 6. Vérifiez que l’option suivante est sélectionnée : **Dans Outlook appliquer Ne pas transférer**.
 
-7. Si l’option suivante est cochée, décochez-la : **Dans Word, Excel, PowerPoint et l’Explorateur de fichiers, demander à l’utilisateur des autorisations personnalisées**.
+7. Si l’option suivante est cochée, décochez-la : **Dans Word, Excel, PowerPoint et l’Explorateur de fichiers, demander à l’utilisateur des autorisations personnalisées**.
 
 8. Cliquez sur **OK** dans le panneau **Protection**, puis sur **Enregistrer** dans le panneau **Étiquette**.
 
@@ -106,7 +108,7 @@ Par conséquent, les destinataires ne peuvent pas transférer l’e-mail, ni l�
 
 Procédez comme suit si vous souhaitez ignorer cette configuration et retourner votre étiquette de façon à ne pas appliquer la protection :
 
-1. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous avez configurée. 
+1. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous avez configurée. 
 
 3. Dans le panneau **Étiquette**, recherchez la zone **Définir des autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Non configuré**, puis cliquez sur **Enregistrer**.
 

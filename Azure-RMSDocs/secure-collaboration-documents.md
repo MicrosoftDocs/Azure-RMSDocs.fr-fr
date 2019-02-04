@@ -4,18 +4,18 @@ description: Flux de travail de bout en bout pour la collaboration autour de doc
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a5a1c0069a35073d9362e28ef18ad4c09d95df3d
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: cc62934195916f5db26e7a328957c7fb09f10a57
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393962"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067586"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
@@ -31,7 +31,7 @@ Lorsque vous configurez ces autorisations, vous pouvez spécifier les utilisateu
 
 - **Pour les utilisateurs n’ayant pas de compte Azure Active Directory** : spécifiez une adresse e-mail qui sera utilisée avec un compte Microsoft. Ce compte peut déjà exister, ou les utilisateurs peuvent le créer au moment de l’ouverture du document protégé. 
     
-    Pour ouvrir des documents avec un compte Microsoft, les utilisateurs doivent utiliser Office 2016 « Démarrer en un clic ». Les autres éditions et versions de Microsoft Office ne prennent pas encore en charge l’ouverture de documents Office protégés avec un compte Microsoft.
+    Pour ouvrir des documents avec un compte Microsoft, les utilisateurs doivent utiliser des applications Office 365 (Démarrer en un clic). Les autres éditions et versions de Microsoft Office ne prennent pas encore en charge l’ouverture de documents Office protégés avec un compte Microsoft.
 
 - **Pour tout utilisateur authentifié** : cette option est appropriée quand vous n’avez pas besoin de contrôler l’accès au document protégé, à condition que l’utilisateur puisse être authentifié. L’authentification peut avoir lieu via Azure AD, à l’aide d’un compte Microsoft, ou même via un fournisseur de réseaux sociaux fédérés ou un code secret à usage unique quand le contenu est protégé par les nouvelles fonctionnalités d’Office 365 Message Encryption. 
 
@@ -140,7 +140,7 @@ En outre, les scénarios suivants prennent en charge l’affichage de documents�
 Prend en charge les comptes d’utilisateur, les groupes à extension messagerie, tous les membres. Les comptes d’utilisateur et les groupes à extension messagerie peuvent inclure des comptes Invité. Tous les membres sauf les comptes Invité.
 
 ###### <a name="footnote-2"></a>Note 2
-Actuellement pris en charge par Office 2016 « Démarrer en un clic » seulement.
+Actuellement pris en charge uniquement par les applications Office 365 (Démarrer en un clic).
 
 
 

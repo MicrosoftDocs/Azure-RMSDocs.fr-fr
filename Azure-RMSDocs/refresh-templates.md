@@ -4,18 +4,18 @@ description: Quand vous utilisez le service Azure Rights Management, les modèle
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 178e191a4099e0e077a45892b3b72310a995a528
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: caed7a13a290739065792320525dfa648981aa20
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394008"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067589"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
@@ -26,19 +26,19 @@ Quand vous utilisez le service Azure Rights Management d’Azure Information Pro
 |Application ou service|Mode d'actualisation des modèles après des modifications|
 |--------------------------|---------------------------------------------|
 |Exchange Online<br /><br />Applicable aux règles de transport et à Outlook Web App |Actualisé automatiquement dans l’heure (aucune étape supplémentaire nécessaire).<br /><br />C’est le cas si vous utilisez le [chiffrement de messages Office 365 avec les nouvelles fonctionnalités](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Si vous avez configuré Exchange Online pour l’utilisation du service Azure Rights Management en important votre domaine de publication approuvé, utilisez le même ensemble d’instructions pour activer les nouvelles fonctionnalités dans Exchange Online.|
-|Client Azure Information Protection|Actualisation automatique chaque fois que la stratégie Azure Information Protection est actualisée sur le client :<br /><br /> - Lorsqu’une application Office qui prend en charge la barre Azure Information Protection s’ouvre. <br /><br /> - Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier. <br /><br /> - Lorsque vous exécutez les applets de commande PowerShell pour l’étiquetage et la protection (Get-AIPFileStatus et Set-AIPFileLabel).<br /><br /> - Lorsque le service du scanneur Azure Information Protection démarre et que la stratégie locale remonte à plus d’une heure. De plus, le service du scanneur vérifie les modifications apportées toutes les heures et utilise ces modifications pour le prochain cycle d’analyse.<br /><br /> - Toutes les 24 heures.<br /><br /> De plus, étant donné que ce client est étroitement intégré à Office, les modèles actualisés pour Office 2016 ou Office 2013 le seront aussi pour le client Azure Information Protection.|
-|Client d’étiquetage unifié Azure Information Protection (préversion)|Actualisé automatiquement toutes les 4 heures par l’application Office.<br /><br /> De plus, étant donné que ce client est étroitement intégré à Office, les modèles actualisés pour Office 2016 ou Office 2013 le seront aussi pour le client d’étiquetage unifié Azure Information Protection.|
-|Office 2016 et Office 2013<br /><br />Application de partage RMS pour Windows|Actualisation automatique (d’après une planification) :<br /><br />- Pour ces versions ultérieures d’Office : l’intervalle d’actualisation par défaut est de 7 jours.<br /><br />- Pour l’application de partage RMS pour Windows : depuis la version 1.0.1784.0, l’intervalle d’actualisation par défaut est quotidien. Les versions antérieures ont, par défaut, un intervalle d'actualisation de sept jours.<br /><br />Pour forcer une actualisation avant la planification, consultez la section [Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Client Azure Information Protection|Actualisation automatique chaque fois que la stratégie Azure Information Protection est actualisée sur le client :<br /><br /> - Lorsqu’une application Office qui prend en charge la barre Azure Information Protection s’ouvre. <br /><br /> - Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier. <br /><br /> - Lorsque vous exécutez les applets de commande PowerShell pour l’étiquetage et la protection (Get-AIPFileStatus et Set-AIPFileLabel).<br /><br /> - Lorsque le service du scanneur Azure Information Protection démarre et que la stratégie locale remonte à plus d’une heure. De plus, le service du scanneur vérifie les modifications apportées toutes les heures et utilise ces modifications pour le prochain cycle d’analyse.<br /><br /> - Toutes les 24 heures.<br /><br /> De plus, étant donné que ce client est étroitement intégré à Office, les modèles actualisés pour les applications Office 365 ou pour Office 2019, Office 2016 ou Office 2013 le seront aussi pour le client Azure Information Protection.|
+|Client d’étiquetage unifié Azure Information Protection (préversion)|Actualisé automatiquement toutes les 4 heures par l’application Office.<br /><br /> De plus, étant donné que ce client est étroitement intégré à Office, les modèles actualisés pour les applications Office 365 ou pour Office 2019, Office 2016 ou Office 2013 le seront aussi pour le client d’étiquetage unifié Azure Information Protection.|
+|Applications Office 365, Office 2019, Office 2016 et Office 2013<br /><br />Application de partage RMS pour Windows|Actualisation automatique (d’après une planification) :<br /><br />- Pour ces versions ultérieures d’Office : l’intervalle d’actualisation par défaut est de 7 jours.<br /><br />- Pour l’application de partage RMS pour Windows : depuis la version 1.0.1784.0, l’intervalle d’actualisation par défaut est quotidien. Les versions antérieures ont, par défaut, un intervalle d'actualisation de sept jours.<br /><br />Pour forcer une actualisation avant la planification, consultez la section [Applications Office 365, Office 2019, Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié](#office-365-apps--office-2019--office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|Actualisation automatique lorsque les utilisateurs se déconnectent de Windows, se reconnectent et attendent jusqu'à une heure.|
 |Exchange sur site avec le connecteur Azure Rights Management<br /><br />Applicable aux règles de transport et à Outlook Web App|Actualisation automatique (aucune étape supplémentaire nécessaire). Toutefois, Outlook Web App met l’interface utilisateur en cache pendant un jour.|
-|Office 2016 pour Mac|Actualisation automatique (aucune étape supplémentaire nécessaire).|
+|Office 2019 pour Mac et Office 2016 pour Mac|Actualisation automatique (aucune étape supplémentaire nécessaire).|
 |Application de partage RMS pour les ordinateurs Mac|Actualisation automatique (aucune étape supplémentaire nécessaire).|
 |Applications Office qui [prennent en charge la fonctionnalité Niveau de confidentialité](https://support.office.com/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US&ui=en-US&rs=en-US#bkmk_whereavailable)|Ces clients ne téléchargent pas les modèles mais y accèdent en ligne, donc aucune étape supplémentaire n’est nécessaire.|
 
 Lorsque les applications client ont besoin de télécharger des modèles (initialement ou actualisés pour des modifications), préparez-vous à attendre pendant jusqu'à 15 minutes avant que le téléchargement soit terminé et que les modèles nouveaux ou mis à jour soient entièrement opérationnels. La durée varie en fonction de différents facteurs comme la taille et la complexité de la configuration du modèle et la connectivité réseau. 
 
-## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié
-En modifiant le Registre sur les ordinateurs exécutant Office 2016, Office 2013 ou l'application de partage Rights Management (RMS) pour Windows, vous pouvez modifier la planification automatique afin que les modèles modifiés soient actualisés sur les ordinateurs à une fréquence supérieure à la fréquence par défaut. Vous pouvez également forcer une actualisation immédiate en supprimant les données existantes dans une valeur de registre.
+## <a name="office-365-apps-office-2019-office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Applications Office 365, Office 2019, Office 2016, Office 2013 et application de partage RMS pour Windows : Forcer une actualisation pour un modèle personnalisé modifié
+En modifiant le Registre sur les ordinateurs exécutant les applications Office 365, Office 2019, Office 2016, Office 2013 ou l’application de partage Rights Management (RMS) pour Windows, vous pouvez modifier la planification automatique afin que les modèles modifiés soient actualisés sur les ordinateurs à une fréquence supérieure à la fréquence par défaut. Vous pouvez également forcer une actualisation immédiate en supprimant les données existantes dans une valeur de registre.
 
 > [!WARNING]
 > Si vous n'utilisez pas l'Éditeur du Registre correctement, vous risquez de provoquer de sérieux problèmes pouvant vous amener à devoir réinstaller le système d'exploitation. Microsoft ne peut pas garantir la résolution des problèmes engendrés par une utilisation incorrecte de l'Éditeur du Registre. Utilisez l’Éditeur du Registre à vos propres risques.

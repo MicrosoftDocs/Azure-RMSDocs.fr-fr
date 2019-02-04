@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 68e479eb7f19f60d6d68b913eae46dd287b5a04f
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: ea82ec3aacb8abbd4b9f15d0150bf7ff535e57db
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305146"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067983"
 ---
 # <a name="byok-pricing-and-restrictions"></a>Tarifs et restrictions BYOK
 
@@ -52,7 +52,7 @@ Pour plus d’informations sur Azure Key Vault, consultez [Qu’est-ce qu’Azur
 
 ## <a name="restrictions-when-using-byok"></a>Restrictions lors de l’utilisation de BYOK
 
-BYOK et la journalisation de l’utilisation fonctionnent de façon homogène avec chaque application qui s’intègre au service Azure Rights Management utilisé par Azure Information Protection. Ceci comprend des services cloud comme SharePoint Online, les serveurs locaux exécutant Exchange et SharePoint qui utilisent le service Azure Rights Management avec le connecteur RMS, et des applications clientes comme Office 2016 et Office 2013. Vous obtenez des journaux d’utilisation de la clé, quelle que soit l’application effectuant des demandes au service Azure Rights Management.
+BYOK et la journalisation de l’utilisation fonctionnent de façon homogène avec chaque application qui s’intègre au service Azure Rights Management utilisé par Azure Information Protection. Ceci comprend des services cloud comme SharePoint Online, les serveurs locaux exécutant Exchange et SharePoint qui utilisent le service Azure Rights Management avec le connecteur RMS, et des applications clientes comme Office 2019, Office 2016 et Office 2013. Vous obtenez des journaux d’utilisation de la clé, quelle que soit l’application effectuant des demandes au service Azure Rights Management.
 
 Si vous avez activé Exchange Online IRM en important votre domaine de publication approuvé à partir d’Azure RMS, suivez les instructions dans [Configurer de nouvelles fonctionnalités de chiffrement de messages Office 365 reposant sur Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) pour activer les nouvelles fonctionnalités dans Exchange Online qui prennent en charge BYOK pour Azure Information Protection.
 

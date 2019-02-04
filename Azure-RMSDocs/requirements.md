@@ -4,18 +4,18 @@ description: Identifiez les critères de déploiement d’Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 01/29/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 66ebb49b3b161a63c80968104e681fad74bbef42
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: 68b1cb057af1cc5de271c6e896e5cff4bb922cd2
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898764"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146704"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -90,9 +90,11 @@ Le client Azure Information Protection a des [prérequis supplémentaires](./rms
 
 Le client Azure Information Protection peut étiqueter et protéger les documents et les e-mails à l’aide des applications Office **Word**, **Excel**, **PowerPoint** et **Outlook** des éditions Office suivantes :
 
-- Office 365 avec les applications Office d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur
+- Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur
 
 - Office 365 ProPlus
+
+- Office Professionnel Plus 2019
 
 - Office Professionnel Plus 2016
 

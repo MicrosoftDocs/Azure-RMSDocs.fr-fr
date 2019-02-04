@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0f62134663cd7c784a694d25369698b4b7c9538c
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: b023eaa514fc22dcb3d595495c724d7d19e58c08
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898798"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067667"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -73,7 +73,7 @@ En plus d’aider les utilisateurs à protéger des documents et des e-mails, le
 Pour savoir comment utiliser ce client pour les ordinateurs Windows, consultez le [Guide de l’utilisateur du client Azure Information Protection](./rms-client/client-user-guide.md).
 
 
-## <a name="using-information-protection-with-office365-office-2016-or-office2013"></a>Utilisation de la protection des informations avec Office 365, Office 2016 ou Office 2013
+## <a name="using-information-protection-with-office365-office-2019-office-2016-or-office2013"></a>Utilisation de la protection des informations avec Office 365, Office 2019, Office 2016 ou Office 2013
 Si vous utilisez le service Azure Rights Management et que vous n’avez pas installé le client Azure Information Protection, les utilisateurs ne voient pas la barre Azure Information Protection dans leurs applications Office pour poste de travail. Ils ne voient pas non plus le bouton **Protéger** sur le ruban, ni **Classer et protéger** dans l’Explorateur de fichiers. Ces ajouts facilitent la protection des documents et des e-mails. Ces utilisateurs doivent suivre des instructions similaires aux suivantes.
 
 > [!TIP]
@@ -112,11 +112,11 @@ Par exemple, si l’e-mail est protégé à l’aide de l’option **Ne pas tran
 
 #### <a name="to-protect-an-email-message-using-outlook-on-the-web"></a>Pour protéger un e-mail à l’aide d’Outlook sur le web
 
-1.  Dans Outlook sur le web, créez un e-mail destiné à une personne de votre organisation.
+1. Dans Outlook sur le web, créez un e-mail destiné à une personne de votre organisation.
 
-2.  Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **Modifier les autorisations**, puis sélectionnez une option dans la liste déroulante. Par exemple : **Chiffrer** ou **\<Nom de la société> – Confidentiel**.
+2. Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **Modifier les autorisations**, puis sélectionnez une option dans la liste déroulante. Par exemple : **Chiffrer** ou **\<Nom de la société> – Confidentiel**.
 
-3.  Envoyez le message.
+3. Envoyez le message.
 
 Comme pour un document protégé, les destinataires sont authentifiés avant de pouvoir ouvrir l’e-mail. S’ils sont autorisés à afficher le message électronique, ce dernier s’ouvrira avec les [droits d’utilisation](configure-usage-rights.md) restreints qui ont été définis pour cet utilisateur. 
 

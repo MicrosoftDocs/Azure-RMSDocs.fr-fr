@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ba44c23b56c2832268f0ed6df122a347c9a8fdf3
-ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
+ms.openlocfilehash: 0d1cae062602897fce6d36078cfac3b164c7d614
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53218457"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146721"
 ---
 # <a name="what-is-azure-rights-management"></a>En quoi consiste Azure Rights Management ?
 
@@ -30,7 +30,7 @@ Par exemple, un employé peut envoyer un document par e-mail à une entreprise p
 
 Mais plus important encore, les personnes et services autorisés (recherche et indexation, par exemple) peuvent continuer à lire et inspecter les données protégées. Ceci n’est pas facile à mettre en œuvre avec d’autres solutions de protection des informations qui utilisent le chiffrement pair à pair. Cette fonctionnalité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise.
 
-L’illustration suivante montre comment ce service fournit une solution de protection pour Office 365, ainsi que pour les serveurs et services locaux. Elle montre également que cette protection est prise en charge par les appareils d’utilisateurs finaux courants qui exécutent Windows, Mac OS, iOS, Android et Windows Phone.
+L’illustration suivante montre comment ce service fournit une solution de protection pour Office 365, ainsi que pour les serveurs et services locaux. Elle montre également que cette protection est prise en charge par les appareils d’utilisateurs finaux courants qui exécutent Windows, macOS, iOS et Android.
 
 
 ![Fonctionnement d'Azure RMS](./media/AzRMS_elements.png)

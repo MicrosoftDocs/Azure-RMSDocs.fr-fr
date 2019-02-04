@@ -4,17 +4,17 @@ description: Tutoriel d’introduction qui vous guide dans la configuration des 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/24/2019
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: 0341ba1b232551f89e1ee43f77a3425b8c6e8ffb
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 324f13a61d287fd883e9336c6e17250e9ab9ff9f
+ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024363"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231019"
 ---
-# <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutoriel : Configurer des paramètres de stratégie Azure Information Protection qui fonctionnent ensemble
+# <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Didacticiel : Configurer les paramètres de stratégie Azure Information Protection qui interagissent
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
@@ -41,17 +41,19 @@ Pour suivre ce tutoriel, il vous faut :
 
 2. Vous avez ajouté le panneau Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
 
-    Pour obtenir de l’aide sur ces actions, voir [Démarrage rapide : Ajouter Azure Information Protection au Portail Azure et afficher la stratégie](quickstart-viewpolicy.md)
+    Si vous avez besoin d’aide avec ces actions, consultez [Démarrage rapide : Ajouter Azure Information Protection au portail Azure et afficher la stratégie](quickstart-viewpolicy.md)
 
 3. Le client Azure Information Protection est installé sur votre ordinateur. 
     
     Pour installer le client, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et téléchargez **AzInfoProtection.exe** sur la page Azure Information Protection.
 
-4. Un ordinateur sous Windows (au minimum Windows 7 avec Service Pack 1) sur lequel vous avez établi une connexion aux applications Office de l’une des catégories suivantes :
+4. Un ordinateur Windows (au minimum Windows 7 avec Service Pack 1) sur lequel vous avez établi une connexion aux applications Office de l’une des catégories suivantes :
     
-    - Office 365 avec des applications Office 2016 (version minimale 1805, build 9330.2078). Pour utiliser cette option, une licence pour Azure Rights Management doit être affectée à votre compte. Cette licence est incluse dans l’abonnement Azure Information Protection.
+    - Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) vous est affectée.
     
-    - Office 365 ProPlus avec des applications 2016 ou 2013 (« Démarrer en un clic » ou installation basée sur Windows Installer).
+    - Office 365 ProPlus.
+    
+    - Office Professionnel Plus 2019.
     
     - Office Professionnel Plus 2016.
     
@@ -75,7 +77,7 @@ Sur le Portail Azure, nous allons modifier la stratégie globale de façon à ch
     
     Si vous n’êtes pas l’administrateur général, utilisez le lien suivant pour les autres rôles : [Connexion au portail Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Sélectionnez **Classifications** > **Stratégies** > **Global** pour ouvrir le panneau **Stratégie : Global**. 
+2. Sélectionnez **Classifications** > **Stratégies** > **Global** pour ouvrir le panneau **Stratégie : Globale**. 
 
 3. Localisez les paramètres de stratégie après les étiquettes, dans la section **Configurer les paramètres à présenter et à appliquer aux utilisateurs finaux d’Information Protection**. Vos paramètres peuvent avoir des valeurs différentes de celles qui s’affichent :
     
@@ -94,7 +96,7 @@ Sur le Portail Azure, nous allons modifier la stratégie globale de façon à ch
     
     ![Tutoriel Azure Information Protection – modification des paramètres par défaut](./media/defaultsettings-aip-changed.png)
 
-5. Sélectionnez **Enregistrer** dans ce panneau **Stratégie : Globale** et, s’il vous est demandé de confirmer votre action, sélectionnez **OK**. 
+5. Sélectionnez **Enregistrer** dans ce panneau **Stratégie : Globale** et, si vous êtes invité à confirmer votre action, sélectionnez **OK**. 
 
 ## <a name="see-your-policy-settings-in-action"></a>Voir vos paramètres de stratégie en pratique 
 
@@ -161,7 +163,7 @@ Toutefois, il peut être intéressant de répéter cet exercice, mais aussi de j
 
 Si vous ne souhaitez pas conserver les modifications que vous avez effectuées dans ce tutoriel, procédez ainsi :
 
-1. Sélectionnez **Classifications** > **Stratégies** > **Global** pour ouvrir le panneau **Stratégie : Global**.
+1. Sélectionnez **Classifications** > **Stratégies** > **Global** pour ouvrir le panneau **Stratégie : Globale**.
 
 2. Rétablissez les valeurs d’origine (dont vous avez pris note) des paramètres de stratégie, puis sélectionnez **Enregistrer**.
 

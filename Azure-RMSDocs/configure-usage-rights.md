@@ -4,18 +4,18 @@ description: Découvrez et identifiez les droits spécifiques qui sont utilisés
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2018
+ms.date: 01/29/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a7bf1e202fdff99375054647e04d44d44eecdb85
-ms.sourcegitcommit: 5b48131ace3bbaf82f22fcb7eedf735c2f73d962
+ms.openlocfilehash: 195700be6b1a2f7aecbdd4de333570669cf6d329
+ms.sourcegitcommit: 4b1f204fd31bb9de05510b85b91304d9964a14c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53429897"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420790"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuration des droits d’utilisation pour Azure Rights Management
 
@@ -119,7 +119,7 @@ Une utilisatrice veut envoyer certaines informations par e-mail à certaines per
 
 Quand Exchange Online utilise les nouvelles fonctionnalités de chiffrement des messages Office 365, une nouvelle option d’e-mail est disponible : **Chiffrer uniquement**.
 
-Cette option est disponible pour les locataires qui utilisent Exchange Online et peut être sélectionnée dans Outlook sur le web, comme nouvelle option de protection des droits pour une règle de flux de courrier, sous la forme d’une action de protection contre la perte de données Office 365 et à partir d’Outlook quand vous avez Office 365 ProPlus avec au minimum la version [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4). Pour plus d’informations, consultez le billet de blog suivant de l’équipe Office : [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
+Cette option est disponible pour les locataires qui utilisent Exchange Online, et peut être sélectionnée dans Outlook sur le web comme nouvelle option de protection des droits pour une règle de flux de courrier, en tant qu’action de protection contre la perte de données Office 365, et à partir d’Outlook (version minimale [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) pour Office 365 ProPlus et version minimale 1805 quand vous avez des [applications Office 365 qui prennent en charge Azure RMS)](requirements-applications.md#windows-computers-for-information-rights-management-irm). Pour plus d’informations sur l’option Chiffrer uniquement, consultez le billet de blog suivant de l’équipe Office : [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
 
 Lorsque cette option est sélectionnée, l’e-mail est chiffré et les destinataires doivent être authentifiés. Ensuite, les destinataires ont tous les droits d’utilisation, à l’exception de **Enregistrer sous, Exporter** et de **Contrôle total**. Cette combinaison de droits d’utilisation signifie que les destinataires n’ont aucune restriction, mis à part qu’ils ne peuvent pas supprimer la protection. Par exemple, un destinataire peut copier à partir de l’e-mail, l’imprimer et le transférer. 
 

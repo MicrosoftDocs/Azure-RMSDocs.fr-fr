@@ -4,16 +4,16 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 075441ef848f3ebe5e106f5989a99981037711bd
-ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
+ms.openlocfilehash: eafcbf02ea6585b8a1434e210c274648982c0894
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397842"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067293"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -105,7 +105,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
        Lorsque vous choisissez tous les membres ou que vous parcourez le répertoire, les utilisateurs ou les groupes doivent avoir une adresse e-mail. Dans un environnement de production, les utilisateurs et les groupes ont presque toujours une adresse e-mail, mais dans un simple environnement de test, vous devrez peut-être ajouter des adresses e-mail aux comptes d’utilisateur ou aux groupes.
         
        ###### <a name="more-information-about-add-any-authenticated-users"></a>Informations supplémentaires sur **Ajouter tous les utilisateurs authentifiés** 
-       Ce paramètre ne restreint pas l’accès au contenu protégé par l’étiquette, tout en chiffrant le contenu et en vous proposant des options permettant de limiter la façon d’accéder au contenu (expiration et l’accès hors connexion) et l’utilisation qui peut en être faite (autorisations). Toutefois, l’application qui ouvre le contenu protégé doit être en mesure de prendre en charge l’authentification utilisée. Pour cette raison, les fournisseurs de réseaux sociaux fédérés, tels que Google, et l’authentification unique par code secret doivent être utilisés uniquement pour les e-mails, et seulement lorsque vous utilisez Exchange Online et les nouvelles fonctionnalités de chiffrement de messages Office 365. Les comptes Microsoft peuvent être utilisées avec la visionneuse Azure Information Protection et avec Office 2016 Démarrer en un clic. 
+       Ce paramètre ne restreint pas l’accès au contenu protégé par l’étiquette, tout en chiffrant le contenu et en vous proposant des options permettant de limiter la façon d’accéder au contenu (expiration et l’accès hors connexion) et l’utilisation qui peut en être faite (autorisations). Toutefois, l’application qui ouvre le contenu protégé doit être en mesure de prendre en charge l’authentification utilisée. Pour cette raison, les fournisseurs de réseaux sociaux fédérés, tels que Google, et l’authentification unique par code secret doivent être utilisés uniquement pour les e-mails, et seulement lorsque vous utilisez Exchange Online et les nouvelles fonctionnalités de chiffrement de messages Office 365. Les comptes Microsoft peuvent être utilisées avec la visionneuse Azure Information Protection et avec les applications Office 365 (Démarrer en un clic). 
           
        Quelques scénarios classiques pour la définition des utilisateurs authentifiés :
        - Tout le monde peut consulter le contenu, mais vous souhaitez imposer des restrictions à son utilisation. Par exemple, vous ne souhaitez pas que le contenu soit modifié, copié ou imprimé.
@@ -242,7 +242,7 @@ Si vous spécifiez des utilisateurs externes ne possédant pas de compte dans Az
 
 - Cette étiquette peut être utilisée pour les-mails si Exchange Online utilise les [nouvelles fonctionnalités dans Chiffrement des messages Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
  
-- Les pièces jointes Office qui sont protégées automatiquement peuvent être affichées dans un navigateur. Pour modifier ces documents, modifiez-les à l’aide d’Office 2016 « Démarrer en un clic » après les avoir téléchargés. [Plus d’informations](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Les pièces jointes Office qui sont protégées automatiquement peuvent être affichées dans un navigateur. Pour modifier ces documents, après les avoir téléchargés, modifiez-les à l’aide des applications Office 365 (Démarrer en un clic) et d’un compte Microsoft qui utilise la même adresse e-mail. [Plus d’informations](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 
 > [!NOTE]

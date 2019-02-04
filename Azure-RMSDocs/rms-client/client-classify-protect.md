@@ -4,18 +4,18 @@ description: Instructions sur la classification et la protection de vos document
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b1d46cb3c98c520ab6900f910f691af920337334
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: e0404f21ae3fbd5a4e9be86c9372645a4a425b38
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393470"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067786"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guide de l’utilisateur : Classifier et protéger un fichier ou un e-mail avec Azure Information Protection
 
@@ -77,7 +77,7 @@ Raisons possibles :
 
 - Si l’étiquette manquante applique la protection, il est possible que vous disposiez d’une édition d’Office qui ne prend pas en charge l’application de la protection Rights Management. Pour vérifier, cliquez sur **Protéger** > **Aide et commentaires**. Dans la boîte de dialogue, vérifiez si vous avez un message dans la section **État du client** indiquant **Ce client n’est pas sous licence pour Office Professionnel Plus**. 
     
-    Vous n’avez pas besoin d’Office Professional Plus si vous disposez d’applications Office 2016 avec au minimum la version 1805, build 9330.2078, et qu’une licence pour Azure Rights Management (également connu sous le nom d’Azure Information Protection pour Office 365) est affectée à votre compte.
+    Vous n’avez pas besoin d’Office Professionnel Plus si vous avez des applications Office d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur.
 
 - L’étiquette peut être dans une stratégie délimitée qui n’inclut pas votre compte. Contactez votre support technique ou votre administrateur.
 

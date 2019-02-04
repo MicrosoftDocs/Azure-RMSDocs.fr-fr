@@ -4,17 +4,17 @@ description: Tutoriel de prise en main d’environ 15 minutes, permettant de mod
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/29/2019
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: a619a05607f5061f51bae93d97cfd44086cefd55
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 2e08b21deb8d1b7ef99d77f56e1bf149a82df081
+ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024176"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231053"
 ---
-# <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Tutoriel : Modifier la stratégie Azure Information Protection et créer une nouvelle étiquette
+# <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Didacticiel : Modifier la stratégie Azure Information Protection et créer une étiquette
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
@@ -39,7 +39,7 @@ Pour suivre ce tutoriel, il vous faut :
 
 2. Vous avez ajouté le panneau Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
 
-    Pour obtenir de l’aide sur ces actions, voir [Démarrage rapide : Ajouter Azure Information Protection au Portail Azure et afficher la stratégie](quickstart-viewpolicy.md)
+    Si vous avez besoin d’aide avec ces actions, consultez [Démarrage rapide : Ajouter Azure Information Protection au portail Azure et afficher la stratégie](quickstart-viewpolicy.md)
 
 3. Le client Azure Information Protection est installé sur votre ordinateur. 
     
@@ -47,9 +47,11 @@ Pour suivre ce tutoriel, il vous faut :
 
 4. Un ordinateur exécutant Windows (au minimum Windows 7 avec Service Pack 1). Sur cet ordinateur, vous êtes connecté aux applications Office de l’une des catégories suivantes :
     
-    - Office 365 avec des applications Office 2016 (version minimale 1805, build 9330.2078). Pour utiliser cette option, une licence pour Azure Rights Management doit être affectée à votre compte. Cette licence est incluse dans l’abonnement Azure Information Protection.
+    - Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) vous est affectée.
     
-    - Office 365 ProPlus avec des applications 2016 ou 2013 (« Démarrer en un clic » ou installation basée sur Windows Installer).
+    - Office 365 ProPlus.
+    
+    - Office Professionnel Plus 2019.
     
     - Office Professionnel Plus 2016.
     
@@ -73,7 +75,7 @@ C’est parti !
     
     Si vous n’êtes pas l’administrateur général, utilisez le lien suivant pour les autres rôles : [Connexion au portail Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Sélectionnez **Classifications** > **Stratégies** > **Global** pour ouvrir le panneau **Stratégie : Global**. 
+2. Sélectionnez **Classifications** > **Stratégies** > **Global** pour ouvrir le panneau **Stratégie : Globale**. 
 
 3. Localisez les paramètres de stratégie après les étiquettes, dans la section **Configurer les paramètres à présenter et à appliquer aux utilisateurs finaux d’Information Protection**. 
     
@@ -91,17 +93,17 @@ C’est parti !
 
 6. Par ailleurs, assurez-vous que le paramètre **Afficher la barre Information Protection dans les applications Office** est défini sur **Activé**.
 
-7. Sélectionnez **Enregistrer** dans ce panneau **Stratégie : Globale** et, s’il vous est demandé de confirmer votre action, sélectionnez **OK**. Fermez ce panneau.
+7. Sélectionnez **Enregistrer** dans ce panneau **Stratégie : Globale** et, si vous êtes invité à confirmer votre action, sélectionnez **OK**. Fermez ce panneau.
 
 ### <a name="create-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Créer une étiquette pour la protection, de marquages visuels et d’une condition pour une demande de classification
 
 Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
 
-1. À partir de l’option de menu **Classifications** > **Étiquettes** : cliquez avec le bouton droit sur l’étiquette **Confidentiel** et sélectionnez **Ajouter une sous-étiquette**.
+1. À partir de l’option de menu **Classifications** > **Étiquettes** : Cliquez avec le bouton droit sur l’étiquette **Confidentiel** et sélectionnez **Ajouter une sous-étiquette**.
     
     Si vous n’avez pas d’étiquette nommée **Confidentiel**, vous pouvez sélectionner une autre étiquette ou créer une étiquette, puis suivre le didacticiel avec des différences mineures.
 
-2. Dans le panneau **Sous-étiquette**, spécifiez le nom d’étiquette **Finance** et ajoutez la description suivante : **Données confidentielles qui contiennent des informations financières réservées aux employés uniquement**.
+2. Dans le panneau **Sous-étiquette**, spécifiez le nom d’étiquette **Finance** et ajoutez la description suivante : **Données confidentielles qui contiennent des informations financières réservées exclusivement aux employés**.
     
     Ce texte explique comment l’étiquette sélectionnée va être utilisée et s’affiche sous forme d’info-bulle pour aider les utilisateurs dans leur choix.
 
@@ -143,11 +145,11 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
     Cliquez sur **Ajouter une nouvelle condition**, puis, dans le panneau **Condition**, sélectionnez les éléments suivants :
     
-    a. **Choisir le type de condition** : conservez la valeur par défaut **Types d’informations**.
+    a. **Choisir le type de condition**  : conservez la valeur par défaut **Types d’informations**.
     
-    b. Pour **Choisir le secteur d’activité** : conservez la valeur par défaut **Tous**.
+    b. **Sélectionner un secteur d’activité** : conservez la valeur par défaut **Tout**.
     
-    c. Dans la zone de recherche **Sélectionner les types d’informations** : tapez **Numéro de carte de crédit**. Ensuite, dans les résultats de recherche, sélectionnez **Numéro de carte de crédit**.
+    c. Dans la zone de recherche **Sélectionner les types d’informations** : tapez **Numéro de carte de crédit**. Ensuite, dans les résultats de recherche, sélectionnez **Numéro de carte de crédit**.
     
     d. **Nombre minimal d’occurrences** : conservez la valeur par défaut **1**.
     
@@ -161,7 +163,7 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
     ![Tutoriel Azure Information Protection - configurer la condition de la carte de crédit](./media/step2-see-condition.png)
 
-11. Pour **Sélectionner comment cette étiquette est appliquée** : conservez la valeur par défaut **Recommandé** et ne modifiez pas le conseil de stratégie par défaut. 
+11. **Sélectionner comment cette étiquette est appliquée** : conservez la valeur par défaut **Recommandé** et ne changez pas le conseil de stratégie par défaut. 
 
 12. Dans la zone **Ajouter des notes pour l’administrateur** , tapez **À des fins de test uniquement**.
 
@@ -169,9 +171,9 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
 
 14. À partir de l’option de menu **Classifications** > **Stratégies** : sélectionnez à nouveau **Globale**, puis sélectionnez le lien **Ajouter ou supprimer des étiquettes** situé en regard des étiquettes.
 
-15. À partir du panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette que vous venez de créer, la sous-étiquette nommée **Finance** et cliquez sur **OK**.
+15. Dans le panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette que vous venez de créer, la sous-étiquette nommée **Finance** et cliquez sur **OK**.
 
-16. Dans le panneau **Stratégie : Globale**, votre nouvelle sous-étiquette s’affiche désormais dans votre stratégie globale, qui est configurée pour le marquage visuel et la protection. Par exemple :
+16. Dans le panneau **Stratégie : Globale**, votre nouvelle sous-étiquette s’affiche désormais dans votre stratégie globale, qui est configurée pour le marquage visuel et la protection. Par exemple :
 
     ![Tutoriel Azure Information Protection : nouvelle sous-étiquette](./media/info-protect-policy-configuredv2.png)
     
@@ -180,7 +182,7 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     ![Tutoriel Azure Information Protection : paramètres configurés](./media/info-protect-settings-configuredv2.png)
     
 
-17. Cliquez sur **Enregistrer** sur ce panneau **Stratégie : Globale**. Si vous êtes invité à confirmer cette action, cliquez sur **OK**.
+17. Cliquez sur **Enregistrer** dans ce panneau **Stratégie : Globale**. Si vous êtes invité à confirmer cette action, cliquez sur **OK**.
 
 Vous pouvez fermer le portail Azure, ou le laisser ouvert pour essayer des options de configuration supplémentaires après avoir terminé ce didacticiel.
 
@@ -254,11 +256,11 @@ Ouvrez un nouveau document dans Word. Comme Azure Information Protection est ins
 
 Si vous ne souhaitez pas conserver les modifications que vous avez effectuées dans ce tutoriel, procédez ainsi :
 
-1. Sélectionnez **Classifications** > **Stratégies** > **Global** pour ouvrir le panneau **Stratégie : Global**.
+1. Sélectionnez **Classifications** > **Stratégies** > **Global** pour ouvrir le panneau **Stratégie : Globale**.
 
 2. Rétablissez les valeurs d’origine (dont vous avez pris note) des paramètres de stratégie, puis sélectionnez **Enregistrer**. 
 
-3. Dans l’option de menu **Classifications** > **Étiquette** : dans le panneau **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel (**…**) de l’étiquette **Finance** que vous avez créée.
+3. Dans l’option de menu **Classifications** > **Étiquette** : dans le panneau **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel (**…**) de l’étiquette **Finance** que vous avez créée.
 
 4. Sélectionnez **Supprimer cette étiquette**, puis **OK** si une confirmation vous est demandée.
 

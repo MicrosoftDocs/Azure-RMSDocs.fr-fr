@@ -4,19 +4,19 @@ description: Certaines questions fréquentes sur le service de protection des do
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ac079a7046b6166b89c828054ed5f94e756fa99f
-ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
+ms.openlocfilehash: 8f0e202b9404b114dd7ae48522a61bc8e524e618
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397978"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146823"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
@@ -147,7 +147,7 @@ Pour obtenir la liste des extensions de noms de fichiers pris en charge en mode 
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>Comment configurer un ordinateur Mac pour protéger et suivre les documents ?
 
-Tout d’abord, assurez-vous que vous avez installé Office pour Mac en utilisant le lien d’installation à partir de https://portal.office.com. Pour obtenir des instructions complètes, consultez [Télécharger et installer ou réinstaller Office 365 ou Office 2016 sur un PC ou un Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+Tout d’abord, assurez-vous que vous avez installé Office pour Mac en utilisant le lien d’installation à partir de https://portal.office.com. Pour obtenir des instructions complètes, consultez [Télécharger et installer ou réinstaller Office 365 ou Office 2019 sur un PC ou un Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
 Ouvrez Outlook et créez un profil à l’aide de compte de travail ou scolaire Office 365. Ensuite, créez un nouveau message, puis procédez comme suit pour configurer Office afin qu’il puisse protéger les documents et e-mails à l’aide du service Azure Rights Management :
 
@@ -194,7 +194,7 @@ L’utilisateur qui a protégé le document, [l’émetteur Rights Management](c
 Pour un locataire, la période de validité par défaut d’une licence d’utilisation est de 30 jours. Vous pouvez remplacer ce paramètre par un paramètre plus restrictif dans une étiquette ou un modèle. Pour plus d’informations sur la licence d’utilisation et sa configuration, consultez la documentation [Licence d’utilisation Rights Management](configure-usage-rights.md#rights-management-use-license).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Est-ce que Rights Management peut empêcher les captures d’écran ?
-En n’accordant pas le [droit d’utilisation](configure-usage-rights.md) **Copy**, Rights Management peut empêcher des captures d’écran de nombreux outils de capture écran couramment utilisés sur les plates-formes Windows (Windows 7, Windows 8.1, Windows 10, Windows Phone) et Android. En revanche, les appareils iOS et Mac n’autorisent aucune application à empêcher les captures d’écran, et les navigateurs (par exemple, utilisés avec Outlook Web App et Office Online) ne peuvent pas non plus empêcher les captures d’écran.
+En n’accordant pas le [droit d’utilisation](configure-usage-rights.md) **Copy**, Rights Management peut empêcher des captures d’écran de nombreux outils de capture écran couramment utilisés sur les plateformes Windows (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) et Android. En revanche, les appareils iOS et Mac n’autorisent aucune application à empêcher les captures d’écran, et les navigateurs (par exemple, utilisés avec Outlook Web App et Office Online) ne peuvent pas non plus empêcher les captures d’écran.
 
 La possibilité d’empêcher les captures d’écran peut également aider à éviter la divulgation accidentelle ou involontaire de renseignements confidentiels ou sensibles. Il existe par ailleurs de nombreuses façons de partager des données affichées sur un écran, et la capture d’écran n’est qu’une méthode parmi d’autres. Par exemple, un utilisateur désireux de partager des informations affichées peut parfaitement les photographier avec son téléphone, recopier les données ou simplement les communiquer verbalement à un tiers.
 

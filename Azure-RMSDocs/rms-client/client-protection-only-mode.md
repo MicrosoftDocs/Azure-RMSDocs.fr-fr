@@ -4,18 +4,18 @@ description: Informations pour les utilisateurs qui exécutent le client Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2f73f8bf107aaebe0e87588c410e1e7f66093ef7
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: dedacab4509b88f300739bd92012debedfaacf7d
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305095"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067966"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guide de l’utilisateur : Mode Protection uniquement pour le client Azure Information Protection
 
@@ -55,7 +55,7 @@ Le mode Protection uniquement s’exécute dans les scénarios suivants :
 
 ## <a name="supported-tasks-for-protection-only-mode"></a>Tâches prises en charge dans le mode protection uniquement
 
-- Protégez (et déprotégez) des documents et des e-mails à partir de vos applications Office, à l’aide de la fonctionnalité Information Rights Management (IRM) d’Office : Par exemple : Cliquez sur **Fichier** > **Informations** > **Protéger le document** > **Restreindre l’accès**. Pour plus d’informations, consultez [Utilisation de la protection des informations avec Office 365, Office 2016 ou Office 2013](../help-users.md).
+- Protégez (et déprotégez) des documents et des e-mails à partir de vos applications Office, à l’aide de la fonctionnalité Information Rights Management (IRM) d’Office : Par exemple : Cliquez sur **Fichier** > **Informations** > **Protéger le document** > **Restreindre l’accès**. Pour plus d’informations, consultez [Utilisation de la protection des informations avec Office 365, Office 2019, Office 2016 ou Office 2013](../help-users.md#using-information-protection-with-Office-365-Office 2019-Office-2016-or-Office-2013).
 
 - Protégez (et déprotégez) des fichiers avec l’Explorateur de fichiers Windows : Cliquez avec le bouton droit sur le fichier, les fichiers ou le dossier > **Classifier et protéger**. Pour appliquer la protection qui a été configurée par votre administrateur, dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, cliquez sur **Sélectionner un modèle** et choisissez l’un des modèles disponibles.
 

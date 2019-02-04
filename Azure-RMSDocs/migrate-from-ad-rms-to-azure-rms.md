@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3f7c06a6415160b5c2245dc60e94bf7d9633ef7f
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 714d5ca28df5ab47fa66ca59a21929bcd7b69d9c
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393751"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146772"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
@@ -203,7 +203,7 @@ Les étapes de migration peuvent être divisées en cinq phases qui peuvent êtr
 
 - **Étape 11 : Effectuer les tâches de migration des clients**
 
-    Si vous avez déployé [l’extension d’appareil mobile](https://technet.microsoft.com/library/dn673574.aspx) pour prendre en charge des appareils mobiles tels que des téléphones et iPad iOS, des téléphones et tablettes Android, des téléphones Windows Phone et des ordinateurs Mac, vous devez supprimer les enregistrements SRV dans le système DNS qui redirigeaient ces clients pour utiliser AD RMS. 
+    Si vous avez déployé l’[extension d’appareil mobile](https://technet.microsoft.com/library/dn673574.aspx) pour prendre en charge des appareils mobiles tels que des iPad et téléphones iOS, des téléphones et tablettes Android, des téléphones et tablettes Windows et des ordinateurs Mac, vous devez supprimer les enregistrements SRV dans le système DNS qui redirigeaient ces clients pour utiliser AD RMS. 
     
     Les contrôles d’intégration que vous avez configurés au cours de la phase de préparation ne sont plus nécessaires. Toutefois, si vous n’utilisez pas de contrôles d’intégration parce que vous avez choisi de tout migrer à la fois au lieu d’effectuer une migration en plusieurs phases, vous pouvez ignorer les instructions pour supprimer les contrôles d’intégration.
     

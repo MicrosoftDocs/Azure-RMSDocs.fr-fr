@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ef9836a6e3b651986642d2c93128ea0f6b1e6112
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 18c5028bf69f756b79328a26ce967f5e73492d2e
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314847"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146789"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -44,7 +44,7 @@ Azure Information Protection permet à une organisation de classifier, d’étiq
 Un utilisateur doit avoir un nom d’utilisateur et un mot de passe valides pour accéder au contenu protégé par Azure Information Protection. Pour en savoir plus sur la façon dont Azure Information Protection permet de sécuriser vos données, consultez [Rôle d’Azure Information Protection dans la sécurisation des données](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
 
 ## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>De quel abonnement ai-je besoin pour Azure Information Protection et quelles sont les fonctionnalités incluses ?
-Consultez les informations sur les abonnements et la liste des fonctionnalités de la page [Tarification Azure Information Protection](https://azure.microsoft.com/en-us/pricing/details/information-protection). 
+Consultez les informations sur les abonnements et la liste des fonctionnalités de la page [Tarification Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection). 
 
 Si vous avez un abonnement Office 365 incluant la protection des données Azure Rights Management, téléchargez la [feuille de données des licences Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) qui contient également des questions fréquentes sur les licences.
 
@@ -122,7 +122,7 @@ Oui, dans le cadre d’une offre de préversion publique, vous pouvez à présen
 
 Ces alertes peuvent vous aider à détecter les attaques avancées liées aux données et les menaces internes dans votre environnement. Ces alertes utilisent le Machine Learning pour dresser le profil du comportement des utilisateurs qui accèdent à vos données protégées. 
 
-Les alertes d’Azure Information Protection sont accessibles [à l’aide de l’API Microsoft Graph Security](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview), ou vous pouvez [diffuser des alertes](https://developer.microsoft.com/en-us/graph/docs/concepts/security_siemintegration) aux solutions SIEM, comme Splunk et IBM Qradar, à l’aide d’Azure Monitor.
+Les alertes d’Azure Information Protection sont accessibles [à l’aide de l’API Microsoft Graph Security](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview), ou vous pouvez [diffuser des alertes](https://developer.microsoft.com/graph/docs/concepts/security_siemintegration) aux solutions SIEM, comme Splunk et IBM Qradar, à l’aide d’Azure Monitor.
 
 Pour plus d’informations sur l’API Microsoft Graph Security, consultez [Vue d’ensemble de l’API Microsoft Graph Security](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview).
 
@@ -195,7 +195,7 @@ De plus, il existe des questions fréquentes destinées aux utilisateurs finaux�
 
 - [FAQ relatif à l’application Azure Information Protection pour iOS et Android](./rms-client/mobile-app-faq.md)
 
-- [FAQ relatif à l’application de partage RMS pour les ordinateurs Mac et Windows Phone](https://technet.microsoft.com/dn451248)
+- [FAQ relatif à l’application de partage RMS pour les ordinateurs Mac](https://technet.microsoft.com/dn451248)
 
 - [FAQ concernant l’application de partage Rights Management pour Windows](https://technet.microsoft.com/dn467883)
 

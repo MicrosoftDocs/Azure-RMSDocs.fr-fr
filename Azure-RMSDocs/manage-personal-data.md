@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 08ae5875437a1e443247a5a57b1bb621b6627ce3
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: f030ebaa372d6fa308a51a3d9b34cefa0bc0535b
+ms.sourcegitcommit: d9c8b560fa3d2797ef634d8919af3ed695b16908
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898781"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55701947"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
 
@@ -201,7 +201,7 @@ Pour désactiver la journalisation des informations pour le scanneur et le clien
 
 - Pour le client Azure Information Protection : créez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) qui configure **LogLevel** sur **Désactivé**.
 
-- Pour le scanneur Azure Information Protection : utilisez la cmdlet [Set-AIPScannerConfiguration](/azureinformationprotection/set-aipscannerconfiguration) pour définir le paramètre *ReportLevel* sur **Désactivé**.
+- Pour le scanneur Azure Information Protection : utilisez la cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) pour définir le paramètre *ReportLevel* sur **Désactivé**.
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 

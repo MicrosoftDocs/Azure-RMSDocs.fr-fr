@@ -4,18 +4,18 @@ description: Découvrez comment les applications (comme Office Word, Excel, Powe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/02/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1b14ef6999f0852474f6f9de5eef2902f8863a8c
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: d8e1164d82304bcf28aa91d2e1708b10fd946ba3
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305168"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559799"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Comment les applications prennent en charge le service Azure Rights Management
 
@@ -45,8 +45,6 @@ Les services de recherche peuvent s’intégrer à Rights Management de différe
 ## <a name="next-steps"></a>Étapes suivantes
 
 Découvrez comment chacun des services et applications suivants prend en charge le service Azure Rights Management :
-
--   [Application de partage RMS pour Windows et les plateformes mobiles](sharing-app-support.md)
 
 -   [Applications et services Office](office-apps-services-support.md)
 

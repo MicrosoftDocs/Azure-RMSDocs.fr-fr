@@ -4,18 +4,18 @@ description: Si vous connaissez ou avez déjà déployé Active Directory Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/25/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ffaa0f341cbe9fd59a63c27b4114923049efcdc6
-ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
+ms.openlocfilehash: cf6f2ed4351f7790b14b0344d5358411e74c2564
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55146687"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559850"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Comparaison d’Azure Information Protection avec AD RMS
 
@@ -53,7 +53,7 @@ Pour plus d’informations et pour connaître les autres différences, consultez
 |Active automatiquement la collaboration sécurisée sur les documents de toutes les organisations qui utilisent aussi Azure AD pour l’authentification. Cela signifie que les organisations peuvent protéger les documents qu’elles partagent en interne ou avec d’autres organisations.|La collaboration sécurisée sur les documents externes à l’organisation exige que des approbations d’authentification soient explicitement définies dans une relation point à point directe entre deux organisations. Vous devez configurer des domaines d’utilisateurs approuvés ou des approbations fédérées créées avec les services AD FS (Active Directory Federation Services).|
 |Envoyez un e-mail protégé (avec éventuellement des documents Office en pièce jointe qui sont automatiquement protégés) aux utilisateurs quand aucune relation d’approbation d’authentification n’existe. Ce scénario est possible en utilisant la fédération avec les fournisseurs de réseaux sociaux ou un code secret à usage unique, ainsi qu’un navigateur web pour l’affichage.|Ne prend pas en charge pas l’envoi d’e-mails protégés quand aucune relation d’approbation d’authentification n’existe.|
 |Fournit des modèles de protection par défaut qui limitent l’accès du contenu à votre propre organisation : un modèle qui permet d’afficher en lecture seule le contenu protégé et un autre qui offre des autorisations d’écriture ou de modification pour le contenu protégé.<br /><br />Vous pouvez également créer vos propres modèles personnalisés, qui comprennent des modèles par département visibles uniquement par un groupe d’utilisateurs. Pour plus d’informations, consultez [Configuration et gestion des modèles pour Azure Information Protection](configure-policy-templates.md).<br /><br />En outre, les utilisateurs peuvent définir leur propre jeu d'autorisations si les modèles ne suffisent pas.|Il n’existe aucun modèle par défaut. Vous devez créer et distribuer vos propres modèles. Pour plus d'informations, voir [Considérations relatives au modèle de stratégie AD RMS](https://go.microsoft.com/fwlink/?LinkId=154765).<br /><br />En outre, les utilisateurs peuvent définir leur propre jeu d'autorisations si les modèles ne suffisent pas.|
-|La version minimale prise en charge de Microsoft Office est Office 2010, pour laquelle le [client Azure Information Protection](./rms-client/aip-client.md) ou l’application de partage RMS est nécessaire.|La version minimale prise en charge de Microsoft Office est Office 2010.|
+|La version minimale prise en charge de Microsoft Office est Office 2010, pour laquelle le [client Azure Information Protection](./rms-client/aip-client.md) est nécessaire.|La version minimale prise en charge de Microsoft Office est Office 2010.|
 |Prend en charge le [client Azure Information Protection](./rms-client/aip-client.md) pour Windows, iOS et Android. Les ordinateurs Mac continuent à être pris en charge par l’application de partage RMS.<br /><br />En outre, le client Azure Information Protection prend en charge les éléments suivants :<br /><br />- Partage avec des personnes dans une autre organisation.<br /><br />- Site de suivi des documents permettant notamment aux utilisateurs de révoquer des documents.|Prend en charge le [client Azure Information Protection](./rms-client/aip-client.md) pour Windows, iOS et Android. Les ordinateurs Mac continuent à être pris en charge par l’application de partage RMS. Toutefois, le partage n’inclut pas le partage avec des personnes extérieures à l’organisation ni le site de suivi de document permettant aux utilisateurs de révoquer des documents.|
 |La plupart des [types de fichiers](./rms-client/client-admin-guide-file-types.md) peuvent être classifiés et protégés lorsque vous utilisez le client Azure Information Protection.<br /><br />Pour les autres applications, consultez le tableau dans [Applications prenant en charge la protection des données Azure Rights Management](./requirements-applications.md).|La plupart des [types de fichiers](./rms-client/client-admin-guide-file-types.md) peuvent être protégés lorsque vous utilisez le client Azure Information Protection.<br /><br />Pour les autres applications, consultez le tableau dans [Applications prenant en charge la protection des données Azure Rights Management](./requirements-applications.md).|
 |La version minimale prise en charge du client Windows est Windows 7 SP1.|La version minimale prise en charge du client Windows est Windows 7 SP1.|

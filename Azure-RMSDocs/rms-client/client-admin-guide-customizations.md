@@ -4,18 +4,18 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/02/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 71ef2607355cbe84003aaf9fc77dfa5d9a72beff
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: 3612c0848cf77a57636186f5f9683a2ac7f1c5ec
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898849"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651562"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -207,9 +207,11 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Utilisez-le uniquement lorsque le [paramètre de stratégie](../configure-policy-settings.md) **Afficher la barre Information Protection dans les applications Office** est défini sur **Activé**.
 
-Lorsque vous configurez ce paramètre et publiez la stratégie pour les utilisateurs, si un utilisateur choisit de ne pas afficher la barre Azure Information Protection dans ses applications Office, la barre reste masquée. Cela se produit lorsque l’utilisateur décoche l’option **Afficher la barre** dans l’onglet **Accueil**, groupe **Protection** groupe, bouton **Protéger**. Ce paramètre n’a aucun effet si l’utilisateur ferme la barre à l’aide de l’icône **Fermer cette barre**.
+Par défaut, si un utilisateur efface l’option **Afficher la barre** de l’onglet **Accueil**, le groupe **Protection** et le bouton **Protéger**, la barre Information Protection ne s’affiche plus dans cette application Office. Toutefois, la barre réapparaît automatiquement la prochaine fois qu’une application Office s’ouvre.
 
-Même si la barre Azure Information Protection reste masquée, les utilisateurs peuvent encore sélectionner une étiquette dans la barre d’outils qui s’affiche temporairement si vous avez configuré la classification recommandée ou si un document ou un e-mail doit avoir une étiquette. 
+Pour empêcher la barre de réapparaître automatiquement une fois que l’utilisateur a choisi de la masquer, utilisez ce paramètre client. Ce paramètre n’a aucun effet si l’utilisateur ferme la barre à l’aide de l’icône **Fermer cette barre**.
+
+Même si la barre Azure Information Protection reste masquée, les utilisateurs peuvent encore sélectionner une étiquette dans une barre qui s’affiche temporairement si vous avez configuré la classification recommandée ou si un document ou un e-mail doit avoir une étiquette. 
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
@@ -419,19 +421,17 @@ Cette configuration nécessite que vous spécifiiez un paramètre client avancé
 
 L’ID de l’étiquette figure dans le panneau **Étiquette** quand vous affichez ou configurez la stratégie Azure Information Protection dans le portail Azure. Pour spécifier une sous-étiquette, l’étiquette parente doit être dans la même étendue, ou dans la stratégie globale.
 
-Spécifiez votre choix d’un nom de règle de migration. Utilisez un nom descriptif qui vous aide à identifier la manière dont une ou plusieurs étiquettes de votre solution d’étiquetage précédente doivent être mappées à une étiquette Azure Information Protection. Le nom s’affiche dans les rapports d’analyse et dans l’observateur d’événements. 
-
-Notez que ce paramètre ne supprime pas les marquages visuels que l’ancienne étiquette a éventuellement appliqués. Pour supprimer des en-têtes et des pieds de page, consultez la section suivante, [Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions).
+Spécifiez votre choix d’un nom de règle de migration. Utilisez un nom descriptif qui vous aide à identifier la manière dont une ou plusieurs étiquettes de votre solution d’étiquetage précédente doivent être mappées à une étiquette Azure Information Protection. Le nom s’affiche dans les rapports d’analyse et dans l’observateur d’événements. Notez que ce paramètre ne supprime pas l’étiquette d’origine du document ni les marquages visuels du document que l’étiquette d’origine a éventuellement appliqués. Pour supprimer des en-têtes et des pieds de page, consultez la section suivante, [Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions).
 
 ### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Exemple 1 : Mappage un-à-un du même nom d’étiquette
 
-Les documents qui ont une étiquette Secure Islands « Confidentiel » doivent être à nouveau libellées « Confidentiel » par Azure Information Protection.
+Configuration requise : Les documents qui ont une étiquette Secure Islands « Confidentiel » doivent être à nouveau libellées « Confidentiel » par Azure Information Protection.
 
 Exemple :
 
-- L’étiquette Azure Information Protection **Confidentiel** a l’ID d’étiquette 1ace2cc3-14bc-4142-9125-bf946a70542c. 
+- L’étiquette Azure Information Protection que vous voulez utiliser s’appelle **Confidentiel** et a l’ID d’étiquette **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
-- L’étiquette Secure Islands est stockée dans la propriété personnalisée nommée **Classification**.
+- L’étiquette Secure Islands s’appelle **Confidentiel** et est stockée dans la propriété personnalisée nommée **Classification**.
 
 Le paramètre client avancé :
 
@@ -442,13 +442,13 @@ Le paramètre client avancé :
 
 ### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Exemple 2 : Mappage un-à-un pour un autre nom d’étiquette
 
-Les documents qui ont une étiquette « Sensible » chez Secure Islands doivent être à nouveau libellés « Hautement confidentiel » par Azure Information Protection.
+Configuration requise : Les documents qui ont une étiquette « Sensible » chez Secure Islands doivent être à nouveau libellés « Hautement confidentiel » par Azure Information Protection.
 
 Exemple :
 
-- L’étiquette Azure Information Protection **Hautement confidentiel** a un ID d’étiquette 3e9df74d-3168-48af-8b11-037e3021813f.
+- L’étiquette Azure Information Protection que vous voulez utiliser s’appelle **Hautement confidentiel** et a l’ID d’étiquette **3e9df74d-3168-48af-8b11-037e3021813f**.
 
-- L’étiquette Secure Islands est stockée dans la propriété personnalisée nommée **Classification**.
+- L’étiquette Secure Islands s’appelle **Sensible** et est stockée dans la propriété personnalisée nommée **Classification**.
 
 Le paramètre client avancé :
 
@@ -460,13 +460,13 @@ Le paramètre client avancé :
 
 ### <a name="example-3-many-to-one-mapping-of-label-names"></a>Exemple 3 : Mappage plusieurs-à-un de noms d’étiquettes
 
-Vous avez deux étiquettes Secure Islands qui contiennent le mot « Interne » et vous souhaitez que les documents dotés d’une de ces étiquettes Secure Islands soient ré-étiquetés comme « Général » par Azure Information Protection.
+Configuration requise : Vous avez deux étiquettes Secure Islands qui contiennent le mot « Interne » et vous souhaitez que les documents dotés d’une de ces étiquettes Secure Islands soient ré-étiquetés comme « Général » par Azure Information Protection.
 
 Exemple :
 
-- L’étiquette Azure Information Protection **Général** a un ID d’étiquette 2beb8fe7-8293-444c-9768-7fdc6f75014d.
+- L’étiquette Azure Information Protection que vous voulez utiliser s’appelle **Général** et a l’ID d’étiquette **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
-- L’étiquette Secure Islands est stockée dans la propriété personnalisée nommée **Classification**.
+- L’étiquette Secure Islands inclut le mot **Interne** et est stockée dans la propriété personnalisée nommée **Classification**.
 
 Le paramètre client avancé :
 

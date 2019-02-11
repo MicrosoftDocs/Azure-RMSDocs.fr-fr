@@ -4,17 +4,17 @@ description: Migrez les étiquettes Azure Information Protection vers le Centre 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/26/2019
+ms.date: 02/05/2019
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 58a563e3d1f43dd312c0d4c9d1ffdf612b1c8d12
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: 8525d20d452004b6ba46dd438dd042f98f603d6d
+ms.sourcegitcommit: e8b4a09db9aad7f6540b4c2fd92b1e8008c999b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231036"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737271"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365
 
@@ -26,6 +26,14 @@ ms.locfileid: "55231036"
 Migrez vos étiquettes si vous souhaitez être en mesure de les utiliser dans le Centre de sécurité et conformité Office 365, où elles peuvent être publiées et ensuite téléchargées par les [clients qui prennent en charge l’étiquetage unifié](#clients-that-support-unified-labeling). Le client Azure Information Protection continue de télécharger les étiquettes avec la stratégie Azure Information Protection à partir du portail Azure. 
 
 Une fois que vous avez migré vos étiquettes, vous pouvez ensuite les modifier dans le portail Azure ou le Centre de sécurité et conformité Office 365, et les clients respectifs téléchargent la même modification.
+
+Avant de lire les instructions détaillées sur la migration de vos étiquettes, vous trouverez probablement utiles les questions fréquemment posées suivantes :
+
+- [Quelle est la différence entre les étiquettes dans Azure Information Protection et celles dans Office 365 ?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
+
+- [Comment définir le bon moment pour migrer mes étiquettes vers Office 365 ?](faqs.md#when-is-the-right-time-to-migrate-my-labels-to-office-365)
+
+- [Une fois que j’ai migré mes étiquettes, quel portail de gestion utiliser ?](faqs.md?#after-ive-migrated-my-labels-which-management-portal-do-i-use )
 
 ### <a name="important-information-about-administrative-roles"></a>Informations importantes sur les rôles administratifs
 

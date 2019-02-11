@@ -4,18 +4,18 @@ description: Découvrez et identifiez les droits spécifiques qui sont utilisés
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 195700be6b1a2f7aecbdd4de333570669cf6d329
-ms.sourcegitcommit: 4b1f204fd31bb9de05510b85b91304d9964a14c1
+ms.openlocfilehash: 02bdd294e30f0d773fcc29b4c7a13f9e418af9db
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420790"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559986"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configuration des droits d’utilisation pour Azure Rights Management
 
@@ -61,10 +61,10 @@ Utilisez le tableau suivant pour obtenir la liste de ces niveaux d’autorisatio
 
 |Niveau d’autorisation|Applications|Droits d’utilisation inclus|
 |---------------------|----------------|---------------------------------|
-|Observateur|Portail Azure Classic <br /><br />Portail Azure<br /><br /> Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Afficher les droits ; Répondre [[1]](#footnote-1) ; Répondre à tous [[1]](#footnote-1) ; Autoriser les macros [[2]](#footnote-2)<br /><br />Remarque : Pour les e-mails, utilisez plutôt le niveau d’autorisation Réviseur pour garantir que la réponse à un e-mail sera reçue sous forme d’e-mail et non pas de pièce jointe. Le niveau Réviseur est également obligatoire pour envoyer un e-mail à une autre organisation qui utilise le client Outlook ou Outlook Web App. Il est également obligatoire pour les utilisateurs de votre organisation qui sont exemptés de l’utilisation du service Azure Rights Management, car vous avez implémenté des [contrôles d’intégration](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
-|Réviseur|Portail Azure Classic <br /><br />Portail Azure<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Afficher les droits ; Répondre : Répondre à tous [[3]](#footnote-3) ; Transférer [[3]](#footnote-3) ; Autoriser les macros [[2]](#footnote-2)|
-|Coauteur|Portail Azure Classic <br /><br />Portail Azure<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Autoriser les macros ; Enregistrer sous, Exporter [[4]](#footnote-4) ; Imprimer ; Répondre [[3]](#footnote-3) ; Répondre à tous [[3]](#footnote-3) ; Transférer [[3]](#footnote-3)|
-|Copropriétaire|Portail Azure Classic <br /><br />Portail Azure<br /><br />Application de partage Rights Management pour Windows<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les macros ; Enregistrer sous, Exporter ; Imprimer ; Répondre [[3]](#footnote-3) ; Répondre à tous [[3]](#footnote-3) ; Transférer [[3]](#footnote-3) ; Contrôle total|
+|Observateur|Portail Azure Classic <br /><br />Portail Azure<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Afficher les droits ; Répondre [[1]](#footnote-1) ; Répondre à tous [[1]](#footnote-1) ; Autoriser les macros [[2]](#footnote-2)<br /><br />Remarque : Pour les e-mails, utilisez plutôt le niveau d’autorisation Réviseur pour garantir que la réponse à un e-mail sera reçue sous forme d’e-mail et non pas de pièce jointe. Le niveau Réviseur est également obligatoire pour envoyer un e-mail à une autre organisation qui utilise le client Outlook ou Outlook Web App. Il est également obligatoire pour les utilisateurs de votre organisation qui sont exemptés de l’utilisation du service Azure Rights Management, car vous avez implémenté des [contrôles d’intégration](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
+|Réviseur|Portail Azure Classic <br /><br />Portail Azure<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Afficher les droits ; Répondre : Répondre à tous [[3]](#footnote-3) ; Transférer [[3]](#footnote-3) ; Autoriser les macros [[2]](#footnote-2)|
+|Coauteur|Portail Azure Classic <br /><br />Portail Azure<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Autoriser les macros ; Enregistrer sous, Exporter [[4]](#footnote-4) ; Imprimer ; Répondre [[3]](#footnote-3) ; Répondre à tous [[3]](#footnote-3) ; Transférer [[3]](#footnote-3)|
+|Copropriétaire|Portail Azure Classic <br /><br />Portail Azure<br /><br />Client Azure Information Protection pour Windows|Afficher, Ouvrir, Lire ; Enregistrer ; Modifier le contenu, Modifier ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les macros ; Enregistrer sous, Exporter ; Imprimer ; Répondre [[3]](#footnote-3) ; Répondre à tous [[3]](#footnote-3) ; Transférer [[3]](#footnote-3) ; Contrôle total|
 
 ----
 
@@ -77,7 +77,7 @@ Non inclus dans le portail Azure.
 Pour le client Azure Information Protection pour Windows, ce droit est nécessaire pour la barre Information Protection dans les applications Office.
 
 ###### <a name="footnote-3"></a>Note 3
-Ne s’applique pas au client Azure Information Protection pour Windows, ni à l’application de partage Rights Management pour Windows.
+Non applicable dans le client Azure Information Protection pour Windows.
 
 ###### <a name="footnote-4"></a>Note 4
 Non inclus dans le portail Azure ou le client Azure Information Protection pour Windows.

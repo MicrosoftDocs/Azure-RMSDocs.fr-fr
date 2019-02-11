@@ -4,18 +4,18 @@ description: Certaines questions fréquentes sur Azure Information Protection et
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 02/07/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 18c5028bf69f756b79328a26ce967f5e73492d2e
-ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
+ms.openlocfilehash: 51ff1b6185661c4ab0c4204e035ffe981a5a9710
+ms.sourcegitcommit: 308e6da8de1a3456a0ba807c5388b8891b861d5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55146789"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55854185"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -35,6 +35,44 @@ Contrairement à Azure Information Protection, Microsoft Information Protection 
 
 Pour plus d’informations, consultez [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967) (Annonce de la disponibilité des fonctionnalités de protection des informations pour protéger vos données sensibles).
 
+## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>Quelle est la différence entre les étiquettes dans Azure Information Protection et celles dans Office 365 ?
+
+Au départ, Office 365 disposait uniquement [d’étiquettes de conservation](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) pour vous permettre de classifier les documents et les e-mails à des fins d’audit et de conservation quand ce contenu se trouvait dans les services Office 365. Par comparaison, les étiquettes Azure Information Protection vous permettent d’appliquer une stratégie de classification et de protection cohérente aux documents et aux e-mails, qu’ils soient locaux ou dans le cloud.
+
+Annoncée à la conférence Microsoft Ignite 2018 d’Orlando, vous avez maintenant une option pour créer et configurer des [étiquettes de sensibilité](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) en plus des étiquettes de conservation dans le Centre de sécurité et conformité Office 365. Actuellement en préversion, vous pouvez migrer vos étiquettes Azure Information Protection existantes vers le nouveau magasin d’étiquetage unifié pour les utiliser comme étiquettes de sensibilité avec Office 365. 
+
+Pour plus d’informations sur la gestion de l’étiquetage unifié et la prise en charge de ces étiquettes, lisez le billet de blog [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
+
+Pour plus d’informations sur la migration de vos étiquettes existantes, consultez [Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365](configure-policy-migrate-labels.md).
+
+## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Comment définir le bon moment pour migrer mes étiquettes vers Office 365 ?
+
+Les étiquettes de sensibilité du Centre de sécurité et conformité Office 365 sont en disponibilité générale, mais l’option pour migrer vos étiquettes Azure Information Protection est toujours en préversion. Lorsque les étiquettes sont migrées vers le magasin d’étiquetage unifié, elles peuvent être publiées puis téléchargées par les [clients qui prennent en charge l’étiquetage unifiée](configure-policy-migrate-labels.md#clients-that-support-unified-labeling). À l’heure actuelle, les clients ne prennent pas tous en charge les étiquettes unifiées ou ne sont pas tous en disponibilité générale.
+
+Nous vous recommandons de commencer par tester la fonctionnalité en préversion avec un locataire de test et ensuite de migrer votre locataire de production. De plus :
+
+- **Si vous débutez avec Azure Information Protection :** 
+    
+    Étant donné qu’Azure Information Protection a des étiquettes par défaut pour accélérer votre déploiement, nous vous recommandons de commencer par migrer ces étiquettes par défaut, puis de les gérer depuis le Centre de sécurité et conformité Office 365.
+
+- **Si vous ne débutez pas avec Azure Information Protection, mais que vous définissez et configurez actuellement les étiquettes que vous souhaitez utiliser :**
+    
+    Nous vous recommandons d’effectuer votre configuration d’étiquettes dans le portail Azure, puis de migrer les étiquettes. Cette stratégie évite la duplication des étiquettes pendant le processus de migration, qui devront ensuite être modifiées dans le Centre de sécurité et conformité.
+
+Avant de migrer vos étiquettes, veillez à bien comprendre les [aspects et les paramètres d’étiquette qui ne sont pas pris en charge par le Centre de sécurité et conformité](configure-policy-migrate-labels.md#considerations-for-unified-labels).
+
+## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Une fois que j’ai migré mes étiquettes, quel portail de gestion utiliser ?
+
+Une fois que vous avez migré vos étiquettes dans le portail Azure :
+
+- Si vous avez des [clients d’étiquetage unifié](configure-policy-migrate-labels.md#clients-that-support-unified-labeling), accédez au Centre de sécurité et conformité Office 365 pour publier ces étiquettes et configurer les paramètres de stratégie pour les clients d’étiquetage unifié. Pour les changements d’étiquette à venir, utilisez le Centre de sécurité et conformité. Les clients d’étiquetage unifié téléchargent les étiquettes et les paramètres de stratégie à partir du Centre de sécurité et conformité.
+
+- Si vous avez des [clients Azure Information Protection](./rms-client/aip-client.md), continuez à utiliser le portail Azure pour modifier vos étiquettes et vos paramètres de stratégie. Les clients Azure Information Protection continuent à télécharger les étiquettes et les paramètres de stratégie à partir d’Azure.
+
+- Si vous avez à la fois des [clients d’étiquetage unifié](configure-policy-migrate-labels.md#clients-that-support-unified-labeling) et des [clients Azure Information Protection](./rms-client/aip-client.md), vous pouvez utiliser le portail pour effectuer des changements d’étiquette. Toutefois, pour que les clients Azure Information Protection récupèrent les changements d’étiquette que vous apportez dans le Centre de sécurité et conformité, vous devez revenir au portail Azure : Utilisez l’option **Publier** du panneau **Azure Information Protection - Étiquetage unifié** dans le portail Azure. 
+
+Continuez à utiliser le portail Azure pour la [centralisation des rapports](reports-aip.md) et le [scanneur](deploy-aip-scanner-preview.md).
+
 ## <a name="whats-the-difference-between-azure-information-protection-and-azure-rights-management"></a>Quelle est la différence entre Information Protection et Azure Rights Management ?
 
 Azure Information Protection permet à une organisation de classifier, d’étiqueter et de protéger ses documents et e-mails. La technologie de protection utilise le service Azure Rights Management, désormais un composant d’Azure Information Protection.
@@ -44,17 +82,18 @@ Azure Information Protection permet à une organisation de classifier, d’étiq
 Un utilisateur doit avoir un nom d’utilisateur et un mot de passe valides pour accéder au contenu protégé par Azure Information Protection. Pour en savoir plus sur la façon dont Azure Information Protection permet de sécuriser vos données, consultez [Rôle d’Azure Information Protection dans la sécurisation des données](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
 
 ## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>De quel abonnement ai-je besoin pour Azure Information Protection et quelles sont les fonctionnalités incluses ?
-Consultez les informations sur les abonnements et la liste des fonctionnalités de la page [Tarification Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection). 
 
-Si vous avez un abonnement Office 365 incluant la protection des données Azure Rights Management, téléchargez la [feuille de données des licences Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) qui contient également des questions fréquentes sur les licences.
+Consultez les informations sur les abonnements et la liste des fonctionnalités de la page [Tarification Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).
+
+Si vous avez un abonnement Office 365 qui comprend la protection des données Azure Rights Management, téléchargez la [fiche sur les licences Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+
+Vous avez d’autres questions sur les licences ? Regardez si vous trouvez des réponses dans la section [Forum aux questions](https://azure.microsoft.com/pricing/details/information-protection#faq) sur les licences.
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Le client Azure Information Protection est-il réservé aux abonnements qui comprennent la classification et l’étiquetage ?
 
 Non. Bien que la plupart des présentations et démonstrations du client Azure Information Protection que vous avez vues montrent comment il prend en charge la classification et l’étiquetage, il peut également servir avec les abonnements incluant simplement le service Azure Rights Management pour la protection des données.
 
 Lorsque le client Azure Information Protection pour Windows est installé et qu’il n’a pas de stratégie Azure Information Protection, le client fonctionne automatiquement en [mode protection seule](./rms-client/client-protection-only-mode.md). Dans ce mode, les utilisateurs peuvent facilement appliquer des modèles Rights Management et des autorisations personnalisées. Si vous décidez, plus tard, de souscrire un abonnement qui n’inclut ni la classification ni l’étiquetage, le client passe automatiquement en mode standard lors du téléchargement de la stratégie Azure Information Protection.
-
-Si vous utilisez actuellement l’application de partage Rights Management pour Windows, nous vous conseillons de la remplacer par le client Azure Information Protection. La prise en charge de l’application de partage prendra fin le 31 janvier 2019. Pour vous aider à effectuer la transition, consultez la section [Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS](./rms-client/upgrade-client-app.md).
 
 ## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators"></a>Faut-il être administrateur général pour configurer Azure Information Protection ou puis-je déléguer la configuration à d’autres administrateurs ?
 
@@ -126,16 +165,6 @@ Les alertes d’Azure Information Protection sont accessibles [à l’aide de l�
 
 Pour plus d’informations sur l’API Microsoft Graph Security, consultez [Vue d’ensemble de l’API Microsoft Graph Security](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview).
 
-## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>Quelle est la différence entre les étiquettes dans Azure Information Protection et celles dans Office 365 ?
-
-Jusqu’à récemment, Office 365 disposait uniquement [d’étiquettes de rétention](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) pour vous permettre de classifier les documents et les e-mails à des fins d’audit et de rétention quand ce contenu se trouvait dans les services Office 365. Par comparaison, les étiquettes Azure Information Protection vous permettent d’appliquer une stratégie de classification et de protection cohérente aux documents et aux e-mails, qu’ils soient locaux ou dans le cloud.
-
-Annoncée à la conférence Microsoft Ignite 2018, vous allez maintenant commencer à voir une option pour créer et configurer des [étiquettes de sensibilité](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) en plus des étiquettes de rétention dans le Centre de sécurité et conformité Office 365. En outre, vous pouvez migrer vos étiquettes Azure Information Protection existantes vers le nouveau magasin d’étiquetage unifié (fonctionnalité en préversion). 
-
-Pour plus d’informations sur la gestion de l’étiquetage unifié et la prise en charge de ces étiquettes, lisez le billet de blog [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
-
-Pour plus d’informations sur la migration de vos étiquettes existantes, consultez [Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365](configure-policy-migrate-labels.md).
-
 ## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>Quelle différence y a-t-il entre l’ICF de Windows Server et le scanneur d’Azure Information Protection ?
 
 L’Infrastructure de classification des fichiers (ICF) de Windows Server a toujours été une option permettant de classer les documents et de les protéger à l’aide du [connecteur Rights Management](deploy-rms-connector.md) (documents Office uniquement) ou d’un [script PowerShell](./rms-client/configure-fci.md) (tous types de fichiers). 
@@ -196,8 +225,4 @@ De plus, il existe des questions fréquentes destinées aux utilisateurs finaux�
 - [FAQ relatif à l’application Azure Information Protection pour iOS et Android](./rms-client/mobile-app-faq.md)
 
 - [FAQ relatif à l’application de partage RMS pour les ordinateurs Mac](https://technet.microsoft.com/dn451248)
-
-- [FAQ concernant l’application de partage Rights Management pour Windows](https://technet.microsoft.com/dn467883)
-
-
 

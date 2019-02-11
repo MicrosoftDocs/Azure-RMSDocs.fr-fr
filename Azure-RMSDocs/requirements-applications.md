@@ -4,18 +4,18 @@ description: Identifiez les applications qui utilisent les API RMS pour prendre 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d75e2cafc104f471d137dd1b1bf14e389f1a076d
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: e6ee0410ede61e32ad371aad7559e58742c5c93a
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231070"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55560020"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 
@@ -45,7 +45,7 @@ Informations sur les colonnes du tableau :
 
 |**Système d’exploitation de l’appareil**|Word, Excel, PowerPoint|E-mail|Autres types de fichiers|
 |---------------------------|-----------------------|-----------------|---------|
-|**Windows**|Applications Office 365 [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office Online (affichage des documents protégés) [[2]](#footnote-2)<br /><br />Navigateur web [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office 365 ProPlus<br /><br />Navigateur web [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Client Azure Information Protection pour Windows : texte, images, pfile<br /><br />Application de partage RMS pour Windows : texte, images, pfile<br /><br />Plug-in SealPath RMS pour AutoCAD : .dwg|
+|**Windows**|Applications Office 365 [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office Online (affichage des documents protégés) [[2]](#footnote-2)<br /><br />Navigateur web [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office 365 ProPlus<br /><br />Navigateur web [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Client Azure Information Protection pour Windows : texte, images, pfile<br /><br />Plug-in SealPath RMS pour AutoCAD : .dwg|
 |**iOS**|GigaTrust<br /><br /> Office Mobile (affichage et édition de documents protégés)<br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs<br /><br />Navigateur web [[3]](#footnote-3)|Application Azure Information Protection (affichage d’e-mails protégés)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Office pour iPad et iPhone [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Navigateur web [[4]](#footnote-4)|Application Azure Information Protection (affichage et protection de textes et d’images)<br /><br />Docs TITUS : Pfile|
 |**Android**|GigaTrust App pour Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile <br /><br />Navigateur web [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />Application Azure Information Protection (affichage d’e-mails protégés)<br /><br />BlackBerry Work <br /><br />GigaTrust App pour Android [[5]](#footnote-5)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook pour Android [[5]](#footnote-5)<br /><br />Samsung Email (S3 et versions ultérieures) [[5]](#footnote-5)<br /><br />TITUS Classification for Mobile <br /><br />Navigateur web [[4]](#footnote-4)|Application Azure Information Protection (affichage de textes et d’images protégés)|
 |**MacOS**|Applications Office 365<br /><br />Office 2019 pour Mac<br /><br />Office 2016 pour Mac<br /><br />Office Online [[2]](#footnote-2)<br /><br />Navigateur web [[3]](#footnote-3)|Outlook 2019 pour Mac<br /><br /> Outlook 2016 pour Mac<br /><br />Navigateur web [[4]](#footnote-4)|Application de partage RMS (affichage de textes et d’images protégés, fichiers protégés de façon générique)|
@@ -101,7 +101,7 @@ Toutes les éditions d’Office (à l’exception d’Office 2007) prennent en 
 
 Quand vous utilisez le service Azure Rights Management avec Office Professionnel Plus 2010 et Service Pack 2 ou Office Professionnel 2010 avec Service Pack 2 :
 
-- Nécessite le client Azure Information Protection pour Windows ou l’application de partage Rights Management pour Windows.
+- Nécessite le client Azure Information Protection pour Windows.
 
 - Non pris en charge sur Windows 10.
 
@@ -134,8 +134,6 @@ Pour plus d’informations sur l’utilisation de l’application, consultez [FA
 
 ### <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Plus d’informations sur le client Azure Information Protection pour Windows
 
-Ce client remplace désormais l’application de partage Rights Management pour Windows.
-
 Pour plus d'informations, consultez les ressources suivantes :
 
 - [Client Azure Information Protection - Guide de l’administrateur](./rms-client/client-admin-guide.md)
@@ -146,21 +144,15 @@ Pour plus d'informations, consultez les ressources suivantes :
 
 Téléchargez l’application correspondante à l’aide des liens de la [page Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970).
 
-### <a name="more-information-about-the-rights-management-sharing-application"></a>Plus d’informations sur l’application de partage Rights Management
+### <a name="more-information-about-the-rights-management-sharing-app"></a>Plus d’informations sur l’application de partage Rights Management
 
-Cette application est remplacée par le client Azure Information Protection.
-
-Sur les ordinateurs Mac, l’application de partage Rights Management fournit une visionneuse qui permet d’afficher les fichiers PDF protégés (.ppdf), les images de texte protégées et les fichiers protégés de manière générique. Elle peut également protéger des fichiers image, mais pas d’autres types de fichiers. Pour protéger les fichiers Office sur ces ordinateurs, utilisez Office pour Mac. 
+Sur les ordinateurs Mac, l’application de partage Rights Management fournit une visionneuse qui permet d’afficher les fichiers PDF protégés (.ppdf), les images de texte protégées et les fichiers protégés de manière générique. Elle peut également protéger des fichiers image, mais pas d’autres types de fichiers. Pour protéger les fichiers Office sur ces ordinateurs, utilisez Office pour Mac ou Office 365 ProPlus. 
 
 Pour plus d'informations, consultez les ressources suivantes :
 
--   [Guide de l’administrateur de l’application de partage Rights Management](./rms-client/sharing-app-admin-guide.md)
-
--   [Guide d’utilisation de l’application de partage Rights Management](./rms-client/sharing-app-user-guide.md)
-
 -   [FAQ relatif à l’application de partage Microsoft Rights Management pour plateformes mobiles](https://technet.microsoft.com/dn451248)
 
-Télécharger la visionneuse pour les ordinateurs Mac en utilisant les liens dans la [page Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970).
+Téléchargez l’application de partage Rights Management pour les ordinateurs Mac en utilisant le lien dans la [page Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970).
 
 
 ### <a name="more-information-about-other-applications-that-support-azure-information-protection"></a>Plus d’informations sur les autres applications qui prennent en charge Azure Information Protection
@@ -177,13 +169,13 @@ Pour plus d’informations, consultez le [guide du développeur Azure Informatio
 
 Les applications suivantes ne sont pas prises en charge actuellement par Azure RMS :
 
--   Microsoft OneDrive Entreprise pour SharePoint Server 2013
+- Microsoft OneDrive Entreprise pour SharePoint Server 2013
 
--   Visionneuse XPS
+- Visionneuse XPS
 
-Par ailleurs, l’application de partage RMS et le client Azure Information Protection a les restrictions suivantes :
+De plus, le client Azure Information Protection présente les restrictions suivantes :
 
--   Pour les ordinateurs Windows : nécessite une version Windows 7 Service Pack 1 minimum
+- Pour les ordinateurs Windows : nécessite une version Windows 7 Service Pack 1 minimum
 
 ## <a name="rms-enlightened-solutions"></a>Solutions compatibles avec RMS
 

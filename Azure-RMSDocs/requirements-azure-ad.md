@@ -4,18 +4,17 @@ description: Identifiez la configuration requise d’Azure AD pour utiliser Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 02/05/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
-ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d52b6fe3c290a6a012d66a39f60633cfb3e08504
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: b2ca14d6dcff00009b6e032d5ca17f5e466d69ea
+ms.sourcegitcommit: 1cd3a3bc19cd973f81a62419c946bfaf2796dfb2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173347"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760767"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 
@@ -33,7 +32,7 @@ Pour intégrer un annuaire Azure AD à des forêts AD locales, voir [Intégrer d
 
 Ordinateurs qui exécutent Office 2010 : 
 
-- Ces ordinateurs nécessitent le [client Azure Information Protection](./rms-client/aip-client.md) (recommandé) ou [l’application de partage Rights Management pour Windows](./rms-client/sharing-app-windows.md) pour s’authentifier auprès d’Azure Information Protection et de son service de protection des données, Azure Rights Management.
+- Ces ordinateurs nécessitent que le [client Azure Information Protection](./rms-client/aip-client.md) s’authentifie auprès d’Azure Information Protection et de son service de protection des données, Azure Rights Management.
 
 - Si vos comptes d’utilisateur sont fédérés (par exemple, si vous utilisez AD FS), ils doivent utiliser l’authentification intégrée de Windows. L’authentification basée sur les formulaires dans ce scénario ne peut pas authentifier les utilisateurs pour Azure Information Protection.
 
@@ -60,15 +59,11 @@ Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Pro
 
 - Client Azure Information Protection :
 
-    - Le [client Azure Information Protection](./rms-client/aip-client.md) pour Windows et pour iOS et Android a toujours pris en charge l’authentification MFA ; aucune version minimale n’est requise. 
+    - Le [client Azure Information Protection](./rms-client/aip-client.md) pour Windows et l’application de visionneuse pour iOS et Android ont toujours pris en charge l’authentification MFA ; aucune version minimale n’est requise. 
 
--   Application de partage Rights Management pour Windows :
+-   Application de partage Rights Management et ordinateurs Mac :
 
-    - Vous devez avoir installé au moins la version 1.0.1908.0, ce que vous pouvez vérifier dans Panneau de configuration > Programmes et fonctionnalités. L’application de partage de Rights Management est désormais remplacée par le client Azure Information Protection. Pour plus d’informations sur l’application de partage, consultez [Application de partage Rights Management pour Windows](./rms-client/sharing-app-windows.md).
-
--   Application de partage Rights Management pour appareils mobiles et ordinateurs Mac :
-
-    -   Assurez-vous que vous avez installé la dernière version. La prise en charge de MFA a été introduite dans la version de septembre 2015 de l’application de partage RMS.
+    -   La prise en charge de MFA a été introduite dans la version de septembre 2015 de l’application de partage RMS.
 
 Ensuite, configurez votre solution MFA :
 

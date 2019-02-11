@@ -4,18 +4,18 @@ description: Informations vous permettant de fournir de l’aide aux utilisateur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b023eaa514fc22dcb3d595495c724d7d19e58c08
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: f71a539185f60695950c4b2989eb68650f58755b
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067667"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559935"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -66,7 +66,7 @@ Utilisez les sections suivantes pour obtenir des informations spécifiques aux a
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Utilisation de la protection des informations avec le client Azure Information Protection
 
-Si les utilisateurs disposent d’Office 2010, le client Azure Information Protection (ou l’ancienne application, c’est-à-dire l’application de partage RMS) est nécessaire pour protéger et utiliser des documents et des e-mails protégés. Cependant, le client Azure Information Protection est recommandé pour tous les ordinateurs et appareils mobiles qui prennent en charge ce service.
+Si les utilisateurs ont Office 2010, le client Azure Information Protection est nécessaire pour protéger et utiliser des documents et des e-mails protégés. Cependant, le client Azure Information Protection est recommandé pour tous les ordinateurs et appareils mobiles qui prennent en charge ce service.
 
 En plus d’aider les utilisateurs à protéger des documents et des e-mails, le client Azure Information Protection leur permet d’effectuer le suivi des documents qu’ils ont protégés. Les documents suivis peuvent également être révoqués si les utilisateurs précédemment autorisés ne doivent plus y avoir accès.
 

@@ -4,18 +4,18 @@ description: Instructions et informations pour les administrateurs pour configur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2018
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 108a77f6c78b49bfcd852ff94ef529d3a667a193
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 32e61bafe3157c33b3ed9db6d540085df07a9f15
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314730"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55560003"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
 
@@ -74,20 +74,20 @@ Ces URL sont standard pour le service Azure Rights Management, à l’exception 
 
 ## <a name="tracking-and-revoking-documents-for-users"></a>Suivi et révocation de documents pour les utilisateurs
 
-Quand les utilisateurs se connectent au site de suivi des documents, ils peuvent suivre et révoquer des documents qu’ils ont protégés à l’aide du client Azure Information Protection, ou qu’ils ont partagés à l’aide de l’application de partage RMS. Quand vous vous connectez en tant qu’administrateur général Azure AD pour votre abonné, vous pouvez cliquer sur l’icône Administrateur afin passer en mode Administrateur. Les autres rôles d’administrateur ne prennent pas en charge ce mode pour le site de suivi de document. 
+Quand les utilisateurs se connectent au site de suivi des documents, ils peuvent suivre et révoquer des documents qu’ils ont protégés à l’aide du client Azure Information Protection. Quand vous vous connectez en tant qu’administrateur général Azure AD pour votre abonné, vous pouvez cliquer sur l’icône Administrateur afin passer en mode Administrateur. Les autres rôles d’administrateur ne prennent pas en charge ce mode pour le site de suivi de document. 
 
 ![Icône Administrateur du site de suivi de document](../media/tracking-site-admin-icon.png)
 
-Le mode administrateur vous permet d’afficher les documents que les utilisateurs de votre organisation ont choisi de suivre à l’aide du client Azure Information Protection, ou ceux qu’ils ont partagé à l’aide de l’application de partage Rights Management.
+Le mode administrateur vous permet de voir les documents que les utilisateurs de votre organisation ont choisi de suivre à l’aide du client Azure Information Protection.
 
 > [!NOTE] 
 > Si vous ne voyez pas cette icône bien que vous soyez un administrateur général, cela signifie que vous n’avez pas encore partagé de documents. Dans ce cas, utilisez l’URL suivante pour accéder au site de suivi des documents : https://portal.azurerms.com/#/admin
 
 Les actions que vous prenez en mode Administrateur sont auditées et consignées dans les fichiers journaux d’utilisation, et vous devez confirmer pour continuer. Pour plus d’informations sur la journalisation, consultez la section suivante.
 
-Quand vous êtes en mode Administrateur, vous pouvez lancer une recherche par utilisateur ou par document. Si vous effectuez une recherche par utilisateur, vous affichez tous les documents que l’utilisateur spécifié a choisi de suivre à l’aide du client Azure Information Protection ou a partagé à l’aide de l’application de partage Rights Management. 
+Quand vous êtes en mode Administrateur, vous pouvez lancer une recherche par utilisateur ou par document. Si vous effectuez une recherche par utilisateur, vous voyez tous les documents que l’utilisateur spécifié a choisi de suivre à l’aide du client Azure Information Protection. 
 
-Si vous effectuez une recherche par document, vous affichez tous les utilisateurs de votre organisation qui ont suivi ce document à l’aide du client Azure Information Protection ou l’ont partagé à l’aide de l’application de partage Rights Management. Vous pouvez ensuite affiner les résultats de la recherche pour suivre les documents que les utilisateurs ont protégé et révoquer ces documents, si nécessaire. 
+Si vous effectuez une recherche par document, vous voyez tous les utilisateurs de votre organisation qui ont suivi ce document à l’aide du client Azure Information Protection. Vous pouvez ensuite affiner les résultats de la recherche pour suivre les documents que les utilisateurs ont protégé et révoquer ces documents, si nécessaire. 
 
 Pour quitter le mode Administrateur, cliquez sur **X** en regard de **Quitter le mode Administrateur** :
 
@@ -99,7 +99,7 @@ Pour obtenir des instructions sur l’utilisation du site de suivi des documents
 
 Cette option n’est disponible que pour la préversion actuelle du client Azure Information Protection.
 
-Pour pouvoir suivre et révoquer un document, il doit d’abord être enregistré sur le site de suivi des documents. Cette action se produit quand les utilisateurs sélectionnent l’option **Suivre et révoquer** dans l’Explorateur de fichiers ou leurs applications Office lorsqu’ils utilisent le client Azure Information Protection. Pour l’application de partage Rights Management, cette action se produit automatiquement lorsque les utilisateurs sélectionnent l’option **Partage protégé**.
+Pour pouvoir suivre et révoquer un document, il doit d’abord être enregistré sur le site de suivi des documents. Cette action se produit quand les utilisateurs sélectionnent l’option **Suivre et révoquer** dans l’Explorateur de fichiers ou leurs applications Office lorsqu’ils utilisent le client Azure Information Protection.
 
 Si vous étiquetez et protégez des fichiers pour des utilisateurs à l’aide de la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), vous pouvez utiliser le paramètre *EnableTracking* pour enregistrer le fichier sur le site de suivi des documents. Par exemple :
 

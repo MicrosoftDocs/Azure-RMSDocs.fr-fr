@@ -4,24 +4,25 @@ description: Cet article vous aidera à comprendre les concepts liés à l’obj
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 9ccea755c83b570aa17ff4d30d98783f4bef79e5
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 09b4db10523539f093a54c54d1fc6b7de8f7ddb0
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446598"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259284"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au moteur de l’API de fichier
 
 L’objet `mip::FileEngine` figurant dans l’API de fichier du kit SDK MIP fournit une interface pour toutes les opérations effectuées au nom d’une identité donnée. Un seul moteur est ajouté pour chaque utilisateur qui se connecte à l’application et toutes les opérations que le moteur effectue sont effectuées dans le contexte de cette identité.
 
-Le `FileEngine` a deux responsabilités principales : répertorier les étiquettes pour un utilisateur authentifié et créer les gestionnaires de fichier pour effectuer les opérations de fichier au nom de l’utilisateur. 
+Le `FileEngine` a deux principales responsabilités : Liste des étiquettes pour un utilisateur authentifié et création de gestionnaires de fichier pour effectuer des opérations de fichier pour le compte de l’utilisateur. 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
-- `ListSensitivityLabels()` : obtient la liste des étiquettes pour le moteur chargé.
-- `CreateFileHandler()` : crée un `mip::FileHandler` pour un flux ou un fichier spécifique.
+- `ListSensitivityLabels()`: Obtient la liste des étiquettes pour le moteur chargé.
+- `CreateFileHandler()`: Crée un `mip::FileHandler` pour un fichier spécifique ou un flux.
 
 ## <a name="add-a-file-engine"></a>Ajouter un moteur de fichier
 

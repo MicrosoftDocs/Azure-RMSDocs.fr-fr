@@ -4,14 +4,15 @@ description: Cet article vous aidera à comprendre les concepts liés à l’obj
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 07e0fc59e0ed5ec1fc66fe3179fce07dfcb687d1
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 9aac5fb0e010c8c73776c3e62ba9e98bdeff77d2
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445272"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252773"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au moteur de l’API de stratégie
 
@@ -19,7 +20,7 @@ ms.locfileid: "47445272"
 
 ## <a name="implementation-add-a-policy-engine"></a>Implémentation : Ajouter un moteur de stratégie
 
-### <a name="implementation-create-policy-engine-settings"></a>Implémentation : Créer les paramètres du moteur de stratégie
+### <a name="implementation-create-policy-engine-settings"></a>Implémentation : Créer des paramètres de stratégie du moteur
 
 De façon similaire à un profil, le moteur nécessite également un objet de paramètres, `mip::PolicyEngine::Settings`. Cet objet stocke l’identificateur de moteur unique, les données client personnalisables qui peuvent être utilisées pour le débogage ou la télémétrie et, éventuellement, les paramètres régionaux.
 
@@ -33,7 +34,7 @@ En guise de bonne pratique, le premier paramètre, **id**, doit être un éléme
 
 ### <a name="implementation-add-the-policy-engine"></a>Implémentation : Ajouter le moteur de stratégie
 
-Pour ajouter ce moteur, nous allons revenir au modèle futur/promesse utilisé pour charger le profil. Au lieu de créer la promesse pour `mip::Profile`, nous allons utiliser `mip::PolicyEngine`.
+Pour ajouter le moteur, nous allons revenir au modèle futur/promesse utilisé pour charger le profil. Au lieu de créer la promesse pour `mip::Profile`, nous allons utiliser `mip::PolicyEngine`.
 
 ```cpp
 

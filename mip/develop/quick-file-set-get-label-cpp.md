@@ -5,14 +5,15 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 4898aefc996c26df5f4831c95be63c9fa1a45dc4
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 45263bc2a8f77f73f318b2c8df94f21e785e0f40
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651205"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256683"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C++)
 
@@ -208,7 +209,7 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
 
 4. Remplacez les valeurs d’espace réservé dans le code source que vous venez de coller dans comme suit, à l’aide de constantes de chaîne :
 
-   | Espace réservé | Value |
+   | Espace réservé | Valeur |
    |:----------- |:----- |
    | \<input-file-path\> | Le chemin complet vers un fichier d’entrée de test, par exemple : `"c:\\Test\\Test.docx"`. |
    | \<content-identifier\> | Un identificateur contrôlable de visu pour le contenu. Exemple : <ul><li>pour un fichier, tenez compte des Chemin\Nomfichier : `"c:\Test\Test.docx"`</li><li>un courrier électronique, pour prendre en compte : l’expéditeur de l’objet : `"RE: Audit design:user1@contoso.com"`</li></ul> |

@@ -4,14 +4,15 @@ description: Décrit la classe mip::fileprofile de Microsoft Information Protect
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 1e94e149a99fa48a69a830d5915ce4b33b55b322
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: fa61567ce2ca239db7cbde9b69837dacb4fc5fe0
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650899"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253227"
 ---
 # <a name="class-mipfileprofilesettings"></a>mip::FileProfile::Settings, classe 
 [Settings](class_mip_fileprofile_settings.md) utilisé par [FileProfile](class_mip_fileprofile.md) lors de sa création et tout au long de sa durée de vie.

@@ -5,20 +5,21 @@ services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: bd04d9aa2edd6be01ae9e912d7ddbf936d6dd4df
-ms.sourcegitcommit: 05fdaf43f74013eecb5886b95b09dd5e00670753
+ms.openlocfilehash: f091cfd220ac8886a6bf26903deb7b97062cffd7
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51297804"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258587"
 ---
 # <a name="auditing-in-the-mip-sdk-file-api"></a>Audit dans l’API de fichier du kit SDK MIP
 
 Le portail d’administration Azure Information Protection permet d’accéder aux rapports de l’administrateur. Ces rapports fournissent une visibilité des étiquettes que les utilisateurs appliquent, manuellement ou automatiquement, dans les applications et les services où le kit SDK MIP est intégré. Les partenaires de développement qui utilisent le kit SDK peuvent facilement activer cette fonctionnalité, ce qui leur permet de faire figurer les informations de leurs applications dans les rapports des clients.
 
-## <a name="event-types"></a>Types d'événements
+## <a name="event-types"></a>Types d’événements
 
 Il existe trois types d’événement pouvant être envoyés via le kit SDK aux fonctionnalités d’analyse Azure Information Protection. **Événements de pulsation**, **événements de détection** et **événements de changement**
 
@@ -30,8 +31,8 @@ Les événements de pulsation sont générés automatiquement pour toutes les ap
 * Heure de la génération
 * Nom d'utilisateur principal
 * Nom de la machine sur laquelle l’audit a été généré
-* Nom du processus
-* Plate-forme
+* Nom de processus
+* Plateforme
 * ID d’application - Correspond à l’ID d’application Azure AD.
 
 Ces événements permettent de détecter les applications de votre entreprise qui utilisent le kit SDK Microsoft Information Protection.

@@ -4,14 +4,15 @@ description: Décrit la classe mip::addcontentfooteraction de Microsoft Informat
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 064581d2b3a3c0ab9b926f0defe161dba46dfe49
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 28f9deb9460c88174f10c9a26c60f51407457b90
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650848"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254031"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>mip::AddContentFooterAction, classe 
 Classe d’action qui spécifie l’ajout d’un pied de page de contenu au document.

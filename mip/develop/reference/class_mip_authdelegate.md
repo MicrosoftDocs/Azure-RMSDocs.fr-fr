@@ -4,14 +4,15 @@ description: Décrit la classe mip::authdelegate de Microsoft Information Protec
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: b6278d605dfbb9a9c4cf0cf1282a159c456c5561
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: cf6ea43b36518f2eec74b9ed0f8682466aa6b64d
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651994"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258009"
 ---
 # <a name="class-mipauthdelegate"></a>classe mip::AuthDelegate 
 Délégué pour l’authentification des opérations associées.

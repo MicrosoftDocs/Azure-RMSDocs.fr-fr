@@ -4,14 +4,15 @@ description: Cet article vous aidera à comprendre les concepts liés à l’obj
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: b229148c3028f4478f83cbbc928e19666c2f44b5
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 0eed59e82d32c3461e21cfcfb20514b4d615ea8c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445425"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252263"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-profile-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au profil de l’API de stratégie
 
@@ -25,10 +26,10 @@ Maintenant que les objets `ProfileObserver` et `AuthDelegateImpl` sont définis,
 
 ### <a name="profilesettings-parameters"></a>Paramètres Profile::Settings
 
-- `std::string path` : le chemin où sont stockés les informations de journalisation, les données de télémétrie et l’état persistant.
-- `bool useInMemoryStorage` : définit si tous les états doivent être stockés en mémoire plutôt que sur le disque.
-- `std::shared_ptr<mip::AuthDelegate> authDelegate` : pointeur partagé de la classe `mip::AuthDelegate`. 
-- `std::shared_ptr<mip::PolicyProfile::Observer> observer` : un pointeur partagé vers l’implémentation de `PolicyProfile::Observer`.
+- `std::string path`: Chemin d’accès de fichier sous l’enregistrement, données de télémétrie et les autres état persistant est stocké.
+- `bool useInMemoryStorage`: Définit ou non tous les États doivent être stockées en mémoire et non sur le disque.
+- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Un pointeur partagé de classe `mip::AuthDelegate` 
+- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: Un pointeur partagé vers le `PolicyProfile::Observer` implémentation.
 - `mip::ApplicationInfo applicationInfo` : objet. Utilisé pour définir des informations sur l’application qui consomme le kit SDK.
 
 Les deux exemples ci-dessous montrent comment créer l’objet profileSettings en utilisant un stockage local pour le stockage de l’état, ainsi qu’un stockage en mémoire uniquement. Les deux supposent que l’objet `authDelegateImpl` a déjà été créé.

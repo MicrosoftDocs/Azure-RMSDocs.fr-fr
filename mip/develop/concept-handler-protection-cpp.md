@@ -4,14 +4,15 @@ description: Cet article vous aidera à comprendre comment les gestionnaires de 
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: a087f1bdef5a010718c67fbdca938ecbb62e5faa
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
-ms.translationtype: HT
+ms.openlocfilehash: e345a98e69c0173ccda7b80c21a5c2c7aa9af5a3
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453491"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253019"
 ---
 # <a name="microsoft-information-protection-sdk---protection-handler-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux gestionnaires de protection
 
@@ -19,7 +20,7 @@ Dans l’API de protection du kit SDK MIP, `mip::ProtectionHandler` expose les f
 
 ## <a name="requirements"></a>Configuration requise
 
-La création d’un `ProtectionHandler` pour travailler avec un fichier spécifique nécessite :
+La création d’un `ProtectionHandler` pour utiliser un fichier spécifique nécessite :
 
 - Un `ProtectionProfile`
 - L’ajout d’un `ProtectionEngine` au `ProtectionProfile`

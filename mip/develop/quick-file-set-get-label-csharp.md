@@ -5,14 +5,15 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/09/2019
 ms.author: bryanla
-ms.openlocfilehash: 726f0cf5b3c087d21323b46c9b7748b545932428
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 3af8cd7e21124d6e6ac70407d8e366eb6d88da45
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651960"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253606"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C#)
 
@@ -69,7 +70,7 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
 
 3. Remplacez les valeurs d’espace réservé dans le code source que vous venez de coller, en utilisant les valeurs suivantes :
 
-   | Espace réservé | Value |
+   | Espace réservé | Valeur |
    |:----------- |:----- |
    | \<input-file-path\> | Le chemin complet vers un fichier d’entrée de test, par exemple : `c:\\Test\\Test.docx`. |
    | \<label-id\> | Un ID d’étiquette de sensibilité, copié à partir de la sortie de la console dans le guide de démarrage rapide précédent, par exemple : `f42a3342-8706-4288-bd31-ebb85995028z`. |

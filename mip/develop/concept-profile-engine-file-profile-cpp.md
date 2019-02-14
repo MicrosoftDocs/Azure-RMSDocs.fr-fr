@@ -4,14 +4,15 @@ description: Cet article vous aidera à comprendre les concepts liés à l’obj
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 33ec266068d15e827267b7d518344aebd0f8f072
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 74937f5ef157c7807b6519a6490af80d46de6a8f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445901"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254509"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-profile-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au profil de l’API de fichier
 
@@ -32,11 +33,11 @@ Les objets `ProfileObserver`, `ConsentDelegateImpl` et `AuthDelegateImpl` ayant 
 
 Le constructeur `FileProfile::Settings` accepte cinq paramètres, répertoriés ci-dessous :
 
-- `std::string path` : le chemin où sont stockés les informations de journalisation, les données de télémétrie et l’état persistant.
-- `bool useInMemoryStorage` : définit si tous les états doivent être stockés en mémoire plutôt que sur le disque.
-- `std::shared_ptr<mip::AuthDelegate> authDelegate` : un pointeur partagé de classe `mip::AuthDelegate`. 
-- `std::shared_ptr<mip::ConsentDelegate>` : 
-- `std::shared_ptr<mip::FileProfile::Observer> observer` : un pointeur partagé vers l’implémentation de `FileProfile::Observer`.
+- `std::string path`: Chemin d’accès de fichier sous l’enregistrement, données de télémétrie et les autres état persistant est stocké.
+- `bool useInMemoryStorage`: Définit ou non tous les États doivent être stockées en mémoire et non sur le disque.
+- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Un pointeur partagé de classe `mip::AuthDelegate` 
+- `std::shared_ptr<mip::ConsentDelegate>`: 
+- `std::shared_ptr<mip::FileProfile::Observer> observer`: Un pointeur partagé vers le `FileProfile::Observer` implémentation.
 - `mip::ApplicationInfo applicationInfo` : objet. Utilisé pour définir des informations sur l’application qui consomme le kit SDK.
 
 Les exemples ci-dessous montrent comment créer l’objet `profileSettings` en utilisant un stockage local pour le stockage de l’état, ainsi qu’un stockage en mémoire uniquement. Les deux supposent que l’objet `authDelegateImpl` a déjà été créé.

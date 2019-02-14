@@ -4,14 +4,15 @@ description: Le kit SDK MIP est conçu pour être presque entièrement asynchron
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 99f68383a4e697f4f8f04c19523ccb0fb50fa3c0
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 9ee7e0bcf7fdd42bb989067adf1037ac8d371cad
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445551"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259658"
 ---
 # <a name="microsoft-information-protection-sdk---observer-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux observateurs
 
@@ -35,7 +36,7 @@ Comme deux fonctions `Observer` sont implémentées par opération asynchrone, o
 - `FileProfileObserver::OnAddEngineSuccess()`
 - `FileProfileObserver::OnAddEngineError()`
 - `FileProfileObserver::OnUnloadEngineSuccess`
-- `FileProfileObserver::OnUnloadEngineError()`. 
+- `FileProfileObserver::OnUnloadEngineError()` . 
 
 ## <a name="mip-sdk-observer-classes"></a>Classes d’observateur du kit SDK MIP
 

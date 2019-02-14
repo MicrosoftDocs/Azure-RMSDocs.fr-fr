@@ -4,14 +4,15 @@ description: Cet article vous aidera à comprendre comment utiliser PowerShell p
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 02/04/2019
 ms.author: bryanla
-ms.openlocfilehash: 43b8042858bb42523ae90ec0090349db66b78d4f
-ms.sourcegitcommit: e24c934a2fb156ec8349638c4020fd17a58fbb01
+ms.openlocfilehash: 85c06979a5010a17b60751ccd8a09529be2c362d
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55890039"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252892"
 ---
 # <a name="acquire-an-access-token-powershell"></a>Acquérir un jeton d’accès (PowerShell)
 

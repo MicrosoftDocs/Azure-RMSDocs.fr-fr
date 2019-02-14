@@ -4,14 +4,15 @@ description: Le kit SDK MIP est conçu pour être presque entièrement asynchron
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 35c0fb8eb358c5872ab378755d303425cc8e80a4
-ms.sourcegitcommit: 2c4e72120213407516a49286368f9b2860505f56
+ms.openlocfilehash: 3f3d556d0772733f87445244b82d2b34924669df
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236813"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256173"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-observers"></a>Kit SDK Microsoft Information Protection – Observateurs de l’API de protection
 

@@ -4,14 +4,15 @@ description: Décrit la classe mip::notsupportederror de Microsoft Information P
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: c935a1f3ec526f0f6f092fcecfd7c2ad686dd950
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 12734b1cc76afe2aef595a524875a6f34317f507
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651596"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254898"
 ---
 # <a name="class-mipnotsupportederror"></a>mip::NotSupportedError, classe 
 L’opération demandée par l’application n’est pas prise en charge par le kit SDK.

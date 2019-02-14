@@ -4,14 +4,15 @@ description: Le kit SDK MIP est conçu pour être presque entièrement asynchron
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 50bc3bfd9bcba8e90a386a6e0444f65389bcfa76
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: d822a8ea57def13d2f04ac1c18b22ff629e413ad
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445799"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251174"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-observers"></a>Kit SDK Microsoft Information Protection – Observateurs de l’API de stratégie
 
@@ -27,7 +28,7 @@ Les exemples ci-dessous illustrent le modèle de promesse/futur, qui est égalem
 
 Dans l’exemple suivant, nous avons créé une classe, `ProfileObserver`, qui est dérivée de `mip::Profile::Observer`. Les fonctions membres ont été remplacées pour utiliser le modèle de promesse/futur utilisé dans tous les exemples.
 
-**Remarque** : Les exemples ci-dessous ne sont que partiellement implémentés et n’incluent pas de remplacements pour les observateurs liés à `mip::ProfileEngine`.
+**Remarque**: Le ci-dessous les exemples ne sont que partiellement implémentés et n’incluent pas de remplacements pour le `mip::ProfileEngine` liés observateurs.
 
 ### <a name="profileobserverh"></a>profile_observer.h
 
@@ -49,7 +50,7 @@ Dans l’implémentation proprement dite, nous définissons une action à entrep
 
 Chaque membre accepte deux paramètres. Le premier est un pointeur partagé vers la classe gérée par la fonction. `ProfileObserver::OnLoadSuccess` s’attend à recevoir un `mip::Profile`. `ProfileObserver::OnAddEngineSuccess` s’attend à `mip::ProfileEngine`.
 
-Le second est un pointeur partagé vers le *contexte*. Dans notre implémentation, le contexte est une référence à un objet `std::promise`, transmise en tant que `shared_ptr<void>`. La première ligne de la fonction caste ceci vers `std::promise`, puis le stocke dans un objet appelé `promise`.
+Le second est un pointeur partagé vers le *contexte*. Dans notre implémentation, le contexte est une référence à un objet `std::promise`, transmise en tant que `shared_ptr<void>`. La première ligne de la fonction caste ceci en `std::promise`, puis le stocke dans un objet appelé `promise`.
 
 Enfin, le futur est préparé en définissant `promise->set_value()` et en lui transmettant l’objet `mip::Profile`.
 

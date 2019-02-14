@@ -4,14 +4,15 @@ description: Guide de démarrage rapide vous montrant comment écrire la logique
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 2fb19aa5071fa13f9801de9e9ed1106717f5adf9
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 75ca6b078275a2547cebfee3c78f8741f367c788
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651426"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255952"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation de l’application cliente (C++)
 

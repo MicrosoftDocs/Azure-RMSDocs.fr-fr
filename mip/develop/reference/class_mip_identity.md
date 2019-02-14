@@ -4,14 +4,15 @@ description: Décrit la classe mip::identity de Microsoft Information Protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 8c2946e312caeb6d87d66004fa306ca1c68e7f92
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: b315dd23ee6dddfc20b2c4d9febdbfabd0ecb3b3
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651875"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255102"
 ---
 # <a name="class-mipidentity"></a>classe mip::Identity 
 Abstraction d’identité.

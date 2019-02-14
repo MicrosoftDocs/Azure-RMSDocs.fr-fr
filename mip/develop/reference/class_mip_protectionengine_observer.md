@@ -4,14 +4,15 @@ description: Décrit la classe mip::protectionengine de Microsoft Information Pr
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 48dc726b8f541d8163cceb16e330f160b6d6bafb
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 6d413ade2e3a83a155c22a2d27b8450c4fc629a6
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651630"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259760"
 ---
 # <a name="class-mipprotectionengineobserver"></a>class mip::ProtectionEngine::Observer 
 Interface qui reçoit les notifications relatives à [ProtectionEngine](class_mip_protectionengine.md).

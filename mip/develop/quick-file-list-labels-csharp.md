@@ -4,16 +4,17 @@ description: Un guide de démarrage rapide vous montrant comment utiliser le SDK
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: bryanla
-ms.openlocfilehash: 52432a1d6be683d6ed40d95e653ef42353b58400
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: f7071952693e947977278b39d28a8ee985d5834e
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651892"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253844"
 ---
-# <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Liste des étiquettes de sensibilité (C#)
+# <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C#)
 
 Ce démarrage rapide vous montre comment utiliser l’API de fichier du SDK MIP pour répertorier les étiquettes de sensibilité configurés pour votre organisation.
 

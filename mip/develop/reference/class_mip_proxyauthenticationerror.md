@@ -4,14 +4,15 @@ description: Décrit la classe mip::proxyauthenticationerror de Microsoft Inform
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 2e4068e53c3153f17fdec5f5e717278fa4d35cc2
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: f80bfae7ceac3e21303e074334c879a5759a3561
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651943"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252705"
 ---
 # <a name="class-mipproxyauthenticationerror"></a>classe mip::ProxyAuthenticationError 
 Échec de l’authentification de proxy.

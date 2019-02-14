@@ -4,14 +4,15 @@ description: Questions fréquentes sur le kit SDK Microsoft Information Protecti
 author: BryanLa
 ms.service: information-protection
 ms.topic: troubleshooting
+ms.collection: M365-security-compliance
 ms.date: 10/19/2018
 ms.author: bryanla
-ms.openlocfilehash: 9bffda812448bea4ba6a6c1557042e14b78de1b5
-ms.sourcegitcommit: 0fad4196f397fa32c60e6d24791fcad43689c4ba
+ms.openlocfilehash: a4e6f4e06e534fd61078da254185503d041d4767
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55088052"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257771"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Questions fréquentes (FAQ) sur le kit SDK Microsoft Information Protection (MIP) et problèmes
 

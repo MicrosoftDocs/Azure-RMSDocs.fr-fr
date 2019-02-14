@@ -4,14 +4,15 @@ description: Cet article vous aidera à comprendre les métadonnées qui sont g�
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 9f9e4768a01d3d82f7b9563cb907533e53c7a228
-ms.sourcegitcommit: 03c9d1131177041e320d1bdbbdd92852a0d1d5cd
+ms.openlocfilehash: 990f729edaa0a2e212812f84fc5a4c63f82e37fb
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52156848"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253967"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK - métadonnées
 
@@ -36,25 +37,25 @@ Le SDK MIP s’applique à l’ensemble suivant de métadonnées.
 | Attribut | Type ou valeur                 | Description                                                                                                                                                                                                                                        | obligatoire |
 |-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
 | **Activé**   | True ou False                 | Cet attribut indique si la classification représentée par ce jeu de paires clé-valeur est activée pour l’élément de données. Les produits DLP validez généralement l’existence de cette clé pour identifier l’étiquette de classification. | Oui       |
-| **ID de site**    | GUID                          | ID de locataire Azure Active Directory                                                                                                                                                                                                                   | Oui       |
+| **SiteId**    | GUID                          | ID de locataire Azure Active Directory                                                                                                                                                                                                                   | Oui       |
 | **ActionId**  | GUID                          | ActionID est modifié chaque fois qu’une étiquette est définie. Journaux d’audit inclura les ancien et nouveaux actionID pour autoriser le chaînage de l’étiquetage d’activité à l’élément de données.                                                                                 | Oui       |
 | **Méthode**    | Standard, privilège ou automatique        | Définir via mip::AssignmentMethod                                                                                                                                                                                                                 | Non        |
 | **SetDate**   | Format de Date étendues ISO 8601 | Horodateur de l’étiquette a été définie.                                                                                                                                                                                                              | Non        |
 | **Nom**      | chaîne                        | Nom unique au sein du client. Il ne correspond pas nécessairement pour nom d’affichage.                                                                                                                                                              | Non      |
-| **ContentBits** | integer | Masque de bits qui décrit les types de contenu de marquage qui doit être appliqué à un fichier. CONTENT_HEADER = 0 X 1, CONTENT_FOOTER = 0 X 2, FILIGRANE = 0 X 4
+| **ContentBits** | entier | Masque de bits qui décrit les types de contenu de marquage qui doit être appliqué à un fichier. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4
  | Non |
 
 Lorsqu’il est appliqué à un fichier, le résultat est similaire à la table ci-dessous.
 
-| Key                                                         | Valeur                                |
+| Touche                                                         | Valeur                                |
 |-------------------------------------------------------------|--------------------------------------|
-| B73aaa526e5d_Enabled du b329 48be MSIP_Label_2096f6a2 d2f7     | true                                 |
-| B73aaa526e5d_SetDate du b329 48be MSIP_Label_2096f6a2 d2f7     | 2018-11-08T21:13:16-0800             |
-| B73aaa526e5d_Method du b329 48be MSIP_Label_2096f6a2 d2f7      | Privilégié                           |
-| B73aaa526e5d_Name du b329 48be MSIP_Label_2096f6a2 d2f7        | Confidentiel                         |
-| B73aaa526e5d_SiteId du b329 48be MSIP_Label_2096f6a2 d2f7      | cb46c030-1825-4E81-a295-151c039dbf02 |
-| B73aaa526e5d_ContentBits du b329 48be MSIP_Label_2096f6a2 d2f7 | 2                                    |
-| B73aaa526e5d_ActionId du b329 48be MSIP_Label_2096f6a2 d2f7    | 88124cf5-1340-457d-90e1-0000a9427c99 |
+| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | true                                 |
+| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |
+| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Method      | Privilégié                           |
+| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Name        | Confidentiel                         |
+| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SiteId      | cb46c030-1825-4e81-a295-151c039dbf02 |
+| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ContentBits | 2                                    |
+| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ActionId    | 88124cf5-1340-457d-90e1-0000a9427c99 |
 
 ## <a name="extending-metadata-with-custom-attributes"></a>Extension des métadonnées avec des attributs personnalisés
 

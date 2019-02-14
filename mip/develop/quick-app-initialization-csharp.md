@@ -4,14 +4,15 @@ description: Un guide de démarrage rapide vous montrant comment écrire la logi
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
-ms.openlocfilehash: 7efaaba799afa01b07a5eefc0b6798983cc590d2
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 17c7bb1bd887b4009f450cb5bbf75900587de4f1
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652368"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252094"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation de l’application cliente (C#)
 

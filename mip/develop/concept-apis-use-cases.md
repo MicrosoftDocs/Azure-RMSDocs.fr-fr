@@ -1,17 +1,18 @@
 ---
 title: Concepts – API dans le kit SDK MIP
-description: Cet article vous aide à comprendre les 3 types d’API du kit SDK MIP et leur relation, et présente des cas d’utilisation pour chacune d’elles.
+description: Cet article vous aidera à comprendre 3 types d’API figurant dans le kit SDK MIP et les liens qu’ils partagent, et il présente des cas d’utilisation pour chacun d’eux.
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 10/16/2018
 ms.author: bryanla
-ms.openlocfilehash: 5c3f7ee97bfe003f2f215ba95ba196894ab8e197
-ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
-ms.translationtype: HT
+ms.openlocfilehash: 1dddb9834a0cc7b365a2294bbad3611e4d01870a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "49476185"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252399"
 ---
 # <a name="microsoft-information-protection-sdk---api-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux API
 
@@ -31,9 +32,9 @@ L’API de fichier est une abstraction des deux API de protection et de stratég
 
 ### <a name="file-api-use-cases"></a>Cas d’utilisation de l’API de fichier
 
-- Vous êtes ingénieur logiciel dans un établissement de services financiers. Vous voulez être sûr que les données issues de vos applications métier, généralement exportées au format Excel, soient étiquetées lors de l’exportation en fonction de leur contenu. Vous pouvez utiliser l’API de fichier pour lister les étiquettes disponibles et pour appliquer l’étiquette appropriée à un format de fichier pris en charge.
+- Vous êtes un ingénieur logiciel auprès d’un établissement de services financiers. Vous voulez être sûr que les données issues de vos applications métier, généralement exportées au format Excel, soient étiquetées lors de l’exportation en fonction de leur contenu. Vous pouvez utiliser l’API de fichier pour lister les étiquettes disponibles et pour appliquer l’étiquette appropriée à un format de fichier pris en charge.
 
-- Votre organisation développe une solution CASB (cloud access security broker). Vos clients demandent la possibilité d’appliquer des étiquettes MIP aux documents Microsoft Office et PDF. L’API de fichier vous permet d’afficher la liste des étiquettes configurées, puis d’autoriser vos clients à créer des règles qui appliquent une étiquette spécifique. L’API de fichier, acceptant l’ID d’étiquette, traite le reste des fichiers répondant aux critères du client.
+- Votre organisation développe un répartiteur de sécurité d’accès cloud (CASB). Vos clients demandent la possibilité d’appliquer des étiquettes MIP aux documents Microsoft Office et PDF. L’API de fichier vous permet d’afficher la liste des étiquettes configurées, puis d’autoriser vos clients à créer des règles qui appliquent une étiquette spécifique. L’API de fichier, acceptant l’ID d’étiquette, traite le reste des fichiers répondant aux critères du client.
 
 - Votre organisation fournit une solution de protection contre la perte de données basée sur un service ou un CASB qui supervise les activités des fichiers des applications SaaS. Pour réduire le risque de perte ou d’exposition des données quand celles-ci sont protégées avec MIP, votre service doit analyser le contenu des fichiers protégés. À l’aide de l’API de fichier pour les formats pris en charge, quand le service est un utilisateur privilégié, il peut :
 

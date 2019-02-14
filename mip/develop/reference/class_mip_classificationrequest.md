@@ -4,14 +4,15 @@ description: Décrit la classe mip::classificationrequest de Microsoft Informati
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: a7350961af4c2e5d63211840382ee7a0b701f1c4
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 81e9a7276b78817f3d2f409cc403992284d23ceb
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652028"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259148"
 ---
 # <a name="class-mipclassificationrequest"></a>classe mip::ClassificationRequest 
 Classe qui contient la demande d’un appel de classification sur l’état d’exécution.

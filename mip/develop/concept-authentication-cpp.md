@@ -4,14 +4,15 @@ description: Cet article va vous aider à comprendre comment le kit SDK MIP impl
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 288342c467574cf84c60e1211238b65a9e716b6c
-ms.sourcegitcommit: 860955fb2c292b3ca5910cd41095363f58caf553
-ms.translationtype: HT
+ms.openlocfilehash: dd2e8c5c3344da351715069910741c5651f4e617
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48230520"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257963"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés à l’authentification
 
@@ -23,11 +24,11 @@ L’authentification dans le kit SDK MIP s’effectue en étendant la classe `mi
 
 `mip::AuthDelegate::AcquireOAuth2Token` accepte les paramètres suivants et retourne une valeur booléenne indiquant si l’acquisition du jeton a réussi :
 
-- `mip::Identity` : l’identité de l’utilisateur ou du service à authentifier, si elle est connue.
-- `mip::AuthDelegate::OAuth2Challenge` : accepte deux paramètres, une **autorité** et une **ressource**. L’**autorité** est le service par rapport auquel le jeton sera généré. La **ressource** est le service auquel nous essayons d’accéder. Le kit SDK traitera la transmission de ces paramètres dans le délégué lorsqu’il sera appelé.
-- `mip::AuthDelegate::OAuth2Token` : le résultat de jeton est écrit dans cet objet. Il sera consommé par le kit SDK lorsque le moteur sera chargé. En dehors de notre implémentation de l’authentification, il ne devrait pas être nécessaire d’obtenir ou de définir cette valeur.
+- `mip::Identity`: L’identité de l’utilisateur ou le service pour être authentifiées, s’il est connu.
+- `mip::AuthDelegate::OAuth2Challenge`: Accepte deux paramètres, **autorité** et **ressources**. L’**autorité** est le service par rapport auquel le jeton sera généré. La **ressource** est le service auquel nous essayons d’accéder. Le kit SDK traitera la transmission de ces paramètres dans le délégué lorsqu’il sera appelé.
+- `mip::AuthDelegate::OAuth2Token`: Le résultat de jeton est écrit dans cet objet. Il sera consommé par le kit SDK lorsque le moteur sera chargé. En dehors de notre implémentation de l’authentification, il ne devrait pas être nécessaire d’obtenir ou de définir cette valeur.
 
-**Important :** Les applications n’appellent pas `AcquireOAuth2Token` directement. Le kit SDK appellera cette fonction si nécessaire.
+**Important :** N’appellent pas les applications `AcquireOAuth2Token` directement. Le kit SDK appellera cette fonction si nécessaire.
 
 ## <a name="consent"></a>Consentement
 
@@ -48,9 +49,9 @@ Lorsqu’un utilisateur exécute une opération qui nécessiterait un consenteme
 
 ### <a name="consent-options"></a>Options de consentement
 
-- **AcceptAlways** : donner son consentement et se souvenir de la décision.
-- **Accept** : donner son consentement une seule fois.
-- **Reject** : ne pas donner son consentement.
+- **AcceptAlways**: Consentement et n’oubliez pas de la décision.
+- **Accepter**: Consentement qu’une seule fois.
+- **Rejeter**: N’acceptez pas.
 
 Lorsque le Kit SDK requiert le consentement de l’utilisateur avec cette méthode, l’application cliente doit présenter l’URL à l’utilisateur. Les applications clientes doivent fournir un moyen d’obtenir le consentement de l’utilisateur et retourner l’énum de consentement appropriée qui correspond à la décision de l’utilisateur.
 

@@ -4,14 +4,15 @@ description: Décrit la classe mip::addcontentheaderaction de Microsoft Informat
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 8cd04bc610944bbbdf00873267161b06a9c09038
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: ab4ce12c9a11c0e2319bcf2b337b6a6f0f7f9f0e
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650933"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256768"
 ---
 # <a name="class-mipaddcontentheaderaction"></a>mip::AddContentHeaderAction, classe 
 Classe d’action qui spécifie l’ajout d’un en-tête de contenu.

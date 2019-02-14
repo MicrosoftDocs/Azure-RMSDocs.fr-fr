@@ -4,14 +4,15 @@ description: Décrit la classe mip::removecontentfooteraction de Microsoft Infor
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 1d8d68ff3fb3e041a271469b9ba4d0a18c158544
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: cff3c01b01f5e02f7df3376fc2cb10fc0a6858fa
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651307"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259522"
 ---
 # <a name="class-mipremovecontentfooteraction"></a>mip::RemoveContentFooterAction, classe 
 Classe d’action qui spécifie la suppression du pied de page de contenu du document.

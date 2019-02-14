@@ -4,24 +4,25 @@ description: Cet article vous aidera à comprendre les concepts liés à l’obj
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: da0c50de6a818fcd8beda0483696ba433ce22149
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
-ms.translationtype: HT
+ms.openlocfilehash: 9595d3a3b12af802720363e141e40608c6f5ba93
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453314"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258404"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-engine-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au moteur de l’API de protection
 
-## <a name="implementation-add-a-protection-engine"></a>Implémentation : Ajouter un moteur de protection
+## <a name="implementation-add-a-protection-engine"></a>Implémentation : Ajouter un moteur de Protection
 
 Dans l’API de fichier, la classe `mip::ProtectionProfile` est la classe racine pour toutes les opérations du kit SDK. Ayant déjà créé le profil, nous pouvons maintenant ajouter un moteur au profil.
 
 L’exemple ci-dessous illustre l’utilisation d’un moteur unique pour un seul utilisateur authentifié.
 
-### <a name="implementation-create-protection-engine-settings"></a>Implémentation : Créer les paramètres du moteur de protection
+### <a name="implementation-create-protection-engine-settings"></a>Implémentation : Créer des paramètres du moteur de Protection
 
 De façon similaire à un profil, le moteur nécessite également un objet de paramètres, `mip::ProtectionEngine::Settings`. Cet objet stocke l’identificateur de moteur unique, les données client personnalisables qui peuvent être utilisées pour le débogage ou la télémétrie et, éventuellement, les paramètres régionaux.
 
@@ -31,7 +32,7 @@ Ici, nous créons un objet `ProtectionEngine::Settings` appelé *engineSettings*
 ProtectionEngine::Settings engineSettings("UniqueID", "");
 ```
 
-**Remarque** : Si vous utilisez cette méthode pour créer l’objet des paramètres de protection, vous devez également définir manuellement CloudEndpointBaseUrl sur https://api.aadrm.com
+**Remarque**: Si vous utilisez cette méthode pour créer l’objet de paramètres de protection, vous devez également définir manuellement le CloudEndpointBaseUrl https://api.aadrm.com
 
 En guise de bonne pratique, le premier paramètre, **id**, doit être un élément permettant au moteur d’être facilement connecté à l’utilisateur associé, **ou** un objet `mip::Identity`. Pour initialiser les paramètres avec `mip::Identity` :
 
@@ -41,7 +42,7 @@ ProtectionEngine::Settings engineSettings(mip::Identity("Bob@Contoso.com", "");
 
 Même si, généralement, vous transmettriez une variable à l’identité plutôt qu’un code en dur.
 
-### <a name="implementation-add-the-protection-engine"></a>Implémentation : Ajouter le moteur de protection
+### <a name="implementation-add-the-protection-engine"></a>Implémentation : Ajoutez le moteur de Protection
 
 Pour ajouter le moteur, nous allons revenir au modèle futur/promesse utilisé pour charger le profil. Au lieu de créer la promesse pour `mip::ProtectionProfile`, nous allons utiliser `mip::ProtectionEngine`.
 
@@ -68,7 +69,7 @@ Pour ajouter le moteur, nous allons revenir au modèle futur/promesse utilisé p
 
 Le résultat final du code ci-dessus est que nous avons ajouté avec succès un moteur pour l’utilisateur authentifié au profil.
 
-## <a name="implementation-list-templates"></a>Implémentation : Répertorier les modèles
+## <a name="implementation-list-templates"></a>Implémentation : Modèles de liste
 
 En utilisant le moteur ajouté, il est maintenant possible de répertorier tous les modèles de sensibilité disponibles pour l’utilisateur authentifié en appelant `engine->GetTemplatesAsync()`. 
 
@@ -83,7 +84,7 @@ mEngine->GetTemplatesAsync(engineObserver, loadPromise);
 auto templates = loadFuture.get();
 ```
 
-### <a name="implementation-print-the-template-ids"></a>Implémentation : Imprimer les ID des modèles
+### <a name="implementation-print-the-template-ids"></a>Implémentation : Imprimer les ID de modèle
 
 ```cpp
 //Iterate through all template IDs in the vector

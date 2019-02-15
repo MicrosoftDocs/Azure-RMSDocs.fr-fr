@@ -3,19 +3,20 @@ title: Prise en charge d’Azure RMS d’Azure Information Protection par les se
 description: Découvrez comment utiliser l’infrastructure de classification des fichiers Windows Server avec Azure RMS quand vous déployez le connecteur RMS pour protéger automatiquement des documents Office.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 45469e6e59139f10bd565730a5fb9fafbdaf13d0
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 81754d9f7ac0ff1351d4298f23da31afcf8ed900
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304842"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254405"
 ---
 # <a name="how-file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci-support-azure-rights-management"></a>Prise en charge d’Azure Rights Management par les serveurs de fichiers exécutant Windows Server et utilisant l’infrastructure de classification des fichiers (ICF)
 

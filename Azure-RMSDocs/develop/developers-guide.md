@@ -3,19 +3,20 @@ title: Guide du développeur Azure Information Protection
 description: Les développeurs peuvent utiliser Azure Information Protection pour protéger et gérer des fichiers de tout type
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/11/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 7b7bf658fe0766091ddd33aab076c9a721fcc236
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 628e93338f276d3b297a36ee3d795227782ff17f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393791"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257964"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guide du développeur Azure Information Protection
 

@@ -3,19 +3,20 @@ title: Prise en charge d’applications pour la protection des données RMS -�
 description: Identifiez les applications qui utilisent les API RMS pour prendre en charge le service Azure Rights Management d’Azure Information Protection en mode natif.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e6ee0410ede61e32ad371aad7559e58742c5c93a
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: 4ae91e36a4b2406d3dcb5a4ea52f4cac48c37287
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55560020"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257193"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 

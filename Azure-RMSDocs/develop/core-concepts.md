@@ -4,20 +4,21 @@ description: Une collection de rubriques de procédures pour développer l'AIP S
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae67523a-c094-44da-86b8-739bedba7111
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 579c307ea8ac0777c9cab03ab55c857011a8ce5c
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 4e4ded66c7372f6bbc4d737a3b0275de8237cbe5
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071219"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255521"
 ---
 # <a name="developer-guidance"></a>Guide pour développeurs
 Le but principal du SDK Microsoft Rights Management Services 4.2 est de vous aider à créer de la façon la plus simple possible des applications compatibles AD RMS tirant parti d’Active Directory Rights Management Services (AD RMS).

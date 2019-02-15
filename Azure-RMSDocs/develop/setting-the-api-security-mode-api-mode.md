@@ -4,20 +4,21 @@ description: Choisissez le mode de sécurité qu’exécute votre application AP
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c1f6b30fa15ac050b77314e1baf8d355f6887f24
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 5f74099dec06ea120dd5f5e212b736e8cd3b0fba
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071401"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251787"
 ---
 # <a name="how-to-set-the-api-security-mode"></a>Comment : définir le mode de sécurité de l’API
 

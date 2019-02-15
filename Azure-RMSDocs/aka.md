@@ -3,19 +3,20 @@ title: 'Azure Information Protection : autres appellations'
 description: Azure Information Protection ayant changé plusieurs fois d’appellation, il est possible que vous le connaissiez sous un autre nom.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 036b80b1c2aa7026b1f7993d42ce726d518209c0
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: b0b6cb3484dd682eec0a85c25d61543361fcad79
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305129"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252756"
 ---
 # <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection : autres appellations
 

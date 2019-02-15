@@ -3,19 +3,20 @@ title: Afficher et utiliser des documents protégés à l’aide du client AIP
 description: Instructions pour afficher et utiliser un document protégé qui vous oblige à installer le client Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5a09cc6ecba5759c39717053f434396ade47a610
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 728a0d8439f9450384d0861504f09679cd59a40f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305248"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255018"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guide de l’utilisateur : Afficher et utiliser des fichiers qui ont été protégés par Rights Management
 

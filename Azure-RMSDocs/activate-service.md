@@ -3,19 +3,20 @@ title: Activation d’Azure Rights Management - AIP
 description: Le service Azure Rights Management doit être activé pour que votre organisation puisse commencer à protéger des documents et e-mails importants à l’aide d’applications et de services prenant en charge cette solution de protection des informations.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4eb4b477091990bfff036288cf2d33795bafeb3d
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 2f05b95477405a2262b7dc0e129f17f9f5ff46db
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305425"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256394"
 ---
 # <a name="activating-azure-rights-management"></a>Activation d'Azure Rights Management
 

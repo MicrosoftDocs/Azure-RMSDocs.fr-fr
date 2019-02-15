@@ -3,19 +3,20 @@ title: Configuration pour les clients utilisant des applications Office avec Azu
 description: Informations et instructions permettant aux administrateurs de configurer des applications Office pour qu’elles fonctionnent avec le service Azure Rights Management d’Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7896e1c8a342ce8a430d9133950a2fe47a7de602
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: 87baf8f7bccd4f99b1beefc8a7ede9c7b38c77cd
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55559765"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255085"
 ---
 # <a name="office-apps-configuration-for-clients-to-use-the-azure-rights-management-service"></a>Applications Office : Configuration pour que les clients utilisent le service Azure Rights Management
 

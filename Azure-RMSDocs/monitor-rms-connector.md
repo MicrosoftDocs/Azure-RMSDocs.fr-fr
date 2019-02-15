@@ -3,19 +3,20 @@ title: Surveiller le connecteur Azure Rights Management - AIP
 description: Informations vous permettant de surveiller le connecteur et l’utilisation du service Azure Rights Management d’Azure Information Protection par votre organisation.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 46f8c817911408d62f12a1fce0a7ae0ce14069e2
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 2d4c03a168f3add9778372a890ea9dd2c7be68bf
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305486"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253861"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Surveiller le connecteur Azure Rights Management
 

@@ -3,19 +3,20 @@ title: Client Azure Information Protection pour Windows
 description: Ressources d’informations sur le client Azure Information Protection pour Windows. Ce client gratuit et téléchargeable s’adresse aux organisations qui souhaitent classifier et protéger les documents et les e-mails.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 365330c19ea55ffa93bc834db50fc6233e6c71f7
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: 9b299d00b3d8e64e97c6ad45af233374bd7c93ca
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55559884"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259947"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Client Azure Information Protection pour Windows
 

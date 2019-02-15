@@ -4,20 +4,21 @@ description: Le SDK Microsoft Rights Management 4.2 gère le chargement des jou
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 5b454ea2917fc5807326493fdf303e508bda7f0f
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 23f4eda077a4f3749097e0f34013d5a831e6cb2f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071809"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255374"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>Procédure : activer la journalisation des erreurs et des performances
 Le SDK Microsoft Rights Management 4.2 gère le chargement des journaux de diagnostic et de performances par le biais d’une propriété d’appareil unique.

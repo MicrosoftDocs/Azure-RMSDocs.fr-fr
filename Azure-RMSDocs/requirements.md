@@ -3,19 +3,20 @@ title: Configuration requise pour Azure Information Protection - AIP
 description: Identifiez les critères de déploiement d’Azure Information Protection pour votre organisation.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/07/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b410b85b1fa877aef542d52cc14b44cf65370c3f
-ms.sourcegitcommit: 308e6da8de1a3456a0ba807c5388b8891b861d5b
+ms.openlocfilehash: 5bf20171ec434d0fde5953f23c11d555f7d80139
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55854168"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252407"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 

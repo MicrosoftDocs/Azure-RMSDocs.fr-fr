@@ -3,19 +3,20 @@ title: 'Informations sur les modules de sécurité matériels Thales et les ajou
 description: Les informations contenues dans cet article ont été supprimées car elles ne sont plus pertinentes maintenant qu’Azure Rights Management utilise Azure Key Vault pour les clés de locataire gérées par le client (également appelées BYOK ou Bring Your Own Key).
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/19/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 679f8d2a59ff088ddec230d3d13113f7725cf769
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: aa5136bf2b4cfb1fb322b846dbffe913dda076dd
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173619"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254796"
 ---
 # <a name="more-information-about-thales-hsms-and-microsoft-additions-retired-content"></a>Informations complémentaires sur les modules de sécurité matériels Thales et les compléments Microsoft : CONTENU SUPPRIMÉ
 

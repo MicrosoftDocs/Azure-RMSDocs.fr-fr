@@ -4,20 +4,21 @@ description: Décrit les principes fondamentaux de l’authentification utilisat
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 03/13/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 2cdd5f88edd8cad446ebaecbdd4065fdc18de51e
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 0376665dfe09a6a29d33c414deedf79ed215bb6d
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394106"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258519"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Procédure d’inscription et d’activation RMS de votre application dans Azure AD
 

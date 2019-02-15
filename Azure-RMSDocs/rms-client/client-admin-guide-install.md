@@ -3,19 +3,20 @@ title: Installer le client Azure Information Protection pour les utilisateurs
 description: Instructions et informations destinées aux administrateurs pour le déploiement du client Azure Information Protection pour Windows sur les réseaux d’entreprise.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 156cb0311e93f506ce4dfcd822dcfd867a1417a8
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: f1f111b0f5e6c534f005dae5725211f9035377ec
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067803"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257064"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 

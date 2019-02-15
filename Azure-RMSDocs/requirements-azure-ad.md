@@ -3,18 +3,19 @@ title: Configuration requise d’Azure AD pour Azure Information Protection – 
 description: Identifiez la configuration requise d’Azure AD pour utiliser Azure Information Protection afin de permettre l’authentification des utilisateurs.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/05/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.suite: ems
-ms.openlocfilehash: b2ca14d6dcff00009b6e032d5ca17f5e466d69ea
-ms.sourcegitcommit: 1cd3a3bc19cd973f81a62419c946bfaf2796dfb2
+ms.openlocfilehash: 7be53f80e3de227ee2439121bc6733661274f3e1
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760767"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258468"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 

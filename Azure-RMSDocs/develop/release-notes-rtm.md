@@ -4,20 +4,21 @@ description: Mises à jour du SDK par révision et autres informations destinée
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/18/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 695251277b62d44166e7a4569881b804db34279e
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: e9a019698b0295c5e0d6e93fad1073cb75a00394
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394248"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253521"
 ---
 # <a name="release-notes"></a>Notes de publication
 

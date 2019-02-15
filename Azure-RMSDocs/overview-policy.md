@@ -3,18 +3,19 @@ title: Présentation de la stratégie Azure Information Protection
 description: Comprendre les étiquettes et les paramètres dans une stratégie Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/27/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6483600d8ba74a29a54965010441fe10dc309d8e
-ms.sourcegitcommit: b10df82d9f00b3f826bce38beb7b666ce3f56e84
+ms.openlocfilehash: 5ecccb6a8d26d3ae074270e46250952d4cc9b4f3
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "53814184"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253933"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Présentation de la stratégie Azure Information Protection
 

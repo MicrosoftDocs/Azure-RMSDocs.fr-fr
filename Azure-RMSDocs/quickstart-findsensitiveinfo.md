@@ -3,18 +3,21 @@ title: 'Démarrage rapide : Rechercher les informations sensibles dans des fich
 description: Utilisez le scanneur Azure Information Protection pour rechercher les informations sensibles consignées dans les fichiers stockés localement.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/16/2019
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 12bde16a9b1659d00137720ad7c804db32cb1556
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 07baee062d994b6efd97084bf0b293adb2d5fb84
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314830"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266010"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
+
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Dans ce démarrage rapide, vous allez installer et configurer le scanneur Azure Information Protection pour trouver les informations sensibles consignées dans les fichiers stockés dans un magasin de données local. Par exemple, un dossier local, un partage réseau ou SharePoint Server.
 

@@ -3,19 +3,20 @@ title: Client Azure Information Protection- Installer et configurer
 description: Informations destinées aux administrateurs sur le déploiement du client Azure Information Protection sur les ordinateurs et appareils mobiles Windows.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/05/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8b6735715bbd7ac86e75838683e14efb8864ffc3
-ms.sourcegitcommit: e8b4a09db9aad7f6540b4c2fd92b1e8008c999b1
+ms.openlocfilehash: 79d4dbb1d6339f0261d57b32cf77addee9ca9744
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737237"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258915"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection : installation et configuration pour les clients
 

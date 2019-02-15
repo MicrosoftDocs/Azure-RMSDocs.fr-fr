@@ -3,19 +3,20 @@ title: Migrer un déploiement AD RMS vers Azure Information Protection - Phase 4
 description: Phase 4 de la migration d’AD RMS vers Azure Information Protection, couvrant les étapes 8 et 9 de la migration d’AD RMS vers Azure Information Protection
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f105a971255cf93bd2d9d41e3f7e0f5cec9df3b4
-ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
+ms.openlocfilehash: a861948134bae0d016ab179ba3cba564d765046a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397910"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253487"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Phase de migration 4 : Configuration des services de prise en charge
 

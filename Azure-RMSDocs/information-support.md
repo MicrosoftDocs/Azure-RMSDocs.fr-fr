@@ -3,19 +3,20 @@ title: Informations et prise en charge pour Azure Information Protection
 description: Ressources pour les administrateurs, qui incluent des informations sur les nouvelles versions, les options de support disponibles et la procédure à suivre pour contacter Microsoft en cas de problème.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/07/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 013532db350b41e8cfaeac5559065e46f76379a7
-ms.sourcegitcommit: 308e6da8de1a3456a0ba807c5388b8891b861d5b
+ms.openlocfilehash: 5d73037a8aba25e7c15ca531241b90dcc92f6dcc
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55854219"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258094"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 

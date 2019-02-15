@@ -3,19 +3,20 @@ title: Configurer et gérer des modèles pour Azure Information Protection – A
 description: Configurer et gérer des modèles Rights Management à partir du portail Azure.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/28/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6147a065f6aff31dd40c339699f0dc35f1ebaa82
-ms.sourcegitcommit: b10df82d9f00b3f826bce38beb7b666ce3f56e84
+ms.openlocfilehash: ff3b809d5e459961321fb04655336f134ff99cc8
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "53814235"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253555"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 

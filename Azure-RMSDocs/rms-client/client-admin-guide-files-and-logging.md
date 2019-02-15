@@ -3,19 +3,20 @@ title: Fichiers du client Azure Information Protection et journalisation de l�
 description: Informations sur les fichiers du client et la journalisation de l’utilisation du client Azure Information Protection pour Windows.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 94806aa46721c1f6b117f910d111dd7ca3fc0366
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: abf4b87198f2997aa7a452d0c34931c55220ee5f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898747"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255068"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 

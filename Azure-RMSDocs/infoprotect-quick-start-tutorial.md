@@ -3,16 +3,17 @@ title: 'Tutoriel : Modifier la stratégie Azure Information Protection et crée
 description: Tutoriel de prise en main d’environ 15 minutes, permettant de modifier la stratégie Azure Information Protection dans votre organisation.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/29/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 2e08b21deb8d1b7ef99d77f56e1bf149a82df081
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: e081da93ecc486de22746e4b19e2bb5334b44c66
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231053"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254354"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Didacticiel : Modifier la stratégie Azure Information Protection et créer une étiquette
 
@@ -145,7 +146,7 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
     Cliquez sur **Ajouter une nouvelle condition**, puis, dans le panneau **Condition**, sélectionnez les éléments suivants :
     
-    a. **Choisir le type de condition**  : conservez la valeur par défaut **Types d’informations**.
+    a. **Choisir le type de condition ** : conservez la valeur par défaut **Types d’informations**.
     
     b. **Sélectionner un secteur d’activité** : conservez la valeur par défaut **Tout**.
     

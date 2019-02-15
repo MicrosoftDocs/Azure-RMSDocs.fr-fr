@@ -3,19 +3,20 @@ title: Opérations pour votre clé de locataire Azure Information Protection
 description: Identifiez les différents niveaux de contrôle et de responsabilité associés à votre clé de locataire Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 72607226c594e3b9d8b7fa203c38f9ee86ca4283
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 9957e144a97006660f05484db7df7ff86622e0e7
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304806"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259488"
 ---
 # <a name="operations-for-your-azure-information-protection-tenant-key"></a>Opérations pour votre clé de locataire Azure Information Protection
 

@@ -4,20 +4,21 @@ description: Toutes les applications prenant en charge RMS doivent appliquer des
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 1f46f11092270117686681662088c16f311963f7
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 5e62518965f2cea04b3b26df6a96646945567b9c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071520"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257890"
 ---
 # <a name="understanding-usage-restrictions"></a>Comprendre les restrictions d’utilisation
 

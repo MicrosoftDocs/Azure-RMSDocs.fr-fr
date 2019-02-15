@@ -4,20 +4,21 @@ description: Les notifications par e-mail permettent à un propriétaire de cont
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 9f0b02e3beb8b18cb90d8a28f9fd0b5dccfe0dbd
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 097ff6cfd212d542844e288ab5ff5f205cb766fc
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071333"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253300"
 ---
 # <a name="how-to-enable-email-notification"></a>Comment : activer les notifications par e-mail
 

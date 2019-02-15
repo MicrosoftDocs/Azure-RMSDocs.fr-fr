@@ -3,19 +3,20 @@ title: Types de fichiers pris en charge par Azure Information Protection
 description: Détails techniques sur les types de fichiers pris en charge, les extensions de noms de fichiers et les niveaux de protection pour les administrateurs responsables du client Azure Information Protection pour Windows.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/29/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f886a2bbf555d1ed3db9c18d8c86ad1cfc03e3d9
-ms.sourcegitcommit: ebb3a8b64a8e18dee4436442e37b54b65171d087
+ms.openlocfilehash: efa968ab048d0c648d1b0351fa847d2a80a3d11a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55567585"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259527"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 

@@ -3,19 +3,20 @@ title: Préparer des utilisateurs et groupes pour Azure Information Protection
 description: Vérifiez que vous disposez des comptes d’utilisateur et de groupe dont vous avez besoin pour démarrer la classification, l’étiquetage et la protection des documents et e-mails de votre organisation.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/06/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e707e84ccfafc7b3ed161d05cadac9f2314ad3ae
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: be4deaa13311cb414df48fc7edde50dbe42ed744
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394283"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253283"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 

@@ -7,24 +7,18 @@ ms.topic: troubleshooting
 ms.collection: M365-security-compliance
 ms.date: 10/19/2018
 ms.author: bryanla
-ms.openlocfilehash: a4e6f4e06e534fd61078da254185503d041d4767
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: f9aed3cab9ba22ba1ac2b41984ce82957278f1e6
+ms.sourcegitcommit: 4ed27f50545aae1a58cc922202959d427bcba7ac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257771"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56323578"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Questions fréquentes (FAQ) sur le kit SDK Microsoft Information Protection (MIP) et problèmes
 
 Cet article fournit des réponses aux Questions fréquentes (FAQ) et des conseils de dépannage pour les problèmes connus et les erreurs courantes.
 
 ## <a name="frequently-asked-questions"></a>Forum Aux Questions 
-
-### <a name="question-which-platforms-are-supported-by-the-mip-sdk"></a>Question : Quelles plateformes sont prises en charge par le kit SDK MIP ?
-
-Le kit SDK MIP est pris en charge sur les plateformes suivantes :
-
-[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ### <a name="question-how-does-the-sdk-handle-strings-and-what-string-type-should-i-be-using-in-my-code"></a>Question : Comment le kit SDK gère les chaînes, et quel type de chaîne utiliser dans mon code ?
 

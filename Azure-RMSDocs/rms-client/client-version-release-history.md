@@ -3,18 +3,19 @@ title: Client Azure Information Protection - historique des versions et politiqu
 description: Découvrez les nouveautés et les changements d’une version du client Azure Information Protection pour Windows, ainsi que la politique du cycle de vie du support.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/24/2019
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ef6bd888c46d7882ada03554813a943861fb51d
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: a715dbe743ef9b4018865df22ccdea347f888192
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898815"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266095"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -127,9 +128,12 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Prise en charge des [marquages visuels](../configure-policy-markings.md) de différentes couleurs dans Excel.
 
-- Pour les déploiements S/MIME existants, nouveau paramètre client avancé (en préversion) permettant de configurer une étiquette de façon à ce qu’elle applique automatiquement la protection S/MIME dans Outlook. [Plus d’informations](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
+- Pour les déploiements S/MIME existants, nouveau paramètre client avancé permettant de configurer une étiquette de façon à ce qu’elle applique automatiquement la protection S/MIME dans Outlook. [Plus d’informations](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
 - Nouveau paramètre client avancé (qui évite d’avoir à modifier le Registre) permettant d’empêcher l’affichage des invites de connexion du service Azure Information Protection pour les [ordinateurs déconnectés](client-admin-guide-customizations.md#support-for-disconnected-computers).
+
+- Un nouveau paramètre client avancé pour [prendre en charge l’ordre des sous-étiquettes](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) lorsque vous utilisez le paramètre de stratégie suivant :
+    - **Pour les e-mails avec pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes**
 
 **Correctifs** :
 

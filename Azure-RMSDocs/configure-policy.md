@@ -3,19 +3,20 @@ title: Configurer la stratégie Azure Information Protection – AIP
 description: Pour configurer la classification, l’étiquetage et la protection, vous devez configurer la stratégie Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 11/13/2018
+ms.date: 02/15/2019
+manager: barbkess
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3085799d9cb8da168c68a1a2eea04528daeb7737
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 03b0aa0ef3b5f2a8cb232059fe748b243e067f76
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394046"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258706"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -65,6 +66,8 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
     
     > [!NOTE] 
     > Si votre locataire a été migré vers le magasin d’étiquetage unifié, votre compte doit également être autorisé à accéder au Centre de sécurité et de conformité Office 365 pour pouvoir gérer les étiquettes sur le Portail Azure. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    
+    - Utilisez le **Lecteur Sécurité** pour [l’analytique Azure Information Protection](reports-aip.md) uniquement.
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Pour accéder au panneau Azure Information Protection pour la première fois
 

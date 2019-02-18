@@ -3,17 +3,18 @@ title: Qu’est-ce qu’Azure Information Protection ?  - AIP
 description: Présentation du service Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 11/05/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 9c7fd9070e6cc07a7b16043dd480addd2d0a4313
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 147982a700f2b2033b77d0b02568990a164cf555
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024334"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257856"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
@@ -31,7 +32,7 @@ Une fois que votre contenu est classifié (et éventuellement protégé), vous p
 
 Les étiquettes Azure Information Protection vous permettent d’appliquer une classification aux documents et e-mails. Ainsi, la classification est identifiable, quel que soit l’endroit où les données sont stockées ou les personnes avec lesquelles elles sont partagées. Les étiquettes peuvent intégrer des marquages visuels comme les en-têtes, pieds de page ou filigranes. Les métadonnées sont ajoutées aux fichiers et aux en-têtes d’e-mail en texte clair. Le texte clair fait en sorte que les autres services, comme les solutions de prévention de perte de données, puissent identifier la classification et prendre les mesures appropriées. 
 
-Par exemple, l’e-mail suivant a été classé sous l’étiquette « Général ». L’étiquette a ajouté un pied de page « Sensibilité : générale » au message électronique. Ce pied de page est un indicateur visuel pour tous les destinataires auxquels il est destiné spécifiant qu’il s’agit de données métier d’ordre général qui ne doivent pas être envoyées à l’extérieur de l’organisation. Cette étiquette est incorporée aux en-têtes d’e-mail afin que les services d’e-mail puissent inspecter cette valeur et éventuellement créer une entrée d’audit ou empêcher son envoi à l’extérieur de l’organisation.
+Par exemple, l’e-mail suivant a été classé sous l’étiquette « Général ». L’étiquette a ajouté un pied de page de « Sensibilité : Général » à l’e-mail. Ce pied de page est un indicateur visuel pour tous les destinataires auxquels il est destiné spécifiant qu’il s’agit de données métier d’ordre général qui ne doivent pas être envoyées à l’extérieur de l’organisation. Cette étiquette est incorporée aux en-têtes d’e-mail afin que les services d’e-mail puissent inspecter cette valeur et éventuellement créer une entrée d’audit ou empêcher son envoi à l’extérieur de l’organisation.
 
 ![Exemple d’en-têtes et de pied de page d’e-mail montrant la classification Azure Information Protection](./media/example-email-footerv2.png)
 
@@ -80,7 +81,7 @@ Après qu’un document a été protégé, les utilisateurs et administrateurs p
 
 ### <a name="additional-integration-for-email"></a>Intégration supplémentaire pour les e-mails
 
-Quand vous utilisez Azure Information Protection avec Exchange Online, vous profitez d’un autre avantage : la possibilité d’envoyer des e-mails protégés à n’importe quel utilisateur, avec l’assurance qu’ils peuvent le lire sur n’importe quel appareil.
+Lorsque vous utilisez Azure Information Protection avec Exchange Online, vous recevez un avantage supplémentaire : La possibilité d’envoyer des e-mails protégés à n’importe quel utilisateur, avec l’assurance qu’ils peuvent le lire sur n’importe quel appareil.
 
 Par exemple, des utilisateurs doivent envoyer des informations sensibles à des adresses e-mail personnelles qui utilisent un compte **Gmail**, **Hotmail** ou **Microsoft**. Ou à des utilisateurs qui n’ont pas de compte dans Office 365 ou Azure AD. Ces e-mails doivent être chiffrés au repos et pendant le transit, et être lus seulement par les destinataires d’origine.
 
@@ -111,19 +112,21 @@ Pour vos magasins de données cloud, utilisez Microsoft Cloud App Security pour 
 
 ## <a name="resources-for-azure-information-protection"></a>Ressources pour Azure Information Protection
 
-- Version d’évaluation gratuite : [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
+- Essai gratuit : [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
-- Options d’abonnement et tarification : [Tarification d’Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)
+- Options d'abonnement et tarification : [Tarification d’Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)
 
-- Téléchargement du client : [Client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
+- Téléchargez le client : [Client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
-- Téléchargement d’un guide d’utilisation personnalisable : [Guide d’adoption Azure Information Protection pour l’utilisateur final](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- Téléchargez le guide de déploiement pour les décideurs d’entreprise : [Guide d’accélération du déploiement d’Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
 
-- FAQ : [Forum aux questions sur Azure Information Protection](faqs.md)
+- Téléchargez un guide d’utilisation personnalisable : [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+
+- Foires aux questions : [Forum aux questions sur Azure Information Protection](faqs.md)
 
 - Yammer : [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
-Ressources supplémentaires : [Informations et prise en charge pour Azure Information Protection](information-support.md)
+Ressources supplémentaires : [Informations et prise en charge pour Azure Information Protection](information-support.md)
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 

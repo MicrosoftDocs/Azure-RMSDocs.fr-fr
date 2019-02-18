@@ -4,20 +4,21 @@ description: Cet article décrit le processus de déploiement d’une applicatio
 keywords: ''
 author: kkanakas
 ms.author: kartikka
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/27/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 audience: developer
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: a7f31be3e7885e206d24ca4f193270b3ca1aa242
-ms.sourcegitcommit: 07af86511a394274f10cf1340de4cf4bad6d1675
+ms.openlocfilehash: 5be6785c86cfeb104acc7f12d4cb7b830e9c9d36
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473781"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251873"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Déploiement d’une application de service sur un autre locataire
 
@@ -31,7 +32,7 @@ La société *CoolApp* a développé une application de service utilisant Azure 
 
 ![Exemple de flux pour la création d’une clé symétrique dans un autre locataire](../media/develop/service-app-provision.jpg)
 
-## <a name="flow-1-coolapp-provides-a-ui-dialog-to-abc-to-implement-the-deployment"></a>Flux 1 : *CoolApp* fournit une boîte de dialogue d’interface utilisateur à *ABC* pour mettre en œuvre le déploiement.
+## <a name="flow-1-coolapp-provides-a-ui-dialog-to-abc-to-implement-the-deployment"></a>Flux 1 : *CoolApp* fournit une boîte de dialogue d’interface utilisateur à *ABC* pour mettre en œuvre le déploiement
 
 À partir du moment où *ABC* achète la solution de *CoolApp*, l’administrateur informatique *d’ABC* doit créer le principal du service *CoolApp* et inscrire l’application dans le locataire Azure AD *d’ABC*. 
 
@@ -46,6 +47,6 @@ L’administrateur informatique *d’ABC* exécute ensuite l’application de *C
 
 Si l’expérience souhaitée n’est pas de fournir à l’administrateur informatique *d’ABC* une boîte de dialogue d’interface utilisateur pour les informations du principal de service, mieux vaut suivre les indications du **Flux 2**.
 
-## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>Flux 2 : l’administrateur informatique *d’ABC* fournit la clé à l’équipe de *CoolApp*.
+## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>Flux 2 : L’administrateur informatique *d’ABC* fournit la clé à l’équipe de *CoolApp*
 
 Une fois que l’administrateur informatique *d’ABC* crée le principal du service, comme indiqué dans la **Figure 1**, *ABC* transfère les informations à l’équipe de *CoolApp*. L’équipe de *CoolApp* continue ensuite en intégrant les informations dans l’application *CoolApp* pour pouvoir les utiliser dans le locataire *d’ABC*.

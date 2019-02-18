@@ -3,17 +3,18 @@ title: Configurer les paramètres de la stratégie Azure Information Protectio
 description: Configurez les paramètres dans la stratégie Azure Information Protection qui s’appliquent à tous les utilisateurs et à tous les appareils.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/16/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: c3d95b0dc8328665c921ab4ff6b37e53ec726f03
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 91ab0e30c0fac8f3285983f6c3b06886c0782e7d
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393480"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266061"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Guide pratique pour configurer les paramètres de stratégie pour Azure Information Protection
 
@@ -37,7 +38,9 @@ Pour configurer ces paramètres :
 
 3. Dans le panneau **Stratégie**, configurez les paramètres suivants :
     
-   - **Sélectionner l’étiquette par défaut** : Lorsque vous définissez cette option, sélectionnez l’étiquette à attribuer à des documents et des e-mails qui n’ont pas d’étiquette. Vous ne pouvez pas définir une étiquette par défaut si elle a des sous-étiquettes. 
+   - **Sélectionner l’étiquette par défaut** : Lorsque vous définissez cette option, sélectionnez l’étiquette à attribuer à des documents et des e-mails qui n’ont pas d’étiquette. Vous ne pouvez pas définir une étiquette par défaut si elle a des sous-étiquettes.
+        
+        Ce paramètre s’applique aux applications Office et au scanneur. Il ne s’applique pas à l’Explorateur de fichiers ou à PowerShell.
     
    - **Tous les documents et e-mails doivent avoir une étiquette** : Lorsque vous paramétrez cette option sur **Activé**, une étiquette doit être appliquée à tous les documents et e-mails envoyés enregistrés. L’étiquetage peut être affecté manuellement par un utilisateur, automatiquement à la suite d’une [condition](configure-policy-classification.md), ou être attribué par défaut (en définissant l’option **Sélectionner l’étiquette par défaut**.
         
@@ -51,11 +54,13 @@ Pour configurer ces paramètres :
         
        ![Azure Information Protection génère une invite si la nouvelle classification est inférieure](./media/info-protect-lower-justification.png)
         
-       Cette option n’est pas applicable pour abaisser le niveau de classification des sous-étiquettes sous la même étiquette parente, ou pour la préversion du scanneur.
+       Cette option n’est pas applicable pour abaisser le niveau de classification des sous-étiquettes sous la même étiquette parente.
         
    - **Pour les e-mails contenant des pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes** : Lorsque vous définissez cette option sur **Recommandé**, les utilisateurs sont invités à appliquer une étiquette à leur e-mail. L’étiquette est choisie dynamiquement en fonction des étiquettes de classification qui sont appliquées aux pièces jointes, et l’étiquette de classification la plus élevée est sélectionnée. La pièce jointe doit être un fichier physique et ne peut pas être un lien vers un fichier (par exemple, un lien vers un fichier sur SharePoint ou OneDrive Entreprise). Les utilisateurs peuvent accepter la recommandation ou l’ignorer. Quand vous définissez cette option sur **Automatique**, l’étiquette est appliquée automatiquement, mais les utilisateurs peuvent la supprimer ou sélectionner une autre étiquette avant d’envoyer l’e-mail.
-    
-     Lorsque la pièce jointe avec l’étiquette de classification la plus élevée est configurée pour la protection avec le paramètre de préversion d’autorisations définies par l’utilisateur, l’e-mail est étiqueté avec la même classification, mais la protection n’est pas appliquée.
+        
+        Pour prendre le classement des sous-étiquettes en compte lorsque vous utilisez ce paramètre de stratégie, vous devez [configurer un paramètre client avancé](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments).
+        
+        Lorsque la pièce jointe avec l’étiquette de classification la plus élevée est configurée pour la protection avec le paramètre de préversion d’autorisations définies par l’utilisateur, l’e-mail est étiqueté avec la même classification, mais la protection n’est pas appliquée.
     
    - **Afficher la barre Information Protection dans les applications Office** : Lorsque ce paramètre est désactivé, les utilisateurs ne peuvent pas sélectionner d’étiquettes depuis une barre dans Word, Excel, PowerPoint et Outlook. En revanche, les utilisateurs peuvent sélectionner des étiquettes au moyen du bouton **Protéger** dans le ruban. Lorsque ce paramètre est activé, les utilisateurs peuvent sélectionner des étiquettes par le biais de la barre et du bouton.
         

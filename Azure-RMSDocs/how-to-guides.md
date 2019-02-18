@@ -3,18 +3,19 @@ title: Instructions pratiques pour les scénarios courants qui utilisent Azure I
 description: Identifier les cas d’usage qui classent et protègent les données de votre organisation à l’aide d’Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 12/08/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7986648999a830985c4dbd1f31855bb222a443c2
-ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
+ms.openlocfilehash: 69ae0a504ffcdaa201b1d4ce9762b22470e05eb7
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53218372"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259029"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guides pratiques pour les scénarios courants qui utilisent Azure Information Protection
 
@@ -39,7 +40,13 @@ Les déploiements les plus performants sont ceux qui identifient des cas d’uti
 
 ## <a name="additional-deployment-instructions"></a>Instructions de déploiement supplémentaires
 
-Notre [blog technique d’Azure Information Protection](https://aka.ms/AIPblog) contient des instructions détaillées supplémentaires de notre équipe d’ingénierie de l’expérience utilisateur. Par exemple :
+Notre [blog technique d’Azure Information Protection](https://aka.ms/AIPblog) contient des instructions supplémentaires de notre équipe d’ingénierie de l’expérience utilisateur.
+
+Par exemple, une méthodologie avec les meilleures pratiques pour les décideurs d’entreprise et les responsables de l’implémentation informatique :
+
+- [Guide d’accélération du déploiement d’Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
+
+Instructions pas à pas :
 
 - [Using Azure Information Protection to protect PDF’s and Adobe Acrobat Reader to view them](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010)
 

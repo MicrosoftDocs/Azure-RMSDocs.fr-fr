@@ -3,20 +3,21 @@ title: Client d’étiquetage unifié Azure Information Protection - Information
 description: Consultez les informations de version pour le client d’étiquetage unifié Azure Information Protection pour Windows.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/23/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: a1544e0fa3c6d09328d1801a75ffbccd496e3482
-ms.sourcegitcommit: b275c1f82bf9176fe3fb36016c6f8692b8418295
+ms.openlocfilehash: 939ae3e367b14f722c38be023c70d9dcce21004f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49951837"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254830"
 ---
-# <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Client d’étiquetage unifié Azure Information Protection : informations sur les versions
+# <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Client d’étiquetage unifié Azure Information Protection : Informations sur la version
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -33,7 +34,7 @@ Ce client est installé comme un module complémentaire Office pour les ordinate
 
 ## <a name="current-preview-version"></a>Préversion actuelle
 
-**Date de publication** : 16/10/2018
+**Date de publication** : 10/16/2018
 
 Cette préversion du client d’étiquetage unifié Azure Information Protection pour Windows prend en charge les fonctionnalités suivantes : 
 
@@ -71,7 +72,7 @@ Les fonctionnalités suivantes ne fonctionnent pas dans cette préversion :
 
 ## <a name="instructions"></a>Instructions
 
-1. Installez le client en respectant les instructions suivantes : [Guide de l’utilisateur : Télécharger et installer le client Azure Information Protection (préversion)](install-unifiedlabelingclient-app.md) 
+1. Installez le client à l'aide des instructions suivantes : [Guide de l’utilisateur : Télécharger et installer le client Azure Information Protection (préversion)](install-unifiedlabelingclient-app.md) 
 
 2. Utilisez le client dans les applications Office comme vous le feriez pour le client Azure Information Protection, à ceci près que le bouton du ruban Office est nommé **Sensibilité** plutôt que **Protéger** :
     

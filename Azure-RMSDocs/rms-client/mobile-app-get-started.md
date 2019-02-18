@@ -3,19 +3,20 @@ title: 'Bien démarrer : application AIP pour iOS et Android'
 description: Afficher des e-mails ou des fichiers avec l’application Azure Information Protection pour iOS et Android
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 05/01/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aea2c8734aa36cb5ca735e351abe27e4e6dcc4e2
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 07391252e55f1b75df4d0fb57d167748d6d69853
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023777"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255000"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android
 
@@ -32,13 +33,13 @@ La plupart des utilisateurs se servent généralement de l’application Azure I
 
 Pour utiliser les instructions suivantes, vous devez avoir accès, depuis votre appareil mobile, à un des fichiers pris en charge par l’application. Par exemple :
 
-- **Un fichier .rpmsg** : il s’agit d’un e-mail protégé par des droits qui s’affiche comme pièce jointe dans un e-mail lorsque votre application de messagerie sur votre appareil mobile ne prend pas en charge la protection des données Rights Management de manière native. 
+- **Un fichier .rpmsg** : Il s’agit d’un e-mail protégé par des droits qui s’affiche comme pièce jointe dans un e-mail lorsque votre application de messagerie sur votre appareil mobile ne prend pas en charge la protection des données Rights Management de manière native. 
     
     Utilisez un autre appareil pour vous envoyer un e-mail protégé par des droits auquel vous pouvez accéder à partir de votre appareil mobile. Par exemple, utilisez Outlook à partir d’un ordinateur Windows. Pour obtenir la liste des clients de messagerie prenant en charge la gestion des droits de manière native, consultez la colonne Adresse de messagerie dans [Applications prenant en charge la protection des données Azure Rights Management](../requirements-applications.md).
 
-- **Un fichier PDF protégé par des droits** : à partir d’un ordinateur Windows, utilisez le client Azure Information Protection pour [protéger un fichier PDF](client-classify-protect.md), puis envoyez ce fichier PDF protégé par des droits par e-mail à votre adresse en tant que pièce jointe. Vous pouvez également télécharger un fichier PDF dans une bibliothèque protégée SharePoint, puis la partager en utilisant votre adresse e-mail.
+- **Un fichier PDF protégé par des droits** : À partir d’un ordinateur Windows, utilisez le client Azure Information Protection pour [protéger un fichier PDF](client-classify-protect.md), puis envoyez ce fichier PDF protégé par des droits par e-mail à votre adresse en tant que pièce jointe. Vous pouvez également télécharger un fichier PDF dans une bibliothèque protégée SharePoint, puis la partager en utilisant votre adresse e-mail.
 
-- **Un fichier ptxt, .pjpg ou .ppng** : à partir d’un ordinateur Windows, utilisez le client Azure Information Protection pour protéger un fichier texte ou image, puis envoyez ce fichier protégé par e-mail à votre adresse en tant que pièce jointe. Pour obtenir la liste complète des types de fichiers que vous pouvez utiliser pour les tests, consultez le premier tableau de la section [Types de fichiers pris en charge pour la classification et la protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) du Guide d’administration du client Azure Information Protection. 
+- **Un fichier .ptxt ou .pjpg ou .ppng** : À partir d’un ordinateur Windows, utilisez le client Azure Information Protection pour protéger un fichier texte ou image, puis envoyez ce fichier protégé par e-mail à votre adresse en tant que pièce jointe. Pour obtenir la liste complète des types de fichiers que vous pouvez utiliser pour les tests, consultez le premier tableau de la section [Types de fichiers pris en charge pour la classification et la protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) du Guide d’administration du client Azure Information Protection. 
 
 Pour afficher ces fichiers dans l’application de visionneuse Azure Information Protection, cliquez sur la pièce jointe ou le lien dans l’e-mail. Lorsque vous êtes invité à sélectionner une application avez laquelle les ouvrir, sélectionnez l’application **Visionneuse d’accès et de protection des informations**. Vous serez invité à vous connecter avec votre compte professionnel ou scolaire, ou invité à sélectionner un certificat. Une fois ces informations d’identification authentifiées, l’application Azure Information Protection affiche l’e-mail ou le fichier que vous voulez lire.
 

@@ -3,18 +3,19 @@ title: Migrer les étiquettes Azure Information Protection vers le Centre de sé
 description: Migrez les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365 pour les clients qui prennent en charge l’étiquetage unifié.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 02/05/2019
+manager: barbkess
+ms.date: 02/12/2019
 ms.topic: article
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 8525d20d452004b6ba46dd438dd042f98f603d6d
-ms.sourcegitcommit: e8b4a09db9aad7f6540b4c2fd92b1e8008c999b1
+ms.openlocfilehash: 27fe7dce81856140caf5e30451caabc3df9a2894
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737271"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254779"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365
 
@@ -24,8 +25,6 @@ ms.locfileid: "55737271"
 > Cette fonctionnalité est en préversion et migre votre locataire vers une nouvelle plateforme. La migration est irréversible. La nouvelle plateforme prend en charge l’étiquetage unifié afin que les étiquettes que vous créez et gérez puissent être utilisées par plusieurs clients et services.
 
 Migrez vos étiquettes si vous souhaitez être en mesure de les utiliser dans le Centre de sécurité et conformité Office 365, où elles peuvent être publiées et ensuite téléchargées par les [clients qui prennent en charge l’étiquetage unifié](#clients-that-support-unified-labeling). Le client Azure Information Protection continue de télécharger les étiquettes avec la stratégie Azure Information Protection à partir du portail Azure. 
-
-Une fois que vous avez migré vos étiquettes, vous pouvez ensuite les modifier dans le portail Azure ou le Centre de sécurité et conformité Office 365, et les clients respectifs téléchargent la même modification.
 
 Avant de lire les instructions détaillées sur la migration de vos étiquettes, vous trouverez probablement utiles les questions fréquemment posées suivantes :
 
@@ -61,6 +60,8 @@ Avant de migrer vos étiquettes, tenez compte des changements et des considérat
 - Modèles de protection :
     
     - Les modèles qui utilisent une clé cloud et qui font partie d’une configuration d’étiquettes sont également migrés avec l’étiquette. Les autres modèles de protection ne sont pas migrés. 
+    
+    - Si vous avez des étiquettes qui sont configurées pour un modèle prédéfini, [convertissez ces modèles en étiquettes](configure-policy-templates.md#to-convert-templates-to-labels) avant de migrer vos étiquettes. Cette configuration ne bloque pas la migration de l’étiquette, mais n’est pas prise en charge dans le Centre de sécurité et de conformité.
     
     - Une fois qu’une étiquette avec des paramètres de protection dans le cloud a été migrée, l’étendue résultante du modèle de protection est l’étendue qui est définie dans le portail Azure (ou à l’aide du module PowerShell AADRM) et l’étendue qui est définie dans le Centre de sécurité et conformité. 
 

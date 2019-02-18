@@ -3,18 +3,21 @@ title: 'Démarrage rapide : Créer une étiquette Azure Information Protection p
 description: Créez et configurez une nouvelle étiquette qui classifie les documents et e-mails pour des utilisateurs spécifiques à l’aide d’une stratégie délimitée.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 11/14/2018
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 1a8af09681411e49936c067c6161376c9d4f9f16
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: a4057396bbe2d642d5f1d155a9e3975d40f02b1e
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023567"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265976"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques
+
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Ce démarrage rapide vise à créer une nouvelle étiquette qui n’est visible et applicable que par certains utilisateurs pour classifier et protéger leurs documents et e-mails.
 
@@ -32,7 +35,7 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
 
 2. Vous avez ajouté le panneau Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
 
-    Pour obtenir une aide avec ces actions, voir [Démarrage rapide : Bien démarrer avec le Portail Azure](quickstart-viewpolicy.md).
+    Si vous avez besoin d’aide avec ces actions, consultez [Démarrage rapide : Bien démarrer avec le portail Azure](quickstart-viewpolicy.md).
 
 3. Un groupe compatible avec les e-mails dans Azure AD et contenant les utilisateurs qui verront et appliqueront la nouvelle étiquette.
     
@@ -54,13 +57,13 @@ Commencez par créer votre nouvelle étiquette.
     
     Si vous n’êtes pas l’administrateur général, utilisez le lien suivant pour les autres rôles : [Connexion au portail Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Dans l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection – Étiquettes**, cliquez sur **Ajouter une nouvelle étiquette**.
+2. À partir de l’option de menu **Classifications** > **Étiquettes** : Dans le panneau **Azure Information Protection - Étiquettes**, cliquez sur **Ajouter une nouvelle étiquette**.
 
 3. Dans le panneau **Étiquette**, spécifiez au moins les éléments suivants :
     
-    - **Nom complet de l’étiquette** : nom de l’étiquette que verront les utilisateurs et qui identifie la classification du contenu. Par exemple : `Sales - Restricted`.
+    - **Nom d'affichage de l’étiquette** : Nom de l’étiquette que verront les utilisateurs et qui identifie la classification du contenu. Par exemple : `Sales - Restricted`.
     
-    - **Description** : info-bulle qui aide les utilisateurs à savoir quand sélectionner cette nouvelle étiquette. Par exemple : `Business data that is restricted to the Sales Team.`
+    - **Description** : Info-bulle qui aide les utilisateurs à savoir quand sélectionner cette nouvelle étiquette. Par exemple : `Business data that is restricted to the Sales Team.`
 
 4. Vérifiez que l’option est marquée **Activé** **(valeur par défaut)**, puis sélectionnez **Enregistrer**.
 
@@ -68,7 +71,7 @@ Commencez par créer votre nouvelle étiquette.
 
 Maintenant, ajoutez votre étiquette à une nouvelle stratégie délimitée.
 
-1. À partir de l’option de menu **Classifications** > **Stratégies** : dans le panneau **Azure Information Protection - Stratégies**, sélectionnez **Ajouter une nouvelle stratégie**. 
+1. À partir de l’option de menu **Classifications** > **Stratégies** : Dans le panneau **Azure Information Protection - Stratégies**, sélectionnez **Ajouter une nouvelle stratégie**. 
 
 2. Dans la zone **Nom de la stratégie** du panneau **Stratégie**, entrez un nom identifiant le groupe d’utilisateurs qui verra votre nouvelle étiquette. Par exemple, `Sales`.
 
@@ -78,7 +81,7 @@ Maintenant, ajoutez votre étiquette à une nouvelle stratégie délimitée.
 
 5. Dans le panneau **Stratégie**, sélectionnez **Ajouter ou supprimer des étiquettes**.
 
-6. Dans le panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette que vous avez créée, par exemple, **Sales - Restricted**, puis **OK**.
+6. Dans le panneau **Stratégie : Ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette que vous avez créée, par exemple, **Sales - Restricted**, puis **OK**.
 
 7. Dans le panneau **Stratégie**, sélectionnez **Enregistrer**. 
 
@@ -96,11 +99,11 @@ Pour tester cette étiquette, il vous faut au minimum deux ordinateurs, car le c
 
 Si vous ne souhaitez pas conserver cette étiquette et cette stratégie délimitée, suivez cette procédure :
 
-1. Dans l’option de menu **Classifications** > **Stratégies** : dans le panneau **Azure Information Protection – Stratégies**, sélectionnez le menu contextuel (**…**) de la stratégie délimitée que vous avez créée. Par exemple, **Sales**.
+1. À partir de l’option de menu **Classifications** > **Stratégies** : Dans le panneau **Azure Information Protection – Stratégies**, sélectionnez le menu contextuel (**…**) de la stratégie délimitée que vous avez créée. Par exemple, **Sales**.
 
 2. Sélectionnez **Supprimer la stratégie**, puis **OK** si une confirmation vous est demandée.
 
-3. Dans l’option de menu **Classifications** > **Étiquette** : dans le panneau **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel (**…**) de l’étiquette que vous avez créée :  par exemple, **Sales - Restricted**.
+3. Dans l’option de menu **Classifications** > **Étiquette** : Dans le panneau **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel (**…**) de l’étiquette que vous avez créée.  par exemple, **Sales - Restricted**.
 
 4.  Sélectionnez **Supprimer cette étiquette**, puis **OK** si une confirmation vous est demandée.
 

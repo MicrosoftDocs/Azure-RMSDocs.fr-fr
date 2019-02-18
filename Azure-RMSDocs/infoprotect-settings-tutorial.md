@@ -3,16 +3,17 @@ title: 'Tutoriel : Configurer les paramètres de stratégie Azure Information P
 description: Tutoriel d’introduction qui vous guide dans la configuration des paramètres de stratégie Azure Information Protection pour classer les documents et e-mails de votre organisation.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/24/2019
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 324f13a61d287fd883e9336c6e17250e9ab9ff9f
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: f906a5b9fc9f678d1f452e347fb3739b4ff96586
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231019"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266078"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Didacticiel : Configurer les paramètres de stratégie Azure Information Protection qui interagissent
 
@@ -157,7 +158,7 @@ La barre Information Protection s’affiche à nouveau pour permettre aux utilis
 
 Étant donné que l’étiquette est sélectionnée avant que l’e-mail soit envoyé, il n’est pas nécessaire d’envoyer l’e-mail pour observer le fonctionnement de ce paramètre de stratégie. Vous pouvez fermer l’e-mail sans l’envoyer ni l’enregistrer.
 
-Toutefois, il peut être intéressant de répéter cet exercice, mais aussi de joindre un autre document qui possède une classification plus élevée (une sous-étiquette de l’étiquette **Hautement confidentiel**). L’invite sera alors différente : elle proposera d’appliquer l’étiquette de classification la plus élevée.
+Toutefois, il peut être intéressant de répéter cet exercice, mais aussi de joindre un autre document qui possède une classification plus élevée (une sous-étiquette de l’étiquette **Hautement confidentiel**). L’invite sera alors différente : elle proposera d’appliquer l’étiquette de classification la plus élevée. Si vous testez plusieurs pièces jointes avec des sous-étiquettes qui ont la même étiquette parente, vous devez configurer [un paramètre client avancé](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) pour prendre en charge leur classement dans le portail Azure.
 
 ## <a name="clean-up-resources"></a>Nettoyer les ressources
 

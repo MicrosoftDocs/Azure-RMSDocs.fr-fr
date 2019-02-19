@@ -4,14 +4,15 @@ description: Cet article vous aidera à comprendre comment les gestionnaires de 
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 6b2916a3937892353f4389a59b5e48356deda603
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
-ms.translationtype: HT
+ms.openlocfilehash: b021f5a05ad484b32af3a189c10522564da6d86d
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453365"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254847"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux gestionnaires de fichiers
 
@@ -50,7 +51,7 @@ La première étape requise dans la gestion de tous les fichiers dans l’API de
 
 Pour créer le `FileHandler`, il suffit d’appeler la fonction `CreateFileHandlerAsync` de `FileEngine` en utilisant le modèle de promesse/futur.
 
-`CreateFileHandlerAsync` accepte trois paramètres : le chemin du fichier qui doit être lu ou modifié, le `mip::FileHandler::Observer` pour les notifications d’événements asynchrones et la promesse pour le `FileHandler`.
+`CreateFileHandlerAsync` accepte trois paramètres : Le chemin d’accès au fichier qui doit être lu ou modifié, le `mip::FileHandler::Observer` pour les notifications d’événements asynchrones et la promesse pour la `FileHandler`.
 
 **Remarque :** La classe `mip::FileHandler::Observer` doit être implémentée dans une classe dérivée, car `CreateFileHandler` nécessite l’objet `Observer`. 
 
@@ -132,7 +133,7 @@ L’étape finale de validation de toute modification dans un fichier dans le ki
 
 Pour implémenter la fonction de validation, nous revenons à promesse/futur, en créant une promesse pour un `bool`. La fonction `CommitAsync()` retournera la valeur true si l’opération a réussi ou false si elle a échoué pour une raison quelconque. 
 
-Après avoir créé les éléments `promise` et `future`, la fonction `CommitAsync()` est appelée et deux paramètres sont fournis : le chemin du fichier de sortie (`std::string`) et la promesse. Enfin, le résultat est obtenu en obtenant la valeur de l’objet `future`.
+Après avoir créé le `promise` et `future`, `CommitAsync()` est appelée et deux paramètres fournis : Le chemin d’accès du fichier de sortie (`std::string`) et la promesse. Enfin, le résultat est obtenu en obtenant la valeur de l’objet `future`.
 
 ```cpp
 auto commitPromise = std::make_shared<std::promise<bool>>();
@@ -141,7 +142,7 @@ handler->CommitAsync(outputFile, commitPromise);
 auto wasCommitted = commitFuture.get();
 ```
 
-**Important :** Le `FileHandler` ne mettra pas à jour et ne remplacera pas les fichiers existants. Il incombe au développeur d’implémenter le **remplacement** du fichier qui est en cours d’étiquetage. 
+**Important :** Le `FileHandler` ne sera pas mettre à jour ou remplacer les fichiers existants. Il incombe au développeur d’implémenter le **remplacement** du fichier qui est en cours d’étiquetage. 
 
 Si vous écrivez une étiquette pour **FileA.docx**, une copie du fichier, **FileB.docx**, sera créée avec l’étiquette appliquée. Un code doit être écrit pour supprimer/renommer **FileA.docx** et renommer **FileB.docx**.
 

@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
-ms.openlocfilehash: 17c7bb1bd887b4009f450cb5bbf75900587de4f1
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: b7f2b25027502fbdd9dd7bd877b8893c1940628a
+ms.sourcegitcommit: ca2df73f8bba6bf0f58eea5bee15e356705276d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252094"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589983"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation de l’application cliente (C#)
 
@@ -83,7 +83,7 @@ Créez maintenant une implémentation pour un délégué d’authentification, e
 
 Le `ApplicationInfo` objet contient deux propriétés. Le `_appInfo.ApplicationId` sera utilisé dans le `AuthDelegateImplementation` classe pour fournir l’ID de client à la bibliothèque d’authentification.
 
-5. Ajouter la `public string AcquireToken()` classe. Cette classe doit accepter `Microsoft.InformationProtection.Identity`et deux chaînes : autorité et ressources. Ces variables de chaîne seront passés à la bibliothèque d’authentification dans par l’API et ne doit pas être manipulés. Modification peut entraîner un échec d’authentification.
+5. Ajouter le `public string AcquireToken()` (méthode). Cette méthode doit accepter `Microsoft.InformationProtection.Identity` et deux chaînes : autorité et ressources. Ces variables de chaîne seront passés à la bibliothèque d’authentification dans par l’API et ne doit pas être manipulés. Modification peut entraîner un échec d’authentification.
 
      ```csharp
      public string AcquireToken(Identity identity, string authority, string resource)

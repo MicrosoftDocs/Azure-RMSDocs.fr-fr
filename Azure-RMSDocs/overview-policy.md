@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5ecccb6a8d26d3ae074270e46250952d4cc9b4f3
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 29f573ae997431d621a616eccb9591c830ae8e9c
+ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253933"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425927"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Présentation de la stratégie Azure Information Protection
 
@@ -50,7 +50,6 @@ Quand une étiquette est configurée pour des sous-étiquettes, les utilisateurs
 Les étiquettes Azure Information Protection peuvent être utilisées avec la gamme complète des données généralement créées et stockées par une organisation, de la classification la plus basse des données personnelles à la classification la plus élevée des données hautement confidentielles. 
 
 Vous pouvez utiliser les étiquettes par défaut sans les modifier, vous pouvez les personnaliser, ou encore les supprimer et créer de nouvelles étiquettes. Pour obtenir des instructions complètes, consultez [Configuration de la stratégie Azure Information Protection](configure-policy.md).
-
 
 ## <a name="next-steps"></a>Étapes suivantes
 

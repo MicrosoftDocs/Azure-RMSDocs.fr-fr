@@ -4,19 +4,19 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/14/2019
+ms.date: 02/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f41dde8fda216084ef9399c0a0e4d7b09c1e79fb
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: e336a025d680f6c3a016f1b9b2c36976f765824f
+ms.sourcegitcommit: ca2df73f8bba6bf0f58eea5bee15e356705276d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266129"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590000"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -413,7 +413,7 @@ Suite à cette modification du Registre, les scénarios suivants sont pris en ch
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Migrer des étiquettes de Secure Islands et d’autres solutions d’étiquetage
 
-Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Ce paramètre est en préversion et est susceptible de changer.
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
 
 Cette configuration n’est actuellement pas compatible avec le nouveau comportement par défaut qui protège les fichiers PDF en utilisant la norme ISO pour le chiffrement des PDF. Dans ce scénario, les fichiers .ppdf ne peuvent pas être ouverts par l’Explorateur de fichiers, PowerShell ou le scanneur. Pour résoudre ce problème, utilisez le paramètre client avancé [Ne pas utiliser la norme ISO pour le chiffrement des PDF](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
@@ -654,11 +654,11 @@ Définissez le niveau de journalisation sur l'une des valeurs suivantes :
 
 - **Erreur** : erreurs uniquement.
 
-- **Info** : journalisation minimale, qui n’inclut aucun ID d’événement.
+- **Info** : Journalisation minimale, qui n’inclut aucun ID d’événement (paramètre par défaut pour le scanneur).
 
-- **Debug** : informations complètes (paramètre par défaut).
+- **Debug** : Informations complètes.
 
-- **Trace** : journalisation très détaillée qui a un impact sur les performances et ne doit être activée qu’à la demande du Support Microsoft. S’il vous est demandé de définir ce niveau de journalisation, pensez à fixer une valeur différente lorsque les journaux souhaités ont été collectés.
+- **Trace** : Journalisation détaillée (paramètre par défaut pour les clients). Pour le scanneur, ce paramètre a un impact significatif sur les performances et doit être activé pour le scanneur uniquement si cela est demandé par le Support Microsoft. S’il vous est demandé de définir ce niveau de journalisation pour le scanneur, pensez à fixer une valeur différente lorsque les journaux souhaités ont été collectés.
 
 Ce paramètre client avancé ne modifie ni les informations envoyées à Azure Information Protection pour le [reporting central](../reports-aip.md), ni les informations écrites dans le [journal des événements](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) local.
 
@@ -682,7 +682,7 @@ Pour obtenir cette solution :
     
     Remarque : Quand l’étiquette est une sous-étiquette, vous devez également spécifier l’étiquette parente avant la sous-étiquette dans la valeur de l’en-tête, en utilisant le même format. Par exemple, si votre sous-étiquette a le GUID 27efdf94-80a0-4d02-b88c-b615c12d69a9, votre valeur doit ressembler à ceci : `MSIP_Label_ab70158b-bdcc-42a3-8493-2a80736e9cbd_Enabled=True;MSIP_Label_27efdf94-80a0-4d02-b88c-b615c12d69a9_Enabled=True;`
 
-Avant de tester cette configuration, n’oubliez pas qu’il y a souvent un délai quand vous créez ou modifiez des règles de flux de messagerie (attendez par exemple une heure). Quand la règle est effective, les événements suivants se produisent si les utilisateurs se servent d’Outlook sur le web ou sur un client d’appareil mobile qui prend en charge la protection Exchange ActiveSync IRM : 
+Avant de tester cette configuration, n’oubliez pas qu’il y a souvent un délai quand vous créez ou modifiez des règles de flux de messagerie (attendez par exemple une heure). Lorsque la règle est appliquée, les événements suivants se produisent quand les utilisateurs utilisent Outlook sur le web : 
 
 - Les utilisateurs sélectionnent la classification des messages Exchange et envoient l’e-mail.
 
@@ -690,7 +690,7 @@ Avant de tester cette configuration, n’oubliez pas qu’il y a souvent un dél
 
 - Quand les destinataires internes qui disposent du client Azure Information Protection affichent l’e-mail dans Outlook, ils voient l’étiquette Azure Information Protection attribuée. 
 
-Si vos étiquettes Azure Information Protection appliquent la protection, ajoutez la protection à la configuration de règle : En sélectionnant l’option pour modifier la sécurité des messages, appliquez la protection des droits, puis sélectionnez le modèle RMS ou l’option Ne pas transférer.
+Si vos étiquettes Azure Information Protection appliquent la protection, ajoutez la protection à la configuration de règle : En sélectionnant l’option pour modifier la sécurité des messages, appliquez la protection des droits, puis sélectionnez le modèle de protection ou l’option Ne pas transférer.
 
 Vous pouvez également configurer des règles de flux de messagerie pour effectuer le mappage inverse. Quand une étiquette Azure Information Protection est détectée, définissez la classification de messages Exchange correspondante :
 

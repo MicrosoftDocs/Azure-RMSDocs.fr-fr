@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 2a6602303e51c4bc1cce803ec43841a52992c8b8
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 54a18f52a3b1cd5656d1d2c3cfbd675062b06c47
+ms.sourcegitcommit: 95b7df32ecccdab4b80bc3a9f6433dc1c33dbbc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254490"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407723"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -126,13 +126,16 @@ Détails :
 
 1. Pour accéder au panneau d’analytique d’Azure Information Protection dans le portail Azure, vous devez avoir l’un de ces [rôles d’administrateur Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) :
     
-    - **Lecteur Sécurité**
-    
     - **Administrateur Information Protection**
     
+    - **Lecteur Sécurité**
+  
    - **Administrateur de sécurité**
     
     - **Administrateur général**
+    
+    > [!NOTE] 
+    > Si votre locataire a été migré vers le magasin d’étiquetage unifié, votre compte doit être un compte d’administrateur général ou l’un des rôles répertoriés avec les autorisations pour accéder au Centre de sécurité et de conformité Office 365. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 2. Pour utiliser Azure Log Analytics, vous devez avoir l’une de ces [rôles Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) ou [rôles Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard :
     
@@ -148,7 +151,7 @@ Détails :
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurer un espace de travail Log Analytics pour les rapports
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**. 
+1. Si ce n’est déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](https://portal.azure.com) avec un compte qui possède les [autorisations requises pour l’analytique Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Accédez ensuite au panneau **Azure Information Protection**. 
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
     
@@ -171,8 +174,6 @@ Dans le panneau Azure Information Protection, recherchez les options du menu **T
 - **Rapport d’utilisation (préversion)**  : Utilisez ce rapport pour voir comment vos étiquettes sont utilisées. 
 
 - **Journaux d’activité (préversion)**  : Utilisez ce rapport pour voir les actions d’étiquetage effectuées par les utilisateurs sur les appareils et les chemins de fichiers.
-    
-    Ce rapport est actuellement en cours de déploiement auprès des locataires ; si vous ne le voyez pas, réessayez quelques jours plus tard.
     
     Ce rapport comporte une option **Colonnes** qui permet d’afficher plus d’informations sur l’activité que l’affichage par défaut.
 

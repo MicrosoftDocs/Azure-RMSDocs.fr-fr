@@ -4,19 +4,19 @@ description: Instructions et exemples pour configurer des règles de flux de mes
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: f35ab27167514b9b94a4cb4be2e6196dccd5280d
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: f46e919665d110665ed85b5e2e5c6a979a1958e9
+ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265993"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425961"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configuration des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection
 
@@ -34,17 +34,13 @@ Vous pouvez étendre ces exemples ainsi que les modifier. Par exemple, ajoutez p
 
 Pour plus d’informations sur la configuration des règles de flux de messagerie afin de chiffrer des messages électroniques, consultez [Définir des règles de flux de messagerie pour chiffrer des messages électroniques dans Office 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) dans la documentation d’Office. 
 
-## <a name="where-labels-are-stored-in-emails-and-documents"></a>Où les étiquettes sont stockées dans des e-mails et des documents
+## <a name="prerequisite-know-your-label-guid"></a>Prérequis : Connaître le GUID de votre étiquette
 
-Étant donné qu’une étiquette Azure Information Protection est stockée dans les métadonnées, les règles de flux de messagerie dans Exchange Online peuvent lire ces informations pour les messages et les pièces jointes des documents :
+Étant donné qu’une étiquette Azure Information Protection est stockée dans les métadonnées, les règles de flux de messagerie dans Exchange Online peuvent lire ces informations pour les messages et les pièces jointes des documents Office. Les règles de flux de messagerie ne prennent pas en charge l’inspection des métadonnées pour les documents PDF.
 
-- Dans les e-mails, ces informations sont stockées dans l’en-tête x- : **msip_labels: MSIP_Label_\<GUID > _Enabled = True ;** 
+Avant de configurer les règles de flux de messagerie pour identifier les messages et les documents étiquetés, assurez-vous que vous connaissez le GUID de l’étiquette Azure Information Protection que vous souhaitez utiliser. 
 
-- Pour les documents Word (.doc et .docx), les feuilles de calcul Excel (.xls et .xlsx) et les présentations PowerPoint (.ppt et .pptx), ces métadonnées sont stockées dans la propriété personnalisée suivante : **MSIP_Label_\<GUID>_Enabled=True**  
-
-Pour identifier le GUID d’une étiquette, recherchez la valeur de l’ID de l’étiquette dans le panneau **Étiquette** quand vous affichez ou configurez la stratégie Azure Information Protection dans le portail Azure. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier le GUID (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours le GUID de la sous-étiquette et non celui de l’étiquette parente.
-
-Avant de configurer vos règles de flux de messagerie, assurez-vous que vous connaissez le GUID de l’étiquette Azure Information Protection que vous souhaitez utiliser.
+Pour plus d’informations sur les métadonnées stockées par une étiquette et sur la façon d’identifier les GUID d’étiquettes, consultez [Étiqueter les informations stockées dans des e-mails et des documents](configure-policy.md#label-information-stored-in-emails-and-documents).
 
 ## <a name="example-configurations"></a>Exemples de configurations
 

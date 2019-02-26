@@ -27,7 +27,7 @@
 ##### [Mode Protection uniquement](client-protection-only-mode.md)
 ##### [Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS](upgrade-client-app.md)
 ### [Client d’étiquetage unifié Azure Information Protection (PRÉVERSION)](unifiedlabelingclient-version-release-history.md)
-### [Télécharger et installer le client d’étiquetage unifié Azure Information Protection (PRÉVERSION)](install-unifiedlabelingclient-app.md)
+#### [Télécharger et installer le client d’étiquetage unifié Azure Information Protection (PRÉVERSION)](install-unifiedlabelingclient-app.md)
 ### [Lecteurs PDF protégés](protected-pdf-readers.md)
 ### [Notes sur le déploiement du client RMS](client-deployment-notes.md)
 ### [Protection RMS avec l’ICF de Windows Server](configure-fci.md)

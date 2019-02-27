@@ -5,10 +5,10 @@ items:
   items:
   - name: À propos du kit SDK Microsoft Information Protection
     href: overview.md
-- name: Setup
-  href: setup-configure-mip.md
 - name: Guides de démarrage rapide
   items:
+  - name: Installation et configuration du Kit de développement logiciel (SDK) MIP
+    href: setup-configure-mip.md
   - name: C++
     items:
     - name: Initialisation d’applications (C++)
@@ -252,6 +252,8 @@ items:
         href: reference/class_mip_userrights.md
       - name: UserRoles
         href: reference/class_mip_userroles.md
+  - name: Explorateur d’API .NET
+    href: /dotnet/api/?term=microsoft.informationprotection
 - name: Ressources
   items:
   - name: Blog des développeurs
@@ -266,9 +268,9 @@ items:
     href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
   - name: Nouveautés de la version 1.1
     href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/MIP-SDK-1-1-Now-GA/ba-p/328325
-ms.openlocfilehash: ebb84750de5764a99f0277fa43faa38dae03f9f1
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 68fae7819664fadd7fa470cd8db9f45eb430dc5b
+ms.sourcegitcommit: dde803603371dc30d40ca7225f330163bcc7c103
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651273"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56825983"

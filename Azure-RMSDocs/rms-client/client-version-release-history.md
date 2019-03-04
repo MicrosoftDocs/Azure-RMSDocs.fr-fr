@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a715dbe743ef9b4018865df22ccdea347f888192
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: bdc92908e04cd0568a7417a269168b34058790e3
+ms.sourcegitcommit: abb08a85dfd7a0f100b381934a3a211da6727178
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266095"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828666"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -83,7 +83,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Le client Azure Information Protection supprime correctement la protection d’un document PDF protégé par l’application de partage Rights Management.
 
-- Les chemins et noms de fichiers n’affichent pas de points d’interrogation (**?**) à la place de caractères non-ASCII dans les analyses Azure Information Protection lorsque les paramètres régionaux du système d’exploitation d’envoi sont configurés en anglais.
+- Les chemins d’accès et les noms de fichiers n’affichent pas de points d’interrogation (**?**) à la place des caractères non ASCII dans l’analytique Azure Information Protection lorsque les paramètres régionaux du système d’exploitation d’envoi sont configurés en anglais.
 
 - Les sous-étiquettes sont correctement appliquées par PowerShell et le scanneur lorsque l’étiquette parent est configurée pour des autorisations définies par l’utilisateur.
 

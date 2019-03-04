@@ -4,17 +4,17 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: a7894ba71ea136d5b7cf1fbe067ff434d942c1d0
-ms.sourcegitcommit: 176a1b0d5ffa1a44484325d25815b4cfaa371af5
+ms.openlocfilehash: 2ddefdc557d83ff0eae6bbc2b5d7d0e69dfbbca5
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56654697"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756179"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -48,7 +48,7 @@ Informations supplémentaires sur ces marquages visuels :
 
 ## <a name="when-visual-markings-are-applied"></a>Application des marquages visuels
 
-Pour les e-mails, les marquages visuels sont appliqués lorsqu’un e-mail est envoyé depuis Outlook.
+Pour les e-mails, les marquages visuels sont appliqués lorsqu’un e-mail est envoyé depuis Outlook. Si cet e-mail fait l’objet d’un transfert ou d’une réponse avec une modification d’étiquette, les marquages visuels d’origine sont conservés.
 
 Pour les documents, les marquages visuels sont appliqués comme suit :
 

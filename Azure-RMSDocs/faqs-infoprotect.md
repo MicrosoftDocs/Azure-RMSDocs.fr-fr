@@ -4,19 +4,19 @@ description: Vous avez une question au sujet de l’utilisation d’Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/25/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 37aea835e34c0db50d277922edbfd044e43afd71
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 5945b115d4b20f7ef8c42d51e76066cca5c994bd
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256807"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756196"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
 
@@ -42,6 +42,18 @@ Pour être informé de la mise à disposition de fonctionnalités de classificat
 > - capacité d’étiquetage intégrée aux applications Office pour appareils mobiles (iOS et Android) et ordinateurs Mac. Pour plus d’informations, consultez [Appliquer des étiquettes de sensibilité à vos documents et e-mails dans Office](https://aka.ms/officemipdocs).
 
 Demandez de nouvelles fonctionnalités et votez pour les demandes en visitant le [site UserVoice](https://msip.uservoice.com/) pour Azure Information Protection.
+
+## <a name="which-preview-client-do-i-install-for-testing-new-functionality"></a>Quel client en préversion installer pour tester de nouvelles fonctionnalités ?
+
+Actuellement, il existe deux clients en préversion pour Windows : 
+
+- Le **client Azure Information Protection** qui télécharge les étiquettes et les paramètres de stratégie à partir du portail Azure. Ce client repose sur la version de disponibilité générale du client.
+
+- Le **client d’étiquetage unifié Azure Information Protection** qui télécharge les étiquettes et les paramètres de stratégie à partir du Centre de sécurité et conformité Office 365. Il s’agit de la seconde préversion de ce client.
+
+Nous vous recommandons de tester le client d’étiquetage unifié Azure Information Protection si ses fonctionnalités actuelles répondent à vos besoins métier. Dans le cas contraire, ou si vous avez configuré des étiquettes dans le portail Azure que vous n’avez pas encore [migrées vers le magasin d’étiquetage unifié](configure-policy-migrate-labels.md), utilisez le client Azure Information Protection.
+
+Pour plus d’informations, consultez [Choisir le client Azure Information Protection à utiliser](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use), notamment pour visualiser un tableau de comparaison des fonctionnalités.
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>Dois-je être un administrateur global pour configurer la classification et les étiquettes ?
 

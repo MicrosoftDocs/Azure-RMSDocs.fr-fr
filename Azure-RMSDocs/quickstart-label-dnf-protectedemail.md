@@ -4,16 +4,16 @@ description: Configurez une étiquette qui protège l’e-mail d’un utilisateu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/29/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 67fe46f94b83b219794251c9d7e1500f756669a3
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: c41f190cf2e91378b03922caf3211c19ec01e871
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266027"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017198"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles
 
@@ -77,7 +77,9 @@ Pour obtenir la liste complète des prérequis d’Azure Information Protection,
 
 2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous souhaitez configurer pour appliquer la protection. 
 
-3. Dans le panneau **Étiquette**, recherchez **Définir des autorisations pour les documents et les e-mails contenant cette étiquette**. Sélectionnez **Protéger**, puis **Protection** :
+3. Dans le panneau **Étiquette**, recherchez **Définir des autorisations pour les documents et les e-mails contenant cette étiquette**. Sélectionnez **Protéger** ; le panneau **Protection** s’ouvre alors automatiquement si l’une des autres options a été sélectionnée précédemment. 
+    
+    Si le panneau **Protection** ne s’ouvre pas automatiquement, sélectionnez **Protection** :
     
     ![Configurer la protection d’une étiquette Azure Information Protection](./media/info-protect-protection-bar-configured.png).
 

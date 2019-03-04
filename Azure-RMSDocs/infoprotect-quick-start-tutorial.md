@@ -4,16 +4,16 @@ description: Tutoriel de prise en main d’environ 15 minutes, permettant de mod
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/29/2019
+ms.date: 02/29/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: e081da93ecc486de22746e4b19e2bb5334b44c66
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 75ba59498918ecb2d987e2fe794c624f8f340498
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254354"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017232"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Didacticiel : Modifier la stratégie Azure Information Protection et créer une étiquette
 
@@ -108,7 +108,7 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
     Ce texte explique comment l’étiquette sélectionnée va être utilisée et s’affiche sous forme d’info-bulle pour aider les utilisateurs dans leur choix.
 
-3. Pour **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Protéger**, puis **Protection** :
+3. Pour **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Protéger**, ce qui ouvre automatiquement le panneau **Protection** avec l’option **Protection** sélectionnée :
     
     ![Configuration d’une étiquette Azure Information Protection à des fins de protection](./media/info-protect-protection-bar-configured.png) 
     
@@ -146,7 +146,7 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
     Cliquez sur **Ajouter une nouvelle condition**, puis, dans le panneau **Condition**, sélectionnez les éléments suivants :
     
-    a. **Choisir le type de condition ** : conservez la valeur par défaut **Types d’informations**.
+    a. **Choisir le type de condition**  : conservez la valeur par défaut **Types d’informations**.
     
     b. **Sélectionner un secteur d’activité** : conservez la valeur par défaut **Tout**.
     

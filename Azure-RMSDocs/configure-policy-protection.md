@@ -4,17 +4,17 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 74ec040b0999bfc9c2f3693cc8ceb3e0d438d67c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 11063a208e21ef121ba0a3a5007c76635f63af17
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255204"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017147"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -73,7 +73,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
         
         Si les utilisateurs n’ont pas les autorisations nécessaires pour supprimer la protection Rights Management et qu’ils sélectionnent une étiquette configurée avec l’option **Supprimer la protection**, ils reçoivent le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
 
-4. Si vous avez sélectionné **Protéger**, sélectionnez maintenant **Protection** pour ouvrir le panneau **Protection** :
+4. Si vous avez sélectionné **Protéger**, le panneau **Protection** s’ouvre automatiquement si l’une des autres options a été sélectionnée. Si ce nouveau panneau ne s’ouvre pas automatiquement, sélectionnez **Protection** :
     
     ![Configurer la protection d’une étiquette Azure Information Protection](./media/info-protect-protection-bar-configured.png)
 
@@ -95,11 +95,13 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
      Pour sélectionner un modèle prédéfini, le modèle doit être publié (pas archivé) et ne pas être déjà lié à une autre étiquette. Quand vous sélectionnez cette option, vous pouvez utiliser un bouton **Modifier le modèle** pour [convertir le modèle en étiquette](configure-policy-templates.md#to-convert-templates-to-labels).
     
-     Conseil : Si vous avez l’habitude de créer et de modifier des modèles personnalisés, il peut s’avérer utile de consulter [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
+     Si vous avez l’habitude de créer et de modifier des modèles personnalisés, il peut s’avérer utile de consulter [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
 
-7. Si vous avez sélectionné **Définir les autorisations** pour **Azure (clé du cloud)**, cette option vous permet de configurer les mêmes paramètres que ceux que vous pouvez configurer dans un modèle. 
+7. Si vous avez sélectionné **Définir les autorisations** pour **Azure (clé cloud)**, cette option vous permet de sélectionner des utilisateurs et droits d’utilisation. 
     
-    Sélectionnez **Ajouter des autorisations** puis, dans le panneau **Ajouter des autorisations**, sélectionnez le premier ensemble d’utilisateurs et de groupes qui auront des droits d’utilisation du contenu à protéger par l’étiquette sélectionnée :
+    Si vous ne sélectionnez pas d’utilisateurs, puis cliquez successivement sur **OK** dans ce panneau et sur **Enregistrer** dans le panneau **Étiquette** : L’étiquette est configurée pour appliquer une protection telle que seule la personne qui applique l’étiquette peut ouvrir le document ou l’e-mail sans aucune restriction. Cette configuration est parfois appelée « Pour moi uniquement » et peut être le résultat requis, afin qu’un utilisateur puisse enregistrer un fichier à n’importe quel emplacement et être assuré d’être le seul à pouvoir l’ouvrir. Si ce résultat correspond à vos besoins et qu’aucun autre utilisateur n’est tenu de collaborer sur le contenu protégé, ne sélectionnez pas **Ajouter des autorisations**. Après que vous avez enregistré l’étiquette, à la prochaine ouverture de ce panneau **Protection**, **IPC_USER_ID_OWNER** est affiché pour **Utilisateurs**, et **Copropriétaire** est affiché pour **Autorisations** afin de refléter cette configuration.
+    
+    Pour spécifier les utilisateurs que vous souhaitez voir en mesure d’ouvrir des documents et e-mails protégés, sélectionnez **Ajouter des autorisations**. Dans le panneau **Ajouter des autorisations**, sélectionnez le premier ensemble d’utilisateurs et de groupes qui disposeront des droits d’utilisation du contenu qui sera protégé par l’étiquette sélectionnée :
     
    - Choisissez **Sélectionner dans la liste**, où vous pouvez alors ajouter tous les utilisateurs de votre organisation en sélectionnant **Ajouter \<nom de l’organisation > - Tous les membres**. Ce paramètre exclut les comptes invités. Vous pouvez également sélectionner **Ajouter tous les utilisateurs authentifiés** ou parcourir le répertoire.
         
@@ -177,7 +179,9 @@ Une fois que vous avez cliqué sur **Enregistrer**, vos modifications sont autom
 
 Les sous-étiquettes **Tous les employés** et **Destinataires uniquement** des étiquettes **Confidentiel** et **Hautement confidentiel** de la [stratégie par défaut](configure-policy-default.md) fournissent des exemples de configurations d’étiquettes qui appliquent une protection. Vous pouvez également utiliser les exemples suivants pour vous aider à configurer la protection pour différents scénarios. 
 
-Pour chaque exemple qui suit, dans votre panneau \<*nom de l’étiquette*>, sélectionnez **Protéger**, puis **Protection** pour ouvrir le panneau **Protection**.
+Pour chaque exemple qui suit, dans votre panneau \<*nom d’étiquette*>, sélectionnez **Protéger**. Si le panneau **Protection** ne s’ouvre pas automatiquement, sélectionnez **Protection** pour l’ouvrir afin de sélectionner les options de configuration de protection :
+
+![Configuration d’une étiquette Azure Information Protection à des fins de protection](./media/info-protect-protection-bar-configured.png)
 
 ### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Exemple 1 : Étiquette qui applique Ne pas transférer pour envoyer un e-mail protégé à un compte Gmail
 

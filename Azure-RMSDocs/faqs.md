@@ -4,19 +4,19 @@ description: Certaines questions fréquentes sur Azure Information Protection et
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fb200717efee9c34e8c3d6fc41ccab82478f5755
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4e7ffa1fa4121d7a0aecc4474d50497c7c300b1b
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258060"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756145"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -50,7 +50,7 @@ Pour plus d’informations sur la migration de vos étiquettes existantes, consu
 
 Les étiquettes de sensibilité du Centre de sécurité et conformité Office 365 sont en disponibilité générale, mais l’option pour migrer vos étiquettes Azure Information Protection est toujours en préversion. Lorsque les étiquettes sont migrées vers le magasin d’étiquetage unifié, elles peuvent être publiées puis téléchargées par les [clients qui prennent en charge l’étiquetage unifiée](configure-policy-migrate-labels.md#clients-that-support-unified-labeling). À l’heure actuelle, les clients ne prennent pas tous en charge les étiquettes unifiées ou ne sont pas tous en disponibilité générale.
 
-Nous vous recommandons de commencer par tester la fonctionnalité en préversion avec un locataire de test et ensuite de migrer votre locataire de production. De plus :
+Nous vous recommandons de commencer par tester les fonctionnalités en préversion avec un abonné de test, puis de migrer votre abonné de production. De plus :
 
 - **Si vous débutez avec Azure Information Protection :** 
     
@@ -61,6 +61,8 @@ Nous vous recommandons de commencer par tester la fonctionnalité en préversion
     Nous vous recommandons d’effectuer votre configuration d’étiquettes dans le portail Azure, puis de migrer les étiquettes. Cette stratégie évite la duplication des étiquettes pendant le processus de migration, qui devront ensuite être modifiées dans le Centre de sécurité et conformité.
 
 Avant de migrer vos étiquettes, veillez à bien comprendre les [aspects et les paramètres d’étiquette qui ne sont pas pris en charge par le Centre de sécurité et conformité](configure-policy-migrate-labels.md#considerations-for-unified-labels).
+
+Voir aussi [Quel client en préversion installer pour tester de nouvelles fonctionnalités ?](faqs-infoprotect.md#which-preview-client-do-i-install-for-testing-new-functionality)
 
 ## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Une fois que j’ai migré mes étiquettes, quel portail de gestion utiliser ?
 

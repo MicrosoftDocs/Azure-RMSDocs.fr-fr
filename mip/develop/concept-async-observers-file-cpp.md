@@ -1,18 +1,18 @@
 ---
 title: Concepts – Observateurs de l’API de fichier dans le kit SDK MIP
 description: Le kit SDK MIP est conçu pour être presque entièrement asynchrone. Cet article vous aidera à comprendre comment des observateurs de l’API de fichier sont implémentés et utilisés pour l’asynchronicité.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: aec8fd7df79fe44503887e22dc7e6a110407f98a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: baa62e34e10de3fb4cacc3eb7cb21c0b3e2ebf75
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259520"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57329954"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-observers"></a>Kit SDK Microsoft Information Protection – Observateurs de l’API de fichier
 

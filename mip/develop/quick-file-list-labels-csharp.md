@@ -1,18 +1,18 @@
 ---
 title: Guide de démarrage rapide - liste des étiquettes de sensibilité d’un client Microsoft Information Protection (MIP) à l’aide du SDK MIP C# Wrapper
 description: Un guide de démarrage rapide vous montrant comment utiliser le SDK Microsoft Information Protection C# wrapper pour répertorier les étiquettes de sensibilité dans votre client.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/04/2019
-ms.author: bryanla
-ms.openlocfilehash: f7071952693e947977278b39d28a8ee985d5834e
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: b692e78cbebe9b8657b0479a1d343453f5f07348
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253844"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333328"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C#)
 

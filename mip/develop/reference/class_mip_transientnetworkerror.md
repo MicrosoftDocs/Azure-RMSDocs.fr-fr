@@ -1,18 +1,18 @@
 ---
 title: mip::TransientNetworkError, classe
 description: Décrit la classe mip::transientnetworkerror de Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 726d9d917f390bf7ed91770661f6fe056deae2ee
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: ff9aa768559b56f897289ec30ade9b7c408c92d4
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258604"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332291"
 ---
 # <a name="class-miptransientnetworkerror"></a>mip::TransientNetworkError, classe 
 Erreur de mise en réseau temporaire. Causée par un comportement inattendu lors d’appels réseau aux points de terminaison du service. L’opération peut être retentée, car cette erreur est une erreur temporaire.

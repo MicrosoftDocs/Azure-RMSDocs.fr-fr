@@ -1,18 +1,18 @@
 ---
 title: Concepts – Implémentation d’un délégué d’authentification (C++)
 description: Cet article vous aidera à comprendre comment implémenter un délégué d’authentification dans C++.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: adf82006219a24b39d44a75e22d5ef1dd282aa79
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 20e82e52a293b7723513fbd0990a3d5e66ea568a
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251277"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333413"
 ---
 # <a name="microsoft-information-protection-sdk---implementing-an-authentication-delegate-c"></a>Kit SDK Microsoft Information Protection – Implémentation d’un délégué d’authentification (C++)
 

@@ -1,18 +1,18 @@
 ---
 title: Concepts – Concepts principaux dans le kit SDK MIP – Profil et moteur
 description: Cet article vous aidera à comprendre les concepts principaux du kit SDK, appelés profil et moteur, qui sont créés pendant l’initialisation de l’application.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: 66c8f462aa45c964e471a8ca056c102fec3ffbcc
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: e815820fa9f3a6de95d5e37e350ed18df8513b21
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252926"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333529"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux objets de profil et de moteur
 

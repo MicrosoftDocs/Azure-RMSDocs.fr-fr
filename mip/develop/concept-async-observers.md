@@ -1,18 +1,18 @@
 ---
 title: Concepts – Observateurs dans le kit SDK MIP
 description: Le kit SDK MIP est conçu pour être presque entièrement asynchrone. Cet article vous aidera à comprendre comment des observateurs sont implémentés et utilisés pour l’asynchronicité.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: 9ee7e0bcf7fdd42bb989067adf1037ac8d371cad
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: e42b9996d737ace5b25988eb72fa02aa87230f13
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259658"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330863"
 ---
 # <a name="microsoft-information-protection-sdk---observer-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux observateurs
 

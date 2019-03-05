@@ -1,18 +1,18 @@
 ---
 title: Concepts – API dans le kit SDK MIP
 description: Cet article vous aidera à comprendre 3 types d’API figurant dans le kit SDK MIP et les liens qu’ils partagent, et il présente des cas d’utilisation pour chacun d’eux.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 10/16/2018
-ms.author: bryanla
-ms.openlocfilehash: 1dddb9834a0cc7b365a2294bbad3611e4d01870a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: d4bef66f8e3d808b195ac49f7bb42ab0eb62b7d5
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252399"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330166"
 ---
 # <a name="microsoft-information-protection-sdk---api-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux API
 

@@ -1,18 +1,18 @@
 ---
 title: classe mip::SensitivityTypesRulePackage
 description: Décrit la classe mip::sensitivitytypesrulepackage de Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 7195d58d90b1a704eb4fc667fc2fe3b93ef03e57
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: aac12d1f607fd1cfbe9bd7ff3c4d54a20f7ea038
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257792"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330336"
 ---
 # <a name="class-mipsensitivitytypesrulepackage"></a>classe mip::SensitivityTypesRulePackage 
   

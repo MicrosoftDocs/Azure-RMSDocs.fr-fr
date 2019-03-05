@@ -1,19 +1,19 @@
 ---
 title: Version du Kit de développement logiciel Microsoft Information Protection (MIP) historique des versions et politique du support
 description: Guide de démarrage rapide vous montrant comment écrire la logique d’initialisation pour des applications clientes du kit SDK Microsoft Information Protection (MIP).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 01/08/2019
-ms.author: bryanla
+ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: da4b737082153f47cc0072e8b259da4c0c89c6e4
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 9f02d682164dac8ee28ed023dd7b21b53937f4bb
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252688"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333634"
 ---
 # <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Version du Kit de développement logiciel Microsoft Information Protection (MIP) historique des versions et politique du support
 

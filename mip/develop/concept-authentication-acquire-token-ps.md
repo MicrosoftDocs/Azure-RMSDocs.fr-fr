@@ -1,18 +1,18 @@
 ---
 title: Concepts – Utilisation de PowerShell pour acquérir un jeton d’accès
 description: Cet article vous aidera à comprendre comment utiliser PowerShell pour acquérir un jeton d’accès OAuth2. Cela est requis par l’implémentation du délégué d’authentification.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 02/04/2019
-ms.author: bryanla
-ms.openlocfilehash: 85c06979a5010a17b60751ccd8a09529be2c362d
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 68ae6bc02f671f0a4d18c382ccde4f53873b2fd4
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252892"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332699"
 ---
 # <a name="acquire-an-access-token-powershell"></a>Acquérir un jeton d’accès (PowerShell)
 

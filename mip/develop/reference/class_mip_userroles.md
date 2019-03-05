@@ -1,18 +1,18 @@
 ---
 title: mip::UserRoles, classe
 description: Décrit la classe mip::userroles de Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 45b2b5170fac04364af1a0418da5d6e1f5e488a3
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 94e58874e0bec01156d70bc569d1909e53dd1ebb
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260049"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333396"
 ---
 # <a name="class-mipuserroles"></a>mip::UserRoles, classe 
 Groupe d’utilisateurs et rôles qui leur sont associés.

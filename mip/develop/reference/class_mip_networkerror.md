@@ -1,18 +1,18 @@
 ---
 title: mip::NetworkError, classe
 description: Décrit la classe mip::networkerror de Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: fe2e9410f3589c38a6630ff95fceb1f6b5415165
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 8740244a8dbfcf436a3b6e324f06caf707b0e00d
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259267"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331076"
 ---
 # <a name="class-mipnetworkerror"></a>mip::NetworkError, classe 
 Erreur de mise en réseau. Causée par un comportement inattendu lors d’appels réseau aux points de terminaison du service.

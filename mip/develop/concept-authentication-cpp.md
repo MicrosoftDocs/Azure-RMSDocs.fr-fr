@@ -1,18 +1,18 @@
 ---
 title: Concepts – Authentification dans le kit SDK MIP
 description: Cet article va vous aider à comprendre comment le kit SDK MIP implémente l’authentification, ainsi que les conditions requises pour que les applications clientes fournissent une logique d’acquisition de jeton d’accès OAuth2.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: dd2e8c5c3344da351715069910741c5651f4e617
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: f4d96da36eb41025df5d280c62a3831cd5afa9a1
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257963"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330841"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés à l’authentification
 

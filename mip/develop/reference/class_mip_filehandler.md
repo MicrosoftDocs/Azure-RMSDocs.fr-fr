@@ -1,18 +1,18 @@
 ---
 title: mip::FileHandler, classe
 description: Décrit la classe mip::filehandler de Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 664478f074334196b78b5583867224e1a9f482d2
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 997b3fbfb7dc302f7a47b5cfb281bdaf37c11295
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253065"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332676"
 ---
 # <a name="class-mipfilehandler"></a>mip::FileHandler, classe 
 Interface pour toutes les fonctions de gestion de fichiers.

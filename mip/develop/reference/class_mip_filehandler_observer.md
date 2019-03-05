@@ -1,18 +1,18 @@
 ---
 title: mip::FileHandler::Observer, classe
 description: Décrit la classe mip::filehandler de Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f6362eab61228cdb161f514c643563f9c45a0857
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 02ed14c315cfc15e39b030e42db0dd9a1e785249
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254745"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57329571"
 ---
 # <a name="class-mipfilehandlerobserver"></a>mip::FileHandler::Observer, classe 
 Interface [Observer](class_mip_filehandler_observer.md) permettant aux clients d’obtenir les notifications des événements liés au gestionnaire de fichiers.

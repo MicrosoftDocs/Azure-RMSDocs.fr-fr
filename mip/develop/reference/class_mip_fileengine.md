@@ -1,18 +1,18 @@
 ---
 title: mip::FileEngine, classe
 description: Décrit la classe mip::fileengine de Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: e397ad68fa39b318d6e4c08e36c450a474c3e5a9
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: f4b61c9866c22f2f29166e6caa4cbc81287c11ca
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255170"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333702"
 ---
 # <a name="class-mipfileengine"></a>mip::FileEngine, classe 
 Cette classe fournit une interface pour toutes les fonctions de moteur.

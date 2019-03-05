@@ -1,18 +1,18 @@
 ---
 title: Concepts – Gestionnaires de protection dans le kit SDK MIP
 description: Cet article vous aidera à comprendre comment les gestionnaires de l’API de protection sont créés et utilisés pour appeler des opérations.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: e345a98e69c0173ccda7b80c21a5c2c7aa9af5a3
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: dd38b8e6c9deb45b4ce7df9ec3363ac8036a7ef4
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253019"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330183"
 ---
 # <a name="microsoft-information-protection-sdk---protection-handler-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux gestionnaires de protection
 

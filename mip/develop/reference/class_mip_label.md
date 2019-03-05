@@ -1,18 +1,18 @@
 ---
 title: mip::Label, classe
 description: Décrit la classe mip::label de Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 5a2444ab0abd944418a8d55eae35c5f6023282f7
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: df0507c484350c6e7461aae2426e243ec013df84
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253225"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333165"
 ---
 # <a name="class-miplabel"></a>mip::Label, classe 
 Abstraction d’une étiquette unique Microsoft Information Protection.

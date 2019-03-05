@@ -1,18 +1,18 @@
 ---
 title: mip::ContentLabel, classe
 description: Décrit la classe mip::contentlabel de Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 6ef95a20be13123eec6ad17a9eef26f321e36cf8
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 34e4395858713219361e4e2ccf8308d89bc5f29d
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254660"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330489"
 ---
 # <a name="class-mipcontentlabel"></a>mip::ContentLabel, classe 
 Abstraction d’une étiquette Microsoft Information Protection appliquée à un élément de contenu, généralement un document.

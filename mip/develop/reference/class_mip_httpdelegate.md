@@ -1,18 +1,18 @@
 ---
 title: mip::HttpDelegate, classe
 description: Décrit la classe mip::httpdelegate de Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 8dd81508766c65d6232c278d56f3720a98aaa9eb
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 18425a807fcddc1bc1db19a35534036a6552255c
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256292"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57329843"
 ---
 # <a name="class-miphttpdelegate"></a>mip::HttpDelegate, classe 
 Interface pour le remplacement de la gestion HTTP.

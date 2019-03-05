@@ -1,18 +1,18 @@
 ---
 title: Installation et configuration du kit SDK Microsoft Information Protection (MIP)
 description: Fournit les conditions préalables d’installation et de configuration permettant d’utiliser les applications générées avec le kit SDK Microsoft Information Protection.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/30/2019
-ms.author: bryanla
-ms.openlocfilehash: 13d9d82a402d283c393c90dc52c265a1bf8502d7
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: c61b2c08cf0cb0fc59942bad3b5bb3fdbc47832c
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254269"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331968"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installation et configuration du kit SDK Microsoft Information Protection (MIP) 
 

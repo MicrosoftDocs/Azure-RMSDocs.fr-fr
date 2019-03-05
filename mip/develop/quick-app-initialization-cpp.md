@@ -1,18 +1,18 @@
 ---
 title: Démarrage rapide – Initialisation pour les clients C++ du kit SDK Microsoft Information Protection (MIP)
 description: Guide de démarrage rapide vous montrant comment écrire la logique d’initialisation pour des applications clientes du kit SDK Microsoft Information Protection (MIP).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
-ms.author: bryanla
-ms.openlocfilehash: 75ca6b078275a2547cebfee3c78f8741f367c788
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: d30111953bdc55b66b712f30de0c50d28ac07303
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255952"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331917"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation de l’application cliente (C++)
 
@@ -322,7 +322,7 @@ Comme mentionné, les objets de profil et le moteur sont requis pour les clients
 
 3. Remplacez toutes les valeurs d’espace réservé dans le code source que vous venez de coller dans, à l’aide de constantes de chaîne :
 
-   | Espace réservé | Value | Exemple |
+   | Espace réservé | Valeur | Exemple |
    |:----------- |:----- |:--------|
    | \<application-id\> | L’Azure AD Application ID (GUID) affecté à l’application inscrite dans [étape #2 du « programme d’installation du SDK MIP et la configuration »](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) article. Remplacez les instances de 2. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
    | \<application-name\> | Un nom convivial défini par l’utilisateur pour votre application. Doit contenir des caractères ASCII valides (à l’exclusion des « ; ») et dans l’idéal, correspond au nom d’application que vous avez utilisé dans votre inscription Azure AD. | `"AppInitialization"` |

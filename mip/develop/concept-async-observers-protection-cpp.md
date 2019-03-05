@@ -1,18 +1,18 @@
 ---
 title: Concepts – Observateurs de l’API de protection dans le kit SDK MIP
 description: Le kit SDK MIP est conçu pour être presque entièrement asynchrone. Cet article vous aidera à comprendre comment des observateurs de l’API de protection sont implémentés et utilisés pour l’asynchronicité.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: 3f3d556d0772733f87445244b82d2b34924669df
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 2d1cf81e20a317ecb1eb9e71b5b4e0ab32482877
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256173"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330760"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-observers"></a>Kit SDK Microsoft Information Protection – Observateurs de l’API de protection
 

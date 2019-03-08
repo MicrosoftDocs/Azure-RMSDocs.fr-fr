@@ -2,8 +2,8 @@
 title: Procédure d’utilisation des paramètres de chiffrement | Azure RMS
 description: Orientation pour les packages de chiffrement Azure RMS et les captures de code pour leur utilisation.
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 44567c4f083ed482a7fd27963e11b65d9a366c86
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 11ebf15c82d8e27399a9df004f98f00b274802f2
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259896"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330357"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>Comment : utiliser des paramètres de chiffrement
 

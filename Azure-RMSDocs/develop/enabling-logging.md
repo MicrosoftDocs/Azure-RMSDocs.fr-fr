@@ -2,8 +2,8 @@
 title: 'Comment : activer la journalisation des erreurs et des performances | Azure RMS'
 description: Le SDK Microsoft Rights Management 4.2 gère le chargement des journaux de diagnostic et de performances par le biais d’une propriété d’appareil unique.
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 23f4eda077a4f3749097e0f34013d5a831e6cb2f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 93975ad0f2113fc10bff3f54f0b6729dfa33bad3
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255374"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331849"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>Procédure : activer la journalisation des erreurs et des performances
 Le SDK Microsoft Rights Management 4.2 gère le chargement des journaux de diagnostic et de performances par le biais d’une propriété d’appareil unique.

@@ -2,8 +2,8 @@
 title: Exemples de code iOS/OS X | Azure RMS
 description: Cette rubrique présente des éléments de code importants pour la version iOS/OS X du Kit RMS SDK.
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: b8a09101f261089aefc01f73da1c9e530d76f7b3
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: c2cae0e07903dd27c8cd4332e255cb33910c9f94
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252875"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330793"
 ---
 # <a name="iosos-x-code-examples"></a>Exemples de code iOS/OS X
 

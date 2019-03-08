@@ -2,8 +2,8 @@
 title: Exemples de code Android | Azure RMS
 description: Cette rubrique présente des éléments de code importants pour la version Android du Kit RMS SDK.
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 12/10/2018
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: e9015fab186df95fa88706674276edb2f8c9ef09
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 7ae70446b932d9f78c2dccc99b2f5727c2e9418e
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255476"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331446"
 ---
 # <a name="android-code-examples"></a>Exemples de code Android
 

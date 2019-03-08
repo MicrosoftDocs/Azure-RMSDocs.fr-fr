@@ -2,8 +2,8 @@
 title: 'Comment : utiliser les droits intégrés | Azure RMS'
 description: Décrit les droits intégrés fournis par RMS SDK 4.2 et les restrictions d’utilisation qu’une application doit appliquer pour respecter ces droits.
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 9142dd29-f1f4-4c2f-82ac-534f14b8bba1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: cd9c1ae8873b8f5a8d0440bd017d92d16801219b
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 6904c0e477a34e4321fcf3d7ee66b47b201bed21
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259607"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332002"
 ---
 # <a name="how-to-use-built-in-rights"></a>Procédure : Utiliser les droits intégrés
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82b76924e74796a06ecc9bf57acb1461cc0e8ce9
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 87cd350077f42718a6bcd86a98e9f8f1f79eb53e
+ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256666"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557644"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
@@ -44,7 +44,7 @@ Même si vous n’avez pas besoin de connaître en détail le fonctionnement de 
 
 |Contrôles de chiffrement|Utilisation dans Azure RMS|
 |-|-|
-|Algorithme : AES<br /><br />Longueur de clé : 128 bits et 256 bits [[1]](#footnote-1)|Protection de documentation|
+|Algorithme : AES<br /><br />Longueur de clé : 128 bits et 256 bits [[1]](#footnote-1)|Protection du contenu|
 |Algorithme : RSA<br /><br />Longueur de clé : 2 048 bits [[2]](#footnote-2)|Protection de clé|
 |SHA-256|Signature de certificat|
 

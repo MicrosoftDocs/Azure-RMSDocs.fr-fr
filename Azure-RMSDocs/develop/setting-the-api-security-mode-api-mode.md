@@ -2,8 +2,8 @@
 title: Procédure de définition du mode de sécurité de l’API | Azure RMS
 description: Choisissez le mode de sécurité qu’exécute votre application API de fichier.
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 5f74099dec06ea120dd5f5e212b736e8cd3b0fba
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: de05a0331e347dbfa4c10237433fcf370f088388
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251787"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330404"
 ---
 # <a name="how-to-set-the-api-security-mode"></a>Comment : définir le mode de sécurité de l’API
 

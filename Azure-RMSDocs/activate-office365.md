@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d072b2d9b87a366d6828aa831a2ce200d420c3b3
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 3eb45542a3ee6cb712abadae68b1d0572204ae35
+ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258916"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557678"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Comment activer Azure Rights Management à partir du centre d’administration Office 365
 
@@ -34,7 +34,7 @@ Si vous avez des questions sur les exigences de l’abonnement ou que vous avez 
     Si vous êtes invité à vous connecter, utilisez un compte qui est administrateur général pour Office 365.
     
     > [!TIP]
-    > Pour obtenir l'aide du centre d'administration, consultez [À propos du Centre d'administration Office 365](https://support.office.com/article/About-the-Office-365-Admin-Center-758befc4-0888-4009-9f14-0d147402fd23).
+    > Pour obtenir l'aide du centre d'administration, consultez [À propos du Centre d'administration Office 365](/office365/admin/admin-overview/about-the-admin-center).
     
     Si vous préférez accéder à la page **Rights Management** sur le Centre d’administration : **Paramètres** > **Services et compléments** > **Microsoft Azure Information Protection** > **Gérer les paramètres Microsoft Azure Information Protection**
 

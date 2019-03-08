@@ -2,8 +2,8 @@
 title: Configuration de l’API de fichier | Azure RMS
 description: Le comportement de l’API de fichier peut être configuré via les paramètres du Registre.
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 10/11/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: a46a270780fe6245adf14b950833d6f6277f1b35
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: d1181dfe1c495a334aaebd567df5db7e14649e25
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253014"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330999"
 ---
 # <a name="file-api-configuration"></a>Configuration de l’API de fichier
 

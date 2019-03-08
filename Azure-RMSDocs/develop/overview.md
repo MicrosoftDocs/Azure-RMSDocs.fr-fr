@@ -2,8 +2,8 @@
 title: Présentation - RMS SDK 4.2 | Azure RMS
 description: AD RMS et Azure RMS sont une technologie de protection des informations qui vous aide à protéger les informations numériques contre toute utilisation non autorisée.
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 8A13494E-C1D7-407D-BCD1-A406915EA578
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 933ced2a2942867657098203c58246ca42caa43b
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 1e7e2badcd57ce6896c9850729ba546efe22b778
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253674"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331339"
 ---
 # <a name="overview"></a>Vue d’ensemble
 

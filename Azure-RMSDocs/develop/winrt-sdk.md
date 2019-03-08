@@ -2,8 +2,8 @@
 title: Configuration pour le Windows Store | Azure RMS
 description: Les applications du Windows Store peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations.
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 12/10/2018
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 18da97a07e7d65c69f88167cf440e864d3b29631
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 57020ff3af69e2711adcc717951b61e48281645a
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257601"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333430"
 ---
 # <a name="windows-store-setup"></a>Configuration pour le Windows Store
 

@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: troubleshooting
 ms.collection: M365-security-compliance
-ms.date: 10/19/2018
+ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e548b2b6e9b32899ceff693312cf510b9fff74aa
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 97b9fdb53c103eac94e62ddb6438c57e4c9f45cc
+ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333546"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57581723"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Questions fréquentes (FAQ) sur le kit SDK Microsoft Information Protection (MIP) et problèmes
 
@@ -20,7 +20,9 @@ Cet article fournit des réponses aux Questions fréquentes (FAQ) et des conseil
 
 ## <a name="frequently-asked-questions"></a>Forum Aux Questions 
 
-### <a name="question-how-does-the-sdk-handle-strings-and-what-string-type-should-i-be-using-in-my-code"></a>Question : Comment le kit SDK gère les chaînes, et quel type de chaîne utiliser dans mon code ?
+### <a name="sdk-string-handling"></a>Gestion des chaînes de kit de développement logiciel
+
+**Question**: Comment le SDK gère-t-elle les chaînes, et quel type de chaîne dois-je utiliser dans mon code ?
 
 Le kit SDK est destiné à un usage multiplateforme et utilise [UTF-8 (Unicode Transformation Format - 8 bits)](https://wikipedia.org/wiki/UTF-8) pour gérer les chaînes. Les instructions varient selon la plateforme que vous utilisez :
 
@@ -34,14 +36,24 @@ Le kit SDK est destiné à un usage multiplateforme et utilise [UTF-8 (Unicode T
 
 ### <a name="error-file-format-not-supported"></a>Erreur : « Format de fichier non pris en charge »  
 
-| Erreur | Solution |
-|-|-|
-|*Format de fichier non pris en charge.*| Cette exception vient de la tentative de protéger ou d’étiqueter un fichier PDF qui a été signé numériquement ou qui est protégé par un mot de passe. Voir [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) pour plus d’informations sur la protection et l’étiquetage de fichiers PDF.|
+**Question**: Je reçois l’erreur suivante lorsque vous tentez de protéger ou d’un fichier PDF de l’étiquette ?
+
+> Format de fichier non pris en charge.
+
+Cette exception provoque de la tentative de protéger ou d’un fichier PDF qui a été signé numériquement de l’étiquette ou de mot de passe protégé. Voir [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) pour plus d’informations sur la protection et l’étiquetage de fichiers PDF.
 
 ### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Erreur : « Impossible d’analyser la stratégie de conformité acquis »  
 
-Vous avez téléchargé le SDK MIP et exécuté les exemples d’applications. Vous utilisez l’exemple de fichier pour tenter de lister toutes les étiquettes, mais vous obtenez l’erreur suivante :
+**Question**: Je reçois l’erreur suivante après le téléchargement du SDK MIP et tente d’utiliser l’exemple de fichier pour répertorier toutes les étiquettes ?
 
-| Erreur | Solution |
-|-|-|
-|*Un problème s’est produit : Impossible d’analyser la stratégie de conformité acquis. A échoué avec : [classe mip::CompliancePolicyParserException] étiquette introuvable : stratégie, NodeType : 15, nom : Aucun nom trouvé, valeur :, ancêtres : <SyncFile> <Content>, ID de corrélation : [34668a40-blll-4ef8-b2af-00005aa674z9]*| Cela indique que vous n’avez pas migré vos étiquettes d’Azure Information Protection vers l’expérience d’étiquetage unifiée. Suivez le [Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365](/azure/information-protection/configure-policy-migrate-labels) pour migrer les étiquettes, puis créer une stratégie d’étiquette dans le Centre de conformité et de sécurité Office 365. Une fois que vous avez terminé, l’exemple s’exécute correctement.|
+> Un problème s’est produit : Impossible d’analyser la stratégie de conformité acquis. A échoué avec : [classe mip::CompliancePolicyParserException] étiquette introuvable : stratégie, NodeType : 15, nom : Aucun nom trouvé, valeur :, ancêtres : <SyncFile> <Content>, ID de corrélation : [34668a40-blll-4ef8-b2af-00005aa674z9]
+
+Cela indique que vous n’avez pas migré vos étiquettes d’Azure Information Protection à l’expérience d’étiquetage unifiée. Suivez le [Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365](/azure/information-protection/configure-policy-migrate-labels) pour migrer les étiquettes, puis créer une stratégie d’étiquette dans le Centre de conformité et de sécurité Office 365. 
+
+### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>Erreur : « System.ComponentModel.Win32Exception : Échec de LoadLibrary »
+
+**Question**: Je reçois l’erreur suivante lors de l’utilisation du Wrapper de .NET SDK MIP ?
+
+> System.ComponentModel.Win32Exception : LoadLibrary a échoué pour : [sdk_wrapper_dotnet.dll] lors de l’appel MIP. Initialize().
+
+Votre application n’a pas le runtime requis, ou n’a pas été créée en tant que mise en production. Consultez [vous assurer que votre application dispose le runtime requis](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) pour plus d’informations. 

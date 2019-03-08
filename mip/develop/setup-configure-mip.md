@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/30/2019
+ms.date: 03/01/2019
 ms.author: mbaldwin
-ms.openlocfilehash: c61b2c08cf0cb0fc59942bad3b5bb3fdbc47832c
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: db815d17303abb0fb98b6e5936fbcd1f975d74f0
+ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331968"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57581740"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installation et configuration du kit SDK Microsoft Information Protection (MIP) 
 
@@ -219,6 +219,17 @@ Si vous disposez déjà d'un IPIA signé et souhaitez ajouter un nouvel *ID de l
 - Contacts de la société, e-mail et téléphone pour la correspondance en cas de situation critique
 
 Après l’envoi du courrier électronique, autoriser jusqu'à 72 heures pour recevoir un accusé de réception.
+
+## <a name="ensure-your-app-has-the-required-runtime"></a>Vérifiez que votre application dispose le runtime requis
+
+> [!NOTE]
+> Cette étape est nécessaire uniquement si vous déployez l’application sur un ordinateur sans Visual Studio, ou si l’installation de Visual Studio ne possède pas les composants Runtime Visual C++.
+
+Les applications créées avec le SDK MIP nécessitent le runtime Visual C++ 2015 ou Visual C++ 2017 pour être installé, si ce n’est pas déjà présent.
+- [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=53587)
+- [Microsoft Visual C++ Redistributable pour Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
+
+Il fonctionne uniquement si l’application a été générée en tant que mise en production. Si l’application est générée en tant que le débogage, puis le runtime de débogage Visual C++ DLL doivent être inclus avec l’application ou installé sur l’ordinateur. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 

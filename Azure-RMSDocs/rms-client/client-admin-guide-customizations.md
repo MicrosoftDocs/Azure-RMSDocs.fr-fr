@@ -4,19 +4,19 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/27/2019
+ms.date: 03/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 59395fe48eff2a3b1df0ae25dded1a66af9f453f
-ms.sourcegitcommit: f19ee03fd3f6f39df1a28ab389b43fbd8f9e9072
+ms.openlocfilehash: 48280e4654d9ab5ce999dcc934791ff408ca5691
+ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56891092"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379948"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -50,12 +50,17 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 |CompareSubLabelsInAttachmentAction|[Activer la prise en charge de l’ordre des sous-étiquettes](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Masquer définitivement la barre Azure Information Protection](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Activer ou désactiver les options d’autorisations personnalisées pour les utilisateurs](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
+|EnableCustomPermissionsForCustomProtectedFiles|[Pour les fichiers protégés avec des autorisations personnalisées, toujours afficher des autorisations personnalisées pour les utilisateurs dans l’Explorateur de fichiers](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnablePDFv2Protection|[Ne pas protéger les fichiers PDF suivant la norme ISO pour le chiffrement PDF](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Modifier le niveau de journalisation local](#change-the-local-logging-level)
+|OutlookBlockUntrustedCollaborationLabel|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookCollaborationTrustedDomains|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Définir une autre étiquette par défaut pour Outlook](#set-a-different-default-label-for-outlook)|
+|OutlookJustifyUntrustedCollaborationLabel|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Activer la classification recommandée dans Outlook](#enable-recommended-classification-in-outlook)|
+|OutlookWarnUntrustedCollaborationLabel|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Supprimer « Pas maintenant » pour les documents quand l’étiquetage obligatoire est utilisé](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[Désactiver le niveau d’intégrité faible pour le scanneur](#disable-the-low-integrity-level-for-the-scanner)|
 |PullPolicy|[Prendre en charge les ordinateurs déconnectés](#support-for-disconnected-computers)
@@ -205,6 +210,19 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Value : **True** pour rendre l’option des autorisations personnalisées visible, ou **False** pour masquer cette option
 
+## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>Pour les fichiers protégés avec des autorisations personnalisées, toujours afficher des autorisations personnalisées aux utilisateurs dans l’Explorateur de fichiers
+
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Ce paramètre est en préversion et nécessite la préversion du client.
+
+Quand vous configurez le [paramètre de stratégie](../configure-policy-settings.md) **Rendre l’option des autorisations personnalisées disponible pour les utilisateurs** ou le paramètre client avancé équivalent dans la section précédente, les utilisateurs ne sont pas en mesure de voir ou de changer les autorisations personnalisées qui sont déjà définies dans un document protégé. 
+
+Quand vous créez et que vous configurez ce paramètre client avancé, les utilisateurs peuvent voir et changer les autorisations personnalisées pour un document protégé quand ils utilisent l’Explorateur de fichiers, en cliquant avec le bouton droit sur le fichier. L’option **Autorisations personnalisées** du bouton **Protéger** sur le ruban Office reste masquée.
+
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
+
+- Clé : **EnableCustomPermissionsForCustomProtectedFiles**
+
+- Value : **True**
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Masquer définitivement la barre Azure Information Protection
 
@@ -250,6 +268,98 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Value : **True**
 
+## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails
+
+Cette configuration utilise plusieurs [paramètres clients avancés](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Cette configuration est en préversion et est susceptible de changer.
+
+Quand vous créez et que vous configurez les paramètres client avancés suivants, les utilisateurs voient des messages contextuels dans Outlook qui peuvent les avertir avant d’envoyer un e-mail, leur demander de justifier la raison pour laquelle ils envoient un e-mail ou les empêcher d’envoyer un e-mail pour un des scénarios suivants :
+
+- **Leur e-mail ou la pièce jointe à leur e-mail a une étiquette spécifique** :
+    - La pièce jointe peut être n’importe quel type de fichier
+
+- **Leur e-mail ou la pièce jointe à leur e-mail n’a pas d’étiquette** :
+    - La pièce jointe peut être un document Office ou un document PDF
+
+Quand ces conditions sont remplies et que l’adresse e-mail du destinataire ne figure pas dans la liste des noms de domaine autorisés que vous avez spécifiée, l’utilisateur voit un message contextuel avec une des actions suivantes :
+
+- **Avertir** : L’utilisateur peut confirmer et envoyer, ou bien annuler.
+
+- **Justifier** : L’utilisateur est invité à entrer une justification (selon des options prédéfinies ou sous forme libre).  L’utilisateur peut ensuite envoyer ou annuler l’e-mail. Le texte de la justification est écrit dans l’en-tête X de l’e-mail afin qu’il puisse être lu par d’autres systèmes, par exemple des services de protection contre la perte de données.
+
+- **Bloquer** : L’utilisateur ne peut pas envoyer l’e-mail tant que la condition perdure. Le message contient la raison du blocage de l’e-mail pour que l’utilisateur puisse résoudre le problème, par exemple supprimer des destinataires spécifiques ou appliquer une étiquette à l’e-mail. 
+
+
+### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Pour implémenter des messages d’avertissement, de justification ou de blocage pour des étiquettes spécifiques :
+
+Pour implémenter les messages contextuels pour des étiquettes spécifiques, vous devez connaître l’ID d’étiquette pour ces étiquettes. L’ID de l’étiquette figure dans le panneau **Étiquette** quand vous affichez ou configurez la stratégie Azure Information Protection dans le portail Azure. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier l’ID de l’étiquette (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente.
+
+Créez un ou plusieurs des paramètres client avancés avec les clés suivantes. Pour les valeurs, spécifiez une ou plusieurs étiquettes en utilisant leur ID, chacun d’eux séparé par une virgule.
+
+Exemple de valeur pour plusieurs ID d’étiquette sous forme de chaîne séparée par des virgules : `dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
+
+
+- Messages d’avertissement :
+    
+    - Clé : **OutlookWarnUntrustedCollaborationLabel**
+    
+    - Valeur : \<**ID d’étiquette séparés par des virgules**>
+
+- Messages de justification :
+    
+    - Clé : **OutlookJustifyUntrustedCollaborationLabel**
+    
+    - Valeur : \<**ID d’étiquette séparés par des virgules**>
+
+- Messages de blocage :
+    
+    - Clé : **OutlookBlockUntrustedCollaborationLabel**
+    
+    - Valeur : \<**ID d’étiquette séparés par des virgules**>
+
+
+### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Pour implémenter des messages contextuels d’avertissement, de justification ou de blocage pour des e-mails ou des pièces jointes qui n’ont pas d’étiquette :
+
+Créez le paramètre client avancé suivant avec une des valeurs suivantes :
+
+- Messages d’avertissement :
+    
+    - Clé : **OutlookUnlabeledCollaborationAction**
+    
+    - Value : **Warn**
+
+- Messages de justification :
+    
+    - Clé : **OutlookUnlabeledCollaborationAction**
+    
+    - Value : **Justify**
+
+- Messages de blocage :
+    
+    - Clé : **OutlookUnlabeledCollaborationAction**
+    
+    - Value : **Bloquer**
+
+- Désactiver ces messages :
+    
+    - Clé : **OutlookUnlabeledCollaborationAction**
+    
+    - Value : **Off**
+
+### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Pour spécifier les noms de domaine autorisés pour des destinataires exemptés des messages contextuels
+
+Quand vous spécifiez un nom de domaine dans un paramètre client avancé, les utilisateurs ne voient pas les messages contextuels pour les destinataires dont l’adresse e-mail comprend ce nom de domaine. Dans ce cas, les e-mails sont envoyés sans qu’un message interrompe le processus. Pour spécifier plusieurs domaines, ajoutez-les sous la forme d’une seule chaîne, en les séparant par des virgules.
+
+Une configuration typique consiste à afficher les messages contextuels seulement pour les destinataires qui sont externes à votre organisation ou qui ne sont pas des partenaires autorisés de votre organisation. Dans ce cas, vous spécifiez tous les domaines de messagerie utilisés par votre organisation et par vos partenaires.
+
+Créez la clé du paramètre client avancé suivant. Pour la valeur, spécifiez un ou plusieurs domaines, chacun d’eux séparé par une virgule.
+
+Exemple de valeur pour plusieurs domaines sous forme de chaîne séparée par des virgules : `contoso.com,fabrikam.com,litware.com`
+
+- Clé : **OutlookCollaborationTrustedDomains**
+
+- Valeur : **\<** noms de domaine, séparés par des virgules**>**
+
+Par exemple, si vous spécifiez le nom de domaine contoso.com, les utilisateurs ne voient pas les messages contextuels dans Outlook quand ils envoient un e-mail à john@sales.contoso.com.
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Définir une autre étiquette par défaut pour Outlook
 
@@ -356,6 +466,8 @@ Si vous voulez que le client rétablisse le comportement des versions antérieur
 Pour que le scanneur Azure Information Protection utilise le nouveau paramètre, le service du scanneur doit être redémarré. De plus, le scanneur ne protègera plus par défaut les documents PDF. Si vous voulez que les documents PDF soient protégés par le scanneur quand EnablePDFv2Protection est défini sur False, vous devez [modifier le Registre](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
 
 Pour plus d’informations sur le nouveau chiffrement PDF, consultez le billet de blog [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
+
+Pour obtenir la liste des lecteurs PDF qui prennent en charge la norme ISO pour le chiffrement des PDF, et des lecteurs qui prennent en charge des formats plus anciens, consultez [Lecteurs PDF pris en charge pour Microsoft Information Protection](protected-pdf-readers.md).
 
 ### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>Pour convertir des fichiers .ppdf existants en fichiers .pdf protégés
 

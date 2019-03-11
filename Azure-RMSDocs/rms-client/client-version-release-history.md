@@ -4,18 +4,18 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bdc92908e04cd0568a7417a269168b34058790e3
-ms.sourcegitcommit: abb08a85dfd7a0f100b381934a3a211da6727178
+ms.openlocfilehash: 9240e0a8fc8f70fb38d9984ae74ee039d0f52e39
+ms.sourcegitcommit: 872fe78c482e8c2c57c3653919edeba745411cba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828666"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57510052"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -49,7 +49,7 @@ Si vous disposez d’une version 1 du client ultérieure à la version 1.41.51.0
 > [!TIP]
 > Vous vous intéressez à l’évaluation au client d’étiquetage unifié Azure Information Protection, car vos étiquettes sont publiées à partir du Centre de sécurité et de conformité Office 365 ? Consultez [Client d’étiquetage unifié Azure Information Protection : Informations sur la version](unifiedlabelingclient-version-release-history.md).
 
-**Date de publication** : 15/01/2019
+**Date de publication** : 05/03/2019
 
 Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
@@ -77,6 +77,11 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
     - Mot de passe de paramètre de publication Azure
     - Clé de compte de stockage Azure (générique)
 
+- Nouveaux paramètres client avancés implémentant des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails. [Plus d’informations](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+
+- Nouveau paramètre client avancé qui est applicable seulement quand vous configurez le paramètre de stratégie de façon à ne pas afficher des autorisations personnalisées : Quand un fichier est protégé par des autorisations personnalisées, affichez l’option des autorisations personnalisées dans l’Explorateur de fichiers, pour que les utilisateurs puissent les voir et les changer (s’ils ont les autorisations nécessaires pour changer les paramètres de protection). [Plus d’informations](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+
+
 **Correctifs** :
 
 - De nouveaux marquages visuels sont systématiquement appliqués lorsqu’un utilisateur ajoute de nouvelles sections à un document Word, puis attribue une nouvelle étiquette au document.
@@ -90,6 +95,12 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 - Le client Azure Information Protection affiche correctement les étiquettes qui ont été appliquées par les [clients qui prennent en charge l’étiquetage unifié](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
 
 - Les documents s’ouvrent correctement dans Office sans message de récupération lorsque la protection a été supprimée par l’Explorateur de fichiers et avec le bouton droit, PowerShell et le scanneur.
+
+- Quand vous utilisez le paramètre client avancé pour définir une [étiquette par défaut pour Outlook](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook), vous pouvez appliquer une étiquette parent qui a des sous-étiquettes quand toutes ces sous-étiquettes sont désactivées pour l’utilisateur.
+
+- Quand vous utilisez le [paramètre de stratégie](../configure-policy-settings.md) **Pour les e-mails avec des pièces jointes, appliquez une étiquette qui correspond à la classification la plus élevée de ces pièces jointes**, et l’étiquette avec la classification la plus élevée est configurée pour les autorisations définies par l’utilisateur. Avant, le résultat était que l’étiquette était appliquée à l’e-mail, mais la protection ne l’était pas. Maintenant :
+    - Quand les autorisations définies par l’utilisateur de l’étiquette incluent Outlook (Ne pas transférer) : Appliquer cette étiquette et sa protection Ne pas transférer à l’e-mail.
+    - Quand les autorisations définies par l’utilisateur de l’étiquette sont seulement pour Word, Excel, PowerPoint et l’Explorateur de fichiers : Ne pas appliquer l’étiquette et n’appliquer aucune protection à l’e-mail.
 
 **Autres modifications :**
 

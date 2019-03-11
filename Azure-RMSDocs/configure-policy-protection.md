@@ -4,17 +4,17 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 11063a208e21ef121ba0a3a5007c76635f63af17
-ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
+ms.openlocfilehash: 110cf52834ef7c2075539f15238c738aa61a16f7
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017147"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332308"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -73,7 +73,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
         
         Si les utilisateurs n’ont pas les autorisations nécessaires pour supprimer la protection Rights Management et qu’ils sélectionnent une étiquette configurée avec l’option **Supprimer la protection**, ils reçoivent le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
 
-4. Si vous avez sélectionné **Protéger**, le panneau **Protection** s’ouvre automatiquement si l’une des autres options a été sélectionnée. Si ce nouveau panneau ne s’ouvre pas automatiquement, sélectionnez **Protection** :
+4. Si vous avez sélectionné **Protéger**, le panneau **Protection** s’ouvre automatiquement si une des autres options a été sélectionnée précédemment. Si ce nouveau panneau ne s’ouvre pas automatiquement, sélectionnez **Protection** :
     
     ![Configurer la protection d’une étiquette Azure Information Protection](./media/info-protect-protection-bar-configured.png)
 
@@ -135,7 +135,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
      |Paramètre|Plus d’informations|Paramètre recommandé
      |-----------|--------------------|--------------------|
-     |**expiration du contenu**|Définissez une date ou un nombre de jours limites pour l’ouverture par les utilisateurs sélectionnés des documents ou e-mails protégés par ces paramètres. Vous pouvez spécifier une date ou un nombre de jours à partir du moment où la protection est appliquée au contenu.<br /><br />Lorsque vous spécifiez une date, celle-ci prend effet à minuit, dans votre fuseau horaire actuel.|**Le contenu n’expire jamais**, sauf s'il comporte une spécification de durée.|
+     |**expiration du contenu**|Définissez une date ou un nombre de jours limite pour l’ouverture par les utilisateurs sélectionnés des documents protégés par ces paramètres. Pour les e-mails, l’expiration n’est pas toujours appliquée en raison des mécanismes de mise en cache utilisés par certains clients de messagerie.<br /><br />Vous pouvez spécifier une date ou un nombre de jours à partir du moment où la protection est appliquée au contenu.<br /><br />Lorsque vous spécifiez une date, celle-ci prend effet à minuit, dans votre fuseau horaire actuel.|**Le contenu n’expire jamais**, sauf s'il comporte une spécification de durée.|
      |**Autoriser l’accès hors connexion**|Utilisez ce paramètre pour équilibrer les éventuelles exigences de sécurité que vous avez (dont l’accès après la révocation) avec la possibilité pour les utilisateurs sélectionnés d’ouvrir du contenu protégé lorsqu’ils ne disposent pas d’une connexion Internet.<br /><br />Si vous spécifiez que le contenu n’est pas disponible sans connexion Internet ou que ce contenu est disponible seulement pour un nombre de jours spécifié, quand ce seuil est atteint, ces utilisateurs doivent se réauthentifier et leur accès est journalisé. Dans ce cas, si leurs informations d’identification ne sont pas mises en cache, les utilisateurs sont invités à se connecter préalablement pour pouvoir ouvrir le ou e-mail.<br /><br />En plus de la réauthentification, la stratégie et l’appartenance au groupe d’utilisateurs sont réévaluées. Cela signifie que les utilisateurs peuvent accéder de nouveau ou ne plus accéder à un même document ou e-mail si des modifications ont été apportées à la stratégie ou à l'appartenance au groupe depuis leur dernier accès. Cela peut inclure l’absence d’accès si le document a été [révoqué](./rms-client/client-track-revoke.md).|En fonction de la sensibilité du contenu :<br /><br />- **Nombre de jours pendant lesquels le contenu est disponible sans connexion Internet** = **7** pour les données métier sensibles pouvant nuire à l’entreprise si elles sont partagées avec des personnes non autorisées. Cette recommandation offre un compromis entre sécurité et flexibilité. Il peut s’agir entre autres de contrats, de rapports de sécurité, de résumés de prévision et de données commerciales.<br /><br />- **Jamais** pour les données d’entreprise très sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Cette recommandation donne la priorité à la sécurité par rapport à la souplesse et garantit que si le document est révoqué, tous les utilisateurs autorisés perdent instantanément la possibilité d’ouvrir le document. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|
     
      Une fois terminée la configuration des autorisations et des paramètres, cliquez sur **OK**. 
@@ -292,6 +292,20 @@ L’avantage de cette configuration est que vous n’avez pas besoin de spécifi
 
 6. Dans le panneau **Étiquette**, sélectionnez **Enregistrer**.
 
+
+### <a name="example-6-label-that-applies-just-for-me-protection"></a>Exemple 6 : Étiquette qui applique une protection « Pour moi uniquement »
+
+Cette configuration offre l’opposé de la collaboration sécurisée pour les documents : À l’exception d’un [super utilisateur](configure-super-users.md), seule la personne qui applique l’étiquette peut ouvrir le contenu protégé, sans aucune restriction. Cette configuration est souvent appelée « Pour moi uniquement » et convient quand un utilisateur veut enregistrer un fichier à n’importe quel emplacement et être assuré d’être le seul à pouvoir l’ouvrir.
+
+La configuration de l’étiquette est extrêmement simple :
+
+1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
+    
+2. Sélectionnez **OK** sans sélectionner aucun utilisateur ou sans configurer aucun paramètre dans ce panneau.
+    
+    Même si vous pouvez configurer des paramètres pour **Expiration du contenu** et **Autoriser l’accès hors connexion**, quand vous ne spécifiez pas d’utilisateurs et leurs autorisations, ces paramètres d’accès ne sont pas applicables. La raison en est que la personne qui applique la protection est l’[émetteur Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) pour le contenu et que ce rôle est exempté de ces restrictions d’accès.
+
+3. Dans le panneau **Étiquette**, sélectionnez **Enregistrer**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

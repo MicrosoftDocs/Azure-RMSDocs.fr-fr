@@ -413,18 +413,15 @@ items:
       href: faqs-rms.md
   - name: Information et support
     href: information-support.md
-    items:
-    - name: Aide rapide
-      href: help-bot.md
   - name: Conformité et informations annexes
     href: compliance.md
   - name: Informations de référence sur PowerShell
     href: https://docs.microsoft.com/powershell/azure/aip/overview?view=azureipps
   - name: Terminologie
     href: terminology.md
-ms.openlocfilehash: f10f9116d8017951c704d9f4f173e780cf23516d
-ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
+ms.openlocfilehash: 7d50cf5d9796499808d14dfb7edcb6072be93d16
+ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379897"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57734131"

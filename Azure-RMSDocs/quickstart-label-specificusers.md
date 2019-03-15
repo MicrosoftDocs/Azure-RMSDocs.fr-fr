@@ -8,12 +8,12 @@ ms.date: 02/15/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: a4057396bbe2d642d5f1d155a9e3975d40f02b1e
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: ea1316d89358096ff585137df151d91a4d910300
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265976"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828377"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques
 
@@ -31,7 +31,7 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
 
 1. Un abonnement comportant le plan Azure Information Protection 1 ou 2.
     
-    Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
+    Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
 
 2. Vous avez ajouté le panneau Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
 

@@ -12,12 +12,12 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 22dbe505020d7ed65318fcdc173a7e659791b606
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2db27a558acd60fc1d3f6a05c1dda90d00baa3bb
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332070"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829074"
 ---
 # <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
 
@@ -33,7 +33,7 @@ Cette rubrique décrit les modifications et les fonctionnalités importantes de 
 -   [Mise à jour de mai 2015 : ajout du contrôle de la journalisation](#may-2015-update---adds-logging-control)
 -   [Mise à jour de février 2015 : ajout de la prise en charge des applications du Windows Store](#february-2015-update---adds-windows-store-application-support)
 -   [Mise à jour de janvier 2015 : ajout de la prise en charge de la plateforme WinPhone](#january-2015-update---adds-winphone-platform-support)
--   [Mise à jour d’octobre 2014 : mise à niveau vers Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-4-1)
+-   [Mise à jour d’octobre 2014 : mise à niveau vers Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-41)
 -   [Notes de publication](#release-notes)
 -   [Forum Aux Questions](#frequently-asked-questions)
 
@@ -240,4 +240,3 @@ Cette section donne des informations sur les versions actuelles et précédentes
 **Q** : L’infrastructure de l’exemple d’application est adaptée à Xcode 5. Puis-je utiliser Xcode 4.6 ?
 
 **R** : Le kit de développement logiciel (SDK) du système d’exploitation OS X fonctionne avec Xcode 4.6 et versions ultérieures uniquement et OS X 10.8 et versions ultérieures.
-

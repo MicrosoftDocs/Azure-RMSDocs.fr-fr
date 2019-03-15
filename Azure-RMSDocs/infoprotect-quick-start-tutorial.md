@@ -8,14 +8,14 @@ ms.date: 02/29/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 75ba59498918ecb2d987e2fe794c624f8f340498
-ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
+ms.openlocfilehash: 5a9c1ebae0678125c19fd35ce4c5275aa056ce45
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017232"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829023"
 ---
-# <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Didacticiel : Modifier la stratégie Azure Information Protection et créer une étiquette
+# <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Tutoriel : Modifier la stratégie Azure Information Protection et créer une étiquette
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
@@ -36,7 +36,7 @@ Pour suivre ce tutoriel, il vous faut :
 
 1. Un abonnement comportant le plan Azure Information Protection 2.
     
-    Si vous n’avez pas d’abonnement incluant Azure Information Protection Plan 2, vous pouvez créer un compte [gratuit](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
+    Si vous n’avez pas d’abonnement incluant Azure Information Protection Plan 2, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
 
 2. Vous avez ajouté le panneau Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
 

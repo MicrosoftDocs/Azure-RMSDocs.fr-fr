@@ -8,12 +8,12 @@ ms.date: 02/29/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: c41f190cf2e91378b03922caf3211c19ec01e871
-ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
+ms.openlocfilehash: ce64578c40ea62e584121ebbc45b1a2cb521f18e
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017198"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828887"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles
 
@@ -37,7 +37,7 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
 
 1. Un abonnement comportant le plan Azure Information Protection 1 ou 2.
     
-    Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
+    Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
 
 2. Vous avez ajouté le panneau Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
 

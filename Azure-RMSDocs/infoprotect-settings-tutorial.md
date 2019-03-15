@@ -8,14 +8,14 @@ ms.date: 02/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: f906a5b9fc9f678d1f452e347fb3739b4ff96586
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: 6119c3baf0f3e6b89246d237c3328988b1e4c654
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266078"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828921"
 ---
-# <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Didacticiel : Configurer les paramètres de stratégie Azure Information Protection qui interagissent
+# <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutoriel : Configurer les paramètres de stratégie Azure Information Protection qui interagissent
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
@@ -38,7 +38,7 @@ Pour suivre ce tutoriel, il vous faut :
 
 1. Un abonnement comportant le plan Azure Information Protection 1 ou 2.
     
-    Si vous n’avez pas ce type d’abonnement, vous pouvez créer un compte [gratuit](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
+    Si vous n’avez pas ce type d’abonnement, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
 
 2. Vous avez ajouté le panneau Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
 

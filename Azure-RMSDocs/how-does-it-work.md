@@ -4,19 +4,19 @@ description: Découvrez en détail le fonctionnement d’Azure RMS, les contrôl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 87cd350077f42718a6bcd86a98e9f8f1f79eb53e
-ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
+ms.openlocfilehash: a60fbf43056673674f07f7dd8517213072f78aec
+ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557644"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57734139"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
@@ -50,7 +50,13 @@ Même si vous n’avez pas besoin de connaître en détail le fonctionnement de 
 
 ###### <a name="footnote-1"></a>Note 1 
 
-La longueur de 256 bits est utilisée par le client Azure Information Protection pour la protection générique et native quand le fichier a une extension de nom de fichier .ppdf, ou est un fichier image ou texte protégé (tel que .ptxt ou .pjpg).
+Une clé de 256 bits est utilisée par le client Azure Information Protection dans les scénarios suivants :
+
+- Protection générique (.pfile).
+
+- Protection native pour les documents PDF quand le document a été protégé avec la norme ISO pour le chiffrement de PDF, ou quand le document protégé qui en résulte a une extension de nom de fichier .ppdf.
+
+- Protection native pour les fichiers texte ou image (comme .ptxt ou .pjpg).
 
 ###### <a name="footnote-2"></a>Note 2
 

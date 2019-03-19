@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ed441ab24517b5d12a1e38ed61a46d4498237636
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 8a1057aeab9bf86bba8047f3425b11e7eeae1082
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259182"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828428"
 ---
 # <a name="office365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365 : Configuration des clients et services en ligne de façon à ce qu’ils utilisent le service Azure Rights Management
 
@@ -104,7 +104,7 @@ Une fois que vous avez activé le service IRM pour SharePoint Online, la bibliot
 #### <a name="configuration-for-users"></a>Configuration pour les utilisateurs
 Donnez aux utilisateurs les instructions suivantes pour qu'ils puissent configurer leur OneDrive Entreprise pour protéger leurs fichiers d'entreprise.
 
-1. Connectez-vous à Office 365 avec votre compte professionnel ou scolaire et accédez au [site web OneDrive](https://portal.office.com/onedrive).
+1. Connectez-vous à Office 365 avec votre compte professionnel ou scolaire et accédez au [site web OneDrive](https://admin.microsoft.com/onedrive).
 
 2. Dans le volet de navigation, en bas, sélectionnez **Revenir à l’expérience OneDrive classique**.
 
@@ -502,7 +502,7 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
 
    2. Recherchez `$tenantAdmin` et remplacez la valeur de l’exemple par votre propre compte d’administrateur général complet pour Office 365.
 
-      Cette valeur est identique à celle que vous utilisez pour vous connecter au portail d’administration d’Office 365 en tant qu’administrateur général. Son format est le suivant : nom_utilisateur@*&lt;nom de domaine du client&gt;*.com
+      Cette valeur est identique à celle que vous utilisez pour vous connecter au Centre d’administration Microsoft 365 en tant qu’administrateur général. Son format est le suivant : nom_utilisateur@*&lt;nom de domaine du locataire&gt;*.com
 
       Par exemple, si le nom d’utilisateur de l’administrateur général d’Office 365 est « admin » pour le domaine de locataire « contoso.com », vous devez spécifier : <strong>admin@contoso.com</strong>
 

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 8477fb6bf726e290b50279c51947939280a9c62a
-ms.sourcegitcommit: bfb8e4fff4b6ebc38337f48f2b31ca43048dcca6
+ms.openlocfilehash: 6aa954a1c111ba20dc890fc9b9b5de4662804379
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007067"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828513"
 ---
 # <a name="deploying-the-preview-version-of-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement de la préversion du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -442,7 +442,7 @@ Il existe deux scénarios pris en charge par le scanneur Azure Information Prote
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Optimisation des performances du scanneur
 
-Utilisez les instructions suivantes pour vous aider à optimiser les performances du scanneur. Toutefois, si votre priorité est la réactivité de l’ordinateur du scanneur plutôt que les performances du scanneur, vous pouvez utiliser un paramètre client avancé pour [limiter le nombre de threads utilisés par le scanneur](#limit-the-number-of-threads-used-by-the-scanner).
+Utilisez les instructions suivantes pour vous aider à optimiser les performances du scanneur. Toutefois, si votre priorité est la réactivité de l’ordinateur du scanneur plutôt que les performances du scanneur, vous pouvez utiliser un paramètre client avancé pour limiter le nombre de threads utilisés par le scanneur.
 
 Pour optimiser les performances de l’analyseur :
 
@@ -551,5 +551,3 @@ Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-el
 Vous vous demandez peut-être : [Quelle différence y a-t-il entre l’ICF de Windows Server et le scanneur d’Azure Information Protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 Vous pouvez également utiliser PowerShell pour classifier et protéger des fichiers de manière interactive à partir de votre ordinateur de bureau. Pour plus d’informations sur tous les scénarios qui utilisent PowerShell, consultez [Utiliser PowerShell avec le client Azure Information Protection](./rms-client/client-admin-guide-powershell.md).
-
-

@@ -4,19 +4,19 @@ description: Certaines questions fréquentes sur Azure Information Protection et
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4e7ffa1fa4121d7a0aecc4474d50497c7c300b1b
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: 6a68d7f550a773016b552b380bb42f596720f250
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756145"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828484"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -48,7 +48,7 @@ Pour plus d’informations sur la migration de vos étiquettes existantes, consu
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Comment définir le bon moment pour migrer mes étiquettes vers Office 365 ?
 
-Les étiquettes de sensibilité du Centre de sécurité et conformité Office 365 sont en disponibilité générale, mais l’option pour migrer vos étiquettes Azure Information Protection est toujours en préversion. Lorsque les étiquettes sont migrées vers le magasin d’étiquetage unifié, elles peuvent être publiées puis téléchargées par les [clients qui prennent en charge l’étiquetage unifiée](configure-policy-migrate-labels.md#clients-that-support-unified-labeling). À l’heure actuelle, les clients ne prennent pas tous en charge les étiquettes unifiées ou ne sont pas tous en disponibilité générale.
+Les étiquettes de sensibilité du Centre de sécurité et conformité Office 365 sont en disponibilité générale, mais l’option pour migrer vos étiquettes Azure Information Protection est toujours en préversion. Quand les étiquettes sont migrées vers le magasin d’étiquetage unifié, elles peuvent être publiées, puis utilisées par les [clients et les services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). À l’heure actuelle, les clients ne prennent pas tous en charge les étiquettes unifiées ou ne sont pas tous en disponibilité générale.
 
 Nous vous recommandons de commencer par tester les fonctionnalités en préversion avec un abonné de test, puis de migrer votre abonné de production. De plus :
 
@@ -68,11 +68,11 @@ Voir aussi [Quel client en préversion installer pour tester de nouvelles foncti
 
 Une fois que vous avez migré vos étiquettes dans le portail Azure :
 
-- Si vous avez des [clients d’étiquetage unifié](configure-policy-migrate-labels.md#clients-that-support-unified-labeling), accédez au Centre de sécurité et conformité Office 365 pour publier ces étiquettes et configurer les paramètres de stratégie pour les clients d’étiquetage unifié. Pour les changements d’étiquette à venir, utilisez le Centre de sécurité et conformité. Les clients d’étiquetage unifié téléchargent les étiquettes et les paramètres de stratégie à partir du Centre de sécurité et conformité.
+- Si vous avez des [clients et des services d’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), accédez au Centre de sécurité et de conformité Office 365 pour publier ces étiquettes et pour configurer leurs paramètres de stratégie. Pour les changements d’étiquette à venir, utilisez le Centre de sécurité et conformité. Les clients d’étiquetage unifié téléchargent les étiquettes et les paramètres de stratégie à partir du Centre de sécurité et conformité.
 
 - Si vous avez des [clients Azure Information Protection](./rms-client/aip-client.md), continuez à utiliser le portail Azure pour modifier vos étiquettes et vos paramètres de stratégie. Les clients Azure Information Protection continuent à télécharger les étiquettes et les paramètres de stratégie à partir d’Azure.
 
-- Si vous avez à la fois des [clients d’étiquetage unifié](configure-policy-migrate-labels.md#clients-that-support-unified-labeling) et des [clients Azure Information Protection](./rms-client/aip-client.md), vous pouvez utiliser le portail pour effectuer des changements d’étiquette. Toutefois, pour que les clients Azure Information Protection récupèrent les changements d’étiquette que vous apportez dans le Centre de sécurité et conformité, vous devez revenir au portail Azure : Utilisez l’option **Publier** du panneau **Azure Information Protection - Étiquetage unifié** dans le portail Azure. 
+- Si vous avez à la fois des [clients d’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) et des [clients Azure Information Protection](./rms-client/aip-client.md), vous pouvez utiliser le portail pour effectuer des changements d’étiquette. Toutefois, pour que les clients Azure Information Protection récupèrent les changements d’étiquette que vous apportez dans le Centre de sécurité et conformité, vous devez revenir au portail Azure : Utilisez l’option **Publier** du panneau **Azure Information Protection - Étiquetage unifié** dans le portail Azure. 
 
 Continuez à utiliser le portail Azure pour la [centralisation des rapports](reports-aip.md) et le [scanneur](deploy-aip-scanner-preview.md).
 
@@ -194,7 +194,9 @@ Quand le scanneur protège les fichiers sur les sites et bibliothèques SharePoi
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>J’ai entendu dire qu’une nouvelle version sera disponible prochainement pour Azure Information Protection : quand sera-t-elle publiée ?
 
-La documentation technique ne contient pas d’informations sur les versions à venir. Pour ce type d’informations et pour les annonces des versions publiées, consultez le [blog Enterprise Mobility and Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services) et recevez les dernières mises à jour de [MicrosoftMobility@MSFTMobility](https://twitter.com/MSFTMobility) sur Twitter. Si vous êtes intéressé par une version d’Office, n’oubliez pas de consulter également le [blog Office 365](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog) et le [blog Office Apps](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog).
+La documentation technique ne contient pas d’informations sur les versions à venir. Pour ce type d’informations et pour les annonces des versions publiées, consultez le [blog Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services).
+
+Si vous êtes intéressé par une version d’Office, n’oubliez pas de consulter également le [blog Office 365](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog) et le [blog Office Apps](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog).
 
 ## <a name="is-azure-information-protection-suitable-for-my-country"></a>Azure Information Protection peut-il être utilisé dans mon pays ?
 
@@ -210,8 +212,6 @@ Consultez [Conformité et informations annexes pour Azure Information Protection
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Comment puis-je signaler un problème ou envoyer des commentaires pour Azure Information Protection ?
 
 Pour le support technique, utilisez vos canaux de support standard ou [contactez le support technique Microsoft](information-support.md#to-contact-microsoft-support).
-
-Pour envoyer des commentaires, notamment des suggestions d’améliorations ou de nouvelles fonctionnalités : Dans votre application Office, sous l’onglet **Accueil**, dans le groupe **Protection**, cliquez sur **Protéger**, puis sur **Aide et commentaires**. Dans la boîte de dialogue **Microsoft Azure Information Protection**, cliquez sur **Envoyez-nous des commentaires**. Cette option permet d’ouvrir un e-mail à envoyer à l’équipe Information Protection.
 
 Nous vous invitons également à contacter l’équipe d’ingénieurs sur son [site Yammer Azure Information Protection](https://www.yammer.com/askipteam/). 
 

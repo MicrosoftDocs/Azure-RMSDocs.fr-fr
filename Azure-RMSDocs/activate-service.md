@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2f05b95477405a2262b7dc0e129f17f9f5ff46db
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: ff99a39c138cc3ddc0b49cf7ff65ab95d5e36ece
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256394"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828904"
 ---
 # <a name="activating-azure-rights-management"></a>Activation d'Azure Rights Management
 
@@ -59,9 +59,9 @@ Quand le service Azure Rights Management est activé, tous les utilisateurs de v
 
 ## <a name="choosing-your-activation-method"></a>Choix de votre méthode d’activation
 
-Pour obtenir des instructions sur l’activation du service Rights Management à partir de votre portail de gestion, choisissez si vous utilisez le centre d’administration Office 365 ou le portail Azure :
+Pour obtenir des instructions sur l’activation du service Rights Management à partir de votre portail de gestion, choisissez si vous utilisez le centre d’administration Microsoft 365 ou le portail Azure :
 
-- [Centre d’administration Office 365](activate-office365.md) : nécessite un compte Administrateur général
+- [Centre d’administration Microsoft 365](activate-office365.md) : nécessite un compte d’administrateur général
 
 - [Portail Azure](activate-azure.md) : ne nécessite pas de compte Administrateur général
 

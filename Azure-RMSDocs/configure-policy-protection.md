@@ -4,17 +4,17 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/05/2019
+ms.date: 03/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 110cf52834ef7c2075539f15238c738aa61a16f7
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 0057677890de2a771e93cc2f843623bbd780c31a
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332308"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57978149"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -62,16 +62,24 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     - **Non configuré** : Sélectionnez cette option si l’étiquette est actuellement configurée pour appliquer la protection et que vous ne voulez plus qu’elle le fasse. Passez ensuite à l'étape 11.
         
         Les paramètres de protection précédemment configurés sont conservés sous la forme de modèle de protection archivé et réapparaissent si vous redéfinissez l’option sur **Protéger**. Vous ne voyez pas ce modèle dans le portail Azure, mais si besoin, vous pouvez toujours le gérer à l’aide de [PowerShell](configure-templates-with-powershell.md). Ce comportement signifie que le contenu reste accessible s’il a cette étiquette avec les paramètres de protection appliqués précédemment.
+        
+        Quand une étiquette avec ce paramètre de protection **Non configuré** est appliqué :
+        
+         - Si le contenu a été précédemment protégé sans utiliser une étiquette, cette protection est conservée. 
+         
+         - Si le contenu a été précédemment protégé avec une étiquette, cette protection est supprimée si l’utilisateur appliquant l’étiquette a les autorisations pour supprimer la protection Rights Management. Cela signifie que l’utilisateur doit avoir le [droit d’utilisation](configure-usage-rights.md) **Exporter** ou **Contrôle total**, ou qu’il doit être le propriétaire Rights Management (ce qui accorde automatiquement le droit d’utilisation Contrôle total), ou être un [super utilisateur dans Azure Rights Management](configure-super-users.md).
+             
+             Si l’utilisateur ne dispose des autorisations pour supprimer la protection, l’étiquette ne peut pas être appliquée et le message suivant s’affiche : **Azure Information Protection ne peut pas appliquer cette étiquette. Si ce problème persiste, contactez votre administrateur**. 
     
     - **Protéger** : Sélectionnez cette option pour appliquer la protection, puis passez à l’étape 4.
     
     - **Supprimer la protection** : Sélectionnez cette option pour supprimer la protection si un document ou un e-mail est protégé. Passez ensuite à l'étape 11.
         
-        Les paramètres de protection précédemment configurés sont conservés sous la forme de modèle de protection archivé et réapparaissent si vous redéfinissez l’option sur **Protéger**. Vous ne voyez pas ce modèle dans le portail Azure, mais si besoin, vous pouvez toujours le gérer à l’aide de [PowerShell](configure-templates-with-powershell.md). Ce comportement signifie que le contenu reste accessible s’il a cette étiquette avec les paramètres de protection appliqués précédemment.
+        Si la protection a été appliquée avec un modèle d’étiquette ou de protection, les paramètres de protection sont conservés sous la forme d’un modèle de protection archivé et réapparaissent si vous redéfinissez l’option sur **Protéger**. Vous ne voyez pas ce modèle dans le portail Azure, mais si besoin, vous pouvez toujours le gérer à l’aide de [PowerShell](configure-templates-with-powershell.md). Ce comportement signifie que le contenu reste accessible s’il a cette étiquette avec les paramètres de protection appliqués précédemment.
         
-        Notez que pour que les utilisateurs puissent appliquer une étiquette avec cette option, ils doivent avoir les autorisations nécessaires pour supprimer la protection Rights Management. Cela signifie que les utilisateurs doivent avoir le [droit d’utilisation](configure-usage-rights.md) **Exporter** ou **Contrôle total**. ou ils doivent être propriétaires de Rights Management (ce qui accorde automatiquement le droit d’utilisation Contrôle total), ou être un [super utilisateur dans Azure Rights Management](configure-super-users.md). Les modèles Azure Rights Management par défaut n’incluent pas les droits d’utilisation qui permettent aux utilisateurs de supprimer la protection. 
+        Notez que pour qu’un utilisateur puisse appliquer une étiquette avec cette option, il doit avoir les autorisations nécessaires pour supprimer la protection Rights Management. Cela signifie que l’utilisateur doit avoir le [droit d’utilisation](configure-usage-rights.md) **Exporter** ou **Contrôle total**, ou qu’il doit être le propriétaire Rights Management (ce qui accorde automatiquement le droit d’utilisation Contrôle total), ou être un [super utilisateur dans Azure Rights Management](configure-super-users.md). 
         
-        Si les utilisateurs n’ont pas les autorisations nécessaires pour supprimer la protection Rights Management et qu’ils sélectionnent une étiquette configurée avec l’option **Supprimer la protection**, ils reçoivent le message suivant : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
+        Si l’utilisateur appliquant l’étiquette avec ce paramètre n’a pas les autorisations pour supprimer la protection Rights Management, l’étiquette ne peut pas être appliquée et le message suivant s’affiche : **Azure Information Protection ne peut pas appliquer cette étiquette. Si le problème persiste, contactez votre administrateur.**
 
 4. Si vous avez sélectionné **Protéger**, le panneau **Protection** s’ouvre automatiquement si une des autres options a été sélectionnée précédemment. Si ce nouveau panneau ne s’ouvre pas automatiquement, sélectionnez **Protection** :
     

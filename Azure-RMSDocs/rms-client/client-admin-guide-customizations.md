@@ -4,19 +4,19 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/06/2019
+ms.date: 03/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 48280e4654d9ab5ce999dcc934791ff408ca5691
-ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
+ms.openlocfilehash: 20c0fbd26a8884524e747a0ebc912d7a6dfb2f48
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379948"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57898097"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -270,14 +270,14 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails
 
-Cette configuration utilise plusieurs [paramètres clients avancés](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Cette configuration est en préversion et est susceptible de changer.
+Cette configuration utilise plusieurs [paramètres clients avancés](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Ce paramètre est en préversion et nécessite la préversion du client.
 
 Quand vous créez et que vous configurez les paramètres client avancés suivants, les utilisateurs voient des messages contextuels dans Outlook qui peuvent les avertir avant d’envoyer un e-mail, leur demander de justifier la raison pour laquelle ils envoient un e-mail ou les empêcher d’envoyer un e-mail pour un des scénarios suivants :
 
 - **Leur e-mail ou la pièce jointe à leur e-mail a une étiquette spécifique** :
     - La pièce jointe peut être n’importe quel type de fichier
 
-- **Leur e-mail ou la pièce jointe à leur e-mail n’a pas d’étiquette** :
+- **Leur e-mail ou leur pièce jointe à l’e-mail n’a pas d’étiquette** :
     - La pièce jointe peut être un document Office ou un document PDF
 
 Quand ces conditions sont remplies et que l’adresse e-mail du destinataire ne figure pas dans la liste des noms de domaine autorisés que vous avez spécifiée, l’utilisateur voit un message contextuel avec une des actions suivantes :
@@ -287,6 +287,28 @@ Quand ces conditions sont remplies et que l’adresse e-mail du destinataire ne 
 - **Justifier** : L’utilisateur est invité à entrer une justification (selon des options prédéfinies ou sous forme libre).  L’utilisateur peut ensuite envoyer ou annuler l’e-mail. Le texte de la justification est écrit dans l’en-tête X de l’e-mail afin qu’il puisse être lu par d’autres systèmes, par exemple des services de protection contre la perte de données.
 
 - **Bloquer** : L’utilisateur ne peut pas envoyer l’e-mail tant que la condition perdure. Le message contient la raison du blocage de l’e-mail pour que l’utilisateur puisse résoudre le problème, par exemple supprimer des destinataires spécifiques ou appliquer une étiquette à l’e-mail. 
+
+L’action résultante est consignée dans le journal des événements Windows local **Journaux des applications et des services** > **Azure Information Protection** :
+
+- Messages d’avertissement : ID d’information 301
+
+- Justifier les messages : ID d’information 302
+
+- Messages de blocage : ID d’information 303
+
+Exemple d’entrée événement d’un message de justification :
+
+```
+Client Version: 1.48.1.0
+Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
+Item Full Path: Price list.msg
+Item Name: Price list
+Process Name: OUTLOOK
+Action: Justify
+User Justification: My manager approved sharing of this content
+Action Source: 
+User Response: Confirmed
+```
 
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Pour implémenter des messages d’avertissement, de justification ou de blocage pour des étiquettes spécifiques :
@@ -503,7 +525,7 @@ Le fichier conserve l’extension de nom de fichier .pdf, mais il est classé c
 
 ## <a name="support-for-files-protected-by-secure-islands"></a>Prise en charge des fichiers protégés par Secure Islands
 
-Cette option de configuration est en préversion et susceptible de changer.
+Cette option de configuration est en préversion et est susceptible de changer.
 
 Si vous avez utilisé Secure Islands pour protéger des documents, vous avez certainement protégé les fichiers texte et image, ainsi que les fichiers protégés de manière générique à la suite de cette protection. Par exemple, les fichiers avec une extension de nom de fichier .ptxt, .pjpeg ou .pfile. Quand vous modifiez le Registre comme suit, Azure Information Protection peut déchiffrer ces fichiers :
 

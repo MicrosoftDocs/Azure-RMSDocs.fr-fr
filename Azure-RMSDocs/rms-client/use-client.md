@@ -4,18 +4,18 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: 5d49a1ad6bed86b6041b66feb3017b716584c5b7
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: 9cb472280160919be93745fe7ff50f05e036f301
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756213"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829091"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -52,11 +52,11 @@ Utilisez le tableau suivant pour vous aider à comparer les fonctionnalités qui
 |Composant|Client Azure Information Protection|Azure Information Protection<br /> Client d’étiquetage unifié Azure Information Protection|
 |-------|-----------------------------------|----------------------------------------------------|
 |Étiquetage des actions : manuel, recommandé, automatique| Oui | Oui |
-|Barre Information Protection dans les applications Office<br />avec info-bulle personnalisable :| Oui | Oui|
 |Création centralisée de rapports (analytique) :| Oui | Oui |
 |Paramètres de réinitialisation et journaux d’exportation :| Oui | Oui |
 |Autorisations définies par l’utilisateur :| Oui | Pour Outlook uniquement (Ne pas transférer) |
 |Autorisations personnalisées :| Oui | Explorateur de fichiers uniquement <br /><br /> Dans les applications Office, les utilisateurs peuvent également sélectionner **Informations sur le fichier** > **Protéger le document** > **Restreindre l’accès**. |
+|Barre Information Protection dans les applications Office :| Oui | Oui, avec des restrictions :<br /><br /> - Pas de titre ou d’info-bulle personnalisable<br /><br /> - Couleur d’étiquette non affichée pour l’étiquette appliquée|
 |Dans l’Explorateur de fichiers, actions déclenchées par clic droit :| Oui | Oui, avec des restrictions :<br /><br /> - Impossible de protéger les documents PDF au format .ppdf <br /><br />  - Pas de prise en charge du mode Protection uniquement|
 |Visionneuse des fichiers protégés :| Oui | Oui, avec des restrictions :<br /><br /> - Pour les fichiers protégés de manière générique (.pfile), contrairement à la visionneuse du client Azure Information Protection, il n’existe aucune possibilité d’enregistrer des modifications dans le fichier ouvert à l’origine.|
 |Commandes PowerShell :| Oui | Oui, avec des restrictions :<br /><br />- Cmdlets incluses : [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />- Les cmdlets qui se connectent directement à un service de protection ne sont pas incluses.|
@@ -69,6 +69,7 @@ Utilisez le tableau suivant pour vous aider à comparer les fonctionnalités qui
 |Scanneur pour magasins de données locaux :| Oui | Non |
 |Suivre et révoquer :| Oui | Non |
 |Mode Protection uniquement (pas d’étiquettes) :| Oui | Non |
+|Bouton Ne pas transférer dans Outlook :| Oui | Non |
 |Prise en charge multilingue :| Oui | Non |
 |Prise en charge des services AD RMS :| Oui | Seule l’action suivante est prise en charge :<br /><br /> - La visionneuse peut ouvrir des documents protégés|
 
@@ -81,13 +82,46 @@ Lorsque les deux clients prennent en charge la même fonctionnalité, utilisez l
 |Configurer :| Option d’installation d’une stratégie de démonstration locale | Pas de stratégie de démonstration locale|
 |Sélection et affichage d’étiquette en cas d’application dans les applications Office :|À partir du bouton **Protéger** situé sur le ruban <br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|À partir du bouton **Critère de diffusion** situé sur le ruban<br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|
 |Gérer la barre Information Protection dans les applications Office :|Pour les utilisateurs : <br /><br />- Option permettant d’afficher ou de masquer la barre à partir du bouton **Protéger** situé sur le ruban<br /><br />- Lorsqu’un utilisateur choisit de masquer la barre, par défaut, elle est masquée dans cette application, mais continue de s’afficher automatiquement dans les applications récemment ouvertes. <br /><br /> Pour les administrateurs : <br /><br />- Paramètres de stratégie permettant d’afficher ou de masquer automatiquement la barre à la première ouverture d’une application, et de contrôler si la barre reste automatiquement masquée pour les applications récemment ouvertes une fois qu’un utilisateur a choisi de masquer la barre|Pour les utilisateurs : <br /><br />- Option permettant d’afficher ou de masquer la barre à partir du bouton **Critère de diffusion** situé sur le ruban<br /><br />- Lorsqu’un utilisateur choisit de masquer la barre, celle-ci est masquée dans cette application et dans les applications récemment ouvertes <br /><br />Pour les administrateurs : <br /><br />- Pas de paramètre de stratégie pour gérer la barre|
-|Couleur d’étiquette : | À configurer dans le portail Azure | Conservée après la migration d’étiquette vers Office 365 <br /><br /> La couleur noire par défaut est attribuée aux nouvelles étiquettes créées dans le Centre de sécurité et de conformité|
+|Couleur d’étiquette : | À configurer dans le portail Azure | Conservée après la migration d’étiquette vers Office 365 <br /><br /> Les nouvelles étiquettes créées dans le Centre de sécurité et de conformité n’ont pas de couleur|
 |Mise à jour de la stratégie : | Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 24 heures | Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 4 heures|
 |Formats pris en charge pour PDF :| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF (par défaut) <br /><br /> - .ppdf <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br /> <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint|
 |Cmdlets prises en charge :| Ensemble des cmdlets documentées pour [AzureInformationProtection](/powershell/module/azureinformationprotection) | Les cmdlets Set-AIPFileClassification et Set-AIPFileLabel ne prennent pas en charge le paramètre *Propriétaire* ni les bibliothèques SharePoint Server. <br /><br /> En outre, le commentaire unique « Aucune étiquette à appliquer » existe pour tous les scénarios dans lesquels aucune étiquette n’est appliquée. <br /><br /> La cmdlet Set-AIPFileLabel ne prend pas en charge le paramètre *EnableTracking*. <br /><br /> La cmdlet Get-AIPFileStatus ne retourne aucune information d’étiquette à partir d’autres abonnés et n’affiche pas le paramètre *RMSIssuedTime*.<br /><br />En outre, le paramètre *LabelingMethod* de la cmdlet Get-AIPFileStatus affiche les valeurs **Privilégié**, **Standard** or **Automatique** et non **Manuel** ou **Automatique**. Pour plus d’informations, consultez la [documentation en ligne](/powershell/module/azureinformationprotection/get-aipfilestatus).|
 |Invites de justification (si configurées) par action dans Office : | Fréquence : par fichier <br /><br /> Diminution du niveau de confidentialité <br /><br /> Suppression d’une étiquette<br /><br /> Suppression de la protection | Fréquence : par session <br /><br /> Diminution du niveau de confidentialité<br /><br /> Suppression d’une étiquette|
-|Supprimer des actions d’étiquette : | L’utilisateur doit confirmer la suppression. <br /><br />L’étiquette par défaut ou l’étiquette automatique (si configurée) n’est pas appliquée automatiquement la prochaine fois que l’application Office ouvre le fichier.  <br /><br />| L’utilisateur n’a pas à confirmer la suppression.<br /><br /> L’étiquette par défaut ou l’étiquette automatique (si configurée) est appliquée automatiquement la prochaine fois que l’application Office ouvre le fichier.|
+|Supprimer les actions de l’étiquette appliquée : | L’utilisateur doit confirmer la suppression. <br /><br />L’étiquette par défaut ou l’étiquette automatique (si configurée) n’est pas appliquée automatiquement la prochaine fois que l’application Office ouvre le fichier.  <br /><br />| L’utilisateur n’a pas à confirmer la suppression.<br /><br /> L’étiquette par défaut ou l’étiquette automatique (si configurée) est appliquée automatiquement la prochaine fois que l’application Office ouvre le fichier.|
 |Classification automatique et recommandée : | Configurée en tant que [conditions d’étiquette](../configure-policy-classification.md) dans le portail Azure avec des types d’informations intégrées et des conditions personnalisées utilisant des expressions régulières ou non <br /><br />Les options de configuration comprennent ce qui suit : <br /><br />- Nombre de valeurs uniques/non uniques <br /><br /> - Nombre minimal| Configurée dans le Centre de sécurité et de conformité avec les types d’informations sensibles intégrés et des [types d’informations personnalisées](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Les options de configuration comprennent ce qui suit :  <br /><br />- Nombre de valeurs uniques seulement <br /><br />- Nombre de valeurs minimales et maximales <br /><br />- Prise en charge des clauses AND et OR avec les types d’informations <br /><br />- Dictionnaire de mots clés<br /><br />- Niveau de confiance et proximité des caractères personnalisables|
+
+#### <a name="features-that-will-not-be-in-the-azure-information-protection-unified-labeling-client"></a>Fonctionnalités qui ne se trouveront pas dans le client d’étiquetage unifié Azure Information Protection
+
+Bien que le client d’étiquetage unifié d’Azure Information Protection soit toujours en cours de développement, les fonctionnalités et les différences de comportement suivantes par rapport au client Azure Information Protection ne seront pas disponibles dans ses versions futures : 
+
+- Autorisations personnalisées dans les applications Office : Word, Excel et PowerPoint
+
+- Suivre et révoquer depuis des applications Office et l’Explorateur de fichiers
+
+- Barre de titre et info-bulle Azure Information Protection
+
+- Prise en charge hors connexion pour les actions de protection dans PowerShell et dans l’Explorateur de fichiers
+
+- Mode Protection uniquement (pas d’étiquettes)
+
+- Protéger le document PDF en tant que format .ppdf
+
+- Afficher le bouton Ne pas transférer dans Outlook
+
+- Stratégie de démonstration
+
+- Justification de la suppression de la protection
+
+- Invite de confirmation avant la suppression d’une étiquette appliquée
+
+- Lien Signaler un problème dans la boîte de dialogue Aide et commentaires
+
+- Étiqueter un document Office avec une propriété personnalisée existante (paramètres du client avancé SyncPropertyName et SyncPropertyState)
+
+- Applets de commande PowerShell distinctes pour la connexion à un service Rights Management
+
+- Protection AD RMS uniquement
+
 
 ##### <a name="parent-labels-and-their-sublabels"></a>Étiquettes parentes et sous-étiquettes associées 
 

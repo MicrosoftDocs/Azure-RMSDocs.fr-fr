@@ -4,17 +4,17 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 2ddefdc557d83ff0eae6bbc2b5d7d0e69dfbbca5
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: cc921ae66d8a36a3bad9f184b7b900c7508eb2d1
+ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756179"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57734112"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -36,7 +36,7 @@ Informations supplémentaires sur ces marquages visuels :
 
 - Longueurs de chaînes maximales :
     
-    - La longueur de chaîne maximale que vous pouvez entrer pour les en-têtes et pieds de page est de 1 024 caractères. Toutefois, Excel a une limite totale de 255 caractères pour les en-têtes et pieds de page. Cette limite inclut des caractères qui ne sont pas visibles dans Excel, comme les codes de mise en forme. Quand vous entrez une longue chaîne pour les en-têtes et pieds de page dans Excel, ce texte peut être tronqué à 255 caractères ou moins.
+    - La longueur de chaîne maximale que vous pouvez entrer pour les en-têtes et pieds de page est de 1 024 caractères. Toutefois, Excel a une limite totale de 255 caractères pour les en-têtes et pieds de page. Cette limite inclut des caractères qui ne sont pas visibles dans Excel, comme les codes de mise en forme. Si cette limite est atteinte, la chaîne que vous entrez n’est pas affichée dans Excel.
     
     - La longueur de chaîne maximale pour les filigranes que vous pouvez entrer est de 255 caractères.
 

@@ -4,17 +4,17 @@ description: Les conditions permettent d’affecter automatiquement une étiquet
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/16/2019
+ms.date: 03/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: b7d0bf743d23083e2f9c6ca18044e26cb8c2ae6f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: f8545491a527b8e502150cd83802b2868dd3a1da
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256564"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829040"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -32,7 +32,7 @@ Un exemple d’invite s’affiche lorsque vous configurez une condition d’appl
 
 Dans cet exemple, l’utilisateur peut cliquer sur **Modifier maintenant** pour appliquer l’étiquette recommandée ou remplacer la recommandation en sélectionnant **Ignorer**. Si l’utilisateur choisit d’ignorer la recommandation et que la condition s’applique toujours quand le document est ensuite ouvert, la recommandation de l’étiquette est réaffichée.
 
-Si vous configurez la classification automatique plutôt que la classification recommandée, l’étiquette est appliquée automatiquement et l’utilisateur voit toujours une notification dans ses applications Office. Toutefois, les boutons **Modifier maintenant** et **Ignorer** sont remplacés par **OK**.
+Si vous configurez la classification automatique au lieu de la classification recommandée, l’étiquette est appliquée automatiquement et l’utilisateur continue de voir une notification dans Word, Excel et PowerPoint. Toutefois, les boutons **Modifier maintenant** et **Ignorer** sont remplacés par **OK**. Dans Outlook, il n’existe pas de notification pour la classification automatique, et l’étiquette est appliquée au moment de que l’e-mail est envoyé.
 
 > [!IMPORTANT]
 >Ne configurez pas une étiquette pour la classification automatique et une autorisation définie par l’utilisateur. L’option de configuration des autorisations définies par l’utilisateur est un [paramètre de protection](configure-policy-protection.md) qui permet aux utilisateurs de spécifier qui doit avoir des autorisations.

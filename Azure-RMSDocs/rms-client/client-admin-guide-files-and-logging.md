@@ -4,19 +4,19 @@ description: Informations sur les fichiers du client et la journalisation de l�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/23/2019
+ms.date: 03/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: abf4b87198f2997aa7a452d0c34931c55220ee5f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 72e29d19ddbfc3189d498724fc8353829820ab4e
+ms.sourcegitcommit: f4fe64474999954e0c013c3901edbb3048670935
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255068"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725747"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 
@@ -48,19 +48,25 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
 
 - Action :
 
-    - Définir l’étiquette :  ID d’information 101
+    - Définir l’étiquette : ID d’information 101
     
-    - Définir l’étiquette (inférieure) :  ID d’information 101
+    - Définir l’étiquette (inférieure) : ID d’information 101
     
     - Définir l’étiquette (supérieure) : ID d’information 101
     
     - Supprimer l’étiquette : ID d’information 104
-   
-    - Recommandé : Information 105
+    
+    - Info-bulle de l’étiquette recommandée : Information 105
     
     - Appliquer la protection personnalisée : ID d’information 201
     
     - Supprimer la protection personnalisée : ID d’information 202
+    
+    - Message d’avertissement Outlook : ID d’information 301
+    
+    - Message de justification Outlook : ID d’information 302
+    
+    - Message de blocage Outlook : ID d’information 303
     
     - Connexion (opérationnelle) : ID d’information 902
     
@@ -86,7 +92,9 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
 
 - Autorisations personnalisées (le cas échéant) qui incluent les [droits d’utilisation par leur nom d’encodage](../configure-usage-rights.md#usage-rights-and-descriptions) pour les utilisateurs, groupes ou organisations spécifiés
 
-Pour obtenir des informations sur la journalisation de l’utilisation du service de protection, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../log-analyze-usage.md)
+Les événements pour les messages d’avertissement, de justification et de blocage Outlook nécessitent la préversion du client et les paramètres du client avancé. Pour plus d’informations, consultez [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
+
+Pour obtenir des informations sur la journalisation de l’utilisation du service de protection, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../log-analyze-usage.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez identifié tous les fichiers journaux associés au client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :

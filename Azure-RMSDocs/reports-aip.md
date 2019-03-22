@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 02/26/2019
+ms.date: 03/22/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 319365dd5dfa7c9c5cb82532faa179334c8f0b0f
-ms.sourcegitcommit: dde803603371dc30d40ca7225f330163bcc7c103
+ms.openlocfilehash: c7f862a7a16579b6d414c79015c42664e4066c29
+ms.sourcegitcommit: cf06c3854e6ee8645c3b71a0257bdb6a1b569843
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56825966"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343041"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -30,7 +30,7 @@ Utiliser l’analytique d’Azure Information Protection pour la création de ra
 
 - Surveillez l’accès utilisateur aux documents et e-mails étiquetés, et les modifications apportées à leur classification. 
 
-- Identifiez les documents qui contiennent des informations sensibles à protéger.
+- Identifiez les documents qui contiennent des informations sensibles susceptibles de mettre votre organisation en péril si elles ne sont pas protégées, et limitez les risques en suivant les recommandations.
 
 Actuellement, les données que vous voyez sont agrégées à partir de vos clients Azure Information Protection et des scanneurs Azure Information Protection, et des ordinateurs Windows exécutant [Windows Defender Advanced Threat Protection (Windows Defender ATP)](/windows/security/threat-protection/windows-defender-atp/overview).
 
@@ -67,7 +67,17 @@ Par exemple, vous serez en mesure de voir ce qui suit :
     - Fichiers étiquetés et protégés, et emplacement des fichiers en fonction des étiquettes
     
     - Fichiers qui contiennent des informations sensibles pour des catégories connues, telles que les données financières et les informations personnelles, et emplacement des fichiers en fonction de ces catégories
+
+- À partir du rapport **Recommandations** :
     
+    - Identifiez les fichiers non protégés qui contiennent un type connu d’informations sensibles. Une recommandation vous permet de configurer immédiatement la condition correspondante pour une de vos étiquettes à appliquer automatique ou pour l’étiquetage recommandé.
+        
+        Si vous suivez la recommandation : La prochaine fois que les fichiers sont ouverts par un utilisateur ou analysés par le scanneur Azure Information Protection, ils peuvent être classifiés et protégés automatiquement.
+    
+    - Référentiels de données ayant des fichiers avec des informations confidentielles identifiées, mais qui ne sont pas analysés par Azure Information Protection. Une recommandation vous permet d’ajouter immédiatement le magasin de données identifié à un des profils du scanneur.
+        
+        Si vous suivez la recommandation : Lors du prochain cycle du scanneur, les fichiers peuvent être classifiés et protégés automatiquement.
+
 Les rapports utilisent [Azure Monitor](/azure/log-analytics/log-analytics-overview) pour stocker les données dans un espace de travail Log Analytics appartenant à votre organisation. Si vous êtes familiarisé avec le langage de requête, vous pouvez modifier les requêtes ainsi que créer des rapports et tableaux de bord Power BI. Le tutoriel suivant peut s’avérer utile pour comprendre le langage de requête : [Prise en main des requêtes de journal Azure Monitor](/azure/azure-monitor/log-query/get-started-queries). 
 
 Pour plus d’informations, lisez le billet de blog suivant : 
@@ -100,7 +110,7 @@ Pour générer ces rapports, les points de terminaison envoient les types suivan
 
 - Version du système d’exploitation client.
 
-Ces informations sont stockées dans un espace de travail Azure Log Analytics appartenant à votre organisation et consultable indépendamment d’Azure Information Protection par les utilisateurs qui disposent des droits d’accès correspondants. Pour plus d’informations, voir la section [Autorisations requises pour l’analytique Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Pour plus d’informations sur la gestion de l’accès à votre espace de travail, consultez la section [Gérer les comptes et les utilisateurs](/azure/azure-monitor/platform/manage-access#manage-accounts-and-users) dans la documentation Azure.
+Ces informations sont stockées dans un espace de travail Azure Log Analytics appartenant à votre organisation et consultable indépendamment d’Azure Information Protection par les utilisateurs qui disposent des droits d’accès correspondants. Pour plus d’informations, voir la section [Autorisations requises pour l’analytique Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Pour plus d’informations sur la gestion de l’accès à votre espace de travail, consultez la section [Gérer l’accès à l’espace de travail Log Analytics avec des autorisations Azure](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) de la documentation Azure.
 
 > [!NOTE]
 > Votre espace de travail Azure Log Analytics pour Azure Information Protection inclut une case à cocher pour les correspondances de contenu de document. Quand vous cochez cette case, les données réelles identifiées par les types d’informations sensibles ou vos conditions personnalisées sont également collectées. Il peut s’agir, par exemple, de numéros de carte de crédit trouvés, mais aussi de numéros de sécurité sociale, de passeport et de compte bancaire. Si vous ne souhaitez pas collecter ces données, ne cochez pas cette case.
@@ -113,8 +123,9 @@ Pour afficher les rapports Azure Information Protection et créer les vôtres, v
 |Condition requise|Plus d’informations|
 |---------------|--------------------|
 |Abonnement Azure qui inclut Log Analytics|Consultez la page de [tarification d’Azure Monitor](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Si vous ne possédez pas un abonnement Azure ou n’utilisez pas Azure Log Analytics, la page des tarifs inclut un lien pour un essai gratuit.|
-|Client Azure Information Protection (version actuelle en disponibilité générale ou préversion) ou préversion du client d’étiquetage unifié Azure Information Protection|Si vous n’avez pas déjà installé l’une de ces versions du client, vous pouvez les télécharger et les installer à partir du Centre de téléchargement Microsoft :<br /> - [Client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) <br /> - [Client d’étiquetage unifié Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=57440)|
-|Pour le rapport de **découverte et des risques** : <br /><br />- Pour afficher les données à partir de magasins de données locaux, vous avez déployé au moins une instance du scanneur Azure Information Protection (version en disponibilité générale ou préversion) <br /><br />- Pour afficher les données à partir d’ordinateurs Windows 10, ils doivent au minimum avoir la build 1809, vous utilisez Windows Defender Advanced Threat Protection (Windows Defender ATP), et vous avez activé la fonctionnalité d’intégration Azure Information Protection à partir de Windows Defender Security Center|Pour obtenir des instructions d’installation pour le scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md). Si vous effectuez la mise à niveau à partir d’une version précédente du scanneur, consultez [Mise à niveau du scanneur Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).<br /><br />Pour obtenir des informations sur la configuration et l’utilisation de la fonctionnalité d’intégration Azure Information Protection à partir de Windows Defender Security Center, consultez [Vue d’ensemble de la protection des informations dans Windows](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
+|Le client Azure Information Protection (version actuelle en disponibilité générale ou en préversion) ou la préversion du client d’étiquetage unifié Azure Information Protection|Si vous n’avez pas déjà installé l’une de ces versions du client, vous pouvez les télécharger et les installer à partir du Centre de téléchargement Microsoft :<br /> - [Client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) <br /> - [Client d’étiquetage unifié Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=57440)|
+|Pour le rapport de **découverte et des risques** : <br /><br />- Pour afficher des données provenant de magasins de données locaux, vous avez déployé au moins une instance du scanneur Azure Information Protection (version en disponibilité générale ou préversion) <br /><br />- Pour afficher les données à partir d’ordinateurs Windows 10, ils doivent au minimum avoir la build 1809, vous utilisez Windows Defender Advanced Threat Protection (Windows Defender ATP), et vous avez activé la fonctionnalité d’intégration Azure Information Protection à partir de Windows Defender Security Center|Pour obtenir des instructions d’installation pour le scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md). <br /><br />Pour obtenir des informations sur la configuration et l’utilisation de la fonctionnalité d’intégration Azure Information Protection à partir de Windows Defender Security Center, consultez [Vue d’ensemble de la protection des informations dans Windows](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
+|Pour le rapport **Recommandations** : <br /><br />- Pour ajouter un nouveau référentiel de données à partir du portail Azure comme action recommandée, vous devez utiliser la préversion actuelle du scanneur Azure Information Protection |Pour déployer la préversion du scanneur, consultez [Déploiement de la préversion du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner-preview.md).|
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Autorisations requises pour l’analytique Azure Information Protection
 
@@ -142,7 +153,7 @@ Détails :
     > [!NOTE] 
     > Si votre locataire a été migré vers le magasin d’étiquetage unifié, votre compte doit être un compte d’administrateur général ou l’un des rôles répertoriés avec les autorisations pour accéder au Centre de sécurité et de conformité Office 365. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
-2. Pour accéder à votre espace de travail Azure Log Analytics, vous devez disposer de l’un des [rôles Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) ou [rôles Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard :
+2. Pour accéder à votre espace de travail Azure Log Analytics, vous devez disposer de l’un des [rôles Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) ou [rôles Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard :
     
     - Pour créer un espace de travail Log Analytics ou créer des requêtes personnalisées, un des éléments suivants :
     
@@ -190,6 +201,12 @@ Dans le panneau Azure Information Protection, recherchez les options du menu **T
     Ce rapport comporte une option **Colonnes** qui permet d’afficher plus d’informations sur l’activité que l’affichage par défaut.
 
 - **Découverte de données (préversion)**  : Utilisez ce rapport pour voir des informations sur les fichiers détectés par les scanneurs ou Windows Defender ATP.
+
+- **Recommandations (préversion)**  : Utilisez ce rapport pour identifier les fichiers qui ont des informations sensibles et limiter les risques en suivant les recommandations.
+    
+    Ce rapport est actuellement en cours de déploiement auprès des locataires ; si vous ne le voyez pas, réessayez quelques jours plus tard.
+    
+    Quand vous sélectionnez un élément, l’option **Afficher les données** affiche les activités d’audit qui ont déclenché la recommandation.
 
 > [!NOTE]
 > Les caractères non-ASCII dans les chemins et les noms de fichiers sont remplacés par des points d’interrogation (**?**) quand les paramètres régionaux du système d’exploitation d’envoi sont configurés en anglais. Il s’agit d’un problème connu.

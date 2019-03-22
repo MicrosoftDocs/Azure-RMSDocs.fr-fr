@@ -4,18 +4,18 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/07/2019
+ms.date: 03/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9240e0a8fc8f70fb38d9984ae74ee039d0f52e39
-ms.sourcegitcommit: 872fe78c482e8c2c57c3653919edeba745411cba
+ms.openlocfilehash: 91afeedf07e34f08860f1d596052fdc559c53098
+ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57510052"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57828445"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -92,7 +92,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Les sous-étiquettes sont correctement appliquées par PowerShell et le scanneur lorsque l’étiquette parent est configurée pour des autorisations définies par l’utilisateur.
 
-- Le client Azure Information Protection affiche correctement les étiquettes qui ont été appliquées par les [clients qui prennent en charge l’étiquetage unifié](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
+- Le client Azure Information Protection affiche correctement les étiquettes qui ont été appliquées par les [clients qui prennent en charge l’étiquetage unifié](../configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 - Les documents s’ouvrent correctement dans Office sans message de récupération lorsque la protection a été supprimée par l’Explorateur de fichiers et avec le bouton droit, PowerShell et le scanneur.
 
@@ -236,21 +236,6 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Le lien **Envoyez-nous des commentaires** de la boîte de dialogue **Aide et commentaires** est supprimé. Il a été temporairement remplacé par **Signaler un problème** qui, par défaut, envoie un e-mail à Microsoft. À compter de décembre 2018, l’option **Signaler un problème** n’est pas affichée par défaut, mais elle peut être ajoutée avec un [paramètre client avancé](client-admin-guide-customizations.md#add-report-an-issue-for-users) où vous spécifiez une chaîne HTTP pour le lien. (par exemple, une page web personnalisée permettant aux utilisateurs de signaler des problèmes, ou une adresse e-mail qui pointe vers votre support technique). 
 
-## <a name="version-12950"></a>Version 1.29.5.0 
-
-**Date de publication** : 26/06/2018
-
-Cette version inclut MSIPC version 1.0.3403.1224 du client RMS.
-
-**Correctifs** :
-
-- Pour les versions d’Outlook 16.0.9324.1000 et ultérieures (Office « Démarrer en un clic »), la barre Azure Information Protection prend en charge les dernières options d’affichage du moniteur qui auparavant pouvaient entraîner l’affichage de la barre en dehors de l’application Outlook.
-
-- Les marquages visuels que vous configurez [par type d’application Office](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) remplacent maintenant un en-tête ou un pied de page qui était précédemment appliqué par une étiquette Azure Information Protection.
-
-- Désormais, quand un fichier Excel porte déjà un étiquette et que celle-ci applique des marquages visuels, une nouvelle feuille présente également les marquages visuels de l’étiquette appliqués.
-
-- Lorsque vous utilisez le paramètre client avancé pour [étiqueter un document Office à l’aide d’une propriété personnalisée existante](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property), l’étiquetage automatique ne remplace pas l’étiquetage manuel.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ae91e36a4b2406d3dcb5a4ea52f4cac48c37287
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4561c505be994039a6e95779e47ea1c511e0a0c1
+ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257193"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221063"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 
@@ -27,7 +27,7 @@ Consultez le tableau suivant pour identifier les applications et solutions prena
 
 Pour ces applications et solutions, la prise en charge de Rights Management est étroitement intégrée en utilisant les API Rights Management pour la prise en charge des restrictions d’utilisation. Ces applications et solutions sont également qualifiées de « compatibles RMS ».
 
-Sauf indication contraire, les fonctionnalités prises en charge s’appliquent à Azure RMS et à AD RMS. Par ailleurs, la prise en charge d’AD RMS sur iOS, Android, macOS et Windows Phone 8.1 a pour prérequis [l’extension des services AD RMS (Active Directory Rights Management Services) pour appareils mobiles](https://technet.microsoft.com/library/dn673574.aspx).
+Sauf indication contraire, les fonctionnalités prises en charge s’appliquent à Azure RMS et à AD RMS. Par ailleurs, la prise en charge d’AD RMS sur iOS, Android, macOS et Windows Phone 8.1 a pour prérequis [l’extension des services AD RMS (Active Directory Rights Management Services) pour appareils mobiles](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 ## <a name="rms-enlightened-applications"></a>Applications compatibles avec RMS
 

@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: mbaldwin
-ms.openlocfilehash: b692e78cbebe9b8657b0479a1d343453f5f07348
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 0b1b110fe3b2e96c258c7b94a3d356b9404d6e7e
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333328"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809741"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C#)
 
@@ -91,7 +91,7 @@ Enfin, générez et testez votre application cliente.
 
 | Récapitulatif | Message d'erreur | Solution |
 |---------|---------------|----------|
-| Jeton d'accès incorrect | *Une exception s’est produite... est le jeton d’accès incorrect/expiré ? <br> <br>Appel d’API a échoué : profile_add_engine_async a échoué avec : [classe mip::PolicySyncException] Échec de la stratégie lors de l’acquisition, la demande a échoué avec le code d’état http : 401, x-ms-diagnostics : [2000001 ; raison = « jeton OAuth envoyée avec la requête ne peut pas être analysée. » ; error_category = « invalid_token »], ID de corrélation : [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (processus 29924) s’est arrêté avec le code 0.<br> <br>Appuyez sur n’importe quelle touche pour fermer cette fenêtre...* | Si votre projet est généré avec succès, mais que vous voyez une sortie similaire à gauche, vous avez probablement un jeton non valide ou expiré dans votre méthode `AcquireOAuth2Token()`. Revenez à [Mettre à jour la logique d’acquisition de jeton](#update-the-token-acquisition-logic-with-a-valid-access-token) et regénérez le jeton d’accès, mettez à jour `AcquireOAuth2Token()` de nouveau et regénérez/retestez. Vous pouvez également examiner et vérifier le jeton et ses revendications, à l’aide de l’application web monopage [jwt.ms](https://jwt.ms/). |
+| Jeton d'accès incorrect | *Une exception s’est produite... est le jeton d’accès incorrect/expiré ? <br> <br>Appel d’API a échoué : profile_add_engine_async a échoué avec : [classe mip::PolicySyncException] Échec de la stratégie lors de l’acquisition, la demande a échoué avec le code d’état http : 401, x-ms-diagnostics : [2000001 ; raison = « jeton OAuth envoyée avec la requête ne peut pas être analysée. » ; error_category = « invalid_token »], ID de corrélation : [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (processus 29924) s’est arrêté avec le code 0.<br> <br>Appuyez sur n’importe quelle touche pour fermer cette fenêtre...* | Si votre projet est généré avec succès, mais que vous voyez une sortie similaire à gauche, vous avez probablement un jeton non valide ou expiré dans votre méthode `AcquireOAuth2Token()`. Revenez à [générer et tester l’application](#build-and-test-the-application) et régénérer la mise à jour du jeton, de l’accès `AcquireOAuth2Token()` à nouveau et régénération/retestez. Vous pouvez également examiner et vérifier le jeton et ses revendications, à l’aide de l’application web monopage [jwt.ms](https://jwt.ms/). |
 | Étiquettes de sensibilité non configurées | Non applicable | Si votre projet est généré avec succès, mais que vous n’avez aucune sortie dans la fenêtre de console, assurez-vous que les étiquettes de sensibilité de votre organisation soient correctement configurées. Consultez [Installation et configuration du kit SDK MIP](setup-configure-mip.md), sous « Définir les paramètres de taxonomie et de protection des étiquettes » pour plus d’informations.  |
 
 ## <a name="next-steps"></a>Étapes suivantes

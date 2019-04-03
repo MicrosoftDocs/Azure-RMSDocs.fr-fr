@@ -4,17 +4,17 @@ description: Les conditions permettent d’affecter automatiquement une étiquet
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/14/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: f8545491a527b8e502150cd83802b2868dd3a1da
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 3cf57d5e958ab535a2e2cd21adc305fe09bb8aec
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829040"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809758"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -99,19 +99,6 @@ Vous pouvez changer ce comportement afin que le client Azure Information Protect
 Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement disponibles pour les utilisateurs et les services. Il n’y a plus d’option de publication distincte.
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Types d’informations sensibles nécessitant une version minimale du client
-
-Les types d’informations sensibles suivants nécessitent au minimum la version 1.37.19.0 pour le client Azure Information Protection :
-
-- **Numéro de téléphone mobile dans l’UE**
-- **Numéro de passeport dans l’UE**
-- **Numéro de permis de conduire dans l’UE**
-- **Numéro d’identification nationale dans l’UE**
-- **Numéro de sécurité sociale ou équivalent dans l’UE**
-- **Numéro de T.V.A. intra-communautaire dans l’UE**
-- **Code d’identification des personnes en Thaïlande**
-- **Numéro d’identification nationale en Turquie**
-- **Numéro de carte de résidence au Japon**
-
 
 Les types d’informations sensibles suivants nécessitent la préversion actuelle du client Azure Information Protection :
 

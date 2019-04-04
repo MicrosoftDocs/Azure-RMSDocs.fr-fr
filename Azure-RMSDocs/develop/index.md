@@ -1,8 +1,7 @@
 ---
-# required metadata
 title: Guide du développeur RMS | Azure RMS
 description: Trois générations du Kit Rights Management SDK sont désormais disponibles.
-keywords: null
+keywords: ''
 author: msmbaldwin
 manager: barbkess
 ms.author: mbaldwin
@@ -14,8 +13,13 @@ ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
+ms.openlocfilehash: 82582497fccec063ad23e157780f871681dc0bb8
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331798"
 ---
-
 # <a name="rms-developers-guide"></a>Guide du développeur RMS
 
 ## <a name="overview"></a>Vue d’ensemble ##

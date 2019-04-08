@@ -4,18 +4,18 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/19/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91afeedf07e34f08860f1d596052fdc559c53098
-ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
+ms.openlocfilehash: d6ffbce2dfba5a2d835808a21857eb396cfc1eb5
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57828445"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809860"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -47,7 +47,7 @@ Utilisez les informations suivantes pour découvrir les nouveautés et les chang
 Si vous disposez d’une version 1 du client ultérieure à la version 1.41.51.0, il s’agit d’une préversion générée à des fins de test et d’évaluation.  
 
 > [!TIP]
-> Vous vous intéressez à l’évaluation au client d’étiquetage unifié Azure Information Protection, car vos étiquettes sont publiées à partir du Centre de sécurité et de conformité Office 365 ? Consultez [Client d’étiquetage unifié Azure Information Protection : Informations sur la version](unifiedlabelingclient-version-release-history.md).
+> L’évaluation du client d’étiquetage unifié Azure Information Protection vous intéresse, car vos étiquettes sont publiées à partir du Centre de sécurité et conformité Office 365, du Centre de sécurité Microsoft 365 ou du Centre de conformité Microsoft 365 ? Consultez [Client d’étiquetage unifié Azure Information Protection : Informations sur la version](unifiedlabelingclient-version-release-history.md).
 
 **Date de publication** : 05/03/2019
 
@@ -81,6 +81,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Nouveau paramètre client avancé qui est applicable seulement quand vous configurez le paramètre de stratégie de façon à ne pas afficher des autorisations personnalisées : Quand un fichier est protégé par des autorisations personnalisées, affichez l’option des autorisations personnalisées dans l’Explorateur de fichiers, pour que les utilisateurs puissent les voir et les changer (s’ils ont les autorisations nécessaires pour changer les paramètres de protection). [Plus d’informations](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
+- Nouveau paramètre client avancé pour l’analytique Azure Information Protection permettant d’empêcher l’envoi de correspondances de types d’informations à un sous-ensemble d’utilisateurs lorsque la case correspondant à la collecte de correspondances de contenu est cochée sur le Portail Azure. [Plus d’informations](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
 
 **Correctifs** :
 

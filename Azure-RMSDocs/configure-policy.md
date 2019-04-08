@@ -3,7 +3,7 @@ title: Configurer la stratégie Azure Information Protection – AIP
 description: Pour configurer la classification, l’étiquetage et la protection, vous devez configurer la stratégie Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-ms.date: 02/15/2019
+ms.date: 04/02/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b12c3451517f3e2832ed36b00d60c401973a0ebb
-ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
+ms.openlocfilehash: f848aed3bb8bf6d7982a757c182edd19c9fbff73
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425944"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809775"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -67,7 +67,7 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
   - **Administrateur général/administrateur de la société**
     
     > [!NOTE] 
-    > Si votre locataire a été migré vers le magasin d’étiquetage unifié, pour gérer Azure Information Protection depuis le portail Azure, votre compte doit être un compte d’administrateur général ou l’un des rôles répertoriés avec les autorisations pour accéder au Centre de sécurité et de conformité Office 365. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Si votre locataire a été migré vers le magasin d’étiquetage unifié, votre compte doit avoir le rôle Administrateur général ou l’un des rôles de la liste avec l’autorisation d’accéder au Centre de sécurité et conformité Office 365, au Centre de sécurité Microsoft 365 ou au Centre de conformité Microsoft 365 pour pouvoir gérer Azure Information Protection sur le Portail Azure. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Pour accéder au panneau Azure Information Protection pour la première fois
@@ -146,7 +146,7 @@ Utilisez les informations suivantes pour configurer la stratégie Azure Informat
 
 - [Guide pratique pour configurer des étiquettes pour des langues différentes](configure-policy-languages.md)
 
-- [Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365](configure-policy-migrate-labels.md)
+- [Guide pratique pour migrer des étiquettes Azure Information Protection sur Office 365](configure-policy-migrate-labels.md)
 
 ## <a name="label-information-stored-in-emails-and-documents"></a>Étiquettes d’information stockées dans des e-mails et des documents
 

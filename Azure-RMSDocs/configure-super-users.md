@@ -4,19 +4,19 @@ description: Découvrez et implémentez la fonctionnalité de super utilisateur 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/12/2018
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1590fded6abab3ca2848d9eb216e9f49f35f0cfb
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4a0583b4cc288385520d2990d6f297a58a81d1cc
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255323"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809725"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données
 
@@ -85,7 +85,7 @@ Pour plus d’informations sur ces applets de commande, consultez [Utilisation d
 
 Même si vous pouvez utiliser l’applet de commande Unprotect-RMSFile pour déchiffrer le contenu protégé dans des fichiers PST, utilisez cette applet de commande stratégiquement dans le cadre de votre processus eDiscovery. L’exécution d’Unprotect-RMSFile sur des fichiers volumineux d’un ordinateur nécessite de nombreuses ressources (mémoire et espace disque) et la taille de fichier maximale prise en charge pour cette applet de commande est de 5 Go.
 
-Dans l’idéal, utilisez [Office 365 eDiscovery](/office365/securitycompliance/ediscovery) pour rechercher dans les e-mails protégés et extraire une pièce jointe protégée dans les e-mails. La capacité de super utilisateur est automatiquement intégrée à Exchange Online afin qu’eDiscovery dans le Centre de sécurité et conformité Office 365 puisse rechercher des éléments chiffrés avant l’exportation, ou déchiffrer un e-mail chiffré lors de l’exportation.
+Dans l’idéal, utilisez [Office 365 eDiscovery](/office365/securitycompliance/ediscovery) pour rechercher dans les e-mails protégés et extraire une pièce jointe protégée dans les e-mails. La capacité de super utilisateur est automatiquement intégrée à Exchange Online de sorte qu’eDiscovery du Centre de sécurité et conformité Office 365 ou du Centre de conformité Microsoft 365 puisse rechercher des éléments chiffrés avant l’exportation, ou déchiffrer des e-mails chiffrés lors de l’exportation.
 
 Si vous ne pouvez pas utiliser Office 365 eDiscovery, vous pouvez recourir à une autre solution eDiscovery qui s’intègre au service Azure Rights Management pour exploiter les données de la même façon. Par ailleurs, si votre solution e-Discovery ne peut pas lire et déchiffrer automatiquement le contenu protégé, vous pouvez toujours utiliser cette solution dans un processus à plusieurs étapes qui vous permet d’exécuter Unprotect-RMSFile plus efficacement :
 

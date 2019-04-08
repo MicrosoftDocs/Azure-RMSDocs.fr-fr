@@ -4,25 +4,25 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/28/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 699e2807c700b90b98bbc855dd8792aa607696f3
-ms.sourcegitcommit: 8ba63c0f4cd7d2ad7614af4ea9cfe8aec7fac4c0
+ms.openlocfilehash: 7eb7ffd98651ed35be7ecd8043e49c1d15a65e8e
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956251"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809707"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Client d’étiquetage unifié Azure Information Protection : Informations sur la version
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 > [!NOTE]
-> Ce client est en préversion et susceptible d’être modifié. Il utilise le magasin d’étiquetage unifié et télécharge une stratégie avec des étiquettes à partir du Centre de sécurité et conformité Office 365. [Plus d’informations](/Office365/SecurityCompliance/sensitivity-labels)
+> Ce client est en préversion et susceptible d’être modifié. Il utilise le magasin d’étiquetage unifié et télécharge une stratégie comportant des étiquettes à partir des centres d’administration suivants : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 et le Centre de conformité Microsoft 365. [Plus d’informations](/Office365/SecurityCompliance/sensitivity-labels)
 
 Vous pouvez télécharger la dernière préversion du client d’étiquetage unifié Azure Information Protection depuis le [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=57440).
 
@@ -42,7 +42,7 @@ Cette préversion du client d’étiquetage unifié Azure Information Protection
 
 - Mise à niveau à partir du client Azure Information Protection.
 
-- Étiquetage manuel, automatique et recommandé : utilisez **Étiquetage automatique** à partir du Centre de sécurité et conformité Office 365 pour configurer l’étiquetage automatique et recommandé. Pour plus d’informations, voir [Appliquer automatiquement une étiquette sensibilité au contenu](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
+- Étiquetage manuel, automatique et recommandé : Pour plus d’informations sur la configuration de l’étiquetage automatique et de l’étiquetage recommandé pour ce client, voir [Appliquer automatiquement une étiquette de confidentialité au contenu](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
 
 - Dans l’Explorateur de fichiers, actions déclenchées par clic droit pour classifier et protéger des fichiers, supprimer la protection et appliquer des autorisations personnalisées.
 
@@ -63,7 +63,7 @@ Cette préversion du client d’étiquetage unifié Azure Information Protection
     - Invites de justification si les utilisateurs baissent le niveau de classification ou suppriment une étiquette
     - Couleurs des étiquettes
 
-- Actualisation de la stratégie à partir du Centre de sécurité et de conformité :
+- Actualisation de la stratégie à partir des centres d’administration :
     - à chaque démarrage d’une application Office et toutes les 4 heures ;
     - lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier ;
     - lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection.

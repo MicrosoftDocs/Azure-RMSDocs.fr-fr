@@ -4,17 +4,17 @@ description: Configurez les paramètres dans la stratégie Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/06/2019
+ms.date: 03/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 5a797fc02894c64d3801492080decf113383cb33
-ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
+ms.openlocfilehash: b85cf3fc1a1f78732c928b40cb09b4781dc42168
+ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379880"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58617820"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Guide pratique pour configurer les paramètres de stratégie pour Azure Information Protection
 
@@ -42,7 +42,11 @@ Pour configurer ces paramètres :
         
         Ce paramètre s’applique aux applications Office et au scanneur. Il ne s’applique pas à l’Explorateur de fichiers ou à PowerShell.
     
-   - **Tous les documents et e-mails doivent avoir une étiquette** : Lorsque vous paramétrez cette option sur **Activé**, une étiquette doit être appliquée à tous les documents et e-mails envoyés enregistrés. L’étiquetage peut être affecté manuellement par un utilisateur, automatiquement à la suite d’une [condition](configure-policy-classification.md), ou être attribué par défaut (en définissant l’option **Sélectionner l’étiquette par défaut**.
+    - **Envoyer des données d’audit à l’analytique Azure Information Protection** : avant la création d’un espace de travail Azure Log Analytics pour [l’analytique Azure Information](reports-aip.md), les valeurs de ce paramètre indiquent **Désactivé** et **Non configuré**. Après la création de l’espace de travail, elles deviennent **Désactivé** et **Activé**.
+        
+        Lorsque le paramètre est **Activé**, les points de terminaison qui prennent en charge la création centralisée de rapports envoient leurs données d’audit au service Azure Information Protection. Pour plus d’informations sur les informations envoyées et stockées, voir la section [Informations collectées et envoyées à Microsoft](reports-aip.md#information-collected-and-sent-to-microsoft). Définissez cette option sur **Désactivé** pour empêcher l’envoi de ces données.
+    
+    - **Tous les documents et e-mails doivent avoir une étiquette** : Lorsque vous paramétrez cette option sur **Activé**, une étiquette doit être appliquée à tous les documents et e-mails envoyés enregistrés. L’étiquetage peut être affecté manuellement par un utilisateur, automatiquement à la suite d’une [condition](configure-policy-classification.md), ou être attribué par défaut (en définissant l’option **Sélectionner l’étiquette par défaut**.
         
        Si aucune étiquette n’est affectée quand les utilisateurs enregistrent un document ou envoient un e-mail, ils sont invités à sélectionner une étiquette. Par exemple :
         

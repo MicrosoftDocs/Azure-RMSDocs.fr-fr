@@ -4,19 +4,19 @@ description: Vous avez une question au sujet de l’utilisation d’Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 3bfa333e88df07702aa6e7990c31609985a2b00f
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 34f64cc28762f8eb08089b188fbb40c7358e4807
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828853"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809979"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
 
@@ -49,7 +49,7 @@ Actuellement, il existe deux clients en préversion pour Windows :
 
 - Le **client Azure Information Protection** qui télécharge les étiquettes et les paramètres de stratégie à partir du portail Azure. Ce client repose sur la version de disponibilité générale du client.
 
-- Le **client d’étiquetage unifié Azure Information Protection** qui télécharge les étiquettes et les paramètres de stratégie à partir du Centre de sécurité et conformité Office 365. Il s’agit de la seconde préversion de ce client.
+- Le **client d’étiquetage unifié Azure Information Protection** qui télécharge les étiquettes et les paramètres de stratégie à partir d’un des centres d’administration : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365. Il s’agit de la seconde préversion de ce client.
 
 Nous vous recommandons de tester le client d’étiquetage unifié Azure Information Protection si ses fonctionnalités actuelles répondent à vos besoins métier. Dans le cas contraire, ou si vous avez configuré des étiquettes dans le portail Azure que vous n’avez pas encore [migrées vers le magasin d’étiquetage unifié](configure-policy-migrate-labels.md), utilisez le client Azure Information Protection.
 

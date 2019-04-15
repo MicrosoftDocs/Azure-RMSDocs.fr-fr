@@ -3,7 +3,7 @@ title: Configurer la stratégie Azure Information Protection – AIP
 description: Pour configurer la classification, l’étiquetage et la protection, vous devez configurer la stratégie Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-ms.date: 04/02/2019
+ms.date: 04/05/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f848aed3bb8bf6d7982a757c182edd19c9fbff73
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: b16d34cfa97a695ea24a6cb5caa18e759517f08e
+ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809775"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233766"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -62,12 +62,14 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
     
     - **Lecteur Sécurité** pour [l’analytique Azure Information Protection](reports-aip.md) uniquement
     
+  - **Administrateur de conformité**
+    
   - **Administrateur de sécurité**
     
-  - **Administrateur général/administrateur de la société**
+  - **Administrateur général**
     
     > [!NOTE] 
-    > Si votre locataire a été migré vers le magasin d’étiquetage unifié, votre compte doit avoir le rôle Administrateur général ou l’un des rôles de la liste avec l’autorisation d’accéder au Centre de sécurité et conformité Office 365, au Centre de sécurité Microsoft 365 ou au Centre de conformité Microsoft 365 pour pouvoir gérer Azure Information Protection sur le Portail Azure. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Si votre locataire a été migré vers le magasin d’étiquetage unifié, l’administrateur Information Protection n’est plus pris en charge. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Pour accéder au panneau Azure Information Protection pour la première fois

@@ -4,18 +4,18 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d6ffbce2dfba5a2d835808a21857eb396cfc1eb5
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 52b72d7d05b405e0d4972dd4c4c1edfee3d9fe3b
+ms.sourcegitcommit: ce2078712d111f102a72b3a8697121f1390bdf07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59289500"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -81,7 +81,10 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Nouveau paramètre client avancé qui est applicable seulement quand vous configurez le paramètre de stratégie de façon à ne pas afficher des autorisations personnalisées : Quand un fichier est protégé par des autorisations personnalisées, affichez l’option des autorisations personnalisées dans l’Explorateur de fichiers, pour que les utilisateurs puissent les voir et les changer (s’ils ont les autorisations nécessaires pour changer les paramètres de protection). [Plus d’informations](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
-- Nouveau paramètre client avancé pour l’analytique Azure Information Protection permettant d’empêcher l’envoi de correspondances de types d’informations à un sous-ensemble d’utilisateurs lorsque la case correspondant à la collecte de correspondances de contenu est cochée sur le Portail Azure. [Plus d’informations](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+- Deux nouveaux paramètres avancés client pour l’analytique Azure Information Protection, pour les scénarios suivants :
+    
+    - Empêcher l’envoi de correspondances de types d’informations à un sous-ensemble d’utilisateurs lorsque la case correspondant à la collecte de correspondances de contenu est cochée sur le Portail Azure. [Plus d’informations](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+    - Pour le rapport de découverte, afficher si les fichiers contiennent des informations sensibles. [Plus d’informations](client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
 
 **Correctifs** :
 

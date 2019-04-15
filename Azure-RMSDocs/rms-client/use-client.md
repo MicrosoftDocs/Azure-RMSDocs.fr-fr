@@ -4,18 +4,18 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: 876838dbd4e9818ca118f632079c98531ce347a1
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 0762edb3e7960c5700ac8a28d7ae1b62455efbe0
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809826"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364604"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -62,6 +62,7 @@ Utilisez le tableau suivant pour vous aider à comparer les fonctionnalités qui
 |Visionneuse des fichiers protégés :| Oui | Oui, avec des restrictions :<br /><br /> - Pour les fichiers protégés de manière générique (.pfile), contrairement à la visionneuse du client Azure Information Protection, il n’existe aucune possibilité d’enregistrer des modifications dans le fichier ouvert à l’origine.|
 |Commandes PowerShell :| Oui | Oui, avec des restrictions :<br /><br />- Cmdlets incluses : [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />- Les cmdlets qui se connectent directement à un service de protection ne sont pas incluses.|
 |Prise en charge hors connexion des actions de protection :| Oui | Oui, avec des restrictions : <br /><br />- Pour l’Explorateur de fichiers et les commandes PowerShell, l’utilisateur doit être connecté à Internet pour protéger les fichiers. |
+|Prise en charge des ordinateurs déconnectés avec gestion de fichier de stratégie manuelle :| Oui |Non |
 |Prise en charge de HYOK :| Oui | Non<br /><br /> Les étiquettes que vous migrez à partir du portail Azure et qui sont configurées pour la protection HYOK sont affichées par le client d’étiquetage unifié Azure Information Protection, mais n’appliquent pas de protection. |
 |Journalisation de l’utilisation dans l’observateur d’événements :| Oui | Non|
 |Héritage d’étiquette à partir des pièces jointes aux e-mails :| Oui | Non |
@@ -103,10 +104,6 @@ Bien que le client d’étiquetage unifié d’Azure Information Protection soit
 
 - Barre de titre et info-bulle Azure Information Protection
 
-- Valeurs dynamiques dans les en-têtes et pieds de page à l’aide de variables, et différents marquages visuels pour Word, Excel, PowerPoint et Outlook
-
-- Prise en charge hors connexion pour les actions de protection dans PowerShell et dans l’Explorateur de fichiers
-
 - Mode Protection uniquement (pas d’étiquettes)
 
 - Protéger le document PDF en tant que format .ppdf
@@ -124,8 +121,6 @@ Bien que le client d’étiquetage unifié d’Azure Information Protection soit
 - Étiqueter un document Office avec une propriété personnalisée existante (paramètres du client avancé SyncPropertyName et SyncPropertyState)
 
 - Applets de commande PowerShell distinctes pour la connexion à un service Rights Management
-
-- Protection AD RMS uniquement
 
 
 #### <a name="parent-labels-and-their-sublabels"></a>Étiquettes parentes et sous-étiquettes associées 

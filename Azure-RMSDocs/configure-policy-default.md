@@ -4,16 +4,16 @@ description: Comprendre le processus de configuration de la stratégie par défa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/06/2018
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: a6fd4b308413fb5bf852a5c063c54b972497289c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 18654d3867fd456b8b4ed6eb0ebd01d9c86ff13a
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253589"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364587"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
@@ -24,6 +24,12 @@ Utilisez les informations suivantes pour comprendre la configuration de la strat
 Quand un administrateur se connecte pour la première fois au service Azure Information Protection à l’aide du Portail Azure, la stratégie Azure Information Protection par défaut de ce locataire est créée. Il peut arriver que Microsoft apporte des modifications à cette stratégie par défaut ; cependant, si vous utilisiez déjà le service avant cette révision, votre version antérieure de la stratégie Azure Information Protection par défaut n’est pas mise à jour, car vous pouvez l’avoir configurée et déployée en production.
 
 Vous pouvez référencer les valeurs suivantes pour rétablir les valeurs par défaut de votre stratégie Azure Information Protection ou la mettre à jour avec les dernières valeurs.
+
+> [!IMPORTANT]
+> Depuis avril 2019, une modification est progressivement déployée sur les nouveaux locataires avec laquelle les étiquettes par défaut ne sont pas créées automatiquement. Ces locataires sont automatiquement provisionnés pour la plateforme d’étiquetage unifié, il n’est donc pas nécessaire de migrer les étiquettes après les avoir configurées dans le portail Azure.
+> 
+> Pour ces locataires, s’il n’existe pas d’étiquettes de sensibilité déjà créées dans le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft 365 ou le centre de conformité Microsoft 365, vous pouvez créer les étiquettes par défaut à partir de la stratégie par défaut pour Azure Information Protection. Pour ce faire, sélectionnez **Générer des étiquettes par défaut** à partir du panneau **Étiquettes** et ajoutez les étiquettes à la stratégie générale. Pour des instructions détaillées, consultez le démarrage rapide [Bien démarrer avec Azure Information Protection sur le portail Azure](quickstart-viewpolicy.md).
+
 
 ## <a name="current-default-policy"></a>Stratégie par défaut actuelle
 
@@ -95,14 +101,19 @@ Les autorisations de protection sont celles définies dans le [modèle par défa
 
 ### <a name="settings"></a>Paramètres
 
+Certains paramètres ont été ajoutés après le 31 juillet 2017.
+
 |Paramètre|Valeur|
 |-------------------------------|---------------------------|
-|Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Sélectionner l’étiquette par défaut|Aucune|
+|Envoyer des données d’audit à l’analytique Azure Information Protection|Désactivé|
+|Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection|Désactivé|
 |Pour les e-mails avec des pièces jointes, appliquez une étiquette qui correspond à la classification la plus élevée de ces pièces jointes|Désactivé|
+|Afficher la barre Information Protection dans les applications Office|Désactivé|
+|Ajouter le bouton Ne pas transférer au ruban Outlook|Désactivé|
+|Activer les options d’autorisations personnalisées pour les utilisateurs|Désactivé|
 |Spécifiez une URL personnalisée pour la page web « En savoir plus » du client Azure Information Protection|Vide|
-
 
 ## <a name="default-policy-before-july-31-2017"></a>Stratégie par défaut avant le 31 juillet 2017
 

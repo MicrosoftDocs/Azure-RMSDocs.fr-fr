@@ -4,19 +4,19 @@ description: Informations sur les données personnelles qui sont utilisées par 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/23/2019
+ms.date: 04/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: aa8b1da968a0821fd889bbed54e6b7698857bcf2
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 33455ec0d6433c52164f27127838917c2850d2f3
+ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233732"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
 
@@ -211,11 +211,13 @@ Les données personnelles que vous affichez et spécifiez dans le portail Azure 
     
 - **Administrateur Information Protection**
 
+- **Administrateur de conformité**
+
 - **Administrateur de sécurité**
 
-- **Administrateur général/administrateur de la société**
+- **Administrateur général**
 
-Les données personnelles que vous affichez et spécifiez à l’aide du module AADRM sont accessibles uniquement par les utilisateurs ayant reçu le rôle **administrateur Information Protection** ou les rôles **Administrateur général/administrateur de la société** par Azure Active Directory, ou le rôle d’administrateur global pour le service Azure Rights Management.  
+Les données personnelles que vous affichez et spécifiez à l’aide du module AADRM sont accessibles uniquement par les utilisateurs ayant reçu le rôle **Administrateur Information Protection**, **Administrateur de conformité** ou **Administrateur général** par Azure Active Directory, ou le rôle d’administrateur global pour le service Azure Rights Management.  
 
 ## <a name="updating-personal-data"></a>Mise à jour des données personnelles
 

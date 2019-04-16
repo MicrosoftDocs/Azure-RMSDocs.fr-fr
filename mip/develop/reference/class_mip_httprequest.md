@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 6e663d4083d9daa2fc744289708f4c127ffb29c2
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 8b0349db2e985d6fb015e1a2698187089483fbe3
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330693"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573069"
 ---
 # <a name="class-miphttprequest"></a>mip::HttpRequest, classe 
 Interface qui décrit une seule requête HTTP.
@@ -20,12 +20,19 @@ Interface qui décrit une seule requête HTTP.
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
+public const std::string& GetId() const  |  ID de la demande Obtient
 public HttpRequestType GetRequestType() const  |  Obtenir le type de requête.
 public const std::string& GetUrl() const  |  Obtenir l’URL de la requête.
-public const std::string& GetBody() const  |  Obtenir le corps de la requête.
+public const std::vector\<uint8_t\>& GetBody() const  |  Obtenir le corps de la requête.
 public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Obtenir les en-têtes de requête.
   
 ## <a name="members"></a>Membres
+  
+### <a name="getid-function"></a>GetId (fonction)
+ID de la demande Obtient
+
+  
+**Retourne**: ID correspondant de la requête [HttpResponse](class_mip_httpresponse.md) aura le même ID
   
 ### <a name="getrequesttype-function"></a>GetRequestType (fonction)
 Obtenir le type de requête.
@@ -43,7 +50,7 @@ Obtenir l’URL de la requête.
 Obtenir le corps de la requête.
 
   
-**Retourne**: Corps de la demande
+**Retourne**: Corps de demande
   
 ### <a name="getheaders-function"></a>GetHeaders (fonction)
 Obtenir les en-têtes de requête.

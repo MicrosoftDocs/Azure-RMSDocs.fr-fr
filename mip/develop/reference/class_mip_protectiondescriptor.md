@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 922ff8811e5cb71d6d4d5920dfec80eadbcbc744
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 6f4bb83950a4745739a1663950a52d05c51f7f4d
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809792"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573290"
 ---
 # <a name="class-mipprotectiondescriptor"></a>class mip::ProtectionDescriptor 
 Description de la protection associée à un élément de contenu.
@@ -26,6 +26,7 @@ public std::string GetName() const  |  Obtient le nom de la protection.
 public std::string GetDescription() const  |  Obtient la description de la protection.
 public std::string GetTemplateId() const  |  Obtient l’ID du modèle de protection, le cas échéant.
 public std::string GetLabelId() const  |  Obtient l’ID de l’étiquette, le cas échéant.
+public std::string GetContentId() const  |  Obtient l’ID de contenu, le cas échéant.
 public std::vector\<UserRights\> GetUserRights() const  |  Obtient la collection de mappages utilisateurs-droits.
 public std::vector\<UserRoles\> GetUserRoles() const  |  Obtient la collection de mappages utilisateurs-rôles.
 public bool DoesContentExpire() const  |  Vérifie si contenu a un délai d’expiration ou non.
@@ -73,6 +74,12 @@ Obtient l’ID de l’étiquette, le cas échéant.
   
 **Retourne**: [Étiquette](class_mip_label.md) ID de cette propriété sera uniquement remplie dans ProtectionDescriptors pour préexistant du contenu protégé. Il s’agit d’un champ rempli par le serveur au moment où le contenu protégé est utilisé.
   
+### <a name="getcontentid-function"></a>GetContentId (fonction)
+Obtient l’ID de contenu, le cas échéant.
+
+  
+**Retourne**: ID de contenu
+  
 ### <a name="getuserrights-function"></a>GetUserRights (fonction)
 Obtient la collection de mappages utilisateurs-droits.
 
@@ -113,7 +120,7 @@ Obtient l’adresse du référent de protection.
 Obtient les données propres à l’application qui ont été chiffrées.
 
   
-**Retourne**: Données spécifiques de l’application A [ProtectionHandler](class_mip_protectionhandler.md) peut contenir un dictionnaire des données spécifiques de l’application qui a été chiffrés par le service de protection. Ces données chiffrées ne dépendent pas des données signées accessibles par [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata-function)
+**Retourne**: Données spécifiques de l’application A [ProtectionHandler](class_mip_protectionhandler.md) peut contenir un dictionnaire des données spécifiques de l’application qui a été chiffrés par le service de protection. Ces données chiffrées sont indépendantes des données signées accessibles par le biais de ProtectionDescriptor::GetSignedAppData.
   
 ### <a name="getsignedappdata-function"></a>GetSignedAppData function
 Obtient les données spécifiques de l’application qui ont été signées.

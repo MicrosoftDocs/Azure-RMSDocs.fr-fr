@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 2e4a107a0a967f4d3ff58ebf269bb701f5834fb0
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: d404d6f60e7b2472bc97181b45fae3b4dabc387b
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331815"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574242"
 ---
 # <a name="class-mipauthdelegateoauth2challenge"></a>classe mip::AuthDelegate::OAuth2Challenge 
 une classe qui contient toutes les informations requises à partir de l’application appelante afin de générer un jeton oauth2.

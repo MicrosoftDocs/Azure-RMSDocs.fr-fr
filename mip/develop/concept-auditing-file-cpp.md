@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: f091cfd220ac8886a6bf26903deb7b97062cffd7
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: df0d51d976f7f900011688d2f328f3a2ddb1e378
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258587"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573149"
 ---
 # <a name="auditing-in-the-mip-sdk-file-api"></a>Audit dans l’API de fichier du kit SDK MIP
 
@@ -31,7 +31,7 @@ Les événements de pulsation sont générés automatiquement pour toutes les ap
 * Heure de la génération
 * Nom d'utilisateur principal
 * Nom de la machine sur laquelle l’audit a été généré
-* Nom de processus
+* Nom du processus
 * Plateforme
 * ID d’application - Correspond à l’ID d’application Azure AD.
 
@@ -49,7 +49,7 @@ Dans l’exemple ci-dessous, `mip::FileHandler` est créé, et la détection d�
 // Create FileHandler with discovery enabled
 auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
 auto handlerFuture = handlerPromise->get_future();
-fileEngine->CreateFileHandlerAsync(filePath, contentId, mip::ContentState::REST, true /*AuditDiscoveryEnabled*/, make_shared<FileHandlerObserver>(), createFileHandlerPromise);
+fileEngine->CreateFileHandlerAsync(inputFilePath, actualFilePath, true /*AuditDiscoveryEnabled*/, make_shared<FileHandlerObserver>(), createFileHandlerPromise);
 auto handler = handlerFuture.get();
 
 // Read label. This generates the discovery audit.

@@ -7,12 +7,12 @@ ms.topic: troubleshooting
 ms.collection: M365-security-compliance
 ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 97b9fdb53c103eac94e62ddb6438c57e4c9f45cc
-ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
+ms.openlocfilehash: 78dc655d8244378fcc37b22030d3060fd291ef16
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581723"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574217"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Questions fréquentes (FAQ) sur le kit SDK Microsoft Information Protection (MIP) et problèmes
 
@@ -57,3 +57,11 @@ Cela indique que vous n’avez pas migré vos étiquettes d’Azure Information 
 > System.ComponentModel.Win32Exception : LoadLibrary a échoué pour : [sdk_wrapper_dotnet.dll] lors de l’appel MIP. Initialize().
 
 Votre application n’a pas le runtime requis, ou n’a pas été créée en tant que mise en production. Consultez [vous assurer que votre application dispose le runtime requis](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) pour plus d’informations. 
+
+### <a name="error-proxyautherror-exception"></a>Erreur : « exception ProxyAuthError »
+
+**Question**: Je reçois l’erreur suivante lors de l’utilisation du SDK MIP ?
+
+> « ProxyAuthenticatonError : L’authentification du proxy est non pris en charge »
+
+Le SDK MIP ne prend pas en charge l’utilisation de serveurs proxy authentifiés. Pour résoudre ce message, les administrateurs de serveur proxy doivent définir les points de terminaison de service Microsoft Information Protection pour ignorer le proxy. Une liste de ces points de terminaison sont disponibles sur le [plages d’adresses IP et Office 365 URL](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges) page. Du SDK MIP requiert que `*.protection.outlook.com` (lignes 9) et les points de terminaison de service Azure Information Protection (ligne 73) contournent l’authentification de proxy.

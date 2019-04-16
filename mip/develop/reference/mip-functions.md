@@ -7,41 +7,49 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 5827c1f2779ec22dd798ec26c12a9977e10065c1
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: ced8339fa93ec349644a1f9e386489bb02c8eff0
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332733"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574021"
 ---
 # <a name="functions"></a>Fonctions
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Récapitulatif 
 
+### <a name="namespace-mip"></a>Namespace mip
 | Fonctions selon la portée espace de noms   | Descriptions                                |
 |--------------------------------|---------------------------------------------|
-**Namespace `mip` :** |
 public std::string GetAssignmentMethodString (méthode de la méthode d’assignation)       |  Convertit la méthode d’assignation enum pour une description de chaîne.
 public static std::string GetActionSourceString(ActionSource actionSource)       |  Obtenir le nom de source d’action.
-public static std::string GetContentStateString(mip::ContentState state)       |  Obtenir le nom de l’état du contenu.
+public static std::string GetDataStateString(mip::DataState state)       |  Obtenir le nom de l’état du contenu.
 public const std::string& GetCustomSettingPolicyDataName()       |  Nom du paramètre pour spécifier explicitement les données de stratégie.
 public const std::string& GetCustomSettingExportPolicyFileName()       |  Nom du paramètre pour spécifier explicitement le chemin d’accès de fichier afin d’exporter les données de stratégie SCC.
 public const std::string& GetCustomSettingSensitivityTypesDataName()       |  Nom du paramètre pour spécifier explicitement les données de sensibilité.
 public const std::string& GetCustomSettingPolicyDataFile()       |  Nom du paramètre pour spécifier explicitement le chemin d’accès de fichier de données de stratégie.
 public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  Nom du paramètre pour spécifier explicitement la sensibilité de types de chemin d’accès du fichier de données.
+public const std::string& GetCustomSettingExternalLabelsEnabled()       |  Nom du paramètre qui permet d’activer la fonctionnalité de « étiquettes externes ».
 public __CDECL void MIP_API ReleaseAllResources()       |  Libère toutes les ressources (threads, etc.) avant l’arrêt.
 public std::shared_ptr MIP_API\<mip::Stream\> CreateStreamFromStdStream (const std::shared_ptr\<std::istream\>& stdIStream)       |  Crée un [Flux](class_mip_stream.md) à partir d’un a std::istream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::ostream\>& stdOStream)       |  Crée un [Flux](class_mip_stream.md) à partir d’un a std::ostream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream(const std::shared_ptr\<std::iostream\>& stdIOStream)       |  Crée un [Flux](class_mip_stream.md) à partir d’un a std::iostream.
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  Crée un [Flux](class_mip_stream.md) à partir d’une mémoire tampon.
- | 
-**Namespace `mip::auditmetadatakeys` :** |
+
+
+### <a name="namespace-mipauditmetadatakeys"></a>Namespace mip::auditmetadatakeys
+ Membres                        | Descriptions                                
+--------------------------------|---------------------------------------------
 public std::string Sender()       |  Auditer les clés de métadonnées dans la représentation sous forme de chaîne.
 public std::string Recipients()       | _Pas encore documenté._
 public std::string LastModifiedBy()       | _Pas encore documenté._
 public std::string LastModifiedDate()       | _Pas encore documenté._
- | 
-**Namespace `mip::rights` :** |
+
+
+### <a name="namespace-miprights"></a>Namespace mip::rights
+
+ Membres                        | Descriptions                                
+--------------------------------|---------------------------------------------
 public std::string Owner()       |  Obtient un identificateur de chaîne pour un droit « propriétaire ».
 public std::string View()       |  Obtient un identificateur de chaîne pour un droit « afficher ».
 public std::string AuditedExtract()       |  Obtient un identificateur de chaîne pour un droit « extraction auditée ».
@@ -56,16 +64,17 @@ public std::string Forward()       |  Obtient un identificateur de chaîne pour 
 public std::vector\<std::string\> EmailRights()       |  Obtient une liste de droits qui s’appliquent aux e-mails.
 public std::vector\<std::string\> EditableDocumentRights()       |  Obtient une liste de droits qui s’appliquent aux documents.
 public std::vector\<std::string\> CommonRights()       |  Obtient une liste des droits qui s’appliquent dans tous les scénarios.
- | 
-**Namespace `mip::roles` :** |
+
+### <a name="namespace-miproles"></a>Namespace mip::roles
+
+ Membres                        | Descriptions                                
+--------------------------------|---------------------------------------------
 public std::string Viewer()       |  Obtient un identificateur de chaîne pour un rôle « observateur ».
 public std::string Reviewer()       |  Obtient un identificateur de chaîne pour un rôle « réviseur ».
 public std::string Author()       |  Obtient un identificateur de chaîne pour un rôle « auteur ».
 public std::string CoOwner()       |  Obtient un identificateur de chaîne pour un rôle « copropriétaire ».
 
-
-
-## <a name="namespace-mip"></a>Namespace `mip`
+## <a name="namespace-mip"></a>Namespace mip
 
 ### <a name="getassignmentmethodstring-function"></a>GetAssignmentMethodString (fonction)
 Convertit la méthode d’assignation enum pour une description de chaîne.
@@ -89,7 +98,7 @@ Paramètres :
   
 **Retourne**: Représentation sous forme de chaîne de la source de l’action.
   
-### <a name="getcontentstatestring-function"></a>GetContentStateString (fonction)
+### <a name="getdatastatestring-function"></a>GetDataStateString (fonction)
 Obtenir le nom de l’état du contenu.
 
 Paramètres :  
@@ -130,23 +139,16 @@ Nom du paramètre pour spécifier explicitement la sensibilité de types de chem
   
 **Retourne**: La clé de paramètres personnalisés.
   
+### <a name="getcustomsettingexternallabelsenabled-function"></a>GetCustomSettingExternalLabelsEnabled function
+Nom du paramètre qui permet d’activer la fonctionnalité de « étiquettes externes ».
+
+  
+**Retourne**: La clé de paramètres personnalisés.
+  
 ### <a name="releaseallresources-function"></a>ReleaseAllResources (fonction)
 Libère toutes les ressources (threads, etc.) avant l’arrêt.
-Si les bibliothèques dynamiques MIP sont chargées en différé par une application, cette fonction doit être appelée avant que l’application ne décharge explicitement ces bibliothèques MIP pour éviter un blocage. Par exemple, sur win32, cette fonction doit être appelée avant tout appel à explicitement décharge des DLL MIP via FreeLibrary ou __FUnloadDelayLoadedDLL2. Les applications doivent libérer les références à tous les objets MIP (par exemple, les profils, les moteurs, les gestionnaires) avant d’appeler cette fonction.
-  
-### <a name="operator-function"></a>opérateur | (fonction)
-Opérateur OR au niveau du bit ProtectionHandlerCreationOptions.
-
-Paramètres :  
-* **un**: Valeur gauche 
-
-
-* **b**: Valeur droite
-
-
-
-  
-**Retourne**: Opération de bits OR de ProtectionHandlerCreationOptions
+Cette fonction doit être appelée une seule fois avant l’arrêt du processus. Il fournit MIP la possibilité d’annuler l’initialisation de lui-même dans un moment où ses bibliothèques dépendantes sont malgrés tout être chargé et jointure de thread est toujours possible. Les applications doivent libérer les références à tous les objets MIP (par exemple, les profils, les moteurs, les gestionnaires) avant d’appeler cette fonction.
+Si cette fonction n’est pas appelée, MIP sera naturellement déchargé dans le cadre de la destruction du processus standard. Sur certaines plateformes, cela peut entraîner un blocage (par exemple, threads ne peut pas être joint sur win32 en réponse à traiter la destruction) ou de défaillance (par exemple, l’ordre de déchargement DLL pour le chargement différé des bibliothèques sur win32 n'est pas contrôlé par MIP, donc ses bibliothèques dépendantes peuvent ont été déchargée par moment de l’exécution de code d’arrêt MIP, ce qui entraîne des échecs de lecture non valides).
   
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream (fonction)
 Crée un [Flux](class_mip_stream.md) à partir d’un a std::istream.
@@ -195,7 +197,7 @@ Paramètres :
 
 
 
-## <a name="namespace-mipauditmetadatakeys"></a>Namespace `mip::auditmetadatakeys`
+## <a name="namespace-mipauditmetadatakeys"></a>Namespace mip::auditmetadatakeys
 
 ### <a name="sender-function"></a>Fonction de l’expéditeur
 Auditer les clés de métadonnées dans la représentation sous forme de chaîne.
@@ -206,6 +208,7 @@ _Pas encore documenté._
   
 ### <a name="lastmodifiedby-function"></a>LastModifiedBy (fonction)
 _Pas encore documenté._
+
   
 ### <a name="lastmodifieddate-function"></a>LastModifiedDate & gt ; (fonction)
 _Pas encore documenté._
@@ -214,7 +217,8 @@ _Pas encore documenté._
 
 
 
-## <a name="namespace-miprights"></a>Namespace `mip::rights`
+
+## <a name="namespace-miprights"></a>Namespace mip::rights
 
 ### <a name="owner-function"></a>Fonction de propriétaire
 Obtient un identificateur de chaîne pour un droit « propriétaire ».
@@ -301,9 +305,7 @@ Obtient une liste des droits qui s’appliquent dans tous les scénarios.
 **Retourne**: Une liste des droits qui s’appliquent dans tous les scénarios
 
 
-
-
-## <a name="namespace-miproles"></a>Namespace `mip::roles`
+## <a name="namespace-miproles"></a>Namespace mip::roles
 
 ### <a name="viewer-function"></a>Fonction de la visionneuse
 Obtient un identificateur de chaîne pour un rôle « observateur ».

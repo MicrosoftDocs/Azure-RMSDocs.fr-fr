@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: c33700dc00440448063de76d95105432a9c5f70a
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 3cc2fbdcfeae4e168e342a3c7af0edc971039db4
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332860"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574310"
 ---
 # <a name="class-mipremovecontentheaderaction"></a>mip::RemoveContentHeaderAction, classe 
 Classe d’action qui spécifie la suppression de l’en-tête de contenu du document.
@@ -22,7 +22,7 @@ Classe d’action qui spécifie la suppression de l’en-tête de contenu du doc
 --------------------------------|---------------------------------------------
 public const std::vector\<std::string\>& GetUIElementNames()  |  Obtient une liste de noms à utiliser pour rechercher les éléments d’interface utilisateur qui doivent être supprimés.
 public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membres
   
 ### <a name="getuielementnames-function"></a>GetUIElementNames (fonction)
@@ -30,9 +30,8 @@ Obtient une liste de noms à utiliser pour rechercher les éléments d’interfa
 
   
 **Retourne**: Une liste de noms d’éléments de l’interface utilisateur.
-  
-### <a name="gettype-function"></a>Fonction GetType
-Obtenir le type de [Action](class_mip_action.md).
 
-  
+### <a name="gettype-function"></a>Fonction GetType    
+Obtenir le type de [Action](class_mip_action.md).  
+
 **Retourne**: ActionType : type d’action dérivée vers lequel cette classe de base peut être castée.

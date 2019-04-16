@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 9e3080e4fcfd8553d04acc1533fc16d8bb1640f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 367626955ba1652b20b372efd309d15304e5336f
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330676"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573443"
 ---
 # <a name="class-mipaddcontentheaderaction"></a>mip::AddContentHeaderAction, classe 
 Classe d’action qui spécifie l’ajout d’un en-tête de contenu.
@@ -28,7 +28,7 @@ public const std::string& GetFontColor() const  |  Obtenir la couleur de la poli
 public ContentMarkAlignment GetAlignment() const  |  Obtenir l’alignement de l’en-tête.
 public int GetMargin() const  |  Obtenir la marge de l’en-tête à partir du bas.
 public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membres
   
 ### <a name="getuielementname-function"></a>GetUIElementName (fonction)
@@ -67,14 +67,14 @@ Obtenir l’alignement de l’en-tête.
   
 **Retourne**: L’énumérateur ContentMarkAlignment : GAUCHE | DROITE | CENTER. 
   
-**Voir aussi**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**Voir aussi**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### <a name="getmargin-function"></a>GetMargin (fonction)
 Obtenir la marge de l’en-tête à partir du bas.
 
   
 **Retourne**: Les marges à partir du bas du document (par exemple, 10 mm).
-  
+
 ### <a name="gettype-function"></a>Fonction GetType
 Obtenir le type de [Action](class_mip_action.md).
 

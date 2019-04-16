@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 022f6f3904bb788146400f6ef6f9fd3f223638f5
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 94f82e84b2907f4aa91100964cfb4d1b287b116e
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330642"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573970"
 ---
 # <a name="class-mipinternalerror"></a>mip::InternalError, classe 
 Erreur interne. Cette erreur est levée quand un événement inattendu se produit pendant l’exécution.
@@ -64,4 +64,3 @@ Définir le message d’erreur.
 
 Paramètres :  
 * **msg** : le message d’erreur.
-

@@ -7,22 +7,30 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 9433ca2f47496e0d28d46c68b3100b53cd25c3f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: bdf0814e56d64bd16918a6f4d269a057620f92f5
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333681"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573120"
 ---
 # <a name="class-mipfileexecutionstate"></a>classe mip::FileExecutionState 
   
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-std::map virtuel public\<std::string, std::shared_ptr\<ClassificationResult\> \> GetClassificationResults (const std::shared_ptr\<FileHandler\> &, const std :: vecteur\<std::shared_ptr\<ClassificationRequest\> \> &) const  |  Retourne un mappage des résultats de la classification.
+DataState GetDataState() virtuel public const  |  Obtient l’état du contenu pendant que l’application interagit avec celui-ci.
+public virtual std::shared_ptr\<ClassificationResults\> GetClassificationResults(const std::shared_ptr\<FileHandler\> &, const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Retourne un mappage des résultats de la classification.
 public virtual std::vector\<uint8_t\> GetSerializedProtectionInfo() const  |  Retourner une mémoire tampon avec le plan sérialisée
+public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Retourner un mappage des paires clé-valeur l’application d’audit spécifique.
   
 ## <a name="members"></a>Membres
+  
+### <a name="getdatastate-function"></a>GetDataState (fonction)
+Obtient l’état du contenu pendant que l’application interagit avec celui-ci.
+
+  
+**Retourne**: État des données du contenu
   
 ### <a name="getclassificationresults-function"></a>GetClassificationResults function
 Retourne un mappage des résultats de la classification.
@@ -43,3 +51,9 @@ Retourner une mémoire tampon avec le plan sérialisée
 
   
 **Retourne**: Une mémoire tampon avec le plan sérialisée
+  
+### <a name="getauditmetadata-function"></a>GetAuditMetadata function
+Retourner un mappage des paires clé-valeur l’application d’audit spécifique.
+
+  
+**Retourne**: Une liste d’expéditeur les paires clé-valeur inscrit de métadonnées d’audit spécifique application : Id d’e-mail pour l’expéditeur, destinataires : Représente un tableau JSON de destinataires pour un message électronique LastModifiedBy : Id d’e-mail pour l’utilisateur qui a modifié dernièrement le LastModifiedDate & gt ; contenu : Date de que dernière modification du contenu

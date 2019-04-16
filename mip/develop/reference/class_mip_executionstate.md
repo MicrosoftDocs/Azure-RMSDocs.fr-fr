@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: d4e06495df39565971b29427d05a56ebe852c3df
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 318b87405ad9e6d6291f82a0bec3da6031e04ccd
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332818"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574356"
 ---
 # <a name="class-mipexecutionstate"></a>mip::ExecutionState, classe 
 Interface pour tous les états nécessaires à l’exécution du moteur.
@@ -23,16 +23,16 @@ Les clients doivent uniquement appeler les méthodes pour obtenir l’état qui 
 --------------------------------|---------------------------------------------
 public std::string GetNewLabelId() const  |  Obtient l’ID de l’étiquette de sensibilité à appliquer au document.
 public ActionSource GetNewLabelActionSource() const  |  Obtient la source pour une nouvelle action d’étiquette.
-public std::string GetContentIdentifier() const  |  Obtient l’identificateur de contenu qui décrit le document. exemple d’un fichier : exemple [chemin] pour un message électronique : [expéditeur : objet].
-public ContentState GetContentState() const  |  Obtient l’état du contenu pendant que l’application interagit avec celui-ci.
+public std::string GetContentIdentifier() const  |  Obtient la description du contenu qui décrit le document. exemple d’un fichier : exemple [chemin] pour un message électronique : [expéditeur : objet].
+DataState GetDataState() virtuel public const  |  Obtient l’état du contenu pendant que l’application interagit avec celui-ci.
 public std::pair\<bool, std::string\> IsDowngradeJustified() const  |  L’implémentation doit avoir lieu si une justification de passer une étiquette existante à une version antérieure a été fournie.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Obtenir la méthode d’assignation de la nouvelle étiquette.
-public std::vector\<std::pair\<std::string, std::string\>\> GetNewLabelExtendedProperties() const  |  Retourner les propriétés étendues de la nouvelle étiquette.
+public virtual std::vector\<std::pair\<std::string, std::string\>\> GetNewLabelExtendedProperties() const  |  Retourner les propriétés étendues de la nouvelle étiquette.
 public std::vector\<std::pair\<std::string, std::string\>\> GetContentMetadata(const std::vector\<std::string\>& names, const std::vector\<std::string\>& namePrefixes) const  |  Obtenir les éléments de métadonnées à partir du contenu.
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Obtenir le descripteur de protection.
 public ContentFormat GetContentFormat() const  |  Obtient le format du contenu.
 public ActionType GetSupportedActions() const  |  Obtient une énumération masquée qui décrit tous les types d’action pris en charge.
-public virtual std::map\<std::string, std::shared_ptr\<ClassificationResult\>\> GetClassificationResults(const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Retourne un mappage des résultats de la classification.
+public virtual std::shared_ptr\<ClassificationResults\> GetClassificationResults(const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Retourne un mappage des résultats de la classification.
 public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Retourner un mappage des paires clé-valeur l’application d’audit spécifique.
   
 ## <a name="members"></a>Membres
@@ -50,13 +50,13 @@ Obtient la source pour une nouvelle action d’étiquette.
 **Retourne**: Source de l’action.
   
 ### <a name="getcontentidentifier-function"></a>GetContentIdentifier (fonction)
-Obtient l’identificateur de contenu qui décrit le document. exemple d’un fichier : exemple [chemin] pour un message électronique : [expéditeur : objet].
+Obtient la description du contenu qui décrit le document. exemple d’un fichier : exemple [chemin] pour un message électronique : [expéditeur : objet].
 
   
-**Retourne**: Identificateur de contenu à appliquer au contenu.
+**Retourne**: Description du contenu à appliquer au contenu.
 Cette valeur est utilisée par l’audit comme une description explicite du contenu
   
-### <a name="getcontentstate-function"></a>GetContentState (fonction)
+### <a name="getdatastate-function"></a>GetDataState (fonction)
 Obtient l’état du contenu pendant que l’application interagit avec celui-ci.
 
   
@@ -76,7 +76,7 @@ Obtenir la méthode d’assignation de la nouvelle étiquette.
   
 **Retourne**: La méthode d’assignation STANDARD, PRIVILEGED, AUTO. 
   
-**Voir aussi**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**Voir aussi**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod)
   
 ### <a name="getnewlabelextendedproperties-function"></a>GetNewLabelExtendedProperties (fonction)
 Retourner les propriétés étendues de la nouvelle étiquette.
@@ -102,7 +102,7 @@ Obtient le format du contenu.
   
 **Retourne**: PAR DÉFAUT, LE COURRIER ÉLECTRONIQUE 
   
-**Voir aussi**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat-enum)
+**Voir aussi**: [mip::ContentFormat](mip-enums-and-structs.md#contentformat)
   
 ### <a name="getsupportedactions-function"></a>GetSupportedActions (fonction)
 Obtient une énumération masquée qui décrit tous les types d’action pris en charge.
@@ -115,12 +115,12 @@ ActionType::Justify doit être pris en charge. Quand la modification d’une str
 Retourne un mappage des résultats de la classification.
 
 Paramètres :  
-* **classificationId** : liste des ID de classification. 
+* **classificationIds**: une liste des ID de classification. 
 
 
 
   
-**Retourne**: Liste des résultats de la classification.
+**Retourne**: Liste des résultats de la classification. retourner nullptr si aucun cycle de classification exécutée.
   
 ### <a name="getauditmetadata-function"></a>GetAuditMetadata function
 Retourner un mappage des paires clé-valeur l’application d’audit spécifique.

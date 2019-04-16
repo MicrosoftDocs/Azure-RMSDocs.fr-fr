@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 8121763106c9f46022264a7eea3bc16e363e523c
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: f3a8d50d55dc615a7aa81e8686b356bfc2d41654
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330472"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573936"
 ---
 # <a name="class-mipaddwatermarkaction"></a>mip::AddWatermarkAction, classe 
 Classe d’action qui spécifie l’ajout d’un filigrane.
@@ -27,7 +27,7 @@ public const std::string& GetFontName() const  |  Obtenir le nom de la police ut
 public int GetFontSize() const  |  Obtenir la taille de la police utilisée pour afficher le filigrane.
 public const std::string& GetFontColor() const  |  Obtenir la couleur de la police utilisée pour afficher le filigrane.
 public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membres
   
 ### <a name="getuielementname-function"></a>GetUIElementName (fonction)
@@ -65,7 +65,7 @@ Obtenir la couleur de la police utilisée pour afficher le filigrane.
 
   
 **Retourne**: Couleur de police sous forme de chaîne (par exemple, « #000000 »).
-  
+
 ### <a name="gettype-function"></a>Fonction GetType
 Obtenir le type de [Action](class_mip_action.md).
 

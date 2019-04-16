@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: dd803c734c099e11b46db1b7d446b03b2eaa8a1e
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 625406d1b2207e4b1f74c77c6813ee3d852f0d37
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332274"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573528"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>mip::AddContentFooterAction, classe 
 Classe d’action qui spécifie l’ajout d’un pied de page de contenu au document.
@@ -28,7 +28,7 @@ public const std::string& GetFontColor() const  |  Obtenir la couleur de la poli
 public ContentMarkAlignment GetAlignment() const  |  Obtenir l’alignement du pied de page.
 public int GetMargin() const  |  Obtenir la marge du pied de page à partir du bas.
 public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membres
   
 ### <a name="getuielementname-function"></a>GetUIElementName (fonction)
@@ -67,14 +67,14 @@ Obtenir l’alignement du pied de page.
   
 **Retourne**: L’énumérateur ContentMarkAlignment : GAUCHE | DROITE | CENTER. 
   
-**Voir aussi**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**Voir aussi**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### <a name="getmargin-function"></a>GetMargin (fonction)
 Obtenir la marge du pied de page à partir du bas.
 
   
 **Retourne**: Les marges à partir du bas du document (par exemple, 10 mm).
-  
+
 ### <a name="gettype-function"></a>Fonction GetType
 Obtenir le type de [Action](class_mip_action.md).
 

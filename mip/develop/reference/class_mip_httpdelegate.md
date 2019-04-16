@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 18425a807fcddc1bc1db19a35534036a6552255c
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 6dedd5e52b0599a58acabd85f7bd076169b3758e
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329843"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574191"
 ---
 # <a name="class-miphttpdelegate"></a>mip::HttpDelegate, classe 
 Interface pour le remplacement de la gestion HTTP.
@@ -20,8 +20,10 @@ Interface pour le remplacement de la gestion HTTP.
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr\<HttpResponse\> Send(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context)  |  Envoyer une requête HTTP.
-public void SendAsync(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context, const std::function\<void(std::shared_ptr\<HttpResponse\>)\>& fnCallback)  | _Pas encore documenté._
+public std::shared_ptr\<HttpOperation\> Send(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context)  |  Envoyer une requête HTTP.
+public std::shared_ptr\<HttpOperation\> SendAsync (const std::shared_ptr\<HttpRequest\>& demande, const std::shared_ptr\<void\>& contexte, const std :: fonction\<void (std::shared_ptr\<HttpOperation\>)\>& callbackFn)  |  Envoyer une requête HTTP en mode asynchrone.
+publique CancelOperation void (const std::string & requestId)  |  Annuler une opération HTTP spécifique.
+CancelAllOperations() void publique  |  Annuler les demandes HTTP en cours.
   
 ## <a name="members"></a>Membres
   
@@ -37,7 +39,32 @@ Paramètres :
 
 
   
-**Retourne**: Réponse HTTP
+**Retourne**: Conteneur d’opération HTTP
   
 ### <a name="sendasync-function"></a>SendAsync (fonction)
-_Pas encore documenté._
+Envoyer une requête HTTP en mode asynchrone.
+
+Paramètres :  
+* **demande**: Requête HTTP 
+
+
+* **contexte**: Le même contexte client opaque qui a été passé à l’API qui a entraîné cette requête HTTP 
+
+
+* **callbackFn**: Fonction qui sera exécutée à l’achèvement
+
+
+
+  
+**Retourne**: Conteneur d’opération HTTP
+  
+### <a name="canceloperation-function"></a>CancelOperation (fonction)
+Annuler une opération HTTP spécifique.
+
+Paramètres :  
+* **requestId**: ID de demande d’annulation
+
+
+  
+### <a name="cancelalloperations-function"></a>CancelAllOperations (fonction)
+Annuler les demandes HTTP en cours.

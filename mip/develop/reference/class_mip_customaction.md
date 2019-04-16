@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 12ecba0f442ee3e51a5cb58e77bee546ac262deb
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 9286cc883e6348aa53d811cf87d6b84d1e35d1af
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333566"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574089"
 ---
 # <a name="class-mipcustomaction"></a>mip::CustomAction, classe 
 [CustomAction](class_mip_customaction.md) est une classe d’action générique qui capture toutes les sous-propriétés de l’action sous la forme d’un jeu de propriétés. Il appartient à l’appelant de comprendre la signification de l’action.
@@ -23,7 +23,7 @@ ms.locfileid: "57333566"
 public const std::string& GetName() const  |  Obtenir le nom de l’action.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetProperties() const  |  Obtenir la liste de paires clé/valeur des propriétés.
 public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membres
   
 ### <a name="getname-function"></a>GetName (fonction)
@@ -37,7 +37,7 @@ Obtenir la liste de paires clé/valeur des propriétés.
 
   
 **Retourne**: Une liste de paires de valeur de clé.
-  
+
 ### <a name="gettype-function"></a>Fonction GetType
 Obtenir le type de [Action](class_mip_action.md).
 

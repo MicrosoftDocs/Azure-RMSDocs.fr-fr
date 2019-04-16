@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 2621d4ec6f8aa8bf20c6fa3bb2bc0350d88333f4
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2481ee7d42f00ce5b33529b15e17b22ba6556b0e
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332597"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574038"
 ---
 # <a name="class-mipfileenginesettings"></a>mip::FileEngine::Settings, classe 
   
@@ -32,7 +32,9 @@ public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSett
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de session du moteur.
 public const std::string& GetSessionId() const  |  Retourne l’ID de session du moteur.
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Définit l’URL de base du point de terminaison du cloud de protection, utilisée pour spécifier la limite du cloud.
-public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Obtient cloudEndpointBaseUrl.
+public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Obtient l’url de base de protection cloud point de terminaison.
+public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  Définit la stratégie cloud point de terminaison url de base, permet de spécifier la limite du cloud.
+public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  Obtient l’url de base de stratégie cloud point de terminaison.
 public void SetProtectionOnlyEngine(const bool protectionOnly)  |  Définit l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.
 public const bool IsProtectionOnlyEngine() const  |  Retourne l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.
 public bool IsLoadSensitivityTypesEnabled() const  |  Obtenir l’indicateur spécifiant si les étiquettes de sensibilité de charge est activée.
@@ -117,10 +119,24 @@ Paramètres :
 
   
 ### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl function
-Obtient cloudEndpointBaseUrl.
+Obtient l’url de base de protection cloud point de terminaison.
 
   
 **Retourne**: Url de base associés aux points de terminaison de protection
+  
+### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl function
+Définit la stratégie cloud point de terminaison url de base, permet de spécifier la limite du cloud.
+
+Paramètres :  
+* **policyCloudEndpointBaseUrl**: Url de base associés aux points de terminaison de stratégie
+
+
+  
+### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl function
+Obtient l’url de base de stratégie cloud point de terminaison.
+
+  
+**Retourne**: Url de base associés aux points de terminaison de stratégie
   
 ### <a name="setprotectiononlyengine-function"></a>SetProtectionOnlyEngine (fonction)
 Définit l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.

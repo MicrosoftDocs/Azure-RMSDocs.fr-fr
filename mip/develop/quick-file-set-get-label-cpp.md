@@ -8,12 +8,12 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 50fe4bce04b28440609c558297d8a3e39087e557
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2ac8c6bbfba6f460ac016a103f32f20856bff2aa
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332835"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573834"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C++)
 
@@ -105,17 +105,16 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
 
    ```cpp
    // Set up async FileHandler for input file operations
-   string filePathIn = "<input-file-path>";
-   string contentIdentifier = "<content-identifier>";
+   string inputFilePath = "<input-file-path>";
+   string actualFilePath = "<content-identifier>";
    std::shared_ptr<FileHandler> handler;
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
         engine->CreateFileHandlerAsync(
-             filePathIn, 
-             contentIdentifier,
-             mip::ContentState::REST, 
+             inputFilePath,
+             actualFilePath,                       
              true, 
              std::make_shared<FileHandlerObserver>(), 
              handlerPromise);
@@ -168,15 +167,14 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
    system("pause");
 
    // Set up async FileHandler for output file operations
-   contentIdentifier = "<content-identifier>";
+   actualFilePath = "<content-identifier>";
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
         engine->CreateFileHandlerAsync(
-             filePathOut, 
-             contentIdentifier,
-             mip::ContentState::REST,
+             filePathOut,
+             actualFilePath,
              true,
              std::make_shared<FileHandlerObserver>(),
              handlerPromise);

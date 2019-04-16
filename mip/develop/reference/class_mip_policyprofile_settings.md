@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: a48f22af3f699412a2976683695467ee7ed71cdb
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: d3105bd9c13e91108c44e847c3eae74f166c5e04
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331186"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573647"
 ---
 # <a name="class-mippolicyprofilesettings"></a>mip::PolicyProfile::Settings, classe 
 [Paramètres](class_mip_policyprofile_settings.md) utilisés par [PolicyProfile](class_mip_policyprofile.md) lors de sa création et tout au long de sa durée de vie.
@@ -30,6 +30,8 @@ public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Obtenir l
 public SetLoggerDelegate void (const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Remplacer l’enregistreur d’événements par défaut.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
 public SetHttpDelegate void (const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
+public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Obtenir le délégué TaskDispatcher (le cas échéant) fourni par l’application.
+public SetTaskDispatcherDelegate void (const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Remplacer la tâche d’asynchrone avec par défaut la distribution de gestion avec du client.
 public void OptOutTelemetry()  |  Refuse la collecte des données de télémétrie.
 public bool IsTelemetryOptedOut() const  |  Indique si la collecte des données de télémétrie doit être désactivée ou non.
 public void SetMinimumLogLevel(LogLevel logLevel)  |  Définir le niveau de journalisation minimum qui va déclencher un événement de journalisation.
@@ -113,6 +115,20 @@ Remplacer la pile HTTP par défaut par celle du client.
 
 Paramètres :  
 * **httpDelegate**: Interface de rappel HTTP implémentée par l’application cliente
+
+
+  
+### <a name="gettaskdispatcherdelegate-function"></a>GetTaskDispatcherDelegate (fonction)
+Obtenir le délégué TaskDispatcher (le cas échéant) fourni par l’application.
+
+  
+**Retourne**: Délégué TaskDispatcher à utiliser pour l’exécution de tâches asynchrones
+  
+### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate (fonction)
+Remplacer la tâche d’asynchrone avec par défaut la distribution de gestion avec du client.
+
+Paramètres :  
+* **taskDispatcherDelegate**: Tâche de la distribution d’interface de rappel implémentée par l’application cliente
 
 
   

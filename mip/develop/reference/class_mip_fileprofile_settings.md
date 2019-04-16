@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: a7f08c24f2e0c4838d538d34268ed9f9704d85bf
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: d85fe9f4b3de485ab966a38b2c41358a6ba091e0
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333583"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574277"
 ---
 # <a name="class-mipfileprofilesettings"></a>mip::FileProfile::Settings, classe 
 [Settings](class_mip_fileprofile_settings.md) utilisé par [FileProfile](class_mip_fileprofile.md) lors de sa création et tout au long de sa durée de vie.
@@ -27,14 +27,14 @@ public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Obtient le d�
 public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Obtient le délégué de consentement utilisé pour demander le consentement de l’utilisateur pour la connexion aux services.
 public std::shared_ptr\<Observateur\> GetObserver() const  |  Obtient l’observateur qui reçoit les notifications des événements liés à [FileProfile](class_mip_fileprofile.md).
 public const ApplicationInfo GetApplicationInfo() const  |  Obtient des informations sur l’application qui utilise le SDK.
-public bool GetSkipTelemetryInit() const  |  Indique si l’initialisation de la télémétrie doit être ignorée ou non.
-public void SetSkipTelemetryInit()  |  Désactive l’initialisation de la télémétrie.
 public void SetNewFeaturesDisabled()  |  Désactive les nouvelles fonctionnalités.
 public bool AreNewFeaturesDisabled() const  |  Indique si les nouvelles fonctionnalités sont désactivées ou non.
 public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Obtenir le délégué d’enregistreur d’événements (le cas échéant) fourni par l’application.
 public SetLoggerDelegate void (const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Remplacer l’enregistreur d’événements par défaut.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
 public SetHttpDelegate void (const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
+public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Obtenir le délégué TaskDispatcher (le cas échéant) fourni par l’application.
+public SetTaskDispatcherDelegate void (const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Remplacer la tâche d’asynchrone avec par défaut la distribution de gestion avec du client.
 public void OptOutTelemetry()  |  Refuse la collecte des données de télémétrie.
 public bool IsTelemetryOptedOut() const  |  Indique si la collecte des données de télémétrie doit être désactivée ou non.
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de la session.
@@ -100,16 +100,6 @@ Obtient des informations sur l’application qui utilise le SDK.
   
 **Retourne**: Plus d’informations sur l’application qui consomme le Kit de développement
   
-### <a name="getskiptelemetryinit-function"></a>GetSkipTelemetryInit (fonction)
-Indique si l’initialisation de la télémétrie doit être ignorée ou non.
-
-  
-**Retourne**: Si l’initialisation de télémétrie doit être ignorée ou non
-  
-### <a name="setskiptelemetryinit-function"></a>SetSkipTelemetryInit (fonction)
-Désactive l’initialisation de la télémétrie.
-Cette méthode n’est généralement pas appelée par les applications clientes, mais plutôt utilisée par le SDK de fichier pour empêcher l’initialisation en double
-  
 ### <a name="setnewfeaturesdisabled-function"></a>SetNewFeaturesDisabled (fonction)
 Désactive les nouvelles fonctionnalités.
 Pour les applications qui ne veulent pas essayer de nouvelles fonctionnalités
@@ -146,6 +136,20 @@ Remplacer la pile HTTP par défaut par celle du client.
 
 Paramètres :  
 * **httpDelegate**: Interface de rappel HTTP implémentée par l’application cliente
+
+
+  
+### <a name="gettaskdispatcherdelegate-function"></a>GetTaskDispatcherDelegate (fonction)
+Obtenir le délégué TaskDispatcher (le cas échéant) fourni par l’application.
+
+  
+**Retourne**: Délégué TaskDispatcher à utiliser pour l’exécution de tâches asynchrones
+  
+### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate (fonction)
+Remplacer la tâche d’asynchrone avec par défaut la distribution de gestion avec du client.
+
+Paramètres :  
+* **taskDispatcherDelegate**: Tâche de la distribution d’interface de rappel implémentée par l’application cliente
 
 
   

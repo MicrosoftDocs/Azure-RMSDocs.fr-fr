@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 94e58874e0bec01156d70bc569d1909e53dd1ebb
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 7e9e750f5b327dbad5e9b46fa1eca2a3291abdd3
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333396"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573103"
 ---
 # <a name="class-mipuserroles"></a>mip::UserRoles, classe 
 Groupe d’utilisateurs et rôles qui leur sont associés.

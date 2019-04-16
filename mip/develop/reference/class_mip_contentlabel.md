@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 34e4395858713219361e4e2ccf8308d89bc5f29d
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 96f8cca48f385a21685e93eb5bc57abac571975c
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330489"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573010"
 ---
 # <a name="class-mipcontentlabel"></a>mip::ContentLabel, classe 
 Abstraction d’une étiquette Microsoft Information Protection appliquée à un élément de contenu, généralement un document.
@@ -21,7 +21,7 @@ Elle contient également des propriétés pour une instance d’étiquette appli
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetCreationTime() const  |  Obtenir l’heure de création de l’étiquette.
+public std::chrono::time_point\<std::chrono::system_clock\> GetCreationTime() const  |  Obtenir l’heure de création de l’étiquette.
 public AssignmentMethod GetAssignmentMethod() const  |  Obtenir la méthode d’assignation de l’étiquette.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  |  Obtient les propriétés étendues.
 public bool IsProtectionAppliedFromLabel() const  |  Indique si la protection a été appliquée par l’étiquette ou non.
@@ -33,7 +33,7 @@ public std::shared_ptr\<Label\> GetLabel() const  |  Obtient l’objet d’étiq
 Obtenir l’heure de création de l’étiquette.
 
   
-**Retourne**: Heure de création sous forme de chaîne GMT.
+**Retourne**: Heure de création.
   
 ### <a name="getassignmentmethod-function"></a>GetAssignmentMethod (fonction)
 Obtenir la méthode d’assignation de l’étiquette.
@@ -41,7 +41,7 @@ Obtenir la méthode d’assignation de l’étiquette.
   
 **Retourne**: Méthode d’assignation STANDARD | PRIVILEGED | AUTO. 
   
-**Voir aussi**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**Voir aussi**: [mip::AssignmentMethod](mip-enums-and-structs.md#assignmentmethod)
   
 ### <a name="getextendedproperties-function"></a>GetExtendedProperties (fonction)
 Obtient les propriétés étendues.

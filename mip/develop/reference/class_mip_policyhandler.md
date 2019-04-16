@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 6c5979706b9868bd7d0b6b1adad5d96bd5d3e0ce
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 7cc1eeeafa4a086631f5d3c376643b5758002679
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329588"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59572832"
 ---
 # <a name="class-mippolicyhandler"></a>mip::PolicyHandler, classe 
 Cette classe fournit une interface pour toutes les fonctions de gestionnaire de stratégie sur un fichier.
@@ -30,7 +30,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  Appelé une 
 Obtenir l’étiquette de sensibilité à partir du contenu existant.
 
 Paramètres :  
-* **state** : État actuel du contenu 
+* **state** : État actuel du contenu. 
 
 
 
@@ -52,7 +52,7 @@ Paramètres :
 Appelé une fois que les actions calculées ont été appliquées et les données validées sur le disque.
 
 Paramètres :  
-* **state** : état actuel de l’exécution du contenu une fois que les actions ont été validées 
+* **état**: l’état actuel de l’exécution du contenu une fois que les actions ont été validées. 
 
 
-: Cet appel envoie un événement d’audit
+: Cet appel envoie un événement d’audit.

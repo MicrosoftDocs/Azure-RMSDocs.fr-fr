@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 5e609cfbc7cbb705dafbee239726c0cfd15cc38a
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 3d3685656f8814fe495e6e29d7fe12cf54d7d7d4
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331866"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574072"
 ---
 # <a name="class-mipprotectionprofilesettings"></a>mip::ProtectionProfile::Settings, classe 
 [Settings](class_mip_protectionprofile_settings.md) utilisé par [ProtectionProfile](class_mip_protectionprofile.md) lors de sa création et tout au long de sa durée de vie.
@@ -34,8 +34,8 @@ public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Obtenir l
 public SetLoggerDelegate void (const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Remplacer l’enregistreur d’événements par défaut.
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
 public SetHttpDelegate void (const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
-public bool GetSkipTelemetryInit() const  |  Indique si l’initialisation de la télémétrie doit être ignorée ou non.
-public void SetSkipTelemetryInit()  |  Désactive l’initialisation de la télémétrie.
+public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Obtenir le délégué TaskDispatcher (le cas échéant) fourni par l’application.
+public SetTaskDispatcherDelegate void (const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Remplacer la tâche d’asynchrone avec par défaut la distribution de gestion avec du client.
 public void SetNewFeaturesDisabled()  |  Désactive les nouvelles fonctionnalités.
 public bool AreNewFeaturesDisabled() const  |  Indique si les nouvelles fonctionnalités sont désactivées ou non.
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de la session.
@@ -156,15 +156,19 @@ Paramètres :
 
 
   
-### <a name="getskiptelemetryinit-function"></a>GetSkipTelemetryInit (fonction)
-Indique si l’initialisation de la télémétrie doit être ignorée ou non.
+### <a name="gettaskdispatcherdelegate-function"></a>GetTaskDispatcherDelegate (fonction)
+Obtenir le délégué TaskDispatcher (le cas échéant) fourni par l’application.
 
   
-**Retourne**: Si l’initialisation de télémétrie doit être ignorée ou non
+**Retourne**: Délégué TaskDispatcher à utiliser pour l’exécution de tâches asynchrones
   
-### <a name="setskiptelemetryinit-function"></a>SetSkipTelemetryInit (fonction)
-Désactive l’initialisation de la télémétrie.
-Cette méthode n’est généralement pas appelée par les applications clientes, mais plutôt utilisée par le SDK de fichier pour empêcher l’initialisation en double
+### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate (fonction)
+Remplacer la tâche d’asynchrone avec par défaut la distribution de gestion avec du client.
+
+Paramètres :  
+* **taskDispatcherDelegate**: Tâche de la distribution d’interface de rappel implémentée par l’application cliente
+
+
   
 ### <a name="setnewfeaturesdisabled-function"></a>SetNewFeaturesDisabled (fonction)
 Désactive les nouvelles fonctionnalités.

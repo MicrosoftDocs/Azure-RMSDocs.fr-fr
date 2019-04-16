@@ -1,21 +1,21 @@
 ---
-title: mip::NetworkError, classe
-description: Décrit la classe mip::networkerror de Microsoft Information Protection (MIP) SDK.
+title: classe mip::OperationCancelledError
+description: Décrit la classe mip::operationcancellederror de Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 0402fe3c3c0ac6f37103c8d09b1300176ef730d6
+ms.openlocfilehash: 69dc2c0242f446450e7933ebfdf80bc52035b358
 ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574123"
+ms.locfileid: "59574463"
 ---
-# <a name="class-mipnetworkerror"></a>mip::NetworkError, classe 
-Erreur de mise en réseau. Causée par un comportement inattendu lors d’appels réseau aux points de terminaison du service.
+# <a name="class-mipoperationcancellederror"></a>classe mip::OperationCancelledError 
+Opération a été annulée.
   
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                

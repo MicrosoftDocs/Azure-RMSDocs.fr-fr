@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 0215d68bafa0243ebcf576755bec90ce5e2540a4
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: f24b380b892739faec0602f3dd6b60467e4f4993
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333090"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573630"
 ---
 # <a name="class-mipjustificationrequirederror"></a>mip::JustificationRequiredError, classe 
   
@@ -21,6 +21,7 @@ ms.locfileid: "57333090"
 --------------------------------|---------------------------------------------
 public std::shared_ptr virtuel\<erreur\> Clone() const  |  Cloner l’erreur.
 public char const* what() const  |  Obtenir le message d’erreur.
+public std::shared_ptr\<erreur\> Clone() const  |  Cloner l’erreur.
 public virtual ErrorType GetErrorType() const  |  Obtenir le type de l’erreur.
 public virtual const std::string& GetErrorName() const  |  Obtenir le nom de l’erreur.
 public virtual const std::string& GetMessage() const  |  Obtenir le message d’erreur.
@@ -33,7 +34,7 @@ Cloner l’erreur.
 
   
 **Retourne**: Un clone de l’erreur.
-  
+
 ### <a name="what-function"></a>Quelle est la fonction
 Obtenir le message d’erreur.
 
@@ -63,4 +64,3 @@ Définir le message d’erreur.
 
 Paramètres :  
 * **msg** : le message d’erreur.
-

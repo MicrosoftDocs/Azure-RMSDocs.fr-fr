@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f7b16658135e802776cde37fdef19c82f7c198e6
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 06bc3f52bdecd85412dc0c35df46c7847167aa1b
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329809"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573752"
 ---
 # <a name="class-miphttpresponse"></a>mip::HttpResponse, classe 
 Interface qui décrit une seule réponse HTTP, implémentée par l’application cliente lors du remplacement de [HttpDelegate](class_mip_httpdelegate.md).
@@ -20,11 +20,18 @@ Interface qui décrit une seule réponse HTTP, implémentée par l’application
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
+public const std::string& GetId() const  |  Obtient le code de réponse.
 public int32_t GetStatusCode() const  |  Obtenir le code d’état de la réponse.
-public const std::string& GetBody() const  |  Obtenir le corps de la requête.
+public const std::vector\<uint8_t\>& GetBody() const  |  Obtenir le corps de la requête.
 public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Obtenir les en-têtes de requête.
   
 ## <a name="members"></a>Membres
+  
+### <a name="getid-function"></a>GetId (fonction)
+Obtient le code de réponse.
+
+  
+**Retourne**: ID de réponse correspondants [HttpRequest](class_mip_httprequest.md) ont le même ID
   
 ### <a name="getstatuscode-function"></a>GetStatusCode (fonction)
 Obtenir le code d’état de la réponse.
@@ -36,7 +43,7 @@ Obtenir le code d’état de la réponse.
 Obtenir le corps de la requête.
 
   
-**Retourne**: Corps de la demande
+**Retourne**: Corps de demande
   
 ### <a name="getheaders-function"></a>GetHeaders (fonction)
 Obtenir les en-têtes de requête.

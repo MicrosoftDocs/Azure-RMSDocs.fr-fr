@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: ad364a0aff564fe50341f4f44b9cb4ab69c5aa60
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 60a61f5e06b5e76cbf0c557e7d489a8d618a8261
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333651"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574146"
 ---
 # <a name="class-mipprotectionengine"></a>class mip::ProtectionEngine 
 Gère les actions liées à la protection sur une identité spécifique.

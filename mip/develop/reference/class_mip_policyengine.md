@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: ffc2adc3e48de3f7efc7426c1276ccba8f0a70f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: ce8ef7df12cdc9823a62234b5dadaaacdb7fed37
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332801"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573783"
 ---
 # <a name="class-mippolicyengine"></a>mip::PolicyEngine, classe 
 Cette classe fournit une interface pour toutes les fonctions de moteur.
@@ -30,6 +30,9 @@ public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscove
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Consigne un événement spécifique à l’application dans le pipeline d’audit.
 public const std::string& GetPolicyDataXml() const  |  Obtient les données de stratégie XML qui décrit les paramètres, les étiquettes et les règles associées à cette stratégie.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtient une liste de paramètres personnalisés.
+public const std::string& GetPolicyId() const  |  Obtient l’ID de stratégie.
+public bool HasClassificationRules() const  |  Obtient si la stratégie a des règles automatiques ou de recommandation.
+public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Obtient l’heure lors de la dernière extraction de la stratégie.
   
 ## <a name="members"></a>Membres
   
@@ -77,25 +80,25 @@ Obtenir l’étiquette de sensibilité par défaut.
 Créer un gestionnaire de stratégie pour exécuter des fonctions liées à la stratégie sur l’état d’exécution d’un fichier.
 
 Paramètres :  
-* **Un**: bool représentant si la découverte de l’audit est activé ou non
+* **Un**: bool représentant si la découverte de l’audit est activé ou non.
 
 
 
   
 **Retourne**: Gestionnaire de stratégie.
-Application doit conserver l’objet de gestionnaire de stratégie pour la durée de vie du document
+Application doit conserver l’objet de gestionnaire de stratégie pour la durée de vie du document.
   
 ### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent (fonction)
 Consigne un événement spécifique à l’application dans le pipeline d’audit.
 
 Paramètres :  
-* **niveau**: du niveau de journal : Informations/avertissement/erreur 
+* **niveau**: du niveau de journal : Informations/avertissement/erreur. 
 
 
-* **eventType** : description du type d’événement 
+* **eventType**: une description du type d’événement. 
 
 
-* **eventData** : données associées à l’événement
+* **eventData**: les données associées à l’événement.
 
 
   
@@ -103,10 +106,28 @@ Paramètres :
 Obtient les données de stratégie XML qui décrit les paramètres, les étiquettes et les règles associées à cette stratégie.
 
   
-**Retourne**: Données de stratégie XML
+**Retourne**: Données XML de la stratégie.
   
 ### <a name="getcustomsettings-function"></a>GetCustomSettings (fonction)
 Obtient une liste de paramètres personnalisés.
 
   
-**Retourne**: Un vecteur de paramètres personnalisés
+**Retourne**: Un vecteur de paramètres personnalisés.
+  
+### <a name="getpolicyid-function"></a>GetPolicyId (fonction)
+Obtient l’ID de stratégie.
+
+  
+**Retourne**: Chaîne qui représente l’ID de stratégie
+  
+### <a name="hasclassificationrules-function"></a>HasClassificationRules (fonction)
+Obtient si la stratégie a des règles automatiques ou de recommandation.
+
+  
+**Retourne**: Une valeur booléenne qui indique si il automatique ni recommandation règles dans la stratégie
+  
+### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime (fonction)
+Obtient l’heure lors de la dernière extraction de la stratégie.
+
+  
+**Retourne**: Le temps lors de la dernière extraction de la stratégie

@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: d874e57806ecf2ee98fa41eb3b655e9525ed8362
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 841eddc32e5e6928469dc11aba581defae09bc09
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333753"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574004"
 ---
 # <a name="class-mipprotectionenginesettings"></a>class mip::ProtectionEngine::Settings 
 [Settings](class_mip_protectionengine_settings.md) utilisé par [ProtectionEngine](class_mip_protectionengine.md) lors de sa création et tout au long de sa durée de vie.

@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 6d19fc5cf852a92bc20f98e913c16a1c6dc180e5
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184737"
 ---
 # <a name="class-miperror"></a>mip::Error, classe 
 Classe de base pour toutes les erreurs qui seront signalées (levées ou retournées) à partir du SDK MIP.

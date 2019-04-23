@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: ff9aa768559b56f897289ec30ade9b7c408c92d4
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60185009"
 ---
 # <a name="class-miptransientnetworkerror"></a>mip::TransientNetworkError, classe 
 Erreur de mise en réseau temporaire. Causée par un comportement inattendu lors d’appels réseau aux points de terminaison du service. L’opération peut être retentée, car cette erreur est une erreur temporaire.

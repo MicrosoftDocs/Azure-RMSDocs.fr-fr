@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.openlocfilehash: d30111953bdc55b66b712f30de0c50d28ac07303
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60185079"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation de l’application cliente (C++)
 
@@ -322,7 +322,7 @@ Comme mentionné, les objets de profil et le moteur sont requis pour les clients
 
 3. Remplacez toutes les valeurs d’espace réservé dans le code source que vous venez de coller dans, à l’aide de constantes de chaîne :
 
-   | Espace réservé | Valeur | Exemple |
+   | Espace réservé | Value | Exemple |
    |:----------- |:----- |:--------|
    | \<application-id\> | L’Azure AD Application ID (GUID) affecté à l’application inscrite dans [étape #2 du « programme d’installation du SDK MIP et la configuration »](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) article. Remplacez les instances de 2. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
    | \<application-name\> | Un nom convivial défini par l’utilisateur pour votre application. Doit contenir des caractères ASCII valides (à l’exclusion des « ; ») et dans l’idéal, correspond au nom d’application que vous avez utilisé dans votre inscription Azure AD. | `"AppInitialization"` |

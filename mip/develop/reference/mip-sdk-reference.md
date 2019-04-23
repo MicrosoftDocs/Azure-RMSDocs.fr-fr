@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 1db2faeca6c2ff00a0053a7d65d16872190d306f
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60172791"
 ---
 # <a name="mip-sdk-for-c-reference"></a>SDK MIP pour C++ référence
 

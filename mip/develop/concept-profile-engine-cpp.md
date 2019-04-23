@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: e815820fa9f3a6de95d5e37e350ed18df8513b21
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175103"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux objets de profil et de moteur
 
@@ -35,7 +35,7 @@ Le profil lui-même offre les fonctionnalités suivantes :
 - Il gère l’authentification en acceptant un `mip::AuthDelegate`.
 - Il définit l’ID d’application et un nom convivial de l’application qui consomme le kit SDK.
 
-### <a name="profile-settings"></a>Paramètres de profil
+### <a name="profile-settings"></a>Paramètres du profil
 
 - `Path`: Chemin d’accès de fichier sous l’enregistrement, données de télémétrie et les autres état persistant est stocké.
 - `useInMemoryStorage`: Une valeur booléenne qui définit si l’état doit être stocké en mémoire, ou sur le disque.
@@ -70,10 +70,10 @@ Un moteur doit être à la fois créé et chargé pour effectuer des opérations
 
 Le tableau suivant décrit les états possibles de moteur, et les méthodes qui peuvent modifier cet état :
 
-|         | NONE              | CRÉÉ           | LOADED         |
+|         | NONE              | CREATED           | LOADED         |
 |---------|-------------------|-------------------|----------------|
 | NONE    |                   |                   | AddEngineAsync |
-| CRÉÉ | DeleteEngineAsync |                   | AddEngineAsync |
+| CREATED | DeleteEngineAsync |                   | AddEngineAsync |
 | LOADED  | DeleteEngineAsync | UnloadEngineAsync |                |
 
 ### <a name="engine-id"></a>ID de moteur

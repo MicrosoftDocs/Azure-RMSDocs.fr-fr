@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: d789250d2ab91ca6e65181e216f260db8d44d496
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184363"
 ---
 # <a name="class-mipprotectionprofile"></a>mip::ProtectionProfile, classe 
 [ProtectionProfile](class_mip_protectionprofile.md) est la classe racine utilisée pour effectuer des opérations de protection.

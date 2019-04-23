@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 36251330bbca45d69630302c304f5190e25db320
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60174032"
 ---
 # <a name="class-miplabelingoptions"></a>mip::LabelingOptions, classe 
 Interface pour la configuration des options d’étiquetage des méthodes SetLabel/DeleteLabel.

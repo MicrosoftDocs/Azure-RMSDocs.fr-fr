@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: d2e5f3e572fcac1d96c4ea4512ec5dc6292444f6
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184329"
 ---
 # <a name="class-mipproxyauthenticationerror"></a>classe mip::ProxyAuthenticationError 
 Échec de l’authentification de proxy.

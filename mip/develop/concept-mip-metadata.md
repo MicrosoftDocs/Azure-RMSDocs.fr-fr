@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
 ms.openlocfilehash: 990f729edaa0a2e212812f84fc5a4c63f82e37fb
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175336"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK - métadonnées
 
@@ -34,7 +34,7 @@ Le GUID est un identificateur unique pour chaque étiquette dans une organisatio
 
 Le SDK MIP s’applique à l’ensemble suivant de métadonnées.
 
-| Attribut | Type ou valeur                 | Description                                                                                                                                                                                                                                        | obligatoire |
+| Attribut | Type ou valeur                 | Description                                                                                                                                                                                                                                        | Obligatoire |
 |-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
 | **Activé**   | True ou False                 | Cet attribut indique si la classification représentée par ce jeu de paires clé-valeur est activée pour l’élément de données. Les produits DLP validez généralement l’existence de cette clé pour identifier l’étiquette de classification. | Oui       |
 | **SiteId**    | GUID                          | ID de locataire Azure Active Directory                                                                                                                                                                                                                   | Oui       |
@@ -47,7 +47,7 @@ Le SDK MIP s’applique à l’ensemble suivant de métadonnées.
 
 Lorsqu’il est appliqué à un fichier, le résultat est similaire à la table ci-dessous.
 
-| Touche                                                         | Valeur                                |
+| Touche                                                         | Value                                |
 |-------------------------------------------------------------|--------------------------------------|
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | true                                 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |

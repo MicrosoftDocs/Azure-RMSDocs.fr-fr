@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: eeab9022b257ff327e2c83b1d8860662355180e5
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60173227"
 ---
 # <a name="class-miprecommendlabelaction"></a>class mip::RecommendLabelAction 
 Les actions d’étiquette recommandées sont conçues pour suggérer une étiquette aux utilisateurs. La suppression de cet appel lorsqu’un utilisateur ignore l’étiquette recommandée doit être effectuée via les actions prises en charge sur l’état d’exécution.

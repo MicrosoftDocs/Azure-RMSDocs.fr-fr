@@ -9,11 +9,11 @@ ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 2ac8c6bbfba6f460ac016a103f32f20856bff2aa
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184890"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C++)
 

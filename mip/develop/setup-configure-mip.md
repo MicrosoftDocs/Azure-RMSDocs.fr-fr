@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 03/01/2019
 ms.author: mbaldwin
 ms.openlocfilehash: db815d17303abb0fb98b6e5936fbcd1f975d74f0
-ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184416"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installation et configuration du kit SDK Microsoft Information Protection (MIP) 
 

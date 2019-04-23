@@ -6,11 +6,11 @@ ms.topic: include
 ms.collection: M365-security-compliance
 ms.date: 02/01/2019
 ms.openlocfilehash: ffa393e0c71a09642cca04cfcfc09a6f56fe375e
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184405"
 ---
 | Système d'exploitation | Versions | Téléchargements | Notes |
 |------------------|----------|----------|--------|

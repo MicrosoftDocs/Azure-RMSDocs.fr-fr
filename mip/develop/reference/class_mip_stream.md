@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 1987aea2e90a3ded3a55f509e3d49a689d361c62
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60185111"
 ---
 # <a name="class-mipstream"></a>mip::Stream, classe 
 Classe qui définit l’interface entre le SDK MIP et le contenu basé sur le flux de données (Stream).

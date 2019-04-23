@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 625406d1b2207e4b1f74c77c6813ee3d852f0d37
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60173491"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>mip::AddContentFooterAction, classe 
 Classe d’action qui spécifie l’ajout d’un pied de page de contenu au document.

@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 3fddd870b6aebb9f5209fc43160c32d87b1d7129
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184754"
 ---
 # <a name="class-mipclassificationrequest"></a>classe mip::ClassificationRequest 
 Classe qui contient la demande d’un appel de classification sur l’état d’exécution.

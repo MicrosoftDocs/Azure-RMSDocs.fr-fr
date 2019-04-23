@@ -9,11 +9,11 @@ ms.date: 01/08/2019
 ms.author: mbaldwin
 manager: barbkess
 ms.openlocfilehash: 9f02d682164dac8ee28ed023dd7b21b53937f4bb
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184216"
 ---
 # <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Version du Kit de développement logiciel Microsoft Information Protection (MIP) historique des versions et politique du support
 
@@ -25,7 +25,7 @@ Les versions préliminaires ne doivent pas être déployées en production. Au l
 
 ## <a name="release-history"></a>Historique des versions
 
-Utilisez les informations suivantes pour découvrir les nouveautés et les modifications d’une version prise en charge. La dernière version est la première sur la liste. 
+Utilisez les informations suivantes pour découvrir les nouveautés et les modifications d’une version prise en charge. La dernière version est répertoriée en première position. 
 
 > [!NOTE]
 > Correctifs mineurs ne sont pas répertoriés donc si vous rencontrez un problème avec le Kit de développement, nous vous recommandons de vérifier si elle est fixe avec la dernière version GA. Si le problème persiste, consultez la préversion actuelle.

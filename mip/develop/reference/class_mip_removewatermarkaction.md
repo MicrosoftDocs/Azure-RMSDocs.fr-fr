@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 7b6ef32e69fefad0371f75ea22b99f4181732e90
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60174168"
 ---
 # <a name="class-mipremovewatermarkaction"></a>mip::RemoveWatermarkAction, classe 
 Classe d’action qui spécifie la suppression du filigrane du document.

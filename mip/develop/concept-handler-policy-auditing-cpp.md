@@ -9,11 +9,11 @@ ms.collection: M365-security-compliance
 ms.date: 11/07/2018
 ms.author: tommos
 ms.openlocfilehash: 729570c902ad3175b65ddd8167005c0cb4e4078c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175222"
 ---
 # <a name="auditing-in-the-mip-sdk"></a>Audit dans le kit SDK MIP
 
@@ -31,7 +31,7 @@ Les événements de pulsation sont générés automatiquement pour toutes les ap
 * Heure de la génération
 * Nom d'utilisateur principal
 * Nom de la machine sur laquelle l’audit a été généré
-* Nom de processus
+* Nom du processus
 * Plateforme
 * ID d’application - Correspond à l’ID d’application Azure AD.
 

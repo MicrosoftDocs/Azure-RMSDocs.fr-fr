@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.openlocfilehash: e20b66062788632f3fc519e498761500ee78d68c
-ms.sourcegitcommit: 1d444b17e3d096f3e867e0240182ae3143fc1b71
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59892525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184992"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C++)
 

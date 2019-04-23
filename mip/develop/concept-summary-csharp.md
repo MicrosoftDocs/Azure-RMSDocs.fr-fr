@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
 ms.openlocfilehash: 6b2f26a61cd491574fd9f4a1e74fbfab4752257a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175190"
 ---
 # <a name="getting-started-with-the-microsoft-information-protection-net-wrapper"></a>Mise en route avec le Wrapper de .NET Microsoft Information Protection
 

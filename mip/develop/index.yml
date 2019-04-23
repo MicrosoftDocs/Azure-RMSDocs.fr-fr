@@ -1,20 +1,14 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: fbd7b6a9d15013be6533f971988192d53a19480a
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330268"
 documentType: LandingData
 title: Documentation du kit SDK Microsoft Information Protection
 metadata:
   title: Documentation du kit SDK Microsoft Information Protection – Tutoriels et informations de référence sur les API
-  description: Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.
+  description: 'Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.'
   services: information-protection
   author: msmbaldwin
   manager: barbkess
   layout: LandingPage
-  ms.assetid: 
+  ms.assetid: null
   ms.service: information-protection
   ms.tgt_pltfrm: na
   ms.devlang: na
@@ -22,47 +16,47 @@ metadata:
   ms.date: 09/26/2018
   ms.author: mbaldwin
 abstract:
-  description: Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.
+  description: 'Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.'
   aside:
     image:
-      alt: Vidéo MIP SDK @ Ignite 2018
+      alt: "Vidéo MIP SDK @ Ignite\_2018"
       height: 112
       src: media/index/kartik-tom-mip-sdk.png
       width: 250
-    title: MIP SDK @ Ignite 2018
-    href: https://www.youtube.com/embed/V02HTllv54s
+    title: "MIP SDK @ Ignite\_2018"
+    href: 'https://www.youtube.com/embed/V02HTllv54s'
     width: 250
 sections:
-- title: Guides de démarrage rapide de 5 minutes
-  description: Après avoir réalisé <a href="setup-configure-mip">l’installation et la configuration</a>, consultez les guides de démarrage rapide du kit SDK MIP.
-  items:
-  - type: table
-    style: dataMatrix
-    columns:
-    - image:
-        src: ./media/index/logo_Cplusplus.svg
-      title: C++
-    - image:
-        src: media/index/logo_Csharp.svg
-      title: C#
-    rows:
-    - title: Initialisation d’applications
-      values:
-      - href: quick-app-initialization-cpp.md
-      - href: quick-app-initialization-csharp.md
-    - title: Utiliser l’API de fichier pour lister les étiquettes de sensibilité
-      values:
-      - href: quick-file-list-labels-cpp.md
-      - href: quick-file-list-labels-csharp.md
-    - title: Utiliser l’API de fichier pour définir/obtenir une étiquette sur un fichier
-      values:
-      - href: quick-file-set-get-label-cpp.md
-      - href: quick-file-set-get-label-csharp.md
-- title: Référence
-  items:
-  - type: list
-    style: cards
-    className: cardsD
+  - title: Guides de démarrage rapide de 5 minutes
+    description: 'Après avoir réalisé <a href="setup-configure-mip">l’installation et la configuration</a>, consultez les guides de démarrage rapide du kit SDK MIP.'
     items:
-    - title: Langues
-      html: <p><a href="reference/mip-sdk-reference">C++</a></p>
+      - type: table
+        style: dataMatrix
+        columns:
+          - image:
+              src: ./media/index/logo_Cplusplus.svg
+            title: C++
+          - image:
+              src: media/index/logo_Csharp.svg
+            title: 'C#'
+        rows:
+          - title: Initialisation d’applications
+            values:
+              - href: quick-app-initialization-cpp.md
+              - href: quick-app-initialization-csharp.md
+          - title: Utiliser l’API de fichier pour lister les étiquettes de sensibilité
+            values:
+              - href: quick-file-list-labels-cpp.md
+              - href: quick-file-list-labels-csharp.md
+          - title: Utiliser l’API de fichier pour définir/obtenir une étiquette sur un fichier
+            values:
+              - href: quick-file-set-get-label-cpp.md
+              - href: quick-file-set-get-label-csharp.md
+  - title: Référence
+    items:
+      - type: list
+        style: cards
+        className: cardsD
+        items:
+          - title: Langues
+            html: <p><a href="reference/mip-sdk-reference">C++</a></p>

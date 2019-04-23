@@ -1,15 +1,9 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: a5679ecddad0f365d5d93e2c0100fa04b2b1a341
-ms.sourcegitcommit: 8c2de5119105cf5d5bc91fcc2202b64e5a779e7c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56081692"
 documentType: LandingData
 title: Documentation sur Azure Information Protection
 metadata:
   title: Documentation sur Azure Information Protection
-  description: Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise.
+  description: 'Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise.'
   services: information-protection
   author: msmbaldwin
   manager: barbkess
@@ -21,58 +15,58 @@ metadata:
   ms.author: mbaldwin
   layout: LandingPage
 abstract:
-  description: Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Azure Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.
+  description: 'Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Azure Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.'
 sections:
-- title: 
-  items:
-  - type: list
-    style: cards
-    className: cardsFTitle
+  - title: null
     items:
-    - title: En savoir plus sur Azure Information Protection
-      href: what-is-information-protection.md
-      image:
-        src: https://docs.microsoft.com/media/common/i_learn-about.svg
-        href: what-is-information-protection.md
-    - title: Bien démarrer avec Azure Information Protection
-      href: quickstart-viewpolicy.md
-      image:
-        src: https://docs.microsoft.com/media/common/i_quick-start.svg
-        href: quickstart-viewpolicy.md
-    - title: Explorer Microsoft 365, solution complète qui comprend Azure Information Protection
-      href: https://docs.microsoft.com/microsoft-365/
-      image:
-        src: /office/media/icons/caret-right-blue.svg
-        href: https://docs.microsoft.com/microsoft-365/
-- title: Guides de démarrage rapide de 5 minutes
-  items:
-  - type: paragraph
-    text: Découvrez comment protéger vos données à l’aide des guides de démarrage rapide suivants.
-  - type: list
-    style: icon48
+      - type: list
+        style: cards
+        className: cardsFTitle
+        items:
+          - title: En savoir plus sur Azure Information Protection
+            href: what-is-information-protection.md
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_learn-about.svg'
+              href: what-is-information-protection.md
+          - title: Bien démarrer avec Azure Information Protection
+            href: quickstart-viewpolicy.md
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_quick-start.svg'
+              href: quickstart-viewpolicy.md
+          - title: "Explorer Microsoft\_365, solution complète qui comprend Azure Information Protection"
+            href: 'https://docs.microsoft.com/microsoft-365/'
+            image:
+              src: /office/media/icons/caret-right-blue.svg
+              href: 'https://docs.microsoft.com/microsoft-365/'
+  - title: Guides de démarrage rapide de 5 minutes
     items:
-    - image:
-        src: https://docs.microsoft.com/media/common/i_portal.svg
-      text: Portail Azure
-      href: quickstart-viewpolicy.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_search.svg
-      text: Rechercher vos informations sensibles
-      href: quickstart-findsensitiveinfo.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_config-tools.svg
-      text: Configurer une étiquette
-      href: quickstart-label-dnf-protectedemail.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_categorize.svg
-      text: Créer une étiquette
-      href: quickstart-label-specificusers.md
-- title: Didacticiels pas à pas
-  items:
-  - type: paragraph
-    text: Découvrez comment modifier des stratégies, créer des étiquettes et configurer des paramètres.
-  - type: list
-    style: unordered
+      - type: paragraph
+        text: Découvrez comment protéger vos données à l’aide des guides de démarrage rapide suivants.
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_portal.svg'
+            text: Portail Azure
+            href: quickstart-viewpolicy.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_search.svg'
+            text: Rechercher vos informations sensibles
+            href: quickstart-findsensitiveinfo.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
+            text: Configurer une étiquette
+            href: quickstart-label-dnf-protectedemail.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_categorize.svg'
+            text: Créer une étiquette
+            href: quickstart-label-specificusers.md
+  - title: Didacticiels pas à pas
     items:
-    - html: <a href="/azure/information-protection/infoprotect-quick-start-tutorial">Modifier la stratégie Azure Information Protection et créer une étiquette</a>
-    - html: <a href="/azure/information-protection/infoprotect-settings-tutorial">Configurer les paramètres de stratégie Azure Information Protection qui interagissent</a>
+      - type: paragraph
+        text: 'Découvrez comment modifier des stratégies, créer des étiquettes et configurer des paramètres.'
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/azure/information-protection/infoprotect-quick-start-tutorial">Modifier la stratégie Azure Information Protection et créer une étiquette</a>
+          - html: "<a href=\"/azure/information-protection/infoprotect-settings-tutorial\">Configurer les paramètres de stratégie Azure\_Information\_Protection qui interagissent</a>"

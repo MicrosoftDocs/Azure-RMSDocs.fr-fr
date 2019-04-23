@@ -1,15 +1,9 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 7643f9eb25665d7a1bc1b2897be521cd30c06757
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332716"
 documentType: LandingData
 title: Microsoft Information Protection
 metadata:
   title: Documentation de Microsoft Information Protection
-  description: Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.
+  description: 'Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.'
   author: msmbaldwin
   manager: barbkess
   ms.service: information-protection
@@ -19,9 +13,9 @@ metadata:
   ms.author: mbaldwin
   layout: LandingPage
 abstract:
-  description: Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.
+  description: 'Contrôlez et sécurisez les e-mails, les documents et les données sensibles que vous partagez en dehors de votre entreprise. Grâce à une classification facile, des étiquettes incorporées et des autorisations, améliorez la protection des données avec Microsoft Information Protection, où qu’elles soient stockées et quelles que soient les personnes avec qui vous les partagez.'
 sections:
-- title: Kit SDK Microsoft Information Protection
-  items:
-  - type: paragraph
-    text: Commencez avec la <a href="develop/">vue d’ensemble du kit SDK Microsoft Information Protection.</a>
+  - title: Kit SDK Microsoft Information Protection
+    items:
+      - type: paragraph
+        text: Commencez avec la <a href="develop/">vue d’ensemble du kit SDK Microsoft Information Protection.</a>

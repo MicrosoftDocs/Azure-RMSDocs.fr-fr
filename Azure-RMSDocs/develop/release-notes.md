@@ -13,11 +13,11 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: d9fda9c7477c408e8003f48c85e6d35fec6a1884
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809809"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60176010"
 ---
 # <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
 

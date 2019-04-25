@@ -4,23 +4,25 @@ description: Une fois que vous avez protégé vos documents, vous pouvez suivre 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/16/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 66c0f915c2a3575d5f9d45e59f5684d9bdfbf7e7
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 95a70375f65e461cff2f69d28598d2a72aeaec10
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252501"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773517"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guide de l’utilisateur : Suivre et révoquer vos documents quand vous utilisez Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Une fois que vous avez protégé vos documents avec Azure Information Protection, vous pouvez suivre leur utilisation. Si nécessaire, vous pouvez également révoquer l’accès à ces documents si des personnes ne doivent plus être en mesure de les lire. Pour ce faire, vous utilisez le **site de suivi des documents**. Vous pouvez accéder à ce site à partir d’un ordinateur Windows ou Mac, d’une tablette ou d’un téléphone.
 
@@ -28,7 +30,7 @@ Après avoir accédé à ce site, connectez-vous pour assurer le suivi de vos do
 
 Actions que vous pouvez entreprendre sur le site de suivi de documents :
 
-- Si vous voulez cesser le partage d'un document : 
+- Si vous souhaitez arrêter le partage d’un document : 
     
     - Cliquez sur **Révoquer l'accès**. Notez la durée pendant laquelle le document reste disponible. Choisissez s’il faut permettre aux utilisateurs de savoir par un message personnalisé que vous révoquez l’accès au document que vous avez partagé précédemment. Quand vous révoquez un document, il n’est pas supprimé, mais les utilisateurs autorisés ne peuvent plus l’ouvrir :
         
@@ -44,7 +46,7 @@ Actions que vous pouvez entreprendre sur le site de suivi de documents :
      
     - Cliquez sur **Paramètres** et choisissez si vous voulez recevoir une notification quand une personne accède au document et si oui, comment :
         
-        ![Icône Exporter au format CSV du site de suivi de document](../media/tracking-site-settings-email.png)
+        ![Configurer des notifications par courrier électronique dans le site de suivi de document](../media/tracking-site-settings-email.png)
 
 - Si vous souhaitez suivre et révoquer des documents partagés pour d’autres :
     
@@ -61,7 +63,7 @@ Actions que vous pouvez entreprendre sur le site de suivi de documents :
 
 Pour effectuer le suivi d’un document que vous avez protégé, vous devez utiliser votre ordinateur Windows pour l’inscrire auprès du site de suivi de documents. Pour ce faire, utilisez l’Explorateur de fichiers ou vos applications Office.
 
-Si vous disposez de la préversion actuelle du client Azure Information Protection, vous pouvez également inscrire le document protégé à PowerShell lorsque vous utilisez le paramètre *EnableTracking* avec la cmdlet [Set-AIPFileLabel ](/powershell/azureinformationprotection/vlatest/set-aipfilelabel).
+Si vous avez la version actuelle de la disponibilité générale du client Azure Information Protection, vous pouvez également enregistrer le document protégé avec PowerShell quand vous utilisez le *EnableTracking* paramètre avec le [ Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) applet de commande.
 
 ## <a name="using-office-to-track-or-revoke-the-document"></a>Utilisation d’Office pour suivre ou révoquer le document
 
@@ -98,17 +100,17 @@ Une fois que vous avez enregistré le document protégé à l’aide de vos appl
 
 - Sur votre PC Windows, ordinateur Mac ou appareil mobile, visitez le [site de suivi des documents](https://go.microsoft.com/fwlink/?LinkId=529562).
 
-    **Navigateurs pris en charge** : nous vous recommandons d’utiliser Internet Explorer (version 10 ou ultérieure). Toutefois, vous pouvez accéder au site de suivi de document depuis tous les navigateurs répertoriés ci-après :
+    **Navigateurs pris en charge** : Nous recommandons d’utiliser Internet Explorer qui est au moins la version 10, mais vous pouvez utiliser un des navigateurs suivants à utiliser le site de suivi de document :
 
-    - Internet Explorer : version 10 ou ultérieure
+    - Internet Explorer : Au moins la version 10
 
-    - Internet Explorer 9 avec MS12-037 minimum : Mise à jour de sécurité cumulative pour Internet Explorer : 12 juin 2012
+    - Internet Explorer 9 avec MS12-037 minimum : Mise à jour de sécurité cumulative pour Internet Explorer : 12 juin 2012
 
-    - Mozilla Firefox : version 12 ou ultérieure
+    - Mozilla Firefox : Au moins la version 12
 
-    - Apple Safari 5 : version 5 ou ultérieure
+    - Apple Safari 5 : Au moins la version 5
 
-    - Google Chrome : version 18 ou ultérieure
+    - Google Chrome : Au moins la version 18
 
 
 ## <a name="other-instructions"></a>Autres instructions

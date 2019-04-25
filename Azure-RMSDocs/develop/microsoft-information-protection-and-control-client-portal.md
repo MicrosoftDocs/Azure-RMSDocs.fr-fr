@@ -14,15 +14,15 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: d61b9cb7262e83270395768a03581b8a97ba365f
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330359"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60176072"
 ---
 # <a name="rights-management-services-sdk-21"></a>Rights Management Services SDK 2.1
 
-## <a name="purpose"></a>Fonction
+## <a name="purpose"></a>Objectif
 
 La plateforme Rights Management Services SDK 2.1 permet aux développeurs de créer des applications qui tirent parti de Rights Management Services (RMS) ou d’Azure Rights Management pour assurer la protection des informations. RMS SDK 2.1 gère des pratiques de sécurité complexes, comme la gestion des clés, et le traitement du chiffrement et du déchiffrement, et il offre une API simplifiée pour le développement d’applications.
 
@@ -38,7 +38,7 @@ Pour plus d’informations sur les conditions d’exécution d’un élément de
 
 |Rubrique|Description|
 |-----|--------|
-|[Vue d'ensemble](ad-rms-overview.md)|Rights Management Services (RMS) est une technologie de protection des informations qui vous aide à protéger les informations numériques contre les utilisations non autorisées.|
+|[Vue d’ensemble](ad-rms-overview.md)|Rights Management Services (RMS) est une technologie de protection des informations qui vous aide à protéger les informations numériques contre les utilisations non autorisées.|
 |[Mise en route](getting-started-with-ad-rms-2-0.md)|La plateforme RMS SDK 2.1 permet aux développeurs de créer des applications qui tirent parti de la protection des informations RMS.|
 |[Notes de publication](release-notes-rtm.md)|Cette rubrique contient des informations importantes sur cette version de RMS SDK 2.1 et sur ses versions précédentes.|
 |[Notes pour les développeurs](developer-notes.md)|Cette section traite de recommandations propres à différents scénarios de développement importants.|

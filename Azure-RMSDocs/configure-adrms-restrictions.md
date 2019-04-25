@@ -4,21 +4,23 @@ description: Vue d’ensemble de la protection HYOK (AD RMS) pour Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: fc99910dbc2f6b8666b50c46b64cc1c9c59958a7
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 6ba22afad4ef9e1e8fc5da98efdff965dd6b3dfa
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259046"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182141"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protection HYOK (Hold your own key) pour Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Prenez connaissance des informations suivantes pour comprendre le lien entre la protection HYOK (Hold Your Own Key) et Azure Information Protection, et en quoi cette protection diffère de la protection cloud par défaut. Avant d’appliquer une protection HYOK, assurez-vous de bien comprendre les cas d’usage appropriés, les scénarios pris en charge, les limitations et les prérequis. 
 
@@ -64,7 +66,7 @@ Pour appliquer une protection HYOK, utilisez les étiquettes Azure Information P
 
 Le tableau suivant liste les scénarios qui prennent en charge la protection du contenu à l’aide d’étiquettes configurées avec HYOK, ainsi que l’ouverture (l’utilisation) du contenu protégé par HYOK.
 
-|Plate-forme|Application|Pris en charge|
+|Plateforme|Application|Pris en charge|
 |----------------------|----------|-----------|
 |Windows|Client Azure Information Protection avec applications Office 365, Office 2019, Office 2016 et Office 2013 <br /><br />- Word, Excel, PowerPoint|Protection : Oui<br /><br />Consommation : Oui|
 |Windows|Client Azure Information Protection avec applications Office 365, Office 2019, Office 2016 et Office 2013 <br /><br />- Outlook|Protection : Oui<br /><br />Consommation : Oui|
@@ -185,7 +187,7 @@ Quand vous configurez une étiquette pour la protection **HYOK (AD RMS)**, vous 
 
 Les valeurs du GUID de modèle et de l’URL de licence sont disponibles dans la console des services AD RMS (Active Directory Rights Management Services) :
 
-- Pour rechercher le GUID du modèle : développez le cluster, puis cliquez sur **Modèles de stratégies de droits**. Vous pouvez ensuite copier le GUID des informations **Modèles de stratégies de droits distribués** à partir du modèle à utiliser. Par exemple : 82bf3474-6efe-4fa1-8827-d1bd93339119
+- Pour rechercher le GUID du modèle : développez le cluster, puis cliquez sur **Modèles de stratégies de droits**. Vous pouvez ensuite copier le GUID des informations **Modèles de stratégies de droits distribués** à partir du modèle à utiliser. Exemple : 82bf3474-6efe-4fa1-8827-d1bd93339119
 
 - Pour rechercher l’URL de licence : cliquez sur le nom du cluster. Dans **Détails du cluster**, copiez la valeur **Gestion des licences** valeur sans la chaîne **/_wmcs/licensing**. Par exemple : https://rmscluster.contoso.com 
     

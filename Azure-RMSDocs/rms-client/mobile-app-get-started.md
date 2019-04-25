@@ -12,11 +12,11 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 07391252e55f1b75df4d0fb57d167748d6d69853
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255000"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180934"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android
 
@@ -31,7 +31,7 @@ La plupart des utilisateurs se servent généralement de l’application Azure I
 >
 > De même, n’essayez pas de vous connecter à l’application tant que vous n’y êtes pas invité.
 
-Pour utiliser les instructions suivantes, vous devez avoir accès, depuis votre appareil mobile, à un des fichiers pris en charge par l’application. Par exemple :
+Pour utiliser les instructions suivantes, vous devez avoir accès, depuis votre appareil mobile, à un des fichiers pris en charge par l’application. Exemple :
 
 - **Un fichier .rpmsg** : Il s’agit d’un e-mail protégé par des droits qui s’affiche comme pièce jointe dans un e-mail lorsque votre application de messagerie sur votre appareil mobile ne prend pas en charge la protection des données Rights Management de manière native. 
     

@@ -12,11 +12,11 @@ ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: e0672d3aecbe82d43cf2fd65de061c9ce09c660b
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258366"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183422"
 ---
 # <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Appareils clients prenant en charge la protection des données Azure Rights Management
 

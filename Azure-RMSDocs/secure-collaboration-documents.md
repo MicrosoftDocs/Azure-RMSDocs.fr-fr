@@ -12,11 +12,11 @@ ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 0c9e426fe6025b31f03ed84e65741c4a461e3938
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257312"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181784"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
@@ -93,7 +93,7 @@ Partagez le document protégé en le joignant à un e-mail et envoyez-le aux per
 
 ## <a name="opening-and-editing-the-protected-document"></a>Ouverture et modification du document protégé
 
-Lorsque les utilisateurs que vous avez autorisés ouvrent le document en vue de le modifier, le document s’ouvre avec une bannière d’informations qui les avertit que les autorisations sont limitées. Par exemple :
+Lorsque les utilisateurs que vous avez autorisés ouvrent le document en vue de le modifier, le document s’ouvre avec une bannière d’informations qui les avertit que les autorisations sont limitées. Exemple :
 
 ![Exemple de bannière d’informations Azure Information Protection pour les autorisations](./media/example-restricted-access-banner.png)
 

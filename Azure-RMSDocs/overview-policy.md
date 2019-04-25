@@ -4,22 +4,24 @@ description: Comprendre les étiquettes et les paramètres dans une stratégie A
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/27/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 29f573ae997431d621a616eccb9591c830ae8e9c
-ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
-ms.translationtype: HT
+ms.openlocfilehash: c2670efc774f81d8e66dfbd18f754a0db34b495b
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425927"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183940"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Présentation de la stratégie Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Une stratégie Azure Information Protection contient les éléments suivants que vous pouvez configurer :
     

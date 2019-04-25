@@ -12,11 +12,11 @@ ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: ff99a39c138cc3ddc0b49cf7ff65ab95d5e36ece
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828904"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60175812"
 ---
 # <a name="activating-azure-rights-management"></a>Activation d'Azure Rights Management
 
@@ -81,7 +81,7 @@ Si vous ne souhaitez pas que tous les utilisateurs puissent protéger des docume
 > [!IMPORTANT]
 > Pour utiliser cette commande, vous devez disposer au moins de la version **2.1.0.0** du [module Azure Rights Management PowerShell](https://www.powershellgallery.com/packages/AADRM).
 >
-> Pour déterminer la version que vous avez installée, exécutez la commande suivante : **(Get-Module aadrm –ListAvailable).Version**
+> Pour vérifier la version que vous avez installé, exécutez : **(Get-Module aadrm –ListAvailable).Version**
 
 Par exemple, si vous souhaitez initialement que seuls les administrateurs du groupe « Département informatique » (dont l'ID d'objet est fbb99ded-32a0-45f1-b038-38b519009503) puissent protéger du contenu à des fins de test, utilisez la commande suivante :
 

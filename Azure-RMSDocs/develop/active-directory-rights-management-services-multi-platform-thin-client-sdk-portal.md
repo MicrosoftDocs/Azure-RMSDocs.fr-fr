@@ -14,15 +14,15 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: 9e09a3f0ccf69360c590f0827d785df12291b963
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330043"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179791"
 ---
 # <a name="rights-management-sdk42"></a>SDK Rights Management 4.2
 
-## <a name="purpose"></a>Fonction
+## <a name="purpose"></a>Objectif
 
 Le SDK Rights Management 4.2 est une API simplifiée de nouvelle génération, qui offre une expérience de développement légère pour la mise à niveau de vos applications pour appareils avec protection des informations par le biais de Rights Management Services. Les développeurs peuvent créer des applications qui tirent parti d’Active Directory Rights Management Services (AD RMS) ou d’Azure Rights Management pour fournir la protection des informations. Ils peuvent facilement protéger ou consommer des informations, tout en gérant de façon transparente des pratiques de sécurité complexes, comme la gestion de clés, le chiffrement et le déchiffrement, la création de stratégies et d’autorisations, la mise en cache sécurisée, et la communication avec les services AD RMS et Azure RMS.
 

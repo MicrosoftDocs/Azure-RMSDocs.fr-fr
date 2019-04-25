@@ -13,11 +13,11 @@ ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: fdf5abd317164736cc66b1cbca8cfb9c2c5863d0
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828972"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60175174"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-microsoft-365-admin-center"></a>Comment activer Azure Rights Management à partir du Centre d’administration Microsoft 365
 

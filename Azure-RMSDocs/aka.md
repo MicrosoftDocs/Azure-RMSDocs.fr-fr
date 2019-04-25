@@ -12,11 +12,11 @@ ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: b0b6cb3484dd682eec0a85c25d61543361fcad79
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252756"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60175840"
 ---
 # <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection : autres appellations
 

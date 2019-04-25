@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 6a4aa43e54510df5775b4c5d73500d60e2a68d56
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331775"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60176905"
 ---
 # <a name="linux-code-examples"></a>Exemples de code Linux
 
@@ -540,7 +540,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par 
                 std::string(“john.smith@msopentechtest01.onmicrosoft.com”));
 
 
-**Étape 4** : Obtenir le jeton d’accès à partir du résultat. Description : Appeler la méthode **result-> accessToken()**
+**Étape 4**: Obtenir le jeton d’accès à partir du résultat. Description : Appeler la méthode **result-> accessToken()**
 
 **Remarque**  Toutes les méthodes de bibliothèque d’authentification peuvent lever **rmsauth::Exception**
 
@@ -573,7 +573,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par 
                         FileCachePtr);
 
 
-**Étape 4** : Appeler la méthode **acquireToken** d’**authContext** et spécifier les paramètres :
+**Étape 4**: Appeler la méthode **acquireToken** d’**authContext** et spécifier les paramètres :
 -   *Ressource demandée* : Ressource protégée à laquelle vous souhaitez accéder
 -   *ID du client unique* : Généralement un GUID
 -   *Informations d’identification de l’utilisateur* : passer l’objet créé
@@ -586,6 +586,6 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par 
                 userCred);
 
 
-**Étape 5** : Obtenir le jeton d’accès à partir du résultat. Description : Appeler la méthode **result-> accessToken()**
+**Étape 5**: Obtenir le jeton d’accès à partir du résultat. Description : Appeler la méthode **result-> accessToken()**
 
 **Remarque**  Toutes les méthodes de bibliothèque d’authentification peuvent lever **rmsauth::Exception**

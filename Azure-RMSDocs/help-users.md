@@ -12,11 +12,11 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 9ac96fe93c3bb903b25b5f9695f3e38451862f11
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258995"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182328"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -103,7 +103,7 @@ Les droits d'utilisation sont affichés en haut du document grâce à une banni�
 
 1.  Dans Outlook, créez un e-mail adressé à un destinataire au sein de votre organisation.
 
-2.  Sous l’onglet **OPTIONS** : **Autorisation** > sélectionnez une option. Par exemple : **Ne pas transférer**, ou **\<Nom de la société> - Confidentiel** ou **\<Nom de la société> - Affichage confidentiel uniquement**.
+2.  Sous l’onglet **OPTIONS** : **Autorisation** > sélectionnez une option. Exemple : **Ne pas transférer**, ou **\<Nom de la société> - Confidentiel** ou **\<Nom de la société> - Affichage confidentiel uniquement**.
 
 3.  Envoyez le message.
 
@@ -115,7 +115,7 @@ Par exemple, si l’e-mail est protégé à l’aide de l’option **Ne pas tran
 
 1. Dans Outlook sur le web, créez un e-mail destiné à une personne de votre organisation.
 
-2. Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **Modifier les autorisations**, puis sélectionnez une option dans la liste déroulante. Par exemple : **Chiffrer** ou **\<Nom de la société> – Confidentiel**.
+2. Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **Modifier les autorisations**, puis sélectionnez une option dans la liste déroulante. Exemple : **Chiffrer** ou **\<Nom de la société> – Confidentiel**.
 
 3. Envoyez le message.
 

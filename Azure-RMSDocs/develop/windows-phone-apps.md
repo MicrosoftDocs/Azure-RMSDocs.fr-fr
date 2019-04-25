@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 42ef57b73dfbbd49620e406a296df400ea3d99cf
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332988"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181038"
 ---
 # <a name="windows-phone-setup"></a>Configuration pour Windows Phone
 

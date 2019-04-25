@@ -12,11 +12,11 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 2d4c03a168f3add9778372a890ea9dd2c7be68bf
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253861"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181569"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Surveiller le connecteur Azure Rights Management
 
@@ -165,7 +165,7 @@ Quand vous installez le connecteur RMS, il crée automatiquement les compteurs d
 
 Par exemple, vous pouvez subir régulièrement des retards lorsque les documents ou les e-mails sont protégés. Vous pouvez également subir des retards à l’ouverture des documents et des e-mails protégés. Dans ce cas, les compteurs de performances peuvent vous aider à déterminer si les retards sont dus au temps de traitement du connecteur, au temps de traitement du service Azure Rights Management ou à un délai réseau. 
 
-Pour vous permettre d’identifier l’origine du retard, recherchez les compteurs qui incluent des valeurs moyennes pour le **Temps de traitement du connecteur**, le **Temps de réponse du service** et le **Temps de réponse du connecteur**. Par exemple : **Temps de réponse moyen du connecteur pour les demandes de licences par lot réussies**.
+Pour vous permettre d’identifier l’origine du retard, recherchez les compteurs qui incluent des valeurs moyennes pour le **Temps de traitement du connecteur**, le **Temps de réponse du service** et le **Temps de réponse du connecteur**. Exemple : **Temps de réponse moyen du connecteur pour les demandes de licences par lot réussies**.
 
 Si vous avez récemment ajouté des comptes de serveur pour utiliser le connecteur, le compteur à consulter est **Durée depuis la dernière mise à jour de la stratégie d’autorisation** pour vérifier que le connecteur a téléchargé la liste depuis que vous l’avez mise à jour, ou déterminer si vous devez attendre un peu plus longtemps (jusqu’à 15 minutes).
 

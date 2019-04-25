@@ -12,11 +12,11 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 4a0583b4cc288385520d2990d6f297a58a81d1cc
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809725"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179659"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données
 
@@ -24,7 +24,7 @@ ms.locfileid: "58809725"
 
 Grâce à la fonctionnalité de super utilisateur du service Azure Rights Management d’Azure Information Protection, les personnes et services autorisés peuvent toujours lire et inspecter les données qu’Azure Rights Management protège pour votre organisation. Si nécessaire, la protection peut ensuite être supprimée ou modifiée.
 
-Un super utilisateur a toujours le [droit d’utilisation](configure-usage-rights.md) Contrôle total Rights Management pour les documents et e-mails qui ont été protégés par le locataire Azure Information Protection de votre organisation. Cette fonctionnalité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise. Par exemple, vous pouvez utiliser cette fonctionnalité pour les scénarios suivants :
+Un super utilisateur a toujours le [droit d’utilisation](configure-usage-rights.md) Contrôle total Rights Management pour les documents et e-mails qui ont été protégés par le locataire Azure Information Protection de votre organisation. Cette fonctionnalité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise. Par exemple, vous pouvez utiliser cette fonctionnalité pour les scénarios suivants :
 
 - Un employé quitte l’organisation et vous devez lire les fichiers qu’il a protégés.
 
@@ -34,11 +34,11 @@ Un super utilisateur a toujours le [droit d’utilisation](configure-usage-right
 
 - Vous avez des services informatiques existants pour les solutions de prévention contre la perte de données (DLP), les passerelles de chiffrement de contenu (CEG) et les produits anti-programme malveillant qui doivent inspecter des fichiers déjà protégés.
 
-- Vous devez déchiffrer des fichiers en bloc à des fins d’audit, juridiques ou de conformité.
+- Vous devez déchiffrer des fichiers en bloc à des fins d'audit, juridiques ou de conformité.
 
 ## <a name="configuration-for-the-super-user-feature"></a>Configuration de la fonctionnalité de super utilisateur
 
-Par défaut, la fonctionnalité de super utilisateur n’est pas activée et ce rôle n’est attribué à aucun utilisateur. Elle est automatiquement activée si vous configurez le connecteur Rights Management pour Exchange. Elle n’est pas requise pour les services standard qui exécutent Exchange Online, SharePoint Online ou SharePoint Server.
+Par défaut, la fonctionnalité de super utilisateur n'est pas activée, et ce rôle n'est attribué à aucun utilisateur. Elle est automatiquement activée si vous configurez le connecteur Rights Management pour Exchange. Elle n’est pas requise pour les services standard qui exécutent Exchange Online, SharePoint Online ou SharePoint Server.
 
 Si vous devez activer manuellement la fonctionnalité de super utilisateur : utilisez l’applet de commande Windows PowerShell [Enable-AadrmSuperUserFeature](/powershell/aadrm/vlatest/enable-aadrmsuperuserfeature), désignez des utilisateurs (ou des comptes de service) en fonction des besoins à l’aide de l’applet de commande [Add-AadrmSuperUser](/powershell/aadrm/vlatest/add-aadrmsuperuser) ou [Set-AadrmSuperUserGroup](/powershell/aadrm/vlatest/set-aadrmsuperusergroup), puis ajoutez des utilisateurs (ou d’autres groupes) en fonction des besoins de ce groupe. 
 

@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 58de314ef4c87518c8aa6c53036c477b541ef5e1
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331033"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178282"
 ---
 # <a name="testing-your-application"></a>Test de votre application
 
@@ -38,7 +38,7 @@ Vous pouvez réaliser le test avec Azure RMS ou un serveur RMS en cours d’exé
 
     Pour obtenir de l’aide sur l’installation de RMS SDK 2.1, consultez [Installer le kit SDK](install-the-rms-sdk.md).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Ce guide n’est pas exhaustif. Pour découvrir comment configurer le client RMS 2.1, consultez [Notes sur le déploiement du client RMS 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 

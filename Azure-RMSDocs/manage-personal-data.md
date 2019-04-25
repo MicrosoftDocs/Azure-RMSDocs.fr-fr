@@ -4,19 +4,19 @@ description: Informations sur les données personnelles qui sont utilisées par 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/04/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 33455ec0d6433c52164f27127838917c2850d2f3
-ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
-ms.translationtype: HT
+ms.openlocfilehash: f2ae2ba9ab7a50bc7e5f87fed7f457132e4b82f7
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233732"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181881"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
 
@@ -34,7 +34,7 @@ Lorsque vous configurez et utilisez Azure Information Protection, les adresses e
 
 - Journaux de suivi des documents
 
-- Journaux d’utilisation du client Azure Information Protection et du client RMS 
+- Journaux d’utilisation pour les clients d’Azure Information Protection et le client RMS 
 
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-intro-sentence.md)]
@@ -90,7 +90,7 @@ Exécutez les applets de commande [Get-AadrmSuperUser](/powershell/module/aadrm/
 
 Exécutez l’applet de commande [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) afin d’obtenir un journal des actions d’administration pour le service Azure Rights Management, lequel protège les données pour Azure Information Protection. Ce journal contient des données personnelles sous la forme d’adresses e-mail et d’adresses IP. Le journal est en texte clair et une fois téléchargé, les détails d’un administrateur spécifique peuvent être recherchés hors connexion.
 
-Par exemple :
+Exemple :
 ```
 PS C:\Users> Get-AadrmAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -99,7 +99,7 @@ The Rights Management administration log was successfully generated and can be f
 ### <a name="usage-logs-for-the-azure-rights-management-service"></a>Journaux d’utilisation du service Azure Rights Management
 Exécutez l’applet de commande [Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog) pour récupérer un journal des actions de l’utilisateur final qui utilisent le service Azure Rights Management. Ce service protège les données pour Azure Information Protection. Le journal peut inclure des données personnelles sous la forme d’adresses e-mail et d’adresses IP. Le journal est en texte clair et une fois téléchargé, les détails d’un administrateur spécifique peuvent être recherchés hors connexion.
 
-Par exemple :
+Exemple :
 ```
 PS C:\Users> Get-AadrmUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -131,7 +131,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 Exécutez l’applet de commande [Get-AadrmDocumentLog](/powershell/module/aadrm/get-aadrmdocumentlog) pour récupérer des informations sur un utilisateur spécifique à partir du site de suivi de document. Pour obtenir les informations de suivi associées aux journaux de documents, utilisez l’applet de commande [Get-AadrmTrackingLog](/powershell/module/aadrm/get-aadrmtrackinglog?view=azureipps).
 
-Par exemple :
+Exemple :
 ```
 PS C:\Users> Get-AadrmDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -186,11 +186,11 @@ IsHiddenInfo         : False
 
 Il n’est pas possible d’effectuer des recherches par ObjectID. Toutefois, vous n’êtes pas limité par le paramètre `-UserEmail` et il n’est pas nécessaire que l’adresse e-mail que vous fournissez fasse partie de votre locataire. Si l’adresse e-mail fournie est stockée n’importe où dans les journaux de suivi des documents, l’entrée de suivi de document est retournée dans la sortie de l’applet de commande.
 
-### <a name="usage-logs-for-the-azure-information-protection-client-and-rms-client"></a>Journaux d’utilisation du client Azure Information Protection et du client RMS
+### <a name="usage-logs-for-the-azure-information-protection-clients-and-rms-client"></a>Journaux d’utilisation pour les clients d’Azure Information Protection et le client RMS
 
 Lorsque des étiquettes et la protection sont appliquées à des documents et des e-mails, les adresses e-mail et les adresses IP peuvent être stockées dans les fichiers journaux sur l’ordinateur d’un utilisateur aux emplacements suivants :
 
-- Pour le client Azure Information Protection : %localappdata%\Microsoft\MSIP\Logs
+- Pour le client d’étiquetage unifié Azure Information Protection et le client Azure Information Protection : %localappdata%\Microsoft\MSIP\Logs
 
 - Pour le client RMS : %localappdata%\Microsoft\MSIPC\msip\Logs
 

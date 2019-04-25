@@ -13,11 +13,11 @@ ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 3f03c055760e6d9e677db40250a6f32d6a112d72
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258978"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60175179"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Guide pratique pour activer Azure Rights Management à partir du portail Azure
 

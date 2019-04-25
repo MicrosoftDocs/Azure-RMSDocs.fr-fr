@@ -4,19 +4,19 @@ description: Vous ne comprenez pas un mot, une expression ou un acronyme lié à
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bd136d42420f42521e9fe058e73b4d643715d254
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
-ms.translationtype: HT
+ms.openlocfilehash: 01b882c03fd907a4ce41f8163a59f8ec30afa396
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809928"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182453"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie liée à Azure Information Protection
 
@@ -36,10 +36,10 @@ Client Azure Information Protection|Le côté client d’Azure Information Prote
 |Étiquette Azure Information Protection|Élément qui applique toujours une valeur de classification aux documents et aux e-mails, et qui peut aussi les protéger. Quand une étiquette est appliquée, les informations de l’étiquette sont stockées dans les métadonnées pour que les applications et les services puissent les lire, et éventuellement agir sur celles-ci.|
 |Stratégie Azure Information Protection|Configuration définie par l’administrateur pour les clients et services qui utilisent les paramètres de stratégie et les étiquettes Azure Information Protection.|
 |Scanneur Azure Information Protection|Service qui s’exécute sur Windows Server et vous permet de découvrir, classifier et protéger des documents sur les dossiers locaux, les partages réseau et les bibliothèques et sites SharePoint Server.|
-|Client d’étiquetage unifié Azure Information Protection|Actuellement en préversion : client des ordinateurs Windows permettant aux utilisateurs, aux administrateurs et aux services d’utiliser les étiquettes de confidentialité et les paramètres de stratégie provenant du Centre de sécurité et conformité Office 365, du Centre de sécurité Microsoft 365 et du Centre de conformité Microsoft 365.|
-|Azure RMS|Voir *Azure Rights Management*.|
+|Client d’étiquetage unifié Azure Information Protection|client des ordinateurs Windows permettant aux utilisateurs, aux administrateurs et aux services d’utiliser les étiquettes de confidentialité et les paramètres de stratégie provenant du Centre de sécurité et conformité Office 365, du Centre de sécurité Microsoft 365 et du Centre de conformité Microsoft 365.|
+|Azure RMS|Voir *Azure Rights Management*.|
 |Visionneuse Azure Information Protection|Application qui s’exécute sur des ordinateurs Windows et des appareils mobiles pour afficher les fichiers protégés.|
-|Gestion des droits Azure|Souvent abrégé *Azure RMS*.<br /><br />Service Azure utilisé par Azure Information Protection qui recourt au chiffrement et à des stratégies, à des fins de sécurisation des documents, des fichiers et des e-mails.  Également appelé *service Rights Management Azure*. Les noms précédents étaient les suivants :<br /><br />- *Windows Azure Active Directory Rights Management* : Souvent abrégé en service Windows Azure AD Rights Management.<br /><br />- *RMS Online* : Nom proposé à l'origine, que vous pourriez voir dans des messages d'erreur et des entrées de fichier journal.|
+|Gestion des droits Azure|Souvent abrégé *Azure RMS*.<br /><br />Service Azure utilisé par Azure Information Protection qui recourt au chiffrement et à des stratégies, à des fins de sécurisation des documents, des fichiers et des e-mails.  Également appelé *service Rights Management Azure*. Les noms précédents étaient les suivants :<br /><br />- *Windows Azure Active Directory Rights Management* : Souvent abrégé en Service Windows Azure AD Rights Management.<br /><br />- *RMS Online* : Le nom d’origine, proposé, que vous pouvez rencontrer parfois dans les messages d’erreur et les entrées de fichier journal.|
 |modèle par défaut|Modèle de protection qui est automatiquement créé pour vous lorsque vous obtenez un abonnement pour Azure Information Protection, afin que vous puissiez immédiatement commencer à protéger les documents et e-mails qui contiennent des informations sensibles.|
 |BYOK|Voir *Bring your own key*.|
 |Bring your own key|Souvent abrégé *BYOK*.<br /><br />Option de configuration et de topologie choisie par une organisation pour générer et gérer sa propre clé de locataire pour Azure Information Protection.|
@@ -57,7 +57,7 @@ Client Azure Information Protection|Le côté client d’Azure Information Prote
 |label|Consultez *Étiquette Azure Information Protection*.|
 |protection des informations|Souvent abrégé *IP*.<br /><br />Terme générique standard qui fait référence à la protection des données et des fichiers par le biais d'un accès limité, même après que les données et les fichiers ont quitté les frontières de l'organisation par courrier électronique ou via le partage de documents. Microsoft Azure Information Protection est un exemple de solution de protection des informations.|
 |Gestion des droits relatifs à l'information|Souvent abrégé *IRM*.<br /><br />Terme utilisé avec les services Office, comme Exchange Server, Word et SharePoint Online, pour décrire la capacité à prendre en charge les services Microsoft Rights Management.|
-|IRM|Voir *Gestion des droits relatifs à l’information*.|
+|RMS|Voir *Gestion des droits relatifs à l’information*.|
 |Chiffrement des messages Office|Souvent abrégé *OME*.<br /><br />Les nouvelles fonctionnalités de chiffrement de messages Office 365 ont une intégration native avec le service Azure Rights Management pour fournir la même protection des e-mails des utilisateurs internes et externes, actualiser automatiquement les modèles et prendre en charge le scénario BYOK (Bring your own key). La précédente implémentation d’OME était seulement conçue pour les destinataires externes, nécessitait une règle de flux de courrier et ne prenait pas en charge BYOK.|
 |MSDRM|Vu parfois comme référence au client RMS 1.0, qui est remplacé par le nouveau client, MSIPC. Cet ancien client prend en charge les applications développées avec le kit de développement logiciel (SDK) RMS 1.0, ainsi qu'Office 2010 et Office 2007, Exchange 2010 et Exchange 2013, SharePoint 2010 et SharePoint 2007.|
 |MSIPC|Vu parfois comme référence au client RMS 2.0, qui remplace l'ancien client RMS, MSDRM. Ce nouveau client prend en charge les applications développées avec RMS SDK 2.0, ainsi qu’Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013 et le client Azure Information Protection.|

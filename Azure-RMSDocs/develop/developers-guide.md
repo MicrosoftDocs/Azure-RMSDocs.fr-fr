@@ -12,11 +12,11 @@ ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
 ms.openlocfilehash: d9f1a3578a5da4abec6d61aa849388573dec3fe1
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331985"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179115"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guide du développeur Azure Information Protection
 

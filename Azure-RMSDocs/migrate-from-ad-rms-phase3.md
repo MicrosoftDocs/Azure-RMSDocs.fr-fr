@@ -12,11 +12,11 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: bdd5d17bc947b25f312baa498da057b409dcd07e
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256972"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60184125"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Phase de migration 3 : Configuration côté client
 
@@ -58,7 +58,7 @@ Cette méthode convient uniquement aux clients Windows qui exécutent des applic
     
     Si vous utilisez le rôle de serveur DNS sur Windows Server, vous pouvez utiliser le tableau suivant en guise d’exemple pour spécifier les propriétés d’un enregistrement SRV dans la console Gestionnaire DNS.
     
-    |Champ|Valeur|  
+    |Champ|Value|  
     |-----------|-----------|  
     |**Domaine**|_tcp.rmscluster.contoso.com|  
     |**Service**|_rmsredir|  
@@ -105,7 +105,7 @@ Le script de configuration du client (Migrate-Client.cmd) configure les paramèt
 
 - Utilisez un script d’ouverture de session si l’utilisateur dispose de privilèges d’administrateur local.
 
-Le script de configuration utilisateur (Migrate-User.cmd) configure les paramètres au niveau de l’utilisateur et nettoie le magasin de licences de client. Cela signifie que ce script doit s’exécuter dans le contexte de l’utilisateur réel. Par exemple :
+Le script de configuration utilisateur (Migrate-User.cmd) configure les paramètres au niveau de l’utilisateur et nettoie le magasin de licences de client. Cela signifie que ce script doit s’exécuter dans le contexte de l’utilisateur réel. Exemple :
 
 - Utilisez un script d’ouverture de session.
 
@@ -132,7 +132,7 @@ Quand vous ne pouvez pas migrer tous vos clients Windows à la fois, exécutez l
    > [!IMPORTANT]
    > Comme avant, veillez à ne pas introduire d’espaces supplémentaires avant ou après les adresses.
    > 
-   > De plus, si vos serveurs AD RMS utilisent des certificats de serveur SSL/TLS, vérifiez si les valeurs des URL de licence incluent le numéro de port **443** dans la chaîne. Par exemple : https://rms.treyresearch.net:443/_wmcs/licensing. Ces informations sont disponibles dans la console Active Directory Rights Management Services quand vous cliquez sur le nom du cluster et que vous consultez les informations **Détails du cluster**. Si vous voyez le numéro de port 443 dans l’URL, incluez cette valeur quand vous modifiez le script. Par exemple : https://rms.treyresearch.net:<strong>443</strong>. 
+   > De plus, si vos serveurs AD RMS utilisent des certificats de serveur SSL/TLS, vérifiez si les valeurs des URL de licence incluent le numéro de port **443** dans la chaîne. Par exemple : https://rms.treyresearch.net:443/_wmcs/licensing. Ces informations sont disponibles dans la console Active Directory Rights Management Services quand vous cliquez sur le nom du cluster et que vous consultez les informations **Détails du cluster**. Si vous voyez le numéro de port 443 dans l’URL, incluez cette valeur quand vous modifiez le script. Par exemple : https://rms.treyresearch.net:<strong>443</strong>. 
     
    Si vous devez récupérer l’URL du service Azure Rights Management pour *&lt;URLdevotrelocataire&gt;*, consultez [Pour identifier l’URL du service Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 

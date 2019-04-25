@@ -4,29 +4,31 @@ description: Exemple de script à copier et à modifier, comme indiqué dans les
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6b040359ecd1f1277711366cd8d612cd9664dba1
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 52a27004d303ff2912da9ad2cd243312bc4c411f
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259131"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180968"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Script Windows PowerShell pour la protection Azure RMS à l’aide de l’ICF des outils de gestion de ressources pour serveur de fichiers
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Cette page contient l’exemple de script à copier et à modifier, comme indiqué dans [Protection RMS avec l’infrastructure de classification des fichiers de Windows Server](configure-fci.md).
 
 Ce script utilise **1.3.155.2** comme version minimale pour le module AzureInformationProtection. Exécutez la commande suivante pour vérifier la version : `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
-*&#42;&#42;Exclusion de responsabilité&#42;&#42; : Cet exemple de script n'est pas pris en charge dans le cadre de tout programme ou service de support standard de Microsoft. Cet exemple de script est fourni EN L’ÉTAT sans garantie d’aucune sorte.*
+*&#42;&#42;Exclusion de responsabilité&#42;&#42; : Cet exemple de script n’est pas pris en charge par aucun programme de support standard de Microsoft ou d’un service. Cet exemple de script est fourni EN L’ÉTAT sans garantie d’aucune sorte.*
 
 ```
 <#

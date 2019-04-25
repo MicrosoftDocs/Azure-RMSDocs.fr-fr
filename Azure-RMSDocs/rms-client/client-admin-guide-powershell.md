@@ -4,27 +4,29 @@ description: Instructions et informations pour que les administrateurs gèrent l
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/25/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 0222a3ad5beaaae01d0da42d869ef2241c3af21a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 2d703eff5d31563c1c34b9937f9a1d2f45e93064
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254014"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183780"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Quand vous installez le client Azure Information Protection, des commandes PowerShell sont installés automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
-Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module comprend toutes les applets de commande Rights Management de l’outil de protection RMS (qui n’est plus pris en charge). Il propose également des applets de commande qui utilisent Azure Information Protection pour l’étiquetage. Par exemple :
+Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module comprend toutes les applets de commande Rights Management de l’outil de protection RMS (qui n’est plus pris en charge). Il propose également des applets de commande qui utilisent Azure Information Protection pour l’étiquetage. Exemple :
 
 |Étiquetage des applets de commande|Exemple d’utilisation|
 |----------------|---------------|
@@ -310,7 +312,7 @@ Votre résultat peut ressembler à ce qui suit :
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-Pour protéger tous les fichiers d’un dossier, utilisez le paramètre **-Folder** avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Par exemple :
+Pour protéger tous les fichiers d’un dossier, utilisez le paramètre **-Folder** avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Exemple :
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -323,7 +325,7 @@ Votre résultat peut ressembler à ce qui suit :
     \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
     \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 
-Lorsque l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande `Get-RMSFileStatus` plus tard pour vérifier si le fichier est protégé. Par exemple :
+Lorsque l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande `Get-RMSFileStatus` plus tard pour vérifier si le fichier est protégé. Exemple :
 
     Get-RMSFileStatus -File \Server1\Documents\Test1.docx
 
@@ -333,7 +335,7 @@ Votre résultat peut ressembler à ce qui suit :
     --------                              ------
     \Server1\Documents\Test1.docx         Protected
 
-Pour déprotéger un fichier, vous devez disposer des droits Propriétaire ou Extraction correspondant au moment où le fichier a été protégé, ou vous devez exécuter les applets de commande en tant que super utilisateur. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Par exemple :
+Pour déprotéger un fichier, vous devez disposer des droits Propriétaire ou Extraction correspondant au moment où le fichier a été protégé, ou vous devez exécuter les applets de commande en tant que super utilisateur. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Exemple :
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -426,7 +428,7 @@ Votre résultat peut ressembler à ce qui suit :
     ---------             -------------
     C:\Test.docx          C:\Test.docx   
 
-Pour protéger tous les fichiers d’un dossier, utilisez le paramètre -Folder avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Par exemple :
+Pour protéger tous les fichiers d’un dossier, utilisez le paramètre -Folder avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Exemple :
 
     Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -439,7 +441,7 @@ Votre résultat peut ressembler à ce qui suit :
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-Quand l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande Get-RMSFileStatus ultérieurement pour vérifier si le fichier est protégé. Par exemple : 
+Quand l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande Get-RMSFileStatus ultérieurement pour vérifier si le fichier est protégé. Exemple : 
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
@@ -449,7 +451,7 @@ Votre résultat peut ressembler à ce qui suit :
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-Pour déprotéger un fichier, vous devez disposer de droits d’utilisation de propriétaire ou d’extraction à compter du moment où le fichier a été protégé, ou être un super utilisateur AD RMS. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Par exemple :
+Pour déprotéger un fichier, vous devez disposer de droits d’utilisation de propriétaire ou d’extraction à compter du moment où le fichier a été protégé, ou être un super utilisateur AD RMS. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Exemple :
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -529,7 +531,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 12. De retour dans le panneau **Autorisations nécessaires**, sélectionnez **Accorder des autorisations**, cliquez sur **Oui** pour confirmer, puis fermez ce panneau.
 
 
-Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *WebAppId*, *WebAppKey* and *NativeAppId*. Par exemple :
+Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *WebAppId*, *WebAppKey* and *NativeAppId*. Exemple :
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 
@@ -585,7 +587,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
 3. Copiez ce script PowerShell sur l’ordinateur qui étiquettera et protégera les fichiers, puis supprimez la version d’origine sur votre ordinateur. Par exemple, vous copiez le script PowerShell sur C:\Scripts\Aipauthentication.ps1 sur un ordinateur Windows Server.
 
-#### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>Étape 4 : Créer une tâche qui exécute le script PowerShell
+#### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>Étape 4 : Créer une tâche qui exécute le script PowerShell
 
 1. Assurez-vous que le compte de service qui étiquettera et protégera les fichiers a le droit d’**Ouvrir une session en tant que programme de traitement par lots**.
 
@@ -599,7 +601,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
 3. Exécuter cette tâche manuellement.
 
-#### <a name="step-4-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>Étape 4 : Vérifier que le jeton est enregistré et supprimer le script PowerShell
+#### <a name="step-4-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>Étape 4 : Vérifier que le jeton est enregistré et supprimer le script PowerShell
 
 1. Vérifiez que le jeton est maintenant stocké dans le dossier %localappdata%\Microsoft\MSIP pour le profil de compte de service. Cette valeur est protégée par le compte de service.
 
@@ -608,7 +610,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
     Vous pouvez supprimer la tâche si vous le souhaitez. Si votre jeton expire, vous devez répéter ce processus, auquel cas il peut être plus pratique de laisser la tâche configurée afin qu’elle soit prête à s’exécuter à nouveau lorsque vous copierez le nouveau script PowerShell avec la nouvelle valeur du jeton.
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour obtenir de l’aide concernant les applets de commande lorsque vous avez ouvert une session PowerShell, tapez `Get-Help <cmdlet name> cmdlet`, puis utilisez le paramètre -online pour lire les informations les plus récentes. Par exemple : 
+Pour obtenir de l’aide concernant les applets de commande lorsque vous avez ouvert une session PowerShell, tapez `Get-Help <cmdlet name> cmdlet`, puis utilisez le paramètre -online pour lire les informations les plus récentes. Exemple : 
 
     Get-Help Get-RMSTemplate -online
 

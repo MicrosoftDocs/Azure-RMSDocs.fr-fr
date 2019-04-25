@@ -12,11 +12,11 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: a67f95bb3d7683de901a557c22971eee6d7b0c25
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828394"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181597"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 

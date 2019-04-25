@@ -12,11 +12,11 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 525637a52a71e4bdc48e8f0665ef73c70a5a18ff
-ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557627"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181070"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Conformité et informations annexes pour Azure Information Protection
 
@@ -40,9 +40,9 @@ Toutefois, certaines informations utiles peuvent aider votre conseiller juridiqu
 
 ## <a name="legal-and-privacy"></a>Mentions légales et confidentialité
 
-- Pour plus d’informations sur le contrat Microsoft Azure : [Contrat Microsoft Azure](https://azure.microsoft.com/support/legal/subscription-agreement/)
+- Pour plus d’informations de contrat Microsoft Azure : [Contrat Microsoft Azure](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Pour plus d’informations sur la confidentialité dans Microsoft Azure : [Déclaration de confidentialité de Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
+- Pour plus d’informations de confidentialité de Microsoft Azure : [Déclaration de confidentialité de Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>Sécurité, conformité et audit
 
@@ -50,7 +50,7 @@ Consultez la section [Respect des obligations réglementaires, de conformité et
 
 - Pour connaître les certifications externes pour Azure Information Protection : [Centre de confidentialité Microsoft Azure](https://azure.microsoft.com/support/trust-center/)
 
-- Pour plus d’informations sur FIPS 140 : [Validation FIPS 140](https://technet.microsoft.com/library/security/cc750357.aspx)
+- Pour plus d’informations FIPS 140 : [Validation FIPS 140](https://technet.microsoft.com/library/security/cc750357.aspx)
 
 Pour obtenir des informations techniques approfondies sur le fonctionnement de la technologie de protection, consultez [Fonctionnement d’Azure RMS](./how-does-it-work.md) 
 

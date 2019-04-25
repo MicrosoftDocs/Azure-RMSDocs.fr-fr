@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: d1181dfe1c495a334aaebd567df5db7e14649e25
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330999"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178231"
 ---
 # <a name="file-api-configuration"></a>Configuration de l’API de fichier
 
@@ -38,13 +38,13 @@ Les sections suivantes décrivent les clés et valeurs de clés qui contrôlent 
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection`
 
-**Type** : Clé
+**Type** : Touche
 
 **Description** : Contient la configuration générale de l’API de fichier.
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>`
 
-**Type** : Clé
+**Type** : Touche
 
 **Description** : Spécifie les informations de configuration d’une extension de fichier spécifique ; par exemple TXT, JPG, etc.
 
@@ -93,18 +93,18 @@ Vous pouvez ajouter une prise en charge native pour tous les types de fichiers (
 -   Extensions de fichiers : doc, dot, xla, xls, xlt, pps, ppt, docm, docx, dotm, dotx, xlam, xlsb, xlsm, xlsx, xltm, xltx, xps, potm, potx, ppsx, ppsm, pptm, pptx, thmx, vsdx, vsdm, vssx, vssm, vstx, and vstm. 
 -   Type de protection = Native (par défaut) : sample.docx est chiffré en sample.docx
 -   Type de protection = Pfile : pour les fichiers Office, le résultat est le même qu’avec la protection native.
--   Off : désactive le chiffrement.
+-   Désactivé : désactive le chiffrement.
 
 **Fichiers PDF**
 
 -   Type de protection = Native : sample.pdf est chiffré et nommé sample.ppdf
 -   Type de protection = Pfile : sample.pdf est chiffré et nommé sample.pdf.pfile.
--   Off : désactive le chiffrement.
+-   Désactivé : désactive le chiffrement.
 
 **Tous les autres formats de fichiers**
 
 -   Type de protection = Pfile : sample.*zzz* est chiffré et nommé sample.*zzz*.pfile, où *zzz* représente l’extension de fichier d’origine.
--   Off : désactive le chiffrement.
+-   Désactivé : désactive le chiffrement.
 
 ### <a name="examples"></a>Exemples
 

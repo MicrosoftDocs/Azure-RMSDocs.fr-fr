@@ -4,23 +4,25 @@ description: Instructions pour supprimer des étiquettes de classification et la
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 55f6dd9696dab3cf686443c656a29356907a721c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 031bfb196e7f896b49e96d4b94574b43e11a8fe8
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258672"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183224"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guide de l’utilisateur : Supprimer des étiquettes et la protection des fichiers et des e-mails qui ont été étiquetés par Azure Information Protection ou protégés par Rights Management
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Lorsque le [client Azure Information Protection est installé sur votre ordinateur](install-client-app.md), vous pouvez supprimer des étiquettes de classification et la protection de fichiers et messages électroniques.
 
@@ -45,7 +47,7 @@ Si l’icône **Supprimer l’étiquette** n’est pas immédiatement disponible
 
 ![Barre Azure Information Protection : modifier l’étiquette](../media/edit-label.png)
 
-Si vous ne voyez toujours pas l’icône **Supprimer l’étiquette**, c’est que votre administrateur ne vous permet pas d’utiliser cette option.
+Si vous ne voyez toujours pas le **supprimer l’étiquette** icône, votre administrateur ne vous permet pas d’utiliser cette option, car tous les documents et e-mails doivent avoir une étiquette.
 
 > [!NOTE]
 > Si vous ne voyez pas cette barre Information Protection dans vos applications Office :

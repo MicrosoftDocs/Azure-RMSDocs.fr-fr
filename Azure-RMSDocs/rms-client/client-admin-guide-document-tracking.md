@@ -4,29 +4,31 @@ description: Instructions et informations pour les administrateurs pour configur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 137d7d613fb5ed510a23d4c81f010ae1cf04386f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 8349a3e6447fe2091de9bd85f912c4f437dca427
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256377"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181422"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Si votre [abonnement prend en charge le suivi des documents](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), le site de suivi des documents est activé par défaut pour tous les utilisateurs de votre organisation. Le suivi des documents fournit des informations pour les utilisateurs et administrateurs concernant les dates d’accès à un document protégé et, si nécessaire, un document suivi peut être révoqué.
 
 ## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Utilisation de PowerShell pour gérer le site de suivi de documents
 
-Les sections suivantes contiennent des informations sur la façon de gérer le site de suivi de documents à l’aide de PowerShell. Pour connaître les instructions d'installation du module PowerShell, consultez [Installation du module PowerShell AADRM](../install-powershell.md). Si vous avez précédemment téléchargé et installé le module, vérifiez le numéro de version en exécutant la commande suivante : `(Get-Module aadrm –ListAvailable).Version`
+Les sections suivantes contiennent des informations sur la façon de gérer le site de suivi de documents à l’aide de PowerShell. Pour connaître les instructions d'installation du module PowerShell, consultez [Installation du module PowerShell AADRM](../install-powershell.md). Si vous avez précédemment téléchargé et installé le module, vérifiez le numéro de version en exécutant la commande suivante : `(Get-Module aadrm –ListAvailable).Version`
 
 Pour plus d’informations sur chacune des applets de commande, utilisez les liens fournis.
 
@@ -98,11 +100,9 @@ Pour obtenir des instructions sur l’utilisation du site de suivi des documents
 
 ### <a name="using-powershell-to-register-labeled-documents-with-the-document-tracking-site"></a>Utiliser PowerShell pour enregistrer des documents étiquetés sur le site de suivi des documents
 
-Cette option n’est disponible que pour la préversion actuelle du client Azure Information Protection.
-
 Pour pouvoir suivre et révoquer un document, il doit d’abord être enregistré sur le site de suivi des documents. Cette action se produit quand les utilisateurs sélectionnent l’option **Suivre et révoquer** dans l’Explorateur de fichiers ou leurs applications Office lorsqu’ils utilisent le client Azure Information Protection.
 
-Si vous étiquetez et protégez des fichiers pour des utilisateurs à l’aide de la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), vous pouvez utiliser le paramètre *EnableTracking* pour enregistrer le fichier sur le site de suivi des documents. Par exemple :
+Si vous étiquetez et protégez des fichiers pour des utilisateurs à l’aide de la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), vous pouvez utiliser le paramètre *EnableTracking* pour enregistrer le fichier sur le site de suivi des documents. Exemple :
 
     Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
 

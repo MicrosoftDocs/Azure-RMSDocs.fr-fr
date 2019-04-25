@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: dbd7969d5e6d87ec2d8e935f44867d58dfee9751
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332247"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178384"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Comment : permettre à votre application de service de fonctionner avec le service RMS cloud
 

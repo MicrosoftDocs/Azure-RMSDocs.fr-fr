@@ -1,22 +1,22 @@
 ---
-title: Informations et prise en charge pour Azure Information Protection
+title: Informations et support pour Azure Information Protection - AIP
 description: Ressources pour les administrateurs, qui incluent des informations sur les nouvelles versions, les options de support disponibles et la procédure à suivre pour contacter Microsoft en cas de problème.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/08/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5ff687b812ac9c7d3253e284baeaca0b1de2e8e3
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.openlocfilehash: 385b44e6f3753e7d066f63fee812c4f12b67171d
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57978217"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181733"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
@@ -65,6 +65,8 @@ Pour connaître les autres options de support, adressez-vous à votre contact Mi
 Ateliers pratiques : Consultez [Atelier pratique Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)
 
 Vidéos à la demande :
+
+- Communauté technique enregistrée webinaires pour [Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014).
 
 - Sessions Microsoft Ignite 2018 pour [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection) :
     

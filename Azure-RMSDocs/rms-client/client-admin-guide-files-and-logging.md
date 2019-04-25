@@ -4,23 +4,25 @@ description: Informations sur les fichiers du client et la journalisation de l�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/11/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 72e29d19ddbfc3189d498724fc8353829820ab4e
-ms.sourcegitcommit: f4fe64474999954e0c013c3901edbb3048670935
-ms.translationtype: HT
+ms.openlocfilehash: 2265dba770f4b67bbcc84368a007b7c921f37b3f
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2019
-ms.locfileid: "57725747"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183399"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Après avoir installé le client Azure Information Protection, vous aurez peut-être besoin de connaître l’emplacement des fichiers et de surveiller l’utilisation du client.
 
@@ -92,7 +94,7 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
 
 - Autorisations personnalisées (le cas échéant) qui incluent les [droits d’utilisation par leur nom d’encodage](../configure-usage-rights.md#usage-rights-and-descriptions) pour les utilisateurs, groupes ou organisations spécifiés
 
-Les événements pour les messages d’avertissement, de justification et de blocage Outlook nécessitent la préversion du client et les paramètres du client avancé. Pour plus d’informations, consultez [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
+Les événements pour Outlook avertir, justifier et bloquer les messages nécessitent le client actuel de la disponibilité générale et les paramètres de clients avancés. Pour plus d’informations, consultez [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
 Pour obtenir des informations sur la journalisation de l’utilisation du service de protection, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../log-analyze-usage.md).
 

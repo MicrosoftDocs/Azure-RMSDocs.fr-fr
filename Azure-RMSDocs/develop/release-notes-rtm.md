@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: 6e962a2e9727048a60e74e811e964e6a0a9bc82d
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332155"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60176044"
 ---
 # <a name="release-notes"></a>Notes de publication
 
@@ -143,15 +143,15 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 
 -   **Problème** : lors de la création d’une nouvelle licence, les droits de propriété doivent être accordés de manière explicite.
 
-    **Solution** : votre application doit ajouter explicitement les droits **Owner** au propriétaire de la licence lors de la création d’une nouvelle licence à l’aide de [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). Pour plus d’informations, voir [Ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md).
+    **Solution**: votre application doit ajouter explicitement les droits **Owner** au propriétaire de la licence lors de la création d’une nouvelle licence à l’aide de [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). Pour plus d’informations, voir [Ajouter des droits de propriétaire explicites](add-explicit-owner-rights.md).
 
 -   **Problème** : si une application appelle [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) ou [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) deux fois pour la même fenêtre à l’aide de son handle, le SDK RMS 2.1 retourne un échec dans **HRESULT**.
 
-    **Solution** : pour obtenir des conseils spécifiques concernant ce problème, consultez la section « Remarques » dans [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) et [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx).
+    **Solution**: pour obtenir des conseils spécifiques concernant ce problème, consultez la section « Remarques » dans [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) et [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx).
 
 -   **Problème** : lors de la création de plusieurs architectures, vous devez utiliser ce guide.
 
-    **Solution** : si vous souhaitez utiliser le fichier Ipcsecproc\*isv.dll pour une architecture différente (par exemple, vous avez installé le SDK 64 bits sur un ordinateur 64 bits et vous souhaitez maintenant effectuer le déploiement sur un ordinateur 32 bits qui nécessite Ipcsecproc\*isv.dll), vous devez installer le SDK 32 bits sur un autre ordinateur et copier les fichiers Ipcsecproc\*isv.dll à cet emplacement à partir du dossier « %PROGRAMFILES%\\Microsoft Information Protection And Control » (l’emplacement par défaut ou celui où vous avez choisi d’installer le SDK).
+    **Solution**: si vous souhaitez utiliser le fichier Ipcsecproc\*isv.dll pour une architecture différente (par exemple, vous avez installé le SDK 64 bits sur un ordinateur 64 bits et vous souhaitez maintenant effectuer le déploiement sur un ordinateur 32 bits qui nécessite Ipcsecproc\*isv.dll), vous devez installer le SDK 32 bits sur un autre ordinateur et copier les fichiers Ipcsecproc\*isv.dll à cet emplacement à partir du dossier « %PROGRAMFILES%\\Microsoft Information Protection And Control » (l’emplacement par défaut ou celui où vous avez choisi d’installer le SDK).
 
 ## <a name="frequently-asked-questions"></a>Forum aux questions
 

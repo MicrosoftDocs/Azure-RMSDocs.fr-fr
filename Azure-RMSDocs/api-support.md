@@ -12,11 +12,11 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: f1869a4de4c6c8a7328708f2dc3cc1f4f7982902
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258893"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60175154"
 ---
 # <a name="other-applications-that-support-the-rights-management-apis"></a>Autres applications prenant en charge les API Rights Management
 
@@ -24,7 +24,7 @@ ms.locfileid: "56258893"
 
 Utilisez les informations suivantes pour comprendre comment le service Azure Rights Management d’Azure Information Protection peut prendre en charge d’autres applications pour protéger les données de votre organisation.
 
-En utilisant les SDK Azure Information Protection, vos développeurs internes peuvent écrire des applications métier pour prendre en charge nativement le service Azure Rights Management. Le mode d’intégration de la protection des informations à ces applications dépend de la manière dont elles sont écrites. Par exemple, l’intégration peut être automatiquement appliquée en demandant un minimum d’interaction utilisateur, ou pour une expérience plus personnalisée, les utilisateurs peuvent être invités à configurer des paramètres pour appliquer la protection des informations à des fichiers. Pour plus d’informations, consultez le [Guide du développeur](./develop/developers-guide.md).
+En utilisant les SDK Azure Information Protection, vos développeurs internes peuvent écrire des applications métier pour prendre en charge nativement le service Azure Rights Management. Le mode d'intégration de la protection des informations à ces applications dépend de la manière dont elles sont écrites. Par exemple, l’intégration peut être automatiquement appliquée en demandant un minimum d’interaction utilisateur, ou pour une expérience plus personnalisée, les utilisateurs peuvent être invités à configurer des paramètres pour appliquer la protection des informations à des fichiers. Pour plus d’informations, consultez le [Guide du développeur](./develop/developers-guide.md).
 
 De même, de nombreux éditeurs de logiciels proposent des applications pour fournir des solutions de protection des informations, également appelées produits de gestion des droits d’entreprise. Un lecteur PDF prenant en charge le service Azure Rights Management pour des plateformes spécifiques en est un exemple typique. Aidez-vous du tableau dans [Applications prenant en charge la protection des données Azure Rights Management](./requirements-applications.md) pour identifier les applications qui prennent en charge Rights Management (applications compatibles avec RSM), puis effectuez une recherche sur Internet pour acheter ou télécharger l’application.
 

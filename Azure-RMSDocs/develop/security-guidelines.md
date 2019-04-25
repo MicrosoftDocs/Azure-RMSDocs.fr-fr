@@ -12,11 +12,11 @@ ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
 ms.openlocfilehash: ca4aa7b340a3024139e6a61c0ba4fd938009d522
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332104"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60175993"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Bonnes pratiques de sécurité pour Information Protection
 
@@ -57,7 +57,7 @@ Microsoft ne teste pas et ne passe pas en revue les résultats des tests liés a
 |Norme recommandée| Les instructions recommandées permettent d’optimiser la sécurité des applications et d’indiquer de quelle manière le SDK peut évoluer à mesure que des critères de sécurité supplémentaires sont implémentés. Les fournisseurs peuvent différencier leurs applications en développant selon ce niveau plus élevé des directives de sécurité.|
 |Norme préférée| Cette norme est la catégorie de sécurité la plus élevée actuellement définie. Les fournisseurs qui développent des applications commercialisées comme hautement sécurisées doivent respecter cette norme. Les applications conformes à cette norme sont susceptibles d’être moins vulnérables aux attaques.|
 
-## <a name="malicious-software"></a>Logiciel malveillant
+## <a name="malicious-software"></a>Logiciels malveillants
 
 Microsoft a défini des normes minimales requises que votre application doit respecter pour protéger le contenu contre des logiciels malveillants.
 

@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: 7a7019e72e4d8d2b66c81fbc69542e140992467b
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330217"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60176820"
 ---
 # <a name="linux-setup"></a>Configuration pour Linux
 

@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: c2bd6e638fe3af2680327061ecf85bbffd0e1794
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331951"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178926"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Procédure d’inscription et d’activation RMS de votre application dans Azure AD
 

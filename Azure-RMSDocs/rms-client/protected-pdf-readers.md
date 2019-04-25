@@ -12,11 +12,11 @@ ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
 ms.reviewer: kartikka
 ms.suite: ems
 ms.openlocfilehash: 9c4236d2e8a08e99c3208694b665beabb71f9b55
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251940"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180900"
 ---
 # <a name="supported-pdf-readers-for-microsoft-information-protection"></a>Lecteurs PDF pris en charge pour Microsoft Information Protection
 

@@ -4,17 +4,17 @@ description: Présentation du service Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
-ms.topic: conceptual
+ms.date: 04/17/2019
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 3082d43d44d961303c61796c949ba66adfb7f08b
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
+ms.openlocfilehash: 64733ce1007a97f32a12b50d37aa886b774f896e
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828462"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181234"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
@@ -109,6 +109,11 @@ Pour en savoir plus sur le déploiement et l’utilisation du scanneur, consulte
 
 Pour vos magasins de données cloud, utilisez Microsoft Cloud App Security pour appliquer vos étiquettes aux documents dans Box, SharePoint Online et OneDrive entreprise. Pour plus d’informations, consultez [Appliquer automatiquement des étiquettes de classification Azure Information Protection](/cloud-app-security/use-case-information-protection) et [Intégration d’Azure Information Protection](/cloud-app-security/azip-integration).
 
+## <a name="latest-labeling-updates-for-microsoft-365"></a>Mises à jour les plus récentes de l’étiquetage pour Microsoft 365
+
+Consultez les dernières informations sur la façon dont Azure Information Protection vous aide à détecter, classifier, protéger et surveiller vos informations sensibles, où qu’il réside :
+
+> [!VIDEO https://www.youtube.com/embed/UI0p9xqMNfI]
 
 ## <a name="resources-for-azure-information-protection"></a>Ressources pour Azure Information Protection
 
@@ -147,4 +152,4 @@ Pour avoir un aperçu des annonces qui ont été faites lors de cette conférenc
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Configurez et découvrez Azure Information Protection par vous-même avec nos [démarrages rapides](quickstart-viewpolicy.md) et nos [tutoriels](infoprotect-quick-start-tutorial.md). Ou, si vous êtes prêt à déployer ce service pour votre organisation, consultez les [guides pratiques pour les scénarios courants](how-to-guides.md).
+Configurez et découvrez Azure Information Protection par vous-même avec nos [démarrages rapides](quickstart-viewpolicy.md) et nos [tutoriels](infoprotect-quick-start-tutorial.md). Ou, si vous êtes prêt à déployer ce service pour votre organisation, consultez les [guides pratiques](how-to-guides.md).

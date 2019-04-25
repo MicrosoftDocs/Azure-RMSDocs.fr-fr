@@ -12,11 +12,11 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 71f5afc3f65713f62607717d5459080aa11bedf2
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256751"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60184159"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Prise en charge d’Azure Rights Management par les programmes et services Office 
 
@@ -44,7 +44,7 @@ Quand vous utilisez Exchange Online ou Exchange Server, vous pouvez configurer d
 
 -   Prise en charge de la protection des e-mails pour **Outlook sur le web**, qui est implémentée de façon similaire à celle du client Outlook. Cette configuration permet aux utilisateurs de protéger des e-mails à l’aide de modèles de protection ou en spécifiant des options. Les utilisateurs peuvent lire et utiliser les e-mails protégés qui leur sont envoyés.
 
--   **Règles de protection** pour les clients Outlook qu’un administrateur configure afin d’appliquer automatiquement des modèles de protection et des options aux e-mails envoyés à des destinataires spécifiés. Par exemple, quand des e-mails internes sont envoyés à votre service juridique, ils peuvent uniquement être lus par les membres du service juridique et ne peuvent pas être transférés. Les utilisateurs voient la protection appliquée à l’e-mail avant de l’envoyer. Ils peuvent aussi, par défaut, supprimer cette protection s’ils décident qu’elle est inutile. Les e-mails sont chiffrés avant d’être envoyés. Pour plus d’informations, consultez [Règles de protection Outlook](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) et [Créer une règle de protection d’Outlook](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) dans la bibliothèque Exchange.
+-   **Règles de protection** pour les clients Outlook qu’un administrateur configure afin d’appliquer automatiquement des modèles de protection et des options aux e-mails envoyés à des destinataires spécifiés. Par exemple, quand des messages électroniques internes sont envoyés à votre service juridique, ils peuvent uniquement être lus par les membres du service juridique et ne peuvent pas être transférés. Les utilisateurs voient la protection appliquée à l’e-mail avant de l’envoyer. Ils peuvent aussi, par défaut, supprimer cette protection s’ils décident qu’elle est inutile. Les e-mails sont chiffrés avant d’être envoyés. Pour plus d’informations, consultez [Règles de protection Outlook](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) et [Créer une règle de protection d’Outlook](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) dans la bibliothèque Exchange.
 
 -   **Règles de flux de courrier** qu’un administrateur configure pour appliquer automatiquement des modèles de protection ou des options aux e-mails. Ces règles sont basées sur des propriétés, comme l’expéditeur, le destinataire, l’objet du message et le contenu. Ces règles sont similaires par leur concept aux règles de protection, mais elles ne permettent pas aux utilisateurs de supprimer la protection, car celle-ci est définie par le service Exchange plutôt que par le client. Étant donné que la protection est définie par le service, peu importe l’appareil ou le système d’exploitation dont disposent les utilisateurs. Pour plus d’informations, consultez [Règles de flux de courrier (règles de transport) dans Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) et [Créer une règle de protection de transport](https://technet.microsoft.com/library/dd302432.aspx) pour Exchange sur site.
 
@@ -67,7 +67,7 @@ Si vous êtes prêt à configurer Exchange pour protéger les e-mails :
 
 ## <a name="sharepoint-online-and-sharepoint-server"></a>SharePoint Online et SharePoint Server
 
-Si vous utilisez SharePoint Online ou SharePoint Server, vous pouvez protéger vos documents à l’aide de la fonctionnalité Gestion des droits relatifs à l’information (IRM) de SharePoint. Cette fonctionnalité permet aux administrateurs de protéger des listes ou des bibliothèques pour que le fichier qui est téléchargé quand un utilisateur extrait un document soit protégé. Cela signifie que seules les personnes autorisées peuvent afficher et utiliser ce fichier conformément aux stratégies de protection des informations que vous spécifiez. Par exemple, le fichier peut être en lecture seule, vous pouvez désactiver la copie du texte, vous pouvez empêcher l’enregistrement d’une copie locale et l’impression du fichier.
+Si vous utilisez SharePoint Online ou SharePoint Server, vous pouvez protéger vos documents à l’aide de la fonctionnalité Gestion des droits relatifs à l’information (IRM) de SharePoint. Cette fonctionnalité permet aux administrateurs de protéger des listes ou des bibliothèques pour que le fichier qui est téléchargé quand un utilisateur extrait un document soit protégé. Cela signifie que seules les personnes autorisées peuvent afficher et utiliser ce fichier conformément aux stratégies de protection des informations que vous spécifiez. Par exemple, le fichier peut être en lecture seule, vous pouvez désactiver la copie du texte, vous pouvez empêcher l'enregistrement d'une copie locale et l'impression du fichier.
 
 Les documents Word, PowerPoint, Excel et PDF prennent en charge cette protection IRM de SharePoint. Par défaut, la protection est limitée à la personne qui télécharge le document. Vous pouvez modifier cette valeur par défaut avec une option de configuration nommée **Autoriser la protection de groupe**, qui étend la protection à un groupe que vous spécifiez. Vous pouvez, par exemple, spécifier un groupe qui a l’autorisation de modifier des documents dans la bibliothèque, afin que le même groupe d’utilisateurs puisse modifier le document en dehors de SharePoint, quel que soit l’utilisateur qui a téléchargé le document. Ou, vous pouvez spécifier un groupe qui ne dispose pas d’autorisations dans SharePoint, mais dont les utilisateurs ont besoin d’accéder au document en dehors de SharePoint. 
 

@@ -12,11 +12,11 @@ ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 023d35152f1afbd8bba60366bfb2beec37905b91
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254201"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180027"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configuration des serveurs pour le connecteur Azure Rights Management
 
@@ -29,15 +29,15 @@ Avant de commencer, vérifiez que le connecteur RMS est installé et configuré.
 
 
 ## <a name="configuring-servers-to-use-the-rms-connector"></a>Configuration de serveurs afin d'utiliser le connecteur RMS
-Une fois que vous avez installé et configuré le connecteur RMS, vous êtes en mesure de configurer les serveurs locaux destinés à se connecter au service Azure Rights Management et à utiliser cette technologie de protection par le biais du connecteur. Cela suppose de configurer les serveurs suivants :
+Une fois que vous avez installé et configuré le connecteur RMS, vous êtes en mesure de configurer les serveurs locaux destinés à se connecter au service Azure Rights Management et à utiliser cette technologie de protection par le biais du connecteur. Cela suppose de configurer les serveurs suivants :
 
--   **Pour Exchange 2016 et Exchange 2013** : Serveurs d'accès au client et serveurs de boîte aux lettres
+-   **Pour Exchange 2016 et Exchange 2013** : Serveurs d’accès client et les serveurs de boîtes aux lettres
 
--   **Pour Exchange 2010** : serveurs d'accès au client et serveurs de transport Hub
+-   **Pour Exchange 2010** : Serveurs d’accès client et les serveurs de transport hub
 
 -   **Pour SharePoint** : serveurs web frontaux SharePoint, y compris ceux hébergeant le serveur d'administration centrale
 
--   **Pour l’infrastructure de classification des fichiers** : ordinateurs Windows Server sur lesquels le Gestionnaire de ressources de fichiers est installé
+-   **Pour l’infrastructure de classification des fichiers** : Ordinateurs Windows Server qui ont installé fichier Resource Manager
 
 Cette configuration nécessite des paramètres de registre. Pour ce faire, vous avez deux options : Automatiquement, avec l’outil de configuration de serveur pour le connecteur Microsoft RMS, ou manuellement, en modifiant le Registre.
 
@@ -89,13 +89,13 @@ Après avoir modifié la configuration de ces serveurs, vous devez les redémarr
 
 2.  Enregistrez le fichier GenConnectorConfig.ps1 sur l'ordinateur que vous utiliserez pour exécuter l'outil. Si vous prévoyez d'exécuter l'outil localement, il doit s'agir du serveur que vous souhaitez configurer afin de communiquer avec le connecteur RMS. Sinon, vous pouvez l'enregistrer sur n'importe quel ordinateur.
 
-3.  Déterminez de quelle façon exécuter l'outil :
+3.  Déterminez de quelle façon exécuter l'outil :
 
-    -   **Localement** : vous pouvez exécuter l'outil de manière interactive à partir du serveur à configurer pour communiquer avec le connecteur RMS. Cette option est adaptée aux configurations uniques, comme un environnement de test.
+    -   **Localement** : Vous pouvez exécuter l’outil de manière interactive, à partir du serveur à être configuré pour communiquer avec le connecteur RMS. Cette option est adaptée aux configurations uniques, comme un environnement de test.
 
     -   **Déploiement logiciel** : Vous pouvez exécuter l’outil pour générer des fichiers de Registre, que vous déployez ensuite sur un ou plusieurs serveurs pertinents avec une application de gestion des systèmes prenant en charge le déploiement logiciel, comme System Center Configuration Manager.
 
-    -   **Stratégie de groupe** : vous pouvez exécuter l'outil pour générer un script, que vous pouvez ensuite transmettre à un administrateur capable de créer des objets de stratégie de groupe pour les serveurs à configurer. Ce script créé un objet de stratégie de groupe pour chaque type de serveur à configurer, auquel l'administrateur peut assigner les serveurs pertinents.
+    -   **Stratégie de groupe** : Vous pouvez exécuter l’outil pour générer un script que vous donnez à un administrateur peut créer des objets de stratégie de groupe pour les serveurs à configurer. Ce script créé un objet de stratégie de groupe pour chaque type de serveur à configurer, auquel l'administrateur peut assigner les serveurs pertinents.
 
     > [!NOTE]
     > Cet outil configure les serveurs qui sont appelés à communiquer avec le connecteur RMS et qui sont répertoriés au début de cette section. N'exécutez pas cet outil sur les serveurs qui exécutent le connecteur RMS.
@@ -111,7 +111,7 @@ Pour exécuter le script, vous devez entrer l’URL du connecteur RMS pour votre
 > [!IMPORTANT]
 > Quand vous exécutez cet outil, veillez à spécifier le nom du connecteur RMS de votre organisation faisant l'objet d'un équilibrage de charge et non celui d'un serveur unique exécutant le service de connecteur RMS.
 
-Consultez les sections suivantes pour obtenir des informations spécifiques pour chaque type de service :
+Consultez les sections suivantes pour obtenir des informations spécifiques pour chaque type de service :
 
 -   [Configuration d’un serveur Exchange afin d’utiliser le connecteur](#configuring-an-exchange-server-to-use-the-connector)
 
@@ -127,13 +127,13 @@ Consultez les sections suivantes pour obtenir des informations spécifiques pour
 > Dans les deux cas, vous devez installer les applications clientes sur des ordinateurs distincts non configurés pour utiliser le connecteur. Elles utiliseront alors RMS correctement.
 
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>Configuration d'un serveur Exchange afin d'utiliser le connecteur
-Les rôles Exchange qui communiquent avec le connecteur RMS sont les suivants :
+Les rôles Exchange qui communiquent avec le connecteur RMS sont les suivants :
 
--   Pour Exchange 2016 et Exchange 2013 : Serveur d'accès au client et serveur de boîte aux lettres
+-   Pour Exchange 2016 et Exchange 2013 : Serveur d’accès client et serveur de boîtes aux lettres
 
--   Pour Exchange 2010 : serveur d'accès au client et serveur de transport Hub
+-   Pour Exchange 2010 : Serveur d’accès client et serveur de transport hub
 
-Pour utiliser le connecteur RMS, ces serveurs Exchange doivent exécuter l'une des versions logicielles suivantes :
+Pour utiliser le connecteur RMS, ces serveurs Exchange doivent exécuter l'une des versions logicielles suivantes :
 
 -   Exchange Server 2016
 
@@ -179,7 +179,7 @@ Les rôles SharePoint qui communiquent avec le connecteur RMS sont les suivants�
 
 -   serveurs web frontaux SharePoint, y compris ceux hébergeant le serveur d'administration centrale
 
-Pour utiliser le connecteur RMS, ces serveurs SharePoint doivent exécuter l'une des versions logicielles suivantes :
+Pour utiliser le connecteur RMS, ces serveurs SharePoint doivent exécuter l'une des versions logicielles suivantes :
 
 -   SharePoint Server 2016
 
@@ -200,7 +200,7 @@ Les serveurs exécutant SharePoint 2010 doivent disposer d’une version du cli
 
 1. Vérifiez que les serveurs SharePoint sont autorisés à utiliser le connecteur RMS à l’aide de l’outil d’administration du connecteur RMS et des informations contenues dans la section [Définition des serveurs autorisés à utiliser le connecteur RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector). Cette configuration est exigée pour que vos serveurs SharePoint puissent utiliser le connecteur RMS.
 
-2.  Sur les serveurs SharePoint qui communiquent avec le connecteur RMS, effectuez l'une des opérations suivantes :
+2.  Sur les serveurs SharePoint qui communiquent avec le connecteur RMS, effectuez l'une des opérations suivantes :
 
     -   Exécutez l'outil de configuration de serveur pour le connecteur Microsoft RMS. Pour plus d’informations, consultez [Comment utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) dans cet article.
 
@@ -222,7 +222,7 @@ Les serveurs exécutant SharePoint 2010 doivent disposer d’une version du cli
 
 
 ## <a name="configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector"></a>Configuration d'un serveur de fichiers pour l'infrastructure de classification des fichiers afin d'utiliser le connecteur
-Pour utiliser le connecteur RMS et l'infrastructure de classification des fichiers dans l'objectif de protéger des documents Office, le serveur de fichiers doit exécuter l'un des systèmes d'exploitation suivants :
+Pour utiliser le connecteur RMS et l'infrastructure de classification des fichiers dans l'objectif de protéger des documents Office, le serveur de fichiers doit exécuter l'un des systèmes d'exploitation suivants :
 
 - Windows Server 2016
 
@@ -234,7 +234,7 @@ Pour utiliser le connecteur RMS et l'infrastructure de classification des fichie
 
 1. Vérifiez que les serveurs de fichiers sont autorisés à utiliser le connecteur RMS à l’aide de l’outil d’administration du connecteur RMS et des informations contenues dans la section [Définition des serveurs autorisés à utiliser le connecteur RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector). Cette configuration est exigée pour que vos serveurs de fichiers puissent utiliser le connecteur RMS.
 
-2. Sur les serveurs de fichiers qui sont configurés pour l'infrastructure de classification des fichiers et appelés à communiquer avec le connecteur RMS, effectuez l'une des opérations suivantes :
+2. Sur les serveurs de fichiers qui sont configurés pour l'infrastructure de classification des fichiers et appelés à communiquer avec le connecteur RMS, effectuez l'une des opérations suivantes :
 
     -   Exécutez l'outil de configuration de serveur pour le connecteur Microsoft RMS. Pour plus d’informations, consultez [Comment utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) dans cet article.
 

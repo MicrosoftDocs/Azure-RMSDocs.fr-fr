@@ -12,11 +12,11 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 297608ce7fd64170e9aaa31ab39f0b0e151d7538
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256836"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60184261"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -50,7 +50,7 @@ Procédez comme suit sur tous les clusters AD RMS, pour tous les domaines de pub
 
     - Spécifiez et confirmez un mot de passe fort. N’oubliez pas ce mot de passe, car vous en aurez besoin ultérieurement pour importer les données de configuration dans Azure Information Protection.
 
-    - N'activez pas la case à cocher pour enregistrer le fichier de domaine approuvé dans RMS version 1.0.
+    - N'activez pas la case à cocher pour enregistrer le fichier de domaine approuvé dans RMS version 1.0.
 
 Après avoir exporté tous les domaines de publication approuvés, vous pouvez commencer la procédure d’importation de ces données dans Azure Information Protection.
 
@@ -157,7 +157,7 @@ Pour plus d’informations sur cette configuration, consultez [Comment configure
 #### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Exemple de script Windows PowerShell permettant d’identifier les modèles AD RMS qui incluent le groupe ANYONE
 Cette section contient l’exemple de script qui vous permet d’identifier n’importe quel modèle AD RMS pour lequel le groupe ANYONE a été défini, comme décrit dans la section précédente.
 
-**Exclusion de responsabilité :** Cet exemple de script n'est pas pris en charge dans le cadre de tout programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
+**Exclusion de responsabilité :** Cet exemple de script n’est pas pris en charge par aucun programme de support standard de Microsoft ou d’un service. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
 
 ```
 import-module adrmsadmin 

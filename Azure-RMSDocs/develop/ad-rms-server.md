@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 6843d2298adcc6edee6cf0ddf35a8d8b32101083
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333127"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179710"
 ---
 # <a name="server"></a>Serveur
 
@@ -43,7 +43,7 @@ Parmi les nombreux services web installés, ceux-ci sont importants pour le dév
 |Localisateur de service | Fournit l’URL des services de certification, de gestion des licences et de publication des comptes à Active Directory pour qu’ils puissent être détectés par les clients RMS. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
 
 ## <a name="related-topics"></a>Rubriques connexes ##
-* [Vue d'ensemble](ad-rms-overview.md)
+* [Vue d’ensemble](ad-rms-overview.md)
 * [Microsoft Internet Information Services](https://www.iis.net/overview)
 * [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md)
 * [Microsoft Windows Rights Management Services avec Service Pack 2](https://www.microsoft.com/download/details.aspx?id=4909)

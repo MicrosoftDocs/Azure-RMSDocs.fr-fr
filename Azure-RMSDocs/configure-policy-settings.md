@@ -4,21 +4,23 @@ description: Configurez les paramètres dans la stratégie Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: c0a3acebb9f95d0044e1ad4b5cbea637e7742201
-ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
-ms.translationtype: HT
+ms.openlocfilehash: 0c77eb5df06ca3a7ba78b4671cc9e52cdb89a34d
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59364536"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180103"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Guide pratique pour configurer les paramètres de stratégie pour Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 En plus du titre de la barre et de l’info-bulle Information Protection, il existe certains paramètres dans la stratégie Azure Information Protection que vous pouvez configurer indépendamment des étiquettes :
 
@@ -64,8 +66,7 @@ Pour configurer ces paramètres :
         
         Pour prendre le classement des sous-étiquettes en compte lorsque vous utilisez ce paramètre de stratégie, vous devez [configurer un paramètre client avancé](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments).
         
-        Quand la pièce jointe avec l’étiquette de classification la plus élevée est configurée pour la protection avec le paramètre en préversion des autorisations définies par l’utilisateur : - Pour la version en disponibilité générale du client : L’e-mail est étiqueté avec la même classification, mais la protection n’est pas appliquée.
-            - Pour la préversion du client : Quand les autorisations définies par l’utilisateur de l’étiquette incluent Outlook (Ne pas transférer), cette étiquette est appliquée et la protection Ne pas transférer est appliquée à l’e-mail. Quand les autorisations définies par l’utilisateur de l’étiquette sont seulement pour Word, Excel, PowerPoint et l’Explorateur de fichiers, cette étiquette n’est pas appliquée à l’e-mail, tout comme la protection.
+        Quand la pièce jointe avec l’étiquette de classification la plus élevée est configurée pour la protection avec le paramètre de version préliminaire d’autorisations définies par l’utilisateur : - lorsque les autorisations définies par l’utilisateur de l’étiquette incluent Outlook (ne pas transférer), cette étiquette est appliquée et ne pas transférer protection est appliquée à l’adresse e-mail. Quand les autorisations définies par l’utilisateur de l’étiquette sont seulement pour Word, Excel, PowerPoint et l’Explorateur de fichiers, cette étiquette n’est pas appliquée à l’e-mail, tout comme la protection.
     
    - **Afficher la barre Information Protection dans les applications Office** : Lorsque ce paramètre est désactivé, les utilisateurs ne peuvent pas sélectionner d’étiquettes depuis une barre dans Word, Excel, PowerPoint et Outlook. En revanche, les utilisateurs peuvent sélectionner des étiquettes au moyen du bouton **Protéger** dans le ruban. Lorsque ce paramètre est activé, les utilisateurs peuvent sélectionner des étiquettes par le biais de la barre et du bouton.
         

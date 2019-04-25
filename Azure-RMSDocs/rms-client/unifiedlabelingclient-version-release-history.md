@@ -1,44 +1,53 @@
 ---
-title: Client d’étiquetage unifié Azure Information Protection - Informations sur les versions
+title: Azure Information Protection unifiée l’étiquetage client - Version historique des versions et politique de support
 description: Consultez les informations de version pour le client d’étiquetage unifié Azure Information Protection pour Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 7eb7ffd98651ed35be7ecd8043e49c1d15a65e8e
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
-ms.translationtype: HT
+ms.openlocfilehash: 1262a2f1a70002686aed0bad47354cdc5ac23bac
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809707"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180883"
 ---
-# <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Client d’étiquetage unifié Azure Information Protection : Informations sur la version
+# <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unifiée l’étiquetage client - Version historique des versions et politique de support
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Instructions pour : [Azure Information Protection unifiée étiquetage client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+
+Vous pouvez télécharger le client étiquetage unifié d’Azure Information Protection à partir de la [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+### <a name="servicing-information-and-timelines"></a>Informations de maintenance et chronologies
+
+Chaque version de disponibilité générale (GA) du client Azure Information Protection unifiée étiquetage est prise en charge jusqu'à six mois après la publication de la version GA suivante. La documentation n’inclut pas d’informations sur les versions non pris en charge du client. Les correctifs et les nouvelles fonctionnalités sont toujours appliqués à la dernière version GA, pas aux anciennes versions GA.
+
+Les préversions ne doivent pas être déployées pour des utilisateurs finaux sur les réseaux de production. Utilisez plutôt la dernière préversion pour tester les nouvelles fonctionnalités ou les correctifs à paraître dans la prochaine version GA. Les préversions qui ne sont pas actuelles ne sont pas prises en charge.
 
 > [!NOTE]
-> Ce client est en préversion et susceptible d’être modifié. Il utilise le magasin d’étiquetage unifié et télécharge une stratégie comportant des étiquettes à partir des centres d’administration suivants : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 et le Centre de conformité Microsoft 365. [Plus d’informations](/Office365/SecurityCompliance/sensitivity-labels)
-
-Vous pouvez télécharger la dernière préversion du client d’étiquetage unifié Azure Information Protection depuis le [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=57440).
+> Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
 ### <a name="release-information"></a>Informations de version
 
-Utilisez les informations suivantes pour voir les éléments pris en charge pour la dernière préversion du client d’étiquetage unifié Azure Information Protection.
+Utilisez les informations suivantes pour voir ce qui est pris en charge pour la version disponibilité générale du client Azure Information Protection unifiée étiquetage.
 
 Ce client installe un module complémentaire Office pour les ordinateurs Windows, une extension pour l’Explorateur de fichiers et un module PowerShell. Ce client a les mêmes [prérequis](../requirements.md) que le client Azure Information Protection qui télécharge une stratégie à partir d’Azure.
 
-Pour comparer les fonctionnalités avec le client Azure Information Protection, voir [Comparaison des fonctionnalités des clients](use-client.md#feature-comparisons-for-the-clients).
+Pour comparer les fonctionnalités avec le client Azure Information Protection, voir [Comparaison des fonctionnalités des clients](use-client.md#compare-the-clients).
 
-## <a name="current-preview-version"></a>Préversion actuelle
+## <a name="version-20778"></a>Version 2.0.778
 
-**Date de publication** : 25/02/2019
+**Date de publication** : 04/16/2019
 
-Cette préversion du client d’étiquetage unifié Azure Information Protection pour Windows prend en charge les fonctionnalités suivantes : 
+Cette première version de disponibilité générale du client étiquetage unifiée Azure Information Protection pour Windows prend en charge les fonctionnalités suivantes : 
 
 - Mise à niveau à partir du client Azure Information Protection.
 
@@ -54,7 +63,7 @@ Cette préversion du client d’étiquetage unifié Azure Information Protection
     - [Lire les informations d’étiquette appliquées à un document](/powershell/module/azureinformationprotection/get-aipfilestatus)
     - [S’authentifier pour prendre en charge les sessions PowerShell sans assistance](/powershell/module/azureinformationprotection/set-aipauthentication)
 
-- Prise en charge de la création centralisée de rapports à l’aide de [l’analytique Azure Information Protection](../reports-aip.md).
+- L’audit des données et point de terminaison discovery prennent en charge pour les rapports centrale à l’aide de [analytique d’Azure Information Protection](../reports-aip.md).
 
 - Paramètres d’étiquette et de stratégie suivants :
     - Marquage visuel (en-têtes, pieds de page, filigranes)
@@ -70,34 +79,14 @@ Cette préversion du client d’étiquetage unifié Azure Information Protection
 
 - Boîte de dialogue Aide et commentaires, qui inclut des paramètres de réinitialisation et des journaux d’exportation.
 
-### <a name="features-that-do-not-work-in-this-preview-version-or-are-not-available"></a>Fonctionnalités qui ne fonctionnent pas dans cette préversion ou qui ne sont pas disponibles
 
-Inclut :
+## <a name="next-steps"></a>Étapes suivantes
 
-- Le scanneur permettant de détecter, étiqueter et protéger les fichiers dans les magasins de données locaux n’est pas disponible.
+Pour plus d’informations, consultez les [tableaux de comparaison](use-client.md#compare-the-clients).
 
-- Les étiquettes migrées à partir du portail Azure et configurées pour la protection HYOK s’affichent dans le client lorsqu’elles sont publiées, mais n’appliquent pas la protection.
+Pour plus d’informations sur l’installation et à l’aide de ce client : 
 
-- L’ensemble complet des cmdlets du module AzureInformationProtection n’est pas disponible, notamment les cmdlets qui se connectent directement à un service de protection. Exemple : Unprotect-RMSFile pour ôter la protection des fichiers en bloc.
+- Pour les utilisateurs : [Télécharger et installer le client](install-unifiedlabelingclient-app.md)
 
-Pour plus d’informations, consultez les [tableaux de comparaison](use-client.md#feature-comparisons-for-the-clients).
+- Pour les administrateurs : [Azure Information Protection unifiée étiquetage guide de l’administrateur client](clientv2-admin-guide.md)
 
-## <a name="instructions"></a>Instructions
-
-1. Installez le client à l'aide des instructions suivantes : [Guide de l’utilisateur : Télécharger et installer le client Azure Information Protection (préversion)](install-unifiedlabelingclient-app.md) 
-
-2. Utilisez le client comme vous le feriez pour le client Azure Information Protection, avec les exceptions suivantes pour les applications Office :
-    - Le bouton du ruban Office est nommé **Critère de diffusion** et non **Protéger**.
-    - Par défaut, les administrateurs ne peuvent pas afficher la barre Information Protection, contrairement aux utilisateurs qui peuvent l’afficher en sélectionnant **Afficher la barre** à partir du bouton **Critère de diffusion**. 
-    - Les autorisations personnalisées ne sont pas disponibles.
-    - L’action Suivre et révoquer n’est pas disponible.
-    
-    Pour les instructions destinées à l’utilisateur :
-    
-    - [Classifier un fichier ou un e-mail](client-classify.md) 
-    
-    - [Classifier et protéger un fichier ou un e-mail](client-classify-protect.md)
-
-3. Partagez votre expérience : 
-    
-    - Pour fournir des commentaires ou poser des questions sur ce client en préversion, utilisez le [site Yammer pour Azure Information Protection](https://www.yammer.com/AskIPTeam).

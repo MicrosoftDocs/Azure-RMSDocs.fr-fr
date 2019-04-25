@@ -1,21 +1,20 @@
 ---
-title: Client Azure Information Protection
+title: Le client pour Azure Information Protection - AIP
 description: Microsoft Azure Information Protection fournit une solution client-serveur qui permet de protéger les données d’une organisation. Le client (le client Azure Information Protection ou le client Rights Management) est intégré aux applications que vous exécutez sur des ordinateurs et appareils mobiles.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/05/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: 0762edb3e7960c5700ac8a28d7ae1b62455efbe0
-ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
-ms.translationtype: HT
+ms.openlocfilehash: ed762332e023843326fc4ec4d89e8fc44ede39be
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59364604"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180814"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -23,31 +22,45 @@ ms.locfileid: "59364604"
 
 Azure Information Protection fournit une solution client-serveur qui permet de protéger les documents et e-mails d’une organisation :
 
-- Le client peut être le client Azure Information Protection ou le client Rights Management, et s’intègre aux applications que vous exécutez sur des ordinateurs et appareils mobiles. 
+- Le client peut être le client Azure Information Protection, le client d’étiquetage unifié Azure Information Protection ou le client Rights Management. Retenue de ces clients vous utilisez, il s’intègre aux applications que vous exécutez sur des ordinateurs et appareils mobiles. 
 
 - Le service réside dans le cloud (Azure Information Protection, qui utilise le service Azure Rights Management pour la protection des données) ou localement (Active Directory Rights Management Services, plus couramment appelés services AD RMS). 
 
-Le client Azure Information Protection prend en charge la classification et la protection avec étiquetage, en plus de la protection sans étiquetage. Ce client s’intègre aux applications Office et doit être installé séparément.
+Le client Azure Information Protection et le client d’étiquetage unifié Azure Information Protection prend en charge la classification et la protection avec l’étiquetage. Le client Azure Information Protection prend également en charge la protection sans l’étiquetage. Les deux clients s’intègrent avec les applications Office et doivent être installés séparément.
 
-Le client Rights Management (RMS) est installé automatiquement avec certaines applications, telles que les applications Office, le client Azure Information Protection, et les applications d’éditeurs de logiciels compatibles avec RMS. Toutefois, il peut également être [installé de manière autonome](https://www.microsoft.com/en-us/download/details.aspx?id=38396) pour prendre en charge la [synchronisation des fichiers à partir des bibliothèques protégées par IRM et de OneDrive Entreprise](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668), et pour les développeurs souhaitant intégrer la protection de gestion des droits aux applications métier.
+Le client Rights Management (RMS) est automatiquement installé avec certaines applications, telles que les applications Office, le client Azure Information Protection et Azure Information Protection unifiée étiquetage client et les applications compatibles RMS à partir de éditeurs de logiciels. Toutefois, il peut également être [installé de manière autonome](https://www.microsoft.com/en-us/download/details.aspx?id=38396) pour prendre en charge la [synchronisation des fichiers à partir des bibliothèques protégées par IRM et de OneDrive Entreprise](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668), et pour les développeurs souhaitant intégrer la protection de gestion des droits aux applications métier.
 
 ## <a name="choose-which-azure-information-protection-client-to-use"></a>Choisir le client Azure Information Protection à utiliser
 
-Le **client Azure Information Protection** qui télécharge les étiquettes et les paramètres de stratégie à partir du portail Azure est en disponibilité générale et dispose d’une préversion pour tester les nouvelles fonctionnalités et les nouveaux correctifs. Pour plus d’informations sur ces versions du client, voir [Client Azure Information Protection : Historique de publication et politique de support des versions](client-version-release-history.md). 
+Le **client Azure Information Protection** télécharge les étiquettes et les paramètres de stratégie à partir du portail Azure. Pour plus d’informations sur ce client, consultez le [client Azure Information Protection : Historique de publication et politique de support des versions](client-version-release-history.md).
 
-Le **client d’étiquetage unifié Azure Information Protection** télécharge les étiquettes et les paramètres de stratégie à partir des centres d’administration : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 et le Centre de conformité Microsoft 365. Ce client est actuellement en préversion à des fins de test. Pour en savoir plus sur cette version du client, voir [Client d’étiquetage unifié Azure Information Protection : Informations sur la version](unifiedlabelingclient-version-release-history.md).
+Le **client d’étiquetage unifié Azure Information Protection** télécharge les étiquettes et les paramètres de stratégie à partir des centres d’administration : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 et le Centre de conformité Microsoft 365. Pour plus d’informations sur ce client, consultez le [étiquetage client unifié, Azure Information Protection : Informations sur la version](unifiedlabelingclient-version-release-history.md).
 
 Quel client convient-il d’installer ?
 
-- Si vous procédez au déploiement en production, utilisez le client Azure Information Protection qui est en disponibilité générale.
+- Installation Azure Information Protection unifiée étiquetage client pour les étiquettes qui peut également être utilisé par Mac OS, iOS et Android, et si vous n’avez pas besoin des fonctionnalités avancées, telles que les paramètres du client avancé, les autorisations définies par l’utilisateur, un local clé (HYOK), ou scanneur pour les magasins de données sur site
 
-- Si vous êtes en phase de test et d’évaluation, utilisez l’un des clients en préversion.
+- Installer le client Azure Information Protection si vous avez besoin des fonctionnalités avancées qui ne sont pas encore disponibles dans le client d’étiquetage unifié, mais les étiquettes ne peut pas être utilisés sur d’autres plateformes client.
+
+Actuellement, le client Azure Information Protection et le client d’étiquetage unifié Azure Information Protection ne pas de parité de leurs fonctionnalités. Nous prévoyons toutefois de supprimer cette différence, puis d’ajouter des fonctionnalités au seul client d’étiquetage unifié Azure Information Protection. Pour cette raison, nous vous recommandons de que déployer le client d’étiquetage unifié Azure Information Protection si sa fonctionnalité et un ensemble de fonctionnalités actuel répond aux besoins de votre entreprise. Dans le cas contraire ou si vous avez configuré des étiquettes dans le portail Azure que vous n’avez pas encore [migrées vers le magasin d’étiquetage unifié](../configure-policy-migrate-labels.md), utilisez le client Azure Information Protection.
+
+Vous pouvez également installer les deux clients dans le même environnement pour prendre en charge des besoins métier différents, comme illustré dans l’exemple suivant. Pour ce scénario, nous vous recommandons de que migrer les étiquettes dans le portail Azure afin que les deux ensembles de clients partagent le même jeu d’étiquettes pour faciliter l’administration.
+
+##### <a name="example-deployment-strategy"></a>Stratégie de déploiement d’exemple :
+
+- Pour la majorité des utilisateurs, vous déployez le client d’étiquetage unifié Azure Information Protection, car la plupart des utilisateurs n’avez pas besoin fonctions ou fonctionnalités qui sont disponibles uniquement avec le client d’étiquetage unifié Azure Information Protection. 
     
-    Pour le moment, les préversions du client Azure Information Protection et du client d’étiquetage unifié Azure Information Protection ne présentent pas les mêmes fonctionnalités. Nous prévoyons toutefois de supprimer cette différence, puis d’ajouter des fonctionnalités au seul client d’étiquetage unifié Azure Information Protection. C’est pourquoi, nous vous recommandons de procéder au test avec le client d’étiquetage unifié Azure Information Protection si ses fonctionnalités actuelles répondent à vos besoins métier. Dans le cas contraire ou si vous avez configuré des étiquettes dans le portail Azure que vous n’avez pas encore [migrées vers le magasin d’étiquetage unifié](../configure-policy-migrate-labels.md), utilisez le client Azure Information Protection.
+    Pour ces utilisateurs, leur expérience étiquetage est très similaire s’ils ont également des appareils qui exécutent Mac OS, iOS et Android, et ces appareils ont une version d’Office qui prend en charge des étiquettes de sensibilité.
 
-### <a name="feature-comparisons-for-the-clients"></a>Comparaison des fonctionnalités des clients
+- Pour un sous-ensemble d’utilisateurs, vous déployez le client Azure Information Protection, car ces utilisateurs ont besoin d’étiquettes qui appliquent la maintenez votre propre protection de clés (HYOK) ou d’une invite autorisations définies par l’utilisateur.
+    
+    Pour ces utilisateurs, ils ont des fonctionnalités complémentaires, mais une expérience légèrement différente si elles ont également les appareils qui exécutent Mac OS, iOS et Android et que ces appareils ont une version d’Office qui prend en charge des étiquettes de sensibilité. Par exemple, ils voient un **protéger** bouton au lieu d’un **sensibilité** bouton sur le ruban d’Office et la barre Information Protection peut être affiché par défaut.
 
-Utilisez le tableau suivant pour vous aider à comparer les fonctionnalités qui sont prises en charge par les deux préversions actuelles.
+- Vous avez des banques de données sur site avec des documents qui doivent être analysés pour des informations sensibles ou classifiés et protégés. Vous déployez le client Azure Information Protection sur les serveurs pour exécuter le scanneur Azure Information Protection.
+
+### <a name="compare-the-clients"></a>Comparer les clients
+
+Utilisez le tableau suivant pour aider à comparer les fonctionnalités qui sont prises en charge par les deux clients Azure Information Protection.
 
 |Composant|Client Azure Information Protection|Azure Information Protection<br /> Client d’étiquetage unifié Azure Information Protection|
 |-------|-----------------------------------|----------------------------------------------------|
@@ -71,13 +84,12 @@ Utilisez le tableau suivant pour vous aider à comparer les fonctionnalités qui
 |Scanneur pour magasins de données locaux :| Oui | Non |
 |Suivre et révoquer :| Oui | Non |
 |Mode Protection uniquement (pas d’étiquettes) :| Oui | Non |
-|Bouton Ne pas transférer dans Outlook :| Oui | Non |
 |Prise en charge multilingue :| Oui | Non |
 |Prise en charge des services AD RMS :| Oui | Seule l’action suivante est prise en charge :<br /><br /> - La visionneuse peut ouvrir des documents protégés quand vous déployez l’[extension Appareils mobiles AD RMS (Active Directory Rights Management Services)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))|
 
-#### <a name="functional-comparison-for-the-clients"></a>Comparaison fonctionnelle des clients
+#### <a name="detailed-comparisons-for-the-clients"></a>Comparaisons détaillées pour les clients
 
-Lorsque les deux clients prennent en charge la même fonctionnalité, utilisez le tableau suivant pour identifier des différences fonctionnelles entre les deux préversions actuelles.
+Lorsque les deux clients prennent en charge la même fonctionnalité, utilisez le tableau suivant pour faciliter l’identification des différences fonctionnelles entre les deux clients.
 
 |Fonctionnalité |Client Azure Information Protection|Azure Information Protection<br /> Client d’étiquetage unifié Azure Information Protection|
 |--------------|-----------------------------------|-----------------------------------------------------------|
@@ -87,16 +99,16 @@ Lorsque les deux clients prennent en charge la même fonctionnalité, utilisez l
 |Couleur d’étiquette : | À configurer dans le portail Azure | Conservée après la migration d’étiquette vers Office 365 <br /><br /> Les nouvelles étiquettes créées dans les centres d’administration n’ont pas de couleur|
 |Mise à jour de la stratégie : | Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 24 heures | Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 4 heures|
 |Formats pris en charge pour PDF :| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF (par défaut) <br /><br /> - .ppdf <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br /> <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint|
-|Cmdlets prises en charge :| Ensemble des cmdlets documentées pour [AzureInformationProtection](/powershell/module/azureinformationprotection) | Les cmdlets Set-AIPFileClassification et Set-AIPFileLabel ne prennent pas en charge le paramètre *Propriétaire* ni les bibliothèques SharePoint Server. <br /><br /> En outre, le commentaire unique « Aucune étiquette à appliquer » existe pour tous les scénarios dans lesquels aucune étiquette n’est appliquée. <br /><br /> La cmdlet Set-AIPFileLabel ne prend pas en charge le paramètre *EnableTracking*. <br /><br /> La cmdlet Get-AIPFileStatus ne retourne aucune information d’étiquette à partir d’autres abonnés et n’affiche pas le paramètre *RMSIssuedTime*.<br /><br />En outre, le paramètre *LabelingMethod* de la cmdlet Get-AIPFileStatus affiche les valeurs **Privilégié**, **Standard** or **Automatique** et non **Manuel** ou **Automatique**. Pour plus d’informations, consultez la [documentation en ligne](/powershell/module/azureinformationprotection/get-aipfilestatus).|
+|Cmdlets prises en charge :| Ensemble des cmdlets documentées pour [AzureInformationProtection](/powershell/module/azureinformationprotection) | Set-AIPAuthentication ne prend pas en charge les sessions non interactives <br /><br /> Les cmdlets Set-AIPFileClassification et Set-AIPFileLabel ne prennent pas en charge le paramètre *Propriétaire* ni les bibliothèques SharePoint Server. <br /><br /> En outre, le commentaire unique « Aucune étiquette à appliquer » existe pour tous les scénarios dans lesquels aucune étiquette n’est appliquée. <br /><br /> La cmdlet Set-AIPFileLabel ne prend pas en charge le paramètre *EnableTracking*. <br /><br /> La cmdlet Get-AIPFileStatus ne retourne aucune information d’étiquette à partir d’autres abonnés et n’affiche pas le paramètre *RMSIssuedTime*.<br /><br />En outre, le paramètre *LabelingMethod* de la cmdlet Get-AIPFileStatus affiche les valeurs **Privilégié**, **Standard** or **Automatique** et non **Manuel** ou **Automatique**. Pour plus d’informations, consultez la [documentation en ligne](/powershell/module/azureinformationprotection/get-aipfilestatus).|
 |Invites de justification (si configurées) par action dans Office : | Fréquence : par fichier <br /><br /> Diminution du niveau de confidentialité <br /><br /> Suppression d’une étiquette<br /><br /> Suppression de la protection | Fréquence : par session <br /><br /> Diminution du niveau de confidentialité<br /><br /> Suppression d’une étiquette|
 |Supprimer les actions de l’étiquette appliquée : | L’utilisateur doit confirmer la suppression. <br /><br />L’étiquette par défaut ou l’étiquette automatique (si configurée) n’est pas appliquée automatiquement la prochaine fois que l’application Office ouvre le fichier.  <br /><br />| L’utilisateur n’a pas à confirmer la suppression.<br /><br /> L’étiquette par défaut ou l’étiquette automatique (si configurée) est appliquée automatiquement la prochaine fois que l’application Office ouvre le fichier.|
 |Classification automatique et recommandée : | Configurée en tant que [conditions d’étiquette](../configure-policy-classification.md) dans le portail Azure avec des types d’informations intégrées et des conditions personnalisées utilisant des expressions régulières ou non <br /><br />Les options de configuration comprennent ce qui suit : <br /><br />- Nombre de valeurs uniques/non uniques <br /><br /> - Nombre minimal| Configurée dans les centres d’administration avec les types d’informations sensibles intégrés et des [types d’informations personnalisés](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Les options de configuration comprennent ce qui suit :  <br /><br />- Nombre de valeurs uniques seulement <br /><br />- Nombre de valeurs minimales et maximales <br /><br />- Prise en charge des clauses AND et OR avec les types d’informations <br /><br />- Dictionnaire de mots clés<br /><br />- Niveau de confiance et proximité des caractères personnalisables|
 
-Pour une comparaison plus détaillée des différences de comportement pour des paramètres de protection spécifiques, consultez [Comparaison du comportement des paramètres de protection pour une étiquette](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
+Pour une comparaison détaillée des différences de comportement pour les paramètres de protection spécifique, consultez [comparant le comportement des paramètres de protection pour une étiquette](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
-#### <a name="features-that-will-not-be-in-the-azure-information-protection-unified-labeling-client"></a>Fonctionnalités qui ne se trouveront pas dans le client d’étiquetage unifié Azure Information Protection
+#### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Fonctionnalité n’est ne pas planifiée pour être dans le client d’étiquetage unifié Azure Information Protection
 
-Bien que le client d’étiquetage unifié d’Azure Information Protection soit toujours en cours de développement, les fonctionnalités et les différences de comportement suivantes par rapport au client Azure Information Protection ne seront pas disponibles dans ses versions futures : 
+Bien que le client d’étiquetage unifié Azure Information Protection est en cours de développement, les fonctionnalités suivantes et les différences de comportement à partir du client Azure Information Protection ne sont pas actuellement planifiées pour être disponible dans les versions futures pour Azure Client Information Protection unifiée étiquetage : 
 
 - Autorisations personnalisées dans les applications Office : Word, Excel et PowerPoint
 

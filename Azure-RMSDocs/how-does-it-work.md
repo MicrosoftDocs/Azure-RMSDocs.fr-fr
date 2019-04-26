@@ -12,17 +12,17 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: a60fbf43056673674f07f7dd8517213072f78aec
-ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57734139"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183075"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-En ce qui concerne le fonctionnement d’Azure RMS, il est important de comprendre que ce service de protection des données fourni par Azure Information Protection n’affiche pas et ne stocke pas vos données dans le cadre du processus de protection. Les informations que vous protégez ne sont jamais stockées dans Azure, sauf si vous indiquez expressément votre volonté de les y stocker, ou si vous utilisez un autre service cloud qui les stocke dans Azure. Azure RMS rend simplement les données d'un document illisibles pour toute personne autre que des utilisateurs et services autorisés :
+En ce qui concerne le fonctionnement d’Azure RMS, il est important de comprendre que ce service de protection des données fourni par Azure Information Protection n’affiche pas et ne stocke pas vos données dans le cadre du processus de protection. Les informations que vous protégez ne sont jamais stockées dans Azure, sauf si vous indiquez expressément votre volonté de les y stocker, ou si vous utilisez un autre service cloud qui les stocke dans Azure. Azure RMS rend simplement les données d'un document illisibles pour toute personne autre que des utilisateurs et services autorisés :
 
 - Les données sont chiffrées au niveau de l'application, et incluent une stratégie qui définit l'utilisation autorisée du document.
 
@@ -81,7 +81,7 @@ Cette clé de locataire est protégée dans les services en ligne de Microsoft, 
 Les licences et certificats envoyés à un appareil Windows sont protégés par la clé privée d’appareil du client, créée quand un utilisateur utilise Azure RMS sur l’appareil pour la première fois. Cette clé privée est à son tour protégée par DPAPI sur le client, ce qui a pour effet de protéger ces secrets à l’aide d’une clé dérivée du mot de passe de l’utilisateur. Sur les appareils mobiles, les clés ne sont utilisées qu’une seule fois. Ainsi, n’étant pas stockées sur les clients, elles ne nécessitent pas de protection sur l’appareil. 
 
 
-## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procédure pas à pas décrivant le fonctionnement d'Azure RMS : première utilisation, protection du contenu, consommation du contenu
+## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procédure pas à pas du fonctionnement d’Azure RMS : La première utilisation, protection du contenu, consommation du contenu
 Pour comprendre plus en détails le fonctionnement d’Azure RMS, examinons un flux classique tel qu’il se produit après l’[activation du service Azure Rights Management](activate-service.md), quand un utilisateur utilise le service Rights Management pour la première fois sur son ordinateur Windows (un processus parfois nommé **initialisation de l’environnement utilisateur** ou amorçage), **protège du contenu** (un document ou un e-mail), puis **consomme** (ouvre et utilise) du contenu protégé par quelqu’un d’autre.
 
 Après l'initialisation de l'environnement utilisateur, l'utilisateur peut protéger des documents ou consommer des documents protégés sur cet ordinateur.
@@ -107,7 +107,7 @@ Le certificat de compte de droits, ou certificat RAC, est l’un de ces certific
 Une copie de ce certificat est stockée dans Azure pour permettre la création d’autres certificats avec les mêmes clés si l’utilisateur change d’appareil.
 
 ### <a name="content-protection"></a>Protection du contenu
-Quand un utilisateur protège un document, le client RMS effectue les actions suivantes sur un document non protégé :
+Quand un utilisateur protège un document, le client RMS effectue les actions suivantes sur un document non protégé :
 
 ![Protection de document RMS : étape 1, le document est chiffré](./media/AzRMS_documentprotection1.png)
 
@@ -151,7 +151,7 @@ Le client déchiffre également la liste des droits, et transmet ceux-ci à l'ap
 
 
 ### <a name="variations"></a>Variantes
-Les procédures pas à pas précédentes couvrent les scénarios standard, mais il existe des variantes :
+Les procédures pas à pas précédentes couvrent les scénarios standard, mais il existe des variantes :
 
 - **Protection de la messagerie** : quand le chiffrement des messages Exchange Online et Office 365 avec de nouvelles fonctionnalités est utilisé pour protéger des messages e-mail, l’authentification demandée pour leur consommation peut également utiliser la fédération avec un fournisseur d’identité sociale ou un code secret à usage unique. Ensuite, les flux de traitement sont très similaires, excepté que la consommation du contenu se fait du côté service dans une session de navigateur web, sur une copie temporairement mise en cache des e-mails sortants.
 

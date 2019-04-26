@@ -4,20 +4,22 @@ description: Comprendre le processus de configuration de la stratégie par défa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 18654d3867fd456b8b4ed6eb0ebd01d9c86ff13a
-ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
-ms.translationtype: HT
+ms.openlocfilehash: 9b3130b9eb2c6f75d06b0d419a4d74d3399562a4
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59364587"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179819"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Utilisez les informations suivantes pour comprendre la configuration de la stratégie par défaut pour Azure Information Protection.
 
@@ -103,7 +105,7 @@ Les autorisations de protection sont celles définies dans le [modèle par défa
 
 Certains paramètres ont été ajoutés après le 31 juillet 2017.
 
-|Paramètre|Valeur|
+|Paramètre|Value|
 |-------------------------------|---------------------------|
 |Sélectionner l’étiquette par défaut|Aucune|
 |Envoyer des données d’audit à l’analytique Azure Information Protection|Désactivé|

@@ -4,19 +4,19 @@ description: Identifiez les critères de déploiement d’Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/07/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5bf20171ec434d0fde5953f23c11d555f7d80139
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: b1370046de0b2b455128af44078476e0b15f9995
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252407"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183899"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -63,7 +63,7 @@ Pour plus d’informations sur la configuration requise pour les comptes d’uti
 
 Les utilisateurs doivent avoir des appareils clients (ordinateurs ou appareils mobiles) exécutant un système d’exploitation qui prend en charge Azure Information Protection.
 
-Les appareils suivants prennent en charge le client Azure Information Protection, qui permet aux utilisateurs de classer et d’étiqueter leurs e-mails et leurs documents :
+Les appareils suivants prennent en charge le client d’étiquetage unifié Azure Information Protection et le client Azure Information Protection. [Les deux clients](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) permettre aux utilisateurs de classer et d’étiqueter leurs documents et e-mails :
 
 - Windows 10 (x86, x64)
     
@@ -81,17 +81,22 @@ Les appareils suivants prennent en charge le client Azure Information Protection
 
 - Windows Server 2008 R2 
 
-En plus de l’installation du client Azure Information Protection sur des ordinateurs physiques, vous pouvez également l’installer sur des machines virtuelles. Vérifiez si l’éditeur de logiciels pour la solution de bureau virtuel a une configuration supplémentaire qui peut être nécessaire pour exécuter le client Azure Information Protection. Par exemple, pour les solutions Citrix, vous devrez peut-être [désactiver les hooks d’API (Application Programming Interface) Citrix](https://support.citrix.com/article/CTX107825) pour Office (winword.exe, excel.exe, outlook.exe, powerpoint.exe) et le client Azure Information Protection (msip.app.exe, msip.viewer.exe).
+Outre l’installation du client sur des ordinateurs physiques, vous pouvez également l’installer sur des machines virtuelles. Vérifier si le fournisseur du logiciel pour la solution de bureau virtuel possède une configuration supplémentaire qui peut-être être nécessaires pour exécuter le client Azure Information Protection unifié étiquetage ou le client Azure Information Protection. Par exemple, pour les solutions de Citrix, vous devrez peut-être [désactiver les raccordements de Citrix Interface API (Application Programming)](https://support.citrix.com/article/CTX107825) pour Office (winword.exe, excel.exe, outlook.exe, powerpoint.exe) et le fichier exécutable de l’Azure Client unifiée étiquetage Information Protection ou le client Azure Information Protection (msip.app.exe, msip.viewer.exe).
 
-Pour les versions de serveur répertoriées, le client Azure Information Protection est pris en charge pour les Services Bureau à distance. Si vous supprimez des profils utilisateur quand vous utilisez le client Azure Information Protection avec les Services Bureau à distance, ne supprimez pas le dossier **%Appdata%\Microsoft\Protect**.
+Pour les versions de serveur répertoriée, les clients Azure Information Protection sont prises en charge pour les Services Bureau à distance. Si vous supprimez des profils utilisateur lorsque vous utilisez les clients Azure Information Protection avec les Services Bureau à distance, ne supprimez pas le **%Appdata%\Microsoft\Protect** dossier.
 
-Quand le client Azure Information Protection protège les données à l’aide du service Azure Rights Management, ces données peuvent être utilisées par les [mêmes appareils](requirements-client-devices.md) que ceux qui prennent en charge le service Azure Rights Management.
+Lorsque les clients Azure Information Protection protège les données en utilisant le service Azure Rights Management, les données peuvent être utilisées par le [mêmes appareils](requirements-client-devices.md) qui prennent en charge le service Azure Rights Management.
 
-Le client Azure Information Protection a des [prérequis supplémentaires](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client) répertoriés dans le guide de l’administrateur.
+Les clients Azure Information Protection disposent des éléments supplémentaires répertoriés dans leurs guides d’administration respectifs :
+
+- Client d’étiquetage unifié Azure Information Protection : [Prérequis](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+
+- Client Azure Information Protection : [Prérequis](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+
 
 ## <a name="applications"></a>Applications
 
-Le client Azure Information Protection peut étiqueter et protéger les documents et les e-mails à l’aide des applications Office **Word**, **Excel**, **PowerPoint** et **Outlook** des éditions Office suivantes :
+Les clients Azure Information Protection peuvent étiqueter et protéger des documents et e-mails à l’aide des applications Office **Word**, **Excel**, **PowerPoint**et **Outlook** à partir d’une des éditions Office suivantes :
 
 - Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur
 
@@ -107,7 +112,7 @@ Le client Azure Information Protection peut étiqueter et protéger les document
 
 Les autres éditions d’Office ne peuvent pas protéger les documents et messages électroniques à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour la classification uniquement. Par conséquent, les étiquettes qui appliquent la protection ne s’affichent pas aux utilisateurs sur la barre Azure Information Protection ni à partir du bouton **Protéger** du ruban Office. 
 
-Le client Azure Information Protection ne prend pas en charge plusieurs versions d’Office sur le même ordinateur. Ce client ne prend pas non plus en charge le changement de comptes d’utilisateur dans Office.
+Les clients Azure Information Protection ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur. Ces clients également ne pas en charge un changement des comptes d’utilisateur dans Office.
 
 Pour plus d’informations sur les éditions d’Office qui prennent en charge le service de protection, consultez [Applications prenant en charge la protection des données Azure Rights Management](requirements-applications.md).
 
@@ -146,7 +151,3 @@ Le scénario de déploiement suivant n’est pas pris en charge, sauf si vous ut
 - En cas d’exécution d’AD RMS et d’Azure RMS côte à côte dans la même organisation, sauf pendant la migration, comme le décrit la rubrique [Migrer d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 Il existe un chemin de migration pris en charge [d’AD RMS vers Azure Information Protection](https://technet.microsoft.com/library/Dn858447.aspx) et [d’Azure Information Protection vers AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). Si vous déployez Azure Information Protection et que vous décidez ensuite que vous ne voulez plus utiliser ce service cloud, consultez [Désaffectation et désactivation d’Azure Information Protection](decommission-deactivate.md).
-
-
-
-

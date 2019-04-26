@@ -4,23 +4,25 @@ description: Instructions d’utilisation du client Rights Management (RMS) avec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fa836d25fa779d53ada2448a4a9d01144e24e1e6
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 41ced1c43502b1c266ad2423b637266dbb0f1690
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255493"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183382"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Cet article contient des instructions et un script pour utiliser le client Azure Information Protection et PowerShell pour configurer les outils de gestion de ressources pour serveur de fichiers et l’infrastructure de classification des fichiers (ICF).
 
@@ -31,10 +33,10 @@ Cette solution vous permet de protéger automatiquement tous les fichiers figura
 > 
 > Pour prendre en charge plusieurs types de fichiers avec l’infrastructure de classification des fichiers Windows Server, vous devez utiliser le module **AzureInformationProtection** de PowerShell, comme décrit dans cet article. Les applets de commande Azure Information Protection, telles que le client Azure Information Protection, prennent en charge la protection générique ainsi que la protection native, ce qui signifie que les types de fichiers autres que les documents Office peuvent être protégés. Pour plus d’informations, consultez [Types de fichiers pris en charge par le client Azure Information Protection](client-admin-guide-file-types.md) dans le guide de l’administrateur du client Azure Information Protection.
 
-Les instructions qui suivent ont trait à Windows Server 2012 R2 ou à Windows Server 2012. Si vous exécutez d'autres versions prises en charge de Windows, il se peut que vous deviez adapter certaines étapes en fonction de différences existant entre votre version du système d'exploitation et celle évoquée dans cet article.
+Les instructions qui suivent ont trait à Windows Server 2012 R2 ou à Windows Server 2012. Si vous exécutez d'autres versions prises en charge de Windows, il se peut que vous deviez adapter certaines étapes en fonction de différences existant entre votre version du système d'exploitation et celle évoquée dans cet article.
 
 ## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Conditions préalables pour l’utilisation de la protection Azure Rights Management avec l’ICF de Windows Server
-Conditions préalables pour ces instructions :
+Conditions préalables pour ces instructions :
 
 - Sur chaque serveur de fichiers où vous allez exécuter le Gestionnaire de ressources de fichiers avec l'infrastructure de classification des fichiers :
     
@@ -57,7 +59,7 @@ Conditions préalables pour ces instructions :
 - Ce scénario ne prend pas en charge les modèles de service. Vous devez soit utiliser un modèle qui n’est pas configuré pour une étendue, soit utiliser l’applet de commande [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) et le paramètre *EnableInLegacyApps*.
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Instructions de configuration de l’ICF des outils de gestion de ressources pour serveur de fichiers pour la protection Azure Rights Management
-Suivez ces instructions pour protéger automatiquement tous les fichiers figurant dans un dossier, en utilisant un script PowerShell en tant que tâche personnalisée. Exécutez les procédures suivantes, dans l'ordre indiqué :
+Suivez ces instructions pour protéger automatiquement tous les fichiers figurant dans un dossier, en utilisant un script PowerShell en tant que tâche personnalisée. Exécutez les procédures suivantes, dans l'ordre indiqué :
 
 1. Enregistrer le script PowerShell
 
@@ -75,7 +77,7 @@ Quand vous aurez suivi ces instructions, tous les fichiers figurant dans votre d
 
 Notez que si vous apportez des changements au modèle Rights Management que vous utilisez pour l’ICF, le compte d’ordinateur qui exécute le script pour protéger les fichiers n’obtient pas automatiquement le modèle mis à jour. Pour ce faire, dans le script, recherchez la commande `Get-RMSTemplate -Force` mise en commentaire, puis supprimez le caractère de commentaire `#`. Quand le modèle mis à jour est téléchargé (que le script a été exécuté au moins une fois), vous pouvez mettre en commentaire cette commande supplémentaire afin que les modèles ne soient pas téléchargés inutilement à chaque fois. Si les changements apportés au modèle sont suffisamment importants pour protéger de nouveau les fichiers sur le serveur de fichiers, vous effectuez cette opération de façon interactive en exécutant l’applet de commande Protect-RMSFile avec un compte ayant des droits d’utilisation Contrôle total ou Exportation sur les fichiers. Si vous publiez un nouveau modèle que vous souhaitez utiliser pour l’ICF, vous devez également exécuter `Get-RMSTemplate -Force`.
 
-### <a name="save-the-windows-powershell-script"></a>Exécution du script Windows PowerShell
+### <a name="save-the-windows-powershell-script"></a>Exécution du script Windows PowerShell
 
 1.  Copiez le contenu du [script Windows PowerShell](fci-script.md) pour la protection Azure RMS à l’aide des outils de gestion de ressources pour serveur de fichiers. Collez le contenu du script et nommez le fichier **RMS-Protect-FCI.ps1** sur votre ordinateur.
 
@@ -97,7 +99,7 @@ Notez que si vous apportez des changements au modèle Rights Management que vous
         ```
         <enter your key here>
         ```
-        Par exemple, le script peut se présenter comme suit :
+        Par exemple, le script peut se présenter comme suit :
 
         `[Parameter(Mandatory = $false)]`
 
@@ -108,23 +110,23 @@ Notez que si vous apportez des changements au modèle Rights Management que vous
         ```
         <enter your BposTenantId here>
         ```
-        Par exemple, le script peut se présenter comme suit :
+        Par exemple, le script peut se présenter comme suit :
 
         `[Parameter(Mandatory = $false)]`
 
         `[string]$BposTenantId = "23976bc6-dcd4-4173-9d96-dad1f48efd42",`
 
-3.  Exécutez le script. Si vous ne vous signez pas le script (plus sécurisé), vous devez configurer Windows PowerShell sur les serveurs qui l'exécutent. Par exemple, exécutez une session Windows PowerShell avec l’option **Exécuter en tant qu’administrateur**, puis tapez : **Set-ExecutionPolicy RemoteSigned**. Toutefois, cette configuration laisse s’exécuter tous les scripts non signés quand ils sont stockés sur ce serveur (moins sécurisé).
+3.  Exécutez le script. Si vous ne vous signez pas le script (plus sécurisé), vous devez configurer Windows PowerShell sur les serveurs qui l'exécutent. Par exemple, exécutez une session Windows PowerShell avec l’option **Exécuter en tant qu’administrateur**, puis tapez : **Set-ExecutionPolicy RemoteSigned**. Toutefois, cette configuration laisse s’exécuter tous les scripts non signés quand ils sont stockés sur ce serveur (moins sécurisé).
 
     Pour plus d'informations sur la signature des scripts Windows PowerShell, voir [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) dans la bibliothèque de documentation PowerShell.
 
-4.  Enregistrez le fichier localement sur chaque serveur de fichiers qui exécute le Gestionnaire de ressources de fichier avec l’infrastructure de classification des fichiers. Par exemple, enregistrez le fichier dans **C:\RMS-Protection**. Si vous utilisez un chemin ou un nom de dossier différent, choisissez un chemin et un dossier ne contenant pas d’espaces. Sécurisez ce fichier à l'aide d'autorisations NTFS afin que les utilisateurs non autorisés ne puissent pas le modifier.
+4.  Enregistrez le fichier localement sur chaque serveur de fichiers qui exécute le Gestionnaire de ressources de fichier avec l’infrastructure de classification des fichiers. Par exemple, enregistrez le fichier dans **C:\RMS-Protection**. Si vous utilisez un chemin ou un nom de dossier différent, choisissez un chemin et un dossier ne contenant pas d’espaces. Sécurisez ce fichier à l'aide d'autorisations NTFS afin que les utilisateurs non autorisés ne puissent pas le modifier.
 
 Vous êtes maintenant prêt à configurer les outils de gestion de ressources pour serveur de fichiers.
 
 ### <a name="create-a-classification-property-for-rights-management-rms"></a>Création d'une propriété de classification pour Rights Management (RMS)
 
--   Dans Outils de gestion de ressources pour serveur de fichiers, Gestion de la classification, créez une propriété locale :
+-   Dans Outils de gestion de ressources pour serveur de fichiers, Gestion de la classification, créez une propriété locale :
 
     -   **Nom** : Tapez **RMS**
 
@@ -150,7 +152,7 @@ Nous pouvons maintenant créer une règle de classification utilisant cette prop
 
             Remplacez *&lt;nom de dossier&gt;* par le nom du dossier choisi. Par exemple, **Classifier tous les fichiers dans le dossier C:\FileShare pour Rights Management**.
 
-        -   **Étendue** : Ajoutez le dossier que vous avez choisi. Par exemple, **C:\FileShare**.
+        -   **Étendue** : Ajouter le dossier choisi. Par exemple, **C:\FileShare**.
 
             N'activez pas les cases à cocher.
 
@@ -174,7 +176,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
     -   **Autoriser la classification continue de nouveaux fichiers** : Cochez cette case pour que les nouveaux fichiers soient classifiés.
 
-    -   Facultatif : Apportez toutes les autres modifications souhaitées, par exemple, en configurant des options pour les rapports et notifications.
+    -   Facultatif : Apporter d’autres modifications souhaitées, telles que la configuration des options pour les rapports et notifications.
 
 À présent que vous avez terminé la configuration de la classification, vous êtes prêt à configurer une tâche de gestion pour appliquer la protection RMS aux fichiers.
 
@@ -192,7 +194,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
             Remplacez *&lt;nom de dossier&gt;* par le nom du dossier choisi. Par exemple, **Protéger les fichiers dans C:\FileShare avec Rights Management et un modèle à l’aide d’un script Windows PowerShell**.
 
-        -   **Étendue** : Sélectionnez le dossier que vous avez choisi. Par exemple, **C:\FileShare**.
+        -   **Étendue** : Sélectionnez le dossier choisi. Par exemple, **C:\FileShare**.
 
             N'activez pas les cases à cocher.
 
@@ -237,7 +239,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
     -   Sous l'onglet **Planifier** :
 
-        -   **Exécuter à** : Configurez la planification de votre choix.
+        -   **Exécuter à** : Configurer la planification de votre choix.
 
             Définissez un temps conséquent pour l'exécution du script. Bien que cette solution protège tous les fichiers du dossier, le script s'exécute une fois pour chacun d'eux à chaque fois. Bien que cela prenne plus de temps que de protéger tous les fichiers en même temps, ce qui est pris en charge le client Azure Information Protection, cette configuration fichier par fichier pour l'ICF est plus puissante. Par exemple, les fichiers protégés peuvent avoir des propriétaires différents (conserver le propriétaire d’origine) quand vous utilisez la variable [Source File Owner Email], et cette action fichier par fichier est nécessaire si vous modifiez ultérieurement la configuration pour protéger les fichiers de façon sélective plutôt que tous les fichiers d’un dossier.
 
@@ -265,7 +267,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
     foreach ($file in (Get-ChildItem -Path C:\FileShare -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
     ```
     > [!TIP]
-    > Conseils de dépannage :
+    > Conseils de dépannage :
     > 
     > -   Si le rapport indique **0** au lieu du nombre de fichiers figurant dans votre dossier, cela indique que le script ne s’est pas exécuté. Commencez par contrôler le script proprement dit en le chargeant dans Windows PowerShell ISE pour valider son contenu, puis essayez de l’exécuter une fois dans la même session PowerShell pour voir si des erreurs s’affichent. Si aucun argument n’est spécifié, le script tente de se connecter et de s’authentifier auprès du service Azure Rights Management.
     > 

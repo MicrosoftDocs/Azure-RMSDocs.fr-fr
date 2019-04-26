@@ -12,11 +12,11 @@ ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 3e1915c327daaee35d9f0e8053f944fd1fcdbd7a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254609"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179676"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>Informations de référence sur PowerShell pour les modèles de protection
 

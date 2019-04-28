@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
 ms.openlocfilehash: df0d51d976f7f900011688d2f328f3a2ddb1e378
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 04/24/2019
 ms.locfileid: "60176922"
 ---
 # <a name="auditing-in-the-mip-sdk-file-api"></a>Audit dans l’API de fichier du kit SDK MIP

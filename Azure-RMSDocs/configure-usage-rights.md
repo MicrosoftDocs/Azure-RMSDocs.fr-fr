@@ -90,8 +90,8 @@ Ces modèles par défaut sont créés quand vous achetez votre abonnement, et vo
 
 |Nom d’affichage du modèle|Droits d’utilisation postérieurs au 6 octobre 2017|Droits d’utilisation antérieurs au 6 octobre 2017|
 |----------------|--------------------|----------|
-|\<*nom de l’organisation> - Affichage confidentiel uniquement* <br /><br />ou<br /><br /> *Hautement confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Copier ; Afficher les droits ; Autoriser les macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier|Afficher, Ouvrir, Lire|
-|\<*nom de l’organisation> - Confidentiel* <br /><br />ou Gestionnaire de configuration <br /><br />*Confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier ; Contrôle total|Afficher, Ouvrir, Lire ; Enregistrer sous ; Exporter ; Modifier le contenu, Modifier ; Afficher les droits ; Autoriser les macros ; Transférer ; Répondre ; Répondre à tous|
+|\<*nom de l’organisation> - Affichage confidentiel uniquement* <br /><br />ou Gestionnaire de configuration<br /><br /> *Hautement confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Copier ; Afficher les droits ; Autoriser les macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier|Afficher, Ouvrir, Lire|
+|\<*nom de l’organisation> - Confidentiel* <br /><br />ou <br /><br />*Confidentiel \ Tous les employés*|Afficher, Ouvrir, Lire ; Enregistrer sous, Exporter ; Copier ; Afficher les droits ; Modifier les droits ; Autoriser les macros ; Imprimer ; Transférer ; Répondre ; Répondre à tous ; Enregistrer ; Modifier le contenu, Modifier ; Contrôle total|Afficher, Ouvrir, Lire ; Enregistrer sous ; Exporter ; Modifier le contenu, Modifier ; Afficher les droits ; Autoriser les macros ; Transférer ; Répondre ; Répondre à tous|
 
 ## <a name="do-not-forward-option-for-emails"></a>Option Ne pas transférer pour les e-mails
 

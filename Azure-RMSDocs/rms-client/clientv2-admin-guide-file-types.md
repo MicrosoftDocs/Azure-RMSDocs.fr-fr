@@ -11,7 +11,7 @@ ms.service: information-protection
 ms.suite: ems
 ms.openlocfilehash: aca0fe5d3d9624676bc2bb12a772f5b753eb1a0d
 ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "60183753"

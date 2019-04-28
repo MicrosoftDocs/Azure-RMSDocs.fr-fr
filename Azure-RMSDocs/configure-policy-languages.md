@@ -11,7 +11,7 @@ ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.openlocfilehash: b4a3e5ec7453331d1fb656874a26e52e0ec573dd
 ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "60179737"

@@ -13,7 +13,7 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.openlocfilehash: dae3461c4e5ec8ea4cc61fe26c20f774c97d76c5
 ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "60182066"

@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 11/16/2018
 ms.author: tommos
 ms.openlocfilehash: cc35475086de76b869428c62cfc35e73fc3060db
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 04/24/2019
 ms.locfileid: "60184924"
 ---
 # <a name="microsoft-information-protection-sdk---policy-handler-concepts"></a>Kit SDK Microsoft Information Protection - Concepts liés au gestionnaire de stratégies

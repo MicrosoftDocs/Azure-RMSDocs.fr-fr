@@ -1,23 +1,25 @@
 ---
-title: 'Tutoriel : Modifier la stratégie Azure Information Protection et créer une étiquette – AIP'
+title: 'Tutoriel : modifier la stratégie Azure Information Protection – AIP'
 description: Tutoriel de prise en main d’environ 15 minutes, permettant de modifier la stratégie Azure Information Protection dans votre organisation.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 7d9792ef45a75bdf3f234eea1ab92eaa475a8ce1
-ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
+ms.openlocfilehash: 0c7baa65c7f0400d94f1aa800e26a41290bb7b36
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58617854"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773566"
 ---
-# <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Tutoriel : Modifier la stratégie Azure Information Protection et créer une étiquette
+# <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutoriel : Configurer les paramètres de la stratégie Azure Information Protection et créer une étiquette
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Dans ce tutoriel, vous allez apprendre à :
 > [!div class="checklist"]
@@ -162,7 +164,7 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
 
 10. Dans le panneau **Sous-étiquette**, vous voyez que **Numéro de carte de crédit** est affiché comme **NOM DE LA CONDITION**, avec **1** **OCCURRENCES** :
     
-    ![Tutoriel Azure Information Protection - configurer la condition de la carte de crédit](./media/step2-see-condition.png)
+    ![Tutoriel Azure Information Protection : résumé de la condition de la carte de crédit](./media/step2-see-condition.png)
 
 11. **Sélectionner comment cette étiquette est appliquée** : conservez la valeur par défaut **Recommandé** et ne changez pas le conseil de stratégie par défaut. 
 

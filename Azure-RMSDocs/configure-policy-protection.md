@@ -4,21 +4,23 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/14/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 0057677890de2a771e93cc2f843623bbd780c31a
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 1e37b45cb6894ddee9630f53c52018f8a0956357
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57978149"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62772577"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’un service Rights Management. Ce service utilise des stratégies de chiffrement, d’identité et d’autorisation pour vous aider à éviter les pertes de données. La protection est appliquée quand une étiquette est configurée de manière à utiliser la protection Rights Management pour les documents et les e-mails. Les utilisateurs peuvent aussi sélectionner l’option **Ne pas transférer** dans Outlook.
 
@@ -143,7 +145,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
      |Paramètre|Plus d’informations|Paramètre recommandé
      |-----------|--------------------|--------------------|
-     |**expiration du contenu**|Définissez une date ou un nombre de jours limite pour l’ouverture par les utilisateurs sélectionnés des documents protégés par ces paramètres. Pour les e-mails, l’expiration n’est pas toujours appliquée en raison des mécanismes de mise en cache utilisés par certains clients de messagerie.<br /><br />Vous pouvez spécifier une date ou un nombre de jours à partir du moment où la protection est appliquée au contenu.<br /><br />Lorsque vous spécifiez une date, celle-ci prend effet à minuit, dans votre fuseau horaire actuel.|**Le contenu n’expire jamais**, sauf s'il comporte une spécification de durée.|
+     |**Expiration du contenu du fichier**|Définissez une date ou un nombre de jours limite pour l’ouverture par les utilisateurs sélectionnés des documents protégés par ces paramètres. Pour les e-mails, l’expiration n’est pas toujours appliquée en raison des mécanismes de mise en cache utilisés par certains clients de messagerie.<br /><br />Vous pouvez spécifier une date ou un nombre de jours à partir du moment où la protection est appliquée au contenu.<br /><br />Lorsque vous spécifiez une date, celle-ci prend effet à minuit, dans votre fuseau horaire actuel.|**Le contenu n’expire jamais**, sauf s'il comporte une spécification de durée.|
      |**Autoriser l’accès hors connexion**|Utilisez ce paramètre pour équilibrer les éventuelles exigences de sécurité que vous avez (dont l’accès après la révocation) avec la possibilité pour les utilisateurs sélectionnés d’ouvrir du contenu protégé lorsqu’ils ne disposent pas d’une connexion Internet.<br /><br />Si vous spécifiez que le contenu n’est pas disponible sans connexion Internet ou que ce contenu est disponible seulement pour un nombre de jours spécifié, quand ce seuil est atteint, ces utilisateurs doivent se réauthentifier et leur accès est journalisé. Dans ce cas, si leurs informations d’identification ne sont pas mises en cache, les utilisateurs sont invités à se connecter préalablement pour pouvoir ouvrir le ou e-mail.<br /><br />En plus de la réauthentification, la stratégie et l’appartenance au groupe d’utilisateurs sont réévaluées. Cela signifie que les utilisateurs peuvent accéder de nouveau ou ne plus accéder à un même document ou e-mail si des modifications ont été apportées à la stratégie ou à l'appartenance au groupe depuis leur dernier accès. Cela peut inclure l’absence d’accès si le document a été [révoqué](./rms-client/client-track-revoke.md).|En fonction de la sensibilité du contenu :<br /><br />- **Nombre de jours pendant lesquels le contenu est disponible sans connexion Internet** = **7** pour les données métier sensibles pouvant nuire à l’entreprise si elles sont partagées avec des personnes non autorisées. Cette recommandation offre un compromis entre sécurité et flexibilité. Il peut s’agir entre autres de contrats, de rapports de sécurité, de résumés de prévision et de données commerciales.<br /><br />- **Jamais** pour les données d’entreprise très sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Cette recommandation donne la priorité à la sécurité par rapport à la souplesse et garantit que si le document est révoqué, tous les utilisateurs autorisés perdent instantanément la possibilité d’ouvrir le document. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|
     
      Une fois terminée la configuration des autorisations et des paramètres, cliquez sur **OK**. 
@@ -191,7 +193,7 @@ Pour chaque exemple qui suit, dans votre panneau \<*nom d’étiquette*>, sélec
 
 ![Configuration d’une étiquette Azure Information Protection à des fins de protection](./media/info-protect-protection-bar-configured.png)
 
-### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Exemple 1 : Étiquette qui applique Ne pas transférer pour envoyer un e-mail protégé à un compte Gmail
+### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Exemple 1 : Étiquette qui applique Ne pas transférer pour envoyer un e-mail protégé à un compte Gmail
 
 Cette étiquette est uniquement disponible dans Outlook et convient quand Exchange Online est configuré pour les [nouvelles fonctionnalités dans Chiffrement de messages Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Demandez aux utilisateurs de sélectionner cette étiquette quand ils ont besoin d’envoyer un e-mail protégé à des personnes qui utilisent un compte Gmail (ou tout autre compte e-mail à l’extérieur de votre organisation). 
 
@@ -208,7 +210,7 @@ Vos utilisateurs tapent l’adresse e-mail Gmail dans la zone **À**.  Ensuite, 
 5. Cliquez sur **OK** dans le panneau **Protection**, puis sur **Enregistrer** dans le panneau **Étiquette**.
 
 
-### <a name="example-2-label-that-restricts-read-only-permission-to-all-users-in-another-organization-and-that-supports-immediate-revocation"></a>Exemple 2 : Étiquette qui limite l’autorisation de lecture seule à tous les utilisateurs d’une autre organisation et qui prend en charge une révocation immédiate
+### <a name="example-2-label-that-restricts-read-only-permission-to-all-users-in-another-organization-and-that-supports-immediate-revocation"></a>Exemple 2 : Étiquette qui limite l’autorisation de lecture seule à tous les utilisateurs d’une autre organisation et qui prend en charge une révocation immédiate
 
 Cette étiquette convient au partage des documents très sensibles (en lecture seule) qui exigent toujours une connexion Internet pour les afficher. Si l’autorisation est révoquée, les utilisateurs ne sont plus en mesure d’afficher le document la prochaine fois qu’ils tentent de l’ouvrir.
 
@@ -229,7 +231,7 @@ Cette étiquette ne convient pas aux e-mails.
 7. Cliquez sur **OK** dans le panneau **Protection**, puis sur **Enregistrer** dans le panneau **Étiquette**.
 
 
-### <a name="example-3-add-external-users-to-an-existing-label-that-protects-content"></a>Exemple 3 : Ajouter des utilisateurs externes à une étiquette existante qui protège le contenu
+### <a name="example-3-add-external-users-to-an-existing-label-that-protects-content"></a>Exemple 3 : Ajouter des utilisateurs externes à une étiquette existante qui protège le contenu
 
 Les nouveaux utilisateurs que vous ajoutez seront en mesure d’ouvrir les documents et e-mails qui ont déjà été protégés avec cette étiquette. Les autorisations que vous accordez à ces utilisateurs peuvent être différentes de celles des utilisateurs existants.
 
@@ -296,7 +298,7 @@ L’avantage de cette configuration est que vous n’avez pas besoin de spécifi
 
 4. Sélectionnez les autorisations souhaitées, puis cliquez sur **OK**.
 
-5. De retour dans le panneau **Protection**, si nécessaire, configurez les paramètres pour **Expiration du contenu** et **Autoriser l’accès hors connexion**, puis cliquez sur **OK**.
+5. De retour dans le panneau **Protection**, si nécessaire, configurez les paramètres pour **Expiration du contenu du fichier** et **Autoriser l’accès hors connexion**, puis cliquez sur **OK**.
 
 6. Dans le panneau **Étiquette**, sélectionnez **Enregistrer**.
 
@@ -311,7 +313,7 @@ La configuration de l’étiquette est extrêmement simple :
     
 2. Sélectionnez **OK** sans sélectionner aucun utilisateur ou sans configurer aucun paramètre dans ce panneau.
     
-    Même si vous pouvez configurer des paramètres pour **Expiration du contenu** et **Autoriser l’accès hors connexion**, quand vous ne spécifiez pas d’utilisateurs et leurs autorisations, ces paramètres d’accès ne sont pas applicables. La raison en est que la personne qui applique la protection est l’[émetteur Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) pour le contenu et que ce rôle est exempté de ces restrictions d’accès.
+    Même si vous pouvez configurer des paramètres pour **Expiration du contenu du fichier** et **Autoriser l’accès hors connexion**, quand vous ne spécifiez pas d’utilisateurs et leurs autorisations, ces paramètres d’accès ne sont pas applicables. La raison en est que la personne qui applique la protection est l’[émetteur Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) pour le contenu et que ce rôle est exempté de ces restrictions d’accès.
 
 3. Dans le panneau **Étiquette**, sélectionnez **Enregistrer**.
 

@@ -4,20 +4,22 @@ description: Tutoriel d’introduction qui vous guide dans la configuration des 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: d627bd71ec3a669f59161c8c3c7137f8a635ceb6
-ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
+ms.openlocfilehash: d5d6988c5180a58ed9de5c8111036ee380044584
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58617792"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773602"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutoriel : Configurer les paramètres de stratégie Azure Information Protection qui interagissent
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Dans ce tutoriel, vous allez apprendre à :
 > [!div class="checklist"]
@@ -113,7 +115,7 @@ La barre Information Protection, qui présente les étiquettes disponibles, perm
 
 Au lieu de modifier l’étiquette, fermez la barre Information Protection pour comparer l’expérience lorsque la barre n’est pas affichée :
 
-![Tutoriel Azure Information Protection – nouveau document avec l’étiquette par défaut](./media/infoprotect-bar-close.png)
+![Tutoriel Azure Information Protection : fermer la barre](./media/infoprotect-bar-close.png)
 
 L’étiquette **Général**, quoique toujours sélectionnée, est beaucoup moins évidente. Le moyen de sélectionner une autre étiquette apparaît également moins clairement. Pour cela, les utilisateurs doivent sélectionner le bouton **Protéger** :
 
@@ -132,7 +134,7 @@ Vous pouvez remplacer l’étiquette **Général** actuellement sélectionnée p
 
 Si nous n’avions pas modifié ce paramètre, la barre Information Protection montrerait cette icône :
 
-![Tutoriel Azure Information Protection – bouton Protéger sélectionné](./media/infoprotect-deletelabel-icon.png)
+![Tutoriel Azure Information Protection : fermer la barre](./media/infoprotect-deletelabel-icon.png)
 
 Avec une étiquette par défaut, l’étiquetage obligatoire permet de garantir que les nouveaux documents et les documents modifiés (tout comme les e-mails) ont une classification de base de votre choix. 
 
@@ -150,9 +152,9 @@ Ajoutez le document Word que vous venez d’étiqueter en pièce jointe à l’e
 
 Si vous cliquez sur **Ignorer**, la nouvelle étiquette n’est pas appliquée et l’e-mail conserve l’étiquette par défaut que nous avons configurée, **Général**. Les étiquettes disponibles sont toujours visibles et peuvent être sélectionnées.
 
-Si vous sélectionnez **Modifier maintenant**, l’e-mail est réétiqueté avec la sous-étiquette **Confidentiel**. Toutefois, les utilisateurs peuvent toujours modifier cette étiquette avant d’envoyer l’e-mail, en sélectionnant Modifier l’étiquette :
+Si vous sélectionnez **Modifier maintenant**, l’e-mail est réétiqueté avec la sous-étiquette **Confidentiel**. Toutefois, les utilisateurs peuvent toujours changer cette étiquette avant d’envoyer l’e-mail, en sélectionnant l’icône Modifier l’étiquette :
 
-![Tutoriel Azure Information Protection – invite à réétiqueter l’e-mail en fonction de la pièce jointe étiquetée](./media/infoprotect-editlabel-icon.png)
+![Tutoriel Azure Information Protection : modifier l’icône d’une étiquette](./media/infoprotect-editlabel-icon.png)
 
 La barre Information Protection s’affiche à nouveau pour permettre aux utilisateurs de sélectionner une autre étiquette.
 

@@ -1,24 +1,24 @@
 ---
-title: 'Tutoriel : configurer Azure Information Protection pour contrôler le surpartage d’informations - AIP'
-description: Tutoriel d’introduction montrant comment configurer et voir les paramètres clients avancés du client Azure Information Protection pour avertir, demander une justification ou bloquer l’envoi de messages depuis Outlook.
+title: 'Tutoriel : utiliser Azure Information Protection pour contrôler le surpartage - AIP'
+description: Tutoriel d’introduction montrant comment configurer et voir en action les paramètres clients avancés du client Azure Information Protection pour avertir, demander une justification ou bloquer l’envoi de messages depuis Outlook.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/24/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 977c26e24ebb9538216704898493f218f86a7556
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 38def86f9bbc32edc083f856cf43101890b5a22e
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773625"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64562782"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutoriel : configurer Azure Information Protection pour contrôler le surpartage d’informations à l’aide d’Outlook
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
+>
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Dans ce tutoriel, vous allez apprendre à :

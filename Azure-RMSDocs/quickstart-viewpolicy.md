@@ -1,19 +1,19 @@
 ---
-title: 'Démarrage rapide : Bien démarrer avec Azure Information Protection sur le Portail Azure – AIP'
+title: 'Démarrage rapide : afficher Azure Information Protection sur le portail Azure - AIP'
 description: Si Azure Information Protection est nouveau pour votre organisation, commencez par ajouter le service au Portail Azure, vérifier que le service de protection est activé et afficher les paramètres de stratégie et les étiquettes.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/25/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: e41af7f6bcf8734377404b0dabcdb059d2d91bc1
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 099d35d7d4862aff3006b1d6cc57423b898234c4
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773582"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767895"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
 

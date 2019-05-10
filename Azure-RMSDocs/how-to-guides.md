@@ -11,11 +11,11 @@ ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.openlocfilehash: 002dcd33e7219d8c25a4d1b24ab559b4f0922799
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182124"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767921"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guides pratiques pour les scénarios courants qui utilisent Azure Information Protection
 

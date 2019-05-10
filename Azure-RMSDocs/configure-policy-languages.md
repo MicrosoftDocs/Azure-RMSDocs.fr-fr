@@ -1,5 +1,5 @@
 ---
-title: Configurer des étiquettes et des modèles dans différentes langues dans Azure Information Protection – AIP
+title: Configurer les étiquettes pour des langues différentes dans Azure Information Protection
 description: Vous pouvez ajouter la prise en charge de différentes langues pour les étiquettes que les utilisateurs voient dans la barre Information Protection et pour tous les modèles visibles par l’utilisateur, en spécifiant les langues dans la stratégie Azure Information Protection et en important vos traductions.
 author: cabailey
 ms.author: cabailey
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: b4a3e5ec7453331d1fb656874a26e52e0ec573dd
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: c89085c7f001cd26ccd0b722196d9678b674163e
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179737"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767948"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Guide pratique pour configurer des étiquettes et des modèles dans différentes langues dans Azure Information Protection
 

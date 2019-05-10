@@ -1,21 +1,21 @@
 ---
-title: Supprimer des étiquettes de sensibilité à l’aide du client d’étiquetage unifié Azure Information Protection pour Windows
-description: Instructions pour supprimer des étiquettes de sensibilité et la protection des fichiers qui ont été étiquetés par Azure Information Protection.
+title: Supprimer des étiquettes à l’aide du client d’étiquetage unifié Azure Information Protection
+description: Instructions pour supprimer des étiquettes de sensibilité et la protection des fichiers et e-mails à l’aide d’Azure Information Protection unifiée étiquetage client.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.suite: ems
-ms.openlocfilehash: 187c36acddb8a6b2e5b1451500640dfd832a8f3f
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: a2443a632fadf51aab5bb59b9e96b7b16547807d
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181116"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767691"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Guide de l’utilisateur : Supprimer des étiquettes et la protection des fichiers et des e-mails qui ont été étiquetés par Azure Information Protection
 

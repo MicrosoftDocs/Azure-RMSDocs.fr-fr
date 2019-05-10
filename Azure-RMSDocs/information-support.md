@@ -4,19 +4,19 @@ description: Ressources pour les administrateurs, qui incluent des informations 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 385b44e6f3753e7d066f63fee812c4f12b67171d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: a80ec942197cb9502fcddbe38190d4e874575825
+ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181733"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64982126"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
@@ -35,9 +35,18 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure Infor
 |Comprendre un terme Azure Information Protection spécifique|Recherchez le terme ou l’abréviation sur la page de [terminologie](terminology.md).|
 
 ## <a name="information-about-new-releases-and-updates"></a>Informations sur les nouvelles versions et mises à jour
+
+La feuille de route officielle pour Azure Information Protection est maintenant sur le [feuille de route de Microsoft 365](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent).
+
 L’équipe du produit Azure Information Protection publie des annonces sur les nouvelles versions importantes dans le [blog Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection). Les versions secondaires sont annoncées sur le [site Yammer](https://www.yammer.com/AskIPTeam) d’Azure Information Protection, et il peut également s’avérer utile de vérifier le [site UserVoice](https://msip.uservoice.com) pour connaître l’état des fonctionnalités demandées.
 
-Vous trouverez des informations supplémentaires et plus détaillées sur le [blog technique d’Azure Information Protection](https://aka.ms/AIPblog). Par exemple, un récapitulatif des modifications de la documentation est publié chaque mois pour vous informer des nouvelles versions, des mises à jour pour les instructions liées au support ainsi que des corrections et des éclaircissements pour les versions existantes. Ces billets de mises à jour de la documentation sont intitulés : « **Azure Information Protection Documentation Update for \<mois année>**  ».
+Vous trouverez des informations supplémentaires et plus détaillées sur le [blog technique d’Azure Information Protection](https://aka.ms/AIPblog). 
+
+## <a name="whats-new-in-the-documentation"></a>Quelles sont les nouveautés dans la documentation
+
+Le blog technique d’Azure Information Protection a également un résumé des [documentation modifie chaque mois](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs). Ces modifications peuvent inclure la documentation de nouvelle et mis à jour pour la nouvelle version, les modifications pour prendre en charge des instructions, ainsi que les corrections et les éclaircissements pour les versions existantes.
+
+Ces billets de mises à jour de la documentation sont intitulés : « **Azure Information Protection Documentation Update for \<mois année>**  ».
 
 ## <a name="support-options-and-community-resources"></a>Options de support technique et ressources de la communauté
 Les sections suivantes fournissent des informations sur les options de support et de résolution de problème ainsi que des ressources de la communauté.

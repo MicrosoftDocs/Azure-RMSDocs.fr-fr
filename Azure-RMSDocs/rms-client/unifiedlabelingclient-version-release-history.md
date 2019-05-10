@@ -1,21 +1,21 @@
 ---
-title: Azure Information Protection unifiée l’étiquetage client - Version historique des versions et politique de support
+title: Azure Information Protection unifiée étiquetage client - stratégie de prise en charge et d’historique de Version
 description: Consultez les informations de version pour le client d’étiquetage unifié Azure Information Protection pour Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1262a2f1a70002686aed0bad47354cdc5ac23bac
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 91d16668c82a542984b177f539b276d6e752194f
+ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180883"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64982148"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unifiée l’étiquetage client - Version historique des versions et politique de support
 
@@ -41,9 +41,15 @@ Utilisez les informations suivantes pour voir ce qui est pris en charge pour la 
 
 Ce client installe un module complémentaire Office pour les ordinateurs Windows, une extension pour l’Explorateur de fichiers et un module PowerShell. Ce client a les mêmes [prérequis](../requirements.md) que le client Azure Information Protection qui télécharge une stratégie à partir d’Azure.
 
-Pour comparer les fonctionnalités avec le client Azure Information Protection, voir [Comparaison des fonctionnalités des clients](use-client.md#compare-the-clients).
+Pour comparer les fonctions et fonctionnalités avec le client Azure Information Protection, consultez [comparer les clients](use-client.md#compare-the-clients).
 
-## <a name="version-20778"></a>Version 2.0.778
+## <a name="version-207790"></a>Version 2.0.779.0
+
+**Date de publication** : 05/01/2019
+
+Cette version comporte un seul correctif pour résoudre une condition de concurrence où, aucune étiquette n’affiche parfois dans les applications Office ou de l’Explorateur de fichiers.
+
+## <a name="version-207780"></a>Version 2.0.778.0
 
 **Date de publication** : 04/16/2019
 

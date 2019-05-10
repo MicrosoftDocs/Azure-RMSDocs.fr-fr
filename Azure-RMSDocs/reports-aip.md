@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 04/23/2019
+ms.date: 05/07/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: e85537f705fa388aa7c2c3a838ca658213899edb
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: d7cc81a41b7515edd0df0e38d5813e0e90b2aa73
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181658"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191939"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -192,11 +192,11 @@ Vous pouvez utiliser les informations d’historique de version pour le [étique
 
 Pour le client d’étiquetage Azure Information Protection unifié :
 
-- Prise en charge pour la découverte de l’audit et de point de terminaison : Version 2.0.778
+- Prise en charge pour la découverte de l’audit et de point de terminaison : Version 2.0.778.0
 
 Pour le client Azure Information Protection :
 
-- Prise en charge pour l’audit : 1.41.51.0
+- Prise en charge pour l’audit : Version 1.41.51.0
 - Prise en charge pour la découverte de point de terminaison : Version 1.48.204.0
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurer un espace de travail Log Analytics pour les rapports
@@ -232,7 +232,7 @@ Dans le panneau Azure Information Protection, recherchez les options du menu **T
 
 - **Découverte de données (préversion)**  : Utilisez ce rapport pour voir des informations sur les fichiers étiquetés trouvés par les scanneurs et les points de terminaison pris en charge.
     
-    Remarque : La découverte de point de terminaison est progressivement déployée sur les locataires. Vous commencerez à voir des données à partir des points de terminaison pris en charge dans ce rapport lorsque cette fonctionnalité aura été déployée sur votre locataire.
+    Remarque : Découverte des points de terminaison est progressivement déployer aux locataires. Vous commencerez à voir des données à partir des points de terminaison pris en charge dans ce rapport lorsque cette fonctionnalité aura été déployée sur votre locataire.
     
     Vous pouvez configurer un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) pour le client Azure Information Protection aux fichiers de rapport qui contiennent des informations sensibles.
     
@@ -268,7 +268,7 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 
 Utilisez les exemples suivants pour voir comment vous pouvez utiliser le schéma convivial pour créer des requêtes personnalisées.
 
-##### <a name="example-1-return-all-users-who-sent-audit-data-in-the-last-31-days"></a>Exemple 1 : Retourner tous les utilisateurs ayant envoyé des données d’audit au cours des 31 derniers jours 
+##### <a name="example-1-return-all-users-who-sent-audit-data-in-the-last-31-days"></a>Exemple 1 : Retourner tous les utilisateurs ayant envoyé des données d’audit au cours des 31 derniers jours 
 
 ```
 InformationProtectionEvents 
@@ -277,7 +277,7 @@ InformationProtectionEvents
 ```
 
  
-##### <a name="example-2-return-the-number-of-labels-that-were-downgraded-per-day-in-the-last-31-days"></a>Exemple 2 : Retourner le nombre d’étiquettes qui ont été rétrogradées par jour au cours des 31 derniers jours 
+##### <a name="example-2-return-the-number-of-labels-that-were-downgraded-per-day-in-the-last-31-days"></a>Exemple 2 : Retourner le nombre d’étiquettes qui ont été rétrogradées par jour au cours des 31 derniers jours 
 
 
 ```
@@ -288,7 +288,7 @@ InformationProtectionEvents
  
 ```
  
-##### <a name="example-3-return-the-number-of-labels-that-were-downgraded-from-confidential-by-user-in-the-last-31-days"></a>Exemple 3 : Retourner le nombre d’étiquettes qui ont été rétrogradées depuis l’état Confidentiel par utilisateur au cours des 31 derniers jours 
+##### <a name="example-3-return-the-number-of-labels-that-were-downgraded-from-confidential-by-user-in-the-last-31-days"></a>Exemple 3 : Retourner le nombre d’étiquettes qui ont été rétrogradées depuis l’état Confidentiel par utilisateur au cours des 31 derniers jours 
 
 ```
 

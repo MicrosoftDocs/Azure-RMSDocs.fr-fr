@@ -1,6 +1,6 @@
 ---
-title: Classer à l’aide d’Azure Information Protection - AIP
-description: Instructions sur la classification de vos documents et e-mails.
+title: Classifier - client Azure Information Protection
+description: Instructions comment classer vos documents et e-mails lorsque vous utilisez le client Azure Information Protection pour Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,14 +11,14 @@ ms.service: information-protection
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2b11a60d9bcc12cb3ad28c3c6f583f99d4664751
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: ecc7a1e0655c322151ba0c44c51592656303d857
+ms.sourcegitcommit: 79218b6b064d757459d0ffb51002959ba6d6bcb9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183827"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64914724"
 ---
-# <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>Guide de l’utilisateur : Classifier un fichier ou un e-mail avec Azure Information Protection
+# <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>Guide de l’utilisateur : Classifier un fichier ou un e-mail avec le client Azure Information Protection
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 >

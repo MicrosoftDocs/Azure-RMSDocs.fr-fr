@@ -1,21 +1,21 @@
 ---
 title: Déployer le scanneur Azure Information Protection - AIP
-description: Instructions pour installer, configurer et exécuter la version actuelle de la disponibilité générale du scanneur Azure Information Protection pour découvrir, classifier et protéger des fichiers sur des magasins de données.
+description: Instructions pour installer, configurer et exécuter la version actuelle du scanneur Azure Information Protection pour découvrir, classifier et protéger des fichiers sur des magasins de données.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 05/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 75ea97484b226617c33f985a40035e3b641434c5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 17a5406e4e7fff0d7acfa431b7a9731db19b2078
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773699"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191898"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -380,7 +380,7 @@ Pour changer le comportement par défaut du scanneur pour protéger d’autres t
 
 - Le scanneur a son propre comportement par défaut : Seuls les formats de fichier Office et les documents PDF sont protégés par défaut. Si le Registre n’est pas modifié, aucun des autres types de fichiers ne sera étiqueté ou protégé par le scanneur.
 
-- Si vous voulez le même comportement de protection par défaut du client Azure Information Protection, où tous les fichiers sont automatiquement protégés avec une protection native ou générique : Spécifiez le caractère générique `*` comme clé de Registre et `Default` comme données de valeur.
+- Si vous souhaitez que le même comportement de protection par défaut que le client Azure Information Protection, où tous les fichiers sont automatiquement protégés avec la protection native ou générique : Spécifiez le `*` génériques comme une clé de Registre `Encryption` comme valeur (REG_SZ), et `Default` que les données de valeur.
 
 Lorsque vous modifiez le Registre, créez manuellement la clé **MSIPC** et la clé **FileProtection** si elles n’existent pas, ainsi qu’une clé pour chaque extension de nom de fichier.
 

@@ -1,6 +1,6 @@
 ---
-title: Afficher et utiliser des documents protégés à l’aide du client AIP
-description: Instructions pour afficher et utiliser un document protégé qui vous oblige à installer le client Azure Information Protection.
+title: Afficher les fichiers protégés avec la visionneuse Azure Information Protection
+description: Instructions pour afficher et utiliser un fichier protégé qui requiert que la visionneuse Azure Information Protection installée.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,20 +11,20 @@ ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d477d8112afd48a61a3f0977f2550fb12dff67a2
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 8dea94af41cb445f895ee4cbc2c424fc169ae117
+ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182957"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64880214"
 ---
-# <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guide de l’utilisateur : Afficher et utiliser des fichiers qui ont été protégés par Rights Management
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Guide de l’utilisateur : Afficher les fichiers protégés avec la visionneuse Azure Information Protection
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Souvent, vous pouvez afficher un document protégé simplement en l’ouvrant. Par exemple, vous pouvez double-cliquer sur une pièce jointe à un e-mail ou sur un fichier dans l’Explorateur de fichiers, ou bien vous pouvez cliquer sur un lien vers un fichier.
+Souvent, vous pouvez afficher un fichier protégé simplement en l’ouvrant. Par exemple, vous pouvez double-cliquer sur une pièce jointe à un e-mail ou sur un fichier dans l’Explorateur de fichiers, ou bien vous pouvez cliquer sur un lien vers un fichier.
 
 Si les fichiers ne s’ouvrent pas immédiatement, la **visionneuse Azure Information Protection** pourra peut-être le faire. Cette visionneuse peut ouvrir des fichiers texte protégés, des fichiers image protégés, des fichiers PDF protégés et tous les fichiers ayant une extension de nom de fichier **.pfile**.
 

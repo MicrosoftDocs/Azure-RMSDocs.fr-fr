@@ -1,22 +1,22 @@
 ---
-title: Configurer des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection
+title: Règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection
 description: Instructions et exemples pour configurer des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/23/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: f96daf289d5fdde320b98482eaf921646023e480
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 839f5e9a63f9e180cddcb9ac5cd4afd2b8474d1e
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773716"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767990"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configuration des règles de flux de messagerie Exchange Online pour les étiquettes Azure Information Protection
 
@@ -60,7 +60,7 @@ Pour les exemples suivants, créez une nouvelle règle de flux de messagerie en 
 Les exemples ont une seule condition qui applique une protection quand un e-mail est envoyé à l’extérieur de l’organisation. Pour plus d’informations sur les autres conditions que vous pouvez sélectionner, consultez les [conditions de règle de flux de messagerie et exceptions (prédicats) dans Exchange Online](https://technet.microsoft.com/library/jj919235(v=exchg.150).aspx).
 
 
-### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>Exemple 1 : Règle qui applique l’option Ne pas transférer à des e-mails étiquetés **Général** quand ils sont envoyés en dehors de l’organisation
+### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>Exemple 1 : Règle qui applique l’option Ne pas transférer à des e-mails étiquetés **Général** quand ils sont envoyés en dehors de l’organisation
 
 Dans cet exemple, l’étiquette **Général** a un GUID de 0e421e6d-ea17-4fdb-8f01-93a3e71333b8. Remplacez par votre propre étiquette ou sous-étiquette GUID que vous souhaitez utiliser avec cette règle. 
 
@@ -88,7 +88,7 @@ Dans la stratégie Azure Information Protection, cette étiquette a été config
 
 Pour plus d’informations sur l’option Ne pas transférer, consultez [option Ne pas transférer pour les e-mails](configure-usage-rights.md#do-not-forward-option-for-emails).
 
-### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Exemple 2 : Règle qui applique l’option Chiffrer uniquement à des e-mails qui ont des pièces jointes étiquetées **Confidentiel\Partenaires** quand ces e-mails sont envoyés en dehors de l’organisation
+### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Exemple 2 : Règle qui applique l’option Chiffrer uniquement à des e-mails qui ont des pièces jointes étiquetées **Confidentiel\Partenaires** quand ces e-mails sont envoyés en dehors de l’organisation
 
 Dans cet exemple, la sous-étiquette **Confidentiel\Partenaires** a le GUID 0e421e6d-ea17-4fdb-8f01-93a3e71333b8. Remplacez par votre propre étiquette ou sous-étiquette GUID que vous souhaitez utiliser avec cette règle. 
 

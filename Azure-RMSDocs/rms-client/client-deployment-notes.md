@@ -4,25 +4,25 @@ description: Informations à propos de l’installation, des systèmes d’explo
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0af65b69d28c97e547c0d0bce9e3024402b28dee
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 36946bc1344931b80b1b45b4f27f86b7be6864c6
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183195"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64768233"
 ---
-# <a name="rms-client-deployment-notes"></a>Notes sur le déploiement du client RMS
+# <a name="rights-management-service-client-deployment-notes"></a>Notes de déploiement de client de Service de gestion des droits
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 7 avec SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016*
 
-Le client service Rights Management (client RMS) version 2 est également appelé client MSIPC. Il s'agit d'un logiciel pour ordinateurs Windows, qui communique avec les services Microsoft Rights Management localement ou dans le cloud pour protéger l'accès aux informations et leur utilisation quand celles-ci transitent par des applications et appareils, à l'intérieur ou à l'extérieur des limites managées de votre organisation. 
+Le client service Rights Management (client RMS) version 2 est également appelé client MSIPC. Il s’agit d’un logiciel pour ordinateurs Windows, qui communique avec les services Microsoft Rights Management localement ou dans le cloud pour protéger l’accès aux informations et leur utilisation quand celles-ci transitent par des applications et appareils, à l’intérieur ou à l’extérieur des limites managées de votre organisation. 
 
 Outre le fait qu’il est livré avec [le client Azure Information Protection pour Windows](aip-client.md), le client RMS est disponible [sous la forme d’un téléchargement facultatif](https://www.microsoft.com/download/details.aspx?id=38396) qui peut, après réception et acceptation de son contrat de licence, être distribué gratuitement avec des logiciels tiers, de sorte que les clients peuvent protéger et utiliser du contenu protégé par les services RMS.
 

@@ -1,22 +1,22 @@
 ---
 title: Prise en charge d’Azure Rights Management par les applications à partir d’AIP
-description: Découvrez comment les applications (comme Office Word, Excel, PowerPoint et Outlook) et les services (comme Exchange et SharePoint) les plus couramment utilisés par vos utilisateurs finaux peuvent utiliser le service Azure Rights Management d’Azure Information Protection pour protéger les documents et e-mails de votre organisation.
+description: Comprendre comment les plus couramment utilisés (par exemple, les applications Office), les applications et les services (par exemple, Exchange et SharePoint) peuvent utiliser le service Azure Rights Management d’Azure Information Protection pour protéger les documents et e-mails de votre organisation.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/02/2019
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 56584fbff799780a86f93546997a342faa29592f
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: deb9cb2bf0751c78d419db579b5df050e4862245
+ms.sourcegitcommit: 4721f96650fde6e0e8e704cc6a3458ddeff635a6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175383"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65087876"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Comment les applications prennent en charge le service Azure Rights Management
 

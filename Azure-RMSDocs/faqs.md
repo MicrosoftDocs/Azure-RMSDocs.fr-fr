@@ -4,17 +4,17 @@ description: Certaines questions fréquentes sur Azure Information Protection et
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 75ad66eba42869e1eeebed6d3ec29253158eeb8d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: f3d8610ff5d1bb1138d69825e37d8c6eb46f1a0a
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182345"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191915"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -64,23 +64,13 @@ Utilisez le **Version** nombre affiché pour identifier le client :
 
 - Une version **1**, par exemple, **1.48.204.0**, identifie le client Azure Information Protection.
 
-- Une version **2**, par exemple, **2.0 684.0**, identifie le client d’étiquetage unifié Azure Information Protection.
+- Une version **2**, par exemple, **2.0.778.0**, identifie le client d’étiquetage unifié Azure Information Protection.
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Comment définir le bon moment pour migrer mes étiquettes vers Office 365 ?
 
-Les étiquettes de confidentialité des centres d’administration (Centre de sécurité et conformité Office 365, Centre de sécurité Microsoft 365 et Centre de conformité Microsoft 365) sont en disponibilité générale, mais l’option de migration des étiquettes Azure Information Protection est toujours en préversion. Lorsque les étiquettes sont migrés vers le magasin d’étiquetage unifié, ils peuvent être publiées et ensuite utilisés par [les clients et les services qui prennent en charge l’étiquetage unifiée](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)...
+Maintenant que l’option de migration des étiquettes dans le portail Azure est en disponibilité générale, nous vous recommandons d’activer la migration afin que vous pouvez utiliser vos étiquettes en tant qu’étiquettes de sensibilité avec [les clients et les services qui prennent en charge l’étiquetage unifiée](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) .
 
-- **Si vous débutez avec Azure Information Protection :**
-    
-    Les étiquettes par défaut d’Azure Information Protection peuvent accélérer votre déploiement, donc nous vous recommandons de migrez ces étiquettes par défaut et gérez à partir d’un des centres d’administration (Office 365 centre de sécurité et conformité, centre de sécurité Microsoft 365, ou centre de conformité de Microsoft 365).
-
-- **Si vous ne débutez pas avec Azure Information Protection, mais que vous définissez et configurez actuellement les étiquettes que vous souhaitez utiliser :**
-    
-    Nous vous recommandons d’effectuer votre configuration d’étiquettes dans le portail Azure, puis de migrer les étiquettes. Cette stratégie évite la création de doublons d’étiquettes pendant le processus de migration, qu’il faudrait ensuite modifier dans l’un des centres d’administration.
-
-Avant de migrer vos étiquettes, veillez à bien comprendre les [aspects et paramètres d’étiquette non pris en charge par les centres d’administration](configure-policy-migrate-labels.md#considerations-for-unified-labels).
-
-Voir aussi [client qui installer pour le test de nouvelles fonctionnalités ?](faqs-infoprotect.md#which-client-do-i-install-for-testing-new-functionality)
+Pour plus d’informations et pour obtenir des instructions, consultez [comment migrer des étiquettes Azure Information Protection pour les étiquettes de sensibilité d’Office 365](configure-policy-migrate-labels.md).
 
 ## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Une fois que j’ai migré mes étiquettes, quel portail de gestion utiliser ?
 

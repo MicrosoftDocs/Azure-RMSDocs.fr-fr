@@ -1,5 +1,5 @@
 ---
-title: Client Azure Information Protection - historique des versions et politique du support
+title: Client de Azure Information Protection - stratégie de prise en charge et d’historique de Version
 description: Découvrez les nouveautés et les changements d’une version du client Azure Information Protection pour Windows, ainsi que la politique du cycle de vie du support.
 author: cabailey
 ms.author: cabailey
@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3e1f515dc12280cdd2f8d9b8bca49ca483ee1809
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 43f7f685cfa1567084ebdc0877215229b0ae592b
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181393"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64768336"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 

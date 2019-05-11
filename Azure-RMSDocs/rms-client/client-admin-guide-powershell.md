@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2d703eff5d31563c1c34b9937f9a1d2f45e93064
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 9d681f986028f83eb3fe59d9e295db6873828052
+ms.sourcegitcommit: 96a05d1abe20b7c588dccaecea18a73b648179b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183780"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65535323"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -486,7 +486,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 
 1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com/).
 
-2. Pour le locataire Azure AD que vous utilisez avec Azure Information Protection, accédez à **Azure Active Directory** > **Inscriptions des applications**. 
+2. Pour le locataire Azure AD que vous utilisez avec Azure Information Protection, accédez à **Azure Active Directory** > **inscriptions d’application (hérité)**. 
 
 3. Sélectionnez **Nouvelle inscription d’application** pour créer votre application web/API. Dans l’étiquette **Créer**, spécifiez les valeurs suivantes, puis cliquez sur **Créer** :
 

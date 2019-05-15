@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/09/2019
+ms.date: 05/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: f93432e245e1eafc74857a7571a4e0a4fe5d9318
-ms.sourcegitcommit: 1c2d588beccfcb13824f3d518683304018bce452
+ms.openlocfilehash: 311c03815cc245f3d48a588fe4ec5fc6fb6ab4cd
+ms.sourcegitcommit: 01e3669cc499d860dc7cda0d1430196621b7a0d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65493282"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626329"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -99,7 +99,7 @@ Lorsque les deux clients prennent en charge la même fonctionnalité, utilisez l
 |Couleur d’étiquette : | À configurer dans le portail Azure | Conservée après la migration d’étiquette vers Office 365 <br /><br /> Les nouvelles étiquettes créées dans les centres d’administration n’ont pas de couleur|
 |Mise à jour de la stratégie : | Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 24 heures | Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 4 heures|
 |Formats pris en charge pour PDF :| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF (par défaut) <br /><br /> - .ppdf <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br /> <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint|
-|Cmdlets prises en charge :| Ensemble des cmdlets documentées pour [AzureInformationProtection](/powershell/module/azureinformationprotection) | Set-AIPAuthentication ne prend pas en charge les sessions non interactives <br /><br /> Les cmdlets Set-AIPFileClassification et Set-AIPFileLabel ne prennent pas en charge le paramètre *Propriétaire* ni les bibliothèques SharePoint Server. <br /><br /> En outre, le commentaire unique « Aucune étiquette à appliquer » existe pour tous les scénarios dans lesquels aucune étiquette n’est appliquée. <br /><br /> La cmdlet Set-AIPFileLabel ne prend pas en charge le paramètre *EnableTracking*. <br /><br /> La cmdlet Get-AIPFileStatus ne retourne aucune information d’étiquette à partir d’autres abonnés et n’affiche pas le paramètre *RMSIssuedTime*.<br /><br />En outre, le paramètre *LabelingMethod* de la cmdlet Get-AIPFileStatus affiche les valeurs **Privilégié**, **Standard** or **Automatique** et non **Manuel** ou **Automatique**. Pour plus d’informations, consultez la [documentation en ligne](/powershell/module/azureinformationprotection/get-aipfilestatus).|
+|Cmdlets prises en charge :| Ensemble des cmdlets documentées pour [AzureInformationProtection](/powershell/module/azureinformationprotection) | Set-AIPAuthentication ne prend pas en charge les sessions non interactives <br /><br /> Les cmdlets Set-AIPFileClassification et Set-AIPFileLabel ne prennent pas en charge le paramètre *Propriétaire* ni les bibliothèques SharePoint Server. <br /><br /> En outre, le commentaire unique « Aucune étiquette à appliquer » existe pour tous les scénarios dans lesquels aucune étiquette n’est appliquée. <br /><br /> La cmdlet Set-AIPFileLabel ne prend pas en charge le paramètre *EnableTracking*. <br /><br /> La cmdlet Get-AIPFileStatus ne retourne aucune information d’étiquette à partir d’autres abonnés et n’affiche pas le paramètre *RMSIssuedTime*.<br /><br />En outre, le *LabelingMethod* affiche les paramètres de Get-AIPFileStatus **privilégié** ou **Standard** au lieu de **manuel** ou **Automatique**. Pour plus d’informations, consultez la [documentation en ligne](/powershell/module/azureinformationprotection/get-aipfilestatus).|
 |Invites de justification (si configurées) par action dans Office : | Fréquence : par fichier <br /><br /> Diminution du niveau de confidentialité <br /><br /> Suppression d’une étiquette<br /><br /> Suppression de la protection | Fréquence : par session <br /><br /> Diminution du niveau de confidentialité<br /><br /> Suppression d’une étiquette|
 |Supprimer les actions de l’étiquette appliquée : | L’utilisateur doit confirmer la suppression. <br /><br />L’étiquette par défaut ou l’étiquette automatique (si configurée) n’est pas appliquée automatiquement la prochaine fois que l’application Office ouvre le fichier.  <br /><br />| L’utilisateur n’a pas à confirmer la suppression.<br /><br /> L’étiquette par défaut ou l’étiquette automatique (si configurée) est appliquée automatiquement la prochaine fois que l’application Office ouvre le fichier.|
 |Étiquettes automatiques et recommandées : | Configurée en tant que [conditions d’étiquette](../configure-policy-classification.md) dans le portail Azure avec des types d’informations intégrées et des conditions personnalisées utilisant des expressions régulières ou non <br /><br />Les options de configuration comprennent ce qui suit : <br /><br />- Nombre de valeurs uniques/non uniques <br /><br /> - Nombre minimal| Configurée dans les centres d’administration avec les types d’informations sensibles intégrés et des [types d’informations personnalisés](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Les options de configuration comprennent ce qui suit :  <br /><br />- Nombre de valeurs uniques seulement <br /><br />- Nombre de valeurs minimales et maximales <br /><br />- Prise en charge des clauses AND et OR avec les types d’informations <br /><br />- Dictionnaire de mots clés<br /><br />- Niveau de confiance et proximité des caractères personnalisables|

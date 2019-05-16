@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 297608ce7fd64170e9aaa31ab39f0b0e151d7538
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 4f1177df3165a811668ae03e45da02879ff7c872
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184261"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708898"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -66,9 +66,9 @@ Votre déploiement AD RMS actuel utilise l’une des configurations suivantes po
 
 - Protection par mot de passe dans la base de données AD RMS. Il s'agit de la configuration par défaut.
 
-- Protection HSM à l'aide d'un module de sécurité matériel Thales.
+- Protection HSM à l’aide d’un module de sécurité nCipher matériel (HSM).
 
-- Protection HSM à l'aide d'un module de sécurité matériel d'un fournisseur que Thales.
+- Protection HSM à l’aide d’un module de sécurité matériel (HSM) d’un fournisseur que nCipher.
 
 - Protection par mot de passe à l'aide d'un fournisseur de services de chiffrement externe.
 
@@ -82,10 +82,10 @@ Le tableau suivant permet d'identifier la procédure à utiliser pour votre migr
 |Déploiement AD RMS actuel|Topologie de clé de locataire Azure Information Protection choisie|Instructions de migration|
 |-----------------------------|----------------------------------------|--------------------------|
 |Protection par mot de passe dans la base de données AD RMS|Gérée par Microsoft|Consultez la procédure **Migration de clé protégée par logiciel à clé protégée par logiciel** après ce tableau.<br /><br />Ce chemin de migration, qui est le plus simple, nécessite uniquement que vous transfériez vos données de configuration vers Azure Information Protection.|
-|Protection HSM à l'aide d'un module de sécurité matériel Thales nShield (HSM) |Gérée par le client (BYOK)|Consultez la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.<br /><br />Cette opération nécessite l’ensemble d’outils BYOK d’Azure Key Vault et trois procédures, d’abord pour transférer la clé de votre module HSM local vers les modules HSM Azure Key Vault, puis pour autoriser le service Azure Rights Management d’Azure Information Protection à utiliser votre clé de locataire, et enfin pour transférer vos données de configuration vers Azure Information Protection.|
+|Protection HSM à l’aide d’un module de sécurité matériel nCipher nShield (HSM) |Gérée par le client (BYOK)|Consultez la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.<br /><br />Cette opération nécessite l’ensemble d’outils BYOK d’Azure Key Vault et trois procédures, d’abord pour transférer la clé de votre module HSM local vers les modules HSM Azure Key Vault, puis pour autoriser le service Azure Rights Management d’Azure Information Protection à utiliser votre clé de locataire, et enfin pour transférer vos données de configuration vers Azure Information Protection.|
 |Protection par mot de passe dans la base de données AD RMS|Gérée par le client (BYOK)|Consultez la procédure **Migration de clé protégée par logiciel à clé protégée par HSM** après ce tableau.<br /><br />Cette opération nécessite l’ensemble d’outils BYOK d’Azure Key Vault et quatre procédures, d’abord pour extraire votre clé logicielle et l’importer dans un module HSM local, puis pour transférer la clé de votre module HSM local vers les modules HSM Azure Information Protection, ensuite pour transférer vos données Key Vault vers Azure Information Protection, et enfin pour transférer vos données de configuration vers Azure Information Protection.|
-|Protection HSM à l'aide d'un module de sécurité matériel d'un fournisseur que Thales |Gérée par le client (BYOK)|Contactez le fournisseur de votre HSM pour obtenir des instructions sur le transfert de votre clé de ce HSM vers un HSM nShield Thales. Suivez ensuite les instructions de la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.|
-|Protection par mot de passe à l'aide d'un fournisseur de services de chiffrement externe|Gérée par le client (BYOK)|Contactez le fournisseur de votre HSM pour obtenir des instructions concernant le transfert de votre clé vers un HSM nShield Thales. Suivez ensuite les instructions de la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.|
+|Protection HSM à l’aide d’un module de sécurité matériel (HSM) d’un fournisseur que nCipher |Gérée par le client (BYOK)|Contactez le fournisseur pour votre module HSM pour obtenir des instructions comment transférer votre clé de ce HSM vers un module de sécurité matériel nCipher nShield (HSM). Suivez ensuite les instructions de la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.|
+|Protection par mot de passe à l'aide d'un fournisseur de services de chiffrement externe|Gérée par le client (BYOK)|Contactez le fournisseur pour votre fournisseur de chiffrement pour obtenir des instructions pour transférer votre clé vers un module de sécurité matériel nCipher nShield (HSM). Suivez ensuite les instructions de la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.|
 
 Si vous avez une clé protégée par HSM que vous ne pouvez pas exporter, vous pouvez quand même migrer vers Azure Information Protection en configurant votre cluster AD RMS pour un mode en lecture seule. Dans ce mode, le contenu précédemment protégé peut toujours être ouvert, mais le contenu nouvellement protégé utilise une nouvelle clé de locataire que vous gérez vous-même (BYOK) ou qui est gérée par Microsoft. Pour plus d’informations, consultez [Une mise à jour d’Office est disponible pour prendre en charge les migrations d’AD RMS vers Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to).
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5fd82546ccf0334ea244226c143426ab3e0da93b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c1ae08971442fcc943f8473bbcbf74681c027702
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181546"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708882"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gérée par le client : Opérations de cycle de vie des clés de locataire
 
@@ -61,7 +61,7 @@ Pour plus d’informations sur chacune de ces étapes :
 ## <a name="backup-and-recover-your-tenant-key"></a>Sauvegarde et récupération de votre clé de locataire
 Étant donné que vous gérez votre clé de locataire, vous êtes responsable de la sauvegarde de la clé utilisée par Azure Information Protection. 
 
-Si vous avez généré votre clé de locataire en local dans un module de sécurité matériel Thales : Pour sauvegarder la clé, sauvegardez le fichier de clé tokenisée, le fichier world et que les cartes Administrateur. Quand vous transférez votre clé vers Azure Key Vault, le service enregistre le fichier de clé tokenisée pour se protéger des défaillances des nœuds de service. Ce fichier est lié à la sécurité de l’instance ou de la région Azure spécifique. Cependant, ce fichier de clé tokenisée n’est pas une sauvegarde complète. Par exemple, si vous avez besoin d’une copie en texte brut de votre clé pour l’utiliser en dehors d’un HSM Thales, Azure Key Vault ne peut pas la récupérer à votre place car il a seulement une copie non récupérable.
+Si vous avez généré votre clé de locataire en local, dans un nCipher HSM : Pour sauvegarder la clé, sauvegardez le fichier de clé tokenisée, le fichier world et que les cartes Administrateur. Quand vous transférez votre clé vers Azure Key Vault, le service enregistre le fichier de clé tokenisée pour se protéger des défaillances des nœuds de service. Ce fichier est lié à la sécurité de l’instance ou de la région Azure spécifique. Cependant, ce fichier de clé tokenisée n’est pas une sauvegarde complète. Par exemple, si vous avez besoin d’une copie en texte brut de votre clé à utiliser en dehors d’un nCipher HSM, Azure Key Vault ne peut pas récupérer pour vous, car il a uniquement une copie non récupérable.
 
 Azure Key Vault dispose d’une [applet de commande de sauvegarde](/powershell/module/az.keyvault/backup-azkeyvaultkey) que vous pouvez utiliser pour sauvegarder une clé en la téléchargeant et en la stockant dans un fichier. Le contenu téléchargé étant chiffré, il ne peut pas être utilisé à l’extérieur d’Azure Key Vault. 
 

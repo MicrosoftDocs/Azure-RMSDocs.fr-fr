@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9651e1c44f9f6fb59fb8a48fb4435212c827968
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 87edfae6959f5ce6c037379e7564449d53405aae
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184074"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708930"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par logiciel à clé protégée par HSM
 
@@ -29,7 +29,7 @@ Si ce n’est pas le scénario de configuration que vous avez choisi, revenez à
 
 Cette procédure en quatre parties permet d’importer la configuration AD RMS dans Azure Information Protection pour que votre clé de locataire Azure Information Protection soit gérée par l’utilisateur (BYOK) dans Azure Key Vault.
 
-Vous devez d’abord extraire votre clé de certificat de licence serveur des données de configuration AD RMS, transférer la clé vers un module de sécurité matériel (HSM) Thales local, empaqueter et transférer votre clé HSM vers Azure Key Vault, autoriser le service Azure Rights Management d’Azure Information Protection à accéder à votre coffre de clés, puis importer les données de configuration.
+Vous devez tout d’abord extraire votre clé de certificat (SLC) de licence de serveur à partir des données de configuration AD RMS et transférer la clé vers un HSM de nCipher en local, empaqueter et transférer votre clé HSM vers Azure Key Vault, puis autoriser le service Azure Rights Management à partir de Azure Information Protection pour accéder à votre coffre de clés, puis importer les données de configuration.
 
 Comme votre clé de locataire Azure Information Protection est stockée et gérée par Azure Key Vault, cette partie de la migration nécessite une administration dans Azure Key Vault, en plus d’Azure Information Protection. Si Azure Key Vault est géré par un autre administrateur que celui de votre organisation, vous devez coordonner et travailler avec cet administrateur pour effectuer ces procédures.
 
@@ -74,7 +74,7 @@ Avant de commencer, vérifiez que votre organisation dispose d’un coffre de cl
 
     - Si vous ne spécifiez pas le mot de passe quand vous exécutez cette commande (en utilisant le nom complet du paramètre **TpdPassword** ou son nom court **pwd**), vous êtes invité à le spécifier.
 
-3. Sur la même station de travail déconnectée, attachez et configurez votre HSM Thales, conformément à votre documentation Thales. Vous pouvez maintenant importer votre clé dans votre HSM Thales attaché en utilisant la commande suivante, où vous devez remplacer ContosoTPD.pem par votre propre nom de fichier :
+3. Sur la même station de travail déconnectée, attacher et configurer votre nCipher HSM, conformément à votre documentation nCipher. Vous pouvez maintenant importer votre clé dans votre nCipher attaché HSM à l’aide de la commande suivante où vous devez remplacer par votre propre nom de fichier pour ContosoTPD.pem :
 
         generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
@@ -103,7 +103,7 @@ Avant de commencer, vérifiez que votre organisation dispose d’un coffre de cl
 
     **Chemin de la clé : C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
 
-Ce résultat confirme que la clé privée est maintenant migrée vers votre appareil HSM Thales local avec une copie chiffrée enregistrée dans une clé (dans notre exemple, « key_simple_contosobyok »). 
+Cette sortie confirme que la clé privée est maintenant migrée vers votre appareil HSM nCipher en local avec une copie chiffrée est enregistrée dans une clé (dans notre exemple, « key_simple_contosobyok »). 
 
 Maintenant que votre clé de licence serveur a été extraite et importée dans votre HSM local, vous êtes prêt à empaqueter la clé protégée par HSM et à la transférer dans Azure Key Vault.
 

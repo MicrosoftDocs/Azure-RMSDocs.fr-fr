@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 264de1992659b2bd8c7464248704b514ae764274
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: c1fb307d06c277dd6f515adbff35a844f65f77cc
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768191"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708912"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
@@ -164,11 +164,11 @@ Les étapes de migration peuvent être divisées en cinq phases qui peuvent êtr
 
     - **Migration de clé protégée par HSM à clé protégée par HSM** :
 
-        De clé stockée par un module HSM pour AD RMS à clé de locataire Azure Information Protection gérée par le client (scénario BYOK, « Bring Your Own Key »). Cette migration nécessite des étapes supplémentaires pour transférer la clé de votre module HSM Thales local vers Azure Key Vault et pour autoriser le service Azure Rights Management à utiliser cette clé. Votre clé protégée par HSM existante doit être protégée par module. Les clés protégées par OCS ne sont pas prises en charge par les services RMS.
+        De clé stockée par un module HSM pour AD RMS à clé de locataire Azure Information Protection gérée par le client (scénario BYOK, « Bring Your Own Key »). Cela nécessite des étapes supplémentaires pour transférer la clé à partir de votre nCipher local HSM vers Azure Key Vault et autoriser le service Azure Rights Management d’utiliser cette clé. Votre clé protégée par HSM existante doit être protégée par module. Les clés protégées par OCS ne sont pas prises en charge par les services RMS.
 
     - **Migration de clé protégée par logiciel à clé protégée par HSM** :
 
-        De clé basée sur un mot de passe et gérée de façon centralisée dans AD RMS à clé de locataire Azure Information Protection gérée par le client (scénario BYOK, « Bring Your Own Key »). Cette migration est celle qui nécessite le plus de configuration, car vous devez d’abord extraire votre clé logicielle et l’importer dans un module HSM local, puis effectuer les étapes supplémentaires pour transférer la clé de votre module HSM Thales local vers le module HSM Azure Key Vault, et enfin autoriser le service Azure Rights Management à utiliser le coffre de clés qui stocke la clé.
+        De clé basée sur un mot de passe et gérée de façon centralisée dans AD RMS à clé de locataire Azure Information Protection gérée par le client (scénario BYOK, « Bring Your Own Key »). Cela nécessite le plus de configuration, car vous devez tout d’abord extraire votre clé logicielle et l’importer vers un HSM local et puis effectuez les étapes supplémentaires pour transférer la clé à partir de votre HSM de nCipher sur site vers un HSM Azure Key Vault et autoriser les droits d’Azure Service de gestion à utiliser le coffre de clés qui stocke la clé.
 
 - **Étape 5. Activer le service Azure Rights Management**
 

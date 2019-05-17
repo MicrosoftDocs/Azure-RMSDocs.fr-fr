@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 990f729edaa0a2e212812f84fc5a4c63f82e37fb
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 21148e9293c3be1162028a6cf7e26c30fb52a15f
+ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175336"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65822174"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK - métadonnées
 
@@ -39,10 +39,10 @@ Le SDK MIP s’applique à l’ensemble suivant de métadonnées.
 | **Activé**   | True ou False                 | Cet attribut indique si la classification représentée par ce jeu de paires clé-valeur est activée pour l’élément de données. Les produits DLP validez généralement l’existence de cette clé pour identifier l’étiquette de classification. | Oui       |
 | **SiteId**    | GUID                          | ID de locataire Azure Active Directory                                                                                                                                                                                                                   | Oui       |
 | **ActionId**  | GUID                          | ActionID est modifié chaque fois qu’une étiquette est définie. Journaux d’audit inclura les ancien et nouveaux actionID pour autoriser le chaînage de l’étiquetage d’activité à l’élément de données.                                                                                 | Oui       |
-| **Méthode**    | Standard, privilège ou automatique        | Définir via mip::AssignmentMethod                                                                                                                                                                                                                 | Non        |
+| **Méthode**    | Standard ou privilégié        | Définir [mip::AssignmentMethod](reference/mip-enums-and-structs.md#assignmentmethod). Standard implique que l’étiquette est appliquée par défaut, ou automatiquement. Privilèges implique que l’étiquette a été sélectionné manuellement.                                                                                                                                                                                                                 | Non        |
 | **SetDate**   | Format de Date étendues ISO 8601 | Horodateur de l’étiquette a été définie.                                                                                                                                                                                                              | Non        |
 | **Nom**      | chaîne                        | Nom unique au sein du client. Il ne correspond pas nécessairement pour nom d’affichage.                                                                                                                                                              | Non      |
-| **ContentBits** | entier | Masque de bits qui décrit les types de contenu de marquage qui doit être appliqué à un fichier. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4
+| **ContentBits** | entier | Masque de bits qui décrit les types de contenu de marquage qui doit être appliqué à un fichier. CONTENT_HEADER = 0 X 1, CONTENT_FOOTER = 0 X 2, FILIGRANE = 0 X 4, CHIFFRER = 0 X 8
  | Non |
 
 Lorsqu’il est appliqué à un fichier, le résultat est similaire à la table ci-dessous.

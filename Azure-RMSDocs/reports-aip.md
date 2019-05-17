@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 05/07/2019
+ms.date: 05/17/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: d7cc81a41b7515edd0df0e38d5813e0e90b2aa73
-ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
+ms.openlocfilehash: 625fcf1474ebd1de1c087fe62a213590014dce13
+ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65191939"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65780884"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -35,7 +35,7 @@ Utiliser l’analytique d’Azure Information Protection pour la création de ra
 
 - Identifiez les documents qui contiennent des informations sensibles susceptibles de mettre votre organisation en péril si elles ne sont pas protégées, et limitez les risques en suivant les recommandations.
 
-Les données que vous voyez sont agrégées à partir de vos clients Azure Information Protection et des scanneurs Azure Information Protection, des ordinateurs Windows exécutant [Windows Defender Advanced Threat Protection (Windows Defender ATP)](/windows/security/threat-protection/windows-defender-atp/overview), et des [clients prenant en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
+Les données que vous voyez sont agrégées à partir de vos clients d’Azure Information Protection et les scanneurs d’Azure Information Protection, à partir d’ordinateurs Windows en cours d’exécution [Microsoft Defender Advanced Threat Protection (ATP Microsoft Defender)](/windows/security/threat-protection/microsoft-defender-atp/overview)et à partir de [les clients qui prennent en charge l’étiquetage unifiée](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 Par exemple, vous serez en mesure de voir ce qui suit :
 
@@ -88,7 +88,7 @@ Les rapports utilisent [Azure Monitor](/azure/log-analytics/log-analytics-overvi
 Pour plus d’informations, lisez le billet de blog suivant : 
 - [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)
 
-- [Discover and protect sensitive data through Azure Information Protection and Windows Defender ATP](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292)
+- [Découvrir et de protéger les données sensibles via Azure Information Protection et Microsoft Defender ATP](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292)
 
 ### <a name="information-collected-and-sent-to-microsoft"></a>Informations collectées et envoyées à Microsoft
 
@@ -137,7 +137,7 @@ Pour afficher les rapports Azure Information Protection et créer les vôtres, v
 |---------------|--------------------|
 |Un abonnement Azure qui inclut Log Analytics et qui concerne le même locataire qu’Azure Information Protection|Consultez la page de [tarification d’Azure Monitor](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Si vous ne possédez pas un abonnement Azure ou n’utilisez pas Azure Log Analytics, la page des tarifs inclut un lien pour un essai gratuit.|
 |Le client Azure Information Protection ou le client d’étiquetage unifié Azure Information Protection|Si vous ne disposez pas d’un de ces clients, vous pouvez télécharger et les installer à partir de la [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Vérifiez que vous disposez de la version la plus récente pour prendre en charge [toutes les fonctionnalités](#features-that-require-a-minimum-version-of-the-client) pour l’analytique d’Azure Information Protection.|
-|Pour le rapport de **découverte et des risques** : <br /><br />-Pour afficher des données à partir de banques de données locales, vous avez déployé au moins une instance du scanneur Azure Information Protection <br /><br />- Pour afficher les données à partir d’ordinateurs Windows 10, ils doivent au minimum avoir la build 1809, vous utilisez Windows Defender Advanced Threat Protection (Windows Defender ATP), et vous avez activé la fonctionnalité d’intégration Azure Information Protection à partir de Windows Defender Security Center|Pour obtenir des instructions d’installation pour le scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md). <br /><br />Pour obtenir des informations sur la configuration et l’utilisation de la fonctionnalité d’intégration Azure Information Protection à partir de Windows Defender Security Center, consultez [Vue d’ensemble de la protection des informations dans Windows](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
+|Pour le rapport de **découverte et des risques** : <br /><br />-Pour afficher des données à partir de banques de données locales, vous avez déployé au moins une instance du scanneur Azure Information Protection <br /><br />-Pour afficher des données à partir d’ordinateurs Windows 10, ils doivent être une version minimale de 1809, à l’aide de Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP), et vous avez activé la fonctionnalité d’intégration Azure Information Protection à partir de Microsoft Defender Security Center|Pour obtenir des instructions d’installation pour le scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md). <br /><br />Pour plus d’informations sur la configuration et à l’aide de la fonctionnalité d’intégration Azure Information Protection depuis Microsoft Defender Security Center, consultez [protection des informations dans la vue d’ensemble de Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
 |Pour le rapport **Recommandations** : <br /><br />-Pour ajouter un nouveau référentiel de données à partir du portail Azure en tant qu’une action recommandée, vous devez utiliser la dernière version de disponibilité générale du scanneur Azure Information Protection |Pour déployer le scanneur, consultez [déploiement du scanneur Azure Information Protection pour classifier et protéger les fichiers automatiquement](deploy-aip-scanner.md).|
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Autorisations requises pour l’analytique Azure Information Protection
@@ -231,8 +231,6 @@ Dans le panneau Azure Information Protection, recherchez les options du menu **T
     Ce rapport comporte une option **Colonnes** qui permet d’afficher plus d’informations sur l’activité que l’affichage par défaut. Vous pouvez également voir plus de détails sur un fichier en le sélectionnant pour afficher les **détails de l’activité**.
 
 - **Découverte de données (préversion)**  : Utilisez ce rapport pour voir des informations sur les fichiers étiquetés trouvés par les scanneurs et les points de terminaison pris en charge.
-    
-    Remarque : Découverte des points de terminaison est progressivement déployer aux locataires. Vous commencerez à voir des données à partir des points de terminaison pris en charge dans ce rapport lorsque cette fonctionnalité aura été déployée sur votre locataire.
     
     Vous pouvez configurer un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) pour le client Azure Information Protection aux fichiers de rapport qui contiennent des informations sensibles.
     

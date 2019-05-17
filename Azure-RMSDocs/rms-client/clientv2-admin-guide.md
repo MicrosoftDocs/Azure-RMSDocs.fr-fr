@@ -4,17 +4,17 @@ description: Instructions et informations destinées aux administrateurs sur un 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 7caa35896e0dcfd3cd6dc1cf407da87e41e71ef5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 6564980da8ad4067d83c408c2baf0afd8ab5c181
+ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183171"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65822218"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection unifiée étiquetage guide de l’administrateur client
 
@@ -156,9 +156,11 @@ Une fois que vous avez installé le client d’étiquetage unifié Azure Informa
 
 L’équipe Azure Information Protection met régulièrement à jour le client étiquetage Azure Information Protection unifié pour les nouvelles fonctionnalités et les correctifs. Les annonces sont postées sur le [site Yammer](https://www.yammer.com/AskIPTeam) de l’équipe.
 
-Si vous utilisez Windows Update, le client d’étiquetage unifié Azure Information Protection pour Azure Information Protection met automatiquement à niveau la version disponibilité générale de ce client, quel que soit la façon dont le client a été installé. Les nouvelles versions de client sont publiées dans le catalogue quelques semaines après le lancement.
+Si vous utilisez Windows Update, le client d’étiquetage unifié Azure Information Protection met automatiquement à niveau la version disponibilité générale de ce client, quel que soit la façon dont le client a été installé. Les nouvelles versions de client sont publiées dans le catalogue quelques semaines après le lancement.
 
 Vous pouvez également mettre à niveau manuellement le client en téléchargeant la nouvelle version à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Installez ensuite la nouvelle version pour mettre à niveau le client. Vous devez utiliser cette méthode pour mettre à niveau les versions préliminaires et si vous mettez à niveau le client Azure Information Protection.
+
+Si vous mettez à niveau à partir du client Azure Information Protection sur Windows 7, toutes les applications Office redémarrent automatiquement lors de la mise à niveau du client. Ce redémarrage automatique ne s’applique pas aux systèmes d’exploitation ultérieurs, ou si vous mettez à niveau à partir d’une version antérieure du client étiquetage unifiée.
 
 Lorsque vous mettez à niveau manuellement, ne désinstallez la version précédente que si vous changez de méthode d’installation. Par exemple, si vous passez de la version du fichier exécutable (.exe) du client à la version du programme d’installation (.msi) Windows du client. Ou si vous devez installer une version antérieure du client. Par exemple, vous avez installé la préversion actuelle pour la tester et vous devez maintenant revenir à la version actuelle en disponibilité générale.
 

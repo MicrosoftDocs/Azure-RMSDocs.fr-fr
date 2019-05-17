@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 26999c8fdd079c7a34d39415d8beba6763a06f68
-ms.sourcegitcommit: e0ce23467744ec6a4da49081461a459bc37c7d78
+ms.openlocfilehash: 865334193d39a048ac48b6233005673f2be43f03
+ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65443276"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65780906"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
@@ -35,7 +35,7 @@ Qu’est-ce la clé de locataire Azure Information Protection ?
 |Besoins de l'entreprise|Topologie de clé de locataire recommandée :|
 |------------------------|-----------------------------------|
 |Déployez Azure Information Protection rapidement et sans matériel spécial, sans logiciel supplémentaire et sans abonnement Azure.<br /><br />Exemple : des environnements de test et quand votre organisation n’a pas de spécifications réglementaires pour la gestion des clés.|Gestion par Microsoft|
-|Réglementations de conformité, sécurité supplémentaire et contrôle sur toutes les opérations du cycle de vie. <br /><br />Exemple : votre clé doit être protégée par un module de sécurité matériel (HSM).|BYOK|
+|Réglementations de conformité et de contrôle sur toutes les opérations de cycle de vie. <br /><br />Exemple : votre clé doit être protégée par un module de sécurité matériel (HSM).|BYOK|
 
 
 Si nécessaire, vous pouvez changer la topologie de clé de locataire après le déploiement à l’aide de l’applet de commande [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).

@@ -4,18 +4,18 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 05/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 91d16668c82a542984b177f539b276d6e752194f
-ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
+ms.openlocfilehash: 37ecdd3862ee6ae83526979f132ff213b66dcece
+ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64982148"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837788"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unifiée l’étiquetage client - Version historique des versions et politique de support
 
@@ -25,6 +25,10 @@ ms.locfileid: "64982148"
 
 
 Vous pouvez télécharger le client étiquetage unifié d’Azure Information Protection à partir de la [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+Après un court délai de quelques semaines en général, la version plus récente de disponibilité générale est également incluse dans le catalogue Microsoft Update avec un nom de produit de **Microsoft Azure Information Protection**  >  **Microsoft Client Azure Information Protection unifiée l’étiquetage**et la classification de **mises à jour**. Cette inclusion dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou de Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
+
+Pour plus d’informations, consultez [étiquetage client unifié, la mise à niveau et la maintenance d’Azure Information Protection](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
 ### <a name="servicing-information-and-timelines"></a>Informations de maintenance et chronologies
 
@@ -73,7 +77,7 @@ Cette première version de disponibilité générale du client étiquetage unifi
 
 - Paramètres d’étiquette et de stratégie suivants :
     - Marquage visuel (en-têtes, pieds de page, filigranes)
-    - Étiquetage par défaut
+    - Par défaut l’étiquetage - actuellement limité aux étiquettes sans les sous-étiquettes
     - Étiquettes qui appliquent Ne pas transférer et s’affichent uniquement dans Outlook
     - Invites de justification si les utilisateurs baissent le niveau de classification ou suppriment une étiquette
     - Couleurs des étiquettes

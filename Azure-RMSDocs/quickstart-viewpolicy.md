@@ -4,16 +4,16 @@ description: Si Azure Information Protection est nouveau pour votre organisation
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/25/2019
+ms.date: 05/20/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 099d35d7d4862aff3006b1d6cc57423b898234c4
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: d2d3793cad1e1d53301f50a7966545bf19a6c851
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767895"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935004"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
 
@@ -130,7 +130,7 @@ Pour afficher les paramètres de la stratégie Azure Information Protection par 
     
 2. Après les étiquettes, dans la section **Configurer les paramètres à présenter et à appliquer aux utilisateurs finaux d’Information Protection**, les paramètres de la stratégie s’affichent. Par exemple, aucune étiquette par défaut n’est définie, les documents ou e-mails ne doivent pas obligatoirement avoir une étiquette et les utilisateurs n’ont pas à fournir de justification quand ils changent les étiquettes :
     
-    ![Paramètres globaux de la stratégie Azure Information Protection](./media/info-protect-policy-default-settingsv3.png)
+    ![Paramètres globaux de la stratégie Azure Information Protection](./media/defaultsettings-aip.png)
 
 3. Dans la mesure où vous ne voyez que les paramètres, vous pouvez fermer tous les panneaux du portail que vous avez ouverts.
 

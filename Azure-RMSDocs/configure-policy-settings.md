@@ -4,17 +4,17 @@ description: Configurez les paramètres dans la stratégie Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 0c77eb5df06ca3a7ba78b4671cc9e52cdb89a34d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 5eac6cd86ea5d413429c02ad37e0a5e186ab6f22
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180103"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934668"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Guide pratique pour configurer les paramètres de stratégie pour Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.locfileid: "60180103"
 
 En plus du titre de la barre et de l’info-bulle Information Protection, il existe certains paramètres dans la stratégie Azure Information Protection que vous pouvez configurer indépendamment des étiquettes :
 
-![Paramètres globaux de la stratégie Azure Information Protection](./media/info-protect-policy-default-settingsv3.png)
+![Paramètres globaux de la stratégie Azure Information Protection](./media/defaultsettings-aip.png)
 
 Notez que les paramètres de stratégie peuvent avoir des valeurs par défaut différentes, selon la date à laquelle vous avez acheté votre abonnement pour Azure Information Protection. Certains paramètres peuvent également être définis par un [paramètre client personnalisé](./rms-client/client-admin-guide-customizations.md).
 

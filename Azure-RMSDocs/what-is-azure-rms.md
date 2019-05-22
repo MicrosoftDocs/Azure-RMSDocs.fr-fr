@@ -4,19 +4,19 @@ description: Informations concernant Azure Rights Management (Azure RMS), la tec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cf15552af49ef62a31605c2148c72806c7b2cad7
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 42e4f575b310b8cb802d982e25ad021cf2445e13
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767823"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934919"
 ---
 # <a name="what-is-azure-rights-management"></a>Qu'est-ce qu'Azure Rights Management ?
 
@@ -65,7 +65,7 @@ Azure Rights Management respecte les obligations réglementaires, de conformité
 
 √ Utilisation du chiffrement standard et prise en charge de la norme FIPS 140-2. Pour plus d’informations, consultez [Contrôles de chiffrement utilisés par Azure RMS : Algorithmes et longueurs de clé](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
 
-√ Prise en charge des modules de sécurité matériels (HSM) Thales pour stocker votre clé de locataire dans les centres de données Microsoft Azure. Azure Rights Management utilise des environnements de sécurité distincts pour ses centres de données d’Amérique du Nord, de la zone EMEA (Europe, Moyen-Orient et Afrique) et d’Asie. Par conséquent, vos clés peuvent uniquement être utilisées dans votre région.
+√ prise en charge pour le module de sécurité matériel nCipher nShield (HSM) pour stocker votre clé de locataire dans Microsoft Azure data centers. Azure Rights Management utilise des environnements de sécurité distincts pour ses centres de données d’Amérique du Nord, de la zone EMEA (Europe, Moyen-Orient et Afrique) et d’Asie. Par conséquent, vos clés peuvent uniquement être utilisées dans votre région.
 
 √ Certifié pour ce qui suit :
 

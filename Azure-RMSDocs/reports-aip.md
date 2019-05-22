@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 05/17/2019
+ms.date: 05/21/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 625fcf1474ebd1de1c087fe62a213590014dce13
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: afded60f7a9b1a67725fe08887895673c2b2ccab
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780884"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934960"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -198,6 +198,18 @@ Pour le client Azure Information Protection :
 
 - Prise en charge pour l’audit : Version 1.41.51.0
 - Prise en charge pour la découverte de point de terminaison : Version 1.48.204.0
+
+### <a name="storage-requirements-and-data-retention"></a>Rétention de données et des besoins de stockage
+
+La quantité de données collectées et stockées dans votre espace de travail Azure Information Protection peut varier considérablement pour chaque client, en fonction de facteurs tels que la procédure de nombreux clients Azure Information Protection et autres points de terminaison pris en charge vous disposez, que vous soyez collecte de données de découverte de point de terminaison, vous avez déployé des scanneurs et ainsi de suite.
+
+Toutefois, en tant que point de départ, vous pouvez trouver les estimations suivantes utiles :
+
+- Pour les données d’audit générées par les clients Azure Information Protection uniquement : 2 Go par 10 000 utilisateurs actifs.
+
+- Pour les données d’audit générées par les clients Azure Information Protection, les scanneurs et les Microsoft Defender ATP : 20 Go par 10 000 utilisateurs actifs.
+
+Journaux d’analyse Azure a un **l’utilisation et estimation des coûts** des fonctionnalités pour vous aider à estimer et vérifiez la quantité de données stockées, et vous pouvez également contrôler la période de rétention de données pour votre espace de travail Analytique de journal. Pour plus d’informations, consultez [gérer l’utilisation et les coûts avec les journaux d’Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurer un espace de travail Log Analytics pour les rapports
 

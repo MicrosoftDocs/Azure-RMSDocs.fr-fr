@@ -9,15 +9,15 @@ ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 2341bfbdc443a15096d178b143e6bd1464b1a53e
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65935078"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutoriel : Configurer les paramètres de stratégie Azure Information Protection qui interagissent
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -142,7 +142,7 @@ Si nous n’avions pas défini d’étiquette par défaut avec le paramètre d�
 
 ### <a name="recommendations-for-emails-with-attachments"></a>Recommandations pour les e-mails avec pièces jointes
 
-Pour le document Word ouvert, choisissez une étiquette ayant une classification plus élevée que **Général** : par exemple, l’une des sous-étiquettes sous **Confidentiel**, comme **Confidentiel – Tout le monde (non protégé)**. Enregistrez le document localement et donnez-lui n’importe quel nom. 
+Pour le document Word ouvert, choisissez une étiquette ayant une classification plus élevée que **Général** : par exemple, l’une des sous-étiquettes sous **Confidentiel**, comme **Confidentiel – Tout le monde (non protégé)** . Enregistrez le document localement et donnez-lui n’importe quel nom. 
 
 Démarrez Outlook et créez un e-mail. Comme nous l’avons vu avec Word, le nouvel e-mail est automatiquement étiqueté comme **Général** et la barre Information Protection s’affiche.
 

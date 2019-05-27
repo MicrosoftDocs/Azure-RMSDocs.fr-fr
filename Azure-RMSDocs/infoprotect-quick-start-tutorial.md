@@ -9,15 +9,15 @@ ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 10fa599831a57291d6e89574b2d57a1db025b2ac
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65934825"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutoriel : Configurer les paramètres de la stratégie Azure Information Protection et créer une étiquette
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -176,7 +176,7 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
 
 15. Dans le panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette que vous venez de créer, la sous-étiquette nommée **Finance** et cliquez sur **OK**.
 
-16. Dans le panneau **Stratégie : Globale**, votre nouvelle sous-étiquette s’affiche désormais dans votre stratégie globale, qui est configurée pour le marquage visuel et la protection. Par exemple :
+16. Dans le panneau **Stratégie : Globale**, votre nouvelle sous-étiquette s’affiche désormais dans votre stratégie globale, qui est configurée pour le marquage visuel et la protection. Par exemple :
 
     ![Tutoriel Azure Information Protection : nouvelle sous-étiquette](./media/info-protect-policy-configuredv2.png)
     
@@ -263,7 +263,7 @@ Si vous ne souhaitez pas conserver les modifications que vous avez effectuées d
 
 2. Rétablissez les valeurs d’origine (dont vous avez pris note) des paramètres de stratégie, puis sélectionnez **Enregistrer**. 
 
-3. Dans l’option de menu **Classifications** > **Étiquette** : dans le panneau **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel (**…**) de l’étiquette **Finance** que vous avez créée.
+3. Dans l’option de menu **Classifications** > **Étiquette** : dans le panneau **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel ( **…** ) de l’étiquette **Finance** que vous avez créée.
 
 4. Sélectionnez **Supprimer cette étiquette**, puis **OK** si une confirmation vous est demandée.
 

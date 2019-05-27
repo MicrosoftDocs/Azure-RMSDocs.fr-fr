@@ -9,15 +9,15 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: d2d3793cad1e1d53301f50a7966545bf19a6c851
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65935004"
 ---
-# <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
+# <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -112,7 +112,7 @@ Si elles ne ressemblent aux étiquettes dans l’image de la section précédent
 
 - À partir des colonnes **MARKING** et **PROTECTION**, vous pouvez voir que certaines étiquettes contiennent des marquages visuels configurés. Les marquages visuels sont un pied de page, un en-tête et un filigrane. Certaines étiquettes également avoir une protection définie. 
 
-Par exemple : 
+Par exemple : 
 
 ![Présentation par guide de démarrage rapide Azure Information Protection des étiquettes par défaut](./media/info-protect-policy-default-labelsv2.png)
 

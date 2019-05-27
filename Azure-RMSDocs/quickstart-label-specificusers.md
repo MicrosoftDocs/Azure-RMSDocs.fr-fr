@@ -9,15 +9,15 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 15359fac56b4bef68ae9668a31c82a8b742b208f
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "64767843"
 ---
-# <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques
+# <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -63,11 +63,11 @@ Commencez par créer votre nouvelle étiquette.
 
 3. Dans le panneau **Étiquette**, spécifiez au moins les éléments suivants :
     
-    - **Nom d'affichage de l’étiquette** : Nom de l’étiquette que verront les utilisateurs et qui identifie la classification du contenu. Par exemple : `Sales - Restricted`.
+    - **Nom d'affichage de l’étiquette** : Nom de l’étiquette que verront les utilisateurs et qui identifie la classification du contenu. Par exemple : `Sales - Restricted`.
     
-    - **Description** : Info-bulle qui aide les utilisateurs à savoir quand sélectionner cette nouvelle étiquette. Par exemple : `Business data that is restricted to the Sales Team.`
+    - **Description** : Info-bulle qui aide les utilisateurs à savoir quand sélectionner cette nouvelle étiquette. Exemple : `Business data that is restricted to the Sales Team.`
 
-4. Vérifiez que l’option est marquée **Activé** **(valeur par défaut)**, puis sélectionnez **Enregistrer**.
+4. Vérifiez que l’option est marquée **Activé** **(valeur par défaut)** , puis sélectionnez **Enregistrer**.
 
 ## <a name="add-the-label-to-a-new-scoped-policy"></a>Ajouter l’étiquette à une nouvelle stratégie délimitée
 
@@ -101,11 +101,11 @@ Pour tester cette étiquette, il vous faut au minimum deux ordinateurs, car le c
 
 Si vous ne souhaitez pas conserver cette étiquette et cette stratégie délimitée, suivez cette procédure :
 
-1. À partir de l’option de menu **Classifications** > **Stratégies** : Dans le panneau **Azure Information Protection – Stratégies**, sélectionnez le menu contextuel (**…**) de la stratégie délimitée que vous avez créée. Par exemple, **Sales**.
+1. À partir de l’option de menu **Classifications** > **Stratégies** : Dans le panneau **Azure Information Protection – Stratégies**, sélectionnez le menu contextuel ( **…** ) de la stratégie délimitée que vous avez créée. Par exemple, **Sales**.
 
 2. Sélectionnez **Supprimer la stratégie**, puis **OK** si une confirmation vous est demandée.
 
-3. Dans l’option de menu **Classifications** > **Étiquette** : Dans le panneau **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel (**…**) de l’étiquette que vous avez créée.  par exemple, **Sales - Restricted**.
+3. Dans l’option de menu **Classifications** > **Étiquette** : Dans le panneau **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel ( **…** ) de l’étiquette que vous avez créée.  par exemple, **Sales - Restricted**.
 
 4.  Sélectionnez **Supprimer cette étiquette**, puis **OK** si une confirmation vous est demandée.
 

@@ -9,21 +9,21 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 657d85e90ffe4192514101595815f5110564d761
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "64767791"
 ---
-# <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
+# <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Dans ce démarrage rapide, vous allez installer et configurer le scanneur Azure Information Protection pour trouver les informations sensibles consignées dans les fichiers stockés dans un magasin de données local. Par exemple, un dossier local, un partage réseau ou SharePoint Server.
 
-Remarque : Ce démarrage rapide utilise la version en disponibilité générale actuelle du scanneur, qui utilise le portail Azure pour la configuration au lieu des cmdlets PowerShell utilisées par les versions précédentes.
+Remarque : Ce démarrage rapide utilise la version en disponibilité générale actuelle du scanneur, qui utilise le portail Azure pour la configuration au lieu des cmdlets PowerShell utilisées par les versions précédentes.
 
 Cette configuration prend moins de 10 minutes.
 
@@ -87,7 +87,7 @@ Avant d’installer le scanneur, créez un profil pour celui-ci dans le portail 
     
     ![Ajouter un référentiel de données pour le scanneur Azure Information Protection](./media/scanner-repository-add.png)
 
-8. Dans le panneau **Référentiel**, spécifiez votre dossier local que vous avez créé dans la première étape. Par exemple : `C:\TestScanner`
+8. Dans le panneau **Référentiel**, spécifiez votre dossier local que vous avez créé dans la première étape. Exemple : `C:\TestScanner`
     
     Pour les autres paramètres de ce panneau, ne les modifiez pas, mais conservez-les comme **profil par défaut**. Cela signifie que le référentiel de données hérite des paramètres du profil de scanneur. 
     

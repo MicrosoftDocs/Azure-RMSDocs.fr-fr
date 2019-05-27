@@ -4,17 +4,17 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 4868e0972839bfd1fa13f230a4e3d1d0af8fe768
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c365b71c2047a3556c3ba4da091945454096e048
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179863"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186677"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -141,9 +141,9 @@ Si la police spécifiée n’est pas disponible, le client utilise la police Cal
 
 ### <a name="setting-the-font-color"></a>Définition de la couleur de la police
 
-Vous pouvez choisir une couleur dans la liste des couleurs disponibles ou spécifier une couleur personnalisée en entrant un code (triplet hexadécimal) représentant les composants RVB (rouge, vert, bleu) de la couleur. Par exemple, **#DAA520**. 
+Vous pouvez choisir une couleur dans la liste des couleurs disponibles ou spécifier une couleur personnalisée en entrant un code (triplet hexadécimal) représentant les composants RVB (rouge, vert, bleu) de la couleur. Par exemple, **#40e0d0** est la valeur RVB pour turquoise. 
 
-Si vous avez besoin d’informations de référence pour ces codes, l’article [Couleurs par nom](https://msdn.microsoft.com/library/aa358802\(v=vs.85\).aspx) de la documentation MSDN constitue un bon point de départ. Ces codes sont utilisés dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
+Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à partir de la [ \<couleur >](https://developer.mozilla.org/docs/Web/CSS/color_value) page à partir de la documentation web MSDN. Ces codes sont utilisés dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

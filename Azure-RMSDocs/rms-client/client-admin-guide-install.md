@@ -4,19 +4,19 @@ description: Instructions et informations destinées aux administrateurs pour le
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 042fb8ea9eb7c129373fa9822d95b3774635c48d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 735d6952083b00e4900c6ad4b444c1b30178998e
+ms.sourcegitcommit: 5ecf68d050152e0b425fa8cf6f3890951185b14a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183804"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050743"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 
@@ -199,7 +199,6 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installation|
     |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installation|
     |Office 2016|Toutes les versions prises en charge|64 bits : [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bits : [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installation|
-    |Office 2013|Toutes les versions prises en charge|64 bits : [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits : [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installation|
     |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installation|
     |Office 2010|Windows 8.1 et Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB2843630 ou KB2919355 n’est pas installé|
     |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installation|

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: c54754c5ec016aaaa54874b2be5bd0ac2d112e90
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 46102a1b2b60b58d47d0e436f25b2480f2737a51
+ms.sourcegitcommit: 5ecf68d050152e0b425fa8cf6f3890951185b14a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183672"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050734"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : Installer le client étiquetage Azure Information Protection unifié pour les utilisateurs
 
@@ -186,7 +186,7 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
 
 1. Téléchargez la version .msi du client étiquetage unifié (AzInfoProtection_UL) Azure Information Protection depuis le [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
-    Si une préversion est disponible, conservez cette version à des fins de test uniquement. Elle n’est pas destinée aux utilisateurs finaux dans un environnement de production. 
+    Si une préversion est disponible, conservez cette version à des fins de test uniquement. Elle n’est pas destinée aux utilisateurs finaux dans un environnement de production.
 
 2. Pour chaque ordinateur qui exécute le fichier .msi, vous devez vérifier que les dépendances logicielles suivantes sont établies. Par exemple, empaquetez-les avec la version .msi du client ou déployez-les uniquement sur les ordinateurs qui répondent à ces dépendances :
     

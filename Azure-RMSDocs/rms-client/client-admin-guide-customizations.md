@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5f9ac2414e83ab84690c0fdaea187dad8d7f3b36
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: bd17dbf51042818250cbea95ee2738d516c76077
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768368"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186685"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -380,7 +380,7 @@ Créez le paramètre client avancé suivant avec une des valeurs suivantes :
 
 Par défaut, l’avertissement, justifier ou de bloquer des messages contextuels s’appliquent à tous les documents Office et PDF. Vous pouvez affiner cette liste en spécifiant les extensions de nom de fichier doivent afficher l’avertissement, justifier ou bloquer des messages avec une propriété de client avancé supplémentaires et une liste séparée par des virgules des extensions de nom de fichier.
 
-Exemple de valeur pour plusieurs extensions de nom de fichier définir sous forme de chaîne séparée par des virgules : `.XLSX,.XLSM,.XLS,.XLTX,.XLTM, .DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+Exemple de valeur pour plusieurs extensions de nom de fichier définir sous forme de chaîne séparée par des virgules : `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
 Dans cet exemple, un document PDF sans étiquette n’entraîne pas avertir, justifier ou bloquer des messages contextuels.
 

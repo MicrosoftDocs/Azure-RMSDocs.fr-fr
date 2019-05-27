@@ -4,17 +4,17 @@ description: Vue d’ensemble technique du service Azure Information Protection,
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 05/20/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
-ms.openlocfilehash: 768cac711deff33bf796973ede2541250df5f357
-ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
+ms.openlocfilehash: 0bb1096a903be953eb9702bc89b6a8c98d340946
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64982172"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935027"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
@@ -26,6 +26,8 @@ L’image suivante illustre Azure Information Protection en action sur l’ordin
 
 ![Exemple de classification recommandée pour Azure Information Protection](./media/info-protect-recommend-calloutsv2.png)
 
+###### <a name="screenshot-from-the-azure-information-protection-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Capture d’écran du [client Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+
 Une fois que votre contenu est classifié (et éventuellement protégé), vous pouvez suivre et contrôler son utilisation. Vous pouvez analyser les flux de données pour obtenir des informations sur vos activités, détecter les comportements à risque et prendre des mesures correctives, suivre l’accès aux documents, empêcher la fuite de données ou une mauvaise utilisation des données, etc.
 
 ## <a name="how-labels-apply-classification"></a>Comment les étiquettes appliquent la classification
@@ -36,6 +38,7 @@ Par exemple, l’e-mail suivant a été classé sous l’étiquette « Général
 
 ![Exemple d’en-têtes et de pied de page d’e-mail montrant la classification Azure Information Protection](./media/example-email-footerv2.png)
 
+###### <a name="screenshot-from-the-azure-information-protection-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Capture d’écran du [client Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ## <a name="how-data-is-protected"></a>Comment les données sont protégées
 
@@ -63,7 +66,9 @@ Pour plus d’informations sur la protection Azure Rights Management, consultez 
 
 Azure Information Protection s’intègre aux workflows existants des utilisateurs finaux quand le client Azure Information Protection est installé. Ce client installe la barre Information Protection dans les applications Office, comme illustré dans la première image qui montre cette barre dans Word. La même barre Information Protection est ajoutée à Excel, PowerPoint et Outlook. Par exemple :
 
-![Exemple de la barre Azure Information Protection dans Excel](./media/excel2016-infoprotect-barv2.png)
+![Exemple de la barre Azure Information Protection dans Excel](./media/excelproplus-infoprotect-bar.png)
+
+###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Capture d’écran du [client d’étiquetage unifié Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) 
 
 Cette barre Information Protection permet aux utilisateurs finaux de sélectionner des étiquettes pour une classification correcte. Si nécessaire, les étiquettes peuvent également être appliquées automatiquement pour faciliter le travail des utilisateurs ou pour respecter les stratégies de votre organisation.
 
@@ -91,9 +96,11 @@ Par exemple, un utilisateur Gmail voit ceci dans un e-mail :
 
 ![Expérience du destinataire Gmail pour OME et AIP](./media/ome-message.png)
 
-Pour les utilisateurs qui envoient l’e-mail, leur flux de travail ne diffère pas de l’envoi d’un e-mail protégé à un utilisateur de leur propre organisation. Par exemple, ils peuvent sélectionner le bouton **Ne pas transférer** que le client Azure Information Protection peut ajouter au ruban Outlook. Cette fonctionnalité Ne pas transférer peut aussi être intégrée dans une étiquette que les utilisateurs sélectionnent, pour que l’e-mail soit classé et protégé :
+Pour les utilisateurs qui envoient l’e-mail, leur flux de travail ne diffère pas de l’envoi d’un e-mail protégé à un utilisateur de leur propre organisation. Par exemple, ils peuvent sélectionner le bouton **Ne pas transférer** que le client Azure Information Protection peut ajouter au ruban Outlook. Cette fonctionnalité Ne pas transférer peut aussi être intégrée dans une étiquette que les utilisateurs sélectionnent, pour que l’e-mail soit classé et protégé. Par exemple :
 
-![Sélection d’une étiquette configurée pour appliquer la règle Ne pas transférer](./media/recipients-only-label.png)
+![Sélection d’une étiquette configurée pour appliquer la règle Ne pas transférer](./media/recipients-only-label2.png)
+
+###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Capture d’écran du [client d’étiquetage unifié Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 Vous pouvez aussi fournir automatiquement une protection aux utilisateurs avec des règles de flux de messagerie qui appliquent une protection des droits. 
 

@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 05/21/2019
+ms.date: 05/29/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: afded60f7a9b1a67725fe08887895673c2b2ccab
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: f35847247db96fdb9396f7bfd1e8ad860e94a88e
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934960"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269846"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -152,7 +152,7 @@ Détails :
     
     - Pour créer votre espace de travail Log Analytics ou des requêtes personnalisées :
     
-        - **Administrateur Information Protection**
+        - **Administrateur Azure Information Protection**
         - **Administrateur de sécurité**
         - **Administrateur de conformité**
         - **Administrateur général**
@@ -162,7 +162,7 @@ Détails :
         - **Lecteur Sécurité**
     
     > [!NOTE] 
-    > Si votre locataire a été migré vers le magasin d’étiquetage unifié, vous ne pouvez pas utiliser le rôle Administrateur Information Protection. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Si votre client a été migré vers le magasin d’étiquetage unifié, vous ne pouvez pas utiliser le rôle d’administrateur Azure Information Protection. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 2. Par ailleurs, vous devez disposer de l’un des [rôles Azure Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) ou [rôles Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard pour accéder à votre espace de travail Azure Log Analytics :
     
@@ -271,7 +271,42 @@ Lorsque vous créez vos propres requêtes, utilisez les noms de schéma convivia
 
 Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’événement que vous pouvez utiliser pour les requêtes personnalisées avec l’analytique Azure Information Protection.
 
-|Column name|Description| |-----_-----|-----------| |Time|Event time: UTC in format YYYY-MM-DDTHH:MM:SS| |User|User: Format UPN or DOMAIN\USER| |ItemPath|Full item path or email subject| |ItemName|File name or email subject | |Method|Label assigned method: Manual, Automatic, Recommended, Default, or Mandatory| |Activity|Audit activity: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection, or NewCustomProtection | |LabelName|Label name (not localized)| |LabelNameBefore |Label name before change (not localized) | |ProtectionType|Protection type [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />| |ProtectionBefore|Protection type before change [JSON] | |InformationTypesMatches|JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data where an empty array means no information types found, and null means no information available| |MachineName |FQDN when available; otherwise host name| |DeviceRisk|Device risk score from WDATP when available| |Platform|Device platform (Win, OSX, Android, iOS) | |ApplicationName|Application friendly name| |AIPVersion|Version of the Azure Information Protection client that performed the audit action | |TenantId|Azure AD tenant ID | |AzureApplicationId|Azure AD registered application ID (GUID)| |ProcessName|Process that hosts MIP SDK| |LabelId|Label GUID or null| |IsProtected|Whether protected: Yes/No | |ProtectionOwner |Rights Management owner in UPN format| |LabelIdBefore|Label GUID or null before change| |InformationTypesAbove55|JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data with confidence level 55 or above | |InformationTypesAbove65|JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data with confidence level 65 or above | |InformationTypesAbove75|JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data with confidence level 75 or above | |InformationTypesAbove85|JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data with confidence level 85 or above | |InformationTypesAbove95|JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data with confidence level 95 or above| |DiscoveredInformationTypes |JSON array of [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) found in data and their matched content (if enabled) where an empty array means no information types found, and null means no information available | |ProtectedBefore|Whether the content was protected before change: Yes/No | |ProtectionOwnerBefore|Rights Management owner before change | |UserJustification|Justification when downgrading or removing label| |LastModifiedBy|User in UPN format who last modified the file. Available for Office and SharePoint Online only| |LastModifiedDate|UTC in format YYYY-MM-DDTHH:MM:SS: Available for Office & SharePoint Online only |
+|Nom de la colonne|Description|
+|-----------|-----------|
+|Time|Heure de l’événement : Heure UTC au format AAAA-MM-JJThh|
+|Utilisateur|Utilisateur : Format UPN ou domaine\nom d’utilisateur|
+|ItemPath|Objet de chemin d’accès ou de courrier électronique l’élément complet|
+|ItemName|Fichier objet de nom ou e-mail |
+|Méthode|Nom attribué de méthode : Manuel, automatique, recommandé, par défaut ou obligatoire|
+|Activité|Activité d’audit : DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, découvrir, accès, RemoveCustomProtection, ChangeCustomProtection ou NewCustomProtection |
+|LabelName|Nom de l’étiquette (ne pas localisé)|
+|LabelNameBefore |Nom d’étiquette avant modification (non localisée) |
+|ProtectionType|Type de protection [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
+|ProtectionBefore|Type de protection avant modification [JSON] |
+|InformationTypesMatches|Tableau JSON des [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) ne trouvé dans les données où un tableau vide ne signifie aucun type d’informations est trouvé et null signifie aucune information disponible|
+|MachineName |Nom de domaine complet lorsqu’il est disponible ; nom d’hôte dans le cas contraire|
+|DeviceRisk|Score de risque d’appareil à partir de Windows Defender ATP lorsqu’il est disponible|
+|Plateforme|Plateforme d’appareil (Win, OSX, Android, iOS) |
+|ApplicationName|Nom convivial de l’application|
+|AIPVersion|Version du client Azure Information Protection qui a effectué l’action d’audit |
+|TenantId|ID de locataire Azure AD |
+|AzureApplicationId|ID (GUID) de l’application inscrits à Azure AD|
+|ProcessName|Processus qui héberge du SDK MIP|
+|LabelId|GUID de l’étiquette ou la valeur null|
+|IsProtected|Si des protégés : Oui/non |
+|ProtectionOwner |Propriétaire Rights Management au format UPN|
+|LabelIdBefore|GUID de l’étiquette ou la valeur null avant modification|
+|InformationTypesAbove55|Tableau JSON des [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trouvées dans les données avec le niveau de confiance 55 ou ultérieure |
+|InformationTypesAbove65|Tableau JSON des [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trouvées dans les données avec le niveau de confiance 65 ou version ultérieure |
+|InformationTypesAbove75|Tableau JSON des [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trouvées dans les données avec le niveau de confiance 75 ou version ultérieure |
+|InformationTypesAbove85|Tableau JSON des [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trouvées dans les données avec le niveau de confiance 85 ou version ultérieure |
+|InformationTypesAbove95|Tableau JSON des [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trouvées dans les données avec le niveau de confiance de 95 ou version ultérieure|
+|DiscoveredInformationTypes |Tableau JSON des [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trouvé dans les données et leur mise en correspondance du contenu (si activé) où un tableau vide ne signifie aucun type d’informations est trouvé et null signifie aucune information disponible |
+|ProtectedBefore|Indique si le contenu a été protégé avant modification : Oui/non |
+|ProtectionOwnerBefore|Propriétaire Rights Management avant modification |
+|UserJustification|Justification quand rétrogradation ou de supprimer l’étiquette|
+|LastModifiedBy|Utilisateur au format UPN qui a modifié le fichier. Disponible pour Office et SharePoint Online uniquement|
+|LastModifiedDate|Heure UTC au format AAAA-MM-JJThh : Disponible pour Office et SharePoint Online uniquement |
 
 
 #### <a name="examples-using-informationprotectionevents"></a>Exemples d’utilisation d’InformationProtectionEvents

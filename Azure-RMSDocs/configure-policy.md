@@ -3,7 +3,7 @@ title: Configurer la stratégie Azure Information Protection – AIP
 description: Pour configurer la classification, l’étiquetage et la protection, vous devez configurer la stratégie Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-ms.date: 05/17/2019
+ms.date: 05/29/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ce3464a1035c79655709d47ea8f64a885602d994
-ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
+ms.openlocfilehash: 53847787fa79782c2bf8e6ce2b6b032e439d1547
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822187"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269723"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -60,7 +60,7 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
 
 - Utilisez un compte avec l’un des [rôles d’administrateur](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) suivants :
     
-    - **Administrateur Information Protection**
+    - **Administrateur Azure Information Protection**
     
     - **Lecteur Sécurité** pour [l’analytique Azure Information Protection](reports-aip.md) uniquement
     
@@ -71,7 +71,7 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
   - **Administrateur général**
     
     > [!NOTE] 
-    > Si votre locataire a été migré vers le magasin d’étiquetage unifié, l’administrateur Information Protection n’est plus pris en charge. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Si votre client a été migré vers le magasin d’étiquetage unifié, l’administrateur Azure Information Protection (anciennement « administrateur Information Protection ») n’est plus pris en charge. [Plus d’informations](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Pour accéder au panneau Azure Information Protection pour la première fois
@@ -93,7 +93,7 @@ La prochaine fois que vous accéderez au panneau **Azure Information Protection*
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Guide de configuration de la stratégie Azure Information Protection
 
-1. Vérifiez que vous êtes connecté au portail Azure avec l’un de ces rôles d’administration : Administrateur Information Protection, Administrateur de sécurité ou Administrateur général. Consultez la [section précédente](#signing-in-to-the-azure-portal) pour plus d’informations sur ces rôles d’administration.
+1. Vérifiez que vous êtes connecté au portail Azure avec l’un de ces rôles d’administration : Administrateur Azure Information Protection, administrateur de sécurité ou administrateur général. Consultez la [section précédente](#signing-in-to-the-azure-portal) pour plus d’informations sur ces rôles d’administration.
 
 2. Si nécessaire, accédez au panneau **Azure Information Protection** : Par exemple, dans le menu hub, cliquez sur **Tous les services** et commencez à taper **Information Protection** dans la zone Filtrer. Dans les résultats, sélectionnez **Azure Information Protection**. 
     
@@ -106,7 +106,7 @@ La prochaine fois que vous accéderez au panneau **Azure Information Protection*
 
 Vous pouvez créer autant d’étiquettes que vous le souhaitez. Cependant, quand il commence à y en avoir trop pour que les utilisateurs puissent voir et sélectionner facilement la bonne étiquette, créez des stratégies délimitées de façon que les utilisateurs voient seulement les étiquettes qui sont pertinentes pour eux. Il existe une limite supérieure pour les étiquettes qui appliquent la protection, qui est de 500.
 
-Lorsque vous apportez des modifications dans un panneau Azure Information Protection, cliquez sur **Enregistrer** pour enregistrer les modifications, ou cliquez sur **Ignorer** pour rétablir les derniers paramètres enregistrés. Quand vous enregistrez des modifications dans une stratégie ou apportez des modifications à des étiquettes qui sont ajoutées à des stratégies, ces modifications sont automatiquement publiées. Il n’y a pas d’option de publication distincte.
+Lorsque vous apportez des modifications dans un panneau Azure Information Protection, cliquez sur **Enregistrer** pour enregistrer les modifications, ou cliquez sur **Ignorer** pour rétablir les derniers paramètres enregistrés. Lorsque vous enregistrez des modifications dans une stratégie ou apportez des modifications aux étiquettes qui sont ajoutées aux stratégies, ces modifications sont automatiquement publiées. Il n’y a pas d’option de publication distincte.
 
 Le client Azure Information Protection vérifie si des modifications ont été apportées au démarrage d’une application Office prise en charge et télécharge les modifications en tant que dernière stratégie Azure Information Protection. Autres déclencheurs qui actualisent la stratégie sur le client :
 

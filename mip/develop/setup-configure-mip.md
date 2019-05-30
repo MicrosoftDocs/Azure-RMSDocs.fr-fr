@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 03/01/2019
 ms.author: mbaldwin
 ms.openlocfilehash: db815d17303abb0fb98b6e5936fbcd1f975d74f0
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60184416"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installation et configuration du kit SDK Microsoft Information Protection (MIP) 
@@ -27,7 +27,7 @@ Veillez à consulter les rubriques suivantes avant de commencer :
 - [Comment la protection fonctionne-t-elle dans Azure Information Protection ?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
 > [!IMPORTANT]
-> **Afin de respecter la confidentialité de l’utilisateur, vous devez demander à l’utilisateur à donner son consentement avant d’activer la journalisation automatique.** L’exemple suivant est un message standard que Microsoft utilise pour la notification de journalisation :
+> **Afin de respecter la confidentialité de l’utilisateur, vous devez lui demander son consentement avant d’activer la journalisation automatique.** L’exemple suivant est un message standard que Microsoft utilise pour la notification de journalisation :
 >
 > *En activant la journalisation des erreurs et des performances, vous acceptez d’envoyer les données des erreurs et des performances à Microsoft. Microsoft collecte les données des erreurs et des performances via Internet (« Données »). Microsoft utilise ces données pour fournir et améliorer la qualité, la sécurité et l’intégrité des produits et des services Microsoft. Par exemple, nous analysons les performances et la fiabilité, comme les fonctionnalités que vous utilisez, la rapidité de réponse des fonctionnalités, les performances de l’appareil, les interactions de l’interface utilisateur et tous les problèmes que vous rencontrez avec le produit. Les données incluent également des informations sur la configuration de votre logiciel, comme le logiciel en cours d’exécution et l’adresse IP.*
 
@@ -45,7 +45,7 @@ De nombreux exemples du kit SDK requièrent l’accès à un abonnement Office 3
 
 ## <a name="configure-sensitivity-labels"></a>Configurer les étiquettes de sensibilité
 
-Si vous utilisez actuellement Azure Information Protection, vous devez migrer vos étiquettes au centre de conformité et de sécurité Office 365. Pour plus d’informations sur ce processus, consultez [Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365](/azure/information-protection/configure-policy-migrate-labels). 
+Si vous utilisez actuellement Azure Information Protection, vous devez migrer vos étiquettes vers le Centre de sécurité et conformité Office 365. Pour plus d’informations sur ce processus, consultez [Guide pratique pour migrer les étiquettes Azure Information Protection vers le Centre de sécurité et conformité Office 365](/azure/information-protection/configure-policy-migrate-labels). 
 
 ## <a name="configure-your-client-workstation"></a>Configurer votre station de travail cliente
 
@@ -68,12 +68,12 @@ Ensuite, exécutez la procédure suivante pour vous assurer que votre ordinateur
    - Charge de travail Windows **Développement pour la plateforme Windows universelle**, ainsi que les composants facultatifs suivants :
      - **Outils de plateforme Windows universelle C++**
      - **SDK Windows 10 (10.0.16299.0)** ou version ultérieure, s’il n’est pas inclus par défaut
-   - Charge de travail Windows **Développement Desktop en C++**, ainsi que les composants facultatifs suivants :
+   - Charge de travail Windows **Développement Desktop en C++** , ainsi que les composants facultatifs suivants :
      - **SDK Windows 10 (10.0.16299.0)** ou version ultérieure, s’il n’est pas inclus par défaut 
 
      [![Installation de Visual Studio](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. Installer le [ADAL.PS PowerShell Module](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2): 
+3. Installez le [module PowerShell ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) : 
 
    - Étant donné que les droits d’administrateur sont requis pour installer les modules, vous devez d’abord effectuer, au choix, l’une des opérations suivantes :
 
@@ -94,19 +94,19 @@ Ensuite, exécutez la procédure suivante pour vous assurer que votre ordinateur
      PS C:\WINDOWS\system32>
      ```
 
-4. Télécharger les fichiers SDK :
+4. Téléchargez les fichiers du SDK :
 
-   Le SDK MIP est pris en charge sur les plateformes suivantes, avec des téléchargements distincts pour chaque plateforme/langue prise en charge :  
+   Le SDK MIP est pris en charge sur les plateformes suivantes, avec des téléchargements distincts pour chaque plateforme/langage pris en charge :  
 
    [!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
-   **TAR.gz/. Téléchargements de zip**
+   **Téléchargements Tar.gz/.Zip**
 
-   TAR.gz et. Téléchargements de zip contiennent les fichiers compressés supplémentaires, un pour chaque API. Les fichiers compressés sont nommés comme suit, où \<API\> = `file`, `protection`, ou `upe`, et \<système d’exploitation\> = la plateforme : `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Par exemple, le fichier pour les fichiers binaires de l’API de protection et les en-têtes sur Debian serait : `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Chaque relation contenant-contenu.tar.gz/.zip est divisée en trois répertoires :
+   Les téléchargements Tar.gz et .Zip contiennent plusieurs fichiers compressés supplémentaires, un pour chaque API. Les fichiers compressés sont nommés comme suit, où \<API\> = `file`, `protection` ou `upe`, et \<OS\> = la plateforme : `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Par exemple, le fichier pour les binaires et en-têtes de l’API de protection sur Debian serait : `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Chaque fichier .tar.gz/.zip contenu se divise en trois répertoires :
 
-   - **Emplacements :** Fichiers binaires compilés pour chaque architecture de la plateforme, le cas échéant.
-   - **Sont les suivantes :** Fichiers d’en-tête (C++).
-   - **Exemples :** Code source pour les exemples d’applications.
+   - **Bins** : fichiers binaires compilés pour chaque architecture de plateforme, le cas échéant.
+   - **Include** : fichiers d’en-tête (C++).
+   - **Samples** : code source des exemples d’applications.
     
    **Packages NuGet**
 
@@ -118,14 +118,14 @@ Ensuite, exécutez la procédure suivante pour vous assurer que votre ordinateur
     Install-Package Microsoft.InformationProtection.Protection
     ```  
 
-5. Si vous n’utilisez pas le package NuGet, ajoutez les chemins d’accès des fichiers binaires du Kit de développement logiciel à la variable d’environnement PATH. La variable de chemin d’accès permet les binaires dépendants (DLL) à rechercher lors de l’exécution, par les applications clientes (facultatif) :
+5. Si vous n’utilisez pas le package NuGet, ajoutez les chemins des binaires du SDK à la variable d’environnement PATH. La variable PATH permet aux applications clientes de trouver les binaires dépendants (DLL) au moment de l’exécution (FACULTATIF) :
 
    Si vous utilisez une station de travail Windows 10 :
 
    - Cliquez sur l’icône Windows en bas à gauche.
    - Tapez « Chemin » et appuyez sur la touche « Entrée » lorsque vous voyez l’élément **Modifier les variables d’environnement système** apparaître.
    - Dans la boîte de dialogue **Propriétés système**, cliquez sur **Variables d’environnement**.
-   - Dans la boîte de dialogue **Variables d’environnement**, cliquez sur la ligne de la variable **Path** sous **Variables utilisateur pour \<utilisateur\>**, puis cliquez sur **Modifier...**
+   - Dans la boîte de dialogue **Variables d’environnement**, cliquez sur la ligne de la variable **Path** sous **Variables utilisateur pour \<utilisateur\>** , puis cliquez sur **Modifier...**
    - Dans la boîte de dialogue **Modifier la variable d’environnement**, cliquez sur **Nouveau**, ce qui crée une nouvelle ligne d’édition. Ajoutez une nouvelle ligne pour chaque sous-répertoire `file\bins\debug\amd64`, `protection\bins\debug\amd64` et `upe\bins\debug\amd64` en utilisant son chemin complet. Les répertoires du kit SDK sont stockés dans un format `<API>\bins\<target>\<platform>`, où :
      - \<API\> = `file`, `protection`, `upe`
      - \<target\> = `debug`, `release`
@@ -133,7 +133,7 @@ Ensuite, exécutez la procédure suivante pour vous assurer que votre ordinateur
    
    - Une fois la mise à jour de la variable **Path** terminée, cliquez sur **OK**. Ensuite, cliquez sur **OK** lorsque vous revenez à la boîte de dialogue **Variables d’environnement**.
 
-6. Téléchargez les exemples SDK à partir de GitHub (facultatif) :
+6. Téléchargez les exemples du SDK à partir de GitHub (FACULTATIF) :
 
    - Si vous n’avez pas de [profil GitHub](https://github.com/join), commencez par en créer un.
    - Ensuite, installez la dernière version des [Outils de client Git de Software Freedom Conservancy (Git Bash)](https://git-scm.com/download/).
@@ -143,7 +143,7 @@ Ensuite, exécutez la procédure suivante pour vous assurer que votre ordinateur
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Inscrire une application cliente auprès d’Azure Active Directory
 
-Dans le cadre de l’abonnement Office 365 processus d’approvisionnement, un locataire Azure Active Directory (Azure AD) associé est créé. Le locataire Azure AD assure la gestion des identités et des accès pour les *comptes d’utilisateur* et les *comptes d’application* Office 365. Les applications qui requièrent un accès à des API sécurisées (telles que les API MIP) nécessitent un compte d’application.
+Dans le cadre du processus de provisionnement de l’abonnement Office 365, un locataire Azure Active Directory (Azure AD) associé est créé. Le locataire Azure AD assure la gestion des identités et des accès pour les *comptes d’utilisateur* et les *comptes d’application* Office 365. Les applications qui requièrent un accès à des API sécurisées (telles que les API MIP) nécessitent un compte d’application.
 
 Pour l’authentification et l’autorisation au moment de l’exécution, les comptes sont représentés par un *principal de sécurité*, qui est dérivé des informations d’identité du compte. Un principal de sécurité qui représente un compte d’application est appelé [ *principal de service*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
 
@@ -153,7 +153,7 @@ Pour enregistrer un compte d’application dans Azure AD en vue de l’utiliser 
   > Pour accéder à la gestion du locataire Azure AD pour la création d’un compte, vous devez vous connecter au portail Azure avec un compte d’utilisateur qui est membre du [rôle « Propriétaire » dans le cadre de l’abonnement](/azure/billing/billing-add-change-azure-subscription-administrator). Selon la configuration de votre locataire, vous pouvez également avoir besoin d’être membre du rôle d’annuaire « Administrateur général » pour [inscrire une application](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
   > Nous vous recommandons de tester cela avec un compte limité. Veillez à ce que ce compte dispose uniquement des droits d’accès aux points de terminaison de contrôle de code source nécessaires. Les mots de passe en texte clair transmis via la ligne de commande peuvent être collectés par des systèmes de journalisation.
 
-1. Suivez les étapes de [inscrire une application avec Azure AD, inscrire une nouvelle application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal) section. À des fins de test, utilisez les valeurs suivantes pour les propriétés spécifiées lorsque vous parcourez les étapes du guide : 
+1. Effectuez les étapes de la section [Inscrire une application auprès d’Azure AD, Inscrire une nouvelle application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal). À des fins de test, utilisez les valeurs suivantes pour les propriétés spécifiées lorsque vous parcourez les étapes du guide : 
     - **Type d’application** – Sélectionnez « Native », car les applications illustrées par le kit SDK sont des applications de console installées en mode natif. Les applications natives sont considérées comme des clients « publics » par OAuth2, comme elles ne peuvent pas stocker ni utiliser de manière sécurisée des informations d’identification d’application. Contrairement à une application « confidentielle » basée sur un serveur, telle qu’une application web, qui est inscrite avec ses propres informations d’identification. 
     - **URI de redirection** – Étant donné que le kit SDK utilise des applications clientes de console simples, utilisez un URI au format `<app-name>://authorize`.
 
@@ -165,7 +165,7 @@ Pour enregistrer un compte d’application dans Azure AD en vue de l’utiliser 
    - Sur la page **Autorisations nécessaires**, cliquez sur **Ajouter**. 
    - Sur la page **Ajouter un accès d’API**, cliquez sur **Sélectionner une API**.
    - Sur la page **Sélectionner une API**, cliquez sur l’API « **Microsoft Rights Management Services** », puis cliquez sur **Sélectionner**.
-   - Sur le **activer l’accès** pour les autorisations de l’API disponibles, cliquez sur «**créer et accéder au contenu protégé pour les utilisateurs**», puis **sélectionnez**, puis **terminé** .
+   - Dans la page **Activer l’accès** pour les autorisations disponibles de l’API, cliquez sur **Créer et accéder au contenu protégé pour les utilisateurs**, sur **Sélectionner**, puis sur **Terminé**.
 
 5. Répétez l’étape 4 mais, cette fois, lorsque vous accédez à la page **Sélectionner une API**, vous devez rechercher l’API.
    - Sur la page **Sélectionner une API**, dans la zone de recherche, tapez « **Service de synchronisation Microsoft Information Protection** », puis cliquez sur l’API et cliquez sur **Sélectionner**.
@@ -178,11 +178,11 @@ Lorsque vous avez terminé, l’inscription de l’application et les autorisati
    [![Inscription d'une application Azure AD](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-Pour plus d’informations sur l’ajout d’API et les autorisations à une inscription, consultez [configurer une application cliente pour accéder aux API web](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Vous y trouverez des informations sur l’ajout des API et des autorisations requises par une application cliente.  
+Pour plus d’informations sur l’ajout d’API et d’autorisations à une inscription, consultez [Configurer une application cliente pour accéder aux API web](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Vous y trouverez des informations sur l’ajout des API et des autorisations requises par une application cliente.  
 
 ## <a name="request-an-information-protection-integration-agreement-ipia"></a>Demande d'un IPIA (Information Protection Integration Agreement)
 
-Avant de pouvoir publier une application développée avec MIP, vous devez demander et conclure un accord formel avec Microsoft.
+Avant de pouvoir lancer une application développée avec MIP, vous devez obtenir l’accord formel de Microsoft.
 
 1. Obtenez votre IPIA en envoyant un e-mail à [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting%20IPIA%20for%20<company-name>) avec les informations suivantes :
 
@@ -214,28 +214,28 @@ Si vous disposez déjà d'un IPIA signé et souhaitez ajouter un nouvel *ID de l
 
 - Nom de l'application d'entreprise
 - Brève description de l'application
-- ID de locataire Azure (même si le même que celui que précédemment)
+- ID de locataire Azure (même s’il est identique au précédent)
 - ID de l’application pour l’application
 - Contacts de la société, e-mail et téléphone pour la correspondance en cas de situation critique
 
-Après l’envoi du courrier électronique, autoriser jusqu'à 72 heures pour recevoir un accusé de réception.
+Vous recevrez un accusé de réception dans les 72 heures après l’envoi de l’e-mail.
 
-## <a name="ensure-your-app-has-the-required-runtime"></a>Vérifiez que votre application dispose le runtime requis
+## <a name="ensure-your-app-has-the-required-runtime"></a>Vérifier que l’application utilise le Runtime approprié
 
 > [!NOTE]
-> Cette étape est nécessaire uniquement si vous déployez l’application sur un ordinateur sans Visual Studio, ou si l’installation de Visual Studio ne possède pas les composants Runtime Visual C++.
+> Effectuez cette étape uniquement si vous déployez l’application sur une machine sans Visual Studio, ou si Visual Studio a été installé sans les composants du Runtime Visual C++.
 
-Les applications créées avec le SDK MIP nécessitent le runtime Visual C++ 2015 ou Visual C++ 2017 pour être installé, si ce n’est pas déjà présent.
-- [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=53587)
-- [Microsoft Visual C++ Redistributable pour Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
+Pour les applications générées avec le SDK MIP, vous devez installer le Runtime Visual C++ 2015 ou Visual C++ 2017 s’il n’est pas déjà présent.
+- [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=53587)
+- [Microsoft Visual C++ Redistributable pour Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
 
-Il fonctionne uniquement si l’application a été générée en tant que mise en production. Si l’application est générée en tant que le débogage, puis le runtime de débogage Visual C++ DLL doivent être inclus avec l’application ou installé sur l’ordinateur. 
+Ces composants fonctionnent uniquement si l’application a été générée en tant que version release. Si l’application est générée en tant que version debug, les DLL debug du Runtime Visual C++ doivent être incluses avec l’application, ou installées sur la machine. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- Si vous êtes un développeur C++
-  - Veillez à lire [concepts d’observateurs](concept-async-observers.md) avant de commencer la section Guide de démarrage rapide, pour en savoir plus sur la nature asynchrone des APIs C++.
-  - Lorsque vous êtes prêt à acquérir de l’expérience avec le Kit de développement, commencez par [Guide de démarrage rapide : Initialisation de l’application cliente (C++)](quick-app-initialization-cpp.md).
-- Si vous êtes un C# développeur, lorsque vous êtes prêt à acquérir de l’expérience avec le Kit de développement, commencez par [Guide de démarrage rapide : Initialisation de l’application cliente (C#)](quick-app-initialization-csharp.md).
+- Si vous développez en C++
+  - Veillez à lire les [concepts liés aux observateurs](concept-async-observers.md) avant de commencer la section de démarrage rapide, pour en savoir plus sur la nature asynchrone des API C++.
+  - Quand vous êtes prêt à utiliser le SDK, commencez par le [Démarrage rapide : Initialisation d’une application cliente (C++)](quick-app-initialization-cpp.md).
+- Si vous développez en C#, quand vous êtes prêt à utiliser le SDK, commencez par le [Démarrage rapide : Initialisation d’une application cliente (C#)](quick-app-initialization-csharp.md).
 
 

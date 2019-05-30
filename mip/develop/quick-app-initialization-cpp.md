@@ -8,18 +8,18 @@ ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.openlocfilehash: d30111953bdc55b66b712f30de0c50d28ac07303
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60185079"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation de l’application cliente (C++)
+# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C++)
 
-Ce démarrage rapide vous montre comment implémenter le modèle de l’initialisation du client, utilisé par le Kit de développement C++ MIP lors de l’exécution. 
+Ce guide de démarrage rapide montre comment implémenter le modèle d’initialisation de client utilisé par le SDK MIP C++ au moment de l’exécution. 
 
 > [!NOTE]
-> Les étapes décrites dans ce guide de démarrage rapide sont requises pour toute application cliente qui utilise les API MIP de fichier, de stratégie ou de protection. Bien que ce guide de démarrage rapide illustre l’utilisation des API de fichier, ce même modèle s’applique aux clients utilisant les API de stratégie et de protection. Terminer les Démarrages rapides restants en série, car chacun d’eux s’appuie sur le précédent, avec celle-ci en cours de la première.
+> Les étapes décrites dans ce guide de démarrage rapide sont requises pour toute application cliente qui utilise les API MIP de fichier, de stratégie ou de protection. Bien que ce guide de démarrage rapide illustre l’utilisation des API de fichier, ce même modèle s’applique aux clients utilisant les API de stratégie et de protection. Effectuez les autres guides de démarrage rapide dans l’ordre, car chacun s’appuie sur le précédent, celui-ci étant le premier.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -28,15 +28,15 @@ Si vous ne l’avez pas déjà fait, veillez à :
 - Exécuter la procédure fournie dans [Installation et configuration du kit SDK Microsoft Information Protection (MIP)](setup-configure-mip.md). Ce guide de démarrage rapide « initialisation d’une application cliente » s’appuie sur une installation et une configuration correctes du kit SDK.
 - Si vous le souhaitez :
   - Passez en revue [Objets de profil et moteur](concept-profile-engine-cpp.md). Les objets de profil et moteur sont des concepts universels, requis par les clients qui utilisent les API MIP de fichier/stratégie/protection. 
-  - Révision [concepts d’authentification](concept-authentication-cpp.md) pour savoir comment l’authentification et consentement sont implémentés par le Kit de développement et de l’application cliente.
-  - Passez en revue les [concepts liés aux observateurs](concept-async-observers.md) pour en savoir plus sur les observateurs et la manière dont ils sont implémentés. Le SDK MIP utilise le modèle observateur pour implémenter des notifications d’événements asynchrones.
+  - Passez en revue les [concepts d’authentification](concept-authentication-cpp.md) pour savoir comment l’authentification et le consentement sont implémentés par le SDK et l’application cliente.
+  - Passez en revue les [concepts liés aux observateurs](concept-async-observers.md) pour en savoir plus sur les observateurs et la manière dont ils sont implémentés. Le SDK MIP utilise le modèle d’observateur pour implémenter des notifications d’événements asynchrones.
 
 ## <a name="create-a-visual-studio-solution-and-project"></a>Créer une solution et un projet Visual Studio
 
-Tout d’abord, nous créer et configurer la solution Visual Studio et le projet, sur lequel les autres Démarrages rapides de génération initiale. 
+Tout d’abord, créez et configurez la solution et le projet Visual Studio initiaux, qui seront utilisés dans les guides de démarrage rapide suivants. 
 
 1. Ouvrez Visual Studio 2017, sélectionnez le menu **Fichier**, **Nouveau**, **Projet**. Dans la boîte de dialogue **Nouveau projet** :
-   - Dans le volet gauche, sous **Installé**, **Autres langages**, sélectionnez **Visual C++**.
+   - Dans le volet gauche, sous **Installé**, **Autres langages**, sélectionnez **Visual C++** .
    - Dans le volet central, sélectionnez **Application console Windows**.
    - Dans le volet inférieur, mettez à jour les champs **Nom**, **Emplacement** et **Nom de la solution** contenante du projet en conséquence.
    - Lorsque vous avez terminé, cliquez sur le bouton **OK** dans le coin inférieur droit.
@@ -44,7 +44,7 @@ Tout d’abord, nous créer et configurer la solution Visual Studio et le projet
      [![Création d’une solution dans Visual Studio](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
 2. Ajoutez le package Nuget pour l’API de fichier du kit SDK MIP dans votre projet :
-   - Dans le **l’Explorateur de solutions**, cliquez sur le nœud de projet (directement sous le nœud de haut/solution), puis sélectionnez **gérer les packages NuGet...** :
+   - Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud du projet (directement sous le nœud supérieur/de solution), puis sélectionnez **Gérer les packages NuGet...**  :
    - Lorsque l’onglet **Gestionnaire de Package NuGet** s’ouvre dans la zone des onglets du groupe d’éditeurs :
      - Sélectionnez **Parcourir**.
      - Dans la zone de recherche, entrez « Microsoft.InformationProtection ».
@@ -59,7 +59,7 @@ Créez maintenant une implémentation de base pour une classe d’observateur de
 
 1. Ajoutez une nouvelle classe dans votre projet, ce qui génère les fichiers header/.h et implementation/.cpp pour vous :
 
-   - Dans le **l’Explorateur de solutions**, cliquez à nouveau sur le nœud du projet, sélectionnez **ajouter**, puis sélectionnez **classe**.
+   - Dans l’**Explorateur de solutions**, recliquez avec le bouton droit sur le nœud du projet, sélectionnez **Ajouter**, puis sélectionnez **Classe**.
    - Dans la boîte de dialogue **Ajouter une classe** :
      - Dans le champ **Nom de la classe**, entrez « profile_observer ». Notez que les champs **Fichier .h** et **Fichier .cpp** sont remplis automatiquement en fonction du nom que vous entrez.
      - Une fois terminé, cliquez sur le bouton **OK**.
@@ -236,7 +236,7 @@ Maintenant, créez une implémentation pour un délégué de consentement, en é
 
 ## <a name="construct-a-file-profile-and-engine"></a>Construire un moteur et un profil de fichier
 
-Comme mentionné, les objets de profil et le moteur sont requis pour les clients du Kit de développement logiciel à l’aide de MIP APIs. Exécutez la partie de codage de ce guide de démarrage rapide, en ajoutant du code pour instancier les objets de profil et de moteur : 
+Comme nous l’avons mentionné précédemment, des objets de profil et de moteur sont nécessaires pour les clients du SDK utilisant des API MIP. Exécutez la partie de codage de ce guide de démarrage rapide, en ajoutant du code pour instancier les objets de profil et de moteur : 
 
 1. À partir de l’**Explorateur de solutions**, ouvrez le fichier .cpp dans votre projet qui contient l’implémentation de la méthode `main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
 
@@ -320,18 +320,18 @@ Comme mentionné, les objets de profil et le moteur sont requis pour les clients
    }
    ``` 
 
-3. Remplacez toutes les valeurs d’espace réservé dans le code source que vous venez de coller dans, à l’aide de constantes de chaîne :
+3. Remplacez toutes les valeurs d’espace réservé que vous venez de coller dans le code source par des constantes de chaîne :
 
-   | Espace réservé | Value | Exemple |
+   | Espace réservé | Valeur | Exemple |
    |:----------- |:----- |:--------|
-   | \<application-id\> | L’Azure AD Application ID (GUID) affecté à l’application inscrite dans [étape #2 du « programme d’installation du SDK MIP et la configuration »](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) article. Remplacez les instances de 2. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
-   | \<application-name\> | Un nom convivial défini par l’utilisateur pour votre application. Doit contenir des caractères ASCII valides (à l’exclusion des « ; ») et dans l’idéal, correspond au nom d’application que vous avez utilisé dans votre inscription Azure AD. | `"AppInitialization"` |
-   | \<application-version\> | Informations de version défini par l’utilisateur pour votre application. Doit contenir des caractères ASCII valides (à l’exclusion des « ; »). | `"1.1.0.0"` |
+   | \<application-id\> | L’ID d’application Azure AD (GUID) attribué à l’application qui a été inscrite à l’[étape 2 de l’article « Installation et configuration du kit SDK MIP »](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory). Remplacez les deux instances. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
+   | \<application-name\> | Un nom convivial défini par l’utilisateur pour votre application. Doit contenir des caractères ASCII valides (à l’exclusion de « ; ») et, si possible, correspondre au nom d’application que vous avez utilisé dans votre inscription Azure AD. | `"AppInitialization"` |
+   | \<application-version\> | Informations de version définies par l’utilisateur pour votre application. Doit contenir des caractères ASCII valides (à l’exclusion de « ; »). | `"1.1.0.0"` |
    | \<engine-account\> | Le compte utilisé pour l’identité du moteur. Lorsque vous vous authentifiez avec un compte d’utilisateur lors de l’acquisition du jeton, il doit correspondre à cette valeur. | `"user1@tenant.onmicrosoft.com"` |
    | \<engine-state\> | L’état défini par l’utilisateur à associer au moteur. | `"My App State"` |
 
 
-4. À présent, effectuez une build finale de l’application et corrigez les erreurs éventuelles. Votre code doit être généré avec succès, mais ne s’exécutera pas correctement tant que vous n’aurez pas terminé le guide de démarrage rapide suivant. Si vous exécutez l’application, vous voir une sortie similaire à ce qui suit. Vous n’aurez pas de jeton d’accès à fournir tant que vous n’aurez pas terminé le guide de démarrage rapide suivant.
+4. À présent, effectuez une build finale de l’application et corrigez les erreurs éventuelles. Votre code doit être généré avec succès, mais ne s’exécutera pas correctement tant que vous n’aurez pas terminé le guide de démarrage rapide suivant. Si vous exécutez l’application, vous voyez une sortie similaire à ce qui suit. Vous n’aurez pas de jeton d’accès à fournir tant que vous n’aurez pas terminé le guide de démarrage rapide suivant.
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:

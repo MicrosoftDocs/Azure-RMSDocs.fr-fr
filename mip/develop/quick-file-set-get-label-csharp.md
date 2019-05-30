@@ -1,6 +1,6 @@
 ---
-title: Guide de démarrage rapide - Set et get une étiquette de sensibilité sur un fichier en utilisant le C# du SDK MIP
-description: Guide de démarrage rapide vous montrant comment utiliser le Wrapper de Microsoft Information Protection SDK .NET pour définir et obtenir une étiquette de sensibilité sur un fichier.
+title: Démarrage rapide – Définir et obtenir une étiquette de sensibilité sur un fichier à l’aide du kit SDK MIP C#
+description: Guide de démarrage rapide illustrant comment utiliser le wrapper .NET du SDK Microsoft Information Protection (MIP) pour définir et obtenir une étiquette de sensibilité sur un fichier.
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
@@ -9,13 +9,13 @@ ms.collection: M365-security-compliance
 ms.date: 01/09/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 395c46ce1979b2ef670aa27e9329c5219ca63e13
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60173230"
 ---
-# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C#)
+# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C#)
 
 Ce guide de démarrage rapide vous montre comment utiliser plus d’API de fichier MIP. En utilisant l’une des étiquettes de sensibilité que vous avez listées dans le précédent guide de démarrage rapide, vous utilisez un gestionnaire de fichiers pour définir/obtenir l’étiquette sur un fichier. La classe de gestionnaire de fichiers expose différentes opérations pour définir/obtenir des étiquettes, ou une protection, pour les types de fichiers pris en charge.
 
@@ -23,14 +23,14 @@ Ce guide de démarrage rapide vous montre comment utiliser plus d’API de fichi
 
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
-- Complète [Guide de démarrage rapide : Liste des étiquettes de sensibilité (C#)](quick-file-list-labels-csharp.md) first, qui génère un solution Visual Studio, starter pour répertorier les étiquettes de sensibilité d’une organisation. Ce guide de démarrage rapide « Définir et obtenir une étiquette de sensibilité » s’appuie sur le guide précédent.
-- Si vous le souhaitez : Révision [gestionnaires de fichiers dans le SDK MIP](concept-handler-file-cpp.md) concepts.
+- Effectuez d’abord les étapes du [Démarrage rapide : Répertorier les étiquettes de sensibilité (C#)](quick-file-list-labels-csharp.md) pour créer une solution Visual Studio de démarrage qui liste les étiquettes de sensibilité d’une organisation. Ce guide de démarrage rapide « Définir et obtenir une étiquette de sensibilité » s’appuie sur le guide précédent.
+- Si vous le souhaitez : passez en revue les concepts liés aux [gestionnaires de fichiers dans le kit SDK MIP](concept-handler-file-cpp.md).
 
 ## <a name="add-logic-to-set-and-get-a-sensitivity-label"></a>Ajouter une logique pour définir et obtenir une étiquette de sensibilité
 
 Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur un fichier à l’aide de l’objet de moteur de fichier. 
 
-1. À l’aide de **l’Explorateur de solutions**, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la fonction Main()' méthode. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet. 
+1. À l’aide de l’**Explorateur de solutions**, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la méthode Main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet. 
 
 2. Vers la fin du corps `Main()`, au-dessous de `Console.ReadKey()` et au-dessus de `}` (où vous vous êtes arrêté dans le guide de démarrage rapide précédent), insérez le code suivant :
 
@@ -72,7 +72,7 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
 
 3. Remplacez les valeurs d’espace réservé dans le code source que vous venez de coller, en utilisant les valeurs suivantes :
 
-   | Espace réservé | Value |
+   | Espace réservé | Valeur |
    |:----------- |:----- |
    | \<input-file-path\> | Le chemin complet vers un fichier d’entrée de test, par exemple : `c:\\Test\\Test.docx`. |
    | \<label-id\> | Un ID d’étiquette de sensibilité, copié à partir de la sortie de la console dans le guide de démarrage rapide précédent, par exemple : `f42a3342-8706-4288-bd31-ebb85995028z`. |
@@ -82,9 +82,9 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
 
 Générez et testez votre application cliente. 
 
-1. Utilisez CTRL-MAJ-B (**générer la Solution**) pour générer votre application cliente. Si vous n’avez aucune erreur de génération, utilisez F5 (**Démarrer le débogage**) pour exécuter votre application.
+1. Utilisez CTRL-MAJ-B (**Générer la solution**) pour générer votre application cliente. Si vous n’avez aucune erreur de génération, utilisez F5 (**Démarrer le débogage**) pour exécuter votre application.
 
-2. Si votre projet génère et s’exécute correctement, l’application *peut* demander l’authentification via la bibliothèque ADAL chaque fois que les appels de kit de développement logiciel votre `AcquireToken()` (méthode). Si les informations d’identification mises en cache existent déjà, vous n’êtes pas invité à se connecter et afficher la liste des étiquettes, suivi par les informations sur l’étiquette appliquée et modifié le fichier.
+2. Si votre projet est généré et s’exécute correctement, l’application *peut* demander une authentification via ADAL chaque fois que le SDK appelle la méthode `AcquireToken()`. Si les informations d’identification ont déjà été mises en cache, vous n’êtes pas invité à vous connecter et à voir la liste des étiquettes, suivie des informations sur l’étiquette appliquée et le fichier modifié.
 
   ```console   
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6

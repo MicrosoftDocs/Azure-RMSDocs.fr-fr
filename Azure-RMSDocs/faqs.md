@@ -4,17 +4,17 @@ description: Certaines questions fréquentes sur Azure Information Protection et
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/07/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: f3d8610ff5d1bb1138d69825e37d8c6eb46f1a0a
-ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
+ms.openlocfilehash: d23df32bf3af4625cbb98579fa93a4bef8443be3
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65191915"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269817"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -110,7 +110,7 @@ Lorsque le client Azure Information Protection pour Windows est installé et qu�
 
 Les administrateurs généraux d’un locataire Office 365 ou Azure AD peuvent évidemment exécuter toutes les tâches d’administration d’Azure Information Protection. Toutefois, si vous voulez affecter des autorisations d’administration à d’autres utilisateurs, vous avez les options suivantes :
 
-- **Administrateur Information Protection** : Ce rôle d’administrateur Azure Active Directory permet à un administrateur de configurer Azure Information Protection, mais pas d’autres services. Un administrateur qui a ce rôle peut activer et désactiver le service de protection Azure Rights Management, configurer les paramètres de protection et les étiquettes, et configurer la stratégie Azure Information Protection. Par ailleurs, un administrateur avec ce rôle peut exécuter toutes les applets de commande PowerShell du [client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) et du [module AADRM](administer-powershell.md). Toutefois, ce rôle ne prend en charge le suivi et révocation de documents pour les utilisateurs.
+- **Administrateur Azure Information Protection**: Ce rôle d’administrateur Azure Active Directory permet à un administrateur de configurer Azure Information Protection, mais pas d’autres services. Un administrateur qui a ce rôle peut activer et désactiver le service de protection Azure Rights Management, configurer les paramètres de protection et les étiquettes, et configurer la stratégie Azure Information Protection. Par ailleurs, un administrateur avec ce rôle peut exécuter toutes les applets de commande PowerShell du [client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) et du [module AADRM](administer-powershell.md). Toutefois, ce rôle ne prend en charge le suivi et révocation de documents pour les utilisateurs.
     
     > [!NOTE]
     > Après avoir [migré votre locataire vers le magasin d’étiquetage unifié](configure-policy-migrate-labels.md), ce rôle n’est plus pris en charge pour le portail Azure.
@@ -151,7 +151,7 @@ Le service Azure Rights Management génère et gère automatiquement les certifi
 
 Azure Information Protection peut classifier et protéger des e-mails et des documents, localement ou dans le cloud. Ces documents sont notamment des documents Word, des feuilles de calcul Excel, des présentations PowerPoint, des documents PDF, des fichiers texte et des fichiers image. Pour connaître les types de document pris en charge, consultez la liste des [types de fichier pris en charge](./rms-client/client-admin-guide-file-types.md) dans le guide d’administration.
 
-Azure Information Protection ne peut pas classifier et protéger les données structurées comme les fichiers de base de données, les éléments de calendrier, les rapports Power BI, les billets Yammer, le contenu Sway et les blocs-notes OneNote.
+Azure Information Protection ne peut pas classifier et protéger les données structurées telles que les fichiers de base de données, éléments de calendrier, les rapports Power BI, publications Yammer, contenu Sway et blocs-notes OneNote.
 
 ## <a name="i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work"></a>Je vois qu’Azure Information Protection est répertoriée en tant qu’application cloud disponible pour l’accès conditionnel : comment cela fonctionne-t-il ?
 

@@ -1,6 +1,6 @@
 ---
-title: Guide de démarrage rapide - initialisation pour Microsoft Information Protection (MIP) SDK C# clients
-description: Un guide de démarrage rapide vous montrant comment écrire la logique d’initialisation pour une Protection de plus d’informations de Microsoft (MIP) SDK C# les applications clientes.
+title: Démarrage rapide – Initialisation pour les clients C# du SDK Microsoft Information Protection (MIP)
+description: Guide de démarrage rapide vous montrant comment écrire la logique d’initialisation pour des applications clientes C# du SDK Microsoft Information Protection (MIP).
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
@@ -8,18 +8,18 @@ ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
 ms.openlocfilehash: b7f2b25027502fbdd9dd7bd877b8893c1940628a
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60184968"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation de l’application cliente (C#)
+# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C#)
 
-Ce démarrage rapide est vous montrent comment implémenter le modèle de l’initialisation du client, utilisé par le wrapper .NET du SDK MIP lors de l’exécution.
+Ce guide de démarrage rapide montre comment implémenter le modèle d’initialisation de client utilisé par le wrapper .NET du SDK MIP au moment de l’exécution.
 
 > [!NOTE]
-> Les étapes décrites dans ce démarrage rapide sont requis pour toute application cliente qui utilise le wrapper MIP .NET fichier ou stratégie d’API. L’API de Protection n’est pas encore disponible. Bien que ce guide de démarrage rapide illustre l’utilisation des API de fichier, ce même modèle s’applique aux clients utilisant les API de stratégie et de protection. Les guides de démarrage rapide futurs doivent être consultés dans l’ordre, car chacun s’appuie sur le précédent, celui-ci étant le premier.
+> Les étapes décrites dans ce guide de démarrage rapide sont requises pour toute application cliente qui utilise les API de fichier ou de stratégie du wrapper .NET du MIP. L’API de protection n’est pas encore disponible. Bien que ce guide de démarrage rapide illustre l’utilisation des API de fichier, ce même modèle s’applique aux clients utilisant les API de stratégie et de protection. Les guides de démarrage rapide futurs doivent être consultés dans l’ordre, car chacun s’appuie sur le précédent, celui-ci étant le premier.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -35,8 +35,8 @@ Si vous ne l’avez pas déjà fait, veillez à :
 Tout d’abord, nous créons et configurons la solution et le projet Visual Studio initiaux, sur lesquels les autres guides de démarrage rapide s’appuieront.
 
 1. Ouvrez Visual Studio 2017, sélectionnez le menu **Fichier**, **Nouveau**, **Projet**. Dans la boîte de dialogue **Nouveau projet** :
-   - Dans le volet gauche, sous **installé**, **Visual C#** , sélectionnez **Windows Desktop**.
-   - Dans le volet central, sélectionnez **application Console (.NET Framework)**
+   - Dans le volet gauche, sous **Installé**, **Visual C#** , sélectionnez **Windows Desktop**.
+   - Dans le volet central, sélectionnez **Application console (.NET Framework)**
    - Dans le volet inférieur, mettez à jour les champs **Nom**, **Emplacement** et **Nom de la solution** contenante du projet en conséquence.
    - Lorsque vous avez terminé, cliquez sur le bouton **OK** dans le coin inférieur droit. 
 
@@ -50,24 +50,24 @@ Tout d’abord, nous créons et configurons la solution et le projet Visual Stud
      - Sélectionnez le package « Microsoft.InformationProtection.File ».
      - Cliquez sur « Installer », puis cliquez sur « OK » lorsque la boîte de dialogue de confirmation **Aperçu des modifications** apparaît.
 
-3. Répétez les étapes ci-dessus pour ajouter le package de l’API de fichier du SDK MIP, mais ajouter « Microsoft.IdentityModel.Clients.ActiveDirectory » à l’application.
+3. Répétez les étapes ci-dessus pour ajouter le package de l’API de fichier du SDK MIP, mais cette fois, ajoutez « Microsoft.IdentityModel.Clients.ActiveDirectory » à l’application.
 
 ## <a name="implement-an-authentication-delegate"></a>Implémenter un délégué d’authentification
 
 Le kit SDK MIP implémente l’authentification en utilisant l’extensibilité de classe, qui fournit un mécanisme pour partager le travail d’authentification avec l’application cliente. Le client doit acquérir un jeton d’accès OAuth2 approprié et le fournir au kit SDK MIP au moment de l’exécution.
 
-Créez maintenant une implémentation pour un délégué d’authentification, en étendant le Kit de développement logiciel `Microsoft.InformationProtection.IAuthDelegate` interface et la substitution et l’implémentation de la `IAuthDelegate.AcquireToken()` fonction virtuelle. Le délégué de l’authentification est instancié et utilisé ultérieurement par le `FileProfile` et `FileEngine` objets.
+Maintenant, créez une implémentation pour un délégué d’authentification, en étendant l’interface `Microsoft.InformationProtection.IAuthDelegate` du SDK et en remplaçant/implémentant la fonction virtuelle `IAuthDelegate.AcquireToken()`. Le délégué de l’authentification est instancié et utilisé plus tard par les objets `FileProfile` et `FileEngine`.
 
-1. Cliquez sur le nom de projet dans Visual Studio, sélectionnez **ajouter** puis **classe**.
-2. Entrez « AuthDelegateImplementation » dans le **nom** champ. Cliquez sur **Ajouter**.
-3. Ajouter à l’aide des instructions pour la bibliothèque d’authentification Active Directory (ADAL) et la bibliothèque MIP :
+1. Cliquez avec le bouton droit sur le nom du projet dans Visual Studio, sélectionnez **Ajouter**, puis sélectionnez **Classe**.
+2. Entrez « AuthDelegateImplementation » dans le champ **Nom**. Cliquez sur **Ajouter**.
+3. Ajoutez les instructions using pour la bibliothèque d’authentification Active Directory (ADAL) et la bibliothèque MIP :
 
      ```csharp
      using Microsoft.InformationProtection;
      using Microsoft.IdentityModel.Clients.ActiveDirectory;
      ```
 
-4. Définissez `AuthDelegateImplementation` hériter `Microsoft.InformationProtection.IAuthDelegate` et implémenter une variable privée de `Microsoft.InformationProtection.ApplicationInfo` et un constructeur qui accepte le même type.
+4. Définissez `AuthDelegateImplementation` pour hériter `Microsoft.InformationProtection.IAuthDelegate` et implémenter une variable privée de `Microsoft.InformationProtection.ApplicationInfo` ainsi qu’un constructeur qui accepte le même type.
 
      ```csharp
      public class AuthDelegateImplementation : IAuthDelegate
@@ -81,9 +81,9 @@ Créez maintenant une implémentation pour un délégué d’authentification, e
      }
      ```
 
-Le `ApplicationInfo` objet contient deux propriétés. Le `_appInfo.ApplicationId` sera utilisé dans le `AuthDelegateImplementation` classe pour fournir l’ID de client à la bibliothèque d’authentification.
+L’objet `ApplicationInfo` contient deux propriétés. `_appInfo.ApplicationId` sera utilisé dans la classe `AuthDelegateImplementation` pour fournir l’ID client à la bibliothèque d’authentification.
 
-5. Ajouter le `public string AcquireToken()` (méthode). Cette méthode doit accepter `Microsoft.InformationProtection.Identity` et deux chaînes : autorité et ressources. Ces variables de chaîne seront passés à la bibliothèque d’authentification dans par l’API et ne doit pas être manipulés. Modification peut entraîner un échec d’authentification.
+5. Ajoutez la méthode `public string AcquireToken()`. Cette méthode doit accepter `Microsoft.InformationProtection.Identity` ainsi que les deux chaînes authority et resource. Ces variables de chaîne seront passées à la bibliothèque d’authentification par l’API et ne doivent pas être modifiées. Leur modification peut entraîner l’échec de l’authentification.
 
      ```csharp
      public string AcquireToken(Identity identity, string authority, string resource)
@@ -96,11 +96,11 @@ Le `ApplicationInfo` objet contient deux propriétés. Le `_appInfo.ApplicationI
 
 ## <a name="implement-a-consent-delegate"></a>Implémenter un délégué de consentement
 
-Créez maintenant une implémentation pour un délégué de consentement, en étendant le Kit de développement logiciel `Microsoft.InformationProtection.IConsentDelegate` interface et la substitution et l’implémentation de `GetUserConsent()`. Le délégué de consentement est instancié et utilisé plus tard par les objets de profil de fichier et de moteur de fichier. Le délégué de consentement est fourni avec l’adresse du service de l’utilisateur doit donner son consentement à l’utilisation dans le `url` paramètre. Le délégué doit fournissent généralement des flux qui permet à l’utilisateur à accepter ou refuser pour donner son consentement pour l’accès au service. Pour coder en dur ce démarrage rapide `Consent.Accept`.
+Maintenant, créez une implémentation pour un délégué de consentement, en étendant l’interface `Microsoft.InformationProtection.IConsentDelegate` du SDK et en remplaçant/implémentant `GetUserConsent()`. Le délégué de consentement est instancié et utilisé plus tard par les objets de profil de fichier et de moteur de fichier. Le délégué de consentement est fourni avec l’adresse du service dont l’utilisation doit être consentie par l’utilisateur dans le paramètre `url`. Le délégué doit généralement fournir un flux qui permette à l’utilisateur de donner ou refuser son consentement pour l’accès au service. Dans le cadre de ce guide de démarrage rapide, vous devez coder `Consent.Accept` en dur.
 
-1. À l’aide de la même fonctionnalité « Ajouter une classe » de Visual Studio que nous avons utilisée précédemment, ajoutez une autre classe dans votre projet. Cette fois, entrez « ConsentDelegateImplementation » dans le **nom de la classe** champ. 
+1. À l’aide de la même fonctionnalité « Ajouter une classe » de Visual Studio que nous avons utilisée précédemment, ajoutez une autre classe dans votre projet. Cette fois, entrez « ConsentDelegateImplementation » dans le champ **Nom de la classe**. 
 
-2. Mettre à jour maintenant **ConsentDelegateImpl.cs** pour implémenter votre nouvelle classe de délégué de consentement. Ajouter à l’aide de l’instruction pour `Microsoft.InformationProtection` et définissez la classe d’héritage `IConsentDelegate`.
+2. Maintenant, mettez à jour **ConsentDelegateImpl.cs** pour implémenter votre nouvelle classe de délégué de consentement. Ajoutez l’instruction using pour `Microsoft.InformationProtection` et définissez la classe afin qu’elle hérite `IConsentDelegate`.
 
      ```csharp
      class ConsentDelegateImplementation : IConsentDelegate
@@ -112,17 +112,17 @@ Créez maintenant une implémentation pour un délégué de consentement, en ét
      }
      ```
 
-3. Si vous le souhaitez, essayez de générer la solution pour vous assurer qu’il est compilé sans erreur.
+3. Si vous le souhaitez, essayez de générer la solution pour vous assurer qu’elle se compile sans erreur.
 
-## <a name="initialize-the-mip-sdk-managed-wrapper"></a>Initialiser le Wrapper managé du SDK MIP
+## <a name="initialize-the-mip-sdk-managed-wrapper"></a>Initialiser le wrapper managé du SDK MIP
 
-1. À partir de **l’Explorateur de solutions**, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la `Main()` (méthode). Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
+1. À partir de l’**Explorateur de solutions**, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la méthode `Main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet.
 
 2. Supprimez l’implémentation générée de `main()`. 
 
-3. Le wrapper managé inclut une classe statique, `Microsoft.InformationProtection.MIP` utilisé pour l’initialisation, le chargement des profils et la libération des ressources. Pour initialiser le wrapper pour les opérations d’API de fichier, appelez MIP. Initialize, en transmettant `MipComponent.File` pour charger les bibliothèques nécessaires pour les opérations de fichier. 
+3. Le wrapper managé inclut une classe statique, `Microsoft.InformationProtection.MIP`, qui est utilisée pour l’initialisation, le chargement des profils et la libération des ressources. Pour initialiser le wrapper pour les opérations d’API de fichier, appelez MIP.Initialize, en passant `MipComponent.File` qui charge les bibliothèques nécessaires aux opérations de fichier. 
 
-4. Dans `Main()` dans *Program.cs* ajoutez ce qui suit, en remplaçant **\<id d’application\>** avec l’ID de l’inscription d’Application AD Azure créé précédemment.
+4. Dans la section `Main()` du fichier *Program.cs*, ajoutez ce qui suit, en remplaçant **\<application-id\>** par l’ID de l’inscription de l’application Azure AD créée précédemment.
 
 ```csharp
 using System;
@@ -146,9 +146,9 @@ namespace mip_sdk_dotnet_quickstart
 }
 ```
 
-## <a name="construct-a-file-profile-and-engine"></a>Construire un profil de fichier et un moteur
+## <a name="construct-a-file-profile-and-engine"></a>Construire un moteur et un profil de fichier
 
-Comme mentionné, les objets de profil et le moteur sont requis pour les clients du Kit de développement logiciel à l’aide de MIP APIs. Terminez la partie de codage de ce démarrage rapide, en ajoutant du code pour charger les DLL natives puis instancier les objets de profil et le moteur.
+Comme nous l’avons mentionné précédemment, des objets de profil et de moteur sont nécessaires pour les clients du SDK utilisant des API MIP. Terminez la phase de codage de ce guide de démarrage rapide en ajoutant le code qui charge les DLL natives et qui instancie ensuite les objets de profil et de moteur.
 
    ```csharp
 using System;
@@ -195,15 +195,15 @@ namespace mip_sdk_dotnet_quickstart
 }
 ``` 
 
-3. Remplacez les valeurs d’espace réservé dans le code source que vous avez collée, en utilisant les valeurs suivantes :
+3. Remplacez les valeurs d’espace réservé que vous aviez collées dans le code source par les valeurs suivantes :
 
-   | Espace réservé | Value | Exemple |
+   | Espace réservé | Valeur | Exemple |
    |:----------- |:----- |:--------|
    | \<application-id\> | L’ID d’application Azure AD affecté à l’application inscrite dans « Installation et configuration du kit SDK MIP » (2 instances).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
    | \<friendly-name\> | Un nom convivial défini par l’utilisateur pour votre application. | AppInitialization |
 
 
-4. À présent, effectuez une build finale de l’application et corrigez les erreurs éventuelles. Votre code doit être généré avec succès.
+4. À présent, effectuez une build finale de l’application et corrigez les erreurs éventuelles. Votre code doit s’exécuter correctement.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

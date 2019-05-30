@@ -4,19 +4,19 @@ description: Informations sur les données personnelles qui sont utilisées par 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: f2ae2ba9ab7a50bc7e5f87fed7f457132e4b82f7
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: e6563b3ac385ff19999d458a461fd2a4c8fa7061
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181881"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269788"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
 
@@ -209,7 +209,7 @@ Pour désactiver la journalisation des informations pour le scanneur et le clien
 ## <a name="securing-and-controlling-access-to-personal-information"></a>Sécurisation et contrôle d’accès aux informations personnelles
 Les données personnelles que vous affichez et spécifiez dans le portail Azure sont accessibles uniquement par les utilisateurs ayant reçu l’un des [rôles d’administrateur suivants par Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) :
     
-- **Administrateur Information Protection**
+- **Administrateur Azure Information Protection**
 
 - **Administrateur de conformité**
 
@@ -217,7 +217,7 @@ Les données personnelles que vous affichez et spécifiez dans le portail Azure 
 
 - **Administrateur général**
 
-Les données personnelles que vous affichez et spécifiez à l’aide du module AADRM sont accessibles uniquement par les utilisateurs ayant reçu le rôle **Administrateur Information Protection**, **Administrateur de conformité** ou **Administrateur général** par Azure Active Directory, ou le rôle d’administrateur global pour le service Azure Rights Management.  
+Les données personnelles que vous affichez et que vous spécifiez à l’aide du module AADRM sont accessibles uniquement aux utilisateurs qui ont reçu la **administrateur Azure Information Protection**, **administrateur de conformité**, ou  **Administrateur général** rôles d’Azure Active Directory, ou le rôle d’administrateur général pour le service Azure Rights Management.  
 
 ## <a name="updating-personal-data"></a>Mise à jour des données personnelles
 

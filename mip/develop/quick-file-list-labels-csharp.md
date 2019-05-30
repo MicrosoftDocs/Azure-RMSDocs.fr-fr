@@ -1,6 +1,6 @@
 ---
-title: Guide de démarrage rapide - liste des étiquettes de sensibilité d’un client Microsoft Information Protection (MIP) à l’aide du SDK MIP C# Wrapper
-description: Un guide de démarrage rapide vous montrant comment utiliser le SDK Microsoft Information Protection C# wrapper pour répertorier les étiquettes de sensibilité dans votre client.
+title: Démarrage rapide – Lister les étiquettes de sensibilité dans un locataire Microsoft Information Protection (MIP) à l’aide du wrapper C# du SDK MIP
+description: Guide de démarrage rapide illustrant comment utiliser le wrapper C# du SDK Microsoft Information Protection (MIP) pour lister les étiquettes de sensibilité dans votre locataire.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
@@ -8,32 +8,32 @@ ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 0b1b110fe3b2e96c258c7b94a3d356b9404d6e7e
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60175591"
 ---
-# <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C#)
+# <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C#)
 
-Ce démarrage rapide vous montre comment utiliser l’API de fichier du SDK MIP pour répertorier les étiquettes de sensibilité configurés pour votre organisation.
+Ce guide de démarrage rapide vous montre comment utiliser l’API de fichier du SDK MIP afin de lister les étiquettes de sensibilité configurées pour votre organisation.
 
 ## <a name="prerequisites"></a>Prérequis
 
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
-- Complète [Guide de démarrage rapide : Initialisation de l’application cliente (C#)](quick-app-initialization-csharp.md) first, qui génère un solution Visual Studio starter. Ce guide de démarrage rapide « Répertorier les étiquettes de sensibilité » s’appuie sur le précédent, qui permet de créer correctement la solution de démarrage.
-- Si vous le souhaitez : Révision [étiquettes de Classification](concept-classification-labels.md) concepts.
+- Effectuez d’abord les étapes du [Démarrage rapide : Initialisation d’une application cliente (C#)](quick-app-initialization-csharp.md) pour créer une solution Visual Studio de démarrage. Ce guide de démarrage rapide « Répertorier les étiquettes de sensibilité » s’appuie sur le précédent, qui permet de créer correctement la solution de démarrage.
+- Si vous le souhaitez : passez en revue les concepts liés aux [étiquettes de classification](concept-classification-labels.md).
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>Ajouter une logique pour répertorier les étiquettes de sensibilité
 
 Ajoutez une logique pour répertorier les étiquettes de sensibilité de votre organisation, à l’aide de l’objet de moteur de fichier. 
 
-1. Ouvrez la solution Visual Studio que vous avez créé dans la précédente « Guide de démarrage rapide : Initialisation de l’application cliente (C#) « article.
+1. Ouvrez la solution Visual Studio que vous avez créée dans l’article précédent « Démarrage rapide : Initialisation d’une application cliente (C#) ».
 
-2. À l’aide de **l’Explorateur de solutions**, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la `Main()` (méthode). Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet. 
+2. À l’aide de l’**Explorateur de solutions**, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la méthode `Main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet. 
 
-3. Vers la fin de la `Main()` corps, sous l’accolade fermante `}` de la `Main()` (où vous vous êtes arrêté dans le Guide de démarrage rapide précédent) de la fonction, insérez le code suivant :
+3. Vers la fin du corps `Main()`, au-dessous de l’accolade fermante `}` de la fonction `Main()` (là où vous vous êtes arrêté dans le guide de démarrage rapide précédent), insérez le code suivant :
 
   ```csharp
   // List sensitivity labels from fileEngine and display name and id  
@@ -55,9 +55,9 @@ Ajoutez une logique pour répertorier les étiquettes de sensibilité de votre o
 
 Enfin, générez et testez votre application cliente. 
 
-1. Utilisez CTRL-MAJ-B (**générer la Solution**) pour générer votre application cliente. Si vous n’avez aucune erreur de génération, utilisez F5 (**Démarrer le débogage**) pour exécuter votre application.
+1. Utilisez CTRL-MAJ-B (**Générer la solution**) pour générer votre application cliente. Si vous n’avez aucune erreur de génération, utilisez F5 (**Démarrer le débogage**) pour exécuter votre application.
 
-2. Si votre projet génère et s’exécute correctement, l’application *peut* demander l’authentification via la bibliothèque ADAL chaque fois que les appels de kit de développement logiciel votre `AcquireToken()` (méthode). Si les informations d’identification mises en cache existent déjà, vous ne sont pas invité à se connecter et afficher la liste des étiquettes. 
+2. Si votre projet est généré et s’exécute correctement, l’application *peut* demander une authentification via ADAL chaque fois que le SDK appelle la méthode `AcquireToken()`. Si les informations d’identification ont déjà été mises en cache, vous n’êtes pas invité à vous connecter et à voir la liste des étiquettes. 
 
      [![Acquisition par Visual Studio d’un jeton de connexion](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
@@ -65,7 +65,7 @@ Enfin, générez et testez votre application cliente.
 
      [![Consentement Visual Studio](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png#lightbox)
 
-3. Une fois l’authentification, votre sortie de la console doit afficher les étiquettes de sensibilité, similaires à l’exemple suivant :
+3. Après l’authentification, la sortie de la console doit afficher les étiquettes de sensibilité, comme dans l’exemple suivant :
 
   ```console
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6
@@ -87,11 +87,11 @@ Enfin, générez et testez votre application cliente.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
-### <a name="problems-during-execution-of-c-application"></a>Problèmes lors de l’exécution de C# application
+### <a name="problems-during-execution-of-c-application"></a>Problèmes durant l’exécution de l’application C#
 
-| Récapitulatif | Message d'erreur | Solution |
+| Résumé | Message d’erreur | Solution |
 |---------|---------------|----------|
-| Jeton d'accès incorrect | *Une exception s’est produite... est le jeton d’accès incorrect/expiré ? <br> <br>Appel d’API a échoué : profile_add_engine_async a échoué avec : [classe mip::PolicySyncException] Échec de la stratégie lors de l’acquisition, la demande a échoué avec le code d’état http : 401, x-ms-diagnostics : [2000001 ; raison = « jeton OAuth envoyée avec la requête ne peut pas être analysée. » ; error_category = « invalid_token »], ID de corrélation : [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (processus 29924) s’est arrêté avec le code 0.<br> <br>Appuyez sur n’importe quelle touche pour fermer cette fenêtre...* | Si votre projet est généré avec succès, mais que vous voyez une sortie similaire à gauche, vous avez probablement un jeton non valide ou expiré dans votre méthode `AcquireOAuth2Token()`. Revenez à [générer et tester l’application](#build-and-test-the-application) et régénérer la mise à jour du jeton, de l’accès `AcquireOAuth2Token()` à nouveau et régénération/retestez. Vous pouvez également examiner et vérifier le jeton et ses revendications, à l’aide de l’application web monopage [jwt.ms](https://jwt.ms/). |
+| Jeton d'accès incorrect | *Une exception s’est produite... le jeton d’accès est-il incorrect ou a-t-il expiré ?<br><br>L’appel de l’API a échoué : Échec de profile_add_engine_asyncprofile_add_engine_async avec : [classe mip::PolicySyncException] Échec de l’obtention de la stratégie, Échec de la requête avec le code d’état http : 401, x-ms-diagnostics: [2000001;reason="Le jeton OAuth envoyé avec la requête ne peut pas être analysé.";error_category="invalid_token"], correlationId:[35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (processus 29924) s’est arrêté avec le code 0.<br><br>Appuyez sur une touche pour fermer cette fenêtre . . .* | Si votre projet est généré avec succès, mais que vous voyez une sortie similaire à gauche, vous avez probablement un jeton non valide ou expiré dans votre méthode `AcquireOAuth2Token()`. Revenez à [Générer et tester l’application](#build-and-test-the-application) et regénérez le jeton d’accès, mettez à jour `AcquireOAuth2Token()` de nouveau et regénérez/retestez. Vous pouvez également examiner et vérifier le jeton et ses revendications, à l’aide de l’application web monopage [jwt.ms](https://jwt.ms/). |
 | Étiquettes de sensibilité non configurées | Non applicable | Si votre projet est généré avec succès, mais que vous n’avez aucune sortie dans la fenêtre de console, assurez-vous que les étiquettes de sensibilité de votre organisation soient correctement configurées. Consultez [Installation et configuration du kit SDK MIP](setup-configure-mip.md), sous « Définir les paramètres de taxonomie et de protection des étiquettes » pour plus d’informations.  |
 
 ## <a name="next-steps"></a>Étapes suivantes

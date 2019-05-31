@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 9fcc7f157ef5fa562993b70a4b30db1556921272
-ms.sourcegitcommit: 1218fad71850f3ea81cd12062544cfbc5a094764
+ms.openlocfilehash: 22c53cbfc4fb1c8ddab3eed8a26cc86b94ee6eac
+ms.sourcegitcommit: 6d928a7154c445ed9a82a07b350c6437d2949117
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263991"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66411782"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -97,7 +97,7 @@ Suivez les instructions pour un [ordinateur déconnecté](./rms-client/client-ad
 
 1. Configurez le scanneur dans le portail Azure, en créant un profil de scanneur. Si vous avez besoin d’aide pour cette étape, consultez [Configurer le scanneur dans le portail Azure](#configure-the-scanner-in-the-azure-portal).
 
-2. Exportez votre profil de scanneur à partir du panneau **Azure Information Protection - Profils (préversion)**, à l’aide de l’option **Exporter**.
+2. Exportez votre profil de scanneur à partir du panneau **Azure Information Protection - Profils (préversion)** , à l’aide de l’option **Exporter**.
 
 3. Pour finir, dans une session PowerShell, exécutez [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) et spécifiez le fichier qui contient les paramètres exportés.
 
@@ -117,9 +117,9 @@ Si vous ne pouvez pas obtenir le rôle Sysadmin même temporairement, vous devez
 
 En règle générale, vous utilisez le même compte utilisateur pour installer et configurer le scanneur. Mais si vous utilisez des comptes différents, ils ont tous les deux besoin du rôle db_owner pour la base de données de configuration du scanneur :
 
-- Si vous ne spécifiez pas votre propre nom de profil pour le scanneur, la base de données de configuration est nommée **AIPScanner_\<nom_ordinateur>**. 
+- Si vous ne spécifiez pas votre propre nom de profil pour le scanneur, la base de données de configuration est nommée **AIPScanner_\<nom_ordinateur>** . 
 
-- Si vous spécifiez votre propre nom de profil, la base de données de configuration est nommée **AIPScanner_\<nom_profil>**.
+- Si vous spécifiez votre propre nom de profil, la base de données de configuration est nommée **AIPScanner_\<nom_profil>** .
 
 #### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restriction : Le compte de service pour le scanneur ne peut pas avoir le droit **Ouvrir une session localement**
 
@@ -443,7 +443,7 @@ Il existe deux scénarios pris en charge par le scanneur Azure Information Prote
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Optimisation des performances du scanneur
 
-Utilisez les instructions suivantes pour vous aider à optimiser les performances du scanneur. Toutefois, si votre priorité est la réactivité de l’ordinateur du scanneur plutôt que les performances du scanneur, vous pouvez utiliser un paramètre client avancé pour limiter le nombre de threads utilisés par le scanneur.
+Utilisez les instructions suivantes pour vous aider à optimiser les performances du scanneur. Toutefois, si votre priorité est la réactivité de l’ordinateur de l’analyseur plutôt que les performances de l’analyseur, vous pouvez utiliser un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner) pour limiter le nombre de threads utilisés par le scanneur.
 
 Pour optimiser les performances de l’analyseur :
 

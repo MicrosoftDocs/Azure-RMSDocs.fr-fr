@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 7860e1222b594c704c0673ea31655df4fcc5aecc
-ms.sourcegitcommit: 1218fad71850f3ea81cd12062544cfbc5a094764
+ms.openlocfilehash: fab3faaa4d2fd46215021f2c3bfda9e020b06434
+ms.sourcegitcommit: 6d928a7154c445ed9a82a07b350c6437d2949117
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263975"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66411766"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Déploiement de versions précédentes du scanneur Azure Information Protection
 
@@ -370,7 +370,7 @@ Il existe deux scénarios pris en charge par le scanneur Azure Information Prote
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Optimisation des performances du scanneur
 
-Utilisez les instructions suivantes pour vous aider à optimiser les performances du scanneur. Toutefois, si votre priorité est la réactivité de l’ordinateur du scanneur plutôt que les performances du scanneur, vous pouvez utiliser un paramètre client avancé pour limiter le nombre de threads utilisés par le scanneur.
+Utilisez les instructions suivantes pour vous aider à optimiser les performances du scanneur. Toutefois, si votre priorité est la réactivité de l’ordinateur de l’analyseur plutôt que les performances de l’analyseur, vous pouvez utiliser un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner) pour limiter le nombre de threads utilisés par le scanneur.
 
 Pour optimiser les performances de l’analyseur :
 

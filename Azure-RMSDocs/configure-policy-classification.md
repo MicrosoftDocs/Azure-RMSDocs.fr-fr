@@ -4,17 +4,17 @@ description: Les conditions permettent d’affecter automatiquement une étiquet
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: fe80fdc803d15ba450cb333da15e82b19a76441e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 7557757584ce5d255ac8081039d1b0b7ace39594
+ms.sourcegitcommit: 9c0bc68fa036749e20aa67660d96278efbeb6a49
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179941"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66448032"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.locfileid: "60179941"
 
 Lorsque vous configurez des conditions pour une étiquette, vous pouvez affecter automatiquement une étiquette à un document ou à un e-mail. Ou vous pouvez inviter les utilisateurs à sélectionner l’étiquette que vous recommandez. 
 
-Quand vous configurez ces conditions, vous pouvez utiliser des modèles prédéfinis, comme **Numéro de carte de crédit** ou **Numéro de sécurité sociale (USA)**. Vous pouvez aussi définir une chaîne ou un modèle personnalisé comme condition de classification automatique. Ces conditions s’appliquent au corps de texte dans les documents et les e-mails, ainsi qu’aux en-têtes et pieds de page. Pour plus d’informations sur les conditions, consultez l’étape 5 de la [procédure suivante](#to-configure-recommended-or-automatic-classification-for-a-label).
+Quand vous configurez ces conditions, vous pouvez utiliser des modèles prédéfinis, comme **Numéro de carte de crédit** ou **Numéro de sécurité sociale (USA)** . Vous pouvez aussi définir une chaîne ou un modèle personnalisé comme condition de classification automatique. Ces conditions s’appliquent au corps de texte dans les documents et les e-mails, ainsi qu’aux en-têtes et pieds de page. Pour plus d’informations sur les conditions, consultez l’étape 5 de la [procédure suivante](#to-configure-recommended-or-automatic-classification-for-a-label).
 
 Pour bénéficier de la meilleure expérience utilisateur possible et pour assurer la continuité des activités, nous vous recommandons de commencer avec la classification recommandée par l’utilisateur plutôt que par la classification automatique. Cette configuration permet à vos utilisateurs d’accepter la classification et toute protection associée, ou de modifier ces suggestions si elles ne sont pas adaptées à leur document ou à leur e-mail.
 
@@ -34,7 +34,7 @@ Un exemple d’invite s’affiche lorsque vous configurez une condition d’appl
 
 Dans cet exemple, l’utilisateur peut cliquer sur **Modifier maintenant** pour appliquer l’étiquette recommandée ou remplacer la recommandation en sélectionnant **Ignorer**. Si l’utilisateur choisit d’ignorer la recommandation et que la condition s’applique toujours quand le document est ensuite ouvert, la recommandation de l’étiquette est réaffichée.
 
-Si vous configurez la classification automatique au lieu de la classification recommandée, l’étiquette est appliquée automatiquement et l’utilisateur continue de voir une notification dans Word, Excel et PowerPoint. Toutefois, les boutons **Modifier maintenant** et **Ignorer** sont remplacés par **OK**. Dans Outlook, il n’existe pas de notification pour la classification automatique, et l’étiquette est appliquée au moment de que l’e-mail est envoyé.
+Si vous configurez la classification automatique au lieu de la classification recommandée, l’étiquette est appliquée automatiquement et l’utilisateur continue de voir une notification dans Word, Excel et PowerPoint. Toutefois, le **modifier maintenant** et **Dismiss** boutons sont remplacées par **OK**. Dans Outlook, il n’existe pas de notification pour la classification automatique, et l’étiquette est appliquée au moment de que l’e-mail est envoyé.
 
 > [!IMPORTANT]
 >Ne configurez pas une étiquette pour la classification automatique et une autorisation définie par l’utilisateur. L’option de configuration des autorisations définies par l’utilisateur est un [paramètre de protection](configure-policy-protection.md) qui permet aux utilisateurs de spécifier qui doit avoir des autorisations.
@@ -102,7 +102,7 @@ Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement d
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Types d’informations sensibles nécessitant une version minimale du client
 
-Les types d’informations sensibles suivants requièrent le [version en disponibilité générale actuelle](./rms-client/client-version-release-history.md#version-1482040) du client Azure Information Protection :
+Les types d’informations sensibles suivants requièrent une version minimale de [1.48.204.0](./rms-client/client-version-release-history.md#version-1482040) du client Azure Information Protection :
 
 - **Chaîne de connexion Azure Service Bus**
 - **Chaîne de connexion Azure IoT**
@@ -117,7 +117,7 @@ Les types d’informations sensibles suivants requièrent le [version en disponi
 
 Pour plus d’informations sur ces types d’informations sensibles, consultez le blog suivant : [Azure Information Protection vous aide à être plus sûr en détectant automatiquement les informations d’identification](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
 
-En outre, les types d’informations sensibles suivants ne sont pas pris en charge pour la version actuelle de la disponibilité générale du client Azure Information Protection et ne plus afficher dans le portail Azure :
+En outre, en commençant par 1.48.204.0 du client Azure Information Protection, les informations sensibles suivantes types ne sont pas pris en charge et n’est plus complet dans le portail Azure. Si vous avez des étiquettes qui utilisent ces types d’informations sensibles, nous vous recommandons de supprimer les, car nous ne pouvons pas garantir la détection correcte pour les et les références à ceux-ci dans les rapports d’analyse doivent être ignorées :
 
 - **Numéro de téléphone dans l’UE**
 - **Coordonnées GPS dans l’UE**

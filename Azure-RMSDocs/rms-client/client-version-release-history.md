@@ -4,18 +4,18 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/18/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 88aa75bbf61728c43f9104d59a00f0c06842ef0e
-ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
+ms.openlocfilehash: 201716f5d33b79223100d1751c555899aa5958ca
+ms.sourcegitcommit: 9c0bc68fa036749e20aa67660d96278efbeb6a49
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837831"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66448053"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -92,7 +92,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 **Correctifs** :
 
-- Les chemins d’accès et les noms de fichiers n’affichent pas de points d’interrogation (**?**) à la place des caractères non ASCII dans l’analytique Azure Information Protection lorsque les paramètres régionaux du système d’exploitation d’envoi sont configurés en anglais.
+- Les chemins d’accès et les noms de fichiers n’affichent pas de points d’interrogation ( **?** ) à la place des caractères non ASCII dans l’analytique Azure Information Protection lorsque les paramètres régionaux du système d’exploitation d’envoi sont configurés en anglais.
 
 - De nouveaux marquages visuels sont systématiquement appliqués lorsqu’un utilisateur ajoute de nouvelles sections à un document Word, puis attribue une nouvelle étiquette au document.
 
@@ -112,7 +112,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 **Autres modifications :**
 
-- Les types d’informations sensibles suivants ne sont plus pris en charge pour les étiquettes que vous configurez pour la classification automatique ou recommandée :
+- Les types d’informations sensibles suivants sont [n’est plus pris en charge](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) pour les étiquettes que vous configurez pour recommandé ou la classification automatique :
     - Numéro de téléphone dans l’UE
     - Coordonnées GPS dans l’UE
 

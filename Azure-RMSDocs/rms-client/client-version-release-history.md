@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 201716f5d33b79223100d1751c555899aa5958ca
-ms.sourcegitcommit: 9c0bc68fa036749e20aa67660d96278efbeb6a49
+ms.openlocfilehash: 4d1da800b43ecfc3fcb91881dc5462e4758ffbb7
+ms.sourcegitcommit: aa13e56ae0ff0dea79e83335a6ecaf45e34e9d8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66448053"
+ms.lasthandoff: 06/02/2019
+ms.locfileid: "66458227"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -173,77 +173,6 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 - Quand la planification du scanneur est définie sur **Toujours**, il y a maintenant un délai de 30 secondes entre les analyses.
 
 - Le scanneur ne modifie plus le propriétaire de Rights Management pour les fichiers qu’il étiquette lorsque le fichier est déjà protégé.
-
-## <a name="version-137190"></a>Version 1.37.19.0
-
-**Date de publication** : 17/09/2018
-
-Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
-
-**Nouvelles fonctionnalités** : 
-
-- Prise en charge de la norme ISO pour le chiffrement PDF en configurant une nouvelle [configuration avancée du client](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). Quand cette option est définie sur **True**, les documents PDF que vous protégez conservent leur extension de nom de fichier .pdf (plutôt que de devenir .ppdf) et peuvent être ouverts sur les lecteurs de fichiers PDF prenant en charge cette norme ISO. Actuellement, vous devez donner aux utilisateurs l’instruction d’ouvrir manuellement ces documents PDF protégés avec la visionneuse Azure Information Protection. Pour les y aider, une page apparaît à l’ouverture d’un de ces documents ; elle comporte des icônes à sélectionner en fonction du système d’exploitation.
-
-- Prise en charge de nouveaux types d’informations sensibles pour vous aider à classer les documents qui contiennent des informations personnelles. [Plus d’informations](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
-
-- Les étiquettes qui appliquent la protection s’affichent maintenant dans les applications Office 365 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur.
-
-- Prise en charge d’étiquetage pour le format **Strict Open XML Document** dans les fichiers Word, Excel et PowerPoint. Pour plus d’informations sur les formats Open XML, consultez le billet de blog Office, [Nouvelles options de format de fichier dans le nouvel Office](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
-
-- Prise en charge des fichiers qui sont protégés par Secure Islands quand ils ne sont pas des documents PDF et Office. Par exemple, des fichiers texte et image protégés. Ou des fichiers avec une extension de nom de fichier .pfile. Cette prise en charge offre de nouveaux scénarios, par exemple le scanneur Azure Information Protection peut inspecter ces fichiers pour y rechercher des informations sensibles et les réétiqueter automatiquement pour Azure Information Protection. [Plus d’informations](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
-
-- Nouveaux paramètres clients avancés servant à supprimer les en-têtes et pieds de page qui ont été appliqués aux documents par d’autres solutions d’étiquetage. [Plus d’informations](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
-
-- Pour le scanneur Azure Information Protection :
-
-    - Nouvelle applet de commande [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) : Doit être exécutée une seule fois après la mise à niveau à partir de la précédente version en disponibilité générale (1.29.5.0) ou d’une version antérieure.
-    
-    - Nouvelle applet de commande [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus) : Obtient l’état actuel du service pour le scanneur.  
-    
-    - Nouvelle applet de commande [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) : Indique au scanneur de démarrer un seul cycle d’analyse quand la planification est définie sur Manuelle.
-    
-    - Les documents PDF sont désormais protégés par défaut quand vous utilisez la norme ISO pour le chiffrement des fichiers PDF.
-    
-    - SharePoint Server 2010 est pris en charge pour les clients qui bénéficient d’un [support étendu pour cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
-    
-- Prise en charge du nouveau panneau **Azure Information Protection - Nodes (préversion)** dans le portail Azure, ce qui vous permet de gérer les scanneurs depuis un emplacement central. Les informations provenant de vos scanneurs déployés et qui disposent d’une connectivité à Azure sont mises à jour toutes les cinq minutes. Dans ce panneau, vous pouvez démarrer le scanneur afin de lancer une analyse ponctuelle, relancer l’analyse de tous les fichiers, vérifier l’état d’un scanneur, et afficher le taux d’analyse.
-
-**Correctifs**
-
-- Pour le scanneur Azure Information Protection :
-    
-    - Pour les documents protégés dans les bibliothèques SharePoint, si le paramètre *DefaultOwner* n’est pas utilisé pour le référentiel de données, la valeur de l’éditeur SharePoint est maintenant utilisée comme valeur par défaut au lieu de la valeur de l’auteur.
-    
-    - Les rapports du scanneur incluent « Dernière modification par » pour les documents Office.
-    
-    - Vous pouvez désormais protéger tous les types de fichiers à l’aide du caractère générique `*` quand vous modifiez le Registre comme décrit dans la section [Modification du registre pour le scanneur](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
-
-- L’affichage des e-mails à l’aide des icônes des flèches Élément suivant et Élément précédent dans la barre d’outils Accès rapide montre la bonne étiquette pour chaque e-mail.
-
-- Si vous utilisez l’Explorateur de fichiers, PowerShell ou le scanneur pour la classification et la protection, les métadonnées des documents Office ne sont ni supprimées ni chiffrées.
-
-- Les autorisations personnalisées gèrent les adresses e-mail des destinataires qui contiennent une apostrophe.
-
-- L’environnement informatique s’initialise (s’amorce) correctement quand cette action est lancée en ouvrant un document protégé stocké dans SharePoint Online.
-
-- Si vous utilisez le client par clic droit dans l’Explorateur de fichiers, PowerShell ou le scanneur, l’étiquetage est bloqué pour les fichiers des emplacements WebDAV, car ce scénario n’est pas pris en charge.
-
-- L’icône Supprimer l’étiquette ne s’affiche pas dans les applications clientes (Word, Excel, PowerPoint et Outlook) si le [Paramètre de stratégie](../configure-policy-settings.md) est configuré sur **Tous les documents et e-mails doivent avoir une étiquette**.
-
-**Autres modifications** :
-
-- Pour [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) :
-    
-    - Les valeurs du paramètre *Planification* ne sont plus **Une fois**, **Continue** et **Jamais**, mais **Manuelle** et **Toujours**.
-        
-    - Le paramètre *Type* est supprimé, donc il est également supprimé de la sortie quand vous exécutez [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration). Par défaut, seuls les fichiers nouveaux ou modifiés sont inspectés après le premier cycle d’analyse. Si vous avez précédemment défini le paramètre *Type* sur **Complète** pour relancer l’analyse de tous les fichiers,exécutez à présent [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) avec le paramètre *Réinitialiser*. Le scanneur doit aussi être configuré pour une planification manuelle, donc le paramètre *Planification* doit être défini sur **Manuel** avec [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
-    
-- La liste d’exclusions par défaut du client et du scanneur inclut maintenant les fichiers .msg, .rar et .zip. Le scanneur exclut également les fichiers .rtf. [Plus d’informations](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
-
-- La version de stratégie est remplacée par 1.4. L’identification du numéro de version est obligatoire pour la [configuration des ordinateurs déconnectés](client-admin-guide-customizations.md#support-for-disconnected-computers).
-
-- Le lien **Envoyez-nous des commentaires** de la boîte de dialogue **Aide et commentaires** est supprimé. Il a été temporairement remplacé par **Signaler un problème** qui, par défaut, envoie un e-mail à Microsoft. À compter de décembre 2018, l’option **Signaler un problème** n’est pas affichée par défaut, mais elle peut être ajoutée avec un [paramètre client avancé](client-admin-guide-customizations.md#add-report-an-issue-for-users) où vous spécifiez une chaîne HTTP pour le lien. (par exemple, une page web personnalisée permettant aux utilisateurs de signaler des problèmes, ou une adresse e-mail qui pointe vers votre support technique). 
-
 
 ## <a name="next-steps"></a>Étapes suivantes
 

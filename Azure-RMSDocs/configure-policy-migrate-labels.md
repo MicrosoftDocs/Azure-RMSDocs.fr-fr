@@ -4,18 +4,18 @@ description: Migrez des étiquettes Azure Information Protection vers des étiqu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/29/2019
+ms.date: 06/03/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: a9cc458bb22c4b2c76b7aa80b58434a213ec5af1
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 1f1952a871940fcd24e7e81bf6d4312fdef8d014
+ms.sourcegitcommit: 1b8e87bda58bb40f3e32b2edf264385e7235b7c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269763"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462242"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Guide pratique pour migrer des étiquettes Azure Information Protection vers des étiquettes de confidentialité Office 365
 
@@ -164,7 +164,7 @@ Pour savoir si les clients et services que vous utilisez prennent en charge l’
 
 ##### <a name="clients-that-currently-support-unified-labeling-include"></a>Les clients qui prennent en charge l’étiquetage unifié sont :
 
-- Le [Azure Information Protection unifiée étiquetage client pour Windows](./rms-client/unifiedlabelingclient-version-release-history.md)
+- Le [Azure Information Protection unifiée étiquetage client pour Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Pour obtenir une comparaison de ce client avec le client Azure Information Protection, consultez [comparer les clients](./rms-client/use-client.md#compare-the-clients).
 
 - Applications Office qui se trouvent à différentes phases de disponibilité. Pour plus d’informations, consultez la section **Où est-ce que la fonctionnalité est disponible aujourd’hui ?** de l’article [Appliquer des étiquettes de critère de diffusion à vos documents et vos e-mails dans Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) dans la documentation Office.
     

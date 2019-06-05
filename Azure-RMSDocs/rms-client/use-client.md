@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/15/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 311c03815cc245f3d48a588fe4ec5fc6fb6ab4cd
-ms.sourcegitcommit: 01e3669cc499d860dc7cda0d1430196621b7a0d1
+ms.openlocfilehash: 0c757c8b599215e78bc30f50a05fbedf83d67481
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626329"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507142"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -104,6 +104,7 @@ Lorsque les deux clients prennent en charge la même fonctionnalité, utilisez l
 |Supprimer les actions de l’étiquette appliquée : | L’utilisateur doit confirmer la suppression. <br /><br />L’étiquette par défaut ou l’étiquette automatique (si configurée) n’est pas appliquée automatiquement la prochaine fois que l’application Office ouvre le fichier.  <br /><br />| L’utilisateur n’a pas à confirmer la suppression.<br /><br /> L’étiquette par défaut ou l’étiquette automatique (si configurée) est appliquée automatiquement la prochaine fois que l’application Office ouvre le fichier.|
 |Étiquettes automatiques et recommandées : | Configurée en tant que [conditions d’étiquette](../configure-policy-classification.md) dans le portail Azure avec des types d’informations intégrées et des conditions personnalisées utilisant des expressions régulières ou non <br /><br />Les options de configuration comprennent ce qui suit : <br /><br />- Nombre de valeurs uniques/non uniques <br /><br /> - Nombre minimal| Configurée dans les centres d’administration avec les types d’informations sensibles intégrés et des [types d’informations personnalisés](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Les options de configuration comprennent ce qui suit :  <br /><br />- Nombre de valeurs uniques seulement <br /><br />- Nombre de valeurs minimales et maximales <br /><br />- Prise en charge des clauses AND et OR avec les types d’informations <br /><br />- Dictionnaire de mots clés<br /><br />- Niveau de confiance et proximité des caractères personnalisables|
 |Conseil de stratégie personnalisables pour les étiquettes automatiques et recommandées : | Oui <br /><br />Utiliser le portail Azure pour remplacer le message par défaut pour les utilisateurs | Non <br /><br /> Bien que les centres d’administration ont une option permettant de fournir un Conseil de stratégie personnalisée, cette option n'est pas actuellement pris en charge par le client d’étiquetage unifié|
+|Modification du niveau de protection par défaut des fichiers : | Oui <br /><br />Vous pouvez utiliser [des modifications du Registre](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) pour remplacer les valeurs par défaut de la protection native et générique | Non |
 
 Pour une comparaison détaillée des différences de comportement pour les paramètres de protection spécifique, consultez [comparant le comportement des paramètres de protection pour une étiquette](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 

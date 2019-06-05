@@ -4,17 +4,17 @@ description: Détails techniques sur les types de fichiers pris en charge, les e
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 61d7dfa6fa1fe86c930e9c6a6d2c21a807433583
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 3e161c382357c0f1710ba5ac587bddb8a7ba1e22
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768128"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507162"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Types de fichier pris en charge par le client d’étiquetage unifié Azure Information Protection
 
@@ -82,7 +82,7 @@ Le client d’étiquetage unifié Azure Information Protection prend en charge l
 |Protection|La protection des fichiers est appliquée comme suit :<br /><br />- Pour afficher le contenu protégé, les personnes qui reçoivent le fichier par e-mail ou qui y ont accès grâce aux autorisations de fichier ou de partage doivent être authentifiées.<br /><br />- De plus, la stratégie et les droits d’utilisation qui ont été définis par le propriétaire du contenu quand les fichiers ont été protégés sont appliqués quand le contenu est affiché dans la visionneuse Azure Information Protection (pour les fichiers texte et image protégés) ou dans l’application associée (pour tous les autres types de fichiers pris en charge).|La protection des fichiers est appliquée comme suit :<br /><br />- Pour afficher le contenu protégé, les personnes autorisées à ouvrir le fichier et qui y ont accès doivent être authentifiées. Si l'autorisation échoue, le fichier ne s'ouvre pas.<br /><br />- Les droits d’utilisation et la stratégie définis par le propriétaire du contenu sont affichés pour informer les utilisateurs autorisés de la stratégie d’utilisation prévue.<br /><br />- La journalisation de l’audit de l’ouverture et de l’accès aux fichiers par les utilisateurs autorisés est effectuée. Cependant, les droits d’utilisation ne sont pas appliqués.|
 |Valeur par défaut pour les types de fichier|Il s'agit du niveau de protection par défaut pour les types de fichiers suivants :<br /><br />- Fichiers texte et image<br /><br />- Fichiers Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Fichiers PDF (Portable Document Format) (.pdf)<br /><br />Pour plus d’informations, consultez la section suivante, [Types de fichiers pris en charge pour la classification et la protection](#supported-file-types-for-classification-and-protection).|Il s’agit de la protection par défaut pour tous les autres types de fichiers (comme .vsdx, .rtf, etc.) qui ne sont pas pris en charge par la fonctionnalité de protection native.|
 
-Vous pouvez modifier le niveau de protection par défaut que le client d’étiquetage unifié Azure Information Protection s’applique. Vous pouvez modifier le niveau par défaut du mode natif au mode générique, générique natif et même empêcher le client d’étiquetage unifié Azure Information Protection à partir de l’application de la protection. Pour plus d’informations, consultez la section [Modification du niveau de protection par défaut des fichiers](#changing-the-default-protection-level-of-files) dans cet article.
+Actuellement, vous ne pouvez pas modifier le niveau de protection par défaut que le client d’étiquetage unifié Azure Information Protection s’applique.
 
 La protection peut être appliquée automatiquement lorsqu’un utilisateur sélectionne une étiquette de sensibilité un administrateur a configuré, ou les utilisateurs peuvent spécifier leurs propres paramètres de protection personnalisés à l’aide de [niveaux d’autorisation](../configure-usage-rights.md#rights-included-in-permissions-levels). 
 
@@ -140,56 +140,6 @@ Pour ces fichiers, l’extension de nom de fichier reste la même une fois que l
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
-### <a name="changing-the-default-protection-level-of-files"></a>Modification du niveau de protection par défaut des fichiers
-Vous pouvez modifier la façon dont le client d’étiquetage unifié Azure Information Protection protège les fichiers en modifiant le Registre. Par exemple, vous pouvez forcer les fichiers qui prennent en charge la protection native à être protégés par le client d’étiquetage unifié Azure Information Protection.
-
-Raisons pour lesquelles vous pourriez vouloir procéder ainsi :
-
-- Pour vous assurer que tous les utilisateurs peuvent ouvrir le fichier s'ils ne possèdent pas d'application prenant en charge la protection native.
-
-- Pour tenir compte des systèmes de sécurité qui agissent sur les fichiers selon leur extension de nom de fichier et peuvent être reconfigurés pour prendre en charge l'extension de nom de fichier .pfile, mais ne peuvent pas être reconfigurés pour prendre en charge plusieurs extensions de nom de fichier pour la protection native.
-
-De même, vous pouvez forcer le client étiquetage unifié d’Azure Information Protection pour appliquer une protection native aux fichiers qui auraient une protection générique par défaut. Cette action peut être appropriée si vous avez une application qui prend en charge les API RMS. Par exemple une application métier écrite par vos développeurs internes ou une application achetée auprès d'un éditeur de logiciels indépendant.
-
-Vous pouvez également forcer le client étiquetage Azure Information Protection unifié pour bloquer la protection des fichiers (ne pas appliquer la protection native ou générique). Par exemple, cette action peut être nécessaire si vous avez une application ou un service automatisé qui doit être en mesure d'ouvrir un fichier spécifique pour traiter son contenu. Lorsque vous bloquez la protection pour un type de fichier, les utilisateurs ne pouvez pas utiliser le client d’étiquetage unifié Azure Information Protection pour protéger un fichier de ce type de fichier. Quand ils essaient de le faire, un message indiquant que l'administrateur a empêché la protection s'affiche, et ils doivent annuler leur action pour protéger le fichier.
-
-Pour configurer le client étiquetage unifié d’Azure Information Protection pour appliquer une protection générique à tous les fichiers qui auraient une protection native par défaut, apportez les modifications suivantes au Registre. Si la clé FileProtection n’existe pas, vous devez la créer manuellement.
-
-1. Créez une clé nommée * pour le chemin de Registre suivant. Cette clé désigne les fichiers avec n’importe quelle extension de nom de fichier :
-
-    - Pour une version 32 bits de Windows : **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
-
-    - Pour une version 64 bits de Windows : **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** et **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
-
-2. Dans la clé nouvellement ajoutée (par exemple, HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*), créez une valeur de chaîne (REG_SZ) nommée **Encryption** avec la valeur de données **Pfile**.
-
-    Avec ce paramètre, le client Azure Information Protection applique une protection générique.
-
-Ces deux réglages entraînent dans le client unifié étiquetage Azure Information Protection qu’appliquent la protection générique à tous les fichiers ayant une extension de nom de fichier. Si c'est l'objectif que vous recherchez, aucune configuration supplémentaire n'est requise. Toutefois, vous pouvez définir des exceptions pour des types de fichier spécifiques, afin qu'ils soient protégés en mode natif. Pour cela, vous devez effectuer trois (pour Windows 32 bits) ou six (pour Windows 64 bits) modifications supplémentaires dans le Registre pour chaque type de fichier :
-
-1. Pour **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** et **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (le cas échéant) : Ajoutez une nouvelle clé qui porte le nom de l’extension de nom de fichier (sans le point précédent).
-
-    Par exemple, pour les fichiers qui ont une extension de nom de fichier .docx, créez une clé nommée **DOCX**.
-
-2. Dans la clé nouvellement ajoutée (par exemple **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX**), créez une valeur DWORD nommée **AllowPFILEEncryption** avec la valeur **0**.
-
-3. Dans la clé de type de fichier nouvellement ajoutée, par exemple **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX**), créez une valeur de chaîne nommée **Encryption** avec la valeur **Native**.
-
-Suite à ces réglages, tous les fichiers sont protégés de façon générique, à l'exception des fichiers qui ont une extension de nom de fichier .docx. Ces fichiers sont protégés en mode natif par le client d’étiquetage unifié Azure Information Protection.
-
-Répétez ces trois étapes pour d’autres types de fichier que vous souhaitez définir en tant qu’exceptions car ils prennent en charge la protection native et vous ne souhaitez pas qu’elles soient protégés par le client d’étiquetage unifié Azure Information Protection.
-
-Vous pouvez apporter des modifications similaires au Registre pour d'autres scénarios en modifiant la valeur de la chaîne **Encryption** qui prend en charge les valeurs suivantes :
-
-- **Pfile** : protection générique
-
-- **Natif** : protection native
-
-- **Désactivé** : Bloquer la protection
-
-Il n’est pas nécessaire de redémarrer l’ordinateur après avoir apporté ces modifications au Registre. Toutefois, si vous utilisez des commandes PowerShell pour protéger des fichiers, vous devez démarrer une nouvelle session PowerShell pour que les modifications soient effectives.
-
-Pour savoir comment modifier le Registre afin de changer le niveau de protection par défaut des fichiers, voir [Configuration de l’API des fichiers](../develop/file-api-configuration.md) dans l’aide aux développeurs. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ».
 
 ## <a name="file-types-that-are-excluded-from-classification-and-protection"></a>Types de fichiers exclus de la classification et de la protection
 

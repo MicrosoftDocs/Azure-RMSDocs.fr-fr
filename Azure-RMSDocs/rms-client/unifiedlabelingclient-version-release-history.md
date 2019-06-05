@@ -4,18 +4,18 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/18/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 37ecdd3862ee6ae83526979f132ff213b66dcece
-ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
+ms.openlocfilehash: 1eabf0f8ac9a1374536c10e651617f676996cdb4
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837788"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507132"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unifiée l’étiquetage client - Version historique des versions et politique de support
 
@@ -56,6 +56,8 @@ Cette version comporte un seul correctif pour résoudre une condition de concurr
 ## <a name="version-207780"></a>Version 2.0.778.0
 
 **Date de publication** : 04/16/2019
+
+Prise en charge via le 01/11/2019
 
 Cette première version de disponibilité générale du client étiquetage unifiée Azure Information Protection pour Windows prend en charge les fonctionnalités suivantes : 
 

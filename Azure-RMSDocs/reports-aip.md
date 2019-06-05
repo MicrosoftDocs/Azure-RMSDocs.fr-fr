@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 05/29/2019
+ms.date: 06/05/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: f35847247db96fdb9396f7bfd1e8ad860e94a88e
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 500786b518f5d95c464d4538a3d8bdefd030a3eb
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269846"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507176"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -205,9 +205,11 @@ La quantité de données collectées et stockées dans votre espace de travail A
 
 Toutefois, en tant que point de départ, vous pouvez trouver les estimations suivantes utiles :
 
-- Pour les données d’audit générées par les clients Azure Information Protection uniquement : 2 Go par 10 000 utilisateurs actifs.
+- Pour les données d’audit générées par les clients Azure Information Protection uniquement : 2 Go par 10 000 utilisateurs actifs par mois.
 
-- Pour les données d’audit générées par les clients Azure Information Protection, les scanneurs et les Microsoft Defender ATP : 20 Go par 10 000 utilisateurs actifs.
+- Pour les données d’audit générées par les clients Azure Information Protection, les scanneurs et les Microsoft Defender ATP : 20 Go par 10 000 utilisateurs actifs par mois.
+
+Si vous utilisez l’étiquetage obligatoire ou que vous avez configuré une étiquette par défaut dans la stratégie globale, aux tarifs sont susceptibles d’être beaucoup plus importante.
 
 Journaux d’analyse Azure a un **l’utilisation et estimation des coûts** des fonctionnalités pour vous aider à estimer et vérifiez la quantité de données stockées, et vous pouvez également contrôler la période de rétention de données pour votre espace de travail Analytique de journal. Pour plus d’informations, consultez [gérer l’utilisation et les coûts avec les journaux d’Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
 
@@ -217,7 +219,7 @@ Journaux d’analyse Azure a un **l’utilisation et estimation des coûts** des
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
     
-2. Recherchez les options du menu **Gérer**, puis sélectionnez **Configurer l’analytique (préversion)**.
+2. Recherchez les options du menu **Gérer**, puis sélectionnez **Configurer l’analytique (préversion)** .
 
 3. Dans le panneau **Azure Information Protection - Log Analytics**, vous pouvez voir une liste des espaces de travail Log Analytics qui sont détenus par votre locataire. Effectuez l'une des opérations suivantes :
     

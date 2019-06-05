@@ -4,18 +4,18 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/31/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4d1da800b43ecfc3fcb91881dc5462e4758ffbb7
-ms.sourcegitcommit: aa13e56ae0ff0dea79e83335a6ecaf45e34e9d8c
+ms.openlocfilehash: 42b2bfefae33c4f1e725a24420dff4a553f5153f
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2019
-ms.locfileid: "66458227"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507103"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -36,9 +36,28 @@ Pour plus d’informations, consultez [Mise à niveau et maintenance du client A
 
 ### <a name="servicing-information-and-timelines"></a>Informations de maintenance et chronologies
 
-Chaque version en disponibilité générale (GA) du client Azure Information Protection est prise en charge jusqu'à six mois après la publication de la version GA suivante. La documentation n’inclut pas d’informations sur les versions non pris en charge du client. Les correctifs et les nouvelles fonctionnalités sont toujours appliqués à la dernière version GA, pas aux anciennes versions GA.
+Chaque version en disponibilité générale (GA) du client Azure Information Protection est prise en charge jusqu'à six mois après la publication de la version GA suivante. À l’exception de cette section, la documentation n’inclut pas d’informations sur les versions non pris en charge du client. Les correctifs et les nouvelles fonctionnalités sont toujours appliqués à la dernière version GA, pas aux anciennes versions GA.
 
 Les préversions ne doivent pas être déployées pour des utilisateurs finaux sur les réseaux de production. Utilisez plutôt la dernière préversion pour tester les nouvelles fonctionnalités ou les correctifs à paraître dans la prochaine version GA. Les préversions qui ne sont pas actuelles ne sont pas prises en charge.
+
+##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versions en disponibilité générale qui ne sont plus prises en charge :
+
+|Version du client|Date de sortie|
+|--------------|--------------------------|
+|1.37.19.0|17/09/2018|
+|1.29.5.0|26/06/2018|
+|1.27.48.0|30/05/2018|
+|1.26.6.0|04/17/2018|
+|1.10.56.0|09/18/2017|
+|1.7.210.0|06/06/2017|
+|1.4.21.0|03/15/2017|
+|1.3.155.2|02/08/2017|
+|1.2.4.0|10/27/2016|
+|1.1.23.0|10/01/2016|
+
+À partir de 6/2/2019, le service d’étiquetage pour Azure Information Protection nécessite des connexions qui utilisent TLS 1.2.
+
+Toutes les versions de client à partir de 1.4.21.0 publié le 15/03/2017 prise en charge de TLS 1.2. Versions du client **1.3.155.2**, **1.2.4.0**, et **1.1.23.0** n’utilisent pas de TLS 1.2 et par conséquent ne peuvent plus télécharger la stratégie Azure Information Protection.
 
 ### <a name="release-history"></a>Historique des versions
 
@@ -134,6 +153,8 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 ## <a name="version-141510"></a>Version 1.41.51.0
 
 **Date de publication** : 27/11/2018
+
+Prise en charge par le biais 16/10/2019
 
 Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 

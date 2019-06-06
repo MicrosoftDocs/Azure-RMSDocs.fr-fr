@@ -47,7 +47,7 @@ Ces procédures sont effectuées par l’administrateur d’Azure Key Vault.
 
 1. Pour chaque clé SLC exportée que vous voulez stocker dans Azure Key Vault, suivez les instructions de la documentation d’Azure Key Vault, notamment [Implémentation de BYOK pour Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) avec l’exception suivante :
 
-   - N’effectuez pas les étapes pour **Générer votre clé de locataire** car vous avez déjà l’équivalent dans votre déploiement AD RMS. Au lieu de cela, identifier la clé utilisée par votre serveur AD RMS à partir de l’installation nCipher et utiliser cette clé lors de la migration. fichiers de clés nCipher chiffrée sont généralement nommés **clé <*Nom_application_clé*><*keyIdentifier* >**  localement sur le serveur.
+   - N’effectuez pas les étapes pour **Générer votre clé de locataire** car vous avez déjà l’équivalent dans votre déploiement AD RMS. Au lieu de cela, identifier la clé utilisée par votre serveur AD RMS à partir de l’installation nCipher et utiliser cette clé lors de la migration. fichiers de clés nCipher chiffrée sont généralement nommés **clé<*Nom_application_clé*><*keyIdentifier*>** localement sur le serveur.
 
      Quand la clé se charge dans Azure Key Vault, vous voyez s’afficher les propriétés de la clé, notamment l’ID de clé. Cela doit ressembler à https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prenez note de cette URL, car l’administrateur Azure Information Protection en a besoin pour indiquer au service Azure Rights Management d’utiliser cette clé pour sa clé de locataire.
 

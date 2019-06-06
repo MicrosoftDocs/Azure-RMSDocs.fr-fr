@@ -4,19 +4,19 @@ description: Informations vous permettant de configurer les serveurs locaux dest
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/06/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 023d35152f1afbd8bba60366bfb2beec37905b91
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: e35aad25d0e065cda255d880b3605056d83c30f7
+ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180027"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719818"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configuration des serveurs pour le connecteur Azure Rights Management
 
@@ -168,10 +168,7 @@ Si vos serveurs Exchange exécutent une version antérieure du système d’expl
 
    -   Modifiez manuellement le Registre à l’aide des informations contenues dans [Paramètres du Registre pour le connecteur RMS](rms-connector-registry-settings.md) pour ajouter manuellement des paramètres du Registre sur les serveurs. 
 
-3. Activez les fonctionnalités IRM pour Exchange en [activant IRM pour les messages internes](https://technet.microsoft.com/library/bb124077(v=exchg.150).aspx#Anchor_1).
-
-    > [!NOTE]
-    > Par défaut, après l’exécution de **Set-IRMConfiguration - InternalLicensingEnabled $true**, IRM est activé automatiquement pour Outlook Web App et les appareils mobiles, ainsi que pour les boîtes aux lettres. Toutefois, les administrateurs peuvent désactiver IRM à différents niveaux, par exemple pour un serveur d’accès au client, pour le répertoire virtuel ou la stratégie de boîte aux lettres Outlook Web App, et pour une stratégie de boîte aux lettres d’appareil mobile. Si les utilisateurs ne voient aucune modèle Azure RMS dans Outlook Web App (après avoir attendu une journée) ou sur les appareils mobiles alors qu’ils peuvent les voir dans le client Outlook, vérifiez les paramètres appropriés pour vous assurer qu’IRM n’est pas désactivé. Pour plus d’informations, consultez [Activer ou désactiver la gestion des droits relatifs à l’information (IRM) sur les serveurs d’accès au client](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx) dans la documentation d’Exchange. 
+3. Activer la fonctionnalité IRM pour Exchange à l’aide de l’applet de commande PowerShell Exchange [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) et définissez `InternalLicensingEnabled $true` et `ClientAccessServerEnabled $true`.
 
 
 ## <a name="configuring-a-sharepoint-server-to-use-the-connector"></a>Configuration d'un serveur SharePoint afin d'utiliser le connecteur

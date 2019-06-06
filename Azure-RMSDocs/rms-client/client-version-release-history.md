@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 42b2bfefae33c4f1e725a24420dff4a553f5153f
-ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
+ms.openlocfilehash: d5c3be398ea132d21b32e6337f44638d424ff71d
+ms.sourcegitcommit: 12848714f3c8d7a4761c28668e5809bf324c267a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66507103"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66692220"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -52,7 +52,7 @@ Les préversions ne doivent pas être déployées pour des utilisateurs finaux s
 |1.7.210.0|06/06/2017|
 |1.4.21.0|03/15/2017|
 |1.3.155.2|02/08/2017|
-|1.2.4.0|10/27/2016|
+|1.2.4.0.0|10/27/2016|
 |1.1.23.0|10/01/2016|
 
 À partir de 6/2/2019, le service d’étiquetage pour Azure Information Protection nécessite des connexions qui utilisent TLS 1.2.

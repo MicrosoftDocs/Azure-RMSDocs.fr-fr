@@ -4,18 +4,18 @@ description: Instructions pour installer, configurer et exécuter la version act
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/28/2019
+ms.date: 06/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 22c53cbfc4fb1c8ddab3eed8a26cc86b94ee6eac
-ms.sourcegitcommit: 6d928a7154c445ed9a82a07b350c6437d2949117
+ms.openlocfilehash: f86c1622e19b0ab5dc7bf274bd020203043bea0f
+ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66411782"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719853"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -489,7 +489,7 @@ Autres facteurs qui affectent les performances de l’analyseur :
 
 - Les fichiers eux-mêmes :
     
-    - Les fichiers Office sont analysés plus rapidement que les fichiers PDF.
+    - À l’exception des fichiers Excel, les fichiers Office sont analysés plus rapidement que les fichiers PDF.
     
     - Les fichiers non protégés sont plus rapides à analyser que les fichiers protégés.
     

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 0c757c8b599215e78bc30f50a05fbedf83d67481
-ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
+ms.openlocfilehash: 47a92d57b9408a1ba0a5b2d82240e24783718e60
+ms.sourcegitcommit: 1ec4b926885331cb4bb31bbd5074c874205f49d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66507142"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749980"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -65,7 +65,7 @@ Utilisez le tableau suivant pour aider à comparer les fonctionnalités qui sont
 |Composant|Client Azure Information Protection|Azure Information Protection<br /> Client d’étiquetage unifié Azure Information Protection|
 |-------|-----------------------------------|----------------------------------------------------|
 |Étiquetage des actions : manuel, recommandé, automatique| Oui | Oui |
-|Création centralisée de rapports (analytique) :| Oui | Oui |
+|Création centralisée de rapports (analytique) :| Oui | Oui, avec des restrictions :<br /><br /> -Aucune prise en charge de [correspondances de contenu](../reports-aip.md#content-matches-for-deeper-analysis) |
 |Paramètres de réinitialisation et journaux d’exportation :| Oui | Oui |
 |Autorisations définies par l’utilisateur :| Oui | Pour Outlook uniquement (Ne pas transférer) |
 |Autorisations personnalisées :| Oui | Explorateur de fichiers uniquement <br /><br /> Dans les applications Office, les utilisateurs peuvent également sélectionner **Informations sur le fichier** > **Protéger le document** > **Restreindre l’accès**. |

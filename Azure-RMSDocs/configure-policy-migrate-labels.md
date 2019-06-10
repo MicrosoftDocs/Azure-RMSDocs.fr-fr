@@ -4,18 +4,18 @@ description: Migrez des étiquettes Azure Information Protection vers des étiqu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/03/2019
+ms.date: 06/08/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 1f1952a871940fcd24e7e81bf6d4312fdef8d014
-ms.sourcegitcommit: 1b8e87bda58bb40f3e32b2edf264385e7235b7c5
+ms.openlocfilehash: 56d23160e685325cc18a2c14b52cf23f950df7a0
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462242"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815541"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Guide pratique pour migrer des étiquettes Azure Information Protection vers des étiquettes de confidentialité Office 365
 
@@ -37,7 +37,7 @@ Avant de lire les instructions détaillées sur la migration de vos étiquettes,
 
 ### <a name="important-information-about-administrative-roles"></a>Informations importantes sur les rôles administratifs
 
-Le [rôle Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) de **administrateur Azure Information Protection** (anciennement **administrateur Information Protection**) ne prend pas en charge l’étiquetage unifiée plateforme. Si ce rôle d’administration est utilisé dans votre organisation, avant de migrer vos étiquettes, ajoutez les utilisateurs qui possèdent ce rôle aux rôles Azure AD **Administrateur de sécurité** ou **Administrateur de conformité**. Si vous avez besoin d’aide, consultez [Donner aux utilisateurs accès au Centre de sécurité et de conformité Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). Vous pouvez également attribuer ces rôles dans le portail Azure AD, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365.
+Le [rôle Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) de **administrateur Azure Information Protection** (anciennement **administrateur Information Protection**) ne prend pas en charge l’étiquetage unifiée plateforme. Si ce rôle d’administration est utilisé dans votre organisation, avant de migrer vos étiquettes, ajouter des utilisateurs qui possèdent ce rôle aux rôles Azure AD de **administrateur de conformité**, **administrateur de données de conformité**, ou **administrateur de sécurité**. Si vous avez besoin d’aide, consultez [Donner aux utilisateurs accès au Centre de sécurité et de conformité Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). Vous pouvez également attribuer ces rôles dans le portail Azure AD, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365.
 
 Au lieu d’utiliser des rôles, dans les centres d’administration, vous pouvez créer un nouveau groupe de rôles pour ces utilisateurs et ajoutez les rôles **Administrateur d’étiquette de sensibilité** ou **Configuration de l’organisation** à ce groupe.
 
@@ -136,10 +136,10 @@ Si l’utilisateur n’a pas un de ces droits d’utilisation ou un de ces rôle
 
 Utilisez les instructions suivantes pour migrer votre locataire et étiquettes Azure Information Protection pour utiliser le nouveau magasin d’étiquetage unifié.
 
-Vous devez être un administrateur de conformité, un administrateur de sécurité ou un administrateur Global pour migrer vos étiquettes.
+Vous devez être un administrateur de conformité, administrateur de données de conformité, administrateur de sécurité ou administrateur général pour migrer vos étiquettes.
 
 > [!NOTE]
-> Si vous avez des étiquettes de rétention ou des stratégies de protection contre la perte de données pour Office 365, nous vous recommandons d’avoir le rôle d’administrateur de conformité, ou le rôle d’administrateur général pour migrer vos étiquettes.
+> Si vous avez des étiquettes de rétention ou des stratégies de protection contre la perte de données pour Office 365, nous vous recommandons d’avoir le rôle d’administrateur de conformité, le rôle d’administrateur de données de conformité ou le rôle d’administrateur général pour migrer vos étiquettes.
 > 
 > Les administrateurs de sécurité n’ont accès aux stratégies de protection contre la perte étiquettes ou des données des rétention, par conséquent, si vous avez un d'entre eux et ils ont le même nom que vos étiquettes Azure Information Protection, le processus de migration ne peut pas terminer manuellement jusqu'à ce que vous renommez un des doublons. Toutefois, si vous avez un des autres rôles, le processus de migration peut renommer l’étiquette Azure Information Protection pour vous, afin que la migration puisse s’exécuter.
 

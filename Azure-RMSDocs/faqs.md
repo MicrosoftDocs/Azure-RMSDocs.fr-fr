@@ -4,17 +4,17 @@ description: Certaines questions fréquentes sur Azure Information Protection et
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/29/2019
+ms.date: 06/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: d23df32bf3af4625cbb98579fa93a4bef8443be3
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: fc85cfcdcef82c4b30df7bc88ac054ee0bc172c5
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269817"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815625"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -117,9 +117,9 @@ Les administrateurs généraux d’un locataire Office 365 ou Azure AD peuvent �
     
     Pour affecter un utilisateur à ce rôle d’administration, consultez [Affecter un utilisateur à des rôles d’administration dans Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
-- **Administrateur de conformité** : Activer et désactiver le service de protection Azure Rights Management, configurer les paramètres de protection et des étiquettes et configurer ce rôle d’administrateur permet à un administrateur de configurer Azure Information Protection, qui inclut la Azure Active Directory le Stratégie de Protection des informations Azure. Par ailleurs, un administrateur avec ce rôle peut exécuter toutes les applets de commande PowerShell du [client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) et du [module AADRM](administer-powershell.md). Toutefois, ce rôle ne prend en charge le suivi et révocation de documents pour les utilisateurs.
+- **Administrateur de conformité** ou **administrateur des données de conformité**: Ces Azure Active Directory des rôles d’administrateur permettent à un administrateur de configurer Azure Information Protection, notamment activer et désactiver le service de protection Azure Rights Management, configurer les paramètres de protection et des étiquettes et configurer le Stratégie de Protection des informations Azure. En outre, un administrateur avec un de ces rôles permettre exécuter toutes les applets de commande PowerShell pour le [client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) et à partir de la [module AADRM](administer-powershell.md). Toutefois, ces rôles ne prennent en charge le suivi et révocation de documents pour les utilisateurs.
     
-    Pour affecter un utilisateur à ce rôle d’administration, consultez [Affecter un utilisateur à des rôles d’administration dans Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Pour connaître les autres autorisations qu’un rôle donne à un utilisateur, consultez la section [Rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) dans la documentation d’Azure Active Directory.
+    Pour affecter un utilisateur à un de ces rôles d’administration, consultez [affecter un utilisateur à des rôles d’administrateur dans Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Pour voir ce qu’ont les autorisations autres un utilisateur avec ces rôles, consultez le [rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section à partir de la documentation Azure Active Directory.
 
 - **Lecteur Sécurité** : Pour [l’analytique Azure Information Protection](reports-aip.md) uniquement. Ce rôle d’administrateur Azure Active Directory permet à un administrateur de visualiser comment vos étiquettes sont utilisées, de surveiller l’accès utilisateur aux documents et e-mails étiquetés, ainsi que les modifications apportées à leur classification, et peut identifier les documents qui contiennent des informations sensibles devant être protégés. Étant donné que cette fonctionnalité utilise Azure Log Analytics, vous devez également avoir un [rôle RBAC](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 
@@ -201,7 +201,7 @@ Les principales différences entre ces deux solutions sont les suivantes :
 
 Actuellement, il existe une différence dans la définition du [propriétaire de Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) pour les fichiers qui sont protégés sur un partage réseau ou dans un dossier local. Par défaut, dans les deux solutions, le propriétaire de Rights Management est défini sur le compte qui protège le fichier, mais vous pouvez remplacer ce paramètre :
 
-- Pour l’ICF Windows Server : Vous pouvez définir le propriétaire de Rights Management sur un seul compte pour tous les fichiers, ou définir de façon dynamique ce propriétaire pour chaque fichier. Pour définir le propriétaire de Rights Management de façon dynamique, utilisez le paramètre et la valeur **- OwnerMail [Source File Owner Email]**. Cette configuration récupère l’adresse e-mail de l’utilisateur à partir d’Active Directory en utilisant le nom du compte d’utilisateur dans la propriété Propriétaire du fichier.
+- Pour l’ICF Windows Server : Vous pouvez définir le propriétaire de Rights Management sur un seul compte pour tous les fichiers, ou définir de façon dynamique ce propriétaire pour chaque fichier. Pour définir le propriétaire de Rights Management de façon dynamique, utilisez le paramètre et la valeur **- OwnerMail [Source File Owner Email]** . Cette configuration récupère l’adresse e-mail de l’utilisateur à partir d’Active Directory en utilisant le nom du compte d’utilisateur dans la propriété Propriétaire du fichier.
 
 - Pour le scanneur Azure Information Protection : Pour les fichiers récemment protégés, vous pouvez définir un seul compte comme propriétaire de Rights Management pour tous les fichiers d’un magasin de données spécifique, mais vous ne pouvez pas définir de façon dynamique ce propriétaire pour chaque fichier. Le propriétaire de Rights Management ne change pas pour les fichiers précédemment protégés. Pour définir le compte des nouveaux fichiers protégés, spécifiez le paramètre **Propriétaire par défaut** dans le profil du scanneur. 
 

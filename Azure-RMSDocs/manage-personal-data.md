@@ -4,19 +4,19 @@ description: Informations sur les données personnelles qui sont utilisées par 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/29/2019
+ms.date: 06/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: e6563b3ac385ff19999d458a461fd2a4c8fa7061
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 91ce158ded8b9e7812f15737b8d07e5efdf5e3c0
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269788"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815584"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
 
@@ -213,11 +213,13 @@ Les données personnelles que vous affichez et spécifiez dans le portail Azure 
 
 - **Administrateur de conformité**
 
+- **Administrateur des données de conformité**
+
 - **Administrateur de sécurité**
 
 - **Administrateur général**
 
-Les données personnelles que vous affichez et que vous spécifiez à l’aide du module AADRM sont accessibles uniquement aux utilisateurs qui ont reçu la **administrateur Azure Information Protection**, **administrateur de conformité**, ou  **Administrateur général** rôles d’Azure Active Directory, ou le rôle d’administrateur général pour le service Azure Rights Management.  
+Les données personnelles que vous affichez et que vous spécifiez à l’aide du module AADRM sont accessibles uniquement aux utilisateurs qui ont reçu la **administrateur Azure Information Protection**, **administrateur de conformité**,  **Administrateur des données de conformité**, ou **administrateur général** rôles d’Azure Active Directory, ou le rôle d’administrateur général pour le service Azure Rights Management.  
 
 ## <a name="updating-personal-data"></a>Mise à jour des données personnelles
 

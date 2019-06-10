@@ -4,19 +4,19 @@ description: Récapitulatif des tâches d’administration dans le portail Azure
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/29/2019
+ms.date: 06/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 11dd9622e273874c83592ad5077bfac637ae64cc
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 9b49ac6ccca68c9907bb86a936a1dc6a7e145e1d
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269831"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815554"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tâches que vous aviez l’habitude d’effectuer dans le portail Azure Classic
 
@@ -56,7 +56,7 @@ Nouvelles fonctionnalités dans le portail Azure :
 
 - Au lieu de gérer un modèle et une étiquette séparément, la conversion de modèles en étiquettes vous permet de gérer un seul objet. Pour obtenir des instructions, consultez [Convertir des modèles en étiquettes](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Prise en charge d’autres rôles d’administrateur : Alors que vous deviez vous connecter en tant qu’administrateur général dans le portail Azure Classic pour configurer Azure Rights Management, vous pouvez maintenant vous connecter au portail Azure pour configurer Azure Information Protection en utilisant un compte qui présente l’un des rôles d’administration suivants : **Administrateur général**, **administrateur de sécurité**, **administrateur de conformité**, ou **administrateur Azure Information Protection**. Pour plus d’informations sur chacun de ces rôles, consultez la section [Rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) dans la documentation d’Azure Active Directory.
+- Prise en charge d’autres rôles d’administrateur : Alors que vous deviez vous connecter en tant qu’administrateur général dans le portail Azure Classic pour configurer Azure Rights Management, vous pouvez maintenant vous connecter au portail Azure pour configurer Azure Information Protection en utilisant un compte qui présente l’un des rôles d’administration suivants : **Administrateur général**, **administrateur de sécurité**, **administrateur de conformité**, **administrateur des données de conformité**, ou **Azure Administrateur Information Protection**. Pour plus d’informations sur chacun de ces rôles, consultez la section [Rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) dans la documentation d’Azure Active Directory.
 
 Les applets de commande PowerShell utilisées pour créer et gérer des modèles et pour activer ou désactiver le service restent inchangées.
 

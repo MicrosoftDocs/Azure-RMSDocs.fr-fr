@@ -4,23 +4,25 @@ description: Ressources d’informations sur le client Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9b299d00b3d8e64e97c6ad45af233374bd7c93ca
-ms.sourcegitcommit: 8ba63c0f4cd7d2ad7614af4ea9cfe8aec7fac4c0
-ms.translationtype: HT
+ms.openlocfilehash: 5c78fc422b623b8893e4dd52f480ff95c5f998ae
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956319"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66817194"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Client Azure Information Protection pour Windows
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2**
+>
+> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Le client Azure Information Protection pour Windows est un client gratuit et téléchargeable s’adressant aux organisations qui utilisent [Azure Information Protection](../what-is-information-protection.md) pour classifier et protéger les documents et e-mails, ou un service Rights Management pour protéger leurs données. Ce client est également doté d’une visionneuse pour les organisations ne disposant pas de leur propre infrastructure de protection des informations, mais souhaitant utiliser du contenu qui a été protégé par d’autres organisations utilisant le service Rights Management de Microsoft.
 

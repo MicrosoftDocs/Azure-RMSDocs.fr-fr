@@ -4,19 +4,19 @@ description: Configurer et gérer des modèles de protection, également appelé
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 28b2c670c3204d5e69a963b8d2f5cabc3eeaa872
-ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.openlocfilehash: 7088f50534b30b188580f395e02a65e56df16cf1
+ms.sourcegitcommit: b5b825ec7f08dbdcd70c0016ed3a69e7dd887fef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880101"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "66840145"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
@@ -55,15 +55,15 @@ Vous pouvez également créer vos propres modèles personnalisés. Même si vous
 
 Si vous avez obtenu votre abonnement récemment, vos modèles par défaut sont créés avec les noms suivants :
 
-- **Confidentiel \ Tous les employés**, qui accorde des autorisations de lecture ou de modification du contenu protégé.
+- **Confidentiel \ Tous les employés**
 
-- **Hautement confidentiel \ Tous les employés**, qui accorde des autorisations d’accès en lecture seule au contenu protégé.
+- **Hautement confidentiel \ Tous les employés**
 
-Si vous avez obtenu votre abonnement il y a quelque temps, vos modèles par défaut sont créés avec les noms suivants :
+Si vous avez obtenu votre abonnement quelques temps auparavant, vos modèles par défaut peuvent être créés avec les noms suivants :
 
-- **\<nom organisation> - Confidentiel** : accorde des autorisations de lecture ou de modification du contenu protégé.
+- **\<nom de l’organisation > - confidentiel**
 
-- **\<nom organisation> - Affichage confidentiel uniquement** : accorde des autorisations d’accès en lecture seule au contenu protégé. 
+- **\<nom de l’organisation> - Affichage confidentiel uniquement** 
 
 Vous pouvez renommer (et reconfigurer) ces modèles par défaut quand vous utilisez le portail Azure.
 
@@ -104,7 +104,7 @@ Avant de modifier ces modèles ou de les convertir en étiquettes, tenez compte 
 
 2. À partir de l’option de menu **Classifications** > **Étiquettes** : Dans le panneau **Azure Information Protection - Étiquettes**, développez **Modèles de protection**, puis recherchez le modèle que vous voulez configurer.
     
-3. Sélectionnez le modèle, puis, dans le panneau **Étiquette**, vous pouvez changer le nom du modèle et la description si nécessaire en modifiant le **Nom d’étiquette** et la **Description**. Ensuite, sélectionnez **Protection**, qui a la valeur **Azure (clé du cloud)**, pour ouvrir le panneau **Protection**.
+3. Sélectionnez le modèle, puis, dans le panneau **Étiquette**, vous pouvez changer le nom du modèle et la description si nécessaire en modifiant le **Nom d’étiquette** et la **Description**. Ensuite, sélectionnez **Protection**, qui a la valeur **Azure (clé du cloud)** , pour ouvrir le panneau **Protection**.
 
 4. Sur le panneau **Protection**, vous pouvez modifier les autorisations, l’expiration du contenu et les paramètres d’accès hors connexion. Pour en savoir plus sur la configuration des paramètres de protection, voir [Comment configurer une étiquette pour la protection offerte par Rights Management](configure-policy-protection.md)
     
@@ -137,7 +137,7 @@ Lorsque vous convertissez un modèle en étiquette :
 
 ## <a name="to-create-a-new-template"></a>Pour créer un nouveau modèle
 
-Quand vous créez une étiquette avec le paramètre de protection **Azure (clé cloud)**, en arrière-plan, cette action crée un modèle personnalisé qui est ensuite accessible pour les services et applications qui sont intégrés aux modèles Rights Management.
+Quand vous créez une étiquette avec le paramètre de protection **Azure (clé cloud)** , en arrière-plan, cette action crée un modèle personnalisé qui est ensuite accessible pour les services et applications qui sont intégrés aux modèles Rights Management.
 
 1. À partir de l’option de menu **Classifications** > **Étiquettes** : Dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez **Ajouter une nouvelle étiquette**.
 

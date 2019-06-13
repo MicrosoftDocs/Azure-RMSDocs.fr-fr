@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: f86c1622e19b0ab5dc7bf274bd020203043bea0f
-ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
+ms.openlocfilehash: 7b3dad06485e3fe50b643cc9559b599cf780811f
+ms.sourcegitcommit: 95cbd8245b049a28556df79cc058668a1668599c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719853"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028703"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -497,12 +497,13 @@ Autres facteurs qui affectent les performances de l’analyseur :
 
 - En outre :
     
-    - Vérifiez que le compte de service qui exécute le scanneur dispose seulement des droits documentés dans la section [prérequis du scanneur](#prerequisites-for-the-azure-information-protection-scanner), puis configurez la [propriété client avancée](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) de manière à désactiver le niveau d’intégrité faible pour le scanneur.
+    - Confirmez que le compte de service qui exécute le scanneur a uniquement les droits documentées dans la [conditions préalables du scanneur](#prerequisites-for-the-azure-information-protection-scanner) section, puis configurez le [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) pour désactiver l’intégrité faible niveau de l’analyseur.
     
     - Le scanneur s’exécute plus rapidement lorsque vous utilisez la [configuration de remplacement](#using-the-scanner-with-alternative-configurations) pour appliquer une étiquette par défaut à tous les fichiers, car le scanneur n’inspecte pas le contenu du fichier.
     
     - Le scanneur s’exécute plus lentement lorsque la [configuration de remplacement](#using-the-scanner-with-alternative-configurations) est utilisée pour identifier toutes les conditions personnalisées et tous les types d’informations sensibles connus.
     
+    - Vous pouvez réduire les délais d’expiration du scanneur avec [client paramètres avancés](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner) mieux analyse taux d’et réduire la consommation de mémoire, mais avec l’accusé de réception que certains fichiers peuvent être ignorés.
 
 ## <a name="list-of-cmdlets-for-the-scanner"></a>Liste des cmdlets pour le scanneur
 

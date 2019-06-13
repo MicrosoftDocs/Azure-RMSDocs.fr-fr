@@ -4,19 +4,19 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
-ms.reviewer: eymanor
+ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: bd17dbf51042818250cbea95ee2738d516c76077
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 4ef4a0d07154da9cb4b4b34d3b55264fa44f5fdf
+ms.sourcegitcommit: 95cbd8245b049a28556df79cc058668a1668599c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66186685"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028713"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -34,7 +34,7 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 
 2. À partir de l’option de menu **Classifications** > **Étiquettes** : Sélectionnez **Stratégies**.
 
-3. Dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel (**...**) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
+3. Dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel ( **...** ) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
     
     Vous pouvez configurer des paramètres avancés pour la stratégie globale et pour les stratégies étendues.
 
@@ -42,18 +42,20 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 
 5. Assurez-vous que les utilisateurs de cette stratégie redémarrent toutes les applications Office qu’ils avaient ouvertes.
 
-6. Si vous n’avez plus besoin de ce paramètre et que vous voulez rétablir le comportement par défaut : Dans le panneau **Paramètres avancés**, sélectionnez le menu contextuel (**...**) en regard du paramètre dont vous n’avez plus besoin, puis sélectionnez **Supprimer**. Ensuite, cliquez sur **Enregistrer et fermer**.
+6. Si vous n’avez plus besoin de ce paramètre et que vous voulez rétablir le comportement par défaut : Dans le panneau **Paramètres avancés**, sélectionnez le menu contextuel ( **...** ) en regard du paramètre dont vous n’avez plus besoin, puis sélectionnez **Supprimer**. Ensuite, cliquez sur **Enregistrer et fermer**.
 
 #### <a name="available-advanced-client-settings"></a>Paramètres client avancés disponibles
 
 |Paramètre|Scénario et instructions|
 |----------------|---------------|
 |DisableDNF|[Masquer ou afficher le bouton Ne pas transférer dans Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
-|CompareSubLabelsInAttachmentAction|[Activer la prise en charge de l’ordre des sous-étiquettes](#enable-order-support-for-sublabels-on-attachments) 
+|CompareSubLabelsInAttachmentAction|[Activer la prise en charge de l’ordre des sous-étiquettes](#enable-order-support-for-sublabels-on-attachments)
+|ContentExtractionTimeout|[Modifier les paramètres de délai d’expiration pour le scanneur](#change-the-timeout-settings-for-the-scanner)
 |EnableBarHiding|[Masquer définitivement la barre Azure Information Protection](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Activer ou désactiver les options d’autorisations personnalisées pour les utilisateurs](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Pour les fichiers protégés avec des autorisations personnalisées, toujours afficher des autorisations personnalisées pour les utilisateurs dans l’Explorateur de fichiers](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnablePDFv2Protection|[Ne pas protéger les fichiers PDF suivant la norme ISO pour le chiffrement PDF](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
+|FileProcessingTimeout|[Modifier les paramètres de délai d’expiration pour le scanneur](#change-the-timeout-settings-for-the-scanner)
 |LabelbyCustomProperty|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Modifier le niveau de journalisation local](#change-the-local-logging-level)
@@ -387,7 +389,7 @@ Dans cet exemple, un document PDF sans étiquette n’entraîne pas avertir, jus
 
 - Clé : **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- Valeur : **\<** pour afficher les messages, séparés par des virgules des extensions de nom de fichier**>**
+- Valeur : **\<** pour afficher les messages, séparés par des virgules des extensions de nom de fichier **>**
 
 
 ### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Pour spécifier les noms de domaine autorisés pour des destinataires exemptés des messages contextuels
@@ -404,19 +406,19 @@ Exemple de valeur pour plusieurs domaines sous forme de chaîne séparée par de
     
     - Clé : **OutlookWarnTrustedDomains**
     
-    - Valeur : **\<** noms de domaine, séparés par des virgules**>**
+    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
 
 - Messages de justification :
     
     - Clé : **OutlookJustifyTrustedDomains**
     
-    - Valeur : **\<** noms de domaine, séparés par des virgules**>**
+    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
 
 - Messages de blocage :
     
     - Clé : **OutlookBlockTrustedDomains**
     
-    - Valeur : **\<** noms de domaine, séparés par des virgules**>**
+    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
 
 Par exemple, spécifiez le client avancé pour bloquer les messages envoyés aux utilisateurs qui ont une adresse de messagerie contoso.com jamais, paramètre de **OutlookBlockTrustedDomains** et **contoso.com**. Par conséquent, les utilisateurs ne voient pas les messages d’avertissement de la fenêtre contextuelle dans Outlook lorsqu’ils envoient un e-mail à john@sales.contoso.com.
 
@@ -856,6 +858,41 @@ Pour configurer ce paramètre avancé afin que le scanneur s’exécute avec un 
 
 - Value : **False**
 
+## <a name="change-the-timeout-settings-for-the-scanner"></a>Modifier les paramètres de délai d’expiration pour le scanneur
+
+Cette configuration utilise [client paramètres avancés](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
+
+Par défaut, le scanneur Azure Information Protection a une période de délai d’expiration de 00:15:00 (15 minutes) pour inspecter chaque fichier pour les types d’informations sensibles ou les expressions regex que vous avez configuré pour des conditions personnalisées. Lorsque le délai d’expiration est atteint pour ce processus d’extraction du contenu, des résultats avant le délai d’expiration sont retournée et autres inspection pour le fichier s’arrête. Dans ce scénario, le message d’erreur suivant est enregistré dans %*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (compressé s’il existe plusieurs journaux) : **Échoué de GetContentParts** avec **l’opération a été annulée** dans les détails.
+
+Si vous rencontrez ce problème de délai d’attente en raison de fichiers volumineux, vous pouvez augmenter ce délai pour l’extraction de contenu complètes :
+
+- Clé : **ContentExtractionTimeout**
+
+- Valeur :  **\<hh:min:sec >**
+
+Le type de fichier peut influencer le temps nécessaire pour analyser un fichier. Durées des analyses exemple :
+
+- Un fichier Word de 100 Mo standard : 0,5-5 minutes
+
+- Un fichier PDF de 100 Mo standard : 5 à 20 minutes
+
+- Un fichier Excel de 100 Mo standard : 12-30 minutes
+
+Pour certains types de fichier sont très volumineux, tels que les fichiers vidéo, envisagez de les exclure de l’analyse en ajoutant l’extension de nom de fichier à la **types de fichiers à analyser** option dans le profil du scanneur.
+
+En outre, le scanneur Azure Information Protection a un délai de 00:30:00 (30 minutes) pour chaque fichier qu’il traite. Cette valeur prend en compte le temps que peuvent être nécessaires pour récupérer un fichier à partir d’un référentiel et temporairement enregistrez-le localement pour les actions qui peuvent inclure le déchiffrement, l’extraction du contenu pour inspection, l’étiquetage et le chiffrement.
+
+Bien que le scanneur Azure Information Protection peut analyser des douzaines, voire de centaines de fichiers par minute, si vous disposez d’un référentiel de données qui a un nombre élevé de fichiers très volumineux, le scanneur peut dépasser cette période de délai d’expiration par défaut et dans le portail Azure, il semble arrêter après 30 minutes. Dans ce scénario, le message d’erreur suivant est enregistré dans %*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (compressé s’il existe plusieurs journaux) et le fichier journal d’analyse .csv : **L’opération a été annulée**.
+
+Un scanneur avec 4 processeurs core par défaut a 16 threads pour l’analyse et la probabilité de rencontrer des 16 fichiers volumineux dans une période de 30 minutes varie selon le rapport entre les fichiers volumineux. Par exemple, si le taux d’analyse est de 200 fichiers par minute, et 1 % des fichiers dépasse le délai d’expiration de 30 minutes, il est une probabilité supérieure à 85 % que le scanneur rencontrerez la situation de délai d’expiration de 30 minutes. Ces délais d’attente peuvent entraîner les durées des analyses plus et la consommation de mémoire plus élevée.
+
+Dans ce cas, si vous ne pouvez pas ajouter davantage de processeurs core à l’ordinateur de l’analyseur, vous pouvez diminuer le délai d’expiration pour une meilleure analyse de taux et réduire la consommation de mémoire, mais avec l’accusé de réception que certains fichiers seront exclus. Vous pouvez également, envisagez d’augmenter le délai d’expiration pour l’analyse des résultats plus précis, mais avec l’accusé de réception évalue cette configuration allez probablement obtenir une analyse plus faible et la consommation de mémoire plus élevée.
+
+Pour modifier la période de délai d’attente pour le traitement des fichiers, configurer les paramètre du client d’avancées suivantes :
+
+- Clé : **FileProcessingTimeout**
+
+- Valeur :  **\<hh:min:sec >**
 
 ## <a name="change-the-local-logging-level"></a>Modifier le niveau de journalisation local
 

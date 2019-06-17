@@ -4,19 +4,19 @@ description: Phase 5 de la migration d’AD RMS vers Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 15b8f2df4fe79b62073955b7c9626fe21e8ec201
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: fd0edb3f9ce5b820a7e19c84e8d04b433c007569
+ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67149270"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Phase de migration 5 : Tâches de post-migration
 
@@ -114,7 +114,9 @@ Enfin, si vous utilisez Office 2010 et que vous avez activé la tâche de **ges
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Étape 12. Renouveler votre clé de locataire Azure Information Protection
 
-Cette étape est recommandée au terme de la migration si votre déploiement AD RMS utilisait le mode de chiffrement RMS 1. Le renouvellement de la clé donne lieu à une protection qui utilise le mode de chiffrement RMS 2. 
+Cette étape est requise lors de la migration est terminée si votre déploiement AD RMS utilisait le Mode de chiffrement RMS 1, car ce mode utilise une clé 1024 bits et le SHA-1. Cette configuration est considérée comme offrent un niveau de protection insuffisant. Microsoft n’approuve l’utilisation de longueurs de clé inférieures telles que les clés RSA 1024 bits et l’utilisation associé à des protocoles qui offrent des niveaux de protection, telles que SHA-1 inadéquates.
+
+Le renouvellement de résultats dans la protection qui utilise le Mode de chiffrement RMS 2, ce qui entraîne une clé de 2048 bits et le SHA-256. 
 
 Même si votre déploiement AD RMS utilisait le mode de chiffrement 2, nous vous recommandons d’effectuer cette étape dans la mesure où une nouvelle clé contribue à protéger votre locataire contre d’éventuelles infractions à la sécurité de votre clé AD RMS.
 

@@ -4,19 +4,19 @@ description: Découvrez en détail le fonctionnement d’Azure RMS, les contrôl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/08/2019
+ms.date: 06/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a60fbf43056673674f07f7dd8517213072f78aec
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 30c97d8e97bec8669fa4c8b6d2b4a2b5d31cca0a
+ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183075"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67149288"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
@@ -64,11 +64,7 @@ La longueur de la clé est de 2 048 bits quand le service Azure Rights Managem
 
 - Durant une migration à partir d’un site local, si le cluster AD RMS s’exécute en mode de chiffrement 1.
 
-- Après une migration à partir d’un site local, si le cluster AD RMS utilisait Exchange Online.
-
 - Pour les clés archivées qui ont été créées localement avant la migration, afin que le contenu préalablement protégé par AD RMS puisse continuer à être ouvert par la post-migration du service Azure Rights Management.
-
-- Si les clients choisissent d’apporter leur propre clé (BYOK) à l’aide d’Azure Key Vault. Azure Information Protection prend en charge les clés d’une longueur de 1 024 bits ou de 2 048 bits. Pour une sécurité accrue, nous vous recommandons d’utiliser une clé d’une longueur de 2 048 bits.
 
 ### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Mode de stockage et de sécurisation des clés de chiffrement Azure RMS
 

@@ -4,19 +4,19 @@ description: Au lieu de Microsoft gère la clé racine pour Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 06/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9e43e534b95ecef5fa412ffb75fd3659ad9f8bb3
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: d23884de43f63798a86b4ade47cd8683d7444980
+ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67149264"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
@@ -145,19 +145,21 @@ Utilisez le tableau suivant pour identifier la région ou l’instance Azure rec
 
 Utilisez la documentation d’Azure Key Vault pour créer un coffre de clés et la clé que vous voulez utiliser pour Azure Information Protection. Par exemple, consultez [Bien démarrer avec Azure Key Vault](/azure/key-vault/key-vault-get-started).
 
-Vérifiez que la longueur de clé est de 2 048 bits (recommandé) ou de 1 024 bits. Les autres longueurs de clé ne sont pas prises en charge par Azure Information Protection.
+Vérifiez que la longueur de clé est de 2 048 bits (recommandé) ou de 1 024 bits. Les autres longueurs de clé ne sont pas prises en charge par Azure Information Protection. 
+
+N’utilisez pas une clé 1024 bits comme votre clé de locataire active, car il est considéré comme pour offrir un niveau de protection insuffisant. Microsoft n’approuve l’utilisation de longueurs de clé inférieures telles que les clés RSA 1024 bits et l’utilisation associé à des protocoles qui offrent des niveaux de protection, telles que SHA-1 inadéquates. Nous vous recommandons de passer à une longueur de clé supérieure.
 
 Pour créer une clé locale protégée par module HSM et la transférer à votre coffre de clés comme clé protégée par module HSM, suivez les procédures décrites dans [Génération et transfert de clés protégées par HSM pour Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys).
 
 Pour qu’Azure Information Protection utilise la clé, toutes les opérations Key Vault doivent être autorisées pour cette clé. C’est la configuration par défaut et les opérations sont chiffrer, déchiffrer, wrapKey, unwrapKey, d’authentification et vérifiez. Vous pouvez vérifier les opérations autorisées d’une clé à l’aide de la commande PowerShell suivante : `(Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps`. Si nécessaire, ajoutez les opérations autorisées à l’aide de [mise à jour-AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey) et *KeyOps* paramètre.
 
-Une clé qui est stockée dans Key Vault a un ID de clé. Cet ID de clé est une URL contenant le nom du coffre de clés, le conteneur de clés, le nom de la clé et la version de la clé. Par exemple : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Vous devez configurer Azure Information Protection pour l’utilisation de cette clé en spécifiant son URL Key Vault.
+Une clé qui est stockée dans Key Vault a un ID de clé. Cet ID de clé est une URL contenant le nom du coffre de clés, le conteneur de clés, le nom de la clé et la version de la clé. Par exemple : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** . Vous devez configurer Azure Information Protection pour l’utilisation de cette clé en spécifiant son URL Key Vault.
 
 Avant qu’Azure Information Protection puisse utiliser la clé, le service Azure Rights Management doit être autorisé à utiliser la clé dans le coffre de clés de votre organisation. Pour ce faire, l’administrateur Azure Key Vault peut utiliser le portail Azure ou Azure PowerShell :
 
 Configuration à l’aide du portail Azure :
 
-1. Accédez à **Coffres de clés** > **\<*nom de votre coffre de clés Key Vault*>** > **Stratégies d’accès** > **Ajouter nouveau**.
+1. Accédez à **Coffres de clés** >  **\<*nom de votre coffre de clés Key Vault*>**  > **Stratégies d’accès** > **Ajouter nouveau**.
 
 2. Dans le panneau **Ajouter une stratégie d’accès**, sélectionnez **BYOK Azure Information Protection** à partir de la zone de liste **Configure from template (optional)** (Configurer à partir du modèle [facultatif]), puis cliquez sur **OK**.
     

@@ -4,19 +4,19 @@ description: Utilisez ces étapes pour préparer, implémenter et gérer Azure I
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dd88cc456337398e9ac95ffafec8514f93cc6598
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 311e8991d4527c48f2d76deba8a93264f4a08dad
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179823"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156565"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Feuille de route pour le déploiement d’Azure Information Protection
 
@@ -103,7 +103,7 @@ Configurez éventuellement les éléments suivants :
 
 - La journalisation de l’utilisation pour pouvoir surveiller l’usage que fait votre organisation du service de protection. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](./log-analyze-usage.md).
 
-### <a name="step-5-configure-your-azure-information-protection-policy-applications-and-services-for-data-protection"></a>Étape 5 : Configurer vos applications, services et stratégie Azure Information Protection pour la protection des données
+### <a name="step-5-configure-your-azure-information-protection-policy-applications-and-services-for-data-protection"></a>Étape 5 : Configurer vos applications, services et stratégie Azure Information Protection pour la protection des données
 
 1. Mettre à jour vos étiquettes pour appliquer la protection
     
@@ -131,7 +131,7 @@ Configurez éventuellement les éléments suivants :
     
     Si vous avez SharePoint et Exchange sur site, et souhaitez utiliser leurs fonctionnalités de gestion des droits relatifs à l’information (IRM), installez et configurez le connecteur Rights Management. Pour plus d’informations, consultez [Déploiement du connecteur Azure Rights Management](./deploy-rms-connector.md).
 
-### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>Étape 6 : Utiliser et superviser vos solutions de protection des données
+### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>Étape 6 : Utiliser et superviser vos solutions de protection des données
 Vous êtes maintenant prêt à superviser la façon dont votre organisation utilise les étiquettes que vous avez configurées et à confirmer que vous protégez des informations sensibles. Pour plus d’informations sur la prise en charge de cette phase de déploiement, consultez les éléments suivants :
 
 - [Création de rapports pour Azure Information Protection](reports-aip.md) : actuellement en préversion
@@ -140,7 +140,7 @@ Vous êtes maintenant prêt à superviser la façon dont votre organisation util
 
 - [Journalisation et analyse de l’utilisation du service Azure Rights Management](./log-analyze-usage.md)
 
-### <a name="step-7-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Étape 7 : Administrer le service de protection pour votre compte de locataire selon les besoins
+### <a name="step-7-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Étape 7 : Administrer le service de protection pour votre compte de locataire selon les besoins
 
 Quand vous commencez à utiliser le service de protection, PowerShell peut s’avérer utile pour automatiser les changements administratifs ou générer des scripts sur ces changements. PowerShell peut également être nécessaire pour certaines configurations avancées. 
 
@@ -204,7 +204,7 @@ Configurez éventuellement les éléments suivants :
 
 Vous êtes maintenant prêt à protéger vos données, ainsi qu’à journaliser la manière dont votre entreprise utilise le service de protection. Pour plus d’informations sur la prise en charge de cette phase de déploiement, consultez [Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management](./help-users.md) et [Journalisation et analyse de l’utilisation du service Azure Rights Management](./log-analyze-usage.md).
 
-### <a name="step-5-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Étape 5 : Administrer le service de protection pour votre compte de locataire selon les besoins
+### <a name="step-5-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Étape 5 : Administrer le service de protection pour votre compte de locataire selon les besoins
 
 Quand vous commencez à utiliser le service de protection, PowerShell peut s’avérer utile pour automatiser les changements administratifs ou générer des scripts sur ces changements. PowerShell peut également être nécessaire pour certaines configurations avancées. 
 

@@ -4,19 +4,19 @@ description: Instructions à suivre pour vérifier que le service fonctionne com
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3fd211e3a40826e9803210c0005ab8acdd1d03ea
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: fbc2cff29997ea3b824d900e2d96b27c65a575f2
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180798"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156614"
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Vérification du service Azure Rights Management
 

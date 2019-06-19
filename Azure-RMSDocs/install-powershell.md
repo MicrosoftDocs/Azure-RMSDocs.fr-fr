@@ -4,19 +4,19 @@ description: Instructions d’installation de Windows PowerShell pour le service
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 789c3178827e52c27759268b1340b53c3add1c39
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 0069503146d5847935fa1b86769a9968c2a5e2b1
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181716"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156807"
 ---
 # <a name="installing-the-aadrm-powershell-module"></a>Installation du module PowerShell AADRM
 

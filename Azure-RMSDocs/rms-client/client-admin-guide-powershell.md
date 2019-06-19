@@ -4,18 +4,18 @@ description: Instructions et informations pour que les administrateurs gèrent l
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/21/2019
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.suite: ems
-ms.openlocfilehash: 5d32210a7ccc56d388b24a55f6e19331e768f7f3
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: 7cffbff5a5d6942c7ed722e64ead4a68e5ae959f
+ms.sourcegitcommit: 9b7b2e3a0f7b5717b349af2c883ebdeebfbd53e2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934950"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67161255"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -86,7 +86,7 @@ En plus des prérequis pour l’installation du module Azure Information Protect
 
     - Créez un compte de principal de service, exécutez Set-RMSServerAuthentication et envisagez de faire de ce principal de service un super utilisateur pour Azure Rights Management.
 
-4. 4. Pour les régions en dehors des États-Unis : 
+4. 4\. Pour les régions en dehors des États-Unis : 
 
     - Modifier le Registre pour la découverte de service.
 
@@ -497,7 +497,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     
     - **(Facultatif) des URI de redirection**: **Web** et `http://localhost`
 
-4. Sur le **AIPOnBehalfOf** panneau, copiez la valeur de la **ID d’Application (client)**. La valeur est similaire à l’exemple suivant : `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Cette valeur est utilisée pour le *WebAppId* paramètre lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
+4. Sur le **AIPOnBehalfOf** panneau, copiez la valeur de la **ID d’Application (client)** . La valeur est similaire à l’exemple suivant : `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Cette valeur est utilisée pour le *WebAppId* paramètre lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
 5. Toujours dans le **AIPOnBehalfOf** panneau, à partir de la **gérer** menu, sélectionnez **authentification**.
 
@@ -542,7 +542,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     - **Prise en charge des types de comptes**: **Comptes dans ce répertoire d’organisation uniquement**
     - **(Facultatif) des URI de redirection**: **Un client public (mobile et bureau)** et `http://localhost`
 
-17. Sur le **AIPClient** panneau, copiez la valeur de la **ID d’Application (client)**. La valeur est similaire à l’exemple suivant : `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+17. Sur le **AIPClient** panneau, copiez la valeur de la **ID d’Application (client)** . La valeur est similaire à l’exemple suivant : `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
     
     Cette valeur est utilisée pour le paramètre NativeAppId lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
@@ -559,6 +559,8 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 22. Sur le **autorisations d’API demande** panneau, sélectionnez **mes API**.
 
 23. Dans le **sélectionner une API** , sélectionnez **APIOnBehalfOf**, puis sélectionnez la case à cocher pour **-emprunt d’identité**, que l’autorisation. Sélectionnez **ajouter des autorisations**. 
+
+24. Sur le **autorisations d’API** panneau, dans le **donner leur consentement** section, sélectionnez **accorder le consentement de l’administrateur pour \<nom de votre locataire >** et sélectionnez **Oui** pour l’invite de confirmation.
 
 Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *WebAppId*, *WebAppKey* and *NativeAppId*. À partir de nos exemples :
 

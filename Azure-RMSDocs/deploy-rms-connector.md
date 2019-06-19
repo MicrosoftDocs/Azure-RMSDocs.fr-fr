@@ -4,19 +4,19 @@ description: Instructions pour déployer le connecteur RMS, qui fournit le servi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/19/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d412e8c53a7cea0da6a84636653ffc203860891e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 6f1d489efb5b6e8b64f83dcf6a9a8645e352e9bf
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179976"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156536"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Déploiement du connecteur Azure Rights Management
 

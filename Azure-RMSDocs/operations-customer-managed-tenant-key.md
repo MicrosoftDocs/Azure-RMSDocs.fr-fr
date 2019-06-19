@@ -4,19 +4,19 @@ description: Informations sur les opérations de cycle de vie applicables si vou
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/18/2019
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c1ae08971442fcc943f8473bbcbf74681c027702
-ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
+ms.openlocfilehash: 82061c4a146a049d7cecf6da6ab16a2e85c0ddd3
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708882"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156760"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gérée par le client : Opérations de cycle de vie des clés de locataire
 

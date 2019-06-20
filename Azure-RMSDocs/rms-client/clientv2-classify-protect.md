@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 1b05cf8f5194c8491a2aa7bb687622e821e770cb
-ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.openlocfilehash: 0ea7ce8fc589b6546210e3cc6ee31b12c83d56de
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880122"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236955"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : Classifier et protéger avec le client d’étiquetage unifié Azure Information Protection
 
@@ -52,7 +52,9 @@ Ou, si vous avez sélectionné **afficher la barre** à partir de la **sensibili
 
 ![Exemple de barre Azure Information Protection](../media/info-protect-barv2-not-set-callout.png)
 
-Pour définir une étiquette, telles que «**confidentiel** \ **tous les employés**», sélectionnez **confidentiel** , puis **tous les employés**. Si vous ne savez pas quelle étiquette appliquer au document ou à l’e-mail actifs, utilisez les info-bulles pour en savoir plus sur chaque étiquette et sur le moment de l’appliquer. Si une étiquette est déjà appliquée au document et que vous souhaitez la modifier, vous pouvez sélectionner une autre étiquette. Si vous avez affiché la barre Azure Information Protection, et les étiquettes ne sont pas affichées dans la barre pour sélectionner, cliquez d’abord sur le **modifier l’étiquette** icône, en regard de la valeur actuelle de l’étiquette.
+Pour définir une étiquette, telles que «**confidentiel** \ **tous les employés**», sélectionnez **confidentiel** , puis **tous les employés**. Si vous ne savez pas quelle étiquette appliquer au document ou à l’e-mail actifs, utilisez les info-bulles pour en savoir plus sur chaque étiquette et sur le moment de l’appliquer.
+
+Si une étiquette est déjà appliquée au document et que vous souhaitez la modifier, vous pouvez sélectionner une autre étiquette. Si vous avez affiché la barre Azure Information Protection, et les étiquettes ne sont pas affichées dans la barre pour sélectionner, cliquez d’abord sur le **modifier l’étiquette** icône, en regard de la valeur actuelle de l’étiquette.
 
 Outre la sélection manuelle, les étiquettes peuvent également être appliquées comme suit :
 

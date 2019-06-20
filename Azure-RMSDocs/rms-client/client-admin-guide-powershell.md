@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.suite: ems
-ms.openlocfilehash: 7cffbff5a5d6942c7ed722e64ead4a68e5ae959f
-ms.sourcegitcommit: 9b7b2e3a0f7b5717b349af2c883ebdeebfbd53e2
+ms.openlocfilehash: 1280a909ec74bf831af5e856274bc6f53a03a5e9
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67161255"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236969"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -524,7 +524,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 
 12. Sur le **AIPOnBehalfOf - exposent une API** panneau, sélectionnez **+ ajouter une étendue**.
 
-13. Sur le **ajouter une étendue** panneau, spécifiez les éléments suivants, puis sélectionnez **ajouter une étendue**:
+13. Sur le **ajouter une étendue** panneau, spécifiez les informations suivantes, en utilisant les chaînes suggérées comme exemples et sélectionnez **ajouter une étendue**:
     - **Nom de l’étendue**: `user-impersonation`
     - **Qui peut accepter ?** : **Les administrateurs et utilisateurs**
     - **Nom complet de consentement administrateur**: `Access Azure Information Protection scanner`
@@ -560,7 +560,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 
 23. Dans le **sélectionner une API** , sélectionnez **APIOnBehalfOf**, puis sélectionnez la case à cocher pour **-emprunt d’identité**, que l’autorisation. Sélectionnez **ajouter des autorisations**. 
 
-24. Sur le **autorisations d’API** panneau, dans le **donner leur consentement** section, sélectionnez **accorder le consentement de l’administrateur pour \<nom de votre locataire >** et sélectionnez **Oui** pour l’invite de confirmation.
+24. Sur le **autorisations d’API** panneau, dans le **donner leur consentement** section, sélectionnez **accorder le consentement de l’administrateur pour \< *nom de votre client* >**  et sélectionnez **Oui** pour l’invite de confirmation.
 
 Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *WebAppId*, *WebAppKey* and *NativeAppId*. À partir de nos exemples :
 

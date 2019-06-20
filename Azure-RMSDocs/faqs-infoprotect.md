@@ -4,19 +4,19 @@ description: Vous avez une question au sujet de l’utilisation d’Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: d39b73a93f6abd434034acc9dca1858c7f57dde4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c06417aa89bdc81c34232c24921d1c64d1be8904
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182651"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236832"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
 
@@ -47,7 +47,7 @@ Demandez de nouvelles fonctionnalités et votez pour les demandes en visitant le
 
 Actuellement, il n’y a deux clients pour Windows : 
 
-- Le **client d’étiquetage unifié Azure Information Protection** qui télécharge les étiquettes et les paramètres de stratégie à partir du Centre de sécurité et conformité Office 365. Ce client est maintenant en disponibilité générale.
+- Le **Azure Information Protection unifiée client étiquetage** qui télécharge des étiquettes et les paramètres de stratégie à partir d’un des centres d’administration suivants : Office 365 centre sécurité et conformité, centre de sécurité Microsoft 365, le centre de conformité de Microsoft 365. Ce client est maintenant en disponibilité générale et a une version d’évaluation pour tester des fonctionnalités supplémentaires pour une version ultérieure.
 
 - Le **client Azure Information Protection** qui télécharge les étiquettes et les paramètres de stratégie à partir du portail Azure. Ce client s’appuie sur les versions précédentes de disponibilité générale du client.
 

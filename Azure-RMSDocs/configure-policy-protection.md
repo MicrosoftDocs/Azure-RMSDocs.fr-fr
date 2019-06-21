@@ -4,17 +4,17 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 06/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: fb689468efe091caecd3bfac076bdf85ca6aef58
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: e7fcdacf0e3b75ee3f7626248652a124faf60bbf
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934720"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305589"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -24,7 +24,7 @@ ms.locfileid: "65934720"
 
 Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’un service Rights Management. Ce service utilise des stratégies de chiffrement, d’identité et d’autorisation pour vous aider à éviter les pertes de données. La protection est appliquée quand une étiquette est configurée de manière à utiliser la protection Rights Management pour les documents et les e-mails. Les utilisateurs peuvent aussi sélectionner l’option **Ne pas transférer** dans Outlook.
 
-Quand votre étiquette est configurée avec le paramètre de protection **Azure (clé cloud)**, en arrière-plan, cette action crée et configure un modèle de protection qui est ensuite accessible pour les services et applications qui sont intégrés aux modèles Rights Management. Par exemple, Exchange Online et les règles de flux d’e-mail et Outlook sur le web. 
+Quand votre étiquette est configurée avec le paramètre de protection **Azure (clé cloud)** , en arrière-plan, cette action crée et configure un modèle de protection qui est ensuite accessible pour les services et applications qui sont intégrés aux modèles Rights Management. Par exemple, Exchange Online et les règles de flux d’e-mail et Outlook sur le web. 
 
 ## <a name="how-the-protection-works"></a>Fonctionnement de la protection
 
@@ -87,7 +87,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
     ![Configurer la protection d’une étiquette Azure Information Protection](./media/info-protect-protection-bar-configured.png)
 
-5. Dans le panneau **Protection**, sélectionnez **Azure (clé du cloud)** ou **HYOK (AD RMS)**.
+5. Dans le panneau **Protection**, sélectionnez **Azure (clé du cloud)** ou **HYOK (AD RMS)** .
     
     Dans la plupart des cas, sélectionnez **Azure (clé du cloud)** pour vos paramètres d’autorisation. Ne sélectionnez **HYOK (AD RMS)** que si vous avez lu et compris les prérequis et les restrictions qui accompagnent cette configuration « *conservez votre propre clé* » (HYOK, hold your own key). Pour plus d’informations, consultez [HYOK (conservez votre propre clé) : exigences et restrictions pour la protection AD RMS](configure-adrms-restrictions.md). Pour poursuivre la configuration de la fonction HYOK (AD RMS), passez à l’étape 9.
     
@@ -107,7 +107,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
      Si vous avez l’habitude de créer et de modifier des modèles personnalisés, il peut s’avérer utile de consulter [Tâches que vous aviez l’habitude d’effectuer avec le portail Azure Classic](migrate-portal.md).
 
-7. Si vous avez sélectionné **Définir les autorisations** pour **Azure (clé cloud)**, cette option vous permet de sélectionner des utilisateurs et droits d’utilisation. 
+7. Si vous avez sélectionné **Définir les autorisations** pour **Azure (clé cloud)** , cette option vous permet de sélectionner des utilisateurs et droits d’utilisation. 
     
     Si vous ne sélectionnez pas d’utilisateurs, puis cliquez successivement sur **OK** dans ce panneau et sur **Enregistrer** dans le panneau **Étiquette** : L’étiquette est configurée pour appliquer une protection telle que seule la personne qui applique l’étiquette peut ouvrir le document ou l’e-mail sans aucune restriction. Cette configuration est parfois appelée « Pour moi uniquement » et peut être le résultat requis, afin qu’un utilisateur puisse enregistrer un fichier à n’importe quel emplacement et être assuré d’être le seul à pouvoir l’ouvrir. Si ce résultat correspond à vos besoins et qu’aucun autre utilisateur n’est tenu de collaborer sur le contenu protégé, ne sélectionnez pas **Ajouter des autorisations**. Après que vous avez enregistré l’étiquette, à la prochaine ouverture de ce panneau **Protection**, **IPC_USER_ID_OWNER** est affiché pour **Utilisateurs**, et **Copropriétaire** est affiché pour **Autorisations** afin de refléter cette configuration.
     
@@ -152,7 +152,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
      Ce regroupement de paramètres crée un modèle personnalisé pour le service Azure Rights Management. Ces modèles peuvent être utilisés avec les applications et services qui s’intègrent à Azure Rights Management. Pour plus d’informations sur la façon dont les ordinateurs et les services téléchargent et actualisent ces modèles, consultez [Actualisation des modèles pour les utilisateurs et services](refresh-templates.md).
 
-8. Si vous avez choisi **Sélectionner un modèle prédéfini** pour **Azure (clé du cloud)**, cliquez sur la zone de liste déroulante, puis sélectionnez le [modèle](configure-policy-templates.md) à utiliser pour protéger les documents et les e-mails avec cette étiquette. Vous ne voyez pas les modèles archivés ou les modèles qui sont déjà sélectionnés pour une autre étiquette.
+8. Si vous avez choisi **Sélectionner un modèle prédéfini** pour **Azure (clé du cloud)** , cliquez sur la zone de liste déroulante, puis sélectionnez le [modèle](configure-policy-templates.md) à utiliser pour protéger les documents et les e-mails avec cette étiquette. Vous ne voyez pas les modèles archivés ou les modèles qui sont déjà sélectionnés pour une autre étiquette.
     
     Si vous sélectionnez un **modèle de service** ou que vous avez configuré des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) :
     
@@ -160,7 +160,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
         
         Notez que tous les modèles publiés sont toujours affichés, même si vous configurez une stratégie délimitée. Par exemple, vous configurez une stratégie délimitée au groupe Marketing. Les modèles que vous pouvez sélectionner ne se limitent pas aux modèles délimités au groupe Marketing, et il est possible de sélectionner un modèle de service que les utilisateurs sélectionnés ne peuvent pas utiliser. Pour faciliter la configuration et minimiser la résolution des problèmes, envisagez d’attribuer le même nom au modèle de service et à l’étiquette de votre stratégie délimitée. 
 
-9. Si vous avez sélectionné **HYOK (AD RMS)**, sélectionnez **Définir les détails des modèles AD RMS** ou **Configurer des autorisations définies par l’utilisateur (préversion)**. Ensuite, spécifiez l’URL de licence de votre cluster AD RMS.
+9. Si vous avez sélectionné **HYOK (AD RMS)** , sélectionnez **Définir les détails des modèles AD RMS** ou **Configurer des autorisations définies par l’utilisateur (préversion)** . Ensuite, spécifiez l’URL de licence de votre cluster AD RMS.
     
     Pour obtenir des instructions afin de spécifier un GUID de modèle et votre URL de licence, consultez [Recherche d’informations pour spécifier la protection AD RMS avec une étiquette Azure Information Protection](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
     
@@ -201,7 +201,7 @@ Vos utilisateurs tapent l’adresse e-mail Gmail dans la zone **À**.  Ensuite, 
 
 1. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé du cloud)** est sélectionnée.
     
-2. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)**.
+2. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)** .
 
 3. Vérifiez que l’option suivante est sélectionnée : **Dans Outlook appliquer Ne pas transférer**.
 
@@ -277,7 +277,7 @@ Lorsque vos utilisateurs spécifient les adresses e-mail dans la zone **À**, ce
     
     Remarque : Ne sélectionnez pas **Observateur** pour les e-mails et, si vous sélectionnez **Personnalisé**, veillez à inclure **Modifier et enregistrer**.
     
-    Pour sélectionner les autorisations qui correspondent à la nouvelle option **Chiffrement seul** d’Exchange Online, sélectionnez **Personnalisé**. Ensuite, sélectionnez toutes les autorisations sauf **Enregistrer sous, Exporter (EXPORT)** et **Contrôle total (OWNER)**.
+    Pour sélectionner les autorisations qui correspondent à la nouvelle option **Chiffrement seul** d’Exchange Online, sélectionnez **Personnalisé**. Ensuite, sélectionnez toutes les autorisations sauf **Enregistrer sous, Exporter (EXPORT)** et **Contrôle total (OWNER)** .
 
 5. Pour spécifier des utilisateurs supplémentaires qui doivent disposer d’autorisations différentes, répétez les étapes 3 et 4.
 

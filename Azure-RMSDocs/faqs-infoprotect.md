@@ -4,19 +4,19 @@ description: Vous avez une question au sujet de l’utilisation d’Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: c06417aa89bdc81c34232c24921d1c64d1be8904
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: db5b1b06f198db0795876e71749b1d220c7c2694
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236832"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305707"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
 
@@ -49,9 +49,9 @@ Actuellement, il n’y a deux clients pour Windows :
 
 - Le **Azure Information Protection unifiée client étiquetage** qui télécharge des étiquettes et les paramètres de stratégie à partir d’un des centres d’administration suivants : Office 365 centre sécurité et conformité, centre de sécurité Microsoft 365, le centre de conformité de Microsoft 365. Ce client est maintenant en disponibilité générale et a une version d’évaluation pour tester des fonctionnalités supplémentaires pour une version ultérieure.
 
-- Le **client Azure Information Protection** qui télécharge les étiquettes et les paramètres de stratégie à partir du portail Azure. Ce client s’appuie sur les versions précédentes de disponibilité générale du client.
+- Le **client Azure Information Protection (classique)** qui télécharge des étiquettes et des paramètres de stratégie à partir du portail Azure. Ce client s’appuie sur les versions précédentes de disponibilité générale du client.
 
-Nous vous recommandons de tester le client d’étiquetage unifié Azure Information Protection si ses fonctionnalités actuelles répondent à vos besoins métier. Dans le cas contraire, ou si vous avez configuré des étiquettes dans le portail Azure que vous n’avez pas encore [migrées vers le magasin d’étiquetage unifié](configure-policy-migrate-labels.md), utilisez le client Azure Information Protection.
+Nous vous conseillons de que tester avec le client d’étiquetage unifié si sa fonctionnalité et un ensemble de fonctionnalités actuel répond aux besoins de votre entreprise. Dans le cas contraire, ou si vous avez configuré des étiquettes dans le portail Azure que vous n’avez pas encore [migré vers le magasin d’étiquetage unifié](configure-policy-migrate-labels.md), utilisez le client classique.
 
 Pour plus d’informations, consultez [Choisir le client Azure Information Protection à utiliser](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use), notamment pour visualiser un tableau de comparaison des fonctionnalités.
 

@@ -4,17 +4,17 @@ description: Certaines questions fréquentes sur Azure Information Protection et
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/08/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: fc85cfcdcef82c4b30df7bc88ac054ee0bc172c5
-ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
+ms.openlocfilehash: 1e0933a88afc355dbcbab0dc667e28f49f10c0b9
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2019
-ms.locfileid: "66815625"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305772"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -46,7 +46,7 @@ Pour plus d’informations sur la migration d’étiquettes existantes, voir [Gu
 
 ## <a name="whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Quelle est la différence entre le client Azure Information Protection et Azure Information Protection unifiée client étiquetage ?
 
-Le **client Azure Information Protection** a été disponible dans la mesure où Azure Information Protection a été annoncée en tant que nouveau service pour la classification et protection des fichiers et e-mails. Ce client télécharge les étiquettes et les paramètres de stratégie à partir d’Azure, et vous configurez la stratégie Azure Information Protection à partir du portail Azure. Pour plus d’informations, consultez [vue d’ensemble de la stratégie Azure Information Protection](overview-policy.md). 
+Le **client Azure Information Protection (classique)** a été disponible dans la mesure où Azure Information Protection a été annoncée en tant que nouveau service pour la classification et protection des fichiers et e-mails. Ce client télécharge les étiquettes et les paramètres de stratégie à partir d’Azure, et vous configurez la stratégie Azure Information Protection à partir du portail Azure. Pour plus d’informations, consultez [vue d’ensemble de la stratégie Azure Information Protection](overview-policy.md). 
 
 Le **Azure Information Protection unifiée client étiquetage** est un ajout récent de plus, pour prendre en charge l’étiquetage unifiée stocker qui prennent en charge plusieurs applications et services. Ce client télécharge les étiquettes de sensibilité et des paramètres de stratégie depuis les centres d’administration suivants : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 et le Centre de conformité Microsoft 365. Pour plus d’informations, consultez [vue d’ensemble des étiquettes de sensibilité](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels).
 
@@ -58,11 +58,11 @@ Affichent les deux clients, lorsqu’ils sont installés, **Azure Information Pr
 
 - Depuis l’Explorateur de fichiers : Cliquez avec le bouton droit sur un ou plusieurs fichiers ou sur un dossier, sélectionnez **Classifier et protéger**, puis **Aide et commentaires**.
 
-- À partir d’une application Office : À partir de la **protéger** bouton (client Azure Information Protection) ou **sensibilité** bouton (client Azure Information Protection unifiée étiquetage), sélectionnez **aide et commentaires**.
+- À partir d’une application Office : À partir de la **protéger** bouton (le client classique) ou **sensibilité** bouton (client unifiée étiquetage), sélectionnez **aide et commentaires**.
 
 Utilisez le **Version** nombre affiché pour identifier le client :
 
-- Une version **1**, par exemple, **1.48.204.0**, identifie le client Azure Information Protection.
+- Une version **1**, par exemple, **1.48.204.0**, identifie le client Azure Information Protection (classique).
 
 - Une version **2**, par exemple, **2.0.778.0**, identifie le client d’étiquetage unifié Azure Information Protection.
 

@@ -4,19 +4,19 @@ description: Instructions pour les administrateurs relatives à la configuration
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 06/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8827350cc630f6e2af77878c726c023c5ba6674e
-ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
+ms.openlocfilehash: 753ef710b4a4058e9792203e549b27cae83f8a12
+ms.sourcegitcommit: 2af2297319265c1f91aa76eb227c6f4d316df42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343692"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348797"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configuration d’applications pour Azure Rights Management
 
@@ -32,7 +32,7 @@ Après avoir déployé Azure Information Protection pour votre organisation, uti
 > [!IMPORTANT]
 > Pour plus d’informations sur les versions prises en charge et les autres exigences, consultez [Configuration requise pour Azure Rights Management](requirements.md).
 
--   [Office 365 : Configuration pour les clients et services en ligne](configure-office365.md)
+-   [Office 365 : Configuration des services en ligne](configure-office365.md)
 
     -   [Exchange Online : Configuration de la Gestion des droits relatifs à l’information](configure-office365.md#exchangeonline-irm-configuration)
 
@@ -40,7 +40,7 @@ Après avoir déployé Azure Information Protection pour votre organisation, uti
 
 - [Applications Office : Configuration pour les clients](configure-office-apps.md)
 
-    -   [Office 2019, Office 2016 et Office 2013](configure-office-apps.md#office2019-office-2016-and-office-2013)
+    -   [Applications Office 365, Office 2019, Office 2016 et Office 2013](configure-office-apps.md#office365-apps-office-2019-office-2016-and-office-2013)
 
     -   [Office 2010](configure-office-apps.md#office2010)
 

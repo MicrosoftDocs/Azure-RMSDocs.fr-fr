@@ -1,6 +1,6 @@
 ---
-title: Configuration pour Office 365 à utiliser Azure RMS - AIP
-description: Informations et instructions permettant aux administrateurs de configurer Office 365 pour qu’il fonctionne avec le service Azure Rights Management d’Azure Information Protection.
+title: Configuration pour les services Office 365 à utiliser Azure RMS - AIP
+description: Informations et instructions permettant aux administrateurs de configurer les services Office 365 pour fonctionner avec le service Azure Rights Management d’Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,23 +11,21 @@ ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c621ce93810243ce022433d860671a34e7d679c0
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 0c86bf4100f3c2c49cc5261215a0edcd59f24408
+ms.sourcegitcommit: 2af2297319265c1f91aa76eb227c6f4d316df42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767971"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348834"
 ---
-# <a name="office365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365 : Configuration des clients et services en ligne de façon à ce qu’ils utilisent le service Azure Rights Management
+# <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365 : Configuration des services en ligne peuvent utiliser le service Azure Rights Management
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Dans la mesure où Office 365 prend en charge le service Azure Rights Management d’Azure Information Protection en mode natif, aucune configuration de l’ordinateur client n’est nécessaire pour gérer les fonctionnalités IRM (Gestion des droits relatifs à l’information) des applications comme Word, Excel, PowerPoint, Outlook et Outlook sur le web. Tout ce que les utilisateurs doivent faire est de se connecter à leurs applications Office avec leurs informations d’identification Rights Management. Ils peuvent alors protéger des fichiers et des e-mails, et utiliser des fichiers et des e-mails qui ont été protégés par d’autres.
-
-Cependant, nous vous recommandons de compléter ces applications par le client Azure Information Protection, afin que les utilisateurs puissent bénéficier du complément Office et de la prise en charge de types de fichiers supplémentaires. Pour plus d’informations, consultez [Client Azure Information Protection pour Windows : Installation et configuration pour les clients](configure-client.md).
+Utilisez les sections suivantes pour vous aider à configurer Exchange Online, SharePoint Online et OneDrive entreprise pour utiliser le service Azure Rights Management d’Azure Information Protection.
 
 ## <a name="exchangeonline-irm-configuration"></a>Exchange Online : Configuration d’IRM
-Pour plus d’informations sur le fonctionnement la Gestion des droits relatifs à l’information Exchange Online avec le service Azure Rights Management, consultez la section [Exchange Online et Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) dans [Prise en charge d’Azure Rights Management par les programmes et services Office](office-apps-services-support.md).
+Pour plus d’informations sur le fonctionnement de Exchange Online avec le service Azure Rights Management, consultez le [Exchange Online et Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) section [comment Office applications et services prennent en charge des droits Azure Gestion](office-apps-services-support.md).
 
 Exchange Online est peut-être déjà activé pour utiliser le service Azure Rights Management. Pour le savoir, exécutez les commandes suivantes :
 
@@ -502,7 +500,7 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
 
    2. Recherchez `$tenantAdmin` et remplacez la valeur de l'exemple par votre propre compte administrateur général complet pour Office 365.
 
-      Cette valeur est identique à celle que vous utilisez pour vous connecter au Centre d’administration Microsoft 365 en tant qu’administrateur général. Son format est le suivant : nom_utilisateur@*&lt;nom de domaine du locataire&gt;*.com
+      Cette valeur est identique à celle que vous utilisez pour vous connecter au Centre d’administration Microsoft 365 en tant qu’administrateur général. Son format est le suivant : nom_utilisateur@ *&lt;nom de domaine du locataire&gt;* .com
 
       Par exemple, si le nom d’utilisateur de l’administrateur général d’Office 365 est « admin » pour le domaine de locataire « contoso.com », vous devez spécifier : <strong>admin@contoso.com</strong>
 
@@ -510,7 +508,7 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
 
       Vous pouvez également lire dans le script les commentaires concernant la façon de remplacer ce tableau en important un fichier .CSV contenant toutes les URL à configurer.  Nous avons fourni un autre exemple de script pour rechercher et extraire automatiquement les URL à insérer dans ce fichier .CSV. Quand vous êtes prêt, utilisez la section [Script supplémentaire pour répertorier toutes les URL de OneDrive Entreprise dans un fichier .CSV](#additional-script-to-output-all-onedrive-for-business-urls-to-a-csv-file) située juste après ces étapes.
 
-      L’URL web du OneDrive Entreprise de l’utilisateur est au format suivant : https://<em>&lt;nom_client&gt;</em>-my.sharepoint.com/personal/*&lt;nom_utilisateur&gt;*_*&lt;nom_client&gt;*_com.
+      L’URL web du OneDrive Entreprise de l’utilisateur est au format suivant : https://<em>&lt;nom_client&gt;</em>-my.sharepoint.com/personal/ *&lt;nom_utilisateur&gt;* _ *&lt;nom_client&gt;* _com.
 
       Par exemple, si l’utilisateur dans le client contoso porte le nom d’utilisateur « rsimone », vous devez spécifier : **https://contoso-my.sharepoint.com/personal/rsimone_contoso_com**
 
@@ -527,7 +525,7 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
 > [!TIP]
 > Vous pouvez également utiliser ce script pour configurer IRM pour une bibliothèque SharePoint Online. Pour cette configuration, il est préférable d’activer l’option supplémentaire **Interdire aux utilisateurs de télécharger des documents qui ne prennent pas en charge IRM** pour vous assurer que la bibliothèque ne contient que des documents protégés.    Pour ce faire, ajoutez le paramètre `-IrmReject` à la commande Set-IrmConfiguration dans le script.
 >
-> Vous devez également modifier les variables `$webUrls` (par exemple, **https://contoso.sharepoint.com**) et `$listTitle` (par exemple, **$Reports**).
+> Vous devez également modifier les variables `$webUrls` (par exemple, **https://contoso.sharepoint.com** ) et `$listTitle` (par exemple, **$Reports**).
 
 Si vous devez désactiver IRM pour les bibliothèques OneDrive Entreprise de l’utilisateur, consultez la section [Script pour désactiver IRM pour OneDrive entreprise](#script-to-disable-irm-for-onedrive-for-business).
 

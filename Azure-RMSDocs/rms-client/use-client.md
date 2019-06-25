@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 06/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: c6898480d18ef5dd915faa1b1c6c369e9de877fb
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.openlocfilehash: b51ebdb55212e2a29b6a8ce950bd69d578e98ed9
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305751"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343672"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -68,7 +68,7 @@ Utilisez le tableau suivant pour aider à comparer les fonctionnalités qui sont
 |Composant|Client classique|client d’étiquetage unifiée|
 |-------|-----------------------------------|----------------------------------------------------|
 |Étiquetage des actions : manuel, recommandé, automatique| Oui | Oui |
-|Création centralisée de rapports (analytique) :| Oui | Oui, avec des restrictions :<br /><br /> - [Correspondances de contenu](../reports-aip.md#content-matches-for-deeper-analysis) nécessitent la préversion du client |
+|Création centralisée de rapports (analytique) :| Oui | Oui, avec des restrictions :<br /><br /> -Aucune prise en charge de [correspondances de contenu](../reports-aip.md#content-matches-for-deeper-analysis) |
 |Paramètres de réinitialisation et journaux d’exportation :| Oui | Oui |
 |Autorisations définies par l’utilisateur :| Oui | Oui, avec des restrictions : <br /><br />-Pour Outlook uniquement (ne pas transférer) : Pris en charge<br /><br />-Pour Word, Excel, PowerPoint et l’Explorateur de fichiers : Prise en charge avec la préversion du client lorsque vous configurez l’étiquette dans le portail Azure |
 |Autorisations personnalisées :| Oui | Explorateur de fichiers et de PowerShell (version préliminaire) <br /><br /> Dans les applications Office, les utilisateurs peuvent également sélectionner **Informations sur le fichier** > **Protéger le document** > **Restreindre l’accès**. |

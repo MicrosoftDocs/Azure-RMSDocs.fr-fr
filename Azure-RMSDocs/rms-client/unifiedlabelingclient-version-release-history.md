@@ -4,18 +4,18 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: ea360e880e4b6bf0dc4c2f362a82ffa6d21a6c3b
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: d0122c41123bb47f0facf2bdf96e73ad10f8fe3d
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236821"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343655"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unifiée l’étiquetage client - Version historique des versions et politique de support
 
@@ -69,7 +69,7 @@ Si vous avez une version 2 du client qui est ultérieure à 2.0.779.0, il est un
     - [Pour les e-mails avec pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
     - [Ajouter « Signaler un problème » pour les utilisateurs](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
     - [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - [Activer l’analytique Azure Information Protection pour découvrir des informations sensibles dans des documents](clientv2-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - [Désactiver l’envoi des informations sensibles découvertes dans les documents à l’analytique d’Azure Information Protection](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
     - [Désactiver l’envoi de correspondances de types d’informations pour un sous-ensemble d’utilisateurs](clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
     - [Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [Appliquer une propriété personnalisée, quand une étiquette est appliquée.](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
@@ -93,6 +93,8 @@ Si vous avez une version 2 du client qui est ultérieure à 2.0.779.0, il est un
 **Correctifs :**
 
 - Lorsque l’étiquetage automatique est configurée, l’étiquette s’applique à la première fois qu’un document est enregistré.
+
+- Par défaut les sous-étiquettes prend en charge l’étiquetage.
 
 ## <a name="version-207790"></a>Version 2.0.779.0
 

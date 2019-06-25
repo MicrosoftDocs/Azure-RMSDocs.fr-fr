@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
-ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 655116fa6749221ee6f454c2b8673635937f34db
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: fba1cf12c8ffbecbc9293c4b06283929507a39cb
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156723"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343722"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Prise en charge d’Azure Rights Management par les programmes et services Office 
 
@@ -29,13 +28,7 @@ Ces programmes prennent en charge la Gestion des droits de façon native et perm
 
 Par exemple, les utilisateurs peuvent configurer un document Word pour qu’il soit accessible seulement par des personnes de votre organisation. Vous pouvez contrôler si une feuille de calcul Excel peut être modifiée ou limitée à la lecture seule, ou l’empêcher d’être imprimée. Pour les fichiers ayant des contraintes de temps, un délai d’expiration peut être configuré, au terme duquel le fichier ne sera plus accessible. Cette configuration peut être faite directement par les utilisateurs ou en appliquant un modèle de protection. Pour Outlook, les utilisateurs peuvent également choisir l’option **Ne pas transférer** pour éviter toute fuite de données.
 
-En plus de la prise en charge native par Office d’Azure Rights Management, ces programmes prennent en charge la barre Azure Information Protection qui est installée avec le [client Azure Information Protection](./rms-client/aip-client.md). Cette barre affiche des étiquettes permettant aux utilisateurs d’appliquer automatiquement une protection à des documents et des e-mails qui contiennent des données sensibles.
-
-Si vous êtes prêt à configurer des programmes Office et le client Azure Information Protection :
-
-- Pour configurer des programmes Office, consultez [Applications Office : Configuration pour les clients](configure-office-apps.md).
-
-- Pour installer et configurer le client Azure Information Protection, consultez [Client Azure Information Protection : Installation et configuration pour les clients](configure-client.md).
+Si vous êtes prêt à configurer Office applications voir [applications Office : Configuration pour les clients](configure-office-apps.md).
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online et Exchange Server
 Quand vous utilisez Exchange Online ou Exchange Server, vous pouvez configurer des options pour Azure Information Protection. Cette configuration permet à Exchange d’offrir les solutions de protection suivantes :
@@ -69,9 +62,7 @@ Si vous êtes prêt à configurer Exchange pour protéger les e-mails :
 
 Si vous utilisez SharePoint Online ou SharePoint Server, vous pouvez protéger vos documents à l’aide de la fonctionnalité Gestion des droits relatifs à l’information (IRM) de SharePoint. Cette fonctionnalité permet aux administrateurs de protéger des listes ou des bibliothèques pour que le fichier qui est téléchargé quand un utilisateur extrait un document soit protégé. Cela signifie que seules les personnes autorisées peuvent afficher et utiliser ce fichier conformément aux stratégies de protection des informations que vous spécifiez. Par exemple, le fichier peut être en lecture seule, vous pouvez désactiver la copie du texte, vous pouvez empêcher l'enregistrement d'une copie locale et l'impression du fichier.
 
-Les documents Word, PowerPoint, Excel et PDF prennent en charge cette protection IRM de SharePoint. Par défaut, la protection est limitée à la personne qui télécharge le document. Vous pouvez modifier cette valeur par défaut avec une option de configuration nommée **Autoriser la protection de groupe**, qui étend la protection à un groupe que vous spécifiez. Vous pouvez, par exemple, spécifier un groupe qui a l’autorisation de modifier des documents dans la bibliothèque, afin que le même groupe d’utilisateurs puisse modifier le document en dehors de SharePoint, quel que soit l’utilisateur qui a téléchargé le document. Ou, vous pouvez spécifier un groupe qui ne dispose pas d’autorisations dans SharePoint, mais dont les utilisateurs ont besoin d’accéder au document en dehors de SharePoint. 
-
-Pour les listes et les bibliothèques SharePoint, cette protection est toujours configurée par un administrateur, jamais par un utilisateur final. Vous définissez les autorisations au niveau du site, puis ces autorisations sont, par défaut, héritées par les listes ou les bibliothèques de ce site. Si vous utilisez SharePoint Online, les utilisateurs peuvent également configurer leur bibliothèque OneDrive Entreprise avec la protection IRM.
+Les documents Word, PowerPoint, Excel et PDF prennent en charge cette protection IRM de SharePoint. Par défaut, la protection est limitée à la personne qui télécharge le document. Vous pouvez modifier cette valeur par défaut avec une option de configuration nommée **Autoriser la protection de groupe**, qui étend la protection à un groupe que vous spécifiez. Vous pouvez, par exemple, spécifier un groupe qui a l’autorisation de modifier des documents dans la bibliothèque, afin que le même groupe d’utilisateurs puisse modifier le document en dehors de SharePoint, quel que soit l’utilisateur qui a téléchargé le document. Ou, vous pouvez spécifier un groupe qui ne dispose pas d’autorisations dans SharePoint, mais dont les utilisateurs ont besoin d’accéder au document en dehors de SharePoint. Pour les listes et les bibliothèques SharePoint, cette protection est toujours configurée par un administrateur, jamais par un utilisateur final. Vous définissez les autorisations au niveau du site, puis ces autorisations sont, par défaut, héritées par les listes ou les bibliothèques de ce site. Si vous utilisez SharePoint Online, les utilisateurs peuvent également configurer leur bibliothèque OneDrive Entreprise avec la protection IRM.
 
 Pour effectuer un contrôle affiné, vous pouvez configurer une liste ou une bibliothèque du site pour qu’elle n’hérite plus des autorisations de son parent. Vous pouvez ensuite configurer des autorisations IRM au niveau de la liste ou de la bibliothèque. Ces autorisations sont alors désignées comme « autorisations uniques ». Notez toutefois que les autorisations sont toujours définies au niveau du conteneur. Vous ne pouvez donc pas les définir pour les fichiers de façon individuelle. 
 
@@ -93,6 +84,8 @@ Pour les bibliothèques qui ne sont pas protégées par IRM, si vous protégez u
 Quand vous utilisez la protection IRM SharePoint, le service Azure Rights Management applique des restrictions d’utilisation et un chiffrement de données aux documents téléchargés à partir de SharePoint, mais pas aux documents créés initialement dans SharePoint ou chargés dans la bibliothèque. Pour plus d’informations sur la façon dont les documents sont protégés avant leur téléchargement, voir [Chiffrement de données dans OneDrive Entreprise et SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) dans la documentation SharePoint.
 
 Bien que ce ne soit plus une nouveauté, le billet suivant du blog Office 365 contient des informations supplémentaires qui peuvent vous être utiles : [Nouveautés de la Gestion des droits relatifs à l’information dans SharePoint et SharePoint Online](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
+
+Pour les modifications qui seront disponibles, consultez [mises à jour de sécurité de SharePoint, d’administration et de migration](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
 
 Si vous êtes prêt à configurer SharePoint pour l’IRM :
 

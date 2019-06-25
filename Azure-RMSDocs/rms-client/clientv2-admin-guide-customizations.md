@@ -4,19 +4,19 @@ description: Informations sur la personnalisation du client d’étiquetage unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 41b4d44babb9941820c95a7f842f119c444a4b06
-ms.sourcegitcommit: 478081129d9ea8382ce08fae0bae1a08cab23893
+ms.openlocfilehash: b269b4b16507a79c0f08d6c9cc290c22dd69f769
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298274"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343750"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifiée Azure Information Protection
 
@@ -132,7 +132,7 @@ Paramètres de stratégie avancés sont appliqués dans l’ordre inverse de l�
 |PostponeMandatoryBeforeSave|[Supprimer « Pas maintenant » pour les documents quand l’étiquetage obligatoire est utilisé](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Ajouter « Signaler un problème » pour les utilisateurs](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Activer l’analytique Azure Information Protection pour découvrir des informations sensibles dans des documents](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
+|RunAuditInformationTypeDiscovery|[Désactiver l’envoi des informations sensibles découvertes dans les documents à l’analytique d’Azure Information Protection](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 
 Exemple de commande PowerShell pour vérifier vos paramètres de stratégie d’étiquette en vigueur pour une stratégie d’étiquette nommé « Global » :
 
@@ -212,13 +212,13 @@ Quand vous configurez ce paramètre, l’option **Pas maintenant** n’est pas p
 
 Pour la stratégie de l’étiquette sélectionnée, spécifiez les chaînes suivantes :
 
-- Clé : **PostponeMandatoryBeforeSaveProperty**
+- Clé : **PostponeMandatoryBeforeSave**
 
 - Value : **False**
 
 Exemple PowerShell de commande, où votre stratégie de l’étiquette est nommé « Global » :
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSaveProperty="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage
 
@@ -444,28 +444,6 @@ Lorsque ces conditions sont remplies et adresse de messagerie du destinataire n�
 
 - **Bloquer** : L’utilisateur ne peut pas envoyer l’e-mail tant que la condition perdure. Le message contient la raison du blocage de l’e-mail pour que l’utilisateur puisse résoudre le problème, par exemple supprimer des destinataires spécifiques ou appliquer une étiquette à l’e-mail. 
 
-L’action résultante est consignée dans le journal des événements Windows local **Journaux des applications et des services** > **Azure Information Protection** :
-
-- Messages d’avertissement : ID d’information 301
-
-- Justifier les messages : ID d’information 302
-
-- Messages de blocage : ID d’information 303
-
-Exemple d’entrée événement d’un message de justification :
-
-```
-Client Version: 2.0.779.0
-Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
-Item Full Path: Price list.msg
-Item Name: Price list
-Process Name: OUTLOOK
-Action: Justify
-User Justification: My manager approved sharing of this content
-Action Source: 
-User Response: Confirmed
-```
-Les sections suivantes contiennent des instructions de configuration pour chaque paramètre client avancé.
 
 > [!TIP]
 > Bien que le didacticiel est pour le client Azure Information Protection plutôt que le client d’étiquetage unifié, vous pouvez voir ces paramètres dans l’action par vous-même avec avancés [didacticiel : Configurez Azure Information Protection pour contrôler oversharing des informations à l’aide de Outlook](../infoprotect-oversharing-tutorial.md).
@@ -595,19 +573,19 @@ Exemples de commandes PowerShell, dans lequel votre stratégie de l’étiquette
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
-## <a name="enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents"></a>Activer l’analytique Azure Information Protection pour découvrir des informations sensibles dans des documents
+## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Désactiver l’envoi des informations sensibles découvertes dans les documents à l’analytique d’Azure Information Protection
 
 Cette configuration utilise une stratégie [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) que vous devez configurer à l’aide de PowerShell du centre de conformité et sécurité Office 365. Il est pris en charge par la version préliminaire d’unifiée étiquetage uniquement le client.
 
-[Analytique de Protection des informations Azure](../reports-aip.md) peut détecter et signaler les documents enregistrés par Azure Information Protection unifiée étiquetage clients lorsque ce contenu contient des informations sensibles. Par défaut, ces informations ne sont pas envoyées à l’analytique Azure Information Protection.
+[Analytique de Protection des informations Azure](../reports-aip.md) peut détecter et signaler les documents enregistrés par les clients Azure Information Protection quand ce contenu contient des informations sensibles. Par défaut, ces informations sont envoyées par Azure Information Protection unifiée l’étiquetage pour l’analytique d’Azure Information Protection.
 
-Pour modifier ce comportement afin que ces informations sont envoyées par le client d’étiquetage unifié, entrez les chaînes suivantes pour la stratégie de l’étiquette sélectionnée :
+Pour modifier ce comportement afin que ces informations ne sont pas envoyées par le client d’étiquetage unifié, entrez les chaînes suivantes pour la stratégie de l’étiquette sélectionnée :
 
 - Clé : **RunAuditInformationTypeDiscovery**
 
-- Value : **True**
+- Value : **False**
 
-Si vous ne définissez pas ce client avancé définition, les résultats d’audit sont toujours envoyés à partir du client d’étiquetage unifié, mais les informations sont limitées à la création de rapports lorsqu’un utilisateur a accédé à du contenu étiqueté.
+Si vous définissez ce paramètre client avancé, les résultats d’audit sont toujours envoyés à partir du client d’étiquetage unifié, mais que les informations sont limitées à la création de rapports lorsqu’un utilisateur a accédé intitulé contenu.
 
 Exemple :
 
@@ -619,7 +597,7 @@ Exemple :
 
 Exemple PowerShell de commande, où votre stratégie de l’étiquette est nommé « Global » :
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="True"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="False"}
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Désactiver l’envoi de correspondances de types d’informations pour un sous-ensemble d’utilisateurs
 
@@ -629,7 +607,7 @@ Lorsque la case [Analytique Azure Information Protection](../reports-aip.md) (qu
 
 - Clé : **LogMatchedContent**
 
-- Value : **Disable**
+- Value : **False**
 
 Exemple PowerShell de commande, où votre stratégie de l’étiquette est nommé « Global » :
 
@@ -647,7 +625,7 @@ Pour les documents Office qui sont étiquetés par Secure Islands, vous pouvez �
 
 - Pour les documents Office : Lorsque le document est ouvert dans l’application de bureau, la nouvelle étiquette de sensibilité est affichée comme définie et est appliquée lorsque le document est enregistré.
 
-- Pour PowerShell : [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) et [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) peut appliquer la nouvelle étiquette de sensibilité. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) n’affiche pas la nouvelle étiquette de sensibilité jusqu'à ce qu’il est défini par une autre méthode.
+- Pour PowerShell : [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) et [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) peut appliquer la nouvelle étiquette de sensibilité.
 
 - Pour l’Explorateur de fichiers : Dans la boîte de dialogue Azure Information Protection, la nouvelle étiquette de sensibilité est indiquée mais n’est pas définie.
 

@@ -4,19 +4,19 @@ description: Informations sur la personnalisation du client d’étiquetage unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: b269b4b16507a79c0f08d6c9cc290c22dd69f769
-ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
+ms.openlocfilehash: 15dc66f33918e52645e81964eca260f167986f3e
+ms.sourcegitcommit: 027c550fc7634ca28935ed3521e8eae186b03483
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343750"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389026"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifiée Azure Information Protection
 
@@ -26,16 +26,16 @@ ms.locfileid: "67343750"
 
 Utilisez les informations suivantes pour les configurations avancées que vous devrez peut-être pour des scénarios spécifiques ou un sous-ensemble d’utilisateurs lorsque vous gérez le client d’étiquetage unifié Azure Information Protection.
 
-Ces paramètres nécessitent une modification du Registre ou en spécifiant les paramètres avancés à l’aide de PowerShell du centre de conformité et sécurité Office 365.
+Ces paramètres nécessitent une modification du Registre ou en spécifiant les paramètres avancés. L’utilisation de paramètres avancés [PowerShell du centre de conformité et sécurité Office 365](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps).
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Comment configurer les paramètres avancés pour le client à l’aide de PowerShell du centre de conformité et sécurité Office 365
 
-Lorsque vous utilisez [PowerShell du centre de conformité et sécurité Office 365](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), vous pouvez configurer des paramètres avancés qui prennent en charge des personnalisations pour les étiquettes et les stratégies de l’étiquette. Exemple :
+Lorsque vous utilisez PowerShell du centre de conformité et sécurité Office 365, vous pouvez configurer des paramètres avancés qui prennent en charge des personnalisations pour les étiquettes et les stratégies de l’étiquette. Exemple :
 
 - Le paramètre pour afficher la barre Information Protection dans les applications Office est un ***stratégie paramètre avancé de l’étiquette***.
 - Le paramètre pour spécifier une couleur de l’étiquette est un ***étiquette paramètre avancé***.
 
-Dans les deux cas, vous spécifiez le *AdvancedSettings* paramètre avec l’identité (nom ou GUID) de la stratégie ou d’une étiquette, et spécifiez les paires clé/valeur dans un [table de hachage](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables), à l’aide de la syntaxe suivante :
+Dans les deux cas, après avoir [se connecter à Office 365 Security & PowerShell du centre de conformité](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), spécifiez la *AdvancedSettings* paramètre avec l’identité (nom ou GUID) de la stratégie ou d’une étiquette et spécifiez paires de clé/valeur un [table de hachage](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Utilisez la syntaxe suivante :
 
 Pour un paramètre de stratégie étiquette unique comme valeur de chaîne :
 
@@ -139,6 +139,9 @@ Exemple de commande PowerShell pour vérifier vos paramètres de stratégie d’
     (Get-LabelPolicy -Identity Global).settings
 
 #### <a name="available-advanced-settings-for-labels"></a>Paramètres avancés disponibles pour les étiquettes
+
+> [!NOTE]
+> L’applet de commande Set-étiquette à configurer les paramètres avancés pour les étiquettes est progressivement déployer aux locataires. Si vous n’avez pas cette applet de commande lorsque vous vous connectez à Office 365 Security & PowerShell du centre de conformité, réessayez dans quelques semaines.
 
 |Paramètre|Scénario et instructions|
 |----------------|---------------|

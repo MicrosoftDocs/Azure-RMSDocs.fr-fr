@@ -4,23 +4,23 @@ description: Informations sur la personnalisation du client d’étiquetage unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/26/2019
+ms.date: 06/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 451a7df93629be3bdfb46004dfa3b4dfd94cced7
-ms.sourcegitcommit: 9628dcd88abde32f612896195f8d3d9a2c1d87bf
+ms.openlocfilehash: 1f338f29216224d5984921f7882d45e4c0c4947c
+ms.sourcegitcommit: a884d627c520721b93d0bb81a2a781399879da0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398759"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67464878"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifiée Azure Information Protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Instructions pour : [Azure Information Protection unifiée étiquetage client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -30,7 +30,7 @@ Ces paramètres nécessitent une modification du Registre ou en spécifiant les 
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Comment configurer les paramètres avancés pour le client à l’aide de PowerShell du centre de conformité et sécurité Office 365
 
-Lorsque vous utilisez PowerShell du centre de conformité et sécurité Office 365, vous pouvez configurer des paramètres avancés qui prennent en charge des personnalisations pour les étiquettes et les stratégies de l’étiquette. Par exemple :
+Lorsque vous utilisez PowerShell du centre de conformité et sécurité Office 365, vous pouvez configurer des paramètres avancés qui prennent en charge des personnalisations pour les étiquettes et les stratégies de l’étiquette. Exemple :
 
 - Le paramètre pour afficher la barre Information Protection dans les applications Office est un ***stratégie paramètre avancé de l’étiquette***.
 - Le paramètre pour spécifier une couleur de l’étiquette est un ***étiquette paramètre avancé***.
@@ -139,9 +139,6 @@ Exemple de commande PowerShell pour vérifier vos paramètres de stratégie d’
     (Get-LabelPolicy -Identity Global).settings
 
 #### <a name="available-advanced-settings-for-labels"></a>Paramètres avancés disponibles pour les étiquettes
-
-> [!NOTE]
-> L’applet de commande Set-étiquette à configurer les paramètres avancés pour les étiquettes est toujours déploiement auprès des clients et n’est pas encore disponible dans toutes les régions. Si vous n’avez pas cette applet de commande lorsque vous vous connectez à Office 365 Security & PowerShell du centre de conformité, réessayez dans quelques semaines.
 
 |Paramètre|Scénario et instructions|
 |----------------|---------------|
@@ -259,15 +256,15 @@ Lorsque vous spécifiez la valeur de chaîne pour la clé **ExternalContentMarki
 
 - Correspondance partielle pour tout supprimer dans l’en-tête ou le pied de page.
     
-    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXT TO REMOVE** (TEXTE À SUPPRIMER). Vous souhaitez entièrement supprimer ces en-têtes ou pieds de page. Spécifiez la valeur : `*TEXT*`.
+    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXT TO REMOVE** (TEXTE À SUPPRIMER). Vous souhaitez entièrement supprimer ces en-têtes ou pieds de page. Spécifiez la valeur : `*TEXT*`.
 
 - Correspondance totale pour juste supprimer des mots spécifiques dans l’en-tête ou le pied de page.
     
-    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXT TO REMOVE** (TEXTE À SUPPRIMER). Vous souhaitez supprimer le mot **TEXTE** uniquement, ce qui laisse la chaîne d’en-tête ou de pied de page avec **À SUPPRIMER**. Spécifiez la valeur : `TEXT `.
+    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXT TO REMOVE** (TEXTE À SUPPRIMER). Vous souhaitez supprimer le mot **TEXTE** uniquement, ce qui laisse la chaîne d’en-tête ou de pied de page avec **À SUPPRIMER**. Spécifiez la valeur : `TEXT `.
 
 - Correspondance totale pour tout supprimer dans l’en-tête ou le pied de page.
     
-    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXT TO REMOVE** (TEXTE À SUPPRIMER). Vous voulez supprimer les en-têtes ou les pieds de page qui ont exactement cette chaîne. Spécifiez la valeur : `^TEXT TO REMOVE$`.
+    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXT TO REMOVE** (TEXTE À SUPPRIMER). Vous voulez supprimer les en-têtes ou les pieds de page qui ont exactement cette chaîne. Spécifiez la valeur : `^TEXT TO REMOVE$`.
     
 
 Les caractères génériques de la chaîne que vous spécifiez sont sensibles à la casse. La longueur maximale de la chaîne est de 255 caractères.
@@ -319,7 +316,7 @@ Pour rechercher le nom de la forme que vous utilisez comme en-tête ou pied de p
 
 Utilisez le nom de la forme afin de spécifier une valeur de chaîne pour la clé **PowerPointShapeNameToRemove**. 
 
-Exemple : Le nom de la forme est **fc**. Pour supprimer la forme portant ce nom, spécifiez la valeur : `fc`.
+Exemple : Le nom de la forme est **fc**. Pour supprimer la forme portant ce nom, spécifiez la valeur : `fc`.
 
 - Clé : **PowerPointShapeNameToRemove**
 
@@ -590,7 +587,7 @@ Pour modifier ce comportement afin que ces informations ne sont pas envoyées pa
 
 Si vous définissez ce paramètre client avancé, les résultats d’audit sont toujours envoyés à partir du client d’étiquetage unifié, mais que les informations sont limitées à la création de rapports lorsqu’un utilisateur a accédé intitulé contenu.
 
-Par exemple :
+Exemple :
 
 - Sans ce paramètre, vous pouvez voir qu’un utilisateur a accédé à Financial.docx qui est étiqueté **Confidential \ Sales**.
 
@@ -644,7 +641,7 @@ Notez que ce paramètre ne supprime pas l’étiquette d’origine du document n
 
 Configuration requise : Les documents qui ont une étiquette Secure Islands « Confidentiel » doivent être à nouveau libellées « Confidentiel » par Azure Information Protection.
 
-Dans cet exemple :
+Exemple :
 
 - L’étiquette Secure Islands s’appelle **Confidentiel** et est stockée dans la propriété personnalisée nommée **Classification**.
 
@@ -662,7 +659,7 @@ Exemple PowerShell de commande, où votre étiquette est nommé « Confidentiel
 
 Configuration requise : Les documents qui ont une étiquette « Sensible » chez Secure Islands doivent être à nouveau libellés « Hautement confidentiel » par Azure Information Protection.
 
-Dans cet exemple :
+Exemple :
 
 - L’étiquette Secure Islands s’appelle **Sensible** et est stockée dans la propriété personnalisée nommée **Classification**.
 
@@ -680,7 +677,7 @@ Exemple PowerShell de commande, où votre étiquette est nommé « Hautement co
 
 Configuration requise : Vous avez deux étiquettes Secure Islands qui contiennent le mot « Interne » et vous souhaitez que les documents qui ont une de ces étiquettes Secure Islands pour être à nouveau libellées « Général » par le client d’étiquetage unifié Azure Information Protection.
 
-Dans cet exemple :
+Exemple :
 
 - L’étiquette Secure Islands inclut le mot **Interne** et est stockée dans la propriété personnalisée nommée **Classification**.
 
@@ -698,7 +695,7 @@ Exemple PowerShell de commande, où votre étiquette est nommé « Général �
 
 Lorsque vous avez besoin de plusieurs règles pour la même étiquette, définir plusieurs valeurs de chaîne pour la même clé. 
 
-Dans cet exemple :
+Exemple :
 
 - Le Secure Islands étiquettes nommée « confidentiel » et « Secret » est stocké dans la propriété personnalisée nommée ** Classification et vous souhaitez que le client étiquetage unifié d’Azure Information Protection pour appliquer l’étiquette de sensibilité nommée « Confidentiel » :
 
@@ -724,7 +721,7 @@ Cette configuration utilise une étiquette [paramètre avancé](#how-to-configur
 
 Il peut y avoir certains scénarios lorsque vous souhaitez appliquer une ou plusieurs propriétés personnalisées à un document ou un message électronique en plus des métadonnées qui sont appliquée par une étiquette de sensibilité.
 
-Par exemple :
+Exemple :
 
 - Vous êtes en cours de [migration à partir d’une autre solution d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions), tels que Secure Islands. Pour une interopérabilité lors de la migration, vous souhaitez que les étiquettes de sensibilité à appliquer également une propriété personnalisée qui est utilisée par l’autre solution d’étiquetage.
 
@@ -750,7 +747,7 @@ Cette configuration, vous devez spécifier un paramètre avancé nommé **custom
 
 Configuration requise : Les documents qui sont étiquetés comme « Confidentiel » par le client d’étiquetage unifié Azure Information Protection doivent avoir la propriété personnalisée supplémentaire nommée « Classification » avec la valeur de « Secret ».
 
-Dans cet exemple :
+Exemple :
 
 - L’étiquette de sensibilité est nommé **confidentiel** et crée une propriété personnalisée nommée **Classification** avec la valeur de **Secret**.
 

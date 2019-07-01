@@ -113,7 +113,7 @@
           items:
             - name: Vue d’ensemble
               href: configure-applications.md
-            - name: Office 365
+            - name: "Services Office\_365"
               href: configure-office365.md
             - name: Applications Office
               href: configure-office-apps.md

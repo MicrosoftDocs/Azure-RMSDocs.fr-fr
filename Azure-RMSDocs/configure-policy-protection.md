@@ -4,17 +4,17 @@ description: Vous pouvez protéger vos documents et e-mails les plus sensibles l
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/22/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: e7fcdacf0e3b75ee3f7626248652a124faf60bbf
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.openlocfilehash: 116ab2106be79119f538b3a2e559bc2faaeb2f2b
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305589"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520430"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -41,7 +41,7 @@ Quand un document ou un e-mail est protégé par un service Rights Management, i
 Pour plus d’informations sur la protection Azure Rights Management et son fonctionnement, consultez [Qu’est-ce qu’Azure Rights Management ?](what-is-azure-rms.md)
 
 > [!IMPORTANT]
-> Pour configurer une étiquette pour appliquer cette protection, le service Azure Rights Management doit être activé pour votre organisation. Pour plus d’informations, consultez [Activation d’Azure Rights Management](activate-service.md).
+> Pour configurer une étiquette pour appliquer cette protection, le service Azure Rights Management doit être activé pour votre organisation. Pour plus d’informations, consultez [Activation du service de protection à partir d’Azure Information Protection](activate-service.md).
 
 Quand l’étiquette applique une protection, il n’est pas approprié d’enregistrer un document protégé sur SharePoint ou OneDrive. Ces emplacements ne prennent pas en charge les fonctionnalités suivantes pour les fichiers protégés : Co-création, Office Online, recherche, aperçu du document, miniature, eDiscovery et protection contre la perte de données. 
 
@@ -132,7 +132,7 @@ Exchange ne doit pas être configuré pour Azure Information Protection avant qu
     
      Au titre de bonne pratique, utilisez des groupes plutôt que des utilisateurs. Cette stratégie permet d’avoir une configuration plus simple et rend moins probable le besoin de mettre à jour par la suite votre configuration d’étiquettes et la reprotection du contenu. Toutefois, si vous apportez des modifications à ce groupe, n’oubliez pas que pour des raisons de performances, Azure Rights Management [met en cache l’appartenance au groupe](prepare.md#group-membership-caching-by-azure-information-protection). 
     
-     Quand vous avez spécifié le premier ensemble d’utilisateurs et de groupes, sélectionnez les autorisations à leur accorder. Pour plus d’informations sur les autorisations disponibles, consultez [Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md). Cependant, la manière dont les applications qui prennent en charge cette protection implémentent ces autorisations peut varier. Consultez la documentation des applications et testez vous-mêmes celles dont les utilisateurs se servent afin de vérifier leur comportement avant de déployer le modèle pour les utilisateurs.
+    Quand vous avez spécifié le premier ensemble d’utilisateurs et de groupes, sélectionnez les autorisations à leur accorder. Pour plus d’informations sur les autorisations disponibles, consultez [Configuration des droits d’utilisation pour Azure Information Protection](configure-usage-rights.md). Cependant, la manière dont les applications qui prennent en charge cette protection implémentent ces autorisations peut varier. Consultez la documentation des applications et testez vous-mêmes celles dont les utilisateurs se servent afin de vérifier leur comportement avant de déployer le modèle pour les utilisateurs.
     
      Si nécessaire, vous pouvez maintenant ajouter un deuxième ensemble d’utilisateurs et de groupes avec des droits d’utilisation. Répétez cette opération jusqu’à avoir spécifié tous les utilisateurs et les groupes avec leurs autorisations respectives.
 

@@ -12,11 +12,11 @@
           href: requirements.md
         - name: Configuration requise d’Azure Active Directory
           href: requirements-azure-ad.md
-        - name: Prise en charge d’appareils clients pour la protection des données
+        - name: Prise en charge d’appareils clients pour la protection
           href: requirements-client-devices.md
-        - name: Prise en charge d’applications pour la protection des données
+        - name: Prise en charge d’applications pour la protection
           href: requirements-applications.md
-        - name: Prise en charge d’un serveur local pour la protection des données
+        - name: Prise en charge d’un serveur local pour la protection
           href: requirements-servers.md
 - name: Guides de démarrage rapide
   expanded: true
@@ -101,7 +101,7 @@
           href: prepare.md
     - name: Déployer et utiliser le service
       items:
-        - name: Activation du service
+        - name: Activation de la protection
           items:
             - name: Vue d’ensemble
               href: activate-service.md
@@ -209,7 +209,7 @@
           items:
             - name: Vue d’ensemble
               href: administer-powershell.md
-            - name: Installation du module PowerShell AADRM
+            - name: Installation du module PowerShell AIPService
               href: install-powershell.md
     - name: Déployer et utiliser le client
       items:

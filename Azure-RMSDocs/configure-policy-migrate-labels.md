@@ -4,18 +4,18 @@ description: Migrez des étiquettes Azure Information Protection vers des étiqu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 07/03/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: b0beddbd21d17cfe35d8efb2b1280f5fd7c17912
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.openlocfilehash: a1fbc9dcb517eb272d1c32c0e81cc06039612c2b
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305747"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520887"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Guide pratique pour migrer des étiquettes Azure Information Protection vers des étiquettes de confidentialité Office 365
 
@@ -66,7 +66,7 @@ Avant de migrer vos étiquettes, tenez compte des changements et des considérat
         
         Conseil : Pour reconfigurer ces étiquettes plus facilement, vous pouvez utiliser deux fenêtres de navigateur : Une fenêtre dans laquelle vous sélectionnez le bouton **Modifier le modèle** de l’étiquette pour afficher les paramètres de protection, et l’autre fenêtre pour configurer les mêmes paramètres quand vous sélectionnez **Définir des autorisations**.
     
-    - Une fois qu’une étiquette comportant des paramètres de protection cloud a été migrée, l’étendue résultante du modèle de protection correspond aux étendues définies sur le Portail Azure (ou à l’aide du module PowerShell AADRM) et dans les centres d’administration. 
+    - Une fois une étiquette avec les paramètres de protection de cloud a été migrée, l’étendue résultante du modèle de protection est l’étendue qui est défini dans le portail Azure (ou à l’aide du module PowerShell de AIPService) et l’étendue est définie dans les centres d’administration. 
 
 - Quand vous migrez vos étiquettes,les résultats de la migration indiquent si une étiquette a été **créée**, **mise à jour** ou **renommée** en raison de la duplication :
 

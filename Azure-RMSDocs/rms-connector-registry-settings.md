@@ -4,19 +4,19 @@ description: Informations relatives aux paramètres du Registre sur les serveurs
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d3cba05e27740ff11a2c8504ace1d1a5037cf3b2
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: e9bb701dcf48aaa514cdf71a6dc6c10c671f618c
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156575"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535051"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Paramètres de Registre pour le connecteur Rights Management
 
@@ -29,7 +29,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 -   *\<URL_votre_locataire>* est l’URL de votre service Azure Rights Management pour votre locataire Azure Information Protection. Pour obtenir cette valeur :
 
-    1.  Exécutez l’applet de commande [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) pour le service Azure Rights Management. Si vous n’avez pas encore installé le module Windows PowerShell pour Azure RMS, consultez [Installation du module PowerShell AADRM](install-powershell.md).
+    1.  Exécutez le [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) applet de commande pour le service Azure Rights Management. Si vous n’avez pas déjà installé le module AIPService, consultez [installation du module PowerShell de AIPService](install-powershell.md).
 
     2.  Dans le résultat de l'applet de commande, identifiez la valeur **LicensingIntranetDistributionPointUrl**.
 
@@ -41,7 +41,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
         
         Vous pouvez vérifier que vous avez la valeur correcte en exécutant la commande PowerShell suivante :
         
-            (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+            (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
 -   *\<FQDN_connecteur>* est le nom de l’équilibrage de charge que vous avez défini dans le système DNS pour le connecteur. Par exemple, **rmsconnector.contoso.com**.
 

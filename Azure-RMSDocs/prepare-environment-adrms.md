@@ -4,19 +4,19 @@ description: Conseils pour les administrateurs si vous avez Azure Rights Managem
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/25/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 572806eefd9207a2d3d6bbcab12ad274c116f49f
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 98b8dc8e09ba7ec3bddb83817663819e0af89697
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767660"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520908"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Préparer l’environnement pour Azure Rights Management quand vous avez AD RMS
 
@@ -58,7 +58,7 @@ Depuis fin février 2018, de nouveaux abonnements incluant Azure Information Pr
 Exécutez l’une des procédures suivantes pour désactiver Azure Rights Management.
 
 > [!TIP]
-> Vous pouvez également utiliser l’applet de commande Windows PowerShell [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm) pour désactiver le service Azure Rights Management.
+> Vous pouvez également utiliser l’applet de commande Windows PowerShell, [Disable-AipService](/powershell/module/aipservice/disable-aipservice)pour désactiver le service Azure Rights Management.
 
 #### <a name="to-deactivate-rights-management-from-the-microsoft-365-admin-center"></a>Pour désactiver Rights Management à partir du Centre d’administration Microsoft 365
 
@@ -68,7 +68,7 @@ Exécutez l’une des procédures suivantes pour désactiver Azure Rights Manage
 
 2. Sur la page **rights management** , cliquez sur **désactiver**.
 
-3.  À l’invite **Voulez-vous désactiver Rights Management ?**, cliquez sur **Désactiver**.
+3.  À l’invite **Voulez-vous désactiver Rights Management ?** , cliquez sur **Désactiver**.
 
 Le message **Rights Management n’est pas activé** s’affiche alors, avec une option pour l’activer.
 

@@ -4,19 +4,19 @@ description: Informations sur les opérations de cycle de vie applicables si Mic
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91672443e149a54dea4805bae10d8656129d04f9
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: bd7701e9b90f2ebd681dad4516c17d74c000f611
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156784"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521923"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gérée par Microsoft : Opérations de cycle de vie de la clé de locataire
 
@@ -46,9 +46,9 @@ Pour renouveler la clé, vous pouvez sélectionner une autre clé gérée par Mi
 
 Si vous avez effectué la migration à partir des services AD RMS (Active Directory Rights Management Services) et que vous avez choisi la topologie de clé gérée par Microsoft pour Azure Information Protection, vous disposez de plusieurs clés gérées par Microsoft. Dans ce scénario, vous avez au moins deux clés gérées par Microsoft pour votre locataire. Au moins une clé a été importée à partir d’AD RMS. Vous disposez également de la clé par défaut qui a été automatiquement créée pour votre locataire Azure Information Protection.
 
-Pour sélectionner une autre clé comme clé de locataire actif pour Azure Information Protection, utilisez l’applet de commande [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) à partir du module AADRM. Pour vous aider à identifier la clé à utiliser, utilisez l’applet de commande [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys). Vous pouvez identifier la clé par défaut qui a été automatiquement créée pour votre locataire Azure Information Protection en exécutant la commande suivante :
+Pour sélectionner une autre clé qui sera votre clé de locataire active pour Azure Information Protection, utilisez la [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) applet de commande à partir du module AIPService. Pour vous aider à identifier la clé à utiliser, utilisez le [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) applet de commande. Vous pouvez identifier la clé par défaut qui a été automatiquement créée pour votre locataire Azure Information Protection en exécutant la commande suivante :
 
-    (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
+    (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
 Pour passer à une topologie de clé gérée par le client (BYOK), consultez [Implémentation de BYOK pour votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 

@@ -4,19 +4,19 @@ description: Informations sur les fichiers du client et la journalisation de l�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2265dba770f4b67bbcc84368a007b7c921f37b3f
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b6391df8ae2e31303f5b369963389abe3005a1bd
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183399"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521656"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 
@@ -96,7 +96,7 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
 
 Les événements pour Outlook avertir, justifier et bloquer les messages nécessitent le client actuel de la disponibilité générale et les paramètres de clients avancés. Pour plus d’informations, consultez [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
-Pour obtenir des informations sur la journalisation de l’utilisation du service de protection, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../log-analyze-usage.md).
+Pour plus d’informations sur la journalisation de l’utilisation du service de protection, consultez [journalisation et analyse de l’utilisation de la protection d’Azure Information Protection](../log-analyze-usage.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez identifié tous les fichiers journaux associés au client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :

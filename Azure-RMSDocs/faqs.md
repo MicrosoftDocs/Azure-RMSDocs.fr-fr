@@ -1,20 +1,20 @@
 ---
 title: FAQ relatives à Azure Information Protection
-description: Certaines questions fréquentes sur Azure Information Protection et son service de protection des données, Azure Rights Management (Azure RMS).
+description: Certaines questions fréquentes sur Azure Information Protection et de son service de protection, Azure Rights Management (Azure RMS).
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 1e0933a88afc355dbcbab0dc667e28f49f10c0b9
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.openlocfilehash: abc19ff1ebc21c143f773d09c0585aa9058e4f09
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305772"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520587"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -110,32 +110,32 @@ Lorsque le client Azure Information Protection pour Windows est installé et qu�
 
 Les administrateurs généraux d’un locataire Office 365 ou Azure AD peuvent évidemment exécuter toutes les tâches d’administration d’Azure Information Protection. Toutefois, si vous voulez affecter des autorisations d’administration à d’autres utilisateurs, vous avez les options suivantes :
 
-- **Administrateur Azure Information Protection**: Ce rôle d’administrateur Azure Active Directory permet à un administrateur de configurer Azure Information Protection, mais pas d’autres services. Un administrateur qui a ce rôle peut activer et désactiver le service de protection Azure Rights Management, configurer les paramètres de protection et les étiquettes, et configurer la stratégie Azure Information Protection. Par ailleurs, un administrateur avec ce rôle peut exécuter toutes les applets de commande PowerShell du [client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) et du [module AADRM](administer-powershell.md). Toutefois, ce rôle ne prend en charge le suivi et révocation de documents pour les utilisateurs.
+- **Administrateur Azure Information Protection**: Ce rôle d’administrateur Azure Active Directory permet à un administrateur de configurer Azure Information Protection, mais pas d’autres services. Un administrateur qui a ce rôle peut activer et désactiver le service de protection Azure Rights Management, configurer les paramètres de protection et les étiquettes, et configurer la stratégie Azure Information Protection. En outre, un administrateur disposant de ce rôle permettre exécuter toutes les applets de commande PowerShell pour le [client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) et à partir de la [AIPService module](administer-powershell.md). Toutefois, ce rôle ne prend en charge le suivi et révocation de documents pour les utilisateurs.
     
     > [!NOTE]
     > Après avoir [migré votre locataire vers le magasin d’étiquetage unifié](configure-policy-migrate-labels.md), ce rôle n’est plus pris en charge pour le portail Azure.
     
     Pour affecter un utilisateur à ce rôle d’administration, consultez [Affecter un utilisateur à des rôles d’administration dans Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
-- **Administrateur de conformité** ou **administrateur des données de conformité**: Ces Azure Active Directory des rôles d’administrateur permettent à un administrateur de configurer Azure Information Protection, notamment activer et désactiver le service de protection Azure Rights Management, configurer les paramètres de protection et des étiquettes et configurer le Stratégie de Protection des informations Azure. En outre, un administrateur avec un de ces rôles permettre exécuter toutes les applets de commande PowerShell pour le [client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) et à partir de la [module AADRM](administer-powershell.md). Toutefois, ces rôles ne prennent en charge le suivi et révocation de documents pour les utilisateurs.
+- **Administrateur de conformité** ou **administrateur des données de conformité**: Ces Azure Active Directory des rôles d’administrateur permettent à un administrateur de configurer Azure Information Protection, notamment activer et désactiver le service de protection Azure Rights Management, configurer les paramètres de protection et des étiquettes et configurer le Stratégie de Protection des informations Azure. En outre, un administrateur avec un de ces rôles permettre exécuter toutes les applets de commande PowerShell pour le [client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) et à partir de la [AIPService module](administer-powershell.md). Toutefois, ces rôles ne prennent en charge le suivi et révocation de documents pour les utilisateurs.
     
     Pour affecter un utilisateur à un de ces rôles d’administration, consultez [affecter un utilisateur à des rôles d’administrateur dans Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Pour voir ce qu’ont les autorisations autres un utilisateur avec ces rôles, consultez le [rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section à partir de la documentation Azure Active Directory.
 
 - **Lecteur Sécurité** : Pour [l’analytique Azure Information Protection](reports-aip.md) uniquement. Ce rôle d’administrateur Azure Active Directory permet à un administrateur de visualiser comment vos étiquettes sont utilisées, de surveiller l’accès utilisateur aux documents et e-mails étiquetés, ainsi que les modifications apportées à leur classification, et peut identifier les documents qui contiennent des informations sensibles devant être protégés. Étant donné que cette fonctionnalité utilise Azure Log Analytics, vous devez également avoir un [rôle RBAC](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 
-- **Administrateur de sécurité** : Ce rôle d’administrateur Azure Active Directory permet à un administrateur de configurer Azure Information Protection dans le portail Azure, en plus de configurer certains aspects d’autres services Azure. Un administrateur disposant de ce rôle ne peut pas exécuter n’importe laquelle de le [applets de commande PowerShell du module AADRM](administer-powershell.md), ou suivre et révoquer des documents pour les utilisateurs.
+- **Administrateur de sécurité** : Ce rôle d’administrateur Azure Active Directory permet à un administrateur de configurer Azure Information Protection dans le portail Azure, en plus de configurer certains aspects d’autres services Azure. Un administrateur disposant de ce rôle ne peut pas exécuter n’importe laquelle de le [applets de commande PowerShell à partir du module AIPService](administer-powershell.md), ou suivre et révoquer des documents pour les utilisateurs.
     
     Pour affecter un utilisateur à ce rôle d’administration, consultez [Affecter un utilisateur à des rôles d’administration dans Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Pour connaître les autres autorisations qu’un rôle donne à un utilisateur, consultez la section [Rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) dans la documentation d’Azure Active Directory.
 
-- **Administrateur général** et **Administrateur du connecteur** Azure Rights Management : Le premier de ces rôles d’administrateur Azure Rights Management accorde aux utilisateurs l’autorisation d’exécuter toutes les [applets de commande PowerShell du module AADRM](administer-powershell.md) sans pour autant être l’administrateur général des autres services cloud. Le deuxième rôle accorde l’autorisation d’exécuter uniquement le connecteur Rights Management (RMS). Ces rôles d’administration accorder des autorisations aux consoles de gestion ni prise en charge du suivi et révocation de documents pour les utilisateurs.
-
-    Pour affecter un de ces rôles d’administration, utilisez l’applet de commande PowerShell AADRM [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator).
+- **Administrateur général** et **Administrateur du connecteur** Azure Rights Management : Pour ces rôles d’administrateur Azure Rights Management, le premier accorde aux utilisateurs des autorisations pour exécuter tous les [applets de commande PowerShell à partir du module AIPService](administer-powershell.md) sans pour autant être un administrateur global pour les autres services cloud et le second rôle accorde des autorisations pour exécuter uniquement le connecteur Rights Management (RMS). Aucune de ces rôles d’administration n’accorder des autorisations pour les consoles de gestion ou de suivi et révocation de documents pour les utilisateurs.
+    
+    Pour affecter un de ces rôles d’administration, utilisez l’applet de commande PowerShell de AIPService [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator).
 
 Quelques éléments à prendre en compte :
 
 - Si vous avez configuré des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), cette configuration n’affecte pas la possibilité d’administrer Azure Information Protection, à l’exception du connecteur RMS. Par exemple, si vous avez configuré des contrôles d’intégration de manière à ce que seul le groupe « Département informatique » puisse protéger du contenu, le compte que vous utilisez pour installer et configurer le connecteur RMS doit être membre de ce groupe. 
 
-- Les utilisateurs avec un rôle d’administration ne peuvent pas supprimer automatiquement la protection des documents ou des e-mails qui ont été protégés par Azure Information Protection. Seuls les super utilisateurs peuvent le faire, sous réserve que la fonctionnalité de super utilisateur soit activée. Toutefois, tout utilisateur avec des autorisations d’administrateur sur Azure Information Protection peut affecter un rôle de super utilisateur, y compris à lui-même. Ils peuvent également activer la fonctionnalité de super utilisateur. Ces actions sont enregistrées dans un journal d’administrateur. Pour plus d’informations, consultez la section des bonnes pratiques dans [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](configure-super-users.md). 
+- Les utilisateurs avec un rôle d’administration ne peuvent pas supprimer automatiquement la protection des documents ou des e-mails qui ont été protégés par Azure Information Protection. Seuls les super utilisateurs peuvent le faire, sous réserve que la fonctionnalité de super utilisateur soit activée. Toutefois, tout utilisateur avec des autorisations d’administrateur sur Azure Information Protection peut affecter un rôle de super utilisateur, y compris à lui-même. Ils peuvent également activer la fonctionnalité de super utilisateur. Ces actions sont enregistrées dans un journal d’administrateur. Pour plus d’informations, consultez la section meilleures pratiques de sécurité [configuration de super utilisateurs pour la récupération de données ou des services Azure Information Protection et de découverte](configure-super-users.md). 
 
 - Si vous migrez vos étiquettes Azure Information Protection dans le magasin d’étiquetage unifié, veillez à lire la section suivante à partir de la documentation de migration d’étiquette : [Informations importantes sur les rôles d’administration](configure-policy-migrate-labels.md#important-information-about-administrative-roles).
 

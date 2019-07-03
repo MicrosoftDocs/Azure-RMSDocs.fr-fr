@@ -4,19 +4,19 @@ description: Obtenir des instructions qui font partie du chemin de migration d�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 11391088aa0e2a084198cdb0aa73eeb6be0795d0
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: b4861b7955237df9b9d282330a8bd3752b00d6e6
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780853"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535212"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par HSM à clé protégée par HSM
 
@@ -64,9 +64,9 @@ Maintenant que vous avez préparé votre clé HSM dans Azure Key Vault pour le s
 
 Ces procédures sont effectuées par l’administrateur d’Azure Information Protection.
 
-1. Sur la station de travail connectée à Internet et dans la session PowerShell, connectez-vous au service Azure Rights Management en utilisant l’applet de commande [Connnect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice).
+1. Sur la station de travail connectée à Internet et dans la session PowerShell, connectez-vous au service Azure Rights Management en utilisant l’applet de commande [Connnect-AadrmService](/powershell/module/aipservice/connect-aipservice).
     
-    Ensuite, chargez chaque fichier exporté de domaine de publication approuvé (.xml) en utilisant l’applet de commande [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd). Par exemple, vous devez disposer d’au moins un fichier supplémentaire à importer si vous avez mis à niveau votre cluster AD RMS pour le Mode de chiffrement 2.
+    Puis chargez chaque fichier (.xml) de domaine de publication approuvé, à l’aide de la [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) applet de commande. Par exemple, vous devez disposer d’au moins un fichier supplémentaire à importer si vous avez mis à niveau votre cluster AD RMS pour le Mode de chiffrement 2.
     
     Pour exécuter cette applet de commande, vous avez besoin du mot de passe que vous avez spécifié précédemment pour chaque fichier de données de configuration et de l’URL de la clé qui a été identifiée à l’étape précédente.
     
@@ -79,20 +79,20 @@ Ces procédures sont effectuées par l’administrateur d’Azure Information Pr
     Entrez le mot de passe que vous avez spécifié pour exporter le fichier de données de configuration. Ensuite, exécutez la commande suivante et confirmez que vous souhaitez effectuer cette action :
     
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
+    Import-AipServiceTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
     
     Dans le cadre de cette importation, la clé SLC est importée et définie automatiquement comme archivée.
 
-2.  Lorsque vous avez chargé chaque fichier, exécutez [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) pour spécifier quelle clé importée correspond à la clé SLC actuellement active dans votre cluster AD RMS. Cette clé devient la clé de locataire active pour votre service Azure Rights Management.
+2.  Lorsque vous avez chargé chaque fichier, exécutez [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) pour spécifier quelle clé importée correspond à la clé SLC actuellement active dans votre cluster AD RMS. Cette clé devient la clé de locataire active pour votre service Azure Rights Management.
 
-3.  Utilisez l’applet de commande [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) pour vous déconnecter du service Azure Rights Management :
+3.  Utilisez le [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) applet de commande pour vous déconnecter du service Azure Rights Management :
 
     ```
-    Disconnect-AadrmService
+    Disconnect-AipServiceService
     ```
 
-Si vous avez besoin ultérieurement de vérifier quelle clé est utilisée par votre clé de locataire Azure Information Protection dans Azure Key Vault, utilisez l’applet de commande [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) d’Azure RMS.
+Si vous avez besoin plus tard vérifier quelle clé de votre Azure Information Protection à l’aide de clé de locataire dans Azure Key Vault, utilisez le [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) applet de commande Azure RMS.
 
 Vous êtes maintenant prêt à passer à [l’Étape 5. Activez le service Azure Rights Management](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 

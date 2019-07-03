@@ -4,19 +4,19 @@ description: Vous développez de meilleures applications compatibles RMS en suiv
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 12/13/2018
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: ca4aa7b340a3024139e6a61c0ba4fd938009d522
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: eb550284cd10a3b0946bd188ca2f194edead86f0
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175993"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521191"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Bonnes pratiques de sécurité pour Information Protection
 
@@ -81,7 +81,7 @@ Si votre application n’interprète pas et n’applique pas correctement les dr
 
 ### <a name="azure-information-protection-aip"></a>Azure Information Protection (AIP)
 
-Le système de protection des informations organise les droits selon plusieurs regroupements. Pour plus d’informations, consultez [Configuration des droits d’utilisation pour Azure Rights Management](../configure-usage-rights.md).
+Le système d’information protection organise les droits de plusieurs regroupements. Pour plus d’informations, consultez [configuration des droits d’utilisation pour Azure Information Protection](../configure-usage-rights.md).
 
 Azure Information Protection permet à un utilisateur de déchiffrer ou non des informations. Les informations n’ont en soi aucune protection. Si un utilisateur dispose du droit de déchiffrer, l’API l’y autorise. L’application est responsable de la gestion ou de la protection de ces informations une fois que celles-ci sont en texte clair. Une application est responsable de la gestion de son environnement et de son interface pour empêcher l’utilisation non autorisée d’informations. Par exemple, la désactivation des boutons **Imprimer** et **Copier** si une licence accorde uniquement le droit VIEW (AFFICHER). La suite de tests doit vérifier que votre application fonctionne correctement avec tous les droits de licence qu’elle reconnaît.
 

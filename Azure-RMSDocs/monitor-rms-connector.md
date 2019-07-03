@@ -4,19 +4,19 @@ description: Informations vous permettant de surveiller le connecteur et l’uti
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 507f8ea8a613715b14fbedd820000765afa48e15
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: aedcee5bef5050e01ab37d6c1ee4f2555d732bf4
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156795"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521972"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Surveiller le connecteur Azure Rights Management
 
@@ -173,7 +173,7 @@ Si vous avez récemment ajouté des comptes de serveur pour utiliser le connecte
 
 La journalisation de l’utilisation vous aide à identifier quand les e-mails et les documents sont protégés et consommés. Lorsque le connecteur RMS est utilisé pour protéger et utiliser du contenu, le champ ID d’utilisateur des journaux contient le nom de principal du service : **Aadrm_S-1-7-0**. Ce nom est automatiquement créé pour le connecteur RMS.
 
-Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](log-analyze-usage.md).
+Pour plus d’informations sur la journalisation de l’utilisation, consultez [journalisation et analyse de l’utilisation de la protection d’Azure Information Protection](log-analyze-usage.md).
 
 Si vous avez besoin d’une journalisation plus détaillée à des fins de diagnostic, vous pouvez utiliser [Debugview](https://go.microsoft.com/fwlink/?LinkID=309277) dans Windows Sysinternals. Activez le traçage pour le connecteur RMS en modifiant le fichier web.config du site par défaut dans IIS :
 

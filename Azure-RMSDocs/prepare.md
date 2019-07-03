@@ -4,19 +4,19 @@ description: Vérifiez que vous disposez des comptes d’utilisateur et de group
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/03/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 75aea1cf43c6e6ca66dbca611946c4366fe8280d
-ms.sourcegitcommit: 1b8e87bda58bb40f3e32b2edf264385e7235b7c5
+ms.openlocfilehash: 2ffe76069e4f36fb4c21fdd8edaeb611635b0abf
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462227"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521903"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 
@@ -215,5 +215,5 @@ Après avoir confirmé que vos utilisateurs et groupes peuvent être utilisés a
 
 - Si votre abonnement a été obtenu avant février 2018 : Vous devez activer le service vous-même. 
 
-Pour plus d’informations, notamment sur la vérification de l’état d’activation, consultez [Activation d’Azure Rights Management](./activate-service.md).
+Pour plus d’informations, notamment sur la vérification de l’état d’activation, consultez [activation du service de protection d’Azure Information Protection](./activate-service.md).
 

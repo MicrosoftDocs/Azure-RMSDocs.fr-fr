@@ -4,18 +4,18 @@ description: Instructions et informations pour que les administrateurs gèrent l
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.suite: ems
-ms.openlocfilehash: 1280a909ec74bf831af5e856274bc6f53a03a5e9
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: 6afeef61671eaaf6fffdb7a0a5bb6ef93b1cf8ce
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236969"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535143"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -94,7 +94,7 @@ En plus des prérequis pour l’installation du module Azure Information Protect
 
 Cette condition préalable s’applique si vous appliquez la protection des données à l’aide d’étiquettes ou en vous connectant directement au service Azure Rights Management.
 
-Si votre locataire Azure Information Protection n’est pas activé, consultez les instructions [d’activation d’Azure Rights Management](../activate-service.md).
+Si votre client Azure Information Protection n’est pas activé, consultez les instructions pour [activation du service de protection d’Azure Information Protection](../activate-service.md).
 
 #### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Prérequis 2 : Pour supprimer la protection des fichiers pour les autres utilisateurs en utilisant votre propre compte
 
@@ -119,12 +119,12 @@ Vous pouvez utiliser les commandes PowerShell et les instructions commentées su
 Pour obtenir les valeurs et exécuter Set-RMSServerAuthentication automatiquement :
 
 ````
-# Make sure that you have the AADRM and MSOnline modules installed
+# Make sure that you have the AIPService and MSOnline modules installed
 
 $ServicePrincipalName="<new service principal name>"
-Connect-AadrmService
-$bposTenantID=(Get-AadrmConfiguration).BPOSId
-Disconnect-AadrmService
+Connect-AipService
+$bposTenantID=(Get-AipServiceConfiguration).BPOSId
+Disconnect-AipServiceService
 Connect-MsolService
 New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 
@@ -139,37 +139,37 @@ Les sections suivantes expliquent comment obtenir et spécifier ces valeurs manu
 
 ##### <a name="to-get-the-bpostenantid"></a>Pour obtenir le BposTenantId
 
-Exécutez l’applet de commande Get-AadrmConfiguration à partir du module Azure RMS Windows PowerShell :
+Exécutez l’applet de commande Get-AipServiceConfiguration à partir du module Azure RMS Windows PowerShell :
 
-1. Si ce module n’est pas déjà installé sur votre ordinateur, consultez [Installation du module PowerShell AADRM](../install-powershell.md).
+1. Si ce module n’est pas déjà installé sur votre ordinateur, consultez [installation du module PowerShell de AIPService](../install-powershell.md).
 
 2. Démarrez Windows PowerShell avec l’option **Exécuter en tant qu’administrateur**.
 
-3. Utilisez l’applet de commande `Connect-AadrmService` pour la connexion au service Azure Rights Management :
-
-        Connect-AadrmService
-
+3. Utilisez l’applet de commande `Connect-AipService` pour la connexion au service Azure Rights Management :
+    
+        Connect-AipService
+    
     Quand vous y êtes invité, entrez vos informations d’identification d’administrateur du locataire Azure Information Protection. Normalement, vous utilisez un compte d’administrateur général pour Azure Active Directory ou Office 365.
-
-4. Exécutez `Get-AadrmConfiguration` et copiez la valeur BPOSId.
-
-    Voici un exemple de sortie de Get-AadrmConfiguration :
-
+    
+4. Exécutez `Get-AipServiceConfiguration` et copiez la valeur BPOSId.
+    
+    Un exemple de sortie de Get-AipServiceConfiguration :
+    
             BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
-
+        
             RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
-
+        
             LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-
+        
             LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-
+        
             CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
-
+        
             CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
 
 5. Déconnectez-vous du service :
-
-        Disconnect-AadrmService
+    
+        Disconnect-AipServiceService
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>Pour obtenir l’AppPrincipalId et la clé symétrique
 
@@ -233,9 +233,9 @@ Notre exemple de commande ressemblerait à ceci :
 
 Comme indiqué dans la commande précédente, vous pouvez fournir les valeurs avec une seule commande en utilisant un script à exécuter en mode non interactif. Mais pour les besoins du test, vous pouvez simplement taper Set-RMSServerAuthentication et fournir les valeurs une par une quand vous y êtes invité. Quand la commande est terminée, le client fonctionne en « mode serveur », qui convient à une utilisation non interactive comme les scripts et l’infrastructure de classification des fichiers Windows Server.
 
-Envisagez de faire de ce compte de principal du service un super utilisateur : Pour garantir que ce compte peut toujours déprotéger des fichiers pour d’autres utilisateurs, vous pouvez le configurer comme super utilisateur. De la même façon que quand vous configurez un compte d’utilisateur standard comme super utilisateur, vous utilisez l’applet de commande Azure RMS [Add-AadrmSuperUser](/powershell/module/aadrm/add-aadrmsuperuser), mais vous spécifiez le paramètre **- ServicePrincipalId** avec votre valeur AppPrincipalId.
+Envisagez de faire de ce compte de principal du service un super utilisateur : Pour garantir que ce compte peut toujours déprotéger des fichiers pour d’autres utilisateurs, vous pouvez le configurer comme super utilisateur. De la même façon que vous configurez un compte d’utilisateur standard comme un super utilisateur, vous utilisez l’applet de commande Azure RMS, [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser), mais spécifier la **ServicePrincipalId** paramètre avec votre Valeur AppPrincipalId.
 
-Pour plus d’informations sur les super utilisateurs, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](../configure-super-users.md).
+Pour plus d’informations sur les super utilisateurs, consultez [configuration de super utilisateurs pour la récupération de données ou des services Azure Information Protection et de découverte](../configure-super-users.md).
 
 > [!NOTE]
 > Pour utiliser votre propre compte pour vous authentifier auprès du service Azure Rights Management, inutile d’exécuter Set-RMSServerAuthentication avant de protéger ou d’annuler la protection de fichiers, ou d’obtenir des modèles.
@@ -244,7 +244,7 @@ Pour plus d’informations sur les super utilisateurs, consultez [Configuration 
 
 Quand vous utilisez un compte de principal de service pour protéger des fichiers et télécharger des modèles à l’extérieur de la région Azure Amérique du Nord, vous devez modifier le Registre : 
 
-1. Exécutez de nouveau l’applet de commande Get-AadrmConfiguration et notez les valeurs pour **CertificationExtranetDistributionPointUrl** et **LicensingExtranetDistributionPointUrl**.
+1. Réexécutez l’applet de commande Get-AipServiceConfiguration et prenez note des valeurs pour **CertificationExtranetDistributionPointUrl** et **LicensingExtranetDistributionPointUrl**.
 
 2. Sur tous les ordinateurs où vous allez exécuter les applets de commande AzureInformationProtection, ouvrez l’Éditeur du Registre.
 

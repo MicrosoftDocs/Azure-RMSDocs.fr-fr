@@ -4,19 +4,19 @@ description: Informations à propos de l’installation, des systèmes d’explo
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 887b4fa06ddac3395892aab8b085fae8a44bebd9
-ms.sourcegitcommit: a8d78554f20fca35a0384569a323e5f73afdc06a
+ms.openlocfilehash: adb30f7f4e9ecb548f8003c7ab7888ee90d0fc43
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66835330"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535099"
 ---
 # <a name="rights-management-service-client-deployment-notes"></a>Notes de déploiement de client de Service de gestion des droits
 
@@ -170,7 +170,7 @@ Pour réaliser la découverte du service, le client RMS vérifie les éléments 
 
     Exemple :  5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
-    *\<URL_de_votre_locataire\>* a le format suivant: **{GUID}.rms.[Région].aadrm.com**. Vous pouvez trouver cette valeur en identifiant la valeur de **RightsManagementServiceId** quand vous exécutez l’applet de commande [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) pour Azure RMS.
+    *\<Url_votre_client\>*  a le format suivant : **{GUID} .RMS. [Region].aadrm.com**. Vous pouvez trouver cette valeur en identifiant les **RightsManagementServiceId** valeur lorsque vous exécutez le [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) applet de commande.
 
 > [!NOTE]
 > Il existe quatre exceptions importantes pour ce flux de découverte de service :

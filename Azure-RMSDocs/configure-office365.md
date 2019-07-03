@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0c86bf4100f3c2c49cc5261215a0edcd59f24408
-ms.sourcegitcommit: 2af2297319265c1f91aa76eb227c6f4d316df42a
+ms.openlocfilehash: 1dcf34bf2990426a9ff22660d871b4f60e72bc3f
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348834"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520623"
 ---
 # <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365 : Configuration des services en ligne peuvent utiliser le service Azure Rights Management
 
@@ -525,7 +525,7 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
 > [!TIP]
 > Vous pouvez également utiliser ce script pour configurer IRM pour une bibliothèque SharePoint Online. Pour cette configuration, il est préférable d’activer l’option supplémentaire **Interdire aux utilisateurs de télécharger des documents qui ne prennent pas en charge IRM** pour vous assurer que la bibliothèque ne contient que des documents protégés.    Pour ce faire, ajoutez le paramètre `-IrmReject` à la commande Set-IrmConfiguration dans le script.
 >
-> Vous devez également modifier les variables `$webUrls` (par exemple, **https://contoso.sharepoint.com** ) et `$listTitle` (par exemple, **$Reports**).
+> Vous devez également modifier le `$webUrls` variable (par exemple, **https :\//contoso.sharepoint.com**) et `$listTitle` variable (par exemple, **$Reports**).
 
 Si vous devez désactiver IRM pour les bibliothèques OneDrive Entreprise de l’utilisateur, consultez la section [Script pour désactiver IRM pour OneDrive entreprise](#script-to-disable-irm-for-onedrive-for-business).
 

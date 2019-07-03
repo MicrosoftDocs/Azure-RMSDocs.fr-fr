@@ -5,7 +5,7 @@ keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 02/23/2017
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: dbd7969d5e6d87ec2d8e935f44867d58dfee9751
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b2e625ad8c238d592656129cbc1542e4f6f24f97
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178384"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521215"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Comment : permettre à votre application de service de fonctionner avec le service RMS cloud
 
@@ -83,11 +83,11 @@ Pour utiliser votre application de service de Rights Management Services SDK 2.
 -   Installez le [Module Powershell Azure RMS](https://technet.microsoft.com/library/jj585012.aspx).
 -   Démarrez Powershell et exécutez les commandes suivantes pour obtenir la configuration RMS du locataire.
 
-    `Import-Module aadrm`
+    `Import-Module AIPService`
 
-    `Connect-AadrmService`(entrez vos informations d’identification d’administrateur)
+    `Connect-AipService`(entrez vos informations d’identification d’administrateur)
 
-    `Get-AadrmConfiguration`
+    `Get-AipServiceConfiguration`
 
 
 - Créez une instance de [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) et définissez quelques membres.
@@ -105,7 +105,7 @@ Pour plus d’informations, consultez [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://
 
 -   Créez une instance de structure [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx) contenant votre instance de [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx).
 
-**Remarque** : Les membres de *connectionInfo* sont définis avec des URL obtenues à partir de l’appel précédent à `Get-AadrmConfiguration` et notées ici avec ces noms de champs.
+**Remarque**  Les membres de *connectionInfo* sont définis avec des URL obtenues à partir de l’appel précédent à `Get-AipServiceConfiguration` et notées ici avec ces noms de champs.
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};

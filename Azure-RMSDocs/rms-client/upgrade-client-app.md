@@ -4,19 +4,19 @@ description: Instructions pour les utilisateurs ayant effectué la mise à nivea
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 640d1b1d99a36a9d81fc9f077bebfec1a6a076cc
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 96cb3f32c7fcb61cc9854c63642c80d098f03c46
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182566"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521635"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Guide de l’utilisateur : Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS
 
@@ -45,7 +45,7 @@ Si vous recherchez une option spécifique que vous utilisiez avec l’applicatio
 |-----------|--------------------|
 |**Partage protégé**|Cette option n’est plus disponible dans le ruban Office. Au lieu de partager directement à partir de votre application Office, utilisez l’option contextuelle de l’Explorateur de fichiers, **Classifier et protéger** pour protéger une copie du document avec des autorisations personnalisées, puis partagez le fichier à l’aide du client de messagerie de votre choix ou d’un emplacement de partage. <br /><br /> Vous pouvez également attacher un document Office non protégé à un e-mail que vous protégez : ce document est alors protégé automatiquement avec les mêmes restrictions. Vous ne pouvez cependant pas suivre ni révoquer ce document.
 |**M’envoyer un e-mail quand quelqu’un tente d’ouvrir ces documents**|Utilisez le site de suivi de document pour configurer les paramètres de notification de votre messagerie préférée : Recherchez le document protégé que vous avez partagé > **Paramètres** > **Notifications par e-mail**
-|**M’autoriser à révoquer de suite l’accès à ces documents**|Cette option n’est plus disponible. Utilisez les paramètres de protection définis par l’administrateur qui n’autorisent pas l’accès hors connexion. En outre, un administrateur peut réduire la période de validité de la licence d’utilisation pour votre locataire, en exécutant [Set-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/set-aadrmmaxuselicensevaliditytime).
+|**M’autoriser à révoquer de suite l’accès à ces documents**|Cette option n’est plus disponible. Utilisez les paramètres de protection définis par l’administrateur qui n’autorisent pas l’accès hors connexion. En outre, un administrateur peut réduire la période de validité de licence utilisé pour votre client, en exécutant [Set-AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime).
 |**Effectuer le suivi de l’utilisation** dans Outlook|La possibilité d’accéder au site de suivi des documents à partir d’Outlook n’est plus disponible. Au lieu de cela, utilisez l’option **Suivre et révoquer** à partir de Word, PowerPoint, Excel ou l’Explorateur de fichiers. Ou, à l’aide d’un navigateur, vous pouvez accéder directement au [site de suivi des documents](https://go.microsoft.com/fwlink/?LinkId=529562).
 
 ## <a name="next-steps"></a>Étapes suivantes

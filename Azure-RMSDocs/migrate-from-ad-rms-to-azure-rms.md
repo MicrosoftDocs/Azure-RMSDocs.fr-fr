@@ -4,19 +4,19 @@ description: Instructions pour la migration de votre déploiement AD RMS (Activ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c1fb307d06c277dd6f515adbff35a844f65f77cc
-ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
+ms.openlocfilehash: 60a7eecb5e0d8175e968051d160bee5441a35de0
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708912"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522057"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
@@ -128,7 +128,7 @@ Ajoutez vos partenaires AD RMS dans votre phase de planification de la migration
 
 - Leur service Azure Rights Management n’est pas encore activé, mais ils connaissent leur URL de service Azure Rights Management.
 
-    Ils peuvent obtenir ces informations en installant l’outil Azure Rights Management, en se connectant au service ([Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice)), puis en affichant les informations du locataire pour le service Azure Rights Management ([Get-AadrmConfiguration](/powershell/aadrm/vlatest/get-aadrmconfiguration)).
+    Ils peuvent obtenir ces informations en installant l’outil Azure Rights Management, connexion au service ([Connect-AipService](/powershell/module/aipservice/connect-aipservice)), puis en affichant les informations du locataire pour le service Azure Rights Management ([ Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)).
 
 - Ils vous fournissent les URL de leur cluster AD RMS et l’URL de service Azure Rights Management pour que vous puissiez configurer les clients migrés afin de rediriger les demandes de contenu protégé AD RMS vers le service Azure Rights Management de leur locataire. Les instructions pour la configuration de la redirection des clients figurent à l’étape 7.
 
@@ -140,9 +140,9 @@ Les étapes de migration peuvent être divisées en cinq phases qui peuvent êtr
 
 [**PHASE 1 : PRÉPARATION DE LA MIGRATION**](migrate-from-ad-rms-phase1.md)
 
-- **Étape 1 : Installer le module PowerShell AADRM et identifier l’URL de votre locataire**
+- **Étape 1 : Installer le module PowerShell de AIPService et identifier l’URL de votre client**
 
-    Le processus de migration vous oblige à exécuter une ou plusieurs des applets de commande PowerShell du module AADRM. Vous devez également connaître l’URL du service Azure Rights Management de votre locataire pour pouvoir réaliser différentes étapes de migration, et vous pouvez identifier cette valeur à l’aide de PowerShell.
+    Le processus de migration vous oblige à exécuter une ou plusieurs des applets de commande PowerShell à partir du module AIPService. Vous devez également connaître l’URL du service Azure Rights Management de votre locataire pour pouvoir réaliser différentes étapes de migration, et vous pouvez identifier cette valeur à l’aide de PowerShell.
 
 - **Étape 2. Préparer la migration des clients**
 
@@ -156,7 +156,7 @@ Les étapes de migration peuvent être divisées en cinq phases qui peuvent êtr
 
 - **Étape 4 :. Exporter des données de configuration d’AD RMS pour les importer dans Azure Information Protection**
 
-    Vous exportez les données de configuration (clés, modèles, URL) d’AD RMS vers un fichier XML, puis vous chargez ce fichier dans le service Azure Rights Management d’Azure Information Protection à l’aide de l’applet de commande PowerShell Import-AadrmTpd. Ensuite, identifiez la clé de certificat de licence serveur (SLC) importée à utiliser comme clé de locataire pour le service Azure Rights Management. Des étapes supplémentaires peuvent être nécessaires en fonction de la configuration de votre clé AD RMS :
+    Vous exportez les données de configuration (clés, modèles, URL) d’AD RMS vers un fichier XML et puis vous chargez ce fichier dans le service Azure Rights Management d’Azure Information Protection, à l’aide de l’applet de commande PowerShell d’importation-AipServiceTpd. Ensuite, identifiez la clé de certificat de licence serveur (SLC) importée à utiliser comme clé de locataire pour le service Azure Rights Management. Des étapes supplémentaires peuvent être nécessaires en fonction de la configuration de votre clé AD RMS :
 
     - **Migration de clé protégée par logiciel à clé protégée par logiciel** :
 
@@ -208,7 +208,7 @@ Les étapes de migration peuvent être divisées en cinq phases qui peuvent êtr
     
     Les contrôles d’intégration que vous avez configurés au cours de la phase de préparation ne sont plus nécessaires. Toutefois, si vous n’utilisez pas de contrôles d’intégration parce que vous avez choisi de tout migrer à la fois au lieu d’effectuer une migration en plusieurs phases, vous pouvez ignorer les instructions pour supprimer les contrôles d’intégration.
     
-    Si vos ordinateurs Windows exécutent Office 2010, vérifiez si vous devez désactiver la tâche de **gestion des modèles de stratégie de droits AD RMS (automatique)**.
+    Si vos ordinateurs Windows exécutent Office 2010, vérifiez si vous devez désactiver la tâche de **gestion des modèles de stratégie de droits AD RMS (automatique)** .
 
 - **Étape 12 : Renouveler votre clé de locataire Azure Information Protection**
 

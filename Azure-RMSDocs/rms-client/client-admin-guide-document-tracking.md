@@ -4,19 +4,19 @@ description: Instructions et informations pour les administrateurs pour configur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8349a3e6447fe2091de9bd85f912c4f437dca427
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: bb76aece7012d521542973c94181f43f7b0d15f3
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181422"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521760"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
 
@@ -28,39 +28,39 @@ Si votre [abonnement prend en charge le suivi des documents](https://www.microso
 
 ## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Utilisation de PowerShell pour gérer le site de suivi de documents
 
-Les sections suivantes contiennent des informations sur la façon de gérer le site de suivi de documents à l’aide de PowerShell. Pour connaître les instructions d'installation du module PowerShell, consultez [Installation du module PowerShell AADRM](../install-powershell.md). Si vous avez précédemment téléchargé et installé le module, vérifiez le numéro de version en exécutant la commande suivante : `(Get-Module aadrm –ListAvailable).Version`
+Les sections suivantes contiennent des informations sur la façon de gérer le site de suivi de documents à l’aide de PowerShell. Pour des instructions d’installation pour le module PowerShell, consultez [installation du module PowerShell de AIPService](../install-powershell.md).
 
 Pour plus d’informations sur chacune des applets de commande, utilisez les liens fournis.
 
 ### <a name="privacy-controls-for-your-document-tracking-site"></a>Contrôles de confidentialité de votre site de suivi de documents
 
-Si l’affichage de toutes les informations de suivi des documents est interdit dans votre organisation pour des raisons de confidentialité, vous pouvez désactiver le suivi des documents à l’aide de l’applet de commande [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). 
+Si l’affichage de toutes les informations de suivi de document est interdit dans votre organisation en raison des exigences de confidentialité, vous pouvez désactiver le suivi des documents à l’aide de la [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) applet de commande. 
 
-Cette applet de commande désactive l’accès au site de suivi de documents afin que tous les utilisateurs de votre organisation ne puissent pas effectuer le suivi ou révoquer l’accès à des documents qu’ils ont protégés. Vous pouvez réactiver le suivi des documents à tout moment en utilisant [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) et vérifier si le suivi des documents est actuellement activé ou désactivé à l’aide de [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). Pour exécuter ces applets de commande, vous devez disposer au minimum de la version **2.3.0.0** du module AADRM pour PowerShell. 
+Cette applet de commande désactive l’accès au site de suivi de documents afin que tous les utilisateurs de votre organisation ne puissent pas effectuer le suivi ou révoquer l’accès à des documents qu’ils ont protégés. Vous pouvez réactiver tout moment, à l’aide de suivi des documents le [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature), et vous pouvez vérifier si le suivi des documents est actuellement activé ou désactivé à l’aide de [ Get-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature). 
 
 Lorsque le site de suivi des documents est activé, il fournit des informations telles que les adresses de messagerie des personnes qui ont tenté d'accéder aux documents protégés et indique quand ces personnes ont tenté d'y accéder, ainsi que leur emplacement. Ce niveau d’informations peut être utile pour déterminer comment les documents partagés sont utilisés et s’ils doivent être révoqués en cas d’activité suspecte. Toutefois, pour des raisons de confidentialité, vous devrez peut-être désactiver ces informations utilisateur pour une partie ou l’intégralité des utilisateurs. 
 
-Si vous avez des utilisateurs pour lesquels cette activité ne doit pas être suivie par d’autres utilisateurs, ajoutez-les à un groupe qui est stocké dans Azure AD, et spécifiez ce groupe avec l’applet de commande [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup). Lorsque vous exécutez cette applet de commande, vous devez spécifier un groupe unique. Toutefois, le groupe peut contenir des groupes imbriqués. 
+Si vous avez des utilisateurs qui ne doivent pas suivi par d’autres utilisateurs pour cette activité, ajoutez-les à un groupe qui est stocké dans Azure AD, et spécifiez ce groupe avec la [Set-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Set-AipServiceDoNotTrackUserGroup) applet de commande. Lorsque vous exécutez cette applet de commande, vous devez spécifier un groupe unique. Toutefois, le groupe peut contenir des groupes imbriqués. 
 
 Pour ces membres du groupe, les utilisateurs ne peuvent pas voir les activités sur le site de suivi du document lorsque cette activité est liée à des documents qu’ils partagent avec eux. En outre, aucune notification par e-mail n’est envoyée à l’utilisateur qui a partagé le document.
 
-Lorsque vous utilisez cette configuration, tous les utilisateurs peuvent toujours utiliser le site de suivi de documents et révoquer l’accès à des documents qu’ils ont protégés. Toutefois, ils ne voient pas l’activité des utilisateurs que vous avez spécifiés à l’aide de l’applet de commande Set-AadrmDoNotTrackUserGroup.
+Lorsque vous utilisez cette configuration, tous les utilisateurs peuvent toujours utiliser le site de suivi de documents et révoquer l’accès à des documents qu’ils ont protégés. Toutefois, ils ne voient pas d’activité pour les utilisateurs que vous avez spécifiés à l’aide de l’applet de commande Set-AipServiceDoNotTrackUserGroup.
 
-Ce paramètre affecte uniquement les utilisateurs finaux. Les administrateurs pour Azure Information Protection peuvent toujours suivre les activités de tous les utilisateurs, même lorsque ces utilisateurs sont spécifiés à l’aide de Set-AadrmDoNotTrackUserGroup. Pour plus d’informations sur la façon dont les administrateurs peuvent suivre les documents pour les utilisateurs, consultez la section [Suivi et révocation de documents pour les utilisateurs](#tracking-and-revoking-documents-for-users).
+Ce paramètre affecte uniquement les utilisateurs finaux. Les administrateurs pour Azure Information Protection peuvent toujours suivre les activités de tous les utilisateurs, même lorsque ces utilisateurs sont spécifiés à l’aide de Set-AipServiceDoNotTrackUserGroup. Pour plus d’informations sur la façon dont les administrateurs peuvent suivre les documents pour les utilisateurs, consultez la section [Suivi et révocation de documents pour les utilisateurs](#tracking-and-revoking-documents-for-users).
 
 
 ### <a name="logging-information-from-the-document-tracking-site"></a>Téléchargement des informations de journalisation à partir du site de suivi de documents
 
-Si vous utilisez la version minimale **2.13.0.0** du module AADRM, vous pouvez utiliser les applets de commande suivantes pour télécharger les informations de journalisation à partir du site de suivi de documents :
+Vous pouvez utiliser les applets de commande suivantes pour télécharger les informations de journalisation à partir du site de suivi de document :
 
-- [Get-AadrmTrackingLog](/powershell/module/aadrm/Get-AadrmTrackingLog)
+- [Get-AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)
     
     Cette applet de commande retourne les informations de suivi relatives aux documents protégés qu’un utilisateur spécifié a protégés (l’émetteur Rights Management) ou auxquels il a accédé. Utilisez cette applet de commande pour vous aider à répondre à la question « Quels documents protégés ont fait l’objet d’un suivi ou d’un accès par un utilisateur spécifié ? »
 
-- [Get-AadrmDocumentLog](/powershell/module/aadrm/Get-AadrmDocumentLog)
+- [Get-AipServiceDocumentLog](/powershell/module/aipservice/Get-AipServiceDocumentLog)
     
     Cette applet de commande retourne les informations sur la protection des documents suivis d’un utilisateur spécifié qui a protégé ces documents (l’émetteur Rights Management) ou qui en était le propriétaire Rights Management, ou des documents protégés ayant été configurés pour autoriser l’accès direct par l’utilisateur. Utilisez cette applet de commande pour vous aider à répondre à la question « Comment les documents d’un utilisateur spécifié sont-ils protégés ? »
- 
+
 ## <a name="destination-urls-used-by-the-document-tracking-site"></a>URL de destination utilisées par le site de suivi de documents
 
 Les URL suivantes sont utilisées pour le suivi des documents et doivent être autorisées sur tous les appareils et services entre les clients qui exécutent le client Azure Information Protection et Internet. Par exemple, ajoutez ces URL aux pare-feu ou à vos sites approuvés si vous utilisez Internet Explorer avec la sécurité renforcée.
@@ -116,8 +116,7 @@ Deux champs des fichiers journaux d’utilisation s’appliquent au suivi des do
 
 Il existe également des types de demandes qui journalisent la façon dont les utilisateurs et les administrateurs utilisent le site de suivi des documents. Par exemple, **RevokeAccess** est le type de demande quand un utilisateur (ou un administrateur au nom d’un utilisateur) a révoqué un document dans le site de suivi des documents. Utilisez ce type de demande conjointement avec le champ AdminAction pour déterminer si l’utilisateur a révoqué son propre document (le champ AdminAction est vide) ou si un administrateur a révoqué un document au nom d’un d’utilisateur (AdminAction a la valeur True).
 
-Pour plus d’informations sur la journalisation de l’utilisation, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](../log-analyze-usage.md)
-
+Pour plus d’informations sur la journalisation de l’utilisation, consultez [journalisation et analyse de l’utilisation de la protection d’Azure Information Protection](../log-analyze-usage.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez configuré le site de suivi des documents pour le client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :

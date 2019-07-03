@@ -4,19 +4,19 @@ description: Informations sur les opérations de cycle de vie applicables si vou
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82061c4a146a049d7cecf6da6ab16a2e85c0ddd3
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: c1b163a1e149b77e8974635dff39d9a754a962f2
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156760"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521942"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gérée par le client : Opérations de cycle de vie des clés de locataire
 
@@ -46,9 +46,9 @@ Pour renouveler la clé et obtenir ainsi une autre clé que vous gérez, vous po
 
 1. Seulement si la nouvelle clé se trouve dans un coffre de clés différent de celui que vous utilisez déjà pour Azure Information Protection : Autoriser Azure Information Protection à utiliser le coffre de clés, à l’aide de la [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) applet de commande.
 
-2. Si Azure Information Protection n’a pas encore d’informations sur la clé que vous voulez utiliser, exécutez l’applet de commande [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey).
+2. Si Azure Information Protection ne connaît déjà de la clé que vous souhaitez utiliser, exécutez [AipServiceKeyVaultKey d’utilisation](/powershell/module/aipservice/use-aipservicekeyvaultkey) applet de commande.
 
-3. Configurez l’objet clé du locataire à l’aide de l’applet de commande [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
+3. Configurer l’objet de clé de locataire, à l’aide de l’exécution [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) applet de commande.
 
 Pour plus d’informations sur chacune de ces étapes :
 

@@ -4,7 +4,7 @@ description: Certaines questions fréquentes sur le service de protection des do
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/19/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c9ed9992f96a923a97f2ec04d8598867321d4505
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 6507d040fec9bf7f93037ae07fa8ecce6d627e0e
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269797"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521132"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
@@ -89,7 +89,7 @@ Absolument et l’avantage est que les utilisateurs peuvent protéger et utilise
 Non, vous gardez toujours le contrôle de vos données et pouvez continuer à y accéder, même si vous décidez de ne plus utiliser le service Azure Rights Management. Pour plus d’informations, consultez [Désaffectation et désactivation d’Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Puis-je contrôler les utilisateurs pouvant utiliser Azure RMS pour protéger du contenu ?
-Oui, le service Azure Rights Management dispose de contrôles d’intégration d’utilisateur pour ce scénario. Pour plus d’informations, consultez la section [Configuration de contrôles d’intégration pour un déploiement échelonné](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) dans l’article [Activation d’Azure Rights Management](activate-service.md).
+Oui, le service Azure Rights Management dispose de contrôles d’intégration d’utilisateur pour ce scénario. Pour plus d’informations, consultez le [configuration des contrôles d’intégration pour un déploiement échelonné](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) section dans le [activation du service de protection d’Azure Information Protection](activate-service.md) article.
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>Puis-je empêcher des utilisateurs de partager des documents protégés avec des organisations spécifiques ?
 L’un des avantages majeurs de l’utilisation du service Azure Rights Management pour la protection des données est qu’il prend en charge la collaboration interentreprises sans que vous soyez obligé de configurer des approbations explicites pour chaque organisation partenaire, car Azure AD se charge de l’authentification à votre place.
@@ -116,11 +116,11 @@ Notez que si vous avez des étiquettes Azure Information Protection, vous devez 
 
 Vous pouvez aussi ajouter des utilisateurs externes aux modèles personnalisés (et étiquettes) à l’aide de PowerShell. Cette configuration vous oblige à utiliser un objet de définition de droits pour mettre à jour votre modèle :
 
-1. Spécifiez les adresses e-mail externes et leurs droits dans un objet de définition de droits en utilisant l’applet de commande [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) pour créer une variable.
+1. Spécifiez les adresses e-mail externes et leurs droits dans un objet de définition de droits, à l’aide de la [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) applet de commande pour créer une variable.
 
-2. Fournissez cette variable au paramètre RightsDefinition avec l’applet de commande [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
+2. Fournissez cette variable au paramètre RightsDefinition avec le [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) applet de commande.
 
-    Lorsque vous ajoutez des utilisateurs à un modèle existant, vous devez définir des objets de définition de droits pour les utilisateurs existants dans les modèles, ainsi que pour les nouveaux utilisateurs. Pour ce scénario, l’**Exemple 3 : Ajouter de nouveaux utilisateurs et de nouveaux droits à un modèle personnalisé** de la section [Exemples](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) pour l’applet de commande peut vous être utile.
+    Lorsque vous ajoutez des utilisateurs à un modèle existant, vous devez définir des objets de définition de droits pour les utilisateurs existants dans les modèles, ainsi que pour les nouveaux utilisateurs. Pour ce scénario, l’**Exemple 3 : Ajouter de nouveaux utilisateurs et de nouveaux droits à un modèle personnalisé** de la section [Exemples](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) pour l’applet de commande peut vous être utile.
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Quels types de groupes puis-je utiliser avec Azure RMS ?
 Pour la plupart des scénarios, vous pouvez utiliser n’importe quel type de groupe d’Azure AD qui a une adresse e-mail. Cette règle s’applique toujours quand vous affectez des droits d’utilisation, mais il existe certaines exceptions pour l’administration du service Azure Rights Management. Pour plus d’informations, consultez [Configuration requise d’Azure Information Protection pour les comptes de groupe](prepare.md#azure-information-protection-requirements-for-group-accounts).
@@ -199,5 +199,5 @@ Comme le montrent ces exemples, même si la totalité des plateformes et logicie
 
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>Quelle différence y a-t-il entre un utilisateur qui protège un e-mail avec l’option Ne pas transférer et un modèle qui n’inclut pas de droit de transfert ?
 
-En dépit de son nom et de son apparence, l’option **Ne pas transférer** n’est ni le contraire du droit de transfert, ni un modèle. Il s’agit en fait d’un ensemble de droits qui incluent la restriction de copier, imprimer et enregistrer des pièces jointes, outre la restriction de transfert des e-mails. Les droits sont appliqués dynamiquement aux utilisateurs par le biais des destinataires choisis et non pas statiquement attribués par l’administrateur. Pour plus d’informations, consultez la section [Option Ne pas transférer pour les e-mails](configure-usage-rights.md#do-not-forward-option-for-emails) dans [Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md).
+En dépit de son nom et de son apparence, l’option **Ne pas transférer** n’est ni le contraire du droit de transfert, ni un modèle. Il s’agit en fait d’un ensemble de droits qui incluent la restriction de copier, imprimer et enregistrer des pièces jointes, outre la restriction de transfert des e-mails. Les droits sont appliqués dynamiquement aux utilisateurs par le biais des destinataires choisis et non pas statiquement attribués par l’administrateur. Pour plus d’informations, consultez le [option ne pas transférer pour les e-mails](configure-usage-rights.md#do-not-forward-option-for-emails) section [configuration des droits d’utilisation pour Azure Information Protection](configure-usage-rights.md).
 

@@ -4,19 +4,19 @@ description: Utilisez ces étapes pour préparer, implémenter et gérer Azure I
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 311e8991d4527c48f2d76deba8a93264f4a08dad
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 6b0918c4f5bd77bec2b0e155eae55882a55d1b54
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156565"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520571"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Feuille de route pour le déploiement d’Azure Information Protection
 
@@ -93,15 +93,15 @@ Quand les utilisateurs sont à l’aise avec l’étiquetage des documents et de
 
 1. Déterminez si vous voulez que Microsoft gère votre clé de locataire (option par défaut) ou si vous voulez la générer et la gérer vous-même (option BYOK, Bring Your Own Key). Pour plus d’informations, consultez [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) (Planification et implémentation de la clé de locataire Azure Information Protection).
 
-2. Installez le module PowerShell pour AADRM sur au moins un ordinateur ayant accès à Internet. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, voir [Installation du module PowerShell AADMR](./install-powershell.md).
+2. Installer le module PowerShell pour AIPService sur au moins un ordinateur qui a accès à Internet. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [installation du module PowerShell de AIPService](./install-powershell.md).
 
 3. Si vous utilisez actuellement AD RMS : Effectuez une migration pour déplacer des clés, des modèles et des URL vers le cloud. Pour plus d’informations, consultez [Migration d’AD RMS vers Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-4. Vérifiez que le service de protection est activé pour pouvoir commencer à protéger des documents et des e-mails. Si un déploiement échelonné est nécessaire, configurez les contrôles d’intégration pour limiter la capacité des utilisateurs à appliquer la protection. Pour plus d’informations, consultez [Activation d’Azure Rights Management](./activate-service.md).
+4. Vérifiez que le service de protection est activé pour pouvoir commencer à protéger des documents et des e-mails. Si un déploiement échelonné est nécessaire, configurez les contrôles d’intégration pour limiter la capacité des utilisateurs à appliquer la protection. Pour plus d’informations, consultez [activation du service de protection d’Azure Information Protection](./activate-service.md).
 
 Configurez éventuellement les éléments suivants :
 
-- La journalisation de l’utilisation pour pouvoir surveiller l’usage que fait votre organisation du service de protection. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](./log-analyze-usage.md).
+- La journalisation de l’utilisation pour pouvoir surveiller l’usage que fait votre organisation du service de protection. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [journalisation et analyse de l’utilisation de la protection d’Azure Information Protection](./log-analyze-usage.md).
 
 ### <a name="step-5-configure-your-azure-information-protection-policy-applications-and-services-for-data-protection"></a>Étape 5 : Configurer vos applications, services et stratégie Azure Information Protection pour la protection des données
 
@@ -119,7 +119,7 @@ Configurez éventuellement les éléments suivants :
 
 3. Configurez la fonctionnalité de super utilisateur pour la récupération de données.
     
-    Si vous avez des services informatiques, tels que des solutions de protection contre la perte de données (DLP), des passerelles de chiffrement de contenu (CEG) et d’autres logiciels anti-programme malveillant, qui sont chargés d’inspecter les fichiers qu’Azure Information Protection doit protéger, configurez les comptes de service en tant que super utilisateurs pour Azure Rights Management. Pour plus d’informations, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](./configure-super-users.md).
+    Si vous avez des services informatiques, tels que des solutions de protection contre la perte de données (DLP), des passerelles de chiffrement de contenu (CEG) et d’autres logiciels anti-programme malveillant, qui sont chargés d’inspecter les fichiers qu’Azure Information Protection doit protéger, configurez les comptes de service en tant que super utilisateurs pour Azure Rights Management. Pour plus d’informations, consultez [configuration de super utilisateurs pour la récupération de données ou des services Azure Information Protection et de découverte](./configure-super-users.md).
 
 4. Classifier et protéger les fichiers existants en bloc
     
@@ -138,13 +138,13 @@ Vous êtes maintenant prêt à superviser la façon dont votre organisation util
 
 - Fichiers du client et l’utilisation de la journalisation pour le [client Azure Information Protection](./rms-client/client-admin-guide-files-and-logging.md)
 
-- [Journalisation et analyse de l’utilisation du service Azure Rights Management](./log-analyze-usage.md)
+- [Journalisation et analyse de l’utilisation de la protection d’Azure Information Protection](./log-analyze-usage.md)
 
 ### <a name="step-7-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Étape 7 : Administrer le service de protection pour votre compte de locataire selon les besoins
 
 Quand vous commencez à utiliser le service de protection, PowerShell peut s’avérer utile pour automatiser les changements administratifs ou générer des scripts sur ces changements. PowerShell peut également être nécessaire pour certaines configurations avancées. 
 
-Pour plus d’informations, consultez [Administration du service Azure Rights Management à l’aide de Windows PowerShell](./administer-powershell.md).
+Pour plus d’informations, consultez [administration protection d’Azure Information Protection à l’aide de PowerShell](./administer-powershell.md).
 
 
 ## <a name="deployment-roadmap-for-data-protection-only"></a>Feuille de route de déploiement pour la protection des données uniquement
@@ -164,17 +164,17 @@ Avant de commencer à utiliser le service de protection d’Azure Information Pr
 
 2. Déterminez si vous voulez que Microsoft gère votre clé de locataire (option par défaut) ou si vous voulez la générer et la gérer vous-même (option BYOK, Bring Your Own Key). Pour plus d’informations, consultez [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) (Planification et implémentation de la clé de locataire Azure Information Protection).
 
-3. Installez le module PowerShell pour AADRM sur au moins un ordinateur ayant accès à Internet. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, voir [Installation du module PowerShell AADMR](./install-powershell.md).
+3. Installer le module PowerShell pour AIPService sur au moins un ordinateur qui a accès à Internet. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [installation du module PowerShell de AIPService](./install-powershell.md).
 
 4. Si vous utilisez actuellement AD RMS : Effectuez une migration pour déplacer des clés, des modèles et des URL vers le cloud. Pour plus d’informations, consultez [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-5. Vérifiez que le service de protection est activé pour pouvoir commencer à protéger des documents et des e-mails. Si un déploiement échelonné est nécessaire, configurez les contrôles d’intégration pour limiter la capacité des utilisateurs à appliquer la protection. Pour plus d’informations, consultez [Activation d’Azure Rights Management](./activate-service.md).
+5. Vérifiez que le service de protection est activé pour pouvoir commencer à protéger des documents et des e-mails. Si un déploiement échelonné est nécessaire, configurez les contrôles d’intégration pour limiter la capacité des utilisateurs à appliquer la protection. Pour plus d’informations, consultez [activation du service de protection d’Azure Information Protection](./activate-service.md).
 
 Configurez éventuellement les éléments suivants :
 
 - Des modèles personnalisés pour des paramètres de protection si les modèles par défaut ne suffisent pas à votre organisation. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [Configuration et gestion des modèles pour Azure Information Protection](./configure-policy-templates.md).
 
-- La journalisation de l’utilisation pour pouvoir surveiller l’usage que fait votre organisation du service de protection. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [Journalisation et analyse de l’utilisation du service Azure Rights Management](./log-analyze-usage.md).
+- La journalisation de l’utilisation pour pouvoir surveiller l’usage que fait votre organisation du service de protection. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [journalisation et analyse de l’utilisation de la protection d’Azure Information Protection](./log-analyze-usage.md).
 
 ### <a name="step-3-install-the-azure-information-protection-client-and-configure-applications-and-services-for-rights-management"></a>Étape 3 : Installer le client Azure Information Protection et configurer des applications et services pour Rights Management
 
@@ -188,7 +188,7 @@ Configurez éventuellement les éléments suivants :
 
 3. Configurez la fonctionnalité de super utilisateur pour la récupération de données.
     
-    Si vous avez des services informatiques, tels que des solutions de protection contre la perte de données (DLP), des passerelles de chiffrement de contenu (CEG) et d’autres logiciels anti-programme malveillant, qui sont chargés d’inspecter les fichiers qu’Azure Information Protection doit protéger, configurez les comptes de service en tant que super utilisateurs pour Azure Rights Management. Pour plus d’informations, consultez [Configuration de super utilisateurs pour Azure Rights Management et les services de découverte ou la récupération de données](./configure-super-users.md).
+    Si vous avez des services informatiques, tels que des solutions de protection contre la perte de données (DLP), des passerelles de chiffrement de contenu (CEG) et d’autres logiciels anti-programme malveillant, qui sont chargés d’inspecter les fichiers qu’Azure Information Protection doit protéger, configurez les comptes de service en tant que super utilisateurs pour Azure Rights Management. Pour plus d’informations, consultez [configuration de super utilisateurs pour la récupération de données ou des services Azure Information Protection et de découverte](./configure-super-users.md).
 
 4. Protéger les fichiers existants en bloc 
     
@@ -202,10 +202,10 @@ Configurez éventuellement les éléments suivants :
 
 ### <a name="step-4-use-and-monitor-your-data-protection-solutions"></a>Étape 4 : Utiliser et superviser vos solutions de protection des données
 
-Vous êtes maintenant prêt à protéger vos données, ainsi qu’à journaliser la manière dont votre entreprise utilise le service de protection. Pour plus d’informations sur la prise en charge de cette phase de déploiement, consultez [Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management](./help-users.md) et [Journalisation et analyse de l’utilisation du service Azure Rights Management](./log-analyze-usage.md).
+Vous êtes maintenant prêt à protéger vos données, ainsi qu’à journaliser la manière dont votre entreprise utilise le service de protection. Pour plus d’informations prendre en charge de cette phase de déploiement, consultez [aider les utilisateurs à protéger des fichiers à l’aide du service Azure Rights Management](./help-users.md) et [journalisation et analyse de l’utilisation de la protection à partir des informations d’Azure Protection](./log-analyze-usage.md).
 
 ### <a name="step-5-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Étape 5 : Administrer le service de protection pour votre compte de locataire selon les besoins
 
 Quand vous commencez à utiliser le service de protection, PowerShell peut s’avérer utile pour automatiser les changements administratifs ou générer des scripts sur ces changements. PowerShell peut également être nécessaire pour certaines configurations avancées. 
 
-Pour plus d’informations, consultez [Administration du service Azure Rights Management à l’aide de Windows PowerShell](./administer-powershell.md).
+Pour plus d’informations, consultez [administration protection d’Azure Information Protection à l’aide de PowerShell](./administer-powershell.md).

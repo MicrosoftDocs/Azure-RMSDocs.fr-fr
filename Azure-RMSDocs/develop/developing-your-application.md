@@ -5,7 +5,7 @@ keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 03/13/2017
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 62d217f7f48d0120ed630b184131b726c21d8363
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: feb0636c025d13dd3a290eb34ecb49eec4ebe284
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179265"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520758"
 ---
 # <a name="developing-your-application"></a>Développement de votre application
 
@@ -35,24 +35,24 @@ La configuration Azure pour cette application vous oblige à créer un ID de loc
 
 ### <a name="azure-ad-tenant-configuration"></a>Configuration du locataire Azure AD
 
-Pour configurer l’environnement Azure AD pour Azure Information Protection, suivez les instructions données dans [Activation d’Azure Rights Management](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
+Pour configurer l’environnement Azure AD pour Azure Information Protection, suivez les instructions de [activation du service de protection d’Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
 
-Une fois que le service est activé, vous avez besoin des composants PowerShell pour les étapes suivantes. Suivez [Administration du service Azure Rights Management à l’aide de Windows PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) pour cela.
+Une fois que le service est activé, vous avez besoin des composants PowerShell pour les étapes suivantes. Suivez [administration protection d’Azure Information Protection à l’aide de PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) pour effectuer cette opération.
 
 ### <a name="getting-your-tenant-id"></a>Obtention de votre ID de locataire
 
 - En tant qu’administrateur, exécutez PowerShell.
-- Importez le module RMS : `Import-Module AADRM`
-- Connectez-vous au service avec les informations d’identification de l’utilisateur affecté : `Connect-AadrmService –Verbose`
-- Vérifiez que RMS est activé : `Enable-AADRM`
-- Obtenez votre ID de locataire en exécutant : `Get-AadrmConfiguration`
+- Importez le module RMS : `Import-Module AIPService`
+- Connectez-vous au service avec les informations d’identification de l’utilisateur affecté : `Connect-AipService –Verbose`
+- Vérifiez que RMS est activé : `enable-aipservice`
+- Obtenez votre ID de locataire en exécutant : `Get-AipServiceConfiguration`
 
 >Enregistrez la valeur BPOSId (ID de locataire). Vous en aurez besoin dans les étapes suivantes.
 
 *Exemple de sortie*
 ![sortie de l’applet de commande](../media/develop/output-of-Get-AadrmConfiguration.png)
 
-- Déconnectez-vous du service : `Disconnect-AadrmService`
+- Déconnectez-vous du service : `Disconnect-AipServiceService`
 
 ### <a name="create-a-service-principal"></a>Créer un principal du service
 Suivez ces étapes pour créer un principal du service :

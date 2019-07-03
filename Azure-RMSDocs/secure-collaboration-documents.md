@@ -4,19 +4,19 @@ description: Flux de travail de bout en bout pour la collaboration autour de doc
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0c9e426fe6025b31f03ed84e65741c4a461e3938
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: cf6ff8129c7737b782b9ccd004089b99475a9311
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181784"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521616"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.locfileid: "60181784"
 
 Lorsque vous utilisez Azure Information Protection, vous pouvez protéger vos documents sans pour autant devoir renoncer à la collaboration avec des utilisateurs autorisés. Les documents créés par un utilisateur puis partagés avec d’autres afin que ceux-ci puissent les consulter et les modifier sont en majorité des documents Office Word, Excel et PowerPoint. Ces documents prennent en charge la protection native, autrement dit, en plus des fonctionnalités de protection que sont le chiffrement et l’autorisation, ils prennent également en charge l’autorisation restreinte pour un contrôle plus précis. 
 
-Ces autorisations sont appelées des droits d’utilisation et incluent des autorisations comme afficher, modifier et imprimer. Vous pouvez définir des droits d’utilisation individuels lorsqu’un document est protégé, ou vous pouvez définir un groupe de droits d’utilisation, appelé niveau d’autorisation. Les niveaux d’autorisation facilitent la sélection de droits d’utilisation qui sont généralement utilisés ensemble, par exemple, réviseur et coauteur. Pour plus d’informations sur les droits d’utilisation et les niveaux d’autorisation, consultez [Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md).
+Ces autorisations sont appelées des droits d’utilisation et incluent des autorisations comme afficher, modifier et imprimer. Vous pouvez définir des droits d’utilisation individuels lorsqu’un document est protégé, ou vous pouvez définir un groupe de droits d’utilisation, appelé niveau d’autorisation. Les niveaux d’autorisation facilitent la sélection de droits d’utilisation qui sont généralement utilisés ensemble, par exemple, réviseur et coauteur. Pour plus d’informations sur les droits d’utilisation et les niveaux d’autorisation, consultez [configuration des droits d’utilisation pour Azure Information Protection](configure-usage-rights.md).
 
 Lorsque vous configurez ces autorisations, vous pouvez spécifier les utilisateurs auxquels elles s’adressent :
 

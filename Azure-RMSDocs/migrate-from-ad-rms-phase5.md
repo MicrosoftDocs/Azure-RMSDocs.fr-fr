@@ -4,19 +4,19 @@ description: Phase 5 de la migration d’AD RMS vers Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/15/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd0edb3f9ce5b820a7e19c84e8d04b433c007569
-ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
+ms.openlocfilehash: bf2675aa43e2c15761fdd46b94e3bb19253cadc3
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67149270"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522070"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Phase de migration 5 : Tâches de post-migration
 
@@ -96,17 +96,17 @@ Pour supprimer les contrôles d’intégration :
 
 1. Dans une session PowerShell, connectez-vous au service Azure Rights Management et indiquez vos informations d’identification d’administrateur général quand vous y êtes invité :
 
-        Connect-Aadrmservice
+        Connect-AipService
 
 2. Exécutez la commande suivante, puis entrez **O** pour confirmer :
 
-        Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+        Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
     
     Notez que cette commande supprime toute application de licence pour le service de protection Azure Rights Management, et ce pour que tous les ordinateurs puissent protéger les documents et les e-mails.
 
 3. Vérifiez que les contrôles d’intégration ne sont plus définis :
 
-        Get-AadrmOnboardingControlPolicy
+        Get-AipServiceOnboardingControlPolicy
 
     Dans la sortie, **Licence** doit indiquer **False** et aucun GUID n’est affiché pour **SecurityGroupOjbectId**
 
@@ -126,11 +126,11 @@ Le passage d’une clé à une autre ne se produit pas immédiatement mais sur p
 
 Pour renouveler votre clé de locataire Azure Information Protection :
 
-- **Si votre clé de locataire est gérée par Microsoft** : exécutez l’applet de commande PowerShell [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) et spécifiez l’identificateur de la clé qui a été automatiquement créée pour votre locataire. Vous pouvez identifier la valeur à spécifier en exécutant l’applet de commande [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys). La clé créée automatiquement pour votre locataire a la date de création la plus ancienne. Vous pouvez donc l’identifier à l’aide de la commande suivante :
+- **Si votre clé de locataire est gérée par Microsoft** : Exécutez l’applet de commande PowerShell [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) et spécifiez l’identificateur de clé pour la clé qui a été créée automatiquement pour votre locataire. Vous pouvez identifier la valeur à spécifier en exécutant la [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) applet de commande. La clé créée automatiquement pour votre locataire a la date de création la plus ancienne. Vous pouvez donc l’identifier à l’aide de la commande suivante :
     
-        (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
+        (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Si vous gérez vous-même votre clé de locataire (BYOK)**  : dans Azure Key Vault, répétez le processus de création de votre clé pour votre locataire Azure Information Protection, puis réexécutez l’applet de commande [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) pour spécifier l’URI de cette nouvelle clé. 
+- **Si vous gérez vous-même votre clé de locataire (BYOK)**  : Dans Azure Key Vault, répétez votre processus de création de la clé pour votre locataire Azure Information Protection, puis exécutez le [AipServiceKeyVaultKey d’utilisation](/powershell/module/aipservice/use-aipservicekeyvaultkey) applet de commande pour spécifier l’URI de cette nouvelle clé. 
 
 Pour plus d’informations sur la gestion de votre clé de locataire Azure Information Protection, consultez [Opérations pour votre clé de locataire Azure Information Protection](./operations-tenant-key.md).
 

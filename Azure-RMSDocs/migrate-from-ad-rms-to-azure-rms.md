@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 60a7eecb5e0d8175e968051d160bee5441a35de0
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.openlocfilehash: 61cd0d2ea761cf3f0ca1a8cbd9e1ab1d248b63ef
+ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522057"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545012"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
@@ -112,7 +112,7 @@ Pour confirmer le mode de chiffrement AD RMS :
 
 ### <a name="migration-limitations"></a>Limites de migration
 
-- Si vous disposez de logiciels et de clients non pris en charge par le service Rights Management utilisé par Azure Information Protection, ils ne peuvent pas protéger ou utiliser du contenu protégé par Azure Rights Management. Consultez les sections relatives aux applications et aux clients pris en charge dans [Conditions requises pour Azure Rights Management](./requirements.md).
+- Si vous disposez de logiciels et de clients non pris en charge par le service Rights Management utilisé par Azure Information Protection, ils ne peuvent pas protéger ou utiliser du contenu protégé par Azure Rights Management. Veillez à consulter les sections d’applications et les clients pris en charge à partir de [configuration requise pour Azure Information Protection](./requirements.md).
 
 - Si votre déploiement des services AD RMS est configuré pour collaborer avec des partenaires externes (par exemple, en utilisant des domaines d’utilisateurs approuvés ou une fédération), ceux-ci doivent également migrer vers Azure Information Protection, soit au moment de votre migration, soit dès que possible par la suite. Pour continuer à accéder au contenu que votre organisation protégeait précédemment à l’aide d’Azure Information Protection, les utilisateurs doivent apporter à la configuration du client des modifications similaires à celles que vous apportez, qui sont incluses dans ce document.
     

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 753ef710b4a4058e9792203e549b27cae83f8a12
-ms.sourcegitcommit: 2af2297319265c1f91aa76eb227c6f4d316df42a
+ms.openlocfilehash: 9a0625f842d7fef7e72020021164b5eb62029031
+ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348797"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545000"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configuration d’applications pour Azure Rights Management
 
@@ -30,7 +30,7 @@ ms.locfileid: "67348797"
 Après avoir déployé Azure Information Protection pour votre organisation, utilisez les informations suivantes pour configurer des applications, le client Azure Information Protection et des services. Par exemple, les applications de Office comme Word 2019, Word 2016 et Word 2013. Des services tels qu’Exchange Online (règles de transport, protection contre la perte de données, Ne pas transférer et chiffrement des messages) et SharePoint Online (bibliothèques protégées) également. Pour des informations sur la manière dont ces applications et services prennent en charge le service de protection des données d’Azure Information Protection, consultez [Comment les applications prennent en charge le service Azure Rights Management](applications-support.md).
 
 > [!IMPORTANT]
-> Pour plus d’informations sur les versions prises en charge et les autres exigences, consultez [Configuration requise pour Azure Rights Management](requirements.md).
+> Pour plus d’informations sur les versions prises en charge et les autres exigences, consultez [configuration requise pour Azure Information Protection](requirements.md).
 
 -   [Office 365 : Configuration des services en ligne](configure-office365.md)
 

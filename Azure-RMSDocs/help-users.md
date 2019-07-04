@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9ac96fe93c3bb903b25b5f9695f3e38451862f11
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 8ab1872aaf42aa2e62d46873f892e93c2bc90927
+ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182328"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545032"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -55,7 +55,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
         
     - **Problèmes de protection ou de consommation de contenu**
         
-        Vérifiez que les utilisateurs disposent d’instructions appropriées pour les applications qu’ils utilisent, et se servent d’applications et d’appareils pris en charge par le service Azure Rights Management. Pour plus d’informations sur les appareils et les applications pris en charge, consultez [Configuration requise pour Azure Rights Management](requirements.md).
+        Vérifiez que les utilisateurs disposent d’instructions appropriées pour les applications qu’ils utilisent, et se servent d’applications et d’appareils pris en charge par le service Azure Rights Management. Pour plus d’informations sur les appareils et les applications prises en charge, consultez [configuration requise pour Azure Information Protection](requirements.md).
         
         Pour vérifier qu’un utilisateur ou un groupe est autorisé par Azure Active Directory à protéger ou à utiliser du contenu protégé, servez-vous des vérifications mentionnées dans la rubrique [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md).
         

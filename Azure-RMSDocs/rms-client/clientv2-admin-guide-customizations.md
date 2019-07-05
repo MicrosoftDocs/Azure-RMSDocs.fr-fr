@@ -4,19 +4,19 @@ description: Informations sur la personnalisation du client d’étiquetage unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/29/2019
+ms.date: 07/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1f338f29216224d5984921f7882d45e4c0c4947c
-ms.sourcegitcommit: a884d627c520721b93d0bb81a2a781399879da0e
+ms.openlocfilehash: aac8b94bbe1eaa46111dee15ac5f69d05ac730ab
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67464878"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563449"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifiée Azure Information Protection
 
@@ -577,7 +577,7 @@ Exemples de commandes PowerShell, dans lequel votre stratégie de l’étiquette
 
 Cette configuration utilise une stratégie [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) que vous devez configurer à l’aide de PowerShell du centre de conformité et sécurité Office 365. Il est pris en charge par la version préliminaire d’unifiée étiquetage uniquement le client.
 
-[Analytique de Protection des informations Azure](../reports-aip.md) peut détecter et signaler les documents enregistrés par les clients Azure Information Protection quand ce contenu contient des informations sensibles. Par défaut, ces informations sont envoyées par Azure Information Protection unifiée l’étiquetage pour l’analytique d’Azure Information Protection.
+[Analytique de Protection des informations Azure](../reports-aip.md) peut détecter et signaler les documents enregistrés par les clients Azure Information Protection quand ce contenu contient des informations sensibles. Par défaut, cette information est envoyée par le client d’étiquetage unifié Azure Information Protection pour l’analytique d’Azure Information Protection.
 
 Pour modifier ce comportement afin que ces informations ne sont pas envoyées par le client d’étiquetage unifié, entrez les chaînes suivantes pour la stratégie de l’étiquette sélectionnée :
 
@@ -589,9 +589,9 @@ Si vous définissez ce paramètre client avancé, les résultats d’audit sont 
 
 Exemple :
 
-- Sans ce paramètre, vous pouvez voir qu’un utilisateur a accédé à Financial.docx qui est étiqueté **Confidential \ Sales**.
+- Avec ce paramètre, vous pouvez voir qu’un utilisateur a accédé Financial.docx étiqueté **confidentiel \ Sales**.
 
-- Avec ce paramètre, vous pouvez voir que Financial.docx contient 6 numéros de carte de crédit.
+- Sans ce paramètre, vous pouvez voir que Financial.docx contient 6 numéros de carte de crédit.
     
     - Si vous activez également [Correspondances de contenu pour approfondir l’analyse](../reports-aip.md#content-matches-for-deeper-analysis), vous pourrez en plus voir quels sont ces numéros de carte de crédit.
 

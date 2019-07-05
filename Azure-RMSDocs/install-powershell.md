@@ -4,21 +4,21 @@ description: Instructions pour installer PowerShell pour le service de protectio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c986b34f3138a3410cb0d675c016206a752ad0c8
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.openlocfilehash: d6f5ccc34669781f4ec9723014d5254444255649
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535024"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563402"
 ---
-# <a name="installing-the-aipservice-powershell-module"></a>Installation du module PowerShell de AIPService
+# <a name="installing-the-aipservice-powershell-module"></a>Installation du module PowerShell AIPService
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -40,8 +40,11 @@ Le module AIPService remplace le module plus anciens, AADRM. Si vous avez instal
 
 Le nouveau module dispose d’alias pour les noms d’applet de commande dans le module plus anciens afin que tous les scripts existants continueront de fonctionner. Toutefois, envisagez de mettre à jour ces références avant de l’ancien module n’est plus prise en charge. Prise en charge pour le module AADRM prendra fin le 15 juillet 2020.
 
-Si vous avez installé le module AADRM avec l’outil d’Administration Azure Rights Management, utilisez **programmes et fonctionnalités** pour désinstaller **Administration de Windows Azure AD Rights Management**.
+Si vous avez installé le module AADRM à partir de PowerShell Gallery, pour le désinstaller, démarrez une session PowerShell avec le **exécuter en tant qu’administrateur** option, puis tapez :
 
+    Uninstall-Module -Name AADRM
+
+Si vous avez installé le module AADRM avec l’outil d’Administration Azure Rights Management, utilisez **programmes et fonctionnalités** pour désinstaller **Administration de Windows Azure AD Rights Management**.
 
 ## <a name="how-to-install-the-aipservice-module"></a>Comment installer le module AIPService
 

@@ -4,18 +4,18 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/05/2019
+ms.date: 07/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d5c3be398ea132d21b32e6337f44638d424ff71d
-ms.sourcegitcommit: 12848714f3c8d7a4761c28668e5809bf324c267a
+ms.openlocfilehash: 569b53a958ae90153133406141be15703ef92901
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692220"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563387"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -107,7 +107,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 - Deux nouveaux paramètres avancés du client pour l’analytique, pour les scénarios suivants :
     
     - Empêcher l’envoi de correspondances de types d’informations à un sous-ensemble d’utilisateurs lorsque la case correspondant à la collecte de correspondances de contenu est cochée sur le Portail Azure. [Plus d’informations](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-    - Pour le **découverte de données** de rapport, indique si les fichiers contiennent des informations sensibles. [Plus d’informations](client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - Pour le **découverte de données** de rapport, indique si les fichiers contiennent des informations sensibles. [Plus d’informations](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
 
 **Correctifs** :
 

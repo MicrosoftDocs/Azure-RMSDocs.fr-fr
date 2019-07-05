@@ -4,19 +4,19 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/12/2019
+ms.date: 07/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 4ef4a0d07154da9cb4b4b34d3b55264fa44f5fdf
-ms.sourcegitcommit: 95cbd8245b049a28556df79cc058668a1668599c
+ms.openlocfilehash: 13bc0ab4df8c07905149cfa6ef8417543415f4d2
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67028713"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563426"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -74,7 +74,7 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 |PullPolicy|[Prendre en charge les ordinateurs déconnectés](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Ajouter « Signaler un problème » pour les utilisateurs](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Activer l’analytique Azure Information Protection pour découvrir des informations sensibles dans des documents](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
+|RunAuditInformationTypeDiscovery|[Désactiver l’envoi des informations sensibles découvertes dans les documents à l’analytique d’Azure Information Protection](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Activer la classification pour qu’elle s’exécute en continu en arrière-plan](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[Limiter le nombre de threads utilisés par le scanneur](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Étiqueter un document Office en utilisant une propriété personnalisée existante](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -795,25 +795,25 @@ Pour étiqueter un document Office avec l’une de ces valeurs de classification
 
 À partir de maintenant, quand un utilisateur ouvre et enregistre un de ces documents Office, le document est étiqueté **Public**, **Général** ou **Hautement confidentiel\Tous les employés** si vous avez des étiquettes avec ces noms dans votre stratégie Azure Information Protection. Si vous n’avez pas d’étiquettes avec ces noms, le document reste sans étiquette.
 
-## <a name="enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents"></a>Activer l’analytique Azure Information Protection pour découvrir des informations sensibles dans des documents
+## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Désactiver l’envoi des informations sensibles découvertes dans les documents à l’analytique d’Azure Information Protection
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
 
-[L’analytique Azure Information Protection](../reports-aip.md) peut détecter et signaler les documents enregistrés par les clients Azure Information Protection lorsque ce contenu contient des informations sensibles. Par défaut, ces informations ne sont pas envoyées à l’analytique Azure Information Protection.
+[Analytique de Protection des informations Azure](../reports-aip.md) peut détecter et signaler les documents enregistrés par les clients Azure Information Protection quand ce contenu contient des informations sensibles. Par défaut, cette information est envoyée par le client Azure Information Protection (classique) à l’analytique d’Azure Information Protection.
 
-Pour modifier ce comportement afin que ces informations soient envoyées, entrez les chaînes suivantes :
+Pour modifier ce comportement afin que ces informations ne sont pas envoyées par le client classique, entrez les chaînes suivantes :
 
 - Clé : **RunAuditInformationTypeDiscovery**
 
-- Value : **True**
+- Value : **False**
 
-Si vous ne définissez pas ce paramètre client avancé, les résultats d’audit sont toujours envoyés à partir du client Azure Information Protection, mais les informations sont limitées à la création de rapports lorsqu’un utilisateur a accédé à du contenu étiqueté.
+Si vous définissez ce paramètre client avancé, les résultats d’audit sont toujours envoyés à partir du client classique, mais les informations sont limitées à la création de rapports lorsqu’un utilisateur a accédé intitulé contenu.
 
 Exemple :
 
-- Sans ce paramètre, vous pouvez voir qu’un utilisateur a accédé à Financial.docx qui est étiqueté **Confidential \ Sales**.
+- Avec ce paramètre, vous pouvez voir qu’un utilisateur a accédé Financial.docx étiqueté **confidentiel \ Sales**.
 
-- Avec ce paramètre, vous pouvez voir que Financial.docx contient 6 numéros de carte de crédit.
+- Sans ce paramètre, vous pouvez voir que Financial.docx contient 6 numéros de carte de crédit.
     
     - Si vous activez également [Correspondances de contenu pour approfondir l’analyse](../reports-aip.md#content-matches-for-deeper-analysis), vous pourrez en plus voir quels sont ces numéros de carte de crédit.
 

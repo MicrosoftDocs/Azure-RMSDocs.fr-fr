@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: fd66c67d4368e393f5c5b7a59cafbf882548ddce
-ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
+ms.openlocfilehash: a32ff0979cfedb250ee44153829013c2595dedb6
+ms.sourcegitcommit: d2a2748e9286d15d0cb53d2d8bb2eb7db0ee5a6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545047"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648182"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -71,7 +71,7 @@ Utilisez le tableau suivant pour aider à comparer les fonctionnalités qui sont
 |Création centralisée de rapports (analytique) :| Oui | Oui, avec des restrictions :<br /><br /> -Aucune prise en charge de [correspondances de contenu](../reports-aip.md#content-matches-for-deeper-analysis) |
 |Paramètres de réinitialisation et journaux d’exportation :| Oui | Oui |
 |Autorisations définies par l’utilisateur :| Oui | Oui, avec des restrictions : <br /><br />-Pour Outlook uniquement (ne pas transférer) : Pris en charge<br /><br />-Pour Word, Excel, PowerPoint et l’Explorateur de fichiers : Prise en charge avec la préversion du client lorsque vous configurez l’étiquette dans le portail Azure |
-|Autorisations personnalisées :| Oui | Explorateur de fichiers et de PowerShell (version préliminaire) <br /><br /> Dans les applications Office, les utilisateurs peuvent également sélectionner **Informations sur le fichier** > **Protéger le document** > **Restreindre l’accès**. |
+|Autorisations personnalisées :| Oui | Explorateur de fichiers et de PowerShell (version préliminaire) <br /><br /> Dans les applications Office, comme alternative, les utilisateurs peuvent sélectionner **Infos sur le fichier** > **protéger le Document** > **restreindre l’accès** ou les administrateurs peuvent configurer un étiquette pour les autorisations définies par l’utilisateur|
 |Barre Information Protection dans les applications Office :| Oui | Oui, avec des restrictions :<br /><br /> - Pas de titre ou d’info-bulle personnalisable<br /><br /> - Couleur d’étiquette non affichée pour l’étiquette appliquée|
 |Les étiquettes peuvent appliquer des marquages visuels (en-tête, pied de page, filigrane) :| Oui | Oui, avec des restrictions :<br /><br /> - Les en-têtes et les pieds de page ne gèrent pas les variables pour les valeurs dynamiques <br /><br /> - Pas de prise en charge pour Word, Excel, PowerPoint et Outlook de différents marquages visuels|
 |Dans l’Explorateur de fichiers, actions déclenchées par clic droit :| Oui | Oui, avec des restrictions :<br /><br /> - Impossible de protéger les documents PDF au format .ppdf <br /><br />  - Pas de prise en charge du mode Protection uniquement|
@@ -117,7 +117,7 @@ Bien que le client d’étiquetage unifié Azure Information Protection est en c
 
 - Prise en charge des applications Office pour les ordinateurs déconnectés avec gestion des fichiers de stratégie manuelle
 
-- Autorisations personnalisées dans les applications Office : Word, Excel et PowerPoint
+- Autorisations personnalisées en tant qu’option que les utilisateurs peuvent sélectionner dans les applications Office : Word, Excel et PowerPoint
 
 - Suivre et révoquer depuis des applications Office et l’Explorateur de fichiers
 

@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/08/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: a32ff0979cfedb250ee44153829013c2595dedb6
-ms.sourcegitcommit: d2a2748e9286d15d0cb53d2d8bb2eb7db0ee5a6d
+ms.openlocfilehash: 38ba4c2f028fcf38fd48be093ee73f2d770bac41
+ms.sourcegitcommit: 7442118f77a175e85444831eb88540034bceeab3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648182"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67715232"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -68,6 +68,7 @@ Utilisez le tableau suivant pour aider à comparer les fonctionnalités qui sont
 |Composant|Client classique|client d’étiquetage unifiée|
 |-------|-----------------------------------|----------------------------------------------------|
 |Étiquetage des actions : manuel, recommandé, automatique| Oui | Oui |
+|Prise en charge multilingue pour les étiquettes :| Oui | Oui |
 |Création centralisée de rapports (analytique) :| Oui | Oui, avec des restrictions :<br /><br /> -Aucune prise en charge de [correspondances de contenu](../reports-aip.md#content-matches-for-deeper-analysis) |
 |Paramètres de réinitialisation et journaux d’exportation :| Oui | Oui |
 |Autorisations définies par l’utilisateur :| Oui | Oui, avec des restrictions : <br /><br />-Pour Outlook uniquement (ne pas transférer) : Pris en charge<br /><br />-Pour Word, Excel, PowerPoint et l’Explorateur de fichiers : Prise en charge avec la préversion du client lorsque vous configurez l’étiquette dans le portail Azure |
@@ -87,7 +88,6 @@ Utilisez le tableau suivant pour aider à comparer les fonctionnalités qui sont
 |Scanneur pour magasins de données locaux :| Oui | Non |
 |Suivre et révoquer :| Oui | Non |
 |Mode protection uniquement (aucune étiquette) à l’aide de modèles :| Oui | Non |
-|Prise en charge multilingue :| Oui | Non |
 |Prise en charge des services AD RMS :| Oui | Seule l’action suivante est prise en charge :<br /><br /> - La visionneuse peut ouvrir des documents protégés quand vous déployez l’[extension Appareils mobiles AD RMS (Active Directory Rights Management Services)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))|
 
 #### <a name="detailed-comparisons-for-the-clients"></a>Comparaisons détaillées pour les clients
@@ -100,6 +100,7 @@ Lorsque les deux clients prennent en charge la même fonctionnalité, utilisez l
 |Sélection et affichage d’étiquette en cas d’application dans les applications Office :|À partir du bouton **Protéger** situé sur le ruban <br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|À partir du bouton **Critère de diffusion** situé sur le ruban<br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|
 |Gérer la barre Information Protection dans les applications Office :|Pour les utilisateurs : <br /><br />- Option permettant d’afficher ou de masquer la barre à partir du bouton **Protéger** situé sur le ruban<br /><br />- Lorsqu’un utilisateur choisit de masquer la barre, par défaut, elle est masquée dans cette application, mais continue de s’afficher automatiquement dans les applications récemment ouvertes. <br /><br /> Pour les administrateurs : <br /><br />- Paramètres de stratégie permettant d’afficher ou de masquer automatiquement la barre à la première ouverture d’une application, et de contrôler si la barre reste automatiquement masquée pour les applications récemment ouvertes une fois qu’un utilisateur a choisi de masquer la barre|Pour les utilisateurs : <br /><br />- Option permettant d’afficher ou de masquer la barre à partir du bouton **Critère de diffusion** situé sur le ruban<br /><br />- Lorsqu’un utilisateur choisit de masquer la barre, celle-ci est masquée dans cette application et dans les applications récemment ouvertes <br /><br />Pour les administrateurs : <br /><br />-Paramètre PowerShell pour gérer la barre (client en version préliminaire uniquement)|
 |Couleur d’étiquette : | À configurer dans le portail Azure | Conservées après la migration d’étiquette à Office 365 et à configurer avec PowerShell <br /><br /> Nouvelles étiquettes créées dans les centres d’administration n’ont pas une couleur mais couleurs peuvent être configurés à l’aide de [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
+|Étiquettes prennent en charge différentes langues :| À configurer dans le portail Azure | Configurer à l’aide de la sécurité et Office 365 PowerShell de conformité et la *LocaleSettings* paramètre pour [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) et [-définir l’étiquette](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)|
 |Mise à jour de la stratégie : | Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 24 heures | Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 4 heures|
 |Formats pris en charge pour PDF :| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF (par défaut) <br /><br /> - .ppdf <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br /> <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint|
 |Cmdlets prises en charge :| Ensemble des cmdlets documentées pour [AzureInformationProtection](/powershell/module/azureinformationprotection) | Set-AIPAuthentication prend en charge les sessions non interactives à l’aide de la préversion du client uniquement <br /><br /> Get-AIPFileStatus, Set-AIPFileClassification et Set-AIPFileLabel ne prennent en charge les chemins d’accès de SharePoint <br /><br /> Set-AIPFileClassification et Set-AIPFileLabel ne prennent pas en charge la *propriétaire* paramètre <br /><br /> En outre, le commentaire unique « Aucune étiquette à appliquer » existe pour tous les scénarios dans lesquels aucune étiquette n’est appliquée. <br /><br /> Set-AIPFileClassification dans la préversion du client prend en charge la *WhatIf* paramètre, donc il peut être exécuté en mode de découverte <br /><br /> La cmdlet Set-AIPFileLabel ne prend pas en charge le paramètre *EnableTracking*. <br /><br /> La cmdlet Get-AIPFileStatus ne retourne aucune information d’étiquette à partir d’autres abonnés et n’affiche pas le paramètre *RMSIssuedTime*.<br /><br />En outre, le *LabelingMethod* affiche les paramètres de Get-AIPFileStatus **privilégié** ou **Standard** au lieu de **manuel** ou **Automatique**. Pour plus d’informations, consultez la [documentation en ligne](/powershell/module/azureinformationprotection/get-aipfilestatus).|

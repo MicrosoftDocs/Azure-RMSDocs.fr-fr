@@ -1,21 +1,21 @@
 ---
-title: Client de Azure Information Protection - stratégie de prise en charge et d’historique de Version
+title: Azure Information Protection l’historique des versions du client & la stratégie de support
 description: Découvrez les nouveautés et les changements d’une version du client Azure Information Protection pour Windows, ainsi que la politique du cycle de vie du support.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/04/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 569b53a958ae90153133406141be15703ef92901
-ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
+ms.openlocfilehash: fd0e18fe93045dec211f2bb400e32fc067ea9ac7
+ms.sourcegitcommit: 01209692397e73aec5c8f04f0ea8b54292b397d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67563387"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67816325"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -27,22 +27,22 @@ L’équipe Azure Information Protection met régulièrement à jour le client A
 
 Vous pouvez télécharger la dernière version en disponibilité générale (GA) et la préversion actuelle (si elle est disponible) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
-Après un court délai de quelques semaines en général, la version plus récente de disponibilité générale est également incluse dans le catalogue Microsoft Update avec un nom de produit de **Microsoft Azure Information Protection**  >  **Client Microsoft Azure Information Protection**et la classification de **mises à jour**. Cette inclusion dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou de Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
+Après un bref délai de quelques semaines, la dernière version de la disponibilité générale est également incluse dans le catalogue Microsoft Update avec le nom de produit **Microsoft Azure information protection** > **Microsoft Azure informations Le client de protection**et la classification des **mises à jour**. Cette inclusion dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou de Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
 
 Pour plus d’informations, consultez [Mise à niveau et maintenance du client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
 > [!TIP]
-> Intéressé par l’utilisation Azure Information Protection client unifié, étiquetage, car vos étiquettes sont publiées à partir de la sécurité Office 365 & centre de conformité, centre de sécurité Microsoft 365 ou centre de conformité de Microsoft 365 ? Lorsque vous téléchargez et installez le client étiquetage unifié à partir du Microsoft Download Center, vous pouvez mettre à niveau votre client Azure Information Protection à ce [client étiquetage unifié](unifiedlabelingclient-version-release-history.md).
+> Vous souhaitez utiliser le client d’étiquetage unifié Azure Information Protection, car vos étiquettes sont publiées à partir d’Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center ou Microsoft 365 Compliance Center? Lorsque vous téléchargez, puis installez le client d’étiquetage unifié à partir du centre de téléchargement Microsoft, vous pouvez mettre à niveau votre client Azure Information Protection vers ce [client d’étiquetage unifié](unifiedlabelingclient-version-release-history.md).
 
 ### <a name="servicing-information-and-timelines"></a>Informations de maintenance et chronologies
 
-Chaque version en disponibilité générale (GA) du client Azure Information Protection est prise en charge jusqu'à six mois après la publication de la version GA suivante. À l’exception de cette section, la documentation n’inclut pas d’informations sur les versions non pris en charge du client. Les correctifs et les nouvelles fonctionnalités sont toujours appliqués à la dernière version GA, pas aux anciennes versions GA.
+Chaque version en disponibilité générale (GA) du client Azure Information Protection est prise en charge jusqu'à six mois après la publication de la version GA suivante. À l’exception de cette section, la documentation n’inclut pas d’informations sur les versions du client non prises en charge. Les correctifs et les nouvelles fonctionnalités sont toujours appliqués à la dernière version GA, pas aux anciennes versions GA.
 
 Les préversions ne doivent pas être déployées pour des utilisateurs finaux sur les réseaux de production. Utilisez plutôt la dernière préversion pour tester les nouvelles fonctionnalités ou les correctifs à paraître dans la prochaine version GA. Les préversions qui ne sont pas actuelles ne sont pas prises en charge.
 
-##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versions en disponibilité générale qui ne sont plus prises en charge :
+##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versions de la disponibilité générale qui ne sont plus prises en charge:
 
-|Version du client|Date de sortie|
+|Version du client|Date de publication|
 |--------------|--------------------------|
 |1.37.19.0|17/09/2018|
 |1.29.5.0|26/06/2018|
@@ -55,9 +55,9 @@ Les préversions ne doivent pas être déployées pour des utilisateurs finaux s
 |1.2.4.0.0|10/27/2016|
 |1.1.23.0|10/01/2016|
 
-À partir de 6/2/2019, le service d’étiquetage pour Azure Information Protection nécessite des connexions qui utilisent TLS 1.2.
+À compter du 6/2/2019, le service d’étiquetage pour Azure Information Protection nécessite des connexions qui utilisent TLS 1,2.
 
-Toutes les versions de client à partir de 1.4.21.0 publié le 15/03/2017 prise en charge de TLS 1.2. Versions du client **1.3.155.2**, **1.2.4.0**, et **1.1.23.0** n’utilisent pas de TLS 1.2 et par conséquent ne peuvent plus télécharger la stratégie Azure Information Protection.
+Toutes les versions du client de 1.4.21.0 publiées 03/15/2017 prennent en charge TLS 1,2. Les versions clientes **1.3.155.2**, **1.2.4.0**et **1.1.23.0** n’utilisent pas TLS 1,2 et ne peuvent donc plus télécharger la stratégie de Azure information protection.
 
 ### <a name="release-history"></a>Historique des versions
 
@@ -76,11 +76,11 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 **Nouvelles fonctionnalités :**
 
-- Le scanneur Azure Information Protection est maintenant configuré à partir du portail Azure, plutôt qu’à l’aide de PowerShell.
+- Le scanneur de Azure Information Protection est maintenant configuré à partir du Portail Azure, plutôt qu’à l’aide de PowerShell.
     
     Si vous mettez à niveau à partir d’une version en disponibilité générale du scanneur, le processus de mise à niveau est différent des versions précédentes ; veillez à lire [Mise à niveau du scanneur Azure Information Protection](client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
 
-- L’analyseur prend désormais en charge plusieurs bases de données de configuration sur la même instance SQL server lorsque vous spécifiez un nom de profil.
+- Le scanneur prend désormais en charge plusieurs bases de données de configuration sur la même instance de SQL Server lorsque vous spécifiez un nom de profil.
 
 - Prise en charge des types d’informations sensibles suivants permettant d’identifier les informations d’identification dans les documents et e-mails :
     - Chaîne de connexion Azure Service Bus
@@ -96,18 +96,18 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Nouveaux paramètres client avancés implémentant des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails. [Plus d’informations](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     
-    Notez que si vous avez configuré la propriété de client avancé de OutlookCollaborationTrustedDomains pour la version d’évaluation, ce paramètre est désormais remplacé par trois nouveaux paramètres, afin que les domaines peuvent être exemptés par action : OutlookWarnTrustedDomains, OutlookJustifyTrustedDomains et OutlookBlockTrustedDomains.
+    Notez que si vous avez configuré la propriété de client avancé de OutlookCollaborationTrustedDomains pour la version préliminaire, ce paramètre est désormais remplacé par trois nouveaux paramètres, afin que les domaines puissent être exemptés par action: OutlookWarnTrustedDomains, OutlookJustifyTrustedDomains et OutlookBlockTrustedDomains.
 
 - Si vous étiquetez et protégez des fichiers à l’aide de la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), vous pouvez utiliser le paramètre *EnableTracking* pour enregistrer le fichier sur le site de suivi des documents. [Plus d’informations](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
 - Nouveau paramètre client avancé qui est applicable seulement quand vous configurez le paramètre de stratégie de façon à ne pas afficher des autorisations personnalisées : Quand un fichier est protégé par des autorisations personnalisées, affichez l’option des autorisations personnalisées dans l’Explorateur de fichiers, pour que les utilisateurs puissent les voir et les changer (s’ils ont les autorisations nécessaires pour changer les paramètres de protection). [Plus d’informations](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
-- Découverte de point de terminaison pour [analytique d’Azure Information Protection](../reports-aip.md).
+- Découverte de point de terminaison pour [Azure information protection Analytics](../reports-aip.md).
     
-- Deux nouveaux paramètres avancés du client pour l’analytique, pour les scénarios suivants :
+- Deux nouveaux paramètres client avancés pour Analytics, pour les scénarios suivants:
     
     - Empêcher l’envoi de correspondances de types d’informations à un sous-ensemble d’utilisateurs lorsque la case correspondant à la collecte de correspondances de contenu est cochée sur le Portail Azure. [Plus d’informations](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-    - Pour le **découverte de données** de rapport, indique si les fichiers contiennent des informations sensibles. [Plus d’informations](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
+    - Pour le rapport de **découverte des données** , affichez si les fichiers contiennent des informations sensibles. [Plus d’informations](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
 
 **Correctifs** :
 
@@ -131,7 +131,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 **Autres modifications :**
 
-- Les types d’informations sensibles suivants sont [n’est plus pris en charge](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) pour les étiquettes que vous configurez pour recommandé ou la classification automatique :
+- Les types d’informations sensibles suivants ne sont [plus pris en charge](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) pour les étiquettes que vous configurez pour la classification recommandée ou automatique:
     - Numéro de téléphone dans l’UE
     - Coordonnées GPS dans l’UE
 
@@ -148,13 +148,13 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Le scanneur Azure Information Protection n’exclut plus les fichiers .zip par défaut. Pour inspecter et étiqueter les fichiers .zip, consultez la section [Pour inspecter les fichiers .zip](client-admin-guide-file-types.md#to-inspect-zip-files) du guide d’administration.
 
-- Le [paramètre de stratégie](../configure-policy-settings.md) **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection** ne s’applique plus au scanneur. Le scanneur effectue ces actions lorsque vous configurez le paramètre **Relabel files** (Réétiqueter les fichiers) sur **Activé** dans le profil du scanneur.
+- Le [paramètre de stratégie](../configure-policy-settings.md) **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection** ne s’applique plus au scanneur. Le scanneur effectue ces actions lorsque vous configurez le paramètre renommer les **fichiers** sur **activé** dans le profil du scanneur, puis activez la case à cocher autoriser l’étiquette à passer à une **version antérieure** .
 
 ## <a name="version-141510"></a>Version 1.41.51.0
 
 **Date de publication** : 27/11/2018
 
-Prise en charge par le biais 16/10/2019
+Pris en charge jusqu’à 10/16/2019
 
 Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
@@ -164,7 +164,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
     
     Si vous souhaitez que le client rétablisse la protection des fichiers PDF à l’aide d’une extension de nom de fichier .ppdf, utilisez le même [paramètre client avancé](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), mais spécifiez **False**.
 
-- L’audit de données prise en charge pour [reporting centrale](../reports-aip.md) à l’aide d’analytique Azure Information Protection, a annoncé au Microsoft Ignite 2018.
+- Audit de la prise en charge des données pour la [création de rapports centralisée](../reports-aip.md) à l’aide d’Azure information protection Analytics, annoncée chez Microsoft en2018.
 
 - Prise en charge des [marquages visuels](../configure-policy-markings.md) de différentes couleurs dans Excel.
 

@@ -4,19 +4,19 @@ description: Identifiez les critères de déploiement d’Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 17b41c32b760e0bff2dcb430689fb8bbebacc22d
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.openlocfilehash: e93b16976bfc6f6be88c015b582dbdb26531549c
+ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141693"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -63,7 +63,7 @@ Pour plus d’informations sur la configuration requise pour les comptes d’uti
 
 Les utilisateurs doivent avoir des appareils clients (ordinateurs ou appareils mobiles) exécutant un système d’exploitation qui prend en charge Azure Information Protection.
 
-Les appareils suivants prennent en charge le client d’étiquetage unifié Azure Information Protection et le client Azure Information Protection. [Les deux clients](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) permettre aux utilisateurs de classer et d’étiqueter leurs documents et e-mails :
+Les appareils suivants prennent en charge le client d’étiquetage Azure Information Protection unifié et le client Azure Information Protection. [Les deux clients](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) permettent aux utilisateurs de classer et d’étiqueter leurs documents et e-mails:
 
 - Windows 10 (x86, x64)
     
@@ -81,22 +81,22 @@ Les appareils suivants prennent en charge le client d’étiquetage unifié Azur
 
 - Windows Server 2008 R2 
 
-Outre l’installation du client sur des ordinateurs physiques, vous pouvez également l’installer sur des machines virtuelles. Vérifier si le fournisseur du logiciel pour la solution de bureau virtuel possède une configuration supplémentaire qui peut-être être nécessaires pour exécuter le client Azure Information Protection unifié étiquetage ou le client Azure Information Protection. Par exemple, pour les solutions de Citrix, vous devrez peut-être [désactiver les raccordements de Citrix Interface API (Application Programming)](https://support.citrix.com/article/CTX107825) pour Office (winword.exe, excel.exe, outlook.exe, powerpoint.exe) et le fichier exécutable de l’Azure Client unifiée étiquetage Information Protection ou le client Azure Information Protection (msip.app.exe, msip.viewer.exe).
+Outre l’installation du client sur des ordinateurs physiques, vous pouvez également l’installer sur des machines virtuelles. Vérifiez si le fournisseur de logiciels de la solution de bureau virtuel dispose d’une configuration supplémentaire qui peut être nécessaire pour exécuter le client d’étiquetage Azure Information Protection unifié ou le client Azure Information Protection. Par exemple, pour les solutions Citrix, vous devrez peut-être désactiver les hooks de l' [interface de programmation d’applications (API) Citrix](https://support.citrix.com/article/CTX107825) pour Office (Winword. exe, Excel. exe, Outlook. exe, PowerPoint. exe) et l’exécutable du Azure information protection Unified étiquetage du client ou du client Azure Information Protection (MSIP. app. exe, MSIP. Viewer. exe).
 
-Pour les versions de serveur répertoriée, les clients Azure Information Protection sont prises en charge pour les Services Bureau à distance. Si vous supprimez des profils utilisateur lorsque vous utilisez les clients Azure Information Protection avec les Services Bureau à distance, ne supprimez pas le **%Appdata%\Microsoft\Protect** dossier.
+Pour les versions de serveur répertoriées, les clients Azure Information Protection sont pris en charge pour la Services Bureau à distance. Si vous supprimez des profils utilisateur quand vous utilisez les clients Azure Information Protection avec Services Bureau à distance, ne supprimez pas le dossier **%AppData%\Microsoft\Protect** .
 
-Lorsque les clients Azure Information Protection protège les données en utilisant le service Azure Rights Management, les données peuvent être utilisées par le [mêmes appareils](requirements-client-devices.md) qui prennent en charge le service Azure Rights Management.
+Lorsque les clients Azure Information Protection protègent les données à l’aide du service Azure Rights Management, les données peuvent être consommées par les [mêmes appareils](requirements-client-devices.md) qui prennent en charge le service de Rights Management Azure.
 
-Les clients Azure Information Protection disposent des éléments supplémentaires répertoriés dans leurs guides d’administration respectifs :
+Les clients Azure Information Protection ont des conditions préalables supplémentaires qui sont répertoriées dans leurs guides d’administration respectifs:
 
-- Client d’étiquetage unifié Azure Information Protection : [Conditions préalables](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+- Client d’étiquetage unifié Azure Information Protection : [Composants requis](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
-- Client Azure Information Protection : [Conditions préalables](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+- Client Azure Information Protection : [Composants requis](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
 
-## <a name="applications"></a>Applications
+## <a name="applications"></a>APPLICATIONS
 
-Les clients Azure Information Protection peuvent étiqueter et protéger des documents et e-mails à l’aide des applications Office **Word**, **Excel**, **PowerPoint**et **Outlook** à partir d’une des éditions Office suivantes :
+Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide des applications Office **Word**, **Excel**, **PowerPoint**et **Outlook** de l’une des éditions Office suivantes:
 
 - Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur
 
@@ -112,7 +112,7 @@ Les clients Azure Information Protection peuvent étiqueter et protéger des doc
 
 Les autres éditions d’Office ne peuvent pas protéger les documents et messages électroniques à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour la classification uniquement. Par conséquent, les étiquettes qui appliquent la protection ne s’affichent pas aux utilisateurs sur la barre Azure Information Protection ni à partir du bouton **Protéger** du ruban Office. 
 
-Les clients Azure Information Protection ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur. Ces clients également ne pas en charge un changement des comptes d’utilisateur dans Office.
+Les clients Azure Information Protection ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur. Ces clients ne prennent pas non plus en charge le changement de comptes d’utilisateur dans Office.
 
 Pour plus d’informations sur les éditions d’Office qui prennent en charge le service de protection, consultez [Applications prenant en charge la protection des données Azure Rights Management](requirements-applications.md).
 
@@ -122,11 +122,13 @@ Si vous avez un pare-feu ou des appareils réseau intervenants similaires qui n�
 
 En plus des informations de l’article relatif à Office, voici des informations propres à Azure Information Protection :
 
+- Pour que le client d’étiquetage unifié télécharge des étiquettes et des stratégies d’étiquette: Autorisez l’URL * **. protection.Outlook.com** sur HTTPS.
+
 - Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour qu’il utilise l’authentification Windows intégrée avec les informations d’identification d’ouverture de session Active Directory de l’utilisateur.
 
 - N’interrompez pas la connexion du client au service TLS (par exemple, pour effectuer une inspection au niveau du paquet) vers l’URL **aadrm.com**. Cela a pour effet d’interrompre l’épinglage de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour sécuriser leur communication avec le service Azure Rights Management.
     
-    - Conseil : En raison de la façon dont Chrome affiche les connexions sécurisées dans la barre d’adresses, vous pouvez utiliser ce navigateur pour vérifier rapidement si la connexion de votre client est arrêtée avant d’atteindre le service Azure Rights Management. Dans la barre d’adresse du navigateur, entrez l’URL suivante : `https://admin.na.aadrm.com/admin/admin.svc` 
+    - Conseil : En raison de la façon dont Chrome affiche les connexions sécurisées dans la barre d’adresses, vous pouvez utiliser ce navigateur pour vérifier rapidement si la connexion de votre client est arrêtée avant d’atteindre le service Azure Rights Management. Dans la barre d’adresse du navigateur, entrez l’URL suivante : `https://admin.na.aadrm.com/admin/admin.svc` 
     
         Ne vous inquiétez pas de ce qu’affiche la fenêtre du navigateur. Cliquez sur le verrou dans la barre d’adresses pour afficher les informations du site. Les informations du site vous permettent de voir l’autorité de certification (CA) émettrice. Si le certificat n’est pas émis par une Autorité de certification Microsoft, il est très probable que votre connexion client-à-service sécurisée s’arrête et nécessite une reconfiguration sur votre pare-feu. L’image suivante illustre un exemple d’une autorité de certification Microsoft. Si vous constatez qu’une autorité de certification interne a émis le certificat, cette configuration n’est pas compatible avec Azure Information Protection.
         

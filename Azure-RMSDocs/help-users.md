@@ -4,19 +4,19 @@ description: Informations vous permettant de fournir de l’aide aux utilisateur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 05/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8ab1872aaf42aa2e62d46873f892e93c2bc90927
-ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
+ms.openlocfilehash: 9d579d6ad639445dbf6f52b8cd3245b01973adef
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545032"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229845"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -43,7 +43,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
     
     Si les utilisateurs disposent du client Azure Information Protection, les opérateurs du support technique peuvent leur demander d’utiliser l’option **Aide et commentaires** pour savoir si l’édition d’Office prend ou non en charge la protection et obtenir le compte d’utilisateur actuellement connecté. Vous pouvez également utiliser cette option pour collecter des fichiers journaux et réinitialiser le client. Pour plus d’informations, consultez le guide de l’administrateur : [Vérifications et résolution des problèmes de l’installation](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
     
-    S’il existe des demandes légitimes d’obtention de droits d’accès complets à des documents protégés, vérifiez que le support technique dispose des processus nécessaires pour effectuer une telle demande à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md) d’Azure Rights Management. Par exemple, ces demandes peuvent émaner du service juridique ou d’un responsable après le départ d’un employé.
+    S’il existe des demandes légitimes d’avoir un accès complet aux documents protégés, assurez-vous que le support technique a des processus pour demander cet accès à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md)Azure information protection. Par exemple, ces demandes peuvent émaner du service juridique ou d’un responsable après le départ d’un employé.
     
     Voici en outre certaines catégories de problèmes que les utilisateurs peuvent signaler :
     
@@ -55,7 +55,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
         
     - **Problèmes de protection ou de consommation de contenu**
         
-        Vérifiez que les utilisateurs disposent d’instructions appropriées pour les applications qu’ils utilisent, et se servent d’applications et d’appareils pris en charge par le service Azure Rights Management. Pour plus d’informations sur les appareils et les applications prises en charge, consultez [configuration requise pour Azure Information Protection](requirements.md).
+        Vérifiez que les utilisateurs disposent d’instructions appropriées pour les applications qu’ils utilisent, et se servent d’applications et d’appareils pris en charge par le service Azure Rights Management. Pour plus d’informations sur les applications et les appareils pris en charge, consultez [Configuration requise pour Azure information protection](requirements.md).
         
         Pour vérifier qu’un utilisateur ou un groupe est autorisé par Azure Active Directory à protéger ou à utiliser du contenu protégé, servez-vous des vérifications mentionnées dans la rubrique [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md).
         
@@ -103,7 +103,7 @@ Les droits d'utilisation sont affichés en haut du document grâce à une banni�
 
 1.  Dans Outlook, créez un e-mail adressé à un destinataire au sein de votre organisation.
 
-2.  Sous l’onglet **OPTIONS** : **Autorisation** > sélectionnez une option. Exemple : **Ne pas transférer**, ou **\<Nom de la société> - Confidentiel** ou **\<Nom de la société> - Affichage confidentiel uniquement**.
+2.  Sous l’onglet **OPTIONS** : **Autorisation** > sélectionnez une option. Par exemple :  **Ne pas transférer**, ou **\<Nom de la société> - Confidentiel** ou **\<Nom de la société> - Affichage confidentiel uniquement**.
 
 3.  Envoyez le message.
 
@@ -115,7 +115,7 @@ Par exemple, si l’e-mail est protégé à l’aide de l’option **Ne pas tran
 
 1. Dans Outlook sur le web, créez un e-mail destiné à une personne de votre organisation.
 
-2. Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **Modifier les autorisations**, puis sélectionnez une option dans la liste déroulante. Exemple : **Chiffrer** ou **\<Nom de la société> – Confidentiel**.
+2. Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **Modifier les autorisations**, puis sélectionnez une option dans la liste déroulante. Par exemple :  **Chiffrer** ou **\<Nom de la société> – Confidentiel**.
 
 3. Envoyez le message.
 

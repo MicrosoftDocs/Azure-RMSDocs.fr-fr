@@ -4,18 +4,18 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/10/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd0e18fe93045dec211f2bb400e32fc067ea9ac7
-ms.sourcegitcommit: 01209692397e73aec5c8f04f0ea8b54292b397d7
+ms.openlocfilehash: d07b862fc95815cad2b100b80c6f024c582263dc
+ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67816325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141642"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -68,9 +68,33 @@ Utilisez les informations suivantes pour découvrir les nouveautés et les chang
 >  
 > Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
+## <a name="version-153100"></a>Version 1.53.10.0
+
+**Date de publication** : 07/15/2019
+
+Cette version comprend la version MSIPC 1.0.3889.0419 du client RMS.
+
+**Nouvelles fonctionnalités :**
+
+- Nouveau paramètre de client avancé pour exempter les messages Outlook du paramètre de stratégie **tous les documents et e-mails doivent avoir une étiquette**. [Plus d’informations](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
+
+- Nouveau paramètre de client avancé pour personnaliser davantage les paramètres qui implémentent des messages contextuels dans Outlook qui avertissent, justifient ou bloquent les courriers électroniques envoyés. Avec ce nouveau paramètre avancé, vous pouvez définir une action différente pour les messages électroniques sans pièce jointe. [Plus d’informations](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
+
+**Correctifs** :
+
+- Lorsque vous utilisez l’Explorateur de fichiers, cliquez avec le bouton droit pour étiqueter un fichier dont la protection est appliquée indépendamment d’une étiquette, cette protection est conservée. Par exemple, un utilisateur a appliqué des autorisations personnalisées à un fichier.
+
+- Lorsque vous remplacez l’option ne pas transférer sur un thread de courrier électronique par une étiquette qui est configurée pour les autorisations définies par l’utilisateur et ne pas transférer, les destinataires d’origine peuvent toujours ouvrir le message électronique.
+
+- Dans le scénario suivant, un utilisateur ne voit plus dans l’info-bulle de l’étiquette que l’étiquette a été automatiquement définie par les utilisateurs: Un utilisateur reçoit un e-mail protégé avec un document joint qui n’est pas étiqueté, mais qui est automatiquement protégé. Lorsque l’utilisateur de la même organisation que l’expéditeur ouvre le document, l’étiquette correspondante pour les paramètres de protection est appliquée au document.
+
+- Le [droit d’utilisation](../configure-usage-rights.md#usage-rights-and-descriptions) minimal pour exécuter l’applet de commande [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) est maintenant **Enregistrer sous, exporter** (exporter) au lieu de **copier** (extraire).
+
 ## <a name="version-1482040"></a>Version 1.48.204.0
 
 **Date de publication** : 04/16/2019
+
+Pris en charge jusqu’à 02/15/2020
 
 Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 

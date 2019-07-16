@@ -4,19 +4,19 @@ description: Informations annexes pour Azure Information Protection qui concerne
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/07/2019
+ms.date: 07/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 92f282a2cf785c82c87d3ffbe8b47317a1ca1956
-ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
+ms.openlocfilehash: 05c2c97bf5a46cb29c64bcd432de2043a5d33ad3
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708838"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229915"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Conformité et informations annexes pour Azure Information Protection
 
@@ -32,7 +32,7 @@ Toutefois, certaines informations utiles peuvent aider votre conseiller juridiqu
 
 - Toutes les clés de chiffrement utilisées par Azure Information Protection sont protégées avec une clé racine propre au client qui utilise RSA 2048 bits. RSA 1024 bits est également pris en charge pour la compatibilité descendante. [Plus d’informations](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Clés racines propres au client sont gérées par Microsoft ou provisionnées par le client dans un nCipher HSM à l’aide de «[apportez votre propre clé](plan-implement-tenant-key.md)» (BYOK). Azure Information Protection prend également en charge des fonctionnalités limitées avec une clé locale via [HYOK](configure-adrms-restrictions.md) (Hold Your Own Key) pour le contenu qui est affecté par les spécifications indiquant qu’il ne doit pas être protégé avec une clé basée sur le cloud.
+- Les clés racines spécifiques au client sont gérées par Microsoft ou approvisionnées par le client dans un HSM nCipher à l’aide de la «mise en place[de votre propre clé](plan-implement-tenant-key.md)» (BYOK). Azure Information Protection prend également en charge des fonctionnalités limitées avec une clé locale via [HYOK](configure-adrms-restrictions.md) (Hold Your Own Key) pour le contenu qui est affecté par les spécifications indiquant qu’il ne doit pas être protégé avec une clé basée sur le cloud.
 
 - Le service Azure Information Protection est hébergé dans les centres de données régionaux du monde entier. Les clés et les stratégies Azure Information Protection restent toujours dans la région dans laquelle elles sont déployées à l’origine.
  
@@ -40,9 +40,9 @@ Toutefois, certaines informations utiles peuvent aider votre conseiller juridiqu
 
 ## <a name="legal-and-privacy"></a>Mentions légales et confidentialité
 
-- Pour plus d’informations de contrat Microsoft Azure : [Contrat Microsoft Azure](https://azure.microsoft.com/support/legal/subscription-agreement/)
+- Pour Microsoft Azure d’informations sur les contrats: [Contrat Microsoft Azure](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Pour plus d’informations de confidentialité de Microsoft Azure : [Déclaration de confidentialité de Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
+- Pour plus d’Microsoft Azure informations de confidentialité: [Déclaration de confidentialité de Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>Sécurité, conformité et audit
 
@@ -50,7 +50,7 @@ Consultez la section [Respect des obligations réglementaires, de conformité et
 
 - Pour connaître les certifications externes pour Azure Information Protection : [Centre de confidentialité Microsoft Azure](https://azure.microsoft.com/support/trust-center/)
 
-- Pour plus d’informations FIPS 140 : [Validation FIPS 140](https://technet.microsoft.com/library/security/cc750357.aspx)
+- Pour obtenir des informations sur FIPS 140: [Validation FIPS 140](https://technet.microsoft.com/library/security/cc750357.aspx)
 
 Pour obtenir des informations techniques approfondies sur le fonctionnement de la technologie de protection, consultez [Fonctionnement d’Azure RMS](./how-does-it-work.md) 
 

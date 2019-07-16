@@ -11,12 +11,14 @@ ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f23b64f7d8d0eddcdf853238400653a32d5f145b
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+search.appverid:
+- MET150
+ms.openlocfilehash: 731870990e5fd852cbc0ac03a988710d1cf52fbf
+ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885596"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie liée à Azure Information Protection
 
@@ -26,21 +28,21 @@ Vous ne comprenez pas un mot, une expression ou un acronyme lié à Microsoft Az
 
 |Terme|Définition|
 |--------|--------------|
-|AADRM|Le nom du premier module PowerShell pour le service de protection (Azure Rights Management), qui a été dérivé de l’abréviation non officielle pour Azure Rights Management quand il appelait (Windows) Azure Active Directory Rights Management. Ce module PowerShell est désormais remplacé par le module AIPService.|
-|activer|Pour activer le service de protection (Azure Rights Management) pour qu’une organisation puisse protéger ses documents et ses e-mails. Cette action active également les fonctionnalités IRM dans Exchange Online et SharePoint Online.|
+|AADRM|Nom du premier module PowerShell pour le service de protection (Azure Rights Management), dérivé de l’abréviation non officielle d’Azure Rights Management lorsqu’il a été nommé précédemment (Windows) Azure Active Directory Rights Management. Ce module PowerShell est maintenant remplacé par le module AIPService.|
+|activer|Pour activer le service de protection (Azure Rights Management) afin qu’une organisation puisse protéger ses documents et ses e-mails. Cette action active également les fonctionnalités IRM dans Exchange Online et SharePoint Online.|
 |Active Directory Rights Management Services|Souvent abrégé *AD RMS*.<br /><br />Rôle Windows Server qui assure une protection par gestion des droits en utilisant le chiffrement et des stratégies pour mieux sécuriser les documents, les fichiers et les e-mails.|
 |AD RMS|Voir *Services Active Directory Rights Management*.|
-|AIPService|Le nom actuel du module PowerShell pour le service de protection, qui remplace par le plus ancien, module AADRM.|
-AzureInformationProtection|Le nom du module PowerShell pour le client Azure Information Protection (classique) et Azure Information Protection unifiée étiquetage client.
+|AIPService|Nom actuel du module PowerShell pour le service de protection, qui remplace par l’ancien module AADRM.|
+AzureInformationProtection|Nom du module PowerShell pour le client Azure Information Protection (Classic) et le client d’étiquetage unifié Azure Information Protection.
 |Azure Information Protection|Service cloud qui utilise des étiquettes pour classifier et protéger les documents et e-mails. Azure Rights Management offre une protection à l’aide de stratégies de chiffrement, d’identité et d’autorisation.|
-Client Azure Information Protection (classique)|Souvent abrégé *client classique*.<br /><br />Du côté client d’origine d’Azure Information Protection qui permet aux utilisateurs, les administrateurs et les services utilisent les étiquettes et les paramètres à partir de votre stratégie Azure Information Protection. Étiquetage client unifié, désormais remplacée avec Azure Information Protection.|
+Client Azure Information Protection (classique)|Parfois abrégé en *client classique*.<br /><br />Le côté client d’origine de Azure Information Protection qui permet aux utilisateurs, aux administrateurs et aux services d’utiliser les étiquettes et les paramètres de votre stratégie de Azure Information Protection. Désormais remplacé par le client d’étiquetage unifié Azure Information Protection.|
 |Étiquette Azure Information Protection|Élément qui applique toujours une valeur de classification aux documents et aux e-mails, et qui peut aussi les protéger. Quand une étiquette est appliquée, les informations de l’étiquette sont stockées dans les métadonnées pour que les applications et les services puissent les lire, et éventuellement agir sur celles-ci.|
 |Stratégie Azure Information Protection|Configuration définie par l’administrateur pour les clients et services qui utilisent les paramètres de stratégie et les étiquettes Azure Information Protection.|
 |Scanneur Azure Information Protection|Service qui s’exécute sur Windows Server et vous permet de découvrir, classifier et protéger des documents sur les dossiers locaux, les partages réseau et les bibliothèques et sites SharePoint Server.|
-|Client d’étiquetage unifié Azure Information Protection|Souvent abrégé *client étiquetage unifié*.<br /><br />client des ordinateurs Windows permettant aux utilisateurs, aux administrateurs et aux services d’utiliser les étiquettes de confidentialité et les paramètres de stratégie provenant du Centre de sécurité et conformité Office 365, du Centre de sécurité Microsoft 365 et du Centre de conformité Microsoft 365. Remplace le client Azure Information Protection (classique).|
+|Client d’étiquetage unifié Azure Information Protection|Parfois abrégé en *client d’étiquetage unifié*.<br /><br />client des ordinateurs Windows permettant aux utilisateurs, aux administrateurs et aux services d’utiliser les étiquettes de confidentialité et les paramètres de stratégie provenant du Centre de sécurité et conformité Office 365, du Centre de sécurité Microsoft 365 et du Centre de conformité Microsoft 365. Remplace le client Azure Information Protection (classique).|
 |Azure RMS|Voir *Azure Rights Management*.|
 |Visionneuse Azure Information Protection|Application qui s’exécute sur des ordinateurs Windows et des appareils mobiles pour afficher les fichiers protégés.|
-|Gestion des droits Azure|Souvent abrégé *Azure RMS*.<br /><br />Service Azure utilisé par Azure Information Protection qui recourt au chiffrement et à des stratégies, à des fins de sécurisation des documents, des fichiers et des e-mails.  Également appelé *service Rights Management Azure*. Les noms précédents étaient les suivants :<br /><br />- *Windows Azure Active Directory Rights Management* : Souvent abrégé en Service Windows Azure AD Rights Management.<br /><br />- *RMS Online* : Le nom d’origine, proposé, que vous pouvez rencontrer parfois dans les messages d’erreur et les entrées de fichier journal.|
+|Gestion des droits Azure|Souvent abrégé *Azure RMS*.<br /><br />Service Azure utilisé par Azure Information Protection qui recourt au chiffrement et à des stratégies, à des fins de sécurisation des documents, des fichiers et des e-mails.  Également appelé *service Rights Management Azure*. Les noms précédents étaient les suivants :<br /><br />- *Windows Azure Active Directory Rights Management* : Souvent abrégé en service Windows Azure AD Rights Management.<br /><br />- *RMS Online* : Nom proposé à l’origine, que vous pouvez parfois voir apparaître dans les messages d’erreur et les entrées du fichier journal.|
 |modèle par défaut|Modèle de protection qui est automatiquement créé pour vous lorsque vous obtenez un abonnement pour Azure Information Protection, afin que vous puissiez immédiatement commencer à protéger les documents et e-mails qui contiennent des informations sensibles.|
 |BYOK|Voir *Bring your own key*.|
 |Bring your own key|Souvent abrégé *BYOK*.<br /><br />Option de configuration et de topologie choisie par une organisation pour générer et gérer sa propre clé de locataire pour Azure Information Protection.|

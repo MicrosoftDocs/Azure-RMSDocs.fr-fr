@@ -1,5 +1,5 @@
 ---
-title: Vue d’ensemble de la protection Azure Rights Management - AIP
+title: Présentation d’Azure Rights Management protection-AIP
 description: Informations concernant Azure Rights Management (Azure RMS), la technologie de protection utilisée par Azure Information Protection.
 author: cabailey
 ms.author: cabailey
@@ -11,12 +11,14 @@ ms.service: information-protection
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 42e4f575b310b8cb802d982e25ad021cf2445e13
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+search.appverid:
+- MET150
+ms.openlocfilehash: 3e5f8b2cadc615e9c2e601ee083f0e9b99566631
+ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885605"
 ---
 # <a name="what-is-azure-rights-management"></a>Qu'est-ce qu'Azure Rights Management ?
 
@@ -65,7 +67,7 @@ Azure Rights Management respecte les obligations réglementaires, de conformité
 
 √ Utilisation du chiffrement standard et prise en charge de la norme FIPS 140-2. Pour plus d’informations, consultez [Contrôles de chiffrement utilisés par Azure RMS : Algorithmes et longueurs de clé](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
 
-√ prise en charge pour le module de sécurité matériel nCipher nShield (HSM) pour stocker votre clé de locataire dans Microsoft Azure data centers. Azure Rights Management utilise des environnements de sécurité distincts pour ses centres de données d’Amérique du Nord, de la zone EMEA (Europe, Moyen-Orient et Afrique) et d’Asie. Par conséquent, vos clés peuvent uniquement être utilisées dans votre région.
+√ Prise en charge du module de sécurité matériel (HSM) nCipher nShield pour stocker votre clé de locataire dans Microsoft Azure centres de données. Azure Rights Management utilise des environnements de sécurité distincts pour ses centres de données d’Amérique du Nord, de la zone EMEA (Europe, Moyen-Orient et Afrique) et d’Asie. Par conséquent, vos clés peuvent uniquement être utilisées dans votre région.
 
 √ Certifié pour ce qui suit :
 

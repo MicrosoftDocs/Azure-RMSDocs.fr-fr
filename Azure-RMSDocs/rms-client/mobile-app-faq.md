@@ -4,7 +4,7 @@ description: Quelques questions fréquemment posées pour vous aider à utiliser
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7694cf898651eee45e64d2319e1527f07e5fa5de
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 5419488303aa3f1c031c09660dd346cc4dc28b65
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156620"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229824"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android
 
@@ -55,7 +55,7 @@ Toutefois, si vous ne souhaitez pas attendre, vous pouvez utiliser les instructi
 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Quelles informations d’identification utiliser pour se connecter à cette application ?
 
-Si votre organisation dispose déjà d’AD RMS en local (avec l’extension Appareils mobiles) ou utilise le service Azure Rights Management, servez-vous de vos informations d’identification pour vous connecter. 
+Si votre organisation dispose déjà d’AD RMS locaux (avec l’extension d’appareil mobile) ou utilise Azure Information Protection, utilisez vos informations d’identification professionnelles pour vous connecter. 
 
 Si votre adresse e-mail personnelle a été utilisée pour protéger le fichier, utilisez les informations d’identification d’un [compte Microsoft](https://signup.live.com) gratuit pour vous connecter.
 
@@ -69,7 +69,7 @@ Toutefois, même si cette visionneuse peut ouvrir des fichiers protégés avec c
 
 Vous pouvez ouvrir les fichiers .rpmsg, .pdf, .ppdf, .pjpg, .pjpeg, .ptiff, .ppng, .ptxt, .pxml et plusieurs autres formats de fichiers texte et image.
 
-Pour obtenir la liste complète des extensions de nom de fichier texte et image, consultez la première table de la section [Types de fichier pris en charge pour la classification et la protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) du guide d’administration.
+Pour obtenir la liste complète des extensions de nom de fichier texte et image, consultez la première table de la section [Types de fichier pris en charge pour la classification et la protection](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) du guide d’administration.
 
 ##  <a name="how-do-i-provide-feedback-about-this-app"></a>Comment envoyer des commentaires concernant cette application ?
 

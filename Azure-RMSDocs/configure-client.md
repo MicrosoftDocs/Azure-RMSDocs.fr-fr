@@ -1,48 +1,59 @@
 ---
 title: Client Azure Information Protection- Installer et configurer
-description: Informations destinées aux administrateurs sur le déploiement du client Azure Information Protection sur les ordinateurs et appareils mobiles Windows.
+description: Informations destinées aux administrateurs sur le déploiement des clients Azure Information Protection sur des ordinateurs Windows et des appareils mobiles.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/05/2019
+ms.date: 07/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 79d4dbb1d6339f0261d57b32cf77addee9ca9744
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 4daf9bfa058aa179e9297e439518202cf965f4ac
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180339"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229853"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection : Installation et configuration pour les clients
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Les ordinateurs qui exécutent Office 2010 exigent que le client Azure Information Protection s’authentifie auprès du service Azure Rights Management et le service Azure Information Protection. Ce client est également recommandé pour tous les ordinateurs Windows et les appareils iOS et Android qui prennent en charge le service Azure Rights Management et Azure Information Protection. 
+Les ordinateurs qui exécutent Office 2010 requièrent l’Azure Information Protection client (Classic) ou le client d’étiquetage unifié Azure Information Protection pour s’authentifier auprès du service de Azure Information Protection.
 
-Le client Azure Information Protection s’intègre aux applications Office grâce à l’installation d’un complément Office, afin de permettre aux utilisateurs d’étiqueter et de protéger facilement des documents et des e-mails directement depuis le ruban Office. Ce client offre également un étiquetage et une protection pour les types de fichiers qui ne sont pas pris en charge de manière native par le service Azure Rights Management, une visionneuse de fichiers protégés et un site de suivi de documents permettant aux utilisateurs de suivre et de révoquer les fichiers qu’ils ont protégés.
+Vous n’êtes pas sûr de la différence entre ces deux clients?  Voir [quelle est la différence entre le client Azure information protection et le client d’étiquetage unifié Azure information protection?](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection)
+
+Ces clients sont également recommandés pour tous les ordinateurs Windows, car ils installent un complément Office afin que les utilisateurs puissent facilement étiqueter et protéger des documents et des e-mails directement à partir du ruban Office. Ces clients offrent également un étiquetage et une protection pour les types de fichiers qui ne sont pas pris en charge en mode natif par le service de protection (Azure Rights Management), ainsi qu’une visionneuse pour les fichiers protégés qui ne peuvent pas être ouverts par les applications Office. Il existe une visionneuse similaire pour iOS et Android.
+
+Le client classique prend également en charge un site de suivi de document permettant aux utilisateurs de suivre et de révoquer les fichiers qu’ils ont protégés.
 
 ## <a name="the-azure-information-protection-client-for-windows-installation-and-configuration"></a>Client Azure Information Protection pour Windows : Installation et configuration
 
-Pour une installation et une configuration du client en entreprise pour Windows, consultez le [Guide de l’administrateur Azure Information Protection](./rms-client/client-admin-guide.md).
+Pour une installation et une configuration d’entreprise du client pour Windows, consultez les guides d’administration suivants:
 
-> [!TIP]
-> Si vous souhaitez installer et tester rapidement le client Azure Information Protection pour un seul ordinateur, consultez [Télécharger et installer le client Azure Information Protection](./rms-client/install-client-app.md) à partir du [Guide de l’utilisateur du client Azure Information Protection](./rms-client/client-user-guide.md).
+- Client d’étiquetage unifié: [Azure information protection Guide](./rms-client/clientv2-admin-guide.md)de l’administrateur du client d’étiquetage unifiée] (./rms-client/client-admin-guide.md)
 
-## <a name="the-azure-information-protection-client-for-ios-and-android-installation-and-management"></a>Client Azure Information Protection pour iOS et Android : Installation et gestion
+- Client classique: [Client Azure Information Protection - Guide de l’administrateur](./rms-client/client-admin-guide.md)
 
-Pour installer le client Azure Information Protection pour ces plateformes mobiles populaires, vous pouvez télécharger l’application correspondante à l’aide des liens de la [page Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970). Aucune action de configuration n'est requise.
+Toutefois, si vous souhaitez installer et tester rapidement ces clients pour un seul ordinateur, consultez les instructions suivantes des guides de l’utilisateur:
+
+- Client d’étiquetage unifié: [Télécharger et installer le client d’étiquetage unifié Azure Information Protection](./rms-client/install-unifiedlabelingclient-app.md)
+
+- Client classique: [Téléchargez et installez le client Azure information protection](./rms-client/install-client-app.md) à partir du Guide de l' [utilisateur du client Azure information protection](./rms-client/client-user-guide.md).
+
+## <a name="the-azure-information-protection-app-for-ios-and-android-installation-and-management"></a>L’application Azure Information Protection pour iOS et Android: Installation et gestion
+
+Pour installer la visionneuse d’applications Azure Information Protection pour iOS et Android, utilisez les liens de la [page Microsoft Azure information protection](https://go.microsoft.com/fwlink/?LinkId=303970). Aucune action de configuration n'est requise.
 
 > [!NOTE]
 > Pour les ordinateurs Mac, les liens de cette page téléchargent l’application de partage RMS. Ces ordinateurs ne prennent pas en charge le client Azure Information Protection.
 
 ### <a name="integration-with-intune"></a>Intégration à Intune
 
-Comme l’application Azure Information Protection utilise le kit de développement logiciel (SDK) d’application Microsoft Intune, lorsque des appareils iOS et Android sont inscrits par Intune, vous pouvez déployer et gérer l’application Azure Information Protection pour ces appareils :
+Étant donné que l’application Azure Information Protection Viewer utilise le kit de développement logiciel (SDK) d’application Microsoft Intune, lorsque des appareils iOS et Android sont inscrits par Intune, vous pouvez déployer et gérer l’application Azure Information Protection Viewer pour ces appareils:
 
 1. [Ajouter l’application Azure Information Protection à Intune](/intune/apps-add) 
 
@@ -54,9 +65,9 @@ Comme l’application Azure Information Protection utilise le kit de développem
 
 Informations supplémentaires quand vous ajoutez l’application Azure Information Protection à Intune :
 
-- Pour iOS : Recherchez et ajoutez l’application à partir d’Intune.
+- Pour iOS: Recherchez et ajoutez l’application à partir d’Intune.
 
-- Pour Android : Lorsque vous ajoutez l’application, utilisez l’**URL de l’Appstore** suivante :
+- Pour Android: Lorsque vous ajoutez l’application, utilisez l’**URL de l’Appstore** suivante :
         
         https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
 
@@ -64,4 +75,4 @@ Quand l’application Azure Information Protection est configurée pour une stra
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Après avoir installé et configuré le client Azure Information Protection, vous devrez peut-être en savoir plus sur la façon dont le client interprète les différents droits d’utilisation pouvant être utilisés pour protéger les documents et les e-mails. Pour plus d’informations, consultez [Configuration des droits d’utilisation pour Azure Rights Management](configure-usage-rights.md).
+Une fois que vous avez installé et configuré Azure Information Protection clients, vous devrez peut-être en savoir plus sur la façon dont le client interprète les différents droits d’utilisation qui peuvent être utilisés pour protéger des documents et des e-mails. Pour plus d’informations, consultez [Configuration des droits d’utilisation pour Azure Information Management](configure-usage-rights.md).

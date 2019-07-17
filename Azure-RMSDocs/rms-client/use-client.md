@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 75d95df5017c440c06f58c22f59ecad68fc1a4b7
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.openlocfilehash: ff8f69469cb7c86868db283aca8586c99b437179
+ms.sourcegitcommit: 433787223074973cae4fcfbe9cd85f46c019cd78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141554"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246849"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -55,7 +55,7 @@ Vous pouvez également installer les deux clients dans le même environnement po
 
 - Pour un sous-ensemble d’utilisateurs, vous déployez le client classique, car ces utilisateurs nécessitent des étiquettes qui appliquent la protection de votre propre clé (HYOK).
     
-    Pour ces utilisateurs, ils ont une expérience légèrement différente s’ils possèdent également des appareils qui exécutent MacOS, iOS et Android, et que ces appareils disposent d’une version d’Office qui prend en charge les étiquettes de sensibilité. Par exemple, ils voient un bouton **protéger** plutôt qu’un bouton **sensibilité** dans le ruban Office. Pour les autres différences, consultez les tableaux qui suivent.
+    Pour ces utilisateurs, ils ont une expérience légèrement différente s’ils possèdent également des appareils qui exécutent MacOS, iOS et Android, et que ces appareils disposent d’une version d’Office qui prend en charge les étiquettes de sensibilité. Par exemple, ils voient un bouton **protéger** plutôt qu’un bouton **sensibilité** dans le ruban Office. Pour connaître les différences entre le client classique et le client d’étiquetage unifié, consultez les tableaux suivants.
 
 - Vous avez des magasins de données locaux avec des documents qui doivent être analysés à la recherche d’informations sensibles ou classifiées et protégées. Vous déployez le client Classic sur les serveurs pour exécuter le scanneur de Azure Information Protection.
 

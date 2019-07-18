@@ -4,19 +4,19 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 29aca45b9a55d8fdecf3fd30ab4bd20c6f082e3f
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.openlocfilehash: bd05adf77fecec7172aa04ae849b6a4e5ce963ef
+ms.sourcegitcommit: 051ef396b1efa9dd6cf77662bbe6aed7154d20a5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141664"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68306618"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -121,7 +121,6 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |EnableCustomPermissionsForCustomProtectedFiles|[Pour les fichiers protégés avec des autorisations personnalisées, toujours afficher des autorisations personnalisées pour les utilisateurs dans l’Explorateur de fichiers](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |HideBarByDefault|[Afficher la barre Information Protection dans les applications Office](##display-the-information-protection-bar-in-office-apps)|
-|labelByCustomProperties|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LogMatchedContent|[Désactiver l’envoi de correspondances de types d’informations pour un sous-ensemble d’utilisateurs](#disable-sending-information-type-matches-for-a-subset-of-users)|
 |OutlookBlockTrustedDomains|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -148,9 +147,9 @@ Utilisez le paramètre *AdvancedSettings* avec [New-label](https://docs.microsof
 |Paramètre|Scénario et instructions|
 |----------------|---------------|
 |Couleur|[Spécifier une couleur pour l’étiquette](#specify-a-color-for-the-label)|
-|customPropertyByLabel|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|customPropertiesByLabel|[Appliquer une propriété personnalisée lorsqu’une étiquette est appliquée](#apply-a-custom-property-when-a-label-is-applied)|
 |DefaultSubLabelId|[Spécifier une sous-étiquette par défaut pour une étiquette parent](#specify-a-default-sublabel-for-a-parent-label) 
-|labelByCustomProperties|[Appliquer une propriété personnalisée lorsqu’une étiquette est appliquée](#apply-a-custom-property-when-a-label-is-applied)|
+|labelByCustomProperties|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |SMimeEncrypt|[Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |SMimeSign|[Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 
@@ -744,7 +743,7 @@ Pour les documents Office et les e-mails Outlook libellés par les utilisateurs 
 
 - Pour l’Explorateur de fichiers : Quand l’utilisateur clique avec le bouton droit sur le fichier et applique l’étiquette, les propriétés personnalisées sont appliquées.
 
-Cette configuration nécessite que vous spécifiiez un paramètre avancé nommé **customPropertyByLabel** pour chaque étiquette de sensibilité à laquelle vous souhaitez appliquer les propriétés personnalisées supplémentaires. Ensuite, définissez la valeur à utiliserpour chaque entrée avec la syntaxe suivante :
+Cette configuration nécessite que vous spécifiiez un paramètre avancé nommé **customPropertiesByLabel** pour chaque étiquette de sensibilité à laquelle vous souhaitez appliquer les propriétés personnalisées supplémentaires. Ensuite, définissez la valeur à utiliserpour chaque entrée avec la syntaxe suivante :
 
 `[custom property name],[custom property value]`
 
@@ -758,13 +757,13 @@ Dans cet exemple :
 
 Paramètre avancé:
 
-- Clé: **customPropertyByLabel**
+- Clé: **customPropertiesByLabel**
 
 - Valeur : **Classification, secret**
 
 Exemple de commande PowerShell, où votre étiquette est nommée «Confidential»:
 
-    Set-Label -Identity Confidential -AdvancedSettings @{customPropertyByLabel="Classification,Secret"}
+    Set-Label -Identity Confidential -AdvancedSettings @{customPropertiesByLabel="Classification,Secret"}
 
 #### <a name="example-2-add-multiple-custom-properties-for-a-label"></a>Exemple 2 : Ajouter plusieurs propriétés personnalisées pour une étiquette
 
@@ -772,7 +771,7 @@ Pour ajouter plusieurs propriétés personnalisées pour la même étiquette, vo
 
 Exemple de commande PowerShell, où votre étiquette est nommée «général» et que vous souhaitez ajouter une propriété personnalisée nommée **classification** avec la valeur **général** et une deuxième propriété personnalisée nommée **sensibilité** avec la valeur **interne** :
 
-    Set-Label -Identity General -AdvancedSettings @{customPropertyByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
+    Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>Configurer une étiquette pour appliquer la protection S/MIME dans Outlook
 

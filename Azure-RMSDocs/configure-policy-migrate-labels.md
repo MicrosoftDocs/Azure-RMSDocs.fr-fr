@@ -4,18 +4,18 @@ description: Migrez des étiquettes Azure Information Protection vers des étiqu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/10/2019
+ms.date: 07/19/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 87d66363531aa29705dedc12ffdace9725fae580
-ms.sourcegitcommit: 531feafbabd8874fbeac4bd460e9bef60afabcdc
+ms.openlocfilehash: 4608bf407a88a306c1abfdd62fc122b80b6a5419
+ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67691035"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340728"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Guide pratique pour migrer des étiquettes Azure Information Protection vers des étiquettes de confidentialité Office 365
 
@@ -23,11 +23,11 @@ ms.locfileid: "67691035"
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Migrer vos étiquettes dans Azure Information Protection afin que vous puissiez les utiliser comme étiquettes de sensibilité par [les clients et les services qui prennent en charge l’étiquetage unifiée](#clients-and-services-that-support-unified-labeling).
+Migrez vos étiquettes dans Azure Information Protection afin de pouvoir les utiliser en tant qu’étiquettes de sensibilité par [les clients et les services qui prennent en charge l’étiquetage unifié](#clients-and-services-that-support-unified-labeling).
 
-Après la migration, gérer et publier ces étiquettes parmi les centres d’administration suivants : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365. Ces étiquettes peuvent être utilisées par le client d’étiquetage unifié Azure Information Protection. Si vous continuez à utiliser le client Azure Information Protection (classique), ce client continue à télécharger les étiquettes avec la stratégie Azure Information Protection à partir du portail Azure.
+Ces étiquettes peuvent ensuite être utilisées par le client d’étiquetage unifié Azure Information Protection. Si vous continuez à utiliser le client Azure Information Protection (Classic), ce client continue de télécharger les étiquettes avec la stratégie de Azure Information Protection à partir du Portail Azure.
 
-Avant de lire les instructions détaillées sur la migration de vos étiquettes, vous trouverez probablement utiles les questions fréquemment posées suivantes :
+Avant de lire les instructions pour migrer vos étiquettes, vous trouverez peut-être les questions fréquemment posées suivantes:
 
 - [Quelle est la différence entre les étiquettes dans Azure Information Protection et celles dans Office 365 ?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
 
@@ -35,9 +35,11 @@ Avant de lire les instructions détaillées sur la migration de vos étiquettes,
 
 - [Une fois que j’ai migré mes étiquettes, quel portail de gestion utiliser ?](faqs.md?#after-ive-migrated-my-labels-which-management-portal-do-i-use )
 
-### <a name="important-information-about-administrative-roles"></a>Informations importantes sur les rôles administratifs
+### <a name="administrative-roles-that-support-the-unified-labeling-platform"></a>Rôles d’administration qui prennent en charge la plateforme d’étiquetage unifiée
 
-Le [rôle Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) de **administrateur Azure Information Protection** (anciennement **administrateur Information Protection**) ne prend pas en charge l’étiquetage unifiée plateforme. Si ce rôle d’administration est utilisé dans votre organisation, avant de migrer vos étiquettes, ajouter des utilisateurs qui possèdent ce rôle aux rôles Azure AD de **administrateur de conformité**, **administrateur de données de conformité**, ou **administrateur de sécurité**. Si vous avez besoin d’aide, consultez [Donner aux utilisateurs accès au Centre de sécurité et de conformité Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). Vous pouvez également attribuer ces rôles dans le portail Azure AD, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365.
+Si vous utilisez des rôles d’administrateur pour l’administration déléguée dans votre organisation, vous devrez peut-être effectuer certaines modifications pour la plateforme d’étiquetage unifiée:
+
+Le [rôle Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) de **Azure information protection administrateur** (anciennement **information protection administrateur**) n’est pas pris en charge par la plateforme d’étiquetage unifiée. Si ce rôle d’administration est utilisé dans votre organisation, ajoutez les utilisateurs qui possèdent ce rôle aux rôles de Azure AD de l’administrateur de la **conformité**, de l’administrateur des **données de conformité**ou de l’administrateur de la **sécurité**. Si vous avez besoin d’aide, consultez [Donner aux utilisateurs accès au Centre de sécurité et de conformité Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). Vous pouvez également attribuer ces rôles dans le portail Azure AD, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365.
 
 Au lieu d’utiliser des rôles, dans les centres d’administration, vous pouvez créer un nouveau groupe de rôles pour ces utilisateurs et ajoutez les rôles **Administrateur d’étiquette de sensibilité** ou **Configuration de l’organisation** à ce groupe.
 
@@ -45,18 +47,17 @@ Si vous ne donnez pas accès aux centres d’administration à ces utilisateurs 
 
 Les administrateurs généraux de votre locataire pourront continuer à gérer les étiquettes et les stratégies sur le Portail Azure et dans les centres d’administration une fois vos étiquettes migrées.
 
-## <a name="considerations-for-unified-labels"></a>Éléments à prendre en considération pour les étiquettes unifiées
+## <a name="before-you-begin"></a>Avant de commencer
 
-Avant de migrer vos étiquettes, tenez compte des changements et des considérations qui suivent :
+Étant donné que la migration des étiquettes est irréversible, assurez-vous que vous avez pris connaissance des modifications et des considérations suivantes:
 
-- Assurez-vous que vous avez [les clients qui prennent en charge des étiquettes unifiées](#clients-and-services-that-support-unified-labeling) et si nécessaire, être préparé pour l’administration dans le portail Azure (pour les clients qui ne prennent pas en charge les étiquettes unifiées) et les centres d’administration (pour les clients qui prennent en charge étiquettes unifiées).
+- Assurez-vous que vous avez des [clients qui prennent en charge des étiquettes unifiées](#clients-and-services-that-support-unified-labeling) et, si nécessaire, préparez-vous à l’administration à la fois dans le portail Azure (pour les clients qui ne prennent pas en charge les étiquettes unifiées) et les centres d’administration (pour le client qui prennent en charge les étiquettes unifiées).
 
-- Les stratégies, notamment les paramètres de stratégie et les personnes qui y ont accès (stratégies délimitées), ainsi que tous les paramètres avancés du client ne sont pas migrés. Les options de configuration de ces paramètres après la migration de votre étiquette sont les suivantes :
-    - Le [copier les stratégies](#copy-your-policies-and-policy-settings) option.
+- Les stratégies, notamment les paramètres de stratégie et les personnes qui y ont accès (stratégies délimitées), ainsi que tous les paramètres avancés du client ne sont pas migrés. Les options de configuration de ces paramètres après la migration de votre étiquette sont les suivantes:
+    - Option de [copie des stratégies](#copy-your-policies-and-policy-settings) .
     - Votre centre d’administration pour les étiquettes de sensibilité.
-    - [Office 365 Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), ce qui vous permet de configurer [client paramètres avancés](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+    - [Office 365 Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), que vous devez utiliser pour configurer les [Paramètres avancés du client](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
     
-    Pour une expérience utilisateur plus homogène, nous vous recommandons de publier les mêmes étiquettes avec les mêmes étendues dans les centres d’administration.
 
 - Les paramètres d’une étiquette migrée ne sont pas tous pris en charge par les centres d’administration. Suivez le tableau de la section [Paramètres d’étiquette non pris en charge dans les centres d’administration](#label-settings-that-are-not-supported-in-the-admin-centers) pour identifier ces paramètres et la procédure recommandée.
 
@@ -68,7 +69,7 @@ Avant de migrer vos étiquettes, tenez compte des changements et des considérat
         
         Conseil : Pour reconfigurer ces étiquettes plus facilement, vous pouvez utiliser deux fenêtres de navigateur : Une fenêtre dans laquelle vous sélectionnez le bouton **Modifier le modèle** de l’étiquette pour afficher les paramètres de protection, et l’autre fenêtre pour configurer les mêmes paramètres quand vous sélectionnez **Définir des autorisations**.
     
-    - Une fois une étiquette avec les paramètres de protection de cloud a été migrée, l’étendue résultante du modèle de protection est l’étendue qui est défini dans le portail Azure (ou à l’aide du module PowerShell de AIPService) et l’étendue est définie dans les centres d’administration. 
+    - Après la migration d’une étiquette avec des paramètres de protection basés sur le Cloud, l’étendue résultante du modèle de protection est définie dans l’étendue définie dans le Portail Azure (ou à l’aide du module PowerShell AIPService) et l’étendue définie dans les centres d’administration. 
 
 - Quand vous migrez vos étiquettes,les résultats de la migration indiquent si une étiquette a été **créée**, **mise à jour** ou **renommée** en raison de la duplication :
 
@@ -78,26 +79,26 @@ Avant de migrer vos étiquettes, tenez compte des changements et des considérat
 
 - Pour chaque étiquette, le portail Azure indique uniquement le nom d’affichage de l’étiquette, que vous pouvez modifier. Les centres d’administration indiquent à la fois ce nom d’affichage et le nom de l’étiquette. Le nom de l’étiquette est le nom initial que vous avez spécifié lors de la création de l’étiquette et cette propriété est utilisée par le service back-end à des fins d’identification.
 
-- Aucune chaîne localisée pour les étiquettes n’est migrée. Définir de nouvelles chaînes localisées pour les étiquettes migrés à l’aide de la sécurité et Office 365 PowerShell de conformité et la *LocaleSettings* paramètre pour [-définir l’étiquette](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
+- Aucune chaîne localisée pour les étiquettes n’est migrée. Définissez de nouvelles chaînes localisées pour les étiquettes migrées à l’aide d’Office 365 Security & Compliance PowerShell et du paramètre *LocaleSettings* pour [Set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
 
-- Après la migration, tout modification d’une étiquette migrée sur le Portail Azure est automatiquement répercutée dans les centres d’administration. Si en revanche vous modifiez une étiquette migrée dans l’un des centres d’administration, vous devez revenir sur le Portail Azure, dans le panneau **Azure Information Protection – Étiquetage unifié**, puis sélectionner **Publier**. Cette action supplémentaire n’est nécessaire pour les clients Azure Information Protection (classique) pour récupérer les modifications de l’étiquette.
+- Après la migration, tout modification d’une étiquette migrée sur le Portail Azure est automatiquement répercutée dans les centres d’administration. Si en revanche vous modifiez une étiquette migrée dans l’un des centres d’administration, vous devez revenir sur le Portail Azure, dans le panneau **Azure Information Protection – Étiquetage unifié**, puis sélectionner **Publier**. Cette action supplémentaire est nécessaire pour que les clients Azure Information Protection (Classic) récupèrent les modifications apportées aux étiquettes.
 
 ### <a name="label-settings-that-are-not-supported-in-the-admin-centers"></a>Paramètres d’étiquette non pris en charge dans les centres d’administration
 
-Utilisez le tableau suivant pour identifier les paramètres de configuration d’une étiquette migrée non pris en charge par le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365. Si vous avez des étiquettes avec ces paramètres, une fois la migration terminée, utilisez les instructions de l’administration dans la dernière colonne avant de publier vos étiquettes dans un des centres d’administration référencé.
+Utilisez le tableau suivant pour identifier les paramètres de configuration d’une étiquette migrée non pris en charge par le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365. Si vous avez des étiquettes avec ces paramètres, une fois la migration terminée, utilisez les conseils d’administration de la dernière colonne avant de publier vos étiquettes dans l’un des centres d’administration référencés.
 
 Si vous n’êtes pas sûr de la façon dont vos étiquettes sont configurées, affichez leurs paramètres dans le portail Azure. Si vous avez besoin d’aide, consultez [Configuration de la stratégie Azure Information Protection](configure-policy.md).
 
-Azure Information Protection (classique) peut utilisent tous les paramètres d’étiquette répertoriés sans aucun problème, car ils continuent à télécharger les étiquettes à partir du portail Azure.
+Les clients Azure Information Protection (Classic) peuvent utiliser tous les paramètres d’étiquette indiqués sans aucun problème, car ils continuent de télécharger les étiquettes à partir du Portail Azure.
 
 |Configuration d’étiquettes|Pris en charge par les clients d’étiquetage unifié| Aide pour les centres d’administration|
 |-------------------|---------------------------------------------|-------------------------|
-|État activé ou désactivé<br /><br />Cet état n’est pas synchronisé avec les centres d’administration |Non applicable|L’équivalent est si l’étiquette est publiée ou non. |
-|Couleur d’étiquette que vous sélectionnez dans la liste ou que vous spécifiez avec un code RVB |Oui|Aucune option de configuration pour les couleurs des étiquettes. Au lieu de cela, vous pouvez configurer les couleurs des étiquettes dans le portail Azure ou utiliser [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).|
+|État activé ou désactivé<br /><br />Cet État n’est pas synchronisé avec les centres d’administration |Non applicable|L’équivalent est si l’étiquette est publiée ou non. |
+|Couleur d’étiquette que vous sélectionnez dans la liste ou que vous spécifiez avec un code RVB |Oui|Aucune option de configuration pour les couleurs des étiquettes. Au lieu de cela, vous pouvez configurer les couleurs des étiquettes dans le Portail Azure ou utiliser [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).|
 |Protection dans le cloud ou protection basée sur HYOK à l’aide d’un modèle prédéfini |Non|Aucune option de configuration pour les modèles prédéfinis. Nous vous déconseillons de publier une étiquette avec cette configuration.|
-|Protection cloud avec des autorisations définies par l’utilisateur pour Word, Excel et PowerPoint |Non|Les centres d’administration n’ont une option de configuration pour les autorisations définies par l’utilisateur pour ces applications Office. Sauf si vous utilisez la version préliminaire du client étiquetage unifiée, nous déconseillons que vous publiez une étiquette avec cette configuration. Si vous ne publiez pas une étiquette avec cette configuration, vérifiez les résultats de l’application de l’étiquette de la [le tableau suivant](#comparing-the-behavior-of-protection-settings-for-a-label).|
+|Protection cloud avec des autorisations définies par l’utilisateur pour Word, Excel et PowerPoint |Oui|Les centres d’administration n’ont pas d’option de configuration pour les autorisations définies par l’utilisateur pour ces applications Office. Toutefois, ce paramètre est pris en charge si vous migrez une étiquette avec cette configuration ou si vous configurez l’étiquette après la migration à l’aide de la Portail Azure. <br /><br /> Si vous publiez une étiquette avec cette configuration, vérifiez les résultats de l’application de l’étiquette à partir du [tableau suivant](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Protection HYOK avec des autorisations définies par l’utilisateur dans Outlook (Ne pas transférer) |Non|Aucune option de configuration pour HYOK. Nous vous déconseillons de publier une étiquette avec cette configuration. Si vous le faites néanmoins, prenez connaissance des résultats de l’application de l’étiquette listés dans le [tableau suivant](#comparing-the-behavior-of-protection-settings-for-a-label).|
-|Supprimer la protection |Non|Aucune option de configuration pour supprimer la protection. Nous vous déconseillons de publier une étiquette avec cette configuration.<br /><br /> Si vous publiez une étiquette avec cette configuration, lorsqu’il est appliqué, protection est supprimée si elle a été précédemment appliquée par une étiquette. Si la protection a été précédemment appliquée indépendamment d’une étiquette, la protection est conservée.|
+|Supprimer la protection |Non|Aucune option de configuration pour supprimer la protection. Nous vous déconseillons de publier une étiquette avec cette configuration.<br /><br /> Si vous publiez une étiquette avec cette configuration, quand elle est appliquée, la protection est supprimée si elle a été appliquée précédemment par une étiquette. Si la protection a été précédemment appliquée indépendamment d’une étiquette, la protection est conservée.|
 |Police personnalisée et couleur de police personnalisée par code RVB pour les marquages visuels (en-tête, pied de page, filigrane)|Oui|La configuration pour les marquages visuels est limitée à une liste de couleurs et de tailles de police. Vous pouvez publier cette étiquette sans rien changer, même si les valeurs configurées n’apparaissent pas dans les centres d’administration. <br /><br />Pour changer ces options, vous pouvez utiliser le portail Azure. Cependant, pour des raisons de simplicité d’administration, vous pouvez remplacer la couleur par l’une des options listées dans les centres d’administration.|
 |Variables dans les marquages visuels (en-tête, pied de page)|Non|Si vous publiez cette étiquette sans changement, les variables s’affichent sous forme de texte sur les clients au lieu d’afficher les valeurs dynamiques. Avant de publier l’étiquette, modifiez les chaînes pour supprimer les variables.|
 |Marquages visuels par application|Non|Si vous publiez cette étiquette sans changement, les variables d’application s’affichent sous forme de texte sur les clients dans toutes les applications, au lieu d’afficher vos chaînes de texte sur les applications choisies. Publiez cette étiquette seulement si elle convient pour toutes les applications, et modifiez les chaînes pour supprimer les variables d’application.|
@@ -105,7 +106,7 @@ Azure Information Protection (classique) peut utilisent tous les paramètres d�
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Comparaison du comportement des paramètres de protection pour une étiquette
 
-Utilisez le tableau suivant pour identifier la manière dont le même paramètre de protection pour une étiquette se comporte différemment, selon qu’il soit utilisé par le client Azure Information Protection (classique), le client d’étiquetage Azure Information Protection unifié, ou par les applications Office qui ont l’étiquetage intégrée (également appelé « Office natifs 
+Utilisez le tableau suivant pour identifier le comportement du même paramètre de protection pour une étiquette, selon qu’elle est utilisée par le client Azure Information Protection (Classic), le client d’étiquetage unifié Azure Information Protection ou les applications Office qui ont des étiquettes intégrées (également appelées «étiquetage Office natif»). Les différences de comportement des étiquettes peuvent modifier votre décision de publier les étiquettes, en particulier lorsque vous avez un mélange de clients dans votre organisation.
 
 Si vous n’êtes pas sûr de la façon dont vos paramètres de protection sont configurés, affichez leurs paramètres dans le volet **Protection** du portail Azure. Si vous avez besoin d’aide, consultez [Configurer une étiquette pour les paramètres de protection](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 
@@ -115,7 +116,7 @@ Les paramètres de protection qui se comportent de la même façon n’apparaiss
 
 |Paramètre de protection pour une étiquette |Client Azure Information Protection (classique) |Client d’étiquetage unifié Azure Information Protection| Applications Office avec étiquetage intégré
 |-------------------|-----------------------------------|-----------------------------------------------------------|---------------
-|Azure (clé cloud) avec des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers :| Visible dans Word, Excel, PowerPoint et l’Explorateur de fichiers <br /><br /> Quand l’étiquette est appliquée :<br /><br /> - Les utilisateurs sont invités à définir des autorisations personnalisées qui sont ensuite appliquées comme protection avec une clé cloud| Pour la version en disponibilité générale : Non visible <br /><br />  Pour la version préliminaire : Visible dans Word, Excel, PowerPoint et l’Explorateur de fichiers <br /><br /> Quand l’étiquette est appliquée :<br /><br /> - Les utilisateurs sont invités à définir des autorisations personnalisées qui sont ensuite appliquées comme protection avec une clé cloud|Visible dans Word, Excel, PowerPoint et Outlook : <br /><br /> Quand l’étiquette est appliquée :<br /><br /> - Les utilisateurs ne sont pas invités à définir des autorisations personnalisées et aucune protection n’est appliquée. <br /><br /> - Si la protection a été précédemment appliquée indépendamment d’une étiquette, cette protection est conservée [[1]](#footnote-1)|
+|Azure (clé cloud) avec des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers :| Visible dans Word, Excel, PowerPoint et l’Explorateur de fichiers <br /><br /> Quand l’étiquette est appliquée :<br /><br /> - Les utilisateurs sont invités à définir des autorisations personnalisées qui sont ensuite appliquées comme protection avec une clé cloud| Visible dans Word, Excel, PowerPoint et l’Explorateur de fichiers <br /><br /> Quand l’étiquette est appliquée :<br /><br /> - Les utilisateurs sont invités à définir des autorisations personnalisées qui sont ensuite appliquées comme protection avec une clé cloud|Visible dans Word, Excel, PowerPoint et Outlook : <br /><br /> Quand l’étiquette est appliquée :<br /><br /> - Les utilisateurs ne sont pas invités à définir des autorisations personnalisées et aucune protection n’est appliquée. <br /><br /> - Si la protection a été précédemment appliquée indépendamment d’une étiquette, cette protection est conservée [[1]](#footnote-1)|
 |HYOK (AD RMS) avec un modèle :| Visible dans Word, Excel, PowerPoint, Outlook et l’Explorateur de fichiers<br /><br /> Quand cette étiquette est appliquée : <br /><br />- La protection HYOK est appliquée aux documents et aux e-mails | Visible dans Word, Excel, PowerPoint, Outlook et l’Explorateur de fichiers  <br /><br /> Quand cette étiquette est appliquée : <br /><br />- Aucune protection n’est appliquée et la protection est supprimée [[2]](#footnote-2) si elle a été précédemment appliquée par une étiquette <br /><br />- Si la protection a été précédemment appliquée indépendamment d’une étiquette, cette protection est conservée |Visible dans Word, Excel, PowerPoint et Outlook <br /><br /> Quand cette étiquette est appliquée : <br /><br />- Aucune protection n’est appliquée et la protection est supprimée [[2]](#footnote-2) si elle a été précédemment appliquée par une étiquette <br /><br />- Si la protection a été précédemment appliquée indépendamment d’une étiquette, cette protection est conservée [[1]](#footnote-1) |
 |HYOK (AD RMS) avec des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers :| Visible dans Word, Excel, PowerPoint et l’Explorateur de fichiers<br /><br /> Quand cette étiquette est appliquée :<br /><br /> - La protection HYOK est appliquée aux documents et aux e-mails| Visible dans Word, Excel et PowerPoint <br /><br /> Quand cette étiquette est appliquée : <br /><br />- La protection n’est pas appliquée et la protection est supprimée [[2]](#footnote-2) si elle a été précédemment appliquée par une étiquette <br /><br />- Si la protection a été précédemment appliquée indépendamment d’une étiquette, cette protection est conservée|Visible dans Word, Excel et PowerPoint <br /><br /> Quand cette étiquette est appliquée : <br /><br />- La protection n’est pas appliquée et la protection est supprimée [[2]](#footnote-2) si elle a été précédemment appliquée par une étiquette <br /><br />- Si la protection a été précédemment appliquée indépendamment d’une étiquette, cette protection est conservée |
 |HYOK (AD RMS) avec des autorisations définies par l’utilisateur pour Outlook :|Visible dans Outlook<br /><br />Quand cette étiquette est appliquée :<br /><br />- « Ne pas transférer » avec la protection HYOK est appliqué aux e-mails|Visible dans Outlook<br /><br />Quand cette étiquette est appliquée :<br /><br /> - La protection n’est pas appliquée et elle est supprimée [[2]](#footnote-2) si elle a été précédemment appliquée par une étiquette <br /><br />- Si la protection a été précédemment appliquée indépendamment d’une étiquette, cette protection est conservée|Visible dans Outlook<br /><br />Quand cette étiquette est appliquée :<br /><br />- La protection n’est pas appliquée et elle est supprimée [[2]](#footnote-2) si elle a été précédemment appliquée par une étiquette <br /><br />- Si la protection a été précédemment appliquée indépendamment d’une étiquette, cette protection est conservée [[1]](#footnote-1)|
@@ -138,18 +139,18 @@ Si l’utilisateur n’a pas un de ces droits d’utilisation ou un de ces rôle
 
 Utilisez les instructions suivantes pour migrer votre locataire et étiquettes Azure Information Protection pour utiliser le nouveau magasin d’étiquetage unifié.
 
-Vous devez être un administrateur de conformité, administrateur de données de conformité, administrateur de sécurité ou administrateur général pour migrer vos étiquettes.
+Vous devez être administrateur de la conformité, administrateur des données de conformité, administrateur de la sécurité ou administrateur général pour migrer vos étiquettes.
 
 > [!NOTE]
-> Si vous avez des étiquettes de rétention ou des stratégies de protection contre la perte de données pour Office 365, nous vous recommandons d’avoir le rôle d’administrateur de conformité, le rôle d’administrateur de données de conformité ou le rôle d’administrateur général pour migrer vos étiquettes.
+> Si vous avez des étiquettes de rétention ou des stratégies de protection contre la perte de données pour Office 365, nous vous recommandons d’avoir le rôle d' **administrateur de conformité** , le rôle d’administrateur de **données de conformité** ou le rôle d' **administrateur général** pour migrer vos étiquettes.
 > 
-> Les administrateurs de sécurité n’ont accès aux stratégies de protection contre la perte étiquettes ou des données des rétention, par conséquent, si vous avez un d'entre eux et ils ont le même nom que vos étiquettes Azure Information Protection, le processus de migration ne peut pas terminer manuellement jusqu'à ce que vous renommez un des doublons. Toutefois, si vous avez un des autres rôles, le processus de migration peut renommer l’étiquette Azure Information Protection pour vous, afin que la migration puisse s’exécuter.
+> Les administrateurs de la sécurité n’ont pas accès aux étiquettes de rétention ou aux stratégies de protection contre la perte de données. par conséquent, si vous disposez de l’un de ces noms et qu’ils ont le même nom que vos étiquettes de Azure Information Protection, le processus de migration ne peut se terminer qu’une des doublons. Toutefois, si vous avez l’un des autres rôles, le processus de migration peut renommer le Azure Information Protection étiquette pour vous, afin que la migration puisse se terminer.
 
 1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**.
     
     Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
 
-2. À partir de la **gérer** option de menu, sélectionnez **unifiés l’étiquetage**.
+2. Dans l’option de menu **gérer** , sélectionnez **étiquetage unifié**.
 
 3. Dans le panneau **Azure Information Protection - Unified labeling** (Azure Information Protection - Étiquetage unifié), sélectionnez **Activer** et suivez les instructions en ligne.
     
@@ -158,29 +159,27 @@ Vous devez être un administrateur de conformité, administrateur de données de
 Les étiquettes qui ont correctement migré peuvent désormais être utilisées par les [clients et les services qui prennent en charge l’étiquetage unifié](#clients-and-services-that-support-unified-labeling). Toutefois, il faut tout d’abord publier ces étiquettes dans l’un des centres d’administration : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365.
 
 > [!IMPORTANT]
-> Si vous modifiez les étiquettes en dehors du portail Azure, pour les clients Azure Information Protection (classique), retourner à cette **unifiée d’Azure Information Protection - l’étiquetage** panneau, puis sélectionnez **publier**.
+> Si vous modifiez les étiquettes en dehors de la Portail Azure, pour les clients Azure Information Protection (Classic), revenez à ce panneau d' **étiquetage Azure information protection-Unified** , puis sélectionnez **publier**.
 
 
-#### <a name="copy-your-policies-and-policy-settings"></a>Copiez vos stratégies et les paramètres de stratégie
+#### <a name="copy-your-policies-and-policy-settings"></a>Copier vos stratégies et paramètres de stratégie
 
 > [!NOTE]
-> Cette option est progressivement déployer aux locataires en version préliminaire et est susceptible de changer. Si vous ne voyez pas le **copier des stratégies (version préliminaire)** option, réessayez dans quelques semaines.
+> Cette option est progressivement déployée sur les locataires en version préliminaire et peut faire l’objet de modifications. Si vous ne voyez pas l’option **copier les stratégies (version préliminaire)** , réessayez dans quelques semaines.
 
-Une fois que vous avez migré vos étiquettes, vous pouvez sélectionner une option pour copier des stratégies. Si vous sélectionnez cette option, une copie unique de vos stratégies avec leurs [paramètres de stratégie](configure-policy-settings.md) et n’importe quel [client paramètres avancés](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) est envoyé au centre d’administration où vous gérez vos étiquettes : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365.
+Une fois que vous avez migré vos étiquettes, vous pouvez sélectionner une option pour copier les stratégies. Si vous sélectionnez cette option, une copie unique de vos stratégies avec les paramètres de [stratégie](configure-policy-settings.md) et les [Paramètres client avancés](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) est envoyée au centre d’administration où vous gérez vos étiquettes: le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365.
 
-Avant de sélectionner le **copier des stratégies (version préliminaire)** option, tenez compte des éléments suivants :
+Avant de sélectionner l’option **copier les stratégies (version préliminaire)** , tenez compte des éléments suivants:
 
-- Vous ne pouvez pas choisir stratégies et les paramètres à copier. Toutes les stratégies (le **Global** stratégie et toutes les stratégies délimitées) sont copiés et tous les paramètres qui sont pris en charge comme paramètres de stratégie d’étiquette sont copiés. Si vous avez déjà une stratégie portant le même nom d’étiquette, il sera remplacé avec les paramètres de stratégie dans le portail Azure.
+- Vous ne pouvez pas sélectionner de manière sélective les stratégies et les paramètres à copier. Toutes les stratégies (stratégie **globale** et stratégies délimitées) sont copiées, et tous les paramètres pris en charge en tant que paramètres de stratégie d’étiquette sont copiés. Si vous disposez déjà d’une stratégie d’étiquette portant le même nom, elle sera remplacée par les paramètres de stratégie de la Portail Azure.
 
-- Certains paramètres de client avancé ne sont pas copiés, car pour Azure Information Protection unifiée étiquetage client, ils sont pris en charge en tant que *étiquette paramètres avancé* plutôt que les paramètres de stratégie. Vous pouvez configurer ces paramètres d’étiquette avancé avec [PowerShell du centre de conformité et sécurité Office 365](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell). Les paramètres de client avancé ne sont pas copiées sont les suivantes :
+- Certains paramètres client avancés ne sont pas copiés, car pour le client d’étiquetage unifié Azure Information Protection, ils sont pris en charge en tant que *Paramètres avancés d’étiquette* plutôt qu’en tant que paramètres de stratégie. Vous pouvez configurer ces paramètres avancés d’étiquette avec [Office 365 Centre de sécurité et de conformité PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell). Les paramètres client avancés qui ne sont pas copiés sont les suivants:
     - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
-- Pour prendre en charge les propriétés de client avancé sont copiées, vous devez utiliser la préversion du client Azure Information Protection unifiée étiquetage.
+- Contrairement à la migration des étiquettes où les modifications ultérieures apportées aux étiquettes sont synchronisées, l’action copier les stratégies ne synchronise pas les modifications ultérieures apportées à vos stratégies ou paramètres de stratégie. Vous pouvez répéter l’action copier la stratégie après avoir apporté des modifications au Portail Azure, et les stratégies existantes et leurs paramètres seront à nouveau remplacés. Ou utilisez les applets de commande [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps) ou [Set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps) avec le paramètre *AdvancedSettings* d’Office 365 Centre de sécurité et de conformité PowerShell.
 
-- Contrairement à la migration d’étiquette où les modifications ultérieures apportées aux étiquettes sont synchronisées, l’action de stratégies de copie ne synchronise toutes les modifications ultérieures apportées à vos stratégies ou les paramètres de stratégie. Vous pouvez répéter l’action de stratégie de copie après avoir apporté des modifications dans le portail Azure, et les stratégies existantes et leurs paramètres seront remplacés à nouveau. Ou utilisez le [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps) ou [définir l’étiquette](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps) applets de commande avec le *AdvancedSettings* paramètre à partir de la sécurité et Office 365 PowerShell du centre de conformité.
-
-Pour plus d’informations sur la configuration des paramètres de stratégie, avancé des paramètres client et les paramètres d’étiquette pour le client d’étiquetage Azure Information Protection unifié, consultez [configurations personnalisées pour Azure Information Protection unifiée étiquetage client](./rms-client/clientv2-admin-guide-customizations.md) du guide d’administration.
+Pour plus d’informations sur la configuration des paramètres de stratégie, des paramètres client avancés et des paramètres d’étiquette pour le client d’étiquetage unifié Azure Information Protection, consultez [configurations personnalisées pour le client d’étiquetage unifié Azure information protection ](./rms-client/clientv2-admin-guide-customizations.md)à partir du Guide de l’administrateur.
 
 ### <a name="clients-and-services-that-support-unified-labeling"></a>Clients et services prenant en charge l’étiquetage unifié
 
@@ -188,7 +187,7 @@ Pour savoir si les clients et services que vous utilisez prennent en charge l’
 
 ##### <a name="clients-that-currently-support-unified-labeling-include"></a>Les clients qui prennent en charge l’étiquetage unifié sont :
 
-- Le [Azure Information Protection unifiée étiquetage client pour Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Pour obtenir une comparaison de ce client avec le client Azure Information Protection (classique), consultez [comparer les clients](./rms-client/use-client.md#compare-the-clients).
+- Le [Azure information protection client d’étiquetage unifié pour Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Pour obtenir une comparaison entre ce client et le client Azure Information Protection (Classic), consultez [comparer les clients](./rms-client/use-client.md#compare-the-clients).
 
 - Applications Office qui se trouvent à différentes phases de disponibilité. Pour plus d’informations, consultez la section **Où est-ce que la fonctionnalité est disponible aujourd’hui ?** de l’article [Appliquer des étiquettes de critère de diffusion à vos documents et vos e-mails dans Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) dans la documentation Office.
     
@@ -196,7 +195,7 @@ Pour savoir si les clients et services que vous utilisez prennent en charge l’
 
 ##### <a name="services-that-currently-support-unified-labeling-include"></a>Les services qui prennent en charge l’étiquetage unifié sont :
 
-- Defender Microsoft Advanced Threat Protection
+- Microsoft Defender-protection avancée contre les menaces
 
 - Microsoft Cloud App Security
     
@@ -212,4 +211,4 @@ Pour savoir si les clients et services que vous utilisez prennent en charge l’
 
 Pour plus d’informations sur les étiquettes migrées maintenant configurables et publiables dans l’un des centres d’administration, voir [Vue d’ensemble des étiquettes de confidentialité](/Office365/SecurityCompliance/sensitivity-labels).
 
-Si vous n’avez pas déjà fait, installez le client d’étiquetage unifié Azure Information Protection. Pour plus d’informations de version, un guide de l’administrateur et guide de l’utilisateur, consultez [Azure Information Protection unifiée étiquetage client pour Windows](./rms-client/aip-clientv2.md).
+Si vous ne l’avez pas déjà fait, installez le client d’étiquetage unifié Azure Information Protection. Pour obtenir des informations sur la version, un guide d’administration et un guide de l’utilisateur, consultez [Azure information protection le client d’étiquetage unifié pour Windows](./rms-client/aip-clientv2.md).

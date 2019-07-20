@@ -4,19 +4,19 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: bd05adf77fecec7172aa04ae849b6a4e5ce963ef
-ms.sourcegitcommit: 051ef396b1efa9dd6cf77662bbe6aed7154d20a5
+ms.openlocfilehash: b40c62853aa35053c98eaee4561af79fd4d56e03
+ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68306618"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68352835"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -440,7 +440,7 @@ Quand vous créez et que vous configurez les paramètres client avancés suivant
 - **Leur e-mail ou leur pièce jointe à l’e-mail n’a pas d’étiquette** :
     - La pièce jointe peut être un document Office ou un document PDF
 
-Lorsque ces conditions sont remplies et que l’adresse de messagerie du destinataire n’est pas incluse dans la liste des noms de domaine autorisés que vous avez spécifiés, l’utilisateur voit un message contextuel avec l’une des actions suivantes:
+Lorsque ces conditions sont remplies, l’utilisateur voit un message contextuel avec l’une des actions suivantes:
 
 - **Avertir** : L’utilisateur peut confirmer et envoyer, ou bien annuler.
 
@@ -448,6 +448,7 @@ Lorsque ces conditions sont remplies et que l’adresse de messagerie du destina
 
 - **Bloquer** : L’utilisateur ne peut pas envoyer l’e-mail tant que la condition perdure. Le message contient la raison du blocage de l’e-mail pour que l’utilisateur puisse résoudre le problème, par exemple supprimer des destinataires spécifiques ou appliquer une étiquette à l’e-mail. 
 
+Quand les messages contextuels concernent une étiquette spécifique, vous pouvez configurer des exceptions pour les destinataires par nom de domaine.
 
 > [!TIP]
 > Bien que le didacticiel concerne le client Azure information protection plutôt que le client d’étiquetage unifié, vous pouvez voir ces paramètres avancés en action pour vous- [même avec le didacticiel suivant: Configurez Azure Information Protection pour contrôler le surPartage des](../infoprotect-oversharing-tutorial.md)informations à l’aide d’Outlook.
@@ -486,6 +487,45 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
 
+#### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Pour exempter les noms de domaine pour les messages contextuels configurés pour des étiquettes spécifiques
+
+Pour les étiquettes que vous avez spécifiées avec ces messages contextuels, vous pouvez exempter des noms de domaine spécifiques afin que les utilisateurs ne voient pas les messages pour les destinataires qui ont ce nom de domaine inclus dans leur adresse de messagerie. Dans ce cas, les e-mails sont envoyés sans qu’un message interrompe le processus. Pour spécifier plusieurs domaines, ajoutez-les sous la forme d’une seule chaîne, en les séparant par des virgules.
+
+Une configuration typique consiste à afficher les messages contextuels seulement pour les destinataires qui sont externes à votre organisation ou qui ne sont pas des partenaires autorisés de votre organisation. Dans ce cas, vous spécifiez tous les domaines de messagerie utilisés par votre organisation et par vos partenaires.
+
+Pour la même stratégie d’étiquette, créez les paramètres client avancés suivants et, pour la valeur, spécifiez un ou plusieurs domaines, chacun étant séparé par une virgule.
+
+Exemple de valeur pour plusieurs domaines sous forme de chaîne séparée par des virgules : `contoso.com,fabrikam.com,litware.com`
+
+Pour la même stratégie d’étiquette, créez les paramètres client avancés suivants et, pour la valeur, spécifiez un ou plusieurs domaines, chacun étant séparé par une virgule.
+
+Exemple de valeur pour plusieurs domaines sous forme de chaîne séparée par des virgules : `contoso.com,fabrikam.com,litware.com`
+
+- Messages d’avertissement :
+    
+    - Clé : **OutlookWarnTrustedDomains**
+    
+    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
+
+- Messages de justification :
+    
+    - Clé : **OutlookJustifyTrustedDomains**
+    
+    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
+
+- Messages de blocage :
+    
+    - Clé : **OutlookBlockTrustedDomains**
+    
+    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
+
+Par exemple, vous avez spécifié le paramètre client avancé **OutlookBlockUntrustedCollaborationLabel** pour l’étiquette **confidentiel \ tous les employés** . Vous spécifiez maintenant le paramètre de client avancé supplémentaire **OutlookJustifyTrustedDomains** et **contoso.com**. Par conséquent, un utilisateur peut envoyer un e-mail à john@sales.contoso.com lorsqu’il est étiqueté **confidentiel \ tous les employés** , mais qu’il ne pourra pas envoyer un e-mail avec la même étiquette à un compte gmail.
+
+Exemples de commandes PowerShell, où votre stratégie d’étiquette est nommée «global»:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Pour implémenter des messages contextuels d’avertissement, de justification ou de blocage pour des e-mails ou des pièces jointes qui n’ont pas d’étiquette :
 
@@ -541,41 +581,6 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
 
-### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Pour spécifier les noms de domaine autorisés pour des destinataires exemptés des messages contextuels
-
-Lorsque vous spécifiez des noms de domaine dans un paramètre client avancé supplémentaire, les utilisateurs ne voient pas les messages contextuels pour les destinataires qui ont ce nom de domaine inclus dans leur adresse de messagerie. Dans ce cas, les e-mails sont envoyés sans qu’un message interrompe le processus. Pour spécifier plusieurs domaines, ajoutez-les sous la forme d’une seule chaîne, en les séparant par des virgules.
-
-Une configuration typique consiste à afficher les messages contextuels seulement pour les destinataires qui sont externes à votre organisation ou qui ne sont pas des partenaires autorisés de votre organisation. Dans ce cas, vous spécifiez tous les domaines de messagerie utilisés par votre organisation et par vos partenaires.
-
-Pour la même stratégie d’étiquette, créez les paramètres client avancés suivants et, pour la valeur, spécifiez un ou plusieurs domaines, chacun étant séparé par une virgule.
-
-Exemple de valeur pour plusieurs domaines sous forme de chaîne séparée par des virgules : `contoso.com,fabrikam.com,litware.com`
-
-- Messages d’avertissement :
-    
-    - Clé : **OutlookWarnTrustedDomains**
-    
-    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
-
-- Messages de justification :
-    
-    - Clé : **OutlookJustifyTrustedDomains**
-    
-    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
-
-- Messages de blocage :
-    
-    - Clé : **OutlookBlockTrustedDomains**
-    
-    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
-
-Par exemple, pour ne jamais bloquer les e-mails envoyés aux utilisateurs disposant d’une adresse de messagerie contoso.com, spécifiez le paramètre client avancé **OutlookBlockTrustedDomains** et **contoso.com**. Par conséquent, les utilisateurs ne voient pas les messages d’avertissement contextuel dans Outlook lorsqu’ils envoient un john@sales.contoso.come-mail à.
-
-Exemples de commandes PowerShell, où votre stratégie d’étiquette est nommée «global»:
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
 ## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics
 

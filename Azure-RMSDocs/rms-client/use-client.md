@@ -4,19 +4,19 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 07/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: ff8f69469cb7c86868db283aca8586c99b437179
-ms.sourcegitcommit: 433787223074973cae4fcfbe9cd85f46c019cd78
+ms.openlocfilehash: e4746246c13ece385cd19f9ace8422ae6210132f
+ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246849"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68352863"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -39,9 +39,9 @@ Le **client d’étiquetage unifié Azure Information Protection** télécharge 
 
 Quel client convient-il d’installer ?
 
-- Installez le client d’étiquetage unifié Azure Information Protection pour les étiquettes qui peuvent également être utilisées par MacOS, iOS et Android, et si vous n’avez pas besoin des nombreuses fonctionnalités qui ne sont pas encore prises en charge. Ces fonctionnalités incluent la protection du contenu avec une clé locale (HYOK) et un scanneur pour les magasins de données locaux.
+- Installez le client d’étiquetage unifié Azure Information Protection pour les étiquettes et les paramètres de stratégie qui peuvent également être utilisés par MacOS, iOS et Android, et si vous n’avez pas besoin des nombreuses fonctionnalités qui ne sont pas encore prises en charge par le client classique. Ces fonctionnalités incluent la protection du contenu avec une clé locale (HYOK) et un scanneur pour les magasins de données locaux.
 
-- Installez le client Azure Information Protection (Classic) si vous avez besoin d’une version du client qui possède des fonctionnalités qui ne sont pas encore disponibles avec le client d’étiquetage unifié. Le compromis est que les étiquettes ne peuvent pas être utilisées sur d’autres plateformes clientes et l’administration à l’aide d’un autre portail de gestion.
+- Installez le client Azure Information Protection (Classic) si vous avez besoin d’une version du client qui possède des fonctionnalités qui ne sont pas encore disponibles avec le client d’étiquetage unifié. Le compromis est que tous les paramètres d’étiquette ne peuvent pas être utilisés sur d’autres plateformes clientes et l’administration à l’aide d’un autre portail de gestion.
 
 Actuellement, le client classique et le client d’étiquetage unifié n’ont pas de parité pour leurs fonctionnalités. Toutefois, cet intervalle se ferme et vous pouvez vous attendre à ce que les nouvelles fonctionnalités soient ajoutées uniquement au client d’étiquetage unifié. Pour cette raison, nous vous recommandons de déployer le client d’étiquetage unifié si son ensemble de fonctionnalités et ses fonctionnalités actuelles répondent aux besoins de votre entreprise. Si ce n’est pas le cas, ou si vous avez configuré des étiquettes dans le Portail Azure que vous n’avez pas encore [migré vers le magasin d’étiquetage unifié](../configure-policy-migrate-labels.md), utilisez le client classique.
 
@@ -51,11 +51,11 @@ Vous pouvez également installer les deux clients dans le même environnement po
 
 - Pour la majorité des utilisateurs, vous déployez le client d’étiquetage unifié Azure Information Protection, car ce client répond aux besoins de l’entreprise pour ces utilisateurs. 
     
-    Pour ces utilisateurs, leur étiquetage est très similaire s’ils ont également des appareils qui exécutent MacOS, iOS et Android, et que ces appareils ont une version d’Office qui prend en charge les étiquettes de sensibilité.
+    Pour ces utilisateurs, leur étiquetage est très similaire sur Windows, Mac, iOS et Android, car ils ont les mêmes étiquettes publiées et les mêmes paramètres de stratégie. En tant qu’administrateur, vous gérez ces étiquettes et paramètres de stratégie dans le même portail de gestion.
 
-- Pour un sous-ensemble d’utilisateurs, vous déployez le client classique, car ces utilisateurs nécessitent des étiquettes qui appliquent la protection de votre propre clé (HYOK).
+- Pour un sous-ensemble d’utilisateurs, vous déployez le client classique, car ces utilisateurs nécessitent une ou plusieurs étiquettes qui appliquent la protection de votre propre clé (HYOK).
     
-    Pour ces utilisateurs, ils ont une expérience légèrement différente s’ils possèdent également des appareils qui exécutent MacOS, iOS et Android, et que ces appareils disposent d’une version d’Office qui prend en charge les étiquettes de sensibilité. Par exemple, ils voient un bouton **protéger** plutôt qu’un bouton **sensibilité** dans le ruban Office. Pour connaître les différences entre le client classique et le client d’étiquetage unifié, consultez les tableaux suivants.
+    Pour ces utilisateurs, ils ont une expérience d’étiquetage légèrement différente lorsqu’ils utilisent ce client. Par exemple, ils voient un bouton **protéger** au lieu d’un bouton de **sensibilité** dans les applications Office. En tant qu’administrateur, vous devez gérer leurs étiquettes pour les paramètres de HYOK et les paramètres de stratégie dans un portail de gestion différent des étiquettes et des paramètres pour les autres plateformes clientes.
 
 - Vous avez des magasins de données locaux avec des documents qui doivent être analysés à la recherche d’informations sensibles ou classifiées et protégées. Vous déployez le client Classic sur les serveurs pour exécuter le scanneur de Azure Information Protection.
 

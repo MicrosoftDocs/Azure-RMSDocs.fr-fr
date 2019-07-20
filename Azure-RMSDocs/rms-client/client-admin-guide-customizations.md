@@ -4,19 +4,19 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 3dfc29a45425bbe811093874f22972a6a53b6283
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.openlocfilehash: 7a20eba01a57a0c09dd24c88834d0d5b6cb53198
+ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141706"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68352884"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -306,7 +306,7 @@ Quand vous créez et que vous configurez les paramètres client avancés suivant
 - **Leur e-mail ou leur pièce jointe à l’e-mail n’a pas d’étiquette** :
     - La pièce jointe peut être un document Office ou un document PDF
 
-Quand ces conditions sont remplies et que l’adresse e-mail du destinataire ne figure pas dans la liste des noms de domaine autorisés que vous avez spécifiée, l’utilisateur voit un message contextuel avec une des actions suivantes :
+Lorsque ces conditions sont remplies, l’utilisateur voit un message contextuel avec l’une des actions suivantes:
 
 - **Avertir** : L’utilisateur peut confirmer et envoyer, ou bien annuler.
 
@@ -314,7 +314,9 @@ Quand ces conditions sont remplies et que l’adresse e-mail du destinataire ne 
 
 - **Bloquer** : L’utilisateur ne peut pas envoyer l’e-mail tant que la condition perdure. Le message contient la raison du blocage de l’e-mail pour que l’utilisateur puisse résoudre le problème, par exemple supprimer des destinataires spécifiques ou appliquer une étiquette à l’e-mail. 
 
-L’action résultante est consignée dans le journal des événements Windows local **Journaux des applications et des services** > **Azure Information Protection** :
+Quand les messages contextuels concernent une étiquette spécifique, vous pouvez configurer des exceptions pour les destinataires par nom de domaine.
+
+Les actions résultantes des messages contextuels sont consignées dans le journal des événements Windows local **journaux** > des applications et des services**Azure information protection**:
 
 - Messages d’avertissement : ID d’information 301
 
@@ -325,7 +327,7 @@ L’action résultante est consignée dans le journal des événements Windows l
 Exemple d’entrée événement d’un message de justification :
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Price list.msg
 Item Name: Price list
@@ -364,6 +366,35 @@ Exemple de valeur pour plusieurs ID d’étiquette sous forme de chaîne sépar�
     
     - Valeur : \<**ID d’étiquette séparés par des virgules**>
 
+#### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Pour exempter les noms de domaine pour les messages contextuels configurés pour des étiquettes spécifiques
+
+Pour les étiquettes que vous avez spécifiées avec ces messages contextuels, vous pouvez exempter des noms de domaine spécifiques afin que les utilisateurs ne voient pas les messages pour les destinataires qui ont ce nom de domaine inclus dans leur adresse de messagerie. Dans ce cas, les e-mails sont envoyés sans qu’un message interrompe le processus. Pour spécifier plusieurs domaines, ajoutez-les sous la forme d’une seule chaîne, en les séparant par des virgules.
+
+Une configuration typique consiste à afficher les messages contextuels seulement pour les destinataires qui sont externes à votre organisation ou qui ne sont pas des partenaires autorisés de votre organisation. Dans ce cas, vous spécifiez tous les domaines de messagerie utilisés par votre organisation et par vos partenaires.
+
+Créez les paramètres client avancés suivants et, pour la valeur, spécifiez un ou plusieurs domaines, chacun séparé par une virgule.
+
+Exemple de valeur pour plusieurs domaines sous forme de chaîne séparée par des virgules : `contoso.com,fabrikam.com,litware.com`
+
+- Messages d’avertissement :
+    
+    - Clé : **OutlookWarnTrustedDomains**
+    
+    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
+
+- Messages de justification :
+    
+    - Clé : **OutlookJustifyTrustedDomains**
+    
+    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
+
+- Messages de blocage :
+    
+    - Clé : **OutlookBlockTrustedDomains**
+    
+    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
+
+Par exemple, vous avez spécifié le paramètre client avancé **OutlookBlockUntrustedCollaborationLabel** pour l’étiquette **confidentiel \ tous les employés** . Vous spécifiez maintenant le paramètre de client avancé supplémentaire **OutlookBlockTrustedDomains** et **contoso.com**. Par conséquent, un utilisateur peut envoyer un e-mail à john@sales.contoso.com lorsqu’il est étiqueté **confidentiel \ tous les employés** , mais qu’il ne pourra pas envoyer un e-mail avec la même étiquette à un compte gmail.
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Pour implémenter des messages contextuels d’avertissement, de justification ou de blocage pour des e-mails ou des pièces jointes qui n’ont pas d’étiquette :
 
@@ -437,37 +468,6 @@ Créez le paramètre client avancé suivant avec une des valeurs suivantes :
     - Valeur : **Off**
 
 Si vous ne spécifiez pas ce paramètre client, la valeur que vous spécifiez pour OutlookUnlabeledCollaborationAction est utilisée pour les messages électroniques sans étiquette, et les messages électroniques sans étiquette avec pièces jointes.
-
-### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Pour spécifier les noms de domaine autorisés pour des destinataires exemptés des messages contextuels
-
-Lorsque vous spécifiez des noms de domaine dans un paramètre client avancé supplémentaire, les utilisateurs ne voient pas les messages contextuels pour les destinataires qui ont ce nom de domaine inclus dans leur adresse de messagerie. Dans ce cas, les e-mails sont envoyés sans qu’un message interrompe le processus. Pour spécifier plusieurs domaines, ajoutez-les sous la forme d’une seule chaîne, en les séparant par des virgules.
-
-Une configuration typique consiste à afficher les messages contextuels seulement pour les destinataires qui sont externes à votre organisation ou qui ne sont pas des partenaires autorisés de votre organisation. Dans ce cas, vous spécifiez tous les domaines de messagerie utilisés par votre organisation et par vos partenaires.
-
-Créez les paramètres client avancés suivants et, pour la valeur, spécifiez un ou plusieurs domaines, chacun séparé par une virgule.
-
-Exemple de valeur pour plusieurs domaines sous forme de chaîne séparée par des virgules : `contoso.com,fabrikam.com,litware.com`
-
-- Messages d’avertissement :
-    
-    - Clé : **OutlookWarnTrustedDomains**
-    
-    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
-
-- Messages de justification :
-    
-    - Clé : **OutlookJustifyTrustedDomains**
-    
-    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
-
-- Messages de blocage :
-    
-    - Clé : **OutlookBlockTrustedDomains**
-    
-    - Valeur : **\<** noms de domaine, séparés par des virgules **>**
-
-Par exemple, pour ne jamais bloquer les e-mails envoyés aux utilisateurs disposant d’une adresse de messagerie contoso.com, spécifiez le paramètre client avancé **OutlookBlockTrustedDomains** et **contoso.com**. Par conséquent, les utilisateurs ne voient pas les messages d’avertissement contextuel dans Outlook lorsqu’ils envoient un john@sales.contoso.come-mail à.
-
 
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Définir une autre étiquette par défaut pour Outlook

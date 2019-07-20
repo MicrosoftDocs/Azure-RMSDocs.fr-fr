@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: c7e5ea29378b051d2b2c0b04366c433dd1675304
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.openlocfilehash: db7dc34da3f8cd2ee92fa0c3a500880ed561dc40
+ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141532"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340687"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -87,7 +87,7 @@ Ce client remplace le client Azure Information Protection (Classic). Pour compar
         -  *CustomPermissions* et *RemoveProtection* -ajouté à [Set-AIPFileLabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)
         -  *OnBeHalfOf* -ajouté à [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), à utiliser à la place du paramètre *Token* pour les sessions non interactives
         -  *WhatIf* et *DiscoveryInfoTypes* -ajoutés à [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), afin que cette applet de commande puisse s’exécuter en mode détection sans appliquer d’étiquettes
-    - Applets de commande déconseillées: Clear-RMSAuthentication, Set-RMSFileStatus, Set-RMSServer, Set-RMSServerAuthentication, obtient-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
+    - Applets de commande déconseillées qui se connectent directement à un service de protection: Clear-RMSAuthentication, Set-RMSFileStatus, Set-RMSServer, Set-RMSServerAuthentication, obtient-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
 
 
 **Céder**

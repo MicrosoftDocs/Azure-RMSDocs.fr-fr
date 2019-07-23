@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: e4746246c13ece385cd19f9ace8422ae6210132f
-ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
+ms.openlocfilehash: 531cd6fed4974435edcf5fd9d7afb12b09e0a61b
+ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68352863"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375467"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -68,21 +68,20 @@ Utilisez le tableau suivant pour comparer les fonctionnalités prises en charge 
 |Étiquetage des actions : manuel, recommandé, automatique| Oui | Oui |
 |Création centralisée de rapports (analytique) :| Oui | Oui |
 |Prise en charge multilingue des étiquettes:| Oui | Oui |
-|Paramètres de réinitialisation et journaux d’exportation :| Oui | Oui |
-|Autorisations définies par l’utilisateur :| Oui | Oui, avec des restrictions : <br /><br />-Pour Outlook uniquement (ne pas transférer): Pris en charge<br /><br />-Pour Word, Excel, PowerPoint et l’Explorateur de fichiers: Pris en charge lorsque vous configurez l’étiquette dans le Portail Azure |
+|Héritage d’étiquette à partir des pièces jointes aux e-mails :| Oui | Oui  |
+|Les personnalisations qui incluent:<br />- Étiquette par défaut pour e-mail<br />-Messages contextuels dans Outlook <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| Oui <br /><br /> Pris en charge comme [paramètres du client avancé que vous configurez dans le portail Azure](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)| Oui <br /><br /> Pris en charge comme [Paramètres avancés que vous configurez avec PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
+|Autorisations définies par l’utilisateur :| Oui | Oui, avec des restrictions : <br /><br />-Pour Word, Excel, PowerPoint et l’Explorateur de fichiers: Pris en charge lorsque vous configurez l’étiquette dans le Portail Azure |
 |Autorisations personnalisées :| Oui | Explorateur de fichiers et PowerShell <br /><br /> Dans les applications Office, comme alternative, les utilisateurs peuvent sélectionner les **informations** > de fichier**protéger le document** > **restreindre l’accès** ou les administrateurs peuvent configurer une étiquette pour les autorisations définies par l’utilisateur|
 |Barre Information Protection dans les applications Office :| Oui | Oui, avec des restrictions :<br /><br /> - Pas de titre ou d’info-bulle personnalisable<br /><br /> - Couleur d’étiquette non affichée pour l’étiquette appliquée|
 |Les étiquettes peuvent appliquer des marquages visuels (en-tête, pied de page, filigrane) :| Oui | Oui, avec des restrictions :<br /><br /> - Les en-têtes et les pieds de page ne gèrent pas les variables pour les valeurs dynamiques <br /><br /> - Pas de prise en charge pour Word, Excel, PowerPoint et Outlook de différents marquages visuels|
 |Dans l’Explorateur de fichiers, actions déclenchées par clic droit :| Oui | Oui, avec des restrictions :<br /><br /> - Impossible de protéger les documents PDF au format .ppdf <br /><br />  - Pas de prise en charge du mode Protection uniquement|
 |Visionneuse des fichiers protégés :| Oui | Oui, avec des restrictions :<br /><br /> -Pour les fichiers protégés de façon générique (. pfile), contrairement à la visionneuse du client classique, il n’est pas possible d’enregistrer les modifications apportées au fichier initialement ouvert.|
-|Commandes PowerShell :| Oui | Oui, avec des restrictions :<br /><br />- Cmdlets incluses : [AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />-Actuellement, vous ne pouvez pas supprimer la protection des fichiers de conteneur (zip,. rar,. 7z,. MSG et. pst).|
+|Commandes PowerShell :| Oui | Oui, avec des restrictions :<br /><br />-Impossible de supprimer la protection des fichiers de conteneur (zip,. rar,. 7z,. MSG et. pst)|
 |Prise en charge hors connexion des actions de protection :| Oui | Oui, avec des restrictions : <br /><br />- Pour l’Explorateur de fichiers et les commandes PowerShell, l’utilisateur doit être connecté à Internet pour protéger les fichiers. |
 |Prise en charge des ordinateurs déconnectés avec gestion de fichier de stratégie manuelle :| Oui |Non |
-|Prise en charge de HYOK :| Oui | Non<br /><br /> Les étiquettes que vous migrez à partir du portail Azure et qui sont configurées pour la protection HYOK sont affichées par le client d’étiquetage unifié Azure Information Protection, mais n’appliquent pas de protection. |
+|Prise en charge de HYOK :| Oui | Non <br /><br /> Les étiquettes que vous migrez à partir du portail Azure et qui sont configurées pour la protection HYOK sont affichées par le client d’étiquetage unifié Azure Information Protection, mais n’appliquent pas de protection. |
 |Journalisation de l’utilisation dans l’observateur d’événements :| Oui | Non|
-|Héritage d’étiquette à partir des pièces jointes aux e-mails :| Oui | Oui  |
 |Afficher le bouton Ne pas transférer dans Outlook| Oui | Non |
-|Les [personnalisations](client-admin-guide-customizations.md#available-advanced-client-settings) sont les suivantes :<br />- Étiquette par défaut pour e-mail<br />- Activer les autorisations personnalisées <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| Oui | Oui à l’aide de [PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
 |Scanneur pour magasins de données locaux :| Oui | Non |
 |Suivre et révoquer :| Oui | Non |
 |Mode protection uniquement (aucune étiquette) à l’aide de modèles:| Oui | Non |
@@ -116,7 +115,7 @@ Bien que le client d’étiquetage unifié Azure Information Protection soit tou
 
 - Prendre en charge les applications Office pour les ordinateurs déconnectés avec gestion manuelle des fichiers de stratégie
 
-- Les autorisations personnalisées sont des options que les utilisateurs peuvent sélectionner dans les applications Office: Word, Excel et PowerPoint
+- Les autorisations personnalisées sont des options distinctes que les utilisateurs peuvent sélectionner dans les applications Office: Word, Excel et PowerPoint
 
 - Suivre et révoquer depuis des applications Office et l’Explorateur de fichiers
 

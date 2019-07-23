@@ -4,19 +4,19 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: b40c62853aa35053c98eaee4561af79fd4d56e03
-ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
+ms.openlocfilehash: 662898959c48cb5cb1a7455bdd377c8ac9e966ec
+ms.sourcegitcommit: ce47b16c16d93e710c0ff95588e1631ccc0e2829
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68352835"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387418"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -390,7 +390,7 @@ Vous pouvez configurer ce paramètre sur **recommandé**, afin que les utilisate
 
 Remarque : Lorsque la pièce jointe avec l’étiquette de classification la plus élevée est configurée pour la protection avec le paramètre des autorisations définies par l’utilisateur:
 
-- Lorsque les autorisations définies par l’utilisateur de l’étiquette sont Outlook (ne pas transférer), cette étiquette est sélectionnée et le fait de ne pas transférer la protection est appliqué à l’e-mail. 
+- Lorsque les autorisations définies par l’utilisateur de l’étiquette sont Outlook (ne pas transférer), cette étiquette est sélectionnée et le fait de ne pas transférer la protection est appliqué à l’e-mail.
 - Lorsque les autorisations définies par l’utilisateur de l’étiquette sont uniquement pour Word, Excel, PowerPoint et l’Explorateur de fichiers, cette étiquette n’est pas appliquée au message électronique et aucune n’est la protection.
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée:
@@ -403,6 +403,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la str
 
 - Valeur de clé 2:\<«info-bulle personnalisée >»
 
+L’info-bulle personnalisée ne prend en charge qu’une seule langue.
 
 Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
 
@@ -492,10 +493,6 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 Pour les étiquettes que vous avez spécifiées avec ces messages contextuels, vous pouvez exempter des noms de domaine spécifiques afin que les utilisateurs ne voient pas les messages pour les destinataires qui ont ce nom de domaine inclus dans leur adresse de messagerie. Dans ce cas, les e-mails sont envoyés sans qu’un message interrompe le processus. Pour spécifier plusieurs domaines, ajoutez-les sous la forme d’une seule chaîne, en les séparant par des virgules.
 
 Une configuration typique consiste à afficher les messages contextuels seulement pour les destinataires qui sont externes à votre organisation ou qui ne sont pas des partenaires autorisés de votre organisation. Dans ce cas, vous spécifiez tous les domaines de messagerie utilisés par votre organisation et par vos partenaires.
-
-Pour la même stratégie d’étiquette, créez les paramètres client avancés suivants et, pour la valeur, spécifiez un ou plusieurs domaines, chacun étant séparé par une virgule.
-
-Exemple de valeur pour plusieurs domaines sous forme de chaîne séparée par des virgules : `contoso.com,fabrikam.com,litware.com`
 
 Pour la même stratégie d’étiquette, créez les paramètres client avancés suivants et, pour la valeur, spécifiez un ou plusieurs domaines, chacun étant séparé par une virgule.
 
@@ -718,7 +715,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la str
 
 - Clé : **EnableLabelByMailHeader**
 
-- Valeur : **Mardi**
+- Valeur : **True**
 
 Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
 
@@ -784,7 +781,7 @@ Cette configuration utilise des [Paramètres avancés](#how-to-configure-advance
 
 Utilisez ces paramètres uniquement lorsque vous disposez d’un [déploiement S/MIME](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption) opérationnel et que vous souhaitez qu’une étiquette applique automatiquement cette méthode de protection pour les e-mails plutôt que Rights Management protection à partir de Azure information protection. La protection qui en résulte est la même que lorsque l’utilisateur sélectionne manuellement les options S/MIME dans Outlook.
 
-Pour configurer un paramètre avancé pour des signatures numériques S/MIME, entrez les chaînes suivantes pour l’étiquette sélectionnée:
+Pour configurer un paramètre avancé pour une signature numérique S/MIME, entrez les chaînes suivantes pour l’étiquette sélectionnée:
 
 - Clé : **SMimeSign**
 

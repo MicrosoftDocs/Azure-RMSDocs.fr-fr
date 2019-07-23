@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 4608bf407a88a306c1abfdd62fc122b80b6a5419
-ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
+ms.openlocfilehash: f1340d42c0f09733bf4517b4d573e75e5d88b68e
+ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340728"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375424"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Guide pratique pour migrer des étiquettes Azure Information Protection vers des étiquettes de confidentialité Office 365
 
@@ -164,8 +164,7 @@ Les étiquettes qui ont correctement migré peuvent désormais être utilisées 
 
 #### <a name="copy-your-policies-and-policy-settings"></a>Copier vos stratégies et paramètres de stratégie
 
-> [!NOTE]
-> Cette option est progressivement déployée sur les locataires en version préliminaire et peut faire l’objet de modifications. Si vous ne voyez pas l’option **copier les stratégies (version préliminaire)** , réessayez dans quelques semaines.
+Cette option est progressivement déployée sur les locataires en version préliminaire et peut faire l’objet de modifications. Si vous ne voyez pas l’option **copier les stratégies (version préliminaire)** , réessayez dans quelques semaines.
 
 Une fois que vous avez migré vos étiquettes, vous pouvez sélectionner une option pour copier les stratégies. Si vous sélectionnez cette option, une copie unique de vos stratégies avec les paramètres de [stratégie](configure-policy-settings.md) et les [Paramètres client avancés](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) est envoyée au centre d’administration où vous gérez vos étiquettes: le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365.
 

@@ -1,32 +1,32 @@
 ---
 title: Afficher les fichiers protégés avec le client d’étiquetage unifié Azure Information Protection
-description: Instructions pour afficher un fichier protégé qui requiert que vous disposiez de la visionneuse d’étiquetage unifiée Azure Information Protection est installée.
+description: Instructions pour afficher un fichier protégé qui vous oblige à installer la Azure Information Protection visionneuse d’étiquetage unifiée.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 2df0bd25bf30eb94aab17a8dae89332b4e96389b
-ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.openlocfilehash: 6c499d384ec4d116edb18dccf532fbb1290bf284
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880195"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427941"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : Afficher les fichiers protégés avec le client d’étiquetage unifié Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 >
-> *Instructions pour : [Azure Information Protection unifiée étiquetage client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Souvent, vous pouvez afficher un fichier protégé simplement en l’ouvrant. Par exemple, vous pouvez double-cliquer sur une pièce jointe à un e-mail ou sur un fichier dans l’Explorateur de fichiers, ou bien vous pouvez cliquer sur un lien vers un fichier.
 
 Si les fichiers ne s’ouvrent pas immédiatement, la **visionneuse Azure Information Protection** pourra peut-être le faire. Cette visionneuse peut ouvrir des fichiers texte protégés, des fichiers image protégés, des fichiers PDF protégés et tous les fichiers ayant une extension de nom de fichier **.pfile**.
 
-La visionneuse s’installe automatiquement dans le cadre du client Azure Information Protection unifié étiquetage, ou vous pouvez l’installer séparément. Vous pouvez installer ce client et la visionneuse à partir de la [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page sur le site Web Microsoft. Pour plus d’informations sur l’installation de ce client, consultez [télécharger et installer le client Azure Information Protection unifié étiquetage](install-unifiedlabelingclient-app.md).
+La visionneuse s’installe automatiquement dans le cadre de l’Azure Information Protection client d’étiquetage unifié, ou vous pouvez l’installer séparément. Vous pouvez installer à la fois ce client et la visionneuse à partir de la page [Microsoft Azure information protection](https://go.microsoft.com/fwlink/?LinkId=303970) du site Web Microsoft. Pour plus d’informations sur l’installation de ce client, consultez [Télécharger et installer le client d’étiquetage unifié Azure information protection](install-unifiedlabelingclient-app.md).
 
 > [!NOTE]
 > Bien que l’installation du client offre davantage de fonctionnalités, elle réclame des autorisations d’administrateur local, et un service correspondant pour votre organisation est requis pour pouvoir profiter de l’ensemble des fonctionnalités : Par exemple, Azure Information Protection.
@@ -59,12 +59,12 @@ Si votre organisation ne dispose pas d’un compte cloud dont vous pouvez vous s
     
     Si vous ne disposez pas d’un compte qui est accepté, consultez la section [Invites pour l’authentification](#prompts-for-authentication) de cette page.
 
-3. Une version en lecture seule du fichier s’ouvre dans le **visionneuse Azure Information Protection** ou dans l’application associée à l’extension de nom de fichier.
+3. Une version en lecture seule du fichier s’ouvre dans la **visionneuse de Azure information protection** ou dans l’application associée à l’extension de nom de fichier.
 
 4. Si vous avez des fichiers protégés supplémentaires à ouvrir, vous pouvez y accéder directement depuis la visionneuse, en utilisant l’option **Ouvrir**. Votre fichier sélectionné remplace le fichier d’origine dans la visionneuse. 
 
 > [!TIP]
-> Si le fichier protégé ne s’ouvre pas alors que vous avez installé le client Azure Information Protection complet, essayez l’option **Réinitialiser les paramètres**. Pour accéder à cette option, à partir d’une application Office, sélectionnez le **sensibilité** bouton > **aide et commentaires** > **réinitialiser les paramètres**. 
+> Si le fichier protégé ne s’ouvre pas alors que vous avez installé le client Azure Information Protection complet, essayez l’option **Réinitialiser les paramètres**. Pour accéder à cette option, à partir d’une application Office, sélectionnez le bouton **sensibilité** >**paramètres**de réinitialisation de **l’aide et des commentaires** > . 
 > 
 > [Informations supplémentaires sur l’option Réinitialiser les paramètres](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)
 

@@ -4,17 +4,17 @@ description: Vous pouvez supprimer ou réorganiser les étiquettes Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 504121e8411132d47ea48635ca9c462ecbccf28c
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: cde7e01f70936904f7d3d905c040d806c9f00d45
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180013"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428494"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Comment supprimer ou réorganiser une étiquette pour Azure Information Protection
 
@@ -60,11 +60,11 @@ Suivez la procédure indiquée ci-dessous pour effectuer ces modifications.
 
 2. À partir de l’option de menu **Classifications** > **Étiquettes** : Dans le panneau **Azure Information Protection - Étiquettes**, effectuez une ou plusieurs des actions suivantes : 
 
-    - Pour supprimer une étiquette : Cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette que vous voulez supprimer, cliquez sur **Supprimer cette étiquette**, puis cliquez sur **OK** pour confirmer. 
+    - Pour supprimer une étiquette : Cliquez avec le bouton droit ou sélectionnez le menu contextuel ( **...** ) de l’étiquette que vous voulez supprimer, cliquez sur **Supprimer cette étiquette**, puis cliquez sur **OK** pour confirmer. 
 
     - Pour désactiver une étiquette : Sélectionnez l’étiquette que vous voulez désactiver. Dans le Panneau **Étiquette**, pour l’option **Activé**, sélectionnez **Désactivé**, puis cliquez sur **Enregistrer**.
 
-    - Pour reclasser une étiquette : Cliquez avec le bouton droit ou sélectionnez le menu contextuel (**...**) de l’étiquette à reclasser, cliquez sur **Déplacer vers le haut** ou **Déplacer vers le bas** jusqu’à ce que l’étiquette se trouve à l’endroit souhaité.  
+    - Pour reclasser une étiquette : Cliquez avec le bouton droit ou sélectionnez le menu contextuel ( **...** ) de l’étiquette à reclasser, cliquez sur **Déplacer vers le haut** ou **Déplacer vers le bas** jusqu’à ce que l’étiquette se trouve à l’endroit souhaité.  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

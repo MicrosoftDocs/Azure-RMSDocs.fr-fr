@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: barbkess
 ms.date: 07/19/2019
-ms.topic: article
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: f1340d42c0f09733bf4517b4d573e75e5d88b68e
-ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
+ms.openlocfilehash: 14d9aa830fba9eced4fb03fbc1e0c9274e9b4106
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375424"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428448"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Guide pratique pour migrer des étiquettes Azure Information Protection vers des étiquettes de confidentialité Office 365
 

@@ -4,17 +4,17 @@ description: Vous pouvez ajouter la prise en charge de différentes langues pour
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: c89085c7f001cd26ccd0b722196d9678b674163e
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 275a1b984ee839477e479f2476554c9d3dbd2b62
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767948"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428470"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Guide pratique pour configurer des étiquettes et des modèles dans différentes langues dans Azure Information Protection
 
@@ -67,7 +67,7 @@ Sélectionnez les langues qui correspondent à la langue de vos utilisateurs pou
 
 7. Lorsque vous avez modifié chaque fichier .xml, créez un nouveau dossier compressé qui contient ces fichiers. Le dossier compressé peut avoir n’importe quel nom, mais il doit avoir une extension .zip.
     
-    Conseil : il n’est pas nécessaire d’attendre d’avoir modifié chacun des fichiers de langue téléchargés. Vous pouvez déployer les différentes langues en plusieurs phases, en incluant dans le fichier .zip un sous-ensemble des fichiers téléchargés. Ensuite, répétez les étapes 7 et 8 après avoir effectué les traductions dans d’autres langues.
+    Conseil : il n’est pas nécessaire d’attendre d’avoir modifié chacun des fichiers de langue téléchargés. Vous pouvez déployer les différentes langues en plusieurs phases, en incluant dans le fichier .zip un sous-ensemble des fichiers téléchargés. Ensuite, répétez les étapes 7 et 8 après avoir effectué les traductions dans d’autres langues.
 
 8. Revenez au panneau **Azure Information Protection - Langues**, puis sélectionnez **Importer**. Si cette option n’est pas disponible, désactivez d’abord la case à cocher **NOM DE LA LANGUE** ou les cases à cocher pour les langues sélectionnées individuellement.
     

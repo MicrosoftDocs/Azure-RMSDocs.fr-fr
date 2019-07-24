@@ -4,19 +4,19 @@ description: Une fois que vous avez protégé vos documents, vous pouvez suivre 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 95a70375f65e461cff2f69d28598d2a72aeaec10
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: b0fb6c14e246a027e01913ef213898bc397717d3
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768077"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428323"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guide de l’utilisateur : Suivre et révoquer vos documents quand vous utilisez Azure Information Protection
 
@@ -46,7 +46,7 @@ Actions que vous pouvez entreprendre sur le site de suivi de documents :
      
     - Cliquez sur **Paramètres** et choisissez si vous voulez recevoir une notification quand une personne accède au document et si oui, comment :
         
-        ![Configurer des notifications par courrier électronique dans le site de suivi de document](../media/tracking-site-settings-email.png)
+        ![Configurer des notifications par courrier électronique dans le site de suivi des documents](../media/tracking-site-settings-email.png)
 
 - Si vous souhaitez suivre et révoquer des documents partagés pour d’autres :
     
@@ -63,7 +63,7 @@ Actions que vous pouvez entreprendre sur le site de suivi de documents :
 
 Pour effectuer le suivi d’un document que vous avez protégé, vous devez utiliser votre ordinateur Windows pour l’inscrire auprès du site de suivi de documents. Pour ce faire, utilisez l’Explorateur de fichiers ou vos applications Office.
 
-Si vous avez la version actuelle de la disponibilité générale du client Azure Information Protection, vous pouvez également enregistrer le document protégé avec PowerShell quand vous utilisez le *EnableTracking* paramètre avec le [ Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) applet de commande.
+Si vous disposez de la version actuelle de la disponibilité générale du client Azure Information Protection, vous pouvez également inscrire le document protégé avec PowerShell quand vous utilisez le paramètre *EnableTracking* avec l’applet de commande [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) .
 
 ## <a name="using-office-to-track-or-revoke-the-document"></a>Utilisation d’Office pour suivre ou révoquer le document
 
@@ -100,17 +100,17 @@ Une fois que vous avez enregistré le document protégé à l’aide de vos appl
 
 - Sur votre PC Windows, ordinateur Mac ou appareil mobile, visitez le [site de suivi des documents](https://go.microsoft.com/fwlink/?LinkId=529562).
 
-    **Navigateurs pris en charge** : Nous recommandons d’utiliser Internet Explorer qui est au moins la version 10, mais vous pouvez utiliser un des navigateurs suivants à utiliser le site de suivi de document :
+    **Navigateurs pris en charge** : Nous vous recommandons d’utiliser Internet Explorer, qui est au moins la version 10, mais vous pouvez utiliser l’un des navigateurs suivants pour utiliser le site de suivi des documents:
 
-    - Internet Explorer : Au moins la version 10
+    - Internet Explorer: Au moins la version 10
 
-    - Internet Explorer 9 avec MS12-037 minimum : Mise à jour de sécurité cumulative pour Internet Explorer : 12 juin 2012
+    - Internet Explorer 9 avec au moins MS12-037: Mise à jour de sécurité cumulative pour Internet Explorer: Le 12 juin 2012
 
-    - Mozilla Firefox : Au moins la version 12
+    - Mozilla Firefox: Au moins la version 12
 
-    - Apple Safari 5 : Au moins la version 5
+    - Apple Safari 5: Au moins la version 5
 
-    - Google Chrome : Au moins la version 18
+    - Google Chrome: Au moins la version 18
 
 
 ## <a name="other-instructions"></a>Autres instructions

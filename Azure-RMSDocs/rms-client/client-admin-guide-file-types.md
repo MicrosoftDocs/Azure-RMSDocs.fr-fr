@@ -1,22 +1,22 @@
 ---
-title: Types de fichiers pris en charge - client Azure Information Protection
+title: Types de fichiers pris en charge-client Azure Information Protection
 description: Détails techniques sur les types de fichiers pris en charge, les extensions de noms de fichiers et les niveaux de protection pour les administrateurs responsables du client Azure Information Protection pour Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 158a5703fa776aed01151fdf09474e54cc3baaa1
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 8ef451597e32915cdc14e859f275e0d8d20326f4
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768313"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428302"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 
@@ -95,9 +95,9 @@ Il existe des tailles de fichier maximales que le client Azure Information Prote
 
   |                                                     Application Office                                                      |                                                Taille de fichier maximale prise en charge                                                 |
   |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-  |             Word 2007 (pris en charge par AD RMS uniquement)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32 bits : 512 Mo<br /><br />64 bits : 512 Mo                                          |
-  |           Excel 2007 (pris en charge par AD RMS uniquement)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32 bits : 2 Go<br /><br />64 bits : limité uniquement par l’espace disque et la mémoire disponibles                       |
-  | PowerPoint 2007 (pris en charge par AD RMS uniquement)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32 bits : limité uniquement par l’espace disque et la mémoire disponibles<br /><br />64 bits : limité uniquement par l’espace disque et la mémoire disponibles |
+  |             Word 2007 (pris en charge par AD RMS uniquement)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32 bits: 512 Mo<br /><br />64 bits: 512 Mo                                          |
+  |           Excel 2007 (pris en charge par AD RMS uniquement)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32 bits: 2 Go<br /><br />64 bits: limité uniquement par l’espace disque et la mémoire disponibles                       |
+  | PowerPoint 2007 (pris en charge par AD RMS uniquement)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32 bits: limité uniquement par l’espace disque et la mémoire disponibles<br /><br />64 bits: limité uniquement par l’espace disque et la mémoire disponibles |
 
 
 - **Pour tous les autres fichiers** : 
@@ -106,7 +106,7 @@ Il existe des tailles de fichier maximales que le client Azure Information Prote
 
   - Pour ôter la protection de fichiers à l’aide de l’applet de commande [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) : la taille de fichier maximale prise en charge pour les fichiers .pst est de 5 Go. Les autres types de fichiers sont limités uniquement par l’espace disque et la mémoire disponibles
 
-    Conseil : Si vous avez besoin de rechercher ou de récupérer des éléments protégés dans des fichiers .pst volumineux, consultez [Conseils d’utilisation d’Unprotect-RMSFile pour eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
+    Conseil : Si vous avez besoin de rechercher ou de récupérer des éléments protégés dans des fichiers .pst volumineux, consultez [Conseils d’utilisation d’Unprotect-RMSFile pour eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Types de fichiers pris en charge pour la classification et la protection
 
@@ -187,9 +187,9 @@ Vous pouvez apporter des modifications similaires au Registre pour d'autres scé
 
 - **Pfile** : protection générique
 
-- **Natif** : protection native
+- **Natif** : protection Native
 
-- **Désactivé** : Bloquer la protection
+- **Désactivé** : Protection contre les blocages
 
 Il n’est pas nécessaire de redémarrer l’ordinateur après avoir apporté ces modifications au Registre. Toutefois, si vous utilisez des commandes PowerShell pour protéger des fichiers, vous devez démarrer une nouvelle session PowerShell pour que les modifications soient effectives.
 

@@ -1,36 +1,36 @@
 ---
-title: Guide de l’utilisateur Azure Information Protection - unifiée de l’étiquetage
-description: Le client d’étiquetage unifié d’Azure Information Protection pour Windows vous permet de protéger vos documents importants et des e-mails contre les personnes qui ne doivent pas les voir, même si votre adresse de messagerie est transféré ou votre document est enregistré dans un autre emplacement.
+title: Guide de l’utilisateur Azure Information Protection-étiquetage unifié
+description: Le Azure Information Protection client d’étiquetage unifié pour Windows vous permet de protéger les documents et e-mails importants des personnes qui ne doivent pas les voir, même si votre adresse de messagerie est transférée ou si votre document est enregistré dans un autre emplacement.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d9e99f5fe0d590dee1a6f2cdd85ecefa086f3be1
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: eef4c6190a9d42530ca626c40da6a08b8c3130e0
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182668"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427974"
 ---
-# <a name="azure-information-protection-unified-labeling-user-guide"></a>Azure Information Protection unifiée étiquetage guide de l’utilisateur 
+# <a name="azure-information-protection-unified-labeling-user-guide"></a>Guide de l’utilisateur d’étiquetage unifié Azure Information Protection 
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 >
-> *Instructions pour : [Azure Information Protection unifiée étiquetage client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Le client d’étiquetage unifié d’Azure Information Protection pour Windows vous permet de protéger vos documents importants et des e-mails contre les personnes qui ne doivent pas les voir, même si votre adresse de messagerie est transféré ou votre document est enregistré dans un autre emplacement. Vous pouvez également utiliser ce client pour ouvrir des documents que d’autres personnes ont protégés à l’aide de la technologie de protection Rights Management dans Azure Information Protection.
+Le Azure Information Protection client d’étiquetage unifié pour Windows vous permet de protéger les documents et e-mails importants des personnes qui ne doivent pas les voir, même si votre adresse de messagerie est transférée ou si votre document est enregistré dans un autre emplacement. Vous pouvez également utiliser ce client pour ouvrir des documents que d’autres personnes ont protégés à l’aide de la technologie de protection Rights Management dans Azure Information Protection.
 
 Tout ce dont vous avez besoin, c’est un ordinateur exécutant au moins Windows 7 avec Service Pack 1. Ensuite, téléchargez auprès de Microsoft et installez ce client gratuit.
 
 
-## <a name="what-do-you-want-to-do"></a>Que souhaitez-vous faire ?
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Téléchargez et installez le client d’étiquetage unifié Azure Information Protection](install-unifiedlabelingclient-app.md)
+- [Télécharger et installer le client d’étiquetage unifié Azure Information Protection](install-unifiedlabelingclient-app.md)
 
 - [Classifier un fichier ou un e-mail](clientv2-classify.md)
 
@@ -42,5 +42,5 @@ Tout ce dont vous avez besoin, c’est un ordinateur exécutant au moins Windows
 
 
 > [!NOTE]
-> Si vous êtes un administrateur responsable du client d’étiquetage unifiée d’Azure Information Protection sur un réseau d’entreprise, consultez le [Azure Information Protection unifiée étiquetage guide de l’administrateur client](clientv2-admin-guide.md) pour informations techniques supplémentaires. 
+> Si vous êtes un administrateur responsable de l’Azure Information Protection client d’étiquetage unifié sur un réseau d’entreprise, consultez le Guide de l' [administrateur du client d’étiquetage unifié Azure information protection](clientv2-admin-guide.md) pour plus d’assistance technique informations. 
 

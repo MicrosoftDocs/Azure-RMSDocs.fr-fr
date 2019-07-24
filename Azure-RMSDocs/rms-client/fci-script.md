@@ -4,19 +4,19 @@ description: Exemple de script à copier et à modifier, comme indiqué dans les
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 52a27004d303ff2912da9ad2cd243312bc4c411f
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 0e0cf93d4805132f0de68a2d027d3d1715f02519
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180968"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427965"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Script Windows PowerShell pour la protection Azure RMS à l’aide de l’ICF des outils de gestion de ressources pour serveur de fichiers
 
@@ -28,7 +28,7 @@ Cette page contient l’exemple de script à copier et à modifier, comme indiqu
 
 Ce script utilise **1.3.155.2** comme version minimale pour le module AzureInformationProtection. Exécutez la commande suivante pour vérifier la version : `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
-*&#42;&#42;Exclusion de responsabilité&#42;&#42; : Cet exemple de script n’est pas pris en charge par aucun programme de support standard de Microsoft ou d’un service. Cet exemple de script est fourni EN L’ÉTAT sans garantie d’aucune sorte.*
+*&#42;&#42;Exclusion de responsabilité&#42;&#42; : Cet exemple de script n’est pris en charge par aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni EN L’ÉTAT sans garantie d’aucune sorte.*
 
 ```
 <#

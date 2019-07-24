@@ -4,18 +4,18 @@ description: Identifiez la configuration requise d’Azure AD pour utiliser Azu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/23/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.suite: ems
-ms.openlocfilehash: 171f7c3a410578421d7dffdf4ba12808940abf58
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 7ae6b5396bd3c2bcd0c92d7f2a21de6681c80546
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768044"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428280"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Configuration requise d’Azure Active Directory pour Azure Information Protection
 
@@ -33,7 +33,7 @@ Pour intégrer un annuaire Azure AD à des forêts AD locales, voir [Intégrer d
 
 Ordinateurs qui exécutent Office 2010 : 
 
-- Ces ordinateurs nécessitent le [étiquetage client unifié, Azure Information Protection](./rms-client/aip-clientv2.md) ou [client Azure Information Protection](./rms-client/aip-client.md) pour s’authentifier auprès d’Azure Information Protection et la protection de ses données service Azure Rights Management.
+- Ces ordinateurs nécessitent l' [Azure information protection client d’étiquetage unifié](./rms-client/aip-clientv2.md) ou [Azure information protection client](./rms-client/aip-client.md) pour s’authentifier auprès d’Azure information protection et de son service de protection des données, Azure Rights Management.
 
 - Si vos comptes d’utilisateur sont fédérés (par exemple, si vous utilisez AD FS), ils doivent utiliser l’authentification intégrée de Windows. L’authentification basée sur les formulaires dans ce scénario ne peut pas authentifier les utilisateurs pour Azure Information Protection.
 
@@ -60,7 +60,7 @@ Pour utiliser l’authentification multifacteur (MFA) avec Azure Information Pro
 
 - Client Azure Information Protection :
 
-    - Les clients Azure Information Protection pour Windows et l’application de visionneuse pour iOS et Android a toujours pris en charge MFA ; aucune version minimale n’est requise. 
+    - Les clients Azure Information Protection pour Windows et l’application de visionneuse pour iOS et Android ont toujours pris en charge MFA; aucune version minimale n’est requise. 
 
 -   Application de partage Rights Management et ordinateurs Mac :
 
@@ -76,7 +76,7 @@ Ensuite, configurez votre solution MFA :
 
 - Pour les clients fédérés (utilisant des serveurs de fédération locaux) :
 
-    - Configurez vos serveurs de fédération pour Azure Active Directory ou Office 365. Par exemple, si vous utilisez AD FS, consultez [configurer des méthodes d’authentification supplémentaires pour AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs).
+    - Configurez vos serveurs de fédération pour Azure Active Directory ou Office 365. Par exemple, si vous utilisez AD FS, consultez [configurer des méthodes d’authentification supplémentaires pour les AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs).
 
         Pour plus d’informations sur ce scénario, consultez [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sur le blog Office.
 

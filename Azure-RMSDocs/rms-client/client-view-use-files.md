@@ -1,24 +1,24 @@
 ---
-title: Afficher les fichiers protégés avec la visionneuse Azure Information Protection
-description: Instructions pour afficher et utiliser un fichier protégé qui requiert que la visionneuse Azure Information Protection installée.
+title: Afficher les fichiers protégés avec la visionneuse de Azure Information Protection
+description: Instructions pour afficher et utiliser un fichier protégé qui vous oblige à installer la visionneuse Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8dea94af41cb445f895ee4cbc2c424fc169ae117
-ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.openlocfilehash: a7e333557d0a3ba6aa130cb24d54acf1717fe278
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880214"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427891"
 ---
-# <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Guide de l’utilisateur : Afficher les fichiers protégés avec la visionneuse Azure Information Protection
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Guide de l’utilisateur : Afficher les fichiers protégés avec la visionneuse de Azure Information Protection
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 >

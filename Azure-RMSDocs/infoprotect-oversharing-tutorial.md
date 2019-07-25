@@ -4,20 +4,20 @@ description: Tutoriel d’introduction montrant comment configurer et voir en ac
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/19/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 889e10192cc36f7fba913683f21c18ee5e577280
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 565a46f599922aeef3636756c47c561264bf010f
+ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65934706"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68352828"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutoriel : configurer Azure Information Protection pour contrôler le surpartage d’informations à l’aide d’Outlook
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -126,7 +126,7 @@ Sur votre ordinateur client, nous allons maintenant voir les résultats de la co
 
 3. Spécifiez votre propre adresse e-mail pour le champ **À** et, pour l’objet, tapez **Testing the General label for the Warn message**. Ensuite, envoyez l’e-mail.
 
-4. Résultat du paramètre client avancé, vous voyez l’avertissement suivant, qui vous invite à confirmer votre souhait d’envoyer l’e-mail. Par exemple :
+4. Résultat du paramètre client avancé, vous voyez l’avertissement suivant, qui vous invite à confirmer votre souhait d’envoyer l’e-mail. Par exemple :
     
     ![Tutoriel Azure Information Protection : voir le paramètre client avancé OutlookWarnUntrustedCollaborationLabel ](./media/see-warnmessage.png)
     
@@ -158,7 +158,7 @@ Sur votre ordinateur client, nous allons maintenant voir les résultats de ce no
 
 3. Spécifiez votre propre adresse e-mail pour le champ **À** et, pour l’objet, tapez **Test de l’étiquette Général pour le message de justification**. Ensuite, envoyez l’e-mail.
 
-4. Cette fois, vous voyez le message suivant, vous invitant à indiquer une justification avant d’envoyer l’e-mail. Par exemple :
+4. Cette fois, vous voyez le message suivant, vous invitant à indiquer une justification avant d’envoyer l’e-mail. Par exemple :
     
     ![Tutoriel Azure Information Protection : voir le paramètre client avancé OutlookJustifyUntrustedCollaborationLabel ](./media/see-justifymessage.png)
     
@@ -190,7 +190,7 @@ Sur votre ordinateur client, nous allons maintenant voir les résultats de ce no
 
 3. Spécifiez votre propre adresse e-mail pour le champ **À** et, pour l’objet, tapez **Test de l’étiquette Général pour le message de prévention**. Ensuite, envoyez l’e-mail.
 
-4. Cette fois, vous voyez le message suivant qui empêche l’envoi de l’e-mail. Par exemple :
+4. Cette fois, vous voyez le message suivant qui empêche l’envoi de l’e-mail. Par exemple :
     
     ![Tutoriel Azure Information Protection : empêcher l’envoi d’un e-mail avec un message contextuel](./media/see-blockmessage.png)
 
@@ -208,10 +208,10 @@ Pour chacun des tests que vous avez effectués, des événements d’information
 
 - Messages de blocage : ID d’information 303
 
-Par exemple, le premier test consistait à avertir l’utilisateur, et vous avez sélectionné **Annuler** ; ainsi, la **Réponse de l’utilisateur** indique **Ignoré** dans le premier événement 301. Par exemple :
+Par exemple, le premier test consistait à avertir l’utilisateur, et vous avez sélectionné **Annuler** ; ainsi, la **Réponse de l’utilisateur** indique **Ignoré** dans le premier événement 301. Par exemple :
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Warn message.msg
 Item Name: Testing the General label for the Warn message
@@ -226,7 +226,7 @@ User Response: Dismissed
 Toutefois, vous avez ensuite sélectionné **Confirmer et envoyer**, ce que reflète l’événement 301 suivant, où la **Réponse de l’utilisateur** indique **Confirmé** :
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Warn message.msg
 Item Name: Testing the General label for the Warn message
@@ -238,10 +238,10 @@ Action Source:
 User Response: Confirmed
 ```
 
-Le même modèle est répété pour le message de justification, qui a un événement 302. Le premier événement a **Ignoré** comme **Réponse de l’utilisateur**, tandis que le second indique la justification qui a été sélectionnée. Par exemple :
+Le même modèle est répété pour le message de justification, qui a un événement 302. Le premier événement a **Ignoré** comme **Réponse de l’utilisateur**, tandis que le second indique la justification qui a été sélectionnée. Par exemple :
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Justify message.msg
 Item Name: Testing the General label for the Justify message
@@ -255,10 +255,10 @@ User Response: Confirmed
 
 ```
 
-Au début du journal des événements se trouve le message de prévention, qui a un événement 303. Par exemple :
+Au début du journal des événements se trouve le message de prévention, qui a un événement 303. Par exemple :
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Block message.msg
 Item Name: Testing the General label for the Block message
@@ -268,6 +268,24 @@ Label After Action: General
 Label ID After Action: 0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 Action Source: 
 ```
+
+### <a name="optional-create-an-additional-advanced-client-setting-to-exempt-these-messages-for-internal-recipients"></a>Facultatif : Créer un paramètre client avancé supplémentaire pour ne pas envoyer ces messages aux destinataires internes
+
+Vous avez testé vos messages d’avertissement, de justification et de blocage en utilisant votre propre adresse e-mail comme destinataire. Dans un environnement de production, vous pouvez choisir de réserver l’affichage de ces messages pour vos étiquettes spécifiées aux destinataires qui ne font pas partie de votre organisation. Vous pouvez étendre cette exemption aux partenaires avec lesquels votre organisation travaille régulièrement.
+
+En guise d’illustration, nous allons créer un paramètre client avancé supplémentaire nommé **OutlookBlockTrustedDomains** et spécifier votre propre nom de domaine à partir de votre adresse e-mail. Cela empêchera au message de blocage que vous avez vu précédemment de s’afficher pour les destinataires qui partagent votre nom de domaine dans leur adresse de messagerie, mais de toujours s’afficher pour les autres destinataires. De même, vous pouvez créer des paramètres clients avancés supplémentaires pour **OutlookWarnTrustedDomains** et **OutlookJustifyTrustedDomains**.
+
+1. Dans le portail Azure, dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel ( **...** ) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
+
+2. Dans le panneau **paramètres avancés**, tapez le nom du paramètre avancé, **OutlookBlockTrustedDomains**, et, en guise de valeur, collez votre nom de domaine à partir de votre adresse e-mail. Par exemple :
+    
+    ![Tutoriel Azure Information Protection : créer le paramètre client avancé OutlookBlockTrustedDomains](./media/configure-exemptblockdomain.png)
+
+4. Sélectionnez **Enregistrer et fermer**. Ne fermez pas le panneau **Stratégies** ou le portail Azure.
+
+5. À présent, [répétez le test précédent pour empêcher les utilisateurs d’envoyer un e-mail contenant l’étiquette Général](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label), et vous ne voyez plus le message de blocage lorsque vous utilisez votre propre adresse de messagerie. L’e-mail est envoyé sans interruption.
+    
+    Pour confirmer que le message de blocage est toujours affiché pour les destinataires externes, répétez le test une fois de plus, mais spécifiez un destinataire en dehors de votre organisation. Cette fois, le message de blocage s’affiche à nouveau, indiquant que l’adresse du nouveau destinataire n’est pas fiable.
 
 ## <a name="configure-and-test-an-advanced-client-setting-to-warn-prompt-for-justification-or-block-emails-that-dont-have-a-label"></a>Configurer et tester un paramètre client avancé pour les e-mails d’avertissement, de demande de justification ou de prévention qui n’ont pas d’étiquette
 
@@ -359,7 +377,7 @@ Sur votre ordinateur client, nous allons maintenant voir les résultats de la mo
 
 3. Spécifiez votre propre adresse e-mail pour le champ **À** et, pour l’objet, tapez **Test de l’envoi d’un e-mail sans étiquette pour le message de prévention**. Ensuite, envoyez l’e-mail.
 
-4. Cette fois, vous voyez le message suivant qui empêche l’envoi de l’e-mail, avec une explication pour l’utilisateur. Par exemple :
+4. Cette fois, vous voyez le message suivant qui empêche l’envoi de l’e-mail, avec une explication pour l’utilisateur. Par exemple :
     
     ![Tutoriel Azure Information Protection : voir le paramètre client avancé OutlookWarnUntrustedCollaborationLabel avec la valeur Empêcher](./media/see-blockmessage2.png)
 
@@ -380,7 +398,7 @@ Comme auparavant, les messages et réponses de l’utilisateur sont journalisés
 Par exemple, voici les résultats de notre invite de justification quand l’e-mail ne porte pas d’étiquette :
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing send an email without a label for the Justify message.msg
 Item Name: Testing send an email without a label for the Justify message
@@ -390,22 +408,6 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
-
-## <a name="create-an-advanced-client-setting-to-exempt-these-messages-for-internal-recipients"></a>Créer un paramètre client avancé pour ne pas envoyer ces messages aux destinataires internes
-
-Nous avons testé ces messages en utilisant votre propre adresse e-mail comme destinataire. Toutefois, dans un environnement de production, vous pouvez choisir de réserver l’affichage de ces messages aux destinataires qui ne font pas partie de votre organisation. Vous pouvez étendre cette exemption aux partenaires avec lesquels votre organisation travaille régulièrement.
-
-En guise d’illustration, nous allons créer un paramètre client avancé nommé **OutlookBlockTrustedDomains** et spécifier votre propre nom de domaine à partir de votre adresse e-mail. Ainsi, le message de prévention ne s’affiche pas pour les destinataires dont l’adresse e-mail partage votre nom de domaine. De même, vous pouvez créer des paramètres clients avancés pour **OutlookWarnTrustedDomains** et **OutlookJustifyTrustedDomains**.
-
-1. Dans le portail Azure, dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel ( **...** ) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
-
-2. Dans le panneau **paramètres avancés**, tapez le nom du paramètre avancé, **OutlookBlockTrustedDomains**, et, en guise de valeur, collez votre nom de domaine à partir de votre adresse e-mail. Par exemple :
-    
-    ![Tutoriel Azure Information Protection : créer le paramètre client avancé OutlookBlockTrustedDomains](./media/configure-exemptblockdomain.png)
-
-4. Sélectionnez **Enregistrer et fermer**. Ne fermez pas le panneau **Stratégies** ou le portail Azure.
-
-5. Répétez le [test précédent pour envoyer un e-mail sans étiquette à votre propre adresse](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-isnt-labeled) ; vous ne voyez plus le message de prévention. Toutefois, si vous ajoutez un nouveau destinataire n’appartenant pas à votre organisation, le message de prévention réapparaît.
 
 ## <a name="clean-up-resources"></a>Nettoyer les ressources
 
@@ -419,6 +421,6 @@ Redémarrez Outlook afin qu’il ne soit plus configuré pour les paramètres qu
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour que les tests soient plus rapides, ce tutoriel utilise un e-mail pour un seul destinataire et sans pièces jointes. Mais vous pouvez appliquer la même méthode avec plusieurs destinataires, plusieurs étiquettes et également appliquer la même logique aux pièces jointes dont l’état d’étiquetage est souvent moins évident pour les utilisateurs. Par exemple, l’e-mail proprement dit est étiqueté Public, mais la présentation PowerPoint jointe est étiquetée Général. Pour plus d’informations, consultez la section suivante dans le guide de l’administrateur : [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+Pour que les tests soient plus rapides, ce tutoriel utilise un e-mail pour un seul destinataire et sans pièces jointes. Mais vous pouvez appliquer la même méthode avec plusieurs destinataires, plusieurs étiquettes et également appliquer la même logique aux pièces jointes dont l’état d’étiquetage est souvent moins évident pour les utilisateurs. Par exemple, l’e-mail proprement dit est étiqueté Public, mais la présentation PowerPoint jointe est étiquetée Général. Pour plus d’informations sur les options de configuration, consultez la section suivante dans le guide de l’administrateur : [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
 Le guide de l’administrateur contient également des informations sur les autres paramètres clients avancés que vous pouvez utiliser pour personnaliser le comportement du client. Pour obtenir la liste complète, consultez [Paramètres client avancés disponibles](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings).

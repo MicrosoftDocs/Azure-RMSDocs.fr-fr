@@ -4,19 +4,19 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 7a20eba01a57a0c09dd24c88834d0d5b6cb53198
-ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
+ms.openlocfilehash: f5a47cf86dfc5f8140cf21a0808eef84919b495d
+ms.sourcegitcommit: 2ad5cda4816c76c5fd3655ee45b64475e42cab32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68352884"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68483132"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -76,7 +76,7 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 |PullPolicy|[Prendre en charge les ordinateurs déconnectés](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Ajouter « Signaler un problème » pour les utilisateurs](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|RunAuditInformationTypesDiscovery|[Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Activer la classification pour qu’elle s’exécute en continu en arrière-plan](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[Limiter le nombre de threads utilisés par le scanneur](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Étiqueter un document Office en utilisant une propriété personnalisée existante](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -271,7 +271,7 @@ Avec ce paramètre, la sous-étiquette classée en dernier à partir de l’éti
 
 ## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>Exempter les messages Outlook de l’étiquetage obligatoire
 
-Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans la portail Azure.
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
 
 Par défaut, lorsque vous activez le [paramètre de stratégie](../configure-policy-settings.md) , **tous les documents et e-mails doivent avoir une étiquette**, tous les documents enregistrés et les e-mails envoyés doivent avoir une étiquette appliquée. Quand vous configurez le paramètre avancé suivant, le paramètre de stratégie s’applique uniquement aux documents Office et non aux messages Outlook.
 
@@ -851,7 +851,7 @@ Cette configuration utilise un [paramètre client avancé](#how-to-configure-adv
 
 Pour modifier ce comportement afin que ces informations ne soient pas envoyées par le client classique, entrez les chaînes suivantes:
 
-- Clé : **RunAuditInformationTypeDiscovery**
+- Clé : **RunAuditInformationTypesDiscovery**
 
 - Valeur : **False**
 

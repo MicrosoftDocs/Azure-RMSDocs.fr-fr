@@ -4,19 +4,19 @@ description: Informations vous permettant de fournir de l’aide aux utilisateur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/15/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9d579d6ad639445dbf6f52b8cd3245b01973adef
-ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
+ms.openlocfilehash: 16f9a0713be5c6dc1110ca5841b48e3ef6d8450e
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68229845"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446747"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -115,7 +115,7 @@ Par exemple, si l’e-mail est protégé à l’aide de l’option **Ne pas tran
 
 1. Dans Outlook sur le web, créez un e-mail destiné à une personne de votre organisation.
 
-2. Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **Modifier les autorisations**, puis sélectionnez une option dans la liste déroulante. Par exemple :  **Chiffrer** ou **\<Nom de la société> – Confidentiel**.
+2. Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **modifier les autorisations** , puis sélectionnez une option dans la liste déroulante. Par exemple :  **Chiffrer** ou **\<Nom de la société> – Confidentiel**.
 
 3. Envoyez le message.
 

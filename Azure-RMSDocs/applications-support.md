@@ -1,22 +1,22 @@
 ---
 title: Prise en charge d’Azure Rights Management par les applications à partir d’AIP
-description: Comprendre comment les plus couramment utilisés (par exemple, les applications Office), les applications et les services (par exemple, Exchange et SharePoint) peuvent utiliser le service Azure Rights Management d’Azure Information Protection pour protéger les documents et e-mails de votre organisation.
+description: Découvrez comment les applications les plus couramment utilisées (telles que les applications Office) et les services (tels qu’Exchange et SharePoint) peuvent utiliser le service Azure Rights Management de Azure Information Protection pour protéger les documents et e-mails de votre organisation.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 07/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: deb9cb2bf0751c78d419db579b5df050e4862245
-ms.sourcegitcommit: 4721f96650fde6e0e8e704cc6a3458ddeff635a6
+ms.openlocfilehash: 4513667ad3a09d4f986282780f4858b0bce670f7
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65087876"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446765"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Comment les applications prennent en charge le service Azure Rights Management
 
@@ -35,7 +35,7 @@ Pour les cas où les utilisateurs doivent appliquer eux-mêmes la protection, ve
 
 Pour plus d’informations sur la configuration de ces applications pour le service Azure Rights Management d’Azure Information Protection, consultez [Configuration d’applications pour Azure Rights Management](configure-applications.md).
 
-Les services de recherche peuvent s’intégrer à Rights Management de différentes manières. Exemple : 
+Les services de recherche peuvent s’intégrer à Rights Management de différentes manières. Par exemple : 
 
 - Exchange Online et Exchange Server utilisent l’indexation côté service pour que les e-mails protégés de l’utilisateur soient affichés automatiquement dans les résultats de la recherche. 
 

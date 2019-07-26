@@ -4,7 +4,7 @@ description: Informations concernant Azure Rights Management (Azure RMS), la tec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 3e5f8b2cadc615e9c2e601ee083f0e9b99566631
-ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
+ms.openlocfilehash: 467f7d9c9ddcf250f27b8980bd989e638959be66
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67885605"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446845"
 ---
 # <a name="what-is-azure-rights-management"></a>Qu'est-ce qu'Azure Rights Management ?
 
@@ -31,7 +31,7 @@ Ce service de protection cloud utilise des stratégies de chiffrement, d’ident
 
 Par exemple, un employé peut envoyer un document par e-mail à une entreprise partenaire, ou l’enregistrer sur son lecteur cloud. La protection permanente offerte par Azure RMS permet de sécuriser les données de votre entreprise. Elle peut également être nécessaire à des fins de conformité, de communication préalable ou simplement de bonne gestion des informations.
 
-Mais plus important encore, les personnes et services autorisés (recherche et indexation, par exemple) peuvent continuer à lire et inspecter les données protégées. Ceci n’est pas facile à mettre en œuvre avec d’autres solutions de protection des informations qui utilisent le chiffrement pair à pair. Cette fonctionnalité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise.
+Mais important, les personnes et services autorisés (tels que la recherche et l’indexation) peuvent continuer à lire et inspecter les données protégées. Ceci n’est pas facile à mettre en œuvre avec d’autres solutions de protection des informations qui utilisent le chiffrement pair à pair. Cette fonctionnalité, parfois appelée « reasoning over data », est un élément déterminant pour conserver le contrôle des données de votre entreprise.
 
 L’illustration suivante montre comment ce service fournit une solution de protection pour Office 365, ainsi que pour les serveurs et services locaux. Elle montre également que cette protection est prise en charge par les appareils d’utilisateurs finaux courants qui exécutent Windows, macOS, iOS et Android.
 
@@ -63,7 +63,7 @@ Utilisez le tableau suivant pour identifier les besoins ou problèmes métier au
 > Si vous connaissez bien la version locale de Rights Management, Active Directory Rights Management Services (AD RMS), vous pouvez consulter le tableau de comparaison dans [Comparaison d’Azure Rights Management et d’AD RMS](compare-on-premise.md).
 
 ## <a name="security-compliance-and-regulatory-requirements"></a>Respect des obligations réglementaires, de conformité et de sécurité
-Azure Rights Management respecte les obligations réglementaires, de conformité et de sécurité suivantes :
+Azure Rights Management prend en charge les exigences réglementaires, de conformité et de sécurité suivantes:
 
 √ Utilisation du chiffrement standard et prise en charge de la norme FIPS 140-2. Pour plus d’informations, consultez [Contrôles de chiffrement utilisés par Azure RMS : Algorithmes et longueurs de clé](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
 

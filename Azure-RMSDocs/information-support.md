@@ -1,10 +1,10 @@
 ---
 title: Informations & la prise en charge de Azure Information Protection-AIP
-description: Ressources pour les administrateurs, qui incluent des informations sur les nouvelles versions, les options de support disponibles et la procédure à suivre pour contacter Microsoft en cas de problème.
+description: Ressources pour les administrateurs, qui incluent des informations sur les nouvelles versions, les options de support technique et comment contacter Microsoft pour signaler un problème.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 28057fb2697855afc7028292f19b2a344635a52c
-ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
+ms.openlocfilehash: c5ce1d092297e713d46dc3df507bcc048fd173e3
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67885508"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446772"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
@@ -63,9 +63,9 @@ Pour les autres clients, utilisez les canaux de support dans le tableau suivant,
 
 |Abonnement|Instructions|
 |----------------|---------------|
-|Azure Information Protection (autonome)|1. Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />2. Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />3. Vérifiez également que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br /><br /> - **Support technique inclus** : Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
+|Azure Information Protection (autonome)|1. Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />2. Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />3. En outre, assurez-vous que l’une des options suivantes est sélectionnée:<br /><br />- **Abonnement avec support technique inclus** : Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br /><br /> - **Support technique inclus** : Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
 |Azure Information Protection et un abonnement Office 365<br /><br />Azure Rights Management avec un abonnement Office 365|Consultez [Contacter le support produit pour les entreprises – Aide de l’administrateur](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) pour obtenir les numéros de téléphone et les différentes options de contact du support dans le Centre d’administration Microsoft 365.|
-|Azure Information Protection avec EMS (Enterprise Mobility + Security)|1. Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />2. Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />3. Vérifiez également que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br /><br /> - **Support technique inclus** : Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
+|Azure Information Protection avec EMS (Enterprise Mobility + Security)|1. Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />2. Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />3. En outre, assurez-vous que l’une des options suivantes est sélectionnée:<br /><br />- **Abonnement avec support technique inclus** : Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br /><br /> - **Support technique inclus** : Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
 |Azure Information Protection avec Microsoft 365 Entreprise|Utilisez les [canaux de support d’Office 365](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
 Pour connaître les autres options de support, adressez-vous à votre contact Microsoft. 

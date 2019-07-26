@@ -4,17 +4,17 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/24/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: c365b71c2047a3556c3ba4da091945454096e048
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 6aea5948c9ad6358425f057a7459c3f851a74f49
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66186677"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446685"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -71,7 +71,7 @@ Utilisez les instructions suivantes pour configurer les marquages visuels d’un
 
 2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette qui contient les marquages visuels que vous souhaitez ajouter ou changer.
 
-3. Dans le panneau **Étiquette**, dans la section **Définir un marquage visuel (par exemple, un en-tête ou un pied de page)**, configurez les paramètres pour les marquages visuels que vous souhaitez, puis cliquez sur **Enregistrer** :
+3. Dans le panneau **Étiquette**, dans la section **Définir un marquage visuel (par exemple, un en-tête ou un pied de page)** , configurez les paramètres pour les marquages visuels que vous souhaitez, puis cliquez sur **Enregistrer** :
     
     - Pour configurer un en-tête : pour **Les documents avec cette étiquette ont un en-tête**, sélectionnez **Activé** si vous souhaitez un en-tête, et **Désactivé** dans le cas contraire. Si vous sélectionnez **Activé**, spécifiez ensuite le texte, la taille, la [police](#setting-the-font-name), la [couleur](#setting-the-font-color) et l’alignement de l’en-tête.
     
@@ -86,9 +86,9 @@ Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement d
 
 Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’en-tête, le pied de page ou le filigrane :
 
-- `${Item.Label}` pour l’étiquette sélectionnée. Exemple : Général
+- `${Item.Label}` pour l’étiquette sélectionnée. Par exemple :  Généralités
 
-- `${Item.Name}` pour le nom de fichier ou l’objet de l’e-mail. Exemple : JulySales.docx
+- `${Item.Name}` pour le nom de fichier ou l’objet de l’e-mail. Par exemple :  JulySales.docx
 
 - `${Item.Location}` pour le chemin et le nom de fichier des documents, et pour l’objet des e-mails. Par exemple : \\\Sales\2016\Q3\JulyReport.docx
 
@@ -96,7 +96,7 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
 
 - `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Par exemple : rsimone@vanarsdelltd.com
 
-- `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Exemple : 8/16/2016 1:30 PM
+- `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Par exemple :  8/16/2016 1:30 PM
 
 Exemple : si vous spécifiez la chaîne `Document: ${item.name}  Classification: ${item.label}` pour le pied de page de l’étiquette **Général**, le texte du pied de page appliqué à un document nommé project.docx est **Document: project.docx  Classification: General**.
 
@@ -141,9 +141,9 @@ Si la police spécifiée n’est pas disponible, le client utilise la police Cal
 
 ### <a name="setting-the-font-color"></a>Définition de la couleur de la police
 
-Vous pouvez choisir une couleur dans la liste des couleurs disponibles ou spécifier une couleur personnalisée en entrant un code (triplet hexadécimal) représentant les composants RVB (rouge, vert, bleu) de la couleur. Par exemple, **#40e0d0** est la valeur RVB pour turquoise. 
+Vous pouvez choisir une couleur dans la liste des couleurs disponibles ou spécifier une couleur personnalisée en entrant un code (triplet hexadécimal) représentant les composants RVB (rouge, vert, bleu) de la couleur. Par exemple, **#40e0d0** est la valeur hexadécimale RVB pour turquoise. 
 
-Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à partir de la [ \<couleur >](https://developer.mozilla.org/docs/Web/CSS/color_value) page à partir de la documentation web MSDN. Ces codes sont utilisés dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
+Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à [ \<](https://developer.mozilla.org/docs/Web/CSS/color_value) partir de la page de > des couleurs dans les documents Web MSDN. Ces codes sont utilisés dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

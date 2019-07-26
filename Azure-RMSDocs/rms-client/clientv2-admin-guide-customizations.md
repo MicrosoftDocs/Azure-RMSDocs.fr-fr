@@ -3,19 +3,19 @@ title: Configurations personnalisées-Azure Information Protection client d’é
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/22/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: c583dfd8fe17a926bc2014a626d289a3d29d627c
-ms.sourcegitcommit: 6c3681cec0f807c6af031db67242ff01a99cd57b
+ms.openlocfilehash: 77fac8df4194e70e05ec202359a18dcfd5b959b7
+ms.sourcegitcommit: 2ad5cda4816c76c5fd3655ee45b64475e42cab32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68411733"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68483108"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -135,7 +135,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |PostponeMandatoryBeforeSave|[Supprimer « Pas maintenant » pour les documents quand l’étiquetage obligatoire est utilisé](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Ajouter « Signaler un problème » pour les utilisateurs](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|RunAuditInformationTypesDiscovery|[Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 
 Exemple de commande PowerShell pour vérifier les paramètres de stratégie d’étiquette en vigueur pour une stratégie d’étiquette nommée «global»:
 
@@ -640,7 +640,7 @@ Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-s
 
 Pour modifier ce comportement afin que ces informations ne soient pas envoyées par le client d’étiquetage unifié, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée:
 
-- Clé : **RunAuditInformationTypeDiscovery**
+- Clé : **RunAuditInformationTypesDiscovery**
 
 - Valeur : **False**
 
@@ -656,7 +656,7 @@ Par exemple :
 
 Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Désactiver l’envoi de correspondances de types d’informations pour un sous-ensemble d’utilisateurs
 

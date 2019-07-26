@@ -4,17 +4,17 @@ description: Informations sur les fichiers du client et la journalisation de l�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: e90672438efff30d378699f36b3037f04d420b22
-ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
+ms.openlocfilehash: 6904f77a621b2dc362a82f9b20099d71aaf4f605
+ms.sourcegitcommit: 29dc76ef3215a68a4a7a0c0eeae83d22caadec4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375440"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68501647"
 ---
 # <a name="admin-guide-azure-information-protection-unified-labeling-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Azure Information Protection la journalisation unifiée des fichiers clients et de l’utilisation du client
 
@@ -34,7 +34,7 @@ Fichiers du client :
 
 Fichiers journaux du client:
 
-- Pour les systèmes d’exploitation 64 bits et 32 bits : **%localappdata%\Microsoft\MSIP**
+- Pour les systèmes d’exploitation 64 bits et 32 bits: **%LocalAppData%\Microsoft\MSIP\Logs**
 
 
 ## <a name="next-steps"></a>Étapes suivantes

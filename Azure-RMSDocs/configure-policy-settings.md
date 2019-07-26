@@ -4,17 +4,17 @@ description: Configurez les paramètres dans la stratégie Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 5eac6cd86ea5d413429c02ad37e0a5e186ab6f22
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: 5b26c3e963fccede6b4a66814c0ab089abfdfd45
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934668"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446827"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Guide pratique pour configurer les paramètres de stratégie pour Azure Information Protection
 
@@ -66,13 +66,13 @@ Pour configurer ces paramètres :
         
         Pour prendre le classement des sous-étiquettes en compte lorsque vous utilisez ce paramètre de stratégie, vous devez [configurer un paramètre client avancé](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments).
         
-        Quand la pièce jointe avec l’étiquette de classification la plus élevée est configurée pour la protection avec le paramètre de version préliminaire d’autorisations définies par l’utilisateur : - lorsque les autorisations définies par l’utilisateur de l’étiquette incluent Outlook (ne pas transférer), cette étiquette est appliquée et ne pas transférer protection est appliquée à l’adresse e-mail. Quand les autorisations définies par l’utilisateur de l’étiquette sont seulement pour Word, Excel, PowerPoint et l’Explorateur de fichiers, cette étiquette n’est pas appliquée à l’e-mail, tout comme la protection.
+        Lorsque la pièce jointe avec l’étiquette de classification la plus élevée est configurée pour la protection avec le paramètre d’aperçu des autorisations définies par l’utilisateur:-lorsque les autorisations définies par l’utilisateur de l’étiquette incluent Outlook (ne pas transférer), cette étiquette est appliquée et ne pas transférer la protection est appliquée à l’e-mail. Quand les autorisations définies par l’utilisateur de l’étiquette sont seulement pour Word, Excel, PowerPoint et l’Explorateur de fichiers, cette étiquette n’est pas appliquée à l’e-mail, tout comme la protection.
     
    - **Afficher la barre Information Protection dans les applications Office** : Lorsque ce paramètre est désactivé, les utilisateurs ne peuvent pas sélectionner d’étiquettes depuis une barre dans Word, Excel, PowerPoint et Outlook. En revanche, les utilisateurs peuvent sélectionner des étiquettes au moyen du bouton **Protéger** dans le ruban. Lorsque ce paramètre est activé, les utilisateurs peuvent sélectionner des étiquettes par le biais de la barre et du bouton.
         
        Lorsque ce paramètre est activé, il peut être utilisé conjointement avec un paramètre client avancé, afin que les utilisateurs puissent [masquer définitivement la barre Azure Information Protection](./rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) s’ils choisissent de ne pas l’afficher. Ils peuvent le faire en désactivant l’option **Afficher la barre** à partir du bouton **Protéger**.
     
-   - **Ajouter le bouton Ne pas transférer au ruban Outlook** : Lorsque ce paramètre est activé, les utilisateurs peuvent sélectionner ce bouton à partir du groupe **Protection** dans le ruban Outlook en plus de sélectionner l’option **Ne pas transférer** à partir des menus Outlook. Pour vous assurer que les utilisateurs classent et protègent leurs e-mails, vous pouvez choisir de ne pas ajouter ce bouton mais de préférer [configurer une étiquette pour la protection](configure-policy-protection.md) ainsi qu’une autorisation définie par l’utilisateur pour Outlook. Du point de vue fonctionnel, ce paramètre de protection revient à sélectionner le bouton **Ne pas transférer**, mais lorsque cette fonctionnalité est incluse dans une étiquette, les e-mails sont classés en même temps qu’ils sont protégés.
+   - **Ajouter le bouton Ne pas transférer au ruban Outlook** : Lorsque ce paramètre est activé, les utilisateurs peuvent sélectionner ce bouton à partir du groupe **Protection** dans le ruban Outlook en plus de sélectionner l’option **Ne pas transférer** à partir des menus Outlook. Pour vous assurer que les utilisateurs classifient leurs courriers électroniques et les protéger, vous préférerez peut-être ne pas ajouter ce bouton mais plutôt [configurer une étiquette pour la protection](configure-policy-protection.md) et une autorisation utilisateur = définie pour Outlook. Du point de vue fonctionnel, ce paramètre de protection revient à sélectionner le bouton **Ne pas transférer**, mais lorsque cette fonctionnalité est incluse dans une étiquette, les e-mails sont classés en même temps qu’ils sont protégés.
     
        Ce paramètre de stratégie peut également être configuré avec un paramètre client avancé en tant que [personnalisation du client](./rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook).
     
@@ -88,7 +88,7 @@ Pour configurer ces paramètres :
     
    - **Fournir une URL personnalisée pour la page web « En savoir plus » du client Azure Information Protection** : Les utilisateurs voient ce lien à la section **Aide et commentaires** dans la boîte de dialogue **Microsoft Azure Information Protection** lorsqu’ils sélectionnent **Protéger** > **Aide et commentaires** sous l’onglet **Accueil** de leurs applications Office. Par défaut, ce lien pointe vers le site web [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection). Si vous souhaitez faire pointer ce lien vers une autre page web, vous pouvez entrer une URL HTTP ou HTTPS (recommandé). Aucun contrôle n’est effectué pour vérifier si l’URL personnalisée entrée est accessible ou si elle s’affiche correctement sur tous les appareils.
         
-       Par exemple, pour le support technique, vous pouvez entrer la page de documentation de Microsoft qui inclut des informations sur l’installation et l’utilisation du client (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) ou publier des informations de version (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Vous pouvez également publier votre propre page web comprenant des informations sur la façon de contacter votre support technique ou une vidéo qui explique pas à pas comment utiliser les étiquettes configurées.
+       Par exemple, pour le support technique, vous pouvez entrer la page de documentation de Microsoft qui inclut des informations sur l’installation et l’utilisation du client ( **https://docs.microsoft.com/information-protection/rms-client/info-protect-client** ) ou publier des informations de version ( **https://docs.microsoft.com/information-protection/rms-client/client-version-release-history** ). Vous pouvez également publier votre propre page web comprenant des informations sur la façon de contacter votre support technique ou une vidéo qui explique pas à pas comment utiliser les étiquettes configurées.
 
 4. Pour enregistrer vos modifications et les rendre disponibles pour les utilisateurs, cliquez sur **Enregistrer**.
 

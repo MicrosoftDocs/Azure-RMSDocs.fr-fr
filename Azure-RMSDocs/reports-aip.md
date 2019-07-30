@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 07/04/2019
+ms.date: 07/28/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 3d3dec9c5f2da8089b277cf9c372800c971af9ea
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.openlocfilehash: 94f7eb89f05ddce29d42689f8af05b0a99e0eedf
+ms.sourcegitcommit: ba28a9dff6a4c75046185749c2ef9e3c08b9e77e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428354"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68602765"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -231,9 +231,6 @@ Azure Monitor journaux a une fonctionnalité d' **utilisation et de coûts estim
 Si vous avez besoin d’aide pour créer l’espace de travail Log Analytics, consultez [Créer un espace de travail Log Analytics dans le portail Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
 Quand l’espace de travail est configuré, vous êtes prêt à afficher les rapports.
-
-> [!NOTE] 
-> Il se produit actuellement un problème connu lors du premier affichage des données dans les rapports. Dans ce cas, définissez le [paramètre de stratégie](configure-policy-settings.md) **Envoyer des données d’audit à l’analytique des journaux d'activité Azure Information Protection** sur **Désactivé** dans la stratégie globale et enregistrez-la. Ensuite, redéfinissez le même paramètre sur **Activé** et enregistrez la stratégie. Une fois que les clients ont [téléchargé la modification](configure-policy.md#making-changes-to-the-policy), leurs événements d’audit sont visibles dans votre espace de travail Log Analytics au bout de 30 minutes maximum.
 
 ## <a name="how-to-view-the-reports"></a>Comment afficher les rapports
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 531cd6fed4974435edcf5fd9d7afb12b09e0a61b
-ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
+ms.openlocfilehash: be9c66a79b5eb9bf03b9a11cedd69926a292cbae
+ms.sourcegitcommit: ba28a9dff6a4c75046185749c2ef9e3c08b9e77e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375467"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68602742"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -74,7 +74,7 @@ Utilisez le tableau suivant pour comparer les fonctionnalités prises en charge 
 |Autorisations personnalisées :| Oui | Explorateur de fichiers et PowerShell <br /><br /> Dans les applications Office, comme alternative, les utilisateurs peuvent sélectionner les **informations** > de fichier**protéger le document** > **restreindre l’accès** ou les administrateurs peuvent configurer une étiquette pour les autorisations définies par l’utilisateur|
 |Barre Information Protection dans les applications Office :| Oui | Oui, avec des restrictions :<br /><br /> - Pas de titre ou d’info-bulle personnalisable<br /><br /> - Couleur d’étiquette non affichée pour l’étiquette appliquée|
 |Les étiquettes peuvent appliquer des marquages visuels (en-tête, pied de page, filigrane) :| Oui | Oui, avec des restrictions :<br /><br /> - Les en-têtes et les pieds de page ne gèrent pas les variables pour les valeurs dynamiques <br /><br /> - Pas de prise en charge pour Word, Excel, PowerPoint et Outlook de différents marquages visuels|
-|Dans l’Explorateur de fichiers, actions déclenchées par clic droit :| Oui | Oui, avec des restrictions :<br /><br /> - Impossible de protéger les documents PDF au format .ppdf <br /><br />  - Pas de prise en charge du mode Protection uniquement|
+|Dans l’Explorateur de fichiers, actions déclenchées par clic droit :| Oui | Oui, avec des restrictions :<br /><br /> -Impossible de protéger les documents PDF au format ancien. ppdf <br /><br />  - Pas de prise en charge du mode Protection uniquement|
 |Visionneuse des fichiers protégés :| Oui | Oui, avec des restrictions :<br /><br /> -Pour les fichiers protégés de façon générique (. pfile), contrairement à la visionneuse du client classique, il n’est pas possible d’enregistrer les modifications apportées au fichier initialement ouvert.|
 |Commandes PowerShell :| Oui | Oui, avec des restrictions :<br /><br />-Impossible de supprimer la protection des fichiers de conteneur (zip,. rar,. 7z,. MSG et. pst)|
 |Prise en charge hors connexion des actions de protection :| Oui | Oui, avec des restrictions : <br /><br />- Pour l’Explorateur de fichiers et les commandes PowerShell, l’utilisateur doit être connecté à Internet pour protéger les fichiers. |

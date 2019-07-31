@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 07/28/2019
+ms.date: 07/30/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 94f7eb89f05ddce29d42689f8af05b0a99e0eedf
-ms.sourcegitcommit: ba28a9dff6a4c75046185749c2ef9e3c08b9e77e
+ms.openlocfilehash: e8f11ef9d7864467b365ce81247a08665290556b
+ms.sourcegitcommit: 2f15ef5f4587a6363314e17a1c24658493f4bb73
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68602765"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68658352"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "68602765"
 > [!NOTE]
 > Cette fonctionnalité est disponible en préversion et susceptible d’être modifiée.
 
-Utiliser l’analytique d’Azure Information Protection pour la création de rapports centralisée afin de vous aider à effectuer le suivi de l’adoption de vos étiquettes Azure Information Protection. De plus :
+Utilisez Azure Information Protection Analytics pour la création de rapports centralisés pour vous aider à suivre l’adoption de vos étiquettes qui classent et protègent les données de votre organisation. De plus :
 
 - Surveillez les documents et les e-mails étiquetés et protégés dans votre organisation
 
@@ -35,7 +35,7 @@ Utiliser l’analytique d’Azure Information Protection pour la création de ra
 
 - Identifiez les documents qui contiennent des informations sensibles susceptibles de mettre votre organisation en péril si elles ne sont pas protégées, et limitez les risques en suivant les recommandations.
 
-Les données que vous voyez sont regroupées à partir de vos Azure Information Protection clients et Azure Information Protection scanneurs, à partir d’ordinateurs Windows exécutant [Microsoft Defender-protection avancée contre les menaces (Microsoft Defender ATP)](/windows/security/threat-protection/microsoft-defender-atp/overview)et à partir de [ clients qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
+Les données que vous voyez sont agrégées à partir de vos clients et scanneurs Azure Information Protection, ainsi qu’à partir des [clients et des services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 Par exemple, vous serez en mesure de voir ce qui suit :
 
@@ -61,7 +61,7 @@ Par exemple, vous serez en mesure de voir ce qui suit :
     
     - Quelles actions d’étiquetage ont été effectuées pour un chemin d’accès donné
     
-    - Quelles actions d’étiquetage ont été effectuées par une application donnée, comme l’Explorateur de fichiers et le clic droit, ou le module PowerShell AzureInformationProtection
+    - Les actions d’étiquetage effectuées par une application spécifique, telles que l’Explorateur de fichiers et le clic droit, PowerShell, le scanneur ou Microsoft Cloud App Security
     
     - Explorez les fichiers signalés pour afficher les **détails de l’activité** afin d’obtenir plus d’informations
 
@@ -136,9 +136,10 @@ Pour afficher les rapports Azure Information Protection et créer les vôtres, v
 |Condition requise|Plus d’informations|
 |---------------|--------------------|
 |Un abonnement Azure qui inclut Log Analytics et qui concerne le même locataire qu’Azure Information Protection|Consultez la page de [tarification d’Azure Monitor](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Si vous ne possédez pas un abonnement Azure ou n’utilisez pas Azure Log Analytics, la page des tarifs inclut un lien pour un essai gratuit.|
-|Le client Azure Information Protection ou le client d’étiquetage unifié Azure Information Protection|Si vous ne disposez pas déjà de l’un de ces clients, vous pouvez les télécharger et les installer à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Assurez-vous que vous disposez de la dernière version pour prendre en charge [toutes les fonctionnalités](#features-that-require-a-minimum-version-of-the-client) de Azure information protection Analytics.|
+|Clients Azure Information Protection|Le client d’étiquetage unifié et le client classique sont pris en charge. <br /><br />Si vous ne disposez pas déjà de l’un de ces clients, vous pouvez les télécharger et les installer à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Assurez-vous que vous disposez de la dernière version pour prendre en charge [toutes les fonctionnalités](#features-that-require-a-minimum-version-of-the-client) de Azure information protection Analytics.|
+|Microsoft Cloud App Security |Pour afficher des informations à partir de Microsoft Cloud App Security, configurez l' [intégration Azure information protection](https://docs.microsoft.com/cloud-app-security/azip-integration).|
 |Pour le rapport de **découverte et des risques** : <br /><br />-Pour afficher les données des magasins de données locaux, vous avez déployé au moins une instance du scanneur Azure Information Protection <br /><br />-Pour afficher les données des ordinateurs Windows 10, ils doivent disposer d’une version minimale de 1809, vous utilisez Microsoft Defender-protection avancée contre les menaces (Microsoft Defender ATP) et vous avez activé la fonctionnalité d’intégration de Azure Information Protection de Microsoft. Security Center Defender|Pour obtenir des instructions d’installation pour le scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md). <br /><br />Pour plus d’informations sur la configuration et l’utilisation de la fonctionnalité d’intégration de Azure Information Protection de Microsoft Defender Security Center, voir [vue d’ensemble de la protection des informations dans Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
-|Pour le rapport **Recommandations** : <br /><br />-Pour ajouter un nouveau référentiel de données à partir de l’Portail Azure en tant qu’action recommandée, vous devez utiliser la dernière version de la disponibilité générale du scanneur de Azure Information Protection |Pour déployer le scanneur, consultez [déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement des fichiers](deploy-aip-scanner.md).|
+|Pour le rapport **Recommandations** : <br /><br />-Pour ajouter un nouveau référentiel de données à partir de l’Portail Azure en tant qu’action recommandée, vous devez utiliser une version du scanneur de Azure Information Protection configurée dans le Portail Azure |Pour déployer le scanneur, consultez [déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement des fichiers](deploy-aip-scanner.md).|
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Autorisations requises pour l’analytique Azure Information Protection
 
@@ -189,13 +190,13 @@ Toutefois, de nombreuses organisations attribuent le rôle Azure AD **Lecteur S�
 
 ### <a name="features-that-require-a-minimum-version-of-the-client"></a>Fonctionnalités qui requièrent une version minimale du client
 
-Vous pouvez utiliser les informations de l’historique des versions pour le [client d’étiquetage unifié Azure information protection](./rms-client/unifiedlabelingclient-version-release-history.md) et le [client Azure information protection](./rms-client/client-version-release-history.md) pour vérifier si votre version du client prend en charge toutes les fonctionnalités de création de rapports centralisées. Versions minimales pour les clients:
+Vous pouvez utiliser les informations de l’historique des versions pour le [client de Azure information protection d’étiquetage unifié](./rms-client/unifiedlabelingclient-version-release-history.md) et le [client Azure information protection (Classic)](./rms-client/client-version-release-history.md) pour vérifier si votre version du client prend en charge tous les rapports centraux. éléments. Versions minimales pour les clients:
 
 Pour le client d’étiquetage unifié Azure Information Protection:
 
 - Prise en charge de l’audit et de la découverte de point de terminaison: Version 2.0.778.0
 
-Pour le client Azure Information Protection :
+Pour le client Azure Information Protection (classique):
 
 - Prise en charge de l’audit: Version 1.41.51.0
 - Prise en charge de la découverte de point de terminaison: Version 1.48.204.0

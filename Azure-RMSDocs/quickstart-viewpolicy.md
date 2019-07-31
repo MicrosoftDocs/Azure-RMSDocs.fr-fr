@@ -4,20 +4,20 @@ description: Si Azure Information Protection est nouveau pour votre organisation
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/20/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: d2d3793cad1e1d53301f50a7966545bf19a6c851
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 5dc98a019ca34e6a303308e4e93d076042893638
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65935004"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446873"
 ---
-# <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
+# <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -112,7 +112,7 @@ Si elles ne ressemblent aux étiquettes dans l’image de la section précédent
 
 - À partir des colonnes **MARKING** et **PROTECTION**, vous pouvez voir que certaines étiquettes contiennent des marquages visuels configurés. Les marquages visuels sont un pied de page, un en-tête et un filigrane. Certaines étiquettes également avoir une protection définie. 
 
-Par exemple : 
+Par exemple : 
 
 ![Présentation par guide de démarrage rapide Azure Information Protection des étiquettes par défaut](./media/info-protect-policy-default-labelsv2.png)
 

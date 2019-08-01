@@ -3,19 +3,19 @@ title: Configurations personnalisées-Azure Information Protection client d’é
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/24/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 77fac8df4194e70e05ec202359a18dcfd5b959b7
-ms.sourcegitcommit: 2ad5cda4816c76c5fd3655ee45b64475e42cab32
+ms.openlocfilehash: 60debc8e04691dcb977da7d9a8c29bba7ae659ce
+ms.sourcegitcommit: 3933f968a952fb1d7c73c0f6a4f42a2a429b863f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483108"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68684660"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -77,7 +77,7 @@ Exemple 4: Supprimez un paramètre avancé de stratégie d’étiquette en spéc
 
 La spécification du nom de la stratégie d’étiquette pour le paramètre d' *identité* PowerShell est simple, car vous ne voyez qu’un seul nom de stratégie dans le centre d’administration où vous gérez vos stratégies d’étiquette. Toutefois, pour les étiquettes, vous voyez un **nom** et un **nom d’affichage** dans les centres d’administration. Dans certains cas, la valeur est la même, mais elle peut être différente:
 
-- **Nom** est le nom d’origine de l’étiquette et il est unique pour toutes vos étiquettes. Si vous modifiez le nom de votre étiquette après sa création, cette valeur reste la même.
+- **Nom** est le nom d’origine de l’étiquette et il est unique pour toutes vos étiquettes. Si vous modifiez le nom de votre étiquette après sa création, cette valeur reste la même. Pour les étiquettes qui ont été migrées à partir de Azure Information Protection, vous pouvez voir l’ID d’étiquette de l’étiquette à partir du Portail Azure.
 
 - **Nom complet** est le nom de l’étiquette que les utilisateurs voient, et il n’est pas nécessaire qu’il soit unique sur toutes vos étiquettes. Par exemple, les utilisateurs voient une sous-étiquette **tous les employés** pour l’étiquette **confidentiel** et une autre sous-étiquette **tous les employés** pour l’étiquette **hautement confidentiel** . Ces sous-étiquettes affichent le même nom, mais elles ne sont pas de la même étiquette et présentent des paramètres différents.
 

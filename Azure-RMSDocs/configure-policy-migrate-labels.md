@@ -4,18 +4,18 @@ description: Migrez des étiquettes Azure Information Protection vers des étiqu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/29/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 0119dedbd569732abd6e9749eb0796879823c153
-ms.sourcegitcommit: ba28a9dff6a4c75046185749c2ef9e3c08b9e77e
+ms.openlocfilehash: 161f87363a6e398465a1ee67068e6f36b2f3919f
+ms.sourcegitcommit: 3933f968a952fb1d7c73c0f6a4f42a2a429b863f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68602734"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68684618"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Guide pratique pour migrer des étiquettes Azure Information Protection vers des étiquettes de confidentialité Office 365
 
@@ -49,7 +49,7 @@ Les administrateurs généraux de votre locataire pourront continuer à gérer l
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-Étant donné que la migration des étiquettes est irréversible, assurez-vous que vous avez pris connaissance des modifications et des considérations suivantes:
+La migration des étiquettes présente de nombreux avantages, mais est irréversible. Assurez-vous que vous avez pris connaissance des modifications et des considérations suivantes:
 
 - Assurez-vous que vous avez des [clients qui prennent en charge des étiquettes unifiées](#clients-and-services-that-support-unified-labeling) et, si nécessaire, préparez-vous à l’administration à la fois dans le portail Azure (pour les clients qui ne prennent pas en charge les étiquettes unifiées) et les centres d’administration (pour le client qui prennent en charge les étiquettes unifiées).
 
@@ -70,13 +70,7 @@ Les administrateurs généraux de votre locataire pourront continuer à gérer l
     
     - Après la migration d’une étiquette avec des paramètres de protection basés sur le Cloud, l’étendue résultante du modèle de protection est définie dans l’étendue définie dans le Portail Azure (ou à l’aide du module PowerShell AIPService) et l’étendue définie dans les centres d’administration. 
 
-- Quand vous migrez vos étiquettes,les résultats de la migration indiquent si une étiquette a été **créée**, **mise à jour** ou **renommée** en raison de la duplication :
-
-    - Quand une étiquette est créée, vous devez ensuite la publier dans l’un des centres d’administration pour la rendre accessible aux applications et services.
-    
-    - Quand une étiquette est renommée, vous devez ensuite la modifier dans l’un des centres d’administration ou sur le Portail Azure.
-
-- Pour chaque étiquette, le portail Azure indique uniquement le nom d’affichage de l’étiquette, que vous pouvez modifier. Les centres d’administration indiquent à la fois ce nom d’affichage et le nom de l’étiquette. Le nom de l’étiquette est le nom initial que vous avez spécifié lors de la création de l’étiquette et cette propriété est utilisée par le service back-end à des fins d’identification.
+- Pour chaque étiquette, le portail Azure indique uniquement le nom d’affichage de l’étiquette, que vous pouvez modifier. Les utilisateurs voient ce nom d’étiquette dans leurs applications. Les centres d’administration indiquent à la fois ce nom d’affichage et le nom de l’étiquette. Le nom de l’étiquette est le nom initial que vous spécifiez lorsque l’étiquette est créée pour la première fois et cette propriété est utilisée par le service principal à des fins d’identification. Lorsque vous migrez vos étiquettes, le nom d’affichage reste le même et le nom de l’étiquette est renommé avec l’ID d’étiquette du Portail Azure.
 
 - Aucune chaîne localisée pour les étiquettes n’est migrée. Définissez de nouvelles chaînes localisées pour les étiquettes migrées à l’aide d’Office 365 Security & Compliance PowerShell et du paramètre *LocaleSettings* pour [Set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
 
@@ -139,11 +133,6 @@ Si l’utilisateur n’a pas un de ces droits d’utilisation ou un de ces rôle
 Utilisez les instructions suivantes pour migrer votre locataire et étiquettes Azure Information Protection pour utiliser le nouveau magasin d’étiquetage unifié.
 
 Vous devez être administrateur de la conformité, administrateur des données de conformité, administrateur de la sécurité ou administrateur général pour migrer vos étiquettes.
-
-> [!NOTE]
-> Si vous avez des étiquettes de rétention ou des stratégies de protection contre la perte de données pour Office 365, nous vous recommandons d’avoir le rôle d' **administrateur de conformité** , le rôle d’administrateur de **données de conformité** ou le rôle d' **administrateur général** pour migrer vos étiquettes.
-> 
-> Les administrateurs de la sécurité n’ont pas accès aux étiquettes de rétention ou aux stratégies de protection contre la perte de données. par conséquent, si vous disposez de l’un de ces noms et qu’ils ont le même nom que vos étiquettes de Azure Information Protection, le processus de migration ne peut se terminer qu’une des doublons. Toutefois, si vous avez l’un des autres rôles, le processus de migration peut renommer le Azure Information Protection étiquette pour vous, afin que la migration puisse se terminer.
 
 1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**.
     

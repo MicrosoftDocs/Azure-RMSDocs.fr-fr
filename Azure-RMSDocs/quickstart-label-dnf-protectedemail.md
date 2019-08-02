@@ -4,20 +4,20 @@ description: Configurez une étiquette qui protège l’e-mail d’un utilisateu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/23/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 1485020b6edd47aae75486bf3a8215cf5cb14a1b
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: a4521aa502fd178843502a5341a2ee27b07438d3
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65935003"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446898"
 ---
-# <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles
+# <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -47,7 +47,7 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
 
 3. Une étiquette Azure Information Protection à configurer. 
     
-    Vous pouvez utiliser une des étiquettes par défaut, ou une étiquette que vous avez créée. Si vous avez besoin d’aide pour créer une étiquette, consultez [Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques](quickstart-label-specificusers.md).
+    Vous pouvez utiliser une des étiquettes par défaut, ou une étiquette que vous avez créée. Si vous avez besoin d’aide pour créer une nouvelle étiquette, consultez [Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques](quickstart-label-specificusers.md).
 
 4. Pour tester la nouvelle étiquette : le client Azure Information Protection doit être installé sur les ordinateurs des utilisateurs. 
     
@@ -79,7 +79,7 @@ Pour obtenir la liste complète des prérequis d’Azure Information Protection,
 
 2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous souhaitez configurer pour appliquer la protection. 
 
-3. Dans le panneau **Étiquette**, recherchez **Définir des autorisations pour les documents et les e-mails contenant cette étiquette**. Sélectionnez **Protéger** ; le panneau **Protection** s’ouvre alors automatiquement si l’une des autres options a été sélectionnée précédemment. 
+3. Dans le panneau **Étiquette**, recherchez **Définir des autorisations pour les documents et les e-mails contenant cette étiquette**. Sélectionnez **Protéger**, le panneau **Protection** s’ouvre alors automatiquement si l’option **Non configuré** ou **Supprimer la protection** a été sélectionnée précédemment.
     
     Si le panneau **Protection** ne s’ouvre pas automatiquement, sélectionnez **Protection** :
     

@@ -3,7 +3,7 @@ title: Configurer la stratégie Azure Information Protection – AIP
 description: Pour configurer la classification, l’étiquetage et la protection, vous devez configurer la stratégie Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-ms.date: 07/19/2019
+ms.date: 08/01/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a6e53aba545176b9224793cf33da1770dadf5437
-ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
+ms.openlocfilehash: 45b1d7dcefcdf36921b2dcbb34f1da6ead57c231
+ms.sourcegitcommit: 66e0193e053f19edaf80b212aa2308993b3bb9e5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340558"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68730366"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -58,7 +58,7 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
 
 - Utilisez le lien suivant : https://portal.azure.com
 
-- Utilisez un compte avec l’un des [rôles d’administrateur](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) suivants :
+- Utilisez un compte de Azure AD qui a l’un des [rôles d’administrateur](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)suivants:
     
     - **Administrateur Azure Information Protection**
     
@@ -74,7 +74,8 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
     
     > [!NOTE] 
     > Si votre locataire a été migré vers le magasin d’étiquetage unifié, le Azure Information Protection administrateur (anciennement «administrateur Information Protection») n’est plus pris en charge. [Plus d’informations](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
-
+    
+    Les comptes Microsoft ne peuvent pas gérer Azure Information Protection.
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Pour accéder au panneau Azure Information Protection pour la première fois
 

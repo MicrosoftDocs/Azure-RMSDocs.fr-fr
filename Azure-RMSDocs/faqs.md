@@ -4,19 +4,19 @@ description: Quelques questions fréquemment posées sur Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/25/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 16f459d789715c44f724eacb4c8fc01397d90b3f
-ms.sourcegitcommit: 29dc76ef3215a68a4a7a0c0eeae83d22caadec4c
+ms.openlocfilehash: d283821fc61747c2debab1e8e449c7083d7fa439
+ms.sourcegitcommit: 66e0193e053f19edaf80b212aa2308993b3bb9e5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68501669"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68730374"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -134,6 +134,8 @@ Les administrateurs généraux d’un locataire Office 365 ou Azure AD peuvent �
     Pour affecter l’un de ces rôles d’administration, utilisez l’applet de commande PowerShell AIPService, [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator).
 
 Quelques éléments à prendre en compte :
+
+- Les comptes Microsoft ne sont pas pris en charge pour l’administration déléguée de Azure Information Protection, même si ces comptes sont affectés à l’un des rôles d’administration répertoriés. 
 
 - Si vous avez configuré des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), cette configuration n’affecte pas la possibilité d’administrer Azure Information Protection, à l’exception du connecteur RMS. Par exemple, si vous avez configuré des contrôles d’intégration de manière à ce que seul le groupe « Département informatique » puisse protéger du contenu, le compte que vous utilisez pour installer et configurer le connecteur RMS doit être membre de ce groupe. 
 

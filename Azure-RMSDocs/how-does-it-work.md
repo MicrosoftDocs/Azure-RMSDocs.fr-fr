@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 30c97d8e97bec8669fa4c8b6d2b4a2b5d31cca0a
-ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
+ms.custom: admin
+ms.openlocfilehash: 0f23bfeca00b8eeb7da3643c192b37641c0ea234
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67149288"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794177"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
@@ -38,14 +40,14 @@ Pour une description détaillée de ce qui se passe, consultez la section [Proc�
 
 Pour obtenir des détails techniques sur les algorithmes et les longueurs de clé qu'Azure RMS utilise, consultez la section suivante.
 
-## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Contrôles de chiffrement utilisés par Azure RMS : Algorithmes et longueurs de clé
+## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Contrôles de chiffrement utilisés par Azure RMS: Algorithmes et longueurs de clé
 Même si vous n’avez pas besoin de connaître en détail le fonctionnement de cette technologie, vous devrez peut-être fournir certaines informations sur les contrôles de chiffrement utilisés, par exemple, pour confirmer que la protection de sécurité répond aux normes.
 
 
 |Contrôles de chiffrement|Utilisation dans Azure RMS|
 |-|-|
-|Algorithme : AES<br /><br />Longueur de clé : 128 bits et 256 bits [[1]](#footnote-1)|Protection du contenu|
-|Algorithme : RSA<br /><br />Longueur de clé : 2 048 bits [[2]](#footnote-2)|Protection de clé|
+|Utilisé CHIFFRE<br /><br />Longueur de la clé: 128 bits et 256 bits [[1]](#footnote-1)|Protection du contenu|
+|Utilisé RSA<br /><br />Longueur de la clé: 2 048 bits [[2]](#footnote-2)|Protection de clé|
 |SHA-256|Signature de certificat|
 
 ###### <a name="footnote-1"></a>Note 1 
@@ -77,7 +79,7 @@ Cette clé de locataire est protégée dans les services en ligne de Microsoft, 
 Les licences et certificats envoyés à un appareil Windows sont protégés par la clé privée d’appareil du client, créée quand un utilisateur utilise Azure RMS sur l’appareil pour la première fois. Cette clé privée est à son tour protégée par DPAPI sur le client, ce qui a pour effet de protéger ces secrets à l’aide d’une clé dérivée du mot de passe de l’utilisateur. Sur les appareils mobiles, les clés ne sont utilisées qu’une seule fois. Ainsi, n’étant pas stockées sur les clients, elles ne nécessitent pas de protection sur l’appareil. 
 
 
-## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procédure pas à pas du fonctionnement d’Azure RMS : La première utilisation, protection du contenu, consommation du contenu
+## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procédure pas à pas de fonctionnement de Azure RMS: Première utilisation, protection du contenu, consommation du contenu
 Pour comprendre plus en détails le fonctionnement d’Azure RMS, examinons un flux classique tel qu’il se produit après l’[activation du service Azure Rights Management](activate-service.md), quand un utilisateur utilise le service Rights Management pour la première fois sur son ordinateur Windows (un processus parfois nommé **initialisation de l’environnement utilisateur** ou amorçage), **protège du contenu** (un document ou un e-mail), puis **consomme** (ouvre et utilise) du contenu protégé par quelqu’un d’autre.
 
 Après l'initialisation de l'environnement utilisateur, l'utilisateur peut protéger des documents ou consommer des documents protégés sur cet ordinateur.

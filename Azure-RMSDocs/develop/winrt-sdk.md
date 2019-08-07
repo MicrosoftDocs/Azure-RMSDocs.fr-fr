@@ -13,12 +13,13 @@ ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 57020ff3af69e2711adcc717951b61e48281645a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: cab28423de31e9d8fe3351f9c20d1c06275fa4c3
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182619"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790722"
 ---
 # <a name="windows-store-setup"></a>Configuration pour le Windows Store
 
@@ -53,13 +54,13 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 -   Ouvrez Visual Studio.
 -   Cliquez sur **Fichier**, sur **Nouveau**, puis sur **Projet**.
--   Dans la boîte de dialogue **Nouveau projet**, cliquez sur **Visual C\#**, sélectionnez **Application vide (Windows)**, puis cliquez sur **OK**.
+-   Dans la boîte de dialogue **Nouveau projet**, cliquez sur **Visual C\#** , sélectionnez **Application vide (Windows)** , puis cliquez sur **OK**.
 
     ![Créer un projet](../media/winrtsetup-newproj.png)
 
 -   Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur votre projet, puis sélectionnez **Ajouter une référence** pour ouvrir la boîte de dialogue **Ajouter une référence**.
 
-    ![Ajouter une référence](../media/winrtsetup-addref.png)
+    ![Ajouter la référence](../media/winrtsetup-addref.png)
 
 -   Dans la boîte de dialogue **Ajouter une référence**, cliquez sur **Parcourir**, puis sélectionnez le fichier *Microsoft.RightsManagement.dll* figurant dans le dossier dans lequel vous avez extrait le package du SDK.
 -   **Applications gérées** : pour créer une application gérée, vous devez ajouter cette référence. Sélectionnez **Windows 8.1**-&gt;**Extensions**, puis cochez la case **Package Windows Visual C++ Runtime pour Windows**
@@ -72,7 +73,7 @@ Vous êtes maintenant prêt à créer vos propres applications du Windows Store.
 
 ### <a name="see-also"></a>Voir aussi
 
-[Prise en main](get-started.md)
+[Bien démarrer](get-started.md)
 
 [Nouveautés](release-notes.md)
 

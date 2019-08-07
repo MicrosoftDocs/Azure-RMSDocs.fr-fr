@@ -13,12 +13,13 @@ ms.assetid: 17B05780-B0EF-4805-8304-52DCDEB3AADB
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6843d2298adcc6edee6cf0ddf35a8d8b32101083
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: b396d65b821f258d08e867bad8331b8603d8ccb9
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179710"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788635"
 ---
 # <a name="server"></a>Serveur
 
@@ -37,7 +38,7 @@ Parmi les nombreux services web installés, ceux-ci sont importants pour le dév
 |---------|-------------|
 | Administration | Héberge le site web d’administration qui vous permet de gérer RMS. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences. Vous pouvez utiliser l’API de script Active Directory Rights Management Services pour écrire des scripts d’administration.|
 | Certification de compte |Crée des certificats d’ordinateur qui identifient les ordinateurs dans la hiérarchie de certificats RMS, et des certificats de compte de droits qui associent des utilisateurs à des ordinateurs spécifiques. Pour plus d’informations, consultez Activation d’un ordinateur et Activation d’un utilisateur.<p><p>Ce service s’exécute sur le serveur de certification racine. |
-|Licences | Émet une *licence utilisateur final*. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
+|Gestion des licences | Émet une *licence utilisateur final*. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
 |Visual Studio | Crée une *licence d’émission* qui définit les stratégies pouvant être énumérés dans une licence utilisateur final. Pour plus d’informations, consultez [Création d’une licence d’émission](https://msdn.microsoft.com/library/Aa362355).<p><p>Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
 |Précertification | Permet à un serveur demander un *certificat de compte de droits* pour le compte d’un utilisateur. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|
 |Localisateur de service | Fournit l’URL des services de certification, de gestion des licences et de publication des comptes à Active Directory pour qu’ils puissent être détectés par les clients RMS. Le service s’exécute sur des serveurs de certification racine et sur des serveurs de licences.|

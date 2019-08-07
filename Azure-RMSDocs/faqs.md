@@ -9,14 +9,15 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
+ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: d283821fc61747c2debab1e8e449c7083d7fa439
-ms.sourcegitcommit: 66e0193e053f19edaf80b212aa2308993b3bb9e5
+ms.openlocfilehash: f93b8e8deeb6a1329262cd08f0bb905d53507812
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68730374"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794169"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 

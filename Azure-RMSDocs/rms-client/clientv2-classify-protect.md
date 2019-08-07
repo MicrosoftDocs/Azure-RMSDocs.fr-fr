@@ -4,17 +4,19 @@ description: Instructions sur la classification et la protection de vos document
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.suite: ems
-ms.openlocfilehash: 5202d56476faeb820fab0c6adef31e6cc161a099
-ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
+ms.custom: user
+ms.openlocfilehash: 78907b2819636a5f2c8e66feae2e44a0bd6c5c90
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375486"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808139"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : Classification et protection avec le client d’étiquetage unifié Azure Information Protection
 
@@ -29,7 +31,7 @@ La façon la plus simple de classifier et de protéger vos documents et vos e-ma
 
 Cependant, vous pouvez également classer et protéger les fichiers à l’aide de **l’Explorateur de fichiers**. Cette méthode prend en charge d’autres types de fichiers et est un moyen pratique pour classer et protéger plusieurs fichiers à la fois. Cette méthode prend en charge la protection des documents Office, des fichiers PDF, des fichiers texte et image et d’un large éventail d’autres fichiers. 
 
-Si votre étiquette applique une protection à un document, il n’est pas approprié d’enregistrer un document protégé sur SharePoint ou OneDrive. Ces emplacements ne prennent pas en charge les éléments suivants pour les fichiers protégés : Co-création, Office Online, recherche, aperçu du document, miniature et eDiscovery.
+Si votre étiquette applique une protection à un document, il n’est pas approprié d’enregistrer un document protégé sur SharePoint ou OneDrive. Ces emplacements ne prennent pas en charge les éléments suivants pour les fichiers protégés : Co-édition, Office pour le Web, recherche, aperçu du document, miniature et eDiscovery.
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Partager un fichier en toute sécurité avec des personnes extérieures à votre organisation
 

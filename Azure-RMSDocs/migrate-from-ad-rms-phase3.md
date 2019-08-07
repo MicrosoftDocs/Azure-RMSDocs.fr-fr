@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 521a14606a72bba4871f18a2191f246af1de14f7
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: eb9cfbe808e20f3b65a2d964e4f776f02b4b5ce8
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522084"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793949"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Phase de migration 3 : Configuration côté client
 
@@ -58,11 +60,11 @@ Cette méthode convient uniquement aux clients Windows qui exécutent des applic
     
     Si vous utilisez le rôle de serveur DNS sur Windows Server, vous pouvez utiliser le tableau suivant en guise d’exemple pour spécifier les propriétés d’un enregistrement SRV dans la console Gestionnaire DNS.
     
-    |Champ|Value|  
+    |Champ|Valeur|  
     |-----------|-----------|  
     |**Domaine**|_tcp.rmscluster.contoso.com|  
     |**Service**|_rmsredir|  
-    |**Protocole**|_http|  
+    |**No**|_http|  
     |**Priorité**|0|  
     |**Poids**|0|  
     |**Numéro de port**|80|  
@@ -105,7 +107,7 @@ Le script de configuration du client (Migrate-Client.cmd) configure les paramèt
 
 - Utilisez un script d’ouverture de session si l’utilisateur dispose de privilèges d’administrateur local.
 
-Le script de configuration utilisateur (Migrate-User.cmd) configure les paramètres au niveau de l’utilisateur et nettoie le magasin de licences de client. Cela signifie que ce script doit s’exécuter dans le contexte de l’utilisateur réel. Exemple :
+Le script de configuration utilisateur (Migrate-User.cmd) configure les paramètres au niveau de l’utilisateur et nettoie le magasin de licences de client. Cela signifie que ce script doit s’exécuter dans le contexte de l’utilisateur réel. Par exemple :
 
 - Utilisez un script d’ouverture de session.
 

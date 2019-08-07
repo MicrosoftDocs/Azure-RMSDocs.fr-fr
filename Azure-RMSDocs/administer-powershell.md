@@ -1,6 +1,6 @@
 ---
-title: Administration de la protection d’Azure Information Protection à l’aide de PowerShell
-description: Découvrez comment vous pouvez utiliser le module PowerShell pour le service de protection d’Azure Information Protection, pour administrer ce service pour votre client.
+title: Administration de la protection à partir de Azure Information Protection à l’aide de PowerShell
+description: Découvrez comment vous pouvez utiliser le module PowerShell pour le service de protection à partir de Azure Information Protection, pour administrer ce service pour votre locataire.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,25 +11,26 @@ ms.service: information-protection
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a6aa0b8ecd01df9d012588f8e2b02d13f03cfff6
-ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
+ms.custom: admin
+ms.openlocfilehash: 1cfd0f1337556ae682022ea951194017f94d9bb4
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67544963"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788191"
 ---
-# <a name="administering-protection-from-azure-information-protection-by-using-powershell"></a>Administration de la protection d’Azure Information Protection à l’aide de PowerShell
+# <a name="administering-protection-from-azure-information-protection-by-using-powershell"></a>Administration de la protection à partir de Azure Information Protection à l’aide de PowerShell
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Vous devez utiliser PowerShell pour administrer le service de protection d’Azure Information Protection ? Ce n’est peut-être pas nécessaire si l’ensemble de votre configuration peut être effectuée dans le portail Azure ou dans le Centre d’administration Microsoft 365. Toutefois, vous devez utiliser PowerShell pour certaines configurations avancées et vous pouvez aussi préférer utiliser PowerShell pour avoir un contrôle de ligne de commande et des scripts plus efficaces.
+Avez-vous besoin d’utiliser PowerShell pour administrer le service de protection de Azure Information Protection? Ce n’est peut-être pas nécessaire si l’ensemble de votre configuration peut être effectuée dans le portail Azure ou dans le Centre d’administration Microsoft 365. Toutefois, vous devez utiliser PowerShell pour certaines configurations avancées et vous pouvez aussi préférer utiliser PowerShell pour avoir un contrôle de ligne de commande et des scripts plus efficaces.
 
 Le tableau de la section suivante répertorie certains des scénarios de configuration avancée qui utilisent PowerShell. Lorsque la configuration peut également être effectuée sans utiliser PowerShell, cette information est également incluse dans le tableau.
 
 Pour obtenir la liste complète des applets de commande disponibles pour ce module, avec plus d’informations sur chacune d’elles, consultez [AIPService](/powershell/module/aipservice/?view=azureipps#aipservice).
 
 > [!NOTE]
-> Pour installer ce module PowerShell, consultez [installation du module PowerShell de AIPService](install-powershell.md).
+> Pour installer ce module PowerShell, consultez [installation du module PowerShell AIPService](install-powershell.md).
 
 Outre ce module PowerShell côté service, le client Azure Information Protection installe un module PowerShell supplémentaire, **AzureInformationProtection**. Ce module client prend en charge la classification et la protection de plusieurs fichiers, permettant ainsi, par exemple, de protéger en bloc tous les fichiers d’un dossier. Pour plus d’informations, consultez [Utilisation de PowerShell avec le client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) dans le Guide de l’administrateur.
 

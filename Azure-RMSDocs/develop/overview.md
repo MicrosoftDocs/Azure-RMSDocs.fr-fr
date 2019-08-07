@@ -13,14 +13,15 @@ ms.assetid: 8A13494E-C1D7-407D-BCD1-A406915EA578
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 1e7e2badcd57ce6896c9850729ba546efe22b778
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: b61fba6a678ec625ac2dc7d78c2550cfba87bb60
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60176017"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792114"
 ---
-# <a name="overview"></a>Vue d'ensemble
+# <a name="overview"></a>Présentation
 
 Le SDK Microsoft Rights Management 4.2 est une technologie de protection des informations disponible pour plusieurs plateformes.  Elle fournit un Kit de développement logiciel (SDK), ou framework, conçu pour les ordinateurs clients et les appareils, qui a pour objectif d’aider à protéger l’accès et l’utilisation des informations qui circulent entre les applications compatibles avec la gestion des droits. Les SDK pour ces plateformes fournissent une API simple permettant à un développeur d’applications de protéger ou de consommer du contenu numérique, de récupérer des modèles et d’acquérir des stratégies à partir d’un serveur, ainsi que d’autres tâches de gestion des droits.
 
@@ -52,6 +53,6 @@ Utilisez le guide de [Prise en main](get-started.md) pour commencer votre projet
 ## <a name="related-topics"></a>Rubriques connexes
 
 * [SDK Microsoft Rights Management](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
-* [Prise en main](get-started.md)
+* [Bien démarrer](get-started.md)
 * [Bibliothèque d’authentification Azure AD](https://msdn.microsoft.com/library/jj573266.aspx)
 * [Compte GitHub](https://github.com/AzureAD/)

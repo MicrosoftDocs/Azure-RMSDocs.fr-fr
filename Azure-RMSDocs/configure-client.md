@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4daf9bfa058aa179e9297e439518202cf965f4ac
-ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
+ms.custom: admin
+ms.openlocfilehash: 08fc646d7f216db4db914c3287f8609a916aaf41
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68229853"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789261"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection : Installation et configuration pour les clients
 

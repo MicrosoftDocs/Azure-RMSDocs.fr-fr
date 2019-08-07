@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
+ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e9bb701dcf48aaa514cdf71a6dc6c10c671f618c
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.custom: admin
+ms.openlocfilehash: f24931cbc3a3f91928a6d7190b5e028e6b474202
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535051"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789584"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Paramètres de Registre pour le connecteur Rights Management
 
@@ -29,11 +31,11 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 -   *\<URL_votre_locataire>* est l’URL de votre service Azure Rights Management pour votre locataire Azure Information Protection. Pour obtenir cette valeur :
 
-    1.  Exécutez le [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) applet de commande pour le service Azure Rights Management. Si vous n’avez pas déjà installé le module AIPService, consultez [installation du module PowerShell de AIPService](install-powershell.md).
+    1.  Exécutez l’applet de commande [AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) pour le service Azure Rights Management. Si vous n’avez pas encore installé le module AIPService, consultez [installation du module PowerShell AIPService](install-powershell.md).
 
     2.  Dans le résultat de l'applet de commande, identifiez la valeur **LicensingIntranetDistributionPointUrl**.
 
-        Exemple : **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+        Par exemple :  **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
     3.  À partir de la valeur, supprimez la section **_wmcs/licensing** de cette chaîne. La chaîne restante est l’URL de votre service Azure Rights Management. Dans notre exemple, l’URL du service Azure Rights Management aurait la valeur suivante :
 
@@ -52,9 +54,9 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
-**Valeur :** Par défaut
+**Value :** Default
 
 **Données :** https:// *\<URL_votre_locataire>* /_wmcs/certification
 
@@ -62,9 +64,9 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
-**Valeur :** Par défaut
+**Value :** Default
 
 **Données :** https:// *\<URL_votre_locataire>* /_wmcs/Licensing
 
@@ -72,7 +74,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\CertificationServerRedirection
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
 **Valeur :** https:// *\<URL_votre_locataire>*
 
@@ -87,7 +89,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
 **Valeur :** https:// *<\URL_votre_locataire>*
 
@@ -103,9 +105,9 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
-**Valeur :** Par défaut
+**Value :** Default
 
 **Données :** https:// *<\URL_votre_locataire>* /_wmcs/certification
 
@@ -113,9 +115,9 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
-**Valeur :** Par défaut
+**Value :** Default
 
 **Données :** https:// *<\URL_votre_locataire>* /_wmcs/Licensing
 
@@ -123,7 +125,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\CertificationServerRedirection
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
 **Valeur :** https:// *<\URL_votre_locataire>*
 
@@ -137,7 +139,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
 **Valeur :** https:// *<\URL_votre_locataire>*
 
@@ -152,7 +154,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
 **Valeur :** https:// *<\URL_votre_locataire>* /_wmcs/licensing
 
@@ -167,9 +169,9 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
-**Valeur :** Par défaut
+**Value :** Default
 
 **Données :** L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et le connecteur RMS :
 
@@ -181,9 +183,9 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
-**Valeur :** Par défaut
+**Value :** Default
 
 
 **Données :** L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et le connecteur RMS :
@@ -199,9 +201,9 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
-**Valeur :** Par défaut
+**Value :** Default
 
 **Données :** http:// *</FQDN_connecteur*/_wmcs/licensing
 
@@ -209,9 +211,9 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Chemin du Registre :** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
-**Valeur :** Par défaut
+**Value :** Default
 
 **Données :** http:// *</FQDN_connecteur>* /_wmcs/certification
 

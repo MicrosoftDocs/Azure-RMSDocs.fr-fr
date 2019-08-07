@@ -4,20 +4,20 @@ description: Certaines questions fréquentes sur le service de protection des do
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.custom: askipteam
+ms.custom: admin
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6507d040fec9bf7f93037ae07fa8ecce6d627e0e
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.openlocfilehash: c141b70bf775787620761dd93c78a6c4dded7faf
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521132"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808073"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
@@ -80,7 +80,7 @@ Si vous avez déjà configuré un groupe pour les autorisations nécessaires, vo
 
 Si le document est protégé au moyen d’autorisations personnalisées, vous ne pouvez pas changer les autorisations du document existant. Vous devez reprotéger le document et spécifier tous les utilisateurs et droits d’utilisation exigés pour cette nouvelle version du document. Pour reprotéger un document protégé, vous devez avoir le droit d’utilisation Contrôle total.
 
-Conseil : Pour vérifier si un document a été protégé avec un modèle ou une autorisation personnalisée, utilisez l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus). Vous verrez systématiquement une description de modèle **Accès limité** pour les autorisations personnalisées, avec un ID de modèle unique qui ne s’affiche pas quand vous exécutez [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate).
+Conseil : Pour vérifier si un document a été protégé avec un modèle ou une autorisation personnalisée, utilisez l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus). Vous verrez systématiquement une description de modèle **Accès limité** pour les autorisations personnalisées, avec un ID de modèle unique qui ne s’affiche pas quand vous exécutez [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate).
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>J’ai un déploiement hybride d’Exchange avec certains utilisateurs sur Exchange Online et d’autres utilisateurs sur Exchange Server. Est-ce compatible avec Azure RMS ?
 Absolument et l’avantage est que les utilisateurs peuvent protéger et utiliser sans problème des e-mails et pièces jointes entre les deux déploiements Exchange. Pour cette configuration, [activez Azure RMS](activate-service.md) et [activez la Gestion des droits relatifs à l’information (IRM) pour Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), puis [déployez et configurez le connecteur RMS](deploy-rms-connector.md) pour Exchange Server.
@@ -89,7 +89,7 @@ Absolument et l’avantage est que les utilisateurs peuvent protéger et utilise
 Non, vous gardez toujours le contrôle de vos données et pouvez continuer à y accéder, même si vous décidez de ne plus utiliser le service Azure Rights Management. Pour plus d’informations, consultez [Désaffectation et désactivation d’Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Puis-je contrôler les utilisateurs pouvant utiliser Azure RMS pour protéger du contenu ?
-Oui, le service Azure Rights Management dispose de contrôles d’intégration d’utilisateur pour ce scénario. Pour plus d’informations, consultez le [configuration des contrôles d’intégration pour un déploiement échelonné](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) section dans le [activation du service de protection d’Azure Information Protection](activate-service.md) article.
+Oui, le service Azure Rights Management dispose de contrôles d’intégration d’utilisateur pour ce scénario. Pour plus d’informations, consultez la section [Configuration des contrôles d’intégration pour un déploiement échelonné](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) dans l’article [activation du service de protection à partir de Azure information protection](activate-service.md) .
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>Puis-je empêcher des utilisateurs de partager des documents protégés avec des organisations spécifiques ?
 L’un des avantages majeurs de l’utilisation du service Azure Rights Management pour la protection des données est qu’il prend en charge la collaboration interentreprises sans que vous soyez obligé de configurer des approbations explicites pour chaque organisation partenaire, car Azure AD se charge de l’authentification à votre place.
@@ -116,9 +116,9 @@ Notez que si vous avez des étiquettes Azure Information Protection, vous devez 
 
 Vous pouvez aussi ajouter des utilisateurs externes aux modèles personnalisés (et étiquettes) à l’aide de PowerShell. Cette configuration vous oblige à utiliser un objet de définition de droits pour mettre à jour votre modèle :
 
-1. Spécifiez les adresses e-mail externes et leurs droits dans un objet de définition de droits, à l’aide de la [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) applet de commande pour créer une variable.
+1. Spécifiez les adresses de messagerie externes et leurs droits dans un objet de définition de droits, à l’aide de l’applet de commande [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) pour créer une variable.
 
-2. Fournissez cette variable au paramètre RightsDefinition avec le [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) applet de commande.
+2. Fournissez cette variable au paramètre RightsDefinition avec l’applet de commande [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) .
 
     Lorsque vous ajoutez des utilisateurs à un modèle existant, vous devez définir des objets de définition de droits pour les utilisateurs existants dans les modèles, ainsi que pour les nouveaux utilisateurs. Pour ce scénario, l’**Exemple 3 : Ajouter de nouveaux utilisateurs et de nouveaux droits à un modèle personnalisé** de la section [Exemples](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) pour l’applet de commande peut vous être utile.
 
@@ -173,7 +173,7 @@ De la même manière qu’un administrateur de site SharePoint active et configu
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Avez-vous des conseils ou des astuces pour réussir le déploiement ?
 
-Une fois que la supervision de nombreux déploiements et écouté nos clients, partenaires, consultants et ingénieurs du support technique un des conseils plus importants que nous pouvons passer à partir de rencontrer : **Concevoir et déployer des stratégies de droits simples**.
+Après avoir vu de nombreux déploiements et écouté nos clients, partenaires, consultants et ingénieurs du support technique, l’un des plus grands conseils que nous pouvons passer de l’expérience: **Concevoir et déployer des stratégies de droits simples**.
 
 Puisqu’Azure Information Protection permet de partager des fichiers en toute sécurité, vous pouvez faire preuve d’ambition concernant la portée de la protection de vos données. Soyez prudent quand vous configurez les restrictions des droits d’utilisation. Pour de nombreuses organisations, la meilleure chose à faire est d’empêcher la fuite des données en limitant l’accès aux seuls membres de votre organisation. Bien sûr, vous pouvez être bien plus précis si vous devez empêcher des personnes d’imprimer, d’éditer, etc. Appliquez néanmoins les restrictions les plus fortes à titre exceptionnel pour les documents nécessitant réellement un niveau de sécurité élevé. Au lieu d’implémenter ces droits d’utilisation plus restrictifs dès le premier jour, adoptez une approche plus progressive.
 
@@ -191,13 +191,13 @@ L’utilisateur qui a protégé le document, [l’émetteur Rights Management](c
 Pour un locataire, la période de validité par défaut d’une licence d’utilisation est de 30 jours. Vous pouvez remplacer ce paramètre par un paramètre plus restrictif dans une étiquette ou un modèle. Pour plus d’informations sur la licence d’utilisation et sa configuration, consultez la documentation [Licence d’utilisation Rights Management](configure-usage-rights.md#rights-management-use-license).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Est-ce que Rights Management peut empêcher les captures d’écran ?
-En n’accordant pas le [droit d’utilisation](configure-usage-rights.md) **Copy**, Rights Management peut empêcher des captures d’écran de nombreux outils de capture écran couramment utilisés sur les plateformes Windows (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) et Android. Toutefois, appareils iOS et Mac n’autorisent aucune application à empêcher les captures d’écran. En outre, les navigateurs sur n’importe quel appareil ne peuvent pas empêcher les captures d’écran. Cela inclut Outlook sur le web et Office Online.
+En n’accordant pas le [droit d’utilisation](configure-usage-rights.md) **Copy**, Rights Management peut empêcher des captures d’écran de nombreux outils de capture écran couramment utilisés sur les plateformes Windows (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) et Android. Toutefois, appareils iOS et Mac n’autorisent aucune application à empêcher les captures d’écran. En outre, les navigateurs sur n’importe quel appareil ne peuvent pas empêcher les captures d’écran. L’utilisation du navigateur comprend Outlook sur le Web et Office pour le Web.
 
-La possibilité d’empêcher les captures d’écran peut également aider à éviter la divulgation accidentelle ou involontaire de renseignements confidentiels ou sensibles. Mais il existe plusieurs façons de partager des données qui sont affichées sur un écran, et en prenant une capture d’écran n'est qu’une seule méthode. Par exemple, un utilisateur désireux de partager des informations affichées peut parfaitement les photographier avec son téléphone, recopier les données ou simplement les communiquer verbalement à un tiers.
+La possibilité d’empêcher les captures d’écran peut également aider à éviter la divulgation accidentelle ou involontaire de renseignements confidentiels ou sensibles. Mais il existe de nombreuses façons pour un utilisateur de partager des données affichées sur un écran, et la capture d’écran n’est qu’une méthode. Par exemple, un utilisateur désireux de partager des informations affichées peut parfaitement les photographier avec son téléphone, recopier les données ou simplement les communiquer verbalement à un tiers.
 
 Comme le montrent ces exemples, même si la totalité des plateformes et logiciels prenaient en charge les API de Rights Management pour bloquer les captures d’écran, la technologie seule ne peut pas toujours empêcher des utilisateurs de partager des données qu’ils ne devraient pas. Même si Rights Management peut contribuer à protéger vos données importantes au moyen de stratégies d’autorisation et d’utilisation, cette solution de gestion des droits d’entreprise doit être assortie d’autres moyens de contrôle. Par exemple, vous pouvez mettre en place une sécurité physique, surveiller et soumettre à un contrôle strict les personnes autorisées à accéder aux données de votre organisation et investir dans la formation pour sensibiliser les utilisateurs à la question du partage de données.
 
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>Quelle différence y a-t-il entre un utilisateur qui protège un e-mail avec l’option Ne pas transférer et un modèle qui n’inclut pas de droit de transfert ?
 
-En dépit de son nom et de son apparence, l’option **Ne pas transférer** n’est ni le contraire du droit de transfert, ni un modèle. Il s’agit en fait d’un ensemble de droits qui incluent la restriction de copier, imprimer et enregistrer des pièces jointes, outre la restriction de transfert des e-mails. Les droits sont appliqués dynamiquement aux utilisateurs par le biais des destinataires choisis et non pas statiquement attribués par l’administrateur. Pour plus d’informations, consultez le [option ne pas transférer pour les e-mails](configure-usage-rights.md#do-not-forward-option-for-emails) section [configuration des droits d’utilisation pour Azure Information Protection](configure-usage-rights.md).
+En dépit de son nom et de son apparence, l’option **Ne pas transférer** n’est ni le contraire du droit de transfert, ni un modèle. Il s’agit en fait d’un ensemble de droits qui incluent la restriction de copier, imprimer et enregistrer des pièces jointes, outre la restriction de transfert des e-mails. Les droits sont appliqués dynamiquement aux utilisateurs par le biais des destinataires choisis et non pas statiquement attribués par l’administrateur. Pour plus d’informations, consultez la section [option ne pas transférer pour les e-mails](configure-usage-rights.md#do-not-forward-option-for-emails) dans [Configuration des droits d’utilisation pour Azure information protection](configure-usage-rights.md).
 

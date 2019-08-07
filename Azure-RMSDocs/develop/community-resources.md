@@ -13,12 +13,13 @@ ms.assetid: e3bdaa6d-e8ca-421a-a429-553bfc54b78b
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 37bdc6e78089ce5e3e4c3072e9804e624bdaaa2b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 6a58d8b9b1a445a8a41ba428ea1e40af6989dbf9
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179002"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788559"
 ---
 # <a name="community-resources"></a>Ressources de la communauté
 

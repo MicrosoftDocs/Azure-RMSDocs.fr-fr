@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1d9e071f931a09d4342759916e3596548014debf
-ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
+ms.custom: user
+ms.openlocfilehash: 9c51fadc644288e86413d94d5d88f3484eb023f6
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68229789"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792906"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Bien démarrer avec l’application Microsoft Azure Information Protection pour iOS et Android
 

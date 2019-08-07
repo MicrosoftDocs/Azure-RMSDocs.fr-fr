@@ -9,14 +9,15 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
+ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 9900f16e91b818b9e46ca8ea3b241b3aec4d4d5d
-ms.sourcegitcommit: 2f15ef5f4587a6363314e17a1c24658493f4bb73
+ms.openlocfilehash: cfe7d97bf7140b8f48f3f32b1d1f7a88de5ca933
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68658357"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789508"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 

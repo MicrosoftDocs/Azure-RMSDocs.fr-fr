@@ -13,12 +13,13 @@ ms.assetid: ae67523a-c094-44da-86b8-739bedba7111
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 3170b34bdd850cb7353e74fdf7c5623a4308e63c
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 6eea940fa139e869708950efe0019fa342987458
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178911"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791132"
 ---
 # <a name="developer-guidance"></a>Guide pour développeurs
 Le but principal du SDK Microsoft Rights Management Services 4.2 est de vous aider à créer de la façon la plus simple possible des applications compatibles AD RMS tirant parti d’Active Directory Rights Management Services (AD RMS).

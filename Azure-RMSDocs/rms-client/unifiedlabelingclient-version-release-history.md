@@ -4,18 +4,20 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/22/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: f60d75655e24e7888ae45111d2b3538a8a12c288
-ms.sourcegitcommit: 6c3681cec0f807c6af031db67242ff01a99cd57b
+ms.custom: admin
+ms.openlocfilehash: 565b9d061bf148d0b1e6e2ef2ea45eb93c6cb6ec
+ms.sourcegitcommit: 96082d61b77f44943509311e2ac0943f970ae4e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68411700"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68820709"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -50,9 +52,21 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 
 Ce client remplace le client Azure Information Protection (Classic). Pour comparer les fonctionnalités et les fonctionnalités avec le client classique, consultez [comparer les clients](use-client.md#compare-the-clients).
 
+## <a name="version-22190"></a>Version 2.2.19.0
+
+**Date de publication** : 08/06/2019
+
+**Céder**
+
+- Le client peut télécharger sa stratégie et afficher les étiquettes de sensibilité actuelles. Ce correctif est nécessaire après la mise à niveau à partir d’une version précédente et vous n’avez pas configuré de types d’informations personnalisées dans votre centre d’étiquetage.
+
+- Améliorations générales des performances et de la stabilité.
+
 ## <a name="version-22140"></a>Version 2.2.14.0
 
 **Date de publication** : 07/15/2019
+
+Pris en charge jusqu’à 04/06/2020
 
 **Nouvelles fonctionnalités :**
 

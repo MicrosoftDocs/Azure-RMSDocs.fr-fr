@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
+ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aedcee5bef5050e01ab37d6c1ee4f2555d732bf4
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 54e0a7470681608bcd38b3a0211718de6059d6e4
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521972"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793903"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Surveiller le connecteur Azure Rights Management
 
@@ -165,7 +167,7 @@ Quand vous installez le connecteur RMS, il crée automatiquement les compteurs d
 
 Par exemple, vous pouvez subir régulièrement des retards lorsque les documents ou les e-mails sont protégés. Vous pouvez également subir des retards à l’ouverture des documents et des e-mails protégés. Dans ce cas, les compteurs de performances peuvent vous aider à déterminer si les retards sont dus au temps de traitement du connecteur, au temps de traitement du service Azure Rights Management ou à un délai réseau. 
 
-Pour vous permettre d’identifier l’origine du retard, recherchez les compteurs qui incluent des valeurs moyennes pour le **Temps de traitement du connecteur**, le **Temps de réponse du service** et le **Temps de réponse du connecteur**. Exemple : **Temps de réponse moyen du connecteur pour les demandes de licences par lot réussies**.
+Pour vous permettre d’identifier l’origine du retard, recherchez les compteurs qui incluent des valeurs moyennes pour le **Temps de traitement du connecteur**, le **Temps de réponse du service** et le **Temps de réponse du connecteur**. Par exemple :  **Temps de réponse moyen du connecteur pour les demandes de licences par lot réussies**.
 
 Si vous avez récemment ajouté des comptes de serveur pour utiliser le connecteur, le compteur à consulter est **Durée depuis la dernière mise à jour de la stratégie d’autorisation** pour vérifier que le connecteur a téléchargé la liste depuis que vous l’avez mise à jour, ou déterminer si vous devez attendre un peu plus longtemps (jusqu’à 15 minutes).
 
@@ -173,7 +175,7 @@ Si vous avez récemment ajouté des comptes de serveur pour utiliser le connecte
 
 La journalisation de l’utilisation vous aide à identifier quand les e-mails et les documents sont protégés et consommés. Lorsque le connecteur RMS est utilisé pour protéger et utiliser du contenu, le champ ID d’utilisateur des journaux contient le nom de principal du service : **Aadrm_S-1-7-0**. Ce nom est automatiquement créé pour le connecteur RMS.
 
-Pour plus d’informations sur la journalisation de l’utilisation, consultez [journalisation et analyse de l’utilisation de la protection d’Azure Information Protection](log-analyze-usage.md).
+Pour plus d’informations sur la journalisation de l’utilisation, consultez [journalisation et analyse de l’utilisation de la protection à partir de Azure information protection](log-analyze-usage.md).
 
 Si vous avez besoin d’une journalisation plus détaillée à des fins de diagnostic, vous pouvez utiliser [Debugview](https://go.microsoft.com/fwlink/?LinkID=309277) dans Windows Sysinternals. Activez le traçage pour le connecteur RMS en modifiant le fichier web.config du site par défaut dans IIS :
 

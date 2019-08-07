@@ -13,12 +13,13 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: e3bce5ec86f8c655ca6f37a108f007d50387c2d2
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 8a576565472327f0c090c3168662f16299d4b61f
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179470"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792669"
 ---
 # <a name="android-setup"></a>Configuration pour Android
 
@@ -26,7 +27,7 @@ Les applications Android peuvent utiliser Microsoft Rights Management SDK 4.2 p
 
 Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
 
--   [Prérequis](#prerequisites)
+-   [Composants requis](#prerequisites)
 -   [Facultatif](#optional)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
@@ -141,7 +142,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 ### <a name="see-also"></a>Voir aussi
 
-[Prise en main](get-started.md)
+[Bien démarrer](get-started.md)
 
 [Nouveautés](release-notes.md)
 

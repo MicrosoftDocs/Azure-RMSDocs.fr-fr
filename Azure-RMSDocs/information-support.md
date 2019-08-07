@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
+ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
+ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: c5ce1d092297e713d46dc3df507bcc048fd173e3
-ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
+ms.openlocfilehash: 9364856f9c84545d8094a4cb6057cd3422f2f1d7
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68446772"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788406"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 

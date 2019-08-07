@@ -13,12 +13,13 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 9874b2d07930b80f8d4ef291f83ae16356a3c191
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: d36938daf4dbcbe86331ec6852dfe4ecb04a2959
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178554"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792403"
 ---
 # <a name="configure-visual-studio"></a>Configurer Visual Studio
 
@@ -30,7 +31,7 @@ Cette rubrique contient des instructions sur la configuration d’un projet Visu
 
 **Instructions**
 
-### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>Étape 1 : Configurer un projet Visual Studio pour utiliser le SDK RMS 2.1
+### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>Étape 1 : Configurer un projet Visual Studio pour utiliser le SDK RMS 2.1
 
 Ces instructions sont spécifiques à Microsoft Visual Studio 2010. Si vous utilisez une autre version de Microsoft Visual Studio, vos boîtes de dialogue de paramètres peuvent être légèrement différentes.
 
@@ -38,13 +39,13 @@ Ces instructions concernent la création d’une application 32 bits native.
 
 1.  Ajoutez le répertoire Include du SDK RMS 2.1 à votre projet Visual Studio 2010.
 
-    Sous **Propriétés de configuration**, sélectionnez **Répertoires VC++**, puis ajoutez le répertoire Include du SDK RMS 2.1 (**$(MSIPCSDKDIR)\\inc**) au champ **Répertoires Include**.
+    Sous **Propriétés de configuration**, sélectionnez **Répertoires VC++** , puis ajoutez le répertoire Include du SDK RMS 2.1 ( **$(MSIPCSDKDIR)\\inc**) au champ **Répertoires Include**.
 
     ![Propriétés de configuration - Champ Répertoires Include](../media/include_directories.png)
 
 2.  Ajoutez le répertoire des bibliothèques du SDK RMS 2.1 à votre projet Visual Studio 2010.
 
-    Sous **Propriétés de configuration**, sélectionnez **Répertoires VC++**, puis ajoutez le répertoire des bibliothèques du SDK RMS 2.1 au champ **Répertoires de bibliothèques** de votre plateforme.
+    Sous **Propriétés de configuration**, sélectionnez **Répertoires VC++** , puis ajoutez le répertoire des bibliothèques du SDK RMS 2.1 au champ **Répertoires de bibliothèques** de votre plateforme.
 
     -   Pour Win32, utilisez **$(MSIPCSDKDIR)\\lib**
     -   Pour x64, utilisez **$(MSIPCSDKDIR)\\lib\\x64**

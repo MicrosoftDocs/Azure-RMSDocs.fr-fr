@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2ffe76069e4f36fb4c21fdd8edaeb611635b0abf
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 9c57385119f8bad8ce6c98c0d3c9bb6cee4c3118
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521903"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793827"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 
@@ -78,7 +79,7 @@ Pour affecter des droits d’utilisation et des contrôles d’accès, et config
 
     - Pour Azure AD : [Ajouter un nom de domaine personnalisé à Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Pour Office 365 : [Ajouter un domaine à Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - Pour Office 365: [Ajouter un domaine à Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - L’attribut **userPrincipalName d’Azure AD** est utilisé uniquement quand un compte dans votre locataire n’a aucune valeur dans l’attribut proxyAddresses d’Azure AD. Par exemple, vous créez un utilisateur dans le portail Azure, ou créez un utilisateur pour Office 365 qui n’a pas de boîte aux lettres.
 
@@ -215,5 +216,5 @@ Après avoir confirmé que vos utilisateurs et groupes peuvent être utilisés a
 
 - Si votre abonnement a été obtenu avant février 2018 : Vous devez activer le service vous-même. 
 
-Pour plus d’informations, notamment sur la vérification de l’état d’activation, consultez [activation du service de protection d’Azure Information Protection](./activate-service.md).
+Pour plus d’informations, notamment la vérification de l’état d’activation, voir [activation du service de protection à partir de Azure information protection](./activate-service.md).
 

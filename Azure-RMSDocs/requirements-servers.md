@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
+ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e94d624c1fa59d44399b9c83959534d75c912d6b
-ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
+ms.custom: admin
+ms.openlocfilehash: bcabc0b88a43caadbe922b8a35cec8cdb4884a4a
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67544989"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793722"
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Serveurs locaux prenant en charge la protection des données Azure Rights Management
 
@@ -48,7 +50,7 @@ Pour utiliser ce connecteur, vous devez configurer la synchronisation des annuai
 
     -   Windows Server 2012 R2
 
-    -   Windows Server 2012
+    -   Windows Server 2012
 
     > [!NOTE]
     > Les serveurs de fichiers qui exécutent Windows Server 2008 R2 n’ont pas d’action de tâche de gestion de fichiers intégrée pour appliquer la protection de Rights Management. Par conséquent, vous ne pouvez pas utiliser le connecteur Rights Management pour ce scénario. En revanche, vous pouvez utiliser l’infrastructure de classification des fichiers et Azure RMS sur ces systèmes d’exploitation si vous configurez une tâche de gestion de fichiers personnalisée de sorte qu’elle exécute un exécutable ou un script capable de protéger les fichiers à l’aide d’Azure RMS. Par exemple, un script Windows PowerShell qui utilise les [applets de commande AzureInformationProtection](/powershell/azureinformationprotection/vlatest/aip).

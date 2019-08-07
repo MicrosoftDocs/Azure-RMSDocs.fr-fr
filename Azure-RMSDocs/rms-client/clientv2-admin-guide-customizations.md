@@ -8,14 +8,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
+ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 60debc8e04691dcb977da7d9a8c29bba7ae659ce
-ms.sourcegitcommit: 3933f968a952fb1d7c73c0f6a4f42a2a429b863f
+ms.custom: admin
+ms.openlocfilehash: 3607fc65a1c1c2dc80768b777d98473fd1c6c88c
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68684660"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790185"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 

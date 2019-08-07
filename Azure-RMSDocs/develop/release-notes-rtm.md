@@ -13,12 +13,13 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 6e962a2e9727048a60e74e811e964e6a0a9bc82d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 6fdef7a9d92880fa6754ffc7b2f889acdecd0bfc
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60176044"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791189"
 ---
 # <a name="release-notes"></a>Notes de publication
 
@@ -153,7 +154,7 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 
     **Solution**: si vous souhaitez utiliser le fichier Ipcsecproc\*isv.dll pour une architecture différente (par exemple, vous avez installé le SDK 64 bits sur un ordinateur 64 bits et vous souhaitez maintenant effectuer le déploiement sur un ordinateur 32 bits qui nécessite Ipcsecproc\*isv.dll), vous devez installer le SDK 32 bits sur un autre ordinateur et copier les fichiers Ipcsecproc\*isv.dll à cet emplacement à partir du dossier « %PROGRAMFILES%\\Microsoft Information Protection And Control » (l’emplacement par défaut ou celui où vous avez choisi d’installer le SDK).
 
-## <a name="frequently-asked-questions"></a>Forum aux questions
+## <a name="frequently-asked-questions"></a>Questions fréquentes (FAQ)
 
 **Q** : comment se comporte la langue par défaut avec des fonctions qui prennent un paramètre LCID ?
 

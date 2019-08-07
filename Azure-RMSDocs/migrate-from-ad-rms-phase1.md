@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bd2ad07e428dabe694701ffbd807fa12ee8e01cb
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 608419325f3a38f607577ee0fd1cdcdeee40d212
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520928"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790616"
 ---
 # <a name="migration-phase-1---preparation"></a>Phase de migration 1 : Préparation
 
@@ -25,15 +27,15 @@ ms.locfileid: "67520928"
 Utilisez les informations suivantes pour la Phase 1 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent les étapes 1 à 3 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) et préparent votre environnement pour la migration sans aucun impact sur vos utilisateurs.
 
 
-## <a name="step-1-install-the-aipservice-powershell-module-and-identify-your-tenant-url"></a>Étape 1 : Installer le module PowerShell de AIPService et identifier l’URL de votre client
+## <a name="step-1-install-the-aipservice-powershell-module-and-identify-your-tenant-url"></a>Étape 1 : Installer le module PowerShell AIPService et identifier l’URL de votre locataire
 
-Installer le module AIPService afin que vous pouvez configurer et gérer le service qui assure la protection des données pour Azure Information Protection.
+Installez le module AIPService afin de pouvoir configurer et gérer le service qui fournit la protection des données pour Azure Information Protection.
 
-Pour obtenir des instructions, consultez [installation du module PowerShell de AIPService](./install-powershell.md).
+Pour obtenir des instructions, consultez [installation du module PowerShell AIPService](./install-powershell.md).
 
 Pour suivre certaines des instructions de migration, vous devez connaître l’URL de service Azure Rights Management de votre locataire pour pouvoir la fournir quand vous voyez des références à *\<URL de votre locataire\>* . Votre URL de service Azure Rights Management a le format suivant : **{GUID}.rms.[Region].aadrm.com**.
 
-Exemple : **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+Par exemple :  **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 ### <a name="to-identify-your-azure-rights-management-service-url"></a>Pour identifier l’URL du service Azure Rights Management
 
@@ -122,7 +124,7 @@ Valeurs de Registre pour Exchange 2010 :
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
-**Type :** Reg_SZ
+**Type :** Reg_SZ
 
 **Valeur :** https://\<URL de votre locataire\>/_wmcs/licensing
 

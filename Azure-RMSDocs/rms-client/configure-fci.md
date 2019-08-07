@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
+ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3266448b019b1cd9d9aadf4a4297877bd31d6aaa
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: e922ba01dfb358868a85be5631a962d3d7fd1ad1
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521522"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793296"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
@@ -56,7 +58,7 @@ Conditions préalables pour ces instructions :
     
 - Vous avez synchronisé vos comptes d’utilisateur Active Directory locaux avec Azure Active Directory ou Office 365, dont leurs adresses e-mail. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et le service Azure Rights Management. Si vous n’exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l’accès des utilisateurs à ces fichiers soit bloqué. Si vous avez besoin de plus d’informations sur cette exigence, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../prepare.md).
     
-- Ce scénario ne prend pas en charge les modèles départementaux vous devez utiliser un modèle qui n’est pas configuré pour une étendue, ou utiliser le [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) applet de commande et le *EnableInLegacyApps*paramètre.
+- Ce scénario ne prend pas en charge les modèles départementaux. vous devez donc utiliser un modèle qui n’est pas configuré pour une étendue ou utiliser l’applet de commande [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) et le paramètre *du enableinlegacyapps* .
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Instructions de configuration de l’ICF des outils de gestion de ressources pour serveur de fichiers pour la protection Azure Rights Management
 Suivez ces instructions pour protéger automatiquement tous les fichiers figurant dans un dossier, en utilisant un script PowerShell en tant que tâche personnalisée. Exécutez les procédures suivantes, dans l'ordre indiqué :
@@ -146,13 +148,13 @@ Nous pouvons maintenant créer une règle de classification utilisant cette prop
 
         -   **Nom** : Tapez **Classifier pour RMS**
 
-        -   **Activé** : Conservez la valeur par défaut, c'est-à-dire que cette case à cocher est activée.
+        -   **Activé** : Conservez la valeur par défaut, ce qui indique que cette case à cocher est activée.
 
         -   **Description** : Tapez **Classifier tous les fichiers dans le dossier &lt;nom de dossier&gt; pour Rights Management**.
 
             Remplacez *&lt;nom de dossier&gt;* par le nom du dossier choisi. Par exemple, **Classifier tous les fichiers dans le dossier C:\FileShare pour Rights Management**.
 
-        -   **Étendue** : Ajouter le dossier choisi. Par exemple, **C:\FileShare**.
+        -   **Étendue** : Ajoutez le dossier que vous avez choisi. Par exemple, **C:\FileShare**.
 
             N'activez pas les cases à cocher.
 
@@ -170,13 +172,13 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
 -   Sous l'onglet **Classification automatique** :
 
-    -   **Activer la planification fixe** : Activez cette case à cocher.
+    -   **Activer la planification fixe** : Cochez cette case.
 
     -   Configurez la planification pour toutes les règles de classification à exécuter, qui inclut notre nouvelle règle de classification des fichiers avec la propriété RMS.
 
     -   **Autoriser la classification continue de nouveaux fichiers** : Cochez cette case pour que les nouveaux fichiers soient classifiés.
 
-    -   Facultatif : Apporter d’autres modifications souhaitées, telles que la configuration des options pour les rapports et notifications.
+    -   Facultatif : Effectuez toutes les autres modifications souhaitées, telles que la configuration des options pour les rapports et les notifications.
 
 À présent que vous avez terminé la configuration de la classification, vous êtes prêt à configurer une tâche de gestion pour appliquer la protection RMS aux fichiers.
 
@@ -194,7 +196,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
             Remplacez *&lt;nom de dossier&gt;* par le nom du dossier choisi. Par exemple, **Protéger les fichiers dans C:\FileShare avec Rights Management et un modèle à l’aide d’un script Windows PowerShell**.
 
-        -   **Étendue** : Sélectionnez le dossier choisi. Par exemple, **C:\FileShare**.
+        -   **Étendue** : Sélectionnez le dossier que vous avez choisi. Par exemple, **C:\FileShare**.
 
             N'activez pas les cases à cocher.
 
@@ -239,11 +241,11 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
     -   Sous l'onglet **Planifier** :
 
-        -   **Exécuter à** : Configurer la planification de votre choix.
+        -   **Exécuter à** : Configurez votre planification par défaut.
 
             Définissez un temps conséquent pour l'exécution du script. Bien que cette solution protège tous les fichiers du dossier, le script s'exécute une fois pour chacun d'eux à chaque fois. Bien que cela prenne plus de temps que de protéger tous les fichiers en même temps, ce qui est pris en charge le client Azure Information Protection, cette configuration fichier par fichier pour l'ICF est plus puissante. Par exemple, les fichiers protégés peuvent avoir des propriétaires différents (conserver le propriétaire d’origine) quand vous utilisez la variable [Source File Owner Email], et cette action fichier par fichier est nécessaire si vous modifiez ultérieurement la configuration pour protéger les fichiers de façon sélective plutôt que tous les fichiers d’un dossier.
 
-        -   **Exécuter en continu sur les nouveaux fichiers** : Activez cette case à cocher.
+        -   **Exécuter en continu sur les nouveaux fichiers** : Cochez cette case.
 
 ### <a name="test-the-configuration-by-manually-running-the-rule-and-task"></a>Test de la configuration en exécutant manuellement la règle et la tâche
 

@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
+ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ffab556f4179728d29c14d86c1114188c983ee9b
-ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
+ms.custom: admin
+ms.openlocfilehash: 49eec868f5d03f8bc1852f53cab380d8ec149b94
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340709"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790172"
 ---
 # <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Appareils clients prenant en charge la protection des données Azure Rights Management
 

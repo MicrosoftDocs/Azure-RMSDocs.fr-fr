@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
+ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bd7701e9b90f2ebd681dad4516c17d74c000f611
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 5d35fc59ebfa051f3f7644c05527ed75bfe54be7
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521923"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790485"
 ---
-# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gérée par Microsoft : Opérations de cycle de vie de la clé de locataire
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gérée par Microsoft: Opérations de cycle de vie de la clé de locataire
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -46,7 +48,7 @@ Pour renouveler la clé, vous pouvez sélectionner une autre clé gérée par Mi
 
 Si vous avez effectué la migration à partir des services AD RMS (Active Directory Rights Management Services) et que vous avez choisi la topologie de clé gérée par Microsoft pour Azure Information Protection, vous disposez de plusieurs clés gérées par Microsoft. Dans ce scénario, vous avez au moins deux clés gérées par Microsoft pour votre locataire. Au moins une clé a été importée à partir d’AD RMS. Vous disposez également de la clé par défaut qui a été automatiquement créée pour votre locataire Azure Information Protection.
 
-Pour sélectionner une autre clé qui sera votre clé de locataire active pour Azure Information Protection, utilisez la [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) applet de commande à partir du module AIPService. Pour vous aider à identifier la clé à utiliser, utilisez le [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) applet de commande. Vous pouvez identifier la clé par défaut qui a été automatiquement créée pour votre locataire Azure Information Protection en exécutant la commande suivante :
+Pour sélectionner une autre clé comme clé de locataire active pour Azure Information Protection, utilisez l’applet de commande [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) à partir du module AIPService. Pour vous aider à identifier la clé à utiliser, utilisez l’applet de commande [«obtenir-AipServiceKeys»](/powershell/module/aipservice/get-aipservicekeys) . Vous pouvez identifier la clé par défaut qui a été automatiquement créée pour votre locataire Azure Information Protection en exécutant la commande suivante :
 
     (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
@@ -58,29 +60,29 @@ Microsoft se charge de sauvegarder votre clé de locataire. Aucune action n'est 
 ## <a name="export-your-tenant-key"></a>Exportation de votre clé de locataire
 Vous pouvez exporter votre clé de locataire et votre configuration Azure Information Protection en suivant les instructions contenues dans les trois étapes suivantes :
 
-### <a name="step-1-initiate-export"></a>Étape 1 : Initiation d’une exportation
+### <a name="step-1-initiate-export"></a>Étape 1 : Initier l’exportation
 
 - [Contactez le support Microsoft](information-support.md#to-contact-microsoft-support) pour ouvrir un **dossier de support Azure Information Protection dans lequel vous demandez l’exportation d’une clé Azure Information Protection**. Vous devez prouver que vous êtes administrateur de votre locataire Azure Information Protection et comprendre que la confirmation de ce processus prend plusieurs jours. Des frais de prise en charge standard s’appliquent. L’exportation de votre clé de locataire n’est pas un service de support technique gratuit.
 
-### <a name="step-2-wait-for-verification"></a>Étape 2 : Attente de la vérification
+### <a name="step-2-wait-for-verification"></a>Étape 2 : Attendre la vérification
 
 - Microsoft vérifie la légitimité de votre demande d’émission de votre clé de locataire Azure Information Protection. Cela peut prendre jusqu’à trois semaines.
 
-### <a name="step-3-receive-key-instructions-from-css"></a>Étape 3 : Recevez des instructions concernant la clé à partir de CSS
+### <a name="step-3-receive-key-instructions-from-css"></a>Étape 3 : Recevoir des instructions clés de CSS
 
 - Les services de support technique Microsoft vous envoient votre clé de locataire et votre configuration Azure Information Protection sous forme chiffrée dans un fichier protégé par mot de passe. L’extension de nom de fichier est **.tpd**. Pour ce faire, le support technique vous envoie (vous, la personne ayant demandé un export) tout d'abord un outil par e-mail. Vous devez exécuter cet outil à partir d'une invite de commande, comme suit :
 
     ```
     AadrmTpd.exe -createkey
     ```
-    Cette opération génère une paire de clés RSA et enregistre les moitiés publique et privée sous forme de fichiers dans le dossier actuel. Exemple : **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** et **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
+    Cette opération génère une paire de clés RSA et enregistre les moitiés publique et privée sous forme de fichiers dans le dossier actuel. Par exemple :  **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** et **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
-    Répondez à l’e-mail que vous a envoyé le support technique et joignez à celui-ci le fichier portant un nom commençant par **PublicKey**. Le support technique vous envoie ensuite un fichier TPD au format .xml, chiffré à l’aide de votre clé RSA. Copiez ce fichier dans le dossier dans lequel vous avez initialement exécuté l’outil AadrmTpd, puis réexécutez l’outil à l’aide de votre fichier dont le nom commence par **PrivateKey** et du fichier reçu du support technique. Exemple :
+    Répondez à l’e-mail que vous a envoyé le support technique et joignez à celui-ci le fichier portant un nom commençant par **PublicKey**. Le support technique vous envoie ensuite un fichier TPD au format .xml, chiffré à l’aide de votre clé RSA. Copiez ce fichier dans le dossier dans lequel vous avez initialement exécuté l’outil AadrmTpd, puis réexécutez l’outil à l’aide de votre fichier dont le nom commence par **PrivateKey** et du fichier reçu du support technique. Par exemple :
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    La sortie de cette commande doit générer deux fichiers : l’un contient le mot de passe en texte brut pour le TPD protégé par mot de passe, tandis que l’autre contient le TPD protégé par mot de passe lui-même. Les fichiers ont un nouveau GUID, par exemple :
+    La sortie de cette commande doit être de deux fichiers: l’un contient le mot de passe en texte brut pour le TPD protégé par mot de passe, tandis que l’autre contient le TPD protégé par mot de passe lui-même. Les fichiers ont un nouveau GUID, par exemple :
      
   - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 
@@ -88,7 +90,7 @@ Vous pouvez exporter votre clé de locataire et votre configuration Azure Inform
 
     Sauvegardez ces fichiers et stockez-les dans un emplacement sécurisé de façon à pouvoir continuer à déchiffrer le contenu protégé par cette clé de locataire. De plus, si vous migrez vers AD RMS, vous pouvez importer ce fichier de TPD (dont le nom commence par **ExportedTDP**) sur votre serveur AD RMS.
 
-### <a name="step-4-ongoing-protect-your-tenant-key"></a>Étape 4 : En cours : Protéger votre clé de locataire
+### <a name="step-4-ongoing-protect-your-tenant-key"></a>Étape 4 : Normale Protéger votre clé de locataire
 
 Après avoir reçu votre clé de locataire, conservez-la en lieu sûr, car toute personne y ayant accès peut déchiffrer tous les documents qu'elle protège.
 

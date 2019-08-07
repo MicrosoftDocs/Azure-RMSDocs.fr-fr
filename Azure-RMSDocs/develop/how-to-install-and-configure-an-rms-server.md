@@ -13,12 +13,13 @@ ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 62cb99bf583cfc515c5e8c59aac18f0b540cc2a5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 59aa02318a0c6d7ee5e9857bead4c79248546320
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178265"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794107"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Comment : installer, configurer et tester avec un serveur RMS
 
@@ -26,7 +27,7 @@ Cette rubrique décrit les étapes de connexion à un serveur RMS ou à Azure RM
  
 ## <a name="instructions"></a>Instructions
 
-### <a name="step-1-setup-your-rms-server"></a>Étape 1 : Configurer votre serveur RMS
+### <a name="step-1-setup-your-rms-server"></a>Étape 1 : Configurer votre serveur RMS
 
 La procédure suivante vous guide dans la configuration de votre serveur RMS et comprend les sections suivantes :
 
@@ -78,7 +79,7 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
                 ServiceLocation
                   EnterpriseCertification
 
-   **Valeur** : (Par défaut) : [**http|https**]://RMSClusterName/**_wmcs/Certification**
+   **Valeur** : (Par défaut) : [**http|https**]://RMSClusterName/ **_wmcs/Certification**
 
 5. **EnterprisePublishing**
 
@@ -89,7 +90,7 @@ La procédure suivante vous guide dans la configuration de votre serveur RMS et
                 ServiceLocation
                   EnterprisePublishing
                   
-   **Valeur** : (Par défaut) :[**http|https**]://RMSClusterName/**_wmcs/Licensing**
+   **Valeur** : (Par défaut) :[**http|https**]://RMSClusterName/ **_wmcs/Licensing**
 
 > [!NOTE]
 > Par défaut, ces clés n’existent pas dans le Registre et doivent être créées.

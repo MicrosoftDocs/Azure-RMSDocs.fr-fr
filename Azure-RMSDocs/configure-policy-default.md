@@ -8,12 +8,14 @@ ms.date: 07/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: d5cdc73e79891cc1756808d67e16f45796550de5
-ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
+ms.subservice: aiplabels
+ms.custom: admin
+ms.openlocfilehash: 00d9ad80ec87f62743eab116edac64f55ebaf4e9
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375410"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789128"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
@@ -105,7 +107,7 @@ Les autorisations de protection sont celles définies dans le [modèle par défa
 
 Certains paramètres ont été ajoutés après le 31 juillet 2017.
 
-|Paramètre|`Value`|
+|Paramètre|Valeur|
 |-------------------------------|---------------------------|
 |Sélectionner l’étiquette par défaut|Aucun|
 |Envoyer des données d’audit à l’analytique Azure Information Protection|Désactivé|

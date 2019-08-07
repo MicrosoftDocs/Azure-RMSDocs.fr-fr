@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
+ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cf6ff8129c7737b782b9ccd004089b99475a9311
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 743b9dc75a5cd39832ef02e0dc0730fc23fd14b9
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521616"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789696"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
@@ -24,7 +26,7 @@ ms.locfileid: "67521616"
 
 Lorsque vous utilisez Azure Information Protection, vous pouvez protéger vos documents sans pour autant devoir renoncer à la collaboration avec des utilisateurs autorisés. Les documents créés par un utilisateur puis partagés avec d’autres afin que ceux-ci puissent les consulter et les modifier sont en majorité des documents Office Word, Excel et PowerPoint. Ces documents prennent en charge la protection native, autrement dit, en plus des fonctionnalités de protection que sont le chiffrement et l’autorisation, ils prennent également en charge l’autorisation restreinte pour un contrôle plus précis. 
 
-Ces autorisations sont appelées des droits d’utilisation et incluent des autorisations comme afficher, modifier et imprimer. Vous pouvez définir des droits d’utilisation individuels lorsqu’un document est protégé, ou vous pouvez définir un groupe de droits d’utilisation, appelé niveau d’autorisation. Les niveaux d’autorisation facilitent la sélection de droits d’utilisation qui sont généralement utilisés ensemble, par exemple, réviseur et coauteur. Pour plus d’informations sur les droits d’utilisation et les niveaux d’autorisation, consultez [configuration des droits d’utilisation pour Azure Information Protection](configure-usage-rights.md).
+Ces autorisations sont appelées des droits d’utilisation et incluent des autorisations comme afficher, modifier et imprimer. Vous pouvez définir des droits d’utilisation individuels lorsqu’un document est protégé, ou vous pouvez définir un groupe de droits d’utilisation, appelé niveau d’autorisation. Les niveaux d’autorisation facilitent la sélection de droits d’utilisation qui sont généralement utilisés ensemble, par exemple, réviseur et coauteur. Pour plus d’informations sur les droits d’utilisation et les niveaux d’autorisation, consultez [Configuration des droits d’utilisation pour Azure information protection](configure-usage-rights.md).
 
 Lorsque vous configurez ces autorisations, vous pouvez spécifier les utilisateurs auxquels elles s’adressent :
 
@@ -93,7 +95,7 @@ Partagez le document protégé en le joignant à un e-mail et envoyez-le aux per
 
 ## <a name="opening-and-editing-the-protected-document"></a>Ouverture et modification du document protégé
 
-Lorsque les utilisateurs que vous avez autorisés ouvrent le document en vue de le modifier, le document s’ouvre avec une bannière d’informations qui les avertit que les autorisations sont limitées. Exemple :
+Lorsque les utilisateurs que vous avez autorisés ouvrent le document en vue de le modifier, le document s’ouvre avec une bannière d’informations qui les avertit que les autorisations sont limitées. Par exemple :
 
 ![Exemple de bannière d’informations Azure Information Protection pour les autorisations](./media/example-restricted-access-banner.png)
 
@@ -130,7 +132,7 @@ En outre, les scénarios suivants prennent en charge l’affichage de documents�
 
 - Un navigateur peut ouvrir des pièces jointes protégées lorsque des fournisseurs de réseaux sociaux et des codes secrets à usage unique sont utilisés pour l’authentification avec Exchange Online et avec les nouvelles fonctionnalités d’Office 365 Message Encryption. 
 
-|Plateformes pour l’affichage et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />Compte Microsoft|
+|Plateformes pour l’affichage et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />Compte Microsoft|
 |---------------|----------|-----------|-----------|
 |Windows|Oui [[1]](#footnote-1)|Oui [[2]](#footnote-2)|
 |iOS|Oui [[1]](#footnote-1)|Non|

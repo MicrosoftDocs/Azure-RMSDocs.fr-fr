@@ -13,12 +13,13 @@ ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 42ef57b73dfbbd49620e406a296df400ea3d99cf
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 08981ab13862eed815609eaad4c6733ec205e0a1
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181038"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792093"
 ---
 # <a name="windows-phone-setup"></a>Configuration pour Windows Phone
 
@@ -27,7 +28,7 @@ Les applications Windows Phone peuvent utiliser Microsoft Rights Management SDK�
 
 Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
 
--   [Prérequis](#prerequisites)
+-   [Composants requis](#prerequisites)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
@@ -51,7 +52,7 @@ Passez en revue les informations contenues dans le guide de [développement Wind
 
 -   Ouvrez *Visual Studio*.
 -   Cliquez sur **Fichier**. Dans le menu **Fichier**, cliquez sur **Nouveau**, puis sur **Projet**.
--   Dans la boîte de dialogue **Nouveau projet**, sélectionnez **Visual C\#**, **Application vide (Windows Phone)**, puis cliquez sur **OK**.
+-   Dans la boîte de dialogue **Nouveau projet**, sélectionnez **Visual C\#** , **Application vide (Windows Phone)** , puis cliquez sur **OK**.
 
     ![Créer un projet](../media/wpsetup-newproj.png)
 
@@ -70,7 +71,7 @@ Vous êtes maintenant prêt à créer vos propres applications Windows Phone.
 
 ### <a name="see-also"></a>Voir aussi
 
-[Prise en main](get-started.md)
+[Bien démarrer](get-started.md)
 
 [Nouveautés](release-notes.md)
 

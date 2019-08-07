@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5d822b36fd7dd38713b8bd3d42aee72838b24195
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: ff2f088358d6f15b4e5b67c3cc6929b1f29f19f4
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522111"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793992"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -64,11 +66,11 @@ La procédure exacte de cette étape dépend de la configuration actuelle de vot
 
 Votre déploiement AD RMS actuel utilise l’une des configurations suivantes pour votre clé de certificat de licence serveur (SLC) :
 
-- Protection par mot de passe dans la base de données AD RMS. Il s'agit de la configuration par défaut.
+- Protection par mot de passe dans la base de données AD RMS. Il s’agit de la configuration par défaut.
 
-- Protection HSM à l’aide d’un module de sécurité nCipher matériel (HSM).
+- Protection HSM à l’aide d’un module de sécurité matériel (HSM) nCipher.
 
-- Protection HSM à l’aide d’un module de sécurité matériel (HSM) d’un fournisseur que nCipher.
+- Protection HSM à l’aide d’un module de sécurité matériel (HSM) d’un fournisseur autre que nCipher.
 
 - Protection par mot de passe à l'aide d'un fournisseur de services de chiffrement externe.
 
@@ -82,10 +84,10 @@ Le tableau suivant permet d'identifier la procédure à utiliser pour votre migr
 |Déploiement AD RMS actuel|Topologie de clé de locataire Azure Information Protection choisie|Instructions de migration|
 |-----------------------------|----------------------------------------|--------------------------|
 |Protection par mot de passe dans la base de données AD RMS|Gérée par Microsoft|Consultez la procédure **Migration de clé protégée par logiciel à clé protégée par logiciel** après ce tableau.<br /><br />Ce chemin de migration, qui est le plus simple, nécessite uniquement que vous transfériez vos données de configuration vers Azure Information Protection.|
-|Protection HSM à l’aide d’un module de sécurité matériel nCipher nShield (HSM) |Gérée par le client (BYOK)|Consultez la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.<br /><br />Cette opération nécessite l’ensemble d’outils BYOK d’Azure Key Vault et trois procédures, d’abord pour transférer la clé de votre module HSM local vers les modules HSM Azure Key Vault, puis pour autoriser le service Azure Rights Management d’Azure Information Protection à utiliser votre clé de locataire, et enfin pour transférer vos données de configuration vers Azure Information Protection.|
+|Protection HSM à l’aide d’un module de sécurité matériel (HSM) nCipher nShield |Gérée par le client (BYOK)|Consultez la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.<br /><br />Cette opération nécessite l’ensemble d’outils BYOK d’Azure Key Vault et trois procédures, d’abord pour transférer la clé de votre module HSM local vers les modules HSM Azure Key Vault, puis pour autoriser le service Azure Rights Management d’Azure Information Protection à utiliser votre clé de locataire, et enfin pour transférer vos données de configuration vers Azure Information Protection.|
 |Protection par mot de passe dans la base de données AD RMS|Gérée par le client (BYOK)|Consultez la procédure **Migration de clé protégée par logiciel à clé protégée par HSM** après ce tableau.<br /><br />Cette opération nécessite l’ensemble d’outils BYOK d’Azure Key Vault et quatre procédures, d’abord pour extraire votre clé logicielle et l’importer dans un module HSM local, puis pour transférer la clé de votre module HSM local vers les modules HSM Azure Information Protection, ensuite pour transférer vos données Key Vault vers Azure Information Protection, et enfin pour transférer vos données de configuration vers Azure Information Protection.|
-|Protection HSM à l’aide d’un module de sécurité matériel (HSM) d’un fournisseur que nCipher |Gérée par le client (BYOK)|Contactez le fournisseur pour votre module HSM pour obtenir des instructions comment transférer votre clé de ce HSM vers un module de sécurité matériel nCipher nShield (HSM). Suivez ensuite les instructions de la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.|
-|Protection par mot de passe à l'aide d'un fournisseur de services de chiffrement externe|Gérée par le client (BYOK)|Contactez le fournisseur pour votre fournisseur de chiffrement pour obtenir des instructions pour transférer votre clé vers un module de sécurité matériel nCipher nShield (HSM). Suivez ensuite les instructions de la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.|
+|Protection HSM à l’aide d’un module de sécurité matériel (HSM) d’un fournisseur autre que nCipher |Gérée par le client (BYOK)|Contactez le fournisseur de votre HSM pour obtenir des instructions sur la façon de transférer votre clé de ce HSM vers un module de sécurité matériel (HSM) nCipher nShield. Suivez ensuite les instructions de la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.|
+|Protection par mot de passe à l'aide d'un fournisseur de services de chiffrement externe|Gérée par le client (BYOK)|Contactez le fournisseur de votre fournisseur de services de chiffrement pour obtenir des instructions sur la façon de transférer votre clé vers un module de sécurité matériel (HSM) nCipher nShield. Suivez ensuite les instructions de la procédure **Migration de clé protégée par HSM à clé protégée par HSM** après ce tableau.|
 
 Si vous avez une clé protégée par HSM que vous ne pouvez pas exporter, vous pouvez quand même migrer vers Azure Information Protection en configurant votre cluster AD RMS pour un mode en lecture seule. Dans ce mode, le contenu précédemment protégé peut toujours être ouvert, mais le contenu nouvellement protégé utilise une nouvelle clé de locataire que vous gérez vous-même (BYOK) ou qui est gérée par Microsoft. Pour plus d’informations, consultez [Une mise à jour d’Office est disponible pour prendre en charge les migrations d’AD RMS vers Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to).
 
@@ -100,7 +102,7 @@ Pour effectuer l’étape 4, sélectionnez les instructions correspondant à vot
 - [Clé protégée par HSM vers clé protégée par HSM](migrate-hsmkey-to-hsmkey.md)
 - [Clé protégée par logiciel vers clé protégée par HSM](migrate-softwarekey-to-hsmkey.md)
 
-## <a name="step-5-activate-the-azure-rights-management-service"></a>Étape 5. Activer le service Azure Rights Management
+## <a name="step-5-activate-the-azure-rights-management-service"></a>Étape 5. Activer le service Azure Rights Management
 
 Ouvrez une session PowerShell et exécutez les commandes suivantes :
 
@@ -134,11 +136,11 @@ Voici les modifications que vous pouvez être amené à apporter aux modèles po
 
 Si vous avez créé des modèles personnalisés avant la migration, que ce soit avant ou après l’activation du service Azure Rights Management, les modèles ne sont pas disponibles pour les utilisateurs après la migration, même si vous les avez définis sur **Publié**. Pour les mettre à la disposition des utilisateurs, vous devez effectuer les opérations suivantes : 
 
-1. Identifiez ces modèles et prenez note de leur ID de modèle, en exécutant la [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate). 
+1. Identifiez ces modèles et prenez note de leur ID de modèle en exécutant la [AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate). 
 
-2. Exporter les modèles à l’aide de l’applet de commande PowerShell d’Azure RMS, [AipServiceTemplate d’exportation](/powershell/module/aipservice/export-aipservicetemplate).
+2. Exportez les modèles à l’aide de l’applet de commande PowerShell Azure RMS, [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate).
 
-3. Importer les modèles à l’aide de l’applet de commande PowerShell d’Azure RMS, [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd).
+3. Importez les modèles à l’aide de l’applet de commande Azure RMS PowerShell, [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd).
 
 Vous pouvez ensuite publier ou archiver ces modèles comme vous le feriez pour tout autre modèle que vous créez après la migration.
 
@@ -157,7 +159,7 @@ Pour plus d’informations sur cette configuration, consultez [Comment configure
 #### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Exemple de script Windows PowerShell permettant d’identifier les modèles AD RMS qui incluent le groupe ANYONE
 Cette section contient l’exemple de script qui vous permet d’identifier n’importe quel modèle AD RMS pour lequel le groupe ANYONE a été défini, comme décrit dans la section précédente.
 
-**Exclusion de responsabilité :** Cet exemple de script n’est pas pris en charge par aucun programme de support standard de Microsoft ou d’un service. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
+**Exclusion de responsabilité :** Cet exemple de script n’est pris en charge par aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
 
 ```
 import-module adrmsadmin 

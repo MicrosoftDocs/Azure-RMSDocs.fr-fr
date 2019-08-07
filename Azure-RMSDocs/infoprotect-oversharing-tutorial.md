@@ -8,12 +8,14 @@ ms.date: 07/19/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 565a46f599922aeef3636756c47c561264bf010f
-ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
+ms.subservice: aiplabels
+ms.custom: admin
+ms.openlocfilehash: 2fdb9e719ffcafb6923528fef6c63bb8eefb3cdc
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68352828"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794130"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutoriel : configurer Azure Information Protection pour contrôler le surpartage d’informations à l’aide d’Outlook
 

@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: e6558bd8cf750c200ae6ec4dd177f34d6a1c84ea
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.custom: admin
+ms.openlocfilehash: bdb3f6fa4fc5828aed1afdc6964b10e5172b7620
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535191"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790576"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tâches que vous aviez l’habitude d’effectuer dans le portail Azure Classic
 
@@ -40,10 +41,10 @@ Utilisez les informations suivantes pour vous aider à passer rapidement au port
 |Archiver un modèle|Affectez à l’étiquette l’état **Désactivé**.
 |Créer un modèle délimité|Créez une stratégie délimitée, puis créez une étiquette dans cette étendue qui applique une protection. <br /><br />Pour plus d’informations, consultez [Guide pratique pour configurer la stratégie Azure Information Protection pour des utilisateurs spécifiques avec des stratégies délimitées](configure-policy-scope.md).
 |Copier un modèle|Vous ne pouvez pas copier un modèle dans le portail Azure. Pour que deux étiquettes aient les mêmes paramètres de protection, vous devez définir les autorisations sur chaque étiquette. <br /><br />Pour en savoir plus, consultez [Configurer une étiquette pour les paramètres de protection](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
-|suppression d'un modèle|Le portail Azure ne prend pas en charge la suppression de modèles, car cette action peut rendre les données inaccessibles. Toutefois, vous pouvez supprimer l’étiquette et ensuite utiliser la commande PowerShell [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate) applet de commande pour supprimer le modèle. <br /><br />Pour plus d’informations, consultez [Guide pratique pour supprimer ou réorganiser une étiquette pour Azure Information Protection](configure-policy-delete-reorder.md).
-|Prise en charge multilingue|Dans la sélection de menu **Gérer**, sélectionnez **Langues** pour exporter les champs personnalisables qui incluent le nom et la description du modèle. Traduisez les chaînes, puis importez-les dans le portail. <br /><br />Pour plus d’informations, consultez [Guide pratique pour configurer des étiquettes et des modèles pour différentes langues dans Azure Information Protection](configure-policy-languages.md).
-|Rapports web Rights Management|La fonctionnalité de [création de rapports centralisés pour Azure Information Protection](reports-aip.md) est actuellement en préversion.<br /><br />Vous pouvez également utiliser la commande PowerShell [Get-AipServiceUsageLog](/powershell/module/aipservice/get-aipserviceuserlog) applet de commande pour télécharger les journaux d’utilisation pour le service Azure Rights Management. Vous pouvez ensuite utiliser ces données pour créer des rapports personnalisés. Pour plus d’informations, consultez [journalisation et analyse de l’utilisation de la protection d’Azure Information Protection](log-analyze-usage.md).
-|Activer et désactiver le service Rights Management|Dans les options du menu **Gérer**, sélectionnez **Activation de la protection**.<br /><br />Pour plus d’informations, consultez [comment activer le service de protection de Rights Management à partir du portail Azure](activate-azure.md).
+|suppression d'un modèle|Le portail Azure ne prend pas en charge la suppression de modèles, car cette action peut rendre les données inaccessibles. Toutefois, vous pouvez supprimer l’étiquette, puis utiliser l’applet de commande PowerShell [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate) pour supprimer le modèle. <br /><br />Pour plus d’informations, consultez [Guide pratique pour supprimer ou réorganiser une étiquette pour Azure Information Protection](configure-policy-delete-reorder.md).
+|Prise en charge multi-langage|Dans la sélection de menu **Gérer**, sélectionnez **Langues** pour exporter les champs personnalisables qui incluent le nom et la description du modèle. Traduisez les chaînes, puis importez-les dans le portail. <br /><br />Pour plus d’informations, consultez [Guide pratique pour configurer des étiquettes et des modèles pour différentes langues dans Azure Information Protection](configure-policy-languages.md).
+|Rapports web Rights Management|La fonctionnalité de [création de rapports centralisés pour Azure Information Protection](reports-aip.md) est actuellement en préversion.<br /><br />Vous pouvez également utiliser l’applet de commande PowerShell [-AipServiceUsageLog](/powershell/module/aipservice/get-aipserviceuserlog) pour télécharger les journaux d’utilisation du service Azure Rights Management. Vous pouvez ensuite utiliser ces données pour créer des rapports personnalisés. Pour plus d’informations, consultez [journalisation et analyse de l’utilisation de la protection à partir de Azure information protection](log-analyze-usage.md).
+|Activer et désactiver le service Rights Management|Dans les options du menu **Gérer**, sélectionnez **Activation de la protection**.<br /><br />Pour plus d’informations, voir [How to Activate the Rights Management protection service from the portail Azure](activate-azure.md).
 
 Avant de modifier vos modèles ou de les convertir en étiquettes dans le portail Azure, consultez [Considérations relatives aux modèles dans le portail Azure](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
 
@@ -56,7 +57,7 @@ Nouvelles fonctionnalités dans le portail Azure :
 
 - Au lieu de gérer un modèle et une étiquette séparément, la conversion de modèles en étiquettes vous permet de gérer un seul objet. Pour obtenir des instructions, consultez [Convertir des modèles en étiquettes](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Prise en charge d’autres rôles d’administrateur : Alors que vous deviez vous connecter en tant qu’administrateur général dans le portail Azure Classic pour configurer Azure Rights Management, vous pouvez maintenant vous connecter au portail Azure pour configurer Azure Information Protection en utilisant un compte qui présente l’un des rôles d’administration suivants : **Administrateur général**, **administrateur de sécurité**, **administrateur de conformité**, **administrateur des données de conformité**, ou **Azure Administrateur Information Protection**. Pour plus d’informations sur chacun de ces rôles, consultez la section [Rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) dans la documentation d’Azure Active Directory.
+- Prise en charge d’autres rôles d’administrateur : Alors que vous deviez vous connecter en tant qu’administrateur général dans le portail Azure Classic pour configurer Azure Rights Management, vous pouvez maintenant vous connecter au portail Azure pour configurer Azure Information Protection en utilisant un compte qui présente l’un des rôles d’administration suivants : Administrateur **général**, **administrateur**de la sécurité, **administrateur de la conformité**, **administrateur des données de conformité**ou administrateur de **Azure information protection**. Pour plus d’informations sur chacun de ces rôles, consultez la section [Rôles disponibles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) dans la documentation d’Azure Active Directory.
 
 Les applets de commande PowerShell utilisées pour créer et gérer des modèles et pour activer ou désactiver le service restent inchangées.
 

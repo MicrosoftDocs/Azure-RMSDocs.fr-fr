@@ -9,12 +9,14 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 6ba22afad4ef9e1e8fc5da98efdff965dd6b3dfa
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.subservice: hyok
+ms.custom: admin
+ms.openlocfilehash: 01bd7936f0269d46b6eb782bdd132e0f80bb3d98
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182141"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789564"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protection HYOK (Hold your own key) pour Azure Information Protection
 
@@ -79,7 +81,7 @@ Le tableau suivant liste les scénarios qui prennent en charge la protection du 
 |MacOS|Office pour Mac<br /><br />- Outlook|Protection : Non<br /><br />Consommation : Oui|
 |MacOS|Application de partage Rights Management|Protection : Non<br /><br />Consommation : Oui|
 |iOS|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection : Non<br /><br />Consommation : Oui|
-|iOS|Office Mobile <br /><br />- Outlook|Protection : Non<br /><br />Consommation : Non|
+|iOS|Office Mobile <br /><br />\- Outlook|Protection : Non<br /><br />Consommation : Non|
 |iOS|Visionneuse Azure Information Protection|Protection : Non applicable<br /><br />Consommation : Oui|
 |Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection : Non<br /><br />Consommation : Oui|
 |Android|Office Mobile <br /><br />- Outlook|Protection : Non<br /><br />Consommation : Non|
@@ -183,11 +185,11 @@ Pour obtenir des informations et des instructions sur le déploiement pour AD RM
 
 ### <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Recherche d’informations pour spécifier la protection AD RMS avec une étiquette Azure Information Protection
 
-Quand vous configurez une étiquette pour la protection **HYOK (AD RMS)**, vous devez spécifier l’URL de licence de votre cluster AD RMS. Par ailleurs, vous devez spécifier un modèle que vous avez configuré pour les autorisations à accorder aux utilisateurs ou permettre aux utilisateurs de définir les autorisations et les utilisateurs. 
+Quand vous configurez une étiquette pour la protection **HYOK (AD RMS)** , vous devez spécifier l’URL de licence de votre cluster AD RMS. Par ailleurs, vous devez spécifier un modèle que vous avez configuré pour les autorisations à accorder aux utilisateurs ou permettre aux utilisateurs de définir les autorisations et les utilisateurs. 
 
 Les valeurs du GUID de modèle et de l’URL de licence sont disponibles dans la console des services AD RMS (Active Directory Rights Management Services) :
 
-- Pour rechercher le GUID du modèle : développez le cluster, puis cliquez sur **Modèles de stratégies de droits**. Vous pouvez ensuite copier le GUID des informations **Modèles de stratégies de droits distribués** à partir du modèle à utiliser. Exemple : 82bf3474-6efe-4fa1-8827-d1bd93339119
+- Pour rechercher le GUID du modèle : développez le cluster, puis cliquez sur **Modèles de stratégies de droits**. Vous pouvez ensuite copier le GUID des informations **Modèles de stratégies de droits distribués** à partir du modèle à utiliser. Par exemple :  82bf3474-6efe-4fa1-8827-d1bd93339119
 
 - Pour rechercher l’URL de licence : cliquez sur le nom du cluster. Dans **Détails du cluster**, copiez la valeur **Gestion des licences** valeur sans la chaîne **/_wmcs/licensing**. Par exemple : https://rmscluster.contoso.com 
     

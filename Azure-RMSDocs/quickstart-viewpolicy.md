@@ -8,12 +8,14 @@ ms.date: 07/20/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 5dc98a019ca34e6a303308e4e93d076042893638
-ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
+ms.subservice: aiplabels
+ms.custom: admin
+ms.openlocfilehash: 096fdbb61be5d0223e94921cb02cb5d7550eafd0
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68446873"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793798"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
 

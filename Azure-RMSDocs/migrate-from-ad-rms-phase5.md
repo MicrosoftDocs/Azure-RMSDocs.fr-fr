@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bf2675aa43e2c15761fdd46b94e3bb19253cadc3
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: da6ee07bf47e4b392346e719a2c62f00133f498c
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522070"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793920"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Phase de migration 5 : Tâches de post-migration
 
@@ -48,19 +50,19 @@ Après avoir déprovisionné vos serveurs AD RMS, vous pouvez en profiter pour p
 >[!IMPORTANT]
 > À la fin de cette migration, vous ne pouvez pas utiliser votre cluster AD RMS avec Azure Information Protection et l’option HYOK (Hold Your Own Key). Si vous décidez d’utiliser HYOK pour une étiquette Azure Information Protection en raison des redirections maintenant en place, le cluster AD RMS que vous utilisez doit avoir des URL de licences différentes de celles des clusters que vous avez migrés.
 
-### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Configuration supplémentaire pour les ordinateurs qui exécutent Office 2010
+### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Configuration de l’addition pour les ordinateurs qui exécutent Office 2010
 
-Si la migration des clients qui exécutent Office 2010, les utilisateurs peuvent rencontrer des retards lors de l’ouverture de contenu protégé une fois que nos serveurs AD RMS sont arrêtés. Ou bien, les utilisateurs peuvent voir les messages qu’ils n’ont pas les informations d’identification pour ouvrir le contenu protégé. Pour résoudre ces problèmes, créez une redirection de réseau pour ces ordinateurs, qui redirige le nom de domaine complet AD RMS URL vers l’adresse IP locale de l’ordinateur (127.0.0.1). Vous pouvez le faire en configurant le fichier hosts local sur chaque ordinateur, ou à l’aide de DNS.
+Si les clients migrés exécutent Office 2010, les utilisateurs peuvent rencontrer des retards lors de l’ouverture de contenu protégé après l’annulation de l’approvisionnement de nos serveurs AD RMS. Les utilisateurs peuvent également voir des messages indiquant qu’ils n’ont pas d’informations d’identification pour ouvrir du contenu protégé. Pour résoudre ces problèmes, créez une redirection réseau pour ces ordinateurs, qui redirige le AD RMS nom de domaine complet de l’URL vers l’adresse IP locale de l’ordinateur (127.0.0.1). Pour ce faire, vous pouvez configurer le fichier des hôtes locaux sur chaque ordinateur ou à l’aide de DNS.
 
-Redirection via le fichier hosts local :
+Redirection par le biais du fichier d’hôte local:
 
-- Ajoutez la ligne suivante dans le fichier hosts local, en remplaçant `<AD RMS URL FQDN>` avec la valeur de votre cluster AD RMS, sans les préfixes ou des pages web :
+- Ajoutez la ligne suivante dans le fichier local hosts, `<AD RMS URL FQDN>` en remplaçant par la valeur de votre cluster AD RMS, sans préfixes ni pages Web:
     
         127.0.0.1 <AD RMS URL FQDN>
 
-Redirection via DNS :
+Redirection via DNS:
     
-- Créer un nouvel enregistrement d’hôte (A) pour votre URL AD RMS FQDN dont l’adresse IP de 127.0.0.1.
+- Créez un nouvel enregistrement d’hôte (A) pour votre AD RMS nom de domaine complet de l’URL, dont l’adresse IP est 127.0.0.1.
 
 ## <a name="step-11-complete-client-migration-tasks"></a>Étape 11. Effectuer les tâches de migration des clients
 
@@ -114,9 +116,9 @@ Enfin, si vous utilisez Office 2010 et que vous avez activé la tâche de **ges
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Étape 12. Renouveler votre clé de locataire Azure Information Protection
 
-Cette étape est requise lors de la migration est terminée si votre déploiement AD RMS utilisait le Mode de chiffrement RMS 1, car ce mode utilise une clé 1024 bits et le SHA-1. Cette configuration est considérée comme offrent un niveau de protection insuffisant. Microsoft n’approuve l’utilisation de longueurs de clé inférieures telles que les clés RSA 1024 bits et l’utilisation associé à des protocoles qui offrent des niveaux de protection, telles que SHA-1 inadéquates.
+Cette étape est requise une fois la migration terminée si votre déploiement de AD RMS utilise le mode de chiffrement RMS 1, car ce mode utilise une clé 1024 bits et SHA-1. Cette configuration est considérée comme offrant un niveau de protection inadéquat. Microsoft n’approuve pas l’utilisation de longueurs de clé inférieures telles que les clés RSA 1024 bits et l’utilisation associée de protocoles qui offrent des niveaux de protection inadéquats, tels que SHA-1.
 
-Le renouvellement de résultats dans la protection qui utilise le Mode de chiffrement RMS 2, ce qui entraîne une clé de 2048 bits et le SHA-256. 
+La régénération de clés entraîne une protection qui utilise le mode de chiffrement RMS 2, qui génère une clé 2048 bits et SHA-256. 
 
 Même si votre déploiement AD RMS utilisait le mode de chiffrement 2, nous vous recommandons d’effectuer cette étape dans la mesure où une nouvelle clé contribue à protéger votre locataire contre d’éventuelles infractions à la sécurité de votre clé AD RMS.
 
@@ -126,11 +128,11 @@ Le passage d’une clé à une autre ne se produit pas immédiatement mais sur p
 
 Pour renouveler votre clé de locataire Azure Information Protection :
 
-- **Si votre clé de locataire est gérée par Microsoft** : Exécutez l’applet de commande PowerShell [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) et spécifiez l’identificateur de clé pour la clé qui a été créée automatiquement pour votre locataire. Vous pouvez identifier la valeur à spécifier en exécutant la [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) applet de commande. La clé créée automatiquement pour votre locataire a la date de création la plus ancienne. Vous pouvez donc l’identifier à l’aide de la commande suivante :
+- **Si votre clé de locataire est gérée par Microsoft** : Exécutez l’applet de commande PowerShell [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) et spécifiez l’identificateur de clé pour la clé qui a été créée automatiquement pour votre locataire. Vous pouvez identifier la valeur à spécifier en exécutant l’applet de commande [AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) . La clé créée automatiquement pour votre locataire a la date de création la plus ancienne. Vous pouvez donc l’identifier à l’aide de la commande suivante :
     
         (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Si vous gérez vous-même votre clé de locataire (BYOK)**  : Dans Azure Key Vault, répétez votre processus de création de la clé pour votre locataire Azure Information Protection, puis exécutez le [AipServiceKeyVaultKey d’utilisation](/powershell/module/aipservice/use-aipservicekeyvaultkey) applet de commande pour spécifier l’URI de cette nouvelle clé. 
+- **Si vous gérez vous-même votre clé de locataire (BYOK)**  : Dans Azure Key Vault, répétez votre processus de création de clé pour votre locataire Azure Information Protection, puis exécutez à nouveau l’applet de commande [use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) pour spécifier l’URI de cette nouvelle clé. 
 
 Pour plus d’informations sur la gestion de votre clé de locataire Azure Information Protection, consultez [Opérations pour votre clé de locataire Azure Information Protection](./operations-tenant-key.md).
 

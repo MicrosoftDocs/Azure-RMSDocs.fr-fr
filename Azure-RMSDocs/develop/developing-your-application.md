@@ -13,12 +13,13 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: feb0636c025d13dd3a290eb34ecb49eec4ebe284
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: dev
+ms.openlocfilehash: c508365855d8d2e914fca2c4853dc315d84331e2
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520758"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791298"
 ---
 # <a name="developing-your-application"></a>Développement de votre application
 
@@ -35,9 +36,9 @@ La configuration Azure pour cette application vous oblige à créer un ID de loc
 
 ### <a name="azure-ad-tenant-configuration"></a>Configuration du locataire Azure AD
 
-Pour configurer l’environnement Azure AD pour Azure Information Protection, suivez les instructions de [activation du service de protection d’Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
+Pour configurer l’environnement de Azure AD pour Azure Information Protection, suivez les instructions de la [Azure information protection activation du service de protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
 
-Une fois que le service est activé, vous avez besoin des composants PowerShell pour les étapes suivantes. Suivez [administration protection d’Azure Information Protection à l’aide de PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) pour effectuer cette opération.
+Une fois que le service est activé, vous avez besoin des composants PowerShell pour les étapes suivantes. Pour ce faire, procédez comme suit: [administration de la protection à partir de Azure information protection à l’aide de PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) .
 
 ### <a name="getting-your-tenant-id"></a>Obtention de votre ID de locataire
 

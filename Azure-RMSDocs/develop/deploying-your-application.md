@@ -13,12 +13,13 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 8f13fb5fd24717e431705e0516d710b2275bea45
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 2c8b3407f31819614605fb77fb86a86159a898fd
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179053"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788544"
 ---
 # <a name="deploy-into-production"></a>Déployer en production
 
@@ -104,7 +105,7 @@ Si le client est présent, poursuivez l’installation de votre application.
 > Si vous avez migré vers le nouveau modèle ADAL pour l’authentification, il est inutile d’installer le **SIA**. Pour plus d’informations, consultez [Authentification ADAL pour votre application compatible RMS](adal-auth.md).
 > Vous pouvez aussi **certifier votre application pour Windows 10** : en mettant à jour votre application pour utiliser l’authentification ADAL au lieu de l’Assistant de connexion Microsoft Online, vous et vos clients pouvez : Utiliser l’authentification multifacteur pour installer le client RMS 2.1 sans nécessiter de privilèges d’administration sur l’ordinateur
 
-Pour que votre utilisateur final tire parti des services Information Protection, vous devez déployer *l'Assistant de connexion Online Services (SIA)*. En tant que développeur d’applications, vous ne savez pas si l’utilisateur final doit utiliser Information Protection via RMS (localement) ou Azure Information Protection.
+Pour que votre utilisateur final tire parti des services Information Protection, vous devez déployer *l'Assistant de connexion Online Services (SIA)* . En tant que développeur d’applications, vous ne savez pas si l’utilisateur final doit utiliser Information Protection via RMS (localement) ou Azure Information Protection.
 
 
 > [!IMPORTANT]

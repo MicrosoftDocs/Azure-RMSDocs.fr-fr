@@ -4,19 +4,21 @@ description: Identifiez les critères de déploiement d’Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
+ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4b70be66db156dc92f57aaf0cc9ba3ce2413dd65
-ms.sourcegitcommit: ce47b16c16d93e710c0ff95588e1631ccc0e2829
+ms.custom: admin
+ms.openlocfilehash: 9ac767525efeaf97d1d3b39f3b25191e7926412b
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387390"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808114"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 

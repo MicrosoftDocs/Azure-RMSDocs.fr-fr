@@ -9,13 +9,15 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
+ms.subservice: v1client
 ms.suite: ems
-ms.openlocfilehash: 6afeef61671eaaf6fffdb7a0a5bb6ef93b1cf8ce
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.custom: admin
+ms.openlocfilehash: 41fa947d70633a3c3c9cddb996fb86ce6b45a23d
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535143"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793638"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -25,7 +27,7 @@ ms.locfileid: "67535143"
 
 Quand vous installez le client Azure Information Protection, des commandes PowerShell sont installés automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
-Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module comprend toutes les applets de commande Rights Management de l’outil de protection RMS (qui n’est plus pris en charge). Il propose également des applets de commande qui utilisent Azure Information Protection pour l’étiquetage. Exemple :
+Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**. Ce module comprend toutes les applets de commande Rights Management de l’outil de protection RMS (qui n’est plus pris en charge). Il propose également des applets de commande qui utilisent Azure Information Protection pour l’étiquetage. Par exemple :
 
 |Étiquetage des applets de commande|Exemple d’utilisation|
 |----------------|---------------|
@@ -35,7 +37,7 @@ Les applets de commande sont installées avec le module PowerShell **AzureInform
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Étiquetez les fichiers de manière non interactive, par exemple à l’aide d’un script qui s’exécute selon une planification.|
 
 > [!TIP]
-> Pour utiliser des applets de commande avec des chemins comprenant plus de 260 caractères, utilisez le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) disponible à compter de la version 1607 de Windows 10 :<br /> **Stratégie de l’ordinateur local** > **Configuration ordinateur** > **modèles d’administration** > **tous les paramètres**  >  **Win32 activer les chemins d’accès longs** 
+> Pour utiliser des applets de commande avec des chemins comprenant plus de 260 caractères, utilisez le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) disponible à compter de la version 1607 de Windows 10 :<br /> **Stratégie** >  >  >  de l’ordinateur local Configuration ordinateur modèles d’administration tous les paramètres activer les chemins longs Win32 >  
 > 
 > Pour Windows Server 2016, vous pouvez utiliser le même paramètre de stratégie de groupe lorsque vous installez les derniers modèles d’administration (.admx) pour Windows 10.
 >
@@ -94,7 +96,7 @@ En plus des prérequis pour l’installation du module Azure Information Protect
 
 Cette condition préalable s’applique si vous appliquez la protection des données à l’aide d’étiquettes ou en vous connectant directement au service Azure Rights Management.
 
-Si votre client Azure Information Protection n’est pas activé, consultez les instructions pour [activation du service de protection d’Azure Information Protection](../activate-service.md).
+Si votre locataire Azure Information Protection n’est pas activé, consultez les instructions relatives à l' [activation du service de protection à partir de Azure information protection](../activate-service.md).
 
 #### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Prérequis 2 : Pour supprimer la protection des fichiers pour les autres utilisateurs en utilisant votre propre compte
 
@@ -139,9 +141,9 @@ Les sections suivantes expliquent comment obtenir et spécifier ces valeurs manu
 
 ##### <a name="to-get-the-bpostenantid"></a>Pour obtenir le BposTenantId
 
-Exécutez l’applet de commande Get-AipServiceConfiguration à partir du module Azure RMS Windows PowerShell :
+Exécutez l’applet de commande AipServiceConfiguration à partir du module Azure RMS Windows PowerShell:
 
-1. Si ce module n’est pas déjà installé sur votre ordinateur, consultez [installation du module PowerShell de AIPService](../install-powershell.md).
+1. Si ce module n’est pas déjà installé sur votre ordinateur, consultez [installation du module PowerShell AIPService](../install-powershell.md).
 
 2. Démarrez Windows PowerShell avec l’option **Exécuter en tant qu’administrateur**.
 
@@ -153,7 +155,7 @@ Exécutez l’applet de commande Get-AipServiceConfiguration à partir du module
     
 4. Exécutez `Get-AipServiceConfiguration` et copiez la valeur BPOSId.
     
-    Un exemple de sortie de Get-AipServiceConfiguration :
+    Exemple de sortie de la AipServiceConfiguration:
     
             BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
         
@@ -233,9 +235,9 @@ Notre exemple de commande ressemblerait à ceci :
 
 Comme indiqué dans la commande précédente, vous pouvez fournir les valeurs avec une seule commande en utilisant un script à exécuter en mode non interactif. Mais pour les besoins du test, vous pouvez simplement taper Set-RMSServerAuthentication et fournir les valeurs une par une quand vous y êtes invité. Quand la commande est terminée, le client fonctionne en « mode serveur », qui convient à une utilisation non interactive comme les scripts et l’infrastructure de classification des fichiers Windows Server.
 
-Envisagez de faire de ce compte de principal du service un super utilisateur : Pour garantir que ce compte peut toujours déprotéger des fichiers pour d’autres utilisateurs, vous pouvez le configurer comme super utilisateur. De la même façon que vous configurez un compte d’utilisateur standard comme un super utilisateur, vous utilisez l’applet de commande Azure RMS, [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser), mais spécifier la **ServicePrincipalId** paramètre avec votre Valeur AppPrincipalId.
+Envisagez de faire de ce compte de principal du service un super utilisateur : Pour garantir que ce compte peut toujours déprotéger des fichiers pour d’autres utilisateurs, vous pouvez le configurer comme super utilisateur. De la même façon que vous configurez un compte d’utilisateur standard comme super utilisateur, vous utilisez la même applet de commande Azure RMS, [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser), mais vous spécifiez le paramètre **ServicePrincipalId** avec votre valeur AppPrincipalId.
 
-Pour plus d’informations sur les super utilisateurs, consultez [configuration de super utilisateurs pour la récupération de données ou des services Azure Information Protection et de découverte](../configure-super-users.md).
+Pour plus d’informations sur les super utilisateurs, consultez [configuration de super utilisateurs pour les Azure information protection et les services de découverte ou la récupération de données](../configure-super-users.md).
 
 > [!NOTE]
 > Pour utiliser votre propre compte pour vous authentifier auprès du service Azure Rights Management, inutile d’exécuter Set-RMSServerAuthentication avant de protéger ou d’annuler la protection de fichiers, ou d’obtenir des modèles.
@@ -244,7 +246,7 @@ Pour plus d’informations sur les super utilisateurs, consultez [configuration 
 
 Quand vous utilisez un compte de principal de service pour protéger des fichiers et télécharger des modèles à l’extérieur de la région Azure Amérique du Nord, vous devez modifier le Registre : 
 
-1. Réexécutez l’applet de commande Get-AipServiceConfiguration et prenez note des valeurs pour **CertificationExtranetDistributionPointUrl** et **LicensingExtranetDistributionPointUrl**.
+1. Exécutez à nouveau l’applet de commande AipServiceConfiguration et notez les valeurs de **CertificationExtranetDistributionPointUrl** et **LicensingExtranetDistributionPointUrl**.
 
 2. Sur tous les ordinateurs où vous allez exécuter les applets de commande AzureInformationProtection, ouvrez l’Éditeur du Registre.
 
@@ -311,7 +313,7 @@ Votre résultat peut ressembler à ce qui suit :
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-Pour protéger tous les fichiers d’un dossier, utilisez le paramètre **-Folder** avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Exemple :
+Pour protéger tous les fichiers d’un dossier, utilisez le paramètre **-Folder** avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Par exemple :
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -324,7 +326,7 @@ Votre résultat peut ressembler à ce qui suit :
     \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
     \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 
-Lorsque l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande `Get-RMSFileStatus` plus tard pour vérifier si le fichier est protégé. Exemple :
+Lorsque l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande `Get-RMSFileStatus` plus tard pour vérifier si le fichier est protégé. Par exemple :
 
     Get-RMSFileStatus -File \Server1\Documents\Test1.docx
 
@@ -334,7 +336,7 @@ Votre résultat peut ressembler à ce qui suit :
     --------                              ------
     \Server1\Documents\Test1.docx         Protected
 
-Pour déprotéger un fichier, vous devez disposer des droits Propriétaire ou Extraction correspondant au moment où le fichier a été protégé, ou vous devez exécuter les applets de commande en tant que super utilisateur. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Exemple :
+Pour déprotéger un fichier, vous devez disposer des droits Propriétaire ou Extraction correspondant au moment où le fichier a été protégé, ou vous devez exécuter les applets de commande en tant que super utilisateur. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Par exemple :
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -427,7 +429,7 @@ Votre résultat peut ressembler à ce qui suit :
     ---------             -------------
     C:\Test.docx          C:\Test.docx   
 
-Pour protéger tous les fichiers d’un dossier, utilisez le paramètre -Folder avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Exemple :
+Pour protéger tous les fichiers d’un dossier, utilisez le paramètre -Folder avec une lettre de lecteur et un chemin d’accès, ou le chemin d’accès UNC. Par exemple :
 
     Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -440,7 +442,7 @@ Votre résultat peut ressembler à ce qui suit :
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-Quand l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande Get-RMSFileStatus ultérieurement pour vérifier si le fichier est protégé. Exemple : 
+Quand l’extension du nom de fichier n’est pas modifiée après l’application de la protection, vous pouvez toujours utiliser l’applet de commande Get-RMSFileStatus ultérieurement pour vérifier si le fichier est protégé. Par exemple : 
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
@@ -450,7 +452,7 @@ Votre résultat peut ressembler à ce qui suit :
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-Pour déprotéger un fichier, vous devez disposer de droits d’utilisation de propriétaire ou d’extraction à compter du moment où le fichier a été protégé, ou être un super utilisateur AD RMS. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Exemple :
+Pour déprotéger un fichier, vous devez disposer de droits d’utilisation de propriétaire ou d’extraction à compter du moment où le fichier a été protégé, ou être un super utilisateur AD RMS. Ensuite, utilisez l’applet de commande de suppression de la protection Unprotect. Par exemple :
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -485,84 +487,84 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 
 1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com/).
 
-2. Pour le locataire Azure AD que vous utilisez avec Azure Information Protection, accédez à **Azure Active Directory** > **gérer** > **inscriptions**. 
+2. Pour le locataire Azure ad que vous utilisez avec Azure information protection, accédez à **Azure Active Directory** > **gérer** > les**inscriptions d’applications**. 
 
-3. Sélectionnez **+ nouvelle inscription**, pour créer votre application Web/API. Sur le **inscrire une application** panneau, spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
+3. Sélectionnez **+ nouvelle inscription**pour créer votre application Web App/API. Dans le panneau **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
 
-   - **Nom**: `AIPOnBehalfOf`
+   - **Nom**:`AIPOnBehalfOf`
         
         Si vous le souhaitez, spécifiez un autre nom. Il doit être unique pour chaque locataire.
     
-    - **Prise en charge des types de comptes**: **Comptes dans ce répertoire d’organisation uniquement**
+    - **Types de comptes pris en charge**: **Comptes dans ce répertoire d’organisation uniquement**
     
-    - **(Facultatif) des URI de redirection**: **Web** et `http://localhost`
+    - **URI de redirection (facultatif)** : **Web** et`http://localhost`
 
-4. Sur le **AIPOnBehalfOf** panneau, copiez la valeur de la **ID d’Application (client)** . La valeur est similaire à l’exemple suivant : `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Cette valeur est utilisée pour le *WebAppId* paramètre lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
+4. Dans le panneau **AIPOnBehalfOf** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Cette valeur est utilisée pour le paramètre *WebAppId* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
-5. Toujours dans le **AIPOnBehalfOf** panneau, à partir de la **gérer** menu, sélectionnez **authentification**.
+5. Toujours dans le panneau **AIPOnBehalfOf** , dans le menu **gérer** , sélectionnez **authentification**.
 
-6. Sur le **AIPOnBehalfOf - authentification** panneau, dans le **paramètres avancés** section, sélectionnez le **les jetons d’ID** case à cocher, puis sélectionnez **enregistrer**.
+6. Dans le panneau **AIPOnBehalfOf-Authentication** , dans la section **Paramètres avancés** , activez la case à cocher **ID Tokens** , puis sélectionnez **Enregistrer**.
 
-7. Toujours dans le **AIPOnBehalfOf - authentification** panneau, à partir de la **gérer** menu, sélectionnez **certificats et clés secrètes**.
+7. Toujours dans le panneau **AIPOnBehalfOf-Authentication** , dans le menu **gérer** , sélectionnez **certificats & secrets**.
 
-8. Sur le **AIPOnBehalfOf - certificats et clés secrètes** panneau, dans le **clés secrètes de Client** section, sélectionnez **+ nouvelle clé secrète client**. 
+8. Dans le panneau **AIPOnBehalfOf-certificats & secrets** , dans la section **secrets client** , sélectionnez **+ nouvelle clé secrète client**. 
 
-9. Pour **ajouter une clé secrète client**, spécifiez les éléments suivants, puis sélectionnez **ajouter**:
+9. Pour **Ajouter une clé secrète client**, spécifiez les éléments suivants, puis sélectionnez **Ajouter**:
     
-    - **Description**: `Azure Information Protection client`
-    - **Expiration**: Spécifiez la durée de votre choix (1 an, 2 ans ou jamais expire)
+    - **Description**:`Azure Information Protection client`
+    - **Expire**le: Spécifiez votre choix de durée (1 an, 2 ans ou n’expire jamais)
 
-9. Sur le **AIPOnBehalfOf - certificats et clés secrètes** panneau, dans le **clés secrètes de Client** section, copiez la chaîne pour le **valeur**. Cette chaîne est similaire à l’exemple suivant : `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`. Pour vous assurer que vous copiez tous les caractères, sélectionnez l’icône pour **copier dans le Presse-papiers**. 
+9. De retour dans le panneau **AIPOnBehalfOf-certificats & secrets** , dans la section **secrets clients** , copiez la chaîne correspondant à la **valeur**. Cette chaîne ressemble à l’exemple suivant: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`. Pour être sûr de copier tous les caractères, sélectionnez l’icône à **copier dans le presse-papiers**. 
     
-    Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée. Comme avec toutes les informations sensibles que vous utilisez, stockez la valeur enregistrée en toute sécurité et restreindre l’accès.
+    Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée. Comme pour toutes les informations sensibles que vous utilisez, stockez la valeur enregistrée en toute sécurité et restreignez l’accès à celle-ci.
 
-10. Toujours dans le **AIPOnBehalfOf - certificats et clés secrètes** panneau, à partir de la **gérer** menu, sélectionnez **exposer une API**.
+10. Toujours dans le panneau **AIPOnBehalfOf-certificats & secrets** , dans le menu **gérer** , sélectionnez **exposer une API**.
 
-11. Sur le **AIPOnBehalfOf - exposent une API** panneau, sélectionnez **définir** pour le **URI ID d’Application** option, puis, dans le **URI ID d’Application** valeur, modifier **api** à **http**. Cette chaîne est similaire à l’exemple suivant : `http://d244e75e-870b-4491-b70d-65534953099e`. 
+11. Dans le panneau **AIPOnBehalfOf-exposer une API** , sélectionnez **Set** pour l’option URI de l' **ID d’application** , et dans la valeur URI de l’ID d' **application** , remplacez **API** par **http**. Cette chaîne ressemble à l’exemple suivant: `http://d244e75e-870b-4491-b70d-65534953099e`. 
     
     Sélectionnez **Enregistrer**.
 
-12. Sur le **AIPOnBehalfOf - exposent une API** panneau, sélectionnez **+ ajouter une étendue**.
+12. De retour sur le panneau **AIPOnBehalfOf-exposer une API** , sélectionnez **+ Ajouter une étendue**.
 
-13. Sur le **ajouter une étendue** panneau, spécifiez les informations suivantes, en utilisant les chaînes suggérées comme exemples et sélectionnez **ajouter une étendue**:
-    - **Nom de l’étendue**: `user-impersonation`
-    - **Qui peut accepter ?** : **Les administrateurs et utilisateurs**
-    - **Nom complet de consentement administrateur**: `Access Azure Information Protection scanner`
-    - **Description du consentement administrateur**: `Allow the application to access the scanner for the signed-in user`
-    - **Nom complet de consentement utilisateur**: `Access Azure Information Protection scanner`
-    - **Description du consentement utilisateur**: `Allow the application to access the scanner for the signed-in user`
-    - **état**: **Activé** (la valeur par défaut)
+13. Dans le panneau **Ajouter une étendue** , spécifiez les éléments suivants, en utilisant les chaînes suggérées comme exemples, puis sélectionnez **Ajouter une étendue**:
+    - **Nom**de l’étendue:`user-impersonation`
+    - **Qui peut donner son consentement?** : **Administrateurs et utilisateurs**
+    - **Nom d’affichage du consentement**de l’administrateur:`Access Azure Information Protection scanner`
+    - **Description du consentement**de l’administrateur:`Allow the application to access the scanner for the signed-in user`
+    - **Nom complet du consentement**de l’utilisateur:`Access Azure Information Protection scanner`
+    - **Description du consentement**de l’utilisateur:`Allow the application to access the scanner for the signed-in user`
+    - **État**: **Activé** (valeur par défaut)
 
-14. Sur le **AIPOnBehalfOf - exposent une API** panneau, fermez ce panneau.
+14. De retour dans le panneau **AIPOnBehalfOf-exposer une API** , fermez ce panneau.
 
-15. Sur le **inscriptions** panneau, sélectionnez **+ nouvelle inscription d’application** pour créer votre application native.
+15. Dans le panneau **inscriptions d’applications** , sélectionnez **+ nouvelle inscription d’application** pour créer votre application native.
 
-16. Sur le **inscrire une application** panneau, spécifiez les paramètres suivants, puis sélectionnez **inscrire**:
-    - **Nom**: `AIPClient`
-    - **Prise en charge des types de comptes**: **Comptes dans ce répertoire d’organisation uniquement**
-    - **(Facultatif) des URI de redirection**: **Un client public (mobile et bureau)** et `http://localhost`
+16. Dans le panneau **inscrire une application** , spécifiez les paramètres suivants, puis sélectionnez **inscrire**:
+    - **Nom**:`AIPClient`
+    - **Types de comptes pris en charge**: **Comptes dans ce répertoire d’organisation uniquement**
+    - **URI de redirection (facultatif)** : **Client public (mobile & Desktop)** et`http://localhost`
 
-17. Sur le **AIPClient** panneau, copiez la valeur de la **ID d’Application (client)** . La valeur est similaire à l’exemple suivant : `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+17. Dans le panneau **AIPClient** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
     
     Cette valeur est utilisée pour le paramètre NativeAppId lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
-18. Toujours dans le **AIPClient** panneau, à partir de la **gérer** menu, sélectionnez **authentification**.
+18. Toujours dans le panneau **AIPClient** , dans le menu **gérer** , sélectionnez **authentification**.
 
-19. Sur le **AIPClient - authentification** panneau, spécifiez les éléments suivants, puis sélectionnez **enregistrer**:
-    - Dans le **paramètres avancés** section, sélectionnez **les jetons d’ID**.
-    - Dans le **type de client par défaut** section, sélectionnez **Oui**.
+19. Dans le panneau **AIPClient-Authentication** , spécifiez les éléments suivants, puis sélectionnez **Enregistrer**:
+    - Dans la section **Paramètres avancés** , sélectionnez **ID jetons**.
+    - Dans la section **type de client par défaut** , sélectionnez **Oui**.
 
-20. Toujours dans le **AIPClient - authentification** panneau, à partir de la **gérer** menu, sélectionnez **autorisations d’API**.
+20. Toujours dans le panneau **AIPClient-Authentication** , dans le menu **gérer** , sélectionnez **autorisations API**.
 
-21. Sur le **AIPClient - autorisations** panneau, sélectionnez **+ ajouter une autorisation**.
+21. Dans le panneau **AIPClient-autorisations** , sélectionnez **+ Ajouter une autorisation**.
 
-22. Sur le **autorisations d’API demande** panneau, sélectionnez **mes API**.
+22. Dans le panneau **demander des autorisations d’API** , sélectionnez **mes API**.
 
-23. Dans le **sélectionner une API** , sélectionnez **APIOnBehalfOf**, puis sélectionnez la case à cocher pour **-emprunt d’identité**, que l’autorisation. Sélectionnez **ajouter des autorisations**. 
+23. Dans la section **Sélectionner une API** , sélectionnez **APIOnBehalfOf**, puis activez la case à cocher **User-emprunt d’identité**comme autorisation. Sélectionnez **Ajouter des autorisations**. 
 
-24. Sur le **autorisations d’API** panneau, dans le **donner leur consentement** section, sélectionnez **accorder le consentement de l’administrateur pour \< *nom de votre client* >**  et sélectionnez **Oui** pour l’invite de confirmation.
+24. De retour dans le panneau autorisations de l' **API** , dans la section **accorder** le consentement, sélectionnez **accorder le consentement de l’administrateur pour \<le nom> de *votre locataire***  et sélectionnez **Oui** pour l’invite de confirmation.
 
-Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *WebAppId*, *WebAppKey* and *NativeAppId*. À partir de nos exemples :
+Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *WebAppId*, *WebAppKey* and *NativeAppId*. À partir de nos exemples:
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 
@@ -586,7 +588,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
 5. Vérifiez que le jeton est enregistré pour le compte de service, et supprimez le script PowerShell.
 
-#### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Étape 1 : Créez un script PowerShell sur votre ordinateur local.
+#### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Étape 1 : Créez un script PowerShell sur votre ordinateur local.
 
 1. Sur votre ordinateur, créez un nouveau script PowerShell nommé Aipauthentication.ps1.
 
@@ -598,7 +600,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
     Par exemple : `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
 
-#### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Étape 2 : Exécutez Set-AIPAuthentication pour obtenir un jeton d’accès et copiez-le dans le Presse-papiers.
+#### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Étape 2 : Exécutez Set-AIPAuthentication pour obtenir un jeton d’accès et copiez-le dans le Presse-papiers.
 
 1. Ouvrez une session Windows PowerShell.
 
@@ -608,7 +610,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
     Par exemple : `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
 
-#### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Étape 3 : Modifier le script PowerShell pour fournir le jeton
+#### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Étape 3 : Modifier le script PowerShell pour fournir le jeton
 
 1. Dans votre script PowerShell, spécifiez la valeur du jeton en collant la chaîne depuis le Presse-papiers, puis enregistrez le fichier.
 
@@ -618,7 +620,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
 3. Copiez ce script PowerShell sur l’ordinateur qui étiquettera et protégera les fichiers, puis supprimez la version d’origine sur votre ordinateur. Par exemple, vous copiez le script PowerShell sur C:\Scripts\Aipauthentication.ps1 sur un ordinateur Windows Server.
 
-#### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>Étape 4 : Créer une tâche qui exécute le script PowerShell
+#### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>Étape 4 : Créer une tâche qui exécute le script PowerShell
 
 1. Assurez-vous que le compte de service qui étiquettera et protégera les fichiers a le droit d’**Ouvrir une session en tant que programme de traitement par lots**.
 
@@ -632,7 +634,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
 3. Exécuter cette tâche manuellement.
 
-#### <a name="step-4-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>Étape 4 : Vérifier que le jeton est enregistré et supprimer le script PowerShell
+#### <a name="step-4-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>Étape 4 : Vérifier que le jeton est enregistré et supprimer le script PowerShell
 
 1. Vérifiez que le jeton est maintenant stocké dans le dossier %localappdata%\Microsoft\MSIP pour le profil de compte de service. Cette valeur est protégée par le compte de service.
 
@@ -641,7 +643,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
     Vous pouvez supprimer la tâche si vous le souhaitez. Si votre jeton expire, vous devez répéter ce processus, auquel cas il peut être plus pratique de laisser la tâche configurée afin qu’elle soit prête à s’exécuter à nouveau lorsque vous copierez le nouveau script PowerShell avec la nouvelle valeur du jeton.
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour obtenir de l’aide concernant les applets de commande lorsque vous avez ouvert une session PowerShell, tapez `Get-Help <cmdlet name> cmdlet`, puis utilisez le paramètre -online pour lire les informations les plus récentes. Exemple : 
+Pour obtenir de l’aide concernant les applets de commande lorsque vous avez ouvert une session PowerShell, tapez `Get-Help <cmdlet name> cmdlet`, puis utilisez le paramètre -online pour lire les informations les plus récentes. Par exemple : 
 
     Get-Help Get-RMSTemplate -online
 

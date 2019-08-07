@@ -4,18 +4,20 @@ description: Migrez des étiquettes Azure Information Protection vers des étiqu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/30/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 161f87363a6e398465a1ee67068e6f36b2f3919f
-ms.sourcegitcommit: 3933f968a952fb1d7c73c0f6a4f42a2a429b863f
+ms.custom: admin
+ms.openlocfilehash: 4a00d85ea5669a5a81a7380796888edff939e310
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68684618"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791749"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Guide pratique pour migrer des étiquettes Azure Information Protection vers des étiquettes de confidentialité Office 365
 
@@ -176,6 +178,8 @@ Pour savoir si les clients et services que vous utilisez prennent en charge l’
 - Services d’éditeurs de logiciels et de développeurs qui utilisent le [SDK Microsoft Information Protection](https://docs.microsoft.com/en-us/information-protection/develop/overview).
 
 ## <a name="next-steps"></a>Étapes suivantes
+
+Pour obtenir de l’aide et des conseils supplémentaires de notre équipe de l’expérience utilisateur, consultez le billet de blog suivant: [Compréhension](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)de la migration d’étiquetage unifiée.
 
 Pour plus d’informations sur les étiquettes migrées maintenant configurables et publiables dans l’un des centres d’administration, voir [Vue d’ensemble des étiquettes de confidentialité](/Office365/SecurityCompliance/sensitivity-labels).
 

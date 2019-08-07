@@ -9,20 +9,22 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2c2b0ca3ded29fd408d6597327f2bb15844bdd10
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 79711bf3c1a3b169e0ab84dfc9680f538dc1642d
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520258"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788228"
 ---
-# <a name="how-to-activate-the-rights-management-protection-service-from-the-azure-portal"></a>Comment activer le service de protection de Rights Management à partir du portail Azure
+# <a name="how-to-activate-the-rights-management-protection-service-from-the-azure-portal"></a>Comment activer le service de protection Rights Management à partir du Portail Azure
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Utilisez ces instructions si vous souhaitez activer le service de protection de Rights Management (Azure RMS) d’Azure Information Protection, à l’aide du portail Azure.
+Utilisez ces instructions si vous souhaitez activer le service de protection de Rights Management (Azure RMS) à partir de Azure Information Protection, à l’aide de la Portail Azure.
 
 1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**.
     
@@ -40,5 +42,5 @@ Quand l’activation est terminée, la barre d’informations affiche **Activati
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-Reprenez la lecture [activation du service de protection d’Azure Information Protection](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
+Reprendre [la lecture de l’activation du service de protection à partir de Azure information protection](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 

@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
+ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d353eac9dd13b90f02a296a40f8aa1b6e3269d52
-ms.sourcegitcommit: 478081129d9ea8382ce08fae0bae1a08cab23893
+ms.custom: admin
+ms.openlocfilehash: 4162e3df46377a4de859d1bb2dce1363d7146d08
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298298"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793596"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -67,7 +69,7 @@ Si vous avez AD RMS et que vous souhaitez migrer AD RMS vers Azure Information
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Devez-vous déployer le client Azure Information Protection ?
 
-Déployer le client Azure Information Protection si vous n’utilisez pas [des étiquettes de sensibilité dans le centre de la conformité et de sécurité Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) mais au lieu de cela, à l’aide des étiquettes Azure Information Protection que vous téléchargez à partir d’Azure et tout des éléments suivants s’applique :
+Déployez le client Azure Information Protection si vous n’utilisez pas [d’étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) , mais utilisez à la place des étiquettes de Azure information protection que vous téléchargez à partir d’Azure, ainsi que l’un des éléments suivants: s’applique
 
 - Vous souhaitez classifier (et éventuellement protéger) des documents et des e-mails en sélectionnant des étiquettes à partir de vos applications Office (Word, Excel, PowerPoint, Outlook).
 
@@ -101,7 +103,7 @@ Utilisez les sections suivantes pour plus d’informations sur l’installation 
 
 Quand le client est installé, utilisez l’option **Aide et commentaires** pour ouvrir la boîte de dialogue **Microsoft Azure Information Protection** :
 
-- À partir d’une application Office : Sous l’onglet **Accueil**, dans le groupe **Protection**, sélectionnez **Protéger**, puis **Aide et commentaires**.
+- À partir d’une application Office: Sous l’onglet **Accueil**, dans le groupe **Protection**, sélectionnez **Protéger**, puis **Aide et commentaires**.
 
 - Depuis l’Explorateur de fichiers : Cliquez avec le bouton droit sur un ou plusieurs fichiers ou sur un dossier, sélectionnez **Classifier et protéger**, puis **Aide et commentaires**. 
 
@@ -167,7 +169,7 @@ Toutefois, les noms et les descriptions d’étiquette que vous spécifiez ne so
 
 ## <a name="post-installation-tasks"></a>Tâches post-installation
 
-Une fois que vous avez installé le client Azure Information Protection, assurez-vous de donner aux utilisateurs les instructions pour savoir comment étiqueter leurs e-mails et documents, ainsi que des conseils sur les étiquettes à choisir pour des scénarios spécifiques. Exemple :
+Une fois que vous avez installé le client Azure Information Protection, assurez-vous de donner aux utilisateurs les instructions pour savoir comment étiqueter leurs e-mails et documents, ainsi que des conseils sur les étiquettes à choisir pour des scénarios spécifiques. Par exemple :
 
 - Instructions en ligne pour l’utilisateur : [Azure Information Protection - Guide de l’utilisateur](client-user-guide.md)
 
@@ -187,14 +189,14 @@ Consultez [Historique des versions et politique du support](client-version-relea
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Mise à niveau du scanneur Azure Information Protection
 
-Utilisez les instructions suivantes pour mettre à niveau le moteur d’analyse à partir de la version disponibilité générale est antérieure à 1.48.204.0 vers la version actuelle du scanneur.
+Utilisez les instructions suivantes pour mettre à niveau le scanneur d’une version de disponibilité générale antérieure à 1.48.204.0 vers la version actuelle du scanneur.
 
-#### <a name="to-upgrade-the-scanner-to-the-current-version"></a>Pour mettre à niveau le moteur d’analyse vers la version actuelle
+#### <a name="to-upgrade-the-scanner-to-the-current-version"></a>Pour mettre à niveau le scanneur vers la version actuelle
 
 > [!IMPORTANT]
-> Pour un chemin de mise à niveau sans heurts, n’installez pas le le client Azure Information Protection sur l’ordinateur qui exécute le scanneur en tant que la première étape pour mettre à niveau le moteur d’analyse. Utilisez plutôt les instructions de mise à niveau suivantes.
+> Pour un chemin de mise à niveau sans heurts, n’installez pas le client Azure Information Protection sur l’ordinateur exécutant le scanneur comme première étape de mise à niveau du scanneur. Utilisez plutôt les instructions de mise à niveau suivantes.
 
-Depuis la version 1.48.204.0, la mise à niveau à partir de versions précédentes automatiquement modifications l’analyseur obtient ses paramètres de configuration à partir du portail Azure. Le schéma est également mis à jour pour la base de données de configuration du scanneur, et cette base de données est également renommée à partir d’AzInfoProtection :
+À partir de la version 1.48.204.0, le processus de mise à niveau des versions précédentes modifie automatiquement le scanneur pour qu’il récupère ses paramètres de configuration du Portail Azure. Le schéma est également mis à jour pour la base de données de configuration du scanneur, et cette base de données est également renommée à partir d’AzInfoProtection :
 
 - Si vous ne spécifiez pas votre propre nom de profil, la base de données de configuration est renommée **AIPScanner_\<nom_ordinateur>** . 
 
@@ -202,13 +204,13 @@ Depuis la version 1.48.204.0, la mise à niveau à partir de versions précéden
 
 Bien qu’il soit possible de suivre une autre séquence pour mettre à niveau le scanneur, nous vous recommandons les étapes suivantes :
 
-1. Utilisez le portail Azure pour créer un nouveau profil de scanneur qui inclut des paramètres pour le scanneur et vos référentiels de données avec tous les paramètres dont ils ont besoin. Pour cette étape, consultez la [configurer le scanneur dans le portail Azure](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) section dans les instructions de déploiement du scanneur.
+1. Utilisez le portail Azure pour créer un nouveau profil de scanneur qui inclut des paramètres pour le scanneur et vos référentiels de données avec tous les paramètres dont ils ont besoin. Pour obtenir de l’aide pour cette étape, consultez la section [configurer le scanneur dans la portail Azure](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) dans les instructions de déploiement de l’analyseur.
     
     Si l’ordinateur qui exécute le scanneur est déconnecté d’Internet, vous devez toujours effectuer cette étape. Ensuite, à partir du portail Azure, utilisez l’option **Exporter** pour exporter votre profil de scanneur dans un fichier.
 
 2. Sur l’ordinateur du scanneur, arrêtez le service du scanneur, **Scanneur Azure Information Protection**.
 
-3. Mettre à niveau le client Azure Information Protection en installant la version actuelle de la disponibilité générale (GA) à partir de la [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+3. Mettez à niveau le client Azure Information Protection en installant la version actuelle de la mise à la disposition générale à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 4. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le même nom de profil que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile Europe`
 
@@ -216,7 +218,7 @@ Bien qu’il soit possible de suivre une autre séquence pour mettre à niveau l
 
 6. Redémarrez le service **Scanneur Azure Information Protection**.
 
-Vous pouvez maintenant utiliser le reste des instructions sur [déploiement du scanneur Azure Information Protection pour classifier et protéger les fichiers automatiquement](../deploy-aip-scanner.md), en omettant l’étape pour installer le scanneur. Étant donné que le scanneur est déjà installé, il n’est aucune raison de le réinstaller.
+Vous pouvez maintenant utiliser le reste des instructions dans [déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement les fichiers](../deploy-aip-scanner.md), en omettant l’étape d’installation du scanneur. Étant donné que le scanneur est déjà installé, il n’y a aucune raison de l’installer à nouveau.
 
 ##### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>Mise à niveau selon une séquence différente des étapes recommandées
 
@@ -227,19 +229,19 @@ Dans ce scénario, lorsque vous configurez le scanneur dans le portail Azure, vo
 > [!TIP]
 > Pour identifier les scanneurs dont la configuration est incorrecte, utilisez le panneau **Azure Information Protection - Nœuds** dans le portail Azure.
 >  
-> Pour les scanneurs qui ont une connectivité Internet, ils affichent leur nom d’ordinateur avec le numéro de version de la disponibilité générale du client Azure Information Protection, mais aucun nom de profil. Seuls les scanneurs portant le numéro de version 1.41.51.0 ne doivent pas afficher de nom de profil dans ce panneau. 
+> Pour les scanneurs disposant d’une connexion Internet, ils affichent le nom de leur ordinateur avec le numéro de version GA du client Azure Information Protection, mais aucun nom de profil. Seuls les scanneurs portant le numéro de version 1.41.51.0 ne doivent pas afficher de nom de profil dans ce panneau. 
 
 Si vous n’avez pas spécifié de nom de profil lors de l’exécution de la commande Update-AIPScanner, le nom d’ordinateur est utilisé pour créer automatiquement le nom du profil du scanneur.
 
 #### <a name="moving-the-scanner-configuration-database-to-a-different-sql-server-instance"></a>Déplacement de la base de données de configuration du scanneur vers une autre instance SQL Server
 
-Dans la version actuelle de la disponibilité générale, il existe un problème connu si vous essayez de déplacer la base de données de configuration de scanneur vers une nouvelle instance de SQL Server après avoir exécuté la commande de mise à niveau.
+Dans la version GA actuelle, il existe un problème connu si vous essayez de déplacer la base de données de configuration de l’analyseur vers une nouvelle instance de SQL Server après l’exécution de la commande de mise à niveau.
 
-Si vous savez que vous souhaitez déplacer la base de données de configuration de scanneur pour la version GA, procédez comme suit :
+Si vous savez que vous souhaitez déplacer la base de données de configuration du scanneur pour la version GA, procédez comme suit:
 
 1. Désinstallez le scanneur à l’aide de [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner).
 
-2. Si vous n’avez pas encore mis à niveau vers la version actuelle de la disponibilité générale du client Azure Information Protection, le client à niveau maintenant.
+2. Si vous n’avez pas encore effectué la mise à niveau vers la version GA actuelle du client Azure Information Protection, mettez à niveau le client maintenant.
 
 3. Installez le scanneur à l’aide de [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), en spécifiant la nouvelle instance SQL Server et le nom du profil.
 

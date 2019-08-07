@@ -13,12 +13,13 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 392bfa5e76bd0e07212fd47042b514a243a652dd
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: c69e34cce0241a289d75593e4a8a9500f88be433
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178718"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791447"
 ---
 # <a name="ios-and-os-x-setup"></a>Installation iOS et OS X
 
@@ -29,7 +30,7 @@ Cette rubrique vous guide tout au long du processus de configuration de votre en
 **Remarque**  Ce SDK ne prend pas en charge l’iPod Touch.
 
 
--   [Prérequis](#prerequisites)
+-   [Composants requis](#prerequisites)
 -   [Facultatif](#optional)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
@@ -73,7 +74,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
     ![Définissez un emplacement](../media/ios-add-dependencies-01a.png)
 
--   Sélectionnez la case d’option **Create groups for any added folders** et décochez la case **Copy items into destination group’s folder (if needed)**.
+-   Sélectionnez la case d’option **Create groups for any added folders** et décochez la case **Copy items into destination group’s folder (if needed)** .
 
     Cette action conserve la référence au dossier d’installation du SDK au lieu de créer une copie.
 
@@ -102,7 +103,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 ### <a name="see-also"></a>Voir aussi
 
-* [Prise en main](get-started.md)
+* [Bien démarrer](get-started.md)
 
 * [Nouveautés](release-notes.md)
 

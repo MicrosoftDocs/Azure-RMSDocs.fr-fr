@@ -13,12 +13,13 @@ ms.assetid: 9142dd29-f1f4-4c2f-82ac-534f14b8bba1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6904c0e477a34e4321fcf3d7ee66b47b201bed21
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 83dbafe17b5ef68735b404fdc819f485d8008c7f
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178919"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791230"
 ---
 # <a name="how-to-use-built-in-rights"></a>Procédure : Utiliser les droits intégrés
 

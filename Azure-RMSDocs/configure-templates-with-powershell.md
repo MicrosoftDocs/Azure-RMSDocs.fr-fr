@@ -1,6 +1,6 @@
 ---
 title: PowerShell pour les modèles de protection | Azure Information Protection
-description: Tout ce que vous pouvez faire dans le portail Azure pour créer et gérer des modèles de protection, vous pouvez le faire également à partir de la ligne de commande via PowerShell. En outre, vous pouvez copier des modèles entre clients ou effectuer des modifications en bloc de propriétés complexes dans les modèles, tels que les noms multilingues et les descriptions.
+description: Tout ce que vous pouvez faire dans le portail Azure pour créer et gérer des modèles de protection, vous pouvez le faire également à partir de la ligne de commande via PowerShell. En outre, vous pouvez copier des modèles entre des locataires ou effectuer des modifications en bloc de propriétés complexes dans les modèles, tels que les noms et les descriptions multilingues.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -10,13 +10,15 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
+ms.subservice: azurerms
 ms.suite: ems
-ms.openlocfilehash: 1e1e033ee900890431ed35faed5cca0171f86e38
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 105286f907df4f8c8f0f329e4467d4dc1d95422e
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520997"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791544"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>Informations de référence sur PowerShell pour les modèles de protection
 
@@ -28,7 +30,7 @@ Vous pouvez aussi exporter et importer des modèles de protection. Ces deux acti
 
 Vous pouvez également utiliser l’exportation et l’importation pour sauvegarder et restaurer vos modèles de protection. Comme bonne pratique, sauvegardez régulièrement vos modèles. Ensuite, si vous apportez une modification aux paramètres de protection qui n’était pas volontaire, vous pouvez facilement revenir à une version antérieure.
 
-Pour obtenir des instructions d’installation, consultez [installation du module PowerShell de AIPService](install-powershell.md).
+Pour obtenir des instructions d’installation, consultez [installation du module PowerShell AIPService](install-powershell.md).
 
 Applets de commande prenant en charge la création et la gestion de modèles de protection :
 

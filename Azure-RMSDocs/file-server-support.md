@@ -1,5 +1,5 @@
 ---
-title: Comment Windows serveurs de fichiers qui utilisent la prise en charge FCI Azure RMS - AIP
+title: Comment les serveurs de fichiers Windows qui utilisent FCI prennent en charge Azure RMS-AIP
 description: Découvrez comment utiliser l’infrastructure de classification des fichiers Windows Server avec Azure RMS quand vous déployez le connecteur RMS pour protéger automatiquement des documents Office.
 author: cabailey
 ms.author: cabailey
@@ -9,21 +9,23 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
+ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 301ee894bfeeb89ffb81b5e22fb7201a1f393178
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.custom: admin
+ms.openlocfilehash: 4644970758cc193cb210b0e216940e6b71c36fc2
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156511"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791856"
 ---
-# <a name="how-windows-file-servers-that-use-fci-support-azure-rights-management"></a>Comment Windows serveurs de fichiers qui utilisent la prise en charge FCI Azure Rights Management
+# <a name="how-windows-file-servers-that-use-fci-support-azure-rights-management"></a>Comment les serveurs de fichiers Windows qui utilisent FCI prennent en charge Azure Rights Management
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-Quand vous configurez Windows Server pour utiliser l’infrastructure de classification des fichiers, la fonctionnalité Outils de gestion de ressources pour serveur de fichiers (FSRM) peut analyser les fichiers locaux pour déterminer s’ils contiennent des données sensibles. Quand les fichiers répondent à ces critères, ils sont balisés avec des propriétés de classification définies par un administrateur. L’infrastructure de classification des fichiers peut effectuer automatiquement une action, selon la classification. Une de ces actions inclut l’application de protection des informations à l’aide d’Azure Rights Management et le déploiement du connecteur Rights Management (également connu sous le connecteur RMS). Les fichiers Office sont alors automatiquement protégés par Azure RMS.
+Quand vous configurez Windows Server pour utiliser l’infrastructure de classification des fichiers, la fonctionnalité Outils de gestion de ressources pour serveur de fichiers (FSRM) peut analyser les fichiers locaux pour déterminer s’ils contiennent des données sensibles. Quand les fichiers répondent à ces critères, ils sont balisés avec des propriétés de classification définies par un administrateur. L’infrastructure de classification des fichiers peut effectuer automatiquement une action, selon la classification. L’une de ces actions comprend l’application de la protection des informations à l’aide d’Azure Rights Management et le déploiement du connecteur Rights Management (également appelé connecteur RMS). Les fichiers Office sont alors automatiquement protégés par Azure RMS.
 
 Pour protéger tous les types de fichier, au lieu d’utiliser le connecteur RMS, exécutez un script Windows PowerShell qui utilise des applets de commande du [module Azure Information Protection](./rms-client/client-admin-guide-powershell.md).
 

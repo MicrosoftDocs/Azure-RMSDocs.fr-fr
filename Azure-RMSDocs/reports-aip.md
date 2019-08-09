@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 07/30/2019
+ms.date: 08/08/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8f783daea65e29ba33d2395208994e9f6b92d7b2
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 62572897d1333eb62509509ce4938099a53dabe2
+ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793786"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862735"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -118,7 +118,7 @@ Pour générer ces rapports, les points de terminaison envoient les types suivan
 
 Ces informations sont stockées dans un espace de travail Azure Log Analytics appartenant à votre organisation et consultable indépendamment d’Azure Information Protection par les utilisateurs qui disposent des droits d’accès correspondants. Pour plus d’informations, voir la section [Autorisations requises pour l’analytique Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Pour plus d’informations sur la gestion de l’accès à votre espace de travail, consultez la section [Gérer l’accès à l’espace de travail Log Analytics avec des autorisations Azure](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) de la documentation Azure.
 
-Pour empêcher les clients Azure Information Protection d’envoyer ces données, définissez le [paramètre de stratégie](configure-policy-settings.md) **Envoyer des données d’audit à l’analytique des journaux d'activité Azure Information Protection** sur **Désactivé** :
+Pour empêcher les clients Azure Information Protection (Classic) d’envoyer ces données, définissez le [paramètre de stratégie](configure-policy-settings.md) **Envoyer les données d’audit à Azure information protection log Analytics** sur **off**:
 
 - Pour que la plupart des utilisateurs envoient ces données d’audit et qu’un sous-ensemble ne puisse pas en envoyer : 
     - Définissez **Envoyer des données d’audit à l’analytique des journaux d'activité Azure Information Protection** sur **Désactivé** dans une stratégie délimitée autour de ce sous-ensemble d’utilisateurs. Cette configuration est généralement utilisée dans les scénarios de production.
@@ -128,7 +128,11 @@ Pour empêcher les clients Azure Information Protection d’envoyer ces données
 
 #### <a name="content-matches-for-deeper-analysis"></a>Correspondances de contenu pour approfondir l’analyse 
 
-Votre espace de travail Azure Log Analytics pour Azure Information Protection comporte une case à cocher permettant de collecter et de stocker également les données identifiées par les types d’informations sensibles ou vos conditions personnalisées. Il peut s’agir, par exemple, de numéros de carte de crédit trouvés, mais aussi de numéros de sécurité sociale, de passeport et de compte bancaire. Si vous ne voulez pas envoyer ces données supplémentaires, ne cochez pas cette case. Si vous souhaitez que la plupart des utilisateurs envoient ces données supplémentaires et qu’un sous-ensemble ne puisse pas en envoyer, cochez la case et configurez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie délimitée autour de cette fraction d’utilisateurs.
+Votre espace de travail Azure Log Analytics pour Azure Information Protection comporte une case à cocher permettant de collecter et de stocker également les données identifiées par les types d’informations sensibles ou vos conditions personnalisées. Il peut s’agir, par exemple, de numéros de carte de crédit trouvés, mais aussi de numéros de sécurité sociale, de passeport et de compte bancaire. Si vous ne souhaitez pas envoyer ces données supplémentaires, n’activez pas la case à cocher **activer l’analyse plus profonde dans vos données sensibles**. Si vous souhaitez que la plupart des utilisateurs envoient ces données supplémentaires et qu’un sous-ensemble d’utilisateurs ne puisse pas l’envoyer, activez la case à cocher, puis:
+
+- Pour le client classique: Configurez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie délimitée pour le sous-ensemble d’utilisateurs.
+
+- Pour le client d’étiquetage unifié: Configurez un [paramètre avancé](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie d’étiquette pour le sous-ensemble d’utilisateurs.
 
 Une fois recueillies, les correspondances de contenu s’affichent dans les rapports : descendez dans la hiérarchie jusqu’aux fichiers des journaux d’activité pour afficher **Détails de l’activité**. Ces informations sont également consultables et récupérables avec des requêtes.
 
@@ -192,16 +196,16 @@ Toutefois, de nombreuses organisations attribuent le rôle Azure AD **Lecteur S�
 
 ### <a name="features-that-require-a-minimum-version-of-the-client"></a>Fonctionnalités qui requièrent une version minimale du client
 
-Vous pouvez utiliser les informations de l’historique des versions pour le [client de Azure information protection d’étiquetage unifié](./rms-client/unifiedlabelingclient-version-release-history.md) et le [client Azure information protection (Classic)](./rms-client/client-version-release-history.md) pour vérifier si votre version du client prend en charge tous les rapports centraux. éléments. Versions minimales pour les clients:
+Les clients Azure Information Protection prennent en charge l’audit de base (utilisation des étiquettes) et la découverte de point de terminaison (identifiant les types d’informations sensibles).
 
-Pour le client d’étiquetage unifié Azure Information Protection:
+Client d’étiquetage unifié Azure Information Protection :
 
-- Prise en charge de l’audit et de la découverte de point de terminaison: Version 2.0.778.0
+- Prise en charge de l’audit de base et de la découverte des points de terminaison: Version minimale de 2.0.778.0
 
-Pour le client Azure Information Protection (classique):
+Client Azure Information Protection (classique):
 
-- Prise en charge de l’audit: Version 1.41.51.0
-- Prise en charge de la découverte de point de terminaison: Version 1.48.204.0
+- Prise en charge de l’audit de base: Version minimale de 1.41.51.0
+- Prise en charge de la découverte de point de terminaison: Version minimale de 1.48.204.0
 
 ### <a name="storage-requirements-and-data-retention"></a>Exigences de stockage et rétention des données
 

@@ -4,19 +4,19 @@ description: Vue d’ensemble de la protection HYOK (AD RMS) pour Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 01bd7936f0269d46b6eb782bdd132e0f80bb3d98
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 14864dd4840fe967b37ab4bd6fbde1de9e2f580d
+ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789564"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862712"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protection HYOK (Hold your own key) pour Azure Information Protection
 
@@ -87,7 +87,7 @@ Le tableau suivant liste les scénarios qui prennent en charge la protection du 
 |Android|Office Mobile <br /><br />- Outlook|Protection : Non<br /><br />Consommation : Non|
 |Android|Visionneuse Azure Information Protection|Protection : Non applicable<br /><br />Consommation : Oui|
 |Web|Outlook sur le web|Protection : Non<br /><br />Consommation : Non|
-|Web|Office Online<br /><br />- Word, Excel, PowerPoint|Protection : Non<br /><br />Consommation : Non|
+|Web|Office pour le Web<br /><br />- Word, Excel, PowerPoint|Protection : Non<br /><br />Consommation : Non|
 |Universal|Applications Office Universal<br /><br />- Word, Excel, PowerPoint|Protection : Non<br /><br />Consommation : Non|
 
 

@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 08/08/2019
+ms.date: 08/11/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 62572897d1333eb62509509ce4938099a53dabe2
-ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
+ms.openlocfilehash: aa9742e4306002592c18b39fde028da7f965fab0
+ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862735"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68948638"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -126,11 +126,13 @@ Pour empêcher les clients Azure Information Protection (Classic) d’envoyer ce
 - Pour que seul un sous-ensemble d’utilisateurs envoie des données d’audit : 
     - Définissez **Envoyer des données d’audit à l’analytique des journaux d'activité Azure Information Protection** sur **Désactivé** dans la stratégie globale, et sur **Activé** dans une stratégie délimitée autour de ce sous-ensemble d’utilisateurs. Cette configuration est généralement utilisée dans les scénarios de test.
 
+Pour empêcher Azure Information Protection clients unifiés d’envoyer ces données, configurez un [paramètre avancé](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)de stratégie d’étiquette.
+
 #### <a name="content-matches-for-deeper-analysis"></a>Correspondances de contenu pour approfondir l’analyse 
 
 Votre espace de travail Azure Log Analytics pour Azure Information Protection comporte une case à cocher permettant de collecter et de stocker également les données identifiées par les types d’informations sensibles ou vos conditions personnalisées. Il peut s’agir, par exemple, de numéros de carte de crédit trouvés, mais aussi de numéros de sécurité sociale, de passeport et de compte bancaire. Si vous ne souhaitez pas envoyer ces données supplémentaires, n’activez pas la case à cocher **activer l’analyse plus profonde dans vos données sensibles**. Si vous souhaitez que la plupart des utilisateurs envoient ces données supplémentaires et qu’un sous-ensemble d’utilisateurs ne puisse pas l’envoyer, activez la case à cocher, puis:
 
-- Pour le client classique: Configurez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie délimitée pour le sous-ensemble d’utilisateurs.
+- Pour le client et le scanneur classiques: Configurez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie délimitée pour le sous-ensemble d’utilisateurs.
 
 - Pour le client d’étiquetage unifié: Configurez un [paramètre avancé](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie d’étiquette pour le sous-ensemble d’utilisateurs.
 

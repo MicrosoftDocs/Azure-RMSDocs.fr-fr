@@ -4,19 +4,19 @@ description: Configurez les paramètres dans la stratégie Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 24eb4e6fcea22bc4b367e8bb37ce2e99080dc528
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: e119c13a37732aad5aab04a0975e4a437aa78a0b
+ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792513"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68948619"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Guide pratique pour configurer les paramètres de stratégie pour Azure Information Protection
 
@@ -48,7 +48,7 @@ Pour configurer ces paramètres :
     
     - **Envoyer des données d’audit à l’analytique Azure Information Protection** : avant la création d’un espace de travail Azure Log Analytics pour [l’analytique Azure Information](reports-aip.md), les valeurs de ce paramètre indiquent **Désactivé** et **Non configuré**. Après la création de l’espace de travail, elles deviennent **Désactivé** et **Activé**.
         
-        Lorsque le paramètre est **Activé**, les points de terminaison qui prennent en charge la création centralisée de rapports envoient leurs données d’audit au service Azure Information Protection. Pour plus d’informations sur les informations envoyées et stockées, voir la section [Informations collectées et envoyées à Microsoft](reports-aip.md#information-collected-and-sent-to-microsoft). Définissez cette option sur **Désactivé** pour empêcher l’envoi de ces données.
+        Lorsque le paramètre est **activé**, les clients qui prennent en charge la création de rapports centralisés envoient des données au service Azure information protection. Ces informations incluent les étiquettes appliquées et le moment où un utilisateur sélectionne une étiquette avec une classification inférieure, ou supprime une étiquette. Pour plus d’informations sur les informations qui sont envoyées et stockées, consultez la section [informations recueillies et envoyées à Microsoft](reports-aip.md#information-collected-and-sent-to-microsoft) dans la documentation du centre de création de rapports. Définissez ce paramètre de stratégie sur **désactivé** pour empêcher l’envoi de ces données.
     
     - **Tous les documents et e-mails doivent avoir une étiquette** : Lorsque vous paramétrez cette option sur **Activé**, une étiquette doit être appliquée à tous les documents et e-mails envoyés enregistrés. L’étiquetage peut être affecté manuellement par un utilisateur, automatiquement à la suite d’une [condition](configure-policy-classification.md), ou être attribué par défaut (en définissant l’option **Sélectionner l’étiquette par défaut**.
         

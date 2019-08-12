@@ -3,7 +3,7 @@ title: Configurations personnalisées-Azure Information Protection client d’é
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/30/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3607fc65a1c1c2dc80768b777d98473fd1c6c88c
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 8957bd019beb3af99ca1794118f42aaa2994d9f6
+ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790185"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68948668"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -119,6 +119,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |AttachmentAction|[Pour les e-mails avec pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[Pour les e-mails avec pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |DisableMandatoryInOutlook|[Exempter les messages Outlook de l’étiquetage obligatoire](#exempt-outlook-messages-from-mandatory-labeling)
+|EnableAudit|[Désactiver l’envoi de données d’audit à Azure Information Protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
 |EnableCustomPermissions|[Désactiver les autorisations personnalisées dans l’Explorateur de fichiers](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Pour les fichiers protégés avec des autorisations personnalisées, toujours afficher des autorisations personnalisées pour les utilisateurs dans l’Explorateur de fichiers](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -633,12 +634,28 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 
+## <a name="disable-sending-audit-data-to-azure-information-protection-analytics"></a>Désactiver l’envoi de données d’audit à Azure Information Protection Analytics
+
+Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
+
+Le client d’étiquetage unifié Azure Information Protection prend en charge la création de rapports centraux et, par défaut, envoie ses données d’audit à [Azure information protection Analytics](../reports-aip.md). Pour plus d’informations sur les informations qui sont envoyées et stockées, consultez la section [informations recueillies et envoyées à Microsoft](../reports-aip.md#information-collected-and-sent-to-microsoft) dans la documentation du centre de création de rapports.
+
+Pour modifier ce comportement afin que ces informations ne soient pas envoyées par le client d’étiquetage unifié, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée:
+
+- Clé : **EnableAudit**
+
+- Valeur : **False**
+
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
+
 
 ## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics
 
 Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
 
-[Azure information protection Analytics](../reports-aip.md) peut détecter et signaler des documents enregistrés par des clients Azure information protection lorsque ce contenu contient des informations sensibles. Par défaut, ces informations sont envoyées par le client d’étiquetage unifié Azure Information Protection à Azure Information Protection Analytics.
+[Azure information protection Analytics](../reports-aip.md) peut signaler des documents enregistrés par des clients Azure information protection lorsque ce contenu contient des informations sensibles. L’attribution du paramètre [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) Advanced n’a pasla valeur false. par défaut, ces informations sont envoyées par le client d’étiquetage unifié Azure information protection pour Azure information protection Analytics.
 
 Pour modifier ce comportement afin que ces informations ne soient pas envoyées par le client d’étiquetage unifié, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée:
 

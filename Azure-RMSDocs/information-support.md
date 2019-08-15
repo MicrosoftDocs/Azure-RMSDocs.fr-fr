@@ -4,7 +4,7 @@ description: Ressources pour les administrateurs, qui incluent des informations 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 9364856f9c84545d8094a4cb6057cd3422f2f1d7
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: d29a8918244f1e3dcdf615d3959df2b3969ffb5f
+ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788406"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68994458"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
@@ -57,7 +57,7 @@ Les sections suivantes fournissent des informations sur les options de support e
 
 ### <a name="to-contact-microsoft-support"></a>Pour contacter le support Microsoft
 
-Si vous avez Support Premier, visitez le [portail pour les clients Support Premier](https://premier.microsoft.com/) afin d’envoyer des incidents, de rechercher des solutions et d’obtenir de l’aide.
+Si vous avez Support Premier, visitez le [Hub de services Microsoft](https://serviceshub.microsoft.com/support/contactsupport) pour soumettre des incidents, parcourir les solutions et obtenir de l’aide.
 
 Vous êtes peut-être éligible à **FastTrack** : Vous pouvez utiliser l’offre du centre FastTrack quand vous achetez au moins 150 licences dans un plan éligible pour Azure Information Protection. L’offre du Centre FastTrack vous permet de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Offre Enterprise Mobility + Security (EMS) du Centre FastTrack](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 

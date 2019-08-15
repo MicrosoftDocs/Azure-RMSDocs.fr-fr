@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/24/2019
+ms.date: 08/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7dbd7a6091f0df3f4124b2ddb06178630c440f67
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: a43bdbf2e4ec14b60ac37164273529c764cffa98
+ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793741"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978803"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -849,15 +849,15 @@ Pour étiqueter un document Office avec l’une de ces valeurs de classification
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
 
-[Azure information protection Analytics](../reports-aip.md) peut détecter et signaler des documents enregistrés par des clients Azure information protection lorsque ce contenu contient des informations sensibles. Par défaut, ces informations sont envoyées par le client Azure Information Protection (Classic) à Azure Information Protection Analytics.
+Lorsque le client Azure Information Protection est utilisé dans les applications Office, il recherche des informations sensibles dans les documents lorsqu’ils sont enregistrés pour la première fois. Si le client n’est pas configuré pour ne pas envoyer d’informations d’audit, tous les types d’informations sensibles détectés (prédéfinis ou personnalisés) sont ensuite envoyés à [Azure information protection Analytics](../reports-aip.md).
 
-Pour modifier ce comportement afin que ces informations ne soient pas envoyées par le client classique, entrez les chaînes suivantes:
+Pour modifier ce comportement afin que les types d’informations sensibles trouvés par le client Classic ne soient pas envoyés à Azure Information Protection Analytics, entrez les chaînes suivantes:
 
 - Clé : **RunAuditInformationTypesDiscovery**
 
 - Valeur : **False**
 
-Si vous définissez ce paramètre de client avancé, les résultats d’audit sont toujours envoyés à partir du client classique, mais les informations sont limitées à la création de rapports lorsqu’un utilisateur a accédé au contenu étiqueté.
+Si vous définissez ce paramètre de client avancé, les résultats d’audit peuvent toujours être envoyés à partir du client, mais les informations sont limitées à la création de rapports lorsqu’un utilisateur a accédé au contenu étiqueté.
 
 Par exemple :
 
@@ -865,13 +865,13 @@ Par exemple :
 
 - Sans ce paramètre, vous pouvez voir que Financial. docx contient 6 numéros de carte de crédit.
     
-    - Si vous activez également [Correspondances de contenu pour approfondir l’analyse](../reports-aip.md#content-matches-for-deeper-analysis), vous pourrez en plus voir quels sont ces numéros de carte de crédit.
+    - Si vous activez également des analyses plus approfondies [dans vos données sensibles](../reports-aip.md#content-matches-for-deeper-analysis), vous serez en outre en mesure de voir ce que sont ces numéros de carte de crédit.
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Désactiver l’envoi de correspondances de types d’informations pour un sous-ensemble d’utilisateurs
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
 
-Lorsque la case [Analytique Azure Information Protection](../reports-aip.md) (qui collecte les correspondances de contenu des types d’informations sensibles ou des conditions personnalisées) est cochée, ces informations sont par défaut envoyées par tous les utilisateurs. Pour éviter que certains utilisateurs n’envoient ces données, créez les paramètres clients avancés suivants dans une [stratégie délimitée](../configure-policy-scope.md) autour de ces utilisateurs : 
+Lorsque vous activez la case à cocher [Azure information protection Analytics](../reports-aip.md) qui permet des analyses plus approfondies dans vos données sensibles, collecte les correspondances de contenu pour vos types d’informations sensibles ou vos conditions personnalisées, par défaut, ces informations sont envoyé par tous les utilisateurs, ce qui comprend les comptes de service qui exécutent le scanneur Azure Information Protection. Pour éviter que certains utilisateurs n’envoient ces données, créez les paramètres clients avancés suivants dans une [stratégie délimitée](../configure-policy-scope.md) autour de ces utilisateurs : 
 
 - Clé : **LogMatchedContent**
 

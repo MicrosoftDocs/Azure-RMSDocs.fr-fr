@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bb9dbea01c501ef7fa8e0639ae9416c4f0f4045e
-ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
+ms.openlocfilehash: 1bf26b600c5ea1ad4d1065b503ea25685fad0a0e
+ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862723"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978727"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
@@ -120,20 +120,21 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
     - Mot de passe de paramètre de publication Azure
     - Clé de compte de stockage Azure (générique)
 
+- Prise en charge de la découverte des points de terminaison pour [Azure information protection Analytics](../reports-aip.md), pour signaler les informations sensibles détectées lors de la première sauvegarde d’un document Office (à l’aide d’applications de bureau pour Word, Excel et PowerPoint):
+    - Pour découvrir ces informations, les documents n’ont pas besoin d’être étiquetés.
+    - Les informations sensibles sont identifiées par des types d’informations prédéfinis et personnalisés.
+    - Si vous ne souhaitez pas que les types d’informations sensibles soient envoyés à Azure Information Protection Analytics, vous pouvez désactiver la découverte de point de terminaison avec un [paramètre client avancé](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics).
+
 - Nouveaux paramètres client avancés implémentant des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails. [Plus d’informations](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     
     Notez que si vous avez configuré la propriété de client avancé de OutlookCollaborationTrustedDomains pour la version préliminaire, ce paramètre est désormais remplacé par trois nouveaux paramètres, afin que les domaines puissent être exemptés par action: OutlookWarnTrustedDomains, OutlookJustifyTrustedDomains et OutlookBlockTrustedDomains.
 
 - Si vous étiquetez et protégez des fichiers à l’aide de la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), vous pouvez utiliser le paramètre *EnableTracking* pour enregistrer le fichier sur le site de suivi des documents. [Plus d’informations](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
+- Nouveau paramètre client avancé pour [Azure information protection Analytics](../reports-aip.md), afin d’éviter d’envoyer des correspondances de types d’informations pour un sous-ensemble d’utilisateurs lorsque vous avez activé la case à cocher dans la portail Azure qui permet une analyse plus approfondie de vos données sensibles. Ce paramètre s’applique au client et au scanneur. [Plus d’informations](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+
 - Nouveau paramètre client avancé qui est applicable seulement quand vous configurez le paramètre de stratégie de façon à ne pas afficher des autorisations personnalisées : Quand un fichier est protégé par des autorisations personnalisées, affichez l’option des autorisations personnalisées dans l’Explorateur de fichiers, pour que les utilisateurs puissent les voir et les changer (s’ils ont les autorisations nécessaires pour changer les paramètres de protection). [Plus d’informations](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
-- Découverte de point de terminaison pour [Azure information protection Analytics](../reports-aip.md).
-    
-- Deux nouveaux paramètres client avancés pour Analytics, pour les scénarios suivants:
-    
-    - Empêcher l’envoi de correspondances de types d’informations à un sous-ensemble d’utilisateurs lorsque la case correspondant à la collecte de correspondances de contenu est cochée sur le Portail Azure. [Plus d’informations](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-    - Pour le rapport de **découverte des données** , affichez si les fichiers contiennent des informations sensibles. [Plus d’informations](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
 
 **Correctifs** :
 
@@ -190,7 +191,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
     
     Si vous souhaitez que le client rétablisse la protection des fichiers PDF à l’aide d’une extension de nom de fichier .ppdf, utilisez le même [paramètre client avancé](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), mais spécifiez **False**.
 
-- Audit de la prise en charge des données pour la [création de rapports centralisée](../reports-aip.md) à l’aide d’Azure information protection Analytics, annoncée chez Microsoft en2018.
+- Audit de la prise en charge des données pour la [création de rapports centralisée](../reports-aip.md) à l’aide d’Azure information protection Analytics. Ces informations incluent l’utilisation des étiquettes pour vous aider à surveiller la façon dont vos étiquettes sont utilisées, ainsi que l’accès des utilisateurs aux documents étiquetés et aux e-mails.
 
 - Prise en charge des [marquages visuels](../configure-policy-markings.md) de différentes couleurs dans Excel.
 

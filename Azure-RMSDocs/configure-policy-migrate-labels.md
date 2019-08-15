@@ -1,10 +1,10 @@
 ---
-title: Migrer des étiquettes Azure Information Protection sur Office 365 – AIP
-description: Migrez des étiquettes Azure Information Protection vers des étiquettes de confidentialité Office 365 pour les clients et les services qui prennent en charge les étiquettes unifiées.
+title: Migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée-AIP
+description: Migrez Azure Information Protection étiquettes vers des étiquettes de sensibilité unifiée pour les clients et les services qui prennent en charge Microsoft Information Protection Framework.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,14 +12,14 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a00d85ea5669a5a81a7380796888edff939e310
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 6661dbd4e19599f12ff585a427e09c1f2ac5352c
+ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68791749"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68994444"
 ---
-# <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Guide pratique pour migrer des étiquettes Azure Information Protection vers des étiquettes de confidentialité Office 365
+# <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Comment migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
@@ -33,7 +33,7 @@ Avant de lire les instructions pour migrer vos étiquettes, vous trouverez peut-
 
 - [Quelle est la différence entre les étiquettes dans Azure Information Protection et celles dans Office 365 ?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
 
-- [Comment définir le bon moment pour migrer mes étiquettes vers Office 365 ?](faqs.md#when-is-the-right-time-to-migrate-my-labels-to-office-365)
+- [Quand est-il approprié de migrer mes étiquettes?](faqs.md#when-is-the-right-time-to-migrate-my-labels)
 
 - [Une fois que j’ai migré mes étiquettes, quel portail de gestion utiliser ?](faqs.md?#after-ive-migrated-my-labels-which-management-portal-do-i-use )
 

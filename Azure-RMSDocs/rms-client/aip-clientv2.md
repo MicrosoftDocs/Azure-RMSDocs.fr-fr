@@ -4,7 +4,7 @@ description: Ressources d’informations pour le Azure Information Protection cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 67713198da1269a776aeeb75606d101178bbeabf
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 195714bb44ea16686005c7f079c6d871c86c8528
+ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790198"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68994400"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Azure Information Protection client d’étiquetage unifié pour Windows
 
@@ -26,7 +26,7 @@ ms.locfileid: "68790198"
 >
 > *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Le client d’étiquetage unifié Azure Information Protection pour Windows est un client téléchargeable pour les organisations qui utilisent des [étiquettes de sensibilité Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) pour classifier et protéger des documents et des e-mails. Ce client est également doté d’une visionneuse pour les organisations ne disposant pas de leur propre infrastructure de protection des informations, mais souhaitant utiliser du contenu qui a été protégé par d’autres organisations utilisant le service Rights Management de Microsoft.
+Le client d’étiquetage unifié Azure Information Protection pour Windows est un client téléchargeable pour les organisations qui utilisent des [étiquettes de sensibilité](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) pour classifier et protéger des documents et des e-mails. Ce client est également doté d’une visionneuse pour les organisations ne disposant pas de leur propre infrastructure de protection des informations, mais souhaitant utiliser du contenu qui a été protégé par d’autres organisations utilisant le service Rights Management de Microsoft.
 
 > [!NOTE]
 > Ce client, également appelé simplement client d’étiquetage unifié, remplace le client Azure Information Protection (Classic). Si vous n’êtes pas sûr du client à utiliser, consultez [choisir le client Azure information protection à utiliser](use-client.md#choose-which-azure-information-protection-client-to-use).

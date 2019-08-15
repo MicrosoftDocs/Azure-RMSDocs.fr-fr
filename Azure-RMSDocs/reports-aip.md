@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 08/11/2019
+ms.date: 08/13/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: aa9742e4306002592c18b39fde028da7f965fab0
-ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
+ms.openlocfilehash: ede0c4b11a2a8bf4f9e059828dda1b58ba4d5f9c
+ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68948638"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978662"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -130,7 +130,7 @@ Pour empêcher Azure Information Protection clients unifiés d’envoyer ces don
 
 #### <a name="content-matches-for-deeper-analysis"></a>Correspondances de contenu pour approfondir l’analyse 
 
-Votre espace de travail Azure Log Analytics pour Azure Information Protection comporte une case à cocher permettant de collecter et de stocker également les données identifiées par les types d’informations sensibles ou vos conditions personnalisées. Il peut s’agir, par exemple, de numéros de carte de crédit trouvés, mais aussi de numéros de sécurité sociale, de passeport et de compte bancaire. Si vous ne souhaitez pas envoyer ces données supplémentaires, n’activez pas la case à cocher **activer l’analyse plus profonde dans vos données sensibles**. Si vous souhaitez que la plupart des utilisateurs envoient ces données supplémentaires et qu’un sous-ensemble d’utilisateurs ne puisse pas l’envoyer, activez la case à cocher, puis:
+Votre espace de travail Azure Log Analytics pour Azure Information Protection comprend également une case à cocher permettant de collecter et de stocker les données identifiées comme étant un type d’informations sensibles (conditions prédéfinies ou personnalisées). Il peut s’agir, par exemple, de numéros de carte de crédit trouvés, mais aussi de numéros de sécurité sociale, de passeport et de compte bancaire. Si vous ne souhaitez pas envoyer ces données supplémentaires, n’activez pas la case à cocher **activer l’analyse plus profonde dans vos données sensibles**. Si vous souhaitez que la plupart des utilisateurs envoient ces données supplémentaires et qu’un sous-ensemble d’utilisateurs ne puisse pas l’envoyer, activez la case à cocher, puis:
 
 - Pour le client et le scanneur classiques: Configurez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie délimitée pour le sous-ensemble d’utilisateurs.
 
@@ -144,7 +144,7 @@ Pour afficher les rapports Azure Information Protection et créer les vôtres, v
 |Condition requise|Plus d’informations|
 |---------------|--------------------|
 |Un abonnement Azure qui inclut Log Analytics et qui concerne le même locataire qu’Azure Information Protection|Consultez la page de [tarification d’Azure Monitor](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Si vous ne possédez pas un abonnement Azure ou n’utilisez pas Azure Log Analytics, la page des tarifs inclut un lien pour un essai gratuit.|
-|Clients Azure Information Protection|Le client d’étiquetage unifié et le client classique sont pris en charge. <br /><br />Si vous ne disposez pas déjà de l’un de ces clients, vous pouvez les télécharger et les installer à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Assurez-vous que vous disposez de la dernière version pour prendre en charge [toutes les fonctionnalités](#features-that-require-a-minimum-version-of-the-client) de Azure information protection Analytics.|
+|Clients Azure Information Protection|Le client d’étiquetage unifié et le client classique sont pris en charge. <br /><br />Si vous ne disposez pas déjà de l’un de ces clients, vous pouvez les télécharger et les installer à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
 |Microsoft Cloud App Security |Pour afficher des informations à partir de Microsoft Cloud App Security, configurez l' [intégration Azure information protection](https://docs.microsoft.com/cloud-app-security/azip-integration).|
 |Pour le rapport de **découverte et des risques** : <br /><br />-Pour afficher les données des magasins de données locaux, vous avez déployé au moins une instance du scanneur Azure Information Protection <br /><br />-Pour afficher les données des ordinateurs Windows 10, ils doivent disposer d’une version minimale de 1809, vous utilisez Microsoft Defender-protection avancée contre les menaces (Microsoft Defender ATP) et vous avez activé la fonctionnalité d’intégration de Azure Information Protection de Microsoft. Security Center Defender|Pour obtenir des instructions d’installation pour le scanneur, consultez [Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers](deploy-aip-scanner.md). <br /><br />Pour plus d’informations sur la configuration et l’utilisation de la fonctionnalité d’intégration de Azure Information Protection de Microsoft Defender Security Center, voir [vue d’ensemble de la protection des informations dans Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
 |Pour le rapport **Recommandations** : <br /><br />-Pour ajouter un nouveau référentiel de données à partir de l’Portail Azure en tant qu’action recommandée, vous devez utiliser une version du scanneur de Azure Information Protection configurée dans le Portail Azure |Pour déployer le scanneur, consultez [déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement des fichiers](deploy-aip-scanner.md).|
@@ -196,19 +196,6 @@ Une fois l’espace de travail configuré pour l’analytique Azure Information 
 
 Toutefois, de nombreuses organisations attribuent le rôle Azure AD **Lecteur Sécurité** et le rôle Azure **Lecteur**.
 
-### <a name="features-that-require-a-minimum-version-of-the-client"></a>Fonctionnalités qui requièrent une version minimale du client
-
-Les clients Azure Information Protection prennent en charge l’audit de base (utilisation des étiquettes) et la découverte de point de terminaison (identifiant les types d’informations sensibles).
-
-Client d’étiquetage unifié Azure Information Protection :
-
-- Prise en charge de l’audit de base et de la découverte des points de terminaison: Version minimale de 2.0.778.0
-
-Client Azure Information Protection (classique):
-
-- Prise en charge de l’audit de base: Version minimale de 1.41.51.0
-- Prise en charge de la découverte de point de terminaison: Version minimale de 1.48.204.0
-
 ### <a name="storage-requirements-and-data-retention"></a>Exigences de stockage et rétention des données
 
 La quantité de données collectées et stockées dans votre espace de travail Azure Information Protection varie considérablement pour chaque locataire, en fonction de facteurs tels que le nombre de clients Azure Information Protection et d’autres points de terminaison pris en charge, que vous soyez la collecte de données de découverte de point de terminaison, vous avez déployé des scanneurs, et ainsi de suite.
@@ -219,7 +206,7 @@ Toutefois, comme point de départ, vous pouvez trouver les estimations suivantes
 
 - Pour les données d’audit générées par les clients Azure Information Protection, les scanneurs et Microsoft Defender ATP: 20 Go par 10 000 utilisateurs actifs par mois.
 
-Si vous utilisez l’étiquetage obligatoire ou si vous avez configuré une étiquette par défaut dans la stratégie globale, les tarifs sont susceptibles d’être beaucoup plus élevés.
+Si vous utilisez l’étiquetage obligatoire ou si vous avez configuré une étiquette par défaut pour la plupart des utilisateurs, vos tarifs seront probablement beaucoup plus élevés.
 
 Azure Monitor journaux a une fonctionnalité d' **utilisation et de coûts estimés** pour vous aider à estimer et à examiner la quantité de données stockées, et vous pouvez également contrôler la période de rétention des données pour votre espace de travail log Analytics. Pour plus d’informations, consultez [gérer l’utilisation et les coûts avec Azure Monitor journaux](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
 

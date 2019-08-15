@@ -4,7 +4,7 @@ description: Vous ne comprenez pas un mot, une expression ou un acronyme lié à
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: c851b2132810f4c15f4a67c4bf70b509b5d44cea
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: f05c5cae2b0bc38929fb2bba3e060f4e521aa053
+ms.sourcegitcommit: fc467e30b67ac218491fccea2d501350d3a656fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792759"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69023981"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie liée à Azure Information Protection
 
@@ -40,7 +40,7 @@ Client Azure Information Protection (classique)|Parfois abrégé en *client clas
 |Étiquette Azure Information Protection|Élément qui applique toujours une valeur de classification aux documents et aux e-mails, et qui peut aussi les protéger. Quand une étiquette est appliquée, les informations de l’étiquette sont stockées dans les métadonnées pour que les applications et les services puissent les lire, et éventuellement agir sur celles-ci.|
 |Stratégie Azure Information Protection|Configuration définie par l’administrateur pour les clients et services qui utilisent les paramètres de stratégie et les étiquettes Azure Information Protection.|
 |Scanneur Azure Information Protection|Service qui s’exécute sur Windows Server et vous permet de découvrir, classifier et protéger des documents sur les dossiers locaux, les partages réseau et les bibliothèques et sites SharePoint Server.|
-|Client d’étiquetage unifié Azure Information Protection|Parfois abrégé en *client d’étiquetage unifié*.<br /><br />client des ordinateurs Windows permettant aux utilisateurs, aux administrateurs et aux services d’utiliser les étiquettes de confidentialité et les paramètres de stratégie provenant du Centre de sécurité et conformité Office 365, du Centre de sécurité Microsoft 365 et du Centre de conformité Microsoft 365. Remplace le client Azure Information Protection (classique).|
+|Client d’étiquetage unifié Azure Information Protection|Parfois abrégé en *client d’étiquetage unifié*.<br /><br />Le client pour les ordinateurs Windows qui permet aux utilisateurs, aux administrateurs et aux services d’utiliser les étiquettes de sensibilité et les paramètres de stratégie d’étiquette du Centre de sécurité et de conformité Office 365, du centre de sécurité Microsoft 365 et du centre de conformité des Microsoft 365. Remplace le client Azure Information Protection (classique).|
 |Azure RMS|Voir *Azure Rights Management*.|
 |Visionneuse Azure Information Protection|Application qui s’exécute sur des ordinateurs Windows et des appareils mobiles pour afficher les fichiers protégés.|
 |Gestion des droits Azure|Souvent abrégé *Azure RMS*.<br /><br />Service Azure utilisé par Azure Information Protection qui recourt au chiffrement et à des stratégies, à des fins de sécurisation des documents, des fichiers et des e-mails.  Également appelé *service Rights Management Azure*. Les noms précédents étaient les suivants :<br /><br />- *Windows Azure Active Directory Rights Management* : Souvent abrégé en service Windows Azure AD Rights Management.<br /><br />- *RMS Online* : Nom proposé à l’origine, que vous pouvez parfois voir apparaître dans les messages d’erreur et les entrées du fichier journal.|
@@ -63,6 +63,8 @@ Client Azure Information Protection (classique)|Parfois abrégé en *client clas
 |Gestion des droits relatifs à l'information|Souvent abrégé *IRM*.<br /><br />Terme utilisé avec les services Office, comme Exchange Server, Word et SharePoint Online, pour décrire la capacité à prendre en charge les services Microsoft Rights Management.|
 |RMS|Voir *Gestion des droits relatifs à l’information*.|
 |Chiffrement des messages Office|Souvent abrégé *OME*.<br /><br />Les nouvelles fonctionnalités de chiffrement de messages Office 365 ont une intégration native avec le service Azure Rights Management pour fournir la même protection des e-mails des utilisateurs internes et externes, actualiser automatiquement les modèles et prendre en charge le scénario BYOK (Bring your own key). La précédente implémentation d’OME était seulement conçue pour les destinataires externes, nécessitait une règle de flux de courrier et ne prenait pas en charge BYOK.|
+|Microsoft Information Protection| Parfois abrégé en *MIP*.<br /><br /> Une infrastructure pour les produits et les fonctionnalités intégrées qui utilisent le même magasin d’étiquetage («étiquettes unifiées») et vous aident à protéger les informations sensibles de votre organisation.|
+|MIP| Consultez *Microsoft information protection*|
 |MSDRM|Vu parfois comme référence au client RMS 1.0, qui est remplacé par le nouveau client, MSIPC. Cet ancien client prend en charge les applications développées avec le kit de développement logiciel (SDK) RMS 1.0, ainsi qu'Office 2010 et Office 2007, Exchange 2010 et Exchange 2013, SharePoint 2010 et SharePoint 2007.|
 |MSIPC|Vu parfois comme référence au client RMS 2.0, qui remplace l'ancien client RMS, MSDRM. Ce nouveau client prend en charge les applications développées avec RMS SDK 2.0, ainsi qu’Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013 et le client Azure Information Protection.|
 |protection native|Niveau de protection disponible dans toutes les applications compatibles, qui empêche l'accès aux fichiers aux personnes non autorisées et qui permet également d'appliquer des stratégies restrictives, comme la lecture seule et l'interdiction d'impression. Il s'agit d'une protection permanente, même en cas de transfert des fichiers ou de sauvegarde dans un lieu public accessible à d'autres personnes.|
@@ -84,7 +86,8 @@ Client Azure Information Protection (classique)|Parfois abrégé en *client clas
 |mode Protection uniquement|Mode de fonctionnement du client Azure Information Protection lorsqu’il n’existe aucune stratégie Azure Information Protection à appliquer aux étiquettes. Dans ce mode, les étiquettes de classification ne s’affichent pas, mais les utilisateurs peuvent continuer à appliquer la protection Rights Management.|
 |scanneur|Voir *Scanneur Azure Information Protection*.|
 |super utilisateur|Groupe d’administrateurs de confiance possédant un droit d’accès et de déchiffrement sur les fichiers protégés par l’organisation à l’aide d’un service de gestion des droits. Ce niveau d'accès est généralement requis pour le processus eDiscovery légal et les audits.|
-|clé de locataire|Ou clé de certificat de licence serveur (SLC).<br /><br />Clé propre à l’organisation, qui sécurise de façon optimale toutes les fonctions de chiffrement de Rights Management qui lui sont associées.|
+|clé de locataire|Également appelée clé de *certificat de licence serveur*.<br /><br />Clé propre à l’organisation, qui sécurise de façon optimale toutes les fonctions de chiffrement de Rights Management qui lui sont associées.|
+|étiquette unifiée| Également appelée *étiquette de sensibilité unifiée*.<br /><br /> Étiquette qui peut être appliquée par les applications, les clients et les services qui prennent en charge Microsoft Information Protection Framework, pour appliquer la classification et éventuellement la protection. Dans les applications et services Office, les étiquettes unifiées sont implémentées en tant qu’étiquettes de sensibilité.|
 |ôter la protection|Supprimer des contrôles de protection de fichiers ou d’e-mails, qui utilisent des stratégies de chiffrement, d’identité, de droits d’utilisation et de contrôle d’accès afin de sécuriser vos données.|
 |licence d'utilisation|Certificat associé à un document, qui est accordé à un utilisateur qui ouvre un fichier ou un e-mail protégé par un service de gestion des droits. Ce certificat contient les droits d'utilisateur du fichier ou de l'e-mail, la clé de chiffrement qui est utilisée pour chiffrer le contenu, ainsi que les restrictions d'accès supplémentaires définies dans la stratégie du document.|
 

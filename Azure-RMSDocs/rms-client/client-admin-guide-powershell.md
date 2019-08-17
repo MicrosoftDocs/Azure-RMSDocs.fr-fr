@@ -4,7 +4,7 @@ description: Instructions et informations pour que les administrateurs gèrent l
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 41fa947d70633a3c3c9cddb996fb86ce6b45a23d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: ce8e2b9969ba6cbc3b5a58eac6d66fdd5db4f5b7
+ms.sourcegitcommit: bdfade60c1939f5c540bbf82859af060eb629f68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793638"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546043"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -126,7 +126,7 @@ Pour obtenir les valeurs et exécuter Set-RMSServerAuthentication automatiquemen
 $ServicePrincipalName="<new service principal name>"
 Connect-AipService
 $bposTenantID=(Get-AipServiceConfiguration).BPOSId
-Disconnect-AipServiceService
+Disconnect-AipService
 Connect-MsolService
 New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 
@@ -171,7 +171,7 @@ Exécutez l’applet de commande AipServiceConfiguration à partir du module Azu
 
 5. Déconnectez-vous du service :
     
-        Disconnect-AipServiceService
+        Disconnect-AipService
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>Pour obtenir l’AppPrincipalId et la clé symétrique
 

@@ -3,7 +3,7 @@ title: Configurations personnalisées-Azure Information Protection client d’é
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/12/2019
+ms.date: 08/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ab409f5f293708db121df0c600cb9e7b5b970a18
-ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
+ms.openlocfilehash: fbe7ddfd8160856a7a8491d0faa672a16b340455
+ms.sourcegitcommit: 2a12c62501e775f73c0e3176744ba966a6edffeb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978741"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69584610"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -887,7 +887,7 @@ Lorsque vous ajoutez une sous-étiquette à une étiquette, les utilisateurs ne 
 
 Exemple de commande PowerShell, où votre étiquette parente est nommée «Confidential» et la sous-étiquette «all employees» a le GUID 8faca7b8-8d20-48A3-8ea2-0f96310a848e:
 
-    Set-Label -Identity "Confidential" -AdvancedSettings @{defaultsublabels="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
+    Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 
 ## <a name="specify-a-color-for-the-label"></a>Spécifier une couleur pour l’étiquette
 

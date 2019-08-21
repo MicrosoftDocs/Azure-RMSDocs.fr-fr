@@ -3,8 +3,8 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 08/13/2019
-manager: barbkess
+ms.date: 08/19/2019
+manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ede0c4b11a2a8bf4f9e059828dda1b58ba4d5f9c
-ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
+ms.openlocfilehash: d3135126a837db9405a006bfd571a05a98ded7b7
+ms.sourcegitcommit: 30fc0e855b4fbcb61bcffa3e8c97a4beb777a787
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978662"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630071"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -37,7 +37,9 @@ Utilisez Azure Information Protection Analytics pour la création de rapports ce
 
 - Identifiez les documents qui contiennent des informations sensibles susceptibles de mettre votre organisation en péril si elles ne sont pas protégées, et limitez les risques en suivant les recommandations.
 
-Les données que vous voyez sont agrégées à partir de vos clients et scanneurs Azure Information Protection, ainsi qu’à partir des [clients et des services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
+- Identifiez le moment où les utilisateurs internes ou externes accèdent à des documents protégés, et si l’accès a été accordé ou refusé.
+
+Les données que vous voyez sont agrégées à partir de vos clients et scanneurs Azure Information Protection, à partir des [clients et des services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)et depuis les [journaux d’utilisation](log-analyze-usage.md)de la protection.
 
 Par exemple, vous serez en mesure de voir ce qui suit :
 
@@ -65,6 +67,8 @@ Par exemple, vous serez en mesure de voir ce qui suit :
     
     - Les actions d’étiquetage effectuées par une application spécifique, telles que l’Explorateur de fichiers et le clic droit, PowerShell, le scanneur ou Microsoft Cloud App Security
     
+    - Les documents protégés auxquels les utilisateurs ont accédé avec succès ou qui ont refusé l’accès aux utilisateurs, même s’ils n’ont pas le client Azure Information Protection installé ou se trouvent en dehors de votre organisation
+
     - Explorez les fichiers signalés pour afficher les **détails de l’activité** afin d’obtenir plus d’informations
 
 - À partir du rapport de **découverte de données** :
@@ -174,7 +178,7 @@ Détails :
     > [!NOTE] 
     > Si votre locataire a été migré vers le magasin d’étiquetage unifié, vous ne pouvez pas utiliser le rôle d’administrateur Azure Information Protection. [Plus d’informations](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
-2. Par ailleurs, vous devez disposer de l’un des [rôles Azure Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) ou [rôles Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard pour accéder à votre espace de travail Azure Log Analytics :
+2. Par ailleurs, vous devez disposer de l’un des [rôles Azure Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-accounts-and-users) ou [rôles Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard pour accéder à votre espace de travail Azure Log Analytics :
     
     - Pour créer l’espace de travail Log Analytics ou des requêtes personnalisées :
     
@@ -198,7 +202,7 @@ Toutefois, de nombreuses organisations attribuent le rôle Azure AD **Lecteur S�
 
 ### <a name="storage-requirements-and-data-retention"></a>Exigences de stockage et rétention des données
 
-La quantité de données collectées et stockées dans votre espace de travail Azure Information Protection varie considérablement pour chaque locataire, en fonction de facteurs tels que le nombre de clients Azure Information Protection et d’autres points de terminaison pris en charge, que vous soyez la collecte de données de découverte de point de terminaison, vous avez déployé des scanneurs, et ainsi de suite.
+La quantité de données collectées et stockées dans votre espace de travail Azure Information Protection varie considérablement pour chaque locataire, en fonction de facteurs tels que le nombre de clients Azure Information Protection et d’autres points de terminaison pris en charge, que vous soyez la collecte de données de découverte de point de terminaison, vous avez déployé des scanneurs, le nombre de documents protégés auxquels vous accédez, etc.
 
 Toutefois, comme point de départ, vous pouvez trouver les estimations suivantes utiles:
 
@@ -234,7 +238,7 @@ Dans le panneau Azure Information Protection, recherchez les options du menu **T
 
 - **Rapport d’utilisation (préversion)**  : Utilisez ce rapport pour voir comment vos étiquettes sont utilisées.
 
-- **Journaux d’activité (préversion)**  : Utilisez ce rapport pour voir les actions d’étiquetage effectuées par les utilisateurs sur les appareils et les chemins de fichiers.
+- **Journaux d’activité (préversion)**  : Utilisez ce rapport pour voir les actions d’étiquetage effectuées par les utilisateurs sur les appareils et les chemins de fichiers. En outre, pour les documents protégés, vous pouvez voir les tentatives d’accès (réussies ou refusées) pour les utilisateurs à l’intérieur et à l’extérieur de votre organisation, même s’ils n’ont pas le client Azure Information Protection installé.
     
     Ce rapport comporte une option **Colonnes** qui permet d’afficher plus d’informations sur l’activité que l’affichage par défaut. Vous pouvez également voir plus de détails sur un fichier en le sélectionnant pour afficher les **détails de l’activité**.
 
@@ -267,6 +271,8 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 
 |Nom de la colonne|Description|
 |-----------|-----------|
+|Access|Un document protégé a été ouvert avec succès, identifié par le nom de fichier s’il est suivi, ou ID s’il n’est pas suivi.|
+|AccessDenied|L’accès à un document protégé a été refusé, identifié par le nom de fichier s’il est suivi, ou ID s’il n’est pas suivi.|
 |Temps|Heure de l’événement: UTC au format AAAA-MM-JJThh: MM: SS|
 |Utilisateur|Utilisateur : Format UPN ou domaine\utilisateur|
 |ItemPath|Chemin d’accès complet de l’élément ou objet de l’e-mail|

@@ -4,7 +4,7 @@ description: Identifiez les critères de déploiement d’Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9ac767525efeaf97d1d3b39f3b25191e7926412b
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 1b5c3344acfa279bd9f778f60957f41e03d56793
+ms.sourcegitcommit: dd89001afcaf1ed4b7ab72a7066b07c0d984249d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808114"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69650875"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -130,11 +130,13 @@ En plus des informations de l’article relatif à Office, voici des information
 
 - N’interrompez pas la connexion du client au service TLS (par exemple, pour effectuer une inspection au niveau du paquet) vers l’URL **aadrm.com**. Cela a pour effet d’interrompre l’épinglage de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour sécuriser leur communication avec le service Azure Rights Management.
     
-    - Conseil : En raison de la façon dont Chrome affiche les connexions sécurisées dans la barre d’adresses, vous pouvez utiliser ce navigateur pour vérifier rapidement si la connexion de votre client est arrêtée avant d’atteindre le service Azure Rights Management. Dans la barre d’adresse du navigateur, entrez l’URL suivante : `https://admin.na.aadrm.com/admin/admin.svc` 
+    Vous pouvez utiliser les commandes PowerShell suivantes pour vous aider à déterminer si votre connexion cliente est interrompue avant d’atteindre le service Azure Rights Management:
+   
+        $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
+        $request.GetResponse()
+        $request.ServicePoint.Certificate.Issuer
     
-        Ne vous inquiétez pas de ce qu’affiche la fenêtre du navigateur. Cliquez sur le verrou dans la barre d’adresses pour afficher les informations du site. Les informations du site vous permettent de voir l’autorité de certification (CA) émettrice. Si le certificat n’est pas émis par une Autorité de certification Microsoft, il est très probable que votre connexion client-à-service sécurisée s’arrête et nécessite une reconfiguration sur votre pare-feu. L’image suivante illustre un exemple d’une autorité de certification Microsoft. Si vous constatez qu’une autorité de certification interne a émis le certificat, cette configuration n’est pas compatible avec Azure Information Protection.
-        
-        ![Vérification du certificat émis pour les connexions Azure Information Protection](./media/certificate-checking.png)
+    Le résultat doit indiquer que l’autorité de certification émettrice provient d’une autorité de certification Microsoft `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`, par exemple:. Si vous voyez un nom d’autorité de certification émettrice qui ne provient pas de Microsoft, il est très probable que votre connexion sécurisée client à service soit arrêtée et nécessite une reconfiguration sur votre pare-feu.
 
 ### <a name="on-premises-servers"></a>Serveurs locaux
 

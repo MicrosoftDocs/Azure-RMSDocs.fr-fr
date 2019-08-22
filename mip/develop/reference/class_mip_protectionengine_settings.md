@@ -1,18 +1,17 @@
 ---
 title: class mip::ProtectionEngine::Settings
-description: Décrit la classe mip::protectionengine de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: Documente la classe MIP::p rotectionengine du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 841eddc32e5e6928469dc11aba581defae09bc09
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: d770f5a613ecf90d6d6d6406b3b017a2f1162993
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184499"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883440"
 ---
 # <a name="class-mipprotectionenginesettings"></a>class mip::ProtectionEngine::Settings 
 [Settings](class_mip_protectionengine_settings.md) utilisé par [ProtectionEngine](class_mip_protectionengine.md) lors de sa création et tout au long de sa durée de vie.
@@ -24,8 +23,8 @@ public Settings(const Identity& identity, const std::string& clientData, const s
 public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  Constructeur [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) pour le chargement d’un moteur existant.
 public const std::string& GetEngineId() const  |  Obtient l’ID du moteur.
 public void SetEngineId(const std::string& engineId)  |  Définit l’ID du moteur.
-public const Identity& GetIdentity() const  |  Obtient l’utilisateur [identité](class_mip_identity.md) associées au moteur.
-public void SetIdentity(const Identity& identity)  |  Définit l’utilisateur [identité](class_mip_identity.md) associées au moteur.
+public const Identity& GetIdentity() const  |  Obtient l' [identité](class_mip_identity.md) de l’utilisateur associée au moteur.
+public void SetIdentity(const Identity& identity)  |  Définit l' [identité](class_mip_identity.md) de l’utilisateur associée au moteur.
 public const std::string& GetClientData() const  |  Obtient les données personnalisées spécifiées par le client.
 public void SetClientData(const std::string& clientData)  |  Définit les données personnalisées spécifiées par le client.
 public const std::string& GetLocale() const  |  Obtient les paramètres régionaux selon lesquels les données du moteur seront écrites.
@@ -38,41 +37,41 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  Obtient l’URL de
   
 ## <a name="members"></a>Membres
   
-### <a name="settings-function"></a>Fonction de paramètres
+### <a name="settings-function"></a>Fonction Settings
 Constructeur [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) pour la création d’un nouveau moteur.
 
 Paramètres :  
-* **identité**: [Identité](class_mip_identity.md) qui sera associé [ProtectionEngine](class_mip_protectionengine.md)
+* **identité**: [Identité](class_mip_identity.md) qui sera associée à [ProtectionEngine](class_mip_protectionengine.md)
 
 
 * **clientData** : données clientes personnalisables qui peuvent être stockées avec le moteur lors du déchargement, et être récupérées à partir d’un moteur chargé. 
 
 
-* **Paramètres régionaux**: La sortie du moteur est fournie dans ces paramètres régionaux.
+* **paramètres régionaux**: La sortie du moteur est fournie dans ces paramètres régionaux.
 
 
   
-### <a name="settings-function"></a>Fonction de paramètres
+### <a name="settings-function"></a>Fonction Settings
 Constructeur [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) pour le chargement d’un moteur existant.
 
 Paramètres :  
-* **engineId**: Identificateur unique du moteur qui est chargé 
+* **engineId**: Identificateur unique du moteur qui sera chargé 
 
 
 * **clientData** : données clientes personnalisables qui peuvent être stockées avec le moteur lors du déchargement, et être récupérées à partir d’un moteur chargé. 
 
 
-* **Paramètres régionaux**: La sortie du moteur est fournie dans ces paramètres régionaux.
+* **paramètres régionaux**: La sortie du moteur est fournie dans ces paramètres régionaux.
 
 
   
-### <a name="getengineid-function"></a>GetEngineId (fonction)
+### <a name="getengineid-function"></a>GetEngineId fonction)
 Obtient l’ID du moteur.
 
   
-**Retourne**: ID de moteur
+**Retourne**: ID du moteur
   
-### <a name="setengineid-function"></a>SetEngineId (fonction)
+### <a name="setengineid-function"></a>SetEngineId fonction)
 Définit l’ID du moteur.
 
 Paramètres :  
@@ -80,27 +79,27 @@ Paramètres :
 
 
   
-### <a name="getidentity-function"></a>GetIdentity (fonction)
-Obtient l’utilisateur [identité](class_mip_identity.md) associées au moteur.
+### <a name="getidentity-function"></a>GetIdentity fonction)
+Obtient l' [identité](class_mip_identity.md) de l’utilisateur associée au moteur.
 
   
-**Retourne**: Utilisateur [identité](class_mip_identity.md) associées au moteur
+**Retourne**: [Identité](class_mip_identity.md) de l’utilisateur associée au moteur
   
-### <a name="setidentity-function"></a>SetIdentity (fonction)
-Définit l’utilisateur [identité](class_mip_identity.md) associées au moteur.
+### <a name="setidentity-function"></a>SetIdentity fonction)
+Définit l' [identité](class_mip_identity.md) de l’utilisateur associée au moteur.
 
 Paramètres :  
-* **identité**: Utilisateur [identité](class_mip_identity.md) associées au moteur
+* **identité**: [Identité](class_mip_identity.md) de l’utilisateur associée au moteur
 
 
   
-### <a name="getclientdata-function"></a>GetClientData function
+### <a name="getclientdata-function"></a>GetClientData fonction)
 Obtient les données personnalisées spécifiées par le client.
 
   
-**Retourne**: Données personnalisées spécifiées par client
+**Retourne**: Données personnalisées spécifiées par le client
   
-### <a name="setclientdata-function"></a>SetClientData function
+### <a name="setclientdata-function"></a>SetClientData fonction)
 Définit les données personnalisées spécifiées par le client.
 
 Paramètres :  
@@ -108,45 +107,45 @@ Paramètres :
 
 
   
-### <a name="getlocale-function"></a>GetLocale (fonction)
+### <a name="getlocale-function"></a>GetLocale fonction)
 Obtient les paramètres régionaux selon lesquels les données du moteur seront écrites.
 
   
-**Retourne**: Paramètres régionaux dans le moteur de données seront écrites.
+**Retourne**: Paramètres régionaux dans lesquels les données du moteur seront écrites
   
-### <a name="setcustomsettings-function"></a>SetCustomSettings (fonction)
+### <a name="setcustomsettings-function"></a>SetCustomSettings fonction)
 Définit les paires nom/valeur utilisées pour les tests et l’expérimentation.
 
 Paramètres :  
-* **customSettings**: Permet de tester et d’expérimentation de paires nom/valeur
+* **customSettings**: Paires nom/valeur utilisées pour les tests et l’expérimentation
 
 
   
-### <a name="getcustomsettings-function"></a>GetCustomSettings (fonction)
+### <a name="getcustomsettings-function"></a>GetCustomSettings fonction)
 Obtient les paires nom/valeur utilisées pour les tests et l’expérimentation.
 
   
-**Retourne**: Permet de tester et d’expérimentation de paires nom/valeur
+**Retourne**: Paires nom/valeur utilisées pour les tests et l’expérimentation
   
-### <a name="setsessionid-function"></a>SetSessionId function
+### <a name="setsessionid-function"></a>SetSessionId fonction)
 Définit l’ID de session du moteur, utilisé pour la corrélation de la journalisation/télémétrie.
 
 Paramètres :  
-* **sessionId**: ID de session du moteur, utilisé pour la corrélation de journalisation et la télémétrie
+* **SessionID**: ID de session du moteur, utilisé pour la corrélation de la journalisation/télémétrie
 
 
   
-### <a name="getsessionid-function"></a>GetSessionId (fonction)
+### <a name="getsessionid-function"></a>GetSessionId fonction)
 Obtient l’ID de session du moteur.
 
   
 **Retourne**: ID de session du moteur
   
-### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl function
+### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl fonction)
 Définit éventuellement l’URL de base du point de terminaison cloud.
 
 Paramètres :  
-* **cloudEndpointBaseUrl** : URL de base utilisée par toutes les demandes de service (par exemple, « https://api.aadrm.com »)
+* **cloudEndpointBaseUrl** : URL de base utilisée par toutes les demandes de service (par exemple, « https://api.aadrm.com  »)
 
 
 Si l’URL de base n’est pas spécifiée, elle sera déterminée par le biais de la recherche DNS du domaine de l’identité du moteur.

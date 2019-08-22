@@ -1,45 +1,44 @@
 ---
-title: classe mip::HttpOperation
-description: Décrit la classe mip::httpoperation de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'MIP:: HttpOperation, classe'
+description: 'Documente la classe MIP:: httpoperation du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: e3eaedbf508f116b19521286b686bc955d108efe
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 8503a5466fe180fc6831e85e1b53954ba99f55c7
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173556"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884105"
 ---
-# <a name="class-miphttpoperation"></a>classe mip::HttpOperation 
-Interface qui décrit une seule opération HTTP, implémentée par l’application cliente lors de la substitution [HttpDelegate](class_mip_httpdelegate.md).
+# <a name="class-miphttpoperation"></a>MIP:: HttpOperation, classe 
+Interface qui décrit une seule opération HTTP, implémentée par l’application cliente lors du remplacement de [HttpDelegate](class_mip_httpdelegate.md).
   
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetId() const  |  Obtient l’ID d’opération.
-public std::shared_ptr\<HttpResponse\> GetResponse()  |  Obtenez la réponse, le cas échéant.
-public bool IsCancelled()  |  Obtenir l’état de l’annulation de l’opération.
+public const std::string& GetId() const  |  Obtient l’ID de l’opération.
+public std:: shared_ptr\<HttpResponse\> GetResponse ()  |  Obtient la réponse, le cas échéant.
+public bool IsCancelled ()  |  Obtient l’état de l’annulation de l’opération.
   
 ## <a name="members"></a>Membres
   
-### <a name="getid-function"></a>GetId (fonction)
-Obtient l’ID d’opération.
+### <a name="getid-function"></a>GetId, fonction
+Obtient l’ID de l’opération.
 
   
-**Retourne**: ID d’opération correspondant [HttpRequest](class_mip_httprequest.md) et [HttpResponse](class_mip_httpresponse.md) aura le même ID
+**Retourne**: ID de l’opération les HttpRequest et HttpResponse correspondants auront le même ID
   
-### <a name="getresponse-function"></a>GetResponse (fonction)
-Obtenez la réponse, le cas échéant.
+### <a name="getresponse-function"></a>GetResponse, fonction
+Obtient la réponse, le cas échéant.
 
   
-**Retourne**: Réponse
+**Retourne**: response
   
-### <a name="iscancelled-function"></a>IsCancelled (fonction)
-Obtenir l’état de l’annulation de l’opération.
+### <a name="iscancelled-function"></a>IsCancelled, fonction
+Obtient l’état de l’annulation de l’opération.
 
   
 **Retourne**: État de l’annulation

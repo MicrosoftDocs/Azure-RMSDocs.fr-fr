@@ -1,18 +1,17 @@
 ---
 title: class mip::ProtectionHandler::Observer
-description: Décrit la classe mip::protectionhandler de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: Documente la classe MIP::p rotectionhandler du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: f6d71bc4f4c04ba305b59b4dcb3b5850f858716b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 0e1a1d039928e1244d6c279fe055330eac7f9577
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184448"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883402"
 ---
 # <a name="class-mipprotectionhandlerobserver"></a>class mip::ProtectionHandler::Observer 
 Interface qui reçoit les notifications relatives à [ProtectionHandler](class_mip_protectionhandler.md).
@@ -21,31 +20,31 @@ Cette interface doit être implémentée par les applications utilisant le SDK d
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public OnCreateProtectionHandlerSuccess void virtuel (const std::shared_ptr\<ProtectionHandler\>& protectionHandler, const std::shared_ptr\<void\>& contexte)  |  Appelé lorsque [ProtectionHandler](class_mip_protectionhandler.md) a été créé avec succès.
-public OnCreateProtectionHandlerFailure void virtuel (std::exception_ptr const & erreur, const std::shared_ptr\<void\>& contexte)  |  Appelé lorsque la création de [ProtectionHandler](class_mip_protectionhandler.md) a échoué.
+public virtual void OnCreateProtectionHandlerSuccess (const std:: shared_ptr\<ProtectionHandler\>& ProtectionHandler, const std:: shared_ptr\<void\>& Context)  |  Appelé lorsque [ProtectionHandler](class_mip_protectionhandler.md) a été créé avec succès.
+public virtual void OnCreateProtectionHandlerFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé lorsque la création de [ProtectionHandler](class_mip_protectionhandler.md) a échoué.
   
 ## <a name="members"></a>Membres
   
-### <a name="oncreateprotectionhandlersuccess-function"></a>OnCreateProtectionHandlerSuccess (fonction)
+### <a name="oncreateprotectionhandlersuccess-function"></a>OnCreateProtectionHandlerSuccess fonction)
 Appelé lorsque [ProtectionHandler](class_mip_protectionhandler.md) a été créé avec succès.
 
 Paramètres :  
-* **protectionHandler**: Nouvellement créé [ProtectionHandler](class_mip_protectionhandler.md)
+* **protectionHandler**: [ProtectionHandler](class_mip_protectionhandler.md) nouvellement créé
 
 
-* **contexte**: Le même contexte que celui qui a été passé à [ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync](class_mip_protectionengine.md#createprotectionhandlerfromdescriptorasync-function) ou [ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync](class_mip_protectionengine.md#createprotectionhandlerfrompublishinglicenseasync-function)
+* **contexte**: Le même contexte qui a été passé à [ProtectionEngine:: CreateProtectionHandlerFromDescriptorAsync](class_mip_protectionengine.md#createprotectionhandlerfromdescriptorasync-function) ou [ProtectionEngine:: CreateProtectionHandlerFromPublishingLicenseAsync](class_mip_protectionengine.md#createprotectionhandlerfrompublishinglicenseasync-function)
 
 
 Une application peut transmettre n’importe quel type de contexte (par exemple, std::promise, std::function) à [ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync](class_mip_protectionengine.md#createprotectionhandlerfromdescriptorasync-function) ou [ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync](class_mip_protectionengine.md#createprotectionhandlerfrompublishinglicenseasync-function), et ce même contexte sera transféré tel quel à ProtectionEngine::Observer::OnCreateProtectionHandlerSuccess ou ProtectionEngine::Observer::OnCreateProtectionHandlerFailure
   
-### <a name="oncreateprotectionhandlerfailure-function"></a>OnCreateProtectionHandlerFailure (fonction)
+### <a name="oncreateprotectionhandlerfailure-function"></a>OnCreateProtectionHandlerFailure fonction)
 Appelé lorsque la création de [ProtectionHandler](class_mip_protectionhandler.md) a échoué.
 
 Paramètres :  
-* **Erreur**: Échec s’est produite lors de la création 
+* **erreur**: Échec qui s’est produit lors de la création 
 
 
-* **contexte**: Le même contexte que celui qui a été passé à [ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync](class_mip_protectionengine.md#createprotectionhandlerfromdescriptorasync-function) ou [ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync](class_mip_protectionengine.md#createprotectionhandlerfrompublishinglicenseasync-function)
+* **contexte**: Le même contexte qui a été passé à [ProtectionEngine:: CreateProtectionHandlerFromDescriptorAsync](class_mip_protectionengine.md#createprotectionhandlerfromdescriptorasync-function) ou [ProtectionEngine:: CreateProtectionHandlerFromPublishingLicenseAsync](class_mip_protectionengine.md#createprotectionhandlerfrompublishinglicenseasync-function)
 
 
 Une application peut transmettre n’importe quel type de contexte (par exemple, std::promise, std::function) à [ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync](class_mip_protectionengine.md#createprotectionhandlerfromdescriptorasync-function) ou [ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync](class_mip_protectionengine.md#createprotectionhandlerfrompublishinglicenseasync-function), et ce même contexte sera transféré tel quel à ProtectionEngine::Observer::OnCreateProtectionHandlerSuccess ou ProtectionEngine::Observer::OnCreateProtectionHandlerFailure

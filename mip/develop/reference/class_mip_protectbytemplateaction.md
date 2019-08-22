@@ -1,18 +1,17 @@
 ---
 title: class mip::ProtectByTemplateAction
-description: Décrit la classe mip::protectbytemplateaction de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: Documente la classe MIP::p rotectbytemplateaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 18bdf3caa5eba2f335376d81f525fe93da4d0352
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: dffd1698e61f55d5c4d65fee9f0d9489939356d6
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173234"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885132"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>class mip::ProtectByTemplateAction 
 Classe d’action qui spécifie l’ajout de la protection par modèle au document.
@@ -21,19 +20,11 @@ Classe d’action qui spécifie l’ajout de la protection par modèle au docume
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetTemplateId() const  |  Obtenir l’ID du modèle de protection associé à l’action.
-public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
-
+  
 ## <a name="members"></a>Membres
   
-### <a name="gettemplateid-function"></a>GetTemplateId (fonction)
+### <a name="gettemplateid-function"></a>GetTemplateId fonction)
 Obtenir l’ID du modèle de protection associé à l’action.
 
   
-**Retourne**: L’ID de modèle de protection.
-
-
-### <a name="gettype-function"></a>Fonction GetType
-Obtenir le type de [Action](class_mip_action.md).
-
-  
-**Retourne**: ActionType : type d’action dérivée vers lequel cette classe de base peut être castée.
+**Retourne**: ID de modèle de protection.

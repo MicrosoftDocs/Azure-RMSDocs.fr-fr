@@ -4,7 +4,7 @@ description: Quelques questions fréquemment posées sur Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/19/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: ff746d3636df73568db009a4e026e37cab962963
-ms.sourcegitcommit: 30fc0e855b4fbcb61bcffa3e8c97a4beb777a787
+ms.openlocfilehash: d2f3616d64a0405d1a0caf452d3491ee7a1fcac1
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630044"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884775"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -49,7 +49,7 @@ Pour plus d’informations sur la migration de vos étiquettes existantes, consu
 
 ## <a name="how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform"></a>Comment puis-je déterminer si mon locataire se trouve sur la plateforme d’étiquetage unifiée?
 
-Lorsque votre locataire se trouve sur la plateforme d’étiquetage unifiée, les étiquettes de sensibilité peuvent être utilisées par [les clients et les services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Si vous avez obtenu votre abonnement pour Azure Information Protection en juin 2019 ou une version ultérieure, votre locataire est automatiquement sur la plateforme d’étiquetage unifiée et aucune autre action n’est nécessaire. Votre locataire peut également se trouver sur cette plateforme, car quelqu’un a [migré vos étiquettes de Azure information protection](configure-policy-migrate-labels.md).
+Lorsque votre locataire se trouve sur la plateforme d’étiquetage unifiée, les étiquettes de sensibilité peuvent être utilisées par [les clients et les services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Si vous avez obtenu votre abonnement pour Azure Information Protection en juin 2019 ou une version ultérieure, votre locataire est automatiquement sur la plateforme d’étiquetage unifiée et aucune autre action n’est nécessaire. Votre locataire peut également se trouver sur cette plateforme, car quelqu’un a migré vos étiquettes de Azure Information Protection.
 
 Pour vérifier l’État, dans le portail Azure, accédez à **Azure information protection** > **gérer** > l'**étiquetage unifié**, puis affichez l’état de l' **étiquetage unifié**:
 

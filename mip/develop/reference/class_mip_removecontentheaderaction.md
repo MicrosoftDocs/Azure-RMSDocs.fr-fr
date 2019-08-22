@@ -1,18 +1,17 @@
 ---
 title: mip::RemoveContentHeaderAction, classe
-description: Décrit la classe mip::removecontentheaderaction de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Documente la classe MIP:: removecontentheaderaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 3cc2fbdcfeae4e168e342a3c7af0edc971039db4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 8702db31c1d6c98e3031c00629cb4630f1df8e80
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173386"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883202"
 ---
 # <a name="class-mipremovecontentheaderaction"></a>mip::RemoveContentHeaderAction, classe 
 Classe d’action qui spécifie la suppression de l’en-tête de contenu du document.
@@ -21,17 +20,11 @@ Classe d’action qui spécifie la suppression de l’en-tête de contenu du doc
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::vector\<std::string\>& GetUIElementNames()  |  Obtient une liste de noms à utiliser pour rechercher les éléments d’interface utilisateur qui doivent être supprimés.
-public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
-
+  
 ## <a name="members"></a>Membres
   
-### <a name="getuielementnames-function"></a>GetUIElementNames (fonction)
+### <a name="getuielementnames-function"></a>GetUIElementNames fonction)
 Obtient une liste de noms à utiliser pour rechercher les éléments d’interface utilisateur qui doivent être supprimés.
 
   
-**Retourne**: Une liste de noms d’éléments de l’interface utilisateur.
-
-### <a name="gettype-function"></a>Fonction GetType    
-Obtenir le type de [Action](class_mip_action.md).  
-
-**Retourne**: ActionType : type d’action dérivée vers lequel cette classe de base peut être castée.
+**Retourne**: Liste des noms d’éléments d’interface utilisateur.

@@ -6,18 +6,18 @@ author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 11/01/2018
+ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: df0d51d976f7f900011688d2f328f3a2ddb1e378
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: df67886f53d697e47f6e812cdcbbac394acaa98d
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60176922"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884754"
 ---
 # <a name="auditing-in-the-mip-sdk-file-api"></a>Audit dans l’API de fichier du kit SDK MIP
 
-Le portail d’administration Azure Information Protection permet d’accéder aux rapports de l’administrateur. Ces rapports fournissent une visibilité des étiquettes que les utilisateurs appliquent, manuellement ou automatiquement, dans les applications et les services où le kit SDK MIP est intégré. Les partenaires de développement qui utilisent le kit SDK peuvent facilement activer cette fonctionnalité, ce qui leur permet de faire figurer les informations de leurs applications dans les rapports des clients.
+Le portail d’administration Azure Information Protection permet d’accéder aux rapports de l’administrateur. Ces rapports fournissent une visibilité sur les étiquettes que les utilisateurs appliquent, manuellement ou automatiquement, sur les applications ou services qui ont intégré le kit de développement logiciel (SDK) MIP. Les partenaires de développement qui utilisent le kit de développement logiciel (SDK) peuvent activer cette fonctionnalité pour exposer les informations de leurs applications dans les rapports des clients.
 
 ## <a name="event-types"></a>Types d’événements
 
@@ -29,7 +29,7 @@ Les événements de pulsation sont générés automatiquement pour toutes les ap
 
 * TenantId
 * Heure de la génération
-* Nom d'utilisateur principal
+* Nom principal de l'utilisateur
 * Nom de la machine sur laquelle l’audit a été généré
 * Nom du processus
 * Plateforme
@@ -63,8 +63,8 @@ Les événements de changement fournissent des informations sur le fichier, l’
 ```cpp
 // Create labeling options, set label
 string contentId = "C:\users\myuser\Documents\MyPlan.docx";
-mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
-handler->SetLabel(labelId, labelingOptions);
+mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+handler->SetLabel(labelId, labelingOptions, mip::ProtectionSettings());
 auto commitPromise = std::make_shared<std::promise<bool>>();
 auto commitFuture = commitPromise->get_future();
 
@@ -79,8 +79,8 @@ if(commitFuture.get()) {
 
 ## <a name="audit-dashboard"></a>Tableau de bord d’audit
 
-Les événements envoyés au pipeline d’audit Azure Information Protection apparaissent dans les rapports sur https://portal.azure.com. Les fonctionnalités d’analyse Azure Information Protection sont en préversion publique et sont susceptibles de changer.
+Les événements envoyés au pipeline d’audit Azure Information Protection apparaissent dans les rapports sur https://portal.azure.com. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur l’expérience utilisateur d’audit dans Azure Information Protection, consultez le [blog d’annonces de la préversion sur Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
+Pour plus d’informations sur l’expérience d’audit dans Azure Information Protection, consultez le [blog de l’annonce préliminaire sur la communauté Tech](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).

@@ -1,60 +1,66 @@
 ---
-title: classe mip::AuthDelegate::OAuth2Challenge
-description: Décrit la classe mip::authdelegate de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'MIP:: AuthDelegate:: OAuth2Challenge, classe'
+description: 'Documente la classe MIP:: authdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: d404d6f60e7b2472bc97181b45fae3b4dabc387b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 836704d51d1afa55bc296681c863ee10a072ea79
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173471"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885911"
 ---
-# <a name="class-mipauthdelegateoauth2challenge"></a>classe mip::AuthDelegate::OAuth2Challenge 
-une classe qui contient toutes les informations requises à partir de l’application appelante afin de générer un jeton oauth2.
+# <a name="class-mipauthdelegateoauth2challenge"></a>MIP:: AuthDelegate:: OAuth2Challenge, classe 
+classe qui contient toutes les informations requises de l’application appelante afin de générer un jeton oauth2.
   
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-OAuth2Challenge public (const std::string & autorité, const std::string & ressource, const std::string & étendue)  |  Construire une nouvelle [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) objet.
-public const std::string & GetAuthority() const  |  Obtenir la chaîne d’autorité.
-public const std::string & GetResource() const  |  Obtenir la chaîne de ressource.
-public const std::string& GetScope() const  |  Obtenir la chaîne de portée.
+public OAuth2Challenge (const std:: String & autorité, const std:: String & ressource, const std:: String & portée, const std:: String & les revendications)  |  Construisez un nouvel objet [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) .
+public const std:: String & GetAuthority () const  |  Obtient la chaîne d’autorité.
+public const std:: String & GetResource () const  |  Obtient la chaîne de ressource.
+public const std:: String & GetScope, () const  |  Obtient la chaîne de portée.
+public const std:: String & GetClaims () const  |  Obtient la chaîne de revendications.
   
 ## <a name="members"></a>Membres
   
-### <a name="oauth2challenge-function"></a>OAuth2Challenge (fonction)
-Construire une nouvelle [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) objet.
+### <a name="oauth2challenge-function"></a>OAuth2Challenge fonction)
+Construisez un nouvel objet [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) .
 
 Paramètres :  
-* **autorité**: l’autorité le jeton doit être généré par rapport. 
+* **Authority**: autorité sur laquelle le jeton doit être généré. 
 
 
-* **ressource**: la ressource que le jeton a la valeur. 
+* **ressource**: la ressource à laquelle le jeton est défini. 
 
 
-* **étendue**: l’étendue que le jeton a la valeur.
+* **portée**: étendue à laquelle le jeton a la valeur.
 
 
   
-### <a name="getauthority-function"></a>GetAuthority (fonction)
-Obtenir la chaîne d’autorité.
+### <a name="getauthority-function"></a>GetAuthority fonction)
+Obtient la chaîne d’autorité.
 
   
-**Retourne**: La chaîne d’autorité.
+**Retourne**: Chaîne d’autorité.
   
-### <a name="getresource-function"></a>GetResource (fonction)
-Obtenir la chaîne de ressource.
+### <a name="getresource-function"></a>GetResource, fonction
+Obtient la chaîne de ressource.
 
   
-**Retourne**: La chaîne de ressource.
+**Retourne**: Chaîne de ressource.
   
-### <a name="getscope-function"></a>GetScope (fonction)
-Obtenir la chaîne de portée.
+### <a name="getscope-function"></a>GetScope, fonction)
+Obtient la chaîne de portée.
 
   
-**Retourne**: La chaîne de portée.
+**Retourne**: Chaîne de portée.
+  
+### <a name="getclaims-function"></a>GetClaims fonction)
+Obtient la chaîne de revendications.
+
+  
+**Retourne**: Chaîne de revendications.

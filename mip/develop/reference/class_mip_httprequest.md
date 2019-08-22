@@ -1,18 +1,17 @@
 ---
 title: mip::HttpRequest, classe
-description: Décrit la classe mip::httprequest de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Documente la classe MIP:: HttpRequest du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 8b0349db2e985d6fb015e1a2698187089483fbe3
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 28584ffa19c2ceb00f4ab3839f945adf737bdb3b
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173496"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885574"
 ---
 # <a name="class-miphttprequest"></a>mip::HttpRequest, classe 
 Interface qui décrit une seule requête HTTP.
@@ -20,40 +19,40 @@ Interface qui décrit une seule requête HTTP.
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetId() const  |  ID de la demande Obtient
+public const std::string& GetId() const  |  Obtient l’ID de la demande.
 public HttpRequestType GetRequestType() const  |  Obtenir le type de requête.
 public const std::string& GetUrl() const  |  Obtenir l’URL de la requête.
-public const std::vector\<uint8_t\>& GetBody() const  |  Obtenir le corps de la requête.
-public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Obtenir les en-têtes de requête.
+public const std:: Vector\<uint8_t\>& GetBody () const  |  Obtenir le corps de la requête.
+public const std:: map\<std:: String, std:: String, CaseInsensitiveComparator\>& GetHeaders () const  |  Obtenir les en-têtes de requête.
   
 ## <a name="members"></a>Membres
   
-### <a name="getid-function"></a>GetId (fonction)
-ID de la demande Obtient
+### <a name="getid-function"></a>GetId, fonction
+Obtient l’ID de la demande.
 
   
-**Retourne**: ID correspondant de la requête [HttpResponse](class_mip_httpresponse.md) aura le même ID
+**Retourne**: ID de la requête la HttpResponse correspondante aura le même ID
   
-### <a name="getrequesttype-function"></a>GetRequestType (fonction)
+### <a name="getrequesttype-function"></a>GetRequestType fonction)
 Obtenir le type de requête.
 
   
 **Retourne**: Type de demande
   
-### <a name="geturl-function"></a>GetUrl (fonction)
+### <a name="geturl-function"></a>GetUrl, fonction
 Obtenir l’URL de la requête.
 
   
-**Retourne**: Url de la demande
+**Retourne**: URL de la requête
   
-### <a name="getbody-function"></a>GetBody (fonction)
+### <a name="getbody-function"></a>GetBody fonction)
 Obtenir le corps de la requête.
 
   
-**Retourne**: Corps de demande
+**Retourne**: Corps de la demande
   
-### <a name="getheaders-function"></a>GetHeaders (fonction)
+### <a name="getheaders-function"></a>GetHeaders fonction)
 Obtenir les en-têtes de requête.
 
   
-**Retourne**: En-têtes de demande
+**Retourne**: En-têtes de requête

@@ -1,18 +1,17 @@
 ---
 title: mip::FileHandler::Observer, classe
-description: Décrit la classe mip::filehandler de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Documente la classe MIP:: fileHandler du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 4204bd17abe756c42c672a1cda17706b59600795
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 9c550f2d678995a4438f22246d00b383574533fd
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184686"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885637"
 ---
 # <a name="class-mipfilehandlerobserver"></a>mip::FileHandler::Observer, classe 
 Interface [Observer](class_mip_filehandler_observer.md) permettant aux clients d’obtenir les notifications des événements liés au gestionnaire de fichiers.
@@ -21,37 +20,53 @@ Toutes les erreurs héritent de [mip::Error](class_mip_error.md). Le client ne d
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public OnCreateFileHandlerSuccess void virtuel (const std::shared_ptr\<FileHandler\>& Gestionnaire de fichiers, const std::shared_ptr\<void\>& contexte)  |  Appelé en cas de création réussie du gestionnaire.
-public OnCreateFileHandlerFailure void virtuel (std::exception_ptr const & erreur, const std::shared_ptr\<void\>& contexte)  |  Appelé en cas d’échec de la création du gestionnaire.
-public OnClassifySuccess void virtuel (const std::vector\<std::shared_ptr\<Action\>\>& actions, const std::shared_ptr\<void\>& contexte)  |  Appelée lorsque classer de réussite.
-public OnClassifyFailure void virtuel (std::exception_ptr const & erreur, const std::shared_ptr\<void\>& contexte)  |  Appelée lorsque classifier a échoué.
-public virtual void OnGetDecryptedTemporaryFileSuccess(const std::string& decryptedFilePath, const std::shared_ptr\<void\>& context)  |  Appelé lors de l’obtention de la réussite d’un fichier temporaire déchiffré.
-public OnGetDecryptedTemporaryFileFailure void virtuel (std::exception_ptr const & erreur, const std::shared_ptr\<void\>& contexte)  |  Appelé lors de l’obtention du fichier temporaire déchiffré a échoué.
-public OnCommitSuccess void virtuel (bool validée, const std::shared_ptr\<void\>& contexte)  |  Appelé quand la validation des modifications du fichier a réussi.
-public OnCommitFailure void virtuel (std::exception_ptr const & erreur, const std::shared_ptr\<void\>& contexte)  |  Appelé en cas d’échec de la validation des modifications du fichier.
+public virtual void OnCreateFileHandlerSuccess (const std:: shared_ptr\<fileHandler\>& fileHandler, const std:: shared_ptr\<void\>& Context)  |  Appelé en cas de création réussie du gestionnaire.
+public virtual void OnCreateFileHandlerFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé en cas d’échec de la création du gestionnaire.
+public virtual void OnClassifySuccess (const std:: Vector\<std:: shared_ptr\<action\>\>& actions, const std:: shared_ptr\<void\>& Context)  |  Appelé lorsque la classification est réussie.
+public virtual void OnClassifyFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé lorsque la classification a échoué.
+public virtual void OnGetDecryptedTemporaryFileSuccess (const std:: String & decryptedFilePath, const std:: shared_ptr\<void\>& Context)  |  Appelée lors de la réussite du fichier temporaire déchiffré.
+public virtual void OnGetDecryptedTemporaryFileFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelée lors de l’échec de l’obtention du fichier temporaire déchiffré.
+public virtual void OnGetDecryptedTemporaryStreamSuccess (const std:: shared_ptr\<flux\>& decryptedStream, const std:: shared_ptr\<void\>& Context)  |  Appelée lors de la réussite du flux temporaire déchiffré.
+public virtual void OnGetDecryptedTemporaryStreamFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé lors de l’échec de l’obtention du flux de déchiffrement temporaire.
+public virtual void OnCommitSuccess (bool validée, const std::\<shared_ptr\>void & Context)  |  Appelé quand la validation des modifications du fichier a réussi.
+public virtual void OnCommitFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé en cas d’échec de la validation des modifications du fichier.
+public virtual void OnInspectSuccess (const std:: shared_ptr\<FileInspector\>& FileInspector, const std:: shared_ptr\<void\>& Context)  |  Appelé lorsque l’inspection est réussie.
+public virtual void OnInspectFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé lorsque l’inspection a échoué.
   
 ## <a name="members"></a>Membres
   
-### <a name="oncreatefilehandlersuccess-function"></a>OnCreateFileHandlerSuccess (fonction)
+### <a name="oncreatefilehandlersuccess-function"></a>OnCreateFileHandlerSuccess fonction)
 Appelé en cas de création réussie du gestionnaire.
   
-### <a name="oncreatefilehandlerfailure-function"></a>OnCreateFileHandlerFailure (fonction)
+### <a name="oncreatefilehandlerfailure-function"></a>OnCreateFileHandlerFailure fonction)
 Appelé en cas d’échec de la création du gestionnaire.
   
-### <a name="onclassifysuccess-function"></a>OnClassifySuccess (fonction)
-Appelée lorsque classer de réussite.
+### <a name="onclassifysuccess-function"></a>OnClassifySuccess fonction)
+Appelé lorsque la classification est réussie.
   
-### <a name="onclassifyfailure-function"></a>OnClassifyFailure (fonction)
-Appelée lorsque classifier a échoué.
+### <a name="onclassifyfailure-function"></a>OnClassifyFailure fonction)
+Appelé lorsque la classification a échoué.
   
-### <a name="ongetdecryptedtemporaryfilesuccess-function"></a>OnGetDecryptedTemporaryFileSuccess (fonction)
-Appelé lors de l’obtention de la réussite d’un fichier temporaire déchiffré.
+### <a name="ongetdecryptedtemporaryfilesuccess-function"></a>OnGetDecryptedTemporaryFileSuccess fonction)
+Appelée lors de la réussite du fichier temporaire déchiffré.
   
-### <a name="ongetdecryptedtemporaryfilefailure-function"></a>OnGetDecryptedTemporaryFileFailure function
-Appelé lors de l’obtention du fichier temporaire déchiffré a échoué.
+### <a name="ongetdecryptedtemporaryfilefailure-function"></a>OnGetDecryptedTemporaryFileFailure fonction)
+Appelée lors de l’échec de l’obtention du fichier temporaire déchiffré.
   
-### <a name="oncommitsuccess-function"></a>OnCommitSuccess (fonction)
+### <a name="ongetdecryptedtemporarystreamsuccess-function"></a>OnGetDecryptedTemporaryStreamSuccess fonction)
+Appelée lors de la réussite du flux temporaire déchiffré.
+  
+### <a name="ongetdecryptedtemporarystreamfailure-function"></a>OnGetDecryptedTemporaryStreamFailure fonction)
+Appelé lors de l’échec de l’obtention du flux de déchiffrement temporaire.
+  
+### <a name="oncommitsuccess-function"></a>OnCommitSuccess fonction)
 Appelé quand la validation des modifications du fichier a réussi.
   
-### <a name="oncommitfailure-function"></a>OnCommitFailure (fonction)
+### <a name="oncommitfailure-function"></a>OnCommitFailure fonction)
 Appelé en cas d’échec de la validation des modifications du fichier.
+  
+### <a name="oninspectsuccess-function"></a>OnInspectSuccess fonction)
+Appelé lorsque l’inspection est réussie.
+  
+### <a name="oninspectfailure-function"></a>OnInspectFailure fonction)
+Appelé lorsque l’inspection a échoué.

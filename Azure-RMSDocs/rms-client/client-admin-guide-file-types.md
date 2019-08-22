@@ -4,7 +4,7 @@ description: Détails techniques sur les types de fichiers pris en charge, les e
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 03b589bf0f16ed8a70f15dea1130fbd8baf85036
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 9d7ddd54feaef28c1d93a9ae041818007c6e965f
+ms.sourcegitcommit: f0dee92d6668001681b507e82f8aea61f3bfa96e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793661"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69894449"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 
@@ -253,7 +253,7 @@ Sans configuration supplémentaire, le client Azure Information Protection utili
 
 |Type d'application|Type de fichier|
 |--------------------------------|-------------------------------------|
-|Word|.docx ; .docm ; .dotm ; .dotx|
+|Word|champs docx;. docm;. dot;. dotm;. dotx|
 |Excel|.xls ; .xlt ; .xlsx ; .xltx ; .xltm ; .xlsm ; .xlsb|
 |PowerPoint|.ppt ; .pps ; .pot ; .pptx ; .ppsx ; .pptm ; .ppsm ; .potx ; .potm|
 |PDF |.pdf|

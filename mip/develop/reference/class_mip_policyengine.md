@@ -1,18 +1,17 @@
 ---
 title: mip::PolicyEngine, classe
-description: Décrit la classe mip::policyengine de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: Documente la classe MIP::p olicyengine du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: ce8ef7df12cdc9823a62234b5dadaaacdb7fed37
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 7ef57d0864ff4899476dc22639942afdbfe6bffe
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173638"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885250"
 ---
 # <a name="class-mippolicyengine"></a>mip::PolicyEngine, classe 
 Cette classe fournit une interface pour toutes les fonctions de moteur.
@@ -22,21 +21,22 @@ Cette classe fournit une interface pour toutes les fonctions de moteur.
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Obtenir les [Settings](class_mip_policyengine_settings.md) du moteur de stratégie.
 public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  répertorier les étiquettes de sensibilité associées au moteur de stratégie.
-public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  Répertorie les types de sensibilité associées au moteur de stratégie.
+public const std:: Vector\<std:: shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes () const  |  répertorie les types de sensibilité associés au moteur de stratégie.
 public const std::string& GetMoreInfoUrl() const  |  Fournir une URL pour la recherche d’autres informations sur la stratégie/les étiquettes.
 public bool IsLabelingRequired() const  |  Vérifie si la stratégie détermine qu’un document doit être étiqueté ou non.
 public std::shared_ptr\<Label\> GetDefaultSensitivityLabel()  |  Obtenir l’étiquette de sensibilité par défaut.
-public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  Créer un gestionnaire de stratégie pour exécuter des fonctions liées à la stratégie sur l’état d’exécution d’un fichier.
+public std:: shared_ptr\<label\> GetLabelById (const std:: String & ID) const  |  Obtient l’étiquette en fonction de l’ID fourni.
+public std:: shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  Créer un gestionnaire de stratégie pour exécuter des fonctions liées à la stratégie sur l’état d’exécution d’un fichier.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Consigne un événement spécifique à l’application dans le pipeline d’audit.
-public const std::string& GetPolicyDataXml() const  |  Obtient les données de stratégie XML qui décrit les paramètres, les étiquettes et les règles associées à cette stratégie.
+public const std:: String & GetPolicyDataXml () const  |  Obtient des données de stratégie XML qui décrivent les paramètres, les étiquettes et les règles associés à cette stratégie.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtient une liste de paramètres personnalisés.
-public const std::string& GetPolicyId() const  |  Obtient l’ID de stratégie.
-public bool HasClassificationRules() const  |  Obtient si la stratégie a des règles automatiques ou de recommandation.
-public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Obtient l’heure lors de la dernière extraction de la stratégie.
+public const std:: String & GetPolicyFileId () const  |  Obtient l’ID du fichier de stratégie.
+public bool HasClassificationRules () const  |  Obtient si la stratégie a des règles automatiques ou de recommandation.
+public std:: Chrono:: time_point\<std:: Chrono:: system_clock\> GetLastPolicyFetchTime () const  |  Obtient l’heure de la dernière extraction de la stratégie.
   
 ## <a name="members"></a>Membres
   
-### <a name="getsettings-function"></a>GetSettings (fonction)
+### <a name="getsettings-function"></a>GetSettings fonction)
 Obtenir les [Settings](class_mip_policyengine_settings.md) du moteur de stratégie.
 
   
@@ -44,90 +44,93 @@ Obtenir les [Settings](class_mip_policyengine_settings.md) du moteur de stratég
   
 **Voir aussi** : [mip::PolicyEngine::Settings](class_mip_policyengine_settings.md)
   
-### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels (fonction)
+### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels fonction)
 répertorier les étiquettes de sensibilité associées au moteur de stratégie.
 
   
-**Retourne**: Une liste d’étiquettes de sensibilité.
+**Retourne**: Liste d’étiquettes de sensibilité.
   
-### <a name="listsensitivitytypes-function"></a>ListSensitivityTypes (fonction)
-Répertorie les types de sensibilité associées au moteur de stratégie.
+### <a name="listsensitivitytypes-function"></a>ListSensitivityTypes fonction)
+répertorie les types de sensibilité associés au moteur de stratégie.
 
   
-**Retourne**: Une liste d’étiquettes de sensibilité. vide si LoadSensitivityTypesEnabled était faux)
+**Retourne**: Liste d’étiquettes de sensibilité. vide si LoadSensitivityTypesEnabled a la valeur false (
   
-**Voir aussi**: [PolicyEngine::Settings](class_mip_policyengine_settings.md)).
+**Voir aussi**: [PolicyEngine:: Settings](class_mip_policyengine_settings.md)).
   
-### <a name="getmoreinfourl-function"></a>GetMoreInfoUrl (fonction)
+### <a name="getmoreinfourl-function"></a>GetMoreInfoUrl fonction)
 Fournir une URL pour la recherche d’autres informations sur la stratégie/les étiquettes.
 
   
-**Retourne**: Une url au format de chaîne.
+**Retourne**: URL au format de chaîne.
   
-### <a name="islabelingrequired-function"></a>IsLabelingRequired (fonction)
+### <a name="islabelingrequired-function"></a>IsLabelingRequired fonction)
 Vérifie si la stratégie détermine qu’un document doit être étiqueté ou non.
 
   
-**Retourne**: True si l’étiquetage est obligatoire ; sinon, false.
+**Retourne**: True si l’étiquetage est obligatoire, sinon false.
   
-### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel (fonction)
+### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel fonction)
 Obtenir l’étiquette de sensibilité par défaut.
 
   
-**Retourne**: À défaut d’étiquette de sensibilité existe, nullptr si aucun jeu d’étiquette par défaut.
+**Retourne**: Étiquette de sensibilité par défaut si elle existe, nullptr si aucune étiquette par défaut n’est définie.
   
-### <a name="createpolicyhandler-function"></a>CreatePolicyHandler (fonction)
+### <a name="getlabelbyid-function"></a>GetLabelById fonction)
+Obtient l’étiquette en fonction de l’ID fourni.
+  
+### <a name="createpolicyhandler-function"></a>CreatePolicyHandler fonction)
 Créer un gestionnaire de stratégie pour exécuter des fonctions liées à la stratégie sur l’état d’exécution d’un fichier.
 
 Paramètres :  
-* **Un**: bool représentant si la découverte de l’audit est activé ou non.
+* **A**: valeur booléenne indiquant si la détection d’audit est activée ou non.
 
 
 
   
 **Retourne**: Gestionnaire de stratégie.
-Application doit conserver l’objet de gestionnaire de stratégie pour la durée de vie du document.
+L’application doit conserver l’objet gestionnaire de stratégie pendant toute la durée de vie du document.
   
-### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent (fonction)
+### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent fonction)
 Consigne un événement spécifique à l’application dans le pipeline d’audit.
 
 Paramètres :  
-* **niveau**: du niveau de journal : Informations/avertissement/erreur. 
+* **niveau**: au niveau du journal: Informations/erreur/avertissement. 
 
 
-* **eventType**: une description du type d’événement. 
+* **eventType**: description du type d’événement. 
 
 
-* **eventData**: les données associées à l’événement.
+* **EventData**: données associées à l’événement.
 
 
   
-### <a name="getpolicydataxml-function"></a>GetPolicyDataXml (fonction)
-Obtient les données de stratégie XML qui décrit les paramètres, les étiquettes et les règles associées à cette stratégie.
+### <a name="getpolicydataxml-function"></a>GetPolicyDataXml fonction)
+Obtient des données de stratégie XML qui décrivent les paramètres, les étiquettes et les règles associés à cette stratégie.
 
   
-**Retourne**: Données XML de la stratégie.
+**Retourne**: Données de stratégie XML.
   
-### <a name="getcustomsettings-function"></a>GetCustomSettings (fonction)
+### <a name="getcustomsettings-function"></a>GetCustomSettings fonction)
 Obtient une liste de paramètres personnalisés.
 
   
-**Retourne**: Un vecteur de paramètres personnalisés.
+**Retourne**: Vecteur de paramètres personnalisés.
   
-### <a name="getpolicyid-function"></a>GetPolicyId (fonction)
-Obtient l’ID de stratégie.
+### <a name="getpolicyfileid-function"></a>GetPolicyFileId fonction)
+Obtient l’ID du fichier de stratégie.
 
   
-**Retourne**: Chaîne qui représente l’ID de stratégie
+**Retourne**: Chaîne qui représente l’ID du fichier de stratégie.
   
-### <a name="hasclassificationrules-function"></a>HasClassificationRules (fonction)
+### <a name="hasclassificationrules-function"></a>HasClassificationRules fonction)
 Obtient si la stratégie a des règles automatiques ou de recommandation.
 
   
-**Retourne**: Une valeur booléenne qui indique si il automatique ni recommandation règles dans la stratégie
+**Retourne**: Valeur booléenne qui indique s’il existe des règles de recommandation ou automatique dans la stratégie.
   
-### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime (fonction)
-Obtient l’heure lors de la dernière extraction de la stratégie.
+### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime fonction)
+Obtient l’heure de la dernière extraction de la stratégie.
 
   
-**Retourne**: Le temps lors de la dernière extraction de la stratégie
+**Retourne**: Heure de la dernière extraction de la stratégie

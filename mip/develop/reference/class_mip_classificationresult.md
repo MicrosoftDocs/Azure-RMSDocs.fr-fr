@@ -1,18 +1,17 @@
 ---
 title: class mip::ClassificationResult
-description: Décrit la classe mip::classificationresult de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Documente la classe MIP:: classificationresult du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 6a048dd7902e8148e4f32f8cc9e62d63110b2b4a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 83856362e0d0a347f660cb60a64a82e24062c247
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174219"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885857"
 ---
 # <a name="class-mipclassificationresult"></a>class mip::ClassificationResult 
 Classe qui contient le résultat d’un appel de classification sur l’État d’exécution.
@@ -23,27 +22,27 @@ Classe qui contient le résultat d’un appel de classification sur l’État d�
 public std::string GetId() const  |  Obtenir l’ID de la stratégie de classification.
 public int GetCount() const  |  Obtenir le nombre d’instances.
 public int GetConfidenceLevel() const  |  Obtenir la confiance dans le résultat.
-public std::string GetSensitiveInformationDetections() const  |  Obtenir les détections des informations sensibles.
+public std:: String GetSensitiveInformationDetections () const  |  Obtient les détections d’informations sensibles.
   
 ## <a name="members"></a>Membres
   
-### <a name="getid-function"></a>GetId (fonction)
+### <a name="getid-function"></a>GetId, fonction
 Obtenir l’ID de la stratégie de classification.
 
   
 **Retourne**: ID de la stratégie de classification.
   
-### <a name="getcount-function"></a>GetCount (fonction)
+### <a name="getcount-function"></a>Fonction GetCount
 Obtenir le nombre d’instances.
 
   
-**Retourne**: Le nombre d’instances.
+**Retourne**: Nombre d’instances.
   
-### <a name="getconfidencelevel-function"></a>GetConfidenceLevel (fonction)
+### <a name="getconfidencelevel-function"></a>GetConfidenceLevel fonction)
 Obtenir la confiance dans le résultat.
   
-### <a name="getsensitiveinformationdetections-function"></a>GetSensitiveInformationDetections (fonction)
-Obtenir les détections des informations sensibles.
+### <a name="getsensitiveinformationdetections-function"></a>GetSensitiveInformationDetections fonction)
+Obtient les détections d’informations sensibles.
 
   
-**Retourne**: Chaîne JSON de toutes les détections des informations sensibles.
+**Retourne**: Chaîne JSON de toutes les détections d’informations sensibles.

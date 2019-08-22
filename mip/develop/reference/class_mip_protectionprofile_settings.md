@@ -1,18 +1,17 @@
 ---
 title: mip::ProtectionProfile::Settings, classe
-description: Décrit la classe mip::protectionprofile de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: Documente la classe MIP::p rotectionprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 3d3685656f8814fe495e6e29d7fe12cf54d7d7d4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 010fa01d42afb181e33afab7ce47f9769e78a01d
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173613"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883345"
 ---
 # <a name="class-mipprotectionprofilesettings"></a>mip::ProtectionProfile::Settings, classe 
 [Settings](class_mip_protectionprofile_settings.md) utilisé par [ProtectionProfile](class_mip_protectionprofile.md) lors de sa création et tout au long de sa durée de vie.
@@ -20,135 +19,201 @@ ms.locfileid: "60173613"
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-Paramètres publics (const std::shared_ptr const std::string & chemin d’accès, useinmemorystorage : bool,\<authdelegate :\>& authdelegate :, const std::shared_ptr\<ConsentDelegate\>& consentDelegate const std::shared_ptr\<ProtectionProfile::Observer\>& observer, const ApplicationInfo & applicationInfo)  |  Constructeur [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) qui spécifie un observateur à utiliser pour les opérations asynchrones.
-Paramètres publics (const std::shared_ptr const std::string & chemin d’accès, useinmemorystorage : bool,\<authdelegate :\>& authdelegate :, const std::shared_ptr\<ConsentDelegate\>& consentDelegate const ApplicationInfo & applicationInfo)  |  Constructeur [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) utilisé pour les opérations synchrones.
+paramètres publics (const std:: String & chemin, CacheStorageType CacheStorageType, const std:: shared_ptr\<AuthDelegate\>& AuthDelegate, const std:: shared_ptr\<ConsentDelegate\>& consentDelegate, const std:: shared_ptr\<ProtectionProfile:: observer\>& observateur, const ApplicationInfo & ApplicationInfo)  |  Constructeur [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) qui spécifie un observateur à utiliser pour les opérations asynchrones.
+paramètres publics (const std:: shared_ptr\<MipContext\>& MipContext, CacheStorageType CacheStorageType, const std:: shared_ptr\<AuthDelegate\>& AuthDelegate, const std:: shared_ptr\< ConsentDelegate\>& ConsentDelegate, const std:: shared_ptr\<ProtectionProfile:: observer\>& observer)  |  Constructeur [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) qui spécifie un observateur à utiliser pour les opérations asynchrones.
+paramètres publics (const std:: String & chemin, CacheStorageType CacheStorageType, const std:: shared_ptr\<AuthDelegate\>& AuthDelegate, const std:: shared_ptr\<ConsentDelegate\>& consentDelegate, const ApplicationInfo & applicationInfo)  |  Constructeur [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) utilisé pour les opérations synchrones.
+paramètres publics (const std:: shared_ptr\<MipContext\>& MipContext, CacheStorageType CacheStorageType, const std:: shared_ptr\<AuthDelegate\>& AuthDelegate, const std:: shared_ptr\< ConsentDelegate\>& ConsentDelegate)  |  Constructeur [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) utilisé pour les opérations synchrones.
 public const std::string& GetPath() const  |  Obtient le chemin où sont stockées les informations de journalisation, les données de télémétrie et autres informations relatives à la protection.
-public bool GetUseInMemoryStorage() const  |  Savoir si les caches sont stockés en mémoire uniquement (plutôt que sur le disque)
-public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Obtient le délégué d’authentification utilisé pour l’acquisition des jetons d’authentification.
-public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Obtient le délégué de consentement utilisé pour la connexion aux services.
-public std::shared_ptr\<ProtectionProfile::Observer\> GetObserver() const  |  Obtient l’observateur qui reçoit les notifications des événements liés à [ProtectionProfile](class_mip_protectionprofile.md).
+public CacheStorageType GetCacheStorageType () const  |  Déterminez si les caches sont stockés dans la mémoire ou sur le disque.
+public std:: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  Obtient le délégué d’authentification utilisé pour l’acquisition des jetons d’authentification.
+public std:: shared_ptr\<ConsentDelegate\> GetConsentDelegate () const  |  Obtient le délégué de consentement utilisé pour la connexion aux services.
+public std:: shared_ptr\<ProtectionProfile:: observer\> GetObserver () const  |  Obtient l’observateur qui reçoit les notifications des événements liés à [ProtectionProfile](class_mip_protectionprofile.md).
 public const ApplicationInfo& GetApplicationInfo() const  |  Obtient des informations sur l’application qui utilise le SDK de protection.
+public std:: shared_ptr\<MipContext\> GetMipContext () const  |  Obtient le contexte MIP qui représente l’état partagé sur tous les profils.
 public void OptOutTelemetry()  |  Refuse la collecte des données de télémétrie.
 public bool IsTelemetryOptedOut() const  |  Indique si la collecte des données de télémétrie doit être désactivée ou non.
-public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Obtenir le délégué d’enregistreur d’événements (le cas échéant) fourni par l’application.
-public SetLoggerDelegate void (const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Remplacer l’enregistreur d’événements par défaut.
-public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
-public SetHttpDelegate void (const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
-public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Obtenir le délégué TaskDispatcher (le cas échéant) fourni par l’application.
-public SetTaskDispatcherDelegate void (const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Remplacer la tâche d’asynchrone avec par défaut la distribution de gestion avec du client.
-public void SetNewFeaturesDisabled()  |  Désactive les nouvelles fonctionnalités.
-public bool AreNewFeaturesDisabled() const  |  Indique si les nouvelles fonctionnalités sont désactivées ou non.
+public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate () const  |  Obtenir le délégué d’enregistreur d’événements (le cas échéant) fourni par l’application.
+public void SetLoggerDelegate (const std:: shared_ptr\<LoggerDelegate\>& LoggerDelegate)  |  Remplacer l’enregistreur d’événements par défaut.
+public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
+public void SetHttpDelegate (const std:: shared_ptr\<HttpDelegate\>& HttpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
+public std:: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Obtient le délégué TaskDispatcher (le cas échéant) fourni par l’application.
+public void SetTaskDispatcherDelegate (const std:: shared_ptr\<TaskDispatcherDelegate\>& TaskDispatcherDelegate)  |  Remplacez la tâche asynchonous par défaut en rétribuant la gestion avec le propriétaire du client.
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de la session.
 public const std::string& GetSessionId() const  |  Obtient l’ID de la session.
 public void SetMinimumLogLevel(LogLevel logLevel)  |  Définir le niveau de journalisation minimum qui va déclencher un événement de journalisation.
 public LogLevel GetMinimumLogLevel() const  |  Obtenir l’objet de niveau de journalisation minimum.
+public void SetCanCacheLicenses (bool canCacheLicenses)  |  Configure si les licences utilisateur final (LUF) sont mises en cache localement.
+public bool CanCacheLicenses () const  |  Obtient une valeur indiquant si les licences d’utilisateur final (LUF) sont mises en cache localement.
   
 ## <a name="members"></a>Membres
   
-### <a name="settings-function"></a>Fonction de paramètres
+### <a name="settings-function"></a>Fonction Settings
 Constructeur [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) qui spécifie un observateur à utiliser pour les opérations asynchrones.
 
 Paramètres :  
-* **Chemin d’accès**: Chemin d’accès de fichier sous l’enregistrement, données de télémétrie et les autres informations relatives à la protection est stockée. 
+* **chemin d’accès**: Chemin de fichier sous lequel sont stockées les données de journalisation, de télémétrie et autres supports de protection 
 
 
-* **useinmemorystorage :**: Store n’importe quel état mis en cache en mémoire plutôt que sur le disque 
+* **cacheStorageType**: Stocker un État mis en cache dans la mémoire ou sur le disque 
 
 
-* **authDelegate**: Objet de rappel à utiliser pour l’authentification, implémentée par l’application cliente 
+* **authDelegate**: Objet de rappel à utiliser pour l’authentification, implémenté par l’application cliente 
 
 
-* **Observateur**: [Observateur](class_mip_protectionprofile_observer.md) instance qui recevra les notifications d’événements liés à [ProtectionProfile](class_mip_protectionprofile.md)
+* **consentDelegate**: Délégué utilisé pour obtenir l’autorisation de l’utilisateur pour accéder aux ressources externes 
 
 
-* **applicationInfo**: Plus d’informations sur l’application qui utilise le Kit de développement logiciel de protection
+* **Observateur**: Instance [Observateur](class_mip_protectionprofile_observer.md) qui recevra les notifications des événements liés à [ProtectionProfile](class_mip_protectionprofile.md)
+
+
+* **applicationInfo**: Informations sur l’application qui consomme le kit de développement logiciel (SDK) de protection
+
+
+> Déconseillé Ce constructeur sera bientôt déconseillé au profit d’un paramètre MIP:: MipContext
+  
+### <a name="settings-function"></a>Fonction Settings
+Constructeur [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) qui spécifie un observateur à utiliser pour les opérations asynchrones.
+
+Paramètres :  
+* **mipContext**: Paramètres de contexte globaux 
+
+
+* **cacheStorageType**: Stocker un État mis en cache dans la mémoire ou sur le disque 
+
+
+* **authDelegate**: Objet de rappel à utiliser pour l’authentification, implémenté par l’application cliente 
+
+
+* **consentDelegate**: Délégué utilisé pour obtenir l’autorisation de l’utilisateur pour accéder aux ressources externes 
+
+
+* **Observateur**: Instance [Observateur](class_mip_protectionprofile_observer.md) qui recevra les notifications des événements liés à [ProtectionProfile](class_mip_protectionprofile.md)
+
+
+* **applicationInfo**: Informations sur l’application qui consomme le kit de développement logiciel (SDK) de protection
 
 
   
-### <a name="settings-function"></a>Fonction de paramètres
+### <a name="settings-function"></a>Fonction Settings
 Constructeur [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) utilisé pour les opérations synchrones.
 
 Paramètres :  
-* **Chemin d’accès**: Chemin d’accès de fichier sous l’enregistrement, données de télémétrie et les autres informations relatives à la protection est stockée. 
+* **chemin d’accès**: Chemin de fichier sous lequel sont stockées les données de journalisation, de télémétrie et autres supports de protection 
 
 
-* **useinmemorystorage :**: Store n’importe quel état mis en cache en mémoire plutôt que sur le disque 
+* **cacheStorageType**: Stocker un État mis en cache dans la mémoire ou sur le disque 
 
 
-* **authDelegate**: Objet de rappel à utiliser pour l’authentification, implémentée par l’application cliente 
+* **authDelegate**: Objet de rappel à utiliser pour l’authentification, implémenté par l’application cliente 
 
 
-* **applicationInfo**: Plus d’informations sur l’application qui utilise le SDK de protection
+* **consentDelegate**: Délégué utilisé pour obtenir l’autorisation de l’utilisateur pour accéder aux ressources externes 
+
+
+* **applicationInfo**: Informations sur l’application qui consomme le kit de développement logiciel (SDK) de protection
+
+
+Ce constructeur sera bientôt déconseillé au profit d’un paramètre MIP:: MipContext
+  
+### <a name="settings-function"></a>Fonction Settings
+Constructeur [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) utilisé pour les opérations synchrones.
+
+Paramètres :  
+* **mipContext**: Paramètres de contexte globaux 
+
+
+* **cacheStorageType**: Stocker un État mis en cache dans la mémoire ou sur le disque 
+
+
+* **authDelegate**: Objet de rappel à utiliser pour l’authentification, implémenté par l’application cliente 
+
+
+* **consentDelegate**: Délégué utilisé pour obtenir l’autorisation de l’utilisateur pour accéder aux ressources externes 
+
+
+* **applicationInfo**: Informations sur l’application qui consomme le kit de développement logiciel (SDK) de protection
 
 
   
-### <a name="getpath-function"></a>GetPath (fonction)
+### <a name="getpath-function"></a>GetPath fonction)
 Obtient le chemin où sont stockées les informations de journalisation, les données de télémétrie et autres informations relatives à la protection.
 
   
 **Retourne**: le chemin où sont stockées les informations de journalisation, les données de télémétrie et autres informations relatives à la protection
+> Déconseillé Cette méthode sera bientôt dépréciée en faveur de l’obtention ou de la définition des données de contexte communes via MIP:: MipContext.
   
-### <a name="getuseinmemorystorage-function"></a>GetUseInMemoryStorage (fonction)
-Savoir si les caches sont stockés en mémoire uniquement (plutôt que sur le disque)
+### <a name="getcachestoragetype-function"></a>GetCacheStorageType fonction)
+Déterminez si les caches sont stockés dans la mémoire ou sur le disque.
 
   
-**Retourne**: True si les caches sont stockés en mémoire uniquement
+**Retourne**: Type de stockage utilisé
   
-### <a name="getauthdelegate-function"></a>GetAuthDelegate (fonction)
+### <a name="getauthdelegate-function"></a>GetAuthDelegate fonction)
 Obtient le délégué d’authentification utilisé pour l’acquisition des jetons d’authentification.
 
   
-**Retourne**: Délégué d’authentification utilisé pour l’acquisition des jetons d’authentification
+**Retourne**: Délégué d’authentification utilisé pour acquérir des jetons d’authentification
   
-### <a name="getconsentdelegate-function"></a>GetConsentDelegate (fonction)
+### <a name="getconsentdelegate-function"></a>GetConsentDelegate fonction)
 Obtient le délégué de consentement utilisé pour la connexion aux services.
 
   
-**Retourne**: Délégué utilisé pour la connexion aux services de consentement
+**Retourne**: Délégué de consentement utilisé pour la connexion aux services
   
-### <a name="getobserver-function"></a>GetObserver (fonction)
+### <a name="getobserver-function"></a>GetObserver fonction)
 Obtient l’observateur qui reçoit les notifications des événements liés à [ProtectionProfile](class_mip_protectionprofile.md).
 
   
 **Retourne**: [Observateur](class_mip_protectionprofile_observer.md) qui reçoit des notifications d’événements liés à [ProtectionProfile](class_mip_protectionprofile.md)
   
-### <a name="getapplicationinfo-function"></a>GetApplicationInfo (fonction)
+### <a name="getapplicationinfo-function"></a>GetApplicationInfo fonction)
 Obtient des informations sur l’application qui utilise le SDK de protection.
 
   
-**Retourne**: Plus d’informations sur l’application qui utilise le Kit de développement logiciel de protection
+**Retourne**: Informations sur l’application qui consomme le kit de développement logiciel (SDK) de protection
+> Déconseillé Cette méthode sera bientôt dépréciée en faveur de l’obtention ou de la définition des données de contexte communes via MIP:: MipContext.
   
-### <a name="optouttelemetry-function"></a>OptOutTelemetry (fonction)
+### <a name="getmipcontext-function"></a>GetMipContext fonction)
+Obtient le contexte MIP qui représente l’état partagé sur tous les profils.
+
+  
+**Retourne**: Contexte MIP
+  
+### <a name="optouttelemetry-function"></a>OptOutTelemetry fonction)
 Refuse la collecte des données de télémétrie.
+> Déconseillé Cette méthode sera bientôt dépréciée en faveur de l’obtention ou de la définition des données de contexte communes via MIP:: MipContext.
   
-### <a name="istelemetryoptedout-function"></a>IsTelemetryOptedOut function
+### <a name="istelemetryoptedout-function"></a>IsTelemetryOptedOut fonction)
 Indique si la collecte des données de télémétrie doit être désactivée ou non.
 
   
-**Retourne**: Si la collecte des données de télémétrie doivent être désactivée ou non
+**Retourne**: Si la collecte de données de télémétrie doit être désactivée ou non
+> Déconseillé Cette méthode sera bientôt dépréciée en faveur de l’obtention ou de la définition des données de contexte communes via MIP:: MipContext.
   
-### <a name="getloggerdelegate-function"></a>GetLoggerDelegate (fonction)
+### <a name="getloggerdelegate-function"></a>GetLoggerDelegate fonction)
 Obtenir le délégué d’enregistreur d’événements (le cas échéant) fourni par l’application.
 
   
-**Retourne**: Enregistreur d’événements
+**Retourne**: Enregistreur
+> Déconseillé Cette méthode sera bientôt dépréciée en faveur de l’obtention ou de la définition des données de contexte communes via MIP:: MipContext.
   
-### <a name="setloggerdelegate-function"></a>SetLoggerDelegate (fonction)
+### <a name="setloggerdelegate-function"></a>SetLoggerDelegate fonction)
 Remplacer l’enregistreur d’événements par défaut.
 
 Paramètres :  
-* **loggerDelegate**: Interface de rappel de journalisation implémentée par les applications clientes
+* **loggerDelegate**: Interface de rappel d’enregistrement implémentée par les applications clientes
 
 
-Cette méthode doit être appelée par les applications clientes qui utilisent leur propre implémentation de l’enregistreur d’événements
+Cette méthode doit être appelée par les applications clientes qui utilisent leur propre implémentation de l’enregistreur d’événements 
+> Déconseillé Cette méthode sera bientôt dépréciée en faveur de l’obtention ou de la définition des données de contexte communes via MIP:: MipContext.
   
-### <a name="gethttpdelegate-function"></a>GetHttpDelegate function
+### <a name="gethttpdelegate-function"></a>GetHttpDelegate fonction)
 Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
 
   
 **Retourne**: Délégué HTTP à utiliser pour les opérations HTTP
   
-### <a name="sethttpdelegate-function"></a>SetHttpDelegate (fonction)
+### <a name="sethttpdelegate-function"></a>SetHttpDelegate fonction)
 Remplacer la pile HTTP par défaut par celle du client.
 
 Paramètres :  
@@ -156,57 +221,61 @@ Paramètres :
 
 
   
-### <a name="gettaskdispatcherdelegate-function"></a>GetTaskDispatcherDelegate (fonction)
-Obtenir le délégué TaskDispatcher (le cas échéant) fourni par l’application.
+### <a name="gettaskdispatcherdelegate-function"></a>GetTaskDispatcherDelegate fonction)
+Obtient le délégué TaskDispatcher (le cas échéant) fourni par l’application.
 
   
 **Retourne**: Délégué TaskDispatcher à utiliser pour l’exécution de tâches asynchrones
   
-### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate (fonction)
-Remplacer la tâche d’asynchrone avec par défaut la distribution de gestion avec du client.
+### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate fonction)
+Remplacez la tâche asynchonous par défaut en rétribuant la gestion avec le propriétaire du client.
 
 Paramètres :  
-* **taskDispatcherDelegate**: Tâche de la distribution d’interface de rappel implémentée par l’application cliente
+* **taskDispatcherDelegate**: Interface de rappel de répartition des tâches implémentée par l’application cliente
 
 
   
-### <a name="setnewfeaturesdisabled-function"></a>SetNewFeaturesDisabled (fonction)
-Désactive les nouvelles fonctionnalités.
-Pour les applications qui ne veulent pas essayer de nouvelles fonctionnalités
-  
-### <a name="arenewfeaturesdisabled-function"></a>AreNewFeaturesDisabled (fonction)
-Indique si les nouvelles fonctionnalités sont désactivées ou non.
-
-  
-**Retourne**: Si les nouvelles fonctionnalités sont désactivées ou non
-  
-### <a name="setsessionid-function"></a>SetSessionId function
+### <a name="setsessionid-function"></a>SetSessionId fonction)
 Définit l’ID de la session.
 
 Paramètres :  
-* **sessionId**: ID de session qui sera utilisé pour mettre en corrélation des journaux et la télémétrie
+* **SessionID**: ID de session qui sera utilisé pour mettre en corrélation les journaux/la télémétrie
 
 
   
-### <a name="getsessionid-function"></a>GetSessionId (fonction)
+### <a name="getsessionid-function"></a>GetSessionId fonction)
 Obtient l’ID de la session.
 
   
-**Retourne**: ID de session qui sera utilisé pour mettre en corrélation des journaux et la télémétrie
+**Retourne**: ID de session qui sera utilisé pour mettre en corrélation les journaux/la télémétrie
   
-### <a name="setminimumloglevel-function"></a>SetMinimumLogLevel (fonction)
+### <a name="setminimumloglevel-function"></a>SetMinimumLogLevel fonction)
 Définir le niveau de journalisation minimum qui va déclencher un événement de journalisation.
 
 Paramètres :  
-* **logLevel** : niveau de journalisation minimum qui va déclencher un événement de journalisation. 
+* **logLevel** : niveau de journalisation minimum qui va déclencher un événement de journalisation.
 
 
-
+> Déconseillé Cette méthode sera bientôt dépréciée en faveur de l’obtention ou de la définition des données de contexte communes via MIP:: MipContext.
   
-**Retourne**: True
-  
-### <a name="getminimumloglevel-function"></a>GetMinimumLogLevel (fonction)
+### <a name="getminimumloglevel-function"></a>GetMinimumLogLevel fonction)
 Obtenir l’objet de niveau de journalisation minimum.
 
   
-**Retourne**: Niveau de journalisation minimum qui va déclencher un événement de journalisation.
+**Retourne**: Niveau de journalisation minimal qui déclenchera un événement de journalisation.
+> Déconseillé Cette méthode sera bientôt dépréciée en faveur de l’obtention ou de la définition des données de contexte communes via MIP:: MipContext.
+  
+### <a name="setcancachelicenses-function"></a>SetCanCacheLicenses fonction)
+Configure si les licences utilisateur final (LUF) sont mises en cache localement.
+
+Paramètres :  
+* **canCacheLicenses**: Indique si le moteur doit mettre en cache une licence lors de l’ouverture du contenu protégé
+
+
+Si la valeur est true, l’ouverture du contenu protégé met en cache la licence associée localement. Si la valeur est false, l’ouverture du contenu protégé effectue toujours l’opération HTTP pour acquérir la licence du service RMS.
+  
+### <a name="cancachelicenses-function"></a>CanCacheLicenses fonction)
+Obtient une valeur indiquant si les licences d’utilisateur final (LUF) sont mises en cache localement.
+
+  
+**Retourne**: Configuration de la mise en cache des licences

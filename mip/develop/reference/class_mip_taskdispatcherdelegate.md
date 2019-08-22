@@ -1,79 +1,78 @@
 ---
-title: classe mip::TaskDispatcherDelegate
-description: Décrit la classe mip::taskdispatcherdelegate de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'MIP:: TaskDispatcherDelegate, classe'
+description: 'Documente la classe MIP:: taskdispatcherdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 568a6df614370769556cd3634070e199beb4da5b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 0455f446cddd7db1c05f0f7e7b76b33496810cf1
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184278"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883023"
 ---
-# <a name="class-miptaskdispatcherdelegate"></a>classe mip::TaskDispatcherDelegate 
-Une classe qui définit l’interface pour le répartiteur de tâche du SDK MIP.
+# <a name="class-miptaskdispatcherdelegate"></a>MIP:: TaskDispatcherDelegate, classe 
+Classe qui définit l’interface du répartiteur de tâches du kit de développement logiciel (SDK) MIP.
   
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public void DispatchTask(const std::string& taskId, std::function\<void()\> task)  |  Exécuter une tâche sur un thread d’arrière-plan.
-public void DispatchTask(const std::string& taskId, std::function\<void()\> task, int64_t delay)  |  Exécuter une tâche sur un thread d’arrière-plan avec le délai donné.
-public void ExecuteTaskOnIndependentThread(const std::string& taskId, std::function\<void()\> task)  |  Exécuter immédiatement une tâche sur un thread indépendant.
-public bool CancelTask (const std::string & ID de tâche)  |  Annuler une tâche en arrière-plan.
-CancelAllTasks() void publique  |  Annuler toutes les tâches en arrière-plan.
+public void DispatchTask (const std:: String & IDTâche, std:: function\<void ()\> Task)  |  Exécuter une tâche sur un thread d’arrière-plan.
+public void DispatchTask (const std:: String & IDTâche, std:: function\<void ()\> tâche, int64_t Delay)  |  Exécuter une tâche sur un thread d’arrière-plan avec le délai donné.
+public void ExecuteTaskOnIndependentThread (const std:: String & IDTâche, std:: function\<void ()\> Task)  |  Exécuter immédiatement une tâche sur un thread indépendant.
+public bool CancelTask (const std:: String & taskId)  |  Annuler une tâche en arrière-plan.
+public void CancelAllTasks ()  |  Annule toutes les tâches en arrière-plan.
   
 ## <a name="members"></a>Membres
   
-### <a name="dispatchtask-function"></a>DispatchTask (fonction)
+### <a name="dispatchtask-function"></a>DispatchTask fonction)
 Exécuter une tâche sur un thread d’arrière-plan.
 
 Paramètres :  
-* **ID de tâche**: ID pour identifier de manière unique une tâche 
+* **taskId**: ID identifiant une tâche de manière unique 
 
 
 * **tâche**: Fonction à exécuter
 
 
   
-### <a name="dispatchtask-function"></a>DispatchTask (fonction)
+### <a name="dispatchtask-function"></a>DispatchTask fonction)
 Exécuter une tâche sur un thread d’arrière-plan avec le délai donné.
 
 Paramètres :  
-* **ID de tâche**: ID pour identifier de manière unique une tâche 
+* **taskId**: ID identifiant une tâche de manière unique 
 
 
 * **tâche**: Fonction à exécuter 
 
 
-* **délai**: Délai d’attente (en secondes) avant l’exécution de tâche
+* **délai**: Délai (en secondes) avant l’exécution de la tâche
 
 
   
-### <a name="executetaskonindependentthread-function"></a>ExecuteTaskOnIndependentThread (fonction)
+### <a name="executetaskonindependentthread-function"></a>ExecuteTaskOnIndependentThread fonction)
 Exécuter immédiatement une tâche sur un thread indépendant.
 
 Paramètres :  
-* **ID de tâche**: ID pour identifier de manière unique une tâche 
+* **taskId**: ID identifiant une tâche de manière unique 
 
 
 * **tâche**: Fonction à exécuter
 
 
   
-### <a name="canceltask-function"></a>CancelTask (fonction)
+### <a name="canceltask-function"></a>CancelTask fonction)
 Annuler une tâche en arrière-plan.
 
 Paramètres :  
-* **ID de tâche**: ID de tâche à annuler
+* **taskId**: ID de la tâche à annuler
 
 
 
   
-**Retourne**: True si la tâche a été correctement annulée ; sinon, false
+**Retourne**: True si la tâche a été annulée avec succès, sinon false
   
-### <a name="cancelalltasks-function"></a>CancelAllTasks (fonction)
-Annuler toutes les tâches en arrière-plan.
+### <a name="cancelalltasks-function"></a>CancelAllTasks fonction)
+Annule toutes les tâches en arrière-plan.

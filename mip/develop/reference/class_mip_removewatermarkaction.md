@@ -1,18 +1,17 @@
 ---
 title: mip::RemoveWatermarkAction, classe
-description: Décrit la classe mip::removewatermarkaction de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Documente la classe MIP:: removewatermarkaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 7b6ef32e69fefad0371f75ea22b99f4181732e90
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 9d67dc7839183e148cb2792482e1fc186858ce7e
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174168"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883146"
 ---
 # <a name="class-mipremovewatermarkaction"></a>mip::RemoveWatermarkAction, classe 
 Classe d’action qui spécifie la suppression du filigrane du document.
@@ -25,13 +24,14 @@ public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_acti
   
 ## <a name="members"></a>Membres
   
-### <a name="getuielementnames-function"></a>GetUIElementNames (fonction)
+### <a name="getuielementnames-function"></a>GetUIElementNames fonction)
 Obtient une liste de noms à utiliser pour rechercher les éléments d’interface utilisateur qui doivent être supprimés.
 
   
-**Retourne**: Une liste de noms d’éléments de l’interface utilisateur.
+**Retourne**: Liste des noms d’éléments d’interface utilisateur.
   
-### <a name="gettype-function"></a>Fonction GetType
+### <a name="gettype-function"></a>GetType, fonction
 Obtenir le type de [Action](class_mip_action.md).
 
+  
 **Retourne**: ActionType : type d’action dérivée vers lequel cette classe de base peut être castée.

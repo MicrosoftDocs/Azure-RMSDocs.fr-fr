@@ -1,66 +1,24 @@
 ---
-title: classe mip::NoPolicyError
-description: Décrit la classe mip::nopolicyerror de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'MIP:: NoPolicyError, classe'
+description: 'Documente la classe MIP:: nopolicyerror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 107aab66dc62592bda5b6833911a446e0013db41
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: c89cc6fd223aa57dfec86f481ec5a78ac34fcfed
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173664"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883837"
 ---
-# <a name="class-mipnopolicyerror"></a>classe mip::NoPolicyError 
-Stratégie de client n’est pas configurée pour les étiquettes de classification /.
+# <a name="class-mipnopolicyerror"></a>MIP:: NoPolicyError, classe 
+La stratégie de locataire n’est pas configurée pour la classification/les étiquettes.
   
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public char const* what() const  |  Obtenir le message d’erreur.
-public std::shared_ptr\<erreur\> Clone() const  |  Cloner l’erreur.
-public virtual ErrorType GetErrorType() const  |  Obtenir le type de l’erreur.
-public virtual const std::string& GetErrorName() const  |  Obtenir le nom de l’erreur.
-public virtual const std::string& GetMessage() const  |  Obtenir le message d’erreur.
-public virtual void SetMessage(const std::string& msg)  |  Définir le message d’erreur.
   
 ## <a name="members"></a>Membres
-  
-### <a name="what-function"></a>Quelle est la fonction
-Obtenir le message d’erreur.
-
-  
-**Retourne**: Le message d’erreur
-  
-### <a name="clone-function"></a>Clone, fonction
-Cloner l’erreur.
-
-  
-**Retourne**: Un clone de l’erreur.
-  
-### <a name="geterrortype-function"></a>GetErrorType (fonction)
-Obtenir le type de l’erreur.
-
-  
-**Retourne**: Le type d’erreur.
-  
-### <a name="geterrorname-function"></a>GetErrorName (fonction)
-Obtenir le nom de l’erreur.
-
-  
-**Retourne**: Le nom de l’erreur.
-  
-### <a name="getmessage-function"></a>Fonction GetMessage
-Obtenir le message d’erreur.
-
-  
-**Retourne**: Le message d’erreur.
-  
-### <a name="setmessage-function"></a>SetMessage (fonction)
-Définir le message d’erreur.
-
-Paramètres :  
-* **msg** : le message d’erreur.
+_Pas encore documenté._

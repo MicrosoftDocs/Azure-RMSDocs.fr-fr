@@ -5,33 +5,33 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 02/04/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e325dc6c3b79cdd7e7720f0bca50d8bdda045979
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b46f478dc38e9010cc2eb221f587f3d3ca3f60a2
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175395"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884735"
 ---
 # <a name="acquire-an-access-token-python"></a>Acquérir un jeton d’accès (Python)
 
-Cet exemple montre comment appeler un script Python externe pour obtenir un jeton OAuth2. Un jeton d’accès OAuth2 valid est requis par l’implémentation du délégué d’authentification.
+Cet exemple montre comment appeler un script Python externe pour obtenir un jeton OAuth2. Un jeton d’accès OAuth2 valide est requis par l’implémentation du délégué d’authentification.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Pour exécuter l’exemple ci-dessous :
+Pour exécuter l’exemple ci-dessous:
 
-- Installez Python 2.7.
+- Installez Python 2,7 ou une version plus récente.
 - Implémentez utils.h/cpp dans votre projet. 
-- AUTH.py doivent être ajoutés à votre projet et existent dans le même répertoire que les fichiers binaires à la conférence build.
-- Complète [le programme d’installation du Kit de développement logiciel (MIP) et la configuration](setup-configure-mip.md). Parmi d’autres tâches, vous allez inscrire votre application cliente dans votre client Azure Active Directory (Azure AD). Azure AD fournit un ID d’application, également appelé ID de client, qui est utilisé dans votre logique d’acquisition de jeton.
+- Auth.py doit être ajouté à votre projet et se trouver dans le même répertoire que les binaires de la Build.
+- [Installation et configuration du kit de développement logiciel (MIP) SDK](setup-configure-mip.md). Entre autres tâches, vous allez inscrire votre application cliente dans votre locataire Azure Active Directory (Azure AD). Azure AD fournira un ID d’application, également appelé ID client, qui est utilisé dans votre logique d’acquisition de jeton.
 
-Ce code n’est pas destiné à des fins de production. Il peut uniquement servir pour le développement et de présentation des concepts d’authentification. L’exemple est multiplateforme.
+Ce code n’est pas destiné à une utilisation en production. Elle ne peut être utilisée que pour le développement et la compréhension des concepts d’authentification. L’exemple est multiplateforme.
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
-Dans l’exemple d’authentification simple, nous avons présenté une simple `AcquireToken()` fonction qui a eu aucun paramètre et a retourné une valeur de jeton codé en dur. Dans cet exemple, nous allons surcharger AcquireToken() pour accepter des paramètres d’authentification et appeler un script Python externe pour retourner le jeton.
+Dans l’exemple d’authentification simple, nous avons démontré `AcquireToken()` une fonction simple qui n’a pris aucun paramètre et a retourné une valeur de jeton codée en dur. Dans cet exemple, nous allons surcharger AcquireToken() pour accepter des paramètres d’authentification et appeler un script Python externe pour retourner le jeton.
 
 ### <a name="authh"></a>auth.h
 
@@ -42,9 +42,7 @@ Dans auth.h, `AcquireToken()` est surchargée, et la fonction surchargée et les
 #include <string>
 
 namespace sample {
-  namespace auth {
-    std::string AcquireToken();
-
+  namespace auth {    
     std::string AcquireToken(
         const std::string& userName, //A string value containing the user's UPN.
         const std::string& password, //The user's password in plaintext
@@ -76,9 +74,6 @@ using std::runtime_error;
 
 namespace sample {
     namespace auth {
-
-    string AcquireToken() { //ignore in this sample
-    }
 
     //This function implements token acquisition in the application by calling an external Python script.
     //The Python script requires username, password, clientId, resource, and authority.
@@ -122,15 +117,22 @@ namespace sample {
 
 ## <a name="python-script"></a>Script Python
 
-Ce script acquiert des jetons d’authentification directement via une demande http simple. Cela est inclus uniquement comme un moyen d’acquérir des jetons d’authentification destinés à être utilisés par les exemples d’applications et n’est pas destiné à être utilisé dans le code de production. Le script fonctionne uniquement sur les locataires qui prennent en charge une authentification http traditionnelle par nom d’utilisateur/mot de passe. L’authentification basée sur MFA ou des certificats échouera.
+Ce script acquiert des jetons d’authentification directement via [Adal pour Python](https://github.com/AzureAD/azure-activedirectory-library-for-python). Ce code est inclus uniquement comme un moyen d’acquérir des jetons d’authentification pour une utilisation par les exemples d’applications et n’est pas destiné à être utilisé en production. Le script fonctionne uniquement sur les locataires qui prennent en charge une authentification http traditionnelle par nom d’utilisateur/mot de passe. L’authentification basée sur MFA ou des certificats échouera.
+
+> [!NOTE] 
+> Avant d’exécuter cet exemple, vous devez installer ADAL pour Python en exécutant l’une des commandes suivantes:
+
+```shell
+pip install adal
+pip3 install adal
+```
 
 ```python
 import getopt
 import sys
 import json
-import urllib
-import urllib2
 import re
+from adal import AuthenticationContext
 
 def printUsage():
   print('auth.py -u <username> -p <password> -a <authority> -r <resource> -c <clientId>')
@@ -146,8 +148,9 @@ def main(argv):
   password = ''
   authority = ''
   resource = ''
-  clientId = ''
 
+  clientId = ''
+    
   for option, arg in options:
     if option == '-h':
       printUsage()
@@ -172,33 +175,13 @@ def main(argv):
     regex = re.compile('^(.*[\/])')
     match = regex.match(authority)
     authority = match.group()
-    authority = authority + 'token'
+    authority = authority + username.split('@')[1]
 
-  # Build REST call
-  headers = {
-    'Content-Type': 'application/x-www-form-urlencoded',
-    'Accept': 'application/json'
-  }
+  auth_context = AuthenticationContext(authority)
+  token = auth_context.acquire_token_with_username_password(resource, username, password, clientId)
+  print(token["accessToken"])
 
-  params = {
-    'resource': resource,
-    'client_id': clientId,
-    'grant_type': 'password',
-    'username': username,
-    'password': password
-  }
-
-  req = urllib2.Request(
-    url = authority,
-    headers = headers,
-    data = urllib.urlencode(params))
-
-  f = urllib2.urlopen(req)
-  response = f.read()
-  f.close()
-  sys.stdout.write(json.loads(response)['access_token'])
-
-if __name__ == '__main__':
+if __name__ == '__main__':  
   main(sys.argv[1:])
 ```
 

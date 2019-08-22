@@ -1,18 +1,17 @@
 ---
 title: class mip::ProtectionDescriptorBuilder
-description: Décrit la classe mip::protectiondescriptorbuilder de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: Documente la classe MIP::p rotectiondescriptorbuilder du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 7ed2c118d2f57f93d0445c113fd6127704e52637
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 5985aad4f4cb9b8276ca855026119507febc9445
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174151"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885113"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>class mip::ProtectionDescriptorBuilder 
 Construit un [ProtectionDescriptor](class_mip_protectiondescriptor.md) qui décrit la protection associée à un élément de contenu.
@@ -20,10 +19,10 @@ Construit un [ProtectionDescriptor](class_mip_protectiondescriptor.md) qui décr
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr MIP_API\<ProtectionDescriptor\> Build()  |  Crée un [ProtectionDescriptor](class_mip_protectiondescriptor.md) dont les autorisations d’accès sont définies par cette instance [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md).
+public MIP_API std:: shared_ptr\<ProtectionDescriptor\> Build ()  |  Crée un [ProtectionDescriptor](class_mip_protectiondescriptor.md) dont les autorisations d’accès sont définies par cette instance [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md).
 public void SetName(const std::string& value)  |  Définit un nom pour la stratégie de protection.
 public void SetDescription(const std::string& value)  |  Définit la description de la stratégie de protection.
-public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  Définit l’heure d’expiration de la stratégie de protection.
+public void SetContentValidUntil (const std:: Chrono:: time_point\<std:: Chrono:: system_clock\>& value)  |  Définit l’heure d’expiration de la stratégie de protection.
 public void SetAllowOfflineAccess(bool value)  |  Définit si la stratégie de protection autorise l’accès au contenu hors connexion ou non.
 public void SetReferrer(const std::string& uri)  |  Définit l’adresse du référent de stratégie de protection.
 public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  Définit les données spécifiques de l’application qui doivent être chiffrées.
@@ -32,25 +31,25 @@ public virtual ~ProtectionDescriptorBuilder()  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
   
-### <a name="build-function"></a>Build (fonction)
+### <a name="build-function"></a>Build, fonction
 Crée un [ProtectionDescriptor](class_mip_protectiondescriptor.md) dont les autorisations d’accès sont définies par cette instance [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md).
 
   
-**Retourne**: Nouvelle [ProtectionDescriptor](class_mip_protectiondescriptor.md) instance
+**Retourne**: Nouvelle instance [ProtectionDescriptor](class_mip_protectiondescriptor.md)
   
-### <a name="setname-function"></a>SetName (fonction)
+### <a name="setname-function"></a>SetName fonction)
 Définit un nom pour la stratégie de protection.
 
 Paramètres :  
-* **Valeur**: Nom de stratégie de protection
+* **valeur**: Nom de la stratégie de protection
 
 
   
-### <a name="setdescription-function"></a>SetDescription (fonction)
+### <a name="setdescription-function"></a>SetDescription fonction)
 Définit la description de la stratégie de protection.
 
 Paramètres :  
-* **Valeur**: Description de la stratégie
+* **valeur**: Description de la stratégie
 
 
   
@@ -58,44 +57,44 @@ Paramètres :
 Définit l’heure d’expiration de la stratégie de protection.
 
 Paramètres :  
-* **Valeur**: Heure d’expiration de la stratégie
+* **valeur**: Heure d’expiration de la stratégie
 
 
   
-### <a name="setallowofflineaccess-function"></a>SetAllowOfflineAccess (fonction)
+### <a name="setallowofflineaccess-function"></a>SetAllowOfflineAccess fonction)
 Définit si la stratégie de protection autorise l’accès au contenu hors connexion ou non.
 
 Paramètres :  
-* **Valeur**: Si la stratégie autorise l’accès au contenu hors connexion ou non
+* **valeur**: Si la stratégie autorise l’accès au contenu hors connexion
 
 
   
-### <a name="setreferrer-function"></a>SetReferrer (fonction)
+### <a name="setreferrer-function"></a>SetReferrer fonction)
 Définit l’adresse du référent de stratégie de protection.
 
 Paramètres :  
-* **URI**: Adresse du référent de stratégie
+* **URI**: Adresse du référent de la stratégie
 
 
 Le référent est un URI qui peut être montré à l’utilisateur en cas d’échec de l’acquisition de la stratégie de protection. L’URI contient des informations sur la façon dont cet utilisateur peut obtenir l’autorisation d’accéder au contenu.
   
-### <a name="setencryptedappdata-function"></a>SetEncryptedAppData (fonction)
+### <a name="setencryptedappdata-function"></a>SetEncryptedAppData fonction)
 Définit les données spécifiques de l’application qui doivent être chiffrées.
 
 Paramètres :  
-* **Valeur**: Données spécifiques de l’application
+* **valeur**: Données spécifiques à l’application
 
 
 Une application peut spécifier un dictionnaire des données spécifiques à l’application qui seront chiffrées par le service de protection. Ces données chiffrées ne dépendent pas des données signées définies par SetSignedAppData.
   
-### <a name="setsignedappdata-function"></a>SetSignedAppData function
+### <a name="setsignedappdata-function"></a>SetSignedAppData fonction)
 Définit les données spécifiques de l’application qui doivent être signées.
 
 Paramètres :  
-* **Valeur**: Données spécifiques de l’application
+* **valeur**: Données spécifiques à l’application
 
 
 Une application peut spécifier un dictionnaire des données spécifiques à l’application qui seront signées par le service de protection. Ces données signées ne dépendent pas des données chiffrées définies par SetEncryptedAppData.
   
-### <a name="protectiondescriptorbuilder-function"></a>~ ProtectionDescriptorBuilder (fonction)
+### <a name="protectiondescriptorbuilder-function"></a>~ ProtectionDescriptorBuilder fonction)
 _Pas encore documenté._

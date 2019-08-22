@@ -5,34 +5,48 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 52d036bd58d4f24710e765ca42493696a3cd5330
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 5fac6b39cb3770748336fac7264134acf2627a02
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175397"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886062"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au moteur de l’API de stratégie
 
-`mip::PolicyEngine` implémente toutes les opérations que l’API de stratégie peut effectuer, à l’exception du chargement du profil. 
+`mip::PolicyEngine` implémente toutes les opérations que l’API de stratégie peut effectuer, à l’exception du chargement du profil.
 
-## <a name="implementation-add-a-policy-engine"></a>Implémentation : Ajouter un moteur de stratégie
+## <a name="implementation-add-a-policy-engine"></a>Déploiement Ajouter un moteur de stratégie
 
-### <a name="implementation-create-policy-engine-settings"></a>Implémentation : Créer des paramètres de stratégie du moteur
+### <a name="implementation-create-policy-engine-settings"></a>Déploiement Créer des paramètres du moteur de stratégie
 
 De façon similaire à un profil, le moteur nécessite également un objet de paramètres, `mip::PolicyEngine::Settings`. Cet objet stocke l’identificateur de moteur unique, les données client personnalisables qui peuvent être utilisées pour le débogage ou la télémétrie et, éventuellement, les paramètres régionaux.
 
-Ici, nous créons un objet `PolicyEngine::Settings` appelé *engineSettings*.
+Ici, nous créons `FileEngine::Settings` un objet appelé *engineSettings* à l’aide de l’identité de l’utilisateur de l’application:
 
 ```cpp
-PolicyEngine::Settings engineSettings("UniqueID", "");
+PolicyEngine::Settings engineSettings(
+  mip::Identity(mUsername), // mip::Identity.
+  "",                       // Client data. Customizable by developer, stored with engine.
+  "en-US",                  // Locale.
+  false);                   // Load sensitive information types for driving classification.
+```
+
+Un ID de moteur personnalisé est également fourni:
+
+```cpp
+PolicyEngine::Settings engineSettings(
+  "myEngineId", // string
+  "",           // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",      // Locale. Default is en-US
+  false);       // Load sensitive information types for driving classification. Default is false.
 ```
 
 En guise de bonne pratique, le premier paramètre, **id**, doit être un élément permettant au moteur d’être facilement connecté à l’utilisateur associé, de préférence le nom d’utilisateur principal.
 
-### <a name="implementation-add-the-policy-engine"></a>Implémentation : Ajouter le moteur de stratégie
+### <a name="implementation-add-the-policy-engine"></a>Déploiement Ajouter le moteur de stratégie
 
 Pour ajouter le moteur, nous allons revenir au modèle futur/promesse utilisé pour charger le profil. Au lieu de créer la promesse pour `mip::Profile`, nous allons utiliser `mip::PolicyEngine`.
 
@@ -59,19 +73,19 @@ Pour ajouter le moteur, nous allons revenir au modèle futur/promesse utilisé p
 
 Le résultat final du code ci-dessus est que nous avons ajouté avec succès un moteur pour l’utilisateur authentifié au profil.
 
-## <a name="implementation-list-sensitivity-labels"></a>Implémentation : Répertorier les étiquettes de sensibilité
+## <a name="implementation-list-sensitivity-labels"></a>Déploiement Répertorier les étiquettes de sensibilité
 
 En utilisant le moteur ajouté, il est maintenant possible de répertorier toutes les étiquettes de sensibilité disponibles pour l’utilisateur authentifié en appelant `engine->ListSensitivityLabels()`.
 
 `ListSensitivityLabels()` extrait la liste des étiquettes et les attributs de ces étiquettes pour un utilisateur spécifique à partir du service. Le résultat est stocké dans un vecteur de `std::shared_ptr<mip::Label>`.
 
-### <a name="implementation-listsensitivitylabels"></a>Implémentation : ListSensitivityLabels()
+### <a name="implementation-listsensitivitylabels"></a>Déploiement ListSensitivityLabels()
 
 ```cpp
 std::vector<shared_ptr<mip::Label>> labels = engine->ListSensitivityLabels();
 ```
 
-### <a name="implementation-print-the-labels"></a>Implémentation : Imprimer les étiquettes
+### <a name="implementation-print-the-labels"></a>Déploiement Imprimer les étiquettes
 
 ```cpp
 //Iterate through all labels in the vector
@@ -94,11 +108,10 @@ for (const auto& label : labels) {
   cout << label->GetName() << " : " << label->GetId() << endl;
 
   //Print child label name and GUID
-  for (const auto& child : label->GetChildren()) {    
+  for (const auto& child : label->GetChildren()) {
     cout << "->  " << child->GetName() <<  " : " << child->GetId() << endl;
   }
 }
 ```
 
 La collection de `mip::Label` retournée par `GetSensitivityLabels()` peut être utilisée pour afficher toutes les étiquettes disponibles pour l’utilisateur, puis, une fois sélectionnée, utilisez l’ID pour appliquer des étiquettes dans un fichier.
-

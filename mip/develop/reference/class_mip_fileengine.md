@@ -1,18 +1,17 @@
 ---
 title: mip::FileEngine, classe
-description: Décrit la classe mip::fileengine de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Documente la classe MIP:: fileengine du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 15ce90a80430f50854580f6c7a2993d92db0a744
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 86437533b2451b613231d668857b1402fc9f4272
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184788"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885811"
 ---
 # <a name="class-mipfileengine"></a>mip::FileEngine, classe 
 Cette classe fournit une interface pour toutes les fonctions de moteur.
@@ -21,110 +20,114 @@ Cette classe fournit une interface pour toutes les fonctions de moteur.
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Retourne les paramètres du moteur.
-public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  Répertorie les types de sensibilité associées au moteur de stratégie.
-public const std::shared_ptr\<Label\> GetDefaultSensitivityLabel() const  |  Obtenir l’étiquette de sensibilité par défaut.
+public const std:: Vector\<std:: shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes () const  |  répertorie les types de sensibilité associés au moteur de stratégie.
+public const std:: shared_ptr\<étiquette\> GetDefaultSensitivityLabel () const  |  Obtenir l’étiquette de sensibilité par défaut.
+public std:: shared_ptr\<label\> GetLabelById (const std:: String & ID) const  |  Obtient l’étiquette en fonction de l’ID fourni.
 public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  Retourne une liste d’étiquettes de sensibilité.
 public const std::string& GetMoreInfoUrl() const  |  Fournir une URL pour la recherche d’autres informations sur la stratégie/les étiquettes.
-public const std::string& GetPolicyId() const  |  Obtient l’ID de stratégie.
+public const std:: String & GetPolicyFileId () const  |  Obtient l’ID du fichier de stratégie.
 public bool IsLabelingRequired() const  |  Vérifie si la stratégie détermine qu’un document doit être étiqueté.
-public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Obtient l’heure lors de la dernière extraction de la stratégie.
-public CreateFileHandlerAsync void (const std::string & inputFilePath, const std::string & actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\<FileHandler::Observer\>& fileHandlerObserver const std::shared_ptr\<void\>& contexte, const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Commence à créer un gestionnaire de fichiers pour le chemin de fichier donné.
-public CreateFileHandlerAsync void (const std::shared_ptr\<Stream\>& inputStream, const std::string & actualFilePath, bool isAuditDiscoveryEnabled, const std::shared_ptr\<FileHandler::Observer \>& fileHandlerObserver, const std::shared_ptr\<void\>& contexte, const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Commence à créer un gestionnaire de fichiers pour le flux de fichier donné.
+public std:: Chrono:: time_point\<std:: Chrono:: system_clock\> GetLastPolicyFetchTime () const  |  Obtient l’heure de la dernière extraction de la stratégie.
+public void CreateFileHandlerAsync (const std:: String & inputFilePath, const std:: String & actualFilePath, bool isAuditDiscoveryEnabled, const std:: shared_ptr\<fileHandler:: observer\>& fileHandlerObserver , const std:: shared_ptr\<void\>& contexte, const std:: shared_ptr\<FileExecutionState\>& FileExecutionState)  |  Commence à créer un gestionnaire de fichiers pour le chemin de fichier donné.
+public void CreateFileHandlerAsync (const std:: shared_ptr\<flux\>& InputStream, const std:: String & actualFilePath, bool isAuditDiscoveryEnabled, const std:: shared_ptr\<fileHandler:: observer \>\<\>\<& fileHandlerObserver, const std:: shared_ptr void & contexte, const std:: shared_ptr FileExecutionState & FileExecutionState) \>  |  Commence à créer un gestionnaire de fichiers pour le flux de fichier donné.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Consigne un événement spécifique à l’application dans le pipeline d’audit.
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtient une liste de paramètres personnalisés.
-public bool HasClassificationRules() const  |  Obtient si la stratégie a des règles automatiques ou de recommandation.
+public bool HasClassificationRules () const  |  Obtient si la stratégie a des règles automatiques ou de recommandation.
   
 ## <a name="members"></a>Membres
   
-### <a name="getsettings-function"></a>GetSettings (fonction)
+### <a name="getsettings-function"></a>GetSettings fonction)
 Retourne les paramètres du moteur.
   
-### <a name="listsensitivitytypes-function"></a>ListSensitivityTypes (fonction)
-Répertorie les types de sensibilité associées au moteur de stratégie.
+### <a name="listsensitivitytypes-function"></a>ListSensitivityTypes fonction)
+répertorie les types de sensibilité associés au moteur de stratégie.
 
   
-**Retourne**: Une liste d’étiquettes de sensibilité. vide si LoadSensitivityTypesEnabled était faux)
+**Retourne**: Liste d’étiquettes de sensibilité. vide si LoadSensitivityTypesEnabled a la valeur false (
   
-**Voir aussi**: [FileEngine::Settings](class_mip_fileengine_settings.md)).
+**Voir aussi**: [FileEngine:: Settings](class_mip_fileengine_settings.md)).
   
-### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel (fonction)
+### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel fonction)
 Obtenir l’étiquette de sensibilité par défaut.
 
   
-**Retourne**: À défaut d’étiquette de sensibilité existe, nullptr si aucun jeu d’étiquette par défaut.
+**Retourne**: Étiquette de sensibilité par défaut si elle existe, nullptr si aucune étiquette par défaut n’est définie.
   
-### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels (fonction)
+### <a name="getlabelbyid-function"></a>GetLabelById fonction)
+Obtient l’étiquette en fonction de l’ID fourni.
+  
+### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels fonction)
 Retourne une liste d’étiquettes de sensibilité.
   
-### <a name="getmoreinfourl-function"></a>GetMoreInfoUrl (fonction)
+### <a name="getmoreinfourl-function"></a>GetMoreInfoUrl fonction)
 Fournir une URL pour la recherche d’autres informations sur la stratégie/les étiquettes.
 
   
-**Retourne**: Une url au format de chaîne.
+**Retourne**: URL au format de chaîne.
   
-### <a name="getpolicyid-function"></a>GetPolicyId (fonction)
-Obtient l’ID de stratégie.
+### <a name="getpolicyfileid-function"></a>GetPolicyFileId fonction)
+Obtient l’ID du fichier de stratégie.
 
   
-**Retourne**: Chaîne qui représente l’ID de stratégie
+**Retourne**: Chaîne qui représente l’ID du fichier de stratégie.
   
-### <a name="islabelingrequired-function"></a>IsLabelingRequired (fonction)
+### <a name="islabelingrequired-function"></a>IsLabelingRequired fonction)
 Vérifie si la stratégie détermine qu’un document doit être étiqueté.
 
   
-**Retourne**: True si l’étiquetage est obligatoire ; sinon, false.
+**Retourne**: True si l’étiquetage est obligatoire, sinon false.
   
-### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime (fonction)
-Obtient l’heure lors de la dernière extraction de la stratégie.
+### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime fonction)
+Obtient l’heure de la dernière extraction de la stratégie.
 
   
-**Retourne**: Le temps lors de la dernière extraction de la stratégie
+**Retourne**: Heure de la dernière extraction de la stratégie
   
-### <a name="createfilehandlerasync-function"></a>CreateFileHandlerAsync (fonction)
+### <a name="createfilehandlerasync-function"></a>CreateFileHandlerAsync fonction)
 Commence à créer un gestionnaire de fichiers pour le chemin de fichier donné.
 
 Paramètres :  
 * **inputFilePath**: Fichier à ouvrir. Le chemin doit inclure le nom de fichier et l’extension de nom de fichier éventuelle. 
 
 
-* **actualFilePath**: Le chemin d’accès de fichier (non temporaires) réelle, sera utilisé pour l’audit. 
+* **actualFilePath**: Le chemin d’accès du fichier (non temporaire) réel sera utilisé pour l’audit. 
 
 
-* **isAuditDiscoveryEnabled**: indiquant si la découverte de l’audit est activé ou non. 
+* **isAuditDiscoveryEnabled**: indiquant si la détection d’audit est activée ou non. 
 
 
 * **fileHandlerObserver**: Une classe qui implémente l’interface [FileHandler::Observer](class_mip_filehandler_observer.md). 
 
 
-* **contexte**: Contexte de client qui sera transmis de manière opaque à l’Observateur.
+* **contexte**: Contexte client qui sera retourné de manière opaque à l’observateur.
 
 
   
-### <a name="createfilehandlerasync-function"></a>CreateFileHandlerAsync (fonction)
+### <a name="createfilehandlerasync-function"></a>CreateFileHandlerAsync fonction)
 Commence à créer un gestionnaire de fichiers pour le flux de fichier donné.
 
 Paramètres :  
-* **inputStream**: Un flux contenant les données de fichier. 
+* **InputStream**: Flux contenant les données du fichier. 
 
 
-* **actualFilePath**: Chemin du fichier. Le chemin doit inclure le nom de fichier et l’extension de nom de fichier éventuelle. utilisera également pour identifier le fichier dans l’audit. 
+* **actualFilePath**: Chemin du fichier. Le chemin doit inclure le nom de fichier et l’extension de nom de fichier éventuelle. permet également d’identifier le fichier dans l’audit. 
 
 
-* **isAuditDiscoveryEnabled**: indiquant si la découverte de l’audit est activé ou non. 
+* **isAuditDiscoveryEnabled**: indiquant si la détection d’audit est activée ou non. 
 
 
 * **fileHandlerObserver**: Une classe qui implémente l’interface [FileHandler::Observer](class_mip_filehandler_observer.md). 
 
 
-* **contexte**: Contexte de client qui sera transmis de manière opaque à l’Observateur.
+* **contexte**: Contexte client qui sera retourné de manière opaque à l’observateur.
 
 
   
-### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent (fonction)
+### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent fonction)
 Consigne un événement spécifique à l’application dans le pipeline d’audit.
 
 Paramètres :  
-* **niveau**: une description du niveau de journal : Informations/avertissement/erreur 
+* **niveau**: description du niveau de journalisation: Info/erreur/avertissement 
 
 
 * **eventType** : description du type d’événement 
@@ -134,14 +137,14 @@ Paramètres :
 
 
   
-### <a name="getcustomsettings-function"></a>GetCustomSettings (fonction)
+### <a name="getcustomsettings-function"></a>GetCustomSettings fonction)
 Obtient une liste de paramètres personnalisés.
 
   
-**Retourne**: Un vecteur de paramètres personnalisés
+**Retourne**: Vecteur de paramètres personnalisés
   
-### <a name="hasclassificationrules-function"></a>HasClassificationRules (fonction)
+### <a name="hasclassificationrules-function"></a>HasClassificationRules fonction)
 Obtient si la stratégie a des règles automatiques ou de recommandation.
 
   
-**Retourne**: Une valeur booléenne qui indique si il automatique ni recommandation règles dans la stratégie
+**Retourne**: Valeur booléenne qui indique s’il existe des règles de recommandation ou automatique dans la stratégie.

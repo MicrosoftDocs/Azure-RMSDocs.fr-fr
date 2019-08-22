@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 7e436d27ae48ee6d3589faaf55943b8ffd314450
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 414ad04c062a81d374a9e46d170feabb15e0e6cc
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175973"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886224"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux gestionnaires de fichiers
 
@@ -51,7 +51,7 @@ La première étape requise dans la gestion de tous les fichiers dans l’API de
 
 Pour créer le `FileHandler`, il suffit d’appeler la fonction `CreateFileHandlerAsync` de `FileEngine` en utilisant le modèle de promesse/futur.
 
-`CreateFileHandlerAsync` accepte trois paramètres : Le chemin d’accès au fichier qui doit être lu ou modifié, le `mip::FileHandler::Observer` pour les notifications d’événements asynchrones et la promesse pour la `FileHandler`.
+`CreateFileHandlerAsync`accepte trois paramètres: Le chemin d’accès au fichier qui doit être lu ou modifié, `mip::FileHandler::Observer` le pour les notifications d’événements asynchrones et `FileHandler`la promesse pour le.
 
 **Remarque :** La classe `mip::FileHandler::Observer` doit être implémentée dans une classe dérivée, car `CreateFileHandler` nécessite l’objet `Observer`. 
 
@@ -94,35 +94,57 @@ Les données d’étiquette peuvent être lues à partir de l’objet `label` et
 
 ## <a name="set-a-label"></a>Définir une étiquette
 
-La définition d’une étiquette est un processus en deux parties. Tout d’abord, après avoir créé un gestionnaire qui pointe sur le fichier en question, l’étiquette peut être définie en appelant `FileHandler->SetLabel()` avec deux paramètres.
+La définition d’une étiquette est un processus en deux parties. Tout d’abord, après avoir créé un gestionnaire qui pointe vers le fichier en question, l’étiquette peut être `FileHandler->SetLabel()` définie en appelant avec `mip::Label`certains `mip::LabelingOptions`paramètres: `mip::ProtectionOptions`, et. Tout d’abord, nous devons résoudre l’ID d’étiquette en étiquette, puis définir les options d’étiquetage. 
+
+### <a name="resolve-label-id-to-miplabel"></a>Résoudre l’ID d’étiquette en MIP:: label
+
+Le premier paramètre de la fonction **setLabel** est `mip::Label`un. Souvent, l’application utilise des identificateurs d’étiquette plutôt que des étiquettes. L’identificateur d' `mip::Label` étiquette peut être résolu en appelant **GetLabelById** sur le moteur de stratégie ou de fichier:
 
 ```cpp
-handler->SetLabel(label->GetId(), mip::LabelingOptions{ mip::AssignmentMethod::PRIVILEGED, "" });
+mip::Label label = mEngine->GetLabelById(labelId);
 ```
-
-Le premier paramètre est simplement l’identificateur d’étiquette issu de `ListLabelsAsync()`. Cette valeur peut être stockée dans une variable dédiée ou en lisant `mip::Label->GetId()`.
-
-L’exemple ci-dessus suppose que nous avons stocké le `mip::Label` souhaité dans un objet appelé `label`.
 
 ### <a name="labeling-options"></a>Options d’étiquetage
 
-Le second paramètre requis pour définir l’étiquette est un objet `mip::LabelingOptions` que nous créons inline lors de l’appel de la fonction `SetLabel()`. Il peut également être créé à l’avance.
+Le deuxième paramètre requis pour définir l’étiquette est `mip::LabelingOptions`. 
 
 `LabelingOptions` spécifie des informations supplémentaires sur l’étiquette comme le `AssignmentMethod` et la justification d’une action.
 
 - `mip::AssignmentMethod` est simplement un énumérateur qui peut prendre trois valeurs : `STANDARD`, `PRIVILEGED` ou `AUTO`. Passez en revue la référence de `mip::AssignmentMethod` pour plus de détails.
 - Une justification est nécessaire uniquement si la stratégie de service la requiert *et* lors de la diminution de la sensibilité *existante* d’un fichier.
 
+Cette capture montre comment créer `mip::LabelingOptions` l’objet et définir la justification et le message de rétrogradation.
+
 ```cpp
-auto labelingOptions = mip::LabelingOptions();
-labelingOptions.SetMethod(mip::AssignmentMethod::STANDARD);
-labelingOptions.SetJustificationMessage("Because I made an educated decision based upon the contents of this file.");
+auto labelingOptions = mip::LabelingOptions(mip::AssignmentMethod::STANDARD);
+labelingOptions.SetDowngradeJustification(true, "Because I made an educated decision based upon the contents of this file.");
 ```
 
-Désormais, au lieu de créer des options d’étiquetage inline, il est possible de les passer à la fonction `SetLabel()`.
+### <a name="protection-settings"></a>Paramètres de protection
+
+Certaines applications peuvent avoir besoin d’effectuer des opérations pour le compte d’une identité d’utilisateur délégué. La `mip::ProtectionSettings` classe permet à l’application de définir l’identité déléguée *par gestionnaire*. Auparavant, la délégation était effectuée par les classes de moteur. Cela présentait des inconvénients significatifs dans la surcharge des applications et les allers-retours de service. En déplaçant les paramètres utilisateur délégué vers `mip::ProtectionSettings` et en faisant cette partie de la classe de gestionnaire, nous éliminons cette surcharge, ce qui améliore les performances des applications qui effectuent de nombreuses opérations pour le compte de divers jeux d’identités utilisateur. 
+
+Si la délégation n’est pas requise, `mip::ProtectionSettings()` transmettez simplement à la fonction **setLabel** . Si la délégation est nécessaire, vous pouvez la créer en créant `mip::ProtectionSettings` un objet et en définissant l’adresse de messagerie déléguée:
 
 ```cpp
-handler->SetLabel(label->GetId(), labelingOptions);
+mip::ProtectionSettings protectionSettings; 
+protectionSettings.SetDelegatedUserEmail("alice@contoso.com");
+```
+
+### <a name="set-the-label"></a>Définir l’étiquette
+
+Après avoir extrait le `mip::Label` de l’ID, défini les options d’étiquetage et, éventuellement, défini les paramètres de protection, l’étiquette peut maintenant être définie.
+
+Si vous n’avez pas défini les paramètres de protection, définissez `SetLabel` l’étiquette en appelant sur le gestionnaire:
+
+```cpp
+handler->SetLabel(label, labelingOptions, mip::ProtectionSettings());
+```
+
+Si vous avez requis des paramètres de protection pour effectuer une opération déléguée, procédez comme suit:
+
+```cpp
+handler->SetLabel(label, labelingOptions, protectionSettings);
 ```
 
 Ayant à présent défini l’étiquette sur le fichier référencé par le gestionnaire, il reste une étape nécessaire pour valider la modification et écrire un fichier sur le disque ou créer un flux de sortie.
@@ -133,7 +155,7 @@ L’étape finale de validation de toute modification dans un fichier dans le ki
 
 Pour implémenter la fonction de validation, nous revenons à promesse/futur, en créant une promesse pour un `bool`. La fonction `CommitAsync()` retournera la valeur true si l’opération a réussi ou false si elle a échoué pour une raison quelconque. 
 
-Après avoir créé le `promise` et `future`, `CommitAsync()` est appelée et deux paramètres fournis : Le chemin d’accès du fichier de sortie (`std::string`) et la promesse. Enfin, le résultat est obtenu en obtenant la valeur de l’objet `future`.
+Après avoir créé `promise` le `future`et `CommitAsync()` , est appelé et deux paramètres sont fournis: Chemin d’accès au fichier`std::string`de sortie () et promesse. Enfin, le résultat est obtenu en obtenant la valeur de l’objet `future`.
 
 ```cpp
 auto commitPromise = std::make_shared<std::promise<bool>>();
@@ -142,7 +164,7 @@ handler->CommitAsync(outputFile, commitPromise);
 auto wasCommitted = commitFuture.get();
 ```
 
-**Important :** Le `FileHandler` ne sera pas mettre à jour ou remplacer les fichiers existants. Il incombe au développeur d’implémenter le **remplacement** du fichier qui est en cours d’étiquetage. 
+**Important :** Ne `FileHandler` met pas à jour ou ne remplace pas les fichiers existants. Il incombe au développeur d’implémenter le **remplacement** du fichier qui est en cours d’étiquetage. 
 
 Si vous écrivez une étiquette pour **FileA.docx**, une copie du fichier, **FileB.docx**, sera créée avec l’étiquette appliquée. Un code doit être écrit pour supprimer/renommer **FileA.docx** et renommer **FileB.docx**.
 

@@ -1,38 +1,37 @@
 ---
-title: classe mip::ClassificationRequest
-description: Décrit la classe mip::classificationrequest de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'MIP:: ClassificationRequest, classe'
+description: 'Documente la classe MIP:: classificationrequest du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 3fddd870b6aebb9f5209fc43160c32d87b1d7129
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 1966123c8a0975ea42aa119883cabd47db594bc4
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184754"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884485"
 ---
-# <a name="class-mipclassificationrequest"></a>classe mip::ClassificationRequest 
+# <a name="class-mipclassificationrequest"></a>MIP:: ClassificationRequest, classe 
 Classe qui contient la demande d’un appel de classification sur l’état d’exécution.
   
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std::string GetClassificationId() const  |  Obtenir l’ID de la stratégie de classification.
-public std::string GetRulePackageId() const  |  Obtenir l’ID du package de règle.
+public std:: String GetClassificationId () const  |  Obtenir l’ID de la stratégie de classification.
+public std:: String GetRulePackageId () const  |  Obtient l’ID du package de règles.
   
 ## <a name="members"></a>Membres
   
-### <a name="getclassificationid-function"></a>GetClassificationId function
+### <a name="getclassificationid-function"></a>GetClassificationId fonction)
 Obtenir l’ID de la stratégie de classification.
 
   
 **Retourne**: ID de la stratégie de classification.
   
-### <a name="getrulepackageid-function"></a>GetRulePackageId (fonction)
-Obtenir l’ID du package de règle.
+### <a name="getrulepackageid-function"></a>GetRulePackageId fonction)
+Obtient l’ID du package de règles.
 
   
-**Retourne**: ID du package de la règle. classifications prédéfinies seront définies à un guid vide.
+**Retourne**: ID du package de règles. les classifications prédéfinies seront définies sur un GUID vide.

@@ -5,26 +5,27 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: dd38b8e6c9deb45b4ce7df9ec3363ac8036a7ef4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b00078ba82d22ce37263162b3d7bb3d1f7d3a903
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175331"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886152"
 ---
 # <a name="microsoft-information-protection-sdk---protection-handler-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux gestionnaires de protection
 
-Dans l’API de protection du kit SDK MIP, `mip::ProtectionHandler` expose les fonctions permettant de chiffrer et déchiffrer les tampons et flux protégés, d’effectuer des vérifications d’accès, d’obtenir la licence de publication et d’obtenir des attributs à partir des informations protégées. 
+Dans l’API de protection du kit SDK MIP, `mip::ProtectionHandler` expose les fonctions permettant de chiffrer et déchiffrer les tampons et flux protégés, d’effectuer des vérifications d’accès, d’obtenir la licence de publication et d’obtenir des attributs à partir des informations protégées.
 
 ## <a name="requirements"></a>Configuration requise
 
 La création d’un `ProtectionHandler` pour utiliser un fichier spécifique nécessite :
 
-- Un `ProtectionProfile`
-- L’ajout d’un `ProtectionEngine` au `ProtectionProfile`
-- Une classe qui hérite de `mip::ProtectionHandler::Observer`, similaire au modèle indiqué [ici]()
+- Un `mip::MipContext`
+- Un `mip::ProtectionProfile`
+- L’ajout d’un `mip::ProtectionEngine` au `ProtectionProfile`
+- Classe qui hérite `mip::ProtectionHandler::Observer`de.
 - Un `mip::ProtectionDescriptor` ou une licence de publication
 
 ## <a name="create-a-protection-handler"></a>Créer un gestionnaire de protection

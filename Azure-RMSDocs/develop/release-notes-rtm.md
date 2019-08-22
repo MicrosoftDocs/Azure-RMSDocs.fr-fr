@@ -14,16 +14,23 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 6fdef7a9d92880fa6754ffc7b2f889acdecd0bfc
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: cb969e8add0c79495cc2cc90e7e92368e42577dc
+ms.sourcegitcommit: f0dee92d6668001681b507e82f8aea61f3bfa96e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68791189"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69894468"
 ---
 # <a name="release-notes"></a>Notes de publication
 
 Cet article contient des informations importantes sur cette version du SDK RMS 2.1 et les précédentes.
+
+## <a name="april-2019---update"></a>2019 avril-mise à jour
+- Résolution des bogues dans l’API de fichier.
+- API de fichier mise à jour pour vérifier le droit d’exportation au lieu du droit d’extraction lors du déchiffrement du contenu.
+- Correctif du programme d’installation pour vérifier que le nouveau protecteur PDF v2 est installé lors de la mise à niveau.
+- Modifications de télémétrie. Cette modification nécessitait une mise à jour du package d’installation qui installe les bibliothèques Runtime C.
+- Modification de l’authentification backend du service, mettez à jour la version du kit de développement logiciel (SDK) à interruption minmize
 
 ## <a name="october-2017---update"></a>Mise à jour d’octobre 2017
 

@@ -1,18 +1,17 @@
 ---
 title: class mip::RecommendLabelAction
-description: Décrit la classe mip::recommendlabelaction de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Documente la classe MIP:: recommendlabelaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: eeab9022b257ff327e2c83b1d8860662355180e5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: dd3d2d0ecf7b549105e1a6373a998e77d4e77de8
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173227"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883211"
 ---
 # <a name="class-miprecommendlabelaction"></a>class mip::RecommendLabelAction 
 Les actions d’étiquette recommandées sont conçues pour suggérer une étiquette aux utilisateurs. La suppression de cet appel lorsqu’un utilisateur ignore l’étiquette recommandée doit être effectuée via les actions prises en charge sur l’état d’exécution.
@@ -20,25 +19,19 @@ Les actions d’étiquette recommandées sont conçues pour suggérer une étiqu
 ## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  |  Obtenir l’ID de l’étiquette suggéré.
-public const std::vector\<std::string\>& GetClassificationIds() const  |  Obtenir les ID de Classification qui correspondait et a provoqué cette étiquette qui doivent apparaître.
-public ActionType GetType() const  |  Obtenir le type de [Action](class_mip_action.md).
-
+public const std:: shared_ptr\<étiquette\>& getLabel () const  |  Obtient l’étiquette suggérée.
+public const std:: Vector\<std:: String\>& GetClassificationIds () const  |  Obtient les ID de classification qui correspondent et a provoqué l’affichage de cette étiquette.
+  
 ## <a name="members"></a>Membres
   
-### <a name="getlabelid-function"></a>GetLabelId (fonction)
-Obtenir l’ID de l’étiquette suggéré.
+### <a name="getlabel-function"></a>GetLabel fonction)
+Obtient l’étiquette suggérée.
 
   
-**Retourne**: L’ID d’étiquette.
+**Retourne**: Étiquette.
   
-### <a name="getclassificationids-function"></a>GetClassificationIds function
-Obtenir les ID de Classification qui correspondait et a provoqué cette étiquette qui doivent apparaître.
+### <a name="getclassificationids-function"></a>GetClassificationIds fonction)
+Obtient les ID de classification qui correspondent et a provoqué l’affichage de cette étiquette.
 
   
-**Retourne**: Const std::vector < std::string > et une liste de classification d’ID qui a provoqué cette étiquette qui doivent apparaître.
-
-### <a name="gettype-function"></a>Fonction GetType    
-Obtenir le type de [Action](class_mip_action.md).  
-
-**Retourne**: ActionType : type d’action dérivée vers lequel cette classe de base peut être castée.
+**Retourne**: Const std:: Vector < std:: String > & une liste d’ID de classification ayant provoqué l’affichage de cette étiquette.

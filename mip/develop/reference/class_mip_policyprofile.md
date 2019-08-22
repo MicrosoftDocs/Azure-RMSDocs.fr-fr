@@ -1,18 +1,17 @@
 ---
 title: mip::PolicyProfile, classe
-description: Décrit la classe mip::policyprofile de Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: Documente la classe MIP::p olicyprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 45af1f4d072a1d8a690aa8f459950ae500df3db8
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 13d24afe87bc04f7a92dde8daf88c1ada38cedc2
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173335"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883751"
 ---
 # <a name="class-mippolicyprofile"></a>mip::PolicyProfile, classe 
 La classe [PolicyProfile](class_mip_policyprofile.md) est la classe de base pour l’utilisation des opérations Microsoft Information Protection. Une application classique a besoin d’une seule classe [PolicyProfile](class_mip_policyprofile.md), mais elle peut créer plusieurs profils si nécessaire.
@@ -21,20 +20,20 @@ La classe [PolicyProfile](class_mip_policyprofile.md) est la classe de base pour
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Obtenir les paramètres définis sur le profil.
-public ListEnginesAsync void (const std::shared_ptr\<void\>& contexte)  |  Démarre une opération d’énumération de moteurs.
+public void ListEnginesAsync (const std:: shared_ptr\<void\>& Context)  |  Démarre une opération d’énumération de moteurs.
 public void UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Démarre le déchargement du moteur de stratégie avec l’ID spécifié.
-public void AddEngineAsync(const PolicyEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  Démarre l’ajout d’un nouveau moteur de stratégie au profil.
+public void AddEngineAsync (const PolicyEngine:: Settings & Settings, const std:\<:\>shared_ptr void & Context)  |  Démarre l’ajout d’un nouveau moteur de stratégie au profil.
 public void DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Démarre la suppression du moteur de stratégie avec l’ID spécifié. Toutes les données du profil spécifié seront supprimées.
   
 ## <a name="members"></a>Membres
   
-### <a name="getsettings-function"></a>GetSettings (fonction)
+### <a name="getsettings-function"></a>GetSettings fonction)
 Obtenir les paramètres définis sur le profil.
 
   
 **Retourne**: Paramètres définis sur le profil.
   
-### <a name="listenginesasync-function"></a>ListEnginesAsync (fonction)
+### <a name="listenginesasync-function"></a>ListEnginesAsync fonction)
 Démarre une opération d’énumération de moteurs.
 
 Paramètres :  
@@ -43,7 +42,7 @@ Paramètres :
 
 [PolicyProfile::Observer](class_mip_policyprofile_observer.md) est appelé en cas de réussite ou d’échec.
   
-### <a name="unloadengineasync-function"></a>UnloadEngineAsync (fonction)
+### <a name="unloadengineasync-function"></a>UnloadEngineAsync fonction)
 Démarre le déchargement du moteur de stratégie avec l’ID spécifié.
 
 Paramètres :  
@@ -55,7 +54,7 @@ Paramètres :
 
 [PolicyProfile::Observer](class_mip_policyprofile_observer.md) est appelé en cas de réussite ou d’échec.
   
-### <a name="addengineasync-function"></a>AddEngineAsync (fonction)
+### <a name="addengineasync-function"></a>AddEngineAsync fonction)
 Démarre l’ajout d’un nouveau moteur de stratégie au profil.
 
 Paramètres :  
@@ -67,7 +66,7 @@ Paramètres :
 
 [PolicyProfile::Observer](class_mip_policyprofile_observer.md) est appelé en cas de réussite ou d’échec.
   
-### <a name="deleteengineasync-function"></a>DeleteEngineAsync (fonction)
+### <a name="deleteengineasync-function"></a>DeleteEngineAsync fonction)
 Démarre la suppression du moteur de stratégie avec l’ID spécifié. Toutes les données du profil spécifié seront supprimées.
 
 Paramètres :  

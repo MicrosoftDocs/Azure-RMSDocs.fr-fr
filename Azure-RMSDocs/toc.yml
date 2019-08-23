@@ -294,7 +294,17 @@
                     - name: Tâches que vous aviez l’habitude d’effectuer avec l’application de partage RMS
                       href: ./rms-client/upgrade-client-app.md
         - name: Lecteurs PDF protégés
-          href: ./rms-client/protected-pdf-readers.md
+          items:
+            - name: Vue d’ensemble
+              href: ./rms-client/protected-pdf-readers.md
+            - name: Windows
+              href: ./rms-client/protected-pdf-readers-windows.md
+            - name: MacOS
+              href: ./rms-client/protected-pdf-readers-mac.md
+            - name: iOS
+              href: ./rms-client/protected-pdf-readers-ios.md
+            - name: Android
+              href: ./rms-client/protected-pdf-readers-android.md
         - name: Notes sur le déploiement du client RMS
           href: ./rms-client/client-deployment-notes.md
         - name: Protection RMS avec l’ICF de Windows Server

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: cb969e8add0c79495cc2cc90e7e92368e42577dc
-ms.sourcegitcommit: f0dee92d6668001681b507e82f8aea61f3bfa96e
+ms.openlocfilehash: c68970dffb263f30eb47ded0a29c2c5700b46bbe
+ms.sourcegitcommit: ad15beac7d95fe3904f3d4671c1e18e2136f74b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69894468"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999221"
 ---
 # <a name="release-notes"></a>Notes de publication
 
@@ -30,7 +30,9 @@ Cet article contient des informations importantes sur cette version du SDK RMS 
 - API de fichier mise à jour pour vérifier le droit d’exportation au lieu du droit d’extraction lors du déchiffrement du contenu.
 - Correctif du programme d’installation pour vérifier que le nouveau protecteur PDF v2 est installé lors de la mise à niveau.
 - Modifications de télémétrie. Cette modification nécessitait une mise à jour du package d’installation qui installe les bibliothèques Runtime C.
-- Modification de l’authentification backend du service, mettez à jour la version du kit de développement logiciel (SDK) à interruption minmize
+- Modifications de l’authentification du service principal, # # # # # #please mise à jour de cette version du kit de développement logiciel (SDK) minmize interruption si vous utilisez l’authentification par clé symétrique pour vos applications
+- Prise en charge de VC 15,9
+
 
 ## <a name="october-2017---update"></a>Mise à jour d’octobre 2017
 

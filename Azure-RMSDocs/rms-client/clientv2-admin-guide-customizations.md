@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fbe7ddfd8160856a7a8491d0faa672a16b340455
-ms.sourcegitcommit: 2a12c62501e775f73c0e3176744ba966a6edffeb
+ms.openlocfilehash: f60c1bdc8dabd586e96c758afe1f93f46d6afb16
+ms.sourcegitcommit: 0d336e4b5386f4861db9492c7dce2ef0e8cf0d6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69584610"
+ms.lasthandoff: 08/25/2019
+ms.locfileid: "70017661"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -773,11 +773,9 @@ Exemple de commande PowerShell, où votre étiquette est nommée «général»:
 
 Lorsque vous avez besoin de plusieurs règles pour la même étiquette, définissez plusieurs valeurs de chaîne pour la même clé. 
 
-Dans cet exemple :
+Dans cet exemple, les étiquettes des îles sécurisées nommées «confidentiel» et «secret» sont stockées dans la propriété personnalisée nommée **classification**et vous souhaitez que le Azure information protection client d’étiquetage unifié applique l’étiquette de sensibilité nommée « Confidentiel»:
 
-- Les étiquettes des îles sécurisées nommées «confidentiel» et «secret» sont stockées dans la propriété personnalisée nommée * * classification et vous souhaitez que le Azure Information Protection client d’étiquetage unifié applique l’étiquette de sensibilité nommée «confidentiel»:
-
-    Set-label-Identity Confidential-AdvancedSettings @ {labelByCustomProperties = ConvertTo-JSON («migrer une étiquette confidentielle, classification, confidentiel», «migrer l’étiquette secrète, la classification, le secret»)}
+    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 
 ### <a name="extend-your-label-migration-rules-to-emails"></a>Étendre vos règles de migration d’étiquette aux e-mails
 

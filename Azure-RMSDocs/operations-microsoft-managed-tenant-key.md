@@ -4,7 +4,7 @@ description: Informations sur les opérations de cycle de vie applicables si Mic
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5d35fc59ebfa051f3f7644c05527ed75bfe54be7
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 00e99f55130f25fa9368a7fdcd1f8c2795250c89
+ms.sourcegitcommit: dc655736e531260c7718a8808f4f1016391d2d7d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790485"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70020488"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gérée par Microsoft: Opérations de cycle de vie de la clé de locataire
 
@@ -62,7 +62,7 @@ Vous pouvez exporter votre clé de locataire et votre configuration Azure Inform
 
 ### <a name="step-1-initiate-export"></a>Étape 1 : Initier l’exportation
 
-- [Contactez le support Microsoft](information-support.md#to-contact-microsoft-support) pour ouvrir un **dossier de support Azure Information Protection dans lequel vous demandez l’exportation d’une clé Azure Information Protection**. Vous devez prouver que vous êtes administrateur de votre locataire Azure Information Protection et comprendre que la confirmation de ce processus prend plusieurs jours. Des frais de prise en charge standard s’appliquent. L’exportation de votre clé de locataire n’est pas un service de support technique gratuit.
+- [Contactez le support Microsoft](information-support.md#to-contact-microsoft-support) pour ouvrir un **dossier de support Azure Information Protection dans lequel vous demandez l’exportation d’une clé Azure Information Protection**. Vous devez prouver que vous êtes un administrateur global pour votre locataire et comprenez que ce processus prend plusieurs jours pour confirmer. Des frais de prise en charge standard s’appliquent. L’exportation de votre clé de locataire n’est pas un service de support technique gratuit.
 
 ### <a name="step-2-wait-for-verification"></a>Étape 2 : Attendre la vérification
 
@@ -99,7 +99,7 @@ Si vous exportez votre clé de locataire parce que vous ne voulez plus utiliser 
 ## <a name="respond-to-a-breach"></a>Réponse à une violation
 Un système de sécurité est incomplet sans un processus de réponse aux violations. Votre clé de locataire peut être compromise ou volée. Même si elle est bien protégée, des vulnérabilités peuvent être détectées dans la technologie actuelle de la clé ou dans les longueurs et algorithmes des clés.
 
-Microsoft dispose d'une équipe chargée de répondre aux incidents de sécurité survenant dans ses produits et services. Dès la réception d'un rapport d'incident avéré, cette équipe met tout en œuvre pour analyser la portée, la cause première et les actions de correction à mettre en place. Si cet incident affecte vos ressources, Microsoft envoie une notification par e-mail (à l’adresse fournie lors de la création de l’abonnement) aux administrateurs de votre locataire Azure Information Protection.
+Microsoft dispose d'une équipe chargée de répondre aux incidents de sécurité survenant dans ses produits et services. Dès la réception d'un rapport d'incident avéré, cette équipe met tout en œuvre pour analyser la portée, la cause première et les actions de correction à mettre en place. Si cet incident affecte vos ressources, Microsoft informe les administrateurs généraux de votre locataire par courrier électronique.
 
 En cas de violation, la meilleure mesure que vous ou Microsoft puissiez prendre dépend de la portée de la violation. Microsoft vous accompagnera dans ce processus. Le tableau suivant présente des situations type et les réponses que vous pouvez mettre en place. Toutefois, la réponse exacte que vous apporterez dépend des informations obtenues lors de l’analyse.
 

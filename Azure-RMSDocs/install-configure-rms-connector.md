@@ -4,7 +4,7 @@ description: Informations vous permettant d’installer et de configurer le conn
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 83193a4f84df3d56129030676d79c20ea3dfe666
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: fef260a3cadfc2ffdc7748e7be058c250db22a3a
+ms.sourcegitcommit: 923227861c00beabb7ed997ef7cba47f06facc94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794040"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70027431"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
@@ -57,7 +57,7 @@ Pour continuer, saisissez un compte et un mot de passe pour configurer le connec
 ## <a name="entering-credentials"></a>Saisie des informations d'identification
 Pour pouvoir configurer le connecteur RMS, vous devez saisir les identifiants d'un compte disposant des droits suffisants. Par exemple, vous pouvez taper <strong>admin@contoso.com</strong>, puis spécifier le mot de passe pour ce compte.
 
-Ce compte ne doit pas requérir l’authentification multifacteur (MFA), car l’outil d’administration Microsoft Rights Management ne prend pas en charge l’authentification multifacteur pour ce compte. 
+Ce compte ne doit pas requérir l’authentification multifacteur (MFA), car l’outil d’administration Microsoft Rights Management ne prend pas en charge l’authentification multifacteur pour ce compte. En outre, si vous utilisez Azure AD accès conditionnel, ne bloquez pas [l’authentification héritée](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) pour ce compte.
 
 Le connecteur applique également des restrictions de caractères à ce mot de passe. Vous ne pouvez pas utiliser un mot de passe qui comporte l’un des caractères suivants: Esperluette ( **&** ), crochet gauche ( **[** ), crochet droite ( **]** ), guillemets droits ( **"** ) et apostrophe ( **’** ). Si votre mot de passe contient l’un de ces caractères, l’authentification échoue pour le connecteur RMS, et vous voyez le message d’erreur **Cette combinaison de nom d’utilisateur et mot de passe n’est pas correcte**, même si vous pouvez vous connecter à l’aide de ce compte et de ce mot de passe pour d’autres scénarios. Si ce scénario s’applique à votre mot de passe, utilisez un autre compte dont le mot de passe ne contient aucun de ces caractères spéciaux ou redéfinissez votre mot de passe de façon à ce qu’il n’en contienne pas.
 

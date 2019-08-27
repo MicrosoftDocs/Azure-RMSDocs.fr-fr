@@ -33,6 +33,10 @@
   items:
     - name: API
       href: concept-apis-use-cases.md
+    - name: Concepts relatifs aux objets MipContext
+      href: concept-mipcontext.md
+    - name: Stockage de cache
+      href: concept-cache-storage.md
     - name: Profil et moteur (C++)
       items:
         - name: Concepts des objets de profil et de moteur

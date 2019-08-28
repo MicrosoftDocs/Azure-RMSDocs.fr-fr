@@ -4,19 +4,19 @@ description: Instructions et informations permettant aux administrateurs de gér
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee514720cf13e819f3d64e77635ae96a26e4d0ed
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: a3cca2ac2e3df8f773d6a818eb664bf5c72263aa
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793211"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056439"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guide de l’administrateur : Utilisation de PowerShell avec le client unifié Azure Information Protection
 
@@ -74,7 +74,7 @@ Vous pouvez exécuter les applets de commande d’étiquetage de manière non in
 Par défaut, lorsque vous exécutez les applets de commande d’étiquetage, les commandes s’exécutent dans votre propre contexte utilisateur dans une session PowerShell interactive. Pour les exécuter sans assistance, créez un compte d’utilisateur Azure AD à cet effet. Ensuite, dans le contexte de cet utilisateur, exécutez l’applet de commande Set-AIPAuthentication pour définir et stocker les informations d’identification à l’aide d’un jeton d’accès Azure AD. Ce compte d’utilisateur est ensuite authentifié et amorcé pour le service de protection à partir de Azure Information Protection. Le compte télécharge la stratégie de Azure Information Protection et tous les modèles de protection utilisés par les étiquettes.
 
 > [!NOTE]
-> Si vous utilisez des [stratégies délimitées](../configure-policy-scope.md), n’oubliez pas que vous devrez peut-être ajouter ce compte à vos stratégies délimitées.
+> Si vous utilisez des stratégies d’étiquette pour différents utilisateurs, n’oubliez pas que vous devrez peut-être ajouter ce compte à une stratégie d’étiquette spécifique.
 
 La première fois que vous exécutez cette applet de commande, vous êtes invité à vous connecter à Azure Information Protection. Spécifiez le nom et le mot de passe du compte d’utilisateur que vous avez créé pour le compte sans assistance. Après cela, ce compte peut ensuite exécuter les applets de commande d’étiquetage de manière non interactive jusqu’à l’expiration du jeton d’authentification dans Azure AD. 
 

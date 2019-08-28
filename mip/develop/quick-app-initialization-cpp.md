@@ -5,16 +5,16 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/18/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: d30111953bdc55b66b712f30de0c50d28ac07303
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 30066f1bbb8b5a4cdd556b7aa34a40d696371a91
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60185079"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884812"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C++)
+# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C++)
 
 Ce guide de démarrage rapide montre comment implémenter le modèle d’initialisation de client utilisé par le SDK MIP C++ au moment de l’exécution. 
 
@@ -137,7 +137,7 @@ Maintenant, créez une implémentation pour un délégué d’authentification, 
      class AuthDelegateImpl final : public mip::AuthDelegate {
      public:
           AuthDelegateImpl() = delete;        // Prevents default constructor
-          
+
           AuthDelegateImpl(
             const std::string& appId)         // AppID for registered AAD app
             : mAppId(appId) {};
@@ -146,6 +146,7 @@ Maintenant, créez une implémentation pour un délégué d’authentification, 
             const mip::Identity& identity,    // Identity of the account to be authenticated, if known
             const OAuth2Challenge& challenge, // Authority (AAD tenant issuing token), and resource (API being accessed; "aud" claim).
             OAuth2Token& token) override;     // Token handed back to MIP SDK
+
      private:
           std::string mAppId;
           std::string mToken;
@@ -194,7 +195,8 @@ Maintenant, créez une implémentation pour un délégué d’authentification, 
           // True = successful token acquisition; False = failure
           return true;
      }
-     ``` 
+     ```
+
 3. Si vous le souhaitez, utilisez la touche F6 (**Générer la solution**) pour exécuter un test de compilation/liaison de votre solution, pour vous assurer qu’elle est correctement générée avant de continuer.
 
 ## <a name="implement-a-consent-delegate"></a>Implémenter un délégué de consentement
@@ -232,6 +234,7 @@ Maintenant, créez une implémentation pour un délégué de consentement, en é
           return Consent::AcceptAlways;
      }
      ``` 
+     
 3. Si vous le souhaitez, utilisez la touche F6 (**Générer la solution**) pour exécuter un test de compilation/liaison de votre solution, pour vous assurer qu’elle est correctement générée avant de continuer.
 
 ## <a name="construct-a-file-profile-and-engine"></a>Construire un moteur et un profil de fichier
@@ -243,6 +246,8 @@ Comme nous l’avons mentionné précédemment, des objets de profil et de moteu
 2. Supprimez l’implémentation générée de `main()`. **Ne supprimez pas** les directives de préprocesseur générées par Visual Studio lors de la création du projet (#pragma, #include). Ajoutez le code suivant après les éventuelles directives de préprocesseur :
 
    ```cpp
+   #include "mip/mip_init.h"
+   #include "mip/mip_context.h"  
    #include "auth_delegate.h"
    #include "consent_delegate.h"
    #include "profile_observer.h"
@@ -253,7 +258,7 @@ Comme nous l’avons mentionné précédemment, des objets de profil et de moteu
    using std::shared_ptr;
    using std::string;
    using std::cout;
-   using mip::ApplicationInfo; 
+   using mip::ApplicationInfo;
    using mip::FileProfile;
    using mip::FileEngine;
 
@@ -263,18 +268,25 @@ Comme nous l’avons mentionné précédemment, des objets de profil et de moteu
      ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, name, version)
                  "<application-name>",
                  "<application-version>"};
-     auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
+
+     auto mipContext = mip::MipContext::Create(appInfo,
+                         "file_sample",
+                         mip::LogLevel::Trace,
+                         nullptr /*loggerDelegateOverride*/,
+                         nullptr /*telemetryOverride*/);
+
+     auto profileObserver = make_shared<ProfileObserver>();         // Observer object
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
      auto consentDelegateImpl = make_shared<ConsentDelegateImpl>(); // Consent delegate object
  
      // Construct/initialize profile object
-     FileProfile::Settings profileSettings("",    // Path for logging/telemetry/state
-       true,                                      // true = use in-memory state storage (vs disk)
-       authDelegateImpl,                            
-       consentDelegateImpl,                     
-       profileObserver,                         
-       appInfo);                                    
+     FileProfile::Settings profileSettings(
+       mipContext,
+       mip::CacheStorageType::OnDisk,
+       authDelegateImpl,
+       consentDelegateImpl,
+       profileObserver);
 
      // Set up promise/future connection for async profile operations; load profile asynchronously
      auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
@@ -296,7 +308,7 @@ Comme nous l’avons mentionné précédemment, des objets de profil et de moteu
      // Construct/initialize engine object
      FileEngine::Settings engineSettings(
        mip::Identity("<engine-account>"),         // Engine identity (account used for authentication)
-       "<engine-state>",                          // User-defined engine state      
+       "<engine-state>",                          // User-defined engine state
        "en-US");                                  // Locale (default = en-US)
 
      // Set up promise/future connection for async engine operations; add engine to profile asynchronously
@@ -306,7 +318,7 @@ Comme nous l’avons mentionné précédemment, des objets de profil et de moteu
      std::shared_ptr<FileEngine> engine; 
      try
      {
-       engine = engineFuture.get();             
+       engine = engineFuture.get();
      }
      catch (const std::exception& e)
      {
@@ -315,6 +327,13 @@ Comme nous l’avons mentionné précédemment, des objets de profil et de moteu
        system("pause");
        return 1;
      }
+
+   // Application shutdown. Null out profile and engine, call ReleaseAllResources();
+   // Application may crash at shutdown if resources aren't properly released.
+   // handler = nullptr; // This will be used in later quick starts.
+   engine = nullptr;
+   profile = nullptr;   
+   mipContext = nullptr;
 
    return 0;
    }

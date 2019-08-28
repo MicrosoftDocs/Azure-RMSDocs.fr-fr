@@ -136,11 +136,11 @@ Utilisez le tableau suivant pour identifier la région ou l’instance Azure rec
 
 |Région ou instance Azure|Emplacement recommandé pour votre coffre de clés|
 |---------------|--------------------|
-|rms.**na**.aadrm.com|**Nord du centre des États-Unis** ou **États-Unis de l'Est**|
-|rms.**eu**.aadrm.com|**Europe du Nord** ou **Europe de l’Ouest**|
-|rms.**ap**.aadrm.com|**Asie de l’Est** ou **Sud-Est asiatique**|
-|rms.**sa**.aadrm.com|**États-Unis de l’Ouest** ou **États-Unis de l'Est**|
-|rms.**govus**.aadrm.com|**États-Unis du Centre** ou **États-Unis de l'Est 2**|
+|rms.**na**.aadrm.com|**USA Centre Nord** ou **USA Est**|
+|rms.**eu**.aadrm.com|**Europe Nord** ou **Europe Ouest**|
+|rms.**ap**.aadrm.com|**Asie Est** ou **Asie Sud-Est**|
+|rms.**sa**.aadrm.com|**USA Ouest** ou **USA Est**|
+|rms.**govus**.aadrm.com|**USA Centre** ou **USA Est 2**|
 |RMS.**aadrm.us**|**US gov Virginie** ou **US gov Arizona**|
 |RMS.**aadrm.CN**|**Chine est 2** ou **Chine Nord 2**|
 

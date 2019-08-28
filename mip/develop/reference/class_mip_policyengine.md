@@ -1,17 +1,17 @@
 ---
 title: mip::PolicyEngine, classe
 description: Documente la classe MIP::p olicyengine du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 7ef57d0864ff4899476dc22639942afdbfe6bffe
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: e70e7c94ee37cfaaf2e56538977377f421f702a3
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885250"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055821"
 ---
 # <a name="class-mippolicyengine"></a>mip::PolicyEngine, classe 
 Cette classe fournit une interface pour toutes les fonctions de moteur.

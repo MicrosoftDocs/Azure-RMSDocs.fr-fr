@@ -1,17 +1,17 @@
 ---
 title: mip::FileHandler, classe
 description: 'Documente la classe MIP:: fileHandler du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: a75187820cea8b806a65eebea937ed091f0c62e0
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 93e4ed2210632a051bc9e1aaa06069d246860041
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884317"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055018"
 ---
 # <a name="class-mipfilehandler"></a>mip::FileHandler, classe 
 Interface pour toutes les fonctions de gestion de fichiers.
@@ -25,6 +25,7 @@ public void ClassifyAsync (const std:: shared_ptr\<void\>& Context)  |  Exécute
 public void InspectAsync (const std:: shared_ptr\<void\>& Context)  |  Crée un objet d’inspecteur de fichier, utilisé pour récupérer le contenu d’un fichier à partir de formats de fichiers compatibles.
 public void setLabel (const std:: shared_ptr\<étiquette\>& label, const LabelingOptions & LabelingOptions, const ProtectionSettings & ProtectionSettings)  |  Définit l’étiquette de sensibilité sur le fichier.
 public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Supprime l’étiquette de sensibilité du fichier.
+static bool IsProtected (const std:: String & FilePath, const std:: shared_ptr<MipContext>& mipContext) | Vérifie si un fichier est protégé ou non.
 public void SetProtection (const std:: shared_ptr\<ProtectionDescriptor\>& ProtectionDescriptor, const ProtectionSettings & ProtectionSettings)  |  Définit des autorisations personnalisées ou basées sur un modèle (en fonction de protectionDescriptor->GetProtectionType) pour le fichier.
 public void RemoveProtection()  |  Supprime la protection du fichier. Si le fichier porte une étiquette, celle-ci est perdue.
 public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Écrit les modifications dans le fichier spécifié par le paramètre \|outputFilePath\ |  .
@@ -62,6 +63,10 @@ Les modifications ne sont pas écrites dans le fichier tant que CommitAsync n’
 Supprime l’étiquette de sensibilité du fichier.
 Les modifications ne sont pas écrites dans le fichier tant que CommitAsync n’est pas appelé. La méthode Privileged et Auto permet à l’API de substituer une étiquette existante. Lève [JustificationRequiredError](class_mip_justificationrequirederror.md) quand la définition de l’étiquette nécessite une justification de l’opération (via le paramètre labelingOptions).
   
+
+### <a name="isprotected-function"></a>IsProtected fonction)
+Vérifie si un fichier est protégé ou non.
+
 ### <a name="setprotection-function"></a>SetProtection fonction)
 Définit des autorisations personnalisées ou basées sur un modèle (en fonction de protectionDescriptor->GetProtectionType) pour le fichier.
 Les modifications ne sont pas écrites dans le fichier tant que CommitAsync n’est pas appelé.

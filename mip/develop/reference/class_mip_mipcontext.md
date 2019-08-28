@@ -1,17 +1,17 @@
 ---
 title: 'MIP:: MipContext, classe'
 description: 'Documente la classe MIP:: mipcontext du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 1993756ee70788a71060484a52f0897d7d80c593
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: f6bc8d5a61ec259b85ae9e2479afeb9a2f00412f
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892764"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70054579"
 ---
 # <a name="class-mipmipcontext"></a>MIP:: MipContext, classe 
 MipContext représente l’état partagé par tous les profils, moteurs et gestionnaires.

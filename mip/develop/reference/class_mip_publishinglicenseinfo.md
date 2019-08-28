@@ -1,17 +1,17 @@
 ---
 title: MIP de classe::P ublishingLicenseInfo
 description: Documente la classe MIP::p ublishinglicenseinfo du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 027aba219be53b6f3182110c0fb068c2050d71cc
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: e11374b639fdfea73326e036f81cded74eb3a4c0
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69893087"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057326"
 ---
 # <a name="class-mippublishinglicenseinfo"></a>MIP de classe::P ublishingLicenseInfo 
 Contient les détails d’une licence de publication utilisée pour créer un gestionnaire de protection.

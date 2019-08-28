@@ -1,17 +1,17 @@
 ---
 title: 'MIP:: SyncFileSensitivityData, classe'
 description: 'Documente la classe MIP:: syncfilesensitivitydata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 3c2e0e3033178d99b0ae2043c5d665930944b53d
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 366c5dcf98216f10f2c2553e61b82a225e41a3c4
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892611"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056806"
 ---
 # <a name="class-mipsyncfilesensitivitydata"></a>MIP:: SyncFileSensitivityData, classe 
   

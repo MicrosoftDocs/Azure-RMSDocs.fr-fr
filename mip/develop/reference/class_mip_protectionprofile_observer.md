@@ -1,17 +1,17 @@
 ---
 title: mip::ProtectionProfile::Observer, classe
 description: Documente la classe MIP::p rotectionprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: bf3a43f28c4a445a5e2040108152832d2bffcfcd
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: e7e260f879fb1e48b19d43f13a451a3a91ee1a39
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885103"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057469"
 ---
 # <a name="class-mipprotectionprofileobserver"></a>mip::ProtectionProfile::Observer, classe 
 Interface qui reçoit les notifications relatives à [ProtectionProfile](class_mip_protectionprofile.md).

@@ -1,17 +1,17 @@
 ---
 title: class mip::ProtectionEngine
 description: Documente la classe MIP::p rotectionengine du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 88cb6565e8e392a83d01ded79186cf7dbb6fb43c
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 0bf87713b209e17d2728232f97f68946ca5d847f
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883492"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057654"
 ---
 # <a name="class-mipprotectionengine"></a>class mip::ProtectionEngine 
 Gère les actions liées à la protection sur une identité spécifique.

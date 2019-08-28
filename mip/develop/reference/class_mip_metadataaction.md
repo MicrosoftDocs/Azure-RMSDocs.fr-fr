@@ -1,17 +1,17 @@
 ---
 title: mip::MetadataAction, classe
 description: 'Documente la classe MIP:: metadataaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 26a189d714001f4145ce328c163a052313923136
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 9175fc9278f012b3f3247cab6a09650c55713ac3
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885415"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055916"
 ---
 # <a name="class-mipmetadataaction"></a>mip::MetadataAction, classe 
 Une [Action](class_mip_action.md) qui ajoute des informations de métadonnées au contenu.

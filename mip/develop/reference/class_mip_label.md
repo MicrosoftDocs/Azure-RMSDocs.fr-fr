@@ -1,17 +1,17 @@
 ---
 title: mip::Label, classe
 description: 'Documente la classe MIP:: label du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 3d746c1f271d75c160ca721ebe6f0fef0f15bd5e
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 364f28ee45b20208be4ac31b30a11bef389fc7b4
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884047"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70054702"
 ---
 # <a name="class-miplabel"></a>mip::Label, classe 
 Abstraction d’une étiquette unique Microsoft Information Protection.

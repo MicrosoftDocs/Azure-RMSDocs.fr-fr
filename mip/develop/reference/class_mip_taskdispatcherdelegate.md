@@ -1,17 +1,17 @@
 ---
 title: 'MIP:: TaskDispatcherDelegate, classe'
 description: 'Documente la classe MIP:: taskdispatcherdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 0455f446cddd7db1c05f0f7e7b76b33496810cf1
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: d5237bf999f7ad704fd303783a9fbdc506b58ed2
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883023"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056759"
 ---
 # <a name="class-miptaskdispatcherdelegate"></a>MIP:: TaskDispatcherDelegate, classe 
 Classe qui définit l’interface du répartiteur de tâches du kit de développement logiciel (SDK) MIP.

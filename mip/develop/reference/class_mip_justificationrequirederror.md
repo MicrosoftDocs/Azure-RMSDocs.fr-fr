@@ -1,17 +1,17 @@
 ---
 title: mip::JustificationRequiredError, classe
 description: 'Documente la classe MIP:: justificationrequirederror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: d75b17d7bf03164c15c4487c288963ca12304eb1
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: dbac2ee9908b5c84fcdf37a5718c4c78d5c53d36
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885545"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70054726"
 ---
 # <a name="class-mipjustificationrequirederror"></a>mip::JustificationRequiredError, classe 
   

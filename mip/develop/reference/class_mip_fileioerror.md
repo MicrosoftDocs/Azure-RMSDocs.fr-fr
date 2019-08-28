@@ -1,17 +1,17 @@
 ---
 title: mip::FileIOError, classe
 description: 'Documente la classe MIP:: fileioerror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 1003119b38b18d572067e31add3bdc0a0f629b9f
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 5aafe0361caaae71c0143e3be5395c784421c2fd
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885614"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70054930"
 ---
 # <a name="class-mipfileioerror"></a>mip::FileIOError, classe 
 Erreur d’E/S de fichier.

@@ -1,17 +1,17 @@
 ---
 title: 'MIP:: ActionData, classe'
 description: 'Documente la classe MIP:: ActionData du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 58a4faece2a7fbd59f2ddc0e979b10b7a64b890a
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: a62654cedbba03d9d22a1ea38e6fc59380e94d35
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69893648"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056385"
 ---
 # <a name="class-mipactiondata"></a>MIP:: ActionData, classe 
   

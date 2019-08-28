@@ -1,17 +1,17 @@
 ---
 title: mip::ProtectionProfile::Settings, classe
 description: Documente la classe MIP::p rotectionprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 010fa01d42afb181e33afab7ce47f9769e78a01d
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: f5c9d9fcd72f65b029c0a1af582b0f0cd498186e
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883345"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057482"
 ---
 # <a name="class-mipprotectionprofilesettings"></a>mip::ProtectionProfile::Settings, classe 
 [Settings](class_mip_protectionprofile_settings.md) utilisé par [ProtectionProfile](class_mip_protectionprofile.md) lors de sa création et tout au long de sa durée de vie.

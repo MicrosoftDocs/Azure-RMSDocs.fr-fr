@@ -4,7 +4,7 @@ description: Informations sur les opérations de cycle de vie applicables si vou
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b1b3dc6b5a557339a33abfb5cf8b54d995b1da21
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: f8eb311e42f17398a0564d6caf4b02618609d9d5
+ms.sourcegitcommit: dc7603461ce9300635bcb389c18e2e708a8229df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793872"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121802"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gérée par le client: Opérations de cycle de vie des clés de locataire
 
@@ -73,7 +73,7 @@ Si vous utilisez BYOK, vous ne pouvez pas exporter votre clé de locataire à pa
 ## <a name="respond-to-a-breach"></a>Réponse à une violation
 Un système de sécurité est incomplet sans un processus de réponse aux violations. Votre clé de locataire peut être compromise ou volée. Même si elle est bien protégée, des vulnérabilités peuvent être détectées dans la technologie actuelle de la clé ou dans les longueurs et algorithmes des clés.
 
-Microsoft dispose d'une équipe chargée de répondre aux incidents de sécurité survenant dans ses produits et services. Dès la réception d'un rapport d'incident avéré, cette équipe met tout en œuvre pour analyser la portée, la cause première et les actions de correction à mettre en place. Si ces incidents affectent vos ressources, Microsoft envoie une notification par e-mail (à l’adresse fournie lors de la création de l’abonnement) aux administrateurs de votre locataire Azure Information Protection.
+Microsoft dispose d'une équipe chargée de répondre aux incidents de sécurité survenant dans ses produits et services. Dès la réception d'un rapport d'incident avéré, cette équipe met tout en œuvre pour analyser la portée, la cause première et les actions de correction à mettre en place. Si cet incident affecte vos ressources, Microsoft informe vos administrateurs généraux de locataire par e-mail.
 
 En cas de violation, la meilleure mesure que vous ou Microsoft puissiez prendre dépend de la portée de la violation. Microsoft vous accompagnera dans ce processus. Le tableau suivant présente des situations type et les réponses que vous pouvez mettre en place. Toutefois, la réponse exacte que vous apporterez dépend des informations obtenues lors de l’analyse.
 

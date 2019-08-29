@@ -6,16 +6,16 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/09/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 395c46ce1979b2ef670aa27e9329c5219ca63e13
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: fc2b07e2ffb8dfe9dec0e3766ac0da39719f7503
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60173230"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885954"
 ---
-# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C#)
+# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C#)
 
 Ce guide de démarrage rapide vous montre comment utiliser plus d’API de fichier MIP. En utilisant l’une des étiquettes de sensibilité que vous avez listées dans le précédent guide de démarrage rapide, vous utilisez un gestionnaire de fichiers pour définir/obtenir l’étiquette sur un fichier. La classe de gestionnaire de fichiers expose différentes opérations pour définir/obtenir des étiquettes, ou une protection, pour les types de fichiers pris en charge.
 
@@ -49,12 +49,11 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
      //Set Labeling Options
      LabelingOptions labelingOptions = new LabelingOptions()
      {
-          ActionSource = ActionSource.Manual,
           AssignmentMethod = AssignmentMethod.Standard
      };
 
      // Set a label on input file
-     handler.SetLabel(labelId, labelingOptions);
+     handler.SetLabel(engine.GetLabelById(labelId), labelingOptions, new ProtectionSettings());
 
      // Commit changes, save as outputFilePath
      var result = Task.Run(async () => await handler.CommitAsync(outputFilePath)).Result;
@@ -65,12 +64,22 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
      // Get the label from output file
      var contentLabel = handlerModified.Label;
      Console.WriteLine(string.Format("Getting the label committed to file: {0}", outputFilePath));
-     Console.WriteLine(string.Format("File Label: {0} \r\nIsProtected: {1}", contentLabel.Label, contentLabel.IsProtectionAppliedFromLabel.ToString()));
+     Console.WriteLine(string.Format("File Label: {0} \r\nIsProtected: {1}", contentLabel.Label.Name, contentLabel.IsProtectionAppliedFromLabel.ToString()));
      Console.WriteLine("Press a key to continue.");
      Console.ReadKey();
    ```
 
-3. Remplacez les valeurs d’espace réservé dans le code source que vous venez de coller, en utilisant les valeurs suivantes :
+3. Vers la fin de `Main()`, identifiez le bloc d’arrêt d’application créé lors du premier démarrage rapide et supprimez les marques de commentaire de la ligne du gestionnaire :
+
+   ```csharp
+   // Application Shutdown
+   handler = null;
+   fileEngine = null;
+   fileProfile = null;
+   mipContext = null;
+   ```
+
+4. Remplacez les valeurs d’espace réservé dans le code source par les valeurs suivantes :
 
    | Espace réservé | Valeur |
    |:----------- |:----- |

@@ -5,16 +5,16 @@ author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/04/2019
+ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: b7f2b25027502fbdd9dd7bd877b8893c1940628a
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 156d7bb4c41a6ce593e66add3aea0a290a9b73ac
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60184968"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886016"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C#)
+# <a name="quickstart-client-application-initialization-c"></a>Démarrage rapide : Initialisation d’une application cliente (C#)
 
 Ce guide de démarrage rapide montre comment implémenter le modèle d’initialisation de client utilisé par le wrapper .NET du SDK MIP au moment de l’exécution.
 
@@ -81,15 +81,15 @@ Maintenant, créez une implémentation pour un délégué d’authentification, 
      }
      ```
 
-L’objet `ApplicationInfo` contient deux propriétés. `_appInfo.ApplicationId` sera utilisé dans la classe `AuthDelegateImplementation` pour fournir l’ID client à la bibliothèque d’authentification.
+L’objet `ApplicationInfo` contient trois propriétés. `_appInfo.ApplicationId` sera utilisé dans la classe `AuthDelegateImplementation` pour fournir l’ID client à la bibliothèque d’authentification. `ApplicationName` et `ApplicationVersion` figureront dans les rapports d’analyse Azure Information Protection.
 
-5. Ajoutez la méthode `public string AcquireToken()`. Cette méthode doit accepter `Microsoft.InformationProtection.Identity` ainsi que les deux chaînes authority et resource. Ces variables de chaîne seront passées à la bibliothèque d’authentification par l’API et ne doivent pas être modifiées. Leur modification peut entraîner l’échec de l’authentification.
+5. Ajoutez la méthode `public string AcquireToken()`. Cette méthode doit accepter `Microsoft.InformationProtection.Identity` ainsi que trois chaînes : l’URL authority, l’URI resource et les revendications, si nécessaire. Ces variables de chaîne seront passées à la bibliothèque d’authentification par l’API et ne doivent pas être modifiées. Leur modification peut entraîner l’échec de l’authentification.
 
      ```csharp
-     public string AcquireToken(Identity identity, string authority, string resource)
+     public string AcquireToken(Identity identity, string authority, string resource, string claims)
      {
           AuthenticationContext authContext = new AuthenticationContext(authority);
-          var result = authContext.AcquireTokenAsync(resource, _appInfo.ApplicationId, new Uri(redirectUri), new PlatformParameters(PromptBehavior.Auto, null), UserIdentifier.AnyUser).Result;
+          var result = Task.Run(async() => await authContext.AcquireTokenAsync(resource, AppInfo.ApplicationId, new Uri(redirectUri), new PlatformParameters(PromptBehavior.Always))).Result;
           return result.AccessToken;
      }
      ```
@@ -120,7 +120,7 @@ Maintenant, créez une implémentation pour un délégué de consentement, en é
 
 2. Supprimez l’implémentation générée de `main()`. 
 
-3. Le wrapper managé inclut une classe statique, `Microsoft.InformationProtection.MIP`, qui est utilisée pour l’initialisation, le chargement des profils et la libération des ressources. Pour initialiser le wrapper pour les opérations d’API de fichier, appelez MIP.Initialize, en passant `MipComponent.File` qui charge les bibliothèques nécessaires aux opérations de fichier. 
+3. Le wrapper managé inclut une classe statique, `Microsoft.InformationProtection.MIP`, qui est utilisée pour l’initialisation, la création d’un `MipContext`, le chargement des profils et la libération des ressources. Pour initialiser le wrapper pour les opérations d’API de fichier, appelez `MIP.Initialize()`, en passant `MipComponent.File` qui charge les bibliothèques nécessaires aux opérations de fichier. 
 
 4. Dans la section `Main()` du fichier *Program.cs*, ajoutez ce qui suit, en remplaçant **\<application-id\>** par l’ID de l’inscription de l’application Azure AD créée précédemment.
 
@@ -128,7 +128,9 @@ Maintenant, créez une implémentation pour un délégué de consentement, en é
 using System;
 using System.Threading.Tasks;
 using Microsoft.InformationProtection;
+using Microsoft.InformationProtection.Exceptions;
 using Microsoft.InformationProtection.File;
+using Microsoft.InformationProtection.Protection;
 
 namespace mip_sdk_dotnet_quickstart
 {
@@ -150,6 +152,8 @@ namespace mip_sdk_dotnet_quickstart
 
 Comme nous l’avons mentionné précédemment, des objets de profil et de moteur sont nécessaires pour les clients du SDK utilisant des API MIP. Terminez la phase de codage de ce guide de démarrage rapide en ajoutant le code qui charge les DLL natives et qui instancie ensuite les objets de profil et de moteur.
 
+
+
    ```csharp
 using System;
 using System.Threading.Tasks;
@@ -165,10 +169,10 @@ namespace mip_sdk_dotnet_quickstart
 
           static void Main(string[] args)
           {
-               //Initialize Wrapper for File API operations
+               // Initialize Wrapper for File API operations.
                MIP.Initialize(MipComponent.File);
 
-               //Create ApplicationInfo, setting the clientID from Azure AD App Registration as the ApplicationId
+               // Create ApplicationInfo, setting the clientID from Azure AD App Registration as the ApplicationId.
                ApplicationInfo appInfo = new ApplicationInfo()
                {
                     ApplicationId = clientId,
@@ -176,24 +180,40 @@ namespace mip_sdk_dotnet_quickstart
                     ApplicationVersion = "1.0.0"
                };
 
-               //Instatiate the AuthDelegateImpl object, passing in AppInfo. 
+               // Instantiate the AuthDelegateImpl object, passing in AppInfo.
                AuthDelegateImplementation authDelegate = new AuthDelegateImplementation(appInfo);
 
-               //Initialize and instantiate the File Profile
-               //Create the FileProfileSettings object
-               var profileSettings = new FileProfileSettings("mip_data", false, authDelegate, new ConsentDelegateImplementation(), appInfo, LogLevel.Trace);
+               MipContext mipContext = MIP.CreateMipContext(appInfo,
+                                        "mip_data",
+                                        LogLevel.Trace,
+                                        null,
+                                        null);
 
-               //Load the Profile async and wait for the result
+               // Initialize and instantiate the File Profile.
+               // Create the FileProfileSettings object.
+               // Initialize file profile settings to create/use local state.
+               var profileSettings = new FileProfileSettings(mipContext,
+                                        CacheStorageType.OnDiskEncrypted,
+                                        authDelegate,
+                                        new ConsentDelegateImplementation());
+
+               // Load the Profile async and wait for the result.
                var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
 
-               //Create a FileEngineSettings object, then use that to add an engine to the profile
+               // Create a FileEngineSettings object, then use that to add an engine to the profile.
                var engineSettings = new FileEngineSettings("user1@tenant.com", "", "en-US");
                engineSettings.Identity = new Identity("user1@tenant.com");
                var fileEngine = Task.Run(async () => await fileProfile.AddEngineAsync(engineSettings)).Result;
+
+               // Application Shutdown
+               // handler = null; // This will be used in later quick starts.
+               fileEngine = null;
+               fileProfile = null;
+               mipContext = null;
           }
      }
 }
-``` 
+```
 
 3. Remplacez les valeurs d’espace réservé que vous aviez collées dans le code source par les valeurs suivantes :
 

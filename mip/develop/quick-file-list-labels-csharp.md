@@ -5,16 +5,16 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/04/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 0b1b110fe3b2e96c258c7b94a3d356b9404d6e7e
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 3a26352f7b8e23e2de55eb21846e20feca7096ff
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60175591"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885985"
 ---
-# <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C#)
+# <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C#)
 
 Ce guide de démarrage rapide vous montre comment utiliser l’API de fichier du SDK MIP afin de lister les étiquettes de sensibilité configurées pour votre organisation.
 
@@ -33,7 +33,7 @@ Ajoutez une logique pour répertorier les étiquettes de sensibilité de votre o
 
 2. À l’aide de l’**Explorateur de solutions**, ouvrez le fichier .cs dans votre projet qui contient l’implémentation de la méthode `Main()`. Par défaut, il a le même nom que le projet qui le contient, et que vous avez spécifié lors de la création du projet. 
 
-3. Vers la fin du corps `Main()`, au-dessous de l’accolade fermante `}` de la fonction `Main()` (là où vous vous êtes arrêté dans le guide de démarrage rapide précédent), insérez le code suivant :
+3. Vers la fin du corps `Main()`, au-dessous de la section d’arrêt d’application de la fonction `Main()` (là où vous vous êtes arrêté dans le démarrage rapide précédent), insérez le code suivant :
 
   ```csharp
   // List sensitivity labels from fileEngine and display name and id  
@@ -49,11 +49,11 @@ Ajoutez une logique pour répertorier les étiquettes de sensibilité de votre o
           }
       }
   }
-  ``` 
+  ```
 
 ## <a name="build-and-test-the-application"></a>Générer et tester l’application
 
-Enfin, générez et testez votre application cliente. 
+Enfin, générez et testez votre application cliente.
 
 1. Utilisez CTRL-MAJ-B (**Générer la solution**) pour générer votre application cliente. Si vous n’avez aucune erreur de génération, utilisez F5 (**Démarrer le débogage**) pour exécuter votre application.
 
@@ -89,7 +89,7 @@ Enfin, générez et testez votre application cliente.
 
 ### <a name="problems-during-execution-of-c-application"></a>Problèmes durant l’exécution de l’application C#
 
-| Résumé | Message d’erreur | Solution |
+| Résumé | Message d'erreur | Solution |
 |---------|---------------|----------|
 | Jeton d'accès incorrect | *Une exception s’est produite... le jeton d’accès est-il incorrect ou a-t-il expiré ?<br><br>L’appel de l’API a échoué : Échec de profile_add_engine_asyncprofile_add_engine_async avec : [classe mip::PolicySyncException] Échec de l’obtention de la stratégie, Échec de la requête avec le code d’état http : 401, x-ms-diagnostics: [2000001;reason="Le jeton OAuth envoyé avec la requête ne peut pas être analysé.";error_category="invalid_token"], correlationId:[35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (processus 29924) s’est arrêté avec le code 0.<br><br>Appuyez sur une touche pour fermer cette fenêtre . . .* | Si votre projet est généré avec succès, mais que vous voyez une sortie similaire à gauche, vous avez probablement un jeton non valide ou expiré dans votre méthode `AcquireOAuth2Token()`. Revenez à [Générer et tester l’application](#build-and-test-the-application) et regénérez le jeton d’accès, mettez à jour `AcquireOAuth2Token()` de nouveau et regénérez/retestez. Vous pouvez également examiner et vérifier le jeton et ses revendications, à l’aide de l’application web monopage [jwt.ms](https://jwt.ms/). |
 | Étiquettes de sensibilité non configurées | Non applicable | Si votre projet est généré avec succès, mais que vous n’avez aucune sortie dans la fenêtre de console, assurez-vous que les étiquettes de sensibilité de votre organisation soient correctement configurées. Consultez [Installation et configuration du kit SDK MIP](setup-configure-mip.md), sous « Définir les paramètres de taxonomie et de protection des étiquettes » pour plus d’informations.  |

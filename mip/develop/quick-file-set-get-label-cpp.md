@@ -6,16 +6,16 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/18/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 2ac8c6bbfba6f460ac016a103f32f20856bff2aa
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: d671aeed3e05882ba8d41c6d7069cd4e548ecec2
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60184890"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884720"
 ---
-# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C++)
+# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C++)
 
 Ce guide de démarrage rapide vous montre comment utiliser plus d’API de fichier MIP. En utilisant l’une des étiquettes de sensibilité que vous avez listées dans le précédent guide de démarrage rapide, vous utilisez un gestionnaire de fichiers pour définir/obtenir l’étiquette sur un fichier. La classe de gestionnaire de fichiers expose différentes opérations pour définir/obtenir des étiquettes, ou une protection, pour les types de fichiers pris en charge.
 
@@ -132,8 +132,8 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
    {
         string labelId = "<label-id>";
         cout << "\nApplying Label ID " << labelId << " to " << filePathIn << endl;
-        mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
-        handler->SetLabel(labelId, labelingOptions);
+        mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+        handler->SetLabel(engine->GetLabelById(labelId), labelingOptions, new ProtectionSettings());
    }
    catch (const std::exception& e)
    {
@@ -205,12 +205,23 @@ Ajoutez une logique pour définir et obtenir une étiquette de sensibilité sur 
    system("pause");
    ```
 
-4. Remplacez les valeurs d’espace réservé que vous venez de coller dans le code source par des constantes de chaîne :
+4. Vers la fin de `main()`, identifiez le bloc d’arrêt d’application créé lors du premier démarrage rapide et supprimez les marques de commentaire de la ligne du gestionnaire :
+
+   ```cpp
+   // Application shutdown. Null out profile and engine, call ReleaseAllResources();
+   // Application may crash at shutdown if resources aren't properly released.
+   profile = nullptr;
+   engine = nullptr;
+   handler = nullptr;
+   mipContext = nullptr;
+   ```
+
+5. Remplacez les valeurs d’espace réservé que vous venez de coller dans le code source par des constantes de chaîne :
 
    | Espace réservé | Valeur |
    |:----------- |:----- |
    | \<input-file-path\> | Le chemin complet vers un fichier d’entrée de test, par exemple : `"c:\\Test\\Test.docx"`. |
-   | \<content-identifier\> | Un identificateur explicite du contenu. Par exemple : <ul><li>pour un fichier, utilisez l’identificateur chemin\nomfichier : `"c:\Test\Test.docx"`</li><li>pour un e-mail, utilisez l’identificateur objet:expéditeur : `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<content-identifier\> | Un identificateur explicite du contenu. Par exemple : <ul><li>pour un fichier, utilisez l’identificateur chemin\nomfichier : `"c:\Test\Test.docx"`</li><li>pour un e-mail, utilisez l’identificateur objet:expéditeur : `"RE: Audit design:user1@contoso.com"`</li></ul> |
    | \<label-id\> | Un ID d’étiquette de sensibilité, copié à partir de la sortie de la console dans le guide de démarrage rapide précédent, par exemple : `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
    | \<output-file-path\> | Le chemin complet vers le fichier de sortie, qui sera une copie étiquetée du fichier d’entrée, par exemple : `"c:\\Test\\Test_labeled.docx"`. |
 

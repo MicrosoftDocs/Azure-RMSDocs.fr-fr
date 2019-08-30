@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs d’un 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 08/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4162e3df46377a4de859d1bb2dce1363d7146d08
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0ec64a51d26543d0777bdab8180579793251b8fd
+ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793596"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70159225"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -116,6 +116,9 @@ Le lien **Signaler un problème** s’affiche seulement si vous spécifiez un [p
 L’option **Exporter les journaux** permet de collecter et de joindre automatiquement des fichiers journaux pour le client Azure Information Protection si vous devez les envoyer au support Microsoft. Cette option peut également être utilisée par les utilisateurs finaux pour envoyer ces fichiers journaux à votre support technique.
 
 L’option **Réinitialiser les paramètres** déconnecte l’utilisateur, supprime la stratégie Azure Information Protection téléchargée et rétablit les paramètres utilisateur pour le service Azure Rights Management.
+
+> [!NOTE]
+> Si vous rencontrez des problèmes techniques avec le client, consultez [options de support et ressources](../information-support.md#support-options-and-community-resources)de la communauté.
 
 ##### <a name="more-information-about-the-reset-settings-option"></a>Informations supplémentaires sur l’option Réinitialiser les paramètres
 

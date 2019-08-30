@@ -4,7 +4,7 @@ description: Instructions d’installation, de configuration et d’exécution d
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/27/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 15beb2bb7b9e041fea8b9a7a3d56837e03b72182
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: 9def81c3f0914ecf1f96e86e68a0b20b3bcbcf13
+ms.sourcegitcommit: 16b1ae6d29c4bea3fc032c21e522b5dd14b59df5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054402"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70150241"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -122,6 +122,26 @@ En règle générale, vous utilisez le même compte utilisateur pour installer e
 - Si vous ne spécifiez pas votre propre nom de profil pour le scanneur, la base de données de configuration est nommée **AIPScanner_\<nom_ordinateur>** . 
 
 - Si vous spécifiez votre propre nom de profil, la base de données de configuration est nommée **AIPScanner_\<nom_profil>** .
+
+Pour créer un utilisateur et accorder des droits db_owner sur cette base de données, demandez à l’administrateur système d’exécuter le script SQL suivant deux fois. La première fois, pour le compte de service qui exécute le scanneur, et la seconde fois pour installer et gérer le scanneur. Avant d’exécuter le script:
+1. Remplacez *domaine\utilisateur* par le nom de domaine et le nom de compte d’utilisateur du compte de service ou du compte d’utilisateur.
+2. Remplacez *dbname* par le nom de la base de données de configuration de l’analyseur.
+
+Script SQL:
+
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
+
+En outre :
+
+- Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
+- Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes:
+    
+    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
+
+Si, après avoir configuré ces autorisations, vous voyez une erreur lors de l’installation du scanneur, l’erreur peut être ignorée et vous pouvez démarrer manuellement le service du scanneur.
+
 
 #### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restriction : Le compte de service pour le scanneur ne peut pas avoir le droit **Ouvrir une session localement**
 

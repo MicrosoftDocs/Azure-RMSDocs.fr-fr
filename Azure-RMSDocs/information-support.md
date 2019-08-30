@@ -4,7 +4,7 @@ description: Ressources pour les administrateurs, qui incluent des informations 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/13/2019
+ms.date: 08/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: d29a8918244f1e3dcdf615d3959df2b3969ffb5f
-ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
+ms.openlocfilehash: 3e07a6b23e9b500953024cb953612d1a44cc3a0d
+ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68994458"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70159151"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
@@ -89,7 +89,7 @@ Vidéos à la demande :
 
 Résolution des problèmes :
 
-- Si vous avez une question sur le fonctionnement de quelque chose : Vérifiez si une réponse a déjà été donnée à votre question dans la page [Forum Aux Questions](faqs.md).
+- Si vous avez une question sur le fonctionnement de quelque chose : Vérifiez que votre question a déjà répondu en tant que [question fréquemment posée](faqs.md).
 
 - Si vous avez une question concernant le support d’Azure Information Protection : Consultez les informations dans [Exigences](requirements.md), qui sont régulièrement mises à jour.
 
@@ -97,7 +97,11 @@ Résolution des problèmes :
 
 - Si vous avez déployé le connecteur Rights Management pour vos serveurs locaux : Consultez les informations sur la [supervision](monitor-rms-connector.md), qui incluent des détails sur les entrées du journal des événements, les compteurs de performance et la journalisation.
 
-- Pour le client Azure Information Protection pour Windows : Consultez la section [Vérifications et résolution des problèmes liés à l’installation](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) du guide de l’administrateur et veillez à utiliser une [version prise en charge](./rms-client/client-version-release-history.md#servicing-information-and-timelines).
+- Pour le client Azure Information Protection :
+    
+    - Client d’étiquetage unifié: Consultez la section [vérifications et résolution des problèmes d’installation](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) du Guide de l’administrateur de ce client, puis confirmez que vous utilisez une [version prise en charge](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines). Si une préversion est disponible, essayez de vérifier si elle résout le problème: tous les correctifs ne sont pas répertoriés dans l’historique des versions.
+    
+    - Client classique: Consultez la section [vérifications et résolution des problèmes d’installation](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) du Guide de l’administrateur de ce client, puis confirmez que vous utilisez une [version prise en charge](./rms-client/client-version-release-history.md#servicing-information-and-timelines). Si une préversion est disponible, essayez de vérifier si elle résout le problème: tous les correctifs ne sont pas répertoriés dans l’historique des versions.
 
 ### <a name="community-resources"></a>Ressources de la communauté
 

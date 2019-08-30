@@ -4,7 +4,7 @@ description: Instructions de déploiement pour les versions de l’analyseur de 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/27/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 128fa8111271d55f3386246687b53132fa37c659
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: 47e345a82427ccdf3d8cf727dd205e9a00965323
+ms.sourcegitcommit: 16b1ae6d29c4bea3fc032c21e522b5dd14b59df5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054297"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70150220"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Déploiement des versions précédentes du scanneur Azure Information Protection
 
@@ -109,6 +109,21 @@ Si vous ne pouvez pas recevoir le rôle sysadmin même temporairement, vous deve
 |Compte utilisateur pour la configuration du scanneur |db_owner|
 
 En règle générale, vous utilisez le même compte utilisateur pour installer et configurer le scanneur. Mais si vous utilisez des comptes différents, ils ont tous les deux besoin du rôle db_owner pour la base de données AzInfoProtectionScanner.
+
+Pour créer un utilisateur et accorder des droits db_owner sur cette base de données, demandez à l’administrateur système d’exécuter le script SQL suivant deux fois. La première fois, pour le compte de service qui exécute le scanneur, et la seconde fois pour installer et gérer le scanneur. Avant d’exécuter le script, remplacez *domaine\utilisateur* par le nom de domaine et le nom de compte d’utilisateur du compte de service ou du compte d’utilisateur:
+
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    USE AzInfoProtectionScanner IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
+
+En outre :
+
+- Vous devez être un administrateur local sur le serveur qui exécutera le scanneur.
+- Le compte de service qui exécutera le scanneur doit disposer des autorisations contrôle total sur les clés de Registre suivantes:
+    
+    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
+
+Si, après avoir configuré ces autorisations, vous voyez une erreur lors de l’installation du scanneur, l’erreur peut être ignorée et vous pouvez démarrer manuellement le service du scanneur.
 
 #### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restriction : Le compte de service pour le scanneur ne peut pas avoir le droit **Ouvrir une session localement**
 

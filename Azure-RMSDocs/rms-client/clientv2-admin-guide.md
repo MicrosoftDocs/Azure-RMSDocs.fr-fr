@@ -4,19 +4,19 @@ description: Instructions et informations pour les administrateurs sur un résea
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 08/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 95c855701b1fc8de2e3f9f458b2cd760a3abdd4b
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: cb9f7319227ea95afce1251c2ccae979dd5c8468
+ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793222"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70159198"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
 
@@ -93,11 +93,16 @@ Quand le client est installé, utilisez l’option **Aide et commentaires** pour
 
 #### <a name="help-and-feedback-section"></a>Section **Aide et commentaires**
 
-Le **lien en savoir plus** , par défaut, est dirigé vers le site Web [Azure information protection](https://www.microsoft.com/cloud-platform/azure-information-protection) . Vous pouvez configurer votre propre lien d’URL qui accède à une page d’aide personnalisée en tant qu’un des paramètres de stratégie dans votre portail de gestion des étiquettes: le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365.
+Le **lien en savoir plus** , par défaut, est dirigé vers le site Web [Azure information protection](https://www.microsoft.com/cloud-platform/azure-information-protection) . Vous pouvez configurer votre propre lien d’URL qui accède à une page d’aide personnalisée en tant qu’un des paramètres de stratégie dans votre centre de gestion d’étiquetage: le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365.
+
+Le lien **signaler un problème** s’affiche uniquement si vous spécifiez un [paramètre avancé](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users). Quand vous configurez ce paramètre, vous spécifiez un lien HTTP, comme l’adresse e-mail de votre support technique. 
 
 Les **journaux d’exportation** collectent et attachent automatiquement les fichiers journaux de l’Azure information protection client d’étiquetage unifié si vous avez été invité à les envoyer à support Microsoft. Cette option peut également être utilisée par les utilisateurs finaux pour envoyer ces fichiers journaux à votre support technique.
 
 Les **paramètres** de réinitialisation déconnectent l’utilisateur, supprime les étiquettes de sensibilité et les stratégies d’étiquette actuellement téléchargées, puis réinitialise les paramètres utilisateur pour le service Azure Rights Management.
+
+> [!NOTE]
+> Si vous rencontrez des problèmes techniques avec le client, consultez [options de support et ressources](../information-support.md#support-options-and-community-resources)de la communauté.
 
 ##### <a name="more-information-about-the-reset-settings-option"></a>Informations supplémentaires sur l’option Réinitialiser les paramètres
 

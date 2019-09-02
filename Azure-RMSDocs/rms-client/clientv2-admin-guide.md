@@ -4,19 +4,19 @@ description: Instructions et informations pour les administrateurs sur un résea
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/29/2019
+ms.date: 09/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e8f2029122ba489aff6a0cf50e2d961ea28ed50e
-ms.sourcegitcommit: d3ac12c51b41bd1ec4ce4009303d124efc95353b
+ms.openlocfilehash: 142b3b527b0936baf0bbd8de0664c601151766d0
+ms.sourcegitcommit: 4c4bf02880c26f5c163e75499348dc10a84357c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180663"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209265"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
 
@@ -148,7 +148,7 @@ Le client d’étiquetage unifié Azure Information Protection prend en charge l
 
 Pour ces langues, les options de menu, les boîtes de dialogue et les messages de l’Azure Information Protection client d’étiquetage unifié s’affichent dans la langue de l’utilisateur. Il existe un programme d’installation unique qui détecte la langue, de sorte qu’aucune configuration supplémentaire n’est requise pour installer le client d’étiquetage unifié Azure Information Protection pour différentes langues. 
 
-Toutefois, le client d’étiquetage unifié Azure Information Protection ne prend actuellement pas en charge les langues différentes pour les étiquettes. En outre, les marquages visuels ne sont pas traduits et ne prennent pas en charge plus d’un langage.
+Toutefois, les noms et les descriptions d’étiquette que vous spécifiez ne sont pas traduits automatiquement lorsque vous configurez des étiquettes dans votre centre d’étiquetage. Pour que les utilisateurs puissent voir les étiquettes dans leur langue par défaut, fournissez vos propres traductions et configurez-les pour les étiquettes à l’aide de à l’aide d’Office 365 Security & Compliance PowerShell et du paramètre *LocaleSettings* pour [Set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps). Les marquages visuels ne sont pas traduits et ne prennent pas en charge plusieurs langues.
 
 ## <a name="post-installation-tasks"></a>Tâches post-installation
 

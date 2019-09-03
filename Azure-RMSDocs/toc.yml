@@ -163,7 +163,7 @@
                   href: migrate-portal.md
             - name: Configurer les langues
               href: configure-policy-languages.md
-            - name: Migrer des étiquettes vers Office 365
+            - name: Activer les étiquettes unifiées
               href: configure-policy-migrate-labels.md
         - name: Configurer une collaboration de documents sécurisés
           href: secure-collaboration-documents.md

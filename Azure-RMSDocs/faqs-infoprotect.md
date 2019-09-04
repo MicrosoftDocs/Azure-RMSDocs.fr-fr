@@ -4,7 +4,7 @@ description: Vous avez une question au sujet de l’utilisation d’Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a8df46df14a4c06196d204865f7a99ce5fa5821
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 0d17189d2c5cd896727de1de05233fbfcd9b9868
+ms.sourcegitcommit: dd60bdae3ed608306cd8f9dbe92aac6650d8fbb3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808048"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215692"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
 
@@ -29,7 +29,7 @@ Vous avez une question concernant Azure Information Protection qui porte spécif
 
 Essayez notre tutoriel [Modifier la stratégie et créer une nouvelle étiquette](infoprotect-quick-start-tutorial.md) pour en voir une démonstration de quelques minutes seulement.
 
-Pour être informé de la mise à disposition de fonctionnalités de classification supplémentaires, consultez les annonces publiées sur le [blog Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) et sur notre [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). La version actuelle présente quelques limites, notamment :
+Pour être informé de la mise à disposition de fonctionnalités de classification supplémentaires, consultez les annonces publiées sur le [blog Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) et sur notre [site Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). Il existe quelques limitations avec les versions actuelles, qui sont les suivantes :
 
 - Aucune possibilité d’étiquetage dans Office Web Apps (Office pour le Web).
 
@@ -39,16 +39,16 @@ Pour être informé de la mise à disposition de fonctionnalités de classificat
 > **Maintenant en préversion** :
 > - Création de rapports centralisée pour la classification et l’étiquetage. Pour plus d’informations, consultez [Création de rapports centralisée pour Azure Information Protection](reports-aip.md).
 >
->**Récemment publié** :
-> - capacité d’étiquetage intégrée aux applications Office pour appareils mobiles (iOS et Android) et ordinateurs Mac. Pour plus d’informations, consultez [Appliquer des étiquettes de sensibilité à vos documents et e-mails dans Office](https://aka.ms/officemipdocs).
+>**Étiquettes de sensibilité pour Office**:
+> - Pour obtenir les informations les plus récentes sur les applications Office qui prennent en charge les étiquettes de sensibilité, consultez la section « où la fonctionnalité est disponible aujourd’hui ? ». de [la section appliquer des étiquettes de sensibilité à vos documents et à votre courrier électronique dans Office](https://aka.ms/officemipdocs).
 
 Demandez de nouvelles fonctionnalités et votez pour les demandes en visitant le [site UserVoice](https://msip.uservoice.com/) pour Azure Information Protection.
 
-## <a name="which-client-do-i-install-for-testing-new-functionality"></a>Quel client dois-je installer pour tester les nouvelles fonctionnalités?
+## <a name="which-client-do-i-install-for-testing-new-functionality"></a>Quel client dois-je installer pour tester les nouvelles fonctionnalités ?
 
-Actuellement, il existe deux clients pour Windows: 
+Actuellement, il existe deux clients pour Windows : 
 
-- Le **Azure information protection client d’étiquetage unifié** qui télécharge des étiquettes et des paramètres de stratégie à partir de l’un des centres d’administration suivants: Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center, Microsoft 365 Compliance Center. Ce client est désormais en disponibilité générale et dispose d’une version préliminaire qui vous permet de tester des fonctionnalités supplémentaires pour une version ultérieure.
+- Le **Azure information protection client d’étiquetage unifié** qui télécharge des étiquettes et des paramètres de stratégie à partir de l’un des centres d’administration suivants : Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center, Microsoft 365 Compliance Center. Ce client est désormais en disponibilité générale et peut disposer d’une préversion pour tester des fonctionnalités supplémentaires pour une version ultérieure.
 
 - Le **client Azure information protection (Classic)** qui télécharge des étiquettes et des paramètres de stratégie à partir du portail Azure. Ce client s’appuie sur les versions de disponibilité générale précédentes du client.
 
@@ -82,7 +82,7 @@ Pour obtenir des exemples d’utilisation de ces métadonnées avec des règles 
 
 ## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>Peut-on créer un modèle de document qui inclut automatiquement la classification ?
 
-Oui. Vous pouvez configurer une étiquette qui [applique un en-tête ou un pied de page comportant le nom d’étiquette](configure-policy-markings.md). Si toutefois cela ne répond pas à vos besoins, vous pouvez créer un modèle de document présentant la mise en forme de votre choix et ajouter la classification comme code de champ. 
+Oui. Vous pouvez configurer une étiquette qui [applique un en-tête ou un pied de page comportant le nom d’étiquette](configure-policy-markings.md). Toutefois, si cela ne répond pas à vos besoins, pour le client Azure Information Protection (Classic) uniquement, vous pouvez créer un modèle de document avec la mise en forme de votre choix et ajouter la classification en tant que code de champ. 
 
 Par exemple, vous pouvez avoir une table dans l’en-tête de votre document qui affiche la classification, ou utiliser une formulation spécifique pour une introduction faisant référence à la classification du document.
 

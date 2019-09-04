@@ -4,19 +4,19 @@ description: Instructions sur la façon de classer vos documents et e-mails lors
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 09/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 2b14872399fc2b9409748a3a149cb8b74b5db016
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 67c65fa592bd08fbcdc195793cd8576ef5ed5a25
+ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790015"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214131"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Guide de l’utilisateur : Classer un fichier ou un e-mail à l’aide du client d’étiquetage unifié Azure Information Protection pour Windows
 
@@ -41,7 +41,7 @@ Ou, si vous avez sélectionné **afficher la barre** à partir du bouton **sensi
 
 ![Exemple de barre Azure Information Protection](../media/info-protect-barv2-not-set-callout.png)
 
-Pour définir une étiquette, par exemple «général», sélectionnez **général**. Si vous ne savez pas quelle étiquette appliquer au document ou à l’e-mail actifs, utilisez les info-bulles pour en savoir plus sur chaque étiquette et sur le moment de l’appliquer. 
+Pour définir une étiquette, par exemple « général », sélectionnez **général**. Si vous ne savez pas quelle étiquette appliquer au document ou à l’e-mail actifs, utilisez les info-bulles pour en savoir plus sur chaque étiquette et sur le moment de l’appliquer. 
 
 Si une étiquette est déjà appliquée au document et que vous souhaitez la modifier, vous pouvez sélectionner une autre étiquette. Si vous avez affiché la barre de Azure Information Protection et que les étiquettes ne s’affichent pas dans la barre que vous sélectionnez, cliquez d’abord sur l’icône **modifier l’étiquette** , en regard de la valeur de l’étiquette active.
 
@@ -55,11 +55,11 @@ Outre la sélection manuelle, les étiquettes peuvent également être appliqué
 
 ### <a name="exceptions-for-the-sensitivity-button"></a>Exceptions pour le bouton de sensibilité
 
-##### <a name="dont-see-the-sensitivity-button-in-your-office-apps"></a>Vous ne voyez pas le bouton sensibilité dans vos applications Office?
+##### <a name="dont-see-the-sensitivity-button-in-your-office-apps"></a>Vous ne voyez pas le bouton sensibilité dans vos applications Office ?
 
 - Vous n’avez peut-être pas [installé](install-unifiedlabelingclient-app.md)le client d’étiquetage unifié Azure information protection.
 
-- Si vous ne voyez pas de bouton **sensibilité** sur le ruban, mais que vous voyez un bouton **protéger** avec des étiquettes à la place, le client Azure information protection est installé et non le client d’étiquetage unifié Azure information protection. [Plus d’informations](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+- Si vous ne voyez pas de bouton **sensibilité** sur le ruban, mais que vous voyez un bouton **protéger** avec des étiquettes à la place, le client Azure information protection (Classic) est installé et non le client d’étiquetage unifié Azure information protection. [Plus d’informations](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>L’étiquette que vous souhaitez voir ne s’affiche pas dans la barre ? 
 
@@ -100,7 +100,7 @@ La classification que vous avez spécifiée reste avec le fichier, même si vous
 
 ## <a name="other-instructions"></a>Autres instructions
 
-Autres instructions du Guide de l’utilisateur pour le Azure Information Protection client d’étiquetage unifié pour Windows:
+Autres instructions du Guide de l’utilisateur pour le Azure Information Protection client d’étiquetage unifié pour Windows :
 
 - [Que voulez-vous faire ?](clientv2-user-guide.md#what-do-you-want-to-do)
 

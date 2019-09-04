@@ -4,7 +4,7 @@ description: Identifiez les critères de déploiement d’Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/20/2019
+ms.date: 09/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1b5c3344acfa279bd9f778f60957f41e03d56793
-ms.sourcegitcommit: dd89001afcaf1ed4b7ab72a7066b07c0d984249d
+ms.openlocfilehash: 75c9eb425c0955b569b7e1578e3921dee4c81500
+ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69650875"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214101"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -65,7 +65,7 @@ Pour plus d’informations sur la configuration requise pour les comptes d’uti
 
 Les utilisateurs doivent avoir des appareils clients (ordinateurs ou appareils mobiles) exécutant un système d’exploitation qui prend en charge Azure Information Protection.
 
-Les appareils suivants prennent en charge le client d’étiquetage Azure Information Protection unifié et le client Azure Information Protection. [Les deux clients](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) permettent aux utilisateurs de classer et d’étiqueter leurs documents et e-mails:
+Les appareils suivants prennent en charge le client d’étiquetage Azure Information Protection unifié et le client Azure Information Protection. [Les deux clients](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) permettent aux utilisateurs de classer et d’étiqueter leurs documents et e-mails :
 
 - Windows 10 (x86, x64)
     
@@ -89,7 +89,7 @@ Pour les versions de serveur répertoriées, les clients Azure Information Prote
 
 Lorsque les clients Azure Information Protection protègent les données à l’aide du service Azure Rights Management, les données peuvent être consommées par les [mêmes appareils](requirements-client-devices.md) qui prennent en charge le service de Rights Management Azure.
 
-Les clients Azure Information Protection ont des conditions préalables supplémentaires qui sont répertoriées dans leurs guides d’administration respectifs:
+Les clients Azure Information Protection ont des conditions préalables supplémentaires qui sont répertoriées dans leurs guides d’administration respectifs :
 
 - Client d’étiquetage unifié Azure Information Protection : [Composants requis](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
@@ -98,7 +98,7 @@ Les clients Azure Information Protection ont des conditions préalables supplém
 
 ## <a name="applications"></a>APPLICATIONS
 
-Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide des applications Office **Word**, **Excel**, **PowerPoint**et **Outlook** de l’une des éditions Office suivantes:
+Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide des applications Office **Word**, **Excel**, **PowerPoint**et **Outlook** de l’une des éditions Office suivantes :
 
 - Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur
 
@@ -112,7 +112,7 @@ Les clients Azure Information Protection peuvent étiqueter et protéger des doc
 
 - Office Professionnel Plus 2010 avec Service Pack 2
 
-Les autres éditions d’Office ne peuvent pas protéger les documents et messages électroniques à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour la classification uniquement. Par conséquent, les étiquettes qui appliquent la protection ne s’affichent pas aux utilisateurs sur la barre Azure Information Protection ni à partir du bouton **Protéger** du ruban Office. 
+Les autres éditions d’Office ne peuvent pas protéger les documents et messages électroniques à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour la classification uniquement. Par conséquent, les étiquettes qui appliquent la protection ne s’affichent pas pour les utilisateurs de la barre de Azure Information Protection ou à partir du bouton **protéger** (client classique) ou du bouton **sensibilité** (client d’étiquetage unifié) sur le ruban Office. 
 
 Les clients Azure Information Protection ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur. Ces clients ne prennent pas non plus en charge le changement de comptes d’utilisateur dans Office.
 
@@ -124,19 +124,19 @@ Si vous avez un pare-feu ou des appareils réseau intervenants similaires qui n�
 
 En plus des informations de l’article relatif à Office, voici des informations propres à Azure Information Protection :
 
-- Pour que le client d’étiquetage unifié télécharge des étiquettes et des stratégies d’étiquette: Autorisez l’URL * **. protection.Outlook.com** sur HTTPS.
+- Pour que le client d’étiquetage unifié télécharge des étiquettes et des stratégies d’étiquette : Autorisez l’URL * **. protection.Outlook.com** sur HTTPS.
 
 - Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour qu’il utilise l’authentification Windows intégrée avec les informations d’identification d’ouverture de session Active Directory de l’utilisateur.
 
 - N’interrompez pas la connexion du client au service TLS (par exemple, pour effectuer une inspection au niveau du paquet) vers l’URL **aadrm.com**. Cela a pour effet d’interrompre l’épinglage de certificat que les clients RMS utilisent avec les autorités de certification gérées par Microsoft pour sécuriser leur communication avec le service Azure Rights Management.
     
-    Vous pouvez utiliser les commandes PowerShell suivantes pour vous aider à déterminer si votre connexion cliente est interrompue avant d’atteindre le service Azure Rights Management:
+    Vous pouvez utiliser les commandes PowerShell suivantes pour vous aider à déterminer si votre connexion cliente est interrompue avant d’atteindre le service Azure Rights Management :
    
         $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
         $request.GetResponse()
         $request.ServicePoint.Certificate.Issuer
     
-    Le résultat doit indiquer que l’autorité de certification émettrice provient d’une autorité de certification Microsoft `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`, par exemple:. Si vous voyez un nom d’autorité de certification émettrice qui ne provient pas de Microsoft, il est très probable que votre connexion sécurisée client à service soit arrêtée et nécessite une reconfiguration sur votre pare-feu.
+    Le résultat doit indiquer que l’autorité de certification émettrice provient d’une autorité de certification Microsoft `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`, par exemple :. Si vous voyez un nom d’autorité de certification émettrice qui ne provient pas de Microsoft, il est très probable que votre connexion sécurisée client à service soit arrêtée et nécessite une reconfiguration sur votre pare-feu.
 
 ### <a name="on-premises-servers"></a>Serveurs locaux
 

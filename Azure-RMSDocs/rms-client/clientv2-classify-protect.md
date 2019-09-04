@@ -4,19 +4,19 @@ description: Instructions sur la classification et la protection de vos document
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 09/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 78907b2819636a5f2c8e66feae2e44a0bd6c5c90
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 99c4e92d61e2a0b652432de85b806568710f56fa
+ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808139"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214056"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : Classification et protection avec le client d’étiquetage unifié Azure Information Protection
 
@@ -68,11 +68,11 @@ Outre la sélection manuelle, les étiquettes peuvent également être appliqué
 
 ### <a name="exceptions-for-the-sensitivity-button"></a>Exceptions pour le bouton de sensibilité
 
-##### <a name="dont-see-the-sensitivity-button-in-your-office-apps"></a>Vous ne voyez pas le bouton sensibilité dans vos applications Office?
+##### <a name="dont-see-the-sensitivity-button-in-your-office-apps"></a>Vous ne voyez pas le bouton sensibilité dans vos applications Office ?
 
 - Vous n’avez peut-être pas [installé](install-unifiedlabelingclient-app.md)le client d’étiquetage unifié Azure information protection.
 
-- Si vous ne voyez pas de bouton **sensibilité** sur le ruban, mais que vous voyez un bouton **protéger** avec des étiquettes à la place, le client Azure information protection est installé et non le client d’étiquetage unifié Azure information protection. [Plus d’informations](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+- Si vous ne voyez pas de bouton **sensibilité** sur le ruban, mais que vous voyez un bouton **protéger** avec des étiquettes à la place, le client Azure information protection (Classic) est installé et non le client d’étiquetage unifié Azure information protection. [Plus d’informations](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
  
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>L’étiquette que vous souhaitez voir ne s’affiche pas dans la barre ? 
 
@@ -91,7 +91,7 @@ Raisons possibles :
 
 Quand vous partagez des documents Office par e-mail, vous pouvez attacher le document à un e-mail que vous protégez : le document est alors automatiquement protégé avec les mêmes restrictions que celles qui s’appliquent à l’e-mail. 
 
-Toutefois, vous souhaiterez peut-être tout d’abord protéger le document, puis l’attacher à l’e-mail. Protégez également l’e-mail si son contenu présente des informations sensibles. Avantage de la protection du document avant de l’attacher à un message électronique:
+Toutefois, vous souhaiterez peut-être tout d’abord protéger le document, puis l’attacher à l’e-mail. Protégez également l’e-mail si son contenu présente des informations sensibles. Avantage de la protection du document avant de l’attacher à un message électronique :
 
 - Vous pouvez appliquer des autorisations différentes au document et à l’e-mail.
 
@@ -147,7 +147,7 @@ Si vous changez d’avis sur la classification et la protection, ou avez besoin 
 La classification et la protection que vous avez spécifiées restent avec le fichier, même si vous l’envoyez par e-mail ou l’enregistrez à un autre emplacement. 
 
 ## <a name="other-instructions"></a>Autres instructions
-Pour plus d’informations sur les instructions du Guide de l’utilisateur pour Azure Information Protection client d’étiquetage unifiée, procédez comme suit:
+Pour plus d’informations sur les instructions du Guide de l’utilisateur pour Azure Information Protection client d’étiquetage unifiée, procédez comme suit :
 
 -   [Que voulez-vous faire ?](client-user-guide.md#what-do-you-want-to-do)
 

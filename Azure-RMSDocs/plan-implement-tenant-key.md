@@ -1,10 +1,10 @@
 ---
 title: Votre clé de locataire Azure Information Protection
-description: Au lieu que Microsoft gère la clé racine pour Azure Information Protection, vous souhaiterez peut-être créer et gérer cette clé (appelée «apporter votre propre clé» ou BYOK) pour votre locataire, pour se conformer à des réglementations spécifiques.
+description: Au lieu que Microsoft gère la clé racine pour Azure Information Protection, vous souhaiterez peut-être créer et gérer cette clé (appelée « apporter votre propre clé » ou BYOK) pour votre locataire, pour se conformer à des réglementations spécifiques.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 48bd5775c1c3858ec2dac0412e4a02e7d2a2bd48
-ms.sourcegitcommit: 96082d61b77f44943509311e2ac0943f970ae4e6
+ms.openlocfilehash: 5490122285549d3fd21ce63b8951cb09a1310f84
+ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820719"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70800835"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
@@ -43,7 +43,7 @@ Qu’est-ce la clé de locataire Azure Information Protection ?
 Si nécessaire, vous pouvez modifier la topologie de votre clé de locataire après le déploiement, à l’aide de l’applet de commande [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) .
 
 
-## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Choisissez la topologie de votre clé de locataire: Géré par Microsoft (valeur par défaut) ou géré par vous (BYOK)
+## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Choisissez la topologie de votre clé de locataire : Géré par Microsoft (valeur par défaut) ou géré par vous (BYOK)
 
 Choisissez la topologie de clé de locataire la plus adaptée à votre organisation :
 
@@ -86,6 +86,8 @@ Cette option implique les étapes suivantes :
 > Par mesure de protection, Azure Key Vault utilise des domaines de sécurité distincts pour ses centres de données dans des régions comme l’Amérique du Nord, l’EMEA (Europe, Moyen-Orient et Afrique) et l’Asie. Azure Key Vault utilise aussi différentes instances d’Azure, comme Microsoft Azure Allemagne et Azure Government. 
 
 Bien que cette action soit facultative, vous pouvez également utiliser les journaux d’utilisation quasiment en temps réel à partir d’Azure Information Protection pour voir exactement quand et comment votre clé de locataire est utilisée.
+
+Lorsque vous utilisez BYOK pour votre clé de locataire Azure Information Protection, vous ne pouvez pas exporter votre trusted publishing domain (TPD). Le TPD est nécessaire si vous décidez de ne plus utiliser Azure Information Protection mais que vous devez toujours être en mesure de déchiffrer le contenu qui a été protégé par Azure Information Protection. Pour préparer ce scénario en créant un TPD approprié à l’avance, reportez-vous aux instructions suivantes : [préparation d’un plan de sortie du Cloud Azure information protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631).
 
 ### <a name="when-you-have-decided-your-tenant-key-topology"></a>Quand vous avez décidé de votre topologie de clé de locataire
 
@@ -155,7 +157,7 @@ N’utilisez pas une clé de 1024 bits comme clé de locataire active, car elle 
 
 Pour créer une clé locale protégée par module HSM et la transférer à votre coffre de clés comme clé protégée par module HSM, suivez les procédures décrites dans [Génération et transfert de clés protégées par HSM pour Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys).
 
-Pour qu’Azure Information Protection utilise la clé, toutes les opérations Key Vault doivent être autorisées pour cette clé. Il s’agit de la configuration par défaut et les opérations sont chiffrer, déchiffrer, wrapKey, unwrapKey, signer et vérifier. Vous pouvez vérifier les opérations autorisées d’une clé à l’aide de la commande PowerShell `(Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps`suivante:. Si nécessaire, ajoutez des opérations autorisées à l’aide de [Update-AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey) et du paramètre *KeyOps* .
+Pour qu’Azure Information Protection utilise la clé, toutes les opérations Key Vault doivent être autorisées pour cette clé. Il s’agit de la configuration par défaut et les opérations sont chiffrer, déchiffrer, wrapKey, unwrapKey, signer et vérifier. Vous pouvez vérifier les opérations autorisées d’une clé à l’aide de la commande PowerShell `(Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps`suivante :. Si nécessaire, ajoutez des opérations autorisées à l’aide de [Update-AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey) et du paramètre *KeyOps* .
 
 Une clé qui est stockée dans Key Vault a un ID de clé. Cet ID de clé est une URL contenant le nom du coffre de clés, le conteneur de clés, le nom de la clé et la version de la clé. Par exemple : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** . Vous devez configurer Azure Information Protection pour l’utilisation de cette clé en spécifiant son URL Key Vault.
 

@@ -4,7 +4,7 @@ description: Informations et instructions à prendre en compte si vous décidez 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3c5e1234d1cba034f1e8ed21488a5b87dada4dcb
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 9add69440b76874e8d3d08125da1173d65049b54
+ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792695"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70800827"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Désaffectation et désactivation de la protection pour Azure Information Protection
 
@@ -28,12 +28,14 @@ Vous pouvez toujours contrôler si votre organisation protège le contenu en uti
 
 Si vous n’avez pas besoin d’un accès permanent à un contenu précédemment protégé, désactivez le service et laissez votre abonnement Azure Information Protection expirer. Cela est approprié si, par exemple, vous avez testé Azure Information Protection avant de le déployer dans un environnement de production.
 
-Cependant, si vous avez déployé Azure Information Protection en production et que vous avez protégé des documents et des e-mails, vérifiez que vous disposez d’une copie de votre clé de locataire Azure Information Protection avant de désactiver le service Azure Rights Management. Vérifiez que vous disposez d’une copie de votre clé avant que votre abonnement expire pour pouvoir conserver l’accès au contenu protégé par Azure Rights Management après la désactivation du service. Si vous avez utilisé la solution BYOK qui vous permet de générer et gérer votre propre clé dans un module de sécurité matériel, vous avez déjà votre clé de locataire Azure Information Protection. Mais, si la gestion a été assurée par Microsoft (par défaut), consultez les instructions d’exportation de votre clé de locataire dans l’article [Opérations pour votre clé de locataire Azure Information Protection](operations-tenant-key.md).
+Toutefois, si vous avez déployé Azure Information Protection dans des documents et des e-mails protégés, assurez-vous que vous disposez d’une copie de votre clé de locataire Azure Information Protection et d’un trusted publishing domain approprié (TPD) avant de désactiver Azure Service Rights Management. Assurez-vous de disposer d’une copie de votre clé et du TPD avant l’expiration de votre abonnement pour vous assurer que vous pouvez conserver l’accès au contenu protégé par Azure Rights Management après la désactivation du service. 
+
+Si vous avez utilisé la solution BYOK qui vous permet de générer et gérer votre propre clé dans un module de sécurité matériel, vous avez déjà votre clé de locataire Azure Information Protection. Vous obtiendrez également un TPD approprié si vous avez suivi les instructions qui [préparent une prochaine sortie Cloud](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631). Toutefois, si votre clé de locataire a été gérée par Microsoft (valeur par défaut), consultez les instructions relatives à l’exportation de votre clé de locataire dans [opérations pour votre Azure information protection](operations-tenant-key.md) article de clé de locataire.
 
 > [!TIP]
 > Même après l’expiration de votre abonnement, votre locataire Azure Information Protection reste disponible pour la consommation de contenu pendant une période prolongée. En revanche, vous ne pouvez plus exporter votre clé de locataire.
 
-Quand vous avez votre clé de locataire Azure Information Protection, vous pouvez déployer Rights Management localement (AD RMS) et importer votre clé de locataire en tant que domaine de publication approuvé (TPD). Ensuite, vous disposez des options suivantes pour désaffecter votre déploiement d’Azure Information Protection :
+Lorsque vous avez votre clé de locataire Azure Information Protection et TPD, vous pouvez déployer Rights Management localement (AD RMS) et importer votre clé de locataire en tant que trusted publishing domain (TPD). Ensuite, vous disposez des options suivantes pour désaffecter votre déploiement d’Azure Information Protection :
 
 |Si vous êtes dans cette situation...|… procédez ainsi :|
 |----------------------------|--------------|

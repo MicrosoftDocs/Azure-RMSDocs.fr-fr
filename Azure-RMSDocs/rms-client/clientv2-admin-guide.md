@@ -4,19 +4,19 @@ description: Instructions et informations pour les administrateurs sur un résea
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/01/2019
+ms.date: 09/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 142b3b527b0936baf0bbd8de0664c601151766d0
-ms.sourcegitcommit: 4c4bf02880c26f5c163e75499348dc10a84357c3
+ms.openlocfilehash: 5c24dbaee6be5ab6e016531caa94da74e6e4487c
+ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2019
-ms.locfileid: "70209265"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70800800"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
 
@@ -42,7 +42,7 @@ Par exemple :
 
 ## <a name="technical-overview-of-the-azure-information-protection-unified-labeling-client"></a>Présentation technique du client d’étiquetage unifié Azure Information Protection
 
-Le client d’étiquetage unifié Azure Information Protection comprend les éléments suivants:
+Le client d’étiquetage unifié Azure Information Protection comprend les éléments suivants :
 
 - Un complément Office, qui installe un bouton de **sensibilité** sur le ruban pour permettre aux utilisateurs de sélectionner des étiquettes de sensibilité, et une option pour afficher la barre de Azure information protection pour une meilleure visibilité des étiquettes.
 
@@ -59,9 +59,9 @@ Le client d’étiquetage unifié Azure Information Protection comprend les él�
 Si vous avez AD RMS et que vous souhaitez migrer AD RMS vers Azure Information Protection, consultez [Migration d’AD RMS vers Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md).
 
 
-## <a name="should-you-deploy-the-azure-information-protection-unified-labeling-client"></a>Devez-vous déployer le client d’étiquetage unifié Azure Information Protection?
+## <a name="should-you-deploy-the-azure-information-protection-unified-labeling-client"></a>Devez-vous déployer le client d’étiquetage unifié Azure Information Protection ?
 
-Déployez le client d’étiquetage unifié Azure Information Protection si vous utilisez des [étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels), et que l’une des conditions suivantes s’applique:
+Déployez le client d’étiquetage unifié Azure Information Protection si vous utilisez des [étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels), et que l’une des conditions suivantes s’applique :
 
 - Vous souhaitez classer (et éventuellement protéger) des documents et des messages électroniques en sélectionnant des étiquettes dans vos applications Office (Word, Excel, PowerPoint, Outlook) sur les ordinateurs Windows.
 
@@ -69,11 +69,9 @@ Déployez le client d’étiquetage unifié Azure Information Protection si vous
 
 - Vous souhaitez exécuter des scripts qui classifient (et éventuellement protègent) des documents à l’aide de commandes PowerShell.
 
-- Vous souhaitez tester un service actuellement en version préliminaire qui découvre, classifie (et éventuellement protège) les fichiers qui sont stockés en local.
-
 - Vous souhaitez afficher des documents protégés lorsqu’une application native permettant d’afficher le fichier n’est pas installée ou ne parvient pas à ouvrir ces documents.
 
-Exemple montrant le complément Office pour le Azure Information Protection client d’étiquetage unifié, affichant le nouveau bouton **sensibilité** sur le ruban et la barre de Azure information Protection facultative:
+Exemple montrant le complément Office pour le Azure Information Protection client d’étiquetage unifié, affichant le nouveau bouton **sensibilité** sur le ruban et la barre de Azure information Protection facultative :
 
 ![Barre Azure Information Protection avec la stratégie par défaut](../media/v2word2016-calloutsv2.png)
 
@@ -87,19 +85,19 @@ Utilisez les sections suivantes pour plus d’informations sur l’installation 
 
 Quand le client est installé, utilisez l’option **Aide et commentaires** pour ouvrir la boîte de dialogue **Microsoft Azure Information Protection** :
 
-- À partir d’une application Office: Dans l’onglet dossier de **démarrage** , dans le groupe **sensibilité** , sélectionnez **sensibilité**, puis sélectionnez **aide et commentaires**.
+- À partir d’une application Office : Dans l’onglet dossier de **démarrage** , dans le groupe **sensibilité** , sélectionnez **sensibilité**, puis sélectionnez **aide et commentaires**.
 
 - Depuis l’Explorateur de fichiers : Cliquez avec le bouton droit sur un ou plusieurs fichiers ou sur un dossier, sélectionnez **Classifier et protéger**, puis **Aide et commentaires**. 
 
 #### <a name="help-and-feedback-section"></a>Section **Aide et commentaires**
 
-Le **lien en savoir plus** , par défaut, est dirigé vers le site Web [Azure information protection](https://www.microsoft.com/cloud-platform/azure-information-protection) . Vous pouvez configurer votre propre lien d’URL qui accède à une page d’aide personnalisée en tant qu’un des paramètres de stratégie dans votre centre de gestion d’étiquetage: le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365.
+Le **lien en savoir plus** , par défaut, est dirigé vers le site Web [Azure information protection](https://www.microsoft.com/cloud-platform/azure-information-protection) . Vous pouvez configurer votre propre lien d’URL qui accède à une page d’aide personnalisée en tant qu’un des paramètres de stratégie dans votre centre de gestion d’étiquetage : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365.
 
 Le lien **signaler un problème** s’affiche uniquement si vous spécifiez un [paramètre avancé](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users). Quand vous configurez ce paramètre, vous spécifiez un lien HTTP, comme l’adresse e-mail de votre support technique. 
 
 Les **journaux d’exportation** collectent et attachent automatiquement les fichiers journaux de l’Azure information protection client d’étiquetage unifié si vous avez été invité à les envoyer à support Microsoft. Cette option peut également être utilisée par les utilisateurs finaux pour envoyer ces fichiers journaux à votre support technique.
 
-Les **paramètres** de réinitialisation déconnectent l’utilisateur, supprime les étiquettes de sensibilité et les stratégies d’étiquette actuellement téléchargées, puis réinitialise les paramètres utilisateur pour le service Azure Rights Management.
+Les **paramètres de réinitialisation** déconnectent l’utilisateur, supprime les étiquettes de sensibilité et les stratégies d’étiquette actuellement téléchargées, puis réinitialise les paramètres utilisateur pour le service Azure Rights Management.
 
 > [!NOTE]
 > Si vous rencontrez des problèmes techniques avec le client, consultez [options de support et ressources](../information-support.md#support-options-and-community-resources)de la communauté.
@@ -114,7 +112,7 @@ Les **paramètres** de réinitialisation déconnectent l’utilisateur, supprime
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\Microsoft\MSIP\Policy.msip
+    - \\*Application%LocalAppData%\Microsoft\MSIP\mip\>\mip\<*
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
@@ -181,7 +179,7 @@ Vous pouvez utiliser l’une des options suivantes pour désinstaller le client�
 
 - Utiliser le Panneau de configuration pour désinstaller un programme : Cliquez sur **Microsoft Azure Information Protection** > **Désinstaller**
 
-- Réexécutez l’exécutable (par exemple, **AzInfoProtection_UL. exe**) et, à partir de la page **modifier l’installation** , cliquez sur désinstaller. 
+- Réexécutez l’exécutable (par exemple, **AzInfoProtection_UL. exe**) et, à partir de la page **modifier l’installation** , cliquez sur **désinstaller**. 
 
 - Exécutez le fichier exécutable avec **/uninstall**. Par exemple : `AzInfoProtection.exe /uninstall`
 

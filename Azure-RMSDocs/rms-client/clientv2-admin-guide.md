@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5c24dbaee6be5ab6e016531caa94da74e6e4487c
-ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
+ms.openlocfilehash: 29a034c436ca8157cb7d64707e5fda69f3422472
+ms.sourcegitcommit: 47826c7149985cd22bce243183748ab59c3dcb51
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70800800"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808689"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
 
@@ -106,13 +106,15 @@ Les **paramètres de réinitialisation** déconnectent l’utilisateur, supprime
 
 - Il n’est pas obligatoire d’être un administrateur local pour utiliser cette option, et cette action n’est pas enregistrée dans l’Observateur d’événements. 
 
-- Sauf si des fichiers sont verrouillés, cette action supprime tous les fichiers dans les emplacements suivants. Ces fichiers incluent des certificats clients, des modèles de protection, des étiquettes de sensibilité et des stratégies à partir de votre portail de gestion des étiquettes, ainsi que les informations d’identification de l’utilisateur mises en cache. Les fichiers journaux clients ne sont pas supprimés.
+- Sauf si des fichiers sont verrouillés, cette action supprime tous les fichiers dans les emplacements suivants. Ces fichiers incluent des certificats clients, des modèles de protection, des étiquettes de sensibilité et des stratégies à partir de votre centre de gestion des étiquettes, ainsi que les informations d’identification de l’utilisateur mises en cache. Les fichiers journaux clients ne sont pas supprimés.
     
     - %LocalAppData%\Microsoft\DRM
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - \\*Application%LocalAppData%\Microsoft\MSIP\mip\>\mip\<*
+    - \\ *%LocalAppData%\Microsoft\MSIP\mipProcessName\<\mip\>*
+    
+    - %LocalAppData%\Microsoft\MSIP\AppDetails
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 

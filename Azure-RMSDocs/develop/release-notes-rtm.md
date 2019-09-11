@@ -14,23 +14,32 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: c68970dffb263f30eb47ded0a29c2c5700b46bbe
-ms.sourcegitcommit: ad15beac7d95fe3904f3d4671c1e18e2136f74b4
+ms.openlocfilehash: 8782889ab2acd630831b3b8ed472f5740b904cb7
+ms.sourcegitcommit: 9ed9013fb79f34d49173acb1b200fbe05ce6b316
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69999221"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892569"
 ---
 # <a name="release-notes"></a>Notes de publication
 
 Cet article contient des informations importantes sur cette version du SDK RMS 2.1 et les précédentes.
+
+## <a name="september-2019---update"></a>Septembre 2019-mise à jour 
+
+- Correction d’un blocage qui peut se produire lors d’une tentative d’appel des méthodes d’initialisation en même temps qu’une autre méthode de client RMS.
+- Correction d’un problème de détermination de la protection RMS des fichiers Office protégés par mot de passe.
+-   Mettez à jour la validation des licences pour des licences à usage spécial.
+- Mises à jour de la protection PDF.
+- Autres correctifs de bogues.
+- Mettez à jour pour lier statiquement aux bibliothèques Runtime C.
 
 ## <a name="april-2019---update"></a>2019 avril-mise à jour
 - Résolution des bogues dans l’API de fichier.
 - API de fichier mise à jour pour vérifier le droit d’exportation au lieu du droit d’extraction lors du déchiffrement du contenu.
 - Correctif du programme d’installation pour vérifier que le nouveau protecteur PDF v2 est installé lors de la mise à niveau.
 - Modifications de télémétrie. Cette modification nécessitait une mise à jour du package d’installation qui installe les bibliothèques Runtime C.
-- Modifications de l’authentification du service principal, # # # # # #please mise à jour de cette version du kit de développement logiciel (SDK) minmize interruption si vous utilisez l’authentification par clé symétrique pour vos applications
+- Modification de l’authentification backend du service, **Mettez à jour vers cette version du kit de développement logiciel (SDK) vers minmize interruption si vous utilisez l’authentification par clé symétrique pour vos applications**
 - Prise en charge de VC 15,9
 
 

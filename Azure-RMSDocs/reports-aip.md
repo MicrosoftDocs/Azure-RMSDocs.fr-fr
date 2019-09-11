@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 08/19/2019
+ms.date: 09/05/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d3135126a837db9405a006bfd571a05a98ded7b7
-ms.sourcegitcommit: 30fc0e855b4fbcb61bcffa3e8c97a4beb777a787
+ms.openlocfilehash: 9108dbe9712b57dd5bef59c5258dccccaf137d86
+ms.sourcegitcommit: 91982b08ba8ce734b6d82382db227fcaa2b15e56
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630071"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70872358"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -40,6 +40,9 @@ Utilisez Azure Information Protection Analytics pour la création de rapports ce
 - Identifiez le moment où les utilisateurs internes ou externes accèdent à des documents protégés, et si l’accès a été accordé ou refusé.
 
 Les données que vous voyez sont agrégées à partir de vos clients et scanneurs Azure Information Protection, à partir des [clients et des services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)et depuis les [journaux d’utilisation](log-analyze-usage.md)de la protection.
+
+> [!NOTE]
+> Actuellement, Azure Information Protection Analytics n’inclut pas les types d’informations personnalisées pour les clients et les services qui prennent en charge l’étiquetage unifié.
 
 Par exemple, vous serez en mesure de voir ce qui suit :
 
@@ -114,7 +117,9 @@ Pour générer ces rapports, les points de terminaison envoient les types suivan
 
 - Pour les e-mails : Objet de l’e-mail et expéditeur de l’e-mail pour les e-mails étiquetés. 
 
-- Types d’informations sensibles ([prédéfinis](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) et personnalisés) détectés dans le contenu.
+- [Types d’informations sensibles prédéfinis](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) qui ont été détectés dans le contenu.
+    
+    Si vous utilisez Azure Information Protection étiquettes avec des conditions personnalisées, les noms de vos types d’informations personnalisées sont également envoyés. Les types d’informations sensibles personnalisés que vous créez dans le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft 365 ou le centre de conformité Microsoft 365 ne sont pas envoyés.
 
 - Version du client Azure Information Protection.
 
@@ -122,23 +127,23 @@ Pour générer ces rapports, les points de terminaison envoient les types suivan
 
 Ces informations sont stockées dans un espace de travail Azure Log Analytics appartenant à votre organisation et consultable indépendamment d’Azure Information Protection par les utilisateurs qui disposent des droits d’accès correspondants. Pour plus d’informations, voir la section [Autorisations requises pour l’analytique Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Pour plus d’informations sur la gestion de l’accès à votre espace de travail, consultez la section [Gérer l’accès à l’espace de travail Log Analytics avec des autorisations Azure](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) de la documentation Azure.
 
-Pour empêcher les clients Azure Information Protection (Classic) d’envoyer ces données, définissez le [paramètre de stratégie](configure-policy-settings.md) **Envoyer les données d’audit à Azure information protection log Analytics** sur **off**:
+Pour empêcher les clients Azure Information Protection (Classic) d’envoyer ces données, affectez au [paramètre de stratégie](configure-policy-settings.md) envoyer des données d’audit la valeur **désactivé** **à Azure information protection Analytics** :
 
 - Pour que la plupart des utilisateurs envoient ces données d’audit et qu’un sous-ensemble ne puisse pas en envoyer : 
-    - Définissez **Envoyer des données d’audit à l’analytique des journaux d'activité Azure Information Protection** sur **Désactivé** dans une stratégie délimitée autour de ce sous-ensemble d’utilisateurs. Cette configuration est généralement utilisée dans les scénarios de production.
+    - Affectez à l’option **Envoyer les données d’audit** la valeur **désactivé** à Azure information protection Analytics dans une stratégie délimitée pour le sous-ensemble d’utilisateurs. Cette configuration est généralement utilisée dans les scénarios de production.
 
 - Pour que seul un sous-ensemble d’utilisateurs envoie des données d’audit : 
-    - Définissez **Envoyer des données d’audit à l’analytique des journaux d'activité Azure Information Protection** sur **Désactivé** dans la stratégie globale, et sur **Activé** dans une stratégie délimitée autour de ce sous-ensemble d’utilisateurs. Cette configuration est généralement utilisée dans les scénarios de test.
+    - Définissez **Envoyer les données d’audit à Azure information protection Analytics** sur **désactivé** dans la stratégie globale, et **sur** dans une stratégie délimitée pour le sous-ensemble d’utilisateurs. Cette configuration est généralement utilisée dans les scénarios de test.
 
 Pour empêcher Azure Information Protection clients unifiés d’envoyer ces données, configurez un [paramètre avancé](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)de stratégie d’étiquette.
 
 #### <a name="content-matches-for-deeper-analysis"></a>Correspondances de contenu pour approfondir l’analyse 
 
-Votre espace de travail Azure Log Analytics pour Azure Information Protection comprend également une case à cocher permettant de collecter et de stocker les données identifiées comme étant un type d’informations sensibles (conditions prédéfinies ou personnalisées). Il peut s’agir, par exemple, de numéros de carte de crédit trouvés, mais aussi de numéros de sécurité sociale, de passeport et de compte bancaire. Si vous ne souhaitez pas envoyer ces données supplémentaires, n’activez pas la case à cocher **activer l’analyse plus profonde dans vos données sensibles**. Si vous souhaitez que la plupart des utilisateurs envoient ces données supplémentaires et qu’un sous-ensemble d’utilisateurs ne puisse pas l’envoyer, activez la case à cocher, puis:
+Votre espace de travail Azure Log Analytics pour Azure Information Protection comprend également une case à cocher permettant de collecter et de stocker les données identifiées comme étant un type d’informations sensibles (conditions prédéfinies ou personnalisées). Il peut s’agir, par exemple, de numéros de carte de crédit trouvés, mais aussi de numéros de sécurité sociale, de passeport et de compte bancaire. Si vous ne souhaitez pas envoyer ces données supplémentaires, n’activez pas la case à cocher **activer l’analyse plus profonde dans vos données sensibles**. Si vous souhaitez que la plupart des utilisateurs envoient ces données supplémentaires et qu’un sous-ensemble d’utilisateurs ne puisse pas l’envoyer, activez la case à cocher, puis :
 
-- Pour le client et le scanneur classiques: Configurez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie délimitée pour le sous-ensemble d’utilisateurs.
+- Pour le client et le scanneur classiques : Configurez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie délimitée pour le sous-ensemble d’utilisateurs.
 
-- Pour le client d’étiquetage unifié: Configurez un [paramètre avancé](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie d’étiquette pour le sous-ensemble d’utilisateurs.
+- Pour le client d’étiquetage unifié : Configurez un [paramètre avancé](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie d’étiquette pour le sous-ensemble d’utilisateurs.
 
 Une fois recueillies, les correspondances de contenu s’affichent dans les rapports : descendez dans la hiérarchie jusqu’aux fichiers des journaux d’activité pour afficher **Détails de l’activité**. Ces informations sont également consultables et récupérables avec des requêtes.
 
@@ -230,7 +235,13 @@ Azure Monitor journaux a une fonctionnalité d' **utilisation et de coûts estim
 
 Si vous avez besoin d’aide pour créer l’espace de travail Log Analytics, consultez [Créer un espace de travail Log Analytics dans le portail Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
-Quand l’espace de travail est configuré, vous êtes prêt à afficher les rapports.
+Lorsque l’espace de travail est configuré, procédez comme suit si vous publiez des étiquettes de sensibilité dans l’un des centres d’administration suivants : Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center, Microsoft 365 Compliance Center :
+
+- Dans la portail Azure accédez à **Azure information protection** > **gérer** > l'**étiquetage unifié**, puis sélectionnez **publier**.
+    
+    Sélectionnez cette option de **publication** chaque fois que vous effectuez une modification d’étiquette (créer, modifier, supprimer) dans votre centre d’étiquetage. 
+
+Vous êtes maintenant prêt à afficher les rapports.
 
 ## <a name="how-to-view-the-reports"></a>Comment afficher les rapports
 

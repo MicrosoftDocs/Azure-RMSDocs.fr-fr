@@ -4,7 +4,7 @@ description: Au lieu que Microsoft gère la clé racine pour Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 09/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5490122285549d3fd21ce63b8951cb09a1310f84
-ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
+ms.openlocfilehash: a36b03f0c753a1e78a65ad4f74446baf3e5fe745
+ms.sourcegitcommit: 190574b5c445aa429867dc324148e52ffd073a67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70800835"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907446"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 

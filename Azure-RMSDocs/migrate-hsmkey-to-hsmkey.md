@@ -4,7 +4,7 @@ description: Les instructions qui font partie du chemin de migration de AD RMS �
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 445dcb34b2d3de3ed81761537332ad0be20b000d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 8c1649fe32c88d0a97b002a5e6ca73047412737f
+ms.sourcegitcommit: 190574b5c445aa429867dc324148e52ffd073a67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794004"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907260"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par HSM à clé protégée par HSM
 
@@ -49,9 +49,11 @@ Ces procédures sont effectuées par l’administrateur d’Azure Key Vault.
 
 1. Pour chaque clé SLC exportée que vous voulez stocker dans Azure Key Vault, suivez les instructions de la documentation d’Azure Key Vault, notamment [Implémentation de BYOK pour Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) avec l’exception suivante :
 
-   - N’effectuez pas les étapes pour **Générer votre clé de locataire** car vous avez déjà l’équivalent dans votre déploiement AD RMS. Au lieu de cela, identifiez la clé utilisée par votre serveur AD RMS à partir de l’installation nCipher et utilisez cette clé lors de la migration. fichiers de clés nCipher chiffrée sont généralement nommés **clé<*Nom_application_clé*><*keyIdentifier*>** localement sur le serveur.
-
-     Quand la clé se charge dans Azure Key Vault, vous voyez s’afficher les propriétés de la clé, notamment l’ID de clé. Cela doit ressembler à https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prenez note de cette URL, car l’administrateur Azure Information Protection en a besoin pour indiquer au service Azure Rights Management d’utiliser cette clé pour sa clé de locataire.
+   - N’effectuez pas les étapes pour **Générer votre clé de locataire** car vous avez déjà l’équivalent dans votre déploiement AD RMS. Au lieu de cela, identifiez les clés utilisées par votre serveur AD RMS à partir de l’installation nCipher et préparez ces clés pour le transfert, puis transférez-les vers Azure Key Vault. 
+        
+        Les fichiers de clé chiffrés pour nCipher sont nommés **key_ <*keyAppName*> _ <*KeyIdentifier* >**  localement sur le serveur. Par exemple, `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Vous aurez besoin de la valeur **mscapi** comme keyAppName, ainsi que de votre propre valeur pour l’identificateur de clé lorsque vous exécutez la commande KeyTransferRemote pour créer une copie de la clé avec des autorisations réduites.
+        
+        Quand la clé se charge dans Azure Key Vault, vous voyez s’afficher les propriétés de la clé, notamment l’ID de clé. Cela doit ressembler à https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prenez note de cette URL, car l’administrateur Azure Information Protection en a besoin pour indiquer au service Azure Rights Management d’utiliser cette clé pour sa clé de locataire.
 
 2. Sur la station de travail connectée à Internet, dans une session PowerShell, utilisez l’applet de commande [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) pour autoriser le principal du service Azure Rights Management à accéder au coffre de clés qui stocke la clé de locataire Azure information protection. Les autorisations nécessaires sont déchiffrer, chiffrer, désencapsuler la clé (unwrapkey), encapsuler la clé (wrapkey), vérifier et signer.
     

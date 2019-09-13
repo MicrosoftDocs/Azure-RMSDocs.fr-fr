@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 94679d642ec2b83d0b7bb979f1ba6e2b0f2fbfe4
-ms.sourcegitcommit: 32ec752f3bda160011c48c82e24f31ffffe5d6ac
+ms.openlocfilehash: a2093d33f53eb9991c0ef3f8c9d1ea798b3dd8ef
+ms.sourcegitcommit: dc8a55e7a5500ede22cef2fabdaddc4bcee9fa24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70888128"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70936955"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -104,8 +104,7 @@ Pris en charge jusqu’à 02/06/2020
     - [Spécifier une sous-étiquette par défaut pour une étiquette parent](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
     - [Spécifier une couleur pour l’étiquette](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
-- Prise en charge des étiquettes configurées pour des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers:
-    - Lorsqu’un utilisateur sélectionne une étiquette avec cette configuration, il est invité à sélectionner des utilisateurs et des paramètres de protection pour le document.
+- Prise en charge des étiquettes configurées pour des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers. Pour plus d’informations, consultez la section [autoriser les utilisateurs à attribuer des autorisations](/Office365/SecurityCompliance/encryption-sensitivity-labels#let-users-assign-permissions) dans la documentation Office.
 
 - Modifications de PowerShell dans le module AzureInformationProtection:
     - Nouvelle applet de commande: [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) -remplace New-RMSProtectionLicense pour créer une stratégie ad hoc pour les autorisations personnalisées

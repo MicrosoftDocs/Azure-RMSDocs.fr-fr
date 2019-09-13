@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/16/2019
+ms.date: 09/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e2cce9e76ae1b583aacc30df7d2abe5940106455
-ms.sourcegitcommit: bdfade60c1939f5c540bbf82859af060eb629f68
+ms.openlocfilehash: 784b51f91a19069c33f5a6dd5a6a655c95e59c0c
+ms.sourcegitcommit: af478aae5b093aa604e69b210de4094aa664f658
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546066"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923316"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -729,7 +729,7 @@ Lorsque le client obtient cette configuration dans sa stratégie, les anciens en
 
 Cette configuration n’est pas prise en charge pour Outlook. Sachez également que quand vous l’utilisez avec Word, Excel et PowerPoint, elle peut affecter négativement les performances de ces applications pour les utilisateurs. La configuration vous permet de définir des paramètres par application, par exemple, rechercher du texte dans les en-têtes et les pieds de page des documents Word, mais pas dans les feuilles de calcul Excel ni dans les présentations PowerPoint.
 
-Étant donné que les caractères génériques affectent les performances pour les utilisateurs, nous vous recommandons de limiter les types d’application Office (**W**ord, **E**xcel, **P**owerPoint) à ceux qui doivent faire l’objet de recherche uniquement :
+Étant donné que les critères spéciaux affectent les performances pour les utilisateurs, nous vous recommandons de limiter les types d’applications Office (**W**ORD, E**X**cel, **P**owerPoint) à ceux qui doivent être recherchés :
 
 - Clé : **RemoveExternalContentMarkingInApp**
 
@@ -851,7 +851,7 @@ Cette configuration utilise un [paramètre client avancé](#how-to-configure-adv
 
 Lorsque le client Azure Information Protection est utilisé dans les applications Office, il recherche des informations sensibles dans les documents lorsqu’ils sont enregistrés pour la première fois. Si le client n’est pas configuré pour ne pas envoyer d’informations d’audit, tous les types d’informations sensibles détectés (prédéfinis ou personnalisés) sont ensuite envoyés à [Azure information protection Analytics](../reports-aip.md). 
 
-La configuration qui contrôle si le client envoie des informations d’audit est le [paramètre de stratégie](../configure-policy-settings.md) **Envoyer des données d’audit à Azure information protection log Analytics**. Lorsque ce paramètre de stratégie est activé parce que vous souhaitez envoyer **des** informations d’audit incluant des actions d’étiquetage mais que vous ne souhaitez pas envoyer de types d’informations sensibles détectés par le client, entrez les chaînes suivantes:
+La configuration qui contrôle si le client envoie des informations d’audit est le [paramètre de stratégie](../configure-policy-settings.md) **Envoyer des données d’audit à Azure information protection log Analytics**. Lorsque ce paramètre de stratégie est activé parce que vous souhaitez envoyer **des** informations d’audit incluant des actions d’étiquetage mais que vous ne souhaitez pas envoyer de types d’informations sensibles détectés par le client, entrez les chaînes suivantes :
 
 - Clé : **RunAuditInformationTypesDiscovery**
 
@@ -865,7 +865,7 @@ Par exemple :
 
 - Sans ce paramètre, vous pouvez voir que Financial. docx contient 6 numéros de carte de crédit.
     
-    - Si vous activez également des analyses plus approfondies [dans vos données sensibles](../reports-aip.md#content-matches-for-deeper-analysis), vous serez en outre en mesure de voir ce que sont ces numéros de carte de crédit.
+    - Si vous activez également des [analyses plus approfondies dans vos données sensibles](../reports-aip.md#content-matches-for-deeper-analysis), vous serez en outre en mesure de voir ce que sont ces numéros de carte de crédit.
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Désactiver l’envoi de correspondances de types d’informations pour un sous-ensemble d’utilisateurs
 
@@ -912,7 +912,7 @@ Pour configurer ce paramètre avancé afin que le scanneur s’exécute avec un 
 
 Cette configuration utilise des [Paramètres client avancés](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans la portail Azure.
 
-Par défaut, le Azure Information Protection scanneur a un délai d’expiration de 00:15:00 (15 minutes) pour inspecter chaque fichier à la fin des types d’informations sensibles ou des expressions Regex que vous avez configurées pour des conditions personnalisées. Lorsque le délai d’attente est atteint pour ce processus d’extraction de contenu, tous les résultats avant le délai d’expiration sont retournés et l’inspection supplémentaire du fichier s’arrête. Dans ce scénario, le message d’erreur suivant est consigné dans%*LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog (zippé s’il y a plusieurs journaux): **Échec de GetContentParts** , car **l’opération a été annulée** dans les détails.
+Par défaut, le Azure Information Protection scanneur a un délai d’expiration de 00:15:00 (15 minutes) pour inspecter chaque fichier à la fin des types d’informations sensibles ou des expressions Regex que vous avez configurées pour des conditions personnalisées. Lorsque le délai d’attente est atteint pour ce processus d’extraction de contenu, tous les résultats avant le délai d’expiration sont retournés et l’inspection supplémentaire du fichier s’arrête. Dans ce scénario, le message d’erreur suivant est consigné dans%*LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog (zippé s’il y a plusieurs journaux) : **Échec de GetContentParts** , car **l’opération a été annulée** dans les détails.
 
 Si vous rencontrez ce problème de délai d’expiration en raison de fichiers volumineux, vous pouvez augmenter ce délai d’attente pour l’extraction de contenu complète:
 
@@ -932,7 +932,7 @@ Pour certains types de fichiers très volumineux, tels que les fichiers vidéo, 
 
 En outre, le Azure Information Protection scanneur a un délai d’expiration de 00:30:00 (30 minutes) pour chaque fichier qu’il traite. Cette valeur prend en compte le temps qu’elle peut prendre pour récupérer un fichier à partir d’un référentiel et l’enregistrer temporairement localement pour les actions qui peuvent inclure le déchiffrement, l’extraction de contenu pour l’inspection, l’étiquetage et le chiffrement.
 
-Bien que le scanneur Azure Information Protection puisse analyser des dizaines de centaines de fichiers par minute, si vous disposez d’un référentiel de données qui contient un grand nombre de fichiers très volumineux, le scanneur peut dépasser ce délai d’expiration par défaut et dans le Portail Azure semble s’arrêter après 30 maximum. Dans ce scénario, le message d’erreur suivant est consigné dans%*LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog (zippé s’il y a plusieurs journaux) et le fichier journal scanner. csv: **L’opération a été annulée**.
+Bien que le scanneur Azure Information Protection puisse analyser des dizaines de centaines de fichiers par minute, si vous disposez d’un référentiel de données qui contient un grand nombre de fichiers très volumineux, le scanneur peut dépasser ce délai d’expiration par défaut et dans le Portail Azure semble s’arrêter après 30 maximum. Dans ce scénario, le message d’erreur suivant est consigné dans%*LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog (zippé s’il y a plusieurs journaux) et le fichier journal scanner. csv : **L’opération a été annulée**.
 
 Un scanneur avec 4 processeurs de base par défaut a 16 threads pour l’analyse et la probabilité de rencontrer 16 fichiers volumineux dans un laps de temps de 30 minutes dépend du rapport des fichiers volumineux. Par exemple, si la vitesse d’analyse est de 200 fichiers par minute et que 1% des fichiers dépassent le délai d’expiration de 30 minutes, il existe une probabilité de plus de 85% que le moteur d’analyse rencontrera la situation du délai d’expiration de 30 minutes. Ces délais d’expiration peuvent entraîner des temps d’analyse plus longs et une plus grande consommation de mémoire.
 

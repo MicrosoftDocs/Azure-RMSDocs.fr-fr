@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 29d08fc8b4b2c2eb73840d8d6dc1f443cd904fcf
-ms.sourcegitcommit: d3ac12c51b41bd1ec4ce4009303d124efc95353b
+ms.openlocfilehash: e76f2a358042b09aee47088e43d898cf1e11784c
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180645"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060173"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : Installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
@@ -24,7 +24,7 @@ ms.locfileid: "70180645"
 >
 > *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Avant d’installer le client d’étiquetage unifié Azure Information Protection sur votre réseau d’entreprise, vérifiez que les ordinateurs disposent des versions et des applications de système d’exploitation requises pour Azure Information Protection: [Configuration requise pour Azure Information Protection](../requirements.md). 
+Avant d’installer le client d’étiquetage unifié Azure Information Protection sur votre réseau d’entreprise, vérifiez que les ordinateurs disposent des versions et des applications de système d’exploitation requises pour Azure Information Protection : [Configuration requise pour Azure Information Protection](../requirements.md). 
 
 Vérifiez ensuite les prérequis supplémentaires qui peuvent être nécessaires pour le client d’étiquetage unifié Azure Information Protection, comme indiqué dans la section suivante. Tous les prérequis ne sont pas vérifiés par le programme d’installation.
 
@@ -40,9 +40,9 @@ Vérifiez ensuite les prérequis supplémentaires qui peuvent être nécessaires
     
     Si la visionneuse Azure Information Protection est installée séparément, Microsoft .NET Framework version 4.5.2 minimum est requis. Si cette version est manquante, le programme d’installation exécutable ne procède pas au téléchargement ni à l’installation.
 
-- Windows PowerShell version 4.0
+- Version minimale de Windows PowerShell 4,0
     
-    Le module PowerShell pour le client nécessite Windows PowerShell version 4.0, que vous devrez peut-être installer sur les systèmes d’exploitation plus anciens. Pour en savoir plus, consultez la page relative à [l’installation de Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). Ce programme d’installation ne vérifie pas ou n’installe pas cette condition préalable pour vous. Pour vérifier la version de Windows PowerShell que vous exécutez, saisissez la chaîne `$PSVersionTable` lors d’une session PowerShell.
+    Le module PowerShell pour le client nécessite une version minimale de 4,0 pour Windows PowerShell, qui devra peut-être être installé sur des systèmes d’exploitation plus anciens. Pour en savoir plus, consultez la page relative à [l’installation de Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). Ce programme d’installation ne vérifie pas ou n’installe pas cette condition préalable pour vous. Pour vérifier la version de Windows PowerShell que vous exécutez, saisissez la chaîne `$PSVersionTable` lors d’une session PowerShell.
 
 - Résolution d’écran supérieure à 800 x 600
     
@@ -73,7 +73,7 @@ Vérifiez ensuite les prérequis supplémentaires qui peuvent être nécessaires
     
     Pour Office 2013 et versions ultérieures, configurez la stratégie de groupe pour vous assurer que le complément **Microsoft Azure Information Protection** pour les applications Office est toujours activé. Sans cette configuration, le complément Microsoft Azure Information Protection peut être désactivé et les utilisateurs ne seront pas en mesure d’étiqueter leurs documents et e-mails dans leur application Office.
     
-    - Pour Outlook: Utilisez le paramètre de stratégie de groupe documenté dans [Contrôle de l’administrateur système sur les compléments](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) de la documentation Office.
+    - Pour Outlook : Utilisez le paramètre de stratégie de groupe documenté dans [Contrôle de l’administrateur système sur les compléments](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) de la documentation Office.
     
     - Pour Word, Excel et PowerPoint : Utilisez le paramètre de stratégie de groupe **Liste des compléments gérés** documenté dans l’article du support [Aucun complément chargé en raison des paramètres de stratégie de groupe pour les programmes Office 2013 et Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). 
         
@@ -192,7 +192,7 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
 
 2. Pour chaque ordinateur qui exécute le fichier .msi, vous devez vérifier que les dépendances logicielles suivantes sont établies. Par exemple, empaquetez-les avec la version .msi du client ou déployez-les uniquement sur les ordinateurs qui répondent à ces dépendances :
     
-    |Version d’Office|Système d’exploitation|Logiciels|Action|
+    |Version d’Office|Système d'exploitation|Logiciels|Action|
     |--------------------|--------------|----------------|---------------------|
     |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installation|
     |Office 2016|Toutes les versions prises en charge|64 bits: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bits: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installation|
@@ -208,7 +208,7 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-Maintenant que vous avez installé le client d’étiquetage unifié Azure Information Protection, consultez les rubriques suivantes pour plus d’informations sur la prise en charge de ce client:
+Maintenant que vous avez installé le client d’étiquetage unifié Azure Information Protection, consultez les rubriques suivantes pour plus d’informations sur la prise en charge de ce client :
 
 - [Fichiers du client et journalisation de l’utilisation](clientv2-admin-guide-files-and-logging.md)
 

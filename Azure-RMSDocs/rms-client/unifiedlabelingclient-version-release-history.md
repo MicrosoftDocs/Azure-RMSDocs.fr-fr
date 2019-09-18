@@ -4,7 +4,7 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/09/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a2093d33f53eb9991c0ef3f8c9d1ea798b3dd8ef
-ms.sourcegitcommit: dc8a55e7a5500ede22cef2fabdaddc4bcee9fa24
+ms.openlocfilehash: a71ed78a2fb528823adc4abaa5f2007256aca65c
+ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70936955"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070654"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -51,6 +51,46 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 > Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
 Ce client remplace le client Azure Information Protection (Classic). Pour comparer les fonctionnalités et les fonctionnalités avec le client classique, consultez [comparer les clients](use-client.md#compare-the-clients).
+
+## <a name="versions-later-than-22210"></a>Versions ultérieures à 2.2.21.0
+
+Si vous disposez d’une version 2 du client qui est ultérieure à 2.2.21.0, il s’agit d’une version préliminaire à des fins de test et d’évaluation.
+
+**Date de publication** : 09/17/2019
+
+**Nouvelles fonctionnalités :**
+
+- Prise en charge du [scanneur](../deploy-aip-scanner.md), pour inspecter et étiqueter les documents des magasins de données locaux. Avec cette version du scanneur :
+    
+    - Plusieurs scanneurs peuvent partager la même SQL Server base de données lorsque vous configurez les scanneurs pour qu’ils utilisent le même profil de scanneur. Cette configuration facilite la gestion de plusieurs scanneurs et entraîne des temps d’analyse plus rapides. Lorsque vous utilisez cette configuration, attendez toujours que l’installation d’un scanneur soit terminée avant d’installer un autre scanneur avec le même profil.
+    
+    - Vous devez spécifier un profil lorsque vous installez le scanneur et que la base de données du scanneur est nommée **\<AIPScannerUL_ profile_name >** . Le paramètre de *Profil* est également obligatoire pour Set-AIPScanner.
+    
+    - Vous pouvez définir une étiquette par défaut pour tous les documents, même si les documents sont déjà étiquetés. Dans les paramètres Profil du scanneur ou référentiel, affectez à l’option **Renommer les fichiers** la valeur **activé** avec la case à cocher **appliquer l’étiquette par défaut** activée.
+    
+    - Vous pouvez supprimer des étiquettes existantes de tous les documents. cette action comprend la suppression de la protection si elle a été appliquée précédemment par une étiquette. La protection appliquée indépendamment d’une étiquette est conservée. Cette configuration de scanneur est effectuée dans les paramètres de profil du scanneur ou de référentiel avec les paramètres suivants :
+        - **Label files based on content** (Étiqueter les fichiers en fonction du contenu) : **Off**
+        - **Étiquette par défaut** : **Aucune.**
+        - **Relabel files** (Réétiqueter les fichiers) : **Activé** avec la case à cocher **appliquer l’étiquette par défaut** sélectionnée
+    
+    - Comme avec le scanneur du client classique, le scanneur protège les fichiers Office et les fichiers PDF. Actuellement, vous ne pouvez pas configurer d’autres types de fichiers à protéger par cette version du scanneur.
+    
+    Vous pouvez mettre à niveau les analyseurs à partir du client Azure Information Protection (Classic). Après la mise à niveau, qui crée une base de données, le moteur de base de données analyse à nouveau tous les fichiers lors de sa première exécution. Pour obtenir des instructions, consultez [mise à niveau de l’analyseur de Azure information protection](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) à partir du Guide de l’administrateur.
+
+- L’applet de commande PowerShell [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) a de nouveaux paramètres lorsque vous souhaitez [étiqueter des fichiers de manière non interactive](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), et une [nouvelle procédure pour inscrire une application dans Azure ad](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client). Les exemples de scénarios incluent le scanneur et les scripts PowerShell automatisés pour étiqueter les documents.
+
+- Les types d’informations sensibles personnalisés correspondants sont envoyés à [Azure information protection Analytics](../reports-aip.md).
+
+- L’étiquette appliquée affiche la couleur configurée pour l’étiquette, si une [couleur a été configurée](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).
+
+- Lorsque vous ajoutez ou modifiez des paramètres de protection sur une étiquette, le client réapplique l’étiquette avec ces derniers paramètres de protection lors de l’enregistrement du document suivant. De même, le scanneur réapplique l’étiquette avec ces derniers paramètres de protection lors de la prochaine analyse du document en mode d’application.
+
+- New cmdlet, [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs), pour rassembler tous les fichiers journaux de%LocalAppData%\Microsoft\MSIP\Logs et les enregistre dans un fichier unique et compressé avec un format. zip. Ce fichier peut ensuite être envoyé à Support Microsoft si vous êtes invité à envoyer des fichiers journaux pour vous aider à examiner un problème signalé.
+
+**Céder**
+
+- Vous pouvez apporter des modifications à un fichier protégé à l’aide de l’Explorateur de fichiers et cliquer avec le bouton droit après avoir supprimé un mot de passe pour le fichier.
+
 
 ## <a name="version-22210"></a>Version 2.2.21.0
 

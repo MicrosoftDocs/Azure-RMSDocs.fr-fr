@@ -4,7 +4,7 @@ description: Informations sur les fichiers du client et la journalisation de l�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6ea0c6787680a86fde0c3a7d2919caac4fcdd811
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 5061dc23fc1493e68e030580133e7b9306bbf68c
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793769"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060133"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 
@@ -96,9 +96,8 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
 
 - Autorisations personnalisées (le cas échéant) qui incluent les [droits d’utilisation par leur nom d’encodage](../configure-usage-rights.md#usage-rights-and-descriptions) pour les utilisateurs, groupes ou organisations spécifiés
 
-Les événements pour les messages Outlook d’avertissement, de justification et de blocage requièrent les paramètres actuels du client de disponibilité générale et du client avancé. Pour plus d’informations, consultez [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
+Les événements pour les messages Outlook d’avertissement, de justification et de blocage requièrent des paramètres client avancés. Pour plus d’informations, consultez [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
-Pour plus d’informations sur la journalisation de l’utilisation pour le service de protection, consultez [journalisation et analyse de l’utilisation de la protection à partir de Azure information protection](../log-analyze-usage.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez identifié tous les fichiers journaux associés au client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :

@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/09/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: e3499c7a5d659217bd10055648bc0c00b5c3a5c8
-ms.sourcegitcommit: 32ec752f3bda160011c48c82e24f31ffffe5d6ac
+ms.openlocfilehash: 94348ea8b214e0ece964dba2d0a49f6e03de49d0
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70888112"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060116"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -40,11 +40,11 @@ Le **client d’étiquetage unifié Azure Information Protection** télécharge 
 
 Quel client convient-il d’installer ?
 
-- Installez le client d’étiquetage unifié Azure Information Protection pour les étiquettes et les paramètres de stratégie qui peuvent également être utilisés par MacOS, iOS et Android, et si vous n’avez pas besoin des nombreuses fonctionnalités qui ne sont pas encore prises en charge par le client classique. Ces fonctionnalités incluent la protection du contenu avec une clé locale (HYOK) et un scanneur pour les magasins de données locaux.
+- Installez le client d’étiquetage unifié Azure Information Protection pour les étiquettes qui peuvent également être utilisées par MacOS, iOS et Android, et si vous n’avez pas besoin des nombreuses fonctionnalités qui ne sont pas encore prises en charge. Ces fonctionnalités incluent la protection du contenu avec une clé locale (HYOK) et une version de disponibilité générale du scanneur pour les magasins de données locaux.
 
-- Installez le client Azure Information Protection (Classic) si vous avez besoin d’une version du client qui possède des fonctionnalités qui ne sont pas encore disponibles avec le client d’étiquetage unifié. Le compromis est que tous les paramètres d’étiquette ne peuvent pas être utilisés sur d’autres plateformes clientes et l’administration à l’aide d’un autre portail de gestion.
+- Installez le client Azure Information Protection (Classic) si vous avez besoin d’une version du client qui possède des fonctionnalités qui ne sont pas encore disponibles avec le client d’étiquetage unifié. Le compromis est que les étiquettes ne peuvent pas être utilisées sur d’autres plateformes clientes et l’administration à l’aide d’un autre portail de gestion.
 
-Actuellement, le client classique et le client d’étiquetage unifié n’ont pas de parité pour leurs fonctionnalités. Toutefois, cet intervalle se ferme et vous pouvez vous attendre à ce que les nouvelles fonctionnalités soient ajoutées uniquement au client d’étiquetage unifié. Pour cette raison, nous vous recommandons de déployer le client d’étiquetage unifié si son ensemble de fonctionnalités et ses fonctionnalités actuelles répondent aux besoins de votre entreprise. Si ce n’est pas le cas, ou si vous avez configuré des étiquettes dans le Portail Azure que vous n’avez pas encore [migré vers le magasin d’étiquetage unifié](../configure-policy-migrate-labels.md), utilisez le client classique.
+La dernière version de la disponibilité générale du client d’étiquetage unifié l’amène à fermer la parité dans les fonctionnalités avec le client classique. À mesure que cet intervalle se ferme, vous pouvez vous attendre à ce que les nouvelles fonctionnalités soient ajoutées uniquement au client d’étiquetage unifié. Pour cette raison, nous vous recommandons de déployer le client d’étiquetage unifié si son ensemble de fonctionnalités et ses fonctionnalités actuelles répondent aux besoins de votre entreprise. Si ce n’est pas le cas, ou si vous avez configuré des étiquettes dans le Portail Azure que vous n’avez pas encore [migré vers le magasin d’étiquetage unifié](../configure-policy-migrate-labels.md), utilisez le client classique.
 
 Vous pouvez également installer les deux clients dans le même environnement pour prendre en charge les différents besoins de l’entreprise, comme illustré dans l’exemple suivant. Pour ce scénario, nous vous recommandons de migrer les étiquettes dans le Portail Azure afin que les deux ensembles de clients partagent le même ensemble d’étiquettes pour faciliter l’administration.
 
@@ -52,13 +52,15 @@ Vous pouvez également installer les deux clients dans le même environnement po
 
 - Pour la majorité des utilisateurs, vous déployez le client d’étiquetage unifié Azure Information Protection, car ce client répond aux besoins de l’entreprise pour ces utilisateurs. 
     
-    Pour ces utilisateurs, leur étiquetage est très similaire sur Windows, Mac, iOS et Android, car ils ont les mêmes étiquettes publiées et les mêmes paramètres de stratégie. En tant qu’administrateur, vous gérez ces étiquettes et paramètres de stratégie dans le même portail de gestion.
+    Pour ces utilisateurs, leur étiquetage est très similaire sur Windows, Mac, iOS et Android, car ils ont les mêmes étiquettes publiées et les mêmes paramètres de stratégie. En tant qu’administrateur, vous gérez ces étiquettes et paramètres de stratégie dans le même centre de gestion.
 
-- Pour un sous-ensemble d’utilisateurs, vous déployez le client classique, car ces utilisateurs nécessitent une ou plusieurs étiquettes qui appliquent la protection de votre propre clé (HYOK).
+- Vous installez également le client d’étiquetage unifié pour vous-même, afin de tester la version préliminaire du scanneur Azure Information Protection et des nouvelles fonctionnalités du client.
+
+- Pour un sous-ensemble d’utilisateurs, vous déployez le client classique, car ces utilisateurs nécessitent des étiquettes qui appliquent la protection de votre propre clé (HYOK).
     
-    Pour ces utilisateurs, ils ont une expérience d’étiquetage légèrement différente lorsqu’ils utilisent ce client. Par exemple, ils voient un bouton **protéger** au lieu d’un bouton de **sensibilité** dans les applications Office. En tant qu’administrateur, vous devez gérer leurs étiquettes pour les paramètres de HYOK et les paramètres de stratégie dans un portail de gestion différent des étiquettes et des paramètres pour les autres plateformes clientes.
+    Pour ces utilisateurs, ils ont une expérience d’étiquetage légèrement différente lorsqu’ils utilisent ce client. Par exemple, ils voient un bouton **protéger** au lieu d’un bouton de **sensibilité** dans les applications Office. En tant qu’administrateur, vous devez gérer les étiquettes des paramètres HYOK et des paramètres de stratégie dans un autre centre de gestion pour les étiquettes et les paramètres des autres plateformes clientes.
 
-- Vous avez des magasins de données locaux avec des documents qui doivent être analysés à la recherche d’informations sensibles ou classifiées et protégées. Vous déployez le client Classic sur les serveurs pour exécuter le scanneur de Azure Information Protection.
+- Vous avez des magasins de données locaux avec des documents qui doivent être analysés à la recherche d’informations sensibles ou classifiées et protégées. Pour une utilisation en production, vous déployez le client Classic sur les serveurs pour exécuter le scanneur de Azure Information Protection.
 
 ### <a name="compare-the-clients"></a>Comparer les clients
 
@@ -67,14 +69,15 @@ Utilisez le tableau suivant pour comparer les fonctionnalités prises en charge 
 |Fonctionnalité|Client classique|Client d’étiquetage unifié|
 |-------|-----------------------------------|----------------------------------------------------|
 |Étiquetage des actions : manuel, recommandé, automatique| Oui | Oui |
-|Création centralisée de rapports (analytique) :| Oui | Oui, avec des restrictions :<br /><br /> -Les types d’informations sensibles personnalisés ne sont pas affichés |
+|Création centralisée de rapports (analytique) :| Oui | Oui, avec des restrictions :<br /><br /> -Les types d’informations sensibles personnalisés sont pris en charge avec la version préliminaire |
 |Visionneuse pour les fichiers protégés (texte, images, PDF,. pfile) :| Oui | Oui |
 |Prise en charge multilingue des étiquettes:| Oui | Oui |
 |Héritage d’étiquette à partir des pièces jointes aux e-mails :| Oui | Oui  |
 |Les personnalisations qui incluent:<br />- Étiquette par défaut pour e-mail<br />-Messages contextuels dans Outlook <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| Oui <br /><br /> Pris en charge comme [paramètres du client avancé que vous configurez dans le portail Azure](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)| Oui <br /><br /> Pris en charge comme [Paramètres avancés que vous configurez avec PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
 |Autorisations définies par l’utilisateur :| Oui | Oui |
+|Scanneur pour magasins de données locaux :| Oui | Oui-version préliminaire |
 |Autorisations personnalisées :| Oui | Explorateur de fichiers et PowerShell <br /><br /> Dans les applications Office, comme alternative, les utilisateurs peuvent sélectionner les **informations** > de fichier**protéger le document** > **restreindre l’accès** ou les administrateurs peuvent configurer une étiquette pour les autorisations définies par l’utilisateur|
-|Barre Information Protection dans les applications Office :| Oui | Oui, avec des restrictions :<br /><br /> - Pas de titre ou d’info-bulle personnalisable<br /><br /> - Couleur d’étiquette non affichée pour l’étiquette appliquée|
+|Barre Information Protection dans les applications Office :| Oui | Oui, avec des restrictions :<br /><br /> - Pas de titre ou d’info-bulle personnalisable<br /><br /> -Couleur de l’étiquette non affichée pour l’étiquette appliquée, sauf si vous utilisez la version préliminaire|
 |Les étiquettes peuvent appliquer des marquages visuels (en-tête, pied de page, filigrane) :| Oui | Oui, avec des restrictions :<br /><br /> - Les en-têtes et les pieds de page ne gèrent pas les variables pour les valeurs dynamiques <br /><br /> - Pas de prise en charge pour Word, Excel, PowerPoint et Outlook de différents marquages visuels|
 |Dans l’Explorateur de fichiers, actions déclenchées par clic droit :| Oui | Oui, avec des restrictions :<br /><br /> -Impossible de protéger les documents PDF au format ancien. ppdf <br /><br />  - Pas de prise en charge du mode Protection uniquement|
 |Commandes PowerShell :| Oui | Oui, avec des restrictions :<br /><br />-Impossible de supprimer la protection des fichiers de conteneur (zip,. rar,. 7z,. MSG et. pst)|
@@ -83,7 +86,6 @@ Utilisez le tableau suivant pour comparer les fonctionnalités prises en charge 
 |Prise en charge de HYOK :| Oui | Non <br /><br /> Les étiquettes que vous migrez à partir du portail Azure et qui sont configurées pour la protection HYOK sont affichées par le client d’étiquetage unifié Azure Information Protection, mais n’appliquent pas de protection. |
 |Journalisation de l’utilisation dans l’observateur d’événements :| Oui | Non|
 |Afficher le bouton Ne pas transférer dans Outlook| Oui | Non |
-|Scanneur pour magasins de données locaux :| Oui | Non |
 |Suivre et révoquer :| Oui | Non |
 |Mode protection uniquement (aucune étiquette) à l’aide de modèles:| Oui | Non |
 |Prise en charge des services AD RMS :| Oui | Seule l’action suivante est prise en charge :<br /><br /> - La visionneuse peut ouvrir des documents protégés quand vous déployez l’[extension Appareils mobiles AD RMS (Active Directory Rights Management Services)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))|
@@ -92,7 +94,7 @@ Utilisez le tableau suivant pour comparer les fonctionnalités prises en charge 
 
 Lorsque les deux clients prennent en charge la même fonctionnalité, utilisez le tableau suivant pour identifier les différences fonctionnelles entre les deux clients.
 
-|Fonctionnalités |Client classique|Client d’étiquetage unifié|
+|Fonctionnalité |Client classique|Client d’étiquetage unifié|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Configurer :| Option d’installation d’une stratégie de démonstration locale | Pas de stratégie de démonstration locale|
 |Sélection et affichage d’étiquette en cas d’application dans les applications Office :|À partir du bouton **Protéger** situé sur le ruban <br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|À partir du bouton **Critère de diffusion** situé sur le ruban<br /><br /> À partir de la barre Information Protection (barre horizontale située sous le ruban)|
@@ -102,7 +104,7 @@ Lorsque les deux clients prennent en charge la même fonctionnalité, utilisez l
 |Mise à jour de la stratégie : | Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 24 heures | Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 4 heures|
 |Formats pris en charge pour PDF :| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF (par défaut) <br /><br /> - .ppdf <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br /> <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint|
 |Fichiers protégés de façon générique (. pfile) ouverts avec la visionneuse :| Le fichier s’ouvre dans l’application d’origine, où il peut ensuite être affiché, modifié et enregistré sans protection | Le fichier s’ouvre dans l’application d’origine, où il peut ensuite être affiché et modifié, mais pas enregistré|
-|Cmdlets prises en charge :| Ensemble des cmdlets documentées pour [AzureInformationProtection](/powershell/module/azureinformationprotection) | Set-AIPFileClassification, Set-AIPFileLabel et Set-AIPFileStatus ne prennent pas en charge les chemins SharePoint <br /><br /> Set-AIPFileClassification et Set-AIPFileLabel ne prennent pas en charge le paramètre *owner* <br /><br /> En outre, le commentaire unique « Aucune étiquette à appliquer » existe pour tous les scénarios dans lesquels aucune étiquette n’est appliquée. <br /><br /> Set-AIPFileClassification prend en charge le paramètre *WhatIf* , afin qu’il puisse être exécuté en mode détection <br /><br /> La cmdlet Set-AIPFileLabel ne prend pas en charge le paramètre *EnableTracking*. <br /><br /> La cmdlet Get-AIPFileStatus ne retourne aucune information d’étiquette à partir d’autres abonnés et n’affiche pas le paramètre *RMSIssuedTime*.<br /><br />En outre, le *paramètre LabelingMethod* pour la fonction de récupération de l' **activité** de l’accès à AIPFileStatus affiche **Privileged** ou standard au lieu du **Manuel** ou **automatique**. Pour plus d’informations, consultez la [documentation en ligne](/powershell/module/azureinformationprotection/get-aipfilestatus).|
+|Cmdlets prises en charge :| Applets de commande pour l’étiquetage et les applets de commande pour la protection uniquement | Applets de commande pour l’étiquetage :<br /><br />Set-AIPFileClassification, Set-AIPFileLabel et Set-AIPFileStatus ne prennent pas en charge les chemins SharePoint, sauf si vous utilisez la version préliminaire <br /><br /> Set-AIPFileClassification et Set-AIPFileLabel ne prennent pas en charge le paramètre *owner* <br /><br /> En outre, le commentaire unique « Aucune étiquette à appliquer » existe pour tous les scénarios dans lesquels aucune étiquette n’est appliquée. <br /><br /> Set-AIPFileClassification prend en charge le paramètre *WhatIf* , afin qu’il puisse être exécuté en mode détection <br /><br /> La cmdlet Set-AIPFileLabel ne prend pas en charge le paramètre *EnableTracking*. <br /><br /> La cmdlet Get-AIPFileStatus ne retourne aucune information d’étiquette à partir d’autres abonnés et n’affiche pas le paramètre *RMSIssuedTime*.<br /><br />En outre, le *paramètre LabelingMethod* pour la fonction de récupération de l' **activité** de l’accès à AIPFileStatus affiche **Privileged** ou standard au lieu du **Manuel** ou **automatique**. Pour plus d’informations, consultez la [documentation en ligne](/powershell/module/azureinformationprotection/get-aipfilestatus).|
 |Invites de justification (si configurées) par action dans Office : | Fréquence : par fichier <br /><br /> Diminution du niveau de confidentialité <br /><br /> Suppression d’une étiquette<br /><br /> Suppression de la protection | Fréquence : par session <br /><br /> Diminution du niveau de confidentialité<br /><br /> Suppression d’une étiquette|
 |Supprimer les actions de l’étiquette appliquée : | L’utilisateur doit confirmer la suppression. <br /><br />L’étiquette par défaut ou l’étiquette automatique (si configurée) n’est pas appliquée automatiquement la prochaine fois que l’application Office ouvre le fichier.  <br /><br />| L’utilisateur n’a pas à confirmer la suppression.<br /><br /> L’étiquette par défaut ou l’étiquette automatique (si configurée) est appliquée automatiquement la prochaine fois que l’application Office ouvre le fichier.|
 |Étiquettes automatiques et recommandées: | Configurée en tant que [conditions d’étiquette](../configure-policy-classification.md) dans le portail Azure avec des types d’informations intégrées et des conditions personnalisées utilisant des expressions régulières ou non <br /><br />Les options de configuration comprennent ce qui suit : <br /><br />- Nombre de valeurs uniques/non uniques <br /><br /> - Nombre minimal| Configurée dans les centres d’administration avec les types d’informations sensibles intégrés et des [types d’informations personnalisés](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Les options de configuration comprennent ce qui suit :  <br /><br />- Nombre de valeurs uniques seulement <br /><br />- Nombre de valeurs minimales et maximales <br /><br />- Prise en charge des clauses AND et OR avec les types d’informations <br /><br />- Dictionnaire de mots clés<br /><br />- Niveau de confiance et proximité des caractères personnalisables|

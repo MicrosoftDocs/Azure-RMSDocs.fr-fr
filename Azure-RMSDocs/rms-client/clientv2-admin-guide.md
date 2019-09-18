@@ -4,19 +4,19 @@ description: Instructions et informations pour les administrateurs sur un résea
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/07/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 29a034c436ca8157cb7d64707e5fda69f3422472
-ms.sourcegitcommit: 47826c7149985cd22bce243183748ab59c3dcb51
+ms.openlocfilehash: eb73cba39d65a4e2c925f73afe7fa3e46ab204cd
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70808689"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060061"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
 
@@ -42,7 +42,7 @@ Par exemple :
 
 ## <a name="technical-overview-of-the-azure-information-protection-unified-labeling-client"></a>Présentation technique du client d’étiquetage unifié Azure Information Protection
 
-Le client d’étiquetage unifié Azure Information Protection comprend les éléments suivants :
+Le client d’étiquetage unifié Azure Information Protection comprend les éléments suivants:
 
 - Un complément Office, qui installe un bouton de **sensibilité** sur le ruban pour permettre aux utilisateurs de sélectionner des étiquettes de sensibilité, et une option pour afficher la barre de Azure information protection pour une meilleure visibilité des étiquettes.
 
@@ -50,18 +50,20 @@ Le client d’étiquetage unifié Azure Information Protection comprend les él�
 
 - Une visionneuse pour afficher les fichiers protégés lorsqu’une application native ne peut pas les ouvrir.
 
-- Un module PowerShell pour appliquer et supprimer des étiquettes de classification et la protection de fichiers. 
+- Un module PowerShell pour découvrir des informations sensibles dans des fichiers et appliquer ou supprimer des étiquettes de classification et la protection des fichiers. 
+    
+    La version préliminaire du client comprend des applets de commande permettant d’installer et de configurer le [scanneur Azure information protection](../deploy-aip-scanner.md) qui s’exécute en tant que service sur Windows Server. Ce service vous permet de découvrir, classifier et protéger des fichiers dans des magasins de données tels que des partages réseau et des bibliothèques SharePoint Server.
 
-- Le client Rights Management qui communique avec le service Azure Rights Management (Azure RMS) pour chiffrer et protéger des fichiers.
+- Le client Rights Management qui communique avec le service de protection (Azure Rights Management) pour chiffrer et protéger des fichiers.
 
-À l’exception de la visionneuse, le Azure Information Protection client d’étiquetage unifié ne peut pas être utilisé avec des applications et des services qui communiquent directement avec le service ou le services AD RMS (Active Directory Rights Management Services) Azure Rights Management.
+À l’exception de la visionneuse, le Azure Information Protection client d’étiquetage unifié ne peut pas être utilisé avec des applications et des services qui communiquent directement avec le service de protection ou services AD RMS (Active Directory Rights Management Services).
 
 Si vous avez AD RMS et que vous souhaitez migrer AD RMS vers Azure Information Protection, consultez [Migration d’AD RMS vers Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md).
 
 
-## <a name="should-you-deploy-the-azure-information-protection-unified-labeling-client"></a>Devez-vous déployer le client d’étiquetage unifié Azure Information Protection ?
+## <a name="should-you-deploy-the-azure-information-protection-unified-labeling-client"></a>Devez-vous déployer le client d’étiquetage unifié Azure Information Protection?
 
-Déployez le client d’étiquetage unifié Azure Information Protection si vous utilisez des [étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels), et que l’une des conditions suivantes s’applique :
+Déployez le client d’étiquetage unifié Azure Information Protection si vous utilisez des [étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels), et que l’une des conditions suivantes s’applique:
 
 - Vous souhaitez classer (et éventuellement protéger) des documents et des messages électroniques en sélectionnant des étiquettes dans vos applications Office (Word, Excel, PowerPoint, Outlook) sur les ordinateurs Windows.
 
@@ -69,9 +71,11 @@ Déployez le client d’étiquetage unifié Azure Information Protection si vous
 
 - Vous souhaitez exécuter des scripts qui classifient (et éventuellement protègent) des documents à l’aide de commandes PowerShell.
 
+- Vous souhaitez tester un service actuellement en version préliminaire qui découvre, classifie (et éventuellement protège) les fichiers qui sont stockés en local.
+
 - Vous souhaitez afficher des documents protégés lorsqu’une application native permettant d’afficher le fichier n’est pas installée ou ne parvient pas à ouvrir ces documents.
 
-Exemple montrant le complément Office pour le Azure Information Protection client d’étiquetage unifié, affichant le nouveau bouton **sensibilité** sur le ruban et la barre de Azure information Protection facultative :
+Exemple montrant le complément Office pour le Azure Information Protection client d’étiquetage unifié, affichant le nouveau bouton **sensibilité** sur le ruban et la barre de Azure information Protection facultative:
 
 ![Barre Azure Information Protection avec la stratégie par défaut](../media/v2word2016-calloutsv2.png)
 
@@ -85,7 +89,7 @@ Utilisez les sections suivantes pour plus d’informations sur l’installation 
 
 Quand le client est installé, utilisez l’option **Aide et commentaires** pour ouvrir la boîte de dialogue **Microsoft Azure Information Protection** :
 
-- À partir d’une application Office : Dans l’onglet dossier de **démarrage** , dans le groupe **sensibilité** , sélectionnez **sensibilité**, puis sélectionnez **aide et commentaires**.
+- À partir d’une application Office: Dans l’onglet dossier de **démarrage** , dans le groupe **sensibilité** , sélectionnez **sensibilité**, puis sélectionnez **aide et commentaires**.
 
 - Depuis l’Explorateur de fichiers : Cliquez avec le bouton droit sur un ou plusieurs fichiers ou sur un dossier, sélectionnez **Classifier et protéger**, puis **Aide et commentaires**. 
 
@@ -95,9 +99,9 @@ Le **lien en savoir plus** , par défaut, est dirigé vers le site Web [Azure in
 
 Le lien **signaler un problème** s’affiche uniquement si vous spécifiez un [paramètre avancé](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users). Quand vous configurez ce paramètre, vous spécifiez un lien HTTP, comme l’adresse e-mail de votre support technique. 
 
-Les **journaux d’exportation** collectent et attachent automatiquement les fichiers journaux de l’Azure information protection client d’étiquetage unifié si vous avez été invité à les envoyer à support Microsoft. Cette option peut également être utilisée par les utilisateurs finaux pour envoyer ces fichiers journaux à votre support technique.
+Les **journaux d’exportation** collectent et attachent automatiquement les fichiers journaux de l’Azure information protection client d’étiquetage unifié si vous avez été invité à les envoyer à support Microsoft. Cette option peut également être utilisée par les utilisateurs finaux pour envoyer ces fichiers journaux à votre support technique. Vous pouvez également utiliser l’applet de commande PowerShell [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) (nécessite la version préliminaire du client).
 
-Les **paramètres de réinitialisation** déconnectent l’utilisateur, supprime les étiquettes de sensibilité et les stratégies d’étiquette actuellement téléchargées, puis réinitialise les paramètres utilisateur pour le service Azure Rights Management.
+Les **paramètres** de réinitialisation déconnectent l’utilisateur, supprime les étiquettes de sensibilité et les stratégies d’étiquette actuellement téléchargées, puis réinitialise les paramètres utilisateur pour le service Azure Rights Management.
 
 > [!NOTE]
 > Si vous rencontrez des problèmes techniques avec le client, consultez [options de support et ressources](../information-support.md#support-options-and-community-resources)de la communauté.
@@ -118,7 +122,7 @@ Les **paramètres de réinitialisation** déconnectent l’utilisateur, supprime
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
-- Les clés de Registre et les paramètres suivants sont supprimés. Si les paramètres d’une de ces clés de Registre ont des valeurs personnalisées, ils doivent être reconfigurés après la réinitialisation du client. 
+- Les clés de Registre et les paramètres suivants sont supprimés. Si les paramètres d’une de ces clés de Registre ont des valeurs personnalisées, ils doivent être reconfigurés après la réinitialisation du client.
     
     En général, pour les réseaux d’entreprise, ces paramètres sont configurés à l’aide de la stratégie de groupe, auquel cas ils sont automatiquement réappliqués lorsque la stratégie de groupe est actualisée sur l’ordinateur. Par contre, certains paramètres peuvent avoir été configurés ponctuellement, par le biais d’un script ou manuellement. Dans ce cas, vous devez prendre des mesures supplémentaires pour reconfigurer ces paramètres. Par exemple, les ordinateurs peuvent exécuter un script ponctuellement afin de configurer des paramètres pour une redirection vers Azure Information Protection, car vous procédez à la migration depuis AD RMS et vous disposez toujours d’un point de connexion de service sur votre réseau. Après la réinitialisation du client, l’ordinateur doit réexécuter ce script.
     
@@ -158,6 +162,14 @@ Après avoir installé le client d’étiquetage unifié Azure Information Prote
 
 - Téléchargez un guide d’utilisation personnalisable : [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
+## <a name="installing-the-azure-information-protection-scanner"></a>Installation du scanneur Azure Information Protection
+
+La version actuelle du scanneur pour le client d’étiquetage unifié est en version préliminaire pour le test. Au cours de cette version préliminaire, installez la préversion actuelle du client d’étiquetage unifié à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+Si vous installez le scanneur pour la première fois sur un ordinateur, téléchargez et installez ce client, puis suivez les instructions de [la procédure de déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement les fichiers](../deploy-aip-scanner.md).
+
+Si vous mettez à niveau le scanneur à partir du client Azure Information Protection (Classic), consultez la section [Upgrading the Azure information protection scanner](#upgrading-the-azure-information-protection-scanner) pour obtenir des instructions.
+
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client"></a>Mise à niveau et maintenance du client d’étiquetage unifié Azure Information Protection
 
 > [!NOTE]
@@ -174,6 +186,66 @@ Si vous effectuez une mise à niveau à partir du client Azure Information Prote
 Lorsque vous mettez à niveau manuellement, ne désinstallez la version précédente que si vous changez de méthode d’installation. Par exemple, si vous passez de la version du fichier exécutable (.exe) du client à la version du programme d’installation (.msi) Windows du client. Ou si vous devez installer une version antérieure du client. Par exemple, vous avez installé la préversion actuelle pour la tester et vous devez maintenant revenir à la version actuelle en disponibilité générale.
 
 Utilisez l' [historique des versions et la stratégie de support](unifiedlabelingclient-version-release-history.md) pour comprendre la stratégie de prise en charge pour le client d’étiquetage unifié Azure information protection, les versions actuellement prises en charge et les nouveautés et modifications des versions prises en charge. 
+
+### <a name="upgrading-the-azure-information-protection-scanner"></a>Mise à niveau du scanneur Azure Information Protection
+
+Si vous utilisez actuellement le scanneur de Azure Information Protection à partir du client Azure Information Protection (Classic), vous pouvez le mettre à niveau pour utiliser des types d’informations sensibles et des étiquettes de sensibilité publiées à partir de la & de sécurité d’Office 365 Le centre de conformité (ou le Microsoft 365 Security Center ou le centre de conformité Microsoft 365).
+
+#### <a name="to-upgrade-the-scanner-to-the-preview-version"></a>Pour mettre à niveau le scanneur vers la version préliminaire
+
+La procédure de mise à niveau du scanneur dépend de la version du client Azure Information Protection (Classic) en cours d’exécution :
+
+- [Mettre à niveau à partir de la version 1.48.204.0 et versions ultérieures](#upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client)
+
+- [Mise à niveau à partir de versions antérieures à 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
+
+Notez que contrairement au scanneur du client Azure Information Protection (Classic), cette version préliminaire du scanneur du client unifié ne prend pas en charge l’exécution sur un ordinateur déconnecté.
+
+La mise à niveau crée une nouvelle base de données nommée **\<AIPScannerUL_ profile_name >** , et la base de données de l’analyseur précédente est conservée au cas où vous en aurez besoin pour la version précédente. Si vous êtes certain que vous n’avez pas besoin de la base de données de l’analyseur précédente, vous pouvez la supprimer. Étant donné que la mise à niveau crée une nouvelle base de données, le moteur de base de données analyse tous les fichiers la première fois qu’elle est exécutée.
+
+##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>Mettre à niveau à partir de Azure Information Protection la version 1.48.204.0 client (Classic) version et versions ultérieures de ce client
+
+1. Sur l’ordinateur du scanneur, arrêtez le service du scanneur, **Scanneur Azure Information Protection**.
+
+2. Effectuez une mise à niveau vers le client d’étiquetage unifié Azure Information Protection en téléchargeant et en installant la version préliminaire du client d’étiquetage unifield à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+3. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le profil de votre scanneur. Par exemple : `Update-AIPScanner –Profile Europe`.
+    
+    Cette étape permet de créer une base de données portant le nom **\<AIPScannerUL_ profile_name >**
+
+4. Redémarrez le service **Scanneur Azure Information Protection**.
+
+Vous pouvez maintenant utiliser le reste des instructions dans [déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement les fichiers](../deploy-aip-scanner.md), en omettant l’étape d’installation du scanneur. Étant donné que le scanneur est déjà installé, il n’y a aucune raison de l’installer à nouveau.
+
+##### <a name="upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040"></a>Mise à niveau à partir des versions du client Azure Information Protection (Classic) antérieures à 1.48.204.0
+
+> [!IMPORTANT]
+> Pour un chemin de mise à niveau sans heurts, n’installez pas le client d’étiquetage unifié Azure Information Protection sur l’ordinateur exécutant le scanneur comme première étape de mise à niveau du scanneur. Utilisez plutôt les instructions de mise à niveau suivantes.
+
+À partir de la version 1.48.204.0, le scanneur obtient ses paramètres de configuration à partir du Portail Azure, à l’aide d’un profil de configuration. La mise à niveau du scanneur implique de demander au scanneur d’utiliser cette configuration en ligne et le client d’étiquetage unifié. la configuration hors connexion pour le scanneur n’est pas prise en charge.
+
+1. Utilisez le portail Azure pour créer un nouveau profil de scanneur qui inclut des paramètres pour le scanneur et vos référentiels de données avec tous les paramètres dont ils ont besoin. Pour obtenir de l’aide pour cette étape, consultez la section [configurer le scanneur dans la portail Azure](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) dans les instructions de déploiement de l’analyseur.
+
+2. Sur l’ordinateur du scanneur, arrêtez le service du scanneur, **Scanneur Azure Information Protection**.
+
+3. Effectuez une mise à niveau vers le client d’étiquetage unifié Azure Information Protection en téléchargeant et en installant la version préliminaire du client d’étiquetage unifié à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+4. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le même nom de profil que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile Europe`
+
+5. Redémarrez le service **Scanneur Azure Information Protection**.
+
+Vous pouvez maintenant utiliser le reste des instructions dans [déploiement de l’analyseur de Azure information protection pour classifier et protéger automatiquement les fichiers](../deploy-aip-scanner.md), en omettant l’étape d’installation du scanneur. Étant donné que le scanneur est déjà installé, il n’y a aucune raison de l’installer à nouveau.
+
+###### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>Mise à niveau selon une séquence différente des étapes recommandées
+
+Lorsque vous effectuez une mise à niveau à partir d’une version antérieure à 1.48.204.0 et que vous ne configurez pas le scanneur dans le Portail Azure avant d’exécuter la commande Update-AIPScanner, vous n’avez pas de nom de profil à spécifier pour identifier les paramètres de configuration de votre analyseur pour la mise à niveau traiter. 
+
+Dans ce scénario, lorsque vous configurez le scanneur dans le portail Azure, vous devez spécifier exactement le même nom de profil que celui utilisé lors de l’exécution de la commande Update-AIPScanner. Si le nom ne correspond pas, le scanneur ne sera pas configuré pour vos paramètres. 
+
+> [!TIP]
+> Pour identifier les scanneurs dont la configuration est incorrecte, utilisez le panneau **Azure Information Protection - Nœuds** dans le portail Azure.
+>  
+> Pour les scanneurs disposant d’une connexion Internet, ils affichent le nom de leur ordinateur avec le numéro de version GA du client Azure Information Protection, mais aucun nom de profil. Seuls les scanneurs portant le numéro de version 1.41.51.0 ne doivent pas afficher de nom de profil dans ce panneau. 
 
 ## <a name="uninstalling-the-azure-information-protection-unified-labeling-client"></a>Désinstallation du client d’étiquetage unifié Azure Information Protection
 

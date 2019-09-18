@@ -1,17 +1,17 @@
 ---
 title: mip::ProtectionProfile, classe
-description: Documente la classe MIP::p rotectionprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+description: Documente la classe MIP ::p rotectionprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 08/27/2019
-ms.openlocfilehash: aa660990885356f887bb310e7049d166e3bdc190
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: dcd50c403f20486e479fc00016ed6c0ef8885efa
+ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057490"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070495"
 ---
 # <a name="class-mipprotectionprofile"></a>mip::ProtectionProfile, classe 
 [ProtectionProfile](class_mip_protectionprofile.md) est la classe racine utilisée pour effectuer des opérations de protection.
@@ -21,13 +21,18 @@ Une application doit créer un [ProtectionProfile](class_mip_protectionprofile.m
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Obtient les paramètres utilisés par [ProtectionProfile](class_mip_protectionprofile.md) lors de son initialisation et tout au long de sa durée de vie.
-public void ListEnginesAsync (const std:: shared_ptr\<void\>& Context)  |  Démarre une opération d’énumération de moteurs.
+public void ListEnginesAsync (const std :: shared_ptr\<void\>& Context)  |  Démarre une opération d’énumération de moteurs.
 public std::vector\<std::string\> ListEngines()  |  Répertorie les moteurs.
-public void AddEngineAsync (const ProtectionEngine:: Settings & Settings, const std:\<:\>shared_ptr void & Context)  |  Démarre l’ajout d’un nouveau moteur de protection au profil.
-public std:: shared_ptr\<ProtectionEngine\> AddEngine (const ProtectionEngine:: Settings & Settings)  |  Ajoute un nouveau moteur de protection au profil.
+public void AddEngineAsync (const ProtectionEngine :: Settings & Settings, const std :\<:\>shared_ptr void & Context)  |  Démarre l’ajout d’un nouveau moteur de protection au profil.
+public std :: shared_ptr\<ProtectionEngine\> AddEngine (const ProtectionEngine :: Settings & Settings)  |  Ajoute un nouveau moteur de protection au profil.
 public void DeleteEngineAsync(const std::string& engineId, const std::shared_ptr\<void\>& context)  |  Démarre la suppression du moteur de protection avec l’ID spécifié. Toutes les données du moteur spécifié seront supprimées.
 public void DeleteEngine(const std::string& engineId)  |  Supprime le moteur de protection avec l’ID spécifié. Toutes les données du moteur spécifié seront supprimées.
-  
+public static MIP_API void _ _ cdecl Mip ::P rotectionProfile :: LoadAsync | Paramètres utilisés par ProtectionProfile lors de son initialisation et tout au long de sa durée de vie
+public static MIP_API std :: shared_ptr&lt;ProtectionProfile&gt; _ _ cdecl Mip ::P rotectionprofile :: Load | Chargement d’un profil en fonction des paramètres fournis.
+public static const MIP_API Char * _ _ cdecl Mip ::P rotectionProfile :: GetVersion | Obtient la version de la bibliothèque.
+public static MIP_API std :: shared_ptr&lt;PublishingLicenseInfo&gt; _ _ cdecl Mip ::P rotectionprofile :: GetPublishingLicenseInfo | Crée un conteneur pour les détails d’une licence de publication et peut être utilisé pour créer un gestionnaire de protection. 
+
+
 ## <a name="members"></a>Membres
   
 ### <a name="getsettings-function"></a>GetSettings fonction)
@@ -92,3 +97,34 @@ Supprime le moteur de protection avec l’ID spécifié. Toutes les données du 
 Paramètres :  
 * **id** : ID unique du moteur.
 
+### <a name="loadasync-function"></a>LoadAsync, fonction
+Paramètres utilisés par ProtectionProfile lors de son initialisation et tout au long de sa durée de vie 
+
+[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) est appelé en cas de réussite ou d’échec.
+
+Paramètres :
+* **paramètres**: Paramètres utilisés par ProtectionProfile lors de son initialisation et tout au long de sa durée de vie.
+* **contexte**: Ce même contexte sera transféré à ProtectionProfile :: observer :: OnLoadSuccess ou ProtectionProfile :: observer :: OnLoadFailure en l'.
+
+### <a name="load-function"></a>Load, fonction
+Chargement d’un profil en fonction des paramètres fournis.
+
+[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) est appelé en cas de réussite ou d’échec.
+
+Paramètres :
+* **paramètres**: Paramètres utilisés par ProtectionProfile lors de son initialisation et tout au long de sa durée de vie.
+
+**Retourne**: Profil nouvellement créé.
+
+### <a name="getversion-function"></a>GetVersion, fonction
+Obtient la version de la bibliothèque. 
+
+**Retourne**: Version de la bibliothèque.
+
+### <a name="getpublishinglicenseinfo-function"></a>GetPublishingLicenseInfo fonction)
+Crée un conteneur pour les détails d’une licence de publication et peut être utilisé pour créer un gestionnaire de protection. 
+
+Paramètres :
+* **serializedPublishingLicense**: Licence de publication sérialisée..
+
+**Retourne**: Un détenteur pour les détails d’une licence de publication 

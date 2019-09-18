@@ -3,7 +3,7 @@ title: Configurations personnalisées-Azure Information Protection client d’é
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/12/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1c8391bd4c7ab4cf57e4f0ddeeb6310259e7cceb
-ms.sourcegitcommit: af478aae5b093aa604e69b210de4094aa664f658
+ms.openlocfilehash: 004f37973d045bcf1a2809a226c150f5bc749681
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923309"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060075"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -655,7 +655,7 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
 Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
 
-Lorsque le client d’étiquetage unifié Azure Information Protection est utilisé dans les applications Office, il recherche des informations sensibles dans les documents lorsqu’ils sont enregistrés pour la première fois. Si le paramètre avancé [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) n’est pas défini sur **false**, tous les types d’informations sensibles prédéfinis détectés sont ensuite envoyés à Azure information protection Analytics.
+Lorsque le client d’étiquetage unifié Azure Information Protection est utilisé dans les applications Office, il recherche des informations sensibles dans les documents lorsqu’ils sont enregistrés pour la première fois. Si le paramètre avancé [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) n’est pas défini sur **false**, les types d’informations sensibles prédéfinis et personnalisés (client en version préliminaire uniquement) trouvés sont ensuite envoyés à Azure information protection Analytics.
 
 Pour modifier ce comportement afin que les types d’informations sensibles détectés par le client d’étiquetage unifié ne soient pas envoyés à Azure Information Protection Analytics, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
 
@@ -944,14 +944,15 @@ Définissez le niveau de journalisation sur l'une des valeurs suivantes :
 
 - **Erreur** : erreurs uniquement.
 
-- **Info** : journalisation minimale, qui n’inclut aucun ID d’événement.
+- **Avertir** : Erreurs et avertissements.
+
+- **Info** : Journalisation minimale, qui n’inclut aucun ID d’événement (paramètre par défaut pour le scanneur).
 
 - **Debug** : Informations complètes.
 
 - **Trace** : Journalisation détaillée (paramètre par défaut pour les clients).
 
 Ce paramètre de registre ne modifie pas les informations qui sont envoyées à Azure Information Protection pour la [création de rapports centraux](../reports-aip.md).
-
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez personnalisé le client d’étiquetage unifié Azure Information Protection, consultez les ressources suivantes pour obtenir des informations supplémentaires dont vous pouvez avoir besoin pour prendre en charge ce client:

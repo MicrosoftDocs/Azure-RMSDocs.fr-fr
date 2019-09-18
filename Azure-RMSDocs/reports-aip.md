@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 09/05/2019
+ms.date: 09/17/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9108dbe9712b57dd5bef59c5258dccccaf137d86
-ms.sourcegitcommit: 91982b08ba8ce734b6d82382db227fcaa2b15e56
+ms.openlocfilehash: e644dfbe89df354b1366164b6b23902ac48bb8f8
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872358"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060183"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -42,7 +42,7 @@ Utilisez Azure Information Protection Analytics pour la création de rapports ce
 Les données que vous voyez sont agrégées à partir de vos clients et scanneurs Azure Information Protection, à partir des [clients et des services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)et depuis les [journaux d’utilisation](log-analyze-usage.md)de la protection.
 
 > [!NOTE]
-> Actuellement, Azure Information Protection Analytics n’inclut pas les types d’informations personnalisées pour les clients et les services qui prennent en charge l’étiquetage unifié.
+> Actuellement, à l’exception de la préversion du client d’étiquetage unifié, Azure Information Protection Analytics n’inclut pas les types d’informations personnalisées pour les clients et les services qui prennent en charge l’étiquetage unifié.
 
 Par exemple, vous serez en mesure de voir ce qui suit :
 
@@ -119,7 +119,7 @@ Pour générer ces rapports, les points de terminaison envoient les types suivan
 
 - [Types d’informations sensibles prédéfinis](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) qui ont été détectés dans le contenu.
     
-    Si vous utilisez Azure Information Protection étiquettes avec des conditions personnalisées, les noms de vos types d’informations personnalisées sont également envoyés. Les types d’informations sensibles personnalisés que vous créez dans le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft 365 ou le centre de conformité Microsoft 365 ne sont pas envoyés.
+    Si vous utilisez Azure Information Protection étiquettes avec des conditions personnalisées, les noms de vos types d’informations personnalisées sont également envoyés. À l’exception de la préversion du client d’étiquetage unifié, les types d’informations sensibles personnalisés que vous créez dans votre centre d’étiquetage ne sont pas envoyés.
 
 - Version du client Azure Information Protection.
 
@@ -183,7 +183,7 @@ Détails :
     > [!NOTE] 
     > Si votre locataire a été migré vers le magasin d’étiquetage unifié, vous ne pouvez pas utiliser le rôle d’administrateur Azure Information Protection. [Plus d’informations](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
-2. Par ailleurs, vous devez disposer de l’un des [rôles Azure Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-accounts-and-users) ou [rôles Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard pour accéder à votre espace de travail Azure Log Analytics :
+2. Par ailleurs, vous devez disposer de l’un des [rôles Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) ou [rôles Azure](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) standard pour accéder à votre espace de travail Azure Log Analytics :
     
     - Pour créer l’espace de travail Log Analytics ou des requêtes personnalisées :
     
@@ -284,7 +284,7 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 |-----------|-----------|
 |Access|Un document protégé a été ouvert avec succès, identifié par le nom de fichier s’il est suivi, ou ID s’il n’est pas suivi.|
 |AccessDenied|L’accès à un document protégé a été refusé, identifié par le nom de fichier s’il est suivi, ou ID s’il n’est pas suivi.|
-|Temps|Heure de l’événement: UTC au format AAAA-MM-JJThh: MM: SS|
+|Time|Heure de l’événement: UTC au format AAAA-MM-JJThh: MM: SS|
 |Utilisateur|Utilisateur : Format UPN ou domaine\utilisateur|
 |ItemPath|Chemin d’accès complet de l’élément ou objet de l’e-mail|
 |ItemName|Nom de fichier ou objet de l’e-mail |

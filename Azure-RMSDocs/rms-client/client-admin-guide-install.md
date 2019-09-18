@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs pour le
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 32805aca55871b502671dec0eec47970d1148a8a
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 001e2a75ab8cb756846c934d00078f303a95922d
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793653"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060142"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guide de l’administrateur : Installer le client Azure Information Protection pour les utilisateurs
 
@@ -42,9 +42,9 @@ Ensuite, vérifiez les prérequis supplémentaires qui peuvent être nécessaire
     
     Si la visionneuse Azure Information Protection est installée séparément, Microsoft .NET Framework version 4.5.2 minimum est requis. Si cette version est manquante, le programme d’installation exécutable ne procède pas au téléchargement ni à l’installation.
 
-- Windows PowerShell version 4.0
+- Version minimale de Windows PowerShell 4,0
     
-    Le module PowerShell pour le client nécessite Windows PowerShell version 4.0, que vous devrez peut-être installer sur les systèmes d’exploitation plus anciens. Pour en savoir plus, consultez la page relative à [l’installation de Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). Ce programme d’installation ne vérifie pas ou n’installe pas cette condition préalable pour vous. Pour vérifier la version de Windows PowerShell que vous exécutez, saisissez la chaîne `$PSVersionTable` lors d’une session PowerShell.
+    Le module PowerShell pour le client nécessite une version minimale de 4,0 pour Windows PowerShell, qui devra peut-être être installé sur des systèmes d’exploitation plus anciens. Pour en savoir plus, consultez la page relative à [l’installation de Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). Ce programme d’installation ne vérifie pas ou n’installe pas cette condition préalable pour vous. Pour vérifier la version de Windows PowerShell que vous exécutez, saisissez la chaîne `$PSVersionTable` lors d’une session PowerShell.
 
 - Résolution d’écran supérieure à 800 x 600
     
@@ -74,7 +74,7 @@ Ensuite, vérifiez les prérequis supplémentaires qui peuvent être nécessaire
     
     Pour Office 2013 et versions ultérieures, configurez la stratégie de groupe pour vous assurer que le complément **Microsoft Azure Information Protection** pour les applications Office est toujours activé. Sans cette configuration, le complément Microsoft Azure Information Protection peut être désactivé et les utilisateurs ne seront pas en mesure d’étiqueter leurs documents et e-mails dans leur application Office.
     
-    - Pour Outlook: Utilisez le paramètre de stratégie de groupe documenté dans [Contrôle de l’administrateur système sur les compléments](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) de la documentation Office.
+    - Pour Outlook : Utilisez le paramètre de stratégie de groupe documenté dans [Contrôle de l’administrateur système sur les compléments](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) de la documentation Office.
     
     - Pour Word, Excel et PowerPoint : Utilisez le paramètre de stratégie de groupe **Liste des compléments gérés** documenté dans l’article du support [Aucun complément chargé en raison des paramètres de stratégie de groupe pour les programmes Office 2013 et Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off). 
         
@@ -195,17 +195,17 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
 
 2. Pour chaque ordinateur qui exécute le fichier .msi, vous devez vérifier que les dépendances logicielles suivantes sont établies. Par exemple, empaquetez-les avec la version .msi du client ou déployez-les uniquement sur les ordinateurs qui répondent à ces dépendances :
     
-    |Version d’Office|Système d’exploitation|Logiciels|Action|
+    |Version d’Office|Système d'exploitation|Logiciels|Action|
     |--------------------|--------------|----------------|---------------------|
-    |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installer|
-    |Office 2013|Toutes les versions prises en charge|64 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installer|
-    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installer|
-    |Office 2016|Toutes les versions prises en charge|64 bits: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bits: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installer|
-    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installer|
+    |Toutes les versions, à l’exception d’Office 365 1902 ou ultérieur|Windows 10 version 1809 uniquement, builds du système d’exploitation postérieures à 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installation|
+    |Office 2013|Toutes les versions prises en charge|64 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bits: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Version : 1.0|Installation|
+    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installation|
+    |Office 2016|Toutes les versions prises en charge|64 bits: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bits: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Version : 1.0|Installation|
+    |Office 2010|Toutes les versions prises en charge|[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version : 2.1|Installation|
     |Office 2010|Windows 8.1 et Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB2843630 ou KB2919355 n’est pas installé|
-    |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer|
+    |Office 2010|Windows 8 et Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installation|
     |Office 2010|Windows 7 et Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Numéro de version inclus dans le nom de fichier : v3|Installer si KB3125574 n’est pas installé|
-    |Non applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Installer|
+    |Non applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Installation|
     |Non applicable|Windows 7|KB2627273 <br /><br /> Numéro de version inclus dans le nom de fichier : v4|Désinstaller l’interface|
 
 3. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/** , par exemple, `AzInfoProtection.msi /quiet`. Toutefois, vous devrez peut-être spécifier des paramètres d’installation supplémentaires qui sont documentés dans les [instructions du programme d’installation exécutable](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).  

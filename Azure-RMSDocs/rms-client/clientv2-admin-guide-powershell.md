@@ -4,19 +4,19 @@ description: Instructions et informations permettant aux administrateurs de gér
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/27/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a3cca2ac2e3df8f773d6a818eb664bf5c72263aa
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: d14ab94a045a31ccf22b862d91c224246866d48d
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056439"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060046"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guide de l’administrateur : Utilisation de PowerShell avec le client unifié Azure Information Protection
 
@@ -33,7 +33,7 @@ Les applets de commande sont installées avec le module PowerShell **AzureInform
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|Dans le cas d’un dossier partagé, identifiez tous les fichiers avec une étiquette spécifique.|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Pour un dossier partagé, inspectez le contenu du fichier puis étiquetez automatiquement les fichiers sans étiquette, selon les conditions que vous avez spécifiées.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Pour un dossier partagé, appliquez une étiquette spécifiée à tous les fichiers dépourvus d’étiquette.|
-|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Étiquetez les fichiers de manière interactive, en utilisant un autre compte d’utilisateur.|
+|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Étiquetez les fichiers de manière non interactive, par exemple à l’aide d’un script qui s’exécute selon une planification.|
 
 > [!TIP]
 > Pour utiliser des applets de commande avec des chemins comprenant plus de 260 caractères, utilisez le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) disponible à compter de la version 1607 de Windows 10 :<br /> **Stratégie** >  >  >  de l’ordinateur local Configuration ordinateur modèles d’administration tous les paramètres activer les chemins longs Win32 >  
@@ -59,7 +59,7 @@ Outre la configuration requise pour l’installation du module AzureInformationP
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Prérequis 1 : Le service Azure Rights Management doit être activé
 
-Si votre locataire Azure Information Protection n’est pas activé pour appliquer la protection, consultez les instructions d' [activation d’Azure Rights Management](../activate-service.md).
+Si votre locataire Azure Information Protection n’est pas activé, consultez les instructions pour [[activation du service de protection à partir de Azure information protection](../activate-service.md).
 
 #### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Prérequis 2 : Pour supprimer la protection des fichiers pour les autres utilisateurs en utilisant votre propre compte
 
@@ -84,11 +84,14 @@ Lorsque le jeton de Azure AD expire, réexécutez l’applet de commande pour ac
 
 Si vous exécutez cette applet de commande sans paramètres, le compte acquiert un jeton d’accès qui est valide 90 jours ou jusqu’à ce que votre mot de passe expire.  
 
-Pour contrôler à quel moment le jeton d’accès expire, exécutez cette applet de commande avec des paramètres. Cette configuration vous permet de configurer le jeton d’accès dans Azure AD pendant un an, deux ans ou pour ne jamais expirer. Vous avez besoin de deux applications inscrites dans Azure Active Directory: Une application **Web / API** et une **application native**. Les paramètres de Set-AIPAuthentication utilisent des valeurs de ces applications.
+Pour contrôler à quel moment le jeton d’accès expire, exécutez cette applet de commande avec des paramètres. Cette configuration vous permet de configurer le jeton d’accès dans Azure AD pendant un an, deux ans ou pour ne jamais expirer. Les paramètres de Set-AIPAuthentication utilisent les valeurs d’un processus d’inscription d’application dans Azure AD.
 
 Après avoir exécuté cette applet de commande, vous pouvez exécuter les applets de commande d’étiquetage dans le contexte du compte de service que vous avez créé.
 
 ### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>Pour créer et configurer les applications Azure AD pour Set-AIPAuthentication
+
+> [!NOTE]
+> Si vous utilisez la préversion actuelle du client d’étiquetage unifié n’utilisez pas cette procédure mais, à la place, consultez [pour créer et configurer les applications Azure AD pour le client set-AIPAuthentication-Preview](#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client).
 
 1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com/).
 
@@ -184,6 +187,80 @@ Lorsque vous exécutez cette commande pour la première fois, vous êtes invité
 2. Exécutez l’applet de commande Set-AIPAuthentication avec le paramètre *OnBeHalfOf* , en spécifiant comme valeur la variable que vous venez de créer. Par exemple :
     
         Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -OnBehalfOf $pscreds
+
+
+#### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client"></a>Pour créer et configurer les applications Azure AD pour le client set-AIPAuthentication-preview
+
+Utilisez la procédure suivante comme autre instruction uniquement si vous avez installé la version préliminaire du client d’étiquetage unifié. 
+
+Pour cette version du client, vous devez créer une nouvelle inscription d’application pour les paramètres *AppID* et *AppSecret* pour Set-AIPAuthentication. Si vous avez effectué une mise à niveau à partir d’une version précédente du client et créé une inscription d’application pour les paramètres *WebAppId* et *NativeAppId* précédents, ceux-ci ne fonctionneront pas avec cette version du client.
+
+1. Dans une nouvelle fenêtre de navigateur, connectez-vous au [portail Azure](https://portal.azure.com/).
+
+2. Pour le locataire Azure ad que vous utilisez avec Azure information protection, accédez à **Azure Active Directory** > **gérer** > les**inscriptions d’applications**. 
+
+3. Sélectionnez **+ nouvel enregistrement**. Dans le panneau **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
+
+   - **Nom**:`AIPv2OnBehalfOf`
+        
+        Si vous le souhaitez, spécifiez un autre nom. Il doit être unique pour chaque locataire.
+    
+    - **Types de comptes pris en charge**: **Comptes dans ce répertoire d’organisation uniquement**
+    
+    - **URI de redirection (facultatif)** : **Web** et`https://localhost`
+
+4. Dans le panneau **AIPv2OnBehalfOf** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. Cette valeur est utilisée pour le paramètre *AppID* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
+
+5. Toujours dans le panneau **AIPv2OnBehalfOf** , dans le menu **gérer** , sélectionnez **certificats & secrets**.
+
+6. Dans le panneau **AIPv2OnBehalfOf-certificats & secrets** , dans la section **secrets client** , sélectionnez **+ nouvelle clé secrète client**.
+
+7. Pour **Ajouter une clé secrète client**, spécifiez les éléments suivants, puis sélectionnez **Ajouter**:
+    
+    - **Description**:`Azure Information Protection unified labeling client`
+    - **Expire**le: Spécifiez votre choix de durée (1 an, 2 ans ou n’expire jamais)
+
+8. De retour dans le panneau **AIPv2OnBehalfOf-certificats & secrets** , dans la section **secrets clients** , copiez la chaîne correspondant à la **valeur**. Cette chaîne ressemble à l’exemple suivant: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. Pour être sûr de copier tous les caractères, sélectionnez l’icône à **copier dans le presse-papiers**. 
+    
+    Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée. Comme pour toutes les informations sensibles que vous utilisez, stockez la valeur enregistrée en toute sécurité et restreignez l’accès à celle-ci.
+
+9. Dans le menu **gérer** , sélectionnez **autorisations d’API**.
+
+10. Dans le panneau **autorisations AIPv2OnBehalfOf-API** , sélectionnez **+ Ajouter une autorisation**.
+
+11. Dans le panneau **demander des autorisations d’API** , sélectionnez **Azure Rights Management Services** et, lorsque vous êtes invité à entrer le type d’autorisations dont votre application a besoin, sélectionnez autorisations de l' **application**.
+
+12. Pour **Sélectionner des autorisations**, développez **contenu** , puis sélectionnez les éléments suivants :
+    
+    -  **Content. DelegatedWriter** (toujours obligatoire)
+    -  **Content. Writer** (toujours obligatoire)
+    -  **Content.** superutilisateur (obligatoire si la [fonctionnalité de super utilisateur](../configure-super-users.md) est nécessaire) 
+    
+    La fonctionnalité de super utilisateur permet au compte de toujours déchiffrer le contenu. Par exemple, pour reprotéger des fichiers et inspecter des fichiers protégés par d’autres utilisateurs.
+
+13. Sélectionnez **Ajouter des autorisations**.
+
+14. Dans le panneau **autorisations AIPv2OnBehalfOf-API** , sélectionnez **accorder le consentement de l' \<administrateur pour le *nom* > de votre locataire** et sélectionnez **Oui** pour l’invite de confirmation.
+
+Vous avez maintenant terminé l’inscription de cette application avec un secret, vous êtes prêt à exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *AppID*et *AppSecret*. En outre, vous aurez besoin de votre ID de locataire. 
+
+> [!TIP]
+>Vous pouvez copier rapidement votre ID de locataire à l’aide de Portail Azure : **Azure Active Directory** > gérerl’IDderépertoiredespropriétés > . > 
+
+Dans notre exemple, avec l’ID de locataire 9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a :
+
+`Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a"`
+
+Lorsque vous exécutez cette commande pour la première fois, vous êtes invité à vous connecter, ce qui crée et stocke en toute sécurité le jeton d’accès de votre compte dans %localappdata%\Microsoft\MSIP. Après cette première connexion, vous pouvez étiqueter et protéger les fichiers de manière non interactive sur l’ordinateur. Toutefois, si vous utilisez un compte de service pour étiqueter et protéger des fichiers, et que ce compte de service ne peut pas se connecter de manière interactive, utilisez le paramètre *OnBehalfOf* avec set-AIPAuthentication:
+
+1. Créez une variable pour stocker les informations d’identification d’un compte Active Directory disposant de l’attribution de droits d’utilisateur pour se connecter de manière interactive. Par exemple :
+    
+        $pscreds = Get-Credential "scv_scanner@contoso.com"
+
+2. Exécutez l’applet de commande Set-AIPAuthentication avec le paramètre *OnBeHalfOf* , en spécifiant comme valeur la variable que vous venez de créer. Par exemple :
+    
+        Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour obtenir de l’aide sur les applets de commande lorsque `Get-Help <cmdlet name> -online`vous êtes dans une session PowerShell, tapez. Par exemple : 

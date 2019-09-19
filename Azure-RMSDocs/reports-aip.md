@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 09/17/2019
+ms.date: 09/18/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e644dfbe89df354b1366164b6b23902ac48bb8f8
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: 3257b194c539e59cc396e43c82499f94addfe625
+ms.sourcegitcommit: 326db0b8f1b46de502bcaaabbeda6efcd5a44441
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060183"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71101320"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -37,7 +37,7 @@ Utilisez Azure Information Protection Analytics pour la création de rapports ce
 
 - Identifiez les documents qui contiennent des informations sensibles susceptibles de mettre votre organisation en péril si elles ne sont pas protégées, et limitez les risques en suivant les recommandations.
 
-- Identifiez le moment où les utilisateurs internes ou externes accèdent à des documents protégés, et si l’accès a été accordé ou refusé.
+- Identifiez le moment où les utilisateurs internes ou externes accèdent à des documents protégés à partir d’ordinateurs Windows, et si l’accès a été accordé ou refusé.
 
 Les données que vous voyez sont agrégées à partir de vos clients et scanneurs Azure Information Protection, à partir des [clients et des services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)et depuis les [journaux d’utilisation](log-analyze-usage.md)de la protection.
 
@@ -181,7 +181,7 @@ Détails :
         - **Lecteur Sécurité**
     
     > [!NOTE] 
-    > Si votre locataire a été migré vers le magasin d’étiquetage unifié, vous ne pouvez pas utiliser le rôle d’administrateur Azure Information Protection. [Plus d’informations](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > Vous ne pouvez pas utiliser le rôle d’administrateur Azure Information Protection si votre locataire se trouve sur la [plateforme d’étiquetage unifiée](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
 
 2. Par ailleurs, vous devez disposer de l’un des [rôles Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) ou [rôles Azure](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) standard pour accéder à votre espace de travail Azure Log Analytics :
     

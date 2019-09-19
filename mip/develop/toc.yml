@@ -9,6 +9,8 @@
   items:
     - name: Installation et configuration du Kit de développement logiciel (SDK) MIP
       href: setup-configure-mip.md
+    - name: Implémenter la prise en charge AD RMS avec le kit SDK MIP
+      href: quick-app-adrms.md
     - name: C++
       items:
         - name: Initialisation d’applications (C++)

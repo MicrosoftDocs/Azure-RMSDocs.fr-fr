@@ -4,7 +4,7 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a71ed78a2fb528823adc4abaa5f2007256aca65c
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.openlocfilehash: 8934e23594ba51248e691ce2e52d69308cb320e5
+ms.sourcegitcommit: d5f046e34de0ad79b64d3f412999145b7d097e75
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070654"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127551"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -75,7 +75,13 @@ Si vous disposez d’une version 2 du client qui est ultérieure à 2.2.21.0, il
     
     - Comme avec le scanneur du client classique, le scanneur protège les fichiers Office et les fichiers PDF. Actuellement, vous ne pouvez pas configurer d’autres types de fichiers à protéger par cette version du scanneur.
     
+    - Problème connu : Les étiquettes nouvelles et renommées ne peuvent pas être sélectionnées en tant qu’étiquette par défaut pour le profil du scanneur ou les paramètres du référentiel. Contournement
+        - Pour les nouvelles étiquettes : Dans la Portail Azure, [Ajoutez l’étiquette](../configure-policy-add-remove-label.md) que vous souhaitez utiliser à la stratégie globale ou à une stratégie délimitée.
+        - Pour les étiquettes renommées : Dans le portail Azure, accédez à **Azure information protection** > **gérer** > l'**étiquetage unifié**, puis sélectionnez **publier**.
+    
     Vous pouvez mettre à niveau les analyseurs à partir du client Azure Information Protection (Classic). Après la mise à niveau, qui crée une base de données, le moteur de base de données analyse à nouveau tous les fichiers lors de sa première exécution. Pour obtenir des instructions, consultez [mise à niveau de l’analyseur de Azure information protection](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) à partir du Guide de l’administrateur.
+    
+    Pour plus d’informations, consultez l’annonce du billet de blog : [La version préliminaire du scanneur AIP d’étiquetage unifiée offre une montée en charge horizontale et bien plus encore.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
 
 - L’applet de commande PowerShell [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) a de nouveaux paramètres lorsque vous souhaitez [étiqueter des fichiers de manière non interactive](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), et une [nouvelle procédure pour inscrire une application dans Azure ad](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client). Les exemples de scénarios incluent le scanneur et les scripts PowerShell automatisés pour étiqueter les documents.
 

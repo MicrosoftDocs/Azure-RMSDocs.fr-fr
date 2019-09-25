@@ -4,19 +4,19 @@ description: Instructions et informations permettant aux administrateurs de gér
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d14ab94a045a31ccf22b862d91c224246866d48d
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: b1db49d2a6033301b5922e66bc76be190b6162af
+ms.sourcegitcommit: 437143e1f7f33aba46ffcc3900c31a763a2105c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060046"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227793"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guide de l’administrateur : Utilisation de PowerShell avec le client unifié Azure Information Protection
 
@@ -26,7 +26,7 @@ ms.locfileid: "71060046"
 
 Lorsque vous installez le client d’étiquetage unifié Azure Information Protection, les commandes PowerShell sont installées automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
-Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**, qui possède des applets de commande pour l’étiquetage. Par exemple :
+Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**, qui possède des applets de commande pour l’étiquetage. Exemple :
 
 |Étiquetage des applets de commande|Exemple d’utilisation|
 |----------------|---------------|
@@ -109,11 +109,11 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 
 4. Dans le panneau **AIPOnBehalfOf** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Cette valeur est utilisée pour le paramètre *WebAppId* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
-5. Toujours dans le panneau **AIPOnBehalfOf** , dans le menu **gérer** , sélectionnez **authentification**.
+5. Toujours dans le panneau **AIPOnBehalfOf** , dans l’encadré **gérer** , sélectionnez **authentification**.
 
 6. Dans le panneau **AIPOnBehalfOf-Authentication** , dans la section **Paramètres avancés** , activez la case à cocher **ID Tokens** , puis sélectionnez **Enregistrer**.
 
-7. Toujours dans le panneau **AIPOnBehalfOf-Authentication** , dans le menu **gérer** , sélectionnez **certificats & secrets**.
+7. Toujours dans le panneau **AIPOnBehalfOf-Authentication** , dans l’encadré **gérer** , sélectionnez **certificats & secrets**.
 
 8. Dans le panneau **AIPOnBehalfOf-certificats & secrets** , dans la section **secrets client** , sélectionnez **+ nouvelle clé secrète client**. 
 
@@ -126,7 +126,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     
     Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée. Comme pour toutes les informations sensibles que vous utilisez, stockez la valeur enregistrée en toute sécurité et restreignez l’accès à celle-ci.
 
-10. Toujours dans le panneau **AIPOnBehalfOf-certificats & secrets** , dans le menu **gérer** , sélectionnez **exposer une API**.
+10. Toujours dans le panneau **AIPOnBehalfOf-certificats & secrets** , dans l’encadré **gérer** , sélectionnez **exposer une API**.
 
 11. Dans le panneau **AIPOnBehalfOf-exposer une API** , sélectionnez **Set** pour l’option URI de l' **ID d’application** , et dans la valeur URI de l’ID d' **application** , remplacez **API** par **http**. Cette chaîne ressemble à l’exemple suivant: `http://d244e75e-870b-4491-b70d-65534953099e`. 
     
@@ -156,13 +156,13 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     
     Cette valeur est utilisée pour le paramètre NativeAppId lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
-18. Toujours dans le panneau **AIPClient** , dans le menu **gérer** , sélectionnez **authentification**.
+18. Toujours dans le panneau **AIPClient** , dans l’encadré **gérer** , sélectionnez **authentification**.
 
 19. Dans le panneau **AIPClient-Authentication** , spécifiez les éléments suivants, puis sélectionnez **Enregistrer**:
     - Dans la section **Paramètres avancés** , sélectionnez **ID jetons**.
     - Dans la section **type de client par défaut** , sélectionnez **Oui**.
 
-20. Toujours dans le panneau **AIPClient-Authentication** , dans le menu **gérer** , sélectionnez **autorisations API**.
+20. Toujours dans le panneau **AIPClient-Authentication** , dans le volet **gérer** , sélectionnez **autorisations API**.
 
 21. Dans le panneau **AIPClient-autorisations** , sélectionnez **+ Ajouter une autorisation**.
 
@@ -180,11 +180,11 @@ Exécutez cette commande dans le contexte du compte qui étiquettera et protége
 
 Lorsque vous exécutez cette commande pour la première fois, vous êtes invité à vous connecter, ce qui crée et stocke en toute sécurité le jeton d’accès de votre compte dans %localappdata%\Microsoft\MSIP. Après cette première connexion, vous pouvez étiqueter et protéger les fichiers de manière non interactive sur l’ordinateur. Toutefois, si vous utilisez un compte de service pour étiqueter et protéger des fichiers, et que ce compte de service ne peut pas se connecter de manière interactive, utilisez le paramètre *OnBehalfOf* avec set-AIPAuthentication:
 
-1. Créez une variable pour stocker les informations d’identification d’un compte Active Directory disposant de l’attribution de droits d’utilisateur pour se connecter de manière interactive. Par exemple :
+1. Créez une variable pour stocker les informations d’identification d’un compte Active Directory disposant de l’attribution de droits d’utilisateur pour se connecter de manière interactive. Exemple :
     
         $pscreds = Get-Credential "scv_scanner@contoso.com"
 
-2. Exécutez l’applet de commande Set-AIPAuthentication avec le paramètre *OnBeHalfOf* , en spécifiant comme valeur la variable que vous venez de créer. Par exemple :
+2. Exécutez l’applet de commande Set-AIPAuthentication avec le paramètre *OnBeHalfOf* , en spécifiant comme valeur la variable que vous venez de créer. Exemple :
     
         Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -OnBehalfOf $pscreds
 
@@ -211,7 +211,7 @@ Pour cette version du client, vous devez créer une nouvelle inscription d’app
 
 4. Dans le panneau **AIPv2OnBehalfOf** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. Cette valeur est utilisée pour le paramètre *AppID* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
-5. Toujours dans le panneau **AIPv2OnBehalfOf** , dans le menu **gérer** , sélectionnez **certificats & secrets**.
+5. Toujours dans le panneau **AIPv2OnBehalfOf** , dans l’encadré **gérer** , sélectionnez **certificats & secrets**.
 
 6. Dans le panneau **AIPv2OnBehalfOf-certificats & secrets** , dans la section **secrets client** , sélectionnez **+ nouvelle clé secrète client**.
 
@@ -224,23 +224,35 @@ Pour cette version du client, vous devez créer une nouvelle inscription d’app
     
     Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée. Comme pour toutes les informations sensibles que vous utilisez, stockez la valeur enregistrée en toute sécurité et restreignez l’accès à celle-ci.
 
-9. Dans le menu **gérer** , sélectionnez **autorisations d’API**.
+9. Dans **gérer** dans la barre latérale, sélectionnez **autorisations API**.
 
 10. Dans le panneau **autorisations AIPv2OnBehalfOf-API** , sélectionnez **+ Ajouter une autorisation**.
 
-11. Dans le panneau **demander des autorisations d’API** , sélectionnez **Azure Rights Management Services** et, lorsque vous êtes invité à entrer le type d’autorisations dont votre application a besoin, sélectionnez autorisations de l' **application**.
+11. Dans le panneau **demander des autorisations d’API** , vérifiez que vous êtes sous l’onglet **API Microsoft** , puis sélectionnez **Azure Rights Management Services**. Lorsque vous êtes invité à entrer le type d’autorisations dont votre application a besoin, sélectionnez autorisations de l' **application**.
 
 12. Pour **Sélectionner des autorisations**, développez **contenu** , puis sélectionnez les éléments suivants :
     
     -  **Content. DelegatedWriter** (toujours obligatoire)
+    -  **Content.** superutilisateur (obligatoire si la [fonctionnalité de super utilisateur](../configure-super-users.md) est nécessaire)
     -  **Content. Writer** (toujours obligatoire)
-    -  **Content.** superutilisateur (obligatoire si la [fonctionnalité de super utilisateur](../configure-super-users.md) est nécessaire) 
     
     La fonctionnalité de super utilisateur permet au compte de toujours déchiffrer le contenu. Par exemple, pour reprotéger des fichiers et inspecter des fichiers protégés par d’autres utilisateurs.
 
 13. Sélectionnez **Ajouter des autorisations**.
 
-14. Dans le panneau **autorisations AIPv2OnBehalfOf-API** , sélectionnez **accorder le consentement de l' \<administrateur pour le *nom* > de votre locataire** et sélectionnez **Oui** pour l’invite de confirmation.
+14. Dans le panneau **autorisations AIPv2OnBehalfOf-API** , sélectionnez **+ Ajouter une nouvelle autorisation** .
+
+15. Dans le panneau **demander des autorisations AIP** , sélectionnez les **API utilisées par mon organisation**et recherchez **service de synchronisation Microsoft information protection**.
+
+16. Dans le panneau **demander des autorisations d’API** , sélectionnez autorisations de l' **application**.
+
+17. Pour les **autorisations SELECT**, développez **UnifiedPolicy** , puis sélectionnez les éléments suivants :
+    
+    -  **UnifiedPolicy. locataire. Read**
+
+18. Sélectionnez **Ajouter des autorisations**.
+
+19. De retour dans le panneau autorisations d’API, sélectionnez **accorder le \<consentement de l’administrateur pour le *nom* > de votre locataire** et sélectionnez **Oui** pour l’invite de confirmation.
 
 Vous avez maintenant terminé l’inscription de cette application avec un secret, vous êtes prêt à exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *AppID*et *AppSecret*. En outre, vous aurez besoin de votre ID de locataire. 
 
@@ -253,17 +265,17 @@ Dans notre exemple, avec l’ID de locataire 9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29
 
 Lorsque vous exécutez cette commande pour la première fois, vous êtes invité à vous connecter, ce qui crée et stocke en toute sécurité le jeton d’accès de votre compte dans %localappdata%\Microsoft\MSIP. Après cette première connexion, vous pouvez étiqueter et protéger les fichiers de manière non interactive sur l’ordinateur. Toutefois, si vous utilisez un compte de service pour étiqueter et protéger des fichiers, et que ce compte de service ne peut pas se connecter de manière interactive, utilisez le paramètre *OnBehalfOf* avec set-AIPAuthentication:
 
-1. Créez une variable pour stocker les informations d’identification d’un compte Active Directory disposant de l’attribution de droits d’utilisateur pour se connecter de manière interactive. Par exemple :
+1. Créez une variable pour stocker les informations d’identification d’un compte Active Directory disposant de l’attribution de droits d’utilisateur pour se connecter de manière interactive. Exemple :
     
         $pscreds = Get-Credential "scv_scanner@contoso.com"
 
-2. Exécutez l’applet de commande Set-AIPAuthentication avec le paramètre *OnBeHalfOf* , en spécifiant comme valeur la variable que vous venez de créer. Par exemple :
+2. Exécutez l’applet de commande Set-AIPAuthentication avec le paramètre *OnBeHalfOf* , en spécifiant comme valeur la variable que vous venez de créer. Exemple :
     
         Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour obtenir de l’aide sur les applets de commande lorsque `Get-Help <cmdlet name> -online`vous êtes dans une session PowerShell, tapez. Par exemple : 
+Pour obtenir de l’aide sur les applets de commande lorsque `Get-Help <cmdlet name> -online`vous êtes dans une session PowerShell, tapez. Exemple : 
 
     Get-Help Set-AIPFileLabel -online
 

@@ -4,7 +4,7 @@ description: Identifiez les appareils prenant en charge le service Azure Rights 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/15/2019
+ms.date: 09/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 49eec868f5d03f8bc1852f53cab380d8ec149b94
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 872a398df33491b815947ad86db70cdbdf922596
+ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790172"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71301140"
 ---
 # <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Appareils clients prenant en charge la protection des données Azure Rights Management
 
@@ -44,7 +44,7 @@ Les systèmes d’exploitation d’appareils mobiles suivants prennent en charge
 
 -   **Téléphones et tablettes Android** : version minimale d’Android 4.4
 
--   **iPhone et iPad** : version minimale d’iOS 8.0
+-   **iPhone et iPad** : Version minimale d’iOS 11,0
 
 -   **Téléphones et tablettes Windows** : Windows 10 Mobile
 

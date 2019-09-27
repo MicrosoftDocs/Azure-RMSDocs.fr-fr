@@ -4,7 +4,7 @@ description: Ressources d’informations pour le Azure Information Protection cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/13/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 903212b1bebf1c54155bb81e57287d341464700c
-ms.sourcegitcommit: d3ac12c51b41bd1ec4ce4009303d124efc95353b
+ms.openlocfilehash: 52a5d195b20559549be40fea1d386c4175b2f8b7
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180691"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314265"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Azure Information Protection client d’étiquetage unifié pour Windows
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
 > *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -33,7 +33,7 @@ Le client d’étiquetage unifié Azure Information Protection pour Windows est 
 
 Utilisez les ressources suivantes pour le client d’étiquetage unifié:
 
-- [Azure Information Protection client d’étiquetage unifié: Historique de publication des versions](unifiedlabelingclient-version-release-history.md)
+- [Azure Information Protection client d’étiquetage unifié: historique des versions](unifiedlabelingclient-version-release-history.md)
 
 - [Guide de l’administrateur pour le client d’étiquetage unifié Azure Information Protection](clientv2-admin-guide.md)
 

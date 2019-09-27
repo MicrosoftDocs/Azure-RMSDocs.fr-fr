@@ -4,7 +4,7 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/19/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8934e23594ba51248e691ce2e52d69308cb320e5
-ms.sourcegitcommit: d5f046e34de0ad79b64d3f412999145b7d097e75
+ms.openlocfilehash: 57cf55e3a08a5ff6ddf983f930a7004b30af55be
+ms.sourcegitcommit: e53d52bd44271d27aa06c63bd4cc32884d3f2a4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127551"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322348"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
 > *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -143,7 +143,7 @@ Pris en charge jusqu’à 02/06/2020
     - [Ajouter « Signaler un problème » pour les utilisateurs](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
     - [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     - [Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
-    - [Désactiver l’envoi de correspondances de types d’informations pour un sous-ensemble d’utilisateurs](clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+    - [Envoyer les correspondances de type d’informations](clientv2-admin-guide-customizations.md#send-information-type-matches)
     - [Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [Appliquer une propriété personnalisée lorsqu’une étiquette est appliquée](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
     - [Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)

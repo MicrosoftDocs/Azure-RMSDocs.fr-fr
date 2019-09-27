@@ -4,19 +4,19 @@ description: Vue d’ensemble de la protection HYOK (AD RMS) pour Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/07/2019
+ms.date: 08/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 14864dd4840fe967b37ab4bd6fbde1de9e2f580d
-ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
+ms.openlocfilehash: 149bf28e72f333eafa090e75e8703b6fe3a61165
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862712"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71313930"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protection HYOK (Hold your own key) pour Azure Information Protection
 
@@ -189,7 +189,7 @@ Quand vous configurez une étiquette pour la protection **HYOK (AD RMS)** , vous
 
 Les valeurs du GUID de modèle et de l’URL de licence sont disponibles dans la console des services AD RMS (Active Directory Rights Management Services) :
 
-- Pour rechercher le GUID du modèle : développez le cluster, puis cliquez sur **Modèles de stratégies de droits**. Vous pouvez ensuite copier le GUID des informations **Modèles de stratégies de droits distribués** à partir du modèle à utiliser. Par exemple :  82bf3474-6efe-4fa1-8827-d1bd93339119
+- Pour rechercher le GUID du modèle : développez le cluster, puis cliquez sur **Modèles de stratégies de droits**. Vous pouvez ensuite copier le GUID des informations **Modèles de stratégies de droits distribués** à partir du modèle à utiliser. Exemple : 82bf3474-6efe-4fa1-8827-d1bd93339119
 
 - Pour rechercher l’URL de licence : cliquez sur le nom du cluster. Dans **Détails du cluster**, copiez la valeur **Gestion des licences** valeur sans la chaîne **/_wmcs/licensing**. Par exemple : https://rmscluster.contoso.com 
     

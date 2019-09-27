@@ -4,7 +4,7 @@ description: Détails techniques sur les types de fichiers pris en charge, les e
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/21/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9d7ddd54feaef28c1d93a9ae041818007c6e965f
-ms.sourcegitcommit: f0dee92d6668001681b507e82f8aea61f3bfa96e
+ms.openlocfilehash: f7fa0bcfabb3165e5126b32613565c78caf41e72
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69894449"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314213"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -187,9 +187,9 @@ Répétez ces trois étapes pour les autres types de fichier que vous souhaitez 
 
 Vous pouvez apporter des modifications similaires au Registre pour d'autres scénarios en modifiant la valeur de la chaîne **Encryption** qui prend en charge les valeurs suivantes :
 
-- **Pfile** : Protection générique
+- **Pfile** : protection générique
 
-- **Natif** : Protection Native
+- **Natif** : protection Native
 
 - **Désactivé** : Protection contre les blocages
 
@@ -253,7 +253,7 @@ Sans configuration supplémentaire, le client Azure Information Protection utili
 
 |Type d'application|Type de fichier|
 |--------------------------------|-------------------------------------|
-|Word|champs docx;. docm;. dot;. dotm;. dotx|
+|Word|champs docx ;. docm ;. dot ;. dotm ;. dotx|
 |Excel|.xls ; .xlt ; .xlsx ; .xltx ; .xltm ; .xlsm ; .xlsb|
 |PowerPoint|.ppt ; .pps ; .pot ; .pptx ; .ppsx ; .pptm ; .ppsm ; .potx ; .potm|
 |PDF |.pdf|

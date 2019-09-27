@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs d’un 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/29/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0ec64a51d26543d0777bdab8180579793251b8fd
-ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
+ms.openlocfilehash: cac8377f4eb4a3d4b5678c9d0a976866aadeead8
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70159225"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314138"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -69,7 +69,7 @@ Si vous avez AD RMS et que vous souhaitez migrer AD RMS vers Azure Information
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Devez-vous déployer le client Azure Information Protection ?
 
-Déployez le client Azure Information Protection si vous n’utilisez pas [d’étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) , mais utilisez à la place des étiquettes de Azure information protection que vous téléchargez à partir d’Azure, ainsi que l’un des éléments suivants: s’applique
+Déployez le client Azure Information Protection si vous n’utilisez pas [d’étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) , mais utilisez à la place des étiquettes de Azure information protection que vous téléchargez à partir d’Azure, ainsi que l’un des éléments suivants : s’applique
 
 - Vous souhaitez classifier (et éventuellement protéger) des documents et des e-mails en sélectionnant des étiquettes à partir de vos applications Office (Word, Excel, PowerPoint, Outlook).
 
@@ -172,7 +172,7 @@ Toutefois, les noms et les descriptions d’étiquette que vous spécifiez ne so
 
 ## <a name="post-installation-tasks"></a>Tâches post-installation
 
-Une fois que vous avez installé le client Azure Information Protection, assurez-vous de donner aux utilisateurs les instructions pour savoir comment étiqueter leurs e-mails et documents, ainsi que des conseils sur les étiquettes à choisir pour des scénarios spécifiques. Par exemple :
+Une fois que vous avez installé le client Azure Information Protection, assurez-vous de donner aux utilisateurs les instructions pour savoir comment étiqueter leurs e-mails et documents, ainsi que des conseils sur les étiquettes à choisir pour des scénarios spécifiques. Exemple :
 
 - Instructions en ligne pour l’utilisateur : [Azure Information Protection - Guide de l’utilisateur](client-user-guide.md)
 
@@ -240,7 +240,7 @@ Si vous n’avez pas spécifié de nom de profil lors de l’exécution de la co
 
 Dans la version GA actuelle, il existe un problème connu si vous essayez de déplacer la base de données de configuration de l’analyseur vers une nouvelle instance de SQL Server après l’exécution de la commande de mise à niveau.
 
-Si vous savez que vous souhaitez déplacer la base de données de configuration du scanneur pour la version GA, procédez comme suit:
+Si vous savez que vous souhaitez déplacer la base de données de configuration du scanneur pour la version GA, procédez comme suit :
 
 1. Désinstallez le scanneur à l’aide de [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner).
 

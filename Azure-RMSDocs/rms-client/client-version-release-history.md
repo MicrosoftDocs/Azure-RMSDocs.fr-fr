@@ -4,7 +4,7 @@ description: Découvrez les nouveautés et les changements d’une version du cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/07/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fd11916ceb130522bc031024aeeb24fdd20e1f0a
-ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
+ms.openlocfilehash: b64e10f93abd89299405e8b4df8e20ca2393616d
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214076"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314078"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : Historique de publication et politique de support des versions
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -34,7 +34,7 @@ Après un bref délai de quelques semaines, la dernière version de la disponibi
 Pour plus d’informations, consultez [Mise à niveau et maintenance du client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
 > [!TIP]
-> Vous souhaitez utiliser le client d’étiquetage unifié Azure Information Protection, car vos étiquettes sont publiées à partir d’Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center ou Microsoft 365 Compliance Center ? Lorsque vous téléchargez, puis installez le client d’étiquetage unifié à partir du centre de téléchargement Microsoft, vous pouvez mettre à niveau votre client Azure Information Protection vers ce [client d’étiquetage unifié](unifiedlabelingclient-version-release-history.md).
+> Vous souhaitez utiliser le client d’étiquetage unifié Azure Information Protection, car vos étiquettes sont publiées à partir d’Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center ou Microsoft 365 Compliance Center? Lorsque vous téléchargez, puis installez le client d’étiquetage unifié à partir du centre de téléchargement Microsoft, vous pouvez mettre à niveau votre client Azure Information Protection vers ce [client d’étiquetage unifié](unifiedlabelingclient-version-release-history.md).
 
 ### <a name="servicing-information-and-timelines"></a>Informations de maintenance et chronologies
 
@@ -42,7 +42,7 @@ Chaque version en disponibilité générale (GA) du client Azure Information Pro
 
 Les préversions ne doivent pas être déployées pour des utilisateurs finaux sur les réseaux de production. Utilisez plutôt la dernière préversion pour tester les nouvelles fonctionnalités ou les correctifs à paraître dans la prochaine version GA. Les préversions qui ne sont pas actuelles ne sont pas prises en charge.
 
-##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versions de la disponibilité générale qui ne sont plus prises en charge :
+##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versions de la disponibilité générale qui ne sont plus prises en charge:
 
 |Version du client|Date de publication|
 |--------------|-------------|
@@ -90,7 +90,7 @@ Cette version comprend la version MSIPC 1.0.3889.0419 du client RMS.
 
 - Lorsque vous remplacez l’option ne pas transférer sur un thread de courrier électronique par une étiquette qui est configurée pour les autorisations définies par l’utilisateur et ne pas transférer, les destinataires d’origine peuvent toujours ouvrir le message électronique.
 
-- Dans le scénario suivant, un utilisateur ne voit plus dans l’info-bulle de l’étiquette que l’étiquette a été automatiquement définie par les utilisateurs : Un utilisateur reçoit un e-mail protégé avec un document joint qui n’est pas étiqueté, mais qui est automatiquement protégé. Lorsque l’utilisateur de la même organisation que l’expéditeur ouvre le document, l’étiquette correspondante pour les paramètres de protection est appliquée au document.
+- Dans le scénario suivant, un utilisateur ne voit plus dans l’info-bulle de l’étiquette que l’étiquette a été automatiquement définie par les utilisateurs: Un utilisateur reçoit un e-mail protégé avec un document joint qui n’est pas étiqueté, mais qui est automatiquement protégé. Lorsque l’utilisateur de la même organisation que l’expéditeur ouvre le document, l’étiquette correspondante pour les paramètres de protection est appliquée au document.
 
 - Le [droit d’utilisation](../configure-usage-rights.md#usage-rights-and-descriptions) minimal pour exécuter l’applet de commande [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) est maintenant **Enregistrer sous, exporter** (exporter) au lieu de **copier** (extraire).
 
@@ -129,7 +129,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Nouveaux paramètres client avancés implémentant des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails. [Plus d’informations](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     
-    Notez que si vous avez configuré la propriété de client avancé de OutlookCollaborationTrustedDomains pour la version préliminaire, ce paramètre est désormais remplacé par trois nouveaux paramètres, afin que les domaines puissent être exemptés par action : OutlookWarnTrustedDomains, OutlookJustifyTrustedDomains et OutlookBlockTrustedDomains.
+    Notez que si vous avez configuré la propriété de client avancé de OutlookCollaborationTrustedDomains pour la version préliminaire, ce paramètre est désormais remplacé par trois nouveaux paramètres, afin que les domaines puissent être exemptés par action: OutlookWarnTrustedDomains, OutlookJustifyTrustedDomains et OutlookBlockTrustedDomains.
 
 - Si vous étiquetez et protégez des fichiers à l’aide de la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), vous pouvez utiliser le paramètre *EnableTracking* pour enregistrer le fichier sur le site de suivi des documents. [Plus d’informations](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
@@ -160,7 +160,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 **Autres modifications :**
 
-- Les types d’informations sensibles suivants ne sont [plus pris en charge](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) pour les étiquettes que vous configurez pour la classification recommandée ou automatique :
+- Les types d’informations sensibles suivants ne sont [plus pris en charge](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) pour les étiquettes que vous configurez pour la classification recommandée ou automatique:
     - Numéro de téléphone dans l’UE
     - Coordonnées GPS dans l’UE
 
@@ -177,7 +177,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Le scanneur Azure Information Protection n’exclut plus les fichiers .zip par défaut. Pour inspecter et étiqueter les fichiers .zip, consultez la section [Pour inspecter les fichiers .zip](client-admin-guide-file-types.md#to-inspect-zip-files) du guide d’administration.
 
-- Le [paramètre de stratégie](../configure-policy-settings.md) **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection** ne s’applique plus au scanneur. Le scanneur effectue ces actions lorsque vous configurez le paramètre **Renommer les fichiers** sur **activé** dans le profil du scanneur, puis activez la case à cocher autoriser l’étiquette à passer à une **version antérieure** .
+- Le [paramètre de stratégie](../configure-policy-settings.md) **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection** ne s’applique plus au scanneur. Le scanneur effectue ces actions lorsque vous configurez le paramètre renommer les **fichiers** sur **activé** dans le profil du scanneur, puis activez la case à cocher autoriser l’étiquette à passer à une **version antérieure** .
 
 ## <a name="version-141510"></a>Version 1.41.51.0
 

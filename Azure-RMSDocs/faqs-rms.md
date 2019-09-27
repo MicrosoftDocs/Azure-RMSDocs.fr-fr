@@ -4,7 +4,7 @@ description: Certaines questions fréquentes sur le service de protection des do
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 08/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: admin
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c141b70bf775787620761dd93c78a6c4dded7faf
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 01b0e866105eeb69e46db9deb497425b627f9ef5
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808073"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314387"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Forum aux questions sur la protection des données dans Azure Information Protection
 
@@ -173,7 +173,7 @@ De la même manière qu’un administrateur de site SharePoint active et configu
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Avez-vous des conseils ou des astuces pour réussir le déploiement ?
 
-Après avoir vu de nombreux déploiements et écouté nos clients, partenaires, consultants et ingénieurs du support technique, l’un des plus grands conseils que nous pouvons passer de l’expérience: **Concevoir et déployer des stratégies de droits simples**.
+Après avoir vu de nombreux déploiements et écouté nos clients, partenaires, consultants et ingénieurs du support technique, l’un des plus grands conseils que nous pouvons passer de l’expérience : **Concevoir et déployer des stratégies de droits simples**.
 
 Puisqu’Azure Information Protection permet de partager des fichiers en toute sécurité, vous pouvez faire preuve d’ambition concernant la portée de la protection de vos données. Soyez prudent quand vous configurez les restrictions des droits d’utilisation. Pour de nombreuses organisations, la meilleure chose à faire est d’empêcher la fuite des données en limitant l’accès aux seuls membres de votre organisation. Bien sûr, vous pouvez être bien plus précis si vous devez empêcher des personnes d’imprimer, d’éditer, etc. Appliquez néanmoins les restrictions les plus fortes à titre exceptionnel pour les documents nécessitant réellement un niveau de sécurité élevé. Au lieu d’implémenter ces droits d’utilisation plus restrictifs dès le premier jour, adoptez une approche plus progressive.
 

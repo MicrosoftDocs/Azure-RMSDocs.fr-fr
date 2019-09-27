@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 09/18/2019
+ms.date: 09/27/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3257b194c539e59cc396e43c82499f94addfe625
-ms.sourcegitcommit: 326db0b8f1b46de502bcaaabbeda6efcd5a44441
+ms.openlocfilehash: c168cbfe672caecb0ebfbeea0e0c0e234599c223
+ms.sourcegitcommit: e53d52bd44271d27aa06c63bd4cc32884d3f2a4b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71101320"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322378"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -137,15 +137,17 @@ Pour empêcher les clients Azure Information Protection (Classic) d’envoyer ce
 
 Pour empêcher Azure Information Protection clients unifiés d’envoyer ces données, configurez un [paramètre avancé](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)de stratégie d’étiquette.
 
-#### <a name="content-matches-for-deeper-analysis"></a>Correspondances de contenu pour approfondir l’analyse 
+#### <a name="content-matches-for-deeper-analysis"></a>Correspondances de contenu pour approfondir l’analyse
 
-Votre espace de travail Azure Log Analytics pour Azure Information Protection comprend également une case à cocher permettant de collecter et de stocker les données identifiées comme étant un type d’informations sensibles (conditions prédéfinies ou personnalisées). Il peut s’agir, par exemple, de numéros de carte de crédit trouvés, mais aussi de numéros de sécurité sociale, de passeport et de compte bancaire. Si vous ne souhaitez pas envoyer ces données supplémentaires, n’activez pas la case à cocher **activer l’analyse plus profonde dans vos données sensibles**. Si vous souhaitez que la plupart des utilisateurs envoient ces données supplémentaires et qu’un sous-ensemble d’utilisateurs ne puisse pas l’envoyer, activez la case à cocher, puis :
+Azure Information Protection vous permet de collecter et de stocker les données réelles identifiées comme étant un type d’informations sensibles (prédéfini ou personnalisé). Il peut s’agir, par exemple, de numéros de carte de crédit trouvés, mais aussi de numéros de sécurité sociale, de passeport et de compte bancaire. Les correspondances de contenu s’affichent lorsque vous sélectionnez une entrée dans les **journaux d’activité**et affichez les détails de l' **activité**. 
 
-- Pour le client et le scanneur classiques : Configurez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie délimitée pour le sous-ensemble d’utilisateurs.
+Par défaut, les clients Azure Information Protection n’envoient pas de correspondances de contenu. Pour modifier ce comportement afin que les correspondances de contenu soient envoyées :
 
-- Pour le client d’étiquetage unifié : Configurez un [paramètre avancé](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie d’étiquette pour le sous-ensemble d’utilisateurs.
+- Pour le client classique, activez une case à cocher dans le cadre de la [configuration](#configure-a-log-analytics-workspace-for-the-reports) de Azure information protection Analytics. La case à cocher est appelée **activer des analyses plus approfondies dans vos données sensibles**.
+    
+    Si vous souhaitez que la plupart des utilisateurs qui utilisent ce client puissent envoyer des correspondances de contenu, mais qu’un sous-ensemble d’utilisateurs ne peut pas envoyer de correspondances de contenu, activez la case à cocher, puis configurez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) dans une stratégie délimitée pour le sous-ensemble d’utilisateurs.
 
-Une fois recueillies, les correspondances de contenu s’affichent dans les rapports : descendez dans la hiérarchie jusqu’aux fichiers des journaux d’activité pour afficher **Détails de l’activité**. Ces informations sont également consultables et récupérables avec des requêtes.
+- Pour le client d’étiquetage unifié, configurez un [paramètre avancé](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches) dans une stratégie d’étiquette.
 
 ## <a name="prerequisites"></a>Prérequis
 Pour afficher les rapports Azure Information Protection et créer les vôtres, vérifiez que les conditions suivantes sont respectées.
@@ -232,10 +234,14 @@ Azure Monitor journaux a une fonctionnalité d' **utilisation et de coûts estim
     - Pour créer un espace de travail Log Analytics : Sélectionnez **Créer un espace de travail** puis, dans le panneau **Espace de travail Log Analytics**, spécifiez les informations demandées.
     
     - Pour utiliser un espace de travail Log Analytics : Sélectionnez l’espace de travail dans la liste.
+    
+    Si vous avez besoin d’aide pour créer l’espace de travail Log Analytics, consultez [Créer un espace de travail Log Analytics dans le portail Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
-Si vous avez besoin d’aide pour créer l’espace de travail Log Analytics, consultez [Créer un espace de travail Log Analytics dans le portail Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
+4. Si vous avez des clients Azure Information Protection (Classic), activez la case à cocher **activer l’analyse plus profonde dans vos données sensibles** si vous souhaitez stocker les données réelles identifiées comme étant un type d’informations sensibles. Pour plus d’informations sur ce paramètre, consultez la section [correspondances de contenu pour une analyse plus profonde](#content-matches-for-deeper-analysis) sur cette page.
 
-Lorsque l’espace de travail est configuré, procédez comme suit si vous publiez des étiquettes de sensibilité dans l’un des centres d’administration suivants : Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center, Microsoft 365 Compliance Center :
+5. Sélectionnez **OK**.
+
+Une fois l’espace de travail configuré, procédez comme suit si vous publiez des étiquettes de sensibilité dans l’un des centres d’administration suivants : Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center, Microsoft 365 Compliance Center :
 
 - Dans la portail Azure accédez à **Azure information protection** > **gérer** > l'**étiquetage unifié**, puis sélectionnez **publier**.
     
@@ -282,10 +288,10 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 
 |Nom de la colonne|Description|
 |-----------|-----------|
-|Access|Un document protégé a été ouvert avec succès, identifié par le nom de fichier s’il est suivi, ou ID s’il n’est pas suivi.|
+|Accès|Un document protégé a été ouvert avec succès, identifié par le nom de fichier s’il est suivi, ou ID s’il n’est pas suivi.|
 |AccessDenied|L’accès à un document protégé a été refusé, identifié par le nom de fichier s’il est suivi, ou ID s’il n’est pas suivi.|
 |Time|Heure de l’événement: UTC au format AAAA-MM-JJThh: MM: SS|
-|Utilisateur|Utilisateur : Format UPN ou domaine\utilisateur|
+|Utilisateur|Utilisateur : Format UPN ou domaine\utilisateur|
 |ItemPath|Chemin d’accès complet de l’élément ou objet de l’e-mail|
 |ItemName|Nom de fichier ou objet de l’e-mail |
 |Méthode|Étiquette assignée à la méthode: Manuel, automatique, recommandé, par défaut ou obligatoire|
@@ -333,7 +339,7 @@ InformationProtectionEvents
 ```
 
  
-##### <a name="example-2-return-the-number-of-labels-that-were-downgraded-per-day-in-the-last-31-days"></a>Exemple 2 : Retourner le nombre d’étiquettes qui ont été rétrogradées par jour au cours des 31 derniers jours 
+##### <a name="example-2-return-the-number-of-labels-that-were-downgraded-per-day-in-the-last-31-days"></a>Exemple 2 : Retourner le nombre d’étiquettes qui ont été rétrogradées par jour au cours des 31 derniers jours 
 
 
 ```

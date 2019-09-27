@@ -4,23 +4,23 @@ description: Instructions et informations permettant aux administrateurs de dép
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e76f2a358042b09aee47088e43d898cf1e11784c
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: 014145899b42b37d7fc757e9b3be1b33469e556b
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060173"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314097"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guide de l’administrateur : Installer le client d’étiquetage unifié Azure Information Protection pour les utilisateurs
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
 > *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -133,7 +133,7 @@ Utilisez les instructions suivantes pour installer le client lorsque vous n’ut
  
     Le nom du fichier a pour format : `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`.
     
-    Par exemple :  **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+    Exemple : **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
     
     Dans ce fichier journal, recherchez la chaîne suivante : **Produit : Microsoft Azure Information Protection--Installation effectuée.** En cas d’échec de l’installation, ce fichier journal contient des informations pour vous aider à identifier et résoudre les problèmes.
 
@@ -159,7 +159,7 @@ Utilisez la procédure suivante pour identifier la valeur à spécifier pour le 
 
 2. Dans le résultat de l'applet de commande, identifiez la valeur **LicensingIntranetDistributionPointUrl**.
 
-    Par exemple :  **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+    Exemple : **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
 3. À partir de la valeur, supprimez la section **_wmcs/licensing** de cette chaîne. Par exemple : **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
@@ -204,8 +204,9 @@ Si vous utilisez Intune pour votre méthode de déploiement de logiciels, utilis
     |Non applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Installation|
     |Non applicable|Windows 7|KB2627273 <br /><br /> Numéro de version inclus dans le nom de fichier : v4|Désinstaller l’interface|
 
-3. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/** , par exemple, `AzInfoProtection_UL.msi /quiet`. Toutefois, vous devrez peut-être spécifier des paramètres d’installation supplémentaires qui sont documentés dans les [instructions du programme d’installation exécutable](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).  
-
+3. Pour une installation par défaut, exécutez le fichier .msi avec **/quiet/** , par exemple, `AzInfoProtection_UL.msi /quiet`. Toutefois, vous devrez peut-être spécifier des paramètres d’installation supplémentaires qui sont documentés dans les [instructions du programme](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer) d’installation exécutable, à une exception près :
+    
+    - Au lieu de **AllowTelemetry = 0** pour désactiver l’option d’installation, **Aidez-nous à améliorer Azure information protection en envoyant des statistiques d’utilisation à Microsoft**, puis spécifiez **ENABLETELEMETRY = 0**. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez installé le client d’étiquetage unifié Azure Information Protection, consultez les rubriques suivantes pour plus d’informations sur la prise en charge de ce client :

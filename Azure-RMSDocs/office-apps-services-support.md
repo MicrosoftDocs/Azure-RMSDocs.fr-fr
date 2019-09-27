@@ -4,7 +4,7 @@ description: Voici comment les programmes Office (comme Word et Outlook) et les 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 08/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 09a9272233a744027810ef65c12e8a3df5cac24b
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 51b39652a5f3ec8cd81f28c1a5ee485992a10375
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808082"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314341"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Prise en charge d’Azure Rights Management par les programmes et services Office 
 
@@ -25,12 +25,12 @@ ms.locfileid: "68808082"
 
 Les programmes Office et les services Office pour utilisateurs finaux peuvent utiliser le service Azure Rights Management d’Azure Information Protection pour protéger les données de votre organisation. Ces programmes Office sont Word, Excel, PowerPoint et Outlook. Les services Office sont Exchange et SharePoint. Les configurations Office prenant en charge le service Azure Rights Management utilisent souvent le terme **gestion des droits relatifs à l’information (IRM)** .
 
-## <a name="office-applications-word-excel-powerpoint-outlook"></a>Applications Office: Word, Excel, PowerPoint, Outlook
+## <a name="office-applications-word-excel-powerpoint-outlook"></a>Applications Office : Word, Excel, PowerPoint, Outlook
 Ces programmes prennent en charge la Gestion des droits de façon native et permettent aux utilisateurs d’appliquer la protection à un document enregistré ou à un e-mail à envoyer. Les utilisateurs peuvent utiliser des [modèles](configure-policy-templates.md) pour appliquer la protection. Autre possibilité pour Word, Excel et PowerPoint : les utilisateurs appliquent des paramètres personnalisés pour l’accès, les droits et les restrictions d’utilisation.
 
 Par exemple, les utilisateurs peuvent configurer un document Word pour qu’il soit accessible seulement par des personnes de votre organisation. Vous pouvez contrôler si une feuille de calcul Excel peut être modifiée ou limitée à la lecture seule, ou l’empêcher d’être imprimée. Pour les fichiers ayant des contraintes de temps, un délai d’expiration peut être configuré, au terme duquel le fichier ne sera plus accessible. Cette configuration peut être faite directement par les utilisateurs ou en appliquant un modèle de protection. Pour Outlook, les utilisateurs peuvent également choisir l’option **Ne pas transférer** pour éviter toute fuite de données.
 
-Si vous êtes prêt à configurer des applications Office [, consultez applications Office: Configuration pour les clients](configure-office-apps.md).
+Si vous êtes prêt à configurer des applications Office [, consultez applications Office : Configuration pour les clients](configure-office-apps.md).
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online et Exchange Server
 Quand vous utilisez Exchange Online ou Exchange Server, vous pouvez configurer des options pour Azure Information Protection. Cette configuration permet à Exchange d’offrir les solutions de protection suivantes :
@@ -81,7 +81,7 @@ Si vous utilisez SharePoint Server, vous pouvez utiliser cette protection IRM en
 > 
 > - La co-création, c’est-à-dire quand plusieurs personnes modifient un document simultanément, n’est pas prise en charge. Pour modifier un document dans une bibliothèque protégée par IRM, vous devez tout d’abord extraire le document et le télécharger, puis le modifier dans votre application Office. Par conséquent, une seule personne peut modifier le document à la fois.
 
-Pour les bibliothèques qui ne sont pas protégées par IRM, si vous protégez un fichier que vous chargez ensuite dans SharePoint ou OneDrive, les éléments suivants ne fonctionnent pas avec ce fichier : Co-édition, Office pour le Web, recherche, aperçu du document, miniature, eDiscovery et protection contre la perte de données (DLP).
+Pour les bibliothèques qui ne sont pas protégées par IRM, si vous protégez un fichier que vous chargez ensuite dans SharePoint ou OneDrive, les éléments suivants ne fonctionnent pas avec ce fichier : Co-création, Office pour le web, recherche, aperçu du document, miniature, eDiscovery et protection contre la perte de données.
 
 Quand vous utilisez la protection IRM SharePoint, le service Azure Rights Management applique des restrictions d’utilisation et un chiffrement de données aux documents téléchargés à partir de SharePoint, mais pas aux documents créés initialement dans SharePoint ou chargés dans la bibliothèque. Pour plus d’informations sur la façon dont les documents sont protégés avant leur téléchargement, voir [Chiffrement de données dans OneDrive Entreprise et SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) dans la documentation SharePoint.
 

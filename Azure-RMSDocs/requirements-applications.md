@@ -4,7 +4,7 @@ description: Identifiez les applications qui utilisent les API RMS pour prendre 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 08/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dfc933dfa753ecee2bf23861d8151df02fe172b5
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 0a953021a425574d59d602ce3f95bd30c07a9cb3
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808107"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314304"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applications prenant en charge la protection des données Azure Rights Management
 
@@ -52,8 +52,8 @@ Informations sur les colonnes du tableau :
 |**iOS**|GigaTrust<br /><br /> Office Mobile <br /><br />Office pour le Web [[2]](#footnote-2)<br /><br />TITUS Docs<br /><br />Navigateur web [[3]](#footnote-3)|Application Azure Information Protection (affichage d’e-mails protégés)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Office pour iPad et iPhone [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Navigateur web [[4]](#footnote-4)|Application Azure Information Protection (affichage et protection de textes et d’images)<br /><br />TITUS docs: Pfile|
 |**Android**|GigaTrust App pour Android<br /><br />Office pour le Web [[2]](#footnote-2)<br /><br />Office Mobile (sauf en utilisant des étiquettes de sensibilité, limitées à l’affichage et à la modification des documents protégés) <br /><br />Navigateur web [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />Application Azure Information Protection (affichage d’e-mails protégés)<br /><br />BlackBerry Work <br /><br />GigaTrust App pour Android [[5]](#footnote-5)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook pour Android [[5]](#footnote-5)<br /><br />Samsung Email (S3 et versions ultérieures) [[5]](#footnote-5)<br /><br />TITUS Classification for Mobile <br /><br />Navigateur web [[4]](#footnote-4)|Application Azure Information Protection (affichage de textes et d’images protégés)|
 |**macOS**|Applications Office 365<br /><br />Office 2019 pour Mac<br /><br />Office 2016 pour Mac<br /><br />Office pour le Web [[2]](#footnote-2)<br /><br />Navigateur web [[3]](#footnote-3)|Outlook 2019 pour Mac<br /><br /> Outlook 2016 pour Mac<br /><br />Navigateur web [[4]](#footnote-4)|Application de partage RMS (affichage de textes et d’images protégés, fichiers protégés de façon générique)|
-|**Windows 10 Mobile**|Applications Office Mobile (affichage des documents protégés avec Azure RMS) <br /><br />Navigateur web [[3]](#footnote-3)|Citrix WorxMail <br /><br />Courrier Outlook (affichage des e-mails protégés) <br /><br />Navigateur web [[4]](#footnote-4)|Non pris en charge|
-|**BlackBerry 10**|Navigateur web [[3]](#footnote-3)|Messagerie Blackberry [[5]](#footnote-5) <br /><br />Navigateur web [[4]](#footnote-4)|Non pris en charge|
+|**Windows 10 Mobile**|Applications Office Mobile (affichage des documents protégés avec Azure RMS) <br /><br />Navigateur web [[3]](#footnote-3)|Citrix WorxMail <br /><br />Courrier Outlook (affichage des e-mails protégés) <br /><br />Navigateur web [[4]](#footnote-4)|Non prise en charge|
+|**BlackBerry 10**|Navigateur web [[3]](#footnote-3)|Messagerie Blackberry [[5]](#footnote-5) <br /><br />Navigateur web [[4]](#footnote-4)|Non prise en charge|
 
 ###### <a name="footnote-1"></a>Note 1
 Inclut : 
@@ -137,7 +137,7 @@ Pour plus d’informations sur l’utilisation de l’application, consultez [FA
 
 ### <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Plus d’informations sur le client Azure Information Protection pour Windows
 
-Pour plus d'informations, reportez-vous aux ressources suivantes :
+Pour plus d'informations, consultez les ressources suivantes :
 
 - [Client Azure Information Protection - Guide de l’administrateur](./rms-client/client-admin-guide.md)
 
@@ -151,7 +151,7 @@ Téléchargez l’application correspondante à l’aide des liens de la [page M
 
 Sur les ordinateurs Mac, l’application de partage Rights Management fournit une visionneuse qui permet d’afficher les fichiers PDF protégés (.ppdf), les images de texte protégées et les fichiers protégés de manière générique. Elle peut également protéger des fichiers image, mais pas d’autres types de fichiers. Pour protéger les fichiers Office sur ces ordinateurs, utilisez Office pour Mac ou Office 365 ProPlus. 
 
-Pour plus d'informations, reportez-vous aux ressources suivantes :
+Pour plus d'informations, consultez les ressources suivantes :
 
 -   [FAQ relatif à l’application de partage Microsoft Rights Management pour plateformes mobiles](https://technet.microsoft.com/dn451248)
 

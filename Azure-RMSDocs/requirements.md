@@ -4,7 +4,7 @@ description: Identifiez les critères de déploiement d’Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/02/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 75c9eb425c0955b569b7e1578e3921dee4c81500
-ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
+ms.openlocfilehash: dc0208e8053e09b2225b8e3bd9698ad1af7e9c43
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214101"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314316"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -65,7 +65,7 @@ Pour plus d’informations sur la configuration requise pour les comptes d’uti
 
 Les utilisateurs doivent avoir des appareils clients (ordinateurs ou appareils mobiles) exécutant un système d’exploitation qui prend en charge Azure Information Protection.
 
-Les appareils suivants prennent en charge le client d’étiquetage Azure Information Protection unifié et le client Azure Information Protection. [Les deux clients](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) permettent aux utilisateurs de classer et d’étiqueter leurs documents et e-mails :
+Les appareils suivants prennent en charge le client d’étiquetage Azure Information Protection unifié et le client Azure Information Protection. [Les deux clients](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) permettent aux utilisateurs de classer et d’étiqueter leurs documents et e-mails:
 
 - Windows 10 (x86, x64)
     
@@ -77,7 +77,9 @@ Les appareils suivants prennent en charge le client d’étiquetage Azure Inform
 
 - Windows 7 Service Pack 1 (x86, x64)
 
-- Windows Server 2016 
+- Windows Server 2019
+
+- Windows Server 2016
 
 - Windows Server 2012 R2 et Windows Server 2012
 
@@ -85,20 +87,23 @@ Les appareils suivants prennent en charge le client d’étiquetage Azure Inform
 
 Outre l’installation du client sur des ordinateurs physiques, vous pouvez également l’installer sur des machines virtuelles. Vérifiez si le fournisseur de logiciels de la solution de bureau virtuel dispose d’une configuration supplémentaire qui peut être nécessaire pour exécuter le client d’étiquetage Azure Information Protection unifié ou le client Azure Information Protection. Par exemple, pour les solutions Citrix, vous devrez peut-être désactiver les hooks de l' [interface de programmation d’applications (API) Citrix](https://support.citrix.com/article/CTX107825) pour Office (Winword. exe, Excel. exe, Outlook. exe, Powerpnt. exe) et l’exécutable pour le Azure information protection Unified étiquetage du client ou du client Azure Information Protection (MSIP. app. exe, MSIP. Viewer. exe).
 
-Pour les versions de serveur répertoriées, les clients Azure Information Protection sont pris en charge pour la Services Bureau à distance. Si vous supprimez des profils utilisateur quand vous utilisez les clients Azure Information Protection avec Services Bureau à distance, ne supprimez pas le dossier **%AppData%\Microsoft\Protect** .
+Pour les versions de serveur listées :
+
+- Les clients Azure Information Protection sont pris en charge pour les Services Bureau à distance. Si vous supprimez des profils utilisateur quand vous utilisez les clients Azure Information Protection avec Services Bureau à distance, ne supprimez pas le dossier **%AppData%\Microsoft\Protect** .
+
+- Server Core et nano Server ne sont pas pris en charge.
 
 Lorsque les clients Azure Information Protection protègent les données à l’aide du service Azure Rights Management, les données peuvent être consommées par les [mêmes appareils](requirements-client-devices.md) qui prennent en charge le service de Rights Management Azure.
 
-Les clients Azure Information Protection ont des conditions préalables supplémentaires qui sont répertoriées dans leurs guides d’administration respectifs :
+Les clients Azure Information Protection ont des conditions préalables supplémentaires qui sont répertoriées dans leurs guides d’administration respectifs:
 
-- Client d’étiquetage unifié Azure Information Protection : [Composants requis](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+- Client d’étiquetage unifié Azure Information Protection : [Conditions préalables](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
-- Client Azure Information Protection : [Composants requis](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+- Client Azure Information Protection : [Conditions préalables](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
+## <a name="applications"></a>Applications
 
-## <a name="applications"></a>APPLICATIONS
-
-Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide des applications Office **Word**, **Excel**, **PowerPoint**et **Outlook** de l’une des éditions Office suivantes :
+Les clients Azure Information Protection peuvent étiqueter et protéger des documents et des e-mails à l’aide des applications Office **Word**, **Excel**, **PowerPoint**et **Outlook** de l’une des éditions Office suivantes:
 
 - Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) est affectée à l’utilisateur
 
@@ -124,7 +129,7 @@ Si vous avez un pare-feu ou des appareils réseau intervenants similaires qui n�
 
 En plus des informations de l’article relatif à Office, voici des informations propres à Azure Information Protection :
 
-- Pour que le client d’étiquetage unifié télécharge des étiquettes et des stratégies d’étiquette : Autorisez l’URL * **. protection.Outlook.com** sur HTTPS.
+- Pour que le client d’étiquetage unifié télécharge des étiquettes et des stratégies d’étiquette: Autorisez l’URL * **. protection.Outlook.com** sur HTTPS.
 
 - Si vous utilisez un proxy web qui nécessite une authentification, vous devez le configurer pour qu’il utilise l’authentification Windows intégrée avec les informations d’identification d’ouverture de session Active Directory de l’utilisateur.
 

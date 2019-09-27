@@ -4,29 +4,29 @@ description: Instructions et informations pour les administrateurs sur un résea
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: eb73cba39d65a4e2c925f73afe7fa3e46ab204cd
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: 5353fa25af08c8ef9c979d232945c7f203a0de07
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060061"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71313954"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
 > *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Utilisez les informations de ce guide si vous êtes responsable de la Azure Information Protection client d’étiquetage unifié sur un réseau d’entreprise, ou si vous souhaitez des informations plus techniques que celles de l' [utilisateur du client d’étiquetage unifié Azure information protection Guide](clientv2-user-guide.md). 
 
-Par exemple :
+Exemple :
 
 - Comprendre les différents composants de ce client et si vous devez les installer ou non
 
@@ -156,7 +156,7 @@ Toutefois, les noms et les descriptions d’étiquette que vous spécifiez ne so
 
 ## <a name="post-installation-tasks"></a>Tâches post-installation
 
-Après avoir installé le client d’étiquetage unifié Azure Information Protection, assurez-vous de fournir aux utilisateurs des instructions sur la façon d’étiqueter leurs documents et e-mails, ainsi que des conseils sur les étiquettes à choisir pour des scénarios spécifiques. Par exemple :
+Après avoir installé le client d’étiquetage unifié Azure Information Protection, assurez-vous de fournir aux utilisateurs des instructions sur la façon d’étiqueter leurs documents et e-mails, ainsi que des conseils sur les étiquettes à choisir pour des scénarios spécifiques. Exemple :
 
 - Instructions en ligne pour l’utilisateur : [Guide de l’utilisateur d’étiquetage unifié Azure Information Protection](clientv2-user-guide.md)
 

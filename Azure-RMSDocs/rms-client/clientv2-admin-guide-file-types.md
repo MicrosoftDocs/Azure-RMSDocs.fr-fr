@@ -4,23 +4,23 @@ description: Détails techniques sur les types de fichiers pris en charge, les e
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/21/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 626f4f5c6e8f2e59c67b92dc324c0800869a375e
-ms.sourcegitcommit: d3ac12c51b41bd1ec4ce4009303d124efc95353b
+ms.openlocfilehash: f9205461a71426b6e2194f64cdf916a02cf2a907
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180677"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314082"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client d’étiquetage unifié Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*>
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*>
 >
 > *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -176,7 +176,7 @@ Sans configuration supplémentaire, le Azure Information Protection client d’�
 
 |Type d'application|Type de fichier|
 |--------------------------------|-------------------------------------|
-|Word|champs docx;. docm;. dot;. dotm;. dotx|
+|Word|champs docx ;. docm ;. dot ;. dotm ;. dotx|
 |Excel|.xls ; .xlt ; .xlsx ; .xltx ; .xltm ; .xlsm ; .xlsb|
 |PowerPoint|.ppt ; .pps ; .pot ; .pptx ; .ppsx ; .pptm ; .ppsm ; .potx ; .potm|
 |PDF |.pdf|

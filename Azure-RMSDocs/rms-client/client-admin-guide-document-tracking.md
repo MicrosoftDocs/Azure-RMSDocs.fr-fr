@@ -4,7 +4,7 @@ description: Instructions et informations pour les administrateurs pour configur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6ba83809a8f077ed23afaa337c62d63c78c0cfbc
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: b014fd328782c4cf09ae204ba7b7d4229d2d49a4
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790122"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314248"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -53,7 +53,7 @@ Ce paramètre affecte uniquement les utilisateurs finaux. Les administrateurs de
 
 ### <a name="logging-information-from-the-document-tracking-site"></a>Téléchargement des informations de journalisation à partir du site de suivi de documents
 
-Vous pouvez utiliser les applets de commande suivantes pour télécharger les informations de journalisation à partir du site de suivi des documents:
+Vous pouvez utiliser les applets de commande suivantes pour télécharger les informations de journalisation à partir du site de suivi des documents :
 
 - [Get-AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)
     
@@ -104,7 +104,7 @@ Pour obtenir des instructions sur l’utilisation du site de suivi des documents
 
 Pour pouvoir suivre et révoquer un document, il doit d’abord être enregistré sur le site de suivi des documents. Cette action se produit quand les utilisateurs sélectionnent l’option **Suivre et révoquer** dans l’Explorateur de fichiers ou leurs applications Office lorsqu’ils utilisent le client Azure Information Protection.
 
-Si vous étiquetez et protégez des fichiers pour des utilisateurs à l’aide de la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), vous pouvez utiliser le paramètre *EnableTracking* pour enregistrer le fichier sur le site de suivi des documents. Par exemple :
+Si vous étiquetez et protégez des fichiers pour des utilisateurs à l’aide de la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), vous pouvez utiliser le paramètre *EnableTracking* pour enregistrer le fichier sur le site de suivi des documents. Exemple :
 
     Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
 

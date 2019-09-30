@@ -4,25 +4,30 @@ description: Les conditions permettent d’affecter automatiquement une étiquet
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/31/2019
+ms.date: 09/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 9e9e6fc0ca652dee464c45f17d2e7d5e109f4947
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: ce645af880b90c12bed284c0b57d597cfd540fd7
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68791765"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71673936"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE]
+> Ces instructions s’appliquent au client Azure Information Protection (Classic) et non au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
+> 
+> Si vous recherchez des informations pour configurer la classification automatique et recommandée pour le client d’étiquetage unifié, consultez la documentation Office. Par exemple, [appliquez automatiquement une étiquette de sensibilité au contenu](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 
 Lorsque vous configurez des conditions pour une étiquette, vous pouvez affecter automatiquement une étiquette à un document ou à un e-mail. Ou vous pouvez inviter les utilisateurs à sélectionner l’étiquette que vous recommandez. 
 
@@ -104,7 +109,7 @@ Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement d
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Types d’informations sensibles nécessitant une version minimale du client
 
-Les types d’informations sensibles suivants requièrent une version minimale de [1.48.204.0](./rms-client/client-version-release-history.md#version-1482040) du client Azure information protection:
+Les types d’informations sensibles suivants requièrent une version minimale de [1.48.204.0](./rms-client/client-version-release-history.md#version-1482040) du client Azure information protection :
 
 - **Chaîne de connexion Azure Service Bus**
 - **Chaîne de connexion Azure IoT**
@@ -117,9 +122,9 @@ Les types d’informations sensibles suivants requièrent une version minimale d
 - **Mot de passe de paramètre de publication Azure**
 - **Clé de compte de stockage Azure (générique)**
 
-Pour plus d’informations sur ces types d’informations sensibles, consultez le billet de blog suivant: [Azure Information Protection vous aide à mieux sécuriser en détectant automatiquement les informations d’identification](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
+Pour plus d’informations sur ces types d’informations sensibles, consultez le billet de blog suivant : [Azure Information Protection vous aide à mieux sécuriser en détectant automatiquement les informations d’identification](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
 
-En outre, à partir de 1.48.204.0 du client Azure Information Protection, les types d’informations sensibles suivants ne sont pas pris en charge et ne s’affichent plus dans le Portail Azure. Si vous avez des étiquettes qui utilisent ces types d’informations sensibles, nous vous recommandons de les supprimer, car nous ne pouvons pas garantir une détection correcte pour eux et les références à celles-ci dans les rapports du scanneur doivent être ignorées:
+En outre, à partir de 1.48.204.0 du client Azure Information Protection, les types d’informations sensibles suivants ne sont pas pris en charge et ne s’affichent plus dans le Portail Azure. Si vous avez des étiquettes qui utilisent ces types d’informations sensibles, nous vous recommandons de les supprimer, car nous ne pouvons pas garantir une détection correcte pour eux et les références à celles-ci dans les rapports du scanneur doivent être ignorées :
 
 - **Numéro de téléphone dans l’UE**
 - **Coordonnées GPS dans l’UE**

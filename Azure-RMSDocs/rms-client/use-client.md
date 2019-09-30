@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 63220621a6c3bbf7ad84ba4c76c38353b56c256d
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 15050d18e1aab19ec80b2be47fdefd16e8f60ba6
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71313993"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71674150"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -36,7 +36,7 @@ Le client Rights Management (RMS) est installé automatiquement avec certaines a
 
 Le **client Azure information protection (Classic)** télécharge des étiquettes et des paramètres de stratégie à partir du portail Azure. Pour plus d’informations sur ce client, consultez [le client Azure information protection: Historique de publication et politique de support des versions](client-version-release-history.md).
 
-Le **client d’étiquetage unifié Azure Information Protection** télécharge les étiquettes et les paramètres de stratégie à partir des centres d’administration : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 et le Centre de conformité Microsoft 365. Pour plus d’informations sur ce client, consultez [le Azure information protection client d’étiquetage unifié: Informations sur la version](unifiedlabelingclient-version-release-history.md).
+Le **client d’étiquetage unifié Azure Information Protection** télécharge les étiquettes et les paramètres de stratégie à partir des centres d’administration : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 et le Centre de conformité Microsoft 365. Pour plus d’informations sur ce client, consultez [le Azure information protection client d’étiquetage unifié: Informations sur la version](unifiedlabelingclient-version-release-history.md). 
 
 Quel client convient-il d’installer ?
 
@@ -148,8 +148,9 @@ Le client Azure Information Protection (Classic) ne prend pas en charge les conf
 
 Pour des raisons de parité, le client d’étiquetage unifié Azure Information Protection ne prend pas non plus en charge l’application d’étiquettes parentes comportant des sous-étiquettes, même si elles peuvent être sélectionnées dans les centres d’administration. Dans ce scénario, le client d’étiquetage unifié Azure Information Protection n’applique pas l’étiquette parente.
 
-## <a name="see-also"></a>Voir aussi
-Consultez la documentation suivante pour en savoir plus sur le déploiement et l’utilisation de ces clients :
+## <a name="next-steps"></a>Étapes suivantes
+
+Pour installer et configurer les clients, utilisez la documentation suivante :
 
 - [Client Azure Information Protection](AIP-client.md)
 

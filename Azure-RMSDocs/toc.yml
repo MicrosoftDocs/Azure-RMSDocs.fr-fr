@@ -25,17 +25,17 @@
       href: quickstart-viewpolicy.md
     - name: Rechercher les informations sensibles dont vous disposez
       href: quickstart-findsensitiveinfo.md
-    - name: Configurer une étiquette pour protéger les e-mails
+    - name: Configurer une étiquette pour protéger les e-mails - client classique
       href: quickstart-label-dnf-protectedemail.md
-    - name: Créer une étiquette pour des utilisateurs spécifiques
+    - name: Créer une étiquette pour des utilisateurs spécifiques - client classique
       href: quickstart-label-specificusers.md
 - name: Didacticiels
   items:
-    - name: Modifier la stratégie et créer une étiquette
+    - name: Modifier la stratégie et créer une étiquette - client classique
       href: infoprotect-quick-start-tutorial.md
-    - name: configurer des paramètres de stratégie qui fonctionnent ensemble ;
+    - name: Configurer des paramètres de stratégie qui fonctionnent ensemble - client classique
       href: infoprotect-settings-tutorial.md
-    - name: Configurer les paramètres clients pour contrôler le surpartage
+    - name: Configurer des paramètres clients pour contrôler le surpartage - client classique
       href: infoprotect-oversharing-tutorial.md
 - name: Concepts
   items:
@@ -65,7 +65,7 @@
   items:
     - name: Guides pratiques pour les scénarios courants
       href: how-to-guides.md
-    - name: Planifier et concevoir
+    - name: Planifier et préparer le service
       items:
         - name: Feuille de route pour le déploiement
           href: deployment-roadmap.md
@@ -99,7 +99,7 @@
               href: byok-price-restrictions.md
         - name: Préparation des utilisateurs et groupes
           href: prepare.md
-    - name: Déployer et utiliser le service
+    - name: Configurer et utiliser le service
       items:
         - name: Activation de la protection
           items:
@@ -251,7 +251,7 @@
                       href: ./rms-client/clientv2-view-use-files.md
                     - name: Supprimer des étiquettes et la protection
                       href: ./rms-client/clientv2-remove-label-protection.md
-            - name: Client Azure Information Protection
+            - name: Client Azure Information Protection (classique)
               items:
                 - name: Vue d’ensemble
                   href: ./rms-client/aip-client.md

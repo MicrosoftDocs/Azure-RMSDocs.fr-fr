@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5353fa25af08c8ef9c979d232945c7f203a0de07
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 4468ce10a79c31c4f3c3be625f84b5cbd69c74da
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71313954"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690099"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
 
@@ -116,7 +116,7 @@ Les **paramètres** de réinitialisation déconnectent l’utilisateur, supprime
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - \\ *%LocalAppData%\Microsoft\MSIP\mipProcessName\<\mip\>*
+    - %LocalAppData%\Microsoft\MSIP\mip @ no__t-0 *\<processname @ no__t-3*\mip
     
     - %LocalAppData%\Microsoft\MSIP\AppDetails
     
@@ -201,17 +201,17 @@ La procédure de mise à niveau du scanneur dépend de la version du client Azur
 
 Notez que contrairement au scanneur du client Azure Information Protection (Classic), cette version préliminaire du scanneur du client unifié ne prend pas en charge l’exécution sur un ordinateur déconnecté.
 
-La mise à niveau crée une nouvelle base de données nommée **\<AIPScannerUL_ profile_name >** , et la base de données de l’analyseur précédente est conservée au cas où vous en aurez besoin pour la version précédente. Si vous êtes certain que vous n’avez pas besoin de la base de données de l’analyseur précédente, vous pouvez la supprimer. Étant donné que la mise à niveau crée une nouvelle base de données, le moteur de base de données analyse tous les fichiers la première fois qu’elle est exécutée.
+La mise à niveau crée une nouvelle base de données nommée **AIPScannerUL_ @ no__t-1profile_name >** , et la base de données de l’analyseur précédente est conservée si vous en avez besoin pour la version précédente. Si vous êtes certain que vous n’avez pas besoin de la base de données de l’analyseur précédente, vous pouvez la supprimer. Étant donné que la mise à niveau crée une nouvelle base de données, le moteur de base de données analyse tous les fichiers la première fois qu’elle est exécutée.
 
 ##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>Mettre à niveau à partir de Azure Information Protection la version 1.48.204.0 client (Classic) version et versions ultérieures de ce client
 
 1. Sur l’ordinateur du scanneur, arrêtez le service du scanneur, **Scanneur Azure Information Protection**.
 
-2. Effectuez une mise à niveau vers le client d’étiquetage unifié Azure Information Protection en téléchargeant et en installant la version préliminaire du client d’étiquetage unifield à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+2. Effectuez une mise à niveau vers le client d’étiquetage unifié Azure Information Protection en téléchargeant et en installant la version préliminaire du client d’étiquetage unifié à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 3. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le profil de votre scanneur. Par exemple : `Update-AIPScanner –Profile Europe`.
     
-    Cette étape permet de créer une base de données portant le nom **\<AIPScannerUL_ profile_name >**
+    Cette étape permet de créer une base de données nommée **AIPScannerUL_ @ no__t-1profile_name >**
 
 4. Redémarrez le service **Scanneur Azure Information Protection**.
 

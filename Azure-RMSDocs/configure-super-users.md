@@ -1,10 +1,10 @@
 ---
 title: Configurer des super utilisateurs pour Azure Rights Management - AIP
-description: Comprenez et implémentez la fonctionnalité de super utilisateur du service Azure Rights Management à partir de Azure Information Protection, afin que les personnes et services autorisés puissent toujours lire et inspecter les données protégées de votre organisation («raison»).
+description: Comprenez et implémentez la fonctionnalité de super utilisateur du service Azure Rights Management à partir de Azure Information Protection, afin que les personnes et services autorisés puissent toujours lire et inspecter les données protégées de votre organisation (« raison »).
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 23cb44d9b4101c4e73aeed27142be50c79a70cfb
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 6eb9c8755e1b5fb1007c4be23932ea1da1c51fbb
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789044"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71683741"
 ---
 # <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Configuration de super utilisateurs pour les services de Azure Information Protection et de découverte ou la récupération de données
 

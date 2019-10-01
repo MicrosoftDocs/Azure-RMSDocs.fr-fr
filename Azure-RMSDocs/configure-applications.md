@@ -4,7 +4,7 @@ description: Instructions pour les administrateurs relatives à la configuration
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/24/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 48c31144fad67eb436eec13e999fc3c4333d684b
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: d4fd33ee379660628a4a870e81d738e068f50482
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789665"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684232"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configuration d’applications pour Azure Rights Management
 
@@ -34,7 +34,7 @@ Après avoir déployé Azure Information Protection pour votre organisation, uti
 > [!IMPORTANT]
 > Pour plus d’informations sur les versions prises en charge et d’autres conditions requises, consultez [Configuration requise pour Azure information protection](requirements.md).
 
--   [Office 365 : Configuration pour services en ligne](configure-office365.md)
+-   [Office 365 : Configuration pour services en ligne @ no__t-0
 
     -   [Exchange Online : Configuration de la Gestion des droits relatifs à l’information](configure-office365.md#exchangeonline-irm-configuration)
 

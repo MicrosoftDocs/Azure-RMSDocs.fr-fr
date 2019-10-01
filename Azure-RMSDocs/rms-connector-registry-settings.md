@@ -4,7 +4,7 @@ description: Informations relatives aux paramètres du Registre sur les serveurs
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f24931cbc3a3f91928a6d7190b5e028e6b474202
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 3b23908748ea9b0dba587530f249c6cdb7629b50
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789584"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689416"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Paramètres de Registre pour le connecteur Rights Management
 
@@ -35,7 +35,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
     2.  Dans le résultat de l'applet de commande, identifiez la valeur **LicensingIntranetDistributionPointUrl**.
 
-        Par exemple :  **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+        Exemple : **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
     3.  À partir de la valeur, supprimez la section **_wmcs/licensing** de cette chaîne. La chaîne restante est l’URL de votre service Azure Rights Management. Dans notre exemple, l’URL du service Azure Rights Management aurait la valeur suivante :
 
@@ -56,7 +56,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Value :** Default
+**Valeur :** Par défaut
 
 **Données :** https:// *\<URL_votre_locataire>* /_wmcs/certification
 
@@ -66,7 +66,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Value :** Default
+**Valeur :** Par défaut
 
 **Données :** https:// *\<URL_votre_locataire>* /_wmcs/Licensing
 
@@ -107,7 +107,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Value :** Default
+**Valeur :** Par défaut
 
 **Données :** https:// *<\URL_votre_locataire>* /_wmcs/certification
 
@@ -117,7 +117,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Value :** Default
+**Valeur :** Par défaut
 
 **Données :** https:// *<\URL_votre_locataire>* /_wmcs/Licensing
 
@@ -171,7 +171,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Value :** Default
+**Valeur :** Par défaut
 
 **Données :** L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et le connecteur RMS :
 
@@ -185,7 +185,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Value :** Default
+**Valeur :** Par défaut
 
 
 **Données :** L'une des options suivantes, selon que vous utilisez le protocole HTTP ou HTTPS entre votre serveur Exchange et le connecteur RMS :
@@ -203,7 +203,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Value :** Default
+**Valeur :** Par défaut
 
 **Données :** http:// *</FQDN_connecteur*/_wmcs/licensing
 
@@ -213,7 +213,7 @@ Voici quelques indications pour savoir quand utiliser ces paramètres :
 
 **Type :** Reg_SZ
 
-**Value :** Default
+**Valeur :** Par défaut
 
 **Données :** http:// *</FQDN_connecteur>* /_wmcs/certification
 

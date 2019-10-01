@@ -4,7 +4,7 @@ description: Configurez et gérez les modèles de protection, également appelé
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a6e4c8be3ee6ab061fea56825ea538b2404c7554
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: b92df89ca1c0bacc7ad47f4b03c97d868b8fa396
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788963"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71683879"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
@@ -61,9 +61,9 @@ Si vous avez obtenu votre abonnement récemment, vos modèles par défaut sont c
 
 - **Hautement confidentiel \ Tous les employés**
 
-Si vous avez obtenu votre abonnement il y a quelque temps, vos modèles par défaut peuvent être créés avec les noms suivants:
+Si vous avez obtenu votre abonnement il y a quelque temps, vos modèles par défaut peuvent être créés avec les noms suivants :
 
-- **\<nom de l’organisation >-confidentiel**
+- **nom de la @no__t 1organization >-Confidential**
 
 - **\<nom de l’organisation> - Affichage confidentiel uniquement** 
 

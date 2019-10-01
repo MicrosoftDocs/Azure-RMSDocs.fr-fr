@@ -4,7 +4,7 @@ description: Phase 2 de la migration d’AD RMS vers Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ff2f088358d6f15b4e5b67c3cc6929b1f29f19f4
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: acc19d8865c189e2852a2b870ea2028aab731f04
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793992"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684445"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -66,7 +66,7 @@ La procédure exacte de cette étape dépend de la configuration actuelle de vot
 
 Votre déploiement AD RMS actuel utilise l’une des configurations suivantes pour votre clé de certificat de licence serveur (SLC) :
 
-- Protection par mot de passe dans la base de données AD RMS. Il s’agit de la configuration par défaut.
+- Protection par mot de passe dans la base de données AD RMS. Il s'agit de la configuration par défaut.
 
 - Protection HSM à l’aide d’un module de sécurité matériel (HSM) nCipher.
 
@@ -102,7 +102,7 @@ Pour effectuer l’étape 4, sélectionnez les instructions correspondant à vot
 - [Clé protégée par HSM vers clé protégée par HSM](migrate-hsmkey-to-hsmkey.md)
 - [Clé protégée par logiciel vers clé protégée par HSM](migrate-softwarekey-to-hsmkey.md)
 
-## <a name="step-5-activate-the-azure-rights-management-service"></a>Étape 5. Activer le service Azure Rights Management
+## <a name="step-5-activate-the-azure-rights-management-service"></a>Étape 5. Activer le service Azure Rights Management
 
 Ouvrez une session PowerShell et exécutez les commandes suivantes :
 

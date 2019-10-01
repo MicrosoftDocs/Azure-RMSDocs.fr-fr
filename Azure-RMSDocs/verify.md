@@ -4,7 +4,7 @@ description: Instructions pour vérifier que le service de protection de Azure I
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1994b30d2ad27f837e49549719de5de7413c25d7
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 4e5892ccbd4e173a9354c62a780ef480382a0921
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792723"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689692"
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Vérification du service Azure Rights Management
 

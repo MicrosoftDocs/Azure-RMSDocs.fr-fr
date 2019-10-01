@@ -4,7 +4,7 @@ description: Le service de protection, Azure Rights Management, doit être activ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3b226e0ed593ad9f5eab85140582267b079f9887
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 4ef001b57f252d4b4c8736bb4b20e998cd6a756b
+ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788408"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71679081"
 ---
 # <a name="activating-the-protection-service-from-azure-information-protection"></a>Activation du service de protection à partir de Azure Information Protection
 
@@ -34,7 +34,7 @@ ms.locfileid: "68788408"
 Lorsque le service de protection pour Azure Information Protection est activé pour votre organisation, les administrateurs et les utilisateurs peuvent commencer à protéger des données importantes à l’aide d’applications et de services qui prennent en charge cette solution de protection des informations. Les administrateurs peuvent également gérer et surveiller les documents et e-mail protégés de votre organisation. 
 
 
-## <a name="do-you-need-to-activate-the-protection-service-azure-rights-management"></a>Avez-vous besoin d’activer le service de protection, Azure Rights Management?
+## <a name="do-you-need-to-activate-the-protection-service-azure-rights-management"></a>Avez-vous besoin d’activer le service de protection, Azure Rights Management ?
 
 Si vous disposez d’un plan de service incluant Azure Rights Management, vous n’aurez peut-être pas besoin d’activer le service :
 
@@ -61,7 +61,7 @@ Lorsque le service de protection est activé, tous les utilisateurs de votre org
 
 ## <a name="choosing-your-activation-method"></a>Choix de votre méthode d’activation
 
-Pour obtenir des instructions sur l’activation du service de protection à partir de votre portail de gestion, indiquez si vous souhaitez utiliser le centre d’administration Microsoft 365 ou le Portail Azure:
+Pour obtenir des instructions sur l’activation du service de protection à partir de votre portail de gestion, indiquez si vous souhaitez utiliser le centre d’administration Microsoft 365 ou le Portail Azure :
 
 - [Centre d’administration Microsoft 365](activate-office365.md) : nécessite un compte d’administrateur général
 

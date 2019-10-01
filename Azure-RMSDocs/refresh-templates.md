@@ -4,7 +4,7 @@ description: Quand vous utilisez le service Azure Rights Management, les modèle
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fde0bd0b2a51a8cdef1848d2ffb6b69ff412fa78
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 8f4589bae2a16ef50760af95bb06448a7d7a18c4
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790250"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690229"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
@@ -50,21 +50,21 @@ En modifiant le Registre sur les ordinateurs exécutant les applications Office�
 
 1.  Dans l’un Éditeur du Registre, créez et définissez l’une des valeurs de Registre suivantes :
     
-    - Pour définir une fréquence de mise à jour en jours (au moins 1 jour):  Créez une valeur de Registre nommée **TemplateUpdateFrequency** et définissez une valeur entière pour les données, spécifiant la fréquence (en jours) de téléchargement des modifications d’un modèle téléchargé. Utilisez les informations suivantes pour rechercher le chemin du Registre pour créer cette nouvelle valeur de Registre.
+    - Pour définir une fréquence de mise à jour en jours (au moins 1 jour) :  Créez une valeur de Registre nommée **TemplateUpdateFrequency** et définissez une valeur entière pour les données, spécifiant la fréquence (en jours) de téléchargement des modifications d’un modèle téléchargé. Utilisez les informations suivantes pour rechercher le chemin du Registre pour créer cette nouvelle valeur de Registre.
 
         **Chemin du Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
         **Type :** REG_DWORD
 
-        **Value :** TemplateUpdateFrequency
+        **Valeur :** TemplateUpdateFrequency
 
-    - Pour définir une fréquence de mise à jour en secondes (au minimum 1 seconde):  Créez une valeur de Registre nommée **TemplateUpdateFrequencyInSeconds** et définissez une valeur entière pour les données, spécifiant la fréquence (en secondes) de téléchargement des modifications d’un modèle téléchargé. Utilisez les informations suivantes pour rechercher le chemin du Registre pour créer cette nouvelle valeur de Registre.
+    - Pour définir une fréquence de mise à jour en secondes (au minimum 1 seconde) :  Créez une valeur de Registre nommée **TemplateUpdateFrequencyInSeconds** et définissez une valeur entière pour les données, spécifiant la fréquence (en secondes) de téléchargement des modifications d’un modèle téléchargé. Utilisez les informations suivantes pour rechercher le chemin du Registre pour créer cette nouvelle valeur de Registre.
 
         **Chemin du Registre :** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
         **Type :** REG_DWORD
 
-        **Value :** TemplateUpdateFrequencyInSeconds
+        **Valeur :** TemplateUpdateFrequencyInSeconds
 
     Assurez-vous que vous créez et définissez l’une de ces valeurs de Registre, pas les deux. Si les deux sont présentes, **TemplateUpdateFrequency** est ignoré.
 
@@ -78,7 +78,7 @@ En modifiant le Registre sur les ordinateurs exécutant les applications Office�
 
    **Type :** REG_SZ
 
-   **Value :** LastUpdatedTime
+   **Valeur :** LastUpdatedTime
 
    > [!TIP]
    > Dans le chemin de Registre, *<MicrosoftRMS_FQDN>* fait référence au nom de domaine complet de votre service Microsoft RMS. Si vous souhaitez vérifier cette valeur :
@@ -87,7 +87,7 @@ En modifiant le Registre sur les ordinateurs exécutant les applications Office�
    > 
    > Dans le résultat de l'applet de commande, identifiez la valeur **LicensingIntranetDistributionPointUrl**.
    > 
-   > Par exemple :  **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+   > Exemple : **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
    > 
    > Dans la valeur, supprimez **https://** et **/_wmcs/licensing** de cette chaîne. La valeur restante est votre nom de domaine complet (FQDN) du service Microsoft RMS. Dans notre exemple, le nom de domaine complet (FQDN) du service Microsoft RMS a la valeur suivante :
    > 

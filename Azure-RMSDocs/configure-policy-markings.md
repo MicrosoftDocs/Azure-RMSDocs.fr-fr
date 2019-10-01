@@ -4,19 +4,19 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/24/2019
+ms.date: 09/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f600ec661f82b8738653cc340d8d803f21e80c8a
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 044eafa1893c34745d49cc05b0ec029d88ecc318
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794142"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684107"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -88,9 +88,9 @@ Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement d
 
 Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’en-tête, le pied de page ou le filigrane :
 
-- `${Item.Label}` pour l’étiquette sélectionnée. Par exemple :  Généralités
+- `${Item.Label}` pour l’étiquette sélectionnée. Exemple : Général
 
-- `${Item.Name}` pour le nom de fichier ou l’objet de l’e-mail. Par exemple :  JulySales.docx
+- `${Item.Name}` pour le nom de fichier ou l’objet de l’e-mail. Exemple : JulySales.docx
 
 - `${Item.Location}` pour le chemin et le nom de fichier des documents, et pour l’objet des e-mails. Par exemple : \\\Sales\2016\Q3\JulyReport.docx
 
@@ -98,7 +98,7 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
 
 - `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Par exemple : rsimone@vanarsdelltd.com
 
-- `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Par exemple :  8/16/2016 1:30 PM
+- `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Exemple : 8/16/2016 1:30 PM
 
 Exemple : si vous spécifiez la chaîne `Document: ${item.name}  Classification: ${item.label}` pour le pied de page de l’étiquette **Général**, le texte du pied de page appliqué à un document nommé project.docx est **Document: project.docx  Classification: General**.
 

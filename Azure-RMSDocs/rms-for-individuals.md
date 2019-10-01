@@ -4,7 +4,7 @@ description: Informations relatives à RMS for Individuals, un abonnement libre-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a6fb98b54c5305206123076b8c9c3b2fad0f9876
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 3ae8fd5d09425cc48407d778062828c0d1b66032
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792872"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684329"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals et Azure Information Protection
 
@@ -62,5 +62,5 @@ Maintenant que votre compte est créé, si vous êtes invité à vous connecter 
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-RMS for Individuals est un exemple d’utilisation de la fonctionnalité d’inscription en libre-service prise en charge par Azure Active Directory. Pour plus d’informations sur le fonctionnement de cette fonctionnalité, consultez la rubrique [qu’est-ce que l’inscription en libre-service pour Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup) dans la documentation de Azure Active Directory.
+RMS for Individuals est un exemple d’utilisation de la fonctionnalité d’inscription en libre-service prise en charge par Azure Active Directory. Pour plus d’informations sur le fonctionnement de cette fonctionnalité, consultez la rubrique [qu’est-ce que l’inscription en libre-service pour Azure Active Directory ?](/azure/active-directory/users-groups-roles/directory-self-service-signup) dans la documentation de Azure Active Directory.
 

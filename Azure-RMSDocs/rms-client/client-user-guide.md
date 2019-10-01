@@ -4,7 +4,7 @@ description: Le client Azure Information Protection pour Windows vous permet de 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: a1bdcb6ee72b2566f4eb075d1912a35b2fee5a78
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: d3bdca8b4676c0a3a32aefe9a0fdb5d59788637c
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793432"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690111"
 ---
 # <a name="azure-information-protection-user-guide"></a>Guide de l’utilisateur Azure Information Protection
 

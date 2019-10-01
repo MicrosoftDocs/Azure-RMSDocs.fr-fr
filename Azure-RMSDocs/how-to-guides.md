@@ -4,19 +4,19 @@ description: Identifiez les cas d’usage qui classent et protègent les donnée
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1a7662b0262e2c46e3b88861a967287070a5a1ed
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 4f42951ff93e5de259ce9b952f340c5e597e3418
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794079"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689354"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guides pratiques pour les scénarios courants qui utilisent Azure Information Protection
 
@@ -30,7 +30,7 @@ Les déploiements les plus performants sont ceux qui identifient des cas d’uti
 
 ## <a name="common-scenarios"></a>Scénarios courants
 
-|Scénario : Je veux ...|Instructions|
+|Consiste Je veux ...|Instructions|
 |----------------|---------------|
 |Identifier les informations sensibles stockées localement par mon entreprise|[Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement](quickstart-findsensitiveinfo.md)|
 |Aider les utilisateurs à protéger leurs e-mails contenant des informations sensibles|[Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles](quickstart-label-dnf-protectedemail.md)|
@@ -51,11 +51,13 @@ Par exemple, une méthodologie avec les meilleures pratiques pour les décideurs
 
 Instructions pas à pas :
 
+- [Comment créer un portail de suivi AIP personnalisé](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-Build-a-Custom-AIP-Tracking-Portal/ba-p/875849)
+
 - [Créez des rapports plus riches avec Microsoft Information Protection et Azure AD les données de connexion](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
 
 - [Tirez parti de Microsoft Cloud App Security pour appliquer des étiquettes Azure Information Protection dans le Cloud](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
 
-- [Comment préparer un plan de «sortie Cloud» Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631)
+- [Comment préparer un plan de « sortie Cloud » Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631)
 
 - [Visualisation des étiquettes entre locataires](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cross-Tenant-Label-Visualization/ba-p/356588)
 

@@ -4,7 +4,7 @@ description: Ressources pour les administrateurs, qui incluent des informations 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/29/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 3e07a6b23e9b500953024cb953612d1a44cc3a0d
-ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
+ms.openlocfilehash: d15e7d022e0a872cb59fbca9344e4cdcdf0552c8
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70159151"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689158"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
@@ -65,9 +65,9 @@ Pour les autres clients, utilisez les canaux de support dans le tableau suivant,
 
 |Abonnement|Instructions|
 |----------------|---------------|
-|Azure Information Protection (autonome)|1. Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />2. Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />3. En outre, assurez-vous que l’une des options suivantes est sélectionnée:<br /><br />- **Abonnement avec support technique inclus** : Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br /><br /> - **Support technique inclus** : Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
+|Azure Information Protection (autonome)|1. Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />2. Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />3. En outre, assurez-vous que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br /><br /> - **Support technique inclus** : Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
 |Azure Information Protection et un abonnement Office 365<br /><br />Azure Rights Management avec un abonnement Office 365|Consultez [Contacter le support produit pour les entreprises – Aide de l’administrateur](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) pour obtenir les numéros de téléphone et les différentes options de contact du support dans le Centre d’administration Microsoft 365.|
-|Azure Information Protection avec EMS (Enterprise Mobility + Security)|1. Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />2. Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />3. En outre, assurez-vous que l’une des options suivantes est sélectionnée:<br /><br />- **Abonnement avec support technique inclus** : Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br /><br /> - **Support technique inclus** : Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
+|Azure Information Protection avec EMS (Enterprise Mobility + Security)|1. Sélectionnez **Nouvelle demande de support** dans [Aide + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) du portail Azure.<br /><br />2. Quand vous êtes y invité, dans le panneau **Fonctions de base**, choisissez **Technique** comme **Type de problème** et **Information Protection** comme service. <br /><br />3. En outre, assurez-vous que l’une des options suivantes est sélectionnée :<br /><br />- **Abonnement avec support technique inclus** : Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br /><br /> - **Support technique inclus** : Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
 |Azure Information Protection avec Microsoft 365 Entreprise|Utilisez les [canaux de support d’Office 365](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
 Pour connaître les autres options de support, adressez-vous à votre contact Microsoft. 
@@ -80,10 +80,6 @@ Ateliers pratiques : Consultez [Atelier pratique Azure Information Protection
 Vidéos à la demande :
 
 - Les webinaires enregistrés par la communauté technique pour [Azure information protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014).
-
-- Sessions Microsoft Ignite 2018 pour [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection) :
-    
-    - Consultez les [cinq meilleures](what-is-information-protection.md#microsoft-ignite) sessions que nous recommandons.
 
 - Sessions Microsoft Virtual Academy incluant [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection).
 
@@ -99,9 +95,9 @@ Résolution des problèmes :
 
 - Pour le client Azure Information Protection :
     
-    - Client d’étiquetage unifié: Consultez la section [vérifications et résolution des problèmes d’installation](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) du Guide de l’administrateur de ce client, puis confirmez que vous utilisez une [version prise en charge](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines). Si une préversion est disponible, essayez de vérifier si elle résout le problème: tous les correctifs ne sont pas répertoriés dans l’historique des versions.
+    - Client d’étiquetage unifié: Consultez la section [vérifications et résolution des problèmes d’installation](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) du Guide de l’administrateur de ce client, puis confirmez que vous utilisez une [version prise en charge](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines). Si une préversion est disponible, essayez de vérifier si elle résout le problème : tous les correctifs ne sont pas répertoriés dans l’historique des versions.
     
-    - Client classique: Consultez la section [vérifications et résolution des problèmes d’installation](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) du Guide de l’administrateur de ce client, puis confirmez que vous utilisez une [version prise en charge](./rms-client/client-version-release-history.md#servicing-information-and-timelines). Si une préversion est disponible, essayez de vérifier si elle résout le problème: tous les correctifs ne sont pas répertoriés dans l’historique des versions.
+    - Client classique: Consultez la section [vérifications et résolution des problèmes d’installation](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) du Guide de l’administrateur de ce client, puis confirmez que vous utilisez une [version prise en charge](./rms-client/client-version-release-history.md#servicing-information-and-timelines). Si une préversion est disponible, essayez de vérifier si elle résout le problème : tous les correctifs ne sont pas répertoriés dans l’historique des versions.
 
 ### <a name="community-resources"></a>Ressources de la communauté
 

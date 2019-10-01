@@ -4,7 +4,7 @@ description: Informations sur les données personnelles qui sont utilisées par 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fa37a5b1263eae5fe7f9739b9c8621334aae6a35
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 3e83f11013f60d418f28c58cee10a84915f39ebc
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788429"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689222"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
 
@@ -91,7 +91,7 @@ Exécutez l’applet de commande [AipServiceSuperUser](/powershell/module/aipser
 
 Exécutez l’applet de commande [obtenir-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) pour obtenir un journal des actions d’administration pour le service de protection (Azure Rights Management) à partir de Azure information protection. Ce journal contient des données personnelles sous la forme d’adresses e-mail et d’adresses IP. Le journal est en texte clair et une fois téléchargé, les détails d’un administrateur spécifique peuvent être recherchés hors connexion.
 
-Par exemple :
+Exemple :
 ```
 PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -100,7 +100,7 @@ The Rights Management administration log was successfully generated and can be f
 ### <a name="usage-logs-for-the-protection-service"></a>Journaux d’utilisation pour le service de protection
 Exécutez l’applet de commande [obtenir-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog) pour récupérer un journal des actions de l’utilisateur final qui utilisent le service de protection à partir de Azure information protection. Le journal peut inclure des données personnelles sous la forme d’adresses e-mail et d’adresses IP. Le journal est en texte clair et une fois téléchargé, les détails d’un administrateur spécifique peuvent être recherchés hors connexion.
 
-Par exemple :
+Exemple :
 ```
 PS C:\Users> Get-AipServiceUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -132,7 +132,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 Exécutez l’applet de commande [AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) pour récupérer des informations à partir du site de suivi des documents sur un utilisateur spécifique. Pour accéder aux informations de suivi associées aux journaux de document, utilisez l’applet de commande [AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps) .
 
-Par exemple :
+Exemple :
 ```
 PS C:\Users> Get-AipServiceDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -191,7 +191,7 @@ Il n’est pas possible d’effectuer des recherches par ObjectID. Toutefois, vo
 
 Lorsque des étiquettes et la protection sont appliquées à des documents et des e-mails, les adresses e-mail et les adresses IP peuvent être stockées dans les fichiers journaux sur l’ordinateur d’un utilisateur aux emplacements suivants :
 
-- Pour le client d’étiquetage unifié Azure Information Protection et le client Azure Information Protection:%localappdata%\Microsoft\MSIP\Logs
+- Pour le client d’étiquetage unifié Azure Information Protection et le client Azure Information Protection :%localappdata%\Microsoft\MSIP\Logs
 
 - Pour le client RMS : %localappdata%\Microsoft\MSIPC\msip\Logs
 
@@ -232,7 +232,7 @@ Vous ne pouvez pas mettre à jour les adresses e-mail pour les super utilisateur
 
 ### <a name="protection-templates"></a>Modèles de protection
 
-Exécutez l’applet de commande [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) pour mettre à jour le modèle de protection. Étant donné que les données personnelles se `RightsDefinitions` trouvent dans la propriété, vous devez également utiliser l’applet de commande [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) pour créer un objet de définitions de droits avec les informations mises à jour, et utiliser l’objet de définitions de droits avec l' appletdecommande`Set-AipServiceTemplateProperty` applet de commande.
+Exécutez l’applet de commande [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) pour mettre à jour le modèle de protection. Étant donné que les données personnelles se trouvent dans la propriété `RightsDefinitions`, vous devez également utiliser l’applet de commande [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) pour créer un objet de définitions de droits avec les informations mises à jour et utiliser l’objet de définitions de droits avec la `Set-AipServiceTemplateProperty` PolicySchedule.
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Super utilisateurs et administrateurs délégués pour le service de protection
 
@@ -263,7 +263,7 @@ Pour supprimer des données personnelles dans les fichiers journaux du client et
 
 Utilisez les trois étapes suivantes pour demander à Microsoft de supprimer les données personnelles dans les journaux de suivi de document, les journaux d’administration ou les journaux d’utilisation pour le service de protection. 
 
-**Étape 1 : Lancer la demande de suppression**
+**Étape 1 : Lancer la demande de suppression**
 [Contactez le Support Microsoft](information-support.md#to-contact-microsoft-support) afin qu’il ouvre un dossier de support Azure Information Protection en vue de la suppression de données de votre locataire. Vous devez prouver que vous êtes administrateur de votre locataire Azure Information Protection et comprendre que la confirmation de ce processus prend plusieurs jours. Lors de l’envoi de votre demande, vous devrez fournir des informations supplémentaires en fonction des données qui doivent être supprimées.
 
 - Pour supprimer le journal d’administration, fournissez la **date de fin**. Tous les journaux d’administration jusqu'à cette date de fin seront supprimés.

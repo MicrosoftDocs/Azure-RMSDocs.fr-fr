@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c3abc12674e0a59f78d473d709a4708affff5dcf
-ms.sourcegitcommit: e53d52bd44271d27aa06c63bd4cc32884d3f2a4b
+ms.openlocfilehash: 86e914bf96e596a01243d2c4a74236f28c6ac9b5
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322404"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690143"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -472,7 +472,7 @@ Lorsque ces conditions sont remplies, l’utilisateur voit un message contextuel
 Quand les messages contextuels concernent une étiquette spécifique, vous pouvez configurer des exceptions pour les destinataires par nom de domaine.
 
 > [!TIP]
-> Bien que le didacticiel concerne le client Azure information protection plutôt que le client d’étiquetage unifié, vous pouvez voir ces paramètres avancés en action pour vous- [même avec le didacticiel suivant: Configurez Azure Information Protection pour contrôler le surPartage des](../infoprotect-oversharing-tutorial.md)informations à l’aide d’Outlook.
+> Pour obtenir un exemple de procédure pas à pas de configuration de ces paramètres, consultez la vidéo [Azure information protection configuration contextuelle Outlook](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Pour implémenter des messages d’avertissement, de justification ou de blocage pour des étiquettes spécifiques :
 

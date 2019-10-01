@@ -4,7 +4,7 @@ description: Phase 5 de la migration d’AD RMS vers Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: da6ee07bf47e4b392346e719a2c62f00133f498c
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 6be761f99415f3f8e2bfa9de6f27a924316de448
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793920"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684486"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Phase de migration 5 : Tâches de post-migration
 
@@ -54,13 +54,13 @@ Après avoir déprovisionné vos serveurs AD RMS, vous pouvez en profiter pour p
 
 Si les clients migrés exécutent Office 2010, les utilisateurs peuvent rencontrer des retards lors de l’ouverture de contenu protégé après l’annulation de l’approvisionnement de nos serveurs AD RMS. Les utilisateurs peuvent également voir des messages indiquant qu’ils n’ont pas d’informations d’identification pour ouvrir du contenu protégé. Pour résoudre ces problèmes, créez une redirection réseau pour ces ordinateurs, qui redirige le AD RMS nom de domaine complet de l’URL vers l’adresse IP locale de l’ordinateur (127.0.0.1). Pour ce faire, vous pouvez configurer le fichier des hôtes locaux sur chaque ordinateur ou à l’aide de DNS.
 
-Redirection par le biais du fichier d’hôte local:
+Redirection par le biais du fichier d’hôte local :
 
-- Ajoutez la ligne suivante dans le fichier local hosts, `<AD RMS URL FQDN>` en remplaçant par la valeur de votre cluster AD RMS, sans préfixes ni pages Web:
+- Ajoutez la ligne suivante dans le fichier local hosts, en remplaçant `<AD RMS URL FQDN>` par la valeur de votre cluster AD RMS, sans préfixes ni pages Web :
     
         127.0.0.1 <AD RMS URL FQDN>
 
-Redirection via DNS:
+Redirection via DNS :
     
 - Créez un nouvel enregistrement d’hôte (A) pour votre AD RMS nom de domaine complet de l’URL, dont l’adresse IP est 127.0.0.1.
 

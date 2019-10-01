@@ -4,7 +4,7 @@ description: Conseils pour les administrateurs si Azure Rights Management avec A
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3b5ee3f68f0f1fb6d82e0e3abaf2d2c0d5585bf8
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 82322cf62aee2d87c4d9938304c605a486bf61b7
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790372"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689548"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Préparez l’environnement pour Azure Rights Management lorsque vous avez AD RMS
 
@@ -56,7 +56,7 @@ Si vous décidez de migrer vers Azure Information Protection ou si vous décidez
 
 Depuis fin février 2018, de nouveaux abonnements incluant Azure Information Protection activent le service Azure Rights Management par défaut. Si ce service est automatiquement activé pour vous alors que vous utilisez également Active Directory Rights Management Services (AD RMS), cette combinaison n’est pas compatible. Il est donc important que vous désactiviez le service Azure Rights Management dès que possible. 
 
-### <a name="step-1-deactivate-azure-rights-management"></a>Étape 1 : Désactiver Azure Rights Management
+### <a name="step-1-deactivate-azure-rights-management"></a>Étape 1 : Désactiver Azure Rights Management
 Exécutez l’une des procédures suivantes pour désactiver Azure Rights Management.
 
 > [!TIP]
@@ -88,7 +88,7 @@ Le message **Rights Management n’est pas activé** s’affiche alors, avec une
 
 La barre d’informations affiche **Désactivation terminée** et **Désactiver** est maintenant remplacé par **Activer**. 
 
-### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
+### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
 
 Consultez les instructions pour la migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
@@ -99,13 +99,13 @@ Microsoft commence à activer le service Azure Rights Management pour les abonne
 
 Si le service est activé automatiquement pour vous et que vous utilisez aussi AD RMS, cette combinaison n’est pas compatible ; il est donc important que votre locataire désactive la mise à jour automatique du service. 
 
-### <a name="step-1-opt-out-from-the-automatic-service-update"></a>Étape 1 : Désactiver la mise à jour automatique du service
+### <a name="step-1-opt-out-from-the-automatic-service-update"></a>Étape 1 : Désactiver la mise à jour automatique du service
 
 Utilisez la commande Exchange Online PowerShell [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) suivante : `Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`
 
 [Plus d’informations](https://support.office.com/article/protection-features-in-azure-information-protection-rolling-out-to-existing-office-365-tenants-7ad6f58e-65d7-4c82-8e65-0b773666634d) 
 
-### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
+### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
 
 Consultez les instructions pour la migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
@@ -116,15 +116,15 @@ Le panneau **Azure Information Protection - Activation de la protection** contie
 
 Si vous utilisez également AD RMS, ne sélectionnez pas l’option **Activer**. Quand le service Azure Rights Management n’est pas activé, vous pouvez toujours utiliser Azure Information Protection pour les étiquettes qui appliquent uniquement la classification. Une stratégie par défaut spéciale est créée pour vous. Elle n’inclut pas la protection des données, et les options de configuration restent indisponibles jusqu’à ce que le service Azure Rights Management soit activé.
 
-### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Étape 1 : Configurer votre stratégie Azure Information Protection pour la classification et l’étiquetage, sans protection
+### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Étape 1 : Configurer votre stratégie Azure Information Protection pour la classification et l’étiquetage, sans protection
 
 À partir du panneau **Azure Information Protection - Étiquettes**, affichez et configurez les étiquettes qui n’incluent pas d’options pour la protection des données. Pour plus d’informations sur la façon de configurer les paramètres d’étiquette et de stratégie, consultez [Configuration de la stratégie Azure Information Protection](configure-policy.md).
 
-### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
+### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
 
 Consultez les instructions pour la migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
-### <a name="step-3-configure-labels-for-protection"></a>Étape 3 : Configurer les étiquettes pour la protection
+### <a name="step-3-configure-labels-for-protection"></a>Étape 3 : Configurer les étiquettes pour la protection
 
 Une fois que vous avez activé le service Azure Rights Management dans le cadre du processus de migration, vous pouvez configurer des étiquettes pour la protection des données. Toutefois, si vous migrez des utilisateurs par lots, vérifiez que les étiquettes qui appliquent la protection ont pour portée uniquement les utilisateurs migrés.
 

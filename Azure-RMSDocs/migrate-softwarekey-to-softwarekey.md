@@ -4,7 +4,7 @@ description: Instructions qui font partie du chemin de migration d’AD RMS ver
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,14 +13,14 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5bbf064cb019b663b62a779bf58322e0b23302e8
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 420cafdcc8fac3c1eb5198dacf8b150bc9da9733
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790534"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684343"
 ---
-# <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Étape 2 : Migration de clé protégée par logiciel à clé protégée par logiciel
+# <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Étape 2 : Migration de clé protégée par logiciel à clé protégée par logiciel
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -33,7 +33,7 @@ La procédure suivante permet d’importer la configuration AD RMS dans Azure I
 
 ## <a name="to-import-the-configuration-data-to-azure-information-protection"></a>Pour importer les données de configuration dans Azure Information Protection
 
-1. Sur une station de travail connectée à Internet, utilisez l’applet de commande [Connect-AipService](/powershell/module/aipservice/connect-aipservice) pour vous connecter au service Azure Rights Management:
+1. Sur une station de travail connectée à Internet, utilisez l’applet de commande [Connect-AipService](/powershell/module/aipservice/connect-aipservice) pour vous connecter au service Azure Rights Management :
 
     ```
     Connect-AipService

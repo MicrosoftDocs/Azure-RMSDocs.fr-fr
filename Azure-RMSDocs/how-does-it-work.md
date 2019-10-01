@@ -4,7 +4,7 @@ description: Découvrez en détail le fonctionnement d’Azure RMS, les contrôl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/15/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0f23bfeca00b8eeb7da3643c192b37641c0ea234
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 29bbb0b080e39cad118b49f695d8ec1d1d5b5493
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794177"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689595"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
@@ -40,14 +40,14 @@ Pour une description détaillée de ce qui se passe, consultez la section [Proc�
 
 Pour obtenir des détails techniques sur les algorithmes et les longueurs de clé qu'Azure RMS utilise, consultez la section suivante.
 
-## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Contrôles de chiffrement utilisés par Azure RMS: Algorithmes et longueurs de clé
+## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Contrôles de chiffrement utilisés par Azure RMS : Algorithmes et longueurs de clé
 Même si vous n’avez pas besoin de connaître en détail le fonctionnement de cette technologie, vous devrez peut-être fournir certaines informations sur les contrôles de chiffrement utilisés, par exemple, pour confirmer que la protection de sécurité répond aux normes.
 
 
 |Contrôles de chiffrement|Utilisation dans Azure RMS|
 |-|-|
-|Utilisé CHIFFRE<br /><br />Longueur de la clé: 128 bits et 256 bits [[1]](#footnote-1)|Protection du contenu|
-|Utilisé RSA<br /><br />Longueur de la clé: 2 048 bits [[2]](#footnote-2)|Protection de clé|
+|Utilisé CHIFFRE<br /><br />Longueur de la clé : 128 bits et 256 bits [[1]](#footnote-1)|Protection du contenu|
+|Utilisé RSA<br /><br />Longueur de la clé : 2 048 bits [[2]](#footnote-2)|Protection de clé|
 |SHA-256|Signature de certificat|
 
 ###### <a name="footnote-1"></a>Note 1 
@@ -79,7 +79,7 @@ Cette clé de locataire est protégée dans les services en ligne de Microsoft, 
 Les licences et certificats envoyés à un appareil Windows sont protégés par la clé privée d’appareil du client, créée quand un utilisateur utilise Azure RMS sur l’appareil pour la première fois. Cette clé privée est à son tour protégée par DPAPI sur le client, ce qui a pour effet de protéger ces secrets à l’aide d’une clé dérivée du mot de passe de l’utilisateur. Sur les appareils mobiles, les clés ne sont utilisées qu’une seule fois. Ainsi, n’étant pas stockées sur les clients, elles ne nécessitent pas de protection sur l’appareil. 
 
 
-## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procédure pas à pas de fonctionnement de Azure RMS: Première utilisation, protection du contenu, consommation du contenu
+## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procédure pas à pas de fonctionnement de Azure RMS : Première utilisation, protection du contenu, consommation du contenu
 Pour comprendre plus en détails le fonctionnement d’Azure RMS, examinons un flux classique tel qu’il se produit après l’[activation du service Azure Rights Management](activate-service.md), quand un utilisateur utilise le service Rights Management pour la première fois sur son ordinateur Windows (un processus parfois nommé **initialisation de l’environnement utilisateur** ou amorçage), **protège du contenu** (un document ou un e-mail), puis **consomme** (ouvre et utilise) du contenu protégé par quelqu’un d’autre.
 
 Après l'initialisation de l'environnement utilisateur, l'utilisateur peut protéger des documents ou consommer des documents protégés sur cet ordinateur.
@@ -100,7 +100,7 @@ Lorsque le compte de l'utilisateur est fédéré avec Azure Active Directory, ce
 
 **Ce qui se passe à l’étape 2** : une fois l’utilisateur authentifié, la connexion est automatiquement redirigée vers le locataire Azure Information Protection de l’organisation, qui émet des certificats permettant à l’utilisateur de s’authentifier auprès du service Azure Rights Management, pour consommer du contenu protégé et protéger du contenu hors connexion.
 
-Le certificat de compte de droits, ou certificat RAC, est l’un de ces certificats. Ce certificat authentifie l’utilisateur dans Azure Active Directory et reste valide pendant 31 jours. Le certificat est renouvelé automatiquement par le client RMS, à condition que le compte d’utilisateur existe toujours dans Azure Active Directory et qu’il soit activé. Ce certificat n’est pas configurable par un administrateur. 
+Le certificat de compte de droits, ou certificat RAC, est l’un de ces certificats. Ce certificat authentifie l’utilisateur pour Azure Active Directory et est valide pendant 31 jours. Le certificat est renouvelé automatiquement par le client RMS, à condition que le compte d’utilisateur existe toujours dans Azure Active Directory et qu’il soit activé. Ce certificat n’est pas configurable par un administrateur. 
 
 Une copie de ce certificat est stockée dans Azure pour permettre la création d’autres certificats avec les mêmes clés si l’utilisateur change d’appareil.
 
@@ -121,7 +121,7 @@ Le client RMS utilise ensuite la clé de l'organisation obtenue lors de l'initia
 
 ![Protection de document RMS : étape 3, la stratégie est incorporée dans le document](./media/AzRMS_documentprotection3.png)
 
-**Ce qui se passe à l’étape 3** : Enfin, le client RMS incorpore la stratégie dans un fichier avec le corps du document chiffré précédemment, pour constituer un document protégé.
+**Ce qui se passe à l’étape 3** : Enfin, le client RMS incorpore la stratégie dans un fichier avec le corps du document chiffré précédemment, qui forment un document protégé.
 
 Ce document peut être stocké partout, ou partagé à l'aide de n'importe quelle méthode, et la stratégie reste toujours associée au document chiffré.
 

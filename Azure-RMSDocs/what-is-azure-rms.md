@@ -4,7 +4,7 @@ description: Informations concernant Azure Rights Management (Azure RMS), la tec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 70ee7b3733d73ca4603bd1031931381b19d3aa08
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0cc51afb848dc754d33e5f0d425741ef84eff453
+ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789755"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71679170"
 ---
 # <a name="what-is-azure-rights-management"></a>Qu'est-ce qu'Azure Rights Management ?
 
@@ -65,7 +65,7 @@ Utilisez le tableau suivant pour identifier les besoins ou problèmes métier au
 > Si vous connaissez bien la version locale de Rights Management, Active Directory Rights Management Services (AD RMS), vous pouvez consulter le tableau de comparaison dans [Comparaison d’Azure Rights Management et d’AD RMS](compare-on-premise.md).
 
 ## <a name="security-compliance-and-regulatory-requirements"></a>Respect des obligations réglementaires, de conformité et de sécurité
-Azure Rights Management prend en charge les exigences réglementaires, de conformité et de sécurité suivantes:
+Azure Rights Management prend en charge les exigences réglementaires, de conformité et de sécurité suivantes :
 
 √ Utilisation du chiffrement standard et prise en charge de la norme FIPS 140-2. Pour plus d’informations, consultez [Contrôles de chiffrement utilisés par Azure RMS : Algorithmes et longueurs de clé](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
 

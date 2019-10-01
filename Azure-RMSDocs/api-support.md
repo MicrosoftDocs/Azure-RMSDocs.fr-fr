@@ -4,7 +4,7 @@ description: Découvrez comment le service Azure Rights Management d’Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 927cee61bbe1cfcaa1aa7f5f22998c06359407f5
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: fe3b91fb094705b82d3fd07ad74691eee8e74399
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789538"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684303"
 ---
 # <a name="other-applications-that-support-the-rights-management-apis"></a>Autres applications prenant en charge les API Rights Management
 

@@ -4,7 +4,7 @@ description: Instructions pour afficher et utiliser un fichier protégé qui vou
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 8cf51210ad584dca72be4e356c5b554688de24ad
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 3ba86bca223317204dc2067e39cb928a64de71e3
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790046"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690122"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Guide de l’utilisateur : Afficher les fichiers protégés avec la visionneuse de Azure Information Protection
 

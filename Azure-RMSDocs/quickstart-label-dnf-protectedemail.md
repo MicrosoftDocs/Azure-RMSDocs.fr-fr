@@ -4,18 +4,18 @@ description: Configurez une étiquette qui protège l’e-mail d’un utilisateu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 09/28/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ffc5aa43b44eedad30dbfdb501152e55f87fb510
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 44e363456d8d4aeaf2a57c8c5b10213d256cb8aa
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793840"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71674173"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles
 
@@ -23,7 +23,7 @@ ms.locfileid: "68793840"
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Dans ce démarrage rapide, vous allez configurer une étiquette existante pour appliquer automatiquement le paramètre de protection Ne pas transférer.
+Dans ce démarrage rapide, vous allez configurer une étiquette Azure Information Protection existante pour appliquer automatiquement le paramètre de protection Ne pas transférer.
 
 La stratégie Azure Information Protection actuelle contient déjà des deux étiquettes avec cette configuration :
 
@@ -51,9 +51,11 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
     
     Vous pouvez utiliser une des étiquettes par défaut, ou une étiquette que vous avez créée. Si vous avez besoin d’aide pour créer une nouvelle étiquette, consultez [Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques](quickstart-label-specificusers.md).
 
-4. Pour tester la nouvelle étiquette : le client Azure Information Protection doit être installé sur les ordinateurs des utilisateurs. 
+4. Pour tester la nouvelle étiquette : Le client Azure Information Protection (classique) doit être installé sur un ordinateur Windows. 
     
-    Pour tester l’étiquette par vous-même, vous pouvez installer le client en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection.
+    Vous pouvez installer le client classique en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection.
+    
+    Si vous utilisez un autre client d’étiquetage que le client classique, consultez la documentation Office pour obtenir des instructions équivalentes à ce tutoriel. Par exemple, [Vue d’ensemble des étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels).
 
 5. Pour tester la nouvelle étiquette : Un ordinateur exécutant Windows (au minimum Windows 7 avec Service Pack 1). Sur cet ordinateur, vous êtes connecté aux applications Office de l’une des catégories suivantes :
     
@@ -89,7 +91,7 @@ Pour obtenir la liste complète des prérequis d’Azure Information Protection,
 
 4. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé du cloud)** est sélectionnée.
     
-5. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)** .
+5. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)**.
 
 6. Vérifiez que l’option suivante est sélectionnée : **Dans Outlook appliquer Ne pas transférer**.
 

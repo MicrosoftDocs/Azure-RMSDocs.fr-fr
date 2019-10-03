@@ -4,18 +4,18 @@ description: Tutoriel d’introduction montrant comment configurer et voir en ac
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 2fdb9e719ffcafb6923528fef6c63bb8eefb3cdc
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: ffbc65add0d5daceddbf02f454efac4a2a288243
+ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794130"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712593"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutoriel : configurer Azure Information Protection pour contrôler le surpartage d’informations à l’aide d’Outlook
 
@@ -43,15 +43,20 @@ Pour suivre ce tutoriel, il vous faut :
     
     Si vous n’avez pas ce type d’abonnement, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
 
-2. Vous avez ajouté le panneau Azure Information Protection au portail Azure et avez au moins une étiquette.
+2. Le panneau Azure Information Protection est ajouté au portail Azure et vous avez au moins une étiquette publiée dans la stratégie générale Azure Information Protection.
     
-    Bien que ce tutoriel utilise l’étiquette par défaut, **Général**, vous pouvez remplacer cette étiquette par une autre si vous préférez. Si vous avez besoin d’aide pour ajouter le panneau Azure Information Protection ou si vous n’avez pas d’étiquettes, consultez [Démarrage rapide : Ajouter Azure Information Protection au portail Azure et afficher la stratégie](quickstart-viewpolicy.md).
+    Bien que ce tutoriel utilise l’étiquette par défaut, **Général**, vous pouvez remplacer cette étiquette par une autre si vous préférez. Si vous avez besoin d’aide pour ajouter le panneau Azure Information Protection ou si vous n’avez pas d’étiquettes publiées dans la stratégie générale, consultez [Démarrage rapide : Ajouter Azure Information Protection au portail Azure et afficher la stratégie](quickstart-viewpolicy.md).
 
 3. Un ordinateur exécutant Windows (au minimum Windows 7 avec Service Pack 1). Sur cet ordinateur, vous pouvez vous connecter à Outlook. Vous devrez peut-être redémarrer Outlook plusieurs fois au cours de ce tutoriel.
 
-4. Le client Azure Information Protection est installé sur votre ordinateur.
+4. Le client Azure Information Protection (classique) est installé sur votre ordinateur Windows.
     
-    Pour installer le client, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et téléchargez **AzInfoProtection.exe** sur la page Azure Information Protection.
+    Vous pouvez installer le client classique en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection. 
+    
+    Si vous utilisez le client d’étiquetage unifié au lieu du client classique, consultez les instructions suivantes qui expliquent comment utiliser les paramètres avancés PowerShell pour les configurations équivalentes à celles dans ce tutoriel :
+    
+    - Instructions du Guide de l’administrateur : [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+    - Vidéo : [Configuration de la fenêtre contextuelle Outlook Azure Information Protection](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
 
 Pour obtenir la liste complète des prérequis d’Azure Information Protection, voir [Prérequis d’Azure Information Protection](requirements.md).
 
@@ -105,7 +110,7 @@ Pour cette étape du tutoriel, nous allons spécifier les paramètres clients av
 
 À l’aide de la stratégie délimitée créée, nous allons ajouter un nouveau paramètre client avancé nommé **OutlookWarnUntrustedCollaborationLabel** avec l’ID de votre étiquette **Général** : 
 
-1. De retour dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel ( **...** ) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
+1. De retour dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel (**...**) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
 
 2. Dans le panneau **Paramètres avancés**, tapez le nom du paramètre avancé, **OutlookWarnUntrustedCollaborationLabel**, et collez votre propre ID d’étiquette en guise de valeur. Utilisation de notre exemple d’ID d’étiquette :
     
@@ -140,7 +145,7 @@ Sur votre ordinateur client, nous allons maintenant voir les résultats de la co
 
 Nous allons modifier le paramètre client avancé existant pour remplacer le nom par **OutlookJustifyUntrustedCollaborationLabel** tout en conservant votre ID d’étiquette **Général** : 
 
-1. Dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel ( **...** ) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
+1. Dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel (**...**) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
 
 2. Dans le panneau **Paramètres avancés**, remplacez le nom du paramètre avancé précédent que vous avez créé, **OutlookWarnUntrustedCollaborationLabel**, par le nouveau nom, **OutlookJustifyUntrustedCollaborationLabel** :
     
@@ -172,7 +177,7 @@ Sur votre ordinateur client, nous allons maintenant voir les résultats de ce no
 
 Nous allons modifier le paramètre client avancé existant une fois de plus pour remplacer le nom par **OutlookBlockUntrustedCollaborationLabel** tout en conservant votre ID d’étiquette **General** : 
 
-1. Dans le portail Azure, dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel ( **...** ) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
+1. Dans le portail Azure, dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel (**...**) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
 
 2. Dans le panneau **Paramètres avancés**, remplacez le nom du paramètre avancé précédent que vous avez créé, **OutlookJustifyUntrustedCollaborationLabel**, par le nouveau nom, **OutlookBlockUntrustedCollaborationLabel** :
     
@@ -277,7 +282,7 @@ Vous avez testé vos messages d’avertissement, de justification et de blocage 
 
 En guise d’illustration, nous allons créer un paramètre client avancé supplémentaire nommé **OutlookBlockTrustedDomains** et spécifier votre propre nom de domaine à partir de votre adresse e-mail. Cela empêchera au message de blocage que vous avez vu précédemment de s’afficher pour les destinataires qui partagent votre nom de domaine dans leur adresse de messagerie, mais de toujours s’afficher pour les autres destinataires. De même, vous pouvez créer des paramètres clients avancés supplémentaires pour **OutlookWarnTrustedDomains** et **OutlookJustifyTrustedDomains**.
 
-1. Dans le portail Azure, dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel ( **...** ) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
+1. Dans le portail Azure, dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel (**...**) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
 
 2. Dans le panneau **paramètres avancés**, tapez le nom du paramètre avancé, **OutlookBlockTrustedDomains**, et, en guise de valeur, collez votre nom de domaine à partir de votre adresse e-mail. Par exemple :
     
@@ -299,7 +304,7 @@ Pour cette étape du tutoriel, nous allons spécifier un nouveau paramètre clie
 
 Ce nouveau paramètre client avancé nommé **OutlookUnlabeledCollaborationAction** n’a pas besoin d’ID d’étiquette, mais spécifie l’action à entreprendre pour le contenu sans étiquette : 
 
-1. Dans le portail Azure, de retour dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel ( **...** ) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
+1. Dans le portail Azure, de retour dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel (**...**) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
 
 2. Dans le panneau **paramètres avancés**, tapez le nom du paramètre avancé, **OutlookUnlabeledCollaborationAction** et, en guise de valeur, spécifiez **Avertir** :
     
@@ -329,7 +334,7 @@ Sur votre ordinateur client, nous allons maintenant voir les résultats de la co
 
 Nous allons modifier le paramètre client avancé existant pour remplacer la valeur par **Justifier** tout en conservant le nom **OutlookUnlabeledCollaborationAction** : 
 
-1. Dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel ( **...** ) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
+1. Dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel (**...**) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
 
 2. Dans le panneau **Paramètres avancés**, recherchez le paramètre **OutlookUnlabeledCollaborationAction** et remplacez la valeur précédente, **Avertir**, par la nouvelle valeur, **Justifier** :
     
@@ -359,7 +364,7 @@ Sur votre ordinateur client, nous allons maintenant voir les résultats de la mo
 
 Comme auparavant, nous allons modifier le paramètre client avancé existant pour remplacer la valeur par **Empêcher** tout en conservant le nom **OutlookUnlabeledCollaborationAction** : 
 
-1. Dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel ( **...** ) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
+1. Dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel (**...**) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Paramètres avancés**.
 
 2. Dans le panneau **Paramètres avancés**, recherchez le paramètre **OutlookUnlabeledCollaborationAction** et remplacez la valeur précédente, **Justifier**, par la nouvelle valeur, **Empêcher** :
     
@@ -415,7 +420,7 @@ User Response: Confirmed
 
 Si vous ne souhaitez pas conserver les modifications que vous avez effectuées dans ce tutoriel, procédez ainsi :
 
-1. Dans le portail Azure, dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel ( **...** ) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Supprimer la stratégie**.
+1. Dans le portail Azure, dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel (**...**) en regard de **Tutoriel sur le surpartage**. Ensuite, sélectionnez **Supprimer la stratégie**.
 
 2. Si vous êtes invité à confirmer, sélectionnez **OK**.
 

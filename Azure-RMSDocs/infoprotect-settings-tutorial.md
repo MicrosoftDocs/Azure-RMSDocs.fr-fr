@@ -4,18 +4,18 @@ description: Tutoriel d’introduction qui vous guide dans la configuration des 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/20/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f2aa0d6b7068488212697f6f2f2e9b1d19c9d131
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 73f242b50e53eb7f5408bf99902daf0214d37268
+ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794053"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712580"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutoriel : Configurer les paramètres de stratégie Azure Information Protection qui interagissent
 
@@ -28,7 +28,7 @@ Dans ce tutoriel, vous allez apprendre à :
 > * configurer des paramètres de stratégie qui fonctionnent ensemble ;
 > * voir vos paramètres en pratique.
 
-Au lieu de demander aux utilisateurs d’étiqueter manuellement leurs documents et e-mails, vous pouvez utiliser les paramètres de stratégie pour :
+Au lieu de demander aux utilisateurs d’étiqueter manuellement leurs documents et e-mails, vous pouvez utiliser les paramètres de stratégie Azure Information Protection pour :
 
 - garantir un niveau de classification de base pour le nouveau contenu et le contenu modifié ;
 
@@ -44,15 +44,17 @@ Pour suivre ce tutoriel, il vous faut :
     
     Si vous n’avez pas ce type d’abonnement, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
 
-2. Vous avez ajouté le panneau Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
-
-    Si vous avez besoin d’aide avec ces actions, consultez [Démarrage rapide : Ajouter Azure Information Protection au portail Azure et afficher la stratégie](quickstart-viewpolicy.md)
-
-3. Le client Azure Information Protection est installé sur votre ordinateur. 
+2. Le panneau Azure Information Protection est ajouté au portail Azure et vous avez une ou plusieurs étiquettes publiées dans la stratégie générale Azure Information Protection.
     
-    Pour installer le client, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et téléchargez **AzInfoProtection.exe** sur la page Azure Information Protection.
+    Ces étapes sont décrites dans [Démarrage rapide : Ajouter Azure Information Protection au portail Azure et afficher la stratégie](quickstart-viewpolicy.md).
 
-4. Un ordinateur Windows (au minimum Windows 7 avec Service Pack 1) sur lequel vous avez établi une connexion aux applications Office de l’une des catégories suivantes :
+3. Le client Azure Information Protection (classique) est installé sur votre ordinateur Windows (Windows 7 minimum avec Service Pack 1). 
+    
+    Vous pouvez installer le client classique en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection. 
+    
+    Si vous utilisez un autre client d’étiquetage que le client classique, consultez la documentation Office pour obtenir des informations sur les paramètres de stratégie pour les étiquettes de sensibilité. Par exemple, [Vue d’ensemble des étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels).
+
+4. Vous êtes connecté aux applications Office à partir de l’une des catégories suivantes :
     
     - Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) vous est affectée.
     
@@ -92,7 +94,7 @@ Sur le Portail Azure, nous allons modifier la stratégie globale de façon à ch
 
     |Paramètre|Valeur|Informations|
     |-------|-----|-----|
-    |**Sélectionner l’étiquette par défaut**|**Général**|Si vous n’avez pas d’étiquette nommée **Général**, sélectionnez une autre étiquette dans la liste déroulante. Elle s’applique automatiquement comme classification de base aux documents et aux e-mails sans étiquette. Toutefois, les utilisateurs peuvent remplacer l’étiquette que vous avez sélectionnée par une autre.|
+    |**Sélectionner l’étiquette par défaut**|**Général**|L’étiquette **General** est l’une des étiquettes par défaut qu’Azure Information Protection peut créer pour vous. Cette étape est traitée dans le Guide de démarrage rapide [Créer et publier des étiquettes](quickstart-viewpolicy.md#create-and-publish-labels). Si vous n’avez pas d’étiquette nommée **Général**, sélectionnez une autre étiquette dans la liste déroulante. Elle s’applique automatiquement comme classification de base aux documents et aux e-mails sans étiquette. Toutefois, les utilisateurs peuvent remplacer l’étiquette que vous avez sélectionnée par une autre.|
     |**Tous les documents et les e-mails doivent avoir une étiquette**|**Activé**|Ce paramètre est souvent appelé étiquetage obligatoire, car il empêche les utilisateurs d’enregistrer des documents ou d’envoyer des e-mails sans étiquette. En parallèle de l’étiquette par défaut, les documents et les e-mails auront soit l’étiquette par défaut que vous avez définie, soit l’étiquette de leur choix.
     |**Pour les e-mails avec pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes**|**Recommandé**|Ce paramètre invite aux utilisateurs à sélectionner une étiquette de classification plus élevée pour leurs e-mails quand ils joignent des documents ayant une classification plus élevée que l’étiquette que vous avez sélectionnée par défaut.
     |**Afficher la barre Information Protection dans les applications Office**|**Activé**|L’affichage de la barre Information Protection permet aux utilisateurs d’afficher et de modifier plus facilement l’étiquette par défaut.
@@ -144,7 +146,7 @@ Si nous n’avions pas défini d’étiquette par défaut avec le paramètre d�
 
 ### <a name="recommendations-for-emails-with-attachments"></a>Recommandations pour les e-mails avec pièces jointes
 
-Pour le document Word ouvert, choisissez une étiquette ayant une classification plus élevée que **Général** : par exemple, l’une des sous-étiquettes sous **Confidentiel**, comme **Confidentiel – Tout le monde (non protégé)** . Enregistrez le document localement et donnez-lui n’importe quel nom. 
+Pour le document Word ouvert, choisissez une étiquette ayant une classification plus élevée que **Général** : par exemple, l’une des sous-étiquettes sous **Confidentiel**, comme **Confidentiel – Tout le monde (non protégé)**. Enregistrez le document localement et donnez-lui n’importe quel nom. 
 
 Démarrez Outlook et créez un e-mail. Comme nous l’avons vu avec Word, le nouvel e-mail est automatiquement étiqueté comme **Général** et la barre Information Protection s’affiche.
 

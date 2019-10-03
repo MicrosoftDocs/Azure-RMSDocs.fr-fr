@@ -4,18 +4,18 @@ description: Tutoriel de prise en main d’environ 15 minutes, permettant de mod
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 44504efc4640bf3d07398b14da7539cbda20e45d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0923ef10427533cae46b5de30f4c30371b9fe6d7
+ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788589"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712612"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutoriel : Configurer les paramètres de la stratégie Azure Information Protection et créer une étiquette
 
@@ -42,15 +42,15 @@ Pour suivre ce tutoriel, il vous faut :
     
     Si vous n’avez pas d’abonnement incluant Azure Information Protection Plan 2, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
 
-2. Vous avez ajouté le panneau Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
-
-    Si vous avez besoin d’aide avec ces actions, consultez [Démarrage rapide : Ajouter Azure Information Protection au portail Azure et afficher la stratégie](quickstart-viewpolicy.md)
-
-3. Le client Azure Information Protection est installé sur votre ordinateur. 
+2. Le panneau Azure Information Protection est ajouté au portail Azure, le service de protection est activé et vous avez une ou plusieurs étiquettes publiées dans la stratégie générale Azure Information Protection.
     
-    Pour installer le client, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et téléchargez **AzInfoProtection.exe** sur la page Azure Information Protection.
+    Ces étapes sont décrites dans [Démarrage rapide : Ajouter Azure Information Protection au portail Azure et afficher la stratégie](quickstart-viewpolicy.md).
 
-4. Un ordinateur exécutant Windows (au minimum Windows 7 avec Service Pack 1). Sur cet ordinateur, vous êtes connecté aux applications Office de l’une des catégories suivantes :
+3. Le client Azure Information Protection (classique) est installé sur votre ordinateur Windows (Windows 7 minimum avec Service Pack 1). 
+    
+    Vous pouvez installer le client classique en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection. Si vous utilisez un autre client d’étiquetage que le client classique, consultez la [documentation Office](/microsoft-365/compliance/sensitivity-labels) pour obtenir des instructions équivalentes à ce tutoriel.
+
+4. Vous êtes connecté aux applications Office à partir de l’une des catégories suivantes :
     
     - Applications Office version minimale 1805, build 9330.2078 d’Office 365 Business ou de Microsoft 365 Business quand une licence Azure Rights Management (également appelé Azure Information Protection pour Office 365) vous est affectée.
     
@@ -90,9 +90,9 @@ C’est parti !
     
     Nous utiliserons ces paramètres de stratégie plus loin dans ce tutoriel lorsque vous les verrez en action.
 
-4. Pour **Sélectionner l’étiquette par défaut**, choisissez **Général**. 
-
-    Si vous n’avez pas cette étiquette car vous avez une version plus ancienne de la stratégie, choisissez **Interne** comme étiquette équivalente.
+4. Pour **Sélectionner l’étiquette par défaut**, sélectionnez l’une des étiquettes, par exemple **Général**. 
+    
+    L’étiquette **General** est l’une des étiquettes par défaut qu’Azure Information Protection peut créer pour vous. Cette étape est traitée dans la section [Créer et publier des étiquettes](quickstart-viewpolicy.md#create-and-publish-labels) du Guide de démarrage rapide pour ajouter Azure Information Protection au portail Azure.
 
 5. Pour **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection**, définissez cette option sur **Activé**, le cas échéant.
 
@@ -150,7 +150,7 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
     Cliquez sur **Ajouter une nouvelle condition**, puis, dans le panneau **Condition**, sélectionnez les éléments suivants :
     
-    a. **Choisir le type de condition**  : conservez la valeur par défaut **Types d’informations**.
+    a. **Choisir le type de condition ** : conservez la valeur par défaut **Types d’informations**.
     
     b. **Sélectionner un secteur d’activité** : conservez la valeur par défaut **Tout**.
     
@@ -265,7 +265,7 @@ Si vous ne souhaitez pas conserver les modifications que vous avez effectuées d
 
 2. Rétablissez les valeurs d’origine (dont vous avez pris note) des paramètres de stratégie, puis sélectionnez **Enregistrer**. 
 
-3. Dans l’option de menu **Classifications** > **Étiquette** : dans le panneau **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel ( **…** ) de l’étiquette **Finance** que vous avez créée.
+3. Dans l’option de menu **Classifications** > **Étiquette** : dans le panneau **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel (**…**) de l’étiquette **Finance** que vous avez créée.
 
 4. Sélectionnez **Supprimer cette étiquette**, puis **OK** si une confirmation vous est demandée.
 

@@ -4,7 +4,7 @@ description: Migrez Azure Information Protection étiquettes vers des étiquette
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/25/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3c75773948fd86ca6b39651c5a9d5d904c68a3cf
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: ec565422044329948c624f8b6207d431c71dc0ac
+ms.sourcegitcommit: b6c1d2cb23c9d883901791bfadc9c39028ddd8aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673914"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835381"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Comment migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée
 
@@ -162,7 +162,7 @@ Pour savoir si les clients et services que vous utilisez prennent en charge l’
 
 - Le [Azure information protection client d’étiquetage unifié pour Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Pour obtenir une comparaison entre ce client et le client Azure Information Protection (Classic), consultez [comparer les clients](./rms-client/use-client.md#compare-the-clients).
 
-- Applications Office qui se trouvent à différentes phases de disponibilité. Pour plus d’informations, consultez la section **Où est-ce que la fonctionnalité est disponible aujourd’hui ?** de l’article [Appliquer des étiquettes de critère de diffusion à vos documents et vos e-mails dans Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) dans la documentation Office.
+- Applications Office qui se trouvent à différentes phases de disponibilité. Pour plus d’informations, consultez [Quelles sont les fonctionnalités de l’étiquette de sensibilité sont prises en charge dans Office aujourd’hui ?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) dans la documentation Office.
     
 - Applications d’éditeurs de logiciels et de développeurs qui utilisent le [SDK Microsoft Information Protection](https://docs.microsoft.com/en-us/information-protection/develop/overview).
 

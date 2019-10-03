@@ -4,7 +4,7 @@ description: Vous avez une question au sujet de l’utilisation d’Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0d17189d2c5cd896727de1de05233fbfcd9b9868
-ms.sourcegitcommit: dd60bdae3ed608306cd8f9dbe92aac6650d8fbb3
+ms.openlocfilehash: 8266e7b6a7883be96571dfd2d493b3eac83bdb7c
+ms.sourcegitcommit: b6c1d2cb23c9d883901791bfadc9c39028ddd8aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70215692"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835390"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
 
@@ -40,7 +40,7 @@ Pour être informé de la mise à disposition de fonctionnalités de classificat
 > - Création de rapports centralisée pour la classification et l’étiquetage. Pour plus d’informations, consultez [Création de rapports centralisée pour Azure Information Protection](reports-aip.md).
 >
 >**Étiquettes de sensibilité pour Office**:
-> - Pour obtenir les informations les plus récentes sur les applications Office qui prennent en charge les étiquettes de sensibilité, consultez la section « où la fonctionnalité est disponible aujourd’hui ? ». de [la section appliquer des étiquettes de sensibilité à vos documents et à votre courrier électronique dans Office](https://aka.ms/officemipdocs).
+> - Pour obtenir les informations les plus récentes sur les applications Office qui prennent en charge les étiquettes de sensibilité, consultez [Quelles sont les fonctionnalités de l’étiquette de sensibilité sont prises en charge dans Office aujourd’hui ?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) dans la documentation Office.
 
 Demandez de nouvelles fonctionnalités et votez pour les demandes en visitant le [site UserVoice](https://msip.uservoice.com/) pour Azure Information Protection.
 

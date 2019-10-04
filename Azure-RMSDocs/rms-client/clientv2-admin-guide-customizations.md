@@ -3,7 +3,7 @@ title: Configurations personnalisées-Azure Information Protection client d’é
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 86e914bf96e596a01243d2c4a74236f28c6ac9b5
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 97e679fd6b234884f3b96fef5abef98f6c68e16a
+ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690143"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923670"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -124,7 +124,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |EnableCustomPermissionsForCustomProtectedFiles|[Pour les fichiers protégés avec des autorisations personnalisées, toujours afficher des autorisations personnalisées pour les utilisateurs dans l’Explorateur de fichiers](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |HideBarByDefault|[Afficher la barre Information Protection dans les applications Office](##display-the-information-protection-bar-in-office-apps)|
-|LogMatchedContent|[Envoyer les correspondances de type d’informations](#send-information-type-matches)|
+|LogMatchedContent|[Envoyer les correspondances de type d’informations à Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
 |OutlookBlockTrustedDomains|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Définir une autre étiquette par défaut pour Outlook](#set-a-different-default-label-for-outlook)|
@@ -655,9 +655,9 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
 Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
 
-Lorsque le client d’étiquetage unifié Azure Information Protection est utilisé dans les applications Office, il recherche des informations sensibles dans les documents lorsqu’ils sont enregistrés pour la première fois. Si le paramètre avancé [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) n’est pas défini sur **false**, les types d’informations sensibles prédéfinis et personnalisés (client en version préliminaire uniquement) trouvés sont ensuite envoyés à Azure information protection Analytics.
+Lorsque le client d’étiquetage unifié Azure Information Protection est utilisé dans les applications Office, il recherche des informations sensibles dans les documents lorsqu’ils sont enregistrés pour la première fois. Si le paramètre avancé [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) n’est pas défini sur **false**, les types d’informations sensibles prédéfinis et personnalisés (client en version préliminaire uniquement) trouvés sont ensuite envoyés à [Azure information protection Analytics](../reports-aip.md).
 
-Pour modifier ce comportement afin que les types d’informations sensibles détectés par le client d’étiquetage unifié ne soient pas envoyés à Azure Information Protection Analytics, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
+Pour modifier ce comportement afin que les types d’informations sensibles détectés par le client d’étiquetage unifié ne soient pas envoyés, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
 
 - Essentiel **RunAuditInformationTypesDiscovery**
 
@@ -677,11 +677,13 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 
-## <a name="send-information-type-matches"></a>Envoyer les correspondances de type d’informations
-
+## <a name="send-information-type-matches-to-azure-information-protection-analytics"></a>Envoyer les correspondances de type d’informations à Azure Information Protection Analytics
+ 
 Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
 
-Par défaut, le client d’étiquetage unifié n’envoie pas de correspondances de contenu pour les types d’informations sensibles à [Azure information protection Analytics](../reports-aip.md). Pour envoyer ces informations supplémentaires lors de l’envoi de types d’informations sensibles, créez le paramètre de client avancé suivant dans une stratégie d’étiquette : 
+Par défaut, le client d’étiquetage unifié n’envoie pas de correspondances de contenu pour les types d’informations sensibles à [Azure information protection Analytics](../reports-aip.md). Pour plus d’informations sur ces informations supplémentaires qui peuvent être envoyées, consultez la section [correspondances de contenu pour une analyse plus poussée](../reports-aip.md#content-matches-for-deeper-analysis) dans la documentation du centre de création de rapports.
+
+Pour envoyer des correspondances de contenu lors de l’envoi de types d’informations sensibles, créez le paramètre de client avancé suivant dans une stratégie d’étiquette : 
 
 - Essentiel **LogMatchedContent**
 

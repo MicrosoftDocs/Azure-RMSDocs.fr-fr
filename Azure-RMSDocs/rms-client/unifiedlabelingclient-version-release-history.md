@@ -4,7 +4,7 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 57cf55e3a08a5ff6ddf983f930a7004b30af55be
-ms.sourcegitcommit: e53d52bd44271d27aa06c63bd4cc32884d3f2a4b
+ms.openlocfilehash: b3da9f1b675a92566a3df7d067116d869133645a
+ms.sourcegitcommit: 7f0ca724b746cc0ed9db88dfe1afb50ebbcdbd08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322348"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71939081"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -37,9 +37,6 @@ Pour plus d’informations, consultez [mise à niveau et maintenance du client d
 Chaque version de disponibilité générale de la Azure Information Protection client d’étiquetage unifiée est prise en charge pendant six mois après la publication de la version GA suivante. La documentation n’inclut pas d’informations sur les versions non pris en charge du client. Les correctifs et les nouvelles fonctionnalités sont toujours appliqués à la dernière version GA, pas aux anciennes versions GA.
 
 Les préversions ne doivent pas être déployées pour des utilisateurs finaux sur les réseaux de production. Utilisez plutôt la dernière préversion pour tester les nouvelles fonctionnalités ou les correctifs à paraître dans la prochaine version GA. Les préversions qui ne sont pas actuelles ne sont pas prises en charge.
-
-> [!NOTE]
-> Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
 ### <a name="release-information"></a>Informations de version
 
@@ -64,7 +61,7 @@ Si vous disposez d’une version 2 du client qui est ultérieure à 2.2.21.0, il
     
     - Plusieurs scanneurs peuvent partager la même SQL Server base de données lorsque vous configurez les scanneurs pour qu’ils utilisent le même profil de scanneur. Cette configuration facilite la gestion de plusieurs scanneurs et entraîne des temps d’analyse plus rapides. Lorsque vous utilisez cette configuration, attendez toujours que l’installation d’un scanneur soit terminée avant d’installer un autre scanneur avec le même profil.
     
-    - Vous devez spécifier un profil lorsque vous installez le scanneur et que la base de données du scanneur est nommée **\<AIPScannerUL_ profile_name >** . Le paramètre de *Profil* est également obligatoire pour Set-AIPScanner.
+    - Vous devez spécifier un profil lorsque vous installez le scanneur et que la base de données du scanneur est nommée **AIPScannerUL_ @ no__t-1profile_name >** . Le paramètre de *Profil* est également obligatoire pour Set-AIPScanner.
     
     - Vous pouvez définir une étiquette par défaut pour tous les documents, même si les documents sont déjà étiquetés. Dans les paramètres Profil du scanneur ou référentiel, affectez à l’option **Renommer les fichiers** la valeur **activé** avec la case à cocher **appliquer l’étiquette par défaut** activée.
     
@@ -143,7 +140,7 @@ Pris en charge jusqu’à 02/06/2020
     - [Ajouter « Signaler un problème » pour les utilisateurs](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
     - [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     - [Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
-    - [Envoyer les correspondances de type d’informations](clientv2-admin-guide-customizations.md#send-information-type-matches)
+    - [Envoyer les correspondances de type d’informations à Azure Information Protection Analytics](clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics)
     - [Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [Appliquer une propriété personnalisée lorsqu’une étiquette est appliquée](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
     - [Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)

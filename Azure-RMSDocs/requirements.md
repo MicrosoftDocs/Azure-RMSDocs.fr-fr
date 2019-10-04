@@ -4,7 +4,7 @@ description: Identifiez les critères de déploiement d’Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dc0208e8053e09b2225b8e3bd9698ad1af7e9c43
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 3ad40af5706e588f71342716c34315818ea07ed0
+ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314316"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923664"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -119,9 +119,13 @@ Les clients Azure Information Protection peuvent étiqueter et protéger des doc
 
 Les autres éditions d’Office ne peuvent pas protéger les documents et messages électroniques à l’aide d’un service Rights Management. Pour ces éditions, Azure Information Protection est pris en charge pour la classification uniquement. Par conséquent, les étiquettes qui appliquent la protection ne s’affichent pas pour les utilisateurs de la barre de Azure Information Protection ou à partir du bouton **protéger** (client classique) ou du bouton **sensibilité** (client d’étiquetage unifié) sur le ruban Office. 
 
-Les clients Azure Information Protection ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur. Ces clients ne prennent pas non plus en charge le changement de comptes d’utilisateur dans Office.
-
 Pour plus d’informations sur les éditions d’Office qui prennent en charge le service de protection, consultez [Applications prenant en charge la protection des données Azure Rights Management](requirements-applications.md).
+
+### <a name="office-features-and-capabilities-not-supported"></a>Fonctionnalités et fonctionnalités Office non prises en charge
+
+- Les clients Azure Information Protection (client classique et client d’étiquetage unifié) ne prennent pas en charge plusieurs versions d’Office sur le même ordinateur ou en basculant les comptes d’utilisateur dans Office.
+
+- La fonctionnalité de [fusion et](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) publipostage d’Office n’est pas prise en charge avec les fonctionnalités de Azure information protection.
 
 ## <a name="firewalls-and-network-infrastructure"></a>Pare-feu et infrastructure réseau
 

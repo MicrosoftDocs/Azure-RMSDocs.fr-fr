@@ -3,7 +3,7 @@ title: Configurer la stratégie Azure Information Protection – AIP
 description: Pour configurer la classification, l’étiquetage et la protection du client Azure Information Protection (Classic), vous devez configurer la stratégie de Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-ms.date: 09/28/2019
+ms.date: 10/04/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2a23660b43f0186c78953695eccbc4b531dbca9a
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 858b745987edd73f12bfda903050e84ca97eaacb
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673822"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966790"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -69,18 +69,20 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
     
     - **Administrateur Azure Information Protection**
     
-    - **Lecteur Sécurité** pour [l’analytique Azure Information Protection](reports-aip.md) uniquement
-    
   - **Administrateur de conformité**
     
   - **Administrateur des données de conformité**
     
   - **Administrateur de sécurité**
     
+    **Lecteur de sécurité** - [Azure information protection Analytics](reports-aip.md) uniquement
+    
+    **Lecteur Global** - [Azure information protection Analytics](reports-aip.md) uniquement
+    
   - **Administrateur général**
     
     > [!NOTE] 
-    > Si votre locataire a été migré vers le magasin d’étiquetage unifié, le Azure Information Protection administrateur (anciennement «administrateur Information Protection») n’est plus pris en charge. [Plus d’informations](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > Si votre locataire se trouve sur la plateforme d’étiquetage unifiée, le rôle d’administrateur Azure Information Protection (anciennement « administrateur Information Protection ») et le rôle lecteur global ne sont pas pris en charge pour le Portail Azure. [Plus d’informations](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
     Les comptes Microsoft ne peuvent pas gérer Azure Information Protection.
 

@@ -4,7 +4,7 @@ description: Vous avez une question au sujet de l’utilisation d’Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/02/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8266e7b6a7883be96571dfd2d493b3eac83bdb7c
-ms.sourcegitcommit: b6c1d2cb23c9d883901791bfadc9c39028ddd8aa
+ms.openlocfilehash: 4222e46b606c9c8de7ee05e5510aa60e5791a9dc
+ms.sourcegitcommit: 7cba3b612b9417ab92d9f002956c78fb97f2a787
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835390"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71959185"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
 
@@ -36,7 +36,7 @@ Pour être informé de la mise à disposition de fonctionnalités de classificat
 - Aucune intégration de classification et d’étiquetage n’est assurée avec Exchange Online ou SharePoint Online.
 
 > [!NOTE]
-> **Maintenant en préversion** :
+> **En**préversion :
 > - Création de rapports centralisée pour la classification et l’étiquetage. Pour plus d’informations, consultez [Création de rapports centralisée pour Azure Information Protection](reports-aip.md).
 >
 >**Étiquettes de sensibilité pour Office**:
@@ -46,7 +46,7 @@ Demandez de nouvelles fonctionnalités et votez pour les demandes en visitant le
 
 ## <a name="which-client-do-i-install-for-testing-new-functionality"></a>Quel client dois-je installer pour tester les nouvelles fonctionnalités ?
 
-Actuellement, il existe deux clients pour Windows : 
+Actuellement, il existe deux clients Azure Information Protection pour Windows : 
 
 - Le **Azure information protection client d’étiquetage unifié** qui télécharge des étiquettes et des paramètres de stratégie à partir de l’un des centres d’administration suivants : Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center, Microsoft 365 Compliance Center. Ce client est désormais en disponibilité générale et peut disposer d’une préversion pour tester des fonctionnalités supplémentaires pour une version ultérieure.
 
@@ -55,6 +55,15 @@ Actuellement, il existe deux clients pour Windows :
 Nous vous recommandons de tester avec le client d’étiquetage unifié si son ensemble de fonctionnalités et ses fonctionnalités actuelles répondent aux besoins de votre entreprise. Si ce n’est pas le cas, ou si vous avez configuré des étiquettes dans le Portail Azure que vous n’avez pas encore [migré vers le magasin d’étiquetage unifié](configure-policy-migrate-labels.md), utilisez le client classique.
 
 Pour plus d’informations, consultez [Choisir le client Azure Information Protection à utiliser](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use), notamment pour visualiser un tableau de comparaison des fonctionnalités.
+
+## <a name="where-can-i-find-information-about-using-sensitivity-labels-in-office"></a>Où puis-je trouver des informations sur l’utilisation des étiquettes de sensibilité dans Office ?
+
+Consultez les ressources suivantes dans la documentation Office :
+
+- [Fonctionnement des étiquettes de sensibilité dans les applications Office](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+
+- [Appliquer des étiquettes de sensibilité à vos documents et e-mails au sein d’Office](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
+
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>Un fichier peut-il avoir plusieurs classifications ?
 

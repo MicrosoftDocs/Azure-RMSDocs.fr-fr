@@ -4,7 +4,7 @@ description: Migrez Azure Information Protection étiquettes vers des étiquette
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/02/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ec565422044329948c624f8b6207d431c71dc0ac
-ms.sourcegitcommit: b6c1d2cb23c9d883901791bfadc9c39028ddd8aa
+ms.openlocfilehash: 8be698e4cfbca2ec1cd7d990098d288762400196
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835381"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966809"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Comment migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée
 
@@ -32,7 +32,7 @@ Migrez Azure Information Protection étiquettes vers la plateforme d’étiqueta
 
 Après avoir migré vos étiquettes, vous ne verrez aucune différence avec le client Azure Information Protection (Classic), car ce client continue de télécharger les étiquettes avec la stratégie de Azure Information Protection à partir du Portail Azure. Toutefois, vous pouvez maintenant utiliser les étiquettes avec le client d’étiquetage unifié Azure Information Protection et d’autres clients et services qui utilisent des étiquettes de sensibilité
 
-Avant de lire les instructions pour migrer vos étiquettes, vous trouverez peut-être les questions fréquemment posées suivantes:
+Avant de lire les instructions pour migrer vos étiquettes, vous trouverez peut-être les questions fréquemment posées suivantes :
 
 - [Quelle est la différence entre les étiquettes dans Azure Information Protection et celles dans Office 365 ?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
 
@@ -42,9 +42,9 @@ Avant de lire les instructions pour migrer vos étiquettes, vous trouverez peut-
 
 ### <a name="administrative-roles-that-support-the-unified-labeling-platform"></a>Rôles d’administration qui prennent en charge la plateforme d’étiquetage unifiée
 
-Si vous utilisez des rôles d’administrateur pour l’administration déléguée dans votre organisation, vous devrez peut-être effectuer certaines modifications pour la plateforme d’étiquetage unifiée:
+Si vous utilisez des rôles d’administrateur pour l’administration déléguée dans votre organisation, vous devrez peut-être effectuer certaines modifications pour la plateforme d’étiquetage unifiée :
 
-Le [rôle Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) de **Azure information protection administrateur** (anciennement **information protection administrateur**) n’est pas pris en charge par la plateforme d’étiquetage unifiée. Si ce rôle d’administration est utilisé dans votre organisation, ajoutez les utilisateurs qui possèdent ce rôle aux rôles de Azure AD de l’administrateur de la **conformité**, de l’administrateur des **données de conformité**ou de l’administrateur de la **sécurité**. Si vous avez besoin d’aide, consultez [Donner aux utilisateurs accès au Centre de sécurité et de conformité Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). Vous pouvez également attribuer ces rôles dans le portail Azure AD, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365.
+Les [rôles Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) de **Azure information protection administrateur** (anciennement **information protection administrateur**) et le **lecteur global** ne sont pas pris en charge par la plateforme d’étiquetage unifiée. Si l’un de ces rôles d’administration est utilisé dans votre organisation pour gérer Azure Information Protection, ajoutez les utilisateurs qui disposent de ce rôle aux rôles Azure AD de **conformité administrateur**, **administrateur des données de conformité**ou **sécurité administrateur**. Si vous avez besoin d’aide, consultez [Donner aux utilisateurs accès au Centre de sécurité et de conformité Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). Vous pouvez également attribuer ces rôles dans le portail Azure AD, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365.
 
 Au lieu d’utiliser des rôles, dans les centres d’administration, vous pouvez créer un nouveau groupe de rôles pour ces utilisateurs et ajoutez les rôles **Administrateur d’étiquette de sensibilité** ou **Configuration de l’organisation** à ce groupe.
 
@@ -58,7 +58,7 @@ La migration des étiquettes présente de nombreux avantages, mais est irrévers
 
 - Assurez-vous que vous avez des [clients qui prennent en charge des étiquettes unifiées](#clients-and-services-that-support-unified-labeling) et, si nécessaire, préparez-vous à l’administration à la fois dans le portail Azure (pour les clients qui ne prennent pas en charge les étiquettes unifiées) et les centres d’administration (pour le client qui prennent en charge les étiquettes unifiées).
 
-- Les stratégies, notamment les paramètres de stratégie et les personnes qui y ont accès (stratégies délimitées), ainsi que tous les paramètres avancés du client ne sont pas migrés. Les options de configuration de ces paramètres après la migration de votre étiquette sont les suivantes:
+- Les stratégies, notamment les paramètres de stratégie et les personnes qui y ont accès (stratégies délimitées), ainsi que tous les paramètres avancés du client ne sont pas migrés. Les options de configuration de ces paramètres après la migration de votre étiquette sont les suivantes :
     - Votre centre d’administration pour les étiquettes de sensibilité.
     - [Office 365 Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), que vous devez utiliser pour configurer les [Paramètres avancés du client](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
     
@@ -104,7 +104,7 @@ Les clients Azure Information Protection (Classic) peuvent utiliser tous les par
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Comparaison du comportement des paramètres de protection pour une étiquette
 
-Utilisez le tableau suivant pour identifier le comportement du même paramètre de protection pour une étiquette, selon qu’elle est utilisée par le client Azure Information Protection (Classic), le client d’étiquetage unifié Azure Information Protection ou les applications Office qui ont des étiquettes intégrées (également appelées «étiquetage Office natif»). Les différences de comportement des étiquettes peuvent modifier votre décision de publier les étiquettes, en particulier lorsque vous avez un mélange de clients dans votre organisation.
+Utilisez le tableau suivant pour identifier le comportement du même paramètre de protection pour une étiquette, selon qu’elle est utilisée par le client Azure Information Protection (Classic), le client d’étiquetage unifié Azure Information Protection ou les applications Office qui ont des étiquettes intégrées (également appelées « étiquetage Office natif »). Les différences de comportement des étiquettes peuvent modifier votre décision de publier les étiquettes, en particulier lorsque vous avez un mélange de clients dans votre organisation.
 
 Si vous n’êtes pas sûr de la façon dont vos paramètres de protection sont configurés, affichez leurs paramètres dans le volet **Protection** du portail Azure. Si vous avez besoin d’aide, consultez [Configurer une étiquette pour les paramètres de protection](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 

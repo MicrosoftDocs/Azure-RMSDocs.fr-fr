@@ -4,7 +4,7 @@ description: Informations sur les données personnelles qui sont utilisées par 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3e83f11013f60d418f28c58cee10a84915f39ebc
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: d16e6e7f0667f9ac57bf772de272d23838b793e1
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689222"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966890"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
 
@@ -218,7 +218,11 @@ Les données personnelles que vous affichez et spécifiez dans le portail Azure 
 
 - **Administrateur de sécurité**
 
+- **Lecteur Sécurité**
+
 - **Administrateur général**
+
+- **Lecteur global**
 
 Les données personnelles que vous affichez et spécifiez à l’aide du module AIPService (ou de l’ancien module, AADRM) sont accessibles uniquement aux utilisateurs qui se sont vu attribuer le **Azure information protection administrateur**, **conformité administrateur**, **conformité** les rôles d’administrateur de données ou d' **administrateur général** de Azure Active Directory ou le rôle d’administrateur général pour le service de protection.
 

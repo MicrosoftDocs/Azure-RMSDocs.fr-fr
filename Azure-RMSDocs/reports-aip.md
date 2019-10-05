@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 10/03/2019
+ms.date: 10/04/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: edc87fe3422bbfe6805a4c3f0d012d0a76e7c5ce
-ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
+ms.openlocfilehash: d33650b879939ce4a23efd77b1ac3de6c9f2ad06
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923696"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966872"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -178,12 +178,13 @@ Détails :
         - **Administrateur des données de conformité**
         - **Administrateur général**
     
-    - Une fois l’espace de travail créé, vous pouvez utiliser le rôle suivant avec moins d’autorisations pour afficher les données collectées :
+    - Une fois l’espace de travail créé, vous pouvez utiliser les rôles suivants avec moins d’autorisations pour afficher les données collectées :
     
         - **Lecteur Sécurité**
+        - **Lecteur global**
     
     > [!NOTE] 
-    > Vous ne pouvez pas utiliser le rôle d’administrateur Azure Information Protection si votre locataire se trouve sur la [plateforme d’étiquetage unifiée](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
+    > Vous ne pouvez pas utiliser le rôle d’administrateur Azure Information Protection ou le rôle lecteur global si votre locataire se trouve sur la [plateforme d’étiquetage unifiée](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
 
 2. Par ailleurs, vous devez disposer de l’un des [rôles Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) ou [rôles Azure](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) standard pour accéder à votre espace de travail Azure Log Analytics :
     
@@ -211,11 +212,11 @@ Toutefois, de nombreuses organisations attribuent le rôle Azure AD **Lecteur S�
 
 La quantité de données collectées et stockées dans votre espace de travail Azure Information Protection varie considérablement pour chaque locataire, en fonction de facteurs tels que le nombre de clients Azure Information Protection et d’autres points de terminaison pris en charge, que vous soyez la collecte de données de découverte de point de terminaison, vous avez déployé des scanneurs, le nombre de documents protégés auxquels vous accédez, etc.
 
-Toutefois, comme point de départ, vous pouvez trouver les estimations suivantes utiles:
+Toutefois, comme point de départ, vous pouvez trouver les estimations suivantes utiles :
 
-- Pour les données d’audit générées par les clients Azure Information Protection uniquement: 2 Go par 10 000 utilisateurs actifs par mois.
+- Pour les données d’audit générées par les clients Azure Information Protection uniquement : 2 Go par 10 000 utilisateurs actifs par mois.
 
-- Pour les données d’audit générées par les clients Azure Information Protection, les scanneurs et Microsoft Defender ATP: 20 Go par 10 000 utilisateurs actifs par mois.
+- Pour les données d’audit générées par les clients Azure Information Protection, les scanneurs et Microsoft Defender ATP : 20 Go par 10 000 utilisateurs actifs par mois.
 
 Si vous utilisez l’étiquetage obligatoire ou si vous avez configuré une étiquette par défaut pour la plupart des utilisateurs, vos tarifs seront probablement beaucoup plus élevés.
 
@@ -243,7 +244,7 @@ Azure Monitor journaux a une fonctionnalité d' **utilisation et de coûts estim
 
 Une fois l’espace de travail configuré, procédez comme suit si vous publiez des étiquettes de sensibilité dans l’un des centres d’administration suivants : Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center, Microsoft 365 Compliance Center :
 
-- Dans la portail Azure accédez à **Azure information protection** > **gérer** > l'**étiquetage unifié**, puis sélectionnez **publier**.
+- Dans la Portail Azure accédez à **Azure Information Protection** > **gérer**l'**étiquetage unifié** > , puis sélectionnez **publier**.
     
     Sélectionnez cette option de **publication** chaque fois que vous effectuez une modification d’étiquette (créer, modifier, supprimer) dans votre centre d’étiquetage. 
 
@@ -290,18 +291,18 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 |-----------|-----------|
 |Accès|Un document protégé a été ouvert avec succès, identifié par le nom de fichier s’il est suivi, ou ID s’il n’est pas suivi.|
 |AccessDenied|L’accès à un document protégé a été refusé, identifié par le nom de fichier s’il est suivi, ou ID s’il n’est pas suivi.|
-|Time|Heure de l’événement: UTC au format AAAA-MM-JJThh: MM: SS|
+|Time|Heure de l’événement : UTC au format AAAA-MM-JJThh : MM : SS|
 |Utilisateur|Utilisateur : Format UPN ou domaine\utilisateur|
 |ItemPath|Chemin d’accès complet de l’élément ou objet de l’e-mail|
 |ItemName|Nom de fichier ou objet de l’e-mail |
-|Méthode|Étiquette assignée à la méthode: Manuel, automatique, recommandé, par défaut ou obligatoire|
-|Activité|Activité d’audit: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection ou NewCustomProtection |
+|Méthode|Étiquette assignée à la méthode : Manuel, automatique, recommandé, par défaut ou obligatoire|
+|Activité|Activité d’audit : DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection ou NewCustomProtection |
 |LabelName|Nom de l’étiquette (non localisé)|
 |LabelNameBefore |Nom de l’étiquette avant modification (non localisé) |
-|ProtectionType|Type de protection [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  «TemplateID»: "GUID" <br /> } <br />|
+|ProtectionType|Type de protection [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  « TemplateID » : "GUID" <br /> } <br />|
 |ProtectionBefore|Type de protection avant modification [JSON] |
 |InformationTypesMatches|Tableau JSON de [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trouvé dans les données où un tableau vide signifie qu’aucun type d’information n’a été trouvé, et null signifie qu’aucune information n’est disponible|
-|MachineName |FQDN, le cas échéant; sinon nom d’hôte|
+|MachineName |FQDN, le cas échéant ; sinon nom d’hôte|
 |DeviceRisk|Score de risque de l’appareil à partir de émission quand il est disponible|
 |Plateforme|Plateforme d’appareils (Win, OSX, Android, iOS) |
 |ApplicationName|Nom convivial de l’application|
@@ -310,7 +311,7 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 |AzureApplicationId|ID d’application inscrite Azure AD (GUID)|
 |ProcessName|Processus qui héberge le kit de développement logiciel MIP|
 |LabelId|GUID de l’étiquette ou null|
-|IsProtected|Si protégé: Oui/non |
+|IsProtected|Si protégé : Oui/non |
 |ProtectionOwner |Rights Management propriétaire au format UPN|
 |LabelIdBefore|GUID de l’étiquette ou null avant modification|
 |InformationTypesAbove55|Tableau JSON des [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trouvés dans les données avec un niveau de confiance de 55 ou supérieur |
@@ -319,11 +320,11 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 |InformationTypesAbove85|Tableau JSON des [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trouvés dans les données avec un niveau de confiance de 85 ou supérieur |
 |InformationTypesAbove95|Tableau JSON des [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trouvés dans les données avec un niveau de confiance de 95 ou supérieur|
 |DiscoveredInformationTypes |Tableau JSON de [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trouvés dans les données et leur contenu mis en correspondance (s’il est activé) où un tableau vide signifie qu’aucun type d’information n’a été trouvé, et null signifie qu’aucune information n’est disponible |
-|ProtectedBefore|Si le contenu a été protégé avant modification: Oui/non |
+|ProtectedBefore|Si le contenu a été protégé avant modification : Oui/non |
 |ProtectionOwnerBefore|Rights Management propriétaire avant modification |
 |UserJustification|Justification de la rétrogradation ou de la suppression d’une étiquette|
 |LastModifiedBy|Utilisateur au format UPN qui a modifié le fichier pour la dernière fois. Disponible uniquement pour Office et SharePoint Online|
-|LastModifiedDate &|UTC au format AAAA-MM-JJThh: MM: SS: Disponible pour Office & SharePoint Online uniquement |
+|LastModifiedDate &|UTC au format AAAA-MM-JJThh : MM : SS : Disponible pour Office & SharePoint Online uniquement |
 
 
 #### <a name="examples-using-informationprotectionevents"></a>Exemples d’utilisation d’InformationProtectionEvents

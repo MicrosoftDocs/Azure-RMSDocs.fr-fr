@@ -4,19 +4,19 @@ description: Les conditions permettent d’affecter automatiquement une étiquet
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ce645af880b90c12bed284c0b57d597cfd540fd7
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: e8379d001fdfeccbdeace6572d32b9dc88ef088c
+ms.sourcegitcommit: 44f43c8c1d9cb9ff71a6be15e8a799ae4f2b3544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673936"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314290"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "71673936"
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
-> Ces instructions s’appliquent au client Azure Information Protection (Classic) et non au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
+> Ces instructions s’appliquent au client Azure Information Protection (classique) et pas au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
 > Si vous recherchez des informations pour configurer la classification automatique et recommandée pour le client d’étiquetage unifié, consultez la documentation Office. Par exemple, [appliquez automatiquement une étiquette de sensibilité au contenu](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 
@@ -50,7 +50,7 @@ Si vous configurez la classification automatique au lieu de la classification re
 
 ## <a name="how-automatic-or-recommended-labels-are-applied"></a>Manière d’appliquer des étiquettes automatiques ou recommandées
 
-- La classification automatique s’applique à Word, Excel et PowerPoint lors de l’enregistrement de documents tandis qu’elle s’applique à Outlook lors de l’envoi d’e-mails. 
+- La classification automatique s’applique à Word, Excel et PowerPoint lors de l’enregistrement de documents et s’applique à Outlook quand vous envoyez des e-mails. 
     
     Vous ne pouvez pas utiliser la classification automatique pour des documents et e-mails qui ont été déjà été étiquetés manuellement ou automatiquement avec une classification plus élevée. 
 
@@ -58,7 +58,7 @@ Si vous configurez la classification automatique au lieu de la classification re
     
     Vous ne pouvez pas utiliser la classification recommandée pour des documents qui ont préalablement été étiquetés avec une classification plus élevée. 
 
-Vous pouvez changer ce comportement afin que le client Azure Information Protection vérifie régulièrement les règles des conditions que vous spécifiez dans les documents. Cette configuration nécessite un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) qui est disponible en préversion.
+Vous pouvez changer ce comportement afin que le client Azure Information Protection vérifie régulièrement les règles des conditions que vous spécifiez dans les documents. C’est le cas, par exemple, si vous utilisez l' [enregistrement](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) automatique avec les applications Office qui sont automatiquement enregistrées dans SharePoint Online, OneDrive ou onedrive entreprise. Pour prendre en charge ce scénario, vous pouvez configurer un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) qui est actuellement en version préliminaire. Le paramètre active la classification pour qu’elle s’exécute en continu en arrière-plan.
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Évaluation de plusieurs conditions lorsqu’elles s’appliquent à plusieurs étiquettes
 

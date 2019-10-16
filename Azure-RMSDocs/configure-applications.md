@@ -34,7 +34,7 @@ Après avoir déployé Azure Information Protection pour votre organisation, uti
 > [!IMPORTANT]
 > Pour plus d’informations sur les versions prises en charge et d’autres conditions requises, consultez [Configuration requise pour Azure information protection](requirements.md).
 
--   [Office 365 : Configuration pour services en ligne @ no__t-0
+-   [Office 365 : Configuration pour services en ligne](configure-office365.md)
 
     -   [Exchange Online : Configuration de la Gestion des droits relatifs à l’information](configure-office365.md#exchangeonline-irm-configuration)
 

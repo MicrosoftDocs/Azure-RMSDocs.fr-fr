@@ -12,23 +12,23 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b3da9f1b675a92566a3df7d067116d869133645a
-ms.sourcegitcommit: 7f0ca724b746cc0ed9db88dfe1afb50ebbcdbd08
+ms.openlocfilehash: a9413cce67eda1cfb36e46ca199205faceafef73
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71939081"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447918"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
-> *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
 Vous pouvez télécharger le client d’étiquetage unifié Azure Information Protection à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-Après un bref délai de quelques semaines, la dernière version de la disponibilité générale est également incluse dans le catalogue Microsoft Update avec le nom de produit **Microsoft Azure information protection** > **Microsoft Azure informations Le client d’étiquetage unifié de protection**et la classification des **mises à jour**. Cette inclusion dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou de Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
+Après un bref délai de quelques semaines, la dernière version de la disponibilité générale est également incluse dans le catalogue Microsoft Update avec le nom de produit **Microsoft Azure Information Protection** > **Microsoft Azure informations Le client d’étiquetage unifié de protection**et la classification des **mises à jour**. Cette inclusion dans le catalogue signifie que vous pouvez mettre à niveau le client à l’aide de WSUS ou de Configuration Manager, ou d’autres mécanismes de déploiement de logiciels qui utilisent Microsoft Update.
 
 Pour plus d’informations, consultez [mise à niveau et maintenance du client d’étiquetage unifié Azure information protection](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
@@ -40,7 +40,7 @@ Les préversions ne doivent pas être déployées pour des utilisateurs finaux s
 
 ### <a name="release-information"></a>Informations de version
 
-Utilisez les informations suivantes pour découvrir les nouveautés ou les modifications apportées à une version prise en charge de l’Azure Information Protection client d’étiquetage unifié pour Windows. La dernière version est répertoriée en première position. Le format de date utilisé sur cette page est *mois/jour/année*.
+Utilisez les informations suivantes pour découvrir les nouveautés ou les modifications apportées à une version prise en charge de l’Azure Information Protection client d’étiquetage unifié pour Windows. La dernière version est la première sur la liste. Le format de date utilisé sur cette page est *mois/jour/année*.
 
 > [!NOTE]
 > Les correctifs mineurs ne sont pas répertoriés. par conséquent, si vous rencontrez un problème avec le client d’étiquetage unifié, nous vous recommandons de vérifier s’il est corrigé avec la dernière version de la mise à la disposition générale. Si le problème persiste, vérifiez la version préliminaire actuelle (si disponible).
@@ -53,7 +53,7 @@ Ce client remplace le client Azure Information Protection (Classic). Pour compar
 
 Si vous disposez d’une version 2 du client qui est ultérieure à 2.2.21.0, il s’agit d’une version préliminaire à des fins de test et d’évaluation.
 
-**Date de publication** : 09/17/2019
+**Publication**: 09/17/2019
 
 **Nouvelles fonctionnalités :**
 
@@ -66,19 +66,19 @@ Si vous disposez d’une version 2 du client qui est ultérieure à 2.2.21.0, il
     - Vous pouvez définir une étiquette par défaut pour tous les documents, même si les documents sont déjà étiquetés. Dans les paramètres Profil du scanneur ou référentiel, affectez à l’option **Renommer les fichiers** la valeur **activé** avec la case à cocher **appliquer l’étiquette par défaut** activée.
     
     - Vous pouvez supprimer des étiquettes existantes de tous les documents. cette action comprend la suppression de la protection si elle a été appliquée précédemment par une étiquette. La protection appliquée indépendamment d’une étiquette est conservée. Cette configuration de scanneur est effectuée dans les paramètres de profil du scanneur ou de référentiel avec les paramètres suivants :
-        - **Label files based on content** (Étiqueter les fichiers en fonction du contenu) : **Off**
-        - **Étiquette par défaut** : **Aucune.**
-        - **Relabel files** (Réétiqueter les fichiers) : **Activé** avec la case à cocher **appliquer l’étiquette par défaut** sélectionnée
+        - **Étiqueter les fichiers en fonction du contenu**: **désactivé**
+        - **Étiquette par défaut**: **aucune**
+        - **Renommer les fichiers**: **activé** avec la case à cocher **appliquer l’étiquette par défaut** activée
     
     - Comme avec le scanneur du client classique, le scanneur protège les fichiers Office et les fichiers PDF. Actuellement, vous ne pouvez pas configurer d’autres types de fichiers à protéger par cette version du scanneur.
     
-    - Problème connu : Les étiquettes nouvelles et renommées ne peuvent pas être sélectionnées en tant qu’étiquette par défaut pour le profil du scanneur ou les paramètres du référentiel. Contournement
-        - Pour les nouvelles étiquettes : Dans la Portail Azure, [Ajoutez l’étiquette](../configure-policy-add-remove-label.md) que vous souhaitez utiliser à la stratégie globale ou à une stratégie délimitée.
-        - Pour les étiquettes renommées : Dans le portail Azure, accédez à **Azure information protection** > **gérer** > l'**étiquetage unifié**, puis sélectionnez **publier**.
+    - Problème connu : les étiquettes nouvelles et renommées ne peuvent pas être sélectionnées en tant qu’étiquette par défaut pour les paramètres de profil de scanneur ou de référentiel. Contournement
+        - Pour les nouvelles étiquettes : dans la Portail Azure, [Ajoutez l’étiquette](../configure-policy-add-remove-label.md) que vous souhaitez utiliser à la stratégie globale ou à une stratégie délimitée.
+        - Pour les étiquettes renommées : dans la Portail Azure, accédez à **Azure Information Protection** > **gérer**l'**étiquetage unifié** > , puis sélectionnez **publier**.
     
     Vous pouvez mettre à niveau les analyseurs à partir du client Azure Information Protection (Classic). Après la mise à niveau, qui crée une base de données, le moteur de base de données analyse à nouveau tous les fichiers lors de sa première exécution. Pour obtenir des instructions, consultez [mise à niveau de l’analyseur de Azure information protection](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) à partir du Guide de l’administrateur.
     
-    Pour plus d’informations, consultez l’annonce du billet de blog : [La version préliminaire du scanneur AIP d’étiquetage unifiée offre une montée en charge horizontale et bien plus encore.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
+    Pour plus d’informations, consultez l’annonce du billet de blog : l’étiquetage unifié la préversion du [scanneur AIP offre une montée en charge horizontale et bien plus encore.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
 
 - L’applet de commande PowerShell [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) a de nouveaux paramètres lorsque vous souhaitez [étiqueter des fichiers de manière non interactive](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), et une [nouvelle procédure pour inscrire une application dans Azure ad](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client). Les exemples de scénarios incluent le scanneur et les scripts PowerShell automatisés pour étiqueter les documents.
 
@@ -97,7 +97,7 @@ Si vous disposez d’une version 2 du client qui est ultérieure à 2.2.21.0, il
 
 ## <a name="version-22210"></a>Version 2.2.21.0
 
-**Date de publication** : 09/03/2019
+**Publication**: 09/03/2019
 
 **Céder**
 
@@ -107,7 +107,7 @@ Si vous disposez d’une version 2 du client qui est ultérieure à 2.2.21.0, il
 
 ## <a name="version-22190"></a>Version 2.2.19.0
 
-**Date de publication** : 08/06/2019
+**Publication**: 08/06/2019
 
 Pris en charge jusqu’à 03/03/2020
 
@@ -119,7 +119,7 @@ Pris en charge jusqu’à 03/03/2020
 
 ## <a name="version-22140"></a>Version 2.2.14.0
 
-**Date de publication** : 07/15/2019
+**Publication**: 07/15/2019
 
 Pris en charge jusqu’à 02/06/2020
 
@@ -127,7 +127,7 @@ Pris en charge jusqu’à 02/06/2020
 
 - Prise en charge des [Paramètres avancés](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) que vous configurez avec PowerShell pour le centre de sécurité et de conformité.
     
-    Ces paramètres avancés prennent en charge les personnalisations suivantes:
+    Ces paramètres avancés prennent en charge les personnalisations suivantes :
      - [Afficher la barre Information Protection dans les applications Office](clientv2-admin-guide-customizations.md#display-the-information-protection-bar-in-office-apps)
     - [Exempter les messages Outlook de l’étiquetage obligatoire](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
     - [Activer la classification recommandée dans Outlook](clientv2-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
@@ -147,20 +147,20 @@ Pris en charge jusqu’à 02/06/2020
     - [Spécifier une sous-étiquette par défaut pour une étiquette parent](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
     - [Spécifier une couleur pour l’étiquette](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
-- Prise en charge des étiquettes configurées pour des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers. Pour plus d’informations, consultez la section [autoriser les utilisateurs à attribuer des autorisations](/Office365/SecurityCompliance/encryption-sensitivity-labels#let-users-assign-permissions) dans la documentation Office.
+- Prise en charge des étiquettes configurées pour des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers. Pour plus d’informations, consultez la section [autoriser les utilisateurs à attribuer des autorisations](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions) dans la documentation Office.
 
-- Modifications de PowerShell dans le module AzureInformationProtection:
-    - Nouvelle applet de commande: [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) -remplace New-RMSProtectionLicense pour créer une stratégie ad hoc pour les autorisations personnalisées
-    - Nouveaux paramètres:
+- Modifications de PowerShell dans le module AzureInformationProtection :
+    - Nouvelle applet de commande : [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) -remplace New-RMSProtectionLicense pour créer une stratégie ad hoc pour les autorisations personnalisées
+    - Nouveaux paramètres :
         -  *CustomPermissions* et *RemoveProtection* -ajouté à [Set-AIPFileLabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)
         -  *OnBeHalfOf* -ajouté à [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), à utiliser à la place du paramètre *Token* pour les sessions non interactives
         -  *WhatIf* et *DiscoveryInfoTypes* -ajoutés à [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), afin que cette applet de commande puisse s’exécuter en mode détection sans appliquer d’étiquettes
-    - Applets de commande déconseillées qui se connectent directement à un service de protection: Clear-RMSAuthentication, Set-RMSFileStatus, Set-RMSServer, Set-RMSServerAuthentication, obtient-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
+    - Applets de commande déconseillées qui se connectent directement à un service de protection : Clear-RMSAuthentication, Set-RMSFileStatus, Set-RMSServer, obtenir-RMSServerAuthentication, obtenir-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
 
 
 **Céder**
 
-- Prise en charge des correspondances de [contenu](../reports-aip.md#content-matches-for-deeper-analysis) pour Analytics et [Set-AIPFileClassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) avec le paramètre *DiscoveryInfoTypes* .
+- Prise en charge des [correspondances de contenu](../reports-aip.md#content-matches-for-deeper-analysis) pour Analytics et [Set-AIPFileClassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) avec le paramètre *DiscoveryInfoTypes* .
 
 - Après avoir modifié les paramètres régionaux de remplacement dans Windows, vous pouvez toujours appliquer une étiquette avec protection à un document PDF.
 
@@ -172,7 +172,7 @@ Pris en charge jusqu’à 02/06/2020
 
 ## <a name="version-207790"></a>Version 2.0.779.0
 
-**Date de publication** : 05/01/2019
+**Publication**: 05/01/2019
 
 Pris en charge jusqu’à 02/15/2020
 
@@ -180,15 +180,15 @@ Cette version offre un correctif unique pour résoudre un problème de condition
 
 ## <a name="version-207780"></a>Version 2.0.778.0
 
-**Date de publication** : 04/16/2019
+**Publication**: 04/16/2019
 
 Pris en charge jusqu’à 11/01/2019
 
-Cette première version de disponibilité générale du client d’étiquetage unifié Azure Information Protection pour Windows prend en charge les fonctionnalités suivantes: 
+Cette première version de disponibilité générale du client d’étiquetage unifié Azure Information Protection pour Windows prend en charge les fonctionnalités suivantes : 
 
 - Mise à niveau à partir du client Azure Information Protection.
 
-- Étiquetage manuel, automatique et recommandé : Pour plus d’informations sur la configuration de l’étiquetage automatique et de l’étiquetage recommandé pour ce client, voir [Appliquer automatiquement une étiquette de confidentialité au contenu](/Office365/SecurityCompliance/apply-sensitivity-label-automatically).
+- Étiquetage manuel, automatique et recommandé : pour plus d’informations sur la configuration de l’étiquetage automatique et recommandé pour ce client, consultez [appliquer automatiquement une étiquette de sensibilité au contenu](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 
 - Dans l’Explorateur de fichiers, actions déclenchées par clic droit pour classifier et protéger des fichiers, supprimer la protection et appliquer des autorisations personnalisées.
 
@@ -211,8 +211,8 @@ Cette première version de disponibilité générale du client d’étiquetage u
 
 - Actualisation de la stratégie à partir des centres d’administration :
     - à chaque démarrage d’une application Office et toutes les 4 heures ;
-    - lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier ;
-    - lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection.
+    - Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier
+    - Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection
 
 - Boîte de dialogue Aide et commentaires, qui inclut des paramètres de réinitialisation et des journaux d’exportation.
 
@@ -221,9 +221,9 @@ Cette première version de disponibilité générale du client d’étiquetage u
 
 Pour plus d’informations, consultez les [tableaux de comparaison](use-client.md#compare-the-clients).
 
-Pour plus d’informations sur l’installation et l’utilisation de ce client: 
+Pour plus d’informations sur l’installation et l’utilisation de ce client : 
 
 - Pour les utilisateurs : [Télécharger et installer le client](install-unifiedlabelingclient-app.md)
 
-- Pour les administrateurs : [Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection](clientv2-admin-guide.md)
+- Pour les administrateurs : Azure Information Protection le Guide de l' [administrateur du client d’étiquetage unifié](clientv2-admin-guide.md)
 

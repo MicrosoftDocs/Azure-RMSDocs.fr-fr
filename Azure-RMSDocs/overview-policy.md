@@ -12,23 +12,23 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 77e58423230ea0d5613db7979c81dca97b4ff61a
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 8f7d05ec4696a8b3aa2e1daadc839187eabd9d1e
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71674113"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447709"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Présentation de la stratégie Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > La stratégie de Azure Information Protection s’applique au client Azure Information Protection (Classic) et non au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> Si vous recherchez des informations sur les étiquettes de sensibilité, consultez la documentation Office. Par exemple, [vue d’ensemble des étiquettes de sensibilité](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels).
+> Si vous recherchez des informations sur les étiquettes de sensibilité, consultez la documentation Office. Par exemple, [Vue d’ensemble des étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
 Une stratégie Azure Information Protection contient les éléments suivants que vous pouvez configurer :
     

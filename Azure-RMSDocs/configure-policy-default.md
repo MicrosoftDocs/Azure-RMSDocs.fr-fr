@@ -10,23 +10,23 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: b2c1564394d0ebd9a40434c642c0195d4ef073a9
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: ea2c89c2ddbebc7a3efe6248a6073ceb82a8f21f
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673879"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447088"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > La stratégie de Azure Information Protection s’applique au client Azure Information Protection (Classic) et non au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> Si vous recherchez des informations sur la configuration des étiquettes de sensibilité et des paramètres de stratégie pour le client d’étiquetage unifié, consultez [vue d’ensemble des étiquettes de sensibilité](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) dans la documentation Office.
+> Si vous recherchez des informations sur la configuration des étiquettes de sensibilité et des paramètres de stratégie pour le client d’étiquetage unifié, consultez [vue d’ensemble des étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) dans la documentation Office.
 
 Utilisez les informations suivantes pour comprendre la configuration de la stratégie par défaut pour Azure Information Protection.
 
@@ -75,25 +75,25 @@ Quand les utilisateurs sélectionnent cette étiquette, l’option Outlook Ne pa
 
 |Étiquette|Info-bulle|Paramètres|
 |-------------------------------|---------------------------|-----------------|
-|Personnel|Données autres que les données d’entreprise, uniquement pour une utilisation personnelle.|**Activé** : Activé <br /><br />**Couleur** : Vert clair<br /><br />**Marquages visuels** : Désactivé <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Public|Données d’entreprise qui sont spécifiquement préparées et approuvées pour une consommation publique.|**Activé** : Activé <br /><br />**Couleur** : Vert<br /><br />**Marquages visuels** : Désactivé<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Général|Données d’entreprise qui ne sont pas destinées à la consommation publique. Cependant, elles peuvent être partagées avec des partenaires externes, en fonction des besoins. Il peut s’agir par exemple d’un annuaire téléphonique interne d’une entreprise, d’organigrammes, de normes internes et de la plupart des communications internes.|**Activé** : Activé <br /><br />**Couleur** : Bleu <br /><br />**Marquages visuels** : Désactivé<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Confidentiel|Données d’entreprise sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Il peut s’agir entre autres de contrats, de rapports de sécurité, de résumés de prévision et de données commerciales.|**Activé** : Activé <br /><br />**Couleur** : Orange<br /><br />**Marquages visuels** : Désactivé<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Hautement confidentiel|Données d’entreprise très sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|**Activé** : Activé <br /><br />**Couleur** : Rouge<br /><br />**Marquages visuels** : Désactivé<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Personnel|Données autres que les données d’entreprise, uniquement pour une utilisation personnelle.|**Activé** : Oui <br /><br />**Couleur** : Vert clair<br /><br />**Marquages visuels** : Désactivés <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Public|Données d’entreprise qui sont spécifiquement préparées et approuvées pour une consommation publique.|**Activé** : Oui <br /><br />**Couleur** : vert<br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Général|Données d’entreprise qui ne sont pas destinées à la consommation publique. Cependant, elles peuvent être partagées avec des partenaires externes, en fonction des besoins. Il peut s’agir par exemple d’un annuaire téléphonique interne d’une entreprise, d’organigrammes, de normes internes et de la plupart des communications internes.|**Activé** : Oui <br /><br />**Couleur** : Bleu <br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Confidentiel|Données d’entreprise sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Il peut s’agir entre autres de contrats, de rapports de sécurité, de résumés de prévision et de données commerciales.|**Activé** : Oui <br /><br />**Couleur** : Orange<br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Hautement confidentiel|Données d’entreprise très sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|**Activé** : Oui <br /><br />**Couleur** : Rouge<br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
 
 
 ### <a name="sublabels"></a>Sous-étiquettes
 
 |Étiquette|Info-bulle|Paramètres|
 |-------------------------------|---------------------------|-----------------|
-|Confidentiel \ Tous les employés|Données confidentielles qui nécessitent une protection, qui permettent toutes les autorisations complètes des employés. Les propriétaires des données peuvent suivre et révoquer le contenu.|**Activé** : Activé <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé comme confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Azure (clé cloud) [[1]](#footnote-1)|
-|Confidentiel \ Tout le monde (sans protection)|Données ne nécessitant pas de protection. Utilisez cette option avec précaution et avec une justification métier appropriée.|**Activé** : Activé <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé comme confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Confidentiel \ Destinataires uniquement|Données confidentielles qui nécessitent la protection et qui peuvent être visualisées seulement par les destinataires.|**Activé** : Activé <br /><br />**Marquages visuels** : Pied de page (e-mail)<br /><br />Classé comme confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Configurer des autorisations définies par l’utilisateur (préversion), dans Outlook appliquer Ne pas transférer|
-|Hautement confidentiel \ Tous les employés|Données hautement confidentielles, qui permettent les autorisations d’afficher, de modifier et de répondre de tous les employés sur ce contenu. Les propriétaires des données peuvent suivre et révoquer le contenu.|**Activé** : Activé <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé hautement confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Azure (clé cloud) [[2]](#footnote-2)|
-|Hautement confidentiel \ Tout le monde (sans protection)|Données ne nécessitant pas de protection. Utilisez cette option avec précaution et avec une justification métier appropriée.|**Activé** : Activé <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé hautement confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Hautement confidentiel \ Destinataires uniquement|Données hautement confidentielles qui nécessitent la protection et qui peuvent être visualisées seulement par les destinataires.|**Activé** : Activé <br /><br />**Marquages visuels** : Pied de page (e-mail)<br /><br />Classé hautement confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Configurer des autorisations définies par l’utilisateur (préversion), dans Outlook appliquer Ne pas transférer|
+|Confidentiel \ Tous les employés|Données confidentielles qui nécessitent une protection, qui permettent toutes les autorisations complètes des employés. Les propriétaires des données peuvent suivre et révoquer le contenu.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé comme confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Azure (clé cloud) [[1]](#footnote-1)|
+|Confidentiel \ Tout le monde (sans protection)|Données ne nécessitant pas de protection. Utilisez cette option avec précaution et avec une justification métier appropriée.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé comme confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Confidentiel \ Destinataires uniquement|Données confidentielles qui nécessitent la protection et qui peuvent être visualisées seulement par les destinataires.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (e-mail)<br /><br />Classé comme confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Configurer des autorisations définies par l’utilisateur (préversion), dans Outlook appliquer Ne pas transférer|
+|Hautement confidentiel \ Tous les employés|Données hautement confidentielles, qui permettent les autorisations d’afficher, de modifier et de répondre de tous les employés sur ce contenu. Les propriétaires des données peuvent suivre et révoquer le contenu.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé hautement confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Azure (clé cloud) [[2]](#footnote-2)|
+|Hautement confidentiel \ Tout le monde (sans protection)|Données ne nécessitant pas de protection. Utilisez cette option avec précaution et avec une justification métier appropriée.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé hautement confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Hautement confidentiel \ Destinataires uniquement|Données hautement confidentielles qui nécessitent la protection et qui peuvent être visualisées seulement par les destinataires.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (e-mail)<br /><br />Classé hautement confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Configurer des autorisations définies par l’utilisateur (préversion), dans Outlook appliquer Ne pas transférer|
 
-###### <a name="footnote-1"></a>Note 1
+###### <a name="footnote-1"></a>Note de bas de page 1
 Les autorisations de protection sont celles définies dans le [modèle par défaut](configure-policy-templates.md#default-templates), **Confidentiel\Tous les employés**.
 
 ###### <a name="footnote-2"></a>Note 2 
@@ -102,9 +102,9 @@ Les autorisations de protection sont celles définies dans le [modèle par défa
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|Valeur|
+|Paramètre|Value|
 |-------------------------------|---------------------------|
-|Titre|Sensibilité|
+|Title|Sensibilité|
 |Info-bulle|L’étiquette actuelle pour ce contenu. Ce paramètre identifie les risques pour l’entreprise si ce contenu est partagé avec des personnes non autorisées à l’intérieur ou à l’extérieur de l’organisation.|
 
 
@@ -114,7 +114,7 @@ Certains paramètres ont été ajoutés après le 31 juillet 2017.
 
 |Paramètre|Value|
 |-------------------------------|---------------------------|
-|Sélectionner l’étiquette par défaut|Aucune|
+|Sélectionner l’étiquette par défaut|aucune.|
 |Envoyer des données d’audit à l’analytique Azure Information Protection|Désactivé|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection|Désactivé|
@@ -133,36 +133,36 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 |Étiquette|Info-bulle|Paramètres|
 |-------------------------------|---------------------------|-----------------|
-|Personnel|Données autres que les données d’entreprise, uniquement pour une utilisation personnelle.|**Activé** : Activé <br /><br />**Couleur** : Vert clair<br /><br />**Marquages visuels** : Désactivé <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Public|Données d’entreprise qui sont spécifiquement préparées et approuvées pour une consommation publique.|**Activé** : Activé <br /><br />**Couleur** : Vert<br /><br />**Marquages visuels** : Désactivé<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Général|Données d’entreprise qui ne sont pas destinées à la consommation publique. Cependant, elles peuvent être partagées avec des partenaires externes, en fonction des besoins. Il peut s’agir par exemple d’un annuaire téléphonique interne d’une entreprise, d’organigrammes, de normes internes et de la plupart des communications internes.|**Activé** : Activé <br /><br />**Couleur** : Bleu <br /><br />**Marquages visuels** : Désactivé<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Confidentiel|Données d’entreprise sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Il peut s’agir entre autres de contrats, de rapports de sécurité, de résumés de prévision et de données commerciales.|**Activé** : Activé <br /><br />**Couleur** : Orange<br /><br />**Marquages visuels** : Désactivé<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Hautement confidentiel|Données d’entreprise très sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|**Activé** : Activé <br /><br />**Couleur** : Rouge<br /><br />**Marquages visuels** : Désactivé<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Personnel|Données autres que les données d’entreprise, uniquement pour une utilisation personnelle.|**Activé** : Oui <br /><br />**Couleur** : Vert clair<br /><br />**Marquages visuels** : Désactivés <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Public|Données d’entreprise qui sont spécifiquement préparées et approuvées pour une consommation publique.|**Activé** : Oui <br /><br />**Couleur** : vert<br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Général|Données d’entreprise qui ne sont pas destinées à la consommation publique. Cependant, elles peuvent être partagées avec des partenaires externes, en fonction des besoins. Il peut s’agir par exemple d’un annuaire téléphonique interne d’une entreprise, d’organigrammes, de normes internes et de la plupart des communications internes.|**Activé** : Oui <br /><br />**Couleur** : Bleu <br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Confidentiel|Données d’entreprise sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Il peut s’agir entre autres de contrats, de rapports de sécurité, de résumés de prévision et de données commerciales.|**Activé** : Oui <br /><br />**Couleur** : Orange<br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Hautement confidentiel|Données d’entreprise très sensibles qui pourraient provoquer des dommages à l’activité si elles étaient partagées avec des personnes non autorisées. Il s'agit entre autres d'informations sur les clients et les employés, les mots de passe, le code source et des rapports financiers préalablement annoncés.|**Activé** : Oui <br /><br />**Couleur** : Rouge<br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
 
 
 ### <a name="sublabels"></a>Sous-étiquettes
 
 |Étiquette|Info-bulle|Paramètres|
 |-------------------------------|---------------------------|-----------------|
-|Confidentiel \ Tous les employés|Données confidentielles qui nécessitent une protection, qui permettent toutes les autorisations complètes des employés. Les propriétaires des données peuvent suivre et révoquer le contenu.|**Activé** : Activé <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé comme confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Confidentiel \ Tout le monde (sans protection)|Données ne nécessitant pas de protection. Utilisez cette option avec précaution et avec une justification métier appropriée.|**Activé** : Activé <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé comme confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Hautement confidentiel \ Tous les employés|Données hautement confidentielles, qui permettent les autorisations d’afficher, de modifier et de répondre de tous les employés sur ce contenu. Les propriétaires des données peuvent suivre et révoquer le contenu.|**Activé** : Activé <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé hautement confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Hautement confidentiel \ Tout le monde (sans protection)|Données ne nécessitant pas de protection. Utilisez cette option avec précaution et avec une justification métier appropriée.|**Activé** : Activé <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé hautement confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Confidentiel \ Tous les employés|Données confidentielles qui nécessitent une protection, qui permettent toutes les autorisations complètes des employés. Les propriétaires des données peuvent suivre et révoquer le contenu.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé comme confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Confidentiel \ Tout le monde (sans protection)|Données ne nécessitant pas de protection. Utilisez cette option avec précaution et avec une justification métier appropriée.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé comme confidentiel <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Hautement confidentiel \ Tous les employés|Données hautement confidentielles, qui permettent les autorisations d’afficher, de modifier et de répondre de tous les employés sur ce contenu. Les propriétaires des données peuvent suivre et révoquer le contenu.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé hautement confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Hautement confidentiel \ Tout le monde (sans protection)|Données ne nécessitant pas de protection. Utilisez cette option avec précaution et avec une justification métier appropriée.|**Activé** : Oui <br /><br />**Marquages visuels** : Pied de page (document et e-mail)<br /><br />Classé hautement confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|Valeur|
+|Paramètre|Value|
 |-------------------------------|---------------------------|
-|Titre|Sensibilité|
+|Title|Sensibilité|
 |Info-bulle|L’étiquette actuelle pour ce contenu. Ce paramètre identifie les risques pour l’entreprise si ce contenu est partagé avec des personnes non autorisées à l’intérieur ou à l’extérieur de l’organisation.|
 
 
 ### <a name="settings"></a>Paramètres
 
-|Paramètre|Valeur|
+|Paramètre|Value|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
-|Sélectionner l’étiquette par défaut|Aucune|
+|Sélectionner l’étiquette par défaut|aucune.|
 |Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection|Désactivé|
 |Pour les e-mails avec des pièces jointes, appliquez une étiquette qui correspond à la classification la plus élevée de ces pièces jointes|Désactivé|
 |Spécifiez une URL personnalisée pour la page web « En savoir plus » du client Azure Information Protection|Vide|
@@ -173,34 +173,34 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 |Étiquette|Info-bulle|Paramètres|
 |-------------------------------|---------------------------|-----------------|
-|Personnel|Réservé à un usage personnel. Ces données ne sont pas surveillées par l’organisation. Les informations personnelles ne doivent inclure aucune donnée professionnelle.|**Activé** : Activé <br /><br />**Couleur** : Vert clair<br /><br />**Marquages visuels** : Désactivé <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Public|Ces informations sont internes et peuvent être utilisées par tout le monde à l’intérieur ou à l’extérieur de l’entreprise.|**Activé** : Activé <br /><br />**Couleur** : Vert<br /><br />**Marquages visuels** : Désactivé<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Interne|Ces informations comprennent une grande variété de données métier internes qui peuvent être utilisées par tous les employés et peuvent être partagées avec des clients et des partenaires commerciaux autorisés. Les informations internes sont, par exemple, des stratégies de l’entreprise et la plupart des communications internes.|**Activé** : Activé <br /><br />**Couleur** : Bleu <br /><br />**Marquages visuels** : Pied de page (document et e-mail) : <br /><br />Sensibilité : Interne<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Confidentiel|Ces données incluent des informations métier sensibles. Une exposition de ces données à des utilisateurs non autorisés peut nuire à l’organisation. Les informations confidentielles sont, par exemple, des informations sur les employés, des projets ou des contrats de clients, ainsi que des données de comptes de vente.|**Activé** : Activé <br /><br />**Couleur** : Orange<br /><br />**Marquages visuels** : Pied de page (document et e-mail) :<br /><br /> Sensibilité : Confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|`Secret`|Ces données incluent des informations hautement confidentielles de l’entreprise qui doivent être protégées. Une exposition de ces données secrètes à des utilisateurs non autorisés peut nuire gravement à l’organisation. Les informations secrètes sont, par exemple, des informations d’identification personnelles, des enregistrements de clients, des codes source et des rapports financiers préalablement annoncés.|**Activé** : Activé <br /><br />**Couleur** : Rouge<br /><br />**Marquages visuels** : Pied de page (document et e-mail) :<br /><br /> Sensibilité : `Secret`<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Personnel|Réservé à un usage personnel. Ces données ne sont pas surveillées par l’organisation. Les informations personnelles ne doivent inclure aucune donnée professionnelle.|**Activé** : Oui <br /><br />**Couleur** : Vert clair<br /><br />**Marquages visuels** : Désactivés <br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Public|Ces informations sont internes et peuvent être utilisées par tout le monde à l’intérieur ou à l’extérieur de l’entreprise.|**Activé** : Oui <br /><br />**Couleur** : vert<br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Interne|Ces informations comprennent une grande variété de données métier internes qui peuvent être utilisées par tous les employés et peuvent être partagées avec des clients et des partenaires commerciaux autorisés. Les informations internes sont, par exemple, des stratégies de l’entreprise et la plupart des communications internes.|**Activé** : Oui <br /><br />**Couleur** : Bleu <br /><br />**Marquages visuels** : Pied de page (document et e-mail) : <br /><br />Sensibilité : Interne<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Confidentiel|Ces données incluent des informations métier sensibles. Une exposition de ces données à des utilisateurs non autorisés peut nuire à l’organisation. Les informations confidentielles sont, par exemple, des informations sur les employés, des projets ou des contrats de clients, ainsi que des données de comptes de vente.|**Activé** : Oui <br /><br />**Couleur** : Orange<br /><br />**Marquages visuels** : Pied de page (document et e-mail) :<br /><br /> Sensibilité : Confidentiel<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Secret|Ces données incluent des informations hautement confidentielles de l’entreprise qui doivent être protégées. Une exposition de ces données secrètes à des utilisateurs non autorisés peut nuire gravement à l’organisation. Les informations secrètes sont, par exemple, des informations d’identification personnelles, des enregistrements de clients, des codes source et des rapports financiers préalablement annoncés.|**Activé** : Oui <br /><br />**Couleur** : Rouge<br /><br />**Marquages visuels** : Pied de page (document et e-mail) :<br /><br /> Sensibilité : Secret<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
 
 
 ### <a name="sublabels"></a>Sous-étiquettes
 
 |Étiquette|Info-bulle|Paramètres|
 |-------------------------------|---------------------------|-----------------|
-|Secret \ Toute l’entreprise|Ces données incluent des informations métier sensibles pour lesquelles les employés de la société ont une autorisation.|**Activé** : Activé <br /><br />**Marquages visuels** : Désactivé<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
-|Secret > Mon groupe|Ces données incluent des informations métier sensibles pour lesquelles des groupes d’employés ont une autorisation.|**Activé** : Activé <br /><br />**Marquages visuels** : Désactivé<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Secret \ Toute l’entreprise|Ces données incluent des informations métier sensibles pour lesquelles les employés de la société ont une autorisation.|**Activé** : Oui <br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
+|Secret > Mon groupe|Ces données incluent des informations métier sensibles pour lesquelles des groupes d’employés ont une autorisation.|**Activé** : Oui <br /><br />**Marquages visuels** : Désactivés<br /><br />**Conditions** : Aucune<br /><br />**Protection** : Aucune|
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|Valeur|
+|Paramètre|Value|
 |-------------------------------|---------------------------|
-|Titre|Sensibilité|
+|Title|Sensibilité|
 |Info-bulle|La confidentialité des informations est composée de quatre niveaux distincts (public, interne, confidentiel, secret), qui permettent à l’utilisateur d’identifier le risque d’exposition d’informations à des utilisateurs non autorisés à l’intérieur ou à l’extérieur de l’entreprise.|
 
 
 ### <a name="settings"></a>Paramètres
 
-|Paramètre|Valeur|
+|Paramètre|Value|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
-|Sélectionner l’étiquette par défaut|Aucune|
+|Sélectionner l’étiquette par défaut|aucune.|
 |Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection|Désactivé|
 |Spécifiez une URL personnalisée pour la page web « En savoir plus » du client Azure Information Protection|Vide|
 

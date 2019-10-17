@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b6874bfc2e3431779891262e33e542058d4f2cf4
-ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
+ms.openlocfilehash: 3a59984f3829ed3305d2e6f6dbd3e121bfff6ba3
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71301170"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447378"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -27,8 +27,8 @@ ms.locfileid: "71301170"
 > Cet article est destiné à la version actuelle de la disponibilité générale du scanneur Azure Information Protection avec le client Azure Information Protection (Classic) et à la version préliminaire du scanneur pour la préversion actuelle des informations Azure. Client d’étiquetage unifié de la protection.
 > 
 > Si vous avez déjà installé le scanneur et que vous souhaitez le mettre à niveau, utilisez les instructions de mise à niveau suivantes, puis suivez les instructions de cette page, en omettant l’étape d’installation du scanneur :
-> - Pour le client classique : [Mise à niveau de l’analyseur de Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)
-> - Pour le client d’étiquetage unifié : [Mise à niveau de l’analyseur de Azure Information Protection](./rms-client/clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner)
+> - Pour le client classique : [mise à niveau du scanneur Azure information protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)
+> - Pour le client d’étiquetage unifié : [mise à niveau du scanneur de Azure information protection](./rms-client/clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner)
 > 
 > Si vous disposez d’une version du scanneur antérieure à 1.48.204.0 et que vous n’êtes pas prêt à effectuer la mise à niveau, consultez [déploiement de versions antérieures du moteur de Azure information protection pour classifier et protéger automatiquement des fichiers](deploy-aip-scanner-previousversions.md).
 
@@ -53,9 +53,9 @@ Lorsque vous avez configuré des étiquettes qui appliquent une classification a
 
 Le scanneur peut inspecter tous les fichiers que Windows est capable d’indexer à l’aide de filtres IFilter installés sur l’ordinateur. Ensuite, pour déterminer si les fichiers doivent être étiquetés, le scanneur utilise la détection de modèles et les types d’informations sensibles de protection contre la perte de données intégrée à Office 365 ou les modèles regex Office 365. Étant donné que le scanneur utilise le client Azure Information Protection (le client classique ou le client d’étiquetage unifié), le scanneur peut classifier et protéger les mêmes types de fichiers :
 
-- Le client classique : [Types de fichiers pris en charge par le client Azure Information Protection](./rms-client/client-admin-guide-file-types.md)
+- Client classique : [types de fichiers pris en charge par le client Azure information protection](./rms-client/client-admin-guide-file-types.md)
 
-- Le client d’étiquetage unifié : [Types de fichiers pris en charge par le client d’étiquetage unifié Azure Information Protection](./rms-client/clientv2-admin-guide-file-types.md)
+- Client d’étiquetage unifié : [types de fichiers pris en charge par le client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide-file-types.md)
 
 Vous pouvez exécuter le scanneur en mode découverte uniquement, dans lequel vous utilisez les rapports pour vérifier ce qui se passerait si les fichiers étaient étiquetés. Ou bien, vous pouvez exécuter le scanneur pour appliquer automatiquement les étiquettes. Vous pouvez également exécuter le scanneur pour découvrir les fichiers contenant des types d’informations sensibles, sans configurer d’étiquettes pour les conditions qui appliquent la classification automatique.
 
@@ -67,16 +67,16 @@ Vous pouvez spécifier les types de fichiers à analyser, ou à exclure de l’a
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Prérequis pour le scanneur Azure Information Protection
 Avant d’installer le scanneur Azure Information Protection, vérifiez que les conditions suivantes sont respectées.
 
-|Condition requise|Plus d’informations|
+|Condition requise|Autres informations|
 |---------------|--------------------|
-|Ordinateur Windows Server pour exécuter le service du scanneur :<br /><br />- Processeurs 4 cœurs<br /><br />- 8 Go de RAM<br /><br />- 10 Go d’espace libre (en moyenne) pour les fichiers temporaires|Windows Server 2019, Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Remarque : À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez utiliser un système d’exploitation client Windows qui est [pris en charge par le client Azure Information Protection](requirements.md#client-devices).<br /><br />Il peut s’agir d’un ordinateur physique ou virtuel doté d’une connexion réseau rapide et fiable aux magasins de données à scanner.<br /><br /> Le scanneur nécessite suffisamment d’espace disque disponible pour créer des fichiers temporaires pour chaque fichier qu’il analyse, quatre fichiers par cœur. L’espace disque recommandé de 10 Go permet de disposer de processeurs 4 cœurs analysant 16 fichiers qui ont chacun une taille de 625 Mo. <br /><br /> Si une connexion Internet n’est pas possible en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations). Sinon, assurez-vous que cet ordinateur dispose d’une connectivité Internet qui autorise les URL suivantes sur HTTPS (port 443) :<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*. protection.outlook.com (scanneur du client d’étiquetage unifié uniquement)|
-|Compte de service pour exécuter le service du scanneur|En plus d’exécuter le service du scanneur sur l’ordinateur Windows Server, ce compte Windows s’authentifie auprès d’Azure AD, puis télécharge la stratégie Azure Information Protection. Ce compte doit être un compte Active Directory et synchronisé avec Azure AD. Si vous ne pouvez pas synchroniser ce compte en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />Ce compte de service a la configuration suivante :<br /><br />- **Ouvrir une session localement**, attribution des droits utilisateur. Ce droit est exigé pour l’installation et la configuration du scanneur, mais pas pour son fonctionnement. Vous devez accorder ce droit au compte de service, mais vous pouvez le supprimer après avoir vérifié que le scanneur peut détecter, classifier et protéger des fichiers. Si l’attribution de ce droit, même pendant une courte période, n’est pas possible en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />- **Ouvrir une session en tant que service**, attribution des droits utilisateur. Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur. <br /><br />- Autorisations sur les référentiels de données : Vous devez accorder les autorisations **Lecture** et **Écriture** pour l’analyse des fichiers, puis pour l’application d’une classification et d’une protection aux fichiers qui remplissent les conditions spécifiées dans la stratégie Azure Information Protection. Pour exécuter le scanneur en mode découverte uniquement, l’autorisation **Lecture** suffit.<br /><br />- Pour les étiquettes qui reprotègent ou suppriment la protection : Pour que le scanneur ait toujours accès aux fichiers protégés, faites de ce compte un [super utilisateur](configure-super-users.md) du service Azure Rights Management et vérifiez que la fonctionnalité de super utilisateur est activée. Pour plus d’informations sur la configuration requise des comptes pour appliquer la protection, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md). En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) pour un déploiement échelonné, assurez-vous que ce compte est inclus dans les contrôles d’intégration que vous avez configurés.|
+|Ordinateur Windows Server pour exécuter le service du scanneur :<br /><br />- Processeurs 4 cœurs<br /><br />- 8 Go de RAM<br /><br />- 10 Go d’espace libre (en moyenne) pour les fichiers temporaires|Windows Server 2019, Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Remarque : À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez utiliser un système d’exploitation client Windows qui est [pris en charge par le client Azure Information Protection](requirements.md#client-devices).<br /><br />Il peut s’agir d’un ordinateur physique ou virtuel doté d’une connexion réseau rapide et fiable aux magasins de données à scanner.<br /><br /> Le scanneur nécessite suffisamment d’espace disque disponible pour créer des fichiers temporaires pour chaque fichier qu’il analyse, quatre fichiers par cœur. L’espace disque recommandé de 10 Go permet de disposer de processeurs 4 cœurs analysant 16 fichiers qui ont chacun une taille de 625 Mo. <br /><br /> Si une connexion Internet n’est pas possible en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations). Sinon, assurez-vous que cet ordinateur dispose d’une connectivité Internet qui autorise les URL suivantes sur HTTPS (port 443) :<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*.protection.outlook.com (analyseur du client d’étiquetage unifié uniquement)|
+|Compte de service pour exécuter le service du scanneur|En plus d’exécuter le service du scanneur sur l’ordinateur Windows Server, ce compte Windows s’authentifie auprès d’Azure AD, puis télécharge la stratégie Azure Information Protection. Ce compte doit être un compte Active Directory et synchronisé avec Azure AD. Si vous ne pouvez pas synchroniser ce compte en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />Ce compte de service a la configuration suivante :<br /><br />- **Ouvrir une session localement**, attribution des droits utilisateur. Ce droit est exigé pour l’installation et la configuration du scanneur, mais pas pour son fonctionnement. Vous devez accorder ce droit au compte de service, mais vous pouvez le supprimer après avoir vérifié que le scanneur peut détecter, classifier et protéger des fichiers. Si l’attribution de ce droit, même pendant une courte période, n’est pas possible en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />- **Ouvrir une session en tant que service**, attribution des droits utilisateur. Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur. <br /><br />- Autorisations d’accès aux dépôts de données : vous devez accorder des autorisations de **Lecture** et **Écriture** pour l’analyse des fichiers, puis l’application d’une classification et d’une protection aux fichiers qui remplissent les conditions stipulées dans la stratégie Azure Information Protection. Pour exécuter le scanneur en mode découverte uniquement, l’autorisation **Lecture** suffit.<br /><br />- Pour les étiquettes qui reprotègent ou retire la protection : pour veiller à ce que le scanneur ait toujours accès aux fichiers protégés, faites de ce compte un [super utilisateur](configure-super-users.md) du service Azure Rights Management et vérifiez que la fonctionnalité de super utilisateur est activée. Pour plus d’informations sur la configuration requise des comptes pour appliquer la protection, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](prepare.md). En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) pour un déploiement échelonné, assurez-vous que ce compte est inclus dans les contrôles d’intégration que vous avez configurés.|
 |SQL Server pour stocker la configuration du scanneur :<br /><br />- Instance locale ou distante<br /><br />-Rôle sysadmin pour installer le scanneur|SQL Server 2012 est la version minimale pour les éditions suivantes :<br /><br />- SQL Server Entreprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Le scanneur Azure Information Protection prend en charge plusieurs bases de données de configuration sur la même instance SQL Server lorsque vous spécifiez un nom de profil personnalisé pour le scanneur. Lorsque vous utilisez la version préliminaire du scanneur à partir du client d’étiquetage unifié, plusieurs analyseurs peuvent partager la même base de données de configuration.<br /><br />Lorsque vous installez le scanneur et si votre compte a le rôle Sysadmin, le processus d’installation crée automatiquement la base de données de configuration du scanneur et accorde le rôle db_owner requis au compte de service qui exécute le scanneur. Si vous ne pouvez pas disposer du rôle Sysadmin ou si les stratégies de votre organisation requièrent que les bases de données soient créées et configurées manuellement, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />La taille de la base de données de configuration varie pour chaque déploiement, mais nous vous recommandons d’allouer 500 Mo pour chaque lot de 1 000 000 fichiers que vous souhaitez analyser. |
-|L’un des Azure Information Protection clients suivants est installé sur l’ordinateur Windows Server <br /><br /> -Client classique <br /><br /> -Client d’étiquetage unifié ([version préliminaire uniquement](./rms-client/unifiedlabelingclient-version-release-history.md#versions-later-than-22210)) |Vous devez installer le client complet pour le scanneur. N’installez pas le client avec juste le module PowerShell.<br /><br />Pour obtenir des instructions d’installation et de mise à niveau : <br /> - [Client classique](./rms-client/client-admin-guide.md)<br /> - [Client d’étiquetage unifié](./rms-client/clientv2-admin-guide.md#installing-the-azure-information-protection-scanner) |
-|Étiquettes configurées qui appliquent une classification automatique et éventuellement une protection|Pour obtenir des instructions pour le client classique afin de configurer une étiquette pour les conditions et pour appliquer la protection :<br /> - [Comment configurer des conditions pour la classification automatique et recommandée](configure-policy-classification.md)<br /> - [Comment configurer une étiquette pour la protection Rights Management](configure-policy-protection.md) <br /><br />Conseil : Vous pouvez utiliser les instructions du [didacticiel](infoprotect-quick-start-tutorial.md) pour tester le scanneur avec une étiquette qui recherche des numéros de carte de crédit dans un document Word préparé. Vous devez toutefois modifier la configuration de l’étiquette afin que **Sélectionner comment cette étiquette est appliquée** soit défini sur **Automatique** plutôt que sur **Recommandé**. Supprimez ensuite l’étiquette du document (si elle est appliquée), puis copiez le fichier dans un référentiel de données pour le scanneur. Pour effectuer un test rapide, il peut s’agir d’un dossier local sur l’ordinateur du scanneur.<br /><br /> Pour obtenir des instructions pour le client d’étiquetage unifié afin de configurer une étiquette pour l’étiquetage automatique et appliquer la protection :<br /> - [Appliquer automatiquement une étiquette de sensibilité au contenu](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically)<br /> - [Restreindre l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels)<br /><br /> Bien que vous puissiez exécuter le scanneur même si vous n’avez pas configuré les étiquettes qui appliquent la classification automatique, ce scénario n’est pas abordé dans ces instructions. [Plus d’informations](#using-the-scanner-with-alternative-configurations)|
-|Pour les bibliothèques de documents et les dossiers SharePoint à analyser :<br /><br />-SharePoint 2019<br /><br />- SharePoint 2016<br /><br />- SharePoint 2013<br /><br />- SharePoint 2010|D’autres versions de SharePoint ne sont pas prises en charge pour le scanneur.<br /><br />Lorsque vous utilisez le contrôle de [version](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning), le scanneur inspecte et étiquette la dernière version publiée. Si le scanneur étiquette une approbation de fichier et de [contenu](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) est requise, ce fichier doit être approuvé pour être disponible pour les utilisateurs. <br /><br />Pour les grandes batteries de serveurs SharePoint, regardez si vous devez augmenter le seuil d’affichage de liste (par défaut, 5 000) pour le scanneur pour accéder à tous les fichiers. Pour plus d’informations, consultez la documentation suivante de SharePoint : [Gérer des listes et bibliothèques de grande taille dans SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)|
-|Pour scanner des documents Office :<br /><br />- formats de fichier 97-2003 et formats Office Open XML pour Word, Excel et PowerPoint|Pour plus d’informations sur les types de fichiers pris en charge par le scanneur pour ces formats de fichier, consultez les informations suivantes : <br />-Client classique : [Types de fichiers pris en charge par le client Azure Information Protection](./rms-client/client-admin-guide-file-types.md)<br />-Client d’étiquetage unifié : [Types de fichiers pris en charge par le client d’étiquetage unifié Azure Information Protection](./rms-client/clientv2-admin-guide-file-types.md)|
-|Pour les chemins longs :<br /><br />- 260 caractères maximum, sauf si le scanneur est installé sur Windows 2016 et que l’ordinateur est configuré pour prendre en charge les chemins longs.|Windows 10 et Windows Server 2016 prennent en charge les chemins de plus de 260 caractères avec le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) suivant : **Stratégie** >  >  >  de l’ordinateur local Configuration ordinateur modèles d’administration tous les paramètres activer les chemins longs Win32 > <br /><br /> Pour plus d’informations sur la prise en charge des chemins de fichiers longs, consultez la section consacrée à la [longueur maximale des chemins](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation pour développeurs Windows 10.
+|L’un des Azure Information Protection clients suivants est installé sur l’ordinateur Windows Server <br /><br /> -Client classique <br /><br /> -Client d’étiquetage unifié ([version préliminaire uniquement](./rms-client/unifiedlabelingclient-version-release-history.md#versions-later-than-22210)) |Vous devez installer le client complet pour le scanneur. N’installez pas le client avec juste le module PowerShell.<br /><br />Pour obtenir des instructions d’installation et de mise à niveau : <br /> - [client classique](./rms-client/client-admin-guide.md)<br /> - [client d’étiquetage unifié](./rms-client/clientv2-admin-guide.md#installing-the-azure-information-protection-scanner) |
+|Étiquettes configurées qui appliquent une classification automatique et éventuellement une protection|Pour obtenir des instructions pour le client classique afin de configurer une étiquette pour les conditions et pour appliquer la protection :<br /> - [Comment configurer des conditions pour la classification automatique et recommandée](configure-policy-classification.md)<br /> - [Comment configurer une étiquette pour la protection Rights Management](configure-policy-protection.md) <br /><br />Conseil : vous pouvez utiliser les instructions du [didacticiel](infoprotect-quick-start-tutorial.md) pour tester le scanneur avec une étiquette qui recherche des numéros de carte de crédit dans un document Word préparé. Vous devez toutefois modifier la configuration de l’étiquette afin que **Sélectionner comment cette étiquette est appliquée** soit défini sur **Automatique** plutôt que sur **Recommandé**. Supprimez ensuite l’étiquette du document (si elle est appliquée), puis copiez le fichier dans un référentiel de données pour le scanneur. Pour effectuer un test rapide, il peut s’agir d’un dossier local sur l’ordinateur du scanneur.<br /><br /> Pour obtenir des instructions pour le client d’étiquetage unifié afin de configurer une étiquette pour l’étiquetage automatique et appliquer la protection :<br /> - [appliquer automatiquement une étiquette de sensibilité au contenu](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)<br /> - [restreindre l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)<br /><br /> Bien que vous puissiez exécuter le scanneur même si vous n’avez pas configuré les étiquettes qui appliquent la classification automatique, ce scénario n’est pas abordé dans ces instructions. [Plus d’informations](#using-the-scanner-with-alternative-configurations)|
+|Pour les bibliothèques de documents et les dossiers SharePoint à analyser :<br /><br />-SharePoint 2019<br /><br />- SharePoint 2016<br /><br />- SharePoint 2013<br /><br />- SharePoint 2010|D’autres versions de SharePoint ne sont pas prises en charge pour le scanneur.<br /><br />Lorsque vous utilisez le contrôle de [version](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning), le scanneur inspecte et étiquette la dernière version publiée. Si le scanneur étiquette une approbation de fichier et de [contenu](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) est requise, ce fichier doit être approuvé pour être disponible pour les utilisateurs. <br /><br />Pour les grandes batteries de serveurs SharePoint, regardez si vous devez augmenter le seuil d’affichage de liste (par défaut, 5 000) pour le scanneur pour accéder à tous les fichiers. Pour plus d’informations, consultez la documentation SharePoint suivante : [gérer les grandes listes et les bibliothèques dans SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)|
+|Pour scanner des documents Office :<br /><br />- formats de fichier 97-2003 et formats Office Open XML pour Word, Excel et PowerPoint|Pour plus d’informations sur les types de fichiers pris en charge par le scanneur pour ces formats de fichier, consultez les informations suivantes : <br />-Client classique : [types de fichiers pris en charge par le client Azure information protection](./rms-client/client-admin-guide-file-types.md)<br />-Client d’étiquetage unifié : [types de fichiers pris en charge par le client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide-file-types.md)|
+|Pour les chemins longs :<br /><br />- 260 caractères maximum, sauf si le scanneur est installé sur Windows 2016 et que l’ordinateur est configuré pour prendre en charge les chemins longs.|Windows 10 et Windows Server 2016 prennent en charge des longueurs de chemin d’accès de plus de 260 caractères avec le [paramètre de stratégie de groupe](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)suivant : stratégie de l' **ordinateur local** > **Configuration ordinateur** > **modèles d’administration**@no_ _ t-6**tous les paramètres** > **activent les chemins longs Win32**<br /><br /> Pour plus d’informations sur la prise en charge des chemins de fichiers longs, consultez la section consacrée à la [longueur maximale des chemins](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) dans la documentation pour développeurs Windows 10.
 
 Si vous ne pouvez pas respecter toutes les conditions dans la table, car votre organisation l’interdit, consultez la section suivante pour obtenir des alternatives.
 
@@ -97,9 +97,9 @@ Les prérequis répertoriés dans la table correspondent aux exigences par défa
 Le scanneur peut prendre en charge ces restrictions, mais celles-ci nécessitent une configuration supplémentaire.
 
 
-#### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Restriction : Le serveur du scanneur n’est pas autorisé à se connecter à Internet
+#### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Restriction : le serveur du scanneur n’est pas autorisé à se connecter à Internet
 
-Pris en charge par le client classique uniquement : Suivez les instructions pour un [ordinateur déconnecté](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). Ensuite, procédez comme suit :
+Pris en charge par le client classique uniquement : suivez les instructions pour un [ordinateur déconnecté](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). Effectuez ensuite les opérations suivantes :
 
 1. Configurez le scanneur dans le portail Azure, en créant un profil de scanneur. Si vous avez besoin d’aide pour cette étape, consultez [Configurer le scanneur dans le portail Azure](#configure-the-scanner-in-the-azure-portal).
 
@@ -109,7 +109,7 @@ Pris en charge par le client classique uniquement : Suivez les instructions pou
 
 Notez que dans cette configuration, le scanneur ne peut pas appliquer la protection (ou supprimer la protection) à l’aide de la clé cloud de votre organisation. Au lieu de cela, le scanneur est limité à l’utilisation d’étiquettes qui appliquent la classification uniquement, ou la protection qui utilise [HYOK](configure-adrms-restrictions.md). 
 
-#### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Restriction : Vous ne pouvez pas obtenir le rôle Sysadmin ou les bases de données doivent être créées et configurées manuellement
+#### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Restriction : vous ne pouvez pas obtenir le rôle Sysadmin ou les bases de données doivent être créées et configurées manuellement
 
 Si le rôle Sysadmin peut vous être attribué temporairement pour installer le scanneur, vous pouvez supprimer ce rôle lorsque l’installation du scanneur est terminée. Lorsque vous utilisez cette configuration, la base de données est automatiquement créée pour vous et le compte de service du scanneur obtient automatiquement les autorisations nécessaires. Toutefois, le compte d’utilisateur qui configure le scanneur nécessite le rôle db_owner pour la base de données de configuration du scanneur, et vous devez attribuer manuellement ce rôle au compte d’utilisateur.
 
@@ -123,9 +123,9 @@ Si vous ne pouvez pas recevoir le rôle sysadmin même temporairement, vous deve
 
 En règle générale, vous utilisez le même compte utilisateur pour installer et configurer le scanneur. Mais si vous utilisez des comptes différents, ils ont tous les deux besoin du rôle db_owner pour la base de données de configuration du scanneur :
 
-- Si vous ne spécifiez pas votre propre nom de profil pour le scanneur (client classique uniquement), la base de données de configuration est nommée **\<AIPScanner_ nom_ordinateur >** . 
+- Si vous ne spécifiez pas votre propre nom de profil pour le scanneur (client classique uniquement), la base de données de configuration est nommée **AIPScanner_ @ no__t-1computer_name >** . 
 
-- Si vous spécifiez votre propre nom de profil, la base de données de configuration est nommée **\<AIPScanner_ profile_name >** (client classique) ou **\<AIPScannerUL_ profile_name >** (client d’étiquetage unifié).
+- Si vous spécifiez votre propre nom de profil, la base de données de configuration est nommée **AIPScanner_ @ no__t-1profile_name >** (client classique) ou **AIPScannerUL_ @ no__t-3profile_name >** (client d’étiquetage unifié).
 
 Pour créer un utilisateur et accorder des droits db_owner sur cette base de données, demandez à l’administrateur système d’exécuter le script SQL suivant deux fois. La première fois, pour le compte de service qui exécute le scanneur, et la seconde fois pour installer et gérer le scanneur. Avant d’exécuter le script :
 1. Remplacez *domaine\utilisateur* par le nom de domaine et le nom de compte d’utilisateur du compte de service ou du compte d’utilisateur.
@@ -147,23 +147,23 @@ En outre :
 Si, après avoir configuré ces autorisations, vous voyez une erreur lors de l’installation du scanneur, l’erreur peut être ignorée et vous pouvez démarrer manuellement le service du scanneur.
 
 
-#### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restriction : Le compte de service pour le scanneur ne peut pas avoir le droit **Ouvrir une session localement**
+#### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restriction : le compte de service pour le scanneur ne peut pas obtenir le droit **Ouvrir une session localement**
 
 Si les stratégies de votre organisation interdisent le droit **ouvrir une session localement** pour les comptes de service, mais autorisent le droit **ouvrir une session en tant que tâche** , suivez les instructions ci-dessous :
 
-- Pour le client classique : Consultez [spécifier et utiliser le paramètre Token pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) à partir du Guide de l’administrateur du client.
+- Pour le client classique : consultez [spécifier et utiliser le paramètre Token pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) à partir du Guide de l’administrateur du client.
 
-- Pour le client d’étiquetage unifié : Utilisez le paramètre *OnBehalfOf* avec set-AIPAuthentication, comme décrit à la fin de la rubrique [Comment étiqueter des fichiers de manière non interactive pour Azure information protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) dans le Guide d’administration de ce client.
+- Pour le client d’étiquetage unifié : utilisez le paramètre *OnBehalfOf* avec set-AIPAuthentication, comme décrit à la fin de la rubrique [Comment étiqueter des fichiers de manière non interactive pour Azure information protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) dans le Guide d’administration de ce client.
 
-#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>Restriction : Le compte de service du scanneur ne peut pas être synchronisé avec Azure Active Directory, mais le serveur a accès à Internet
+#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>Restriction : le compte de service du scanneur ne peut pas être synchronisé avec Azure Active Directory, mais le serveur a accès à Internet
 
 Vous pouvez avoir un compte pour exécuter le service du scanneur et un autre compte pour l’authentification auprès d’Azure Active Directory :
 
 - Pour le compte de service du scanneur, vous pouvez utiliser un compte Windows local ou un compte Active Directory.
 
 - Pour le compte Azure Active Directory, suivez les instructions ci-dessous :
-    - Pour le client classique : Consultez [spécifier et utiliser le paramètre Token pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) à partir du Guide de l’administrateur du client.
-    - Pour le client d’étiquetage unifié : Utilisez le paramètre *OnBehalfOf* avec set-AIPAuthentication, comme décrit à la fin de la rubrique [Comment étiqueter des fichiers de manière non interactive pour Azure information protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) dans le Guide d’administration de ce client.
+    - Pour le client classique : consultez [spécifier et utiliser le paramètre Token pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) à partir du Guide de l’administrateur du client.
+    - Pour le client d’étiquetage unifié : utilisez le paramètre *OnBehalfOf* avec set-AIPAuthentication, comme décrit à la fin de la rubrique [Comment étiqueter des fichiers de manière non interactive pour Azure information protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) dans le Guide d’administration de ce client.
 
 ## <a name="configure-the-scanner-in-the-azure-portal"></a>Configurer le scanneur dans le portail Azure
 
@@ -186,20 +186,20 @@ Avant d’installer le scanneur ou de le mettre à niveau à partir d’une anci
 5. Pour cette configuration initiale, configurez les paramètres suivants, puis sélectionnez **Enregistrer** mais ne fermez pas le panneau :
     
     Pour la section **paramètres de profil** :
-    - **Planification**: Conservez la valeur **Manuel** par défaut
-    - **Info types to be discovered** (Types d’infos à découvrir) : Définissez sur **Policy only** (Stratégie uniquement)
-    - **Configure repositories** (Configurer des référentiels) : Ne configurez pas pour l’instant, car le profil doit tout d’abord être enregistré.
+    - **Planifier**: conserver la valeur par défaut **manuelle**
+    - **Types d’informations à découvrir**: changer en **stratégie uniquement**
+    - **Configurer les référentiels**: ne pas configurer pour l’instant, car le profil doit d’abord être enregistré.
     
     Pour la section application de la **stratégie** :
-    - **Appliquer** : Sélectionnez **Désactivé**
-    - **Label files based on content** (Étiqueter les fichiers en fonction du contenu) : Conservez la valeur **Activé** par défaut
-    - **Étiquette par défaut** : Conservez la valeur **Stratégie par défaut** par défaut
-    - **Relabel files** (Réétiqueter les fichiers) : Conservez la valeur **Désactivé** par défaut
+    - **Appliquer**: sélectionner **désactivé**
+    - **Étiqueter les fichiers en fonction du contenu**: conservez la valeur par défaut **activée**
+    - **Étiquette par**défaut : conserver la valeur par défaut de la **stratégie** par défaut
+    - **Réétiqueter les fichiers**: conserver la valeur par défaut **désactivé**
     
     Pour la section **configurer les paramètres du fichier** :
-    - **Conservez les valeurs de « Date de modification », « Dernière modification » et « Modifié par »** : Conservez la valeur **Activé** par défaut
-    - **File types to scan** (Types de fichiers à analyser) : Conservez les types de fichiers par défaut pour **Exclure**
-    - **Propriétaire par défaut** : Conservez la valeur **Scanner Account** (Compte du scanneur) par défaut
+    - **Conserver les valeurs « date de modification », « dernière modification » et « modifié par »** : conserver la valeur par défaut **activée**
+    - **Types de fichiers à analyser**: conserver les types de fichiers par défaut pour l' **exclusion**
+    - **Propriétaire par défaut**: conserver la valeur par défaut du **compte de scanneur**
 
 6. Maintenant que le profil est créé et enregistré, vous pouvez revenir à l’option **Configure repositories** (Configurer des référentiels) pour spécifier les magasins de données à analyser. Vous pouvez spécifier les dossiers locaux, les chemins d’accès UNC et les URL du serveur SharePoint pour les dossiers et bibliothèques de documents locaux SharePoint. 
     
@@ -217,7 +217,7 @@ Avant d’installer le scanneur ou de le mettre à niveau à partir d’une anci
     
     Les caractères génériques ne sont pas pris en charge, ni les emplacements WebDav.
     
-    Exemples :
+    Exemples :
     
     - Pour un chemin d’accès local : `C:\Folder`
     
@@ -230,9 +230,9 @@ Avant d’installer le scanneur ou de le mettre à niveau à partir d’une anci
     > [!TIP]
     > Si vous ajoutez un chemin d’accès SharePoint pour « Documents partagés » :
     >
-     >- Spécifiez **Documents partagés** dans le chemin d’accès lorsque vous souhaitez analyser tous les documents et tous les dossiers de Documents partagés. Par exemple : `http://sp2013/Shared Documents`
+     >- Spécifiez **Documents partagés** dans le chemin d’accès lorsque vous souhaitez analyser tous les documents et tous les dossiers de Documents partagés. Par exemple : `http://sp2013/Shared Documents`
      >
-     >- Spécifiez **Documents** dans le chemin d’accès lorsque vous souhaitez analyser tous les documents et tous les dossiers d’un sous-dossier sous Documents partagés. Par exemple : `http://sp2013/Documents/Sales Reports`
+     >- Spécifiez **Documents** dans le chemin d’accès lorsque vous souhaitez analyser tous les documents et tous les dossiers d’un sous-dossier sous Documents partagés. Par exemple : `http://sp2013/Documents/Sales Reports`
     
     Pour les autres paramètres de ce panneau, ne les modifiez pas pour cette configuration initiale, mais conservez-les comme **profil par défaut**. Cela signifie que le référentiel de données hérite des paramètres du profil de scanneur. 
     
@@ -280,13 +280,13 @@ Le jeton Azure AD permet au compte de service du scanneur de s’authentifier au
     
     Pour créer ces applications, suivez les instructions des guides d’administration pour les clients concernés :
     
-    - Pour le client classique : [Comment étiqueter des fichiers de manière non interactive pour Azure Information Protection](./rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
+    - Pour le client classique : [Comment étiqueter des fichiers de manière non interactive pour Azure information protection](./rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
     
-    - Pour le client d’étiquetage unifié : [Comment étiqueter des fichiers de manière non interactive pour Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
+    - Pour le client d’étiquetage unifié : [Comment étiqueter des fichiers de manière non interactive pour Azure information protection](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
         > [!NOTE]
         > Veillez à suivre le [deuxième ensemble d’instructions](./rms-client/clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client) qui sont nouvelles pour le client en version préliminaire.
 
-2. À partir de l’ordinateur Windows Server, si votre compte de service de scanneur a reçu l’autorisation **Ouvrir une session localement** pour l’installation : Connectez-vous avec ce compte et démarrez une session PowerShell. Exécutez [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), en spécifiant les valeurs copiées à partir de l’étape précédente :
+2. À partir de l’ordinateur Windows Server, si votre compte de service de scanneur a reçu l’autorisation **Ouvrir une session localement** pour l’installation : connectez-vous avec ce compte et démarrez une session PowerShell. Exécutez [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), en spécifiant les valeurs copiées à partir de l’étape précédente :
     
     Pour le client classique :
     
@@ -304,9 +304,9 @@ Le jeton Azure AD permet au compte de service du scanneur de s’authentifier au
     
     Le compte de service pour le scanneur ne peut pas obtenir le droit **Ouvrir une session localement** pour l’installation :
     
-    -  Pour le client classique : Consultez [spécifier et utiliser le paramètre Token pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) à partir du Guide de l’administrateur du client.
+    -  Pour le client classique : consultez [spécifier et utiliser le paramètre Token pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) à partir du Guide de l’administrateur du client.
     
-    -  Pour le client d’étiquetage unifié : Utilisez le paramètre *OnBehalfOf* avec set-AIPAuthentication, comme décrit à la fin de la rubrique [Comment étiqueter des fichiers de manière non interactive pour Azure information protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) du Guide de l’administrateur de ce client.
+    -  Pour le client d’étiquetage unifié : utilisez le paramètre *OnBehalfOf* avec set-AIPAuthentication, comme décrit à la fin de la rubrique [Comment étiqueter des fichiers de manière non interactive pour Azure information protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) du Guide de l’administrateur de ce client.
 
 Le scanneur dispose désormais d’un jeton pour s’authentifier auprès de Azure AD, ce qui est valide pendant un an, deux ans ou n’expire jamais, en fonction de votre configuration de l' **application Web/API** (client classique) ou de la clé secrète client (client d’étiquetage unifié) dans Azure ad. Quand le jeton expire, vous devez répéter les étapes 1 et 2.
 
@@ -356,8 +356,8 @@ Si vous suivez ces instructions, le scanneur s’exécute une seule fois en mode
 
 2. Dans le panneau \<**nom du profil**>, modifiez les deux paramètres suivants, puis sélectionnez **Enregistrer** :
     
-   - Dans la section **paramètres de profil** : Modifiez la **planification** pour **toujours**
-   - À partir de la section application de la **stratégie** : Changer **appliquer** **sur activé**
+   - Dans la section **paramètres de profil** : modifiez la **planification** pour **toujours**
+   - À partir de la section application de la **stratégie** : modifier **appliquer** la valeur **activé**
     
      Il existe d’autres paramètres de configuration que vous pouvez modifier. Par exemple, si les attributs de fichier sont modifiés et que le scanneur peut réétiqueter les fichiers. Utilisez l’aide contextuelle des informations pour plus d’informations sur chaque paramètre de configuration.
 
@@ -379,25 +379,25 @@ Puisque nous avons configuré la planification pour qu’elle s’exécute en co
 
 Lors de l’analyse de fichiers, le scanneur effectue les processus suivants.
 
-### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. Déterminer les fichiers à inclure dans l’analyse ou à exclure de celle-ci 
+### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. déterminer si les fichiers sont inclus ou exclus pour l’analyse 
 Le scanneur ignore automatiquement les fichiers qui sont exclus de la classification et de la protection, tels que les fichiers exécutables et les fichiers système. Pour plus d’informations, consultez les guides d’administration suivants :
 
-- Pour le client classique : [Types de fichiers exclus de la classification et de la protection](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
+- Pour le client classique : [types de fichiers exclus de la classification et de la protection](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
 
-- Pour le client d’étiquetage unifié : [Types de fichiers exclus de la classification et de la protection](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
+- Pour le client d’étiquetage unifié : [types de fichiers exclus de la classification et de la protection](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
 
 Vous pouvez modifier ce comportement en définissant une liste de types de fichiers à analyser ou à exclure de l’analyse. Vous pouvez spécifier cette liste pour le scanneur à appliquer à tous les référentiels de données par défaut, et vous pouvez spécifier une liste pour chaque référentiel de données. Pour spécifier cette liste, utilisez le paramètre **Files types to scan** (Types de fichiers à analyser) dans le profil du scanneur :
 
 ![Configurer les types de fichiers à analyser pour le scanneur Azure Information Protection](./media/scanner-file-types.png)
 
-### <a name="2-inspect-and-label-files"></a>2. Inspecter et étiqueter les fichiers
+### <a name="2-inspect-and-label-files"></a>2. Inspectez et étiquetez les fichiers
 
 Le scanneur utilise ensuite des filtres pour analyser les types de fichiers pris en charge. Ces mêmes filtres sont utilisés par le système d’exploitation pour Windows Search et l’indexation. Sans configuration supplémentaire, Windows IFilter permet d’analyser les types de fichiers utilisés par Word, Excel, PowerPoint ansi que les documents PDF et les fichiers texte.
 
 Pour obtenir la liste complète des types de fichiers pris en charge par défaut, ainsi que des informations supplémentaires sur la façon de configurer des filtres existants qui incluent des fichiers. zip et des fichiers. TIFF, consultez les guides d’administration suivants :
 
-- Pour le client classique : [Types de fichiers pris en charge pour l’inspection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection)
-- Pour le client d’étiquetage unifié : [Types de fichiers pris en charge pour l’inspection](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection)
+- Pour le client classique : [types de fichiers pris en charge pour l’inspection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection)
+- Pour le client d’étiquetage unifié : [types de fichiers pris en charge pour l’inspection](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection)
 
 Après inspection, ces types de fichiers peuvent être étiquetés à l’aide des conditions que vous avez spécifiées pour vos étiquettes. Ou, si vous utilisez le mode de découverte, ces fichiers peuvent être signalés comme contenant les conditions que vous avez spécifiées pour vos étiquettes ou tous les types d’informations sensibles connus. 
 
@@ -416,13 +416,13 @@ Par exemple, après inspection des fichiers portant l’extension .txt, le scann
 > 
 > - Vous devrez peut-être augmenter le nombre de ports dynamiques pour le système d’exploitation hébergeant les fichiers. Le renforcement du serveur pour SharePoint peut être l’une des raisons expliquant pourquoi le scanneur dépasse le nombre de connexions réseau autorisées et s’arrête.
 >     
->     Pour vérifier qu’il s’agit bien de la cause de l’arrêt du scanneur, examinez si le message d’erreur suivant est consigné pour le scanneur dans %*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (zippé s’il existe plusieurs journaux) : **Impossible de se connecter au serveur distant ---> System.Net.Sockets.SocketException: Une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est habituellement autorisée IP:port**
+>     Pour vérifier s’il s’agit de la cause de l’arrêt du scanneur, regardez si le message d’erreur suivant est consigné pour le scanneur dans%*LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog (zippé s’il y a plusieurs journaux) : **Impossible de se connecter au serveur distant---> System .net. Sockets. SocketException : une seule utilisation de chaque adresse de socket (protocole/adresse réseau/port) est normalement autorisée sur IP : port**
 >    
 >     Pour plus d’informations sur l’affichage de la plage de ports actuelle et l’augmentation de la plage, consultez [Paramètres modifiables pour améliorer les performances du réseau](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 > 
-> - Pour les grandes batteries de serveurs SharePoint, vous devrez peut-être augmenter le seuil d’affichage de liste (par défaut, 5 000). Pour plus d’informations, consultez la documentation suivante de SharePoint : [Gérer des listes et bibliothèques de grande taille dans SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
+> - Pour les grandes batteries de serveurs SharePoint, vous devrez peut-être augmenter le seuil d’affichage de liste (par défaut, 5 000). Pour plus d’informations, consultez la documentation SharePoint suivante : [gérer les grandes listes et les bibliothèques dans SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 
-### <a name="3-label-files-that-cant-be-inspected"></a>3. Étiqueter les fichiers qui ne peuvent pas être inspectés
+### <a name="3-label-files-that-cant-be-inspected"></a>3. étiquetez les fichiers qui ne peuvent pas être inspectés
 Pour les types de fichiers qui ne peuvent pas être inspectés, le scanneur applique l’étiquette par défaut dans la stratégie Azure Information Protection ou l’étiquette par défaut que vous configurez pour le scanneur.
 
 Comme dans l’étape précédente, le scanneur ne peut pas étiqueter les fichiers dans les cas suivants :
@@ -439,9 +439,9 @@ Cette section s’applique uniquement au scanneur du client classique.
 
 Pour changer le comportement par défaut du scanneur pour protéger d’autres types de fichiers que les fichiers Office et PDF, vous devez modifier manuellement le Registre et indiquer les types de fichiers supplémentaires qui doivent être protégés ainsi que le type de protection (native ou générique). Pour obtenir des instructions, consultez [Configuration de l’API de fichier](develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». En outre, spécifiquement pour le scanneur :
 
-- Le scanneur a son propre comportement par défaut : Seuls les formats de fichier Office et les documents PDF sont protégés par défaut. Si le Registre n’est pas modifié, aucun des autres types de fichiers ne sera étiqueté ou protégé par le scanneur.
+- Le scanneur a son propre comportement par défaut : seuls les formats de fichier Office et les documents PDF sont protégés par défaut. Si le Registre n’est pas modifié, aucun des autres types de fichiers ne sera étiqueté ou protégé par le scanneur.
 
-- Si vous souhaitez utiliser le même comportement de protection par défaut que le client Azure Information Protection, où tous les fichiers sont automatiquement protégés par une protection native ou générique : Spécifiez `*` le caractère générique en tant que `Encryption` clé de Registre, en tant que valeur `Default` (REG_SZ) et en tant que données de valeur.
+- Si vous souhaitez utiliser le même comportement de protection par défaut que le client Azure Information Protection, où tous les fichiers sont automatiquement protégés par une protection native ou générique : spécifiez le caractère générique `*` comme clé de Registre, `Encryption` comme valeur (REG_SZ) et @no__ t-2 comme données de valeur.
 
 Lorsque vous modifiez le Registre, créez manuellement la clé **MSIPC** et la clé **FileProtection** si elles n’existent pas, ainsi qu’une clé pour chaque extension de nom de fichier.
 
@@ -468,16 +468,16 @@ En outre, tous les fichiers sont inspectés lorsque le scanneur du client classi
 
 Le scanneur actualise la stratégie en fonction des déclencheurs suivants :
 
-- Analyseur du client classique : Toutes les heures et lorsque le service démarre et que la stratégie est antérieure à une heure. 
+- Analyseur du client classique : toutes les heures et lorsque le service démarre et que la stratégie est antérieure à une heure. 
 
-- Analyseur du client d’étiquetage unifié : Toutes les quatre heures et au démarrage du service. 
+- Analyseur du client d’étiquetage unifié : toutes les quatre heures et au démarrage du service. 
 
 > [!TIP]
 > Si vous devez actualiser la stratégie avant l’intervalle par défaut, par exemple, pendant une période de test : 
 >
-> - Analyseur du client classique : Supprimez manuellement le fichier de stratégie **Policy. MSIP** de **%LocalAppData%\Microsoft\MSIP\Policy.MSIP**.
+> - Analyseur à partir du client classique : supprimez manuellement le fichier de stratégie, **Policy. MSIP** , de **%LocalAppData%\Microsoft\MSIP\Policy.MSIP**.
 >
-> - Analyseur du client d’étiquetage unifié : Supprimez manuellement le contenu **de\\%LocalAppData%\Microsoft\MSIP\mip<*ProcessName*> \mip**.
+> - Analyseur du client d’étiquetage unifié : supprimez manuellement le contenu de **%LocalAppData%\Microsoft\MSIP\mip @ no__t-1 @ no__t-2*ProcessName*> \mip**.
 >
 Ensuite, redémarrez le service du scanneur Azure Information Protection. Si vous avez modifié les paramètres de protection de vos étiquettes, attendez 15 minutes à partir de l’enregistrement des paramètres de protection avant de redémarrer le service.
 
@@ -509,22 +509,22 @@ Le scanneur Azure Information Protection prend en charge trois autres scénarios
     
     Applicable uniquement au scanneur à partir du client d’étiquetage unifié, cette configuration vous permet de supprimer les étiquettes existantes, y compris la protection, si elles ont été appliquées avec cette étiquette. La protection appliquée indépendamment d’une étiquette est conservée. Utilisez cette configuration si vous devez supprimer toutes les étiquettes des fichiers dans un référentiel.
     
-    Configurez les paramètres suivants :
-    - **Label files based on content** (Étiqueter les fichiers en fonction du contenu) : **Off**
-    - **Étiquette par défaut** : **Aucune.**
-    - **Relabel files** (Réétiqueter les fichiers) : **Activé** avec la case à cocher **appliquer l’étiquette par défaut** sélectionnée
+    Configurez les paramètres suivants :
+    - **Étiqueter les fichiers en fonction du contenu**: **désactivé**
+    - **Étiquette par défaut**: **aucune**
+    - **Renommer les fichiers**: **activé** avec la case à cocher **appliquer l’étiquette par défaut** activée
 
 - Identifier toutes les conditions personnalisées et tous les types d’informations sensibles connus.
     
     Pour cette configuration, définissez les **Info types to be discovered** (Types d’infos à découvrir) sur **Tous**.
     
-    Pour le scanneur du client classique : Le scanneur utilise toute condition personnalisée que vous avez spécifiée pour les étiquettes dans la stratégie Azure Information Protection et la liste des types d’informations qui sont disponibles pour les étiquettes dans la stratégie Azure Information Protection. 
+    Pour le scanneur du client classique : le scanneur utilise toutes les conditions personnalisées que vous avez spécifiées pour les étiquettes dans la stratégie de Azure Information Protection, ainsi que la liste des types d’informations disponibles pour les étiquettes dans les informations Azure. Stratégie de protection. 
     
-    Pour le scanneur à partir du client d’étiquetage unifié : Le scanneur utilise tous les types d’informations sensibles personnalisés que vous avez spécifiés et la liste des types d’informations sensibles intégrés qui peuvent être sélectionnés dans le centre de gestion d’étiquetage.
+    Pour le scanneur du client d’étiquetage unifié : le scanneur utilise tous les types d’informations sensibles personnalisés que vous avez spécifiés et la liste des types d’informations sensibles intégrés qui peuvent être sélectionnés dans le centre de gestion d’étiquetage.
     
     Ce paramètre vous permet de retrouver des informations sensibles que vous ne pensiez peut-être pas avoir, mais au détriment des taux d’analyse du scanneur.
     
-    Le démarrage rapide suivant pour le scanneur utilise cette configuration : [Démarrage rapide : Trouver quelles sont vos informations sensibles](quickstart-findsensitiveinfo.md).
+    Le démarrage rapide suivant pour le scanneur utilise cette configuration : [démarrage rapide : Rechercher les informations sensibles dont vous disposez](quickstart-findsensitiveinfo.md).
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Optimisation des performances du scanneur
 
@@ -562,7 +562,7 @@ Autres facteurs qui affectent les performances de l’analyseur :
 
 - La construction d’expressions regex pour des conditions personnalisées
     
-    Pour éviter une consommation de mémoire importante et le risque de dépassements du délai d’expiration (15 minutes par fichier), passez en revue vos expressions regex pour vérifier que la correspondance des modèles est efficace. Exemple :
+    Pour éviter une consommation de mémoire importante et le risque de dépassements du délai d’expiration (15 minutes par fichier), passez en revue vos expressions regex pour vérifier que la correspondance des modèles est efficace. Exemple :
     
     - Évitez les [quantificateurs gourmands](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     
@@ -645,12 +645,12 @@ Si le scanneur a été configuré pour s’exécuter manuellement plutôt que de
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
+Comment l’équipe Core Services Engineering and Operations de Microsoft a-t-elle implémenté ce scanneur ?  Lisez l’étude de cas technique : [Automatiser la protection des données avec le scanneur Azure Information Protection](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
 Vous vous demandez peut-être : [Quelle différence y a-t-il entre l’ICF de Windows Server et le scanneur d’Azure Information Protection ?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 Vous pouvez également utiliser PowerShell pour classifier et protéger des fichiers de manière interactive à partir de votre ordinateur de bureau. Pour plus d’informations sur ce scénario et d’autres scénarios qui utilisent PowerShell, consultez les sections suivantes dans les guides d’administration :
 
-- Pour le client classique : [Utilisation de PowerShell avec le client Azure Information Protection](./rms-client/client-admin-guide-powershell.md)
+- Pour le client classique : [utilisation de PowerShell avec le client Azure information protection](./rms-client/client-admin-guide-powershell.md)
 
-- Pour le client d’étiquetage unifié : [Utilisation de PowerShell avec le client d’étiquetage unifié Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md)
+- Pour le client d’étiquetage unifié : [utilisation de PowerShell avec le client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide-powershell.md)

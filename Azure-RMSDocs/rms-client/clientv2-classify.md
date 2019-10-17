@@ -11,33 +11,33 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 67c65fa592bd08fbcdc195793cd8576ef5ed5a25
-ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
+ms.openlocfilehash: c7ae1a038ab3b499767cc892bd1b99ae27c8dbdc
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214131"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447343"
 ---
-# <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Guide de l’utilisateur : Classer un fichier ou un e-mail à l’aide du client d’étiquetage unifié Azure Information Protection pour Windows
+# <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Guide de l’utilisateur : classer un fichier ou un e-mail à l’aide du client d’étiquetage unifié Azure Information Protection pour Windows
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 >
-> *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Utilisez ces instructions pour classifier (mais pas protéger) vos documents et e-mails. Si vous devez également protéger vos documents et e-mails, consultez les [instructions de classification et protection](clientv2-classify-protect.md). Si vous ne savez pas quel ensemble d’instructions utiliser, contactez votre administrateur ou votre support technique.
 
-La façon la plus simple de classifier vos documents et vos e-mails consiste à le faire quand vous les créez ou que vous les modifiez à partir de vos applications bureautiques Office : **Word**, **Excel**, **PowerPoint**, **Outlook**. 
+Le plus simple pour classifier vos documents et vos e-mails consiste à le faire quand vous les créez ou les modifiez à partir de vos applications bureautiques Office : **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
 Cependant, vous pouvez également classifier les fichiers à l’aide de l’**Explorateur de fichiers**. Cette méthode, qui prend en charge d’autres types de fichiers, est un moyen pratique de classifier plusieurs fichiers à la fois. 
 
 ## <a name="using-office-apps-to-classify-your-documents-and-emails"></a>Utilisation des applications Office pour classifier vos documents et vos e-mails
 
-Dans l’onglet dossier de **démarrage** , sélectionnez le bouton **sensibilité** sur le ruban, puis sélectionnez l’une des étiquettes qui a été configurée pour vous. Par exemple :
+Dans l’onglet dossier de **démarrage** , sélectionnez le bouton **sensibilité** sur le ruban, puis sélectionnez l’une des étiquettes qui a été configurée pour vous. Exemple :
 
 ![Exemple de bouton sensibilité](../media/sensitivity-not-set-callout.png)
 
-Ou, si vous avez sélectionné **afficher la barre** à partir du bouton **sensibilité** , vous pouvez sélectionner une étiquette à partir de la barre de Azure information protection. Par exemple :
+Ou, si vous avez sélectionné **afficher la barre** à partir du bouton **sensibilité** , vous pouvez sélectionner une étiquette à partir de la barre de Azure information protection. Exemple :
 
 ![Exemple de barre Azure Information Protection](../media/info-protect-barv2-not-set-callout.png)
 
@@ -76,17 +76,17 @@ Quand vous sélectionnez un dossier, tous les fichiers et sous-dossiers qu’il 
 
 Quand vous utilisez l’Explorateur de fichiers pour classifier vos fichiers, si l’une ou plusieurs des étiquettes apparaissent estompées, les fichiers que vous avez sélectionnés ne prennent pas en charge la classification sans également les protéger.
 
-Le guide de l’administrateur contient la liste complète des types de fichiers qui prennent en charge la classification sans protection : [Types de fichiers pris en charge pour la classification uniquement](clientv2-admin-guide-file-types.md#file-types-supported-for-classification-only).
+Le guide de l’administrateur contient la liste complète des types de fichiers qui prennent en charge la classification sans protection : [Types de fichiers pris en charge pour la classification seule](clientv2-admin-guide-file-types.md#file-types-supported-for-classification-only).
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>Pour classifier un fichier à l’aide de l’Explorateur de fichiers
 
-1. Dans l’Explorateur de fichiers, sélectionnez votre fichier, plusieurs fichiers ou un dossier. Cliquez avec le bouton droit, puis sélectionnez **Classifier et protéger**. Par exemple :
+1. Dans l’Explorateur de fichiers, sélectionnez votre fichier, plusieurs fichiers ou un dossier. Cliquez avec le bouton droit, puis sélectionnez **Classifier et protéger**. Exemple :
     
     ![Menu contextuel de l’Explorateur de fichiers, Classifier et protéger avec Azure Information Protection](../media/right-click-classify-protect-folder.png)
 
 2. Dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, utilisez les étiquettes comme vous le feriez dans une application Office, qui définit la classification comme l’a effectuée votre administrateur. 
     
-    Si aucune des étiquettes ne peut être sélectionnée (elles apparaissent estompées) : Le fichier sélectionné ne prend pas en charge la classification. Par exemple :
+    Si aucune des étiquettes n’est sélectionnable (elles apparaissent estompées) : le fichier sélectionné ne prend pas en charge la classification. Exemple :
     
     ![Aucune étiquette n’est disponible dans la boîte de dialogue Classifier et protéger - Azure Information Protection**](../media/v2info-protect-dialog-labels-dimmed.png)
 
@@ -106,5 +106,5 @@ Autres instructions du Guide de l’utilisateur pour le Azure Information Protec
 
 ## <a name="additional-information-for-administrators"></a>Informations supplémentaires pour les administrateurs
 
-Consultez [vue d’ensemble des étiquettes de sensibilité](/Office365/SecurityCompliance/sensitivity-labels).
+Consultez [vue d’ensemble des étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels).
 

@@ -11,22 +11,22 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4468ce10a79c31c4f3c3be625f84b5cbd69c74da
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 4fb1c9ca3800e46ffcf3b8946823e4c43ca9d284
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690099"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447612"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
-> *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Utilisez les informations de ce guide si vous êtes responsable de la Azure Information Protection client d’étiquetage unifié sur un réseau d’entreprise, ou si vous souhaitez des informations plus techniques que celles de l' [utilisateur du client d’étiquetage unifié Azure information protection Guide](clientv2-user-guide.md). 
 
-Exemple :
+Exemple :
 
 - Comprendre les différents composants de ce client et si vous devez les installer ou non
 
@@ -42,7 +42,7 @@ Exemple :
 
 ## <a name="technical-overview-of-the-azure-information-protection-unified-labeling-client"></a>Présentation technique du client d’étiquetage unifié Azure Information Protection
 
-Le client d’étiquetage unifié Azure Information Protection comprend les éléments suivants:
+Le client d’étiquetage unifié Azure Information Protection comprend les éléments suivants :
 
 - Un complément Office, qui installe un bouton de **sensibilité** sur le ruban pour permettre aux utilisateurs de sélectionner des étiquettes de sensibilité, et une option pour afficher la barre de Azure information protection pour une meilleure visibilité des étiquettes.
 
@@ -61,9 +61,9 @@ Le client d’étiquetage unifié Azure Information Protection comprend les él�
 Si vous avez AD RMS et que vous souhaitez migrer AD RMS vers Azure Information Protection, consultez [Migration d’AD RMS vers Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md).
 
 
-## <a name="should-you-deploy-the-azure-information-protection-unified-labeling-client"></a>Devez-vous déployer le client d’étiquetage unifié Azure Information Protection?
+## <a name="should-you-deploy-the-azure-information-protection-unified-labeling-client"></a>Devez-vous déployer le client d’étiquetage unifié Azure Information Protection ?
 
-Déployez le client d’étiquetage unifié Azure Information Protection si vous utilisez des [étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels), et que l’une des conditions suivantes s’applique:
+Déployez le client d’étiquetage unifié Azure Information Protection si vous utilisez des [étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels), et que l’une des conditions suivantes s’applique :
 
 - Vous souhaitez classer (et éventuellement protéger) des documents et des messages électroniques en sélectionnant des étiquettes dans vos applications Office (Word, Excel, PowerPoint, Outlook) sur les ordinateurs Windows.
 
@@ -75,7 +75,7 @@ Déployez le client d’étiquetage unifié Azure Information Protection si vous
 
 - Vous souhaitez afficher des documents protégés lorsqu’une application native permettant d’afficher le fichier n’est pas installée ou ne parvient pas à ouvrir ces documents.
 
-Exemple montrant le complément Office pour le Azure Information Protection client d’étiquetage unifié, affichant le nouveau bouton **sensibilité** sur le ruban et la barre de Azure information Protection facultative:
+Exemple montrant le complément Office pour le Azure Information Protection client d’étiquetage unifié, affichant le nouveau bouton **sensibilité** sur le ruban et la barre de Azure information Protection facultative :
 
 ![Barre Azure Information Protection avec la stratégie par défaut](../media/v2word2016-calloutsv2.png)
 
@@ -89,19 +89,19 @@ Utilisez les sections suivantes pour plus d’informations sur l’installation 
 
 Quand le client est installé, utilisez l’option **Aide et commentaires** pour ouvrir la boîte de dialogue **Microsoft Azure Information Protection** :
 
-- À partir d’une application Office: Dans l’onglet dossier de **démarrage** , dans le groupe **sensibilité** , sélectionnez **sensibilité**, puis sélectionnez **aide et commentaires**.
+- À partir d’une application Office : sous l’onglet dossier de **démarrage** , dans le groupe **sensibilité** , sélectionnez **sensibilité**, puis sélectionnez **aide et commentaires**.
 
-- Depuis l’Explorateur de fichiers : Cliquez avec le bouton droit sur un ou plusieurs fichiers ou sur un dossier, sélectionnez **Classifier et protéger**, puis **Aide et commentaires**. 
+- Dans l’Explorateur de fichiers : cliquez avec le bouton droit sur un ou plusieurs fichiers ou sur un dossier, sélectionnez **Classifier et protéger**, puis **Aide et commentaires**. 
 
 #### <a name="help-and-feedback-section"></a>Section **Aide et commentaires**
 
-Le **lien en savoir plus** , par défaut, est dirigé vers le site Web [Azure information protection](https://www.microsoft.com/cloud-platform/azure-information-protection) . Vous pouvez configurer votre propre lien d’URL qui accède à une page d’aide personnalisée en tant qu’un des paramètres de stratégie dans votre centre de gestion d’étiquetage : le Centre de sécurité et conformité Office 365, le Centre de sécurité Microsoft 365 ou le Centre de conformité Microsoft 365.
+Le **lien en savoir plus** , par défaut, est dirigé vers le site Web [Azure information protection](https://www.microsoft.com/cloud-platform/azure-information-protection) . Vous pouvez configurer votre propre lien d’URL qui accède à une page d’aide personnalisée en tant qu’un des paramètres de stratégie dans votre centre de gestion d’étiquetage : Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center ou Microsoft 365 Centre de conformité.
 
 Le lien **signaler un problème** s’affiche uniquement si vous spécifiez un [paramètre avancé](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users). Quand vous configurez ce paramètre, vous spécifiez un lien HTTP, comme l’adresse e-mail de votre support technique. 
 
 Les **journaux d’exportation** collectent et attachent automatiquement les fichiers journaux de l’Azure information protection client d’étiquetage unifié si vous avez été invité à les envoyer à support Microsoft. Cette option peut également être utilisée par les utilisateurs finaux pour envoyer ces fichiers journaux à votre support technique. Vous pouvez également utiliser l’applet de commande PowerShell [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) (nécessite la version préliminaire du client).
 
-Les **paramètres** de réinitialisation déconnectent l’utilisateur, supprime les étiquettes de sensibilité et les stratégies d’étiquette actuellement téléchargées, puis réinitialise les paramètres utilisateur pour le service Azure Rights Management.
+Les **paramètres de réinitialisation** déconnectent l’utilisateur, supprime les étiquettes de sensibilité et les stratégies d’étiquette actuellement téléchargées, puis réinitialise les paramètres utilisateur pour le service Azure Rights Management.
 
 > [!NOTE]
 > Si vous rencontrez des problèmes techniques avec le client, consultez [options de support et ressources](../information-support.md#support-options-and-community-resources)de la communauté.
@@ -146,7 +146,7 @@ Si vous devez vous connecter en tant qu’utilisateur différent de celui qui es
 
 Utilisez l’information **Version** pour vérifier la version installée sur le client. Vous pouvez vérifier s’il s’agit de la version la plus récente, ainsi que des correctifs et des nouvelles fonctionnalités correspondants en lisant les [informations](unifiedlabelingclient-version-release-history.md) de version du client.
 
-## <a name="support-for-multiple-languages"></a>Prise en charge de plusieurs langues
+## <a name="support-for-multiple-languages"></a>Prise en charge de langues multiples
 
 Le client d’étiquetage unifié Azure Information Protection prend en charge les mêmes langues que celles prises en charge par Office 365. Pour obtenir la liste de ces langues, consultez la section **Office 365, Exchange Online Protection et Power BI** dans la page [Disponibilité internationale](https://products.office.com/business/international-availability) des produits Office.
 
@@ -156,11 +156,11 @@ Toutefois, les noms et les descriptions d’étiquette que vous spécifiez ne so
 
 ## <a name="post-installation-tasks"></a>Tâches post-installation
 
-Après avoir installé le client d’étiquetage unifié Azure Information Protection, assurez-vous de fournir aux utilisateurs des instructions sur la façon d’étiqueter leurs documents et e-mails, ainsi que des conseils sur les étiquettes à choisir pour des scénarios spécifiques. Exemple :
+Après avoir installé le client d’étiquetage unifié Azure Information Protection, assurez-vous de fournir aux utilisateurs des instructions sur la façon d’étiqueter leurs documents et e-mails, ainsi que des conseils sur les étiquettes à choisir pour des scénarios spécifiques. Exemple :
 
-- Instructions en ligne pour l’utilisateur : [Guide de l’utilisateur d’étiquetage unifié Azure Information Protection](clientv2-user-guide.md)
+- Instructions de l’utilisateur en ligne : [Azure information protection Guide de l’utilisateur d’étiquetage unifié](clientv2-user-guide.md)
 
-- Téléchargez un guide d’utilisation personnalisable : [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- Téléchargement d’un guide d’utilisation personnalisable : [Guide d’adoption Azure Information Protection pour l’utilisateur final](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
 ## <a name="installing-the-azure-information-protection-scanner"></a>Installation du scanneur Azure Information Protection
 
@@ -209,7 +209,7 @@ La mise à niveau crée une nouvelle base de données nommée **AIPScannerUL_ @ 
 
 2. Effectuez une mise à niveau vers le client d’étiquetage unifié Azure Information Protection en téléchargeant et en installant la version préliminaire du client d’étiquetage unifié à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-3. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le profil de votre scanneur. Par exemple : `Update-AIPScanner –Profile Europe`.
+3. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le profil de votre scanneur. Par exemple : `Update-AIPScanner –Profile Europe`.
     
     Cette étape permet de créer une base de données nommée **AIPScannerUL_ @ no__t-1profile_name >**
 
@@ -230,7 +230,7 @@ Vous pouvez maintenant utiliser le reste des instructions dans [déploiement de 
 
 3. Effectuez une mise à niveau vers le client d’étiquetage unifié Azure Information Protection en téléchargeant et en installant la version préliminaire du client d’étiquetage unifié à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-4. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le même nom de profil que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile Europe`
+4. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le même nom de profil que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile Europe`
 
 5. Redémarrez le service **Scanneur Azure Information Protection**.
 
@@ -251,11 +251,11 @@ Dans ce scénario, lorsque vous configurez le scanneur dans le portail Azure, vo
 
 Vous pouvez utiliser l’une des options suivantes pour désinstaller le client :
 
-- Utiliser le Panneau de configuration pour désinstaller un programme : Cliquez sur **Microsoft Azure Information Protection** > **Désinstaller**
+- Utilisez le panneau de configuration pour désinstaller un programme : cliquez sur **Microsoft Azure Information Protection** > **Désinstaller**
 
 - Réexécutez l’exécutable (par exemple, **AzInfoProtection_UL. exe**) et, à partir de la page **modifier l’installation** , cliquez sur **désinstaller**. 
 
-- Exécutez le fichier exécutable avec **/uninstall**. Par exemple : `AzInfoProtection.exe /uninstall`
+- Exécutez le fichier exécutable avec **/uninstall**. Par exemple : `AzInfoProtection.exe /uninstall`
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour installer le client, consultez [installer le client d’étiquetage unifié Azure information protection pour les utilisateurs](clientv2-admin-guide-install.md).

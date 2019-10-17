@@ -13,22 +13,22 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cac8377f4eb4a3d4b5678c9d0a976866aadeead8
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: c5fec770f3841408ea2eb10f5836329a6b003312
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314138"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447662"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
+>*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Utilisez les informations de ce guide si vous êtes responsable du client Azure Information Protection sur un réseau d’entreprise, ou si vous souhaitez des informations techniques supplémentaires par rapport au [Guide de l’administrateur du client Azure Information Protection](client-user-guide.md). 
 
-Par exemple :
+Exemple :
 
 - Comprendre les différents composants de ce client et si vous devez les installer ou non
 
@@ -69,7 +69,7 @@ Si vous avez AD RMS et que vous souhaitez migrer AD RMS vers Azure Information
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Devez-vous déployer le client Azure Information Protection ?
 
-Déployez le client Azure Information Protection si vous n’utilisez pas [d’étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) , mais utilisez à la place des étiquettes de Azure information protection que vous téléchargez à partir d’Azure, ainsi que l’un des éléments suivants : s’applique
+Déployez le client Azure Information Protection si vous n’utilisez pas [d’étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) , mais utilisez à la place des étiquettes de Azure information protection que vous téléchargez à partir d’Azure, ainsi que l’un des éléments suivants : s’applique
 
 - Vous souhaitez classifier (et éventuellement protéger) des documents et des e-mails en sélectionnant des étiquettes à partir de vos applications Office (Word, Excel, PowerPoint, Outlook).
 
@@ -103,9 +103,9 @@ Utilisez les sections suivantes pour plus d’informations sur l’installation 
 
 Quand le client est installé, utilisez l’option **Aide et commentaires** pour ouvrir la boîte de dialogue **Microsoft Azure Information Protection** :
 
-- À partir d’une application Office: Sous l’onglet **Accueil**, dans le groupe **Protection**, sélectionnez **Protéger**, puis **Aide et commentaires**.
+- Dans une application Office, sous l’onglet **Accueil**, dans le groupe **Protection**, sélectionnez **Protéger**, puis **Aide et commentaires**.
 
-- Depuis l’Explorateur de fichiers : Cliquez avec le bouton droit sur un ou plusieurs fichiers ou sur un dossier, sélectionnez **Classifier et protéger**, puis **Aide et commentaires**. 
+- Dans l’Explorateur de fichiers : cliquez avec le bouton droit sur un ou plusieurs fichiers ou sur un dossier, sélectionnez **Classifier et protéger**, puis **Aide et commentaires**. 
 
 #### <a name="help-and-feedback-section"></a>Section **Aide et commentaires**
 
@@ -158,11 +158,11 @@ Si vous avez besoin de vous connecter avec un nom d’utilisateur différent de 
 
 La **Dernière connexion** affiche la date/l’heure de la dernière connexion du client au service Azure Information Protection de votre organisation. Vous pouvez utiliser ces informations avec la date et l’heure auxquelles la **stratégie Information Protection a été installée** pour confirmer la date et l’heure de la dernière installation ou mise à jour de la stratégie Azure Information Protection. Lorsque le client se connecte au service, il télécharge automatiquement la dernière stratégie s’il détecte des modifications dans sa stratégie actuelle, ainsi que toutes les 24 heures. Si vous avez apporté des modifications à la stratégie après l’heure affichée, fermez et rouvrez l’application Office.
 
-Si vous voyez **Ce client n’a pas de licence pour Office Professionnel Plus** : Le client Azure Information Protection a détecté que l’édition d’Office installée ne prend pas en charge l’application de la protection Rights Management. Si ce problème est détecté, les étiquettes qui appliquent la protection ne s’affichent pas dans la barre Azure Information Protection.
+Si vous voyez le message **Ce client n’est pas sous licence pour Office Professionnel Plus** : le client Azure Information Protection a détecté que l’édition d’Office installée ne prend pas en charge l’application de la protection Rights Management. Si ce problème est détecté, les étiquettes qui appliquent la protection ne s’affichent pas dans la barre Azure Information Protection.
 
 Utilisez l’information **Version** pour vérifier la version installée sur le client. Vous pouvez vérifier s’il s’agit de la dernière version et s’il existe des correctifs correspondants et des nouvelles fonctionnalités en cliquant sur le lien **Nouveautés** pour lire l’[historique de publication des versions](client-version-release-history.md) du client.
 
-## <a name="support-for-multiple-languages"></a>Prise en charge de plusieurs langues
+## <a name="support-for-multiple-languages"></a>Prise en charge de langues multiples
 
 Le client Azure Information Protection prend en charge les mêmes langues qu’Office 365. Pour obtenir la liste de ces langues, consultez la section **Office 365, Exchange Online Protection et Power BI** dans la page [Disponibilité internationale](https://products.office.com/business/international-availability) des produits Office.
 
@@ -172,11 +172,11 @@ Toutefois, les noms et les descriptions d’étiquette que vous spécifiez ne so
 
 ## <a name="post-installation-tasks"></a>Tâches post-installation
 
-Une fois que vous avez installé le client Azure Information Protection, assurez-vous de donner aux utilisateurs les instructions pour savoir comment étiqueter leurs e-mails et documents, ainsi que des conseils sur les étiquettes à choisir pour des scénarios spécifiques. Exemple :
+Une fois que vous avez installé le client Azure Information Protection, assurez-vous de donner aux utilisateurs les instructions pour savoir comment étiqueter leurs e-mails et documents, ainsi que des conseils sur les étiquettes à choisir pour des scénarios spécifiques. Exemple :
 
-- Instructions en ligne pour l’utilisateur : [Azure Information Protection - Guide de l’utilisateur](client-user-guide.md)
+- Instructions pour l’utilisateur en ligne : [Guide de l’utilisateur Azure Information Protection](client-user-guide.md)
 
-- Téléchargez un guide d’utilisation personnalisable : [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- Téléchargement d’un guide d’utilisation personnalisable : [Guide d’adoption Azure Information Protection pour l’utilisateur final](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-client"></a>Mise à niveau et maintenance du client Azure Information Protection
 
@@ -215,9 +215,9 @@ Bien qu’il soit possible de suivre une autre séquence pour mettre à niveau l
 
 3. Mettez à niveau le client Azure Information Protection en installant la version actuelle de la mise à la disposition générale à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-4. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le même nom de profil que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile Europe`
+4. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le même nom de profil que vous avez spécifié à l’étape 1. Par exemple : `Update-AIPScanner –Profile Europe`
 
-5. Uniquement si le scanneur est exécuté sur un ordinateur déconnecté : Exécutez maintenant [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) et spécifiez le fichier qui contient les paramètres exportés.
+5. Uniquement si le scanneur s’exécute sur un ordinateur déconnecté : exécutez à présent [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) et spécifiez le fichier contenant les paramètres exportés.
 
 6. Redémarrez le service **Scanneur Azure Information Protection**.
 
@@ -254,11 +254,11 @@ Si vous savez que vous souhaitez déplacer la base de données de configuration 
 
 Vous pouvez utiliser l’une des options suivantes pour désinstaller le client :
 
-- Utiliser le Panneau de configuration pour désinstaller un programme : Cliquez sur **Microsoft Azure Information Protection** > **Désinstaller**
+- Utilisez le panneau de configuration pour désinstaller un programme : cliquez sur **Microsoft Azure Information Protection** > **Désinstaller**
 
 - Réexécutez le fichier exécutable (par exemple, **AzInfoProtection.exe**) et dans la page **Modifier l’installation**, cliquez sur **Désinstaller**. 
 
-- Exécutez le fichier exécutable avec **/uninstall**. Par exemple : `AzInfoProtection.exe /uninstall`
+- Exécutez le fichier exécutable avec **/uninstall**. Par exemple : `AzInfoProtection.exe /uninstall`
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour installer le client, consultez [Installer le client Azure Information Protection pour les utilisateurs](client-admin-guide-install.md).

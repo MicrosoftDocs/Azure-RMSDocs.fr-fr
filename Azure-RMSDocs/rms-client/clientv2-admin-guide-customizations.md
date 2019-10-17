@@ -12,18 +12,18 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 97e679fd6b234884f3b96fef5abef98f6c68e16a
-ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
+ms.openlocfilehash: 95c873af126c9882bcb74790e8e68834149738e8
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923670"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447825"
 ---
-# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
+# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
-> *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Utilisez les informations suivantes pour les configurations avancées dont vous pouvez avoir besoin pour des scénarios spécifiques ou un sous-ensemble d’utilisateurs lorsque vous gérez le client d’étiquetage unifié Azure Information Protection.
 
@@ -31,26 +31,26 @@ Ces paramètres requièrent la modification du registre ou la spécification de 
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Comment configurer des paramètres avancés pour le client à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell
 
-Quand vous utilisez Office 365 Centre de sécurité et de conformité PowerShell, vous pouvez configurer des paramètres avancés qui prennent en charge les personnalisations des étiquettes et des stratégies d’étiquette. Exemple :
+Quand vous utilisez Office 365 Centre de sécurité et de conformité PowerShell, vous pouvez configurer des paramètres avancés qui prennent en charge les personnalisations des étiquettes et des stratégies d’étiquette. Exemple :
 
 - Le paramètre permettant d’afficher la barre d’Information Protection dans les applications Office est un ***paramètre avancé***de la stratégie d’étiquette.
 - Le paramètre permettant de spécifier une couleur d’étiquette est un ***paramètre avancé d’étiquette***.
 
 Dans les deux cas, une fois que vous êtes [connecté à Office 365 Centre de sécurité et de conformité PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), spécifiez le paramètre *AdvancedSettings* avec l’identité (nom ou GUID) de la stratégie ou de l’étiquette, et spécifiez des paires clé/valeur dans une [table de hachage](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Utilisez la syntaxe suivante :
 
-Pour un paramètre de stratégie étiquette, valeur de chaîne unique:
+Pour un paramètre de stratégie étiquette, valeur de chaîne unique :
 
     Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
 
-Pour les paramètres de stratégie d’étiquette, plusieurs valeurs de chaîne pour la même clé:
+Pour les paramètres de stratégie d’étiquette, plusieurs valeurs de chaîne pour la même clé :
 
     Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 
-Pour un paramètre d’étiquette, valeur de chaîne unique:
+Pour un paramètre d’étiquette, valeur de chaîne unique :
 
     Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 
-Pour les paramètres d’étiquette, plusieurs valeurs de chaîne pour la même clé:
+Pour les paramètres d’étiquette, plusieurs valeurs de chaîne pour la même clé :
 
     Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 
@@ -59,42 +59,42 @@ Pour supprimer un paramètre avancé, utilisez la même syntaxe, mais spécifiez
 
 #### <a name="examples-for-setting-advanced-settings"></a>Exemples de paramétrage des paramètres avancés
 
-Exemple 1 : Définir un paramètre avancé pour une stratégie d’étiquette pour une valeur de chaîne unique:
+Exemple 1 : définir une stratégie d’étiquette paramètre avancé pour une valeur de chaîne unique :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 
-Exemple 2 : Définissez un paramètre avancé pour une étiquette pour une valeur de chaîne unique:
+Exemple 2 : définir un paramètre avancé pour une étiquette pour une valeur de chaîne unique :
 
     Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 
-Exemple 3 : Définissez un paramètre avancé pour les étiquettes pour plusieurs valeurs de chaîne:
+Exemple 3 : définir un paramètre avancé pour les étiquettes pour plusieurs valeurs de chaîne :
 
     Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 
-Exemple 4: Supprimez un paramètre avancé de stratégie d’étiquette en spécifiant une valeur de chaîne NULL:
+Exemple 4 : supprimer un paramètre avancé de stratégie d’étiquette en spécifiant une valeur de chaîne NULL :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
 
 #### <a name="specifying-the-identity-for-the-label-policy-or-label"></a>Spécification de l’identité de la stratégie ou de l’étiquette de l’étiquette
 
-La spécification du nom de la stratégie d’étiquette pour le paramètre d' *identité* PowerShell est simple, car vous ne voyez qu’un seul nom de stratégie dans le centre d’administration où vous gérez vos stratégies d’étiquette. Toutefois, pour les étiquettes, vous voyez un **nom** et un **nom d’affichage** dans les centres d’administration. Dans certains cas, la valeur est la même, mais elle peut être différente:
+La spécification du nom de la stratégie d’étiquette pour le paramètre d' *identité* PowerShell est simple, car vous ne voyez qu’un seul nom de stratégie dans le centre d’administration où vous gérez vos stratégies d’étiquette. Toutefois, pour les étiquettes, vous voyez un **nom** et un **nom d’affichage** dans les centres d’administration. Dans certains cas, la valeur est la même, mais elle peut être différente :
 
 - **Nom** est le nom d’origine de l’étiquette et il est unique pour toutes vos étiquettes. Si vous modifiez le nom de votre étiquette après sa création, cette valeur reste la même. Pour les étiquettes qui ont été migrées à partir de Azure Information Protection, vous pouvez voir l’ID d’étiquette de l’étiquette à partir du Portail Azure.
 
 - **Nom complet** est le nom de l’étiquette que les utilisateurs voient, et il n’est pas nécessaire qu’il soit unique sur toutes vos étiquettes. Par exemple, les utilisateurs voient une sous-étiquette **tous les employés** pour l’étiquette **confidentiel** et une autre sous-étiquette **tous les employés** pour l’étiquette **hautement confidentiel** . Ces sous-étiquettes affichent le même nom, mais elles ne sont pas de la même étiquette et présentent des paramètres différents.
 
-Pour configurer les paramètres avancés des étiquettes, utilisez la valeur **nom** . Par exemple, pour identifier l’étiquette dans l’image suivante, vous devez spécifier `-Identity "All Company"`:
+Pour configurer les paramètres avancés des étiquettes, utilisez la valeur **nom** . Par exemple, pour identifier l’étiquette dans l’image suivante, vous devez spécifier `-Identity "All Company"` :
 
 ![Utiliser’name’plutôt que’Display Name’pour identifier une étiquette de sensibilité](../media/labelname_scc.png)
 
-Si vous préférez spécifier le GUID de l’étiquette, cette valeur n’est pas affichée dans le centre d’administration où vous gérez vos étiquettes. Toutefois, vous pouvez utiliser la commande Office 365 Centre de sécurité et de conformité PowerShell suivante pour rechercher cette valeur:
+Si vous préférez spécifier le GUID de l’étiquette, cette valeur n’est pas affichée dans le centre d’administration où vous gérez vos étiquettes. Toutefois, vous pouvez utiliser la commande Office 365 Centre de sécurité et de conformité PowerShell suivante pour rechercher cette valeur :
 
     Get-Label | Format-Table -Property DisplayName, Name, Guid
 
 
 #### <a name="order-of-precedence---how-conflicting-settings-are-resolved"></a>Ordre de priorité-mode de résolution des paramètres en conflit
 
-À l’aide de l’un des centres d’administration où vous gérez vos étiquettes de sensibilité, vous pouvez configurer les paramètres de stratégie d’étiquette suivants:
+À l’aide de l’un des centres d’administration où vous gérez vos étiquettes de sensibilité, vous pouvez configurer les paramètres de stratégie d’étiquette suivants :
 
 - **Appliquer cette étiquette par défaut aux documents et aux e-mails**
 
@@ -104,11 +104,11 @@ Si vous préférez spécifier le GUID de l’étiquette, cette valeur n’est pa
 
 - **Fournir aux utilisateurs un lien vers une page d’aide personnalisée**
 
-Lorsque plusieurs stratégies d’étiquette sont configurées pour un utilisateur, chacune avec des paramètres de stratégie potentiellement différents, le dernier paramètre de stratégie est appliqué en fonction de l’ordre des stratégies dans le centre d’administration. Pour plus d’informations, consultez priorité de la [stratégie d’étiquette (ordre important)](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels#label-policy-priority-order-matters) .
+Lorsque plusieurs stratégies d’étiquette sont configurées pour un utilisateur, chacune avec des paramètres de stratégie potentiellement différents, le dernier paramètre de stratégie est appliqué en fonction de l’ordre des stratégies dans le centre d’administration. Pour plus d’informations, consultez priorité de la [stratégie d’étiquette (ordre important)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters) .
 
-Les paramètres avancés des étiquettes suivent la même logique pour la précédence: Quand une étiquette est dans plusieurs stratégies d’étiquette et que cette étiquette a des paramètres avancés, le dernier paramètre avancé est appliqué en fonction de l’ordre des stratégies dans le centre d’administration.
+Les paramètres avancés des étiquettes suivent la même logique pour la précédence : lorsqu’une étiquette est dans plusieurs stratégies d’étiquette et que cette étiquette a des paramètres avancés, le dernier paramètre avancé est appliqué en fonction de l’ordre des stratégies dans le centre d’administration.
 
-Les paramètres avancés de la stratégie d’étiquette sont appliqués dans l’ordre inverse: À une exception près, les paramètres avancés de la première stratégie sont appliqués, en fonction de l’ordre des stratégies dans le centre d’administration. L’exception est le paramètre avancé *OutlookDefaultLabel*, qui définit une autre étiquette par défaut pour Outlook. Pour ce paramètre avancé de stratégie d’étiquette uniquement, le dernier paramètre est appliqué en fonction de l’ordre des stratégies dans le centre d’administration.
+Les paramètres avancés de la stratégie d’étiquette sont appliqués dans l’ordre inverse : à une exception près, les paramètres avancés de la première stratégie sont appliqués, en fonction de l’ordre des stratégies dans le centre d’administration. L’exception est le paramètre avancé *OutlookDefaultLabel*, qui définit une autre étiquette par défaut pour Outlook. Pour ce paramètre avancé de stratégie d’étiquette uniquement, le dernier paramètre est appliqué en fonction de l’ordre des stratégies dans le centre d’administration.
 
 #### <a name="available-advanced-settings-for-label-policies"></a>Paramètres avancés disponibles pour les stratégies d’étiquette
 
@@ -140,7 +140,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |ReportAnIssueLink|[Ajouter « Signaler un problème » pour les utilisateurs](#add-report-an-issue-for-users)|
 |RunAuditInformationTypesDiscovery|[Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 
-Exemple de commande PowerShell pour vérifier les paramètres de stratégie d’étiquette en vigueur pour une stratégie d’étiquette nommée «global»:
+Exemple de commande PowerShell pour vérifier les paramètres de stratégie d’étiquette en vigueur pour une stratégie d’étiquette nommée « global » :
 
     (Get-LabelPolicy -Identity Global).settings
 
@@ -157,7 +157,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-label](https://docs.microsof
 |SMimeEncrypt|[Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |SMimeSign|[Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 
-Exemple de commande PowerShell pour vérifier les paramètres de votre étiquette en vigueur pour une étiquette nommée «public»:
+Exemple de commande PowerShell pour vérifier les paramètres de votre étiquette en vigueur pour une étiquette nommée « public » :
 
     (Get-Label -Identity Public).settings
 
@@ -167,13 +167,13 @@ Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-s
 
 Par défaut, les utilisateurs doivent sélectionner l’option **afficher la barre** à partir du bouton **sensibilité** pour afficher la barre de information protection dans les applications Office. Utilisez la clé **HideBarByDefault** et définissez la valeur sur **false** pour afficher automatiquement cette barre pour les utilisateurs afin qu’ils puissent sélectionner des étiquettes à partir de la barre ou du bouton. 
 
-Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes:
+Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes :
 
-- Essentiel **HideBarByDefault**
+- Clé : **HideBarByDefault**
 
-- Value : **False**
+- Valeur : **False**
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
 
@@ -183,13 +183,13 @@ Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-s
 
 Par défaut, lorsque vous activez le paramètre de stratégie étiquette **tous les documents et e-mails doivent avoir une étiquette**, tous les documents enregistrés et les e-mails envoyés doivent avoir une étiquette appliquée. Quand vous configurez le paramètre avancé suivant, le paramètre de stratégie s’applique uniquement aux documents Office et non aux messages Outlook.
 
-Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes:
+Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes :
 
-- Essentiel **DisableMandatoryInOutlook**
+- Clé : **DisableMandatoryInOutlook**
 
-- Value : **True**
+- Valeur : **True**
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
 
@@ -199,13 +199,13 @@ Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-s
 
 Quand vous configurez une étiquette pour la classification recommandée, les utilisateurs sont invités à accepter ou ignorer l’étiquette recommandée dans Word, Excel et PowerPoint. Ce paramètre affiche également cette recommandation d’étiquette dans Outlook.
 
-Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes:
+Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes :
 
-- Essentiel **OutlookRecommendationEnabled**
+- Clé : **OutlookRecommendationEnabled**
 
-- Value : **True**
+- Valeur : **True**
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
 
@@ -215,13 +215,13 @@ Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-s
 
 Quand vous configurez ce paramètre, Outlook n’applique pas l’étiquette par défaut qui est configurée en tant que paramètre de stratégie pour l’option **appliquer cette étiquette par défaut aux documents et aux e-mails**. Au lieu de cela, Outlook peut appliquer une autre étiquette par défaut ou ne rien appliquer.
 
-Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes:
+Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes :
 
-- Essentiel **OutlookDefaultLabel**
+- Clé : **OutlookDefaultLabel**
 
-- Valeur: \<GUID de l' **étiquette**> ou **aucun**
+- Valeur :**GUID d’étiquette**\< > ou **aucun**
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
 
@@ -234,13 +234,13 @@ Quand vous utilisez le paramètre de stratégie étiquette de **tous les documen
 
 Quand vous configurez ce paramètre, l’option **Pas maintenant** n’est pas proposée, et les utilisateurs sont obligés de sélectionner une étiquette au premier enregistrement du document.
 
-Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes:
+Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes :
 
-- Essentiel **PostponeMandatoryBeforeSave**
+- Clé : **PostponeMandatoryBeforeSave**
 
-- Value : **False**
+- Valeur : **False**
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
 
@@ -256,19 +256,19 @@ Cette configuration n’est pas prise en charge pour Outlook. Sachez également 
 
 Étant donné que les critères spéciaux affectent les performances pour les utilisateurs, nous vous recommandons de limiter les types d’applications Office (**W**ORD, E**X**cel, **P**owerPoint) à ceux qui doivent être recherchés.
 
-Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes:
+Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivantes :
 
-- Essentiel **RemoveExternalContentMarkingInApp**
+- Clé : **RemoveExternalContentMarkingInApp**
 
-- Value : \<**Types d’application Office WXP**> 
+- Valeur : \< **Types d’application Office WXP**> 
 
-Exemples :
+Exemples :
 
 - Pour rechercher dans des documents Word uniquement, spécifiez **W**.
 
 - Pour rechercher dans des documents Word et des présentations PowerPoint, spécifiez **WP**.
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
 
@@ -280,28 +280,28 @@ Lorsque vous spécifiez la valeur de chaîne pour la clé **ExternalContentMarki
 
 - Correspondance partielle pour tout supprimer dans l’en-tête ou le pied de page.
     
-    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXT TO REMOVE** (TEXTE À SUPPRIMER). Vous souhaitez entièrement supprimer ces en-têtes ou pieds de page. Spécifiez la valeur : `*TEXT*`.
+    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXTE À SUPPRIMER**. Vous souhaitez entièrement supprimer ces en-têtes ou pieds de page. Spécifiez la valeur : `*TEXT*`.
 
 - Correspondance totale pour juste supprimer des mots spécifiques dans l’en-tête ou le pied de page.
     
-    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXT TO REMOVE** (TEXTE À SUPPRIMER). Vous souhaitez supprimer le mot **TEXTE** uniquement, ce qui laisse la chaîne d’en-tête ou de pied de page avec **À SUPPRIMER**. Spécifiez la valeur : `TEXT `.
+    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXTE À SUPPRIMER**. Vous souhaitez supprimer le mot **TEXTE** uniquement, ce qui laisse la chaîne d’en-tête ou de pied de page avec **À SUPPRIMER**. Spécifiez la valeur : `TEXT `.
 
 - Correspondance totale pour tout supprimer dans l’en-tête ou le pied de page.
     
-    Exemple : Les en-têtes ou les pieds de page contiennent la chaîne **TEXT TO REMOVE** (TEXTE À SUPPRIMER). Vous voulez supprimer les en-têtes ou les pieds de page qui ont exactement cette chaîne. Spécifiez la valeur : `^TEXT TO REMOVE$`.
+    Exemple : Les en-têtes ou les pieds de page ont la chaîne **TEXTE À SUPPRIMER**. Vous voulez supprimer les en-têtes ou les pieds de page qui ont exactement cette chaîne. Spécifiez la valeur : `^TEXT TO REMOVE$`.
     
 
 Les caractères génériques de la chaîne que vous spécifiez sont sensibles à la casse. La longueur maximale de la chaîne est de 255 caractères.
 
 Étant donné que des documents peuvent contenir des caractères invisibles ou différents types d’espaces ou des tabulations, la chaîne que vous spécifiez pour une expression ou une phrase peut ne pas être détectée. Si possible, spécifiez un seul mot distinctif pour la valeur et veillez à tester les résultats avant de procéder au déploiement en production.
 
-Pour la même stratégie d’étiquette, spécifiez les chaînes suivantes:
+Pour la même stratégie d’étiquette, spécifiez les chaînes suivantes :
 
-- Essentiel **ExternalContentMarkingToRemove**
+- Clé : **ExternalContentMarkingToRemove**
 
 - Valeur : \< **chaîne à trouver, définie comme expression régulière**> 
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
 
@@ -313,15 +313,15 @@ Si un texte d’en-tête ou de pied de page prend plus d’une ligne, créez une
 
 **Étiquette appliquée manuellement**
 
-Pour supprimer ce pied de page multiligne, vous créez les deux entrées suivantes pour la même stratégie d’étiquette:
+Pour supprimer ce pied de page multiligne, vous créez les deux entrées suivantes pour la même stratégie d’étiquette :
 
-- Essentiel **ExternalContentMarkingToRemove**
+- Clé : **ExternalContentMarkingToRemove**
 
-- Valeur de la clé 1 : **\*Confidentiel***
+- Valeur de la clé 1 :  **\*Confidentiel***
 
-- Valeur de la clé 2 : **\*Étiquette appliquée*** 
+- Valeur de la clé 2 :  **\*Étiquette appliquée*** 
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
 
@@ -334,7 +334,7 @@ Si vous ne spécifiez pas ce paramètre client avancé supplémentaire et si Pow
 
 Pour rechercher le nom de la forme que vous utilisez comme en-tête ou pied de page :
 
-1. Dans PowerPoint, affichez le volet **Sélection** : Onglet **Format** > Groupe **Organiser** > Volet **Sélection**.
+1. Dans PowerPoint, affichez le volet **Sélection** : onglet **Mise en forme** > groupe **Organiser** > **volet sélection**.
 
 2. Sélectionnez la forme sur la diapositive qui contient votre en-tête ou votre pied de page. Le nom de la forme sélectionnée est maintenant en surbrillance dans le volet **Sélection**.
 
@@ -342,11 +342,11 @@ Utilisez le nom de la forme afin de spécifier une valeur de chaîne pour la cl�
 
 Exemple : Le nom de la forme est **fc**. Pour supprimer la forme portant ce nom, spécifiez la valeur : `fc`.
 
-- Essentiel **PowerPointShapeNameToRemove**
+- Clé : **PowerPointShapeNameToRemove**
 
-- Value : \<**Nom de la forme PowerPoint**> 
+- Valeur : \< **Nom de la forme PowerPoint**> 
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
 
@@ -354,11 +354,11 @@ Lorsque vous avez plusieurs formes PowerPoint à supprimer, spécifiez autant de
 
 Par défaut, seuls les en-têtes et les pieds de page qui se trouvent dans les diapositives principales sont recherchés. Pour étendre cette recherche à toutes les diapositives, processus beaucoup plus gourmand en ressources, utilisez un paramètre client avancé supplémentaire nommé **RemoveExternalContentMarkingInAllSlides**:
 
-- Essentiel **RemoveExternalContentMarkingInAllSlides**
+- Clé : **RemoveExternalContentMarkingInAllSlides**
 
-- Value : **True**
+- Valeur : **True**
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
 
@@ -369,13 +369,13 @@ Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-s
 
 Par défaut, les utilisateurs voient une option nommée **protéger avec des autorisations personnalisées** lorsqu’ils cliquent avec le bouton droit dans l’Explorateur de fichiers et choisissent **classer et protéger**. Cette option permet de définir leurs propres paramètres de protection qui peuvent remplacer tous les paramètres de protection que vous pouvez avoir inclus dans une configuration d’étiquette. Les utilisateurs peuvent voir également une option pour supprimer la protection. Quand vous configurez ce paramètre, les utilisateurs ne voient pas ces options.
 
-Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée:
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
 
-- Essentiel **EnableCustomPermissions**
+- Clé : **EnableCustomPermissions**
 
-- Value : **False**
+- Valeur : **False**
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 
@@ -387,13 +387,13 @@ Quand vous configurez le paramètre client avancé pour [Désactiver les autoris
 
 Toutefois, il existe un autre paramètre de client avancé que vous pouvez spécifier afin que dans ce scénario, les utilisateurs puissent afficher et modifier des autorisations personnalisées pour un document protégé lorsqu’ils utilisent l’Explorateur de fichiers et cliquer avec le bouton droit sur le fichier.
 
-Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée:
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
 
-- Essentiel **EnableCustomPermissionsForCustomProtectedFiles**
+- Clé : **EnableCustomPermissionsForCustomProtectedFiles**
 
-- Value : **True**
+- Valeur : **True**
 
-Exemple de commande PowerShell:
+Exemple de commande PowerShell :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissionsForCustomProtectedFiles="True"}
 
@@ -408,24 +408,24 @@ La pièce jointe doit être un fichier physique et ne peut pas être un lien ver
 
 Vous pouvez configurer ce paramètre sur **recommandé**, afin que les utilisateurs soient invités à appliquer l’étiquette sélectionnée à leur message électronique, avec une info-bulle personnalisable. Les utilisateurs peuvent accepter la recommandation ou l’ignorer. Ou bien, vous pouvez configurer ce paramètre sur **automatique**, où l’étiquette sélectionnée est automatiquement appliquée, mais les utilisateurs peuvent supprimer l’étiquette ou sélectionner une autre étiquette avant d’envoyer l’e-mail.
 
-Remarque : Lorsque la pièce jointe avec l’étiquette de classification la plus élevée est configurée pour la protection avec le paramètre des autorisations définies par l’utilisateur:
+Remarque : lorsque la pièce jointe avec l’étiquette de classification la plus élevée est configurée pour la protection avec le paramètre des autorisations définies par l’utilisateur :
 
 - Lorsque les autorisations définies par l’utilisateur de l’étiquette sont Outlook (ne pas transférer), cette étiquette est sélectionnée et le fait de ne pas transférer la protection est appliqué à l’e-mail.
 - Lorsque les autorisations définies par l’utilisateur de l’étiquette sont uniquement pour Word, Excel, PowerPoint et l’Explorateur de fichiers, cette étiquette n’est pas appliquée au message électronique et aucune n’est la protection.
 
-Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée:
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
 
 - Clé 1 : **AttachmentAction**
 
-- Valeur de la clé 1 : **Recommandé** ou **automatique**
+- Valeur de clé 1 : **recommandé** ou **automatique**
 
 - Clé 2 : **AttachmentActionTip**
 
-- Valeur de clé 2:\<«info-bulle personnalisée >»
+- Valeur de clé 2 : « @no__t-info-bulle 0customized > »
 
 L’info-bulle personnalisée ne prend en charge qu’une seule langue.
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic"}
 
@@ -435,17 +435,17 @@ Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-s
 
 Quand vous spécifiez le paramètre client avancé suivant, les utilisateurs voient une option **Signaler un problème** qu’ils peuvent sélectionner dans la boîte de dialogue **Aide et commentaires** du client. Spécifiez une chaîne HTTP pour le lien. (par exemple, une page web personnalisée permettant aux utilisateurs de signaler des problèmes, ou une adresse e-mail qui pointe vers votre support technique). 
 
-Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée:
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
 
-- Essentiel **ReportAnIssueLink**
+- Clé : **ReportAnIssueLink**
 
-- Value : **\<Chaîne HTTP>**
+- Valeur : **\<chaîne HTTP >**
 
 Exemple de valeur pour un site web : `https://support.contoso.com`
 
 Exemple de valeur pour une adresse e-mail : `mailto:helpdesk@contoso.com`
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:helpdesk@contoso.com"}
 
@@ -461,13 +461,13 @@ Quand vous créez et que vous configurez les paramètres client avancés suivant
 - **Leur e-mail ou leur pièce jointe à l’e-mail n’a pas d’étiquette** :
     - La pièce jointe peut être un document Office ou un document PDF
 
-Lorsque ces conditions sont remplies, l’utilisateur voit un message contextuel avec l’une des actions suivantes:
+Lorsque ces conditions sont remplies, l’utilisateur voit un message contextuel avec l’une des actions suivantes :
 
-- **Avertir** : L’utilisateur peut confirmer et envoyer, ou bien annuler.
+- **WARN**: l’utilisateur peut confirmer et envoyer, ou annuler.
 
-- **Justifier** : L’utilisateur est invité à entrer une justification (selon des options prédéfinies ou sous forme libre).  L’utilisateur peut ensuite envoyer ou annuler l’e-mail. Le texte de la justification est écrit dans l’en-tête X de l’e-mail afin qu’il puisse être lu par d’autres systèmes, par exemple des services de protection contre la perte de données.
+- **Justify**: l’utilisateur est invité à fournir une justification (options prédéfinies ou forme libre).  L’utilisateur peut ensuite envoyer ou annuler l’e-mail. Le texte de la justification est écrit dans l’en-tête X de l’e-mail afin qu’il puisse être lu par d’autres systèmes, par exemple des services de protection contre la perte de données.
 
-- **Bloquer** : L’utilisateur ne peut pas envoyer l’e-mail tant que la condition perdure. Le message contient la raison du blocage de l’e-mail pour que l’utilisateur puisse résoudre le problème, par exemple supprimer des destinataires spécifiques ou appliquer une étiquette à l’e-mail. 
+- **Bloquer**: l’utilisateur ne peut pas envoyer l’e-mail tant que la condition est conservée. Le message contient la raison du blocage de l’e-mail pour que l’utilisateur puisse résoudre le problème, par exemple supprimer des destinataires spécifiques ou appliquer une étiquette à l’e-mail. 
 
 Quand les messages contextuels concernent une étiquette spécifique, vous pouvez configurer des exceptions pour les destinataires par nom de domaine.
 
@@ -478,29 +478,29 @@ Quand les messages contextuels concernent une étiquette spécifique, vous pouve
 
 Pour la stratégie sélectionnée, créez un ou plusieurs des paramètres avancés suivants avec les clés suivantes. Pour les valeurs, spécifiez une ou plusieurs étiquettes par leur GUID, chacune séparée par une virgule.
 
-Exemple de valeur pour plusieurs GUID d’étiquette sous la forme d’une chaîne séparée par des virgules:`dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
+Exemple de valeur pour plusieurs GUID d’étiquette sous la forme d’une chaîne séparée par des virgules : `dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
 
 
 - Messages d’avertissement :
     
-    - Essentiel **OutlookWarnUntrustedCollaborationLabel**
+    - Clé : **OutlookWarnUntrustedCollaborationLabel**
     
-    - Valeur: \< **GUID des étiquettes, séparés par des virgules**>
+    - Valeur : GUID d’étiquette \< **, séparés par des virgules**>
 
 - Messages de justification :
     
-    - Essentiel **OutlookJustifyUntrustedCollaborationLabel**
+    - Clé : **OutlookJustifyUntrustedCollaborationLabel**
     
-    - Valeur: \< **GUID des étiquettes, séparés par des virgules**>
+    - Valeur : GUID d’étiquette \< **, séparés par des virgules**>
 
 - Messages de blocage :
     
-    - Essentiel **OutlookBlockUntrustedCollaborationLabel**
+    - Clé : **OutlookBlockUntrustedCollaborationLabel**
     
-    - Valeur: \< **GUID des étiquettes, séparés par des virgules**>
+    - Valeur : GUID d’étiquette \< **, séparés par des virgules**>
 
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e,b6d21387-5d34-4dc8-90ae-049453cec5cf,bb48a6cb-44a8-49c3-9102-2d2b017dcead,74591a94-1e0e-4b5d-b947-62b70fc0f53a,6c375a97-2b9b-4ccd-9c5b-e24e4fd67f73"}
 
@@ -520,25 +520,25 @@ Exemple de valeur pour plusieurs domaines sous forme de chaîne séparée par de
 
 - Messages d’avertissement :
     
-    - Essentiel **OutlookWarnTrustedDomains**
+    - Clé : **OutlookWarnTrustedDomains**
     
     - Valeur : **\<** noms de domaine, séparés par des virgules **>**
 
 - Messages de justification :
     
-    - Essentiel **OutlookJustifyTrustedDomains**
+    - Clé : **OutlookJustifyTrustedDomains**
     
     - Valeur : **\<** noms de domaine, séparés par des virgules **>**
 
 - Messages de blocage :
     
-    - Essentiel **OutlookBlockTrustedDomains**
+    - Clé : **OutlookBlockTrustedDomains**
     
     - Valeur : **\<** noms de domaine, séparés par des virgules **>**
 
-Par exemple, vous avez spécifié le paramètre client avancé **OutlookBlockUntrustedCollaborationLabel** pour l’étiquette **confidentiel \ tous les employés** . Vous spécifiez maintenant le paramètre de client avancé supplémentaire **OutlookJustifyTrustedDomains** et **contoso.com**. Par conséquent, un utilisateur peut envoyer un e-mail à john@sales.contoso.com lorsqu’il est étiqueté **confidentiel \ tous les employés** , mais qu’il ne pourra pas envoyer un e-mail avec la même étiquette à un compte gmail.
+Par exemple, vous avez spécifié le paramètre client avancé **OutlookBlockUntrustedCollaborationLabel** pour l’étiquette **confidentiel \ tous les employés** . Vous spécifiez maintenant le paramètre de client avancé supplémentaire **OutlookJustifyTrustedDomains** et **contoso.com**. Par conséquent, un utilisateur peut envoyer un e-mail à john@sales.contoso.com lorsqu’il est étiqueté **confidentiel \ tous les employés** , mais qu’il ne peut pas envoyer un e-mail avec la même étiquette à un compte gmail.
 
-Exemples de commandes PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemples de commandes PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
 
@@ -546,34 +546,34 @@ Exemples de commandes PowerShell, où votre stratégie d’étiquette est nommé
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Pour implémenter des messages contextuels d’avertissement, de justification ou de blocage pour des e-mails ou des pièces jointes qui n’ont pas d’étiquette :
 
-Pour la même stratégie d’étiquette, créez le paramètre de client avancé suivant avec l’une des valeurs suivantes:
+Pour la même stratégie d’étiquette, créez le paramètre de client avancé suivant avec l’une des valeurs suivantes :
 
 - Messages d’avertissement :
     
-    - Essentiel **OutlookUnlabeledCollaborationAction**
+    - Clé : **OutlookUnlabeledCollaborationAction**
     
-    - Value : **Warn**
+    - Valeur : **avertir**
 
 - Messages de justification :
     
-    - Essentiel **OutlookUnlabeledCollaborationAction**
+    - Clé : **OutlookUnlabeledCollaborationAction**
     
-    - Value : **Justify**
+    - Valeur : **justifier**
 
 - Messages de blocage :
     
-    - Essentiel **OutlookUnlabeledCollaborationAction**
+    - Clé : **OutlookUnlabeledCollaborationAction**
     
-    - Value : **Bloquer**
+    - Valeur : **bloquer**
 
 - Désactiver ces messages :
     
-    - Essentiel **OutlookUnlabeledCollaborationAction**
+    - Clé : **OutlookUnlabeledCollaborationAction**
     
-    - Value : **Off**
+    - Valeur : **désactivé**
 
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
 
@@ -582,19 +582,19 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
 Par défaut, les messages contextuels avertir, justifier ou bloquer s’appliquent à tous les documents Office et documents PDF. Vous pouvez affiner cette liste en spécifiant les extensions de nom de fichier qui doivent afficher les messages d’avertissement, justifier ou bloquer avec un paramètre avancé supplémentaire et une liste séparée par des virgules des extensions de nom de fichier.
 
-Exemple de valeur pour plusieurs extensions de nom de fichier à définir en tant que chaîne séparée par des virgules:`.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+Exemple de valeur pour plusieurs extensions de nom de fichier à définir en tant que chaîne séparée par des virgules : `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
 Dans cet exemple, un document PDF sans étiquette n’a pas pour effet d’avertir, de justifier ou de bloquer les messages contextuels.
 
-Pour la même stratégie d’étiquette, entrez les chaînes suivantes: 
+Pour la même stratégie d’étiquette, entrez les chaînes suivantes : 
 
 
-- Essentiel **OutlookOverrideUnlabeledCollaborationExtensions**
+- Clé : **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- Valeur: **\<** extensions de nom de fichier pour afficher des messages, séparés par des virgules **>**
+- Valeur : **\<** extensions de nom de fichier pour afficher des messages, séparés par des virgules **>**
 
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
 
@@ -606,31 +606,31 @@ Créez le paramètre client avancé suivant avec une des valeurs suivantes :
 
 - Messages d’avertissement :
     
-    - Essentiel **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Clé : **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Value : **Warn**
+    - Valeur : **avertir**
 
 - Messages de justification :
     
-    - Essentiel **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Clé : **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Value : **Justify**
+    - Valeur : **justifier**
 
 - Messages de blocage :
     
-    - Essentiel **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Clé : **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Value : **Bloquer**
+    - Valeur : **bloquer**
 
 - Désactiver ces messages :
     
-    - Essentiel **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Clé : **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Value : **Off**
+    - Valeur : **désactivé**
 
 Si vous ne spécifiez pas ce paramètre client, la valeur que vous spécifiez pour OutlookUnlabeledCollaborationAction est utilisée pour les messages électroniques sans étiquette, et les messages électroniques sans étiquette avec pièces jointes.
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 
@@ -640,13 +640,13 @@ Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-s
 
 Le client d’étiquetage unifié Azure Information Protection prend en charge la création de rapports centraux et, par défaut, envoie ses données d’audit à [Azure information protection Analytics](../reports-aip.md). Pour plus d’informations sur les informations qui sont envoyées et stockées, consultez la section [informations recueillies et envoyées à Microsoft](../reports-aip.md#information-collected-and-sent-to-microsoft) dans la documentation du centre de création de rapports.
 
-Pour modifier ce comportement afin que ces informations ne soient pas envoyées par le client d’étiquetage unifié, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée:
+Pour modifier ce comportement afin que ces informations ne soient pas envoyées par le client d’étiquetage unifié, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
 
-- Essentiel **EnableAudit**
+- Clé : **EnableAudit**
 
-- Value : **False**
+- Valeur : **False**
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
 
@@ -659,13 +659,13 @@ Lorsque le client d’étiquetage unifié Azure Information Protection est utili
 
 Pour modifier ce comportement afin que les types d’informations sensibles détectés par le client d’étiquetage unifié ne soient pas envoyés, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
 
-- Essentiel **RunAuditInformationTypesDiscovery**
+- Clé : **RunAuditInformationTypesDiscovery**
 
-- Value : **False**
+- Valeur : **False**
 
 Si vous définissez ce paramètre de client avancé, les informations d’audit peuvent toujours être envoyées à partir du client, mais les informations sont limitées à la création de rapports lorsqu’un utilisateur a accédé au contenu étiqueté.
 
-Exemple :
+Exemple :
 
 - Avec ce paramètre, vous pouvez voir qu’un utilisateur a accédé à Financial. docx qui est étiqueté **confidentiel \ Sales**.
 
@@ -673,7 +673,7 @@ Exemple :
     
     - Si vous activez également [Correspondances de contenu pour approfondir l’analyse](../reports-aip.md#content-matches-for-deeper-analysis), vous pourrez en plus voir quels sont ces numéros de carte de crédit.
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 
@@ -685,11 +685,11 @@ Par défaut, le client d’étiquetage unifié n’envoie pas de correspondances
 
 Pour envoyer des correspondances de contenu lors de l’envoi de types d’informations sensibles, créez le paramètre de client avancé suivant dans une stratégie d’étiquette : 
 
-- Essentiel **LogMatchedContent**
+- Clé : **LogMatchedContent**
 
-- Value : **True**
+- Valeur : **True**
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
@@ -701,13 +701,13 @@ Cette configuration n’est pas compatible avec les fichiers PDF protégés qui 
 
 Pour les documents Office étiquetés par des îlots sécurisés, vous pouvez réétiqueter ces documents avec une étiquette de sensibilité à l’aide d’un mappage que vous définissez. Cette méthode permet également de réutiliser les étiquettes d’autres solutions qui se trouvent sur des documents Office. 
 
-À la suite de cette option de configuration, la nouvelle étiquette de sensibilité est appliquée par le client d’étiquetage unifié Azure Information Protection comme suit:
+À la suite de cette option de configuration, la nouvelle étiquette de sensibilité est appliquée par le client d’étiquetage unifié Azure Information Protection comme suit :
 
-- Pour les documents Office : Lorsque le document est ouvert dans l’application de bureau, la nouvelle étiquette de sensibilité est indiquée comme définie et appliquée lorsque le document est enregistré.
+- Pour les documents Office : lorsque le document est ouvert dans l’application de bureau, la nouvelle étiquette de sensibilité est indiquée comme définie et appliquée lorsque le document est enregistré.
 
 - Pour PowerShell : [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) et [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) peuvent appliquer la nouvelle étiquette de sensibilité.
 
-- Pour l’Explorateur de fichiers : Dans la boîte de dialogue Azure Information Protection, la nouvelle étiquette de sensibilité est affichée, mais n’est pas définie.
+- Pour l’Explorateur de fichiers : dans la boîte de dialogue Azure Information Protection, la nouvelle étiquette de sensibilité est affichée, mais n’est pas définie.
 
 Cette configuration nécessite que vous spécifiiez un paramètre avancé nommé **labelByCustomProperties** pour chaque étiquette de sensibilité que vous souhaitez mapper à l’ancienne étiquette. Ensuite, définissez la valeur à utiliserpour chaque entrée avec la syntaxe suivante :
 
@@ -717,45 +717,45 @@ Spécifiez votre choix d’un nom de règle de migration. Utilisez un nom descri
 
 Notez que ce paramètre ne supprime pas l’étiquette d’origine du document ni les marquages visuels du document que l’étiquette d’origine a éventuellement appliqués. Pour supprimer des en-têtes et des pieds de page, consultez la section précédente, [Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions).
 
-#### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Exemple 1 : Mappage un-à-un du même nom d’étiquette
+#### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Exemple 1 : mappage du même nom d’étiquette
 
-Configuration requise : Les documents qui ont une étiquette Secure Islands « Confidentiel » doivent être à nouveau libellées « Confidentiel » par Azure Information Protection.
+Exigence : les documents qui ont une étiquette des îlots sécurisés « confidentiel » doivent être réétiquetés comme « confidentiels » par Azure Information Protection.
 
 Exemple :
 
 - L’étiquette Secure Islands s’appelle **Confidentiel** et est stockée dans la propriété personnalisée nommée **Classification**.
 
-Paramètre avancé:
+Paramètre avancé :
 
-- Clé: **labelByCustomProperties**
+- Clé : **labelByCustomProperties**
 
-- Value : **L’étiquette des îlots sécurisés est confidentielle, classification, confidentiel**
+- Valeur : l' **étiquette des îlots sécurisés est confidentielle, classification, confidentiel**
 
-Exemple de commande PowerShell, où votre étiquette est nommée «Confidential»:
+Exemple de commande PowerShell, où votre étiquette est nommée « Confidential » :
 
     Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Confidential,Classification,Confidential"}
 
-#### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Exemple 2 : Mappage un-à-un pour un autre nom d’étiquette
+#### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Exemple 2 : un mappage pour un autre nom d’étiquette
 
-Configuration requise : Les documents qui ont une étiquette « Sensible » chez Secure Islands doivent être à nouveau libellés « Hautement confidentiel » par Azure Information Protection.
+Exigence : les documents intitulés « sensibles » par les îles sécurisées doivent être renommés comme « hautement confidentiels » par Azure Information Protection.
 
 Exemple :
 
 - L’étiquette Secure Islands s’appelle **Sensible** et est stockée dans la propriété personnalisée nommée **Classification**.
 
-Paramètre avancé:
+Paramètre avancé :
 
-- Clé: **labelByCustomProperties**
+- Clé : **labelByCustomProperties**
 
-- Value : **L’étiquette des îlots sécurisés est sensible, classification, sensible**
+- Valeur : l' **étiquette des îlots sécurisés est sensible, classification, sensible**
 
-Exemple de commande PowerShell, où votre étiquette est nommée «hautement confidentiel»:
+Exemple de commande PowerShell, où votre étiquette est nommée « hautement confidentiel » :
 
     Set-Label -Identity "Highly Confidential" -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Sensitive,Classification,Sensitive"}
 
-#### <a name="example-3-many-to-one-mapping-of-label-names"></a>Exemple 3 : Mappage plusieurs-à-un de noms d’étiquettes
+#### <a name="example-3-many-to-one-mapping-of-label-names"></a>Exemple 3 : mappage de plusieurs noms d’étiquettes en un
 
-Configuration requise : Vous avez deux étiquettes de îles sécurisées qui incluent le mot «Internal» et vous souhaitez que les documents qui ont l’une de ces étiquettes des îles sécurisées soient réétiquetés comme «général» par le client d’étiquetage unifié Azure Information Protection.
+Exigence : vous avez deux étiquettes de îles sécurisées qui incluent le mot « Internal » et vous souhaitez que les documents qui ont l’une de ces étiquettes des îlots sécurisés soient réétiquetés comme « général » par le client d’étiquetage unifié Azure Information Protection.
 
 Exemple :
 
@@ -763,15 +763,15 @@ Exemple :
 
 Le paramètre client avancé :
 
-- Clé: **labelByCustomProperties**
+- Clé : **labelByCustomProperties**
 
-- Value : **L’étiquette des îlots sécurisés contient Internal, classification. \*Interne.\***
+- Valeur : l' **étiquette des îlots sécurisés contient Internal, classification,. \*Internal. \***
 
-Exemple de commande PowerShell, où votre étiquette est nommée «général»:
+Exemple de commande PowerShell, où votre étiquette est nommée « général » :
 
     Set-Label -Identity General -AdvancedSettings @{labelByCustomProperties="Secure Islands label contains Internal,Classification,.*Internal.*"}
 
-#### <a name="example-4-multiple-rules-for-the-same-label"></a>Exemple 4: Plusieurs règles pour la même étiquette
+#### <a name="example-4-multiple-rules-for-the-same-label"></a>Exemple 4 : plusieurs règles pour la même étiquette
 
 Lorsque vous avez besoin de plusieurs règles pour la même étiquette, définissez plusieurs valeurs de chaîne pour la même clé. 
 
@@ -783,13 +783,13 @@ Dans cet exemple, les étiquettes des îles sécurisées nommées « confidenti
 
 Vous pouvez utiliser vos paramètres avancés labelByCustomProperties avec les courriers électroniques Outlook en plus des documents Office en spécifiant un paramètre avancé de stratégie d’étiquette supplémentaire. Toutefois, ce paramètre a un impact négatif connu sur les performances d’Outlook. par conséquent, configurez ce paramètre supplémentaire uniquement lorsque vous avez une forte exigence pour l’entreprise et n’oubliez pas de le définir sur une valeur de chaîne NULL lorsque vous avez terminé la migration à partir de la autre solution d’étiquetage.
 
-Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée:
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
 
-- Essentiel **EnableLabelByMailHeader**
+- Clé : **EnableLabelByMailHeader**
 
-- Value : **True**
+- Valeur : **True**
 
-Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée «global»:
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
 
@@ -799,7 +799,7 @@ Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-s
 
 Il peut y avoir des scénarios lorsque vous souhaitez appliquer une ou plusieurs propriétés personnalisées à un document ou à un message électronique en plus des métadonnées appliquées par une étiquette de sensibilité.
 
-Exemple :
+Exemple :
 
 - Vous êtes en train de [migrer à partir d’une autre solution d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions), telle que des îlots sécurisés. Pour l’interopérabilité au cours de la migration, vous souhaitez que les étiquettes de sensibilité appliquent également une propriété personnalisée utilisée par l’autre solution d’étiquetage.
 
@@ -807,43 +807,43 @@ Exemple :
 
 Pour les documents Office et les e-mails Outlook libellés par les utilisateurs à l’aide du client d’étiquetage unifié Azure Information Protection, vous pouvez ajouter une ou plusieurs propriétés personnalisées que vous définissez. Vous pouvez également utiliser cette méthode pour le client d’étiquetage unifié pour afficher une propriété personnalisée sous la forme d’une étiquette à partir d’autres solutions pour le contenu qui n’est pas encore étiqueté par le client d’étiquetage unifié.
 
-À la suite de cette option de configuration, toutes les propriétés personnalisées supplémentaires sont appliquées par le client d’étiquetage unifié Azure Information Protection, comme suit:
+À la suite de cette option de configuration, toutes les propriétés personnalisées supplémentaires sont appliquées par le client d’étiquetage unifié Azure Information Protection, comme suit :
 
-- Pour les documents Office : Lorsque le document est étiqueté dans l’application de bureau, les propriétés personnalisées supplémentaires sont appliquées lors de l’enregistrement du document.
+- Pour les documents Office : lorsque le document est étiqueté dans l’application de bureau, les propriétés personnalisées supplémentaires sont appliquées lors de l’enregistrement du document.
 
-- Pour les e-mails Outlook: Lorsque le message électronique est étiqueté dans Outlook, les propriétés supplémentaires sont appliquées à l’en-tête x lors de l’envoi de l’e-mail.
+- Pour les e-mails Outlook : lorsque le message électronique est étiqueté dans Outlook, les propriétés supplémentaires sont appliquées à l’en-tête x lors de l’envoi de l’e-mail.
 
 - Pour PowerShell : [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) et [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) appliquent les propriétés personnalisées supplémentaires lorsque le document est étiqueté et enregistré. La fonction [AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) affiche les propriétés personnalisées en tant qu’étiquette mappée si une étiquette de sensibilité n’est pas appliquée.
 
-- Pour l’Explorateur de fichiers : Quand l’utilisateur clique avec le bouton droit sur le fichier et applique l’étiquette, les propriétés personnalisées sont appliquées.
+- Pour l’Explorateur de fichiers : quand l’utilisateur clique avec le bouton droit sur le fichier et applique l’étiquette, les propriétés personnalisées sont appliquées.
 
 Cette configuration nécessite que vous spécifiiez un paramètre avancé nommé **customPropertiesByLabel** pour chaque étiquette de sensibilité à laquelle vous souhaitez appliquer les propriétés personnalisées supplémentaires. Ensuite, définissez la valeur à utiliserpour chaque entrée avec la syntaxe suivante :
 
 `[custom property name],[custom property value]`
 
-#### <a name="example-1-add-a-single-custom-property-for-a-label"></a>Exemple 1 : Ajouter une seule propriété personnalisée pour une étiquette
+#### <a name="example-1-add-a-single-custom-property-for-a-label"></a>Exemple 1 : ajouter une seule propriété personnalisée pour une étiquette
 
-Configuration requise : Les documents qui sont étiquetés comme étant «confidentiels» par le client d’étiquetage unifié Azure Information Protection doivent avoir la propriété personnalisée supplémentaire nommée «classification» avec la valeur «secret».
+Exigence : les documents étiquetés comme étant « confidentiels » par le client d’étiquetage unifié Azure Information Protection doivent avoir la propriété personnalisée supplémentaire nommée « classification » avec la valeur « secret ».
 
 Exemple :
 
 - L’étiquette sensibilité est nommée **confidentiel** et crée une propriété personnalisée nommée **classification** avec la valeur **secret**.
 
-Paramètre avancé:
+Paramètre avancé :
 
-- Clé: **customPropertiesByLabel**
+- Clé : **customPropertiesByLabel**
 
-- Value : **Classification, secret**
+- Valeur : **classification, secret**
 
-Exemple de commande PowerShell, où votre étiquette est nommée «Confidential»:
+Exemple de commande PowerShell, où votre étiquette est nommée « Confidential » :
 
     Set-Label -Identity Confidential -AdvancedSettings @{customPropertiesByLabel="Classification,Secret"}
 
-#### <a name="example-2-add-multiple-custom-properties-for-a-label"></a>Exemple 2 : Ajouter plusieurs propriétés personnalisées pour une étiquette
+#### <a name="example-2-add-multiple-custom-properties-for-a-label"></a>Exemple 2 : ajouter plusieurs propriétés personnalisées pour une étiquette
 
 Pour ajouter plusieurs propriétés personnalisées pour la même étiquette, vous devez définir plusieurs valeurs de chaîne pour la même clé.
 
-Exemple de commande PowerShell, où votre étiquette est nommée «général» et que vous souhaitez ajouter une propriété personnalisée nommée **classification** avec la valeur **général** et une deuxième propriété personnalisée nommée **sensibilité** avec la valeur **interne** :
+Exemple de commande PowerShell, où votre étiquette est nommée « général » et que vous souhaitez ajouter une propriété personnalisée nommée **classification** avec la valeur **général** et une deuxième propriété personnalisée nommée **sensibilité** avec la valeur **interne** :
 
     Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
 
@@ -851,25 +851,25 @@ Exemple de commande PowerShell, où votre étiquette est nommée «général» e
 
 Cette configuration utilise des [Paramètres avancés](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) d’étiquette que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
 
-Utilisez ces paramètres uniquement lorsque vous disposez d’un [déploiement S/MIME](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption) opérationnel et que vous souhaitez qu’une étiquette applique automatiquement cette méthode de protection pour les e-mails plutôt que Rights Management protection à partir de Azure information protection. La protection qui en résulte est la même que lorsque l’utilisateur sélectionne manuellement les options S/MIME dans Outlook.
+Utilisez ces paramètres uniquement lorsque vous disposez d’un [déploiement S/MIME](https://docs.microsoft.com/microsoft-365/compliance/s-mime-for-message-signing-and-encryption) opérationnel et que vous souhaitez qu’une étiquette applique automatiquement cette méthode de protection pour les e-mails plutôt que Rights Management protection à partir de Azure information protection. La protection qui en résulte est la même que lorsque l’utilisateur sélectionne manuellement les options S/MIME dans Outlook.
 
-Pour configurer un paramètre avancé pour une signature numérique S/MIME, entrez les chaînes suivantes pour l’étiquette sélectionnée:
+Pour configurer un paramètre avancé pour une signature numérique S/MIME, entrez les chaînes suivantes pour l’étiquette sélectionnée :
 
-- Essentiel **SMimeSign**
+- Clé : **SMimeSign**
 
-- Value : **True**
+- Valeur : **True**
 
-Pour configurer un paramètre avancé pour le chiffrement S/MIME, entrez les chaînes suivantes pour l’étiquette sélectionnée:
+Pour configurer un paramètre avancé pour le chiffrement S/MIME, entrez les chaînes suivantes pour l’étiquette sélectionnée :
 
-- Essentiel **SMimeEncrypt**
+- Clé : **SMimeEncrypt**
 
-- Value : **True**
+- Valeur : **True**
 
 Si l’étiquette que vous spécifiez est configurée pour le chiffrement, pour le client d’étiquetage unifié Azure Information Protection, la protection S/MIME remplace la protection Rights Management uniquement dans Outlook. La version de disponibilité générale du client d’étiquetage unifié continue à utiliser les paramètres de chiffrement spécifiés pour l’étiquette dans le centre d’administration. Pour les applications Office avec étiquetage intégré, celles-ci n’appliquent pas la protection S/MIME mais appliquent la protection ne pas transférer.
 
 Si vous souhaitez que l’étiquette soit visible dans Outlook uniquement, configurez l’étiquette pour appliquer le chiffrement **uniquement aux messages électroniques dans Outlook**.
 
-Exemples de commandes PowerShell, où votre étiquette est nommée «destinataires uniquement»:
+Exemples de commandes PowerShell, où votre étiquette est nommée « destinataires uniquement » :
 
     Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeSign="True"}
 
@@ -879,13 +879,13 @@ Exemples de commandes PowerShell, où votre étiquette est nommée «destinatair
 
 Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) d’étiquette que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
 
-Lorsque vous ajoutez une sous-étiquette à une étiquette, les utilisateurs ne peuvent plus appliquer l’étiquette parent à un document ou à un e-mail. Par défaut, les utilisateurs sélectionnent l’étiquette parente pour afficher les sous-étiquettes qu’elles peuvent appliquer, puis sélectionnent l’une de ces sous-étiquettes. Si vous configurez ce paramètre avancé, lorsque les utilisateurs sélectionnent l’étiquette parent, une sous-étiquette est automatiquement sélectionnée et appliquée: 
+Lorsque vous ajoutez une sous-étiquette à une étiquette, les utilisateurs ne peuvent plus appliquer l’étiquette parent à un document ou à un e-mail. Par défaut, les utilisateurs sélectionnent l’étiquette parente pour afficher les sous-étiquettes qu’elles peuvent appliquer, puis sélectionnent l’une de ces sous-étiquettes. Si vous configurez ce paramètre avancé, lorsque les utilisateurs sélectionnent l’étiquette parent, une sous-étiquette est automatiquement sélectionnée et appliquée : 
 
-- Essentiel **DefaultSubLabelId**
+- Clé : **DefaultSubLabelId**
 
-- Valeur: \<GUID de sous-étiquette >
+- Valeur : GUID \<sublabel >
 
-Exemple de commande PowerShell, où votre étiquette parente est nommée «Confidential» et la sous-étiquette «all employees» a le GUID 8faca7b8-8d20-48A3-8ea2-0f96310a848e:
+Exemple de commande PowerShell, où votre étiquette parente est nommée « Confidential » et la sous-étiquette « all employees » a le GUID 8faca7b8-8d20-48A3-8ea2-0f96310a848e :
 
     Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 
@@ -895,15 +895,15 @@ Cette configuration utilise des [Paramètres avancés](#how-to-configure-advance
 
 Utilisez ce paramètre avancé pour définir la couleur d’une étiquette. Pour spécifier la couleur, entrez un code d’triplement hexadécimal pour les composants rouge, vert et bleu (RVB) de la couleur. Par exemple, #40e0d0 est la valeur hexadécimale RVB pour turquoise.
 
-Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à [ \<](https://developer.mozilla.org/docs/Web/CSS/color_value) partir de la page de > des couleurs dans les documents Web MSDN. Ces codes sont utilisés dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
+Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à partir de la page [\<color >](https://developer.mozilla.org/docs/Web/CSS/color_value) à partir des documents Web MSDN. Vous trouverez également ces codes dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
 
-Pour configurer le paramètre avancé pour la couleur d’un contrôle Label, entrez les chaînes suivantes pour l’étiquette sélectionnée:
+Pour configurer le paramètre avancé pour la couleur d’un contrôle Label, entrez les chaînes suivantes pour l’étiquette sélectionnée :
 
-- Clé: **couleur**
+- Clé : **couleur**
 
-- Value : \<> De valeur hexadécimale RVB
+- Valeur : valeur hexadécimale \<RGB >
 
-Exemple de commande PowerShell, où votre étiquette est nommée «public»:
+Exemple de commande PowerShell, où votre étiquette est nommée « public » :
 
     Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
@@ -911,7 +911,7 @@ Exemple de commande PowerShell, où votre étiquette est nommée «public»:
 
 Dans un environnement de production, les utilisateurs n’ont généralement pas besoin de se connecter en tant qu’utilisateur différent lorsqu’ils utilisent le client d’étiquetage unifié Azure Information Protection. Toutefois, en tant qu’administrateur, vous devrez peut-être vous connecter sous un autre nom d’utilisateur pendant une phase de test. 
 
-Vous pouvez vérifier sous quel compte vous êtes actuellement connecté en utilisant la boîte de dialogue **Microsoft Azure Information Protection** : Ouvrez une application Office et, sous l’onglet dossier de **démarrage** , sélectionnez le bouton **sensibilité** , puis sélectionnez **aide et commentaires**. Votre nom de votre compte s’affiche dans la section **État du client**.
+Vous pouvez vérifier le compte auquel vous êtes actuellement connecté à l’aide de la boîte de dialogue **Microsoft Azure information protection** : Ouvrez une application Office et, sous l’onglet dossier de **démarrage** , sélectionnez le bouton **sensibilité** , puis sélectionnez **aide et Commentaires**. Votre nom de votre compte s’affiche dans la section **État du client**.
 
 Pensez à vérifier le nom de domaine du compte connecté. En effet, vous pouvez accidentellement vous connecter avec le bon nom de compte, mais avec le mauvais domaine. Un symptôme de l’utilisation d’un compte incorrect comprend l’échec du téléchargement des étiquettes ou l’affichage des étiquettes ou du comportement que vous attendez.
 
@@ -936,28 +936,28 @@ En outre :
 
 Par défaut, le Azure Information Protection client d’étiquetage unifié écrit les fichiers journaux du client dans le dossier **%LocalAppData%\Microsoft\MSIP** . Ces fichiers servent à la résolution des problèmes par le Support Microsoft.
  
-Pour modifier le niveau de journalisation de ces fichiers, localisez le nom de la valeur suivante dans le registre et définissez les données de la valeur sur le niveau de journalisation requis:
+Pour modifier le niveau de journalisation de ces fichiers, localisez le nom de la valeur suivante dans le registre et définissez les données de la valeur sur le niveau de journalisation requis :
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\LogLevel**
 
 Définissez le niveau de journalisation sur l'une des valeurs suivantes :
 
-- **Désactivé** : aucune journalisation locale.
+- **Off**: aucune journalisation locale.
 
-- **Erreur** : erreurs uniquement.
+- **Erreur**: erreurs uniquement.
 
-- **Avertir** : Erreurs et avertissements.
+- **WARN**: erreurs et avertissements.
 
-- **Info** : Journalisation minimale, qui n’inclut aucun ID d’événement (paramètre par défaut pour le scanneur).
+- **Info**: journalisation minimale, qui n’indique aucun ID d’événement (paramètre par défaut pour le scanneur).
 
-- **Debug** : Informations complètes.
+- **Débogage**: informations complètes.
 
-- **Trace** : Journalisation détaillée (paramètre par défaut pour les clients).
+- **Trace**: journalisation détaillée (paramètre par défaut pour les clients).
 
 Ce paramètre de registre ne modifie pas les informations qui sont envoyées à Azure Information Protection pour la [création de rapports centraux](../reports-aip.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
-Maintenant que vous avez personnalisé le client d’étiquetage unifié Azure Information Protection, consultez les ressources suivantes pour obtenir des informations supplémentaires dont vous pouvez avoir besoin pour prendre en charge ce client:
+Maintenant que vous avez personnalisé le client d’étiquetage unifié Azure Information Protection, consultez les ressources suivantes pour obtenir des informations supplémentaires dont vous pouvez avoir besoin pour prendre en charge ce client :
 
 - [Fichiers du client et journalisation de l’utilisation](client-admin-guide-files-and-logging.md)
 

@@ -13,27 +13,27 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 52a5d195b20559549be40fea1d386c4175b2f8b7
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: d357f5ddbaa4387e16ac476588d1651fe583b374
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314265"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447874"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Azure Information Protection client d’étiquetage unifié pour Windows
 
 >*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
-> *Instructions pour : [Azure Information Protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Le client d’étiquetage unifié Azure Information Protection pour Windows est un client téléchargeable pour les organisations qui utilisent des [étiquettes de sensibilité](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) pour classifier et protéger des documents et des e-mails. Ce client est également doté d’une visionneuse pour les organisations ne disposant pas de leur propre infrastructure de protection des informations, mais souhaitant utiliser du contenu qui a été protégé par d’autres organisations utilisant le service Rights Management de Microsoft.
+Le client d’étiquetage unifié Azure Information Protection pour Windows est un client téléchargeable pour les organisations qui utilisent des [étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) pour classifier et protéger des documents et des e-mails. Ce client est également doté d’une visionneuse pour les organisations ne disposant pas de leur propre infrastructure de protection des informations, mais souhaitant utiliser du contenu qui a été protégé par d’autres organisations utilisant le service Rights Management de Microsoft.
 
 > [!NOTE]
 > Ce client, également appelé simplement client d’étiquetage unifié, remplace le client Azure Information Protection (Classic). Si vous n’êtes pas sûr du client à utiliser, consultez [choisir le client Azure information protection à utiliser](use-client.md#choose-which-azure-information-protection-client-to-use).
 
-Utilisez les ressources suivantes pour le client d’étiquetage unifié:
+Utilisez les ressources suivantes pour le client d’étiquetage unifié :
 
-- [Azure Information Protection client d’étiquetage unifié: historique des versions](unifiedlabelingclient-version-release-history.md)
+- [Azure Information Protection client d’étiquetage unifié : historique de publication des versions](unifiedlabelingclient-version-release-history.md)
 
 - [Guide de l’administrateur pour le client d’étiquetage unifié Azure Information Protection](clientv2-admin-guide.md)
 

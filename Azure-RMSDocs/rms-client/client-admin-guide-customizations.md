@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 03793c18accb1d3728a25f95012255431b8b83c6
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: a4a507423ed0a06627fcf5e28bb053d622ca252f
+ms.sourcegitcommit: b1ca785ae8ea5a91393a1602aded899be1951b2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447680"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811188"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -492,7 +492,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
 
-N’utilisez ce paramètre que si vous avez un [déploiement S/MIME](https://docs.microsoft.com/microsoft-365/compliance/s-mime-for-message-signing-and-encryption) fonctionnel et que vous souhaitez qu’une étiquette applique automatiquement cette méthode de protection aux e-mails, plutôt que la protection Rights Management d’Azure Information Protection. La protection qui en résulte est la même que lorsque l’utilisateur sélectionne manuellement les options S/MIME dans Outlook.
+N’utilisez ce paramètre que si vous avez un [déploiement S/MIME](https://docs.microsoft.com/exchange/s-mime-for-message-signing-and-encryption) fonctionnel et que vous souhaitez qu’une étiquette applique automatiquement cette méthode de protection aux e-mails, plutôt que la protection Rights Management d’Azure Information Protection. La protection qui en résulte est la même que lorsque l’utilisateur sélectionne manuellement les options S/MIME dans Outlook.
 
 Cette configuration implique de spécifier un paramètre client avancé nommé **LabelToSMIME** pour chacune des étiquettes Azure Information Protection qui devront appliquer la protection S/MIME. Ensuite, définissez la valeur à utiliserpour chaque entrée avec la syntaxe suivante :
 

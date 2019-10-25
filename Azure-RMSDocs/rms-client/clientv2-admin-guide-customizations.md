@@ -3,7 +3,7 @@ title: Configurations personnalisées-Azure Information Protection client d’é
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/03/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 95c873af126c9882bcb74790e8e68834149738e8
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: e396296e896dad79deaf8caf3474e7297ccd2080
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447825"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805695"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -123,6 +123,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |EnableCustomPermissions|[Désactiver les autorisations personnalisées dans l’Explorateur de fichiers](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Pour les fichiers protégés avec des autorisations personnalisées, toujours afficher des autorisations personnalisées pour les utilisateurs dans l’Explorateur de fichiers](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|EnableLabelBySharePointProperties|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 |HideBarByDefault|[Afficher la barre Information Protection dans les applications Office](##display-the-information-protection-bar-in-office-apps)|
 |LogMatchedContent|[Envoyer les correspondances de type d’informations à Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
 |OutlookBlockTrustedDomains|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -421,7 +422,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la str
 
 - Clé 2 : **AttachmentActionTip**
 
-- Valeur de clé 2 : « @no__t-info-bulle 0customized > »
+- Valeur de clé 2 : «\<info-bulle personnalisée > »
 
 L’info-bulle personnalisée ne prend en charge qu’une seule langue.
 
@@ -472,7 +473,7 @@ Lorsque ces conditions sont remplies, l’utilisateur voit un message contextuel
 Quand les messages contextuels concernent une étiquette spécifique, vous pouvez configurer des exceptions pour les destinataires par nom de domaine.
 
 > [!TIP]
-> Pour obtenir un exemple de procédure pas à pas de configuration de ces paramètres, consultez la vidéo [Azure information protection configuration contextuelle Outlook](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
+> Pour obtenir un exemple de procédure pas à pas de configuration de ces paramètres, consultez la vidéo [Azure information protection configuration contextuelle Outlook](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Pour implémenter des messages d’avertissement, de justification ou de blocage pour des étiquettes spécifiques :
 
@@ -655,7 +656,7 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
 Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
 
-Lorsque le client d’étiquetage unifié Azure Information Protection est utilisé dans les applications Office, il recherche des informations sensibles dans les documents lorsqu’ils sont enregistrés pour la première fois. Si le paramètre avancé [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) n’est pas défini sur **false**, les types d’informations sensibles prédéfinis et personnalisés (client en version préliminaire uniquement) trouvés sont ensuite envoyés à [Azure information protection Analytics](../reports-aip.md).
+Lorsque le client d’étiquetage unifié Azure Information Protection est utilisé dans les applications Office, il recherche des informations sensibles dans les documents lorsqu’ils sont enregistrés pour la première fois. Si le paramètre avancé [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) n’est pas défini sur **false**, tous les types d’informations sensibles prédéfinis et personnalisés détectés sont ensuite envoyés à [Azure information protection Analytics](../reports-aip.md).
 
 Pour modifier ce comportement afin que les types d’informations sensibles détectés par le client d’étiquetage unifié ne soient pas envoyés, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
 
@@ -793,6 +794,22 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
 
+### <a name="extend-your-label-migration-rules-to-sharepoint-properties"></a>Étendre vos règles de migration d’étiquette à des propriétés SharePoint
+
+Vous pouvez utiliser vos paramètres avancés labelByCustomProperties avec des propriétés SharePoint que vous pouvez exposer en tant que colonnes aux utilisateurs.
+
+Ce paramètre est pris en charge lorsque vous utilisez Word, Excel et PowerPoint.
+
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes pour la stratégie d’étiquette sélectionnée :
+
+- Clé : **EnableLabelBySharePointProperties**
+
+- Valeur : **True**
+
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
+
 ## <a name="apply-a-custom-property-when-a-label-is-applied"></a>Appliquer une propriété personnalisée lorsqu’une étiquette est appliquée
 
 Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) d’étiquette que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
@@ -889,6 +906,7 @@ Exemple de commande PowerShell, où votre étiquette parente est nommée « Con
 
     Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 
+
 ## <a name="specify-a-color-for-the-label"></a>Spécifier une couleur pour l’étiquette
 
 Cette configuration utilise des [Paramètres avancés](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) d’étiquette que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
@@ -931,6 +949,43 @@ En outre :
 
 - Vous pouvez utiliser l’option **Réinitialiser les paramètres** dans **aide et commentaires** pour vous déconnecter et supprimer les étiquettes et les paramètres de stratégie actuellement téléchargés à partir du centre de sécurité et de conformité Office 365, du centre de sécurité Microsoft 365 ou de la Microsoft 365 Centre de conformité.
 
+
+## <a name="support-for-disconnected-computers"></a>Prise en charge des ordinateurs déconnectés
+
+> [!IMPORTANT]
+> Les ordinateurs déconnectés sont pris en charge pour les scénarios d’étiquetage suivants uniquement : Explorateur de fichiers, PowerShell et le scanneur. Pour étiqueter des documents dans vos applications Office, vous devez disposer d’une connectivité à Internet.
+
+Par défaut, le Azure Information Protection client d’étiquetage unifié tente automatiquement de se connecter à Internet pour télécharger les étiquettes et les paramètres de stratégie d’étiquette à partir du centre de gestion des étiquettes : le Centre de sécurité et de conformité Office 365, le Microsoft 365 Security Center ou le centre de conformité des Microsoft 365. Si vous avez des ordinateurs qui ne peuvent pas se connecter à Internet pendant un certain temps, vous pouvez exporter et copier des fichiers qui gèrent manuellement la stratégie du client d’étiquetage unifié.
+
+Ample
+
+1. Choisissez ou créez un compte d’utilisateur dans Azure AD que vous allez utiliser pour télécharger des étiquettes et des paramètres de stratégie que vous souhaitez utiliser sur votre ordinateur déconnecté.
+
+2. En tant que paramètre de stratégie d’étiquette supplémentaire pour ce compte, [désactivez l’envoi de données d’audit à Azure information protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) à l’aide du paramètre avancé **EnableAudit** .
+    
+    Nous vous recommandons d’effectuer cette étape, car si l’ordinateur déconnecté dispose d’une connectivité Internet périodique, il envoie les informations de journalisation à Azure Information Protection Analytics qui comprend le nom d’utilisateur de l’étape 1. Ce compte d’utilisateur peut être différent du compte local que vous utilisez sur l’ordinateur déconnecté.
+
+3. À partir d’un ordinateur connecté à Internet et sur lequel le client d’étiquetage unifié est installé et connecté avec le compte d’utilisateur de l’étape 1, téléchargez les étiquettes et les paramètres de stratégie.
+
+4. À partir de cet ordinateur, exportez les fichiers journaux.
+    
+    Par exemple, exécutez l’applet de commande [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs) ou utilisez l’option **Exporter les journaux** de la boîte de dialogue [aide et commentaires](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) du client. 
+    
+    Les fichiers journaux sont exportés sous la forme d’un fichier compressé unique.
+
+5.  Ouvrez le fichier compressé et, à partir du dossier MSIP, copiez tous les fichiers qui ont une extension de nom de fichier. Xml.
+
+6. Collez ces fichiers dans le dossier **%LocalAppData%\Microsoft\MSIP** sur l’ordinateur déconnecté.
+
+7. Si le compte d’utilisateur choisi est un compte qui se connecte généralement à Internet, activez à nouveau l’envoi des données d’audit en affectant à la valeur **EnableAudit** la valeur **true**.
+
+8. Pour que l’ordinateur déconnecté protège des fichiers, reprotégez les fichiers, supprimez la protection des fichiers ou Inspectez les fichiers protégés : sur l’ordinateur déconnecté, exécutez l’applet de commande [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec le paramètre *DelegatedUser* et spécifiez le compte d’utilisateur créé à l’étape 1 pour définir le contexte de l’utilisateur. Exemple :
+    
+        Set-AIPAuthentication -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser offlineuser@contoso.com
+
+Sachez que si un utilisateur de cet ordinateur sélectionne l’option **Réinitialiser les paramètres** dans [aide et commentaires](clientv2-admin-guide.md#help-and-feedback-section), cette action supprime les fichiers de stratégie et rend le client inopérant tant que vous n’avez pas remplacé manuellement les fichiers ou que le client ne se connecte pas à Internet. télécharge les fichiers.
+
+Si votre ordinateur déconnecté exécute le scanneur Azure Information Protection, vous devez effectuer des étapes de configuration supplémentaires. Pour plus d’informations, voir [restriction : le serveur du scanneur ne peut pas disposer d’une connexion Internet](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) à partir des instructions de déploiement de l’analyseur.
 
 ## <a name="change-the-local-logging-level"></a>Modifier le niveau de journalisation local
 

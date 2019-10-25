@@ -14,10 +14,10 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 52690476d54eb2c23aee4c77f66ca55d320831cb
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71689507"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Surveiller le connecteur Azure Rights Management
@@ -133,7 +133,7 @@ Pour plus d’informations sur la configuration du connecteur RMS pour les conne
 
 Avertissement **2003**
 
-**La liste des autorisations est vide. Le service n’est pas utilisable tant que la liste des utilisateurs et groupes autorisés pour le connecteur n’est pas renseignée.**
+**La liste des autorisations est vide. Le service ne sera pas utilisable tant que la liste des utilisateurs et des groupes autorisés pour le connecteur n’a pas été remplie.**
 
 Cet événement est consigné quand le connecteur RMS n’a pas de liste de comptes autorisés, ce qui empêche tout serveur local de s’y connecter. Le connecteur RMS télécharge la liste toutes les 15 minutes à partir d’Azure RMS. 
 
@@ -167,7 +167,7 @@ Quand vous installez le connecteur RMS, il crée automatiquement les compteurs d
 
 Par exemple, vous pouvez subir régulièrement des retards lorsque les documents ou les e-mails sont protégés. Vous pouvez également subir des retards à l’ouverture des documents et des e-mails protégés. Dans ce cas, les compteurs de performances peuvent vous aider à déterminer si les retards sont dus au temps de traitement du connecteur, au temps de traitement du service Azure Rights Management ou à un délai réseau. 
 
-Pour vous permettre d’identifier l’origine du retard, recherchez les compteurs qui incluent des valeurs moyennes pour le **Temps de traitement du connecteur**, le **Temps de réponse du service** et le **Temps de réponse du connecteur**. Exemple : **Temps de réponse moyen du connecteur pour les demandes de licences par lot réussies**.
+Pour vous permettre d’identifier l’origine du retard, recherchez les compteurs qui incluent des valeurs moyennes pour le **Temps de traitement du connecteur**, le **Temps de réponse du service** et le **Temps de réponse du connecteur**. Par exemple : **Temps de réponse moyen du connecteur pour les demandes de licences par lot réussies**.
 
 Si vous avez récemment ajouté des comptes de serveur pour utiliser le connecteur, le compteur à consulter est **Durée depuis la dernière mise à jour de la stratégie d’autorisation** pour vérifier que le connecteur a téléchargé la liste depuis que vous l’avez mise à jour, ou déterminer si vous devez attendre un peu plus longtemps (jusqu’à 15 minutes).
 

@@ -12,12 +12,12 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a404bfbc36c8952214ed3c6814bab44368366170
-ms.sourcegitcommit: 0d336e4b5386f4861db9492c7dce2ef0e8cf0d6d
+ms.openlocfilehash: 86f53fd6fa1be34399d104bd33a9b0e749f3f949
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2019
-ms.locfileid: "70017619"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805634"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Comparaison d’Azure Information Protection avec AD RMS
 
@@ -27,19 +27,19 @@ Si vous connaissez ou avez déjà déployé les services AD RMS (Active Director
 
 Voici quelques-unes des principales différences pour Azure Information Protection :
 
-- **Aucune infrastructure de serveur nécessaire** : Azure Information Protection n’a pas besoin de serveurs et certificats PKI supplémentaires, contrairement à AD RMS, car Microsoft Azure s’en occupe pour vous. Ainsi, cette solution cloud est plus rapide à déployer et plus facile à gérer.
+- **Aucune infrastructure serveur nécessaire** : Azure Information Protection n’a pas besoin de serveurs et de certificats PKI supplémentaires, contrairement à AD RMS, car Microsoft Azure s’en occupe pour vous. Ainsi, cette solution cloud est plus rapide à déployer et plus facile à gérer.
 
-- **Authentification basée sur le cloud** : Azure Information Protection utilise Azure AD pour l’authentification, à la fois pour les utilisateurs internes et pour les utilisateurs d’autres organisations. Cela signifie que vos utilisateurs peuvent être authentifiés même s’ils ne sont pas connectés à votre réseau interne et qu’il est plus facile de partager du contenu protégé avec des utilisateurs d’autres organisations. De nombreuses organisations disposent déjà de comptes d’utilisateur dans Azure AD, car elles exécutent des services Azure ou Office 365. Si ce n’est pas le cas, RMS for individuals permet aux utilisateurs de créer un compte gratuit. Il est également possible d’utiliser un compte Microsoft pour les [applications qui prennent en charge ce type d’authentification pour Azure Information Protection](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents). En comparaison, pour partager AD RMS contenu protégé avec une autre organisation, vous devez configurer des approbations explicites avec chaque organisation.
+- **Authentification basée sur le cloud** : Azure Information Protection utilise Azure AD pour l’authentification, à la fois pour les utilisateurs internes et les utilisateurs d’autres organisations. Cela signifie que vos utilisateurs peuvent être authentifiés même s’ils ne sont pas connectés à votre réseau interne et qu’il est plus facile de partager du contenu protégé avec des utilisateurs d’autres organisations. De nombreuses organisations disposent déjà de comptes d’utilisateur dans Azure AD, car elles exécutent des services Azure ou Office 365. Si ce n’est pas le cas, RMS for individuals permet aux utilisateurs de créer un compte gratuit. Il est également possible d’utiliser un compte Microsoft pour les [applications qui prennent en charge ce type d’authentification pour Azure Information Protection](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents). En comparaison, pour partager AD RMS contenu protégé avec une autre organisation, vous devez configurer des approbations explicites avec chaque organisation.
 
-- **Prise en charge intégrée des appareils mobiles** : Aucune modification du déploiement n’est nécessaire pour Azure Information Protection pour la prise en charge des appareils mobiles et des ordinateurs Mac. Pour prendre en charge ces appareils avec AD RMS, vous devez installer l’extension Appareils mobiles, configurer les services AD FS pour la fédération et créer des enregistrements supplémentaires pour votre service DNS public.
+- **Prise en charge intégrée des appareils mobiles**: aucune modification du déploiement n’est nécessaire pour Azure information protection pour la prise en charge des appareils mobiles et des ordinateurs Mac. Pour prendre en charge ces appareils avec AD RMS, vous devez installer l’extension Appareils mobiles, configurer les services AD FS pour la fédération et créer des enregistrements supplémentaires pour votre service DNS public.
 
-- **Modèles par défaut** : Azure Information Protection crée automatiquement des modèles par défaut qui restreignent l’accès du contenu à votre propre organisation. Ces modèles facilitent le démarrage immédiat de la protection des données sensibles. Il n’existe aucun modèle par défaut pour AD RMS.
+- **Modèles par défaut**: Azure information protection crée automatiquement des modèles par défaut qui restreignent l’accès du contenu à votre propre organisation. Ces modèles facilitent le démarrage immédiat de la protection des données sensibles. Il n’existe aucun modèle par défaut pour AD RMS.
 
-- **Modèles départementaux** : également appelés modèles délimités. Azure Information Protection prend en charge les modèles départementaux pour les modèles supplémentaires que vous créez. Cette configuration vous permet de définir un groupe d’utilisateurs autorisés à voir des modèles spécifiques dans leurs applications clientes. Le nombre de modèles rendus visibles étant limité, les utilisateurs peuvent plus facilement sélectionner la stratégie appropriée que vous définissez pour différents groupes d’utilisateurs. AD RMS ne prend pas en charge les modèles départementaux.
+- **Modèles départementaux**: également appelés modèles délimités. Azure Information Protection prend en charge les modèles départementaux pour les modèles supplémentaires que vous créez. Cette configuration vous permet de définir un groupe d’utilisateurs autorisés à voir des modèles spécifiques dans leurs applications clientes. Le nombre de modèles rendus visibles étant limité, les utilisateurs peuvent plus facilement sélectionner la stratégie appropriée que vous définissez pour différents groupes d’utilisateurs. AD RMS ne prend pas en charge les modèles départementaux.
 
-- **Suivi et révocation de documents** : Azure Information Protection prend en charge ces fonctionnalités avec le client Azure Information Protection (Classic), contrairement à AD RMS.
+- **Suivi et révocation des documents**: Azure information protection prend en charge ces fonctionnalités avec le client Azure information protection (Classic), contrairement à AD RMS.
 
-- **Classification et étiquetage** : Azure Information Protection prend en charge les étiquettes qui appliquent la classification et éventuellement la protection. Ces fonctionnalités sont fournies avec le [client Azure information protection (Classic) et le client d’étiquetage unifié Azure information protection](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use). À l’aide de ces clients, la classification et l’étiquetage peuvent être intégrés aux applications Office, à l’Explorateur de fichiers, à PowerShell et à un scanneur pour les magasins de données locaux. AD RMS ne prend pas en charge ces fonctionnalités de classification et d’étiquetage.
+- **Classification et étiquetage**: Azure information protection prend en charge les étiquettes qui appliquent la classification et éventuellement la protection. Ces fonctionnalités sont fournies avec le [client Azure information protection (Classic) et le client d’étiquetage unifié Azure information protection](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers). À l’aide de ces clients, la classification et l’étiquetage peuvent être intégrés aux applications Office, à l’Explorateur de fichiers, à PowerShell et à un scanneur pour les magasins de données locaux. AD RMS ne prend pas en charge ces fonctionnalités de classification et d’étiquetage.
 
 De plus, Azure Information Protection étant un service cloud, il peut offrir des correctifs et de nouvelles fonctionnalités plus rapidement qu’une solution de serveur locale. Aucune nouvelle fonctionnalité n’est planifiée pour AD RMS dans Windows Server.
 
@@ -51,8 +51,8 @@ Pour les autres différences, utilisez le tableau suivant pour une comparaison c
 |Active automatiquement la collaboration sécurisée sur les documents de toutes les organisations qui utilisent aussi Azure AD pour l’authentification.|La collaboration sécurisée sur les documents externes à l’organisation exige que des approbations d’authentification soient explicitement définies dans une relation point à point directe entre deux organisations. Vous devez configurer des domaines d’utilisateurs approuvés ou des approbations fédérées créées avec les services AD FS (Active Directory Federation Services).|
 |Envoyez un e-mail protégé (avec éventuellement des documents Office en pièce jointe qui sont automatiquement protégés) aux utilisateurs quand aucune relation d’approbation d’authentification n’existe. Ce scénario est possible en utilisant la fédération avec les fournisseurs de réseaux sociaux ou un code secret à usage unique, ainsi qu’un navigateur web pour l’affichage.|Ne prend pas en charge pas l’envoi d’e-mails protégés quand aucune relation d’approbation d’authentification n’existe.|
 |Prend en charge le client Azure Information Protection (Classic) et le client d’étiquetage unifié Azure Information Protection pour les activités de protection et de consommation.|Prend en charge le client Azure Information Protection (Classic) pour les activités de protection et de consommation. <br /><br />Prend en charge le client d’étiquetage unifié Azure Information Protection à des fins de consommation uniquement et vous devez installer l' [extension d’appareil Mobile services AD RMS (Active Directory Rights Management Services)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
-|Prend en charge l'authentification multifacteur (Multi-Factor Authentication, MFA) pour les ordinateurs et les appareils mobiles.<br /><br />Pour plus d’informations, consultez [Multi-Factor Authentication (MFA) et Azure Information Protection](./requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection).|Prend en charge l'authentification par carte à puce si IIS est configuré pour demander des certificats.|
-|Prend en charge le mode de chiffrement 2 par défaut pour fournir un niveau de sécurité recommandé pour les longueurs de clés et les algorithmes de chiffrement.|Prend en charge le mode de chiffrement 1 par défaut et requiert une configuration supplémentaire pour prendre en charge le mode de chiffrement 2 pour un niveau de sécurité recommandé.<br /><br />Pour plus d’informations, consultez [AD RMS modes](https://go.microsoft.com/fwlink/?LinkId=266659)de chiffrement.|
+|Prend en charge l’authentification multifacteur (MFA) pour les ordinateurs et les appareils mobiles.<br /><br />Pour plus d’informations, consultez [Multi-Factor Authentication (MFA) et Azure Information Protection](./requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection).|Prend en charge l'authentification par carte à puce si IIS est configuré pour demander des certificats.|
+|Prend en charge le mode de chiffrement 2 par défaut pour fournir un niveau de sécurité recommandé pour les longueurs de clés et les algorithmes de chiffrement.|Prend en charge le mode de chiffrement 1 par défaut et requiert une configuration supplémentaire pour prendre en charge le mode de chiffrement 2 pour un niveau de sécurité recommandé.<br /><br />Pour plus d’informations, consultez [AD RMS modes de chiffrement](https://go.microsoft.com/fwlink/?LinkId=266659).|
 |Requiert une licence Azure Information Protection ou une licence Azure Rights Management avec Office 365 pour protéger du contenu. <br /><br />Aucune licence n’est nécessaire pour utiliser du contenu protégé par Azure Information Protection (y compris si les utilisateurs appartiennent à une autre organisation).<br /><br />Pour plus d’informations sur les licences, y compris les différences entre une licence P1 et P2, consultez la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) du site Azure information protection.|Nécessite une licence RMS pour protéger du contenu et utiliser du contenu protégé par AD RMS.<br /><br />Pour plus d’informations sur les licences, consultez [licences d’accès client et licences de gestion](https://www.microsoft.com/en-us/Licensing/product-licensing/client-access-license.aspx) pour obtenir des informations générales, mais contactez votre partenaire Microsoft ou un représentant Microsoft pour obtenir des informations spécifiques.|
 
 ## <a name="cryptographic-controls-for-signing-and-encryption"></a>Contrôles de chiffrement pour la signature et le chiffrement
@@ -62,7 +62,7 @@ Azure Information Protection et AD RMS utilisent la norme AES 128 pour le chiff
 
 Azure Information Protection est conforme à la norme FIPS 140-2 lorsque la taille de votre clé de locataire est de 2 048 bits, ce qui correspond à la taille par défaut quand le service Azure Rights Management est activé. 
 
-Pour plus d’informations sur les contrôles de chiffrement, consultez [Contrôles de chiffrement utilisés par Azure RMS : Algorithmes et longueurs de clé](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
+Pour plus d’informations sur les contrôles de chiffrement, consultez [Contrôles de chiffrement utilisés par Azure RMS : algorithmes et longueurs de clé](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
 
 
 ## <a name="next-steps"></a>Étapes suivantes
@@ -70,7 +70,7 @@ Pour plus d’informations sur la configuration requise pour utiliser Azure Info
 
 Si vous envisagez de migrer de AD RMS vers Azure Information Protection, consultez [migration de AD RMS vers Azure information protection](migrate-from-ad-rms-to-azure-rms.md).
 
-Les forums aux questions suivants peuvent vous intéresser:
-- [Quelle est la différence entre Azure Information Protection et Microsoft Information Protection?](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection)
-- [Quelle est la différence entre Azure Information Protection et Azure Rights Management?](faqs.md#whats-the-difference-between-azure-information-protection-and-azure-rights-management)
+Les forums aux questions suivants peuvent vous intéresser :
+- [Quelle est la différence entre Azure Information Protection et Microsoft Information Protection ?](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection)
+- [Quelle est la différence entre Azure Information Protection et Azure Rights Management ?](faqs.md#whats-the-difference-between-azure-information-protection-and-azure-rights-management)
 

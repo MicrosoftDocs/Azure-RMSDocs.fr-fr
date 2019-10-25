@@ -14,10 +14,10 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 0de43192b44fb4e6d931d1e09ef8f01514c0a4ff
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "72447035"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
@@ -170,7 +170,7 @@ Quand une étiquette est appliquée à un document ou un e-mail, en arrière-pla
 
 - Dans les e-mails, ces informations sont stockées dans l’en-tête x- : **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
 
-- Pour les documents Word (. doc et. docx), les feuilles de calcul Excel (. xls et. xlsx), les présentations PowerPoint (. ppt et. pptx) et les documents PDF, ces métadonnées sont stockées dans la propriété personnalisée suivante : **MSIP_Label_ @ no__t-1GUID > _enabled = true**  
+- Pour les documents Word (. doc et. docx), les feuilles de calcul Excel (. xls et. xlsx), les présentations PowerPoint (. ppt et. pptx) et les documents PDF, ces métadonnées sont stockées dans la propriété personnalisée suivante : **MSIP_Label_\<GUID > _enabled = true**  
 
 Pour les e-mails, les informations d’étiquette sont stockées lors de l’envoi de l’e-mail. Pour les documents, les informations d’étiquette sont stockées lors de l’enregistrement du fichier. 
 

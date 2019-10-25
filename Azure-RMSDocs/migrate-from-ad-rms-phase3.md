@@ -14,10 +14,10 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: e723940e418b127a46405166368a96867784799c
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71684567"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Phase de migration 3 : Configuration côté client
@@ -86,7 +86,7 @@ Cette méthode convient uniquement aux clients Windows qui exécutent des applic
 
     f. Pour vérifier que cette configuration fonctionne comme prévu, essayez de vous connecter au fichier licensing.asmx directement à partir d’un navigateur. Le message d’erreur suivant doit s’afficher. Le client exécutant des applications Office 365, Office 2019 ou Office 2016 recherche alors l’enregistrement SRV :
     
-    **Message d’erreur 401.3 : vous ne disposez pas des autorisations permettant d’afficher ce répertoire ou cette page à l’aide des informations d’identification que vous avez fournies (accès refusé en raison des listes de contrôle d’accès).**
+    **Message d’erreur 401.3 : vous ne disposez pas des autorisations permettant d’afficher ce répertoire ou cette page à l’aide des informations d’identification que vous avez fournies (accès refusé en raison des listes de contrôle d’accès).**
 
 
 ## <a name="client-reconfiguration-by-using-registry-edits"></a>Reconfiguration du client à l’aide des modifications du Registre
@@ -107,7 +107,7 @@ Le script de configuration du client (Migrate-Client.cmd) configure les paramèt
 
 - Utilisez un script d’ouverture de session si l’utilisateur dispose de privilèges d’administrateur local.
 
-Le script de configuration utilisateur (Migrate-User.cmd) configure les paramètres au niveau de l’utilisateur et nettoie le magasin de licences de client. Cela signifie que ce script doit s’exécuter dans le contexte de l’utilisateur réel. Exemple :
+Le script de configuration utilisateur (Migrate-User.cmd) configure les paramètres au niveau de l’utilisateur et nettoie le magasin de licences de client. Cela signifie que ce script doit s’exécuter dans le contexte de l’utilisateur réel. Exemple :
 
 - Utilisez un script d’ouverture de session.
 
@@ -129,12 +129,12 @@ Quand vous ne pouvez pas migrer tous vos clients Windows à la fois, exécutez l
 
 1. Retournez aux scripts de migration **Migrate-Client.cmd** et **Migrate-User.cmd** que vous avez extraits après les avoir téléchargés au cours de la [phase de préparation](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
-2. Suivez les instructions de **Migrate-Client.cmd** pour modifier le script afin qu’il contienne l’URL du service Azure Rights Management de votre locataire ainsi que les noms des serveurs pour les URL de licences extranet et intranet du cluster AD RMS. Ensuite, incrémentez la version du script comme expliqué précédemment. Une bonne pratique pour le suivi des versions de script consiste à utiliser la date du jour au format suivant : AAAAMMJJ
+2. Suivez les instructions de **Migrate-Client.cmd** pour modifier le script afin qu’il contienne l’URL du service Azure Rights Management de votre locataire ainsi que les noms des serveurs pour les URL de licences extranet et intranet du cluster AD RMS. Ensuite, incrémentez la version du script comme expliqué précédemment. Une bonne pratique pour le suivi des versions de script consite à utiliser la date d’aujourd’hui au format suivant : AAAAMMJJ.
     
    > [!IMPORTANT]
    > Comme avant, veillez à ne pas introduire d’espaces supplémentaires avant ou après les adresses.
    > 
-   > De plus, si vos serveurs AD RMS utilisent des certificats de serveur SSL/TLS, vérifiez si les valeurs des URL de licence incluent le numéro de port **443** dans la chaîne. Par exemple : https://rms.treyresearch.net:443/_wmcs/licensing. Ces informations sont disponibles dans la console Active Directory Rights Management Services quand vous cliquez sur le nom du cluster et que vous consultez les informations **Détails du cluster**. Si vous voyez le numéro de port 443 dans l’URL, incluez cette valeur quand vous modifiez le script. Par exemple : https://rms.treyresearch.net:<strong>443</strong>. 
+   > De plus, si vos serveurs AD RMS utilisent des certificats de serveur SSL/TLS, vérifiez si les valeurs des URL de licence incluent le numéro de port **443** dans la chaîne. Par exemple : https://rms.treyresearch.net:443/_wmcs/licensing. Ces informations sont disponibles dans la console Active Directory Rights Management Services quand vous cliquez sur le nom du cluster et que vous consultez les informations **Détails du cluster**. Si vous voyez le numéro de port 443 dans l’URL, incluez cette valeur quand vous modifiez le script. Par exemple : https://rms.treyresearch.net:<strong>443</strong>. 
     
    Si vous devez récupérer l’URL du service Azure Rights Management pour *&lt;URLdevotrelocataire&gt;* , consultez [Pour identifier l’URL du service Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 

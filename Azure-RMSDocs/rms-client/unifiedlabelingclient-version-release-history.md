@@ -4,7 +4,7 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/03/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a9413cce67eda1cfb36e46ca199205faceafef73
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 7a41debe26783b530ec92dd38aa308b5e9da7546
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447918"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805275"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -47,21 +47,19 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 >  
 > Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
-Ce client remplace le client Azure Information Protection (Classic). Pour comparer les fonctionnalités et les fonctionnalités avec le client classique, consultez [comparer les clients](use-client.md#compare-the-clients).
+Ce client remplace le client Azure Information Protection (Classic). Pour comparer les fonctionnalités et les fonctionnalités avec le client Classic, consultez [comparer les clients d’étiquetage pour les ordinateurs Windows](use-client.md##compare-the-labeling-clients-for-windows-computers).
 
-## <a name="versions-later-than-22210"></a>Versions ultérieures à 2.2.21.0
+## <a name="version-25330"></a>Version 2.5.33.0
 
-Si vous disposez d’une version 2 du client qui est ultérieure à 2.2.21.0, il s’agit d’une version préliminaire à des fins de test et d’évaluation.
-
-**Publication**: 09/17/2019
+**Publication**: 10/23/2019
 
 **Nouvelles fonctionnalités :**
 
-- Prise en charge du [scanneur](../deploy-aip-scanner.md), pour inspecter et étiqueter les documents des magasins de données locaux. Avec cette version du scanneur :
+- Version préliminaire du [scanneur](../deploy-aip-scanner.md), pour inspecter et étiqueter les documents des magasins de données locaux. Avec cette version du scanneur :
     
     - Plusieurs scanneurs peuvent partager la même SQL Server base de données lorsque vous configurez les scanneurs pour qu’ils utilisent le même profil de scanneur. Cette configuration facilite la gestion de plusieurs scanneurs et entraîne des temps d’analyse plus rapides. Lorsque vous utilisez cette configuration, attendez toujours que l’installation d’un scanneur soit terminée avant d’installer un autre scanneur avec le même profil.
     
-    - Vous devez spécifier un profil lorsque vous installez le scanneur et que la base de données du scanneur est nommée **AIPScannerUL_ @ no__t-1profile_name >** . Le paramètre de *Profil* est également obligatoire pour Set-AIPScanner.
+    - Vous devez spécifier un profil lorsque vous installez le scanneur et que la base de données du scanneur s’intitule **AIPScannerUL_\<profile_name >** . Le paramètre de *Profil* est également obligatoire pour Set-AIPScanner.
     
     - Vous pouvez définir une étiquette par défaut pour tous les documents, même si les documents sont déjà étiquetés. Dans les paramètres Profil du scanneur ou référentiel, affectez à l’option **Renommer les fichiers** la valeur **activé** avec la case à cocher **appliquer l’étiquette par défaut** activée.
     
@@ -80,7 +78,11 @@ Si vous disposez d’une version 2 du client qui est ultérieure à 2.2.21.0, il
     
     Pour plus d’informations, consultez l’annonce du billet de blog : l’étiquetage unifié la préversion du [scanneur AIP offre une montée en charge horizontale et bien plus encore.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
 
-- L’applet de commande PowerShell [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) a de nouveaux paramètres lorsque vous souhaitez [étiqueter des fichiers de manière non interactive](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection), et une [nouvelle procédure pour inscrire une application dans Azure ad](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client). Les exemples de scénarios incluent le scanneur et les scripts PowerShell automatisés pour étiqueter les documents.
+- L’applet de commande PowerShell [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) a de nouveaux paramètres (*AppID*, *AppSecret*, *TenantId*, *DelegatedUser*et *OnBehalfOf*) pour lorsque vous souhaitez étiqueter des fichiers de manière non interactive, ainsi qu’un nouveau procédure d’inscription d’une application dans Azure AD. Les exemples de scénarios incluent le scanneur et les scripts PowerShell automatisés pour étiqueter les documents. Pour obtenir des instructions, consultez [Comment étiqueter des fichiers de manière non interactive](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) à partir du Guide de l’administrateur.
+    
+    Notez que *DelegatedUser* est un nouveau paramètre depuis la dernière version d’évaluation du client d’étiquetage unifié et que les autorisations de l’API pour l’application inscrite ont donc changé.
+
+- Nouveau paramètre avancé de stratégie d’étiquette PowerShell pour [étendre vos règles de migration d’étiquette aux propriétés SharePoint](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-sharepoint-properties).
 
 - Les types d’informations sensibles personnalisés correspondants sont envoyés à [Azure information protection Analytics](../reports-aip.md).
 
@@ -88,16 +90,29 @@ Si vous disposez d’une version 2 du client qui est ultérieure à 2.2.21.0, il
 
 - Lorsque vous ajoutez ou modifiez des paramètres de protection sur une étiquette, le client réapplique l’étiquette avec ces derniers paramètres de protection lors de l’enregistrement du document suivant. De même, le scanneur réapplique l’étiquette avec ces derniers paramètres de protection lors de la prochaine analyse du document en mode d’application.
 
+- [Prise en charge des ordinateurs déconnectés](clientv2-admin-guide-customizations.md#support-for-disconnected-computers) en exportant des fichiers à partir d’un client et en les copiant manuellement sur l’ordinateur déconnecté. Notez que cette configuration est prise en charge pour l’étiquetage avec l’Explorateur de fichiers, PowerShell et le scanneur. Cette configuration n’est pas prise en charge pour l’étiquetage avec les applications Office.
+
 - New cmdlet, [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs), pour rassembler tous les fichiers journaux de%LocalAppData%\Microsoft\MSIP\Logs et les enregistre dans un fichier unique et compressé avec un format. zip. Ce fichier peut ensuite être envoyé à Support Microsoft si vous êtes invité à envoyer des fichiers journaux pour vous aider à examiner un problème signalé.
 
 **Céder**
 
 - Vous pouvez apporter des modifications à un fichier protégé à l’aide de l’Explorateur de fichiers et cliquer avec le bouton droit après avoir supprimé un mot de passe pour le fichier.
 
+- Vous pouvez ouvrir des fichiers protégés en mode natif dans la visionneuse sans avoir à [utiliser le droit](../configure-usage-rights.md#usage-rights-and-descriptions)enregistrer sous, exporter (exporter).
+
+- Les étiquettes et les paramètres de stratégie sont actualisés comme prévu sans devoir exécuter [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication?)ou supprimer manuellement le dossier%localappdata%\Microsoft\MSIP\mip.
+
+**Modifications supplémentaires**
+
+- [Réinitialiser les paramètres](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) supprime maintenant les dossiers%LocalAppData%\Microsoft\MSIP\mip\\ *\<processname. exe\>* au lieu de%LocalAppData%\Microsoft\MSIP\mip\\ *\<ProcessName\>* \mip Répertoire.
+
+- L' [AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) d’accès à la sécurité comprend désormais l’ID de contenu d’un document protégé.
 
 ## <a name="version-22210"></a>Version 2.2.21.0
 
-**Publication**: 09/03/2019
+**Publication**: 09/03/2020
+
+Pris en charge jusqu’à 04/23/2020
 
 **Céder**
 
@@ -219,7 +234,7 @@ Cette première version de disponibilité générale du client d’étiquetage u
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations, consultez les [tableaux de comparaison](use-client.md#compare-the-clients).
+Pour plus d’informations, consultez les [tableaux de comparaison](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
 Pour plus d’informations sur l’installation et l’utilisation de ce client : 
 

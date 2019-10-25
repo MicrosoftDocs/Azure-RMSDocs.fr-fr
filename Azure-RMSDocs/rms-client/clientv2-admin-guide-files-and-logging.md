@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1f568c3bf2a2e6cd9b94b0a7a8bd9a49b35c4958
-ms.sourcegitcommit: ef57eb7896cf0aeb592f5e8ab37452f1e95aa20d
+ms.openlocfilehash: 8e2b6d0b3e0436800cd73959107bd544dae348b0
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542356"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805588"
 ---
 # <a name="admin-guide-azure-information-protection-unified-labeling-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Azure Information Protection fichiers du client d’étiquetage unifié et journalisation de l’utilisation du client
 
@@ -34,9 +34,14 @@ Fichiers du client :
 
 - Pour les systèmes d’exploitation 32 bits : **\Program Files\Microsoft Azure Information Protection**
 
-Fichiers journaux du client :
+Fichiers journaux du client et fichiers de stratégie actuellement installés :
 
-- Pour les systèmes d’exploitation 64 bits et 32 bits : **%LocalAppData%\Microsoft\MSIP\Logs**
+- Pour les systèmes d’exploitation 64 bits et 32 bits : **%localappdata%\Microsoft\MSIP**
+
+
+## <a name="usage-logging-for-the-azure-information-protection-unified-labeling-client"></a>Journalisation de l’utilisation pour le client d’étiquetage unifié Azure Information Protection
+
+Le client d’étiquetage unifié n’enregistre pas l’activité des utilisateurs dans le journal des événements Windows local. Utilisez plutôt la fonctionnalité de [création de rapports centralisée](../reports-aip.md) de Azure information protection. 
 
 
 ## <a name="next-steps"></a>Étapes suivantes

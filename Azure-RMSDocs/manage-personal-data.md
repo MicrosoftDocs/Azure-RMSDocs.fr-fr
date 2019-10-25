@@ -13,10 +13,10 @@ ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: d16e6e7f0667f9ac57bf772de272d23838b793e1
-ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71966890"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gérer les données personnelles pour Azure Information Protection
@@ -54,7 +54,7 @@ Quand Azure Information Protection est utilisé pour classifier et protéger des
 
 Exécutez l’applet de commande [obtenir-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate) pour obtenir la liste des modèles de protection. Vous pouvez utiliser l’ID de modèle pour obtenir des informations détaillées sur un modèle spécifique. L’objet `RightsDefinitions` affiche les données personnelles, le cas échéant. 
 
-Exemple :
+Exemple :
 ```
 PS C:\Users> Get-AipServiceTemplate -TemplateId fcdbbc36-1f48-48ca-887f-265ee1268f51 | select *
 
@@ -91,7 +91,7 @@ Exécutez l’applet de commande [AipServiceSuperUser](/powershell/module/aipser
 
 Exécutez l’applet de commande [obtenir-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) pour obtenir un journal des actions d’administration pour le service de protection (Azure Rights Management) à partir de Azure information protection. Ce journal contient des données personnelles sous la forme d’adresses e-mail et d’adresses IP. Le journal est en texte clair et une fois téléchargé, les détails d’un administrateur spécifique peuvent être recherchés hors connexion.
 
-Exemple :
+Exemple :
 ```
 PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -100,7 +100,7 @@ The Rights Management administration log was successfully generated and can be f
 ### <a name="usage-logs-for-the-protection-service"></a>Journaux d’utilisation pour le service de protection
 Exécutez l’applet de commande [obtenir-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog) pour récupérer un journal des actions de l’utilisateur final qui utilisent le service de protection à partir de Azure information protection. Le journal peut inclure des données personnelles sous la forme d’adresses e-mail et d’adresses IP. Le journal est en texte clair et une fois téléchargé, les détails d’un administrateur spécifique peuvent être recherchés hors connexion.
 
-Exemple :
+Exemple :
 ```
 PS C:\Users> Get-AipServiceUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -132,7 +132,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 Exécutez l’applet de commande [AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) pour récupérer des informations à partir du site de suivi des documents sur un utilisateur spécifique. Pour accéder aux informations de suivi associées aux journaux de document, utilisez l’applet de commande [AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps) .
 
-Exemple :
+Exemple :
 ```
 PS C:\Users> Get-AipServiceDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -201,9 +201,9 @@ Lorsque le client Azure Information Protection exécute le scanneur, les donnée
 
 Pour désactiver la journalisation des informations pour le scanneur et le client Azure Information Protection, utilisez les configurations suivantes :
 
-- Pour le client Azure Information Protection : créez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) qui configure **LogLevel** sur **Désactivé**.
+- Pour le client Azure Information Protection : créez un [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) qui configure **LogLevel** sur **off**.
 
-- Pour le scanneur Azure Information Protection : utilisez la cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) pour définir le paramètre *ReportLevel* sur **Désactivé**.
+- Pour le scanneur Azure Information Protection : utilisez l’applet de commande [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) pour définir le paramètre *ReportLevel* sur **off**.
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 
@@ -236,7 +236,7 @@ Vous ne pouvez pas mettre à jour les adresses e-mail pour les super utilisateur
 
 ### <a name="protection-templates"></a>Modèles de protection
 
-Exécutez l’applet de commande [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) pour mettre à jour le modèle de protection. Étant donné que les données personnelles se trouvent dans la propriété `RightsDefinitions`, vous devez également utiliser l’applet de commande [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) pour créer un objet de définitions de droits avec les informations mises à jour et utiliser l’objet de définitions de droits avec la `Set-AipServiceTemplateProperty` PolicySchedule.
+Exécutez l’applet de commande [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) pour mettre à jour le modèle de protection. Étant donné que les données personnelles se trouvent dans la propriété `RightsDefinitions`, vous devez également utiliser l’applet de commande [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) pour créer un objet de définitions de droits avec les informations mises à jour, et utiliser l’objet de définitions de droits avec les `Set-AipServiceTemplateProperty` PolicySchedule.
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Super utilisateurs et administrateurs délégués pour le service de protection
 
@@ -267,7 +267,7 @@ Pour supprimer des données personnelles dans les fichiers journaux du client et
 
 Utilisez les trois étapes suivantes pour demander à Microsoft de supprimer les données personnelles dans les journaux de suivi de document, les journaux d’administration ou les journaux d’utilisation pour le service de protection. 
 
-**Étape 1 : Lancer la demande de suppression**
+**Étape 1 : Lancer la demande de suppression**
 [Contactez le Support Microsoft](information-support.md#to-contact-microsoft-support) afin qu’il ouvre un dossier de support Azure Information Protection en vue de la suppression de données de votre locataire. Vous devez prouver que vous êtes administrateur de votre locataire Azure Information Protection et comprendre que la confirmation de ce processus prend plusieurs jours. Lors de l’envoi de votre demande, vous devrez fournir des informations supplémentaires en fonction des données qui doivent être supprimées.
 
 - Pour supprimer le journal d’administration, fournissez la **date de fin**. Tous les journaux d’administration jusqu'à cette date de fin seront supprimés.
@@ -276,9 +276,9 @@ Utilisez les trois étapes suivantes pour demander à Microsoft de supprimer les
 
 La suppression de ces données est irréversible. Il n’existe aucun moyen de récupérer les données après le traitement d’une demande de suppression. Il est recommandé aux administrateurs d’exporter les données requises avant de soumettre une demande de suppression.
 
-**Étape 2 : Attendre la vérification** Microsoft doit vérifier que votre demande de suppression d’un ou plusieurs journaux est légitime. Cela peut prendre jusqu’à cinq jours ouvrés.
+**Étape 2 : Attendre la vérification** Microsoft doit vérifier que votre demande de suppression d’un ou plusieurs journaux est légitime. Cela peut prendre jusqu’à cinq jours ouvrés.
 
-**Étape 3 : Obtenir la confirmation de la suppression** Les services de support technique Microsoft vous enverront un e-mail de confirmation de la suppression des données. 
+**Étape 3 : Obtenir la confirmation de la suppression** Les services de support technique Microsoft (CSS) vous enverront un e-mail de confirmation de la suppression des données. 
 
 ## <a name="exporting-personal-data"></a>Exportation des données personnelles
 Lorsque vous utilisez les applets de commande PowerShell AIPService ou AADRM, les données personnelles sont rendues disponibles pour la recherche et l’exportation sous la forme d’un objet PowerShell. L’objet PowerShell peut être converti en objet JSON et être enregistré à l’aide de l’applet de commande `ConvertTo-Json`.

@@ -3,8 +3,8 @@ title: Client Azure Information Protection pour Windows
 description: Ressources d’informations pour le client Azure Information Protection (Classic) pour Windows.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 09/26/2019
+manager: rkarlin
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,23 +12,23 @@ ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0b10037f1ea3179c7268254b49a93cf932905c8b
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: dd143b60039053d1a7b7206ab42896a702e01328
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314283"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805714"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Client Azure Information Protection pour Windows
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2**
+>*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2**
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Le client Azure Information Protection (Classic) est le client téléchargeable d’origine pour les organisations qui utilisent [Azure information protection](../what-is-information-protection.md) pour classifier et protéger des documents et des e-mails, ou utiliser un service Rights Management pour protéger leurs données. Ce client est également doté d’une visionneuse pour les organisations ne disposant pas de leur propre infrastructure de protection des informations, mais souhaitant utiliser du contenu qui a été protégé par d’autres organisations utilisant le service Rights Management de Microsoft.
 
 > [!NOTE]
-> Ce client, également connu sous le nom de client Classic, est remplacé par le client d’étiquetage unifié Azure Information Protection. Si vous n’êtes pas sûr du client à utiliser, consultez [choisir le client Azure information protection à utiliser](use-client.md#choose-which-azure-information-protection-client-to-use).
+> Ce client, également connu sous le nom de client Classic, est remplacé par le client d’étiquetage unifié Azure Information Protection. Si vous n’êtes pas sûr du client à utiliser, consultez [choisir le client d’étiquetage à utiliser pour les ordinateurs Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 Utilisez les ressources suivantes pour le client classique :
 
@@ -41,7 +41,7 @@ Utilisez les ressources suivantes pour le client classique :
 > [!TIP]
 > Il existe également une application Azure Information Protection pour iOS et Android. Pour plus d’informations, consultez [Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android](mobile-app-faq.md ).
 > 
-> Pour les ordinateurs Mac : Utilisez l’application de partage RMS et consultez le [Forum aux questions sur l’application de partage Rights Management pour plateformes mobiles et Mac](https://technet.microsoft.com/dn451248).
+> Pour les ordinateurs Mac : utilisez l’application partage RMS et lisez le [Forum aux questions sur Rights Management application de partage pour les plateformes mobiles et Mac](https://technet.microsoft.com/dn451248).
 
 ## <a name="install-instructions"></a>Instructions d’installation
 

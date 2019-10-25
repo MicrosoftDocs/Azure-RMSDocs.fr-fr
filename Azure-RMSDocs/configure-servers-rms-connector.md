@@ -14,10 +14,10 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: a6a3727c559c7b2268e84790a8f9377165a5c00a
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71683842"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configuration des serveurs pour le connecteur Azure Rights Management
@@ -33,15 +33,15 @@ Avant de commencer, vérifiez que le connecteur RMS est installé et configuré.
 ## <a name="configuring-servers-to-use-the-rms-connector"></a>Configuration de serveurs afin d'utiliser le connecteur RMS
 Une fois que vous avez installé et configuré le connecteur RMS, vous êtes en mesure de configurer les serveurs locaux destinés à se connecter au service Azure Rights Management et à utiliser cette technologie de protection par le biais du connecteur. Cela suppose de configurer les serveurs suivants :
 
--   **Pour Exchange 2016 et Exchange 2013** : Serveurs d’accès au client et serveurs de boîtes aux lettres
+-   **Pour Exchange 2016 et Exchange 2013** : serveurs d’accès au client et serveurs de boîte aux lettres
 
--   **Pour Exchange 2010** : Serveurs d’accès au client et serveurs de transport Hub
+-   **Pour Exchange 2010** : serveurs d’accès au client et serveurs de transport Hub
 
--   **Pour SharePoint** : serveurs web frontaux SharePoint, y compris ceux hébergeant le serveur d'administration centrale
+-   **Pour SharePoint** : serveurs web frontaux SharePoint, notamment ceux hébergeant le serveur d’administration centrale
 
--   **Pour l’infrastructure de classification des fichiers** : Ordinateurs Windows Server sur lesquels sont installés des Gestionnaire des ressources de fichiers
+-   **Pour l’infrastructure de classification des fichiers** : ordinateurs Windows Server sur lesquels le Gestionnaire de ressources de fichiers est installé
 
-Cette configuration nécessite des paramètres de registre. Pour ce faire, vous avez deux options : Automatiquement, avec l’outil de configuration de serveur pour le connecteur Microsoft RMS, ou manuellement, en modifiant le Registre.
+Cette configuration nécessite des paramètres de registre. Pour ce faire, deux options de configuration s’offrent à vous : automatique (en utilisant l’outil de configuration de serveur pour le connecteur Microsoft RMS) ou manuelle (en modifiant le Registre).
 
 ---
 
@@ -93,11 +93,11 @@ Après avoir modifié la configuration de ces serveurs, vous devez les redémarr
 
 3.  Déterminez de quelle façon exécuter l'outil :
 
-    -   **Localement** : Vous pouvez exécuter l’outil de manière interactive, à partir du serveur à configurer pour communiquer avec le connecteur RMS. Cette option est adaptée aux configurations uniques, comme un environnement de test.
+    -   **En local**: vous pouvez exécuter l'outil de manière interactive à partir du serveur à configurer pour communiquer avec le connecteur RMS. Cette option est adaptée aux configurations uniques, comme un environnement de test.
 
-    -   **Déploiement logiciel** : Vous pouvez exécuter l’outil pour générer des fichiers de Registre, que vous déployez ensuite sur un ou plusieurs serveurs pertinents avec une application de gestion des systèmes prenant en charge le déploiement logiciel, comme System Center Configuration Manager.
+    -   **Déploiement logiciel**: vous pouvez exécuter l'outil pour générer des fichiers de registre que vous déployez ensuite sur un ou plusieurs serveurs pertinents à l'aide d'une application de gestion des systèmes prenant en charge le déploiement logiciel, telle que System Center Configuration Manager.
 
-    -   **Stratégie de groupe** : Vous pouvez exécuter l’outil pour générer un script que vous donnez à un administrateur qui peut créer des objets stratégie de groupe pour les serveurs à configurer. Ce script créé un objet de stratégie de groupe pour chaque type de serveur à configurer, auquel l'administrateur peut assigner les serveurs pertinents.
+    -   **Stratégie de groupe**: vous pouvez exécuter l'outil pour générer un script, que vous pouvez ensuite transmettre à un administrateur capable de créer des objets de stratégie de groupe pour les serveurs à configurer. Ce script créé un objet de stratégie de groupe pour chaque type de serveur à configurer, auquel l'administrateur peut assigner les serveurs pertinents.
 
     > [!NOTE]
     > Cet outil configure les serveurs qui sont appelés à communiquer avec le connecteur RMS et qui sont répertoriés au début de cette section. N'exécutez pas cet outil sur les serveurs qui exécutent le connecteur RMS.
@@ -108,7 +108,7 @@ Après avoir modifié la configuration de ces serveurs, vous devez les redémarr
     Get-help .\GenConnectorConfig.ps1 -detailed
     ```
 
-Pour exécuter le script, vous devez entrer l’URL du connecteur RMS pour votre organisation. Saisissez le préfixe de protocole (HTTP:// ou HTTPS://) ainsi que le nom du connecteur, tel que défini dans le système DNS pour l'adresse d'équilibrage de charge. Par exemple, https : \//connecteur. contoso. com. L'outil utilise ensuite cette URL pour contacter les serveurs qui exécutent le connecteur RMS et obtenir d'autres paramètres servant à créer les configurations requises.
+Pour exécuter le script, vous devez entrer l’URL du connecteur RMS pour votre organisation. Saisissez le préfixe de protocole (HTTP:// ou HTTPS://) ainsi que le nom du connecteur, tel que défini dans le système DNS pour l'adresse d'équilibrage de charge. Par exemple, https :\//connector.contoso.com. L'outil utilise ensuite cette URL pour contacter les serveurs qui exécutent le connecteur RMS et obtenir d'autres paramètres servant à créer les configurations requises.
 
 > [!IMPORTANT]
 > Quand vous exécutez cet outil, veillez à spécifier le nom du connecteur RMS de votre organisation faisant l'objet d'un équilibrage de charge et non celui d'un serveur unique exécutant le service de connecteur RMS.
@@ -131,9 +131,9 @@ Consultez les sections suivantes pour obtenir des informations spécifiques pour
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>Configuration d'un serveur Exchange afin d'utiliser le connecteur
 Les rôles Exchange qui communiquent avec le connecteur RMS sont les suivants :
 
--   Pour Exchange 2016 et Exchange 2013 : Serveur d’accès au client et serveur de boîtes aux lettres
+-   Pour Exchange 2016 et Exchange 2013 : serveur d’accès au client et serveur de boîte aux lettres
 
--   Pour Exchange 2010 : Serveur d’accès au client et serveur de transport Hub
+-   Pour Exchange 2010 : serveur d'accès au client et serveur de transport Hub
 
 Pour utiliser le connecteur RMS, ces serveurs Exchange doivent exécuter l'une des versions logicielles suivantes :
 
@@ -158,7 +158,7 @@ Si vos serveurs Exchange exécutent une version antérieure du système d’expl
 
 1. Vérifiez que les serveurs Exchange sont autorisés à utiliser le connecteur RMS à l’aide de l’outil d’administration du connecteur RMS et des informations contenues dans la section [Définition des serveurs autorisés à utiliser le connecteur RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector). Cette configuration est nécessaire pour qu’Exchange puisse utiliser le connecteur RMS.
 
-2. Sur les rôles serveur Exchange qui communiquent avec le connecteur RMS, effectuez l'une des opérations suivantes :
+2. Sur les rôles serveur Exchange qui communiquent avec le connecteur RMS, effectuez l'une des opérations suivantes :
 
    -   Exécutez l'outil de configuration de serveur pour le connecteur Microsoft RMS. Pour plus d’informations, consultez [Comment utiliser l’outil de configuration de serveur pour le connecteur Microsoft RMS](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) dans cet article.
 
@@ -184,7 +184,7 @@ Pour utiliser le connecteur RMS, ces serveurs SharePoint doivent exécuter l'une
 
 -   SharePoint Server 2013
 
--   SharePoint Server 2010
+-   SharePoint Server 2010
 
 Un serveur SharePoint 2016 ou SharePoint 2013 doit également exécuter une version du client MSIPC 2.1 prise en charge avec le connecteur RMS. Pour vérifier que vous disposez d’une version prise en charge, téléchargez la dernière version du client à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=38396).
 
@@ -211,9 +211,9 @@ Les serveurs exécutant SharePoint 2010 doivent disposer d’une version du cli
 
     -   Si vous utilisez SharePoint 2016 ou SharePoint 2013, modifiez manuellement le Registre à l’aide des informations contenues dans [Paramètres du Registre pour le connecteur RMS](rms-connector-registry-settings.md) pour ajouter manuellement des paramètres du Registre sur les serveurs. 
 
-3.  Activez IRM dans SharePoint. Pour plus d’informations, consultez [Configurer la gestion des droits relatifs à l’information (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) dans la bibliothèque SharePoint.
+3.  Activez IRM dans SharePoint. Pour plus d'informations, voir [Configurer la gestion des droits relatifs à l’information (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) dans la bibliothèque SharePoint.
 
-    Dans le cadre de ces instructions, vous devez configurer SharePoint pour utiliser le connecteur en spécifiant l’option **Utiliser ce serveur RMS**, puis entrer l’URL de connecteur d’équilibrage de charge que vous avez configurée. Saisissez le préfixe de protocole (HTTP:// ou HTTPS://) ainsi que le nom du connecteur, tel que défini dans le système DNS pour l'adresse d'équilibrage de charge. Par exemple, si le nom de votre connecteur est https : \//connecteur. contoso. com, votre configuration ressemble à l’image suivante :
+    Dans le cadre de ces instructions, vous devez configurer SharePoint pour utiliser le connecteur en spécifiant l’option **Utiliser ce serveur RMS**, puis entrer l’URL de connecteur d’équilibrage de charge que vous avez configurée. Saisissez le préfixe de protocole (HTTP:// ou HTTPS://) ainsi que le nom du connecteur, tel que défini dans le système DNS pour l'adresse d'équilibrage de charge. Par exemple, si le nom de votre connecteur est https :\//connector.contoso.com, votre configuration ressemble à l’image suivante :
 
     ![Configuration de SharePoint Server pour le connecteur RMS](./media/AzRMS_SharePointConnector.png)
 
@@ -225,7 +225,7 @@ Pour utiliser le connecteur RMS et l'infrastructure de classification des fichie
 
 - Windows Server 2016
 
-- Windows Server 2012 R2
+- R2 Windows Server 2012
 
 - Windows Server 2012
 

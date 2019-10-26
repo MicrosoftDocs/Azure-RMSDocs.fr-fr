@@ -4,7 +4,7 @@ description: Vous avez une question au sujet de l’utilisation d’Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/04/2019
+ms.date: 10/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7de86d9f6f21ac9dd7839793d02b97b394930f1a
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 649aca255019ea5992e7901c2275ca0fe3c61cba
+ms.sourcegitcommit: 7089f06723f609ce40558ae1346db68b9a47667f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805512"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916273"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Forum aux questions sur la classification et l’étiquetage dans Azure Information Protection
 
@@ -107,12 +107,14 @@ Pour ajouter ce code de champ dans votre document :
 
 La classification de l’étiquette actuelle s’affiche dans le document ; cette valeur est actualisée automatiquement à chaque fois que vous ouvrez le document ou que vous utilisez le modèle. Par conséquent, lorsque l’étiquette change, la classification qui s’affiche pour ce code de champ est automatiquement mise à jour dans le document.
 
-## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>En quoi la classification Azure Information Protection pour les e-mails est-elle différente de celle des messages Exchange ?
+## <a name="how-is-classification-for-emails-using-azure-information-protection-different-from-exchange-message-classification"></a>Comment la classification des e-mails utilise-t-elle Azure Information Protection différente de la classification des messages Exchange ?
 
-La classification des messages Exchange est une ancienne fonctionnalité permettant de classer des e-mails. Elle est mise en œuvre indépendamment de la classification Azure Information Protection. 
+La classification des messages Exchange est une fonctionnalité plus ancienne qui peut classer les e-mails et est implémentée indépendamment des étiquettes de Azure Information Protection ou des étiquettes de sensibilité qui appliquent la classification.
 
-Toutefois, vous pouvez intégrer les deux solutions pour que, quand les utilisateurs classifient un e-mail à l’aide de la version web d’Outlook et de certaines applications de messagerie mobile, la classification Azure Information Protection et ses marquages d’étiquette correspondants soient automatiquement ajoutés. 
+Toutefois, vous pouvez intégrer cette fonctionnalité plus ancienne à des étiquettes, de sorte que lorsque les utilisateurs classifient un e-mail à l’aide d’Outlook sur le Web et en utilisant des applications de messagerie mobile, la classification des étiquettes et les marques d’étiquette correspondantes sont automatiquement ajoutées.
 
 Vous pouvez utiliser cette même technique pour utiliser vos étiquettes avec Outlook sur le web et les applications de messagerie mobile.
 
-Pour les étapes de configuration, consultez [Intégration de la classification des messages Exchange avec Azure Information Protection pour une solution d’étiquetage sur appareil mobile](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution).
+Notez qu’il n’est pas nécessaire de le faire si vous utilisez Outlook sur le Web avec Exchange Online, car cette combinaison prend en charge l’étiquetage intégré lorsque vous publiez des étiquettes de sensibilité à partir du Centre de sécurité et de conformité Office 365, Microsoft 365 Security Center ou Microsoft Compliance Center.
+
+Si vous ne pouvez pas utiliser l’étiquetage intégré avec Outlook sur le Web, consultez les étapes de configuration de cette solution de contournement : intégration de la [classification des messages Exchange avec Azure information protection pour une solution d’étiquetage des appareils mobiles](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution).

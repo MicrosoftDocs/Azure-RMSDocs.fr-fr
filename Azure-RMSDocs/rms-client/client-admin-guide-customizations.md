@@ -4,7 +4,7 @@ description: Informations sur la personnalisation du client Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a4a507423ed0a06627fcf5e28bb053d622ca252f
-ms.sourcegitcommit: b1ca785ae8ea5a91393a1602aded899be1951b2d
+ms.openlocfilehash: db282701b5374652d8469e5eadf42cd0a3472c3b
+ms.sourcegitcommit: 7089f06723f609ce40558ae1346db68b9a47667f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811188"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916293"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -972,7 +972,9 @@ Ce paramètre client avancé ne modifie ni les informations envoyées à Azure I
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Intégration avec la classification des messages Exchange pour une solution d’étiquetage des appareils mobiles
 
-Bien que Outlook sur le web ne prenne pas encore en charge la protection et la classification Azure Information Protection, vous pouvez utiliser la classification des messages Exchange pour étendre vos étiquettes d’Azure Information Protection à vos utilisateurs mobiles lorsqu’ils utilisent Outlook sur le web. Outlook Mobile ne prend pas en charge la classification des messages Exchange.
+Outlook sur le Web prend désormais en charge l’étiquetage intégré pour Exchange Online, qui est la méthode recommandée pour étiqueter les messages électroniques dans Outlook sur le Web. Toutefois, si vous n’utilisez pas encore les étiquettes de sensibilité publiées à partir du Centre de sécurité et de conformité Office 365, Microsoft 365 Security Center ou Microsoft Compliance Center, vous pouvez utiliser la classification des messages Exchange pour étendre les informations Azure Des étiquettes de protection à vos utilisateurs mobiles lorsqu’ils utilisent Outlook sur le Web. Vous pouvez également utiliser cette méthode pour Exchange Server. 
+
+Outlook Mobile ne prend pas en charge la classification des messages Exchange.
 
 Pour obtenir cette solution : 
 

@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 10/14/2019
+ms.date: 10/24/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8b7884de10999518d0c6cf9806b546181277a113
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 8b9245eea83c3ff3fa58312c866310876d8e2814
+ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447838"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890295"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -39,10 +39,7 @@ Utilisez Azure Information Protection Analytics pour la création de rapports ce
 
 - Identifiez le moment où les utilisateurs internes ou externes accèdent à des documents protégés à partir d’ordinateurs Windows, et si l’accès a été accordé ou refusé.
 
-Les données que vous voyez sont agrégées à partir de vos clients et scanneurs Azure Information Protection, à partir des [clients et des services qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)et depuis les [journaux d’utilisation](log-analyze-usage.md)de la protection.
-
-> [!NOTE]
-> Actuellement, à l’exception de la préversion du client d’étiquetage unifié, Azure Information Protection Analytics n’inclut pas les types d’informations personnalisées pour les clients et les services qui prennent en charge l’étiquetage unifié.
+Les données que vous voyez sont agrégées à partir de vos clients et scanneurs Azure Information Protection, de Microsoft Cloud App Security à partir d’ordinateurs Windows 10 utilisant Microsoft Defender-protection avancée contre les menaces et de [journaux d’utilisation](log-analyze-usage.md)de la protection.
 
 Par exemple, vous serez en mesure de voir ce qui suit :
 
@@ -76,7 +73,7 @@ Par exemple, vous serez en mesure de voir ce qui suit :
 
 - À partir du rapport de **découverte de données** :
 
-    - Quels sont les fichiers présents dans les référentiels de données analysés, les ordinateurs Windows 10 ou les ordinateurs qui exécutent le client Azure Information Protection ou les [clients qui prennent en charge l’étiquetage unifié](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)
+    - Quels fichiers se trouvent dans vos référentiels de données analysés, ordinateurs Windows 10 ou ordinateurs exécutant les clients Azure Information Protection
     
     - Fichiers étiquetés et protégés, et emplacement des fichiers en fonction des étiquettes
     
@@ -117,9 +114,7 @@ Pour générer ces rapports, les points de terminaison envoient les types suivan
 
 - Pour les e-mails : l’objet de l’e-mail et l’expéditeur de l’e-mail pour les e-mails étiquetés. 
 
-- [Types d’informations sensibles prédéfinis](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) qui ont été détectés dans le contenu.
-    
-    Si vous utilisez Azure Information Protection étiquettes avec des conditions personnalisées, les noms de vos types d’informations personnalisées sont également envoyés. À l’exception de la préversion du client d’étiquetage unifié, les types d’informations sensibles personnalisés que vous créez dans votre centre d’étiquetage ne sont pas envoyés.
+- Types d’informations sensibles ([prédéfinis](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) et personnalisés) détectés dans le contenu.
 
 - Version du client Azure Information Protection.
 
@@ -289,8 +284,6 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 
 |Nom de la colonne|Description|
 |-----------|-----------|
-|Accès|Un document protégé a été ouvert avec succès, identifié par le nom de fichier s’il est suivi, ou ID s’il n’est pas suivi.|
-|AccessDenied|L’accès à un document protégé a été refusé, identifié par le nom de fichier s’il est suivi, ou ID s’il n’est pas suivi.|
 |Heure|Heure de l’événement : UTC au format AAAA-MM-JJThh : MM : SS|
 |Utilisateur|Utilisateur : format UPN ou domaine\utilisateur|
 |ItemPath|Chemin d’accès complet de l’élément ou objet de l’e-mail|

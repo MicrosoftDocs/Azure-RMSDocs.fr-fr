@@ -4,7 +4,7 @@ description: Instructions d’installation, de configuration et d’exécution d
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4b83fcc4a7f5d8a586e6e2f8c4b51ef93d0cb257
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 05ccffd1370a73bf5f5286f40be0510316e3f883
+ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805743"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984957"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -411,9 +411,9 @@ Toutefois, le scanneur ne peut pas étiqueter les fichiers dans les cas suivants
 
 - L’étiquette applique la classification et la protection, mais le scanneur ne protège pas le type de fichier.
     
-    Par défaut, le scanneur protège uniquement les types de fichiers Office et PDF (si ces derniers sont protégés à l’aide de la norme ISO pour le chiffrement PDF). Pour le scanneur du client classique, les autres types de fichiers peuvent être protégés lorsque vous [Modifiez le registre](#editing-the-registry-for-the-scanner) , comme décrit dans la section suivante.
+    Par défaut, le scanneur protège uniquement les types de fichiers Office et PDF (si ces derniers sont protégés à l’aide de la norme ISO pour le chiffrement PDF). D’autres types de fichiers peuvent être protégés lorsque vous [Modifiez les types de fichiers protégés](#change-which-file-types-to-protect) , comme décrit dans la section suivante.
 
-Par exemple, après inspection des fichiers portant l’extension .txt, le scanneur ne peut pas appliquer une étiquette configurée pour la classification mais pas pour la protection, car le type de fichier .txt ne prend pas en charge la classification uniquement. Si l’étiquette est configurée pour la classification et la protection et que le Registre est modifié pour le type de fichier .txt, le scanneur peut étiqueter le fichier. 
+Par exemple, après inspection des fichiers portant l’extension .txt, le scanneur ne peut pas appliquer une étiquette configurée pour la classification mais pas pour la protection, car le type de fichier .txt ne prend pas en charge la classification uniquement. Si l’étiquette est configurée pour la classification et la protection, et si l’extension de nom de fichier. txt est incluse pour le scanneur à protéger, le scanneur peut étiqueter le fichier. 
 
 > [!TIP]
 > Pendant ce processus, si le scanneur s’arrête et ne termine pas l’analyse d’un grand nombre de fichiers dans un référentiel :
@@ -435,13 +435,19 @@ Comme dans l’étape précédente, le scanneur ne peut pas étiqueter les fichi
 
 - L’étiquette applique la classification et la protection, mais le scanneur ne protège pas le type de fichier.
     
-    Par défaut, le scanneur protège uniquement les types de fichiers Office et PDF (si ces derniers sont protégés à l’aide de la norme ISO pour le chiffrement PDF). Pour le scanneur du client classique, les autres types de fichiers peuvent être protégés lorsque vous [Modifiez le registre](#editing-the-registry-for-the-scanner) comme décrit ci-après.
+    Par défaut, le scanneur protège uniquement les types de fichiers Office et PDF (si ces derniers sont protégés à l’aide de la norme ISO pour le chiffrement PDF). D’autres types de fichiers peuvent être protégés lorsque vous modifiez les types de fichiers à protéger, comme décrit ci-après.
 
-### <a name="editing-the-registry-for-the-scanner"></a>Modification du Registre pour le scanneur
+## <a name="change-which-file-types-to-protect"></a>Changer les types de fichiers à protéger
+
+Par défaut, le scanneur protège les types de fichiers Office et les fichiers PDF uniquement. Vous pouvez modifier ce comportement de sorte que, par exemple, le scanneur protège tous les types de fichiers, ce qui correspond au même comportement de protection que le client. Ou le scanneur protège les types de fichiers supplémentaires que vous spécifiez, en plus des types de fichiers Office et des fichiers PDF. 
+
+Pour obtenir des instructions de configuration, consultez les sections suivantes.
+
+### <a name="scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected"></a>Analyseur du client classique : utilisez le registre pour changer les types de fichiers protégés.
 
 Cette section s’applique uniquement au scanneur du client classique.
 
-Pour changer le comportement par défaut du scanneur pour protéger d’autres types de fichiers que les fichiers Office et PDF, vous devez modifier manuellement le Registre et indiquer les types de fichiers supplémentaires qui doivent être protégés ainsi que le type de protection (native ou générique). Pour obtenir des instructions, consultez [Configuration de l’API de fichier](develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». En outre, spécifiquement pour le scanneur :
+Pour modifier le comportement par défaut de l’analyseur en vue de protéger les types de fichiers autres que les fichiers Office et les PDF, vous devez modifier le registre et spécifier les types de fichiers supplémentaires que vous souhaitez protéger, ainsi que le type de protection (natif ou générique). Pour obtenir des instructions, consultez [Configuration de l’API de fichier](develop/file-api-configuration.md) dans le Guide du développeur. Dans cette documentation pour les développeurs, la protection générique est appelée « PFile ». En outre, spécifiquement pour le scanneur :
 
 - Le scanneur a son propre comportement par défaut : seuls les formats de fichier Office et les documents PDF sont protégés par défaut. Si le Registre n’est pas modifié, aucun des autres types de fichiers ne sera étiqueté ou protégé par le scanneur.
 
@@ -456,6 +462,25 @@ Par exemple, pour que le scanneur protège les fichiers TIFF en plus des fichier
 Pour obtenir la liste des types de fichiers texte et image qui prennent en charge de façon similaire la protection native, mais qui doivent être spécifiés dans le registre, consultez [types de fichiers pris en charge pour la classification et la protection](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection).
 
 Pour les fichiers ne prenant pas en charge la protection native, indiquez l’extension de nom de fichier comme nouvelle clé et **PFile** pour la protection générique. L’extension de nom de fichier résultante pour le fichier protégé est .pfile.
+
+### <a name="scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected"></a>Analyseur du client d’étiquetage unifié : utiliser PowerShell pour modifier les types de fichiers protégés
+
+Cette section s’applique uniquement au scanneur du client d’étiquetage unifié.
+
+Pour une stratégie d’étiquette qui s’applique au compte d’utilisateur qui télécharge des étiquettes pour le scanneur, spécifiez un paramètre avancé PowerShell nommé **PFileSupportedExtensions**. 
+
+> [!NOTE]
+> Pour un scanneur qui a accès à Internet, ce compte d’utilisateur est le compte que vous spécifiez pour le paramètre *DelegatedUser* avec la commande Set-AIPAuthentication.
+
+Exemple 1 : commande PowerShell pour le scanneur afin de protéger tous les types de fichiers, où votre stratégie d’étiquette est nommée « scanner » :
+
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
+
+Exemple 2 : commande PowerShell pour le scanneur afin de protéger les fichiers. xml et. TIFF en plus des fichiers Office et des fichiers PDF, où votre stratégie d’étiquette est nommée « scanner » :
+
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
+
+Pour obtenir des instructions détaillées, consultez [modifier les types de fichiers à protéger](./rms-client/clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) à partir du Guide de l’administrateur.
 
 
 ## <a name="when-files-are-rescanned"></a>Lorsque les fichiers sont réanalysés

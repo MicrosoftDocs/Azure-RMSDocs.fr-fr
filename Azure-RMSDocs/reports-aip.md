@@ -3,7 +3,7 @@ title: Création de rapports centralisée pour Azure Information Protection
 description: Guide pratique pour utiliser la création de rapports centralisée pour suivre l’adoption de vos étiquettes Azure Information Protection et identifier les fichiers qui contiennent des informations sensibles
 author: cabailey
 ms.author: cabailey
-ms.date: 10/24/2019
+ms.date: 10/29/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8b9245eea83c3ff3fa58312c866310876d8e2814
-ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
+ms.openlocfilehash: 8f8022ba40b04c7a579cdf4caf7f9a8d60c19014
+ms.sourcegitcommit: e90658d1a43e883f8abef9a8c242a920cd484cbc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890295"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057679"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -294,7 +294,6 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 |LabelNameBefore |Nom de l’étiquette avant modification (non localisé) |
 |ProtectionType|Type de protection [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  « TemplateID » : « GUID » <br /> } <br />|
 |ProtectionBefore|Type de protection avant modification [JSON] |
-|InformationTypesMatches|Tableau JSON de [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trouvé dans les données où un tableau vide signifie qu’aucun type d’information n’a été trouvé, et null signifie qu’aucune information n’est disponible|
 |MachineName |FQDN, le cas échéant ; sinon nom d’hôte|
 |DeviceRisk|Score de risque de l’appareil à partir de émission quand il est disponible|
 |Plate-forme|Plateforme d’appareils (Win, OSX, Android, iOS) |

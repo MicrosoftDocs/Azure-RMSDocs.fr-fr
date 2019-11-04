@@ -3,8 +3,8 @@ title: Azure Information Protection l’historique des versions du client d’é
 description: Consultez les informations de version pour le client d’étiquetage unifié Azure Information Protection pour Windows.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 10/27/2019
+manager: rkarlin
+ms.date: 11/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1f0ed559646acb36931a55ed2cd321bae91395fc
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: 0ee20b6063dffd18b5067663de05c2d7a25cabd4
+ms.sourcegitcommit: ee897f9dc3580269395b63fb9aeccbd8a547fff1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984841"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73446024"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -37,6 +37,15 @@ Pour plus d’informations, consultez [mise à niveau et maintenance du client d
 Chaque version de disponibilité générale de la Azure Information Protection client d’étiquetage unifiée est prise en charge pendant six mois après la publication de la version GA suivante. La documentation n’inclut pas d’informations sur les versions non pris en charge du client. Les correctifs et les nouvelles fonctionnalités sont toujours appliqués à la dernière version GA, pas aux anciennes versions GA.
 
 Les préversions ne doivent pas être déployées pour des utilisateurs finaux sur les réseaux de production. Utilisez plutôt la dernière préversion pour tester les nouvelles fonctionnalités ou les correctifs à paraître dans la prochaine version GA. Les préversions qui ne sont pas actuelles ne sont pas prises en charge.
+
+##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versions de la disponibilité générale qui ne sont plus prises en charge :
+
+|Version du client|Date de publication|
+|--------------|-------------|
+|2.0.778.0|04/16/2019|
+
+Le format de date utilisé sur cette page est *mois/jour/année*.
+
 
 ### <a name="release-information"></a>Informations de version
 
@@ -69,6 +78,8 @@ Ce client remplace le client Azure Information Protection (Classic). Pour compar
         - **Renommer les fichiers**: **activé** avec la case à cocher **appliquer l’étiquette par défaut** activée
     
     - Comme avec le scanneur du client classique, par défaut, le scanneur protège les fichiers Office et les fichiers PDF. Vous pouvez protéger d’autres types de fichiers lorsque vous utilisez un [paramètre avancé PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
+    
+    - Les ID d’événement pour les cycles de scanneur en début et en fin ne sont pas écrits dans le journal des événements Windows. Utilisez plutôt le Portail Azure pour ces informations.
     
     - Problème connu : les étiquettes nouvelles et renommées ne peuvent pas être sélectionnées en tant qu’étiquette par défaut pour les paramètres de profil de scanneur ou de référentiel. Contournement
         - Pour les nouvelles étiquettes : dans la Portail Azure, [Ajoutez l’étiquette](../configure-policy-add-remove-label.md) que vous souhaitez utiliser à la stratégie globale ou à une stratégie délimitée.
@@ -195,48 +206,9 @@ Pris en charge jusqu’à 02/15/2020
 
 Cette version offre un correctif unique pour résoudre un problème de condition de course dans le cas où il peut arriver que des étiquettes ne s’affichent pas dans les applications Office ou l’Explorateur de fichiers.
 
-## <a name="version-207780"></a>Version 2.0.778.0
-
-**Publication**: 04/16/2019
-
-Pris en charge jusqu’à 11/01/2019
-
-Cette première version de disponibilité générale du client d’étiquetage unifié Azure Information Protection pour Windows prend en charge les fonctionnalités suivantes : 
-
-- Mise à niveau à partir du client Azure Information Protection.
-
-- Étiquetage manuel, automatique et recommandé : pour plus d’informations sur la configuration de l’étiquetage automatique et recommandé pour ce client, consultez [appliquer automatiquement une étiquette de sensibilité au contenu](/microsoft-365/compliance/apply-sensitivity-label-automatically).
-
-- Dans l’Explorateur de fichiers, actions déclenchées par clic droit pour classifier et protéger des fichiers, supprimer la protection et appliquer des autorisations personnalisées.
-
-- Visionneuse pour les fichiers texte et image protégés, les fichiers PDF protégés ainsi que les fichiers faisant l’objet d’une protection générique.
-
-- Commandes PowerShell pour effectuer les actions suivantes :
-    - [Définir ou supprimer une étiquette dans un document](/powershell/module/azureinformationprotection/set-aipfilelabel)
-    - [Étiqueter un document après en avoir examiné le contenu](/powershell/module/azureinformationprotection/set-aipfileclassification)
-    - [Lire les informations d’étiquette appliquées à un document](/powershell/module/azureinformationprotection/get-aipfilestatus)
-    - [S’authentifier pour prendre en charge les sessions PowerShell sans assistance](/powershell/module/azureinformationprotection/set-aipauthentication)
-
-- Audit des données et prise en charge de la découverte des points de terminaison pour la création de rapports centralisée à l’aide d' [Azure information protection Analytics](../reports-aip.md)
-
-- Paramètres d’étiquette et de stratégie suivants :
-    - Marquage visuel (en-têtes, pieds de page, filigranes)
-    - Étiquetage par défaut-actuellement limité aux étiquettes sans sous-étiquettes
-    - Étiquettes qui appliquent Ne pas transférer et s’affichent uniquement dans Outlook
-    - Invites de justification si les utilisateurs baissent le niveau de classification ou suppriment une étiquette
-    - Couleurs des étiquettes
-
-- Actualisation de la stratégie à partir des centres d’administration :
-    - à chaque démarrage d’une application Office et toutes les 4 heures ;
-    - Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier
-    - Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection
-
-- Boîte de dialogue Aide et commentaires, qui inclut des paramètres de réinitialisation et des journaux d’exportation.
-
-
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations, consultez les [tableaux de comparaison](use-client.md#compare-the-labeling-clients-for-windows-computers).
+Vous ne savez pas s’il s’agit du bon client à installer ?  Consultez [choisir le client d’étiquetage à utiliser pour les ordinateurs Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 Pour plus d’informations sur l’installation et l’utilisation de ce client : 
 

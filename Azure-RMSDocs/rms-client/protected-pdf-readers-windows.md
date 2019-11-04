@@ -4,23 +4,23 @@ description: Installer un lecteur sur Windows pour les documents PDF étiquetés
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: c600b706a1081d0693ecc50fc60adc9b94f23ab7
-ms.sourcegitcommit: 84190253d8682032912b36e291f17105d7f9d7f8
+ms.openlocfilehash: 4f51ccb9bf11f6d692978cb24cf5b9bad186c690
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69978352"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445116"
 ---
 # <a name="install-a-pdf-reader-for-windows"></a>Installer un lecteur PDF pour Windows
 
-[![Icône Windows](../media/develop/windows-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
+[icône Windows ![](../media/develop/windows-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
 
 Si vous avez besoin d’ouvrir un document PDF protégé sur votre ordinateur Windows, installez le plug-in Adobe pour Adobe Acrobat Reader.
 
@@ -36,7 +36,7 @@ Ample
 
 4. Si vous y êtes invité, demandez à votre administrateur d' [autoriser le plug-](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)in.
 
-Lecteurs de substitution qui ouvrent des documents PDF protégés conformes à la norme ISO pour le chiffrement PDF:
+Lecteurs de substitution qui ouvrent des documents PDF protégés conformes à la norme ISO pour le chiffrement PDF :
 
 - Visionneuse Azure Information Protection : [Télécharger](https://go.microsoft.com/fwlink/?linkid=838993)
 

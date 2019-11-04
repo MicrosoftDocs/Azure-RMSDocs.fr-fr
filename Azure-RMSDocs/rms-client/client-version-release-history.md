@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 37f50c51588b908b558c60e9387e918f26393f07
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 4a31e28e560325d3165f5b5e53906fa879664c7b
+ms.sourcegitcommit: ee897f9dc3580269395b63fb9aeccbd8a547fff1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805671"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73446019"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
 
@@ -191,6 +191,8 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 - Le [paramètre de stratégie](../configure-policy-settings.md) **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection** ne s’applique plus au scanneur. Le scanneur effectue ces actions lorsque vous configurez le paramètre **Renommer les fichiers** sur **activé** dans le profil du scanneur, puis activez la case à cocher autoriser l’étiquette à passer à une **version antérieure** .
 
 ## <a name="next-steps"></a>Étapes suivantes
+
+Vous ne savez pas s’il s’agit du bon client à installer ?  Consultez [choisir le client d’étiquetage à utiliser pour les ordinateurs Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 Pour plus d’informations sur l’installation et l’utilisation du client : 
 

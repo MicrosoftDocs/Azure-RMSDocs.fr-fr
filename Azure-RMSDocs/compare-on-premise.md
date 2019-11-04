@@ -4,7 +4,7 @@ description: Si vous connaissez ou avez déjà déployé Active Directory Rights
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/23/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 86f53fd6fa1be34399d104bd33a9b0e749f3f949
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: d0cd811adcd773446c60a3442bb5687210931ed0
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805634"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444834"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Comparaison d’Azure Information Protection avec AD RMS
 

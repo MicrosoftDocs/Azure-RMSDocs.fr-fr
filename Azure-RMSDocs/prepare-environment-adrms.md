@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 82322cf62aee2d87c4d9938304c605a486bf61b7
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 4bca627cbe63a4c4729d6c1f4a4569a101bb6013
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689548"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559789"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Préparez l’environnement pour Azure Rights Management lorsque vous avez AD RMS
 
@@ -76,21 +76,21 @@ Le message **Rights Management n’est pas activé** s’affiche alors, avec une
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>Pour désactiver Rights Management à partir du portail Azure
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**.
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Ensuite, accédez au volet de **Azure information protection** .
     
-    Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
     
-    Si vous n’avez pas accédé au panneau Azure Information Protection avant, consultez les [étapes supplémentaires](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) à suivre une seule fois pour ajouter ce panneau au portail.
+    Si vous n’avez pas accédé au volet Azure Information Protection, consultez les [étapes supplémentaires](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time) pour ajouter ce volet au portail.
 
 2. Sélectionnez **Activation de la protection** dans les options du menu. 
 
-3.  Dans le panneau **Azure Information Protection - Activation de la protection**, sélectionnez **Désactiver**. Sélectionnez **Oui** pour confirmer votre choix.
+3.  Dans le volet **Azure information protection d’activation** de la protection, sélectionnez **Désactiver**. Sélectionnez **Oui** pour confirmer votre choix.
 
 La barre d’informations affiche **Désactivation terminée** et **Désactiver** est maintenant remplacé par **Activer**. 
 
-### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
+### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
 
-Consultez les instructions pour la migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+Consultez les instructions de migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
 
 ## <a name="your-subscription-was-purchased-before-or-during-february-2018-and-you-have-exchange-online"></a>Votre abonnement a été acheté avant ou pendant février 2018, et vous disposez d’Exchange Online
@@ -99,32 +99,32 @@ Microsoft commence à activer le service Azure Rights Management pour les abonne
 
 Si le service est activé automatiquement pour vous et que vous utilisez aussi AD RMS, cette combinaison n’est pas compatible ; il est donc important que votre locataire désactive la mise à jour automatique du service. 
 
-### <a name="step-1-opt-out-from-the-automatic-service-update"></a>Étape 1 : Désactiver la mise à jour automatique du service
+### <a name="step-1-opt-out-from-the-automatic-service-update"></a>Étape 1 : Désactiver la mise à jour automatique du service
 
 Utilisez la commande Exchange Online PowerShell [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) suivante : `Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`
 
 [Plus d’informations](https://support.office.com/article/protection-features-in-azure-information-protection-rolling-out-to-existing-office-365-tenants-7ad6f58e-65d7-4c82-8e65-0b773666634d) 
 
-### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
+### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
 
-Consultez les instructions pour la migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+Consultez les instructions de migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
 
 ## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Vous voyez une option pour activer la protection quand vous configurez Azure Information Protection
 
-Le panneau **Azure Information Protection - Activation de la protection** contient une option permettant d’activer le service Azure Rights Management.  
+Le volet d’activation de la **Protection Azure information protection** a la possibilité d’activer le service Azure Rights Management.  
 
 Si vous utilisez également AD RMS, ne sélectionnez pas l’option **Activer**. Quand le service Azure Rights Management n’est pas activé, vous pouvez toujours utiliser Azure Information Protection pour les étiquettes qui appliquent uniquement la classification. Une stratégie par défaut spéciale est créée pour vous. Elle n’inclut pas la protection des données, et les options de configuration restent indisponibles jusqu’à ce que le service Azure Rights Management soit activé.
 
-### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Étape 1 : Configurer votre stratégie Azure Information Protection pour la classification et l’étiquetage, sans protection
+### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Étape 1 : Configurer votre stratégie Azure Information Protection pour la classification et l’étiquetage, sans protection
 
-À partir du panneau **Azure Information Protection - Étiquettes**, affichez et configurez les étiquettes qui n’incluent pas d’options pour la protection des données. Pour plus d’informations sur la façon de configurer les paramètres d’étiquette et de stratégie, consultez [Configuration de la stratégie Azure Information Protection](configure-policy.md).
+Dans le volet **Azure information protection-étiquettes** , affichez et configurez les étiquettes qui n’incluent pas les options de protection des données. Pour plus d’informations sur la façon de configurer les paramètres d’étiquette et de stratégie, consultez [Configuration de la stratégie Azure Information Protection](configure-policy.md).
 
-### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
+### <a name="step-2-start-planning-for-migration"></a>Étape 2 : Commencer la planification de la migration
 
-Consultez les instructions pour la migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+Consultez les instructions de migration : [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
-### <a name="step-3-configure-labels-for-protection"></a>Étape 3 : Configurer les étiquettes pour la protection
+### <a name="step-3-configure-labels-for-protection"></a>Étape 3 : Configurer les étiquettes pour la protection
 
 Une fois que vous avez activé le service Azure Rights Management dans le cadre du processus de migration, vous pouvez configurer des étiquettes pour la protection des données. Toutefois, si vous migrez des utilisateurs par lots, vérifiez que les étiquettes qui appliquent la protection ont pour portée uniquement les utilisateurs migrés.
 

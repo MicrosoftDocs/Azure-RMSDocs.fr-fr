@@ -1,33 +1,33 @@
 ---
 title: mip::ProtectionProfile::Observer, classe
-description: Documente la classe MIP::p rotectionprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+description: Documente la classe MIP ::p rotectionprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: e7e260f879fb1e48b19d43f13a451a3a91ee1a39
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: a9138e497655dfa939a9ac9b15d7ed228331e9e0
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057469"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560698"
 ---
 # <a name="class-mipprotectionprofileobserver"></a>mip::ProtectionProfile::Observer, classe 
-Interface qui reçoit les notifications relatives à [ProtectionProfile](class_mip_protectionprofile.md).
+Interface qui reçoit les notifications liées à ProtectionProfile.
 Cette interface doit être implémentée par les applications utilisant le SDK de protection
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnLoadSuccess (const std:: shared_ptr\<ProtectionProfile\>& Profile, const std::\<shared_ptr\>void & Context)  |  Appelé quand le chargement d’un profil a réussi.
-public virtual void OnLoadFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé quand le chargement d’un profil a provoqué une erreur.
-public virtual void OnListEnginesSuccess (const std:: Vector\<std:: String\>& engineIds, const std:: shared_ptr\<void\>& Context)  |  Appelé quand la liste des moteurs a été générée avec succès.
-public virtual void OnListEnginesFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé quand la génération de la liste de moteurs a provoqué une erreur.
-public virtual void OnAddEngineSuccess (const std:: shared_ptr\<ProtectionEngine\>& moteur, const std:: shared_ptr\<void\>& Context)  |  Appelé quand l’ajout d’un nouveau moteur a réussi.
-public virtual void OnAddEngineFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé quand l’ajout d’un nouveau moteur a provoqué une erreur.
-public virtuel void OnDeleteEngineSuccess (const std:: shared_ptr\<void\>& Context)  |  Appelé quand la suppression d’un moteur a réussi.
-public virtual void OnDeleteEngineFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé quand la suppression d’un moteur a provoqué une erreur.
+public virtual void OnLoadSuccess (const std :: shared_ptr\<ProtectionProfile\>& profil, const std :: shared_ptr\<void\>& contexte)  |  Appelé quand le chargement d’un profil a réussi.
+public virtual void OnLoadFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand le chargement d’un profil a provoqué une erreur.
+public virtual void OnListEnginesSuccess (const std :: Vector\<std :: String\>& engineIds, const std :: shared_ptr\<void\>& contexte)  |  Appelé quand la liste des moteurs a été générée avec succès.
+public virtual void OnListEnginesFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand la génération de la liste de moteurs a provoqué une erreur.
+public virtual void OnAddEngineSuccess (const std :: shared_ptr\<ProtectionEngine\>& moteur, const std :: shared_ptr\<void\>& contexte)  |  Appelé quand l’ajout d’un nouveau moteur a réussi.
+public virtual void OnAddEngineFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand l’ajout d’un nouveau moteur a provoqué une erreur.
+public virtual void OnDeleteEngineSuccess (const std :: shared_ptr\<void\>contexte &)  |  Appelé quand la suppression d’un moteur a réussi.
+public virtual void OnDeleteEngineFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand la suppression d’un moteur a provoqué une erreur.
   
 ## <a name="members"></a>Membres
   
@@ -35,25 +35,25 @@ public virtual void OnDeleteEngineFailure (const std:: exception_ptr & erreur, c
 Appelé quand le chargement d’un profil a réussi.
 
 Paramètres :  
-* **Profil**: Référence au [ProtectionProfile](class_mip_protectionprofile.md) nouvellement créé
+* **Profil**: référence au ProtectionProfile nouvellement créé.
 
 
-* **contexte**: Le même contexte qui a été passé à [ProtectionProfile:: LoadAsync](class_mip_protectionprofile.md#addengineasync-function)
+* **context** : le même contexte que celui qui a été passé à ProtectionProfile::LoadAsync
 
 
-Une application peut passer n’importe quel type de contexte (par exemple, std::promise, std::function) à [ProtectionProfile::LoadAsync](class_mip_protectionprofile.md#addengineasync-function), et ce même contexte est transféré tel quel à [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess-function) ou [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure-function)
+Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionProfile :: LoadAsync, et ce même contexte sera transféré tel quel à ProtectionProfile :: observer :: OnLoadSuccess ou ProtectionProfile :: observer :: O nLoadFailure
   
 ### <a name="onloadfailure-function"></a>OnLoadFailure fonction)
 Appelé quand le chargement d’un profil a provoqué une erreur.
 
 Paramètres :  
-* **erreur**: [Erreur](class_mip_error.md) qui s’est produite lors du chargement 
+* **erreur**: erreur qui s’est produite lors du chargement 
 
 
-* **contexte**: Le même contexte qui a été passé à [ProtectionProfile:: LoadAsync](class_mip_protectionprofile.md#addengineasync-function)
+* **context** : le même contexte que celui qui a été passé à ProtectionProfile::LoadAsync
 
 
-Une application peut passer n’importe quel type de contexte (par exemple, std::promise, std::function) à [ProtectionProfile::LoadAsync](class_mip_protectionprofile.md#addengineasync-function), et ce même contexte est transféré tel quel à [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess-function) ou [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure-function)
+Une application peut passer n’importe quel type de contexte (par exemple, std ::p romise, std :: Function) à ProtectionProfile :: LoadAsync, et ce même contexte sera transféré tel quel à ProtectionProfile :: observer :: OnLoadSuccess ou ProtectionProfile :: observer :: O nLoadFailure
   
 ### <a name="onlistenginessuccess-function"></a>OnListEnginesSuccess fonction)
 Appelé quand la liste des moteurs a été générée avec succès.
@@ -62,7 +62,7 @@ Paramètres :
 * **engineIds** : liste des ID des moteurs disponibles. 
 
 
-* **contexte**: Le même contexte qui a été passé à [ProtectionProfile:: ListEnginesAsync](class_mip_protectionprofile.md#listenginesasync-function)
+* **Context**: le même contexte qui a été passé à ProtectionProfile :: ListEnginesAsync
 
 
   
@@ -73,7 +73,7 @@ Paramètres :
 * **error** : erreur ayant provoqué l’échec de l’opération de génération de la liste des moteurs. 
 
 
-* **contexte**: Le même contexte qui a été passé à [ProtectionProfile:: ListEnginesAsync](class_mip_protectionprofile.md#listenginesasync-function)
+* **Context**: le même contexte qui a été passé à ProtectionProfile :: ListEnginesAsync
 
 
   
@@ -81,10 +81,10 @@ Paramètres :
 Appelé quand l’ajout d’un nouveau moteur a réussi.
 
 Paramètres :  
-* **moteur**: Moteur nouvellement créé 
+* **engine** : moteur nouvellement créé 
 
 
-* **contexte**: Le même contexte qui a été passé à [ProtectionProfile:: AddEngineAsync](class_mip_protectionprofile.md#addengineasync-function)
+* **Context**: le même contexte qui a été passé à ProtectionProfile :: AddEngineAsync
 
 
   
@@ -95,7 +95,7 @@ Paramètres :
 * **error** : erreur ayant provoqué l’échec de l’opération d’ajout du moteur. 
 
 
-* **contexte**: Le même contexte qui a été passé à [ProtectionProfile:: AddEngineAsync](class_mip_protectionprofile.md#addengineasync-function)
+* **Context**: le même contexte qui a été passé à ProtectionProfile :: AddEngineAsync
 
 
   
@@ -103,7 +103,7 @@ Paramètres :
 Appelé quand la suppression d’un moteur a réussi.
 
 Paramètres :  
-* **contexte**: Le même contexte qui a été passé à [ProtectionProfile::D eleteengineasync](class_mip_protectionprofile.md#deleteengineasync-function)
+* **Context**: le même contexte qui a été passé à ProtectionProfile ::D eleteengineasync
 
 
   
@@ -114,5 +114,5 @@ Paramètres :
 * **error** : erreur ayant provoqué l’échec de l’opération de suppression du moteur. 
 
 
-* **contexte**: Le même contexte qui a été passé à [ProtectionProfile::D eleteengineasync](class_mip_protectionprofile.md#deleteengineasync-function)
+* **Context**: le même contexte qui a été passé à ProtectionProfile ::D eleteengineasync
 

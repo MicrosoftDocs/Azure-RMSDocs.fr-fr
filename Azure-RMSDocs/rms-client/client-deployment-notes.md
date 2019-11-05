@@ -12,12 +12,12 @@ ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cd8fe9cc8e6b3d3cacba9ae8195741e2023396f
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: fab25bc33a6db5f8590f9baecf63efef5aa18864
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71690178"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561208"
 ---
 # <a name="rights-management-service-client-deployment-notes"></a>Notes de déploiement du client de service Rights Management
 

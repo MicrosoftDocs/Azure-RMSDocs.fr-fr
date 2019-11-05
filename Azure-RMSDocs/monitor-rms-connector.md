@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 52690476d54eb2c23aee4c77f66ca55d320831cb
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 0ec70d2cc26e3314378742a9875b14f5420fbb4e
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71689507"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559193"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Surveiller le connecteur Azure Rights Management
 
@@ -40,14 +40,14 @@ Voici quelques exemples d’événements d’informations :
 
 Si vous n’avez pas configuré le connecteur pour utiliser le protocole HTTPS, vous recevez un avertissement avec l’ID 2002 indiquant qu’un client utilise une connexion non sécurisée (HTTP).
 
-Si le connecteur ne parvient pas à se connecter au service Azure Rights Management, il est probable que l’erreur 3001 s’affiche. Cet échec de connexion peut être dû à un problème DNS ou à l’absence d’une connexion Internet pour un ou plusieurs serveurs exécutant le connecteur RMS. 
+Si le connecteur ne parvient pas à se connecter au service Azure Rights Management, il est probable que l’erreur 3001 s’affiche. Par exemple, cet échec de connexion peut être dû à un problème DNS ou à l’absence d’accès Internet pour un ou plusieurs serveurs exécutant le connecteur RMS. 
 
 > [!TIP]
 > Quand les serveurs du connecteur RMS ne peuvent pas se connecter au service Azure Rights Management, les configurations de proxy web sont souvent à l’origine du problème.
 
 Comme avec toutes les entrées de journal des événements, examinez le message pour plus de détails.
 
-Outre la vérification du journal des événements quand vous déployez le connecteur pour la première fois, recherchez régulièrement les avertissements et les erreurs. Le connecteur peut fonctionner comme prévu initialement, mais les autres administrateurs peuvent modifier les configurations dépendantes. Par exemple, un autre administrateur modifie la configuration du serveur proxy web et les serveurs du connecteur RMS ne peuvent plus se connecter à Internet (Erreur 3001) ou il supprime un compte d’ordinateur d’un groupe que vous avez autorisé à utiliser le connecteur (Avertissement 2001).
+Outre la vérification du journal des événements quand vous déployez le connecteur pour la première fois, recherchez régulièrement les avertissements et les erreurs. Le connecteur peut fonctionner comme prévu initialement, mais les autres administrateurs peuvent modifier les configurations dépendantes. Par exemple, un autre administrateur modifie la configuration du serveur proxy Web pour que les serveurs du connecteur RMS ne puissent plus accéder à Internet (erreur 3001) ou supprime un compte d’ordinateur d’un groupe que vous avez spécifié comme autorisé à utiliser le connecteur (avertissement 2001) .
 
 ### <a name="event-log-ids-and-descriptions"></a>ID du journal des événements et descriptions
 

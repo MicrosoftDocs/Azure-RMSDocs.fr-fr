@@ -1,26 +1,26 @@
 ---
 title: mip::CustomAction, classe
-description: 'Documente la classe MIP:: CustomAction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+description: 'Documente la classe MIP :: CustomAction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 7e78d11cc85af5550a4d6ab235b3754d72b2c012
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 450ae0e455f74c6cb9b1f6b0b6d8aded9b30b2bd
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055161"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558904"
 ---
 # <a name="class-mipcustomaction"></a>mip::CustomAction, classe 
-[CustomAction](class_mip_customaction.md) est une classe d’action générique qui capture toutes les sous-propriétés de l’action sous la forme d’un jeu de propriétés. Il appartient à l’appelant de comprendre la signification de l’action.
+CustomAction est une classe d’action générique qui capture toutes les sous-propriétés de l’action sous la forme d’un conteneur de propriétés. Il appartient à l’appelant de comprendre la signification de l’action.
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  |  Obtenir le nom de l’action.
-public const std:: Vector\<std::p air\<std:: String, std:: String\>\>& GetProperties () const  |  Obtenir la liste de paires clé/valeur des propriétés.
+public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetProperties () const  |  Obtenir la liste de paires clé/valeur des propriétés.
   
 ## <a name="members"></a>Membres
   
@@ -28,10 +28,10 @@ public const std:: Vector\<std::p air\<std:: String, std:: String\>\>& GetProper
 Obtenir le nom de l’action.
 
   
-**Retourne**: Nom de l’action, le cas échéant, une chaîne vide.
+**Retourne** : nom de l’action s’il existe ; sinon une chaîne vide.
   
 ### <a name="getproperties-function"></a>GetProperties, fonction
 Obtenir la liste de paires clé/valeur des propriétés.
 
   
-**Retourne**: Liste de paires clé-valeur.
+**Retourne** : une liste de paires clé/valeur.

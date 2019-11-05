@@ -1,27 +1,27 @@
 ---
-title: 'MIP:: RulePackageData, classe'
-description: 'Documente la classe MIP:: rulepackagedata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'MIP :: RulePackageData, classe'
+description: 'Documente la classe MIP :: rulepackagedata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: f66b03fc8950b9e6c7356b857b3a1a942a1cdd85
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 5cc04f5082ca0ac6e3cd9153834064794b9eaf12
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057141"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560570"
 ---
-# <a name="class-miprulepackagedata"></a>MIP:: RulePackageData, classe 
+# <a name="class-miprulepackagedata"></a>MIP :: RulePackageData, classe 
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const PolicyRuleData * GetRuleData () const  | _Pas encore documenté._
-public const std::p air\<std:: String, std:: String\>& GetLabelToTemplateId () const  | _Pas encore documenté._
-public const std::p air\<std:: String, bool\>& GetLabelToDoNotForward () const  | _Pas encore documenté._
-virtuel public ~ RulePackageData ()  | _Pas encore documenté._
+public const PolicyRuleData * GetRuleData () const  | Pas encore documenté.
+public const std ::p air\<std :: String, std :: String\>& GetLabelToTemplateId () const  | Pas encore documenté.
+public const std ::p air\<std :: String, ProtectionActionType\>& GetLabelToProtectionType () const  | Pas encore documenté.
+virtuel public ~ RulePackageData ()  | Pas encore documenté.
   
 ## <a name="members"></a>Membres
   
@@ -33,7 +33,7 @@ _Pas encore documenté._
 _Pas encore documenté._
 
   
-### <a name="getlabeltodonotforward-function"></a>GetLabelToDoNotForward fonction)
+### <a name="getlabeltoprotectiontype-function"></a>GetLabelToProtectionType fonction)
 _Pas encore documenté._
 
   

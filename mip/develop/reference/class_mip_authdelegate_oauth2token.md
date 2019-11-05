@@ -1,39 +1,39 @@
 ---
-title: 'MIP:: AuthDelegate:: OAuth2Token, classe'
-description: 'Documente la classe MIP:: authdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'MIP :: AuthDelegate :: OAuth2Token, classe'
+description: 'Documente la classe MIP :: authdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 93c73f632410bf6b1c6898746d1fcbd2c4f67e72
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: d8bce56e02778d48e6e3c0cfdb02f1c3f1f4054a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056250"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560344"
 ---
-# <a name="class-mipauthdelegateoauth2token"></a>MIP:: AuthDelegate:: OAuth2Token, classe 
+# <a name="class-mipauthdelegateoauth2token"></a>MIP :: AuthDelegate :: OAuth2Token, classe 
 Classe définissant comment le kit de développement logiciel MIP s’attend à ce que le jeton oauth2 soit renvoyé dans le kit de développement logiciel (SDK).
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public OAuth2Token ()  |  Construisez un nouvel objet [OAuth2Token](class_mip_authdelegate_oauth2token.md) .
-public OAuth2Token (const std:: String & accessToken)  |  Construit un nouvel objet [OAuth2Token](class_mip_authdelegate_oauth2token.md) à partir d’un accessToken.
-public const std:: String & GetAccessToken () const  |  Obtient la chaîne du jeton d’accès.
-public void SetAccessToken (const std:: String & accessToken)  |  Définissez la chaîne du jeton d’accès.
+public OAuth2Token ()  |  Construisez un nouvel objet OAuth2Token.
+public OAuth2Token (const std :: String & accessToken)  |  Construit un nouvel objet OAuth2Token à partir d’un accessToken.
+public const std :: String & GetAccessToken () const  |  Obtient la chaîne du jeton d’accès.
+public void SetAccessToken (const std :: String & accessToken)  |  Définissez la chaîne du jeton d’accès.
   
 ## <a name="members"></a>Membres
   
 ### <a name="oauth2token-function"></a>OAuth2Token fonction)
-Construisez un nouvel objet [OAuth2Token](class_mip_authdelegate_oauth2token.md) .
+Construisez un nouvel objet OAuth2Token.
   
 ### <a name="oauth2token-function"></a>OAuth2Token fonction)
-Construit un nouvel objet [OAuth2Token](class_mip_authdelegate_oauth2token.md) à partir d’un accessToken.
+Construit un nouvel objet OAuth2Token à partir d’un accessToken.
 
 Paramètres :  
-* **accessToken**: Le jeton d’accès réel passé dans le kit de développement logiciel (SDK).
+* **accessToken**: le jeton d’accès réel passé dans le kit de développement logiciel (SDK).
 
 
   
@@ -41,7 +41,7 @@ Paramètres :
 Obtient la chaîne du jeton d’accès.
 
   
-**Retourne**: Chaîne du jeton d’accès.
+**Retourne**: la chaîne du jeton d’accès.
   
 ### <a name="setaccesstoken-function"></a>SetAccessToken fonction)
 Définissez la chaîne du jeton d’accès.

@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8df8af6462a1e574186f096c919b070d4c7b6812
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: dcab49ef780916ac5ddbcb0acba2a555da92ebbe
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444938"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559736"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Configuration des droits d’utilisation pour Azure Information Protection
 
@@ -132,7 +132,13 @@ Vous pouvez aussi modifier cet héritage de la protection des documents en spéc
 
 Si vous n’avez pas besoin qu’un document joint conserve la protection d’origine, consultez [Sécuriser la collaboration sur les documents à l’aide d’Azure Information Protection](secure-collaboration-documents.md).
 
-Remarque : Si vous voyez des références à **DecryptAttachmentFromPortal**, ce paramètre est désormais déconseillé pour [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps). Sauf si vous avez précédemment défini ce paramètre, il n’est pas disponible. 
+Remarque : Si vous voyez des références à **DecryptAttachmentFromPortal**, ce paramètre est désormais déconseillé pour [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps). Sauf si vous avez précédemment défini ce paramètre, il n’est pas disponible.
+
+## <a name="automatically-encrypt-pdf-documents-with-exchange-online"></a>Chiffrer automatiquement les documents PDF avec Exchange Online
+
+Quand Exchange Online utilise les nouvelles fonctionnalités de chiffrement de messages Office 365, vous pouvez chiffrer automatiquement les documents PDF non protégés lorsqu’ils sont joints à un message électronique chiffré. Le document hérite des mêmes autorisations que celles du message électronique. Pour activer cette configuration, définissez **EnablePdfEncryption $true** avec [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps).
+
+Les destinataires qui n’ont pas encore de lecteur installé et qui prend en charge la norme ISO pour le chiffrement PDF peuvent installer l’un des lecteurs listés dans les [lecteurs PDF qui prennent en charge Microsoft information protection](./rms-client/protected-pdf-readers.md). Les destinataires peuvent également lire le document PDF protégé dans le portail OME.
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Émetteur Rights Management et propriétaire Rights Management
 
@@ -168,7 +174,7 @@ Quand un utilisateur ouvre un document ou un e-mail protégé par Azure Rights M
 
 Un utilisateur doit disposer d’une licence d’utilisation valide pour ouvrir le contenu en plus de son certificat de compte de droits (RAC), certificat accordé quand [l’environnement utilisateur est initialisé](how-does-it-work.md#initializing-the-user-environment), puis renouvelé tous les 31 jours.
 
-Pendant la durée de la licence d’utilisation, l’utilisateur n’est ni réauthentifié ni réautorisé pour le contenu. Il peut ainsi continuer à ouvrir le document ou l’e-mail protégé sans connexion Internet. Au terme de la période de validité de la licence d’utilisation, l’utilisateur doit être réauthentifié et réautorisé s’il souhaite accéder au document ou à l’e-mail protégé. 
+Pendant la durée de la licence d’utilisation, l’utilisateur n’est ni réauthentifié ni réautorisé pour le contenu. Cela permet à l’utilisateur de continuer à ouvrir le document ou l’e-mail protégé sans connexion Internet. Au terme de la période de validité de la licence d’utilisation, l’utilisateur doit être réauthentifié et réautorisé s’il souhaite accéder au document ou à l’e-mail protégé. 
 
 Quand les documents et les e-mails sont protégés à l’aide d’une étiquette ou d’un modèle définissant les paramètres de protection, vous pouvez changer ces paramètres dans votre étiquette ou votre modèle sans avoir à reprotéger le contenu. Si l’utilisateur a déjà accédé au contenu, les changements prennent effet après l’expiration de sa licence d’utilisation. Cependant, quand des utilisateurs appliquent des autorisations personnalisées (ou « stratégie de droits ad hoc ») et que ces autorisations doivent être changées après la protection du document ou de l’e-mail, ce contenu doit être reprotégé avec les nouvelles autorisations. Les autorisations personnalisées pour un e-mail sont implémentées avec l’option Ne pas transférer.
 

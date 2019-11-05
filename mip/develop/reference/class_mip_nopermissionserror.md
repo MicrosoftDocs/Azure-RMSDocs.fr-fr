@@ -1,26 +1,26 @@
 ---
-title: 'MIP:: NoPermissionsError, classe'
-description: 'Documente la classe MIP:: nopermissionserror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'MIP :: NoPermissionsError, classe'
+description: 'Documente la classe MIP :: nopermissionserror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: ca81d5a51bd79860884ff60906103663e49a9005
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 8d2304de44343812794a918c1f73ca84d6b3169d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055846"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560994"
 ---
-# <a name="class-mipnopermissionserror"></a>MIP:: NoPermissionsError, classe 
+# <a name="class-mipnopermissionserror"></a>MIP :: NoPermissionsError, classe 
 L’utilisateur n’a pas pu obtenir l’accès au contenu. Par exemple, aucune autorisation, contenu révoqué.
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string GetReferrer() const  |  Obtient le contact en cas de droits manquants sur le document.
-public std::string GetOwner() const  | _Pas encore documenté._
+public std::string GetOwner() const  | Pas encore documenté.
   
 ## <a name="members"></a>Membres
   
@@ -28,7 +28,7 @@ public std::string GetOwner() const  | _Pas encore documenté._
 Obtient le contact en cas de droits manquants sur le document.
 
   
-**Retourne**: Contact en cas de droits manquants sur le document.
+**Retourne**: le contact en cas de droits manquants sur le document.
   
 ### <a name="getowner-function"></a>GetOwner fonction)
 _Pas encore documenté._

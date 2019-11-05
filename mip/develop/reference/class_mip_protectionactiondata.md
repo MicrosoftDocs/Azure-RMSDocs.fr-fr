@@ -1,31 +1,26 @@
 ---
-title: MIP de classe::P rotectionActionData
-description: Documente la classe MIP::p rotectionactiondata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+title: MIP de classe ::P rotectionActionData
+description: Documente la classe MIP ::p rotectionactiondata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 9706844d0558c6c4f31ac5b9490ac77cb1a57824
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 45a3c37acf9137f7e8f3567ce8b1d44c637d2402
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057714"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560785"
 ---
-# <a name="class-mipprotectionactiondata"></a>MIP de classe::P rotectionActionData 
+# <a name="class-mipprotectionactiondata"></a>MIP de classe ::P rotectionActionData 
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ProtectionActionType GetProtectionType () const  | _Pas encore documenté._
-public const std::string& GetTemplateId() const  | _Pas encore documenté._
-virtuel public ~ ProtectionActionData ()  | _Pas encore documenté._
-ActionDataType, GetType (), const public  | _Pas encore documenté._
-public const std:: map\<std:: String, std:: String\>& GetProperties () const  | _Pas encore documenté._
-public std:: String GetArgumentValue (const std:: String & clé) const  | _Pas encore documenté._
-public const std::string& GetName() const  | _Pas encore documenté._
-public std:: Vector\<std::p air\<std:: String, std:: String\> \> GetArguments () const  | _Pas encore documenté._
+public ProtectionActionType GetProtectionType () const  | Pas encore documenté.
+public const std::string& GetTemplateId() const  | Pas encore documenté.
+virtuel public ~ ProtectionActionData ()  | Pas encore documenté.
   
 ## <a name="members"></a>Membres
   
@@ -38,24 +33,4 @@ _Pas encore documenté._
 
   
 ### <a name="protectionactiondata-function"></a>~ ProtectionActionData fonction)
-_Pas encore documenté._
-
-  
-### <a name="gettype-function"></a>GetType, fonction
-_Pas encore documenté._
-
-  
-### <a name="getproperties-function"></a>GetProperties, fonction
-_Pas encore documenté._
-
-  
-### <a name="getargumentvalue-function"></a>GetArgumentValue fonction)
-_Pas encore documenté._
-
-  
-### <a name="getname-function"></a>Fonction GetName
-_Pas encore documenté._
-
-  
-### <a name="getarguments-function"></a>GetArguments fonction)
 _Pas encore documenté._

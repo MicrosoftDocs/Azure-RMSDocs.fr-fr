@@ -1,22 +1,22 @@
 ---
-title: 'MIP:: TemplateNotFoundError, classe'
-description: 'Documente la classe MIP:: templatenotfounderror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'MIP :: TemplateNotFoundError, classe'
+description: 'Documente la classe MIP :: templatenotfounderror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 0d0233f636a7603e2d4da03402fa020e82d7e18f
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 79436b990a8bf58326e4cf158d34a39de25d0a62
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056962"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560491"
 ---
-# <a name="class-miptemplatenotfounderror"></a>MIP:: TemplateNotFoundError, classe 
+# <a name="class-miptemplatenotfounderror"></a>MIP :: TemplateNotFoundError, classe 
 L’ID de modèle n’est pas reconnu par le service RMS.
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
   

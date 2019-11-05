@@ -12,12 +12,12 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4b4affd55c743e2dda7dc3077ae527b002b5b442
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 01e000bfa52a92f0e9d7b58327d84d24bd17410d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689411"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559899"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Préparation des utilisateurs et groupes pour Azure Information Protection
 
@@ -53,7 +53,7 @@ Il existe trois scénarios d’utilisation des utilisateurs et des groupes avec 
 
 - Les droits d’utilisation déterminent si un utilisateur peut ouvrir un document ou e-mail et comment il peut l’utiliser, par exemple s’il peut uniquement le lire, le lire et l’imprimer, ou le lire et le modifier. 
 
-- Les contrôles d’accès incluent une date d’expiration et indiquent si une connexion à Internet est nécessaire pour l’accès. 
+- Les contrôles d’accès incluent une date d’expiration et si une connexion à Internet est nécessaire pour l’accès. 
 
 **Pour configurer le service Azure Rights Management** afin de prendre en charge des scénarios spécifiques. Par conséquent, seuls les administrateurs sélectionnent ces groupes. Les exemples incluent la configuration des éléments suivants :
 
@@ -77,9 +77,9 @@ Pour affecter des droits d’utilisation et des contrôles d’accès, et config
 
     Azure Information Protection peut utiliser n’importe quelle valeur dans cet attribut proxyAddresses d’Azure AD si le domaine a été ajouté à votre locataire (un « domaine vérifié »). Pour plus d’informations sur la vérification des domaines :
 
-    - Pour Azure AD : [Ajouter un nom de domaine personnalisé à Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
+    - Pour Azure AD : [Ajouter un nom de domaine personnalisé à Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Pour Office 365 : [Ajouter un domaine à Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - Pour Office 365 : [Ajouter un domaine à office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - L’attribut **userPrincipalName d’Azure AD** est utilisé uniquement quand un compte dans votre locataire n’a aucune valeur dans l’attribut proxyAddresses d’Azure AD. Par exemple, vous créez un utilisateur dans le portail Azure, ou créez un utilisateur pour Office 365 qui n’a pas de boîte aux lettres.
 
@@ -132,7 +132,7 @@ Par exemple, à l’aide du module PowerShell V1 pour Azure Active Directory, [M
     Connect-MsolService
 
 
-Remarque : Si cette commande ne fonctionne pas, vous pouvez exécuter `Install-Module MSOnline` pour installer le module MSOnline.
+Remarque : Si cette commande ne fonctionne pas, vous pouvez exécuter `Install-Module MSOnline` pour installer le module MSOnline.
 
 Configurez ensuite votre session PowerShell afin de ne pas tronquer les valeurs :
 
@@ -150,10 +150,10 @@ Vérifiez ensuite si la colonne **ProxyAddresses** est remplie. Si tel est le ca
 
 Si la colonne **ProxyAddresses** n’est pas remplie, la valeur **UserPrincipalName** sert à autoriser l’utilisation du service Azure Rights Management.
 
-Par exemple :
+Exemple :
 
 
-|  Nom d’affichage   |     UserPrincipalName      |                            ProxyAddresses                             |
+|  Nom complet   |     UserPrincipalName      |                            ProxyAddresses                             |
 |-----------------|----------------------------|-----------------------------------------------------------------------|
 | Jagannath Reddy | jagannathreddy@contoso.com |                                  {}                                   |
 |    Ankur Roy    |    ankurroy@contoso.com    | {SMTP:ankur.roy@contoso.com, smtp : ankur.roy@onmicrosoft.contoso.com} |
@@ -177,7 +177,7 @@ Dans la plupart des cas, la valeur de UserPrincipalName correspond à une valeur
 > [!TIP]
 > Vous pouvez utiliser l’applet de commande Export-Csv afin d’exporter les résultats dans une feuille de calcul pour faciliter la gestion, comme la recherche et la modification en bloc pour l’importation.
 >
-> Par exemple : `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+> Par exemple : `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
 ### <a name="confirm-group-accounts-are-ready-for-azure-information-protection"></a>Confirmer que les comptes de groupe sont prêts pour Azure Information Protection
 
@@ -212,9 +212,9 @@ N’oubliez pas de tenir compte de ce délai dans l’ensemble des modifications
 
 Après avoir confirmé que vos utilisateurs et groupes peuvent être utilisés avec Azure Information Protection et que vous êtes prêt à commencer à protéger des documents et des e-mails, vérifiez que vous avez besoin d’activer le service Azure Rights Management. Ce service doit être activé avant de pouvoir protéger les documents et les e-mails de votre organisation : 
 
-- À compter de février 2018 : Si votre abonnement incluant Azure Rights Management ou Azure Information Protection a été obtenu pendant ou après ce mois, le service est automatiquement activé pour vous. 
+- À partir de février 2018 : si votre abonnement incluant Azure Rights Management ou Azure Information Protection a été obtenu pendant ou après ce mois, le service est automatiquement activé pour vous. 
 
-- Si votre abonnement a été obtenu avant février 2018 : Vous devez activer le service vous-même. 
+- Si votre abonnement a été obtenu avant février 2018 : vous devez activer le service vous-même. 
 
 Pour plus d’informations, notamment la vérification de l’état d’activation, voir [activation du service de protection à partir de Azure information protection](./activate-service.md).
 

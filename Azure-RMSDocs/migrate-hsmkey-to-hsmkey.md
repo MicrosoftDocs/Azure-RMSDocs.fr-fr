@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7bb76420eeca9afb8cc8897ffb73c42864283b5e
-ms.sourcegitcommit: 0412b9ff13cf17478d157c13a5d95b3c0caa84cb
+ms.openlocfilehash: d7594886d6dc3715d29e15a1a1133142f244ad1d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72382077"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559887"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par HSM à clé protégée par HSM
 

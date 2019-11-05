@@ -1,22 +1,22 @@
 ---
-title: 'MIP:: ServiceDisabledError, classe'
-description: 'Documente la classe MIP:: servicedisablederror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'MIP :: ServiceDisabledError, classe'
+description: 'Documente la classe MIP :: servicedisablederror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 2fb7968ee2443d208ef3370308056eee4832e385
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 766d3747c2dbe6a9fdecc6cb6e21eb3d4000d3ec
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057027"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558203"
 ---
-# <a name="class-mipservicedisablederror"></a>MIP:: ServiceDisabledError, classe 
+# <a name="class-mipservicedisablederror"></a>MIP :: ServiceDisabledError, classe 
 L’utilisateur n’a pas pu accéder au contenu en raison de la désactivation d’un service.
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 const GetExtent () d’étendue publique  |  Obtient l’étendue pour laquelle le service est désactivé.
@@ -28,13 +28,13 @@ const GetExtent () d’étendue publique  |  Obtient l’étendue pour laquelle 
 Obtient l’étendue pour laquelle le service est désactivé.
 
   
-**Retourne**: Extension pour laquelle le service est désactivé
+**Retourne**: l’étendue pour laquelle le service est désactivé
   
 ### <a name="extent-enum"></a>Énumération d’étendue
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Utilisateur            | Le service est désactivé pour l’utilisateur.
-Appareil            | Le service est désactivé pour l’appareil.
-Plateforme            | Le service est désactivé pour la plateforme.
-Locataire            | Le service est désactivé pour le locataire.
+Périphérique            | Le service est désactivé pour l’appareil.
+Plate-forme            | Le service est désactivé pour la plateforme.
+Client            | Le service est désactivé pour le locataire.
 Décrit l’étendue pour laquelle le service est désactivé.

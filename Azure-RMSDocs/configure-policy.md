@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0de43192b44fb4e6d931d1e09ef8f01514c0a4ff
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: e5d81b5437fef69438fac5d8729b4beb8c9641a9
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72447035"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559455"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
@@ -86,13 +86,13 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
     
     Les comptes Microsoft ne peuvent pas gérer Azure Information Protection.
 
-## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Pour accéder au panneau Azure Information Protection pour la première fois
+## <a name="to-access-the-azure-information-protection-pane-for-the-first-time"></a>Pour accéder au volet de Azure Information Protection pour la première fois
 
 1. Connectez-vous au portail Azure.
 
-2. Dans le menu hub, sélectionnez **Créer une ressource**, puis, à partir de la zone de recherche pour la Place de marché, tapez **Azure Information Protection**. 
+2. Sélectionnez **+ créer une ressource**, puis, dans la zone de recherche de la place de marché, tapez **Azure information protection**. 
     
-3. Dans la liste des résultats, sélectionnez **Azure Information Protection**. Dans le panneau **Azure Information Protection**, cliquez sur **Créer**.
+3. Dans la liste des résultats, sélectionnez **Azure Information Protection**. Dans le volet **Azure information protection** , cliquez sur **créer**.
     
     > [!TIP] 
     > Ou sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous n’avez ainsi pas besoin d’accéder au service lors de votre prochaine connexion au portail.
@@ -101,15 +101,15 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
 
 4. Vous voyez la page **Démarrage rapide** qui s’ouvre automatiquement la première fois que vous vous connectez au service. Parcourez les ressources suggérées ou utilisez les autres options de menu. Pour configurer les étiquettes que les utilisateurs peuvent sélectionner, utilisez la procédure suivante.
 
-La prochaine fois que vous accéderez au panneau **Azure Information Protection**, l’option **Étiquettes** sera automatiquement sélectionnée pour vous permettre de voir et de configurer des étiquettes pour tous les utilisateurs. Vous pouvez revenir à la page **Démarrage rapide** en la sélectionnant à partir du menu **Général**.
+La prochaine fois que vous accéderez au volet **Azure information protection** , il sélectionne automatiquement l’option **étiquettes** pour vous permettre d’afficher et de configurer des étiquettes pour tous les utilisateurs. Vous pouvez revenir à la page **Démarrage rapide** en la sélectionnant à partir du menu **Général**.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Guide de configuration de la stratégie Azure Information Protection
 
 1. Assurez-vous que vous êtes connecté au Portail Azure à l’aide de l’un de ces rôles d’administration : Azure Information Protection administrateur, administrateur de la sécurité ou administration globale. Consultez la [section précédente](#signing-in-to-the-azure-portal) pour plus d’informations sur ces rôles d’administration.
 
-2. Si besoin, accédez au panneau **Azure Information Protection** : par exemple, dans le menu hub, cliquez sur **Tous les services** et commencez à taper **Information Protection** dans la zone Filtrer. Dans les résultats, sélectionnez **Azure Information Protection**. 
+2. Si nécessaire, accédez au volet de **Azure information protection** : par exemple, dans le menu Hub, cliquez sur **tous les services** et commencez à taper **information protection** dans la zone de filtre. Dans les résultats, sélectionnez **Azure Information Protection**. 
     
-    Le panneau **Azure Information Protection - Étiquettes** s’ouvre automatiquement pour vous permettre d’afficher et de modifier les étiquettes disponibles. Vous pouvez mettre les étiquettes à la disposition de tous les utilisateurs, de certains utilisateurs ou d’aucun utilisateur en les ajoutant à une stratégie ou en les supprimant de celle-ci.
+    Le volet **Azure information protection-étiquettes** s’ouvre automatiquement pour vous permet d’afficher et de modifier les étiquettes disponibles. Vous pouvez mettre les étiquettes à la disposition de tous les utilisateurs, de certains utilisateurs ou d’aucun utilisateur en les ajoutant à une stratégie ou en les supprimant de celle-ci.
 
 3. Pour afficher et modifier les stratégies, sélectionnez **Stratégies** parmi les options de menu. Pour afficher et modifier la stratégie que reçoivent tous les utilisateurs, sélectionnez la stratégie **Globale**. Pour créer une stratégie personnalisée pour certains utilisateurs, sélectionnez **Ajouter une nouvelle stratégie**.
     
@@ -118,7 +118,7 @@ La prochaine fois que vous accéderez au panneau **Azure Information Protection*
 
 Vous pouvez créer autant d’étiquettes que vous le souhaitez. Cependant, quand il commence à y en avoir trop pour que les utilisateurs puissent voir et sélectionner facilement la bonne étiquette, créez des stratégies délimitées de façon que les utilisateurs voient seulement les étiquettes qui sont pertinentes pour eux. Il existe une limite supérieure pour les étiquettes qui appliquent la protection, qui est de 500.
 
-Lorsque vous apportez des modifications dans un panneau Azure Information Protection, cliquez sur **Enregistrer** pour enregistrer les modifications, ou cliquez sur **Ignorer** pour rétablir les derniers paramètres enregistrés. Lorsque vous enregistrez des modifications apportées à une stratégie ou que vous modifiez des étiquettes ajoutées à des stratégies, ces modifications sont automatiquement publiées. Il n’y a pas d’option de publication distincte.
+Lorsque vous apportez des modifications dans un volet de Azure Information Protection, cliquez sur **Enregistrer** pour enregistrer les modifications, ou cliquez sur **Ignorer** pour rétablir les derniers paramètres enregistrés. Lorsque vous enregistrez des modifications apportées à une stratégie ou que vous modifiez des étiquettes ajoutées à des stratégies, ces modifications sont automatiquement publiées. Il n’y a pas d’option de publication distincte.
 
 Le client Azure Information Protection vérifie si des modifications ont été apportées au démarrage d’une application Office prise en charge et télécharge les modifications en tant que dernière stratégie Azure Information Protection. Autres déclencheurs qui actualisent la stratégie sur le client :
 
@@ -174,7 +174,7 @@ Quand une étiquette est appliquée à un document ou un e-mail, en arrière-pla
 
 Pour les e-mails, les informations d’étiquette sont stockées lors de l’envoi de l’e-mail. Pour les documents, les informations d’étiquette sont stockées lors de l’enregistrement du fichier. 
 
-Pour identifier le GUID d’une étiquette, recherchez la valeur de l’ID de l’étiquette dans le panneau **Étiquette** du portail Azure quand vous affichez ou configurez la stratégie Azure Information Protection. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier le GUID (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours le GUID de la sous-étiquette et non celui de l’étiquette parente.
+Pour identifier le GUID d’une étiquette, recherchez la valeur ID d’étiquette dans le volet **étiquette** de la portail Azure, lorsque vous affichez ou configurez la stratégie de Azure information protection. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier le GUID (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours le GUID de la sous-étiquette et non celui de l’étiquette parente.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

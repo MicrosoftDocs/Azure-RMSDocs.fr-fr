@@ -12,12 +12,12 @@ ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6340a78d430c387f7a7cf76b9a6474d399b7e98f
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 5018e69cf1798592d07b053eaeaccef234f71561
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71966853"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559867"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tâches que vous aviez l’habitude d’effectuer dans le portail Azure Classic
 
@@ -35,7 +35,7 @@ Utilisez les informations suivantes pour vous aider à passer rapidement au port
 
 |Portail Azure Classic|Comment effectuer cette tâche dans le portail Azure
 |-----------|--------------------|
-|Accéder aux paramètres de configuration pour la première fois|1. [Connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Suivez les instructions pour [accéder au panneau Azure information protection pour la première fois](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time).
+|Accéder aux paramètres de configuration pour la première fois|1. [Connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Suivez les instructions pour [accéder au volet de Azure information protection pour la première fois](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time).
 |Créer un modèle|Créez une étiquette qui applique une protection et utilisez **Définir des autorisations** pour définir les autorisations, l’expiration et l’accès hors connexion. <br /><br />En pratique, cette configuration crée un modèle personnalisé qui est ensuite accessible aux services et aux applications intégrés aux modèles Rights Management.<br /><br />Pour plus d’informations, consultez [Créer un modèle](configure-policy-templates.md#to-create-a-new-template).
 |Modifiez les propriétés du modèle : <br /><br />- Nom et description du modèle<br /><br />- Droits d’utilisation, expiration du contenu et paramètres d’accès hors connexion|Si vous ne l’avez pas encore fait, [convertissez le modèle en étiquette](configure-policy-templates.md#to-convert-templates-to-labels), puis effectuez les étapes suivantes :<br /><br />1. modifier le nom et la description de l’étiquette<br /><br />2. modifiez les paramètres de protection sur l’étiquette pour mettre à jour les autorisations, l’expiration et les paramètres d’accès hors connexion.<br /><br />Pour en savoir plus, consultez [Configurer une étiquette pour les paramètres de protection](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 |Archiver un modèle|Affectez à l’étiquette l’état **Désactivé**.

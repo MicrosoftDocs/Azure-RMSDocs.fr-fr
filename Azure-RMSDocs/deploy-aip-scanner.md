@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d78743f9b2a2350a16e26d311abc1e9948851bc5
-ms.sourcegitcommit: 1615c805dafac7ee6c8576c284663c39662a6a28
+ms.openlocfilehash: 76e074719b031543436cb367ca08e8238c2dbfa7
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441858"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559816"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -69,7 +69,7 @@ Avant d’installer le scanneur Azure Information Protection, vérifiez que les 
 
 |Condition requise|Autres informations|
 |---------------|--------------------|
-|Ordinateur Windows Server pour exécuter le service du scanneur :<br /><br />- Processeurs 4 cœurs<br /><br />- 8 Go de RAM<br /><br />- 10 Go d’espace libre (en moyenne) pour les fichiers temporaires|Windows Server 2019, Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Remarque : À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez utiliser un système d’exploitation client Windows qui est [pris en charge par le client Azure Information Protection](requirements.md#client-devices).<br /><br />Il peut s’agir d’un ordinateur physique ou virtuel doté d’une connexion réseau rapide et fiable aux magasins de données à scanner.<br /><br /> Le scanneur nécessite suffisamment d’espace disque disponible pour créer des fichiers temporaires pour chaque fichier qu’il analyse, quatre fichiers par cœur. L’espace disque recommandé de 10 Go permet de disposer de processeurs 4 cœurs analysant 16 fichiers qui ont chacun une taille de 625 Mo. <br /><br /> Si une connexion Internet n’est pas possible en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations). Sinon, assurez-vous que cet ordinateur dispose d’une connectivité Internet qui autorise les URL suivantes sur HTTPS (port 443) :<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*.protection.outlook.com (analyseur du client d’étiquetage unifié uniquement)|
+|Ordinateur Windows Server pour exécuter le service du scanneur :<br /><br />- Processeurs 4 cœurs<br /><br />- 8 Go de RAM<br /><br />- 10 Go d’espace libre (en moyenne) pour les fichiers temporaires|Windows Server 2019, Windows Server 2016 ou Windows Server 2012 R2. <br /><br />Remarque : À des fins de test ou d’évaluation dans un environnement hors production, vous pouvez utiliser un système d’exploitation client Windows qui est [pris en charge par le client Azure Information Protection](requirements.md#client-devices).<br /><br />Il peut s’agir d’un ordinateur physique ou virtuel doté d’une connexion réseau rapide et fiable aux magasins de données à scanner.<br /><br /> Le scanneur nécessite suffisamment d’espace disque disponible pour créer des fichiers temporaires pour chaque fichier qu’il analyse, quatre fichiers par cœur. L’espace disque recommandé de 10 Go permet de disposer de processeurs 4 cœurs analysant 16 fichiers qui ont chacun une taille de 625 Mo. <br /><br /> Si la connexion Internet n’est pas possible en raison des stratégies de votre organisation, consultez la section [déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations) . Dans le cas contraire, assurez-vous que cet ordinateur dispose d’une connectivité Internet qui autorise les URL suivantes sur HTTPs (port 443) :<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*.protection.outlook.com (analyseur du client d’étiquetage unifié uniquement)|
 |Compte de service pour exécuter le service du scanneur|En plus d’exécuter le service du scanneur sur l’ordinateur Windows Server, ce compte Windows s’authentifie auprès d’Azure AD, puis télécharge la stratégie Azure Information Protection. Ce compte doit être un compte Active Directory et synchronisé avec Azure AD. Si vous ne pouvez pas synchroniser ce compte en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />Ce compte de service a la configuration suivante :<br /><br />- **Ouvrir une session localement**, attribution des droits utilisateur. Ce droit est exigé pour l’installation et la configuration du scanneur, mais pas pour son fonctionnement. Vous devez accorder ce droit au compte de service, mais vous pouvez le supprimer après avoir vérifié que le scanneur peut détecter, classifier et protéger des fichiers. Si l’attribution de ce droit, même pendant une courte période, n’est pas possible en raison des stratégies de votre organisation, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br />- **Ouvrir une session en tant que service**, attribution des droits utilisateur. Ce droit est accordé automatiquement au compte de service pendant l’installation du scanneur et il est exigé pour l’installation, la configuration et le fonctionnement du scanneur. <br /><br />- Autorisations d’accès aux dépôts de données : vous devez accorder des autorisations de **Lecture** et **Écriture** pour l’analyse des fichiers, puis l’application d’une classification et d’une protection aux fichiers qui remplissent les conditions stipulées dans la stratégie Azure Information Protection. Pour exécuter le scanneur en mode découverte uniquement, l’autorisation **Lecture** suffit.<br /><br />-Pour les étiquettes qui reprotègent ou suppriment la protection : pour s’assurer que le scanneur ait toujours accès aux fichiers protégés, définissez ce compte comme [super utilisateur](configure-super-users.md) pour Azure information protection et assurez-vous que la fonctionnalité de super utilisateur est activée. En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) pour un déploiement échelonné, assurez-vous que ce compte est inclus dans les contrôles d’intégration que vous avez configurés.|
 |SQL Server pour stocker la configuration du scanneur :<br /><br />- Instance locale ou distante<br /><br />-Rôle sysadmin pour installer le scanneur|SQL Server 2012 est la version minimale pour les éditions suivantes :<br /><br />- SQL Server Entreprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Le scanneur Azure Information Protection prend en charge plusieurs bases de données de configuration sur la même instance SQL Server lorsque vous spécifiez un nom de profil personnalisé pour le scanneur. Lorsque vous utilisez la version préliminaire du scanneur à partir du client d’étiquetage unifié, plusieurs analyseurs peuvent partager la même base de données de configuration.<br /><br />Lorsque vous installez le scanneur et si votre compte a le rôle Sysadmin, le processus d’installation crée automatiquement la base de données de configuration du scanneur et accorde le rôle db_owner requis au compte de service qui exécute le scanneur. Si vous ne pouvez pas disposer du rôle Sysadmin ou si les stratégies de votre organisation requièrent que les bases de données soient créées et configurées manuellement, consultez la section [Déploiement du scanneur avec d’autres configurations](#deploying-the-scanner-with-alternative-configurations).<br /><br /> Pour obtenir des conseils sur la capacité, consultez [exigences de stockage et planification de la capacité pour SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).|
 |L’un des Azure Information Protection clients suivants est installé sur l’ordinateur Windows Server <br /><br /> -Client classique <br /><br /> -Client d’étiquetage unifié ([version de disponibilité générale actuelle uniquement](./rms-client/unifiedlabelingclient-version-release-history.md#version-25330)) |Vous devez installer le client complet pour le scanneur. N’installez pas le client avec juste le module PowerShell.<br /><br />Pour obtenir des instructions d’installation et de mise à niveau : <br /> - [client classique](./rms-client/client-admin-guide.md)<br /> - [client d’étiquetage unifié](./rms-client/clientv2-admin-guide.md#installing-the-azure-information-protection-scanner) |
@@ -116,12 +116,12 @@ Les prérequis répertoriés dans la table correspondent aux exigences par défa
 
 - Les comptes de service ne peut pas obtenir le droit **Ouvrir une session localement**
 
-- Les comptes de service ne peuvent pas être synchronisés avec Azure Active Directory, mais les serveurs ont accès à Internet
+- Les comptes de service ne peuvent pas être synchronisés avec Azure Active Directory mais les serveurs ont une connectivité Internet
 
 Le scanneur peut prendre en charge ces restrictions, mais celles-ci nécessitent une configuration supplémentaire.
 
 
-#### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Restriction : le serveur du scanneur n’est pas autorisé à se connecter à Internet
+#### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Restriction : le serveur de scanneur ne peut pas disposer d’une connexion Internet
 
 Suivez les instructions des guides d’administration pour prendre en charge un ordinateur déconnecté :
 
@@ -137,7 +137,7 @@ Effectuez ensuite les opérations suivantes :
 
 1. Configurez le scanneur dans le portail Azure, en créant un profil de scanneur. Si vous avez besoin d’aide pour cette étape, consultez [Configurer le scanneur dans le portail Azure](#configure-the-scanner-in-the-azure-portal).
 
-2. Exportez votre profil de scanneur à partir du panneau **Azure information protection-Profiles** , à l’aide de l’option d' **exportation** .
+2. Exportez votre profil de scanneur à partir du volet **Azure information protection-Profiles** , à l’aide de l’option d' **exportation** .
 
 3. Pour finir, dans une session PowerShell, exécutez [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) et spécifiez le fichier qui contient les paramètres exportés.
 
@@ -187,7 +187,7 @@ Si les stratégies de votre organisation interdisent le droit **ouvrir une sessi
 
 - Pour le client d’étiquetage unifié : utilisez le paramètre *OnBehalfOf* avec set-AIPAuthentication, comme décrit dans [Comment étiqueter des fichiers de manière non interactive pour Azure information protection dans le](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) Guide d’administration de ce client.
 
-#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>Restriction : le compte de service du scanneur ne peut pas être synchronisé avec Azure Active Directory, mais le serveur a accès à Internet
+#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>Restriction : le compte de service du scanneur ne peut pas être synchronisé avec Azure Active Directory mais le serveur dispose d’une connexion Internet
 
 Vous pouvez avoir un compte pour exécuter le service du scanneur et un autre compte pour l’authentification auprès d’Azure Active Directory :
 
@@ -202,21 +202,21 @@ Vous pouvez avoir un compte pour exécuter le service du scanneur et un autre co
 
 Avant d’installer le scanneur ou de le mettre à niveau à partir d’une ancienne version de disponibilité générale du scanneur, créez un profil pour le scanneur dans le Portail Azure. Vous configurez le profil pour définir les paramètres du scanneur et les référentiels de données à analyser.
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**. 
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Ensuite, accédez au volet de **Azure information protection** . 
     
-    Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
     
 2. Recherchez les options de menu **Scanneur**, puis sélectionnez **Profils**.
 
-3. Dans le panneau **Azure Information Protection - Profils**, sélectionnez **Ajouter** :
+3. Dans le volet **Azure information protection-profils** , sélectionnez **Ajouter**:
     
     ![Ajouter un profil pour le scanneur Azure Information Protection](./media/scanner-add-profile.png)
 
-4. Dans le panneau **Ajouter un nouveau profil**, donnez un nom au scanneur utilisé pour identifier ses paramètres de configuration et référentiels de données à analyser. Par exemple, vous pouvez spécifier **Europe** pour identifier l’emplacement géographique des référentiels de données couverts par votre scanneur. Lorsque vous installerez ou mettrez à niveau le scanneur ultérieurement, vous devrez spécifier le même nom de profil.
+4. Dans le volet **Ajouter un nouveau profil** , spécifiez un nom pour le scanneur utilisé pour identifier les paramètres de configuration et les référentiels de données à analyser. Par exemple, vous pouvez spécifier **Europe** pour identifier l’emplacement géographique des référentiels de données couverts par votre scanneur. Lorsque vous installerez ou mettrez à niveau le scanneur ultérieurement, vous devrez spécifier le même nom de profil.
     
     Si vous le souhaitez, entrez une description des raisons administratives, pour vous aider à identifier le nom de profil du scanneur.
 
-5. Pour cette configuration initiale, configurez les paramètres suivants, puis sélectionnez **Enregistrer** mais ne fermez pas le panneau :
+5. Pour cette configuration initiale, configurez les paramètres suivants, puis sélectionnez **Enregistrer** sans fermer le volet :
     
     Pour la section **paramètres de profil** :
     - **Planifier**: conserver la valeur par défaut **manuelle**
@@ -238,15 +238,15 @@ Avant d’installer le scanneur ou de le mettre à niveau à partir d’une anci
     
     SharePoint Server 2019, SharePoint Server 2016 et SharePoint Server 2013 sont pris en charge pour SharePoint. SharePoint Server 2010 est également pris en charge lorsque vous bénéficiez d’un [support étendu pour cette version de SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
-    Pour ajouter votre premier magasin de données, toujours dans le panneau **Ajouter un nouveau profil**, sélectionnez **Configure repositories** (Configurer des référentiels) pour ouvrir le panneau **Référentiels** :
+    Pour ajouter votre premier magasin de données, toujours dans le volet **Ajouter un nouveau profil** , sélectionnez **configurer les référentiels** pour ouvrir le volet **dépôts** :
     
     ![Configurer des référentiels de données pour le scanneur Azure Information Protection](./media/scanner-repositories-bar.png)
 
-7. Dans le panneau **Référentiels**, sélectionnez **Ajouter** :
+7. Dans le volet **référentiels** , sélectionnez **Ajouter**:
     
     ![Ajouter un référentiel de données pour le scanneur Azure Information Protection](./media/scanner-repository-add.png)
 
-8. Dans le panneau **Référentiel**, spécifiez le chemin d’accès du référentiel de données. 
+8. Dans le volet **référentiel** , spécifiez le chemin d’accès du référentiel de données. 
     
     Les caractères génériques ne sont pas pris en charge, ni les emplacements WebDav.
     
@@ -267,13 +267,13 @@ Avant d’installer le scanneur ou de le mettre à niveau à partir d’une anci
      >
      >- Spécifiez **Documents** dans le chemin d’accès lorsque vous souhaitez analyser tous les documents et tous les dossiers d’un sous-dossier sous Documents partagés. Par exemple : `http://sp2013/Documents/Sales Reports`
     
-    Pour les autres paramètres de ce panneau, ne les modifiez pas pour cette configuration initiale, mais conservez-les comme **profil par défaut**. Cela signifie que le référentiel de données hérite des paramètres du profil de scanneur. 
+    Pour les autres paramètres de ce volet, ne les modifiez pas pour cette configuration initiale, mais conservez-les comme **profil par défaut**. Cela signifie que le référentiel de données hérite des paramètres du profil de scanneur. 
     
     Sélectionnez **Enregistrer**.
 
 9. Si vous souhaitez ajouter un autre référentiel de données, répétez les étapes 7 et 8.
 
-10. Vous pouvez maintenant fermer le panneau des **dépôts** et le panneau de votre profil. Dans le panneau **Azure information protection-Profiles** , vous voyez le nom de votre profil affiché, ainsi que la colonne **planification** qui affiche **Manuel** et la colonne **appliquer** est vide.
+10. Vous pouvez maintenant fermer le volet **dépôts** et le volet de votre profil. Dans le volet **Azure information protection-Profiles** , vous voyez le nom de votre profil affiché, ainsi que la colonne **planification** qui affiche **Manuel** et la colonne **appliquer** est vide.
 
 Vous pouvez maintenant installer le scanneur avec le profil de scanneur que vous venez de créer.
 
@@ -343,7 +343,7 @@ Vous pouvez maintenant exécuter votre première analyse en mode découverte.
 
 ## <a name="run-a-discovery-cycle-and-view-reports-for-the-scanner"></a>Exécuter un cycle de découverte et afficher les rapports pour le scanneur
 
-1. Dans le Portail Azure, dans le panneau **Azure information protection-profils** , sélectionnez le profil de votre scanneur, puis l’option **Analyser maintenant** :
+1. Dans le Portail Azure, dans le volet **Azure information protection-profils** , sélectionnez le profil de votre scanneur, puis l’option **Analyser maintenant** :
     
     ![Lancer l’analyse pour le scanneur Azure Information Protection](./media/scanner-scan-now.png)
     
@@ -353,7 +353,7 @@ Vous pouvez maintenant exécuter votre première analyse en mode découverte.
 
 2. Attendez que le scanneur termine son cycle. Une fois que le scanneur a parcouru tous les fichiers inclus dans les magasins de données que vous avez spécifiés, le service s’arrête alors que le service du scanneur continue de s’exécuter :
     
-    - Dans le panneau **Azure information protection-profils** , utilisez l’option **Actualiser** et attendez que s’affichent les valeurs de la colonne des résultats de la **dernière analyse** et de la colonne **dernière analyse (heure de fin)** .
+    - Dans le volet **Azure information protection-profils** , utilisez l’option **Actualiser** et attendez que les valeurs des colonnes **résultats** de la dernière analyse et **dernière analyse (heure de fin)** s’affichent.
     
     - Dans PowerShell, vous pouvez exécuter `Get-AIPScannerStatus` pour surveiller le changement d’état.
     
@@ -381,16 +381,16 @@ Quand vous êtes prêt à étiqueter automatiquement les fichiers que le scanneu
 
 Si vous suivez ces instructions, le scanneur s’exécute une seule fois en mode création de rapports uniquement. Pour modifier ces paramètres, modifiez le profil du scanneur :
 
-1. Dans le panneau **Azure information protection-Profiles** , sélectionnez le profil du scanneur pour le modifier.
+1. De retour dans le volet **Azure information protection-profils** , sélectionnez le profil du scanneur pour le modifier.
 
-2. Dans le panneau \<**nom du profil**>, modifiez les deux paramètres suivants, puis sélectionnez **Enregistrer** :
+2. Dans le volet \<**nom du profil**>, modifiez les deux paramètres suivants, puis sélectionnez **Enregistrer**:
     
    - Dans la section **paramètres de profil** : modifiez la **planification** pour **toujours**
    - À partir de la section application de la **stratégie** : modifier **appliquer** la valeur **activé**
     
      Il existe d’autres paramètres de configuration que vous pouvez modifier. Par exemple, si les attributs de fichier sont modifiés et que le scanneur peut réétiqueter les fichiers. Utilisez l’aide contextuelle des informations pour plus d’informations sur chaque paramètre de configuration.
 
-3. Prenez note de l’heure actuelle et redémarrez le scanneur à partir du panneau **Azure information protection-Profiles** :
+3. Prenez note de l’heure actuelle et redémarrez le scanneur à partir du volet **Azure information protection-Profiles** :
     
     ![Lancer l’analyse pour le scanneur Azure Information Protection](./media/scanner-scan-now.png)
     
@@ -512,7 +512,7 @@ Pour obtenir des instructions détaillées, consultez [modifier les types de fic
 
 Pour le premier cycle d’analyse, le scanneur inspecte tous les fichiers des magasins de données configurés. Pour les analyses suivantes, il inspecte uniquement les fichiers nouveaux ou modifiés. 
 
-Vous pouvez forcer le scanneur à inspecter à nouveau tous les fichiers à partir du panneau **Azure information protection-profils** du portail Azure. Sélectionnez votre profil de scanneur dans la liste, puis sélectionnez l’option **relancer l’analyse de tous les fichiers** :
+Vous pouvez forcer le scanneur à inspecter à nouveau tous les fichiers à partir du volet **Azure information protection-profils** du portail Azure. Sélectionnez votre profil de scanneur dans la liste, puis sélectionnez l’option **relancer l’analyse de tous les fichiers** :
 
 ![Relancer l’analyse pour le scanneur Azure Information Protection](./media/scanner-rescan-files2.png)
 
@@ -540,11 +540,11 @@ Ensuite, redémarrez le service du scanneur Azure Information Protection. Si vou
 
 Pour les référentiels de données que vous avez ajoutés à un profil de scanneur, vous pouvez utiliser les options **Exporter** et **Importer** pour modifier rapidement les paramètres. Par exemple, pour vos référentiels de données SharePoint, vous souhaitez ajouter un nouveau type de fichier à exclure de l’analyse.
 
-Plutôt que de modifier chaque référentiel de données dans le portail Azure, utilisez l’option **Exporter** dans le panneau **Référentiels** :
+Au lieu de modifier chaque référentiel de données dans le Portail Azure, utilisez l’option d' **exportation** à partir du volet **dépôts** :
 
 ![Exportation de paramètres de référentiel de données pour le scanneur](./media/export-scanner-repositories.png)
 
-Modifiez manuellement le fichier pour apporter la modification, puis utilisez l’option **Importer** du même panneau.
+Modifiez manuellement le fichier pour effectuer la modification, puis utilisez l’option d' **importation** dans le même volet.
 
 ## <a name="using-the-scanner-with-alternative-configurations"></a>Utilisation du scanneur avec d’autres configurations
 

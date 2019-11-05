@@ -1,22 +1,22 @@
 ---
 title: mip::AddContentFooterAction, classe
-description: 'Documente la classe MIP:: addcontentfooteraction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+description: 'Documente la classe MIP :: addcontentfooteraction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a9dc9b68dbe2a4ca1a670f608f2ae3e0010affe6
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 83452da929250dac907dd53868733c77eb26b877
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056379"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560396"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>mip::AddContentFooterAction, classe 
 Classe d’action qui spécifie l’ajout d’un pied de page de contenu au document.
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  API utilisée pour marquer l’élément de pied de page de contenu.
@@ -33,37 +33,37 @@ public int GetMargin() const  |  Obtenir la marge du pied de page à partir du b
 API utilisée pour marquer l’élément de pied de page de contenu.
 
   
-**Retourne**: Nom à utiliser pour l’élément d’interface utilisateur qui contient le pied de page de contenu. Le même nom est retourné dans [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) si le pied de page de contenu doit être supprimé.
+**Retourne** : le nom à utiliser pour l’élément d’interface utilisateur qui contient le pied de page de contenu. Le même nom sera retourné dans RemoveContentFooterAction si le pied de page de contenu doit être supprimé.
   
 ### <a name="gettext-function"></a>GetText, fonction
 Obtenir le texte devant être placé dans le pied de page de contenu.
 
   
-**Retourne**: Texte du pied de page de contenu.
+**Retourne** : le texte du pied de page de contenu.
   
 ### <a name="getfontname-function"></a>GetFontName fonction)
 Obtenir le nom de la police utilisée pour afficher le pied de page de contenu.
 
   
-**Retourne**: Nom de la police. La valeur par défaut est Calibri si rien n’est défini par la stratégie.
+**Retourne** : le nom de la police. La valeur par défaut est Calibri si rien n’est défini par la stratégie.
   
 ### <a name="getfontsize-function"></a>GetFontSize fonction)
 Obtenir la taille de la police utilisée pour afficher le pied de page de contenu.
 
   
-**Retourne**: Taille de police sous la forme d’un entier.
+**Retourne** : la taille de la police sous forme de nombre entier.
   
 ### <a name="getfontcolor-function"></a>GetFontColor fonction)
 Obtenir la couleur de la police utilisée pour afficher le pied de page de contenu.
 
   
-**Retourne**: Couleur de police sous forme de chaîne (par exemple, «#000000»).
+**Retourne** : couleur de la police sous forme de chaîne (par exemple, #000000).
   
 ### <a name="getalignment-function"></a>GetAlignment fonction)
 Obtenir l’alignement du pied de page.
 
   
-**Retourne**: Énumérateur ContentMarkAlignment: À GAUCHE | À DROITE | GESTIONNAIRE. 
+**Retourne** : l’énumérateur ContentMarkAlignment : LEFT|RIGHT|CENTER. 
   
 **Voir aussi**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
@@ -71,4 +71,4 @@ Obtenir l’alignement du pied de page.
 Obtenir la marge du pied de page à partir du bas.
 
   
-**Retourne**: Marges à partir du bas du document (par exemple, 10 mm).
+**Retourne** : marges à partir du bas du document (par exemple, 10 mm).

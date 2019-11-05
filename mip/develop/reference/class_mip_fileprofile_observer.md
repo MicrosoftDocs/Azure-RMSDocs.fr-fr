@@ -1,39 +1,39 @@
 ---
 title: mip::FileProfile::Observer, classe
-description: 'Documente la classe MIP:: fileprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+description: 'Documente la classe MIP :: fileprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: fef75e5990a89a5a52dd1810bc15b62d1d82171b
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: fbe8b2edd8e9ee8d013134e66c39db8fbbee4dd4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054903"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560219"
 ---
 # <a name="class-mipfileprofileobserver"></a>mip::FileProfile::Observer, classe 
-Interface [Observer](class_mip_fileprofile_observer.md) permettant aux clients d’obtenir les notifications des événements liés aux profils.
-Toutes les erreurs héritent de [mip::Error](class_mip_error.md). Le client ne doit pas rappeler le moteur sur le thread qui appelle l’observateur.
+Interface observer permettant aux clients d’obtenir des notifications pour les événements liés au profil.
+Toutes les erreurs héritent de MIP :: Error. Le client ne doit pas rappeler le moteur sur le thread qui appelle l’observateur.
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual ~Observer()  | _Pas encore documenté._
-public virtual void OnLoadSuccess (const std:: shared_ptr\<MIP:: FileProfile\>& Profile, const std::\<shared_ptr\>void & Context)  |  Appelé quand le chargement d’un profil a réussi.
-public virtual void OnLoadFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé quand le chargement d’un profil a provoqué une erreur.
-public virtual void OnListEnginesSuccess (const std:: Vector\<std:: String\>& engineIds, const std:: shared_ptr\<void\>& Context)  |  Appelé quand la liste des moteurs a été générée avec succès.
-public virtual void OnListEnginesFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé quand la génération de la liste de moteurs a provoqué une erreur.
-public virtuel void OnUnloadEngineSuccess (const std:: shared_ptr\<void\>& Context)  |  Appelé quand le déchargement d’un moteur a réussi.
-public virtual void OnUnloadEngineFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé quand le déchargement d’un moteur a provoqué une erreur.
-public virtual void OnAddEngineSuccess (const std:: shared_ptr\<MIP:: FileEngine\>& moteur, const std:: shared_ptr\<void\>& Context)  |  Appelé quand l’ajout d’un nouveau moteur a réussi.
-public virtual void OnAddEngineFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé quand l’ajout d’un nouveau moteur a provoqué une erreur.
-public virtuel void OnDeleteEngineSuccess (const std:: shared_ptr\<void\>& Context)  |  Appelé quand la suppression d’un moteur a réussi.
-public virtual void OnDeleteEngineFailure (const std:: exception_ptr & erreur, const std:: shared_ptr\<void\>& Context)  |  Appelé quand la suppression d’un moteur a provoqué une erreur.
+public virtual ~Observer()  | Pas encore documenté.
+public virtual void OnLoadSuccess (const std :: shared_ptr\<MIP :: FileProfile\>profil &, const std :: shared_ptr\<void\>& contexte)  |  Appelé quand le chargement d’un profil a réussi.
+public virtual void OnLoadFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand le chargement d’un profil a provoqué une erreur.
+public virtual void OnListEnginesSuccess (const std :: Vector\<std :: String\>& engineIds, const std :: shared_ptr\<void\>& contexte)  |  Appelé quand la liste des moteurs a été générée avec succès.
+public virtual void OnListEnginesFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand la génération de la liste de moteurs a provoqué une erreur.
+public virtual void OnUnloadEngineSuccess (const std :: shared_ptr\<void\>contexte &)  |  Appelé quand le déchargement d’un moteur a réussi.
+public virtual void OnUnloadEngineFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand le déchargement d’un moteur a provoqué une erreur.
+public virtual void OnAddEngineSuccess (const std :: shared_ptr\<MIP :: FileEngine\>moteur &, const std :: shared_ptr\<void\>& contexte)  |  Appelé quand l’ajout d’un nouveau moteur a réussi.
+public virtual void OnAddEngineFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand l’ajout d’un nouveau moteur a provoqué une erreur.
+public virtual void OnDeleteEngineSuccess (const std :: shared_ptr\<void\>contexte &)  |  Appelé quand la suppression d’un moteur a réussi.
+public virtual void OnDeleteEngineFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand la suppression d’un moteur a provoqué une erreur.
 public virtual void OnPolicyChanged(const std::string& engineId)  |  Appelé quand la stratégie a été changée pour le moteur avec l’ID spécifié.
 public virtual void OnAddPolicyEngineStarting (bool requiresPolicyFetch)  |  Appelée avant la création du moteur pour décrire si les données de stratégie du moteur de stratégie doivent être extraites du serveur ou si elles peuvent être créées à partir de données mises en cache localement.
-protected Observer()  | _Pas encore documenté._
+protected Observer()  | Pas encore documenté.
   
 ## <a name="members"></a>Membres
   
@@ -78,7 +78,7 @@ Appelé quand la stratégie a été changée pour le moteur avec l’ID spécifi
 Appelée avant la création du moteur pour décrire si les données de stratégie du moteur de stratégie doivent être extraites du serveur ou si elles peuvent être créées à partir de données mises en cache localement.
 
 Paramètres :  
-* **requiresPolicyFetch**: Indique si les données du moteur doivent être récupérées via HTTP ou si elles sont chargées à partir du cache
+* **requiresPolicyFetch**: indique si les données du moteur doivent être récupérées via http ou si elles sont chargées à partir du cache
 
 
 Ce rappel facultatif peut être utilisé par une application pour être informé qu’une opération AddEngineAsync nécessite ou non une opération HTTP (avec le délai associé) à effectuer.

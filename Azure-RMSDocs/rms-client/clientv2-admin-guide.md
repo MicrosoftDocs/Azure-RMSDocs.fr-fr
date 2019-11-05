@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1c7458e1e936b464e8f4666911c3f23fb96dd3fe
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 2d26e7d80a37fd5ae8b52539a09fcbb9c924a13d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805288"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561206"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
 
@@ -257,9 +257,9 @@ Lorsque vous effectuez une mise à niveau à partir d’une version antérieure 
 Dans ce scénario, lorsque vous configurez le scanneur dans le portail Azure, vous devez spécifier exactement le même nom de profil que celui utilisé lors de l’exécution de la commande Update-AIPScanner. Si le nom ne correspond pas, le scanneur ne sera pas configuré pour vos paramètres. 
 
 > [!TIP]
-> Pour identifier les scanneurs dont la configuration est incorrecte, utilisez le panneau **Azure Information Protection - Nœuds** dans le portail Azure.
+> Pour identifier les scanneurs qui présentent cette configuration inutilisable, utilisez le volet **Azure information protection-Nodes** du portail Azure.
 >  
-> Pour les scanneurs disposant d’une connexion Internet, ils affichent le nom de leur ordinateur avec le numéro de version GA du client Azure Information Protection, mais aucun nom de profil. Seuls les scanneurs portant le numéro de version 1.41.51.0 ne doivent pas afficher de nom de profil dans ce panneau. 
+> Pour les scanneurs disposant d’une connexion Internet, ils affichent le nom de leur ordinateur avec le numéro de version GA du client Azure Information Protection, mais aucun nom de profil. Seuls les scanneurs dont le numéro de version est 1.41.51.0 ne doivent afficher aucun nom de profil dans ce volet. 
 
 ## <a name="uninstalling-the-azure-information-protection-unified-labeling-client"></a>Désinstallation du client d’étiquetage unifié Azure Information Protection
 

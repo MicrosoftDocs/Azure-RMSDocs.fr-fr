@@ -1,26 +1,25 @@
 ---
 title: class mip::LoggerDelegate
-description: 'Documente la classe MIP:: loggerdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+description: 'Documente la classe MIP :: loggerdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 6339accaa94d00a95faf9ab047e148d61671422c
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: f1726c53afb7e398f8921e1cb8fc67e3166fffe8
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054593"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561038"
 ---
 # <a name="class-miploggerdelegate"></a>class mip::LoggerDelegate 
 Une classe qui définit l’interface de l’enregistreur d’événements SDK MIP.
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public void Init(const std::string& storagePath, LogLevel logLevel)  |  Initialiser l’enregistreur d’événements.
-public LogLevel GetLogLevel() const  |  Obtenir le niveau de journalisation le plus bas qui doit déclencher un événement de journalisation.
+public void Init(const std::string& storagePath)  |  Initialiser l’enregistreur d’événements.
 public void Flush()  |  Vider le l’enregistreur d’événements.
 public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Écrire une instruction de journal dans le fichier journal.
   
@@ -30,18 +29,9 @@ public void WriteToLog(const LogLevel level, const std::string& message, const s
 Initialiser l’enregistreur d’événements.
 
 Paramètres :  
-* **storagePath** : le chemin d’accès à l’emplacement où l’état persistant, notamment les journaux, peut être stocké. 
+* **storagePath** : le chemin d’accès à l’emplacement où l’état persistant, notamment les journaux, peut être stocké.
 
 
-* **logLevel** : niveau de journalisation le plus bas qui doit déclencher un événement de journalisation.
-
-
-  
-### <a name="getloglevel-function"></a>GetLogLevel fonction)
-Obtenir le niveau de journalisation le plus bas qui doit déclencher un événement de journalisation.
-
-  
-**Retourne**: Niveau de journal le plus bas qui déclencherait un événement de journalisation.
   
 ### <a name="flush-function"></a>Flush, fonction
 Vider le l’enregistreur d’événements.

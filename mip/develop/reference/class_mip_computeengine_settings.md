@@ -1,31 +1,33 @@
 ---
-title: 'MIP:: ComputeEngine:: Settings, classe'
-description: 'Documente la classe MIP:: computeengine du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'MIP :: ComputeEngine :: Settings, classe'
+description: 'Documente la classe MIP :: computeengine du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 78917c686c1c7da42af13d3f6e6a5349bc509a0d
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: bc27cae6020034029712e96fa5ae500d7afebf9b
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056240"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559374"
 ---
-# <a name="class-mipcomputeenginesettings"></a>MIP:: ComputeEngine:: Settings, classe 
+# <a name="class-mipcomputeenginesettings"></a>MIP :: ComputeEngine :: Settings, classe 
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-paramètres publics (const ApplicationInfo & ApplicationInfo, const std:: shared_ptr\<TelemetryDelegate\>& TelemetryDelegate, const std:: shared_ptr\<LoggerDelegate\>& LoggerDelegate , const std:: Vector\<std::p air\<std:: String, std:: String\>\>& CustomProperties)  | _Pas encore documenté._
-public const ApplicationInfo& GetApplicationInfo() const  | _Pas encore documenté._
-public std:: shared_ptr\<TelemetryDelegate\> GetTelemetryDelegate () const  | _Pas encore documenté._
-public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate () const  | _Pas encore documenté._
-public const std:: Vector\<std::p air\<std:: String, std:: String\>\>& GetCustomProperties () const  | _Pas encore documenté._
-public void SetParentCorrelationId (const std:: String correlationId, const std:: String Description)  | _Pas encore documenté._
-public const std:: String & GetParentCorrelationId () const  | _Pas encore documenté._
-public const std:: String & GetParentCorrelationIdDescription () const  | _Pas encore documenté._
+Paramètres publics (const ApplicationInfo & applicationInfo, const std :: shared_ptr\<TelemetryDelegate\>& telemetryDelegate, const std :: shared_ptr\<LoggerDelegate\>& loggerDelegate, const std :: String & nom d’hôte, const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& customProperties, const std :: Vector\<LabelFilterType\>& labelFilter)  | Pas encore documenté.
+public const ApplicationInfo& GetApplicationInfo() const  | Pas encore documenté.
+public std :: shared_ptr\<TelemetryDelegate\> GetTelemetryDelegate () const  | Pas encore documenté.
+public std :: shared_ptr\<LoggerDelegate\> GetLoggerDelegate () const  | Pas encore documenté.
+public const std :: String & GetHostName () const  | Pas encore documenté.
+public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomProperties () const  | Pas encore documenté.
+public void SetParentCorrelationId (const std :: String correlationId, const std :: String Description)  | Pas encore documenté.
+public const std :: String & GetParentCorrelationId () const  | Pas encore documenté.
+public const std :: String & GetParentCorrelationIdDescription () const  | Pas encore documenté.
+public const std :: Vector\<LabelFilterType\>& GetLabelFilter () const  | Pas encore documenté.
   
 ## <a name="members"></a>Membres
   
@@ -45,6 +47,10 @@ _Pas encore documenté._
 _Pas encore documenté._
 
   
+### <a name="gethostname-function"></a>GetHostName fonction)
+_Pas encore documenté._
+
+  
 ### <a name="getcustomproperties-function"></a>GetCustomProperties fonction)
 _Pas encore documenté._
 
@@ -58,4 +64,8 @@ _Pas encore documenté._
 
   
 ### <a name="getparentcorrelationiddescription-function"></a>GetParentCorrelationIdDescription fonction)
+_Pas encore documenté._
+
+  
+### <a name="getlabelfilter-function"></a>GetLabelFilter fonction)
 _Pas encore documenté._

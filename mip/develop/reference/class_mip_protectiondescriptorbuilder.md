@@ -5,47 +5,46 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: cf3007c7d75b669de3f9952223f4f3920489251e
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.date: 10/29/2019
+ms.openlocfilehash: cdc72fd45a4b82611aa02d0a9182cd829b6d8a9e
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070589"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560773"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>class mip::ProtectionDescriptorBuilder 
-Construit un [ProtectionDescriptor](class_mip_protectiondescriptor.md) qui décrit la protection associée à un élément de contenu.
+Construit un ProtectionDescriptor qui décrit la protection associée à un élément de contenu.
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public MIP_API std :: shared_ptr\<ProtectionDescriptor\> Build ()  |  Crée un [ProtectionDescriptor](class_mip_protectiondescriptor.md) dont les autorisations d’accès sont définies par cette instance [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md).
+public MIP_API std :: shared_ptr\<ProtectionDescriptor\> Build ()  |  Crée un ProtectionDescriptor dont les autorisations d’accès sont définies par cette instance ProtectionDescriptorBuilder.
 public void SetName(const std::string& value)  |  Définit un nom pour la stratégie de protection.
 public void SetDescription(const std::string& value)  |  Définit la description de la stratégie de protection.
-public void SetContentValidUntil (const std :: Chrono :: time_point\<std :: Chrono :: system_clock\>& value)  |  Définit l’heure d’expiration de la stratégie de protection.
+public void SetContentValidUntil (const std :: Chrono :: time_point\<std :: Chrono :: system_clock\>& valeur)  |  Définit l’heure d’expiration de la stratégie de protection.
 public void SetAllowOfflineAccess(bool value)  |  Définit si la stratégie de protection autorise l’accès au contenu hors connexion ou non.
 public void SetReferrer(const std::string& uri)  |  Définit l’adresse du référent de stratégie de protection.
-public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  Définit les données spécifiques de l’application qui doivent être chiffrées.
-public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  Définit les données spécifiques de l’application qui doivent être signées.
-public virtual ~ProtectionDescriptorBuilder()  | _Pas encore documenté._
-public static MIP_API std :: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP ::P rotectiondescriptorbuilder :: CreateFromUserRights | Crée un ProtectionDescriptorBuilder dont les autorisations d’accès sont définies par les utilisateurs et les droits.
-public static MIP_API std :: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP ::P rotectiondescriptorbuilder :: CreateFromUserRoles | Crée un ProtectionDescriptorBuilder dont les autorisations d’accès sont définies par les utilisateurs et les rôles.
-public static MIP_API std :: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP ::P rotectiondescriptorbuilder :: CreateFromTemplate | Crée un ProtectionDescriptorBuilder dont les autorisations d’accès sont définies par le modèle de protection. 
-
+public void SetEncryptedAppData (const std :: Map\<std :: String, std :: String\>& valeur)  |  Définit les données spécifiques de l’application qui doivent être chiffrées.
+public void SetSignedAppData (const std :: Map\<std :: String, std :: String\>& valeur)  |  Définit les données spécifiques de l’application qui doivent être signées.
+public virtual ~ProtectionDescriptorBuilder()  | Pas encore documenté.
+public static MIP_API std :: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP ::P rotectionDescriptorBuilder :: CreateFromUserRights | Crée un ProtectionDescriptorBuilder dont les autorisations d’accès sont définies par les utilisateurs et les droits.
+public static MIP_API std :: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP ::P rotectionDescriptorBuilder :: CreateFromUserRoles | Crée un ProtectionDescriptorBuilder dont les autorisations d’accès sont définies par les utilisateurs et les rôles.
+public static MIP_API std :: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP ::P rotectionDescriptorBuilder :: CreateFromTemplate | Crée un ProtectionDescriptorBuilder dont les autorisations d’accès sont définies par le modèle de protection. 
 
 ## <a name="members"></a>Membres
   
 ### <a name="build-function"></a>Build, fonction
-Crée un [ProtectionDescriptor](class_mip_protectiondescriptor.md) dont les autorisations d’accès sont définies par cette instance [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md).
+Crée un ProtectionDescriptor dont les autorisations d’accès sont définies par cette instance ProtectionDescriptorBuilder.
 
   
-**Retourne**: Nouvelle instance [ProtectionDescriptor](class_mip_protectiondescriptor.md)
+**Retourne**: nouvelle instance ProtectionDescriptor
   
 ### <a name="setname-function"></a>SetName fonction)
 Définit un nom pour la stratégie de protection.
 
 Paramètres :  
-* **valeur**: Nom de la stratégie de protection
+* **value** : nom de la stratégie de protection
 
 
   
@@ -53,13 +52,15 @@ Paramètres :
 Définit la description de la stratégie de protection.
 
 Paramètres :  
-* **valeur**: Description de la stratégie
+* **value** : description de la stratégie
 
-### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil function
+
+  
+### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil fonction)
 Définit l’heure d’expiration de la stratégie de protection.
 
 Paramètres :  
-* **valeur**: Heure d’expiration de la stratégie
+* **value** : heure d’expiration de la stratégie
 
 
   
@@ -67,13 +68,15 @@ Paramètres :
 Définit si la stratégie de protection autorise l’accès au contenu hors connexion ou non.
 
 Paramètres :  
-* **valeur**: Si la stratégie autorise l’accès au contenu hors connexion
+* **value** : valeur indiquant si la stratégie autorise l’accès au contenu hors connexion ou non
 
+
+  
 ### <a name="setreferrer-function"></a>SetReferrer fonction)
 Définit l’adresse du référent de stratégie de protection.
 
 Paramètres :  
-* **URI**: Adresse du référent de la stratégie
+* **uri** : adresse du référent de la stratégie
 
 
 Le référent est un URI qui peut être montré à l’utilisateur en cas d’échec de l’acquisition de la stratégie de protection. L’URI contient des informations sur la façon dont cet utilisateur peut obtenir l’autorisation d’accéder au contenu.
@@ -82,7 +85,7 @@ Le référent est un URI qui peut être montré à l’utilisateur en cas d’é
 Définit les données spécifiques de l’application qui doivent être chiffrées.
 
 Paramètres :  
-* **valeur**: Données spécifiques à l’application
+* **value** : données spécifiques à l’application
 
 
 Une application peut spécifier un dictionnaire des données spécifiques à l’application qui seront chiffrées par le service de protection. Ces données chiffrées ne dépendent pas des données signées définies par SetSignedAppData.
@@ -91,7 +94,7 @@ Une application peut spécifier un dictionnaire des données spécifiques à l�
 Définit les données spécifiques de l’application qui doivent être signées.
 
 Paramètres :  
-* **valeur**: Données spécifiques à l’application
+* **value** : données spécifiques à l’application
 
 
 Une application peut spécifier un dictionnaire des données spécifiques à l’application qui seront signées par le service de protection. Ces données signées ne dépendent pas des données chiffrées définies par SetEncryptedAppData.
@@ -103,17 +106,17 @@ _Pas encore documenté._
 Crée un ProtectionDescriptorBuilder dont les autorisations d’accès sont définies par les utilisateurs et les droits.
 
 Paramètres :
-* **usersAndRights**: Collection de mappages utilisateurs-droits.
+* **usersAndRights**: collection de mappages utilisateurs-droits.
 
-**Retourne**: Nouvelle instance [ProtectionDescriptor](class_mip_protectiondescriptor.md) 
+**Retourne** : nouvelle instance [ProtectionDescriptor](class_mip_protectiondescriptor.md) 
 
 ### <a name="createfromuserroles-function"></a>CreateFromUserRoles fonction)
 Crée un ProtectionDescriptorBuilder dont les autorisations d’accès sont définies par les utilisateurs et les rôles.
 
 Paramètres :
-* **usersAndRoles**: Collection de mappages utilisateurs-rôles.
+* **usersAndRoles**: collection de mappages utilisateurs-rôles.
 
-**Retourne**: Crée un [ProtectionDescriptor](class_mip_protectiondescriptor.md) dont les autorisations d’accès sont définies par les utilisateurs et les rôles.
+**Retourne**: crée un [ProtectionDescriptor](class_mip_protectiondescriptor.md) dont les autorisations d’accès sont définies par les utilisateurs et les rôles.
 
 ### <a name="createfromtemplate-function"></a>CreateFromTemplate fonction)
 Crée un ProtectionDescriptorBuilder dont les autorisations d’accès sont définies par le modèle de protection. 
@@ -121,7 +124,4 @@ Crée un ProtectionDescriptorBuilder dont les autorisations d’accès sont déf
 Paramètres :
 * **TemplateID**: ID de modèle de protection.
 
-**Retourne**: Nouvelle instance [ProtectionDescriptor](class_mip_protectiondescriptor.md) .
-
-
-
+**Retourne**: une nouvelle instance [ProtectionDescriptor](class_mip_protectiondescriptor.md) .

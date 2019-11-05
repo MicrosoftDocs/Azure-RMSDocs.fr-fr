@@ -5,25 +5,25 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: d99b7c3468cc98ad655e41bdd2aaa771a287aca2
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.date: 10/29/2019
+ms.openlocfilehash: 63a7f3c377a40a5faf82afe332a12efed0d646c4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "70057563"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560725"
 ---
 # <a name="class-mipprotectionhandlerconsumptionsettings"></a>MIP ::P rotectionHandler :: ConsumptionSettings 
-Paramètres utilisés pour créer un [ProtectionHandler](class_mip_protectionhandler.md) pour utiliser le contenu existant.
+Paramètres utilisés pour créer un ProtectionHandler pour utiliser le contenu existant.
   
 ## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ConsumptionSettings (const std :: Vector\<uint8_t\>& serializedPublishingLicense)  | ProtectionHandler :: ConsumptionSettings constructeur pour la création d’un nouveau gestionnaire.
+public ConsumptionSettings (const std :: Vector\<uint8_t\>& serializedPublishingLicense)  |  ProtectionHandler :: ConsumptionSettings constructeur pour la création d’un nouveau gestionnaire.
 public ConsumptionSettings (const std :: shared_ptr\<PublishingLicenseInfo\>& licenseInfo)  |  ProtectionHandler :: ConsumptionSettings constructeur pour la création d’un nouveau gestionnaire.
 public std :: shared_ptr\<PublishingLicenseInfo\> GetPublishingLicenseInfo () const  |  Procurez-vous la licence de publication associée au contenu protégé.
-public bool GetIsOfflineOnly () const  |  Obtient une valeur indiquant si la création de [ProtectionHandler](class_mip_protectionhandler.md) autorise ou non les opérations http en ligne.
-public void SetIsOfflineOnly (bool isOfflineOnly)  |  Définit si la création de [ProtectionHandler](class_mip_protectionhandler.md) autorise ou non les opérations http en ligne.
+public bool GetIsOfflineOnly () const  |  Obtient une valeur indiquant si la création de ProtectionHandler autorise ou non les opérations HTTP en ligne.
+public void SetIsOfflineOnly (bool isOfflineOnly)  |  Définit si la création de ProtectionHandler autorise ou non les opérations HTTP en ligne.
 public void SetDelegatedUserEmail (const std :: String & delegatedUserEmail)  |  Définit l’utilisateur délégué.
 public const std :: String & GetDelegatedUserEmail () const  |  Obtient l’utilisateur délégué.
   
@@ -53,19 +53,19 @@ Procurez-vous la licence de publication associée au contenu protégé.
 **Retourne**: publication des informations de licence
   
 ### <a name="getisofflineonly-function"></a>GetIsOfflineOnly fonction)
-Obtient une valeur indiquant si la création de [ProtectionHandler](class_mip_protectionhandler.md) autorise ou non les opérations http en ligne.
+Obtient une valeur indiquant si la création de ProtectionHandler autorise ou non les opérations HTTP en ligne.
 
   
-**Retourne**: true si les opérations http ne sont pas autorisées. sinon, false si la valeur est true, la création de [ProtectionHandler](class_mip_protectionhandler.md) réussit uniquement si le contenu a déjà été déchiffré précédemment et que sa licence non expirée est mise en cache. Un MIP :: NetworkError = est levé si le contenu mis en cache est introuvable.
+**Retourne**: true si les opérations http ne sont pas autorisées. sinon, false si la valeur est true, la création de ProtectionHandler réussit uniquement si le contenu a déjà été déchiffré précédemment et que sa licence non expirée est mise en cache. Une exception MIP :: NetworkError est levée si le contenu mis en cache est introuvable.
   
 ### <a name="setisofflineonly-function"></a>SetIsOfflineOnly fonction)
-Définit si la création de [ProtectionHandler](class_mip_protectionhandler.md) autorise ou non les opérations http en ligne.
+Définit si la création de ProtectionHandler autorise ou non les opérations HTTP en ligne.
 
 Paramètres :  
 * **isOfflineOnly**: true si les opérations http ne sont pas autorisées, sinon false.
 
 
-Si la valeur est true, la création de [ProtectionHandler](class_mip_protectionhandler.md) réussit uniquement si le contenu a déjà été déchiffré précédemment et que sa licence non expirée est mise en cache. Une exception MIP :: NetworkError est levée si le contenu mis en cache est introuvable.
+Si la valeur est true, la création de ProtectionHandler réussit uniquement si le contenu a déjà été déchiffré précédemment et que sa licence non expirée est mise en cache. Une exception MIP :: NetworkError est levée si le contenu mis en cache est introuvable.
   
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail fonction)
 Définit l’utilisateur délégué.

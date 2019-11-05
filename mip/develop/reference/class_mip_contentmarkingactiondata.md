@@ -1,31 +1,31 @@
 ---
-title: 'MIP:: ContentMarkingActionData, classe'
-description: 'Documente la classe MIP:: contentmarkingactiondata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'MIP :: ContentMarkingActionData, classe'
+description: 'Documente la classe MIP :: contentmarkingactiondata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 694cb45a91136279aa6e997735e0b041a50b3744
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: ee5dd72a9e001e2effce81aad28b7ae36907b098
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056159"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559317"
 ---
-# <a name="class-mipcontentmarkingactiondata"></a>MIP:: ContentMarkingActionData, classe 
+# <a name="class-mipcontentmarkingactiondata"></a>MIP :: ContentMarkingActionData, classe 
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | _Pas encore documenté._
-public const std::string& GetFontName() const  | _Pas encore documenté._
-public const std::string& GetFontColor() const  | _Pas encore documenté._
-public ContentMarkAlignment GetContentMarkAlignment () const  | _Pas encore documenté._
-public int GetFontSize() const  | _Pas encore documenté._
-public int GetMargin() const  | _Pas encore documenté._
-public ContentMarkPlacement GetContentMarkPlacement () const  | _Pas encore documenté._
-virtuel public ~ ContentMarkingActionData ()  | _Pas encore documenté._
+public const std::string& GetText() const  | Pas encore documenté.
+public const std::string& GetFontName() const  | Pas encore documenté.
+public const std::string& GetFontColor() const  | Pas encore documenté.
+public ContentMarkAlignment GetContentMarkAlignment () const  | Pas encore documenté.
+public int GetFontSize() const  | Pas encore documenté.
+public int GetMargin() const  | Pas encore documenté.
+public ContentMarkPlacement GetContentMarkPlacement () const  | Pas encore documenté.
+virtuel public ~ ContentMarkingActionData ()  | Pas encore documenté.
   
 ## <a name="members"></a>Membres
   

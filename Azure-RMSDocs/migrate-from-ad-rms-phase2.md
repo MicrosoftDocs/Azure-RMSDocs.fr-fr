@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: acc19d8865c189e2852a2b870ea2028aab731f04
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 381439513d86102bb0c08fde63015b417f192be3
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684445"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559918"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Phase de migration 2 : Configuration côté serveur pour AD RMS
 
@@ -27,7 +27,7 @@ ms.locfileid: "71684445"
 Utilisez les informations suivantes pour la Phase 2 de la migration d’AD RMS vers Azure Information Protection. Ces procédures couvrent les étapes 4 à 6 de la rubrique [Migration d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Étape 4. Exporter les données de configuration d’AD RMS, puis les importer dans Azure Information Protection
+## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Étape 4. Exporter les données de configuration d’AD RMS, puis les importer dans Azure Information Protection
 Cette étape est un processus comprenant deux phases :
 
 1. Exporter les données de configuration d'AD RMS en exportant les domaines de publication approuvés (TPD) dans un fichier .xml. Ce processus est identique pour toutes les migrations.
@@ -77,7 +77,7 @@ Votre déploiement AD RMS actuel utilise l’une des configurations suivantes po
 > [!NOTE]
 > Pour plus d'informations sur l'utilisation des modules de sécurité matériels avec AD RMS, consultez [Utilisation d'AD RMS avec des modules de sécurité matériels](https://technet.microsoft.com/library/jj651024.aspx).
 
-Les deux options de topologie des clés de locataire Azure Information Protection sont : Microsoft gère votre clé de locataire (**Gérée par Microsoft**) ou vous la gérez vous-même (**gérée par le client**) dans Azure Key Vault. Le scénario dans lequel vous gérez votre propre clé de locataire Azure Information Protection est parfois appelé BYOK (« Bring Your Own Key »). Pour plus d’informations, consultez l’article [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
+Les deux options de topologie de clé de locataire Azure Information Protection sont les suivantes : Microsoft gère votre clé de locataire (**Gérée par Microsoft**) ou vous la gérez vous-même (**Gérée par le client**) dans Azure Key Vault. Le scénario dans lequel vous gérez votre propre clé de locataire Azure Information Protection est parfois appelé BYOK (« Bring Your Own Key »). Pour plus d’informations, consultez l’article [Planification et implémentation de votre clé de locataire Azure Information Protection](plan-implement-tenant-key.md).
 
 Le tableau suivant permet d'identifier la procédure à utiliser pour votre migration. 
 
@@ -91,7 +91,7 @@ Le tableau suivant permet d'identifier la procédure à utiliser pour votre migr
 
 Si vous avez une clé protégée par HSM que vous ne pouvez pas exporter, vous pouvez quand même migrer vers Azure Information Protection en configurant votre cluster AD RMS pour un mode en lecture seule. Dans ce mode, le contenu précédemment protégé peut toujours être ouvert, mais le contenu nouvellement protégé utilise une nouvelle clé de locataire que vous gérez vous-même (BYOK) ou qui est gérée par Microsoft. Pour plus d’informations, consultez [Une mise à jour d’Office est disponible pour prendre en charge les migrations d’AD RMS vers Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to).
 
-Avant de commencer ces procédures de migration de clés, vérifiez que vous avez accès aux fichiers .xml créés lors de l’exportation des domaines de publication approuvés. Par exemple, ceux-ci peuvent être enregistrés sur une clé USB que vous déplacez du serveur AD RMS vers la station de travail connectée à Internet.
+Avant de commencer ces procédures de migration de clés, vérifiez que vous avez accès aux fichiers .xml créés lors de l’exportation des domaines de publication approuvés. Par exemple, ceux-ci peuvent être enregistrés sur un lecteur flash USB que vous déplacez du serveur AD RMS vers la station de travail connectée à Internet.
 
 > [!NOTE]
 > Quelle que soit la manière dont vous stockez ces fichiers, suivez les meilleures pratiques pour les protéger, car ces données incluent votre clé privée.
@@ -152,14 +152,14 @@ Quand vous gérez des modèles et des étiquettes dans le portail Azure, ce grou
 
 Si vous n’êtes pas sûr que vos modèles AD RMS incluent le groupe ANYONE, vous pouvez utiliser l’exemple de script Windows PowerShell suivant pour identifier ces modèles. Pour plus d’informations sur l’utilisation de Windows PowerShell avec AD RMS, consultez [Utilisation de Windows PowerShell pour administrer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
-Vous pouvez facilement ajouter des utilisateurs externes à des modèles quand vous convertissez ces derniers en étiquettes dans le portail Azure. Ensuite, dans le panneau **Ajouter des autorisations**, choisissez **Entrez les détails** pour spécifier manuellement les adresses e-mail de ces utilisateurs. 
+Vous pouvez facilement ajouter des utilisateurs externes à des modèles quand vous convertissez ces derniers en étiquettes dans le portail Azure. Ensuite, dans le volet **Ajouter des autorisations** , choisissez entrer les **Détails** pour spécifier manuellement les adresses de messagerie de ces utilisateurs. 
 
 Pour plus d’informations sur cette configuration, consultez [Comment configurer une étiquette pour la protection offerte par Rights Management](./configure-policy-protection.md).
 
 #### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Exemple de script Windows PowerShell permettant d’identifier les modèles AD RMS qui incluent le groupe ANYONE
 Cette section contient l’exemple de script qui vous permet d’identifier n’importe quel modèle AD RMS pour lequel le groupe ANYONE a été défini, comme décrit dans la section précédente.
 
-**Exclusion de responsabilité :** Cet exemple de script n’est pris en charge par aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
+**Exclusion de responsabilité** : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
 
 ```
 import-module adrmsadmin 

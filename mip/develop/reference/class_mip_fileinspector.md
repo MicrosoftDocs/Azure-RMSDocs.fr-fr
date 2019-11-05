@@ -1,23 +1,36 @@
 ---
-title: 'MIP:: FileInspector, classe'
-description: 'Documente la classe MIP:: fileinspector du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'MIP :: FileInspector, classe'
+description: 'Documente la classe MIP :: fileinspector du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: f696b5b96a6b6b4ce43a28c160dd5e11ab9a6036
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 8ae396cc529cbeb17afa8ad0c4617e4bfcfbed3a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056109"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558813"
 ---
-# <a name="class-mipfileinspector"></a>MIP:: FileInspector, classe 
+# <a name="class-mipfileinspector"></a>MIP :: FileInspector, classe 
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
+public InspectorType GetInspectorType () const  |  Obtient les types de fichiers,.
+public std :: shared_ptr\<flux\> GetFileStream () const  |  Obtient le flux de fichier.
   
 ## <a name="members"></a>Membres
-_Pas encore documenté._
+  
+### <a name="getinspectortype-function"></a>GetInspectorType fonction)
+Obtient les types de fichiers,.
+
+  
+**Retourne**: InspectorType.
+  
+### <a name="getfilestream-function"></a>GetFileStream fonction)
+Obtient le flux de fichier.
+
+  
+**Retourne**: PTR partagé dans le flux de fichier.

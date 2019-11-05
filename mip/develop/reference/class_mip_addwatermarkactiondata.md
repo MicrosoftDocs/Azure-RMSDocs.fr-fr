@@ -1,29 +1,29 @@
 ---
-title: 'MIP:: AddWatermarkActionData, classe'
-description: 'Documente la classe MIP:: addwatermarkactiondata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'MIP :: AddWatermarkActionData, classe'
+description: 'Documente la classe MIP :: addwatermarkactiondata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a82a0e27eb2a3f9e292c7862778b01f23390ee35
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 8ced12000bace295be4571158ae0f05364c5aec7
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055496"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559478"
 ---
-# <a name="class-mipaddwatermarkactiondata"></a>MIP:: AddWatermarkActionData, classe 
+# <a name="class-mipaddwatermarkactiondata"></a>MIP :: AddWatermarkActionData, classe 
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | _Pas encore documenté._
-public const std::string& GetFontName() const  | _Pas encore documenté._
-public const std::string& GetFontColor() const  | _Pas encore documenté._
-public int GetFontSize() const  | _Pas encore documenté._
-public WatermarkLayout GetWatermarkLayout () const  | _Pas encore documenté._
-virtuel public ~ AddWatermarkActionData ()  | _Pas encore documenté._
+public const std::string& GetText() const  | Pas encore documenté.
+public const std::string& GetFontName() const  | Pas encore documenté.
+public const std::string& GetFontColor() const  | Pas encore documenté.
+public int GetFontSize() const  | Pas encore documenté.
+public WatermarkLayout GetWatermarkLayout () const  | Pas encore documenté.
+virtuel public ~ AddWatermarkActionData ()  | Pas encore documenté.
   
 ## <a name="members"></a>Membres
   

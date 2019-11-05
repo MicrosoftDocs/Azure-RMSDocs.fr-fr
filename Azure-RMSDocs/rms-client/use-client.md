@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/27/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 551aaa12a4a567b955b7d5e005e205c4029aa382
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: abe085b36bd940dd69c2cc5f0f7a564fd6707548
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984897"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561128"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -52,7 +52,7 @@ Le choix de l’étiquetage du client pour vos ordinateurs Windows peut être in
 
 Quel client devez-vous utiliser ?
 
-- Utilisez le **client d’étiquetage intégré à Office** pour vos ordinateurs Windows quand vous avez des applications Office 365 dont la version 1910 est minimale, que vous souhaitez utiliser les mêmes étiquettes et paramètres de stratégie que MacOS, iOS et Android, et que vous n’avez pas besoin de fonctionnalités dans  vos applications Office qui requièrent le client d’étiquetage unifié ou Classic. Ces fonctionnalités incluent actuellement l’étiquetage automatique et recommandé, et la barre de Information Protection sous le ruban pour faciliter la sélection et la visibilité des étiquettes. Ce client prend en charge le basculement de comptes et parce qu’il n’utilise pas de complément Office, il offre de meilleures performances dans les applications Office que l’utilisation de l’un des clients Azure Information Protection.
+- Utilisez le **client d’étiquetage intégré à Office** pour vos ordinateurs Windows quand vous avez des applications Office 365 dont la version 1910 est minimale, que vous souhaitez utiliser les mêmes étiquettes et paramètres de stratégie que MacOS, iOS et Android, et que vous n’avez pas besoin de fonctionnalités dans  vos applications Office qui requièrent le client d’étiquetage unifié ou Classic. Ces fonctionnalités incluent la barre de Information Protection sous le ruban pour faciliter la sélection et la visibilité des étiquettes. Ce client prend en charge le basculement de comptes et parce qu’il n’utilise pas de complément Office, il offre de meilleures performances dans les applications Office que l’utilisation de l’un des clients Azure Information Protection.
 
 - Utilisez l' **Azure information protection client d’étiquetage unifié** sur les ordinateurs Windows pour les étiquettes et les paramètres de stratégie qui peuvent également être utilisés par MacOS, iOS et Android. vous souhaitez étiqueter les fichiers indépendamment des applications Office 365 et vous n’avez pas besoin de fonctionnalités sont uniquement prises en charge par le client classique. Ces fonctionnalités incluent actuellement la protection du contenu avec une clé locale (HYOK) et une version de disponibilité générale du scanneur pour les magasins de données locaux.
 
@@ -77,9 +77,6 @@ Si vous disposez d’un ordinateur Windows qui exécute les applications Office 
     Pour ces utilisateurs, ils ont une expérience d’étiquetage légèrement différente lorsqu’ils utilisent ce client. Par exemple, ils voient un bouton **protéger** au lieu d’un bouton de **sensibilité** dans les applications Office. En tant qu’administrateur, vous devez gérer les étiquettes des paramètres HYOK et des paramètres de stratégie dans un autre centre de gestion pour les étiquettes et les paramètres des autres plateformes clientes.
 
 - Vous avez des magasins de données locaux avec des documents qui doivent être analysés à la recherche d’informations sensibles ou classifiées et protégées. Pour une utilisation en production, vous déployez le client Classic sur les serveurs pour exécuter le scanneur de Azure Information Protection.
-
-
-
 
 ## <a name="compare-the-labeling-clients-for-windows-computers"></a>Comparer les clients d’étiquetage pour les ordinateurs Windows
 

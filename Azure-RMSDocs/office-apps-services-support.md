@@ -3,8 +3,8 @@ title: Prise en charge d’Azure RMS d’Azure Information Protection par les pr
 description: Voici comment les programmes Office (comme Word et Outlook) et les services Office (Exchange et SharePoint) pour les utilisateurs finaux peuvent utiliser le service Azure Rights Management d’Azure Information Protection pour protéger les données de votre organisation.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 08/09/2019
+manager: rkarlin
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1250960a27deed4121bf0fd090250de30e56632b
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 279fc1cd21486115fc270456d28d0d2598d8d271
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447716"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559838"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Prise en charge d’Azure Rights Management par les programmes et services Office 
 
@@ -73,7 +73,7 @@ Le service IRM doit d'abord être activé pour SharePoint. Ensuite, vous spécif
 Si vous utilisez SharePoint Server, vous pouvez utiliser cette protection IRM en déployant le connecteur Azure Rights Management. Ce connecteur fait office de relais entre vos serveurs locaux et le service cloud Rights Management. Pour plus d’informations, consultez [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md).
 
 > [!NOTE]
-> Quand vous utilisez la protection IRM de SharePoint, certaines limitations s’appliquent :
+> Il existe certaines limitations lorsque vous utilisez l’IRM de SharePoint :
 > 
 > - Vous ne pouvez pas utiliser les modèles de protection personnalisés ou par défaut que vous gérez dans le portail Azure. 
 > 
@@ -82,6 +82,9 @@ Si vous utilisez SharePoint Server, vous pouvez utiliser cette protection IRM en
 > - La co-création, c’est-à-dire quand plusieurs personnes modifient un document simultanément, n’est pas prise en charge. Pour modifier un document dans une bibliothèque protégée par IRM, vous devez tout d’abord extraire le document et le télécharger, puis le modifier dans votre application Office. Par conséquent, une seule personne peut modifier le document à la fois.
 
 Pour les bibliothèques qui ne sont pas protégées par IRM, si vous protégez un fichier que vous chargez ensuite sur SharePoint ou OneDrive, les éléments suivants ne fonctionnent pas avec ce fichier : co-édition, Office pour le Web, recherche, aperçu du document, miniature, eDiscovery et protection contre la perte de données (DLP) ).
+
+> [!TIP]
+> Au lieu d’utiliser l’IRM de SharePoint, envisagez d’utiliser des étiquettes de sensibilité qui appliquent le chiffrement, puis [activez les étiquettes de sensibilité pour les fichiers Office dans SharePoint et OneDrive (version préliminaire publique)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 Quand vous utilisez la protection IRM SharePoint, le service Azure Rights Management applique des restrictions d’utilisation et un chiffrement de données aux documents téléchargés à partir de SharePoint, mais pas aux documents créés initialement dans SharePoint ou chargés dans la bibliothèque. Pour plus d’informations sur la façon dont les documents sont protégés avant leur téléchargement, voir [Chiffrement de données dans OneDrive Entreprise et SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) dans la documentation SharePoint.
 

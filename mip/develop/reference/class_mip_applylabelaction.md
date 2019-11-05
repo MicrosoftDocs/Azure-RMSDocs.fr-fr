@@ -1,26 +1,26 @@
 ---
 title: class mip::ApplyLabelAction
-description: 'Documente la classe MIP:: applylabelaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+description: 'Documente la classe MIP :: applylabelaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 3e5ba734400000b1b1a324520e9595828c2f6ff9
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: cb3ff8c247ad4dbcf4d85ba31608b07f3aaceddf
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056316"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559038"
 ---
 # <a name="class-mipapplylabelaction"></a>class mip::ApplyLabelAction 
 Appliquer les actions de l’étiquette requiert d’appeler l’application pour appliquer une étiquette spécifique.
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std:: shared_ptr\<étiquette\>& getLabel () const  |  Obtient l’étiquette requise.
-public const std:: Vector\<std:: String\>& GetClassificationIds () const  |  Obtient les ID de classification qui correspondent et a provoqué l’affichage de cette étiquette.
+public const std :: shared_ptr\<étiquette\>& GetLabel () const  |  Obtient l’étiquette requise.
+public const std :: Vector\<std :: String\>& GetClassificationIds () const  |  Obtient les ID de classification qui correspondent et a provoqué l’affichage de cette étiquette.
   
 ## <a name="members"></a>Membres
   
@@ -28,10 +28,10 @@ public const std:: Vector\<std:: String\>& GetClassificationIds () const  |  Obt
 Obtient l’étiquette requise.
 
   
-**Retourne**: Étiquette.
+**Retourne**: l’étiquette.
   
 ### <a name="getclassificationids-function"></a>GetClassificationIds fonction)
 Obtient les ID de classification qui correspondent et a provoqué l’affichage de cette étiquette.
 
   
-**Retourne**: Const std:: Vector < std:: String > & une liste d’ID de classification ayant provoqué l’affichage de cette étiquette.
+**Retourne**: const std :: Vector < std :: string > & une liste d’ID de classification qui a provoqué l’affichage de cette étiquette.

@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ae95c9d4ffc7bae7004ad6e79a958c0c8836a22f
-ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
+ms.openlocfilehash: c988dd65f677d69d362fe59f6a5eb0d631b23faa
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71679020"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561110"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
@@ -36,7 +36,7 @@ Lorsque vous configurez ces autorisations, vous pouvez spécifier les utilisateu
     
     Pour ouvrir des documents avec un compte Microsoft, les utilisateurs doivent utiliser des applications Office 365 (Démarrer en un clic). Les autres éditions et versions de Microsoft Office ne prennent pas encore en charge l’ouverture de documents Office protégés avec un compte Microsoft.
 
-- **Pour tout utilisateur authentifié** : cette option est appropriée quand vous n’avez pas besoin de contrôler l’accès au document protégé, à condition que l’utilisateur puisse être authentifié. L’authentification peut avoir lieu via Azure AD, à l’aide d’un compte Microsoft, ou même via un fournisseur de réseaux sociaux fédérés ou un code secret à usage unique quand le contenu est protégé par les nouvelles fonctionnalités d’Office 365 Message Encryption. 
+- **Pour tout utilisateur authentifié** : cette option est appropriée lorsque vous n’avez pas besoin de contrôler l’accès au document protégé, à condition que l’utilisateur puisse être authentifié. L’authentification peut avoir lieu via Azure AD, à l’aide d’un compte Microsoft, ou même via un fournisseur de réseaux sociaux fédérés ou un code secret à usage unique quand le contenu est protégé par les nouvelles fonctionnalités d’Office 365 Message Encryption. 
 
 En tant qu’administrateur, vous pouvez configurer une étiquette Azure Information Protection pour appliquer les autorisations et les utilisateurs autorisés. Avec cette configuration, les utilisateurs et autres administrateurs peuvent facilement appliquer les paramètres de protection corrects, car il leur suffit d’appliquer l’étiquette, sans avoir à indiquer les détails. Les sections suivantes fournissent un exemple de procédure pas à pas qui permet de protéger un document prenant en charge la collaboration sécurisée avec les utilisateurs internes et externes.
 
@@ -45,39 +45,39 @@ En tant qu’administrateur, vous pouvez configurer une étiquette Azure Informa
 
 Cet exemple décrit la procédure de configuration d’une étiquette existante afin d’appliquer une protection permettant aux utilisateurs de votre organisation de collaborer autour de documents avec tous les utilisateurs d’une autre organisation disposant d’Office 365 ou d’Azure AD, avec un groupe d’une autre organisation disposant d’Office 365 ou d’Azure AD et avec un utilisateur qui n’a pas de compte dans Azure AD et utilise à la place une adresse e-mail Gmail.
 
-Étant donné que le scénario restreint l’accès de personnes spécifiques, il n’inclut pas le paramètre pour tous les utilisateurs authentifiés. Pour obtenir un exemple de la manière dont vous pouvez configurer une étiquette avec ce paramètre, consultez l’[Exemple 5 : Étiquette qui chiffre le contenu, mais n’en restreint pas l’accès](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
+Étant donné que le scénario restreint l’accès de personnes spécifiques, il n’inclut pas le paramètre pour tous les utilisateurs authentifiés. Pour obtenir un exemple de la manière dont vous pouvez configurer une étiquette avec ce paramètre, consultez [Exemple 5 : étiquette qui crypte le contenu, mais n’en restreint pas l’accès](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
-1. Sélectionnez l’étiquette qui existe déjà dans la stratégie globale ou la stratégie délimitée. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
+1. Sélectionnez l’étiquette qui existe déjà dans la stratégie globale ou la stratégie délimitée. Dans le volet **protection** , assurez-vous que l’option **Azure (clé Cloud)** est sélectionnée.
     
 2. Vérifiez que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
 
-3. Dans le panneau **Ajouter des autorisations** : 
+3. Dans le volet **Ajouter des autorisations** : 
     
-   - Pour votre groupe interne : sélectionnez **Parcourir le répertoire** pour sélectionner le groupe qui doit avoir une fonction de messagerie activée.
+   - Pour votre groupe interne : sélectionnez **Parcourir les répertoires** pour sélectionner le groupe qui doit être à extension messagerie.
     
    - Pour tous les utilisateurs de la première organisation externe : sélectionnez **Entrez les détails** et tapez le nom d’un domaine dans le locataire de l’organisation. Par exemple, fabrikam.com.
     
    - Pour le groupe dans la seconde organisation externe : sous l’onglet **Entrez les détails**, tapez l’adresse e-mail du groupe dans le locataire de l’organisation. Par exemple, sales@contoso.com.
     
-   - Pour l’utilisateur qui n’a pas de compte Azure AD : toujours sous l’onglet **Entrez les détails**, tapez l’adresse e-mail de l’utilisateur. Par exemple, bengi.turan@gmail.com. 
+   - Pour l’utilisateur qui n’a pas de compte Azure AD : sous l’onglet **Entrez les détails**, tapez l’adresse e-mail de l’utilisateur. Par exemple, bengi.turan@gmail.com. 
 
-4. Pour accorder les mêmes autorisations à tous les utilisateurs : Pour **Choisir des autorisations à partir des autorisations prédéfinies**, sélectionnez **Copropriétaire**, **Co-auteur**, **Réviseur** ou **Personnalisé** pour sélectionner les autorisations à accorder.
+4. Pour accorder les mêmes autorisations à tous les utilisateurs : dans **Choisir des autorisations à partir des autorisations prédéfinies**, sélectionnez **Copropriétaire**, **Co-auteur**, **Réviseur** ou **Personnalisé** pour sélectionner les autorisations à accorder.
     
     Par exemple, les autorisations que vous configurez peuvent s’apparenter à ce qui suit :
         
     ![Configuration d’autorisations pour une collaboration sécurisée](./media/collaboration-permissions.png)
 
-5. Cliquez sur **OK** dans le panneau **Ajouter des autorisations**.
+5. Cliquez sur **OK** dans le volet **Ajouter des autorisations** .
 
-6. Dans le panneau **Protection**, cliquez sur **OK**.
+6. Dans le volet **protection** , cliquez sur **OK**.
 
-7. Dans le panneau **Étiquette**, sélectionnez **Enregistrer**. 
+7. Dans le volet **étiquette** , sélectionnez **Enregistrer**. 
 
 ## <a name="applying-the-label-that-supports-secure-collaboration"></a>Application de l’étiquette qui prend en charge la collaboration sécurisée
 
 Maintenant que cette étiquette est configurée, elle peut être appliquée aux documents de différentes manières, notamment :
 
-|Différentes manières d’appliquer l’étiquette|Plus d’informations|
+|Différentes manières d’appliquer l’étiquette|Autres informations|
 |---------------|----------|
 |Un utilisateur sélectionne manuellement l’étiquette lorsque le document est créé dans l’application Office.|Les utilisateurs sélectionnent l’étiquette à partir du bouton **Protéger** du ruban Office ou à partir de la barre Azure Information Protection.|
 |Les utilisateurs sont invités à sélectionner une étiquette au moment de l’enregistrement d’un nouveau document.|Vous avez configuré le [paramètre de stratégie](configure-policy-settings.md) Azure Information Protection nommé **Tous les documents et e-mails doivent avoir une étiquette**.|
@@ -95,7 +95,7 @@ Partagez le document protégé en le joignant à un e-mail et envoyez-le aux per
 
 ## <a name="opening-and-editing-the-protected-document"></a>Ouverture et modification du document protégé
 
-Lorsque les utilisateurs que vous avez autorisés ouvrent le document en vue de le modifier, le document s’ouvre avec une bannière d’informations qui les avertit que les autorisations sont limitées. Exemple :
+Lorsque les utilisateurs que vous avez autorisés ouvrent le document en vue de le modifier, le document s’ouvre avec une bannière d’informations qui les avertit que les autorisations sont limitées. Exemple :
 
 ![Exemple de bannière d’informations Azure Information Protection pour les autorisations](./media/example-restricted-access-banner.png)
 
@@ -132,14 +132,14 @@ En outre, les scénarios suivants prennent en charge l’affichage de documents�
 
 - Un navigateur peut ouvrir des pièces jointes protégées lorsque des fournisseurs de réseaux sociaux et des codes secrets à usage unique sont utilisés pour l’authentification avec Exchange Online et avec les nouvelles fonctionnalités d’Office 365 Message Encryption. 
 
-|Plateformes pour l’affichage et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />Compte Microsoft|
+|Plateformes pour l’affichage et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />Compte Microsoft|
 |---------------|----------|-----------|-----------|
 |Windows|Oui [[1]](#footnote-1)|Oui [[2]](#footnote-2)|
 |iOS|Oui [[1]](#footnote-1)|Non|
 |Android|Oui [[1]](#footnote-1)|Non|
 |MacOS|Oui [[1]](#footnote-1)|Non|
 
-###### <a name="footnote-1"></a>Note 1
+###### <a name="footnote-1"></a>Note de bas de page 1
 Prend en charge les comptes d’utilisateur, les groupes à extension messagerie, tous les membres. Les comptes d’utilisateur et les groupes à extension messagerie peuvent inclure des comptes Invité. Tous les membres sauf les comptes Invité.
 
 ###### <a name="footnote-2"></a>Note 2

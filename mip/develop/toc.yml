@@ -339,6 +339,16 @@
               href: reference/class_mip_userrights.md
             - name: UserRoles
               href: reference/class_mip_userroles.md
+    - name: Bibliothèque C
+      items:
+        - name: Vue d’ensemble
+          href: reference/c/overview.md
+        - name: Énumérations
+          href: reference/c/enumerations.md
+        - name: Structures
+          href: reference/c/structures.md
+        - name: Fonctions
+          href: reference/c/functions.md
     - name: Explorateur d’API .NET
       href: /dotnet/api/?term=microsoft.informationprotection
 - name: Ressources

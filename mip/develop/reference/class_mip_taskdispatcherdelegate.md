@@ -1,28 +1,28 @@
 ---
-title: 'MIP:: TaskDispatcherDelegate, classe'
-description: 'Documente la classe MIP:: taskdispatcherdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
+title: 'MIP :: TaskDispatcherDelegate, classe'
+description: 'Documente la classe MIP :: taskdispatcherdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: d5237bf999f7ad704fd303783a9fbdc506b58ed2
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: e73a03b842b1216bcc4ef71941ca4bc0b0233945
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056759"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559956"
 ---
-# <a name="class-miptaskdispatcherdelegate"></a>MIP:: TaskDispatcherDelegate, classe 
+# <a name="class-miptaskdispatcherdelegate"></a>MIP :: TaskDispatcherDelegate, classe 
 Classe qui définit l’interface du répartiteur de tâches du kit de développement logiciel (SDK) MIP.
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public void DispatchTask (const std:: String & IDTâche, std:: function\<void ()\> Task)  |  Exécuter une tâche sur un thread d’arrière-plan.
-public void DispatchTask (const std:: String & IDTâche, std:: function\<void ()\> tâche, int64_t Delay)  |  Exécuter une tâche sur un thread d’arrière-plan avec le délai donné.
-public void ExecuteTaskOnIndependentThread (const std:: String & IDTâche, std:: function\<void ()\> Task)  |  Exécuter immédiatement une tâche sur un thread indépendant.
-public bool CancelTask (const std:: String & taskId)  |  Annuler une tâche en arrière-plan.
+public void DispatchTask (const std :: String & IDTâche, std :: function\<void ()\> Task)  |  Exécuter une tâche sur un thread d’arrière-plan.
+public void DispatchTask (const std :: String & IDTâche, std :: function\<void ()\> Task, int64_t delaySeconds)  |  Exécuter une tâche sur un thread d’arrière-plan avec le délai donné.
+public void ExecuteTaskOnIndependentThread (const std :: String & IDTâche, std :: function\<void ()\> Task)  |  Exécuter immédiatement une tâche sur un thread indépendant.
+public bool CancelTask (const std :: String & taskId)  |  Annuler une tâche en arrière-plan.
 public void CancelAllTasks ()  |  Annule toutes les tâches en arrière-plan.
   
 ## <a name="members"></a>Membres
@@ -31,10 +31,10 @@ public void CancelAllTasks ()  |  Annule toutes les tâches en arrière-plan.
 Exécuter une tâche sur un thread d’arrière-plan.
 
 Paramètres :  
-* **taskId**: ID identifiant une tâche de manière unique 
+* **taskId**: ID pour identifier de manière unique une tâche 
 
 
-* **tâche**: Fonction à exécuter
+* **tâche**: fonction à exécuter
 
 
   
@@ -42,13 +42,13 @@ Paramètres :
 Exécuter une tâche sur un thread d’arrière-plan avec le délai donné.
 
 Paramètres :  
-* **taskId**: ID identifiant une tâche de manière unique 
+* **taskId**: ID pour identifier de manière unique une tâche 
 
 
-* **tâche**: Fonction à exécuter 
+* **tâche**: fonction à exécuter 
 
 
-* **délai**: Délai (en secondes) avant l’exécution de la tâche
+* **delaySeconds**: délai (en secondes) avant l’exécution de la tâche
 
 
   
@@ -56,10 +56,10 @@ Paramètres :
 Exécuter immédiatement une tâche sur un thread indépendant.
 
 Paramètres :  
-* **taskId**: ID identifiant une tâche de manière unique 
+* **taskId**: ID pour identifier de manière unique une tâche 
 
 
-* **tâche**: Fonction à exécuter
+* **tâche**: fonction à exécuter
 
 
   
@@ -72,7 +72,7 @@ Paramètres :
 
 
   
-**Retourne**: True si la tâche a été annulée avec succès, sinon false
+**Retourne**la valeur true si la tâche a été annulée avec succès, sinon false.
   
 ### <a name="cancelalltasks-function"></a>CancelAllTasks fonction)
 Annule toutes les tâches en arrière-plan.

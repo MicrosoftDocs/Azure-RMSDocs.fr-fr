@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c5fec770f3841408ea2eb10f5836329a6b003312
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 6a3792d8b69ebe7bf1f924fe618725a7cf286353
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447662"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561277"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -209,7 +209,7 @@ Bien qu’il soit possible de suivre une autre séquence pour mettre à niveau l
 
 1. Utilisez le portail Azure pour créer un nouveau profil de scanneur qui inclut des paramètres pour le scanneur et vos référentiels de données avec tous les paramètres dont ils ont besoin. Pour obtenir de l’aide pour cette étape, consultez la section [configurer le scanneur dans la portail Azure](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) dans les instructions de déploiement de l’analyseur.
     
-    Si l’ordinateur qui exécute le scanneur est déconnecté d’Internet, vous devez toujours effectuer cette étape. Ensuite, à partir du portail Azure, utilisez l’option **Exporter** pour exporter votre profil de scanneur dans un fichier.
+    Si l’ordinateur exécutant le scanneur est déconnecté d’Internet, vous devez toujours effectuer cette étape. Ensuite, à partir du portail Azure, utilisez l’option **Exporter** pour exporter votre profil de scanneur dans un fichier.
 
 2. Sur l’ordinateur du scanneur, arrêtez le service du scanneur, **Scanneur Azure Information Protection**.
 
@@ -230,9 +230,9 @@ Si vous ne configurez pas le scanneur dans le portail Azure avant d’exécuter 
 Dans ce scénario, lorsque vous configurez le scanneur dans le portail Azure, vous devez spécifier exactement le même nom de profil que celui utilisé lors de l’exécution de la commande Update-AIPScanner. Si le nom ne correspond pas, le scanneur ne sera pas configuré pour vos paramètres. 
 
 > [!TIP]
-> Pour identifier les scanneurs dont la configuration est incorrecte, utilisez le panneau **Azure Information Protection - Nœuds** dans le portail Azure.
+> Pour identifier les scanneurs qui présentent cette configuration inutilisable, utilisez le volet **Azure information protection-Nodes** du portail Azure.
 >  
-> Pour les scanneurs disposant d’une connexion Internet, ils affichent le nom de leur ordinateur avec le numéro de version GA du client Azure Information Protection, mais aucun nom de profil. Seuls les scanneurs portant le numéro de version 1.41.51.0 ne doivent pas afficher de nom de profil dans ce panneau. 
+> Pour les scanneurs disposant d’une connexion Internet, ils affichent le nom de leur ordinateur avec le numéro de version GA du client Azure Information Protection, mais aucun nom de profil. Seuls les scanneurs dont le numéro de version est 1.41.51.0 ne doivent afficher aucun nom de profil dans ce volet. 
 
 Si vous n’avez pas spécifié de nom de profil lors de l’exécution de la commande Update-AIPScanner, le nom d’ordinateur est utilisé pour créer automatiquement le nom du profil du scanneur.
 

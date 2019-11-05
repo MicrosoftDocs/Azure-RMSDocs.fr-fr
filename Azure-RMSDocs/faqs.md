@@ -4,7 +4,7 @@ description: Quelques questions fréquemment posées sur Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/04/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 4a94787ad611ca52206629362a7ac1bf9df9f174
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 0ba1046b18c8500130572e054e2bdd6e3a90fc5c
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805546"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561405"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -93,7 +93,7 @@ Une fois que vous avez migré vos étiquettes dans le portail Azure :
 
 - Si vous avez le [client Azure information protection (Classic)](./rms-client/aip-client.md), continuez à utiliser la portail Azure pour modifier vos étiquettes et paramètres de stratégie. Le client classique continue à télécharger des étiquettes et des paramètres de stratégie à partir d’Azure.
 
-- Si vous avez des [clients d’étiquetage unifiés](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) et des [clients classiques](./rms-client/aip-client.md), vous pouvez utiliser les centres d’administration ou le portail Azure pour modifier l’étiquette. Toutefois, pour que les clients classiques récupèrent les modifications d’étiquette que vous apportez dans les centres d’administration, vous devez revenir à la Portail Azure : utilisez l’option **publier** du panneau **Azure information protection-Unified Labeling** dans le portail Azure. 
+- Si vous avez des [clients d’étiquetage unifiés](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) et des [clients classiques](./rms-client/aip-client.md), vous pouvez utiliser les centres d’administration ou le portail Azure pour modifier l’étiquette. Toutefois, pour que les clients classiques récupèrent les modifications d’étiquette que vous apportez dans les centres d’administration, vous devez revenir à la Portail Azure : utilisez l’option **publier** du volet d' **étiquetage Azure information protection-Unified** dans le portail Azure. 
 
 Continuez à utiliser le portail Azure pour la [centralisation des rapports](reports-aip.md) et le [scanneur](deploy-aip-scanner.md).
 
@@ -167,9 +167,11 @@ Le service Azure Rights Management génère et gère automatiquement les certifi
 
 ## <a name="what-types-of-data-can-azure-information-protection-classify-and-protect"></a>Quels sont les types de données qu’Azure Information Protection peut classifier et protéger ?
 
-Azure Information Protection peut classifier et protéger des e-mails et des documents, localement ou dans le cloud. Ces documents sont notamment des documents Word, des feuilles de calcul Excel, des présentations PowerPoint, des documents PDF, des fichiers texte et des fichiers image. Pour connaître les types de document pris en charge, consultez la liste des [types de fichier pris en charge](./rms-client/client-admin-guide-file-types.md) dans le guide d’administration.
+Azure Information Protection peut classifier et protéger des e-mails et des documents, localement ou dans le cloud. Ces documents sont notamment des documents Word, des feuilles de calcul Excel, des présentations PowerPoint, des documents PDF, des fichiers texte et des fichiers image. Pour connaître les types de document pris en charge, consultez la liste des [types de fichier pris en charge](./rms-client/clientv2-admin-guide-file-types.md) dans le guide d’administration.
 
-Azure Information Protection ne pouvez pas classifier et protéger des données structurées telles que des fichiers de base de données, des éléments de calendrier, des rapports Power BI, des publications Yammer, du contenu Sway et des blocs-notes OneNote.
+Azure Information Protection ne pouvez pas classifier et protéger des données structurées telles que des fichiers de base de données, des éléments de calendrier, des publications Yammer, du contenu Sway et des blocs-notes OneNote.
+
+**Récemment annoncé en**préversion : Power bi prend désormais en charge la classification à l’aide d’étiquettes de sensibilité et peut appliquer la protection de ces étiquettes aux données exportées aux formats de fichier suivants :. pdf,. xls et. ppt. Pour plus d’informations, consultez [protection des données en Power bi (version préliminaire)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview).
 
 ## <a name="i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work"></a>Je vois qu’Azure Information Protection est répertoriée en tant qu’application cloud disponible pour l’accès conditionnel : comment cela fonctionne-t-il ?
 
@@ -185,7 +187,7 @@ Informations complémentaires :
 
 - Vous devrez peut-être ajuster la fréquence à laquelle vos stratégies d’accès conditionnel sont évaluées. Pour cela, configurez la durée de vie des jetons. Pour plus d’informations, consultez [Durées de vie de jeton configurables dans Azure Active Directory](/azure/active-directory/active-directory-configurable-token-lifetimes).
 
-- Nous vous recommandons de ne pas ajouter de comptes d’administrateur à vos stratégies d’accès conditionnel sans quoi ces comptes ne seront plus en mesure d’accéder au panneau Azure Information Protection dans le portail Azure.
+- Nous vous recommandons de ne pas ajouter de comptes d’administrateur à vos stratégies d’accès conditionnel, car ces comptes ne seront pas en mesure d’accéder au volet de Azure Information Protection dans le Portail Azure.
 
 - Si vous utilisez MFA dans vos stratégies d’accès conditionnel pour collaborer avec d’autres organisations (B2B), vous devez utiliser [Azure AD B2B Collaboration](/azure/active-directory/b2b/what-is-b2b) et créer des comptes Invité pour les utilisateurs de l’autre organisation avec lesquels vous souhaitez partager.
 

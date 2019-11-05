@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: de6d00cbd624ff21175b5020cd3b872269f9c926
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 7d6d35d5a1c560468845d0b04ae27e32dc40b671
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684116"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559281"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Ajouter une étiquette à une stratégie Azure Information Protection ou la supprimer de celle-ci
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Après avoir créé une étiquette Azure Information Protection, vous pouvez l’ajouter à une stratégie afin qu’elle soit disponible pour les utilisateurs. Si l’étiquette est destinée à tous les utilisateurs, ajoutez-la à la stratégie globale. Si l’étiquette est destinée à une partie des utilisateurs, ajoutez-la à une stratégie délimitée. Vous ne pouvez ajouter une étiquette qu’à une seule stratégie. 
 
@@ -36,17 +36,17 @@ Pour créer une stratégie délimitée afin que l’étiquette s’applique à u
 
 ## <a name="to-add-or-remove-a-label-to-or-from-a-policy"></a>Pour ajouter une étiquette à une stratégie ou la supprimer de celle-ci
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**.
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Ensuite, accédez au volet de **Azure information protection** .
     
-    Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
 
-2. À partir de l’option de menu **Classifications** > **Stratégies** : Dans le panneau **Azure Information Protection** - **Stratégies**, sélectionnez **Globale** si l’étiquette à ajouter ou supprimer s’applique à tous les utilisateurs.
+2. À partir de l’option de menu **classifications** > **stratégies** : dans le volet **Azure information protection** - **stratégies** , sélectionnez **Global** si l’étiquette à ajouter ou supprimer s’applique à tous les utilisateurs.
 
     Si l’étiquette à ajouter ou supprimer s’applique à une partie des utilisateurs, sélectionnez votre stratégie délimitée à la place.
 
-3. Dans le panneau **Stratégie**, sélectionnez **Ajouter ou supprimer des étiquettes**.
+3. Dans le volet **stratégie** , sélectionnez **Ajouter ou supprimer des étiquettes**.
 
-4. Dans le panneau **Stratégie : Ajouter ou supprimer des étiquettes**, vous voyez une case cochée en regard de toutes les étiquettes qui se trouvent déjà dans une stratégie, et le nom de la stratégie correspondante dans la colonne **STRATÉGIE**.
+4. Dans le volet **stratégie : ajouter ou supprimer des étiquettes** , vous voyez toutes vos étiquettes avec une case à cocher activée si elles se trouvent déjà dans une stratégie, et le nom de stratégie correspondant dans la colonne **stratégie** .
      
     Les sous-étiquettes sont mises en retrait. Dans une stratégie délimitée, les étiquettes qui sont héritées de la stratégie globale s’affichent comme étant non disponibles.
     

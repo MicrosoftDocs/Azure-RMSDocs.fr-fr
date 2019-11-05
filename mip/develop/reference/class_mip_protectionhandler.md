@@ -1,39 +1,39 @@
 ---
 title: class mip::ProtectionHandler
-description: Documente la classe MIP::p rotectionhandler du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
+description: Documente la classe MIP ::p rotectionhandler du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 28250cc27adeb18c2ca723084267341798f5efa7
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 6b5468986d62c01d2d3f0b55a57946d5fa06bab3
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057580"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560110"
 ---
 # <a name="class-mipprotectionhandler"></a>class mip::ProtectionHandler 
 Gère les actions liées à la protection pour une configuration de protection spécifique.
   
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std:: shared_ptr\<Stream\> CreateProtectedStream (const std:: shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contente)  |  Créer un flux protégé qui permet de chiffrer/déchiffrer le contenu.
+public std :: shared_ptr\<flux\> CreateProtectedStream (const std :: shared_ptr\<flux\>& backingStream, int64_t contentStartPosition, int64_t contente)  |  Créer un flux protégé qui permet de chiffrer/déchiffrer le contenu.
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Chiffrer un tampon.
 public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Déchiffrer un tampon.
-public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calcule la taille (en octets) du contenu s’il devait être chiffré avec ce [ProtectionHandler](class_mip_protectionhandler.md).
-public int64_t GetBlockSize()  |  Obtient la taille de bloc (en octets) pour le mode de chiffrement utilisé par ce [ProtectionHandler](class_mip_protectionhandler.md).
-public std:: Vector\<std:: String\> GetRight () const  |  Obtient les droits accordés à l’identité/l’utilisateur associé à ce [ProtectionHandler](class_mip_protectionhandler.md).
+public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calcule la taille (en octets) du contenu s’il devait être chiffré avec ce ProtectionHandler.
+public int64_t GetBlockSize()  |  Obtient la taille de bloc (en octets) pour le mode de chiffrement utilisé par ce ProtectionHandler.
+public std :: Vector\<std :: String\> GetRights () const  |  Obtient les droits accordés à l’utilisateur/l’identité associé à ce ProtectionHandler.
 public bool AccessCheck(const std::string& right) const  |  Vérifie si le Gestionnaire de protection accorde à l’utilisateur l’accès au droit spécifié.
 public const std::string GetIssuedTo()  |  Obtient l’utilisateur associé au Gestionnaire de protection.
 public const std::string GetOwner()  |  Obtient l’adresse e-mail du propriétaire du contenu.
 public bool IsIssuedToOwner()  |  Indique si l’utilisateur actuel est le propriétaire du contenu ou non.
-public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor ()  |  Obtient les détails de la protection.
+public std :: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor ()  |  Obtient les détails de la protection.
 public const std::string GetContentId()  |  Obtient l’identificateur unique du document/contenu.
 public bool DoesUseDeprecatedAlgorithms()  |  Indique si le gestionnaire de protection utilise des algorithmes de chiffrement dépréciés (ECB) pour la compatibilité descendante ou non.
 public bool IsAuditedExtractAllowed()  |  Indique si le gestionnaire de protection accorde le droit « extraction auditée » à l’utilisateur ou non.
-public const std:: Vector\<uint8_t\> GetSerializedPublishingLicense ()  |  Sérialiser [ProtectionHandler](class_mip_protectionhandler.md) dans une licence de publication (PL)
+public const std :: Vector\<uint8_t\> GetSerializedPublishingLicense ()  |  Sérialiser ProtectionHandler dans une licence de publication (PL)
   
 ## <a name="members"></a>Membres
   
@@ -41,152 +41,152 @@ public const std:: Vector\<uint8_t\> GetSerializedPublishingLicense ()  |  Séri
 Créer un flux protégé qui permet de chiffrer/déchiffrer le contenu.
 
 Paramètres :  
-* **backingStream**: Flux de sauvegarde à partir duquel lire/écrire 
+* **backingStream** : flux de sauvegarde à partir duquel lire/écrire 
 
 
-* **contentStartPosition**: Position de départ (en octets) dans le flux de stockage où commence le contenu protégé 
+* **contentStartPosition** : position de départ (en octets) dans le flux de sauvegarde où commence le contenu protégé 
 
 
-* **contenu**: Taille (en octets) du contenu protégé dans le flux de données de stockage
+* **contentSize** : taille (en octets) du contenu protégé dans le flux de sauvegarde
 
 
 
   
-**Retourne**: Flux protégé
+**Retourne** : le flux protégé
   
 ### <a name="encryptbuffer-function"></a>EncryptBuffer fonction)
 Chiffrer un tampon.
 
 Paramètres :  
-* **offsetFromStart**: Position relative de inputBuffer à partir du début du contenu en texte clair 
+* **offsetFromStart** : position relative d’inputBuffer à partir du début du contenu en texte clair 
 
 
-* **inputBuffer**: Mémoire tampon de contenu en texte clair qui sera chiffré 
+* **inputBuffer** : mémoire tampon du contenu en texte clair qui sera chiffré 
 
 
-* **inputBufferSize**: Taille (en octets) de la mémoire tampon d’entrée 
+* **inputBufferSize** : taille (en octets) de la mémoire tampon d’entrée 
 
 
-* **OUTPUTBUFFER**: Mémoire tampon dans laquelle le contenu chiffré sera copié 
+* **outputBuffer** : mémoire tampon dans laquelle le contenu chiffré sera copié 
 
 
-* **outputBufferSize**: Taille (en octets) de la mémoire tampon de sortie 
+* **outputBufferSize** : taille (en octets) de la mémoire tampon de sortie 
 
 
-* **isFinal**: Si la mémoire tampon d’entrée contient les octets de texte clair final ou non
+* **isFinal** : valeur indiquant si la mémoire tampon d’entrée contient les octets du texte en clair final ou non
 
 
 
   
-**Retourne**: Taille réelle (en octets) du contenu chiffré
+**Retourne** : la taille réelle (en octets) du contenu chiffré
   
 ### <a name="decryptbuffer-function"></a>DecryptBuffer fonction)
 Déchiffrer un tampon.
 
 Paramètres :  
-* **offsetFromStart**: Position relative de inputBuffer à partir du début du contenu chiffré 
+* **offsetFromStart** : position relative d’inputBuffer à partir du début du contenu chiffré 
 
 
-* **inputBuffer**: Mémoire tampon du contenu chiffré qui sera déchiffré 
+* **inputBuffer** : mémoire tampon du contenu chiffré qui sera déchiffré 
 
 
-* **inputBufferSize**: Taille (en octets) de la mémoire tampon d’entrée 
+* **inputBufferSize** : taille (en octets) de la mémoire tampon d’entrée 
 
 
-* **OUTPUTBUFFER**: Mémoire tampon dans laquelle le contenu déchiffré sera copié 
+* **outputBuffer** : mémoire tampon dans laquelle le contenu déchiffré sera copié 
 
 
-* **outputBufferSize**: Taille (en octets) de la mémoire tampon de sortie 
+* **outputBufferSize** : taille (en octets) de la mémoire tampon de sortie 
 
 
-* **isFinal**: Si la mémoire tampon d’entrée contient les octets chiffrés finaux ou non
+* **isFinal** : valeur indiquant si la mémoire tampon d’entrée contient les octets du texte chiffré final ou non
 
 
 
   
-**Retourne**: Taille réelle (en octets) du contenu déchiffré
+**Retourne** : la taille réelle (en octets) du contenu déchiffré
   
 ### <a name="getprotectedcontentlength-function"></a>GetProtectedContentLength fonction)
-Calcule la taille (en octets) du contenu s’il devait être chiffré avec ce [ProtectionHandler](class_mip_protectionhandler.md).
+Calcule la taille (en octets) du contenu s’il devait être chiffré avec ce ProtectionHandler.
 
 Paramètres :  
-* **unprotectedLength**: Taille (en octets) du contenu non protégé 
+* **unprotectedLength** : taille (en octets) du contenu non protégé 
 
 
-* **includesFinalBlock**: Décrit si le contenu non protégé en question comprend ou non le dernier bloc. Par exemple, en mode de chiffrement CBC4k, les blocs protégés non finaux sont de la même taille que les blocs non protégés, mais les blocs protégés finaux sont plus grands que leurs équivalents non protégés.
+* **includesFinalBlock** : décrit si le contenu non protégé en question inclut le dernier bloc ou non. Par exemple, en mode de chiffrement CBC4k, les blocs protégés non finaux sont de la même taille que les blocs non protégés, mais les blocs protégés finaux sont plus grands que leurs équivalents non protégés.
 
 
 
   
-**Retourne**: Taille (en octets) du contenu protégé
+**Retourne** : la taille (en octets) du contenu protégé
   
 ### <a name="getblocksize-function"></a>GetBlockSize fonction)
-Obtient la taille de bloc (en octets) pour le mode de chiffrement utilisé par ce [ProtectionHandler](class_mip_protectionhandler.md).
+Obtient la taille de bloc (en octets) pour le mode de chiffrement utilisé par ce ProtectionHandler.
 
   
-**Retourne**: Taille de bloc (en octets)
+**Retourne** : la taille (en octets) du bloc
   
 ### <a name="getrights-function"></a>GetRight, fonction
-Obtient les droits accordés à l’identité/l’utilisateur associé à ce [ProtectionHandler](class_mip_protectionhandler.md).
+Obtient les droits accordés à l’utilisateur/l’identité associé à ce ProtectionHandler.
 
   
-**Retourne**: Droits accordés à l’utilisateur
+**Retourne** : droits accordés à l’utilisateur
   
 ### <a name="accesscheck-function"></a>Fonction AccessCheck
 Vérifie si le Gestionnaire de protection accorde à l’utilisateur l’accès au droit spécifié.
 
 Paramètres :  
-* à **droite**: Droit de vérifier
+* **right** : droit à vérifier
 
 
 
   
-**Retourne**: Si le gestionnaire de protection accorde à l’utilisateur l’accès au droit spécifié ou non
+**Retourne** : valeur indiquant si le gestionnaire de protection accorde à l’utilisateur l’accès au droit spécifié ou non
   
 ### <a name="getissuedto-function"></a>GetIssuedTo fonction)
 Obtient l’utilisateur associé au Gestionnaire de protection.
 
   
-**Retourne**: Utilisateur associé au gestionnaire de protection
+**Retourne** : l’utilisateur associé au Gestionnaire de protection
   
 ### <a name="getowner-function"></a>GetOwner fonction)
 Obtient l’adresse e-mail du propriétaire du contenu.
 
   
-**Retourne**: Adresse e-mail du propriétaire du contenu
+**Retourne** : l’adresse e-mail du propriétaire du contenu
   
 ### <a name="isissuedtoowner-function"></a>IsIssuedToOwner fonction)
 Indique si l’utilisateur actuel est le propriétaire du contenu ou non.
 
   
-**Retourne**: Si l’utilisateur actuel est le propriétaire du contenu ou non
+**Retourne** : valeur indiquant s l’utilisateur actuel est le propriétaire du contenu ou non
   
 ### <a name="getprotectiondescriptor-function"></a>GetProtectionDescriptor fonction)
 Obtient les détails de la protection.
 
   
-**Retourne**: Détails de la protection
+**Retourne** : les détails de la protection
   
 ### <a name="getcontentid-function"></a>GetContentId fonction)
 Obtient l’identificateur unique du document/contenu.
 
   
-**Retourne**: Identificateur unique du contenu
+**Retourne** : l’identificateur unique du contenu
   
 ### <a name="doesusedeprecatedalgorithms-function"></a>DoesUseDeprecatedAlgorithms fonction)
 Indique si le gestionnaire de protection utilise des algorithmes de chiffrement dépréciés (ECB) pour la compatibilité descendante ou non.
 
   
-**Retourne**: Si le gestionnaire de protection utilise ou non des algorithmes de chiffrement déconseillés
+**Retourne** : valeur indiquant si le gestionnaire de protection utilise des algorithmes de chiffrement dépréciés ou non
   
 ### <a name="isauditedextractallowed-function"></a>IsAuditedExtractAllowed fonction)
 Indique si le gestionnaire de protection accorde le droit « extraction auditée » à l’utilisateur ou non.
 
   
-**Retourne**: Si le gestionnaire de protection accorde le droit «audit audité» à l’utilisateur ou non
+**Retourne** : valeur indiquant si le gestionnaire de protection accorde le droit « extraction auditée » à l’utilisateur ou non
   
 ### <a name="getserializedpublishinglicense-function"></a>GetSerializedPublishingLicense fonction)
-Sérialiser [ProtectionHandler](class_mip_protectionhandler.md) dans une licence de publication (PL)
+Sérialiser ProtectionHandler dans une licence de publication (PL)
 
   
-**Retourne**: Licence de publication sérialisée
+**Retourne** : licence de publication sérialisée

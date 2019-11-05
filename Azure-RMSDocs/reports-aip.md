@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 616e273f3d3a9a615e752e4fb9587165aac15a23
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: de74d15b2db84cc13cbc54943675232e8d659df4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445061"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561364"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
 
@@ -163,7 +163,7 @@ Comme cette fonctionnalité utilise Azure Monitoring, le contrôle d’accès en
 
 Détails :
 
-1. Il vous faut l’un des [rôles d’administrateur Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) suivants pour accéder au panneau d’analytique d’Azure Information Protection :
+1. L’un des [rôles d’administrateur Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) suivants pour accéder au volet analyse Azure information protection :
     
     - Pour créer votre espace de travail Log Analytics ou des requêtes personnalisées :
     
@@ -219,15 +219,15 @@ Azure Monitor journaux a une fonctionnalité d' **utilisation et de coûts estim
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurer un espace de travail Log Analytics pour les rapports
 
-1. Si ce n’est déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](https://portal.azure.com) avec un compte qui possède les [autorisations requises pour l’analytique Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Accédez ensuite au panneau **Azure Information Protection**. 
+1. Si ce n’est déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](https://portal.azure.com) avec un compte qui possède les [autorisations requises pour l’analytique Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Ensuite, accédez au volet de **Azure information protection** . 
     
-    Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
     
 2. Recherchez les options du menu **Gérer**, puis sélectionnez **Configurer l’analytique (préversion)** .
 
-3. Dans le panneau **Azure Information Protection - Log Analytics**, vous pouvez voir une liste des espaces de travail Log Analytics qui sont détenus par votre locataire. Procédez de l'une des façons suivantes :
+3. Dans le volet **Azure information protection log Analytics** , vous voyez une liste de tous les espaces de travail log Analytics détenus par votre locataire. Procédez de l'une des façons suivantes :
     
-    - Pour créer un espace de travail Log Analytics : sélectionnez **Créer un espace de travail** puis, dans le panneau **Espace de travail Log Analytics**, fournissez les informations demandées.
+    - Pour créer un espace de travail Log Analytics : sélectionnez **créer un nouvel espace**de travail, puis dans le volet **espace de travail log Analytics** , fournissez les informations demandées.
     
     - Pour utiliser un espace de travail Log Analytics existant : sélectionnez l’espace de travail dans la liste.
     
@@ -247,7 +247,7 @@ Vous êtes maintenant prêt à afficher les rapports.
 
 ## <a name="how-to-view-the-reports"></a>Comment afficher les rapports
 
-Dans le panneau Azure Information Protection, recherchez les options du menu **Tableaux de bord**, puis sélectionnez l’une des options suivantes :
+Dans le volet Azure Information Protection, recherchez les options du menu **tableaux de bord** , puis sélectionnez l’une des options suivantes :
 
 - **Rapport d’utilisation (préversion)**  : utilisez ce rapport pour voir comment vos étiquettes sont utilisées.
 
@@ -269,7 +269,7 @@ Dans le panneau Azure Information Protection, recherchez les options du menu **T
 
 ## <a name="how-to-modify-the-reports-and-create-custom-queries"></a>Comment modifier les rapports et créer des requêtes personnalisées
 
-Sélectionnez l’icône de requête dans le tableau de bord pour ouvrir un panneau **Recherche dans les journaux** : 
+Sélectionnez l’icône de requête dans le tableau de bord pour ouvrir un volet de recherche dans les **journaux** : 
 
 ![Icône Log Analytics pour personnaliser les rapports Azure Information Protection](./media/log-analytics-icon.png)
 

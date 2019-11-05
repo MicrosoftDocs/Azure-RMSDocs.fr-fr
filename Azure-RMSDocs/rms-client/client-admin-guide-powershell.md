@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5efccfe851446a754cd5f823b8f71d504824a778
-ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
+ms.openlocfilehash: 7898fd3ff15423c6a92eb2eabe6f5cb01007b076
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890327"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561305"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -489,7 +489,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 
 2. Pour le locataire Azure AD que vous utilisez avec Azure Information Protection, accédez à **Azure Active Directory** > **gérer** > **inscriptions d’applications**. 
 
-3. Sélectionnez **+ nouvelle inscription**pour créer votre application Web App/API. Dans le panneau **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
+3. Sélectionnez **+ nouvelle inscription**pour créer votre application Web App/API. Dans le volet **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
 
    - **Nom**: `AIPOnBehalfOf`
         
@@ -499,34 +499,34 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     
     - **URI de redirection (facultatif)** : **Web** et `http://localhost`
 
-4. Dans le panneau **AIPOnBehalfOf** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant : `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Cette valeur est utilisée pour le paramètre *WebAppId* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
+4. Dans le volet **AIPOnBehalfOf** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant : `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Cette valeur est utilisée pour le paramètre *WebAppId* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
-5. Toujours dans le panneau **AIPOnBehalfOf** , dans le menu **gérer** , sélectionnez **authentification**.
+5. Toujours dans le volet **AIPOnBehalfOf** , dans le menu **gérer** , sélectionnez **authentification**.
 
-6. Dans le panneau **AIPOnBehalfOf-Authentication** , dans la section **Paramètres avancés** , activez la case à cocher **ID Tokens** , puis sélectionnez **Enregistrer**.
+6. Dans le volet **authentification AIPOnBehalfOf** , dans la section **Paramètres avancés** , activez la case à cocher **ID Tokens** , puis sélectionnez **Enregistrer**.
 
-7. Toujours dans le panneau **AIPOnBehalfOf-Authentication** , dans le menu **gérer** , sélectionnez **certificats & secrets**.
+7. Toujours dans le volet **AIPOnBehalfOf-Authentication** , dans le menu **gérer** , sélectionnez **certificats & secrets**.
 
-8. Dans le panneau **AIPOnBehalfOf-certificats & secrets** , dans la section **secrets client** , sélectionnez **+ nouvelle clé secrète client**. 
+8. Dans le volet **AIPOnBehalfOf-certificats & secrets** , dans la section **secrets client** , sélectionnez **+ nouvelle clé secrète client**. 
 
 9. Pour **Ajouter une clé secrète client**, spécifiez les éléments suivants, puis sélectionnez **Ajouter**:
     
     - **Description**: `Azure Information Protection client`
     - **Expires**: spécifiez votre choix de durée (1 an, 2 ans ou n’expire jamais)
 
-9. De retour dans le panneau **AIPOnBehalfOf-certificats & secrets** , dans la section **secrets clients** , copiez la chaîne correspondant à la **valeur**. Cette chaîne ressemble à l’exemple suivant : `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`. Pour être sûr de copier tous les caractères, sélectionnez l’icône à **copier dans le presse-papiers**. 
+9. De retour dans le volet **AIPOnBehalfOf-certificats & secrets** , dans la section **secrets clients** , copiez la chaîne correspondant à la **valeur**. Cette chaîne ressemble à l’exemple suivant : `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`. Pour être sûr de copier tous les caractères, sélectionnez l’icône à **copier dans le presse-papiers**. 
     
     Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée. Comme pour toutes les informations sensibles que vous utilisez, stockez la valeur enregistrée en toute sécurité et restreignez l’accès à celle-ci.
 
-10. Toujours dans le panneau **AIPOnBehalfOf-certificats & secrets** , dans le menu **gérer** , sélectionnez **exposer une API**.
+10. Toujours dans le volet **AIPOnBehalfOf-certificats & secrets** , dans le menu **gérer** , sélectionnez **exposer une API**.
 
-11. Dans le panneau **AIPOnBehalfOf-exposer une API** , sélectionnez **Set** pour l’option URI de l' **ID d’application** , et dans la valeur URI de l’ID d' **application** , remplacez **API** par **http**. Cette chaîne ressemble à l’exemple suivant : `http://d244e75e-870b-4491-b70d-65534953099e`. 
+11. Dans le volet **AIPOnBehalfOf-exposer une API** , sélectionnez **Set** pour l’option URI de l' **ID d’application** , et dans la valeur URI de l’ID d' **application** , remplacez **API** par **http**. Cette chaîne ressemble à l’exemple suivant : `http://d244e75e-870b-4491-b70d-65534953099e`. 
     
     Sélectionnez **Enregistrer**.
 
-12. De retour sur le panneau **AIPOnBehalfOf-exposer une API** , sélectionnez **+ Ajouter une étendue**.
+12. De retour sur le **AIPOnBehalfOf-exposer un volet API** , sélectionnez **+ Ajouter une étendue**.
 
-13. Dans le panneau **Ajouter une étendue** , spécifiez les éléments suivants, en utilisant les chaînes suggérées comme exemples, puis sélectionnez **Ajouter une étendue**:
+13. Dans le volet **Ajouter une étendue** , spécifiez les éléments suivants, en utilisant les chaînes suggérées comme exemples, puis sélectionnez **Ajouter une étendue**:
     - **Nom**de l’étendue : `user-impersonation`
     - **Qui peut donner son consentement ?** : **administrateurs et utilisateurs**
     - **Nom d’affichage du consentement**de l’administrateur : `Access Azure Information Protection scanner`
@@ -535,34 +535,34 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
     - **Description du consentement**de l’utilisateur : `Allow the application to access the scanner for the signed-in user`
     - **État**: **activé** (valeur par défaut)
 
-14. De retour dans le panneau **AIPOnBehalfOf-exposer une API** , fermez ce panneau.
+14. De retour sur le **AIPOnBehalfOf-exposer un volet API** , fermez ce volet.
 
-15. Dans le panneau **inscriptions d’applications** , sélectionnez **+ nouvelle inscription d’application** pour créer votre application native.
+15. Dans le volet **inscriptions d’applications** , sélectionnez **+ nouvelle inscription d’application** pour créer votre application native.
 
-16. Dans le panneau **inscrire une application** , spécifiez les paramètres suivants, puis sélectionnez **inscrire**:
+16. Dans le volet **inscrire une application** , spécifiez les paramètres suivants, puis sélectionnez **inscrire**:
     - **Nom**: `AIPClient`
     - **Types de comptes pris en charge**: **comptes dans ce répertoire d’organisation uniquement**
     - **URI de redirection (facultatif)** : **client Public (mobile & desktop)** et `http://localhost`
 
-17. Dans le panneau **AIPClient** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant : `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+17. Dans le volet **AIPClient** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant : `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
     
     Cette valeur est utilisée pour le paramètre NativeAppId lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
-18. Toujours dans le panneau **AIPClient** , dans le menu **gérer** , sélectionnez **authentification**.
+18. Toujours dans le volet **AIPClient** , dans le menu **gérer** , sélectionnez **authentification**.
 
-19. Dans le panneau **AIPClient-Authentication** , spécifiez les éléments suivants, puis sélectionnez **Enregistrer**:
+19. Dans le volet **AIPClient-Authentication** , spécifiez les éléments suivants, puis sélectionnez **Enregistrer**:
     - Dans la section **Paramètres avancés** , sélectionnez **ID jetons**.
     - Dans la section **type de client par défaut** , sélectionnez **Oui**.
 
-20. Toujours dans le panneau **AIPClient-Authentication** , dans le menu **gérer** , sélectionnez **autorisations API**.
+20. Toujours dans le volet **AIPClient-Authentication** , dans le menu **gérer** , sélectionnez **autorisations API**.
 
-21. Dans le panneau **AIPClient-autorisations** , sélectionnez **+ Ajouter une autorisation**.
+21. Dans le volet **AIPClient-autorisations** , sélectionnez **+ Ajouter une autorisation**.
 
-22. Dans le panneau **demander des autorisations d’API** , sélectionnez **mes API**.
+22. Dans le volet **demander des autorisations d’API** , sélectionnez **mes API**.
 
 23. Dans la section **Sélectionner une API** , sélectionnez **APIOnBehalfOf**, puis activez la case à cocher **User-emprunt d’identité**comme autorisation. Sélectionnez **Ajouter des autorisations**. 
 
-24. De retour dans le panneau **autorisations** de l’API, dans la section **accorder** le consentement, sélectionnez **accorder le consentement de l’administrateur pour \<*le nom de votre locataire*>** et sélectionnez **Oui** pour l’invite de confirmation.
+24. De retour dans le volet **autorisations** de l’API, dans la section **accorder** un consentement, sélectionnez **accorder le consentement de l’administrateur pour \<*le nom de votre locataire*>** et sélectionnez **Oui** pour l’invite de confirmation.
 
 Vous venez de terminer la configuration des deux applications, et vous disposez des valeurs dont vous avez besoin pour exécuter [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec les paramètres *WebAppId*, *WebAppKey* and *NativeAppId*. À partir de nos exemples :
 

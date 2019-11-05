@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1388445ad9a5e7facded18dcd3f19be265bc4035
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: da0d578d06081667e4d8a25be841c2feb2c1fbd5
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805644"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561251"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guide de l’administrateur : utilisation de PowerShell avec le client unifié Azure Information Protection
 
@@ -101,7 +101,7 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
 
 2. Pour le locataire Azure AD que vous utilisez avec Azure Information Protection, accédez à **Azure Active Directory** > **gérer** > **inscriptions d’applications**. 
 
-3. Sélectionnez **+ nouvel enregistrement**. Dans le panneau **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
+3. Sélectionnez **+ nouvel enregistrement**. Dans le volet **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
 
    - **Nom**: `AIP-DelegatedUser`
         
@@ -111,26 +111,26 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
     
     - **URI de redirection (facultatif)** : **Web** et `https://localhost`
 
-4. Dans le panneau **AIP-DelegatedUser** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant : `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. Cette valeur est utilisée pour le paramètre *AppID* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
+4. Dans le volet **AIP-DelegatedUser** , copiez la valeur de l’ID de l' **application (client)** . La valeur ressemble à l’exemple suivant : `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. Cette valeur est utilisée pour le paramètre *AppID* lorsque vous exécutez l’applet de commande Set-AIPAuthentication. Collez et enregistrez la valeur pour référence ultérieure.
 
 5. Dans la barre latérale, sélectionnez **gérer** les **certificats > & les secrets**.
 
-6. Sur le panneau **AIP-DelegatedUser-certificats & secrets** , dans la section **secrets du client** , sélectionnez **+ nouvelle clé secrète client**.
+6. Sur le volet **AIP-DelegatedUser-certificats & secrets** , dans la section **secrets client** , sélectionnez **+ nouvelle clé secrète client**.
 
 7. Pour **Ajouter une clé secrète client**, spécifiez les éléments suivants, puis sélectionnez **Ajouter**:
     
     - **Description**: `Azure Information Protection unified labeling client`
     - **Expires**: spécifiez votre choix de durée (1 an, 2 ans ou n’expire jamais)
 
-8. De retour sur le panneau **AIP-DelegatedUser-certificates & secrets** , dans la section **secrets client** , copiez la chaîne correspondant à la **valeur**. Cette chaîne ressemble à l’exemple suivant : `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. Pour être sûr de copier tous les caractères, sélectionnez l’icône à **copier dans le presse-papiers**. 
+8. De retour sur le volet **AIP-DelegatedUser-certificates & secrets** , dans la section **secrets client** , copiez la chaîne correspondant à la **valeur**. Cette chaîne ressemble à l’exemple suivant : `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. Pour être sûr de copier tous les caractères, sélectionnez l’icône à **copier dans le presse-papiers**. 
     
     Il est important d’enregistrer cette chaîne, car elle ne sera plus affichée et ne pourra pas être récupérée. Comme pour toutes les informations sensibles que vous utilisez, stockez la valeur enregistrée en toute sécurité et restreignez l’accès à celle-ci.
 
 9. Dans la barre latérale, sélectionnez **gérer** les **autorisations d’API** > .
 
-10. Dans le panneau d' **autorisations AIP-DelegatedUser-API** , sélectionnez **+ Ajouter une autorisation**.
+10. Dans le volet d' **autorisations AIP-DelegatedUser-API** , sélectionnez **+ Ajouter une autorisation**.
 
-11. Dans le panneau **demander des autorisations d’API** , vérifiez que vous êtes sous l’onglet **API Microsoft** , puis sélectionnez **Azure Rights Management Services**. Lorsque vous êtes invité à entrer le type d’autorisations dont votre application a besoin, sélectionnez autorisations de l' **application**.
+11. Dans le volet **demander des autorisations d’API** , vérifiez que vous êtes sous l’onglet **API Microsoft** , puis sélectionnez **Azure Rights Management Services**. Lorsque vous êtes invité à entrer le type d’autorisations dont votre application a besoin, sélectionnez autorisations de l' **application**.
 
 12. Pour **Sélectionner des autorisations**, développez **contenu** , puis sélectionnez les éléments suivants :
     
@@ -139,11 +139,11 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
 
 13. Sélectionnez **Ajouter des autorisations**.
 
-14. Dans le panneau d' **autorisations AIP-DelegatedUser-API** , sélectionnez **+ Ajouter une nouvelle autorisation** .
+14. De retour dans le volet d' **autorisations AIP-DelegatedUser-API** , sélectionnez **+ Ajouter une nouvelle autorisation** .
 
-15. Dans le panneau **demander des autorisations AIP** , sélectionnez les **API utilisées par mon organisation**et recherchez **service de synchronisation Microsoft information protection**.
+15. Dans le volet **demander des autorisations AIP** , sélectionnez les **API utilisées par mon organisation**et recherchez **service de synchronisation Microsoft information protection**.
 
-16. Dans le panneau **demander des autorisations d’API** , sélectionnez autorisations de l' **application**.
+16. Dans le volet **demander des autorisations d’API** , sélectionnez autorisations de l' **application**.
 
 17. Pour les **autorisations SELECT**, développez **UnifiedPolicy** , puis sélectionnez les éléments suivants :
     
@@ -151,7 +151,7 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
 
 18. Sélectionnez **Ajouter des autorisations**.
 
-19. De retour dans le panneau d' **autorisations AIP-DelegatedUser-API** , sélectionnez **accorder le consentement de l’administrateur pour \<*le nom de votre locataire*>** et sélectionnez **Oui** pour l’invite de confirmation.
+19. De retour dans le volet d' **autorisations AIP-DelegatedUser-API** , sélectionnez **accorder le consentement de l’administrateur pour \<*le nom de votre locataire*>** et sélectionnez **Oui** pour l’invite de confirmation.
     
     Vos autorisations d’API doivent ressembler à ce qui suit :
     

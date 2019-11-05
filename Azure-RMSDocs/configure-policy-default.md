@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ea2c89c2ddbebc7a3efe6248a6073ceb82a8f21f
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 892d19f9318a01f527b4dc5df686300321497f29
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447088"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559613"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
@@ -37,7 +37,7 @@ Vous pouvez référencer les valeurs suivantes pour rétablir les valeurs par d�
 > [!IMPORTANT]
 > À compter du 2019 avril, les étiquettes par défaut ne sont pas créées automatiquement pour les nouveaux clients. Ces locataires sont automatiquement provisionnés pour la plateforme d’étiquetage unifié, il n’est donc pas nécessaire de migrer les étiquettes après les avoir configurées dans le portail Azure.
 > 
-> Pour ces locataires, s’il n’existe pas d’étiquettes de sensibilité déjà créées dans le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft 365 ou le centre de conformité Microsoft 365, vous pouvez créer les étiquettes par défaut à partir de la stratégie par défaut pour Azure Information Protection. Pour ce faire, sélectionnez **Générer des étiquettes par défaut** à partir du panneau **Étiquettes** et ajoutez les étiquettes à la stratégie générale. Pour des instructions détaillées, consultez le démarrage rapide [Bien démarrer avec Azure Information Protection sur le portail Azure](quickstart-viewpolicy.md).
+> Pour ces locataires, s’il n’existe pas d’étiquettes de sensibilité déjà créées dans le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft 365 ou le centre de conformité Microsoft 365, vous pouvez créer les étiquettes par défaut à partir de la stratégie par défaut pour Azure Information Protection. Pour ce faire, sélectionnez **générer des étiquettes par défaut** dans le volet **étiquettes** et ajoutez les étiquettes à la stratégie globale. Pour des instructions détaillées, consultez le démarrage rapide [Bien démarrer avec Azure Information Protection sur le portail Azure](quickstart-viewpolicy.md).
 
 
 ## <a name="current-default-policy"></a>Stratégie par défaut actuelle

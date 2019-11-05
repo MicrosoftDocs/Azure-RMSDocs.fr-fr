@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d8d60a170e587b7aa6b9e21f4368b26cb33d84bb
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 8fc9425608f0ff2556ad83292607bb84912a427b
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444954"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559692"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
@@ -171,7 +171,7 @@ Si vous ne l'avez pas déjà fait, vous devez à présent configurer l'équilibr
 ## <a name="configuring-load-balancing-and-high-availability"></a>Configuration de l'équilibrage de charge et de la haute disponibilité
 Après avoir installé la deuxième instance ou la dernière instance du connecteur RMS, définissez un nom de serveur d’URL de connecteur et configurez un système d’équilibrage de charge.
 
-Le nom de serveur URL du connecteur peut être n'importe quel nom défini dans un espace de noms que vous contrôlez. Par exemple, vous pouvez créer une entrée dans votre système DNS pour **rmsconnector.contoso.com** et configurer cette entrée pour utiliser une adresse IP dans votre système d’équilibrage de charge. Il n'y a pas de conditions requises particulières pour ce nom, et il n'est pas nécessaire de le configurer sur les serveurs de connecteur eux-mêmes. Il n'est pas non plus nécessaire que ce nom apparaisse sur Internet, sauf si vos serveurs Exchange et SharePoint sont amenés à communiquer avec le connecteur via Internet.
+Le nom de serveur URL du connecteur peut être n'importe quel nom défini dans un espace de noms que vous contrôlez. Par exemple, vous pouvez créer une entrée dans votre système DNS pour **rmsconnector.contoso.com** et configurer cette entrée pour utiliser une adresse IP dans votre système d’équilibrage de charge. Il n'y a pas de conditions requises particulières pour ce nom, et il n'est pas nécessaire de le configurer sur les serveurs de connecteur eux-mêmes. Ce nom ne doit pas être résolu sur Internet, sauf si vos serveurs Exchange et SharePoint doivent communiquer avec le connecteur via Internet.
 
 > [!IMPORTANT]
 > Nous vous conseillons de ne pas modifier ce nom une fois les serveurs Exchange ou SharePoint configurés pour utiliser le connecteur, car vous devriez alors supprimer ces serveurs de l'ensemble des configurations de gestion des droits relatifs à l'information pour ensuite les reconfigurer.
@@ -208,7 +208,7 @@ Si vous utilisez l'option HTTPS, assurez-vous que tous les serveurs exécutant l
 > - Pour configurer IIS afin d’utiliser le certificat, consultez [Ajouter une liaison à un site (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx) dans la bibliothèque de documentation [Serveur web (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) sur TechNet.
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Configuration du connecteur RMS pour un serveur proxy web
-Si vos serveurs de connecteur sont installés au sein d'un réseau qui ne possède pas de connectivité Internet directe et qui nécessite la configuration manuelle d'un serveur proxy web pour obtenir un accès Internet sortant, vous devez configurer le registre de ces serveurs pour le connecteur RMS.
+Si vos serveurs de connecteur sont installés sur un réseau qui ne dispose pas d’une connectivité Internet directe et requiert la configuration manuelle d’un serveur proxy Web pour l’accès Internet sortant, vous devez configurer le registre sur ces serveurs pour le connecteur RMS.
 
 #### <a name="to-configure-the-rms-connector-to-use-a-web-proxy-server"></a>Configuration du connecteur RMS afin d'utiliser un serveur proxy web
 
@@ -233,7 +233,7 @@ Vous pouvez exécuter l'outil d'administration du connecteur RMS à partir d'un 
 
 -   au moins une interface réseau ;
 
--   un accès à Internet via un pare-feu (ou un proxy web).
+-   Accès à Internet via un pare-feu (ou un proxy Web).
 
 Exécutez les fichiers suivants pour installer l'outil d'administration du connecteur RMS :
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 28c63107581e6560686845b7f9a77293f505da41
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: c4a889c021d6a66a5cde7e071137d9f13dcc0ab1
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445016"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559516"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Guide pratique pour configurer les paramètres de stratégie pour Azure Information Protection
 
@@ -37,15 +37,15 @@ Notez que les paramètres de stratégie peuvent avoir des valeurs par défaut di
 
 ## <a name="to-configure-the-policy-settings"></a>Pour configurer les paramètres de stratégie
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**.
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Ensuite, accédez au volet de **Azure information protection** .
     
-    Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
 
-2. À partir de l’option de menu **Classifications** > **Stratégies** : dans le panneau **Azure Information Protection - Stratégies**, sélectionnez **Globale** si les paramètres que vous souhaitez configurer s’appliquent à tous les utilisateurs.
+2. À partir de l’option de menu **classifications** > **stratégies** : dans le volet **Azure information protection-stratégies** , sélectionnez **Global** si les paramètres que vous souhaitez configurer s’appliquent à tous les utilisateurs.
     
     Si les paramètres à configurer se trouvent dans une [stratégie délimitée](configure-policy-scope.md) pour s’appliquer uniquement aux utilisateurs sélectionnés, sélectionnez votre stratégie délimitée à la place.
 
-3. Dans le panneau **Stratégie**, configurez les paramètres suivants :
+3. Dans le volet **stratégie** , configurez les paramètres :
     
    - **Sélectionner l’étiquette par défaut** : lorsque vous définissez cette option, sélectionnez l’étiquette à attribuer à des documents et des e-mails qui n’ont pas d’étiquette. Vous ne pouvez pas définir une étiquette par défaut si elle a des sous-étiquettes.
         

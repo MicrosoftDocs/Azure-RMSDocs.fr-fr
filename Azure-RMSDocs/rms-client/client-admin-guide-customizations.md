@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a9226d20962d1d51608ef0d5d487e785006fd8dc
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: 9314cee4b09db6098612ce0e9cd5c6bac51a8e66
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984927"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561332"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -32,19 +32,19 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Comment configurer les paramètres avancés de configuration du client dans le portail
 
-1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, [connectez-vous au portail Azure](../configure-policy.md#signing-in-to-the-azure-portal), puis accédez au panneau **Azure Information Protection**.
+1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, [Connectez-vous au portail Azure](../configure-policy.md#signing-in-to-the-azure-portal), puis accédez au volet de **Azure information protection** .
 
 2. À partir de l’option de menu **Classifications** > **Étiquettes** : sélectionnez **Stratégies**.
 
-3. Dans le panneau **Azure Information Protection - Stratégies**, sélectionnez le menu contextuel ( **...** ) à côté de la stratégie qui doit contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
+3. Dans le volet **Azure information protection-stratégies** , sélectionnez le menu contextuel ( **...** ) en regard de la stratégie pour contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
     
     Vous pouvez configurer des paramètres avancés pour la stratégie globale et pour les stratégies étendues.
 
-4. Dans le panneau **Paramètres avancés**, tapez le nom et la valeur du paramètre avancé, puis sélectionnez **Enregistrer et fermer**.
+4. Dans le volet **Paramètres avancés** , tapez le nom et la valeur du paramètre avancé, puis sélectionnez **enregistrer et fermer**.
 
 5. Assurez-vous que les utilisateurs de cette stratégie redémarrent toutes les applications Office qu’ils avaient ouvertes.
 
-6. Si vous n’avez plus besoin de ce paramètre et souhaitez rétablir le comportement par défaut : dans le panneau **Paramètres avancés**, sélectionnez le menu contextuel ( **...** ) à côté du paramètre dont vous n’avez plus besoin, puis sélectionnez **Supprimer**. Ensuite, cliquez sur **Enregistrer et fermer**.
+6. Si vous n’avez plus besoin du paramètre et souhaitez rétablir le comportement par défaut : dans le volet **Paramètres avancés** , sélectionnez le menu contextuel ( **...** ) en regard du paramètre dont vous n’avez plus besoin, puis sélectionnez **supprimer**. Ensuite, cliquez sur **Enregistrer et fermer**.
 
 #### <a name="available-advanced-client-settings"></a>Paramètres client avancés disponibles
 
@@ -157,9 +157,9 @@ Créez le nom de la valeur DWORD suivant (avec toutes données de la valeur) :
 
 ## <a name="support-for-disconnected-computers"></a>Prise en charge des ordinateurs déconnectés
 
-Par défaut, le client Azure Information Protection tente automatiquement de se connecter au service Azure Information Protection pour télécharger la dernière stratégie Azure Information Protection. Si vous disposez d’ordinateurs qui ne peuvent pas se connecter à Internet pendant une période donnée, vous pouvez empêcher le client d’essayer de se connecter au service en modifiant le Registre. 
+Par défaut, le client Azure Information Protection tente automatiquement de se connecter au service Azure Information Protection pour télécharger la dernière stratégie Azure Information Protection. Si vous avez des ordinateurs dont vous savez qu’ils ne seront pas en mesure de se connecter à Internet pendant un certain temps, vous pouvez empêcher le client d’essayer de se connecter au service en modifiant le registre. 
 
-Notez que, sans connexion web, le client ne peut pas appliquer la protection (ou la supprimer) à l’aide de la clé cloud de votre organisation. Il ne peut qu’utiliser les étiquettes qui appliquent seulement la classification, ou la protection qui utilise [HYOK](../configure-adrms-restrictions.md).
+Notez que sans connexion Internet, le client ne peut pas appliquer la protection (ou supprimer la protection) à l’aide de la clé basée sur le Cloud de votre organisation. Il ne peut qu’utiliser les étiquettes qui appliquent seulement la classification, ou la protection qui utilise [HYOK](../configure-adrms-restrictions.md).
 
 Vous pouvez empêcher l’affichage d’une invite de connexion au service Azure Information Protection soit en utilisant un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer sur le Portail Azure, puis en téléchargeant la stratégie pour les ordinateurs, soit en modifiant le Registre.
 
@@ -343,7 +343,7 @@ Les sections suivantes contiennent des instructions de configuration pour chaque
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Pour implémenter des messages d’avertissement, de justification ou de blocage pour des étiquettes spécifiques :
 
-Pour implémenter les messages contextuels pour des étiquettes spécifiques, vous devez connaître l’ID d’étiquette pour ces étiquettes. L’ID de l’étiquette figure dans le panneau **Étiquette** quand vous affichez ou configurez la stratégie Azure Information Protection dans le portail Azure. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier l’ID de l’étiquette (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente.
+Pour implémenter les messages contextuels pour des étiquettes spécifiques, vous devez connaître l’ID d’étiquette pour ces étiquettes. La valeur ID de l’étiquette s’affiche dans le volet **étiquette** , lorsque vous affichez ou configurez la stratégie de Azure information protection dans le portail Azure. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier l’ID de l’étiquette (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente.
 
 Créez un ou plusieurs des paramètres client avancés avec les clés suivantes. Pour les valeurs, spécifiez une ou plusieurs étiquettes en utilisant leur ID, chacun d’eux séparé par une virgule.
 
@@ -478,7 +478,7 @@ Cette configuration utilise un [paramètre client avancé](#how-to-configure-adv
 
 Quand vous configurez ce paramètre, Outlook n’applique pas l’étiquette par défaut qui est configurée dans la stratégie Azure Information Protection pour le paramètre **Sélectionner l’étiquette par défaut**. Au lieu de cela, Outlook peut appliquer une autre étiquette par défaut ou ne rien appliquer.
 
-Pour appliquer une autre étiquette, vous devez spécifier son ID. L’ID de l’étiquette figure dans le panneau **Étiquette** quand vous affichez ou configurez la stratégie Azure Information Protection dans le portail Azure. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier l’ID de l’étiquette (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente.
+Pour appliquer une autre étiquette, vous devez spécifier son ID. La valeur ID de l’étiquette s’affiche dans le volet **étiquette** , lorsque vous affichez ou configurez la stratégie de Azure information protection dans le portail Azure. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier l’ID de l’étiquette (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente.
 
 Pour qu’Outlook n’applique pas l’étiquette par défaut, spécifiez **None**.
 
@@ -498,7 +498,7 @@ Cette configuration implique de spécifier un paramètre client avancé nommé *
 
 `[Azure Information Protection label ID];[S/MIME action]`
 
-L’ID de l’étiquette figure dans le panneau **Étiquette** quand vous affichez ou configurez la stratégie Azure Information Protection dans le portail Azure. Pour utiliser S/MIME avec une sous-étiquette, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente. L’étiquette parente doit être dans la même étendue que la sous-étiquette, ou dans la stratégie globale.
+La valeur ID de l’étiquette s’affiche dans le volet **étiquette** , lorsque vous affichez ou configurez la stratégie de Azure information protection dans le portail Azure. Pour utiliser S/MIME avec une sous-étiquette, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente. L’étiquette parente doit être dans la même étendue que la sous-étiquette, ou dans la stratégie globale.
 
 L’action S/MIME peut être :
 
@@ -662,7 +662,7 @@ Cette configuration nécessite que vous spécifiiez un paramètre client avancé
 
 `[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
 
-L’ID de l’étiquette figure dans le panneau **Étiquette** quand vous affichez ou configurez la stratégie Azure Information Protection dans le portail Azure. Pour spécifier une sous-étiquette, l’étiquette parente doit être dans la même étendue, ou dans la stratégie globale.
+La valeur ID de l’étiquette s’affiche dans le volet **étiquette** , lorsque vous affichez ou configurez la stratégie de Azure information protection dans le portail Azure. Pour spécifier une sous-étiquette, l’étiquette parente doit être dans la même étendue, ou dans la stratégie globale.
 
 Spécifiez votre choix d’un nom de règle de migration. Utilisez un nom descriptif qui vous aide à identifier la manière dont une ou plusieurs étiquettes de votre solution d’étiquetage précédente doivent être mappées à une étiquette Azure Information Protection. Le nom s’affiche dans les rapports d’analyse et dans l’observateur d’événements. Notez que ce paramètre ne supprime pas l’étiquette d’origine du document ni les marquages visuels du document que l’étiquette d’origine a éventuellement appliqués. Pour supprimer des en-têtes et des pieds de page, consultez la section suivante, [Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions).
 

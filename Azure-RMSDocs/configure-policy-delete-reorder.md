@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 6fce8c019fe618f6678c1137f22ef5e9ce66a3df
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: ddbe7273bb6bfc931ef9bcbe73a847156c5f4183
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684158"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559630"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Comment supprimer ou réorganiser une étiquette pour Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Vous pouvez supprimer ou réorganiser les étiquettes Azure Information Protection que les utilisateurs voient dans leurs applications Office en sélectionnant ces actions pour les étiquettes.
 
@@ -56,17 +56,17 @@ Triez les étiquettes de manière à ce que les utilisateurs les voient dans un 
 
 Suivez la procédure indiquée ci-dessous pour effectuer ces modifications.
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**. 
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Ensuite, accédez au volet de **Azure information protection** . 
     
-    Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
 
-2. À partir de l’option de menu **Classifications** > **Étiquettes** : Dans le panneau **Azure Information Protection - Étiquettes**, effectuez une ou plusieurs des actions suivantes : 
+2. À partir de l’option de menu **classifications** > **étiquettes** : dans le volet **Azure information protection-étiquettes** , effectuez une ou plusieurs des actions suivantes : 
 
-    - Pour supprimer une étiquette : Cliquez avec le bouton droit ou sélectionnez le menu contextuel ( **...** ) de l’étiquette que vous voulez supprimer, cliquez sur **Supprimer cette étiquette**, puis cliquez sur **OK** pour confirmer. 
+    - Pour supprimer une étiquette : cliquez avec le bouton droit ou sélectionnez le menu contextuel ( **...** ) de l’étiquette que vous souhaitez supprimer, cliquez sur **Supprimer cette étiquette**, puis cliquez sur **OK** pour confirmer. 
 
-    - Pour désactiver une étiquette : Sélectionnez l’étiquette que vous voulez désactiver. Dans le Panneau **Étiquette**, pour l’option **Activé**, sélectionnez **Désactivé**, puis cliquez sur **Enregistrer**.
+    - Pour désactiver une étiquette : sélectionnez l’étiquette que vous souhaitez désactiver. Dans le volet **étiquette** , pour **activé**, sélectionnez **désactivé**, puis cliquez sur **Enregistrer**.
 
-    - Pour reclasser une étiquette : Cliquez avec le bouton droit ou sélectionnez le menu contextuel ( **...** ) de l’étiquette à reclasser, cliquez sur **Déplacer vers le haut** ou **Déplacer vers le bas** jusqu’à ce que l’étiquette se trouve à l’endroit souhaité.  
+    - Pour réorganiser une étiquette : cliquez avec le bouton droit ou sélectionnez le menu contextuel ( **...** ) de l’étiquette à réorganiser, cliquez sur **Déplacer vers le haut** ou **Déplacer vers le bas** jusqu'à ce que l’étiquette se trouve à l’endroit souhaité.  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

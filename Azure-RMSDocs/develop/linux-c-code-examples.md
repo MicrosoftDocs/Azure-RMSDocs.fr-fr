@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 0b65fad4922790eb7a269edb46b48e4502e28d44
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: dec0a095b84d265d3594112b24beba8aae923959
+ms.sourcegitcommit: e8c3def412267905871928448f3810731b5c0443
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790964"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632267"
 ---
 # <a name="linux-code-examples"></a>Exemples de code Linux
 
@@ -27,7 +27,7 @@ Cette rubrique présente les éléments de code et les scénarios importants pou
 
 Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_sample* et *rmsauth\_sample*. Pour plus d’informations, consultez [samples](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples) dans le dépôt GitHub.
 
-## <a name="scenario-access-protection-policy-information-from-a-protected-file"></a>Scénario : Accéder aux informations de stratégie de protection à partir d’un fichier protégé
+## <a name="scenario-access-protection-policy-information-from-a-protected-file"></a>Scénario : Accéder aux informations de stratégie de protection à partir d’un fichier protégé
 
 **Ouvre et lit un fichier protégé RMS Source**
 **Source** : [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
@@ -100,7 +100,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 **Créer un flux de fichier protégé**
 **Source** : [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**Description** : Cette méthode crée un flux de fichier protégé à partir du flux de sauvegarde passé par le biais de la méthode du SDK, *ProtectedFileStream::Aquire*, qui est ensuite retourné à l’appelant.
+**Description**: cette méthode crée un flux de fichier protégé à partir du flux de sauvegarde passé via la méthode SDK, *ProtectedFileStream :: Acquire*, qui est ensuite retournée à l’appelant.
 
 **C++**  :
 
@@ -147,7 +147,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
       return fsResult;
     }
 
-## <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scénario : Créer un fichier protégé en utilisant un modèle
+## <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scénario : Créer un fichier protégé à l’aide d’un modèle
 
 **Protège un fichier avec un modèle sélectionné par l’utilisateur**
 **Source** : [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
@@ -215,7 +215,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 **Protège un fichier à l’aide d’une stratégie créée à partir d’un modèle**
 **Source** : [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**Description** : Une liste de modèles associés à l’utilisateur est récupérée et le modèle sélectionné est ensuite utilisé pour créer une stratégie qui, à son tour, est utilisée pour protéger le fichier.
+**Description**: Une liste de modèles associés à l’utilisateur est récupérée et le modèle sélectionné est ensuite utilisé pour créer une stratégie qui, à son tour, est utilisée pour protéger le fichier.
 
 **C++**  :
 
@@ -248,7 +248,7 @@ Les extraits de code ci-dessous sont tirés des exemples d’applications *rms\_
 **Protège un fichier conformément à une stratégie**
 **Source** : [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**Description** : Créer un flux de fichier protégé à l’aide de la stratégie donnée, puis protéger ce fichier.
+**Description**: Créer un flux de fichier protégé à l’aide de la stratégie donnée, puis protéger ce fichier.
 
 **C++**  :
 
@@ -499,13 +499,13 @@ La méthode *WorkerThread()* est appelée par deux des exemples de scénarios pr
     }
 
 
-## <a name="scenario-rms-authentication"></a>Scénario : Authentification RMS
+## <a name="scenario-rms-authentication"></a>Scénario : Authentification RMS
 
 Les exemples suivants montrent deux approches d’authentification : obtention d’un jeton oAuth2 d’authentification Azure avec interface utilisateur et sans interface utilisateur.
 **Acquisition de jeton d’authentification oAuth2 avec interface utilisateur**
 **Source** : [rmsauth\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rmsauth_sample)
 
-**Étape 1** : Créer un point partagé de l’objet **rmsauth::FileCache**.
+**Étape 1** : Créer un point partagé de l’objet **rmsauth::FileCache**
 Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par défaut.
 
 **C++**  :
@@ -513,7 +513,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
     auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
 
 
-**Étape 2** : Créer l’objet **rmsauth::AuthenticationContext**. Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*.
+**Étape 2** : Créer l’objet **rmsauth::AuthenticationContext** Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*.
 
 **C++**  :
 
@@ -523,7 +523,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
                               FileCachePtr);
 
 
-**Étape 3** : Appeler la méthode **acquireToken** de l’objet **authContext** et spécifier les paramètres suivants : Description :
+**Étape 3**: appelez la méthode **acquireToken** de l’objet **authContext** et spécifiez les paramètres suivants : Description :
 
 -   *Ressource demandée* : Ressource protégée à laquelle vous souhaitez accéder
 -   *ID du client unique* : Généralement un GUID
@@ -541,7 +541,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
                 std::string(“john.smith@msopentechtest01.onmicrosoft.com”));
 
 
-**Étape 4** : Obtenir le jeton d’accès à partir du résultat. Description : Appeler la méthode **result-> accessToken()**
+**Étape 4** : Obtenir le jeton d’accès à partir du résultat Description : Appeler la méthode **result-> accessToken()**
 
 **Remarque**  Toutes les méthodes de bibliothèque d’authentification peuvent lever **rmsauth::Exception**
 
@@ -549,14 +549,14 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
 **Acquisition de jeton d’authentification oAuth2 sans interface utilisateur**
 **Source** : [rmsauth\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rmsauth_sample)
 
-**Étape 1** : Créer un point partagé de l’objet **rmsauth::FileCache**. Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par défaut
+**Étape 1** : Créer un point partagé de l’objet **rmsauth::FileCache** Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par défaut
 
 **C++**  :
 
     auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
 
 
-**Étape 2** : Créer l’objet **UserCredential**. Description : Spécifier la *connexion utilisateur* et le *mot de passe*
+**Étape 2** : Créer l’objet **UserCredential** Description : Spécifier la *connexion utilisateur* et le *mot de passe*
 
 **C++**  :
 
@@ -564,7 +564,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
                                                  "SomePass");
 
 
-**Étape 3** : Créer l’objet **rmsauth::AuthenticationContext**. Description : Spécifier l’*URI* d’autorité Azure et l’objet *FileCache*
+**Étape 3** : Créer l’objet **rmsauth::AuthenticationContext** Description : Spécifier l’*URI d’autorité* Azure et l’objet *FileCache*
 
 **C++**  :
 
@@ -574,7 +574,7 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
                         FileCachePtr);
 
 
-**Étape 4** : Appeler la méthode **acquireToken** d’**authContext** et spécifier les paramètres :
+**Étape 4**: appelez la méthode **acquireToken** de **authContext** et spécifiez les paramètres :
 -   *Ressource demandée* : Ressource protégée à laquelle vous souhaitez accéder
 -   *ID du client unique* : Généralement un GUID
 -   *Informations d’identification de l’utilisateur* : passer l’objet créé
@@ -587,6 +587,6 @@ Description : Vous pouvez définir le chemin du cache ou utiliser la valeur par
                 userCred);
 
 
-**Étape 5** : Obtenir le jeton d’accès à partir du résultat. Description : Appeler la méthode **result-> accessToken()**
+**Étape 5** : Obtenir le jeton d’accès à partir du résultat Description : Appeler la méthode **result-> accessToken()**
 
 **Remarque**  Toutes les méthodes de bibliothèque d’authentification peuvent lever **rmsauth::Exception**

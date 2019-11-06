@@ -15,7 +15,7 @@ ms.locfileid: "73558193"
 ---
 # <a name="class-mipsensitivityconditiondata"></a>MIP :: SensitivityConditionData, classe 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Récapitulatif
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetLabelId() const  | Pas encore documenté.

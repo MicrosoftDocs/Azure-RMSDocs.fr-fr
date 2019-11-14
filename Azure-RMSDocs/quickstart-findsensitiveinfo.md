@@ -4,18 +4,18 @@ description: Utilisez le scanneur Azure Information Protection pour rechercher l
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/24/2019
+ms.date: 11/01/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 9e4899d918701d59f5fc14db9264d1f983c9df60
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: c00aebd2af57dfbb7d9897d200ef3601ebf26ed3
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447688"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559947"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
 
@@ -24,7 +24,7 @@ ms.locfileid: "72447688"
 Dans ce démarrage rapide, vous allez installer et configurer le scanneur Azure Information Protection pour trouver les informations sensibles consignées dans les fichiers stockés dans un magasin de données local. Par exemple, un dossier local, un partage réseau ou SharePoint Server.
 
 > [!NOTE]
-> Vous pouvez utiliser ce guide de démarrage rapide avec la version en disponibilité générale actuelle du client Azure Information Protection (classique) ou la préversion actuelle du client d’étiquetage unifié Azure Information Protection.
+> Vous pouvez utiliser ce guide de démarrage rapide avec la version en disponibilité générale actuelle du client Azure Information Protection (classique) ou la version en disponibilité générale du client d’étiquetage unifié Azure Information Protection, qui inclut une préversion du scanneur.
 >  
 > Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 
@@ -64,41 +64,41 @@ Pour effectuer un test initial afin de confirmer que le scanneur fonctionne :
 
 Avant d’installer le scanneur, créez un profil pour celui-ci dans le portail Azure. Ce profil contient les paramètres du scanneur et les emplacements des référentiels de données à analyser.
 
-1. Ouvrez une nouvelle fenêtre de navigateur, puis [connectez-vous au Portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au panneau **Azure Information Protection**. 
+1. Ouvrez une nouvelle fenêtre de navigateur, puis [connectez-vous au Portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au volet **Azure Information Protection**. 
     
-    Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    Par exemple, dans la zone de recherche de ressources, services et documents : Commencez à taper **Information** et sélectionnez **Azure Information Protection**.
     
-2. Recherchez les options du **Scanneur** dans le panneau de gauche et sélectionnez **Profils**.
+2. Recherchez les options du **Scanneur** dans le volet de gauche et sélectionnez **Profils**.
 
-3. Dans le panneau **Azure Information Protection - Profils**, sélectionnez **Ajouter** :
+3. Dans le volet **Azure Information Protection - Profils**, sélectionnez **Ajouter** :
     
     ![Ajouter un profil pour le scanneur Azure Information Protection](./media/scanner-add-profile.png)
 
-4. Dans le panneau **Ajouter un nouveau profil**, donnez un nom au scanneur utilisé pour identifier ses paramètres de configuration et référentiels de données à analyser. Par exemple, pour ce démarrage rapide, vous pouvez spécifier **Démarrage rapide**. Lorsque vous installerez le scanneur ultérieurement, vous devrez spécifier le même nom de profil.
+4. Dans le volet **Ajouter un nouveau profil**, donnez un nom au scanneur utilisé pour identifier ses paramètres de configuration et référentiels de données à analyser. Par exemple, pour ce démarrage rapide, vous pouvez spécifier **Démarrage rapide**. Lorsque vous installerez le scanneur ultérieurement, vous devrez spécifier le même nom de profil.
     
     Si vous le souhaitez, entrez une description des raisons administratives, pour vous aider à identifier le nom de profil du scanneur.
 
-5. Recherchez la section **Application de la stratégie**, dans laquelle pour ce démarrage rapide, vous allez sélectionner un seul paramètre : Pour **Appliquer**, sélectionnez **Désactivé**. Puis sélectionnez **Enregistrer** mais ne fermez pas le panneau.
+5. Recherchez la section **Application de la stratégie**, dans laquelle pour ce démarrage rapide, vous allez sélectionner un seul paramètre : Pour **Appliquer**, sélectionnez **Désactivé**. Puis sélectionnez **Enregistrer** mais ne fermez pas le volet.
     
     Les paramètres configurent le scanneur pour une détection à usage unique de tous les fichiers dans vos référentiels de données spécifiés. Cette analyse recherche tous les types connus d’informations sensibles et ne nécessite aucune configuration préalable de vos étiquettes Azure Information Protection ou paramètres de stratégie.
 
 6. Maintenant que le profil est créé et enregistré, vous pouvez revenir à l’option **Configurer des référentiels** pour spécifier votre dossier local en tant que magasin de données à analyser.
     
-    Toujours dans le panneau **Ajouter un nouveau profil**, sélectionnez **Configurer des référentiels** pour ouvrir le panneau **Référentiels** :
+    Toujours dans le volet **Ajouter un nouveau profil**, sélectionnez **Configurer les référentiels** pour ouvrir le volet **Référentiels** :
     
     ![Configurer des référentiels de données pour le scanneur Azure Information Protection](./media/scanner-repositories-bar.png)
 
-7. Dans le panneau **Référentiels**, sélectionnez **Ajouter** :
+7. Dans le volet **Référentiels**, sélectionnez **Ajouter** :
     
     ![Ajouter un référentiel de données pour le scanneur Azure Information Protection](./media/scanner-repository-add.png)
 
-8. Dans le panneau **Référentiel**, spécifiez votre dossier local que vous avez créé dans la première étape. Par exemple : `C:\TestScanner`
+8. Dans le volet **Référentiel**, spécifiez votre dossier local que vous avez créé dans la première étape. Par exemple : `C:\TestScanner`
     
-    Pour les autres paramètres de ce panneau, ne les modifiez pas, mais conservez-les comme **profil par défaut**. Cela signifie que le référentiel de données hérite des paramètres du profil de scanneur. 
+    Pour les autres paramètres de ce volet, ne les modifiez pas, mais conservez-les comme **profil par défaut**. Cela signifie que le référentiel de données hérite des paramètres du profil de scanneur. 
     
     Sélectionnez **Enregistrer**.
 
-9. De retour dans le panneau **Azure Information Protection - Profils**, votre nom de profil est maintenant répertorié, avec la colonne **PLANIFICATION** affichant **Manuel** et la colonne **APPLIQUER** étant vide. 
+9. De retour dans le volet **Azure Information Protection - Profils**, votre nom de profil est maintenant répertorié, avec la colonne **PLANIFICATION** affichant **Manuel** et la colonne **APPLIQUER** étant vide. 
     
     La colonne **NŒUDS** affiche **0** parce que vous n’avez pas encore installé le scanneur pour ce profil.
 
@@ -116,7 +116,7 @@ Vous pouvez maintenant installer le scanneur avec le profil de scanneur que vous
 
 ## <a name="start-the-scan-and-confirm-it-finished"></a>Démarrer l’analyse et confirmer la fin de l’opération
 
-1. Dans le portail Azure, actualisez le panneau **Azure Information Protection - Profils** et la colonne **NŒUDS** doit maintenant afficher **1**.
+1. Dans le portail Azure, actualisez le volet **Azure Information Protection - Profils** et la colonne **NŒUDS** doit maintenant afficher **1**.
 
 2. Sélectionnez votre nom de profil, puis l’option **Analyser maintenant** :
     
@@ -128,7 +128,7 @@ Vous pouvez maintenant installer le scanneur avec le profil de scanneur que vous
     
     Attendez que des valeurs s’affichent dans les colonnes **RÉSULTATS DE LA DERNIÈRE ANALYSE** et **DERNIÈRE ANALYSE (HEURE DE FIN)** .
     
-    Vous pouvez aussi consulter le journal des événements **Applications et services** Windows local, **Azure Information Protection**. Confirmer l’ID d’événement d’information **911** pour le processus **MSIP.Scanneur**. L’entrée du journal d’événements contient également un résumé des résultats de l’analyse.
+    Sinon, pour le scanneur du client classique uniquement : Consultez le journal des événements **Applications et services** Windows local, **Azure Information Protection**. Confirmer l’ID d’événement d’information **911** pour le processus **MSIP.Scanneur**. L’entrée du journal d’événements contient également un résumé des résultats de l’analyse.
 
 ## <a name="see-detailed-results"></a>Afficher les résultats détaillés
 
@@ -153,7 +153,7 @@ Dans Excel, les deux premières colonnes affichent le nom du répertoire du maga
         
             http://sp2016/Shared Documents
 
-2. Redémarrez le scanneur à nouveau : Dans le panneau **Azure Information Protection - Profils**, assurez-vous que votre profil est sélectionné, puis sélectionnez l’option **Analyser maintenant** :
+2. Redémarrez le scanneur à nouveau : Dans le volet **Azure Information Protection - Profils**, assurez-vous que votre profil est sélectionné, puis sélectionnez l’option **Analyser maintenant** :
     
     ![Lancer l’analyse pour le scanneur Azure Information Protection](./media/scanner-scan-now.png)
 

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0923ef10427533cae46b5de30f4c30371b9fe6d7
-ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
+ms.openlocfilehash: c425fcc71f8400b945ec684f45f5c1622fedbbef
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712612"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559223"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutoriel : Configurer les paramètres de la stratégie Azure Information Protection et créer une étiquette
 
@@ -42,7 +42,7 @@ Pour suivre ce tutoriel, il vous faut :
     
     Si vous n’avez pas d’abonnement incluant Azure Information Protection Plan 2, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
 
-2. Le panneau Azure Information Protection est ajouté au portail Azure, le service de protection est activé et vous avez une ou plusieurs étiquettes publiées dans la stratégie générale Azure Information Protection.
+2. Le volet Azure Information Protection est ajouté au portail Azure, le service de protection est activé et vous avez une ou plusieurs étiquettes publiées dans la stratégie générale Azure Information Protection.
     
     Ces étapes sont décrites dans [Démarrage rapide : Ajouter Azure Information Protection au portail Azure et afficher la stratégie](quickstart-viewpolicy.md).
 
@@ -76,7 +76,7 @@ C’est parti !
 
 1. Ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général. Accédez ensuite à **Azure Information Protection**. 
     
-    Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    Par exemple, dans la zone de recherche de ressources, services et documents : Commencez à taper **Information** et sélectionnez **Azure Information Protection**.
     
     Si vous n’êtes pas l’administrateur général, utilisez le lien suivant pour les autres rôles : [Connexion au portail Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
@@ -98,7 +98,7 @@ C’est parti !
 
 6. Par ailleurs, assurez-vous que le paramètre **Afficher la barre Information Protection dans les applications Office** est défini sur **Activé**.
 
-7. Sélectionnez **Enregistrer** dans ce panneau **Stratégie : Globale** et, si vous êtes invité à confirmer votre action, sélectionnez **OK**. Fermez ce panneau.
+7. Sélectionnez **Enregistrer** dans ce panneau **Stratégie : Globale** et, si vous êtes invité à confirmer votre action, sélectionnez **OK**. Fermez ce volet.
 
 ### <a name="create-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Créer une étiquette pour la protection, de marquages visuels et d’une condition pour une demande de classification
 
@@ -108,17 +108,17 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
     Si vous n’avez pas d’étiquette nommée **Confidentiel**, vous pouvez sélectionner une autre étiquette ou créer une étiquette, puis suivre le didacticiel avec des différences mineures.
 
-2. Dans le panneau **Sous-étiquette**, spécifiez le nom d’étiquette **Finance** et ajoutez la description suivante : **Données confidentielles qui contiennent des informations financières réservées exclusivement aux employés**.
+2. Dans le volet **Sous-étiquette**, spécifiez le nom d’étiquette **Finance** et ajoutez la description suivante : **Données confidentielles qui contiennent des informations financières réservées exclusivement aux employés**.
     
     Ce texte explique comment l’étiquette sélectionnée va être utilisée et s’affiche sous forme d’info-bulle pour aider les utilisateurs dans leur choix.
 
-3. Pour **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Protéger**, ce qui ouvre automatiquement le panneau **Protection** avec l’option **Protection** sélectionnée :
+3. Pour **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Protéger**, ce qui ouvre automatiquement le volet **Protection** avec l’option **Protection** sélectionnée :
     
     ![Configuration d’une étiquette Azure Information Protection à des fins de protection](./media/info-protect-protection-bar-configured.png) 
     
-4. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé du cloud)** est sélectionnée. Cette option utilise le service Azure Rights Management pour protéger les documents et les e-mails. Vérifiez aussi que l’option **Définir les autorisations** est sélectionnée. Ensuite, sélectionnez **Ajouter des autorisations**.
+4. Dans le volet **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée. Cette option utilise le service Azure Rights Management pour protéger les documents et les e-mails. Vérifiez aussi que l’option **Définir les autorisations** est sélectionnée. Ensuite, sélectionnez **Ajouter des autorisations**.
 
-5. Dans le panneau **Ajouter des autorisations**, sélectionnez **Ajouter \<nom de l’organisation> - Tous les membres**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous voyez et sélectionnez l’option suivante :
+5. Dans le volet **Ajouter des autorisations**, sélectionnez **Ajouter \<nom de l’organisation> - Tous les membres**. Par exemple, si le nom de votre organisation est VanArsdel, Ltd, vous voyez et sélectionnez l’option suivante :
     
     ![Accorder des autorisations de protection à tous les membres pour une étiquette Azure Information Protection](./media/info-protect-protection-all-members.png) 
     
@@ -130,15 +130,15 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
     Vous pouvez sélectionner différents niveaux d’autorisation ou spécifier des droits d’utilisation individuels à l’aide de l’option **Personnalisé**. Dans ce didacticiel, nous utilisons l’option **Réviseur**. Vous pourrez tester différentes autorisations par la suite et découvrir comment limiter les actions des utilisateurs spécifiés sur le document protégé ou l’e-mail.
 
-7. Cliquez sur **OK** pour fermer le panneau **Ajouter des autorisations**. Le panneau **Protection** est mis à jour pour refléter votre configuration. Par exemple :
+7. Cliquez sur **OK** pour fermer le volet **Ajouter des autorisations**. Le volet **Protection** est mis à jour pour refléter votre configuration. Par exemple :
     
-     ![Panneau Protection affichant la configuration des autorisations pour une étiquette Azure Information Protection](./media/info-protect-protection-configured.png)
+     ![Volet Protection affichant la configuration des autorisations pour une étiquette Azure Information Protection](./media/info-protect-protection-configured.png)
     
-    Si vous sélectionnez **Ajouter des autorisations**, le panneau **Ajouter des autorisations** s’ouvre à nouveau pour vous permettre d’ajouter des utilisateurs et de leur accorder des autorisations différentes. Par exemple, accordez uniquement un accès en consultation à un groupe spécifique. Dans ce didacticiel, nous utilisons un seul jeu d’autorisations pour tous les utilisateurs.
+    Si vous sélectionnez **Ajouter des autorisations**, le volet **Ajouter des autorisations** s’ouvre à nouveau pour vous permettre d’ajouter des utilisateurs et de leur accorder des autorisations différentes. Par exemple, accordez uniquement un accès en consultation à un groupe spécifique. Dans ce didacticiel, nous utilisons un seul jeu d’autorisations pour tous les utilisateurs.
 
-8. Passez en revue et conservez les valeurs par défaut pour l’expiration du contenu et l’accès hors connexion, puis cliquez sur **OK** pour enregistrer et fermer le panneau **Protection**.
+8. Passez en revue et conservez les valeurs par défaut pour l’expiration du contenu et l’accès hors connexion, puis cliquez sur **OK** pour enregistrer et fermer le volet **Protection**.
 
-8. Revenez au panneau **Sous-étiquette** et recherchez la section **Définir un marquage visuel** :
+8. Revenez au volet **Sous-étiquette** et recherchez la section **Définir un marquage visuel** :
     
     Pour le paramètre **Les documents avec cette étiquette ont un pied de page**, cliquez sur **Activé**, puis, dans la zone **Texte**, tapez **Classé confidentiel**. 
     
@@ -148,9 +148,9 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
 9. Recherchez la section **Configurer des conditions pour appliquer automatiquement cette étiquette** :
     
-    Cliquez sur **Ajouter une nouvelle condition**, puis, dans le panneau **Condition**, sélectionnez les éléments suivants :
+    Cliquez sur **Ajouter une nouvelle condition**, puis, dans le volet **Condition**, sélectionnez les éléments suivants :
     
-    a. **Choisir le type de condition ** : conservez la valeur par défaut **Types d’informations**.
+    a. **Choisir le type de condition**  : conservez la valeur par défaut **Types d’informations**.
     
     b. **Sélectionner un secteur d’activité** : conservez la valeur par défaut **Tout**.
     
@@ -162,9 +162,9 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
     ![Tutoriel Azure Information Protection - configurer la condition de la carte de crédit](./media/step2-configure-condition.png)
     
-    Cliquez sur **Enregistrer** pour revenir au panneau **Sous-étiquette**.
+    Cliquez sur **Enregistrer** pour revenir au volet **Sous-étiquette**.
 
-10. Dans le panneau **Sous-étiquette**, vous voyez que **Numéro de carte de crédit** est affiché comme **NOM DE LA CONDITION**, avec **1** **OCCURRENCES** :
+10. Dans le volet **Sous-étiquette**, vous voyez que **Numéro de carte de crédit** est affiché comme **NOM DE LA CONDITION**, avec **1** **OCCURRENCES** :
     
     ![Tutoriel Azure Information Protection : résumé de la condition de la carte de crédit](./media/step2-see-condition.png)
 
@@ -172,13 +172,13 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
 
 12. Dans la zone **Ajouter des notes pour l’administrateur** , tapez **À des fins de test uniquement**.
 
-13. Cliquez sur **Enregistrer** dans ce panneau **Sous-étiquette**. Si vous êtes invité à confirmer, cliquez sur **OK**. La nouvelle étiquette est créée et enregistrée, mais elle n’est pas encore ajoutée à une stratégie.
+13. Cliquez sur **Enregistrer** dans ce volet **Sous-étiquette**. Si vous êtes invité à confirmer, cliquez sur **OK**. La nouvelle étiquette est créée et enregistrée, mais elle n’est pas encore ajoutée à une stratégie.
 
 14. À partir de l’option de menu **Classifications** > **Stratégies** : sélectionnez à nouveau **Globale**, puis sélectionnez le lien **Ajouter ou supprimer des étiquettes** situé en regard des étiquettes.
 
 15. Dans le panneau **Stratégie : ajouter ou supprimer des étiquettes**, sélectionnez l’étiquette que vous venez de créer, la sous-étiquette nommée **Finance** et cliquez sur **OK**.
 
-16. Dans le panneau **Stratégie : Globale**, votre nouvelle sous-étiquette s’affiche désormais dans votre stratégie globale, qui est configurée pour le marquage visuel et la protection. Par exemple :
+16. Dans le panneau **Stratégie : Globale**, votre nouvelle sous-étiquette s’affiche à présent dans votre stratégie globale, qui est configurée pour le marquage visuel et la protection. Par exemple :
 
     ![Tutoriel Azure Information Protection : nouvelle sous-étiquette](./media/info-protect-policy-configuredv2.png)
     
@@ -265,7 +265,7 @@ Si vous ne souhaitez pas conserver les modifications que vous avez effectuées d
 
 2. Rétablissez les valeurs d’origine (dont vous avez pris note) des paramètres de stratégie, puis sélectionnez **Enregistrer**. 
 
-3. Dans l’option de menu **Classifications** > **Étiquette** : dans le panneau **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel (**…**) de l’étiquette **Finance** que vous avez créée.
+3. Dans l’option de menu **Classifications** > **Étiquette** : dans le volet **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel ( **…** ) de l’étiquette **Finance** que vous avez créée.
 
 4. Sélectionnez **Supprimer cette étiquette**, puis **OK** si une confirmation vous est demandée.
 

@@ -4,7 +4,7 @@ description: Vue d’ensemble technique du service Azure Information Protection,
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/18/2019
+ms.date: 11/04/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0659abcb6211bc05a6db435db759eed8f6c44cea
-ms.sourcegitcommit: 2f092b395e31ce64df8b9148433032be5702217e
+ms.openlocfilehash: 08360f357acd10d8f832f7aa5efcfb271539c8fe
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589604"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561150"
 ---
 # <a name="what-is-azure-information-protection"></a>Qu’est-ce qu’Azure Information Protection ?
 
@@ -145,7 +145,7 @@ Ressources supplémentaires : [Informations et prise en charge pour Azure Infor
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
-Microsoft Ignite 2019 dans Orlando arrive ! Il y aura un grand nombre d’informations utiles sur Azure Information Protection avec les dernières mises à jour et améliorations. Nous espérons vous y rencontrer, mais si vous ne pouvez pas nous rejoindre, les sessions sont enregistrées pour être consultées ultérieurement.
+Microsoft Ignite 2019 commence à Orlando ! Il y a un grand nombre d’informations utiles sur Azure Information Protection avec les dernières mises à jour et améliorations. Nous espérons vous y rencontrer, mais si vous ne pouvez pas nous rejoindre, les sessions sont enregistrées pour être consultées ultérieurement.
 
 Consultez la liste suivante pour connaitre les cinq premières sessions recommandées. Des liens sont ajoutés lorsque les enregistrements sont disponibles :
 
@@ -158,6 +158,9 @@ Consultez la liste suivante pour connaitre les cinq premières sessions recomman
 - BRK2120 : activer Azure Information Protection ? Navigation dans l’étiquetage unifiée, configuration de stratégie, clients et analytique
 
 - BRK2121 : étendez la puissance de l’étiquetage et la protection de la sensibilité à vos propres applications et solutions ISV avec le kit de développement logiciel (SDK) Microsoft Information Protection
+
+Dernier billet de blog : [Découvrir où se trouvent vos données sensibles et les protéger intelligemment avec Microsoft 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Understand-where-your-sensitive-data-is-located-and/ba-p/960465)
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 44e363456d8d4aeaf2a57c8c5b10213d256cb8aa
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 02a036a3ab72cc0dcd16d2d3d7e9edaa4c0338ad
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71674173"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559146"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles
 
@@ -43,7 +43,7 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
     
     Si vous n’avez aucun de ces abonnements, vous pouvez créer un compte [gratuit](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) pour votre organisation.
 
-2. Vous avez ajouté le panneau Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
+2. Vous avez ajouté le volet Azure Information Protection au Portail Azure et vérifié que le service de protection est activé.
 
     Si vous avez besoin d’aide avec ces actions, consultez [Démarrage rapide : Bien démarrer avec le portail Azure](quickstart-viewpolicy.md).
 
@@ -77,27 +77,27 @@ Pour obtenir la liste complète des prérequis d’Azure Information Protection,
 
 1. Ouvrez une nouvelle fenêtre de navigateur et connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général. Accédez ensuite à **Azure Information Protection**. 
     
-    Par exemple, dans le menu hub, cliquez sur **Tous les services** et tapez **Informations** dans la zone Filtrer. Sélectionnez **Azure Information Protection**.
+    Par exemple, dans la zone de recherche de ressources, services et documents : Commencez à taper **Information** et sélectionnez **Azure Information Protection**.
     
     Si vous n’êtes pas l’administrateur général, utilisez le lien suivant pour les autres rôles : [Connexion au portail Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous souhaitez configurer pour appliquer la protection. 
+2. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le volet **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous souhaitez configurer pour appliquer la protection. 
 
-3. Dans le panneau **Étiquette**, recherchez **Définir des autorisations pour les documents et les e-mails contenant cette étiquette**. Sélectionnez **Protéger**, le panneau **Protection** s’ouvre alors automatiquement si l’option **Non configuré** ou **Supprimer la protection** a été sélectionnée précédemment.
+3. Dans le volet **Étiquette**, recherchez **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**. Sélectionnez **Protéger**, le volet **Protection** s’ouvre alors automatiquement si l’option **Non configuré** ou **Supprimer la protection** a été sélectionnée précédemment.
     
-    Si le panneau **Protection** ne s’ouvre pas automatiquement, sélectionnez **Protection** :
+    Si le volet **Protection** ne s’ouvre pas automatiquement, sélectionnez **Protection** :
     
     ![Configurer la protection d’une étiquette Azure Information Protection](./media/info-protect-protection-bar-configured.png).
 
-4. Dans le panneau **Protection**, vérifiez que l’option **Azure (clé du cloud)** est sélectionnée.
+4. Dans le volet **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
     
-5. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)**.
+5. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)** .
 
 6. Vérifiez que l’option suivante est sélectionnée : **Dans Outlook appliquer Ne pas transférer**.
 
 7. Si l’option suivante est cochée, décochez-la : **Dans Word, Excel, PowerPoint et l’Explorateur de fichiers, demander à l’utilisateur des autorisations personnalisées**.
 
-8. Cliquez sur **OK** dans le panneau **Protection**, puis sur **Enregistrer** dans le panneau **Étiquette**.
+8. Cliquez sur **OK** dans le volet **Protection**, puis sur **Enregistrer** dans le volet **Étiquette**.
 
 Votre étiquette est maintenant configurée pour s’afficher uniquement dans Outlook et pour appliquer la protection Ne pas transférer aux e-mails.
 
@@ -119,9 +119,9 @@ Par conséquent, les destinataires ne peuvent pas transférer l’e-mail, ni l�
 
 Procédez comme suit si vous souhaitez ignorer cette configuration et retourner votre étiquette de façon à ne pas appliquer la protection :
 
-1. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le panneau **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous avez configurée. 
+1. À partir de l’option de menu **Classifications** > **Étiquettes** : dans le volet **Azure Information Protection - Étiquettes**, sélectionnez l’étiquette que vous avez configurée. 
 
-3. Dans le panneau **Étiquette**, recherchez la zone **Définir des autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Non configuré**, puis cliquez sur **Enregistrer**.
+3. Dans le volet **Étiquette**, recherchez la zone **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Non configuré**, puis cliquez sur **Enregistrer**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

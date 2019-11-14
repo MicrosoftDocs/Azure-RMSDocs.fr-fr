@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: d48061cda0d13ad04dc05dbd5d260a56dec60166
-ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
+ms.openlocfilehash: 92bc55f99636d7a54cafc7c45c1588d2828974c7
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712567"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561386"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
 
@@ -43,9 +43,9 @@ Azure Information Protection n’est pas automatiquement disponible sur le Porta
     
     Si vous n’êtes pas l’administrateur général, utilisez le lien suivant pour les autres rôles : [Connexion au portail Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Dans le menu hub, sélectionnez **Créer une ressource**, puis, à partir de la zone de recherche pour la Place de marché, tapez **Azure Information Protection**. 
+2. Sélectionnez **+ Créer une ressource**, puis, à partir de la zone de recherche de la Place de marché, tapez **Azure Information Protection**. 
     
-3. Dans la liste des résultats, sélectionnez **Azure Information Protection**. Ensuite, dans le panneau **Azure Information Protection**, cliquez sur **Créer**.
+3. Dans la liste des résultats, sélectionnez **Azure Information Protection**. Ensuite, dans le volet **Azure Information Protection**, cliquez sur **Créer**.
     
     > [!TIP] 
     > Ou sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous n’avez ainsi pas besoin d’accéder au service lors de votre prochaine connexion au portail.
@@ -56,7 +56,7 @@ Azure Information Protection n’est pas automatiquement disponible sur le Porta
 
 Même si le service de protection est maintenant automatiquement activé pour les nouveaux clients, il est préférable de vérifier qu’aucune activation manuelle n’est nécessaire. 
 
-1. Dans le panneau **Azure Information Protection**, sélectionnez **Gérer** > **Activation de la protection**.
+1. Dans le volet **Azure Information Protection**, sélectionnez **Gérer** > **Activation de la protection**.
 
 2. Vérifiez que la protection est activée pour votre locataire : 
     
@@ -92,7 +92,7 @@ Votre entreprise peut déjà disposer d’étiquettes, car elles ont été cré�
     
     a. Sélectionnez **Ajouter ou supprimer des étiquettes**.
     
-    b. Dans le panneau **Stratégie : Ajouter ou supprimer des étiquettes**, sélectionnez toutes les étiquettes, puis sélectionnez **OK**.
+    b. Dans le panneau **Stratégie : Ajouter ou supprimer des étiquettes**, sélectionnez toutes les étiquettes, puis **OK**.
     
     c. De retour dans le panneau **Stratégie : Général**, sélectionnez **Enregistrer**.
 
@@ -100,15 +100,15 @@ La publication des étiquettes dans le portail Azure les rend disponibles pour l
 
 ## <a name="view-your-labels"></a>Afficher vos étiquettes
 
-Sélectionnez **Classifications** > **Étiquettes** et consacrez quelques minutes à vous familiariser avec les étiquettes qui sont affichées sur le panneau **Azure Information Protection - Étiquettes** .
+Sélectionnez **Classifications** > **Étiquettes** et prenez quelques minutes pour vous familiariser avec les étiquettes qui sont affichées sur le volet **Azure Information Protection - Étiquettes** .
 
 Si elles ne ressemblent aux étiquettes dans l’image de la section précédente, vous n’utilisez pas les étiquettes par défaut d’Azure Information Protection, mais des étiquettes qui ont peut-être été créées à partir du Centre de sécurité et de conformité Office 365, du centre de sécurité Microsoft 365 ou du centre de conformité Microsoft 365.
 
 > [!TIP]
 > Si vous ne souhaitez pas utiliser vos étiquettes personnalisées, mais les étiquettes par défaut d’Azure Information Protection : 
-> - Supprimez les étiquettes personnalisées et l’option pour générer des étiquettes par défaut s’affiche dans le panneau **Étiquettes**, comme décrit dans la [section précédente](#create-and-publish-labels). 
+> - Supprimez les étiquettes personnalisées et l’option pour générer des étiquettes par défaut s’affiche dans le volet **Étiquettes**, comme décrit dans la [section précédente](#create-and-publish-labels). 
 
-À partir du panneau **Azure Information Protection - Étiquettes** :
+À partir du volet **Azure Information Protection - Étiquettes** :
 
 - Les étiquettes de classification par défaut sont **Personnel**, **Public**, **Interne**, **Confidentiel** et **Hautement confidentiel**. Les deux dernières étiquettes se développent pour afficher des sous-étiquettes, qui sont des exemples de sous-catégories dans une classification.
 
@@ -118,7 +118,7 @@ Par exemple :
 
 ![Présentation par guide de démarrage rapide Azure Information Protection des étiquettes par défaut](./media/info-protect-policy-default-labelsv2.png)
 
-Si vous sélectionnez une étiquette, vous voyez des détails pour cette configuration d’étiquette sur un nouveau panneau.
+Si vous sélectionnez une étiquette, vous voyez des détails pour cette configuration d’étiquette sur un nouveau volet.
 
 ## <a name="view-your-policy-settings"></a>Afficher vos paramètres de stratégie
 
@@ -134,7 +134,7 @@ Pour afficher les paramètres de la stratégie Azure Information Protection par 
     
     ![Paramètres globaux de la stratégie Azure Information Protection](./media/defaultsettings-aip.png)
 
-3. Vous pouvez maintenant fermer les panneaux du portail que vous avez ouverts.
+3. Vous pouvez maintenant fermer les volets du portail que vous avez ouverts.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -4,18 +4,18 @@ description: Utilisez le scanneur Azure Information Protection pour rechercher l
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/01/2019
+ms.date: 11/12/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: c00aebd2af57dfbb7d9897d200ef3601ebf26ed3
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 22bd446f940e176c3cae82f7e629cb93f2456bc1
+ms.sourcegitcommit: 6393b971f56a1c666f82777d38ea3ca853c60342
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559947"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73979975"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
 
@@ -42,7 +42,7 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
     
     - Le client classique : Pour installer ce client, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et téléchargez **AzInfoProtection.exe** depuis la page Azure Information Protection.
     
-    - Le client d’étiquetage unifié : Pour installer ce client, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et téléchargez **AzInfoProtection_UL_Preview.exe** depuis la page Azure Information Protection.
+    - Le client d’étiquetage unifié : Pour installer ce client, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et téléchargez **AzInfoProtection_UL.exe** depuis la page Azure Information Protection.
     
 3. SQL Server Express est également installé sur votre ordinateur.
     

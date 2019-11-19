@@ -1,6 +1,6 @@
 ---
 title: PowerShell pour les modèles de protection | Azure Information Protection
-description: Tout ce que vous pouvez faire dans le portail Azure pour créer et gérer des modèles de protection, vous pouvez le faire également à partir de la ligne de commande via PowerShell. En outre, vous pouvez copier des modèles entre des locataires ou effectuer des modifications en bloc de propriétés complexes dans les modèles, tels que les noms et les descriptions multilingues.
+description: Utilisez PowerShell pour créer et gérer des modèles de protection pour Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cd34533f1042668b79f540dd6066f600be445f2
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: b75242487f3a32d0e6ea0f912d9bc75f8109e0fe
+ms.sourcegitcommit: 9484744702a82b8adc45f78e0b127a3857794d29
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71683593"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74160884"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>Informations de référence sur PowerShell pour les modèles de protection
 
@@ -38,9 +38,9 @@ Applets de commande prenant en charge la création et la gestion de modèles de 
 
 - [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)
 
-- [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)
+- [AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)
 
-- [Get-AipServiceTemplateProperty](/powershell/module/aipservice/get-aipservicetemplateproperty)
+- [AipServiceTemplateProperty](/powershell/module/aipservice/get-aipservicetemplateproperty)
 
 - [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd)
 

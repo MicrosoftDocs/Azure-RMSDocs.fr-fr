@@ -4,7 +4,7 @@ description: Migrez Azure Information Protection étiquettes vers des étiquette
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 11/04/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b07c2e6ffe7e9eae6b1a9130890c33d033264474
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 08c5571399e9a77e2d28cc2c6b3f25e9ffc0235a
+ms.sourcegitcommit: 9484744702a82b8adc45f78e0b127a3857794d29
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559570"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74160868"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Comment migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée
 
@@ -44,7 +44,7 @@ Avant de lire les instructions pour migrer vos étiquettes, vous trouverez peut-
 
 Si vous utilisez des rôles d’administrateur pour l’administration déléguée dans votre organisation, vous devrez peut-être effectuer certaines modifications pour la plateforme d’étiquetage unifiée :
 
-Les [rôles Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) de **Azure information protection administrateur** (anciennement **information protection administrateur**) et le **lecteur global** ne sont pas pris en charge par la plateforme d’étiquetage unifiée. Si l’un de ces rôles d’administration est utilisé dans votre organisation pour gérer Azure Information Protection, ajoutez les utilisateurs qui disposent de ce rôle aux rôles Azure AD de **conformité administrateur**, **administrateur des données de conformité**ou **sécurité administrateur**. Si vous avez besoin d’aide, consultez [Donner aux utilisateurs accès au Centre de sécurité et de conformité Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). Vous pouvez également attribuer ces rôles dans le portail Azure AD, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365.
+Les [rôles Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) de **Azure information protection administrateur** (anciennement **information protection administrateur**) et le **lecteur global** ne sont pas pris en charge par la plateforme d’étiquetage unifiée. Si l’un de ces rôles d’administration est utilisé dans votre organisation pour gérer Azure Information Protection, ajoutez les utilisateurs qui possèdent ce rôle aux rôles Azure AD de l’administrateur de la **conformité**, à l’administrateur des **données de conformité**ou à l’administrateur de la **sécurité**. Si vous avez besoin d’aide, consultez [Donner aux utilisateurs accès au Centre de sécurité et de conformité Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). Vous pouvez également attribuer ces rôles dans le portail Azure AD, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365.
 
 Au lieu d’utiliser des rôles, dans les centres d’administration, vous pouvez créer un nouveau groupe de rôles pour ces utilisateurs et ajoutez les rôles **Administrateur d’étiquette de sensibilité** ou **Configuration de l’organisation** à ce groupe.
 
@@ -71,7 +71,7 @@ La migration des étiquettes présente de nombreux avantages, mais est irrévers
     
     - Si vous avez des étiquettes configurées pour un modèle prédéfini, modifiez ces étiquettes et sélectionnez l’option **Définir les autorisations** pour configurer les mêmes paramètres de protection que ceux de votre modèle. Les étiquettes comportant des modèles prédéfinis ne bloquent pas la migration des étiquettes, mais cette configuration n’est pas prise en charge dans les centres d’administration.
         
-        Conseil : pour vous aider à reconfigurer ces étiquettes, il peut être utile de disposer de deux fenêtres de navigateur : une fenêtre dans laquelle vous sélectionnez le bouton **modifier le modèle** pour l’étiquette afin d’afficher les paramètres de protection, et l’autre fenêtre pour configurer les mêmes paramètres lorsque vous Sélectionnez **définir les autorisations**.
+        Conseil : pour vous aider à reconfigurer ces étiquettes, il peut être utile de disposer de deux fenêtres de navigateur : une fenêtre dans laquelle vous sélectionnez le bouton **modifier le modèle** pour l’étiquette afin d’afficher les paramètres de protection, et l’autre fenêtre pour configurer les mêmes paramètres lorsque vous sélectionnez **définir les autorisations**.
     
     - Après la migration d’une étiquette avec des paramètres de protection basés sur le Cloud, l’étendue résultante du modèle de protection est définie dans l’étendue définie dans le Portail Azure (ou à l’aide du module PowerShell AIPService) et l’étendue définie dans les centres d’administration. 
 
@@ -140,7 +140,7 @@ Utilisez les instructions suivantes pour migrer vos étiquettes de locataire et 
 
 Vous devez être administrateur de la conformité, administrateur des données de conformité, administrateur de la sécurité ou administrateur général pour migrer vos étiquettes.
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Ensuite, accédez au volet de **Azure information protection** .
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au volet **Azure Information Protection**.
     
     Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
 
@@ -158,7 +158,7 @@ Les étiquettes qui ont correctement migré peuvent désormais être utilisées 
 ### <a name="copy-policies"></a>Copier les stratégies
 
 > [!NOTE]
-> Cette option est progressivement déployée sur les locataires. Elle est également en version préliminaire et sujette à modification.
+> Cette option est en version préliminaire et sujette à modification.
 
 Une fois que vous avez migré vos étiquettes, vous pouvez sélectionner une option pour copier les stratégies. Si vous sélectionnez cette option, une copie unique de vos stratégies avec les paramètres de [stratégie](configure-policy-settings.md) et les [paramètres de client avancés](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) est envoyée au centre d’administration où vous gérez vos étiquettes : Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center, Microsoft 365 Compliance Center.
 

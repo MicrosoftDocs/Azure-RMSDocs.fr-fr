@@ -59,12 +59,12 @@ Cet article contient des informations importantes sur cette version du SDK RMS 
 >[!Note]
 > Les mises à jour de la documentation de fonctionnalités dans cette section s’appliquent au téléchargement du SDK daté du 11/12/2015.
 
-- **Amélioration du flux d’authentification** : utilisation de l’authentification basée sur les jetons OAuth2 par le biais de la [bibliothèque ADAL (Azure Active Directory Authentication Library)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/). Pour plus d’informations sur ce processus et ses extensions d’API, consultez [Authentification ADAL pour votre application compatible RMS](how-to-use-adal-authentication.md).
+- **Amélioration du flux d’authentification** : utilisation de l’authentification basée sur les jetons OAuth2 par le biais de la [bibliothèque ADAL (Azure Active Directory Authentication Library)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/). Pour plus d’informations sur ce processus et sur les extensions d’API, consultez [Authentification ADAL pour votre application compatible RMS](how-to-use-adal-authentication.md).
 
 - **Mise à jour vers la bibliothèque ADAL** : en mettant à jour votre application pour utiliser l’authentification ADAL au lieu de l’Assistant de connexion Microsoft Online, vous et vos clients pouvez :
 
-  - Utiliser l’authentification multifacteur.
-  - Installer le client RMS 2.1 sans nécessiter de privilèges d’administration sur l’ordinateur.
+  - utiliser l’authentification multifacteur ;
+  - installer le client RMS 2.1 sans nécessiter de privilèges d’administration sur l’ordinateur.
   - Certifier votre application pour Windows 10
 
 - **La prise en charge de l’Assistant de connexion Microsoft Online avec le SDK RMS est supprimée.** Nous continuerons à prendre en charge l’utilisation de l’Assistant de connexion pendant six mois, après quoi la prise en charge cessera.
@@ -107,7 +107,7 @@ Cet article contient des informations importantes sur cette version du SDK RMS 
 
 ## <a name="october-2014-update"></a>Mise à jour d’octobre 2014
 
--   Les comportements par défaut du composant de l’API de fichier du SDK a été mis à jour. Pour plus d’informations, voir [Configuration de l’API de fichier](file-api-configuration.md).
+-   Les comportements par défaut du composant de l’API de fichier du Kit de développement logiciel a été mis à jour. Pour plus d’informations, voir [Configuration de l’API de fichier](file-api-configuration.md).
 -   La notification par e-mail, qui est une nouvelle fonctionnalité, est décrite dans l’article sur les remarques à l’attention des développeurs [Activation des notifications par e-mail](how-to-enable-email-notification.md).
 
 ## <a name="july-2014-update"></a>Mise à jour de juillet 2014
@@ -146,7 +146,7 @@ Le composant de l’API de fichier du SDK a été étendu et offre les fonctionn
 
     Pour plus d’informations sur les types de fichier pris en charge, voir [Configuration de l’API de fichier](file-api-configuration.md).
 
--   Les **ordinateurs Windows 7 SP1 et Windows Server 2008 R2 SP1** non dotés de la mise à jour [KB2533623](https://support.microsoft.com/kb/2533623) peuvent afficher l’erreur suivante lors de la protection de fichiers Office : « Le paramètre est incorrect. Code d’erreur 0x80070057 ». Si vous voyez cette erreur, installez de nouveau la mise à jour et réessayez. Si cette erreur persiste, contactez l’alias de commentaires de la version bêta du kit SDK RMS <rmcstbeta@microsoft.com>.
+-   Les **ordinateurs Windows 7 SP1 et Windows Server 2008 R2 SP1** non dotés de la mise à jour [KB2533623](https://support.microsoft.com/kb/2533623) peuvent afficher l’erreur suivante lors de la protection de fichiers Office : « Le paramètre est incorrect. Code d’erreur 0x80070057 ». Si vous voyez cette erreur, réinstallez la mise à jour et réessayez. Si cette erreur persiste, contactez l’alias de commentaires de la version bêta du kit SDK RMS <rmcstbeta@microsoft.com>.
 
     **Remarque**  À compter de la version d’avril 2015, une vérification a été ajoutée au processus d’installation pour cette mise à jour issue de la Base de connaissances.
 

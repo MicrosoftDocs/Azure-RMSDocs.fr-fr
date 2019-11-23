@@ -31,7 +31,7 @@ Pour plus d’informations sur le fonctionnement d’Exchange Online avec le ser
 
 Exchange Online est peut-être déjà activé pour utiliser le service Azure Rights Management. Pour le savoir, exécutez les commandes suivantes :
 
-1. S'il s'agit de la première fois que vous avez utilisé Windows PowerShell pour Exchange Online sur votre ordinateur, vous devez configurer Windows PowerShell pour exécuter des scripts signés. Démarrez votre session Windows PowerShell à l'aide de l'option **Exécuter en tant qu'administrateur** , puis tapez :
+1. Si vous n'avez jamais utilisé Windows PowerShell pour Exchange Online sur votre ordinateur, vous devez configurer Windows PowerShell pour exécuter des scripts signés. Démarrez votre session Windows PowerShell à l'aide de l'option **Exécuter en tant qu'administrateur** , puis tapez :
     
         Set-ExecutionPolicy RemoteSigned
     
@@ -84,12 +84,12 @@ Pour configurer la prise en charge du service Azure Rights Management dans Share
 
 Pour activer le service IRM pour SharePoint Online, consultez les instructions suivantes dans la documentation Office :
 
-- [Configuration de la Gestion des droits relatifs à l'information dans le centre d'administration SharePoint](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center)
+- [Configuration de la gestion des droits relatifs à l'information dans le centre d'administration SharePoint](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center)
 
-Cette configuration est effectuée par l'administrateur Office 365.
+Cette configuration est effectuée par l'administrateur Office 365.
 
 ### <a name="configuring-irm-for-libraries-and-lists"></a>Configuration de l'IRM pour les bibliothèques et listes
-Une fois que vous avez activé le service IRM pour SharePoint, les propriétaires de sites peuvent protéger par IRM leurs bibliothèques de documents et listes SharePoint. Pour obtenir des instructions, consultez les ressources suivantes sur le site web Office :
+Une fois que vous avez activé le service IRM pour SharePoint, les propriétaires de sites peuvent protéger par IRM leurs bibliothèques de documents et listes SharePoint. Pour obtenir des instructions, consultez les ressources suivantes sur le site web Office :
 
 - [Activation de la gestion des droits relatifs à l'information pour une liste ou une bibliothèque](https://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)
 
@@ -129,7 +129,7 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
 
 3. Copiez le contenu du script suivant et nommez le fichier Set-IRMOnOneDriveForBusiness.ps1 sur votre ordinateur.
 
-   *&#42;&#42;Exclusion de responsabilité&#42;&#42;*  : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
+   *&#42;&#42;Exclusion de responsabilité&#42;&#42;*  : cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
 
    ```
    # Requires Windows PowerShell version 3
@@ -492,21 +492,21 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
    Disconnect-SPOService -ErrorAction SilentlyContinue
    ```
 
-4. Examinez le script et apportez les modifications suivantes :
+4. Examinez le script et apportez les modifications suivantes :
 
-   1. Recherchez `$sharepointAdminCenterUrl` et remplacez la valeur de l'exemple par l'URL de votre propre Centre d'administration SharePoint.
+   1. Recherchez `$sharepointAdminCenterUrl` et remplacez la valeur de l’exemple par l’URL de votre propre Centre d’administration SharePoint.
 
       Cette valeur est l’URL de base quand vous accédez au Centre d’administration SharePoint. Son format est le suivant : https://<em>&lt;nom_client&gt;</em>-admin.sharepoint.com.
 
       Par exemple, si le nom de client est « contoso », vous devez spécifier : **https://contoso-admin.sharepoint.com**
 
-   2. Recherchez `$tenantAdmin` et remplacez la valeur de l'exemple par votre propre compte administrateur général complet pour Office 365.
+   2. Recherchez `$tenantAdmin` et remplacez la valeur de l’exemple par votre propre compte d’administrateur général complet pour Office 365.
 
       Cette valeur est identique à celle que vous utilisez pour vous connecter au Centre d’administration Microsoft 365 en tant qu’administrateur général. Son format est le suivant : nom_utilisateur@ *&lt;nom de domaine du locataire&gt;* .com
 
       Par exemple, si le nom d’utilisateur de l’administrateur général d’Office 365 est « admin » pour le domaine de locataire « contoso.com », vous devez spécifier : <strong>admin@contoso.com</strong>
 
-   3. Recherchez `$webUrls` et remplacez les valeurs de l'exemple par les URL des sites web OneDrive Entreprise de vos utilisateurs, en ajoutant ou en supprimant le nombre d'entrées nécessaires.
+   3. Recherchez `$webUrls` et remplacez les valeurs de l’exemple par les URL des sites web OneDrive Entreprise de vos utilisateurs, en ajoutant ou en supprimant le nombre d’entrées nécessaires.
 
       Vous pouvez également lire dans le script les commentaires concernant la façon de remplacer ce tableau en important un fichier .CSV contenant toutes les URL à configurer.  Nous avons fourni un autre exemple de script pour rechercher et extraire automatiquement les URL à insérer dans ce fichier .CSV. Quand vous êtes prêt, utilisez la section [Script supplémentaire pour répertorier toutes les URL de OneDrive Entreprise dans un fichier .CSV](#additional-script-to-output-all-onedrive-for-business-urls-to-a-csv-file) située juste après ces étapes.
 
@@ -527,16 +527,16 @@ Si vous ne pouvez pas configurer IRM pour le OneDrive Entreprise d'utilisateurs 
 > [!TIP]
 > Vous pouvez également utiliser ce script pour configurer IRM pour une bibliothèque SharePoint Online. Pour cette configuration, il est préférable d’activer l’option supplémentaire **Interdire aux utilisateurs de télécharger des documents qui ne prennent pas en charge IRM** pour vous assurer que la bibliothèque ne contient que des documents protégés.    Pour ce faire, ajoutez le paramètre `-IrmReject` à la commande Set-IrmConfiguration dans le script.
 >
-> Vous devez également modifier la variable `$webUrls` (par exemple, **https : \//contoso. SharePoint. com**) et @no__t variable-3 (par exemple, **$reports**).
+> Vous devez également modifier la variable `$webUrls` (par exemple, **https :\//contoso.SharePoint.com**) et `$listTitle` variable (par exemple, **$reports**).
 
 Si vous devez désactiver IRM pour les bibliothèques OneDrive Entreprise de l’utilisateur, consultez la section [Script pour désactiver IRM pour OneDrive entreprise](#script-to-disable-irm-for-onedrive-for-business).
 
 ##### <a name="additional-script-to-output-all-onedrive-for-business-urls-to-a-csv-file"></a>Script supplémentaire pour insérer toutes les URL de OneDrive Entreprise dans un fichier .CSV
 Pour l'étape 4c ci-dessus, vous pouvez utiliser le script Windows PowerShell suivant pour extraire les URL des bibliothèques OneDrive Entreprise de tous les utilisateurs, que vous pouvez ensuite vérifier, modifier si nécessaire et importer dans le script principal.
 
-Ce script nécessite également le [SDK des composants du client SharePoint Online](https://www.microsoft.com/en-us/download/details.aspx?id=42038) et [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Suivez les mêmes instructions pour le copier et coller, enregistrez le fichier localement (par exemple, sous « Rapport-OneDriveForBusinessSiteInfo.ps1 »), modifiez les valeurs `$sharepointAdminCenterUrl` et `$tenantAdmin` comme précédemment, puis exécutez le script.
+Ce script nécessite également le [SDK des composants du client SharePoint Online](https://www.microsoft.com/en-us/download/details.aspx?id=42038) et [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Suivez les mêmes instructions pour le copier et le coller, enregistrez le fichier localement (par exemple, sous « Report-OneDriveForBusinessSiteInfo.ps1 »), modifiez les valeurs `$sharepointAdminCenterUrl` et `$tenantAdmin` comme précédemment, puis exécutez le script.
 
-*&#42;&#42;Exclusion de responsabilité&#42;&#42;*  : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
+*&#42;&#42;Exclusion de responsabilité&#42;&#42;*  : cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
 
 ```
 # Requires Windows PowerShell version 3
@@ -761,7 +761,7 @@ Si vous devez désactiver IRM pour le OneDrive Entreprise d'un utilisateur, util
 
 Ce script nécessite également le [SDK des composants du client SharePoint Online](https://www.microsoft.com/en-us/download/details.aspx?id=42038) et [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Copiez et collez le contenu, enregistrez le fichier localement (par exemple, sous « Disable-IRMOnOneDriveForBusiness.ps1 »), puis modifiez les valeurs `$sharepointAdminCenterUrl` et `$tenantAdmin`. Spécifiez manuellement les URL de OneDrive Entreprise ou utilisez le script de la section précédente pour les importer, puis exécutez le script.
 
-*&#42;&#42;Exclusion de responsabilité&#42;&#42;*  : Cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
+*&#42;&#42;Exclusion de responsabilité&#42;&#42;*  : cet exemple de script n’est pris en charge dans le cadre d’aucun programme ou service de support standard de Microsoft. Cet exemple de script est fourni TEL QUEL sans garantie d'aucune sorte.
 
 ```
 # Requires Windows PowerShell version 3

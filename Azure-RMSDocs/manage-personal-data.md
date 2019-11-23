@@ -84,14 +84,14 @@ LabelId                 :
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Super utilisateurs et administrateurs délégués pour le service de protection
 
-Exécutez l’applet de commande [AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) et l’applet de commande [aipservicerolebasedadministrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator) pour voir quels utilisateurs ont reçu le rôle de super utilisateur ou d’administrateur général pour le service de protection (Azure Rights Management) à partir d’Azure Information Protection. L’adresse e-mail des utilisateurs ayant reçu l’un de ces rôles est affichée.
+Exécutez l’applet de commande [AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) et l’applet de commande [aipservicerolebasedadministrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator) pour voir quels utilisateurs ont reçu le rôle de super utilisateur ou d’administrateur général pour le service de protection (Azure Rights Management) à partir de Azure information protection. L’adresse e-mail des utilisateurs ayant reçu l’un de ces rôles est affichée.
 
 
 ### <a name="administration-logs-for-the-protection-service"></a>Journaux d’administration pour le service de protection
 
 Exécutez l’applet de commande [obtenir-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) pour obtenir un journal des actions d’administration pour le service de protection (Azure Rights Management) à partir de Azure information protection. Ce journal contient des données personnelles sous la forme d’adresses e-mail et d’adresses IP. Le journal est en texte clair et une fois téléchargé, les détails d’un administrateur spécifique peuvent être recherchés hors connexion.
 
-Exemple :
+Par exemple :
 ```
 PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -100,7 +100,7 @@ The Rights Management administration log was successfully generated and can be f
 ### <a name="usage-logs-for-the-protection-service"></a>Journaux d’utilisation pour le service de protection
 Exécutez l’applet de commande [obtenir-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog) pour récupérer un journal des actions de l’utilisateur final qui utilisent le service de protection à partir de Azure information protection. Le journal peut inclure des données personnelles sous la forme d’adresses e-mail et d’adresses IP. Le journal est en texte clair et une fois téléchargé, les détails d’un administrateur spécifique peuvent être recherchés hors connexion.
 
-Exemple :
+Par exemple :
 ```
 PS C:\Users> Get-AipServiceUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -132,7 +132,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 Exécutez l’applet de commande [AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) pour récupérer des informations à partir du site de suivi des documents sur un utilisateur spécifique. Pour accéder aux informations de suivi associées aux journaux de document, utilisez l’applet de commande [AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps) .
 
-Exemple :
+Par exemple :
 ```
 PS C:\Users> Get-AipServiceDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -224,7 +224,7 @@ Les données personnelles que vous affichez et spécifiez dans le portail Azure 
 
 - **Lecteur global**
 
-Les données personnelles que vous affichez et spécifiez à l’aide du module AIPService (ou de l’ancien module, AADRM) sont accessibles uniquement aux utilisateurs qui se sont vu attribuer le **Azure information protection administrateur**, **conformité administrateur**, **conformité** les rôles d’administrateur de données ou d' **administrateur général** de Azure Active Directory ou le rôle d’administrateur général pour le service de protection.
+Les données personnelles que vous affichez et spécifiez à l’aide du module AIPService (ou de l’ancien module, AADRM) sont accessibles uniquement aux utilisateurs qui ont reçu les rôles administrateur **Azure information protection**, administrateur de **conformité**, administrateur des **données de conformité**ou administrateur **général** de Azure Active Directory ou le rôle d’administrateur général pour le service de protection.
 
 ## <a name="updating-personal-data"></a>Mise à jour des données personnelles
 
@@ -236,7 +236,7 @@ Vous ne pouvez pas mettre à jour les adresses e-mail pour les super utilisateur
 
 ### <a name="protection-templates"></a>Modèles de protection
 
-Exécutez l’applet de commande [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) pour mettre à jour le modèle de protection. Étant donné que les données personnelles se trouvent dans la propriété `RightsDefinitions`, vous devez également utiliser l’applet de commande [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) pour créer un objet de définitions de droits avec les informations mises à jour, et utiliser l’objet de définitions de droits avec les `Set-AipServiceTemplateProperty` PolicySchedule.
+Exécutez l’applet de commande [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) pour mettre à jour le modèle de protection. Étant donné que les données personnelles se trouvent dans la propriété `RightsDefinitions`, vous devez également utiliser l’applet de commande [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) pour créer un objet de définitions de droits avec les informations mises à jour, et utiliser l’objet de définitions de droits avec l’applet de commande `Set-AipServiceTemplateProperty`.
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Super utilisateurs et administrateurs délégués pour le service de protection
 

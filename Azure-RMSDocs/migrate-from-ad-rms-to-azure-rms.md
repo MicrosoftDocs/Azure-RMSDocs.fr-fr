@@ -1,10 +1,10 @@
 ---
 title: Migrer un déploiement AD RMS vers Azure Information Protection
-description: Instructions pour la migration de votre déploiement AD RMS (Active Directory Rights Management Services) vers Azure Information Protection. Après la migration, les utilisateurs ont toujours accès aux documents et messages électroniques que votre organisation a protégés à l’aide de AD RMS.
+description: Instructions pour la migration de votre déploiement AD RMS (Active Directory Rights Management Services) vers Azure Information Protection. After the migration, users still have access to documents and email messages that your organization protected by using AD RMS.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bb514d89a438059b626f74edcb51a40b19415126
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 978feb26639a3c8f05ac2576a2e922c744cae9cf
+ms.sourcegitcommit: fed1df1858f8316f7dd45e751c6910b444651a87
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71684384"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74474316"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
@@ -40,11 +40,11 @@ Bien que ceci ne soit pas obligatoire, il peut s’avérer utile de lire ce qui 
 
 - [Planification et implémentation de votre clé de locataire Azure Information Protection](./plan-implement-tenant-key.md) : découvrez les options de gestion clés dont vous disposez pour votre locataire Azure Information Protection où votre clé SLC équivalente dans le cloud est gérée par Microsoft (l’option par défaut) ou gérée par vous (la configuration BYOK). 
 
-- [Découverte du service RMS](./rms-client/client-deployment-notes.md#rms-service-discovery) : cette section des notes de déploiement du client RMS explique que l’ordre de découverte des services est **Registre**, **SCP**, puis **cloud**. Pendant le processus de migration, alors que le point de connexion de service est toujours installé, vous configurez les clients avec des paramètres de Registre pour votre locataire Azure Information Protection de façon à ce qu’ils n’utilisent pas le cluster AD RMS retourné depuis le point de connexion de service.
+- [RMS service discovery](./rms-client/client-deployment-notes.md#rms-service-discovery): This section of the RMS client deployment notes explains that the order for service discovery is **registry**, then **service connection point (SCP)** , then **cloud**. Pendant le processus de migration, alors que le point de connexion de service est toujours installé, vous configurez les clients avec des paramètres de Registre pour votre locataire Azure Information Protection de façon à ce qu’ils n’utilisent pas le cluster AD RMS retourné depuis le point de connexion de service.
 
 - [Vue d’ensemble du connecteur Microsoft Rights Management](./deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector) : cette section de la documentation du connecteur RMS explique comment vos serveurs locaux peuvent se connecter au service Azure Rights Management pour protéger des documents et des e-mails.
 
-En outre, si vous êtes familiarisé avec le fonctionnement de AD RMS, il peut s’avérer utile de lire [comment Azure RMS fonctionne-t-il ? En coulisses](./how-does-it-work.md) pour vous aider à identifier les processus technologiques identiques ou différents pour la version du Cloud.
+In addition, if you are familiar with how AD RMS works, you might find it useful to read [How does Azure RMS work? Under the hood](./how-does-it-work.md) to help you identify which technology processes are the same or different for the cloud version.
 
 ## <a name="prerequisites-for-migrating-ad-rms-to-azure-information-protection"></a>Conditions préalables à une migration d’AD RMS vers Azure Information Protection
 
@@ -76,7 +76,7 @@ Avant de procéder à la migration vers Azure Information Protection, assurez-vo
 
     Consultez [Configuration requise pour Azure Information Protection](./requirements.md).
 
-    Notez que si vous avez des ordinateurs qui exécutent Office 2010, vous devez installer le [client Azure information protection ou le client d’étiquetage unifié Azure information protection pour les utilisateurs](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client), car ces clients offrent la possibilité d’authentifier les utilisateurs dans le Cloud services. Pour les versions ultérieures d’Office, ces clients sont requis pour la classification et l’étiquetage, et le client Azure Information Protection est facultatif, mais recommandé si vous souhaitez protéger uniquement les données. Pour plus d’informations, consultez les guides d’administration pour le [client Azure information protection](./rms-client/client-admin-guide.md) et le [client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide.md).
+    Note that if you have computers that run Office 2010, you must install the [Azure Information Protection client or the Azure Information Protection unified labeling client for users](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client), because these clients provide the ability to authenticate users to cloud services. For later versions of Office, these clients are required for classification and labeling, and the Azure Information Protection client is optional but recommended if you want to only protect data. For more information, see the admin guides for the [Azure Information Protection client](./rms-client/client-admin-guide.md) and the [Azure Information Protection unified labeling client](./rms-client/clientv2-admin-guide.md).
 
     Bien qu’un abonnement à Azure Information Protection soit nécessaire pour pouvoir migrer à partir d’AD RMS, nous recommandons de ne pas activer le service Rights Management du client (tenant) avant de commencer la migration. Le processus de migration comporte cette étape d’activation après l’exportation des clés et des modèles à partir d’AD RMS, et leur importation dans le client (tenant) pour Azure Information Protection. Toutefois, si le service Rights Management est déjà activé, la migration sera toujours possible à partir d’AD RMS moyennant quelques étapes supplémentaires.
 
@@ -114,7 +114,7 @@ Pour confirmer le mode de chiffrement AD RMS :
 
 ### <a name="migration-limitations"></a>Limites de migration
 
-- Si vous disposez de logiciels et de clients non pris en charge par le service Rights Management utilisé par Azure Information Protection, ils ne peuvent pas protéger ou utiliser du contenu protégé par Azure Rights Management. Veillez à consulter les sections applications et clients pris en charge dans la section [Configuration requise pour Azure information protection](./requirements.md).
+- Si vous disposez de logiciels et de clients non pris en charge par le service Rights Management utilisé par Azure Information Protection, ils ne peuvent pas protéger ou utiliser du contenu protégé par Azure Rights Management. Be sure to check the supported applications and clients sections from [Requirements for Azure Information Protection](./requirements.md).
 
 - Si votre déploiement des services AD RMS est configuré pour collaborer avec des partenaires externes (par exemple, en utilisant des domaines d’utilisateurs approuvés ou une fédération), ceux-ci doivent également migrer vers Azure Information Protection, soit au moment de votre migration, soit dès que possible par la suite. Pour continuer à accéder au contenu que votre organisation protégeait précédemment à l’aide d’Azure Information Protection, les utilisateurs doivent apporter à la configuration du client des modifications similaires à celles que vous apportez, qui sont incluses dans ce document.
     
@@ -130,11 +130,11 @@ Ajoutez vos partenaires AD RMS dans votre phase de planification de la migration
 
 - Leur service Azure Rights Management n’est pas encore activé, mais ils connaissent leur URL de service Azure Rights Management.
 
-    Ils peuvent obtenir ces informations en installant l’outil Azure Rights Management, en se connectant au service ([Connect-AipService](/powershell/module/aipservice/connect-aipservice)), puis en affichant leurs informations de locataire pour le service Azure Rights Management ([obtenir-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) ).
+    They can get this information by installing the Azure Rights Management Tool, connecting to the service ([Connect-AipService](/powershell/module/aipservice/connect-aipservice)), and then viewing their tenant information for the Azure Rights Management service ([Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)).
 
 - Ils vous fournissent les URL de leur cluster AD RMS et l’URL de service Azure Rights Management pour que vous puissiez configurer les clients migrés afin de rediriger les demandes de contenu protégé AD RMS vers le service Azure Rights Management de leur locataire. Les instructions pour la configuration de la redirection des clients figurent à l’étape 7.
 
-- Ils importent leurs clés racines de cluster (SLC) AD RMS dans leur locataire avant que vous ne commenciez à migrer vos utilisateurs. De même, vous devez importer vos clés racines de cluster AD RMS avant qu’ils ne commencent à migrer leurs utilisateurs. Les instructions pour l’importation de la clé sont abordées dans ce processus de migration, [étape 4. Exportez les données de configuration à partir de AD RMS et importez-les sur Azure Information Protection](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection). 
+- Ils importent leurs clés racines de cluster (SLC) AD RMS dans leur locataire avant que vous ne commenciez à migrer vos utilisateurs. De même, vous devez importer vos clés racines de cluster AD RMS avant qu’ils ne commencent à migrer leurs utilisateurs. Instructions for importing the key are covered in this migration process, [Step 4. Export configuration data from AD RMS and import it to Azure Information Protection](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection). 
 
 ## <a name="overview-of-the-steps-for-migrating-ad-rms-to-azure-information-protection"></a>Présentation des étapes de migration d’AD RMS vers Azure Information Protection
 
@@ -142,11 +142,11 @@ Les étapes de migration peuvent être divisées en cinq phases qui peuvent êtr
 
 [**PHASE 1 : PRÉPARATION DE LA MIGRATION**](migrate-from-ad-rms-phase1.md)
 
-- **Étape 1 : installer le module PowerShell AIPService et identifier l’URL de votre locataire**
+- **Step 1: Install the AIPService PowerShell module and identify your tenant URL**
 
-    Pour le processus de migration, vous devez exécuter une ou plusieurs des applets de commande PowerShell à partir du module AIPService. Vous devez également connaître l’URL du service Azure Rights Management de votre locataire pour pouvoir réaliser différentes étapes de migration, et vous pouvez identifier cette valeur à l’aide de PowerShell.
+    The migration process requires you to run one or more of the PowerShell cmdlets from the AIPService module. Vous devez également connaître l’URL du service Azure Rights Management de votre locataire pour pouvoir réaliser différentes étapes de migration, et vous pouvez identifier cette valeur à l’aide de PowerShell.
 
-- **Étape 2. Préparer la migration des clients**
+- **Step 2. Prepare for client migration**
 
     Si vous ne pouvez pas migrer tous les clients à la fois et que vous allez les migrer par lots, utilisez les contrôles d’intégration et déployez un script de prémigration. Toutefois, si vous les migrez tous à la fois au lieu d’effectuer une migration en plusieurs phases, vous pouvez ignorer cette étape.
 
@@ -156,9 +156,9 @@ Les étapes de migration peuvent être divisées en cinq phases qui peuvent êtr
 
 [**PHASE 2 : CONFIGURATION CÔTÉ SERVEUR POUR AD RMS**](migrate-from-ad-rms-phase2.md)
 
-- **Étape 4. Exportez les données de configuration à partir de AD RMS et importez-les dans Azure Information Protection**
+- **Step 4. Export configuration data from AD RMS and import it to Azure Information Protection**
 
-    Vous exportez les données de configuration (clés, modèles, URL) de AD RMS vers un fichier XML, puis vous chargez ce fichier dans le service Azure Rights Management à partir de Azure Information Protection, à l’aide de l’applet de commande PowerShell Import-AipServiceTpd. Ensuite, identifiez la clé de certificat de licence serveur (SLC) importée à utiliser comme clé de locataire pour le service Azure Rights Management. Des étapes supplémentaires peuvent être nécessaires en fonction de la configuration de votre clé AD RMS :
+    You export the configuration data (keys, templates, URLs) from AD RMS to an XML file, and then upload that file to the Azure Rights Management service from Azure Information Protection, by using the Import-AipServiceTpd PowerShell cmdlet. Ensuite, identifiez la clé de certificat de licence serveur (SLC) importée à utiliser comme clé de locataire pour le service Azure Rights Management. Des étapes supplémentaires peuvent être nécessaires en fonction de la configuration de votre clé AD RMS :
 
     - **Migration de clé protégée par logiciel à clé protégée par logiciel** :
 
@@ -166,17 +166,17 @@ Les étapes de migration peuvent être divisées en cinq phases qui peuvent êtr
 
     - **Migration de clé protégée par HSM à clé protégée par HSM** :
 
-        De clé stockée par un module HSM pour AD RMS à clé de locataire Azure Information Protection gérée par le client (scénario BYOK, « Bring Your Own Key »). Cela nécessite des étapes supplémentaires pour transférer la clé de votre HSM nCipher local vers Azure Key Vault et autoriser le service Azure Rights Management à utiliser cette clé. Votre clé protégée par HSM existante doit être protégée par module. Les clés protégées par OCS ne sont pas prises en charge par les services RMS.
+        De clé stockée par un module HSM pour AD RMS à clé de locataire Azure Information Protection gérée par le client (scénario BYOK, « Bring Your Own Key »). This requires additional steps to transfer the key from your on-premises nCipher HSM to Azure Key Vault and authorize the Azure Rights Management service to use this key. Votre clé protégée par HSM existante doit être protégée par module. Les clés protégées par OCS ne sont pas prises en charge par les services RMS.
 
     - **Migration de clé protégée par logiciel à clé protégée par HSM** :
 
-        De clé basée sur un mot de passe et gérée de façon centralisée dans AD RMS à clé de locataire Azure Information Protection gérée par le client (scénario BYOK, « Bring Your Own Key »). Cela nécessite la configuration la plus grande car vous devez d’abord extraire votre clé logicielle et l’importer dans un HSM local, puis effectuer les étapes supplémentaires pour transférer la clé de votre HSM nCipher local vers une Azure Key Vault HSM et autoriser les droits Azure. Service de gestion pour utiliser le coffre de clés qui stocke la clé.
+        De clé basée sur un mot de passe et gérée de façon centralisée dans AD RMS à clé de locataire Azure Information Protection gérée par le client (scénario BYOK, « Bring Your Own Key »). This requires the most configuration because you must first extract your software key and import it to an on-premises HSM, and then do the additional steps to transfer the key from your on-premises nCipher HSM to an Azure Key Vault HSM and authorize the Azure Rights Management service to use the key vault that stores the key.
 
-- **Étape 5. Activer le service Azure Rights Management**
+- **Step 5. Activate the Azure Rights Management service**
 
     Si possible, effectuez cette étape après le processus d'importation et non avant. Des étapes supplémentaires sont nécessaires si le service a été activé avant l’importation.
 
-- **Étape 6. Configurer les modèles importés**
+- **Step 6. Configure imported templates**
 
     Lorsque vous importez vos modèles de stratégie de droits, leur état est archivé. Si vous souhaitez que les utilisateurs puissent voir et utiliser ces modèles, vous devez changer leur état en publié dans le portail Azure Classic.
 

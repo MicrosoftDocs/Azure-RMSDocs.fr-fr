@@ -1,10 +1,10 @@
 ---
 title: Configurer la stratégie Azure Information Protection – AIP
-description: Pour configurer la classification, l’étiquetage et la protection du client Azure Information Protection (Classic), vous devez configurer la stratégie de Azure Information Protection.
+description: To configure classification, labeling, and protection for the Azure Information Protection client (classic), you must configure the Azure Information Protection policy.
 author: cabailey
 ms.author: cabailey
-ms.date: 10/04/2019
-manager: barbkess
+ms.date: 11/25/2019
+manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,25 +13,25 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e5d81b5437fef69438fac5d8729b4beb8c9641a9
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 498028d071e2af3a908518020b142cc1dea39a4d
+ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559455"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74479147"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
-> La stratégie de Azure Information Protection s’applique au client Azure Information Protection (Classic) et non au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
+> The Azure Information Protection policy applies to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> Si vous recherchez des informations sur la configuration des étiquettes de sensibilité et des paramètres de stratégie pour le client d’étiquetage unifié, consultez [vue d’ensemble des étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) dans la documentation Office.
+> If you are looking for information to configure sensitivity labels and policy settings for the unified labeling client, see [Overview of sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) from the Office documentation.
 
-Pour configurer la classification, l’étiquetage et la protection du client classique, vous devez configurer la stratégie de Azure Information Protection. Cette stratégie est ensuite téléchargée sur les ordinateurs sur lesquels est installé le [client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+To configure classification, labeling, and protection for the classic client, you must configure the Azure Information Protection policy. Cette stratégie est ensuite téléchargée sur les ordinateurs sur lesquels est installé le [client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 La stratégie contient des paramètres et des étiquettes :
 
@@ -65,34 +65,34 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
 
 - Utilisez le lien suivant : https://portal.azure.com
 
-- Utilisez un compte de Azure AD qui a l’un des [rôles d’administrateur](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)suivants :
+- Use an Azure AD account that has one of the following [administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Administrateur Azure Information Protection**
+    - **Azure Information Protection administrator**
     
   - **Administrateur de conformité**
     
-  - **Administrateur des données de conformité**
+  - **Compliance data administrator**
     
   - **Administrateur de sécurité**
     
-    **Lecteur de sécurité** - [Azure information protection Analytics](reports-aip.md) uniquement
+    **Security reader** - [Azure Information Protection analytics](reports-aip.md) only
     
-    **Lecteur Global** - [Azure information protection Analytics](reports-aip.md) uniquement
+    **Global reader** - [Azure Information Protection analytics](reports-aip.md) only
     
   - **Administrateur général**
     
     > [!NOTE] 
-    > Si votre locataire se trouve sur la plateforme d’étiquetage unifiée, le rôle d’administrateur Azure Information Protection (anciennement « administrateur Information Protection ») et le rôle lecteur global ne sont pas pris en charge pour le Portail Azure. [Plus d’informations](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > If your tenant is on the [unified labeling platform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform), the Azure Information Protection administrator role (formerly "Information Protection administrator"), the Security reader role, and the Global reader role are not supported for the Azure portal. [Plus d’informations](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
-    Les comptes Microsoft ne peuvent pas gérer Azure Information Protection.
+    Microsoft accounts cannot manage Azure Information Protection.
 
-## <a name="to-access-the-azure-information-protection-pane-for-the-first-time"></a>Pour accéder au volet de Azure Information Protection pour la première fois
+## <a name="to-access-the-azure-information-protection-pane-for-the-first-time"></a>To access the Azure Information Protection pane for the first time
 
 1. Connectez-vous au portail Azure.
 
-2. Sélectionnez **+ créer une ressource**, puis, dans la zone de recherche de la place de marché, tapez **Azure information protection**. 
+2. Sélectionnez **+ Créer une ressource**, puis, à partir de la zone de recherche de la Place de marché, tapez **Azure Information Protection**. 
     
-3. Dans la liste des résultats, sélectionnez **Azure Information Protection**. Dans le volet **Azure information protection** , cliquez sur **créer**.
+3. Dans la liste des résultats, sélectionnez **Azure Information Protection**. On the **Azure Information Protection** pane, click **Create**.
     
     > [!TIP] 
     > Ou sélectionnez **Épingler au tableau de bord** pour créer une vignette **Azure Information Protection** sur votre tableau de bord. Vous n’avez ainsi pas besoin d’accéder au service lors de votre prochaine connexion au portail.
@@ -101,15 +101,15 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
 
 4. Vous voyez la page **Démarrage rapide** qui s’ouvre automatiquement la première fois que vous vous connectez au service. Parcourez les ressources suggérées ou utilisez les autres options de menu. Pour configurer les étiquettes que les utilisateurs peuvent sélectionner, utilisez la procédure suivante.
 
-La prochaine fois que vous accéderez au volet **Azure information protection** , il sélectionne automatiquement l’option **étiquettes** pour vous permettre d’afficher et de configurer des étiquettes pour tous les utilisateurs. Vous pouvez revenir à la page **Démarrage rapide** en la sélectionnant à partir du menu **Général**.
+Next time you access the **Azure Information Protection** pane, it automatically selects the **Labels** option so that you can view and configure labels for all users. Vous pouvez revenir à la page **Démarrage rapide** en la sélectionnant à partir du menu **Général**.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Guide de configuration de la stratégie Azure Information Protection
 
-1. Assurez-vous que vous êtes connecté au Portail Azure à l’aide de l’un de ces rôles d’administration : Azure Information Protection administrateur, administrateur de la sécurité ou administration globale. Consultez la [section précédente](#signing-in-to-the-azure-portal) pour plus d’informations sur ces rôles d’administration.
+1. Make sure that you are signed in to the Azure portal by using one of these administrative roles: Azure Information Protection administrator, Security administrator, or Global administration. Consultez la [section précédente](#signing-in-to-the-azure-portal) pour plus d’informations sur ces rôles d’administration.
 
-2. Si nécessaire, accédez au volet de **Azure information protection** : par exemple, dans le menu Hub, cliquez sur **tous les services** et commencez à taper **information protection** dans la zone de filtre. Dans les résultats, sélectionnez **Azure Information Protection**. 
+2. If necessary, navigate to the **Azure Information Protection** pane: For example, on the hub menu, click **All services** and start typing **Information Protection** in the Filter box. Dans les résultats, sélectionnez **Azure Information Protection**. 
     
-    Le volet **Azure information protection-étiquettes** s’ouvre automatiquement pour vous permet d’afficher et de modifier les étiquettes disponibles. Vous pouvez mettre les étiquettes à la disposition de tous les utilisateurs, de certains utilisateurs ou d’aucun utilisateur en les ajoutant à une stratégie ou en les supprimant de celle-ci.
+    The **Azure Information Protection - Labels** pane automatically opens for you to view and edit the available labels. Vous pouvez mettre les étiquettes à la disposition de tous les utilisateurs, de certains utilisateurs ou d’aucun utilisateur en les ajoutant à une stratégie ou en les supprimant de celle-ci.
 
 3. Pour afficher et modifier les stratégies, sélectionnez **Stratégies** parmi les options de menu. Pour afficher et modifier la stratégie que reçoivent tous les utilisateurs, sélectionnez la stratégie **Globale**. Pour créer une stratégie personnalisée pour certains utilisateurs, sélectionnez **Ajouter une nouvelle stratégie**.
     
@@ -118,7 +118,7 @@ La prochaine fois que vous accéderez au volet **Azure information protection** 
 
 Vous pouvez créer autant d’étiquettes que vous le souhaitez. Cependant, quand il commence à y en avoir trop pour que les utilisateurs puissent voir et sélectionner facilement la bonne étiquette, créez des stratégies délimitées de façon que les utilisateurs voient seulement les étiquettes qui sont pertinentes pour eux. Il existe une limite supérieure pour les étiquettes qui appliquent la protection, qui est de 500.
 
-Lorsque vous apportez des modifications dans un volet de Azure Information Protection, cliquez sur **Enregistrer** pour enregistrer les modifications, ou cliquez sur **Ignorer** pour rétablir les derniers paramètres enregistrés. Lorsque vous enregistrez des modifications apportées à une stratégie ou que vous modifiez des étiquettes ajoutées à des stratégies, ces modifications sont automatiquement publiées. Il n’y a pas d’option de publication distincte.
+When you make any changes on an Azure Information Protection pane, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. When you save changes in a policy, or make changes to labels that are added to policies, those changes are automatically published. Il n’y a pas d’option de publication distincte.
 
 Le client Azure Information Protection vérifie si des modifications ont été apportées au démarrage d’une application Office prise en charge et télécharge les modifications en tant que dernière stratégie Azure Information Protection. Autres déclencheurs qui actualisent la stratégie sur le client :
 
@@ -168,13 +168,13 @@ Utilisez les informations suivantes pour configurer la stratégie Azure Informat
 
 Quand une étiquette est appliquée à un document ou un e-mail, en arrière-plan, l’étiquette est stockée dans les métadonnées afin que les applications et services puissent lire l’étiquette :
 
-- Dans les e-mails, ces informations sont stockées dans l’en-tête x- : **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
+- In emails, this information is stored in the x-header: **msip_labels: MSIP_Label_\<GUID>_Enabled=True** 
 
-- Pour les documents Word (. doc et. docx), les feuilles de calcul Excel (. xls et. xlsx), les présentations PowerPoint (. ppt et. pptx) et les documents PDF, ces métadonnées sont stockées dans la propriété personnalisée suivante : **MSIP_Label_\<GUID > _enabled = true**  
+- For Word documents (.doc and .docx), Excel spreadsheets (.xls and .xlsx), PowerPoint presentations (.ppt and .pptx), and PDF documents, this metadata is stored in the following custom property: **MSIP_Label_\<GUID>_Enabled=True**
 
-Pour les e-mails, les informations d’étiquette sont stockées lors de l’envoi de l’e-mail. Pour les documents, les informations d’étiquette sont stockées lors de l’enregistrement du fichier. 
+For emails, the label information is stored when the email is sent. For documents, the label information is stored when the file is saved. 
 
-Pour identifier le GUID d’une étiquette, recherchez la valeur ID d’étiquette dans le volet **étiquette** de la portail Azure, lorsque vous affichez ou configurez la stratégie de Azure information protection. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier le GUID (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours le GUID de la sous-étiquette et non celui de l’étiquette parente.
+To identify the GUID for a label, locate the Label ID value on the **Label** pane in the Azure portal, when you view or configure the Azure Information Protection policy. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier le GUID (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours le GUID de la sous-étiquette et non celui de l’étiquette parente.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -184,5 +184,5 @@ Pour obtenir des exemples montrant comment personnaliser la stratégie Azure Inf
 
 - [Configurer les paramètres de stratégie Azure Information Protection qui interagissent](infoprotect-settings-tutorial.md)
 
-Pour plus d’informations sur l’exécution de votre stratégie, consultez [rapports centraux pour Azure information protection](reports-aip.md).
+To see how your policy is performing, see [Central reporting for Azure Information Protection](reports-aip.md).
 

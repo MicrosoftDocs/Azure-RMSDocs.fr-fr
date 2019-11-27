@@ -1,5 +1,5 @@
 ---
-title: Custom configurations - Azure Information Protection client
+title: Configurations personnalisées-client Azure Information Protection
 description: Informations sur la personnalisation du client Azure Information Protection pour Windows.
 author: cabailey
 ms.author: cabailey
@@ -22,9 +22,9 @@ ms.locfileid: "74479164"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
-> *Instructions for: [Azure Information Protection client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Utilisez les informations suivantes pour les configurations avancées nécessaires dont vous pourrez avoir besoin pour des scénarios spécifiques, ou pour un sous-ensemble d’utilisateurs lorsque vous gérez le client Azure Information Protection.
 
@@ -32,33 +32,33 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Comment configurer les paramètres avancés de configuration du client dans le portail
 
-1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** pane.
+1. Si vous ne l’avez pas déjà fait, dans une nouvelle fenêtre de navigateur, [Connectez-vous au portail Azure](../configure-policy.md#signing-in-to-the-azure-portal), puis accédez au volet de **Azure information protection** .
 
 2. À partir de l’option de menu **Classifications** > **Étiquettes** : sélectionnez **Stratégies**.
 
-3. On the **Azure Information Protection - Policies** pane, select the context menu ( **...** ) next to the policy to contain the advanced settings. Ensuite, sélectionnez **Paramètres avancés**.
+3. Dans le volet **Azure information protection-stratégies** , sélectionnez le menu contextuel ( **...** ) en regard de la stratégie pour contenir les paramètres avancés. Ensuite, sélectionnez **Paramètres avancés**.
     
     Vous pouvez configurer des paramètres avancés pour la stratégie globale et pour les stratégies étendues.
 
-4. On the **Advanced settings** pane, type the advanced setting name and value, and then select **Save and close**.
+4. Dans le volet **Paramètres avancés** , tapez le nom et la valeur du paramètre avancé, puis sélectionnez **enregistrer et fermer**.
 
 5. Assurez-vous que les utilisateurs de cette stratégie redémarrent toutes les applications Office qu’ils avaient ouvertes.
 
-6. If you no longer need the setting and want to revert to the default behavior: On the **Advanced settings** pane, select the context menu ( **...** ) next to the setting you no longer need, and then select **Delete**. Ensuite, cliquez sur **Enregistrer et fermer**.
+6. Si vous n’avez plus besoin du paramètre et souhaitez rétablir le comportement par défaut : dans le volet **Paramètres avancés** , sélectionnez le menu contextuel ( **...** ) en regard du paramètre dont vous n’avez plus besoin, puis sélectionnez **supprimer**. Ensuite, cliquez sur **Enregistrer et fermer**.
 
 #### <a name="available-advanced-client-settings"></a>Paramètres client avancés disponibles
 
 |Paramètre|Scénario et instructions|
 |----------------|---------------|
 |DisableDNF|[Masquer ou afficher le bouton Ne pas transférer dans Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
-|DisableMandatoryInOutlook|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)|
+|DisableMandatoryInOutlook|[Exempter les messages Outlook de l’étiquetage obligatoire](#exempt-outlook-messages-from-mandatory-labeling)|
 |CompareSubLabelsInAttachmentAction|[Activer la prise en charge de l’ordre des sous-étiquettes](#enable-order-support-for-sublabels-on-attachments) 
-|ContentExtractionTimeout|[Change the timeout settings for the scanner](#change-the-timeout-settings-for-the-scanner)
+|ContentExtractionTimeout|[Modifier les paramètres de délai d’attente pour le scanneur](#change-the-timeout-settings-for-the-scanner)
 |EnableBarHiding|[Masquer définitivement la barre Azure Information Protection](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Activer ou désactiver les options d’autorisations personnalisées pour les utilisateurs](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Pour les fichiers protégés avec des autorisations personnalisées, toujours afficher des autorisations personnalisées pour les utilisateurs dans l’Explorateur de fichiers](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnablePDFv2Protection|[Ne pas protéger les fichiers PDF suivant la norme ISO pour le chiffrement PDF](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
-|FileProcessingTimeout|[Change the timeout settings for the scanner](#change-the-timeout-settings-for-the-scanner)
+|FileProcessingTimeout|[Modifier les paramètres de délai d’attente pour le scanneur](#change-the-timeout-settings-for-the-scanner)
 |LabelbyCustomProperty|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Modifier le niveau de journalisation local](#change-the-local-logging-level)
@@ -78,7 +78,7 @@ Certains de ces paramètres nécessitent une modification du Registre, et certai
 |PullPolicy|[Prendre en charge les ordinateurs déconnectés](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Ajouter « Signaler un problème » pour les utilisateurs](#add-report-an-issue-for-users)|
-|RunAuditInformationTypesDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|RunAuditInformationTypesDiscovery|[Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Activer la classification pour qu’elle s’exécute en continu en arrière-plan](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[Limiter le nombre de threads utilisés par le scanneur](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Étiqueter un document Office en utilisant une propriété personnalisée existante](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -157,9 +157,9 @@ Créez le nom de la valeur DWORD suivant (avec toutes données de la valeur) :
 
 ## <a name="support-for-disconnected-computers"></a>Prise en charge des ordinateurs déconnectés
 
-Par défaut, le client Azure Information Protection tente automatiquement de se connecter au service Azure Information Protection pour télécharger la dernière stratégie Azure Information Protection. If you have computers that you know will not be able to connect to the internet for a period of time, you can prevent the client from attempting to connect to the service by editing the registry. 
+Par défaut, le client Azure Information Protection tente automatiquement de se connecter au service Azure Information Protection pour télécharger la dernière stratégie Azure Information Protection. Si vous avez des ordinateurs dont vous savez qu’ils ne seront pas en mesure de se connecter à Internet pendant un certain temps, vous pouvez empêcher le client d’essayer de se connecter au service en modifiant le registre. 
 
-Note that without an internet connection, the client cannot apply protection (or remove protection) by using your organization's cloud-based key. Il ne peut qu’utiliser les étiquettes qui appliquent seulement la classification, ou la protection qui utilise [HYOK](../configure-adrms-restrictions.md).
+Notez que sans connexion Internet, le client ne peut pas appliquer la protection (ou supprimer la protection) à l’aide de la clé basée sur le Cloud de votre organisation. Il ne peut qu’utiliser les étiquettes qui appliquent seulement la classification, ou la protection qui utilise [HYOK](../configure-adrms-restrictions.md).
 
 Vous pouvez empêcher l’affichage d’une invite de connexion au service Azure Information Protection soit en utilisant un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer sur le Portail Azure, puis en téléchargeant la stratégie pour les ordinateurs, soit en modifiant le Registre.
 
@@ -197,7 +197,7 @@ Lorsque vous exportez la stratégie à partir du portail Azure, un fichier compr
     
 2. Renommez le fichier identifié en **Policy.msip** et copiez-le dans le dossier **%LocalAppData%\Microsoft\MSIP** sur les ordinateurs où le client Azure Information Protection est installé. 
 
-If your disconnected computer is running the current GA version of the Azure Information Protection scanner, there are additional configuration steps you must take. For more information, see [Restriction: The scanner server cannot have internet connectivity](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) from the scanner deployment instructions.
+Si votre ordinateur déconnecté exécute la version GA actuelle du scanneur Azure Information Protection, vous devez effectuer des étapes de configuration supplémentaires. Pour plus d’informations, voir [restriction : le serveur du scanneur ne peut pas disposer d’une connexion Internet](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) à partir des instructions de déploiement de l’analyseur.
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Masquer ou afficher le bouton Ne pas transférer dans Outlook
 
@@ -233,7 +233,7 @@ Quand vous créez et que vous configurez ce paramètre client avancé, les utili
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
-- Key: **EnableCustomPermissionsForCustomProtectedFiles**
+- Clé : **EnableCustomPermissionsForCustomProtectedFiles**
 
 - Valeur : **True**
 
@@ -263,7 +263,7 @@ Utilisez ce paramètre lorsque vous avez sous-étiquettes et que vous avez confi
 
 Configurez les chaînes suivantes :
 
-- Key: **CompareSubLabelsInAttachmentAction**
+- Clé : **CompareSubLabelsInAttachmentAction**
 
 - Valeur : **True**
 
@@ -271,15 +271,15 @@ Sans ce paramètre, la première étiquette trouvée dans l’étiquette parente
 
 Avec ce paramètre, la sous-étiquette classée en dernier à partir de l’étiquette parente avec la classification la plus élevée est appliquée à l’e-mail. Si vous avez besoin réorganiser vos étiquettes pour appliquer l’étiquette que vous souhaitez pour ce scénario, consultez [Comment supprimer ou réorganiser une étiquette pour Azure Information Protection](../configure-policy-delete-reorder.md).
 
-## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>Exempt Outlook messages from mandatory labeling
+## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>Exempter les messages Outlook de l’étiquetage obligatoire
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
 
-By default, when you enable the [policy setting](../configure-policy-settings.md) **All documents and emails must have a label**, all saved documents and sent emails must have a label applied. When you configure the following advanced setting, the policy setting applies only to Office documents and not to Outlook messages.
+Par défaut, lorsque vous activez le [paramètre de stratégie](../configure-policy-settings.md) , **tous les documents et e-mails doivent avoir une étiquette**, tous les documents enregistrés et les e-mails envoyés doivent avoir une étiquette appliquée. Quand vous configurez le paramètre avancé suivant, le paramètre de stratégie s’applique uniquement aux documents Office et non aux messages Outlook.
 
 Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
-- Key: **DisableMandatoryInOutlook**
+- Clé : **DisableMandatoryInOutlook**
 
 - Valeur : **True**
 
@@ -308,23 +308,23 @@ Quand vous créez et que vous configurez les paramètres client avancés suivant
 - **Leur e-mail ou leur pièce jointe à l’e-mail n’a pas d’étiquette** :
     - La pièce jointe peut être un document Office ou un document PDF
 
-When these conditions are met, the user sees a pop-up message with one of the following actions:
+Lorsque ces conditions sont remplies, l’utilisateur voit un message contextuel avec l’une des actions suivantes :
 
-- **Warn**: The user can confirm and send, or cancel.
+- **WARN**: l’utilisateur peut confirmer et envoyer, ou annuler.
 
-- **Justify**: The user is prompted for justification (predefined options or free-form).  L’utilisateur peut ensuite envoyer ou annuler l’e-mail. Le texte de la justification est écrit dans l’en-tête X de l’e-mail afin qu’il puisse être lu par d’autres systèmes, par exemple des services de protection contre la perte de données.
+- **Justify**: l’utilisateur est invité à fournir une justification (options prédéfinies ou forme libre).  L’utilisateur peut ensuite envoyer ou annuler l’e-mail. Le texte de la justification est écrit dans l’en-tête X de l’e-mail afin qu’il puisse être lu par d’autres systèmes, par exemple des services de protection contre la perte de données.
 
-- **Block**: The user is prevented from sending the email while the condition remains. Le message contient la raison du blocage de l’e-mail pour que l’utilisateur puisse résoudre le problème, par exemple supprimer des destinataires spécifiques ou appliquer une étiquette à l’e-mail. 
+- **Bloquer**: l’utilisateur ne peut pas envoyer l’e-mail tant que la condition est conservée. Le message contient la raison du blocage de l’e-mail pour que l’utilisateur puisse résoudre le problème, par exemple supprimer des destinataires spécifiques ou appliquer une étiquette à l’e-mail. 
 
-When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
+Quand les messages contextuels concernent une étiquette spécifique, vous pouvez configurer des exceptions pour les destinataires par nom de domaine.
 
-The resulting actions from the pop-up messages are logged to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**:
+Les actions résultantes des messages contextuels sont consignées dans le journal des événements Windows local **journaux des applications et des Services** > **Azure information protection**:
 
-- Warn messages: Information ID 301
+- Messages d’avertissement : ID d’informations 301
 
-- Justify messages: Information ID 302
+- Justification des messages : ID d’informations 302
 
-- Block messages: Information ID 303
+- Bloquer les messages : ID d’informations 303
 
 Exemple d’entrée événement d’un message de justification :
 
@@ -339,11 +339,11 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
-The following sections contain configuration instructions for each advanced client setting, and you can see them in action for yourself with [Tutorial: Configure Azure Information Protection to control oversharing of information using Outlook](../infoprotect-oversharing-tutorial.md).
+Les sections suivantes contiennent des instructions de configuration pour chaque paramètre de client avancé. vous pouvez les voir en action pour vous-même avec [le didacticiel : configurer Azure information protection pour contrôler le surPartage des informations à l’aide d’Outlook](../infoprotect-oversharing-tutorial.md).
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Pour implémenter des messages d’avertissement, de justification ou de blocage pour des étiquettes spécifiques :
 
-Pour implémenter les messages contextuels pour des étiquettes spécifiques, vous devez connaître l’ID d’étiquette pour ces étiquettes. The label ID value is displayed on the **Label** pane, when you view or configure the Azure Information Protection policy in the Azure portal. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier l’ID de l’étiquette (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente.
+Pour implémenter les messages contextuels pour des étiquettes spécifiques, vous devez connaître l’ID d’étiquette pour ces étiquettes. La valeur ID de l’étiquette s’affiche dans le volet **étiquette** , lorsque vous affichez ou configurez la stratégie de Azure information protection dans le portail Azure. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier l’ID de l’étiquette (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente.
 
 Créez un ou plusieurs des paramètres client avancés avec les clés suivantes. Pour les valeurs, spécifiez une ou plusieurs étiquettes en utilisant leur ID, chacun d’eux séparé par une virgule.
 
@@ -352,51 +352,51 @@ Exemple de valeur pour plusieurs ID d’étiquette sous forme de chaîne sépar�
 
 - Messages d’avertissement :
     
-    - Key: **OutlookWarnUntrustedCollaborationLabel**
+    - Clé : **OutlookWarnUntrustedCollaborationLabel**
     
     - Valeur : \<**ID d’étiquette séparés par des virgules**>
 
 - Messages de justification :
     
-    - Key: **OutlookJustifyUntrustedCollaborationLabel**
+    - Clé : **OutlookJustifyUntrustedCollaborationLabel**
     
     - Valeur : \<**ID d’étiquette séparés par des virgules**>
 
 - Messages de blocage :
     
-    - Key: **OutlookBlockUntrustedCollaborationLabel**
+    - Clé : **OutlookBlockUntrustedCollaborationLabel**
     
     - Valeur : \<**ID d’étiquette séparés par des virgules**>
 
-#### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>To exempt domain names for pop-up messages configured for specific labels
+#### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Pour exempter les noms de domaine pour les messages contextuels configurés pour des étiquettes spécifiques
 
-For the labels that you've specified with these pop-up messages, you can exempt specific domain names so that users do not see the messages for recipients who have that domain name included in their email address. Dans ce cas, les e-mails sont envoyés sans qu’un message interrompe le processus. Pour spécifier plusieurs domaines, ajoutez-les sous la forme d’une seule chaîne, en les séparant par des virgules.
+Pour les étiquettes que vous avez spécifiées avec ces messages contextuels, vous pouvez exempter des noms de domaine spécifiques afin que les utilisateurs ne voient pas les messages pour les destinataires qui ont ce nom de domaine inclus dans leur adresse de messagerie. Dans ce cas, les e-mails sont envoyés sans qu’un message interrompe le processus. Pour spécifier plusieurs domaines, ajoutez-les sous la forme d’une seule chaîne, en les séparant par des virgules.
 
 Une configuration typique consiste à afficher les messages contextuels seulement pour les destinataires qui sont externes à votre organisation ou qui ne sont pas des partenaires autorisés de votre organisation. Dans ce cas, vous spécifiez tous les domaines de messagerie utilisés par votre organisation et par vos partenaires.
 
-Create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
+Créez les paramètres client avancés suivants et, pour la valeur, spécifiez un ou plusieurs domaines, chacun séparé par une virgule.
 
 Exemple de valeur pour plusieurs domaines sous forme de chaîne séparée par des virgules : `contoso.com,fabrikam.com,litware.com`
 
 - Messages d’avertissement :
     
-    - Key: **OutlookWarnTrustedDomains**
+    - Clé : **OutlookWarnTrustedDomains**
     
     - Valeur : **\<** noms de domaine, séparés par des virgules **>**
 
 - Messages de justification :
     
-    - Key: **OutlookJustifyTrustedDomains**
+    - Clé : **OutlookJustifyTrustedDomains**
     
     - Valeur : **\<** noms de domaine, séparés par des virgules **>**
 
 - Messages de blocage :
     
-    - Key: **OutlookBlockTrustedDomains**
+    - Clé : **OutlookBlockTrustedDomains**
     
     - Valeur : **\<** noms de domaine, séparés par des virgules **>**
 
-For example, you have specified the **OutlookBlockUntrustedCollaborationLabel** advanced client setting for the **Confidential \ All Employees** label. You now specify the additional advanced client setting of **OutlookBlockTrustedDomains** and **contoso.com**. As a result, a user can send an email to john@sales.contoso.com when it is labeled **Confidential \ All Employees** but will be blocked from sending an email with the same label to a Gmail account.
+Par exemple, vous avez spécifié le paramètre client avancé **OutlookBlockUntrustedCollaborationLabel** pour l’étiquette **confidentiel \ tous les employés** . Vous spécifiez maintenant le paramètre de client avancé supplémentaire **OutlookBlockTrustedDomains** et **contoso.com**. Par conséquent, un utilisateur peut envoyer un e-mail à john@sales.contoso.com lorsqu’il est étiqueté **confidentiel \ tous les employés** , mais qu’il ne peut pas envoyer un e-mail avec la même étiquette à un compte gmail.
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Pour implémenter des messages contextuels d’avertissement, de justification ou de blocage pour des e-mails ou des pièces jointes qui n’ont pas d’étiquette :
 
@@ -404,72 +404,72 @@ Créez le paramètre client avancé suivant avec une des valeurs suivantes :
 
 - Messages d’avertissement :
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Clé : **OutlookUnlabeledCollaborationAction**
     
-    - Value: **Warn**
+    - Valeur : **avertir**
 
 - Messages de justification :
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Clé : **OutlookUnlabeledCollaborationAction**
     
-    - Value: **Justify**
+    - Valeur : **justifier**
 
 - Messages de blocage :
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Clé : **OutlookUnlabeledCollaborationAction**
     
-    - Value: **Block**
+    - Valeur : **bloquer**
 
 - Désactiver ces messages :
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Clé : **OutlookUnlabeledCollaborationAction**
     
-    - Value: **Off**
+    - Valeur : **désactivé**
 
-#### <a name="to-define-specific-file-name-extensions-for-the-warn-justify-or-block-pop-up-messages-for-email-attachments-that-dont-have-a-label"></a>To define specific file name extensions for the warn, justify, or block pop-up messages for email attachments that don't have a label
+#### <a name="to-define-specific-file-name-extensions-for-the-warn-justify-or-block-pop-up-messages-for-email-attachments-that-dont-have-a-label"></a>Pour définir des extensions de nom de fichier spécifiques pour les messages contextuels avertir, justifier ou bloquer pour les pièces jointes qui n’ont pas d’étiquette
 
-By default, the warn, justify, or block pop-up messages apply to all Office documents and PDF documents. You can refine this list by specifying which file name extensions should display the warn, justify, or block messages with an additional advanced client property and a comma-separated list of file name extensions.
+Par défaut, les messages contextuels avertir, justifier ou bloquer s’appliquent à tous les documents Office et documents PDF. Vous pouvez affiner cette liste en spécifiant les extensions de nom de fichier qui doivent afficher les messages d’avertissement, de justification ou de blocage avec une propriété de client avancée supplémentaire et une liste séparée par des virgules d’extensions de noms de fichiers.
 
-Example value for multiple file name extensions to define as a comma-separated string: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+Exemple de valeur pour plusieurs extensions de nom de fichier à définir en tant que chaîne séparée par des virgules : `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
-In this example, an unlabeled PDF document will not result in warn, justify, or block pop-up messages.
+Dans cet exemple, un document PDF sans étiquette n’a pas pour effet d’avertir, de justifier ou de bloquer les messages contextuels.
 
 
-- Key: **OutlookOverrideUnlabeledCollaborationExtensions**
+- Clé : **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- Value: **\<** file name extensions to display messages, comma separated **>**
+- Valeur : **\<** des extensions de nom de fichier pour afficher des messages, séparés par des virgules **>**
 
-#### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>To specify a different action for email messages without attachments
+#### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>Pour spécifier une action différente pour les messages électroniques sans pièces jointes
 
-By default, the value that you specify for OutlookUnlabeledCollaborationAction to warn, justify, or block pop-up messages applies to emails or attachments that don't have a label. You can refine this configuration by specifying another advanced client setting for email messages that don't have attachments.
+Par défaut, la valeur que vous spécifiez pour OutlookUnlabeledCollaborationAction pour avertir, justifier ou bloquer les messages contextuels s’applique aux e-mails ou pièces jointes qui n’ont pas d’étiquette. Vous pouvez affiner cette configuration en spécifiant un autre paramètre de client avancé pour les messages électroniques qui n’ont pas de pièces jointes.
 
 Créez le paramètre client avancé suivant avec une des valeurs suivantes :
 
 - Messages d’avertissement :
     
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Clé : **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Value: **Warn**
+    - Valeur : **avertir**
 
 - Messages de justification :
     
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Clé : **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Value: **Justify**
+    - Valeur : **justifier**
 
 - Messages de blocage :
     
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Clé : **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Value: **Block**
+    - Valeur : **bloquer**
 
 - Désactiver ces messages :
     
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Clé : **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Value: **Off**
+    - Valeur : **désactivé**
 
-If you don't specify this client setting, the value that you specify for OutlookUnlabeledCollaborationAction is used for unlabeled email messages without attachments as well as unlabeled email messages with attachments.
+Si vous ne spécifiez pas ce paramètre client, la valeur que vous spécifiez pour OutlookUnlabeledCollaborationAction est utilisée pour les messages électroniques sans étiquette, et les messages électroniques sans étiquette avec pièces jointes.
 
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Définir une autre étiquette par défaut pour Outlook
@@ -478,7 +478,7 @@ Cette configuration utilise un [paramètre client avancé](#how-to-configure-adv
 
 Quand vous configurez ce paramètre, Outlook n’applique pas l’étiquette par défaut qui est configurée dans la stratégie Azure Information Protection pour le paramètre **Sélectionner l’étiquette par défaut**. Au lieu de cela, Outlook peut appliquer une autre étiquette par défaut ou ne rien appliquer.
 
-Pour appliquer une autre étiquette, vous devez spécifier son ID. The label ID value is displayed on the **Label** pane, when you view or configure the Azure Information Protection policy in the Azure portal. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier l’ID de l’étiquette (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente.
+Pour appliquer une autre étiquette, vous devez spécifier son ID. La valeur ID de l’étiquette s’affiche dans le volet **étiquette** , lorsque vous affichez ou configurez la stratégie de Azure information protection dans le portail Azure. Pour les fichiers auxquels des étiquettes sont appliquées, vous pouvez également exécuter l’applet de commande PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) pour identifier l’ID de l’étiquette (MainLabelId ou SubLabelId). Si une étiquette a des sous-étiquettes, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente.
 
 Pour qu’Outlook n’applique pas l’étiquette par défaut, spécifiez **None**.
 
@@ -498,7 +498,7 @@ Cette configuration implique de spécifier un paramètre client avancé nommé *
 
 `[Azure Information Protection label ID];[S/MIME action]`
 
-The label ID value is displayed on the **Label** pane, when you view or configure the Azure Information Protection policy in the Azure portal. Pour utiliser S/MIME avec une sous-étiquette, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente. L’étiquette parente doit être dans la même étendue que la sous-étiquette, ou dans la stratégie globale.
+La valeur ID de l’étiquette s’affiche dans le volet **étiquette** , lorsque vous affichez ou configurez la stratégie de Azure information protection dans le portail Azure. Pour utiliser S/MIME avec une sous-étiquette, spécifiez toujours l’ID de la sous-étiquette et non celui de l’étiquette parente. L’étiquette parente doit être dans la même étendue que la sous-étiquette, ou dans la stratégie globale.
 
 L’action S/MIME peut être :
 
@@ -592,7 +592,7 @@ De plus, quand vous utilisez ces instructions pour des fichiers que vous n’ave
 
 Pour utiliser des commandes PowerShell pour convertir des fichiers .ppdf existants en fichiers .pdf protégés qui utilisent la norme ISO pour le chiffrement PDF :
 
-1. Utilisez [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) avec le fichier .ppdf. Exemple :
+1. Utilisez [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) avec le fichier .ppdf. Par exemple :
     
         Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
 
@@ -604,11 +604,11 @@ Pour utiliser des commandes PowerShell pour convertir des fichiers .ppdf exista
     
    - La valeur pour **RMSTemplateId**. Si cette valeur est **Accès restreint**, un utilisateur a protégé le fichier à l’aide d’autorisations personnalisées au lieu d’utiliser des paramètres de protection configurés pour l’étiquette. Si vous continuez, ces autorisations personnalisées sont remplacées par les paramètres de protection de l’étiquette. Décidez s’il faut continuer ou demander à l’utilisateur (valeur affichée pour **RMSIssuer**) de supprimer l’étiquette et de la réappliquer, avec leurs autorisations personnalisées d’origine.
 
-3. Supprimez l’étiquette à l’aide de [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) avec le paramètre *RemoveLabel*. Si vous utilisez le [paramètre de stratégie](../configure-policy-settings.md) **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection**, vous devez également spécifier le paramètre  *Justification* avec la raison. Exemple : 
+3. Supprimez l’étiquette à l’aide de [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) avec le paramètre *RemoveLabel*. Si vous utilisez le [paramètre de stratégie](../configure-policy-settings.md) **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection**, vous devez également spécifier le paramètre  *Justification* avec la raison. Par exemple : 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
-4. Réappliquez l’étiquette d’origine, en spécifiant la valeur de l’étiquette que vous avez identifiée à l’étape 1. Exemple :
+4. Réappliquez l’étiquette d’origine, en spécifiant la valeur de l’étiquette que vous avez identifiée à l’étape 1. Par exemple :
     
         Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 
@@ -616,7 +616,7 @@ Le fichier conserve l’extension de nom de fichier .pdf, mais il est classé c
 
 ## <a name="support-for-files-protected-by-secure-islands"></a>Prise en charge des fichiers protégés par Secure Islands
 
-This configuration option is in preview and might change.
+Cette option de configuration est en version préliminaire et peut changer.
 
 Si vous avez utilisé Secure Islands pour protéger des documents, vous avez certainement protégé les fichiers texte et image, ainsi que les fichiers protégés de manière générique à la suite de cette protection. Par exemple, les fichiers avec une extension de nom de fichier .ptxt, .pjpeg ou .pfile. Quand vous modifiez le Registre comme suit, Azure Information Protection peut déchiffrer ces fichiers :
 
@@ -662,15 +662,15 @@ Cette configuration nécessite que vous spécifiiez un paramètre client avancé
 
 `[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
 
-The label ID value is displayed on the **Label** pane, when you view or configure the Azure Information Protection policy in the Azure portal. Pour spécifier une sous-étiquette, l’étiquette parente doit être dans la même étendue, ou dans la stratégie globale.
+La valeur ID de l’étiquette s’affiche dans le volet **étiquette** , lorsque vous affichez ou configurez la stratégie de Azure information protection dans le portail Azure. Pour spécifier une sous-étiquette, l’étiquette parente doit être dans la même étendue, ou dans la stratégie globale.
 
 Spécifiez votre choix d’un nom de règle de migration. Utilisez un nom descriptif qui vous aide à identifier la manière dont une ou plusieurs étiquettes de votre solution d’étiquetage précédente doivent être mappées à une étiquette Azure Information Protection. Le nom s’affiche dans les rapports d’analyse et dans l’observateur d’événements. Notez que ce paramètre ne supprime pas l’étiquette d’origine du document ni les marquages visuels du document que l’étiquette d’origine a éventuellement appliqués. Pour supprimer des en-têtes et des pieds de page, consultez la section suivante, [Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions).
 
 ### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Exemple 1 : mappage du même nom d’étiquette
 
-Requirement: Documents that have a Secure Islands label of "Confidential" should be relabeled as "Confidential" by Azure Information Protection.
+Exigence : les documents qui ont une étiquette des îlots sécurisés « confidentiel » doivent être réétiquetés comme « confidentiels » par Azure Information Protection.
 
-Exemple :
+Dans cet exemple :
 
 - L’étiquette Azure Information Protection que vous voulez utiliser s’appelle **Confidentiel** et a l’ID d’étiquette **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
@@ -679,15 +679,15 @@ Exemple :
 Le paramètre client avancé :
 
     
-|Nom|Value|
+|Nom|Valeur|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, « L’étiquette Secure Islands est confidentiel », Classification, Confidentiel|
 
 ### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Exemple 2 : un mappage pour un autre nom d’étiquette
 
-Requirement: Documents labeled as "Sensitive" by Secure Islands should be relabeled as "Highly Confidential" by Azure Information Protection.
+Exigence : les documents intitulés « sensibles » par les îles sécurisées doivent être renommés comme « hautement confidentiels » par Azure Information Protection.
 
-Exemple :
+Dans cet exemple :
 
 - L’étiquette Azure Information Protection que vous voulez utiliser s’appelle **Hautement confidentiel** et a l’ID d’étiquette **3e9df74d-3168-48af-8b11-037e3021813f**.
 
@@ -696,16 +696,16 @@ Exemple :
 Le paramètre client avancé :
 
     
-|Nom|Value|
+|Nom|Valeur|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, «L’étiquette Secure Islands est sensible », Classification, Sensible|
 
 
 ### <a name="example-3-many-to-one-mapping-of-label-names"></a>Exemple 3 : mappage de plusieurs noms d’étiquettes en un
 
-Requirement: You have two Secure Islands labels that include the word "Internal" and you want documents that have either of these Secure Islands labels to be relabeled as "General" by Azure Information Protection.
+Exigence : vous avez deux étiquettes de îles sécurisées qui incluent le mot « Internal » et vous souhaitez que les documents qui ont l’une de ces étiquettes des îlots sécurisés soient réétiquetés comme « général » par Azure Information Protection.
 
-Exemple :
+Dans cet exemple :
 
 - L’étiquette Azure Information Protection que vous voulez utiliser s’appelle **Général** et a l’ID d’étiquette **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
@@ -714,7 +714,7 @@ Exemple :
 Le paramètre client avancé :
 
     
-|Nom|Value|
+|Nom|Valeur|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, «L’étiquette Secure Islands contient Interne », Classification,. \*Interne.\*|
 
@@ -729,13 +729,13 @@ Lorsque le client obtient cette configuration dans sa stratégie, les anciens en
 
 Cette configuration n’est pas prise en charge pour Outlook. Sachez également que quand vous l’utilisez avec Word, Excel et PowerPoint, elle peut affecter négativement les performances de ces applications pour les utilisateurs. La configuration vous permet de définir des paramètres par application, par exemple, rechercher du texte dans les en-têtes et les pieds de page des documents Word, mais pas dans les feuilles de calcul Excel ni dans les présentations PowerPoint.
 
-Because the pattern matching affects the performance for users, we recommend that you limit the Office application types (**W**ord, E**X**cel, **P**owerPoint) to just those that need to be searched:
+Étant donné que les critères spéciaux affectent les performances pour les utilisateurs, nous vous recommandons de limiter les types d’applications Office (**W**ORD, E**X**cel, **P**owerPoint) à ceux qui doivent être recherchés :
 
 - Clé : **RemoveExternalContentMarkingInApp**
 
 - Valeur : \< **Types d’application Office WXP**> 
 
-Exemples :
+Exemples :
 
 - Pour rechercher dans des documents Word uniquement, spécifiez **W**.
 
@@ -845,37 +845,37 @@ Pour étiqueter un document Office avec l’une de ces valeurs de classification
 
 À partir de maintenant, quand un utilisateur ouvre et enregistre un de ces documents Office, le document est étiqueté **Public**, **Général** ou **Hautement confidentiel\Tous les employés** si vous avez des étiquettes avec ces noms dans votre stratégie Azure Information Protection. Si vous n’avez pas d’étiquettes avec ces noms, le document reste sans étiquette.
 
-## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Disable sending discovered sensitive information in documents to Azure Information Protection analytics
+## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
 
-When the Azure Information Protection client is used in Office apps, it looks for sensitive information in documents when they are first saved. Providing the client isn't configured to not sent audit information, any sensitive information types found (predefined or custom) are then sent to [Azure Information Protection analytics](../reports-aip.md). 
+Lorsque le client Azure Information Protection est utilisé dans les applications Office, il recherche des informations sensibles dans les documents lorsqu’ils sont enregistrés pour la première fois. Si le client n’est pas configuré pour ne pas envoyer d’informations d’audit, tous les types d’informations sensibles détectés (prédéfinis ou personnalisés) sont ensuite envoyés à [Azure information protection Analytics](../reports-aip.md). 
 
-The configuration that controls whether the client sends audit information is the [policy setting](../configure-policy-settings.md) of **Send audit data to Azure Information Protection log analytics**. When this policy setting is **On** because you want to send audit information that includes labeling actions but you don't want to send sensitive information types found by the client, enter the following strings:
+La configuration qui contrôle si le client envoie des informations d’audit est le [paramètre de stratégie](../configure-policy-settings.md) **Envoyer des données d’audit à Azure information protection log Analytics**. Lorsque ce paramètre de stratégie est activé parce que vous souhaitez envoyer **des** informations d’audit incluant des actions d’étiquetage mais que vous ne souhaitez pas envoyer de types d’informations sensibles détectés par le client, entrez les chaînes suivantes :
 
-- Key: **RunAuditInformationTypesDiscovery**
+- Clé : **RunAuditInformationTypesDiscovery**
 
 - Valeur : **False**
 
-If you set this advanced client setting, auditing information can still be sent from the client but the information is limited to labeling activity.
+Si vous définissez ce paramètre de client avancé, les informations d’audit peuvent toujours être envoyées à partir du client, mais les informations sont limitées à l’étiquetage de l’activité.
 
-Exemple :
+Par exemple :
 
-- With this setting, you can see that a user accessed Financial.docx that is labeled **Confidential \ Sales**.
+- Avec ce paramètre, vous pouvez voir qu’un utilisateur a accédé à Financial. docx qui est étiqueté **confidentiel \ Sales**.
 
-- Without this setting, you can see that Financial.docx contains 6 credit card numbers.
+- Sans ce paramètre, vous pouvez voir que Financial. docx contient 6 numéros de carte de crédit.
     
-    - If you also enable [deeper analytics into your sensitive data](../reports-aip.md#content-matches-for-deeper-analysis), you will additionally be able to see what those credit card numbers are.
+    - Si vous activez également des [analyses plus approfondies dans vos données sensibles](../reports-aip.md#content-matches-for-deeper-analysis), vous serez en outre en mesure de voir ce que sont ces numéros de carte de crédit.
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Désactiver l’envoi de correspondances de types d’informations pour un sous-ensemble d’utilisateurs
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure.
 
-When you select the checkbox for [Azure Information Protection analytics](../reports-aip.md) that enables deeper analytics into your sensitive data collects the content matches for your sensitive information types or your custom conditions, by default, this information is sent by all users, which includes service accounts that run the Azure Information Protection scanner. Pour éviter que certains utilisateurs n’envoient ces données, créez les paramètres clients avancés suivants dans une [stratégie délimitée](../configure-policy-scope.md) autour de ces utilisateurs : 
+Lorsque vous activez la case à cocher [Azure information protection Analytics](../reports-aip.md) qui permet des analyses plus approfondies dans vos données sensibles, collecte les correspondances de contenu pour vos types d’informations sensibles ou vos conditions personnalisées, par défaut, ces informations sont envoyées par tous les utilisateurs, y compris les comptes de service qui exécutent le scanneur Azure information protection. Pour éviter que certains utilisateurs n’envoient ces données, créez les paramètres clients avancés suivants dans une [stratégie délimitée](../configure-policy-scope.md) autour de ces utilisateurs : 
 
-- Key: **LogMatchedContent**
+- Clé : **LogMatchedContent**
 
-- Value: **Disable**
+- Valeur : **Désactiver**
 
 
 ## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>Limiter le nombre de threads utilisés par le scanneur
@@ -888,7 +888,7 @@ Pour la valeur, spécifiez le nombre de threads simultanés que le scanneur peut
 
 Lorsque vous configurez tout d’abord la valeur pour le test, nous vous recommandons de spécifier 2 par cœur, puis de surveiller les résultats. Par exemple, si vous exécutez le scanneur sur un ordinateur disposant de 4 cœurs, définissez tout d’abord la valeur 8. Si nécessaire, augmentez ou diminuez ce nombre, selon les performances qui vous sont nécessaires pour l’ordinateur du scanneur et votre fréquence d’analyse. 
 
-- Key: **ScannerConcurrencyLevel**
+- Clé : **ScannerConcurrencyLevel**
 
 - Valeur : **\<nombre maximal de threads simultanés**
 
@@ -908,41 +908,41 @@ Pour configurer ce paramètre avancé afin que le scanneur s’exécute avec un 
 
 - Valeur : **False**
 
-## <a name="change-the-timeout-settings-for-the-scanner"></a>Change the timeout settings for the scanner
+## <a name="change-the-timeout-settings-for-the-scanner"></a>Modifier les paramètres de délai d’attente pour le scanneur
 
-This configuration uses [advanced client settings](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+Cette configuration utilise des [Paramètres client avancés](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans la portail Azure.
 
-By default, the Azure Information Protection scanner has a timeout period of 00:15:00 (15 minutes) to inspect each file for sensitive information types or the regex expressions that you've configured for custom conditions. When the timeout period is reached for this content extraction process, any results before the timeout are returned and further inspection for the file stops. In this scenario, the following error message is logged in %*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (zipped if there are multiple logs): **GetContentParts failed** with **The operation was canceled** in the details.
+Par défaut, le Azure Information Protection scanneur a un délai d’expiration de 00:15:00 (15 minutes) pour inspecter chaque fichier à la fin des types d’informations sensibles ou des expressions Regex que vous avez configurées pour des conditions personnalisées. Lorsque le délai d’attente est atteint pour ce processus d’extraction de contenu, tous les résultats avant le délai d’expiration sont retournés et l’inspection supplémentaire du fichier s’arrête. Dans ce scénario, le message d’erreur suivant est consigné dans%*LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog (zippé s’il y a plusieurs journaux) : **GetContentParts a échoué** avec **l’opération a été annulée** dans les détails.
 
-If you experience this timeout problem because of large files, you can increase this timeout period for full content extraction:
+Si vous rencontrez ce problème de délai d’expiration en raison de fichiers volumineux, vous pouvez augmenter ce délai d’attente pour l’extraction de contenu complète :
 
-- Key: **ContentExtractionTimeout**
+- Clé : **ContentExtractionTimeout**
 
-- Value: **\<hh:min:sec>**
+- Valeur : **\<hh : min : sec >**
 
-The file type can influence how long it takes to scan a file. Example scanning times:
+Le type de fichier peut influencer le temps nécessaire à l’analyse d’un fichier. Exemples de temps d’analyse :
 
-- A typical 100 MB Word file: 0.5-5 minutes
+- Fichier Word 100 Mo standard : 0,5 à 5 minutes
 
-- A typical 100 MB PDF file: 5-20 minutes
+- Fichier PDF 100 Mo standard : 5-20 minutes
 
-- A typical 100 MB Excel file: 12-30 minutes
+- Fichier Excel 100 Mo standard : 12-30 minutes
 
-For some file types that are very large, such as video files, consider excluding them from the scan by adding the file name extension to the **File types to scan** option in the scanner profile.
+Pour certains types de fichiers très volumineux, tels que les fichiers vidéo, pensez à les exclure de l’analyse en ajoutant l’extension de nom de fichier à l’option **types de fichiers à analyser** dans le profil du scanneur.
 
-In addition, the Azure Information Protection scanner has a timeout period of 00:30:00 (30 minutes) for each file that it processes. This value takes into account the time it can take to retrieve a file from a repository and temporarily save it locally for actions that can include decryption, content extraction for inspection, labeling, and encryption.
+En outre, le Azure Information Protection scanneur a un délai d’expiration de 00:30:00 (30 minutes) pour chaque fichier qu’il traite. Cette valeur prend en compte le temps qu’elle peut prendre pour récupérer un fichier à partir d’un référentiel et l’enregistrer temporairement localement pour les actions qui peuvent inclure le déchiffrement, l’extraction de contenu pour l’inspection, l’étiquetage et le chiffrement.
 
-Although the Azure Information Protection scanner can scan dozens to hundreds of files per minute, if you have a data repository that has a high number of very large files, the scanner can exceed this default timeout period and in the Azure portal, seem to stop after 30 minutes. In this scenario, the following error message is logged in %*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (zipped if there are multiple logs) and the scanner .csv log file: **The operation was canceled**.
+Bien que le scanneur Azure Information Protection puisse analyser des dizaines de centaines de fichiers par minute, si vous disposez d’un référentiel de données qui contient un grand nombre de fichiers très volumineux, le scanneur peut dépasser ce délai d’expiration par défaut et dans le Portail Azure semble s’arrêter après 30 maximum. Dans ce scénario, le message d’erreur suivant est consigné dans%*LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog (zippé s’il y a plusieurs journaux) et le fichier journal scanner. csv : **l’opération a été annulée**.
 
-A scanner with 4 core processors by default has 16 threads for scanning and the probability of encountering 16 large files in a 30 minute time period depends on the ratio of the large files. For example, if the scanning rate is 200 files per minute, and 1% of files exceed the 30 minute timeout, there is a probability of more than 85% that the scanner will encounter the 30 minute timeout situation. These timeouts can result in longer scanning times and higher memory consumption.
+Un scanneur avec 4 processeurs de base par défaut a 16 threads pour l’analyse et la probabilité de rencontrer 16 fichiers volumineux dans un laps de temps de 30 minutes dépend du rapport des fichiers volumineux. Par exemple, si la vitesse d’analyse est de 200 fichiers par minute et que 1% des fichiers dépassent le délai d’expiration de 30 minutes, il existe une probabilité de plus de 85% que le moteur d’analyse rencontrera la situation du délai d’expiration de 30 minutes. Ces délais d’expiration peuvent entraîner des temps d’analyse plus longs et une plus grande consommation de mémoire.
 
-In this situation, if you cannot add more core processors to the scanner computer, consider decreasing the timeout period for better scanning rates and lower memory consumption, but with the acknowledgment that some files will be excluded. Alternatively, consider increasing the timeout period for more accurate scanning results but with the acknowledgment that this configuration will likely result in lower scanning rates and higher memory consumption.
+Dans ce cas, si vous ne pouvez pas ajouter d’autres processeurs de base à l’ordinateur du scanneur, envisagez de réduire le délai d’expiration pour obtenir de meilleurs taux d’analyse et une consommation de mémoire inférieure, mais avec l’accusé de réception que certains fichiers seront exclus. Vous pouvez également envisager d’augmenter le délai d’expiration pour obtenir des résultats d’analyse plus précis, mais avec l’accusé de réception que cette configuration entraînera probablement des taux d’analyse inférieurs et une consommation de mémoire plus élevée.
 
-To change the timeout period for file processing, configure the following advanced client setting:
+Pour modifier le délai d’attente pour le traitement des fichiers, configurez le paramètre de client avancé suivant :
 
-- Key: **FileProcessingTimeout**
+- Clé : **FileProcessingTimeout**
 
-- Value: **\<hh:min:sec>**
+- Valeur : **\<hh : min : sec >**
 
 ## <a name="change-the-local-logging-level"></a>Modifier le niveau de journalisation local
 
@@ -952,27 +952,27 @@ Par défaut, le client Azure Information Protection écrit les fichiers journaux
  
 Pour modifier le niveau de journalisation de ces fichiers, configurez le paramètre client avancé suivant :
 
-- Key: **LogLevel**
+- Clé : **LogLevel**
 
 - Valeur : **\<niveau de journalisation>**
 
 Définissez le niveau de journalisation sur l'une des valeurs suivantes :
 
-- **Off**: No local logging.
+- **Off**: aucune journalisation locale.
 
-- **Error**: Errors only.
+- **Erreur**: erreurs uniquement.
 
-- **Info**: Minimum logging, which includes no event IDs (the default setting for the scanner).
+- **Info**: journalisation minimale, qui n’indique aucun ID d’événement (paramètre par défaut pour le scanneur).
 
-- **Debug**: Full information.
+- **Débogage**: informations complètes.
 
-- **Trace**: Detailed logging (the default setting for clients). Pour le scanneur, ce paramètre a un impact significatif sur les performances et doit être activé pour le scanneur uniquement si cela est demandé par le Support Microsoft. S’il vous est demandé de définir ce niveau de journalisation pour le scanneur, pensez à fixer une valeur différente lorsque les journaux souhaités ont été collectés.
+- **Trace**: journalisation détaillée (paramètre par défaut pour les clients). Pour le scanneur, ce paramètre a un impact significatif sur les performances et doit être activé pour le scanneur uniquement si cela est demandé par le Support Microsoft. S’il vous est demandé de définir ce niveau de journalisation pour le scanneur, pensez à fixer une valeur différente lorsque les journaux souhaités ont été collectés.
 
 Ce paramètre client avancé ne modifie ni les informations envoyées à Azure Information Protection pour le [reporting central](../reports-aip.md), ni les informations écrites dans le [journal des événements](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) local.
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Intégration avec la classification des messages Exchange pour une solution d’étiquetage des appareils mobiles
 
-Outlook on the web now supports built-in labeling for Exchange Online, which is the recommended method to label emails in Outlook on the web. However, if you're not yet using sensitivity labels that are published from the Office 365 Security & Compliance Center, Microsoft 365 security center, or Microsoft compliance center, you can use Exchange message classification to extend Azure Information Protection labels to your mobile users when they use Outlook on the web. You can also use this method for Exchange Server. 
+Outlook sur le Web prend désormais en charge l’étiquetage intégré pour Exchange Online, qui est la méthode recommandée pour étiqueter les messages électroniques dans Outlook sur le Web. Toutefois, si vous n’utilisez pas encore les étiquettes de sensibilité publiées à partir du Centre de sécurité et de conformité Office 365, Microsoft 365 Security Center ou Microsoft Compliance Center, vous pouvez utiliser la classification des messages Exchange pour étendre les informations Azure Des étiquettes de protection à vos utilisateurs mobiles lorsqu’ils utilisent Outlook sur le Web. Vous pouvez également utiliser cette méthode pour Exchange Server. 
 
 Outlook Mobile ne prend pas en charge la classification des messages Exchange.
 
@@ -982,11 +982,11 @@ Pour obtenir cette solution :
 
 2. Créez une règle de flux de messagerie Exchange pour chaque étiquette : appliquez la règle quand les propriétés de message incluent la classification que vous avez configurée, puis modifiez les propriétés de message pour définir un en-tête de message. 
 
-     For the message header, you find the information to specify by inspecting the internet headers of an email that you sent and classified by using your Azure Information Protection label. Look for the header **msip_labels** and the string that immediately follows, up to and excluding the semicolon. Exemple :
+     Pour l’en-tête de message, vous trouvez les informations à spécifier en examinant les en-têtes Internet d’un e-mail que vous avez envoyé et classifié à l’aide de votre étiquette Azure Information Protection. Recherchez l’en-tête **msip_labels** et la chaîne qui suit immédiatement, jusqu’au point-virgule et sans le point-virgule. Par exemple :
     
-    **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True**
+    **msip_labels : MSIP_Label_0e421e6d-EA17-4FDB-8F01-93a3e71333b8_Enabled = true**
     
-    Ensuite, pour l’en-tête du message dans la règle, spécifiez **msip_labels** pour l’en-tête, et le reste de cette chaîne pour la valeur de l’en-tête. Exemple :
+    Ensuite, pour l’en-tête du message dans la règle, spécifiez **msip_labels** pour l’en-tête, et le reste de cette chaîne pour la valeur de l’en-tête. Par exemple :
     
     ![Exemple de règles de flux de messagerie Exchange Online qui définit l’en-tête de message pour une étiquette Azure Information Protection spécifique](../media/exchange-rule-for-message-header.png)
     
@@ -1000,7 +1000,7 @@ Avant de tester cette configuration, n’oubliez pas qu’il y a souvent un dél
 
 - Quand les destinataires internes qui disposent du client Azure Information Protection affichent l’e-mail dans Outlook, ils voient l’étiquette Azure Information Protection attribuée. 
 
-If your Azure Information Protection labels apply protection, add this protection to the rule configuration: Selecting the option to modify the message security, apply rights protection, and then select the protection template or Do Not Forward option.
+Si vos étiquettes d’Azure Information Protection appliquent la protection, ajoutez cette protection à la configuration de la règle : sélectionnez l’option permettant de modifier la sécurité des messages, appliquez la protection des droits, puis sélectionnez le modèle de protection ou l’option ne pas transférer.
 
 Vous pouvez également configurer des règles de flux de messagerie pour effectuer le mappage inverse. Quand une étiquette Azure Information Protection est détectée, définissez la classification de messages Exchange correspondante :
 

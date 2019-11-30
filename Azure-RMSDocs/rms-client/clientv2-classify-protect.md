@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 00ad46e033116b1a39421cbfbc04a316ee2d7da7
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 7eb4b4223f9fb8c53aec3ebe341384001175feda
+ms.sourcegitcommit: bc45a127fc4d5871f6e7b3bba8774bcfb194397a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561174"
+ms.lasthandoff: 11/29/2019
+ms.locfileid: "74661836"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : classifier et protéger avec le client d’étiquetage unifié Azure Information Protection
 
@@ -91,9 +91,7 @@ Raisons possibles :
 
 Quand vous partagez des documents Office par e-mail, vous pouvez attacher le document à un e-mail que vous protégez : le document est alors automatiquement protégé avec les mêmes restrictions que celles qui s’appliquent à l’e-mail. 
 
-Toutefois, vous souhaiterez peut-être tout d’abord protéger le document, puis l’attacher à l’e-mail. Protégez également l’e-mail si son contenu présente des informations sensibles. Avantage de la protection du document avant de l’attacher à un message électronique :
-
-- Vous pouvez appliquer des autorisations différentes au document et à l’e-mail.
+Toutefois, vous souhaiterez peut-être tout d’abord protéger le document, puis l’attacher à l’e-mail. Protégez également l’e-mail si son contenu présente des informations sensibles. L’avantage de protéger le document avant de l’attacher à un message électronique est que vous pouvez appliquer des autorisations différentes au document par rapport à l’e-mail.
 
 ## <a name="using-file-explorer-to-classify-and-protect-files"></a>Utilisation de l’Explorateur de fichiers pour classifier et protéger des fichiers
 

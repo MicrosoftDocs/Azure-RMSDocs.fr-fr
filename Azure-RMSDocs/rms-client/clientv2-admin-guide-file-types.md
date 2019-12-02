@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bf386685847f10ecead59ac59c44620f03372d6d
-ms.sourcegitcommit: fed1df1858f8316f7dd45e751c6910b444651a87
+ms.openlocfilehash: 9574d9e2089169878c44cb4827ac58e94f177f88
+ms.sourcegitcommit: 488a941642f82e49503b4c2c4216a003be4db054
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74474257"
+ms.lasthandoff: 12/01/2019
+ms.locfileid: "74666852"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : types de fichiers pris en charge par le client d’étiquetage unifié Azure Information Protection
 
@@ -68,7 +68,7 @@ Vous pouvez classifier les types de fichiers suivants même s’ils ne sont pas 
 
 D’autres types de fichiers prennent en charge la classification quand ils sont aussi protégés. Pour ces types de fichiers, consultez la section [Types de fichiers pris en charge pour la classification et la protection](#supported-file-types-for-classification-and-protection).
 
-Exemples :
+Exemples :
 
 - Si l’étiquette de sensibilité **générale** applique la classification et n’applique pas la protection : vous pouvez appliquer l’étiquette **générale** à un fichier nommé Sales. pdf, mais vous n’avez pas pu appliquer cette étiquette à un fichier nommé Sales. txt. 
 
@@ -150,7 +150,7 @@ Pour empêcher les utilisateurs de modifier des fichiers essentiels au fonctionn
 - **Types de fichiers exclus** : .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msp, .msi, .pdb, .jar
     
     > [!NOTE]
-    > Contrairement au client classique, les fichiers. msg ne sont pas exclus. Actuellement, il existe un problème connu avec les fichiers. MSG qui sont classifiés et protégés en tant que « . msg. pfile » et vous ne pouvez pas ouvrir ces fichiers. Pour ces fichiers, supprimez l’étiquette pour ouvrir le fichier.
+    > Contrairement au client classique, les fichiers. msg ne sont pas exclus. Actuellement, vous ne pouvez pas ouvrir correctement les fichiers. MSG qui sont classifiés et protégés. Pour ces fichiers, supprimez l’étiquette pour ouvrir le fichier.
 
 - **Dossiers exclus** : 
     - Windows

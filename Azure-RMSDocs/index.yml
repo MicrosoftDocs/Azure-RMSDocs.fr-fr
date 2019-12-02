@@ -12,12 +12,12 @@ metadata:
   ms.author: cabailey
   manager: rkarlin
   ms.date: 11/01/2019
-  ms.openlocfilehash: 433565965e0f3cdf8dfd94ed11769b547c75a01c
-  ms.sourcegitcommit: 260bf72bbc04e825c825805824546d203821f6c6
+  ms.openlocfilehash: da2c47f0e33f861a342f290f5a6edfccf72a7d66
+  ms.sourcegitcommit: bc45a127fc4d5871f6e7b3bba8774bcfb194397a
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/01/2019
-  ms.locfileid: "73428739"
+  ms.lasthandoff: 11/29/2019
+  ms.locfileid: "74661819"
 landingContent:
 - title: À propos d’Azure Information Protection
   linkLists:
@@ -49,12 +49,12 @@ landingContent:
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Mises à jour de la documentation pour octobre
-      url: https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog
-    - text: Détails de la version 2.5.33.0 - Client d’étiquetage unifié
-      url: ./rms-client/unifiedlabelingclient-version-release-history.md#version-25330
+    - text: Mises à jour de la documentation pour novembre
+      url: https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Documentation-Update-for-November/ba-p/1031924
     - text: 5 sessions Ignite principales recommandées
       url: what-is-information-protection.md#microsoft-ignite
+    - text: Détails de la version 2.5.33.0 - Client d’étiquetage unifié
+      url: ./rms-client/unifiedlabelingclient-version-release-history.md#version-25330
 - title: Classer et protéger les données dans des magasins de données locaux
   linkLists:
   - linkListType: how-to-guide

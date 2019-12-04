@@ -1,10 +1,10 @@
 ---
-title: The client for Azure Information Protection - AIP
+title: Client pour Azure Information Protection-AIP
 description: Microsoft Azure Information Protection fournit une solution client-serveur qui permet de protéger les données d’une organisation. Le client (le client Azure Information Protection ou le client Rights Management) est intégré aux applications que vous exécutez sur des ordinateurs et appareils mobiles.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/01/2019
+ms.date: 12/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,53 +12,53 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fdc74c7c1366afe17c6c7b6ac02ec63c973b0bce
-ms.sourcegitcommit: 488a941642f82e49503b4c2c4216a003be4db054
+ms.openlocfilehash: a7273f3ebb8a467d08e5897e0684b2ec2a3ffee2
+ms.sourcegitcommit: 1d89fb1c773c198c28b08230855d01d72f140dc0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2019
-ms.locfileid: "74666835"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74780913"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
->*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 
 Azure Information Protection fournit une solution client-serveur qui permet de protéger les documents et e-mails d’une organisation :
 
-- The client can be the built-in labeling client for Office, the Azure Information Protection unified labeling client for Windows, the Azure Information Protection client (classic) for Windows, or the Rights Management client.
+- Le client peut être le client d’étiquetage intégré pour Office, le Azure Information Protection client d’étiquetage unifié pour Windows, le client Azure Information Protection (Classic) pour Windows ou le client Rights Management.
     
-    These clients are often referred to as the **Office built-in labeling client**, the **unified labeling client**, the **classic client**, and the **RMS client**, respectively. Whichever client you use, it integrates with applications that you run on computers and mobile devices.
+    Ces clients sont souvent désignés comme le **client d’étiquetage Office intégré**, le client d' **étiquetage unifié**, le client **classique**et le **client RMS**, respectivement. Quel que soit le client que vous utilisez, il s’intègre aux applications que vous exécutez sur des ordinateurs et des appareils mobiles.
 
-- The service resides in the cloud or on-premises. The cloud service is Azure Information Protection, which uses the Azure Rights Management service for the data protection. The on-premises service is Active Directory Rights Management Services, more commonly known as AD RMS. 
+- Le service réside dans le Cloud ou localement. Le service Cloud est Azure Information Protection, qui utilise le service Azure Rights Management pour la protection des données. Le service local est services AD RMS (Active Directory Rights Management Services), plus communément appelé AD RMS. 
 
-All these clients integrate with Office applications but the unified labeling client and the classic client must be installed separately and support additional features and components. For example, these clients include support for File Explorer, so you can classify and protect files outside Office. Additional components include a viewer for protected PDF documents and protected images, and a scanner for on-premises data stores.
+Tous ces clients s’intègrent aux applications Office, mais le client d’étiquetage unifié et le client classique doivent être installés séparément et prendre en charge des fonctionnalités et composants supplémentaires. Par exemple, ces clients incluent la prise en charge de l’Explorateur de fichiers, ce qui vous permet de classer et de protéger des fichiers en dehors d’Office. Les composants supplémentaires incluent une visionneuse pour les documents PDF protégés et les images protégées, ainsi qu’un scanneur pour les magasins de données locaux.
 
-The RMS client provides protection only. This client is automatically installed with some applications, such as Office applications, the Azure Information Protection clients, and RMS-enlightened applications from software vendors. Toutefois, il peut également être [installé de manière autonome](https://www.microsoft.com/en-us/download/details.aspx?id=38396) pour prendre en charge la [synchronisation des fichiers à partir des bibliothèques protégées par IRM et de OneDrive Entreprise](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668), et pour les développeurs souhaitant intégrer la protection de gestion des droits aux applications métier.
+Le client RMS offre une protection uniquement. Ce client est installé automatiquement avec certaines applications, telles que les applications Office, les clients Azure Information Protection et les applications compatibles RMS des éditeurs de logiciels. Toutefois, il peut également être [installé de manière autonome](https://www.microsoft.com/en-us/download/details.aspx?id=38396) pour prendre en charge la [synchronisation des fichiers à partir des bibliothèques protégées par IRM et de OneDrive Entreprise](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668), et pour les développeurs souhaitant intégrer la protection de gestion des droits aux applications métier.
 
-## <a name="choose-which-labeling-client-to-use-for-windows-computers"></a>Choose which labeling client to use for Windows computers
+## <a name="choose-which-labeling-client-to-use-for-windows-computers"></a>Choisir le client d’étiquetage à utiliser pour les ordinateurs Windows
 
-Where possible, use one of the labeling clients because labels abstract the complexity of applying protection for users, and labels also provide classification so you can track and manage your data.
+Dans la mesure du possible, utilisez l’un des clients d’étiquetage, car les étiquettes font abstraction de la complexité de l’application de la protection pour les utilisateurs, et les étiquettes fournissent également une classification pour vous permettre de suivre et de gérer vos données.
 
-Your choice of labeling client for your Windows computers might be influenced by which management portal you use:
+Le choix de l’étiquetage du client pour vos ordinateurs Windows peut être influencé par le portail de gestion que vous utilisez :
 
-- The Office built-in labeling client and the Azure Information Protection unified labeling client download labels and policy settings from the following admin centers: 
-    - Office 365 Security & Compliance Center
-    - Microsoft 365 security center
-    - Microsoft 365 compliance center
+- Le client d’étiquetage d’Office intégré et le client d’étiquetage unifié Azure Information Protection sont téléchargés des étiquettes et des paramètres de stratégie à partir des centres d’administration suivants : 
+    - Office 365 Centre de sécurité et de conformité
+    - Centre de sécurité Microsoft 365
+    - Centre de conformité Microsoft 365
 
-- The Azure Information Protection client (classic) downloads label and policy settings from the Azure portal.
+- Le client Azure Information Protection (Classic) télécharge les paramètres d’étiquette et de stratégie à partir du Portail Azure.
 
-Because the unified labeling client and the classic client require a separate installation to Office, you must download and install these clients from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+Étant donné que le client d’étiquetage unifié et le client Classic requièrent une installation distincte pour Office, vous devez télécharger et installer ces clients à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
-Which client should you use?
+Quel client devez-vous utiliser ?
 
-- Use the **labeling client built in to Office** for your Windows computers when you have Office 365 apps that are a minimum version 1910, you want to use the same labels and policy settings that can also be used by MacOS, iOS, and Android, and you don't need features in your Office apps that require the unified labeling client or classic client. These features include the Information Protection bar under the ribbon for easier label selection and visibility. This client supports switching accounts, and because it doesn't use an Office add-in, it has better performance in Office apps than using either of the Azure Information Protection clients.
+- Utilisez le **client d’étiquetage intégré à Office** pour vos ordinateurs Windows quand vous avez des applications Office 365 dont la version 1910 est minimale, que vous souhaitez utiliser les mêmes étiquettes et paramètres de stratégie que MacOS, iOS et Android, et que vous n’avez pas besoin de fonctionnalités dans vos applications Office qui requièrent le client d’étiquetage unifié ou le client Classic. Ces fonctionnalités incluent la barre de Information Protection sous le ruban pour faciliter la sélection et la visibilité des étiquettes. Ce client prend en charge le basculement de comptes et parce qu’il n’utilise pas de complément Office, il offre de meilleures performances dans les applications Office que l’utilisation de l’un des clients Azure Information Protection.
 
-- Use the **Azure Information Protection unified labeling client** on Windows computers for labels and policy settings that can also be used by MacOS, iOS, and Android, you want to label files independently from Office 365 apps, and you don’t need features that are only supported by the classic client. These features currently include protecting content with an on-premises key (HYOK) and a general availability version of the scanner for on-premises data stores.
+- Utilisez l' **Azure information protection client d’étiquetage unifié** sur les ordinateurs Windows pour les étiquettes et les paramètres de stratégie qui peuvent également être utilisés par MacOS, iOS et Android. vous souhaitez étiqueter les fichiers indépendamment des applications Office 365 et vous n’avez pas besoin de fonctionnalités qui ne sont prises en charge que par le client classique. Ces fonctionnalités incluent actuellement la protection du contenu avec une clé locale (HYOK) et une version de disponibilité générale du scanneur pour les magasins de données locaux.
 
-- Install the **Azure Information Protection client (classic)** on Windows computers if you need a version of the client that has features that are not yet available with the unified labeling client. Although this client can use the same labels as those used by MacOS, iOS, and Android, it has different policy settings. So your tradeoff is administration using another management portal and a different user experience for users.
+- Installez le **client Azure information protection (Classic)** sur les ordinateurs Windows si vous avez besoin d’une version du client qui possède des fonctionnalités qui ne sont pas encore disponibles avec le client d’étiquetage unifié. Bien que ce client puisse utiliser les mêmes étiquettes que celles utilisées par MacOS, iOS et Android, il possède des paramètres de stratégie différents. Votre compromis est donc l’administration à l’aide d’un autre portail de gestion et d’une expérience utilisateur différente pour les utilisateurs.
 
-The latest version of the unified labeling client brings it to close parity in features with the classic client. As this gap closes, you can expect new features to be added only to the unified labeling client. For this reason, we recommend you deploy the unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](../configure-policy-migrate-labels.md), use the classic client.
+La dernière version du client d’étiquetage unifié l’amène à fermer la parité dans les fonctionnalités avec le client classique. À mesure que cet intervalle se ferme, vous pouvez vous attendre à ce que les nouvelles fonctionnalités soient ajoutées uniquement au client d’étiquetage unifié. Pour cette raison, nous vous recommandons de déployer le client d’étiquetage unifié si son ensemble de fonctionnalités et ses fonctionnalités actuelles répondent aux besoins de votre entreprise. Si ce n’est pas le cas, ou si vous avez configuré des étiquettes dans le Portail Azure que vous n’avez pas encore [migré vers le magasin d’étiquetage unifié](../configure-policy-migrate-labels.md), utilisez le client classique.
 
 Vous pouvez utiliser différents clients dans le même environnement pour prendre en charge différents besoins de l’entreprise, comme illustré dans l’exemple de déploiement suivant. Dans un environnement client mixte, nous vous recommandons d’utiliser des étiquettes unifiées afin que les clients partagent le même ensemble d’étiquettes pour faciliter l’administration. Par défaut, les nouveaux clients ont des étiquettes unifiées, car leurs locataires se trouvent sur la plateforme d’étiquetage unifiée. Pour plus d’informations, consultez [Comment puis-je déterminer si mon locataire se trouve sur la plateforme d’étiquetage unifiée ?](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
 
@@ -162,8 +162,6 @@ Pour une comparaison détaillée des différences de comportement pour des param
 ### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Fonctionnalités non planifiées dans le client d’étiquetage unifié Azure Information Protection
 
 Bien que le client d’étiquetage unifié Azure Information Protection soit toujours en cours de développement, les fonctionnalités et les différences de comportement suivantes du client classique ne sont pas prévues pour le moment dans les futures versions du client d’étiquetage unifié : 
-
-- Prendre en charge les applications Office pour les ordinateurs déconnectés avec gestion manuelle des fichiers de stratégie
 
 - Autorisations personnalisées en tant qu’option distincte que les utilisateurs peuvent sélectionner dans les applications Office : Word, Excel et PowerPoint
 

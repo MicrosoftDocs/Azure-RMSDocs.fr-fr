@@ -4,7 +4,7 @@ description: Les instructions qui font partie du chemin de migration de AD RMS �
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/11/2019
+ms.date: 11/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d7594886d6dc3715d29e15a1a1133142f244ad1d
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: e83515d0e6764cab5af784b4d695b318daa42d8d
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559887"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935467"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par HSM à clé protégée par HSM
 

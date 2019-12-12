@@ -7,18 +7,18 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 18cf28b380e5636b8948f133bceabd61b504d8fb
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73558973"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74840256"
 ---
 # <a name="class-mipcomputeengine"></a>MIP :: ComputeEngine, classe 
   
 ## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std :: Vector\<std :: shared_ptr\<étiquette\>\>& ListSensitivityLabels ()  | Pas encore documenté.
+public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  | Pas encore documenté.
 public std :: shared_ptr\<ContentLabel\> GetSensitivityLabel (ComputeEngineContext & Context, const DocumentState & State)  | Pas encore documenté.
 public std :: Vector\<std :: shared_ptr\<action\>\> ComputeActions (ComputeEngineContext & Context, const DocumentState & documentState, const ApplicationActionState & actionState)  | Pas encore documenté.
 public void NotifyCommittedActions (ComputeEngineContext & Context, const DocumentState & documentState, const ApplicationActionState & actionState)  | Pas encore documenté.
@@ -47,7 +47,7 @@ _Pas encore documenté._
 ### <a name="computeengine-function"></a>~ ComputeEngine fonction)
 _Pas encore documenté._
 
-### <a name="create-function"></a>créer une fonction
+### <a name="create-function"></a>Créer une fonction
 _Pas encore documenté._
 
 ### <a name="createcontext-function"></a>CreateContext fonction)

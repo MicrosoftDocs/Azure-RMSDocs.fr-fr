@@ -8,15 +8,15 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
 ms.openlocfilehash: 37ab92e336d88d37d9e4e7631e108bbaaebdb977
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886187"
 ---
 # <a name="microsoft-information-protection-sdk---policy-handler-concepts"></a>Kit SDK Microsoft Information Protection - Concepts liés au gestionnaire de stratégies
 
-Dans l’API de stratégie `mip::PolicyHandler` , expose les opérations utilisées pour calculer des actions de stratégie et soumettre des événements d’audit.
+Dans l’API de stratégie, `mip::PolicyHandler` expose les opérations utilisées pour calculer des actions de stratégie et soumettre des événements d’audit.
 
 ## <a name="policy-handler-functions"></a>Fonctions du gestionnaire de stratégies
 
@@ -27,14 +27,14 @@ Dans cet article, nous couvrirons les méthodes suivantes :
 - `ComputeActions`
 - `NotifyCommittedActions`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 La création de `PolicyHandler` nécessite :
 
 - Un `mip::MipContext`
 - Un `mip::PolicyProfile`
 - L’ajout d’un `mip::PolicyEngine` au `mip::PolicyProfile`
-- Une classe qui implémente`mip::PolicyHandler::Observer`
+- Classe qui implémente `mip::PolicyHandler::Observer`
 
 ## <a name="create-a-policy-handler"></a>Créer un gestionnaire de stratégies
 
@@ -58,7 +58,7 @@ Une fois l’objet `PolicyHandler` correctement créé, les actions peuvent êtr
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Maintenant que vous avez appris à créer un gestionnaire de stratégie:
+Maintenant que vous avez appris à créer un gestionnaire de stratégie :
 
 - Découvrez comment [créer une classe d’état d’exécution](concept-handler-policy-executionstate-cpp.md), qui est utilisée pour déterminer des actions de calcul.
 - Téléchargez les [exemples d’API de stratégie à partir de GitHub et essayez l’API de stratégie](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

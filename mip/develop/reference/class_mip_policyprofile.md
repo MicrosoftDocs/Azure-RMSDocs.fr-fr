@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 8feb0b93982a00c4843ea914f969ef27cf8e5ca2
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560915"
 ---
 # <a name="class-mippolicyprofile"></a>mip::PolicyProfile, classe 
@@ -20,16 +20,16 @@ La classe PolicyProfile est la classe racine pour l’utilisation des opération
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Obtenir les paramètres définis sur le profil.
-public void ListEnginesAsync (const std :: shared_ptr\<void\>contexte &)  |  Démarre une opération d’énumération de moteurs.
-public std :: Vector\<std :: String\> ListEngines ()  |  Liste des moteurs.
-public void UnloadEngineAsync (const std :: String & ID, const std :: shared_ptr\<void\>& Context)  |  Démarre le déchargement du moteur de stratégie avec l’ID spécifié.
+public void ListEnginesAsync (const std :: shared_ptr\<void\>& Context)  |  Démarre une opération d’énumération de moteurs.
+public std::vector\<std::string\> ListEngines()  |  Liste des moteurs.
+public void UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Démarre le déchargement du moteur de stratégie avec l’ID spécifié.
 public void UnloadEngine (const std :: String & ID)  |  Démarre le déchargement du moteur de stratégie avec l’ID spécifié.
 public void AddEngineAsync (const PolicyEngine :: Settings & Settings, const std :: shared_ptr\<void\>& Context)  |  Démarre l’ajout d’un nouveau moteur de stratégie au profil.
-public std :: shared_ptr\<PolicyEngine\> AddEngine (const PolicyEngine :: Settings & Settings, const std :: shared_ptr\<void\>contexte &)  |  Ajoutez un nouveau moteur de stratégie au profil.
-public void DeleteEngineAsync (const std :: String & ID, const std :: shared_ptr\<void\>& Context)  |  Démarre la suppression du moteur de stratégie avec l’ID spécifié. Toutes les données du profil spécifié seront supprimées.
+public std :: shared_ptr\<PolicyEngine\> AddEngine (const PolicyEngine :: Settings & Settings, const std :: shared_ptr\<void\>& Context)  |  Ajoutez un nouveau moteur de stratégie au profil.
+public void DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Démarre la suppression du moteur de stratégie avec l’ID spécifié. Toutes les données du profil spécifié seront supprimées.
 public void DeleteEngine(const std::string& engineId)  |  Supprimer le moteur de stratégie avec l’ID donné. Toutes les données du moteur spécifié seront supprimées.
-public static MIP_API void _ _ cdecl Mip ::P olicyProfile :: LoadAsync | Démarre le chargement d’un profil en fonction des paramètres fournis.
-public static const MIP_API Char * _ _ cdecl Mip ::P olicyProfile :: GetVersion | Obtient la version de la bibliothèque
+public static MIP_API void __CDECL MIP ::P olicyProfile :: LoadAsync | Démarre le chargement d’un profil en fonction des paramètres fournis.
+public static const MIP_API char * __CDECL MIP ::P olicyProfile :: GetVersion | Obtient la version de la bibliothèque
 
 ## <a name="members"></a>Membres
   

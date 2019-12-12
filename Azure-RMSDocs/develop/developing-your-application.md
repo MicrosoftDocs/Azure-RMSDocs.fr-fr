@@ -15,10 +15,10 @@ ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: c508365855d8d2e914fca2c4853dc315d84331e2
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791298"
 ---
 # <a name="developing-your-application"></a>Développement de votre application
@@ -27,8 +27,8 @@ Dans cet exemple, vous allez développer une application console simple qui inte
 
 ## <a name="sample-app-prerequisites"></a>Prérequis de l’exemple d’application
 - **Système d’exploitation** : Windows 10, Windows 8, Windows 7, Windows Server 2008, Windows Server 2008 R2 ou Windows Server 2012
-- **Langage de programmation** : C# (.NET Framework 3.0 et ultérieur)
-- **Environnement de développement** : Visual Studio 2015 (et ultérieur)
+- **Langage de programmation** : C# (.NET Framework 3.0 et versions ultérieures)
+- **Environnement de développement** : Visual Studio 2015 (et versions ultérieures)
 
 ## <a name="setting-up-your-azure-configuration"></a>Définition de votre configuration Azure
 
@@ -38,7 +38,7 @@ La configuration Azure pour cette application vous oblige à créer un ID de loc
 
 Pour configurer l’environnement de Azure AD pour Azure Information Protection, suivez les instructions de la [Azure information protection activation du service de protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
 
-Une fois que le service est activé, vous avez besoin des composants PowerShell pour les étapes suivantes. Pour ce faire, procédez comme suit: [administration de la protection à partir de Azure information protection à l’aide de PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) .
+Une fois que le service est activé, vous avez besoin des composants PowerShell pour les étapes suivantes. Pour ce faire, procédez comme suit : [administration de la protection à partir de Azure information protection à l’aide de PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) .
 
 ### <a name="getting-your-tenant-id"></a>Obtention de votre ID de locataire
 

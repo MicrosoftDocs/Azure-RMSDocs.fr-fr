@@ -4,7 +4,7 @@ description: Installer un lecteur pour les documents PDF étiquetés pour la cla
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/22/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,16 +14,18 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 23d9f5cf45b579542ecb9c297270bc426c2a914b
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 1ab7dbd201d18289eb7823172f104d8693a3c3e3
+ms.sourcegitcommit: 6f3379705e781fbba1755e34637c7f941da4559e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444845"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907387"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>Lecteurs PDF prenant en charge Microsoft Information Protection
 
 Si vous avez besoin d’ouvrir un document PDF protégé par Microsoft Information Protection, utilisez les liens et les informations ci-dessous.
+
+Un document PDF protégé est susceptible de contenir des informations sensibles. Pour renforcer la sécurité, le document est chiffré afin que les personnes non autorisées ne puissent pas le lire. Pour ouvrir ce document, vous avez besoin d’un lecteur (parfois appelé visionneuse) qui vérifie que vous avez reçu les autorisations nécessaires pour ouvrir le document, puis le déchiffrer pour vous.
 
 ## <a name="install-pdf-readers-for-your-device"></a>Installer des lecteurs PDF pour votre appareil
 
@@ -42,7 +44,7 @@ Actuellement, SharePoint Online et SharePoint en local utilisent un format plus 
 
 |Système d'exploitation|Lecteurs pris en charge|
 |----------------|-----------------------------------|
-|Windows 10 et versions antérieures<br />via Windows 7 Service Pack 1|Visionneuse Azure Information Protection<br /><br />Gaaiho Doc<br /><br />Client PDF GigaTrust Desktop pour Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF<br /><br />Application de partage RMS|
+|Windows 10 et versions antérieures<br />via Windows 7 Service Pack 1|Visionneuse Azure Information Protection<br /><br />Gaaiho Doc<br /><br />Client PDF GigaTrust Desktop pour Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF|
 |Android|Application Azure Information Protection<br /><br />Foxit MobilePDF avec RMS<br /><br />GigaTrust App pour Android|
 |iOS|Application Azure Information Protection<br /><br />Foxit MobilePDF avec RMS<br /><br />Docs TITUS|
 
@@ -67,3 +69,9 @@ Pour plus d’informations, consultez les billets de blog suivants :
 - [Disponibilité générale de l’intégration d’Adobe Acrobat Reader avec Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-Integration-with/ba-p/298396)
 
 - [FAQ sur l’intégration d’Adobe Reader et de Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Adobe-reader-and-Microsoft-Information-Protection-integration/ba-p/482219)
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Utilisez les liens de cette page pour installer un lecteur PDF afin de pouvoir ouvrir des documents PDF protégés.
+
+Si vous avez besoin d’aide sur le lecteur après son installation, suivez les instructions et la documentation qui l’accompagnent. Par exemple, pour la visionneuse de Azure Information Protection pour Windows, consultez le Guide de l' [utilisateur : afficher les fichiers protégés avec le client d’étiquetage unifié Azure information protection](clientv2-view-use-files.md).

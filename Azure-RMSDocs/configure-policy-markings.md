@@ -4,19 +4,19 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/24/2019
+ms.date: 11/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 982bc822b43d98f1019dd9f6bae53ace74068a4c
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 472bf634c1eb43e000b26fa1bb11387442ff91c1
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559719"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935042"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -61,13 +61,13 @@ Pour les documents, les marquages visuels sont appliqués comme suit :
 
 - Lorsqu’un document est étiqueté à l’aide de l’Explorateur de fichiers, de PowerShell ou du scanneur Azure Information Protection, les marquages visuels ne sont pas appliqués immédiatement, mais le sont par le client Azure Information Protection lorsque ce document est ouvert dans une application Office et lors du premier enregistrement du document.
     
-    L’exception concerne l’utilisation de l' [enregistrement automatique](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) avec les applications Office pour les fichiers enregistrés dans SharePoint Online, OneDrive ou onedrive entreprise : quand l’enregistrement automatique est activé, les marquages visuels ne sont pas appliqués, sauf si vous configurez le [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) sur activez la classification pour qu’elle s’exécute en continu en arrière-plan. 
+    La seule exception est quand vous utilisez l' [enregistrement automatique](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) avec les applications Office pour les fichiers qui sont enregistrés dans SharePoint Online, OneDrive ou onedrive entreprise : quand l’enregistrement automatique est activé, les marquages visuels ne sont pas appliqués, sauf si vous configurez le [paramètre client avancé](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) pour activer la classification pour qu’elle s’exécute en continu en arrière-plan. 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Pour configurer les marquages visuels pour une étiquette
 
 Utilisez les instructions suivantes pour configurer les marquages visuels d’une étiquette.
 
-1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Ensuite, accédez au volet de **Azure information protection** . 
+1. Si vous ne l’avez pas déjà fait, ouvrez une nouvelle fenêtre de navigateur et [connectez-vous au portail Azure](configure-policy.md#signing-in-to-the-azure-portal). Accédez ensuite au volet **Azure Information Protection**. 
     
     Par exemple, dans la zone de recherche pour ressources, services et docs : commencez à taper les **informations** et sélectionnez **Azure information protection**.
 
@@ -145,7 +145,7 @@ Si la police spécifiée n’est pas disponible, le client utilise la police Cal
 
 Vous pouvez choisir une couleur dans la liste des couleurs disponibles ou spécifier une couleur personnalisée en entrant un code (triplet hexadécimal) représentant les composants RVB (rouge, vert, bleu) de la couleur. Par exemple, **#40e0d0** est la valeur hexadécimale RVB pour turquoise. 
 
-Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à partir de la page [\<color >](https://developer.mozilla.org/docs/Web/CSS/color_value) à partir des documents Web MSDN. Vous trouverez également ces codes dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
+Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à partir de la page de [> de couleur\<](https://developer.mozilla.org/docs/Web/CSS/color_value) dans les documents Web MSDN. Vous trouverez également ces codes dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

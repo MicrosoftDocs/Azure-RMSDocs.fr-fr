@@ -4,7 +4,7 @@ description: Ressources pour les administrateurs, qui incluent des informations 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: ee402ae5c713fda68e731d15a132a217576a4705
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: fac66b2b8719965286bdce6cb10b15a4b8b4f710
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559665"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934736"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 

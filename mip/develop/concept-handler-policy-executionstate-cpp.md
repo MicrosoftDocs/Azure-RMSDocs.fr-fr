@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
 ms.openlocfilehash: 34576337726e8974e65076bc1358d316ad32d9d2
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886170"
 ---
 # <a name="implement-executionstate"></a>Implémenter ExecutionState
@@ -31,7 +31,7 @@ Le passage d’informations dans le kit SDK MIP pour calculer une action à effe
 | Membre                                                                             | Returns                                                                                                              |
 | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `std::shared_ptr<mip::Label> GetNewLabel()`                                        | Retourne l’étiquette à appliquer à l’objet.                                                                       |
-| `mip::DataState GetDataState()`                                                    | Retourne le ataState MIP::D de l’objet.                                                                            |
+| `mip::DataState GetDataState()`                                                    | Retourne le ataState MIP ::D de l’objet.                                                                            |
 | `std::pair<bool, std::string> IsDowngradeJustified()`                              | Retourne un std::pair qui indique si le passage à une version antérieure est justifié et pour quelle raison.                                 |
 | `std::string GetContentIdentifier()`                                               | Retourne l’identificateur de contenu. Il doit s’agir d’un identificateur lisible, qui désigne l’emplacement de l’objet.        |
 | `mip::ActionSource GetNewLabelActionSource()`                                      | Retourne le mip::ActionSource de l’étiquette.                                                                          |

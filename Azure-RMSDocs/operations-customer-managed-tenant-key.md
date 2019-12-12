@@ -4,7 +4,7 @@ description: Informations sur les opérations de cycle de vie applicables si vou
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/28/2019
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 682ed03cfafa9dad1d9696d51e0b64c71dea6fa3
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 0381e5d6368587a6e743caefd519fc4669c6183b
+ms.sourcegitcommit: 07b518c780f5e63eb5a72d7499ec7cfa40a95628
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445055"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898908"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gérée par le client : opérations de cycle de vie des clés de locataires
 
@@ -27,7 +27,10 @@ ms.locfileid: "73445055"
 Si vous gérez votre clé de locataire pour Azure Information Protection (dans le cadre d’un scénario BYOK, ou Bring Your Own Key), utilisez les sections suivantes pour obtenir plus d’informations sur les opérations de cycle de vie qui s’appliquent à cette topologie.
 
 ## <a name="revoke-your-tenant-key"></a>Révocation de votre clé de locataire
-Dans Azure Key Vault, vous pouvez modifier les autorisations sur le coffre de clés qui contient votre clé de locataire Azure Information Protection pour que le service Azure Rights Management ne puisse plus accéder à la clé. Cependant, si vous effectuez cette opération, personne ne peut ouvrir les documents et les e-mails que vous avez précédemment protégés à l’aide du service Azure Rights Management.
+
+Il existe très peu de scénarios dans lesquels vous devrez peut-être révoquer votre clé au lieu de la régénération de clé. Quand vous révoquez votre clé, tout le contenu qui a été protégé par votre locataire à l’aide de cette clé devient inaccessible à tous (y compris Microsoft, vos administrateurs généraux et les super utilisateurs), sauf si vous disposez d’une sauvegarde de la clé que vous pouvez restaurer. Une fois votre clé révoquée, vous ne pouvez pas protéger le nouveau contenu tant que vous n’avez pas créé et configuré une nouvelle clé de locataire pour Azure Information Protection. 
+
+Pour révoquer votre clé de locataire gérée par le client, dans Azure Key Vault, modifiez les autorisations sur le coffre de clés qui contient votre clé de locataire Azure Information Protection afin que le service de Rights Management Azure ne puisse plus accéder à la clé. Cette action révoque effectivement la clé de locataire pour Azure Information Protection.
 
 Quand vous annulez votre abonnement Azure Information Protection, Azure Information Protection arrête d’utiliser votre clé de locataire, et aucune action n’est nécessaire de votre part.
 

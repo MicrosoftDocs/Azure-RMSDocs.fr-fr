@@ -4,7 +4,7 @@ description: Instructions sur la façon de classer vos documents et e-mails quan
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 9aa4c1a1a9d5c909d77f229ba1817e8de2c14cd1
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 37857281f618957ebd9ef4d71e777adc8019b5f3
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690277"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935722"
 ---
-# <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>Guide de l’utilisateur : Classer un fichier ou un e-mail avec le client Azure Information Protection
+# <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>Guide de l’utilisateur : classer un fichier ou un e-mail avec le client Azure Information Protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Utilisez ces instructions pour classifier (mais pas protéger) vos documents et e-mails. Si vous devez également protéger vos documents et e-mails, consultez les [instructions de classification et protection](client-classify-protect.md). Si vous ne savez pas quel ensemble d’instructions utiliser, contactez votre administrateur ou votre support technique.
 
-La façon la plus simple de classifier vos documents et vos e-mails consiste à le faire quand vous les créez ou que vous les modifiez à partir de vos applications bureautiques Office : **Word**, **Excel**, **PowerPoint**, **Outlook**. 
+Le plus simple pour classifier vos documents et vos e-mails consiste à le faire quand vous les créez ou les modifiez à partir de vos applications bureautiques Office : **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
 Cependant, vous pouvez également classifier les fichiers à l’aide de l’**Explorateur de fichiers**. Cette méthode, qui prend en charge d’autres types de fichiers, est un moyen pratique de classifier plusieurs fichiers à la fois. 
 
@@ -75,17 +75,17 @@ Quand vous sélectionnez un dossier, tous les fichiers et sous-dossiers qu’il 
 
 Quand vous utilisez l’Explorateur de fichiers pour classifier vos fichiers, si l’une ou plusieurs des étiquettes apparaissent estompées, les fichiers que vous avez sélectionnés ne prennent pas en charge la classification sans également les protéger.
 
-Le guide de l’administrateur contient la liste complète des types de fichiers qui prennent en charge la classification sans protection : [Types de fichiers pris en charge pour la classification uniquement](client-admin-guide-file-types.md#file-types-supported-for-classification-only).
+Le guide de l’administrateur contient la liste complète des types de fichiers qui prennent en charge la classification sans protection : [Types de fichiers pris en charge pour la classification seule](client-admin-guide-file-types.md#file-types-supported-for-classification-only).
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>Pour classifier un fichier à l’aide de l’Explorateur de fichiers
 
-1. Dans l’Explorateur de fichiers, sélectionnez votre fichier, plusieurs fichiers ou un dossier. Cliquez avec le bouton droit, puis sélectionnez **Classifier et protéger**. Exemple :
+1. Dans l’Explorateur de fichiers, sélectionnez votre fichier, plusieurs fichiers ou un dossier. Cliquez avec le bouton droit, puis sélectionnez **Classifier et protéger**. Exemple :
     
     ![Menu contextuel de l’Explorateur de fichiers, Classifier et protéger avec Azure Information Protection](../media/right-click-classify-protect-folder.png)
 
 2. Dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, utilisez les étiquettes comme vous le feriez dans une application Office, qui définit la classification comme l’a effectuée votre administrateur. 
     
-    Si aucune des étiquettes ne peut être sélectionnée (elles apparaissent estompées) : Le fichier sélectionné ne prend pas en charge la classification. Exemple :
+    Si aucune des étiquettes n’est sélectionnable (elles apparaissent estompées) : le fichier sélectionné ne prend pas en charge la classification. Exemple :
     
     ![Aucune étiquette n’est disponible dans la boîte de dialogue Classifier et protéger - Azure Information Protection**](../media/info-protect-dialog-labels-dimmed.png)
 

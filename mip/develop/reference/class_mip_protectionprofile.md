@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a6c78e7311f3af3920df19d7a3a6ca92bb09e819
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560059"
 ---
 # <a name="class-mipprotectionprofile"></a>mip::ProtectionProfile, classe 
@@ -21,16 +21,16 @@ Une application doit créer un ProtectionProfile avant d’effectuer des opérat
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Obtient les paramètres utilisés par ProtectionProfile lors de son initialisation et tout au long de sa durée de vie.
-public void ListEnginesAsync (const std :: shared_ptr\<void\>contexte &)  |  Démarre une opération d’énumération de moteurs.
-public std :: Vector\<std :: String\> ListEngines ()  |  Répertorie les moteurs.
+public void ListEnginesAsync (const std :: shared_ptr\<void\>& Context)  |  Démarre une opération d’énumération de moteurs.
+public std::vector\<std::string\> ListEngines()  |  Répertorie les moteurs.
 public void AddEngineAsync (const ProtectionEngine :: Settings & Settings, const std :: shared_ptr\<void\>& Context)  |  Démarre l’ajout d’un nouveau moteur de protection au profil.
 public std :: shared_ptr\<ProtectionEngine\> AddEngine (const ProtectionEngine :: Settings & Settings)  |  Ajoute un nouveau moteur de protection au profil.
-public void DeleteEngineAsync (const std :: String & engineId, const std :: shared_ptr\<void\>& Context)  |  Démarre la suppression du moteur de protection avec l’ID spécifié. Toutes les données du moteur spécifié seront supprimées.
+public void DeleteEngineAsync(const std::string& engineId, const std::shared_ptr\<void\>& context)  |  Démarre la suppression du moteur de protection avec l’ID spécifié. Toutes les données du moteur spécifié seront supprimées.
 public void DeleteEngine(const std::string& engineId)  |  Supprime le moteur de protection avec l’ID spécifié. Toutes les données du moteur spécifié seront supprimées.
-public static MIP_API void _ _ cdecl Mip ::P rotectionProfile :: LoadAsync | Paramètres utilisés par ProtectionProfile lors de son initialisation et tout au long de sa durée de vie
-public static MIP_API std :: shared_ptr&lt;ProtectionProfile&gt; MIP MIP ::P rotectionProfile :: Load | Chargement d’un profil en fonction des paramètres fournis.
-public static const MIP_API Char * _ _ cdecl Mip ::P rotectionProfile :: GetVersion | Obtient la version de la bibliothèque.
-public static MIP_API std :: shared_ptr&lt;PublishingLicenseInfo&gt; MIP MIP ::P rotectionProfile :: GetPublishingLicenseInfo | Crée un conteneur pour les détails d’une licence de publication et peut être utilisé pour créer un gestionnaire de protection. 
+public static MIP_API void __CDECL MIP ::P rotectionProfile :: LoadAsync | Paramètres utilisés par ProtectionProfile lors de son initialisation et tout au long de sa durée de vie
+public static MIP_API std :: shared_ptr&lt;ProtectionProfile&gt; __CDECL MIP ::P rotectionProfile :: Load | Chargement d’un profil en fonction des paramètres fournis.
+public static const MIP_API char * __CDECL MIP ::P rotectionProfile :: GetVersion | Obtient la version de la bibliothèque.
+public static MIP_API std :: shared_ptr&lt;PublishingLicenseInfo&gt; __CDECL MIP ::P rotectionProfile :: GetPublishingLicenseInfo | Crée un conteneur pour les détails d’une licence de publication et peut être utilisé pour créer un gestionnaire de protection. 
 
 ## <a name="members"></a>Membres
   

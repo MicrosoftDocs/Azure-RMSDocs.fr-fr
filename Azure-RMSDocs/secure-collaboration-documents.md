@@ -4,7 +4,7 @@ description: Flux de travail de bout en bout pour la collaboration autour de doc
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c988dd65f677d69d362fe59f6a5eb0d631b23faa
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: b3be1b1577277b31dd515f8343870de73e258770
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561110"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934464"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
@@ -47,11 +47,11 @@ Cet exemple décrit la procédure de configuration d’une étiquette existante 
 
 Étant donné que le scénario restreint l’accès de personnes spécifiques, il n’inclut pas le paramètre pour tous les utilisateurs authentifiés. Pour obtenir un exemple de la manière dont vous pouvez configurer une étiquette avec ce paramètre, consultez [Exemple 5 : étiquette qui crypte le contenu, mais n’en restreint pas l’accès](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
-1. Sélectionnez l’étiquette qui existe déjà dans la stratégie globale ou la stratégie délimitée. Dans le volet **protection** , assurez-vous que l’option **Azure (clé Cloud)** est sélectionnée.
+1. Sélectionnez l’étiquette qui existe déjà dans la stratégie globale ou la stratégie délimitée. Dans le volet **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
     
 2. Vérifiez que l’option **Définir les autorisations** est sélectionnée, puis sélectionnez **Ajouter des autorisations**.
 
-3. Dans le volet **Ajouter des autorisations** : 
+3. Dans le volet **Ajouter des autorisations** : 
     
    - Pour votre groupe interne : sélectionnez **Parcourir les répertoires** pour sélectionner le groupe qui doit être à extension messagerie.
     
@@ -67,11 +67,11 @@ Cet exemple décrit la procédure de configuration d’une étiquette existante 
         
     ![Configuration d’autorisations pour une collaboration sécurisée](./media/collaboration-permissions.png)
 
-5. Cliquez sur **OK** dans le volet **Ajouter des autorisations** .
+5. Cliquez sur **OK** dans le volet **Ajouter des autorisations**.
 
 6. Dans le volet **protection** , cliquez sur **OK**.
 
-7. Dans le volet **étiquette** , sélectionnez **Enregistrer**. 
+7. Dans le volet **Étiquette**, sélectionnez **Enregistrer**. 
 
 ## <a name="applying-the-label-that-supports-secure-collaboration"></a>Application de l’étiquette qui prend en charge la collaboration sécurisée
 

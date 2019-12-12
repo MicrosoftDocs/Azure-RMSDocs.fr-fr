@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 5bdc88746a8921f306d9d52dbe75f3c2b826a5b6
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560136"
 ---
 # <a name="class-miplabel"></a>mip::Label, classe 
@@ -29,7 +29,7 @@ public const std :: String & GetAutoTooltip () const  |  Obtient la description
 public bool IsActive() const  |  Obtient une valeur booléenne signalant si l’étiquette est active.
 public std :: weak_ptr\<étiquette\> GetParent () const  |  Obtenir l’étiquette parente.
 public const std :: Vector\<std :: shared_ptr\<étiquette\>\>& GetChildren () const  |  Obtenir les étiquettes enfants de l’étiquette actuelle.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtient les paramètres personnalisés d’une étiquette.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtient les paramètres personnalisés d’une étiquette.
 public ActionSource GetActionSource() const  |  Obtient la source d’action de l’étiquette.
   
 ## <a name="members"></a>Membres

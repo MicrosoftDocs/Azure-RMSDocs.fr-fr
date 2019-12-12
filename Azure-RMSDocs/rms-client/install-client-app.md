@@ -4,7 +4,7 @@ description: Instructions destinées aux utilisateurs pour installer le client A
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 8cd249d34574d3b0a14554a4e66e28a917fcbaf7
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: a7f9b75cfcc139ac14241ba562d89caa60bc1f5f
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689843"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933386"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Guide de l’utilisateur : Télécharger et installer le client Azure Information Protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
+>*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
 Si votre administrateur n’installe pas le client Azure Information Protection pour vous, vous pouvez le faire vous-même. Vous devez être un administrateur local de votre PC pour installer ce client, de sorte qu’il puisse étiqueter et protéger vos documents et vos e-mails.
 
-De plus :
+De plus :
 
 - Le client Azure Information Protection requiert une version minimale de Microsoft .NET Framework 4.6.2. Si cette version est manquante, le programme d’installation tente de télécharger et d’installer ce composant requis. Lorsque ce composant requis est installé dans le cadre de l’installation du client, votre ordinateur doit être redémarré.
 

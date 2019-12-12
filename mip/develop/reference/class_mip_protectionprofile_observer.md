@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a9138e497655dfa939a9ac9b15d7ed228331e9e0
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560698"
 ---
 # <a name="class-mipprotectionprofileobserver"></a>mip::ProtectionProfile::Observer, classe 
@@ -20,13 +20,13 @@ Cette interface doit être implémentée par les applications utilisant le SDK d
 ## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public virtual void OnLoadSuccess (const std :: shared_ptr\<ProtectionProfile\>& profil, const std :: shared_ptr\<void\>& contexte)  |  Appelé quand le chargement d’un profil a réussi.
+public virtual void OnLoadSuccess (const std :: shared_ptr\<ProtectionProfile\>profil &, const std :: shared_ptr\<void\>& contexte)  |  Appelé quand le chargement d’un profil a réussi.
 public virtual void OnLoadFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand le chargement d’un profil a provoqué une erreur.
 public virtual void OnListEnginesSuccess (const std :: Vector\<std :: String\>& engineIds, const std :: shared_ptr\<void\>& contexte)  |  Appelé quand la liste des moteurs a été générée avec succès.
 public virtual void OnListEnginesFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand la génération de la liste de moteurs a provoqué une erreur.
 public virtual void OnAddEngineSuccess (const std :: shared_ptr\<ProtectionEngine\>& moteur, const std :: shared_ptr\<void\>& contexte)  |  Appelé quand l’ajout d’un nouveau moteur a réussi.
 public virtual void OnAddEngineFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand l’ajout d’un nouveau moteur a provoqué une erreur.
-public virtual void OnDeleteEngineSuccess (const std :: shared_ptr\<void\>contexte &)  |  Appelé quand la suppression d’un moteur a réussi.
+public virtual void OnDeleteEngineSuccess (const std :: shared_ptr\<void\>& Context)  |  Appelé quand la suppression d’un moteur a réussi.
 public virtual void OnDeleteEngineFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand la suppression d’un moteur a provoqué une erreur.
   
 ## <a name="members"></a>Membres

@@ -4,19 +4,19 @@ description: Installer un lecteur sur des ordinateurs Mac pour les documents PDF
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/22/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 9701b11720d9683f4d2af1d9bbbd2cfb63944dd3
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 1eb186053241fe86b70eeff82286d3e62801b015
+ms.sourcegitcommit: 6f3379705e781fbba1755e34637c7f941da4559e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445029"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907415"
 ---
 # <a name="install-a-pdf-reader-for-macos"></a>Installer un lecteur PDF pour MacOS
 
@@ -26,7 +26,7 @@ Si vous avez besoin d’ouvrir un document PDF protégé sur votre ordinateur Ma
 
 **Versions prises en charge**: 10,12-10,14
 
-Ample
+Instructions :
 
 1. Lisez les [conditions générales d’utilisation d’Adobe](https://www.adobe.com/legal/terms.html).
 
@@ -34,7 +34,9 @@ Ample
 
 3. Installez le [plug-in Adobe](https://go.microsoft.com/fwlink/?linkid=2050049) pour Mac.
 
-4. Si vous y êtes invité, demandez à votre administrateur d' [autoriser le plug-](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)in.
+4. Si vous êtes invité à approuver l’administrateur, demandez à votre administrateur d’autoriser le plug-in.
+    
+    Les instructions d’administration pour cette étape sont incluses dans l’annonce de la publication : [disponibilité générale de l’intégration d’Adobe Acrobat Reader avec Microsoft information protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

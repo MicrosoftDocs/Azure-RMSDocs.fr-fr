@@ -12,10 +12,10 @@ ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 2d26e7d80a37fd5ae8b52539a09fcbb9c924a13d
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561206"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guide de l’administrateur du client d’étiquetage unifié Azure Information Protection
@@ -24,7 +24,7 @@ ms.locfileid: "73561206"
 >
 > *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Utilisez les informations de ce guide si vous êtes responsable de la Azure Information Protection client d’étiquetage unifié sur un réseau d’entreprise, ou si vous souhaitez des informations plus techniques que celles de l' [utilisateur du client d’étiquetage unifié Azure information protection Guide](clientv2-user-guide.md). 
+Utilisez les informations de ce guide si vous êtes responsable de la Azure Information Protection client d’étiquetage unifié sur un réseau d’entreprise, ou si vous souhaitez des informations plus techniques que celles figurant dans le Guide de l' [utilisateur du client d’étiquetage unifié Azure information protection](clientv2-user-guide.md). 
 
 Exemple :
 
@@ -126,7 +126,7 @@ Les **paramètres de réinitialisation** déconnectent l’utilisateur, supprime
     
     En général, pour les réseaux d’entreprise, ces paramètres sont configurés à l’aide de la stratégie de groupe, auquel cas ils sont automatiquement réappliqués lorsque la stratégie de groupe est actualisée sur l’ordinateur. Par contre, certains paramètres peuvent avoir été configurés ponctuellement, par le biais d’un script ou manuellement. Dans ce cas, vous devez prendre des mesures supplémentaires pour reconfigurer ces paramètres. Par exemple, les ordinateurs peuvent exécuter un script ponctuellement afin de configurer des paramètres pour une redirection vers Azure Information Protection, car vous procédez à la migration depuis AD RMS et vous disposez toujours d’un point de connexion de service sur votre réseau. Après la réinitialisation du client, l’ordinateur doit réexécuter ce script.
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
     - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
@@ -134,7 +134,7 @@ Les **paramètres de réinitialisation** déconnectent l’utilisateur, supprime
     
     - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
+    - HKEY_CURRENT_USER \SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
 
 - L’utilisateur actuellement connecté est déconnecté.
 
@@ -213,7 +213,7 @@ La procédure de mise à niveau du scanneur dépend de la version du client clas
 
 - [Mise à niveau à partir de versions antérieures à 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
 
-La mise à niveau crée une base de données nommée **AIPScannerUL_\<profile_name >** , et la base de données de l’analyseur précédente est conservée au cas où vous en aurez besoin pour la version précédente. Si vous êtes certain que vous n’avez pas besoin de la base de données de l’analyseur précédente, vous pouvez la supprimer. Étant donné que la mise à niveau crée une nouvelle base de données, le moteur de base de données analyse tous les fichiers la première fois qu’elle est exécutée.
+La mise à niveau crée une base de données nommée **AIPScannerUL_\<profile_name >** , et la base de données de l’analyseur précédente est conservée si vous en avez besoin pour la version précédente. Si vous êtes certain que vous n’avez pas besoin de la base de données de l’analyseur précédente, vous pouvez la supprimer. Étant donné que la mise à niveau crée une nouvelle base de données, le moteur de base de données analyse tous les fichiers la première fois qu’elle est exécutée.
 
 ##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>Mettre à niveau à partir de Azure Information Protection la version 1.48.204.0 client (Classic) version et versions ultérieures de ce client
 
@@ -225,7 +225,7 @@ Si vous avez mis à niveau le scanneur à l’aide de la version préliminaire d
 
 3. Dans une session PowerShell, exécutez la commande Update-AIPScanner avec le profil de votre scanneur. Par exemple : `Update-AIPScanner –Profile Europe`.
     
-    Cette étape permet de créer une base de données portant le nom **AIPScannerUL_\<profile_name >**
+    Cette étape permet de créer une nouvelle base de données avec le nom **AIPScannerUL_\<profile_name >**
 
 4. Redémarrez le service **Scanneur Azure Information Protection**.
 
@@ -267,7 +267,7 @@ Vous pouvez utiliser l’une des options suivantes pour désinstaller le client�
 
 - Utilisez le panneau de configuration pour désinstaller un programme : cliquez sur **Microsoft Azure Information Protection** > **Désinstaller**
 
-- Réexécutez l’exécutable (par exemple, **AzInfoProtection_UL. exe**) et, à partir de la page **modifier l’installation** , cliquez sur **désinstaller**. 
+- Réexécutez l’exécutable (par exemple, **AzInfoProtection_UL. exe**), puis dans la page **modifier l’installation** , cliquez sur **désinstaller**. 
 
 - Exécutez le fichier exécutable avec **/uninstall**. Par exemple : `AzInfoProtection.exe /uninstall`
 

@@ -4,7 +4,7 @@ description: Phase 5 de la migration d’AD RMS vers Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6be761f99415f3f8e2bfa9de6f27a924316de448
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: ee5ecddb5ba3c5c1add15b7e75fd2fe6f53a2271
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684486"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935484"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Phase de migration 5 : Tâches de post-migration
 
@@ -66,7 +66,7 @@ Redirection via DNS :
 
 ## <a name="step-11-complete-client-migration-tasks"></a>Étape 11. Effectuer les tâches de migration des clients
 
-Pour des clients appareils mobiles et des ordinateurs Mac : Supprimez les enregistrements SRV DNS que vous avez créés lors du déploiement de l’ [extension d'appareil mobile AD RMS](https://technet.microsoft.com/library/dn673574.aspx).
+Pour les clients d’appareils mobiles et les ordinateurs Mac : Supprimez les enregistrements SRV DNS que vous avez créés lors du déploiement de l’[extension d’appareil mobile AD RMS](https://technet.microsoft.com/library/dn673574.aspx).
 
 Une fois ces changements DNS propagés, ces clients découvrent automatiquement le service Azure Rights Management et commencent à l’utiliser. Toutefois, les ordinateurs Mac qui exécutent Office Mac mettent en cache les informations d’AD RMS. Pour ces ordinateurs, ce processus peut prendre jusqu’à 30 jours. 
 
@@ -112,7 +112,7 @@ Pour supprimer les contrôles d’intégration :
 
     Dans la sortie, **Licence** doit indiquer **False** et aucun GUID n’est affiché pour **SecurityGroupOjbectId**
 
-Enfin, si vous utilisez Office 2010 et que vous avez activé la tâche de **gestion des modèles de stratégie de droits AD RMS (automatique)** dans la bibliothèque du Planificateur de tâches Windows, désactivez cette tâche parce qu’elle n’est pas utilisée par le client Azure Information Protection. Cette tâche est généralement activée par l’utilisation d’une stratégie de groupe et prend en charge un déploiement AD RMS. Vous trouverez cette tâche à l’emplacement suivant : **Microsoft** > **Windows** > **Client AD RMS (Active Directory Rights Management Services)**
+Enfin, si vous utilisez Office 2010 et que vous avez activé la tâche de **gestion des modèles de stratégie de droits AD RMS (automatique)** dans la bibliothèque du Planificateur de tâches Windows, désactivez cette tâche parce qu’elle n’est pas utilisée par le client Azure Information Protection. Cette tâche est généralement activée par l’utilisation d’une stratégie de groupe et prend en charge un déploiement AD RMS. Vous trouverez cette tâche à l’emplacement suivant : **Microsoft** > **Windows** > **Active Directory Rights Management Services Client**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Étape 12. Renouveler votre clé de locataire Azure Information Protection
 
@@ -128,11 +128,11 @@ Le passage d’une clé à une autre ne se produit pas immédiatement mais sur p
 
 Pour renouveler votre clé de locataire Azure Information Protection :
 
-- **Si votre clé de locataire est gérée par Microsoft** : Exécutez l’applet de commande PowerShell [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) et spécifiez l’identificateur de clé pour la clé qui a été créée automatiquement pour votre locataire. Vous pouvez identifier la valeur à spécifier en exécutant l’applet de commande [AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) . La clé créée automatiquement pour votre locataire a la date de création la plus ancienne. Vous pouvez donc l’identifier à l’aide de la commande suivante :
+- **Si votre clé de locataire est gérée par Microsoft**: exécutez l’applet de commande PowerShell [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) et spécifiez l’identificateur de clé pour la clé qui a été créée automatiquement pour votre locataire. Vous pouvez identifier la valeur à spécifier en exécutant l’applet de commande [AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) . La clé créée automatiquement pour votre locataire a la date de création la plus ancienne. Vous pouvez donc l’identifier à l’aide de la commande suivante :
     
         (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Si vous gérez vous-même votre clé de locataire (BYOK)**  : Dans Azure Key Vault, répétez votre processus de création de clé pour votre locataire Azure Information Protection, puis exécutez à nouveau l’applet de commande [use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) pour spécifier l’URI de cette nouvelle clé. 
+- **Si votre clé de locataire est gérée par vous (BYOK)** : dans Azure Key Vault, répétez votre processus de création de clé pour votre locataire Azure information protection, puis exécutez à nouveau l’applet de commande [use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) pour spécifier l’URI de cette nouvelle clé. 
 
 Pour plus d’informations sur la gestion de votre clé de locataire Azure Information Protection, consultez [Opérations pour votre clé de locataire Azure Information Protection](./operations-tenant-key.md).
 

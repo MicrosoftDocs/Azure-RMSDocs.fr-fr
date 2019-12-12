@@ -14,10 +14,10 @@ ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 643715037716dcb30356b08c34e48047dd4f7074
-ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74479164"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
@@ -592,7 +592,7 @@ De plus, quand vous utilisez ces instructions pour des fichiers que vous n’ave
 
 Pour utiliser des commandes PowerShell pour convertir des fichiers .ppdf existants en fichiers .pdf protégés qui utilisent la norme ISO pour le chiffrement PDF :
 
-1. Utilisez [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) avec le fichier .ppdf. Par exemple :
+1. Utilisez [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) avec le fichier .ppdf. Exemple :
     
         Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
 
@@ -604,11 +604,11 @@ Pour utiliser des commandes PowerShell pour convertir des fichiers .ppdf exista
     
    - La valeur pour **RMSTemplateId**. Si cette valeur est **Accès restreint**, un utilisateur a protégé le fichier à l’aide d’autorisations personnalisées au lieu d’utiliser des paramètres de protection configurés pour l’étiquette. Si vous continuez, ces autorisations personnalisées sont remplacées par les paramètres de protection de l’étiquette. Décidez s’il faut continuer ou demander à l’utilisateur (valeur affichée pour **RMSIssuer**) de supprimer l’étiquette et de la réappliquer, avec leurs autorisations personnalisées d’origine.
 
-3. Supprimez l’étiquette à l’aide de [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) avec le paramètre *RemoveLabel*. Si vous utilisez le [paramètre de stratégie](../configure-policy-settings.md) **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection**, vous devez également spécifier le paramètre  *Justification* avec la raison. Par exemple : 
+3. Supprimez l’étiquette à l’aide de [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) avec le paramètre *RemoveLabel*. Si vous utilisez le [paramètre de stratégie](../configure-policy-settings.md) **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection**, vous devez également spécifier le paramètre  *Justification* avec la raison. Exemple : 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
-4. Réappliquez l’étiquette d’origine, en spécifiant la valeur de l’étiquette que vous avez identifiée à l’étape 1. Par exemple :
+4. Réappliquez l’étiquette d’origine, en spécifiant la valeur de l’étiquette que vous avez identifiée à l’étape 1. Exemple :
     
         Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 
@@ -670,7 +670,7 @@ Spécifiez votre choix d’un nom de règle de migration. Utilisez un nom descri
 
 Exigence : les documents qui ont une étiquette des îlots sécurisés « confidentiel » doivent être réétiquetés comme « confidentiels » par Azure Information Protection.
 
-Dans cet exemple :
+Exemple :
 
 - L’étiquette Azure Information Protection que vous voulez utiliser s’appelle **Confidentiel** et a l’ID d’étiquette **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
@@ -679,7 +679,7 @@ Dans cet exemple :
 Le paramètre client avancé :
 
     
-|Nom|Valeur|
+|Nom|Value|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, « L’étiquette Secure Islands est confidentiel », Classification, Confidentiel|
 
@@ -687,7 +687,7 @@ Le paramètre client avancé :
 
 Exigence : les documents intitulés « sensibles » par les îles sécurisées doivent être renommés comme « hautement confidentiels » par Azure Information Protection.
 
-Dans cet exemple :
+Exemple :
 
 - L’étiquette Azure Information Protection que vous voulez utiliser s’appelle **Hautement confidentiel** et a l’ID d’étiquette **3e9df74d-3168-48af-8b11-037e3021813f**.
 
@@ -696,7 +696,7 @@ Dans cet exemple :
 Le paramètre client avancé :
 
     
-|Nom|Valeur|
+|Nom|Value|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, «L’étiquette Secure Islands est sensible », Classification, Sensible|
 
@@ -705,7 +705,7 @@ Le paramètre client avancé :
 
 Exigence : vous avez deux étiquettes de îles sécurisées qui incluent le mot « Internal » et vous souhaitez que les documents qui ont l’une de ces étiquettes des îlots sécurisés soient réétiquetés comme « général » par Azure Information Protection.
 
-Dans cet exemple :
+Exemple :
 
 - L’étiquette Azure Information Protection que vous voulez utiliser s’appelle **Général** et a l’ID d’étiquette **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
@@ -714,7 +714,7 @@ Dans cet exemple :
 Le paramètre client avancé :
 
     
-|Nom|Valeur|
+|Nom|Value|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, «L’étiquette Secure Islands contient Interne », Classification,. \*Interne.\*|
 
@@ -735,7 +735,7 @@ Cette configuration n’est pas prise en charge pour Outlook. Sachez également 
 
 - Valeur : \< **Types d’application Office WXP**> 
 
-Exemples :
+Exemples :
 
 - Pour rechercher dans des documents Word uniquement, spécifiez **W**.
 
@@ -859,7 +859,7 @@ La configuration qui contrôle si le client envoie des informations d’audit es
 
 Si vous définissez ce paramètre de client avancé, les informations d’audit peuvent toujours être envoyées à partir du client, mais les informations sont limitées à l’étiquetage de l’activité.
 
-Par exemple :
+Exemple :
 
 - Avec ce paramètre, vous pouvez voir qu’un utilisateur a accédé à Financial. docx qui est étiqueté **confidentiel \ Sales**.
 
@@ -982,11 +982,11 @@ Pour obtenir cette solution :
 
 2. Créez une règle de flux de messagerie Exchange pour chaque étiquette : appliquez la règle quand les propriétés de message incluent la classification que vous avez configurée, puis modifiez les propriétés de message pour définir un en-tête de message. 
 
-     Pour l’en-tête de message, vous trouvez les informations à spécifier en examinant les en-têtes Internet d’un e-mail que vous avez envoyé et classifié à l’aide de votre étiquette Azure Information Protection. Recherchez l’en-tête **msip_labels** et la chaîne qui suit immédiatement, jusqu’au point-virgule et sans le point-virgule. Par exemple :
+     Pour l’en-tête de message, vous trouvez les informations à spécifier en examinant les en-têtes Internet d’un e-mail que vous avez envoyé et classifié à l’aide de votre étiquette Azure Information Protection. Recherchez l’en-tête **msip_labels** et la chaîne qui suit immédiatement, jusqu’au point-virgule et sans le point-virgule. Exemple :
     
     **msip_labels : MSIP_Label_0e421e6d-EA17-4FDB-8F01-93a3e71333b8_Enabled = true**
     
-    Ensuite, pour l’en-tête du message dans la règle, spécifiez **msip_labels** pour l’en-tête, et le reste de cette chaîne pour la valeur de l’en-tête. Par exemple :
+    Ensuite, pour l’en-tête du message dans la règle, spécifiez **msip_labels** pour l’en-tête, et le reste de cette chaîne pour la valeur de l’en-tête. Exemple :
     
     ![Exemple de règles de flux de messagerie Exchange Online qui définit l’en-tête de message pour une étiquette Azure Information Protection spécifique](../media/exchange-rule-for-message-header.png)
     

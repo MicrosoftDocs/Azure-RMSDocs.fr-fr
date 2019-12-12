@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 3c9bca4e474306d3e73df8d9d41a7c4ef9c6e5e2
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68790816"
 ---
 # <a name="development-environment-files"></a>Fichiers d’environnement de développement
@@ -27,7 +27,7 @@ Cette rubrique présente les fichiers d’environnement de développement et leu
 
 Le SDK Rights Management Services 2.1 comprend les fichiers suivants, qui sont installés sur votre ordinateur à l’emplacement par défaut ou à l’emplacement que vous avez spécifié : %MsipcSDKDir%.
 
-|Fichier|Chemin|Description|
+|File|Chemin d’accès|Description|
 |----|----|-----------|
 |ReadMe.htm| \ | Contient un lien vers l’aide de RMS et les [notes de publication](release-notes-rtm.md).|
 |Isvtier5appsigningprivkey.dat|\bin|Contient la clé privée utilisée pour générer un manifeste pour une utilisation pendant le développement d’une application prenant en charge RMS.|

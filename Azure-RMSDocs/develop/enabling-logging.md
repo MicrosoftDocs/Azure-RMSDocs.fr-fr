@@ -15,16 +15,16 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 93524278a914ce38add95eed18f2f192f4dd684b
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792427"
 ---
-# <a name="how-to-enable-error-and-performance-logging"></a>Procédure : activer la journalisation des erreurs et des performances
+# <a name="how-to-enable-error-and-performance-logging"></a>Comment : activer la journalisation des erreurs et des performances
 Le SDK Microsoft Rights Management 4.2 gère le chargement des journaux de diagnostic et de performances par le biais d’une propriété d’appareil unique.
 
-## <a name="overview"></a>Présentation ##
+## <a name="overview"></a>Overview ##
 Vous pouvez améliorer l’expérience de vos utilisateurs et faciliter la résolution de leurs problèmes en activant le chargement automatique des données des journaux de diagnostic, de performances et de télémétrie vers Microsoft. 
 
 > [!IMPORTANT] 
@@ -33,7 +33,7 @@ Vous pouvez améliorer l’expérience de vos utilisateurs et faciliter la réso
 > [!NOTE]
 > À titre d’exemple, voici un message standard que Microsoft utilise pour la notification de journalisation : 
 >
-> *En activant la journalisation des erreurs et des performances, vous acceptez d’envoyer les données des erreurs et des performances à Microsoft.  Microsoft collecte les données des erreurs et des performances via Internet (« Données »).  Microsoft utilise ces données pour fournir et améliorer la qualité, la sécurité et l’intégrité des produits et des services Microsoft.  Par exemple, nous analysons les performances et la fiabilité, comme les fonctionnalités que vous utilisez, la rapidité de réponse des fonctionnalités, les performances de l’appareil, les interactions de l’interface utilisateur et tous les problèmes que vous rencontrez avec le produit.  Les données incluent également des informations sur la configuration de votre logiciel, comme le logiciel en cours d’exécution et l’adresse IP.*  
+> *En activant la journalisation des erreurs et des performances, vous acceptez d’envoyer des données d’erreur et de performances à Microsoft.  Microsoft collectera les données d’erreur et de performances sur Internet (« Data »).  Microsoft utilise ces données pour fournir et améliorer la qualité, la sécurité et l’intégrité des produits et services Microsoft.  Par exemple, nous analysons les performances et la fiabilité, comme les fonctionnalités que vous utilisez, la rapidité de réponse des fonctionnalités, les performances de l’appareil, les interactions de l’interface utilisateur et les problèmes que vous rencontrez avec le produit.  Les données incluent également des informations sur la configuration de votre logiciel, comme le logiciel en cours d’exécution et l’adresse IP.*  
 
 Vous allez gérer le contrôle de la journalisation via deux propriétés.
 

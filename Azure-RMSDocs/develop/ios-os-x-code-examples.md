@@ -15,26 +15,26 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: eada5335d234b080dcb7be882eddfc4437a59370
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792221"
 ---
 # <a name="iosos-x-code-examples"></a>Exemples de code iOS/OS X
 
 Cette rubrique présente des éléments de code importants pour la version iOS/OS X du Kit RMS SDK.
 
-**Remarque**  Dans l’exemple de code et les descriptions qui suivent, nous utilisons le terme MSIPC (Microsoft Information Protection and Control) pour faire référence au processus client.
+**Remarque** : Dans l’exemple de code et les descriptions qui suivent, nous utilisons le terme MSIPC (Microsoft Information Protection and Control) pour faire référence au processus client.
 
 
 
-## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Utilisation de Microsoft Rights Management SDK 4.2 - Principaux scénarios
+## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Utilisation de Microsoft Rights Management SDK 4.2 : principaux scénarios
 
 
 Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un exemple d’application représentant des scénarios de développement importants pour l’orientation de ce SDK. Ces exemples illustrent l’utilisation du format de fichier protégé Microsoft (appelé « fichier protégé »), l’utilisation de formats de fichiers protégés personnalisés et l’utilisation de contrôles d’interface utilisateur personnalisés.
 
-### <a name="scenario-consume-an-rms-protected-file"></a>Scénario : Consommer un fichier protégé par RMS
+### <a name="scenario-consume-an-rms-protected-file"></a>Scénario : Consommer un fichier protégé RMS
 
 
 - **Étape 1** : Créer un objet [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)
@@ -55,9 +55,9 @@ Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un ex
             }];
         }
 
-- **Étape 2** : Configurer l’authentification à l’aide de la bibliothèque d’authentification Active Directory (ADAL).
+- **Étape 2** : Configurer l’authentification à l’aide de la bibliothèque d’authentification Active Directory (ADAL).
 
-  **Description** : Dans cette étape, nous allons utiliser la bibliothèque ADAL pour implémenter un [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) avec des exemples de paramètres d’authentification. Pour plus d’informations sur l’utilisation de la bibliothèque ADAL, consultez la Bibliothèque d’authentification Azure AD (ADAL).
+  **Description** : Lors de cette étape, nous allons utiliser la bibliothèque ADAL pour implémenter un [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) avec des exemples de paramètres d’authentification. Pour plus d’informations sur l’utilisation de la bibliothèque ADAL, consultez la Bibliothèque d’authentification Azure AD (ADAL).
 
       // AuthenticationCallback holds the necessary information to retrieve an access token.
       @interface MsipcAuthenticationCallback : NSObject<MSAuthenticationCallback>
@@ -96,7 +96,7 @@ Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un ex
                           }];
        }
 
-- **Étape 3** : Vérifier l’existence de l’autorisation de modification pour cet utilisateur avec ce contenu par le biais de la méthode [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) d’un objet [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx).
+- **Étape 3** : Vérifier l’existence de l’autorisation de modification pour cet utilisateur avec ce contenu par le biais de la méthode [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) d’un objet [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx).
 
       - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
       {
@@ -110,11 +110,11 @@ Vous trouverez ci-dessous des exemples de code **Objective C** tirés d’un ex
           }
       }
 
-### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scénario : Créer un fichier protégé en utilisant un modèle
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scénario : Créer un fichier protégé à l’aide d’un modèle
 
 Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx), nous sélectionnons le premier pour créer une stratégie, puis nous créons et écrivons dans le nouveau fichier protégé.
 
--   **Étape 1** : Obtenir la liste des modèles
+-   **Étape 1** : Obtenir la liste des modèles
 
         + (void)templateListUsageWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -186,7 +186,7 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
             }];
          }
 
--   **Étape 2** : Créer un [MSCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) à l’aide du [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) de l’**étape 1** et le lire.
+-   **Étape 2** : Créer un [MSCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) à l’aide du [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) de l’**Étape 1** et le lire.
 
         + (void)customProtectedDataWith:(NSData *)protectedData
         {
@@ -213,10 +213,10 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
             }];
          }
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>Scénario : Créer un fichier protégé personnalisé à l’aide d’une stratégie personnalisée (ad hoc)
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>Scénario : Créer un fichier protégé personnalisé à l’aide d’une stratégie personnalisée (ad hoc)
 
 
--   **Étape 1** : Avec une adresse e-mail fournie par l’utilisateur, créez un descripteur de stratégie.
+-   **Étape 1** : Avec une adresse e-mail fournie par l’utilisateur, créer un descripteur de stratégie.
 
     **Description** : Dans la pratique, les objets suivants doivent être créés à l’aide d’entrées d’utilisateur à partir de l’interface de l’appareil : [MSUserRights](https://msdn.microsoft.com/library/dn790811.aspx) et [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx).
 
@@ -243,7 +243,7 @@ Dans ce scénario, nous commençons par obtenir une liste de modèles, [MSTempla
             }];
         }
 
--   **Étape 3** : Créer et écrire du contenu dans [MSMutableCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx), puis le fermer.
+-   **Étape 3** :Créer et écrire du contenu dans [MSMutableCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx), puis le fermer.
 
         + (void)mutableCustomProtectedData:(NSMutableData *)backingData policy:(MSUserPolicy *)policy contentToProtect:(NSString *)contentToProtect
         {

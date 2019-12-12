@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: e8f2e2c775270f81489778ced852a7bb26b5ad1c
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175494"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-observers"></a>Kit SDK Microsoft Information Protection – Observateurs de l’API de stratégie
@@ -28,9 +28,9 @@ Les exemples ci-dessous illustrent le modèle de promesse/futur, qui est égalem
 
 Dans l’exemple suivant, nous avons créé une classe, `ProfileObserver`, qui est dérivée de `mip::Profile::Observer`. Les fonctions membres ont été remplacées pour utiliser le modèle de promesse/futur utilisé dans tous les exemples.
 
-**Remarque**: Le ci-dessous les exemples ne sont que partiellement implémentés et n’incluent pas de remplacements pour le `mip::ProfileEngine` liés observateurs.
+**Remarque** : Les exemples ci-dessous ne sont que partiellement implémentés et n’incluent pas de remplacements pour les observateurs liés à `mip::ProfileEngine`.
 
-### <a name="profileobserverh"></a>profile_observer.h
+### <a name="profile_observerh"></a>profile_observer.h
 
 Dans l’en-tête, nous définissons la classe `ProfileObserver`, dérivée de `mip::Profile::Observer`, puis nous remplaçons chacune des fonctions membres.
 
@@ -44,7 +44,7 @@ ProfileObserver() { }
 };
 ```
 
-### <a name="profileobservercpp"></a>profile_observer.cpp
+### <a name="profile_observercpp"></a>profile_observer.cpp
 
 Dans l’implémentation proprement dite, nous définissons une action à entreprendre pour chaque fonction membre d’observateur.
 

@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: e42b9996d737ace5b25988eb72fa02aa87230f13
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175137"
 ---
 # <a name="microsoft-information-protection-sdk---observer-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux observateurs
@@ -36,7 +36,7 @@ Comme deux fonctions `Observer` sont implémentées par opération asynchrone, o
 - `FileProfileObserver::OnAddEngineSuccess()`
 - `FileProfileObserver::OnAddEngineError()`
 - `FileProfileObserver::OnUnloadEngineSuccess`
-- `FileProfileObserver::OnUnloadEngineError()` . 
+- `FileProfileObserver::OnUnloadEngineError()`. 
 
 ## <a name="mip-sdk-observer-classes"></a>Classes d’observateur du kit SDK MIP
 

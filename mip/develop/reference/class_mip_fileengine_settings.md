@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 387d3819e8abe9fb24283cd0f62a78c15ce27b49
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558852"
 ---
 # <a name="class-mipfileenginesettings"></a>mip::FileEngine::Settings, classe 
@@ -26,14 +26,14 @@ public const Identity& GetIdentity() const  |  Retourne l’identité du moteur.
 public void SetIdentity(const Identity& identity)  |  Définit l’identité du moteur.
 public const std::string& GetClientData() const  |  Retourne les données clientes du moteur.
 public const std::string& GetLocale() const  |  Retourne les paramètres régionaux du moteur.
-public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\>\>valeur &)  |  Définit une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtient une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
+public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& value)  |  Définit une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtient une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de session du moteur.
 public const std::string& GetSessionId() const  |  Retourne l’ID de session du moteur.
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Définit l’URL de base du point de terminaison du cloud de protection, utilisée pour spécifier la limite du cloud.
 public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Obtient l’URL de base du point de terminaison Cloud de protection.
 public void SetPolicyCloudEndpointBaseUrl (const std :: String & policyCloudEndpointBaseUrl)  |  Définit l’URL de base du point de terminaison Cloud de la stratégie, utilisée pour spécifier la limite du Cloud.
-public const std :: String & GetPolicyCloudEndpointBaseUrl () const  |  Obtient l’URL de base du point de terminaison Cloud de la stratégie.
+public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  Obtient l’URL de base du point de terminaison Cloud de la stratégie.
 public void SetProtectionOnlyEngine (bool protectionOnly)  |  Définit l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.
 public const bool IsProtectionOnlyEngine() const  |  Retourne l’indicateur du moteur de protection uniquement - sans étiquette/stratégie.
 public bool IsLoadSensitivityTypesEnabled () const  |  Obtient l’indicateur qui spécifie si les étiquettes de sensibilité de la charge sont activées.
@@ -115,7 +115,7 @@ Définit l’ID de session du moteur.
 ### <a name="getsessionid-function"></a>GetSessionId fonction)
 Retourne l’ID de session du moteur.
   
-### <a name="setprotectioncloudendpointbaseurl-function"></a>SetProtectionCloudEndpointBaseUrl fonction)
+### <a name="setprotectioncloudendpointbaseurl-function"></a>SetProtectionCloudEndpointBaseUrl function
 Définit l’URL de base du point de terminaison du cloud de protection, utilisée pour spécifier la limite du cloud.
 
 Paramètres :  
@@ -123,13 +123,13 @@ Paramètres :
 
 
   
-### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl fonction)
+### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl function
 Obtient l’URL de base du point de terminaison Cloud de protection.
 
   
 **Retourne** : URL de base associée aux points de terminaison de protection
   
-### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl fonction)
+### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl function
 Définit l’URL de base du point de terminaison Cloud de la stratégie, utilisée pour spécifier la limite du Cloud.
 
 Paramètres :  
@@ -137,7 +137,7 @@ Paramètres :
 
 
   
-### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl fonction)
+### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl function
 Obtient l’URL de base du point de terminaison Cloud de la stratégie.
 
   

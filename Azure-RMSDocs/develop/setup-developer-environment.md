@@ -15,17 +15,17 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 2b8adc9775bc4711d9aabe70a912e79b37d48eef
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792133"
 ---
 # <a name="setup-developer-environment"></a>Installer l’environnement de développement
 
 Les rubriques suivantes vous montrent comment installer votre environnement de développement en vue d’une utilisation des API AD RMS SDK adaptées à votre système d’exploitation.
 
-|Plateforme | Description|
+|Plate-forme | Description|
 |------|------------|
 |[Android](android-sdk.md)| Les applications Android peuvent utiliser Microsoft Rights Management SDK 4.2 pour activer la protection intégrée des informations en utilisant Azure Active Directory Rights Management (AAD RM).|
 |[Linux](linux-setup.md)|Plusieurs versions des systèmes d’exploitation Linux peuvent désormais utiliser le SDK MS RMS 4.2 pour activer la protection intégrée des informations dans leur application à l’aide d’Azure Active Directory Rights Management (AAD RM).|

@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 5cdcf04a68269581dc032f753247ba88e9f118d7
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558868"
 ---
 # <a name="class-mipdocumentstate"></a>MIP de classe ::D ocumentState 
@@ -20,11 +20,11 @@ ms.locfileid: "73558868"
 --------------------------------|---------------------------------------------
 public std::string GetContentIdentifier() const  |  Obtient la description du contenu qui décrit le document. exemple pour un fichier : [path\filename] exemple pour un e-mail : [Subject : sender].
 DataState virtuel public GetDataState () const  |  Obtient l’état du contenu pendant que l’application interagit avec celui-ci.
-public std :: Vector\<std ::p air\<std :: String, std :: String\>\> GetContentMetadata (const std :: Vector\<std :: String\>& Names, const std :: Vector\<std :: String\>& namePrefixes) const  |  Obtenir les éléments de métadonnées à partir du contenu.
+public std::vector\<std::pair\<std::string, std::string\>\> GetContentMetadata(const std::vector\<std::string\>& names, const std::vector\<std::string\>& namePrefixes) const  |  Obtenir les éléments de métadonnées à partir du contenu.
 public std :: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  |  Obtenir le descripteur de protection.
 public ContentFormat GetContentFormat() const  |  Obtient le format du contenu.
 public virtuel std :: shared_ptr\<ClassificationResults\> GetClassificationResults (const std :: Vector\<std :: shared_ptr\<ClassificationRequest\>\> &) const  |  Retourne un mappage des résultats de la classification.
-public virtuel std :: Map\<std :: String, std :: String\> GetAuditMetadata () const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
+public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
   
 ## <a name="members"></a>Membres
   
@@ -76,4 +76,4 @@ Paramètres :
 Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
 
   
-**Retourne**: une liste de métadonnées d’audit spécifiques à l’application clé enregistrée : ID de paires de valeurs expéditeur : ID de courrier électronique pour les destinataires de l’expéditeur : représente un tableau JSON de destinataires pour un e-mail LastModifiedBy : ID de messagerie de l’utilisateur qui a modifié le contenu pour la dernière fois LastModifiedDate &: date de la dernière modification du contenu
+**Retourne**: une liste de métadonnées d’audit spécifiques à l’application clé enregistrée : ID de paires de valeurs expéditeur : ID de messagerie pour les destinataires de l’expéditeur : représente un tableau JSON de destinataires pour un e-mail LastModifiedBy : ID de l’utilisateur qui a modifié le contenu LastModifiedDate &: date de la dernière modification du contenu

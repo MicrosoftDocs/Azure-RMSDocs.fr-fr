@@ -4,7 +4,7 @@ description: Informations vous permettant d’installer et de configurer le conn
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/26/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8fc9425608f0ff2556ad83292607bb84912a427b
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 1b1f98a5d01d90cc25d6ffc378201ae90711eead
+ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559692"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74882046"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
@@ -46,9 +46,9 @@ Avant de commencer, vérifiez les [conditions préalables](deploy-rms-connector.
 
     -   Si vous voulez utiliser l'outil de configuration de serveur pour le connecteur RMS, afin d'automatiser la configuration des paramètres de registre sur vos serveurs locaux, téléchargez également le fichier GenConnectorConfig.ps1.
 
-3.  Sur l'ordinateur sur lequel vous souhaitez installer le connecteur RMS, exécutez le fichier **RMSConnectorSetup.exe** avec des privilèges d'administrateur.
+3.  Sur l’ordinateur sur lequel vous souhaitez installer le connecteur RMS, exécutez **RMSConnectorSetup. exe** avec des privilèges d’administrateur.
 
-4.  Dans la page d'accueil de Microsoft Rights Management Connector Setup, sélectionnez **Installer le connecteur Microsoft Rights Management sur l'ordinateur**, puis cliquez sur **Suivant**.
+4.  Sur la page d’accueil du programme d’installation du connecteur Microsoft Rights Management, sélectionnez **installer le connecteur microsoft Rights Management sur l’ordinateur**, puis cliquez sur **suivant**.
 
 5.  Lisez et acceptez les termes du contrat de licence du connecteur RMS, puis cliquez sur **Suivant**.
 
@@ -57,9 +57,9 @@ Pour continuer, saisissez un compte et un mot de passe pour configurer le connec
 ## <a name="entering-credentials"></a>Saisie des informations d'identification
 Pour pouvoir configurer le connecteur RMS, vous devez saisir les identifiants d'un compte disposant des droits suffisants. Par exemple, vous pouvez taper <strong>admin@contoso.com</strong>, puis spécifier le mot de passe pour ce compte.
 
-Ce compte ne doit pas requérir l’authentification multifacteur (MFA), car l’outil d’administration Microsoft Rights Management ne prend pas en charge l’authentification multifacteur pour ce compte. En outre, si vous utilisez Azure AD accès conditionnel, ne [bloquez pas l’authentification héritée](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) pour ce compte.
+Ce compte ne doit pas exiger l’authentification multifacteur (MFA), car l’installation du connecteur Microsoft Rights Management ne prend pas en charge MFA. En outre, si vous utilisez Azure AD accès conditionnel, ne [bloquez pas l’authentification héritée](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) pour ce compte.
 
-Le connecteur applique également des restrictions de caractères à ce mot de passe. Vous ne pouvez pas utiliser un mot de passe qui comporte les caractères suivants : « et commercial » ( **&** ) ; crochet ouvrant ( **[** ) ; crochet fermant ( **]** ) ; guillemet droit ( **"** ) ; et apostrophe ( **'** ). Si votre mot de passe contient l’un de ces caractères, l’authentification échoue pour le connecteur RMS, et vous voyez le message d’erreur **Cette combinaison de nom d’utilisateur et mot de passe n’est pas correcte**, même si vous pouvez vous connecter à l’aide de ce compte et de ce mot de passe pour d’autres scénarios. Si ce scénario s’applique à votre mot de passe, utilisez un autre compte dont le mot de passe ne contient aucun de ces caractères spéciaux ou redéfinissez votre mot de passe de façon à ce qu’il n’en contienne pas.
+Le programme d’installation du connecteur présente également des restrictions de caractères pour ce mot de passe. Vous ne pouvez pas utiliser un mot de passe qui comporte les caractères suivants : « et commercial » ( **&** ) ; crochet ouvrant ( **[** ) ; crochet fermant ( **]** ) ; guillemet droit ( **"** ) ; et apostrophe ( **'** ). Si votre mot de passe contient l’un de ces caractères, l’authentification échoue pour l’installation du connecteur RMS et vous voyez le message d’erreur la **combinaison du nom d’utilisateur et du mot de passe n’est pas correcte**, même si vous pouvez vous connecter avec ce compte et ce mot de passe pour d’autres scénarios. Si ce scénario s’applique à votre mot de passe, utilisez un autre compte dont le mot de passe ne contient aucun de ces caractères spéciaux ou redéfinissez votre mot de passe de façon à ce qu’il n’en contienne pas.
 
 En outre, si vous avez implémenté des [contrôles d’intégration](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), vérifiez que le compte spécifié peut protéger le contenu. Par exemple, si vous avez limité la possibilité de protéger du contenu pour le groupe « Département informatique », le compte que vous spécifiez ici doit être un membre de ce groupe. Si ce n’est pas le cas, le message d’erreur suivant s’affiche : **la tentative de détection de l’emplacement du service d’administration et de l’organisation a échoué. Assurez-vous que le service Microsoft Rights Management est activé pour votre organisation.**
 
@@ -76,7 +76,7 @@ Vous pouvez utiliser un compte possédant l'un des privilèges suivants :
     > 
     > Pour exécuter le connecteur RMS avec des privilèges minimum, créez un compte dédié à cet effet, auquel vous affectez ensuite le rôle d’administrateur du connecteur Azure RMS en procédant comme suit :
     >
-    > 1.  Si vous ne l’avez pas déjà fait, téléchargez et installez le module PowerShell AIPService. Pour plus d’informations, consultez [installation du module PowerShell AIPService](install-powershell.md).
+    > 1. Si vous ne l’avez pas déjà fait, téléchargez et installez le module PowerShell AIPService. Pour plus d’informations, consultez [installation du module PowerShell AIPService](install-powershell.md).
     >
     >     Démarrez Windows PowerShell avec la commande **exécuter en tant qu’administrateur** et connectez-vous au service de protection à l’aide de la commande [Connect-AipService](/powershell/module/aipservice/connect-aipservice) :
     >
@@ -113,7 +113,7 @@ Exécutez les actions suivantes sur la dernière page de l'Assistant, puis cliqu
 -   S'il s'agit de la deuxième (ou dernière) instance du connecteur, sélectionnez **Lancer la console Administrateur du connecteur pour autoriser des serveurs**.
 
 > [!TIP]
-> À ce stade, vous pouvez réaliser un test de vérification pour vous assurer que les services Web du connecteur RMS sont opérationnels :
+> À ce stade, vous pouvez réaliser un test de vérification pour vous assurer que les services Web du connecteur RMS sont opérationnels :
 >
 > -   Dans un navigateur web, accédez à l’URL **http://&lt;adresse_connecteur&gt;/_wmcs/certification/servercertification.asmx**, en remplaçant *&lt;adresse_connecteur&gt;* par l’adresse ou le nom du serveur sur lequel le connecteur RMS est installé. Si la connexion fonctionne, la page **ServerCertificationWebService** apparaît.
 
@@ -126,9 +126,9 @@ Par exemple, le nom de votre journal d’installation peut être similaire à C:
 ## <a name="authorizing-servers-to-use-the-rms-connector"></a>Définition des serveurs autorisés à utiliser le connecteur RMS
 Dès lors que le connecteur RMS est installé sur au moins deux ordinateurs, vous êtes en mesure d'autoriser les serveurs et les services souhaités à utiliser le connecteur RMS. Par exemple, les serveurs exécutant Exchange Server 2013 ou SharePoint Server 2013.
 
-Pour définir ces serveurs, exécutez l'outil d'administration du connecteur RMS, puis ajoutez des entrées à la liste des serveurs autorisés. Vous pouvez exécuter cet outil lors de la sélection de l'option **Lancer la console Administrateur du connecteur pour autoriser des serveurs** à la fin de l'Assistant de configuration du connecteur Microsoft Rights Management, mais vous pouvez également l'exécuter séparément de l'Assistant.
+Pour définir ces serveurs, exécutez l'outil d'administration du connecteur RMS, puis ajoutez des entrées à la liste des serveurs autorisés. Vous pouvez exécuter cet outil lors de la sélection de l'option **Lancer la console Administrateur du connecteur pour autoriser des serveurs** à la fin de l'Assistant de configuration du connecteur Microsoft Rights Management, mais vous pouvez également l'exécuter séparément de l'Assistant.
 
-Prenez en compte les considérations suivantes lors de la définition des serveurs :
+Prenez en compte les considérations suivantes lors de la définition des serveurs :
 
 - Les serveurs ajoutés reçoivent des privilèges particuliers. Tous les comptes que vous spécifiez pour le rôle serveur Exchange dans la configuration du connecteur reçoivent le [rôle super utilisateur](configure-super-users.md) dans Azure RMS, ce qui leur donne accès à tout le contenu de ce locataire RMS. La fonctionnalité de super utilisateur est automatiquement activée à ce stade, si nécessaire. Pour éviter le risque de sécurité lié à l'élévation de privilèges, veillez à spécifier uniquement les comptes utilisés par les serveurs Exchange de votre organisation. Tous les serveurs configurés comme serveurs SharePoint ou serveurs de fichiers utilisant l'infrastructure de classification des fichiers (ICF) reçoivent des privilèges d’utilisateur standard.
 
@@ -145,11 +145,11 @@ Sur la page **Autoriser un serveur à utiliser le connecteur**, saisissez le nom
 
 Il est important d'autoriser l'objet adéquat. Pour qu'un serveur utilise le connecteur, le compte qui exécute le service local (par exemple, Exchange ou SharePoint) doit être sélectionné pour autorisation. Par exemple, si le service est exécuté en tant que compte de service configuré, ajoutez le nom de ce compte de service à la liste. Si le service est exécuté en tant que système local, ajoutez le nom de l'objet d'ordinateur (par exemple, NOMSERVEUR$). Il est préférable de créer un groupe contenant ces comptes afin de spécifier ce groupe plutôt que des noms de serveurs individuels.
 
-Voici quelques informations relatives aux différents rôles de serveur :
+Voici quelques informations relatives aux différents rôles de serveur :
 
 -   Pour les serveurs exécutant Exchange : vous devez spécifier un groupe de sécurité. Notez que vous pouvez utiliser le groupe par défaut (**Serveurs Exchange**) créé et mis à jour automatiquement par Exchange, regroupant tous les serveurs Exchange de la forêt.
 
--   Pour les serveurs exécutant SharePoint :
+-   Pour les serveurs exécutant SharePoint :
 
     -   Si un serveur SharePoint 2010 est configuré pour s'exécuter en tant que système Local (il n'utilise pas de compte de service), créez manuellement un groupe de sécurité dans les services de domaine Active Directory, puis ajoutez l'objet de nom d'ordinateur pour le serveur dans cette configuration à ce groupe.
 
@@ -178,7 +178,7 @@ Le nom de serveur URL du connecteur peut être n'importe quel nom défini dans u
 
 Une fois le nom créé dans le système DNS et associé à une adresse IP, configurez l'équilibrage de charge pour cette adresse, afin de rediriger le trafic vers les serveurs du connecteur. Vous pouvez utiliser n'importe quel programme d'équilibrage de charge basé sur une adresse IP, notamment la fonctionnalité Équilibrage de la charge réseau (NLB) de Windows Server. Pour plus d'informations, consultez le [guide de déploiement de l’équilibrage de charge](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
 
-Utilisez les paramètres suivants pour configurer le cluster NLB :
+Utilisez les paramètres suivants pour configurer le cluster NLB :
 
 -   Ports : 80 (HTTP) ou 443 (HTTPS)
 
@@ -201,7 +201,7 @@ Pour que le connecteur RMS utilise TLS, installez un certificat d'authentificati
 Si vous utilisez l'option HTTPS, assurez-vous que tous les serveurs exécutant le connecteur disposent d'un certificat d'authentification de serveur valide lié à l'autorité de certification racine reconnue par vos serveurs Exchange et SharePoint. Par ailleurs, si l'autorité de certification qui a établi les certificats pour les serveurs du connecteur publie une liste de révocation de certificats, les serveurs Exchange et SharePoint doivent pouvoir la télécharger.
 
 > [!TIP]
-> Vous pouvez utiliser les informations et ressources suivantes pour vous aider à demander et à installer un certificat d'authentification de serveur, puis à relier ce certificat au site Web par défaut dans IIS :
+> Vous pouvez utiliser les informations et ressources suivantes pour vous aider à demander et à installer un certificat d'authentification de serveur, puis à relier ce certificat au site Web par défaut dans IIS :
 >
 > - Si vous utilisez les services de certificat Active Directory (AD CS) et une autorité de certification d'entreprise pour déployer ces certificats d'authentification de serveur, vous pouvez dupliquer puis utiliser le modèle de certificat de serveur Web. Ce modèle utilise l'option **Fourni dans la demande** pour le nom du sujet du certificat, ce qui signifie que vous pouvez fournir le nom de domaine complet du nom du connecteur RMS pour le nom du sujet du certificat ou le nom alternatif du sujet pour votre demande de certificat.
 > -   Si vous utilisez une autorité de certification autonome ou si vous achetez ce certificat auprès d’une autre société, consultez la rubrique [Configuration des certificats de serveur Internet (IIS 7)](https://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) dans la bibliothèque de documentation [Serveur web (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) sur TechNet.
@@ -223,19 +223,19 @@ Si vos serveurs de connecteur sont installés sur un réseau qui ne dispose pas 
 4.  Fermez l'éditeur de registre, puis redémarrez le serveur ou exécutez une commande IISReset pour redémarrer IIS.
 
 ## <a name="installing-the-rms-connector-administration-tool-on-administrative-computers"></a>Installation de l'outil d'administration du connecteur RMS sur les ordinateurs d'administration
-Vous pouvez exécuter l'outil d'administration du connecteur RMS à partir d'un ordinateur sur lequel le connecteur RMS n'est pas installé, dans la mesure où cet ordinateur est conforme à la configuration suivante :
+Vous pouvez exécuter l'outil d'administration du connecteur RMS à partir d'un ordinateur sur lequel le connecteur RMS n'est pas installé, dans la mesure où cet ordinateur est conforme à la configuration suivante :
 
 -   Un ordinateur physique ou virtuel exécutant Windows Server 2012 ou Windows Server 2012 R2 (toutes éditions), Windows Server 2008 R2 ou Windows Server 2008 R2 Service Pack 1 (toutes éditions), Windows 8.1, Windows 8 ou Windows 7.
 
--   1 Go de RAM minimum ;
+-   1 Go de RAM minimum.
 
--   64 Go d'espace disque minimum ;
+-   64 Go d'espace disque minimum.
 
--   au moins une interface réseau ;
+-   Au moins une interface réseau.
 
 -   Accès à Internet via un pare-feu (ou un proxy Web).
 
-Exécutez les fichiers suivants pour installer l'outil d'administration du connecteur RMS :
+Exécutez les fichiers suivants pour installer l'outil d'administration du connecteur RMS :
 
 -   Pour un ordinateur 32 bits : RMSConnectorAdminToolSetup_x86.exe
 

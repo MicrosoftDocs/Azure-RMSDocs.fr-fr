@@ -4,19 +4,19 @@ description: Installer un lecteur sur Windows pour les documents PDF étiquetés
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/22/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4f51ccb9bf11f6d692978cb24cf5b9bad186c690
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 3fbf6b04f6c9b67e8b0b3a9f679428c4af0a6505
+ms.sourcegitcommit: 6f3379705e781fbba1755e34637c7f941da4559e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445116"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907455"
 ---
 # <a name="install-a-pdf-reader-for-windows"></a>Installer un lecteur PDF pour Windows
 
@@ -26,7 +26,7 @@ Si vous avez besoin d’ouvrir un document PDF protégé sur votre ordinateur Wi
 
 **Versions prises en charge**: Windows 10 et versions antérieures via Windows 7 Service Pack 1
 
-Ample 
+Instructions : 
 
 1. Lisez les [conditions générales d’utilisation d’Adobe](https://www.adobe.com/legal/terms.html).
 
@@ -34,7 +34,9 @@ Ample
 
 3. Installez le [plug-in Adobe](https://go.microsoft.com/fwlink/?linkid=2050049) pour Windows.
 
-4. Si vous y êtes invité, demandez à votre administrateur d' [autoriser le plug-](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)in.
+4. Si vous êtes invité à approuver l’administrateur, demandez à votre administrateur d’autoriser le plug-in.
+    
+    Les instructions d’administration pour cette étape sont incluses dans l’annonce de la publication : [disponibilité générale de l’intégration d’Adobe Acrobat Reader avec Microsoft information protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
 
 Lecteurs de substitution qui ouvrent des documents PDF protégés conformes à la norme ISO pour le chiffrement PDF :
 

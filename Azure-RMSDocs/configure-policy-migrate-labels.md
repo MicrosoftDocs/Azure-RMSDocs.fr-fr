@@ -4,7 +4,7 @@ description: Migrez Azure Information Protection étiquettes vers des étiquette
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 11/25/2019
+ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 24cf337ac84155485d11c3822f6207b11f5b04e5
-ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
+ms.openlocfilehash: 31140c7591f2846090a73627fe1f146bc5609cef
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564481"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935025"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Comment migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée
 
@@ -44,7 +44,7 @@ Avant de lire les instructions pour migrer vos étiquettes, vous trouverez peut-
 
 Si vous utilisez des rôles d’administrateur pour l’administration déléguée dans votre organisation, vous devrez peut-être effectuer certaines modifications pour la plateforme d’étiquetage unifiée :
 
-Les [rôles Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) de **Azure information protection administrateur** (anciennement **information protection administrateur**) et le **lecteur global** ne sont pas pris en charge par la plateforme d’étiquetage unifiée. Si l’un de ces rôles d’administration est utilisé dans votre organisation pour gérer Azure Information Protection, ajoutez les utilisateurs qui possèdent ce rôle aux rôles Azure AD de l’administrateur de la **conformité**, à l’administrateur des **données de conformité**ou à l’administrateur de la **sécurité**. Si vous avez besoin d’aide, consultez [Donner aux utilisateurs accès au Centre de sécurité et de conformité Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). Vous pouvez également attribuer ces rôles dans le portail Azure AD, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365.
+Le [rôle Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) de **Azure information protection administrateur** (anciennement **information protection administrateur**) n’est pas pris en charge par la plateforme d’étiquetage unifiée. Si ce rôle d’administration est utilisé dans votre organisation pour gérer Azure Information Protection, ajoutez les utilisateurs qui possèdent ce rôle aux rôles Azure AD de l’administrateur de la **conformité**, à l’administrateur des **données de conformité**ou à l’administrateur de la **sécurité**. Si vous avez besoin d’aide, consultez [Donner aux utilisateurs accès au Centre de sécurité et de conformité Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). Vous pouvez également attribuer ces rôles dans le portail Azure AD, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365.
 
 Au lieu d’utiliser des rôles, dans les centres d’administration, vous pouvez créer un nouveau groupe de rôles pour ces utilisateurs et ajoutez les rôles **Administrateur d’étiquette de sensibilité** ou **Configuration de l’organisation** à ce groupe.
 
@@ -160,19 +160,29 @@ Les étiquettes qui ont correctement migré peuvent désormais être utilisées 
 > [!NOTE]
 > Cette option est en version préliminaire et sujette à modification.
 
-Une fois que vous avez migré vos étiquettes, vous pouvez sélectionner une option pour copier les stratégies. Si vous sélectionnez cette option, une copie unique de vos stratégies avec les paramètres de [stratégie](configure-policy-settings.md) et les [Paramètres client avancés](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) est envoyée au centre d’administration où vous gérez vos étiquettes : Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center, Microsoft 365 Compliance Center.
+Une fois que vous avez migré vos étiquettes, vous pouvez sélectionner une option pour copier les stratégies. Si vous sélectionnez cette option, une copie unique de vos stratégies avec les paramètres de [stratégie](configure-policy-settings.md) et les [Paramètres client avancés](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) est envoyée au centre d’administration où vous gérez vos étiquettes : Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center, Microsoft 365 Compliance Center. 
+
+Les stratégies ont été correctement copiées avec leurs paramètres et les étiquettes sont ensuite automatiquement publiées sur les utilisateurs et les groupes qui ont été affectés aux stratégies dans la Portail Azure. Notez que, pour la stratégie globale, il s’agit de tous les utilisateurs. Si vous n’êtes pas prêt à publier les étiquettes migrées dans les stratégies copiées, une fois les stratégies copiées, vous pouvez supprimer les étiquettes des stratégies d’étiquette dans le centre d’étiquetage de votre administrateur.
 
 Avant de sélectionner l’option **copier les stratégies (version préliminaire)** dans le volet d' **étiquetage Azure information protection-Unified** , tenez compte des points suivants :
 
-- Vous ne pouvez pas sélectionner de manière sélective les stratégies et les paramètres à copier. Toutes les stratégies (stratégie **globale** et stratégies délimitées) sont copiées, et tous les paramètres pris en charge en tant que paramètres de stratégie d’étiquette sont copiés. Si vous disposez déjà d’une stratégie d’étiquette portant le même nom, elle sera remplacée par les paramètres de stratégie de la Portail Azure.
+- L’option **copier les stratégies (** préversion) n’est pas disponible tant que l’étiquetage unifié n’est pas activé pour votre locataire.
+
+- Vous ne pouvez pas sélectionner de manière sélective les stratégies et les paramètres à copier. Toutes les stratégies (stratégie **globale** et stratégies délimitées) sont automatiquement sélectionnées pour être copiées, et tous les paramètres pris en charge en tant que paramètres de stratégie d’étiquette sont copiés. Si vous disposez déjà d’une stratégie d’étiquette portant le même nom, elle sera remplacée par les paramètres de stratégie de la Portail Azure.
 
 - Certains paramètres client avancés ne sont pas copiés, car pour le client d’étiquetage unifié Azure Information Protection, ils sont pris en charge en tant que *Paramètres avancés d’étiquette* plutôt qu’en tant que paramètres de stratégie. Vous pouvez configurer ces paramètres avancés d’étiquette avec [Office 365 Centre de sécurité et de conformité PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell). Les paramètres avancés du client qui ne sont pas copiés sont les suivants :
     - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
-- Contrairement à la migration des étiquettes où les modifications ultérieures apportées aux étiquettes sont synchronisées, l’action copier les stratégies ne synchronise pas les modifications ultérieures apportées à vos stratégies ou paramètres de stratégie. Vous pouvez répéter l’action copier la stratégie après avoir apporté des modifications au Portail Azure, et les stratégies existantes et leurs paramètres seront à nouveau remplacés. Ou utilisez les applets de commande Set-LabelPolicy ou Set-label avec le paramètre *AdvancedSettings* d’Office 365 Centre de sécurité et de conformité PowerShell.
+- Contrairement à la migration des étiquettes où les modifications ultérieures apportées aux étiquettes sont synchronisées, l’action **copier les stratégies** ne synchronise pas les modifications ultérieures apportées à vos stratégies ou paramètres de stratégie. Vous pouvez répéter l’action copier la stratégie après avoir apporté des modifications au Portail Azure, et les stratégies existantes et leurs paramètres seront à nouveau remplacés. Ou utilisez les applets de commande Set-LabelPolicy ou Set-label avec le paramètre *AdvancedSettings* d’Office 365 Centre de sécurité et de conformité PowerShell.
 
-- L’option **copier les stratégies (** préversion) n’est pas disponible tant que l’étiquetage unifié n’est pas activé pour votre locataire.
+- L’action **copier les stratégies** vérifie les éléments suivants pour chaque stratégie avant de la copier :
+    
+    - Les utilisateurs et les groupes attribués à la stratégie sont actuellement dans Azure AD. Si un ou plusieurs comptes sont absents, la stratégie n’est pas copiée. L’appartenance au groupe n’est pas vérifiée.
+    
+    - La stratégie globale contient au moins une étiquette. Étant donné que les centres d’étiquetage des administrateurs ne prennent pas en charge les stratégies d’étiquette sans étiquette, une stratégie globale sans étiquette n’est pas copiée.
+
+- Si vous copiez des stratégies, puis que vous les supprimez de votre centre d’étiquetage des administrateurs, attendez au moins deux heures avant d’utiliser l’action **copier les stratégies** pour garantir un temps suffisant pour la réplication de la suppression.
 
 Pour plus d’informations sur la configuration des paramètres de stratégie, des paramètres client avancés et des paramètres d’étiquette pour le client d’étiquetage unifié Azure Information Protection, consultez [configurations personnalisées pour le client d’étiquetage unifié Azure information protection](./rms-client/clientv2-admin-guide-customizations.md) à partir du Guide de l’administrateur.
 
@@ -198,7 +208,7 @@ Pour vérifier si les clients et les services que vous utilisez prennent en char
     
     Pour plus d’informations, consultez [utiliser des étiquettes de sensibilité avec Microsoft Teams, les groupes office 365 et les sites SharePoint (version préliminaire publique)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites) et [activer les étiquettes de sensibilité pour les fichiers Office dans SharePoint et OneDrive (version préliminaire publique)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
-- Microsoft Defender-protection avancée contre les menaces
+- Microsoft Defender Advanced Threat Protection
 
 - Microsoft Cloud App Security
     

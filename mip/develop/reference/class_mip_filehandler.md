@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: b2a6e3cd6de886c3e3983442a1ec7185b688b662
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558842"
 ---
 # <a name="class-mipfilehandler"></a>mip::FileHandler, classe 
@@ -21,22 +21,22 @@ Interface pour toutes les fonctions de gestion de fichiers.
 --------------------------------|---------------------------------------------
 public std :: shared_ptr\<ContentLabel\> GetLabel ()  |  Démarre la récupération de l’étiquette de sensibilité à partir du fichier.
 public std :: shared_ptr\<ProtectionHandler\> GetProtection ()  |  Démarre la récupération de la stratégie de protection à partir du fichier.
-public void ClassifyAsync (const std :: shared_ptr\<void\>contexte &)  |  Exécute les règles dans le gestionnaire et retourne la liste des actions à exécuter.
-public void InspectAsync (const std :: shared_ptr\<void\>contexte &)  |  Crée un objet d’inspecteur de fichier, utilisé pour récupérer le contenu d’un fichier à partir de formats de fichiers compatibles.
-public void SetLabel (const std :: shared_ptr\<label\>& étiquette, const LabelingOptions & labelingOptions, const ProtectionSettings & protectionSettings)  |  Définit l’étiquette de sensibilité sur le fichier.
+public void ClassifyAsync (const std :: shared_ptr\<void\>& Context)  |  Exécute les règles dans le gestionnaire et retourne la liste des actions à exécuter.
+public void InspectAsync (const std :: shared_ptr\<void\>& Context)  |  Crée un objet d’inspecteur de fichier, utilisé pour récupérer le contenu d’un fichier à partir de formats de fichiers compatibles.
+public void SetLabel (const std :: shared_ptr\<étiquette\>& étiquette, const LabelingOptions & labelingOptions, const ProtectionSettings & protectionSettings)  |  Définit l’étiquette de sensibilité sur le fichier.
 public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Supprime l’étiquette de sensibilité du fichier.
 public void SetProtection (const std :: shared_ptr\<ProtectionDescriptor\>& protectionDescriptor, const ProtectionSettings & protectionSettings)  |  Définit des autorisations personnalisées ou basées sur un modèle (en fonction de protectionDescriptor->GetProtectionType) pour le fichier.
 public void SetProtection (const std :: shared_ptr\<ProtectionHandler\>& protectionHandler)  |  Définit la protection d’un document à l’aide d’un gestionnaire de protection existant.
 public void RemoveProtection()  |  Supprime la protection du fichier. Si le fichier porte une étiquette, celle-ci est perdue.
-public void CommitAsync (const std :: String & outputFilePath, const std :: shared_ptr\<void\>& Context) | Écrit les modifications dans le fichier spécifié par le paramètre \|outputFilePath\ |  .
+public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Écrit les modifications dans le fichier spécifié par le paramètre \|outputFilePath\ |  .
 public void CommitAsync (const std :: shared_ptr\<flux\>& outputStream, const std :: shared_ptr\<void\>contexte &) | Écrit les modifications dans le flux spécifié par le paramètre \|outputStream\ |  .
 public bool IsModified ()  |  Vérifie s’il existe des modifications à valider dans le fichier.
-public void GetDecryptedTemporaryFileAsync (const std :: shared_ptr\<void\>contexte &)  |  Retourne un chemin d’accès à un fichier temporaire (qui sera supprimé si possible), représentant le contenu déchiffré.
-public void GetDecryptedTemporaryStreamAsync (const std :: shared_ptr\<void\>contexte &)  |  Retourne un flux représentant le contenu déchiffré.
+public void GetDecryptedTemporaryFileAsync (const std :: shared_ptr\<void\>& Context)  |  Retourne un chemin d’accès à un fichier temporaire (qui sera supprimé si possible), représentant le contenu déchiffré.
+public void GetDecryptedTemporaryStreamAsync (const std :: shared_ptr\<void\>& Context)  |  Retourne un flux représentant le contenu déchiffré.
 public void NotifyCommitSuccessful (const std :: String & actualFilePath)  |  À appeler quand les modifications ont été validées sur le disque.
 public std::string GetOutputFileName()  |  Détermine le nom et l’extension du fichier de sortie en fonction du nom du fichier d’origine et des modifications cumulées.
 public static bool IsProtected (const std :: String & filePath, const std :: shared_ptr<MipContext>& mipContext) | Vérifie si un fichier est protégé ou non.
-public static FILE_API std :: Vector&lt;uint8_t&gt; _ _ cdecl Mip :: FileHandler :: GetSerializedPublishingLicense | Retourne la licence de publication si le fichier en contient.
+public static FILE_API std :: Vector&lt;uint8_t&gt; __CDECL MIP :: FileHandler :: GetSerializedPublishingLicense | Retourne la licence de publication si le fichier en contient.
 
 ## <a name="members"></a>Membres
   

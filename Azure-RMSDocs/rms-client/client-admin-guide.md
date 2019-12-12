@@ -4,7 +4,7 @@ description: Instructions et informations destinées aux administrateurs d’un 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6a3792d8b69ebe7bf1f924fe618725a7cf286353
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 9169da03c020f07f2ad031efff80364658aa6b24
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561277"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935263"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guide de l’administrateur du client Azure Information Protection
 
@@ -69,7 +69,7 @@ Si vous avez AD RMS et que vous souhaitez migrer AD RMS vers Azure Information
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Devez-vous déployer le client Azure Information Protection ?
 
-Déployez le client Azure Information Protection si vous n’utilisez pas [d’étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) , mais utilisez à la place des étiquettes de Azure information protection que vous téléchargez à partir d’Azure, ainsi que l’un des éléments suivants : s’applique
+Déployez le client Azure Information Protection si vous n’utilisez pas [d’étiquettes de sensibilité dans le centre de sécurité et de conformité Office 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) mais à la place, à l’aide des étiquettes de Azure information protection que vous téléchargez à partir d’Azure, et les conditions suivantes s’appliquent :
 
 - Vous souhaitez classifier (et éventuellement protéger) des documents et des e-mails en sélectionnant des étiquettes à partir de vos applications Office (Word, Excel, PowerPoint, Outlook).
 
@@ -138,7 +138,7 @@ L’option **Réinitialiser les paramètres** déconnecte l’utilisateur, suppr
     
     En général, pour les réseaux d’entreprise, ces paramètres sont configurés à l’aide de la stratégie de groupe, auquel cas ils sont automatiquement réappliqués lorsque la stratégie de groupe est actualisée sur l’ordinateur. Par contre, certains paramètres peuvent avoir été configurés ponctuellement, par le biais d’un script ou manuellement. Dans ce cas, vous devez prendre des mesures supplémentaires pour reconfigurer ces paramètres. Par exemple, les ordinateurs peuvent exécuter un script ponctuellement afin de configurer des paramètres pour une redirection vers Azure Information Protection, car vous procédez à la migration depuis AD RMS et vous disposez toujours d’un point de connexion de service sur votre réseau. Après la réinitialisation du client, l’ordinateur doit réexécuter ce script.
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
     - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
@@ -146,7 +146,7 @@ L’option **Réinitialiser les paramètres** déconnecte l’utilisateur, suppr
     
     - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+    - HKEY_CURRENT_USER \SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
 
 - L’utilisateur actuellement connecté est déconnecté.
 

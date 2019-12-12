@@ -4,7 +4,7 @@ description: Identifiez les produits de serveurs locaux qui peuvent utiliser le 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1cff4a483d8e8d8e14dc6c8159d70655b7b71009
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 313d99a4d0d68417da7d18947a4e81278aca2fef
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684473"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935338"
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Serveurs locaux prenant en charge la protection des données Azure Rights Management
 
@@ -30,7 +30,7 @@ Pour utiliser ce connecteur, vous devez configurer la synchronisation des annuai
 
 -   **Exchange Server** :
 
-    -   Exchange Server 2016
+    -   Exchange Server 2016
 
     -   Exchange Server 2013
 
@@ -48,7 +48,7 @@ Pour utiliser ce connecteur, vous devez configurer la synchronisation des annuai
 
     -   Windows Server 2016
 
-    -   Windows Server 2012 R2
+    -   R2 Windows Server 2012
 
     -   Windows Server 2012
 

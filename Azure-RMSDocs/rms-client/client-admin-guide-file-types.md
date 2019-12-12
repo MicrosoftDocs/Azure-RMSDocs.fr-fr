@@ -4,7 +4,7 @@ description: Détails techniques sur les types de fichiers pris en charge, les e
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 350f687a61899046346f26b5beb2944b9f3caf13
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: 02f1e21b73f1d800e5e50918e6a5694402840474
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984873"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935314"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guide de l’administrateur : Types de fichiers pris en charge par le client Azure Information Protection
 
@@ -149,7 +149,7 @@ Pour ces fichiers, l’extension de nom de fichier reste la même une fois que l
 ### <a name="changing-the-default-protection-level-of-files"></a>Modification du niveau de protection par défaut des fichiers
 Vous pouvez modifier la façon dont le client Azure Information Protection protège les fichiers en modifiant le Registre. Par exemple, vous pouvez forcer les fichiers qui prennent en charge la protection native à être protégés de manière générique par le client Azure Information Protection.
 
-Raisons pour lesquelles vous pourriez vouloir procéder ainsi :
+Raisons pour lesquelles vous pourriez vouloir procéder ainsi :
 
 - Pour vous assurer que tous les utilisateurs peuvent ouvrir le fichier s'ils n'ont pas une application qui prend en charge la protection native.
 
@@ -165,7 +165,7 @@ Pour configurer le client Azure Information Protection afin qu’il applique une
 
     - Pour la version 32 bits de Windows : **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
 
-    - Pour la version 64 bits de Windows : **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** et **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
+    - Pour la version 64 bits de Windows : **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\msipc\fileprotection** et **HKEY_LOCAL_MACHINE \software\microsoft\msipc\fileprotection**
 
 2. Dans la clé nouvellement ajoutée (par exemple, HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*), créez une valeur de chaîne (REG_SZ) nommée **Encryption** avec la valeur de données **Pfile**.
 
@@ -173,7 +173,7 @@ Pour configurer le client Azure Information Protection afin qu’il applique une
 
 Ces deux réglages entraînent l’application de la protection générique par le client Azure Information Protection à tous les fichiers ayant une extension de nom de fichier. S'il s'agit de votre objectif, aucune configuration supplémentaire n'est requise. Toutefois, vous pouvez définir des exceptions pour des types de fichiers spécifiques pour qu'ils soient toujours protégés en mode natif. Pour cela, vous devez effectuer trois (pour Windows 32 bits) ou six (pour Windows 64 bits) modifications supplémentaires dans le Registre pour chaque type de fichier :
 
-1. Pour **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** et **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (le cas échéant) : ajoutez une nouvelle clé qui porte le nom de l’extension de nom de fichier (sans le période précédente).
+1. Pour **HKEY_LOCAL_MACHINE \software\microsoft\msipc\fileprotection** et **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\msipc\fileprotection** (le cas échéant) : ajoutez une nouvelle clé qui porte le nom de l’extension de nom de fichier (sans le point précédent).
 
     Par exemple, pour les fichiers qui ont une extension de nom de fichier .docx, créez une clé nommée **DOCX**.
 
@@ -271,7 +271,7 @@ Le scanneur Azure Information Protection et la commande PowerShell [Set-AIPFileC
 
 1. Pour l’ordinateur exécutant le scanneur ou la session PowerShell, installez [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
 
-2. Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. zip doit être classifié et protégé par une étiquette, ajoutez une entrée de Registre pour cette extension de nom de fichier afin de bénéficier d’une protection générique (pfile), comme décrit dans [modifications du Registre pour changer les types de fichiers sont protégés](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) des instructions de déploiement de l’analyseur.
+2. Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. zip doit être classifié et protégé par une étiquette, ajoutez une entrée de Registre pour cette extension de nom de fichier afin de bénéficier d’une protection générique (pfile), comme décrit dans [modifications du Registre pour changer les types de fichiers protégés](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) des instructions de déploiement de l’analyseur.
 
 Exemple de scénario après avoir effectué ces étapes : 
 
@@ -283,7 +283,7 @@ Après avoir inspecté le fichier, le scanneur classifie ce fichier comme **Conf
 
 Le scanneur Azure Information Protection et la commande PowerShell [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) peuvent utiliser la reconnaissance optique de caractères (OCR) pour inspecter les images TIFF avec une extension de nom de fichier .tiff quand vous installez la fonctionnalité Windows TIFF IFilter et configurez les [paramètres TIFF Windows IFilter](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) sur l’ordinateur qui exécute le scanneur ou la session PowerShell.
 
-Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. TIFF doit être classifié et protégé par une étiquette, ajoutez une entrée de Registre pour cette extension de nom de fichier afin de bénéficier d’une protection native, comme décrit dans [modifications du Registre pour changer les types de fichiers protégé](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) contre les instructions de déploiement de l’analyseur.
+Pour le scanneur : après avoir trouvé des informations sensibles, si le fichier. TIFF doit être classifié et protégé par une étiquette, ajoutez une entrée de Registre pour cette extension de nom de fichier afin de bénéficier d’une protection native, comme décrit dans [modifications du Registre pour changer les types de fichiers protégés](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) par les instructions de déploiement de l’analyseur.
 
 ## <a name="next-steps"></a>Étapes suivantes
 Maintenant que vous avez identifié les types de fichiers pris en charge par le client Azure Information Protection, consultez les ressources suivantes pour des informations supplémentaires nécessaires à la prise en charge de ce client :

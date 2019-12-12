@@ -15,13 +15,13 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 2c96bbc94b30728466a53dc471ebf7375e845e09
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791381"
 ---
-# <a name="api-reference"></a>Informations de référence sur les API
+# <a name="api-reference"></a>Référence d'API
 
 Le SDK Microsoft Rights Management 2.1 prend en charge l’activation de RMS de clients Windows. Pour plus d’informations sur des points spécifiques, consultez [Notes de publication](release-notes-rtm.md).
 - [Constantes](https://msdn.microsoft.com/library/hh535291.aspx)

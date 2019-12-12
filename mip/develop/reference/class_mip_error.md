@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: f59a2b394cbf0bfa5deb555e2c4cdd8c427ed7ea
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560295"
 ---
 # <a name="class-miperror"></a>mip::Error, classe 
@@ -34,7 +34,7 @@ Obtenir le message d’erreur.
   
 **Retourne** : message d’erreur
   
-### <a name="clone-function"></a>Cloner une fonction
+### <a name="clone-function"></a>Clone, fonction
 Cloner l’erreur.
 
   

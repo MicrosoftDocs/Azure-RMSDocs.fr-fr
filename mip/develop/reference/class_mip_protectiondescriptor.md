@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 34acc6109a5d3dfcbbaec37e81f3215dd30f5018
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73557736"
 ---
 # <a name="class-mipprotectiondescriptor"></a>class mip::ProtectionDescriptor 
@@ -32,8 +32,8 @@ public bool DoesContentExpire () const  |  Vérifie si le contenu a une heure d�
 public std :: Chrono :: time_point\<std :: Chrono :: system_clock\> GetContentValidUntil () const  |  Obtient l’heure d’expiration de la protection.
 public bool DoesAllowOfflineAccess() const  |  Indique si la protection autorise l’accès au contenu hors connexion ou non.
 public std::string GetReferrer() const  |  Obtient l’adresse du référent de protection.
-public std :: Map\<std :: String, std :: String\> GetEncryptedAppData () const  |  Obtient les données spécifiques de l’application qui ont été chiffrées.
-public std :: Map\<std :: String, std :: String\> GetSignedAppData () const  |  Obtient les données spécifiques de l’application qui ont été signées.
+public std::map\<std::string, std::string\> GetEncryptedAppData() const  |  Obtient les données spécifiques de l’application qui ont été chiffrées.
+public std::map\<std::string, std::string\> GetSignedAppData() const  |  Obtient les données spécifiques de l’application qui ont été signées.
   
 ## <a name="members"></a>Membres
   
@@ -97,7 +97,7 @@ Vérifie si le contenu a une heure d’expiration ou non.
   
 **Retourne**la valeur true si le contenu peut expirer, sinon false.
   
-### <a name="getcontentvaliduntil-function"></a>GetContentValidUntil fonction)
+### <a name="getcontentvaliduntil-function"></a>GetContentValidUntil function
 Obtient l’heure d’expiration de la protection.
 
   

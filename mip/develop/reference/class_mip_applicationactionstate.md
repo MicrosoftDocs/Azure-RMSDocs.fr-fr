@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a3a5bde734c62859d2f2a03967a61d9ec14a2056
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73559446"
 ---
 # <a name="class-mipapplicationactionstate"></a>MIP :: ApplicationActionState, classe 
@@ -20,7 +20,7 @@ ms.locfileid: "73559446"
 --------------------------------|---------------------------------------------
 public LabelState GetNewLabelState () const  |  Obtient le nouvel état de l’étiquette.
 public std :: shared_ptr\<étiquette\> GetNewLabel () const  |  Obtient l’ID de l’étiquette de sensibilité à appliquer au document.
-STD public ::p air\<bool, std :: String\> IsDowngradeJustified () const  |  L’implémentation doit avoir lieu si une justification de passer une étiquette existante à une version antérieure a été fournie.
+public std::pair\<bool, std::string\> IsDowngradeJustified() const  |  L’implémentation doit avoir lieu si une justification de passer une étiquette existante à une version antérieure a été fournie.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Obtenir la méthode d’assignation de la nouvelle étiquette.
 public virtuel std :: Vector\<std ::p air\<std :: String, std :: String\>\> GetNewLabelExtendedProperties () const  |  Retourner les propriétés étendues de la nouvelle étiquette.
 public ActionType GetSupportedActions() const  |  Obtient une énumération masquée qui décrit tous les types d’action pris en charge.

@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 8a576565472327f0c090c3168662f16299d4b61f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792669"
 ---
 # <a name="android-setup"></a>Configuration pour Android
@@ -27,12 +27,12 @@ Les applications Android peuvent utiliser Microsoft Rights Management SDK 4.2 p
 
 Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
 
--   [Composants requis](#prerequisites)
+-   [Prérequis](#prerequisites)
 -   [Facultatif](#optional)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
 Nous recommandons les logiciels suivants sur votre système de développement :
 
@@ -47,7 +47,7 @@ Nous recommandons les logiciels suivants sur votre système de développement :
 
     Ce SDK peut être utilisé pour développer pour Android 4.0.3 (API niveau 15) et ultérieur.
 
--   Bibliothèque d’authentification : Nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Vous pouvez cependant utiliser aussi d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
+-   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Vous pouvez cependant utiliser aussi d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
 
     Pour plus d’informations, consultez [ADAL pour Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
@@ -63,7 +63,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 ## <a name="configuring-your-development-environment"></a>Configuration de votre environnement de développement
 
-**Remarque**   Préversion de MS RMS SDK 4.2 : Dans cette préversion, les captures d’écran n’ont pas été mises à jour pour montrer le changement du nom des chemins de com/microsoft/protection en com/microsoft/rightsmanagment. Le texte a cependant été mis à jour.
+**Remarque**  version préliminaire de MS Kit de développement logiciel (SDK) RMS 4,2 : dans cette version préliminaire, les captures d’écran n’ont pas été mises à jour pour afficher la modification du nom des chemins d’accès de com/Microsoft/protection à com/Microsoft/rightsmanagment. Le texte a cependant été mis à jour.
 
  
 -   Ouvrez l’environnement de développement Eclipse.
@@ -142,7 +142,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 ### <a name="see-also"></a>Voir aussi
 
-[Bien démarrer](get-started.md)
+[Prise en main](get-started.md)
 
 [Nouveautés](release-notes.md)
 

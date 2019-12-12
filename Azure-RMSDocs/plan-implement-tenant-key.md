@@ -4,7 +4,7 @@ description: Au lieu que Microsoft gère la clé racine pour Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/11/2019
+ms.date: 11/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 585b99fa7d6960c0a340b0f63f4d696d2bd4d9ce
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: b71300cd48df45d68b785e758e066de96ac4dca7
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559159"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934651"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planification et implémentation de la clé de locataire Azure Information Protection
 
@@ -159,13 +159,13 @@ Pour créer une clé locale protégée par module HSM et la transférer à votre
 
 Pour qu’Azure Information Protection utilise la clé, toutes les opérations Key Vault doivent être autorisées pour cette clé. Il s’agit de la configuration par défaut et les opérations sont chiffrer, déchiffrer, wrapKey, unwrapKey, signer et vérifier. Vous pouvez vérifier les opérations autorisées d’une clé à l’aide de la commande PowerShell suivante : `(Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps`. Si nécessaire, ajoutez des opérations autorisées à l’aide de [Update-AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey) et du paramètre *KeyOps* .
 
-Une clé qui est stockée dans Key Vault a un ID de clé. Cet ID de clé est une URL contenant le nom du coffre de clés, le conteneur de clés, le nom de la clé et la version de la clé. Par exemple : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** . Vous devez configurer Azure Information Protection pour l’utilisation de cette clé en spécifiant son URL Key Vault.
+Une clé qui est stockée dans Key Vault a un ID de clé. Cet ID de clé est une URL contenant le nom du coffre de clés, le conteneur de clés, le nom de la clé et la version de la clé. Par exemple : **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Vous devez configurer Azure Information Protection pour l’utilisation de cette clé en spécifiant son URL Key Vault.
 
 Avant qu’Azure Information Protection puisse utiliser la clé, le service Azure Rights Management doit être autorisé à utiliser la clé dans le coffre de clés de votre organisation. Pour ce faire, l’administrateur Azure Key Vault peut utiliser le portail Azure ou Azure PowerShell :
 
 Configuration à l’aide du portail Azure :
 
-1. Accédez à **Coffres de clés** >  **\<*nom de votre coffre de clés Key Vault*>**  > **Stratégies d’accès** > **Ajouter nouveau**.
+1. Accédez à **Coffres de clés** > **\<*nom de votre coffre de clés Key Vault*>** > **Stratégies d’accès** > **Ajouter nouveau**.
 
 2. Dans le volet **Ajouter une stratégie d’accès** , sélectionnez **Azure information protection BYOK** dans la zone de liste **configurer à partir d’un modèle (facultatif)** , puis cliquez sur **OK**.
     

@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: a6e5fae2296fb6f966f5f7fb6b73facb867398a2
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560449"
 ---
 # <a name="enumerations-and-structures"></a>Énumérations et structures
@@ -67,16 +67,16 @@ Alignement des marques de contenu (en-tête de contenu ou pied de page de conten
 #### <a name="assignmentmethod-enum"></a>Énumération assignation
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
-HIVER            | La méthode d’affectation d’étiquette est standard
+STANDARD            | La méthode d’affectation d’étiquette est standard
 AUTORISÉE            | La méthode d’affectation d’étiquette est privilégiée
-Auto            | La méthode d’affectation d’étiquette est automatique
+AUTO            | La méthode d’affectation d’étiquette est automatique
 Méthode d’assignation de l’étiquette sur le document. Indique si l’assignation de l’étiquette a été effectuée automatiquement, standard ou en tant qu’opération privilégiée (l’équivalent d’une opération d’administrateur).
   
 #### <a name="actionsource-enum"></a>Énumération ActionSource
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
-Manuelle            | Sélectionné manuellement par l’utilisateur
-Automatique            | Défini par les conditions de la stratégie
+MANUAL            | Sélectionné manuellement par l’utilisateur
+AUTOMATIC            | Défini par les conditions de la stratégie
 RECOMMANDATIONS            | Défini par l’utilisateur après que l’étiquette a été recommandée par les conditions de la stratégie
 DEFAULT            | Défini par défaut dans la stratégie
 définit ce qui a déclenché l’événement SetLabel
@@ -86,14 +86,14 @@ définit ce qui a déclenché l’événement SetLabel
 --------------------------------|---------------------------------------------
 REST            | Données inactives stockées physiquement dans les bases de données/fichiers/entrepôts
 FILMS            | Les données qui traversent un réseau ou qui résident temporairement dans la mémoire de l’ordinateur à lire ou à mettre à jour
-FAITES            | Données actives sous modification constante stockées physiquement dans les bases de données/fichiers/entrepôts, etc.
+USE            | Données actives sous modification constante stockées physiquement dans les bases de données/fichiers/entrepôts, etc.
 Définit l’état des données sur lequel l’application agit.
   
 #### <a name="contentformat-enum"></a>Énumération ContentFormat
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
 DEFAULT            | Le format du contenu est le format de fichier standard
-Messagerie            | Le format du contenu est un format d’e-mail
+E-MAIL            | Le format du contenu est un format d’e-mail
 Format du contenu.
   
 #### <a name="labelfiltertype-enum"></a>Énumération LabelFilterType
@@ -149,7 +149,7 @@ POLICY_SYNC_ERROR            | Une tentative de synchronisation des données de 
 NO_PERMISSIONS            | L’utilisateur n’a pas pu obtenir l’accès au contenu. Par exemple, aucune autorisation, contenu révoqué
 NO_AUTH_TOKEN            | L’utilisateur n’a pas pu accéder au contenu en raison d’un jeton d’authentification vide.
 DISABLED_SERVICE            | L’utilisateur n’a pas pu accéder au contenu en raison de la désactivation du service
-PROXY_AUTH_ERROR            | Échec de l’authentification du proxy.
+PROXY_AUTH_ERROR            | Échec de l'authentification du proxy.
 NO_POLICY            | Aucune stratégie n’est configurée pour l’utilisateur/locataire
 OPERATION_CANCELLED            | Opération annulée
 ADHOC_PROTECTION_REQUIRED            | La protection ad hoc doit être configurée pour terminer l’action sur le fichier
@@ -254,12 +254,12 @@ Sensibilité            |
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
 Header            | 
-Pied            | 
+Pied de page            | 
   
 #### <a name="labelactiondatatype-enum"></a>Énumération LabelActionDataType
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
-Recommander            | 
+Recommend            | 
 Appliquer            | 
   
 #### <a name="protectionactiontype-enum"></a>Énumération ProtectionActionType
@@ -384,9 +384,9 @@ public std::string Comment()       |  Obtient un identificateur de chaîne pour 
 public std::string Reply()       |  Obtient un identificateur de chaîne pour un droit « répondre ».
 public std::string ReplyAll()       |  Obtient un identificateur de chaîne pour un droit « répondre à tous ».
 public std::string Forward()       |  Obtient un identificateur de chaîne pour un droit « transférer ».
-public std :: Vector\<std :: String\> EmailRights ()       |  Obtient une liste de droits qui s’appliquent aux e-mails.
-public std :: Vector\<std :: String\> EditableDocumentRights ()       |  Obtient une liste de droits qui s’appliquent aux documents.
-public std :: Vector\<std :: String\> CommonRights ()       |  Obtient une liste des droits qui s’appliquent dans tous les scénarios.
+public std::vector\<std::string\> EmailRights()       |  Obtient une liste de droits qui s’appliquent aux e-mails.
+public std::vector\<std::string\> EditableDocumentRights()       |  Obtient une liste de droits qui s’appliquent aux documents.
+public std::vector\<std::string\> CommonRights()       |  Obtient une liste des droits qui s’appliquent dans tous les scénarios.
   
 ### <a name="members"></a>Membres
   
@@ -420,7 +420,7 @@ Obtient un identificateur de chaîne pour un droit « exporter ».
   
 **Renvoie** : identificateur de chaîne de « export » vers la droite
   
-#### <a name="extract-function"></a>Extraire la fonction
+#### <a name="extract-function"></a>fonction Extract
 Obtient un identificateur de chaîne pour un droit « extraire ».
 
   

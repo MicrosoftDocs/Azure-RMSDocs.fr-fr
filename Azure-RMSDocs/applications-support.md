@@ -4,7 +4,7 @@ description: Découvrez comment les applications les plus couramment utilisées 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/02/2019
+ms.date: 11/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e45fadfa83e6327e8fc16db8e86f89c7ed1cf07c
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 795c260430305492b19aded923c01cf4d918b70f
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684280"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935195"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Comment les applications prennent en charge le service Azure Rights Management
 
@@ -36,7 +36,7 @@ Pour les cas où les utilisateurs doivent appliquer eux-mêmes la protection, ve
 
 Pour plus d’informations sur la configuration de ces applications pour le service Azure Rights Management d’Azure Information Protection, consultez [Configuration d’applications pour Azure Rights Management](configure-applications.md).
 
-Les services de recherche peuvent s’intégrer à Rights Management de différentes manières. Exemple : 
+Les services de recherche peuvent s’intégrer à Rights Management de différentes manières. Exemple : 
 
 - Exchange Online et Exchange Server utilisent l’indexation côté service pour que les e-mails protégés de l’utilisateur soient affichés automatiquement dans les résultats de la recherche. 
 

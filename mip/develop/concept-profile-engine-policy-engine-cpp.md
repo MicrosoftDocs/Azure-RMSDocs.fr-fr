@@ -8,23 +8,23 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 5fac6b39cb3770748336fac7264134acf2627a02
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886062"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au moteur de l’API de stratégie
 
 `mip::PolicyEngine` implémente toutes les opérations que l’API de stratégie peut effectuer, à l’exception du chargement du profil.
 
-## <a name="implementation-add-a-policy-engine"></a>Déploiement Ajouter un moteur de stratégie
+## <a name="implementation-add-a-policy-engine"></a>Implémentation : Ajouter un moteur de stratégie
 
-### <a name="implementation-create-policy-engine-settings"></a>Déploiement Créer des paramètres du moteur de stratégie
+### <a name="implementation-create-policy-engine-settings"></a>Implémentation : Créer les paramètres du moteur de stratégie
 
 De façon similaire à un profil, le moteur nécessite également un objet de paramètres, `mip::PolicyEngine::Settings`. Cet objet stocke l’identificateur de moteur unique, les données client personnalisables qui peuvent être utilisées pour le débogage ou la télémétrie et, éventuellement, les paramètres régionaux.
 
-Ici, nous créons `FileEngine::Settings` un objet appelé *engineSettings* à l’aide de l’identité de l’utilisateur de l’application:
+Ici, nous créons un objet `FileEngine::Settings` appelé *engineSettings* à l’aide de l’identité de l’utilisateur de l’application :
 
 ```cpp
 PolicyEngine::Settings engineSettings(
@@ -34,7 +34,7 @@ PolicyEngine::Settings engineSettings(
   false);                   // Load sensitive information types for driving classification.
 ```
 
-Un ID de moteur personnalisé est également fourni:
+Un ID de moteur personnalisé est également fourni :
 
 ```cpp
 PolicyEngine::Settings engineSettings(
@@ -46,7 +46,7 @@ PolicyEngine::Settings engineSettings(
 
 En guise de bonne pratique, le premier paramètre, **id**, doit être un élément permettant au moteur d’être facilement connecté à l’utilisateur associé, de préférence le nom d’utilisateur principal.
 
-### <a name="implementation-add-the-policy-engine"></a>Déploiement Ajouter le moteur de stratégie
+### <a name="implementation-add-the-policy-engine"></a>Implémentation : Ajouter le moteur de stratégie
 
 Pour ajouter le moteur, nous allons revenir au modèle futur/promesse utilisé pour charger le profil. Au lieu de créer la promesse pour `mip::Profile`, nous allons utiliser `mip::PolicyEngine`.
 
@@ -73,19 +73,19 @@ Pour ajouter le moteur, nous allons revenir au modèle futur/promesse utilisé p
 
 Le résultat final du code ci-dessus est que nous avons ajouté avec succès un moteur pour l’utilisateur authentifié au profil.
 
-## <a name="implementation-list-sensitivity-labels"></a>Déploiement Répertorier les étiquettes de sensibilité
+## <a name="implementation-list-sensitivity-labels"></a>Implémentation : Répertorier les étiquettes de sensibilité
 
 En utilisant le moteur ajouté, il est maintenant possible de répertorier toutes les étiquettes de sensibilité disponibles pour l’utilisateur authentifié en appelant `engine->ListSensitivityLabels()`.
 
 `ListSensitivityLabels()` extrait la liste des étiquettes et les attributs de ces étiquettes pour un utilisateur spécifique à partir du service. Le résultat est stocké dans un vecteur de `std::shared_ptr<mip::Label>`.
 
-### <a name="implementation-listsensitivitylabels"></a>Déploiement ListSensitivityLabels()
+### <a name="implementation-listsensitivitylabels"></a>Implémentation : ListSensitivityLabels()
 
 ```cpp
 std::vector<shared_ptr<mip::Label>> labels = engine->ListSensitivityLabels();
 ```
 
-### <a name="implementation-print-the-labels"></a>Déploiement Imprimer les étiquettes
+### <a name="implementation-print-the-labels"></a>Implémentation : Imprimer les étiquettes
 
 ```cpp
 //Iterate through all labels in the vector

@@ -15,13 +15,13 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 6f36ef984a6d6d10ce06ae690c98153524a7d301
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791487"
 ---
-# <a name="overview"></a>Présentation
+# <a name="overview"></a>Overview
 
 Rights Management Services SDK 2.1 est une technologie de protection des informations qui vous aide à protéger les informations numériques contre toute utilisation non autorisée. Dans votre application avec gestion des droits, les propriétaires de contenu peuvent définir qui peut ouvrir, modifier, imprimer, transférer ou effectuer d’autres actions avec le contenu.
 
@@ -29,7 +29,7 @@ AD RMS est constitué de composants [serveur](ad-rms-server.md) et [client](ad-r
 
 Le composant [client](ad-rms-client.md) peut être exécuté sur un système d’exploitation client ou serveur et il contient des fonctions qui permettent à une application de chiffrer et déchiffrer du contenu, de récupérer des modèles et des listes de révocation, d’acquérir des licences et des certificats auprès d’un serveur, ainsi que d’autres tâches liées à la gestion des droits.
 
-Pour plus d’informations, voir [Types d’applications](application-types.md).
+Pour plus d’informations, consultez [Types d’applications](application-types.md).
 
 Voici quelques scénarios pour lesquels des applications basées sur le SDK Rights Management Services 2.1 peuvent être utilisées.
 
@@ -54,5 +54,5 @@ Les autres rubriques de cette section traitent de l’architecture RMS et ses im
 ## <a name="related-topics"></a>Rubriques connexes
 
 * [Concepts RMS](application-types.md)
-* [Bien démarrer](getting-started-with-ad-rms-2-0.md)
+* [Prise en main](getting-started-with-ad-rms-2-0.md)
 * [Documentation d’AD RMS pour les professionnels de l’informatique](https://technet.microsoft.com/library/cc771234.aspx)

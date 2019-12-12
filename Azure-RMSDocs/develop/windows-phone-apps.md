@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 08981ab13862eed815609eaad4c6733ec205e0a1
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792093"
 ---
 # <a name="windows-phone-setup"></a>Configuration pour Windows Phone
@@ -28,11 +28,11 @@ Les applications Windows Phone peuvent utiliser Microsoft Rights Management SDK�
 
 Cette rubrique explique comment configurer votre environnement pour créer vos propres applications.
 
--   [Composants requis](#prerequisites)
+-   [Prérequis](#prerequisites)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
 
 Vous devez disposer des logiciels suivants sur votre système de développement :
@@ -71,7 +71,7 @@ Vous êtes maintenant prêt à créer vos propres applications Windows Phone.
 
 ### <a name="see-also"></a>Voir aussi
 
-[Bien démarrer](get-started.md)
+[Prise en main](get-started.md)
 
 [Nouveautés](release-notes.md)
 

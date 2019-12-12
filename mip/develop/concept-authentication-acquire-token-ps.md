@@ -8,27 +8,27 @@ ms.collection: M365-security-compliance
 ms.date: 02/04/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 68ae6bc02f671f0a4d18c382ccde4f53873b2fd4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175307"
 ---
 # <a name="acquire-an-access-token-powershell"></a>Acquérir un jeton d’accès (PowerShell)
 
-L’exemple montre comment appeler un script PowerShell externe pour obtenir un jeton OAuth2. Un jeton d’accès OAuth2 valid est requis par l’implémentation du délégué d’authentification.
+L’exemple illustré montre comment appeler un script PowerShell externe pour obtenir un jeton OAuth2. Un jeton d’accès OAuth2 valide est requis par l’implémentation du délégué d’authentification.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
-- Complète [le programme d’installation du Kit de développement logiciel (MIP) et la configuration](setup-configure-mip.md). Parmi d’autres tâches, vous allez inscrire votre application cliente dans votre client Azure Active Directory (Azure AD). Azure AD fournit un ID d’application, également appelé ID de client, qui est utilisé dans votre logique d’acquisition de jeton.
+- [Installation et configuration du kit de développement logiciel (MIP) SDK](setup-configure-mip.md). Entre autres tâches, vous allez inscrire votre application cliente dans votre locataire Azure Active Directory (Azure AD). Azure AD fournira un ID d’application, également appelé ID client, qui est utilisé dans votre logique d’acquisition de jeton.
 
-Ce code n’est pas destiné à des fins de production. Il peut uniquement servir pour le développement et de présentation des concepts d’authentification. 
+Ce code n’est pas destiné à une utilisation en production. Elle ne peut être utilisée que pour le développement et la compréhension des concepts d’authentification. 
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
 ### <a name="authh"></a>auth.h
 
-Nous créons une fonction unique appelée AcquireToken. Dans la mesure où la valeur de retour sera codé en dur pour ce didacticiel, nous n’accepter aucun paramètre et retourner une chaîne (jeton).
+Nous créons une fonction unique appelée AcquireToken. Étant donné que la valeur de retour sera codée en dur pour ce didacticiel, nous n’acceptons aucun paramètre et renvoyons une chaîne (le jeton).
 
 ```cpp
 //auth.h
@@ -43,7 +43,7 @@ namespace sample {
 
 ### <a name="authcpp"></a>auth.cpp
 
-Notre fichier source retourne une valeur de jeton qui sera codé en dur dans une étape ultérieure.
+Notre fichier source retourne une valeur de jeton qui sera codée en dur dans une étape ultérieure.
 
 ```cpp
 //auth.cpp
@@ -66,7 +66,7 @@ Pour finir, émettez un jeton à placer dans la variable mToken. L’exemple ci-
 
 ### <a name="install-adalpshttpswwwpowershellgallerycompackagesadalps31942-from-ps-gallery"></a>Installer [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) à partir de la galerie PS
 
-Vous pouvez ignorer cette étape si vous avez terminé il précédemment dans [le programme d’installation du Kit de développement logiciel (MIP) et la configuration](setup-configure-mip.md).
+Vous pouvez ignorer cette étape si vous l’avez effectuée précédemment dans [le kit de développement logiciel (MIP) SDK Setup and configuration](setup-configure-mip.md).
 
 ```PowerShell
 Install-Module -Name ADAL.PS

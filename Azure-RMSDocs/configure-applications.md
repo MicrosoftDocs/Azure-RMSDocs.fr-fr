@@ -4,7 +4,7 @@ description: Instructions pour les administrateurs relatives à la configuration
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d4fd33ee379660628a4a870e81d738e068f50482
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: f361c96b3b1143b59d431124988eca84f66d8ec9
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684232"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933546"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configuration d’applications pour Azure Rights Management
 
@@ -34,19 +34,19 @@ Après avoir déployé Azure Information Protection pour votre organisation, uti
 > [!IMPORTANT]
 > Pour plus d’informations sur les versions prises en charge et d’autres conditions requises, consultez [Configuration requise pour Azure information protection](requirements.md).
 
--   [Office 365 : Configuration pour services en ligne](configure-office365.md)
+-   [Office 365 : configuration pour services en ligne](configure-office365.md)
 
-    -   [Exchange Online : Configuration de la Gestion des droits relatifs à l’information](configure-office365.md#exchangeonline-irm-configuration)
+    -   [Exchange Online : configuration d’IRM](configure-office365.md#exchangeonline-irm-configuration)
 
-    -   [SharePoint Online et OneDrive Entreprise : Configuration de la Gestion des droits relatifs à l’information](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)
+    -   [SharePoint Online et OneDrive entreprise : configuration de la gestion des droits relatifs à l’information](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)
 
-- [Applications Office : Configuration pour les clients](configure-office-apps.md)
+- [Applications Office : configuration pour les clients](configure-office-apps.md)
 
     -   [Office 365 Apps, Office 2019, Office 2016 et Office 2013](configure-office-apps.md#office365-apps-office-2019-office-2016-and-office-2013)
 
     -   [Office 2010](configure-office-apps.md#office2010)
 
--   [Client Azure Information Protection : Installation et configuration pour les clients](configure-client.md)
+-   [Client Azure Information Protection : installation et configuration pour les clients](configure-client.md)
 
 Pour configurer des serveurs locaux tels que SharePoint Server et Exchange Server, consultez [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md).
 

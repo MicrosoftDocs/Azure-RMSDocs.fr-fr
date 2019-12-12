@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: e67c2122314d33a6b49f6696f1f13d6f0bbde920
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558694"
 ---
 # <a name="class-miplabelgroupdata"></a>MIP :: LabelGroupData, classe 
@@ -35,7 +35,7 @@ public const std ::p air\<std :: String, std :: String\>& GetMoreInfoUrl () c
 public bool IsMandatory () const  | Pas encore documenté.
 public const std :: Vector\<ProtectionActionType\>& GetProtectionActionTypes () const  | Pas encore documenté.
 public bool IsAuditEnabled () const  | Pas encore documenté.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  | Pas encore documenté.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  | Pas encore documenté.
 public const std :: Vector\<std :: String\>& GetLabelByCustomProperties () const  | Pas encore documenté.
 public const std :: Vector\<std :: String\>& GetCustomPropertiesByLabel () const  | Pas encore documenté.
 virtuel public ~ LabelGroupData ()  | Pas encore documenté.

@@ -14,10 +14,10 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 978feb26639a3c8f05ac2576a2e922c744cae9cf
-ms.sourcegitcommit: fed1df1858f8316f7dd45e751c6910b444651a87
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74474316"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
@@ -62,7 +62,7 @@ Avant de procéder à la migration vers Azure Information Protection, assurez-vo
         
       - Windows Server 2016 (x64)
         
-  - Toutes les topologies AD RMS valides sont prises en charge :
+  - Toutes les topologies AD RMS valides sont prises en charge :
     
       - Forêt unique, cluster RMS unique
         

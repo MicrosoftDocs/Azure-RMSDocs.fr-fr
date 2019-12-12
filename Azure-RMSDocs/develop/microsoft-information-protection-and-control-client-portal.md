@@ -15,15 +15,15 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: f8d11222ec554c16ce1b3c0113d3bbe7cb291004
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68790899"
 ---
 # <a name="rights-management-services-sdk-21"></a>Rights Management Services SDK 2.1
 
-## <a name="purpose"></a>Objectif
+## <a name="purpose"></a>Fonction
 
 La plateforme Rights Management Services SDK 2.1 permet aux développeurs de créer des applications qui tirent parti de Rights Management Services (RMS) ou d’Azure Rights Management pour assurer la protection des informations. RMS SDK 2.1 gère des pratiques de sécurité complexes, comme la gestion des clés, et le traitement du chiffrement et du déchiffrement, et il offre une API simplifiée pour le développement d’applications.
 

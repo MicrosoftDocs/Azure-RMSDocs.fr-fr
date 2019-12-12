@@ -4,7 +4,7 @@ description: Comprenez et implémentez la fonctionnalité de super utilisateur d
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b7e8d2b2f510a97c01ecf02040a404b11ffdc9be
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 6121403dd5d384be5ec969a417c42dc41e90e69b
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72446986"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934957"
 ---
 # <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Configuration de super utilisateurs pour les services de Azure Information Protection et de découverte ou la récupération de données
 
@@ -42,7 +42,7 @@ Un super utilisateur a toujours le [droit d’utilisation](configure-usage-right
 
 Par défaut, la fonctionnalité de super utilisateur n'est pas activée, et ce rôle n'est attribué à aucun utilisateur. Elle est automatiquement activée si vous configurez le connecteur Rights Management pour Exchange. Elle n’est pas requise pour les services standard qui exécutent Exchange Online, SharePoint Online ou SharePoint Server.
 
-Si vous devez activer manuellement la fonctionnalité de super utilisateur, utilisez l’applet de commande PowerShell [Enable-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature), puis affectez des utilisateurs (ou des comptes de service) en fonction des besoins à l’aide de l’applet de commande [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) ou de l’applet de [commande Définissez](/powershell/module/aipservice/set-aipservicesuperusergroup) l’applet de commande Set-AipServiceSuperUserGroup et ajoutez des utilisateurs (ou d’autres groupes) en fonction des besoins de ce groupe. 
+Si vous devez activer manuellement la fonctionnalité de super utilisateur, utilisez l’applet de commande PowerShell [Enable-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature), puis affectez des utilisateurs (ou des comptes de service) en fonction des besoins à l’aide de l’applet de commande [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) ou de l’applet de commande [Set-AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) , puis ajoutez des utilisateurs (ou d’autres groupes) en fonction des besoins de ce groupe. 
 
 Bien que l’utilisation d’un groupe de super utilisateurs soit plus facile à gérer, n’oubliez pas que pour des raisons de performances, Azure Rights Management [met en cache l’appartenance au groupe](prepare.md#group-membership-caching-by-azure-information-protection). Par conséquent, si vous devez affecter un nouvel utilisateur en tant que super utilisateur pour déchiffrer le contenu immédiatement, ajoutez-le à l’aide de Add-AipServiceSuperUser, plutôt que d’ajouter l’utilisateur à un groupe existant que vous avez configuré à l’aide de Set-AipServiceSuperUserGroup.
 

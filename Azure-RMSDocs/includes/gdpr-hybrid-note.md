@@ -1,6 +1,6 @@
 ---
-title: Fichier Include
-description: Fichier Include
+title: fichier descriptif
+description: fichier descriptif
 services: azure-policy
 author: eross-msft
 ms.service: azure-policy
@@ -10,10 +10,10 @@ ms.date: 07/01/2018
 ms.author: lizross
 ms.custom: include file
 ms.openlocfilehash: c5752d469056680448b5f31cf0d901e881231868
-ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68912350"
 ---
 >[!Note]

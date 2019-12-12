@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: d1c1a66ce3821bf3d552ee0daa0648940b645fcb
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560258"
 ---
 # <a name="class-mipfilehandlerobserver"></a>mip::FileHandler::Observer, classe 
@@ -28,7 +28,7 @@ public virtual void OnGetDecryptedTemporaryFileSuccess (const std :: String & d
 public virtual void OnGetDecryptedTemporaryFileFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelée lors de l’échec de l’obtention du fichier temporaire déchiffré.
 public virtual void OnGetDecryptedTemporaryStreamSuccess (const std :: shared_ptr\<flux\>& decryptedStream, const std :: shared_ptr\<void\>& contexte)  |  Appelée lors de la réussite du flux temporaire déchiffré.
 public virtual void OnGetDecryptedTemporaryStreamFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé lors de l’échec de l’obtention du flux de déchiffrement temporaire.
-public virtual void OnCommitSuccess (bool validée, const std :: shared_ptr\<void\>contexte &)  |  Appelé quand la validation des modifications du fichier a réussi.
+public virtual void OnCommitSuccess (bool validée, const std :: shared_ptr\<void\>& Context)  |  Appelé quand la validation des modifications du fichier a réussi.
 public virtual void OnCommitFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé en cas d’échec de la validation des modifications du fichier.
 public virtual void OnInspectSuccess (const std :: shared_ptr\<FileInspector\>& fileInspector, const std :: shared_ptr\<void\>contexte &)  |  Appelé lorsque l’inspection est réussie.
 public virtual void OnInspectFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé lorsque l’inspection a échoué.

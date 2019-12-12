@@ -14,11 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
+experimental: true
+experiment_id: priyamo-test-20160729
 ms.openlocfilehash: cd70cecf84a6f346d3e88e3a7aa9cc28406fd265
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792014"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>Comment : activer le suivi et la révocation de documents
@@ -35,7 +37,7 @@ Les étapes 1 et 2 permettent au document d’être suivi. L’étape 3 permet
 
 Les détails de l’implémentation de ces étapes suivent.
 
-## <a name="1-add-document-tracking-metadata"></a>1. Ajouter des métadonnées de suivi des documents
+## <a name="1-add-document-tracking-metadata"></a>1. ajouter des métadonnées de suivi de document
 
 Le suivi de documents est une fonctionnalité du système Rights Management. En ajoutant des métadonnées spécifiques pendant le processus de protection d’un document, vous pouvez inscrire le document auprès d’un portail de services offrant différentes options de suivi.
 
@@ -88,7 +90,7 @@ Enfin, utilisez cette API pour inscrire votre document faisant l’objet d’un 
 - [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
 
-## <a name="2-register-the-document-with-the-rms-service"></a>2. Inscrire le document auprès du service RMS
+## <a name="2-register-the-document-with-the-rms-service"></a>2. inscrire le document auprès du service RMS
 
 Voici un exemple d’extrait de code illustrant la définition des métadonnées de suivi de document et l’appel utilisé pour inscrire le document auprès du système de suivi.
 

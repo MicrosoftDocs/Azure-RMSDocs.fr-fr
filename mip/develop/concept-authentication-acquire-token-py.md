@@ -8,19 +8,19 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: b46f478dc38e9010cc2eb221f587f3d3ca3f60a2
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69884735"
 ---
 # <a name="acquire-an-access-token-python"></a>Acquérir un jeton d’accès (Python)
 
 Cet exemple montre comment appeler un script Python externe pour obtenir un jeton OAuth2. Un jeton d’accès OAuth2 valide est requis par l’implémentation du délégué d’authentification.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
-Pour exécuter l’exemple ci-dessous:
+Pour exécuter l’exemple ci-dessous :
 
 - Installez Python 2,7 ou une version plus récente.
 - Implémentez utils.h/cpp dans votre projet. 
@@ -31,7 +31,7 @@ Ce code n’est pas destiné à une utilisation en production. Elle ne peut êtr
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
-Dans l’exemple d’authentification simple, nous avons démontré `AcquireToken()` une fonction simple qui n’a pris aucun paramètre et a retourné une valeur de jeton codée en dur. Dans cet exemple, nous allons surcharger AcquireToken() pour accepter des paramètres d’authentification et appeler un script Python externe pour retourner le jeton.
+Dans l’exemple d’authentification simple, nous avons démontré une fonction de `AcquireToken()` simple qui n’a pris aucun paramètre et a retourné une valeur de jeton codée en dur. Dans cet exemple, nous allons surcharger AcquireToken() pour accepter des paramètres d’authentification et appeler un script Python externe pour retourner le jeton.
 
 ### <a name="authh"></a>auth.h
 
@@ -120,7 +120,7 @@ namespace sample {
 Ce script acquiert des jetons d’authentification directement via [Adal pour Python](https://github.com/AzureAD/azure-activedirectory-library-for-python). Ce code est inclus uniquement comme un moyen d’acquérir des jetons d’authentification pour une utilisation par les exemples d’applications et n’est pas destiné à être utilisé en production. Le script fonctionne uniquement sur les locataires qui prennent en charge une authentification http traditionnelle par nom d’utilisateur/mot de passe. L’authentification basée sur MFA ou des certificats échouera.
 
 > [!NOTE] 
-> Avant d’exécuter cet exemple, vous devez installer ADAL pour Python en exécutant l’une des commandes suivantes:
+> Avant d’exécuter cet exemple, vous devez installer ADAL pour Python en exécutant l’une des commandes suivantes :
 
 ```shell
 pip install adal

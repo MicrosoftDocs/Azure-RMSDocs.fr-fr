@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 5534cf804422de2d02a53e8c21ceae77af52691d
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886092"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-profile-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au profil de l’API de fichier
@@ -20,25 +20,25 @@ Le profil est la classe racine pour toutes les opérations dans le kit SDK MIP. 
 
 Certaines exigences de code doivent être remplies avant d’essayer d’instancier un profil :
 
-- `MipContext`a été créé et stocké dans un objet accessible à `mip::FileProfile` l’objet.
-- `AuthDelegateImpl`implémente `mip::AuthDelegate`.
-- `ConsentDelegateImpl`implémente `mip::ConsentDelegate`.
+- `MipContext` a été créé et stocké dans un objet accessible à l’objet `mip::FileProfile`.
+- L'objet `AuthDelegateImpl` implémente l'objet `mip::AuthDelegate`.
+- L'objet `ConsentDelegateImpl` implémente l'objet `mip::ConsentDelegate`.
 - L’application a été [inscrite dans Azure Active Directory](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad.md) et l’ID client est codé en dur dans les fichiers de configuration ou d’application.
 - Une classe héritant de `mip::FileProfile::Observer` a été correctement implémentée.
 
 ## <a name="load-a-profile"></a>Charger un profil
 
-Les objets `ProfileObserver`, `ConsentDelegateImpl` et `AuthDelegateImpl` ayant été définis, `mip::FileProfile` peut maintenant être instancié. La création `mip::FileProfile` de l’objet`mip::MipContext`nécessite que [] [`mip::FileProfile::Settings`](reference/class_mip_fileprofile_settings.md) ait et `FileProfile`stocke toutes les informations de paramètres relatives à.
+Les objets `ProfileObserver`, `ConsentDelegateImpl` et `AuthDelegateImpl` ayant été définis, `mip::FileProfile` peut maintenant être instancié. La création de l’objet `mip::FileProfile` nécessite que [`mip::MipContext`] ait et [`mip::FileProfile::Settings`](reference/class_mip_fileprofile_settings.md) pour stocker toutes les informations de paramètres concernant le `FileProfile`.
 
 ### <a name="fileprofilesettings-parameters"></a>Paramètres FileProfile::Settings
 
 Le constructeur `FileProfile::Settings` accepte cinq paramètres, répertoriés ci-dessous :
 
-- `std::shared_ptr<MipContext>`: Objet `mip::MipContext` qui a été initialisé pour stocker les informations sur l’application, le chemin d’accès à l’État, etc.
-- `mip::CacheStorageType`: Définit le mode de stockage de l’État: En mémoire, sur disque, sur disque et chiffré.
-- `std::shared_ptr<mip::AuthDelegate>`: Pointeur partagé de la classe `mip::AuthDelegate`.
-- `std::shared_ptr<mip::ConsentDelegate>`: Pointeur partagé de la classe [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
-- `std::shared_ptr<mip::FileProfile::Observer> observer`: Pointeur partagé vers l’implémentation de `Observer` profil (dans [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)et [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
+- `std::shared_ptr<MipContext>`: objet `mip::MipContext` qui a été initialisé pour stocker les informations sur l’application, le chemin d’accès à l’État, etc.
+- `mip::CacheStorageType`: définit le mode de stockage de l’État : en mémoire, sur disque, sur disque et chiffré.
+- `std::shared_ptr<mip::AuthDelegate>` : un pointeur partagé de classe `mip::AuthDelegate`.
+- `std::shared_ptr<mip::ConsentDelegate>`: pointeur partagé de la classe [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
+- `std::shared_ptr<mip::FileProfile::Observer> observer`: pointeur partagé vers l’implémentation du profil `Observer` (dans [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)et [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 
 Les exemples ci-dessous montrent comment créer l’objet `profileSettings` en utilisant un stockage local pour le stockage de l’état, ainsi qu’un stockage en mémoire uniquement. Les deux supposent que l’objet `authDelegateImpl` a déjà été créé.
 

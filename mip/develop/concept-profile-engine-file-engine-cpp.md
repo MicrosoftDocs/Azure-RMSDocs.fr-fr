@@ -8,21 +8,21 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 5cd54fb4d7b153ccdec3fdd6d7919b7595cfed96
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886098"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au moteur de l’API de fichier
 
 L’objet `mip::FileEngine` figurant dans l’API de fichier du kit SDK MIP fournit une interface pour toutes les opérations effectuées au nom d’une identité donnée. Un seul moteur est ajouté pour chaque utilisateur qui se connecte à l’application et toutes les opérations que le moteur effectue sont effectuées dans le contexte de cette identité.
 
-Le `FileEngine` a deux responsabilités principales: Répertorier les étiquettes pour un utilisateur authentifié et créer des gestionnaires de fichiers pour effectuer des opérations sur les fichiers pour le compte de l’utilisateur. 
+Le `FileEngine` a deux responsabilités principales : répertorier les étiquettes pour un utilisateur authentifié et créer les gestionnaires de fichier pour effectuer les opérations de fichier au nom de l’utilisateur. 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
-- `ListSensitivityLabels()`: Obtient la liste des étiquettes pour le moteur chargé.
-- `CreateFileHandler()`: Crée un `mip::FileHandler` pour un fichier ou un flux spécifique.
+- `ListSensitivityLabels()` : obtient la liste des étiquettes pour le moteur chargé.
+- `CreateFileHandler()` : crée un `mip::FileHandler` pour un flux ou un fichier spécifique.
 
 ## <a name="add-a-file-engine"></a>Ajouter un moteur de fichier
 
@@ -32,7 +32,7 @@ Tel qu’indiqué dans [Objets de profil et de moteur](concept-profile-engine-cp
 
 De façon similaire à un profil, le moteur nécessite également un objet de paramètres, `mip::FileEngine::Settings`. Cet objet stocke l’identificateur de moteur unique, les données client personnalisables qui peuvent être utilisées pour le débogage ou la télémétrie et, éventuellement, les paramètres régionaux.
 
-Ici, nous créons `FileEngine::Settings` un objet appelé *engineSettings* à l’aide de l’identité de l’utilisateur de l’application.
+Ici, nous créons un objet `FileEngine::Settings` appelé *engineSettings* à l’aide de l’identité de l’utilisateur de l’application.
 
 ```cpp
 FileEngine::Settings engineSettings(
@@ -42,7 +42,7 @@ FileEngine::Settings engineSettings(
   false);                   // Load sensitive information types for driving classification.
 ```
 
-Un ID de moteur personnalisé est également fourni:
+Un ID de moteur personnalisé est également fourni :
 
 ```cpp
 FileEngine::Settings engineSettings(

@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
 ms.openlocfilehash: 8ade287531ee9f1c18678d42ef5e51a4c70ee13f
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886196"
 ---
 # <a name="compute-an-action"></a>Calculer une action
@@ -30,7 +30,7 @@ Un exemple de code pour cet article est disponible sur GitHub.
 
 ## <a name="compute-an-action-for-a-new-label"></a>Calculer une action pour une nouvelle étiquette
 
-Le calcul `mip::Actions` du pour une nouvelle étiquette peut être effectué à l’aide `ExecutionStateImpl` du défini dans [ExecutionState](concept-handler-policy-executionstate-cpp.md).
+Le calcul du `mip::Actions` pour une nouvelle étiquette peut être obtenu à l’aide de la `ExecutionStateImpl` définie dans [ExecutionState](concept-handler-policy-executionstate-cpp.md).
 
 ```cpp
 // Replace with valid label ID.
@@ -65,7 +65,7 @@ Add: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ContentBits : 3
 
 ## <a name="compute-actions-with-an-existing-label"></a>Calculer des actions avec une étiquette existante
 
-Lors de l’utilisation de l’API de stratégie, il est à l’application de lire les métadonnées à partir du contenu. Ces métadonnées sont fournies à l’API dans le cadre de `mip::ExecutionState`. `ComputeActions()` peut prendre en charge des opérations plus complexes que l’application d’une nouvelle étiquette à un document qui n’en a pas. L’exemple ci-dessous illustre la rétrogradation d’une étiquette d’une étiquette plus sensible à une étiquette moins sensible. Ce processus est simulé en lisant une chaîne de métadonnées séparées par des virgules et en fournissant l’API `mip::ExecutionState`via.
+Lors de l’utilisation de l’API de stratégie, il est à l’application de lire les métadonnées à partir du contenu. Ces métadonnées sont fournies à l’API dans le cadre de `mip::ExecutionState`. `ComputeActions()` peut prendre en charge des opérations plus complexes que l’application d’une nouvelle étiquette à un document qui n’en a pas. L’exemple ci-dessous illustre la rétrogradation d’une étiquette d’une étiquette plus sensible à une étiquette moins sensible. Ce processus est simulé en lisant une chaîne de métadonnées séparées par des virgules et en fournissant l’API via `mip::ExecutionState`.
 
 > [!NOTE]
 > L’exemple utilise une fonction utilitaire appelée `SplitString()`. Vous pouvez trouver un exemple [ici](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/utils.cpp)

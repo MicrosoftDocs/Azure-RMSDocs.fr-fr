@@ -4,7 +4,7 @@ description: Découvrez en détail le fonctionnement d’Azure RMS, les contrôl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 29bbb0b080e39cad118b49f695d8ec1d1d5b5493
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 274889b59e40157bf0a4fb3e02a350b17907ddfa
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689595"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934770"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Fonctionnement d'Azure RMS Sous le capot
 
@@ -30,27 +30,27 @@ En ce qui concerne le fonctionnement d’Azure RMS, il est important de comprend
 
 - Quand un document protégé est utilisé par un utilisateur légitime, ou traité par un service autorisé, ses données sont déchiffrées et les droits définis dans la stratégie appliqués.
 
-Dans l’image suivante, vous pouvez voir comment ce processus fonctionne dans sa globalité. Un document contenant la formule secrète est protégé, puis ouvert correctement par un utilisateur ou un service autorisé. Le document est protégé par une clé de contenu (la clé verte sur cette image). Elle est unique pour chaque document et est placée dans l’en-tête du fichier où elle est protégée par votre clé racine de locataire Azure Information Protection (la clé rouge sur l’image). Microsoft peut générer et gérer votre clé de locataire. Vous pouvez également générer et gérer personnellement votre propre clé de locataire.
+À un niveau élevé, vous pouvez voir comment ce processus fonctionne dans l'image suivante. Un document contenant la formule secrète est protégé, puis ouvert correctement par un utilisateur ou un service autorisé. Le document est protégé par une clé de contenu (la clé verte sur cette image). Elle est unique pour chaque document et est placée dans l’en-tête du fichier où elle est protégée par votre clé racine de locataire Azure Information Protection (la clé rouge sur l’image). Microsoft peut générer et gérer votre clé de locataire. Vous pouvez également générer et gérer personnellement votre propre clé de locataire.
 
 Durant le processus de protection, quand Azure RMS chiffre, déchiffre, autorise et applique des restrictions, la formule secrète n'est jamais envoyée à Azure.
 
 ![Comment Azure RMS protège un fichier](./media/AzRMS_SecretColaFormula_final.png)
 
-Pour une description détaillée de ce qui se passe, consultez la section [Procédure pas à pas décrivant le fonctionnement d’Azure RMS : première utilisation, protection du contenu, consommation du contenu](#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) de cet article.
+Pour obtenir une description détaillée de ce qui se passe, consultez la section [Procédure pas à pas décrivant le fonctionnement d’Azure RMS : première utilisation, protection du contenu, consommation du contenu](#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) de cet article.
 
 Pour obtenir des détails techniques sur les algorithmes et les longueurs de clé qu'Azure RMS utilise, consultez la section suivante.
 
-## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Contrôles de chiffrement utilisés par Azure RMS : Algorithmes et longueurs de clé
+## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Contrôles de chiffrement utilisés par Azure RMS : Algorithmes et longueurs de clé
 Même si vous n’avez pas besoin de connaître en détail le fonctionnement de cette technologie, vous devrez peut-être fournir certaines informations sur les contrôles de chiffrement utilisés, par exemple, pour confirmer que la protection de sécurité répond aux normes.
 
 
 |Contrôles de chiffrement|Utilisation dans Azure RMS|
 |-|-|
-|Utilisé CHIFFRE<br /><br />Longueur de la clé : 128 bits et 256 bits [[1]](#footnote-1)|Protection du contenu|
-|Utilisé RSA<br /><br />Longueur de la clé : 2 048 bits [[2]](#footnote-2)|Protection de clé|
+|Algorithme : AES<br /><br />Longueur de clé : 128 bits et 256 bits [[1]](#footnote-1)|Protection du contenu|
+|Algorithme : RSA<br /><br />Longueur de clé : 2 048 bits [[2]](#footnote-2)|Protection de clé|
 |SHA-256|Signature de certificat|
 
-###### <a name="footnote-1"></a>Note 1 
+###### <a name="footnote-1"></a>Note de bas de page 1 
 
 Une clé de 256 bits est utilisée par le client Azure Information Protection dans les scénarios suivants :
 
@@ -79,7 +79,7 @@ Cette clé de locataire est protégée dans les services en ligne de Microsoft, 
 Les licences et certificats envoyés à un appareil Windows sont protégés par la clé privée d’appareil du client, créée quand un utilisateur utilise Azure RMS sur l’appareil pour la première fois. Cette clé privée est à son tour protégée par DPAPI sur le client, ce qui a pour effet de protéger ces secrets à l’aide d’une clé dérivée du mot de passe de l’utilisateur. Sur les appareils mobiles, les clés ne sont utilisées qu’une seule fois. Ainsi, n’étant pas stockées sur les clients, elles ne nécessitent pas de protection sur l’appareil. 
 
 
-## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procédure pas à pas de fonctionnement de Azure RMS : Première utilisation, protection du contenu, consommation du contenu
+## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procédure pas à pas décrivant le fonctionnement d'Azure RMS : première utilisation, protection du contenu, consommation du contenu
 Pour comprendre plus en détails le fonctionnement d’Azure RMS, examinons un flux classique tel qu’il se produit après l’[activation du service Azure Rights Management](activate-service.md), quand un utilisateur utilise le service Rights Management pour la première fois sur son ordinateur Windows (un processus parfois nommé **initialisation de l’environnement utilisateur** ou amorçage), **protège du contenu** (un document ou un e-mail), puis **consomme** (ouvre et utilise) du contenu protégé par quelqu’un d’autre.
 
 Après l'initialisation de l'environnement utilisateur, l'utilisateur peut protéger des documents ou consommer des documents protégés sur cet ordinateur.
@@ -92,7 +92,7 @@ Pour qu'un utilisateur puisse protéger du contenu ou utiliser du contenu proté
 
 ![Flux d’activation du client RMS : étape 1, authentification du client](./media/AzRMS.png)
 
-**Ce qui se passe à l’étape 1** : le client RMS sur l’ordinateur se connecte d’abord au service Azure Rights Management, puis authentifie l’utilisateur à l’aide de son compte Azure Active Directory.
+**Ce qui se passe à l’étape 1** : le client RMS sur l’ordinateur se connecte d’abord au service à Azure Rights Management, puis authentifie l’utilisateur à l’aide de son compte Azure Active Directory.
 
 Lorsque le compte de l'utilisateur est fédéré avec Azure Active Directory, cette authentification est automatique. L'utilisateur n'est donc pas invité à fournir d'informations d'identification.
 
@@ -109,11 +109,11 @@ Quand un utilisateur protège un document, le client RMS effectue les actions su
 
 ![Protection de document RMS : étape 1, le document est chiffré](./media/AzRMS_documentprotection1.png)
 
-**Ce qui se passe à l’étape 1** : Le client RMS crée une clé aléatoire (clé de contenu), puis chiffre le document en utilisant cette clé avec l'algorithme de chiffrement symétrique AES.
+**Ce qui se passe à l’étape 1** : le client RMS crée une clé aléatoire (la clé de contenu), puis chiffre le document en utilisant cette clé, avec l’algorithme de chiffrement symétrique AES.
 
 ![Protection de document RMS : étape 2, la stratégie est créée](./media/AzRMS_documentprotection2.png)
 
-**Ce qui se passe à l’étape 2** : le client RMS crée ensuite un certificat comprenant une stratégie pour le document, qui inclut les [droits d’utilisation](configure-usage-rights.md) pour les utilisateurs ou les groupes, ainsi que d’autres restrictions, comme une date d’expiration. Ces paramètres peuvent être définis dans un modèle qu’un administrateur a déjà configuré ou spécifié au moment de la protection du contenu (parfois appelé « stratégie ad hoc »).   
+**Ce qui se passe à l’étape 2** : le client RMS crée ensuite un certificat incluant une stratégie pour le document, qui inclut les [droits d’utilisation](configure-usage-rights.md) pour les utilisateurs ou les groupes, ainsi que d’autres restrictions, comme une date d’expiration. Ces paramètres peuvent être définis dans un modèle qu’un administrateur a déjà configuré ou spécifié au moment de la protection du contenu (parfois appelé « stratégie ad hoc »).   
 
 Le principal attribut Azure AD utilisé pour identifier les utilisateurs et groupes sélectionnés est l’attribut proxyAddress d’Azure AD, qui stocke toutes les adresses e-mail pour un utilisateur ou un groupe. Toutefois, si un compte d’utilisateur ne possède aucune valeur dans l’attribut ProxyAddresses d’Active Directory, la valeur UserPrincipalName de l’utilisateur est employée à la place.
 
@@ -121,7 +121,7 @@ Le client RMS utilise ensuite la clé de l'organisation obtenue lors de l'initia
 
 ![Protection de document RMS : étape 3, la stratégie est incorporée dans le document](./media/AzRMS_documentprotection3.png)
 
-**Ce qui se passe à l’étape 3** : Enfin, le client RMS incorpore la stratégie dans un fichier avec le corps du document chiffré précédemment, qui forment un document protégé.
+**Ce qui se passe à l’étape 3**: Enfin, le client RMS incorpore la stratégie dans un fichier avec le corps du document chiffré précédemment, qui, ensemble, comprend un document protégé.
 
 Ce document peut être stocké partout, ou partagé à l'aide de n'importe quelle méthode, et la stratégie reste toujours associée au document chiffré.
 
@@ -130,17 +130,17 @@ Quand un utilisateur veut consommer un document protégé, le client RMS commenc
 
 ![Consommation de document RMS : étape 1, l’utilisateur est authentifié et obtient la liste des droits](./media/AzRMS_documentconsumption1.png)
 
-**Ce qui se passe à l’étape 1** : l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur au service Azure Rights Management. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l'utilisateur sur le document. Pour identifier l’utilisateur, l’attribut ProxyAddresses d’Azure AD est utilisé pour le compte de l’utilisateur et les groupes dont l’utilisateur est membre. Pour des raisons de performances, l’appartenance au groupe est [mise en cache](prepare.md#group-membership-caching-by-azure-information-protection). Si le compte d’utilisateur n’a aucune valeur pour l’attribut ProxyAddresses d’Azure AD, la valeur UserPrincipalName d’Azure AD est utilisée à la place.
+**Ce qui se passe à l’étape 1** : l’utilisateur authentifié envoie la stratégie de document et les certificats de l’utilisateur au service Azure Rights Management. Le service déchiffre et évalue la stratégie, puis génère la liste des droits (éventuels) de l'utilisateur sur le document. Pour identifier l’utilisateur, l’attribut ProxyAddresses d’Azure AD est utilisé pour le compte de l’utilisateur et les groupes dont l’utilisateur est membre. Pour des raisons de performances, l’appartenance au groupe est [mise en cache](prepare.md#group-membership-caching-by-azure-information-protection). Si le compte d’utilisateur n’a aucune valeur pour l’attribut ProxyAddresses d’Azure AD, la valeur UserPrincipalName d’Azure AD est utilisée à la place.
 
 ![Consommation de document RMS : étape 2, la licence d’utilisation est retournée au client](./media/AzRMS_documentconsumption2.png)
 
-**Ce qui se passe à l’étape 2** : Le service extrait ensuite la clé de contenu AES de la stratégie déchiffrée. Cette clé est alors chiffrée avec la clé RSA publique de l'utilisateur obtenue avec la demande.
+**Ce qui se passe à l’étape 2** : le service extrait ensuite la clé de contenu AES de la stratégie déchiffrée. Cette clé est alors chiffrée avec la clé RSA publique de l'utilisateur obtenue avec la demande.
 
 Après cela, la clé de contenu re-chiffrée est incorporée dans une licence d'utilisation chiffrée avec la liste des droits de l'utilisateur, qui est renvoyée au client RMS.
 
 ![Consommation de document RMS : étape 3, le document est déchiffré et les droits sont appliqués](./media/AzRMS_documentconsumption3.png)
 
-**Ce qui se passe à l’étape 3** : Enfin, le client RMS prend la licence d'utilisation chiffrée et la déchiffre avec sa propre clé privée utilisateur. Cela permet au client RMS de déchiffrer le corps du document si nécessaire, et de l'afficher à l'écran.
+**Ce qui se passe à l’étape 3** : enfin, le client RMS prend la licence d’utilisation chiffrée et la déchiffre avec sa propre clé privée utilisateur. Cela permet au client RMS de déchiffrer le corps du document si nécessaire, et de l'afficher à l'écran.
 
 Le client déchiffre également la liste des droits, et transmet ceux-ci à l'application qui les applique dans son interface utilisateur.
 
@@ -151,7 +151,7 @@ Le client déchiffre également la liste des droits, et transmet ceux-ci à l'ap
 ### <a name="variations"></a>Variantes
 Les procédures pas à pas précédentes couvrent les scénarios standard, mais il existe des variantes :
 
-- **Protection de la messagerie** : quand le chiffrement des messages Exchange Online et Office 365 avec de nouvelles fonctionnalités est utilisé pour protéger des messages e-mail, l’authentification demandée pour leur consommation peut également utiliser la fédération avec un fournisseur d’identité sociale ou un code secret à usage unique. Ensuite, les flux de traitement sont très similaires, excepté que la consommation du contenu se fait du côté service dans une session de navigateur web, sur une copie temporairement mise en cache des e-mails sortants.
+- **Protection de la messagerie** : quand le chiffrement des messages Exchange Online et Office 365 avec de nouvelles fonctionnalités est utilisé pour protéger des messages e-mail, l’authentification demandée pour leur consommation peut également utiliser la fédération avec un fournisseur d’identité sociale ou un code secret à usage unique. Ensuite, les flux de traitement sont très similaires, excepté que la consommation du contenu se fait du côté service dans une session de navigateur web, sur une copie temporairement mise en cache des e-mails sortants.
 
 - **Appareils mobiles** : quand des appareils mobiles protègent ou consomment des fichiers avec le service Azure Rights Management, les flux du processus sont beaucoup plus simples. Les appareils mobiles ne passent pas par le processus d'initialisation utilisateur, car chaque transaction (pour protéger ou consommer du contenu) est indépendante. Comme avec les ordinateurs Windows, les appareils mobiles se connectent au service Azure Rights Management et s’authentifient. Pour protéger du contenu, les appareils mobiles soumettent une stratégie, puis le service Azure Rights Management leur envoie une licence de publication et une clé symétrique pour protéger le document. Pour consommer du contenu, quand des appareils mobiles se connectent au service Azure Rights Management et s’authentifient, ils envoient la stratégie de document au service Azure Rights Management et demandent une licence d’utilisation pour consommer le document. En réponse, le service Azure Rights Management leur envoie les clés nécessaires et les restrictions. Les deux processus utilisent TLS pour protéger l'échange de clés et d'autres communications.
 
@@ -159,7 +159,7 @@ Les procédures pas à pas précédentes couvrent les scénarios standard, mais 
 
 - **Protection générique (.pfile)**  : quand le service Azure Rights Management protège un fichier de façon générique, le flux est fondamentalement le même pour la protection du contenu, sauf que le client RMS crée une stratégie qui accorde tous les droits. Lorsque le fichier est consommé, il est déchiffré avant d'être transmis à l'application cible. Ce scénario vous permet de protéger tous les fichiers, même s'ils ne prennent pas en charge RMS en mode natif.
 
-- **Comptes Microsoft** : Azure Information Protection peut autoriser la consommation d’adresses e-mail si elles sont authentifiées avec un compte Microsoft. Toutefois, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
+- **Comptes Microsoft** : Azure Information Protection peut autoriser l’utilisation d’adresses e-mail si elles sont authentifiées avec un compte Microsoft. Toutefois, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 55bfba6da57fa07614165f4d5fcc5fba226cfca7
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886232"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés à l’authentification
@@ -24,13 +24,13 @@ L’authentification dans le kit SDK MIP s’effectue en étendant la classe `mi
 
 `mip::AuthDelegate::AcquireOAuth2Token` accepte les paramètres suivants et retourne une valeur booléenne indiquant si l’acquisition du jeton a réussi :
 
-- `mip::Identity`: Identité de l’utilisateur ou du service à authentifier, s’il est connu.
-- `mip::AuthDelegate::OAuth2Challenge`: Accepte quatre paramètres, **autorité**, **ressource**, **revendications**et **étendues**. L’**autorité** est le service par rapport auquel le jeton sera généré. La **ressource** est le service auquel nous essayons d’accéder. Le kit SDK traitera la transmission de ces paramètres dans le délégué lorsqu’il sera appelé. Les **revendications** sont les revendications spécifiques aux étiquettes requises par le service de protection. Les étendues sont les étendues d’autorisation Azure ad requises pour accéder à la ressource. 
-- `mip::AuthDelegate::OAuth2Token`: Le résultat de jeton est écrit dans cet objet. Il sera consommé par le kit SDK lorsque le moteur sera chargé. En dehors de notre implémentation de l’authentification, il ne devrait pas être nécessaire d’obtenir ou de définir cette valeur.
+- `mip::Identity` : l’identité de l’utilisateur ou du service à authentifier, si elle est connue.
+- `mip::AuthDelegate::OAuth2Challenge`: accepte quatre paramètres, **autorité**, **ressource**, **revendications**et **étendues**. L’**autorité** est le service par rapport auquel le jeton sera généré. La **ressource** est le service auquel nous essayons d’accéder. Le kit SDK traitera la transmission de ces paramètres dans le délégué lorsqu’il sera appelé. Les **revendications** sont les revendications spécifiques aux étiquettes requises par le service de protection. Les **étendues** sont les étendues d’autorisation Azure ad requises pour accéder à la ressource. 
+- `mip::AuthDelegate::OAuth2Token` : le résultat de jeton est écrit dans cet objet. Il sera consommé par le kit SDK lorsque le moteur sera chargé. En dehors de notre implémentation de l’authentification, il ne devrait pas être nécessaire d’obtenir ou de définir cette valeur.
 
-**Important :** Les applications n' `AcquireOAuth2Token` appellent pas directement. Le kit SDK appellera cette fonction si nécessaire.
+**Important :** Les applications n’appellent pas `AcquireOAuth2Token` directement. Le kit SDK appellera cette fonction si nécessaire.
 
-## <a name="consent"></a>Insu
+## <a name="consent"></a>Consent
 
 Azure AD exige qu’une application reçoive un consentement, avant d’être autorisée à accéder aux API/ressources sécurisées sous l’identité d’un compte. Le consentement est enregistré comme un accusé de réception permanent de l’autorisation dans le locataire du compte, pour le compte spécifique (consentement de l’utilisateur) ou pour tous les comptes (consentement de l’administrateur). Le consentement intervient dans divers scénarios, en fonction de l’API accédée et des autorisations que l’application recherche, ainsi que du compte utilisé pour la connexion : 
 
@@ -49,9 +49,9 @@ Lorsqu’un utilisateur exécute une opération qui nécessiterait un consenteme
 
 ### <a name="consent-options"></a>Options de consentement
 
-- **AcceptAlways**: Consentement et mémoriser la décision.
-- **Accepter**: Consentement une fois.
-- **Rejeter**: Ne vous consentez pas.
+- **AcceptAlways** : donner son consentement et se souvenir de la décision.
+- **Accept** : donner son consentement une seule fois.
+- **Reject** : ne pas donner son consentement.
 
 Lorsque le Kit SDK requiert le consentement de l’utilisateur avec cette méthode, l’application cliente doit présenter l’URL à l’utilisateur. Les applications clientes doivent fournir un moyen d’obtenir le consentement de l’utilisateur et retourner l’énum de consentement appropriée qui correspond à la décision de l’utilisateur.
 
@@ -102,7 +102,7 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 }
 ```
 
-À des fins de test et de développement `ConsentDelegate` , il est possible d’implémenter un simple qui ressemble à ceci:
+À des fins de test et de développement, il est possible d’implémenter un `ConsentDelegate` simple qui ressemble à ceci :
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {

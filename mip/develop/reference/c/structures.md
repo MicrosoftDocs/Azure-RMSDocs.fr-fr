@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 11/4/2019
 ms.openlocfilehash: aa544dfbd046ae8c3137cbc115d9af6ea219bc07
-ms.sourcegitcommit: 7a8eef5eb9d6440c6e2300cb3f264da31061b00d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73591602"
 ---
 # <a name="structures"></a>Structures
@@ -41,8 +41,8 @@ Informations fournies par un serveur pour générer un jeton OAuth2
 
 | Champ | Description |
 |---|---|
-| Autorisations | Autorité OAuth2  |
-| Ressource | Ressource OAuth2  |
+| authority | Autorité OAuth2  |
+| resource | Ressource OAuth2  |
 | scope | Étendue OAuth2  |
 
 
@@ -91,7 +91,7 @@ En-tête de requête/réponse HTTP
 | Champ | Description |
 |---|---|
 | name | Nom/clé de l’en-tête  |
-| value | Valeur d’en-tête  |
+| value | Valeur de l’en-tête  |
 
 
 ```c
@@ -110,11 +110,11 @@ Requête HTTP
 |---|---|
 | id | ID de demande unique--corrélé avec la même propriété dans mip_cc_http_response  |
 | type | Type de requête HTTP (par exemple, obtenir vs. poster)  |
-| URL | URL de la requête HTTP  |
+| url | URL de la requête HTTP  |
 | bodySize | Taille du corps de la requête HTTP en octets  |
-| organismes | Mémoire tampon qui a le corps de la requête HTTP  |
+| body | Mémoire tampon qui a le corps de la requête HTTP  |
 | headersCount | Nombre d’en-têtes de requête HTTP  |
-| En-têtes | Mémoire tampon contenant les en-têtes de requête HTTP  |
+| en-têtes | Mémoire tampon contenant les en-têtes de requête HTTP  |
 
 
 ```c
@@ -139,9 +139,9 @@ Réponse HTTP
 | id | ID de demande unique--corrélé avec la même propriété dans mip_cc_http_request  |
 | statusCode | Code d’état de réponse HTTP  |
 | bodySize | Taille du corps de la réponse HTTP en octets  |
-| organismes | Mémoire tampon qui présente le corps de la réponse HTTP  |
+| body | Mémoire tampon qui présente le corps de la réponse HTTP  |
 | headersCount | Nombre d’en-têtes de réponse HTTP  |
-| En-têtes | Mémoire tampon contenant les en-têtes de réponse HTTP  |
+| en-têtes | Mémoire tampon contenant les en-têtes de réponse HTTP  |
 
 
 ```c
@@ -162,7 +162,7 @@ Struct qui contient des informations spécifiques à l’application
 
 | Champ | Description |
 |---|---|
-| Messagerie | Adresse de messagerie de l’utilisateur  |
+| Messagerie | Adresse e-mail de l’utilisateur  |
 
 
 ```c
@@ -178,7 +178,7 @@ Définit l’état activé/désactivé d’une fonctionnalité unique
 
 | Champ | Description |
 |---|---|
-| Fonctionnalité | Nom de la fonctionnalité  |
+| Fonctionnalité d' | Nom de la fonctionnalité  |
 | value | État activé/désactivé  |
 
 
@@ -198,7 +198,7 @@ Un groupe d’utilisateurs et les droits qui leur sont associés
 |---|---|
 | utilisateurs | Liste des utilisateurs  |
 | usersCount | Nombre d’utilisateurs  |
-| autorisations | Liste des droits  |
+| droits | Liste des droits  |
 | rightsCount | Nombre de droits  |
 
 
@@ -220,7 +220,7 @@ Un groupe d’utilisateurs et les rôles qui leur sont associés
 |---|---|
 | utilisateurs | Liste des utilisateurs  |
 | usersCount | Nombre d’utilisateurs  |
-| Rôles | Liste des rôles  |
+| roles | Liste des rôles  |
 | rolesCount | Nombre de rôles  |
 
 

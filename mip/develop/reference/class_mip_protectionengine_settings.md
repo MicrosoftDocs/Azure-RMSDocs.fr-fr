@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 746309afc21637c85ec53dd9af7214151c5bb75a
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73557677"
 ---
 # <a name="class-mipprotectionenginesettings"></a>class mip::ProtectionEngine::Settings 
@@ -28,8 +28,8 @@ public void SetIdentity(const Identity& identity)  |  Définit l’identité de 
 public const std::string& GetClientData() const  |  Obtient les données personnalisées spécifiées par le client.
 public void SetClientData(const std::string& clientData)  |  Définit les données personnalisées spécifiées par le client.
 public const std::string& GetLocale() const  |  Obtient les paramètres régionaux selon lesquels les données du moteur seront écrites.
-public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\>\>valeur &)  |  Définit les paires nom/valeur utilisées pour les tests et l’expérimentation.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtient les paires nom/valeur utilisées pour les tests et l’expérimentation.
+public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& value)  |  Définit les paires nom/valeur utilisées pour les tests et l’expérimentation.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtient les paires nom/valeur utilisées pour les tests et l’expérimentation.
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de session du moteur, utilisé pour la corrélation de la journalisation/télémétrie.
 public const std::string& GetSessionId() const  |  Obtient l’ID de session du moteur.
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Définit éventuellement l’URL de base du point de terminaison cloud.
@@ -150,7 +150,7 @@ Paramètres :
 
 Si l’URL de base n’est pas spécifiée, elle sera déterminée par le biais de la recherche DNS du domaine de l’identité du moteur.
   
-### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl fonction)
+### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl function
 Obtient l’URL de base du cloud utilisée par toutes les demandes de service, si elle est spécifiée.
 
   

@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 10/01/2019
 ms.author: tommos
 ms.openlocfilehash: 3d97bdbf5307d7f0faefe6b6434b1df1ebc67798
-ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74484851"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-configuration de la télémétrie
@@ -52,7 +52,7 @@ Passez en revue les tableaux ci-dessous pour connaître exactement les événeme
 | MIP. Version                          | Version du kit de développement logiciel (SDK) MIP.                                                                | Non       |
 | Opération                            | Pulsation                                                                              | Non       |
 | OrganizationId                       | GUID du locataire de l’utilisateur authentifié.                                            | Non       |
-| Plateforme                             | Version du système d’exploitation.                                                              | Non       |
+| Plate-forme                             | Version du système d'exploitation.                                                              | Non       |
 | ProcessName                          | Nom du processus à l’aide du kit de développement logiciel (SDK).                                                     | Non       |
 | ProductVersion                       | Identique à « App. ApplicationVersion ».                                                      | Non       |
 | SDKVersion                           | Identique à MIP. Version.                                                                   | Non       |
@@ -83,10 +83,10 @@ Passez en revue les tableaux ci-dessous pour connaître exactement les événeme
 | LabelId                              | Identificateur d’étiquette de contenu sur le fichier ou les données ouverts.                                   | Non       |
 | MachineName                          | Nom du système qui a généré l’événement.                                           | **Oui**  |
 | MIP. Version                          | Version du kit de développement logiciel (SDK) MIP.                                                                | Non       |
-| Arguments                             | Chemin d’accès/Description du fichier ou des données.                                             | **Oui**  |
+| ObjectId                             | Chemin d’accès/Description du fichier ou des données.                                             | **Oui**  |
 | Opération                            | « Détection ».                                                                           | Non       |
 | OrganizationId                       | GUID du locataire de l’utilisateur authentifié.                                            | Non       |
-| Plateforme                             | Version du système d’exploitation.                                                              | Non       |
+| Plate-forme                             | Version du système d'exploitation.                                                              | Non       |
 | ProcessName                          | Nom du processus à l’aide du kit de développement logiciel (SDK).                                                     | Non       |
 | Protégé                            | Valeur booléenne indiquant si le fichier est protégé ou non.                                       | Non       |
 | Protection                           | Identificateur du modèle de protection.                                                    | **Oui**  |
@@ -124,10 +124,10 @@ Passez en revue les tableaux ci-dessous pour connaître exactement les événeme
 | LabelIdBefore                        | ID de l’étiquette précédente qui était sur le fichier ou les données.                                        | Non       |
 | MachineName                          | Nom du système qui a généré l’événement.                                           | **Oui**  |
 | MIP. Version                          | Version du kit de développement logiciel (SDK) MIP.                                                                | Non       |
-| Arguments                             | Chemin d’accès/Description du fichier ou des données.                                             | **Oui**  |
+| ObjectId                             | Chemin d’accès/Description du fichier ou des données.                                             | **Oui**  |
 | Opération                            | « Modifier ».                                                                              | Non       |
 | OrganizationId                       | GUID du locataire de l’utilisateur authentifié.                                            | Non       |
-| Plateforme                             | Version du système d’exploitation.                                                              | Non       |
+| Plate-forme                             | Version du système d'exploitation.                                                              | Non       |
 | ProcessName                          | Nom du processus à l’aide du kit de développement logiciel (SDK).                                                     | Non       |
 | Version du produit                      |                                                                                        | Non       |
 | Protégé                            | Valeur booléenne indiquant si le fichier est protégé ou non.                                       | Non       |

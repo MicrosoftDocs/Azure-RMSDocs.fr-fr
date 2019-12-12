@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: c69e34cce0241a289d75593e4a8a9500f88be433
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791447"
 ---
 # <a name="ios-and-os-x-setup"></a>Installation iOS et OS X
@@ -30,14 +30,14 @@ Cette rubrique vous guide tout au long du processus de configuration de votre en
 **Remarque**  Ce SDK ne prend pas en charge l’iPod Touch.
 
 
--   [Composants requis](#prerequisites)
+-   [Prérequis](#prerequisites)
 -   [Facultatif](#optional)
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
-Nous vous recommandons de disposer des logiciels suivants sur votre système de développement :
+Nous recommandons les logiciels suivants sur votre système de développement :
 
 -   OS X est obligatoire pour tout développement iOS.
 -   Xcode version 6.0 ou ultérieure
@@ -48,7 +48,7 @@ Nous vous recommandons de disposer des logiciels suivants sur votre système de 
 
     Vous pouvez utiliser ce SDK pour développer pour iOS 7.0 et OS X 10.8 et versions ultérieures.
 
--   Bibliothèque d’authentification : Nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Vous pouvez cependant utiliser aussi d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
+-   Bibliothèque d’authentification : nous vous recommandons d’utiliser la [bibliothèque ADAL (Azure AD Authentication Library)](https://msdn.microsoft.com/library/jj573266.aspx). Vous pouvez cependant utiliser aussi d’autres bibliothèques d’authentification qui prennent en charge OAuth 2.0.
 
     Pour plus d’informations, consultez [ADAL pour iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios) ou [ADAL pour OS X](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)
 
@@ -85,7 +85,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
     ![Ajoutez le groupe de ressources](../media/iOS-add-resource-bundle-02a.png)
 
 -   Comme vous l’avez fait quand vous avez copié le Framework, sélectionnez la case d’option **Create groups for any added folders** (Créer des groupes pour tout dossier ajouté) et décochez la case **Copy items into destination group’s folder (if needed)** (Copier les éléments dans le dossier du groupe de destination si nécessaire).
--   Le SDK s’appuie sur d’autres frameworks, notamment : **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** et **Security**. Pour ajouter ces infrastructures, accédez à la section **Linked Frameworks and Libraries** (Infrastructures et bibliothèques liées) du volet **Summary** (Résumé) de la cible et développez cette section pour les ajouter.
+-   Le SDK s’appuie sur d’autres infrastructures, notamment : **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** et **Security**. Pour ajouter ces infrastructures, accédez à la section **Linked Frameworks and Libraries** (Infrastructures et bibliothèques liées) du volet **Summary** (Résumé) de la cible et développez cette section pour les ajouter.
 
     Les infrastructures **UIKit** et **Foundation** sont obligatoires et généralement présentes par défaut.
 
@@ -103,7 +103,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 ### <a name="see-also"></a>Voir aussi
 
-* [Bien démarrer](get-started.md)
+* [Prise en main](get-started.md)
 
 * [Nouveautés](release-notes.md)
 

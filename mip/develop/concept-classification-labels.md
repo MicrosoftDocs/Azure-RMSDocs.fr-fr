@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: e1101bd505a35e02fdeeed032d5dec61364bfb8d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175239"
 ---
 # <a name="microsoft-information-protection-sdk---classification-label-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux étiquettes de classification
@@ -20,24 +20,24 @@ Dans le cadre d’une stratégie complète de protection des données, les organ
 
 Les attributs liés à la classification impliquent généralement le **risque** encouru par l’organisation si un document ou des données sont perdus ou consultés par des personnes indésirables. Dans le système de classification usuel de l’État fédéral des États-Unis, il existe trois niveaux de classification. Chacun d’eux a une définition qui décrit quand cette classification doit être appliquée :
 
-* **Top Secret**: Doit être appliquée aux informations, dont la divulgation non autorisée peut raisonnablement causer un préjudice exceptionnellement grave à la sécurité nationale l’autorité de classification d’origine est en mesure d’identifier ou le décrire.
-* **Clé secrète**: Doit être appliquée aux informations, dont la divulgation non autorisée peut raisonnablement nuire gravement à la sécurité nationale l’autorité de classification d’origine est en mesure d’identifier ou le décrire.
-* **Confidentiel**: Doit être appliquée aux informations, dont la divulgation non autorisée peut raisonnablement causer un préjudice à la sécurité nationale l’autorité de classification d’origine est en mesure d’identifier ou le décrire.
-* **Non classifiées**: Ce n’est pas réellement une classification, mais plutôt l’absence d’un des trois ci-dessus.
+* **Top secrète** : s’applique aux informations dont la divulgation non autorisée pourrait raisonnablement causer un préjudice exceptionnellement grave à la sécurité nationale que l’autorité de classification d’origine est en mesure d’identifier ou de décrire.
+* **Secrète** : s’applique aux informations dont la divulgation non autorisée pourrait raisonnablement nuire gravement à la sécurité nationale que l’autorité de classification d’origine est en mesure d’identifier ou de décrire.
+* **Confidentielle** : s’applique aux informations dont la divulgation non autorisée pourrait raisonnablement nuire à la sécurité nationale que l’autorité de classification d’origine est en mesure d’identifier ou de décrire.
+* **Non classifiée** : ce n’est pas réellement une classification, mais plutôt l’absence des trois classifications ci-dessus.
 
 Dans une application du secteur commercial ou privé, nous pouvons définir une liste semblable à la liste par défaut du service Azure Information Protection, avec des valeurs monétaires jointes.
 
-* **Hautement confidentiel**: Doit être appliquée aux informations, dont la divulgation non autorisée peut raisonnablement provoquent des dommages supérieurs à USD $1 M.
-* **Confidentiel**: Doit être appliquée aux informations, dont la divulgation non autorisée peut raisonnablement provoquent des dommages supérieurs à USD $100 Ko.
-* **Général**: Doit être appliquée aux informations, dont la divulgation non autorisée peut raisonnablement provoquent des dommages mesurables peu.
-* **Public**: Doit être appliqué à des informations destinées à la consommation publique, externe. 
-* **Non professionnelle**: Doit être appliquée aux informations qui ne sont pas liées à l’entreprise, direct ou indirect.
+* **Hautement confidentielle** : s’applique aux informations, dont la divulgation non autorisée pourrait raisonnablement entraîner des dommages supérieurs à 1 M USD.
+* **Confidentielle** : s’applique aux informations, dont la divulgation non autorisée pourrait raisonnablement entraîner des dommages supérieurs à 100 000 USD.
+* **Générale** : s’applique aux informations, dont la divulgation non autorisée pourrait raisonnablement entraîner des dommages mesurables limités.
+* **Publique** : s’applique aux informations destinées à une consommation externe publique. 
+* **Non professionnelle** : s’applique aux informations qui ne sont pas liées, directement ni indirectement, à l’activité de l’entreprise.
 
 Chaque classification décrit le risque encouru par l’entreprise en cas de divulgation non autorisée de ces informations. Après avoir identifié cette classification et ces conditions, il convient d’identifier les attributs qui aident les propriétaires de données à comprendre quelle classification appliquer.
 
 ## <a name="labeling"></a>Étiquetage
 
-Le fait d’associer une classification de données à un ensemble d’informations est appelé **étiquetage**. Étant donné que le kit SDK MIP traite de l’application d’**étiquettes** de classification à des documents, nous ne nous référons pas à des classifications, mais plutôt à des étiquettes. Un utilisateur ou processus a déjà **classés** les données selon la connaissance des informations : Le SDK MIP sera ensuite **étiquette** les informations.
+Le fait d’associer une classification de données à un ensemble d’informations est appelé **étiquetage**. Étant donné que le kit SDK MIP traite de l’application d’**étiquettes** de classification à des documents, nous ne nous référons pas à des classifications, mais plutôt à des étiquettes. Un utilisateur ou un processus a déjà **classifié** les données en fonction des informations connues : le kit SDK MIP **étiquètera** ensuite les informations.
 
 ## <a name="labels-in-the-mip-sdk"></a>Étiquettes dans le kit SDK MIP
 
@@ -52,10 +52,10 @@ L’étiquette applique une protection et un marquage du contenu en fonction de 
 
 ## <a name="miplabel-vs-mipcontentlabel"></a>mip::Label ou mip::ContentLabel
 
-Il existe deux types d’étiquette dans le kit SDK MIP. `Label` et `ContentLabel`.
+Il existe deux types d’étiquette dans le kit SDK MIP. Voir `Label` et `ContentLabel`.
 
-* Étiquette : Une étiquette qui peut être appliquée par un utilisateur ou un processus tel que défini dans la stratégie organisationnelle.
-* ContentLabel : Une étiquette qui existe déjà dans un document ou les informations. Elle peut être lue, mise à jour ou supprimée. 
+* Label : étiquette qui peut être appliquée par un utilisateur ou un processus telle qu’elle est définie dans la politique de l’organisation.
+* ContentLabel : étiquette qui existe déjà sur un document ou des informations. Elle peut être lue, mise à jour ou supprimée. 
 
 En d’autres termes, l’étiquette `ContentLabel` est une étiquette `Label` qui a été appliquée à des informations.
 

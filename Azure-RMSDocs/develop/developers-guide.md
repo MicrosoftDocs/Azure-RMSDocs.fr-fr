@@ -12,10 +12,10 @@ ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
 ms.openlocfilehash: d9f1a3578a5da4abec6d61aa849388573dec3fe1
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60179115"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guide du développeur Azure Information Protection
@@ -125,7 +125,7 @@ Chacune des rubriques suivantes présente les instructions spécifiques d’un a
 - [Format de fichier .MSG (partie 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
 - [Format de fichier .MSG (partie 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
 
-### <a name="api-reference"></a>Informations de référence sur les API
+### <a name="api-reference"></a>Référence d'API
 
 - [Informations de référence sur l’API Windows](https://msdn.microsoft.com/library/hh535292.aspx)
   - [Codes d’erreur du SDK Windows](https://msdn.microsoft.com/library/hh535248.aspx)

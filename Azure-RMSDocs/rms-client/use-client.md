@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/03/2019
+ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a7273f3ebb8a467d08e5897e0684b2ec2a3ffee2
-ms.sourcegitcommit: 1d89fb1c773c198c28b08230855d01d72f140dc0
+ms.openlocfilehash: 024e785faf06abde45177fe8049ae8c7c24294fd
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74780913"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933291"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -42,9 +42,9 @@ Dans la mesure du possible, utilisez l’un des clients d’étiquetage, car les
 Le choix de l’étiquetage du client pour vos ordinateurs Windows peut être influencé par le portail de gestion que vous utilisez :
 
 - Le client d’étiquetage d’Office intégré et le client d’étiquetage unifié Azure Information Protection sont téléchargés des étiquettes et des paramètres de stratégie à partir des centres d’administration suivants : 
-    - Office 365 Centre de sécurité et de conformité
+    - Centre de sécurité et conformité Office 365
     - Centre de sécurité Microsoft 365
-    - Centre de conformité Microsoft 365
+    - Centre de conformité Microsoft 365
 
 - Le client Azure Information Protection (Classic) télécharge les paramètres d’étiquette et de stratégie à partir du Portail Azure.
 
@@ -52,7 +52,9 @@ Le choix de l’étiquetage du client pour vos ordinateurs Windows peut être in
 
 Quel client devez-vous utiliser ?
 
-- Utilisez le **client d’étiquetage intégré à Office** pour vos ordinateurs Windows quand vous avez des applications Office 365 dont la version 1910 est minimale, que vous souhaitez utiliser les mêmes étiquettes et paramètres de stratégie que MacOS, iOS et Android, et que vous n’avez pas besoin de fonctionnalités dans vos applications Office qui requièrent le client d’étiquetage unifié ou le client Classic. Ces fonctionnalités incluent la barre de Information Protection sous le ruban pour faciliter la sélection et la visibilité des étiquettes. Ce client prend en charge le basculement de comptes et parce qu’il n’utilise pas de complément Office, il offre de meilleures performances dans les applications Office que l’utilisation de l’un des clients Azure Information Protection.
+- Utilisez le **client d’étiquetage intégré à Office** pour vos ordinateurs Windows quand vous avez des applications Office 365 dont la version 1910 est minimale, que vous souhaitez utiliser les mêmes étiquettes et paramètres de stratégie que MacOS, iOS et Android, et que vous n’avez pas besoin de fonctionnalités dans vos applications Office qui requièrent le client d’étiquetage unifié ou le client Classic. Ces fonctionnalités incluent la barre de Information Protection sous le ruban pour faciliter la sélection et la visibilité des étiquettes. 
+    
+    Ce client prend en charge le basculement de comptes et parce qu’il n’utilise pas de complément Office, il offre de meilleures performances dans les applications Office que l’utilisation de l’un des clients Azure Information Protection. L’étiquetage étant intégré à Office, il n’y a pas d’installation et de maintenance distinctes pour ce client d’étiquetage. En outre, contrairement à un complément Office, il ne peut pas être désactivé.
 
 - Utilisez l' **Azure information protection client d’étiquetage unifié** sur les ordinateurs Windows pour les étiquettes et les paramètres de stratégie qui peuvent également être utilisés par MacOS, iOS et Android. vous souhaitez étiqueter les fichiers indépendamment des applications Office 365 et vous n’avez pas besoin de fonctionnalités qui ne sont prises en charge que par le client classique. Ces fonctionnalités incluent actuellement la protection du contenu avec une clé locale (HYOK) et une version de disponibilité générale du scanneur pour les magasins de données locaux.
 

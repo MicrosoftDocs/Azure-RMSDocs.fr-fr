@@ -4,7 +4,7 @@ description: Une fois que vous avez protégé vos documents, vous pouvez suivre 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 39fa96ed1c355e0cef12dfd87950b9ab0c495c29
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 537318bd21ec27d91fc1868d4c9e4ef4b6a8fa35
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690264"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935671"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guide de l’utilisateur : Suivre et révoquer vos documents quand vous utilisez Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Une fois que vous avez protégé vos documents avec Azure Information Protection, vous pouvez suivre leur utilisation. Si nécessaire, vous pouvez également révoquer l’accès à ces documents si des personnes ne doivent plus être en mesure de les lire. Pour ce faire, vous utilisez le **site de suivi des documents**. Vous pouvez accéder à ce site à partir d’un ordinateur Windows ou Mac, d’une tablette ou d’un téléphone.
 
@@ -38,13 +38,13 @@ Actions que vous pouvez entreprendre sur le site de suivi de documents :
         
         ![Icône Révoquer l’accès du site de suivi de document](../media/tracking-site-revoke-access-icon.png)
         
-- Si vous voulez exporter vers Excel : 
+- Si vous souhaitez exporter vers Excel : 
     
     - Cliquez sur **Exporter au format CSV**, de sorte que vous pouvez ensuite modifier les données et créer vos propres vues et graphiques :
          
         ![Icône Exporter au format CSV du site de suivi de document](../media/tracking-site-export-icon.png)
          
-- Si vous voulez configurer des notifications par courrier électronique : 
+- Si vous souhaitez configurer des notifications par courrier électronique : 
      
     - Cliquez sur **Paramètres** et choisissez si vous voulez recevoir une notification quand une personne accède au document et si oui, comment :
         
@@ -61,7 +61,7 @@ Actions que vous pouvez entreprendre sur le site de suivi de documents :
 À moins d’être un administrateur, vous pouvez suivre et révoquer uniquement les documents que vous avez protégés. Vous ne pouvez pas effectuer le suivi de vos messages électroniques protégés en utilisant le site de suivi de document.
 
 > [!NOTE] 
-> Si votre administrateur a configuré les contrôles de confidentialité pour le site de suivi de documents, vous ne verrez peut-être pas lorsque les utilisateurs de votre organisation ont accédé à un document que vous suivez. Un administrateur peut exempter tous les utilisateurs ou seulement certains. Toutefois, vous pouvez toujours révoquer l’accès aux documents que vous suivez.
+> Si votre administrateur a configuré des contrôles de confidentialité pour le site de suivi des documents, vous ne verrez peut-être pas quand les utilisateurs de votre organisation accèdent à un document que vous suivez. Un administrateur peut exempter tous les utilisateurs ou uniquement certains utilisateurs. Toutefois, vous pouvez toujours révoquer l’accès aux documents que vous suivez.
 
 Pour effectuer le suivi d’un document que vous avez protégé, vous devez utiliser votre ordinateur Windows pour l’inscrire auprès du site de suivi de documents. Pour ce faire, utilisez l’Explorateur de fichiers ou vos applications Office.
 
@@ -102,17 +102,17 @@ Une fois que vous avez enregistré le document protégé à l’aide de vos appl
 
 - Sur votre PC Windows, ordinateur Mac ou appareil mobile, visitez le [site de suivi des documents](https://go.microsoft.com/fwlink/?LinkId=529562).
 
-    **Navigateurs pris en charge** : Nous vous recommandons d’utiliser Internet Explorer, qui est au moins la version 10, mais vous pouvez utiliser l’un des navigateurs suivants pour utiliser le site de suivi des documents:
+    **Navigateurs pris en charge**: nous vous recommandons d’utiliser Internet Explorer, qui est au moins la version 10, mais vous pouvez utiliser l’un des navigateurs suivants pour utiliser le site de suivi des documents :
 
-    - Internet Explorer: Au moins la version 10
+    - Internet Explorer : version 10 ou ultérieure
 
-    - Internet Explorer 9 avec au moins MS12-037: Mise à jour de sécurité cumulative pour Internet Explorer: Le 12 juin 2012
+    - Internet Explorer 9 avec MS12-037 minimum : mise à jour de sécurité cumulative pour Internet Explorer : 12 juin 2012
 
-    - Mozilla Firefox: Au moins la version 12
+    - Mozilla Firefox : version 12 ou ultérieure
 
-    - Apple Safari 5: Au moins la version 5
+    - Apple Safari 5 : version 5 ou ultérieure
 
-    - Google Chrome: Au moins la version 18
+    - Google Chrome : version 18 ou ultérieure
 
 
 ## <a name="other-instructions"></a>Autres instructions

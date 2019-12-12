@@ -8,23 +8,23 @@ ms.collection: M365-security-compliance
 ms.date: 07/29/2019
 ms.author: mbaldwin
 ms.openlocfilehash: a1112b3c35539654ac71b6c8c686f93e676ac5f3
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886120"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux objets de profil et de moteur
 
 ## <a name="profiles"></a>Profils
 
-`MipContext` Où est la classe pour le stockage des paramètres propres au kit de développement logiciel (SDK), le profil est la classe racine pour toutes les opérations d’étiquetage MIP et de protection spécifiques dans le SDK MIP. Avant d’utiliser l’un des trois ensembles d’API, l’application cliente doit créer un profil. Les opérations ultérieures sont effectuées par le profil ou par d’autres objets *ajoutés* au profil.
+Lorsque le `MipContext` est la classe pour le stockage des paramètres spécifiques au kit de développement logiciel (SDK), le profil est la classe racine pour toutes les opérations d’étiquetage MIP et spécifiques à la protection dans le kit de développement logiciel MIP. Avant d’utiliser l’un des trois ensembles d’API, l’application cliente doit créer un profil. Les opérations ultérieures sont effectuées par le profil ou par d’autres objets *ajoutés* au profil.
 
 Il existe trois types de profil dans le kit SDK MIP :
 
-- [`PolicyProfile`](reference/class_mip_policyprofile.md) : Classe de profil pour l’API de stratégie MIP.
-- [`ProtectionProfile`](reference/class_mip_protectionprofile.md) : Classe de profil pour l’API de protection MIP.
-- [`FileProfile`](reference/class_mip_fileprofile.md) : Classe de profil pour l’API de fichier MIP.
+- [`PolicyProfile`](reference/class_mip_policyprofile.md) : la classe de profil pour l’API de stratégie MIP.
+- [`ProtectionProfile`](reference/class_mip_protectionprofile.md) : la classe de profil pour l’API de protection MIP.
+- [`FileProfile`](reference/class_mip_fileprofile.md) : la classe de profil pour l’API de fichier MIP.
 
 L’API utilisée dans l’application consommatrice détermine la classe de profil à utiliser.
 
@@ -33,42 +33,42 @@ Le profil lui-même offre les fonctionnalités suivantes :
 - Définit si l’État doit être chargé en mémoire ou rendu persistant sur le disque et, s’il est rendu persistant sur le disque, doit être chiffré.
 - Il gère l’authentification en acceptant un `mip::AuthDelegate`.
 - Définit le `mip::ConsentDelegate` qui doit être utilisé pour les opérations de consentement.
-- Définit l' `mip::FileProfile::Observer` implémentation qui sera utilisée pour les rappels asynchrones pour les opérations de profil.
+- Définit l’implémentation de `mip::FileProfile::Observer` qui sera utilisée pour les rappels asynchrones pour les opérations de profil.
 
 ### <a name="profile-settings"></a>Paramètres du profil
 
-- `MipContext`: Objet `MipContext` qui a été initialisé pour stocker les informations sur l’application, le chemin d’accès à l’État, etc.
-- `CacheStorageType`: Définit le mode de stockage de l’État: En mémoire, sur disque, sur disque et chiffré.
-- `authDelegate`: Pointeur partagé de la classe `mip::AuthDelegate`.
-- `consentDelegate`: Pointeur partagé de la classe [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
-- `observer`: Pointeur partagé vers l’implémentation de `Observer` profil (dans [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)et [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
-- `applicationInfo`: [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) Objet. Informations sur l’application qui utilise le kit de développement logiciel (SDK), qui correspond à votre ID d’inscription et à votre nom d’application de Azure Active Directory.
+- `MipContext`: objet `MipContext` qui a été initialisé pour stocker les informations sur l’application, le chemin d’accès à l’État, etc.
+- `CacheStorageType`: définit le mode de stockage de l’État : en mémoire, sur disque, sur disque et chiffré.
+- `authDelegate` : un pointeur partagé de classe `mip::AuthDelegate`.
+- `consentDelegate`: pointeur partagé de la classe [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
+- `observer`: pointeur partagé vers l’implémentation du profil `Observer` (dans [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)et [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
+- `applicationInfo`: objet [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) . Informations sur l’application qui utilise le kit de développement logiciel (SDK), qui correspond à votre ID d’inscription et à votre nom d’application de Azure Active Directory.
 
 ## <a name="engines"></a>Moteurs
 
-Les moteurs d’API de fichier, de profil et de protection fournissent une interface pour les opérations effectuées sur par une identité spécifique. Un moteur est ajouté à l’objet de profil pour chaque utilisateur ou principal de service qui se connecte à l’application. Il est possible d’effectuer des opérations déléguées `mip::ProtectionSettings` via et le gestionnaire de fichiers ou de protection. Pour plus d’informations, consultez [la section paramètres de protection dans les concepts de fileHandler](concept-handler-file-cpp.md) .
+Les moteurs d’API de fichier, de profil et de protection fournissent une interface pour les opérations effectuées sur par une identité spécifique. Un moteur est ajouté à l’objet de profil pour chaque utilisateur ou principal de service qui se connecte à l’application. Il est possible d’effectuer des opérations déléguées par le biais de `mip::ProtectionSettings` et du gestionnaire de fichiers ou de protection. Pour plus d’informations, consultez [la section paramètres de protection dans les concepts de fileHandler](concept-handler-file-cpp.md) .
 
 Il existe trois classes de moteur dans le kit SDK, une pour chaque API. La liste suivante montre les classes de moteur et quelques fonctions associées à chacune :
 
 - [`mip::ProtectionEngine`](reference/class_mip_protectionengine.md)
 - [`mip::PolicyEngine`](reference/class_mip_policyengine.md)
-  - `ListSensitivityLabels()`: Obtient la liste des étiquettes pour le moteur chargé.
-  - `GetSensitivityLabel()`: Obtient l’étiquette à partir du contenu existant.
-  - `ComputeActions()`: Fourni avec un ID d’étiquette et des métadonnées facultatives, retourne la liste des actions qui doivent se produire pour un élément spécifique.
+  - `ListSensitivityLabels()` : obtient la liste des étiquettes pour le moteur chargé.
+  - `GetSensitivityLabel()` : obtient l’étiquette issue du contenu existant.
+  - `ComputeActions()` : fournie avec un ID d’étiquette et des métadonnées facultatives, retourne la liste des actions qui doivent se produire pour un élément spécifique.
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
-  - `ListSensitivityLabels()`: Obtient la liste des étiquettes pour le moteur chargé.
-  - `CreateFileHandler()`: Crée un `mip::FileHandler` pour un fichier ou un flux spécifique.
+  - `ListSensitivityLabels()` : obtient la liste des étiquettes pour le moteur chargé.
+  - `CreateFileHandler()` : crée un `mip::FileHandler` pour un flux ou un fichier spécifique.
 
 ### <a name="engine-states"></a>États de moteur
 
 Un moteur peut avoir deux états différents :
 
-- `CREATED`: Créé indique que le kit de développement logiciel (SDK) dispose de suffisamment d’informations d’état local après avoir appelé les services principaux requis.
-- `LOADED`: Le kit de développement logiciel (SDK) a créé les structures de données requises pour que le moteur soit opérationnel.
+- `CREATED` : indique que le kit SDK possède suffisamment d’informations d’état local après l’appel aux services backend requis.
+- `LOADED` : le SDK a généré les structures de données requises pour que le moteur soit opérationnel.
 
 Un moteur doit être à la fois créé et chargé pour effectuer des opérations quelconques. La classe `Profile` expose plusieurs méthodes de gestion du moteur : `AddEngineAsync`, `RemoveEngineAsync` et `UnloadEngineAsync`.
 
-Le tableau suivant décrit les États de moteur possibles et les méthodes qui peuvent modifier cet État:
+Le tableau suivant décrit les États de moteur possibles et les méthodes qui peuvent modifier cet État :
 
 |         | NONE              | CREATED           | LOADED         |
 |---------|-------------------|-------------------|----------------|
@@ -78,14 +78,14 @@ Le tableau suivant décrit les États de moteur possibles et les méthodes qui p
 
 ### <a name="engine-id"></a>ID du moteur
 
-Chaque moteur possède un identificateur unique, `id`, qui est utilisé dans toutes les opérations de gestion du moteur. L’application peut fournir un `id`ou le kit de développement logiciel (SDK) peut en générer un, s’il n’est pas fourni par l’application. Toutes les autres propriétés du moteur (par exemple, l’adresse de messagerie dans les informations d’identité) sont des charges utiles opaques pour le kit SDK. Le kit SDK n’exécute AUCUNE logique pour maintenir uniques les autres propriétés ou appliquer d’autres contraintes.
+Chaque moteur possède un identificateur unique, `id`, qui est utilisé dans toutes les opérations de gestion du moteur. L’application peut fournir une `id`, ou le kit de développement logiciel (SDK) peut en générer un, s’il n’est pas fourni par l’application. Toutes les autres propriétés du moteur (par exemple, l’adresse de messagerie dans les informations d’identité) sont des charges utiles opaques pour le kit SDK. Le kit SDK n’exécute AUCUNE logique pour maintenir uniques les autres propriétés ou appliquer d’autres contraintes.
 
 > [!IMPORTANT]
 > Il est recommandé d’utiliser un ID de moteur qui est propre à l’utilisateur et de l’utiliser chaque fois que l’utilisateur effectue une opération avec le kit de développement logiciel (SDK). L’échec de la fourniture d’un ID de moteur existant entraîne des allers-retours supplémentaires vers la stratégie de récupération et récupère les licences qui ont peut-être déjà été mises en cache pour le moteur existant.
 
 ### <a name="engine-management-methods"></a>Méthodes de gestion du moteur
 
-Comme mentionné précédemment, il existe trois méthodes de gestion des moteurs dans le `AddEngineAsync`Kit `DeleteEngineAsync`de développement `UnloadEngineAsync`logiciel (SDK):, et.
+Comme mentionné précédemment, il existe trois méthodes de gestion des moteurs dans le kit de développement logiciel (SDK) : `AddEngineAsync`, `DeleteEngineAsync`et `UnloadEngineAsync`.
 
 #### <a name="addengineasync"></a>AddEngineAsync
 

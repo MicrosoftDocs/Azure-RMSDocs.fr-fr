@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 11/4/2019
 ms.openlocfilehash: f1ad15819d10bcded670fe519db07667b7e7331e
-ms.sourcegitcommit: 7a8eef5eb9d6440c6e2300cb3f264da31061b00d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73591616"
 ---
 # <a name="enumerations"></a>Énumérations
@@ -140,7 +140,7 @@ Définit de nouvelles fonctionnalités par nom
 |  MIP_FLIGHTING_FEATURE_SERVICE_DISCOVERY = 0      | S’appuyer sur un appel HTTP distinct pour déterminer les points de terminaison de service RMS (false par défaut) |
 |  MIP_FLIGHTING_FEATURE_AUTH_INFO_CACHE = 1        | Mettez en cache les défis OAuth2 par domaine/locataire pour réduire les réponses 401 inutiles. Désactiver pour les applications/services qui gèrent leur propre authentification HTTP (true par défaut)  |
 |  MIP_FLIGHTING_FEATURE_LINUX_ENCRYPTED_CACHE = 2  | Activer la mise en cache chiffrée pour les plateformes Linux (false par défaut)  |
-|  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3     | Activez le nom d’entreprise unique pour la recherche DNS. par exemple, https://corprights  |
+|  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3     | Activez le nom d’entreprise unique pour la recherche DNS. Exemple : https://corprights  |
 |  MIP_FLIGHTING_FEATURE_POLICY_AUTH = 4            | Activez l’authentification HTTP automatique pour les requêtes envoyées au service de stratégie. Désactiver pour les applications/services qui gèrent leur propre authentification HTTP (true par défaut)  |
 
 

@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a1938601e036f7fb4d84a9a5815016dbda4509b7
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558517"
 ---
 # <a name="class-mippolicyengine"></a>mip::PolicyEngine, classe 
@@ -20,17 +20,17 @@ Cette classe fournit une interface pour toutes les fonctions de moteur.
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Obtient les paramètres du moteur de stratégie.
-public const std :: Vector\<std :: shared_ptr\<étiquette\>\>& ListSensitivityLabels ()  |  répertorier les étiquettes de sensibilité associées au moteur de stratégie.
+public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  répertorier les étiquettes de sensibilité associées au moteur de stratégie.
 public const std :: Vector\<std :: shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes () const  |  répertorie les types de sensibilité associés au moteur de stratégie.
 public const std::string& GetMoreInfoUrl() const  |  Fournir une URL pour la recherche d’autres informations sur la stratégie/les étiquettes.
 public bool IsLabelingRequired() const  |  Vérifie si la stratégie détermine qu’un document doit être étiqueté ou non.
-public std :: shared_ptr\<étiquette\> GetDefaultSensitivityLabel ()  |  Obtenir l’étiquette de sensibilité par défaut.
-public std :: shared_ptr\<label\> GetLabelById (const std :: String & ID) const  |  Obtient l’étiquette en fonction de l’ID fourni.
+public std::shared_ptr\<Label\> GetDefaultSensitivityLabel()  |  Obtenir l’étiquette de sensibilité par défaut.
+public std :: shared_ptr\<étiquette\> GetLabelById (const std :: String & ID) const  |  Obtient l’étiquette en fonction de l’ID fourni.
 public std :: shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  Créer un gestionnaire de stratégie pour exécuter des fonctions liées à la stratégie sur l’état d’exécution d’un fichier.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Consigne un événement spécifique à l’application dans le pipeline d’audit.
 public const std :: String & GetPolicyDataXml () const  |  Obtient des données de stratégie XML qui décrivent les paramètres, les étiquettes et les règles associés à cette stratégie.
 public const std :: String & GetSensitivityTypesDataXml () const  |  Obtient les données de types de sensibilité XML qui décrivent les types de sensibilité associés à cette stratégie.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtient une liste de paramètres personnalisés.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtient une liste de paramètres personnalisés.
 public const std :: String & GetPolicyFileId () const  |  Obtient l’ID du fichier de stratégie.
 public const std :: String & GetSensitivityFileId () const  |  Obtient l’ID du fichier de sensibilité.
 public bool HasClassificationRules () const  |  Obtient si la stratégie a des règles automatiques ou de recommandation.

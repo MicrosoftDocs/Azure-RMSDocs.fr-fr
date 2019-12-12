@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a29673c71aaa0357ebb52bc4cab3b3fef74a21d1
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560198"
 ---
 # <a name="class-miphttpdelegate"></a>mip::HttpDelegate, classe 
@@ -20,7 +20,7 @@ Interface pour le remplacement de la gestion HTTP.
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std :: shared_ptr\<HttpOperation\> Send (const std :: shared_ptr\<HttpRequest\>& demande, const std :: shared_ptr\<void\>& contexte)  |  Envoyer une requête HTTP.
-public std :: shared_ptr\<HttpOperation\> SendAsync (const std :: shared_ptr\<HttpRequest\>& demande, const std :: shared_ptr\<void\>& contexte, const std :: function\<void (STD :: shared_ptr\<HttpOperation\>)  |  Envoyer une requête HTTP de manière asynchrone.
+public std :: shared_ptr\<HttpOperation\> SendAsync (const std :: shared_ptr\<HttpRequest\>& demande, const std :: shared_ptr\<void\>& contexte, const std :: function\<void (std :: shared_ptr\<HttpOperation\>)  |  Envoyer une requête HTTP de manière asynchrone.
 public void CancelOperation (const std :: String & requestId)  |  Annule une opération HTTP spécifique.
 public void CancelAllOperations ()  |  Annuler les requêtes HTTP en cours.
   

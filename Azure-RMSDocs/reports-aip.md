@@ -14,10 +14,10 @@ ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: fb4167ecc6f4dca175fe478d085a228a044416a9
-ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74564546"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Création de rapports centralisée pour Azure Information Protection
@@ -293,7 +293,7 @@ Utilisez le tableau suivant pour identifier le nom convivial des fonctions d’�
 |TenantId|ID de locataire Azure AD |
 |AzureApplicationId|ID d’application inscrite Azure AD (GUID)|
 |ProcessName|Processus qui héberge le kit de développement logiciel MIP|
-|ID|GUID de l’étiquette ou null|
+|LabelId|GUID de l’étiquette ou null|
 |IsProtected|Si protégé : oui/non |
 |ProtectionOwner |Rights Management propriétaire au format UPN|
 |LabelIdBefore|GUID de l’étiquette ou null avant modification|

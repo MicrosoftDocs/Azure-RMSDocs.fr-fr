@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 9b3b32464cae35560c74a05b28506ca60dc963d2
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886049"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-profile-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au profil de l’API de stratégie
@@ -22,16 +22,16 @@ Les deux exemples ci-dessous montrent comment créer l’objet profileSettings e
 
 ## <a name="load-a-profile"></a>Charger un profil
 
-Maintenant que les `MipContext`éléments `ProfileObserver`, et `AuthDelegateImpl` sont définis, nous allons les utiliser pour instancier `mip::PolicyProfile`. La création `mip::PolicyProfile` de l' [`mip::PolicyProfile::Settings`](reference/class_mip_PolicyProfile_settings.md) objet `mip::MipContext`requiert et.
+Maintenant que les `MipContext`, `ProfileObserver`et `AuthDelegateImpl` sont définis, nous les utiliserons pour instancier `mip::PolicyProfile`. La création de l’objet `mip::PolicyProfile` nécessite [`mip::PolicyProfile::Settings`](reference/class_mip_PolicyProfile_settings.md) et `mip::MipContext`.
 
 ### <a name="profilesettings-parameters"></a>Paramètres Profile::Settings
 
-Le `PolicyProfile::Settings` constructeur accepte quatre paramètres, répertoriés ci-dessous:
+Le constructeur `PolicyProfile::Settings` accepte quatre paramètres, répertoriés ci-dessous :
 
-- `const std::shared_ptr<MipContext>`: Objet `mip::MipContext` qui a été initialisé pour stocker les informations sur l’application, le chemin d’accès à l’État, etc.
-- `mip::CacheStorageType`: Définit le mode de stockage de l’État: En mémoire, sur disque, sur disque et chiffré. Pour plus d’informations, consultez [concepts de stockage du cache](concept-cache-storage.md).
-- `std::shared_ptr<mip::AuthDelegate>`: Pointeur partagé de la classe `mip::AuthDelegate`.
-- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: Pointeur partagé vers l’implémentation de `Observer` profil (dans [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)et [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
+- `const std::shared_ptr<MipContext>`: objet `mip::MipContext` qui a été initialisé pour stocker les informations sur l’application, le chemin d’accès à l’État, etc.
+- `mip::CacheStorageType`: définit le mode de stockage de l’État : en mémoire, sur disque, sur disque et chiffré. Pour plus d’informations, consultez [concepts de stockage du cache](concept-cache-storage.md).
+- `std::shared_ptr<mip::AuthDelegate>` : un pointeur partagé de classe `mip::AuthDelegate`.
+- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: pointeur partagé vers l’implémentation du profil `Observer` (dans [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)et [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 
 Les deux exemples ci-dessous montrent comment créer l’objet profileSettings en utilisant un stockage local pour le stockage de l’état, ainsi qu’un stockage en mémoire uniquement. Les deux supposent que l’objet `authDelegateImpl` a déjà été créé.
 

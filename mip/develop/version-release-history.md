@@ -9,10 +9,10 @@ ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
 ms.openlocfilehash: a678765835785dcb40aaf65e7f92e78fba67c73a
-ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74479103"
 ---
 # <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Historique des versions et politique de support de Microsoft Information Protection (MIP) SDK
@@ -25,7 +25,7 @@ Les versions préliminaires ne doivent pas être déployées en production. Au l
 
 ## <a name="release-history"></a>Historique des versions
 
-Utilisez les informations suivantes pour découvrir les nouveautés ou les modifications apportées à une version prise en charge. La dernière version est répertoriée en première position. 
+Utilisez les informations suivantes pour découvrir les nouveautés ou les modifications apportées à une version prise en charge. La dernière version est la première sur la liste. 
 
 > [!NOTE]
 > Les correctifs mineurs ne sont pas répertoriés. par conséquent, si vous rencontrez un problème avec le kit de développement logiciel (SDK), nous vous recommandons de vérifier s’il est corrigé avec la dernière version de la mise à la disposition générale. Si le problème persiste, consultez la préversion actuelle.
@@ -38,7 +38,7 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 
 Cette version introduit la prise en charge de l’API de protection dans le package .NET (Microsoft. InformationProtection. file).
 
-### <a name="sdk-changes"></a>Modifications du SDK
+### <a name="sdk-changes"></a>Modifications du kit SDK
 - Améliorations des performances et correctifs de bogues
 - Énumération StorageType renommée en CacheStorageType
 - Liens Android vers libc + + à la place de gnustl
@@ -195,7 +195,7 @@ Cette version introduit la prise en charge de l’API de protection dans le pack
  - MIP ::P olicyHandler :: NotifyCommitedActions renommé MIP ::P olicyHandler :: NotifyCommittedActions
 
 
-## <a name="version-110"></a>Version 1.1.0
+## <a name="version-110"></a>Version 1.1.0
 
 **Date de publication**: 15 janvier 2019
 
@@ -214,7 +214,7 @@ Cette version introduit la prise en charge des plateformes suivantes :
 - La licence de publication sérialisée peut maintenant être récupérée directement à partir d’un fichier sans aucune opération HTTP via MIP :: FileHandler :: GetSerializedPublishingLicense
 - Les applications sont notifiées si une opération HTTP est requise pour terminer la création d’un MIP :: FileEngine/MIP ::P olicyEngine via MIP :: FileProfile :: observer :: OnAddPolicyEngineStarting/MIP ::P olicyProfile :: observer :: OnAddEngineStarting
 - Détection de la nécessité ou non d’une date d’expiration pour la détection de contenu protégé avec la méthode de commodité MIP ::P rotectionDescriptor ::D oesContentExpire
-- Classification
+- Classification :
   - Les types de sensibilité (expressions régulières pour CC #, Passport #, etc.) peuvent être obtenus à partir du service SCC
     - Activez la fonctionnalité en définissant l’indicateur MIP :: FileEngine :: Settings/MIP ::P olicyEngine :: Settings
     - Lire les types via MIP :: FileEngine :: ListSensitivityTypes/MIP ::P olicyEngine :: ListSensitivityTypes

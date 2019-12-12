@@ -15,10 +15,10 @@ ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 2c8b3407f31819614605fb77fb86a86159a898fd
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68788544"
 ---
 # <a name="deploy-into-production"></a>Déployer en production
@@ -31,7 +31,7 @@ Avant de pouvoir lancer une application développée avec AIP/RMS, vous devez pa
 ### <a name="begin-the-process"></a>Lancement du processus
 Obtenez votre IPIA en envoyant un e-mail à <strong>IPIA@microsoft.com</strong> avec les informations suivantes :
 
-**Objet :** Demande d’IPIA pour *Nom de la société*
+**Objet :** demande d'IPIA pour *Nom de la société*
 
 Dans le corps du message électronique, incluez :
 - Nom de l’application et du produit
@@ -103,13 +103,13 @@ Si le client est présent, poursuivez l’installation de votre application.
 
 > [!NOTE]
 > Si vous avez migré vers le nouveau modèle ADAL pour l’authentification, il est inutile d’installer le **SIA**. Pour plus d’informations, consultez [Authentification ADAL pour votre application compatible RMS](adal-auth.md).
-> Vous pouvez aussi **certifier votre application pour Windows 10** : en mettant à jour votre application pour utiliser l’authentification ADAL au lieu de l’Assistant de connexion Microsoft Online, vous et vos clients pouvez : Utiliser l’authentification multifacteur pour installer le client RMS 2.1 sans nécessiter de privilèges d’administration sur l’ordinateur
+> Vous pouvez également **certifier votre application pour Windows 10**. En mettant à jour votre application pour utiliser l’authentification ADAL plutôt que l’Assistant de connexion Microsoft Online, vous et vos clients pouvez : utiliser l’authentification multifacteur, installer le client RMS 2.1 sans avoir besoin de privilèges d’administration sur l’ordinateur.
 
 Pour que votre utilisateur final tire parti des services Information Protection, vous devez déployer *l'Assistant de connexion Online Services (SIA)* . En tant que développeur d’applications, vous ne savez pas si l’utilisateur final doit utiliser Information Protection via RMS (localement) ou Azure Information Protection.
 
 
 > [!IMPORTANT]
-> Si vous devez exécuter votre application cliente avec Azure RMS, vous devez créer vos propres locataires. Pour plus d’informations, consultez [Configuration requise d’Azure RMS : Abonnements cloud prenant en charge Azure RMS](../requirements.md).
+> Si vous devez exécuter votre application cliente avec Azure RMS, vous devez créer vos propres locataires. Pour plus d’informations, consultez [Conditions requises pour Azure RMS : abonnements cloud qui prennent en charge Azure RMS](../requirements.md).
 > Pour plus d’informations sur l’exécution d’Azure RMS, consultez [Permettre à votre application de service de fonctionner avec le service RMS cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 -   Téléchargez l’[Assistant de connexion Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177) à partir du Centre de téléchargement Microsoft.

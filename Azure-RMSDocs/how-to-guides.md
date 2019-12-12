@@ -4,25 +4,25 @@ description: Identifiez les cas d’usage qui classent et protègent les donnée
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4f42951ff93e5de259ce9b952f340c5e597e3418
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: f3bc3064aa4a3a723197dcb171eaba018bca6b3e
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689354"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933325"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guides pratiques pour les scénarios courants qui utilisent Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Il existe de nombreux scénarios dans lesquels vous pouvez utiliser Azure Information Protection pour classer et, le cas échéant, protéger les documents et e-mails de votre organisation. 
 
@@ -30,9 +30,9 @@ Les déploiements les plus performants sont ceux qui identifient des cas d’uti
 
 ## <a name="common-scenarios"></a>Scénarios courants
 
-|Consiste Je veux ...|Instructions|
+|Scénario : je souhaite...|Instructions|
 |----------------|---------------|
-|Identifier les informations sensibles stockées localement par mon entreprise|[Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement](quickstart-findsensitiveinfo.md)|
+|Identifier les informations sensibles stockées localement par mon entreprise|[Démarrage rapide : Rechercher les informations sensibles consignées dans des fichiers stockés localement](quickstart-findsensitiveinfo.md)|
 |Aider les utilisateurs à protéger leurs e-mails contenant des informations sensibles|[Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles](quickstart-label-dnf-protectedemail.md)|
 |Aider les utilisateurs à classer les données qu’ils ont créées ou modifiées, et à les protéger si elles contiennent des informations sensibles| [Tutoriel : Modifier la stratégie et créer une nouvelle étiquette](infoprotect-quick-start-tutorial.md)|
 |Aider les utilisateurs à collaborer sur un document protégé|[Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection](secure-collaboration-documents.md)|

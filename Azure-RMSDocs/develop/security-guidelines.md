@@ -12,10 +12,10 @@ ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
 ms.openlocfilehash: eb550284cd10a3b0946bd188ca2f194edead86f0
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67521191"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Bonnes pratiques de sécurité pour Information Protection
@@ -49,7 +49,7 @@ Il existe plusieurs catégories principales de vulnérabilités dans un système
 
 Ces rubriques portent principalement sur les problèmes de fuites. L’intégrité d’un système d’API dépend de sa capacité, au fil du temps, à protéger les informations et à autoriser l’accès seulement à des entités désignées. Ces rubriques abordent également les problèmes de corruption. Les problèmes de refus ne sont pas couverts.
 
-Microsoft ne teste pas et ne passe pas en revue les résultats des tests liés au respect de la norme minimale. Le partenaire est responsable du respect des normes minimales. Microsoft fournit deux niveaux supplémentaires de recommandations pour aider à limiter les menaces courantes. En règle générale, ces suggestions sont cumulatives. Par exemple, le respect des recommandations préférées implique que vous respectez les normes minimales là où elles sont applicables, sauf indication contraire.
+Microsoft ne teste pas ni ne vérifie les résultats des tests liés au respect de la norme minimale. Le partenaire est responsable du respect des normes minimales. Microsoft fournit deux niveaux supplémentaires de recommandations pour aider à limiter les menaces courantes. En règle générale, ces suggestions sont cumulatives. Par exemple, le respect des recommandations préférées implique que vous respectez les normes minimales là où elles sont applicables, sauf indication contraire.
 
 |Niveau de norme|Description|
 |---|---|
@@ -57,7 +57,7 @@ Microsoft ne teste pas et ne passe pas en revue les résultats des tests liés a
 |Norme recommandée| Les instructions recommandées permettent d’optimiser la sécurité des applications et d’indiquer de quelle manière le SDK peut évoluer à mesure que des critères de sécurité supplémentaires sont implémentés. Les fournisseurs peuvent différencier leurs applications en développant selon ce niveau plus élevé des directives de sécurité.|
 |Norme préférée| Cette norme est la catégorie de sécurité la plus élevée actuellement définie. Les fournisseurs qui développent des applications commercialisées comme hautement sécurisées doivent respecter cette norme. Les applications conformes à cette norme sont susceptibles d’être moins vulnérables aux attaques.|
 
-## <a name="malicious-software"></a>Logiciels malveillants
+## <a name="malicious-software"></a>Logiciel malveillant
 
 Microsoft a défini des normes minimales requises que votre application doit respecter pour protéger le contenu contre des logiciels malveillants.
 
@@ -81,7 +81,7 @@ Si votre application n’interprète pas et n’applique pas correctement les dr
 
 ### <a name="azure-information-protection-aip"></a>Azure Information Protection (AIP)
 
-Le système d’information protection organise les droits de plusieurs regroupements. Pour plus d’informations, consultez [configuration des droits d’utilisation pour Azure Information Protection](../configure-usage-rights.md).
+Le système de protection des informations organise les droits à quelques regroupements. Pour plus d’informations, consultez [Configuration des droits d’utilisation pour Azure information protection](../configure-usage-rights.md).
 
 Azure Information Protection permet à un utilisateur de déchiffrer ou non des informations. Les informations n’ont en soi aucune protection. Si un utilisateur dispose du droit de déchiffrer, l’API l’y autorise. L’application est responsable de la gestion ou de la protection de ces informations une fois que celles-ci sont en texte clair. Une application est responsable de la gestion de son environnement et de son interface pour empêcher l’utilisation non autorisée d’informations. Par exemple, la désactivation des boutons **Imprimer** et **Copier** si une licence accorde uniquement le droit VIEW (AFFICHER). La suite de tests doit vérifier que votre application fonctionne correctement avec tous les droits de licence qu’elle reconnaît.
 

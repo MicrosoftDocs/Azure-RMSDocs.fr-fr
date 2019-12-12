@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: baa62e34e10de3fb4cacc3eb7cb21c0b3e2ebf75
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175443"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-observers"></a>Kit SDK Microsoft Information Protection – Observateurs de l’API de fichier
@@ -29,9 +29,9 @@ Les exemples ci-dessous illustrent le modèle de promesse/futur, qui est égalem
 
 Dans l’exemple suivant, nous avons créé une classe, `ProfileObserver`, qui est dérivée de `mip::FileProfile::Observer`. Les fonctions membres ont été remplacées pour utiliser le modèle de promesse/futur utilisé dans tous les exemples.
 
-**Remarque**: Le ci-dessous les exemples ne sont que partiellement implémentés et n’incluent pas de remplacements pour le `mip::FileEngine` liés observateurs.
+**Remarque** : Les exemples ci-dessous ne sont que partiellement implémentés et n’incluent pas de remplacements pour les observateurs liés à `mip::FileEngine`.
 
-### <a name="profileobserverh"></a>profile_observer.h
+### <a name="profile_observerh"></a>profile_observer.h
 
 Dans l’en-tête, nous définissons la classe `ProfileObserver`, dérivée de `mip::FileProfile::Observer`, puis nous remplaçons chacune des fonctions membres.
 
@@ -45,7 +45,7 @@ ProfileObserver() { }
 };
 ```
 
-### <a name="profileobservercpp"></a>profile_observer.cpp
+### <a name="profile_observercpp"></a>profile_observer.cpp
 
 Dans l’implémentation proprement dite, nous définissons une action à entreprendre pour chaque fonction membre d’observateur.
 
@@ -53,7 +53,7 @@ Chaque membre accepte deux paramètres. Le premier est un pointeur partagé vers
 
 Le second est un pointeur partagé vers le *contexte*. Dans notre implémentation, le contexte est une référence à un objet `std::promise`, transmise par référence en tant que `std::shared_ptr<void>`. La première ligne de la fonction caste ceci en `std::promise`, puis le stocke dans un objet appelé `promise`.
 
-Enfin, le futur est préparé en définissant `promise->set_value()` et en lui passant l’objet `mip::FileProfile`.
+Enfin, le futur est préparé en définissant `promise->set_value()` et en lui transmettant l’objet `mip::FileProfile`.
 
 ```cpp
 #include "profile_observer.h"
@@ -83,7 +83,7 @@ Lorsque nous instancions une classe du kit SDK ou utilisons une fonction qui eff
 
 De façon similaire à l’observateur de profil, l’objet `mip::FileHandler` implémente une classe `mip::FileHandler::Observers` pour la gestion des notifications d’événements asynchrones lors d’opérations de fichier. L’implémentation est similaire à celle détaillée ci-dessus. `FileHandlerObserver` est partiellement défini ci-dessous. 
 
-### <a name="filehandlerobserverh"></a>file_handler_observer.h
+### <a name="file_handler_observerh"></a>file_handler_observer.h
 
 ```cpp
 #include "mip/file/file_handler.h"
@@ -102,7 +102,7 @@ public:
 };
 ```
 
-### <a name="filehandlerobservercpp"></a>file_handler_observer.cpp
+### <a name="file_handler_observercpp"></a>file_handler_observer.cpp
 
 Cet exemple correspond simplement aux deux premières fonctions, mais les fonctions restantes utilisent un modèle similaire à celles-ci et à `ProfileObserver`.
 

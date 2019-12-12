@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: f1e5e06332cac6c0f8beba089d92654781ff6f71
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560431"
 ---
 # <a name="mip-sdk-for-c-reference"></a>SDK MIP pour C++ référence
@@ -91,7 +91,7 @@ Le SDK MIP pour C++ inclut :
 [MIP :: NoPermissionsError, classe](class_mip_nopermissionserror.md)  |  L’utilisateur n’a pas pu obtenir l’accès au contenu. Par exemple, aucune autorisation, contenu révoqué.
 [MIP :: NoPolicyError, classe](class_mip_nopolicyerror.md)  |  La stratégie de locataire n’est pas configurée pour la classification/les étiquettes.
 [MIP :: NotSupportedError, classe](class_mip_notsupportederror.md)  |  L’opération demandée par l’application n’est pas prise en charge par le kit SDK.
-[MIP :: OperationCancelledError, classe](class_mip_operationcancellederror.md)  |  L’opération a été annulée.
+[MIP :: OperationCancelledError, classe](class_mip_operationcancellederror.md)  |  L'opération a été annulée.
 [MIP de classe ::P olicyEngine](class_mip_policyengine.md)  |  Cette classe fournit une interface pour toutes les fonctions de moteur.
 [MIP ::P olicyEngine :: Settings, classe](class_mip_policyengine_settings.md)  |  Définit les paramètres associés à un PolicyEngine.
 [MIP de classe ::P olicyHandler](class_mip_policyhandler.md)  |  Cette classe fournit une interface pour toutes les fonctions de gestionnaire de stratégie sur un fichier.

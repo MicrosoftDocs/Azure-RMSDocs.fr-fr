@@ -13,10 +13,10 @@ ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 7898fd3ff15423c6a92eb2eabe6f5cb01007b076
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561305"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
@@ -491,7 +491,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 
 3. Sélectionnez **+ nouvelle inscription**pour créer votre application Web App/API. Dans le volet **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
 
-   - **Nom**: `AIPOnBehalfOf`
+   - **Nom** : `AIPOnBehalfOf`
         
         Si vous le souhaitez, spécifiez un autre nom. Il doit être unique pour chaque locataire.
     
@@ -527,10 +527,10 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 12. De retour sur le **AIPOnBehalfOf-exposer un volet API** , sélectionnez **+ Ajouter une étendue**.
 
 13. Dans le volet **Ajouter une étendue** , spécifiez les éléments suivants, en utilisant les chaînes suggérées comme exemples, puis sélectionnez **Ajouter une étendue**:
-    - **Nom**de l’étendue : `user-impersonation`
+    - **Nom de l’étendue** : `user-impersonation`
     - **Qui peut donner son consentement ?** : **administrateurs et utilisateurs**
-    - **Nom d’affichage du consentement**de l’administrateur : `Access Azure Information Protection scanner`
-    - **Description du consentement**de l’administrateur : `Allow the application to access the scanner for the signed-in user`
+    - **Nom d’affichage du consentement administrateur** : `Access Azure Information Protection scanner`
+    - **Description du consentement de l’administrateur** : `Allow the application to access the scanner for the signed-in user`
     - **Nom complet du consentement**de l’utilisateur : `Access Azure Information Protection scanner`
     - **Description du consentement**de l’utilisateur : `Allow the application to access the scanner for the signed-in user`
     - **État**: **activé** (valeur par défaut)
@@ -540,7 +540,7 @@ Après avoir exécuté cette applet de commande, vous pouvez exécuter les apple
 15. Dans le volet **inscriptions d’applications** , sélectionnez **+ nouvelle inscription d’application** pour créer votre application native.
 
 16. Dans le volet **inscrire une application** , spécifiez les paramètres suivants, puis sélectionnez **inscrire**:
-    - **Nom**: `AIPClient`
+    - **Nom** : `AIPClient`
     - **Types de comptes pris en charge**: **comptes dans ce répertoire d’organisation uniquement**
     - **URI de redirection (facultatif)** : **client Public (mobile & desktop)** et `http://localhost`
 

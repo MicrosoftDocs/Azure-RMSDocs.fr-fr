@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: e5196535dc474d2649c084b55c55a80c3af349b9
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560758"
 ---
 # <a name="class-mipprotectionengineobserver"></a>class mip::ProtectionEngine::Observer 
@@ -22,7 +22,7 @@ Cette interface doit être implémentée par les applications utilisant le SDK d
 --------------------------------|---------------------------------------------
 public virtual void OnGetTemplatesSuccess (const std :: shared_ptr\<std :: Vector\<std :: String\>\>& templateIds, const std :: shared_ptr\<void\>& contexte)  |  Appelé lorsque les modèles ont été récupérés.
 public virtual void OnGetTemplatesFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé lorsque la récupération de modèles a généré une erreur.
-public virtual void OnGetRightsForLabelIdSuccess (const std :: shared_ptr\<std :: Vector\<std :: String\>\>droits &, const std :: shared_ptr\<void\>contexte &)  |  Appelé en cas de récupération réussie des droits.
+public virtual void OnGetRightsForLabelIdSuccess (const std :: shared_ptr\<std :: Vector\<std :: String\>\>& droits, const std :: shared_ptr\<void\>& contexte)  |  Appelé en cas de récupération réussie des droits.
 public virtual void OnGetRightsForLabelIdFailure (const std :: exception_ptr & erreur, const std :: shared_ptr\<void\>contexte &)  |  Appelé lors de la récupération des droits pour un ID d’étiquette pour l’utilisateur.
   
 ## <a name="members"></a>Membres

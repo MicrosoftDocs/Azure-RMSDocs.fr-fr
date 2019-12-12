@@ -4,7 +4,7 @@ description: Informations vous permettant de fournir de l’aide aux utilisateur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/23/2019
+ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 669764881af477e19ffcf9d63266fe19e1f26f92
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: b24319f4759c36190cd880335c19899401495608
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71683580"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933359"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Aider les utilisateurs à protéger des fichiers en utilisant le service Azure Rights Management
 
@@ -31,7 +31,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
     Expliquez à vos utilisateurs comment et quand protéger des documents et messages électroniques contenant des informations sensibles. Autant que possible, fournissez ces informations pour leurs flux de travail existants afin qu’ils puissent intégrer les étapes supplémentaires à un processus déjà familier, au lieu d’introduire des processus nouveaux. Pensez à leur faire part des avantages et des risques inhérents à votre activité et proposez-leur des conseils sur la protection des fichiers et des messages électroniques. Si vous avez configuré des [modèles](configure-policy-templates.md), fournissez des instructions concernant le modèle à sélectionner si le nom et la description des modèles ne suffisent pas à identifier le bon modèle.
     
     > [!TIP]
-    > Exemples de vidéos à l’attention des utilisateurs finaux :
+    > Exemples de vidéos à l’attention des utilisateurs finaux :
     > -   [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
     > -   [Révocation et suivi de document Azure RMS](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
@@ -43,7 +43,7 @@ Après avoir déployé et configuré Azure Information Protection pour votre org
     
 -   **Informations de support technique**
     
-    Si les utilisateurs disposent du client Azure Information Protection, les opérateurs du support technique peuvent leur demander d’utiliser l’option **Aide et commentaires** pour savoir si l’édition d’Office prend ou non en charge la protection et obtenir le compte d’utilisateur actuellement connecté. Vous pouvez également utiliser cette option pour collecter des fichiers journaux et réinitialiser le client. Pour plus d’informations, consultez le guide de l’administrateur : [Vérifications et résolution des problèmes de l’installation](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
+    Si les utilisateurs disposent du client Azure Information Protection, les opérateurs du support technique peuvent leur demander d’utiliser l’option **Aide et commentaires** pour savoir si l’édition d’Office prend ou non en charge la protection et obtenir le compte d’utilisateur actuellement connecté. Vous pouvez également utiliser cette option pour collecter des fichiers journaux et réinitialiser le client. Pour plus d’informations, consultez le guide de l’administrateur : [Vérifications et résolution des problèmes liés à l’installation](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
     
     S’il existe des demandes légitimes d’avoir un accès complet aux documents protégés, assurez-vous que le support technique a des processus pour demander cet accès à l’aide de la [fonctionnalité de super utilisateur](configure-super-users.md)Azure information protection. Par exemple, ces demandes peuvent émaner du service juridique ou d’un responsable après le départ d’un employé.
     
@@ -86,7 +86,7 @@ Si vous utilisez le service Azure Rights Management et que vous n’avez pas ins
 
 1.  Dans Microsoft Word, créez un document.
 
-2.  Dans le menu **Fichier** : **Informations** > **Protéger le document** >  **Restreindre l’accès**.
+2.  Dans le menu **fichier** : **info** > **protéger le document** >  **restreindre l’accès**.
 
 3. Choisissez un modèle pour appliquer rapidement les droits d’utilisation appropriés ou sélectionnez **Restreindre l’accès** et sélectionnez vous-même les droits d’utilisation.
 
@@ -105,7 +105,7 @@ Les droits d'utilisation sont affichés en haut du document grâce à une banni�
 
 1.  Dans Outlook, créez un e-mail adressé à un destinataire au sein de votre organisation.
 
-2.  Sous l’onglet **OPTIONS** : **Autorisation** > sélectionnez une option. Exemple : **Ne pas transférer**, ou **\<Nom de la société> - Confidentiel** ou **\<Nom de la société> - Affichage confidentiel uniquement**.
+2.  Sous l’onglet **options** : **autorisation** > sélectionnez une option. Par exemple : **Ne pas transférer**, **\<Nom de la société>- Confidentiel** ou **\<Nom de la société>- Affichage confidentiel uniquement**.
 
 3.  Envoyez le message.
 
@@ -117,7 +117,7 @@ Par exemple, si l’e-mail est protégé à l’aide de l’option **Ne pas tran
 
 1. Dans Outlook sur le web, créez un e-mail destiné à une personne de votre organisation.
 
-2. Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **modifier les autorisations** , puis sélectionnez une option dans la liste déroulante. Exemple : **Chiffrer** ou **\<Nom de la société> – Confidentiel**.
+2. Sélectionnez **Protéger**. Si la valeur par défaut n’a pas été modifiée par un administrateur, l’option **Ne pas transférer** est sélectionnée automatiquement. Si vous souhaitez modifier la valeur par défaut, sélectionnez **modifier les autorisations** , puis sélectionnez une option dans la liste déroulante. Par exemple : **chiffrer** ou **\<nom de la société >-Confidential**.
 
 3. Envoyez le message.
 

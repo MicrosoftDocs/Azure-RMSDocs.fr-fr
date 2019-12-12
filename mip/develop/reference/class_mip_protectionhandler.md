@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 6b5468986d62c01d2d3f0b55a57946d5fa06bab3
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560110"
 ---
 # <a name="class-mipprotectionhandler"></a>class mip::ProtectionHandler 
@@ -19,7 +19,7 @@ Gère les actions liées à la protection pour une configuration de protection s
 ## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public std :: shared_ptr\<flux\> CreateProtectedStream (const std :: shared_ptr\<flux\>& backingStream, int64_t contentStartPosition, int64_t contente)  |  Créer un flux protégé qui permet de chiffrer/déchiffrer le contenu.
+public std :: shared_ptr\<flux\> CreateProtectedStream (const std :: shared_ptr\<flux\>& backingStream, int64_t contentStartPosition, int64_t contenter)  |  Créer un flux protégé qui permet de chiffrer/déchiffrer le contenu.
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Chiffrer un tampon.
 public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Déchiffrer un tampon.
 public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calcule la taille (en octets) du contenu s’il devait être chiffré avec ce ProtectionHandler.

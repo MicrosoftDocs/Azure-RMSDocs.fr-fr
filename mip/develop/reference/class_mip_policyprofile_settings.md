@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 324b31a9589cff75a758da2936a3aba242fd63c2
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560874"
 ---
 # <a name="class-mippolicyprofilesettings"></a>mip::PolicyProfile::Settings, classe 
@@ -19,7 +19,7 @@ Paramètres utilisés par PolicyProfile lors de sa création et tout au long de 
 ## <a name="summary"></a>Table des matières
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-Paramètres publics (const std :: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std :: shared_ptr\<AuthDelegate\>& authDelegate, const std :: shared_ptr\<PolicyProfile :: O bserver\>& observer)  |  Interface pour la configuration du profil.
+Paramètres publics (const std :: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std :: shared_ptr\<AuthDelegate\>& authDelegate, const std :: shared_ptr\<PolicyProfile :: observer\>& observer)  |  Interface pour la configuration du profil.
 public CacheStorageType GetCacheStorageType () const  |  Déterminez si les caches sont stockés dans la mémoire ou sur le disque.
 public const std :: shared_ptr\<AuthDelegate\>& GetAuthDelegate () const  |  Obtenir le délégué d’authentification.
 public const std :: shared_ptr\<PolicyProfile :: observer\>& GetObserver () const  |  Obtenir l’observateur d’événements.
@@ -31,7 +31,7 @@ public void SetTaskDispatcherDelegate (const std :: shared_ptr\<TaskDispatcherD
 public void SetSessionId(const std::string& sessionId)  | Pas encore documenté.
 public const std::string& GetSessionId() const  | Pas encore documenté.
 public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& customSettings)  |  Définir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
-public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
 public ~Settings()  | Pas encore documenté.
   
 ## <a name="members"></a>Membres

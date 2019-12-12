@@ -14,10 +14,10 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: d1181dfe1c495a334aaebd567df5db7e14649e25
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60178231"
 ---
 # <a name="file-api-configuration"></a>Configuration de l’API de fichier
@@ -38,15 +38,15 @@ Les sections suivantes décrivent les clés et valeurs de clés qui contrôlent 
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection`
 
-**Type** : Touche
+**Type** : Clé
 
 **Description** : Contient la configuration générale de l’API de fichier.
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>`
 
-**Type** : Touche
+**Type** : Clé
 
-**Description** : Spécifie les informations de configuration d’une extension de fichier spécifique ; par exemple TXT, JPG, etc.
+**Description** : Spécifie les informations de configuration d’une extension de fichier spécifique ; par exemple TXT, JPG, etc.
 
 - Le caractère générique « * » est autorisé. Toutefois, le paramètre d’une extension spécifique est prioritaire sur le paramètre du caractère générique. Le caractère générique n’affecte pas les paramètres des fichiers Microsoft Office. Vous devez désactiver explicitement ces derniers à l’aide du type de fichier.
 - Pour spécifier des fichiers qui n’ont pas d’extension, utilisez « . »
@@ -61,12 +61,12 @@ Pour spécifier le comportement de la protection, définissez la valeur **Encryp
 
 **Description** : Contient l’une des trois valeurs suivantes :
 
-- **Désactivé** : Le chiffrement est désactivé.
+- **Off** : Le chiffrement est désactivé.
 
 > [!Note]
 > Ce paramètre n’a aucune incidence sur le déchiffrement. Tout fichier chiffré, que ce soit via la protection Native ou la protection Pfile, peut être déchiffré du moment que l’utilisateur dispose du droit **EXTRACT**.
 
-- **Natif** :  Le chiffrement natif est utilisé. Pour les fichiers Office, le fichier chiffré a la même extension que le fichier d’origine. Par exemple, un fichier avec l’extension de fichier .docx est chiffré en fichier avec l’extension .docx. Les autres fichiers auxquels une protection native peut être appliquée sont chiffrés en fichiers avec une extension au format p*zzz*, où *zzz* représente l’extension de fichier d’origine. Par exemple, les fichiers .txt sont chiffrés en fichiers portant l’extension .ptxt. La liste des extensions de fichiers pouvant bénéficier d’une protection native est dressée ci-après.
+- **Native** : Le chiffrement natif est utilisé. Pour les fichiers Office, le fichier chiffré a la même extension que le fichier d’origine. Par exemple, un fichier avec l’extension de fichier .docx est chiffré en fichier avec l’extension .docx. Les autres fichiers auxquels une protection native peut être appliquée sont chiffrés en fichiers avec une extension au format p*zzz*, où *zzz* représente l’extension de fichier d’origine. Par exemple, les fichiers .txt sont chiffrés en fichiers portant l’extension .ptxt. La liste des extensions de fichiers pouvant bénéficier d’une protection native est dressée ci-après.
 
 - **Pfile** : Le chiffrement PFile est utilisé. L’extension .pfile est ajoutée à l’extension d’origine du fichier chiffré. Par exemple, une fois le chiffrement effectué, un fichier .txt a l’extension .txt.pfile.
 
@@ -92,19 +92,19 @@ Vous pouvez ajouter une prise en charge native pour tous les types de fichiers (
 
 -   Extensions de fichiers : doc, dot, xla, xls, xlt, pps, ppt, docm, docx, dotm, dotx, xlam, xlsb, xlsm, xlsx, xltm, xltx, xps, potm, potx, ppsx, ppsm, pptm, pptx, thmx, vsdx, vsdm, vssx, vssm, vstx, and vstm. 
 -   Type de protection = Native (par défaut) : sample.docx est chiffré en sample.docx
--   Type de protection = Pfile : pour les fichiers Office, le résultat est le même qu’avec la protection native.
--   Désactivé : désactive le chiffrement.
+-   Type de protection = Pfile : pour les fichiers Office, le résultat est le même qu’avec la protection native.
+-   Off : Désactive le chiffrement.
 
 **Fichiers PDF**
 
 -   Type de protection = Native : sample.pdf est chiffré et nommé sample.ppdf
 -   Type de protection = Pfile : sample.pdf est chiffré et nommé sample.pdf.pfile.
--   Désactivé : désactive le chiffrement.
+-   Off : Désactive le chiffrement.
 
 **Tous les autres formats de fichiers**
 
 -   Type de protection = Pfile : sample.*zzz* est chiffré et nommé sample.*zzz*.pfile, où *zzz* représente l’extension de fichier d’origine.
--   Désactivé : désactive le chiffrement.
+-   Off : Désactive le chiffrement.
 
 ### <a name="examples"></a>Exemples
 

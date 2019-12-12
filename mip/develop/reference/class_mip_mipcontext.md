@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 9efbe9330014458a26f62e4dfac9ea24ad5d4475
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561028"
 ---
 # <a name="class-mipmipcontext"></a>MIP :: MipContext, classe 
@@ -26,8 +26,8 @@ public const std :: String & GetMipPath () const  |  Obtenir le chemin d’acc�
 public bool IsOfflineOnly ()  |  Obtient le paramètre en mode hors connexion uniquement.
 public std :: shared_ptr\<LoggerDelegate\> GetLoggerDelegate ()  |  Obtient l’implémentation du journal.
 public LoggerDelegate * GetRawLoggerDelegate ()  |  Obtient l’implémentation du journal.
-public static MIP_API std :: shared_ptr&lt;MipContext&gt; _ _ cdecl Mip :: MipContext :: Create | Créez une instance MipContext à utiliser lors de l’initialisation des profils.
-public static MIP_API std :: shared_ptr&lt;MipContext&gt; _ _ cdecl Mip :: MipContext :: CreateWithCustomFeatureSettings | Créez une nouvelle instance MipContext avec des paramètres de fonctionnalités personnalisés.
+public static MIP_API std :: shared_ptr&lt;MipContext&gt; __CDECL MIP :: MipContext :: Create | Créez une instance MipContext à utiliser lors de l’initialisation des profils.
+public static MIP_API std :: shared_ptr&lt;MipContext&gt; __CDECL MIP :: MipContext :: CreateWithCustomFeatureSettings | Créez une nouvelle instance MipContext avec des paramètres de fonctionnalités personnalisés.
 
 ## <a name="members"></a>Membres
   
@@ -76,7 +76,7 @@ Obtient l’implémentation du journal.
   
 **Retourne** : enregistreur d’événements
 
-### <a name="create-function"></a>créer une fonction
+### <a name="create-function"></a>Créer une fonction
 Créez une instance MipContext à utiliser lors de l’initialisation des profils.
 
 **Retourne**: instance MipContext.

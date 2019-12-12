@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: dec0a095b84d265d3594112b24beba8aae923959
-ms.sourcegitcommit: e8c3def412267905871928448f3810731b5c0443
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73632267"
 ---
 # <a name="linux-code-examples"></a>Exemples de code Linux

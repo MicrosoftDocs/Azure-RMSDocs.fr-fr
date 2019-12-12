@@ -1,16 +1,16 @@
 ---
 title: Fonctions
-description: Mission.
+description: Fonctions.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 11/4/2019
 ms.openlocfilehash: cfc80ab9e4704c9efa5d3105f36c668bce26a6b9
-ms.sourcegitcommit: 7a8eef5eb9d6440c6e2300cb3f264da31061b00d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73591637"
 ---
 # <a name="functions"></a>Fonctions
@@ -25,7 +25,7 @@ Paramètre | Description
 |---|---|
 | autorité | Adresse e-mail pour laquelle le jeton sera acquis |
 | challenge | Défi OAuth2 |
-| contexte | Contexte d’application opaque passé à l’API MIP qui a entraîné ce rappel d’authentification |
+| context | Contexte d’application opaque passé à l’API MIP qui a entraîné ce rappel d’authentification |
 | tokenBuffer | Sortie Mémoire tampon dans laquelle le jeton sera copié. Si la valeur est null, 'actualTokenSize’sera rempli, mais |
 | tokenBufferSize | Taille (en octets) de la mémoire tampon de sortie |
 | actualTokenSize | Sortie Taille réelle (en octets) du jeton |
@@ -51,7 +51,7 @@ définition de la fonction de rappel pour le consentement de l’utilisateur à 
 
 Paramètre | Description
 |---|---|
-| URL | URL pour laquelle le kit de développement logiciel (SDK) requiert le consentement de l’utilisateur |
+| url | URL pour laquelle le kit de développement logiciel (SDK) requiert le consentement de l’utilisateur |
 
 **Retour**: réponse du consentement de l’utilisateur
 
@@ -69,9 +69,9 @@ Créer un dictionnaire de clés/valeurs de chaîne
 
 Paramètre | Description
 |---|---|
-| Écritures | Tableau de paires clé/valeur |
+| entries | Tableau de paires clé/valeur |
 | count | Nombre de paires clé/valeur |
-| DIC | Sortie Dictionnaire nouvellement créé |
+| dictionnaire | Sortie Dictionnaire nouvellement créé |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -92,8 +92,8 @@ Obtenir des paires clé/valeur qui composent un dictionnaire
 
 Paramètre | Description
 |---|---|
-| DIC | Dictionnaire source |
-| Écritures | Sortie Tableau de paires clé/valeur, mémoire possédée par l’objet mip_cc_dictionary |
+| dictionnaire | Dictionnaire source |
+| entries | Sortie Tableau de paires clé/valeur, mémoire appartenant à mip_cc_dictionary objet |
 | count | Sortie Nombre de paires clé/valeur |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -115,7 +115,7 @@ Libérer les ressources associées à un dictionnaire
 
 Paramètre | Description
 |---|---|
-| DIC | Dictionnaire à libérer |
+| dictionnaire | Dictionnaire à libérer |
 
 ```c
 void MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
@@ -130,7 +130,7 @@ Définition de fonction de rappel pour l’émission d’une requête HTTP
 Paramètre | Description
 |---|---|
 | demande | Requête HTTP devant être exécutée par l’application |
-| contexte | Le même contexte opaque passé à l’appel d’API MIP qui a généré cette requête HTTP |
+| context | Le même contexte opaque passé à l’appel d’API MIP qui a généré cette requête HTTP |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_http_send_callback_fn,
@@ -187,7 +187,7 @@ Paramètre | Description
 | httpDelegate | Handle vers un objet délégué HTTP |
 | requestId | ID de la requête HTTP associée à cette opération |
 | result | État de réussite ou d’échec de l’opération |
-| Lutte | Réponse HTTP si l’opération a réussi, sinon nullptr |
+| response | Réponse HTTP si l’opération a réussi, sinon nullptr |
 
 **Remarque**: cette fonction doit être appelée par l’application lorsqu’une opération http est terminée. L’ID de la réponse HTTP doit correspondre à l’ID de la requête HTTP pour permettre à MIP de corréler une réponse avec sa demande 
 
@@ -237,11 +237,11 @@ Définition de fonction de rappel pour l’écriture d’une instruction de jour
 
 Paramètre | Description
 |---|---|
-| Niveau | niveau de journalisation de l’instruction log. |
-| Message | message de l’instruction log. |
-| Fonctionnalités | nom de la fonction pour l’instruction de journal. |
+| niveau | niveau de journalisation de l’instruction log. |
+| message | message de l’instruction log. |
+| function | nom de la fonction pour l’instruction de journal. |
 | fichier | nom du fichier dans lequel l’instruction du journal a été générée. |
-| spline | Numéro de ligne où l’instruction de journalisation a été générée. |
+| courbes | Numéro de ligne où l’instruction de journalisation a été générée. |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_logger_write_callback_fn,
@@ -299,8 +299,8 @@ Créer un contexte MIP pour gérer l’état partagé entre toutes les instances
 Paramètre | Description
 |---|---|
 | applicationInfo | Informations sur l’application qui consomme le kit de développement logiciel (SDK) de protection |
-| D | Chemin de fichier sous lequel sont stockées les données de journalisation, de télémétrie et autres supports de protection |
-| LogLevel | Niveau de journalisation minimal pour. miplog |
+| path | Chemin de fichier sous lequel sont stockées les données de journalisation, de télémétrie et autres supports de protection |
+| logLevel | Niveau de journalisation minimal pour. miplog |
 | isOfflineOnly | Activer/désactiver les opérations réseau (pas toutes les actions prises en charge hors connexion) |
 | loggerDelegateOverride | Facultatif Implémentation de substitution d’enregistreur d’événements |
 | telemetryOverride | Facultatif Paramètres de télémétrie remplacés. Si la valeur est NULL, les paramètres par défaut seront utilisés. |
@@ -328,8 +328,8 @@ Créer un contexte MIP pour gérer l’état partagé entre toutes les instances
 Paramètre | Description
 |---|---|
 | applicationInfo | Informations sur l’application qui consomme le kit de développement logiciel (SDK) de protection |
-| D | Chemin de fichier sous lequel sont stockées les données de journalisation, de télémétrie et autres supports de protection |
-| LogLevel | Niveau de journalisation minimal pour. miplog |
+| path | Chemin de fichier sous lequel sont stockées les données de journalisation, de télémétrie et autres supports de protection |
+| logLevel | Niveau de journalisation minimal pour. miplog |
 | isOfflineOnly | Activer/désactiver les opérations réseau (pas toutes les actions prises en charge hors connexion) |
 | loggerDelegateOverride | Facultatif Implémentation de substitution d’enregistreur d’événements |
 | telemetryOverride | Facultatif Paramètres de télémétrie remplacés. Si la valeur est NULL, les paramètres par défaut seront utilisés. |
@@ -697,7 +697,7 @@ Créer une liste de chaînes
 
 Paramètre | Description
 |---|---|
-| celles | Tableau de chaînes |
+| chaînes | Tableau de chaînes |
 | count | Nombre de chaînes |
 | stringList | Sortie Liste de chaînes nouvellement créée |
 
@@ -721,7 +721,7 @@ Obtenir des chaînes qui composent une liste de chaînes
 Paramètre | Description
 |---|---|
 | stringList | Liste des chaînes sources |
-| celles | Sortie Tableau de chaînes, mémoire détenu par l’objet mip_cc_string_list |
+| chaînes | Sortie Tableau de chaînes, mémoire appartenant à mip_cc_string_list objet |
 | count | Sortie Nombre de chaînes |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -757,7 +757,7 @@ Définition de fonction de rappel pour la distribution d’une tâche asynchrone
 
 Paramètre | Description
 |---|---|
-| TaskId | Identificateur de tâche unique |
+| taskId | Identificateur de tâche unique |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_dispatch_task_callback_fn,
@@ -773,7 +773,7 @@ Fonction de rappel pour l’annulation d’une tâche en arrière-plan
 
 Paramètre | Description
 |---|---|
-| TaskId | Identificateur de tâche unique |
+| taskId | Identificateur de tâche unique |
 
 **Retourne**la valeur true si la tâche a été annulée avec succès, sinon false.
 
@@ -815,7 +815,7 @@ Avertit un délégué TaskDispatcher qu’une tâche est planifiée pour s’ex�
 Paramètre | Description
 |---|---|
 | taskDispatcher | Handle vers un objet délégué de tâche de répartiteur |
-| TaskId | ID de la tâche asynchrone associée à cette opération |
+| taskId | ID de la tâche asynchrone associée à cette opération |
 
 **Remarque**: cette fonction doit être appelée par l’application lorsqu’une tâche est planifiée pour s’exécuter. Cela entraînera une exécution immédiate de la tâche sur le thread actuel. L’ID doit correspondre à celui d’une tâche précédemment distribuée, non annulée. 
 
@@ -846,7 +846,7 @@ Définir un nom d’hôte de télémétrie qui remplacera les paramètres de té
 Paramètre | Description
 |---|---|
 | telemetryConfig | Configuration de la télémétrie |
-| Nom d’hôte | Nom d'hôte |
+| hostName | Nom d'hôte |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -1025,7 +1025,7 @@ Libérer les ressources associées à un moteur de protection
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de protection à libérer |
+| moteur | Moteur de protection à libérer |
 
 ```c
 void MIP_CC_ReleaseProtectionEngine(mip_cc_protection_engine engine);
@@ -1039,10 +1039,10 @@ Crée un gestionnaire de protection pour la publication d’un nouveau contenu
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur sous lequel un gestionnaire sera créé |
+| moteur | Moteur sous lequel un gestionnaire sera créé |
 | paramètres | Paramètres du gestionnaire de protection |
-| contexte | Contexte client qui sera transmis de manière opaque à HttpDelegate et AuthDelegate |
-| D | Sortie Instance du gestionnaire de protection nouvellement créée |
+| context | Contexte client qui sera transmis de manière opaque à HttpDelegate et AuthDelegate |
+| gestionnaire | Sortie Instance du gestionnaire de protection nouvellement créée |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -1062,10 +1062,10 @@ Crée un gestionnaire de protection pour la consommation de contenu existant
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur sous lequel un gestionnaire sera créé |
+| moteur | Moteur sous lequel un gestionnaire sera créé |
 | paramètres | Paramètres du gestionnaire de protection |
-| contexte | Contexte client qui sera transmis de manière opaque à HttpDelegate et AuthDelegate |
-| D | Sortie Instance du gestionnaire de protection nouvellement créée |
+| context | Contexte client qui sera transmis de manière opaque à HttpDelegate et AuthDelegate |
+| gestionnaire | Sortie Instance du gestionnaire de protection nouvellement créée |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -1085,7 +1085,7 @@ Obtient la taille de la mémoire tampon requise pour l’ID du moteur
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de protection |
+| moteur | Moteur de protection |
 | idSize | Sortie Taille de la mémoire tampon de stockage de l’ID de moteur (en nombre de caractères) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1104,7 +1104,7 @@ Obtient l’ID du moteur
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de protection |
+| moteur | Moteur de protection |
 | idBuffer | Sortie Mémoire tampon dans laquelle l’ID sera copié. |
 | idBufferSize | Taille (en nombre de caractères) du idBuffer. |
 | actualIdSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -1129,8 +1129,8 @@ Obtient le nombre de modèles RMS associés à un moteur de protection
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de protection |
-| contexte | Contexte client qui sera transmis de manière opaque à HttpDelegate et AuthDelegate |
+| moteur | Moteur de protection |
+| context | Contexte client qui sera transmis de manière opaque à HttpDelegate et AuthDelegate |
 | templatesSize | Sortie Nombre de modèles |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1152,8 +1152,8 @@ Obtenir la collection de modèles disponibles pour un utilisateur
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de protection |
-| contexte | Contexte client qui sera transmis de manière opaque à HttpDelegate et AuthDelegate |
+| moteur | Moteur de protection |
+| context | Contexte client qui sera transmis de manière opaque à HttpDelegate et AuthDelegate |
 | templateBuffer | Sortie Mémoire tampon dans laquelle les modèles seront copiés. |
 | templateBufferSize | Taille (en nombre d’éléments) du templateBuffer. |
 | actualTemplatesSize | Sortie Nombre d’ID de modèle écrits dans la mémoire tampon |
@@ -1179,13 +1179,13 @@ Obtenir la liste des droits octroyés à un utilisateur pour un ID d’étiquett
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de protection |
-| contexte | Contexte client qui sera transmis de manière opaque à HttpDelegate et AuthDelegate |
+| moteur | Moteur de protection |
+| context | Contexte client qui sera transmis de manière opaque à HttpDelegate et AuthDelegate |
 | documentId | ID de document affecté au document |
 | ID | ID d’étiquette appliqué au document |
 | ownerEmail | Propriétaire du document |
 | delagedUserEmail | E-mail de l’utilisateur si l’utilisateur ou l’application d’authentification agit pour le compte d’un autre utilisateur, vide si aucun |
-| autorisations | Sortie Liste des droits accordés à un utilisateur, mémoire dont l’appelant est propriétaire |
+| droits | Sortie Liste des droits accordés à un utilisateur, mémoire dont l’appelant est propriétaire |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -1210,7 +1210,7 @@ Obtient la taille des données clientes associées à un moteur de protection
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de protection |
+| moteur | Moteur de protection |
 | clientDataSize | Sortie Taille des données du client (en nombre de caractères) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1229,7 +1229,7 @@ Obtenir les données client associées à un moteur de protection
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de protection |
+| moteur | Moteur de protection |
 | clientDataBuffer | Sortie Mémoire tampon dans laquelle les données du client seront copiées |
 | clientDataBufferSize | Taille (en nombre de caractères) de clientDataBuffer. |
 | actualClientDataSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -1316,7 +1316,7 @@ Définit l’ID de session qui peut être utilisé pour mettre en corrélation l
 Paramètre | Description
 |---|---|
 | paramètres | Paramètres du moteur |
-| IDsession | ID de session qui représente la durée de vie d’un moteur de protection |
+| sessionID | ID de session qui représente la durée de vie d’un moteur de protection |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -1492,7 +1492,7 @@ Paramètre | Description
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
-**Remarque**: si la valeur est true, la création du gestionnaire de protection réussit uniquement si le contenu a déjà été déchiffré précédemment et que sa licence non expirée est mise en cache. Un résultat MIP_RESULT_ERROR_NETWORK est retourné si le contenu mis en cache est introuvable. 
+**Remarque**: si la valeur est true, la création du gestionnaire de protection réussit uniquement si le contenu a déjà été déchiffré précédemment et que sa licence non expirée est mise en cache. Un MIP_RESULT_ERROR_NETWORK résultat est retourné si le contenu mis en cache est introuvable. 
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
@@ -1529,7 +1529,7 @@ Obtient la taille de la licence de publication (en octets)
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire représentant le contenu protégé |
+| gestionnaire | Gestionnaire représentant le contenu protégé |
 | publishingLicenseBufferSize | Sortie Taille de la licence de publication (en octets) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1548,7 +1548,7 @@ Obtient la licence de publication
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire représentant le contenu protégé |
+| gestionnaire | Gestionnaire représentant le contenu protégé |
 | publishingLicenseBuffer | Sortie Mémoire tampon dans laquelle la licence de publication sera écrite |
 | publishingLicenseBufferSize | Taille de la mémoire tampon de la licence de publication |
 | actualPublishingLicenseSize | Sortie Taille réelle de la licence de publication (en octets) |
@@ -1573,7 +1573,7 @@ Obtient le descripteur de protection
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire représentant le contenu protégé |
+| gestionnaire | Gestionnaire représentant le contenu protégé |
 | Description | Sortie Descripteur de protection |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1592,8 +1592,8 @@ Obtient la liste des droits accordés à un utilisateur
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire représentant le contenu protégé |
-| autorisations | Sortie Liste des droits accordés à un utilisateur, mémoire dont l’appelant est propriétaire |
+| gestionnaire | Gestionnaire représentant le contenu protégé |
+| droits | Sortie Liste des droits accordés à un utilisateur, mémoire dont l’appelant est propriétaire |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -1613,7 +1613,7 @@ Calcule la taille du contenu protégé, la factorisation dans le remplissage, et
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire représentant le contenu protégé |
+| gestionnaire | Gestionnaire représentant le contenu protégé |
 | unprotectedSize | Taille du contenu non protégé/en texte clair (en octets) |
 | includesFinalBlock | Décrit si le contenu non protégé en question comprend ou non le dernier bloc. |
 | protectedSize | Sortie Taille du contenu protégé |
@@ -1636,7 +1636,7 @@ Obtient la taille de bloc (en octets) pour le mode de chiffrement utilisé par u
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire représentant le contenu protégé |
+| gestionnaire | Gestionnaire représentant le contenu protégé |
 | blockSize | Sortie Taille de bloc (en octets) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1655,7 +1655,7 @@ Obtient la taille de la mémoire tampon requise pour stocker l’utilisateur auq
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire représentant le contenu protégé |
+| gestionnaire | Gestionnaire représentant le contenu protégé |
 | issuedUserSize | Sortie Taille de la mémoire tampon pour stocker l’utilisateur émis (en nombre de caractères) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1674,7 +1674,7 @@ Obtient l’utilisateur qui a obtenu l’accès au contenu protégé
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire représentant le contenu protégé |
+| gestionnaire | Gestionnaire représentant le contenu protégé |
 | issuedUserBuffer | Sortie Mémoire tampon dans laquelle l’utilisateur émis sera copié. |
 | issuedUserBufferSize | Taille (en nombre de caractères) du issuedUserBuffer. |
 | actualIssuedUserSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -1699,7 +1699,7 @@ Obtient la taille de la mémoire tampon requise pour stocker le propriétaire du
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire représentant le contenu protégé |
+| gestionnaire | Gestionnaire représentant le contenu protégé |
 | Propriétaires | Sortie Taille de la mémoire tampon pour stocker l’utilisateur émis (en nombre de caractères) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1718,7 +1718,7 @@ Obtient le propriétaire du contenu protégé
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire représentant le contenu protégé |
+| gestionnaire | Gestionnaire représentant le contenu protégé |
 | ownerBuffer | Sortie Mémoire tampon dans laquelle l’utilisateur émis sera copié. |
 | ownerBufferSize | Taille (en nombre de caractères) du ownerBuffer. |
 | actualOwnerSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -1743,7 +1743,7 @@ Obtient le contenu IE du contenu protégé
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire représentant le contenu protégé |
+| gestionnaire | Gestionnaire représentant le contenu protégé |
 | contentId | Sortie ID de contenu |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1762,7 +1762,7 @@ Détermine si le gestionnaire de protection utilise un algorithme de chiffrement
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire représentant le contenu protégé |
+| gestionnaire | Gestionnaire représentant le contenu protégé |
 | doesUseDeprecatedAlgorithm | Sortie Indique si le gestionnaire de protection utilise un algorithme de chiffrement déconseillé |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1839,7 +1839,7 @@ Libérer les ressources associées à un gestionnaire de protection
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire de protection à libérer |
+| gestionnaire | Gestionnaire de protection à libérer |
 
 ```c
 void MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
@@ -1853,7 +1853,7 @@ Charger un profil
 
 Paramètre | Description
 |---|---|
-| paramètres | Paramètres du profil |
+| paramètres | Paramètres de profil |
 | profil | Sortie Instance de profil de protection nouvellement créée |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1886,8 +1886,8 @@ Définit l’ID de session qui peut être utilisé pour mettre en corrélation l
 
 Paramètre | Description
 |---|---|
-| paramètres | Paramètres du profil |
-| IDsession | ID de session qui représente la durée de vie d’un profil de protection |
+| paramètres | Paramètres de profil |
+| sessionID | ID de session qui représente la durée de vie d’un profil de protection |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -1905,7 +1905,7 @@ Configure si les licences d’utilisateur final (LUF) seront mises en cache loca
 
 Paramètre | Description
 |---|---|
-| paramètres | Paramètres du profil |
+| paramètres | Paramètres de profil |
 | canCacheLicenses | Indique si le moteur doit mettre en cache une licence lors de l’ouverture du contenu protégé |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -1962,7 +1962,7 @@ Configure les paramètres personnalisés, utilisés pour la régulation et le te
 
 Paramètre | Description
 |---|---|
-| paramètres | Paramètres du profil |
+| paramètres | Paramètres de profil |
 | customSettings | Paires clé/valeur de paramètres personnalisés |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -2034,7 +2034,7 @@ Obtenir des actions qui composent un résultat d’action
 Paramètre | Description
 |---|---|
 | actionResult | Résultat de l’action source |
-| Interventions | Sortie Tableau d’actions, mémoire détenu par l’objet mip_cc_action_result |
+| actions | Sortie Tableau d’actions, mémoire détenu par l’objet mip_cc_action_result |
 | count | Sortie Nombre de paires clé/valeur |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -2203,7 +2203,7 @@ Obtient la taille de police de l’entier
 Paramètre | Description
 |---|---|
 | action | action « Ajouter un pied de page de contenu » |
-| FontSize | Sortie Taille de police |
+| fontSize | Sortie Taille de police |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -2266,7 +2266,7 @@ Obtient l’alignement
 Paramètre | Description
 |---|---|
 | action | action « Ajouter un pied de page de contenu » |
-| Repère | Sortie Repère |
+| alignement | Sortie Repère |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -2436,7 +2436,7 @@ Obtient la taille de police de l’entier
 Paramètre | Description
 |---|---|
 | action | action « Ajouter un en-tête de contenu » |
-| FontSize | Sortie Taille de police |
+| fontSize | Sortie Taille de police |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -2499,7 +2499,7 @@ Obtient l’alignement
 Paramètre | Description
 |---|---|
 | action | action « Ajouter un en-tête de contenu » |
-| Repère | Sortie Repère |
+| alignement | Sortie Repère |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -2581,7 +2581,7 @@ Obtient la disposition du filigrane
 Paramètre | Description
 |---|---|
 | action | action « Ajouter un filigrane » |
-| Dispose | Sortie Disposition de filigrane |
+| layout | Sortie Disposition de filigrane |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -2688,7 +2688,7 @@ Obtient la taille de police de l’entier
 Paramètre | Description
 |---|---|
 | action | action « Ajouter un filigrane » |
-| FontSize | Sortie Taille de police |
+| fontSize | Sortie Taille de police |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -2928,12 +2928,12 @@ Définition de la fonction de rappel pour la récupération du document refléte
 
 Paramètre | Description
 |---|---|
-| noms | Tableau de noms de clé de métadonnées à inclure dans le résultat |
+| Noms | Tableau de noms de clé de métadonnées à inclure dans le résultat |
 | namesSize | Nombre de valeurs dans le tableau’Names' |
 | namePrefixes | Tableau de préfixes de nom de clé de métadonnées à inclure dans le résultat |
 | namePrefixesSize | Nombre de valeurs dans le tableau « namesPrefixes » |
-| contexte | Contexte d’application passé de manière opaque de l’appel d’API au rappel |
-| Metadata | Sortie Dictionnaire de clés/valeurs de métadonnées, créé par l’application cliente. Ce dictionnaire sera publié par MIP. |
+| context | Contexte d’application passé de manière opaque de l’appel d’API au rappel |
+| métadonnées | Sortie Dictionnaire de clés/valeurs de métadonnées, créé par l’application cliente. Ce dictionnaire sera publié par MIP. |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_metadata_callback,
@@ -3120,7 +3120,7 @@ Obtient le niveau de sensibilité de l’étiquette. Plus la valeur est élevée
 Paramètre | Description
 |---|---|
 | label | Étiquette |
-| sensibilité | Sortie Niveau de sensibilité |
+| sensitivity | Sortie Niveau de sensibilité |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -3336,7 +3336,7 @@ Paramètre | Description
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
-**Remarque**: la variable’metadataNames’doit être libérée par l’appelant en appelant MIP_CC_ReleaseStringList @note la suppression des métadonnées doit être effectuée avant l’ajout de métadonnées 
+**Remarque**: la variable « metadataNames » doit être libérée par l’appelant en appelant MIP_CC_ReleaseStringList @note la suppression des métadonnées doit être effectuée avant l’ajout de métadonnées 
 
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
@@ -3353,7 +3353,7 @@ Obtient les métadonnées de l’action « Metadata » à ajouter
 Paramètre | Description
 |---|---|
 | action | action « Metadata » |
-| Metadata | Sortie Paires clé/valeur de métadonnées à ajouter, mémoire dont l’appelant est propriétaire |
+| métadonnées | Sortie Paires clé/valeur de métadonnées à ajouter, mémoire dont l’appelant est propriétaire |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -3373,7 +3373,7 @@ Libérer les ressources associées à un moteur de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie à libérer |
+| moteur | Moteur de stratégie à libérer |
 
 ```c
 void MIP_CC_ReleasePolicyEngine(mip_cc_policy_engine engine);
@@ -3387,7 +3387,7 @@ Obtient la taille de la mémoire tampon requise pour l’ID du moteur
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | idSize | Sortie Taille de la mémoire tampon de stockage de l’ID de moteur (en nombre de caractères) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3406,7 +3406,7 @@ Obtient l’ID du moteur
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | idBuffer | Sortie Mémoire tampon dans laquelle l’ID sera copié. |
 | idBufferSize | Taille (en nombre de caractères) du idBuffer. |
 | actualIdSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -3431,7 +3431,7 @@ Obtient la taille des données clientes associées à un moteur de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | moreInfoUrlSize | Sortie Taille des données du client (en nombre de caractères) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3450,7 +3450,7 @@ Obtenir des données client associées à un moteur de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | moreInfoUrlBuffer | Sortie Mémoire tampon dans laquelle les données du client seront copiées |
 | moreInfoUrlBufferSize | Taille (en nombre de caractères) de moreInfoUrlBuffer. |
 | actualMoreInfoUrlSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -3475,7 +3475,7 @@ Obtient une valeur indiquant si la stratégie stipule qu’un document doit êtr
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | isLabelingRequired | Sortie Indique si la stratégie stipule qu’un document doit être étiqueté |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3494,7 +3494,7 @@ Obtient la taille des données clientes associées à un moteur de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | policyFileIdSize | Sortie Taille des données du client (en nombre de caractères) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3513,7 +3513,7 @@ Obtenir des données client associées à un moteur de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | policyFileIdBuffer | Sortie Mémoire tampon dans laquelle les données du client seront copiées |
 | policyFileIdBufferSize | Taille (en nombre de caractères) de policyFileIdBuffer. |
 | actualPolicyFileIdSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -3538,7 +3538,7 @@ Obtient la taille des données clientes associées à un moteur de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | sensitivityFileIdSize | Sortie Taille des données du client (en nombre de caractères) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3557,7 +3557,7 @@ Obtenir des données client associées à un moteur de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | sensitivityFileIdBuffer | Sortie Mémoire tampon dans laquelle les données du client seront copiées |
 | sensitivityFileIdBufferSize | Taille (en nombre de caractères) de sensitivityFileIdBuffer. |
 | actualSensitivityFileIdSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -3582,7 +3582,7 @@ Obtient une valeur indiquant si la stratégie a des règles automatiques ou de r
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | hasClassificationRules | Sortie Indique si la stratégie a des règles automatiques ou de recommandation |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3601,7 +3601,7 @@ Obtient l’heure de la dernière récupération de la stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | lastPolicyFetchTime | Sortie Heure de la dernière extraction de la stratégie (en secondes depuis l’époque) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3620,7 +3620,7 @@ Obtient le nombre d’étiquettes de sensibilité associées au moteur de strat�
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | labelsSize | Sortie Nombre d’étiquettes |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3639,7 +3639,7 @@ Obtient les étiquettes de sensibilité associées au moteur de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | labelBuffer | Sortie Mémoire tampon dans laquelle les étiquettes seront copiées. Les étiquettes sont détenues par le client |
 | labelBufferSize | Taille (en nombre d’étiquettes) du labelBuffer. |
 | actualLabelsSize | Sortie Nombre d’étiquettes écrites dans la mémoire tampon |
@@ -3664,7 +3664,7 @@ Obtient l’étiquette de sensibilité par ID
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | ID | ID d’étiquette |
 | label | Sortie Étiquette de sensibilité. Cette valeur est la propriété de l’appelant et doit être libérée avec MIP_CC_ReleaseLabel. |
 
@@ -3685,7 +3685,7 @@ Obtient le nombre de types de sensibilité associés au moteur de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | sensitivityTypesSize | Sortie Nombre de types de sensibilité |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3704,7 +3704,7 @@ Obtient les types de sensibilité associés au moteur de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | sensitivityTypeBuffer | Sortie Mémoire tampon dans laquelle les types de sensibilité seront copiés. Sensibilité |
 | sensitivityTypeBufferSize | Taille (en nombre de types de sensibilité) du sensitivityTypeBuffer. |
 | actualSensitivityTypesSize | Sortie Nombre de types de sensibilité écrits dans la mémoire tampon |
@@ -3729,9 +3729,9 @@ Créer un gestionnaire de stratégie pour exécuter des fonctions liées à la s
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | isAuditDiscoveryEnabled | Indique si la détection d’audit est activée |
-| D | Sortie Instance du gestionnaire de stratégie nouvellement créée |
+| gestionnaire | Sortie Instance du gestionnaire de stratégie nouvellement créée |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -3750,8 +3750,8 @@ Enregistre un événement spécifique de l’application dans le pipeline d’au
 
 Paramètre | Description
 |---|---|
-| Niveau | Niveau de l’événement : info/Error/Warning |
-| Événement | Description du type d’événement |
+| niveau | Niveau de l’événement : info/Error/Warning |
+| eventType | Description du type d’événement |
 | eventData | Données associées à l’événement. |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3772,7 +3772,7 @@ Obtient la taille du fichier XML de données de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | xmlSize | Sortie Taille du fichier XML de données de stratégie (en nombre de caractères) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3791,7 +3791,7 @@ Obtient le XML des données de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | xmlBuffer | Sortie Mémoire tampon dans laquelle le XML sera copié. |
 | xmlBufferSize | Taille (en nombre de caractères) du xmlBuffer. |
 | actualXmlSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -3816,7 +3816,7 @@ Obtient la taille des données XML des types de sensibilité
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | xmlSize | Sortie Taille du fichier XML de données de stratégie (en nombre de caractères) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3835,7 +3835,7 @@ Obtient le XML des données des types de sensibilité
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | xmlBuffer | Sortie Mémoire tampon dans laquelle le XML sera copié. |
 | xmlBufferSize | Taille (en nombre de caractères) du xmlBuffer. |
 | actualXmlSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -3860,7 +3860,7 @@ Obtient la taille des données clientes associées à un moteur de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | clientDataSize | Sortie Taille des données du client (en nombre de caractères) |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -3879,7 +3879,7 @@ Obtenir des données client associées à un moteur de stratégie
 
 Paramètre | Description
 |---|---|
-| Rotation | Moteur de stratégie |
+| moteur | Moteur de stratégie |
 | clientDataBuffer | Sortie Mémoire tampon dans laquelle les données du client seront copiées |
 | clientDataBufferSize | Taille (en nombre de caractères) de clientDataBuffer. |
 | actualClientDataSize | Sortie Nombre de caractères écrits dans la mémoire tampon |
@@ -3912,7 +3912,7 @@ Paramètre | Description
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
-**Remarque**: 'loadSensitivityTypes’doit avoir la valeur’true’uniquement si l’application s’attend à appeler ultérieurement MIP_CC_PolicyEngine_GetSensitivityTypes. Dans le cas contraire, elle doit avoir la valeur false pour éviter une opération HTTP inutile. 
+**Remarque**: « loadSensitivityTypes » doit avoir la valeur « true » uniquement si l’application s’attend à appeler ultérieurement MIP_CC_PolicyEngine_GetSensitivityTypes. Dans le cas contraire, elle doit avoir la valeur false pour éviter une opération HTTP inutile. 
 
 ```c
 mip_cc_result MIP_CC_CreatePolicyEngineSettingsWithIdentity(
@@ -3970,7 +3970,7 @@ Définit l’ID de session qui peut être utilisé pour mettre en corrélation l
 Paramètre | Description
 |---|---|
 | paramètres | Paramètres du moteur |
-| IDsession | ID de session qui représente la durée de vie d’un moteur de stratégie |
+| sessionID | ID de session qui représente la durée de vie d’un moteur de stratégie |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -4042,7 +4042,7 @@ Libérer les ressources associées à un gestionnaire de stratégie
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire de stratégie à libérer |
+| gestionnaire | Gestionnaire de stratégie à libérer |
 
 ```c
 void MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
@@ -4056,9 +4056,9 @@ Obtient l’étiquette actuelle d’un document
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire de stratégie |
+| gestionnaire | Gestionnaire de stratégie |
 | documentState | État du document |
-| contexte | Contexte d’application transféré de manière opaque à tous les rappels |
+| context | Contexte d’application transféré de manière opaque à tous les rappels |
 | contentLabel | Étiquette actuellement appliquée à un document |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -4079,10 +4079,10 @@ Exécute les règles de stratégie en fonction de l’état fourni et détermine
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire de stratégie |
+| gestionnaire | Gestionnaire de stratégie |
 | documentState | État du document |
 | applicationState | État des actions de l’application |
-| contexte | Contexte d’application transféré de manière opaque à tous les rappels |
+| context | Contexte d’application transféré de manière opaque à tous les rappels |
 | actionResult | Sortie Actions qui doivent être effectuées par l’application, mémoire dont l’appelant est propriétaire |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -4106,10 +4106,10 @@ Appelé par l’application après que des actions calculées ont été appliqu�
 
 Paramètre | Description
 |---|---|
-| D | Gestionnaire de stratégie |
+| gestionnaire | Gestionnaire de stratégie |
 | documentState | État du document |
 | applicationState | État des actions de l’application |
-| contexte | Contexte d’application transféré de manière opaque à tous les rappels |
+| context | Contexte d’application transféré de manière opaque à tous les rappels |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -4131,7 +4131,7 @@ Charger un profil
 
 Paramètre | Description
 |---|---|
-| paramètres | Paramètres du profil |
+| paramètres | Paramètres de profil |
 | profil | Sortie Instance de profil de stratégie nouvellement créée |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -4164,8 +4164,8 @@ Définit l’ID de session qui peut être utilisé pour mettre en corrélation l
 
 Paramètre | Description
 |---|---|
-| paramètres | Paramètres du profil |
-| IDsession | ID de session qui représente la durée de vie d’un profil de stratégie |
+| paramètres | Paramètres de profil |
+| sessionID | ID de session qui représente la durée de vie d’un profil de stratégie |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -4221,7 +4221,7 @@ Configure les paramètres personnalisés, utilisés pour la régulation et le te
 
 Paramètre | Description
 |---|---|
-| paramètres | Paramètres du profil |
+| paramètres | Paramètres de profil |
 | customSettings | Paires clé/valeur de paramètres personnalisés |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
@@ -4274,7 +4274,7 @@ Obtient les noms des éléments d’interface utilisateur de l’action supprime
 Paramètre | Description
 |---|---|
 | action | action « supprimer le pied de page de contenu » |
-| noms | Sortie Noms des éléments d’interface utilisateur à supprimer, mémoire dont l’appelant est propriétaire |
+| Noms | Sortie Noms des éléments d’interface utilisateur à supprimer, mémoire dont l’appelant est propriétaire |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -4295,7 +4295,7 @@ Obtient les noms des éléments d’interface utilisateur de l’action supprime
 Paramètre | Description
 |---|---|
 | action | action « supprimer l’en-tête de contenu » |
-| noms | Sortie Noms des éléments d’interface utilisateur à supprimer, mémoire dont l’appelant est propriétaire |
+| Noms | Sortie Noms des éléments d’interface utilisateur à supprimer, mémoire dont l’appelant est propriétaire |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 
@@ -4316,7 +4316,7 @@ Obtient les noms des éléments d’interface utilisateur de l’action « supp
 Paramètre | Description
 |---|---|
 | action | action « supprimer le pied de page du filigrane » |
-| noms | Sortie Noms des éléments d’interface utilisateur à supprimer, mémoire dont l’appelant est propriétaire |
+| Noms | Sortie Noms des éléments d’interface utilisateur à supprimer, mémoire dont l’appelant est propriétaire |
 
 **Retour**: code de résultat indiquant la réussite ou l’échec
 

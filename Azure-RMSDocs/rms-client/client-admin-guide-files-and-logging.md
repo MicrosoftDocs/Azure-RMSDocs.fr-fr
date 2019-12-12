@@ -4,7 +4,7 @@ description: Informations sur les fichiers du client et la journalisation de l�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9edd0e3bcfda2d50da70e29bc807745d263f30bb
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 9011a6b7fc282c1e170959c31ce1e01bc22aa9c5
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314240"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935297"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
+>*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
-> *Instructions pour : [Client Azure Information Protection pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Après avoir installé le client Azure Information Protection, vous aurez peut-être besoin de connaître l’emplacement des fichiers et de surveiller l’utilisation du client.
 
@@ -52,33 +52,33 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
 
 - Action :
 
-    - Définir l’étiquette : ID d’information 101
+    - Définir l’étiquette : ID d’informations 101
     
-    - Définir l’étiquette (inférieure) : ID d’information 101
+    - Définir l’étiquette (inférieure) : ID d’informations 101
     
-    - Définir l’étiquette (supérieure) : ID d’information 101
+    - Définir l’étiquette (plus élevée) : ID d’informations 101
     
-    - Supprimer l’étiquette : ID d’information 104
+    - Supprimer l’étiquette : ID d’informations 104
     
-    - Info-bulle de l’étiquette recommandée : Information 105
+    - Info-bulle de l’étiquette recommandée : information 105
     
-    - Appliquer la protection personnalisée : ID d’information 201
+    - Appliquer la protection personnalisée : ID d’informations 201
     
-    - Supprimer la protection personnalisée : ID d’information 202
+    - Supprimer la protection personnalisée : ID d’informations 202
     
-    - Message d’avertissement Outlook : ID d’information 301
+    - Message Outlook Warn : information ID 301
     
-    - Message de justification Outlook : ID d’information 302
+    - Outlook justifier le message : ID d’informations 302
     
-    - Message de blocage Outlook : ID d’information 303
+    - Message de blocage Outlook : ID d’informations 303
     
-    - Connexion (opérationnelle) : ID d’information 902
+    - Connexion (opérationnelle) : ID d’informations 902
     
-    - Télécharger la stratégie (opérationnelle) : ID d’information 901
+    - Télécharger la stratégie (opérationnelle) : ID d’informations 901
     
 - Source de l’action :
     
-    - Manuel 
+    - Manuelle 
     
     - Recommandé
     

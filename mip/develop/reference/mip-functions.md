@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 01/28/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 4479cd9419d51e841906e6268427e184d4e1b4d3
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558003"
 ---
 # <a name="functions"></a>Fonctions
@@ -27,9 +27,9 @@ public static std :: String GetActionSourceString (ActionSource actionSource)  
 public static std :: String GetDataStateString (MIP ::D ataState State)       |  Obtient le nom de l’état du contenu.
 public const std::string& GetCustomSettingPolicyDataName()       |  Nom du paramètre pour spécifier explicitement les données de stratégie.
 public const std::string& GetCustomSettingExportPolicyFileName()       |  Nom du paramètre pour spécifier explicitement le chemin d’accès de fichier afin d’exporter les données de stratégie SCC.
-public const std :: String & GetCustomSettingSensitivityTypesDataName ()       |  Nom du paramètre pour spécifier explicitement les données de sensibilité.
+public const std::string& GetCustomSettingSensitivityTypesDataName()       |  Nom du paramètre pour spécifier explicitement les données de sensibilité.
 public const std::string& GetCustomSettingPolicyDataFile()       |  Nom du paramètre pour spécifier explicitement le chemin d’accès de fichier de données de stratégie.
-public const std :: String & GetCustomSettingSensitivityTypesDataFile ()       |  Nom du paramètre pour spécifier explicitement le chemin d’accès du fichier de données des types de sensibilité.
+public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  Nom du paramètre pour spécifier explicitement le chemin d’accès du fichier de données des types de sensibilité.
 public const std :: String & GetCustomSettingLabelCustomPropertiesSyncEnabled ()       |  Nom du paramètre qui autorise l’activation de l’étiquette par des propriétés personnalisées et des propriétés personnalisées par des fonctionnalités d’étiquette.
 public const std :: Map\<FlightingFeature, bool\>& GetDefaultFeatureSettings ()       |  Obtient une valeur indiquant si une fonctionnalité est activée par défaut.
 public MIP_API std :: shared_ptr\<MIP :: Stream\> CreateStreamFromStdStream (const std :: shared_ptr\<std :: IStream\>& stdIStream)       |  Crée un flux à partir d’un std :: IStream.
@@ -73,19 +73,19 @@ Paramètres :
   
 **Retourne**: une représentation sous forme de chaîne de l’état du contenu.
   
-### <a name="getcustomsettingpolicydataname-function"></a>GetCustomSettingPolicyDataName fonction)
+### <a name="getcustomsettingpolicydataname-function"></a>GetCustomSettingPolicyDataName function
 Nom du paramètre pour spécifier explicitement les données de stratégie.
 
   
 **Renvoie** : la clé des paramètres personnalisés.
   
-### <a name="getcustomsettingexportpolicyfilename-function"></a>GetCustomSettingExportPolicyFileName fonction)
+### <a name="getcustomsettingexportpolicyfilename-function"></a>GetCustomSettingExportPolicyFileName function
 Nom du paramètre pour spécifier explicitement le chemin d’accès de fichier afin d’exporter les données de stratégie SCC.
 
   
 **Renvoie** : la clé des paramètres personnalisés.
   
-### <a name="getcustomsettingsensitivitytypesdataname-function"></a>GetCustomSettingSensitivityTypesDataName fonction)
+### <a name="getcustomsettingsensitivitytypesdataname-function"></a>GetCustomSettingSensitivityTypesDataName function
 Nom du paramètre pour spécifier explicitement les données de sensibilité.
 
   
@@ -218,9 +218,9 @@ public std::string Comment()       |  Obtient un identificateur de chaîne pour 
 public std::string Reply()       |  Obtient un identificateur de chaîne pour un droit « répondre ».
 public std::string ReplyAll()       |  Obtient un identificateur de chaîne pour un droit « répondre à tous ».
 public std::string Forward()       |  Obtient un identificateur de chaîne pour un droit « transférer ».
-public std :: Vector\<std :: String\> EmailRights ()       |  Obtient une liste de droits qui s’appliquent aux e-mails.
-public std :: Vector\<std :: String\> EditableDocumentRights ()       |  Obtient une liste de droits qui s’appliquent aux documents.
-public std :: Vector\<std :: String\> CommonRights ()       |  Obtient une liste des droits qui s’appliquent dans tous les scénarios.
+public std::vector\<std::string\> EmailRights()       |  Obtient une liste de droits qui s’appliquent aux e-mails.
+public std::vector\<std::string\> EditableDocumentRights()       |  Obtient une liste de droits qui s’appliquent aux documents.
+public std::vector\<std::string\> CommonRights()       |  Obtient une liste des droits qui s’appliquent dans tous les scénarios.
   
 
 ### <a name="owner-function"></a>Fonction owner
@@ -253,7 +253,7 @@ Obtient un identificateur de chaîne pour un droit « exporter ».
   
 **Renvoie** : identificateur de chaîne de « export » vers la droite
   
-### <a name="extract-function"></a>Extraire la fonction
+### <a name="extract-function"></a>fonction Extract
 Obtient un identificateur de chaîne pour un droit « extraire ».
 
   

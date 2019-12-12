@@ -15,23 +15,23 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: d36938daf4dbcbe86331ec6852dfe4ecb04a2959
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792403"
 ---
 # <a name="configure-visual-studio"></a>Configurer Visual Studio
 
 Cette rubrique contient des instructions sur la configuration d’un projet Visual Studio en vue d’utiliser le SDK Rights Management Services 2.1.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
 -   [Installer le SDK](install-the-rms-sdk.md)
 
 **Instructions**
 
-### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>Étape 1 : Configurer un projet Visual Studio pour utiliser le SDK RMS 2.1
+### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>Étape 1 : configurer un projet Visual Studio pour utiliser kit de développement logiciel (SDK) RMS 2,1
 
 Ces instructions sont spécifiques à Microsoft Visual Studio 2010. Si vous utilisez une autre version de Microsoft Visual Studio, vos boîtes de dialogue de paramètres peuvent être légèrement différentes.
 

@@ -8,21 +8,21 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 1ccfc81e4b45c6ec4e4316b748d9ccc0f73561a4
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886029"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-engine-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au moteur de l’API de protection
 
-## <a name="implementation-add-a-protection-engine"></a>Déploiement Ajouter un moteur de protection
+## <a name="implementation-add-a-protection-engine"></a>Implémentation : Ajouter un moteur de protection
 
 Dans l’API de fichier, la classe `mip::ProtectionProfile` est la classe racine pour toutes les opérations du kit SDK. Ayant déjà créé le profil, nous pouvons maintenant ajouter un moteur au profil.
 
 L’exemple ci-dessous illustre l’utilisation d’un moteur unique pour un seul utilisateur authentifié.
 
-### <a name="implementation-create-protection-engine-settings"></a>Déploiement Créer des paramètres de moteur de protection
+### <a name="implementation-create-protection-engine-settings"></a>Implémentation : Créer les paramètres du moteur de protection
 
 De façon similaire à un profil, le moteur nécessite également un objet de paramètres, `mip::ProtectionEngine::Settings`. Cet objet stocke l’identificateur de moteur unique, les données client personnalisables qui peuvent être utilisées pour le débogage ou la télémétrie et, éventuellement, les paramètres régionaux.
 
@@ -33,7 +33,7 @@ ProtectionEngine::Settings engineSettings("UniqueID", "");
 ```
 
 > [!NOTE]
-> Si vous utilisez cette méthode pour créer l’objet paramètres de protection, vous devez également définir manuellement le https://api.aadrm.com CloudEndpointBaseUrl sur ou sur TP l’URL du cluster de service Active Directory Rights Management.
+> Si vous utilisez cette méthode pour créer l’objet de paramètres de protection, vous devez également définir manuellement le CloudEndpointBaseUrl sur https://api.aadrm.com ou de TP l’URL du cluster de service Active Directory Rights Management.
 
 En guise de bonne pratique, le premier paramètre, **id**, doit être un élément permettant au moteur d’être facilement connecté à l’utilisateur associé, **ou** un objet `mip::Identity`. Pour initialiser les paramètres avec `mip::Identity` :
 
@@ -41,7 +41,7 @@ En guise de bonne pratique, le premier paramètre, **id**, doit être un éléme
 ProtectionEngine::Settings engineSettings(mip::Identity("Bob@Contoso.com", "");
 ```
 
-### <a name="implementation-add-the-protection-engine"></a>Déploiement Ajouter le moteur de protection
+### <a name="implementation-add-the-protection-engine"></a>Implémentation : Ajouter le moteur de protection
 
 Pour ajouter le moteur, nous allons revenir au modèle futur/promesse utilisé pour charger le profil. Au lieu de créer la promesse pour `mip::ProtectionProfile`, nous allons utiliser `mip::ProtectionEngine`.
 
@@ -68,13 +68,13 @@ Pour ajouter le moteur, nous allons revenir au modèle futur/promesse utilisé p
 
 Le résultat final du code ci-dessus est que nous avons ajouté avec succès un moteur pour l’utilisateur authentifié au profil.
 
-## <a name="implementation-list-templates"></a>Déploiement Liste des modèles
+## <a name="implementation-list-templates"></a>Implémentation : Répertorier les modèles
 
 En utilisant le moteur ajouté, il est maintenant possible de répertorier tous les modèles de sensibilité disponibles pour l’utilisateur authentifié en appelant `engine->GetTemplatesAsync()`. 
 
 `GetTemplatesAsync()` extrait la liste des identificateurs de modèles. Le résultat est stocké dans un vecteur de `std::shared_ptr<std::string>`.
 
-### <a name="implementation-listsensitivitytemplates"></a>Déploiement ListSensitivityTemplates()
+### <a name="implementation-listsensitivitytemplates"></a>Implémentation : ListSensitivityTemplates()
 
 ```cpp
 auto loadPromise = std::make_shared<std::promise<shared_ptr<vector<string>>>>();
@@ -83,7 +83,7 @@ mEngine->GetTemplatesAsync(engineObserver, loadPromise);
 auto templates = loadFuture.get();
 ```
 
-### <a name="implementation-print-the-template-ids"></a>Déploiement Imprimer les ID de modèle
+### <a name="implementation-print-the-template-ids"></a>Implémentation : Imprimer les ID des modèles
 
 ```cpp
 //Iterate through all template IDs in the vector

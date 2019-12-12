@@ -4,7 +4,7 @@ description: Comprenez les détails et les restrictions lorsque vous utilisez de
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 09/22/2019
+ms.date: 11/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cc78119434cc969a97d27e5aa964be7445963638
-ms.sourcegitcommit: 6641b39a788a5c1c62fb7d9286acc83b35c76f32
+ms.openlocfilehash: 4a82afdeee9459b460b98a385102147c6c78ff28
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198649"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935178"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>BYOK les détails de votre propre clé pour Azure Information Protection
 

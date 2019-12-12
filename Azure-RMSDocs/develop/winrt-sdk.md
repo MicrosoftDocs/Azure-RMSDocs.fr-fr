@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: cab28423de31e9d8fe3351f9c20d1c06275fa4c3
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68790722"
 ---
 # <a name="windows-store-setup"></a>Configuration pour le Windows Store
@@ -32,7 +32,7 @@ Cette rubrique vous guide tout au long du processus de configuration de votre en
 -   [Configuration de votre environnement de développement](#configuring-your-development-environment)
 -   [Voir aussi](#see-also)
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
 
 Vous devez disposer des logiciels suivants sur votre système de développement :
@@ -60,7 +60,7 @@ Notre bibliothèque d’interface utilisateur fournit une interface utilisateur 
 
 -   Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur votre projet, puis sélectionnez **Ajouter une référence** pour ouvrir la boîte de dialogue **Ajouter une référence**.
 
-    ![Ajouter la référence](../media/winrtsetup-addref.png)
+    ![Ajouter une référence](../media/winrtsetup-addref.png)
 
 -   Dans la boîte de dialogue **Ajouter une référence**, cliquez sur **Parcourir**, puis sélectionnez le fichier *Microsoft.RightsManagement.dll* figurant dans le dossier dans lequel vous avez extrait le package du SDK.
 -   **Applications gérées** : pour créer une application gérée, vous devez ajouter cette référence. Sélectionnez **Windows 8.1**-&gt;**Extensions**, puis cochez la case **Package Windows Visual C++ Runtime pour Windows**
@@ -73,7 +73,7 @@ Vous êtes maintenant prêt à créer vos propres applications du Windows Store.
 
 ### <a name="see-also"></a>Voir aussi
 
-[Bien démarrer](get-started.md)
+[Prise en main](get-started.md)
 
 [Nouveautés](release-notes.md)
 

@@ -15,10 +15,10 @@ ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 5150c9f3339f442f7898f273d2275cd267e8d6b8
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791151"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Déploiement d’une application de service sur un autre locataire
@@ -33,7 +33,7 @@ La société *CoolApp* a développé une application de service utilisant Azure 
 
 ![Exemple de flux pour la création d’une clé symétrique dans un autre locataire](../media/develop/service-app-provision.jpg)
 
-## <a name="flow-1-coolapp-provides-a-ui-dialog-to-abc-to-implement-the-deployment"></a>Flux 1 : *CoolApp* fournit une boîte de dialogue d’interface utilisateur à *ABC* pour mettre en œuvre le déploiement
+## <a name="flow-1-coolapp-provides-a-ui-dialog-to-abc-to-implement-the-deployment"></a>Flux 1 : *CoolApp* fournit une boîte de dialogue d’interface utilisateur à *ABC* pour mettre en œuvre le déploiement.
 
 À partir du moment où *ABC* achète la solution de *CoolApp*, l’administrateur informatique *d’ABC* doit créer le principal du service *CoolApp* et inscrire l’application dans le locataire Azure AD *d’ABC*. 
 
@@ -48,6 +48,6 @@ L’administrateur informatique *d’ABC* exécute ensuite l’application de *C
 
 Si l’expérience souhaitée n’est pas de fournir à l’administrateur informatique *d’ABC* une boîte de dialogue d’interface utilisateur pour les informations du principal de service, mieux vaut suivre les indications du **Flux 2**.
 
-## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>Flux 2 : L’administrateur informatique *d’ABC* fournit la clé à l’équipe de *CoolApp*
+## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>Flux 2 : l’administrateur informatique *d’ABC* fournit la clé à l’équipe de *CoolApp*.
 
 Une fois que l’administrateur informatique *d’ABC* crée le principal du service, comme indiqué dans la **Figure 1**, *ABC* transfère les informations à l’équipe de *CoolApp*. L’équipe de *CoolApp* continue ensuite en intégrant les informations dans l’application *CoolApp* pour pouvoir les utiliser dans le locataire *d’ABC*.

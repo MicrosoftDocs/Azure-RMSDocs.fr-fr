@@ -15,13 +15,13 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 1ce52c18e1fb7569ea1b02f56f0564aab0f09129
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791036"
 ---
-# <a name="install-the-sdk"></a>Installer le Kit de développement logiciel (SDK)
+# <a name="install-the-sdk"></a>Installer le SDK
 
 Cette rubrique vous guide tout au long de l’installation des outils de développement.
 

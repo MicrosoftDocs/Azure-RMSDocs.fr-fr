@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: cdc72fd45a4b82611aa02d0a9182cd829b6d8a9e
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560773"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>class mip::ProtectionDescriptorBuilder 
@@ -25,8 +25,8 @@ public void SetDescription(const std::string& value)  |  Définit la description
 public void SetContentValidUntil (const std :: Chrono :: time_point\<std :: Chrono :: system_clock\>& valeur)  |  Définit l’heure d’expiration de la stratégie de protection.
 public void SetAllowOfflineAccess(bool value)  |  Définit si la stratégie de protection autorise l’accès au contenu hors connexion ou non.
 public void SetReferrer(const std::string& uri)  |  Définit l’adresse du référent de stratégie de protection.
-public void SetEncryptedAppData (const std :: Map\<std :: String, std :: String\>& valeur)  |  Définit les données spécifiques de l’application qui doivent être chiffrées.
-public void SetSignedAppData (const std :: Map\<std :: String, std :: String\>& valeur)  |  Définit les données spécifiques de l’application qui doivent être signées.
+public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  Définit les données spécifiques de l’application qui doivent être chiffrées.
+public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  Définit les données spécifiques de l’application qui doivent être signées.
 public virtual ~ProtectionDescriptorBuilder()  | Pas encore documenté.
 public static MIP_API std :: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP ::P rotectionDescriptorBuilder :: CreateFromUserRights | Crée un ProtectionDescriptorBuilder dont les autorisations d’accès sont définies par les utilisateurs et les droits.
 public static MIP_API std :: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP ::P rotectionDescriptorBuilder :: CreateFromUserRoles | Crée un ProtectionDescriptorBuilder dont les autorisations d’accès sont définies par les utilisateurs et les rôles.
@@ -56,7 +56,7 @@ Paramètres :
 
 
   
-### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil fonction)
+### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil function
 Définit l’heure d’expiration de la stratégie de protection.
 
 Paramètres :  

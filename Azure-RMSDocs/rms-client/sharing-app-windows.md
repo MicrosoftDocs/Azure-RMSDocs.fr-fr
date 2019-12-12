@@ -4,22 +4,22 @@ description: L’application de partage Rights Management pour Windows n’est p
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/15/2019
+ms.date: 11/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c42f11102d9c20f5dc3f4ca35b78762ab8506b64
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 7d61f30cfcb20197850821275791e0f24161b496
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689746"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933376"
 ---
 # <a name="rights-management-sharing-application-for-windows"></a>Application de partage Rights Management pour Windows
 
 >*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-**Notification de fin du support** : L’application de partage Rights Management pour Windows est maintenant remplacée par le [client Azure Information Protection](aip-client.md). La prise en charge de cette application plus ancienne prend fin le 31 janvier 2019.
+**Notification de fin de support**: l’application de partage Rights Management pour Windows est désormais remplacée par le [client Azure information protection](aip-client.md). La prise en charge de cette application plus ancienne prend fin le 31 janvier 2019.

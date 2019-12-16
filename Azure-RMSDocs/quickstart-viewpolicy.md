@@ -4,18 +4,18 @@ description: Si Azure Information Protection est nouveau pour votre organisation
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 92bc55f99636d7a54cafc7c45c1588d2828974c7
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: d1734b5102b1305077ce3b84fb95521daeb69c23
+ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561386"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74882086"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
 
@@ -82,9 +82,11 @@ Votre entreprise peut déjà disposer d’étiquettes, car elles ont été cré�
     
      ![Azure Information Protection, aucune étiquette par défaut](./media/info-protect-nodefaultlabels.png)
     
-    Si vous ne voyez pas cette option pour générer des étiquettes par défaut, vous disposez déjà d’étiquettes, probablement similaires à celles de l’image suivante, qui sont les étiquettes par défaut pour Azure Information Protection :
+    Si vous ne voyez pas cette option pour générer des étiquettes par défaut, vous disposez peut-être déjà d’étiquettes, probablement similaires à celles de l’image suivante, qui sont les étiquettes par défaut pour Azure Information Protection :
     
     ![Azure Information Protection, étiquettes par défaut](./media/info-protect-defaultlabels.png)
+    
+    Si vous ne voyez pas cette option pour générer des étiquettes par défaut et que vous ne voyez pas non plus d’étiquettes, accédez à **Gérer** > **Étiquetage unifié** et affichez l’état de **Étiquetage unifié**. Si vous voyez **Non activé**, sélectionnez **Activer**, puis revenez au volet **Classifications** > **Étiquettes**.
 
 2. Si vous n’avez pas encore d’étiquettes, sélectionnez l’option **Générer des étiquettes par défaut**.
 

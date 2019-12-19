@@ -20,7 +20,7 @@ ms.locfileid: "74907417"
 ---
 # <a name="install-a-pdf-reader-for-android"></a>Installer un lecteur PDF pour Android
 
-[icône ![Android](../media/develop/android-icon.png)](https://go.microsoft.com/fwlink/?LinkId=325340)
+[![Android icône](../media/develop/android-icon.png)](https://go.microsoft.com/fwlink/?LinkId=325340)
 
 Si vous avez besoin d’ouvrir un document PDF protégé sur votre appareil Android, téléchargez l' [application Azure information protection](https://go.microsoft.com/fwlink/?LinkId=325340) à partir du Google Play Store.
 

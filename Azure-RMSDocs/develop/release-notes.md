@@ -1,5 +1,5 @@
 ---
-title: Nouveautés et notes de publication
+title: Rrelease notes pour le kit de développement logiciel (SDK) Rights Management Services v4. x
 description: Décrit les fonctionnalités et modifications importantes de cette version et des précédentes.
 author: msmbaldwin
 ms.author: mbaldwin
@@ -12,18 +12,18 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: d9fda9c7477c408e8003f48c85e6d35fec6a1884
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: a4cfb05e45f1c3726bd5722c2c084a332eb5ce03
+ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60176010"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75303624"
 ---
 # <a name="whats-new-and-release-notes"></a>Nouveautés et notes de publication
 
 ## <a name="whats-new"></a>Nouveautés
 
-Cette rubrique décrit les modifications et les fonctionnalités importantes de cette nouvelle version du kit RMS SDK v4.X.
+Cette rubrique décrit les modifications et les fonctionnalités importantes de cette nouvelle version de la kit de développement logiciel (SDK) RMS v4. x.
 
 -   [Nouveau en juillet 2017](#new-for-july-2017)
 -   [Mise à jour d’octobre 2016](#october-2016-update)

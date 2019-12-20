@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e83515d0e6764cab5af784b4d695b318daa42d8d
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: a8c52a86e3f19302c86c6022f734f222b0d1ce97
+ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935467"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75303599"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par HSM à clé protégée par HSM
 
@@ -53,7 +53,7 @@ Ces procédures sont effectuées par l’administrateur d’Azure Key Vault.
         
         Les fichiers de clé chiffrés pour nCipher sont nommés **key_ <<em>keyAppName</em>> _ <<em>KeyIdentifier</em>>** localement sur le serveur. Par exemple, `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Vous aurez besoin de la valeur **mscapi** comme keyAppName, ainsi que de votre propre valeur pour l’identificateur de clé lorsque vous exécutez la commande KeyTransferRemote pour créer une copie de la clé avec des autorisations réduites.
         
-        Quand la clé se charge dans Azure Key Vault, vous voyez s’afficher les propriétés de la clé, notamment l’ID de clé. Cela doit ressembler à https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prenez note de cette URL, car l’administrateur Azure Information Protection en a besoin pour indiquer au service Azure Rights Management d’utiliser cette clé pour sa clé de locataire.
+        Quand la clé se charge dans Azure Key Vault, vous voyez s’afficher les propriétés de la clé, notamment l’ID de clé. Elle ressemble à https\://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prenez note de cette URL, car l’administrateur Azure Information Protection en a besoin pour indiquer au service Azure Rights Management d’utiliser cette clé pour sa clé de locataire.
 
 2. Sur la station de travail connectée à Internet, dans une session PowerShell, utilisez l’applet de commande [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) pour autoriser le principal du service Azure Rights Management à accéder au coffre de clés qui stocke la clé de locataire Azure information protection. Les autorisations nécessaires sont déchiffrer, chiffrer, désencapsuler la clé (unwrapkey), encapsuler la clé (wrapkey), vérifier et signer.
     

@@ -4,15 +4,14 @@ description: Guide de démarrage rapide sur la procédure de configuration d’A
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 04/17/2019
 ms.author: tommos
-ms.openlocfilehash: 49abf94c735b1ba14771adb9c2fe5dc126722b48
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.openlocfilehash: 424a260b1646a381dca23de71785dd34f92fc281
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070572"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555158"
 ---
 # <a name="quickstart-active-directory-rights-management-server-ad-rms-protection"></a>Démarrage rapide : Protection Active Directory Rights Management Server (AD RMS)
 

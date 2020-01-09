@@ -1,9 +1,9 @@
 ---
 title: Protection RMS avec l’infrastructure ICF de Windows Server - AIP
 description: Instructions d’utilisation du client Rights Management (RMS) avec le client Azure Information Protection pour configurer les outils de gestion de ressources pour serveur de fichiers et l’infrastructure de classification des fichiers (ICF).
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 265f6ee9fcf5e3fb3a4e658ab1c114a8e3ce7d4e
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 5d03aa523c22e66c79748cd378b67d7124686972
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935518"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326510"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protection RMS avec l’infrastructure de classification des fichiers (ICF) de Windows Server
 
@@ -38,7 +38,7 @@ Cette solution vous permet de protéger automatiquement tous les fichiers figura
 Les instructions qui suivent ont trait à Windows Server 2012 R2 ou à Windows Server 2012. Si vous exécutez d'autres versions prises en charge de Windows, il se peut que vous deviez adapter certaines étapes en fonction de différences existant entre votre version du système d'exploitation et celle évoquée dans cet article.
 
 ## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Conditions préalables pour l’utilisation de la protection Azure Rights Management avec l’ICF de Windows Server
-Conditions préalables pour ces instructions :
+Conditions préalables pour ces instructions :
 
 - Sur chaque serveur de fichiers où vous allez exécuter le Gestionnaire de ressources de fichiers avec l'infrastructure de classification des fichiers :
     
@@ -54,7 +54,7 @@ Conditions préalables pour ces instructions :
     
   - Si vous souhaitez modifier le niveau par défaut de protection (native ou générique) pour des extensions de nom de fichier spécifiques, vous avez modifié le Registre comme décrit dans la section [Modification du niveau de protection par défaut des fichiers](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) du guide d’administrateur.
     
-  - Vous disposez d’une connexion Internet et vous avez configuré les paramètres de votre ordinateur si ceux-ci sont requis pour un serveur proxy. Par exemple : `netsh winhttp import proxy source=ie`
+  - Vous disposez d’une connexion Internet et vous avez configuré les paramètres de votre ordinateur si ceux-ci sont requis pour un serveur proxy. Exemple : `netsh winhttp import proxy source=ie`
     
 - Vous avez synchronisé vos comptes d’utilisateur Active Directory locaux avec Azure Active Directory ou Office 365, dont leurs adresses e-mail. Cela est obligatoire pour tous les utilisateurs qui peuvent devoir accéder à des fichiers une fois qu’ils sont protégés par ICF et le service Azure Rights Management. Si vous n’exécutez pas cette étape (par exemple, dans un environnement de test), il se peut que l’accès des utilisateurs à ces fichiers soit bloqué. Si vous avez besoin de plus d’informations sur cette exigence, consultez [Préparation des utilisateurs et groupes pour Azure Information Protection](../prepare.md).
     
@@ -251,7 +251,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
 1.  Exécutez la règle de classification :
 
-    1.  Cliquez sur **Règles de classification** &gt; **Exécuter la classification avec toutes les règles maintenant**
+    1.  Cliquez sur **règles de classification** &gt; exécuter la **classification avec toutes les règles maintenant**
 
     2.  Cliquez sur **Attendre la fin de la classification**, puis sur **OK**.
 
@@ -259,7 +259,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
 
 3.  Exécutez la tâche de gestion de fichiers :
 
-    1.  Cliquez sur **Tâches de gestion de fichiers** &gt; **Protéger les fichiers avec RMS** &gt; **Exécuter maintenant une tâche de gestion de fichiers**
+    1.  Cliquez sur **tâches de gestion de fichiers** &gt; **protéger les fichiers avec RMS** &gt; **exécuter la tâche de gestion de fichiers maintenant**
 
     2.  Cliquez sur **Attendre la fin de l’exécution de la tâche**, puis sur **OK**.
 
@@ -269,7 +269,7 @@ Bien que vous puissiez exécuter les règles de classification manuellement, pou
     foreach ($file in (Get-ChildItem -Path C:\FileShare -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
     ```
     > [!TIP]
-    > Conseils de dépannage :
+    > Conseils de dépannage :
     > 
     > -   Si le rapport indique **0** au lieu du nombre de fichiers figurant dans votre dossier, cela indique que le script ne s’est pas exécuté. Commencez par contrôler le script proprement dit en le chargeant dans Windows PowerShell ISE pour valider son contenu, puis essayez de l’exécuter une fois dans la même session PowerShell pour voir si des erreurs s’affichent. Si aucun argument n’est spécifié, le script tente de se connecter et de s’authentifier auprès du service Azure Rights Management.
     > 

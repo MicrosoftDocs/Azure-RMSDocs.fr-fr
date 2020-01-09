@@ -1,9 +1,9 @@
 ---
 title: Guide de l’utilisateur Azure Information Protection-étiquetage unifié
-description: Le Azure Information Protection client d’étiquetage unifié pour Windows vous permet de protéger les documents et e-mails importants des personnes qui ne doivent pas les voir, même si votre adresse de messagerie est transférée ou si votre document est enregistré dans un autre emplacement.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+description: Azure Information Protection client d’étiquetage unifié pour Windows vous permet de protéger les documents et e-mails importants des personnes qui ne doivent pas les voir, même si votre adresse de messagerie est transférée ou si votre document est enregistré dans un autre emplacement.
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 9223087642653b304a719a8f0cbe0125d5b3a741
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 8e4851da21542985c89ef22c50b9d6015e5a6835
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935552"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326511"
 ---
 # <a name="azure-information-protection-unified-labeling-user-guide"></a>Guide de l’utilisateur d’étiquetage unifié Azure Information Protection 
 

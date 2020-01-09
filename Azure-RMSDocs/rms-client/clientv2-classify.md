@@ -1,9 +1,9 @@
 ---
 title: Classer à l’aide du client d’étiquetage unifié Azure Information Protection
 description: Instructions sur la façon de classer vos documents et e-mails lorsque vous utilisez le client d’étiquetage unifié Azure Information Protection pour Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 922d803237edde7950798a9bc9c538f2bcf6b538
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 975332c439530697d6460d2348531488d2b83e15
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935586"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326590"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Guide de l’utilisateur : classer un fichier ou un e-mail à l’aide du client d’étiquetage unifié Azure Information Protection pour Windows
 
@@ -33,11 +33,11 @@ Cependant, vous pouvez également classifier les fichiers à l’aide de l’**E
 
 ## <a name="using-office-apps-to-classify-your-documents-and-emails"></a>Utilisation des applications Office pour classifier vos documents et vos e-mails
 
-Dans l’onglet dossier de **démarrage** , sélectionnez le bouton **sensibilité** sur le ruban, puis sélectionnez l’une des étiquettes qui a été configurée pour vous. Exemple :
+Dans l’onglet dossier de **démarrage** , sélectionnez le bouton **sensibilité** sur le ruban, puis sélectionnez l’une des étiquettes qui a été configurée pour vous. Exemple :
 
 ![Exemple de bouton sensibilité](../media/sensitivity-not-set-callout.png)
 
-Ou, si vous avez sélectionné **afficher la barre** à partir du bouton **sensibilité** , vous pouvez sélectionner une étiquette à partir de la barre de Azure information protection. Exemple :
+Ou, si vous avez sélectionné **afficher la barre** à partir du bouton **sensibilité** , vous pouvez sélectionner une étiquette à partir de la barre de Azure information protection. Exemple :
 
 ![Exemple de barre Azure Information Protection](../media/info-protect-barv2-not-set-callout.png)
 
@@ -59,7 +59,7 @@ Outre la sélection manuelle, les étiquettes peuvent également être appliqué
 
 - Vous n’avez peut-être pas [installé](install-unifiedlabelingclient-app.md)le client d’étiquetage unifié Azure information protection.
 
-- Si vous ne voyez pas de bouton **sensibilité** sur le ruban, mais que vous voyez un bouton **protéger** avec des étiquettes à la place, le client Azure information protection (Classic) est installé et non le client d’étiquetage unifié Azure information protection. [Plus d’informations](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+- Si vous ne voyez pas de bouton **sensibilité** sur le ruban, mais que vous voyez un bouton **protéger** avec des étiquettes à la place, le client Azure information protection (Classic) est installé et non le client d’étiquetage unifié Azure information protection. [Informations complémentaires](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>L’étiquette que vous souhaitez voir ne s’affiche pas dans la barre ? 
 
@@ -80,13 +80,13 @@ Le guide de l’administrateur contient la liste complète des types de fichiers
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>Pour classifier un fichier à l’aide de l’Explorateur de fichiers
 
-1. Dans l’Explorateur de fichiers, sélectionnez votre fichier, plusieurs fichiers ou un dossier. Cliquez avec le bouton droit, puis sélectionnez **Classifier et protéger**. Exemple :
+1. Dans l’Explorateur de fichiers, sélectionnez votre fichier, plusieurs fichiers ou un dossier. Cliquez avec le bouton droit, puis sélectionnez **Classifier et protéger**. Exemple :
     
     ![Menu contextuel de l’Explorateur de fichiers, Classifier et protéger avec Azure Information Protection](../media/right-click-classify-protect-folder.png)
 
 2. Dans la boîte de dialogue **Classifier et protéger - Azure Information Protection**, utilisez les étiquettes comme vous le feriez dans une application Office, qui définit la classification comme l’a effectuée votre administrateur. 
     
-    Si aucune des étiquettes n’est sélectionnable (elles apparaissent estompées) : le fichier sélectionné ne prend pas en charge la classification. Exemple :
+    Si aucune des étiquettes n’est sélectionnable (elles apparaissent estompées) : le fichier sélectionné ne prend pas en charge la classification. Exemple :
     
     ![Aucune étiquette n’est disponible dans la boîte de dialogue Classifier et protéger - Azure Information Protection**](../media/v2info-protect-dialog-labels-dimmed.png)
 

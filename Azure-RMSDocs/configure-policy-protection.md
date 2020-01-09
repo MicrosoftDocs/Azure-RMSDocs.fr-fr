@@ -1,28 +1,29 @@
 ---
 title: Configurer une étiquette Azure Information Protection à des fins de protection – AIP
 description: Vous pouvez protéger vos documents et e-mails les plus sensibles lorsque vous configurez une étiquette, de façon à utiliser la protection offerte par Rights Management.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 7e455e54832113b1a4f67665ddad8455080b4970
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 84d72965d0438b17b23f194d4ec085765853608c
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933767"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75742723"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
 
 > [!NOTE]
 > Ces instructions s’appliquent au client Azure Information Protection (classique) et pas au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
@@ -285,7 +286,7 @@ Lorsque vos utilisateurs spécifient les adresses e-mail dans la zone **À**, ce
 
 4. Pour **Choisir des autorisations à partir des autorisations prédéfinies**, sélectionnez **Copropriétaire**, **Co-auteur**, **Réviseur** ou **Personnalisé** pour sélectionner les autorisations à accorder.
     
-    Remarque : Ne sélectionnez pas **Observateur** pour les e-mails et, si vous sélectionnez **Personnalisé**, veillez à inclure **Modifier et enregistrer**.
+    Remarque : Ne sélectionnez pas **Observateur** pour les e-mails et, si vous sélectionnez **Personnalisé**, veillez à inclure **Modifier et enregistrer**.
     
     Pour sélectionner les autorisations qui correspondent à la nouvelle option **Chiffrement seul** d’Exchange Online, sélectionnez **Personnalisé**. Ensuite, sélectionnez toutes les autorisations sauf **Enregistrer sous, Exporter (EXPORT)** et **Contrôle total (OWNER)** .
 

@@ -1,9 +1,9 @@
 ---
 title: Application de partage Rights Management pour Windows - AIP
 description: L’application de partage Rights Management pour Windows n’est plus prise en charge.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7d61f30cfcb20197850821275791e0f24161b496
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: bc9968b7e07c89fa1bba7f9c558aa1400b1b49a9
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933376"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326290"
 ---
 # <a name="rights-management-sharing-application-for-windows"></a>Application de partage Rights Management pour Windows
 

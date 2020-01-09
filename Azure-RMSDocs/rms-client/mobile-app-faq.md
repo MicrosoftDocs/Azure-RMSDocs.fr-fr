@@ -1,23 +1,23 @@
 ---
 title: FAQ relatives à l’application Azure Information Protection pour iOS et Android
 description: Quelques questions fréquemment posées pour vous aider à utiliser l’application Azure Information Protection pour iOS et Android
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.custom: user
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a8f6871f322765abf07087ce3c7bd629bfc9748f
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: user
+ms.openlocfilehash: e96698cdebf37a18b2e089ed9b51c09bf55e4966
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74160824"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326385"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Forum aux questions sur l’application Microsoft Azure Information Protection pour iOS et Android
 
@@ -63,7 +63,7 @@ Si votre adresse e-mail personnelle a été utilisée pour protéger le fichier,
 
 Oui, lorsque vous demandez un compte Microsoft, vous pouvez spécifier votre adresse Hotmail ou Gmail, ou toute autre adresse e-mail que vous possédez. 
 
-Toutefois, même si cette visionneuse peut ouvrir des fichiers protégés avec ce compte, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Plus d’informations](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+Toutefois, même si cette visionneuse peut ouvrir des fichiers protégés avec ce compte, toutes les applications ne peuvent pas ouvrir du contenu protégé lorsqu’un compte Microsoft est utilisé pour l’authentification. [Informations complémentaires](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="which-file-extensions-can-i-open-with-this-app"></a>Quelles extensions de fichier puis-je ouvrir avec cette application ?
 

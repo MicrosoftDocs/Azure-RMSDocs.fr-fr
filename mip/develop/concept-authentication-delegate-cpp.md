@@ -4,15 +4,14 @@ description: Cet article vous aidera à comprendre comment implémenter un dél�
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e3436acdd6a2900f4a21bb50b283d12065cd659b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 5f21c837c1bcd48fe23f3df2647d401390ee81f5
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886251"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556229"
 ---
 # <a name="microsoft-information-protection-sdk---implementing-an-authentication-delegate-c"></a>Kit SDK Microsoft Information Protection – Implémentation d’un délégué d’authentification (C++)
 

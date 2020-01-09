@@ -4,15 +4,14 @@ description: Cet article vous aidera à comprendre comment les gestionnaires de 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 414ad04c062a81d374a9e46d170feabb15e0e6cc
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: f94f885f77d15ec5c38894a4801b08908e65a166
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886224"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555804"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux gestionnaires de fichiers
 
@@ -37,9 +36,9 @@ Dans cet article, nous couvrirons les méthodes suivantes :
 - `DeleteLabel()`
 - `CommitAsync()`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Conditions requises
 
-La création d’un `FileHandler` pour utiliser un fichier spécifique nécessite :
+La création d’un `FileHandler` pour travailler avec un fichier spécifique nécessite :
 
 - Un `FileProfile`
 - L’ajout d’un `FileEngine` au `FileProfile`

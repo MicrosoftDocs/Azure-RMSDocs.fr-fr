@@ -4,15 +4,14 @@ description: Cet article vous aide à comprendre comment les gestionnaires d’A
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: 37ab92e336d88d37d9e4e7631e108bbaaebdb977
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 583e59832e40f87665232ebf39e1dddb462ba212
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886187"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556178"
 ---
 # <a name="microsoft-information-protection-sdk---policy-handler-concepts"></a>Kit SDK Microsoft Information Protection - Concepts liés au gestionnaire de stratégies
 
@@ -27,7 +26,7 @@ Dans cet article, nous couvrirons les méthodes suivantes :
 - `ComputeActions`
 - `NotifyCommittedActions`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Conditions requises
 
 La création de `PolicyHandler` nécessite :
 

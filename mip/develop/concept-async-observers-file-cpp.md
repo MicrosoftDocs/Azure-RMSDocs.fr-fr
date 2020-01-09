@@ -4,15 +4,14 @@ description: Le kit SDK MIP est conçu pour être presque entièrement asynchron
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: baa62e34e10de3fb4cacc3eb7cb21c0b3e2ebf75
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 16bd0824d1dd572041c4f64ed395704a2a9187f5
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175443"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555906"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-observers"></a>Kit SDK Microsoft Information Protection – Observateurs de l’API de fichier
 
@@ -53,7 +52,7 @@ Chaque membre accepte deux paramètres. Le premier est un pointeur partagé vers
 
 Le second est un pointeur partagé vers le *contexte*. Dans notre implémentation, le contexte est une référence à un objet `std::promise`, transmise par référence en tant que `std::shared_ptr<void>`. La première ligne de la fonction caste ceci en `std::promise`, puis le stocke dans un objet appelé `promise`.
 
-Enfin, le futur est préparé en définissant `promise->set_value()` et en lui transmettant l’objet `mip::FileProfile`.
+Enfin, le futur est préparé en définissant `promise->set_value()` et en lui passant l’objet `mip::FileProfile`.
 
 ```cpp
 #include "profile_observer.h"

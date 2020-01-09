@@ -4,15 +4,14 @@ description: Fonctions
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 4479cd9419d51e841906e6268427e184d4e1b4d3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: fb6c857d06da7a68d01d095db556216fee990dc6
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558003"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555974"
 ---
 # <a name="functions"></a>Fonctions
 
@@ -43,7 +42,7 @@ opérateur ActionType public ^ (ActionType a, ActionType b)       |  Opérateur 
 ### <a name="getassignmentmethodstring-function"></a>GetAssignmentMethodString fonction)
 Convertit l’énumération assignation en Description de chaîne.
 
-Paramètres :  
+Paramètres :  
 * **méthode**: méthode d’assignation. 
 
 
@@ -54,7 +53,7 @@ Paramètres :
 ### <a name="getactionsourcestring-function"></a>GetActionSourceString fonction)
 Obtient le nom de la source de l’action.
 
-Paramètres :  
+Paramètres :  
 * **actionSource**: source de l’action. 
 
 
@@ -65,7 +64,7 @@ Paramètres :
 ### <a name="getdatastatestring-function"></a>GetDataStateString fonction)
 Obtient le nom de l’état du contenu.
 
-Paramètres :  
+Paramètres :  
 * **actionSource**: état du contenu sur lequel le travail est effectué. 
 
 
@@ -118,7 +117,7 @@ Obtient une valeur indiquant si une fonctionnalité est activée par défaut.
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream fonction)
 Crée un flux à partir d’un std :: IStream.
 
-Paramètres :  
+Paramètres :  
 * **stdIStream** : sauvegarde std::istream
 
 
@@ -129,7 +128,7 @@ Paramètres :
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream fonction)
 Crée un flux à partir d’un std :: ostream.
 
-Paramètres :  
+Paramètres :  
 * **stdIStream** : sauvegarde std::ostream
 
 
@@ -140,7 +139,7 @@ Paramètres :
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream fonction)
 Crée un flux à partir d’un std :: iostream.
 
-Paramètres :  
+Paramètres :  
 * **stdIOStream** : sauvegarde std::iostream
 
 
@@ -151,7 +150,7 @@ Paramètres :
 ### <a name="createstreamfrombuffer-function"></a>CreateStreamFromBuffer fonction)
 Crée un flux à partir d’une mémoire tampon.
 
-Paramètres :  
+Paramètres :  
 * **buffer** : pointeur vers une mémoire tampon
 
 
@@ -162,7 +161,7 @@ Paramètres :
 ### <a name="readfromstream-function"></a>ReadFromStream fonction)
 Lit tous les octets du flux.
 
-Paramètres :  
+Paramètres :  
 * **pointeur**: vers un flux.
 
 

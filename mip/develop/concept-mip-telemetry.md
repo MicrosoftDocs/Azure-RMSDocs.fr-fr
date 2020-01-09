@@ -4,15 +4,14 @@ description: Cet article vous aidera à comprendre comment refuser la télémét
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 10/01/2019
 ms.author: tommos
-ms.openlocfilehash: 3d97bdbf5307d7f0faefe6b6434b1df1ebc67798
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: e2c8d8726edc483b35c7b9931bc83a3ddb3b5a2c
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74484851"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556144"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-configuration de la télémétrie
 

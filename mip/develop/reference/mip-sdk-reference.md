@@ -4,15 +4,14 @@ description: SDK MIP pour C++ référence
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f1e5e06332cac6c0f8beba089d92654781ff6f71
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 69896e60fcf8aa33b2181fd22aeda803ab35b1cf
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560431"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555991"
 ---
 # <a name="mip-sdk-for-c-reference"></a>SDK MIP pour C++ référence
 
@@ -24,7 +23,7 @@ Le SDK MIP pour C++ inclut :
 - [Fonctions](mip-functions.md)
 - Les classes suivantes :
 
- Classe                         | Description                                
+ Class                         | Description                                
 --------------------------------|---------------------------------------------
 [MIP :: AccessDeniedError, classe](class_mip_accessdeniederror.md)  |  L’utilisateur n’a pas pu obtenir l’accès au contenu. Par exemple, aucune autorisation, contenu révoqué.
 [MIP :: action de classe](class_mip_action.md)  |  Interface pour une action. Chaque action se traduit par une étape qui doit être effectuée par l’application pour appliquer l’étiquette (comme défini dans la stratégie)

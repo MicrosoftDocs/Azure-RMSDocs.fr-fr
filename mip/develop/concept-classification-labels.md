@@ -4,15 +4,14 @@ description: Cet article vous aidera à comprendre comment les étiquettes sont 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: e1101bd505a35e02fdeeed032d5dec61364bfb8d
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: b2be24e1703d4831a95feaa51012cf7469a481b7
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175239"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556212"
 ---
 # <a name="microsoft-information-protection-sdk---classification-label-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux étiquettes de classification
 
@@ -59,7 +58,7 @@ Il existe deux types d’étiquette dans le kit SDK MIP. Voir `Label` et `Conten
 
 En d’autres termes, l’étiquette `ContentLabel` est une étiquette `Label` qui a été appliquée à des informations.
 
-## <a name="metadata"></a>Métadonnées
+## <a name="metadata"></a>Metadata
 
 Le kit SDK prend également en charge l’ajout de métadonnées supplémentaires aux documents sous la forme de paires clé/valeur. Si votre organisation a des sous-classifications ou des balises qui décrivent les informations de manière plus spécifique, le kit SDK peut être utilisé pour appliquer ces métadonnées.
 

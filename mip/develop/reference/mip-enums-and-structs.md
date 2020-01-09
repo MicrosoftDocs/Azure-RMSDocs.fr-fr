@@ -4,15 +4,14 @@ description: Documentation de référence sur C++ les structs et les enums du ki
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: a6e5fae2296fb6f966f5f7fb6b73facb867398a2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 2a641ace68d6999e3d452fa7f5c014ec1215556a
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560449"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556008"
 ---
 # <a name="enumerations-and-structures"></a>Énumérations et structures
 
@@ -119,7 +118,7 @@ Réponse d’un utilisateur quand le consentement est demandé pour la connexion
 #### <a name="cachestoragetype-enum"></a>Énumération CacheStorageType
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
-InMemory            | Dans le stockage en mémoire
+Mémoire            | Dans le stockage en mémoire
 OnDisk            | Sur le stockage sur disque
 OnDiskEncrypted            | Sur le stockage sur disque avec chiffrement (si pris en charge par la plateforme)
 Type de stockage pour les caches.
@@ -127,7 +126,7 @@ Type de stockage pour les caches.
 #### <a name="pfileextensionbehavior-enum"></a>Énumération PFileExtensionBehavior
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
-Par défaut            | Les extensions deviendront le comportement par défaut du SDK
+Valeur par défaut            | Les extensions deviendront le comportement par défaut du SDK
 PFileSuffix            | Les extensions deviendront <EXT>. PFILE
 PPrefix            | Les extensions deviendront P<EXT>
 Décrit le comportement des extensions PFile.
@@ -161,7 +160,7 @@ LABEL_DISABLED            | L’étiquette est désactivée ou inactive
 #### <a name="inspectortype-enum"></a>Énumération InspectorType
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
-Inconnu            | Inspecteur de fichier inconnu.
+Inconnu.            | Inspecteur de fichier inconnu.
 Fragment            | Inspecteur de fichier de style MSG, basé sur rpmsg/MSG.
 Type d’inspecteur en corrélation avec les types de fichiers pris en charge.
   
@@ -247,7 +246,7 @@ AddWatermark            |
 #### <a name="conditiondatatype-enum"></a>Énumération ConditionDataType
  Valeurs                         | Descriptions                                
 --------------------------------|---------------------------------------------
-Par défaut            | 
+Valeur par défaut            | 
 Sensibilité            | 
   
 #### <a name="contentmarkplacement-enum"></a>Énumération ContentMarkPlacement

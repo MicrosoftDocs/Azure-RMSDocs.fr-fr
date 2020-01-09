@@ -4,15 +4,14 @@ description: Cet article vous aidera à comprendre les concepts liés à l’obj
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 5534cf804422de2d02a53e8c21ceae77af52691d
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: f174225ee7399480c610b491819c434400548e22
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886092"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555294"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-profile-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés au profil de l’API de fichier
 

@@ -4,15 +4,14 @@ description: Le kit SDK MIP est conçu pour être presque entièrement asynchron
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: 2d1cf81e20a317ecb1eb9e71b5b4e0ab32482877
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 559e6088edc4bab51867ac379451ae3feef5acd6
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175545"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555923"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-observers"></a>Kit SDK Microsoft Information Protection – Observateurs de l’API de protection
 
@@ -54,7 +53,7 @@ Chaque membre accepte deux paramètres. Le premier est un pointeur partagé vers
 
 Le second est un pointeur partagé vers le *contexte*. Dans notre implémentation, le contexte est une référence à un objet `std::promise`, transmise en tant que `shared_ptr<void>`. La première ligne de la fonction caste ceci en `std::promise`, puis le stocke dans un objet appelé `promise`.
 
-Enfin, le futur est préparé en définissant `promise->set_value()` et en lui transmettant l’objet `mip::ProtectionProtection`.
+Enfin, le futur est préparé en définissant `promise->set_value()` et en lui passant l’objet `mip::ProtectionProtection`.
 
 ```cpp
 //protection_observers.cpp

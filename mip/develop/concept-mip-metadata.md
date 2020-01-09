@@ -4,15 +4,14 @@ description: Cet article vous aidera à comprendre les métadonnées générées
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 3ae27b1bf0b4f709e9621f00b1b3a16c2ba1882c
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 6713ba0d8b6727f3ed10e4b3846cbe2bb1b43f6e
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886133"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555685"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>SDK Microsoft Information Protection-métadonnées
 
@@ -47,7 +46,7 @@ Le kit de développement logiciel MIP applique l’ensemble de métadonnées sui
 
 Lorsqu’il est appliqué à un fichier, le résultat est semblable au tableau ci-dessous.
 
-| Clé                                                         | Value                                |
+| Clé                                                         | valeur                                |
 |-------------------------------------------------------------|--------------------------------------|
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | true                                 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |

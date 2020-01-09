@@ -4,21 +4,20 @@ description: Cet article vous aidera à comprendre comment utiliser PowerShell p
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 02/04/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 68ae6bc02f671f0a4d18c382ccde4f53873b2fd4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: ddc962f97e6e7d6b0e7ff091821fa83063e9f068
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175307"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555855"
 ---
 # <a name="acquire-an-access-token-powershell"></a>Acquérir un jeton d’accès (PowerShell)
 
 L’exemple illustré montre comment appeler un script PowerShell externe pour obtenir un jeton OAuth2. Un jeton d’accès OAuth2 valide est requis par l’implémentation du délégué d’authentification.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 - [Installation et configuration du kit de développement logiciel (MIP) SDK](setup-configure-mip.md). Entre autres tâches, vous allez inscrire votre application cliente dans votre locataire Azure Active Directory (Azure AD). Azure AD fournira un ID d’application, également appelé ID client, qui est utilisé dans votre logique d’acquisition de jeton.
 

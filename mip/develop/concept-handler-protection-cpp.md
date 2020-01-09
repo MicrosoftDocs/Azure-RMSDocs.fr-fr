@@ -4,23 +4,22 @@ description: Cet article vous aidera à comprendre comment les gestionnaires de 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: b00078ba82d22ce37263162b3d7bb3d1f7d3a903
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 892e492351d3779667629ff4522891bb527fd782
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886152"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556161"
 ---
 # <a name="microsoft-information-protection-sdk---protection-handler-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux gestionnaires de protection
 
 Dans l’API de protection du kit SDK MIP, `mip::ProtectionHandler` expose les fonctions permettant de chiffrer et déchiffrer les tampons et flux protégés, d’effectuer des vérifications d’accès, d’obtenir la licence de publication et d’obtenir des attributs à partir des informations protégées.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Conditions requises
 
-La création d’un `ProtectionHandler` pour utiliser un fichier spécifique nécessite :
+La création d’un `ProtectionHandler` pour travailler avec un fichier spécifique nécessite :
 
 - Un `mip::MipContext`
 - Un `mip::ProtectionProfile`

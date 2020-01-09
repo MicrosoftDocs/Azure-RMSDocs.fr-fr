@@ -4,15 +4,14 @@ description: Cet article vous aidera à comprendre les concepts relatifs au stoc
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: a72ae5169e4a7ee9a201876afbef0f5d33fc9b89
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: ed6407e99677bbed293959e15720c4c7d418aa54
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69893750"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555821"
 ---
 # <a name="microsoft-information-protection-sdk---cache-storage"></a>Kit de développement logiciel (SDK) Microsoft Information Protection-stockage cache
 
@@ -26,9 +25,9 @@ L’application définit le type de cache lors du chargement du profil dans le c
 
 À compter de la version 1,3 du kit de développement logiciel MIP, les types de cache de stockage suivants sont disponibles.
 
-| Type            | Fonction                                                                                                                         |
+| Tapez            | Fonction                                                                                                                         |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| InMemory        | Maintient le cache de stockage en mémoire dans l’application.                                                                       |
+| Mémoire        | Maintient le cache de stockage en mémoire dans l’application.                                                                       |
 | OnDisk          | Stocke la base de données sur le disque dans le répertoire fourni dans l’objet Settings. La base de données est stockée en texte brut.              |
 | OnDiskEncrypted | Stocke la base de données sur le disque dans le répertoire fourni dans l’objet Settings. La base de données est chiffrée à l’aide d’API propres au système d’exploitation. |
 

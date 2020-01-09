@@ -4,15 +4,14 @@ description: Cet article vous aidera à comprendre le concept principal du kit d
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: aac40c5ba5f06e705aaf5c6d42c6963d851d2764
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 97b6720a4501ab389099b7c2d49fa7cfbf81e00b
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69893733"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555668"
 ---
 # <a name="microsoft-information-protection-sdk---mipcontext-object-concepts"></a>Microsoft Information Protection SDK-concepts des objets MipContext
 

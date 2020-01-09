@@ -4,21 +4,20 @@ description: Cet article vous aidera à comprendre comment utiliser Python pour 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: b46f478dc38e9010cc2eb221f587f3d3ca3f60a2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 7cb49e161b3718a54bcdb8601cc857a47b1e9f16
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69884735"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556246"
 ---
 # <a name="acquire-an-access-token-python"></a>Acquérir un jeton d’accès (Python)
 
 Cet exemple montre comment appeler un script Python externe pour obtenir un jeton OAuth2. Un jeton d’accès OAuth2 valide est requis par l’implémentation du délégué d’authentification.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Pour exécuter l’exemple ci-dessous :
 

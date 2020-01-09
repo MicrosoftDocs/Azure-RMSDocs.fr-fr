@@ -1,19 +1,18 @@
 ---
 title: Historique des versions et politique de support de Microsoft Information Protection (MIP) SDK
-description: Version de l’historique des versions et notes de modification du kit de développement logiciel MIP.
+description: Historique des versions et notes de modification pour le kit de développement logiciel MIP.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: a678765835785dcb40aaf65e7f92e78fba67c73a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: c28ab93feedea4c27ef9fe032f889d17da078d49
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74479103"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555940"
 ---
 # <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Historique des versions et politique de support de Microsoft Information Protection (MIP) SDK
 
@@ -25,7 +24,7 @@ Les versions préliminaires ne doivent pas être déployées en production. Au l
 
 ## <a name="release-history"></a>Historique des versions
 
-Utilisez les informations suivantes pour découvrir les nouveautés ou les modifications apportées à une version prise en charge. La dernière version est la première sur la liste. 
+Utilisez les informations suivantes pour découvrir les nouveautés ou les modifications apportées à une version prise en charge. La dernière version est répertoriée en première position. 
 
 > [!NOTE]
 > Les correctifs mineurs ne sont pas répertoriés. par conséquent, si vous rencontrez un problème avec le kit de développement logiciel (SDK), nous vous recommandons de vérifier s’il est corrigé avec la dernière version de la mise à la disposition générale. Si le problème persiste, consultez la préversion actuelle.

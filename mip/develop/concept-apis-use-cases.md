@@ -4,15 +4,14 @@ description: Cet article vous aidera à comprendre 3 types d’API figurant dans
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 10/16/2018
 ms.author: mbaldwin
-ms.openlocfilehash: d4bef66f8e3d808b195ac49f7bb42ab0eb62b7d5
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 580e2c14d60c60ccb42d5d8553d4f37a705b4c0f
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60180842"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556280"
 ---
 # <a name="microsoft-information-protection-sdk---api-concepts"></a>Kit SDK Microsoft Information Protection – Concepts liés aux API
 

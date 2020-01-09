@@ -1,9 +1,9 @@
 ---
 title: Suivi et révocation de documents - Azure Information Protection
 description: Une fois que vous avez protégé vos documents, vous pouvez suivre la manière dont les personnes les utilisent. Si nécessaire, vous pouvez également révoquer l’accès à ces documents si ces personnes ne doivent plus être en mesure de les lire.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 537318bd21ec27d91fc1868d4c9e4ef4b6a8fa35
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 2fa57c099bcbc6730e649e9aef3adb7fa4176b03
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935671"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675667"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guide de l’utilisateur : Suivre et révoquer vos documents quand vous utilisez Azure Information Protection
 
@@ -44,7 +44,7 @@ Actions que vous pouvez entreprendre sur le site de suivi de documents :
          
         ![Icône Exporter au format CSV du site de suivi de document](../media/tracking-site-export-icon.png)
          
-- Si vous souhaitez configurer des notifications par courrier électronique : 
+- Si vous voulez configurer des notifications par courrier électronique : 
      
     - Cliquez sur **Paramètres** et choisissez si vous voulez recevoir une notification quand une personne accède au document et si oui, comment :
         

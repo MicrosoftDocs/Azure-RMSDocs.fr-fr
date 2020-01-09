@@ -1,9 +1,9 @@
 ---
 title: Configurations personnalisées-Azure Information Protection client d’étiquetage unifié
 description: Informations sur la personnalisation de l’Azure Information Protection client d’étiquetage unifié pour Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1fcab238281326ff8e885f655a936392e1519eb1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 9428f682c9046f3b9f0e7b9dd9af498db7fd2d4c
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74474380"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675616"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -32,7 +32,7 @@ Ces paramètres requièrent la modification du registre ou la spécification de 
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Comment configurer des paramètres avancés pour le client à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell
 
-Quand vous utilisez Office 365 Centre de sécurité et de conformité PowerShell, vous pouvez configurer des paramètres avancés qui prennent en charge les personnalisations des étiquettes et des stratégies d’étiquette. Exemple :
+Quand vous utilisez Office 365 Centre de sécurité et de conformité PowerShell, vous pouvez configurer des paramètres avancés qui prennent en charge les personnalisations des étiquettes et des stratégies d’étiquette. Exemple :
 
 - Le paramètre permettant d’afficher la barre d’Information Protection dans les applications Office est un ***paramètre avancé***de la stratégie d’étiquette.
 - Le paramètre permettant de spécifier une couleur d’étiquette est un ***paramètre avancé d’étiquette***.
@@ -125,7 +125,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |EnableCustomPermissionsForCustomProtectedFiles|[Pour les fichiers protégés avec des autorisations personnalisées, toujours afficher des autorisations personnalisées pour les utilisateurs dans l’Explorateur de fichiers](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |EnableLabelBySharePointProperties|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-|HideBarByDefault|[Afficher la barre Information Protection dans les applications Office](##display-the-information-protection-bar-in-office-apps)|
+|HideBarByDefault|[Afficher la barre Information Protection dans les applications Office](#display-the-information-protection-bar-in-office-apps)|
 |LogMatchedContent|[Envoyer les correspondances de type d’informations à Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
 |OutlookBlockTrustedDomains|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -243,7 +243,7 @@ Vous pouvez modifier ce comportement par défaut pour une stratégie d’étique
 
 Utilisez le tableau suivant pour identifier la valeur de chaîne à spécifier :
 
-| Valeur chaîne| Client| Scanneur|
+| Valeur chaîne| Client| Scanner|
 |-------------|-------|--------|
 |\*|Valeur par défaut : appliquer la protection à tous les types de fichiers|Appliquer la protection à tous les types de fichiers|
 |\<valeur null >| Appliquer la protection aux types de fichiers Office et aux fichiers PDF| Valeur par défaut : appliquer la protection aux types de fichiers Office et aux fichiers PDF|
@@ -297,9 +297,9 @@ Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivan
 
 - Clé : **RemoveExternalContentMarkingInApp**
 
-- Valeur : \< **Types d’application Office WXP**> 
+- Valeur : \<**Types d’application Office WXP**> 
 
-Exemples :
+Exemples :
 
 - Pour rechercher dans des documents Word uniquement, spécifiez **W**.
 
@@ -336,7 +336,7 @@ Pour la même stratégie d’étiquette, spécifiez les chaînes suivantes :
 
 - Clé : **ExternalContentMarkingToRemove**
 
-- Valeur : \< **chaîne à trouver, définie comme expression régulière**> 
+- Valeur : \<**chaîne à trouver, définie comme expression régulière**> 
 
 Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
@@ -354,9 +354,9 @@ Pour supprimer ce pied de page multiligne, vous créez les deux entrées suivant
 
 - Clé : **ExternalContentMarkingToRemove**
 
-- Valeur de la clé 1 :  **\*Confidentiel***
+- Valeur de la clé 1 : **\*Confidentiel***
 
-- Valeur de la clé 2 :  **\*Étiquette appliquée*** 
+- Valeur de la clé 2 : **\*Étiquette appliquée*** 
 
 Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
@@ -381,7 +381,7 @@ Exemple : Le nom de la forme est **fc**. Pour supprimer la forme portant ce nom
 
 - Clé : **PowerPointShapeNameToRemove**
 
-- Valeur : \< **Nom de la forme PowerPoint**> 
+- Valeur : \<**Nom de la forme PowerPoint**> 
 
 Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
@@ -702,7 +702,7 @@ Pour modifier ce comportement afin que les types d’informations sensibles dét
 
 Si vous définissez ce paramètre de client avancé, les informations d’audit peuvent toujours être envoyées à partir du client, mais les informations sont limitées à la création de rapports lorsqu’un utilisateur a accédé au contenu étiqueté.
 
-Exemple :
+Exemple :
 
 - Avec ce paramètre, vous pouvez voir qu’un utilisateur a accédé à Financial. docx qui est étiqueté **confidentiel \ Sales**.
 
@@ -871,7 +871,7 @@ Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-s
 
 Il peut y avoir des scénarios lorsque vous souhaitez appliquer une ou plusieurs propriétés personnalisées à un document ou à un message électronique en plus des métadonnées appliquées par une étiquette de sensibilité.
 
-Exemple :
+Exemple :
 
 - Vous êtes en train de [migrer à partir d’une autre solution d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions), telle que des îlots sécurisés. Pour l’interopérabilité au cours de la migration, vous souhaitez que les étiquettes de sensibilité appliquent également une propriété personnalisée utilisée par l’autre solution d’étiquetage.
 
@@ -1034,7 +1034,7 @@ Instructions :
 
 7. Si le compte d’utilisateur choisi est un compte qui se connecte généralement à Internet, activez à nouveau l’envoi des données d’audit en affectant à la valeur **EnableAudit** la valeur **true**.
 
-8. Pour que l’ordinateur déconnecté protège des fichiers, reprotégez les fichiers, supprimez la protection des fichiers ou Inspectez les fichiers protégés : sur l’ordinateur déconnecté, exécutez l’applet de commande [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec le paramètre *DelegatedUser* et spécifiez le compte d’utilisateur de l’étape 1 pour définir le contexte de l’utilisateur. Exemple :
+8. Pour que l’ordinateur déconnecté protège des fichiers, reprotégez les fichiers, supprimez la protection des fichiers ou Inspectez les fichiers protégés : sur l’ordinateur déconnecté, exécutez l’applet de commande [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec le paramètre *DelegatedUser* et spécifiez le compte d’utilisateur de l’étape 1 pour définir le contexte de l’utilisateur. Exemple :
     
         Set-AIPAuthentication -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser offlineuser@contoso.com
 

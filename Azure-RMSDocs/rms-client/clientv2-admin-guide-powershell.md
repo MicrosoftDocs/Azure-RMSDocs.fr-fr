@@ -1,9 +1,9 @@
 ---
 title: Utiliser PowerShell avec le client d’étiquetage unifié Azure Information Protection
 description: Instructions et informations permettant aux administrateurs de gérer le Azure Information Protection client d’étiquetage unifié à l’aide de PowerShell.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: da0d578d06081667e4d8a25be841c2feb2c1fbd5
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 44b30188cdae6e41f830afd283c22ca58e9afea2
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561251"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675565"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guide de l’administrateur : utilisation de PowerShell avec le client unifié Azure Information Protection
 
@@ -26,7 +26,7 @@ ms.locfileid: "73561251"
 
 Lorsque vous installez le client d’étiquetage unifié Azure Information Protection, les commandes PowerShell sont installées automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
-Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**, qui possède des applets de commande pour l’étiquetage. Exemple :
+Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**, qui possède des applets de commande pour l’étiquetage. Exemple :
 
 |Étiquetage des applets de commande|Exemple d’utilisation|
 |----------------|---------------|
@@ -170,7 +170,7 @@ Maintenant que vous avez terminé l’inscription de cette application avec un s
     
     Vous êtes invité à entrer le mot de passe de ce compte.
 
-2. Exécutez l’applet de commande Set-AIPAuthentication avec le paramètre *OnBeHalfOf* , en spécifiant comme valeur la variable que vous venez de créer. Spécifiez également les valeurs d’inscription de votre application, votre ID de locataire et le nom du compte d’utilisateur délégué dans Azure AD. Exemple :
+2. Exécutez l’applet de commande Set-AIPAuthentication avec le paramètre *OnBeHalfOf* , en spécifiant comme valeur la variable que vous venez de créer. Spécifiez également les valeurs d’inscription de votre application, votre ID de locataire et le nom du compte d’utilisateur délégué dans Azure AD. Exemple :
     
         Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
 
@@ -178,7 +178,7 @@ Maintenant que vous avez terminé l’inscription de cette application avec un s
 > Si l’ordinateur ne peut pas accéder à Internet, il n’est pas nécessaire de créer l’application dans Azure AD et d’exécuter Set-AIPAuthentication. Au lieu de cela, suivez les instructions pour les [ordinateurs déconnectés](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour obtenir de l’aide sur les applets de commande lorsque vous êtes dans une session PowerShell, tapez `Get-Help <cmdlet name> -online`. Exemple : 
+Pour obtenir de l’aide sur les applets de commande lorsque vous êtes dans une session PowerShell, tapez `Get-Help <cmdlet name> -online`. Exemple : 
 
     Get-Help Set-AIPFileLabel -online
 

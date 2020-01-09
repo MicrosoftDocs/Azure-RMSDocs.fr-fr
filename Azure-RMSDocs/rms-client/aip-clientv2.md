@@ -1,9 +1,9 @@
 ---
 title: Azure Information Protection client d’étiquetage unifié pour Windows
 description: Ressources d’informations pour le Azure Information Protection client d’étiquetage unifié pour Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: ddfcabc7237c66d95bc9f6dab15dc5326a92d6be
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 020efafdb2a87187a011663773b9ce4f1dce5968
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72805251"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675837"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Azure Information Protection client d’étiquetage unifié pour Windows
 

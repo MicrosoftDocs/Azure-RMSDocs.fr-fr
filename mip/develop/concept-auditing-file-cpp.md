@@ -5,21 +5,20 @@ services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: df67886f53d697e47f6e812cdcbbac394acaa98d
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 0e7fdde8194603917186f5771ca1a782fd209fa7
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69884754"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556263"
 ---
 # <a name="auditing-in-the-mip-sdk-file-api"></a>Audit dans l’API de fichier du kit SDK MIP
 
 Le portail d’administration Azure Information Protection permet d’accéder aux rapports de l’administrateur. Ces rapports fournissent une visibilité sur les étiquettes que les utilisateurs appliquent, manuellement ou automatiquement, sur les applications ou services qui ont intégré le kit de développement logiciel (SDK) MIP. Les partenaires de développement qui utilisent le kit de développement logiciel (SDK) peuvent activer cette fonctionnalité pour exposer les informations de leurs applications dans les rapports des clients.
 
-## <a name="event-types"></a>Types d'événement
+## <a name="event-types"></a>Types d'événements
 
 Il existe trois types d’événement pouvant être envoyés via le kit SDK aux fonctionnalités d’analyse Azure Information Protection. **Événements de pulsation**, **événements de détection** et **événements de changement**
 

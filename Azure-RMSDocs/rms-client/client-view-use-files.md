@@ -1,9 +1,9 @@
 ---
 title: Afficher les fichiers protégés avec la visionneuse de Azure Information Protection
 description: Instructions pour afficher et utiliser un fichier protégé qui vous oblige à installer la visionneuse Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 78cd226b532478c00da4754cf890ed3f0ab65ce7
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 11b8f4331828ce6061d2c4c3087b4ac027892556
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935637"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675633"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Guide de l’utilisateur : afficher les fichiers protégés avec la visionneuse de Azure Information Protection
 

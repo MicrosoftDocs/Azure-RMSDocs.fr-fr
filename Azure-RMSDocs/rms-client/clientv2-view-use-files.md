@@ -1,9 +1,9 @@
 ---
 title: Afficher les fichiers protégés avec le client d’étiquetage unifié Azure Information Protection
 description: Instructions pour afficher un fichier protégé qui vous oblige à installer la Azure Information Protection visionneuse d’étiquetage unifiée.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: d4c7ba70ab09c1fa4033babdf3dd5f5664e284ce
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: bbe2a70714d65bff27ce7dc9131ea33fc0774454
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935535"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326539"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Guide de l’utilisateur : afficher les fichiers protégés avec le client d’étiquetage unifié Azure Information Protection
 

@@ -1,10 +1,10 @@
 ---
 title: Migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée-AIP
 description: Migrez Azure Information Protection étiquettes vers des étiquettes de sensibilité unifiée pour les clients et les services qui prennent en charge Microsoft Information Protection Framework.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 12/08/2019
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,19 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 31140c7591f2846090a73627fe1f146bc5609cef
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 60f1ea855d2ec666f2d22bb53d8856a6461157dc
+ms.sourcegitcommit: a38af4741017cd745efc011cf29a0fedb62f9be7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935025"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75827534"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Comment migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 > *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
 
 Migrez Azure Information Protection étiquettes vers la plateforme d’étiquetage unifiée pour pouvoir les utiliser en tant qu’étiquettes de sensibilité par [les clients et les services qui prennent en charge l’étiquetage unifié](#clients-and-services-that-support-unified-labeling).
 
@@ -194,7 +195,7 @@ Pour vérifier si les clients et les services que vous utilisez prennent en char
 
 - Le [Azure information protection client d’étiquetage unifié pour Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Pour obtenir une comparaison entre ce client et le client Azure Information Protection (Classic), consultez [comparer les clients d’étiquetage pour les ordinateurs Windows](./rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-- Applications Office qui se trouvent à différentes phases de disponibilité. Pour plus d’informations, consultez [Quelles sont les fonctionnalités de l’étiquette de sensibilité sont prises en charge dans Office aujourd’hui ?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) dans la documentation Office.
+- Applications Office qui se trouvent à différentes phases de disponibilité. Pour plus d’informations, consultez [prise en charge des fonctionnalités d’étiquette de sensibilité dans les applications](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) à partir de la documentation Office.
     
 - Applications d’éditeurs de logiciels et de développeurs qui utilisent le [SDK Microsoft Information Protection](https://docs.microsoft.com/information-protection/develop/overview).
 
@@ -222,8 +223,12 @@ Pour vérifier si les clients et les services que vous utilisez prennent en char
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour obtenir de l’aide et des conseils supplémentaires de notre équipe de l’expérience utilisateur, consultez le billet de blog suivant : [Understanding Unified Labeling migration](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185).
+Pour obtenir des conseils supplémentaires et des conseils de notre équipe de l’expérience utilisateur, consultez les ressources suivantes :
 
-Pour plus d’informations sur les étiquettes migrées maintenant configurables et publiables dans l’un des centres d’administration, voir [Vue d’ensemble des étiquettes de confidentialité](/microsoft-365/compliance/sensitivity-labels).
+- Billet de blog : [comprendre la migration unifiée d’étiquetage](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)
+
+- Webinaire : [enregistrement d’un webinaire d’étiquetage unifié pour AIP](https://aka.ms/AIP-UL-Webinar-Join1)
+
+Pour plus d’informations sur vos étiquettes migrées qui peuvent maintenant être configurées et publiées dans l’un des centres d’administration d’étiquetage, consultez [vue d’ensemble des étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels).
 
 Si vous ne l’avez pas déjà fait, installez le client d’étiquetage unifié Azure Information Protection. Pour obtenir des informations sur la version, un guide d’administration et un guide de l’utilisateur, consultez [Azure information protection le client d’étiquetage unifié pour Windows](./rms-client/aip-clientv2.md).

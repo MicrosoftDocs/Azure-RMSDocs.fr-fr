@@ -1,22 +1,22 @@
 ---
 title: Configurer les marquages visuels d’une étiquette Azure Information Protection – AIP
 description: Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez sélectionner plusieurs options pour que la classification choisie soit facilement visible. Ces marquages visuels sont un filigrane, un en-tête et un pied de page.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/24/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 472bf634c1eb43e000b26fa1bb11387442ff91c1
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 7e16f4034e52345ec473256763b960c49c81418b
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935042"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743426"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -37,7 +37,7 @@ Informations supplémentaires sur ces marquages visuels :
     
     - PowerPoint : les filigranes sont appliqués au masque des diapositives comme image d’arrière-plan. Sur l’onglet **Affichage**, **Masque des diapositives**, vérifiez que la case à cocher **Masquer les graphiques en arrière-plan** n’est pas sélectionnée.
 
-- Il est possible d’ajouter plusieurs lignes dans les filigranes, ainsi que dans les en-têtes et les pieds de page dans Word, Excel et PowerPoint. Si plusieurs lignes sont spécifiées dans l’en-tête ou le pied de page appliqué à Outlook d’une étiquette, les lignes sont concaténées. Dans ce cas de figure, vous pouvez utiliser la configuration permettant de [définir des marquages visuels différents pour Word, Excel, PowerPoint et Outlook](##setting-different-visual-markings-for-word-excel-powerpoint-and-outlook).
+- Il est possible d’ajouter plusieurs lignes dans les filigranes, ainsi que dans les en-têtes et les pieds de page dans Word, Excel et PowerPoint. Si plusieurs lignes sont spécifiées dans l’en-tête ou le pied de page appliqué à Outlook d’une étiquette, les lignes sont concaténées. Dans ce cas de figure, vous pouvez utiliser la configuration permettant de [définir des marquages visuels différents pour Word, Excel, PowerPoint et Outlook](#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook).
 
 - Longueurs de chaînes maximales :
     
@@ -96,7 +96,7 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
 
 - `${User.Name}` pour le propriétaire du document ou de l’e-mail, par le nom d’utilisateur connecté à Windows. Par exemple : rsimone
 
-- `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Par exemple : rsimone@vanarsdelltd.com
+- `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Exemple : rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Par exemple : 16/08/2016 13:30
 
@@ -115,7 +115,7 @@ Utilisez la syntaxe suivante :
 
 La syntaxe de cette instruction respecte la casse.
 
-Exemples :
+Exemples :
 
 - **Définir un texte d’en-tête pour les documents Word uniquement :**
     

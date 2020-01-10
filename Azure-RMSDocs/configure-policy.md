@@ -1,9 +1,9 @@
 ---
 title: Configurer la stratégie Azure Information Protection – AIP
 description: Pour configurer la classification, l’étiquetage et la protection du client Azure Information Protection (Classic), vous devez configurer la stratégie de Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-ms.date: 11/25/2019
+author: mlottner
+ms.author: mlottner
+ms.date: 1/06/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,18 +13,19 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2c34ed49b9a88373de514a44ebadf2800c23c298
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: c665a6e5ba7ebdc6097e20e0de1854065325bc49
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74564514"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743515"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configuration de la stratégie Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
 
 > [!NOTE]
 > La stratégie de Azure Information Protection s’applique au client Azure Information Protection (Classic) et non au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
@@ -82,7 +83,7 @@ Pour vous connecter au portail Azure et configurer et gérer Azure Information P
   - **Administrateur général**
     
     > [!NOTE] 
-    > Si votre locataire se trouve sur la [plateforme d’étiquetage unifiée](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform), le rôle d’administrateur Azure information protection (anciennement « administrateur information protection ») n’est pas pris en charge pour le portail Azure. [Plus d’informations](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > Si votre locataire se trouve sur la [plateforme d’étiquetage unifiée](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform), le rôle d’administrateur Azure information protection (anciennement « administrateur information protection ») n’est pas pris en charge pour le portail Azure. [Informations complémentaires](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
     Les comptes Microsoft ne peuvent pas gérer Azure Information Protection.
 

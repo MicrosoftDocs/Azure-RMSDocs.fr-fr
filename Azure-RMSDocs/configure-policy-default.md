@@ -1,27 +1,28 @@
 ---
 title: Stratégie Azure Information Protection par défaut – AIP
 description: Comprendre le processus de configuration de la stratégie par défaut pour Azure Information Protection. Si vous modifiez la stratégie par défaut, vous pouvez référencer ces valeurs de manière à réinitialiser votre stratégie sur les valeurs par défaut.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 12/05/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: cc690668d602105c9c8c48461e6d4014cd2e59ff
-ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
+ms.openlocfilehash: 31d2a86316d8208f46469220a95658dcc6d34c12
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74882054"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75742932"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>La stratégie Azure Information Protection par défaut
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
 
 > [!NOTE]
 > La stratégie de Azure Information Protection s’applique au client Azure Information Protection (Classic) et non au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
@@ -102,7 +103,7 @@ Les autorisations de protection sont celles définies dans le [modèle par défa
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|Value|
+|Paramètre|valeur|
 |-------------------------------|---------------------------|
 |Title|Sensibilité|
 |Info-bulle|L’étiquette actuelle pour ce contenu. Ce paramètre identifie les risques pour l’entreprise si ce contenu est partagé avec des personnes non autorisées à l’intérieur ou à l’extérieur de l’organisation.|
@@ -112,7 +113,7 @@ Les autorisations de protection sont celles définies dans le [modèle par défa
 
 Certains paramètres ont été ajoutés après le 31 juillet 2017.
 
-|Paramètre|Value|
+|Paramètre|valeur|
 |-------------------------------|---------------------------|
 |Sélectionner l’étiquette par défaut|aucune.|
 |Envoyer des données d’audit à l’analytique Azure Information Protection|Désactivé|
@@ -151,7 +152,7 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|Value|
+|Paramètre|valeur|
 |-------------------------------|---------------------------|
 |Title|Sensibilité|
 |Info-bulle|L’étiquette actuelle pour ce contenu. Ce paramètre identifie les risques pour l’entreprise si ce contenu est partagé avec des personnes non autorisées à l’intérieur ou à l’extérieur de l’organisation.|
@@ -159,7 +160,7 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 ### <a name="settings"></a>Paramètres
 
-|Paramètre|Value|
+|Paramètre|valeur|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Sélectionner l’étiquette par défaut|aucune.|
@@ -189,7 +190,7 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 ### <a name="information-protection-bar"></a>Barre Information Protection
 
-|Paramètre|Value|
+|Paramètre|valeur|
 |-------------------------------|---------------------------|
 |Title|Sensibilité|
 |Info-bulle|La confidentialité des informations est composée de quatre niveaux distincts (public, interne, confidentiel, secret), qui permettent à l’utilisateur d’identifier le risque d’exposition d’informations à des utilisateurs non autorisés à l’intérieur ou à l’extérieur de l’entreprise.|
@@ -197,7 +198,7 @@ Notez que les descriptions de cette stratégie font référence aux données qui
 
 ### <a name="settings"></a>Paramètres
 
-|Paramètre|Value|
+|Paramètre|valeur|
 |-------------------------------|---------------------------|
 |Tous les documents et e-mails doivent avoir une étiquette (appliquée automatiquement ou par les utilisateurs)|Désactivé|
 |Sélectionner l’étiquette par défaut|aucune.|

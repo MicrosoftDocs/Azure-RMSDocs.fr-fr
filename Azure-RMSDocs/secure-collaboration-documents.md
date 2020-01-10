@@ -1,10 +1,10 @@
 ---
 title: Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 description: Flux de travail de bout en bout pour la collaboration autour de documents protégés par Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b3be1b1577277b31dd515f8343870de73e258770
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 57e40899f3c386b076a8642c17f019ea0767ab22
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934464"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743776"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
@@ -42,6 +42,7 @@ En tant qu’administrateur, vous pouvez configurer une étiquette Azure Informa
 
 
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>Exemple de configuration d’une étiquette afin d’appliquer une protection prenant en charge la collaboration interne et externe
+
 
 Cet exemple décrit la procédure de configuration d’une étiquette existante afin d’appliquer une protection permettant aux utilisateurs de votre organisation de collaborer autour de documents avec tous les utilisateurs d’une autre organisation disposant d’Office 365 ou d’Azure AD, avec un groupe d’une autre organisation disposant d’Office 365 ou d’Azure AD et avec un utilisateur qui n’a pas de compte dans Azure AD et utilise à la place une adresse e-mail Gmail.
 
@@ -95,7 +96,7 @@ Partagez le document protégé en le joignant à un e-mail et envoyez-le aux per
 
 ## <a name="opening-and-editing-the-protected-document"></a>Ouverture et modification du document protégé
 
-Lorsque les utilisateurs que vous avez autorisés ouvrent le document en vue de le modifier, le document s’ouvre avec une bannière d’informations qui les avertit que les autorisations sont limitées. Exemple :
+Lorsque les utilisateurs que vous avez autorisés ouvrent le document en vue de le modifier, le document s’ouvre avec une bannière d’informations qui les avertit que les autorisations sont limitées. Exemple :
 
 ![Exemple de bannière d’informations Azure Information Protection pour les autorisations](./media/example-restricted-access-banner.png)
 

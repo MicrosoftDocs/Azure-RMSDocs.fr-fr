@@ -1,10 +1,10 @@
 ---
 title: Configurations personnalisées-client Azure Information Protection
 description: Informations sur la personnalisation du client Azure Information Protection pour Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/27/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 643715037716dcb30356b08c34e48047dd4f7074
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 8f1c4ef83d7e7b34cf0e7c854da203b4e6b1696e
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74479164"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743735"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guide de l’administrateur : Configurations personnalisées pour le client Azure Information Protection
 
@@ -201,7 +201,7 @@ Si votre ordinateur déconnecté exécute la version GA actuelle du scanneur Azu
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Masquer ou afficher le bouton Ne pas transférer dans Outlook
 
-La méthode recommandée pour configurer cette option consiste à utiliser le [paramètre de stratégie](../configure-policy-settings.md) **Ajouter le bouton Ne pas transférer au ruban Outlook**. Cela dit, vous pouvez également configurer cette option en utilisant un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous configurez dans le portail Azure.
+La méthode recommandée pour configurer cette option consiste à utiliser le [paramètre de stratégie](../configure-policy-settings.md) **Ajouter le bouton ne pas transférer au ruban Outlook**. Cela dit, vous pouvez également configurer cette option en utilisant un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous configurez dans le portail Azure.
 
 Lorsque vous configurez ce paramètre, celui-ci masque ou affiche le bouton **Ne pas transférer** dans le ruban Outlook. Ce paramètre n’a aucun effet sur l’option Ne pas transférer à partir des menus Office.
 
@@ -213,7 +213,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 ## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Activer ou désactiver les options d’autorisations personnalisées pour les utilisateurs
 
-La méthode recommandée pour configurer cette option consiste à utiliser le [paramètre de stratégie](../configure-policy-settings.md) **Activer l’option des autorisations personnalisées pour les utilisateurs**. Cela dit, vous pouvez également configurer cette option en utilisant un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous configurez dans le portail Azure. 
+La méthode recommandée pour configurer cette option consiste à utiliser le [paramètre de stratégie](../configure-policy-settings.md) **rendre l’option des autorisations personnalisées disponible pour les utilisateurs**. Cela dit, vous pouvez également configurer cette option en utilisant un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous configurez dans le portail Azure. 
 
 Lorsque vous configurez ce paramètre et que vous publiez la stratégie pour les utilisateurs, les options des autorisations personnalisées deviennent visibles pour les utilisateurs qui peuvent ainsi sélectionner leurs propres paramètres de protection, ou sont masquées pour ne pas que les utilisateurs puissent sélectionner leurs propres paramètres de protection à moins d’y être invités.
 
@@ -227,7 +227,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Ce paramètre est en préversion et est susceptible de changer.
 
-Quand vous configurez le [paramètre de stratégie](../configure-policy-settings.md) **Rendre l’option des autorisations personnalisées disponible pour les utilisateurs** ou le paramètre client avancé équivalent dans la section précédente, les utilisateurs ne sont pas en mesure de voir ou de changer les autorisations personnalisées qui sont déjà définies dans un document protégé. 
+Quand vous configurez le [paramètre de stratégie](../configure-policy-settings.md) **rendre l’option des autorisations personnalisées disponible pour les utilisateurs** ou le paramètre client avancé équivalent dans la section précédente, les utilisateurs ne peuvent pas afficher ou modifier les autorisations personnalisées qui sont déjà définies dans un document protégé. 
 
 Quand vous créez et que vous configurez ce paramètre client avancé, les utilisateurs peuvent voir et changer les autorisations personnalisées pour un document protégé quand ils utilisent l’Explorateur de fichiers, en cliquant avec le bouton droit sur le fichier. L’option **Autorisations personnalisées** du bouton **Protéger** sur le ruban Office reste masquée.
 
@@ -239,7 +239,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Masquer définitivement la barre Azure Information Protection
 
-Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Utilisez-le uniquement lorsque le [paramètre de stratégie](../configure-policy-settings.md) **Afficher la barre Information Protection dans les applications Office** est défini sur **Activé**.
+Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. Utilisez-le uniquement lorsque le [paramètre de stratégie](../configure-policy-settings.md) **afficher la barre d’information protection dans applications Office** est défini **sur activé**.
 
 Par défaut, si un utilisateur efface l’option **Afficher la barre** de l’onglet **Accueil**, le groupe **Protection** et le bouton **Protéger**, la barre Information Protection ne s’affiche plus dans cette application Office. Toutefois, la barre réapparaît automatiquement la prochaine fois qu’une application Office s’ouvre.
 
@@ -486,7 +486,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Clé : **OutlookDefaultLabel**
 
-- Valeur : \< **ID d’étiquette**> ou **None**
+- Valeur : \<**ID d’étiquette**> ou **None**
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>Configurer une étiquette pour appliquer la protection S/MIME dans Outlook
 
@@ -532,7 +532,7 @@ Si vous souhaitez que l’étiquette ne soit visible que dans Outlook, configure
 
 Cette configuration utilise un [paramètre client avancé](#how-to-configure-advanced-client-configuration-settings-in-the-portal) que vous devez configurer dans le portail Azure. 
 
-Quand vous utilisez le [paramètre de stratégie](../configure-policy-settings.md) **All documents and emails must have a label** (Tous les documents et e-mails doivent avoir une étiquette), les utilisateurs sont invités à sélectionner une étiquette au moment du premier enregistrement d’un document Office et de l’envoi d’un e-mail. Pour les documents, les utilisateurs peuvent sélectionner **Pas maintenant** pour ignorer temporairement l’invite à sélectionner une étiquette et revenir au document. En revanche, ils ne peuvent pas fermer le document enregistré sans l’étiqueter. 
+Quand vous utilisez le [paramètre de stratégie](../configure-policy-settings.md)**All documents and emails must have a label** (Tous les documents et e-mails doivent avoir une étiquette), les utilisateurs sont invités à sélectionner une étiquette au moment du premier enregistrement d’un document Office et de l’envoi d’un e-mail. Pour les documents, les utilisateurs peuvent sélectionner **Pas maintenant** pour ignorer temporairement l’invite à sélectionner une étiquette et revenir au document. En revanche, ils ne peuvent pas fermer le document enregistré sans l’étiqueter. 
 
 Quand vous configurez ce paramètre, l’option **Pas maintenant** n’est pas proposée, et les utilisateurs sont obligés de sélectionner une étiquette au premier enregistrement du document.
 
@@ -592,7 +592,7 @@ De plus, quand vous utilisez ces instructions pour des fichiers que vous n’ave
 
 Pour utiliser des commandes PowerShell pour convertir des fichiers .ppdf existants en fichiers .pdf protégés qui utilisent la norme ISO pour le chiffrement PDF :
 
-1. Utilisez [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) avec le fichier .ppdf. Exemple :
+1. Utilisez [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) avec le fichier .ppdf. Exemple :
     
         Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
 
@@ -604,11 +604,11 @@ Pour utiliser des commandes PowerShell pour convertir des fichiers .ppdf exista
     
    - La valeur pour **RMSTemplateId**. Si cette valeur est **Accès restreint**, un utilisateur a protégé le fichier à l’aide d’autorisations personnalisées au lieu d’utiliser des paramètres de protection configurés pour l’étiquette. Si vous continuez, ces autorisations personnalisées sont remplacées par les paramètres de protection de l’étiquette. Décidez s’il faut continuer ou demander à l’utilisateur (valeur affichée pour **RMSIssuer**) de supprimer l’étiquette et de la réappliquer, avec leurs autorisations personnalisées d’origine.
 
-3. Supprimez l’étiquette à l’aide de [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) avec le paramètre *RemoveLabel*. Si vous utilisez le [paramètre de stratégie](../configure-policy-settings.md) **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection**, vous devez également spécifier le paramètre  *Justification* avec la raison. Exemple : 
+3. Supprimez l’étiquette à l’aide de [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) avec le paramètre *RemoveLabel*. Si vous utilisez le [paramètre de stratégie](../configure-policy-settings.md)**Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection**, vous devez également spécifier le paramètre  *Justification* avec la raison. Exemple : 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
-4. Réappliquez l’étiquette d’origine, en spécifiant la valeur de l’étiquette que vous avez identifiée à l’étape 1. Exemple :
+4. Réappliquez l’étiquette d’origine, en spécifiant la valeur de l’étiquette que vous avez identifiée à l’étape 1. Exemple :
     
         Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 
@@ -679,7 +679,7 @@ Exemple :
 Le paramètre client avancé :
 
     
-|Nom|Value|
+|Nom|valeur|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, « L’étiquette Secure Islands est confidentiel », Classification, Confidentiel|
 
@@ -696,7 +696,7 @@ Exemple :
 Le paramètre client avancé :
 
     
-|Nom|Value|
+|Nom|valeur|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, «L’étiquette Secure Islands est sensible », Classification, Sensible|
 
@@ -714,7 +714,7 @@ Exemple :
 Le paramètre client avancé :
 
     
-|Nom|Value|
+|Nom|valeur|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d, «L’étiquette Secure Islands contient Interne », Classification,. \*Interne.\*|
 
@@ -733,9 +733,9 @@ Cette configuration n’est pas prise en charge pour Outlook. Sachez également 
 
 - Clé : **RemoveExternalContentMarkingInApp**
 
-- Valeur : \< **Types d’application Office WXP**> 
+- Valeur : \<**Types d’application Office WXP**> 
 
-Exemples :
+Exemples :
 
 - Pour rechercher dans des documents Word uniquement, spécifiez **W**.
 
@@ -766,7 +766,7 @@ Les caractères génériques de la chaîne que vous spécifiez sont sensibles à
 
 - Clé : **ExternalContentMarkingToRemove**
 
-- Valeur : \< **chaîne à trouver, définie comme expression régulière**> 
+- Valeur : \<**chaîne à trouver, définie comme expression régulière**> 
 
 #### <a name="multiline-headers-or-footers"></a>En-têtes ou pieds de page multilignes
 
@@ -780,11 +780,11 @@ Pour supprimer ce pied de page multiligne, créez les deux entrées suivantes :
 
 - Clé 1 : **ExternalContentMarkingToRemove**
 
-- Valeur de la clé 1 :  **\*Confidentiel***
+- Valeur de la clé 1 : **\*Confidentiel***
 
 - Clé 2 : **ExternalContentMarkingToRemove**
 
-- Valeur de la clé 2 :  **\*Étiquette appliquée*** 
+- Valeur de la clé 2 : **\*Étiquette appliquée*** 
 
 #### <a name="optimization-for-powerpoint"></a>Optimisation pour PowerPoint
 
@@ -804,7 +804,7 @@ Exemple : Le nom de la forme est **fc**. Pour supprimer la forme portant ce nom
 
 - Clé : **PowerPointShapeNameToRemove**
 
-- Valeur : \< **Nom de la forme PowerPoint**> 
+- Valeur : \<**Nom de la forme PowerPoint**> 
 
 Lorsque vous avez plusieurs formes PowerPoint à supprimer, créez autant de clés **PowerPointShapeNameToRemove** que vous avez de formes à supprimer. Pour chaque entrée, spécifiez le nom de la forme à supprimer.
 
@@ -831,7 +831,7 @@ Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
 
 - Clé 1 : **SyncPropertyName**
 
-- Valeur de la clé 1 : \< **nom de la propriété**> 
+- Valeur de la clé 1 : \<**nom de la propriété**> 
 
 - Clé 2 : **SyncPropertyState**
 
@@ -859,7 +859,7 @@ La configuration qui contrôle si le client envoie des informations d’audit es
 
 Si vous définissez ce paramètre de client avancé, les informations d’audit peuvent toujours être envoyées à partir du client, mais les informations sont limitées à l’étiquetage de l’activité.
 
-Exemple :
+Exemple :
 
 - Avec ce paramètre, vous pouvez voir qu’un utilisateur a accédé à Financial. docx qui est étiqueté **confidentiel \ Sales**.
 
@@ -982,11 +982,11 @@ Pour obtenir cette solution :
 
 2. Créez une règle de flux de messagerie Exchange pour chaque étiquette : appliquez la règle quand les propriétés de message incluent la classification que vous avez configurée, puis modifiez les propriétés de message pour définir un en-tête de message. 
 
-     Pour l’en-tête de message, vous trouvez les informations à spécifier en examinant les en-têtes Internet d’un e-mail que vous avez envoyé et classifié à l’aide de votre étiquette Azure Information Protection. Recherchez l’en-tête **msip_labels** et la chaîne qui suit immédiatement, jusqu’au point-virgule et sans le point-virgule. Exemple :
+     Pour l’en-tête de message, vous trouvez les informations à spécifier en examinant les en-têtes Internet d’un e-mail que vous avez envoyé et classifié à l’aide de votre étiquette Azure Information Protection. Recherchez l’en-tête **msip_labels** et la chaîne qui suit immédiatement, jusqu’au point-virgule et sans le point-virgule. Exemple :
     
     **msip_labels : MSIP_Label_0e421e6d-EA17-4FDB-8F01-93a3e71333b8_Enabled = true**
     
-    Ensuite, pour l’en-tête du message dans la règle, spécifiez **msip_labels** pour l’en-tête, et le reste de cette chaîne pour la valeur de l’en-tête. Exemple :
+    Ensuite, pour l’en-tête du message dans la règle, spécifiez **msip_labels** pour l’en-tête, et le reste de cette chaîne pour la valeur de l’en-tête. Exemple :
     
     ![Exemple de règles de flux de messagerie Exchange Online qui définit l’en-tête de message pour une étiquette Azure Information Protection spécifique](../media/exchange-rule-for-message-header.png)
     

@@ -1,10 +1,10 @@
 ---
 title: Informations & la prise en charge de Azure Information Protection-AIP
 description: Ressources pour les administrateurs, qui incluent des informations sur les nouvelles versions, les options de support technique et comment contacter Microsoft pour signaler un problème.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,16 +15,17 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fac66b2b8719965286bdce6cb10b15a4b8b4f710
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 0eda64683a498c69ff710319547b1349e1c1cfc5
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934736"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743596"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
 
 Utilisez les ressources suivantes pour en savoir plus sur le service Azure Information Protection, le déployer et le prendre en charge pour votre organisation.
 
@@ -52,14 +53,14 @@ Le blog technique de Azure Information Protection présente également un résum
 
 Ces billets sur les mises à jour de la documentation sont intitulés : « **Azure Information Protection Documentation Update for – \<mois année>**  ».
 
-## <a name="support-options-and-community-resources"></a>Options de support technique et ressources de la communauté
+## <a name="support-options-and-community-resources"></a>Options de support et ressources de la communauté
 Les sections suivantes fournissent des informations sur les options de support et de résolution de problème ainsi que des ressources de la communauté.
 
 ### <a name="to-contact-microsoft-support"></a>Pour contacter le support Microsoft
 
 Si vous avez Support Premier, visitez le [Hub de services Microsoft](https://serviceshub.microsoft.com/support/contactsupport) pour soumettre des incidents, parcourir les solutions et obtenir de l’aide.
 
-Vous êtes peut-être éligible à **FastTrack** : vous pouvez utiliser l’offre du centre FastTrack quand vous achetez au moins 150 licences dans un plan éligible pour Azure Information Protection. L’offre du Centre FastTrack vous permet de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Offre Enterprise Mobility + Security (EMS) du Centre FastTrack](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
+Vous êtes peut-être éligible à **FastTrack** : vous pouvez utiliser l’offre du centre FastTrack quand vous achetez au moins 150 licences dans un plan éligible pour Azure Information Protection. L’offre du centre FastTrack vous permet de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Offre Enterprise Mobility + Security (EMS) du Centre FastTrack](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 
 Pour les autres clients, utilisez les canaux de support dans le tableau suivant, en fonction de votre abonnement à Azure Information Protection.
 

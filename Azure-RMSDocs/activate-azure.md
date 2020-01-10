@@ -1,10 +1,10 @@
 ---
 title: Activer Azure RMS avec le portail Azure - Azure Information Protection
 description: Instructions relatives à l’activation de la protection dans le portail Azure afin que votre organisation puissent commencer à protéger les documents et les e-mails.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,17 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 256cb5dd2251c650a621412b6a13768479597f4e
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 6e34c0127645db9d4dee9dc61c5b2a331a27c9f6
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934787"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75742790"
 ---
 # <a name="how-to-activate-the-rights-management-protection-service-from-the-azure-portal"></a>Comment activer le service de protection Rights Management à partir du Portail Azure
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
 
 Utilisez ces instructions si vous souhaitez activer le service de protection de Rights Management (Azure RMS) à partir de Azure Information Protection, à l’aide de la Portail Azure.
 

@@ -1,10 +1,10 @@
 ---
 title: Actualiser la liste de modèles Azure RMS - AIP
 description: Quand vous utilisez le service Azure Rights Management, les modèles sont automatiquement téléchargés vers les ordinateurs clients pour que les utilisateurs puissent les sélectionner à partir de leurs applications. En revanche, vous devrez peut-être effectuer d’autres étapes si vous apportez des modifications aux modèles.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/09/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,17 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bcd6a8cf37abc6e66fe272c7de794379efc9b49e
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: c260767d29ecf6b56b101f57f40192177cf7242c
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561360"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743857"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
 
 Lorsque vous utilisez le service Azure Rights Management à partir de Azure Information Protection, les modèles de protection sont automatiquement téléchargés vers les ordinateurs clients afin que les utilisateurs puissent les sélectionner à partir de leurs applications. En revanche, vous devrez peut-être effectuer d’autres étapes si vous apportez des modifications aux modèles :
 
@@ -44,7 +45,7 @@ Lorsque les applications clientes doivent télécharger des modèles (initialeme
 En modifiant le Registre sur les ordinateurs exécutant les applications Office 365, Office 2019, Office 2016 ou Office 2013, vous pouvez changer la planification automatique afin que les modèles modifiés soient actualisés sur les ordinateurs à une fréquence supérieure à la fréquence par défaut. Vous pouvez également forcer une actualisation immédiate en supprimant les données existantes dans une valeur de Registre.
 
 > [!WARNING]
-> Si vous n'utilisez pas l'Éditeur du Registre correctement, vous risquez de provoquer de sérieux problèmes pouvant vous amener à devoir réinstaller le système d'exploitation. Microsoft ne peut pas garantir la résolution des problèmes engendrés par une utilisation incorrecte de l’Éditeur du Registre. Utilisez l’Éditeur du Registre à vos propres risques.
+> Si vous n'utilisez pas l'Éditeur du Registre correctement, vous risquez de provoquer de sérieux problèmes pouvant vous amener à devoir réinstaller le système d'exploitation. Microsoft ne peut pas garantir la résolution des problèmes engendrés par une utilisation incorrecte de l'Éditeur du Registre. Utilisez l’Éditeur du Registre à vos propres risques.
 
 ### <a name="to-change-the-automatic-schedule"></a>Pour modifier la planification automatique
 
@@ -93,9 +94,9 @@ En modifiant le Registre sur les ordinateurs exécutant les applications Office�
    > 
    > **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
-2. Supprimer le dossier suivant et tous les fichiers qu’il contient : **%localappdata%\Microsoft\MSIPC\Templates**
+2. Supprimez le dossier suivant et tous les fichiers qu’il contient : **%localappdata%\Microsoft\MSIPC\Templates**
 
-3. Redémarrez vos applications Office et les instances de l’Explorateur de fichiers.
+3. Redémarrez vos applications Office et les instances de l'Explorateur de fichiers.
 
 ## <a name="office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates"></a>Office 2019 pour Mac et Office 2016 pour Mac : comment forcer une actualisation des modèles
 

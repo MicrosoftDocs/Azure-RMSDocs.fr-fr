@@ -1,8 +1,8 @@
 ---
 title: Client Azure Information Protection pour Windows
 description: Ressources d’informations pour le client Azure Information Protection (Classic) pour Windows.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
 ms.date: 10/23/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd143b60039053d1a7b7206ab42896a702e01328
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: ec40deb985ebc26304dc8d53c8f2685b7a235272
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72805714"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743739"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Client Azure Information Protection pour Windows
 

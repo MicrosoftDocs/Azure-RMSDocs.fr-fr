@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection l’historique des versions du client & la stratégie de support
-description: Découvrez les nouveautés et les changements d’une version du client Azure Information Protection pour Windows, ainsi que la politique du cycle de vie du support.
-author: cabailey
-ms.author: cabailey
+description: Découvrez les nouveautés et les modifications d’une version du client Azure Information Protection pour Windows, ainsi que la politique du cycle de vie du support.
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 10/23/2019
+ms.date: 1/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,20 +12,21 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a31e28e560325d3165f5b5e53906fa879664c7b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: e9fc95f47273b6d604ba6a1151106ae64298fce0
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73446019"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743647"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
+
 
 >*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
 > *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-L’équipe Azure Information Protection met régulièrement à jour le client Azure Information Protection avec des correctifs et des nouvelles fonctionnalités. 
+
 
 Vous pouvez télécharger la dernière version en disponibilité générale (GA) et la préversion actuelle (si elle est disponible) à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
@@ -34,13 +35,13 @@ Après un bref délai de quelques semaines, la dernière version de la disponibi
 Pour plus d’informations, consultez [Mise à niveau et maintenance du client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
 > [!TIP]
-> Vous souhaitez utiliser le client d’étiquetage unifié Azure Information Protection, car vos étiquettes sont publiées à partir d’Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center ou Microsoft 365 Compliance Center ? Lorsque vous téléchargez, puis installez le client d’étiquetage unifié à partir du centre de téléchargement Microsoft, vous pouvez mettre à niveau votre client Azure Information Protection vers ce [client d’étiquetage unifié](unifiedlabelingclient-version-release-history.md).
+> Vous souhaitez utiliser le client d’étiquetage unifié Azure Information Protection, car vos étiquettes sont publiées à partir d’Office 365 Centre de sécurité et de conformité, Microsoft 365 Security Center ou Microsoft 365 Compliance Center ? Lorsque vous téléchargez, puis installez le client d’étiquetage unifié à partir du centre de téléchargement Microsoft, vous pouvez mettre à niveau votre client Azure Information Protection vers le [client d’étiquetage unifié](unifiedlabelingclient-version-release-history.md).
 
 ### <a name="servicing-information-and-timelines"></a>Informations de maintenance et chronologies
 
 Chaque version en disponibilité générale (GA) du client Azure Information Protection est prise en charge jusqu'à six mois après la publication de la version GA suivante. À l’exception de cette section, la documentation n’inclut pas d’informations sur les versions du client non prises en charge. Les correctifs et les nouvelles fonctionnalités sont toujours appliqués à la dernière version GA, pas aux anciennes versions GA.
 
-Les préversions ne doivent pas être déployées pour des utilisateurs finaux sur les réseaux de production. Utilisez plutôt la dernière préversion pour tester les nouvelles fonctionnalités ou les correctifs à paraître dans la prochaine version GA. Les préversions qui ne sont pas actuelles ne sont pas prises en charge.
+Les versions préliminaires ne doivent pas être déployées auprès des utilisateurs finaux sur les réseaux de production. Utilisez plutôt la dernière préversion pour tester les nouvelles fonctionnalités ou les correctifs à paraître dans la prochaine version GA. Les préversions qui ne sont pas actuelles ne sont pas prises en charge.
 
 ##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versions de la disponibilité générale qui ne sont plus prises en charge :
 
@@ -66,12 +67,13 @@ Toutes les versions du client de 1.4.21.0 publiées 03/15/2017 prennent en charg
 
 ### <a name="release-history"></a>Historique des versions
 
-Utilisez les informations suivantes pour découvrir les nouveautés et les changements d’une version prise en charge du client Azure Information Protection pour Windows. La dernière version est la première sur la liste.
+Utilisez les informations suivantes pour découvrir les nouveautés et les modifications d’une version prise en charge du client Azure Information Protection pour Windows. La dernière version est répertoriée en première position.
 
 > [!NOTE]
 > Les correctifs mineurs ne sont pas listés. Par conséquent, si vous rencontrez un problème avec le client Azure Information Protection, nous vous recommandons de vérifier s’il n’est pas résolu dans la toute dernière version GA. Si le problème persiste, vérifiez la version préliminaire actuelle (si disponible).
 >  
 > Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
+
 
 ## <a name="version-154330"></a>Version 1.54.33.0
 
@@ -91,9 +93,9 @@ Cette version comprend la version MSIPC 1.0.3889.0419 du client RMS.
 
 **Nouvelles fonctionnalités :**
 
-- Nouveau paramètre de client avancé pour exempter les messages Outlook du paramètre de stratégie **tous les documents et e-mails doivent avoir une étiquette**. [Plus d’informations](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
+- Nouveau paramètre de client avancé pour exempter les messages Outlook du paramètre de stratégie **tous les documents et e-mails doivent avoir une étiquette**. [Informations complémentaires](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
 
-- Nouveau paramètre de client avancé pour personnaliser davantage les paramètres qui implémentent des messages contextuels dans Outlook qui avertissent, justifient ou bloquent les courriers électroniques envoyés. Avec ce nouveau paramètre avancé, vous pouvez définir une action différente pour les messages électroniques sans pièce jointe. [Plus d’informations](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
+- Nouveau paramètre de client avancé pour personnaliser davantage les paramètres qui implémentent des messages contextuels dans Outlook qui avertissent, justifient ou bloquent les courriers électroniques envoyés. Avec ce nouveau paramètre avancé, vous pouvez définir une action différente pour les messages électroniques sans pièce jointe. [Informations complémentaires](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
 
 **Correctifs** :
 
@@ -138,15 +140,15 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
     - Les informations sensibles sont identifiées par des types d’informations prédéfinis et personnalisés.
     - Si vous ne souhaitez pas que les types d’informations sensibles soient envoyés à Azure Information Protection Analytics, vous pouvez désactiver la découverte de point de terminaison avec un [paramètre client avancé](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics).
 
-- Nouveaux paramètres client avancés implémentant des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails. [Plus d’informations](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+- Nouveaux paramètres client avancés implémentant des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails. [Informations complémentaires](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     
     Notez que si vous avez configuré la propriété de client avancé de OutlookCollaborationTrustedDomains pour la version préliminaire, ce paramètre est désormais remplacé par trois nouveaux paramètres, afin que les domaines puissent être exemptés par action : OutlookWarnTrustedDomains, OutlookJustifyTrustedDomains et OutlookBlockTrustedDomains.
 
-- Si vous étiquetez et protégez des fichiers à l’aide de la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), vous pouvez utiliser le paramètre *EnableTracking* pour enregistrer le fichier sur le site de suivi des documents. [Plus d’informations](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
+- Si vous étiquetez et protégez des fichiers à l’aide de la cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), vous pouvez utiliser le paramètre *EnableTracking* pour enregistrer le fichier sur le site de suivi des documents. [Informations complémentaires](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
-- Nouveau paramètre client avancé pour [Azure information protection Analytics](../reports-aip.md), afin d’éviter d’envoyer des correspondances de types d’informations pour un sous-ensemble d’utilisateurs lorsque vous avez activé la case à cocher dans la portail Azure qui permet une analyse plus approfondie de vos données sensibles. Ce paramètre s’applique au client et au scanneur. [Plus d’informations](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+- Nouveau paramètre client avancé pour [Azure information protection Analytics](../reports-aip.md), afin d’éviter d’envoyer des correspondances de types d’informations pour un sous-ensemble d’utilisateurs lorsque vous avez activé la case à cocher dans la portail Azure qui permet une analyse plus approfondie de vos données sensibles. Ce paramètre s’applique au client et au scanneur. [Informations complémentaires](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
 
-- Nouveau paramètre client avancé applicable uniquement lorsque vous configurez le paramètre de stratégie de manière à ne pas afficher les autorisations personnalisées : quand un fichier est protégé par des autorisations personnalisées, affichez l’option autorisations personnalisées dans l’Explorateur de fichiers pour que les utilisateurs puissent voir et les modifier (s’ils disposent des autorisations nécessaires pour modifier les paramètres de protection). [Plus d’informations](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+- Nouveau paramètre client avancé applicable uniquement lorsque vous configurez le paramètre de stratégie de manière à ne pas afficher les autorisations personnalisées : quand un fichier est protégé par des autorisations personnalisées, affichez l’option autorisations personnalisées dans l’Explorateur de fichiers pour que les utilisateurs puissent voir et les modifier (s’ils disposent des autorisations nécessaires pour modifier les paramètres de protection). [Informations complémentaires](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
 
 **Correctifs** :
@@ -165,7 +167,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Quand vous utilisez le paramètre client avancé pour définir une [étiquette par défaut pour Outlook](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook), vous pouvez appliquer une étiquette parent qui a des sous-étiquettes quand toutes ces sous-étiquettes sont désactivées pour l’utilisateur.
 
-- Quand vous utilisez le [paramètre de stratégie](../configure-policy-settings.md) **Pour les e-mails avec des pièces jointes, appliquez une étiquette qui correspond à la classification la plus élevée de ces pièces jointes**, et l’étiquette avec la classification la plus élevée est configurée pour les autorisations définies par l’utilisateur. Avant, le résultat était que l’étiquette était appliquée à l’e-mail, mais la protection ne l’était pas. Maintenant :
+- Quand vous utilisez le [paramètre de stratégie](../configure-policy-settings.md) **pour les messages électroniques avec pièces jointes, appliquez une étiquette qui correspond à la classification la plus élevée de ces pièces jointes** et l’étiquette avec la classification la plus élevée est configurée pour les autorisations définies par l’utilisateur, le résultat était auparavant que l’étiquette était appliquée à l’e-mail, mais la protection ne l’était pas. Maintenant :
     - Lorsque les autorisations définies par l’utilisateur de l’étiquette sont Outlook (ne pas transférer) : appliquez cette étiquette et sa protection ne pas transférer à l’e-mail.
     - Lorsque les autorisations définies par l’utilisateur de l’étiquette sont uniquement pour Word, Excel, PowerPoint et l’Explorateur de fichiers : n’appliquez pas l’étiquette et n’appliquez pas de protection à l’e-mail.
 
@@ -188,7 +190,7 @@ Cette version inclut la version 1.0.3592.627 de MSIPC du client RMS.
 
 - Le scanneur Azure Information Protection n’exclut plus les fichiers .zip par défaut. Pour inspecter et étiqueter les fichiers .zip, consultez la section [Pour inspecter les fichiers .zip](client-admin-guide-file-types.md#to-inspect-zip-files) du guide d’administration.
 
-- Le [paramètre de stratégie](../configure-policy-settings.md) **Les utilisateurs doivent fournir une justification pour définir une étiquette de classification moins élevée, supprimer une étiquette ou supprimer la protection** ne s’applique plus au scanneur. Le scanneur effectue ces actions lorsque vous configurez le paramètre **Renommer les fichiers** sur **activé** dans le profil du scanneur, puis activez la case à cocher autoriser l’étiquette à passer à une **version antérieure** .
+- Le [paramètre de stratégie](../configure-policy-settings.md) **les utilisateurs doivent fournir une justification pour définir une étiquette de classification inférieure, supprimer une étiquette ou supprimer la protection** ne s’applique plus au scanneur. Le scanneur effectue ces actions lorsque vous configurez le paramètre **Renommer les fichiers** sur **activé** dans le profil du scanneur, puis activez la case à cocher autoriser l’étiquette à passer à une **version antérieure** .
 
 ## <a name="next-steps"></a>Étapes suivantes
 

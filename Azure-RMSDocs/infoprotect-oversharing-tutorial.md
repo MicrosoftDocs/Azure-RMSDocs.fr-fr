@@ -1,33 +1,36 @@
 ---
 title: 'Tutoriel : utiliser Azure Information Protection pour contrôler le surpartage - AIP'
 description: Tutoriel d’introduction montrant comment configurer et voir en action les paramètres clients avancés du client Azure Information Protection pour avertir, demander une justification ou bloquer l’envoi de messages depuis Outlook.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ef93a0ee7bdcfd2caf2216bed15bd2d1d9e5436e
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 52d47fb119a94054022cc14edc4e2bd07ddef33a
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559369"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675361"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutoriel : configurer Azure Information Protection pour contrôler le surpartage d’informations à l’aide d’Outlook
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Dans ce tutoriel, vous allez apprendre à :
+Dans ce tutoriel, vous apprenez à effectuer les opérations suivantes :
 > [!div class="checklist"]
 > * Configurer des paramètres qui implémentent des messages contextuels d’avertissement, de justification ou de prévention dans Outlook
 > * voir vos paramètres en pratique.
 > * Passer en revue les actions et messages utilisateur journalisés dans le journal des événements 
+
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 L’e-mail est une des méthodes les plus courantes à l’aide desquelles les utilisateurs partagent des informations de façon inappropriée, qu’elles se trouvent dans l’e-mail proprement dit ou dans des pièces jointes. Vous pouvez utiliser des solutions de protection contre la perte de données qui peuvent identifier les informations sensibles connues et empêcher qu’elles franchissent les limites de votre organisation. Toutefois, vous pouvez également utiliser le client Azure Information Protection avec certains paramètres clients avancés pour empêcher le surpartage et également former vos utilisateurs avec des messages interactifs qui fournissent des commentaires en temps réel.
 

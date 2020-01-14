@@ -1,10 +1,10 @@
 ---
 title: Configuration requise pour Azure Information Protection - AIP
 description: Identifiez les critères de déploiement d’Azure Information Protection pour votre organisation.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 12/04/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6caa524dd993dcdfd8a3e19ebccaea313006657b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: ecde2ec34dd27cb3bd2a176e8d205de6ee865421
+ms.sourcegitcommit: 2d75192e7cd2e322ab422fc2115aa063e8dda18b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74831700"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75913280"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -49,7 +49,7 @@ Si vous avez des questions sur les abonnements ou les licences, ne les postez pa
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
-Votre organisation doit disposer d’un annuaire Azure AD (Azure Active Directory) afin de prendre en charge l’authentification utilisateur et l’autorisation pour Azure Information Protection. De plus, si vous souhaitez utiliser vos comptes d’utilisateur à partir de votre annuaire local (AD DS), vous devez également configurer une intégration d’annuaire.
+Votre organisation doit disposer d’un annuaire Azure AD (Azure Active Directory) afin de prendre en charge l’authentification utilisateur et l’autorisation pour Azure Information Protection. De plus, si vous souhaitez utiliser vos comptes d'utilisateur à partir de votre annuaire local (AD DS), vous devez également configurer une intégration d'annuaire.
 
 L’authentification unique (SSO) étant prise en charge pour Azure Information Protection, les utilisateurs ne sont pas invités de manière répétée à fournir leurs informations d’identification. Si vous utilisez une autre solution de fournisseur pour la fédération, vérifiez auprès de ce dernier comment la configurer pour Azure AD. WS-Trust est une exigence courante pour ces solutions afin de prendre en charge l’authentification unique. 
 
@@ -75,8 +75,6 @@ Les appareils suivants prennent en charge le client d’étiquetage Azure Inform
 
 - Windows 8 (x86, x64)
 
-- Windows 7 Service Pack 1 (x86, x64)
-
 - Windows Server 2019
 
 - Windows Server 2016
@@ -85,6 +83,7 @@ Les appareils suivants prennent en charge le client d’étiquetage Azure Inform
 
 - Windows Server 2008 R2 
 
+Pour plus d’informations sur les options de prise en charge des versions antérieures de Windows, contactez votre compte Microsoft ou un représentant du support technique.   
 Outre l’installation du client sur des ordinateurs physiques, vous pouvez également l’installer sur des machines virtuelles. Vérifiez si le fournisseur de logiciels de la solution de bureau virtuel dispose d’une configuration supplémentaire qui peut être nécessaire pour exécuter le client d’étiquetage Azure Information Protection unifié ou le client Azure Information Protection. Par exemple, pour les solutions Citrix, vous devrez peut-être désactiver les hooks de l' [interface de programmation d’applications (API) Citrix](https://support.citrix.com/article/CTX107825) pour Office (Winword. exe, Excel. exe, Outlook. exe, Powerpnt. exe) et l’exécutable pour le client d’étiquetage Azure information protection unifié ou le client Azure information protection (MSIP. app. exe, MSIP. Viewer. exe).
 
 Pour les versions de serveur listées :
@@ -166,4 +165,18 @@ Le scénario de déploiement suivant n’est pas pris en charge, sauf si vous ut
 - En cas d’exécution d’AD RMS et d’Azure RMS côte à côte dans la même organisation, sauf pendant la migration, comme le décrit la rubrique [Migrer d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 Il existe un chemin de migration pris en charge [d’AD RMS vers Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) et [d’Azure Information Protection vers AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). Si vous déployez Azure Information Protection et que vous décidez ensuite que vous ne voulez plus utiliser ce service cloud, consultez [Désaffectation et désactivation d’Azure Information Protection](decommission-deactivate.md).
+
+### <a name="service-tags"></a>Étiquettes de service
+
+Veillez à autoriser l’accès à tous les ports pour les balises de service suivantes :
+
+- **AzureInformationProtection**
+- **AzureActiveDirectory**
+- **AzureFrontDoor. FrontEnd**
+
+Le service Azure Information Protection dépend également de deux adresses IP spécifiques :
+ - **13.107.6.181** 
+ - **13.107.9.181**
+
+Veillez à créer des règles pour autoriser l’accès sortant à ces adresses IP spécifiques. 
 

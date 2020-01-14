@@ -4,15 +4,14 @@ description: Fournit les conditions préalables d’installation et de configura
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 06/13/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 906d8cb104c5c8639c4ffe52ecd1f4ff1ff0a8d0
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: a7159374ab736bc2f5df151ade82874b33875e56
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69882994"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555957"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installation et configuration du kit SDK Microsoft Information Protection (MIP) 
 
@@ -145,7 +144,7 @@ Ensuite, exécutez la procédure suivante pour vous assurer que votre ordinateur
 
 Dans le cadre du processus de provisionnement de l’abonnement Office 365, un locataire Azure Active Directory (Azure AD) associé est créé. Le locataire Azure AD assure la gestion des identités et des accès pour les *comptes d’utilisateur* et les *comptes d’application* Office 365. Les applications qui requièrent un accès à des API sécurisées (telles que les API MIP) nécessitent un compte d’application.
 
-Pour l’authentification et l’autorisation au moment de l’exécution, les comptes sont représentés par un *principal de sécurité*, qui est dérivé des informations d’identité du compte. Un principal de sécurité qui représente un compte d’application est appelé [ *principal de service*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
+Pour l’authentification et l’autorisation au moment de l’exécution, les comptes sont représentés par un *principal de sécurité*, qui est dérivé des informations d’identité du compte. Un principal de sécurité qui représente un compte d’application est appelé [*principal de service*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
 
 Pour enregistrer un compte d’application dans Azure AD en vue de l’utiliser avec les exemples du kit SDK MIP et des guides de démarrage rapide :
 

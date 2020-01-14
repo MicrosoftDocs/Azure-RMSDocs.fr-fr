@@ -4,15 +4,14 @@ description: Guide de démarrage rapide illustrant comment utiliser le wrapper 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 3a26352f7b8e23e2de55eb21846e20feca7096ff
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: 9f12ff856e7d70c76e3c89700d05aeb653d030cd
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885985"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555277"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C#)
 
@@ -23,7 +22,7 @@ Ce guide de démarrage rapide vous montre comment utiliser l’API de fichier du
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
 - Effectuez d’abord les étapes du [Démarrage rapide : Initialisation d’une application cliente (C#)](quick-app-initialization-csharp.md) pour créer une solution Visual Studio de démarrage. Ce guide de démarrage rapide « Répertorier les étiquettes de sensibilité » s’appuie sur le précédent, qui permet de créer correctement la solution de démarrage.
-- Si vous le souhaitez : passez en revue les concepts liés aux [étiquettes de classification](concept-classification-labels.md).
+- Éventuellement : passez en revue les concepts liés aux [étiquettes de classification](concept-classification-labels.md).
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>Ajouter une logique pour répertorier les étiquettes de sensibilité
 

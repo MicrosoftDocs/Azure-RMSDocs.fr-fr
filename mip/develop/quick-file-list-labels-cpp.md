@@ -4,17 +4,16 @@ description: Guide de démarrage rapide illustrant comment utiliser le kit SDK C
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e20b66062788632f3fc519e498761500ee78d68c
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 330ceb37e0c8324a083bf5c5d7240035b9b86a0a
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60184992"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556042"
 ---
-# <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C++)
+# <a name="quickstart-list-sensitivity-labels-c"></a>Démarrage rapide : Lister les étiquettes de sensibilité (C++)
 
 Ce guide de démarrage rapide vous montre comment utiliser l’API de fichier MIP pour répertorier les étiquettes de sensibilité configurées pour votre organisation.
 
@@ -23,7 +22,7 @@ Ce guide de démarrage rapide vous montre comment utiliser l’API de fichier MI
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
 - Effectuez d’abord les étapes du [Démarrage rapide : Initialisation d’une application cliente (C++)](quick-app-initialization-cpp.md) pour créer une solution Visual Studio de démarrage. Ce guide de démarrage rapide « Répertorier les étiquettes de sensibilité » s’appuie sur le précédent, qui permet de créer correctement la solution de démarrage.
-- Si vous le souhaitez : passez en revue les concepts liés aux [étiquettes de classification](concept-classification-labels.md).
+- Éventuellement : passez en revue les concepts liés aux [étiquettes de classification](concept-classification-labels.md).
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>Ajouter une logique pour répertorier les étiquettes de sensibilité
 
@@ -125,15 +124,15 @@ Enfin, générez et testez votre application cliente.
 
 ### <a name="problems-during-execution-of-powershell-script"></a>Problèmes durant l’exécution du script PowerShell 
 
-| Résumé | Message d’erreur | Solution |
+| Résumé | Message d'erreur | Solution |
 |---------|---------------|----------|
 | URI de redirection incorrecte dans l’inscription de l’application ou un script PowerShell (AADSTS50011) |*AADSTS50011 : l’URL de réponse spécifiée dans la requête ne correspond pas aux URL de réponse configurées pour l’application : 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.* | Vérifiez l’URI de redirection utilisé, en effectuant l’une des opérations suivantes :<br><br><li>Mettez à jour l’URI de redirection dans la configuration de votre application Azure AD, pour qu’il corresponde à votre script PowerShell. Consultez [Installation et configuration du kit SDK MIP](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) pour vérifier que vous avez correctement configuré la propriété de l’URI de redirection.<br><li>Mettez à jour la variable `redirectUri` dans votre script PowerShell, pour qu’elle corresponde à l’inscription de votre application. |
-| Compte de connexion incorrect (AADSTS50020) | *AADSTS50020 : le compte d’utilisateur « user@domain.com » du fournisseur d’identité « https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/ » n’existe pas dans le locataire « Nom de l’organisation » et ne peut donc pas accéder à l’application « 0edbblll-8773-44de-b87c-b8c6276d41eb » dans ce locataire.* | Effectuez l'une des opérations suivantes :<br><br><li>Réexécutez le script PowerShell, mais veillez à utiliser un compte issu du même locataire où votre application Azure AD est inscrite.<br><li>Si votre compte de connexion était correct, votre session hôte PowerShell peut être déjà authentifiée sous un compte différent. Dans ce cas, quittez l’hôte de script, puis rouvrez-le et essayez de l’exécuter de nouveau.<br><li>Si vous utilisez ce guide de démarrage rapide avec une application web (au lieu d’une application native) et que vous avez besoin de vous connecter à l’aide d’un compte issu d’un autre locataire, veillez à ce que l’inscription de votre application Azure AD soit activée pour une utilisation multilocataire. Vous pouvez vérifier à l’aide de la fonctionnalité « Modifier le manifeste » dans l’inscription de l’application et vous assurer qu’elle spécifie `"availableToOtherTenants": true,`. |
+| Compte de connexion incorrect (AADSTS50020) | *AADSTS50020 : le compte d’utilisateur « user@domain.com » du fournisseur d’identité « https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/  » n’existe pas dans le locataire « Nom de l’organisation » et ne peut donc pas accéder à l’application « 0edbblll-8773-44de-b87c-b8c6276d41eb » dans ce locataire.* | Effectuez l'une des opérations suivantes :<br><br><li>Réexécutez le script PowerShell, mais veillez à utiliser un compte issu du même locataire où votre application Azure AD est inscrite.<br><li>Si votre compte de connexion était correct, votre session hôte PowerShell peut être déjà authentifiée sous un compte différent. Dans ce cas, quittez l’hôte de script, puis rouvrez-le et essayez de l’exécuter de nouveau.<br><li>Si vous utilisez ce guide de démarrage rapide avec une application web (au lieu d’une application native) et que vous avez besoin de vous connecter à l’aide d’un compte issu d’un autre locataire, veillez à ce que l’inscription de votre application Azure AD soit activée pour une utilisation multilocataire. Vous pouvez vérifier à l’aide de la fonctionnalité « Modifier le manifeste » dans l’inscription de l’application et vous assurer qu’elle spécifie `"availableToOtherTenants": true,`. |
 | Autorisations incorrectes dans l’inscription de l’application (AADSTS65005) | *AADSTS65005 : ressource non valide. Le client a demandé l’accès à une ressource qui n’est pas listée dans les autorisations demandées dans l’inscription d’application du client. ID de l’application cliente : 0edbblll-8773-44de-b87c-b8c6276d41eb. Valeur de la ressource à partir de la demande : https://syncservice.o365syncservice.com/. ID de l’application de ressources : 870c4f2e-85b6-4d43-bdda-6ed9a579b725. Liste des ressources valides à partir de l’inscription de l’application : 00000002-0000-0000-c000-000000000000.* | Mettez à jour les demandes d’autorisation dans la configuration de votre application Azure AD. Consultez [Installation et configuration du kit SDK MIP](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) pour vérifier que vous avez correctement configuré les demandes d’autorisation dans l’inscription de votre application. |
 
 ### <a name="problems-during-execution-of-c-application"></a>Problèmes durant l’exécution de l’application C++
 
-| Résumé | Message d’erreur | Solution |
+| Résumé | Message d'erreur | Solution |
 |---------|---------------|----------|
 | Jeton d'accès incorrect | *Une exception s’est produite... le jeton d’accès est-il incorrect ou a-t-il expiré ?<br><br>L’appel de l’API a échoué : Échec de profile_add_engine_asyncprofile_add_engine_async avec : [classe mip::PolicySyncException] Échec de l’obtention de la stratégie, Échec de la requête avec le code d’état http : 401, x-ms-diagnostics: [2000001;reason="Le jeton OAuth envoyé avec la requête ne peut pas être analysé.";error_category="invalid_token"], correlationId:[35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (processus 29924) s’est arrêté avec le code 0.<br><br>Appuyez sur une touche pour fermer cette fenêtre . . .* | Si votre projet est généré avec succès, mais que vous voyez une sortie similaire à gauche, vous avez probablement un jeton non valide ou expiré dans votre méthode `AcquireOAuth2Token()`. Revenez à [Créer un script PowerShell pour générer des jetons d’accès](#create-a-powershell-script-to-generate-access-tokens) et regénérez le jeton d’accès, mettez de nouveau à jour `AcquireOAuth2Token()` et regénérez/retestez. Vous pouvez également examiner et vérifier le jeton et ses revendications, à l’aide de l’application web monopage [jwt.ms](https://jwt.ms/). |
 | Étiquettes de sensibilité non configurées | Non applicable | Si votre projet est généré avec succès, mais que vous n’avez aucune sortie dans la fenêtre de console, assurez-vous que les étiquettes de sensibilité de votre organisation soient correctement configurées. Consultez [Installation et configuration du kit SDK MIP](setup-configure-mip.md), sous « Définir les paramètres de taxonomie et de protection des étiquettes » pour plus d’informations.  |

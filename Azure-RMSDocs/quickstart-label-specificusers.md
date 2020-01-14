@@ -1,27 +1,30 @@
 ---
 title: 'Démarrage rapide : Nouvelle étiquette Azure Information Protection pour des utilisateurs spécifiques – AIP'
 description: Créez et configurez une nouvelle étiquette qui classifie les documents et e-mails pour un sous-ensemble d’utilisateurs à l’aide d’une stratégie délimitée.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3e69706b786227cd41e215bc48c6caf9fab250bb
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: a321d0034760e4daf67154f09d843302f1fb9974
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935365"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675888"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Démarrage rapide : Créer une étiquette Azure Information Protection pour des utilisateurs spécifiques
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Ce démarrage rapide vise à créer une nouvelle étiquette Azure Information Protection qui n’est visible et applicable que par certains utilisateurs pour classifier et protéger leurs documents et e-mails.
 
@@ -67,11 +70,11 @@ Commencez par créer votre nouvelle étiquette.
 
 3. Dans le volet **Étiquette**, spécifiez au moins les éléments suivants :
     
-    - **Nom d'affichage de l’étiquette** : Nom de l’étiquette que verront les utilisateurs et qui identifie la classification du contenu. Par exemple : `Sales - Restricted`.
+    - **Nom d'affichage de l’étiquette** : Nom de l’étiquette que verront les utilisateurs et qui identifie la classification du contenu. Par exemple : `Sales - Restricted`.
     
     - **Description** : Info-bulle qui aide les utilisateurs à savoir quand sélectionner cette nouvelle étiquette. Par exemple : `Business data that is restricted to the Sales Team.`
 
-4. Vérifiez que l’option est marquée **Activé** **(valeur par défaut)** , puis sélectionnez **Enregistrer**.
+4. Vérifiez que l’option est marquée **Activé****(valeur par défaut)**, puis sélectionnez **Enregistrer**.
 
 ## <a name="add-the-label-to-a-new-scoped-policy"></a>Ajouter l’étiquette à une nouvelle stratégie délimitée
 
@@ -105,11 +108,11 @@ Pour tester cette étiquette, il vous faut au minimum deux ordinateurs, car le c
 
 Si vous ne souhaitez pas conserver cette étiquette et cette stratégie délimitée, suivez cette procédure :
 
-1. À partir de l’option de menu **Classifications** > **Stratégies** : Dans le volet **Azure Information Protection – Stratégies**, sélectionnez le menu contextuel ( **…** ) de la stratégie délimitée que vous avez créée. Par exemple, **Sales**.
+1. À partir de l’option de menu **Classifications** > **Stratégies** : Dans le volet **Azure Information Protection – Stratégies**, sélectionnez le menu contextuel (**…**) de la stratégie délimitée que vous avez créée. Par exemple, **Sales**.
 
 2. Sélectionnez **Supprimer la stratégie**, puis **OK** si une confirmation vous est demandée.
 
-3. Dans l’option de menu **Classifications** > **Étiquette** : Dans le volet **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel ( **…** ) de l’étiquette que vous avez créée.  par exemple, **Sales - Restricted**.
+3. Dans l’option de menu **Classifications** > **Étiquette** : Dans le volet **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel (**…**) de l’étiquette que vous avez créée.  par exemple, **Sales - Restricted**.
 
 4.  Sélectionnez **Supprimer cette étiquette**, puis **OK** si une confirmation vous est demandée.
 

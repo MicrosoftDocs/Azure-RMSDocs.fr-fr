@@ -1,32 +1,35 @@
 ---
 title: 'Tutoriel : utiliser les paramètres de stratégie Azure Information Protection pour classer les données'
 description: Tutoriel d’introduction qui vous guide dans la configuration des paramètres de stratégie Azure Information Protection pour classer les documents et e-mails de votre organisation.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 98aeeb0b858690327904e8fcd3932f9b38e7cf30
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: edc6fe02c5b11624e88e393dbaff20bb8ed1a620
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559206"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675497"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutoriel : Configurer les paramètres de stratégie Azure Information Protection qui interagissent
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Dans ce tutoriel, vous allez apprendre à :
+Dans ce tutoriel, vous apprenez à effectuer les opérations suivantes :
 > [!div class="checklist"]
 > * configurer des paramètres de stratégie qui fonctionnent ensemble ;
 > * voir vos paramètres en pratique.
+
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Au lieu de demander aux utilisateurs d’étiqueter manuellement leurs documents et e-mails, vous pouvez utiliser les paramètres de stratégie Azure Information Protection pour :
 
@@ -134,7 +137,7 @@ Pour afficher à nouveau la barre Information Protection, sélectionnez **Affich
 
 ### <a name="mandatory-labeling"></a>Étiquetage obligatoire
 
-Vous pouvez remplacer l’étiquette **Général** actuellement sélectionnée par une autre étiquette, mais pas la supprimer. Puisque nous avons **activé** **Tous les documents et e-mails doivent avoir une étiquette**, l’icône **Supprimer l’étiquette** n’est pas disponible sur la barre Information Protection. 
+Vous pouvez remplacer l’étiquette **Général** actuellement sélectionnée par une autre étiquette, mais pas la supprimer. Puisque nous avons **activé****Tous les documents et e-mails doivent avoir une étiquette**, l’icône **Supprimer l’étiquette** n’est pas disponible sur la barre Information Protection. 
 
 Si nous n’avions pas modifié ce paramètre, la barre Information Protection montrerait cette icône :
 
@@ -146,7 +149,7 @@ Si nous n’avions pas défini d’étiquette par défaut avec le paramètre d�
 
 ### <a name="recommendations-for-emails-with-attachments"></a>Recommandations pour les e-mails avec pièces jointes
 
-Pour le document Word ouvert, choisissez une étiquette ayant une classification plus élevée que **Général** : par exemple, l’une des sous-étiquettes sous **Confidentiel**, comme **Confidentiel – Tout le monde (non protégé)** . Enregistrez le document localement et donnez-lui n’importe quel nom. 
+Pour le document Word ouvert, choisissez une étiquette ayant une classification plus élevée que **Général** : par exemple, l’une des sous-étiquettes sous **Confidentiel**, comme **Confidentiel – Tout le monde (non protégé)**. Enregistrez le document localement et donnez-lui n’importe quel nom. 
 
 Démarrez Outlook et créez un e-mail. Comme nous l’avons vu avec Word, le nouvel e-mail est automatiquement étiqueté comme **Général** et la barre Information Protection s’affiche.
 

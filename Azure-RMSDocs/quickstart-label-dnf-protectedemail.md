@@ -1,27 +1,30 @@
 ---
 title: 'Démarrage rapide : configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails - AIP'
 description: Configurez une étiquette qui protège l’e-mail d’un utilisateur en appliquant automatiquement la protection Ne pas transférer.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 4d3ee0b82c99c093dcc66363b8aed98c5a151e60
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 24f4b8e4412dffcd9047c5b80643b5a2aca7dc39
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934566"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675922"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Client Azure Information Protection pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Dans ce démarrage rapide, vous allez configurer une étiquette Azure Information Protection existante pour appliquer automatiquement le paramètre de protection Ne pas transférer.
 
@@ -91,7 +94,7 @@ Pour obtenir la liste complète des prérequis d’Azure Information Protection,
 
 4. Dans le volet **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
     
-5. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)** .
+5. Sélectionnez **Configurer les autorisations définies par l’utilisateur (préversion)**.
 
 6. Vérifiez que l’option suivante est sélectionnée : **Dans Outlook appliquer Ne pas transférer**.
 

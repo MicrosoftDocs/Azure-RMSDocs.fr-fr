@@ -5,15 +5,14 @@ services: information-protection
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: d671aeed3e05882ba8d41c6d7069cd4e548ecec2
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: 6923bdf83f76a3e2a30e49bae27e9f7be963a623
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884720"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556025"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C++)
 
@@ -24,7 +23,7 @@ Ce guide de démarrage rapide vous montre comment utiliser plus d’API de fichi
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
 - Effectuez d’abord les étapes du [Guide de démarrage rapide : Lister les étiquettes de sensibilité (C++)](quick-file-list-labels-cpp.md) pour créer une solution Visual Studio de démarrage qui liste les étiquettes de sensibilité d’une organisation. Ce guide de démarrage rapide « Définir et obtenir une étiquette de sensibilité » s’appuie sur le guide précédent.
-- Si vous le souhaitez : passez en revue les concepts liés aux [gestionnaires de fichiers dans le kit SDK MIP](concept-handler-file-cpp.md).
+- Éventuellement : passez en revue les concepts liés aux [gestionnaires de fichiers dans le kit SDK MIP](concept-handler-file-cpp.md).
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>Implémenter une classe d’observateur pour superviser l’objet de gestionnaire de fichiers
 

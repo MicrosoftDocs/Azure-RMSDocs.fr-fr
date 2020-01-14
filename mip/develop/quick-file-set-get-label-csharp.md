@@ -5,15 +5,14 @@ services: information-protection
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: fc2b07e2ffb8dfe9dec0e3766ac0da39719f7503
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: c081d20ba3cfffdc1db06ade5d918230f3b9eff8
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885954"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75554988"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Démarrage rapide : Définir et obtenir une étiquette de sensibilité (C#)
 
@@ -24,7 +23,7 @@ Ce guide de démarrage rapide vous montre comment utiliser plus d’API de fichi
 Si vous ne l’avez pas encore fait, veillez à remplir les prérequis suivants avant de poursuivre :
 
 - Effectuez d’abord les étapes du [Démarrage rapide : Répertorier les étiquettes de sensibilité (C#)](quick-file-list-labels-csharp.md) pour créer une solution Visual Studio de démarrage qui liste les étiquettes de sensibilité d’une organisation. Ce guide de démarrage rapide « Définir et obtenir une étiquette de sensibilité » s’appuie sur le guide précédent.
-- Si vous le souhaitez : passez en revue les concepts liés aux [gestionnaires de fichiers dans le kit SDK MIP](concept-handler-file-cpp.md).
+- Éventuellement : passez en revue les concepts liés aux [gestionnaires de fichiers dans le kit SDK MIP](concept-handler-file-cpp.md).
 
 ## <a name="add-logic-to-set-and-get-a-sensitivity-label"></a>Ajouter une logique pour définir et obtenir une étiquette de sensibilité
 

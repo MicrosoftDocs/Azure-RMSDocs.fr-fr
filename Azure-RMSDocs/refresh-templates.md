@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c260767d29ecf6b56b101f57f40192177cf7242c
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 6aae4636fe717bdaf81ae3e2461e56e17751c2f9
+ms.sourcegitcommit: 68cf1e0fda06c6f20cbd829dc4fbc8c12686947b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743857"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952982"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
@@ -37,7 +37,7 @@ Lorsque vous utilisez le service Azure Rights Management à partir de Azure Info
 |Exchange sur site avec le connecteur Azure Rights Management<br /><br />Applicable aux règles de transport et à Outlook Web App|Actualisation automatique (aucune étape supplémentaire nécessaire). Toutefois, Outlook Web App met l’interface utilisateur en cache pendant un jour.|
 |Office 2019 pour Mac et Office 2016 pour Mac|Actualisation automatique lorsque vous ouvrez le contenu protégé. Pour forcer une actualisation, consultez la section suivante, [office 2019 pour Mac et office 2016 pour Mac : comment forcer une actualisation des modèles](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |Application de partage RMS pour les ordinateurs Mac|Actualisation automatique (aucune étape supplémentaire nécessaire).|
-|Applications Office qui [prennent en charge la fonctionnalité Niveau de confidentialité](https://support.office.com/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US&ui=en-US&rs=en-US#bkmk_whereavailable)|Ces clients ne téléchargent pas les modèles mais y accèdent en ligne, donc aucune étape supplémentaire n’est nécessaire.|
+|Applications Office 365 ProPlus avec [étiquetage intégré](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Ce client d’étiquetage intégré ne télécharge pas de modèles, mais y accède en ligne, aucune étape supplémentaire n’est requise.|
 
 Lorsque les applications clientes doivent télécharger des modèles (initialement ou actualisés pour des modifications), préparez-vous à attendre jusqu’à 30 minutes avant que le téléchargement soit terminé et que les modèles nouveaux ou mis à jour soient entièrement opérationnels. La durée varie en fonction de différents facteurs comme la taille et la complexité de la configuration du modèle et la connectivité réseau. 
 

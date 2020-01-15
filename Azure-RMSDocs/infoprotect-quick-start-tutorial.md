@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 358308fe111eb1c3762d3e6a98fbea0d2e065bbc
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: c684bc08faaab4317df0588ccc9350199c62049d
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675514"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743678"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutoriel : Configurer les paramètres de la stratégie Azure Information Protection et créer une étiquette
 
@@ -30,8 +30,6 @@ Dans ce tutoriel, vous apprenez à effectuer les opérations suivantes :
 > * Configurer l’étiquette pour les marquages visuels ainsi que pour le classement et la protection recommandés
 > * Voir vos paramètres et étiquettes en action
 
-> [!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Grâce à cette configuration, les utilisateurs observent l’application d’une étiquette par défaut lorsqu’ils créent un nouveau document ou e-mail. Toutefois, ils sont invités à appliquer la nouvelle étiquette lorsque des informations relatives à une carte de crédit sont détectées. Lorsque la nouvelle étiquette est appliquée, le contenu est reclassé et protégé, et affiche un pied de page et un filigrane correspondants. 
 
@@ -153,7 +151,7 @@ Nous allons maintenant créer une sous-étiquette pour **Confidentiel**.
     
     Cliquez sur **Ajouter une nouvelle condition**, puis, dans le volet **Condition**, sélectionnez les éléments suivants :
     
-    a. **Choisir le type de condition ** : conservez la valeur par défaut **Types d’informations**.
+    a. **Choisir le type de condition**  : conservez la valeur par défaut **Types d’informations**.
     
     b. **Sélectionner un secteur d’activité** : conservez la valeur par défaut **Tout**.
     
@@ -268,7 +266,7 @@ Si vous ne souhaitez pas conserver les modifications que vous avez effectuées d
 
 2. Rétablissez les valeurs d’origine (dont vous avez pris note) des paramètres de stratégie, puis sélectionnez **Enregistrer**. 
 
-3. Dans l’option de menu **Classifications** > **Étiquette** : dans le volet **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel (**…**) de l’étiquette **Finance** que vous avez créée.
+3. Dans l’option de menu **Classifications** > **Étiquette** : dans le volet **Azure Information Protection – Étiquette**, sélectionnez le menu contextuel ( **…** ) de l’étiquette **Finance** que vous avez créée.
 
 4. Sélectionnez **Supprimer cette étiquette**, puis **OK** si une confirmation vous est demandée.
 

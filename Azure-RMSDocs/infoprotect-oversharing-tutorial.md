@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 52d47fb119a94054022cc14edc4e2bd07ddef33a
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 7f4ed4ba4962246bc6466807f492c8ac18f18cc2
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675361"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743566"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutoriel : configurer Azure Information Protection pour contrôler le surpartage d’informations à l’aide d’Outlook
 
@@ -29,8 +29,6 @@ Dans ce tutoriel, vous apprenez à effectuer les opérations suivantes :
 > * voir vos paramètres en pratique.
 > * Passer en revue les actions et messages utilisateur journalisés dans le journal des événements 
 
-> [!NOTE] 
-> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 L’e-mail est une des méthodes les plus courantes à l’aide desquelles les utilisateurs partagent des informations de façon inappropriée, qu’elles se trouvent dans l’e-mail proprement dit ou dans des pièces jointes. Vous pouvez utiliser des solutions de protection contre la perte de données qui peuvent identifier les informations sensibles connues et empêcher qu’elles franchissent les limites de votre organisation. Toutefois, vous pouvez également utiliser le client Azure Information Protection avec certains paramètres clients avancés pour empêcher le surpartage et également former vos utilisateurs avec des messages interactifs qui fournissent des commentaires en temps réel.
 

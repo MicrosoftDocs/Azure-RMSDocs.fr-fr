@@ -4,7 +4,7 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/24/2019
+ms.date: 1/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9428f682c9046f3b9f0e7b9dd9af498db7fd2d4c
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 74ff92fd76ca12fd77e0eb29d4e22c1dfacde084
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675616"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960007"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
 > *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -285,7 +285,43 @@ Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée 
 
 Cette configuration utilise des [Paramètres avancés](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
 
-Les paramètres permettent de supprimer ou de remplacer des en-têtes ou des pieds de page textuels de documents quand ces marquages visuels ont été appliqués par une autre solution d’étiquetage. Par exemple, l’ancien pied de page contient le nom d’une ancienne étiquette que vous avez maintenant migrée vers des étiquettes de sensibilité pour utiliser un nouveau nom d’étiquette et son propre pied de page.
+Il existe deux méthodes qui peuvent être utilisées pour supprimer des classifications d’autres solutions d’étiquetage. La première méthode supprime toute forme de documents Word où le nom de forme correspond au nom défini dans la propriété avancée **WordShapeNameToRemove**, la deuxième méthode vous permet de supprimer ou de remplacer des en-têtes ou des pieds de page textuels à partir de documents Word, Excel et PowerPoint, comme défini dans la propriété avancée **RemoveExternalContentMarkingInApp** . 
+
+### <a name="use-the-wordshapenametoremove-advanced-property-preview"></a>Utiliser la propriété avancée WordShapeNameToRemove (version préliminaire)
+
+*La propriété avancée **WordShapeNameToRemove** est prise en charge à partir de la version 2.6.101.0 et supérieure*
+
+Ce paramètre vous permet de supprimer ou de remplacer des étiquettes basées sur des formes de documents Word lorsque ces marquages visuels ont été appliqués par une autre solution d’étiquetage. Par exemple, la forme contient le nom d’une ancienne étiquette que vous avez maintenant migrée vers des étiquettes de sensibilité pour utiliser un nouveau nom d’étiquette et sa propre forme.
+
+Pour utiliser cette propriété avancée, vous devez rechercher le nom de la forme dans le document Word, puis les définir dans la liste de propriétés avancées **WordShapeNameToRemove** des formes. Le service supprime toutes les formes dans Word qui commencent par un nom défini dans la liste des formes de cette propriété avancée.
+
+Évitez de supprimer les formes qui contiennent le texte que vous souhaitez ignorer, en définissant le nom de toutes les formes à supprimer et évitez de vérifier le texte dans toutes les formes, ce qui est un processus gourmand en ressources.
+
+Si vous ne spécifiez pas de formes de mot dans ce paramètre de propriété avancé supplémentaire et que Word est inclus dans la valeur de clé **RemoveExternalContentMarkingInApp** , le texte que vous spécifiez dans la valeur **ExternalContentMarkingToRemove** est recherché dans toutes les formes. 
+
+Pour rechercher le nom de la forme que vous utilisez et souhaitez exclure :
+
+1. Dans Word, affichez le volet de **sélection** : onglet dossier de **démarrage** > groupe **édition** > **Sélectionnez** l’option > **volet sélection**.
+
+2. Sélectionnez la forme sur la page que vous souhaitez marquer pour suppression. Le nom de la forme que vous marquez est maintenant mis en surbrillance dans le volet de **sélection** .
+
+Utilisez le nom de la forme pour spécifier une valeur de chaîne pour la clé * * * * WordShapeNameToRemove * * * *. 
+
+Exemple : le nom de la forme est **DC**. Pour supprimer la forme portant ce nom, spécifiez la valeur : `dc`.
+
+- Clé : **WordShapeNameToRemove**
+
+- Valeur : \<**nom** de la forme de mot> 
+
+Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+
+Lorsque vous avez plusieurs formes de mot à supprimer, spécifiez autant de valeurs que vous avez de formes à supprimer.
+
+
+### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>Utiliser la propriété avancée RemoveExternalContentMarkingInApp
+Ce paramètre vous permet de supprimer ou de remplacer des en-têtes ou des pieds de page textuels dans des documents lorsque ces marquages visuels ont été appliqués par une autre solution d’étiquetage. Par exemple, l’ancien pied de page contient le nom d’une ancienne étiquette que vous avez maintenant migrée vers des étiquettes de sensibilité pour utiliser un nouveau nom d’étiquette et son propre pied de page.
 
 Lorsque le client d’étiquetage unifié obtient cette configuration dans sa stratégie, les anciens en-têtes et pieds de page sont supprimés ou remplacés lorsque le document est ouvert dans l’application Office et toute étiquette de sensibilité est appliquée au document.
 
@@ -1008,7 +1044,7 @@ En outre :
 ## <a name="support-for-disconnected-computers"></a>Prise en charge des ordinateurs déconnectés
 
 > [!IMPORTANT]
-> Les ordinateurs déconnectés sont pris en charge pour les scénarios d’étiquetage suivants uniquement : Explorateur de fichiers, PowerShell et le scanneur. Pour étiqueter des documents dans vos applications Office, vous devez disposer d’une connectivité à Internet.
+> Les ordinateurs déconnectés sont pris en charge pour les scénarios d’étiquetage suivants : Explorateur de fichiers, PowerShell, vos applications Office et le scanneur.
 
 Par défaut, le Azure Information Protection client d’étiquetage unifié tente automatiquement de se connecter à Internet pour télécharger les étiquettes et les paramètres de stratégie d’étiquette à partir du centre de gestion des étiquettes : le Centre de sécurité et de conformité Office 365, le Microsoft 365 Security Center ou le centre de conformité des Microsoft 365. Si vous avez des ordinateurs qui ne peuvent pas se connecter à Internet pendant un certain temps, vous pouvez exporter et copier des fichiers qui gèrent manuellement la stratégie du client d’étiquetage unifié.
 

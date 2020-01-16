@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b061ac3e067184d1af8b55756a7b3ac3fc0c8a35
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: eb50c150ee908c14c04e0786c57b4ae53e2599a0
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743535"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960565"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -156,9 +156,19 @@ Si vous ne pouvez pas recevoir le rôle sysadmin même temporairement, vous deve
 
 En règle générale, vous utilisez le même compte utilisateur pour installer et configurer le scanneur. Mais si vous utilisez des comptes différents, ils ont tous les deux besoin du rôle db_owner pour la base de données de configuration du scanneur :
 
-- Si vous ne spécifiez pas votre propre nom de profil pour le scanneur (client classique uniquement), la base de données de configuration est nommée **AIPScanner_\<computer_name >** . 
+- Pour le client classique :
 
-- Si vous spécifiez votre propre nom de profil, la base de données de configuration est nommée **AIPScanner_\<profile_name >** (client classique) **ou AIPScannerUL_\<profile_name > (client** d’étiquetage unifié).
+    Si vous ne spécifiez pas votre propre nom de profil pour le scanneur, la base de données de configuration est nommée **AIPScanner_\<computer_name >** (client classique uniquement). Passez à l’étape suivante pour créer un utilisateur et accorder des droits de db_owner sur la base de données. 
+
+- Pour le client d’étiquetage unifié :
+    
+    Si vous spécifiez votre propre nom de profil, la base de données de configuration est nommée **AIPScannerUL_ < profile_name >** (client d’étiquetage unifié).
+    
+    Remplissez la base de données à l’aide du script suivant : 
+
+
+
+    s’il n’existe pas (Select * from Master. sys. server_principals où sid = SUSER_SID ('domaine\utilisateur')) BEGIN DECLARE @T nvarchar (500) Set @T = 'CREATe LOGIN' + QUOTENAME ('domaine\utilisateur') + 'de WINDOWS’exec (@T) END 
 
 Pour créer un utilisateur et accorder des droits de db_owner sur cette base de données, demandez à l’administrateur système d’exécuter le script SQL suivant deux fois. La première fois, pour le compte de service qui exécute le scanneur, et la seconde fois pour installer et gérer le scanneur. Avant d’exécuter le script :
 1. Remplacez *domaine\utilisateur* par le nom de domaine et le nom de compte d’utilisateur du compte de service ou du compte d’utilisateur.
@@ -404,6 +414,16 @@ Si vous suivez ces instructions, le scanneur s’exécute une seule fois en mode
     Puis examinez les rapports pour déterminer quels fichiers ont été étiquetés, quelle classification a été appliquée et si une protection a été appliquée. Ou bien, utilisez le portail Azure pour consulter plus facilement ces informations.
 
 Puisque nous avons configuré la planification pour qu’elle s’exécute en continu, lorsque le scanneur a parcouru tous les fichiers, il démarre automatiquement un nouveau cycle pour découvrir les fichiers nouveaux et modifiés.
+
+## <a name="stop-a-scan"></a>Arrêter une analyse 
+
+Pour arrêter une analyse que vous avez démarrée précédemment avant qu’elle ne soit terminée, utilisez l’option **arrêter l’analyse** à partir de l’interface, ou
+ 
+![Arrêter une analyse pour le scanneur de Azure Information Protection](./media/scanner-stop-scan.png)
+    
+Vous pouvez également exécuter la commande suivante dans votre session PowerShell :
+    
+        Stop-AIPScan 
 
 ## <a name="how-files-are-scanned"></a>Procédure d’analyse des fichiers
 

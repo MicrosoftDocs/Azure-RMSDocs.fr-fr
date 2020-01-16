@@ -4,7 +4,7 @@ description: Quand vous utilisez le service Azure Rights Management, les modèle
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 1/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6aae4636fe717bdaf81ae3e2461e56e17751c2f9
-ms.sourcegitcommit: 68cf1e0fda06c6f20cbd829dc4fbc8c12686947b
+ms.openlocfilehash: 52d00883b19c2c595dd098a9be6d79d3b3183355
+ms.sourcegitcommit: 800339fed1c516d627dbb91ed804a7c7d5b892a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952982"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031461"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Actualisation des modèles pour les utilisateurs et services
 
@@ -31,7 +31,7 @@ Lorsque vous utilisez le service Azure Rights Management à partir de Azure Info
 |--------------------------|---------------------------------------------|
 |Exchange Online<br /><br />Applicable aux règles de transport et à Outlook Web App |Actualisé automatiquement dans l’heure (aucune étape supplémentaire nécessaire).|
 |Client Azure Information Protection|Actualisation automatique chaque fois que la stratégie Azure Information Protection est actualisée sur le client :<br /><br /> - Lorsqu’une application Office qui prend en charge la barre Azure Information Protection s’ouvre. <br /><br /> - Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier. <br /><br /> - Lorsque vous exécutez les applets de commande PowerShell pour l’étiquetage et la protection (Get-AIPFileStatus et Set-AIPFileLabel).<br /><br /> - Lorsque le service du scanneur Azure Information Protection démarre et que la stratégie locale remonte à plus d’une heure. De plus, le service du scanneur vérifie les modifications apportées toutes les heures et utilise ces modifications pour le prochain cycle d’analyse.<br /><br /> - Toutes les 24 heures.<br /><br /> De plus, étant donné que ce client est étroitement intégré à Office, les modèles actualisés pour les applications Office 365 ou pour Office 2019, Office 2016 ou Office 2013 le seront aussi pour le client Azure Information Protection.|
-|Client d’étiquetage unifié Azure Information Protection|Actualisé automatiquement toutes les 4 heures par l’application Office.<br /><br /> De plus, étant donné que ce client est étroitement intégré à Office, les modèles actualisés pour les applications Office 365 ou pour Office 2019, Office 2016 ou Office 2013 le seront aussi pour le client d’étiquetage unifié Azure Information Protection.|
+|Client d’étiquetage unifié Azure Information Protection|Pour les applications Office, les modèles s’actualisent automatiquement chaque fois que l’application est ouverte.<br /><br /> De plus, étant donné que ce client est étroitement intégré à Office, les modèles actualisés pour les applications Office 365 ou pour Office 2019, Office 2016 ou Office 2013 le seront aussi pour le client d’étiquetage unifié Azure Information Protection.<br /><br /> Pour l’Explorateur de fichiers, PowerShell et le scanneur, le client ne télécharge pas de modèles, mais y accède en ligne, aucune étape supplémentaire n’est requise.|
 |Applications Office 365, Office 2019, Office 2016 et Office 2013|Actualisation automatique (d’après une planification) :<br /><br />- Pour ces versions ultérieures d’Office : l’intervalle d’actualisation par défaut est de sept jours.<br /><br />Pour forcer une actualisation plus tôt que la planification, consultez la section suivante, [office 365 Apps, office 2019, office 2016 et office 2013 : comment forcer une actualisation pour les modèles](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
 |Office 2010|Actualisation automatique lorsque les utilisateurs se déconnectent de Windows, se reconnectent et attendent jusqu'à une heure.|
 |Exchange sur site avec le connecteur Azure Rights Management<br /><br />Applicable aux règles de transport et à Outlook Web App|Actualisation automatique (aucune étape supplémentaire nécessaire). Toutefois, Outlook Web App met l’interface utilisateur en cache pendant un jour.|

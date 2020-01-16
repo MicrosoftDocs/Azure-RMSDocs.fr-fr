@@ -12,16 +12,16 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 24a0ee1b4627002284d5861287ec7a3133813902
-ms.sourcegitcommit: a38af4741017cd745efc011cf29a0fedb62f9be7
+ms.openlocfilehash: 221623101c75a5834947c7f29a4f4df4f8d68a35
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75827551"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960747"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
->*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
+>*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 
 
 Azure Information Protection fournit une solution client-serveur qui permet de protéger les documents et e-mails d’une organisation :
@@ -102,23 +102,23 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Les autorisations personnalisées sont définies indépendamment d’une étiquette :| **Oui** | **Oui** <sup>3</sup>| Non |
 |Barre Information Protection dans les applications Office :| **Oui** | **Oui**| Non |
 |Marquages visuels en tant qu’action d’étiquette (en-tête, pied de page, filigrane) :| **Oui** | **Oui** | **Oui**|
-|Marquages visuels par application :| **Oui** | Non | Non |
-|Marquages visuels dynamiques avec des variables :| **Oui** | Non | Non |
+|Marquages visuels par application :| **Oui** | **Yes* | Non |
+|Marquages visuels dynamiques avec des variables :| **Oui** | **** | Non |
 |Étiquette avec l’Explorateur de fichiers :| **Oui** | **Oui** | Non |
 |Visionneuse pour les fichiers protégés (texte, images, PDF,. pfile) :| **Oui** | **Oui** | Non|
 |Prise en charge PPDF pour l’application des étiquettes :| **Oui** | Non | Non |
 |Applets de commande d’étiquetage PowerShell :| **Oui** | **Oui** <sup>4</sup> | Non |
 |Prise en charge hors connexion des actions de protection :| **Oui** | **Oui** <sup>5</sup> | **Oui** |
-|Gestion manuelle des fichiers de stratégie pour les ordinateurs déconnectés :| **Oui** |**Oui** <sup>6</sup>| Non |
+|Gestion manuelle des fichiers de stratégie pour les ordinateurs déconnectés :| **Oui** |**Oui**| Non |
 |Prise en charge de HYOK :| **Oui** | Non | Non |
 |Journalisation de l’utilisation dans observateur d’événements :| **Oui** | Non |Non |
 |Afficher le bouton ne pas transférer dans Outlook :| **Oui** | Non | Non |
-|Suivre les documentés protégés :| **Oui** | **Oui** <sup>7</sup> | Non |
+|Suivre les documentés protégés :| **Oui** | **Oui** <sup>6</sup> | Non |
 |Révoquer les documents protégés :| **Oui** | Non | Non |
 |Mode Protection uniquement (pas d’étiquettes) :| **Oui** | Non | Non |
 |Prise en charge du changement de compte :| Non | Non | **Oui** |
 |Prise en charge de Services Bureau à distance :| **Oui** | **Oui** | **Oui** |
-|Prise en charge des services AD RMS :| **Oui** | Non <sup>8</sup> | Non |
+|Prise en charge des services AD RMS :| **Oui** | Non <sup>7</sup> | Non |
 
 Notes de bas de page :
 
@@ -128,15 +128,13 @@ Notes de bas de page :
 
 <sup>3</sup> pris en charge par l’Explorateur de fichiers et PowerShell. Dans les applications Office, les utilisateurs peuvent sélectionner les **informations de fichier** > **protéger le document** > **restreindre l’accès**.
 
-<sup>4</sup> aucune prise en charge de la suppression de la protection des fichiers de conteneur (zip,. rar,. 7z,. MSG et. pst).
+<sup>4</sup> aucune prise en charge de la suppression de la protection des fichiers de conteneur (zip).
 
 <sup>5</sup> pour l’Explorateur de fichiers et les commandes PowerShell, l’utilisateur doit être connecté à Internet pour protéger des fichiers.
 
-<sup>6</sup> pris en charge pour l’étiquetage avec l’Explorateur de fichiers, PowerShell et le scanneur. Non pris en charge pour l’étiquetage dans les applications Office.
+<sup>6</sup> le site de suivi des documents pris en charge par le client classique n’est pas pris en charge par le client d’étiquetage unifié. Toutefois, si vous n’avez pas besoin d’enregistrer d’abord le document pour le suivi, les administrateurs peuvent utiliser la [création de rapports centralisée](../reports-aip.md) pour déterminer si les documents protégés sont accessibles à partir d’ordinateurs Windows et si l’accès a été accordé ou refusé. 
 
-<sup>7</sup> le site de suivi des documents pris en charge par le client classique n’est pas pris en charge par le client d’étiquetage unifié. Toutefois, si vous n’avez pas besoin d’enregistrer d’abord le document pour le suivi, les administrateurs peuvent utiliser la [création de rapports centralisée](../reports-aip.md) pour déterminer si les documents protégés sont accessibles à partir d’ordinateurs Windows et si l’accès a été accordé ou refusé. 
-
-<sup>8</sup> les actions d’étiquetage et de protection ne sont pas prises en charge. Toutefois, pour un déploiement AD RMS, la visionneuse peut ouvrir des documents protégés lorsque vous utilisez l' [extension d’appareil Mobile services AD RMS (Active Directory Rights Management Services)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
+<sup>7</sup> les actions d’étiquetage et de protection ne sont pas prises en charge. Toutefois, pour un déploiement AD RMS, la visionneuse peut ouvrir des documents protégés lorsque vous utilisez l' [extension d’appareil Mobile services AD RMS (Active Directory Rights Management Services)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 
 ### <a name="detailed-comparisons-for-the-azure-information-protection-clients"></a>Comparaisons détaillées pour les clients Azure Information Protection

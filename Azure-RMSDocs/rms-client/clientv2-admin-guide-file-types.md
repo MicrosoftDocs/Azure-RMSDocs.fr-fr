@@ -4,23 +4,23 @@ description: Détails techniques sur les types de fichiers pris en charge, les e
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/21/2019
+ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e27e89e2a4763eefa16abe3cc107279152528b16
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: d779be9a4193bd2ae2746d7ad72cc7ea2730ab9d
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675599"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960042"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : types de fichiers pris en charge par le client d’étiquetage unifié Azure Information Protection
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows server 2008 R2*>
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows server 2008 R2*>
 >
 > *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 

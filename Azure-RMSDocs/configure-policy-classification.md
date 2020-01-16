@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c91ad278b9ce4e699a9756cc228fd8bccd4b65e2
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: cb5bd910d69b85feae4c96b9bc8deb34369ccedb
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742912"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75959831"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -110,7 +110,7 @@ Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement d
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Types d’informations sensibles nécessitant une version minimale du client
 
-Les types d’informations sensibles suivants requièrent une version minimale de [1.48.204.0](./rms-client/client-version-release-history.md#version-1482040) du client Azure information protection :
+Les types d’informations sensibles suivants requièrent une version minimale de 1.48.204.0 du client Azure Information Protection :
 
 - **Chaîne de connexion Azure Service Bus**
 - **Chaîne de connexion Azure IoT**

@@ -12,16 +12,16 @@ ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 92579210477a1583a6b27793934f704f5816164b
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 1f75664fda8277622ba209d1d0972c3588de1959
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675752"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960266"
 ---
 # <a name="rights-management-service-client-deployment-notes"></a>Notes de déploiement du client de service Rights Management
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 7 avec SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016*
+>*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 8, Windows 8.1, Windows 10, windows Server 2008 R2, windows server 2012, windows server 2012 R2, windows server 2016*
 
 Le client service Rights Management (client RMS) version 2 est également appelé client MSIPC. Il s’agit d’un logiciel pour ordinateurs Windows, qui communique avec les services Microsoft Rights Management localement ou dans le cloud pour protéger l’accès aux informations et leur utilisation quand celles-ci transitent par des applications et appareils, à l’intérieur ou à l’extérieur des limites managées de votre organisation. 
 

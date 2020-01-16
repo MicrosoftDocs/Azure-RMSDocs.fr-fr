@@ -4,7 +4,7 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/02/2019
+ms.date: 1/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c7291b63971d34e7dd7e3e369cd13dfca7e44729
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: 9298022feecc4be60b3e528e5195fcec485502b2
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326374"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960816"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
->*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows server 2012 R2, windows server 2012, windows Server 2008 R2*
 >
 > *Instructions pour : [Azure information protection client d’étiquetage unifié pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -42,6 +42,7 @@ Les versions préliminaires ne doivent pas être déployées auprès des utilisa
 
 |Version du client|Date de publication|
 |--------------|-------------|
+|2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
 
 Le format de date utilisé sur cette page est *mois/jour/année*.
@@ -57,6 +58,42 @@ Utilisez les informations suivantes pour découvrir les nouveautés ou les modif
 > Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
 Ce client remplace le client Azure Information Protection (Classic). Pour comparer les fonctionnalités et les fonctionnalités avec le client Classic, consultez [comparer les clients d’étiquetage pour les ordinateurs Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
+
+## <a name="version-261010"></a>Version 2.6.101.0
+
+**Publication** le 1/15/2020
+
+**Nouvelles fonctionnalités :**
+
+- La modification de l’applet de commande [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) **Set-AIPFileLabel** pour permettre la suppression de la protection des fichiers PST, rar, 7zip et MSG. 
+
+- Ajout de la possibilité pour les administrateurs de Azure Information Protection de contrôler le moment où les extensions pfile sont utilisées pour les fichiers. En savoir plus sur la [modification des types de fichiers protégés](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#change-which-file-types-to-protect). 
+
+- Prise en charge du marquage visuel dynamique ajoutée pour les applications et les variables. En savoir plus sur la [Configuration des étiquettes pour les marquages visuels](https://docs.microsoft.com/azure/information-protection/configure-policy-markings). 
+
+- Améliorations apportées à [des conseils de stratégie personnalisables pour les étiquettes automatiques et recommandées](use-client.md).   
+
+- Prise en charge ajoutée pour la [fonctionnalité d’étiquetage hors connexion](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#support-for-disconnected-computers) avec les applications Office dans le client d’étiquetage unifié.
+
+- La nouvelle propriété avancée **WordShapeNameToRemove** permet de supprimer le marquage de contenu dans les documents Word créés par des applications tierces. En savoir plus sur la façon d' [identifier les noms de formes existants et de les définir en vue de leur suppression à l’aide de **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions). 
+
+- Fonctionnalités liées au [scanneur](../deploy-aip-scanner.md) :
+    - [Simplification de la découverte des sous-sites et SharePoint locaux](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories). La définition de chaque site spécifique n’est plus nécessaire. 
+    - Propriété avancée pour le [dimensionnement du segment SQL](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server) ajouté.
+    - Les administrateurs ont désormais la possibilité d' [arrêter des analyses existantes et d’effectuer une nouvelle analyse](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan) si une modification a été apportée à l’étiquette par défaut.
+    - Par défaut, l’analyseur définit maintenant une télémétrie minimale pour des analyses plus rapides et une taille de journal réduite et les types d’informations sont maintenant mis en cache dans la base de données. En savoir plus sur l' [optimisation du scanneur](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner). 
+
+**Correctifs :**
+
+- Le scanneur prend désormais en charge des déploiements distincts pour la base de données et le service, tandis que les droits **sysadmin** sont nécessaires uniquement pour le déploiement de base de données. 
+- Dans les cas où les utilisateurs ont tenté sans succès d’ouvrir des fichiers TIFF protégés et des fichiers TIFF créés par RightFax, les fichiers TIFF s’ouvrent et restent stables comme prévu.  
+- Les endommagements précédents des fichiers txt et PDF protégés sont résolus.
+- Une étiquette incohérente entre les Log Analytics **automatique** et **manuelle** a été corrigée. 
+- Des problèmes d’héritage inattendus identifiés entre les nouveaux e-mails et le dernier e-mail ouvert d’un utilisateur sont désormais résolus.  
+- La protection des fichiers. msg en tant que. msg. fichiers pfile fonctionne à présent comme prévu. 
+- Les autorisations de copropriétaire ajoutées à partir des paramètres définis par l’utilisateur Office sont désormais appliquées comme prévu. 
+- Lorsque vous entrez des autorisations de mise à niveau vers la version antérieure, le texte ne peut plus être entré lorsque d’autres options sont déjà sélectionnées. 
+
 
 ## <a name="version-25330"></a>Version 2.5.33.0
 
@@ -197,14 +234,6 @@ Pris en charge jusqu’à 02/06/2020
 - Lorsque l’étiquetage automatique est configuré, l’étiquette s’applique la première fois qu’un document est enregistré.
 
 - L’étiquetage par défaut prend en charge les sous-étiquettes.
-
-## <a name="version-207790"></a>Version 2.0.779.0
-
-**Publication**: 05/01/2019
-
-Pris en charge jusqu’à 02/15/2020
-
-Cette version offre un correctif unique pour résoudre un problème de condition de course dans le cas où il peut arriver que des étiquettes ne s’affichent pas dans les applications Office ou l’Explorateur de fichiers.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -4,7 +4,7 @@ description: Instructions pour afficher et utiliser un fichier protégé qui vou
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/23/2019
+ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 11b8f4331828ce6061d2c4c3087b4ac027892556
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 5f2bb77ff65f0d9c314edfb66021307580345fca
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675633"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960721"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Guide de l’utilisateur : afficher les fichiers protégés avec la visionneuse de Azure Information Protection
 
->*S’applique à : Services AD RMS (Active Directory Rights Management Services), [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 avec SP1*
+>*S’applique à : services AD RMS (Active Directory Rights Management Services), [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
 > *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 

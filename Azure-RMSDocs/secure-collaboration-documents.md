@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 57e40899f3c386b076a8642c17f019ea0767ab22
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 90c49b8222e379094ee5f5d00c5bd37c7dd0377d
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743776"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960882"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
@@ -38,7 +38,7 @@ Lorsque vous configurez ces autorisations, vous pouvez spécifier les utilisateu
 
 - **Pour tout utilisateur authentifié** : cette option est appropriée lorsque vous n’avez pas besoin de contrôler l’accès au document protégé, à condition que l’utilisateur puisse être authentifié. L’authentification peut avoir lieu via Azure AD, à l’aide d’un compte Microsoft, ou même via un fournisseur de réseaux sociaux fédérés ou un code secret à usage unique quand le contenu est protégé par les nouvelles fonctionnalités d’Office 365 Message Encryption. 
 
-En tant qu’administrateur, vous pouvez configurer une étiquette Azure Information Protection pour appliquer les autorisations et les utilisateurs autorisés. Avec cette configuration, les utilisateurs et autres administrateurs peuvent facilement appliquer les paramètres de protection corrects, car il leur suffit d’appliquer l’étiquette, sans avoir à indiquer les détails. Les sections suivantes fournissent un exemple de procédure pas à pas qui permet de protéger un document prenant en charge la collaboration sécurisée avec les utilisateurs internes et externes.
+En tant qu’administrateur, vous pouvez configurer une étiquette Azure Information Protection pour appliquer les autorisations et les utilisateurs autorisés. Avec cette configuration, les utilisateurs et autres administrateurs peuvent facilement appliquer les paramètres de protection corrects, car il leur suffit d’appliquer l’étiquette, sans avoir à indiquer les détails. Les sections suivantes fournissent un exemple de procédure pour protéger un document qui prend en charge la collaboration sécurisée avec des utilisateurs internes et externes.
 
 
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>Exemple de configuration d’une étiquette afin d’appliquer une protection prenant en charge la collaboration interne et externe

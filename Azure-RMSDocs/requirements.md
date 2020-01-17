@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ecde2ec34dd27cb3bd2a176e8d205de6ee865421
-ms.sourcegitcommit: 2d75192e7cd2e322ab422fc2115aa063e8dda18b
+ms.openlocfilehash: e639a94bde4daf481fc0a715492edeb702ba2ddd
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75913280"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117882"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Configuration requise pour Azure Information Protection
 
@@ -81,7 +81,6 @@ Les appareils suivants prennent en charge le client d’étiquetage Azure Inform
 
 - Windows Server 2012 R2 et Windows Server 2012
 
-- Windows Server 2008 R2 
 
 Pour plus d’informations sur les options de prise en charge des versions antérieures de Windows, contactez votre compte Microsoft ou un représentant du support technique.   
 Outre l’installation du client sur des ordinateurs physiques, vous pouvez également l’installer sur des machines virtuelles. Vérifiez si le fournisseur de logiciels de la solution de bureau virtuel dispose d’une configuration supplémentaire qui peut être nécessaire pour exécuter le client d’étiquetage Azure Information Protection unifié ou le client Azure Information Protection. Par exemple, pour les solutions Citrix, vous devrez peut-être désactiver les hooks de l' [interface de programmation d’applications (API) Citrix](https://support.citrix.com/article/CTX107825) pour Office (Winword. exe, Excel. exe, Outlook. exe, Powerpnt. exe) et l’exécutable pour le client d’étiquetage Azure information protection unifié ou le client Azure information protection (MSIP. app. exe, MSIP. Viewer. exe).

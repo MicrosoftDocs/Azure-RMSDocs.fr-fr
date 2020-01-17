@@ -13,16 +13,16 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 86c908f2c53ed66853b7f3b16e02a406748055be
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: bdcc6b77e5f75b67e69f39c4c5c260f44850f62e
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934974"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117618"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configuration des serveurs pour le connecteur Azure Rights Management
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2016, windows server 2012 R2 et windows server 2012*
 
 
 Utilisez les informations suivantes pour vous aider à configurer les serveurs locaux destinés à utiliser le connecteur Azure Rights Management (RMS). Ces procédures couvrent l’étape 5 de [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md).
@@ -145,11 +145,6 @@ Pour utiliser le connecteur RMS, ces serveurs Exchange doivent exécuter l'une d
 
 Vous avez également besoin sur ces serveurs d’une version 1 du client RMS (également appelé MSDRM) qui prend en charge le mode de chiffrement RMS 2. Tous les systèmes d’exploitation Windows incluent le client MSDRM, mais les versions antérieures du client ne prenaient pas en charge le mode de chiffrement 2. Si vos serveurs Exchange exécutent au moins Windows Server 2012, aucune action supplémentaire n’est nécessaire car le client RMS installé avec ces systèmes d’exploitation prend en charge le mode de chiffrement 2 en mode natif. 
 
-Si vos serveurs Exchange exécutent une version antérieure du système d’exploitation, vérifiez que la version installée du client RMS prend en charge le mode de chiffrement 2. Pour cela, comparez le numéro de version du fichier Windows\System32\Msdrm.dll installé aux numéros de version répertoriés dans les articles suivants de la Base de connaissances. Si le numéro de version du fichier installé est égal ou supérieur aux numéros de version répertoriés, aucune action supplémentaire n’est nécessaire. Si le numéro de version du fichier installé est inférieur, téléchargez le correctif indiqué dans l’article et installez-le.
-
-- Windows Server 2008 : [https://support.microsoft.com/kb/2627272](https://support.microsoft.com/kb/2627272) 
-
-- Windows Server 2008 R2 : [https://support.microsoft.com/kb/2627273](https://support.microsoft.com/kb/2627273)
 
 > [!IMPORTANT]
 > Si ces versions ou des versions ultérieures d’Exchange et du client MSDRM ne sont pas installées, vous ne pouvez pas configurer Exchange pour utiliser le connecteur. Vérifiez que ces versions sont installées avant de continuer.
@@ -182,7 +177,7 @@ Pour utiliser le connecteur RMS, ces serveurs SharePoint doivent exécuter l'une
 
 -   SharePoint Server 2016
 
--   SharePoint Server 2013
+-   SharePoint Server 2013
 
 -   SharePoint Server 2010
 
@@ -193,7 +188,7 @@ Un serveur SharePoint 2016 ou SharePoint 2013 doit également exécuter une ve
 >
 > Vous pouvez vérifier la version du client en consultant le numéro de version du fichier MSIPC.dll, situé sous **\Program Files\Active Directory Rights Management Services Client 2.1**. La boîte de dialogue Propriétés affiche le numéro de version du client MSIPC 2.1.
 
-Les serveurs exécutant SharePoint 2010 doivent disposer d’une version du client MSDRM qui inclut la prise en charge du mode de chiffrement RMS 2. La version minimale prise en charge dans Windows Server 2008 est incluse dans le correctif logiciel que vous pouvez télécharger depuis la page [Longueur de clé RSA augmentée à 2 048 bits pour AD RMS dans Windows Server 2008 R2 et Windows Server 2008](https://support.microsoft.com/kb/2627272), et la version minimale pour Windows Server 2008 R2 est téléchargeable à partir de la page [Longueur de clé RSA augmentée à 2 048 bits pour AD RMS dans Windows 7 ou Windows Server 2008 R2](https://support.microsoft.com/kb/2627273). Notez que Windows Server 2012 et Windows Server 2012 R2 prennent nativement en charge le mode de chiffrement 2.
+Les serveurs exécutant SharePoint 2010 doivent disposer d’une version du client MSDRM qui inclut la prise en charge du mode de chiffrement RMS 2. Notez que Windows Server 2012 et Windows Server 2012 R2 prennent nativement en charge le mode de chiffrement 2.
 
 ### <a name="to-configure-sharepoint-servers-to-use-the-connector"></a>Configuration de serveurs SharePoint afin d'utiliser le connecteur
 
@@ -211,7 +206,7 @@ Les serveurs exécutant SharePoint 2010 doivent disposer d’une version du cli
 
     -   Si vous utilisez SharePoint 2016 ou SharePoint 2013, modifiez manuellement le Registre à l’aide des informations contenues dans [Paramètres du Registre pour le connecteur RMS](rms-connector-registry-settings.md) pour ajouter manuellement des paramètres du Registre sur les serveurs. 
 
-3.  Activez IRM dans SharePoint. Pour plus d'informations, voir [Configurer la gestion des droits relatifs à l’information (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) dans la bibliothèque SharePoint.
+3.  Activez IRM dans SharePoint. Pour plus d’informations, consultez [Configurer la gestion des droits relatifs à l’information (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) dans la bibliothèque SharePoint.
 
     Dans le cadre de ces instructions, vous devez configurer SharePoint pour utiliser le connecteur en spécifiant l’option **Utiliser ce serveur RMS**, puis entrer l’URL de connecteur d’équilibrage de charge que vous avez configurée. Saisissez le préfixe de protocole (HTTP:// ou HTTPS://) ainsi que le nom du connecteur, tel que défini dans le système DNS pour l'adresse d'équilibrage de charge. Par exemple, si le nom de votre connecteur est https :\//connector.contoso.com, votre configuration ressemble à l’image suivante :
 

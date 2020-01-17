@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 313d99a4d0d68417da7d18947a4e81278aca2fef
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: e8ce88ed734177fd35c733f115f157c94b70627d
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935338"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117933"
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Serveurs locaux prenant en charge la protection des données Azure Rights Management
 
@@ -32,7 +32,7 @@ Pour utiliser ce connecteur, vous devez configurer la synchronisation des annuai
 
     -   Exchange Server 2016
 
-    -   Exchange Server 2013
+    -   Exchange Server 2013
 
     -   Exchange Server 2010
 
@@ -52,12 +52,11 @@ Pour utiliser ce connecteur, vous devez configurer la synchronisation des annuai
 
     -   Windows Server 2012
 
-    > [!NOTE]
-    > Les serveurs de fichiers qui exécutent Windows Server 2008 R2 n’ont pas d’action de tâche de gestion de fichiers intégrée pour appliquer la protection de Rights Management. Par conséquent, vous ne pouvez pas utiliser le connecteur Rights Management pour ce scénario. En revanche, vous pouvez utiliser l’infrastructure de classification des fichiers et Azure RMS sur ces systèmes d’exploitation si vous configurez une tâche de gestion de fichiers personnalisée de sorte qu’elle exécute un exécutable ou un script capable de protéger les fichiers à l’aide d’Azure RMS. Par exemple, un script Windows PowerShell qui utilise les [applets de commande AzureInformationProtection](/powershell/azureinformationprotection/vlatest/aip).
+
     > 
     > Vous pouvez également utiliser ces applets de commande avec des serveurs exécutant des versions ultérieures de Windows Server, l’avantage étant que ces applets de commande peuvent protéger tous les types de fichiers. Le connecteur RMS protège uniquement les fichiers Office. Pour obtenir des instructions, consultez [Protection RMS avec l’Infrastructure de classification des fichiers &#40;ICF&#41; de Windows Server](./rms-client/configure-fci.md).
 
-Le connecteur Rights Management est pris en charge sur Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 et Windows Server 2008 R2.
+Le connecteur Rights Management est pris en charge sur Windows Server 2016, Windows Server 2012 R2 et Windows Server 2012.
 
 Pour plus d’informations sur la configuration du connecteur Rights Management pour ces serveurs locaux, consultez [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md).
 

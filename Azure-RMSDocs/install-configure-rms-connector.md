@@ -13,16 +13,16 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1b1f98a5d01d90cc25d6ffc378201ae90711eead
-ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
+ms.openlocfilehash: 4d4ba8a3093e1bef32e42b562c93e787e603614b
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74882046"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117984"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installation et configuration du connecteur Azure Rights Management
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*S’applique à : [Azure information protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2016, windows server 2012 R2 et windows server 2012*
 
 Utilisez les informations suivantes pour vous aider à installer et à configurer le connecteur Azure Rights Management (RMS). Ces procédures couvrent les étapes 1 à 4 de [Déploiement du connecteur Azure Rights Management](deploy-rms-connector.md).
 
@@ -113,7 +113,7 @@ Exécutez les actions suivantes sur la dernière page de l'Assistant, puis cliqu
 -   S'il s'agit de la deuxième (ou dernière) instance du connecteur, sélectionnez **Lancer la console Administrateur du connecteur pour autoriser des serveurs**.
 
 > [!TIP]
-> À ce stade, vous pouvez réaliser un test de vérification pour vous assurer que les services Web du connecteur RMS sont opérationnels :
+> À ce stade, vous pouvez réaliser un test de vérification pour vous assurer que les services Web du connecteur RMS sont opérationnels :
 >
 > -   Dans un navigateur web, accédez à l’URL **http://&lt;adresse_connecteur&gt;/_wmcs/certification/servercertification.asmx**, en remplaçant *&lt;adresse_connecteur&gt;* par l’adresse ou le nom du serveur sur lequel le connecteur RMS est installé. Si la connexion fonctionne, la page **ServerCertificationWebService** apparaît.
 
@@ -149,7 +149,7 @@ Voici quelques informations relatives aux différents rôles de serveur :
 
 -   Pour les serveurs exécutant Exchange : vous devez spécifier un groupe de sécurité. Notez que vous pouvez utiliser le groupe par défaut (**Serveurs Exchange**) créé et mis à jour automatiquement par Exchange, regroupant tous les serveurs Exchange de la forêt.
 
--   Pour les serveurs exécutant SharePoint :
+-   Pour les serveurs exécutant SharePoint :
 
     -   Si un serveur SharePoint 2010 est configuré pour s'exécuter en tant que système Local (il n'utilise pas de compte de service), créez manuellement un groupe de sécurité dans les services de domaine Active Directory, puis ajoutez l'objet de nom d'ordinateur pour le serveur dans cette configuration à ce groupe.
 
@@ -176,7 +176,7 @@ Le nom de serveur URL du connecteur peut être n'importe quel nom défini dans u
 > [!IMPORTANT]
 > Nous vous conseillons de ne pas modifier ce nom une fois les serveurs Exchange ou SharePoint configurés pour utiliser le connecteur, car vous devriez alors supprimer ces serveurs de l'ensemble des configurations de gestion des droits relatifs à l'information pour ensuite les reconfigurer.
 
-Une fois le nom créé dans le système DNS et associé à une adresse IP, configurez l'équilibrage de charge pour cette adresse, afin de rediriger le trafic vers les serveurs du connecteur. Vous pouvez utiliser n'importe quel programme d'équilibrage de charge basé sur une adresse IP, notamment la fonctionnalité Équilibrage de la charge réseau (NLB) de Windows Server. Pour plus d'informations, consultez le [guide de déploiement de l’équilibrage de charge](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
+Une fois le nom créé dans le système DNS et associé à une adresse IP, configurez l'équilibrage de charge pour cette adresse, afin de rediriger le trafic vers les serveurs du connecteur. Vous pouvez utiliser n'importe quel programme d'équilibrage de charge basé sur une adresse IP, notamment la fonctionnalité Équilibrage de la charge réseau (NLB) de Windows Server. Pour plus d’informations, consultez le [guide de déploiement de l’équilibrage de charge](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
 
 Utilisez les paramètres suivants pour configurer le cluster NLB :
 
@@ -223,19 +223,19 @@ Si vos serveurs de connecteur sont installés sur un réseau qui ne dispose pas 
 4.  Fermez l'éditeur de registre, puis redémarrez le serveur ou exécutez une commande IISReset pour redémarrer IIS.
 
 ## <a name="installing-the-rms-connector-administration-tool-on-administrative-computers"></a>Installation de l'outil d'administration du connecteur RMS sur les ordinateurs d'administration
-Vous pouvez exécuter l'outil d'administration du connecteur RMS à partir d'un ordinateur sur lequel le connecteur RMS n'est pas installé, dans la mesure où cet ordinateur est conforme à la configuration suivante :
+Vous pouvez exécuter l'outil d'administration du connecteur RMS à partir d'un ordinateur sur lequel le connecteur RMS n'est pas installé, dans la mesure où cet ordinateur est conforme à la configuration suivante :
 
--   Un ordinateur physique ou virtuel exécutant Windows Server 2012 ou Windows Server 2012 R2 (toutes éditions), Windows Server 2008 R2 ou Windows Server 2008 R2 Service Pack 1 (toutes éditions), Windows 8.1, Windows 8 ou Windows 7.
+-   Un ordinateur physique ou virtuel exécutant Windows Server 2012 ou Windows Server 2012 R2 (toutes éditions), Windows 8.1, Windows 8.
 
--   1 Go de RAM minimum.
+-   1 Go de RAM minimum ;
 
--   64 Go d'espace disque minimum.
+-   64 Go d'espace disque minimum ;
 
--   Au moins une interface réseau.
+-   au moins une interface réseau ;
 
 -   Accès à Internet via un pare-feu (ou un proxy Web).
 
-Exécutez les fichiers suivants pour installer l'outil d'administration du connecteur RMS :
+Exécutez les fichiers suivants pour installer l'outil d'administration du connecteur RMS :
 
 -   Pour un ordinateur 32 bits : RMSConnectorAdminToolSetup_x86.exe
 

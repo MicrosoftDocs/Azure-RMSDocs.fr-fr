@@ -1,9 +1,9 @@
 ---
 title: Migration de clé protégée par HSM vers une autre clé protégée par HSM - AIP
 description: Les instructions qui font partie du chemin de migration de AD RMS à Azure Information Protection, et s’appliquent uniquement si votre clé de AD RMS est protégée par HSM et que vous souhaitez migrer vers Azure Information Protection à l’aide d’une clé de locataire protégée par HSM dans Azure Key Vault.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a8c52a86e3f19302c86c6022f734f222b0d1ce97
-ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
+ms.openlocfilehash: 888da129f3b6897303cb2731d23afc52f6261cce
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303599"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117950"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Étape 2 : Migration de clé protégée par HSM à clé protégée par HSM
 

@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7325f81ff67cf8fe23548a966c55ef42a1cf00f3
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: c3babbe6a0470df498567f6614362e87c14a24cf
+ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117729"
+ms.lasthandoff: 01/20/2020
+ms.locfileid: "76281596"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
 
@@ -75,23 +75,6 @@ Utilisez les informations suivantes pour découvrir les nouveautés et les modif
 >  
 > Pour le support technique, consultez les informations dans [Options de support technique et ressources de la communauté](../information-support.md#support-options-and-community-resources). Nous vous invitons également à contacter l’équipe Azure Information Protection sur son [site Yammer](https://www.yammer.com/askipteam/).
 
-## <a name="version-154590"></a>Version 1.54.59.0
-
-**Publication**: 1/29/2020
-
-**Correctifs** :
-
-- Problème dans lequel les fichiers protégés par IQP affichent les options de **récupération** et/ou d' **enregistrement sous** après la suppression de la protection. 
-
-- De nombreux textes d’info-bulles de fonctionnalités de produit ont été améliorés pour plus de clarté et de compréhension. 
-
-- Les problèmes de stabilité du client lors de l’utilisation de fichiers PDF protégés sont résolus. 
-
-- Les fichiers temporaires déchiffrés ne sont plus accessibles aux utilisateurs à partir du dossier Temp. 
-
-- Les étiquettes de protection sont maintenant supprimées comme prévu si l’étiquette est supprimée de l’e-mail pendant le processus de création de l’e-mail. 
-
-Cette version comprend également des correctifs généraux pour la stabilité et les performances.
 
 ## <a name="version-154330"></a>Version 1.54.33.0
 

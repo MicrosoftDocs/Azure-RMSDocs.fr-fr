@@ -4,19 +4,19 @@ description: Vous pouvez ajouter la prise en charge de différentes langues pour
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 1/18/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ceb0a7d86be6816d3120182f42510f94c2d11473
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 3ffb6b844d73d1b2b7f21651123f10599aeef562
+ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742953"
+ms.lasthandoff: 01/20/2020
+ms.locfileid: "76281630"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Guide pratique pour configurer des étiquettes et des modèles dans différentes langues dans Azure Information Protection
 
@@ -46,7 +46,7 @@ Vous pouvez aussi configurer des modèles dans différentes langues quand l’un
 
 - Vous n’avez pas d’abonnement qui prend en charge les étiquettes, vous pouvez uniquement créer et gérer des modèles dans le portail Azure.
 
-Sélectionnez les langues qui correspondent à la langue de vos utilisateurs pour Office et Windows. Ces noms et descriptions d’étiquettes s’affichent alors respectivement dans la barre Azure Information Protection des applications Office et dans la boîte de dialogue **Classer et protéger – Azure Information Protection**. Pour plus d’informations sur la langue choisie, consultez la section [Comment le client Azure Information Protection détermine la langue à afficher](#how-the-azure-information-protection-client-determines-the-language-to- display) de cette page. 
+Sélectionnez les langues qui correspondent à la langue de vos utilisateurs pour Office et Windows. Ces noms et descriptions d’étiquettes s’affichent alors respectivement dans la barre Azure Information Protection des applications Office et dans la boîte de dialogue **Classer et protéger – Azure Information Protection**. Pour plus d’informations sur la langue choisie, consultez la section [Comment le client Azure Information Protection détermine la langue à afficher](#how-the-azure-information-protection-client-determines-the-language-to-display) de cette page. 
 
 ## <a name="to-configure-labels-and-templates-for-different-languages"></a>Pour configurer des étiquettes et des modèles dans différentes langues
 

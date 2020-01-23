@@ -1,34 +1,34 @@
 ---
 title: 'Démarrage rapide : rechercher les informations sensibles à l’aide du scanneur Azure Information Protection'
 description: Utilisez le scanneur Azure Information Protection pour rechercher les informations sensibles consignées dans les fichiers stockés localement.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/12/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/13/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 22bd446f940e176c3cae82f7e629cb93f2456bc1
-ms.sourcegitcommit: 6393b971f56a1c666f82777d38ea3ca853c60342
+ms.openlocfilehash: 6cb4739d0da222f8748c4f4684290b7193093bcc
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73979975"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960441"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Dans ce démarrage rapide, vous allez installer et configurer le scanneur Azure Information Protection pour trouver les informations sensibles consignées dans les fichiers stockés dans un magasin de données local. Par exemple, un dossier local, un partage réseau ou SharePoint Server.
+Lors de ce démarrage rapide, vous autoriserez SharePoint à permettre l’analyse, et vous installerez et configurerez le scanneur Azure Information Protection pour trouver des informations sensibles dans vos fichiers stockés dans un magasin de données local. Par exemple, un dossier local, un partage réseau ou SharePoint Server.
 
 > [!NOTE]
 > Vous pouvez utiliser ce guide de démarrage rapide avec la version en disponibilité générale actuelle du client Azure Information Protection (classique) ou la version en disponibilité générale du client d’étiquetage unifié Azure Information Protection, qui inclut une préversion du scanneur.
 >  
 > Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 
-Cette configuration prend moins de 10 minutes.
+Cette configuration prend moins de 15 minutes.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -52,6 +52,8 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
 
 Pour obtenir la liste complète des prérequis d’Azure Information Protection, voir [Prérequis d’Azure Information Protection](requirements.md).
 
+5. Accès aux autorisations de stratégie SharePoint si vous choisissez d’autoriser une analyse SharePoint.
+
 ## <a name="prepare-a-test-folder-and-file"></a>Préparer un dossier et un fichier de test
 
 Pour effectuer un test initial afin de confirmer que le scanneur fonctionne :
@@ -59,6 +61,29 @@ Pour effectuer un test initial afin de confirmer que le scanneur fonctionne :
 1. Créez un dossier local sur votre ordinateur. Par exemple, **TestScanner** sur votre lecteur C local.
 
 2. Créez et enregistrez un document Word dans ce dossier, contenant le texte **Carte de crédit : 4242-4242-4242-4242**.
+
+## <a name="permission-users-to-scan-sharepoint-repositories"></a>Autoriser les utilisateurs à analyser des référentiels SharePoint
+
+Vous pouvez utiliser le scanneur dans tous les référentiels SharePoint en spécifiant l’URL du site. Azure Information Protection découvrira tous les sites sous cette URL et les analysera.
+
+Pour activer les analyses des référentiels, ajoutez les autorisations SharePoint suivantes pour l’utilisateur que vous souhaitez utiliser pour l’analyse :
+
+1. Ouvrez SharePoint et sélectionnez **Stratégie d’autorisation**, puis sélectionnez **Ajouter un niveau de stratégie d’autorisation**. 
+
+    ![Créer un niveau de stratégie d’autorisation pour un utilisateur spécifique](./media/aip-quick-set-sp-permissions.png)
+
+
+2. Sous **Autorisations de collection de sites**, sélectionnez l’option **Auditeur du collecteur de sites**.   
+
+3. Sous **Autorisations**, sélectionnez **Accorder** pour l’option **Afficher les pages de l’application** et **enregistrez** vos modifications.  
+
+    ![Sélectionner les options Auditeur du collecteur de sites pour un utilisateur spécifique](./media/aip-quick-set-site-permissions.png)
+
+4. Après avoir confirmé vos modifications, cliquez sur **OK** dans la notice **Stratégie de l’application web** qui s’ouvre,   
+
+5. Dans la page **Ajouter des utilisateurs**, ajoutez l’utilisateur que vous souhaitez utiliser pour l’analyse dans le champ **Choisir des utilisateurs**. Sous **Choisir des autorisations**, sélectionnez l’option **Collection de sites**, puis cliquez sur **Terminer** pour appliquer les autorisations créées à l’utilisateur ajouté ou sélectionné. 
+
+    ![Ajouter un utilisateur à de nouvelles options d’autorisation](./media/aip-quick-set-user-permissions.png)
 
 ## <a name="configure-a-profile-for-the-scanner"></a>Configurer un profil pour le scanneur
 

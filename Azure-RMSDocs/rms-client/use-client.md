@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/09/2020
+ms.date: 1/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: b452dcd3e212316d73c75e4075b471c5e363a86a
-ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
+ms.openlocfilehash: 3e0ed6d49a49604cfc666e1cda5390c480dc192f
+ms.sourcegitcommit: 46dbd8ea769c0c5549a008d7464c17032a1f7130
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281613"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755797"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -43,9 +43,9 @@ Dans la mesure du possible, utilisez l’un des clients d’étiquetage, car les
 Le choix de l’étiquetage du client pour vos ordinateurs Windows peut être influencé par le portail de gestion que vous utilisez :
 
 - Le client d’étiquetage d’Office intégré et le client d’étiquetage unifié Azure Information Protection sont téléchargés des étiquettes et des paramètres de stratégie à partir des centres d’administration suivants : 
-    - Centre de sécurité et conformité Office 365
+    - Office 365 Centre de sécurité et de conformité
     - Centre de sécurité Microsoft 365
-    - Centre de conformité Microsoft 365
+    - Centre de conformité Microsoft 365
 
 - Le client Azure Information Protection (Classic) télécharge les paramètres d’étiquette et de stratégie à partir du Portail Azure.
 
@@ -85,15 +85,17 @@ Si vous disposez d’un ordinateur Windows qui exécute les applications Office 
 
 Utilisez le tableau suivant pour comparer les fonctionnalités prises en charge par les trois clients d’étiquetage pour les ordinateurs Windows.
 
-Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées à Office sur différentes plateformes de système d’exploitation (Windows, MacOS, iOS et Android) et pour le Web, consultez la documentation Office, [prise en charge des fonctionnalités d’étiquette de sensibilité dans les applications](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps).
+Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées à Office sur différentes plateformes de système d’exploitation (Windows, MacOS, iOS et Android) et pour le Web, consultez la documentation de conformité Microsoft 365, [prise en charge des fonctionnalités d’étiquette de sensibilité dans les applications](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). Cette documentation comprend également les numéros de version Office ou les informations de canal Office Update pour les fonctionnalités prises en charge.
 
 |Composant|Client classique|Client d’étiquetage unifié|Client d’étiquetage Office intégré|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Étiquetage manuel :| **Oui** | **Oui** |**Oui** |
 |Étiquette par défaut :| **Oui** | **Oui** | **Oui** |
-|Étiquetage automatique ou recommandé :| **Oui** | **Oui** | Non |
+|Étiquetage automatique ou recommandé : <br />-Pour Word, Excel, PowerPoint| **Oui** | **Oui** | **Oui** |
+|Étiquetage automatique ou recommandé :<br />-Pour Outlook| **Oui** | **Oui** | Non |
 |Étiquetage obligatoire :| **Oui** | **Oui** | Non |
-|Autorisations définies par l’utilisateur pour une étiquette :<br />-Ne pas transférer pour les e-mails<br />-Autorisations personnalisées pour Word, Excel, PowerPoint, Explorateur de fichiers| **Oui** | **Oui** | Non |
+|Autorisations définies par l’utilisateur pour une étiquette : <br />-Ne pas transférer pour les e-mails| **Oui** | **Oui** | **Oui** |
+|Autorisations définies par l’utilisateur pour une étiquette : <br />-Autorisations personnalisées pour Word, Excel, PowerPoint, Explorateur de fichiers| **Oui** | **Oui** | Non |
 |Prise en charge multilingue des étiquettes :| **Oui** | **Oui** |**Oui** |
 |Héritage d’étiquette à partir des pièces jointes aux e-mails :| **Oui** | **Oui**  |Non |
 |Les personnalisations qui incluent :<br />- Étiquette par défaut pour e-mail<br />-Messages contextuels dans Outlook <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| **Oui** <sup>1</sup> | **Oui** <sup>2</sup> | Non |
@@ -102,7 +104,7 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Les autorisations personnalisées sont définies indépendamment d’une étiquette :| **Oui** | **Oui** <sup>3</sup>| Non |
 |Barre Information Protection dans les applications Office :| **Oui** | **Oui**| Non |
 |Marquages visuels en tant qu’action d’étiquette (en-tête, pied de page, filigrane) :| **Oui** | **Oui** | **Oui**|
-|Marquages visuels par application :| **Oui** | **Yes* | Non |
+|Marquages visuels par application :| **Oui** | **Oui* | Non |
 |Marquages visuels dynamiques avec des variables :| **Oui** | **** | Non |
 |Étiquette avec l’Explorateur de fichiers :| **Oui** | **Oui** | Non |
 |Visionneuse pour les fichiers protégés (texte, images, PDF,. pfile) :| **Oui** | **Oui** | Non|

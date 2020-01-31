@@ -4,7 +4,7 @@ description: Migrez Azure Information Protection étiquettes vers des étiquette
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/21/2020
+ms.date: 1/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 382688a769513ba8540f844b86906ef078cee754
-ms.sourcegitcommit: 9bac5032d7251057f84a0e3ab0aba0e48a77b5f8
+ms.openlocfilehash: a62fbe465eda5dec253da938878f343bb00b8173
+ms.sourcegitcommit: 200c710a675180cc0488defff299f2cc3c66922f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517641"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812583"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Comment migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée
 
@@ -215,9 +215,9 @@ Pour vérifier si les clients et les services que vous utilisez prennent en char
     
     Ce service prend en charge les étiquettes avant la migration vers le magasin d’étiquetage unifié et après la migration, selon la logique suivante :
     
-    - Si les centres d’administration ont les mêmes étiquettes que celles de l’Portail Azure : les étiquettes unifiées sont récupérées à partir des centres d’administration. Pour que ces étiquettes puissent être sélectionnées dans Cloud App Security, au moins une étiquette doit être publiée sur au moins un utilisateur.
+    - Si les centres d’administration ont des étiquettes de sensibilité, ces étiquettes sont récupérées à partir des centres d’administration. Pour que ces étiquettes puissent être sélectionnées dans Cloud App Security, au moins une étiquette doit être publiée sur au moins un utilisateur.
     
-    - Si les centres d’administration n’ont pas les mêmes étiquettes que celles de l’Portail Azure : les étiquettes unifiées ne sont pas utilisées à partir des centres d’administration, et à la place, les étiquettes sont récupérées à partir de la Portail Azure.
+    - Si les centres d’administration n’ont pas d’étiquette de sensibilité, Azure Information Protection étiquettes sont récupérées à partir du Portail Azure.
 
 - Services d’éditeurs de logiciels et de développeurs qui utilisent le [SDK Microsoft Information Protection](https://docs.microsoft.com/information-protection/develop/overview).
 

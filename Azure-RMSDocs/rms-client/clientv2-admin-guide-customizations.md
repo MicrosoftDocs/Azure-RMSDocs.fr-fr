@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b18beab3c6a2dd3b01991fdb9755b943ec62fe5a
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 8e91257484ccb148475d16e3fd5de2905b8691c3
+ms.sourcegitcommit: d9465ec12b78c24d4d630295d4e5ffae0ba8d647
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117695"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77045018"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -32,7 +32,7 @@ Ces paramètres requièrent la modification du registre ou la spécification de 
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Comment configurer des paramètres avancés pour le client à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell
 
-Quand vous utilisez Office 365 Centre de sécurité et de conformité PowerShell, vous pouvez configurer des paramètres avancés qui prennent en charge les personnalisations des étiquettes et des stratégies d’étiquette. Exemple :
+Quand vous utilisez Office 365 Centre de sécurité et de conformité PowerShell, vous pouvez configurer des paramètres avancés qui prennent en charge les personnalisations des étiquettes et des stratégies d’étiquette. Par exemple :
 
 - Le paramètre permettant d’afficher la barre d’Information Protection dans les applications Office est un ***paramètre avancé***de la stratégie d’étiquette.
 - Le paramètre permettant de spécifier une couleur d’étiquette est un ***paramètre avancé d’étiquette***.
@@ -154,7 +154,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-label](https://docs.microsof
 
 |Paramètre|Scénario et instructions|
 |----------------|---------------|
-|couleur|[Spécifier une couleur pour l’étiquette](#specify-a-color-for-the-label)|
+|color|[Spécifier une couleur pour l’étiquette](#specify-a-color-for-the-label)|
 |customPropertiesByLabel|[Appliquer une propriété personnalisée lorsqu’une étiquette est appliquée](#apply-a-custom-property-when-a-label-is-applied)|
 |DefaultSubLabelId|[Spécifier une sous-étiquette par défaut pour une étiquette parent](#specify-a-default-sublabel-for-a-parent-label) 
 |labelByCustomProperties|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -243,7 +243,7 @@ Vous pouvez modifier ce comportement par défaut pour une stratégie d’étique
 
 Utilisez le tableau suivant pour identifier la valeur de chaîne à spécifier :
 
-| Valeur chaîne| Client| Scanner|
+| Valeur de chaîne| Client| Scanneur|
 |-------------|-------|--------|
 |\*|Valeur par défaut : appliquer la protection à tous les types de fichiers|Appliquer la protection à tous les types de fichiers|
 |\<valeur null >| Appliquer la protection aux types de fichiers Office et aux fichiers PDF| Valeur par défaut : appliquer la protection aux types de fichiers Office et aux fichiers PDF|
@@ -738,7 +738,7 @@ Pour modifier ce comportement afin que les types d’informations sensibles dét
 
 Si vous définissez ce paramètre de client avancé, les informations d’audit peuvent toujours être envoyées à partir du client, mais les informations sont limitées à la création de rapports lorsqu’un utilisateur a accédé au contenu étiqueté.
 
-Exemple :
+Par exemple :
 
 - Avec ce paramètre, vous pouvez voir qu’un utilisateur a accédé à Financial. docx qui est étiqueté **confidentiel \ Sales**.
 
@@ -813,7 +813,7 @@ Notez que ce paramètre ne supprime pas l’étiquette d’origine du document n
 
 Exigence : les documents qui ont une étiquette des îlots sécurisés « confidentiel » doivent être réétiquetés comme « confidentiels » par Azure Information Protection.
 
-Exemple :
+Dans cet exemple :
 
 - L’étiquette Secure Islands s’appelle **Confidentiel** et est stockée dans la propriété personnalisée nommée **Classification**.
 
@@ -831,7 +831,7 @@ Exemple de commande PowerShell, où votre étiquette est nommée « Confidentia
 
 Exigence : les documents intitulés « sensibles » par les îles sécurisées doivent être renommés comme « hautement confidentiels » par Azure Information Protection.
 
-Exemple :
+Dans cet exemple :
 
 - L’étiquette Secure Islands s’appelle **Sensible** et est stockée dans la propriété personnalisée nommée **Classification**.
 
@@ -849,7 +849,7 @@ Exemple de commande PowerShell, où votre étiquette est nommée « hautement c
 
 Exigence : vous avez deux étiquettes de îles sécurisées qui incluent le mot « Internal » et vous souhaitez que les documents qui ont l’une de ces étiquettes des îlots sécurisés soient réétiquetés comme « général » par le client d’étiquetage unifié Azure Information Protection.
 
-Exemple :
+Dans cet exemple :
 
 - L’étiquette Secure Islands inclut le mot **Interne** et est stockée dans la propriété personnalisée nommée **Classification**.
 
@@ -907,7 +907,7 @@ Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-s
 
 Il peut y avoir des scénarios lorsque vous souhaitez appliquer une ou plusieurs propriétés personnalisées à un document ou à un message électronique en plus des métadonnées appliquées par une étiquette de sensibilité.
 
-Exemple :
+Par exemple :
 
 - Vous êtes en train de [migrer à partir d’une autre solution d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions), telle que des îlots sécurisés. Pour l’interopérabilité au cours de la migration, vous souhaitez que les étiquettes de sensibilité appliquent également une propriété personnalisée utilisée par l’autre solution d’étiquetage.
 
@@ -933,7 +933,7 @@ Cette configuration nécessite que vous spécifiiez un paramètre avancé nommé
 
 Exigence : les documents étiquetés comme étant « confidentiels » par le client d’étiquetage unifié Azure Information Protection doivent avoir la propriété personnalisée supplémentaire nommée « classification » avec la valeur « secret ».
 
-Exemple :
+Dans cet exemple :
 
 - L’étiquette sensibilité est nommée **confidentiel** et crée une propriété personnalisée nommée **classification** avec la valeur **secret**.
 
@@ -991,7 +991,7 @@ Lorsque vous ajoutez une sous-étiquette à une étiquette, les utilisateurs ne 
 
 - Clé : **DefaultSubLabelId**
 
-- Valeur : GUID de la sous-étiquette \<
+- Valeur : GUID de la sous-étiquette \<>
 
 Exemple de commande PowerShell, où votre étiquette parente est nommée « Confidential » et la sous-étiquette « all employees » a le GUID 8faca7b8-8d20-48A3-8ea2-0f96310a848e :
 
@@ -1016,7 +1016,7 @@ Exemple de commande PowerShell, où votre étiquette est nommée « public »�
 
     Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
-## <a name="sign-in-as-a-different-user"></a>Se connecter avec l’identité d’un autre utilisateur
+## <a name="sign-in-as-a-different-user"></a>Sign in as a different user
 
 Dans un environnement de production, les utilisateurs n’ont généralement pas besoin de se connecter en tant qu’utilisateur différent lorsqu’ils utilisent le client d’étiquetage unifié Azure Information Protection. Toutefois, en tant qu’administrateur, vous devrez peut-être vous connecter sous un autre nom d’utilisateur pendant une phase de test. 
 
@@ -1070,10 +1070,6 @@ Instructions :
 
 7. Si le compte d’utilisateur choisi est un compte qui se connecte généralement à Internet, activez à nouveau l’envoi des données d’audit en affectant à la valeur **EnableAudit** la valeur **true**.
 
-8. Pour que l’ordinateur déconnecté protège des fichiers, reprotégez les fichiers, supprimez la protection des fichiers ou Inspectez les fichiers protégés : sur l’ordinateur déconnecté, exécutez l’applet de commande [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) avec le paramètre *DelegatedUser* et spécifiez le compte d’utilisateur de l’étape 1 pour définir le contexte de l’utilisateur. Exemple :
-    
-        Set-AIPAuthentication -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser offlineuser@contoso.com
-
 N’oubliez pas que si un utilisateur de cet ordinateur sélectionne l’option **Réinitialiser les paramètres** dans [aide et commentaires](clientv2-admin-guide.md#help-and-feedback-section), cette action supprime les fichiers de stratégie et rend le client inopérant tant que vous n’avez pas remplacé manuellement les fichiers ou que le client ne se connecte pas à Internet et télécharge les fichiers.
 
 Si votre ordinateur déconnecté exécute le scanneur Azure Information Protection, vous devez effectuer des étapes de configuration supplémentaires. Pour plus d’informations, voir [restriction : le serveur du scanneur ne peut pas disposer d’une connexion Internet](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) à partir des instructions de déploiement de l’analyseur.
@@ -1084,7 +1080,7 @@ Par défaut, le Azure Information Protection client d’étiquetage unifié écr
  
 Pour modifier le niveau de journalisation de ces fichiers, localisez le nom de la valeur suivante dans le registre et définissez les données de la valeur sur le niveau de journalisation requis :
 
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\LogLevel**
+**HKEY_CURRENT_USER \SOFTWARE\Microsoft\MSIP\LogLevel**
 
 Définissez le niveau de journalisation sur l'une des valeurs suivantes :
 
@@ -1102,7 +1098,7 @@ Définissez le niveau de journalisation sur l'une des valeurs suivantes :
 
 Ce paramètre de registre ne modifie pas les informations qui sont envoyées à Azure Information Protection pour la [création de rapports centraux](../reports-aip.md).
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 Maintenant que vous avez personnalisé le client d’étiquetage unifié Azure Information Protection, consultez les ressources suivantes pour obtenir des informations supplémentaires dont vous pouvez avoir besoin pour prendre en charge ce client :
 
 - [Fichiers du client et journalisation de l’utilisation](client-admin-guide-files-and-logging.md)

@@ -4,7 +4,7 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/04/2020
+ms.date: 02/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 01852416ece6046ad5132e8dd36ff2ee931ae393
-ms.sourcegitcommit: eb04292842a97c6813dbd9e5310db2e1652da011
+ms.openlocfilehash: 3f30cd7aea2498c101937aacc8f3cbf3ffdc6364
+ms.sourcegitcommit: d9465ec12b78c24d4d630295d4e5ffae0ba8d647
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034295"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77044969"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -42,6 +42,7 @@ Les préversions ne doivent pas être déployées pour des utilisateurs finaux s
 
 |Version du client|Date de publication|
 |--------------|-------------|
+|2.2.14.0|07/15/2019|
 |2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
 
@@ -181,59 +182,6 @@ Pris en charge jusqu’à 03/03/2020
 - Le client peut télécharger sa stratégie et afficher les étiquettes de sensibilité actuelles. Ce correctif est nécessaire après la mise à niveau à partir d’une version précédente et vous n’avez pas configuré de types d’informations personnalisées dans votre centre d’étiquetage.
 
 - Améliorations générales des performances et de la stabilité.
-
-## <a name="version-22140"></a>Version 2.2.14.0
-
-**Publication**: 07/15/2019
-
-Pris en charge jusqu’à 02/06/2020
-
-**Nouvelles fonctionnalités :**
-
-- Prise en charge des [Paramètres avancés](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) que vous configurez avec PowerShell pour le centre de sécurité et de conformité.
-    
-    Ces paramètres avancés prennent en charge les personnalisations suivantes :
-     - [Afficher la barre Information Protection dans les applications Office](clientv2-admin-guide-customizations.md#display-the-information-protection-bar-in-office-apps)
-    - [Exempter les messages Outlook de l’étiquetage obligatoire](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
-    - [Activer la classification recommandée dans Outlook](clientv2-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
-    - [Définir une autre étiquette par défaut pour Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
-    - [Supprimer « Pas maintenant » pour les documents quand l’étiquetage obligatoire est utilisé](clientv2-admin-guide-customizations.md#remove-not-now-for-documents-when-you-use-mandatory-labeling)
-    - [Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](clientv2-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
-    - [Désactiver les autorisations personnalisées dans l’Explorateur de fichiers](clientv2-admin-guide-customizations.md#disable-custom-permissions-in-file-explorer)
-    - [Pour les fichiers protégés avec des autorisations personnalisées, toujours afficher des autorisations personnalisées pour les utilisateurs dans l’Explorateur de fichiers](clientv2-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
-    - [Pour les e-mails avec pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
-    - [Ajouter « Signaler un problème » pour les utilisateurs](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
-    - [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - [Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
-    - [Envoyer les correspondances de type d’informations à Azure Information Protection Analytics](clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics)
-    - [Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-    - [Appliquer une propriété personnalisée lorsqu’une étiquette est appliquée](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
-    - [Configurer une étiquette pour appliquer la protection S/MIME dans Outlook](clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
-    - [Spécifier une sous-étiquette par défaut pour une étiquette parent](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
-    - [Spécifier une couleur pour l’étiquette](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
-
-- Prise en charge des étiquettes configurées pour des autorisations définies par l’utilisateur pour Word, Excel, PowerPoint et l’Explorateur de fichiers. Pour plus d’informations, consultez la section [autoriser les utilisateurs à attribuer des autorisations](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions) dans la documentation Office.
-
-- Modifications de PowerShell dans le module AzureInformationProtection :
-    - Nouvelle applet de commande : [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) -remplace New-RMSProtectionLicense pour créer une stratégie ad hoc pour les autorisations personnalisées
-    - Nouveaux paramètres :
-        -  *CustomPermissions* et *RemoveProtection* -ajouté à [Set-AIPFileLabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)
-        -  *OnBeHalfOf* -ajouté à [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), à utiliser à la place du paramètre *Token* pour les sessions non interactives
-        -  *WhatIf* et *DiscoveryInfoTypes* -ajoutés à [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), afin que cette applet de commande puisse s’exécuter en mode détection sans appliquer d’étiquettes
-    - Applets de commande déconseillées qui se connectent directement à un service de protection : Clear-RMSAuthentication, Set-RMSFileStatus, Set-RMSServer, obtenir-RMSServerAuthentication, obtenir-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
-
-
-**Céder**
-
-- Prise en charge des [correspondances de contenu](../reports-aip.md#content-matches-for-deeper-analysis) pour Analytics et [Set-AIPFileClassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) avec le paramètre *DiscoveryInfoTypes* .
-
-- Après avoir modifié les paramètres régionaux de remplacement dans Windows, vous pouvez toujours appliquer une étiquette avec protection à un document PDF.
-
-- Lorsqu’une étiquette est supprimée du contenu, la protection est également supprimée uniquement lorsqu’elle a été appliquée dans le cadre de la configuration de l’étiquette. Si la protection a été appliquée indépendamment de l’étiquette, cette protection est conservée. Par exemple, un utilisateur a appliqué des autorisations personnalisées à un fichier.
-
-- Lorsque l’étiquetage automatique est configuré, l’étiquette s’applique la première fois qu’un document est enregistré.
-
-- L’étiquetage par défaut prend en charge les sous-étiquettes.
 
 ## <a name="next-steps"></a>Étapes suivantes :
 

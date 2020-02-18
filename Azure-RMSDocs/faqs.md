@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: c690329492732cbc446575335f57e9dae83979f5
-ms.sourcegitcommit: 17c327d58aa1695e59fb2cd8aea3b3cfc65f60b8
+ms.openlocfilehash: 09c83a38d08efa6be464124ae1bfdae45d4fdbdc
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912992"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423173"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Forum aux questions sur Azure Information Protection
 
@@ -66,7 +66,7 @@ Vous pouvez également vérifier en accédant à **Azure Information Protection*
 
 Le **client Azure information protection (Classic)** est disponible depuis que Azure information protection a été annoncé pour la première fois en tant que nouveau service de classification et de protection des fichiers et e-mails. Ce client télécharge des étiquettes et des paramètres de stratégie à partir d’Azure, et vous configurez la stratégie de Azure Information Protection à partir du Portail Azure. Pour plus d’informations, consultez [vue d’ensemble de la stratégie de Azure information protection](overview-policy.md). 
 
-Le **Azure information protection client d’étiquetage unifié** est un ajout plus récent, afin de prendre en charge le magasin d’étiquetage unifié que plusieurs applications et services prennent en charge. Ce client télécharge les étiquettes de sensibilité et les paramètres de stratégie à partir des centres d’administration suivants : le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365. Pour plus d’informations, consultez [vue d’ensemble des étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+Le **Azure information protection client d’étiquetage unifié** est un ajout plus récent, afin de prendre en charge le magasin d’étiquetage unifié que plusieurs applications et services prennent en charge. Ce client télécharge les étiquettes de sensibilité et les paramètres de stratégie à partir des centres d’administration suivants : le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft 365 et le centre de conformité Microsoft 365. Pour plus d’informations, consultez [en savoir plus sur les étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
 Si vous n’êtes pas sûr du client à utiliser, consultez [choisir le client Azure information protection à utiliser](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
@@ -183,7 +183,7 @@ Lorsqu’un utilisateur ouvre un document protégé par Azure Information Protec
 
 Pour plus d’informations et des exemples de procédure pas à pas, consultez le blog suivant : [Conditional Access policies for Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/) (Stratégies d’accès conditionnel pour Azure Information Protection).
 
-Informations supplémentaires :
+Informations complémentaires :
 
 - Pour les ordinateurs Windows : pour la préversion actuelle, les stratégies d’accès conditionnel pour Azure Information Protection sont évaluées quand l’[environnement de l’utilisateur est initialisé](./how-does-it-work.md#initializing-the-user-environment) (ce processus est également appelé amorçage), puis tous les 30 jours.
 
@@ -250,7 +250,7 @@ Pour le support technique, utilisez vos canaux de support standard ou [contactez
 
 Nous vous invitons également à contacter l’équipe d’ingénieurs sur son [site Yammer Azure Information Protection](https://www.yammer.com/askipteam/). 
 
-## <a name="what-do-i-do-if-my-question-isnt-here"></a>Que puis-je faire si ma question ne figure pas dans cette rubrique ?
+## <a name="what-do-i-do-if-my-question-isnt-here"></a>Que puis-je faire si ma question ne figure pas dans cette rubrique ?
 
 Tout d’abord, passez en revue les questions fréquentes suivantes propres à la classification et à l’étiquetage ou spécifiques de la protection des données. Le service Azure Rights Management (Azure RMS) fournit la technologie de protection des données à Azure Information Protection. Azure RMS peut être utilisé avec la classification et l’étiquetage, ou de façon autonome. 
 

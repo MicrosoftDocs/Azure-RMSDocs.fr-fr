@@ -12,12 +12,12 @@ ms.assetid: ''
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: dd65c04165b125df6239792e528f28586a75e78f
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 0c6d9de295be95fde6459849d4e9abb5161cf998
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75959868"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422830"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Guide de l’utilisateur : supprimer des étiquettes et la protection des fichiers et des e-mails qui ont été étiquetés par Azure Information Protection
 
@@ -74,5 +74,5 @@ Plus d’instructions pratiques dans le guide de l’utilisateur Azure Informati
 
 ## <a name="additional-information-for-administrators"></a>Informations supplémentaires pour les administrateurs    
 
-Consultez [vue d’ensemble des étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels).
+Consultez [en savoir plus sur les étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels).
 

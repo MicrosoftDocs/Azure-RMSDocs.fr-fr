@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bc7370507cce3b8ff783190cc82fcd8230329bf1
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 58567d3a8d76da4f872558a7aeea102562c7c3cf
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934872"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423165"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Feuille de route pour le déploiement d’Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "74934872"
 
 Utilisez les étapes suivantes comme des recommandations visant à faciliter la préparation, l’implémentation et la gestion d’Azure Information Protection pour votre organisation.
 
-Ou encore : 
+Vous pouvez également 
 
 - Vous recherchez des instructions basées sur des scénarios pour Azure Information Protection ? Consultez [les guides de procédures pour les scénarios courants qui utilisent Azure information protection](how-to-guides.md).
 
@@ -78,7 +78,7 @@ Reconfigurez vos étiquettes pour apporter les modifications nécessaires pour p
 
 - Étiquettes de Azure Information Protection pour le client classique : configuration de la [stratégie de Azure information protection](./configure-policy.md)
 
-- Étiquettes de sensibilité pour le client d’étiquetage unifié : [vue d’ensemble des étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
+- Étiquettes de sensibilité pour le client d’étiquetage unifié : [en savoir plus sur les étiquettes de sensibilité](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
 
 Déployez ensuite le client Azure Information Protection (Classic) ou le client d’étiquetage unifié Azure Information Protection pour les utilisateurs. Fournissez une formation utilisateur et des instructions spécifiques pour sélectionner les étiquettes. Pour plus d’informations sur l’installation et la prise en charge des clients, consultez les guides d’administration :
 
@@ -112,7 +112,7 @@ Quand les utilisateurs sont à l’aise avec l’étiquetage des documents et de
 
 4. Vérifiez que le service de protection est activé pour pouvoir commencer à protéger des documents et des e-mails. Si un déploiement échelonné est nécessaire, configurez les contrôles d’intégration pour limiter la capacité des utilisateurs à appliquer la protection. Pour plus d’informations, consultez [Activation du service de protection à partir d’Azure Information Protection](./activate-service.md).
 
-Configurez éventuellement les éléments suivants :
+Configurez éventuellement les éléments suivants :
 
 - La journalisation de l’utilisation pour pouvoir surveiller l’usage que fait votre organisation du service de protection. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [journalisation et analyse de l’utilisation de la protection à partir de Azure information protection](./log-analyze-usage.md).
 
@@ -187,7 +187,7 @@ Avant de commencer à utiliser le service de protection d’Azure Information Pr
 
 5. Vérifiez que le service de protection est activé pour pouvoir commencer à protéger des documents et des e-mails. Si un déploiement échelonné est nécessaire, configurez les contrôles d’intégration pour limiter la capacité des utilisateurs à appliquer la protection. Pour plus d’informations, consultez [Activation du service de protection à partir d’Azure Information Protection](./activate-service.md).
 
-Configurez éventuellement les éléments suivants :
+Configurez éventuellement les éléments suivants :
 
 - Des modèles personnalisés pour des paramètres de protection si les modèles par défaut ne suffisent pas à votre organisation. Vous pouvez effectuer cette étape maintenant ou ultérieurement. Pour plus d’informations, consultez [Configuration et gestion des modèles pour Azure Information Protection](./configure-policy-templates.md).
 
@@ -227,6 +227,6 @@ Quand vous commencez à utiliser le service de protection, PowerShell peut s’a
 
 Pour plus d’informations, consultez [administration de la protection à partir de Azure information protection à l’aide de PowerShell](./administer-powershell.md).
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Lorsque vous déployez Azure Information Protection, il peut s’avérer utile de consulter les [questions fréquemment posées](faqs.md), ainsi que la page [informations et support](information-support.md) pour obtenir des ressources supplémentaires.

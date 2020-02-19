@@ -1,25 +1,25 @@
 ---
 title: 'Démarrage rapide : afficher Azure Information Protection sur le portail Azure - AIP'
 description: Si Azure Information Protection est nouveau pour votre organisation, commencez par ajouter le service au Portail Azure, vérifier que le service de protection est activé et publier les paramètres de stratégie et les étiquettes.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 12/04/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: d1734b5102b1305077ce3b84fb95521daeb69c23
-ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
+ms.openlocfilehash: c3c38ea55406b85dabda3e94101d268a9505c085
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74882086"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423091"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Démarrage rapide : Bien démarrer avec Azure Information Protection dans le portail Azure
 
->*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Dans ce démarrage rapide, vous allez ajouter Azure Information Protection au portail Azure, vérifier que le service de protection est activé, créer des étiquettes par défaut si vous n’avez pas d’étiquettes et afficher les paramètres de stratégie pour le client Azure Information Protection (classique).
 
@@ -74,7 +74,7 @@ Même si le service de protection est maintenant automatiquement activé pour le
 
 ## <a name="create-and-publish-labels"></a>Créer et publier des étiquettes
 
-Votre entreprise peut déjà disposer d’étiquettes, car elles ont été créées automatiquement pour votre locataire, ou parce que vous avez des étiquettes de sensibilité dans le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft ou le centre de conformité Microsoft. Voyons voir :
+Votre entreprise peut déjà disposer d’étiquettes, car elles ont été créées automatiquement pour votre locataire, ou parce que vous avez des étiquettes de confidentialité dans le Centre de sécurité et de conformité Office 365, le centre de sécurité Microsoft ou le centre de conformité Microsoft. Voyons voir :
 
 1. Sélectionnez **Classifications** > **Étiquettes** :
     
@@ -147,6 +147,6 @@ Si vous utilisez le client classique :
 
 Si vous utilisez le client d’étiquetage unifié :
 
-- Consultez [Vue d’ensemble des étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels) dans la documentation Office.
+- Consultez [Découvrir les étiquettes de confidentialité](/microsoft-365/compliance/sensitivity-labels) dans la documentation sur la conformité Microsoft 365.
 
 Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).

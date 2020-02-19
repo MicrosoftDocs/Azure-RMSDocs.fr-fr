@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: d22ba5ffe36ea97801149a53d1c500c6d9df0208
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: ec4271250f010156b60ff8da248ea5fcdd7e5f64
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743770"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423122"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Démarrage rapide : Configurer une étiquette pour permettre aux utilisateurs de protéger facilement les e-mails qui contiennent des informations sensibles
 
@@ -56,7 +56,7 @@ Pour pouvoir suivre ce guide de démarrage rapide, il vous faut :
     
     Vous pouvez installer le client classique en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection.
     
-    Si vous utilisez un autre client d’étiquetage que le client classique, consultez la documentation Office pour obtenir des instructions équivalentes à ce tutoriel. Par exemple, [Vue d’ensemble des étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels).
+    Si vous utilisez un autre client d’étiquetage que le client classique, consultez la documentation sur la conformité Microsoft 365 pour des instructions équivalentes à ce tutoriel. Par exemple, [Découvrir les étiquettes de confidentialité](/microsoft-365/compliance/sensitivity-labels).
 
 5. Pour tester la nouvelle étiquette : Un ordinateur exécutant Windows (au minimum Windows 7 avec Service Pack 1). Sur cet ordinateur, vous êtes connecté aux applications Office de l’une des catégories suivantes :
     

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c684bc08faaab4317df0588ccc9350199c62049d
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 4f816190cd240fb4dee90c67167de791b3a46d52
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743678"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423230"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutoriel : Configurer les paramètres de la stratégie Azure Information Protection et créer une étiquette
 
@@ -49,7 +49,7 @@ Pour suivre ce tutoriel, il vous faut :
 
 3. Le client Azure Information Protection (classique) est installé sur votre ordinateur Windows (Windows 7 minimum avec Service Pack 1). 
     
-    Vous pouvez installer le client classique en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection. Si vous utilisez un autre client d’étiquetage que le client classique, consultez la [documentation Office](/microsoft-365/compliance/sensitivity-labels) pour obtenir des instructions équivalentes à ce tutoriel.
+    Vous pouvez installer le client classique en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection. Si vous utilisez un autre client d’étiquetage que le client classique, consultez la [documentation sur la conformité Microsoft 365](/microsoft-365/compliance/sensitivity-labels) pour des instructions équivalentes à ce tutoriel.
 
 4. Vous êtes connecté aux applications Office à partir de l’une des catégories suivantes :
     

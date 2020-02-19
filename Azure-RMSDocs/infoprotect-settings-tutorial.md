@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0c1e008185fb279964c56f508ee9daa6822718e4
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 266f796d6d3abc594a1447995d09687eaabb1ad7
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743525"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423209"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutoriel : Configurer les paramètres de stratégie Azure Information Protection qui interagissent
 
@@ -53,7 +53,7 @@ Pour suivre ce tutoriel, il vous faut :
     
     Vous pouvez installer le client classique en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) et en téléchargeant **AzInfoProtection.exe** sur la page Azure Information Protection. 
     
-    Si vous utilisez un autre client d’étiquetage que le client classique, consultez la documentation Office pour obtenir des informations sur les paramètres de stratégie pour les étiquettes de sensibilité. Par exemple, [Vue d’ensemble des étiquettes de sensibilité](/microsoft-365/compliance/sensitivity-labels).
+    Si vous utilisez un autre client d’étiquetage que le client classique, consultez la documentation sur la conformité Microsoft 365 pour des informations sur les paramètres de stratégie des étiquettes de confidentialité. Par exemple, [Découvrir les étiquettes de confidentialité](/microsoft-365/compliance/sensitivity-labels).
 
 4. Vous êtes connecté aux applications Office à partir de l’une des catégories suivantes :
     

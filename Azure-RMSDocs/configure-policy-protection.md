@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 84d72965d0438b17b23f194d4ec085765853608c
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: f91e194eb6e7d7dd9623d6467de5466b64ec2b9e
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742723"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422559"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -28,7 +28,7 @@ ms.locfileid: "75742723"
 > [!NOTE]
 > Ces instructions s’appliquent au client Azure Information Protection (classique) et pas au client d’étiquetage unifié Azure Information Protection. Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> Si vous recherchez des informations sur la configuration d’une étiquette de sensibilité pour appliquer une protection Rights Management, consultez la documentation Office. Par exemple, [Restriction de l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](/microsoft-365/compliance/encryption-sensitivity-labels).
+> Si vous recherchez des informations sur la configuration d’une étiquette de sensibilité pour appliquer une protection Rights Management, consultez la documentation de conformité Microsoft 365. Par exemple, [Restriction de l’accès au contenu à l’aide du chiffrement dans les étiquettes de sensibilité](/microsoft-365/compliance/encryption-sensitivity-labels).
 
 Vous pouvez protéger vos documents et e-mails les plus sensibles à l’aide d’un service Rights Management. Ce service utilise des stratégies de chiffrement, d’identité et d’autorisation pour vous aider à éviter les pertes de données. La protection est appliquée quand une étiquette est configurée de manière à utiliser la protection Rights Management pour les documents et les e-mails. Les utilisateurs peuvent aussi sélectionner l’option **Ne pas transférer** dans Outlook.
 

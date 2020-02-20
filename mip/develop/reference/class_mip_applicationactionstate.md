@@ -1,26 +1,26 @@
 ---
 title: 'MIP :: ApplicationActionState, classe'
 description: 'Documente la classe MIP :: applicationactionstate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a3a5bde734c62859d2f2a03967a61d9ec14a2056
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 70128f67f758145be2b03954d3385a8428d63fe9
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559446"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490640"
 ---
 # <a name="class-mipapplicationactionstate"></a>MIP :: ApplicationActionState, classe 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public LabelState GetNewLabelState () const  |  Obtient le nouvel état de l’étiquette.
 public std :: shared_ptr\<étiquette\> GetNewLabel () const  |  Obtient l’ID de l’étiquette de sensibilité à appliquer au document.
-public std::pair\<bool, std::string\> IsDowngradeJustified() const  |  L’implémentation doit avoir lieu si une justification de passer une étiquette existante à une version antérieure a été fournie.
+STD public ::p air\<bool, std :: String\> IsDowngradeJustified () const  |  L’implémentation doit avoir lieu si une justification de passer une étiquette existante à une version antérieure a été fournie.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Obtenir la méthode d’assignation de la nouvelle étiquette.
 public virtuel std :: Vector\<std ::p air\<std :: String, std :: String\>\> GetNewLabelExtendedProperties () const  |  Retourner les propriétés étendues de la nouvelle étiquette.
 public ActionType GetSupportedActions() const  |  Obtient une énumération masquée qui décrit tous les types d’action pris en charge.

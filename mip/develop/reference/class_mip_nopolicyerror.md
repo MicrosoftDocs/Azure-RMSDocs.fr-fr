@@ -1,22 +1,22 @@
 ---
 title: 'MIP :: NoPolicyError, classe'
 description: 'Documente la classe MIP :: nopolicyerror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: ccc97d9a8c7fcd9dd9e3ec0eea35f2bb4af8a6b0
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 513fdd196c31f32809e7f2238b1993fb4aeeccd0
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559248"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489841"
 ---
 # <a name="class-mipnopolicyerror"></a>MIP :: NoPolicyError, classe 
 La stratégie de locataire n’est pas configurée pour la classification/les étiquettes.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
   

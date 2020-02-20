@@ -1,26 +1,26 @@
 ---
 title: 'MIP :: FileExecutionState, classe'
 description: 'Documente la classe MIP :: fileexecutionstate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 063f1b0227415dc413e0c56d26f60fc39274a817
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a55ad7b5d28a3115ea4f17f36a846011e82d7827
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560237"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490045"
 ---
 # <a name="class-mipfileexecutionstate"></a>MIP :: FileExecutionState, classe 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 DataState virtuel public GetDataState () const  |  Obtient l’état du contenu pendant que l’application interagit avec celui-ci.
 public virtuel std :: shared_ptr\<ClassificationResults\> GetClassificationResults (const std :: shared_ptr\<FileHandler\> &, const std :: Vector\<std :: shared_ptr\<ClassificationRequest\>\> &) const  |  Retourne un mappage des résultats de la classification.
-public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
+public virtuel std :: Map\<std :: String, std :: String\> GetAuditMetadata () const  |  Retourne une carte de paires clé-valeur d’audit spécifiques à l’application.
   
 ## <a name="members"></a>Membres
   

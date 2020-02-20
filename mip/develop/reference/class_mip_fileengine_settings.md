@@ -1,21 +1,21 @@
 ---
 title: mip::FileEngine::Settings, classe
 description: 'Documente la classe MIP :: fileengine du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 387d3819e8abe9fb24283cd0f62a78c15ce27b49
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 6105a542c3c01b31598796912211f97562b25f08
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558852"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488787"
 ---
 # <a name="class-mipfileenginesettings"></a>mip::FileEngine::Settings, classe 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 Paramètres publics (const std :: String & engineId, const std :: String & ClientData :, const std :: String & paramètres régionaux, bool loadSensitivityTypes)  |  FileEngine :: Settings, constructeur pour le chargement d’un moteur existant.
@@ -26,8 +26,8 @@ public const Identity& GetIdentity() const  |  Retourne l’identité du moteur.
 public void SetIdentity(const Identity& identity)  |  Définit l’identité du moteur.
 public const std::string& GetClientData() const  |  Retourne les données clientes du moteur.
 public const std::string& GetLocale() const  |  Retourne les paramètres régionaux du moteur.
-public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& value)  |  Définit une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtient une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
+public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\>\>valeur &)  |  Définit une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
+public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtient une liste de paires nom/valeur utilisées pour les tests et l’expérimentation.
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de session du moteur.
 public const std::string& GetSessionId() const  |  Retourne l’ID de session du moteur.
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Définit l’URL de base du point de terminaison du cloud de protection, utilisée pour spécifier la limite du cloud.

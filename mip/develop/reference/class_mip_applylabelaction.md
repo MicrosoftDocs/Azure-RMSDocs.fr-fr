@@ -1,22 +1,22 @@
 ---
 title: class mip::ApplyLabelAction
 description: 'Documente la classe MIP :: applylabelaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: cb3ff8c247ad4dbcf4d85ba31608b07f3aaceddf
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: e1551adddec611c6f9a0982c5a267fad39c436c4
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559038"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490674"
 ---
 # <a name="class-mipapplylabelaction"></a>class mip::ApplyLabelAction 
 Appliquer les actions de l’étiquette requiert d’appeler l’application pour appliquer une étiquette spécifique.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std :: shared_ptr\<étiquette\>& GetLabel () const  |  Obtient l’étiquette requise.

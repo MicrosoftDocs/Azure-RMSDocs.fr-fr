@@ -1,22 +1,22 @@
 ---
 title: class mip::ProtectionEngine::Settings
 description: Documente la classe MIP ::p rotectionengine du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 746309afc21637c85ec53dd9af7214151c5bb75a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 71f428667bf485d0abd4f953aa2d94181b1bd8f1
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73557677"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77486883"
 ---
 # <a name="class-mipprotectionenginesettings"></a>class mip::ProtectionEngine::Settings 
 Paramètres utilisés par ProtectionEngine lors de sa création et tout au long de sa durée de vie.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  ProtectionEngine :: Settings, constructeur pour la création d’un nouveau moteur.
@@ -28,8 +28,8 @@ public void SetIdentity(const Identity& identity)  |  Définit l’identité de 
 public const std::string& GetClientData() const  |  Obtient les données personnalisées spécifiées par le client.
 public void SetClientData(const std::string& clientData)  |  Définit les données personnalisées spécifiées par le client.
 public const std::string& GetLocale() const  |  Obtient les paramètres régionaux selon lesquels les données du moteur seront écrites.
-public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& value)  |  Définit les paires nom/valeur utilisées pour les tests et l’expérimentation.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtient les paires nom/valeur utilisées pour les tests et l’expérimentation.
+public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\>\>valeur &)  |  Définit les paires nom/valeur utilisées pour les tests et l’expérimentation.
+public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtient les paires nom/valeur utilisées pour les tests et l’expérimentation.
 public void SetSessionId(const std::string& sessionId)  |  Définit l’ID de session du moteur, utilisé pour la corrélation de la journalisation/télémétrie.
 public const std::string& GetSessionId() const  |  Obtient l’ID de session du moteur.
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Définit éventuellement l’URL de base du point de terminaison cloud.
@@ -145,7 +145,7 @@ Obtient l’ID de session du moteur.
 Définit éventuellement l’URL de base du point de terminaison cloud.
 
 Paramètres :  
-* **cloudEndpointBaseUrl** : URL de base utilisée par toutes les demandes de service (par exemple, « https://api.aadrm.com  »)
+* **cloudEndpointBaseUrl** : URL de base utilisée par toutes les demandes de service (par exemple, « https://api.aadrm.com »)
 
 
 Si l’URL de base n’est pas spécifiée, elle sera déterminée par le biais de la recherche DNS du domaine de l’identité du moteur.

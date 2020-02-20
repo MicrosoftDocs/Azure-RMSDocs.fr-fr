@@ -1,22 +1,22 @@
 ---
 title: 'MIP :: ClassificationRequest, classe'
 description: 'Documente la classe MIP :: classificationrequest du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 62b600a377d195c693c94dff7a0472305b53b3f2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 27c6e01eea2dae3735ce5cc3e5cd618b6223d2eb
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74840307"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489025"
 ---
 # <a name="class-mipclassificationrequest"></a>MIP :: ClassificationRequest, classe 
 Classe qui contient la demande d’un appel de classification sur l’état d’exécution.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std :: String GetClassificationId () const  |  Obtenir l’ID de la stratégie de classification.

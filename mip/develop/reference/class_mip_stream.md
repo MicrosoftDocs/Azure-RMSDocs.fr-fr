@@ -1,22 +1,22 @@
 ---
 title: mip::Stream, classe
 description: 'Documente la classe MIP :: Stream du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: f1bd4220369d036c2071453412844e0691efb2ec
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 65e50fc9751b2ac38e2dae216e3e81cacba5c832
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559969"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489399"
 ---
 # <a name="class-mipstream"></a>mip::Stream, classe 
 Classe qui définit l’interface entre le SDK MIP et le contenu basé sur le flux de données (Stream).
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  Lire dans une mémoire tampon à partir du flux.

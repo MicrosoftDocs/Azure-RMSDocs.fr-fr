@@ -1,23 +1,23 @@
 ---
 title: mip::PolicyProfile::Observer, classe
 description: Documente la classe MIP ::p olicyprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: b2b1fd7e2462f9544f7f3d1110d25e2b88a89dc0
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 89411740e807bba1554da175d8c978601a45a7b6
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560889"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487529"
 ---
 # <a name="class-mippolicyprofileobserver"></a>mip::PolicyProfile::Observer, classe 
 Interface observer permettant aux clients d’obtenir des notifications pour les événements liés au profil.
 Toutes les erreurs héritent de MIP :: Error. Le client ne doit pas rappeler le moteur sur le thread qui appelle l’observateur.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public virtual void OnLoadSuccess (const std :: shared_ptr\<PolicyProfile\>profil &, const std :: shared_ptr\<void\>& contexte)  |  Appelé quand le chargement d’un profil a réussi.

@@ -1,26 +1,26 @@
 ---
 title: MIP de classe ::P ropertyData
 description: Documente la classe MIP ::p ropertydata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 66eea2b65ab81ed561ac45b6e3284ab9f1ce32f3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: fd345d41d2f8c80267dd420f351b3b2c5eb1cb57
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560832"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489739"
 ---
 # <a name="class-mippropertydata"></a>MIP de classe ::P ropertyData 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetId() const  | Pas encore documenté.
-public const std::string& GetName() const  | Pas encore documenté.
-virtuel public ~ PropertyData ()  | Pas encore documenté.
+public const std::string& GetId() const  | _Pas encore documenté._
+public const std::string& GetName() const  | _Pas encore documenté._
+virtuel public ~ PropertyData ()  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
   

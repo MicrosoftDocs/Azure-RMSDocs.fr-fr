@@ -1,22 +1,22 @@
 ---
 title: mip::HttpDelegate, classe
 description: 'Documente la classe MIP :: httpdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a29673c71aaa0357ebb52bc4cab3b3fef74a21d1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: e629e15ed3a4754123f8ca71adee04d32bc3785f
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560198"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488107"
 ---
 # <a name="class-miphttpdelegate"></a>mip::HttpDelegate, classe 
 Interface pour le remplacement de la gestion HTTP.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std :: shared_ptr\<HttpOperation\> Send (const std :: shared_ptr\<HttpRequest\>& demande, const std :: shared_ptr\<void\>& contexte)  |  Envoyer une requête HTTP.

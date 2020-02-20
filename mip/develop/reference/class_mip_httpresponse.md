@@ -1,22 +1,22 @@
 ---
 title: mip::HttpResponse, classe
 description: 'Documente la classe MIP :: HttpResponse du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 876de8047abc4e2f13ee8e103cdfa1648738aa84
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: e24eef471b11daffadb84235edbc93ff14696c25
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558755"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488056"
 ---
 # <a name="class-miphttpresponse"></a>mip::HttpResponse, classe 
 Interface qui décrit une réponse HTTP unique, implémentée par l’application cliente lors du remplacement de HttpDelegate.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Obtient l’ID de réponse.

@@ -1,22 +1,22 @@
 ---
 title: class mip::LoggerDelegate
 description: 'Documente la classe MIP :: loggerdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: f1726c53afb7e398f8921e1cb8fc67e3166fffe8
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: c9e4f4db31c12a84f888964694ffa4c88585c884
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561038"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487733"
 ---
 # <a name="class-miploggerdelegate"></a>class mip::LoggerDelegate 
 Une classe qui définit l’interface de l’enregistreur d’événements SDK MIP.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public void Init(const std::string& storagePath)  |  Initialiser l’enregistreur d’événements.
@@ -25,7 +25,7 @@ public void WriteToLog(const LogLevel level, const std::string& message, const s
   
 ## <a name="members"></a>Membres
   
-### <a name="init-function"></a>Fonction init
+### <a name="init-function"></a>Init, fonction
 Initialiser l’enregistreur d’événements.
 
 Paramètres :  

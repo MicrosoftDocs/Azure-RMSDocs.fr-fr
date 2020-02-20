@@ -1,22 +1,22 @@
 ---
 title: mip::FileHandler, classe
 description: 'Documente la classe MIP :: fileHandler du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: b2a6e3cd6de886c3e3983442a1ec7185b688b662
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 52c28c1763fc3e7513f98a23a18cb6c91e0ed508
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558842"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488736"
 ---
 # <a name="class-mipfilehandler"></a>mip::FileHandler, classe 
 Interface pour toutes les fonctions de gestion de fichiers.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std :: shared_ptr\<ContentLabel\> GetLabel ()  |  Démarre la récupération de l’étiquette de sensibilité à partir du fichier.
@@ -28,16 +28,14 @@ public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Supprime l�
 public void SetProtection (const std :: shared_ptr\<ProtectionDescriptor\>& protectionDescriptor, const ProtectionSettings & protectionSettings)  |  Définit des autorisations personnalisées ou basées sur un modèle (en fonction de protectionDescriptor->GetProtectionType) pour le fichier.
 public void SetProtection (const std :: shared_ptr\<ProtectionHandler\>& protectionHandler)  |  Définit la protection d’un document à l’aide d’un gestionnaire de protection existant.
 public void RemoveProtection()  |  Supprime la protection du fichier. Si le fichier porte une étiquette, celle-ci est perdue.
-public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Écrit les modifications dans le fichier spécifié par le paramètre \|outputFilePath\ |  .
+public void CommitAsync (const std :: String & outputFilePath, const std :: shared_ptr\<void\>contexte &) | Écrit les modifications dans le fichier spécifié par le paramètre \|outputFilePath\ |  .
 public void CommitAsync (const std :: shared_ptr\<flux\>& outputStream, const std :: shared_ptr\<void\>contexte &) | Écrit les modifications dans le flux spécifié par le paramètre \|outputStream\ |  .
 public bool IsModified ()  |  Vérifie s’il existe des modifications à valider dans le fichier.
 public void GetDecryptedTemporaryFileAsync (const std :: shared_ptr\<void\>& Context)  |  Retourne un chemin d’accès à un fichier temporaire (qui sera supprimé si possible), représentant le contenu déchiffré.
 public void GetDecryptedTemporaryStreamAsync (const std :: shared_ptr\<void\>& Context)  |  Retourne un flux représentant le contenu déchiffré.
 public void NotifyCommitSuccessful (const std :: String & actualFilePath)  |  À appeler quand les modifications ont été validées sur le disque.
 public std::string GetOutputFileName()  |  Détermine le nom et l’extension du fichier de sortie en fonction du nom du fichier d’origine et des modifications cumulées.
-public static bool IsProtected (const std :: String & filePath, const std :: shared_ptr<MipContext>& mipContext) | Vérifie si un fichier est protégé ou non.
-public static FILE_API std :: Vector&lt;uint8_t&gt; __CDECL MIP :: FileHandler :: GetSerializedPublishingLicense | Retourne la licence de publication si le fichier en contient.
-
+  
 ## <a name="members"></a>Membres
   
 ### <a name="getlabel-function"></a>GetLabel fonction)
@@ -109,9 +107,3 @@ Déclenche un événement d’audit
   
 ### <a name="getoutputfilename-function"></a>GetOutputFileName fonction)
 Détermine le nom et l’extension du fichier de sortie en fonction du nom du fichier d’origine et des modifications cumulées.
-
-### <a name="isprotected-function"></a>IsProtected fonction)
-Vérifie si un fichier est protégé ou non.
-
-### <a name="getserializedpublishinglicense-function"></a>GetSerializedPublishingLicense fonction)
-Retourne la licence de publication si le fichier en contient.

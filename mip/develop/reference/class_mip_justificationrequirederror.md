@@ -1,28 +1,28 @@
 ---
 title: mip::JustificationRequiredError, classe
 description: 'Documente la classe MIP :: justificationrequirederror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: f1964e9212088966d421e7b946ca2148b8f56e19
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 610a76514416da4c2c14e8ed45fa32fca8f25efb
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560134"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488005"
 ---
 # <a name="class-mipjustificationrequirederror"></a>mip::JustificationRequiredError, classe 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public virtuel std :: shared_ptr\<erreur\> Clone () const  |  Cloner l’erreur.
   
 ## <a name="members"></a>Membres
   
-### <a name="clone-function"></a>Clone, fonction
+### <a name="clone-function"></a>Cloner une fonction
 Cloner l’erreur.
 
   

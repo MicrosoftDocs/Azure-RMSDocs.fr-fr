@@ -1,22 +1,22 @@
 ---
 title: mip::PolicyProfile::Settings, classe
 description: Documente la classe MIP ::p olicyprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 324b31a9589cff75a758da2936a3aba242fd63c2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 6c2d7f26e12f03bd886f2a3fedab8e0a3d976c45
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560874"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489756"
 ---
 # <a name="class-mippolicyprofilesettings"></a>mip::PolicyProfile::Settings, classe 
 Paramètres utilisés par PolicyProfile lors de sa création et tout au long de sa durée de vie.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 Paramètres publics (const std :: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std :: shared_ptr\<AuthDelegate\>& authDelegate, const std :: shared_ptr\<PolicyProfile :: observer\>& observer)  |  Interface pour la configuration du profil.
@@ -27,12 +27,12 @@ public std :: shared_ptr\<MipContext\> GetMipContext () const  |  Obtient le co
 public std :: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  Obtenir le délégué HTTP (le cas échéant) fourni par l’application.
 public void SetHttpDelegate (const std :: shared_ptr\<HttpDelegate\>& httpDelegate)  |  Remplacer la pile HTTP par défaut par celle du client.
 public std :: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Obtient le délégué TaskDispatcher (le cas échéant) fourni par l’application.
-public void SetTaskDispatcherDelegate (const std :: shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Remplacez la tâche asynchonous par défaut en rétribuant la gestion avec le propriétaire du client.
-public void SetSessionId(const std::string& sessionId)  | Pas encore documenté.
-public const std::string& GetSessionId() const  | Pas encore documenté.
+public void SetTaskDispatcherDelegate (const std :: shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Remplacer la gestion de la répartition des tâches asynchrones par défaut avec le propriétaire du client.
+public void SetSessionId(const std::string& sessionId)  | _Pas encore documenté._
+public const std::string& GetSessionId() const  | _Pas encore documenté._
 public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& customSettings)  |  Définir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
-public ~Settings()  | Pas encore documenté.
+public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
+public ~Settings()  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
   
@@ -98,7 +98,7 @@ Obtient le délégué TaskDispatcher (le cas échéant) fourni par l’applicati
 **Retourne**: le délégué TaskDispatcher à utiliser pour l’exécution des tâches asynchrones
   
 ### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate fonction)
-Remplacez la tâche asynchonous par défaut en rétribuant la gestion avec le propriétaire du client.
+Remplacer la gestion de la répartition des tâches asynchrones par défaut avec le propriétaire du client.
 
 Paramètres :  
 * **taskDispatcherDelegate**: tâche distribuant l’interface de rappel implémentée par l’application cliente

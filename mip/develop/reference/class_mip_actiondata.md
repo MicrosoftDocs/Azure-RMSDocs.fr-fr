@@ -1,51 +1,26 @@
 ---
 title: 'MIP :: ActionData, classe'
 description: 'Documente la classe MIP :: ActionData du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: d0bd4fc28eaee1544a2c7334e8fcc8f06151b9b6
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: bb74866f0a4d7396265869b2039594a7dd22ee13
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559075"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489195"
 ---
 # <a name="class-mipactiondata"></a>MIP :: ActionData, classe 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-ActionDataType, GetType (), const public  | Pas encore documenté.
-public const std :: Map\<std :: String, std :: String\>& GetProperties () const  | Pas encore documenté.
-public std :: String GetArgumentValue (const std :: String & clé) const  | Pas encore documenté.
-public const std::string& GetName() const  | Pas encore documenté.
-public std :: Vector\<std ::p air\<std :: String, std :: String\>\> GetArguments () const  | Pas encore documenté.
-virtuel public ~ ActionData ()  | Pas encore documenté.
+virtuel public ~ ActionData ()  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
-  
-### <a name="gettype-function"></a>GetType, fonction
-_Pas encore documenté._
-
-  
-### <a name="getproperties-function"></a>GetProperties, fonction
-_Pas encore documenté._
-
-  
-### <a name="getargumentvalue-function"></a>GetArgumentValue fonction)
-_Pas encore documenté._
-
-  
-### <a name="getname-function"></a>Fonction GetName
-_Pas encore documenté._
-
-  
-### <a name="getarguments-function"></a>GetArguments fonction)
-_Pas encore documenté._
-
   
 ### <a name="actiondata-function"></a>~ ActionData fonction)
 _Pas encore documenté._

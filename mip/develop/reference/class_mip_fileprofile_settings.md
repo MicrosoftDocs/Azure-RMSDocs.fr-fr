@@ -1,22 +1,22 @@
 ---
 title: mip::FileProfile::Settings, classe
 description: 'Documente la classe MIP :: fileprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 21bbda3424f5c436324ce97137082200ee8d9837
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 4987919875c297ace2246e77eadab279238cc205
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561096"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490028"
 ---
 # <a name="class-mipfileprofilesettings"></a>mip::FileProfile::Settings, classe 
 Paramètres utilisés par FileProfile lors de sa création et tout au long de sa durée de vie.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 Paramètres publics (const std :: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, std :: shared_ptr\<AuthDelegate\> authDelegate, std :: shared_ptr\<ConsentDelegate\> consentDelegate, std :: shared_ptr\<observateur\> observateur)  |  Constructeur FileProfile :: Settings.

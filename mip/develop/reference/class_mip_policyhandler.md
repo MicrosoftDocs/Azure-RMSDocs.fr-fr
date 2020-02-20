@@ -1,22 +1,22 @@
 ---
 title: mip::PolicyHandler, classe
 description: Documente la classe MIP ::p olicyhandler du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 71b1a9dff879cde728e7fa1aa9e1f871d292ec4c
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 9f270a628a6320b005145aab8cd0611acc907d68
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560920"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489790"
 ---
 # <a name="class-mippolicyhandler"></a>mip::PolicyHandler, classe 
 Cette classe fournit une interface pour toutes les fonctions de gestionnaire de stratégie sur un fichier.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std :: shared_ptr\<ContentLabel\> GetSensitivityLabel (const ExecutionState & State)  |  Obtenir l’étiquette de sensibilité à partir du contenu existant.

@@ -1,31 +1,31 @@
 ---
 title: MIP de classe ::P olicyRuleData
 description: Documente la classe MIP ::p olicyruledata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 2094f6d2d0a243f73f9c19f08dcc68877ca5d16a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: db35427c2531edf0653d4f1a05ecbfe8cb93d8d7
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560842"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77486985"
 ---
 # <a name="class-mippolicyruledata"></a>MIP de classe ::P olicyRuleData 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetName() const  | Pas encore documenté.
-public const std::string& GetId() const  | Pas encore documenté.
-public const std :: Vector\<std :: unique_ptr\<ActionData\>\>& GetActionsData () const  | Pas encore documenté.
-public bool IsCompatibleVersion () const  | Pas encore documenté.
-public const std :: Map\<std :: String, std :: String\>& GetAttributeData () const  | Pas encore documenté.
-public const std :: Vector\<std :: Map\<std :: String, std :: String\>\>& GetRuleTags () const  | Pas encore documenté.
-public const ConditionData * GetConditionData () const  | Pas encore documenté.
-virtuel public ~ PolicyRuleData ()  | Pas encore documenté.
+public const std::string& GetName() const  | _Pas encore documenté._
+public const std::string& GetId() const  | _Pas encore documenté._
+public const std :: Vector\<std :: unique_ptr\<ActionData\>\>& GetActionsData () const  | _Pas encore documenté._
+public bool IsCompatibleVersion () const  | _Pas encore documenté._
+public const std :: Map\<std :: String, std :: String\>& GetAttributeData () const  | _Pas encore documenté._
+public const std :: Vector\<std :: Map\<std :: String, std :: String\>\>& GetRuleTags () const  | _Pas encore documenté._
+public const ConditionData * GetConditionData () const  | _Pas encore documenté._
+virtuel public ~ PolicyRuleData ()  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
   

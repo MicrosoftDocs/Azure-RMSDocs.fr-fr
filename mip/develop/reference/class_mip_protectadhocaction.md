@@ -1,22 +1,22 @@
 ---
 title: mip::ProtectAdhocAction, classe
 description: Documente la classe MIP ::p rotectadhocaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 47cabde15ef310a38e53d6a173a2ba032862d78b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 15fc6a1ebb455e0e38fb301c9d92299763dbf7f0
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73557983"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77486900"
 ---
 # <a name="class-mipprotectadhocaction"></a>mip::ProtectAdhocAction, classe 
 Classe d’action qui spécifie l’ajout de la protection ad hoc au document.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
   

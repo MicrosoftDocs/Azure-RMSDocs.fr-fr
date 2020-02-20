@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: fb6c857d06da7a68d01d095db556216fee990dc6
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 6fd93191ef95e4a019b59ca0f318db366b5e5874
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555974"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489246"
 ---
 # <a name="functions"></a>Fonctions
 
@@ -30,6 +30,8 @@ public const std::string& GetCustomSettingSensitivityTypesDataName()       |  No
 public const std::string& GetCustomSettingPolicyDataFile()       |  Nom du paramètre pour spécifier explicitement le chemin d’accès de fichier de données de stratégie.
 public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  Nom du paramètre pour spécifier explicitement le chemin d’accès du fichier de données des types de sensibilité.
 public const std :: String & GetCustomSettingLabelCustomPropertiesSyncEnabled ()       |  Nom du paramètre qui autorise l’activation de l’étiquette par des propriétés personnalisées et des propriétés personnalisées par des fonctionnalités d’étiquette.
+public const std :: String & GetCustomSettingPolicyTtlDays ()       |  Le nom du paramètre qui active la durée de vie de la stratégie de remplacement en jours est par défaut de 30 jours. Les valeurs doivent être définies en tant qu’entiers de chaîne i < 0 signifie une durée de vie infinie.
+public const std :: String & GetCustomSettingSensitivityPolicyTtlDays ()       |  Le nom du paramètre qui permet de remplacer la durée de vie de la stratégie de sensibilité en jours est par défaut de 30 jours. Les valeurs doivent être définies en tant qu’entiers de chaîne i < 0 signifie une durée de vie infinie.
 public const std :: Map\<FlightingFeature, bool\>& GetDefaultFeatureSettings ()       |  Obtient une valeur indiquant si une fonctionnalité est activée par défaut.
 public MIP_API std :: shared_ptr\<MIP :: Stream\> CreateStreamFromStdStream (const std :: shared_ptr\<std :: IStream\>& stdIStream)       |  Crée un flux à partir d’un std :: IStream.
 public MIP_API std :: shared_ptr\<MIP :: Stream\> CreateStreamFromStdStream (const std :: shared_ptr\<std :: ostream\>& stdOStream)       |  Crée un flux à partir d’un std :: ostream.
@@ -42,29 +44,24 @@ opérateur ActionType public ^ (ActionType a, ActionType b)       |  Opérateur 
 ### <a name="getassignmentmethodstring-function"></a>GetAssignmentMethodString fonction)
 Convertit l’énumération assignation en Description de chaîne.
 
-Paramètres :  
+Paramètres :  
 * **méthode**: méthode d’assignation. 
 
 
-
-  
 **Retourne**: description de chaîne de la méthode d’assignation.
   
 ### <a name="getactionsourcestring-function"></a>GetActionSourceString fonction)
 Obtient le nom de la source de l’action.
 
-Paramètres :  
+Paramètres :  
 * **actionSource**: source de l’action. 
 
-
-
-  
 **Retourne**: une représentation sous forme de chaîne de la source de l’action.
   
 ### <a name="getdatastatestring-function"></a>GetDataStateString fonction)
 Obtient le nom de l’état du contenu.
 
-Paramètres :  
+Paramètres :  
 * **actionSource**: état du contenu sur lequel le travail est effectué. 
 
 
@@ -108,6 +105,18 @@ Nom du paramètre qui autorise l’activation de l’étiquette par des proprié
   
 **Renvoie** : la clé des paramètres personnalisés.
   
+### <a name="getcustomsettingpolicyttldays-function"></a>GetCustomSettingPolicyTtlDays fonction)
+Le nom du paramètre qui active la durée de vie de la stratégie de remplacement en jours est par défaut de 30 jours. Les valeurs doivent être définies en tant qu’entiers de chaîne i < 0 signifie une durée de vie infinie.
+
+  
+**Renvoie** : la clé des paramètres personnalisés.
+  
+### <a name="getcustomsettingsensitivitypolicyttldays-function"></a>GetCustomSettingSensitivityPolicyTtlDays fonction)
+Le nom du paramètre qui permet de remplacer la durée de vie de la stratégie de sensibilité en jours est par défaut de 30 jours. Les valeurs doivent être définies en tant qu’entiers de chaîne i < 0 signifie une durée de vie infinie.
+
+  
+**Renvoie** : la clé des paramètres personnalisés.
+  
 ### <a name="getdefaultfeaturesettings-function"></a>GetDefaultFeatureSettings fonction)
 Obtient une valeur indiquant si une fonctionnalité est activée par défaut.
 
@@ -117,7 +126,7 @@ Obtient une valeur indiquant si une fonctionnalité est activée par défaut.
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream fonction)
 Crée un flux à partir d’un std :: IStream.
 
-Paramètres :  
+Paramètres :  
 * **stdIStream** : sauvegarde std::istream
 
 
@@ -128,7 +137,7 @@ Paramètres :
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream fonction)
 Crée un flux à partir d’un std :: ostream.
 
-Paramètres :  
+Paramètres :  
 * **stdIStream** : sauvegarde std::ostream
 
 
@@ -139,7 +148,7 @@ Paramètres :
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream fonction)
 Crée un flux à partir d’un std :: iostream.
 
-Paramètres :  
+Paramètres :  
 * **stdIOStream** : sauvegarde std::iostream
 
 
@@ -150,7 +159,7 @@ Paramètres :
 ### <a name="createstreamfrombuffer-function"></a>CreateStreamFromBuffer fonction)
 Crée un flux à partir d’une mémoire tampon.
 
-Paramètres :  
+Paramètres :  
 * **buffer** : pointeur vers une mémoire tampon
 
 
@@ -161,7 +170,7 @@ Paramètres :
 ### <a name="readfromstream-function"></a>ReadFromStream fonction)
 Lit tous les octets du flux.
 
-Paramètres :  
+Paramètres :  
 * **pointeur**: vers un flux.
 
 
@@ -180,12 +189,12 @@ Opérateur XOR (^) pour l’énumération de type d’action.
 
 ## <a name="namespace-mipauditmetadatakeys"></a>espace de noms MIP :: auditmetadatakeys
 
- Membres                        | Descriptions                                
+Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std :: String Sender ()       |  Clés de métadonnées d’audit dans la représentation sous forme de chaîne.
-public std :: String Recipients ()       | Pas encore documenté.
-public std :: String LastModifiedBy ()       | Pas encore documenté.
-public std :: String LastModifiedDate & ()       | Pas encore documenté.
+public std :: String Recipients ()       | _Pas encore documenté._
+public std :: String LastModifiedBy ()       | _Pas encore documenté._
+public std :: String LastModifiedDate & ()       | _Pas encore documenté._
   
 ### <a name="sender-function"></a>Fonction d’expéditeur
 Clés de métadonnées d’audit dans la représentation sous forme de chaîne.
@@ -204,7 +213,7 @@ _Pas encore documenté._
 
 ## <a name="namespace-miprights"></a>espace de noms `mip::rights` 
   
- Membres                        | Descriptions                                
+Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string Owner()       |  Obtient un identificateur de chaîne pour un droit « propriétaire ».
 public std::string View()       |  Obtient un identificateur de chaîne pour un droit « afficher ».
@@ -217,11 +226,10 @@ public std::string Comment()       |  Obtient un identificateur de chaîne pour 
 public std::string Reply()       |  Obtient un identificateur de chaîne pour un droit « répondre ».
 public std::string ReplyAll()       |  Obtient un identificateur de chaîne pour un droit « répondre à tous ».
 public std::string Forward()       |  Obtient un identificateur de chaîne pour un droit « transférer ».
-public std::vector\<std::string\> EmailRights()       |  Obtient une liste de droits qui s’appliquent aux e-mails.
-public std::vector\<std::string\> EditableDocumentRights()       |  Obtient une liste de droits qui s’appliquent aux documents.
-public std::vector\<std::string\> CommonRights()       |  Obtient une liste des droits qui s’appliquent dans tous les scénarios.
+public std :: Vector\<std :: String\> EmailRights ()       |  Obtient une liste de droits qui s’appliquent aux e-mails.
+public std :: Vector\<std :: String\> EditableDocumentRights ()       |  Obtient une liste de droits qui s’appliquent aux documents.
+public std :: Vector\<std :: String\> CommonRights ()       |  Obtient une liste des droits qui s’appliquent dans tous les scénarios.
   
-
 ### <a name="owner-function"></a>Fonction owner
 Obtient un identificateur de chaîne pour un droit « propriétaire ».
 
@@ -306,9 +314,9 @@ Obtient une liste des droits qui s’appliquent dans tous les scénarios.
   
 **Renvoie** : une liste des droits qui s’appliquent dans tous les scénarios
 
-## <a name="namespace-miproles"></a>espace de noms MIP :: Roles
+## <a name="namespace-miproles"></a>espace de noms `mip::roles` 
   
- Membres                        | Descriptions                                
+Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std::string Viewer()       |  Obtient un identificateur de chaîne pour un rôle « observateur ».
 public std::string Reviewer()       |  Obtient un identificateur de chaîne pour un rôle « réviseur ».
@@ -338,4 +346,3 @@ Obtient un identificateur de chaîne pour un rôle « copropriétaire ».
 
   
 **Renvoie** : identificateur de chaîne pour un rôle « copropriétaire » Un copropriétaire a toutes les autorisations
-

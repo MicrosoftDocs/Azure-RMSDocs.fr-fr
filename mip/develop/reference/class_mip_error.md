@@ -1,66 +1,24 @@
 ---
 title: mip::Error, classe
 description: 'Documente la classe MIP :: Error du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: f59a2b394cbf0bfa5deb555e2c4cdd8c427ed7ea
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: c27458e658af47d14d718dbbf9bc19e7687603fd
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560295"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490096"
 ---
 # <a name="class-miperror"></a>mip::Error, classe 
 Classe de base pour toutes les erreurs qui seront signalées (levées ou retournées) à partir du SDK MIP.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public char const* what() const  |  Obtenir le message d’erreur.
-public std :: shared_ptr\<erreur\> Clone () const  |  Cloner l’erreur.
-public virtual ErrorType GetErrorType() const  |  Obtenir le type de l’erreur.
-public virtual const std::string& GetErrorName() const  |  Obtenir le nom de l’erreur.
-public virtual const std::string& GetMessage() const  |  Obtenir le message d’erreur.
-public virtual void SetMessage(const std::string& msg)  |  Définir le message d’erreur.
   
 ## <a name="members"></a>Membres
-  
-### <a name="what-function"></a>fonction
-Obtenir le message d’erreur.
-
-  
-**Retourne** : message d’erreur
-  
-### <a name="clone-function"></a>Clone, fonction
-Cloner l’erreur.
-
-  
-**Retourne** : un clone de l’erreur.
-  
-### <a name="geterrortype-function"></a>GetErrorType fonction)
-Obtenir le type de l’erreur.
-
-  
-**Retourne** : le type de l’erreur.
-  
-### <a name="geterrorname-function"></a>GetErrorName fonction)
-Obtenir le nom de l’erreur.
-
-  
-**Retourne** : le nom de l’erreur.
-  
-### <a name="getmessage-function"></a>Fonction GetMessage
-Obtenir le message d’erreur.
-
-  
-**Retourne** : le message d’erreur.
-  
-### <a name="setmessage-function"></a>SetMessage fonction)
-Définir le message d’erreur.
-
-Paramètres :  
-* **msg** : le message d’erreur.
-
+_Pas encore documenté._

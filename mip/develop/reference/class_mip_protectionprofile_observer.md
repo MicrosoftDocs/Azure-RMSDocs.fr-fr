@@ -1,23 +1,23 @@
 ---
 title: mip::ProtectionProfile::Observer, classe
 description: Documente la classe MIP ::p rotectionprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a9138e497655dfa939a9ac9b15d7ed228331e9e0
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a88819b27a0453c3264360021b21354fa18f9d07
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560698"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489586"
 ---
 # <a name="class-mipprotectionprofileobserver"></a>mip::ProtectionProfile::Observer, classe 
 Interface qui reçoit les notifications liées à ProtectionProfile.
 Cette interface doit être implémentée par les applications utilisant le SDK de protection
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public virtual void OnLoadSuccess (const std :: shared_ptr\<ProtectionProfile\>profil &, const std :: shared_ptr\<void\>& contexte)  |  Appelé quand le chargement d’un profil a réussi.

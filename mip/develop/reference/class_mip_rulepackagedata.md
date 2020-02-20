@@ -1,27 +1,27 @@
 ---
 title: 'MIP :: RulePackageData, classe'
 description: 'Documente la classe MIP :: rulepackagedata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 5cc04f5082ca0ac6e3cd9153834064794b9eaf12
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: ace2e5c8eb1b5d72c8d9410ba9b5e7fd3f008049
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560570"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489467"
 ---
 # <a name="class-miprulepackagedata"></a>MIP :: RulePackageData, classe 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const PolicyRuleData * GetRuleData () const  | Pas encore documenté.
-public const std ::p air\<std :: String, std :: String\>& GetLabelToTemplateId () const  | Pas encore documenté.
-public const std ::p air\<std :: String, ProtectionActionType\>& GetLabelToProtectionType () const  | Pas encore documenté.
-virtuel public ~ RulePackageData ()  | Pas encore documenté.
+public const PolicyRuleData * GetRuleData () const  | _Pas encore documenté._
+public const std ::p air\<std :: String, std :: String\>& GetLabelToTemplateId () const  | _Pas encore documenté._
+public const std ::p air\<std :: String, std :: shared_ptr\<ProtectionActionData\>\>& GetLabelToProtectionType () const  | _Pas encore documenté._
+virtuel public ~ RulePackageData ()  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
   

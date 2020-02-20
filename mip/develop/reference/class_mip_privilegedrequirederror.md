@@ -1,22 +1,22 @@
 ---
 title: mip::PrivilegedRequiredError, classe
 description: Documente la classe MIP ::p rivilegedrequirederror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 1b0b0e7f7f51ac356276fc2e1b80cceec5126d17
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: ccdd16472b2f5a3034de675bc4d873c4bed3e827
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558283"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77486951"
 ---
 # <a name="class-mipprivilegedrequirederror"></a>mip::PrivilegedRequiredError, classe 
 L’étiquette actuelle a été affectée en tant qu’opération avec des privilèges (l’équivalent d’une opération administrateur), par conséquent, elle ne peut pas être remplacée.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
   

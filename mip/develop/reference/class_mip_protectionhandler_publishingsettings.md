@@ -1,26 +1,26 @@
 ---
 title: MIP ::P rotectionHandler ::P ublishingSettings
 description: Documente la classe MIP ::p rotectionhandler du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 358c96b15b4e9eeb10a42937602487ec4d59b050
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: e61eb300cbc787ecbb7fd14ec5dcb060d4f47d0a
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560742"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490759"
 ---
 # <a name="class-mipprotectionhandlerpublishingsettings"></a>MIP ::P rotectionHandler ::P ublishingSettings 
 Paramètres utilisés pour créer un ProtectionHandler pour protéger un nouveau contenu.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public PublishingSettings (const std :: shared_ptr\<ProtectionDescriptor\>& protectionDescriptor)  |  ProtectionHandler :: Settings, constructeur pour la création d’un nouveau moteur.
-public std :: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  | Pas encore documenté.
+public std :: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  | _Pas encore documenté._
 public bool GetIsAuditedExtractionAllowed () const  |  Obtient une valeur indiquant si des applications prenant en charge les non-MIP sont autorisées ou non pour ouvrir du contenu protégé.
 public void SetIsAuditedExtractionAllowed (bool isAuditedExtractionAllowed)  |  Définit si les applications prenant en charge non MIP sont autorisées ou non pour ouvrir du contenu protégé.
 public bool GetIsDeprecatedAlgorithmPreferred () const  |  Obtient une valeur indiquant si l’algorithme de chiffrement (ECB) déconseillé est préféré pour la compatibilité descendante.

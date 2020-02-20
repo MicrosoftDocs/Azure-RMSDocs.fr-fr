@@ -1,22 +1,22 @@
 ---
 title: mip::Label, classe
 description: 'Documente la classe MIP :: label du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 5bdc88746a8921f306d9d52dbe75f3c2b826a5b6
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a108cdccef1747ec2b06a981f993fa8ad438d011
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560136"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487988"
 ---
 # <a name="class-miplabel"></a>mip::Label, classe 
 Abstraction d’une étiquette unique Microsoft Information Protection.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Obtenir l’ID de l’étiquette.
@@ -29,7 +29,7 @@ public const std :: String & GetAutoTooltip () const  |  Obtient la description
 public bool IsActive() const  |  Obtient une valeur booléenne signalant si l’étiquette est active.
 public std :: weak_ptr\<étiquette\> GetParent () const  |  Obtenir l’étiquette parente.
 public const std :: Vector\<std :: shared_ptr\<étiquette\>\>& GetChildren () const  |  Obtenir les étiquettes enfants de l’étiquette actuelle.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtient les paramètres personnalisés d’une étiquette.
+public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtient les paramètres personnalisés d’une étiquette.
 public ActionSource GetActionSource() const  |  Obtient la source d’action de l’étiquette.
   
 ## <a name="members"></a>Membres

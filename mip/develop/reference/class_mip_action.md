@@ -1,30 +1,24 @@
 ---
 title: mip::Action, classe
 description: 'Documente la classe MIP :: action du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: d3cc1aecfb5ca8bf2d78dd9d6c8c280b5541389d
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 0f95ec9d4b89a8efdc118d584f7f73ec2128ef8a
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560412"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489161"
 ---
 # <a name="class-mipaction"></a>mip::Action, classe 
 Interface pour une action. Chaque action se traduit par une étape qui doit être effectuée par l’application pour appliquer l’étiquette (comme défini dans la stratégie)
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ActionType GetType() const  |  Obtient le type d’action.
   
 ## <a name="members"></a>Membres
-  
-### <a name="gettype-function"></a>GetType, fonction
-Obtient le type d’action.
-
-  
-**Retourne** : ActionType - le type d’action dérivée vers lequel cette classe de base peut être castée.
+_Pas encore documenté._

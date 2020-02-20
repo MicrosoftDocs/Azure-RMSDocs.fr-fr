@@ -1,22 +1,22 @@
 ---
 title: 'MIP :: OperationCancelledError, classe'
 description: 'Documente la classe MIP :: operationcancellederror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 9b800bed51821ec077950149146240f042b2076a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 7142122d10c5e0b3807e70cf701aba8f7fef101f
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558600"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489807"
 ---
 # <a name="class-mipoperationcancellederror"></a>MIP :: OperationCancelledError, classe 
 L'opération a été annulée.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
   

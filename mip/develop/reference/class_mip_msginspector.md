@@ -1,26 +1,28 @@
 ---
 title: 'MIP :: MsgInspector, classe'
 description: 'Documente la classe MIP :: msginspector du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: d1234168e4ce3996077b705e904f5765b761ec4c
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: d2c4f85989e5d9d77ebb540b0b4adfd64b8334c1
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558605"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489892"
 ---
 # <a name="class-mipmsginspector"></a>MIP :: MsgInspector, classe 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std :: Vector\<uint8_t\>& GetBody ()  |  Obtient le corps du message. si TXT/HTML est au format UTF8.
 public BodyType GetBodyType () const  |  Obtient le type de corps.
 public const std :: Vector\<std :: unique_ptr\<MsgAttachmentData\>\>& GetAttachments () const  |  Obtient une liste de pièces jointes sous forme d’objets de données de pièce jointe MSG.
+public InspectorType GetInspectorType () const  |  Obtient les types de fichiers,.
+public std :: shared_ptr\<flux\> GetFileStream () const  |  Obtient le flux de fichier.
   
 ## <a name="members"></a>Membres
   
@@ -41,3 +43,15 @@ Obtient une liste de pièces jointes sous forme d’objets de données de pièce
 
   
 **Retourne**: un vecteur de std :: unique_ptr<MsgAttachmentData>
+  
+### <a name="getinspectortype-function"></a>GetInspectorType fonction)
+Obtient les types de fichiers,.
+
+  
+**Retourne**: InspectorType.
+  
+### <a name="getfilestream-function"></a>GetFileStream fonction)
+Obtient le flux de fichier.
+
+  
+**Retourne**: PTR partagé dans le flux de fichier.

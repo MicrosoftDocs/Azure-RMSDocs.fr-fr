@@ -1,22 +1,22 @@
 ---
 title: class mip::PolicyEngine::Settings
 description: Documente la classe MIP ::p olicyengine du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: c215b7e25908cc3f7984f68b63e3ea1be4d4a718
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 620775649ee0fa593f141b1a4f983ad8b52caafe
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560982"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487614"
 ---
 # <a name="class-mippolicyenginesettings"></a>class mip::PolicyEngine::Settings 
 Définit les paramètres associés à un PolicyEngine.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 Paramètres publics (const std :: String & engineId, const std :: String & ClientData :, const std :: String & paramètres régionaux, bool loadSensitivityTypes)  |  PolicyEngine :: Settings, constructeur pour le chargement d’un moteur existant.
@@ -29,7 +29,7 @@ public const std::string& GetClientData() const  |  Obtenir la valeur Client Dat
 public void SetClientData(const std::string& clientData)  |  Définir la chaîne Client Data.
 public const std::string& GetLocale() const  |  Obtenir la valeur Locale définie dans les paramètres.
 public void SetCustomSettings (const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& customSettings)  |  Définir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
+public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  |  Obtenir les paramètres personnalisés, qui sont utilisés pour la régulation et le test de la fonctionnalité.
 public void SetSessionId(const std::string& sessionId)  |  Définir l’ID de session, qui est utilisé pour la télémétrie définie par le client.
 public const std::string& GetSessionId() const  |  Obtenir l’ID de session, qui est un identificateur unique.
 public bool IsLoadSensitivityTypesEnabled () const  |  Obtient l’indicateur qui spécifie si les étiquettes de sensibilité de la charge sont activées.
@@ -39,6 +39,8 @@ public void SetDelegatedUserEmail (const std :: String & delegatedUserEmail)  |
 public const std :: String & GetDelegatedUserEmail () const  |  Obtient l’utilisateur délégué.
 public void SetLabelFilter (const std :: Vector\<LabelFilterType\>& labelFilter)  |  Définit le filtre d’étiquette.
 public const std :: Vector\<LabelFilterType\>& GetLabelFilter () const  |  Obtient le filtre d’étiquette.
+public void SetVariableTextMarkingType (VariableTextMarkingType variableTextMarkingType)  |  Définit le type de marquage de texte de la variable.
+public VariableTextMarkingType GetVariableTextMarkingType () const  |  Obtient le type de marquage de texte de la variable.
   
 ## <a name="members"></a>Membres
   
@@ -166,7 +168,7 @@ Obtient l’indicateur qui spécifie si les étiquettes de sensibilité de la ch
 Définit éventuellement l’URL de base du point de terminaison cloud.
 
 Paramètres :  
-* **cloudEndpointBaseUrl** : URL de base utilisée par toutes les demandes de service (par exemple, « https://dataservice.protection.outlook.com  »)
+* **cloudEndpointBaseUrl** : URL de base utilisée par toutes les demandes de service (par exemple, « https://dataservice.protection.outlook.com »)
 
 
   
@@ -206,3 +208,17 @@ Obtient le filtre d’étiquette.
   
 **Retourne**: filtre d’étiquette.
 Par défaut, les étiquettes sont filtrées par défaut, cette API permet de filtrer par actions possibles.
+  
+### <a name="setvariabletextmarkingtype-function"></a>SetVariableTextMarkingType fonction)
+Définit le type de marquage de texte de la variable.
+
+Paramètres :  
+* **variableTextMarkingType**: type de marquage de texte de la variable.
+
+
+  
+### <a name="getvariabletextmarkingtype-function"></a>GetVariableTextMarkingType fonction)
+Obtient le type de marquage de texte de la variable.
+
+  
+**Retourne**: le type de marquage de texte de la variable.

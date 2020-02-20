@@ -1,22 +1,22 @@
 ---
 title: mip::AddContentHeaderAction, classe
 description: 'Documente la classe MIP :: addcontentheaderaction du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 40e9b648799008bcc75b48ae9379f7a3010bd7bd
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: f58fe47de4ee1f79f64415013fc1949ef53b2adf
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559047"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490725"
 ---
 # <a name="class-mipaddcontentheaderaction"></a>mip::AddContentHeaderAction, classe 
 Classe d’action qui spécifie l’ajout d’un en-tête de contenu.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  API utilisée pour marquer l’élément d’en-tête de contenu.

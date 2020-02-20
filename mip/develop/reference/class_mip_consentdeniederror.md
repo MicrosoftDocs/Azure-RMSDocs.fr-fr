@@ -1,22 +1,22 @@
 ---
 title: mip::ConsentDeniedError, classe
 description: 'Documente la classe MIP :: consentdeniederror du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a949fc5d86c11b37c87b119281f5c8e6efc58f1a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 07aa6d39bf14e6995d9dc60be88d02928105aa2f
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559340"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488957"
 ---
 # <a name="class-mipconsentdeniederror"></a>mip::ConsentDeniedError, classe 
 Une opération nécessitant le consentement de l’utilisateur ne l’a pas obtenu.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
   

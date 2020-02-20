@@ -1,30 +1,30 @@
 ---
 title: MIP de classe ::P rotectionSettings
 description: Documente la classe MIP ::p rotectionsettings du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 5c0354b69912e437f87dc9b9b614338091a5b163
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a44d404fed5ebdac535bac586f4ce54a61e94f6d
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560668"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489569"
 ---
 # <a name="class-mipprotectionsettings"></a>MIP de classe ::P rotectionSettings 
 Interface pour la configuration des options de protection pour la méthode SetLabel.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ProtectionSettings () = default  | Pas encore documenté.
-public ProtectionSettings (const std :: String & delegatedUserEmail, PFileExtensionBehavior pfileExtensionBehavior)  | Pas encore documenté.
-public void SetDelegatedUserEmail (const std :: String delegatedUserEmail)  | Pas encore documenté.
-public std :: String GetDelegatedUserEmail () const  | Pas encore documenté.
-public void SetPFileExtensionBehavior (PFileExtensionBehavior pfileExtensionBehavior)  | Pas encore documenté.
-public PFileExtensionBehavior GetPFileExtensionBehavior () const  | Pas encore documenté.
+public ProtectionSettings () = default  | _Pas encore documenté._
+public ProtectionSettings (const std :: String & delegatedUserEmail, PFileExtensionBehavior pfileExtensionBehavior)  | _Pas encore documenté._
+public void SetDelegatedUserEmail (const std :: String delegatedUserEmail)  | _Pas encore documenté._
+public std :: String GetDelegatedUserEmail () const  | _Pas encore documenté._
+public void SetPFileExtensionBehavior (PFileExtensionBehavior pfileExtensionBehavior)  | _Pas encore documenté._
+public PFileExtensionBehavior GetPFileExtensionBehavior () const  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
   

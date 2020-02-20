@@ -1,22 +1,22 @@
 ---
 title: class mip::ProtectionDescriptor
 description: Documente la classe MIP ::p rotectiondescriptor du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 34acc6109a5d3dfcbbaec37e81f3215dd30f5018
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 43871eeae67cd55cc85b06f22c5dd6e76fb91f2f
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73557736"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487036"
 ---
 # <a name="class-mipprotectiondescriptor"></a>class mip::ProtectionDescriptor 
 Description de la protection associée à un élément de contenu.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public ProtectionType GetProtectionType() const  |  Obtient le type de protection, issue du modèle de SDK de protection ou non.
@@ -32,8 +32,8 @@ public bool DoesContentExpire () const  |  Vérifie si le contenu a une heure d�
 public std :: Chrono :: time_point\<std :: Chrono :: system_clock\> GetContentValidUntil () const  |  Obtient l’heure d’expiration de la protection.
 public bool DoesAllowOfflineAccess() const  |  Indique si la protection autorise l’accès au contenu hors connexion ou non.
 public std::string GetReferrer() const  |  Obtient l’adresse du référent de protection.
-public std::map\<std::string, std::string\> GetEncryptedAppData() const  |  Obtient les données spécifiques de l’application qui ont été chiffrées.
-public std::map\<std::string, std::string\> GetSignedAppData() const  |  Obtient les données spécifiques de l’application qui ont été signées.
+public std :: Map\<std :: String, std :: String\> GetEncryptedAppData () const  |  Obtient les données spécifiques de l’application qui ont été chiffrées.
+public std :: Map\<std :: String, std :: String\> GetSignedAppData () const  |  Obtient les données spécifiques de l’application qui ont été signées.
   
 ## <a name="members"></a>Membres
   

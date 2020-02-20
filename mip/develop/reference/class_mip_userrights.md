@@ -1,22 +1,22 @@
 ---
 title: mip::UserRights, classe
 description: 'Documente la classe MIP :: UserRights du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 1df26089f37b1e89be8749aa1bc862f0d3a729ba
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: f44ff30c890a5a8ab3dbce2426a6c1898df1f0e5
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558394"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489297"
 ---
 # <a name="class-mipuserrights"></a>mip::UserRights, classe 
 Groupe d’utilisateurs et droits qui leur sont associés.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public UserRights (const std :: Vector\<std :: String\>& Users, const std :: Vector\<std :: String\>& Rights)  |  Constructeur UserRights.

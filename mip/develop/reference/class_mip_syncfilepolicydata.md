@@ -1,29 +1,29 @@
 ---
 title: 'MIP :: SyncFilePolicyData, classe'
 description: 'Documente la classe MIP :: syncfilepolicydata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: c4464c4705af082c8c5f1e63fde217b083a24d7e
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a9e08fa2f734f40e4a99aae4a6e141cec4eff6c0
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560517"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489348"
 ---
 # <a name="class-mipsyncfilepolicydata"></a>MIP :: SyncFilePolicyData, classe 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const LabelGroupData * GetLabelGroupData () const  | Pas encore documenté.
-public const std :: Vector\<std :: unique_ptr\<PolicyPackageData\>\>& GetPoliciesPackageData () const  | Pas encore documenté.
-public const std :: String & GetUpn () const  | Pas encore documenté.
-public const std :: unordered_map\<std :: String, std :: String\>& GetClassificationList () const  | Pas encore documenté.
-public const std :: String & GetUserObjectId () const  | Pas encore documenté.
-virtuel public ~ SyncFilePolicyData ()  | Pas encore documenté.
+public const LabelGroupData * GetLabelGroupData () const  | _Pas encore documenté._
+public const std :: Vector\<std :: unique_ptr\<PolicyPackageData\>\>& GetPoliciesPackageData () const  | _Pas encore documenté._
+public const std :: String & GetUpn () const  | _Pas encore documenté._
+public const std :: unordered_map\<std :: String, std :: String\>& GetClassificationList () const  | _Pas encore documenté._
+public const std :: String & GetUserObjectId () const  | _Pas encore documenté._
+virtuel public ~ SyncFilePolicyData ()  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
   

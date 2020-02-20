@@ -1,22 +1,22 @@
 ---
 title: 'MIP :: AuthDelegate, classe'
 description: 'Documente la classe MIP :: authdelegate du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 3dc5679893c0de02eb9b9cb4f197c5ea39bf356f
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 30907f3bf4a08f72305a59290c8cbd891def44c9
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560335"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490606"
 ---
 # <a name="class-mipauthdelegate"></a>MIP :: AuthDelegate, classe 
 Délégué pour les opérations liées à l’authentification.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public virtuel bool AcquireOAuth2Token (const MIP :: Identity & Identity, const OAuth2Challenge & Challenge, OAuth2Token & Token)  |  Cette méthode est appelée lorsqu’un jeton d’authentification est requis pour le moteur de stratégie avec l’identité donnée et le Challenge donné. Le client doit retourner une valeur indiquant si l’acquisition du jeton a réussi. En cas de réussite, elle doit initialiser l’objet de jeton donné.
@@ -28,15 +28,18 @@ public virtuel bool AcquireOAuth2Token (const MIP :: Identity & Identity, const
 Cette méthode est appelée lorsqu’un jeton d’authentification est requis pour le moteur de stratégie avec l’identité donnée et le Challenge donné. Le client doit retourner une valeur indiquant si l’acquisition du jeton a réussi. En cas de réussite, elle doit initialiser l’objet de jeton donné.
 
 Paramètres :  
-* **identité**: 
+* **identité**: utilisateur pour lequel un jeton est demandé 
 
 
-* **défi**: 
+* **défi**: OAuth2 Challenge 
 
 
-* **token** : 
+* **jeton**: [sortie] jeton OAuth2 encodé en base64
 
 
+
+  
+**Retourne**: true si le jeton a été acquis avec succès, sinon false en cas d’échec, si le paramètre de sortie du jeton contient un message d’erreur, il est inclus dans l’exception NoAuthTokenError qui sera ensuite déclenchée par l’application.
 > Déconseillé : cette méthode sera bientôt dépréciée en faveur de celle qui accepte un paramètre de contexte. Si la nouvelle version a été implémentée, il n’est pas nécessaire d’implémenter cette version.
   
 ### <a name="acquireoauth2token-function"></a>AcquireOAuth2Token fonction)
@@ -54,3 +57,7 @@ Paramètres :
 
 * **jeton**: [sortie] jeton OAuth2 encodé en base64
 
+
+
+  
+**Retourne**: true si le jeton a été acquis avec succès, sinon false en cas d’échec, si le paramètre de sortie du jeton contient un message d’erreur, il est inclus dans l’exception NoAuthTokenError qui sera ensuite déclenchée par l’application.

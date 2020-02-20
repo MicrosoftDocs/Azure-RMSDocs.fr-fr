@@ -1,31 +1,31 @@
 ---
 title: 'MIP :: ContentMarkingActionData, classe'
 description: 'Documente la classe MIP :: contentmarkingactiondata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: ee5dd72a9e001e2effce81aad28b7ae36907b098
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 6652cf38163a461af49675c5009dba6461ffa544
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559317"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488906"
 ---
 # <a name="class-mipcontentmarkingactiondata"></a>MIP :: ContentMarkingActionData, classe 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | Pas encore documenté.
-public const std::string& GetFontName() const  | Pas encore documenté.
-public const std::string& GetFontColor() const  | Pas encore documenté.
-public ContentMarkAlignment GetContentMarkAlignment () const  | Pas encore documenté.
-public int GetFontSize() const  | Pas encore documenté.
-public int GetMargin() const  | Pas encore documenté.
-public ContentMarkPlacement GetContentMarkPlacement () const  | Pas encore documenté.
-virtuel public ~ ContentMarkingActionData ()  | Pas encore documenté.
+public const std::string& GetText() const  | _Pas encore documenté._
+public const std::string& GetFontName() const  | _Pas encore documenté._
+public const std::string& GetFontColor() const  | _Pas encore documenté._
+public ContentMarkAlignment GetContentMarkAlignment () const  | _Pas encore documenté._
+public int GetFontSize() const  | _Pas encore documenté._
+public int GetMargin() const  | _Pas encore documenté._
+public ContentMarkPlacement GetContentMarkPlacement () const  | _Pas encore documenté._
+virtuel public ~ ContentMarkingActionData ()  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
   

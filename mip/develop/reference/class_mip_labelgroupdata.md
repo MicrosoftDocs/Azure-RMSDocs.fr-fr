@@ -1,44 +1,46 @@
 ---
 title: 'MIP :: LabelGroupData, classe'
 description: 'Documente la classe MIP :: labelgroupdata du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e67c2122314d33a6b49f6696f1f13d6f0bbde920
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a780ac706b547049a6b1de9adce237b405fea711
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558694"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489943"
 ---
 # <a name="class-miplabelgroupdata"></a>MIP :: LabelGroupData, classe 
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  | Pas encore documenté.
-public const std :: Vector\<std :: unique_ptr\<LabelGroupData\>\>& GetLabelGroupData () const  | Pas encore documenté.
-public int GetOrder () const  | Pas encore documenté.
-public const std ::p air\<std :: String, std :: String\>& GetColor () const  | Pas encore documenté.
-public const std ::p air\<std :: String, std :: String\>& GetName () const  | Pas encore documenté.
-public const std ::p air\<std :: String, std :: String\>& GetDescription () const  | Pas encore documenté.
-public const std::string& GetTemplateId() const  | Pas encore documenté.
-public const std :: String & GetInvariantName () const  | Pas encore documenté.
-public const std ::p air\<std :: String, std :: String\>& GetTooltip () const  | Pas encore documenté.
-public const std ::p air\<std :: String, std :: String\>& GetAutoTooltip () const  | Pas encore documenté.
-public bool IsEnabled () const  | Pas encore documenté.
-public bool IsDowngradeJustificationRequired () const  | Pas encore documenté.
-public const std :: String & GetDefaultLabelId () const  | Pas encore documenté.
-public const std ::p air\<std :: String, std :: String\>& GetMoreInfoUrl () const  | Pas encore documenté.
-public bool IsMandatory () const  | Pas encore documenté.
-public const std :: Vector\<ProtectionActionType\>& GetProtectionActionTypes () const  | Pas encore documenté.
-public bool IsAuditEnabled () const  | Pas encore documenté.
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  | Pas encore documenté.
-public const std :: Vector\<std :: String\>& GetLabelByCustomProperties () const  | Pas encore documenté.
-public const std :: Vector\<std :: String\>& GetCustomPropertiesByLabel () const  | Pas encore documenté.
-virtuel public ~ LabelGroupData ()  | Pas encore documenté.
+public const std::string& GetLabelId() const  | _Pas encore documenté._
+public const std :: Vector\<std :: unique_ptr\<LabelGroupData\>\>& GetLabelGroupData () const  | _Pas encore documenté._
+public int GetOrder () const  | _Pas encore documenté._
+public const std ::p air\<std :: String, std :: String\>& GetColor () const  | _Pas encore documenté._
+public const std ::p air\<std :: String, std :: String\>& GetName () const  | _Pas encore documenté._
+public const std ::p air\<std :: String, std :: String\>& GetDescription () const  | _Pas encore documenté._
+public const std::string& GetTemplateId() const  | _Pas encore documenté._
+public const std :: String & GetInvariantName () const  | _Pas encore documenté._
+public const std ::p air\<std :: String, std :: String\>& GetTooltip () const  | _Pas encore documenté._
+public const std ::p air\<std :: String, std :: String\>& GetAutoTooltip () const  | _Pas encore documenté._
+public bool IsEnabled () const  | _Pas encore documenté._
+public bool IsDowngradeJustificationRequired () const  | _Pas encore documenté._
+public const std :: String & GetDefaultLabelId () const  | _Pas encore documenté._
+public const std ::p air\<std :: String, std :: String\>& GetMoreInfoUrl () const  | _Pas encore documenté._
+public bool IsMandatory () const  | _Pas encore documenté._
+public const std :: Vector\<std :: shared_ptr\<ProtectionActionData\>\>& GetProtectionActionData () const  | _Pas encore documenté._
+public bool IsAuditEnabled () const  | _Pas encore documenté._
+public const std :: Vector\<std ::p air\<std :: String, std :: String\>\>& GetCustomSettings () const  | _Pas encore documenté._
+public const std :: Vector\<std :: String\>& GetLabelByCustomProperties () const  | _Pas encore documenté._
+public const std :: Vector\<std :: String\>& GetCustomPropertiesByLabel () const  | _Pas encore documenté._
+public std :: Vector\<std ::p air\<std :: String, std :: String\>\> GetParsedCustomPropertiesByLabel () const  | _Pas encore documenté._
+public std :: Vector\<std :: tuple\<std :: String, std :: String, std :: String\>\> GetLabelByCustomPropertiesSettings () const  | _Pas encore documenté._
+virtuel public ~ LabelGroupData ()  | _Pas encore documenté._
   
 ## <a name="members"></a>Membres
   
@@ -102,7 +104,7 @@ _Pas encore documenté._
 _Pas encore documenté._
 
   
-### <a name="getprotectionactiontypes-function"></a>GetProtectionActionTypes fonction)
+### <a name="getprotectionactiondata-function"></a>GetProtectionActionData fonction)
 _Pas encore documenté._
 
   
@@ -119,6 +121,14 @@ _Pas encore documenté._
 
   
 ### <a name="getcustompropertiesbylabel-function"></a>GetCustomPropertiesByLabel fonction)
+_Pas encore documenté._
+
+  
+### <a name="getparsedcustompropertiesbylabel-function"></a>GetParsedCustomPropertiesByLabel fonction)
+_Pas encore documenté._
+
+  
+### <a name="getlabelbycustompropertiessettings-function"></a>GetLabelByCustomPropertiesSettings fonction)
 _Pas encore documenté._
 
   

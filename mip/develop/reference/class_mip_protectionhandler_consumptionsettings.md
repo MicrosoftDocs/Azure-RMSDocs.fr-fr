@@ -1,25 +1,26 @@
 ---
 title: 'MIP ::P rotectionHandler :: ConsumptionSettings'
 description: Documente la classe MIP ::p rotectionhandler du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 63a7f3c377a40a5faf82afe332a12efed0d646c4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 0f505d919f36819ce77285c77d6eebf7156d481c
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560725"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77486781"
 ---
 # <a name="class-mipprotectionhandlerconsumptionsettings"></a>MIP ::P rotectionHandler :: ConsumptionSettings 
 Paramètres utilisés pour créer un ProtectionHandler pour utiliser le contenu existant.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public ConsumptionSettings (const std :: Vector\<uint8_t\>& serializedPublishingLicense)  |  ProtectionHandler :: ConsumptionSettings constructeur pour la création d’un nouveau gestionnaire.
+public ConsumptionSettings (const std :: Vector\<uint8_t\>& serializedPreLicense, const std :: Vector\<uint8_t\>& serializedPublishingLicense)  |  ProtectionHandler :: ConsumptionSettings constructeur pour la création d’un nouveau gestionnaire.
 public ConsumptionSettings (const std :: shared_ptr\<PublishingLicenseInfo\>& licenseInfo)  |  ProtectionHandler :: ConsumptionSettings constructeur pour la création d’un nouveau gestionnaire.
 public std :: shared_ptr\<PublishingLicenseInfo\> GetPublishingLicenseInfo () const  |  Procurez-vous la licence de publication associée au contenu protégé.
 public bool GetIsOfflineOnly () const  |  Obtient une valeur indiquant si la création de ProtectionHandler autorise ou non les opérations HTTP en ligne.
@@ -33,6 +34,17 @@ public const std :: String & GetDelegatedUserEmail () const  |  Obtient l’uti
 ProtectionHandler :: ConsumptionSettings constructeur pour la création d’un nouveau gestionnaire.
 
 Paramètres :  
+* **serializedPublishingLicense**: licence de publication sérialisée à partir du contenu protégé
+
+
+  
+### <a name="consumptionsettings-function"></a>ConsumptionSettings fonction)
+ProtectionHandler :: ConsumptionSettings constructeur pour la création d’un nouveau gestionnaire.
+
+Paramètres :  
+* **serializedPreLicense**: pré-licence sérialisée de attaché au contenu. 
+
+
 * **serializedPublishingLicense**: licence de publication sérialisée à partir du contenu protégé
 
 

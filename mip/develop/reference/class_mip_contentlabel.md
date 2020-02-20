@@ -1,23 +1,23 @@
 ---
 title: mip::ContentLabel, classe
 description: 'Documente la classe MIP :: contentlabel du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a29ea5be05d928f25b9a4255416d93acedcb1c0b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: f131885572ab5ad3a2664a6b50162a011529bfbb
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74840273"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490334"
 ---
 # <a name="class-mipcontentlabel"></a>mip::ContentLabel, classe 
 Abstraction d’une étiquette Microsoft Information Protection appliquée à un élément de contenu, généralement un document.
 Elle contient également des propriétés pour une instance d’étiquette appliquée spécifique.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std :: Chrono :: time_point\<std :: Chrono :: system_clock\> GetCreationTime () const  |  Obtenir l’heure de création de l’étiquette.

@@ -1,22 +1,22 @@
 ---
 title: mip::HttpRequest, classe
 description: 'Documente la classe MIP :: HttpRequest du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: bfe55f09caaa20687750b055e10828f8cc6df2bd
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: f3b26ad07b8b3bfc556646cfd96a71aa9188bbb0
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560171"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488090"
 ---
 # <a name="class-miphttprequest"></a>mip::HttpRequest, classe 
 Interface qui décrit une seule requête HTTP.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Obtient l’ID de la demande.

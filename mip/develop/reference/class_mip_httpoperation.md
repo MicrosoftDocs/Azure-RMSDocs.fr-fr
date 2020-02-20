@@ -1,22 +1,22 @@
 ---
 title: 'MIP :: HttpOperation, classe'
 description: 'Documente la classe MIP :: httpoperation du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 6f0c3cc726d72d89a8682907ebc350270db5daee
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 4be7b54dd5df255c488043d84ebcfebbce7e6ac2
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558791"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489994"
 ---
 # <a name="class-miphttpoperation"></a>MIP :: HttpOperation, classe 
 Interface qui décrit une seule opération HTTP, implémentée par l’application cliente lors du remplacement de HttpDelegate.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Obtient l’ID de l’opération.

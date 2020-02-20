@@ -1,33 +1,31 @@
 ---
 title: mip::FileProfile, classe
 description: 'Documente la classe MIP :: fileprofile du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a436024aefe58a73ea03747fce5c5f2f4b4fc4b1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 44d6024473555c0745ff3156ff5cd004f83b6f6b
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558799"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488141"
 ---
 # <a name="class-mipfileprofile"></a>mip::FileProfile, classe 
 La classe FileProfile est la classe racine pour l’utilisation des opérations Microsoft Information Protection.
 Une application classique a besoin d’un seul profil.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Retourne les paramètres de profil.
-public void ListEnginesAsync (const std :: shared_ptr\<void\>& Context)  |  Démarre une opération d’énumération de moteurs.
-public void UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Démarre le déchargement du moteur de fichier avec l’ID spécifié.
-public void AddEngineAsync (const FileEngine :: Settings & Settings, const std :: shared_ptr\<void\>& Context)  |  Démarre l’ajout d’un nouveau moteur de fichier au profil.
-public void DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Démarre la suppression du moteur de fichier avec l’ID spécifié. Toutes les données du profil spécifié seront supprimées.
-public static FILE_API void __CDECL MIP :: FileProfile :: LoadAsync | Démarre le chargement d’un profil en fonction des paramètres fournis
-public static const FILE_API char * __CDECL MIP :: FileProfile :: GetVersion | Obtient la version de la bibliothèque.
-
+public std :: shared_ptr\<AsyncControl\> ListEnginesAsync (const std :: shared_ptr\<void\>& contexte)  |  Démarre une opération d’énumération de moteurs.
+public std :: shared_ptr\<AsyncControl\> UnloadEngineAsync (const std :: String & ID, const std :: shared_ptr\<void\>contexte &)  |  Démarre le déchargement du moteur de fichier avec l’ID spécifié.
+public std :: shared_ptr\<AsyncControl\> AddEngineAsync (const FileEngine :: Settings & Settings, const std :: shared_ptr\<void\>& Context)  |  Démarre l’ajout d’un nouveau moteur de fichier au profil.
+public std :: shared_ptr\<AsyncControl\> DeleteEngineAsync (const std :: String & ID, const std :: shared_ptr\<void\>contexte &)  |  Démarre la suppression du moteur de fichier avec l’ID spécifié. Toutes les données du profil spécifié seront supprimées.
+  
 ## <a name="members"></a>Membres
   
 ### <a name="getsettings-function"></a>GetSettings fonction)
@@ -35,24 +33,28 @@ Retourne les paramètres de profil.
   
 ### <a name="listenginesasync-function"></a>ListEnginesAsync fonction)
 Démarre une opération d’énumération de moteurs.
+
+  
+**Retourne**: objet de contrôle asynchrone.
 FileProfile :: observer est appelé en cas de réussite ou d’échec.
   
 ### <a name="unloadengineasync-function"></a>UnloadEngineAsync fonction)
 Démarre le déchargement du moteur de fichier avec l’ID spécifié.
+
+  
+**Retourne**: objet de contrôle asynchrone.
 FileProfile :: observer est appelé en cas de réussite ou d’échec.
   
 ### <a name="addengineasync-function"></a>AddEngineAsync fonction)
 Démarre l’ajout d’un nouveau moteur de fichier au profil.
+
+  
+**Retourne**: objet de contrôle asynchrone.
 FileProfile :: observer est appelé en cas de réussite ou d’échec.
   
 ### <a name="deleteengineasync-function"></a>DeleteEngineAsync fonction)
 Démarre la suppression du moteur de fichier avec l’ID spécifié. Toutes les données du profil spécifié seront supprimées.
+
+  
+**Retourne**: objet de contrôle asynchrone.
 FileProfile :: observer est appelé en cas de réussite ou d’échec.
-
-### <a name="loadasync-function"></a>LoadAsync, fonction
-Démarre le chargement d’un profil en fonction des paramètres fournis.
-
-[FileProfile::Observer](class_mip_fileprofile_observer.md) est appelé en cas de réussite ou d’échec.
-
-### <a name="getversion-function"></a>GetVersion, fonction
-Obtient la version de la bibliothèque.

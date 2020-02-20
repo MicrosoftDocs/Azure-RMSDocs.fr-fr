@@ -1,22 +1,22 @@
 ---
 title: class mip::ProtectionHandler
 description: Documente la classe MIP ::p rotectionhandler du kit de développement logiciel (SDK) Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 6b5468986d62c01d2d3f0b55a57946d5fa06bab3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 4b245ea2a579aa3d9a0fddfb503830d75577c2b7
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560110"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489654"
 ---
 # <a name="class-mipprotectionhandler"></a>class mip::ProtectionHandler 
 Gère les actions liées à la protection pour une configuration de protection spécifique.
   
-## <a name="summary"></a>Table des matières
+## <a name="summary"></a>Résumé
  Membres                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public std :: shared_ptr\<flux\> CreateProtectedStream (const std :: shared_ptr\<flux\>& backingStream, int64_t contentStartPosition, int64_t contenter)  |  Créer un flux protégé qui permet de chiffrer/déchiffrer le contenu.

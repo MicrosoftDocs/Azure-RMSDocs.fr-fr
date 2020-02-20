@@ -4,7 +4,7 @@
   items:
     - name: À propos du kit SDK Microsoft Information Protection
       href: overview.md
-- name: Guides de démarrage rapide
+- name: Démarrages rapides
   expanded: true
   items:
     - name: Installation et configuration du Kit de développement logiciel (SDK) MIP
@@ -135,6 +135,8 @@
               href: reference/class_mip_applylabelaction.md
             - name: ArgumentData
               href: reference/class_mip_argumentdata.md
+            - name: AsyncControl
+              href: reference/class_mip_asynccontrol.md
             - name: AuthDelegate
               href: reference/class_mip_authdelegate.md
             - name: 'AuthDelegate::OAuth2Challenge'
@@ -203,8 +205,10 @@
               href: reference/class_mip_httprequest.md
             - name: HttpResponse
               href: reference/class_mip_httpresponse.md
-            - name: Fournisseur
+            - name: Identité
               href: reference/class_mip_identity.md
+            - name: InsufficientBufferError
+              href: reference/class_mip_insufficientbuffererror.md
             - name: InternalError
               href: reference/class_mip_internalerror.md
             - name: JustificationRequiredError
@@ -333,6 +337,8 @@
               href: reference/class_mip_syncfilesensitivitydata.md
             - name: TaskDispatcherDelegate
               href: reference/class_mip_taskdispatcherdelegate.md
+            - name: TemplateDescriptor
+              href: reference/class_mip_templatedescriptor.md
             - name: TemplateNotFoundError
               href: reference/class_mip_templatenotfounderror.md
             - name: TransientNetworkError

@@ -4,7 +4,7 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/09/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8e91257484ccb148475d16e3fd5de2905b8691c3
-ms.sourcegitcommit: d9465ec12b78c24d4d630295d4e5ffae0ba8d647
+ms.openlocfilehash: b4ddfa8a7746de36030cb38b726949a19eebf73d
+ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77045018"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507703"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -57,6 +57,8 @@ Pour les paramètres d’étiquette, plusieurs valeurs de chaîne pour la même 
 
 Pour supprimer un paramètre avancé, utilisez la même syntaxe, mais spécifiez une valeur de chaîne NULL.
 
+> [!IMPORTANT]
+> L’utilisation d’espaces blancs dans la chaîne empêche l’application des étiquettes. 
 
 #### <a name="examples-for-setting-advanced-settings"></a>Exemples de paramétrage des paramètres avancés
 
@@ -111,6 +113,7 @@ Les paramètres avancés des étiquettes suivent la même logique pour la préc�
 
 Les paramètres avancés de la stratégie d’étiquette sont appliqués dans l’ordre inverse : à une exception près, les paramètres avancés de la première stratégie sont appliqués, en fonction de l’ordre des stratégies dans le centre d’administration. L’exception est le paramètre avancé *OutlookDefaultLabel*, qui définit une autre étiquette par défaut pour Outlook. Pour ce paramètre avancé de stratégie d’étiquette uniquement, le dernier paramètre est appliqué en fonction de l’ordre des stratégies dans le centre d’administration.
 
+
 #### <a name="available-advanced-settings-for-label-policies"></a>Paramètres avancés disponibles pour les stratégies d’étiquette
 
 Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) et [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
@@ -121,6 +124,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |AttachmentActionTip|[Pour les e-mails avec pièces jointes, appliquez une étiquette correspondant à la classification la plus élevée de ces pièces jointes](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |DisableMandatoryInOutlook|[Exempter les messages Outlook de l’étiquetage obligatoire](#exempt-outlook-messages-from-mandatory-labeling)
 |EnableAudit|[Désactiver l’envoi de données d’audit à Azure Information Protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
+|EnableContainerSupport|[Activer la suppression de la protection des fichiers PST, rar, 7zip et MSG](#enable-removal-of-protection-from-compressed-files)
 |EnableCustomPermissions|[Désactiver les autorisations personnalisées dans l’Explorateur de fichiers](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Pour les fichiers protégés avec des autorisations personnalisées, toujours afficher des autorisations personnalisées pour les utilisateurs dans l’Explorateur de fichiers](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrer des étiquettes de Secure Islands et autres solutions d’étiquetage](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -212,6 +216,20 @@ Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivan
 Exemple de commande PowerShell, où votre stratégie d’étiquette est nommée « global » :
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
+
+## <a name="enable-removal-of-protection-from-compressed-files"></a>Activer la suppression de la protection des fichiers compressés
+
+Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) de stratégie que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell.
+
+Quand vous configurez ce paramètre, l’applet de commande [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) **Set-AIPFileLabel** est activée pour permettre la suppression de la protection des fichiers PST, rar, 7zip et MSG.
+
+- Clé : **Set-LabelPolicy**
+
+- Valeur : **True**
+
+Exemple de commande PowerShell dans laquelle votre stratégie est activée :
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Définir une autre étiquette par défaut pour Outlook
 
@@ -335,7 +353,7 @@ Pour la stratégie d’étiquette sélectionnée, spécifiez les chaînes suivan
 
 - Valeur : \<**Types d’application Office WXP**> 
 
-Exemples :
+Exemples :
 
 - Pour rechercher dans des documents Word uniquement, spécifiez **W**.
 
@@ -364,7 +382,7 @@ Lorsque vous spécifiez la valeur de chaîne pour la clé **ExternalContentMarki
     Exemple : Les en-têtes ou les pieds de page ont la chaîne **TEXTE À SUPPRIMER**. Vous voulez supprimer les en-têtes ou les pieds de page qui ont exactement cette chaîne. Spécifiez la valeur : `^TEXT TO REMOVE$`.
     
 
-Les caractères génériques de la chaîne que vous spécifiez sont sensibles à la casse. La longueur maximale de la chaîne est de 255 caractères.
+Les caractères génériques de la chaîne que vous spécifiez sont sensibles à la casse. La longueur de chaîne maximale est de 255 caractères et ne peut pas contenir d’espaces blancs. 
 
 Étant donné que des documents peuvent contenir des caractères invisibles ou différents types d’espaces ou des tabulations, la chaîne que vous spécifiez pour une expression ou une phrase peut ne pas être détectée. Si possible, spécifiez un seul mot distinctif pour la valeur et veillez à tester les résultats avant de procéder au déploiement en production.
 
@@ -928,6 +946,9 @@ Pour les documents Office et les e-mails Outlook libellés par les utilisateurs 
 Cette configuration nécessite que vous spécifiiez un paramètre avancé nommé **customPropertiesByLabel** pour chaque étiquette de sensibilité à laquelle vous souhaitez appliquer les propriétés personnalisées supplémentaires. Ensuite, définissez la valeur à utiliserpour chaque entrée avec la syntaxe suivante :
 
 `[custom property name],[custom property value]`
+
+> [!IMPORTANT]
+> L’utilisation d’espaces blancs dans la chaîne empêche l’application des étiquettes.
 
 #### <a name="example-1-add-a-single-custom-property-for-a-label"></a>Exemple 1 : ajouter une seule propriété personnalisée pour une étiquette
 

@@ -4,7 +4,7 @@ description: Instructions d’installation, de configuration et d’exécution d
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 2/14/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 03ec95f3e53bd522c1d1775e54dfae7305a578e3
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 770096621ecffe8e2f557fa7df92e2bd028dd1e4
+ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77423187"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507720"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Déploiement du scanneur Azure Information Protection pour classifier et protéger automatiquement les fichiers
 
@@ -345,9 +345,18 @@ Le jeton Azure AD permet au scanneur de s’authentifier auprès du service Azur
     ```
 
     Lorsque vous y êtes invité, spécifiez le mot de passe des informations d’identification de votre compte de service pour Azure AD, puis cliquez sur **Accepter**.
-    
+
+        
     Si votre compte de service de scanneur ne peut pas se voir accorder le droit **ouvrir une session localement** pour l’installation [, consultez spécifier et utiliser le paramètre Token pour Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) à partir du Guide de l’administrateur du client.
-    
+
+
+    **Exemple de client classique :**
+
+    ```
+    Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
+    Acquired application access token on behalf of the user
+    ```
+       
     **Pour le client d’étiquetage unifié :**
     
     ```
@@ -355,6 +364,14 @@ Le jeton Azure AD permet au scanneur de s’authentifier auprès du service Azur
     ```
     
     Si votre compte de service de scanneur ne peut pas se voir accorder le droit **ouvrir une session localement** pour l’installation, utilisez le paramètre *OnBehalfOf* avec set-AIPAuthentication, comme décrit dans [Comment étiqueter des fichiers de manière non interactive pour Azure information protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) du Guide de l’administrateur de ce client.
+
+    **Exemple de client d’étiquetage unifié :**
+
+    ```
+    $pscreds = Get-Credential CONTOSO\scanner
+    Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+    Acquired application access token on behalf of CONTOSO\scanner.
+    ```
 
 Le scanneur dispose désormais d’un jeton pour s’authentifier auprès de Azure AD, ce qui est valide pendant un an, deux ans ou n’expire jamais, en fonction de votre configuration de l' **application Web/API** (client classique) ou de la clé secrète client (client d’étiquetage unifié) dans Azure ad. Quand le jeton expire, vous devez répéter les étapes 1 et 2.
 

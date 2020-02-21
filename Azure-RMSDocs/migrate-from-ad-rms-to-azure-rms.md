@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0d78151a9eb2ecc64a21ed1076095b6a6f56278a
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 7e1ec5241cfedf89b33258115afbc1ee86eae3b3
+ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117967"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507635"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migration d’AD RMS vers Azure Information Protection
 
@@ -44,7 +44,7 @@ Bien que ceci ne soit pas obligatoire, il peut s’avérer utile de lire ce qui 
 
 - [Vue d’ensemble du connecteur Microsoft Rights Management](./deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector) : cette section de la documentation du connecteur RMS explique comment vos serveurs locaux peuvent se connecter au service Azure Rights Management pour protéger des documents et des e-mails.
 
-En outre, si vous êtes familiarisé avec le fonctionnement de AD RMS, il peut s’avérer utile de lire [comment Azure RMS fonctionne-t-il ? En coulisses](./how-does-it-work.md) pour vous aider à identifier les processus technologiques identiques ou différents pour la version du Cloud.
+En outre, si vous n’êtes pas familiarisé avec le fonctionnement de AD RMS, vous trouverez peut-être utile de lire [comment Azure RMS fonctionne-t-il ? En coulisses](./how-does-it-work.md) pour vous aider à identifier les processus technologiques identiques ou différents pour la version du Cloud.
 
 ## <a name="prerequisites-for-migrating-ad-rms-to-azure-information-protection"></a>Conditions préalables à une migration d’AD RMS vers Azure Information Protection
 
@@ -54,13 +54,13 @@ Avant de procéder à la migration vers Azure Information Protection, assurez-vo
     
   - Les versions suivantes d’AD RMS prennent en charge une migration vers Azure Information Protection :
            
-      - Windows Server 2012 (x64)
+      - Windows Server 2012 (x64)
         
       - Windows Server 2012 R2 (x64)
         
       - Windows Server 2016 (x64)
         
-  - Toutes les topologies AD RMS valides sont prises en charge :
+  - Toutes les topologies AD RMS valides sont prises en charge :
     
       - Forêt unique, cluster RMS unique
         
@@ -213,6 +213,6 @@ Les étapes de migration peuvent être divisées en cinq phases qui peuvent êtr
     Cette étape est recommandée si vous n’utilisiez pas le mode de chiffrement 2 avant la migration.
 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 Pour démarrer la migration, accédez à [Phase 1 : Préparation](migrate-from-ad-rms-phase1.md).
 

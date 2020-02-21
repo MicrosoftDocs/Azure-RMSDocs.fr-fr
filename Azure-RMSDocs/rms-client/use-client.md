@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/23/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 8585245243813977c6c7442fab4d5687e89882c1
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 96a1af247d9c65077be3dc7706cc1976850540fd
+ms.sourcegitcommit: 2abde0336bffda66ba7c629bfb5f0525264c3730
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422843"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77494885"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -105,7 +105,7 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Barre Information Protection dans les applications Office :| **Oui** | **Oui**| Non |
 |Marquages visuels en tant qu’action d’étiquette (en-tête, pied de page, filigrane) :| **Oui** | **Oui** | **Oui**|
 |Marquages visuels par application :| **Oui** | **Oui* | Non |
-|Marquages visuels dynamiques avec des variables :| **Oui** | **** | Non |
+|Marquages visuels dynamiques avec des variables :| **Oui** | **Oui** (version préliminaire) | Non |
 |Étiquette avec l’Explorateur de fichiers :| **Oui** | **Oui** | Non |
 |Visionneuse pour les fichiers protégés (texte, images, PDF,. pfile) :| **Oui** | **Oui** | Non|
 |Prise en charge PPDF pour l’application des étiquettes :| **Oui** | Non | Non |

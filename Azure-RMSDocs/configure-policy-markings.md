@@ -4,19 +4,19 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0b38d57c17fd9025135cc7edd15fa69973b9cd70
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: c1f1e674f8937de23b37a8f0273e57c4a44e4d64
+ms.sourcegitcommit: 2821e8a48cea3abdb8af91cdde02380126d00630
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75959942"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600676"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -84,6 +84,8 @@ Quand vous cliquez sur **Enregistrer**, vos modifications sont automatiquement d
 
 ## <a name="using-variables-in-the-text-string"></a>Utilisation de variables dans la chaîne de texte
 
+Les variables suivantes sont généralement disponibles lors de l’utilisation de Azure Information Protection client classique et sont en version préliminaire publique lors de l’utilisation du client d’étiquetage unifié Azure Information Protection.  
+
 Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’en-tête, le pied de page ou le filigrane :
 
 - `${Item.Label}` pour l’étiquette sélectionnée. Par exemple : Général
@@ -92,13 +94,16 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
 
 - `${Item.Location}` pour le chemin et le nom de fichier des documents, et pour l’objet des e-mails. Par exemple : \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` pour le propriétaire du document ou de l’e-mail, par le nom d’utilisateur connecté à Windows. Par exemple : rsimone
+- `${User.Name}` pour le propriétaire du document ou de l’e-mail, par le nom d’utilisateur connecté à Windows. Par exemple : rsimone 
 
-- `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Exemple : rsimone@vanarsdelltd.com
+- `${User.PrincipalName}` pour le propriétaire du document ou de l’e-mail, par l’adresse e-mail du client Azure Information Protection connecté (UPN). Exemple : rsimone@vanarsdelltd.com.
 
 - `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Par exemple : 16/08/2016 13:30
 
 Exemple : Si vous spécifiez la chaîne `Document: ${item.name}  Classification: ${item.label}` pour le pied de page de l’étiquette **Général**, le texte du pied de page appliqué à un document nommé project.docx est **Document : project.docx Classification : Général**.
+
+> [!NOTE]
+> L’utilisation de la variable `${User.Name}` et/ou `${User.PrincipalName}` n’est pas prise en charge actuellement par le client d’étiquetage unifié Azure Information Protection. 
 
 >[!TIP]
 > On utilise également un [code de champ pour insérer le nom de l’étiquette](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) dans un document ou un modèle.
@@ -113,7 +118,7 @@ Utilisez la syntaxe suivante :
 
 La syntaxe de cette instruction respecte la casse.
 
-Exemples :
+Exemples :
 
 - **Définir un texte d’en-tête pour les documents Word uniquement :**
     
@@ -133,6 +138,9 @@ Exemples :
     
     Dans Word et PowerPoint, l’étiquette applique le texte en filigrane « Ce contenu est confidentiel ». Dans Excel, l’étiquette applique le texte en filigrane « Confidentiel ». Dans Outlook, l’étiquette n’applique pas de texte en filigrane, car les filigranes comme les marquages visuels ne sont pas pris en charge pour Outlook.
 
+> [!NOTE]
+> Lorsque vous utilisez le client d’étiquetage unifié Azure Information Protection, la définition de valeurs pour le nom de la **police** et/ou la **couleur de police** n’est possible qu’à l’aide du portail Azure information protection. 
+
 ### <a name="setting-the-font-name"></a>Définition du nom de la police
 
 Calibri est la police par défaut pour le texte des en-têtes, pieds de page et filigranes. Si vous spécifiez une autre police, vérifiez qu’elle est disponible sur les appareils clients qui appliqueront les marquages visuels. 
@@ -145,7 +153,7 @@ Vous pouvez choisir une couleur dans la liste des couleurs disponibles ou spéci
 
 Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à partir de la page de [> de couleur\<](https://developer.mozilla.org/docs/Web/CSS/color_value) dans les documents Web MSDN. Vous trouverez également ces codes dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 

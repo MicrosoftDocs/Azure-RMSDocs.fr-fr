@@ -4,19 +4,19 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/25/2020
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c1f1e674f8937de23b37a8f0273e57c4a44e4d64
-ms.sourcegitcommit: 2821e8a48cea3abdb8af91cdde02380126d00630
+ms.openlocfilehash: 33bb27b5b1d79236d1a1c65bdb109b9697a73302
+ms.sourcegitcommit: 2964d0c06033a0933ea569c11475de5abf95cf92
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77600676"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77629451"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -139,7 +139,7 @@ Exemples :
     Dans Word et PowerPoint, l’étiquette applique le texte en filigrane « Ce contenu est confidentiel ». Dans Excel, l’étiquette applique le texte en filigrane « Confidentiel ». Dans Outlook, l’étiquette n’applique pas de texte en filigrane, car les filigranes comme les marquages visuels ne sont pas pris en charge pour Outlook.
 
 > [!NOTE]
-> Lorsque vous utilisez le client d’étiquetage unifié Azure Information Protection, la définition de valeurs pour le nom de la **police** et/ou la **couleur de police** n’est possible qu’à l’aide du portail Azure information protection. 
+> Lorsque vous utilisez le client d’étiquetage unifié Azure Information Protection, la définition des valeurs pour le nom de la **police** est possible uniquement à l’aide du portail Azure information protection. Lorsque vous définissez des valeurs pour la **couleur de police** au-delà de l’une des cinq valeurs par défaut, est également possible uniquement à l’aide du portail Azure information protection.
 
 ### <a name="setting-the-font-name"></a>Définition du nom de la police
 

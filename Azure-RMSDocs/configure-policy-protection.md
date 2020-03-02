@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f91e194eb6e7d7dd9623d6467de5466b64ec2b9e
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 0f98ea44bc223f3b484836fdcf53ecd452b352ce
+ms.sourcegitcommit: 275d31ef762c702b6c63025cbba0a45ca9528ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422559"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77778549"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 
@@ -208,7 +208,7 @@ Pour chaque exemple qui suit, dans votre volet \<*nom d’étiquette*>, sélecti
 
 Cette étiquette est uniquement disponible dans Outlook et convient quand Exchange Online est configuré pour les [nouvelles fonctionnalités dans Chiffrement de messages Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Demandez aux utilisateurs de sélectionner cette étiquette quand ils ont besoin d’envoyer un e-mail protégé à des personnes qui utilisent un compte Gmail (ou tout autre compte e-mail à l’extérieur de votre organisation). 
 
-Vos utilisateurs tapent l’adresse e-mail Gmail dans la zone **À**.  Ensuite, ils sélectionnent l’étiquette et l’option Ne pas transférer est automatiquement ajoutée à l’e-mail. Par conséquent, les destinataires ne peuvent pas transférer l’e-mail, ni l’imprimer, le copier, enregistrer des pièces jointes ou enregistrer l’e-mail sous un autre nom. 
+Vos utilisateurs tapent l’adresse e-mail Gmail dans la zone **À**.  Ensuite, ils sélectionnent l’étiquette et l’option Ne pas transférer est automatiquement ajoutée à l’e-mail. Par conséquent, les destinataires ne peuvent pas transférer l’e-mail, ni l’imprimer, le copier ou l’enregistrer en dehors de leur boîte de réception avec l’option **Enregistrer sous**. 
 
 1. Dans le volet **Protection**, vérifiez que l’option **Azure (clé cloud)** est sélectionnée.
     

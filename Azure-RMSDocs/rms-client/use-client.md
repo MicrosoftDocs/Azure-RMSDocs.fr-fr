@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 96a1af247d9c65077be3dc7706cc1976850540fd
-ms.sourcegitcommit: 2abde0336bffda66ba7c629bfb5f0525264c3730
+ms.openlocfilehash: fd48222d2b137c8c823e3d233562905da4d4ddc2
+ms.sourcegitcommit: 94a93275f61a2f46c995a3b7c18bae85f3f302f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77494885"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78215757"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -95,7 +95,7 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Étiquetage automatique ou recommandé :<br />-Pour Outlook| **Oui** | **Oui** | Non |
 |Étiquetage obligatoire :| **Oui** | **Oui** | Non |
 |Autorisations définies par l’utilisateur pour une étiquette : <br />-Ne pas transférer pour les e-mails| **Oui** | **Oui** | **Oui** |
-|Autorisations définies par l’utilisateur pour une étiquette : <br />-Autorisations personnalisées pour Word, Excel, PowerPoint, Explorateur de fichiers| **Oui** | **Oui** | Non |
+|Autorisations définies par l’utilisateur pour une étiquette : <br />-Autorisations personnalisées pour Word, Excel, PowerPoint, Explorateur de fichiers| **Oui** | **Oui** | **Oui** |
 |Prise en charge multilingue des étiquettes :| **Oui** | **Oui** |**Oui** |
 |Héritage d’étiquette à partir des pièces jointes aux e-mails :| **Oui** | **Oui**  |Non |
 |Les personnalisations qui incluent :<br />- Étiquette par défaut pour e-mail<br />-Messages contextuels dans Outlook <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| **Oui** <sup>1</sup> | **Oui** <sup>2</sup> | Non |
@@ -150,7 +150,7 @@ Lorsque le client Azure Information Protection (Classic) et le Azure Information
 |Gérer la barre Information Protection dans les applications Office :|Pour les utilisateurs : <br /><br />- Option permettant d’afficher ou de masquer la barre à partir du bouton **Protéger** situé sur le ruban<br /><br />- Lorsqu’un utilisateur choisit de masquer la barre, par défaut, elle est masquée dans cette application, mais continue de s’afficher automatiquement dans les applications récemment ouvertes. <br /><br /> Pour les administrateurs : <br /><br />- Paramètres de stratégie permettant d’afficher ou de masquer automatiquement la barre à la première ouverture d’une application, et de contrôler si la barre reste automatiquement masquée pour les applications récemment ouvertes une fois qu’un utilisateur a choisi de masquer la barre|Pour les utilisateurs : <br /><br />- Option permettant d’afficher ou de masquer la barre à partir du bouton **Critère de diffusion** situé sur le ruban<br /><br />- Lorsqu’un utilisateur choisit de masquer la barre, celle-ci est masquée dans cette application et dans les applications récemment ouvertes <br /><br />Pour les administrateurs : <br /><br />-Paramètre PowerShell pour gérer la barre |
 |Couleur d’étiquette : | À configurer dans le portail Azure | Conservé après la migration des étiquettes et configurable avec [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
 |Les étiquettes prennent en charge différentes langues :| À configurer dans le portail Azure | Configurer à l’aide d' [Office 365 Security & Compliance PowerShell](/microsoft-365/compliance/create-sensitivity-labels#additional-label-settings-with-office-365-security--compliance-center-powershell)|
-|Mise à jour de la stratégie : | Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 24 heures <br /><br />Pour le scanneur : toutes les heures et lorsque le service démarre et que la stratégie est antérieure à une heure| Quand une application Office s’ouvre <br /><br /> Lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier <br /><br />Lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection<br /><br />Toutes les 4 heures <br /><br />Pour le scanneur : toutes les 4 heures|
+|Mise à jour de la stratégie : | Quand une application Office s’ouvre <br /><br /> lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier ; <br /><br />lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection.<br /><br />Toutes les 24 heures <br /><br />Pour le scanneur : toutes les heures et lorsque le service démarre et que la stratégie est antérieure à une heure| Quand une application Office s’ouvre <br /><br /> lorsque vous cliquez avec le bouton droit pour classifier et protéger un fichier ou un dossier ; <br /><br />lorsque vous exécutez les cmdlets PowerShell pour l’étiquetage et la protection.<br /><br />Toutes les 4 heures <br /><br />Pour le scanneur : toutes les 4 heures|
 |Formats pris en charge pour PDF :| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF (par défaut) <br /><br /> - .ppdf <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint| Protection : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br /> <br /><br /> Consommation : <br /><br /> - Norme ISO pour le chiffrement PDF <br /><br />- .ppdf<br /><br />- Protection IRM pour SharePoint|
 |Fichiers protégés de façon générique (. pfile) ouverts avec la visionneuse :| Le fichier s’ouvre dans l’application d’origine, où il peut ensuite être affiché, modifié et enregistré sans protection | Le fichier s’ouvre dans l’application d’origine, où il peut ensuite être affiché et modifié, mais pas enregistré|
 |Cmdlets prises en charge :| Applets de commande pour l’étiquetage et les applets de commande pour la protection uniquement | Applets de commande pour l’étiquetage :<br /><br /> Set-AIPFileClassification et Set-AIPFileLabel ne prennent pas en charge le paramètre *owner* <br /><br /> En outre, le commentaire unique « Aucune étiquette à appliquer » existe pour tous les scénarios dans lesquels aucune étiquette n’est appliquée. <br /><br /> Set-AIPFileClassification prend en charge le paramètre *WhatIf* , afin qu’il puisse être exécuté en mode détection <br /><br /> La cmdlet Set-AIPFileLabel ne prend pas en charge le paramètre *EnableTracking*. <br /><br /> La cmdlet Get-AIPFileStatus ne retourne aucune information d’étiquette à partir d’autres abonnés et n’affiche pas le paramètre *RMSIssuedTime*.<br /><br />En outre, le *paramètre LabelingMethod* pour la fonction de récupération de l' **activité** de l’accès à AIPFileStatus affiche **Privileged** ou standard au lieu du **Manuel** ou **automatique**. Pour plus d’informations, consultez la [documentation en ligne](/powershell/module/azureinformationprotection/get-aipfilestatus).|

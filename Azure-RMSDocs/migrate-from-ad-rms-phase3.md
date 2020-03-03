@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 613dcf3e6b35ed801fafc7718dbb0db8b664483c
-ms.sourcegitcommit: 07b518c780f5e63eb5a72d7499ec7cfa40a95628
+ms.openlocfilehash: b2c206885b2449edc73948a3c0e3c815634c93de
+ms.sourcegitcommit: 94a93275f61a2f46c995a3b7c18bae85f3f302f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898916"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78215741"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Phase de migration 3 : Configuration côté client
 
@@ -60,7 +60,7 @@ Cette méthode convient uniquement aux clients Windows qui exécutent des applic
     
     Si vous utilisez le rôle de serveur DNS sur Windows Server, vous pouvez utiliser le tableau suivant en guise d’exemple pour spécifier les propriétés d’un enregistrement SRV dans la console Gestionnaire DNS.
     
-    |Champ|Value|  
+    |Champ|Valeur|  
     |-----------|-----------|  
     |**Domaine**|_tcp.rmscluster.contoso.com|  
     |**Service**|_rmsredir|  
@@ -93,7 +93,7 @@ Cette méthode convient uniquement aux clients Windows qui exécutent des applic
 
 ## <a name="client-reconfiguration-by-using-registry-edits"></a>Reconfiguration du client à l’aide des modifications du Registre
 
-Cette méthode convient à tous les clients Windows. Vous devez l’utiliser si les clients n’exécutent pas des applications Office 365, Office 2019 ou Office 2016, mais une version antérieure d’Office. Cette méthode utilise deux scripts de migration pour reconfigurer les clients AD RMS :
+Cette méthode convient à tous les clients Windows et doit être utilisée si elle n’exécute pas les applications Office 365, ou Office 2016 (ou version ultérieure) en mode « démarrer en un clic ». Cette méthode utilise deux scripts de migration pour reconfigurer les clients AD RMS :
 
 - Migrate-Client.cmd
 
@@ -109,7 +109,7 @@ Le script de configuration du client (Migrate-Client.cmd) configure les paramèt
 
 - Utilisez un script d’ouverture de session si l’utilisateur dispose de privilèges d’administrateur local.
 
-Le script de configuration utilisateur (Migrate-User.cmd) configure les paramètres au niveau de l’utilisateur et nettoie le magasin de licences de client. Cela signifie que ce script doit s’exécuter dans le contexte de l’utilisateur réel. Exemple :
+Le script de configuration utilisateur (Migrate-User.cmd) configure les paramètres au niveau de l’utilisateur et nettoie le magasin de licences de client. Cela signifie que ce script doit s’exécuter dans le contexte de l’utilisateur réel. Par exemple :
 
 - Utilisez un script d’ouverture de session.
 
@@ -136,11 +136,11 @@ Quand vous ne pouvez pas migrer tous vos clients Windows à la fois, exécutez l
    > [!IMPORTANT]
    > Comme avant, veillez à ne pas introduire d’espaces supplémentaires avant ou après les adresses.
    > 
-   > De plus, si vos serveurs AD RMS utilisent des certificats de serveur SSL/TLS, vérifiez si les valeurs des URL de licence incluent le numéro de port **443** dans la chaîne. Par exemple : https://rms.treyresearch.net:443/_wmcs/licensing. Ces informations sont disponibles dans la console Active Directory Rights Management Services quand vous cliquez sur le nom du cluster et que vous consultez les informations **Détails du cluster**. Si vous voyez le numéro de port 443 dans l’URL, incluez cette valeur quand vous modifiez le script. Par exemple : https://rms.treyresearch.net:<strong>443</strong>. 
+   > De plus, si vos serveurs AD RMS utilisent des certificats de serveur SSL/TLS, vérifiez si les valeurs des URL de licence incluent le numéro de port **443** dans la chaîne. Par exemple : https://rms.treyresearch.net:443/_wmcs/licensing. Ces informations sont disponibles dans la console Active Directory Rights Management Services quand vous cliquez sur le nom du cluster et que vous consultez les informations **Détails du cluster**. Si vous voyez le numéro de port 443 dans l’URL, incluez cette valeur quand vous modifiez le script. Par exemple : https://rms.treyresearch.net:<strong>443</strong>. 
     
    Si vous devez récupérer l’URL du service Azure Rights Management pour *&lt;URLdevotrelocataire&gt;*, consultez [Pour identifier l’URL du service Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
 3. À l’aide des instructions fournies au début de cette étape, configurez les méthodes de déploiement de votre script pour exécuter **Migrate-Client.cmd** et **Migrate-User.cmd** sur les ordinateurs clients Windows utilisés par les membres du groupe AIPMigrated. 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 Pour poursuivre la migration, passez à la [Phase 4 : Configuration des services de prise en charge](migrate-from-ad-rms-phase4.md).

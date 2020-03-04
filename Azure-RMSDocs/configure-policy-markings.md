@@ -4,19 +4,19 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/27/2020
+ms.date: 03/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c9aca3acb5d047a6d1b24dd453b0f2126ce4ce37
-ms.sourcegitcommit: 275d31ef762c702b6c63025cbba0a45ca9528ce5
+ms.openlocfilehash: 66e209340ada675a2a91b72e3553d98dc309c96b
+ms.sourcegitcommit: 63ce6f2a405d8b649c7a74194beec0a8855a5441
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77778600"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238498"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
@@ -100,7 +100,7 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
 
 - `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Par exemple : 16/08/2016 13:30
 
-Exemple : Si vous spécifiez la chaîne `Document: ${Item.name}  Classification: ${Item.label}` pour le pied de page de l’étiquette **Général**, le texte du pied de page appliqué à un document nommé project.docx est **Document : project.docx Classification : Général**.
+Exemple : Si vous spécifiez la chaîne `Document: ${Item.Name}  Classification: ${Item.Label}` pour le pied de page de l’étiquette **Général**, le texte du pied de page appliqué à un document nommé project.docx est **Document : project.docx Classification : Général**.
 
 > [!NOTE]
 > L’utilisation de la variable `${User.Name}` et/ou `${User.PrincipalName}` n’est pas prise en charge actuellement par le client d’étiquetage unifié Azure Information Protection. 

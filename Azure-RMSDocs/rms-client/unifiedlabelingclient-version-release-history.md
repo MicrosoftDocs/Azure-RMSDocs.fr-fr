@@ -4,7 +4,7 @@ description: Consultez les informations de version pour le client d’étiquetag
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3960ab26aabd89c41707c6cf96917253174f8cab
-ms.sourcegitcommit: adbbfae6a94f43792a5a732c7eca5078c1fdc95f
+ms.openlocfilehash: 543fd7af43dc235fbe8faca2f0dae332b0b493f1
+ms.sourcegitcommit: 1eed9a57596b67255c45a604595cc77a56350557
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77599843"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238628"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l’historique des versions et la stratégie de support du client d’étiquetage unifié
 
@@ -42,6 +42,7 @@ Les préversions ne doivent pas être déployées pour des utilisateurs finaux s
 
 |Version du client|Date de publication|
 |--------------|-------------|
+|2.2.19.0|08/06/2019|
 |2.2.14.0|07/15/2019|
 |2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
@@ -170,18 +171,6 @@ Pris en charge jusqu’à 04/23/2020
 - Quand vous utilisez le paramètre avancé [OutlookDefaultLabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook) pour définir une autre étiquette par défaut pour Outlook, et que l’étiquette que vous spécifiez n’a pas de sous-étiquettes pour la stratégie d’étiquette, l’étiquette est correctement appliquée.
 
 - Lorsque le client Azure Information Protection est utilisé dans une application Office, un utilisateur avec un compte Active Directory qui n’est pas configuré pour l’authentification unique est invité à s’authentifier pour Azure Information Protection. Une fois l’authentification réussie, l’état du client passe correctement à en ligne, ce qui permet la fonctionnalité d’étiquetage.
-
-## <a name="version-22190"></a>Version 2.2.19.0
-
-**Publication**: 08/06/2019
-
-Pris en charge jusqu’à 03/03/2020
-
-**Céder**
-
-- Le client peut télécharger sa stratégie et afficher les étiquettes de sensibilité actuelles. Ce correctif est nécessaire après la mise à niveau à partir d’une version précédente et vous n’avez pas configuré de types d’informations personnalisées dans votre centre d’étiquetage.
-
-- Améliorations générales des performances et de la stabilité.
 
 ## <a name="next-steps"></a>Étapes suivantes :
 

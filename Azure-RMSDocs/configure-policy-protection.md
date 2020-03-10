@@ -12,11 +12,11 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: 0f98ea44bc223f3b484836fdcf53ecd452b352ce
-ms.sourcegitcommit: 275d31ef762c702b6c63025cbba0a45ca9528ce5
+ms.sourcegitcommit: 9fcac73287781cd9cc47298740be0a5f8f54a6c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77778549"
+ms.lasthandoff: 03/08/2020
+ms.locfileid: "78928560"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Comment configurer une étiquette pour la protection offerte par Rights Management
 

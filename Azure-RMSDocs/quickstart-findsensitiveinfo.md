@@ -4,18 +4,18 @@ description: Utilisez le scanneur Azure Information Protection pour rechercher l
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/09/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 6cb4739d0da222f8748c4f4684290b7193093bcc
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 126ef492f090a578443a0bea0ee7c747554d6eb2
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960441"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973171"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Démarrage rapide : Rechercher les informations sensibles dans des fichiers stockés localement
 
@@ -24,7 +24,7 @@ ms.locfileid: "75960441"
 Lors de ce démarrage rapide, vous autoriserez SharePoint à permettre l’analyse, et vous installerez et configurerez le scanneur Azure Information Protection pour trouver des informations sensibles dans vos fichiers stockés dans un magasin de données local. Par exemple, un dossier local, un partage réseau ou SharePoint Server.
 
 > [!NOTE]
-> Vous pouvez utiliser ce guide de démarrage rapide avec la version en disponibilité générale actuelle du client Azure Information Protection (classique) ou la version en disponibilité générale du client d’étiquetage unifié Azure Information Protection, qui inclut une préversion du scanneur.
+> Vous pouvez utiliser ce guide de démarrage rapide avec la version en disponibilité générale actuelle du client Azure Information Protection (classique) ou la version en disponibilité générale du client d’étiquetage unifié Azure Information Protection qui inclut le scanneur.
 >  
 > Vous ne connaissez pas trop la différence entre ces clients ? Consultez ce [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 

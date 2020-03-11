@@ -18,7 +18,7 @@
           href: requirements-applications.md
         - name: Prise en charge d’un serveur local pour la protection
           href: requirements-servers.md
-- name: Guides de démarrage rapide
+- name: Démarrages rapides
   expanded: true
   items:
     - name: Bien démarrer dans le portail Azure
@@ -45,7 +45,7 @@
       items:
         - name: Vue d’ensemble
           href: what-is-azure-rms.md
-        - name: Fonctionnement
+        - name: "Comment cela fonctionne-t-il\_?"
           href: how-does-it-work.md
         - name: Comment les applications prennent en charge la protection Azure Rights Management
           items:
@@ -139,7 +139,7 @@
               href: configure-policy-delete-reorder.md
             - name: Modifier une étiquette
               href: configure-policy-change-label.md
-            - name: Configuration de la protection
+            - name: Configurer la protection
               items:
                 - name: Vue d’ensemble
                   href: configure-policy-protection.md
@@ -323,6 +323,8 @@
         - name: "Rights Management SDK\_4.2"
           href: ./develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md
           items:
+            - name: Avis de dépréciation
+              href: ./develop/deprecation-notice.md
             - name: Vue d’ensemble
               href: ./develop/overview.md
             - name: Prise en main
@@ -450,7 +452,7 @@
                   href: 'https://msdn.microsoft.com/library/hh535294.aspx'
                 - name: Codes d'erreur
                   href: 'https://msdn.microsoft.com/library/hh535248.aspx'
-        - name: Conditions d'utilisation
+        - name: Terminologie
 - name: Ressources
   items:
     - name: Forum aux questions

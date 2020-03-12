@@ -4,7 +4,7 @@ description: Récapitulatif des tâches d’administration dans le portail Azure
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,17 +12,19 @@ ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2d0c6035d8955195b4a61b4464c2ce9724c74f02
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: dceeee125fb08eae70faab5d956a3382e725b64a
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743898"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973190"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Tâches que vous aviez l’habitude d’effectuer dans le portail Azure Classic
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Jusqu’à présent, vous utilisiez le portail Azure Classic pour gérer le service Azure Rights Management et vous avez besoin d’aide pour passer au portail Azure ?
 
@@ -45,7 +47,7 @@ Utilisez les informations suivantes pour vous aider à passer rapidement au port
 |suppression d'un modèle|Le portail Azure ne prend pas en charge la suppression de modèles, car cette action peut rendre les données inaccessibles. Toutefois, vous pouvez supprimer l’étiquette, puis utiliser l’applet de commande PowerShell [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate) pour supprimer le modèle. <br /><br />Pour plus d’informations, consultez [Guide pratique pour supprimer ou réorganiser une étiquette pour Azure Information Protection](configure-policy-delete-reorder.md).
 |Prise en charge multilingue|Dans la sélection de menu **Gérer**, sélectionnez **Langues** pour exporter les champs personnalisables qui incluent le nom et la description du modèle. Traduisez les chaînes, puis importez-les dans le portail. <br /><br />Pour plus d’informations, consultez [Guide pratique pour configurer des étiquettes et des modèles pour différentes langues dans Azure Information Protection](configure-policy-languages.md).
 |Rapports web Rights Management|La fonctionnalité de [création de rapports centralisés pour Azure Information Protection](reports-aip.md) est actuellement en préversion.<br /><br />Vous pouvez également utiliser l’applet de commande PowerShell [-AipServiceUsageLog](/powershell/module/aipservice/get-aipserviceuserlog) pour télécharger les journaux d’utilisation du service Azure Rights Management. Vous pouvez ensuite utiliser ces données pour créer des rapports personnalisés. Pour plus d’informations, consultez [journalisation et analyse de l’utilisation de la protection à partir de Azure information protection](log-analyze-usage.md).
-|Activer et désactiver le service Rights Management|Dans les options du menu **Gérer**, sélectionnez **Activation de la protection**.<br /><br />Pour plus d’informations, voir [Comment activer le service de protection de Rights Management à partir du portail Azure](activate-azure.md).
+|Activer et désactiver le service Rights Management|Dans les options du menu **Gérer**, sélectionnez **Activation de la protection**.<br /><br />Pour plus d’informations, voir [How to Activate the Rights Management protection service from the portail Azure](activate-azure.md).
 
 Avant de modifier vos modèles ou de les convertir en étiquettes dans le portail Azure, consultez [Considérations relatives aux modèles dans le portail Azure](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
 

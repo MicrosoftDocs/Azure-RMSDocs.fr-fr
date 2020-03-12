@@ -4,7 +4,7 @@ description: Informations destinées aux administrateurs sur le déploiement des
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,17 +12,19 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 43850c44b4dbce0e9aeac68939c9d2fe915faa78
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 180e6c29580c87ebdf813df0dc6aae40007f1d86
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742696"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972766"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection : installation et configuration pour les clients
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Les ordinateurs qui exécutent Office 2010 requièrent l’Azure Information Protection client (Classic) ou le client d’étiquetage unifié Azure Information Protection pour s’authentifier auprès du service de Azure Information Protection.
 
@@ -48,7 +50,7 @@ Toutefois, si vous souhaitez installer et tester rapidement ces clients pour un 
 
 ## <a name="the-azure-information-protection-app-for-ios-and-android-installation-and-management"></a>L’application Azure Information Protection pour iOS et Android : installation et gestion
 
-Pour installer la visionneuse d’applications Azure Information Protection pour iOS et Android, utilisez les liens de la [page Microsoft Azure information protection](https://go.microsoft.com/fwlink/?LinkId=303970). Aucune configuration n'est demandée.
+Pour installer la visionneuse d’applications Azure Information Protection pour iOS et Android, utilisez les liens de la [page Microsoft Azure information protection](https://go.microsoft.com/fwlink/?LinkId=303970). Aucune action de configuration n'est requise.
 
 > [!NOTE]
 > Pour les ordinateurs Mac, les liens de cette page téléchargent l’application de partage RMS. Ces ordinateurs ne prennent pas en charge le client Azure Information Protection.

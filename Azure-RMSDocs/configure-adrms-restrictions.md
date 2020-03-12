@@ -4,25 +4,28 @@ description: Vue d’ensemble de la protection HYOK (AD RMS) pour Azure Informat
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 8ae21a207dd122066fc4dac659bd1e2e9e7c243f
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: a2a4bd0f438bea68d63779eb661ec2537cb870c8
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742761"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972692"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protection HYOK (Hold your own key) pour Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 
 Prenez connaissance des informations suivantes pour comprendre le lien entre la protection HYOK (Hold Your Own Key) et Azure Information Protection, et en quoi cette protection diffère de la protection cloud par défaut. Avant d’appliquer une protection HYOK, assurez-vous de bien comprendre les cas d’usage appropriés, les scénarios pris en charge, les limitations et les prérequis. 
@@ -87,8 +90,8 @@ Le tableau suivant liste les scénarios qui prennent en charge la protection du 
 |Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection : non<br /><br />Utilisation : oui|
 |Android|Office Mobile <br /><br />- Outlook|Protection : non<br /><br />Utilisation : non|
 |Android|Visionneuse Azure Information Protection|Protection : non applicable<br /><br />Utilisation : oui|
-|Web|Outlook sur le web|Protection : non<br /><br />Utilisation : non|
-|Web|Office pour le Web<br /><br />- Word, Excel, PowerPoint|Protection : non<br /><br />Utilisation : non|
+|Internet|Outlook sur le web|Protection : non<br /><br />Utilisation : non|
+|Internet|Office pour le Web<br /><br />- Word, Excel, PowerPoint|Protection : non<br /><br />Utilisation : non|
 |Universal|Applications Office Universal<br /><br />- Word, Excel, PowerPoint|Protection : non<br /><br />Utilisation : non|
 
 
@@ -192,7 +195,7 @@ Les valeurs du GUID de modèle et de l’URL de licence sont disponibles dans la
 
 - Pour rechercher le GUID du modèle : développez le cluster, puis cliquez sur **Modèles de stratégies de droits**. Vous pouvez ensuite copier le GUID des informations **Modèles de stratégies de droits distribués** à partir du modèle à utiliser. Par exemple : 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- Pour trouver l’URL de licence : cliquez sur le nom du cluster. Dans **Détails du cluster**, copiez la valeur **Gestion des licences** valeur sans la chaîne **/_wmcs/licensing**. Exemple : https://rmscluster.contoso.com 
+- Pour trouver l’URL de licence : cliquez sur le nom du cluster. Dans **Détails du cluster**, copiez la valeur **Gestion des licences** valeur sans la chaîne **/_wmcs/licensing**. Exemple : https://rmscluster.contoso.com. 
     
     Si vous disposez d’une valeur de licence extranet et d’une valeur de licence intranet différentes : spécifiez la valeur extranet uniquement si vous voulez partager des documents ou des e-mails protégés avec des partenaires qui ont été définis avec des approbations point à point explicites. Sinon, utilisez la valeur intranet et vérifiez que tous les ordinateurs clients qui utilisent la protection AD RMS avec Azure Information Protection se connectent au moyen d’une connexion intranet (par exemple, les ordinateurs distants utilisent une connexion VPN).
 

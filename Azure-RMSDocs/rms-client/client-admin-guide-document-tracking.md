@@ -4,7 +4,7 @@ description: Instructions et informations pour les administrateurs pour configur
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9a04156d41bd062f4f182fd4133d938c189157e5
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: e4537e9a84f83eaf3865e01dbf4c5b702a8bbc50
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117831"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973090"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guide de l’administrateur : Configuration et utilisation du suivi des documents pour Azure Information Protection
 
@@ -26,6 +26,8 @@ ms.locfileid: "76117831"
 >
 > *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Si votre [abonnement prend en charge le suivi des documents](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), le site de suivi des documents est activé par défaut pour tous les utilisateurs de votre organisation. Le suivi des documents fournit des informations pour les utilisateurs et administrateurs concernant les dates d’accès à un document protégé et, si nécessaire, un document suivi peut être révoqué.
 
@@ -56,11 +58,11 @@ Ce paramètre affecte uniquement les utilisateurs finaux. Les administrateurs de
 
 Vous pouvez utiliser les applets de commande suivantes pour télécharger les informations de journalisation à partir du site de suivi des documents :
 
-- [Get-AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)
+- [AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)
     
     Cette applet de commande retourne les informations de suivi relatives aux documents protégés qu’un utilisateur spécifié a protégés (l’émetteur Rights Management) ou auxquels il a accédé. Utilisez cette applet de commande pour vous aider à répondre à la question « Quels documents protégés ont fait l’objet d’un suivi ou d’un accès par un utilisateur spécifié ? »
 
-- [Get-AipServiceDocumentLog](/powershell/module/aipservice/Get-AipServiceDocumentLog)
+- [AipServiceDocumentLog](/powershell/module/aipservice/Get-AipServiceDocumentLog)
     
     Cette applet de commande retourne les informations sur la protection des documents suivis d’un utilisateur spécifié qui a protégé ces documents (l’émetteur Rights Management) ou qui en était le propriétaire Rights Management, ou des documents protégés ayant été configurés pour autoriser l’accès direct par l’utilisateur. Utilisez cette applet de commande pour vous aider à répondre à la question « Comment les documents d’un utilisateur spécifié sont-ils protégés ? »
 

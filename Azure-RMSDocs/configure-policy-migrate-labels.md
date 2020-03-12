@@ -4,7 +4,7 @@ description: Migrez Azure Information Protection étiquettes vers des étiquette
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/04/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 96f80806d87ea4acae1e3f1343e815dc42573408
-ms.sourcegitcommit: 9fcac73287781cd9cc47298740be0a5f8f54a6c7
+ms.openlocfilehash: c61254aba161724bc780ec2e0bd3b169134790de
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2020
-ms.locfileid: "78932544"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972786"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Comment migrer des étiquettes Azure Information Protection vers des étiquettes de sensibilité unifiée
 
@@ -25,6 +25,8 @@ ms.locfileid: "78932544"
 >
 > *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Migrez Azure Information Protection étiquettes vers la plateforme d’étiquetage unifiée pour pouvoir les utiliser en tant qu’étiquettes de sensibilité par [les clients et les services qui prennent en charge l’étiquetage unifié](#clients-and-services-that-support-unified-labeling).
 
@@ -35,7 +37,7 @@ Après avoir migré vos étiquettes, vous ne verrez aucune différence avec le c
 
 Avant de lire les instructions pour migrer vos étiquettes, vous trouverez peut-être les questions fréquemment posées suivantes :
 
-- [Quelle est la différence entre les étiquettes dans Azure Information Protection et celles dans Office 365 ?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
+- [Quelle est la différence entre les étiquettes dans Azure Information Protection et les étiquettes dans Office 365 ?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
 
 - [Quand est-il approprié de migrer mes étiquettes ?](faqs.md#when-is-the-right-time-to-migrate-my-labels)
 
@@ -222,7 +224,7 @@ Pour vérifier si les clients et les services que vous utilisez prennent en char
 
 - Services d’éditeurs de logiciels et de développeurs qui utilisent le [SDK Microsoft Information Protection](https://docs.microsoft.com/information-protection/develop/overview).
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour obtenir des conseils supplémentaires et des conseils de notre équipe de l’expérience utilisateur, consultez les ressources suivantes :
 

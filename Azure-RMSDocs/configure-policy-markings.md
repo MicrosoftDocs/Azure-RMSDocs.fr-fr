@@ -4,24 +4,27 @@ description: Lorsque vous affectez une étiquette à un document ou un e-mail, v
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/02/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 66e209340ada675a2a91b72e3553d98dc309c96b
-ms.sourcegitcommit: 63ce6f2a405d8b649c7a74194beec0a8855a5441
+ms.openlocfilehash: 6492c4dcbe9ba408d2d4efd9c751933a6eefe6b4
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238498"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972817"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Comment configurer des marquages visuels d’une étiquette pour Azure Information Protection
 
 >*S’applique à : [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
+
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Lorsque vous affectez une étiquette à un document ou un e-mail, vous pouvez sélectionner plusieurs options pour que la classification choisie soit facilement visible. Ces marquages visuels sont un filigrane, un en-tête et un pied de page. 
 
@@ -100,13 +103,16 @@ Vous pouvez utiliser les variables suivantes dans la chaîne de texte pour l’e
 
 - `${Event.DateTime}` pour la date et l’heure de la définition de l’étiquette sélectionnée. Par exemple : 16/08/2016 13:30
 
+> [!NOTE]
+>Cette syntaxe respecte la casse.
+
 Exemple : Si vous spécifiez la chaîne `Document: ${Item.Name}  Classification: ${Item.Label}` pour le pied de page de l’étiquette **Général**, le texte du pied de page appliqué à un document nommé project.docx est **Document : project.docx Classification : Général**.
 
 > [!NOTE]
 > L’utilisation de la variable `${User.Name}` et/ou `${User.PrincipalName}` n’est pas prise en charge actuellement par le client d’étiquetage unifié Azure Information Protection. 
 
 >[!TIP]
-> On utilise également un [code de champ pour insérer le nom de l’étiquette](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) dans un document ou un modèle.
+> Vous pouvez également utiliser un [Code de champ pour insérer le nom de l’étiquette](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) dans un document ou un modèle.
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Définition de marquages visuels différents pour Word, Excel, PowerPoint et Outlook
 
@@ -116,7 +122,8 @@ Utilisez la syntaxe suivante :
 
     ${If.App.<application type>}<your visual markings text> ${If.End}
 
-La syntaxe de cette instruction respecte la casse.
+> [!NOTE]
+>La syntaxe de cette instruction respecte la casse.
 
 Exemples :
 
@@ -153,7 +160,7 @@ Vous pouvez choisir une couleur dans la liste des couleurs disponibles ou spéci
 
 Si vous avez besoin d’une référence pour ces codes, vous trouverez une table utile à partir de la page de [> de couleur\<](https://developer.mozilla.org/docs/Web/CSS/color_value) dans les documents Web MSDN. Vous trouverez également ces codes dans de nombreuses applications qui vous permettent de modifier des images. Par exemple, Microsoft Paint vous permet de choisir une couleur personnalisée dans une palette et de copier les valeurs RVB qui sont automatiquement affichées.
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur la configuration de votre stratégie Azure Information Protection, utilisez les liens figurant dans la section [Configuration de la stratégie de votre organisation](configure-policy.md#configuring-your-organizations-policy).  
 

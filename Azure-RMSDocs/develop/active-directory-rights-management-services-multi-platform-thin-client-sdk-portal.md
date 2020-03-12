@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: dd357e74e71b9e5b296825b395ecd54b14c332d5
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 76bd7d42a00780520bd77c93c9e751d10bed5518
+ms.sourcegitcommit: fc0499f182e9203ccbd4a8685dd880d1311845ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68788691"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79084724"
 ---
 # <a name="rights-management-sdk42"></a>SDK Rights Management 4.2
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 ## <a name="purpose"></a>Fonction
 
@@ -31,7 +33,7 @@ Le SDK Rights Management 4.2 est une API simplifiée de nouvelle génération, 
 
 Les API du SDK RMS 4.2 utilisent des langages et des modèles de programmation standard pour chaque système d’exploitation ; leur utilisation est donc facile.
 
-## <a name="supported-operating-systems"></a>Systèmes d'exploitation pris en charge
+## <a name="supported-operating-systems"></a>Systèmes d’exploitation pris en charge
 
 Le SDK RMS 4.2 est disponible pour les systèmes d’exploitation suivants :
 

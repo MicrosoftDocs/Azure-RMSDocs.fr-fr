@@ -4,7 +4,7 @@ description: Configurez et gérez les modèles de protection, également appelé
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 09e8358493e80099b38294c472f134cb0632943f
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 63c6857794730dc0b6532d39c6ae7b8a2d572671
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743449"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973297"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configuration et gestion des modèles pour Azure Information Protection
 
@@ -26,6 +26,8 @@ ms.locfileid: "75743449"
 >
 > *Instructions pour : [Azure information protection client pour Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Les modèles de protection, également appelés modèles Rights Management, sont un regroupement de paramètres de protection définis par l’administrateur pour Azure Information Protection. Ces paramètres incluent les [droits d’utilisation](configure-usage-rights.md) que vous avez choisis pour les utilisateurs autorisés et les contrôles d’accès pour l’accès hors connexion et après l’expiration. Ces modèles sont intégrés à la stratégie Azure Information Protection : 
 
@@ -144,7 +146,7 @@ Quand vous créez une étiquette avec le paramètre de protection **Azure (clé 
 
 1. À partir de l’option de menu **classifications** > **étiquettes** : dans le volet **Azure information protection-étiquettes** , sélectionnez **Ajouter une nouvelle étiquette**.
 
-2. Dans le volet **étiquette** , conservez la valeur par défaut **activé : activée**, puis entrez un nom d’étiquette et une description pour le nom et la description du modèle.
+2. Dans le volet **étiquette** , conservez la valeur par défaut **activé : activée**, puis entrez un nom d’étiquette et une description pour le nom et la description du modèle. **On**
 
 3. Pour **Définir les autorisations pour les documents et les e-mails contenant cette étiquette**, sélectionnez **Protéger**, puis **Protection** :
     

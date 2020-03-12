@@ -4,7 +4,7 @@ description: Instructions et informations pour que les administrateurs gèrent l
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0820004870c3a391a2dcea9fa3c81b8577374c54
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: ff48c873b55a0aa0f973885c65fd3b68701dbca8
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117763"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79082222"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guide de l’administrateur : Utiliser PowerShell avec le client Azure Information Protection
 
@@ -25,7 +25,8 @@ ms.locfileid: "76117763"
 >
 > *Instructions pour : [Azure information protection client pour Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-
+>[!NOTE] 
+> Pour fournir une expérience client unifiée et rationalisée, **Azure Information Protection client (Classic)** et **Gestion des étiquettes** dans le Portail Azure sont **dépréciées** à compter du **31 mars 2021**. Ce laps de temps permet à tous les clients Azure Information Protection actuels de passer à notre solution d’étiquetage unifiée à l’aide de la plateforme d’étiquetage unifiée de Microsoft Information Protection. En savoir plus en consultant la [notice de dépréciation](https://aka.ms/aipclassicsunset) officielle.
 
 Quand vous installez le client Azure Information Protection, des commandes PowerShell sont installés automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
@@ -47,7 +48,7 @@ Les applets de commande sont installées avec le module PowerShell **AzureInform
 
 Le [scanneur Azure Information Protection](../deploy-aip-scanner.md) utilise les applets de commande du module AzureInformationProtection pour installer et configurer un service sur Windows Server. Ce scanneur vous permet de découvrir, classifier et protéger des fichiers sur des magasins de données.
 
-Pour obtenir une liste de toutes les cmdlets et de l’aide associée, voir le [module Azure Information Protection](/powershell/module/azureinformationprotection). Dans une session PowerShell, tapez `Get-Help <cmdlet name> -online` pour afficher l’aide la plus récente.  
+Pour obtenir une liste de toutes les applets de commande et de l’aide associée, voir le [module Azure Information Protection](/powershell/module/azureinformationprotection). Dans une session PowerShell, tapez `Get-Help <cmdlet name> -online` pour afficher l’aide la plus récente.  
 
 Ce module s’installe dans **\ProgramFiles (x86)\Microsoft Azure Information Protection** et ajoute ce dossier à la variable système **PSModulePath**. Le fichier .dll de ce module est nommé **AIP.dll**.
 
@@ -76,7 +77,7 @@ Avant de commencer à utiliser ces applets de commande, consultez les autres con
 Lisez cette section avant de commencer à utiliser les commandes PowerShell quand votre organisation utilise Azure Information Protection pour la classification et la protection, ou seulement le service Azure Rights Management pour la protection des données.
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Conditions préalables requises
 
 En plus des prérequis pour l’installation du module Azure Information Protection, il existe d’autres prérequis pour l’étiquetage Azure Information Protection et pour le service de protection de données Azure Rights Management :
 
@@ -350,12 +351,12 @@ Votre résultat peut ressembler à ce qui suit :
 
 Notez que si les modèles Rights Management sont modifiés, vous devez les télécharger à nouveau à l’aide de `Get-RMSTemplate -force`. 
 
-## <a name="active-directory-rights-management-services"></a>Services AD RMS (Active Directory Rights Management Services)
+## <a name="active-directory-rights-management-services"></a>Active Directory Rights Management Services
 
 Lisez cette section avant de commencer à utiliser les commandes PowerShell pour protéger ou annuler la protection des fichiers, lorsque votre organisation utilise simplement Active Directory Rights Management Services.
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Conditions préalables requises
 
 Outre les prérequis pour l’installation du module AzureInformationProtection, le compte utilisé pour protéger ou déprotéger des fichiers doit disposer des autorisations de lecture et d’exécution pour accéder à ServerCertification.asmx :
 
@@ -483,7 +484,7 @@ Si vous exécutez cette applet de commande sans paramètres, le compte acquiert 
 
 Pour contrôler à quel moment le jeton d’accès expire, exécutez cette applet de commande avec des paramètres. Vous pouvez ainsi configurer le jeton d’accès pour qu’il expire au bout d’un an, de deux ans ou jamais. Cette configuration nécessite que vous disposiez de deux applications inscrites dans Azure Active Directory : une application de type **application web/API** et une **application native**. Les paramètres de cette applet de commande utilisent les valeurs de ces applications.
 
-Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiquetage dans le contexte du compte d’utilisateur que vous avez créé.
+Après avoir exécuté cette applet de commande, vous pouvez exécuter les applets de commande d’étiquetage dans le contexte du compte d’utilisateur que vous avez créé.
 
 ### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>Pour créer et configurer les applications Azure AD pour Set-AIPAuthentication
 
@@ -493,7 +494,7 @@ Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiq
 
 3. Sélectionnez **+ nouvelle inscription**pour créer votre application Web App/API. Dans le volet **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
 
-   - **Nom** : `AIPOnBehalfOf`
+   - **Nom**: `AIPOnBehalfOf`
         
         Si vous le souhaitez, spécifiez un autre nom. Il doit être unique pour chaque locataire.
     
@@ -529,10 +530,10 @@ Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiq
 12. De retour sur le **AIPOnBehalfOf-exposer un volet API** , sélectionnez **+ Ajouter une étendue**.
 
 13. Dans le volet **Ajouter une étendue** , spécifiez les éléments suivants, en utilisant les chaînes suggérées comme exemples, puis sélectionnez **Ajouter une étendue**:
-    - **Nom de l’étendue** : `user-impersonation`
+    - **Nom**de l’étendue : `user-impersonation`
     - **Qui peut donner son consentement ?** : **administrateurs et utilisateurs**
-    - **Nom d’affichage du consentement administrateur** : `Access Azure Information Protection scanner`
-    - **Description du consentement de l’administrateur** : `Allow the application to access the scanner for the signed-in user`
+    - **Nom d’affichage du consentement**de l’administrateur : `Access Azure Information Protection scanner`
+    - **Description du consentement**de l’administrateur : `Allow the application to access the scanner for the signed-in user`
     - **Nom complet du consentement**de l’utilisateur : `Access Azure Information Protection scanner`
     - **Description du consentement**de l’utilisateur : `Allow the application to access the scanner for the signed-in user`
     - **État**: **activé** (valeur par défaut)
@@ -542,7 +543,7 @@ Après avoir exécuté cette cmdlet, vous pouvez exécuter les cmdlets d’étiq
 15. Dans le volet **inscriptions d’applications** , sélectionnez **+ nouvelle inscription d’application** pour créer votre application native.
 
 16. Dans le volet **inscrire une application** , spécifiez les paramètres suivants, puis sélectionnez **inscrire**:
-    - **Nom** : `AIPClient`
+    - **Nom**: `AIPClient`
     - **Types de comptes pris en charge**: **comptes dans ce répertoire d’organisation uniquement**
     - **URI de redirection (facultatif)** : **client Public (mobile & desktop)** et `http://localhost`
 
@@ -600,7 +601,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
 3. En suivant les instructions de la section précédente, modifiez cette commande en spécifiant vos propres valeurs pour les paramètres **WebAppId**, **WebAppkey**, et **NativeAppId**. À ce stade, vous n’avez pas encore la valeur pour le paramètre **Jeton**, que vous spécifierez plus tard. 
 
-    Exemple : `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
+    Exemple : `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`.
 
 #### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Étape 2 : exécuter Set-AIPAuthentication pour obtenir un jeton d’accès et le copier dans le Presse-papiers
 
@@ -610,7 +611,7 @@ Suivez les étapes et instructions supplémentaires suivantes afin d’éviter l
 
         (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
 
-    Exemple : `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+    Exemple : `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`.
 
 #### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Étape 3 : modifier le script PowerShell pour fournir le jeton
 

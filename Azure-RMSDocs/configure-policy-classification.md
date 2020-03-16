@@ -12,11 +12,11 @@ ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: 919a31bfbc4d173aa9658eaf8725b1dd3da5f5d1
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422768"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404536"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Comment configurer des conditions pour la classification automatique et recommandée pour Azure Information Protection
 
@@ -88,7 +88,7 @@ Vous pouvez changer ce comportement afin que le client Azure Information Protect
         La liste des types d’informations que vous pouvez sélectionner à partir du portail Azure est régulièrement mise à jour pour inclure les nouveaux ajouts DLP Office. Toutefois, elle exclut tous les types d’informations sensibles personnalisés que vous avez définis et téléchargés sous la forme d’un package de règles dans le Centre de sécurité et conformité Office 365.
         
         > [!IMPORTANT]
-        > Certains types d’informations nécessitent une version minimale du client. [Informations complémentaires](#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
+        > Certains types d’informations nécessitent une version minimale du client. [Plus d’informations](#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
         
         Quand Azure Information Protection évalue les types d’informations que vous sélectionnez, il n’utilise pas le paramètre de niveau de confiance DLP d’Office, mais recherche celui avec le niveau de confiance le plus faible.
     

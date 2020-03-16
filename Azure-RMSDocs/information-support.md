@@ -16,11 +16,11 @@ ms.custom: admin
 search.appverid:
 - MET150
 ms.openlocfilehash: 0eda64683a498c69ff710319547b1349e1c1cfc5
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743596"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404247"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informations et prise en charge pour Azure Information Protection
 
@@ -53,14 +53,14 @@ Le blog technique de Azure Information Protection présente également un résum
 
 Ces billets sur les mises à jour de la documentation sont intitulés : « **Azure Information Protection Documentation Update for – \<mois année>**  ».
 
-## <a name="support-options-and-community-resources"></a>Options de support et ressources de la communauté
+## <a name="support-options-and-community-resources"></a>Options de support technique et ressources de la communauté
 Les sections suivantes fournissent des informations sur les options de support et de résolution de problème ainsi que des ressources de la communauté.
 
 ### <a name="to-contact-microsoft-support"></a>Pour contacter le support Microsoft
 
 Si vous avez Support Premier, visitez le [Hub de services Microsoft](https://serviceshub.microsoft.com/support/contactsupport) pour soumettre des incidents, parcourir les solutions et obtenir de l’aide.
 
-Vous êtes peut-être éligible à **FastTrack** : vous pouvez utiliser l’offre du centre FastTrack quand vous achetez au moins 150 licences dans un plan éligible pour Azure Information Protection. L’offre du centre FastTrack vous permet de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Offre Enterprise Mobility + Security (EMS) du Centre FastTrack](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
+Vous êtes peut-être éligible à **FastTrack** : vous pouvez utiliser l’offre du centre FastTrack quand vous achetez au moins 150 licences dans un plan éligible pour Azure Information Protection. L’offre du Centre FastTrack vous permet de travailler avec des spécialistes Microsoft pour évaluer, corriger et activer les services éligibles. Pour plus d’informations, consultez [Offre Enterprise Mobility + Security (EMS) du Centre FastTrack](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 
 Pour les autres clients, utilisez les canaux de support dans le tableau suivant, en fonction de votre abonnement à Azure Information Protection.
 
@@ -84,7 +84,7 @@ Vidéos à la demande :
 
 - Sessions Microsoft Virtual Academy incluant [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection).
 
-Dépannage :
+Dépannage :
 
 - Si vous avez une question sur le fonctionnement d’un problème, vérifiez si votre question a déjà répondu en tant que [question fréquemment posée](faqs.md).
 

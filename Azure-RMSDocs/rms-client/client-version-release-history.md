@@ -13,11 +13,11 @@ ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: abb96a7d86bddea671230fbd033d9c940cf982a3
-ms.sourcegitcommit: 6db47d691974b5450b80c58a49b2913ec1a99802
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77155923"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404740"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection : historique des versions et politique du support
 

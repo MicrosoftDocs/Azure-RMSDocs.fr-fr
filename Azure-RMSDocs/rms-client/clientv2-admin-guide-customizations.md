@@ -4,7 +4,7 @@ description: Informations sur la personnalisation de l’Azure Information Prote
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b4ddfa8a7746de36030cb38b726949a19eebf73d
-ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
+ms.openlocfilehash: 76109514c88b90826d2f258f86f2bc97dc7cbce1
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507703"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404944"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guide de l’administrateur : configurations personnalisées pour le client d’étiquetage unifié Azure Information Protection
 
@@ -146,6 +146,7 @@ Utilisez le paramètre *AdvancedSettings* avec [New-LabelPolicy](https://docs.mi
 |RemoveExternalContentMarkingInApp|[Supprimer les en-têtes et les pieds de page d’autres solutions d’étiquetage](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Ajouter « Signaler un problème » pour les utilisateurs](#add-report-an-issue-for-users)|
 |RunAuditInformationTypesDiscovery|[Désactiver l’envoi d’informations sensibles découvertes dans des documents à Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|RunPolicyInBackground|[Activer la classification pour qu’elle s’exécute en continu en arrière-plan](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limiter le nombre de threads utilisés par le scanneur](#limit-the-number-of-threads-used-by-the-scanner)|
 
 Exemple de commande PowerShell pour vérifier les paramètres de stratégie d’étiquette en vigueur pour une stratégie d’étiquette nommée « global » :
@@ -305,7 +306,7 @@ Cette configuration utilise des [Paramètres avancés](#how-to-configure-advance
 
 Il existe deux méthodes qui peuvent être utilisées pour supprimer des classifications d’autres solutions d’étiquetage. La première méthode supprime toute forme de documents Word où le nom de forme correspond au nom défini dans la propriété avancée **WordShapeNameToRemove**, la deuxième méthode vous permet de supprimer ou de remplacer des en-têtes ou des pieds de page textuels à partir de documents Word, Excel et PowerPoint, comme défini dans la propriété avancée **RemoveExternalContentMarkingInApp** . 
 
-### <a name="use-the-wordshapenametoremove-advanced-property-preview"></a>Utiliser la propriété avancée WordShapeNameToRemove (version préliminaire)
+### <a name="use-the-wordshapenametoremove-advanced-property"></a>Utiliser la propriété avancée WordShapeNameToRemove
 
 *La propriété avancée **WordShapeNameToRemove** est prise en charge à partir de la version 2.6.101.0 et supérieure*
 
@@ -1018,6 +1019,29 @@ Exemple de commande PowerShell, où votre étiquette parente est nommée « Con
 
     Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 
+## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Activer la classification pour qu’elle s’exécute en continu en arrière-plan
+
+Cette configuration utilise un [paramètre avancé](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) d’étiquette que vous devez configurer à l’aide d’Office 365 Centre de sécurité et de conformité PowerShell. Ce paramètre est en préversion et est susceptible de changer.
+
+Quand vous configurez ce paramètre, il modifie le comportement par défaut de la façon dont le Azure Information Protection client d’étiquetage unifié applique les étiquettes automatiques et recommandées aux documents :
+
+Pour Word, Excel et PowerPoint, la classification automatique s’exécute en continu en arrière-plan.
+
+Le comportement ne change pas pour Outlook.
+Lorsque le Azure Information Protection client d’étiquetage unifié vérifie régulièrement les règles de condition que vous spécifiez, ce comportement active la classification et la protection automatiques et recommandées pour les documents stockés dans SharePoint Service. Les fichiers volumineux s’enregistrent également plus rapidement car les règles des conditions se sont déjà exécutées.
+
+Les règles des conditions ne s’exécutent pas en temps réel pendant la saisie de l’utilisateur. Elles s’exécutent plutôt à intervalles réguliers sous la forme d’une tâche en arrière-plan si le document est modifié.
+
+Pour configurer ce paramètre avancé, entrez les chaînes suivantes :
+
+- Clé : **RunPolicyInBackground**
+- Valeur : **True**
+
+
+
+Exemple de commande PowerShell : 
+
+    Set-LabelPolicy -Identity PolicyName -AdvancedSettings @{RunPolicyInBackground = "true"}
 
 ## <a name="specify-a-color-for-the-label"></a>Spécifier une couleur pour l’étiquette
 

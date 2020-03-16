@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 90c49b8222e379094ee5f5d00c5bd37c7dd0377d
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960882"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403720"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configuration d’une collaboration sécurisée autour de documents à l’aide d’Azure Information Protection
 
@@ -78,7 +78,7 @@ Cet exemple décrit la procédure de configuration d’une étiquette existante 
 
 Maintenant que cette étiquette est configurée, elle peut être appliquée aux documents de différentes manières, notamment :
 
-|Différentes manières d’appliquer l’étiquette|Autres informations|
+|Différentes manières d’appliquer l’étiquette|Informations complémentaires|
 |---------------|----------|
 |Un utilisateur sélectionne manuellement l’étiquette lorsque le document est créé dans l’application Office.|Les utilisateurs sélectionnent l’étiquette à partir du bouton **Protéger** du ruban Office ou à partir de la barre Azure Information Protection.|
 |Les utilisateurs sont invités à sélectionner une étiquette au moment de l’enregistrement d’un nouveau document.|Vous avez configuré le [paramètre de stratégie](configure-policy-settings.md) Azure Information Protection nommé **Tous les documents et e-mails doivent avoir une étiquette**.|
@@ -96,7 +96,7 @@ Partagez le document protégé en le joignant à un e-mail et envoyez-le aux per
 
 ## <a name="opening-and-editing-the-protected-document"></a>Ouverture et modification du document protégé
 
-Lorsque les utilisateurs que vous avez autorisés ouvrent le document en vue de le modifier, le document s’ouvre avec une bannière d’informations qui les avertit que les autorisations sont limitées. Exemple :
+Lorsque les utilisateurs que vous avez autorisés ouvrent le document en vue de le modifier, le document s’ouvre avec une bannière d’informations qui les avertit que les autorisations sont limitées. Par exemple :
 
 ![Exemple de bannière d’informations Azure Information Protection pour les autorisations](./media/example-restricted-access-banner.png)
 
@@ -133,7 +133,7 @@ En outre, les scénarios suivants prennent en charge l’affichage de documents�
 
 - Un navigateur peut ouvrir des pièces jointes protégées lorsque des fournisseurs de réseaux sociaux et des codes secrets à usage unique sont utilisés pour l’authentification avec Exchange Online et avec les nouvelles fonctionnalités d’Office 365 Message Encryption. 
 
-|Plateformes pour l’affichage et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />Compte Microsoft|
+|Plateformes pour l’affichage et la modification de documents : <br />Word, Excel, PowerPoint|Méthode d'authentification :<br />Azure AD|Méthode d'authentification :<br />Compte Microsoft|
 |---------------|----------|-----------|-----------|
 |Windows|Oui [[1]](#footnote-1)|Oui [[2]](#footnote-2)|
 |iOS|Oui [[1]](#footnote-1)|Non|
@@ -149,7 +149,7 @@ Actuellement pris en charge uniquement par les applications Office 365 (Démarr
 
 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 
 Consultez d’autres [exemples de configuration](configure-policy-protection.md#example-configurations) pour que les étiquettes appliquent une protection dans des scénarios courants. Cet article contient également des informations supplémentaires sur les paramètres de protection.
 

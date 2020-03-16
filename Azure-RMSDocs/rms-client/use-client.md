@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection fournit une solution client-
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/02/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fd48222d2b137c8c823e3d233562905da4d4ddc2
-ms.sourcegitcommit: 94a93275f61a2f46c995a3b7c18bae85f3f302f1
+ms.openlocfilehash: a4e7206bb02c29649d6e5807a445bb3970f35ca6
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78215757"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404876"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Côté client d’Azure Information Protection
 
@@ -73,7 +73,7 @@ Si vous disposez d’un ordinateur Windows qui exécute les applications Office 
     
     Pour ces utilisateurs, leur étiquetage est très similaire sur Windows, Mac, iOS et Android, car ils ont les mêmes étiquettes publiées et les mêmes paramètres de stratégie. En tant qu’administrateur, vous gérez ces étiquettes et paramètres de stratégie dans le même centre de gestion.
 
-- Vous installez également le client d’étiquetage unifié pour vous-même, afin de tester la version préliminaire du scanneur Azure Information Protection.
+- Vous installez également le client d’étiquetage unifié pour vous-même, afin de tester le scanneur Azure Information Protection.
 
 - Pour un sous-ensemble d’utilisateurs, vous déployez le client classique, car ces utilisateurs nécessitent des étiquettes qui appliquent la protection de votre propre clé (HYOK).
     
@@ -99,13 +99,13 @@ Pour comparer les fonctionnalités d’étiquetage de sensibilité intégrées �
 |Prise en charge multilingue des étiquettes :| **Oui** | **Oui** |**Oui** |
 |Héritage d’étiquette à partir des pièces jointes aux e-mails :| **Oui** | **Oui**  |Non |
 |Les personnalisations qui incluent :<br />- Étiquette par défaut pour e-mail<br />-Messages contextuels dans Outlook <br />- Prise en charge de S/MIME<br />- Option Signaler un problème| **Oui** <sup>1</sup> | **Oui** <sup>2</sup> | Non |
-|Scanneur pour magasins de données locaux :| **Oui** | **Oui <br />(version préliminaire)** | Non |
+|Scanneur pour magasins de données locaux :| **Oui** | **Oui <br />** | Non |
 |Création centralisée de rapports (analytique) :| **Oui** | **Oui** | Non |
 |Les autorisations personnalisées sont définies indépendamment d’une étiquette :| **Oui** | **Oui** <sup>3</sup>| Non |
 |Barre Information Protection dans les applications Office :| **Oui** | **Oui**| Non |
 |Marquages visuels en tant qu’action d’étiquette (en-tête, pied de page, filigrane) :| **Oui** | **Oui** | **Oui**|
-|Marquages visuels par application :| **Oui** | **Oui* | Non |
-|Marquages visuels dynamiques avec des variables :| **Oui** | **Oui** (version préliminaire) | Non |
+|Marquages visuels par application :| **Oui** | **Oui** | Non |
+|Marquages visuels dynamiques avec des variables :| **Oui** | **Oui** | Non |
 |Étiquette avec l’Explorateur de fichiers :| **Oui** | **Oui** | Non |
 |Visionneuse pour les fichiers protégés (texte, images, PDF,. pfile) :| **Oui** | **Oui** | Non|
 |Prise en charge PPDF pour l’application des étiquettes :| **Oui** | Non | Non |
@@ -179,8 +179,6 @@ Bien que le client d’étiquetage unifié Azure Information Protection soit tou
 - Afficher le bouton Ne pas transférer dans Outlook
 
 - Stratégie de démonstration
-
-- Justification de la suppression de la protection
 
 - Invite de confirmation voulez **-vous supprimer cette étiquette ?** pour les utilisateurs lorsque vous n’utilisez pas le paramètre de stratégie pour la justification
 

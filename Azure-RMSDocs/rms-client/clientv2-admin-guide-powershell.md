@@ -4,19 +4,19 @@ description: Instructions et informations permettant aux administrateurs de gér
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ad41e73fe6b0d973d4763d2f5a26b2381c93354d
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 4456dd292fe6049a432aaebe56cba36dc4a3d7d1
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117652"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404706"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guide de l’administrateur : utilisation de PowerShell avec le client unifié Azure Information Protection
 
@@ -26,7 +26,7 @@ ms.locfileid: "76117652"
 
 Lorsque vous installez le client d’étiquetage unifié Azure Information Protection, les commandes PowerShell sont installées automatiquement. Vous pouvez ainsi gérer le client en exécutant des commandes que vous pouvez placer dans des scripts d’automatisation.
 
-Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**, qui possède des applets de commande pour l’étiquetage. Exemple :
+Les applets de commande sont installées avec le module PowerShell **AzureInformationProtection**, qui possède des applets de commande pour l’étiquetage. Par exemple :
 
 |Étiquetage des applets de commande|Exemple d’utilisation|
 |----------------|---------------|
@@ -93,7 +93,7 @@ Pour le compte d’utilisateur délégué :
 ### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>Pour créer et configurer les applications Azure AD pour Set-AIPAuthentication
 
 > [!IMPORTANT]
-> Ces instructions concernent la version actuelle de la disponibilité générale du client d’étiquetage unifié et s’appliquent également à la version préliminaire du scanneur pour ce client.
+> Ces instructions concernent la version de disponibilité générale actuelle du client d’étiquetage unifié et s’appliquent également à la version de disponibilité générale du scanneur pour ce client.
 
 Set-AIPAuthentication nécessite une inscription d’application pour les paramètres *AppID* et *AppSecret* . Si vous avez effectué une mise à niveau à partir d’une version précédente du client et créé une inscription d’application pour les paramètres *WebAppId* et *NativeAppId* précédents, ceux-ci ne fonctionneront pas avec le client d’étiquetage unifié. Vous devez créer une nouvelle inscription d’application comme suit :
 
@@ -103,7 +103,7 @@ Set-AIPAuthentication nécessite une inscription d’application pour les param�
 
 3. Sélectionnez **+ nouvel enregistrement**. Dans le volet **inscrire une application** , spécifiez les valeurs suivantes, puis cliquez sur **inscrire**:
 
-   - **Nom** : `AIP-DelegatedUser`
+   - **Nom**: `AIP-DelegatedUser`
         
         Si vous le souhaitez, spécifiez un autre nom. Il doit être unique pour chaque locataire.
     
@@ -170,15 +170,15 @@ Maintenant que vous avez terminé l’inscription de cette application avec un s
     
     Vous êtes invité à entrer le mot de passe de ce compte.
 
-2. Exécutez l’applet de commande Set-AIPAuthentication avec le paramètre *OnBeHalfOf* , en spécifiant comme valeur la variable que vous venez de créer. Spécifiez également les valeurs d’inscription de votre application, votre ID de locataire et le nom du compte d’utilisateur délégué dans Azure AD. Exemple :
+2. Exécutez l’applet de commande Set-AIPAuthentication avec le paramètre *OnBeHalfOf* , en spécifiant comme valeur la variable que vous venez de créer. Spécifiez également les valeurs d’inscription de votre application, votre ID de locataire et le nom du compte d’utilisateur délégué dans Azure AD. Par exemple :
     
         Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
 
 > [!NOTE]
 > Si l’ordinateur ne peut pas accéder à Internet, il n’est pas nécessaire de créer l’application dans Azure AD et d’exécuter Set-AIPAuthentication. Au lieu de cela, suivez les instructions pour les [ordinateurs déconnectés](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
 
-## <a name="next-steps"></a>Étapes suivantes
-Pour obtenir de l’aide sur les applets de commande lorsque vous êtes dans une session PowerShell, tapez `Get-Help <cmdlet name> -online`. Exemple : 
+## <a name="next-steps"></a>Étapes suivantes :
+Pour obtenir de l’aide sur les applets de commande lorsque vous êtes dans une session PowerShell, tapez `Get-Help <cmdlet name> -online`. Par exemple : 
 
     Get-Help Set-AIPFileLabel -online
 

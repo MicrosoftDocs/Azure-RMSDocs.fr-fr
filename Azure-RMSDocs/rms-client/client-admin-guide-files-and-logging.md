@@ -14,11 +14,11 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 21d7bd36101ed2b1cfe38c3501801a06839b027b
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117797"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404077"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guide de l’administrateur : Fichiers du client Azure Information Protection et journalisation de l’utilisation du client
 
@@ -78,7 +78,7 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
     
 - Source de l’action :
     
-    - Manuelle 
+    - Manuel 
     
     - Recommandé
     
@@ -86,7 +86,7 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
     
     - Système (pour la stratégie de connexion et de téléchargement)
     
-    - Valeur par défaut
+    - Default
     
 - Étiquette avant et après l’action 
     
@@ -99,7 +99,7 @@ Le client enregistre l’activité de l’utilisateur dans le journal des évén
 Les événements pour les messages Outlook d’avertissement, de justification et de blocage requièrent des paramètres client avancés. Pour plus d’informations, consultez [Implémenter des messages contextuels dans Outlook qui avertissent, demandent une justification ou bloquent l’envoi des e-mails](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 Maintenant que vous avez identifié tous les fichiers journaux associés au client Azure Information Protection, consultez les éléments suivants pour des informations supplémentaires nécessaires à la prise en charge de ce client :
 
 - [Customizations](client-admin-guide-customizations.md)
